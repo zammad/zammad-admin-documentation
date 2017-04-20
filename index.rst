@@ -61,7 +61,6 @@ Zammad - Documentation for admin unsers
    :caption: System
 
    system
-   system-subscription
    system-integrations
    system-api
    system-objects
