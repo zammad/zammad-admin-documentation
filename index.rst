@@ -48,7 +48,6 @@ Zammad - Documentation for admin unsers
    :maxdepth: 2
    :caption: Settings
 
-   settings
    settings-branding
    settings-system
    settings-security
