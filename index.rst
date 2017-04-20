@@ -32,7 +32,7 @@ Zammad - Documentation for admin unsers
    manage-groups
    manage-organizations
    manage-overviews
-   manage-textModules
+   manage-text-modules
    manage-macros
    manage-tags
    manage-calendars
