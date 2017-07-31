@@ -6,21 +6,6 @@ Zammad - Documentation for admin unsers
 * :ref:`settings-docs`
 * :ref:`system-docs`
 
-.. _channels-docs:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Channels
-
-   channels
-   channels-web
-   channels-form
-   channels-email
-   channels-chat
-   channels-twitter
-   channels-facebook
-   channels-telegram
-
 .. _manage-docs:
 
 .. toctree::
@@ -41,6 +26,22 @@ Zammad - Documentation for admin unsers
    manage-scheduler
    manage-report-profiles
    manage-time-accounting
+
+.. _channels-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Channels
+
+   channels
+   channels-web
+   channels-form
+   channels-email
+   channels-chat
+   channels-twitter
+   channels-facebook
+   channels-telegram
+
 
 .. _settings-docs:
 
