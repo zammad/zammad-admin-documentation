@@ -85,4 +85,6 @@ make -e SPHINXOPTS="-D language='en'" html
 
 ```
 
+If you have a problem, please create an issue. Thanks.
+
 
