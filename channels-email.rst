@@ -3,10 +3,11 @@ E-Mail
 
 Accounts
 ----------
-| All system email addresses can be added in this menu item.
-| If you want to fetch emails via POP3 or IMAP you have to create a mail channel in here.
+All system email addresses can be added in this menu item.
+If you want to fetch emails via POP3 or IMAP you have to create a mail channel in here.
 
 Just follow these steps:
+
 - Click “New”
 - Enter “Organization & Department Name”
 - Enter “Email address”
