@@ -12,6 +12,7 @@ That's how it works:
 1. specify the ticket groups for which the SLA is to apply (these can also be arbitrarily combined and thus specified). In the preview you see the selection of the tickets and doublecheck wheather those are correct.
 2. choose the business-calender
 3. define the SLA-Times:
+
 - First Response 	Timeframe for the first response (external call, email)
 - Update Time 		Timeframe for every following response (external call, Email)
 - Solution Time 	Timeframe for solving the problem (status: closed)
