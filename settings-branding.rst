@@ -1,14 +1,14 @@
 Branding
 ********
 
-Product-name
+*Product-name
 Defines the name of the application, shown in the web interface, tabs and title bar of the web browser.
 
-Organisation
+*Organisation
 Will be shown in the app and is included in email footers.
 
-Logo
+*Logo
 Defines the logo of the application, shown in the web interface.
 
-Schönes Datum
+*Pretty Date
 Defines date format you like the most.
