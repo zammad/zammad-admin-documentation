@@ -1,11 +1,17 @@
 Groups
 ******
 
-This is the group-manage area. You can edit existing and add new groups. 
+This is the group-manage area. You can edit existing and add new groups.
 
 What are groups actually?
-Groups in Zammad correspond to groups that edit tickets. For example, The tickets relevant to the sales department are available in the 'Sales' group, while the tickets for the support department are available in the 'Support' group. Tickets flow through various channels in Zammad and are sorted into the groups and made available to the agents responsible for the group.
-A group can be compared to a cabinet in which the folders are set sorted. Each agent has his / her closet for which he is responsible. Various persons have access to the contents of the cabinet.
+Groups in Zammad are similar to working groups that deal with different topics within a company.
+For example, The tickets relevant to the sales department are available in the 'Sales' group,
+while the tickets for the support department are available in the 'Support' group.
+Tickets enter Zammad through various channels and are sorted by groups. The tickets (cases) are thus made
+available to the agents responsible for the group.
+A group can be compared to a cabinet in which the folders (with cases that need to be processed) are set sorted.
+Each agent has his / her closet for which he is responsible.
+Several people can be responsible for processing the cases inside the cabinets and work on them. This setting can be defined for each individual user in Users Management
 
 Click on a group to access the edit mask. The following settings can be made here:
 
