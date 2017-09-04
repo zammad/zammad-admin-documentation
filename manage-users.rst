@@ -6,8 +6,10 @@ On the right a new user can be created and edited by clicking on an existing use
 The mask to add and edit users have the same structure:
 
 - adding all relevant information about a user. If there are more information needed, it is possible to add a attribute in the object-management (system --> objects-->users)
-- users can be assigned to an organization 
+- users can be assigned to an organization
 - users can be set as a VIP (These users can be selected specifically for the SLA or other automatisms, in which these users must be distinguished from other users)
 - set or change password
 - assign user rights
 - set user active/inactive
+
+Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin only need the email address for registration. The emails sent to the customer are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.  
