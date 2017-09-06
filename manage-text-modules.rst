@@ -1,7 +1,7 @@
 Text Modules
 ************
 
-Create text modules to spend less time writing responses. Text modules can include smart variables like the users name or email address.
+Create text modules to spend less time writing responses. You can create text passages or even entire response templates.Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
 
 Examples of snippets are:
@@ -20,4 +20,4 @@ ticket.owner (e. g. ticket.owner.firstname, ticket.owner.lastname)
 ticket.organization (e. g. ticket.organization.name)
 user (e. g. user.firstname, user.email)
 
-To select placeholders from a list, just enter "::". The list can be searched with the arrow keys after inputting keywords.
+To select placeholders from a list, just enter "::" in the text block. The list can be searched with the arrow keys after inputting keywords or shortcuts.
