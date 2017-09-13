@@ -22,9 +22,10 @@ That's how it works:
 8. Set the scheduler to inactive
 
 
-For this example, it means:
+**For this example, it means:**
 
 Every day (Monday to Friday) at 9:00 a. m., all tickets will be:
+
 - assigned to the Sales group and 
 - are not closed 
 - and whose escalation was 30 minutes ago
@@ -34,4 +35,5 @@ assigned to Emma and the priority is set to 3-high.
 As a supervisor in the Sales group, this enables you to intercept and process escalated tickets.
 
 
-BTW: this is the only place where it's possible to delete tickets via frontend (action --> delete)
+**BTW:** 
+this is the only place where it's possible to delete tickets via frontend (action --> delete)
