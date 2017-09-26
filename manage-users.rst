@@ -13,6 +13,9 @@ If nothing has been selected, as you can see on the last screen, all user groups
 
 Here, only the administrators are selected - there are two in this system.
 
+Create and edit users
+----------
+
 On the right side by clicking "new user" a new user can be created:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Users-3.jpg
@@ -29,15 +32,18 @@ Users can be set as a VIP (These users can be selected specifically for the SLA 
 
 You can create further fields in the agent interface by choosing System --> Objects.
 
-Information about the user can be entered in the lower part of the edit mask. This information is only visible to agents:
+Any other relevant information about the user can be entered in the lower part of the edit mask (note). This information is only visible to agents:
  
-.. image:: images/manage/Zammad_Helpdesk_-_Users-6.jpg
+.. image:: images/manage/Zammad_Helpdesk_-_Users-6a.jpg
 
-**The assignment of rights / Permissions**
+The assignment of rights / Permissions
+----------
 
-...can only be set here via this mask!
+...can only be set here, via this mask!
 
 First, you can set which role the user should have in the system. Does this user have administrative rights, is he/she an agent who processes the tickets or a customer who only sees and processes his own tickets?
+
+.. image:: images/manage/Zammad_Helpdesk_-_Users-6b.jpg
 
 If the current user is an agent, you can select this option to open further settings. Now it is possible to select which rights are assigned to him in which group:
 
@@ -45,11 +51,22 @@ If the current user is an agent, you can select this option to open further sett
 
 If a user gets no rights to one group, the system does not display a ticket or ticket notification to the user. This group, for which he has no rights, is also not displayed in the group selection.
 
+
+View from user's perspective
+----------
+
 It's also possible to show the view from user's perspective - scroll over the action-column, like that:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Users-4.jpg
 
 This function can be used, for example, to test whether the rights assignment for the respective user has been set correctly - i. e. that this user only has access to the areas assigned to him/her.
+
+Set a user active/ inactive
+----------
+
+.. image:: images/manage/Zammad_Helpdesk_-_Users-8.jpg
+
+If a user is set to inactiv, he/she can no longer log in to the system. Other, active users will no longer see this user as a possible ticket owner
 
 
 **side note**
