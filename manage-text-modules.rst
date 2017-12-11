@@ -17,17 +17,19 @@ Creating keywords makes it easier to find the right text module.
 To select placeholders from a list, just enter "::" in the text block. The list can be searched with the arrow keys after inputting keywords or shortcuts.
 All text modules can be used in articles as well as in triggers (auto-messages) and in chat.
 
-**Tip:**
-If text modules are to be grouped, this can be done using shortcuts. Example country codes:
+:Tip::
+  If text modules are to be grouped, this can be done using shortcuts. Example country codes:
 
 Text modules are created for the group Germany as follows:
-Ger_Textmodule1
-Ger_Textmodule2
-...
+
+- Ger_Textmodule1
+- Ger_Textmodule2
+- ...
 
 for Austrian-Snippets:
-Aut_Textmodule1
-Aut_Textmodule2
+
+- Aut_Textmodule1
+- Aut_Textmodule2
 
 only the relevant text modules are displayed for each country
 
@@ -36,6 +38,7 @@ Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
 
 Examples of snippets are:
+**********************
 
 Hello Mrs. #{ticket.customer.lastname},
 
@@ -47,7 +50,9 @@ My Name is #{user.firstname},
 
 Of course you can also use multi line snippets.
 
+
 Available objects are:
+**********************
 
 ticket (e. g. ticket.state, ticket.group)
 
