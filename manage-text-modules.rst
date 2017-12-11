@@ -10,7 +10,7 @@ Text modules
 Text modules can be edited in the admin interface under Manage --> Text modules.
 Here you will find text snippets already created in the standard version, which can be extended as needed.
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/Zammad_Helpdesk_-_Text_modules.jpg
+.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/manage/Zammad_Helpdesk_-_Text_modules.jpg
 
 Creating keywords makes it easier to find the right text module.
 
@@ -65,11 +65,11 @@ Email-Templates
 If entire tickets with similar content are often created, ticket templates can be created. This speeds up ticket creation. Ticket templates can contain the following information: ticket type, customer, title, test, group, owner, status, priority and tags.
 The templates can be accessed via the letter icon as shown in the following picture:
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/Banners_and_Alerts_und_Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
+.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/manage/Banners_and_Alerts_und_Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
 
 Here you can either select an already created template or save the current one under a desired name.
 When you create a new template, all the required information is entered in the ticket and an appropriate name is selected, which is entered in the field "Save as template". After clicking on "Save", the template can be selected during the future ticketing process.
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
+.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/manage/Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
 
 The templates are available for all agents.
