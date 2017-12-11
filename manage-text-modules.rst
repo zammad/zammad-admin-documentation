@@ -10,7 +10,7 @@ Text modules
 Text modules can be edited in the admin interface under Manage --> Text modules.
 Here you will find text snippets already created in the standard version, which can be extended as needed.
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/manage/Zammad_Helpdesk_-_Text_modules.jpg
+.. image:: images/manage/Zammad_Helpdesk_-_Text_modules.jpg
 
 Creating keywords makes it easier to find the right text module.
 
