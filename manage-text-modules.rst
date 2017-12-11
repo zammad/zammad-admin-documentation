@@ -22,7 +22,7 @@ To select placeholders from a list, just enter "::" in the text block. The list 
 All text modules can be used in articles as well as in triggers (auto-messages) and in chat.
 
 
-:Tip:
+**Tip:**
 If text modules are to be grouped, this can be done using shortcuts. Example country codes:
 
 Text modules are created for the group Germany as follows:
@@ -41,32 +41,30 @@ thus only the relevant text modules are displayed for each country.
 
 
 
-Examples of snippets are:
-------
+**Examples of snippets are:**
 
-Hello Mrs. #{ticket.customer.lastname},
+  Hello Mrs. #{ticket.customer.lastname},
 
-Hello Mr. #{ticket.customer.lastname},
+  Hello Mr. #{ticket.customer.lastname},
 
-Hello #{ticket.customer.firstname},
+  Hello #{ticket.customer.firstname},
 
-My Name is #{user.firstname},
+  My Name is #{user.firstname},
 
 Of course you can also use multi line snippets.
 
 
-Available objects are:
-------
+**Available objects are:**
 
-ticket (e. g. ticket.state, ticket.group)
+  ticket (e. g. ticket.state, ticket.group)
 
-ticket.customer (e. g. ticket.customer.firstname, ticket.customer.lastname)
+  ticket.customer (e. g. ticket.customer.firstname, ticket.customer.lastname)
 
-ticket.owner (e. g. ticket.owner.firstname, ticket.owner.lastname)
+  ticket.owner (e. g. ticket.owner.firstname, ticket.owner.lastname)
 
-ticket.organization (e. g. ticket.organization.name)
+  ticket.organization (e. g. ticket.organization.name)
 
-user (e. g. user.firstname, user.email)
+  user (e. g. user.firstname, user.email)
 
 
 Email-Templates
