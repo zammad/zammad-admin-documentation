@@ -23,20 +23,21 @@ All text modules can be used in articles as well as in triggers (auto-messages) 
 
 
 **Tip:**
-If text modules are to be grouped, this can be done using shortcuts. Example country codes:
+  If text modules are to be grouped, this can be done using shortcuts. Example country codes:
 
-Text modules are created for the group Germany as follows:
+  Text modules are created for the group Germany as follows:
 
-- Ger_Textmodule1
-- Ger_Textmodule2
-- ...
+  - Ger_Textmodule1
+  - Ger_Textmodule2
+  - ...
 
-for Austrian-Snippets:
+  for Austrian-Snippets:
 
-- Aut_Textmodule1
-- Aut_Textmodule2
+  - Aut_Textmodule1
+  - Aut_Textmodule2
 
-thus only the relevant text modules are displayed for each country.
+  thus only the relevant text modules are displayed for each country.
+
 
 
 
@@ -52,6 +53,7 @@ thus only the relevant text modules are displayed for each country.
   My Name is #{user.firstname},
 
 Of course you can also use multi line snippets.
+
 
 
 **Available objects are:**
