@@ -42,7 +42,7 @@ thus only the relevant text modules are displayed for each country.
 
 
 Examples of snippets are:
----
+------
 
 Hello Mrs. #{ticket.customer.lastname},
 
@@ -56,7 +56,7 @@ Of course you can also use multi line snippets.
 
 
 Available objects are:
----
+------
 
 ticket (e. g. ticket.state, ticket.group)
 
