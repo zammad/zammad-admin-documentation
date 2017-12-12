@@ -3,12 +3,13 @@ Organizations
 
 Organizations allow you to group customers. This has two important advantages, among other things.
 
-  1. As an agent you have not only the overview of a customer's tickets, but also an overview of the entire organization. For example, by searching for the organization, all the tickets are displayed and they can be opened easily by click.
+1.) As an agent you have not only the overview of a customer's tickets, but also an overview of the entire organization. For example, by searching for the organization, all the tickets are displayed and they can be opened easily by click.
 This overview appears as follows:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Awesome_Customer_Inc_.jpg
 
-  2. As a customer, you can view and edit your colleagues' tickets (if the organization is a "share", you can set this as the parameter for each organization).
+
+2.) As a customer, you can view and edit your colleagues' tickets (if the organization is a "share", you can set this as the parameter for each organization).
 
 **For example:**
    A customer user who has only created one ticket himself, but whose entire organization is 6, the overview looks like this:
