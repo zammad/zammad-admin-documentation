@@ -11,10 +11,11 @@ Zammad - Documentation for admin unsers
 .. toctree::
    :maxdepth: 2
    :caption: Manage
-   
+
    manage
    manage-users
    manage-groups
+   manage-roles
    manage-organizations
    manage-overviews
    manage-text-modules
@@ -53,7 +54,7 @@ Zammad - Documentation for admin unsers
    settings-system
    settings-security
    settings-ticket
-   
+
 .. _system-docs:
 
 .. toctree::
@@ -69,4 +70,4 @@ Zammad - Documentation for admin unsers
    system-monitoring
    system-packages
    system-sessions
-   system-version   
+   system-version
