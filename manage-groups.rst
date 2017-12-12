@@ -11,7 +11,9 @@ What are groups actually?
   Each agent has his / her closet for which he is responsible.
   Several people can be responsible for processing the cases inside the cabinets and work on them. This setting can be defined for each individual user in Users Management
 
-**Click on a group to access the edit mask. The following settings can be made here:**
+**group-settings**
+
+By clicking on a group or clicking "new group" you access the edit mask. The following settings can be made here:
 
 - set or change the name
 - Assignment timeout (in minutes) --> The time after the ticket is changed to "unassigned" after the assigned agent does not work on the ticket
@@ -21,3 +23,19 @@ What are groups actually?
 - signature -->  an already created signature can be selected (Channels --> E-Mail --> Signatures)
 - note --> notes are visible to agents but never to customers
 - set the group active or inactive
+
+Eventually it should look something like this:
+
+.. image:: images/manage/Zammad_Helpdesk_-_Groups.jpg
+
+The access rights for agents to a group can be set up as follows:
+
+1.) directly via the user administration (Admin-Interface --> Manage --> Users)
+`<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-users.html>`_
+
+or
+
+2) With the permission setting via a role (Admin-Interface --> Manage --> Role)
+`<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-roles.html>`_
+
+It is recommended to avoid using both configurations.
