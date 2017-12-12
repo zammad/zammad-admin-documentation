@@ -69,16 +69,9 @@ Of course you can also use multi line snippets.
   user (e. g. user.firstname, user.email)
 
 
-Email-Templates
--------------
-If entire tickets with similar content are often created, ticket templates can be created. This speeds up ticket creation. Ticket templates can contain the following information: ticket type, customer, title, test, group, owner, status, priority and tags.
-The templates can be accessed via the letter icon as shown in the following picture:
+  Ticket-Templates
+  -------------
 
-.. image:: images/manage/Banners_and_Alerts_und_Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
+  Ticket templates can be created by any agent. Therefore you will find information under the following link: 
 
-Here you can either select an already created template or save the current one under a desired name.
-When you create a new template, all the required information is entered in the ticket and an appropriate name is selected, which is entered in the field "Save as template". After clicking on "Save", the template can be selected during the future ticketing process.
-
-.. image:: images/manage/Zammad_Helpdesk_-_Call_Inbound__Inquiry.jpg
-
-The templates are available for all agents.
+  http://zammad-user-documentation.readthedocs.io/de/latest/zammad-ticket-templates.html
