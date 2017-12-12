@@ -69,9 +69,10 @@ Of course you can also use multi line snippets.
   user (e. g. user.firstname, user.email)
 
 
-  Ticket-Templates
-  -------------
 
-  Ticket templates can be created by any agent. Therefore you will find information under the following link: 
+  Ticket-Templates
+  ----------------
+
+  Ticket templates can be created by any agent. Therefore you will find information under the following link:
 
   http://zammad-user-documentation.readthedocs.io/de/latest/zammad-ticket-templates.html
