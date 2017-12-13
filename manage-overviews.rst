@@ -9,7 +9,7 @@ In the Overview Management Area you can add new overviews, edit or delete them.
 The following attributes can be set when creating an overview:
 
 
-**available for a specific role / available for certain users**
+**AVALABLE FOR A SPECIFIC ROLE / AVAILABLE FOR CERTAIN USERS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
@@ -20,18 +20,20 @@ hint
 With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
 
 
-**only available for users/customer with shared organizations**
+**ONLY AVAILABLE FOR USERS/CUSTOMER WITH SHARED ORGANIZATIONS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews2.jpg
 
  hint
    shared oranization = that's a setting in the organizations-management
+
    `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-organizations.html>`_
 
  This is only important if the available role is Customer. When deciding whether yes or no is selected, it must be considered to what extent this makes sense - For example, if a customer sees only his own tickets, many views are usually not necessary.
 
 
-**available for users which are replacements for other users**
+
+**AVAILABLE FOR USERS WHICH ARE REPLACEMENTS FOR OTHER USERS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews3.jpg
 
@@ -41,14 +43,14 @@ For example:
   Agent A is on vacation and Agent B will take care of his tickets. Then an overview can be set up, which only shows Agent B all new tickets from Agent A for this period of time, without having to search for them separately.
 
 
-**conditions for shown tickets**
+**CONDITIONS FOR SHOWN TICKETS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews4.jpg
 
 What conditions should the listed tickets contain? (=it is like a filter) You can add more than one condition. In the preview you have the possibility to double check if your entry of the conditions makes sense by directly displaying tickets that match your filtering.
 
 
-**attributes**
+**ATTRIBUTES:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Unassigned___Open.jpg
 
@@ -61,7 +63,7 @@ With this setting you can select the headlines of your overview. Depending on wh
 These settings can also be adjusted individually by each agent at a later time (In the overview, top right: Options).
 
 
-**order/ direction / group by /active**
+**ORDER / DIRECTION / GROUP BY / ACTIVE:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews6.jpg
 
