@@ -19,8 +19,7 @@ hint
 
 With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
 
-
-**ONLY AVAILABLE FOR USERS/CUSTOMER WITH SHARED ORGANIZATIONS:**
+**ONLY AVAILABLE FOR USERS / CUSTOMERS WITH SHARED ORGANIZATIONS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews2.jpg
 
@@ -30,7 +29,6 @@ With these settings you can choose whether to make the overviews available to an
    `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-organizations.html>`_
 
  This is only important if the available role is Customer. When deciding whether yes or no is selected, it must be considered to what extent this makes sense - For example, if a customer sees only his own tickets, many views are usually not necessary.
-
 
 
 **AVAILABLE FOR USERS WHICH ARE REPLACEMENTS FOR OTHER USERS:**
