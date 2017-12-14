@@ -8,10 +8,11 @@ That's how it works:
 
 **1. Determine the ticket attributes (conditions)**
 
-...to limit the tickets on which an action is to be performed (these can also be arbitrarily combined and thus specified):
+Specify for which type of tickets an action should be executed (these can also be arbitrarily combined and thus specified):
 
 .. image:: images/manage/Zammad_Helpdesk_-_Triggers10.jpg
 
+The following attributes can be selected and used as a condition:
 
 Ticket attributes:
   Define matching ticket attributes for which a trigger will be executed. You can also distinguish between creating and updating tickets (it’s called action).
@@ -33,6 +34,7 @@ Based on matching conditions, certain changes on tickets will be made and/or not
 
 
 The following can be changes on objects:
+
 - either an automatic change of ticket information (status, owner, title,...) or
 - an automatically generated email that is sent to the customer or the agent of the relevant ticket or to all agents in the system.
 
