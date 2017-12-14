@@ -3,11 +3,11 @@ Macros
 
 You can use macros in Zammad to automate recurring sequences, saving time (and nerves). This allows a combined sequence of actions on the ticket to be executed with just one click.
 
-In the Macros Management Mask you can add, edit and delete macros.
+In the Macros Management Mask you can add, edit and delete macros:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros.jpg
 
-That's how the edit-mask look like:
+By clicking on an existing macro or by clicking on "New Macro" (top right) the edit mask opens:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros2.jpg
 
@@ -24,10 +24,10 @@ One macro can contain any number of changes to the ticket. In this example you c
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros4.jpg
 
-click on them and move the mouse pointer:
+select all relevant tickets, click, hold down the cursor and move it anywhere, like that:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros5.jpg
 
-Now all macros are displayed and you can move all the tickets into it:
+Keep the cursor pressed and go to "Run Macro" so that you can see all active macros:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros6.jpg
