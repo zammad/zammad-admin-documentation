@@ -6,13 +6,13 @@ You can create any number of profiles in the Admin Interface in the "Report Prof
 
 .. image:: images/manage/Zammad_Helpdesk_-_Report_Profile.jpg
 
+This example shows the statistics of all tickets of the organization "Awesome Customer" that were created in the last month.
+
 The filters can be combined with each other as desired. The filters build on each other, which means that they are further restricted per additional attribute.
 
 All configured filters are displayed in the statistics area and you can switch between them with one click:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Report_Profile2.jpg
-
-This example shows the statistics of all tickets of the organization "Awesome Customer" that were created in the last month.
 
 
 Further information about the reporting:
