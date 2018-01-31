@@ -24,5 +24,10 @@ You have two options to implement the chat on your website:
 - Automatically show chat (that's the default-setting)
 - or manually open chat.
 
+***Chat restrictions***
+
+You offer a chat for your target group, but you don't want to activate chat for certain IP areas or countries? Then you have the possibility to store this fast and easily per chat configuration in the admin area. You can define for which areas no chat should be offered:
+
+.. image:: images/channels/Chat_3.jpg
 
 In the adminarea you can also find more information about the customization of the chat.
