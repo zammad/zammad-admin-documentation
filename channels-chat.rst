@@ -3,10 +3,6 @@ Chat
 
 You can create chat widgets for your web pages to allow visitors to chat with you.
 
-In the left corner there is a switch for the agents to turn the chats on and off:
-
-.. image:: images/channels/Chat.jpg
-
 The area for configuring the chat can be found in the admin area at Channels --> Chat:
 
 .. image:: images/channels/Chat_2.jpg
