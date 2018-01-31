@@ -30,7 +30,7 @@ Click on “Create App ID" and enter app name
 .. image:: images/channels/FB_11.png
 
 
-***Configure Zammad as Facebook app
+***Configure Zammad as Facebook app***
 
 - Go to “Admin -> Channels -> Facebook”
 - Click on “Connect Facebook App” and enter your “App ID”, “App Secret” and verify the “Callback URL”.
@@ -38,7 +38,7 @@ Click on “Create App ID" and enter app name
 Done, your Zammad is configured as Facebook App now.
 
 
-***Link your Facebook Page to your Zammad Facebook app
+***Link your Facebook Page to your Zammad Facebook app***
 
 Now you need to link your Facebook Page from which you want to get posts and send out comments.
 
@@ -57,7 +57,7 @@ After you are done, you will get an overview of all linked Facebook Accounts.
 .. image:: images/channels/FB_23.jpg
 
 
-***Start using your new channel
+***Start using your new channel***
 
 Start and write a post to your page, short time later you will have a new ticket in Zammad.
 
