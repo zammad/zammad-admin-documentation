@@ -30,4 +30,4 @@ select all relevant tickets, click, hold down the cursor and move it anywhere, l
 
 Keep the cursor pressed and go to "Run Macro" so that you can see all active macros:
 
-.. image:: images/manage/Zammad_Helpdesk_-_Macros6.jpg
+.. image:: images/manage/Zammad_Helpdesk-Macros6.jpg
