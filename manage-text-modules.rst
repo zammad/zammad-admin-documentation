@@ -74,4 +74,4 @@ Ticket-Templates
 
   Ticket templates can be created by any agent. Therefore you will find information under the following link:
 
-`<http:://zammad-user-documentation.readthedocs.io/de/latest/zammad-ticket-templates.html>`_
+`<http://zammad-user-documentation.readthedocs.io/de/latest/zammad-ticket-templates.html>`_
