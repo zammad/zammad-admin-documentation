@@ -36,7 +36,7 @@ Additional E-Mail Setting
 
 Since version Zammad 2.0 there are different ticket settings that can be made directly on the ticket. These settings are at the top of each ticket, to the right of the subject:
 
-.. image:: images/channels/additional-email-settings.jpg
+.. image:: images/manage/additional-email-settings.jpg
 
 The following options can be set individually for each admin:
 
