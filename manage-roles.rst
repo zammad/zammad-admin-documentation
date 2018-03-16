@@ -13,7 +13,7 @@ For example, you could choose someone as a "Text-Module-Coordinator" who is a no
 
 You can give access to the following sections:
 
-.. image:: images/manage/Zammad_Helpdesk_-_Roles_2.jpg
+.. image:: images/manage/Zammad_Helpdesk_-_Roles-2.jpg
 
 **Understanding each Permission:**
 
