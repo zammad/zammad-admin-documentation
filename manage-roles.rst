@@ -13,6 +13,17 @@ For example, you could choose someone as a "Text-Module-Coordinator" who is a no
 
 You can give access to the following sections:
 
+.. image:: images/manage/Zammad_Helpdesk_-_Roles_admin.jpg
+
+Agent
+-------
+
+The authorization can be assigned to the individual communication functions:
+
+.. image:: images/manage/Zammad_Helpdesk_-_Roles3.jpg
+
+In addition, access rights can be given to the individual groups:
+
 .. image:: images/manage/Zammad_Helpdesk_-_Roles-2.jpg
 
 **Understanding each Permission:**
@@ -31,17 +42,6 @@ You can give access to the following sections:
 
 **FULL**
      Right to create, read, change and see tickets in the overviews.
-
-Agent
--------
-
-The authorization can be assigned to the individual communication functions:
-
-.. image:: images/manage/Zammad_Helpdesk_-_Roles3.jpg
-
-In addition, access rights can be given to the individual groups:
-
-.. image:: images/manage/Zammad_Helpdesk_-_Roles4.jpg
 
 Customer
 -------
