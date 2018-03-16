@@ -15,6 +15,23 @@ You can give access to the following sections:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Roles2.jpg
 
+**Understanding each Permission:**
+
+**READ**
+     Read only access to the tickets and entries of this group.
+
+**CREATE**
+     Right to create tickets or entries in this group.
+
+**CHANGE**
+     Right to change the attributes of tickets or entries or areas that belong to this group.
+
+**OVERVIEW**
+     Right to see tickets in the overviews. A view of the ticket details is not possible
+
+**FULL**
+     Right to create, read, change and see tickets in the overviews.
+
 Agent
 -------
 
