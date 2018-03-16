@@ -35,11 +35,18 @@ Additional E-Mail Setting
 =====================
 Since version Zammad 2.0 there are different ticket settings that can be made directly on the ticket. These settings are at the top of each ticket, to the right of the subject:
 
-.. image:: images/gettingstarted/Abb44-Ticketeinstellungen.jpg
+.. image:: images/channels/additional-email-settings.jpf
 
-The following options can be set individually for each admin::
+The following options can be set individually for each admin:
 
-- Note - Default visibility: Is a note created in the standard system as internal or external? (this setting can be changed later on for each article)
-- E-mail subject: If this setting is deactivated, the e-mail subject is regenerated based on the ticket subject. If you enter "yes", you can enter a separate subject for each article.
-- Email - full quote: If this setting is activated, the content of all previous articles marked as external will be listed at the end of the new message.
-- Twitter initials: Adding the sender's initials to the end of a tweet.
+Note
+     Default visibility: Is a note created in the standard system as internal or external? (this setting can be changed later on for each article)
+
+E-mail subject
+     If this setting is deactivated, the e-mail subject is regenerated based on the ticket subject. If you enter "yes", you can enter a separate subject for each article.
+
+Email - full quote
+     If this setting is activated, the content of all previous articles marked as external will be listed at the end of the new message.
+
+Twitter initials
+     Adding the sender's initials to the end of a tweet.
