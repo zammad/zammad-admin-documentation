@@ -1,5 +1,5 @@
-Zammad - Documentation for admin unsers
-=======================================
+Zammad - Documentation for administrators
+=========================================
 
 * :ref:`channels-docs`
 * :ref:`manage-docs`
