@@ -54,3 +54,10 @@ All of Jacob Smith's tickets arrive in Zammad and are automatically assigned to 
 3.) With this trigger, the person who created the last article in the ticket receives an automatic email.
 
 .. image:: images/manage/Zammad_Helpdesk_-_Triggers3.jpg
+
+
+Additional information on attributes:
+-------------
+
+* **Closed at** is set once when a ticket is closed and will not be updated
+* **Type** refers to the type of an article that has been added to the ticket (eg. last updated by mail)
