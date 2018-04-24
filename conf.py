@@ -1,12 +1,13 @@
 import sys
 import os
+import time
 
 import sphinx_rtd_theme
 
 html_logo = "images/zammad_logo_70x61.png"
 html_favicon = "images/favicon.ico"
 project = u'Zammad'
-copyright = u'2017, Zammad'
+copyright = u'%s, Zammad' % time.strftime("%Y")
 author = u'Zammad'
 
 source_suffix = '.rst'
