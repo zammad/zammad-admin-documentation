@@ -59,5 +59,6 @@ All of Jacob Smith's tickets arrive in Zammad and are automatically assigned to 
 Additional information on attributes:
 -------------
 
-* **Closed at** is set once when a ticket is closed and will not be updated
-* **Type** refers to the type of an article that has been added to the ticket (eg. last updated by mail)
+* **Ticket - Closed at** is set once when a ticket is closed and will not be updated.
+* **Article - Type** refers to the type of an article that has been added to the ticket (e. g. email, phone, note...)
+* **Article - Sender** refers to the sender type of an article that has been added to the ticket (e. g. Agent, Customer or System)
