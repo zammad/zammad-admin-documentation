@@ -43,6 +43,12 @@ In addition, access rights can be given to the individual groups:
 **FULL**
      Right to create, read, change and see tickets in the overviews.
 
+
+Here are a few examples of different combinations of rights:
+
+.. image:: images/manage/permission-examples.jpg
+
+
 Customer
 -------
 Access to customer tickets based on current_user an organization
