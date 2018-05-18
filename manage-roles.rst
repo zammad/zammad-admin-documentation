@@ -46,7 +46,7 @@ In addition, access rights can be given to the individual groups:
 
 Here are a few examples of different combinations of rights:
 
-.. image:: images/manage/permission-examples.jpg
+.. image:: images/manage/permission-examples2.jpg
 
 
 Customer
