@@ -39,3 +39,13 @@ or
 `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-roles.html>`_
 
 It is recommended to avoid using both configurations.
+
+
+  ..Hint..
+  
+  If the "Group" field does not appear in the ticket information, check whether:
+
+  a) more than one group is created
+  b) the current user has change-permissions to more than one group
+
+  This is because Zammad automatically hides selection fields with only one selection
