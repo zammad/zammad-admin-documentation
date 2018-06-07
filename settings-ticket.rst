@@ -17,6 +17,18 @@ The format of the subject.
 
 *None* means there is no ticket-number, only the name of the ticket: Some Subject (without ticket number). In the last case you should enable "postmaster_follow_up_search_in" to recognize followups based on email headers and/or body.
 
+*Ticket Last Contact Behaviour*
+Sets the last customer contact based on the last contact of a customer or on the last contact of a customer to whom an agent has not yet responded.
+
+This specification refers to settings, for example, in the overviews:
+
+.. image:: images/settings/Zammad_Helpdesk_-_Open.jpg
+
+or when setting triggers:
+.. image:: images/settings/Trigger-last-contact.jpg
+
+So if it is set "without consideration an agent has replied to it" --> Then the time of the last contact of the customer will be shown, although the agent has sent a message to the customer in the meantime.
+
 
 Number
 ----------
@@ -30,3 +42,16 @@ Number
 	With Checksum, a checksum will be appended to the counter. The format looks like "SystemID.Counter.CheckSum" (e. g. 10101384, 10101392).
 	--> Checksum:
 	--> MIN. SIZE OF NUMBER
+
+
+Auto Assignment
+----------
+
+In a larger Zammad environment, it happens that several agents open the same ticket at the same time. Although collision detection is then effective, the efficiency of processing can be increased by means of the new automatic assignment of tickets when a ticket is opened.
+
+The automatic assignment of tickets can be activated and configured in the admin area under "Settings"->"Ticket"->"Automatic assignment".
+
+The following parameters can be configured:
+
+A filter to select the tickets for which automatic assignment is to be activated (e.g. only for the sales group)
+Exceptions of users for which no automatic assignment is to be active (e.g. for group leaders).

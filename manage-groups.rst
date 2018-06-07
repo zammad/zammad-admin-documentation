@@ -39,3 +39,7 @@ or
 `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-roles.html>`_
 
 It is recommended to avoid using both configurations.
+
+  ..Hint::
+    If the group selection in the ticket is not available for a user, check if there is more than one group configured and assigned to this user.
+    If there is only one selection option, Zammad hides the field automatically.
