@@ -40,6 +40,13 @@ or
 
 It is recommended to avoid using both configurations.
 
-  ..Hint::
-    If the group selection in the ticket is not available for a user, check if there is more than one group configured and assigned to this user.
-    If there is only one selection option, Zammad hides the field automatically.
+
+
+  ..Hint..
+
+  If the "Group" field does not appear in the ticket information, check whether:
+
+  a) more than one group is created
+  b) the current user has change-permissions to more than one group
+
+  This is because Zammad automatically hides selection fields with only one selection
