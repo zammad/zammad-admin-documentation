@@ -31,3 +31,12 @@ Within the organization can be set the following things:
 - if the assignment is domain based (assign users based on domain)
 - note
 - if it's active or inactive
+
+
+Import of organizations via CSV file
+----------
+With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
+
+To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be finally executed.
+
+.. image:: images/manage/Zammad_Helpdesk_-_Organizations-Import.jpg
