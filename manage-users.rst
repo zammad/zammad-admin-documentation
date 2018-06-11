@@ -33,8 +33,19 @@ Users can be set as a VIP (These users can be selected specifically for the SLA 
 You can create further fields in the agent interface by choosing System --> Objects.
 
 Any other relevant information about the user can be entered in the lower part of the edit mask (note). This information is only visible to agents:
- 
+
 .. image:: images/manage/Zammad_Helpdesk_-_Users-6a.jpg
+
+
+Import of users via CSV file
+----------
+With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
+
+To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be finally executed.
+
+.. image:: images/manage/Zammad_Helpdesk_-_Users-Import.jpg
+
+
 
 The assignment of rights / Permissions
 ----------
@@ -70,4 +81,4 @@ If a user is set to inactiv, he/she can no longer log in to the system. Other, a
 
 
 **side note**
-Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only. The emails sent to the customer are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.  
+Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only. The emails sent to the customer are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.
