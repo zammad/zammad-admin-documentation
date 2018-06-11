@@ -69,8 +69,8 @@ Of course you can also use multi line snippets.
   user (e. g. user.firstname, user.email)
 
 
-  Delete or clone text modules
-  ----------
+Delete or clone text modules
+----------
 
   It happens more often that similar text modules have to be created or unnecessary ones deleted. For these cases you can click on the 3 points in the text module overview on the right side and select the corresponding action:
 
@@ -79,8 +79,8 @@ Of course you can also use multi line snippets.
   When cloning, text modules with all attributes are duplicated and can be edited later.
 
 
-  Import of text modules via CSV file
-  ----------
+Import of text modules via CSV file
+----------
   With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
 
   To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be finally executed.
