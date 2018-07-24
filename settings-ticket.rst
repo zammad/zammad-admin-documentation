@@ -11,11 +11,17 @@ Base
 
 The format of the subject.
 
-*Right* means the number is at the right side, name of the ticket on the left: Some Subject [Ticket#12345]
+*Right* 
 
-*Left* means the number is at the left side, name of the ticket on the right: [Ticket#12345] Some Subject
+means the number is at the right side, name of the ticket on the left: Some Subject [Ticket#12345]
 
-*None* means there is no ticket-number, only the name of the ticket: Some Subject (without ticket number). In the last case you should enable "postmaster_follow_up_search_in" to recognize followups based on email headers and/or body.
+*Left* 
+
+means the number is at the left side, name of the ticket on the right: [Ticket#12345] Some Subject
+
+*None* 
+
+means there is no ticket-number, only the name of the ticket: Some Subject (without ticket number). In the last case you should enable "postmaster_follow_up_search_in" to recognize followups based on email headers and/or body. You'll find that setting in Channels --> Email-->Settings.
 
 *Ticket Last Contact Behaviour*
 Sets the last customer contact based on the last contact of a customer or on the last contact of a customer to whom an agent has not yet responded.
