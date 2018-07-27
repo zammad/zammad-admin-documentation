@@ -31,6 +31,27 @@ Filter
 With Filters you can e.g. dispatch new Tickets into certain groups or set a certain priority for Tickets of an VIP customer. Different attributes of a filter can be combined with each other. Likewise, the following actions can be combined. It should be borne in mind that the combined attributes build on each other. If a filter is no longer needed, it can either be temporarily set inactive or deleted directly.
 
 
+Signature
+----------
+You can create a separate signature for each group in Zammad. The individual signatures are created here:
+
+.. image:: images/channels/Zammad_Helpdesk_-Signature.jpg
+
+Afterwards, the existing (and active) signatures are available in the group editing mask:
+
+.. image:: images/channels/Signature2.jpg
+
+Information can be automatically loaded into a signature via "Snippets". All information stored on the ticket, assigned customers or agents can be inserted. This makes it possible to design the signature individually. To load a list of possible snippets, press"::" (two colons) in the text field of the signature:
+
+.. image:: images/channels/Signature3.jpg
+
+Here is an example of a signature:
+
+.. image:: images/channels/Signature4.jpg
+
+Currently the snippets can only be loaded into already created tickets (status Zammad 2.5)
+
+
 Additional E-Mail Setting
 ----------
 
