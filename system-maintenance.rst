@@ -17,4 +17,4 @@ You can place a short message for all users on the login page. This will then be
 
 But you can also inform all agents with a message about something:
 
-image:: images/maintenance/Login-2.jpg
+.. image:: images/maintenance/Login-2.jpg
