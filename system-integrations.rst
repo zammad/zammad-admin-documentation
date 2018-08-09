@@ -40,8 +40,8 @@ What can it do for me?
 
 [1]_ requires PBX/telephone system support
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/system/CTI-1.jpg
+.. image:: images/system/CTI-1.jpg
 
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/system/CTI-2.jpg
+.. image:: images/system/CTI-2.jpg
 
 More information can be found on https://docs.zammad.org/en/latest/cti-api-intro.html
