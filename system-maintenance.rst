@@ -11,9 +11,10 @@ Before the maintenance mode is activated, you can not only inform about it on th
 
 @Login
 ========================
-.. image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/maintenance.jpg
+You can place a short message for all users on the login page. This will then be displayed as follows:
 
+.. image:: images/maintenance/Login-1.jpg
 
-but you can also inform all agents with a message about it:
+But you can also inform all agents with a message about something:
 
-image:: images/Users/johannakiefer/Entwicklung/zammad-admin-documentation/images/maintenance.jpg
+image:: images/maintenance/Login-2.jpg
