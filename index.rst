@@ -1,11 +1,6 @@
 Zammad - Documentation for administrators
 =========================================
 
-* :ref:`channels-docs`
-* :ref:`manage-docs`
-* :ref:`settings-docs`
-* :ref:`system-docs`
-
 .. _manage-docs:
 
 .. toctree::
