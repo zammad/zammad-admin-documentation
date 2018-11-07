@@ -64,6 +64,7 @@ Zammad - Documentation for administrators
 
    system
    system-integrations
+   system-integrations-telephony
    system-api
    system-objects
    system-translations

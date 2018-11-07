@@ -1,47 +1,38 @@
 Integrations
 ************
 
-CTI (generic)
-========================
+Zammad offers numerous integrations that add rich features to your instance.
 
-Since Zammad 2.6 anyone with access to a CTI (computer telephony integration) system can use the phone-functionality.
-
-
-Using the CTI-integration enables you to greet customers by name,  get their tickets up on the screen with a single click. Or, identify missed calls at a glance, and return calls right from within Zammad.
-Manufacturers of telephone systems or developers can use this interface to connect their telephone system to Zammad.
-
-What do I need to get started?
---------
-
-Zammad requires the following information to support the agent:
-
-- individual call events (e.g., call incoming/answered/ended)
-- caller ID data
-
-To use the new CTI interface, your CTI system must transmit this information (and only this information) to Zammad via HTTP.
-
-What can it do for me?
---------
-
-***Inbound calls***
-- Caller ID display: Open a caller’s customer profile with just one click
-- Intelligent caller ID search: Automatically scans tickets for caller ID data (e.g., in email signatures) if customer account data is missing
-- Caller overview: See a caller’s entire ticket history, or instantly create a new ticket
-- Call journal: See all calls at a glance, along with their status (e.g., which ones require a call-back?)
-- Agent overview: See who’s currently on a call
-- Selective call blocking [1]_
-- Do-not-disturb mode [1]_
+.. Note:: We're still working on this part of our dcoumentation, stay tight!
 
 
-***Outbound calls***
+LDAP / Active Directory
+=======================
 
-- Direct dialing: Initiate calls from within Zammad [1]_
-- Dynamic caller ID: Set your caller ID based on, e.g., the destination country of the call*
+With our LDAP-Integration, you can easilly use existing authentication systems without having to update more than one source.
+Also, e.g. password policies are ensured by your LDAP-Source - Zammad will always contact your LDAP-Server for authentications.
 
-[1]_ requires PBX/telephone system support
 
-.. image:: images/system/CTI-1.jpg
+To configure LDAP-Integration, simply go to the Admin-Settings -> System -> Integrations -> LDAP.
+Press "change" and follow the wizard for adding the needed LDAP-Information to Zammad.
+On the last step Zammad will ask you for your wanted LDAP-Mapping. By default, Zammad only Maps Login, First- and Lastname.
+Technically you can map any LDAP object to a Zammad User-Object (this also works for Custom Objects!).
 
-.. image:: images/system/CTI-2.jpg
+On this wizard step, you can also define the wanted LDAP-Group to Zammad-Role mapping.
 
-More information can be found on https://docs.zammad.org/en/latest/cti-api-intro.html
+.. Note:: Please note that nested groups are currently not supported by Zammad.
+
+If needed, you can also change the user filter for your LDAP-Query. The option "Users without assigned LDAP groups" will by default assign the Customer-Role 
+(default signup role) to any LDAP-User, that doesn't match to the above role-mapping. After pressing Continue, Zammad will check if the configuration is okay. 
+You can then enable LDAP and start your first synch. The synch will then run hourly - if you need to change mappings, you can change the configuration at any time.
+
+.. image:: images/system/ldap-1.jpg
+
+.. Note:: | You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active-Directory Accounts (the Users will be set to inactive within Zammad).
+          | You can find further information for Active Directory Filters at the Webseite from Microsoft_.
+		  
+.. _Microsoft: https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
+
+After the sync has finished, you can find the new LDAP-Users under "Users".Zammad integrates them just normal users, the difference is the login name.
+
+.. image:: images/system/ldap-2.jpg
