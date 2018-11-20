@@ -1,23 +1,27 @@
 Forms
 *****
 
-With form you can add a form to your web page which directly generates a ticket for you.
-**Please note:** At the moment it is not possible to add more (or custom) fields to a Zammad Form. 
+.. hint:: At the moment it is not possible to add more (or custom) fields to a Zammad Form. 
 
-You can set the following things for this form:
+Feedback or contact forms are quite often used on websites. Usually they will generate an email which will be sent to somebody who forwards it and so on. With Zammad it’s quite easy to integrate these forms into your website and directly generate tickets with them. In just 2 minutes.
 
-* the group the form submits the message to
-* title of the form
-* Name of the forms submit button
-* The message being displayed after submitting the form
-* you also have further options:
-   * enabling debugging mode for implementation
-   * enable displaying the forms title when being opened
-   * the option to directly display the form or after a button being pressed ("Start modal dialog for form")
-   * disable loading CSS for the form (handy if you want to integrate the CSS information within your stylesheet)
-   * Add a new field for uploading files
+Go to "Admin -> Channels -> Form" and enable the switch for this feature. Below you can adapt your form settings.
 
+.. image:: images/channels/zammad_form_init.png
+   :alt: adapt your form settings
 
-Press "Preview" to see how the form looks like
+In preview mode you can test if the form fits your needs (e. g. if it opens as modal dialog or if it's shown inline on the website)
 
-The last step is to add the Javascript code snippet to your web page and - that's it -
+.. image:: images/channels/zammad_form_preview.png
+   :alt: test it in preview mode
+
+Just copy the JavaScript snippet and paste it into your website. That's all. Just 2 minutes.
+
+.. image:: images/channels/zammad_form_js_cp.png
+   :alt: copy the JavaScript snippet and paste it into your website - done
+
+Finally, the forms will look as follows:
+
+.. image:: images/channels/zammad_form_live.png
+   :alt: example form as modal dialog
+
