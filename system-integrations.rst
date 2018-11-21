@@ -6,33 +6,46 @@ Zammad offers numerous integrations that add rich features to your instance.
 .. Note:: We're still working on this part of our dcoumentation, stay tight!
 
 
-LDAP / Active Directory
-=======================
+Integrations for phone systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-With our LDAP-Integration, you can easilly use existing authentication systems without having to update more than one source.
-Also, e.g. password policies are ensured by your LDAP-Source - Zammad will always contact your LDAP-Server for authentications.
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
 
+   integrations/generic-cti
+   integrations/placetel-cti
+   integrations/sipgate
+   
+Integrations for authentication and customers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To configure LDAP-Integration, simply go to the Admin-Settings -> System -> Integrations -> LDAP.
-Press "change" and follow the wizard for adding the needed LDAP-Information to Zammad.
-On the last step Zammad will ask you for your wanted LDAP-Mapping. By default, Zammad only Maps Login, First- and Lastname.
-Technically you can map any LDAP object to a Zammad User-Object (this also works for Custom Objects!).
+.. Note:: This section currently misses the Clearbit.
 
-On this wizard step, you can also define the wanted LDAP-Group to Zammad-Role mapping.
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
 
-.. Note:: Please note that nested groups are currently not supported by Zammad.
+   integrations/ldap
+   integrations/exchange
+   
+Integrations for Monitoring Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If needed, you can also change the user filter for your LDAP-Query. The option "Users without assigned LDAP groups" will by default assign the Customer-Role 
-(default signup role) to any LDAP-User, that doesn't match to the above role-mapping. After pressing Continue, Zammad will check if the configuration is okay. 
-You can then enable LDAP and start your first synch. The synch will then run hourly - if you need to change mappings, you can change the configuration at any time.
+.. Note:: This section currently misses the following integrations:
 
-.. image:: images/system/ldap-1.jpg
+  * Check_MK
+  * Icinga
+  * Monit
+  * Nagios
+  
+Other Integrations
+^^^^^^^^^^^^^^^^^^
 
-.. Note:: | You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active-Directory Accounts (the Users will be set to inactive within Zammad).
-          | You can find further information for Active Directory Filters at the Webseite from Microsoft_.
-		  
-.. _Microsoft: https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
+This section will hold any other integration that can't be grouped up (yet).
 
-After the sync has finished, you can find the new LDAP-Users under "Users".Zammad integrates them just normal users, the difference is the login name.
+.. Note:: This section currently misses the following integrations:
 
-.. image:: images/system/ldap-2.jpg
+  * Slack
+  * i-doit
+
