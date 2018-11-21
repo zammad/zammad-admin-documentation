@@ -6,7 +6,7 @@ Accounts
 All system email addresses can be added in this menu item.
 If you want to fetch emails via POP3 or IMAP you have to create a mail channel in here.
 
-**If you're using a Office365 Mailbox, please ensure that it's a real usermailbox and not a shared mailbox!**
+.. hint:: If you're using Office365- or Exchange-Mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
 
 Just follow these steps:
 
@@ -80,6 +80,8 @@ Twitter initials
 
 Advanced E-Mail-Configuration
 -----------------------------
+
+The following options need console access to your Server that hosts Zammad.
 
 .. toctree::
    :maxdepth: 1
