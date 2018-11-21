@@ -3,7 +3,7 @@ Integrations
 
 Zammad offers numerous integrations that add rich features to your instance.
 
-.. Note:: We're still working on this part of our dcoumentation, stay tight!
+.. Note:: We're still working on this part of our documentation, stay tight!
 
 
 Integrations for phone systems
