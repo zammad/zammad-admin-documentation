@@ -1,47 +1,51 @@
 Integrations
 ************
 
-CTI (generic)
-========================
+Zammad offers numerous integrations that add rich features to your instance.
 
-Since Zammad 2.6 anyone with access to a CTI (computer telephony integration) system can use the phone-functionality.
-
-
-Using the CTI-integration enables you to greet customers by name,  get their tickets up on the screen with a single click. Or, identify missed calls at a glance, and return calls right from within Zammad.
-Manufacturers of telephone systems or developers can use this interface to connect their telephone system to Zammad.
-
-What do I need to get started?
---------
-
-Zammad requires the following information to support the agent:
-
-- individual call events (e.g., call incoming/answered/ended)
-- caller ID data
-
-To use the new CTI interface, your CTI system must transmit this information (and only this information) to Zammad via HTTP.
-
-What can it do for me?
---------
-
-***Inbound calls***
-- Caller ID display: Open a caller’s customer profile with just one click
-- Intelligent caller ID search: Automatically scans tickets for caller ID data (e.g., in email signatures) if customer account data is missing
-- Caller overview: See a caller’s entire ticket history, or instantly create a new ticket
-- Call journal: See all calls at a glance, along with their status (e.g., which ones require a call-back?)
-- Agent overview: See who’s currently on a call
-- Selective call blocking [1]_
-- Do-not-disturb mode [1]_
+.. Note:: We're still working on this part of our dcoumentation, stay tight!
 
 
-***Outbound calls***
+Integrations for phone systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Direct dialing: Initiate calls from within Zammad [1]_
-- Dynamic caller ID: Set your caller ID based on, e.g., the destination country of the call*
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
 
-[1]_ requires PBX/telephone system support
+   integrations/generic-cti
+   integrations/placetel-cti
+   integrations/sipgate
+   
+Integrations for authentication and customers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/system/CTI-1.jpg
+.. Note:: This section currently misses the Clearbit.
 
-.. image:: images/system/CTI-2.jpg
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
 
-More information can be found on https://docs.zammad.org/en/latest/cti-api-intro.html
+   integrations/ldap
+   integrations/exchange
+   
+Integrations for Monitoring Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. Note:: This section currently misses the following integrations:
+
+  * Check_MK
+  * Icinga
+  * Monit
+  * Nagios
+  
+Other Integrations
+^^^^^^^^^^^^^^^^^^
+
+This section will hold any other integration that can't be grouped up (yet).
+
+.. Note:: This section currently misses the following integrations:
+
+  * Slack
+  * i-doit
+
