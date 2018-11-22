@@ -38,27 +38,37 @@ Another common use case is the supervisor role, where the supervisor can freely 
 
 .. image:: images/manage/permission-example-use-case-supervisor.jpg
 
-**Understanding each Permission:**
 
-**READ**
-     Read only access to the tickets and entries of this group.
+.. csv-table:: Understanding Permissions
+   :header: "Permission", "Description"
+   :widths: 10, 20
 
-**CREATE**
-     Right to create tickets or entries in this group.
+   "READ", "Read only access to the tickets and entries of this group."
+   "CREATE", "Right to create tickets or entries in this group."
+   "CHANGE", "Right to change the attributes of tickets or entries or areas that belong to this group."
+   "OVERVIEW", "Right to see tickets in the overviews. A view of the ticket details is not possible."
+   "FULL", "Right to create, read, change and see tickets in the overviews."
 
-**CHANGE**
-     Right to change the attributes of tickets or entries or areas that belong to this group.
-
-**OVERVIEW**
-     Right to see tickets in the overviews. A view of the ticket details is not possible
-
-**FULL**
-     Right to create, read, change and see tickets in the overviews.
+.. hint:: | **I can't assign an agent as Owner?!** 
+  | To assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
 
 
 Here are a few examples of different combinations of rights:
 
-.. image:: images/manage/permission-examples2.jpg
+.. image:: images/manage/permission-examples-comb1.jpg
+
+This applies to group "Incoming" and allows the agent to read and edit its tickets. He can also search for those tickets and see them in overviews.
+The agent **can't** create new tickets into the group "Incoming".
+
+.. image:: images/manage/permission-examples-comb2.jpg
+
+This applies to group "Incoming" and allows the agent to create new tickets to the group. He also can see the tickets in overviews.
+The agent can't read or edit tickets of this group (also Bulk actions do not work). Searching for tickets inside of "Incoming" is also not possible.
+
+.. image:: images/manage/permission-examples-comb3.jpg
+
+The agent can read, search and edit tickets for the group "Incoming".
+The tickets will not appear in the agents overviews and creation of new tickets doesn't work as well.
 
 
 Customer
