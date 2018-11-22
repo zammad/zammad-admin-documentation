@@ -1,11 +1,6 @@
 Zammad - Documentation for administrators
 =========================================
 
-* :ref:`channels-docs`
-* :ref:`manage-docs`
-* :ref:`settings-docs`
-* :ref:`system-docs`
-
 .. _manage-docs:
 
 .. toctree::
@@ -38,7 +33,6 @@ Zammad - Documentation for administrators
    channels-web
    channels-form
    channels-email
-   channels-sms
    channels-chat
    channels-twitter
    channels-facebook

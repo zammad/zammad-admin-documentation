@@ -18,13 +18,25 @@ You can give access to the following sections:
 Agent
 -------
 
-The authorization can be assigned to the individual communication functions:
+You can selectively give agents access to communication and reporting functions:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Roles3.jpg
 
 In addition, access rights can be given to the individual groups:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Roles-2.jpg
+
+**Common Use Cases:**
+
+In the vast majority of cases, the agent role should simply be given the full permission:
+
+.. image:: images/manage/permission-example-use-case-agent.jpg
+
+This is the recommended default and should be used unless you have special requirements for the agent role.
+
+Another common use case is the supervisor role, where the supervisor can freely view and modify tickets, just like an agent, but cannot be assigned as a ticket owner. This is done by selecting all four individual permissions:
+
+.. image:: images/manage/permission-example-use-case-supervisor.jpg
 
 **Understanding each Permission:**
 
