@@ -19,7 +19,7 @@ By clicking on a group or clicking "new group" you access the edit mask. The fol
 - Assignment timeout (in minutes) --> The time after the ticket is changed to "unassigned" after the assigned agent does not work on the ticket
 - follow-up possible --> This is about the decision, what happens with a new message from the customer after a ticket has been closed. Either the status of the ticket is changed to "open" (yes) or a completely new ticket is created (no)
 - assign follow ups --> Here it is to decide whether in the case of a follow up the agent is to be registered as the owner who was saved as the last owner (yes) or whether the owner should be left open (no)
-- E-Mail --> the Email-adress the group is assigned to. That means that all tickets sent to this e-mail address will be assigned to this group. Also, this email address is the sender address for e-mails written from the system.
+- E-Mail --> the Email-address the group is assigned to. That means that all tickets sent to this e-mail address will be assigned to this group. Also, this email address is the sender address for e-mails written from the system.
 - signature -->  an already created signature can be selected (Channels --> E-Mail --> Signatures)
 - note --> notes are visible to agents but never to customers
 - set the group active or inactive
