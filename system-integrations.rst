@@ -20,14 +20,13 @@ Integrations for phone systems
 Integrations for authentication and customers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Note:: This section currently misses the Clearbit.
-
 .. toctree::
    :maxdepth: 1
    :titlesonly:
 
    integrations/ldap
    integrations/exchange
+   integrations/clearbit
    
 Integrations for Monitoring Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,6 +45,11 @@ This section will hold any other integration that can't be grouped up (yet).
 
 .. Note:: This section currently misses the following integrations:
 
-  * Slack
   * i-doit
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   integrations/slack
 
