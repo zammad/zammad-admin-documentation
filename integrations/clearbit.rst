@@ -18,10 +18,10 @@ In general you can get any information from clearbit, as long as you have a mapp
    <br />
 
 
-.. Hint: Clearbit does have a Mapping of fields like LDAP and Exchange have, but does not "win" against Zammad information. This means 
-         that if you have e.g. the lastname field filled in already and Clearbit has other information on that, it will not be updated.  |br|\  |br|\ 
-         However: If let's say the lastname has been set by Clearbit and Zammad notices that the lastname on the Clearbit source has changed, Zammad 
-         will also update this value.
+.. Hint:: Clearbit does have a Mapping of fields like LDAP and Exchange have, but does not "win" against Zammad information. This means 
+          that if you have e.g. the lastname field filled in already and Clearbit has other information on that, it will not be updated.  |br|\  |br|\ 
+          However: If let's say the lastname has been set by Clearbit and Zammad notices that the lastname on the Clearbit source has changed, Zammad 
+          will also update this value.
   
 
 Configuration
