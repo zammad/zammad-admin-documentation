@@ -16,5 +16,23 @@ Password
 
 
 
-Third-Party-Application
-----------
+Third-Party Applications
+------------------------
+
+
+.. hint:: We're currently missing the following documentations for login providers: 
+
+  * LinkedIn
+  * Generic OAuth2
+  * Weibo
+
+  
+.. toctree::
+   :maxdepth: 1
+
+   security-thirdparty/facebook
+   security-thirdparty/github
+   security-thirdparty/gitlab
+   security-thirdparty/google
+   security-thirdparty/microsoft
+   security-thirdparty/twitter

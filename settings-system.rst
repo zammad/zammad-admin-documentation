@@ -15,6 +15,10 @@ Service
 
 *Geo Location Service*
 	Defines the backend for geo location lookups to store geo locations for addresses.
+	
+.. hint:: You can find a detailed privacy information on what we store for how long on our Privacy-Appendix_ inside of our System-Administrator-Documentation.
+  
+.. _Privacy-Appendix: https://docs.zammad.org/en/latest/appendix-privacy.html
 
 
 Frontend

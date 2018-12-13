@@ -6,7 +6,7 @@ Accounts
 All system email addresses can be added in this menu item.
 If you want to fetch emails via POP3 or IMAP you have to create a mail channel in here.
 
-**If you're using a Office365 Mailbox, please ensure that it's a real usermailbox and not a shared mailbox!**
+.. hint:: If you're using Office365- or Exchange-Mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
 
 Just follow these steps:
 
@@ -16,7 +16,7 @@ Just follow these steps:
 - Enter “Password”
 - Enter “Destination Group”
 
-Zammad trys to detect the POP3, IMAP and SMTP server settings automatically. This should work most of the time. If it doesn’t, use the “Experts” button to configure it by yourself.
+Zammad tries to detect the POP3, IMAP and SMTP server settings automatically. This should work most of the time. If it doesn’t, use the “Experts” button to configure it by yourself.
 
 While creating a new e-mail account, it is possible to use the expert settings to determine whether the e-mails remain in the connected mailbox or whether they should be transferred completely into the Zammad in order to avoid duplicate processing of e-mails:
 
@@ -28,17 +28,16 @@ While creating a new e-mail account, it is possible to use the expert settings t
 
 .. image:: images/channels/Zammad_Helpdesk_-_channel-Email-KeepMessages.jpg
 
-**Cautionary note**
-As soon as the email account is integrated and emails are imported, any notifications set via the trigger will be sent. It is therefore essential to check in advance that triggers with automatically generated messages are deactivated.
+.. Note:: As soon as the email account is integrated and emails are imported, any notifications set via the trigger will be sent. It is therefore essential to check in advance that triggers with automatically generated messages are deactivated.
 
-Filter
-----------
+Filters
+-------
 With Filters you can e.g. dispatch new Tickets into certain groups or set a certain priority for Tickets of an VIP customer. Different attributes of a filter can be combined with each other. Likewise, the following actions can be combined. It should be borne in mind that the combined attributes build on each other. If a filter is no longer needed, it can either be temporarily set inactive or deleted directly.
 
 
 Signature
-----------
-You can create a separate signature for each group in Zammad. The individual signatures can be created and edited here::
+---------
+You can create a separate signature for each group in Zammad. The individual signatures can be created and edited here:
 
 .. image:: images/channels/Zammad_Helpdesk_-Signature.jpg
 
@@ -60,13 +59,13 @@ Currently the snippets can only be loaded into already created tickets (status Z
 
 
 Additional E-Mail Setting
-----------
+-------------------------
 
 Since version Zammad 2.0 there are different ticket settings that can be made directly on the ticket. These settings are at the top of each ticket, to the right of the subject:
 
 .. image:: images/manage/additional-email-settings.jpg
 
-The following options can be set individually for each admin:
+The following options can be set individually by each admin:
 
 Note
      Default visibility: Is a note created in the standard system as internal or external? (this setting can be changed later on for each article)
@@ -79,3 +78,15 @@ Email - full quote
 
 Twitter initials
      Adding the sender's initials to the end of a tweet.
+
+
+Advanced E-Mail-Configuration
+-----------------------------
+
+The following options need console access to your Server that hosts Zammad.
+
+.. toctree::
+   :maxdepth: 1
+
+   channel-email/fetchmail
+   channel-email/sendmail

@@ -1,6 +1,8 @@
 Facebook
 ********
 
+.. hint:: Please note that this part of our documentation currently is outdated. We currently are working on solutions for this topic.
+
 You can connect Facebook Accounts with Zammad. You need to connect your Zammad with Facebook first:
 
 For this start at: https://developers.facebook.com/apps/
