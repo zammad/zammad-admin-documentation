@@ -1,91 +1,146 @@
 Twitter
-*******
+=======
 
-.. hint:: Please note that this part of our documentation currently is outdated. We currently are working on solutions for this topic.
+Zammad supports Twitter integration,
+meaning you can send and receive tweets and DMs just like emails!
 
-It's possible to put your Twitter communication into Zammad. To do so, you need to follow these steps:
+.. figure:: images/channels/zammad_first_tweet_as_ticket.png
+   :alt: Twitter Ticket with draft reply
+   :align: center
 
-Register Twitter app
-====================
+   Twitter tickets will show a 🐦 Twitter bird in the reply area. Just click on the reply button (as you would for an email) to tweet back.
 
-Register your Zammad as Twitter app under http://apps.twitter.com. It's required to let Zammad read/write tweets.
+.. note::
+   To set it up, follow the steps below:
 
-.. image:: images/channels/apps.twitter.com_start.png
-   :alt: inital page
+   1. Apply for a `Twitter Developer account`_.
+   2. `Create a new Twitter app`_ for Zammad.
+   3. Set your new app’s permissions to *Read, write, and access direct messages.*
+   4. Generate a new access token & secret.
+   5. `Set up a dev environment`_ for the Account Activity API.
+   6. Add your new Twitter app in Zammad.
+   7. Add your Twitter account in Zammad.
+   8. Configure filters for creating new tickets based on **#tags** and **@mentions**.
 
-Click on "Create New App"
+   Read on for details about each step.
 
-.. image:: images/channels/apps.twitter.com_new_app_screen.png
-   :alt: new app page
+1. Apply for a Twitter Developer account
+----------------------------------------
 
-Enter app settings. As "Callback URL" you need to enter "https://zammad_host/api/v1/external_credentials/twitter/callback"
+.. figure:: images/channels/app.twitter.com_developer_account.png
+   :alt: Twitter Developer account: Welcome page
+   :align: center
 
-.. image:: images/channels/apps.twitter.com_created_app_screen.png
-   :alt: new app is being created
+   This welcome page is displayed after completing the application for a Developer account.
 
-After the app has been created, update the application icon and organization attributes.
+You will need a regular Twitter account with a verified phone number
+to apply for a `Twitter Developer account`_ (at https://developer.twitter.com).
 
-.. image:: images/channels/apps.twitter.com_set_permissions.png
-   :alt: set permissions to receive and send direct messages
+During the application process, you will be asked
+to **Describe in your own words what you are building**.
+You may use the answer below::
 
-Next we need to set _read, write and access direct messages permissions_ for the app.
+   1. To manage customer service communications for our organization.
+   2. No.
+   3. Our use case involves posting original tweets in response to tweets and DMs we receive. We will not use the Twitter API to post or like “content”.
+   4. Our application will display individual tweets in their original form to authorized customer service agents of our organization only.
 
-.. image:: images/channels/apps.twitter.com_get_credentials.png
-   :alt: click on Keys & Access Token, note them
+2. Create a new Twitter app for Zammad
+--------------------------------------
 
-Go to "Keys and Access Token" tab and note the "Consumer Key" and "Consumer Secret".
+.. figure:: images/channels/apps.twitter.com_create_app_screen.png
+   :alt: Twitter Developer account: Create app page
+   :align: center
 
+   To create a new app, select **Apps** under your user menu, then click **Create an app**.
 
-Configure Zammad as Twitter app
-===============================
+Once you have finished setting up your Developer account,
+use it to `create a new Twitter app`_.
+The following fields are **required:**
 
-Go to "Admin -> Channels -> Twitter"
+App name
+   Must be unique *across all of Twitter.* No other developer account may create an app with the same name.
 
-.. image:: images/channels/zammad_connect_twitter_app1.png
-   :alt: Admin -> Channels -> Twitter
+Application description
+   Anything is fine here.
+   
+Website URL
+   The URL of your Zammad instance.
 
-Click on "Connect Twitter App" and enter your "Consumer Key", "Consumer Secret" and verify the "Callback URL".
+Callback URLs
+   ``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``
 
-.. image:: images/channels/zammad_connect_twitter_app2.png
-   :alt: Connect Twitter App, click "Submit"
+   This URL is also visible in the **Connect Twitter App** dialog of your Zammad admin settings panel.
 
-Done, your Zammad is configured as Twitter App now.
+Tell us how this app will be used
+   Anything is fine here. We suggest the following::
 
+      This app will be used to manage Twitter communications between our customers and our organization’s customer service agents on Zammad.
 
-Link your Twitter account to your Zammad Twitter app
-====================================================
+3. Set your new app’s permissions
+---------------------------------
 
-Now you need to link your Twitter Account from which you want to get tweets and send out tweets.
+   .. figure:: images/channels/apps.twitter.com_set_permissions.png
+      :alt: Twitter Developer account: App permissions page
+      :align: center
 
-Click on "Add Account", then you will see the authorize app page of Twitter. Click on "authorize app".
+      Select *Read, write, and access direct messages.*
 
-.. image:: images/channels/zammad_link_twitter_account.png
-   :alt: Click on "Add Account"
+4. Generate a new access token & secret
+---------------------------------------
 
-.. image:: images/channels/twitter.com_authorize_app.png
-   :alt: Twitter authorize app page will appear
+   .. figure:: images/channels/apps.twitter.com_get_credentials.png
+      :alt: Twitter Developer account: App keys and tokens page
+      :align: center
 
-You will get redirected back to Zammad. Now you need to configure your search keys, where mentions and direct messages should get routed.
+      You will need all four keys/tokens later, so don’t close this tab.
 
-.. image:: images/channels/zammad_linked_twitter_account.png
-   :alt: Back in Zammad - settings
+5. Set up a dev environment
+---------------------------
 
-After you are done, you will get an overview of all linked Twitter Accounts.
+After creating your app, `set up a dev environment`_ for the Account Activity API.
 
-.. image:: images/channels/zammad_linked_twitter_account_done.png
-   :alt: Back in Zammad - settings
+.. figure:: images/channels/apps.twitter.com_dev_environment.png
+   :alt: Twitter Developer account: Dev environments page
+   :align: center
 
-Start using your new channel
-============================
+   Name it whatever you like (*e.g.,* ``zammad``). You will need the label later, so don’t forget it.
 
-Start and write a message (direct message or tweet), short time later you will have a new ticket in Zammad.
+6. Add your new Twitter app in Zammad
+-------------------------------------
 
-.. image:: images/channels/zammad_first_tweet_as_ticket.png
-   :alt: A new Ticket - the tweet - just reply
+.. figure:: images/channels/zammad_connect_twitter_app1.png
+   :alt: Zammad: Configure Twitter app
+   :align: center
 
-Just click on the reply button (as you do it for emails) to send a reply.
+   Add your new Twitter app under **Channels > Twitter** in the admin settings panel. You will need the keys, tokens, and dev environment label from Steps 4 and 5.
 
-.. image:: images/channels/zammad_first_tweet_as_ticket_reply.png
-   :alt: Ticket after reply sent out
+7. Add your Twitter account in Zammad
+-------------------------------------
 
+.. figure:: images/channels/zammad_link_twitter_account.png
+   :alt: Zammad: Add Twitter account
+   :align: center
 
+   Click **Add Account** under **Channels > Twitter** in the admin settings panel.
+
+.. figure:: images/channels/twitter.com_authorize_app.png
+   :alt: Twitter: Authorize Zammad
+   :align: center
+
+   You will be redirected to Twitter and asked to authorize Zammad to access your account.
+
+8. Configure filters
+--------------------
+
+.. figure:: images/channels/zammad_linked_twitter_account.png
+   :alt: Zammad: Configure Twitter accounts
+   :align: center
+
+   Set up filters to automatically create new tickets based on **#tags** or **@mentions**.
+
+That’s it! Now, incoming tweets and DMs will be automatically turned into Zammad tickets.
+
+.. _Twitter developer account: https://developer.twitter.com/en/apply/user
+.. _create a new Twitter app: https://developer.twitter.com/en/apps/create
+.. _set up a dev environment: https://developer.twitter.com/en/account/environments
