@@ -11,7 +11,7 @@ for the average, non-technical user,
 so certain advanced options and use cases have been deliberately omitted.)
 
 To configure Zammad to use sendmail,
-run the following command in your Zammad directory:::
+run the following command in your Zammad directory::
 
   /opt/zammad $ zammad rails r "Channel.create!(area: 'Email::Account', options: { inbound: { adapter: 'null', options: {} }, outbound: { adapter: 'sendmail' } }, active: true, preferences: { editable: false }, updated_by_id: 1, created_by_id: 1)"
 

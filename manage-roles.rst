@@ -1,5 +1,7 @@
+.. _manage_roles:
+
 Roles
-*******
+*****
 
 ... are the aggregation of groups. These should represent the field of activity / functional description of the agent. A user can be active in several roles.
 
@@ -16,7 +18,7 @@ You can give access to the following sections:
 .. image:: images/manage/Zammad_Helpdesk_-_Roles_admin.jpg
 
 Agent
--------
+-----
 
 You can selectively give agents access to communication and reporting functions:
 

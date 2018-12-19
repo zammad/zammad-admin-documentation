@@ -1,3 +1,5 @@
+.. _manage_overviews:
+
 Overviews
 *********
 
@@ -13,9 +15,7 @@ The following attributes can be set when creating an overview:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
-hint
-    roles are assigned to users, per default there are agents, admins and customers.
-    `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-roles.html>`_
+.. Hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :ref:`manage_roles`.
 
 With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
 
@@ -23,9 +23,8 @@ With these settings you can choose whether to make the overviews available to an
 **ONLY AVAILABLE FOR USERS / CUSTOMERS WITH SHARED ORGANIZATIONS:**
 
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews2.jpg
-hint
-  shared organization = that's a setting in the organisations-management
-  `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-organizations.html>`_
+
+.. Hint::  Shared organization = that's a setting in the organisations-management. See :ref:`manage_organizations` for more information.
 
 This is only important if the available role is a customer. When deciding whether yes or no is selected,it must be considered to what extent this makes sense - for example, if a customer sees only his own tickets, many views are usually not necessary...
 

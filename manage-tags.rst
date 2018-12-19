@@ -5,9 +5,7 @@ With tags, tickets can be categorized and marked.
 
 How to tag
 --------------
-All agents can tag tickets. Therefore you will find further information here:
-
-`<http://zammad-user-documentation.readthedocs.io/de/latest/zammad-ticket-tags.html`_
+All agents can tag tickets. You can find further information about tagging of tickets on our `User Documentation <https://user-docs.zammad.org/en/latest/basics/service-ticket/settings/tags.html>`_.
 
 
 Tag-Overviews
@@ -17,11 +15,11 @@ You can list all the marked tickets by tag in different ways:
 
 **1. by providing an appropriate overview**
   Create a new overview and select "Tag contains ..." as condition.
-  More information about overviews can be found here: `<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-overviews.html>`_
+  You can find further information in :ref:`manage_overviews`
 
 **2. by a search-query**
 
-Enter e. g.: "tag: banana" in the search mask and you will receive all tickets that have been tagged accordingly. For a collected listing, click on "Show Search Details" under the search box:
+Enter e. g.: ``tag:banana`` in the search mask and you will receive all tickets that have been tagged accordingly. For a collected listing, click on "Show Search Details" under the search box:
 
 .. image:: images/manage/tag_banana.jpg
 

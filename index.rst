@@ -58,7 +58,7 @@ Zammad - Documentation for administrators
 
    system
    system-integrations
-   system-api
+   API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system-objects
    system-translations
    system-maintenance

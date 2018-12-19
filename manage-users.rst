@@ -46,9 +46,10 @@ To reduce the error rate of unwanted mass changes, a test import is carried out 
 .. image:: images/manage/Zammad_Helpdesk_-_Users-Import.jpg
 
 
+.. _manage_user_rights:
 
 The assignment of rights / Permissions
-----------
+--------------------------------------
 
 ...can only be set here, via this mask!
 

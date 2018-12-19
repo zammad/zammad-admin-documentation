@@ -30,23 +30,19 @@ Eventually it should look something like this:
 
 The access rights for agents to a group can be set up as follows:
 
-1.) directly via the user administration (Admin-Interface --> Manage --> Users)
-`<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-users.html>`_
+1.) directly via the user administration (Admin-Interface --> Manage --> Users), please see: :ref:`manage_user_rights`
 
 or
 
-2) With the permission setting via a role (Admin-Interface --> Manage --> Role)
-`<http://zammad-admin-documentation.readthedocs.io/en/latest/manage-roles.html>`_
+2) With the permission setting via a role (Admin-Interface --> Manage --> Role), please see: :ref:`manage_roles`
 
 It is recommended to avoid using both configurations.
 
 
 
-  ..Hint..
+.. Hint:: If the "Group" field does not appear in the ticket information, check whether:
 
-  If the "Group" field does not appear in the ticket information, check whether:
-
-  a) more than one group is created
-  b) the current user has change-permissions to more than one group
+    * more than one group is created
+    * the current user has change-permissions to more than one group
 
   This is because Zammad automatically hides selection fields with only one selection

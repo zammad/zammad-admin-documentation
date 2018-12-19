@@ -21,7 +21,7 @@ This setting is optional, of course, so there’s nothing to worry about if you 
 .. image:: images/manage/Macro.jpg
 
 
-***Is a macro created, it can be applied via two paths:***
+***You have two options on how to use Macros:***
 
 1. In the ticket on the right lower corner. There is an arrow next to the "update" button. All active macros are displayed here:
 

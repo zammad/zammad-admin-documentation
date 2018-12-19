@@ -35,5 +35,4 @@ assigned to Emma and the priority is set to 3-high.
 As a supervisor in the Sales group, this enables you to intercept and process escalated tickets.
 
 
-**BTW:** 
-this is the only place where it's possible to delete tickets via frontend (action --> delete)
+.. Note:: This is currently the only place where it's possible to delete tickets via frontend (action --> delete)

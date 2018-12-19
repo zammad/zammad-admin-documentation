@@ -1,7 +1,7 @@
 Slack
 =====
 
-.. Note:: In order to use this feature, please add a new Slack-App to your Workspace. The App you need is called `` Incoming WebHooks`` .
+.. Note:: In order to use this feature, please add a new Slack-App to your Workspace. The App you need is called ``Incoming WebHooks`` .
 
 
 Why do I need this feature?
