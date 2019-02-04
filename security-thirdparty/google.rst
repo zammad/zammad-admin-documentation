@@ -4,7 +4,7 @@ Google
 Register Google app
 -------------------
 
-.. hint:: You currently need to activate the Google+ API in order to successfully authenticate with Zammad.
+.. hint:: You currently need to activate the Google+ API in order to successfully authenticate with Zammad. **This will change with Zammad 2.9.**
 
 Visit https://console.cloud.google.com/projectcreate and create an project
 
@@ -22,8 +22,11 @@ https://zammad_host/auth/google_oauth2/callback
 
 zammad_host has to be replaced with your Zammad FQDN
 
-.. image:: /images/system/thirdparty/cloud.developers.google.com-create-oauth-id.png
-    :alt: Google
+.. image:: /images/system/thirdparty/goole-oauth-consent-screen.png
+    :alt: Creating a consent screen
+
+.. image:: /images/system/thirdparty/google-create-oauth-Client-ID.png
+    :alt: Adding a new oauth Client-ID
 
 Navigate to "Admin -> Security -> Third Party Applications" -> Google and enter the OAUTH Keys (Client ID & Client's Secret)
 
