@@ -27,7 +27,7 @@ Add a new scheduler
 
 The scheduler shown in the screenshot would have the following effects:
 
-Every workday (Monday to Friday) at 9:00 a. m., all tickets which:
+Every workday (Monday to Friday) at 9:00 a.m. (*UTC*), all tickets which:
 
 - are not closed and
 - are assigned to the Sales group and 
