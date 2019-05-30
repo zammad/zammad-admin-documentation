@@ -41,14 +41,14 @@ Postmaster filters allow you to match email headers (e.g. ``From``, ``To``, ``Su
   | From: contains: ``regex:(\.|@)amazon\.com``
   | Group: Purchasing
   
-  Note that the Group action only has an effect when the matching email results in a new ticket. Zammad will not change the group of existing tickets.
+  .. Note:: Note that the Group action only has an effect when the matching email results in a new ticket. Zammad will not change the group of existing tickets.
   
 - Automatically increase the priority of tickets from a VIP customer:
 
   | From: contains: ``ourvipcustomer@example.com``
   | Priority: 3 high
 
-  Note that the Priority action only has an effect when the matching email results in a new ticket. Zammad will not change the priority of existing tickets.
+  .. Note:: Note that the Priority action only has an effect when the matching email results in a new ticket. Zammad will not change the priority of existing tickets.
 
 - Automatically tag and close spam tickets that have been marked as spam by an external spam filter (e.g. SpamAssassin):
 
@@ -56,7 +56,7 @@ Postmaster filters allow you to match email headers (e.g. ``From``, ``To``, ``Su
   | Tag: add: ``spam``
   | State: closed
   
-  Note that the State action only has an effect when the matching email results in a new ticket. Zammad will not change the state of existing tickets. It will add the tag though if it missing, even if the mail is an update to an existing ticket.
+  .. Note:: Note that the State action only has an effect when the matching email results in a new ticket. Zammad will not change the state of existing tickets. It will add the tag though if it missing, even if the mail is an update to an existing ticket.
 
 The following actions are only effective when creating tickets: Group, State, Priority, Owner.
 
