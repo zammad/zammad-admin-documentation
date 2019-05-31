@@ -1,7 +1,7 @@
 Groups
 ******
 
-This is the group management area. You can edit existing groups and add new groups.
+This is the group management area. From here you can edit existing groups and add new groups.
 
 What are groups?
 -----------------
@@ -26,9 +26,9 @@ There you can edit the following settings:
 - *Follow up possible*: configure what happens when a customer replies to a closed ticket:
 
   - *yes*: the ticket will be reopened.
-  - *do not reopen ticket but create new ticket*: the ticket will remain closed, and Zammad will instead put the customer's reply in a completely new ticket.
+  - *do not reopen ticket but create new ticket*: the ticket will remain closed, and Zammad will instead create a new ticket for the customer's reply.
 
-- *Assign follow ups*: configure whether a closed ticket that has been reopened due to a customer reply should remain assigned to the last agent:
+- *Assign follow ups*: configure whether a closed ticket that has been reopened due to a customer's reply should remain assigned to the last agent:
 
   - *yes*: the ticket will remain to the last agent who owned it.
   - *no*: Zammad will unassign the ticket.
@@ -39,7 +39,7 @@ There you can edit the following settings:
 
 - *Note*: an internal note about the group that is only visible to people who can access the group management area.
 
-- *Active*: choose whether the group is enabled or not. Groups cannot be deleted, only set to inactive.
+- *Active*: choose whether the group is enabled or not. Groups cannot be deleted, they can only be set to inactive.
 
 Eventually it should look something like this:
 
@@ -48,7 +48,7 @@ Eventually it should look something like this:
 Permissions
 --------------
 
-The group permissions for agents can be set up as follows:
+The group's permissions for agents can be set up as follows:
 
 1. directly via the user administration (Admin → Manage → Users), please see: :ref:`manage_user_rights`
 
@@ -63,6 +63,6 @@ It is recommended to avoid using both configurations.
 .. Hint:: If the *Group* field does not appear in the ticket view, ensure that:
 
     * you have created more than one group
-    * the current user has change permissions to more than one group
+    * the current user has "change" permissions to more than one group
 
   This is necessary because Zammad automatically hides selection fields with only one option.
