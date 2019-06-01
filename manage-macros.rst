@@ -28,7 +28,7 @@ This setting is optional, of course, so there’s nothing to worry about if you 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros3.jpg
 
 
-2. If you want to apply a macro for more then one ticket, you have to select all the corresponding tickets in the overview:
+2. If you want to apply a macro for more than one ticket, you have to select all the corresponding tickets in the overview:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros4.jpg
 
