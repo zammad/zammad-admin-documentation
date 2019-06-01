@@ -13,14 +13,14 @@ That's how it works:
 .. image:: images/manage/Zammad_Helpdesk_-_manage-SLAs-2.jpg
 
 
-1. give it a distinctive name
-2. specify the ticket groups for which the SLA is to apply (these can also be arbitrarily combined and thus specified)
+1. Give it a distinctive name
+2. Specify the ticket groups for which the SLA is to apply (these can also be arbitrarily combined and thus specified)
 3. In the preview you see the selection of the tickets and doublecheck wheather those are correct
-4. choose the business-calender
-5. define the SLA-Times:
+4. Choose the business-calender
+5. Define the SLA-Times:
 
 - First Response 	Timeframe for the first response (external call, email)
 - Update Time 		Timeframe for every following response (external call, Email)
 - Solution Time 	Timeframe for solving the problem (status: closed)
 
-It is up to you if you set one, two or all three times. When the SLA time is reached, the ticket escalates. Now all agents get an notifications, which have stored the corresponding setting in their own settings profile -> notifications. The information that a ticket is escalated can be selected in the triggers as an attribute, whereby a desired action can be followed.
+It is up to you if you set one, two or all three times. When the SLA time is reached, the ticket escalates. Now all agents get  notifications, which have stored the corresponding setting in their own settings profile -> notifications. The information that a ticket is escalated can be selected in the triggers as an attribute, whereby a desired action can be followed.
