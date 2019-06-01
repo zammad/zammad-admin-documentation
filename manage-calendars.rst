@@ -17,7 +17,7 @@ All created calendars are displayed in the overview.
 1. Here you can create a new calendar if agents or customers belong to another time zone.
 2. Just push the delete-button to delete this specific calender - all SLAs assigned to this calendar are automatically assigned to the default calendar.
 3. Pressing this button sets this calendar as the default calendar for the entire system.
-4. via this button you get to the edit-mask (same mask as in 1.):
+4. Via this button you get to the edit-mask (same mask as in 1.):
 
 .. image:: images/manage/Zammad_Helpdesk_-_Manage-Calendars-2.jpg
 
