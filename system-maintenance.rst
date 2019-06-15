@@ -1,7 +1,7 @@
 Maintenance
 ***********
 
-If maintenance work on the system is necessary, a number of preparations must be made. You can take care of that here.
+If maintenance work on the system is necessary, a number of preparations must be made. You can take care of them here.
 
 Mode
 ========================
