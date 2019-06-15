@@ -21,7 +21,7 @@ means the number is at the left side, name of the ticket on the right: [Ticket#1
 
 *None* 
 
-means there is no ticket-number, only the name of the ticket: Some Subject (without ticket number). In the last case you should enable "postmaster_follow_up_search_in" to recognize followups based on email headers and/or body. You'll find that setting in Channels --> Email-->Settings.
+means there is no ticket-number, only the name of the ticket: Some Subject (without ticket number). In the last case you should enable "postmaster_follow_up_search_in" to recognize followups based on email headers and/or body. You'll be able to find that setting in Channels --> Email-->Settings.
 
 *Ticket Last Contact Behaviour*
 Sets the last customer contact based on the last contact of a customer or on the last contact of a customer to whom an agent has not yet responded.
