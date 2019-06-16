@@ -22,7 +22,7 @@ The time period and time interval can be changed with one click (the graphic ada
 
 .. image:: images/manage/Zammad_Helpdesk_-_Reporting10.jpg
 
-You can filter the Create Channels (Phone, Email, Twitter,...) and Communication (Phone, Email, Twitter,...) and select metrics (choose from the menu bar in the upper left corner - currently Ticket Count, Create Channels, Communication). Here all tickets of a profile are evaluated with a certain metric.
+You can filter the Create Channels (Phone, Email, Twitter,...) and Communication (Phone, Email, Twitter,...) and select metrics (choose from the menu bar in the upper left corner - currently Ticket Count, Create Channels, Communication). Here are  all tickets with a certain metric of a profile evaluated.
 
 .. image:: images/manage/Zammad_Helpdesk_-_Reporting11.jpg
 

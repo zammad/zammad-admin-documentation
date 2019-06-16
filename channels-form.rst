@@ -50,7 +50,7 @@ It also ensure that the E-Mail-Address being used is valid (with MX-Check on the
    
    
 .. hint:: You can change the above default values, please keep in mind, that setting those values higher might lead to problems in term of created Tickets. |br|\ |br|\
-  Please note that the following changes require console access to your Hosts that runs Zammad.
+  Please note that the following changes require console access to your hosts that runs Zammad.
   
 **Change the Ticket-Creation per IP and hour to 10**::
 
