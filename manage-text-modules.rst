@@ -71,7 +71,7 @@ Of course you can also use multi line snippets.
 Delete or clone text modules
 ----------------------------
 
-It happens more often that similar text modules have to be created or unnecessary ones deleted. For these cases you can click on the 3 points in the text module overview on the right side and select the corresponding action:
+Often similar text modules have to be created or unnecessary ones deleted. For these cases you can click on the 3 points in the text module overview on the right side and select the corresponding action:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Text_modules-clone.jpg
 
@@ -83,7 +83,7 @@ Import of text modules via CSV file
 
 With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
 
-  To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be finally executed.
+  To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import will be executed.
 
   .. image:: images/manage/Zammad_Helpdesk_-_Text_modules-Import.jpg
 

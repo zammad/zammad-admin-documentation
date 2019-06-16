@@ -26,7 +26,7 @@ With these settings you can choose whether to make the overviews available to an
 
 .. Hint::  Shared organization = that's a setting in the organisations-management. See :ref:`manage_organizations` for more information.
 
-This is only important if the available role is a customer. When deciding whether yes or no is selected,it must be considered to what extent this makes sense - for example, if a customer sees only his own tickets, many views are usually not necessary...
+This is only important if the available role is a customer. When deciding whether yes or no is selected, it must be considered to what extent this makes sense - for example, if a customer sees only his own tickets, many views are usually not necessary...
 
 
 **AVAILABLE FOR USERS WHICH ARE REPLACEMENTS FOR OTHER USERS:**
