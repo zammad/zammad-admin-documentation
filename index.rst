@@ -22,6 +22,7 @@ Zammad - Documentation for administrators
    manage-scheduler
    manage-report-profiles
    manage-time-accounting
+   manage-knowledge-base
 
 .. _channels-docs:
 
