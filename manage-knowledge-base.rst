@@ -18,6 +18,9 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
           By default, only admin users are permitted to create, edit, and manage knowledge base articles.
           See :doc:`Roles </manage-roles>` for details on how to grant write access to agents or other users.
 
+.. note:: The knowledge base will not appear in the main menu until it has been
+          enabled in the admin panel.
+
 Features
 --------
 
@@ -26,7 +29,7 @@ Features
 * 🔍 Full text search
 * 📅 Scheduled publishing
 * 📎 File attachments
-* 📋 Internal links to tickets
+* 🔗 Wiki-style internal linking to both 💡 **KB answers** and 📋 **tickets**
 * 🖼️ Rich text editor + embedded images
 
 Setup
@@ -105,6 +108,8 @@ Entries added here will appear in the knowledge base like so:
 
 Custom URL
 ^^^^^^^^^^
+
+.. note:: This feature is only available on **self-hosted** instances.
 
 .. figure:: /images/manage/knowledge-base-custom-url.png
    :alt: Knowledge Base: Configure custom URL
