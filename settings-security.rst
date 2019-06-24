@@ -18,7 +18,7 @@ Password
 This section allows you to define password requirements for the local user accounts. 
 
 .. note:: Zammad does **not** allow you to change your LDAP password, instead, it will set a password in it's local database which might confuse your users.
-  This will be addressed in the future by `#1169<https://github.com/zammad/zammad/issues/1169>`_ and `#2389<https://github.com/zammad/zammad/issues/2389>`_.
+  This will be addressed in the future by `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
 
 
 Maximum failed logins
