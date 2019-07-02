@@ -99,6 +99,10 @@ Public Menu
 
    🧭 Customize the nav menu that appears in the header of the knowledge base.
 
+
+.. hint:: ``Target`` let's you decide if you want the link to be opened within a new
+  browser tab upon click or not.
+
 Use this section to unify the knowledge base with your own website’s main navigation.
 Entries added here will appear in the knowledge base like so:
 
