@@ -50,7 +50,7 @@ Click on “Add Account”, then you will see the authorize app page of Facebook
 
 .. image:: images/channels/FB_21.jpg
 
-You will get redirected back to Zammad. Now you need to configure your search keys, where mentions and direct messages should get routed.
+You will get redirected back to Zammad. Now you need to configure your search keys, where mentions should get routed.
 
 .. image:: images/channels/FB_22.jpg
 
