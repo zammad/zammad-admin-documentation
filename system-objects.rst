@@ -21,7 +21,7 @@ When adding a new object, you can choose between the following object types:
 - Date
    - enables you to use the date picker of Zammad.
    - you can allow / forbid the date chosen to be in the future and in past.
-   - set the default time difference in hours.
+   - set the standard time difference in hours, which is entered as the default value if no value is defined.
 - Date-time
    - enables you to use the date picker plus time selection of Zammad.
    - you can allow / forbid the date chosen to be in the future and in past.
