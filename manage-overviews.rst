@@ -8,11 +8,16 @@ You can also create individual reports for individual agents or agent groups.
 
 In the Overview Management Area you can add new overviews, edit or delete them.
 
+.. Warning:: Please note that Overviews can cause performance issues leading to no longer or less often refreshing overviews!
 The following attributes can be set when creating an overview:
+  
+  When ever possible, try to use the same overviews for as many agents and groups as possible to keep the number of overviews low. 
+  For best results, you might want to use between 15-20 overviews maximum.
+
+.. Note:: Overviews will only show tickets to your users, that the user have rights on (group or role based).
 
 
-**AVALABLE FOR A SPECIFIC ROLE / AVAILABLE FOR CERTAIN USERS:**
-
+The following attributes can be set when creating an overview:
 .. image:: images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
 .. Hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :ref:`manage_roles`.
