@@ -17,7 +17,7 @@ Add a new scheduler
 .. image:: images/manage/Zammad_Helpdesk_-_Manage-Scheduler-step6-8.jpg
 
 1. *Name*: choose a name for the scheduler.
-2. *When should the job run*: choose the points in time when the scheduler should run.
+2. *When should the job run*: choose the points in time using UTC timezone when the scheduler should run.
 3. *Conditions for affected objects*: determine the ticket attributes (conditions) to limit on which tickets the actions configured in step 5 are to be performed.
 4. *Preview*: this list previews some tickets that your conditions are matching and shows a total of how many tickets are being matched. Use this to double-check the entered conditions.
 5. *Execute changes on objects*: determine the changes to be made to the ticket.
