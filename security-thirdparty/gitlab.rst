@@ -22,7 +22,10 @@ Configure Zammad as Gitlab app
 ------------------------------
 
 Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications Dashboard.
-.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty_zammad.png
+
+.. Note:: Please ensure to use ``https://{git_host}/api/v4/`` for site.
+
+.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty.jpg
     :alt: Gitlab config in Zammad admin interface
 
 
