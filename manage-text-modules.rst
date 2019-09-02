@@ -1,12 +1,16 @@
-=====
+==============
 Text Templates
-=====
+==============
+
+.. Warning:: With Zammad 3.1 we introduced group based text modules. This documentation contains information that might no longer apply to Zammad versions earlier 3.1.
 
 Create text templates to spend less time writing responses. You can create text passages (Text modules) or even entire response templates.
 
+.. Note:: Beside text modules Zammad also allows you to use `Ticket-Templates for ticket creation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_.
+
 
 Text modules
--------------
+------------
 
 Text modules can be edited in the admin interface under Manage --> Text modules.
 Here you will find text snippets already created in the standard version, which can be extended as needed.
@@ -18,8 +22,20 @@ Here you can add new text modules, delete or edit them.
 
 Creating keywords makes it easier to find the right text module.
 
+.. figure:: images/manage/text-module-keywords-example.png
+  :alt: You can find text modules either by their name or keyword.
+
+If needed, you can restrict text modules to specific groups.
+With this, you can easilly keep text module lists short and dedicate specific texts to where they belong.
+
+You can adjust the group memberships for text modules at any time. 
+This allows you to have the text module available globally (no groups selected) or one or several specific groups.
+
+.. figure:: images/manage/text-module-group-specific.png
+  :alt: Example: Restricting text modules to 2nd Level group only.
+
 To select placeholders from a list, just enter "::" in the text block. The list can be searched with the arrow keys after inputting keywords or shortcuts.
-All text modules can be used in articles as well as in triggers (auto-messages) and in chat.
+All text modules can be used in articles as well as in the chat.
 
 .. Note: You can find more information on how to use text modules on our `User Documentation <https://user-docs.zammad.org/en/latest/advanced/text-modules.html>`_.
 
