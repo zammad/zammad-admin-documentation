@@ -7,7 +7,11 @@ In the Macros Management Mask you can add, edit and delete macros:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros.jpg
 
-By clicking on an existing macro or by clicking on "New Macro" (top right) the edit mask opens:
+
+Adding or updating Macros
+-------------------------
+
+By either clicking on an existing macro to edit it or clicking on "New Macro" on the upper right to add new Macros, the macro app will open:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Macros2.jpg
 
@@ -21,7 +25,10 @@ This setting is optional, of course, so there’s nothing to worry about if you 
 .. image:: images/manage/Macro.jpg
 
 
-***You have two options on how to use Macros:***
+Using Macros
+-------------
+
+You have two options on how to use Macros:
 
 1. In the ticket on the right lower corner. There is an arrow next to the "update" button. All active macros are displayed here:
 
