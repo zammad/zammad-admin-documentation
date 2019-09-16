@@ -1,5 +1,5 @@
 SAML
-========
+====
 
 It is possible to create a quick login for your helpdesk via SAML for Enterprise SSO integrations.
 
@@ -12,7 +12,7 @@ It is possible to create a quick login for your helpdesk via SAML for Enterprise
   Configuring the upstream SAML IdP is outside the scope of Zammad documentation.
 
 Configure SAML in Zammad
----------------------
+------------------------
 
 - Navigate to "Admin -> Security -> Third Party Applications -> Authentication via SAML"
 - Click the on/off slider to "On"
@@ -59,7 +59,7 @@ Configured example:
 
 
 Configure the SAML IdP
---------------------------------
+----------------------
 
 If your IdP supports xml import or auto xml metadata retrieval, use this URL:
 https://zammadFQDN/auth/saml/metadata
