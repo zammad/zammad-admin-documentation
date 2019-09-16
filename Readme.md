@@ -1,20 +1,19 @@
 # Zammad admin documentation
 
 If you want to contribute to zammad documentation you can 
-edit the *.rst files and create pull requests.
+edit the \*.rst files and create pull requests.
 
 We take care about the translation part, so please don't change anything else
 whithin the repo, those changes will be discarded anyway ;) .
 
-Note: 
-At the moment we only have a german translation. We are working on an english
-version and will change the default later.
+**Note:**
+At the moment we only have a english version - the translation into other language is not planned as of now.
 
 ## Documentation
 
 Zammad hosts a searchable version of this documentation on https://docs.zammad.org
 
-## ReStructuredText markup
+### ReStructuredText markup
 
 If you like to edit the docs use the ReStructuredText markup language. Infos about this markup language can be found at:
 
@@ -27,6 +26,14 @@ Thanks! ❤️ ❤️ ❤️
 
 
 [![Documentation Status](https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest)](https://zammad-admin-documentation.readthedocs.io/de/latest/)
+
+## Notes on Documentation Branches and Pull Requests
+
+Please note that this repository uses protected branches, which is why the default branch is ``develop``.
+The most current version is **always** ``master`` - if you create Pull Requests, please define ``master`` as destination Branch.
+
+This will ensure that your changes are available upon merge.
+
 
 ## Local tests (mostly internal stuff)
 
