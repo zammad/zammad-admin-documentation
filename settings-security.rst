@@ -86,3 +86,4 @@ Sometimes, this doesn't come in handy, as this also means if you're trying to au
    security-thirdparty/google
    security-thirdparty/microsoft
    security-thirdparty/twitter
+   security-thirdparty/saml
