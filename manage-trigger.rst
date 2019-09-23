@@ -69,6 +69,8 @@ Send an email
 .. Note:: In order to send E-Mails with Triggers, you need to configure an E-Mail-Address for the group the trigger is working in.
   If you don't, Zammad will skip the Trigger.
 
+.. Hint:: Some actions (e.g. E-Mail and Notes) allow the use of variables. Learn more about :ref:`system_variables` to enhance your triggers.
+
 
 Examples
 --------

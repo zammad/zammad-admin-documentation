@@ -88,6 +88,8 @@ Here is an example of a signature-setting and and how it might actually look lik
 
 Currently the snippets can only be loaded into already created tickets (status Zammad 2.5)
 
+.. Note:: Learn more about :ref:`system_variables` to enhance your signatures.
+
 
 Additional E-Mail Setting
 -------------------------

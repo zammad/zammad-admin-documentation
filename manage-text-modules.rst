@@ -20,6 +20,8 @@ Here you will find text snippets already created in the standard version, which 
 Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
 
+.. Note:: Learn more about :ref:`system_variables` to enhance your text modules.
+
 Creating keywords makes it easier to find the right text module.
 
 .. figure:: images/manage/text-module-keywords-example.png

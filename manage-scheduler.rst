@@ -7,6 +7,8 @@ The scheduler performs time-based automated actions. You can set up your own sch
 
 .. warning:: While it is possible to delegate scheduler permissions to normal agents with the ``admin/scheduler`` permission, it is inadvisable to do so. Malicious agents could use a scheduler to access tickets in restricted groups (by moving them to a non-restricted group) or to delete arbitrary tickets.
 
+.. Hint:: When sending E-Mails, you can use variables to make them more dynamic. Learn more about :ref:`system_variables`.
+
 Add a new scheduler
 ===================
 
