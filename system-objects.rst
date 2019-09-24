@@ -49,8 +49,7 @@ When adding a new object, you can choose between the following object types:
    - this object enables you to use up to 6 sub keys.
    - you'll see this object as a kind of drop down menu.
    
-**Note:** You cannot change the object format / type as soon as you applied it.
-If you don't further need an object, you can disable it.
+.. Note:: You cannot change the object format / type as soon as you applied it. If you don't further need an object, you can disable it.
 
 
 URL fields (Link-Template)
@@ -76,6 +75,11 @@ You can use any variable that's available within Zammad! This gives your great o
 
 Learn more about :ref:`system_variables`.
 
+.. figure:: images/system/object_link-template.gif
+  :align: center
+  
+  The above screencast shows how the link template will perform after object creation.
+
 
 Object permissions
 -------------------
@@ -89,6 +93,28 @@ When ever needed you can restrict access to objects for permission roles (agents
    - show / hide the field.
    - make the field required (if needed).
    
-Please note that the above does not apply to default objects being shipped with Zammad.
+.. Hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
 
-.. image:: images/system/objects-2.jpg
+.. figure:: images/system/objects-2.jpg
+  :align: center
+  
+  This is the object edit screen, it looks very similar to the creation screen and holds all object specific information.
+
+
+
+Updating database after adding or editing objects
+-------------------------------------------------
+
+.. Hint:: Zammad doesn't restart automatically and prompts you to restart? You may want to check `configure enviroment variables <https://docs.zammad.org/en/latest/appendix-configure-env-vars.html#configure-restart-command>`_ to solve this.
+
+.. Note:: If you're on a self hosted system, you might need console access to your Zammad-Server to restart the service.
+
+When adding or changing objects, Zammad will not apply the changes isntantly, but instead shows you the changed objects first. 
+If you're ready to go, just click on "Update database" to apply the changes to Zammad. 
+If you made a mistake or just want to discard your changes, click "Discard changes".
+
+.. figure:: images/system/object-update-database.jpg
+  :align: center
+  
+  Changes on objects require you to update the database to apply these changes.
+
