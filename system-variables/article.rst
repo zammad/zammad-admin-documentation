@@ -3,7 +3,10 @@ Articles (System-Variables)
 
 .. Note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
--
+Below you can find all available ticket article-based variables within Zammad. 
+These can be called via Triggers for example. If you're unsure if Zammad does support variables at the point you're at, you can try to type ``::`` to check.
+
+The below list gives you an example what kind of data you can expect, it's not intended to explain the data itself.
 
 .. csv-table:: Article System-Variables
    :header: "name", "variable", "example"
