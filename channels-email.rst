@@ -8,6 +8,19 @@ If you want to fetch emails via POP3 or IMAP you have to create a mail channel i
 
 .. hint:: If you're using Office365- or Exchange-Mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
 
+.. Warning:: You may need to prepare your mail account if your user of the following services:
+  
+    .. toctree::
+     :maxdepth: 1
+     
+     channel-email/prerequisites-gmail
+
+
+.. _add-a-mail-account:
+
+Add a mail account
+^^^^^^^^^^^^^^^^^^
+
 Just follow these steps:
 
 - Click “New”
