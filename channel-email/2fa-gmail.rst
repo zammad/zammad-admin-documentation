@@ -1,6 +1,6 @@
 .. _2fa-gmail:
 
-How to Create an App Password for Gmail
+How to create an App Password for Gmail
 ***************************************
 
 If you have 2FA enabled on your Google account,
