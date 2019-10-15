@@ -8,6 +8,21 @@ If you want to fetch emails via POP3 or IMAP you have to create a mail channel i
 
 .. hint:: If you're using Office365- or Exchange-Mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
 
+.. note:: **Special instructions for two-factor authentication (2FA):**
+
+   If your email provider requires you to enter a one-time passcode (sent via SMS) when logging in, you’ll have to generate an **app password** to use with Zammad.
+
+   .. toctree::
+      :maxdepth: 1
+     
+      channel-email/2fa-gmail
+
+
+.. _add-a-mail-account:
+
+Add a mail account
+^^^^^^^^^^^^^^^^^^
+
 Just follow these steps:
 
 - Click “New”
