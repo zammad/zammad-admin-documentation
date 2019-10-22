@@ -46,6 +46,10 @@ Done, your Zammad is now configured as a Telegram bot.
 Start using your new channel
 ============================
 
+.. Note:: Please note that the maximum file size for Telegram-Bots is 20MB! 
+  Further information can be found in the `Telegram API-Reference <https://core.telegram.org/bots/api#getfile>`_.
+
+
 Go to your Telegram client, search for your new Telegram bot and start writing a message.
 
 .. image:: images/channels/telegram_client_search_bot.png
