@@ -9,7 +9,7 @@ To get this to work you need to pipe your emails to rails.
 
  su - zammad
  cd /opt/zammad
- cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
+ cat test/fixtures/mail1.box | zammad run rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
 
 Fetchmail
@@ -28,7 +28,7 @@ Fetchmail
  #
  # zammad fetchmail config
  #
- poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda "rails r 'Channel::Driver::MailStdin.new(trusted: true)'"
+ poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda "zammad run rails r 'Channel::Driver::MailStdin.new(trusted: true)'"
 
 
 That's it. Emails now will be directly piped into Zammad.
@@ -69,7 +69,7 @@ Fetchmail config looks slightly different.
  #VERBOSE="on"
 
  :0 :
- | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
+ | zammad run rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
 
 
