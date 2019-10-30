@@ -54,10 +54,11 @@ Signatures
 Sending a mail out without signature? Nah! Learn more about :ref:`signatures`.
 
 
-- Automatically tag and close spam tickets that have been marked as spam by an external spam filter (e.g. SpamAssassin):
+Settings
+++++++++
 
-
-It should be borne in mind that the combined attributes build on each other. If a filter is no longer needed, it can either be temporarily set inactive or deleted directly.
+Zammad allows you define some of its recognition depths and other useful settings that mostly apply to E-Mails. 
+For this, you can learn more about :ref:`email_settings`.
 
 
 Additional E-Mail Setting
