@@ -27,7 +27,7 @@ Zammad - Documentation for administrators
 .. _channels-docs:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Channels
 
    channels
@@ -61,6 +61,7 @@ Zammad - Documentation for administrators
    system-integrations
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system-objects
+   system-variables
    system-translations
    system-maintenance
    system-monitoring

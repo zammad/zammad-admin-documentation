@@ -35,7 +35,7 @@ There you can edit the following settings:
 
 - *Email*: choose which email address will be used as the sending address (`From` header) when agents reply to tickets in this group. Email addresses can be configured in Channels → Email → Accounts.
 
-- *Signature*: choose which signature should be appended when agents reply to tickets in this group. Signatures can be configured in Channels → Email → Signatures.
+- *Signature*: choose which signature should be appended when agents reply to tickets in this group. Learn more about :ref:`signatures`.
 
 - *Note*: an internal note about the group that is only visible to people who can access the group management area.
 
