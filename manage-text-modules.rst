@@ -76,14 +76,7 @@ All text modules can be used in articles as well as in the chat.
 Of course you can also use multi line snippets.
 
 
-
-**Available objects are:**
-
-  * ticket (e. g. ticket.state, ticket.group)
-  * ticket.customer (e. g. ticket.customer.firstname, ticket.customer.lastname)
-  * ticket.owner (e. g. ticket.owner.firstname, ticket.owner.lastname)
-  * ticket.organization (e. g. ticket.organization.name)
-  * user (e. g. user.firstname, user.email)
+.. Hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :ref:`system_variables`.
 
 
 Delete or clone text modules
