@@ -75,7 +75,7 @@ The below list gives you an example what kind of data you can expect, it's not i
    "Ticket > Created by > Web", "``#{ticket.created_by.web}``", "``https://zammad.org`` or empty if not set"
    "Ticket > Created by > VIP", "``#{ticket.created_by.vip}``", "``false`` or ``true``"
    "Ticket > Created by > Phone", "``#{ticket.created_by.phone}``", "``004930123456789`` or empty if not set"
-   "Ticket > Created by > Note", "``#{ticket.created_by.note}``", "``Some note to this user`` or empty if not set""
+   "Ticket > Created by > Note", "``#{ticket.created_by.note}``", "``Some note to this user`` or empty if not set"
    "Ticket > Created by > Mobile", "``#{ticket.created_by.mobile}``", "``0049176123456789`` or empty if not set"
    "Ticket > Created by > Login", "``#{ticket.created_by.login}``", "``jdoe``"
    "Ticket > Created by > Lastname", "``#{ticket.created_by.lastname}``", "``Doe`` or empty if not set"

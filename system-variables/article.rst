@@ -31,7 +31,7 @@ The below list gives you an example what kind of data you can expect, it's not i
    "Article > Subject", "``#{article.subject}``", "``My amazing subject``"
    "Article > Sender > Name", "``#{article.sender.name}``", "``Customer``, ``Agent`` or ``System``"
    "Article > Visibility", "``#{article.internal}``", "``false`` or ``true`` (false if not internal)"
-   "Article > From", "``#{article.from}``", "``Joe Doe <jdoe@example.com>`` may differ, depends on ``FROM`` of send mail
+   "Article > From", "``#{article.from}``", "``Joe Doe <jdoe@example.com>`` may differ, depends on ``FROM`` of send mail"
    "Article > Created by > Web", "``#{article.created_by.web}``", "``https://zammad.com`` or empty if not set in user object"
    "Article > Created by > VIP", "``#{article.created_by.vip}``", "``true`` or ``false``"
    "Article > Created by > Phone", "``#{article.created_by.phone}``", "``+4930123456789`` or empty if not set in user object"
