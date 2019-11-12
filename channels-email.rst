@@ -37,34 +37,18 @@ While creating a new e-mail account, it is possible to use the expert settings t
 .. Note:: As soon as the email account is integrated and emails are imported, any notifications set via the trigger will be sent. It is therefore essential to check in advance that triggers with automatically generated messages are deactivated.
 
 
-Further useful settings
-------------------------
+Further mail specific settings
+------------------------------
 
-Filters
-+++++++
+Below you can find further settings that affect the way Zammad handles Email communication.
 
-In some cases you might want to re-route or even ignore messages based on their meta information.
-In these cases most of the times a Trigger is not optimal, because Zammad checks if a Trigger needs to be executed on every ticket update or creation. 
-So in some cases you only want to run specific things during Ticket creation (if it comes via E-Mail) - for this, you might find :ref:`postmaster_filters` interesting.
+.. toctree::
+   :maxdepth: 1
 
-
-Signatures
-++++++++++
-
-Sending a mail out without signature? Nah! Learn more about :ref:`signatures`.
-
-
-Settings
-++++++++
-
-Zammad allows you define some of its recognition depths and other useful settings that mostly apply to E-Mails. 
-For this, you can learn more about :ref:`email_settings`.
-
-
-Additional E-Mail Setting
--------------------------
-
-Some E-Mail related settings can be changed within :ref:`settings_in_tickets`.
+   channel-email/postmaster-filters
+   channel-email/signatures
+   channel-email/email_settings
+   ticket/settings-in-tickets
 
 
 Advanced E-Mail-Configuration
