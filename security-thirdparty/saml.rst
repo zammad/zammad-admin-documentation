@@ -104,4 +104,4 @@ The specific attributes to map vary widely between SAML IdP systems, this reques
   RequestedAttribute FriendlyName="Family name" Name="last_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="false"
 
 
-Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page. Alternatively you can enable "Auto-linking" for existing user accounts.
+Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page. Alternatively you can enable :ref:`automatic_account_linking` for existing user accounts.

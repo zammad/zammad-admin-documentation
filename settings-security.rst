@@ -58,6 +58,8 @@ If the account is yet unknown, Zammad will create a new user automatically, with
 Another big advantage of this feature is that your user doesn't need another password to remember.
 
 
+.. _automatic_account_linking:
+
 Automatic account link on initial logon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
