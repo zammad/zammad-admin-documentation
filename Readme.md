@@ -7,7 +7,7 @@ We take care about the translation part, so please don't change anything else
 whithin the repo, those changes will be discarded anyway ;) .
 
 **Note:**
-At the moment we only have a english version - the translation into other language is not planned as of now.
+At the moment we only have an english version - the translation into other language is not planned as of now.
 
 ## Documentation
 
