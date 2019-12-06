@@ -33,12 +33,15 @@ Just follow these steps:
 
 Zammad tries to detect the POP3, IMAP and SMTP server settings automatically. This should work most of the time. If it doesn’t work, use the “Experts” button to configure it yourself.
 
-While creating a new e-mail account, it is possible to use the expert settings to determine whether the e-mails remain in the connected mailbox or whether they should be transferred completely into the Zammad in order to avoid duplicate processing of e-mails.
+.. hint:: 🚯 By default, Zammad will **remove emails from your inbox after importing them**.
 
-.. hint:: If you choose to fetch mails from another directory than your INBOX, ensure that Mails for Zammad are moved to that directory. 
-  If you don't want this to happen automatically, at least do this manually during Zammads mail check (during channel creation as shown below).
-  If Zammad can't find it's Test-E-Mails, it suspects there's an issue with your configuration which will deny you to finish the configuration.
+   If you want Zammad to leave the contents of your inbox untouched, use the *Keep Messages on Server* option in the *Experts* configuration view.
 
+.. hint:: 📥 **If configuring Zammad to retrieve mail from a folder other than your inbox...**
+
+   During the account setup process, Zammad will verify your credentials by sending you an email from your own account, and then monitoring the folder you selected to confirm that it was delivered successfully.
+
+   Account setup will not succeed until this test message appears in the incoming mail folder you specified. If you don’t have filters set up to move Zammad’s test message there automatically, be sure to move it there yourself.
 
 1. step:
 
@@ -49,8 +52,7 @@ While creating a new e-mail account, it is possible to use the expert settings t
 .. image:: images/channels/Zammad_Helpdesk_-_channel-Email-KeepMessages.jpg
 
 
-.. Note:: As soon as the email account is integrated and emails are imported, any notifications set via the trigger will be sent. It is therefore essential to check in advance that triggers with automatically generated messages are deactivated.
-
+.. warning:: Be sure to **disable all auto-reply triggers** whenever adding a new email account. Zammad will begin importing emails shortly after the account has been added, and incoming messages will cause any active triggers to fire.
 
 Further mail specific settings
 ------------------------------
