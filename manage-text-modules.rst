@@ -56,7 +56,7 @@ All text modules can be used in articles as well as in the chat.
 
 
 
-The example text modules below use :doc:`system variables </system-variables>` to dynamically insert information like the customer’s or agent’s names.
+The example text modules below use :doc:`/system-variables` to dynamically insert information like the customer’s or agent’s names.
 
 **Examples of snippets are**::
 

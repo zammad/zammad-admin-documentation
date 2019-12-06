@@ -67,7 +67,7 @@ Send an email
 .. note:: In order to send emails with Triggers, you need to configure an email address for the group the trigger is working in.
    If you don't, Zammad will skip the Trigger.
 
-.. hint:: Certain actions (such as *Email* and *Notes*) support :doc:`system variables </system-variables>`, which can be used to build highly-customized message templates.
+.. hint:: Certain actions (such as *Email* and *Notes*) support :doc:`/system-variables`, which can be used to build highly-customized message templates.
 
 
 Examples

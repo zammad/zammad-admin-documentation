@@ -1,5 +1,5 @@
-Current User (System Variables)
-*******************************
+Current User
+************
 
 .. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
@@ -10,7 +10,7 @@ Current user variables always return values of the current user that caused e.g.
    In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
 
 
-.. csv-table:: Current User System Variables
+.. csv-table:: Current User Variables
    :header: "name", "variable", "example"
    :widths: 20, 10, 20
 

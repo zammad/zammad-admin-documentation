@@ -1,5 +1,5 @@
-Articles (System Variables)
-***************************
+Articles
+********
 
 .. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
@@ -8,7 +8,7 @@ These can be called via Triggers for example. If you're unsure if Zammad does su
 
 The below list gives you an example what kind of data you can expect, it's not intended to explain the data itself.
 
-.. csv-table:: Article System Variables
+.. csv-table:: Article Variables
    :header: "name", "variable", "example"
    :widths: 20, 10, 20
 

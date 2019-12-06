@@ -1,5 +1,5 @@
-Config (System Variables)
-*************************
+Config
+******
 
 .. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
@@ -8,7 +8,7 @@ These hold useful configuration information that you can use within e.g. trigger
 
 The below list gives you an example what kind of data you can expect, it's not intended to explain the data itself.
 
-.. csv-table:: Config System Variables
+.. csv-table:: Config Variables
    :header: "name", "variable", "example"
    :widths: 20, 10, 20
 

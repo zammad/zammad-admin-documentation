@@ -15,7 +15,7 @@ Each group can be assigned its own signature, but they can also all use the same
 Dynamic Signatures
 ++++++++++++++++++
 
-To individualize the signatures, it is possible to automatically load specific information into a signature via :doc:`system variables </system-variables>`. All information stored on the ticket, assigned customers or agents can be inserted. This makes it possible to design the signature individually. To load a list of available variables, enter two colons (``::``) into the *Text* box of the signature editor.
+To individualize the signatures, it is possible to automatically load specific information into a signature via :doc:`/system-variables`. All information stored on the ticket, assigned customers or agents can be inserted. This makes it possible to design the signature individually. To load a list of available variables, enter two colons (``::``) into the *Text* box of the signature editor.
 
 .. hint:: Please keep in mind that specific information might not be available during ticket creation. The best example here is the ticket number / id. Specific information are created with submitting the ticket and thus are not available before submitting.
 
