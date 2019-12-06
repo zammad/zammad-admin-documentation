@@ -92,7 +92,7 @@ Zammad is using POST Bindings for the Assertion Consumer Service (ACS)
 
 ``https://zammadFQDN/auth/saml/callback``
 
-Zammad requests these attributes from the SAML IdP, these are not configurable. Each attribute should map to the correct SAML attribute via "Mappers" as needed, or equivielent mapping paradigm in other IdP systems.
+Zammad requests these attributes from the SAML IdP, these are not configurable. Each attribute should map to the correct SAML attribute via "Mappers" as needed, or equivalent mapping paradigm in other IdP systems.
 The specific attributes to map vary widely between SAML IdP systems, this requested attribute list can help align the SAML provided attributes with what Zammad expects to see.
 
 .. code-block:: html
@@ -103,4 +103,4 @@ The specific attributes to map vary widely between SAML IdP systems, this reques
    RequestedAttribute FriendlyName="Family name" Name="last_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="false"
 
 
-Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page. Alternatively you can enable :ref:`automatic_account_linking` for existing user accounts.
+Now, you should be able to link accounts in the Profile Panel under *Linked Accounts*, or log in via the Zammad login page. Alternately, you can enable :ref:`automatic account linking <automatic_account_linking>` for existing user accounts.
