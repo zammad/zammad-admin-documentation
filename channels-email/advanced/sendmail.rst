@@ -8,7 +8,7 @@ If you try to configure **only** an outgoing email account
 you will find that it’s simply not possible via the email channel setup wizard.
 Instead, you will have to create it via the CLI.
 
-(The wizard is designed to provide an idiot-proof email configuration process 
+(The wizard is designed to provide an idiot-proof email configuration process
 for the average, non-technical user,
 so certain advanced options and use cases have been deliberately omitted.)
 
