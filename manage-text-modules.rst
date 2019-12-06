@@ -16,10 +16,7 @@ Here you will find text snippets already created in the standard version, which 
 
 .. image:: images/manage/Zammad_Helpdesk_-_Text_modules.jpg
 
-Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
-
-.. note:: Learn more about :doc:`/system-variables` to enhance your text modules.
 
 Creating keywords makes it easier to find the right text module.
 
@@ -59,6 +56,7 @@ All text modules can be used in articles as well as in the chat.
 
 
 
+The example text modules below use :doc:`system variables </system-variables>` to dynamically insert information like the customer’s or agent’s names.
 
 **Examples of snippets are**::
 
@@ -71,9 +69,6 @@ All text modules can be used in articles as well as in the chat.
    My Name is #{user.firstname},
 
 Of course you can also use multi line snippets.
-
-
-.. hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :doc:`/system-variables`.
 
 
 Delete or clone text modules
