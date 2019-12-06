@@ -1,5 +1,3 @@
-.. _signatures:
-
 Signatures
 **********
 
@@ -20,7 +18,7 @@ Each group can be assigned its own signature, but they can also all use the same
 Creating dynamic signatures
 +++++++++++++++++++++++++++
 
-.. Note:: Learn more about :ref:`system_variables` to enhance your signatures.
+.. Note:: Learn more about :doc:`/system-variables` to enhance your signatures.
 
 To individualize the signatures, it is possible to automatically load specific information into a signature via variables. All information stored on the ticket, assigned customers or agents can be inserted. This makes it possible to design the signature individually. To load a list of possible snippets, press ``::`` (two colons) in the text field of the signature.
 

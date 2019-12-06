@@ -73,7 +73,7 @@ This means that you can, for exmaple, create a URL for a google search by defini
 The above will create a google search link which will contain the search phrase (which is the objects value). 
 You can use any variable that's available within Zammad! This gives your great options within your structures!
 
-Learn more about :ref:`system_variables`.
+Learn more about :doc:`/system-variables`.
 
 .. figure:: images/system/object_link-template.gif
   :align: center

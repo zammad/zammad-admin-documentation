@@ -10,7 +10,7 @@ Groups in Zammad are similar to working groups that deal with different topics w
   
 Tickets enter Zammad through various channels (e.g. via email) and are then sorted into these groups. The tickets (cases) are thus made available to the agents responsible for the group. Each ticket can only belong to one group, and you can decide with a permission system what permissions your agents have in each group. For example, you might want set up a group *Management* for confidential tickets; with the permission system you can configure that only a few select agents will have access to these tickets.
 
-For an additional way to categorize tickets, have a look at  :ref:`manage_tags`.
+For an additional way to categorize tickets, have a look at  :doc:`/manage-tags`.
 
 Group settings
 ---------------
@@ -35,7 +35,7 @@ There you can edit the following settings:
 
 - *Email*: choose which email address will be used as the sending address (`From` header) when agents reply to tickets in this group. Email addresses can be configured in Channels → Email → Accounts.
 
-- *Signature*: choose which signature should be appended when agents reply to tickets in this group. Learn more about :ref:`signatures`.
+- *Signature*: choose which :doc:`signature </channel-email/signatures>` to use when replying to tickets in this group.
 
 - *Note*: an internal note about the group that is only visible to people who can access the group management area.
 
@@ -54,7 +54,7 @@ The group's permissions for agents can be set up as follows:
 
 or
 
-2. With the permission setting via a role (Admin → Manage → Role), please see: :ref:`manage_roles`
+2. With the permission setting via a role (Admin → Manage → Role), please see: :doc:`/manage-roles`
 
 It is recommended to avoid using both configurations.
 

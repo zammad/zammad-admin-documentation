@@ -20,7 +20,7 @@ Here you will find text snippets already created in the standard version, which 
 Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
 
-.. Note:: Learn more about :ref:`system_variables` to enhance your text modules.
+.. Note:: Learn more about :doc:`/system-variables` to enhance your text modules.
 
 Creating keywords makes it easier to find the right text module.
 
@@ -76,7 +76,7 @@ All text modules can be used in articles as well as in the chat.
 Of course you can also use multi line snippets.
 
 
-.. Hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :ref:`system_variables`.
+.. Hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :doc:`/system-variables`.
 
 
 Delete or clone text modules

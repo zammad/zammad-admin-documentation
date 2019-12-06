@@ -1,7 +1,7 @@
 Ticket
 ******
 
-.. Note:: Some Ticket related settings are configured within Tickets, which is why they can be found on :ref:`settings_in_tickets`.
+.. Note:: Some Ticket related settings are configured within Tickets, which is why they can be found on :doc:`/ticket/settings-in-tickets`.
 
 Base
 ----
@@ -20,7 +20,7 @@ Ticket Hook Position: Default value ``right``
     *None* 
         This will completely remove ticket references from the subject.
 
-        .. Warning:: Please ensure to take a look at :ref:`email_settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly. 
+        .. Warning:: Please ensure to take a look at :doc:`/channels-email/email-settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly. 
 
         Disabling this and not setting up any further follow up search will lead to unexpected results!
 
@@ -43,8 +43,8 @@ Ticket Last Contact Behaviour: Default value ``Last customer contact (with consi
 
          - .. image:: images/settings/Trigger-last-contact.jpg
 
-       * - Last contact value used on :ref:`manage_overviews`
-         - Last contact value used on :ref:`manage_triggers`
+       * - Last contact value used on :doc:`/manage-overviews`
+         - Last contact value used on :doc:`/manage-trigger`
 
 
 Number

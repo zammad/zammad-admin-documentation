@@ -1,5 +1,3 @@
-.. _system_variables:
-
 System-Variables within Zammad
 ******************************
 

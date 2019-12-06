@@ -1,5 +1,3 @@
-.. _postmaster_filters:
-
 Filters
 *******
 

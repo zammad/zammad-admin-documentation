@@ -1,5 +1,3 @@
-.. _manage_organizations:
-
 Organizations
 *************
 

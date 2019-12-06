@@ -1,5 +1,3 @@
-.. _settings_in_tickets:
-
 Settings within Tickets
 ***********************
 

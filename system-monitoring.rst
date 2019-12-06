@@ -1,5 +1,3 @@
-.. _system_monitoring:
-
 Monitoring
 **********
 

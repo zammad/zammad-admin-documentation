@@ -1,11 +1,9 @@
-.. _email_settings:
-
 Settings
 ********
 
 Below you can find the currently available Email related settings. Most of these settings have default values which can be found in this list as well.
 
-.. Note:: Some E-Mail related settings are ticket based settings, which is why they can be found on :ref:`settings_in_tickets`.
+.. Note:: Some E-Mail related settings are ticket based settings, which is why they can be found on :doc:`/ticket/settings-in-tickets`.
 
 List of Settings
 ----------------
@@ -39,7 +37,7 @@ Send postmaster mail if mail too large: Default value ``yes (enabled)`` on fresh
         If the option is set to no, Zammad will not reply to mails that are too big. Your customer will **not notice** that the mail was too large! 
         Instead, Zammad will use the monitoring endpoint to alert its administrators that it can't fetch a too large mail.
 
-        Learn more about :ref:`system_monitoring`.
+        Learn more about :doc:`/system-monitoring`.
 Sender based on Reply-To header: Default value ``not set (-)``
     This setting decides how Zammad should recognize it's customers from Emails that contain a ``Reply-To`` header. 
     This comes in useful if you're working with contact forms that need to use reply to headers.

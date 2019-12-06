@@ -1,5 +1,3 @@
-.. _2fa-gmail:
-
 How to create an App Password for Gmail
 ***************************************
 
