@@ -1,30 +1,33 @@
 Ticket
 ******
 
-.. note:: Some Ticket related settings are configured within Tickets, which is why they can be found in the :doc:`/misc-composer`.
+.. note:: Additional settings for the ticket composer interface can be found in the :doc:`/misc-composer`.
 
 Base
 ----
 
-Ticket Hook: Default value ``Ticket#``
-   The identifier for a ticket, e. g. Ticket#, Call#, MyTicket#.
-Ticket Hook Position: Default value ``right``
+Ticket Hook (default: ``Ticket#``)
+   The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#.
+
+Ticket Hook Position (default: ``right``)
    With this setting you can decide (if) where to insert the ticket number.
 
    *Right*
       This setting will add the ticket reference on the right site of the subject.
+
       Example: ``Some Subject [Ticket#12345]``
    *Left*
       This setting will add the ticket reference on the left site of the subject.
+
       Example: ``[Ticket#12345] Some Subject``
    *None*
       This will completely remove ticket references from the subject.
 
-      .. warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the email channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
+   .. warning:: Please ensure to take a look at :doc:`/channels/email/settings` within the email channel to ensure you have at least one reference that helps Zammad to assign follow-ups correctly.
 
       Disabling this and not setting up any further follow up search will lead to unexpected results!
 
-Ticket Last Contact Behaviour: Default value ``Last customer contact (with consideration an agent has replied to it)``
+Ticket Last Contact Behaviour (default: ``Last customer contact (with consideration an agent has replied to it)``)
    This setting changes the way Zammad updates the ``Last Contact`` value of a ticket.
    This is fairly important for overviews and what you expect upon ticket updates of a customer.
 
@@ -49,7 +52,7 @@ Ticket Last Contact Behaviour: Default value ``Last customer contact (with consi
 Number
 ------
 
-Ticket Number Format: Default value ``Increment (SystemID.Counter)``
+Ticket Number Format (default: ``Increment (SystemID.Counter)``)
    This setting defines the way Zammads ticket number will look.
    Changing this setting in production will cause follow up detection to fail.
 
@@ -65,11 +68,11 @@ Ticket Number Format: Default value ``Increment (SystemID.Counter)``
 OPTIONS
    The below options allow you to further customize your ticket number. The availability of options differ depending of the chosen ticket number format above.
 
-   Checksum: Default value ``no``
+   Checksum (default: ``no``)
       If set to yes, we'll built a checksum to further "unique" the ticket number of your system. If you're dealing with many other ticket systems this might help to prevent false positive follow up detections on tickets.
 
       This will also add another digit to the ticket number.
-   Min. size of Number: Default value ``5``
+   Min. size of Number (default: ``5``)
       This setting defines the minimum length of your ticket number. If your counter is not yet high enough, Zammad will fill the number with zeros to ensure the wanted length.
 
       Please note that the minimum length is ``3`` (SystemID + at least one digit if below 10). Also, if the length is no longer long enough, the number will automatically get one digit longer. Ticket-Numbers **do not overflow**, thus it's save to keep it at 5 or set it lower if wanted.
@@ -77,7 +80,7 @@ OPTIONS
       .. note:: This option is only available if ticket number format is set to ``Increment``!
 
 
-Auto Assignment
+Auto-Assignment
 ---------------
 
 In a larger Zammad environment, it happens that several agents open the same ticket at the same time. Although collision detection is then effective, the efficiency of processing can be increased by means of the automatic assignment of tickets when a ticket is opened.
