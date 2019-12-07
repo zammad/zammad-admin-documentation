@@ -2,7 +2,7 @@ Chat
 ****
 
 Chat has gotten very important for company and overall customer support. If used properly, support via chat
-can be a real efficiency booster. A downside of chats is when nobody responds or a bot responding to the customer. 
+can be a real efficiency booster. A downside of chats is when nobody responds or a bot responding to the customer.
 
 How to improve Support by Chat?
 ===============================
@@ -32,13 +32,13 @@ The task is clear: Work on the disadvantages of a regular support chat and impro
   - If no agent is online or the agents are absend, the chat won't be available
 * We're setting an agent as inactive, if the agent doesn't accept new chat requests or the WebApp is offline.
   This way, your support staff can take breaks without your customers waiting ages for a reaction (see point above)
-* Zammad does not respond to chat messages on it's own to ensure that there's no strange delay coming 
+* Zammad does not respond to chat messages on it's own to ensure that there's no strange delay coming
   afterwards. Zammad will fire a (configurable by agent) auto response as soon as the agents accepts the Chat
   request.
 * Zammad will try to adapt your main website colors to the chat. You can also adjust those colors allowing
   you to integrate the chat into your website, like it has been there before.
-  
-  
+
+
 Configuration of the Chat widget
 ================================
 

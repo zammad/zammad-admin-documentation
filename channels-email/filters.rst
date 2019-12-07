@@ -34,4 +34,3 @@ Different attributes of a filter can be combined with each other. Likewise, the 
 Note that Zammad matches against the full header, e.g. for a mail with "``From: Display Name <display.name@example.com>``", the ``From`` condition will test against "``Display Name <display.name@example.com>``". This is especially important when using anchored regular expressions; ``regex:^display\.name@example.com$`` would not match this mail!
 
 It should be borne in mind that the combined attributes build on each other. If a filter is no longer needed, it can either be temporarily set inactive or deleted directly.
-

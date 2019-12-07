@@ -32,7 +32,7 @@ The scheduler shown in the screenshot would have the following effects:
 Every workday (Monday to Friday) at 9:00 a.m. (*UTC*), all tickets which:
 
 - are not closed and
-- are assigned to the Sales group and 
+- are assigned to the Sales group and
 - whose escalation was 30 minutes ago
 
 will be:
@@ -42,4 +42,4 @@ will be:
 
 As a supervisor in the Sales group, this enables Emma to intercept and process escalated tickets.
 
-Emma will not receive notifications when the scheduler assigns her these tickets, and no note will be added to them. 
+Emma will not receive notifications when the scheduler assigns her these tickets, and no note will be added to them.

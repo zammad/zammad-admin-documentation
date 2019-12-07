@@ -45,4 +45,3 @@ Go to "Admin -> Security -> Twitter -> Third Party Applications -> Office 365 Se
 Fill in the "APP ID" and the "APP SECRET" and click the "Submit" button.
 
 Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page.
-

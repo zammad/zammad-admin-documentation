@@ -43,4 +43,3 @@ Fill in the "Twitter Key" and the "Twitter Secret" and click the "Submit" button
 
 
 Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page.
-

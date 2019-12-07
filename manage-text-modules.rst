@@ -29,7 +29,7 @@ Creating keywords makes it easier to find the right text module.
 If needed, you can restrict text modules to specific groups.
 With this, you can easilly keep text module lists short and dedicate specific texts to where they belong.
 
-You can adjust the group memberships for text modules at any time. 
+You can adjust the group memberships for text modules at any time.
 This allows you to have the text module available globally (no groups selected) or one or several specific groups.
 
 .. figure:: images/manage/text-module-group-specific.png

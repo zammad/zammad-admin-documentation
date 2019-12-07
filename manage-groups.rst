@@ -7,7 +7,7 @@ What are groups?
 ----------------
 
 Groups in Zammad are similar to working groups that deal with different topics within a company. For example, the tickets relevant to the sales department might be available in the *Sales* group, while the tickets for the support department might be available in the *Support* group. These are just examples; how you structure your groups is up to you.
-  
+
 Tickets enter Zammad through various channels (e.g. via email) and are then sorted into these groups. The tickets (cases) are thus made available to the agents responsible for the group. Each ticket can only belong to one group, and you can decide with a permission system what permissions your agents have in each group. For example, you might want set up a group *Management* for confidential tickets; with the permission system you can configure that only a few select agents will have access to these tickets.
 
 For an additional way to categorize tickets, have a look at  :doc:`/manage-tags`.

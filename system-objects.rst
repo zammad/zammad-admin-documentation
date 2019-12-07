@@ -1,7 +1,7 @@
 Objects
 *******
 
-In Zammad you can add your own fields to tickets, users, organizations and even groups. 
+In Zammad you can add your own fields to tickets, users, organizations and even groups.
 This can be useful if you need to add further information to a ticket that you don't want to have in a note (you'll find it easier).
 
 .. Note:: Try to avoid deleting objects (rather disable them) as Zammad might run into unexpected conditions if they where referenced somewhere.
@@ -9,7 +9,7 @@ This can be useful if you need to add further information to a ticket that you d
 .. image:: images/system/objects-1.jpg
 
 Here's an overview of the objects. On the upper right you can add new Attributes (no 1).
-By default, there will be no custom fields - standard objects (no 2) will be grayed out, you can't delete or change those. 
+By default, there will be no custom fields - standard objects (no 2) will be grayed out, you can't delete or change those.
 Custom objects (no 3) will be displayed in black font and have a trash bin on the right site to delete not needed objects.
 By click on custom objects, you can edit them so they can suite your needs.
 
@@ -48,7 +48,7 @@ When adding a new object, you can choose between the following object types:
 - Tree Select
    - this object enables you to use up to 6 sub keys.
    - you'll see this object as a kind of drop down menu.
-   
+
 .. Note:: You cannot change the object format / type as soon as you applied it. If you don't further need an object, you can disable it.
 
 
@@ -57,7 +57,7 @@ URL fields (Link-Template)
 
 .. Note:: This option is available within Zammad 3.2 and later. This function is restricted to Text and Select objects only.
 
-Link-Templates are an amazing way to dynamically generate URLs. This allows you to integrate other systems better, without having the need to 
+Link-Templates are an amazing way to dynamically generate URLs. This allows you to integrate other systems better, without having the need to
 manually copy an URL! As soon as field is set and updated, a URL-Icon will appear, allowing you to open the link in a new tab.
 
 .. Hint:: Even though the Link-Template field shows up within the object edition, it is optional and not used if you don't fill in anything.
@@ -70,14 +70,14 @@ This means that you can, for exmaple, create a URL for a google search by defini
 
 ``https://www.google.com/search?q=#{ticket.amazingobject}``
 
-The above will create a google search link which will contain the search phrase (which is the objects value). 
+The above will create a google search link which will contain the search phrase (which is the objects value).
 You can use any variable that's available within Zammad! This gives your great options within your structures!
 
 Learn more about :doc:`/system-variables`.
 
 .. figure:: images/system/object_link-template.gif
   :align: center
-  
+
   The above screencast shows how the link template will perform after object creation.
 
 
@@ -87,17 +87,17 @@ Object permissions
 When ever needed you can restrict access to objects for permission roles (agents and customer) and even set a object to be required.
 
 - During Ticket Creation
-   - show / hide the field. 
+   - show / hide the field.
    - make the field required (if needed).
 - During Updating a Ticket
    - show / hide the field.
    - make the field required (if needed).
-   
+
 .. Hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
 
 .. figure:: images/system/objects-2.jpg
   :align: center
-  
+
   This is the object edit screen, it looks very similar to the creation screen and holds all object specific information.
 
 
@@ -109,12 +109,11 @@ Updating database after adding or editing objects
 
 .. Note:: If you're on a self hosted system, you might need console access to your Zammad-Server to restart the service.
 
-When adding or changing objects, Zammad will not apply the changes isntantly, but instead shows you the changed objects first. 
-If you're ready to go, just click on "Update database" to apply the changes to Zammad. 
+When adding or changing objects, Zammad will not apply the changes isntantly, but instead shows you the changed objects first.
+If you're ready to go, just click on "Update database" to apply the changes to Zammad.
 If you made a mistake or just want to discard your changes, click "Discard changes".
 
 .. figure:: images/system/object-update-database.jpg
   :align: center
-  
-  Changes on objects require you to update the database to apply these changes.
 
+  Changes on objects require you to update the database to apply these changes.

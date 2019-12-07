@@ -65,7 +65,7 @@ Modify the ticket
 Send an email
   Either to the customer, the agent who owns the ticket, or every agent in the
   system.
-  
+
 .. Note:: In order to send E-Mails with Triggers, you need to configure an E-Mail-Address for the group the trigger is working in.
   If you don't, Zammad will skip the Trigger.
 

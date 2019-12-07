@@ -10,5 +10,5 @@ That means for example: if you are working with a dispatcher, you could implemen
 
 .. figure:: /images/channels/zammad-web_customer-creates-new-ticket.jpg
   :figclass: align-center
-  
+
   In this example we selected "Sales" and "2nd Level" to be selectable for the customer.

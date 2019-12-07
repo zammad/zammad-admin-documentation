@@ -1,6 +1,6 @@
 # Zammad admin documentation
 
-If you want to contribute to zammad documentation you can 
+If you want to contribute to zammad documentation you can
 edit the \*.rst files and create pull requests.
 
 We take care about the translation part, so please don't change anything else
@@ -62,10 +62,10 @@ manager.
 brew install gettext
 ```
 
-The workflow itself 
+The workflow itself
 ```
 # create .tx config
-tx init 
+tx init
 # or when just want to update a ressource
 tx set --source -r <project_slug.resource_slug> -l <lang> <file>
 
@@ -93,5 +93,3 @@ make -e SPHINXOPTS="-D language='en'" html
 ```
 
 If you have a problem, please create an issue. Thanks.
-
-

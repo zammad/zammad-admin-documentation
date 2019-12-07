@@ -16,7 +16,7 @@ Integrations for phone systems
    integrations/generic-cti
    integrations/placetel-cti
    integrations/sipgate
-   
+
 Integrations for authentication and customers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -27,7 +27,7 @@ Integrations for authentication and customers
    integrations/ldap
    integrations/exchange
    integrations/clearbit
-   
+
 Integrations for Monitoring Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -37,7 +37,7 @@ Integrations for Monitoring Systems
   * Icinga
   * Monit
   * Nagios
-  
+
 Other Integrations
 ^^^^^^^^^^^^^^^^^^
 
@@ -52,4 +52,3 @@ This section will hold any other integration that can't be grouped up (yet).
    :titlesonly:
 
    integrations/slack
-

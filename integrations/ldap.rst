@@ -16,18 +16,17 @@ On this wizard step, you can also define the wanted LDAP-Group to Zammad-Role ma
 
 .. Note:: Please note that nested groups are currently not supported by Zammad.
 
-If needed, you can also change the user filter for your LDAP-Query. The option "Users without assigned LDAP groups" will by default assign the Customer-Role 
-(default sign-up role) to any LDAP-User, that doesn't match to the above role-mapping. After pressing Continue, Zammad will check if the configuration is okay. 
+If needed, you can also change the user filter for your LDAP-Query. The option "Users without assigned LDAP groups" will by default assign the Customer-Role
+(default sign-up role) to any LDAP-User, that doesn't match to the above role-mapping. After pressing Continue, Zammad will check if the configuration is okay.
 You can then enable LDAP and start your first sync. The sync will then run hourly - if you need to change mappings, you can change the configuration at any time.
 
 .. image:: /images/system/ldap-1.jpg
 
 .. Note:: | You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active-Directory Accounts (the Users will be set to inactive within Zammad).
           | You can find further information for Active Directory Filters at the Website from Microsoft_.
-		  
+
 .. _Microsoft: https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
 
 After the sync has finished, you can find the new LDAP-Users under "Users". Zammad integrates them just normal users, the difference is the login name.
 
 .. image:: /images/system/ldap-2.jpg
-

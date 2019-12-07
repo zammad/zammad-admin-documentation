@@ -63,7 +63,7 @@ App name
 
 Application description
    Anything is fine here.
-   
+
 Website URL
    The URL of your Zammad instance.
 

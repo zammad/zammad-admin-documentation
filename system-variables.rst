@@ -40,6 +40,4 @@ The first part of the variable name consist of the object type. Currently these 
 The second part is the name of the object. This is the name you define during object creation and can be found within the object menu at any time.
 The first and second part of a variable is divided by a point, e.g.: ``ticket.number`` which will in total be ``#{ticket.number}``.
 
-Now, in some situations it's possible that you'll need to use a third part. The best example for such a situation would be a ``select`` or ``tree-select`` field which will by default return the key value, not it's display name. For this, just extend your variable with ``.value``. This will result in ``#{ticket.select.value}``. 
-
-
+Now, in some situations it's possible that you'll need to use a third part. The best example for such a situation would be a ``select`` or ``tree-select`` field which will by default return the key value, not it's display name. For this, just extend your variable with ``.value``. This will result in ``#{ticket.select.value}``.

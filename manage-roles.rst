@@ -49,7 +49,7 @@ Another common use case is the supervisor role, where the supervisor can freely 
    "OVERVIEW", "Right to see tickets in the overviews. A view of the ticket details is not possible."
    "FULL", "Right to create, read, change and see tickets in the overviews."
 
-.. hint:: | **I can't assign an agent as Owner?!** 
+.. hint:: | **I can't assign an agent as Owner?!**
   | In order to assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
 
 

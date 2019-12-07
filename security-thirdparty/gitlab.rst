@@ -46,4 +46,3 @@ and logged in as a customer.
 
 
 Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page.
-

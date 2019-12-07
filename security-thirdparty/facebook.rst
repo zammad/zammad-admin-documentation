@@ -40,4 +40,3 @@ Navigate to "Admin -> Security -> Third Party Applications" and enter the App ID
 
 
 Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page.
-

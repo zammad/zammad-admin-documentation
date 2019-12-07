@@ -15,11 +15,11 @@ Note - default visibility (default: ``internal``)
    .. image:: /images/misc/composer_default-visibility.jpg
 
 Email - subject field (default: ``no``)
-   When setting this option to ``yes``, Zammad will also display the subject field when answering via Email articles. 
+   When setting this option to ``yes``, Zammad will also display the subject field when answering via Email articles.
    It doesn't matter if you click on ``reply`` or switch to Email article manually.
 
-   .. warning:: Please note that if set to ``no``, Zammad will automatically use the tickets title as subject! 
-      
+   .. warning:: Please note that if set to ``no``, Zammad will automatically use the tickets title as subject!
+
       The subject can differ between title and mail subject if choosing ``yes``.
 
 Email - full quote (default: ``no``)
@@ -33,5 +33,5 @@ Email - quote header (default: ``yes``)
    Example: ``On Thursday, June 27, 2019, 3:37:11 PM, Jacob Smith wrote:``
 
 Twitter - tweet initials (default: ``yes``)
-   When set to yes, this will add ``/CM`` (first character of first- and lastname) to the bottom of every tweet answer you create. 
+   When set to yes, this will add ``/CM`` (first character of first- and lastname) to the bottom of every tweet answer you create.
    This only affects tickets that come from the Twitter Channel.

@@ -11,30 +11,30 @@ Ticket Hook: Default value ``Ticket#``
 Ticket Hook Position: Default value ``right``
     With this setting you can decide (if) where to insert the ticket number.
 
-    *Right* 
+    *Right*
         This setting will add the ticket reference on the right site of the subject.
         Example: ``Some Subject [Ticket#12345]``
-    *Left* 
+    *Left*
         This setting will add the ticket reference on the left site of the subject.
         Example: ``[Ticket#12345] Some Subject``
-    *None* 
+    *None*
         This will completely remove ticket references from the subject.
 
-        .. Warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly. 
+        .. Warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
 
         Disabling this and not setting up any further follow up search will lead to unexpected results!
 
 Ticket Last Contact Behaviour: Default value ``Last customer contact (with consideration an agent has replied to it)``
-    This setting changes the way Zammad updates the ``Last Contact`` value of a ticket. 
+    This setting changes the way Zammad updates the ``Last Contact`` value of a ticket.
     This is fairly important for overviews and what you expect upon ticket updates of a customer.
 
     Last customer contact (with consideration an agent has replied to it)
-        If this option is chosen, Zammad will update the last updated value just once if a customer replies. 
+        If this option is chosen, Zammad will update the last updated value just once if a customer replies.
         After that, Zammad will wait for an agent to react.
 
         This comes in handy if you want to work tickets in the order of their first update. This will not change ticket orders if customers decide to "bumb" the ticket affected.
     Last customer contact (without consideration an agent has replied to it)
-        When setting this option, Zammad will always update the last updated value. 
+        When setting this option, Zammad will always update the last updated value.
         This means that if ordering by ``Last Update``, ticket orders will change if customers "bump" the ticket.
 
     .. list-table::
@@ -51,7 +51,7 @@ Number
 ------
 
 Ticket Number Format: Default value ``Increment (SystemID.Counter)``
-	This setting defines the way Zammads ticket number will look. 
+	This setting defines the way Zammads ticket number will look.
 	Changing this setting in production will cause follow up detection to fail.
 
     Increment (SystemID.Counter)
@@ -87,7 +87,7 @@ In a larger Zammad environment, it happens that several agents open the same tic
 
 The automatic assignment of tickets can be activated and configured in the admin area under within Settings -> Ticket -> Auto assignment.
 
-If you want to use this function for only specific tickets, you can configure the conditions accordingly to meet your requirenment. 
+If you want to use this function for only specific tickets, you can configure the conditions accordingly to meet your requirenment.
 By default the condition affects all tickets with the state ``open``.
 
 If you need to exclude users (e.g. a group leader), you can search and select the desired agents in the ``Exception Users`` list.

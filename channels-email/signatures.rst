@@ -9,7 +9,7 @@ Afterwards, the existing (and active) signatures are available in the group edit
 
     .. image:: /images/channels/Signature2.jpg
 
-Each group can be assigned its own signature, but they can also all use the same signature. 
+Each group can be assigned its own signature, but they can also all use the same signature.
 
 
 Dynamic Signatures

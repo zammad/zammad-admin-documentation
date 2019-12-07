@@ -5,8 +5,8 @@ Current User (System-Variables)
 
 Current user variables always return values of the current user that caused e.g. a trigger to run.
 
-.. Note:: Due to the above fact, these variables are often not (yet) set or available for usuage. 
-  
+.. Note:: Due to the above fact, these variables are often not (yet) set or available for usuage.
+
   In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
 
 
@@ -57,5 +57,3 @@ Current user variables always return values of the current user that caused e.g.
    "Current User > Created by > Address", "``#{user.created_by.address}``", "``Some street 1, 12345 Berlin`` or empty if not set"
    "Current User > Created at", "``#{user.created_at}``", "``2019-10-07 16:25:00 UTC``"
    "Current User > Address", "``#{user.address}``", "``Some street 1, 12345 Berlin`` or empty if not set"
-
-
