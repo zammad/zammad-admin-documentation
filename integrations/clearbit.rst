@@ -5,10 +5,10 @@ With our LDAP-Integration, you can easily enrich the information provided by Zam
 If the customers or agents E-Mail-Address is known to Clearbit, it will share all information it has regarding the user with Zammad.
 Those information can include the following:
 
-  * Avatar
-  * Address information
-  * Website-Information
-  * A BIO (as Note by default)
+* Avatar
+* Address information
+* Website-Information
+* A BIO (as Note by default)
 
 If needed, you can add further custom objects and add mappings to them, so the clearbit information can be filled within the database.
 In general you can get any information from clearbit, as long as you have a mapping to an Zammad object.
@@ -19,9 +19,10 @@ In general you can get any information from clearbit, as long as you have a mapp
 
 
 .. Hint:: Clearbit does have a Mapping of fields like LDAP and Exchange have, but does not "win" against Zammad information. This means
-          that if you have e.g. the lastname field filled in already and Clearbit has other information on that, it will not be updated.  |br|\  |br|\
-          However: If let's say the lastname has been set by Clearbit and Zammad notices that the lastname on the Clearbit source has changed, Zammad
-          will also update this value.
+   that if you have e.g. the lastname field filled in already and Clearbit has other information on that, it will not be updated.
+
+   However: If let's say the lastname has been set by Clearbit and Zammad notices that the lastname on the Clearbit source has changed, Zammad
+   will also update this value.
 
 
 Configuration

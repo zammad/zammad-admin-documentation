@@ -10,11 +10,11 @@ Why do I need this feature?
 If you're already using Slack for your team communication, you'll love this feature!
 Our Slack integration can push ticket notifications about the last ticket article based on the following events:
 
-  * on Ticket creation
-  * on Ticket updates
-  * on reached reminders
-  * a Ticket has escalated
-  * a Ticket is going to escalate
+* on Ticket creation
+* on Ticket updates
+* on reached reminders
+* a Ticket has escalated
+* a Ticket is going to escalate
 
 Zammad will provide the Ticket title, a direct link to the Ticket, the event type (creation, updated, escalation), the customer,
 time and the last article that has triggered the notification. This will give you further options, as you can see e.g. escalating tickets

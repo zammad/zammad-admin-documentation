@@ -7,9 +7,9 @@ To get this to work you need to pipe your emails to rails.
 
 **Command line**::
 
- su - zammad
- cd /opt/zammad
- cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
+   su - zammad
+   cd /opt/zammad
+   cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
 
 Fetchmail
@@ -17,18 +17,18 @@ Fetchmail
 
 **Create .fetchmailrc**::
 
- su - zammad
- cd ~
- touch .fetchmailrc
- chmod 0600 .fetchmailrc
+   su - zammad
+   cd ~
+   touch .fetchmailrc
+   chmod 0600 .fetchmailrc
 
 
 **vi .fetchmailrc**::
 
- #
- # zammad fetchmail config
- #
- poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda "rails r 'Channel::Driver::MailStdin.new(trusted: true)'"
+   #
+   # zammad fetchmail config
+   #
+   poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda "rails r 'Channel::Driver::MailStdin.new(trusted: true)'"
 
 
 That's it. Emails now will be directly piped into Zammad.
@@ -44,32 +44,32 @@ Fetchmail config looks slightly different.
 
 **vi .fetchmailrc**::
 
- #
- # zammad fetchmail config
- #
- poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda /usr/bin/procmail is zammad here
+   #
+   # zammad fetchmail config
+   #
+   poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda /usr/bin/procmail is zammad here
 
 
 **Create .procmailrc**::
 
- su - zammad
- cd ~
- touch .procmailrc
+   su - zammad
+   cd ~
+   touch .procmailrc
 
 **vi .procmailrc**::
 
- # --
- # Pipe all emails into Zammad
- # --
- PATH=/opt/zammad/bin:/opt/zammad/vendor/bundle/bin:/sbin:/bin:/usr/sbin:/usr/bin:
- SYS_HOME="/home/zammad"
- RAILS_ENV=production
- GEM_PATH=/opt/zammad/vendor/bundle/ruby/2.4.1/
- LOGFILE="$SYS_HOME/procmail.log"
- #VERBOSE="on"
+   # --
+   # Pipe all emails into Zammad
+   # --
+   PATH=/opt/zammad/bin:/opt/zammad/vendor/bundle/bin:/sbin:/bin:/usr/sbin:/usr/bin:
+   SYS_HOME="/home/zammad"
+   RAILS_ENV=production
+   GEM_PATH=/opt/zammad/vendor/bundle/ruby/2.4.1/
+   LOGFILE="$SYS_HOME/procmail.log"
+   #VERBOSE="on"
 
- :0 :
- | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
+   :0 :
+   | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
 
 

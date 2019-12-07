@@ -76,9 +76,9 @@ You can use any variable that's available within Zammad! This gives your great o
 Learn more about :doc:`/system-variables`.
 
 .. figure:: images/system/object_link-template.gif
-  :align: center
+   :align: center
 
-  The above screencast shows how the link template will perform after object creation.
+   The above screencast shows how the link template will perform after object creation.
 
 
 Object permissions
@@ -96,9 +96,9 @@ When ever needed you can restrict access to objects for permission roles (agents
 .. Hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
 
 .. figure:: images/system/objects-2.jpg
-  :align: center
+   :align: center
 
-  This is the object edit screen, it looks very similar to the creation screen and holds all object specific information.
+   This is the object edit screen, it looks very similar to the creation screen and holds all object specific information.
 
 
 
@@ -114,6 +114,6 @@ If you're ready to go, just click on "Update database" to apply the changes to Z
 If you made a mistake or just want to discard your changes, click "Discard changes".
 
 .. figure:: images/system/object-update-database.jpg
-  :align: center
+   :align: center
 
-  Changes on objects require you to update the database to apply these changes.
+   Changes on objects require you to update the database to apply these changes.

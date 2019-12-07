@@ -9,87 +9,87 @@ List of Settings
 ----------------
 
 Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}>``
-    This is the default sender address for Zammad that affects all mails but those generated because of replies (like triggers or agent based mails).
-    Your customers normally will not see this address. This E-Mail-Address does not need to receive and can't bne assigned to a group.
+   This is the default sender address for Zammad that affects all mails but those generated because of replies (like triggers or agent based mails).
+   Your customers normally will not see this address. This E-Mail-Address does not need to receive and can't bne assigned to a group.
 
-    .. Note:: This address is relevant for agent notifications and password reset mails (also affects customers).
+   .. Note:: This address is relevant for agent notifications and password reset mails (also affects customers).
 Additional follow-up detection
-    In some situations the normal follow-up detection is not enough. This might be due to missing references in the subject (the ticket hook and number).
-    These options can help to recognize follow-ups to existing tickets.
+   In some situations the normal follow-up detection is not enough. This might be due to missing references in the subject (the ticket hook and number).
+   These options can help to recognize follow-ups to existing tickets.
 
-    .. Note:: Please note that searching in attachment and body might lead to false follow-up detections.
+   .. Note:: Please note that searching in attachment and body might lead to false follow-up detections.
 Maximum Email Size: Default value ``10 MB``
-    This one is pretty obvious: It defines the maximum allowed size of a Email Zammad will fetch.
-    Zammad will not fetch Mails that are bigger than this option.
+   This one is pretty obvious: It defines the maximum allowed size of a Email Zammad will fetch.
+   Zammad will not fetch Mails that are bigger than this option.
 
-    .. Note:: Starting with Zammad 3.2 Zammad can provide postmaster mails (see "Send postmaster mail if mail too large" below).
+   .. Note:: Starting with Zammad 3.2 Zammad can provide postmaster mails (see "Send postmaster mail if mail too large" below).
 
-    .. Hint:: This technically also affects attachments for articles.
+   .. Hint:: This technically also affects attachments for articles.
 Send postmaster mail if mail too large: Default value ``yes (enabled)`` on fresh installations and ``no (disabled)`` on upgrade installations
-    .. Note:: This option is only available with Zammad 3.2 and later. Upgraded installations will, by default, have the value set to ``no (disabled``).
+   .. Note:: This option is only available with Zammad 3.2 and later. Upgraded installations will, by default, have the value set to ``no (disabled``).
 
-    Option set to ``yes``
-        This setting will cause Zammad to automatically reply to mails that exceed the above mail size limit with a postmaster style mail.
-        This will help your user to understand that his mail did not arrive and won't be reviewed by you.
+   Option set to ``yes``
+      This setting will cause Zammad to automatically reply to mails that exceed the above mail size limit with a postmaster style mail.
+      This will help your user to understand that his mail did not arrive and won't be reviewed by you.
 
-        .. Note:: Zammad will still download and remove (if enabled) the mail from the mailbox. Instead of importing it to the database, it will save the affected mail to ``/opt/zammad/tmp/oversized_mail/``.
-    Option set to ``no``
-        If the option is set to no, Zammad will not reply to mails that are too big. Your customer will **not notice** that the mail was too large!
-        Instead, Zammad will use the monitoring endpoint to alert its administrators that it can't fetch a too large mail.
+      .. Note:: Zammad will still download and remove (if enabled) the mail from the mailbox. Instead of importing it to the database, it will save the affected mail to ``/opt/zammad/tmp/oversized_mail/``.
+   Option set to ``no``
+      If the option is set to no, Zammad will not reply to mails that are too big. Your customer will **not notice** that the mail was too large!
+      Instead, Zammad will use the monitoring endpoint to alert its administrators that it can't fetch a too large mail.
 
-        Learn more about :doc:`/system-monitoring`.
+      Learn more about :doc:`/system-monitoring`.
 Sender based on Reply-To header: Default value ``not set (-)``
-    This setting decides how Zammad should recognize it's customers from Emails that contain a ``Reply-To`` header.
-    This comes in useful if you're working with contact forms that need to use reply to headers.
+   This setting decides how Zammad should recognize it's customers from Emails that contain a ``Reply-To`` header.
+   This comes in useful if you're working with contact forms that need to use reply to headers.
 
-    Option set to ``-`` or ``Take reply-to header as sender/from of email``
-       This setting will overwrite the initial ``FROM`` to the value used in ``Reply-To`` completely.
-    Option set to ``Take reply-to header as sender/from of email and use realname of origin from``
-       This setting will partially overwrite the initial ``FROM``. It uses the mail address from the ``Reply-To`` header and uses the given name of the ``FROM`` header, if given.
+   Option set to ``-`` or ``Take reply-to header as sender/from of email``
+      This setting will overwrite the initial ``FROM`` to the value used in ``Reply-To`` completely.
+   Option set to ``Take reply-to header as sender/from of email and use realname of origin from``
+      This setting will partially overwrite the initial ``FROM``. It uses the mail address from the ``Reply-To`` header and uses the given name of the ``FROM`` header, if given.
 Customer selection based on sender and receive list: Default value ``yes``
-    This option decides how Zammad should react if an agent sends a Email to it.
+   This option decides how Zammad should react if an agent sends a Email to it.
 
-    Option set to ``yes``
-        Whatever the first user / Email address is set within the recipient list is will be used a ticket customer.
-    Option set to ``no``
-        The agent will be set as ticket customer.
+   Option set to ``yes``
+      Whatever the first user / Email address is set within the recipient list is will be used a ticket customer.
+   Option set to ``no``
+      The agent will be set as ticket customer.
 
-        .. Note:: Currently agents can't be customers within the UI. While Email communication works, agents can't see their own tickets (as a customer) if they don't have access to the group.
+      .. Note:: Currently agents can't be customers within the UI. While Email communication works, agents can't see their own tickets (as a customer) if they don't have access to the group.
 Block Notifications
-    With the regex that can be defined here, you can ensure not to send any notifications to specific systems.
-    By default this especially affects typical system addresses which can't receive Emails any way.
+   With the regex that can be defined here, you can ensure not to send any notifications to specific systems.
+   By default this especially affects typical system addresses which can't receive Emails any way.
 
-    The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
+   The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
 Sender Format: Default value ``Agent + Format Seperator + System Address Display Name``
-    This configures the display name used in the ``FROM`` header of mails Zammad sends.
+   This configures the display name used in the ``FROM`` header of mails Zammad sends.
 
-    .. Note:: This does not affect Notification mails (to agents) and password reset mails. Emails that are not sent by agents (e.g. trigger based notifications) will always fallback to ``System Address Display Name`` if needed.
+   .. Note:: This does not affect Notification mails (to agents) and password reset mails. Emails that are not sent by agents (e.g. trigger based notifications) will always fallback to ``System Address Display Name`` if needed.
 
-    Option set to ``Agent + Format Seperator + System Address Display Name``
-        This will cause Zammad to set the ``FROM`` header to agent name and the channels display name divided by a seperator (configured below).
+   Option set to ``Agent + Format Seperator + System Address Display Name``
+      This will cause Zammad to set the ``FROM`` header to agent name and the channels display name divided by a seperator (configured below).
 
-        Example: ``Christopher Miller via Chrispresso Inc.``.
-    Option set to ``System Address Display Name``
-        This will cause Zammad to always use the display name of the used channel in the ``FROM`` header.
+      Example: ``Christopher Miller via Chrispresso Inc.``.
+   Option set to ``System Address Display Name``
+      This will cause Zammad to always use the display name of the used channel in the ``FROM`` header.
 
-        Example: ``Chrispresso Inc.``
+      Example: ``Chrispresso Inc.``
 Sender Format Seperator: Default value ``via``
-    This is a can be a String you can freely choose. It divided the agents name and the display name of the channel when ever needed.
+   This is a can be a String you can freely choose. It divided the agents name and the display name of the channel when ever needed.
 Ticket Subject Forward: Default value ``FWD``
-    The above string will be used on the subject if you forward a mail from Zammad.
+   The above string will be used on the subject if you forward a mail from Zammad.
 
-    .. Note:: ``:`` will be automatically appended to the above string.
+   .. Note:: ``:`` will be automatically appended to the above string.
 Ticket Subject Reply: Default value ``RE``
-    The above string will be used on the subject if you reply to a mail from Zammad.
+   The above string will be used on the subject if you reply to a mail from Zammad.
 
-    .. Note:: ``:`` will be automatically appended to the above string.
+   .. Note:: ``:`` will be automatically appended to the above string.
 Ticket Subject Size: Default value ``110``
-    This setting enforces a maximum length for subjects when replying.
-    If the subject you're using for your reply is too long, Zammad will automatically truncate the length and insert ``[...]`` to show it has shortened the subject.
+   This setting enforces a maximum length for subjects when replying.
+   If the subject you're using for your reply is too long, Zammad will automatically truncate the length and insert ``[...]`` to show it has shortened the subject.
 
-    Example: ``RE: Test somew[...] [Ticket#123456]``
+   Example: ``RE: Test somew[...] [Ticket#123456]``
 
-    .. Note:: This does **not** limit ticket titles within the UI, just the subjects during replying to an Email.
+   .. Note:: This does **not** limit ticket titles within the UI, just the subjects during replying to an Email.
 
 
 Enhanced settings

@@ -2,13 +2,13 @@ System-Variables within Zammad
 ******************************
 
 .. Note:: Please note that this is just an overview of available variables. It might be incomplete or variables might not be available within some functions.
-  If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+   If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
 System variables can be called by typing ``::`` (just like text modules in the frontend), as long as you're in a supported text field within the Backend.
 Zammad will show display all variables being available within this context and replace it to the variable as soon as you selected an entry.
 
 .. Hint:: You have an empty field which you referenced and it appears as ``-``?
-  That's currently working as designed - you might want to ensure that these fields always have a value (in text fields `` `` is a value!).
+   That's currently working as designed - you might want to ensure that these fields always have a value (in text fields `` `` is a value!).
 
 
 Variable-Categories

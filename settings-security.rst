@@ -5,10 +5,10 @@ Base
 ----
 
 *New User Accounts*
-	Enables users to create their own account via web interface.
+   Enables users to create their own account via web interface.
 
 *Lost Password*
-	Activates lost password feature for users. If "no" is selected here, the password can only be changed via the admin interface.
+   Activates lost password feature for users. If "no" is selected here, the password can only be changed via the admin interface.
 
 .. hint:: Normally, especially when using LDAP, you might want to consider to disable both above options, because you'd normally do that via LDAP.
 
@@ -19,7 +19,7 @@ Password
 This section allows you to define password requirements for the local user accounts.
 
 .. note:: Zammad does **not** allow you to change your LDAP password, instead, it will set a password in it's local database which might confuse your users.
-  This will be addressed in the future by `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
+   This will be addressed in the future by `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
 
 
 Maximum failed logins
@@ -75,9 +75,9 @@ Sometimes, this doesn't come in handy, as this also means if you're trying to au
 
 .. hint:: We're currently missing the following documentations for login providers:
 
-  * LinkedIn
-  * Generic OAuth2
-  * Weibo
+   * LinkedIn
+   * Generic OAuth2
+   * Weibo
 
 
 .. toctree::

@@ -10,23 +10,23 @@ Go to https://identity.microsoft.com (or https://apps.dev.microsoft.com) and log
 
 
 .. image:: /images/system/thirdparty/identity.microsoft.com_new_app_screen.png
-    :alt: inital page
+   :alt: inital page
 
 Click on "Create App"
 
 
 .. image:: /images/system/thirdparty/identity.microsoft.com_new_app_screen2.png
-    :alt: new app page
+   :alt: new app page
 
 Enter app settings. Then a new plattform and select "web".
 
 
 .. image:: /images/system/thirdparty/identity.microsoft.com_new_app_screen_add_platform.png
-    :alt: new plattform
+   :alt: new plattform
 
 
 .. image:: /images/system/thirdparty/identity.microsoft.com_new_app_screen_add_platform_url.png
-    :alt: set callack/redirect url
+   :alt: set callack/redirect url
 
 As "Redirect URL" you need to enter "https://yourdomain.zammad.com/auth/microsoft_office365/callback"
 
@@ -40,7 +40,7 @@ Configure Zammad as Microsoft app
 Go to "Admin -> Security -> Twitter -> Third Party Applications -> Office 365 Section"
 
 .. image:: /images/system/thirdparty/zammad_connect_microsoft_thirdparty1.png
-    :alt: Admin -> Security -> Third Party Applications
+   :alt: Admin -> Security -> Third Party Applications
 
 Fill in the "APP ID" and the "APP SECRET" and click the "Submit" button.
 

@@ -34,20 +34,20 @@ If you set multiple conditions for a trigger, they must **all** be true for it
 to fire. You can configure triggers to fire based on the properties of:
 
 The **Ticket** itself
-  *e.g.,* Was this ticket newly created? Is the ticket currently open? When was
-  the last time we received contact from the customer on this ticket?
+   *e.g.,* Was this ticket newly created? Is the ticket currently open? When was
+   the last time we received contact from the customer on this ticket?
 
 New **Articles** on the ticket
-  *e.g.,* Was this article added by email? by phone? Was it created by an
-  agent, or a customer? Does the subject contain a certain set of words?
+   *e.g.,* Was this article added by email? by phone? Was it created by an
+   agent, or a customer? Does the subject contain a certain set of words?
 
 The **Customer** that created the ticket
-  *e.g.,* What is the customer’s name? Is the customer a VIP? What department
-  does the customer work in?
+   *e.g.,* What is the customer’s name? Is the customer a VIP? What department
+   does the customer work in?
 
 The **Organizations** that the ticket’s customer belongs to
-  *e.g.,* What is the name of the customer’s organization? Does it have a note
-  attached to it containing a certain set of words?
+   *e.g.,* What is the name of the customer’s organization? Does it have a note
+   attached to it containing a certain set of words?
 
 Changes
 ~~~~~~~
@@ -59,15 +59,13 @@ When creating a trigger, define your changes here:
 A trigger can do two things once its conditions have been met:
 
 Modify the ticket
-  *e.g.,* Escalate its priority, close it, reassign it, rename it, add tags,
-  etc.
+   *e.g.,* Escalate its priority, close it, reassign it, rename it, add tags, etc.
 
 Send an email
-  Either to the customer, the agent who owns the ticket, or every agent in the
-  system.
+   Either to the customer, the agent who owns the ticket, or every agent in the system.
 
 .. Note:: In order to send E-Mails with Triggers, you need to configure an E-Mail-Address for the group the trigger is working in.
-  If you don't, Zammad will skip the Trigger.
+   If you don't, Zammad will skip the Trigger.
 
 .. Hint:: Some actions (e.g. E-Mail and Notes) allow the use of variables. Learn more about :doc:`/system-variables` to enhance your triggers.
 
@@ -102,13 +100,13 @@ Inside your Zammad directory (usually ``/opt/zammad``), email templates for
 various events are stored inside the ``/app/views/mailer`` directory, named
 according to the language they’re written in. Thus, ::
 
-  /opt/zammad/app/views/mailer/ticket_create/de.html.erb
+   /opt/zammad/app/views/mailer/ticket_create/de.html.erb
 
 is the German-language template used to notify agents whenever a new ticket is
 created. To modify this template, create another file with the same name and
-add a ``.custom`` suffix: ::
+add a ``.custom`` suffix::
 
-  /opt/zammad/app/views/mailer/ticket_create/de.html.erb.custom
+   /opt/zammad/app/views/mailer/ticket_create/de.html.erb.custom
 
 Now, this file will be used instead of the original when sending notification
 emails in German.

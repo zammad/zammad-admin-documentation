@@ -74,7 +74,7 @@ If the current user is an agent, you can select this option to open further sett
    "FULL", "Right to create, read, change and see tickets in the overviews."
 
 .. hint:: | **I can't assign an agent as Owner?!**
-  | To assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
+   | To assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
 
 If a user gets no rights to one group, the system does not display a ticket or ticket notification to the user. This group, for which he has no rights, is also not displayed in the group selection.
 
@@ -99,4 +99,4 @@ If a user is set to inactive, he/she can no longer log into the system. Other, a
 
 
 .. Note:: Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only.
-  The emails sent to the customers are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.
+   The emails sent to the customers are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.

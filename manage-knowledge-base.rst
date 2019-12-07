@@ -12,14 +12,14 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
 
 .. hint:: This document describes how to ⚙ **configure** the knowledge base.
 
-	  For details on how to ✍️ **use and edit** it, please refer to the
-          `Zammad Agent docs <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_.
+   For details on how to ✍️ **use and edit** it, please refer to the
+   `Zammad Agent docs <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_.
 
-          By default, only admin users are permitted to create, edit, and manage knowledge base articles.
-          See :doc:`Roles </manage-roles>` for details on how to grant write access to agents or other users.
+   By default, only admin users are permitted to create, edit, and manage knowledge base articles.
+   See :doc:`Roles </manage-roles>` for details on how to grant write access to agents or other users.
 
 .. note:: The knowledge base will not appear in the main menu until it has been
-          enabled in the admin panel.
+   enabled in the admin panel.
 
 Features
 --------
@@ -56,12 +56,12 @@ Theme
    🎨 Customize the appearance of the knowledge base.
 
 :Icon & Link Color: Applies to all **category & article** entries in
-		    knowledge base menus, as well as hyperlinks in articles.
+                    knowledge base menus, as well as hyperlinks in articles.
 
 :Header Color:      Applies to the area surrounding the search bar.
 
 :Icon Set:          Defines the selection of icons that may be used when
-		    creating/editing categories.
+                    creating/editing categories.
 
                     Each category in the knowledge base *must* be given an icon.
                     Icons appear prominently in the main menu, like so:
@@ -71,8 +71,8 @@ Theme
                        :align: center
 
                     .. warning:: 🤦‍♀️ Re-assigning icons on all of your categories is tedious work.
-                                 It’s advisable to explore your options early
-                                 to avoid having to change your mind down the road.
+                       It’s advisable to explore your options early
+                       to avoid having to change your mind down the road.
 
 Languages
 ^^^^^^^^^
@@ -101,7 +101,7 @@ Public Menu
 
 
 .. hint:: ``Target`` let's you decide if you want the link to be opened within a new
-  browser tab upon click or not.
+   browser tab upon click or not.
 
 Use this section to unify the knowledge base with your own website’s main navigation.
 Entries added here will appear in the knowledge base like so:

@@ -9,25 +9,25 @@ Register Twitter app
 Go to https://dev.twitter.com/apps and login with your account.
 
 .. image:: /images/system/thirdparty/apps.twitter.com_start.png
-    :alt: inital page
+   :alt: inital page
 
 Click on "Create App"
 
 
 .. image:: /images/system/thirdparty/apps.twitter.com_new_app_screen.png
-    :alt: new app page
+   :alt: new app page
 
 Enter app settings. As "Callback URL" you need to enter "https://zammad_host/api/v1/external_credentials/twitter/callback"
 
 After the app has been created, update the application icon and organization attributes.
 
 .. image:: /images/system/thirdparty/apps.twitter.com_set_permissions.png
-    :alt: set permissions to receive and send direct messages
+   :alt: set permissions to receive and send direct messages
 
 Next we need to set ``read, write and access direct messages permissions`` for the app.
 
 .. image:: /images/system/thirdparty/apps.twitter.com_get_credentials.png
-    :alt: click on Keys & Access Token, note them
+   :alt: click on Keys & Access Token, note them
 
 Go to "Keys and Access Token" tab and note the "Consumer Key" and "Consumer Secret".
 
@@ -37,7 +37,7 @@ Configure Zammad as Twitter app
 Go to "Admin -> Security -> Twitter -> Third Party Applications -> Twitter Section"
 
 .. image:: /images/system/thirdparty/zammad_connect_twitter_thirdparty1.png
-    :alt: Admin -> Security -> Third Party Applications
+   :alt: Admin -> Security -> Third Party Applications
 
 Fill in the "Twitter Key" and the "Twitter Secret" and click the "Submit" button.
 

@@ -22,8 +22,8 @@ You can then enable LDAP and start your first sync. The sync will then run hourl
 
 .. image:: /images/system/ldap-1.jpg
 
-.. Note:: | You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active-Directory Accounts (the Users will be set to inactive within Zammad).
-          | You can find further information for Active Directory Filters at the Website from Microsoft_.
+.. Note:: You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active-Directory Accounts (the Users will be set to inactive within Zammad).
+   You can find further information for Active Directory Filters at the Website from Microsoft_.
 
 .. _Microsoft: https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
 

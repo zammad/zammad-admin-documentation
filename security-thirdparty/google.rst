@@ -17,7 +17,7 @@ Now expand the menu, expand "APIs & Services" and select "Credentials".
 Go to the tab "OAuth consent screen" first and ensure to fill in the requested information - without doing so you can't create credentials!
 
 .. image:: /images/system/thirdparty/goole-oauth-consent-screen.png
-    :alt: Creating a consent screen
+   :alt: Creating a consent screen
 
 After filling in and savingthe consent screen information, you can change to "Credentials" tab and
 create new "OAuth client ID"-Credentials.
@@ -34,13 +34,13 @@ Fill in the neceassary information, for restrictions you need the following (rep
 ``https://zammad_host/auth/google_oauth2/callback``
 
 .. image:: /images/system/thirdparty/google-create-oauth-Client-ID.png
-    :alt: Adding a new oauth Client-ID
+   :alt: Adding a new oauth Client-ID
 
 After creating the credentials, go to your Zammad installation and navigate to
 "Admin -> Security -> Third Party Applications" -> Google.
 Enter your Client ID and Client secret here.
 
 .. image:: /images/system/thirdparty/zammad_connect_google_thirdparty1.png
-    :alt: Zammad
+   :alt: Zammad
 
 After submitting, the login via Google can be used.

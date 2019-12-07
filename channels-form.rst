@@ -50,19 +50,19 @@ It also ensure that the E-Mail-Address being used is valid (with MX-Check on the
 
 
 .. hint:: You can change the above default values, please keep in mind, that setting those values higher might lead to problems in term of created Tickets. |br|\ |br|\
-  Please note that the following changes require console access to your hosts that runs Zammad.
+   Please note that the following changes require console access to your hosts that runs Zammad.
 
 **Change the Ticket-Creation per IP and hour to 10**::
 
-	rails> Setting.set('form_ticket_create_by_ip_per_hour','10')
+   rails> Setting.set('form_ticket_create_by_ip_per_hour','10')
 
 **Change the Ticket-Creation per IP and hour to 50**::
 
-	rails> Setting.set('form_ticket_create_by_ip_per_day','50')
+   rails> Setting.set('form_ticket_create_by_ip_per_day','50')
 
 **Change the Ticket-Creation per day to 500**::
 
-	rails> Setting.set('form_ticket_create_per_day','500')
+   rails> Setting.set('form_ticket_create_per_day','500')
 
 
 Further options to make it harder

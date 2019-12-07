@@ -15,8 +15,9 @@ Tag-Overviews
 You can list all the marked tickets by tag in different ways:
 
 **1. by providing an appropriate overview**
-  Create a new overview and select "Tag contains ..." as condition.
-  You can find further information in :doc:`/manage-overviews`
+
+Create a new overview and select "Tag contains ..." as condition.
+You can find further information in :doc:`/manage-overviews`
 
 **2. by a search-query**
 

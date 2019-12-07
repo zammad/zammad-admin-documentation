@@ -67,8 +67,8 @@ Step 2: Label and Generate a New App Password
    :align: center
 
 .. hint:: If you wish, you can actually name your app password anything you like.
-          Choosing a name you can easily recognize will help
-          if you create many app passwords and need to revoke one in the future.
+   Choosing a name you can easily recognize will help
+   if you create many app passwords and need to revoke one in the future.
 
 Step 3: Add Your Account to Zammad Using the App Password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

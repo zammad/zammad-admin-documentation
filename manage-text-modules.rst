@@ -24,7 +24,7 @@ Here you can add new text modules, delete or edit them.
 Creating keywords makes it easier to find the right text module.
 
 .. figure:: images/manage/text-module-keywords-example.png
-  :alt: You can find text modules either by their name or keyword.
+   :alt: You can find text modules either by their name or keyword.
 
 If needed, you can restrict text modules to specific groups.
 With this, you can easilly keep text module lists short and dedicate specific texts to where they belong.
@@ -33,7 +33,7 @@ You can adjust the group memberships for text modules at any time.
 This allows you to have the text module available globally (no groups selected) or one or several specific groups.
 
 .. figure:: images/manage/text-module-group-specific.png
-  :alt: Example: Restricting text modules to 2nd Level group only.
+   :alt: Example: Restricting text modules to 2nd Level group only.
 
 To select placeholders from a list, just enter "::" in the text block. The list can be searched with the arrow keys after inputting keywords or shortcuts.
 All text modules can be used in articles as well as in the chat.
@@ -43,34 +43,32 @@ All text modules can be used in articles as well as in the chat.
 
 .. Tip:: If text modules are to be grouped, this can be done using shortcuts. Example country codes:
 
-  Text modules are created for the group Germany as follows:
+   Text modules are created for the group Germany as follows:
 
-  - Ger_Textmodule1
-  - Ger_Textmodule2
-  - ...
+   - Ger_Textmodule1
+   - Ger_Textmodule2
+   - ...
 
-  for Austrian-Snippets:
+   for Austrian-Snippets:
 
-  - Aut_Textmodule1
-  - Aut_Textmodule2
+   - Aut_Textmodule1
+   - Aut_Textmodule2
 
-  thus only the relevant text modules are displayed for each country.
-
-
+   thus only the relevant text modules are displayed for each country.
 
 
 
-**Examples of snippets are:**
 
-  ::
 
-    Hello Mrs. #{ticket.customer.lastname},
+**Examples of snippets are**::
 
-    Hello Mr. #{ticket.customer.lastname},
+   Hello Mrs. #{ticket.customer.lastname},
 
-    Hello #{ticket.customer.firstname},
+   Hello Mr. #{ticket.customer.lastname},
 
-    My Name is #{user.firstname},
+   Hello #{ticket.customer.firstname},
+
+   My Name is #{user.firstname},
 
 Of course you can also use multi line snippets.
 
@@ -93,13 +91,13 @@ Import of text modules via CSV file
 
 With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
 
-  To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import will be executed.
+To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import will be executed.
 
-  .. image:: images/manage/Zammad_Helpdesk_-_Text_modules-Import.jpg
+.. image:: images/manage/Zammad_Helpdesk_-_Text_modules-Import.jpg
 
 
 
 Ticket templates for new tickets
 --------------------------------
 
-  Ticket templates in new tickets can be created by any agent. Therefore you will find information inside of our `User-Documentation <https://user-docs.zammad.org/de/latest/zammad-ticket-templates.html>`_ .
+Ticket templates in new tickets can be created by any agent. Therefore you will find information inside of our `User-Documentation <https://user-docs.zammad.org/de/latest/zammad-ticket-templates.html>`_ .

@@ -2,7 +2,7 @@ Sipgate
 =======
 
 .. Note:: In order to use this feature, please go to your Feature-Store on your sipgate account and activate ``sipgate.io``.
-  This feature is available for all account types of sipgate, the store option might differ in name and API-Calls.
+   This feature is available for all account types of sipgate, the store option might differ in name and API-Calls.
 
 Knowing who's calling is quite important, if you want to bring your support to the next level!
 Our integration for sipgate enables you to see whos calling who.
@@ -12,8 +12,8 @@ For configuration, please go to the Admin-Settings -> Settings -> Integrations =
 
 Get your incoming and outgoing URL of your Zammad instance::
 
-  Incoming: https://zammad.your.tld/api/v1/sipgate/in
-  Outgoing: https://zammad.your.tld/api/v1/sipgate/out
+   Incoming: https://zammad.your.tld/api/v1/sipgate/in
+   Outgoing: https://zammad.your.tld/api/v1/sipgate/out
 
 You now need to visit the Console_ website from sipgate. Go to Webhooks -> URLs and enter your incoming and outgoing URLs there.
 Further below you can also choose what extensions or groups should appear in your Zammad instance later.

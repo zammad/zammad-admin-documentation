@@ -7,7 +7,7 @@ Current user variables always return values of the current user that caused e.g.
 
 .. Note:: Due to the above fact, these variables are often not (yet) set or available for usuage.
 
-  In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
+   In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
 
 
 .. csv-table:: Current-User System-Variables

@@ -50,7 +50,7 @@ Another common use case is the supervisor role, where the supervisor can freely 
    "FULL", "Right to create, read, change and see tickets in the overviews."
 
 .. hint:: | **I can't assign an agent as Owner?!**
-  | In order to assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
+   | In order to assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
 
 
 Here are a few examples of different combinations of rights:
@@ -89,8 +89,7 @@ These settings refer to the personal settings that can be set here:
 
 .. image:: images/manage/Zammad_Helpdesk_-_Roles8.jpg
 
-hint
-  If agents are not allowed to change their own passwords, you don't have to check "Password". In this case, only the admin can assign and change a password.
+.. hint:: If agents are not allowed to change their own passwords, you don't have to check "Password". In this case, only the admin can assign and change a password.
 
 
 Default at signup
