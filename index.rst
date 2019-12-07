@@ -68,3 +68,11 @@ Zammad - Documentation for administrators
    system-packages
    system-sessions
    system-version
+
+.. _misc-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Misc
+
+   misc-composer

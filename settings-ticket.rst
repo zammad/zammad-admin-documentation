@@ -1,7 +1,7 @@
 Ticket
 ******
 
-.. Note:: Some Ticket related settings are configured within Tickets, which is why they can be found on :doc:`/ticket/settings-in-tickets`.
+.. Note:: Some Ticket related settings are configured within Tickets, which is why they can be found in the :doc:`/misc-composer`.
 
 Base
 ----

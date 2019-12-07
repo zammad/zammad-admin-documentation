@@ -3,7 +3,7 @@ Settings
 
 Below you can find the currently available Email related settings. Most of these settings have default values which can be found in this list as well.
 
-.. Note:: Some E-Mail related settings are ticket based settings, which is why they can be found on :doc:`/ticket/settings-in-tickets`.
+.. Note:: Some E-Mail related settings are ticket based settings, which is why they can be found in the :doc:`/misc-composer`.
 
 List of Settings
 ----------------

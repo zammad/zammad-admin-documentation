@@ -16,4 +16,4 @@ Read on to learn how email works in Zammad, and all the things you can do with i
    channels-email/advanced
 
 .. note:: Some additional options for composing and replying to emails
-   can be found in the :doc:`/ticket/settings-in-tickets`.
+   can be found in the :doc:`/misc-composer`.
