@@ -3,7 +3,7 @@ Forms
 
 .. hint:: At the moment it is not possible to add more (or custom) fields to a Zammad Form.
 
-.. Note:: The form is currently limited to one form per instance.
+.. note:: The form is currently limited to one form per instance.
 
 Feedback or contact forms are quite often used on websites. Usually they will generate an email which will be sent to somebody who forwards it and so on. With Zammad it’s quite easy to integrate these forms into your website and directly generate tickets with them. In just 2 minutes.
 

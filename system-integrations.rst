@@ -3,7 +3,7 @@ Integrations
 
 Zammad offers numerous integrations that add rich features to your instance.
 
-.. Note:: We're still working on this part of our documentation, stay tight!
+.. note:: We're still working on this part of our documentation, stay tight!
 
 
 Integrations for phone systems
@@ -31,7 +31,7 @@ Integrations for authentication and customers
 Integrations for Monitoring Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Note:: This section currently misses the following integrations:
+.. note:: This section currently misses the following integrations:
 
    * Check_MK
    * Icinga
@@ -43,7 +43,7 @@ Other Integrations
 
 This section will hold any other integration that can't be grouped up (yet).
 
-.. Note:: This section currently misses the following integrations:
+.. note:: This section currently misses the following integrations:
 
    * i-doit
 

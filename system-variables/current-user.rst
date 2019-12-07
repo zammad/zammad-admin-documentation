@@ -1,11 +1,11 @@
 Current User (System-Variables)
 *******************************
 
-.. Note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 
 Current user variables always return values of the current user that caused e.g. a trigger to run.
 
-.. Note:: Due to the above fact, these variables are often not (yet) set or available for usuage.
+.. note:: Due to the above fact, these variables are often not (yet) set or available for usuage.
 
    In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
 

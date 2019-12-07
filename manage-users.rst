@@ -95,8 +95,8 @@ Set a user active/ inactive
 
 If a user is set to inactive, he/she can no longer log into the system. Other, active users will no longer see this user as a possible ticket owner.
 
-.. Hint:: Disabling a Customer does not deny E-Mails from that customer!
+.. hint:: Disabling a Customer does not deny E-Mails from that customer!
 
 
-.. Note:: Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only.
+.. note:: Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only.
    The emails sent to the customers are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.

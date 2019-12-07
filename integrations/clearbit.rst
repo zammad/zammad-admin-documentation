@@ -18,7 +18,7 @@ In general you can get any information from clearbit, as long as you have a mapp
    <br />
 
 
-.. Hint:: Clearbit does have a Mapping of fields like LDAP and Exchange have, but does not "win" against Zammad information. This means
+.. hint:: Clearbit does have a Mapping of fields like LDAP and Exchange have, but does not "win" against Zammad information. This means
    that if you have e.g. the lastname field filled in already and Clearbit has other information on that, it will not be updated.
 
    However: If let's say the lastname has been set by Clearbit and Zammad notices that the lastname on the Clearbit source has changed, Zammad
@@ -36,7 +36,7 @@ Now change to your Zammad instance, go to Admin-Settings -> Integrations (System
 Paste your API-Key into the API-Key-Field and decide if Zammad should create unknown Organizations automatically, if the user does not have one
 yet (and Clearbit knows it). The shared option decides if the new organizations Zammad creates with Clearbit should be shared ones.
 
-.. Note:: If you're unsure what option to choose, better stick with "no". You can also learn more about Organizations_ .
+.. note:: If you're unsure what option to choose, better stick with "no". You can also learn more about Organizations_ .
 
 .. _Organizations: ../manage-organizations.html
 
@@ -45,14 +45,14 @@ yet (and Clearbit knows it). The shared option decides if the new organizations 
 The Mapping option works similar to the mapping within the Exchange- and LDAP-Synch. You can add further mappings for e.g. custom fields if you need
 more information that Clearbit can provide.
 
-.. Note:: If you want to add more Clearbit fields and want to learn more about available fields on their API, you can take a look at their API-Documentation_ .
+.. note:: If you want to add more Clearbit fields and want to learn more about available fields on their API, you can take a look at their API-Documentation_ .
 
 .. _API-Documentation: https://dashboard.clearbit.com/docs#enrichment-api
 
 If you're happy with the above chosen Settings and your mapping, just save the changes and enable the Clearbit-Integration. Zammad will now start polling the Clearbit-API
 as User contact you.
 
-.. Note:: Zammad does not synchronize with Clearbit on a regular basis, but on demand if needed. This saves API-Calls.
+.. note:: Zammad does not synchronize with Clearbit on a regular basis, but on demand if needed. This saves API-Calls.
 
 .. image:: /images/system/clearbit-zammad-mapping.jpg
 

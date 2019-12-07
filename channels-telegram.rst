@@ -6,7 +6,7 @@ It's possible to put your Telegram bot communication into Zammad. To do so, you 
 .. note::
    Your Zammad instance needs to be publicly available via HTTPS (we use Telegram WebHooks).
 
-.. Warning::
+.. warning::
    Please note that due to technical API restrictions of Telegram, you can only receive messages with up to 20MB file size!
 
    If you want to learn more about this, please take a look at `Telegrams API-Documentation <https://core.telegram.org/bots/api#getfile>`_.
@@ -52,7 +52,7 @@ Done, your Zammad is now configured as a Telegram bot.
 Start using your new channel
 ============================
 
-.. Note:: Please note that the maximum file size for Telegram-Bots is 20MB!
+.. note:: Please note that the maximum file size for Telegram-Bots is 20MB!
    Further information can be found in the `Telegram API-Reference <https://core.telegram.org/bots/api#getfile>`_.
 
 

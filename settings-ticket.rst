@@ -1,7 +1,7 @@
 Ticket
 ******
 
-.. Note:: Some Ticket related settings are configured within Tickets, which is why they can be found in the :doc:`/misc-composer`.
+.. note:: Some Ticket related settings are configured within Tickets, which is why they can be found in the :doc:`/misc-composer`.
 
 Base
 ----
@@ -20,7 +20,7 @@ Ticket Hook Position: Default value ``right``
    *None*
       This will completely remove ticket references from the subject.
 
-      .. Warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
+      .. warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
 
       Disabling this and not setting up any further follow up search will lead to unexpected results!
 
@@ -74,7 +74,7 @@ OPTIONS
 
       Please note that the minimum length is ``3`` (SystemID + at least one digit if below 10). Also, if the length is no longer long enough, the number will automatically get one digit longer. Ticket-Numbers **do not overflow**, thus it's save to keep it at 5 or set it lower if wanted.
 
-      .. Note:: This option is only available if ticket number format is set to ``Increment``!
+      .. note:: This option is only available if ticket number format is set to ``Increment``!
 
 
 Auto Assignment
@@ -82,7 +82,7 @@ Auto Assignment
 
 In a larger Zammad environment, it happens that several agents open the same ticket at the same time. Although collision detection is then effective, the efficiency of processing can be increased by means of the automatic assignment of tickets when a ticket is opened.
 
-   .. Note:: Auto Assignment only kicks in if the ticket has no owner yet. By default the agent can always reset the ticket owner to ``-`` if needed.
+   .. note:: Auto Assignment only kicks in if the ticket has no owner yet. By default the agent can always reset the ticket owner to ``-`` if needed.
 
 The automatic assignment of tickets can be activated and configured in the admin area under within Settings -> Ticket -> Auto assignment.
 
@@ -91,4 +91,4 @@ By default the condition affects all tickets with the state ``open``.
 
 If you need to exclude users (e.g. a group leader), you can search and select the desired agents in the ``Exception Users`` list.
 
-   .. Note:: The search function in this area is only affective, if you have too many agents to display at once to help you with the configuration.
+   .. note:: The search function in this area is only affective, if you have too many agents to display at once to help you with the configuration.

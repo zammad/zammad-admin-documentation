@@ -6,12 +6,12 @@ You can also create individual reports for individual agents or agent groups.
 
 In the Overview Management Area you can add new overviews, edit or delete them.
 
-.. Warning:: Please note that Overviews can cause performance issues leading to no longer or less often refreshing overviews!
+.. warning:: Please note that Overviews can cause performance issues leading to no longer or less often refreshing overviews!
 
    When ever possible, try to use the same overviews for as many agents and groups as possible to keep the number of overviews low.
    For best results, you might want to use between 15-20 overviews maximum.
 
-.. Note:: Overviews will only show tickets to your users, that the user have rights on (group or role based).
+.. note:: Overviews will only show tickets to your users, that the user have rights on (group or role based).
 
 
 The following attributes can be set when creating an overview:
@@ -20,7 +20,7 @@ The following attributes can be set when creating an overview:
 
    .. image:: images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
-   .. Hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :doc:`/manage-roles`.
+   .. hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :doc:`/manage-roles`.
 
    With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
 
@@ -29,11 +29,11 @@ The following attributes can be set when creating an overview:
 
    .. image:: images/manage/Zammad_Helpdesk_-_Overviews2.jpg
 
-   .. Hint::  Shared organization is a setting in the organisations-management. See :doc:`/manage-organizations` for more information.
+   .. hint::  Shared organization is a setting in the organisations-management. See :doc:`/manage-organizations` for more information.
 
    This is only important if the available role is a customer. When deciding whether yes or no is selected, it must be considered to what extent this makes sense - for example, if a customer sees only his own tickets, many views are usually not necessary...
 
-   .. Note:: Users also refers to the customer role in this case.
+   .. note:: Users also refers to the customer role in this case.
 
 
 :Available for users which are replacements for other users:
@@ -44,7 +44,7 @@ The following attributes can be set when creating an overview:
 
    **For example:** Agent A is on vacation and Agent B will take care of his tickets. Then an overview can be set up, which only shows Agent B all new tickets from Agent A for this period of time, without having to search for them separately.
 
-   .. Note:: Replacement users are part of our `Out of Office function <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_.
+   .. note:: Replacement users are part of our `Out of Office function <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_.
 
 
 :Conditions for shown tickets:
@@ -66,7 +66,7 @@ The following attributes can be set when creating an overview:
 
    These settings can also be adjusted individually by admins at a later time (In the overview, top right: Options).
 
-   .. Note:: Please note that overview column and sort settings are global settings which affect all users seeing those overviews.
+   .. note:: Please note that overview column and sort settings are global settings which affect all users seeing those overviews.
 
 
 :Ordering, grouping and active:

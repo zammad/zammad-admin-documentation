@@ -1,7 +1,7 @@
 Slack
 =====
 
-.. Note:: In order to use this feature, please add a new Slack-App to your Workspace. The App you need is called ``Incoming WebHooks`` .
+.. note:: In order to use this feature, please add a new Slack-App to your Workspace. The App you need is called ``Incoming WebHooks`` .
 
 
 Why do I need this feature?
@@ -32,7 +32,7 @@ If you don't have an app yet, you can simply add a new one - just search for `` 
 Choose (or create) the channel Zamma should post it's information to and press on "Add Incoming WebHooks integration".
 If you're ready, copy the provided WebHook-URL and go to your Zammad installation.
 
-.. Hint:: You need administrative rights on the Slack Workspace. The Link to the App-Directory is normally ``https://[workspace-name].slack.com/apps`` .
+.. hint:: You need administrative rights on the Slack Workspace. The Link to the App-Directory is normally ``https://[workspace-name].slack.com/apps`` .
 
 .. image :: /images/system/slack-add-incoming-webhook.jpg
 
@@ -47,7 +47,7 @@ The channel defines the Slack channel the information is being posted in. As las
 When you're ready, just hit "Submit" and enable the integration. Zammad will now post new ticket information based on the trigger you chose.
 Below the options you have the recent log that shows the latest requests to Slack for debugging if needed.
 
-.. Note:: If you leave the Icon-URL empty, Zammad will use the Zammad-Logo instead. The Icon should be a PNG-File and a square image.
+.. note:: If you leave the Icon-URL empty, Zammad will use the Zammad-Logo instead. The Icon should be a PNG-File and a square image.
 
 .. image :: /images/system/slack-configuration-in-zammad.jpg
 

@@ -1,11 +1,11 @@
 Text Templates
 ==============
 
-.. Warning:: With Zammad 3.1 we introduced group based text modules. This documentation contains information that might no longer apply to Zammad versions earlier 3.1.
+.. warning:: With Zammad 3.1 we introduced group based text modules. This documentation contains information that might no longer apply to Zammad versions earlier 3.1.
 
 Create text templates to spend less time writing responses. You can create text passages (Text modules) or even entire response templates.
 
-.. Note:: Beside text modules Zammad also allows you to use `Ticket-Templates for ticket creation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_.
+.. note:: Beside text modules Zammad also allows you to use `Ticket-Templates for ticket creation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_.
 
 
 Text modules
@@ -19,7 +19,7 @@ Here you will find text snippets already created in the standard version, which 
 Text modules can include smart variables like the users name or email address.
 Here you can add new text modules, delete or edit them.
 
-.. Note:: Learn more about :doc:`/system-variables` to enhance your text modules.
+.. note:: Learn more about :doc:`/system-variables` to enhance your text modules.
 
 Creating keywords makes it easier to find the right text module.
 
@@ -38,10 +38,10 @@ This allows you to have the text module available globally (no groups selected) 
 To select placeholders from a list, just enter "::" in the text block. The list can be searched with the arrow keys after inputting keywords or shortcuts.
 All text modules can be used in articles as well as in the chat.
 
-.. Note: You can find more information on how to use text modules on our `User Documentation <https://user-docs.zammad.org/en/latest/advanced/text-modules.html>`_.
+.. note:: You can find more information on how to use text modules on our `User Documentation <https://user-docs.zammad.org/en/latest/advanced/text-modules.html>`_.
 
 
-.. Tip:: If text modules are to be grouped, this can be done using shortcuts. Example country codes:
+.. tip:: If text modules are to be grouped, this can be done using shortcuts. Example country codes:
 
    Text modules are created for the group Germany as follows:
 
@@ -73,7 +73,7 @@ All text modules can be used in articles as well as in the chat.
 Of course you can also use multi line snippets.
 
 
-.. Hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :doc:`/system-variables`.
+.. hint:: When working with text modules, you sometimes might want to use existing information. For this, you might want to learn more about :doc:`/system-variables`.
 
 
 Delete or clone text modules

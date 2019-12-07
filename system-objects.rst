@@ -4,7 +4,7 @@ Objects
 In Zammad you can add your own fields to tickets, users, organizations and even groups.
 This can be useful if you need to add further information to a ticket that you don't want to have in a note (you'll find it easier).
 
-.. Note:: Try to avoid deleting objects (rather disable them) as Zammad might run into unexpected conditions if they where referenced somewhere.
+.. note:: Try to avoid deleting objects (rather disable them) as Zammad might run into unexpected conditions if they where referenced somewhere.
 
 .. image:: images/system/objects-1.jpg
 
@@ -17,7 +17,7 @@ By click on custom objects, you can edit them so they can suite your needs.
 Object types
 ------------
 
-.. Hint:: Starting with Zammad 3.2 you can create dynamic URL-Fields for select and text attributes. See more below!
+.. hint:: Starting with Zammad 3.2 you can create dynamic URL-Fields for select and text attributes. See more below!
 
 When adding a new object, you can choose between the following object types:
 
@@ -49,18 +49,18 @@ When adding a new object, you can choose between the following object types:
    - this object enables you to use up to 6 sub keys.
    - you'll see this object as a kind of drop down menu.
 
-.. Note:: You cannot change the object format / type as soon as you applied it. If you don't further need an object, you can disable it.
+.. note:: You cannot change the object format / type as soon as you applied it. If you don't further need an object, you can disable it.
 
 
 URL fields (Link-Template)
 --------------------------
 
-.. Note:: This option is available within Zammad 3.2 and later. This function is restricted to Text and Select objects only.
+.. note:: This option is available within Zammad 3.2 and later. This function is restricted to Text and Select objects only.
 
 Link-Templates are an amazing way to dynamically generate URLs. This allows you to integrate other systems better, without having the need to
 manually copy an URL! As soon as field is set and updated, a URL-Icon will appear, allowing you to open the link in a new tab.
 
-.. Hint:: Even though the Link-Template field shows up within the object edition, it is optional and not used if you don't fill in anything.
+.. hint:: Even though the Link-Template field shows up within the object edition, it is optional and not used if you don't fill in anything.
 
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,7 +93,7 @@ When ever needed you can restrict access to objects for permission roles (agents
    - show / hide the field.
    - make the field required (if needed).
 
-.. Hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
+.. hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
 
 .. figure:: images/system/objects-2.jpg
    :align: center
@@ -105,9 +105,9 @@ When ever needed you can restrict access to objects for permission roles (agents
 Updating database after adding or editing objects
 -------------------------------------------------
 
-.. Hint:: Zammad doesn't restart automatically and prompts you to restart? You may want to check `configure enviroment variables <https://docs.zammad.org/en/latest/appendix-configure-env-vars.html#configure-restart-command>`_ to solve this.
+.. hint:: Zammad doesn't restart automatically and prompts you to restart? You may want to check `configure enviroment variables <https://docs.zammad.org/en/latest/appendix-configure-env-vars.html#configure-restart-command>`_ to solve this.
 
-.. Note:: If you're on a self hosted system, you might need console access to your Zammad-Server to restart the service.
+.. note:: If you're on a self hosted system, you might need console access to your Zammad-Server to restart the service.
 
 When adding or changing objects, Zammad will not apply the changes isntantly, but instead shows you the changed objects first.
 If you're ready to go, just click on "Update database" to apply the changes to Zammad.

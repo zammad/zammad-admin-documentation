@@ -60,7 +60,7 @@ It is recommended to avoid using both configurations.
 
 
 
-.. Hint:: If the *Group* field does not appear in the ticket view, ensure that:
+.. hint:: If the *Group* field does not appear in the ticket view, ensure that:
 
    * you have created more than one group
    * the current user has "change" permissions to more than one group

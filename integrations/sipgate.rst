@@ -1,7 +1,7 @@
 Sipgate
 =======
 
-.. Note:: In order to use this feature, please go to your Feature-Store on your sipgate account and activate ``sipgate.io``.
+.. note:: In order to use this feature, please go to your Feature-Store on your sipgate account and activate ``sipgate.io``.
    This feature is available for all account types of sipgate, the store option might differ in name and API-Calls.
 
 Knowing who's calling is quite important, if you want to bring your support to the next level!

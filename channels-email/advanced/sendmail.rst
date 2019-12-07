@@ -1,7 +1,7 @@
 Outbound-Only Configuration (Sendmail)
 **************************************
 
-.. Warning:: For the initial setup of this you need administrative rights on the Zammad machine (console).
+.. warning:: For the initial setup of this you need administrative rights on the Zammad machine (console).
 
 If you try to configure **only** an outgoing email account
 (as in, you do not wish to set up an incoming IMAP/POP3 account at all),

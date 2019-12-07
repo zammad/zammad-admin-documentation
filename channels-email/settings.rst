@@ -3,7 +3,7 @@ Settings
 
 Below you can find the currently available Email related settings. Most of these settings have default values which can be found in this list as well.
 
-.. Note:: Some E-Mail related settings are ticket based settings, which is why they can be found in the :doc:`/misc-composer`.
+.. note:: Some E-Mail related settings are ticket based settings, which is why they can be found in the :doc:`/misc-composer`.
 
 List of Settings
 ----------------
@@ -12,27 +12,27 @@ Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}
    This is the default sender address for Zammad that affects all mails but those generated because of replies (like triggers or agent based mails).
    Your customers normally will not see this address. This E-Mail-Address does not need to receive and can't bne assigned to a group.
 
-   .. Note:: This address is relevant for agent notifications and password reset mails (also affects customers).
+   .. note:: This address is relevant for agent notifications and password reset mails (also affects customers).
 Additional follow-up detection
    In some situations the normal follow-up detection is not enough. This might be due to missing references in the subject (the ticket hook and number).
    These options can help to recognize follow-ups to existing tickets.
 
-   .. Note:: Please note that searching in attachment and body might lead to false follow-up detections.
+   .. note:: Please note that searching in attachment and body might lead to false follow-up detections.
 Maximum Email Size: Default value ``10 MB``
    This one is pretty obvious: It defines the maximum allowed size of a Email Zammad will fetch.
    Zammad will not fetch Mails that are bigger than this option.
 
-   .. Note:: Starting with Zammad 3.2 Zammad can provide postmaster mails (see "Send postmaster mail if mail too large" below).
+   .. note:: Starting with Zammad 3.2 Zammad can provide postmaster mails (see "Send postmaster mail if mail too large" below).
 
-   .. Hint:: This technically also affects attachments for articles.
+   .. hint:: This technically also affects attachments for articles.
 Send postmaster mail if mail too large: Default value ``yes (enabled)`` on fresh installations and ``no (disabled)`` on upgrade installations
-   .. Note:: This option is only available with Zammad 3.2 and later. Upgraded installations will, by default, have the value set to ``no (disabled``).
+   .. note:: This option is only available with Zammad 3.2 and later. Upgraded installations will, by default, have the value set to ``no (disabled``).
 
    Option set to ``yes``
       This setting will cause Zammad to automatically reply to mails that exceed the above mail size limit with a postmaster style mail.
       This will help your user to understand that his mail did not arrive and won't be reviewed by you.
 
-      .. Note:: Zammad will still download and remove (if enabled) the mail from the mailbox. Instead of importing it to the database, it will save the affected mail to ``/opt/zammad/tmp/oversized_mail/``.
+      .. note:: Zammad will still download and remove (if enabled) the mail from the mailbox. Instead of importing it to the database, it will save the affected mail to ``/opt/zammad/tmp/oversized_mail/``.
    Option set to ``no``
       If the option is set to no, Zammad will not reply to mails that are too big. Your customer will **not notice** that the mail was too large!
       Instead, Zammad will use the monitoring endpoint to alert its administrators that it can't fetch a too large mail.
@@ -54,7 +54,7 @@ Customer selection based on sender and receive list: Default value ``yes``
    Option set to ``no``
       The agent will be set as ticket customer.
 
-      .. Note:: Currently agents can't be customers within the UI. While Email communication works, agents can't see their own tickets (as a customer) if they don't have access to the group.
+      .. note:: Currently agents can't be customers within the UI. While Email communication works, agents can't see their own tickets (as a customer) if they don't have access to the group.
 Block Notifications
    With the regex that can be defined here, you can ensure not to send any notifications to specific systems.
    By default this especially affects typical system addresses which can't receive Emails any way.
@@ -63,7 +63,7 @@ Block Notifications
 Sender Format: Default value ``Agent + Format Seperator + System Address Display Name``
    This configures the display name used in the ``FROM`` header of mails Zammad sends.
 
-   .. Note:: This does not affect Notification mails (to agents) and password reset mails. Emails that are not sent by agents (e.g. trigger based notifications) will always fallback to ``System Address Display Name`` if needed.
+   .. note:: This does not affect Notification mails (to agents) and password reset mails. Emails that are not sent by agents (e.g. trigger based notifications) will always fallback to ``System Address Display Name`` if needed.
 
    Option set to ``Agent + Format Seperator + System Address Display Name``
       This will cause Zammad to set the ``FROM`` header to agent name and the channels display name divided by a seperator (configured below).
@@ -78,18 +78,18 @@ Sender Format Seperator: Default value ``via``
 Ticket Subject Forward: Default value ``FWD``
    The above string will be used on the subject if you forward a mail from Zammad.
 
-   .. Note:: ``:`` will be automatically appended to the above string.
+   .. note:: ``:`` will be automatically appended to the above string.
 Ticket Subject Reply: Default value ``RE``
    The above string will be used on the subject if you reply to a mail from Zammad.
 
-   .. Note:: ``:`` will be automatically appended to the above string.
+   .. note:: ``:`` will be automatically appended to the above string.
 Ticket Subject Size: Default value ``110``
    This setting enforces a maximum length for subjects when replying.
    If the subject you're using for your reply is too long, Zammad will automatically truncate the length and insert ``[...]`` to show it has shortened the subject.
 
    Example: ``RE: Test somew[...] [Ticket#123456]``
 
-   .. Note:: This does **not** limit ticket titles within the UI, just the subjects during replying to an Email.
+   .. note:: This does **not** limit ticket titles within the UI, just the subjects during replying to an Email.
 
 
 Enhanced settings
