@@ -42,7 +42,7 @@ When adding a new object, you can choose between the following object types:
    - Allows you to define a URL if needed
 - Text
    - you can enter a default value.
-   - you can choose between the following types: E-Mail, Phone, Text or URL.
+   - you can choose between the following types: email, phone, text, or URL.
    - you can pick the maximum length of the field.
    - Allows you to define a URL if needed
 - Tree Select

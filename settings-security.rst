@@ -68,7 +68,7 @@ In general there's two ways two possible ways to handle how Zammad deals with us
 against a third-party application. By default, Zammad will not automatically link "unknown" authentication providers to existing accounts.
 This means that the user has to manually link authentication providers to their accounts (for more about this `consult the user documentation <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_).
 
-Sometimes, this doesn't come in handy, as this also means if you're trying to authenticate against a (yet) unknown third party authentication, Zammad will throw an error telling you, that the E-Mail-Address is already in use. If you want to ensure that no matter if your user links his account or not, you might want to enable "Automatic account link on initial logon"
+Sometimes, this doesn't come in handy, as this also means if you're trying to authenticate against a (yet) unknown third party authentication, Zammad will throw an error telling you, that the email address is already in use. If you want to ensure that no matter if your user links his account or not, you might want to enable "Automatic account link on initial logon"
 
 .. image:: /images/system/thirdparty/automatic-account-link.png
 

@@ -38,7 +38,7 @@ The Form function could be abused by sending a higher amount of messages / ticke
 If you do not use Zammad-Forms: **disable** them.
 
 But don't worry! Zammad does limit the maximum created tickets based on different criteria.
-It also ensure that the E-Mail-Address being used is valid (with MX-Check on the E-Mail-Domain).
+It also ensure that the email address being used is valid (with MX-Check on the email’s domain).
 
 .. csv-table:: Form settings to limit Ticket-Creation
    :header: "Option", "Default value", "Description"

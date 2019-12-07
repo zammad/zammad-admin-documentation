@@ -64,10 +64,10 @@ Modify the ticket
 Send an email
    Either to the customer, the agent who owns the ticket, or every agent in the system.
 
-.. note:: In order to send E-Mails with Triggers, you need to configure an E-Mail-Address for the group the trigger is working in.
+.. note:: In order to send emails with Triggers, you need to configure an email address for the group the trigger is working in.
    If you don't, Zammad will skip the Trigger.
 
-.. hint:: Some actions (e.g. E-Mail and Notes) allow the use of variables. Learn more about :doc:`/system-variables` to enhance your triggers.
+.. hint:: Some actions (e.g. *email* and *notes*) allow the use of variables. Learn more about :doc:`/system-variables` to enhance your triggers.
 
 
 Examples

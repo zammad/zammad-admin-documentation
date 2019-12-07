@@ -4,7 +4,7 @@ Monitoring
 **Please note:** This is only available in self hosted instances, as we're monitoring hosted instances and fix problems.
 
 On the monitoring page you can see the current health state of Zammad.
-This can be useful if you for example have the feeling that you don't receive E-Mails anymore, you can take a look here before logging onto your Server.
+This can be useful if you for example have the feeling that you don't receive emails anymore, you can take a look here before logging onto your Server.
 
 Besides the optical state of an event, you can also reset the access token for this module and get the monitoring URL for a monitoring system of your choice.
 

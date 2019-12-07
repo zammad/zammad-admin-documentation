@@ -2,7 +2,7 @@ Clearbit
 ========
 
 With our LDAP-Integration, you can easily enrich the information provided by Zammad.
-If the customers or agents E-Mail-Address is known to Clearbit, it will share all information it has regarding the user with Zammad.
+If the customers or agents email address is known to Clearbit, it will share all information it has regarding the user with Zammad.
 Those information can include the following:
 
 * Avatar

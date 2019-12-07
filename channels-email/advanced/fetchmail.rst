@@ -73,10 +73,10 @@ Fetchmail config looks slightly different.
 
 
 
-Supported E-Mail headers for presorting
+Supported email headers for presorting
 =======================================
 
-Presorting based von E-Mail-Headers currently works for the following Ticket- and Article-Attributes.
+Presorting based on email headers currently works for the following Ticket- and Article-Attributes.
 
 Ticket attributes
 -----------------

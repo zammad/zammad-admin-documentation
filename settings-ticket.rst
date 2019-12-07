@@ -20,7 +20,7 @@ Ticket Hook Position: Default value ``right``
    *None*
       This will completely remove ticket references from the subject.
 
-      .. warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the E-Mail channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
+      .. warning:: Please ensure to take a look at :doc:`/channels-email/settings` within the email channel to ensure you have at least one reference that helps Zammad to assign follow ups correctly.
 
       Disabling this and not setting up any further follow up search will lead to unexpected results!
 
