@@ -20,17 +20,17 @@ Further below you can also choose what extensions or groups should appear in you
 
 .. _Console: https://console.sipgate.com/webhooks/urls
 
-.. image :: /images/system/sipgate-1.jpg
+.. image:: /images/system/sipgate-1.jpg
 
 Now you're all set to activate the sipgate integration within Zammad. If you want to, you can inbound and outbound caller IDs to block.
 This ensures that you can concentrate on your work instead of answering unwanted calls all the time. Setting the default Caller ID is optional
 and makes sense if you have several numbers. This ensures that your group number for e.g. support is always displayed so your agent don't get called back directly.
 
-.. image :: /images/system/sipgate-2.jpg
+.. image:: /images/system/sipgate-2.jpg
 
 You can now switch to your caller log. You'll see missed, in- and outgoing calls here. Pretty easy, right?
 
-.. image :: /images/system/sipgate-3.jpg
+.. image:: /images/system/sipgate-3.jpg
 
 Debugging-Log
 -------------
@@ -38,4 +38,4 @@ Debugging-Log
 In case something doesn't work as expected or you're just curious, Zammad also offers a log of the last API calls on the integration page.
 If you click on the request, a detailed view will open showing you the exact request.
 
-.. image :: /images/system/sipgate-4.jpg
+.. image:: /images/system/sipgate-4.jpg
