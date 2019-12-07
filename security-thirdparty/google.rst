@@ -34,7 +34,7 @@ Fill in the neceassary information, for restrictions you need the following (rep
 ``https://zammad_host/auth/google_oauth2/callback``
 
 .. image:: /images/system/thirdparty/google-create-oauth-Client-ID.png
-   :alt: Adding a new oauth Client-ID
+   :alt: Adding a new OAuth client ID
 
 After creating the credentials, go to your Zammad installation and navigate to
 "Admin -> Security -> Third Party Applications" -> Google.

@@ -9,7 +9,7 @@ Accounts
 All system email addresses can be added in this menu item.
 If you want to fetch emails via POP3 or IMAP you have to create a mail channel in here.
 
-.. hint:: If you're using Office365- or Exchange-Mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
+.. hint:: If you're using Office365 or Exchange mailboxes, please ensure that your Mailbox is not shared, but a normal mailbox account.
 
 .. note:: **Special instructions for two-factor authentication (2FA):**
 

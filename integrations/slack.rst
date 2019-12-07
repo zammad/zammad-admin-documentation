@@ -1,7 +1,7 @@
 Slack
 =====
 
-.. note:: In order to use this feature, please add a new Slack-App to your Workspace. The App you need is called ``Incoming WebHooks`` .
+.. note:: In order to use this feature, please add a new Slack app to your Workspace. The App you need is called ``Incoming WebHooks`` .
 
 
 Why do I need this feature?
@@ -30,16 +30,16 @@ Configure the integration
 First of all, please go to your slack workspace - go to administration => Manage Apps.
 If you don't have an app yet, you can simply add a new one - just search for `` Incoming WebHooks`` and customize the app to your needs.
 Choose (or create) the channel Zamma should post it's information to and press on "Add Incoming WebHooks integration".
-If you're ready, copy the provided WebHook-URL and go to your Zammad installation.
+If you're ready, copy the provided WebHook URL and go to your Zammad installation.
 
-.. hint:: You need administrative rights on the Slack Workspace. The Link to the App-Directory is normally ``https://[workspace-name].slack.com/apps`` .
+.. hint:: You need administrative rights on the Slack Workspace. The link to the app directory is normally ``https://[workspace-name].slack.com/apps`` .
 
 .. image:: /images/system/slack-add-incoming-webhook.jpg
 
 .. image:: /images/system/slack-incmoing-webhook-configuration.jpg
 
-To configure the slack integration, log in to Zammad and go to Admin-Settings -> Integrations (System) => Slack .
-Here you can choose on what evens Zammad should post information about a ticket to your Slack-Channel.
+To configure the slack integration, log in to Zammad and go to Integrations (System) => Slack in the admin panel.
+Here you can choose on what evens Zammad should post information about a ticket to your Slack channel.
 Next you need to device what groups shall be affected by this, as anybody with access to that specific Slack channel can read at least parts of the ticket
 this might be a privacy issue, if you select the wrong groups. The username is simply the name that Zammad uses as display name inside the Slack chat.
 The channel defines the Slack channel the information is being posted in. As last option, you can set a custom icon for posting to slack.
@@ -47,7 +47,7 @@ The channel defines the Slack channel the information is being posted in. As las
 When you're ready, just hit "Submit" and enable the integration. Zammad will now post new ticket information based on the trigger you chose.
 Below the options you have the recent log that shows the latest requests to Slack for debugging if needed.
 
-.. note:: If you leave the Icon-URL empty, Zammad will use the Zammad-Logo instead. The Icon should be a PNG-File and a square image.
+.. note:: If you leave the icon URL empty, Zammad will use the Zammad logo instead. The icon should be a square PNG file.
 
 .. image:: /images/system/slack-configuration-in-zammad.jpg
 
