@@ -2,7 +2,7 @@ System
 ******
 
 Service
-----------
+-------
 
 *Image Service*
 	Defines the backend for user and organization image lookups.
@@ -22,7 +22,8 @@ Service
 
 
 Frontend
-----------
+--------
+
 *Send client stats*
 	Send client stats/error message to central server to improve the usability.
 

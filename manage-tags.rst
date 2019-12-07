@@ -4,12 +4,13 @@ Tags
 With tags, tickets can be categorized and marked.
 
 How to tag
---------------
+----------
+
 All agents can tag tickets. You can find further information about tagging of tickets on our `User Documentation <https://user-docs.zammad.org/en/latest/basics/service-ticket/settings/tags.html>`_.
 
 
 Tag-Overviews
---------------
+-------------
 
 You can list all the marked tickets by tag in different ways:
 
@@ -39,7 +40,7 @@ Select one of the tickets that appears below the search box or get a complete ov
 
 
 Tag Management Area
---------------
+-------------------
 
 Here it can also (in addition to the overview - as described above) be set whether the agents are allowed to add tags themselves or not (in the left upper corner).
 

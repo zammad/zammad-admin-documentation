@@ -7,7 +7,6 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Manage
 
-   manage
    manage-users
    manage-groups
    manage-roles
@@ -30,7 +29,6 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Channels
 
-   channels
    channels-web
    channels-form
    channels-email
@@ -57,7 +55,6 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: System
 
-   system
    system-integrations
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system-objects

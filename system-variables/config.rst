@@ -1,5 +1,5 @@
 Config (System-Variables)
-************************
+*************************
 
 .. Note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
 

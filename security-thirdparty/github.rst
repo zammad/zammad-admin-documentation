@@ -16,7 +16,7 @@ where zammad_host has to be replaced with your Zammad FQDN
 
 
 Configure Zammad as GitHub app
--------------------------------
+------------------------------
 
 Enter the "APP ID" and the "APP SECRET" from the GitHub OAUTH Applications Dashboard
 

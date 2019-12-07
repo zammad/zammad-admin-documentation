@@ -34,7 +34,8 @@ Within the organization the following things can be set:
 
 
 Import of organizations via CSV file
-----------
+------------------------------------
+
 With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
 
 To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import will be executed.

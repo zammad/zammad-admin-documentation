@@ -36,7 +36,7 @@ That's it. Emails now will be directly piped into Zammad.
 
 
 Using Procmail for advanced features like presorting
-=====================================================
+====================================================
 
 If you want to do some more with your emails, like presorting to a Zammad group or filtering spam, you can use Procmail.
 

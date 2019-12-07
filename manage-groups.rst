@@ -4,7 +4,7 @@ Groups
 This is the group management area. From here you can edit existing groups and add new groups.
 
 What are groups?
------------------
+----------------
 
 Groups in Zammad are similar to working groups that deal with different topics within a company. For example, the tickets relevant to the sales department might be available in the *Sales* group, while the tickets for the support department might be available in the *Support* group. These are just examples; how you structure your groups is up to you.
   
@@ -13,7 +13,7 @@ Tickets enter Zammad through various channels (e.g. via email) and are then sort
 For an additional way to categorize tickets, have a look at  :doc:`/manage-tags`.
 
 Group settings
----------------
+--------------
 
 Click on a group to edit it, or click on *New group* to create a new group.
 
@@ -46,7 +46,7 @@ Eventually it should look something like this:
 .. image:: images/manage/Zammad_Helpdesk_-_Groups.jpg
 
 Permissions
---------------
+-----------
 
 The group's permissions for agents can be set up as follows:
 

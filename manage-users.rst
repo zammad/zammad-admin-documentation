@@ -14,7 +14,7 @@ If nothing has been selected, as you can see on the last screen, all user groups
 Here, only the administrators are selected - there are two in this system.
 
 Create and edit users
-----------
+---------------------
 
 By clicking the "new user" panel you create a new user for your system.
 
@@ -38,7 +38,8 @@ Any other relevant information about the user can be entered in the lower part o
 
 
 Import of users via CSV file
-----------
+----------------------------
+
 With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
 
 To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be executed.
@@ -79,7 +80,7 @@ If a user gets no rights to one group, the system does not display a ticket or t
 
 
 View from user's perspective
-----------
+----------------------------
 
 It's also possible to show the view from a user's perspective - scroll over the action-column, like that:
 
@@ -88,7 +89,7 @@ It's also possible to show the view from a user's perspective - scroll over the 
 This function can be used, for example, to test whether the rights assignment for the respective user have been set correctly - i. e. that this user only has access to the areas assigned to him/her.
 
 Set a user active/ inactive
-----------
+---------------------------
 
 .. image:: images/manage/Zammad_Helpdesk_-_Users-8.jpg
 

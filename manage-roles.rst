@@ -6,7 +6,7 @@ Roles
 The assignment of rights directly via a group should be avoided when roles are used.
 
 Admin
--------
+-----
 
 An admin role usually has access to the the admin interface, but you can either give someone full access to the admin area (Admin - Admin Interface = yes) or you can distribute access to some areas only.
 For example, you could choose someone as a "Text-Module-Coordinator" who is a normal agent, but coordinates all changes in this area. In this way the admin can be relieved.
@@ -72,13 +72,14 @@ The tickets will not appear in the agent's overviews and the creation of new tic
 
 
 Customer
--------
+--------
+
 Access to customer tickets based on current_user and organization
 --> This checkbox gives the user access to his or her own tickets created in the ticket system. If the customer is a member of a "Shared Organization", he can also see the tickets of the shared organization.
 
 
 User preferences
--------
+----------------
 
 For each of both, agents and customers, you can define which areas are available in the user preferences:
 
@@ -93,7 +94,7 @@ hint
 
 
 Default at signup
--------
+-----------------
 
 One of the roles should be created as the "default role" (default at signup = yes). When someone registers in the system who has not before been registered in the system, this role is given to them.
 This is usually the role "Customer". All other roles must be set to "no".

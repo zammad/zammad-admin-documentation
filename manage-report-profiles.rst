@@ -16,7 +16,7 @@ All configured filters are displayed in the statistics area and you can switch b
 
 
 Further information about the reporting:
----------
+----------------------------------------
 
 The time period and time interval can be changed with one click (the graphic adapts itself directly):
 

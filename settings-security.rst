@@ -2,7 +2,8 @@ Security
 ********
 
 Base
-----------
+----
+
 *New User Accounts*
 	Enables users to create their own account via web interface.
 
@@ -13,7 +14,7 @@ Base
 
 
 Password
-----------
+--------
 
 This section allows you to define password requirements for the local user accounts. 
 

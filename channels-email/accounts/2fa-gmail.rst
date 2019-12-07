@@ -71,7 +71,7 @@ Step 2: Label and Generate a New App Password
           if you create many app passwords and need to revoke one in the future.
 
 Step 3: Add Your Account to Zammad Using the App Password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your new app password will appear on the screen.
 Copy and paste it into Zammad’s :ref:`email account setup dialog <add-a-mail-account>`

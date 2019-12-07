@@ -4,7 +4,7 @@ Microsoft / Office365
 It is possible to create a quick login for your helpdesk via Microsoft (also Office 365) To do so, you need to follow these steps:
 
 Register Microsoft app
---------------------
+----------------------
 
 Go to https://identity.microsoft.com (or https://apps.dev.microsoft.com) and login with your account.
 
@@ -35,7 +35,7 @@ After the app has been created, update the application icon and organization att
 Click on "Generate New Password" button and note the "Password" and "Application Id".
 
 Configure Zammad as Microsoft app
--------------------------------
+---------------------------------
 
 Go to "Admin -> Security -> Twitter -> Third Party Applications -> Office 365 Section"
 

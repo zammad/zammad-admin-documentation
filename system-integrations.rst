@@ -18,7 +18,7 @@ Integrations for phone systems
    integrations/sipgate
    
 Integrations for authentication and customers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 1

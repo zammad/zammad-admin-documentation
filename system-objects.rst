@@ -82,7 +82,7 @@ Learn more about :doc:`/system-variables`.
 
 
 Object permissions
--------------------
+------------------
 
 When ever needed you can restrict access to objects for permission roles (agents and customer) and even set a object to be required.
 

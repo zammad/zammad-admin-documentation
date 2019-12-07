@@ -26,7 +26,7 @@ This setting is optional, of course, so there’s nothing to worry about if you 
 
 
 Using Macros
--------------
+------------
 
 You have two options on how to use Macros:
 
