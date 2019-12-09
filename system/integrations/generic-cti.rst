@@ -41,4 +41,4 @@ What can it do for me?
 
 .. image:: /images/system/CTI-2.jpg
 
-More information can be found on our `CTI API into <https://docs.zammad.org/en/latest/cti-api-intro.html>`_.
+More information can be found on our `CTI API intro <https://docs.zammad.org/en/latest/cti-api-intro.html>`_.
