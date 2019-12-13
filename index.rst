@@ -7,22 +7,21 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Manage
 
-   manage
-   manage-users
-   manage-groups
-   manage-roles
-   manage-organizations
-   manage-overviews
-   manage-text-modules
-   manage-macros
-   manage-tags
-   manage-calendars
-   manage-slas
-   manage-trigger
-   manage-scheduler
-   manage-report-profiles
-   manage-time-accounting
-   manage-knowledge-base
+   manage/users
+   manage/groups
+   manage/roles
+   manage/organizations
+   manage/overviews
+   manage/text-modules
+   manage/macros
+   manage/tags
+   manage/calendars
+   manage/slas
+   manage/trigger
+   manage/scheduler
+   manage/report-profiles
+   manage/time-accounting
+   manage/knowledge-base
 
 .. _channels-docs:
 
@@ -30,14 +29,13 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Channels
 
-   channels
-   channels-web
-   channels-form
-   channels-email
-   channels-chat
-   channels-twitter
-   channels-facebook
-   channels-telegram
+   channels/web
+   channels/form
+   channels/email
+   channels/chat
+   channels/twitter
+   channels/facebook
+   channels/telegram
 
 
 .. _settings-docs:
@@ -46,10 +44,10 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Settings
 
-   settings-branding
-   settings-system
-   settings-security
-   settings-ticket
+   settings/branding
+   settings/system
+   settings/security
+   settings/ticket
 
 .. _system-docs:
 
@@ -57,13 +55,21 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: System
 
-   system
-   system-integrations
+   system/integrations
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
-   system-objects
-   system-translations
-   system-maintenance
-   system-monitoring
-   system-packages
-   system-sessions
-   system-version
+   system/objects
+   system/variables
+   system/translations
+   system/maintenance
+   system/monitoring
+   system/packages
+   system/sessions
+   system/version
+
+.. _misc-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Misc
+
+   misc/composer
