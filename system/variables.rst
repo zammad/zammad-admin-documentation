@@ -27,7 +27,7 @@ Wait, what about custom objects?
 
 Good point! Of course, we can't predict what objects you might create, but we can give you a hint on how to put the puzzle together to get your custom values.
 
-For this, we'll will talk about the inner part of the variable (so everything within ``#{}``), please put the outer part around to have a valid variable.
+For this, we'll talk about the inner part of the variable (so everything within ``#{}``), please put the outer part around to have a valid variable.
 The first part of the variable name consist of the object type. Currently these are:
 
 * Ticket (``ticket``)
