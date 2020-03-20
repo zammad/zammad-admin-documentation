@@ -1,5 +1,5 @@
 Examples
-=======
+========
 
 1. Any time Jacob Smith creates a ticket, assign it to the Sales group:
 
