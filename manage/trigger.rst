@@ -1,13 +1,24 @@
 Trigger
 =======
 
+.. toctree::
+   :hidden:
+
+   /manage/trigger/conditions-and-actions
+   /manage/trigger/examples
+   /manage/trigger/other-notifications
+
 This page introduces triggers and helps you to understand their scope, 
-what the can help you with and what you can't achieve.
+what they can help you with and what you can't achieve.
 
-Table of content
-----------------
+  * :doc:`/manage/trigger/conditions-and-actions`
+  * :doc:`/manage/trigger/examples`
+  * :doc:`/manage/trigger/other-notifications`
+  * :ref:`trigger-scope`
+  * :ref:`trigger-default-configuration`
+  * :ref:`trigger-how-they-work`
 
-  * Scope
+.. _trigger-scope:
   * Default configuration
   * How triggers work
   * Conditions and actions
@@ -16,6 +27,8 @@ Table of content
 
 Scope
 -----
+
+.. _trigger-default-configuration:
 
 Default configuration
 ---------------------
@@ -28,8 +41,9 @@ successfully. This trigger can be deactivated at any time if needed.
 
 Triggers are very flexible and can help to achieve various things. 
 You may want to check out some of our examples.
+.. _trigger-how-they-work:
 
-How Do They Work?
+How triggers work
 -----------------
 
 Triggers consist of two parts: **conditions** and **changes**. Conditions
