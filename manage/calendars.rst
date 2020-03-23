@@ -1,7 +1,7 @@
 Calendars
 *********
 
-A calendar is required to calculate escalations or reports based on business hours.
+A calendar is required to calculate escalations, reports based on business hours or for trigger execution.
 
 Define a "standard"-calendar which system-wide is valid. Only in the specified business hours, escalation notifications are sent to agents.
 
