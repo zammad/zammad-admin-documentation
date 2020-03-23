@@ -6,7 +6,7 @@ Conditions
 
 When creating a trigger, define your conditions here:
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Triggers10.jpg
+  .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-conditions.png
 
 If you set multiple conditions for a trigger, they must **all** be true for it
 to fire. You can configure triggers to fire based on the properties of:
@@ -32,7 +32,7 @@ Actions
 
 When creating a trigger, define your changes here:
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Triggers11.jpg
+  .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-actions.png
 
 A trigger can do two things once its conditions have been met:
 
