@@ -95,4 +95,4 @@ To reduce the error rate of unwanted mass changes, a test import is carried out 
 Ticket templates for new tickets
 --------------------------------
 
-Ticket templates in new tickets can be created by any agent. Therefore you will find information inside of our `User-Documentation <https://user-docs.zammad.org/de/latest/zammad-ticket-templates.html>`_ .
+Ticket templates in new tickets can be created by any agent. Therefore you will find information inside of our `User-Documentation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_ .
