@@ -37,6 +37,11 @@ Integrations for Monitoring Systems
   * Icinga
   * Monit
   * Nagios
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   integrations/zabbix
   
 Other Integrations
 ^^^^^^^^^^^^^^^^^^
