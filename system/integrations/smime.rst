@@ -37,3 +37,6 @@ How to configure the S/MIME integration?
 
 How to work with the S/MIME integration?
 ----------------------------------------
+
+Working with S/MIME from agent point of view is out of scope of this documentation. 
+However, you can find further information about this topic `here </>`_.
