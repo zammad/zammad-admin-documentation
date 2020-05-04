@@ -29,6 +29,9 @@ before you can add your Gmail account to Zammad.
    For more information, see `Google’s official help article on the subject
    <https://support.google.com/accounts/answer/185833>`_.
 
+   .. note:: G-Suite users might not be able to activiate 2 step verification, this option then has to be 
+      enabled by your G-Suite administrator (Security → Basic settings)
+
 Step 1: Access Your App Password Settings Page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
