@@ -1,6 +1,15 @@
 Conditions and actions
 ======================
 
+How triggers work
+-----------------
+
+Triggers consist of two parts: **conditions** and **changes**. Conditions
+answer the question, “when should this trigger fire?” Changes answer the
+question, “what should happen when it does?”
+
+Triggers are evaluated in alphabetical order, by **name.**
+
 Conditions
 ----------
 
