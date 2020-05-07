@@ -1,5 +1,5 @@
-Other Notifications
-===================
+System notifications
+====================
 
 There are other notification emails sent by Zammad that are not configurable as
 triggers (*e.g.,* the notifications that **agents** receive when a new ticket
