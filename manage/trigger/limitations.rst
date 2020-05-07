@@ -1,7 +1,8 @@
 Limitations
 ===========
 
-It's important to understand when a trigger can be used and when it's better to use e.g. Zammads :doc:`/manage/scheduler`. 
+It's important to understand when a trigger can be used and when it's better to use e.g. Zammads 
+:doc:`/manage/scheduler` or `postmaster filter <https://admin-docs.zammad.org/en/latest/channels/email/filters.html>`_. 
 
 Triggers will fire during the following conditions:
 
