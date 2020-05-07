@@ -1,26 +1,34 @@
-Trigger
-=======
+Triggers
+========
 
-Use triggers to set up all kinds of if-this-then-that automation workflows.
+Use triggers to set up all kinds of 🎛️ **if-this-then-that** automation workflows.
 
-  * :doc:`/manage/trigger/examples`
-  * :doc:`/manage/trigger/conditions-and-actions`
-  * :doc:`/manage/trigger/limitations`
-  * :doc:`/manage/trigger/other-notifications`
+.. hint:: For ⏳ **every-so-often** automation workflows,
+   try :doc:`schedulers </manage/scheduler>` instead.
 
-.. Warning:: By default Zammad has an auto reply trigger activated. This trigger will reply to **all incoming emails** and reply to them!
+The first thing to know about triggers is that **you're already using them**.
+From the moment you set up Zammad, it starts sending auto-replies
+to all incoming emails. Recognize this line?
 
-By default, every time a customer creates a new ticket, they automatically 
-receive a confirmation email to assure them that their issue has been received
-successfully. This trigger can be deactivated at any time if needed.
+.. figure:: /images/manage/trigger-example01_ticket_zoom.png
+   :alt: Screenshot of auto-reply notification in ticket view
 
-Triggers are very flexible and can help to achieve various things. 
-You may want to check out some of our :doc:`/manage/trigger/examples`.
+It means that the ticket is from an incoming customer email,
+and that the customer received this message in response:
 
-.. _trigger-how-they-work:
+.. figure:: /images/manage/trigger-example01_received_message.png
+   :alt: Screenshot of auto-reply in customer’s inbox
+
+This auto-reply message is a **trigger**.
+You can disable it, modify it, or create new ones
+for all sorts of automation tasks on the Trigger page of the admin panel:
+
+.. figure:: /images/manage/trigger-example01_admin_panel.png
+   :alt: Screenshot of “Triggers” page in admin panel
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
+   :caption: Learn more
 
    /manage/trigger/examples
    /manage/trigger/conditions-and-actions
