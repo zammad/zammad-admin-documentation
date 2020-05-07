@@ -5,7 +5,7 @@ To get you up and running quickly, here are some examples
 of the kinds of automation tasks you can set up with triggers.
 
 .. hint:: If they don't make sense to you, don't worry—just skip ahead to
-   :doc:`/manage/trigger/conditions-and-actions`
+   :doc:`/manage/trigger/how-do-they-work`
    to learn about all the options in detail,
    then come back here to see them in action.
 
@@ -29,4 +29,4 @@ of the kinds of automation tasks you can set up with triggers.
    about a newly created ticket,
    that’s built into the system itself.
    If you need to customize those,
-   you will have to :doc:`manually edit files on your server </manage/trigger/other-notifications>`.
+   you will have to :doc:`manually edit files on your server </manage/trigger/system-notifications>`.

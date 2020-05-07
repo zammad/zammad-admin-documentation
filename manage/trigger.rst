@@ -30,7 +30,7 @@ for all sorts of automation tasks on the Trigger page of the admin panel:
    :maxdepth: 1
    :caption: Learn more
 
-   /manage/trigger/examples
-   /manage/trigger/conditions-and-actions
+   /manage/trigger/learn-by-example
+   /manage/trigger/how-do-they-work
    /manage/trigger/limitations
-   /manage/trigger/other-notifications
+   /manage/trigger/system-notifications
