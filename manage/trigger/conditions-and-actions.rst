@@ -8,7 +8,9 @@ Triggers consist of two parts: **conditions** and **changes**. Conditions
 answer the question, “when should this trigger fire?” Changes answer the
 question, “what should happen when it does?”
 
-Triggers are evaluated in alphabetical order, by **name.**
+Triggers are evaluated in alphabetical order, by **name.** 
+In some situations triggers might be the wrong choice, see :doc:`/manage/trigger/limitations` 
+for more information.
 
 Conditions
 ----------
