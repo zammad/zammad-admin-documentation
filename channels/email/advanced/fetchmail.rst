@@ -5,6 +5,10 @@ Maybe you want to add emails via Fetchmail or Procmail to Zammad.
 
 To get this to work you need to pipe your emails to rails.
 
+.. note:: Below commands might differ from system to system. If you want to learn on how 
+  to call Zammad commands on your system, please have a look on `our console introduction 
+  <https://docs.zammad.org/en/latest/admin/console.html>`_.
+
 **Command line**::
 
    su - zammad
