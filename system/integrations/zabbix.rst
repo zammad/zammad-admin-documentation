@@ -60,8 +60,3 @@ required.
 
 For more information, use the
 `Zabbix <https://www.zabbix.com/documentation/current/manual/config/notifications>`__
-
-Supported Versions
-------------------
-
-Zabbix 5.0
