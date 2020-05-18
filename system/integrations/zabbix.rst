@@ -31,7 +31,7 @@ Create a global macro
 frontend**.
 
 2. In the **Administration** > **Media types** section, import the
-`Template <https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/media/media_zammad.xml>`_
+`Template <https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/media/zammad/media_zammad.xml>`_
 
 3. Open the added **Zammad** media type and set:
 
