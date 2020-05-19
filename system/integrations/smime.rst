@@ -120,3 +120,7 @@ I can see "Encrypt" and "Sign", however, can't click or activate these buttons.
 I can activate "Sign", but can't use "Encrypt"?!
   In order to encrypt emails, you'll need the public certificate of your recipient. If Zammad doesn't know the 
   recipients certificate, it can't allow you to encrypt the email in question.
+
+When adding a new certificate, I get the error `Fingerprint already taken`??
+  This exception occurs if you already added a certificate with the same fingerprint. Ensure it's not already 
+  present in your installation.
