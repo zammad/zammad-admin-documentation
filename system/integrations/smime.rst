@@ -88,6 +88,10 @@ Add a private key
 
 .. [#crtfile] You can supply a pem/cer file that contains both, the certificate and private key. Zammad will extract what it needs, depending on the dialogue you're in.
 
+.. hint:: Imported a certificate after receiving a mail?
+   No problem, if the integration has been enabled, Zammad allows your 
+   agent to re-check on failed verifications or decryptions!
+
 How to work with the S/MIME integration?
 ----------------------------------------
 
