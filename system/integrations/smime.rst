@@ -106,6 +106,16 @@ This section can help you if you encounter issues while using S/MIME within Zamm
 Checking for issues with the integration
 ++++++++++++++++++++++++++++++++++++++++
 
+Zammad comes with a log that shows if there were issues with in- or outgoing emails. 
+This covers signing, signing verification, encryption and decryption.
+
+.. figure:: /images/system/smime/smime-log.png
+   :alt: Sample entries of in- and outgoing S/MIME related emails.
+   :align: center
+
+.. hint:: This log does not cover :doc:`/manage/trigger` or :doc:`/manage/scheduler` based emails!
+   For those mails you'll need to have a look in your ``production.log`` for hints what went wrong.
+
 Common Issues you might encounter
 +++++++++++++++++++++++++++++++++
 
