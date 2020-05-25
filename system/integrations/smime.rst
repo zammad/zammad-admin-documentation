@@ -42,7 +42,7 @@ How to configure the S/MIME integration?
   within certificate and private key context. Zammad will automatically extract the correct part it needs.
 
 To configure and activate Zammads S/MIME integration, just navigate to Integrations → S/MIME. 
-Here you can activate the S/MIME functionality itself. If activated, this will add new options to trigger and scheduler options. 
+Here you can activate the S/MIME functionality itself. If activated, this will add new options to :doc:`/manage/trigger` and :doc:`/manage/scheduler` options. 
 Also, your agents will now see a "sign" and "encrypt" button above article creation and within new ticket dialogues.
 
 .. hint:: By default Zammad will always encrypt and sign an outgoing mail. Your agent has to disable it manually. 
