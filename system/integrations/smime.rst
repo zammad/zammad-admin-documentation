@@ -117,6 +117,8 @@ I can see "Encrypt" and "Sign", however, can't click or activate these buttons.
   
   1. The mail address configured within the group your agent tries to sign the mail does not match the mail address 
      that's configured within your certificate.
+
+        .. note:: This also affects :doc:`/manage/trigger` and :doc:`/manage/scheduler` if they're supposed to encrypt emails!
   2. While you've provided a certificate, it's missing the private key. Check the certificate list and search for the 
      string "Including private key.".
   3. You provided an invalid certificate that's not suitable for S/MIME.
