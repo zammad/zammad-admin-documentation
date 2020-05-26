@@ -17,7 +17,7 @@ You can import certificates by
      the certificate or
    * importing a public certificate of a specific user you've been provided to verify the mail content.
 
-This integration **does not** come with automatic trusted CAs, as Zammad can't predict which use base is valid to you.
+This integration **does not** come with automatic trusted CAs, as Zammad can't predict which user base is valid to you.
 
 Where to get S/MIME certificates from?
 --------------------------------------
