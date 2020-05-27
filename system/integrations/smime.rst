@@ -140,3 +140,7 @@ I can activate "Sign", but can't use "Encrypt"?!
 When adding a new certificate, I get the error `Fingerprint already taken`??
    This exception occurs if you already added a certificate with the same fingerprint. Ensure it's not already 
    present in your installation.
+
+I did add a S/MIME certificate for a specific mail address but still can't encrypt it!
+   Please have a look into your ``production.log`` which might hold further information about this issue. 
+   If it doesn't, please ensure you're using a correct certificate. (attributes may be missing which can cause this issue)
