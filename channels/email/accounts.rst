@@ -37,7 +37,10 @@ If it doesn’t work, use the “Experts” button to configure it yourself.
    If you want Zammad to leave the contents of your inbox untouched,
    use the *Keep Messages on Server* option in the *Experts* configuration view.
 
-So let's get started setting up an email channel!
+If you're looking on how to add further email addresses or aliases to existing accounts, you may want to have a look at 
+:doc:`/channels/email/aliases`.
+
+So let's get started setting up an email channel! 
 For this, simply navigate to "Email" and click on the "new" button.
 A wizard will appear and leads you through the following steps.
 
@@ -252,9 +255,9 @@ you want to change.
 
 Zammad then will provide a new modal dialogue in which you can change the group to another one. 
 
-   .. note:: Zammad will only display active groups for selection.
+.. note:: Zammad will only display active groups for selection.
 
-   .. hint:: Changing destination groups does not affect existing tickets, they'll remain in their original group.
+.. hint:: Changing destination groups does not affect existing tickets, they'll remain in their original group.
 
 .. figure:: /images/channels/email/change-destination-group-for-email-account.png
    :alt: Changing the destination group for an email account
@@ -270,10 +273,10 @@ To do so, Zammad provides you with *edit* links for inbound and outbound.
 The exact same wizard will be used for updating like upon adding the account. 
 If something is unclear, you can safely scroll up and have a look. 💪
 
-   .. note:: If you edit "Inbound" , Zammad will also provide the "Outbound" configuration.
+.. note:: If you edit "Inbound" , Zammad will also provide the "Outbound" configuration.
       If you just have to edit your Outbound configuration, you can safely just edit outbound.
 
-   .. hint:: In some situations your browser may "change" the password living in the password field. 
+.. hint:: In some situations your browser may "change" the password living in the password field. 
       To ensure Zammad won't fail authentication, it's the best to also insert the password of the email account.
 
 .. figure:: /images/channels/email/updating-email-account.png
@@ -297,6 +300,8 @@ one single account, you can simply delete an existing channel.
 
 This will remove the channel configuration, but not email addresses. You will need to remove them in a second step. 
 Zammad will display all not associated email addresses above your email accounts. 
+
+.. hint:: For you overview we'll tell you how to re-assign email addresses on :doc:`/channels/email/aliases`.
 
 .. figure:: /images/channels/email/email-addresses-without-channel.png
    :alt: email addresses without channels attached

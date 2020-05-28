@@ -10,6 +10,7 @@ Read on to learn how email works in Zammad, and all the things you can do with i
    :titlesonly:
 
    email/accounts
+   email/aliases
    email/filters
    email/signatures
    email/settings
