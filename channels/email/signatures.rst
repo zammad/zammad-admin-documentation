@@ -1,6 +1,10 @@
 Signatures
 **********
 
+.. figure:: /images/channels/email/signatures-page.png
+   :alt: Account settings page
+   :align: center
+
 You can create a separate signature for each group in Zammad. The individual signatures can be created and edited here:
 
 .. image:: /images/channels/Zammad_Helpdesk_-Signature.jpg

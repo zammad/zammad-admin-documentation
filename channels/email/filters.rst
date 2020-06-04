@@ -1,6 +1,10 @@
 Filters
 *******
 
+.. figure:: /images/channels/email/filters-page.png
+   :alt: Account settings page
+   :align: center
+
 Postmaster filters allow you to match email headers (e.g. ``From``, ``To``, ``Subject``, ``X-Spam-Flag`` etc.) and execute a set of actions whenever Zammad's email parser encounters a matching email. The actions will be applied to the ticket that is created or updated by this email. Here are some examples of what is possible with filters:
 
 - Automatically dispatch tickets into certain groups:

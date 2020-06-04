@@ -1,6 +1,10 @@
 Accounts
 --------
 
+.. figure:: /images/channels/email/accounts-page.png
+   :alt: Account settings page
+   :align: center
+
 .. toctree::
    :maxdepth: 1
 
