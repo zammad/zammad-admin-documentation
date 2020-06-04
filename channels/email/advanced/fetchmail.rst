@@ -1,5 +1,5 @@
-Pipe (Fetchmail)
-****************
+Watch your inbox with Fetchmail
+*******************************
 
 Maybe you want to add emails via Fetchmail or Procmail to Zammad.
 
