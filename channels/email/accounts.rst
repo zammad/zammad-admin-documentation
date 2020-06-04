@@ -2,9 +2,10 @@ Accounts
 --------
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
-   accounts/2fa-gmail
+   accounts/aliases
+   accounts/system-notifications
 
 All system email addresses can be added in this menu item.
 If you want to fetch emails via POP3 or IMAP
@@ -38,7 +39,7 @@ If it doesn’t work, use the “Experts” button to configure it yourself.
    use the *Keep Messages on Server* option in the *Experts* configuration view.
 
 If you're looking on how to add further email addresses or aliases to existing accounts, you may want to have a look at 
-:doc:`/channels/email/aliases`.
+:doc:`accounts/aliases`.
 
 So let's get started setting up an email channel! 
 For this, simply navigate to "Email" and click on the "new" button.
@@ -240,7 +241,7 @@ After adding an account, it will automatically appear within the email channel o
 At this point Zammad will allow you to adjust settings whenever needed depending on what you'll want to do.
 
 Below we'll handle all email account based settings - if you want to learn more about handling email addresses, 
-please have a look at the :doc:`/channels/email/aliases` section.
+please have a look at the :doc:`accounts/aliases` section.
 
 .. figure:: /images/channels/email/email-channel-overview.png
    :alt: Zammad list all configured email accounts at one place
@@ -301,7 +302,7 @@ one single account, you can simply delete an existing channel.
 This will remove the channel configuration, but not email addresses. You will need to remove them in a second step. 
 Zammad will display all not associated email addresses above your email accounts. 
 
-.. hint:: For you overview we'll tell you how to re-assign email addresses on :doc:`/channels/email/aliases`.
+.. hint:: For you overview we'll tell you how to re-assign email addresses on :doc:`accounts/aliases`.
 
 .. figure:: /images/channels/email/email-addresses-without-channel.png
    :alt: email addresses without channels attached
