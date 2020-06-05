@@ -46,7 +46,7 @@ If you want to update it or change the way how you send out notifications, just 
    .. note:: You can only have one active notification channel. Zammad wouldn't be able to decide which email 
       address it should use in which situation. 
 
-.. figure:: /images/channels/email/notifification-channel-on-channel-page.png
+.. figure:: /images/channels/email/accounts-system-notifications.png
    :alt: Notification channel on the email channels page
    :align: center
 
