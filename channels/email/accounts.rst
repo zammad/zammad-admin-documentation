@@ -7,7 +7,7 @@ Accounts
    accounts/account-setup
    accounts/secondary-addresses
    accounts/managing-accounts
-   accounts/system-notifications
+   accounts/email-notification
 
 :doc:`accounts/account-setup`
    Use the **New Email Account** dialog to connect your account.
@@ -34,11 +34,11 @@ Accounts
       :scale: 25%
       :align: center
 
-:doc:`accounts/system-notifications`
+:doc:`accounts/email-notification`
    Configure the outgoing mail provider for **system notifications**.
    (Self-hosted installations only.)
 
-   .. figure:: /images/channels/email/accounts-system-notifications.png
+   .. figure:: /images/channels/email/accounts-email-notification.png
       :alt: New Email Account dialog
       :scale: 60%
       :align: center
