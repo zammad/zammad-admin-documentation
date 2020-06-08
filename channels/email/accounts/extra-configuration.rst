@@ -1,6 +1,9 @@
 Extra Configuration
 -------------------
 
+.. hint:: Can't send mails from a ticket yet?
+   You may want to check your :doc:`Group settings </manage/groups>`.
+
 After adding an account, it will automatically appear within the email channel overview. 
 At this point Zammad will allow you to adjust settings whenever needed depending on what you'll want to do.
 

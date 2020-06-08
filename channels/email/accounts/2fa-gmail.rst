@@ -79,7 +79,7 @@ Step 3: Add Your Account to Zammad Using the App Password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your new app password will appear on the screen.
-Copy and paste it into Zammad’s :doc:`email account setup dialog <new-account-settings>`
+Copy and paste it into Zammad’s :doc:`email account setup dialog <account-setup>`
 in place of your normal password.
 
 That’s it!

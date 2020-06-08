@@ -64,6 +64,9 @@ Block Notifications
    By default this especially affects typical system addresses which can't receive Emails any way.
 
    The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
+
+   .. _email-settings-sender-format:
+
 Sender Format: Default value ``Agent + Format Seperator + System Address Display Name``
    This configures the display name used in the ``FROM`` header of mails Zammad sends.
 
