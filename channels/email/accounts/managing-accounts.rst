@@ -38,12 +38,12 @@ Mail Server Settings
 
 Email Address
    Use the **+ Add** or **Edit** buttons
-   to set up email aliases on this account.
+   to set up secondary addresses on this account.
 
-   See :doc:`aliases` for a detailed description of each option.
+   See :doc:`secondary-addresses` for a detailed description of each option.
 
-   .. figure:: /images/channels/email/add-or-update-aliases.png
-      :alt: Location of alias add/edit buttons
+   .. figure:: /images/channels/email/add-or-update-addresses.png
+      :alt: Location of email address add/edit buttons
       :scale: 60%
       :align: center
 
@@ -61,7 +61,7 @@ Delete
    .. note:: 🧹 **Additional Steps Required**
 
       When an email account is deleted,
-      its :doc:`email aliases <aliases>` **remain in the system**. 
+      its :doc:`email aliases <secondary-addresses>` **remain in the system**. 
       Be sure to reassign or delete them manually.
 
       .. figure:: /images/channels/email/email-addresses-without-channel.png
@@ -69,4 +69,9 @@ Delete
          :scale: 60%
          :align: center
 
-         Orphaned email addresses appear in a list above configured accounts.
+         Click on the address to assign it to another account, or click ✖ to delete it.
+
+      Groups need an assigned an address to send outgoing emails.
+      If you delete a group’s assigned address,
+      agents belonging to that group won’t be able to send emails
+      until you assign it a new one.

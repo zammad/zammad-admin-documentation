@@ -42,7 +42,7 @@ Organization & Department Name
 
       A customer’s inbox with an auto-reply from **Chrispresso Sales**.
 
-   If you add :doc:`multiple addresses <aliases>` to a single account,
+   If you add :doc:`multiple addresses <secondary-addresses>` to a single account,
    you can define a separate Organization & Department Name for each one.
 
    Email display names value can be
@@ -53,6 +53,10 @@ Email
 
    If your account login/username is different from your email address,
    use the *Experts* dialog (see below).
+
+   If your inbox receives mail for more than one email address,
+   be sure to :doc:`add your alternate addresses <secondary-addresses>`
+   after account setup.
 
 Password
    Your account password.

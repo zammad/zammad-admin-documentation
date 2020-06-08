@@ -5,7 +5,7 @@ Accounts
    :hidden:
 
    accounts/account-setup
-   accounts/aliases
+   accounts/secondary-addresses
    accounts/managing-accounts
    accounts/system-notifications
 
@@ -17,11 +17,11 @@ Accounts
       :scale: 60%
       :align: center
 
-:doc:`accounts/aliases`
+:doc:`accounts/secondary-addresses`
    Send and receive email at **additional email addresses**,
    all through the same mailbox/account.
 
-   .. figure:: /images/channels/email/accounts-aliases.gif
+   .. figure:: /images/channels/email/accounts-addresses.gif
       :alt: New Email Account dialog
       :scale: 60%
       :align: center
