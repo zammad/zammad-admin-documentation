@@ -6,7 +6,7 @@ Accounts
 
    accounts/account-setup
    accounts/aliases
-   accounts/extra-configuration
+   accounts/managing-accounts
    accounts/system-notifications
 
 :doc:`accounts/account-setup`
@@ -26,7 +26,7 @@ Accounts
       :scale: 60%
       :align: center
 
-:doc:`accounts/extra-configuration`
+:doc:`accounts/managing-accounts`
    Edit the configuration of existing accounts in the **Accounts Panel**.
 
    .. figure:: /images/channels/email/panel.png
