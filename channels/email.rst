@@ -19,7 +19,7 @@ Control how Zammad **sends and receives email**.
    **Connect Zammad to your email provider**
    so that it can watch your inbox, send auto-replies, and more.
 
-   (Self-hosted users will have already completed this step
+   (Self-hosted users may have already completed this step
    during new system setup.)
 
 :doc:`🗂️ Filters <email/filters>`
