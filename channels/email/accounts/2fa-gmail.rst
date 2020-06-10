@@ -1,3 +1,5 @@
+:orphan:
+
 How to create an App Password for Gmail
 ***************************************
 
@@ -77,7 +79,7 @@ Step 3: Add Your Account to Zammad Using the App Password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Your new app password will appear on the screen.
-Copy and paste it into Zammad’s :ref:`email account setup dialog <add-a-mail-account>`
+Copy and paste it into Zammad’s :doc:`email account setup dialog <account-setup>`
 in place of your normal password.
 
 That’s it!

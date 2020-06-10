@@ -1,6 +1,10 @@
 Settings
 ********
 
+.. figure:: /images/channels/email/settings-page.png
+   :alt: Account settings page
+   :align: center
+
 Below you can find the currently available Email related settings. Most of these settings have default values which can be found in this list as well.
 
 .. note:: Some email-related settings are ticket based settings, which is why they can be found in the :doc:`/misc/composer`.
@@ -60,6 +64,9 @@ Block Notifications
    By default this especially affects typical system addresses which can't receive Emails any way.
 
    The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
+
+   .. _email-settings-sender-format:
+
 Sender Format: Default value ``Agent + Format Seperator + System Address Display Name``
    This configures the display name used in the ``FROM`` header of mails Zammad sends.
 

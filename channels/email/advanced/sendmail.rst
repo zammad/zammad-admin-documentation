@@ -1,5 +1,5 @@
-Outbound-Only Configuration (Sendmail)
-**************************************
+Dispatch messages with Sendmail
+*******************************
 
 .. warning:: For the initial setup of this you need administrative rights on the Zammad machine (console).
 
