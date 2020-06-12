@@ -126,7 +126,7 @@ Checking for issues with the integration
 Zammad comes with a log that shows if there were issues with in- or outgoing emails. 
 This covers signing, signing verification, encryption and decryption.
 
-.. figure:: /images/system/smime/smime-log.png
+.. figure:: /images/system/smime/smime-log.gif
    :alt: Sample entries of in- and outgoing S/MIME related emails.
    :align: center
 
