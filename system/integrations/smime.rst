@@ -62,31 +62,36 @@ Public certificate and private key are needed together for your sending channel.
    :alt: S/MIME integration showing configured certificates and possible issues with Logging
    :align: center
 
-Providing certificates
-++++++++++++++++++++++
+Providing certificates and private keys
++++++++++++++++++++++++++++++++++++++++
 
-Add a certificate
-   It all starts with the certificate. With this step you'll add either your own certificate (for an outgoing email address) or 
-   the certificate of your e.g. customer. You can choose to either upload the certificate as a file [#crtfile]_ or to paste the certificate content into the text field.
-   
-   If you're ready click on "Add" to save the certificate within Zammad.
-   
-   .. figure:: /images/system/smime/add-certificate-example.png
-     :alt: Dialogue to add new certificates
-     :align: center
+.. note:: A private key is only required for Zammads email addresses. You'll never have to ask customers
+   for their private key.
 
-Add a private key
-   A private key is only required for Zammads email addresses. With this step you'll add your own private key for your certificate to Zammad. 
-   You can choose to either upload the private key as a file [#crtfile]_ or to paste the private key content into the text field.
+You can add new certificates and private keys via **Add Certificate** and **Add Private Key**. 
+In order to add private keys for certificates, the certificate has to be available to Zammad beforehand. 
 
-   If you're ready click on "Add" to save the private key within Zammad.
-   Zammad will automatically detect the correct certificate to assign the private key to.
+You can provide keys and certificates either by pasting the information in PEM format into the text field or 
+by directly uploading the file itself.
 
-   .. figure:: /images/system/smime/add-certificate-key-example.png
-      :alt: Dialogue to add new private keys for your certificates
-      :align: center
+.. tip:: You can provide a certificate and private key combined PEM. Zammad will recognize the context and 
+   what part to take from the PEM.
 
-.. [#crtfile] You can supply a pem/cer file that contains both, the certificate and private key. Zammad will extract what it needs, depending on the dialogue you're in.
+   .. note:: 🤓 **One more note on certificates and private keys**
+
+   Certificate
+      In order to validate signed emails from your customers, you'll need to add their certificate to Zammad. 
+      If your customer is rather large or you're an internal IT department, you can also add a CA certificate to 
+      verify all messages that have been signed with an certificate issued by that CA. 🙌
+
+   Private keys
+      Zammads needs private keys for signing outgoing mails only. 
+      This means you'll only require the keys you (should) already have for the email accounts that you're 
+      using with Zammad.
+
+.. figure:: /images/system/smime/adding-certificate-and-private-key.gif
+   :alt: Dialogue to add new certificates or private keys
+   :align: center
 
 .. hint:: Imported a certificate after receiving a mail?
    No problem, if the integration has been enabled, Zammad allows your 
