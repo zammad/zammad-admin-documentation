@@ -45,9 +45,6 @@ To configure and activate Zammads S/MIME integration, just navigate to Integrati
 Here you can activate the S/MIME functionality itself. If activated, this will add new options to :doc:`/manage/trigger` and :doc:`/manage/scheduler` options. 
 Also, your agents will now see a "sign" and "encrypt" button above article creation and within new ticket dialogues.
 
-.. hint:: By default Zammad will always encrypt and sign an outgoing mail. Your agent has to disable it manually. 
-   This is, if suitable certificates are found. (_`Addressing issues` might help you to understand scopes better)
-
 Zammad will display all configured certificates within the table. This allows you to see if an customer email address 
 is already known, when the certificate became valid and when it will expire. 
 
@@ -77,7 +74,7 @@ by directly uploading the file itself.
 .. tip:: You can provide a certificate and private key combined PEM. Zammad will recognize the context and 
    what part to take from the PEM.
 
-   .. note:: 🤓 **One more note on certificates and private keys**
+.. note:: 🤓 **One more note on certificates and private keys**
 
    Certificate
       In order to validate signed emails from your customers, you'll need to add their certificate to Zammad. 
@@ -96,6 +93,21 @@ by directly uploading the file itself.
 .. hint:: Imported a certificate after receiving a mail?
    No problem, if the integration has been enabled, Zammad allows your 
    agent to re-check on failed verifications or decryptions!
+
+To sign or encrypt by default or not to
++++++++++++++++++++++++++++++++++++++++
+
+.. hint:: By default Zammad will always encrypt and sign an outgoing mail. Your agent has to disable it manually. 
+   This is if suitable certificates are found. (`Addressing issues`_ might help you to understand scopes better)
+
+In some situations you may not wish to encrypt or sign emails by default. 
+Instead Zammad allows you to choose the default behavior on a per group basis.
+
+   .. note:: Your agent can always enable signing or encrypting if technically possible.
+
+.. figure:: /images/system/smime/default-behaviour-on-per-group-basis.png
+   :alt: Zammad allowing to choose the default behaviour on per group basis
+   :align: center
 
 How to work with the S/MIME integration?
 ----------------------------------------
