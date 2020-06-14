@@ -33,6 +33,7 @@ Zammad - Documentation for administrators
    channels/form
    channels/email
    channels/chat
+   channels/google
    channels/twitter
    channels/facebook
    channels/telegram
