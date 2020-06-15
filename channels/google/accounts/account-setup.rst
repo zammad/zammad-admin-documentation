@@ -23,6 +23,14 @@ Preparation
 Before you can add an Google mail account, have a look at :doc:`configure-app`. 
 This has to be done once per Zammad instance.
 
+.. note:: If you're migrating the email channel to the Google channel, make sure that you have 
+   no email addresses left over!
+
+   .. figure:: /images/channels/google/email-addresses-without-channel.png
+      :alt: List of orphaned email addresses
+      :scale: 60%
+      :align: center
+
 Basic
 -----
 
