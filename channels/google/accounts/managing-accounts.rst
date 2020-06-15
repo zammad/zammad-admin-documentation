@@ -61,7 +61,8 @@ Delete
    .. note:: ⚠ **No Additional Steps Required**
 
       Unlike the Email channel, Zammad removes your configured email addresses 
-      together with your account if you delete it.
+      together with your account if you delete it. This is, because we can reliabely 
+      determine them as gmail addresses which you can't use on other servers at that moment.
 
       Groups need an assigned an address to send outgoing emails.
       If you delete a group’s assigned address, agents belonging to 
