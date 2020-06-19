@@ -55,7 +55,7 @@ Public certificate and private key are needed together for your sending channel.
 
 .. [#] Encryption of emails requires you to provide the recipients public certificate. You can only encrypt emails for *one recipient*.
 
-.. figure:: /images/system/smime/smime-configuration.png
+.. figure:: /images/system/integrations/smime/configuration.png
    :alt: S/MIME integration showing configured certificates and possible issues with Logging
    :align: center
 
@@ -86,7 +86,7 @@ by directly uploading the file itself.
       This means you'll only require the keys you (should) already have for the email accounts that you're 
       using with Zammad.
 
-.. figure:: /images/system/smime/adding-certificate-and-private-key.gif
+.. figure:: /images/system/integrations/smime/adding-certificate-and-private-key.gif
    :alt: Dialogue to add new certificates or private keys
    :align: center
 
@@ -105,7 +105,7 @@ Instead Zammad allows you to choose the default behavior on a per group basis.
 
    .. note:: Your agent can always enable signing or encrypting if technically possible.
 
-.. figure:: /images/system/smime/default-behaviour-on-per-group-basis.png
+.. figure:: /images/system/integrations/smime/default-behaviour-on-per-group-basis.png
    :alt: Zammad allowing to choose the default behaviour on per group basis
    :align: center
 
@@ -126,7 +126,7 @@ Checking for issues with the integration
 Zammad comes with a log that shows if there were issues with in- or outgoing emails. 
 This covers signing, signing verification, encryption and decryption.
 
-.. figure:: /images/system/smime/smime-log.gif
+.. figure:: /images/system/integrations/smime/log.gif
    :alt: Sample entries of in- and outgoing S/MIME related emails.
    :align: center
 
