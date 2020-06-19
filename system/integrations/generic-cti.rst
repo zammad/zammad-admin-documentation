@@ -37,8 +37,8 @@ What can it do for me?
 
 .. [1] requires PBX/telephone system support
 
-.. image:: /images/system/CTI-1.jpg
+.. image:: /images/system/integrations/generic-cti/1.jpg
 
-.. image:: /images/system/CTI-2.jpg
+.. image:: /images/system/integrations/generic-cti/2.jpg
 
 More information can be found on our `CTI API intro <https://docs.zammad.org/en/latest/cti-api-intro.html>`_.

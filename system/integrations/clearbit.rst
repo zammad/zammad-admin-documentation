@@ -30,7 +30,7 @@ Configuration
 
 The configuration of clearbit is really easy and done fast! Just login to your Clearbit-Account, go to "API" and copy the secret-API-Key.
 
-.. image:: /images/system/clearbit-api-key.jpg
+.. image:: /images/system/integrations/clearbit/api-key.jpg
 
 Now change to your Zammad instance, go to Integrations (System) -> Clearbit in the admin panel.
 Paste your API-Key into the API-Key-Field and decide if Zammad should create unknown Organizations automatically, if the user does not have one
@@ -38,7 +38,7 @@ yet (and Clearbit knows it). The shared option decides if the new organizations 
 
 .. note:: If you're unsure what option to choose, better stick with "no". You can also learn more about :doc:`/manage/organizations`.
 
-.. image:: /images/system/clearbit-configure-zammad.jpg
+.. image:: /images/system/integrations/clearbit/configure-zammad.jpg
 
 The Mapping option works similar to the mapping within the Exchange and LDAP sync. You can add further mappings for e.g. custom fields if you need
 more information that Clearbit can provide.
@@ -49,15 +49,15 @@ If you're happy with the above chosen Settings and your mapping, just save the c
 
 .. note:: Zammad does not synchronize with Clearbit on a regular basis, but on demand if needed. This saves API calls.
 
-.. image:: /images/system/clearbit-zammad-mapping.jpg
+.. image:: /images/system/integrations/clearbit/zammad-mapping.jpg
 
 Below the Settings and Mappings, you'll find our Integration log. You can see what requests Zammad sent to Clearbit and also the APIs Response.
 
-.. image:: /images/system/clearbit-zammad-log.jpg
+.. image:: /images/system/integrations/clearbit/zammad-log.jpg
 
 By the way, you can also view the API log on the Clearbit website - the information seen is basically the same.
 
-.. image:: /images/system/clearbit-api-log.jpg
+.. image:: /images/system/integrations/clearbit/api-log.jpg
 
 
 Example when adding a user
@@ -67,4 +67,4 @@ To show you how fast information is added, we added a small Screencast below.
 This shows the creation of the User Alex from Clearbit. As we already set the lastname of Alex to "X", Zammad did not update it. What Zammad did was
 to add further information it received from Clearbit. Really cool, right?
 
-.. image:: /images/system/clearbit-automatic-user-additions.gif
+.. image:: /images/system/integrations/clearbit/automatic-user-additions.gif

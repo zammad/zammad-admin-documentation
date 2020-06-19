@@ -12,7 +12,7 @@ To register an app in Gitlab open your profile and select applications.
 As callback URL enter "https://zammad_host/auth/gitlab/callback"
 where zammad_host has to be replaced with your Zammad FQDN
 
-.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty_gitlab.png
+.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_gitlab.png
    :alt: Register OAuth app on gitlab instance
 
 At the moment we need the "api" scope. This is caused due a bug
@@ -25,20 +25,20 @@ Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications Dashb
 
 .. note:: Please ensure to use ``https://{git_host}/api/v4/`` for site.
 
-.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty.jpg
+.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty.jpg
    :alt: Gitlab config in Zammad admin interface
 
 
 After you configured the Gitlab credentials and activated
 the login method, you should see a new icon on the login page.
 
-.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty_login.png
+.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_login.png
    :alt: Gitlab logo on login page
 
 If you click on the icon you will be redirected to Gitlab and see something
 similar to this:
 
-.. image:: /images/system/thirdparty/zammad_connect_gitlab_thirdparty_gitlab_authorize.png
+.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_gitlab_authorize.png
    :alt: Gitlab oauth page
 
 When you grant the access you will be redirected to your Zammad instance

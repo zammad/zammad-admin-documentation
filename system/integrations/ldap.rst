@@ -20,7 +20,7 @@ If needed, you can also change the user filter for your LDAP query. The option "
 (default sign-up role) to any LDAP user, that doesn't match to the above role mapping. After pressing Continue, Zammad will check if the configuration is okay.
 You can then enable LDAP and start your first sync. The sync will then run hourly - if you need to change mappings, you can change the configuration at any time.
 
-.. image:: /images/system/ldap-1.jpg
+.. image:: /images/system/integrations/ldap/1.jpg
 
 .. note:: You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active Directory accounts (the users will be set to inactive within Zammad).
    You can find further information for Active Directory Filters at the Website from Microsoft_.
@@ -29,4 +29,4 @@ You can then enable LDAP and start your first sync. The sync will then run hourl
 
 After the sync has finished, you can find the new LDAP users under "Users". Zammad integrates them just normal users, the difference is the login name.
 
-.. image:: /images/system/ldap-2.jpg
+.. image:: /images/system/integrations/ldap/2.jpg
