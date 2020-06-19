@@ -52,7 +52,7 @@ Do not set this option at all if using the "certificate" field above.
 
 Configured example:
 
-.. image:: /images/system/thirdparty/zammad_connect_saml_thirdparty.png
+.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty.png
    :alt: Zammad SAML Example
 
 

@@ -17,10 +17,10 @@ Technically you can map any Exchange object to a Zammad user object (this also w
 After pressing Continue, Zammad will check if the configuration is okay.  You can then enable LDAP and start your first sync.
 The sync will then run hourly - if you need to change mappings or the address book(s), you can change the configuration at any time.
 
-.. image:: /images/system/exchange-1.jpg
+.. image:: /images/system/integrations/exchange/1.jpg
 
 After the sync has finished, you can find the new Exchange contacts under "Users". Zammad integrates them just normal users.
 
 .. note:: In some cases you might see unique IDs as "Login" instead of the email address. This is normal and doesn't affect the login or email mapping for that entry.
 
-.. image:: /images/system/exchange-2.jpg
+.. image:: /images/system/integrations/exchange/2.jpg

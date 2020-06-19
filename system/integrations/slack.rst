@@ -34,9 +34,9 @@ If you're ready, copy the provided WebHook URL and go to your Zammad installatio
 
 .. hint:: You need administrative rights on the Slack Workspace. The link to the app directory is normally ``https://[workspace-name].slack.com/apps`` .
 
-.. image:: /images/system/slack-add-incoming-webhook.jpg
+.. image:: /images/system/integrations/slack/add-incoming-webhook.jpg
 
-.. image:: /images/system/slack-incmoing-webhook-configuration.jpg
+.. image:: /images/system/integrations/slack/incmoing-webhook-configuration.jpg
 
 To configure the slack integration, log in to Zammad and go to Integrations (System) => Slack in the admin panel.
 Here you can choose on what evens Zammad should post information about a ticket to your Slack channel.
@@ -49,7 +49,7 @@ Below the options you have the recent log that shows the latest requests to Slac
 
 .. note:: If you leave the icon URL empty, Zammad will use the Zammad logo instead. The icon should be a square PNG file.
 
-.. image:: /images/system/slack-configuration-in-zammad.jpg
+.. image:: /images/system/integrations/slack/configuration-in-zammad.jpg
 
 
 The result
@@ -58,14 +58,14 @@ The result
 The following figure shows how it will look if you choose to receive updates on created and updated tickets. On every post Zammad sends to the Slack channel, you can
 create new threads to discuss about the new article.
 
-.. image:: /images/system/slack-updates-on-created-and-updated-tickets.jpg
+.. image:: /images/system/integrations/slack/updates-on-created-and-updated-tickets.jpg
 
 If you just want to keep track of soon escalating or already escalated tickets, it will look the the following figure. Zammad changes the color in front of the post
 so you can easily see the state of the ticket.
 
-.. image:: /images/system/slack-escalating-soon-and-escalated.jpg
+.. image:: /images/system/integrations/slack/escalating-soon-and-escalated.jpg
 
 If you change the state, Zammad will also put information on what state the ticket gets and (if pending state) the date until it pends.
 You'll also recognize the color codes in front of posts on slack, as they are exact the same the ticket state colors you'll see in Zammad!
 
-.. image:: /images/system/slack-different-visualized-states.jpg
+.. image:: /images/system/integrations/slack/different-visualized-states.jpg

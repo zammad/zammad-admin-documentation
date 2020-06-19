@@ -6,7 +6,7 @@ This can be useful if you need to add further information to a ticket that you d
 
 .. note:: Try to avoid deleting objects (rather disable them) as Zammad might run into unexpected conditions if they where referenced somewhere.
 
-.. image:: /images/system/objects-1.jpg
+.. image:: /images/system/objects/1.jpg
 
 Here's an overview of the objects. On the upper right you can add new Attributes (no 1).
 By default, there will be no custom fields - standard objects (no 2) will be grayed out, you can't delete or change those.
@@ -75,7 +75,7 @@ You can use any variable that's available within Zammad! This gives your great o
 
 Learn more about :doc:`/system/variables`.
 
-.. figure:: /images/system/object_link-template.gif
+.. figure:: /images/system/objects/link-template.gif
    :align: center
 
    The above screencast shows how the link template will perform after object creation.
@@ -95,7 +95,7 @@ When ever needed you can restrict access to objects for permission roles (agents
 
 .. hint:: You can't change these settings for pre defined objects (as you can't edit them via UI). Please note that this currently works as designed.
 
-.. figure:: /images/system/objects-2.jpg
+.. figure:: /images/system/objects/2.jpg
    :align: center
 
    This is the object edit screen, it looks very similar to the creation screen and holds all object specific information.
@@ -113,7 +113,7 @@ When adding or changing objects, Zammad will not apply the changes isntantly, bu
 If you're ready to go, just click on "Update database" to apply the changes to Zammad.
 If you made a mistake or just want to discard your changes, click "Discard changes".
 
-.. figure:: /images/system/object-update-database.jpg
+.. figure:: /images/system/objects/update-database.jpg
    :align: center
 
    Changes on objects require you to update the database to apply these changes.

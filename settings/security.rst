@@ -87,4 +87,4 @@ This means that the user has to manually link authentication providers to their 
 
 Sometimes, this doesn't come in handy, as this also means if you're trying to authenticate against a (yet) unknown third party authentication, Zammad will throw an error telling you, that the email address is already in use. If you want to ensure that no matter if your user links his account or not, you might want to enable "Automatic account link on initial logon"
 
-.. image:: /images/system/thirdparty/automatic-account-link.png
+.. image:: /images/settings/security/automatic-account-link.png

@@ -18,5 +18,5 @@ Zammad has issue (whatever nature, refer to image 2 for interface example)::
 
    {"healthy":false,"message":"Channel: Twitter::Account in key:{\"id\"=\XXXXXXXXXXXXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somewhat name\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e","issues":["Channel: Twitter::Account in key:{\"id\"=\XXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somename\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e"],"actions":[],"token":"OgitXXXXXXXXXXXXXXXXXXXXXXNxo4ptCoQ"}
 
-.. image:: /images/system/monitoring-1.jpg
-.. image:: /images/system/monitoring-2.jpg
+.. image:: /images/system/monitoring/1.jpg
+.. image:: /images/system/monitoring/2.jpg
