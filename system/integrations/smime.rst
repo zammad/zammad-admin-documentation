@@ -173,3 +173,7 @@ The ✅ **Sign** button is disabled
 
 Error: “Fingerprint already taken”
    * Are you sure you haven’t added this certificate already?
+
+Error: “❌ invalid byte sequence in UTF-8”
+   * Please ensure to provide PEM formatted certificate and keys.
+   * Did you check if the provided file is a valid certificate or key?
