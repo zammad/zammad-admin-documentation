@@ -49,8 +49,16 @@ Accounts
       :scale: 60%
       :align: center
 
-.. note:: 🤔 **Huh?! No notification channel for Google??**
+Email Notification
+   This option is **not available on Google channels**.
 
-   Zammad currently doesn't provide a notification channel for gmail accounts, we suggest using the 
-   :doc:`regular email channel </channels/email/accounts/email-notification>` for notification channels. 
-   This also reduces the risk to hit `Google's sending limits <https://support.google.com/a/answer/166852?hl=en>`_.
+   To configure the outgoing mail provider for system notifications,
+   use a :doc:`regular email channel </channels/email/accounts>`.
+   (Self-hosted installations only.)
+
+   .. note:: 🤔 **Why?**
+
+      Using a Gmail account for automated, outgoing messages is risky:
+      users who exceed Google’s `email sending limits
+      <https://support.google.com/a/answer/166852>`_
+      can have their accounts suspended.
