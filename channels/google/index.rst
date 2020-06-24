@@ -4,10 +4,10 @@ Google
 .. toctree::
    :hidden:
 
-   google/accounts
-   email/filters
-   email/signatures
-   email/settings
+   accounts
+   /channels/email/filters
+   /channels/email/signatures
+   /channels/email/settings
 
 Control how Zammad **sends and receives email**.
 
@@ -15,18 +15,18 @@ Control how Zammad **sends and receives email**.
    :alt: Email settings panel
    :align: center
 
-:doc:`👥 Accounts <google/accounts>`
+:doc:`👥 Accounts <accounts>`
    **Connect Zammad to your google account**
    so that it can watch your inbox, send auto-replies, and more.
 
-:doc:`🗂️ Filters <email/filters>`
+:doc:`🗂️ Filters </channels/email/filters>`
    **Make sure new tickets show up in the right place**
    with automated, if-this-then-that rules for all incoming email.
 
-:doc:`📜  Signatures <email/signatures>`
+:doc:`📜  Signatures </channels/email/signatures>`
    Customize signatures for all outgoing email.
 
-:doc:`⚙️  Settings <email/settings>`
+:doc:`⚙️  Settings </channels/email/settings>`
    Manage options like: 
 
    * set the “From:” address on auto-replies

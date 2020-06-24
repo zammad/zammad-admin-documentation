@@ -31,9 +31,9 @@ Zammad - Documentation for administrators
 
    channels/web
    channels/form
-   channels/email
+   channels/email/index
    channels/chat
-   channels/google
+   channels/google/index
    channels/twitter
    channels/facebook
    channels/telegram
