@@ -11,6 +11,9 @@ Email
 
 Control how Zammad **sends and receives email**.
 
+.. hint:: **Using Gmail / G Suite?**
+   Set up a :doc:`Google channel </channels/google/index>` instead.
+
 .. figure:: /images/channels/email/panel.png
    :alt: Email settings panel
    :align: center
