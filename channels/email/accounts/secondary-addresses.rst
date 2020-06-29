@@ -11,10 +11,7 @@ with a different “From:” address from the one on the account.
    Once you add a secondary address,
    you can configure a group to start sending emails with it.
 
-.. warning:: 🙅 **Do not abuse this feature.**
-
-   If you use secondary addresses to impersonate other parties,
-   your IP is liable to get added to a spam blacklist.
+.. include:: secondary-addresses.warning.rst
 
 Your email provider may also be set up to *receive incoming messages*
 for many addresses in the same mailbox.
