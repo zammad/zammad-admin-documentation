@@ -4,10 +4,20 @@ Accounts
 .. toctree::
    :hidden:
 
-   accounts/configure-app
+   accounts/register-app
    accounts/account-setup
    accounts/secondary-addresses
    accounts/managing-accounts
+
+:doc:`accounts/register-app`
+   Use the **Connect Google App** dialog to register Zammad as an OAuth app on Google.
+
+   (This step is **required**; read on to learn why.)
+
+   .. figure:: /images/channels/google/accounts/register-app/05-add-oauth-credentials.gif
+      :alt: Registering Zammad as a Google OAuth app
+      :scale: 60%
+      :align: center
 
 :doc:`accounts/account-setup`
    Use the **Add Account** dialog to connect your account.

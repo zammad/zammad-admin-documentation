@@ -1,7 +1,7 @@
 Account Setup
 =============
 
-After you’ve :doc:`registered Zammad as an OAuth app <configure-app>`
+After you’ve :doc:`registered Zammad as an OAuth app <register-app>`
 in your Google Developer settings,
 you can begin connecting Gmail accounts to Zammad.
 
