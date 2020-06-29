@@ -26,7 +26,7 @@ Mail Server Settings
    Click **Edit** on inbound/outbound account details
    to change your server configuration.
 
-   See :ref:`New Account Settings <gmail-experts-folder>`
+   See :ref:`New Account Settings <google-folder>`
    for a detailed description of each option.
 
    .. figure:: /images/channels/google/updating-gmail-account.png
