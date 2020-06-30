@@ -48,7 +48,7 @@ Email Notification
    This option is **not available on Google channels**.
 
    To configure the outgoing mail provider for system notifications,
-   use a :doc:`regular email channel </channels/email/accounts>`.
+   use a :doc:`regular email notification channel </channels/email/accounts>`.
    (Self-hosted installations only.)
 
    .. note:: 🤔 **Why?**
