@@ -34,7 +34,6 @@ Integrations for Monitoring Systems
 
 .. note:: This section currently misses the following integrations:
 
-   * Check_MK
    * Icinga
    * Monit
    * Nagios
@@ -43,6 +42,7 @@ Integrations for Monitoring Systems
    :maxdepth: 1
    :titlesonly:
 
+   integrations/check_mk
    integrations/zabbix
 
 Other Integrations
