@@ -1,6 +1,6 @@
-Fetch behavior
-   Click **Edit** on inbound account details to change the default folder or 
-   possibility to keep messages on server.
+Fetch Preferences
+   Click **Edit** on inbound account details
+   to change how messages are retrieved from your account.
 
    See :ref:`New Account Settings <google-folder>`
    for a detailed description of each option.
