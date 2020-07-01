@@ -7,6 +7,8 @@ Once an account has been added, use the Accounts panel to edit its configuration
    :alt: Existing accounts can be edited from the Accounts panel.
    :align: center
 
+.. include:: managing-accounts.inbound-outbound.rst
+
 Destination Group
    Click on the group name to reassign the account.
 
@@ -21,20 +23,6 @@ Destination Group
 
    .. hint:: 📮 **Still can’t send outgoing email tickets?**
       Check your :doc:`group settings </manage/groups>`.
-
-Mail Server Settings
-   Click **Edit** on inbound/outbound account details
-   to change your server configuration.
-
-   See :ref:`New Account Settings <email-new-account-experts>`
-   for a detailed description of each option.
-
-   .. figure:: /images/channels/email/updating-email-account.png
-      :alt: Location of account details settings for existing accounts
-      :scale: 60%
-      :align: center
-
-   .. note:: ⌨️ In some browsers, you may have to manually re-enter your password.
 
 Email Address
    Use the **+ Add** or **Edit** buttons
@@ -58,20 +46,4 @@ Enabled / Disabled
 Delete
    Deleting an account removes its configuration from Zammad entirely.
 
-   .. note:: 🧹 **Additional Steps Required**
-
-      When an email account is deleted,
-      its :doc:`email aliases <secondary-addresses>` **remain in the system**. 
-      Be sure to reassign or delete them manually.
-
-      .. figure:: /images/channels/email/email-addresses-without-channel.png
-         :alt: List of orphaned email addresses
-         :scale: 60%
-         :align: center
-
-         Click on the address to assign it to another account, or click ✖ to delete it.
-
-      Groups need an assigned an address to send outgoing emails.
-      If you delete a group’s assigned address,
-      agents belonging to that group won’t be able to send emails
-      until you assign it a new one.
+   .. include:: managing-accounts.delete-note.rst

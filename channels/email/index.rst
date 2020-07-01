@@ -4,32 +4,35 @@ Email
 .. toctree::
    :hidden:
 
-   email/accounts
-   email/filters
-   email/signatures
-   email/settings
+   accounts
+   filters
+   signatures
+   settings
 
 Control how Zammad **sends and receives email**.
+
+.. hint:: **Using Gmail / G Suite?**
+   Set up a :doc:`Google channel </channels/google/index>` instead.
 
 .. figure:: /images/channels/email/panel.png
    :alt: Email settings panel
    :align: center
 
-:doc:`👥 Accounts <email/accounts>`
+:doc:`👥 Accounts <accounts>`
    **Connect Zammad to your email provider**
    so that it can watch your inbox, send auto-replies, and more.
 
    (Self-hosted users may have already completed this step
    during new system setup.)
 
-:doc:`🗂️ Filters <email/filters>`
+:doc:`🗂️ Filters <filters>`
    **Make sure new tickets show up in the right place**
    with automated, if-this-then-that rules for all incoming email.
 
-:doc:`📜  Signatures <email/signatures>`
+:doc:`📜  Signatures <signatures>`
    Customize signatures for all outgoing email.
 
-:doc:`⚙️  Settings <email/settings>`
+:doc:`⚙️  Settings <settings>`
    Manage options like: 
 
    * set the “From:” address on auto-replies
@@ -49,5 +52,5 @@ If you’re too cool for POP3/IMAP/SMTP...
 .. toctree::
    :maxdepth: 1
 
-   email/advanced/fetchmail
-   email/advanced/sendmail
+   advanced/fetchmail
+   advanced/sendmail
