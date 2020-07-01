@@ -7,6 +7,8 @@ Once an account has been added, use the Accounts panel to edit its configuration
    :alt: Existing accounts can be edited from the Accounts panel.
    :align: center
 
+.. include:: managing-accounts.inbound-outbound.rst
+
 Destination Group
    Click on the group name to reassign the account.
 
@@ -21,8 +23,6 @@ Destination Group
 
    .. hint:: 📮 **Still can’t send outgoing email tickets?**
       Check your :doc:`group settings </manage/groups>`.
-
-.. include:: managing-accounts.edit-account.rst
 
 Email Address
    Use the **+ Add** or **Edit** buttons
