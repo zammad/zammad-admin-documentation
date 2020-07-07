@@ -76,7 +76,7 @@ Goto -> Keycloak Admin -> Clients -> ``https://zammadFQDN/auth/saml/metadata`` -
 .. code-block:: html
 
    Name: ZammadEmail
-   Mapper Type: User Attribute
+   Mapper Type: User Property
    User Attribute: emailAddress
    SAML Attribute Name: email
    SAML Attribute NameFormat: Basic
@@ -99,6 +99,9 @@ Zammad is using POST Bindings for the Assertion Consumer Service (ACS)
 Zammad requests these attributes from the SAML IdP, these are not configurable. Each attribute should map to the correct SAML attribute via "Mappers" as needed, or equivalent mapping paradigm in other IdP systems.
 The specific attributes to map vary widely between SAML IdP systems, this requested attribute list can help align the SAML provided attributes with what Zammad expects to see.
 
+   .. warn:: Please note that attribute may mean property in some cases! Mappings with user properties should be 
+      what you're aiming for.
+
 .. code-block:: html
 
    RequestedAttribute FriendlyName="Email address" Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="false"
@@ -108,3 +111,7 @@ The specific attributes to map vary widely between SAML IdP systems, this reques
 
 
 Now, you should be able to link accounts in the Profile Panel under *Linked Accounts*, or log in via the Zammad login page. Alternately, you can enable :ref:`automatic account linking <automatic_account_linking>` for existing user accounts.
+
+.. hint:: **Having issues with automatic account linking?**
+   
+   Changes are high that user attribute or user property mapping isn't configured like it should be. 
