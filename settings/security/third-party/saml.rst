@@ -34,6 +34,10 @@ Define the fields per your upstream IdP documentation, some known working Keyclo
    - The above certificate is just an example, you should use a proper certificate from your IdP!
    - Note that this is generally NOT the same cert used by TLS in the HTTPS connection to the IdP.
 
+.. hint:: **ADFS users**
+   
+   Above certificate refers to the to the signing certificate.
+
 
 - In Keycloak, this certificate can be found by going to:
 - Keycloak Admin: Realm settings -> keys -> RSA -> "certifcate" popup
