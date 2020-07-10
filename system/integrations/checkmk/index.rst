@@ -7,6 +7,7 @@ Checkmk
    /system/integrations/checkmk/learn-by-example
    /system/integrations/checkmk/receive-monitoring-emails
    /system/integrations/checkmk/receive-monitoring-http-calls
+   /system/integrations/checkmk/valid-ticket-attributes
 
 Checkmk is a powerful monitoring solution that can either send emails or http requests to Zammad. 
 This integration allows you to recognize Checkmk tickets and thus automatically close tickets 
@@ -32,6 +33,7 @@ if a system self-heals or gets fixed automatically.
    /system/integrations/checkmk/learn-by-example
    /system/integrations/checkmk/receive-monitoring-emails
    /system/integrations/checkmk/receive-monitoring-http-calls
+   /system/integrations/checkmk/valid-ticket-attributes
 
 Settings
 --------
