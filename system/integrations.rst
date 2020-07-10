@@ -42,7 +42,7 @@ Integrations for Monitoring Systems
    :maxdepth: 1
    :titlesonly:
 
-   integrations/check_mk
+   integrations/checkmk/index
    integrations/zabbix
 
 Other Integrations

@@ -1,8 +1,8 @@
-Check_MK
+Checkmk
 ========
 
 Check_MK is a powerful monitoring solution that can either send emails or http requests to Zammad. 
-This integration allows you to recognize check_mk tickets and thus automatically close tickets 
+This integration allows you to recognize Checkmk tickets and thus automatically close tickets 
 if a system self-heals or gets fixed automatically.
 
 .. warning:: 🐞 **Bugs ahead**
@@ -13,8 +13,8 @@ if a system self-heals or gets fixed automatically.
 .. _Issue2377: https://github.com/zammad/zammad/issues/2377
 .. _Issue2180: https://github.com/zammad/zammad/issues/2180
 
-.. figure:: /images/system/integrations/check_mk/settings.png
-   :alt: Screenshot of Check_MK settings within the integrations page
+.. figure:: /images/system/integrations/checkmk/settings.png
+   :alt: Screenshot of Checkmk settings within the integrations page
    :align: center
    :width: 70%
 
@@ -22,7 +22,7 @@ Settings
 --------
 
 Group
-   Define a group in which check_mk tickets should be created.
+   Define a group in which Checkmk tickets should be created.
 
    .. hint:: This option only affects created monitoring tickets via http calls.
 
@@ -62,7 +62,7 @@ they can be executed.
 
          .. hint:: Our sample scripts do not require further parameters upon calling. 🤓
 
-         .. figure:: /images/system/integrations/check_mk/adding-new-notification-rules.png
+         .. figure:: /images/system/integrations/checkmk/adding-new-notification-rules.png
             :alt: Checkmk setting page for configuration of new notification rules
             :align: center
 
@@ -133,6 +133,6 @@ If you can't create new tickets or can't check Zammads responses in your tool, t
 
 The log entries contain the returned status, request and response and will help you to figure out the issue. 🙌
 
-.. figure:: /images/system/integrations/check_mk/recent-log-overview.png
+.. figure:: /images/system/integrations/checkmk/recent-log-overview.png
    :alt: Example of successful communication between a Checkmk and Zammad instance
    :align: center
