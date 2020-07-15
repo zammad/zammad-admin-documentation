@@ -50,12 +50,9 @@ Other Integrations
 
 This section will hold any other integration that can't be grouped up (yet).
 
-.. note:: This section currently misses the following integrations:
-
-   * i-doit
-
 .. toctree::
    :maxdepth: 1
    :titlesonly:
 
    integrations/slack
+   integrations/i-doit
