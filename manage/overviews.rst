@@ -8,11 +8,11 @@ In the Overview Management Area you can add new overviews, edit or delete them.
 
 .. warning:: Please note that Overviews can cause performance issues leading to no longer or less often refreshing overviews!
 
-   When ever possible, try to use the same overviews for as many agents and groups as possible to keep the number of overviews low.
-   For best results, you might want to use between 15-20 overviews maximum.
+   Whenever possible, try to use the same overviews for as many agents and groups as possible to keep the number of overviews 
+   low. For best results, you might want to use between 15-20 overviews maximum. Also, any overview will only show a total of 
+   2100 elements.
 
 .. note:: Overviews will only show tickets to your users, that the user have rights on (group or role based).
-
 
 The following attributes can be set when creating an overview:
 
@@ -21,9 +21,8 @@ The following attributes can be set when creating an overview:
    .. image:: /images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
    .. hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :doc:`roles`.
-
+   
    With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
-
 
 :Only available for users with shared organization:
 
@@ -35,7 +34,6 @@ The following attributes can be set when creating an overview:
 
    .. note:: Users also refers to the customer role in this case.
 
-
 :Available for users which are replacements for other users:
 
    .. image:: /images/manage/Zammad_Helpdesk_-_Overviews3.jpg
@@ -46,13 +44,11 @@ The following attributes can be set when creating an overview:
 
    .. note:: Replacement users are part of our `Out of Office function <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_.
 
-
 :Conditions for shown tickets:
 
    .. image:: /images/manage/Zammad_Helpdesk_-_Overviews4.jpg
 
    What conditions should the listed tickets contain? (it is like a filter) You can add more than one condition. In the preview you have the possibility to double check if your entry of the conditions makes sense by directly displaying tickets that match your filtering.
-
 
 :ATTRIBUTES:
 
@@ -67,7 +63,6 @@ The following attributes can be set when creating an overview:
    These settings can also be adjusted individually by admins at a later time (In the overview, top right: Options).
 
    .. note:: Please note that overview column and sort settings are global settings which affect all users seeing those overviews.
-
 
 :Ordering, grouping and active:
 
