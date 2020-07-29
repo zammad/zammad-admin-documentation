@@ -12,8 +12,8 @@ you’ll have to customize the data those scripts send to Zammad.
 Example
 -------
 
-The following script will automatically set all tickets it creates to high priority
-and assign them to charlie@chrispresso.com.
+This custom script will automatically set all tickets it creates to **high priority**
+and **assign them to charlie@chrispresso.com**.
 
 .. code-block:: bash
 
@@ -31,20 +31,25 @@ and assign them to charlie@chrispresso.com.
 How does it work?
 -----------------
 
-There are two kinds of data you can pass to the API:
+There are two kinds of data you can pass to the API,
+both in the form of key-value pairs:
 
 Checkmk parameters
    are required, and make up the **contents** of the resulting tickets/articles.
    They also determine whether an event creates a new ticket
    or updates/closes an existing one.
+
+   These are the only values used in the sample scripts.
+   **Use them as-is**; technically, they can be customized,
+   but it’s hard to imagine a good reason for it.
+
 Ticket attributes
    are optional, and can be used to **adjust settings** on newly created tickets
    (*e.g.,* set the owner, group, priority, or state).
 
-These parameters/attributes are passed in the form of key-value pairs.
-To include them in your API request,
-simply add an extra “form” option for each one (``-F "key=value"``)
-to your script’s ``curl`` command line, as in the example above.
+   If you want to customize your Checkmk alert script, do it with these.
+   Simply add an extra “form” option for each one (``-F "key=value"``)
+   to your script’s ``curl`` command line, as in the example above.
 
 .. hint:: 💡 **It's just an API endpoint!**
 
@@ -66,8 +71,6 @@ containing the details of the event that triggered it:
 
 These details come from the fields listed below,
 which correspond to parameters provided by Checkmk (``$NOTIFY_*``).
-Technically, they can be replaced with whatever you want,
-but it’s not recommended.
 
 **Required fields are marked with an asterisk (\*).**
 
@@ -86,6 +89,8 @@ service
    Used to determine if a new event belongs to an existing ticket.
 
    Displayed as ``-`` when omitted.
+
+   .. _checkmk-parameter-state:
 
 state\*
    The current state of the service or host in question. (``$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)
@@ -108,10 +113,10 @@ Ticket Attributes
 
    Find a complete list of ticket attributes in the Object Manager.
 
-Pass ticket attributes to change the settings of the ticket
-that will be created for this event.
+Ticket attributes are entirely optional,
+and can be used to customize the tickets that Checkmk creates.
 (Note that these attributes will be ignored
-if the event belongs to an existing ticket.)
+if a new event belongs to an existing ticket.)
 
 Why would you want to do this?
 Maybe you have only one IT guy,
@@ -142,19 +147,15 @@ including :doc:`custom ones you created through the Object Manager </system/obje
 How do I know what values I can set?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-group / state / priority
-   .. figure:: /images/system/integrations/checkmk/ticket-attribute-names.png
-      :alt: See possible values for certain attributes in the ticket pane.
-      :scale: 50%
-      :align: center
+.. warning:: 😵 **Invalid values → unpredictable behavior**
 
-   Refer to the dropdown menus in the ticket pane:
+   If you provide a value that Zammad doesn’t understand
+   (*e.g.,* ``-F "priority=high"``), it’s not always clear what will happen.
+   In some cases, a ticket will be created with the default values instead—but
+   in others, it may not be created at all!
 
-   .. code:: bash
-
-      -F "group=Users"
-      -F "state=closed"
-      -F "priority=3 high"
+So what values does Zammad understand, then?
+Well, it depends...
 
 owner
    Use an email address or username:
@@ -163,11 +164,53 @@ owner
 
       -F "owner=it@chrispresso.com"
 
-For other attributes, you may need to play around
-in the `Rails console <https://docs.zammad.org/en/latest/admin/console.html>`_
-to find out what kinds of values they accept.
+group & priority
+   Refer to the dropdown menus in the ticket pane:
 
-.. warning:: 😵 **Invalid values → unpredictable behavior**
+   .. code:: bash
 
-   In some cases, a ticket will be created with the default values instead—but
-   in others, it may not be created at all!
+      -F "group=Users"
+      -F "priority=3 high"
+
+   .. figure:: /images/system/integrations/checkmk/ticket-attribute-names.png
+      :alt: See possible values for certain attributes in the ticket pane.
+      :scale: 50%
+      :align: center
+
+   .. note:: 🙅 **Ticket state CANNOT be set this way!**
+
+      Why? Because ``-F "state=..."`` is already used
+      :ref:`as a Checkmk parameter <checkmk-parameter-state>`.
+
+Everything Else
+   To set any other attributes, it helps to know your way around the
+   `Rails console <https://docs.zammad.org/en/latest/admin/console.html>`_.
+   Valid values are those that you can set with a string:
+
+   .. code:: ruby
+
+      # valid
+      >> Ticket.first.update(note: "You're gonna need a bigger boat")
+      => true
+      >> Ticket.first.note
+      => "You're gonna need a bigger boat"
+
+      >> Ticket::State.find_by(name: "open").id
+      => 2
+      >> Ticket.first.update(state_id: 2)
+      => true
+      >> Ticket.first.state.name
+      => "open"
+
+      # invalid
+      >> Ticket.first.update(preferences: "I'm a Checkmk ticket!")
+      => true
+      >> Ticket.first.preferences
+      => {}
+
+   These values can then be passed directly to the API:
+
+   .. code:: bash
+
+      -F "note=You're gonna need a bigger boat"
+      -F "state_id=2"
