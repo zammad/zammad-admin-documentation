@@ -15,7 +15,10 @@ you might start wishing there was a way they could talk to each other.
 Zammad gives you two:
 
 1. Add i-doit Links to Zammad Tickets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
+
+What users see
+^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/ticket-pane-demo.gif
    :alt: i-doit integration in Zammad’s ticket pane
@@ -28,6 +31,9 @@ where you can add links to existing i-doit devices
 for easy reference.
 (See our `user documentation <https://user-docs.zammad.org/en/latest/extras/i-doit-assets-on-tickets.html>`_
 to learn how it works in practice).
+
+How to set it up
+^^^^^^^^^^^^^^^^
 
 .. note:: 🧩 **Requires i-doit’s**
    `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_.
@@ -64,7 +70,10 @@ Client ID
    (Zammad does not require you to enter a value here, but i-doit might!)
 
 2. List / Create Zammad Tickets in i-doit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
+
+What users see
+^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/i-doit-demo.gif
    :alt: Zammad integration in i-doit’s device view
@@ -74,6 +83,9 @@ i-doit’s ticket system integration gives you a way to see
 all the tickets for a given device without ever leaving i-doit.
 (See our `user documentation <https://user-docs.zammad.org/en/latest/extras/i-doit-assets-on-tickets.html>`_
 to learn how it works in practice).
+
+How to set it up
+^^^^^^^^^^^^^^^^
 
 Enable this integration in the i-doit admin panel
 under **Interfaces / external data > Trouble Ticket System (TTS) > Configuration**:
