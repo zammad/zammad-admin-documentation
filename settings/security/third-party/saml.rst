@@ -110,7 +110,7 @@ Enable SAML and enter your IdP’s details in the Admin Panel under
    <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
 
    **Keycloak users:** Find your certificate in the Keycloak admin panel under
-   **Clients > https://your.zammad.domain/auth/saml/metadata > SAML Keys**.
+   **Realm Settings > Keys > RSA > Certificate**.
 
 See :ref:`automatic account linking <automatic_account_linking>` for details on how to link existing Zammad accounts to IdP accounts.
 
