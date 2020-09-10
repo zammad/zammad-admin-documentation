@@ -61,6 +61,7 @@ Zammad - Documentation for administrators
    system/objects
    system/variables
    system/translations
+   system/data-privacy
    system/maintenance
    system/monitoring
    system/packages
