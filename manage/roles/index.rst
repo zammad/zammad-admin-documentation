@@ -4,6 +4,7 @@ Roles
 .. toctree::
    :hidden:
 
+   admin-permissions
    group-permissions
    user-preference-permissions
 
@@ -21,7 +22,13 @@ Parts of a roles
 Depending on your use cases, the default roles may be sufficient. 
 
 :doc:`🛡️ admin permissions <admin-permissions>`
-   X
+   These permissions affect all administrative settings available for Zammads UI. 
+   Granular settings for key users are possible to reduce work loads on admins.
+
+      .. figure:: /images/manage/roles/admin-settings.png
+         :alt: Screenshot showing admin settings within Zammad.
+         :align: center
+         :width: 80%
 
 :doc:`🕵️ agent permissions <agent-permissions>`
    X
@@ -50,16 +57,6 @@ Depending on your use cases, the default roles may be sufficient.
 
 
 The assignment of rights directly via a group should be avoided when roles are used.
-
-Admin
------
-
-An admin role usually has access to the the admin interface, but you can either give someone full access to the admin area (Admin - Admin Interface = yes) or you can distribute access to some areas only.
-For example, you could choose someone as a "Text-Module-Coordinator" who is a normal agent, but coordinates all changes in this area. In this way the admin can be relieved.
-
-You can give access to the following sections:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Roles_admin.jpg
 
 Agent
 -----
