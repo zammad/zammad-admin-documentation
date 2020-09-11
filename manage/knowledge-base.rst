@@ -16,7 +16,7 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
    `Zammad Agent docs <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_.
 
    By default, only admin users are permitted to create, edit, and manage knowledge base articles.
-   See :doc:`roles` for details on how to grant write access to agents or other users.
+   See :doc:`roles/index` for details on how to grant write access to agents or other users.
 
 .. note:: The knowledge base will not appear in the main menu until it has been
    enabled in the admin panel.

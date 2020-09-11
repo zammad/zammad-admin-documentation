@@ -54,7 +54,7 @@ The group's permissions for agents can be set up as follows:
 
 or
 
-2. With the permission setting via a role (Admin → Manage → Role), please see: :doc:`roles`
+2. With the permission setting via a role (Admin → Manage → Role), please see: :doc:`roles/index`
 
 It is recommended to avoid using both configurations.
 

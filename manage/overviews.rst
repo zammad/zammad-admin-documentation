@@ -20,7 +20,8 @@ The following attributes can be set when creating an overview:
 
    .. image:: /images/manage/Zammad_Helpdesk_-_Overviews.jpg
 
-   .. hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about :doc:`roles`.
+   .. hint:: Roles are assigned to users, per default there are agents, admins and customers. Further information about 
+      :doc:`roles/index`.
    
    With these settings you can choose whether to make the overviews available to an entire group of people (by selecting the role) or to specific users. The entries in both fields apply. This means that you can also select individual users in addition to sharing the overview for all role members.
 
