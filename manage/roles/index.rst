@@ -5,6 +5,7 @@ Roles
    :hidden:
 
    admin-permissions
+   agent-permissions
    group-permissions
    user-preference-permissions
 
@@ -31,10 +32,16 @@ Depending on your use cases, the default roles may be sufficient.
          :width: 80%
 
 :doc:`🕵️ agent permissions <agent-permissions>`
-   X
+   Agent permissions cover all areas that affect communication with customers. 
+   Agents are the backbone of your customer support, even though every agent may have different fields to work on.
 
    :doc:`👪 group permissions <group-permissions>` depend on the agent permission. 
    You may not require them if you prefer to configure group permissions per :doc:`user </manage/users/index>`.
+
+   .. figure:: /images/manage/roles/agents-paradise.png
+      :alt: Screenshot showing the most relevant areas for agents: tickets, overviews, chat, knowledge base and caller log.
+      :align: center
+      :width: 80%
 
 👤 customer permission
    The permission ``ticket.customer`` allows your customers to see their tickets when logged in to Zammad. 
@@ -54,21 +61,6 @@ Depending on your use cases, the default roles may be sufficient.
          :alt: Screenshot showing the profile settings.
          :align: center
          :width: 80%
-
-
-The assignment of rights directly via a group should be avoided when roles are used.
-
-Agent
------
-
-You can selectively give agents access to communication and reporting functions:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Roles3.jpg
-
-In addition, access rights can be given to the individual groups:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Roles-2.jpg
-
 
 Default at signup
 -----------------
