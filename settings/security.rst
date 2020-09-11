@@ -50,6 +50,7 @@ Digit required
 This enforces your users to at least use one digit with his password.
 The default value is `yes`.
 
+.. _third_party_logins:
 
 Third-Party Applications
 ------------------------

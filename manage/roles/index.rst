@@ -5,6 +5,7 @@ Roles
    :hidden:
 
    group-permissions
+   user-preference-permissions
 
 Roles are a great way to provide the exact same permissions to several users. 
 Roles work best with automated user synchronisation like :doc:`/system/integrations/ldap`.
@@ -39,8 +40,13 @@ Depending on your use cases, the default roles may be sufficient.
       This enables access to tickets the agent is customer of. 
       The ticket view for these tickets behaves the same way like it does for your customers. 🙌
 
-:doc:`🛠 user permissions <user-permissions>`
-   X
+:doc:`🛠 user preference permissions <user-preference-permissions>`
+   These permissions refer to `Profile Settings <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_.
+
+      .. figure:: /images/manage/roles/users-profile-settings.png
+         :alt: Screenshot showing the profile settings.
+         :align: center
+         :width: 80%
 
 
 The assignment of rights directly via a group should be avoided when roles are used.
@@ -65,29 +71,6 @@ You can selectively give agents access to communication and reporting functions:
 In addition, access rights can be given to the individual groups:
 
 .. image:: /images/manage/Zammad_Helpdesk_-_Roles-2.jpg
-
-PERMISSIONS
-
-
-Customer
---------
-
-Access to customer tickets based on current_user and organization
---> This checkbox gives the user access to his or her own tickets created in the ticket system. If the customer is a member of a "Shared Organization", he can also see the tickets of the shared organization.
-
-
-User preferences
-----------------
-
-For each of both, agents and customers, you can define which areas are available in the user preferences:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Roles5.jpg
-
-These settings refer to the personal settings that can be set here:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Roles8.jpg
-
-.. hint:: If agents are not allowed to change their own passwords, you don't have to check "Password". In this case, only the admin can assign and change a password.
 
 
 Default at signup
