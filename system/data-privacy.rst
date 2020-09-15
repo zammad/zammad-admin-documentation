@@ -1,7 +1,7 @@
 Data Privacy
 ************
 
-Zammad allows you to delete any user and it's belonging customer tickets. 
+Zammad allows you to delete any user and its associated customer tickets. 
 This is an easy and great addition to our `console way <https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers>`_.
 
 .. figure:: /images/system/data-privacy/creating-a-new-deletion-task.png
@@ -16,8 +16,6 @@ This is an easy and great addition to our `console way <https://docs.zammad.org/
 Limitations
 -----------
 
-Below you can find a list of technical and logical limitations of this functionality.
-
    * You can't delete your own account
    * You can't remove the last administrator of your Zammad installation
    * You can remove organizations together with the last organization member
@@ -31,18 +29,15 @@ Below you can find a list of technical and logical limitations of this functiona
 Deleting a user
 ---------------
 
-There are two ways how you can initiate a deletion task.
-
-**1. via user management or user details**
-   When having a look at user details, you can choose to "Delete" a user via the "Action" menu. 
-   If have ``admin.user`` permissions you can use the three dots on the right of a user to 
-   initiate a deletion.
-
+**Method 1: via user management or user details**
+   From a user’s profile: click Action > Delete. 
+   In the Admin Panel: use the ⋮ menu under Manage > Users.
+   
    .. figure:: /images/system/data-privacy/create-user-deletion-task-via-context-menus.gif
       :alt: Screencast showing how to initiate a deletion task via Zammads context menus.
       :align: center
 
-**2. via Data Privacy option directly**
+**Method 2: via Data Privacy option directly**
    If you want to skip other menus, you can also create a deletion task directly within "Data Privacy". 
    The user can be found via it's name or email address.
 
