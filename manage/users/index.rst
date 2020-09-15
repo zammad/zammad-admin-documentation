@@ -1,102 +1,125 @@
 Users
 *****
 
-This is the user-management-area. All users who have access to Zammad can be edited here.
+The user management allows you to add new users or edit existing ones. 
+If needed you can also restrict the users listed by role or searching.
 
-There is an overview about all registered users in the system. That includes agents, admins and customer:
+.. figure:: /images/manage/users/user-management.png
+    :alt: Screenshot showing the user management of Zammad
+    :align: center
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-1.jpg
+What is a user in terms of Zammad?
+==================================
 
-If nothing has been selected, as you can see on the last screen, all user groups are displayed. If you select one (or two) user groups, only the users that are assigned to this role are displayed, as you can see in the following picture:
+Unlike other tools like e.g. OTRS not just your agents and admins have an account. 
+Technically your customer does as well - here's why:
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-2.jpg
+   In order to provide advanced features like listing all customers tickets Zammad requires references. 
+   These are bound to a user account which can have different permissions.
+   This also allows you to change permissions of a user without loosing information.
 
-Here, only the administrators are selected - there are two in this system.
+   .. note:: Zammad will always create a new user account as customer (by default) in case you receive 
+      a message from a unknown user. During this process Zammad will try to recognize the first and lastname.
 
-Create and edit users
----------------------
+   .. hint:: Users are available in Zammad globally. They're not bound to specific groups!
 
-By clicking the "new user" panel you create a new user for your system.
+Manage your users
+=================
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-3.jpg
+.. toctree::
+   :hidden:
 
-Existing users can be edited by clicking on the user you wish to edit. You can reach the following mask on both paths. In the upper part of the mask all personal details can be registered:
+   manage-via-ui
+   manage-via-import
+   LDAP (integration) </system/integrations/ldap>
+   Exchange (integration) </system/integrations/exchange>
+   API <https://docs.zammad.org/en/latest/api/intro.html>
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-5.jpg
+:doc:`by using the UI <manage-via-ui>`
+   The simplest way is to use Zammads UI to update or create users. 
+   You can do so by using the user management. 
 
-In the "Organization" field, the user can be directly assigned to a customer group / organization. Only existing organizations can be selected. Customers of the same organization can view each other items (if the organization is set as a "shared" organization).
+      .. note:: **🕵️ Agents can also create and edit users**
 
-You can also change the password to log in to Zammad.
+         Even without access to the user management, Zammad allows user creation within the 
+         `ticket creation dialogue <https://user-docs.zammad.org/en/latest/basics/service-ticket/create.html>`_. 
+         Agents can also update customer users by using the search function or directly 
+         `within a ticket <https://user-docs.zammad.org/en/latest/extras/customers.html>`_.
 
-Users can be set as a VIP (These users can be selected specifically for the SLA or other automatisms, in which these users must be distinguished from other users).
+   .. figure:: /images/manage/users/editing-and-adding-users-via-ui.gif
+      :alt: Screencast showing a user being updated and one being created.
+      :align: center
+      :width: 80%
 
-You can create further fields in the agent interface by choosing System --> Objects.
+:doc:`by using CSV imports <manage-via-import>`
+   You can use the "Import" button to download a sample CSV or upload a ready to go one.
 
-Any other relevant information about the user can be entered in the lower part of the edit mask (note). This information is only visible to agents:
+   .. figure:: /images/manage/users/importing-users-via-csv.gif   
+      :alt: Screencast showing users being imported via CSV
+      :align: center
+      :width: 80%
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-6a.jpg
+by using synchronisation
+   Currently you can either use :doc:`LDAP </system/integrations/ldap>` or 
+   :doc:`Exchange address books </system/integrations/exchange>`. 
+   When using LDAP, you don't require local passwords.
 
+The techy way 🤓
+   If above options are not the right ones for you, you can also use 
+   `Zammads API <https://docs.zammad.org/en/latest/api/intro.html>`_. 
+   It allows you to automate things entirely if required. 🚀
 
-Import of users via CSV file
-----------------------------
+Inactive users
+++++++++++++++
 
-With the import action (since Zammad 2.5) you can download a sample CSV file and upload your own CSV file.
+Users set to inactive can no longer login to Zammad. If the affected user is an agent, 
+agents no longer can set this user as ticket owner. You can use this option to keep ticket data.
 
-To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import can be executed.
+.. note:: ℹ Disabling a Customer does not deny emails from that customer!
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-Import.jpg
+Your agents can still search for inactive users. 
+Inactive users will be greyed out - on screens with user selections, Zammad will clearly state 
+if a user is inactive.
 
+   .. figure:: /images/manage/users/customer-search-returns-inactive-user.png
+      :alt: Screencast showing a ticket creation screen with a user search returning an inactive user.
+      :align: center
 
 .. _manage_user_rights:
 
-The assignment of rights / Permissions
---------------------------------------
+Assigning permissions to users
+==============================
 
-...can only be set here, via this mask!
+.. toctree::
+   :hidden:
 
-First, you can set which role the user should have in the system. Does this user have administrative rights, is he/she an agent who processes tickets or a customer who only sees and processes his own tickets?
+   Roles </manage/roles/index>
+   Group permissions on the user </manage/users/group-permissions>
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-6b.jpg
+As soon as you have more than one :doc:`group </manage/groups>` within Zammad, 
+you'll need to assign your agents the permissions to access them.
 
-If the current user is an agent, you can select this option to open further settings. Now it is possible to select which rights are assigned to the agent and in which group:
+:doc:`Assign roles to users </manage/roles/index>`
+   Roles can provide more than just permissions to specific groups. 
+   A big benefit in using roles is less administration and ensuring that all users within 
+   e.g. a department have the same rights.
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-7.jpg
+   .. figure:: /images/manage/users/assign-group-roles-to-user.gif
+      :alt: Screencast showing a user receiving further roles
+      :align: center
+      :width: 80%
 
+:doc:`Directly assign group permissions on a user <group-permissions>`
+   If you don't have too many agents to administer, roles may be a slight overkill. 
+   Instead you can also assign permissions to groups directly on the user in question.
 
-.. csv-table:: Understanding Permissions
-   :header: "Permission", "Description"
-   :widths: 10, 20
+      .. note:: In order to Zammad provide the group selection, you also need to provide a role with ``ticket.agent`` permission. 
+         By default the role ``Agent`` typically provides this permission!
 
-   "READ", "Read only access to the tickets and entries of this group."
-   "CREATE", "Right to create tickets or entries in this group."
-   "CHANGE", "Right to change the attributes of tickets, entries or areas that belong to this group."
-   "OVERVIEW", "Right to see tickets in the overviews. A view of the ticket details is not possible."
-   "FULL", "Right to create, read, change and see tickets in the overviews."
+   .. figure:: /images/manage/users/assign-group-permissions-directly-to-user.gif
+      :alt: Screencast showing a user being assigned specific group rights directly within the user.
+      :align: center
+      :width: 80%
 
-.. hint:: | **I can't assign an agent as Owner?!**
-   | To assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
-
-If a user gets no rights to one group, the system does not display a ticket or ticket notification to the user. This group, for which he has no rights, is also not displayed in the group selection.
-
-
-View from user's perspective
-----------------------------
-
-It's also possible to show the view from a user's perspective - scroll over the action-column, like that:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-4.jpg
-
-This function can be used, for example, to test whether the rights assignment for the respective user have been set correctly - i. e. that this user only has access to the areas assigned to him/her.
-
-Set a user active/ inactive
----------------------------
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Users-8.jpg
-
-If a user is set to inactive, he/she can no longer log into the system. Other, active users will no longer see this user as a possible ticket owner.
-
-.. hint:: Disabling a Customer does not deny emails from that customer!
-
-
-.. note:: Every user needs their own e-mail address to log in to the system and to view and edit their tickets. Agents and Admin need the email address for registration only.
-   The emails sent to the customers are written from the email-address set in the group settings. Your own e-mail address can be placed in the signature.
+.. hint:: You can use Zammads LDAP mapping to map roles to existing groups in your LDAP. 
+   This reduces your administration tasks within Zammad and doesn't require to touch every user in question. 😎
