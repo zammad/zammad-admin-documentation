@@ -1,14 +1,6 @@
 Roles
 *****
 
-.. toctree::
-   :hidden:
-
-   admin-permissions
-   agent-permissions
-   group-permissions
-   user-preference-permissions
-
 Roles are a great way to provide the exact same permissions to several users. 
 Roles work best with automated user synchronisation like :doc:`/system/integrations/ldap`.
 
@@ -17,8 +9,16 @@ Roles work best with automated user synchronisation like :doc:`/system/integrati
    :align: center
    :width: 90%
 
-Parts of a roles
-----------------
+Parts of a role
+===============
+
+.. toctree::
+   :hidden:
+
+   admin-permissions
+   agent-permissions
+   group-permissions
+   user-preference-permissions
 
 Depending on your use cases, the default roles may be sufficient. 
 
@@ -63,7 +63,7 @@ Depending on your use cases, the default roles may be sufficient.
          :width: 80%
 
 Default at signup
------------------
+=================
 
 One of your roles has to be the "default role". 
 This default role is used for accounts Zammad or one of your agents has to create during e.g. 
