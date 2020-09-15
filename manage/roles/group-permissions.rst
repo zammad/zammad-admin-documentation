@@ -30,7 +30,7 @@ Examples and use cases
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /images/manage/group-permissions/full-rights.png
-   :alt:
+   :alt: The user gets full rights to a group.
    :align: center
    :width: 90%
 
@@ -41,7 +41,7 @@ This provides the complete notification and ticket experience for the group in q
       for the agent.
 
 .. figure:: /images/manage/group-permissions/everything-but-full.png
-   :alt:
+   :alt: User has granular rights with everything but "full".
    :align: center
    :width: 90%
 
@@ -51,14 +51,14 @@ a ticket in the group of question. All other ticket relevant tasks can still be 
    .. hint:: This is the perfect permission for supervisors.
 
 .. figure:: /images/manage/group-permissions/read-change-and-overview.png
-   :alt:
+   :alt: User is allowed to read, change and see tickets in overviews.
    :align: center
    :width: 90%
 
 While your agent can't create new tickets with above permissions, the agent can still work on existing tickets. 
 
 .. figure:: /images/manage/group-permissions/create-and-overview.png
-   :alt:
+   :alt: The user is allowed to create new tickets and see them in an overview.
    :align: center
    :width: 90%
 
@@ -66,7 +66,7 @@ Above permissions allow the agent to create tickets in the group.
 The agent also will see the tickets within overviews if applicable, but can't open or update the ticket.
 
 .. figure:: /images/manage/group-permissions/read-and-change.png
-   :alt:
+   :alt: The user is allowed to read tickets and update them, but can't see them in overviews.
    :align: center
    :width: 90%
 
@@ -74,7 +74,7 @@ The agent can use the search function or direct links to tickets in question.
 Tickets can get updated by the agent.
 
 .. figure:: /images/manage/group-permissions/create-only.png
-   :alt:
+   :alt: Tickets can be created in the affected group, but not accessed further.
    :align: center
    :width: 90%
 
