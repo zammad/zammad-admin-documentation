@@ -26,6 +26,8 @@ Host
 User
    Your account login/username.
 
+   .. hint:: The notification sender address can be configured within the :doc:`Settings tab <../settings>`.
+
 Password
    Your account password.
 
