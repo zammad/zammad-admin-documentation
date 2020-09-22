@@ -74,7 +74,7 @@ Frequently asked questions
 **🤓 What happens if my customer drops a mail while the deletion taks is pending?** 
    Zammad will remove all tickets of your customer. This means if your customer creates a new ticket 
    in between task creation and execution, the ticket will also be removed. 
-   A user can only removed if all references are removed. However: Zammad will update the "deleted Tickets" 
+   A user can only be removed if all references are removed. However: Zammad will update the "deleted Tickets" 
    list with the tickets.
 
 **🧐 Can removed users still create tickets?**
