@@ -18,7 +18,7 @@ along with **all of their associated tickets**.
    (introduced in Zammad 3.5).
 
    On older systems that have not been updated yet,
-   users can also be `deleted via the Zammad console`_.
+   customers can also be `deleted via the Zammad console`_.
 
    .. _deleted via the Zammad console: https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers
 
