@@ -129,7 +129,7 @@ Frequently Asked Questions
    because there is no way to safely determine
    if it actually describes the user in question.
 
-😵 **I deleted user and can still see a message they sent!**
+😵 **I deleted an user and can still see a message they sent!**
    Tickets can only belong to a single customer,
    but may contain messages (“articles”) from many people.
    If you deleted a user but you’re still seeing articles they sent,
