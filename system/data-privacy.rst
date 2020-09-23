@@ -1,87 +1,137 @@
 Data Privacy
-************
+============
 
-Zammad allows you to delete any user and its associated customer tickets. 
-This is an easy and great addition to our `console way <https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers>`_.
+For compliance with GDPR and other data privacy laws,
+you may wish to **permanently delete users from the system**,
+along with **all of their associated tickets**.
 
 .. figure:: /images/system/data-privacy/creating-a-new-deletion-task.png
-   :alt: Screenshot of Zammads Data Privacy function
+   :alt: User deletion dialog in the Data Privacy panel
    :align: center
 
-.. note:: **🤔 Huh? I don’t see a Data Privacy option...**
-   
-   This functionality was introduced with Zammad 3.5. 
-   Also, you'll need at least ``admin.data_privacy`` permissions.
+   The user deletion dialog lists some of the tickets
+   that will be removed from the system along with the user.
 
-Limitations
------------
+.. note:: 🤔 **Huh? I don’t see the Data Privacy panel...**
 
-   * You can't delete your own account
-   * You can't remove the last administrator of your Zammad installation
-   * You can remove organizations together with the last organization member
-   * If you do want to remove the last organization member with it's organization, 
-     please ensure that all deletion tasks for other members have been **completed**
-   * Adding a deletion task can't be canceled and will be run within 10 minutes
-   * The ticket preview within the deletion dialogue holds up to 6 tickets and works 
-     similar to the overview previews.
-   * Text fields will not get updated. Only references to the affected user matter.
+   Access to this panel requires ``admin.data_privacy`` permissions
+   (introduced in Zammad 3.5).
 
-Deleting a user
----------------
+   On older systems that have not been updated yet,
+   users can also be `deleted via the Zammad console`_.
 
-**Method 1: via user management or user details**
-   From a user’s profile: click Action > Delete. 
-   In the Admin Panel: use the ⋮ menu under Manage > Users.
-   
-   .. figure:: /images/system/data-privacy/create-user-deletion-task-via-context-menus.gif
-      :alt: Screencast showing how to initiate a deletion task via Zammads context menus.
+   .. _deleted via the Zammad console: https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers
+
+Deleting Users
+--------------
+
+.. warning:: 💣 **All deletions are FINAL!**
+
+   Once you click “Delete”, the action cannot be cancelled or undone.
+
+   Any time you delete a user, all their tickets will be deleted, as well.
+   It is not possible to delete a user and still keep their tickets.
+
+.. note:: 🙅 **The following records cannot be deleted:**
+
+  * your own account
+  * the system’s last remaining administrator account
+
+Step 1: Find a user / confirm deletion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are three ways to access the user deletion dialog:
+
+**from the user’s profile**
+
+   .. figure:: /images/system/data-privacy/delete-user-via-profile.gif
+      :alt: Accessing the user deletion dialog in a user profile
       :align: center
 
-**Method 2: via Data Privacy option directly**
-   If you want to skip other menus, you can also create a deletion task directly within "Data Privacy". 
-   The user can be found via it's name or email address.
+      Click **Action > Delete**.
 
-   .. figure:: /images/system/data-privacy/create-user-deletion-task-via-data-privacy-directly.gif
-      :alt: Screencast showing how to initiate a deletion task directly within Data Privacy.
+**in the “Manage > Users” Admin Panel**
+
+   .. figure:: /images/system/data-privacy/delete-user-via-user-panel.gif
+      :alt: Accessing the user deletion dialog under “Users” in the Admin Panel
       :align: center
 
-Following up on deletion tasks
-------------------------------
+      Use the **⋮ Actions** menu for the target user.
 
-**via Activity Stream**
-   Zammad will create two information within the Activity Stream:
-      * Data privacy task for user X created
-      * Data privacy task for user X updated
+**in the “System > Data Privacy” Admin Panel**
 
-   These messages can only be seen by persons with access to Data Privacy.
+   .. figure:: /images/system/data-privacy/delete-user-via-data-privacy-panel.gif
+      :alt: Accessing the user deletion dialog under “Data Privacy” in the Admin Panel
+      :align: center
 
+      Use the **New Deletion Task** button. Search for users by name or email address.
+
+.. hint:: 👥 **You can delete organizations, too.**
+
+   If the customer you are deleting is the last user in their organization,
+   a **Delete Organization?** option will be displayed in the user deletion dialog:
+
+   .. figure:: /images/system/data-privacy/delete-organization-option.png
+      :alt: Deleting an organization via the user deletion dialog
+      :align: center
+      :width: 50%
+
+   (If you encounter an error when selecting “Yes” here,
+   make sure there are no pending deletion tasks
+   for other customers from this organization.)
+
+Step 2: Monitor deletion job status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It may take up to ten minutes for the system to process your request,
+so for each user you delete, a “deletion task” is added to the queue.
+You can keep an eye on the status of these tasks in two places:
+
+**in the Activity Stream**
    .. figure:: /images/system/data-privacy/activity-stream-with-deletion-tasks.png
       :alt: Activity Stream showing data privacy tasks
       :align: center
-      :width: 90%  
+      :width: 90%
 
-**via Data Privacy task list**
-   Within Data Privacy you can always see the last removed users and tickets. 
+   For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it’s complete.
 
+   .. hint:: These notifications are only visible to users with ``admin.data_privacy`` permissions.
+
+**in the “System > Data Privacy” Admin Panel**
    .. figure:: /images/system/data-privacy/data-privacy-task-list.png
       :alt: The task list within Data Privacy shows removals being in progress and completed.
       :align: center
-      :width: 90%  
+      :width: 90%
 
-Frequently asked questions
+Frequently Asked Questions
 --------------------------
 
-**🤓 What happens if my customer drops a mail while the deletion taks is pending?** 
-   Zammad will remove all tickets of your customer. This means if your customer creates a new ticket 
-   in between task creation and execution, the ticket will also be removed. 
-   A user can only be removed if all references are removed. However: Zammad will update the "deleted Tickets" 
-   list with the tickets.
+🤓 **What happens if I receive an email from a deleted customer?**
+   Zammad automatically creates a new user account
+   whenever it receives a message from an unrecognized email address,
+   including deleted users.
+   Deleted users are never blocked from creating new tickets.
 
-**🧐 Can removed users still create tickets?**
-   If the user you removed decides to create a new ticket (by e.g. mail), Zammad will automatically create 
-   a new user account. The Data Privacy function does not block any users.
+   In the unlikely event that you receive an email
+   between the time that you click “Delete”
+   and the system has processed your request,
+   **that ticket will be automatically removed**.
+   The ticket number for the lost ticket will be displayed
+   in the Admin Panel under **System > Data Privacy >
+   Completed Tasks > Delete User > Deleted Tickets**.
 
-**😵 I removed a user but still can find an article!**
-   Zammad takes in account tickets the user is customer of. 
-   It doesn't remove articles from tickets the user wasn't customer of. 
-   To clear out those references, the creator ID will be reset to ``System``.
+🤔 **What about user information stored in internal notes or other messages?**
+   The deletion process removes **user accounts and associated tickets only**.
+
+   If there are references to a user’s name or information
+   stored elsewhere in the system,
+   that information **will not be removed**
+   because there is no way to safely determine
+   if it actually describes the user in question.
+
+😵 **I deleted user and can still see a message they sent!**
+   Tickets can only belong to a single customer,
+   but may contain messages (“articles”) from many people.
+   If you deleted a user but you’re still seeing articles they sent,
+   don’t worry—those articles are for a ticket that belongs to someone else,
+   and no longer contain any reference to the sender’s identity.
