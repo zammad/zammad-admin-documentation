@@ -50,7 +50,7 @@ Digit required
 This enforces your users to at least use one digit with his password.
 The default value is `yes`.
 
-.. _third_party_logins:
+.. _third-party-logins:
 
 Third-Party Applications
 ------------------------
@@ -77,7 +77,7 @@ Another big advantage of this feature is that your user doesn't need another pas
    * Generic OAuth2
    * Weibo
 
-.. _automatic_account_linking:
+.. _automatic-account-linking:
 
 Automatic account link on initial logon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -85,7 +85,7 @@ if a user is inactive.
       :alt: Screencast showing a ticket creation screen with a user search returning an inactive user.
       :align: center
 
-.. _manage_user_rights:
+.. _manage-user-rights:
 
 Assigning permissions to users
 ==============================

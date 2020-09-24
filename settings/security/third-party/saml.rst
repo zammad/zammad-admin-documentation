@@ -112,7 +112,7 @@ Enable SAML and enter your IdP’s details in the Admin Panel under
    **Keycloak users:** Find your certificate in the Keycloak admin panel under
    **Realm Settings > Keys > RSA > Certificate**.
 
-See :ref:`automatic account linking <automatic_account_linking>` for details on how to link existing Zammad accounts to IdP accounts.
+See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to IdP accounts.
 
 Troubleshooting
 ---------------

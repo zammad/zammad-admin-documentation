@@ -50,7 +50,7 @@ Permissions
 
 The group's permissions for agents can be set up as follows:
 
-1. directly via the user administration (Admin → Manage → Users), please see: :ref:`manage_user_rights`
+1. directly via the user administration (Admin → Manage → Users), please see: :ref:`manage-user-rights`
 
 or
 

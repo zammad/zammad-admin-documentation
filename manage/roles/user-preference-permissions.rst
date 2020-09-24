@@ -31,7 +31,7 @@ These permissions are part of `Profile Settings <https://user-docs.zammad.org/en
     Upon first logon Zammad tries to auto detect the correct language right away.
 
 ``user.linked_accounts``
-    This option is relevant for instances using :ref:`Third Party authentication <third_party_logins>`.
+    This option is relevant for instances using :ref:`Third Party authentication <third-party-logins>`.
     If you haven't activated automatic account linking, this will be the only way for your users to
     link their existing third party accounts to their Zammad account.
 
