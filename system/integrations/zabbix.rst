@@ -1,5 +1,5 @@
 Zabbix Integration
-==============
+==================
 
 
 This guide describes how to integrate your Zabbix 5.0 installation with
