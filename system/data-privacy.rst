@@ -76,7 +76,7 @@ There are three ways to access the user deletion dialog:
       :align: center
       :width: 50%
 
-   (If you encounter an error when selecting “Yes” here,
+   (If this option does not appear,
    make sure there are no pending deletion tasks
    for other customers from this organization.)
 
