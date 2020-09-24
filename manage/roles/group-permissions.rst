@@ -1,13 +1,13 @@
 Group permissions
 -----------------
 
-You can either provide granular or full group permissions. 
-These permissions decide on how your agents can interact with the tickets of 
+You can either provide granular or full group permissions.
+These permissions decide on how your agents can interact with the tickets of
 that group.
 
    .. hint:: **🤔 Huh? I don’t see the group table...**
 
-      You need more than one active group within Zammad to see group permissions. 
+      You need more than one active group within Zammad to see group permissions.
       If you have one group only, all agents by default have access to that group.
 
    .. note:: **⚠ Permissions also affect notifications!**
@@ -23,7 +23,7 @@ that group.
    "FULL", "Right to find, create, read, change and see tickets in the overviews. Assign agent as ticket owner."
 
 .. hint:: **😵 Can't assign an agent as ticket owner?!**
-   
+
    In order to assign an agent as Ticket-Owner, the agent needs **FULL** rights on the group, other wise this is not possible.
 
 Examples and use cases
@@ -34,10 +34,10 @@ Examples and use cases
    :align: center
    :width: 90%
 
-In most cases, the permission ``full`` is the best choice for groups your agent mainly works in. 
+In most cases, the permission ``full`` is the best choice for groups your agent mainly works in.
 This provides the complete notification and ticket experience for the group in question.
 
-   .. hint:: This is the default permission we'd suggest if you don't require further restrictions 
+   .. hint:: This is the default permission we'd suggest if you don't require further restrictions
       for the agent.
 
 .. figure:: /images/manage/group-permissions/everything-but-full.png
@@ -45,8 +45,8 @@ This provides the complete notification and ticket experience for the group in q
    :align: center
    :width: 90%
 
-If you provide your agent with everything but ``full`` permission, the agent can no longer be owner of 
-a ticket in the group of question. All other ticket relevant tasks can still be full filled. 
+If you provide your agent with everything but ``full`` permission, the agent can no longer be owner of
+a ticket in the group of question. All other ticket relevant tasks can still be full filled.
 
    .. hint:: This is the perfect permission for supervisors.
 
@@ -55,14 +55,14 @@ a ticket in the group of question. All other ticket relevant tasks can still be 
    :align: center
    :width: 90%
 
-While your agent can't create new tickets with above permissions, the agent can still work on existing tickets. 
+While your agent can't create new tickets with above permissions, the agent can still work on existing tickets.
 
 .. figure:: /images/manage/group-permissions/create-and-overview.png
    :alt: The user is allowed to create new tickets and see them in an overview.
    :align: center
    :width: 90%
 
-Above permissions allow the agent to create tickets in the group. 
+Above permissions allow the agent to create tickets in the group.
 The agent also will see the tickets within overviews if applicable, but can't open or update the ticket.
 
 .. figure:: /images/manage/group-permissions/read-and-change.png
@@ -70,7 +70,7 @@ The agent also will see the tickets within overviews if applicable, but can't op
    :align: center
    :width: 90%
 
-The agent can use the search function or direct links to tickets in question. 
+The agent can use the search function or direct links to tickets in question.
 Tickets can get updated by the agent.
 
 .. figure:: /images/manage/group-permissions/create-only.png
@@ -78,9 +78,9 @@ Tickets can get updated by the agent.
    :align: center
    :width: 90%
 
-This allows your agent to create tickets for the group in question. 
+This allows your agent to create tickets for the group in question.
 After ticket creation the agent has no further access to it.
 
-   .. hint:: Perfect for situations an agent answers a phone call that can't be solved with the agents knowledge. 
-      Instead of asking your customer to call again, the agent can note down the call and what it's about. 
+   .. hint:: Perfect for situations an agent answers a phone call that can't be solved with the agents knowledge.
+      Instead of asking your customer to call again, the agent can note down the call and what it's about.
       After creating the ticket in the correct group, a agent of the group can solve the case. 💪
