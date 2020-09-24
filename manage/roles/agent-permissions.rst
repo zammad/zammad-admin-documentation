@@ -14,7 +14,7 @@ You can provide them with granular permissions on specific communication types.
    For an agent being able to effectively use this function, you'll also have to configure the :doc:`Chat Channel </channels/chat>`.
 
    You can find more information on the agents options
-   within the `user documentation <https://user-docs.zammad.org/en/latest/extras/chat.html>`_.
+   within the `user documentation`_.
 
    .. figure:: /images/manage/roles/chatting-agent.png
       :alt: Screenshot showing active customer chats within the chat interface.
@@ -25,7 +25,7 @@ You can provide them with granular permissions on specific communication types.
    Grants agents to see the global caller log. This enables additional *browser notifications* if enabled by agent.
 
    You can learn more about agents possibilities on
-   the `user documentation <https://user-docs.zammad.org/en/latest/extras/caller-log.html>`_.
+   the `user documentation`_.
 
    .. figure:: /images/manage/roles/caller-log.png
       :alt: Screenshot showing the caller log.
@@ -35,7 +35,7 @@ You can provide them with granular permissions on specific communication types.
 Knowledge Base permissions
    Either of both below permissions activate the internal :doc:`knowledge base </manage/knowledge-base>` for your agents.
    Learn more about the possibilities you provide
-   with our `user documentation <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_.
+   with our `user documentation`_.
 
    ``knowledge_base.editor``
       Granting editor permissions allows creation of new answers and categories within the knowledge base.
@@ -77,3 +77,5 @@ Knowledge Base permissions
    .. figure:: /images/manage/roles/overviews.png
       :alt: Screenshot showing the "Overviews" link and some ticket overviews
       :align: center
+
+.. _user documentation: https://user-docs.zammad.org/en/latest/extras/knowledge-base.html

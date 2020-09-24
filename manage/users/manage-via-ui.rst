@@ -93,7 +93,7 @@ by searching
       :align: center
 
 🏴‍☠️ Take over a users session
-==============================
+===============================
 
 If needed users with ``admin.users`` permission can take over a users session.
 This can come in handy to cross check permissions being available to the user.
