@@ -9,8 +9,12 @@ Roles work best with automated user synchronisation like :doc:`/system/integrati
    :align: center
    :width: 90%
 
-Parts of a role
-===============
+.. hint:: 💡 **LDAP users:**
+
+   Syncing your LDAP “groups” to Zammad “roles” can sdf asdf.
+
+Permissions
+-----------
 
 .. toctree::
    :hidden:
