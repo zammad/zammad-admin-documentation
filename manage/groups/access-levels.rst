@@ -28,7 +28,6 @@ Setting Access Levels
 There are two ways to define an agent’s per-group access levels:
 
 1. Directly, in the :ref:`Edit User dialog <user-details-group-access>`
-   (under **Manage > Users**)
 
    .. figure:: /images/manage/groups/access-levels/assign-group-access-per-user.gif
       :alt: Screencast showing a user being assigned specific group rights directly within the user.
@@ -37,8 +36,7 @@ There are two ways to define an agent’s per-group access levels:
 
       Simply set your access levels right on the target user.
 
-2. Implicitly, via the :ref:`Edit Role dialog <role-settings-group-access>`
-   (under **Manage > Roles**)
+2. Implicitly, by :ref:`editing a user’s roles <role-settings-group-access>`
 
    .. figure:: /images/manage/roles/group-access-levels.png
       :alt: Group access table in Edit Role dialog

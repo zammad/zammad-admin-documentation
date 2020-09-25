@@ -1,78 +1,136 @@
 Roles
-*****
+=====
 
-Roles are a great way to provide the exact same permissions to several users.
+If you’re already using Zammad,
+you’ll know that users can be **admins**, **agents**, or **customers**.
+These are Zammad’s built-in roles, and they’re the tip of the iceberg
+of its powerful, flexible, and fine-grained permission system.
 
 .. figure:: /images/manage/roles/role-overview.png
    :alt: Role overview within Zammads admin settings.
    :align: center
    :width: 90%
 
-.. hint:: 💡 **LDAP/Active Directory users:**
+   Assign user privileges in the Admin Panel, under **Manage > Roles**.
 
-   Roles work best with automated user synchronisation like :doc:`/system/integrations/ldap`.
+.. note:: 👀 **What’s New in v3.5**
 
-Permissions
------------
+   Now, users can have both “agent” and “customer” roles at the same time!
+
+   Why would you want this?
+   Agents get :doc:`overviews </manage/overviews>`
+   of all the tickets they’re *assigned to* (among other things),
+   while customers get an overview of all the tickets they’ve *opened*.
+   But some teams use Zammad for both internal and public communication,
+   so their agents need both.
+
+   Having both roles also changes what you see in the ticket view,
+   depending on whether you’re the “customer” or not.
+
+.. tip:: 💡 **LDAP/Active Directory users:**
+
+   Syncing your LDAP “groups” to Zammad roles
+   can make access management *way* easier.
+   To learn more, see :doc:`/system/integrations/ldap`.
+
+.. _what-is-a-role:
+
+What Is a Role?
+---------------
+
+**tl;dr** Some users can do things others can’t (like close a ticket).
+Users have roles, roles have permissions,
+and permissions are what make those actions possible.
+
+So what exactly are permissions, then?
+
+.. figure:: /images/manage/roles/permissions-admin.png
+   :alt: List of permissions in the New Role dialog
+   :align: center
+   :width: 80%
+
+   The ``admin.calendar`` permission gives you access
+   to the **Manage > Calendars** admin panel.
+
+Simply put, permissions are names for all the different things
+users might want to do throughout the system, such as:
+
+:``chat.agent``: respond to live chat messages
+:``ticket.agent``: update tickets
+:``admin.user``: access the **Manage > Users** admin panel
+:``knowledge_base.editor``: create/edit knowledge base articles
+
+Zammad has dozens of these permissions,
+which is a lot to keep track of.
+So instead of saying “This user has permissions A, B, and C”,
+Zammad says “The *agent role* has permissions A, B, and C,
+and this user is an agent.”
+
+This makes creating user accounts for new agents a whole lot simpler,
+and it also makes it easier to invent a new permission D
+and say “All existing agents can do *that* now, too.”
+
+In short, roles are just collections of permissions that you can give to a user.
+The built-in admin, agent, and customer roles are enough for many teams,
+but Zammad gives you the freedom to custom-build your own.
+
+And to do that, you’ll need to know what each permission does.
+
+Reference Guide: Permissions
+----------------------------
 
 .. toctree::
    :hidden:
 
    admin-permissions
    agent-permissions
-   user-preference-permissions
+   user-preferences-permissions
 
-Depending on your use cases, the default roles may be sufficient.
+Broadly speaking, there are four types of permissions:
 
-:doc:`🛡️ admin permissions <admin-permissions>`
-   These permissions affect all administrative settings available for Zammads UI.
-   Granular settings for key users are possible to reduce work loads on admins.
+:doc:`🛡️ Admin <admin-permissions>`
+   for access to each page of the Admin Panel
 
-      .. figure:: /images/manage/roles/admin-settings.png
-         :alt: Screenshot showing admin settings within Zammad.
-         :align: center
-         :width: 80%
+:doc:`🕵️ Agent <agent-permissions>`
+   for access to customer communications
 
-:doc:`🕵️ agent permissions <agent-permissions>`
-   Agent permissions cover all areas that affect communication with customers.
-   Agents are the backbone of your customer support, even though every agent may have different fields to work on.
+👤 Customer
+   Without the ``ticket.customer`` permission,
+   customers can’t see the **My Ticket** overview—but
+   they can still log in and open new tickets!
 
-   :doc:`👪 group access levels </manage/groups/access-levels>` depend on the agent permission.
-   You may not require them if you prefer to :doc:`configure group access levels on a per-user basis </manage/users/index>`.
+:doc:`🎛️ User Preferences <user-preferences-permissions>`
+   for access to your own `user profile <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_
 
-   .. figure:: /images/manage/roles/agents-paradise.png
-      :alt: Screenshot showing the most relevant areas for agents: tickets, overviews, chat, knowledge base and caller log.
-      :align: center
-      :width: 80%
+.. note:: 📁 **Permissions are namespaced**,
+   which is sort of like having files inside of folders.
 
-👤 customer permission
-   The permission ``ticket.customer`` allows your customers to see their tickets when logged in to Zammad.
-   Removing this permission disables the "Overview" link within the UI, it does not disallow your customer
-   to login!
+   These permissions:
 
-   .. hint:: **👀 Agents can be customers too!**
+   * ``admin.api``
+   * ``admin.branding``
+   * ``admin.calendar``
+   * ``admin.channel_chat``
+   * ``admin.channel_email``
+   * ...and 30+ more
 
-      Starting with Zammad 3.5 you can assign your agents with the customer role.
-      This enables access to tickets the agent is customer of.
-      The ticket view for these tickets behaves the same way like it does for your customers. 🙌
+   all belong to the ``admin`` namespace.
+   You can select them individually,
+   or you can just select ``admin`` to enable the whole bunch.
 
-:doc:`🛠 user preference permissions <user-preference-permissions>`
-   These permissions refer to `Profile Settings <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_.
-
-      .. figure:: /images/manage/roles/users-profile-settings.png
-         :alt: Screenshot showing the profile settings.
-         :align: center
-         :width: 80%
+Role Details
+------------
 
 Default at signup
-=================
+   Every new user must be assigned at least one role upon creation.
+   This attribute decides which role to give new users by default
+   (which usually happens when creating a new ticket for a new customer).
 
-One of your roles has to be the "default role".
-This default role is used for accounts Zammad or one of your agents has to create during e.g.
-ticket creation. This role **should never** provide admin or agent permissions!
+   .. figure:: /images/manage/roles/default-role.png
+      :alt: Role overview in the admin panel, showing default role
+      :align: center
 
-By default the role ``Customer`` is the default signup role.
+      The default role is identified in the overview
+      of the **Manage > Roles** admin panel.
 
-For your overall overview Zammad provides a column in the role listing to tell you which role is the default right away.
-
-.. image:: /images/manage/roles/default-role.png
+   .. warning:: 🙅 **This role should never provide admin/agent permissions.**

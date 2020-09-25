@@ -33,7 +33,7 @@ The “Users” panel provides tools to manually manage user accounts.
       Use the 🔎 **Search for users** bar and the **Roles** buttons to filter the list.
       You may search by name, email, or any other user attribute.
 
-   .. note:: 🐛 **Known bug**
+   .. note:: 🐞 **Known bug**
 
       The search list displays up to 50 users, from newest to oldest.
       That means that if there are more than 50 results,
@@ -42,6 +42,8 @@ The “Users” panel provides tools to manually manage user accounts.
       This is a `known bug`_ with a fix underway.
 
       .. _known bug: https://github.com/zammad/zammad/issues/2214
+
+   .. _view-from-users-perspective:
 
 🏴‍☠️ Taking over a user’s session
    .. figure:: /images/manage/users/takeover-user-session.gif

@@ -1,98 +1,60 @@
-Agent permissions
------------------
+Agent Permissions
+=================
 
-Agents are the backbone of every customer support.
-You can provide them with granular permissions on specific communication types.
+.. note:: The permissions listed on this page grant access to features
+   that have to be enabled or configured system-wide in the Admin Panel first.
 
-.. figure:: /images/manage/roles/agents-paradise.png
-   :alt: Screenshot showing the most relevant areas for agents: tickets, overviews, chat, knowledge base and caller log.
+.. figure:: /images/manage/roles/permissions-agent.png
+   :alt: Agent permissions in the New Role dialog
    :align: center
-   :width: 90%
+   :width: 80%
 
-``chat.agent``
-   This permission enables the "Customer Chat" link within the UI.
-   For an agent being able to effectively use this function, you'll also have to configure the :doc:`Chat Channel </channels/chat>`.
+   Agent permissions are shown in the middle of the New Role dialog...
 
-   You can find more information on the agents options
-   within the `user documentation`_.
-
-   .. figure:: /images/manage/roles/chatting-agent.png
-      :alt: Screenshot showing active customer chats within the chat interface.
-      :align: center
-      :width: 80%
-
-``cti.agent``
-   Grants agents to see the global caller log. This enables additional *browser notifications* if enabled by agent.
-
-   You can learn more about agents possibilities on
-   the `user documentation`_.
-
-   .. figure:: /images/manage/roles/caller-log.png
-      :alt: Screenshot showing the caller log.
-      :align: center
-      :width: 80%
-
-Knowledge Base permissions
-   Either of both below permissions activate the internal :doc:`knowledge base </manage/knowledge-base>` for your agents.
-   Learn more about the possibilities you provide
-   with our `user documentation`_.
-
-   ``knowledge_base.editor``
-      Granting editor permissions allows creation of new answers and categories within the knowledge base.
-
-   ``knowledge_base.reader``
-      Granting reader permissions only allows your agents to view **internal** and **public** answers.
-
-   .. figure:: /images/manage/roles/knowledge-base.png
-      :alt: Screenshot showing the knowledge base to an agents with permissions.
-      :align: center
-      :width: 80%
-
-``report``
-   Allow your users to learn more about the teams performance and overall ticket stats.
-
-      .. hint:: This is rather a key user or supervisor permission.
-
-   .. note:: This permission provides meta information of any ticket with fitting conditions.
-      Your user does not require ``ticket.agent`` permissions to see them!
-
-   .. warning:: ⚠ Do not **ever** provide this permission to your customers!
-      Providing reporting access to your customers is a data breach and reveals **all ticket and user information!**
-
-   .. figure:: /images/manage/roles/reporting.png
-      :alt: Screenshot showing Zammads ticket reporting functionality.
-      :align: center
-      :width: 80%
-
-``ticket.agent``
-   This permission activates the Overview link which provides access to ticket overviews.
-
-   .. hint:: This permission is required in **every** role if it provides :doc:`/manage/groups/access-levels`.
-      This also applies to agents that have several of such roles - the permission does not stack!
-
-   .. warning:: ⚠ You can't combine this permission with ``ticket.customer`` in the same role.
-      Please provide your agent with the ``Customer`` role additionally if you want to provide them the
-      tickets they're customer in.
-
-   .. figure:: /images/manage/roles/overviews.png
-      :alt: Screenshot showing the "Overviews" link and some ticket overviews
-      :align: center
-
-.. _role-settings-group-access:
-
-Group Access Levels
--------------------
-
-:doc:`Lorem ipsum dolor </manage/groups/access-levels>`.
-
-.. figure:: /images/manage/roles/group-access-levels.png
-   :alt: Group access table in Edit Role dialog
+.. figure:: /images/manage/roles/sidebar.png
+   :alt: Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone
    :align: center
-   :width: 90%
 
-.. hint:: **🤔 Huh? I don’t see the group access table...**
+   ...and give users access to new sidebar tabs for communicating with customers.
 
-   The group access table is only visible
-   when there is **more than one active group** in the system.
+:``chat.agent``:            :doc:`💬 Customer Chat </channels/chat>`
+:``cti.agent``:             :doc:`📞 Phone </system/integrations/generic-cti>` integration
+:``knowledge_base.editor``: :doc:`📕 Knowledge Base </manage/knowledge-base>` (create/edit privileges)
+:``knowledge_base.reader``: :doc:`📕 Knowledge Base </manage/knowledge-base>` (read privileges for internal & public content)
+:``report``:                :doc:`📈 Reporting </manage/report-profiles>`
 
-.. _user documentation: https://user-docs.zammad.org/en/latest/extras/knowledge-base.html
+                            .. warning:: 🙅 **Never grant this permission to your customers.**
+
+                               Giving customers access to reporting constitutes a serious data breach,
+                               as it includes **all ticket and user information across the entire system**!
+
+                            .. note:: This permission is the exception to the rule on this page:
+
+                               1. the feature it enables is not for communicating with customers;
+                               2. the button appears at the *bottom* of the sidebar; and
+                               3. it is typically reserved for admins and supervisors.
+
+                            .. _role-settings-group-access:
+:``ticket.agent``:          :doc:`🗒️ (Agent) Overviews </manage/overviews>`
+
+                            .. note:: 🤔 **What’s this big table doing here in the middle of my permissions?**
+
+                               .. figure:: /images/manage/roles/group-access-levels.png
+                                  :alt: Group access table in Edit Role dialog
+                                  :align: center
+
+                                  The group access table is shown
+                                  when there is **more than one active group** in the system.
+
+                               Okay, so remember when we said that :ref:`“roles are just collections of permissions” <what-is-a-role>`?
+                               That wasn’t *entirely* true—they can also be collections of **group access levels**.
+
+                               To learn more, see :doc:`/manage/groups/access-levels`.
+
+                            .. hint:: 🤓 **Point of technicality**
+
+                               As of Zammad 3.5, you can assign both agent and customer roles to the same user—but
+                               but you **can’t** assign both ``ticket.agent`` and ``ticket.customer`` *permissions* to the same *role!*
+
+                               To make it work, you need two separate roles:
+                               one with ``ticket.agent`` and the other with ``ticket.customer``.
