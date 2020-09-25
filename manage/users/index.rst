@@ -138,30 +138,31 @@ The ones that aren’t are described below.
          A slashed-out 👤 icon indicates an inactive user.
          In other cases, inactive users are greyed out.
 
-   .. _manage-user-permissions:
+         .. _user-details-group-access:
 
 🔓 Permissions
-   As soon as you have more than one :doc:`group </manage/groups>`,
-   you'll need to assign your agents the permissions to access them.
+   Under this heading, you can manage two separate (but related) user details:
 
-   :doc:`Assign roles to users </manage/roles/index>`
-      Roles can provide more than just permissions to specific groups.
-      A big benefit in using roles is less administration and ensuring that all users within
-      e.g. a department have the same rights.
+   1. :doc:`/manage/roles/index` dictate what users can do in the system.
+      If you need to grant someone privileges to edit the knowledge base
+      or access part of the admin panel, roles are the answer.
 
-      .. figure:: /images/manage/users/assign-group-roles-to-user.gif
-         :alt: Screencast showing a user receiving further roles
-         :align: center
-         :width: 80%
+   2. :doc:`/manage/groups/access-levels` dictate which tickets
+      an agent can work with.
+      If someone’s not receiving notifications for incoming tickets
+      or can’t be assigned a ticket,
+      group access levels are likely to blame.
 
-   :doc:`Directly assign group permissions on a user <group-permissions>`
-      If you don't have too many agents to administer, roles may be a slight overkill.
-      Instead you can also assign permissions to groups directly on the user in question.
+   .. figure:: /images/manage/users/user-details-permissions.png
+      :alt: Permissions in the edit user dialog
+      :align: center
+      :width: 70%
 
-         .. note:: In order to Zammad provide the group selection, you also need to provide a role with ``ticket.agent`` permission.
-            By default the role ``Agent`` typically provides this permission!
+      **Top:** A user’s roles decide what kinds of actions they can perform
+      and which :doc:`groups </manage/groups/index>` they belong to.
+      **Bottom:** Group assignments can alternately be set on a per-user basis.
 
-      .. figure:: /images/manage/users/assign-group-permissions-directly-to-user.gif
-         :alt: Screencast showing a user being assigned specific group rights directly within the user.
-         :align: center
-         :width: 80%
+   .. hint:: **🤔 Huh? I don’t see the group access table...**
+
+      The group access table is only visible in **agent profiles**,
+      when there is **more than one active group** in the system.

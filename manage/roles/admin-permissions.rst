@@ -32,7 +32,7 @@ like updating :doc:`Text Modules </manage/text-modules>`.
 ``admin.channel_facebook``
    Grants access to the :doc:`/channels/facebook` settings page.
 
-      .. note:: Access to facebook based tickets depends on agents :doc:`group permissions <group-permissions>`.
+      .. note:: Access to facebook based tickets depends on agents :doc:`/manage/groups/access-levels`.
 
 ``admin.channel_formular``
    Grants access to the :doc:`/channels/form` setting page.
@@ -43,12 +43,12 @@ like updating :doc:`Text Modules </manage/text-modules>`.
 ``admin.channel_telegram``
    Grants access to the :doc:`/channels/telegram` settings page.
 
-      .. note:: Access to telegram based tickets depends on agents :doc:`group permissions <group-permissions>`.
+      .. note:: Access to telegram based tickets depends on agents :doc:`/manage/groups/access-levels`.
 
 ``admin.channel_twitter``
    Grants access to the :doc:`/channels/twitter` settings page.
 
-      .. note:: Access to twitter based tickets depends on agents :doc:`group permissions <group-permissions>`.
+      .. note:: Access to twitter based tickets depends on agents :doc:`/manage/groups/access-levels`.
 
 ``admin.channel_web``
    Grants access to the :doc:`/channels/web` settings page.
@@ -59,7 +59,7 @@ like updating :doc:`Text Modules </manage/text-modules>`.
       .. warning:: ⚠ This allows removal of data and thus is a potential dangerous permission!
 
 ``admin.group``
-   Allows users to add or change :doc:`/manage/groups` and their settings.
+   Allows users to add or change :doc:`/manage/groups/index` and their settings.
 
 ``admin.integration``
    This permission grants access **to all** available :doc:`/system/integrations`.

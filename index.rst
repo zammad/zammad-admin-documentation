@@ -8,7 +8,7 @@ Zammad - Documentation for administrators
    :caption: Manage
 
    manage/users/index
-   manage/groups
+   manage/groups/index
    manage/roles/index
    manage/organizations
    manage/overviews

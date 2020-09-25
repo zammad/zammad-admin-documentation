@@ -67,15 +67,32 @@ Knowledge Base permissions
 ``ticket.agent``
    This permission activates the Overview link which provides access to ticket overviews.
 
-      .. hint:: This permission is required in **every** role if it provides :doc:`group-permissions`.
-         This also applies to agents that have several of such roles - the permission does not stack!
+   .. hint:: This permission is required in **every** role if it provides :doc:`/manage/groups/access-levels`.
+      This also applies to agents that have several of such roles - the permission does not stack!
 
-      .. warning:: ⚠ You can't combine this permission with ``ticket.customer`` in the same role.
-         Please provide your agent with the ``Customer`` role additionally if you want to provide them the
-         tickets they're customer in.
+   .. warning:: ⚠ You can't combine this permission with ``ticket.customer`` in the same role.
+      Please provide your agent with the ``Customer`` role additionally if you want to provide them the
+      tickets they're customer in.
 
    .. figure:: /images/manage/roles/overviews.png
       :alt: Screenshot showing the "Overviews" link and some ticket overviews
       :align: center
+
+.. _role-settings-group-access:
+
+Group Access Levels
+-------------------
+
+:doc:`Lorem ipsum dolor </manage/groups/access-levels>`.
+
+.. figure:: /images/manage/roles/group-access-levels.png
+   :alt: Group access table in Edit Role dialog
+   :align: center
+   :width: 90%
+
+.. hint:: **🤔 Huh? I don’t see the group access table...**
+
+   The group access table is only visible
+   when there is **more than one active group** in the system.
 
 .. _user documentation: https://user-docs.zammad.org/en/latest/extras/knowledge-base.html

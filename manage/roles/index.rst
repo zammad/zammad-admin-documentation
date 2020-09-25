@@ -2,16 +2,15 @@ Roles
 *****
 
 Roles are a great way to provide the exact same permissions to several users.
-Roles work best with automated user synchronisation like :doc:`/system/integrations/ldap`.
 
 .. figure:: /images/manage/roles/role-overview.png
    :alt: Role overview within Zammads admin settings.
    :align: center
    :width: 90%
 
-.. hint:: 💡 **LDAP users:**
+.. hint:: 💡 **LDAP/Active Directory users:**
 
-   Syncing your LDAP “groups” to Zammad “roles” can sdf asdf.
+   Roles work best with automated user synchronisation like :doc:`/system/integrations/ldap`.
 
 Permissions
 -----------
@@ -21,7 +20,6 @@ Permissions
 
    admin-permissions
    agent-permissions
-   group-permissions
    user-preference-permissions
 
 Depending on your use cases, the default roles may be sufficient.
@@ -39,8 +37,8 @@ Depending on your use cases, the default roles may be sufficient.
    Agent permissions cover all areas that affect communication with customers.
    Agents are the backbone of your customer support, even though every agent may have different fields to work on.
 
-   :doc:`👪 group permissions <group-permissions>` depend on the agent permission.
-   You may not require them if you prefer to configure group permissions per :doc:`user </manage/users/index>`.
+   :doc:`👪 group access levels </manage/groups/access-levels>` depend on the agent permission.
+   You may not require them if you prefer to :doc:`configure group access levels on a per-user basis </manage/users/index>`.
 
    .. figure:: /images/manage/roles/agents-paradise.png
       :alt: Screenshot showing the most relevant areas for agents: tickets, overviews, chat, knowledge base and caller log.

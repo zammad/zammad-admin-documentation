@@ -37,7 +37,7 @@ These permissions are part of `Profile Settings <https://user-docs.zammad.org/en
 
 ``user.notifications``
     Allow your agents to decide which notifications they want to receive for their tickets.
-    Notifications are only sent on tickets your agent has :doc:`full permissions of a group <group-permissions>`.
+    Notifications are only sent on tickets your agent has :doc:`full permissions of a group </manage/groups/access-levels>`.
 
 ``user.out_of_office``
     If enabled your agents can define a replacement agent during their vacation.

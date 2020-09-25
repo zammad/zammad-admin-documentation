@@ -71,7 +71,7 @@ Password
    you’ll have to :doc:`generate an app password <2fa-gmail>` to use with Zammad.
 
 Destination Group
-   The :doc:`group </manage/groups>` that incoming mail will be assigned to.
+   The :doc:`group </manage/groups/index>` that incoming mail will be assigned to.
 
    Use :doc:`filters </channels/email/filters>`
    for more fine-grained sorting of incoming email.
