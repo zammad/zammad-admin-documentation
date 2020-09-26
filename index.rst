@@ -7,9 +7,9 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: Manage
 
-   manage/users
-   manage/groups
-   manage/roles
+   manage/users/index
+   manage/groups/index
+   manage/roles/index
    manage/organizations
    manage/overviews
    manage/text-modules

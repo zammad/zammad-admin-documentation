@@ -102,7 +102,7 @@ Username / Password
    Login credentials for a Zammad agent.
 
    .. note:: This agent must have **read permission**
-      for all :doc:`groups </manage/groups>` that plan on using the i-doit integration.
+      for all :doc:`groups </manage/groups/index>` that plan on using the i-doit integration.
 
       You may even wish to create a dedicated agent account just for this integration.
       (Otherwise, if the agent ever changes her password,

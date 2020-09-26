@@ -1,0 +1,77 @@
+Managing Users via the Admin Panel
+==================================
+
+The “Users” panel provides tools to manually manage user accounts.
+
+👥 Creating and editing users
+   .. figure:: /images/manage/users/new-user-dialog.gif
+      :alt: Screencast showing a user being created.
+      :align: center
+
+      Click the **New User** button to open the New User dialog,
+      or click on an existing user to edit.
+
+   .. hint:: See :ref:`user-details-reference`
+      for help with the New/Edit User dialog.
+
+🗑️ Deleting users
+   .. figure:: /images/manage/users/delete-user-via-user-management.gif
+      :alt: Screencast showing a user being selected for deletion.
+      :align: center
+
+      Use the ⋮ **Actions** menu to open the **Delete User** dialog.
+
+   .. warning:: 💥 **Deleting a customer destroys all their associated tickets!**
+
+      To learn more, see :doc:`/system/data-privacy`.
+
+🔎 Filtering the user list
+   .. figure:: /images/manage/users/user-list-restrict-by-role.gif
+      :alt: Screencast showing the user list being filtered by available user roles.
+      :align: center
+
+      Use the 🔎 **Search for users** bar and the **Roles** buttons to filter the list.
+      You may search by name, email, or any other user attribute.
+
+   .. note:: 🐞 **Known bug**
+
+      The search list displays up to 50 users, from newest to oldest.
+      That means that if there are more than 50 results,
+      the user you’re searching for might not be shown.
+
+      This is a `known bug`_ with a fix underway.
+
+      .. _known bug: https://github.com/zammad/zammad/issues/2214
+
+   .. _view-from-users-perspective:
+
+🏴‍☠️ Taking over a user’s session
+   .. figure:: /images/manage/users/takeover-user-session.gif
+      :alt: Screencast showing an admin switching to the users perspective
+      :align: center
+
+      Use the ⋮ **Actions** menu to 👁️ **View from user’s perspective**.
+
+   The **View from user’s perspective** button
+   allows you to “hijack” another user’s session
+   and confirm firsthand what they can and can’t do (or see)
+   when they’re logged in.
+
+   This is especially useful when you need to verify
+   that you’ve set up custom permissions correctly for non-admin users.
+
+   .. danger:: **⚠ With great power comes with great responsibility.**
+
+      This feature is not a simulation;
+      entering this mode will boot the user from their session,
+      and any actions you take
+      (responding to tickets, changing passwords,
+      :doc:`logging hours worked </manage/time-accounting>`)
+      will actually be performed from the user’s account.
+
+      (On the other hand, if the user logs back in, you’ll be booted, too.)
+
+   .. hint:: When finished,
+      use the **Back to my view ✕** button at the top of the page.
+      If you try to exit by logging out,
+      the “hijacked” user session will be restored when you log back in.

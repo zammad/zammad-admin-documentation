@@ -22,7 +22,7 @@ Destination Group
    Changing this setting will not reassign existing tickets to the new group.
 
    .. hint:: 📮 **Still can’t send outgoing email tickets?**
-      Check your :doc:`group settings </manage/groups>`.
+      Check your :doc:`group settings </manage/groups/settings>`.
 
 Email Address
    Use the **+ Add** or **Edit** buttons

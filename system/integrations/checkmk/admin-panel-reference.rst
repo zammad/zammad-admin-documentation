@@ -9,7 +9,7 @@ Settings
    :align: center
 
 Group
-   Which :doc:`group </manage/groups>` should Checkmk tickets be assigned to
+   Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned to
    as a default (*i.e.,* when none is specified)?
 
    (Applies to :ref:`API alerts <checkmk-api-alerts>` only.)
