@@ -45,6 +45,8 @@ User Preferences Permissions
 
                                        .. note:: Agents only receive ticket notifications for
                                           :doc:`groups they have “full” access to </manage/groups/access-levels>`.
+
+                                       .. hint:: Customers don't need this permission.
 :``user_preferences.out_of_office``:   Designate a substitute for out-of-office hours
 
                                        .. note:: 💡 **Security Tip**
@@ -57,4 +59,4 @@ User Preferences Permissions
                                        .. warning:: 🔑 **Third-party authentication / LDAP users:**
 
                                           Be sure to **revoke this permission** for all your users.
-                                          Otherwise, user passwords may fall out of sync.
+                                          Otherwise, users will have two passwords (local & LDAP).
