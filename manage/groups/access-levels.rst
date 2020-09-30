@@ -20,7 +20,7 @@ Within each group, the different access levels allow an agent to...
 :OVERVIEW: ...see ticket overviews (but not ticket details)
 :FULL:     ...all of the above **and be assigned tickets**
 
-.. note:: 🔔 **Group access also enables notifications for that group’s tickets.**
+.. note:: 🔔 **Full group access also enables notifications for that group’s tickets.**
 
 Setting Access Levels
 ---------------------
