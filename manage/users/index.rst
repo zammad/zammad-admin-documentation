@@ -33,7 +33,7 @@ Learn more about managing users...
    How? Zammad checks the sender of every incoming message
    at every inbox it monitors,
    and if it doesn’t recognize the address,
-   🪄 **poof**—new customer account!
+   ✨ **poof**—new customer account!
 
    (Your customers never need to set a password.
    Of course, they can if they want to,
@@ -57,7 +57,7 @@ The ones that aren’t are described below.
 .. note:: 🕵️ **Admins aren’t the only ones who can change these settings.**
 
    In most cases, agents can, too
-   (using the `new ticket dialog`_ or the `ticket pane`_).
+   (using the `new ticket dialog`_, search function or the `ticket pane`_).
 
    .. _new ticket dialog: https://user-docs.zammad.org/en/latest/basics/service-ticket/create.html
    .. _ticket pane: https://user-docs.zammad.org/en/latest/extras/customers.html
