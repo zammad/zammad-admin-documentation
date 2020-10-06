@@ -24,12 +24,9 @@ Agent Permissions
 
                             .. hint:: 🤓 Requires configuration of either integrations
 
-                               .. toctree::
-                                  :maxdepth: 1
-
-                                  Generic CTI </system/integrations/generic-cti>
-                                  placetel </system/integrations/placetel-cti>
-                                  sipgate </system/integrations/sipgate>
+                                  * :doc:`Generic CTI </system/integrations/generic-cti>`
+                                  * :doc:`placetel </system/integrations/placetel-cti>`
+                                  * :doc:`sipgate </system/integrations/sipgate>`
 
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             

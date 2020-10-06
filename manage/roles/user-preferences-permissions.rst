@@ -46,7 +46,7 @@ User Preferences Permissions
                                        .. note:: Agents only receive ticket notifications for
                                           :doc:`groups they have “full” access to </manage/groups/access-levels>`.
 
-                                       .. hint:: Customers don't need this permission.
+                                          Customers can’t receive ticket notifications at all.
 :``user_preferences.out_of_office``:   Designate a substitute for out-of-office hours
 
                                        .. note:: 💡 **Security Tip**
