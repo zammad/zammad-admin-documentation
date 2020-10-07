@@ -39,9 +39,6 @@ Learn more about managing users...
    Of course, they can if they want to,
    but the account will be there even if they never use it.)
 
-.. hint:: Zammad users are global to the whole instance. 
-   Restriction to specific groups is not possible.
-
 .. _user-details-reference:
 
 Reference Guide: User Details

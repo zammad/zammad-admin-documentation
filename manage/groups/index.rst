@@ -9,6 +9,9 @@ Tickets enter Zammad through various channels (e.g. via email) and are then sort
 
 For an additional way to categorize tickets, have a look at  :doc:`/manage/tags`.
 
+.. hint:: Zammad users are global to the whole instance. 
+   Restriction to specific groups is not possible.
+
 .. toctree::
    :maxdepth: 1
    :caption: Learn more
