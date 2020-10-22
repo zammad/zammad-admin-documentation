@@ -59,4 +59,6 @@ User Preferences Permissions
                                        .. warning:: 🔑 **Third-party authentication / LDAP users:**
 
                                           Be sure to **revoke this permission** for all your users.
-                                          Otherwise, users will have two passwords (local & LDAP).
+                                          When using a third-party identity server (like LDAP),
+                                          the whole point is to let *it* take care of authentication
+                                          so that passwords never have to live in Zammad’s database.
