@@ -17,10 +17,21 @@ Agent Permissions
 
    ...and give users access to new sidebar tabs for communicating with customers.
 
-:``chat.agent``:            :doc:`💬 Customer Chat </channels/chat>`
-:``cti.agent``:             :doc:`📞 Phone </system/integrations/generic-cti>` integration
-:``knowledge_base.editor``: :doc:`📕 Knowledge Base </manage/knowledge-base>` (create/edit privileges)
-:``knowledge_base.reader``: :doc:`📕 Knowledge Base </manage/knowledge-base>` (read privileges for internal & public content)
+:``chat.agent``:            `💬 Customer Chat <https://user-docs.zammad.org/en/latest/extras/chat.html>`_
+
+                            .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
+:``cti.agent``:             Provides access to `📞 Caller Log <https://user-docs.zammad.org/en/latest/extras/caller-log.html>`_
+
+                            .. hint:: 🤓 Requires configuration of either integrations
+
+                                  * :doc:`Generic CTI </system/integrations/generic-cti>`
+                                  * :doc:`placetel </system/integrations/placetel-cti>`
+                                  * :doc:`sipgate </system/integrations/sipgate>`
+
+:knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
+                            
+                            :``knowledge_base.editor``:     create/edit privileges
+                            :``knowledge_base.reader``:     read privileges for internal & public content
 :``report``:                :doc:`📈 Reporting </manage/report-profiles>`
 
                             .. warning:: 🙅 **Never grant this permission to your customers.**
@@ -35,7 +46,7 @@ Agent Permissions
                                3. it is typically reserved for admins and supervisors.
 
                             .. _role-settings-group-access:
-:``ticket.agent``:          :doc:`🗒️ (Agent) Overviews </manage/overviews>`
+:``ticket.agent``:          `🗒️ (Agent) Overviews <https://user-docs.zammad.org/en/latest/basics/find-ticket/browse.html>`_
 
                             .. note:: 🤔 **What’s this big table doing here in the middle of my permissions?**
 
