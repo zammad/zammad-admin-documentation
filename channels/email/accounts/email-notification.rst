@@ -26,6 +26,9 @@ Host
 User
    Your account login/username.
 
+   .. hint:: The “From:” address on system notifications can be configured under
+      :doc:`Channels > Email > Settings > Notification Sender <../settings>`.
+
 Password
    Your account password.
 

@@ -35,7 +35,7 @@ Control how Zammad **sends and receives email**.
 :doc:`⚙️  Settings <settings>`
    Manage options like: 
 
-   * set the “From:” address on auto-replies
+   * set the “From:” address on system notifications
    * raise the limit on attachment sizes
    * modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
 
