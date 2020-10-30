@@ -19,11 +19,15 @@ Setting up a new email account? Here’s what all the settings do.
    and to turn it back on once all your messages have been imported.
 
 .. note:: **Gmail / G Suite users:**
-   Google is in the process of upgrading its security policies.
-   To stay up-to-date, do **not** add your account as an email channel—instead,
-   create a :doc:`Google channel </channels/google/accounts/account-setup>`.
+      Google is in the process of upgrading its security policies.
+      To stay up-to-date, do **not** add your account as an email channel—instead,
+      create a :doc:`Google channel </channels/google/accounts/account-setup>`.
+   **Microsoft 365 users:**
+      Microsoft is in the process of upgrading its security policies.
+      To stay up-to-date, do **not** add your account as an email channel—instead,
+      create a :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
 
-   **Office365 / Exchange users:** Shared mailboxes are not supported.
+   **Microsoft 365 / Exchange users:** Shared mailboxes are not supported.
 
 Basic
 -----
