@@ -45,6 +45,8 @@ User Preferences Permissions
 
                                        .. note:: Agents only receive ticket notifications for
                                           :doc:`groups they have “full” access to </manage/groups/access-levels>`.
+
+                                          Customers can’t receive ticket notifications at all.
 :``user_preferences.out_of_office``:   Designate a substitute for out-of-office hours
 
                                        .. note:: 💡 **Security Tip**
@@ -57,4 +59,6 @@ User Preferences Permissions
                                        .. warning:: 🔑 **Third-party authentication / LDAP users:**
 
                                           Be sure to **revoke this permission** for all your users.
-                                          Otherwise, user passwords may fall out of sync.
+                                          When using a third-party identity server (like LDAP),
+                                          the whole point is to let *it* take care of authentication
+                                          so that passwords never have to live in Zammad’s database.
