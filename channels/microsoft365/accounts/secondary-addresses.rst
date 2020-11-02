@@ -1,4 +1,4 @@
-.. note:: Secondary addresses in Microsoft365 channels
+.. note:: Secondary addresses in Microsoft 365 channels
    work (almost) **just like they do in email channels**,
    so this article is lifted (almost) verbatim
    from :doc:`here </channels/email/accounts/secondary-addresses>`.

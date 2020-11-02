@@ -37,22 +37,23 @@ Step-by-Step
 
 To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.com/>`_. 
 
-   .. warning:: Ensure to create this app with your organizations admin account. 
-      Using accounts that are not part of your organization will require further approvements 
-      from organization administrators!
+.. note:: 🔑 **Use an admin account for your organization.**
 
-1. **Create a new App**
+   Otherwise, an admin will have to approve your changes
+   before they can take effect.
 
-   Name
-      This name will be displayed within the consent screen.
+1. **Add an App Registration**
+
+   Under **App Registrations > ➕ New Registration**,
+   use the following:
 
    Supported account types
-      Choose **Accounts in any organizational directory (Any Azure AD directory - Multitenant) 
+      **Accounts in any organizational directory
+      (Any Azure AD directory - Multitenant) 
       and personal Microsoft accounts (e.g. Skype, Xbox)**.
 
-   Redirect URI (optional)
-      Select **Web** and provide the Callback URL.
-      *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
+   Redirect URI
+      **Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
 
       Find it in the Zammad admin panel
       under **Channels > Microsoft 365 > Connect Microsoft 365 App > Your callback URL**.
@@ -63,7 +64,19 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
 
 2. **Add API permissions**
 
-   Use the **➕ Add a permission** button to start your search.
+   Under **API Permissions > ➕ Add a permission > Microsoft Graph > Delegated permissions**, add the following:
+
+   OpenId permissions
+      * ``email``
+      * ``offline_access``
+      * ``openid``
+      * ``profile``
+
+   IMAP
+      * ``IMAP.AccessAsUser.all``
+
+   SMTP
+      * ``SMTP.Send``
 
    .. figure:: /images/channels/microsoft365/accounts/register-app/02-add-api-permissions.gif
       :alt: Screencast demo of enabling Microsoft API permissions in Microsoft Azure Portal
@@ -71,9 +84,14 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
 
 3. **Connect your Microsoft app in Zammad**
 
-   Create a new client secret and copy your new OAuth app’s credentials 
-   (**Application (client) ID** and **client secret**) into Zammad in the admin panel, 
+   Copy your new app registration’s **Application (client) ID**
+   (found under **Overview > Essentials**)
+   into Zammad in the admin panel, 
    under **Channels > Microsoft 365 > Connect Microsoft 365 App**.
+
+   Then, create a new client secret
+   under **Certificates and Secrets > ➕ New Client Secret**
+   and copy that into the Zammad admin panel, as well.
 
    .. figure:: /images/channels/microsoft365/accounts/register-app/03-add-oauth-credentials.gif
       :alt: Screencast demo of entering Microsoft OAuth credentials in Zammad admin panel

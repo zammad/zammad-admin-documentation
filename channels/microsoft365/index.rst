@@ -9,9 +9,7 @@ Microsoft 365
    signatures
    settings
 
-Connect a Microsoft 365 account to Zammad.
-
-.. hint:: Microsoft 365 was prior called Office 365.
+Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
 
 .. figure:: /images/channels/microsoft365/panel.png
    :alt: Email settings panel

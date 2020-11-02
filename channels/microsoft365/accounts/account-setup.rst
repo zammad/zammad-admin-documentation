@@ -22,8 +22,8 @@ in your Azure Portal, you can begin connecting Microsoft accounts to Zammad.
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 
-If you’ve already added your Microsoft365 account as a regular email channel,
-you’ll have to convert it to a Microsoft365 channel eventually:
+If you’ve already added your Microsoft 365 account as a regular email channel,
+you’ll have to convert it to a Microsoft 365 channel eventually:
 Microsoft is planning to end support for simple password authentication
 in third-party email clients (like Zammad).
 **But there’s no rush just yet**.
@@ -36,12 +36,12 @@ well before Microsoft officially pulls the plug on password auth.
    remember to **delete the email channel for your Microsoft account**
    (and all its associated aliases) before re-adding it here.
 
-   .. figure:: /images/channels/microsoft365/email-addresses-without-channel.png
+   .. figure:: /images/channels/microsoft365/accounts/account-setup/email-addresses-without-channel.png
       :alt: List of orphaned email addresses
       :scale: 60%
       :align: center
 
-      Make sure you don’t have any of these left over before creating your new Microsoft365 channel.
+      Make sure you don’t have any of these left over before creating your new Microsoft 365 channel.
 
 Add a New Account
 -----------------
@@ -51,16 +51,19 @@ Add a New Account
    :scale: 50%
    :align: center
 
-Click **Add Account** to connect your Microsoft365 / Outlook accounts to Zammad.
+Click **Add Account** to connect your Microsoft 365 / Outlook accounts to Zammad.
 You will be redirected to a Microsoft sign-in and confirmation page.
 
-Aliases are not imported automatically, see :doc:`secondary-addresses` to add further aliases.
+
+.. note:: 🕵️ **Aliases are not imported automatically.**
+
+   See :doc:`secondary-addresses` to add them yourself.
 
 Channel
 ^^^^^^^
 
 .. figure:: /images/channels/microsoft365/accounts/account-setup/microsoft365-account-settings.png
-   :alt: Click on Add Account to add your Microsoft365 account to Zammad
+   :alt: Click on Add Account to add your Microsoft 365 account to Zammad
    :scale: 50%
    :align: center
 

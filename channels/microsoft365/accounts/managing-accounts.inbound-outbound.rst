@@ -5,7 +5,7 @@ Fetch Preferences
    See :ref:`New Account Settings <microsoft365-folder>`
    for a detailed description of each option.
 
-   .. figure:: /images/channels/microsoft365/updating-microsoft365-account.png 
+   .. figure:: /images/channels/microsoft365/accounts/managing-accounts/updating-microsoft365-account.png 
       :alt: Location of account details settings for existing accounts
       :scale: 60%
       :align: center

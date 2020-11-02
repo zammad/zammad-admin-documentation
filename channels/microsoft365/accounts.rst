@@ -31,7 +31,7 @@ Accounts
    Send and receive email at **additional email addresses**,
    all through the same mailbox/account.
 
-   .. figure:: /images/channels/microsoft365/add-microsoft365-alias.gif
+   .. figure:: /images/channels/microsoft365/accounts/add-microsoft365-alias.gif
       :alt: Adding new aliases to your Microsoft account in Zammad
       :scale: 60%
       :align: center
@@ -47,9 +47,8 @@ Accounts
 Email Notification
    This option is **not available on Microsoft365 channels**.
 
-   To configure the outgoing mail provider for system notifications,
-   use a :doc:`regular email notification channel </channels/email/accounts>`.
-   (Self-hosted installations only.)
+   (See the corresponding section on the
+   :doc:`Email Accounts </channels/email/accounts>` page to learn more.)
 
    .. note:: 🤔 **Why?**
 
