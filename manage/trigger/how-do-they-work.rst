@@ -52,6 +52,8 @@ A trigger can do the following things once its conditions have been met:
    *e.g.,* Escalate its priority, close it, reassign it, rename it, add tags, etc.
 * Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in the system.
+* :doc:`Submit data via webhook <webhooks>`
+   Send a complete Payload containing the ticket information together with its articles and users.
 * add internal or public notes to the ticket
    This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)
 
