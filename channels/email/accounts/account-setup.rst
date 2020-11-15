@@ -178,6 +178,35 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+Optional Archive Import
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: 
+
+   This option only appears if you have emails older than two weeks in your mailbox, 
+   configured Zammad not to keep messages on the server and fetch mails via IMAP.
+
+Zammad will ask you if you want to import the mails ``regular`` or as ``archive``. 
+Here's the differences:
+
+regular
+   If any triggers are configured, Zammad will send mails to the ticket creators and also 
+   notifications to the agents. The creation dates of the tickets are the moment Zammad fetched the mail.
+
+archive
+   Zammad will not send any notifications or triggered emails during ticket creation. 
+   Affected Tickets will be created with closed state. Don't worry, you can always find them by searching!
+
+   .. note:: 
+
+      🤓 The archive option only affects tickets before the channel creation date.
+      All newer mails will be imported as ``regular``.
+
+.. figure:: /images/channels/email/account-setup-archive-import.png
+   :alt: Optional archive import mode for email channel.
+   :align: center
+   :width: 60%
+
 Email Outbound
 ^^^^^^^^^^^^^^
 
