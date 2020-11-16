@@ -34,6 +34,8 @@ Accounts
       :scale: 25%
       :align: center
 
+   .. _email-notification:
+
 :doc:`accounts/email-notification`
    Configure the outgoing mail provider for **system notifications**.
    (Self-hosted installations only.)
