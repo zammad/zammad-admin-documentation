@@ -66,31 +66,34 @@ brew install gettext
 The workflow itself
 ```
 # create .tx config
-tx init
-# or when just want to update a ressource
-tx set --source -r <project_slug.resource_slug> -l <lang> <file>
+$ tx init
 
-make clean
+# ensure clean enviroment
+$ make clean
 
-# this will generate the strings from the *.rst files
-make gettext
+# generate the strings from the *.rst files
+$ make gettext
 
-# this will generate the locales (DE|EN)
-sphinx-intl update -p _build/locale/ -l de -l en
+# OPTIONAL: if you have to adapt a new locale, run
+sphinx-intl update -p _build/locale/ -l de
 
-# this will update the ressource files from the pot dir
-sphinx-intl update-txconfig-resources --pot-dir _build/locale --transifex-project-name zammad-admin-documentation
+# update the resource files from the pot dir
+$ sphinx-intl update-txconfig-resources --pot-dir _build/locale --transifex-project-name zammad-admin-documentation
 
 # push to transifex (if configured)
-tx push -s
+$ tx push -s
 
+# Below pull options by default ignore unreviewed (see https://docs.transifex.com/client/pull#getting-different-file-variants )
 # after translation pull needed languages from transifex
-tx pull -l en
+$ tx pull -l en
 
-# manual build based upon the language (_build/html/)
-make -e SPHINXOPTS="-D language='de'" html
-make -e SPHINXOPTS="-D language='en'" html
+# build the .MO files for use with readthedocs
+# (After a successful build, push to this repo and readthedocs will update itself.)
+$ sh build_mo.sh
 
+# manual language-based build (`_build/html/`) (for testing)
+$ make -e SPHINXOPTS="-D language='de'" html
+$ make -e SPHINXOPTS="-D language='en'" html
 ```
 
 If you have a problem, please create an issue. Thanks.
