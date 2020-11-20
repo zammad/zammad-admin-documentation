@@ -32,13 +32,16 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     # Override default css to get a larger width for local build
     def setup(app):
+        app.add_js_file('theme/zammad_overrides.js')
         app.add_css_file('theme/theme_overrides.css')
 else:
     # Override default css to get a larger width for ReadTheDoc build
-    html_context = {
-        'css_files': [
-            'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
-            'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
-            '_static/theme/theme_overrides.css'
-        ],
-    }
+    html_css_files = [
+        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        'theme/theme_overrides.css'
+    ]
+
+    html_js_files = [
+        'theme/zammad_overrides.js',
+    ]
