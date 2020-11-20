@@ -1,62 +1,47 @@
 Webhooks
 ========
 
-Webhooks are a great way to tell third parties about changes in Zammad.
-By using webhooks, you won't need to poll Zammads API for changes (and remember the last state)!
+Webhooks are a way to integrate Zammad with other web services or applications,
+allowing them to subscribe to live updates about new tickets
+instead of having to poll the Zammad server every *n* minutes.
 
-The webhook Zammad sends contains a JSON payload with all information about the ticket in question:
+.. note:: ⌛ **Webhooks may not arrive immediately.**
 
-   * ticket meta information
-   * *all* articles
-   * group information of the ticket
-   * *all* users of the ticket articles
-   * role details relevant to listed users
-   * organizations of users *if applicable*
+   Webhooks are sent out with the same priority and order as email triggers.
+   If webhook dispatch fails (*e.g.,* because the receiving server is misconfigured),
+   Zammad will retry up to four times.
 
+How does it work?
+-----------------
 
+Under the hood, Zammad sends a POST request
+to a third-party URL (“API endpoint”) you specify in the New Trigger dialog.
+The application server behind this URL/endpoint
+must be configured to receive messages from Zammad
+and handle the attached data accordingly.
 
-Technical information
-+++++++++++++++++++++
+Webhook requests from Zammad contain the following JSON data about new/incoming tickets:
 
-.. note:: **🤓 Limitations**
+* ticket attributes/metadata
+* *all* associated articles
+* associated users (*e.g.,* article senders, owners, etc.)
+* associated user roles
+* associated user organizations (if applicable)
+* associated groups
 
-   In order to reduce the payload size Zammad will provide the Links to the attachments.
-   You can retreive them if needed - be sure to access these authenticated.
+Request headers
+---------------
 
-   The following user attributes **are not sent** via webhook:
+Zammad sends the following headers in each webhook POST request:
 
-      * ``last_login``
-      * ``login_failed``
-      * ``password``
-      * ``preferences``
-      * ``group_ids``
-      * ``groups``
-      * ``authorization_ids``
-      * ``authorizations``
+:``User-Agent``:        ``"Zammad User Agent"``
+:``X-Zammad-Trigger``:  The name of the originating trigger
+:``X-Zammad-Delivery``: A unique, random ID string
+:``X-Hub-Signature``:   The SHA-1 hash of your HMAC-SHA1 signature token
+                        (assuming you provided one when creating your trigger)
 
-.. hint:: **⏲ Webhooks are sent delayed**
-
-   Webhooks are treated similar like emails.
-   If we can't submit the webhook data successfully, we will try another 4 times.
-
-
-Request-Header
---------------
-
-The following headers are set by Zammad:
-
-   * User-Agent: ``Zammad User Agent``
-   * X-Zammad-Trigger: ``{Name of trigger you chose}``
-   * X-Zammad-Delivery: ``{Unique Random ID}``
-   * X-Hub-Signature: ``{sha1 hash of your HMAC-SHA1 signature token}``
-
-      .. note:: This header is only set if you provide a secret!
-
-Payload
--------
-
-Below payload is not a complete payload, we stripped out empty and ``null`` values to reduce its size.
-The payload would also contain custom objects if you defined any.
+JSON payload (example)
+----------------------
 
 .. code-block:: json
 
@@ -353,3 +338,26 @@ The payload would also contain custom objects if you defined any.
        "accounted_time": 0
      }
    }
+
+.. note::
+
+   * For better readability, all empty and ``null`` values
+     have been omitted from the sample payload above.
+     That means the webhooks you receive
+     *will include additional fields not shown here*.
+
+   * Webhooks will also include fields for any relevant
+     :doc:`custom objects </system/objects>` defined in your system.
+
+   * Attachments are *not included*; links to attachments *are* (authentication required).
+
+   * None of the following **user attributes** are included:
+
+     * ``last_login``
+     * ``login_failed``
+     * ``password``
+     * ``preferences``
+     * ``group_ids``
+     * ``groups``
+     * ``authorization_ids``
+     * ``authorizations``
