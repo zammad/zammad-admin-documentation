@@ -1,23 +1,22 @@
 /* Custom overrides */
 /* No oversized <pre>, please - Thanks to @TJemxx */
 
-function OnLoadRunner(){
-  CalculatePres();
-  AddOnClick();
+function onLoadRunner(){
+  calculatePres();
+  addOnClick();
 }
 
 // Function to fire (re)-calculation for <pre> elements
-function CalculatePres(){
-  pres = document.getElementsByTagName('pre');
-  for(var i = 0; i < pres.length; i++){ 
-    WorkPres(pres[i], i);
+function calculatePres(){
+  const pres = document.getElementsByTagName('pre');
+  for(let i = 0; i < pres.length; i++){ 
+    workPres(pres[i], i);
   };
-  console.log("<pre> elements reviewed ...")
 }
 
 // Update <pre> elements
-function WorkPres(item, index) {
-  var size = 250;
+function workPres(item, index) {
+  const size = 250;
 
   if ( !document.getElementById(item) ){
     item.setAttribute('id', 'pre-' + index);
@@ -26,13 +25,11 @@ function WorkPres(item, index) {
   if( item.clientHeight > size ){
     
     if ( !document.getElementById('button-' + item) ){
-      var button = document.createElement('button');
+      const button = document.createElement('button');
       button.setAttribute('onclick', 'shortPre(' + index + ')');
       button.setAttribute('id', 'button-pre-' + index);
       $(button).html('Expand to full size ...').addClass('shorten-pre-button');    
       item.appendChild(button);
-
-      console.log("added button for big <pre> (pre-" + index + ")")
     }
     
     item.classList.add('shorten-pre');
@@ -40,9 +37,9 @@ function WorkPres(item, index) {
 };
 
 function shortPre(i) {
-  var attr = 'pre-' + i
-  var pre = document.getElementById(attr);
-  var button = document.getElementById('button-' + attr);
+  const attr = 'pre-' + i;
+  const pre = document.getElementById(attr);
+  const button = document.getElementById('button-' + attr);
 
   if ( pre.classList.contains('shorten-pre')) {
     pre.classList.remove('shorten-pre');
@@ -57,21 +54,20 @@ function shortPre(i) {
   }
 }
 
-function AddOnClick(){
+function addOnClick(){
   // Find all possible tabs to add onClick actions
-  console.log("Add onClick actions for <a>-data-tabs (if any) ...")
-  tabs = document.getElementsByTagName('a');
-  for(var i = 0; i < tabs.length; i++){ 
+  const tabs = document.getElementsByTagName('a');
+  for(let i = 0; i < tabs.length; i++){ 
     if ( tabs[i].hasAttribute('data-tab') ){
-      WorkTabs(tabs[i]);
+      workTabs(tabs[i]);
     }
   };
 }
 
 // Provide all tabs with onClick action
-function WorkTabs(item) {
-  item.setAttribute('onclick', 'CalculatePres()');
+function workTabs(item) {
+  item.setAttribute('onclick', 'calculatePres()');
 }
 
 // onLoad run through all pres and add shorten classes to those that are quite long
-window.addEventListener('load', OnLoadRunner, false);
+window.addEventListener('load', onLoadRunner, false);
