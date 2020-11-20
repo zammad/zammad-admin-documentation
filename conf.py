@@ -43,6 +43,6 @@ else:
             '_static/theme/theme_overrides.css'
         ],
         'js_files': [
-        	'_static/theme/zammad_overrides.js'
+            '_static/theme/zammad_overrides.js'
         ],
     }

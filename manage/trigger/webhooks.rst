@@ -1,7 +1,7 @@
 Webhooks
 ========
 
-Webhooks are a great way to tell third parties about changes in Zammad. 
+Webhooks are a great way to tell third parties about changes in Zammad.
 By using webhooks, you won't need to poll Zammads API for changes (and remember the last state)!
 
 The webhook Zammad sends contains a JSON payload with all information about the ticket in question:
@@ -12,7 +12,7 @@ The webhook Zammad sends contains a JSON payload with all information about the 
    * *all* users of the ticket articles
    * role details relevant to listed users
    * organizations of users *if applicable*
-   
+
 
 
 Technical information
@@ -20,7 +20,7 @@ Technical information
 
 .. note:: **🤓 Limitations**
 
-   In order to reduce the payload size Zammad will provide the Links to the attachments. 
+   In order to reduce the payload size Zammad will provide the Links to the attachments.
    You can retreive them if needed - be sure to access these authenticated.
 
    The following user attributes **are not sent** via webhook:
@@ -36,7 +36,7 @@ Technical information
 
 .. hint:: **⏲ Webhooks are sent delayed**
 
-   Webhooks are treated similar like emails. 
+   Webhooks are treated similar like emails.
    If we can't submit the webhook data successfully, we will try another 4 times.
 
 
@@ -55,7 +55,7 @@ The following headers are set by Zammad:
 Payload
 -------
 
-Below payload is not a complete payload, we stripped out empty and ``null`` values to reduce its size. 
+Below payload is not a complete payload, we stripped out empty and ``null`` values to reduce its size.
 The payload would also contain custom objects if you defined any.
 
 .. code-block:: json

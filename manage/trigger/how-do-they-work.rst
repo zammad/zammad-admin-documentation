@@ -5,8 +5,8 @@ Triggers consist of two parts: **conditions** and **changes**. Conditions
 answer the question, “when should this trigger fire?” Changes answer the
 question, “what should happen when it does?”
 
-Triggers are evaluated in alphabetical order, by **name.** 
-In some situations triggers might be the wrong choice, see :doc:`/manage/trigger/limitations` 
+Triggers are evaluated in alphabetical order, by **name.**
+In some situations triggers might be the wrong choice, see :doc:`/manage/trigger/limitations`
 for more information.
 
 Conditions
@@ -16,7 +16,7 @@ When creating a trigger, define your conditions here:
 
   .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-conditions.png
 
-Trigger conditions are **and-selectors** and thus all conditions must apply as configured for the trigger to fire. 
+Trigger conditions are **and-selectors** and thus all conditions must apply as configured for the trigger to fire.
 You can configure triggers to fire based on the properties of:
 
 * The **Ticket** itself
@@ -32,11 +32,11 @@ You can configure triggers to fire based on the properties of:
    *e.g.,* What is the name of the customer’s organization? Does it have a note
    attached to it containing a certain set of words?
 * The **Execution time** the trigger is being triggered
-    *e.g.,* Only send out a auto-reply if the mail has been received outside of 
+    *e.g.,* Only send out a auto-reply if the mail has been received outside of
     the working hour times. Working hours can be defined on :doc:`/manage/calendars` setting.
 
     .. Note::
-       
+
        The business hours condition was introduced with Zammad 3.3.
 
 Actions
