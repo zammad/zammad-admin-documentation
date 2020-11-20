@@ -1,21 +1,18 @@
 /* Custom overrides */
 /* No oversized <pre>, please - Thanks to @TJemxx */
-function shortPre(i) {
-  var attr = 'pre-' + i
-  var pre = document.getElementById(attr);
-  var button = document.getElementById('button-' + attr);
 
-  if ( pre.classList.contains('shorten-pre')) {
-    pre.classList.remove('shorten-pre');
-    pre.classList.add('release-shorten-pre');
+function OnLoadRunner(){
+  CalculatePres();
+  AddOnClick();
+}
 
-    $(button).html('Reduce to smaller size ...')
-  } else {
-    pre.classList.remove('release-shorten-pre');
-    pre.classList.add('shorten-pre');
-
-    $(button).html('Expand to full size ...')
-  }
+// Function to fire (re)-calculation for <pre> elements
+function CalculatePres(){
+  pres = document.getElementsByTagName('pre');
+  for(var i = 0; i < pres.length; i++){ 
+    WorkPres(pres[i], i);
+  };
+  console.log("<pre> elements reviewed ...")
 }
 
 // Update <pre> elements
@@ -42,18 +39,22 @@ function WorkPres(item, index) {
   }
 };
 
-// Provide all tabs with onClick action
-function WorkTabs(item) {
-  item.setAttribute('onclick', 'CalculatePres()');
-}
+function shortPre(i) {
+  var attr = 'pre-' + i
+  var pre = document.getElementById(attr);
+  var button = document.getElementById('button-' + attr);
 
-// Function to fire (re)-calculation for <pre> elements
-function CalculatePres(){
-  pres = document.getElementsByTagName('pre');
-  for(var i = 0; i < pres.length; i++){ 
-    WorkPres(pres[i], i);
-  };
-  console.log("<pre> elements reviewed ...")
+  if ( pre.classList.contains('shorten-pre')) {
+    pre.classList.remove('shorten-pre');
+    pre.classList.add('release-shorten-pre');
+
+    $(button).html('Reduce to smaller size ...')
+  } else {
+    pre.classList.remove('release-shorten-pre');
+    pre.classList.add('shorten-pre');
+
+    $(button).html('Expand to full size ...')
+  }
 }
 
 function AddOnClick(){
@@ -67,9 +68,9 @@ function AddOnClick(){
   };
 }
 
-function OnLoadRunner(){
-  CalculatePres();
-  AddOnClick();
+// Provide all tabs with onClick action
+function WorkTabs(item) {
+  item.setAttribute('onclick', 'CalculatePres()');
 }
 
 // onLoad run through all pres and add shorten classes to those that are quite long
