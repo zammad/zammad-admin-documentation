@@ -26,13 +26,6 @@ Setting up a new email account? Here’s what all the settings do.
       To stay up-to-date, do **not** add your account as an email channel—instead,
       create a :doc:`Google channel </channels/google/accounts/account-setup>`.
 
-.. note::
-
-   **Gmail / G Suite users:**
-      Google is in the process of upgrading its security policies.
-      To stay up-to-date, do **not** add your account as an email channel—instead,
-      create a :doc:`Google channel </channels/google/accounts/account-setup>`.
-
    **Microsoft 365 users:**
       Microsoft is in the process of upgrading its security policies.
       To stay up-to-date, do **not** add your account as an email channel—instead,
