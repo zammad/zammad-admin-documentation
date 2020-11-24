@@ -11,12 +11,13 @@ Setting up a new email account? Here’s what all the settings do.
    Use the *Experts* dialog to
    :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
 
+   .. _email-experts-import-as-warning:
+
 .. warning:: 📮 **Zammad will send an auto-reply message
    to every email it imports.** (Including the old ones!)
 
-   Make sure to :doc:`disable this behavior </manage/trigger>`
-   prior adding an email account,
-   and to turn it back on once all your messages have been imported.
+   Use the *Experts* dialog to
+   :ref:`change this behavior <email-experts-import-as>`.
 
 .. note::
 
@@ -178,34 +179,35 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
-Optional Archive Import
-^^^^^^^^^^^^^^^^^^^^^^^
+   .. _email-experts-import-as:
 
-.. note:: 
+Import as
+   .. figure:: /images/channels/email/account-setup-archive-import.png
+      :alt: “Import as” option in Email account setup dialog
+      :align: center
+      :width: 40%
 
-   This option only appears if you have emails older than two weeks in your mailbox, 
-   configured Zammad not to keep messages on the server and fetch mails via IMAP.
+      How should old emails be imported?
 
-Zammad will ask you if you want to import the mails ``regular`` or as ``archive``. 
-Here's the differences:
+   During the import process, Zammad treats **all messages**
+   (including ones you’ve already read from months or years ago)
+   as if they had been sent today:
+   senders will receive auto-replies saying
+   “your message has been received and we’ll get back to you within 24 hours,”
+   and tickets created for each message will be marked as “new”.
 
-regular
-   If any triggers are configured, Zammad will send mails to the ticket creators and also 
-   notifications to the agents. The creation dates of the tickets are the moment Zammad fetched the mail.
+   Use this option to disable this behavior for messages more than two weeks old.
 
-archive
-   Zammad will not send any notifications or triggered emails during ticket creation. 
-   Affected Tickets will be created with closed state. Don't worry, you can always find them by searching!
+   .. note:: This option may not be shown if:
 
-   .. note:: 
+      * all messages in your inbox are less than two weeks old
+      * you selected **Keep messages on server: Yes**
+      * you selected **Type: POP3**
 
-      🤓 The archive option only affects tickets before the channel creation date.
-      All newer mails will be imported as ``regular``.
-
-.. figure:: /images/channels/email/account-setup-archive-import.png
-   :alt: Optional archive import mode for email channel.
-   :align: center
-   :width: 60%
+      For more fine-grained control,
+      manually disable this and other :doc:`triggers </manage/trigger>`
+      before adding an email account,
+      then turn them back on once all your messages have been imported.
 
 Email Outbound
 ^^^^^^^^^^^^^^
