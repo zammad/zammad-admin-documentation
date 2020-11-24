@@ -11,12 +11,13 @@ Setting up a new email account? Here’s what all the settings do.
    Use the *Experts* dialog to
    :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
 
+   .. _email-experts-import-as-warning:
+
 .. warning:: 📮 **Zammad will send an auto-reply message
    to every email it imports.** (Including the old ones!)
 
-   Make sure to :doc:`disable this behavior </manage/trigger>`
-   prior adding an email account,
-   and to turn it back on once all your messages have been imported.
+   Use the *Experts* dialog to
+   :ref:`change this behavior <email-experts-import-as>`.
 
 .. note::
 
@@ -177,6 +178,36 @@ Keep messages on server
       If you choose **yes** here, remember that it’s your responsibility
       to clean out your inbox from time to time
       to keep it below its storage limit.
+
+   .. _email-experts-import-as:
+
+Import as
+   .. figure:: /images/channels/email/account-setup-archive-import.png
+      :alt: “Import as” option in Email account setup dialog
+      :align: center
+      :width: 40%
+
+      How should old emails be imported?
+
+   During the import process, Zammad treats **all messages**
+   (including ones you’ve already read from months or years ago)
+   as if they had been sent today:
+   senders will receive auto-replies saying
+   “your message has been received and we’ll get back to you within 24 hours,”
+   and tickets created for each message will be marked as “new”.
+
+   Use this option to disable this behavior for messages more than two weeks old.
+
+   .. note:: This option may not be shown if:
+
+      * all messages in your inbox are less than two weeks old
+      * you selected **Keep messages on server: Yes**
+      * you selected **Type: POP3**
+
+      For more fine-grained control,
+      manually disable this and other :doc:`triggers </manage/trigger>`
+      before adding an email account,
+      then turn them back on once all your messages have been imported.
 
 Email Outbound
 ^^^^^^^^^^^^^^
