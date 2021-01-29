@@ -31,7 +31,11 @@ Agent Permissions
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
                             :``knowledge_base.editor``:     create/edit privileges
-                            :``knowledge_base.reader``:     read privileges for internal & public content
+                            :``knowledge_base.reader``:     read privileges for internal content
+
+                                                            .. hint::
+
+                                                               Public articles are always visible.
 :``report``:                :doc:`📈 Reporting </manage/report-profiles>`
 
                             .. warning:: 🙅 **Never grant this permission to your customers.**
