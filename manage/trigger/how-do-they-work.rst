@@ -56,6 +56,7 @@ A trigger can do the following things once its conditions have been met:
    Connect Zammad to another web service or application to give it live updates about new tickets.
 * add internal or public notes to the ticket
    This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)
+* set *static* or *relative* times for date or date-time fields
 
 .. note:: In order to send emails with Triggers, you need to configure an email address for the group the trigger is working in.
    If you don't, Zammad will skip the Trigger completely.
