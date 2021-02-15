@@ -22,3 +22,19 @@ of the kinds of automation tasks you can set up with macros.
       :align: center
       :width: 90%
       :alt: Screencast showing spam macro configuration and behavior
+
+2. Postpone a ticket for 7 days:
+   
+   Postponing a ticket can have various reasons. In this example we want to 
+   give the customer some time to reply before we get back to the customer 
+   and manually ask for more input. 
+
+   .. tip::
+
+      Technically :doc:`/manage/scheduler` are perfect for automated reminders 
+      for customers. Above sample reminds the agent to do things.
+
+   .. figure:: /images/manage/macros/macro-example-postpone-ticket-for-7days.gif
+      :align: center
+      :width: 90%
+      :alt: Screencast showing postpone macro configuration and behavior

@@ -25,6 +25,8 @@ A macro can do the following things:
 * add internal or public notes to the ticket
    This allows you to help your agents with specific information if needed. 
    (e.g. automated changes a macro applied to the ticket)
+* use relative time 
+   (e.g. set a pending reminder of a ticket in 7 days)
 
 Further Settings
 ----------------
