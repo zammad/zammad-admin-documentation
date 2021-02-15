@@ -13,10 +13,15 @@ Macros are available to any agent with and can differ depending on the
 group of the ticket. They ensure consistent work flows and saving time on 
 the daily little things.
 
-.. figure:: /images/manage/macros/
-   :align: center
-   :width: 80%
-   :alt: X
+.. image:: /images/manage/macros/macro-selection-ticket-view.png
+   :align: left
+   :width: 45%
+   :alt: Example macros within a ticket detail view.
+
+.. image:: /images/manage/macros/macro-bulk-operation-overview.png
+   :align: right
+   :width: 45%
+   :alt: Example macros within an overview (bulk operation).
 
 .. toctree::
    :maxdepth: 1

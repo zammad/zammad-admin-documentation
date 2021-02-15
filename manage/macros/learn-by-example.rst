@@ -2,20 +2,23 @@ Learn by example
 ================
 
 To get you up and running quickly, here are some examples
-of the kinds of automation tasks you can set up with triggers.
+of the kinds of automation tasks you can set up with macros.
 
-.. hint:: If they don't make sense to you, don't worry—just skip ahead to
+.. hint:: 
+
+   If they don't make sense to you, don't worry—just skip ahead to
    :doc:`/manage/macros/how-do-they-work`
    to learn about all the options in detail,
    then come back here to see them in action.
 
-1. Close spam tickets:
+1. Close and mark tickets as spam:
 
    .. tip::
 
       This macro is perfect for combining with a :doc:`/manage/scheduler` 
       to clean up unwanted tickets!
 
-   .. figure:: /images/manage/macros/
-
-2. X
+   .. figure:: /images/manage/macros/macro-example-mark-ticket-as-spam.gif
+      :align: center
+      :width: 90%
+      :alt: Screencast showing spam macro configuration and behavior
