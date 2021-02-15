@@ -58,6 +58,9 @@ A trigger can do the following things once its conditions have been met:
    This allows you to help your agents with specific information if needed. 
    (e.g. automated changes a trigger applied to the ticket)
 * set *static* or *relative* times for date or date-time fields
+   Sometimes you might want to handle specific postpones automatically for 
+   the agent or customer. Using relative (or even static) times will greatly 
+   support you on this path.
 
 .. note:: 
    In order to send emails with Triggers, you need to configure an email 
