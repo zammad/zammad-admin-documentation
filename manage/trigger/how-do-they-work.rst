@@ -6,7 +6,7 @@ answer the question, “when should this trigger fire?” Changes answer the
 question, “what should happen when it does?”
 
 Triggers are evaluated in alphabetical order, by **name.**
-In some situations triggers might be the wrong choice, see 
+In some situations triggers might be the wrong choice, see
 :doc:`/manage/trigger/limitations` for more information.
 
 Conditions
@@ -16,12 +16,12 @@ When creating a trigger, define your conditions here:
 
    .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-conditions.png
 
-Trigger conditions are **and-selectors** and thus all conditions must apply as 
-configured for the trigger to fire. You can configure triggers to fire based on 
+Trigger conditions are **and-selectors** and thus all conditions must apply as
+configured for the trigger to fire. You can configure triggers to fire based on
 the properties of:
 
 * The **Ticket** itself
-   *e.g.,* Was this ticket newly created? Is the ticket currently open? When 
+   *e.g.,* Was this ticket newly created? Is the ticket currently open? When
    was the last time we received contact from the customer on this ticket?
 * New **Articles** on the ticket
    *e.g.,* Was this article added by email? by phone? Was it created by an
@@ -32,9 +32,10 @@ the properties of:
 * The **Organizations** that the ticket’s customer belongs to
    *e.g.,* What is the name of the customer’s organization? Does it have a note
    attached to it containing a certain set of words?
-* The **Execution time** the trigger is being triggered *e.g.,* Only send out 
-   a auto-reply if the mail has been received outside of the working hour 
-   times. Working hours can be defined on :doc:`/manage/calendars` setting.
+* The **Execution time** the trigger is being triggered
+   *e.g.,* Only send an auto-reply if the message was received outside of
+   regular business hours. (“Regular business hours” can be defined on
+   :doc:`/manage/calendars` setting.)
 
 Actions
 -------
@@ -46,29 +47,25 @@ When creating a trigger, define your changes here:
 A trigger can do the following things once its conditions have been met:
 
 * Modify the ticket
-   *e.g.,* Escalate its priority, close it, reassign it, rename it, 
+   *e.g.,* Escalate its priority, close it, reassign it, rename it,
    add tags, etc.
+
+   Date & time attributes (like **Pending till** or **Escalation at**) can be
+   specified in *absolute* or *relative* terms.
 * Send an email or SMS
-   Either to the customer, the agent who owns the ticket, or every agent in 
+   Either to the customer, the agent who owns the ticket, or every agent in
    the system.
 * :doc:`Fire a webhook <webhooks>`
-   Connect Zammad to another web service or application to give it live updates 
+   Connect Zammad to another web service or application to give it live updates
    about new tickets.
-* add internal or public notes to the ticket
-   This allows you to help your agents with specific information if needed. 
+* Add internal or public notes to the ticket
+   This allows you to help your agents with specific information if needed.
    (e.g. automated changes a trigger applied to the ticket)
-* set *static* or *relative* times for date or date-time fields
-   Sometimes you might want to handle specific postpones automatically for 
-   the agent or customer. Using relative (or even static) times will greatly 
-   support you on this path.
 
-.. note:: 
-   In order to send emails with Triggers, you need to configure an email 
-   address for the group the trigger is working in. If you don't, Zammad will 
-   skip the Trigger completely.
+.. note:: In order to send emails with Triggers, you need to configure
+   an email address for the group the trigger is working in. If you
+   don't, Zammad will skip the Trigger completely.
 
-.. hint::
-
-   Certain actions (such as *Email*, *SMS* and *Notes*) support 
-   :doc:`/system/variables`, which can be used to build highly-customized 
-   message templates.
+.. hint:: Certain actions (such as *Email*, *SMS* and *Notes*) support
+   :doc:`/system/variables`, which can be used to build
+   highly-customized message templates.
