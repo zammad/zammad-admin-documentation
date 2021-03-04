@@ -2,7 +2,7 @@ Learn by example
 ================
 
 To get you up and running quickly, here are some examples
-of the kinds of automation tasks you can set up with macros.
+of the kinds of one-click actions you can set up using macros.
 
 .. hint:: 
 
@@ -11,30 +11,32 @@ of the kinds of automation tasks you can set up with macros.
    to learn about all the options in detail,
    then come back here to see them in action.
 
-1. Close and mark tickets as spam:
+1. If you deal with a lot of spam, you could set up a macro that applies
+   the following changes to a ticket:
 
-   .. tip::
-
-      This macro is perfect for combining with a :doc:`/manage/scheduler` 
-      to clean up unwanted tickets!
+   :State: closed
+   :Tags:  add ``spam``
+   :Owner: current user
 
    .. figure:: /images/manage/macros/macro-example-mark-ticket-as-spam.gif
       :align: center
-      :width: 90%
+      :width: 70%
       :alt: Screencast showing spam macro configuration and behavior
 
-2. Postpone a ticket for 7 days:
-   
-   Postponing a ticket can have various reasons. In this example we want to 
-   give the customer some time to reply before we get back to the customer 
-   and manually ask for more input. 
+   .. tip:: 💡 Run this macro in a :doc:`/manage/scheduler` 
+      to periodically clean up unwanted tickets.
 
-   .. tip::
+2. If you want to set a ticket’s state to *pending reminder*, it’s
+   usually a two-step process—first select the state, then select a date.
+   To always set a reminder for the same, fixed amount of time (say,
+   seven days later), you can bundle the whole change into a macro:
 
-      Technically :doc:`/manage/scheduler` are perfect for automated reminders 
-      for customers. Above sample reminds the agent to do things.
+   :Note:         “Postponing ticket for 7 days.” (🔒 internal visibility only)
+   :State:        pending reminder
+   :Pending Till: relative / 7 / days
+   :Owner:        current user
 
    .. figure:: /images/manage/macros/macro-example-postpone-ticket-for-7days.gif
       :align: center
-      :width: 90%
+      :width: 70%
       :alt: Screencast showing postpone macro configuration and behavior

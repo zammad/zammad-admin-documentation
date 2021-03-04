@@ -1,67 +1,61 @@
 How do they work?
 =================
 
-Macros consist of **actions**. Thy allow you do run several actions 
-on a specific or selection of tickets.
+Macros are made up of **actions** (changes to a ticket).
+You can add as many actions to a macro as you want.
 
-Macros can be restricted by groups to allow specific actions for specific user 
-groups. In some situations macros might be the wrong choice, 
-see :doc:`/manage/macros/limitations` for more information.
+There are also a few other settings that affect who can use a macro or how it behaves.
 
-Actions
--------
+Creating Macros
+---------------
 
-When creating a macro, define your desired actions:
+.. figure:: /images/manage/macros/macro-actions.png
+   :width: 80%
+   :align: center
+   :alt: Screenshot showing different possible actions for macros.
 
-   .. figure:: /images/manage/macros/macro-actions.png
-      :width: 80%
-      :align: center
-      :alt: Screenshot showing different possible actions for macros.
+:Actions:
+   You can create actions to:
 
-A macro can do the following things:
+   * set ticket attributes (priority, state, group, etc.)
+   * add new notes to a ticket
 
-* Modify the ticket
-   *e.g.,* Escalate its priority, close it, reassign it, rename it, add tags, etc.
-* add internal or public notes to the ticket
-   This allows you to help your agents with specific information if needed. 
-   (e.g. automated changes a macro applied to the ticket)
-* use relative time 
-   (e.g. set a pending reminder of a ticket in 7 days)
+   There are **no** actions for:
 
-Further Settings
-----------------
+   * sending a reply to the customer
 
-:Once completed:
-   This setting allows you decide how you want to proceed with the current 
-   ticket tab. 
+   .. note:: Unlike triggers, the scheduler, and text modules,
+      macro actions do **not** support the use of
+      :doc:`/system/variables`.
 
-   .. note:: 
+   .. warning:: If the ticket is missing a required attribute
+      and the macro doesn’t set it, then **no actions will be
+      applied**.
 
-      Please see :doc:`/manage/macros/limitations` in this regard as well.
+:Once completed...:
+   After running this macro, should Zammad remain on the current
+   tab, close it, or automatically switch to the next ticket?
+   (Does not apply when running macros “in bulk”.)
 
 :Note:
-   A note for you and your other administrators. 
-   It's only shown within the configuration screen, rails console and API.
+   What should other Zammad admins know about this macro?
+   (Visible only via the “Edit: Macro” dialog, Rails console, and API.)
 
 :Groups:
-   Some macros may not make any sense outside of specific groups. 
-   This setting allows you to select groups the Macro should be available in.
+   Which :doc:`/manage/groups/index` are allowed to see/use this macro?
 
 :Active:
-   If deleting is not yet an option, you can also set Macros to inactive.
+   Choose “inactive” to disable this macro without deleting it.
 
-To Clone or Delete ...
-----------------------
+Managing Macros
+---------------
 
-The macro overview screen allows you to either clone or delete the macro in 
-question.
+You can delete or even clone existing macros in the Admin Panel under **Manage > Macros**. 
 
-   .. figure:: /images/manage/macros/macro-clone-and-remove.gif
-      :align: center
-      :width: 80%
-      :alt: Screencast showing the creation of a new macro via cloning and its removal
+.. figure:: /images/manage/macros/macro-clone-and-remove.gif
+   :align: center
+   :width: 80%
+   :alt: Screencast showing the creation of a new macro via cloning and its removal
 
-   .. tip::
-
-      During cloning Zammad will allow you to configure your very new macro 
-      right away. If you cancel the new dialog, no new Macro will be added.
+   When cloning a macro, you *must* click “Submit” for the duplicate
+   to be created.
