@@ -1,48 +1,40 @@
 Macros
-******
+======
 
-Macros make it easy to automate common, multi-step tasks within Zammad. You can use macros in Zammad to automate recurring sequences, saving time (and nerves). This allows a combined sequence of actions on the ticket to be executed with just one click.
+Macros are **🖱️ one-click shortcuts** for applying changes to a ticket.
 
-In the Macros Management Mask you can add, edit and delete macros:
+If you find yourself making the same changes to lots of tickets
+(*e.g.,* close-and-tag-as-spam or reassign-to-another-group),
+you can store those changes in a macro for easy access:
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Macros.jpg
+.. figure:: /images/manage/macros/macro-selection-ticket-view.png
+   :alt: Example macros within a ticket detail view.
+   :align: center
+   :width: 70%
 
+   Choose from the macros **Close & Tag as Spam**, **Move to RMA**,
+   and **Reply & Close & Tag as Banana**.
 
-Adding or updating Macros
--------------------------
+You can also apply macros in bulk (*i.e.,* to many tickets all at once) via the *Overviews* page:
 
-By either clicking on an existing macro to edit it or clicking on "New Macro" on the upper right to add new Macros, the macro app will open:
+.. figure:: /images/manage/macros/macro-bulk-operation-overview.png
+   :alt: Example macros within an overview (bulk operation).
+   :align: center
+   :width: 70%
 
-.. image:: /images/manage/Zammad_Helpdesk_-_Macros2.jpg
+   Select your desired tickets, then click-and-drag
+   to apply a macro to all of them.
 
-One macro can contain any number of changes to the ticket. In this example you close the ticket, set the owner and tag the ticket - all with just one click!
+You can create or edit macros on the Macros page of the admin panel:
 
+.. figure:: /images/manage/macros/macro-overview.png
+   :align: center
+   :width: 80%
+   :alt: Screenshot of “Macros” page in admin panel
 
-As of Zammad 2.6, macros can be configured to close the current tab when finished, so you can move straight onto the next ticket without another thought.
+.. toctree::
+   :maxdepth: 1
+   :caption: Learn more
 
-This setting is optional, of course, so there’s nothing to worry about if you don’t want your macros to work like this.
-
-.. image:: /images/manage/Macro.jpg
-
-
-Using Macros
-------------
-
-You have two options on how to use Macros:
-
-1. In the ticket on the right lower corner. There is an arrow next to the "update" button. All active macros are displayed here:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Macros3.jpg
-
-
-2. If you want to apply a macro for more than one ticket, you have to select all the corresponding tickets in the overview:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Macros4.jpg
-
-select all relevant tickets, click, hold down the cursor and move it anywhere, like that:
-
-.. image:: /images/manage/Zammad_Helpdesk_-_Macros5.jpg
-
-Keep the cursor pressed and go to "Run Macro" so that you can see all active macros:
-
-.. image:: /images/manage/Zammad_Helpdesk-Macros6.jpg
+   /manage/macros/learn-by-example
+   /manage/macros/how-do-they-work
