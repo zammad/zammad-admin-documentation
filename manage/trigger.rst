@@ -32,6 +32,5 @@ for all sorts of automation tasks on the Trigger page of the admin panel:
 
    /manage/trigger/learn-by-example
    /manage/trigger/how-do-they-work
-   /manage/trigger/webhooks
    /manage/trigger/limitations
    /manage/trigger/system-notifications

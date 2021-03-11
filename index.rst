@@ -18,6 +18,7 @@ Zammad - Documentation for administrators
    manage/calendars
    manage/slas
    manage/trigger
+   manage/webhook
    manage/scheduler
    manage/report-profiles
    manage/time-accounting
