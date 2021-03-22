@@ -1,11 +1,11 @@
-Github
+GitHub
 ======
 
-The Github integration allows you to link issues to your Zammad tickets 
+The GitHub integration allows you to link issues to your Zammad tickets 
 and keep track without switching sites.
 
 .. figure:: /images/system/integrations/github/github-integration-page.png
-   :alt: Integration page for Github
+   :alt: Integration page for GitHub
    :align: center
    :width: 90%
 
@@ -38,9 +38,9 @@ Step 2: Configure Zammad
 
    .. hint:: 
 
-      The default endpoint for Github is ``https://api.github.com/graphql``. 
+      The default endpoint for GitHub is ``https://api.github.com/graphql``. 
       You only have to adjust this value if you're using 
-      Github Enterprise Server.
+      GitHub Enterprise Server.
 
 Apart from that, you only have to submit your API-Token. 
 Upon saving Zammad will verify the connection - this may take a moment. 
@@ -48,14 +48,14 @@ If everything is ready, just activate the integration and a new tab on the
 ticket settings will appear. 🎉
 
 .. figure:: /images/system/integrations/github/configure-and-active-github-integration.gif
-   :alt: Screencast showing how to configure Zammads Github integration
+   :alt: Screencast showing how to configure Zammads GitHub integration
    :align: center
    :width: 90%
 
 Limitations
 -----------
 
-The Github integration currently is limited to Issues only. 
+The GitHub integration currently is limited to Issues only. 
 
 Frequently Asked Questions
 --------------------------
@@ -65,6 +65,6 @@ Frequently Asked Questions
    It should be solved within minutes - if not, please see 2. below.
 
 2. The token verification takes forever!
-   Please ensure that your Zammad-Server can communicate to Github. 
+   Please ensure that your Zammad-Server can communicate to GitHub. 
    Depending on your systems load and connectivity the verification may take 
    quite some time.
