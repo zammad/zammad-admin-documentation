@@ -53,6 +53,7 @@ Integrations for Issue-Trackers
    :titlesonly:
 
    integrations/github
+   integrations/gitlab
 
 Other Integrations
 ^^^^^^^^^^^^^^^^^^
