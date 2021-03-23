@@ -21,6 +21,13 @@ Step 1: Create API-Key for Zammad
       account which has access to all repositories in question. This especially 
       is relevant if you're working with private repositories.
 
+      .. warning:: **🚧 If you're working with private repositories only... 🚧**
+
+         Below permissions to not work with private repositories. 
+         GitHub does not provide granular read only for those which is why 
+         you have to use ``repo`` permission instead. We don't recommend that - 
+         it provides a lot of additional access.
+
 Go to your account settings and navigate to **Developer settings** → 
 **Personal access tokens**. On this new site click on **Generate new token** to 
 add a new API-Token. On the next screen provide a meaningful name 
