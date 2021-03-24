@@ -31,6 +31,10 @@ Agent Permissions
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
                             :``knowledge_base.editor``:     create/edit privileges
+
+                                                            .. hint::
+
+                                                              Editor permissions always include reader permissions.
                             :``knowledge_base.reader``:     read privileges for internal content
 
                                                             .. hint::
