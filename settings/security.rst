@@ -74,7 +74,6 @@ Another big advantage of this feature is that your user doesn't need another pas
 .. note:: We're currently missing documentation for the following login providers:
 
    * LinkedIn
-   * Generic OAuth2
    * Weibo
 
 .. _automatic-account-linking:
