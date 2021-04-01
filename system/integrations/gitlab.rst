@@ -1,69 +1,54 @@
 GitLab
 ======
 
-The GitLab integration allows you to link issues to your Zammad tickets 
-and keep track without switching sites.
+Use GitLab integration to track GitLab issues directly within Zammad tickets.
+Add issue hyperlinks and get a live summary of metadata
+like status (open/closed), assignee, labels, and more.
 
 .. figure:: /images/system/integrations/gitlab/gitlab-integration-page.png
    :alt: Integration page for GitLab
    :align: center
    :width: 90%
 
-Configuration
--------------
+.. note:: GitLab integration does not support merge requests.
 
-Step 1: Create API-Key for Zammad
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setup
+-----
 
-   .. note::
+1. In your GitLab preferences, create a new API token under **Access Tokens**.
 
-      API-Keys are bound to users. In this case it makes sense to use an admin 
-      account which has access to all repositories in question. This especially 
-      is relevant if you're working with private repositories.
+   Under **Select scopes**, choose ``read_api`` only.
 
-Go to your account preferences and navigate to **Access Tokens**. 
-Provide a meaningful name (e.g. ``Zammad``) and tick the scope ``read_api`` 
-on the new page.
+   .. figure:: /images/system/integrations/gitlab/add-api-token-gitlab.gif
+      :alt: Screencast showing how to create a new API token
+      :align: center
+      :width: 90%
 
-That's it, submit the form in order to receive the token.
+   .. hint:: 🔒 **If you wish to link issues on any private repos...**
 
-.. figure:: /images/system/integrations/gitlab/add-api-token-gitlab.gif
-   :alt: Screencast showing how to create a new API-Token
-   :align: center
-   :width: 90%
+      Your API token must belong to an account with access to those repos.
 
-Step 2: Configure Zammad
-^^^^^^^^^^^^^^^^^^^^^^^^
+2. Enter your new API token in Zammad and enable GitLab integration.
 
-   .. hint:: 
+   .. figure:: /images/system/integrations/gitlab/configure-and-active-gitlab-integration.gif
+      :alt: Screencast showing how to configure Zammad’s GitLab integration
+      :align: center
+      :width: 90%
 
-      The default endpoint for hosted GitLab is 
-      ``https://gitlab.com/api/graphql``. If you're hosting your own GitLab 
-      instance, just replace ``gitlab.com`` with the FQDN or your installation.
+   .. hint:: Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
+      unless you’re a self-hosted GitLab user.
 
-Apart from that, you only have to submit your API-Token. 
-Upon saving Zammad will verify the connection - this may take a moment. 
-If everything is ready, just activate the integration and a new tab on the 
-ticket settings will appear. 🎉
+Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
 
-.. figure:: /images/system/integrations/gitlab/configure-and-active-gitlab-integration.gif
-   :alt: Screencast showing how to configure Zammads GitLab integration
-   :align: center
-   :width: 90%
+Troubleshooting
+---------------
 
-Limitations
------------
+Token verification is taking a long time
+   Slight delays are normal (<2 min.), especially for systems under heavy load.
 
-The GitLab integration currently is limited to Issues only. 
+   Self-hosted administrators, please check your network settings
+   to ensure that your Zammad server can reach gitlab.com.
 
-Frequently Asked Questions
---------------------------
-
-1. I entered the credentials, left the side and now the credentials are gone!:
-   This is an indicator for Zammad still verifying your provided data. 
-   It should be solved within minutes - if not, please see 2. below.
-
-2. The token verification takes forever!
-   Please ensure that your Zammad-Server can communicate to GitLab. 
-   Depending on your systems load and connectivity the verification may take 
-   quite some time.
+I reloaded the page and now the API token is gone
+   This may indicate that Zammad is still verifying your API token.
+   Try reloading the page again in a couple minutes.

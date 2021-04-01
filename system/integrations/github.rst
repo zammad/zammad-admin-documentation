@@ -1,77 +1,58 @@
 GitHub
 ======
 
-The GitHub integration allows you to link issues to your Zammad tickets 
-and keep track without switching sites.
+Use GitHub integration to track GitHub issues directly within Zammad tickets.
+Add issue hyperlinks and get a live summary of metadata
+like status (open/closed), assignee, labels, and more.
 
 .. figure:: /images/system/integrations/github/github-integration-page.png
    :alt: Integration page for GitHub
    :align: center
    :width: 90%
 
-Configuration
--------------
+.. note:: GitHub integration does not support pull requests.
 
-Step 1: Create API-Key for Zammad
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setup
+-----
 
-   .. note::
+1. In your GitHub settings, create a new API token under
+   **Developer settings > Personal access tokens > Generate new token**.
 
-      API-Keys are bound to users. In this case it makes sense to use an admin 
-      account which has access to all repositories in question. This especially 
-      is relevant if you're working with private repositories.
+   Under **Select scopes**, choose ``public_repo`` only.
 
-      .. warning:: **🚧 If you're working with private repositories only... 🚧**
+   .. figure:: /images/system/integrations/github/add-api-token-github.gif
+      :alt: Screencast showing how to create a new API token
+      :align: center
+      :width: 90%
 
-         Below permissions to not work with private repositories. 
-         GitHub does not provide granular read only for those which is why 
-         you have to use ``repo`` permission instead. We don't recommend that - 
-         it provides a lot of additional access.
+      Create a new API key with ``public_repo`` privileges.
 
-Go to your account settings and navigate to **Developer settings** → 
-**Personal access tokens**. On this new site click on **Generate new token** to 
-add a new API-Token. On the next screen provide a meaningful name 
-(e.g. ``Zammad``) followed by ``public_repo`` permission. 
+   .. hint:: 🔒 **If you wish to link issues on any private repos...**
 
-That's it, submit the form in order to receive the token.
+      1. Use the ``repo`` parent scope instead.
+      2. Your API token must belong to an account with access to those repos.
 
-.. figure:: /images/system/integrations/github/add-api-token-github.gif
-   :alt: Screencast showing how to create a new API-Token
-   :align: center
-   :width: 90%
+2. Enter your new API token in Zammad and enable GitHub integration.
 
-Step 2: Configure Zammad
-^^^^^^^^^^^^^^^^^^^^^^^^
+   .. figure:: /images/system/integrations/github/configure-and-active-github-integration.gif
+      :alt: Screencast showing how to configure Zammad’s GitHub integration
+      :align: center
+      :width: 90%
 
-   .. hint:: 
+   .. hint:: Leave the default API endpoint (``https://api.github.com/graphql``) as-is
+      unless you’re using GitHub Enterprise Server.
 
-      The default endpoint for GitHub is ``https://api.github.com/graphql``. 
-      You only have to adjust this value if you're using 
-      GitHub Enterprise Server.
+Once completed, a new GitHub issues tab will appear in the ticket pane. 🎉
 
-Apart from that, you only have to submit your API-Token. 
-Upon saving Zammad will verify the connection - this may take a moment. 
-If everything is ready, just activate the integration and a new tab on the 
-ticket settings will appear. 🎉
+Troubleshooting
+---------------
 
-.. figure:: /images/system/integrations/github/configure-and-active-github-integration.gif
-   :alt: Screencast showing how to configure Zammads GitHub integration
-   :align: center
-   :width: 90%
+Token verification is taking a long time
+   Slight delays are normal (<2 min.), especially for systems under heavy load.
 
-Limitations
------------
+   Self-hosted administrators, please check your network settings
+   to ensure that your Zammad server can reach api.github.com.
 
-The GitHub integration currently is limited to Issues only. 
-
-Frequently Asked Questions
---------------------------
-
-1. I entered the credentials, left the side and now the credentials are gone!:
-   This is an indicator for Zammad still verifying your provided data. 
-   It should be solved within minutes - if not, please see 2. below.
-
-2. The token verification takes forever!
-   Please ensure that your Zammad-Server can communicate to GitHub. 
-   Depending on your systems load and connectivity the verification may take 
-   quite some time.
+I reloaded the page and now the API token is gone
+   This may indicate that Zammad is still verifying your API token.
+   Try reloading the page again in a couple minutes.
