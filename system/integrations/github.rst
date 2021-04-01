@@ -17,20 +17,26 @@ Setup
 
 1. In your GitHub settings, create a new API token under
    **Developer settings > Personal access tokens > Generate new token**.
-
-   Under **Select scopes**, choose ``public_repo`` only.
+   Leave the **Scopes** section empty.
 
    .. figure:: /images/system/integrations/github/add-api-token-github.gif
       :alt: Screencast showing how to create a new API token
       :align: center
       :width: 90%
 
-      Create a new API key with ``public_repo`` privileges.
+      Create a new API key with no scopes/privileges.
 
-   .. hint:: 🔒 **If you wish to link issues on any private repos...**
+   .. hint:: 🔒 **Will this work for private repos?**
 
-      1. Use the ``repo`` parent scope instead.
-      2. Your API token must belong to an account with access to those repos.
+      No. To link private repo issues, **use the** ``repo`` **scope instead**.
+      Bear in mind that the resulting token will have
+      `lots of permissions that it doesn’t actually need
+      <https://docs.github.com/en/developers/apps/scopes-for-oauth-apps>`_,
+      which presents a security risk
+      if your token ever falls into the wrong hands.
+
+      Unfortunately, because of how GitHub’s OAuth token scopes are set up,
+      this is the only way to link issues on private repos.
 
 2. Enter your new API token in Zammad and enable GitHub integration.
 
