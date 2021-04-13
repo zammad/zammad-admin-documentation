@@ -45,6 +45,16 @@ Integrations for Monitoring Systems
    integrations/checkmk/index
    integrations/zabbix
 
+Integrations for Issue Trackers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   integrations/github
+   integrations/gitlab
+
 Other Integrations
 ^^^^^^^^^^^^^^^^^^
 
