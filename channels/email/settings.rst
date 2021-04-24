@@ -14,7 +14,7 @@ List of Settings
 
 Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}>``
    This is the default sender address for Zammad that affects all mails but those generated because of replies (like triggers or agent based mails).
-   Your customers normally will not see this address. This email address does not need to receive and can't bne assigned to a group.
+   Your customers normally will not see this address. This email address does not need to receive and can't be assigned to a group.
 
    .. note:: This address is relevant for agent notifications and password reset mails (also affects customers).
 Additional follow-up detection
