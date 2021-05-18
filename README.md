@@ -41,8 +41,7 @@ This will ensure that your changes are available upon merge.
 If you want to test the doc for yourself you need a local installation of sphinx and gettext.
 
 ```
-pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme
-
+pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme sphinx-version-warning
 ```
 
 
