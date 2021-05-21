@@ -21,7 +21,7 @@ You can find further information in :doc:`overviews`
 
 **2. by a search-query**
 
-Enter e. g.: ``tag:banana`` in the search mask and you will receive all tickets that have been tagged accordingly. For a collected listing, click on "Show Search Details" under the search box:
+Enter e. g.: ``tags:banana`` in the search mask and you will receive all tickets that have been tagged accordingly. For a collected listing, click on "Show Search Details" under the search box:
 
 .. image:: /images/manage/tag_banana.jpg
 
