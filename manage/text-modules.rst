@@ -1,10 +1,6 @@
 Text Modules
 ============
 
-.. warning:: With Zammad 3.1 we introduced group based text modules. This documentation contains information that might no longer apply to Zammad versions earlier 3.1.
-
-Create text templates to spend less time writing responses. You can create text passages (Text modules) or even entire response templates.
-
 .. note:: Beside text modules Zammad also allows you to use `Ticket-Templates for ticket creation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_.
 
 
@@ -89,10 +85,3 @@ With the import action (since Zammad 2.5) you can download a sample CSV file and
 To reduce the error rate of unwanted mass changes, a test import is carried out first and a summary appears at the end. If you agree with the summary, the CSV import will be executed.
 
 .. image:: /images/manage/Zammad_Helpdesk_-_Text_modules-Import.jpg
-
-
-
-Ticket templates for new tickets
---------------------------------
-
-Ticket templates in new tickets can be created by any agent. Therefore you will find information inside of our `User-Documentation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_ .
