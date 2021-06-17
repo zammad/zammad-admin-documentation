@@ -6,10 +6,6 @@ Text Modules
    Beside text modules Zammad also allows you to use `Ticket-Templates for ticket 
    creation <https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html>`_.
 
-
-Text modules
-------------
-
 Text modules can be edited in the admin interface under Manage --> Text modules.
 Here you will find text snippets already created in the standard version, which 
 can be extended as needed.
