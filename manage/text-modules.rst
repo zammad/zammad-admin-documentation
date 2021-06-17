@@ -1,5 +1,5 @@
-Text Templates
-==============
+Text Modules
+============
 
 .. warning:: With Zammad 3.1 we introduced group based text modules. This documentation contains information that might no longer apply to Zammad versions earlier 3.1.
 
