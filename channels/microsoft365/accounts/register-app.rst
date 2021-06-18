@@ -96,8 +96,8 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
 
 3. **Connect your Microsoft app in Zammad**
 
-   Copy your new app registration’s **Application (client) ID**
-   (found under **Overview > Essentials**)
+   Copy your new app registration’s **Application (client) ID** and 
+   **Directory (tenant) ID** (found under **Overview > Essentials**) 
    into Zammad in the admin panel, 
    under **Channels > Microsoft 365 > Connect Microsoft 365 App**.
 
