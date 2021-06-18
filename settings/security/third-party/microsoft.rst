@@ -5,6 +5,11 @@ Zammads Office 365 allows your users with Microsoft accounts to login.
 This works for Azure users as well and can be an alternative to 
 :doc:`/system/integrations/ldap`.
 
+.. note::
+
+   This documentation part does not cover our 
+   :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`.
+
 .. figure:: /images/settings/security/third-party/microsoft/zammad-login-with-office365-button.png
    :alt: Screenshot showing Office365 login button on Zammad login screen.
    :scale: 75%
