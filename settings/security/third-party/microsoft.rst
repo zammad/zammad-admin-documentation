@@ -65,10 +65,12 @@ Redirect URI (optional):
    :align: center
 
 Within  **API permissions** add the following permissions:
-   
-   * Contacts.Read
-   * openid
-   * User.read (set by default)
+   OpenId permissions
+      * ``openid``
+   User
+      * ``User.Read``
+   Contacts
+      * ``Contacts.Read``
 
 You can find these permissions within *Microsoft Graph → Delegated permissions*. 
 
