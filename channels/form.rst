@@ -27,6 +27,12 @@ Finally, the forms will look as follows:
 .. image:: /images/channels/zammad_form_live.png
    :alt: example form as modal dialog
 
+**Requirements**
+
+Zammad form requires jQuery. If you don't already use it on your website include it like this:
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 Potential Spam-Issue
 --------------------
 

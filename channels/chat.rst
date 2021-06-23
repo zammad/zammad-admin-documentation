@@ -68,7 +68,7 @@ The final result will look like the following:
 
 Zammad chat requires jQuery. If you don't already use it on your website include it like this:
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 You have two options to implement the chat on your website:
 
