@@ -48,21 +48,10 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
    use the following:
 
    Supported account types
-      Choose from one of the following options:
+      Choose the option that’s right for your organization
+      (or click *Help me choose...* if you’re not sure).
 
-      * Accounts in this organizational directory only 
-        (Default Directory only - Single tenant)
-      * Accounts in any organizational directory 
-        (Any Azure AD directory - Multitenant)
-      * Accounts in any organizational directory 
-        (Any Azure AD directory - Multitenant) 
-        and personal Microsoft accounts (e.g. Skype, Xbox)
-
-      .. tip::
-
-         The correct account type depends on your use case. 
-         If you want to use the authentication internal only, choose the first 
-         option. If you're unsure, use the "Help me choose..." link.
+      .. note:: 🙅 **The “Personal Microsoft accounts only” option is not supported.**
 
    Redirect URI
       **Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
