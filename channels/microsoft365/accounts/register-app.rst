@@ -51,7 +51,17 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
       Choose the option that’s right for your organization
       (or click *Help me choose...* if you’re not sure).
 
-      .. note:: 🙅 **The “Personal Microsoft accounts only” option is not supported.**
+      * Accounts in this organizational directory only 
+        (Default Directory only - Single tenant)
+      * Accounts in any organizational directory 
+        (Any Azure AD directory - Multitenant)
+      * Accounts in any organizational directory 
+        (Any Azure AD directory - Multitenant) 
+        and personal Microsoft accounts (e.g. Skype, Xbox)
+
+      .. note:: 
+
+         🙅 **The “Personal Microsoft accounts only” option is not supported.**
 
    Redirect URI
       **Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
