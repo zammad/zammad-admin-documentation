@@ -48,9 +48,20 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
    use the following:
 
    Supported account types
-      **Accounts in any organizational directory
-      (Any Azure AD directory - Multitenant) 
-      and personal Microsoft accounts (e.g. Skype, Xbox)**.
+      Choose the option that’s right for your organization
+      (or click *Help me choose...* if you’re not sure).
+
+      * Accounts in this organizational directory only 
+        (Default Directory only - Single tenant)
+      * Accounts in any organizational directory 
+        (Any Azure AD directory - Multitenant)
+      * Accounts in any organizational directory 
+        (Any Azure AD directory - Multitenant) 
+        and personal Microsoft accounts (e.g. Skype, Xbox)
+
+      .. note:: 
+
+         🙅 **The “Personal Microsoft accounts only” option is not supported.**
 
    Redirect URI
       **Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
@@ -84,8 +95,8 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
 
 3. **Connect your Microsoft app in Zammad**
 
-   Copy your new app registration’s **Application (client) ID**
-   (found under **Overview > Essentials**)
+   Copy your new app registration’s **Application (client) ID** and 
+   **Directory (tenant) ID** (found under **Overview > Essentials**) 
    into Zammad in the admin panel, 
    under **Channels > Microsoft 365 > Connect Microsoft 365 App**.
 
