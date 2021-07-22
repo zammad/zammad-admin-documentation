@@ -38,3 +38,4 @@ Webhook requests from Zammad contain the following JSON data about new/incoming 
    :caption: Learn more
 
    /manage/webhook/payload
+   /manage/webhook/log
