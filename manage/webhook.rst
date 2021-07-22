@@ -37,5 +37,6 @@ Webhook requests from Zammad contain the following JSON data about new/incoming 
    :maxdepth: 1
    :caption: Learn more
 
+   /manage/webhook/add
    /manage/webhook/payload
    /manage/webhook/log
