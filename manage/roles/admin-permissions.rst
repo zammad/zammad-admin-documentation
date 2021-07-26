@@ -87,7 +87,7 @@ Admin Permissions
 :``admin.security``:         :doc:`Settings > Security </settings/security>` settings of Zammad
                              This also covers third party authentications.
 :``admin.session``:          :doc:`System > Sessions </system/sessions>`
-:``admin.setting_system``:   :doc:`Settings > System </settings/system>` of Zammad
+:``admin.setting_system``:   :doc:`Settings > System </settings/system/index>` of Zammad
 :``admin.sla``:              :doc:`Manage > SLAs </manage/slas>`
 :``admin.tag``:              :doc:`Manage > Tags </manage/tags>`
 :``admin.text_module``:      :doc:`Manage > Text Modules </manage/text-modules>`
