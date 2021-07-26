@@ -23,6 +23,8 @@ SystemID
    In case you're communicating with another ticket system with similar
    ticket number schemes this ID greatly reduces the risk of false follow ups.
 
+   The SystemID is randomly selected upon installation of Zammad (``1-99``).
+
    .. warning::
 
       **Do not** change this setting in a productive system!
