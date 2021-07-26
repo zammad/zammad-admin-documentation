@@ -2,8 +2,8 @@ Webhook
 =======
 
 Webhooks are a way to integrate Zammad with other web services or applications,
-allowing them to subscribe to live updates about new tickets
-instead of having to poll the Zammad server every *n* minutes.
+allowing them to subscribe to live updates about tickets instead of having to
+poll the Zammad server every *n* minutes.
 
 .. note:: ⌛ **Webhooks may not arrive immediately.**
 
