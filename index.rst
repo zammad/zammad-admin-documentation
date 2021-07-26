@@ -47,7 +47,7 @@ Zammad - Documentation for administrators
    :caption: Settings
 
    settings/branding
-   settings/system
+   settings/system/index
    settings/security
    settings/ticket
 
