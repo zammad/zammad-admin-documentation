@@ -32,7 +32,7 @@ Supported account types:
 Avatars of signing in users:
    Zammad currently ignores user avatars. If the user is registered with 
    e.g. Gravatar, Zammad will fetch the avatar from there if enabled. 
-   See :doc:`Zammad Image Service </settings/system>` for more.
+   See :doc:`Zammad Image Service </settings/system/index>` for more.
 
 Step 1 - Register a Microsoft app for Zammad
 --------------------------------------------
