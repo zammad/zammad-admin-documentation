@@ -133,4 +133,4 @@ Default at signup
       The default role is identified in the overview
       of the **Manage > Roles** admin panel.
 
-   .. warning:: 🙅 **This role should never provide admin/agent permissions.**
+   .. warning:: 🙅 **Default roles should never provide admin/agent permissions.**
