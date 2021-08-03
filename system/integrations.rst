@@ -66,3 +66,4 @@ This section will hold any other integration that can't be grouped up (yet).
 
    integrations/slack
    integrations/i-doit
+   integrations/elasticsearch
