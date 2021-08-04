@@ -4,7 +4,7 @@ Elasticsearch (SaaS)
 The Elasticsearch integration allows you to create a read-only user to use
 with your favorite reporting tool (e.g. like Grafana).
 
-If you want take full advantage for reporting, have a look at our
+If you want to take full advantage of the Zammad reporting, have a look at our
 `Grafana <https://docs.zammad.org/en/latest/appendix/reporting-tools-thirdparty/grafana.html>`_
 setup page as well.
 
@@ -31,7 +31,7 @@ hosted environments:
    * currently you're limited to user only
    * Reporting tools that require to write into the indexes
      (like Kibana) are not supported
-   * IP access restriction currently is not yet supported
+   * IP access restriction is currently not yet supported
 
 Activating Elasticsearch access
 -------------------------------
@@ -57,7 +57,7 @@ URL
    A unique subdomain that does not tell your real instance URL.
 
 Software
-   The mayor version of the search index being used.
+   The major version of the search index being used.
    This is required by some Reporting tools like Grafana.
 
 Authentication
@@ -127,8 +127,8 @@ Credentials
 -----------
 
 Within this section Zammad displays your available users.
-The password is provided once upon activation and is not available after
-that moment.
+The password is provided once (upon activation) and cannot be retrieved
+after that.
 
    .. note:: **🔐 I need my Elasticsearch user password to be changed**
 
