@@ -34,3 +34,4 @@ for all sorts of automation tasks on the Trigger page of the admin panel:
    /manage/trigger/how-do-they-work
    /manage/trigger/limitations
    /manage/trigger/system-notifications
+   /manage/trigger/email-header-auto-response
