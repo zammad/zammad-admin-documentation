@@ -12,6 +12,21 @@ accounts.
    `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and
    `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
 
+.. warning:: **💪 Exception for strong passwords 💪**
+   
+   Please note that below password policies *do not* affect administrators
+   setting passwords on user accounts. While this seems strange and not safe
+   we believe that an administrator knowing an users passwords in insecure
+   as well.
+
+   The suggested workflow is either:
+
+      * to use third party logins to not require local passwords at all
+        **- or -**
+      * to require your *user to reset the password* upon first login. 
+   
+   This way administrators are not required to set a users password at all!
+
 
 Maximum failed logins
 ---------------------
