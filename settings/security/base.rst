@@ -6,7 +6,7 @@ New User Accounts
 
 .. container:: cfloat-left
 
-   Activated the `register as a new customer` function on the login page.
+   Activates the `register as a new customer` function on the login page.
    If set to ``no`` only administrators or agents can create new accounts
    manually.
 
@@ -22,7 +22,7 @@ New User Accounts
 .. warning:: **😖 This setting may be confusing**
    
    Deactivation of above function **does not** deactivate automatic account
-   creation! This means: If a user write e.g. an email to Zammad and has no
+   creation! This means: If a user writes e.g. an email to Zammad and has no
    account yet, Zammad will automatically create the account.
 
    User accounts are a direct dependency of tickets and thus technically
@@ -47,9 +47,9 @@ Lost Password
       :width: 60%
       :align: center
 
-.. tip:: **😖 This function may confuse users**
+.. tip:: **😖 This function may be confusing**
 
-   With third party authentications - but especially LDAP you may want to
+   With third party authentications – but especially LDAP – you may want to
    disable this function. Zammad **will not** change third party login
    passwords and instead set or change the local password!
 

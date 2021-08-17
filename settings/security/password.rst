@@ -16,7 +16,7 @@ accounts.
    
    Please note that below password policies *do not* affect administrators
    setting passwords on user accounts. While this seems strange and not safe
-   we believe that an administrator knowing an users passwords in insecure
+   we believe that an administrator knowing an users passwords is insecure
    as well.
 
    The suggested workflow is either:
@@ -35,6 +35,7 @@ You can choose a value between ``4`` and ``20``. This defines how often a login
 to a user account may fail until Zammad will lock it. Please note that via UI
 the only way to unlock a user account is to change the password (either as admin
 or via password reset function (if enabled)).
+
 The default value is ``10``.
 
 .. note:: 
@@ -48,18 +49,23 @@ The default value is ``10``.
 ------------------------------
 
 You can add complexity into passwords by enforcing at least 2 upper and lower
-case characters. The default value is ``no``.
+case characters. 
+
+The default value is ``no``.
 
 
 Minimum length
 --------------
 
-This defines the minimum password length required (from ``4`` to ``20``). 
-he default value is ``6``.
+This defines the minimum password length required for users to provide
+(from ``4`` to ``20``). 
+
+The default value is ``6``.
 
 
 Digit required
 --------------
 
-This enforces your users to at least use one digit with his password.
+This enforces your users to use at least one digit within the password.
+
 The default value is ``yes``.

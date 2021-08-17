@@ -31,18 +31,20 @@ password to remember.
 Automatic account link on initial logon
 ---------------------------------------
 
-In general there's two ways two possible ways to handle how Zammad deals with
-users it already knows (from whatever source) when you try to authenticate
-against a third-party application. By default, Zammad will not automatically
-link "unknown" authentication providers to existing accounts.
+In general there's two possible options for Zammad on how to deal with
+already known users as they try to authenticate against a third-party
+application. By default, Zammad will not automatically link "unknown"
+authentication providers to existing accounts.
+
 This means that the user has to manually link authentication providers to their
 accounts (for more about this 
 `consult the user documentation <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_).
 
-Sometimes, this doesn't come in handy, as this also means if you're trying to
-authenticate against a (yet) unknown third party authentication, Zammad will
-throw an error telling you, that the email address is already in use. If you
-want to ensure that no matter if your user links his account or not, you might
-want to enable "Automatic account link on initial logon"
+Sometimes this doesn't come in handy as this also means you'll receive
+error messages about "email address being in use already" for (yet) unknown
+third-party authentication methods.
+
+If you want to allow your users to always being able to login, no matter what,
+you may want to enable ``Automatic account link on initial logon``.
 
 .. image:: /images/settings/security/automatic-account-link.png
