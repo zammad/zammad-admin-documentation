@@ -52,3 +52,38 @@ Lost Password
    With third party authentications - but especially LDAP you may want to
    disable this function. Zammad **will not** change third party login
    passwords and instead set or change the local password!
+
+Session Timeout
+---------------
+
+All settings below by default are set to ``4 weeks``.
+Session Timeout defines the life time of a users session.
+As soon reached, Zammad will automatically log off the session in question.
+
+Zammad takes the highest value set assigned for the user based on
+the permissions.
+
+   #. ``admin``
+   #. ``ticket.agent``
+   #. ``ticket.customer``
+   #. ``default`` (fallback if user doesn't have above permissions set)
+
+All settings act independent on each other allowing you to disable the
+timeouts for e.g. admins, but not agents.
+
+   .. note:: **🤓 An example**
+
+      Let's suppose you configured the following session timeouts
+         * default: 3 weeks
+         * admin: 2 weeks
+         * ticket.agent: 4 weeks
+         * ticket.customer: 1 week
+
+      This results in the following situations
+         - a user with ``admin`` permission will have a timeout of 2 weeks
+         - a user with ``admin`` and ``ticket.agent`` permissions will
+           have a timeout of 2 weeks
+         - a user with ``ticket.customer`` permission will have a timeout
+           of 1 week
+         - a user with neither ``admin``, ``ticket.agent`` nor
+           ``ticket.customer`` permissions will have a timeout of 3 weeks
