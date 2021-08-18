@@ -37,7 +37,8 @@ User Preferences Permissions
 
                                           To learn more, see :doc:`/manage/trigger/system-notifications`.
 :``user_preferences.language``:        Configure the UI locale/language
-:``user_preferences.linked_accounts``: Manually link accounts after signing in with :ref:`third-party authentication <third-party-logins>`
+:``user_preferences.linked_accounts``: Manually link accounts after signing in with 
+                                       :doc:`third-party authentication </settings/security/third-party>`
 
                                        .. note:: If :ref:`automatic account linking <automatic-account-linking>` fails,
                                           this is the only way your users can utilize third-party logins.
