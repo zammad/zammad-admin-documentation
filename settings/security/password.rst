@@ -7,7 +7,7 @@ accounts.
 .. note:: 
 
    Zammad does **not** allow you to change your LDAP password, instead, it will
-   set a password in it's local database which might confuse your users. This
+   set a password in its local database which might confuse your users. This
    will be addressed in the future by
    `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and
    `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
@@ -16,7 +16,7 @@ accounts.
    
    Please note that below password policies *do not* affect administrators
    setting passwords on user accounts. While this seems strange and not safe
-   we believe that an administrator knowing an users passwords is insecure
+   we believe that an administrator knowing an user's password is insecure
    as well.
 
    The suggested workflow is either:
@@ -25,7 +25,7 @@ accounts.
         **- or -**
       * to require your *user to reset the password* upon first login. 
    
-   This way administrators are not required to set a users password at all!
+   This way administrators are not required to set a user's password at all!
 
 
 Maximum failed logins
@@ -48,7 +48,7 @@ The default value is ``10``.
 2 lower and 2 upper characters
 ------------------------------
 
-You can add complexity into passwords by enforcing at least 2 upper and lower
+You can add complexity to passwords by enforcing at least 2 upper and lower
 case characters. 
 
 The default value is ``no``.

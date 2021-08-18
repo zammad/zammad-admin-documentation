@@ -2,10 +2,10 @@ Third-Party Applications
 ************************
 
 Third party authentication is a great way to help your users to login to Zammad
-easier. If the account is yet unknown, Zammad will create a new user
+more easily. If the account is yet unknown, Zammad will create a new user
 automatically, without the user needed to interact (e.g. type in his name).
-Another big advantage of this feature is that your user doesn't need another
-password to remember.
+Another big advantage of this feature is that your user doesn't need to remember
+another password.
 
 .. toctree::
    :caption: Login Providers
@@ -44,7 +44,7 @@ Sometimes this doesn't come in handy as this also means you'll receive
 error messages about "email address being in use already" for (yet) unknown
 third-party authentication methods.
 
-If you want to allow your users to always being able to login, no matter what,
+If you want to allow your users to always be able to log in, no matter what,
 you may want to enable ``Automatic account link on initial logon``.
 
 .. image:: /images/settings/security/automatic-account-link.png
