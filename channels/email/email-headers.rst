@@ -2,7 +2,7 @@ Email header manipulation
 *************************
 
 Email header manipulation allows you to re-route or adjust tickets apart from
-filters or triggers. Like an API call, but much more different.
+filters or triggers. Like an API call, but with emails.
 
 Header checks are case insensitive.
 
@@ -17,8 +17,8 @@ Header checks are case insensitive.
    However: You can adjust mostly any article or ticket attribute (yes, custoom
    ones as well) if you know the attributes exact name.
 
-   The name column within :doc:`/system/objects` provides easy access to
-   objects attribute names. 🤓
+   The name column within :doc:`object management </system/objects>` provides
+   easy access to objects attribute names. 🤓
 
 Trigger auto responses
 ----------------------
@@ -102,7 +102,7 @@ The manipulation can be used instead of triggers. Triggers are considered
 
          | Pending states always require the ``pending_time`` attribute on top. 
          | Like so: 
-           ``X-Zammad-Ticket-FollowUp-Pending_Time: 2021-09-26T08:00:00+0200``
+           ``X-Zammad-Ticket-Pending_Time: 2021-09-26T08:00:00+0200``
 
 ``X-Zammad-Customer-Email``
    | Manipulate the ticket customer - this can be a different user than the
@@ -134,7 +134,7 @@ email articles.
 
       .. warning::
 
-         System emails are indicated by the trigger sendout like entries.
+         System emails are indicated like trigger response like entries.
          Users can't see them natively.
 
          .. figure:: /images/channels/email/headers/email-header-as-system.png
@@ -143,13 +143,13 @@ email articles.
 
 ``X-Zammad-Article-Type``
    | Change the article type of your incoming mail. This requires you to know
-     the article types being available to your system.
+     which article types are available in your system.
    | Example: ``X-Zammad-Article-Type: phone``
 
       .. warning::
 
          This header can cause *serious issues* in your instance and may
-         lead to absolute unexpected behavior. Only use with absolute care!
+         lead to unexpected behavior. Only use with absolute care!
 
 ``X-Zammad-Article-Internal``
    | Manipulate the default article visibility.
