@@ -8,6 +8,7 @@ Google
    filters
    signatures
    settings
+   email-headers
 
 Connect a Gmail or G Suite account to Zammad.
 

@@ -8,6 +8,7 @@ Email
    filters
    signatures
    settings
+   email-headers
 
 Control how Zammad **sends and receives email**.
 
@@ -48,6 +49,11 @@ Control how Zammad **sends and receives email**.
       or **always copy parent messages into your replies**?
 
       Check the ✍️ :doc:`/misc/composer`.
+
+:doc:`📇 Header manipulation <email-headers>`
+   Manipulate auto response behavior or incoming routing.
+
+      .. warning:: 🤓 This is a very advanced topic.
 
 Extra Options for Self-Hosted Users
 -----------------------------------
