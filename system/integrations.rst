@@ -27,7 +27,7 @@ Integrations for authentication and customers
    integrations/ldap
    integrations/exchange
    integrations/clearbit
-   integrations/smime
+   integrations/smime/index
 
 Integrations for Monitoring Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
