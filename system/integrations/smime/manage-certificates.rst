@@ -10,6 +10,9 @@ S/MIME is **disabled by default**. Enable it to start adding certificates.
    Manage certificates in the Admin Panel under **System > Integrations > S/MIME**.
    Certificates may be pasted in as plain text or uploaded from a file.
 
+Add Certificate data
+--------------------
+
 Add Certificate
    Import public-key certificates for both your own organization and your contacts.
    
@@ -53,8 +56,26 @@ Add Private Key
 
       Please note that bulk imports of private keys are not possible.
 
+Download Certificate data
+-------------------------
+
+You can download the earlier provided certificates and private keys at any
+time from your Zammad instance.
+
+   .. note:: **🔐 Passphrase protected private keys stay protected**
+
+      Downloading private keys that originally were encrypted with a passphrase
+      will also have this state after retrieval. Knowing the password is
+      mandatory to continue working with keys in question.
+
+.. figure:: /images/system/integrations/smime/downloading-certificate-data.gif
+   :alt: Dialogue to download certificates or private keys
+   :align: center
+
+   Download stored certificates and their keys
+
 Default Behavior
-^^^^^^^^^^^^^^^^
+----------------
 
 The ticket composer will set all outgoing messages
 to **signed and encrypted** by default
