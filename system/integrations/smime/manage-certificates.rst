@@ -12,6 +12,9 @@ S/MIME is **disabled by default**. Enable it to start adding certificates.
 
 Add Certificate
    Import public-key certificates for both your own organization and your contacts.
+   
+   You can also add a bunch of certificates in one go by providing a single file
+   with all relevant certificates.
 
    .. warning:: 🕵️ **ALWAYS verify certificates in-person or over the phone!**
 
@@ -47,6 +50,8 @@ Add Private Key
 
       If your certificate and private key are bundled together
       in the same file or PEM block, import it twice (once using each button).
+
+      Please note that bulk imports of private keys are not possible.
 
 Default Behavior
 ^^^^^^^^^^^^^^^^
