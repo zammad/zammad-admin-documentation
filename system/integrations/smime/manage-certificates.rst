@@ -85,7 +85,7 @@ These defaults can be modified on a per-group basis:
 
 .. figure:: /images/system/integrations/smime/default-behaviour-on-per-group-basis.png
    :alt: Zammad allowing to choose the default behaviour on per group basis
-   :scale: 50%
+   :scale: 80%
    :align: center
 
 Of course, agents can always manually change these settings

@@ -1,6 +1,13 @@
 S/MIME
 ======
 
+.. toctree::
+   :hidden:
+
+   prerequisites
+   manage-certificates
+   troubleshooting
+
 S/MIME is the most widely-supported method for secure email communication.
 With S/MIME, you can exchange **signed** and **encrypted** messages with others.
 
@@ -20,39 +27,15 @@ Encryption
 
    Once S/MIME has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will appear in the ticket composer.
 
-.. toctree::
-   :titlesonly:
-   :caption: How does it work?
+:doc:`🔪 Prerequisites <prerequisites>`
+   New to S/MIME? This section helps you to find certificate providers and
+   points out Limitations.
 
-   prerequisites
-   manage-certificates
-   troubleshooting
+:doc:`📝 Manage Certificates <manage-certificates>`
+   Add and download certificates; configure group default behaviors.
 
-Limitation
-----------
-
-Please note that Zammad by default distrust senders.
-This means that you're always required to provide certificate data, no matter
-if for signing or encrypting.
-
-This is by design and can't be adjusted.
-
-Default Behavior
-----------------
-
-The ticket composer will set all outgoing messages
-to **signed and encrypted** by default
-(assuming the required certificates exist).
-
-These defaults can be modified on a per-group basis:
-
-.. figure:: /images/system/integrations/smime/default-behaviour-on-per-group-basis.png
-   :alt: Zammad allowing to choose the default behaviour on per group basis
-   :scale: 50%
-   :align: center
-
-Of course, agents can always manually change these settings
-on each email they send out.
+:doc:`😦 Troubleshooting <troubleshooting>`
+   Turned wrong? About recent logs and common issues.
 
 Usage
 -----

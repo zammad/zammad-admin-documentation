@@ -27,3 +27,12 @@ Prerequisites
    and usually 🙅 **involves extra work for your contacts**.
 
    Bear in mind that 🤝 **S/MIME only works if the other party is using it, too.**
+
+Limitations
+-----------
+
+Please note that Zammad by default distrust senders.
+This means that you're always required to provide certificate data, no matter
+if for signing or encrypting.
+
+This is by design and can't be adjusted.
