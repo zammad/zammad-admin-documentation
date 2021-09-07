@@ -28,6 +28,15 @@ Encryption
    manage-certificates
    troubleshooting
 
+Limitation
+----------
+
+Please note that Zammad by default distrust senders.
+This means that you're always required to provide certificate data, no matter
+if for signing or encrypting.
+
+This is by design and can't be adjusted.
+
 Default Behavior
 ----------------
 
