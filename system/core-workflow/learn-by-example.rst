@@ -61,9 +61,9 @@ The workflow may not use them all.
          The Result
             This is what the agent would experience with above
             workflows in place.
-
-            | **TODO - BUG AHEAD**
-            | https://github.com/zammad/zammad/issues/3739
+            .. figure:: /images/system/core-workflow/examples/1_group-specific-fields-and-values_result.gif
+            :alt: Workflow shows objects and limits options based on selections on the group
+            :width: 90%
 
 2. Approval process
       In this case ``aproved`` is visible to agents by default.
@@ -76,8 +76,8 @@ The workflow may not use them all.
 
       .. tip::
 
-         This workflow may work best in combination with a :doc:`/manage/trigger`
-         trigger but technically is not required.
+         This workflow may work best in combination with a 
+         :doc:`trigger </manage/trigger>` but technically is not required.
 
          Select fields may be a better approach because they allow more
          values than just a simple ``true`` or ``false``.

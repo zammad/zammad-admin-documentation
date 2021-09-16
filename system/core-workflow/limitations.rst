@@ -15,6 +15,17 @@ API calls are only partly affected
     * show
     * hide
 
+Some fields stay unavailable to customers
+  For technical and security reasons some default fields (the greyed out ones
+  you can't edit) stay unavailable for display and usage on customer
+  permissions.
+
+    .. hint::
+
+      If you require your customers to change e.g. priorities, please
+      consider using workarounds via :doc:`/system/objects` and
+      :doc:`/manage/trigger`.
+
 What is out of scope of Core Workflow...?
   There are some things that would count as workflow but are either done via
   :doc:`/manage/trigger`, :doc:`/manage/scheduler` or over the current top.
