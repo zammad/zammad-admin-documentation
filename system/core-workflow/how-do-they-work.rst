@@ -99,75 +99,97 @@ Available Operators
 
    The availability of available operators depends on the object type and scope.
 
-show
-   Display the field in question in UI. Allows setting of values.
+.. hint:: **🧐 Actions can cause confusion**
 
-hide
-   Hide the field in question from UI, however, still allows setting the field.
+   | Please note that actions may or may not restrict API based access to
+     attributes. We're displaying the following icons for your overview
+     to understand these limits better. 👀
+   | |api| This icon indicates the action affects the API.
+   | |ui| This Icon indicates the action only affects the web interface.
+
+show |ui|
+   Display the field in question. Allows setting of values.
+
+hide |ui|
+   Hide the field in question, however,
+   technically still allows setting the field.
 
       .. warning::
 
          The field is **not** gone and still contains any value it provides!
          You may want to consider *remove* instead.
 
-remove
-   Entirely removes the field from UI and API.
-   The field value cannot be changed / set.
+remove |ui| |api|
+   Entirely removes the field. The field value cannot be changed / set.
 
       .. warning::
 
          This fields value is being unset in case it's set!
          You may want to consider *hide* instead.
 
-set mandatory
-   Sets the field to mandatory for UI and API use.
+set mandatory |ui| |api|
+   Sets the field to mandatory.
 
-set optional
-   Sets the field to optional for UI and API use.
+set optional |ui| |api|
+   Sets the field to optional.
 
-add option
-   Allows adding options to tree selects or selects. (UI & API)
+add option |ui| |api|
+   Allows adding options to tree selects or selects.
 
       .. note::
 
          This requires options to be hidden before hand (remove option).
          It allows to use *existing* configured values.
 
-remove option
-   Allows removing options from tree selects or selects. (UI & API)
+remove option |ui| |api|
+   Allows removing options from tree selects or selects.
 
       .. note::
 
          It allows to use *existing* configured values.
 
-set fixed to
-   Reduces the available options by your selection. (UI & API)
+set fixed to |ui| |api|
+   Reduces the available options by your selection.
 
       .. tip::
 
          This may indirectly reduce your workflows in terms of
          *add option* and *remove option*. 🤓
 
-fill in
-   Allows population of string and integer fields with your value for UI.
+fill in |ui|
+   Allows population of string and integer fields with your value.
 
-fill empty
+fill empty |ui|
    Allows population of string and integer fields with your value
-   **if the field is empty** for UI.   
+   **if the field is empty**.   
 
-select
-   Select a specific value within a select, tree select or boolean field
-   within UI.
+select |ui|
+   Select a specific value within a select, tree select or boolean fields.
 
-auto select
+auto select |ui|
    | Helps the user on tree selects and select fields:
    | If the field has one option to select only and has no value yet, the
-     value is automatically set. This applies to the UI only.
+     value is automatically set.
 
    .. warning::
 
       This option only works if you have one value and acts passive with more
       options.
+
+set readonly |ui|
+   Allows you to display an attribute as read only.
+
+unset readonly |ui|
+   In case a workflow set the field in question to read only, you can
+   undo this with above option.
+
+.. |api| image:: /images/icons/api-symbol.png
+   :height: 42px
+   :width: 42px
+
+.. |ui| image:: /images/icons/ui-symbol.png
+   :height: 42px
+   :width: 42px
 
 Stop after match
 ----------------
