@@ -70,9 +70,9 @@ The workflow may not use them all.
       For this workflow a additional role ``Approval person`` is required
       (no further permissions).
 
-      | **TODO - BUG AHEAD**
-      | Screenshot process blocked
-      | https://github.com/zammad/zammad/issues/3740
+      .. figure:: /images/system/core-workflow/examples/2_role-specific-approval-settingsl.png
+         :alt: Sample workflow that restricts an approval attribute to specific roles
+         :width: 90%
 
       .. tip::
 
@@ -83,8 +83,9 @@ The workflow may not use them all.
          values than just a simple ``true`` or ``false``.
 
       The result
-         | **TODO - BUG AHEAD**
-         | Screencast process blocked
+         .. figure:: /images/system/core-workflow/examples/2_role-specific-approval-settingsl_result.gif
+            :alt: Workflow fixes possible values of "Approved ?" to a specific selection depending on the users role
+            :width: 90%
 
 3. State dependent mandatory fields
       This workflow sets ``Category`` to mandatory if the agent wants to set the
