@@ -8,6 +8,7 @@ Microsoft 365
    filters
    signatures
    settings
+   email-headers
 
 Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
 
