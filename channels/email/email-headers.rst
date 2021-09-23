@@ -2,7 +2,7 @@ Email header manipulation
 *************************
 
 Email header manipulation allows you to re-route or adjust tickets apart from
-filters or triggers. Like an API call, but with emails.
+filters or triggers. Like an API call, but with Emails.
 
 Header checks are case insensitive.
 
@@ -14,16 +14,16 @@ Header checks are case insensitive.
 .. tip::
 
    Below headers are examples and –in our opinion– the most relevant ones.
-   However: You can adjust mostly any article or ticket attribute (yes, custoom
-   ones as well) if you know the attributes exact name.
+   However: You can adjust mostly any article or ticket attribute (yes, custom
+   ones as well) if you know the attribute's exact name.
 
-   The name column within :doc:`object management </system/objects>` provides
+   The name column within :doc:`object's management </system/objects>` provides
    easy access to objects attribute names. 🤓
 
 Trigger auto responses
 ----------------------
 
-Normally Zammad runs internal checks to see if an email is an automatic
+Normally Zammad runs internal checks to see if an Email is an automatic
 response. In these cases Zammad will not send trigger based responses.
 
 There may be use cases where this behavior may be in your way,
@@ -45,7 +45,7 @@ below options allow you to overcome this issue.
 
 ``x-zammad-is-auto-response``
    Providing this header allows you to tell Zammad that the mail in question
-   is an auto generated response (``true``). This will cause email based
+   is an auto generated response (``true``). This will cause Email based
    triggers to be skipped.
 
    Set this header to ``false`` if you want to generate auto responses.
@@ -62,7 +62,7 @@ Zammad allows you to use headers to manipulate ticket creations or follow ups.
 The manipulation can be used instead of triggers. Triggers are considered
 *after* header settings and thus can still overrule.
 
-   .. note:: **🔎 Zammad differentiates in between ticket creation and follow up**
+   .. note:: **🔎 Zammad differentiates between ticket creation and follow up**
 
       | For creations use: ``X-Zammad-Ticket-{Attribute Name}``
       | For follow ups use: ``X-Zammad-Ticket-FollowUp-{Attribute Name}``
@@ -72,9 +72,9 @@ The manipulation can be used instead of triggers. Triggers are considered
 
    .. warning:: **🧐 About values**
 
-      * While headers are case insensitive, values like e.g. priority names
+      * While headers are not case sensitive, values like e.g. priority names
         are case censitive: ``1 low`` will work, but ``1 lOw`` will not!
-      * When using attributes that require datetime values, ensure to use
+      * When using attributes that require date / time values, ensure to use
         Time Zoned Times. e.g. for 28th September 2021 on 8 am CEST, either use:
 
             * ``2021-09-28T08:00:00+0200``
@@ -82,7 +82,7 @@ The manipulation can be used instead of triggers. Triggers are considered
             * ``2021-09-28T06:00:00.000Z``
 
 ``X-Zammad-Ticket-Priority`` & ``X-Zammad-Ticket-FollowUp-Priority``
-   | Allows you to adjust a tickets priority.
+   | Allows you to adjust a ticket's priority.
    | Example: ``X-Zammad-Ticket-Priority: 1 low``
 
 ``X-Zammad-Ticket-Group`` & ``X-Zammad-Ticket-FollowUp-Group``
@@ -91,7 +91,7 @@ The manipulation can be used instead of triggers. Triggers are considered
 
 ``X-Zammad-Ticket-Owner`` & ``X-Zammad-Ticket-FollowUp-Owner``
    | Directly assign or change the ticket owner. Valid values are either
-     ``login`` or ``email``
+     ``login`` or ``Email``
    | Example: ``X-Zammad-Ticket-Owner: jdoe``
 
 ``X-Zammad-Ticket-State`` & ``X-Zammad-Ticket-FollowUp-State``
@@ -126,18 +126,18 @@ Article attributes
 ------------------
 
 If needed Zammad allows you to manipulate attributes or states of fetched
-email articles.
+Email articles.
 
 ``X-Zammad-Article-Sender``
-   | Manipulate the sender type (Agent, Customer or System)
+   | Manipulate the sender type (Agent, Customer, or System)
    | Example: ``X-Zammad-Article-Sender: System``
 
       .. warning::
 
-         System emails are indicated like trigger response like entries.
-         Users can't see them natively.
+         System Emails are indicated in a similar way as trigger-response
+         like entries Users can't see them natively.
 
-         .. figure:: /images/channels/email/headers/email-header-as-system.png
+         .. figure:: /images/channels/Email/headers/Email-header-as-system.png
             :alt: Received mail as article sender system
             :width: 75%
 
@@ -156,5 +156,5 @@ email articles.
    | Example: ``X-Zammad-Article-Internal: true``
 
 ``X-Zammad-Ignore``
-   | Tell Zammad to silently drop the email.
+   | Tell Zammad to silently drop the Email.
    | Example: ``X-Zammad-Ignore: true``

@@ -9,7 +9,7 @@ Triggers are evaluated in alphabetical order, by **name.**
 In some situations triggers might be the wrong choice, see
 :doc:`/manage/trigger/limitations` for more information.
 
-.. hint:: **🤓 E-Mail trigger behavior can be manipulated**
+.. hint:: **🤓 Email trigger behavior can be manipulated**
 
    Please have a look at :doc:`/channels/email/email-headers`
    in case this is a relevant use case for you.
