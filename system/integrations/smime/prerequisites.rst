@@ -31,7 +31,7 @@ Prerequisites
 Limitations
 -----------
 
-Please note that Zammad by default distrust senders.
+Please note that Zammad will distrust senders by default.
 This means that you're always required to provide certificate data, no matter
 if for signing or encrypting.
 

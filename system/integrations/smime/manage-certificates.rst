@@ -62,7 +62,7 @@ Download Certificate data
 You can download the earlier provided certificates and private keys at any
 time from your Zammad instance.
 
-   .. note:: **🔐 Passphrase protected private keys stay protected**
+   .. note:: **🔐 Passphrase-protected private keys stay protected**
 
       Downloading private keys that originally were encrypted with a passphrase
       will also have this state after retrieval. Knowing the password is

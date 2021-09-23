@@ -35,7 +35,7 @@ Encryption
    Add and download certificates; configure group default behaviors.
 
 :doc:`😦 Troubleshooting <troubleshooting>`
-   Turned wrong? About recent logs and common issues.
+   Took a wrong turn? About recent logs and common issues.
 
 Usage
 -----
