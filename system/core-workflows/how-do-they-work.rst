@@ -5,12 +5,12 @@ Core Workflows are evaluated by priority.
 If 2 workflows have the same priority by alphabetical order by **name**.
 Triggers are evaluated in alphabetical order, by **name.**
 
-Because of the way Core Workflow works all changes to attributes
+Because of the way Core Workflows works all changes to attributes
 are checked with the application server – please see :doc:`limitations`
 for possible issues.
 
-Below we're talking about settings that have an impact and are not self
-explanatory.
+Below we're talking about settings that have an impact and are not
+self-explanatory.
 
 Object
 ------
@@ -30,23 +30,23 @@ Context
 -------
 
 Choose in which situation the workflow is applied.
-Actions can be combined to reduces workflows.
+Contexts can be combined to reduce workflows.
 
 Creation Mask
-   When selected your conditions and actions will affect all applicable creation
+   Once selected your conditions and actions will affect all applicable creation
    masks.
 
 Edit Mask
-   When selected your conditions and actions will affect all applicable edit
+   Once selected your conditions and actions will affect all applicable edit
    masks.
 
 Conditions
 ----------
 
 Zammad decides in between selected and saved conditions.
-These can be combined where ever needed.
+These can be combined wherever needed.
 
-   .. tip:: **🤓 Combining conditions allows OR selections**
+   .. tip:: **🤓 Combining conditions allows "OR"-selections**
 
       However, note that each condition type counts as *and* selector
       and can't overrule the other condition type.
@@ -63,20 +63,20 @@ Selected Conditions
    This applies for drafts (active selection) and currently saved values.
 
 Saved Conditions
-   These conditions only apply if they're saved within the database no matter
+   These conditions only apply if they're saved within the database regardless
    of the current value or selection of the field.
 
       .. note::
 
          Keep in mind that the value has to be available in the situation
-         you need it. Otherwise the condition won't match.
+         where you need it. Otherwise the condition won't match.
 
 Action
 ------
 
 Which actions should we run on the relevant fields?
 The possible actions depend on the object type, however, usually
-you can at least change the visibility and if the field is mandatory.
+you can at least change the visibility and whether the field is mandatory.
 
    .. note:: **🚧 Actions are not available for relations**
 
@@ -97,7 +97,7 @@ Available Operators
 
 .. note::
 
-   The availability of available operators depends on the object type and scope.
+   The availability of operators depends on the object type and scope.
 
 .. hint:: **🧐 Actions can cause confusion**
 
@@ -105,13 +105,13 @@ Available Operators
      attributes. We're displaying the following icons for your overview
      to understand these limits better. 👀
    | |api| This icon indicates the action affects the API.
-   | |ui| This Icon indicates the action only affects the web interface.
+   | |ui| This icon indicates the action only affects the web interface.
 
 show |ui|
    Display the field in question. Allows setting of values.
 
 hide |ui|
-   Hide the field in question, however,
+   Hide the field in question however,
    technically still allows setting the field.
 
       .. warning::
@@ -124,7 +124,7 @@ remove |ui| |api|
 
       .. warning::
 
-         This fields value is being unset in case it's set!
+         This field's value is being unset in case it's set!
          You may want to consider *hide* instead.
 
 set mandatory |ui| |api|
@@ -138,7 +138,7 @@ add option |ui| |api|
 
       .. note::
 
-         This requires options to be hidden before hand (remove option).
+         This requires options to be hidden beforehand (remove option).
          It allows to use *existing* configured values.
 
 remove option |ui| |api|
@@ -173,7 +173,7 @@ auto select |ui|
 
    .. warning::
 
-      This option only works if you have one value and acts passive with more
+      This option only works if you have one value and acts passively with more
       options.
 
 set readonly |ui|
@@ -194,14 +194,14 @@ unset readonly |ui|
 Stop after match
 ----------------
 
-Stop evaluation of other, following workflows that would match other wise.
+Stop evaluation of other, following workflows that would match otherwise.
 
 Default: ``no``
 
 Priority
 --------
 
-By adjusting the priority you decide when a workflow is checked on.
+You decide at which point your workflow is evaluated.
 Priorities are sorted descending – this means that a workflow matching
 can stop matching in specific situations.
 
