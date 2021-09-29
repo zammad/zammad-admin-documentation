@@ -136,6 +136,15 @@ Sender Format: Default value ``Agent + Format Seperator + System Address Display
 
       Example: ``Chrispresso Inc.``
 
+   Option set to ``Agent Name``
+      Zammad will use the agent's name which is very personal.
+
+      .. tip::
+
+         | Usually you'd also want to remove the ticket slug from the subject
+           in those cases.
+         | Learn more in :doc:`Settings → Ticket </settings/ticket>`.
+
 Sender Format Seperator: Default value ``via``
    This is a can be a String you can freely choose. It divided the agents name
    and the display name of the channel when ever needed.
