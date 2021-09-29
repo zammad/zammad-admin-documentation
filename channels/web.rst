@@ -1,14 +1,60 @@
 Web
 ***
 
-You can define whether a customer can create tickets via the web interface or not.
-If they can you can furthermore define groups for which a customer can create tickets via web interface. "-" means all groups are available.
+The web channel mainly affects your customers using the web interface.
+These settings allow you to restrict your customers ticket creation.
 
-.. image:: /images/channels/zammad-web_configure-groups.jpg
+   .. tip::
 
-That means for example: if you are working with a dispatcher, you could implement a group "Income" and only select this group here. Thus, all incoming tickets are routed to this group and can be dispached to other groups from here.
+      :doc:`/system/core-workflows` allow even further restrictions and
+      actions if you need them. 🤓
 
-.. figure:: /images/channels/zammad-web_customer-creates-new-ticket.jpg
-   :figclass: align-center
+.. figure:: /images/channels/web/setting-overview_web-channel.png
+   :width: 90%
+   :alt: The web channel settings page
 
-   In this example we selected "Sales" and "2nd Level" to be selectable for the customer.
+Settings affecting your customer
+--------------------------------
+
+Enable Ticket creation
+   You can forbid customers to create tickets via the web interface.
+   This will remove the "➕" button on the lower left.
+
+   Default: ``yes``
+
+      .. note::
+
+         This does not forbid updating existing tickets via UI.
+
+
+
+Group selection for Ticket creation
+   By default your customers may create tickets in all groups.
+   As this may be an issue, especially when having several support levels or
+   internal groups, you can always select a set of groups you want to be
+   available.
+
+   Default: ``-``
+
+      .. note:: **🤓 This does not affect your agents**
+
+         Agents are affected by :doc:`/manage/groups/access-levels`.
+
+Global settings affecting *all* users
+-------------------------------------
+
+Tab behavior after ticket creation
+   This setting allows administrators to provide a default behavior of Zammad's
+   tab *after* ticket update.
+
+   Default: ``Stay on tab``
+
+      .. note:: **Users can always overrule**
+
+         If your user decides to select a different tab behavior on any ticket,
+         this action will be the new default behavior for that user.
+
+         Zammad remembers the decision of the user. 💾
+
+            .. figure:: /images/channels/web/tab-behavior-ticket-zoom.png
+               :alt: Ticket zoom with tab behavior to choose for the user
