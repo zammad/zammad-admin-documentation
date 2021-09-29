@@ -7,17 +7,17 @@ that you don't want to have in a note (you'll find it easier).
 
 .. note:: 
 
-   Try to avoid deleting objects (rather disable them) as Zammad might run into
-   unexpected conditions if they where referenced somewhere.
+   Try to avoid deleting objects (and disable them instead) as Zammad might run
+   into unexpected conditions if they are referenced somewhere.
 
 .. image:: /images/system/objects/object-overview.png
 
 Here's an overview of the objects. On the upper right you can add new
-Attributes (no 1). By default, there will be no custom fields - standard objects
-(no 2) will be grayed out, you can't delete or change those.
-Custom objects (no 3) will be displayed in black font and have a trash bin on
-the right site to delete not needed objects.
-By click on custom objects, you can edit them so they can suite your needs.
+Attributes. By default, there will be no custom fields - standard objects
+will be grayed out, you can't delete or change those.
+Custom objects (will be displayed in black font and have a trash bin on
+the right site to delete unnecessary objects.
+By clicking on "custom objects" you can edit them to suit your needs.
 
 .. toctree::
    :maxdepth: 1
@@ -38,9 +38,9 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 .. warning::
 
    After applying the object changes with "Update Database" a restart of Zammad
-   is **mandatory**. If you don't you may experience unexpected behavior or
-   even errors. You may want to do those kind of configurations during
-   maintenance windows.
+   is **mandatory**. If you don't perform it, you may experience unexpected
+   behavior or even errors. You may want to do those kind of configurations
+   during maintenance windows.
 
       .. figure:: /images/system/objects/update-database.png
          :align: center
@@ -51,7 +51,7 @@ to Zammad. If you made a mistake or just want to discard your changes, click
    .. tip:: **🤓 Service restarts can be automated**
 
       | Hosted environments automatically restart for you.
-      | If you're using a self hosted installation you can use
+      | If you're using a self-hosted installation you can use
         `environment variables`_
 
 .. _environment variables:
@@ -60,7 +60,7 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 System objects
 --------------
 
-Zammad comes with pre shipped objects. Some of these currently do not
+Zammad comes with pre-configured objects. Some of these currently do not
 provide the possibility to edit them via UI (or at all).
 
 This is not a bug but is to save you from possibly nuking Zammad.

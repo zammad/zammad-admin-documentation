@@ -4,7 +4,7 @@ Object types
 When adding a new object, you can choose between the following object types.
 
 Boolean
-   Provides a drop down field with display values for ``true`` and ``false``.
+   Provides a drop-down field with display values for ``true`` and ``false``.
    Allows setting a default value.
 
    .. figure:: /images/system/objects/settings_boolean.png
@@ -29,11 +29,11 @@ Datetime
    Provides a date and time picker – does not allow default values
 
    Allow future
-      | Allows to disallow dates and times in the future.
+      | Forbid dates and times in the future.
       | Default: ``yes``
 
    Allow past
-      | Allows to disallow dates and times in the past.
+      | Forbid dates and times in the past.
       | Default: ``yes``
 
    Default time diff (minutes)
@@ -49,7 +49,7 @@ Datetime
       :alt: Available settings for Date time fields
 
 Integer
-   Provides a input field that allows integer usage only.
+   Provides an input field that allows integer usage only.
    You may define a default value.
    
    Minimal
@@ -62,13 +62,13 @@ Integer
       :alt: Available settings for Integer fields
 
 Select
-   Provides a drop down field that allows selection of one value out of several.
+   Provides a drop-down field that allows selection of one value out of several.
    This field does allow setting a default value.
 
    .. tip::
 
       Adding values can be tricky for first timers, don't forget to press
-      "➕ Add" after typing your values. Other wise you may loose a value.
+      "➕ Add" after typing your values. Otherwise you may loose a value.
 
    .. hint::
 
@@ -105,7 +105,7 @@ Text
       :alt: Available settings for Text fields
 
 Tree Select
-   Provides a select like field with up to 6 layers of options.
+   Provides a select-like field with up to 6 layers of options.
    Does not allow setting a default value.
 
    .. figure:: /images/system/objects/settings_treeselect.png
@@ -127,26 +127,26 @@ URL fields (Link-Template)
 
 Link-Templates are an amazing way to dynamically generate URLs.
 They allow you to integrate other systems better without having to
-manually copying data from Zammad if possible.
+manually copy data from Zammad if possible.
 
    .. note::
 
-      Another great way of communicating with another system may be Zammads
+      Another great way of communicating with another system may be Zammad's
       :doc:`Webhooks </manage/webhook>`.
 
-After filling a link-template enabled fields a URL icon will appear on its
+After filling a link-template enabled field, an URL icon will appear on its
 right. Clicking on the icon opens a new tab.
 
    .. hint:: 
 
-      Even through Zammad displays the link template within object edit and
-      create screens the function is optional. It's only active if you populate
+      Even though Zammad displays the link template within object edit and
+      create screens, the function is optional. It's only active if you populate
       the field.
 
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-As example, let's say you have an object called ``amazingobject`` - you want
+As an example, let's say you have an object called ``amazingobject`` - you want
 to open a google search directly with the input from that field.
 
 Providing below to the link-template field allows you to do so:

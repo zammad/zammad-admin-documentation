@@ -6,18 +6,18 @@ Object permissions
 
    Some of the possible permission and screen options for objects.
 
-When ever needed you can restrict access to objects based on the 
+Whenever needed you can restrict access to objects based on the 
 :ref:`user permission <permission-guide>`
 (``admin``, ``ticket.agent`` & ``ticket.customer``).
 
-.. tip:: **🤓 Below is not written to stone 🤓**
+.. tip:: **🤓 Below is not set in stone 🤓**
 
-   You can always adjust below settings with :doc:`/system/core-workflow`.
+   You can always adjust below settings with :doc:`/system/core-workflows`.
    This also allows role based restriction. 👀
 
 .. note::
    
-   In some situation Zammad internally overrules below screen, requirement and
+   In some situations, Zammad internally overrules below screen, requirement and
    permission settings. This is because at some points you can't set fields
    which would mean we couldn't create the ticket.
 
@@ -60,7 +60,7 @@ invite_customer & invite_agent
 About screen options
 --------------------
 
-Now we know the different possible situations,
+Now that we know the different possible situations,
 let's talk about available options.
 
 shown

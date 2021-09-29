@@ -53,7 +53,7 @@ Admin Permissions
 
                                 That’s in :doc:`/manage/groups/access-levels`.
 :``admin.channel_web``:      :doc:`Channels > Web </channels/web>`
-:``admin.core_workflow``:    :doc:`System > Core Workflow </system/core-workflow>`
+:``admin.core_workflows``:    :doc:`System > Core Workflows </system/core-workflows>`
 :``admin.data_privacy``:     :doc:`System > Data Privacy </system/data-privacy>`
 
                              .. danger:: 🔥 This permission allows users to permanently delete data on the system. Proceed with caution!
