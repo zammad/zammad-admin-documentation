@@ -60,6 +60,11 @@ A trigger can do the following things once its conditions have been met:
 * Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in
    the system.
+
+      .. tip::
+
+         Sending emails allow you to include the attachments of the triggering
+         article if required.
 * :doc:`Fire a webhook </manage/webhook>`
    Connect Zammad to another web service or application to give it live updates
    about new tickets.
