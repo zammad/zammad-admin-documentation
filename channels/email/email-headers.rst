@@ -137,7 +137,7 @@ Email articles.
          System Emails are indicated in a similar way as trigger-response
          like entries Users can't see them natively.
 
-         .. figure:: /images/channels/Email/headers/Email-header-as-system.png
+         .. figure:: /images/channels/email/headers/email-header-as-system.png
             :alt: Received mail as article sender system
             :width: 75%
 
