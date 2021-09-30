@@ -9,8 +9,7 @@ accounts.
    Zammad does **not** allow you to change your LDAP password, instead, it will
    set a password in its local database which might confuse your users. This
    will be addressed in the future by
-   `#1169 <https://github.com/zammad/zammad/issues/1169>`_ and
-   `#2389 <https://github.com/zammad/zammad/issues/2389>`_.
+   `#1169 <https://github.com/zammad/zammad/issues/1169>`_.
 
 .. warning:: **💪 Exception for strong passwords 💪**
    
@@ -32,18 +31,26 @@ Maximum failed logins
 ---------------------
 
 You can choose a value between ``4`` and ``20``. This defines how often a login
-to a user account may fail until Zammad will lock it. Please note that via UI
-the only way to unlock a user account is to change the password (either as admin
-or via password reset function (if enabled)).
+to a user account may fail until Zammad will lock it. 
+Your users can always use the "forgot password" function to change their
+password and unlock their account.
 
 The default value is ``10``.
 
 .. note:: 
 
-   You can also unlock an account via 
-   `console <https://docs.zammad.org/en/latest/console/working-on-users.html>`_
-   or `API <https://docs.zammad.org/en/latest/api-user.html>`_.
+   Beside changing the users password, you can also unlock accounts via
 
+      * :ref:`user management list <locked-user-accounts>`
+      * `console`_
+      * `api`_
+
+.. _console: https://docs.zammad.org/en/latest/console/working-on-users.html
+.. _API: https://docs.zammad.org/en/latest/api/user.html
+
+.. hint::
+
+   Failed logins via LDAP no longer lock accounts.
 
 2 lower and 2 upper characters
 ------------------------------
