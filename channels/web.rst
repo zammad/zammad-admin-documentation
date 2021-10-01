@@ -1,7 +1,7 @@
 Web
 ***
 
-The web channel mainly affects your customers using the web interface.
+The web channel mainly affects your customers' using the web interface.
 These settings allow you to restrict your customers ticket creation.
 
    .. tip::

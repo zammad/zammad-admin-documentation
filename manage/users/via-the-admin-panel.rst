@@ -52,7 +52,7 @@ The “Users” panel provides tools to manually manage user accounts.
 
       Use the ⋮ **Actions** menu to unlock accounts after too many
       failed logins. Locked accounts are indicated with a 🔒 lock icon
-      on the left site.
+      on the left side.
 
    .. _view-from-users-perspective:
 

@@ -39,7 +39,7 @@ The default value is ``10``.
 
 .. note:: 
 
-   Beside changing the users password, you can also unlock accounts via
+   Beside changing the user's password, you can also unlock accounts via
 
       * :ref:`user management list <locked-user-accounts>`
       * `console`_

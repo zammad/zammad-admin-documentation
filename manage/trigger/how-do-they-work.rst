@@ -63,7 +63,7 @@ A trigger can do the following things once its conditions have been met:
 
       .. tip::
 
-         Sending emails allow you to include the attachments of the triggering
+         Sending emails allows you to include the attachments of the triggering
          article if required.
 * :doc:`Fire a webhook </manage/webhook>`
    Connect Zammad to another web service or application to give it live updates

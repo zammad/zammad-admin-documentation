@@ -5,12 +5,12 @@ Settings
    :alt: Account settings page
    :align: center
 
-Below you can find the currently available Email related settings. Most of
+Below you can find the currently available email-related settings. Most of
 these settings have default values which can be found in this list as well.
 
 .. note::
 
-   Some email-related settings are ticket based settings, which is why
+   Some email-related settings are ticket-based settings, which is why
    they can be found in the :doc:`/misc/composer`.
 
 List of Settings
@@ -18,7 +18,7 @@ List of Settings
 
 Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}>``
    This is the default sender address for Zammad that affects all mails but
-   those generated because of replies (like triggers or agent based mails).
+   those generated because of replies (like triggers or agent-based mails).
    Your customers normally will not see this address. This email address does
    not need to receive and can't be assigned to a group.
 
@@ -39,7 +39,7 @@ Additional follow-up detection
       follow-up detections.
 
 Maximum Email Size: Default value ``10 MB``
-   This one is pretty obvious: It defines the maximum allowed size of a Email
+   This one is pretty obvious: It defines the maximum allowed size of an email
    Zammad will fetch. Zammad will not fetch Mails that are bigger than this
    option.
 
@@ -74,7 +74,7 @@ Send postmaster mail if mail too large: Default value ``yes (enabled)``
       Learn more about :doc:`/system/monitoring`.
 
 Sender based on Reply-To header: Default value ``not set (-)``
-   This setting decides how Zammad should recognize it's customers from Emails
+   This setting decides how Zammad should recognize its customers from emails
    that contain a ``Reply-To`` header. This comes in useful if you're working
    with contact forms that need to use reply to headers.
 
@@ -91,8 +91,8 @@ Customer selection based on sender and receive list: Default value ``yes``
    This option decides how Zammad should react if an agent sends a Email to it.
 
    Option set to ``yes``
-      Whatever the first user / Email address is set within the recipient list
-      is will be used a ticket customer.
+      The first user / email address from the recipient list will be used as
+      the ticket customer.
 
    Option set to ``no``
       The agent will be set as ticket customer.
@@ -106,7 +106,7 @@ Customer selection based on sender and receive list: Default value ``yes``
 Block Notifications
    With the regex that can be defined here, you can ensure not to send any
    notifications to specific systems. By default this especially affects typical
-   system addresses which can't receive Emails any way.
+   system addresses which can't receive Emails anyway.
 
    The default value is:
    ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
@@ -121,12 +121,12 @@ Sender Format: Default value ``Agent + Format Seperator + System Address Display
 
       This does not affect Notification mails (to agents) and password reset
       mails. Emails that are not sent by agents
-      (e.g. trigger based notifications) will always fallback to
+      (e.g. trigger-based notifications) will always fallback to
       ``System Address Display Name`` if needed.
 
-   Option set to ``Agent + Format Seperator + System Address Display Name``
+   Option set to ``Agent + Format Separator + System Address Display Name``
       This will cause Zammad to set the ``FROM`` header to agent name and the
-      channels display name divided by a seperator (configured below).
+      channel's display name, divided by a separator (configured below).
 
       Example: ``Christopher Miller via Chrispresso Inc.``.
 
@@ -146,11 +146,11 @@ Sender Format: Default value ``Agent + Format Seperator + System Address Display
          | Learn more in :doc:`Settings → Ticket </settings/ticket>`.
 
 Sender Format Seperator: Default value ``via``
-   This is a can be a String you can freely choose. It divided the agents name
-   and the display name of the channel when ever needed.
+   This is a can be a string you can freely choose. It divides the agent's name
+   and the display name of the channel whenever needed.
 
 Ticket Subject Forward: Default value ``FWD``
-   The above string will be used on the subject if you forward a mail from
+   The above string will be used on the subject if you forward an email from
    Zammad.
 
    .. note::
@@ -176,14 +176,14 @@ Ticket Subject Size: Default value ``110``
    .. note::
 
       This does **not** limit ticket titles within the UI, just the subjects
-      during replying to an Email.
+      when replying to an Email.
 
 
 Enhanced settings
 -----------------
 
 Some less relevant settings can be changed via rails console if needed.
-As example Zammad allows you to send all outgoing communication to a BCC
+As an example, Zammad allows you to send all outgoing communication to a BCC
 address for archiving reasons if needed. You can find the needed commands
 `within the advanced customization settings`_.
 
