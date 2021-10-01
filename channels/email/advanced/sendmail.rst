@@ -20,7 +20,7 @@ run the following command (you can use rails r [...] if you installed Zammad fro
 Now, you should see a new **Email Account** entry in the admin settings panel:
 
 .. figure:: /images/channels/zammad_email_sendmail.png
-   :alt: The new, outbound-only email channel appears in the Admin Settings Email panel.
+   :alt: The new, outbound-only email channel appears in the admin settings email panel.
    :align: center
 
    Use the **Add** button under the **Email Address** heading to add new email addresses to send from.

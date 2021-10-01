@@ -88,7 +88,7 @@ Sender based on Reply-To header: Default value ``not set (-)``
       name of the ``FROM`` header, if given.
 
 Customer selection based on sender and receive list: Default value ``yes``
-   This option decides how Zammad should react if an agent sends a Email to it.
+   This option decides how Zammad should react if an agent sends a email to it.
 
    Option set to ``yes``
       The first user / email address from the recipient list will be used as
@@ -106,7 +106,7 @@ Customer selection based on sender and receive list: Default value ``yes``
 Block Notifications
    With the regex that can be defined here, you can ensure not to send any
    notifications to specific systems. By default this especially affects typical
-   system addresses which can't receive Emails anyway.
+   system addresses which can't receive emails anyway.
 
    The default value is:
    ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|no-reply|no-reply.+?)@.+?``
@@ -176,7 +176,7 @@ Ticket Subject Size: Default value ``110``
    .. note::
 
       This does **not** limit ticket titles within the UI, just the subjects
-      when replying to an Email.
+      when replying to an email.
 
 
 Enhanced settings

@@ -20,7 +20,7 @@ That's how it works:
 5. Define the SLA-Times:
 
    :First Response: Timeframe for the first response (external call, email)
-   :Update Time:    Timeframe for every following response (external call, Email)
+   :Update Time:    Timeframe for every following response (external call, email)
    :Solution Time:  Timeframe for solving the problem (status: closed)
 
 It is up to you if you set one, two or all three times. When the SLA time is reached, the ticket escalates. Now all agents get  notifications, which have stored the corresponding setting in their own settings profile -> notifications. The information that a ticket is escalated can be selected in the triggers as an attribute, whereby a desired action can be followed.

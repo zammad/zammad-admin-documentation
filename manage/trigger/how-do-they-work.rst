@@ -76,6 +76,6 @@ A trigger can do the following things once its conditions have been met:
    an email address for the group the trigger is working in. If you
    don't, Zammad will skip the Trigger completely.
 
-.. hint:: Certain actions (such as *Email*, *SMS* and *Notes*) support
+.. hint:: Certain actions (such as *email*, *SMS* and *notes*) support
    :doc:`/system/variables`, which can be used to build
    highly-customized message templates.
