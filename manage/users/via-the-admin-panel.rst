@@ -43,6 +43,17 @@ The “Users” panel provides tools to manually manage user accounts.
 
       .. _known bug: https://github.com/zammad/zammad/issues/2214
 
+   .. _locked-user-accounts:
+
+🔒 Unlock locked user accounts
+   .. figure:: /images/manage/users/unlock-account.gif
+      :alt: Screencast showing how to unlock user accounts
+      :align: center
+
+      Use the ⋮ **Actions** menu to unlock accounts after too many
+      failed logins. Locked accounts are indicated with a 🔒 lock icon
+      on the left side.
+
    .. _view-from-users-perspective:
 
 🏴‍☠️ Taking over a user’s session

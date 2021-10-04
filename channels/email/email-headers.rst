@@ -2,7 +2,7 @@ Email header manipulation
 *************************
 
 Email header manipulation allows you to re-route or adjust tickets apart from
-filters or triggers. Like an API call, but with Emails.
+filters or triggers. Like an API call, but with emails.
 
 Header checks are case insensitive.
 
@@ -23,7 +23,7 @@ Header checks are case insensitive.
 Trigger auto responses
 ----------------------
 
-Normally Zammad runs internal checks to see if an Email is an automatic
+Normally Zammad runs internal checks to see if an email is an automatic
 response. In these cases Zammad will not send trigger based responses.
 
 There may be use cases where this behavior may be in your way,
@@ -45,7 +45,7 @@ below options allow you to overcome this issue.
 
 ``x-zammad-is-auto-response``
    Providing this header allows you to tell Zammad that the mail in question
-   is an auto generated response (``true``). This will cause Email based
+   is an auto generated response (``true``). This will cause email based
    triggers to be skipped.
 
    Set this header to ``false`` if you want to generate auto responses.
@@ -126,7 +126,7 @@ Article attributes
 ------------------
 
 If needed Zammad allows you to manipulate attributes or states of fetched
-Email articles.
+email articles.
 
 ``X-Zammad-Article-Sender``
    | Manipulate the sender type (Agent, Customer, or System)

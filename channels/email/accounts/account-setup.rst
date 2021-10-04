@@ -183,7 +183,7 @@ Keep messages on server
 
 Import as
    .. figure:: /images/channels/email/account-setup-archive-import.png
-      :alt: “Import as” option in Email account setup dialog
+      :alt: “Import as” option in email account setup dialog
       :align: center
       :width: 40%
 

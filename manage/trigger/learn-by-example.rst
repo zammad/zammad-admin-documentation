@@ -19,7 +19,7 @@ of the kinds of automation tasks you can set up with triggers.
 
    .. figure:: /images/manage/trigger/Zammad_Helpdesk_trigger-example2.png
 
-3. Send an auto-reply email to *anyone* who responds to a ticket:
+3. Send an auto-reply email to *any customer* who responds to a ticket:
 
    .. figure:: /images/manage/trigger/Zammad_Helpdesk_trigger-example3.png
 
