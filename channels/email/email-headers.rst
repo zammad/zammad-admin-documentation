@@ -137,7 +137,7 @@ email articles.
          System Emails are indicated in a similar way as trigger-response
          like entries Users can't see them natively.
 
-         .. figure:: /images/channels/Email/headers/Email-header-as-system.png
+         .. figure:: /images/channels/email/headers/email-header-as-system.png
             :alt: Received mail as article sender system
             :width: 75%
 
@@ -156,5 +156,5 @@ email articles.
    | Example: ``X-Zammad-Article-Internal: true``
 
 ``X-Zammad-Ignore``
-   | Tell Zammad to silently drop the email.
+   | Tell Zammad to silently drop the Email.
    | Example: ``X-Zammad-Ignore: true``

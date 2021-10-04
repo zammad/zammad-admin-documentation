@@ -61,6 +61,7 @@ Zammad - Documentation for administrators
    system/integrations
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system/objects
+   system/core-workflows
    system/variables
    system/translations
    system/data-privacy

@@ -76,6 +76,8 @@ but Zammad gives you the freedom to custom-build your own.
 
 And to do that, you’ll need to know what each permission does.
 
+.. _permission-guide:
+
 Reference Guide: Permissions
 ----------------------------
 
