@@ -61,9 +61,10 @@ The workflow may not use them all.
          The Result
             This is what the agent would experience with the above
             workflows in place.
+            
             .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_result.gif
-            :alt: Workflow shows objects and limits options based on selections on the group
-            :width: 90%
+               :alt: Workflow shows objects and limits options based on selections on the group
+               :width: 90%
 
 2. Approval process
       In this case ``approved`` is visible to agents by default.
