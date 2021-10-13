@@ -12,8 +12,10 @@ With this, you're all set to provide exactly those information you really need!
 
 .. note:: 
 
-   If the pre-defined :doc:`/system/objects` are not enough,
-   please add them beforehand.
+   * If the pre-defined :doc:`/system/objects` are not enough,
+     please add them beforehand.
+   * If you experience slow or unreliable field updates, please see
+     :ref:`Core Workflow Ajax Modus <core-workflow-ajax-mode>`
 
 .. warning::
 
