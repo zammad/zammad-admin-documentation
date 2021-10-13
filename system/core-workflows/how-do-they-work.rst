@@ -3,7 +3,7 @@ How do they work?
 
 Core Workflows are evaluated by priority.
 If 2 workflows have the same priority by alphabetical order by **name**.
-Triggers are evaluated in alphabetical order, by **name.**
+Workflows are evaluated in alphabetical order, by **name.**
 
 Because of the way Core Workflows works all changes to attributes
 are checked with the application server – please see :doc:`limitations`
