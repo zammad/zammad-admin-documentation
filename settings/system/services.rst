@@ -1,20 +1,28 @@
 Services
 ********
 
-Image Service: Default ``Image Service`` (active)
+Image Service
    Defines the backend for user and organization image lookups.
 
-Geo Calendar Service: Default ``Geo Calendar Service`` (active)
+   Default: ``Image Service`` (active)
+
+Geo Calendar Service
    Defines the backend for geo calendar lookups. Used for initial calendar
    succession.
 
-Geo IP Service: Default ``Geo IP Service`` (active)
+   Default: ``Geo Calendar Service`` (active)
+
+Geo IP Service
    Defines the backend for geo IP lookups. Shows also location of an IP address
    if an IP address is shown.
 
-Geo Location Service: Default ``Geo Location Service`` (active)
+   Default: ``Geo IP Service`` (active)
+
+Geo Location Service
    Defines the backend for geo location lookups to store geo locations for
    addresses.
+
+   Default: ``Geo Location Service`` (active)
 
 .. hint:: 
 
