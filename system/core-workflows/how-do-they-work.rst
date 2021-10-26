@@ -119,13 +119,8 @@ hide |ui|
          The field is **not** gone and still contains any value it provides!
          You may want to consider *remove* instead.
 
-remove |ui| |api|
-   Entirely removes the field. The field value cannot be changed / set.
-
-      .. warning::
-
-         This field's value is being unset in case it's set!
-         You may want to consider *hide* instead.
+remove |ui| 
+   Entirely removes the field. The field value will no get evaluated.
 
 set mandatory |ui| |api|
    Sets the field to mandatory.
