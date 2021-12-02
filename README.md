@@ -47,11 +47,11 @@ This will ensure that your changes are available upon merge.
 
 * gettext
 
-```
-$ brew install gettext              # macOS
-$ sudo apt install gettext          # Debian / Ubuntu
-$ sudo dnf install gettext          # Fedora
-```
+  ```
+  $ brew install gettext              # macOS
+  $ sudo apt install gettext          # Debian / Ubuntu
+  $ sudo dnf install gettext          # Fedora
+  ```
 
 ### Example for a local HTML build
 
