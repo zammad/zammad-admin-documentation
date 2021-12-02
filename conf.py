@@ -16,7 +16,7 @@ exclude_patterns = ['_build', 'html', 'doctrees']
 extensions = ['versionwarning.extension', 'sphinx_tabs.tabs']
 
 locale_dirs = ['locale/']
-gettext_compact = False
+gettext_compact = "user-docs"
 language = "en"
 
 html_static_path = ['_static']

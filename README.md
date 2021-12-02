@@ -1,3 +1,5 @@
+[![Documentation Status][badge]][docs] [![Translation Status][tbadge]][wbetranslate]
+
 # Zammad admin documentation
 
 If you want to contribute to zammad documentation you can
@@ -25,9 +27,6 @@ Thanks! ❤️ ❤️ ❤️
 
   Zammad Team
 
-
-[![Documentation Status](https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest)](https://zammad-admin-documentation.readthedocs.io/de/latest/)
-
 ## Notes on Documentation Branches and Pull Requests
 
 Please note that this repository uses protected branches.
@@ -36,15 +35,23 @@ please use ``main`` as destination Branch.
 
 This will ensure that your changes are available upon merge.
 
+## Compilation
 
-## Local tests (mostly internal stuff)
+### Dependencies
 
-If you want to test the doc for yourself you need a local installation of sphinx and gettext.
+* sphinx
+
+  ```
+  $ pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme sphinx-tabs
+  ```
+
+* gettext
 
 ```
-pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme sphinx-version-warning
+$ brew install gettext              # macOS
+$ sudo apt install gettext          # Debian / Ubuntu
+$ sudo dnf install gettext          # Fedora
 ```
-
 
 ### Example for a local HTML build
 
@@ -52,44 +59,22 @@ pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme sphinx-version-
 make html
 ```
 
-### Example workflow for localization using transifex
+### Localization using Weblate
 
-If you have to work on the translations you need gettext.
+This documentation is translated via Weblate.
+After changing or adding text in this documentation, updating the POT file
+is required. (This is usually done by us after QA *before* merging the PR)
 
-For OS X use HomeBrew or build from source. For Linux use your package
-manager.
+Weblate will automatically provide the translation parts in in its UI for
+all available languages. If there's translation progress it will automatically
+provide pull requests on this repository. 🎉
 
 ```
-brew install gettext
-```
-
-The workflow itself
-```
-# create .tx config
-$ tx init
-
 # ensure clean enviroment
 $ make clean
 
 # generate the strings from the *.rst files
 $ make gettext
-
-# OPTIONAL: if you have to adapt a new locale, run
-sphinx-intl update -p _build/locale/ -l de
-
-# update the resource files from the pot dir
-$ sphinx-intl update-txconfig-resources --pot-dir _build/locale --transifex-project-name zammad-admin-documentation
-
-# push to transifex (if configured)
-$ tx push -s
-
-# Below pull options by default ignore unreviewed (see https://docs.transifex.com/client/pull#getting-different-file-variants )
-# after translation pull needed languages from transifex
-$ tx pull -l en
-
-# build the .MO files for use with readthedocs
-# (After a successful build, push to this repo and readthedocs will update itself.)
-$ sh build_mo.sh
 
 # manual language-based build (`_build/html/`) (for testing)
 $ make -e SPHINXOPTS="-D language='de'" html
@@ -97,3 +82,13 @@ $ make -e SPHINXOPTS="-D language='en'" html
 ```
 
 If you have a problem, please create an issue. Thanks.
+
+### Localization progress
+
+[![Translation progress][tprogress]][wbetranslate]
+
+[badge]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest
+[docs]: https://admin-docs.zammad.org/en/latest/
+[tbadge]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/svg-badge.svg
+[wbetranslate]: https://translations.zammad.org/projects/documentations/admin-documentation/
+[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/multi-auto.svg
