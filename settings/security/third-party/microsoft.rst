@@ -57,7 +57,7 @@ Supported account types:
 Redirect URI (optional):
    Select web and provide your callback url. 
    The callback url looks like this: 
-   ``https://zammad.domain.tld/auth/microsoft_office365/callback``
+   ``https://account.zammad.tld/auth/microsoft_office365/callback``
 
 .. figure:: /images/settings/security/third-party/microsoft/register-microsoft-app.gif
    :alt: Screencast showing how to register a Microsoft app
