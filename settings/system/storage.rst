@@ -8,7 +8,7 @@ Storage Mechanism
 
    By default we're writing to the ``Database`` - you can switch to
    ``Filesystem`` at any time. If you chose filesystem, your files are
-   written to ``/opt/zammad/fs/``
+   written to ``/opt/zammad/storage/``
 
    .. note::
 
