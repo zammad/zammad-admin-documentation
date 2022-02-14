@@ -12,7 +12,7 @@ Please provide the following requirements:
    * Your Zammad instance must be allowed to communicate to external services
    * Placetel must be able to reach your Zammad instance
 
-:doc:`configure-placetel-for-zammad.rst`
+:doc:`configure-placetel-for-zammad`
    Learn how to configure placetel to enable Zammad and placetel to communicate
    with each other.
 
