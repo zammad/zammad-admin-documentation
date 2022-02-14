@@ -3,13 +3,6 @@ Placetel CTI
 
 Starting with Zammad 2.8, we're supporting the CTI for placetel. For configuration, please go to Settings -> Integrations -> Placetel in the admin panel.
 
-Limitations
------------
-
-Please note, that it's not possible to log outbound calls.
-This is due to a limitation of the Placetel API.
-
-
 Getting needed information from placetel
 ----------------------------------------
 
