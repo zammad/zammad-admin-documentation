@@ -9,6 +9,18 @@ Zammad offers numerous integrations that add rich features to your instance.
 Integrations for phone systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. hint::
+
+   Your VoIP provider or telephony system is not listed?
+   Possibly your provider supports Zammad by using the generic CTI - if you're
+   unsure ask your provider.
+
+   Provider does not support Zammad?
+   `Consider creating a feature request in the Zammad Community`_.
+
+.. _Consider creating a feature request in the Zammad Community:
+   https://community.zammad.org/c/stuff-you-like-zammad-to-have-feel-free-to-discuss-and-add-proposals/6
+
 .. toctree::
    :maxdepth: 1
    :titlesonly:
