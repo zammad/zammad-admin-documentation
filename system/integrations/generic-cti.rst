@@ -1,44 +1,33 @@
 CTI (generic)
 =============
 
-Zammad offers phone functionality for users with access to a CTI (computer telephony integration) system (available since version 2.6).
+.. include:: /system/integrations/cti-integration-introduction.include.rst
 
+Requirements
+------------
 
-Using the CTI integration enables you to greet customers by name,  get their tickets up on the screen with a single click. Or, identify missed calls at a glance, and return calls right from within Zammad.
-Manufacturers of telephone systems or developers can use this interface to connect their telephone system to Zammad.
+Please provide the following requirements:
 
-What do I need to get started?
-------------------------------
+   * a telephone system that supports webhooks (outbound)
+     (best option are those that allow customizing the calls)
+   * a unique Call-ID during the call session
+   * call event data (from and to numbers, direction)
+   * your Zammad instance must be reachable for your telephony system
 
-Zammad requires the following information to support the agent:
+If you want to learn more on what kind of requests are supported by Zammad
+and what it expects, please consult our `CTI-API documentation`_.
 
-- individual call events (e.g., call incoming/answered/ended)
-- caller ID data
+.. URL is subject to change due to reworks
 
-To use the new CTI interface, your CTI system must transmit this information (and only this information) to Zammad via HTTP.
+.. _CTI-API documentation:
+   https://docs.zammad.org/en/latest/cti/api-intro.html
 
-What can it do for me?
-----------------------
+Available settings
+------------------
 
-***Inbound calls***
-- Caller ID display: Open a caller’s customer profile with just one click
-- Intelligent caller ID search: Automatically scans tickets for caller ID data (e.g., in email signatures) if customer account data is missing
-- Caller overview: See a caller’s entire ticket history, or instantly create a new ticket
-- Call journal: See all calls at a glance, along with their status (e.g., which ones require a call back?)
-- Agent overview: See who’s currently on a call
-- Selective call blocking [1]_
-- Do-not-disturb mode [1]_
+X
 
+Recent Logs
+-----------
 
-***Outbound calls***
-
-- Direct dialing: Initiate calls from within Zammad [1]_
-- Dynamic caller ID: Set your caller ID based on, e.g., the destination country of the call*
-
-.. [1] requires PBX/telephone system support
-
-.. image:: /images/system/integrations/generic-cti/1.jpg
-
-.. image:: /images/system/integrations/generic-cti/2.jpg
-
-More information can be found on our `CTI API intro <https://docs.zammad.org/en/latest/cti-api-intro.html>`_.
+X
