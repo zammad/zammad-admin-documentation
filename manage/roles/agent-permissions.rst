@@ -25,8 +25,8 @@ Agent Permissions
                             .. hint:: 🤓 Requires configuration of either integrations
 
                                   * :doc:`Generic CTI </system/integrations/generic-cti>`
-                                  * :doc:`placetel </system/integrations/placetel-cti>`
-                                  * :doc:`sipgate </system/integrations/sipgate>`
+                                  * :doc:`placetel </system/integrations/placetel/index>`
+                                  * :doc:`sipgate </system/integrations/sipgate/index>`
 
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
