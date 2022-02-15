@@ -25,9 +25,9 @@ Integrations for phone systems
    :maxdepth: 1
    :titlesonly:
 
-   integrations/generic-cti
-   integrations/placetel/index
-   integrations/sipgate/index
+   integrations/cti/generic
+   integrations/cti/placetel
+   integrations/cti/sipgate
 
 Integrations for authentication and customers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

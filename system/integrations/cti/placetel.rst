@@ -1,7 +1,7 @@
 Placetel CTI
 ============
 
-.. include:: /system/integrations/cti-integration-introduction.include.rst
+.. include:: /system/integrations/cti/introduction.include.rst
 
 Requirements
 ------------
@@ -12,7 +12,7 @@ Please provide the following requirements:
    * Your Zammad instance must be allowed to communicate to external services
    * Placetel must be able to reach your Zammad instance
 
-:doc:`configure-placetel-for-zammad`
+:doc:`provider-configurations/placetel`
    Learn how to configure placetel to enable Zammad and placetel to communicate
    with each other.
 

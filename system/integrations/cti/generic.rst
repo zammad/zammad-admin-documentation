@@ -1,7 +1,7 @@
 CTI (generic)
 =============
 
-.. include:: /system/integrations/cti-integration-introduction.include.rst
+.. include:: /system/integrations/cti/introduction.include.rst
 
 Requirements
 ------------
