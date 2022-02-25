@@ -66,18 +66,19 @@ Other Settings
 Phone Extension to Agent Mapping
    .. include:: /system/integrations/cti/includes/extenion-to-agent-mapping.include.rst
 
-   .. figure:: /images/system/integrations/cti/placetel/phone-extension-to-agent-mapping.png
-      :alt: Screenshot showing sample user mappings in between placetel and Zammad
+   .. figure:: /images/system/integrations/cti/sipgate/phone-extension-to-agent-mapping.png
+      :alt: Screenshot showing sample user mappings in between sipgate and Zammad
 
    .. hint::
 
-      You can find your agents placetel username combination required within
-      ⚙️ PBX → VoIP destinations. Within the "Advanced settings" section
-      you're looking for "SIP user name" and "SIP server".
+      You can find your agents sipgate username within
+      ``Accountverwaltung → Benutzer``. You're looking for the SIP-ID.
 
-      Combine these two like so: ``<sip-user-name>@<sip-server>``.
+      .. figure:: /images/system/integrations/cti/sipgate/voip-credentials.png
+         :alt: Sample VoIP credentials for a sipgate user
 
-      .. figure:: /images/system/integrations/cti/placetel/voip-credentials.png
-         :alt: Sample VoIP credentials for a placetel user
+      .. note::
+
+         Users with several devices also have several SIP-IDs.
 
 .. include:: /system/integrations/cti/includes/recent-logs.include.rst
