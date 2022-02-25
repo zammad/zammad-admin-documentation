@@ -1,5 +1,5 @@
-Sipgate
-=======
+Sipgate (sipgate.io)
+====================
 
 .. toctree::
    :hidden:
