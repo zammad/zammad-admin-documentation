@@ -1,4 +1,4 @@
-Setup sipgate connection for Zammad
+Setup Sipgate connection for Zammad
 ===================================
 
 .. note::
@@ -15,7 +15,7 @@ Setup sipgate connection for Zammad
 Step 1: Book sipgate.io package
    .. hint:: Skip to step 2 if you already have the package booked!
 
-   Login to an administrative sipgate account and navigate to
+   Login to an administrative Sipgate account and navigate to
    ``Accountverwaltung``. You'll see several different options depending on
    your booked packages. Select ``Verträge & Produkte`` to continue.
 
@@ -32,7 +32,7 @@ Step 1: Book sipgate.io package
 
          The availability for ``sipgate.io`` packages and their levels highly
          depends on the overall account type and product you've booked with
-         sipgate.
+         Sipgate.
 
    .. figure:: /images/system/integrations/cti/sipgate/step1-book-sipgateIO-addon.gif
       :alt: Screencast showing the process on how to book the required sipgate.io addon
@@ -48,7 +48,7 @@ Step 2: Configure webhook for Zammad
    .. note::
 
       Ensure to select at least one call group or phoneline within "Sources".
-      Other wise sipgate will not indicate any incoming or outgoing calls
+      Other wise Sipgate will not indicate any incoming or outgoing calls
       to Zammad.
 
    .. figure:: /images/system/integrations/cti/sipgate/step2-configure-sipgate-webhooks.gif
@@ -56,15 +56,15 @@ Step 2: Configure webhook for Zammad
 
 Step 3: Restrict the numbers to notify on
    Having a lot of numbers that shouldn't be used for notifying Zammad?
-   Within the Webhooks → URLs section of sipgate you can select which *sources*
-   sipgate should notify Zammad about in- and outgoing calls.
+   Within the Webhooks → URLs section of Sipgate you can select which *sources*
+   Sipgate should notify Zammad about in- and outgoing calls.
 
    Use either specific phone lines or use the option
    "Use for all phonelines and groups" to notify Zammad about all existing
-   lines of your sipgate account.
+   lines of your Sipgate account.
 
    .. figure:: /images/system/integrations/cti/sipgate/restrict-notifying-numbers.png
-      :alt: Screenshot showing a sample selection of phone numbers to use for the sipgates webhooks API
+      :alt: Screenshot showing a sample selection of phone numbers to use for the Sipgates webhooks API
 
    .. hint::
 
@@ -77,9 +77,9 @@ Step 3: Restrict the numbers to notify on
       calls to Zammad. You'll also can see the response.
 
       .. figure:: /images/system/integrations/cti/sipgate/debug-log-details-sipgate.png
-         :alt: Screenshot showing sample log entries for sipgates webhook calls to Zammad
+         :alt: Screenshot showing sample log entries for Sipgates webhook calls to Zammad
 
-Step 4 (optional): Further configurations for sipgate
-   If needed, you can now configure Zammads sipgate integration in more detail.
+Step 4 (optional): Further configurations for Sipgate
+   If needed, you can now configure Zammads Sipgate integration in more detail.
    You can learn more about your options here:
    :ref:`Sipgate integration settings <sipgate_settings>`.

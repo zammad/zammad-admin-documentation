@@ -19,9 +19,9 @@ Limitations
 
 Please note the following limitations to reduce confusion later on:
 
-   * CTI integrations provide caller log functions only
+   * CTI integrations provide caller log functions only.
    * This integration does not provide any VoIP functionalities;
      you can't make phone calls from within Zammad.
    * If your browser supports ``tel``-URLs, you can click on phone numbers
      for automatic dialing. This requires additional software / configuration
-     on your agents computers.
+     on your agent's computers.

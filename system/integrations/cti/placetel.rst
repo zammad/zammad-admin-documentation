@@ -13,12 +13,12 @@ Requirements
 
 Please provide the following requirements:
 
-   * You need an administrative placetel account for your organization
-   * Your Zammad instance must be allowed to communicate to external services
-   * Placetel must be able to reach your Zammad instance
+   * You need an administrative Placetel account for your organization.
+   * Your Zammad instance must be allowed to communicate to external services.
+   * Placetel must be able to reach your Zammad instance.
 
 :doc:`provider-configurations/placetel`
-   Learn how to configure placetel to enable Zammad and placetel to communicate
+   Learn how to configure Placetel to enable Zammad and Placetel to communicate
    with each other.
 
 .. _placetel_settings:
@@ -35,11 +35,11 @@ Available settings
 
 Endpoint Settings
    The here listed endpoint settings are relevant for the
-   :doc:`integration configuration with placetel <provider-configurations/placetel>`.
+   :doc:`integration configuration with Placetel <provider-configurations/placetel>`.
 
    Endpoint
       This endpoint will be required for the Zammad integration within the
-      placetel web interface.
+      Placetel web interface.
 
    API Token
       You'll receive this token within the ``Web API`` menu.
@@ -62,17 +62,17 @@ Phone Extension to Agent Mapping
    .. include:: /system/integrations/cti/includes/extenion-to-agent-mapping.include.rst
 
    .. figure:: /images/system/integrations/cti/placetel/phone-extension-to-agent-mapping.png
-      :alt: Screenshot showing sample user mappings in between placetel and Zammad
+      :alt: Screenshot showing sample user mappings in between Placetel and Zammad
 
    .. hint::
 
-      You can find your agents placetel username combination required within
+      You can find your agents Placetel username combination required within
       ⚙️ PBX → VoIP destinations. Within the "Advanced settings" section
       you're looking for "SIP user name" and "SIP server".
 
       Combine these two like so: ``<sip-user-name>@<sip-server>``.
 
       .. figure:: /images/system/integrations/cti/placetel/voip-credentials.png
-         :alt: Sample VoIP credentials for a placetel user
+         :alt: Sample VoIP credentials for a Placetel user
 
 .. include:: /system/integrations/cti/includes/recent-logs.include.rst

@@ -13,15 +13,15 @@ Requirements
 
 Please provide the following requirements:
 
-   * You need an administrative sipgate account for your organization
-   * Zammad requires a ``sipgate.io`` addon from the feature store
-      * Please note that API calls are not free with sipgate.
+   * You need an administrative Sipgate account for your organization.
+   * Zammad requires a ``sipgate.io`` addon from the feature store.
+      * Please note that API calls are not free with Sipgate.
         Rates may apply and differ from account to account.
-   * Your Zammad instance must be allowed to communicate to external services
-   * Sipgate must be able to reach your Zammad instance
+   * Your Zammad instance must be allowed to communicate to external services.
+   * Sipgate must be able to reach your Zammad instance.
 
 :doc:`provider-configurations/sipgate`
-   Learn how to configure sipgate to enable Zammad and sipgate to communicate
+   Learn how to configure Sipgate to enable Zammad and Sipgate to communicate
    with each other.
 
 .. _sipgate_settings:
@@ -67,15 +67,15 @@ Phone Extension to Agent Mapping
    .. include:: /system/integrations/cti/includes/extenion-to-agent-mapping.include.rst
 
    .. figure:: /images/system/integrations/cti/sipgate/phone-extension-to-agent-mapping.png
-      :alt: Screenshot showing sample user mappings in between sipgate and Zammad
+      :alt: Screenshot showing sample user mappings in between Sipgate and Zammad
 
    .. hint::
 
-      You can find your agents sipgate username within
+      You can find your agent's Sipgate username within
       ``Accountverwaltung → Benutzer``. You're looking for the SIP-ID.
 
       .. figure:: /images/system/integrations/cti/sipgate/voip-credentials.png
-         :alt: Sample VoIP credentials for a sipgate user
+         :alt: Sample VoIP credentials for a Sipgate user
 
       .. note::
 
