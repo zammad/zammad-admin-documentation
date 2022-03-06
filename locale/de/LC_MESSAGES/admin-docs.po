@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 00:29+0100\n"
+"POT-Creation-Date: 2022-03-04 16:38+0100\n"
 "PO-Revision-Date: 2022-01-19 16:02+0000\n"
 "Last-Translator: gokhirschfelder <e.hirschfelder@gok-online.de>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -77,7 +77,8 @@ msgstr ""
 
 #: ../channels/chat.rst:23
 msgid "Long waiting queues before even writing with a personal"
-msgstr "Lange Warteschlangen, bevor man überhaupt ein mit einer Person schreibt"
+msgstr ""
+"Lange Warteschlangen, bevor man überhaupt ein mit einer Person schreibt"
 
 #: ../channels/chat.rst:24
 msgid ""
@@ -1223,6 +1224,10 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:41
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0 ../manage/webhook/add.rst:49
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:10
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:20
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:9
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:19
 msgid "Note"
 msgstr ""
 
@@ -2471,6 +2476,7 @@ msgid "form_ticket_create_by_ip_per_day"
 msgstr ""
 
 #: ../channels/form.rst:1
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:8
 msgid "240"
 msgstr ""
 
@@ -5689,15 +5695,15 @@ msgid "🤓 Requires configuration of either integrations"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:27
-msgid ":doc:`Generic CTI </system/integrations/generic-cti>`"
+msgid ":doc:`Generic CTI </system/integrations/cti/generic>`"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:28
-msgid ":doc:`placetel </system/integrations/placetel-cti>`"
+msgid ":doc:`placetel </system/integrations/cti/placetel>`"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:29
-msgid ":doc:`sipgate </system/integrations/sipgate>`"
+msgid ":doc:`sipgate </system/integrations/cti/sipgate>`"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:0
@@ -6917,8 +6923,8 @@ msgstr ""
 #: ../manage/trigger/limitations.rst:2
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
+#: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/elasticsearch.rst:25
-#: ../system/integrations/placetel-cti.rst:7
 #: ../system/integrations/smime/prerequisites.rst:32
 msgid "Limitations"
 msgstr ""
@@ -9480,7 +9486,7 @@ msgstr ""
 msgid ""
 "By default we're writing to the ``Database`` - you can switch to "
 "``Filesystem`` at any time. If you chose filesystem, your files are written "
-"to ``/opt/zammad/fs/``"
+"to ``/opt/zammad/storage/``"
 msgstr ""
 
 #: ../settings/system/storage.rst:15
@@ -10688,39 +10694,52 @@ msgstr ""
 msgid "Integrations for phone systems"
 msgstr ""
 
-#: ../system/integrations.rst:21
-msgid "Integrations for authentication and customers"
+#: ../system/integrations.rst:14
+msgid ""
+"Your VoIP provider or telephony system is not listed? Possibly your provider "
+"supports Zammad by using the generic CTI - if you're unsure ask your "
+"provider."
+msgstr ""
+
+#: ../system/integrations.rst:18
+msgid ""
+"Provider does not support Zammad? `Consider creating a feature request in "
+"the Zammad Community`_."
 msgstr ""
 
 #: ../system/integrations.rst:33
+msgid "Integrations for authentication and customers"
+msgstr ""
+
+#: ../system/integrations.rst:45
 msgid "Integrations for Monitoring Systems"
 msgstr ""
 
-#: ../system/integrations.rst:35
+#: ../system/integrations.rst:47
 msgid "This section currently misses the following integrations:"
 msgstr ""
 
-#: ../system/integrations.rst:37
+#: ../system/integrations.rst:49
 msgid "Icinga"
 msgstr "Icinga"
 
-#: ../system/integrations.rst:38
+#: ../system/integrations.rst:50
 msgid "Monit"
 msgstr "Monit"
 
-#: ../system/integrations.rst:39
+#: ../system/integrations.rst:51
 msgid "Nagios"
 msgstr "Nagios"
 
-#: ../system/integrations.rst:49
+#: ../system/integrations.rst:61
 msgid "Integrations for Issue Trackers"
 msgstr ""
 
-#: ../system/integrations.rst:59
+#: ../system/integrations.rst:71
 msgid "Other Integrations"
 msgstr ""
 
-#: ../system/integrations.rst:61
+#: ../system/integrations.rst:73
 msgid ""
 "This section will hold any other integration that can't be grouped up (yet)."
 msgstr ""
@@ -10780,6 +10799,7 @@ msgid ""
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:36
+#: ../system/integrations/cti/includes/recent-logs.include.rst:2
 msgid "Recent Logs"
 msgstr ""
 
@@ -11378,6 +11398,812 @@ msgid ""
 "was to add further information it received from Clearbit. Really cool, right?"
 msgstr ""
 
+#: ../system/integrations/cti/generic.rst:2
+msgid "CTI (generic)"
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:1
+msgid ""
+"This integration enables Zammad to provide a caller log to your agents. With "
+"this your agents can greet your customers by their name and are supported by "
+"Zammad with automatically opening a new ticket dialogue or the user profile."
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:6
+msgid ""
+"If you want to learn more on how your agents can use this function, please "
+"refer the `user documentation`_."
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:11
+msgid ""
+"Automatically opening new ticket dialogues or user profiles requires agent "
+"to extension mapping - see more below."
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:20
+msgid "Please note the following limitations to reduce confusion later on:"
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:22
+msgid "CTI integrations provide caller log functions only."
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:23
+msgid ""
+"This integration does not provide any VoIP functionalities; you can't make "
+"phone calls from within Zammad."
+msgstr ""
+
+#: ../system/integrations/cti/includes/introduction.include.rst:25
+msgid ""
+"If your browser supports ``tel``-URLs, you can click on phone numbers for "
+"automatic dialing. This requires additional software / configuration on your "
+"agent's computers."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:7
+#: ../system/integrations/cti/placetel.rst:12
+#: ../system/integrations/cti/sipgate.rst:12
+#: ../system/integrations/zabbix.rst:10
+msgid "Requirements"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:9
+#: ../system/integrations/cti/placetel.rst:14
+#: ../system/integrations/cti/sipgate.rst:14
+msgid "Please provide the following requirements:"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:11
+msgid ""
+"A telephone system that supports webhooks (outbound) (best option are those "
+"that allow customizing the calls)."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:13
+msgid "A unique Call-ID during the call session."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:14
+msgid "Call event data (both numbers and direction)."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:15
+msgid "Your Zammad instance must be reachable for your telephony system."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:17
+msgid ""
+"If you want to learn more on what kind of requests are supported by Zammad "
+"and what it expects, please consult our `CTI-API documentation`_."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:26
+#: ../system/integrations/cti/placetel.rst:27
+#: ../system/integrations/cti/sipgate.rst:30
+msgid "Available settings"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:30
+msgid ""
+"Click the button next to the ``CTI (generic)`` heading to activate or "
+"deactivate this function."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:38
+#: ../system/integrations/cti/placetel.rst:46
+#: ../system/integrations/cti/sipgate.rst:45
+#, fuzzy
+#| msgid "Settings"
+msgid "Endpoint Settings"
+msgstr "Einstellungen"
+
+#: ../system/integrations/cti/generic.rst:34
+msgid ""
+"Zammad will list your generic CTI endpoint here. It contains a unique token "
+"so ensure to keep this URL save."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:37
+msgid ""
+"You'll need this endpoint for your PBX to talk to Zammad, see `CTI-API "
+"documentation`_."
+msgstr ""
+
+#: ../system/integrations/cti/includes/important-dont-forget-saving.include.rst:3
+msgid ""
+"All following options **do not save automatically**. Always use the Save "
+"button on the lower end of the integration page!"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:60
+#: ../system/integrations/cti/placetel.rst:54
+#: ../system/integrations/cti/sipgate.rst:57
+#, fuzzy
+#| msgid "Settings"
+msgid "Call Settings"
+msgstr "Einstellungen"
+
+#: ../system/integrations/cti/generic.rst:56
+#: ../system/integrations/cti/placetel.rst:54
+#: ../system/integrations/cti/sipgate.rst:42
+#: ../system/integrations/cti/sipgate.rst:55
+msgid "Inbound"
+msgstr ""
+
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:1
+msgid ""
+"This option allows you to block specific incoming caller IDs. It allows you "
+"to temporarily reject e.g. spam callers without having to contact providers "
+"or PBX administrators."
+msgstr ""
+
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:6
+msgid "Caller ID to block"
+msgstr ""
+
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:6
+msgid "Provide caller IDs to block in ``E.164`` format."
+msgstr ""
+
+#: ../system/integrations/cti/includes/inbound-calls.include.rst:9
+msgid ""
+"Provide a meaningful note for your fellow administrators to remind yourself "
+"why you've chosen to block the number."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:52
+msgid ""
+"Your telephony system has to support this function. Zammad will send a "
+"``reject`` response which will cause your telephony system to hang up the "
+"call."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:56
+msgid "To callers this usually will feel like the line is busy."
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:20
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:19
+#: ../system/integrations/cti/sipgate.rst:45
+msgid "Outbound"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls-intro.include.rst:1
+msgid ""
+"In many cases you may want to use a different caller ID depending on the "
+"destination you're calling. This may apply due to specific connection rates "
+"to other countries or because you want your customer to feel you're calling "
+"from the same country."
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls-intro.include.rst:6
+msgid "This option expects ``E.164`` number formats."
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:13
+msgid "Destination caller ID"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:5
+msgid "The caller ID or number you're trying to call."
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:9
+msgid "You can use wildcards for e.g. country specific outbound numbers like:"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:11
+msgid "``49*`` for Germany"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:12
+msgid "``4930*`` for Berlin / Germany landlines"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:13
+msgid "``33*`` for France"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:17
+msgid "Set Outbound caller ID"
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:16
+msgid ""
+"The outbound caller ID to set (the number your customer sees on his display) "
+"in ``E.164`` number format."
+msgstr ""
+
+#: ../system/integrations/cti/includes/outbound-calls.include.rst:20
+msgid "Provide a short description for fellow administrators."
+msgstr ""
+
+#: ../system/integrations/cti/includes/generic-cti-support-note.includes.rst:3
+msgid ""
+"This option requires your PBX to send a specific request to Zammad *before "
+"dialing*. Please consult the `CTI API`_ in case you're not sure."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:69
+#: ../system/integrations/cti/placetel.rst:59
+#: ../system/integrations/cti/sipgate.rst:64
+#, fuzzy
+#| msgid "Settings"
+msgid "Other Settings"
+msgstr "Einstellungen"
+
+#: ../system/integrations/cti/includes/other-settings-intro.include.rst:1
+msgid ""
+"Below you can find all available additional settings for this CTI "
+"integration. For your overview we're sorting them by appearance and "
+"reference their description first."
+msgstr ""
+
+#: ../system/integrations/cti/includes/default-caller-id.include.rst:2
+#: ../system/integrations/cti/includes/default-caller-id.include.rst:1
+msgid "Default caller ID for outbound calls"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:16
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:15
+msgid "Shown records in caller log"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:2
+msgid ""
+"Allows you to set the number of shown caller log entries for all users. You "
+"can choose from the following values:"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:5
+msgid "60 (default)"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:6
+msgid "120"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:7
+msgid "180"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:9
+msgid "300"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:11
+msgid "**🥵 Potential performance issue**"
+msgstr ""
+
+#: ../system/integrations/cti/includes/records-caller-log.include.rst:13
+msgid ""
+"Setting this setting higher than 60 may cause serious performance issues on "
+"very busy instances. Keep in mind that this setting causes Zammad to poll "
+"and send up to 300 records to *all active agent sessions* in very short time "
+"periods."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:90
+msgid "Caller Log Filter"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:72
+msgid ""
+"This function allows you to provide call information based on e.g. queues "
+"only to agents that really need the information."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:75
+msgid ""
+"Why? If you have a team for several countries or departments, you don't want "
+"to bug your agents from other departments. Leaving these options empty will "
+"fallback to showing everything to everyone."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:81
+msgid "Destination caller ID or Queue"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:80
+msgid ""
+"This depends on your PBX and usually is either a queue ID, phone number or "
+"extension."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:86
+msgid "Agents"
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:84
+msgid ""
+"Select the agents that are responsible for the group. These agents will then "
+"see caller log entries and call notifications fitting to said queue."
+msgstr ""
+
+#: ../system/integrations/cti/generic.rst:0
+msgid ""
+"Screenshot showing the caller log filter table with pre filled sample data"
+msgstr ""
+
+#: ../system/integrations/cti/includes/recent-logs.include.rst:6
+msgid ""
+"With recent logs Zammad allows you to view the latest calls for the CTI "
+"functionality. This usually comes in handy, when you're looking for errors."
+msgstr ""
+
+#: ../system/integrations/cti/includes/recent-logs.include.rst:0
+msgid ""
+"Screenshot showing several incoming requests within Recent logs section."
+msgstr ""
+
+#: ../system/integrations/cti/includes/recent-logs.include.rst:16
+msgid "I'm just here to clear floats up."
+msgstr ""
+
+#: ../system/integrations/cti/includes/recent-logs.include.rst:20
+msgid ""
+"By clicking on the entry of interest, Zammad will provide more details on "
+"the call in question. You'll see the payload it received and also the "
+"response that was sent."
+msgstr ""
+
+#: ../system/integrations/cti/includes/recent-logs.include.rst:0
+msgid ""
+"Screenshot showing detailed information of a specific log entry of recent "
+"logs"
+msgstr ""
+
+#: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:1
+msgid ""
+"By mapping your agents extension to their existing Zammad users, Zammad can "
+"provide a new ticket dialogue or open the user profile for the agent that "
+"picks up the call."
+msgstr ""
+
+#: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:5
+msgid ""
+"This speeds up ticket aiding, no matter if it's for existing tickets or new "
+"ones!"
+msgstr ""
+
+#: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:10
+msgid "The agent perspective is described within our `user documentation`_."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:2
+msgid "Placetel CTI"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:16
+msgid "You need an administrative Placetel account for your organization."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:17
+#: ../system/integrations/cti/sipgate.rst:20
+msgid ""
+"Your Zammad instance must be allowed to communicate to external services."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:18
+msgid "Placetel must be able to reach your Zammad instance."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:22
+msgid ":doc:`provider-configurations/placetel`"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:21
+msgid ""
+"Learn how to configure Placetel to enable Zammad and Placetel to communicate "
+"with each other."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:31
+msgid ""
+"Click the button next to the ``Placetel`` heading to activate or deactivate "
+"this function."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:37
+msgid ""
+"The here listed endpoint settings are relevant for the :doc:`integration "
+"configuration with Placetel <provider-configurations/placetel>`."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:42
+msgid "Endpoint"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:41
+msgid ""
+"This endpoint will be required for the Zammad integration within the "
+"Placetel web interface."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:46
+msgid "API Token"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:45
+msgid ""
+"You'll receive this token within the ``Web API`` menu. Make sure to copy "
+"this value, it's only shown once!"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:76
+#: ../system/integrations/cti/sipgate.rst:82
+msgid "Phone Extension to Agent Mapping"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:0
+msgid "Screenshot showing sample user mappings in between Placetel and Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:69
+msgid ""
+"You can find your agents Placetel username combination required within ⚙️ PBX "
+"→ VoIP destinations. Within the \"Advanced settings\" section you're looking "
+"for \"SIP user name\" and \"SIP server\"."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:73
+msgid "Combine these two like so: ``<sip-user-name>@<sip-server>``."
+msgstr ""
+
+#: ../system/integrations/cti/placetel.rst:0
+msgid "Sample VoIP credentials for a Placetel user"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:2
+msgid "Setup Placetel connection for Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:6
+msgid ""
+"This configuration step requires a *full* administrative Placetel account. "
+"You may receive forbidden error messages with Placetel in case your "
+"permissions are not high enough."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:10
+msgid ""
+"The following actions can be configured via the `Placetel web interface`_."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:30
+msgid "Step 1: Activate Zammad integration"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:15
+msgid ""
+"Within Integrations, scroll down to Partner integrations and select Zammad."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:18
+msgid ""
+"You can alternatively filter by \"Ticket Systems\" to reduce the number of "
+"entries on the page. You'll still want to look for Partner integrations. 🤓"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:22
+msgid ""
+"Within the Zammad integration now press \"Activate\". A new tab ``API`` "
+"becomes available - open this tab."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:25
+msgid ""
+"Now tick \"Enable Call Control / Notify API\" and paste the Placetel "
+"endpoint from your Zammad instance into the field \"URL of your API endpoint"
+"\". Save to apply the settings"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:0
+msgid "Screencast showing how to activate the Zammad integration"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:52
+msgid "Step 2: Generate API Token for Placetel"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:33
+msgid ""
+"Go back to the integrations page and scroll down to \"Web API\". Generate a "
+"new API token by using the \"Create a new API token\" button."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:38
+msgid ""
+"If you already generated a token either use your existing token or reset it "
+"by using above mentioned button. Placetel will ask you to conform this reset."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:42
+msgid ""
+"Please keep in mind that existing API scripts may no longer work due to "
+"token resets!"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:45
+msgid ""
+"Copy the provided API token and insert it into the \"API Token\" field "
+"within Zammads Placetel integration."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:48
+msgid ""
+"Apply your changes by using the \"Save\" button on the bottom of the "
+"Placetel integration page and activate the Placetel integration."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:0
+msgid ""
+"Screencast showing how to retrieve an API token from Placetel for Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:74
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:80
+msgid "Step 3: Restrict the numbers to notify on"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:55
+msgid ""
+"Having a lot of numbers that shouldn't be used for notifying Zammad? Within "
+"the the Integrations page of the Placetel web interface, go to \"Notify API"
+"\"."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:59
+msgid ""
+"Lower on the page Placetel allows you to restrict the numbers to notify on. "
+"You'll find this within the \"External routing API\" part."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:0
+msgid ""
+"Screenshot showing a sample selection of phone numbers to use for the "
+"Placetels notify API"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:67
+msgid ""
+"This menu point also provides a API request log from Placetel view. Just "
+"open \"Recent responses of your API endpoint\" to learn more."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:70
+msgid ""
+"If you want to see Zammads perspective, use the \"Recent Logs\" part from "
+"within the Placetel integration page."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:0
+msgid "Screenshot showing sample log entries for Placetels API calls to Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:78
+msgid "Step 4 (optional): Further configurations for Placetel"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/placetel.rst:77
+msgid ""
+"If needed, you can now configure Zammads Placetel integration in more "
+"detail. You can learn more about your options here: :ref:`Placetel "
+"integration settings <placetel_settings>`."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:2
+msgid "Setup Sipgate connection for Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Sipgate has no english web interface which is why this documentation page is "
+"mixing up languages badly."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Please also note that the availability of API addons highly depends on your "
+"package trier. Usage of sipgate.io packages *is not free*, please check "
+"their `pricing page`_ before!"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:38
+msgid "Step 1: Book sipgate.io package"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:16
+msgid "Skip to step 2 if you already have the package booked!"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:18
+msgid ""
+"Login to an administrative Sipgate account and navigate to "
+"``Accountverwaltung``. You'll see several different options depending on "
+"your booked packages. Select ``Verträge & Produkte`` to continue."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:22
+msgid ""
+"Scroll down to the section ``Zusätzliche Produkte buchen`` and look for "
+"``sipgate.io`` - select this product by using the ``Produkte anzeigen``-"
+"Button."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:26
+msgid ""
+"On the next page select either one of the ``sipgate.io`` packages or ``Push-"
+"API Package Free``. Follow the dialogue by booking the addon. You'll be "
+"returned to your contract overview and now should see the selected addon in "
+"your list."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:33
+msgid ""
+"The availability for ``sipgate.io`` packages and their levels highly depends "
+"on the overall account type and product you've booked with Sipgate."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Screencast showing the process on how to book the required sipgate.io addon"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:55
+msgid "Step 2: Configure webhook for Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:41
+msgid ""
+"Within your ``Accountverwaltung`` navicate to your product ``sipgate.io``. "
+"In the newly opened tab, switch from \"Clients\" to \"Webhooks\" and paste "
+"the endpoint URLs from your Zammad instance like so:"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:45
+msgid "Inbound endpoint to \"Incoming\""
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:46
+msgid "Outbound endpoint to \"Outgoing\""
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:50
+msgid ""
+"Ensure to select at least one call group or phoneline within \"Sources\". "
+"Other wise Sipgate will not indicate any incoming or outgoing calls to "
+"Zammad."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Screencast showing how to add Zammads endpoint URLs to sipgate.ios webhook "
+"configuration"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:58
+msgid ""
+"Having a lot of numbers that shouldn't be used for notifying Zammad? Within "
+"the Webhooks → URLs section of Sipgate you can select which *sources* "
+"Sipgate should notify Zammad about in- and outgoing calls."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:62
+msgid ""
+"Use either specific phone lines or use the option \"Use for all phonelines "
+"and groups\" to notify Zammad about all existing lines of your Sipgate "
+"account."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Screenshot showing a sample selection of phone numbers to use for the "
+"Sipgates webhooks API"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:71
+msgid "This section also allows you to enable a Debug log."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid "Screenshot showing an enabled Debug log option"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:76
+msgid ""
+"After enabling you can use the Debug log section to see all sent webhook "
+"calls to Zammad. You'll also can see the response."
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:0
+msgid ""
+"Screenshot showing sample log entries for Sipgates webhook calls to Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:84
+msgid "Step 4 (optional): Further configurations for Sipgate"
+msgstr ""
+
+#: ../system/integrations/cti/provider-configurations/sipgate.rst:83
+msgid ""
+"If needed, you can now configure Zammads Sipgate integration in more detail. "
+"You can learn more about your options here: :ref:`Sipgate integration "
+"settings <sipgate_settings>`."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:2
+msgid "Sipgate (sipgate.io)"
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:16
+msgid "You need an administrative Sipgate account for your organization."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:18
+msgid "Zammad requires a ``sipgate.io`` addon from the feature store."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:18
+msgid ""
+"Please note that API calls are not free with Sipgate. Rates may apply and "
+"differ from account to account."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:21
+msgid "Sipgate must be able to reach your Zammad instance."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:25
+msgid ":doc:`provider-configurations/sipgate`"
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:24
+msgid ""
+"Learn how to configure Sipgate to enable Zammad and Sipgate to communicate "
+"with each other."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:34
+msgid ""
+"Click the button next to the ``sipgate.io`` heading to activate or "
+"deactivate this function."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:38
+msgid ""
+"Below endpoint settings affect the :doc:`sipgate.io configuration <provider-"
+"configurations/sipgate>`."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:42
+msgid "This endpoint is required for incoming call hooks."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:45
+msgid "This endpoint is required for outgoing call hooks."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:0
+msgid "Screenshot showing sample user mappings in between Sipgate and Zammad"
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:74
+msgid ""
+"You can find your agent's Sipgate username within ``Accountverwaltung → "
+"Benutzer``. You're looking for the SIP-ID."
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:0
+msgid "Sample VoIP credentials for a Sipgate user"
+msgstr ""
+
+#: ../system/integrations/cti/sipgate.rst:82
+msgid "Users with several devices also have several SIP-IDs."
+msgstr ""
+
 #: ../system/integrations/elasticsearch.rst:2
 msgid "Elasticsearch (SaaS)"
 msgstr ""
@@ -11593,87 +12419,6 @@ msgid ""
 "In some cases you might see unique IDs as \"Login\" instead of the email "
 "address. This is normal and doesn't affect the login or email mapping for "
 "that entry."
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:2
-msgid "CTI (generic)"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:4
-msgid ""
-"Zammad offers phone functionality for users with access to a CTI (computer "
-"telephony integration) system (available since version 2.6)."
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:7
-msgid ""
-"Using the CTI integration enables you to greet customers by name,  get their "
-"tickets up on the screen with a single click. Or, identify missed calls at a "
-"glance, and return calls right from within Zammad. Manufacturers of "
-"telephone systems or developers can use this interface to connect their "
-"telephone system to Zammad."
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:11
-msgid "What do I need to get started?"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:13
-msgid "Zammad requires the following information to support the agent:"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:15
-msgid "individual call events (e.g., call incoming/answered/ended)"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:16
-msgid "caller ID data"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:18
-msgid ""
-"To use the new CTI interface, your CTI system must transmit this information "
-"(and only this information) to Zammad via HTTP."
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:21
-msgid "What can it do for me?"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:23
-msgid ""
-"***Inbound calls*** - Caller ID display: Open a caller’s customer profile "
-"with just one click - Intelligent caller ID search: Automatically scans "
-"tickets for caller ID data (e.g., in email signatures) if customer account "
-"data is missing - Caller overview: See a caller’s entire ticket history, or "
-"instantly create a new ticket - Call journal: See all calls at a glance, "
-"along with their status (e.g., which ones require a call back?) - Agent "
-"overview: See who’s currently on a call - Selective call blocking [1]_ - Do-"
-"not-disturb mode [1]_"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:33
-msgid "***Outbound calls***"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:35
-msgid "Direct dialing: Initiate calls from within Zammad [1]_"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:36
-msgid ""
-"Dynamic caller ID: Set your caller ID based on, e.g., the destination "
-"country of the call*"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:38
-msgid "requires PBX/telephone system support"
-msgstr ""
-
-#: ../system/integrations/generic-cti.rst:44
-msgid ""
-"More information can be found on our `CTI API intro <https://docs.zammad.org/"
-"en/latest/cti-api-intro.html>`_."
 msgstr ""
 
 #: ../system/integrations/github.rst:4
@@ -12070,134 +12815,6 @@ msgid ""
 "After the sync has finished, you can find the new LDAP users under \"Users"
 "\". Zammad integrates them just normal users, the difference is the login "
 "name."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:2
-msgid "Placetel CTI"
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:4
-msgid ""
-"Starting with Zammad 2.8, we're supporting the CTI for placetel. For "
-"configuration, please go to Settings -> Integrations -> Placetel in the "
-"admin panel."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:9
-msgid ""
-"Please note, that it's not possible to log outbound calls. This is due to a "
-"limitation of the Placetel API."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:14
-msgid "Getting needed information from placetel"
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:16
-msgid ""
-"Before starting with Zammad, you'll need to login to your placetel Account, "
-"go to Administration -> Settings. Here you'll find the tab \"External APIs"
-"\" (open it). Activate \"Call Control/Notify API\" and enter the URL of the "
-"Zammad API endpoint (can be found within the Placetel integration page). "
-"Further below you can tick the phone numbers you want Zammad to get notified "
-"on."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:22
-msgid ""
-"Now change to the API tab and grab your API token. If you don't have an API "
-"token yet, you can simply create one."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:27
-msgid "Activating Placetel Integration within Zammad"
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:29
-msgid ""
-"Enabling the Zammad placetel integration is really easy. Simply paste your "
-"API token into the text field, activate the integration and save your "
-"changes. You're all set up! If needed, you can add Inbound caller IDs to a "
-"ignore list. If you do this, Zammad will not show any notifications from "
-"those numbers."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:32
-msgid ""
-"Further below on the same page you'll have a log of recent notifications "
-"that came to the API, in case you need to debug something."
-msgstr ""
-
-#: ../system/integrations/placetel-cti.rst:36
-msgid ""
-"As soon as you start calling (in and out) on activated numbers, you'll see "
-"them in your Caller log with their current state."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:2
-msgid "Sipgate"
-msgstr "Sipgate"
-
-#: ../system/integrations/sipgate.rst:4
-msgid ""
-"In order to use this feature, please go to the Feature Store in your sipgate "
-"account and activate ``sipgate.io``. This feature is available for all "
-"account types of sipgate, the store option might differ in name and API "
-"calls."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:7
-msgid ""
-"Knowing who's calling is quite important, if you want to bring your support "
-"to the next level! Our integration for sipgate enables you to see whos "
-"calling who. If you have a customer that wants to get connected to Emmily, "
-"you can even check if she's free in the caller log."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:11
-msgid ""
-"For configuration, please go to Settings -> Integrations -> sipgate in the "
-"admin panel."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:13
-msgid "Get your incoming and outgoing URL of your Zammad instance::"
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:18
-msgid ""
-"You now need to visit the Console_ website from sipgate. Go to Webhooks -> "
-"URLs and enter your incoming and outgoing URLs there. Further below you can "
-"also choose what extensions or groups should appear in your Zammad instance "
-"later."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:25
-msgid ""
-"Now you're all set to activate the sipgate integration within Zammad. If you "
-"want to, you can inbound and outbound caller IDs to block. This ensures that "
-"you can concentrate on your work instead of answering unwanted calls all the "
-"time. Setting the default Caller ID is optional and makes sense if you have "
-"several numbers. This ensures that your group number for e.g. support is "
-"always displayed so your agent don't get called back directly."
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:31
-msgid ""
-"You can now switch to your caller log. You'll see missed, in- and outgoing "
-"calls here. Pretty easy, right?"
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:36
-msgid "Debug Log"
-msgstr ""
-
-#: ../system/integrations/sipgate.rst:38
-msgid ""
-"In case something doesn't work as expected or you're just curious, Zammad "
-"also offers a log of the last API calls on the integration page. If you "
-"click on the request, a detailed view will open showing you the exact "
-"request."
 msgstr ""
 
 #: ../system/integrations/slack.rst:2
@@ -12767,10 +13384,6 @@ msgid ""
 "This guide describes how to integrate your Zabbix 5.0 installation with "
 "Zammad using the Zabbix webhook feature. This guide will provide "
 "instructions on setting up a media type, a user and an action in Zabbix."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:10
-msgid "Requirements"
 msgstr ""
 
 #: ../system/integrations/zabbix.rst:12
@@ -15238,3 +15851,6 @@ msgstr ""
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
+
+#~ msgid "Sipgate"
+#~ msgstr "Sipgate"
