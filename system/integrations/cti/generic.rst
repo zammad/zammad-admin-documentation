@@ -17,10 +17,8 @@ Please provide the following requirements:
 If you want to learn more on what kind of requests are supported by Zammad
 and what it expects, please consult our `CTI-API documentation`_.
 
-.. URL is subject to change due to reworks
-
 .. _CTI-API documentation:
-   https://docs.zammad.org/en/latest/cti/api-intro.html
+   https://docs.zammad.org/en/latest/api/generic-cti/index.html
 
 Available settings
 ------------------
