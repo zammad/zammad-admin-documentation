@@ -25,7 +25,7 @@ Learn more about managing users...
 
 .. note:: 😲 **Customers get their own user accounts, too?**
 
-   Yes! Unlike OTRS, Zammad needs to store accounts
+   Yes! Unlike e.g. OTRS, Zammad needs to store accounts
    for *everyone* who communicates through the system.
 
    Why? It helps us do things like show all tickets from a certain customer.
@@ -59,9 +59,12 @@ The ones that aren’t are described below.
    In most cases, agents can, too
    (using the `new ticket dialog`_, `search bar`_ or the `ticket pane`_).
 
-   .. _new ticket dialog: https://user-docs.zammad.org/en/latest/basics/service-ticket/create.html
-   .. _search bar: https://user-docs.zammad.org/en/latest/basics/find-ticket/search.html
-   .. _ticket pane: https://user-docs.zammad.org/en/latest/extras/customers.html
+   .. _new ticket dialog:
+      https://user-docs.zammad.org/en/latest/basics/service-ticket/create.html
+   .. _search bar:
+      https://user-docs.zammad.org/en/latest/basics/find-ticket/search.html
+   .. _ticket pane:
+      https://user-docs.zammad.org/en/latest/extras/customers.html
 
 👤 Login
    A user’s email and login may differ, but
