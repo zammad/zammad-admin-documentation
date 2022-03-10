@@ -15,7 +15,8 @@ you can store those changes in a macro for easy access:
    Choose from the macros **Close & Tag as Spam**, **Move to RMA**,
    and **Reply & Close & Tag as Banana**.
 
-You can also apply macros in bulk (*i.e.,* to many tickets all at once) via the *Overviews* page:
+You can also apply macros in bulk (*i.e.,* to many tickets all at once)
+via the *Overviews* page:
 
 .. figure:: /images/manage/macros/macro-bulk-operation-overview.png
    :alt: Example macros within an overview (bulk operation).
