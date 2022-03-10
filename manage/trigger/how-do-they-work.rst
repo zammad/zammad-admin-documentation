@@ -19,7 +19,7 @@ Conditions
 
 When creating a trigger, define your conditions here:
 
-   .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-conditions.png
+   .. figure:: /images/manage/trigger/conditions-of-a-trigger.png
 
 Trigger conditions are **and-selectors** and thus all conditions must apply as
 configured for the trigger to fire. You can configure triggers to fire based on
@@ -47,7 +47,7 @@ Actions
 
 When creating a trigger, define your changes here:
 
-   .. figure:: /images/manage/trigger/Zammad_Helpdesk_Trigger-actions.png
+   .. figure:: /images/manage/trigger/actions-of-a-trigger.png
 
 A trigger can do the following things once its conditions have been met:
 
