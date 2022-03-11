@@ -88,10 +88,10 @@ Text
 
       Currently available:
 
-         * email
-         * phone
-         * text
-         * url *(url fields disable link-template availability)*
+         * Email
+         * Phone
+         * Text
+         * Url *(URL fields disable link-template availability)*
 
    Maxlength
       you can pick the maximum length of the field.
