@@ -13,12 +13,15 @@ Connect your SAML identity provider as a single sign-on (SSO) method.
    and the IdP is a software service that you either host or subscribe to
    (*e.g.,* `Keycloak`_, `Redhat SSO Server`_, `ADFS`_, or `Okta`_).
 
-   This guide assumes you are already using SAML within your organization (i.e., that your IdP is fully set up).
+   This guide assumes you are already using SAML within your organization
+   (i.e., that your IdP is fully set up).
 
-   .. _Keycloak: https://www.keycloak.org/
-   .. _Redhat SSO Server: https://access.redhat.com/products/red-hat-single-sign-on
-   .. _ADFS: https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services
-   .. _Okta: https://www.okta.com/
+.. _Keycloak: https://www.keycloak.org/
+.. _Redhat SSO Server:
+   https://access.redhat.com/products/red-hat-single-sign-on
+.. _ADFS:
+   https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services
+.. _Okta: https://www.okta.com/
 
 Step 1: Configure Your IdP
 --------------------------
@@ -70,19 +73,18 @@ Keycloak
    * **To help Zammad match its own user accounts to Keycloak users,**
      create a user attribute (or “property”) mapper:
 
-     +--------------------------------------------------------------------------------+
-     | **Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > Create** |
-     +===============================+================================================+
-     | **Name**                      | emailAddress                                   |
-     +-------------------------------+------------------------------------------------+
-     | **Mapper Type**               | User Property                                  |
-     +-------------------------------+------------------------------------------------+
-     | **Property**                  | emailAddress                                   |
-     +-------------------------------+------------------------------------------------+
-     | **SAML Attribute Name**       | email                                          |
-     +-------------------------------+------------------------------------------------+
-     | **SAML Attribute NameFormat** | basic                                          |
-     +-------------------------------+------------------------------------------------+
+     .. list-table:: **Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > Create**
+
+        * - **Name**
+          - ``emailAddress``
+        * - **Mapper Type**
+          - ``User Property``
+        * - **Property**
+          - ``emailAddress``
+        * - **SAML Attribute Name**
+          - ``email``
+        * - **SAML Attribute NameFormat**
+          - ``basic``
 
      In the example above, we’re telling Zammad that
      whenever it receives a SAML login request,
@@ -112,7 +114,8 @@ Enable SAML and enter your IdP’s details in the Admin Panel under
    **Keycloak users:** Find your certificate in the Keycloak admin panel under
    **Realm Settings > Keys > RSA > Certificate**.
 
-See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to IdP accounts.
+See :ref:`automatic account linking <automatic-account-linking>` for details on
+how to link existing Zammad accounts to IdP accounts.
 
 Troubleshooting
 ---------------

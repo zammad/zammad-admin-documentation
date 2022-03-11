@@ -4,7 +4,7 @@ Knowledge Base
 Publish your own library of FAQs, how-tos, internal SOPs and more with the
 **knowledge base**.
 
-.. figure:: /images/manage/knowledge-base-demo.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-demo.png
    :alt: Sample Knowledge Base Index
    :align: center
 
@@ -13,10 +13,14 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
 .. hint:: This document describes how to ⚙ **configure** the knowledge base.
 
    For details on how to ✍️ **use and edit** it, please refer to the
-   `Zammad Agent docs <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_.
+   `Zammad user documentation`_.
 
-   By default, only admin users are permitted to create, edit, and manage knowledge base articles.
-   See :doc:`roles/index` for details on how to grant write access to agents or other users.
+   By default, only admin users are permitted to create, edit, and manage
+   knowledge base articles. See :doc:`roles/index` for details on how to
+   grant write access to agents or other users.
+
+.. _Zammad user documentation:
+   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html
 
 .. note:: The knowledge base will not appear in the main menu until it has been
    enabled in the admin panel.
@@ -38,18 +42,19 @@ Setup
 To enable the knowledge base, first select the languages/locales you wish to
 publish in:
 
-.. figure:: /images/manage/knowledge-base-setup.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-setup.png
    :alt: Knowledge Base: Initial setup
    :align: center
 
-   You must choose at least one. (Don’t worry, you can always change them later!)
+   You must choose at least one.
+   (Don’t worry, you can always change them later!)
 
 Read on for details about each section of the knowledge base configuration.
 
 Theme
 ^^^^^
 
-.. figure:: /images/manage/knowledge-base-theme.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-theme.png
    :alt: Knowledge Base: Configure theme
    :align: center
 
@@ -66,47 +71,53 @@ Theme
                     Each category in the knowledge base *must* be given an icon.
                     Icons appear prominently in the main menu, like so:
 
-                    .. figure:: /images/manage/knowledge-base-icons.png
+                    .. figure:: /images/manage/knowledge-base/knowledge-base-icons.png
                        :alt: Knowledge Base: Icons
                        :align: center
 
-                    .. warning:: 🤦‍♀️ Re-assigning icons on all of your categories is tedious work.
-                       It’s advisable to explore your options early
-                       to avoid having to change your mind down the road.
+                    .. warning:: 
+
+                       🤦‍♀️ Re-assigning icons on all of your categories is
+                       tedious work. It’s advisable to explore your options
+                       early to avoid having to change your mind down the road.
 
 Languages
 ^^^^^^^^^
 
-.. figure:: /images/manage/knowledge-base-languages.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-languages.png
    :alt: Knowledge Base: Configure languages
    :align: center
 
    🌍 Add or remove locales, or reassign the default.
 
-The knowledge base will automatically display the language matching each visitor’s locale.
-Visitors may always manually switch to another language via a dropdown menu in the footer.
+The knowledge base will automatically display the language matching each
+visitor’s locale. Visitors may always manually switch to another language via a
+dropdown menu in the footer.
 
 The default locale is displayed when the visitor’s locale is not supported.
 
-Articles that have not yet been translated into a given language will be hidden from that locale.
+Articles that have not yet been translated into a given language will be hidden
+from that locale.
 
 Public Menu
 ^^^^^^^^^^^
 
-.. figure:: /images/manage/knowledge-base-public-menu.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-public-menu.png
    :alt: Knowledge Base: Configure public menu
    :align: center
 
    🧭 Customize the nav menu that appears in the header of the knowledge base.
 
 
-.. hint:: ``Target`` let's you decide if you want the link to be opened within a new
+.. hint::
+
+   "Target" let's you decide if you want the link to be opened within a new
    browser tab upon click or not.
 
-Use this section to unify the knowledge base with your own website’s main navigation.
-Entries added here will appear in the knowledge base like so:
+Use this section to unify the knowledge base with your own website’s main
+navigation. Entries added here will appear in the knowledge base like so:
 
-.. figure:: /images/manage/knowledge-base-public-menu-result.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-public-menu-result.png
    :alt: Knowledge Base: Public menu
    :align: center
 
@@ -115,7 +126,7 @@ Custom URL
 
 .. note:: This feature is only available on **self-hosted** instances.
 
-.. figure:: /images/manage/knowledge-base-custom-url.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-custom-url.png
    :alt: Knowledge Base: Configure custom URL
    :align: center
 
@@ -131,7 +142,7 @@ enter your desired URL here and configure your web server as described
 Delete
 ^^^^^^
 
-.. figure:: /images/manage/knowledge-base-delete.png
+.. figure:: /images/manage/knowledge-base/knowledge-base-delete.png
    :alt: Knowledge Base: Delete knowledge base
    :align: center
 

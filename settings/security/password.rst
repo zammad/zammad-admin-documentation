@@ -8,8 +8,9 @@ accounts.
 
    Zammad does **not** allow you to change your LDAP password, instead, it will
    set a password in its local database which might confuse your users. This
-   will be addressed in the future by
-   `#1169 <https://github.com/zammad/zammad/issues/1169>`_.
+   will be addressed in the future by `#1169`_.
+
+.. _#1169: https://github.com/zammad/zammad/issues/1169
 
 .. warning:: **💪 Exception for strong passwords 💪**
    
@@ -52,8 +53,8 @@ The default value is ``10``.
 
    Failed logins via LDAP no longer lock accounts.
 
-2 lower and 2 upper characters
-------------------------------
+2 lower case and 2 upper case characters
+----------------------------------------
 
 You can add complexity to passwords by enforcing at least 2 upper and lower
 case characters. 

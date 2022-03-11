@@ -19,7 +19,7 @@ Client storage
 
 .. _core-workflow-ajax-mode:
 
-Core Workflow Ajax Modus
+Core Workflow Ajax Mode
    This setting allows administrators to enforce :doc:`/system/core-workflows`
    to use Ajax-Calls instead of web sockets. You'll usually only need this if
    you experience serious issues as noted below.

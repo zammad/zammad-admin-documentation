@@ -36,7 +36,7 @@ Additional follow-up detection
    .. note:: 
 
       Please note that searching in attachment and body might lead to false
-      follow-up detections.
+      follow-up detection.
 
 Maximum Email Size: Default value ``10 MB``
    This one is pretty obvious: It defines the maximum allowed size of an email
@@ -78,16 +78,16 @@ Sender based on Reply-To header: Default value ``not set (-)``
    that contain a ``Reply-To`` header. This comes in useful if you're working
    with contact forms that need to use reply to headers.
 
-   Option set to ``-`` or ``Take reply-to header as sender/from of email``
+   Option set to ``-`` or ``Take reply-to header as sender/from of email.``
       This setting will overwrite the initial ``FROM`` to the value used in
       ``Reply-To`` completely.
 
-   Option set to ``Take reply-to header as sender/from of email and use realname of origin from``
+   Option set to ``Take Reply-To header as sender/from of email and use the real name of origin from.``
       This setting will partially overwrite the initial ``FROM``. 
       It uses the mail address from the ``Reply-To`` header and uses the given
       name of the ``FROM`` header, if given.
 
-Customer selection based on sender and receive list: Default value ``yes``
+Customer selection based on sender and receiver list: Default value ``yes``
    This option decides how Zammad should react if an agent sends a email to it.
 
    Option set to ``yes``
@@ -113,7 +113,7 @@ Block Notifications
 
    .. _email-settings-sender-format:
 
-Sender Format: Default value ``Agent + Format Seperator + System Address Display Name``
+Sender Format: Default value ``Agent Name + FromSeparator + System Address Display Name``
    This configures the display name used in the ``FROM`` header of mails
    Zammad sends.
 
@@ -124,7 +124,7 @@ Sender Format: Default value ``Agent + Format Seperator + System Address Display
       (e.g. trigger-based notifications) will always fallback to
       ``System Address Display Name`` if needed.
 
-   Option set to ``Agent + Format Separator + System Address Display Name``
+   Option set to ``Agent Name + FromSeparator + System Address Display Name``
       This will cause Zammad to set the ``FROM`` header to agent name and the
       channel's display name, divided by a separator (configured below).
 
@@ -145,7 +145,7 @@ Sender Format: Default value ``Agent + Format Seperator + System Address Display
            in those cases.
          | Learn more in :doc:`Settings → Ticket </settings/ticket>`.
 
-Sender Format Seperator: Default value ``via``
+Sender Format Separator: Default value ``via``
    This is a can be a string you can freely choose. It divides the agent's name
    and the display name of the channel whenever needed.
 

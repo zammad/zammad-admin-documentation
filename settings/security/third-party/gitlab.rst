@@ -21,11 +21,12 @@ in Gitlab: https://gitlab.com/gitlab-org/gitlab-ce/issues/33022
 Configure Zammad as Gitlab app
 ------------------------------
 
-Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications Dashboard.
+Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications
+Dashboard.
 
 .. note:: Please ensure to use ``https://{git_host}/api/v4/`` for site.
 
-.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty.jpg
+.. image:: /images/settings/security/third-party/gitlab/enable-authentication-via-gitlab-in-zammad.png
    :alt: Gitlab config in Zammad admin interface
 
 
@@ -45,4 +46,5 @@ When you grant the access you will be redirected to your Zammad instance
 and logged in as a customer.
 
 
-Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via Zammad login page.
+Now you can link accounts via "Avatar -> Profile -> Link Accounts" or login via
+Zammad login page.
