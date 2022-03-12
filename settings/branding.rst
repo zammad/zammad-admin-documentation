@@ -31,7 +31,10 @@ Timezone
          This does not have any effect on timings for your agents or how
          Zammad stores date and time values.
 
-         However, this function has an effect on the scheduler runtime.
+      .. warning::
+
+         Changing this value has direct consequences on your
+         :doc:`/manage/scheduler` tasks! Keep in mind that the offset changes.
 
 Pretty Date
    This setting allows you to define how Zammad should display time stamps
