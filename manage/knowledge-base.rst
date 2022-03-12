@@ -106,24 +106,52 @@ from that locale.
 Public Menu
 ^^^^^^^^^^^
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-public-menu.png
-   :alt: Knowledge Base: Configure public menu
-   :align: center
-
-   🧭 Customize the nav menu that appears in the header of the knowledge base.
-
-
-.. hint::
-
-   "Target" let's you decide if you want the link to be opened within a new
-   browser tab upon click or not.
-
 Use this section to unify the knowledge base with your own website’s main
 navigation. Entries added here will appear in the knowledge base like so:
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-public-menu-result.png
    :alt: Knowledge Base: Public menu
    :align: center
+
+Zammad will provide a list of the current set links per knowledge base language.
+If you're missing a language, you'll have to add the language up ront.
+
+You can adjust every URL on language level.
+
+.. figure:: /images/manage/knowledge-base/knowledge-base-public-menu.png
+   :alt: Knowledge Base: Configure public menu
+   :align: center
+
+   🧭 Customize the nav menu that appears in the header of the knowledge base.
+
+Arranging URLs
+   By clicking on "Edit", Zammad allows you to add, update, re-arrange or
+   remove URLs from either your public header menu or public footer menu.
+
+   Title
+      This is the URL title that's being displayed to your users.
+
+   URL
+      The actual URL the user is going to open upon clicking.
+
+   Target
+      Allows you to tell your users browser to open the URL in a new tab.
+      By default your user would leave the knowledge base page if not set.
+
+   Delete
+      If you tick the delete field, the URL will be removed from the menu upon
+      pressing on the "Submit" button.
+
+   Change URLs position
+      Use ☰ to drag & drop the URLs in question to the new desired position.
+      Your changes will be saved with pressing the "Submit" button.
+
+      .. figure:: /images/manage/knowledge-base/repositioning-public-menu-urls.gif
+         :alt: Screencast showing the repositioning of URLs
+         :align: center
+
+         Re-arranging URL positions works for the header menu just as the
+         footer menu
 
 Custom URL
 ^^^^^^^^^^
