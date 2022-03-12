@@ -65,6 +65,10 @@ Theme
 
 :Header Color:      Applies to the area surrounding the search bar.
 
+:Header Link Color:  Defines the color of the header links to use.
+                     Make sure that this color has a proper contrast to
+                     *Header Color*.
+
 :Icon Set:          Defines the selection of icons that may be used when
                     creating/editing categories.
 
