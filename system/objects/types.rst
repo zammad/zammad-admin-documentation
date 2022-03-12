@@ -88,6 +88,27 @@ Select
 
    .. include:: /system/objects/includes/reposition-values.include.rst
 
+Textarea
+   Provides a textarea input field (multiple lines) and thus allows e.g.
+   new lines. You can set a default field value.
+
+      .. note::
+
+         Please note that this field *does not* support text formatting
+         or HTML content (rich text).
+
+      .. warning:: **🥵 This field can consume a lot of space**
+
+         Depending on where you use this field type, it may use a lot of
+         space if you provide a lot of text. This may be an issue to work with.
+
+   Maxlength
+      | You can pick the maximum length of the field.
+      | The default length of this object is ``500``.
+
+   .. figure:: /images/system/objects/settings_textarea.png
+      :alt: Available settings for Textarea fields
+
 Text
    Provides a text field (one line) and allows choosing a default value.
 
@@ -104,7 +125,7 @@ Text
          * Url *(URL fields disable link-template availability)*
 
    Maxlength
-      you can pick the maximum length of the field.
+      You can pick the maximum length of the field.
 
    .. include:: /system/objects/includes/url-template-hint.include.rst
 
