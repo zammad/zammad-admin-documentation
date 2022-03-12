@@ -19,8 +19,10 @@ Date
 
       .. note::
 
-         Please note that this setting is currently affected by
-         `bug 3763 <https://github.com/zammad/zammad/issues/3763>`_.
+         Please note that this setting is currently affected by `bug 3763`_.
+
+.. _bug 3763:
+   https://github.com/zammad/zammad/issues/3763
 
    .. figure:: /images/system/objects/settings_date.png
       :alt: Available settings for Date fields
@@ -42,8 +44,7 @@ Datetime
 
       .. note::
 
-         Please note that this setting is currently affected by
-         `bug 3763 <https://github.com/zammad/zammad/issues/3763>`_.
+         Please note that this setting is currently affected by `bug 3763`_.
 
    .. figure:: /images/system/objects/settings_datetime.png
       :alt: Available settings for Date time fields
@@ -61,22 +62,31 @@ Integer
    .. figure:: /images/system/objects/settings_integer.png
       :alt: Available settings for Integer fields
 
+Multiselect
+   Provides a multiselect field that allows the selection of one or more out
+   of several. This field does allow setting a default value.
+
+   .. include:: /system/objects/includes/adding-values-hint.include.rst
+
+   .. include:: /system/objects/includes/url-template-hint.include.rst
+
+   .. figure:: /images/system/objects/settings_multiselect.png
+      :alt: Available settings for Multiselect fields
+
+   .. include:: /system/objects/includes/reposition-values.include.rst
+
 Select
    Provides a drop-down field that allows selection of one value out of several.
    This field does allow setting a default value.
 
-   .. tip::
+   .. include:: /system/objects/includes/adding-values-hint.include.rst
 
-      Adding values can be tricky for first timers, don't forget to press
-      "➕ Add" after typing your values. Otherwise you may loose a value.
-
-   .. hint::
-
-      Select fields allow usage of
-      :ref:`URL fields (Link Templates) <link-templates>`.
+   .. include:: /system/objects/includes/url-template-hint.include.rst
 
    .. figure:: /images/system/objects/settings_select.png
       :alt: Available settings for Select fields
+
+   .. include:: /system/objects/includes/reposition-values.include.rst
 
 Text
    Provides a text field (one line) and allows choosing a default value.
@@ -96,10 +106,7 @@ Text
    Maxlength
       you can pick the maximum length of the field.
 
-   .. hint::
-
-      Select fields allow usage of
-      :ref:`URL fields (Link Templates) <link-templates>`.
+   .. include:: /system/objects/includes/url-template-hint.include.rst
 
    .. figure:: /images/system/objects/settings_text.png
       :alt: Available settings for Text fields
