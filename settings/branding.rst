@@ -22,6 +22,17 @@ Logo
 
          .. figure:: /images/settings/branding-logo-options.png
             :alt: Screenshot highlighting the submit button of the logo change dialogue
+
+Timezone
+   Define the timezone of your Zammad installation.
+
+      .. note::
+
+         This does not have any effect on timings for your agents or how
+         Zammad stores date and time values.
+
+         However, this function has an effect on the scheduler runtime.
+
 Pretty Date
    This setting allows you to define how Zammad should display time stamps
    within the interface to all users.
