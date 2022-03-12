@@ -77,3 +77,11 @@ Digit required
 This enforces your users to use at least one digit within the password.
 
 The default value is ``yes``.
+
+Special character required
+--------------------------
+
+This setting allows you to improve your password quality even more by enforcing
+the password to contain at least one special character.
+
+The default value is ``no``.
