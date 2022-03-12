@@ -23,6 +23,14 @@ Logo
          .. figure:: /images/settings/branding-logo-options.png
             :alt: Screenshot highlighting the submit button of the logo change dialogue
 
+Locale
+   Allows to set the default language of the Zammad instance.
+   The here defined locale mostly acts as a fallback for:
+
+      * user preferences (if Zammad can't detect the users locale)
+      * CSV output (reporting, time accounting)
+      * notifications
+
 Timezone
    Define the timezone of your Zammad installation.
 
@@ -33,8 +41,16 @@ Timezone
 
       .. warning::
 
-         Changing this value has direct consequences on your
-         :doc:`/manage/scheduler` tasks! Keep in mind that the offset changes.
+         Changing this value has direct consequences on the following areas:
+         
+            * :doc:`/manage/scheduler` tasks
+            * search indexing (and thus reporting)
+            * notifications
+            * calendar subscriptions
+            * browser printing
+
+         Please note that some of above partly are fallbacks in case Zammad
+         could not detect the agents timezone correctly.
 
 Pretty Date
    This setting allows you to define how Zammad should display time stamps
