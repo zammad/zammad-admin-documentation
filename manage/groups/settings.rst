@@ -68,6 +68,16 @@ Signature
    replying to tickets in this group. Leaving this option unset will send
    emails without any signature.
 
+Shared Drafts
+   Shared drafts allows your agents to share ticket drafts (for new and existing
+   tickets) with their colleagues. By default this setting is enabled,
+   disable it if you don't want your agents to use this function.
+
+   Learn more about `shared drafts in our user documentation`_.
+
+.. _shared drafts in our user documentation:
+   https://user-docs.zammad.org/en/latest/extras/shared-drafts.html
+
 Note
    An internal note about the group that is only visible to people who can
    access the group management area.
