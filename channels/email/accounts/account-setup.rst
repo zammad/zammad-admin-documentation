@@ -120,14 +120,31 @@ Host
 
    Contact your email provider or system administrator if you don’t know.
 
+User
+   This field is being pre-filled with your email address in case you've
+   provided one before opening the expert settings.
+
+   Adjust this setting in case your username and email address differ.
+
 Password
    Your account password.
 
 SSL / STARTTLS
    Enable encryption when fetching messages.
 
-   Choose from **yes** and **no**;
-   Zammad will detect which protocol to use.
+   You can choose from the following options:
+
+      * No SSL
+
+        .. warning::
+
+           Retrieving Emails, just like sending your
+           username and password without any encryption *is not secure*.
+
+           You should never use this configuration on internet machines!
+
+      * SSL
+      * STARTTLS
 
 Port
    Your email server’s port (usu. ``993`` for IMAP, or ``995`` for POP3).
