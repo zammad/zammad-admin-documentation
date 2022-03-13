@@ -12,8 +12,8 @@ you’ll have to customize the data those scripts send to Zammad.
 Example
 -------
 
-This custom script will automatically set all tickets it creates to **high priority**
-and **assign them to charlie@chrispresso.com**.
+This custom script will automatically set all tickets it creates to
+**high priority** and **assign them to charlie@chrispresso.com**.
 
 .. code-block:: bash
 
@@ -53,8 +53,8 @@ Ticket attributes
 
 .. hint:: 💡 **It's just an API endpoint!**
 
-   When using Checkmk integration, messages need to be formatted in a certain way,
-   but that *doesn’t mean the messages actually have to come from Checkmk*.
+   When using Checkmk integration, messages need to be formatted in a certain
+   way, but that *doesn’t mean the messages actually have to come from Checkmk*.
 
    If you use another monitoring tool that’s not officially supported by Zammad,
    there’s probably a way to make it work with your Checkmk callback URL.
@@ -75,16 +75,19 @@ which correspond to parameters provided by Checkmk (``$NOTIFY_*``).
 **Required fields are marked with an asterisk (\*).**
 
 event_id\*
-   A unique ID for the system event. (``$NOTIFY_SERVICEPROBLEMID`` / ``$NOTIFY_HOSTPROBLEMID``)
+   A unique ID for the system event. (``$NOTIFY_SERVICEPROBLEMID`` /
+   ``$NOTIFY_HOSTPROBLEMID``)
 
 host\*
-   The hostname of the system that the event originated from. (``$NOTIFY_HOSTNAME``)
+   The hostname of the system that the event originated from.
+   (``$NOTIFY_HOSTNAME``)
 
    Used to determine if a new event belongs to an existing ticket.
    Also used in the subject line of the resulting article (“<host> is <state>”).
 
 service
-   The name of the service that the event originated from. (``$NOTIFY_SERVICEDESC``)
+   The name of the service that the event originated from.
+   (``$NOTIFY_SERVICEDESC``)
 
    Used to determine if a new event belongs to an existing ticket.
 
@@ -93,13 +96,16 @@ service
    .. _checkmk-parameter-state:
 
 state\*
-   The current state of the service or host in question. (``$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)
+   The current state of the service or host in question.
+   (``$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)
 
-   Used to detect when a ticket should be auto-closed (*i.e.,* on ``OK``/``UP``).
-   Also used in the subject line of the resulting article (“<host> is <state>”).
+   Used to detect when a ticket should be auto-closed (*i.e.,* on
+   ``OK``/``UP``). Also used in the subject line of the resulting article
+   (“<host> is <state>”).
 
 text
-   The output of the process that triggered the event. (``$NOTIFY_SERVICEOUTPUT`` / ``$NOTIFY_HOSTOUTPUT``)
+   The output of the process that triggered the event.
+   (``$NOTIFY_SERVICEOUTPUT`` / ``$NOTIFY_HOSTOUTPUT``)
 
    Displayed as ``-`` when omitted.
 
@@ -107,7 +113,8 @@ Ticket Attributes
 -----------------
 
 .. figure:: /images/system/integrations/checkmk/finding-object-names.png
-   :alt: The Object Manager attribute panel displays built-in and custom attribute names.
+   :alt: The Object Manager attribute panel displays built-in and custom
+         attribute names.
    :align: center
    :width: 80%
 
@@ -132,8 +139,8 @@ In most cases, you’ll probably want to set one of the following:
 * state
 * priority
 
-but in practice, you can set almost any attribute,
-including :doc:`custom ones you created through the Object Manager </system/objects>`.
+but in practice, you can set almost any attribute, including
+:doc:`custom ones you created through the Object Manager </system/objects>`.
 
 .. note:: 🙅 The following attributes are **not customizable**:
 
@@ -184,8 +191,10 @@ group & priority
 
 Everything Else
    To set any other attributes, it helps to know your way around the
-   `Rails console <https://docs.zammad.org/en/latest/admin/console.html>`_.
-   Valid values are those that you can set with a string:
+   `rails console`_. Valid values are those that you can set with a string:
+
+.. _rails console:
+   https://docs.zammad.org/en/latest/admin/console.html
 
    .. code:: ruby
 

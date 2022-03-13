@@ -32,11 +32,11 @@ Context
 Choose in which situation the workflow is applied.
 Contexts can be combined to reduce workflows.
 
-Creation Mask
+Creation mask
    Once selected your conditions and actions will affect all applicable creation
    masks.
 
-Edit Mask
+Edit mask
    Once selected your conditions and actions will affect all applicable edit
    masks.
 
@@ -154,7 +154,7 @@ set fixed to |ui| |api|
 fill in |ui|
    Allows population of string and integer fields with your value.
 
-fill empty |ui|
+fill in empty |ui|
    Allows population of string and integer fields with your value
    **if the field is empty**.   
 

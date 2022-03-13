@@ -1,7 +1,7 @@
 Composer Settings
 *****************
 
-.. figure:: /images/misc/composer.jpg
+.. figure:: /images/misc/composer.png
    :align: center
 
    Use the Composer Settings to change the behavior of the new message editor.
@@ -16,7 +16,7 @@ Note - default visibility (default: ``internal``)
    This affects **only** notes (default article on ticket answering).
    The visibility of phone- and email article notes is not affected.
 
-   .. image:: /images/misc/composer_default-visibility.jpg
+   .. image:: /images/misc/composer_default-visibility.png
 
 Email - subject field (default: ``no``)
    When setting this option to ``yes``, Zammad will also display the subject
@@ -48,5 +48,5 @@ Email - quote header (default: ``yes``)
 
 Twitter - tweet initials (default: ``yes``)
    When set to yes, this will add ``/CM`` (first character of first- and
-   lastname) to the bottom of every tweet answer you create.
+   last name) to the bottom of every tweet answer you create.
    This only affects tickets that come from the Twitter Channel.

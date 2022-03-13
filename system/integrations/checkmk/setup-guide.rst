@@ -11,8 +11,10 @@ That means that “setting up Checkmk integration”
 is simply a matter of **adding configuration to your Checkmk site**:
 telling it when to send these messages and what to say.
 To do that, you’ll need to create a new **notification rule**
-(see `Checkmk’s official docs <https://checkmk.com/cms_notifications.html>`_
-for help with that).
+(see `Checkmk’s official docs`_ for help with that).
+
+.. _Checkmk’s official docs:
+   https://checkmk.com/cms_notifications.html
 
 As part of this new rule, you’ll have to choose a **notification method**
 (*i.e.,* a script to execute whenever the rule is triggered).
@@ -23,7 +25,8 @@ and contain the logic for sending API/email messages to Zammad:
    :alt: Checkmk "New Rule" dialog
    :align: center
 
-   Find your custom scripts in the Checkmk WATO under **Notifications > New Rule > Notification Method**.
+   Find your custom scripts in the Checkmk WATO under
+   **Notifications > New Rule > Notification Method**.
 
 Once you’re done setting up your new rule, you’re all set!
 New tickets should start coming in and auto-updating
@@ -88,7 +91,9 @@ Host notification
 Email Alerts
 ^^^^^^^^^^^^
 
-.. warning:: 🐞 **There are known bugs** in Zammad’s processing of email from Checkmk.
+.. warning::
+
+   🐞 **There are known bugs** in Zammad’s processing of email from Checkmk.
    This section will be completed once they have been resolved.
    (Learn more at GitHub issues `#2377`_ & `#2180`_.)
 

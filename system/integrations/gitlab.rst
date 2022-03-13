@@ -35,7 +35,9 @@ Setup
       :align: center
       :width: 90%
 
-   .. hint:: Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
+   .. hint::
+
+      Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
       unless you’re a self-hosted GitLab user.
 
 Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
@@ -47,7 +49,7 @@ Token verification is taking a long time
    Slight delays are normal (<2 min.), especially for systems under heavy load.
 
    Self-hosted administrators, please check your network settings
-   to ensure that your Zammad server can reach gitlab.com.
+   to ensure that your Zammad server can reach ``gitlab.com``.
 
 I reloaded the page and now the API token is gone
    This may indicate that Zammad is still verifying your API token.
