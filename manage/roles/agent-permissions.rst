@@ -17,16 +17,23 @@ Agent Permissions
 
    ...and give users access to new sidebar tabs for communicating with customers.
 
-:``chat.agent``:            `💬 Customer Chat <https://user-docs.zammad.org/en/latest/extras/chat.html>`_
+:``chat.agent``:            `💬 Customer Chat`_
 
                             .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
-:``cti.agent``:             Provides access to `📞 Caller Log <https://user-docs.zammad.org/en/latest/extras/caller-log.html>`_
+
+.. _💬 Customer Chat:
+   https://user-docs.zammad.org/en/latest/extras/chat.html
+
+:``cti.agent``:             Provides access to `📞 Caller Log`_
 
                             .. hint:: 🤓 Requires configuration of either integrations
 
                                   * :doc:`Generic CTI </system/integrations/cti/generic>`
                                   * :doc:`placetel </system/integrations/cti/placetel>`
                                   * :doc:`sipgate </system/integrations/cti/sipgate>`
+
+.. _📞 Caller Log:
+   https://user-docs.zammad.org/en/latest/extras/caller-log.html 
 
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
