@@ -40,6 +40,26 @@ Agent Permissions
                                                             .. hint::
 
                                                                Public articles are always visible.
+
+                            .. tip::
+
+                               Zammad supports `granular permissions on knowledge base categories`_.
+
+                               This function allows *agents with editor* permissions to restrict
+                               roles to specific internal categories & answers.
+
+                               In order to allow your agents to set granular role permissions,
+                               the roles in question require at least reader permission for the
+                               knowledge base.
+
+                                 .. danger::
+
+                                    Keep in mind that this may be dangerous, as reader permission
+                                    provides access to internal answers!
+
+.. _granular permissions on knowledge base categories:
+   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#granular-category-permissions
+
 :``report``:                :doc:`📈 Reporting </manage/report-profiles>`
 
                             .. warning:: 🙅 **Never grant this permission to your customers.**
