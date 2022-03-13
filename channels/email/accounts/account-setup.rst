@@ -75,10 +75,6 @@ Email
 Password
    Your account password.
 
-   If your email provider requires you to enter
-   a one-time passcode (sent via SMS) when logging in,
-   you’ll have to :doc:`generate an app password <2fa-gmail>` to use with Zammad.
-
 Destination Group
    The :doc:`group </manage/groups/index>` that incoming mail will be assigned to.
 
@@ -117,10 +113,6 @@ Host
 
 Password
    Your account password.
-
-   If your email provider requires you to enter
-   a one-time passcode (sent via SMS) when logging in,
-   you’ll have to :doc:`generate an app password <2fa-gmail>` to use with Zammad.
 
 SSL / STARTTLS
    Enable encryption when fetching messages.
