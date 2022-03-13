@@ -42,5 +42,6 @@ Port
    This configuration step was part of the Getting Started wizard:
    
    .. figure:: /images/channels/email/getting-started_notification-channel.png
-      :alt: The getting started wizard asking how one wants to sendout notifications
+      :alt: The getting started wizard asking how one wants to send out
+            notifications
       :align: center

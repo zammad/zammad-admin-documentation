@@ -1,7 +1,10 @@
 Dispatch messages with Sendmail
 *******************************
 
-.. warning:: For the initial setup of this you need administrative rights on the Zammad machine (console).
+.. warning::
+
+   For the initial setup of this you need administrative rights on the
+   Zammad machine (console).
 
 If you try to configure **only** an outgoing email account
 (as in, you do not wish to set up an incoming IMAP/POP3 account at all),
@@ -12,15 +15,17 @@ Instead, you will have to create it via the CLI.
 for the average, non-technical user,
 so certain advanced options and use cases have been deliberately omitted.)
 
-To configure Zammad to use sendmail,
-run the following command (you can use rails r [...] if you installed Zammad from source)::
+To configure Zammad to use sendmail, run the following command
+(you can use rails r [...] if you installed Zammad from source)::
 
    zammad run rails r "Channel.create(area: 'Email::Account', options: { inbound: { adapter: 'null', options: {} }, outbound: { adapter: 'sendmail' } }, active: true, preferences: { editable: false }, updated_by_id: 1, created_by_id: 1)"
 
 Now, you should see a new **Email Account** entry in the admin settings panel:
 
 .. figure:: /images/channels/zammad_email_sendmail.png
-   :alt: The new, outbound-only email channel appears in the admin settings email panel.
+   :alt: The new, outbound-only email channel appears in the admin settings
+         email panel.
    :align: center
 
-   Use the **Add** button under the **Email Address** heading to add new email addresses to send from.
+   Use the **Add** button under the **Email Address** heading to add new email
+   addresses to send from.

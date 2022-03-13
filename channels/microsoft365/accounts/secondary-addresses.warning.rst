@@ -1,4 +1,6 @@
-.. warning:: 👀 **Secondary addresses must be added to your Microsoft account first.**
+.. warning::
+
+   👀 **Secondary addresses must be added to your Microsoft account first.**
 
    Personal accounts
       Use the `Manage how you sign in to Microsoft

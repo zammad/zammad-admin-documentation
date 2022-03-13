@@ -4,7 +4,8 @@ Account Setup
 After you’ve :doc:`registered Zammad as an OAuth app <register-app>`
 in your Azure Portal, you can begin connecting Microsoft accounts to Zammad.
 
-☠️ **But first, a word of warning!** The import process does things you might not expect:
+☠️ **But first, a word of warning!**
+The import process does things you might not expect:
 
 .. danger:: 🚯 **Zammad will delete all emails in your inbox
    during the import process.**
@@ -41,7 +42,8 @@ well before Microsoft officially pulls the plug on password auth.
       :scale: 60%
       :align: center
 
-      Make sure you don’t have any of these left over before creating your new Microsoft 365 channel.
+      Make sure you don’t have any of these left over before creating your new
+      Microsoft 365 channel.
 
 Add a New Account
 -----------------
@@ -104,5 +106,6 @@ Troubleshooting
 ---------------
 
 I successfully added my account, but Zammad isn’t fetching new email
-   If you specified a :ref:`custom folder/label to fetch from <microsoft365-folder>`,
+   If you specified a 
+   :ref:`custom folder/label to fetch from <microsoft365-folder>`,
    are you sure incoming mail is arriving in that folder?

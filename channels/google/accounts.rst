@@ -10,7 +10,8 @@ Accounts
    accounts/managing-accounts
 
 :doc:`accounts/register-app`
-   Use the **Connect Google App** dialog to register Zammad as an OAuth app on Google.
+   Use the **Connect Google App** dialog to register Zammad as an OAuth app on
+   Google.
 
    (This step is **required**; read on to learn why.)
 
@@ -47,7 +48,8 @@ Accounts
 .. note:: 🤔 **How do I use my Gmail account for outgoing system notifications?**
 
    On **subscription/cloud-hosted instances**, you can’t.
-   Notifications will always come from “Notification Master <noreply\@your.zammad.domain>”.
+   Notifications will always come from
+   “Notification Master <noreply\@your.zammad.domain>”.
 
    On **self-hosted instances**, we still don’t recommend it.
    Using a Gmail account for automated, outgoing messages is risky:

@@ -45,7 +45,9 @@ Accounts
       :scale: 60%
       :align: center
 
-.. note:: 🤔 **How do I use my Microsoft 365 account for outgoing system notifications?**
+.. note:: 🤔
+
+   **How do I use my Microsoft 365 account for outgoing system notifications?**
 
    On **subscription/cloud-hosted instances**, you can’t.
    Notifications will always come from

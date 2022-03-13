@@ -1,7 +1,8 @@
 Managing Accounts
 =================
 
-Once an account has been added, use the Accounts panel to edit its configuration.
+Once an account has been added, use the Accounts panel to edit its
+configuration.
 
 .. figure:: /images/channels/email/panel.png
    :alt: Existing accounts can be edited from the Accounts panel.
@@ -41,7 +42,9 @@ Enabled / Disabled
    This may be necessary during scheduled maintenance
    or when migrating your installation to a new host. 
 
-   .. note:: 📮 Disabling an account disables *outgoing* messages for it, as well.
+   .. note::
+
+      📮 Disabling an account disables *outgoing* messages for it, as well.
 
 Delete
    Deleting an account removes its configuration from Zammad entirely.

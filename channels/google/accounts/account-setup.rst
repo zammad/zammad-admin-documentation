@@ -5,7 +5,8 @@ After you’ve :doc:`registered Zammad as an OAuth app <register-app>`
 in your Google Developer settings,
 you can begin connecting Gmail accounts to Zammad.
 
-☠️ **But first, a word of warning!** The import process does things you might not expect:
+☠️ **But first, a word of warning!**
+The import process does things you might not expect:
 
 .. danger:: 🚯 **Zammad will delete all emails in your inbox
    during the import process.**
@@ -42,7 +43,8 @@ well before Google officially pulls the plug on password auth.
       :scale: 60%
       :align: center
 
-      Make sure you don’t have any of these left over before creating your new Google channel.
+      Make sure you don’t have any of these left over before creating your new
+      Google channel.
 
 Add a New Account
 -----------------
@@ -65,8 +67,8 @@ Any aliases registered in your Gmail settings will be imported automatically.
       :scale: 60%
 
    Google has a stringent verification process
-   to protect users from third-party websites that use OAuth to access their data.
-   Since you *are* the third-party website here,
+   to protect users from third-party websites that use OAuth to access their
+   data. Since you *are* the third-party website here,
    you can safely ignore this warning.
 
 Channel

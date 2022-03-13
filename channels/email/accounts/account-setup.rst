@@ -3,7 +3,8 @@ Account Setup
 
 Setting up a new email account? Here’s what all the settings do.
 
-☠️ **But first, a word of warning!** The import process does things you might not expect:
+☠️ **But first, a word of warning!**
+The import process does things you might not expect:
 
 .. danger:: 🚯 **Zammad will delete all emails in your inbox
    during the import process.**
@@ -13,8 +14,10 @@ Setting up a new email account? Here’s what all the settings do.
 
    .. _email-experts-import-as-warning:
 
-.. warning:: 📮 **Zammad will send an auto-reply message
-   to every email it imports.** (Including the old ones!)
+.. warning::
+
+   📮 **Zammad will send an auto-reply message to every email it imports.**
+   (Including the old ones!)
 
    Use the *Experts* dialog to
    :ref:`change this behavior <email-experts-import-as>`.
@@ -23,13 +26,15 @@ Setting up a new email account? Here’s what all the settings do.
 
    **Gmail / G Suite users:**
       Google is in the process of upgrading its security policies.
-      To stay up-to-date, do **not** add your account as an email channel—instead,
-      create a :doc:`Google channel </channels/google/accounts/account-setup>`.
+      To stay up-to-date, do **not** add your account as an email
+      channel — instead, create a
+      :doc:`Google channel </channels/google/accounts/account-setup>`.
 
    **Microsoft 365 users:**
       Microsoft is in the process of upgrading its security policies.
-      To stay up-to-date, do **not** add your account as an email channel—instead,
-      create a :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
+      To stay up-to-date, do **not** add your account as an email
+      channel — instead, create a
+      :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
 
    **Microsoft 365 / Exchange users:**
       Shared mailboxes are not supported.
@@ -42,7 +47,8 @@ to figure out your email provider’s configuration
 based on your email address alone.
 
 .. figure:: /images/channels/email/accounts-new-success.gif
-   :alt: Enter your email address and password, and Zammad will figure out the rest.
+   :alt: Enter your email address and password, and Zammad will figure out the
+         rest.
    :scale: 50%
    :align: center
 
@@ -56,8 +62,9 @@ Organization & Department Name
 
       A customer’s inbox with an auto-reply from **Chrispresso Sales**.
 
-   If you add :doc:`multiple addresses <secondary-addresses>` to a single account,
-   you can define a separate Organization & Department Name for each one.
+   If you add :doc:`multiple addresses <secondary-addresses>` to a single
+   account, you can define a separate Organization & Department Name for each
+   one.
 
    Email display names value can be
    :ref:`further customized in the Settings tab <email-settings-sender-format>`.
@@ -76,10 +83,11 @@ Password
    Your account password.
 
 Destination Group
-   The :doc:`group </manage/groups/index>` that incoming mail will be assigned to.
+   The :doc:`group </manage/groups/index>` that incoming mail will be assigned
+   to.
 
-   Use :doc:`filters </channels/email/filters>`
-   for more fine-grained sorting of incoming email.
+   Use :doc:`filters </channels/email/filters>` for more fine-grained sorting
+   of incoming email.
 
 .. _email-new-account-experts:
 
@@ -91,7 +99,8 @@ If Zammad can’t figure out how to connect your account
 use the *Experts* dialog.
 
 .. figure:: /images/channels/email/accounts-new-failure.gif
-   :alt: When auto-detection fails, you will be presented with the "Experts" account setup dialog.
+   :alt: When auto-detection fails, you will be presented with the "Experts"
+         account setup dialog.
    :scale: 50%
    :align: center
 
@@ -188,7 +197,8 @@ Import as
    “your message has been received and we’ll get back to you within 24 hours,”
    and tickets created for each message will be marked as “new”.
 
-   Use this option to disable this behavior for messages more than two weeks old.
+   Use this option to disable this behavior for messages more than two weeks
+   old.
 
    .. note:: This option may not be shown if:
 
