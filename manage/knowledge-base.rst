@@ -114,7 +114,7 @@ navigation. Entries added here will appear in the knowledge base like so:
    :align: center
 
 Zammad will provide a list of the current set links per knowledge base language.
-If you're missing a language, you'll have to add the language up ront.
+If you're missing a language, you'll have to add the language up front.
 
 You can adjust every URL on language level.
 
