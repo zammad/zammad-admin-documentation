@@ -97,9 +97,9 @@ Textarea
          Please note that this field *does not* support text formatting
          or HTML content (rich text).
 
-      .. warning:: **🥵 This field can consume a lot of space**
+      .. warning:: **🥵 This field can consume a lot of visual space**
 
-         Depending on where you use this field type, it may use a lot of
+         Depending on where you use this field type, it may use a lot of visual
          space if you provide a lot of text. This may be an issue to work with.
 
    Maxlength
