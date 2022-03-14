@@ -1,12 +1,12 @@
 Translations
 ************
 
-Translations of Zammad are handled central on our `Weblate instance`_.
+Translations of Zammad are processed centrally on our `Weblate instance`_.
 This allows non development people to review and update translation strings of
 the language they actually speak.
 
-Your language is in a bad translation state or has typos?
-Please consider helping us solving this out! All you need is either a GitHub
+Your language is in an incomplete translation state or has typos?
+Please consider helping us sorting this out! All you need is either a GitHub
 account or register directly on our instance.
 
 .. _Weblate instance:
@@ -20,7 +20,7 @@ account or register directly on our instance.
 --------------------------------------------------------------------------------
 
 Apart from these centralized translations, there's still local translations
-you can run. This is relevant if you added custom objects that require
+you can manage. This is relevant if you added custom objects that require
 translations or even states.
 
    .. warning::
@@ -35,9 +35,9 @@ How do I get the most recent translations?
 ------------------------------------------
 
 Because of how Zammad ships translations, the only way to update the
-central translations is to update your Zammad installation. The benefit from
-that is that you no longer require internet access during a Zammad upgrade as
-the package has everything it needs already.
+central translations is to update your Zammad installation. The benefit of
+this is that you no longer need internet access during a Zammad upgrade as
+the package has everything it requires already.
 
 But... I have custom objects?!
 ------------------------------
@@ -54,11 +54,11 @@ Now you can translate your objects as needed.
 So how does this local translation work?
 ----------------------------------------
 
-Within the translation menu look up the string you're searching for and update
-it's target as designed. As soon as you leave the target input field, the change
+Within the translation menu, look up the string you're searching for and update
+its target as designed. As soon as you leave the target input field, the change
 will be saved.
 
-Translated strings are slightly highlighted and come with a "Reset" action.
+Such locally translated strings are slightly highlighted and come with a "Reset" action.
 
 The translation strings shown by Zammad are always those of the
 profile language you've chosen. If you need to translate a different language,
@@ -75,15 +75,15 @@ change the language in your `profile settings`_ up front.
       **Yes, these changes are update safe!**
 
 .. figure:: /images/system/translations/changed-local-translation.png
-   :alt: Screenshot showing a adjusted translation locally
+   :alt: Screenshot showing an adjusted translation locally
 
-Getting back to original translations
-+++++++++++++++++++++++++++++++++++++
+Reverting to original translations
+++++++++++++++++++++++++++++++++++
 
 If you want to reset all translation changes on your instance, use the
 red "Reset" button on the upper right of the translation management.
 
-In case you're just looking to reset a specific translation, lookup the
+In case you just intend to reset a specific translation, lookup the
 translation string and use the "reset" action.
 
 .. figure:: /images/system/translations/resetting-local-translations.png
