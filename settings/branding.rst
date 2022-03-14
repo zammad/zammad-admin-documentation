@@ -49,7 +49,7 @@ Timezone
             * calendar subscriptions
             * browser printing
 
-         Please note that some of above partly are fallbacks in case Zammad
+         Please note that some of above are fallbacks in case Zammad
          could not detect the agents timezone correctly.
 
 Pretty Date
