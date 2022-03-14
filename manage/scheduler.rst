@@ -34,7 +34,13 @@ Name
    Choose a name for the scheduler.
 
 When should the job run?
-   Choose the points in time using UTC timezone when the scheduler should run.
+   Choose the points in time using :doc:`Zammads timezone </settings/branding>`
+   when the scheduler should run.
+
+   .. note::
+
+      The scheduler tasks are not saving any timezone information.
+      Thus: Scheduler tasks created prior Zammad 5.1 don't require any change.
 
 Conditions for affected objects
    Determine the ticket attributes (conditions) to limit on which tickets the
@@ -62,7 +68,8 @@ Active
 
 The scheduler shown in the screenshot would have the following effects:
 
-   Every workday (Monday to Friday) at 9:00 a.m. (*UTC*), all tickets which:
+   Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*),
+   all tickets which:
 
       - are not closed or merged, and
       - are assigned to the Sales group, and

@@ -32,15 +32,14 @@ Admin Permissions
 
                                 Use ``chat.agent`` instead.
 :``admin.channel_email``:    :doc:`Channels > Email </channels/email/index>`
-
-                             .. note:: There is no specific permission for the Google channel yet.
-                                This is an `open feature request <https://github.com/zammad/zammad/issues/3194>`_.
 :``admin.channel_facebook``: :doc:`Channels > Facebook </channels/facebook>`
 
                              .. hint:: 🤓 **Trying to grant access to view/update tickets from Facebook?**
 
                                 That’s in :doc:`/manage/groups/access-levels`.
 :``admin.channel_formular``: :doc:`Channels > Form </channels/form>`
+:``admin.channel_google``:       :doc:`Channels > Google </channels/google/index>`
+:``admin.channel_microsoft365``: :doc:`Channels > Microsoft 365 </channels/microsoft365/index>`
 :``admin.channel_sms``:      Channels > SMS
 :``admin.channel_telegram``: :doc:`Channels > Telegram </channels/telegram>`
 
