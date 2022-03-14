@@ -18,6 +18,16 @@ Note - default visibility (default: ``internal``)
 
    .. image:: /images/misc/composer_default-visibility.png
 
+Article - visibility confirmation dialog
+   This setting allows administrators to enforce a confirmation dialog to
+   agents when they're trying to change the article visibility from internal
+   to public.
+
+   This setting affects all article types within UI, no matter if the article
+   exists already or it's still a writing draft.
+
+   .. image:: /images/misc/article-visibility-confirmation-dialog.png
+
 Email - subject field (default: ``no``)
    When setting this option to ``yes``, Zammad will also display the subject
    field when answering via email articles. It doesn't matter if you click
