@@ -1,17 +1,19 @@
-Office 365
-==========
+Microsoft
+=========
 
-Zammads Office 365 allows your users with Microsoft accounts to login. 
+Zammads Microsoft connection allows your users with Microsoft accounts to login. 
 This works for Azure users as well and can be an alternative to 
 :doc:`/system/integrations/ldap`.
+
+.. hint:: **This login function was called "Office 365" prior Zammad 5.1.**
 
 .. note::
 
    This documentation part does not cover our 
    :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`.
 
-.. figure:: /images/settings/security/third-party/microsoft/zammad-login-with-office365-button.png
-   :alt: Screenshot showing Office365 login button on Zammad login screen.
+.. figure:: /images/settings/security/third-party/microsoft/zammad-login-interface-with-microsoft-login.png
+   :alt: Screenshot showing Microsoft login button on Zammad login screen.
    :scale: 75%
    :align: center
 
@@ -100,7 +102,7 @@ Step 2 - Add app credentials to Zammad
 --------------------------------------
 
 Navigate to Security → Third-party Applications (Tab) within Zammads admin 
-settings. Scroll down to the section *Authentication via Office 365* and 
+settings. Scroll down to the section *Authentication via Microsoft* and 
 fill in the required information.
 
 App ID:
@@ -115,7 +117,7 @@ App Tenant ID:
    (Default Directory only - Single tenant).*
 
 Apply your settings by pressing submit and activate 
-*Authentication via Office 365*.
+*Authentication via Microsoft*.
 
 .. figure:: /images/settings/security/third-party/microsoft/add-microsoft-app-credentials-to-zammad.gif
    :alt: Screencast showing how to add app credentials and activating the 

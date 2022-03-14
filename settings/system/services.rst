@@ -4,19 +4,19 @@ Services
 Image Service
    Defines the backend for user and organization image lookups.
 
-   Default: ``Image Service`` (active)
+   Default: ``Zammad Image Service`` (active)
 
 Geo Calendar Service
    Defines the backend for geo calendar lookups. Used for initial calendar
    succession.
 
-   Default: ``Geo Calendar Service`` (active)
+   Default: ``Zammad GeoCalendar Service`` (active)
 
 Geo IP Service
    Defines the backend for geo IP lookups. Shows also location of an IP address
    if an IP address is shown.
 
-   Default: ``Geo IP Service`` (active)
+   Default: ``Zammad GeoIP Service`` (active)
 
 Geo Location Service
    Defines the backend for geo location lookups to store geo locations for
@@ -27,6 +27,6 @@ Geo Location Service
 .. hint:: 
 
    You can find a detailed privacy information on what we store for how long on
-   our Privacy-Appendix_ inside of our System-Administrator-Documentation.
+   our `Privacy Appendix`_ inside of our System-Administrator-Documentation.
 
-.. _Privacy-Appendix: https://docs.zammad.org/en/latest/appendix/privacy.html
+.. _Privacy Appendix: https://docs.zammad.org/en/latest/appendix/privacy.html

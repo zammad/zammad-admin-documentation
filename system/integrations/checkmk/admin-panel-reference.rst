@@ -9,26 +9,28 @@ Settings
    :align: center
 
 Group
-   Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned to
-   as a default (*i.e.,* when none is specified)?
+   Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned
+   to as a default (*i.e.,* when none is specified)?
 
    (Applies to :ref:`API alerts <checkmk-api-alerts>` only.)
 
 Auto close
-   Should Zammad automatically close tickets if a service has recovered on its own?
+   Should Zammad automatically close tickets if a service has recovered on
+   its own?
 
    (Agents will receive notifications for such closures as appropriate.)
 
-Auto close state
+Auto-close state
    What ticket state should be applied when “auto-closing” a ticket?
 
    (You may choose from the seven built-in ticket states,
-   but if you change this setting from the default,
-   you’ll more likely want to
-   `define a new ticket state <https://docs.zammad.org/en/latest/admin/console.html>`_
-   for this purpose.
+   but if you change this setting from the default, you’ll more likely want to
+   `define a new ticket state`_ for this purpose.
    This can be especially useful for tracking tickets with
    :doc:`reports </manage/report-profiles>`.)
+
+.. _define a new ticket state:
+   https://docs.zammad.org/en/latest/admin/console.html
 
 .. _checkmk-recent-logs:
 
@@ -42,5 +44,5 @@ Recent Logs
 If you’re having trouble getting Zammad and Checkmk to play nicely together,
 this section can help you troubleshoot. 🙌
 
-It contains a record of the fifty most recent transactions that Zammad knows about,
-including each one’s request/response details and return status.
+It contains a record of the fifty most recent transactions that Zammad knows
+about, including each one’s request/response details and return status.

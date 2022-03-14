@@ -17,5 +17,7 @@ Console based settings 🤓
 
 There's some console based settings we didn't put into the UI.
 However, you may find them helpful - you can find them in our
-`hidden settings <https://docs.zammad.org/en/latest/admin/console/hidden-settings.html>`_
-section.
+`hidden settings`_ section.
+
+.. _hidden settings:
+   https://docs.zammad.org/en/latest/admin/console/hidden-settings.html

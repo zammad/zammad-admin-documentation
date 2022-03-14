@@ -18,9 +18,12 @@ Within each group, the different access levels allow an agent to...
 :CREATE:   ...create new tickets
 :CHANGE:   ...modify existing tickets
 :OVERVIEW: ...see ticket overviews (but not ticket details)
-:FULL:     ...all of the above **and be assigned / receive notifications for tickets**
+:FULL:     ...all of the above
+           **and be assigned / receive notifications for tickets**
 
-.. note:: 🔔 **Full group access also enables notifications for that group’s tickets.**
+.. note:: 
+
+   🔔 **Full group access also enables notifications for that group’s tickets.**
 
 Setting Access Levels
 ---------------------

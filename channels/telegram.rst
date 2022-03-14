@@ -1,18 +1,28 @@
 Telegram
 ********
 
-It's possible to put your Telegram bot communication into Zammad. To do so, you need to follow these steps.
+It's possible to put your Telegram bot communication into Zammad.
+To do so, you need to follow these steps.
 
-.. note:: Your Zammad instance needs to be publicly available via HTTPS (we use Telegram WebHooks).
+.. note::
 
-.. warning:: 📎 Zammad **cannot receive file attachments larger than 20MB** in Telegram messages.
+   Your Zammad instance needs to be publicly available via HTTPS
+   (we use Telegram WebHooks).
 
-   This is a hard limit imposed by the `Telegram Bot API <https://core.telegram.org/bots/api#getfile>`_.
+.. warning::
+
+   📎 Zammad **cannot receive file attachments larger than 20MB** in
+   Telegram messages.
+
+   This is a hard limit imposed by the `Telegram Bot API`_.
+
+.. _Telegram Bot API: https://core.telegram.org/bots/api#getfile
 
 Register a Telegram bot app
 ===========================
 
-Register your Telegram bot via your Telegram client, see also here: https://core.telegram.org/bots#3-how-do-i-create-a-bot
+Register your Telegram bot via your Telegram client, see also here:
+https://core.telegram.org/bots#3-how-do-i-create-a-bot
 
 Go to BotFather
 
@@ -49,7 +59,8 @@ Done, your Zammad is now configured as a Telegram bot.
 Start using your new channel
 ============================
 
-Go to your Telegram client, search for your new Telegram bot and start writing a message.
+Go to your Telegram client, search for your new Telegram bot and start writing
+a message.
 
 .. image:: /images/channels/telegram_client_search_bot.png
    :alt: search for bot

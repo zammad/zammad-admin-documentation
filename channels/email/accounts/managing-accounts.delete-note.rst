@@ -9,7 +9,8 @@
       :scale: 60%
       :align: center
 
-      Click on the address to assign it to another account, or click ✖ to delete it.
+      Click on the address to assign it to another account, or click ✖
+      to delete it.
 
    Groups need an assigned an address to send outgoing emails.
    If you delete a group’s assigned address,

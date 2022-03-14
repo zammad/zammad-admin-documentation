@@ -17,16 +17,23 @@ Agent Permissions
 
    ...and give users access to new sidebar tabs for communicating with customers.
 
-:``chat.agent``:            `💬 Customer Chat <https://user-docs.zammad.org/en/latest/extras/chat.html>`_
+:``chat.agent``:            `💬 Customer Chat`_
 
                             .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
-:``cti.agent``:             Provides access to `📞 Caller Log <https://user-docs.zammad.org/en/latest/extras/caller-log.html>`_
+
+.. _💬 Customer Chat:
+   https://user-docs.zammad.org/en/latest/extras/chat.html
+
+:``cti.agent``:             Provides access to `📞 Caller Log`_
 
                             .. hint:: 🤓 Requires configuration of either integrations
 
                                   * :doc:`Generic CTI </system/integrations/cti/generic>`
                                   * :doc:`placetel </system/integrations/cti/placetel>`
                                   * :doc:`sipgate </system/integrations/cti/sipgate>`
+
+.. _📞 Caller Log:
+   https://user-docs.zammad.org/en/latest/extras/caller-log.html 
 
 :knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
@@ -40,6 +47,26 @@ Agent Permissions
                                                             .. hint::
 
                                                                Public articles are always visible.
+
+                            .. tip::
+
+                               Zammad supports `granular permissions on knowledge base categories`_.
+
+                               This function allows *agents with editor* permissions to restrict
+                               specific internal categories & answers to chosen roles.
+
+                               In order to allow your agents to set granular role permissions,
+                               the roles in question require at least reader permission for the
+                               knowledge base.
+
+                                 .. danger::
+
+                                    Keep in mind that this may be dangerous, as reader permission
+                                    provides access to internal answers!
+
+.. _granular permissions on knowledge base categories:
+   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#granular-category-permissions
+
 :``report``:                :doc:`📈 Reporting </manage/report-profiles>`
 
                             .. warning:: 🙅 **Never grant this permission to your customers.**

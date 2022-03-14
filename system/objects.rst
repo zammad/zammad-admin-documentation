@@ -26,6 +26,27 @@ By clicking on "custom objects" you can edit them to suit your needs.
    /system/objects/types
    /system/objects/permissions
 
+Ordering objects
+----------------
+
+Since Zammad introduced :doc:`/system/core-workflows` the need to have a
+custom positioning for objects has become more important than ever.
+
+To adjust the position of an object, simply click on the object entry in
+question, scroll down and adjust the position number.
+
+.. figure:: /images/system/objects/object-positioning.png
+   :alt: Screenshot showing object entries with a custom object ordered in between default objects
+
+.. hint::
+
+   In case two objects have the same position value, Zammad will sort
+   alphabetically by name automatically.
+
+   | **Limitation**
+   | Please note that you cannot change the positioning of default objects
+     at this time.
+
 Updating database after adding or editing objects
 -------------------------------------------------
 

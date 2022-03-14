@@ -1,7 +1,8 @@
 Triggers
 ========
 
-Use triggers to set up all kinds of 🎛️ **if-this-then-that** automation workflows.
+Use triggers to set up all kinds of 🎛️ **if-this-then-that** automation
+workflows.
 
 .. hint:: For ⏳ **every-so-often** automation workflows,
    try :doc:`schedulers </manage/scheduler>` instead.
@@ -10,20 +11,20 @@ The first thing to know about triggers is that **you're already using them**.
 From the moment you set up Zammad, it starts sending auto-replies
 to all incoming emails. Recognize this line?
 
-.. figure:: /images/manage/trigger-example01_ticket_zoom.png
+.. figure:: /images/manage/trigger/trigger-based-auto-reply-in-ticket-zoom.png
    :alt: Screenshot of auto-reply notification in ticket view
 
 It means that the ticket is from an incoming customer email,
 and that the customer received this message in response:
 
-.. figure:: /images/manage/trigger-example01_received_message.png
+.. figure:: /images/manage/trigger/trigger-based-auto-reply-in-a-customer-mailbox.png
    :alt: Screenshot of auto-reply in customer’s inbox
 
 This auto-reply message is a **trigger**.
 You can disable it, modify it, or create new ones
 for all sorts of automation tasks on the Trigger page of the admin panel:
 
-.. figure:: /images/manage/trigger-example01_admin_panel.png
+.. figure:: /images/manage/trigger/trigger-management.png
    :alt: Screenshot of “Triggers” page in admin panel
 
 .. toctree::

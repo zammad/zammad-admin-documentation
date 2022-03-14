@@ -5,10 +5,11 @@ Setting up a new Microsoft365 / Outlook account?
 Because of Microsoft's strict security policies,
 it’s not as simple as entering your username and password.
 
-First, you’ll have to connect Zammad to your Microsoft account as an **OAuth app**
-via the Microsoft Azure Portal.
-Once that’s done, you’ll be able to connect as many Microsoft 365 accounts to Zammad as you want,
-using only active Microsoft 365 browser sessions (no usernames or passwords required).
+First, you’ll have to connect Zammad to your Microsoft account as an
+**OAuth app** via the Microsoft Azure Portal.
+Once that’s done, you’ll be able to connect as many Microsoft 365 accounts to
+Zammad as you want, using only active Microsoft 365 browser sessions
+(no usernames or passwords required).
 
 .. note:: 🤔 **What the heck is OAuth?**
 
@@ -29,13 +30,17 @@ using only active Microsoft 365 browser sessions (no usernames or passwords requ
 
    In this case, **Zammad is that third-party website**.
    That’s why adding a Microsoft account is a two-stage process:
-   first, you have to register Zammad as a website that wishes to access Microsoft user data;
-   then, you have to add yourself as a Microsoft user who agrees to let Zammad fetch your email.
+   first, you have to register Zammad as a website that wishes to access
+   Microsoft user data; then, you have to add yourself as a Microsoft user who
+   agrees to let Zammad fetch your email.
 
 Step-by-Step
 ------------
 
-To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.com/>`_. 
+To get started, head over to `Microsoft’s Azure Portal`_. 
+
+.. _Microsoft’s Azure Portal:
+   https://portal.azure.com/
 
 .. note:: 🔑 **Use an admin account for your organization.**
 
@@ -64,18 +69,22 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
          🙅 **The “Personal Microsoft accounts only” option is not supported.**
 
    Redirect URI
-      **Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
+      **Web** > *E.g.,*
+      ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback`` 
 
       Find it in the Zammad admin panel
-      under **Channels > Microsoft 365 > Connect Microsoft 365 App > Your callback URL**.
+      under **Channels > Microsoft 365 > Connect Microsoft 365 App >
+      Your callback URL**.
 
    .. figure:: /images/channels/microsoft365/accounts/register-app/01-create-app.gif
-      :alt: Screencast demo of new app creation in Microsoft Azure Portal settings
+      :alt: Screencast demo of new app creation in Microsoft Azure Portal
+            settings
       :align: center
 
 2. **Add API permissions**
 
-   Under **API Permissions > ➕ Add a permission > Microsoft Graph > Delegated permissions**, add the following:
+   Under **API Permissions > ➕ Add a permission > Microsoft Graph >
+   Delegated permissions**, add the following:
 
    OpenId permissions
       * ``email``
@@ -90,7 +99,8 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
       * ``SMTP.Send``
 
    .. figure:: /images/channels/microsoft365/accounts/register-app/02-add-api-permissions.gif
-      :alt: Screencast demo of enabling Microsoft API permissions in Microsoft Azure Portal
+      :alt: Screencast demo of enabling Microsoft API permissions in Microsoft
+            Azure Portal
       :align: center
 
 3. **Connect your Microsoft app in Zammad**
@@ -105,7 +115,9 @@ To get started, head over to `Microsoft’s Azure Portal <https://portal.azure.c
    and copy that into the Zammad admin panel, as well.
 
    .. figure:: /images/channels/microsoft365/accounts/register-app/03-add-oauth-credentials.gif
-      :alt: Screencast demo of entering Microsoft OAuth credentials in Zammad admin panel
+      :alt: Screencast demo of entering Microsoft OAuth credentials in Zammad
+            admin panel
       :align: center
 
-🍾 Congratulations! Now you’re ready to connect Microsoft 365 or Outlook accounts to Zammad.
+🍾 Congratulations! Now you’re ready to connect Microsoft 365 or Outlook
+accounts to Zammad.

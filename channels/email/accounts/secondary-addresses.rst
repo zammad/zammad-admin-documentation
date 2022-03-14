@@ -5,7 +5,8 @@ Secondary addresses (also known as *aliases*) allow you to send emails
 with a different “From:” address from the one on the account.
 
 .. figure:: /images/channels/email/accounts-addresses.gif
-   :alt: Video demonstration of adding a secondary address and configuring a group to use it.
+   :alt: Video demonstration of adding a secondary address and configuring
+         a group to use it.
    :align: center
 
    Once you add a secondary address,

@@ -30,13 +30,14 @@ Setup
 
       No. To link private repo issues, **use the** ``repo`` **scope instead**.
       Bear in mind that the resulting token will have
-      `lots of permissions that it doesn’t actually need
-      <https://docs.github.com/en/developers/apps/scopes-for-oauth-apps>`_,
-      which presents a security risk
-      if your token ever falls into the wrong hands.
+      `lots of permissions that it doesn’t actually need`_, which presents a
+      security risk if your token ever falls into the wrong hands.
 
       Unfortunately, because of how GitHub’s OAuth token scopes are set up,
       this is the only way to link issues on private repos.
+
+.. _lots of permissions that it doesn’t actually need:
+   https://docs.github.com/en/developers/apps/scopes-for-oauth-apps
 
 2. Enter your new API token in Zammad and enable GitHub integration.
 
@@ -45,7 +46,9 @@ Setup
       :align: center
       :width: 90%
 
-   .. hint:: Leave the default API endpoint (``https://api.github.com/graphql``) as-is
+   .. hint::
+
+      Leave the default API endpoint (``https://api.github.com/graphql``) as-is
       unless you’re using GitHub Enterprise Server.
 
 Once completed, a new GitHub issues tab will appear in the ticket pane. 🎉
@@ -57,7 +60,7 @@ Token verification is taking a long time
    Slight delays are normal (<2 min.), especially for systems under heavy load.
 
    Self-hosted administrators, please check your network settings
-   to ensure that your Zammad server can reach api.github.com.
+   to ensure that your Zammad server can reach ``api.github.com``.
 
 I reloaded the page and now the API token is gone
    This may indicate that Zammad is still verifying your API token.
