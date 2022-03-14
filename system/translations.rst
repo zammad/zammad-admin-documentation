@@ -58,7 +58,8 @@ Within the translation menu, look up the string you're searching for and update
 its target as designed. As soon as you leave the target input field, the change
 will be saved.
 
-Such locally translated strings are slightly highlighted and come with a "Reset" action.
+Such locally translated strings are slightly highlighted and come with a "Reset"
+action.
 
 The translation strings shown by Zammad are always those of the
 profile language you've chosen. If you need to translate a different language,
