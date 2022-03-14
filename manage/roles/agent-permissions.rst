@@ -53,7 +53,7 @@ Agent Permissions
                                Zammad supports `granular permissions on knowledge base categories`_.
 
                                This function allows *agents with editor* permissions to restrict
-                               roles to specific internal categories & answers.
+                               roles to specific internal categories & answers to chosen roles.
 
                                In order to allow your agents to set granular role permissions,
                                the roles in question require at least reader permission for the
