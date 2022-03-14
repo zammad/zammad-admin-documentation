@@ -44,9 +44,8 @@ Assign follow-ups
       The owner assignment of the ticket will be removed.
 
 Email
-   Ticket groups decide on which email address Zammad will use outbound
-   for replying on a ticket. *Destination groups* of your email based channels
-   do not have any effect on this setting and may differ.
+   Select which sender's email address Zammad will use outbound for replying on
+   a ticket in this group.
 
       .. note:: **You don't have an email address configured yet?**
 
@@ -57,11 +56,6 @@ Email
             * :doc:`Channels → Google </channels/google/index>`
 
          and come back afterwards.
-
-   .. tip::
-
-      You can't reply on a ticket? This is an indicator that you haven't set
-      an email address in the affected group yet. 🤓
 
 Signature
    Choose which :doc:`signature </channels/email/signatures>` to use when
