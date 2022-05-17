@@ -20,6 +20,12 @@ The import process does things you might not expect:
    prior adding an email account,
    and to turn it back on once all your messages have been imported.
 
+.. tip:: 🤓 **Shared mailboxes are possible...**
+
+   For this to function ensure to set a password for the account in question.
+   You'll need these credentials to authenticate against later during adding
+   the account.
+
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 

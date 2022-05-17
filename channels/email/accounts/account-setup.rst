@@ -36,9 +36,6 @@ The import process does things you might not expect:
       channel — instead, create a
       :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
 
-   **Microsoft 365 / Exchange users:**
-      Shared mailboxes are not supported.
-
 Basic
 -----
 
