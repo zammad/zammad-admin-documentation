@@ -115,3 +115,14 @@ I successfully added my account, but Zammad isn’t fetching new email
    If you specified a 
    :ref:`custom folder/label to fetch from <microsoft365-folder>`,
    are you sure incoming mail is arriving in that folder?
+
+My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``
+   This is a Microsoft 365 specific issue which you have to solve with
+   Microsoft. However, you can have a look at `Microsofts documentation`_
+   which might allow you to solve the issue on your own.
+
+   As soon as the issue has been fixed, the Zammad channel will recover
+   automatically.
+
+   .. _Microsofts documentation:
+      https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention
