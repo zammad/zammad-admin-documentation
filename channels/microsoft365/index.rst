@@ -35,5 +35,5 @@ Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
    Ensure to disable admin consent for the mailboxes in question.
 
 .. include:: /channels/email/index.rst
-   :start-after: :align: center
+   :start-after: .. start-after-migration
    :end-before: Extra Options for Self-Hosted Users

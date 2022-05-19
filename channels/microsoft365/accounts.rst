@@ -6,6 +6,7 @@ Accounts
 
    accounts/register-app
    accounts/account-setup
+   accounts/migrate-from-email-channel
    accounts/secondary-addresses
    accounts/managing-accounts
 
@@ -23,8 +24,19 @@ Accounts
 :doc:`accounts/account-setup`
    Use the **Add Account** dialog to connect your account.
 
+   You're migrating existing email channels? Look below!
+
    .. figure:: /images/channels/microsoft365/accounts/account-setup/add-microsoft365-account-to-zammad.gif
       :alt: Adding your gmail account to Zammad
+      :scale: 60%
+      :align: center
+
+:doc:`accounts/migrate-from-email-channel`
+   Use the *Migrate now!* button within your email channels to quickly move
+   your mailboxes to Microsoft 365. You can roll back if things hit the fan!
+
+   .. figure:: /images/channels/microsoft365/accounts/migrate-email-channel-to-microsoft365.gif
+      :alt: Migrate an existing email channel to Microsoft 365
       :scale: 60%
       :align: center
 
