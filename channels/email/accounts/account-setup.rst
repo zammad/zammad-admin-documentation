@@ -259,9 +259,18 @@ Verification
    :alt: Email account verification step
    :align: center
 
-As a final step, Zammad sends a test email
-from your own account, to your own account.
-Once this test email is received, the new account setup process is complete! 🎉
+As a final step, Zammad sends a test email from your own account,
+to your own account, and to ``verify-external-smtp-sending@discard.zammad.org``
+which discards the test mail right away.
+
+We've created a `landing page for discard.zammad.org`_ which describes the
+backgrounds as well.
+
+.. _landing page for discard.zammad.org:
+   https://discard.zammad.org
+
+This this Zammad ensures that your email account is capable of sending internal
+and external - once this is verified the setup process is complete! 🎉
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
