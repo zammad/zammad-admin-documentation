@@ -13,9 +13,7 @@ of its powerful, flexible, and fine-grained permission system.
 
    Assign user privileges in the Admin Panel, under **Manage > Roles**.
 
-.. note:: 👀 **What’s New in v3.5**
-
-   Now, users can have both “agent” and “customer” roles at the same time!
+.. note:: 👀 Users can have both “agent” and “customer” roles at the same time!
 
    Why would you want this?
    Agents get :doc:`overviews </manage/overviews>`
