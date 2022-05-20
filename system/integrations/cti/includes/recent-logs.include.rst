@@ -25,3 +25,7 @@ Recent Logs
 
    .. figure:: /images/system/integrations/cti/recent-logs-detail.png
       :alt: Screenshot showing detailed information of a specific log entry of recent logs
+
+.. container:: cfloat-clear
+
+   x

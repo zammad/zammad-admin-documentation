@@ -88,3 +88,5 @@ Caller Log Filter
       :width: 75%
 
 .. include:: /system/integrations/cti/includes/recent-logs.include.rst
+
+.. include:: /system/integrations/cti/includes/troubleshooting.include.rst

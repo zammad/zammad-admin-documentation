@@ -76,3 +76,5 @@ Phone Extension to Agent Mapping
          :alt: Sample VoIP credentials for a Placetel user
 
 .. include:: /system/integrations/cti/includes/recent-logs.include.rst
+
+.. include:: /system/integrations/cti/includes/troubleshooting.include.rst
