@@ -106,6 +106,8 @@ After adding the account
 
    Changing this setting will not reassign existing tickets to the new group.
 
+   .. include:: /channels/email/accounts/account-setup-group-hint.include.rst
+
 Troubleshooting
 ---------------
 

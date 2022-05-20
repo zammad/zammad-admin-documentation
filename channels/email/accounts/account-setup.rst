@@ -272,6 +272,8 @@ backgrounds as well.
 This this Zammad ensures that your email account is capable of sending internal
 and external - once this is verified the setup process is complete! 🎉
 
+.. include:: /channels/email/accounts/account-setup-group-hint.include.rst
+
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
