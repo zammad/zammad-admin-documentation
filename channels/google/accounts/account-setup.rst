@@ -112,6 +112,21 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+After adding the account
+   After successfully adding the Microsoft 365 mail account, you can adjust
+   the default group Zammad is going to assign incoming new tickets to.
+
+   .. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
+      :alt: Location of "Destination Group" setting for existing accounts
+      :scale: 60%
+      :align: center
+
+   Only **active** groups will be displayed.
+
+   Changing this setting will not reassign existing tickets to the new group.
+
+   .. include:: /channels/email/accounts/account-setup-group-hint.include.rst
+
 Troubleshooting
 ---------------
 

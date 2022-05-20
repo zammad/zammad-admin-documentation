@@ -20,6 +20,12 @@ The import process does things you might not expect:
    prior adding an email account,
    and to turn it back on once all your messages have been imported.
 
+.. tip:: 🤓 **Shared mailboxes are possible...**
+
+   For this to function ensure to set a password for the account in question.
+   You'll need these credentials to authenticate against later during adding
+   the account.
+
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 
@@ -27,23 +33,8 @@ If you’ve already added your Microsoft 365 account as a regular email channel,
 you’ll have to convert it to a Microsoft 365 channel eventually:
 Microsoft is planning to end support for simple password authentication
 in third-party email clients (like Zammad).
-**But there’s no rush just yet**.
 
-Upcoming versions of Zammad will feature an automated migration wizard
-to help you make the switch, and it’ll be available
-well before Microsoft officially pulls the plug on password auth.
-
-.. hint:: If you’d prefer not to wait, you can do it manually today—just
-   remember to **delete the email channel for your Microsoft account**
-   (and all its associated aliases) before re-adding it here.
-
-   .. figure:: /images/channels/microsoft365/accounts/account-setup/email-addresses-without-channel.png
-      :alt: List of orphaned email addresses
-      :scale: 60%
-      :align: center
-
-      Make sure you don’t have any of these left over before creating your new
-      Microsoft 365 channel.
+Please refer the :doc:`migrate-from-email-channel` guide.
 
 Add a New Account
 -----------------
@@ -102,6 +93,21 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+After adding the account
+   After successfully adding the Microsoft 365 mail account, you can adjust
+   the default group Zammad is going to assign incoming new tickets to.
+
+   .. figure:: /images/channels/microsoft365/accounts/account-setup/change-destination-group.png
+      :alt: Location of "Destination Group" setting for existing accounts
+      :scale: 60%
+      :align: center
+
+   Only **active** groups will be displayed.
+
+   Changing this setting will not reassign existing tickets to the new group.
+
+   .. include:: /channels/email/accounts/account-setup-group-hint.include.rst
+
 Troubleshooting
 ---------------
 
@@ -109,3 +115,14 @@ I successfully added my account, but Zammad isn’t fetching new email
    If you specified a 
    :ref:`custom folder/label to fetch from <microsoft365-folder>`,
    are you sure incoming mail is arriving in that folder?
+
+My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``
+   This is a Microsoft 365 specific issue which you have to solve with
+   Microsoft. However, you can have a look at `Microsofts documentation`_
+   which might allow you to solve the issue on your own.
+
+   As soon as the issue has been fixed, the Zammad channel will recover
+   automatically.
+
+   .. _Microsofts documentation:
+      https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention

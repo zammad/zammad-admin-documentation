@@ -78,11 +78,11 @@ Sender based on Reply-To header: Default value ``not set (-)``
    that contain a ``Reply-To`` header. This comes in useful if you're working
    with contact forms that need to use reply to headers.
 
-   Option set to ``-`` or ``Take reply-to header as sender/from of email.``
+   Option set to ``Take reply-to header as sender/from of email.``
       This setting will overwrite the initial ``FROM`` to the value used in
       ``Reply-To`` completely.
 
-   Option set to ``Take Reply-To header as sender/from of email and use the real name of origin from.``
+   Option set to ``-`` or ``Take Reply-To header as sender/from of email and use the real name of origin from.``
       This setting will partially overwrite the initial ``FROM``. 
       It uses the mail address from the ``Reply-To`` header and uses the given
       name of the ``FROM`` header, if given.

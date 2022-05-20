@@ -24,5 +24,5 @@ Connect a Gmail or G Suite account to Zammad.
    which has a few extra quirks due to Google’s strict security measures.
 
 .. include:: /channels/email/index.rst
-   :start-after: :align: center
+   :start-after: .. start-after-migration
    :end-before: Extra Options for Self-Hosted Users
