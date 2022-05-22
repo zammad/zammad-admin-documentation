@@ -14,11 +14,13 @@ Mode
 
 @Login
    This setting allows you to provide a login message within a green banner
-   above the login screen.
+   above the login screen. Click into the green banner in the settings page
+   to adjust your message. To activate the message, activate the *@Login*
+   setting.
 
-   This setting by default is empty.
-
-   .. image:: /images/maintenance/Login-1.jpg
+   .. figure:: /images/system/maintenance/login-message-setting.png
+      :alt: Screenshot showing the default login message within the
+            settings page
 
 Message
    Send an informative message to **all active sessions**.
@@ -33,7 +35,7 @@ Message
 
    Reload application
       Selecting this option will change the messages acceptance button from
-      *Okay* (with nothing happening) to *Reload Application* which forces
+      *Close* (with nothing happening) to *Continue session* which forces
       the application to reload.
 
    .. warning::
@@ -41,4 +43,52 @@ Message
       If you have customers that are logged in to Zammad, they'll also be
       notified if they're active in that moment.
 
-   .. image:: /images/maintenance/Login-2.jpg
+   .. tabs::
+
+      .. tab:: without reload application
+
+         .. container:: cfloat-left
+
+            Message setting within Zammads admin settings without ticket reload
+            application setting.
+
+            .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png
+               :alt: Screenshot showing the send message settings without ticket
+                     reload application set
+
+         .. container:: cfloat-right
+
+            The modal all other active sessions will see upon pressing
+            *Send to clients*.
+
+            .. figure:: /images/system/maintenance/message-without-reload-application.png
+               :alt: Screenshot showing modal caused by maintenance's message
+                     without reload application ticket
+
+         .. container:: cfloat-clear
+
+            X
+
+      .. tab:: with reload application
+
+         .. container:: cfloat-left
+
+            Message setting within Zammads admin settings with ticket reload
+            application setting.
+
+            .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png
+               :alt: Screenshot showing the send message settings with ticket
+                     reload application set
+
+         .. container:: cfloat-right
+
+            The modal all other active sessions will see upon pressing
+            *Send to clients*.
+         
+            .. figure:: /images/system/maintenance/message-with-reload-application.png
+               :alt: Screenshot showing modal caused by maintenance's message
+                     with reload application ticket
+
+         .. container:: cfloat-clear
+
+            X
