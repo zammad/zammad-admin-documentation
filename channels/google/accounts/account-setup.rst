@@ -24,27 +24,12 @@ The import process does things you might not expect:
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 
-If you’ve already added your Gmail account as a regular email channel,
+If you’ve already added your Google account as a regular email channel,
 you’ll have to convert it to a Google channel eventually:
 Google is planning to end support for simple password authentication
 in third-party email clients (like Zammad).
-**But there’s no rush just yet**.
 
-Upcoming versions of Zammad will feature an automated migration wizard
-to help you make the switch, and it’ll be available
-well before Google officially pulls the plug on password auth.
-
-.. hint:: If you’d prefer not to wait, you can do it manually today—just
-   remember to **delete the email channel for your Gmail account**
-   (and all its associated aliases) before re-adding it here.
-
-   .. figure:: /images/channels/google/email-addresses-without-channel.png
-      :alt: List of orphaned email addresses
-      :scale: 60%
-      :align: center
-
-      Make sure you don’t have any of these left over before creating your new
-      Google channel.
+Please refer the :doc:`migrate-from-email-channel` guide.
 
 Add a New Account
 -----------------
