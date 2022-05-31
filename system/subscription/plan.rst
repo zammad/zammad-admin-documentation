@@ -4,7 +4,7 @@ Plan
 Subscription
    On the top of the subscription summary you'll find the number of used and
    available (booked) agent seats. By using the *see more* link you can also
-   expand a agent list to see the currently configured, active agents.
+   expand an agent list to see the currently configured, active agents.
 
       .. tip::
 
@@ -46,7 +46,7 @@ Summary
 
    Billing cycle
       You can choose between either monthly or yearly billing.
-      The price per agents will be cheaper if you decide for yearly billing.
+      The price per agent will be cheaper if you decide for yearly billing.
 
          .. tip::
 
@@ -101,7 +101,7 @@ Payment method
       if you're ready. You'll then receive an email with the SEPA mandate.
 
    Technically there's also the possibility to pay via invoice, however - this
-   method only applies to fairly low number of instances. Please contact
+   method only applies to a fairly low number of instances. Please contact
    `our sales team`_ for more information.
 
 .. _our sales team:
