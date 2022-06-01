@@ -47,6 +47,33 @@ Payment history
       Invoices that are to be billed are not available before the payment
       is completed.
 
+   Date
+      Date of the invoice creation.
+
+   Amount
+      Invoice total including VAT if applicable.
+
+   Description
+      Contains contract period (monthly or yearly) and hosted plan for the
+      subscription period in question.
+
+   Payment method / Service period
+      Used bank account or credit card as well as the subscription period the
+      invoice is about.
+
+      .. note::
+
+         It might happen that the invoice date and subscription period differ.
+         This is nothing to worry about, the subscription periods will be
+         accounted later on.
+
+   Receipt
+      Use the arrow to download the invoice in question. You can download all
+      available invoices any time you need to here!
+
+   .. figure:: /images/system/subscription/payment-history.png
+      :alt: Screenshot showing payment history of a hosted instance
+
 Do you want to cancel your subscription?
    In case you no longer want to use Zammads SaaS, you can cancel your
    subscription by using the red *Yes, please cancel my subscription* button.
@@ -58,3 +85,16 @@ Do you want to cancel your subscription?
       We will remind you about your cancelled subscription several times up
       front. After the subscription ended all instance data will be removed.
       A restore *is not* possible after that point!
+
+   .. figure:: /images/system/subscription/cancel-hosted-subscription.gif
+      :alt: Screencast showing how to cancel a subscription
+
+   .. hint:: **😖 Cancelled by accident?**
+
+      You can always undo the cancellation via the
+      *Yes, undo the cancellation of my subscription* button up to the last
+      subscription day!
+
+      .. figure:: /images/system/subscription/undo-cancellation.png
+         :alt: Screenshot showing a red button to cancel the subscription
+               cancellation
