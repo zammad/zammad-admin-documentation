@@ -90,7 +90,7 @@ The ones that aren’t are described below.
    (Agents do not, though.)
 
 🏢 Organization
-   :doc:`/manage/organizations` are a way to group customers together
+   :doc:`/manage/organizations/index` are a way to group customers together
    (usually, members of the same company).
    This allows you to do things like view all tickets for that company
    or set up special :doc:`/manage/trigger` that fire only for those customers.
