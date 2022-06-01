@@ -70,7 +70,7 @@ Admin Permissions
 :``admin.maintenance``:      :doc:`System > Maintenance </system/maintenance>`
 :``admin.monitoring``:       :doc:`System > Monitoring </system/monitoring>`
 :``admin.object``:           :doc:`System > Objects </system/objects>`
-:``admin.organization``:     :doc:`Manage > Organizations </manage/organizations>`
+:``admin.organization``:     :doc:`Manage > Organizations </manage/organizations/index>`
 
                              .. note:: Agents can access existing organizations
                                 from the search bar, even without this permission.
