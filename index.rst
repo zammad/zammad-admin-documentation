@@ -10,7 +10,7 @@ Zammad - Documentation for administrators
    manage/users/index
    manage/groups/index
    manage/roles/index
-   manage/organizations
+   manage/organizations/index
    manage/overviews
    manage/text-modules
    manage/macros
