@@ -100,6 +100,25 @@ The ones that aren’t are described below.
 
       To add one, go to **Manage > Organizations** in the Admin Panel.
 
+🏤 Secondary Organizations
+   This option allows you to assign more organizations (which are not the users
+   primary) to users.
+
+   Secondary organizations behave the same like the primary ones with one
+   exception: Secondaries are not as highlighted like their primaries.
+
+   .. hint::
+
+      Listings for all organizational tickets are not affected by this.
+      Zammad will mix primary and secondary organization tickets together.
+
+   .. warning::
+
+      While the number of secondary organizations is not limited directly,
+      you may want to keep this to a reasonable number of organizations.
+
+      30-40 organizations at maximum *should* be good enough.
+
 👑 VIP
    This flag is a way for your team to indicate high-status customers.
    Just as with organizations,
