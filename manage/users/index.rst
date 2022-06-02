@@ -8,7 +8,7 @@ or even synchronized with third-party directory services.
 .. figure:: /images/manage/users/managing-users-manually.gif
    :alt: Creating and editing users directly in the Admin Panel
    :align: center
-   :width: 80%
+   :width: 90%
 
    The simplest way to manage users is directly in the Admin Panel.
 
