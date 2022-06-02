@@ -51,7 +51,7 @@ The ones that aren’t are described below.
 .. figure:: /images/manage/organizations/administrative-changing-organization-settings.png
    :alt: The edit organization dialog, showing the various organization detail fields
    :align: center
-   :width: 60%
+   :width: 75%
 
    User details can be set in the **New/Edit Organization** dialog.
 
@@ -84,6 +84,14 @@ The ones that aren’t are described below.
 
       Sharing organizations don't just affect customers, however, if you want to
       provide ticket access to agents, please see the :ref:`permission-guide`.
+
+   .. figure:: /images/manage/organizations/user-view-of-shared-organization-tickets.png
+      :width: 80%
+      :align: center
+      :alt: Screenshot showing "My Organization Tickets" overview with tickets
+            belonging to all organization members
+
+      Members of shared organization have access to organization based overviews
 
 🗄️ Domain based assignment
    Activating domain based assignment will cause Zammad to automatically add
