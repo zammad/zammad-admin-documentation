@@ -42,6 +42,8 @@ Learn more about managing organizations...
 
    Proceed with caution.
 
+.. _organization-details-reference:
+
 Reference Guide: Organization Details
 -------------------------------------
 
