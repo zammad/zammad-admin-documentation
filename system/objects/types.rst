@@ -125,7 +125,18 @@ Single tree selection field
    Provides a select-like field with up to 6 layers of options.
    Does not allow setting a default value.
 
+   .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
+
    .. figure:: /images/system/objects/settings_treeselect.png
+      :alt: Available settings for Tree Select fields
+
+Multiple tree selection field
+   Provides a select-like field with up to 6 layers of options allowing
+   the selection of multiple values. Does not allow setting a default value.
+
+   .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
+
+   .. figure:: /images/system/objects/settings_multitreeselect.png
       :alt: Available settings for Tree Select fields
 
 .. warning:: 
