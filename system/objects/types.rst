@@ -3,6 +3,11 @@ Object types
 
 When adding a new object, you can choose between the following object types.
 
+.. warning:: 
+
+   You cannot change the object format / type as soon as it is applied.
+   If you no longer need an object, consider disabling it instead of removing.
+
 Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
    Allows setting a default value.
@@ -138,11 +143,6 @@ Multiple tree selection field
 
    .. figure:: /images/system/objects/settings_multitreeselect.png
       :alt: Available settings for Tree Select fields
-
-.. warning:: 
-
-   You cannot change the object format / type as soon as it is applied.
-   If you no longer need an object, consider disabling it instead of removing.
 
 .. _link-templates:
 
