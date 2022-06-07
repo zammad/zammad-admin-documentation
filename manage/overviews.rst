@@ -38,7 +38,7 @@ Available for the following roles / Restrict to only the following users
    Define roles that are supposed to see and use the overview in question.
 
    If your overview is rather specific for a sub group of users of your role,
-   use the *"Restrict to only the following users"* option to restrict
+   use the *"Restrict to only the following users"* option to further restrict
    the visibility of the overview to defined users.
 
       .. hint::
