@@ -18,10 +18,10 @@ The workflow may not use them all.
       * Support
       * 2nd Level
    * Attributes
-      * Category (Tree-Select, not mandatory, agents only)
-      * Approved (Boolean, not mandatory, not shown, ``false`` as default)
-      * Operating System (Text, not mandatory, not shown)
-      * Software used (Select, not mandatory, not shown)
+      * Category (Single tree selection field, not mandatory, agents only)
+      * Approved (Boolean field, not mandatory, not shown, ``false`` as default)
+      * Operating System (Text field, not mandatory, not shown)
+      * Software used (Single selection field, not mandatory, not shown)
 
 1. Group specific values and fields
       This workflow set depends on the category field.
