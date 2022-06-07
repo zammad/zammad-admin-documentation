@@ -34,8 +34,8 @@ Message
       The text you want to provide to your logged in sessions.
 
    Reload application
-      Selecting this option will change the messages acceptance button from
-      *Close* (with nothing happening) to *Continue session* which forces
+      Selecting this option will change the message acceptance button from
+      *Close* (with nothing happening) to *Continue session*, which forces
       the application to reload.
 
    .. warning::
@@ -45,7 +45,7 @@ Message
 
    .. tabs::
 
-      .. tab:: without reload application
+      .. tab:: Example without reload application
 
          .. container:: cfloat-left
 
@@ -69,7 +69,7 @@ Message
 
             X
 
-      .. tab:: with reload application
+      .. tab:: Example with reload application
 
          .. container:: cfloat-left
 
