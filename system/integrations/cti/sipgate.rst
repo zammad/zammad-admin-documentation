@@ -82,3 +82,5 @@ Phone Extension to Agent Mapping
          Users with several devices also have several SIP-IDs.
 
 .. include:: /system/integrations/cti/includes/recent-logs.include.rst
+
+.. include:: /system/integrations/cti/includes/troubleshooting.include.rst
