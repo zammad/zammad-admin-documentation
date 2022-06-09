@@ -1,4 +1,4 @@
-Managing Users via the Admin Panel
+Managing users via the admin panel
 ==================================
 
 The “Users” panel provides tools to manually manage user accounts.

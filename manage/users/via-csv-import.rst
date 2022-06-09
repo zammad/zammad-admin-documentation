@@ -1,4 +1,4 @@
-Managing Users via CSV Import
+Managing users via CSV Import
 =============================
 
 If your organization has information about customers (or personnel)
@@ -19,21 +19,21 @@ you can batch-import them into Zammad in just three steps.
    like :doc:`LDAP / Active Directory </system/integrations/ldap>`
    or :doc:`Exchange </system/integrations/exchange>`.
 
-Step 1: Inspect the Sample .csv
+Step 1: Inspect the sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
 (**“Example CSV file for download”**)
 to see how Zammad expects you to format your user data.
 
-Step 2: Export Your User Data to .csv
+Step 2: Export your user data to .csv
 -------------------------------------
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
 
 * the ``id`` attribute (column) should be left blank or removed entirely;
 * the ``firstname`` and ``lastname`` attributes are **required**; and
-* any others may be safely omitted
+* any other columns may be safely omitted
   as long as each row has the same number of fields (commas).
 
 For instance:
@@ -44,7 +44,7 @@ For instance:
    jdoe,"John","Doe",jdoe@example.com,"https://zammad.com",true
    mmore,"Madeline","Moore",mmore@example.net,"",false
 
-Step 3: Import Your .csv to Zammad
+Step 3: Import your .csv to Zammad
 ----------------------------------
 
 Once your raw user data has been submitted,
