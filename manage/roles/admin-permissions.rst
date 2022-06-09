@@ -25,7 +25,7 @@ Admin Permissions
 :``admin.api``:              `System > API <https://docs.zammad.org/en/latest/api-intro.html>`_
 :``admin.branding``:         :doc:`Settings > Branding </settings/branding>`
 :``admin.calendar``:         :doc:`Manage > Calendars </manage/calendars>`
-                             (required for :doc:`/manage/slas`)
+                             (required for :doc:`/manage/slas/index`)
 :``admin.channel_chat``:     :doc:`Channels > Chat </channels/chat>`
 
                              .. hint:: 🤓 **Trying to grant access to send messages in live chats?**
@@ -88,7 +88,7 @@ Admin Permissions
                              This also covers third party authentications.
 :``admin.session``:          :doc:`System > Sessions </system/sessions>`
 :``admin.setting_system``:   :doc:`Settings > System </settings/system/index>` of Zammad
-:``admin.sla``:              :doc:`Manage > SLAs </manage/slas>`
+:``admin.sla``:              :doc:`Manage > SLAs </manage/slas/index>`
 :``admin.tag``:              :doc:`Manage > Tags </manage/tags>`
 :``admin.text_module``:      :doc:`Manage > Text Modules </manage/text-modules>`
 :``admin.ticket``:           :doc:`Settings > Tickets </settings/ticket>` (does not grant access to :doc:`/misc/composer`)

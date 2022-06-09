@@ -16,7 +16,7 @@ Zammad - Documentation for administrators
    manage/macros
    manage/tags
    manage/calendars
-   manage/slas
+   manage/slas/index
    manage/trigger
    manage/webhook
    manage/scheduler
