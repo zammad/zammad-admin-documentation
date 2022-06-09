@@ -14,7 +14,18 @@ has to remember.
 .. _Kerberos Single Sign-On:
    https://docs.zammad.org/en/latest/appendix/single-sign-on.html
 
-.. FIGURE
+.. figure:: /images/system/integrations/ldap/ldap-integration-management.png
+   :width: 90%
+   :align: center
+   :alt: Zammands LDAP management page
+
+.. toctree::
+   :hidden:
+
+   manage
+
+📝 :doc:`manage`
+   Add, modify, remove or re-arrange your LDAP-Sources as needed.
 
 Limitations
 -----------
@@ -61,7 +72,25 @@ Before you continue, please note the following limitations.
 .. _Issue 4108: https://github.com/zammad/zammad/issues/4108
 .. _Issue 4109: https://github.com/zammad/zammad/issues/4109
 
+Recent Logs
+-----------
 
+This section holds all requests Zammad handled for all LDAP sources.
+These entries can either contain synchronization information or logins
+(authentication attempts via Zammads login interface).
+
+By clicking on any request, Zammad will provide even more information.
+The provided information can be useful when something does not work as expected.
+
+.. note::
+
+   Especially a LDAP synchronization can cause many log entries.
+   The web interface will always limit the number of shown entries to the last
+   50 entries.
+
+.. figure:: /images/system/integrations/ldap/ldap-log-entries.gif
+   :alt: Screencast showing LDAP integration log entries and a detail view on
+         an entry.
 
 --------------------------------------------------------------------------------
 
@@ -77,13 +106,9 @@ If needed, you can also change the user filter for your LDAP query. The option "
 (default sign-up role) to any LDAP user, that doesn't match to the above role mapping. After pressing Continue, Zammad will check if the configuration is okay.
 You can then enable LDAP and start your first sync. The sync will then run hourly - if you need to change mappings, you can change the configuration at any time.
 
-.. image:: /images/system/integrations/ldap/1.jpg
-
 .. note:: You can use user filters to limit the search results Zammad gets. Also, you can hide deactivated Active Directory accounts (the users will be set to inactive within Zammad).
    You can find further information for Active Directory Filters at the Website from Microsoft_.
 
 .. _Microsoft: https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
 
 After the sync has finished, you can find the new LDAP users under "Users". Zammad integrates them just normal users, the difference is the login name.
-
-.. image:: /images/system/integrations/ldap/2.jpg
