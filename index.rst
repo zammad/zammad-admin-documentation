@@ -58,7 +58,7 @@ Zammad - Documentation for administrators
    :maxdepth: 2
    :caption: System
 
-   system/integrations
+   system/integrations/index
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system/objects
    system/core-workflows

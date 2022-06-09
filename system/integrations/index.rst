@@ -36,7 +36,7 @@ Integrations for authentication and customers
    :maxdepth: 1
    :titlesonly:
 
-   integrations/ldap
+   integrations/ldap/index
    integrations/exchange
    integrations/clearbit
    integrations/smime/index
