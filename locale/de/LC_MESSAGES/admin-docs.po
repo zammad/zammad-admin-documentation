@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 01:02+0200\n"
+"POT-Creation-Date: 2022-06-09 16:29+0200\n"
 "PO-Revision-Date: 2022-06-02 16:37+0000\n"
 "Last-Translator: Marcel Herrguth <github@thehomeofanime.de>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -316,7 +316,8 @@ msgstr ""
 #: ../channels/email/accounts/managing-accounts.rst:None
 #: ../channels/google/accounts.rst:0 ../channels/microsoft365/accounts.rst:0
 msgid "Existing accounts can be edited from the Accounts panel."
-msgstr "Existierende Accounts können in der Accountverwaltung angepasst werden."
+msgstr ""
+"Existierende Accounts können in der Accountverwaltung angepasst werden."
 
 #: ../channels/email/accounts.rst:45
 msgid ":doc:`accounts/email-notification`"
@@ -338,7 +339,8 @@ msgstr "Account-Einrichtung"
 
 #: ../channels/email/accounts/account-setup.rst:4
 msgid "Setting up a new email account? Here’s what all the settings do."
-msgstr "Legen Sie einen neuen Email-Account an? Das bedeuten die Einstellungen."
+msgstr ""
+"Legen Sie einen neuen Email-Account an? Das bedeuten die Einstellungen."
 
 #: ../channels/email/accounts/account-setup.rst:6
 #: ../channels/google/accounts/account-setup.rst:8
@@ -372,8 +374,8 @@ msgid ""
 "📮 **Zammad will send an auto-reply message to every email it imports.** "
 "(Including the old ones!)"
 msgstr ""
-"📮 **Zammad sendet automatische Antworten für jede Email die es importiert.**"
-" (Das betrifft auch alte!)"
+"📮 **Zammad sendet automatische Antworten für jede Email die es importiert.** "
+"(Das betrifft auch alte!)"
 
 #: ../channels/email/accounts/account-setup.rst:22
 msgid ""
@@ -870,6 +872,7 @@ msgstr ""
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:112
 #: ../settings/security/third-party/saml.rst:121
+#: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:57 ../system/integrations/gitlab.rst:46
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
@@ -2418,7 +2421,7 @@ msgstr "Option"
 msgid "Default value"
 msgstr "Standardwert"
 
-#: ../channels/form.rst:63
+#: ../channels/form.rst:63 ../system/subscription/billing.rst:57
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -4054,7 +4057,7 @@ msgstr ""
 msgid "System"
 msgstr "System"
 
-#: ../index.rst:76
+#: ../index.rst:77
 msgid "Misc"
 msgstr ""
 
@@ -4339,8 +4342,9 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/index.rst:28 ../manage/macros.rst:36
-#: ../manage/trigger.rst:30 ../manage/webhook.rst:36
-#: ../system/core-workflows.rst:30 ../system/objects.rst:22
+#: ../manage/slas/index.rst:94 ../manage/trigger.rst:30
+#: ../manage/webhook.rst:36 ../system/core-workflows.rst:30
+#: ../system/objects.rst:22
 msgid "Learn more"
 msgstr ""
 
@@ -4425,7 +4429,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/settings.rst:14 ../manage/scheduler.rst:34
-#: ../manage/slas.rst:20
+#: ../manage/slas/how-do-they-work.rst:19
 msgid "Name"
 msgstr ""
 
@@ -4838,7 +4842,7 @@ msgid ""
 "remove URLs from either your public header menu or public footer menu."
 msgstr ""
 
-#: ../manage/knowledge-base.rst:132
+#: ../manage/knowledge-base.rst:132 ../system/maintenance.rst:31
 msgid "Title"
 msgstr "Titel"
 
@@ -4986,6 +4990,7 @@ msgid "Screenshot of “Macros” page in admin panel"
 msgstr ""
 
 #: ../manage/macros/how-do-they-work.rst:2
+#: ../manage/slas/how-do-they-work.rst:2
 #: ../manage/trigger/how-do-they-work.rst:2
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
@@ -5095,6 +5100,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/macros/learn-by-example.rst:2
+#: ../manage/slas/learn-by-example.rst:2
 #: ../manage/trigger/learn-by-example.rst:2
 #: ../system/core-workflows/learn-by-example.rst:2
 msgid "Learn by example"
@@ -5260,7 +5266,7 @@ msgid ""
 "the CSV import will be executed."
 msgstr ""
 
-#: ../manage/overviews.rst:2
+#: ../manage/overviews.rst:2 ../manage/slas/index.rst:67
 msgid "Overviews"
 msgstr ""
 
@@ -5301,7 +5307,7 @@ msgstr ""
 msgid "The following attributes can be set when creating an overview:"
 msgstr ""
 
-#: ../manage/overviews.rst:39
+#: ../manage/overviews.rst:46
 msgid ""
 "Available for the following roles / Restrict to only the following users"
 msgstr ""
@@ -5313,24 +5319,35 @@ msgid ""
 msgstr ""
 
 #: ../manage/overviews.rst:36
-msgid ""
-"With these settings you can choose whether to make the overviews available "
-"to an entire group of people (by selecting the role) or to specific users. "
-"The entries in both fields apply. This means that you can also select "
-"individual users in addition to sharing the overview for all role members."
+msgid "The setting \"available for the following roles\" is mandatory."
 msgstr ""
 
-#: ../manage/overviews.rst:54
-msgid "Only available for users with shared organization"
+#: ../manage/overviews.rst:38
+msgid "Define roles that are supposed to see and use the overview in question."
+msgstr ""
+
+#: ../manage/overviews.rst:40
+msgid ""
+"If your overview is rather specific for a sub group of users of your role, "
+"use the *\"Restrict to only the following users\"* option to further "
+"restrict the visibility of the overview to defined users."
 msgstr ""
 
 #: ../manage/overviews.rst:46
+msgid "You will still have to provide a role!"
+msgstr ""
+
+#: ../manage/overviews.rst:61
+msgid "Only available for users with shared organization"
+msgstr ""
+
+#: ../manage/overviews.rst:53
 msgid ""
 "Shared organization is a setting in the organisations-management. See :doc:"
 "`organizations` for more information."
 msgstr ""
 
-#: ../manage/overviews.rst:49
+#: ../manage/overviews.rst:56
 msgid ""
 "This is only important if the available role is a customer. When deciding "
 "whether yes or no is selected, it must be considered to what extent this "
@@ -5338,15 +5355,15 @@ msgid ""
 "views are usually not necessary..."
 msgstr ""
 
-#: ../manage/overviews.rst:54
+#: ../manage/overviews.rst:61
 msgid "Users also refers to the customer role in this case."
 msgstr ""
 
-#: ../manage/overviews.rst:71
+#: ../manage/overviews.rst:78
 msgid "Available for users which are replacements for other users."
 msgstr ""
 
-#: ../manage/overviews.rst:59
+#: ../manage/overviews.rst:66
 msgid ""
 "This selection refers to the setting in the user preferences (profile-pic in "
 "the left corner --> profile -->) \"out of office\". If this option is "
@@ -5354,7 +5371,7 @@ msgid ""
 "substitution."
 msgstr ""
 
-#: ../manage/overviews.rst:64
+#: ../manage/overviews.rst:71
 msgid ""
 "**For example:** Agent A is on vacation and Agent B will take care of his "
 "tickets. Then an overview can be set up, which only shows Agent B all new "
@@ -5362,15 +5379,15 @@ msgid ""
 "them separately."
 msgstr ""
 
-#: ../manage/overviews.rst:71
+#: ../manage/overviews.rst:78
 msgid "Replacement users are part of our `Out of Office function`_."
 msgstr ""
 
-#: ../manage/overviews.rst:82
+#: ../manage/overviews.rst:89
 msgid "Conditions for shown tickets"
 msgstr ""
 
-#: ../manage/overviews.rst:79
+#: ../manage/overviews.rst:86
 msgid ""
 "What conditions should the listed tickets contain? (it is like a filter) You "
 "can add more than one condition. In the preview you have the possibility to "
@@ -5378,15 +5395,15 @@ msgid ""
 "displaying tickets that match your filtering."
 msgstr ""
 
-#: ../manage/overviews.rst:102 ../system/core-workflows/learn-by-example.rst:24
+#: ../manage/overviews.rst:109 ../system/core-workflows/learn-by-example.rst:24
 msgid "Attributes"
 msgstr ""
 
-#: ../manage/overviews.rst:87
+#: ../manage/overviews.rst:94
 msgid "Which attributes shall be shown in the overview? (column headers)"
 msgstr ""
 
-#: ../manage/overviews.rst:89
+#: ../manage/overviews.rst:96
 msgid ""
 "With this setting you can select the headlines of your overview. Depending "
 "on which information is important in this selection, it can be displayed "
@@ -5394,39 +5411,39 @@ msgid ""
 "look like this:"
 msgstr ""
 
-#: ../manage/overviews.rst:96
+#: ../manage/overviews.rst:103
 msgid ""
 "These settings can also be adjusted individually by admins at a later time "
 "(In the overview, top right: Options)."
 msgstr ""
 
-#: ../manage/overviews.rst:101
+#: ../manage/overviews.rst:108
 msgid ""
 "Please note that overview column and sort settings are global settings which "
 "affect all users seeing those overviews."
 msgstr ""
 
-#: ../manage/overviews.rst:111
+#: ../manage/overviews.rst:118
 msgid "Ordering, grouping and active"
 msgstr ""
 
-#: ../manage/overviews.rst:107
+#: ../manage/overviews.rst:114
 msgid ""
 "order: In which order should the tickets be displayed? (Sorted by the "
 "attributes)"
 msgstr ""
 
-#: ../manage/overviews.rst:109
+#: ../manage/overviews.rst:116
 msgid "direction: The direction of the order"
 msgstr ""
 
-#: ../manage/overviews.rst:110
+#: ../manage/overviews.rst:117
 msgid ""
 "group by: Should the tickets be displayed again grouped by a specific "
 "attribute within the list?"
 msgstr ""
 
-#: ../manage/overviews.rst:112
+#: ../manage/overviews.rst:119
 msgid "active: Set them active or inactive"
 msgstr ""
 
@@ -5542,9 +5559,13 @@ msgid "``admin.calendar``"
 msgstr "``admin.calendar``"
 
 #: ../manage/roles/admin-permissions.rst:27
+#, fuzzy
+#| msgid ""
+#| ":doc:`Manage > Calendars </manage/calendars>` (required for :doc:`/manage/"
+#| "slas`)"
 msgid ""
 ":doc:`Manage > Calendars </manage/calendars>` (required for :doc:`/manage/"
-"slas`)"
+"slas/index`)"
 msgstr ""
 ":doc:`Verwalten > Kalender </manage/calendars>` (required for :doc:`/manage/"
 "slas`)"
@@ -5844,7 +5865,9 @@ msgid "``admin.sla``"
 msgstr "``admin.sla``"
 
 #: ../manage/roles/admin-permissions.rst:91
-msgid ":doc:`Manage > SLAs </manage/slas>`"
+#, fuzzy
+#| msgid ":doc:`Manage > SLAs </manage/slas>`"
+msgid ":doc:`Manage > SLAs </manage/slas/index>`"
 msgstr ":doc:`Verwalten > SLAs </manage/slas>`"
 
 #: ../manage/roles/admin-permissions.rst:0
@@ -6590,7 +6613,7 @@ msgid ""
 "actions configured in step 5 are to be performed."
 msgstr ""
 
-#: ../manage/scheduler.rst:52 ../manage/slas.rst:28
+#: ../manage/scheduler.rst:52 ../manage/slas/how-do-they-work.rst:26
 msgid "Preview"
 msgstr ""
 
@@ -6676,98 +6699,547 @@ msgid ""
 "tickets, and no note will be added to them."
 msgstr ""
 
-#: ../manage/slas.rst:2
-msgid "SLAs"
-msgstr ""
-
-#: ../manage/slas.rst:4
+#: ../manage/slas/how-do-they-work.rst:4
 msgid ""
-"Service levels and the respective agreements (service level agreements, "
-"SLAs) document quality pledges for IT services. SLAs are recorded and "
-"administered in here."
+"You can define several independent SLAs, however, ensure to have no "
+"overlapping SLAs as their calculations may not work as you intended them "
+"originally."
 msgstr ""
 
-#: ../manage/slas.rst:8
+#: ../manage/slas/how-do-they-work.rst:None
+msgid "Part of the configuration dialogue for SLAs"
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:14
 msgid ""
-"A calendar is required to calculate escalations or evaluations based on "
-"business hours. Define a \"standard\" calendar which is valid throughout the "
-"system. Only in the specified business hours, escalation notifications are "
-"sent to agents. If you have customers for which you need to comply with "
-"different business hours, you can create multiple calendars. The customer "
-"tickets are allocated via the SLAs."
+"Updating existing SLA configurations *may* cause temporary performance "
+"issues depending on your instance size and affected tickets. You may want to "
+"perform those changes outside of your business hours."
 msgstr ""
 
-#: ../manage/slas.rst:15
-msgid "That's how it works:"
+#: ../manage/slas/how-do-they-work.rst:19
+msgid "Give your SLA a meaningful name to quickly see what or who is affected."
 msgstr ""
 
-#: ../manage/slas.rst:20
-msgid "Give it a distinctive name"
-msgstr ""
-
-#: ../manage/slas.rst:24
+#: ../manage/slas/how-do-they-work.rst:22
 msgid "Ticket selector"
 msgstr ""
 
-#: ../manage/slas.rst:23
-msgid ""
-"Specify the ticket groups for which the SLA is to apply (these can also be "
-"arbitrarily combined and thus specified)"
+#: ../manage/slas/how-do-they-work.rst:22
+msgid "Specify the conditions on which tickets this SLA should apply to."
 msgstr ""
 
-#: ../manage/slas.rst:27
+#: ../manage/slas/how-do-they-work.rst:25
 msgid ""
 "In the preview you see the selection of the tickets and double check whether "
-"those are correct"
+"those are correct."
 msgstr ""
 
-#: ../manage/slas.rst:31
+#: ../manage/slas/how-do-they-work.rst:33
 msgid "Calendar"
 msgstr ""
 
-#: ../manage/slas.rst:31
-msgid "Choose the business-calender"
+#: ../manage/slas/how-do-they-work.rst:29
+msgid ""
+"Zammad calculates ticket escalations based on your business hours. It makes "
+"no sense to escalate tickets when you're not in."
 msgstr ""
 
-#: ../manage/slas.rst:49
+#: ../manage/slas/how-do-they-work.rst:32
+msgid ""
+"Choose the correct calendar here. If you haven't set your business hours "
+"yet, see :doc:`/manage/calendars` to learn more."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:90
 msgid "SLA Times"
 msgstr ""
 
-#: ../manage/slas.rst:34
-msgid "Define the SLA-Times:"
+#: ../manage/slas/how-do-they-work.rst:36
+msgid ""
+"Define the escalation timings based on your working hours. Keep in mind that "
+"if you defined 8 hour business hours per day, a 16 hour escalation will take "
+"two business days."
 msgstr ""
 
-#: ../manage/slas.rst:37
+#: ../manage/slas/how-do-they-work.rst:48
 msgid "First Response"
 msgstr ""
 
-#: ../manage/slas.rst:37
-msgid "Time frame for the first response (external call, email)"
+#: ../manage/slas/how-do-they-work.rst:41
+msgid ""
+"Time frame for the first response (external call, email). This time is "
+"calculated from the ticket creation."
 msgstr ""
 
-#: ../manage/slas.rst:40
+#: ../manage/slas/how-do-they-work.rst:46
+msgid ""
+"The start time *does not* reset if you're e.g. moving the ticket into new "
+"groups or different SLA calculations. That is because the creation time of "
+"the ticket does not change - keep this in mind."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:66
 msgid "Update Time"
 msgstr ""
 
-#: ../manage/slas.rst:40
-msgid "Time frame for every following response (external call, email)"
+#: ../manage/slas/how-do-they-work.rst:51
+msgid ""
+"Time frame for every following response (external call, email). This time "
+"either counts from ticket creation (if no first response is set) or *after* "
+"the first response was done."
 msgstr ""
 
-#: ../manage/slas.rst:43
+#: ../manage/slas/how-do-they-work.rst:62
+#, fuzzy
+#| msgid "on Ticket updates"
+msgid "between agent updates"
+msgstr "bei Ticketaktualisierung"
+
+#: ../manage/slas/how-do-they-work.rst:56
+msgid ""
+"In this scenario your agent have to respond every ``n`` hours depending on "
+"your configuration. This causes Zammad to not care if your customer replied "
+"or not."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:62
+msgid "This setting can be quiet stressful for your agents."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:66
+msgid "for an agent to respond"
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:65
+msgid ""
+"From the moment your customer replied to the ticket, your agents have the "
+"configured time amount to respond until the ticket escalates."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:75
 msgid "Solution Time"
 msgstr ""
 
-#: ../manage/slas.rst:43
-msgid "Time frame for solving the problem (status: closed)"
+#: ../manage/slas/how-do-they-work.rst:69
+msgid ""
+"Time frame for solving the problem (setting the ticket to a closed state "
+"type)."
 msgstr ""
 
-#: ../manage/slas.rst:45
+#: ../manage/slas/how-do-they-work.rst:74
+msgid ""
+"This escalation timing *does not* care about ticket responses. It's being "
+"calculated from the ticket creation."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:77
 msgid ""
 "It is up to you if you set one, two or all three times. When the SLA time is "
-"reached, the ticket escalates. Now all agents get  notifications, which have "
-"stored the corresponding setting in their own settings profile -> "
-"notifications. The information that a ticket is escalated can be selected in "
-"the triggers as an attribute, whereby a desired action can be followed."
+"reached, the ticket escalates."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:82
+msgid ""
+"*First response* and *Solution time* can only apply once. Update time "
+"applies until the ticket has been solved or the SLA no longer matches your "
+"criteria."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:86
+msgid ""
+"The only way to stop escalations in default installations is to set the "
+"ticket to either a pending reminder or pending close. **However**: as soon "
+"as the ticket is being set to open (e.g. by a customer responding) the "
+"ticket may instantly escalate depending on its age and your configuration."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:94
+msgid ""
+"Ticket escalations will notify all affected agents. This highly depends on "
+"their chosen notification settings (Profile). Escalated tickets can also be "
+"filtered for:"
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:98
+msgid "by searching"
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:99
+#, fuzzy
+#| msgid ":doc:`Manage > Triggers </manage/trigger>`"
+msgid ":doc:`/manage/trigger`"
+msgstr ":doc:`Verwalten > Trigger </manage/trigger>`"
+
+#: ../manage/slas/how-do-they-work.rst:100
+#, fuzzy
+#| msgid "``admin.scheduler``"
+msgid ":doc:`/manage/scheduler`"
+msgstr "``admin.scheduler``"
+
+#: ../manage/slas/how-do-they-work.rst:101
+#, fuzzy
+#| msgid ":doc:`Manage > Overviews</manage/overviews>`"
+msgid ":doc:`/manage/overviews`"
+msgstr ":doc:`Verwalten > Übersichten </manage/overviews>`"
+
+#: ../manage/slas/index.rst:2
+msgid "SLAs"
+msgstr ""
+
+#: ../manage/slas/index.rst:4
+msgid ""
+"Service Level Agreements, abbreviated SLAs, help you to meet specific "
+"response times for your customers' requests. This way you can define goals "
+"such as answering every inquiry within eight hours. If you are at risk of "
+"missing this target, Zammad will alert you."
+msgstr ""
+
+#: ../manage/slas/index.rst:None
+msgid "Screenshot showing SLA management with configured SLA levels"
+msgstr ""
+
+#: ../manage/slas/index.rst:14
+msgid ""
+"Agents will be notified via several, optional ways. You can provide "
+"overviews for escalated or soon to escalate tickets to help you agents. "
+"Also, agents can check the current applying SLA timings of tickets at any "
+"time."
+msgstr ""
+
+#: ../manage/slas/index.rst:26
+#, fuzzy
+#| msgid "notifications"
+msgid "Online notifications"
+msgstr "Benachrichtigungen"
+
+#: ../manage/slas/index.rst:19 ../manage/slas/index.rst:29
+msgid ""
+"Zammad will warn agents roughly 15 minute before escalation and when the "
+"ticket finally escalates. This depends on the notification configuration of "
+"your agent."
+msgstr ""
+
+#: ../manage/slas/index.rst:0
+msgid ""
+"Screenshot showing two notifications: One upcoming escalation and\n"
+"one escalated ticket"
+msgstr ""
+
+#: ../manage/slas/index.rst:51
+#, fuzzy
+#| msgid "Email Notification"
+msgid "Email notifications"
+msgstr "Email-Benachrichtigung"
+
+#: ../manage/slas/index.rst:0
+#, fuzzy
+#| msgid "a Ticket is going to escalate"
+msgid "Email notification for a ticket that's going to escalate."
+msgstr "ein Ticket ist kurz vorm Eskalieren"
+
+#: ../manage/slas/index.rst:39
+#, fuzzy
+#| msgid "a Ticket is going to escalate"
+msgid "Notification by mail that a ticket is going to escalate."
+msgstr "ein Ticket ist kurz vorm Eskalieren"
+
+#: ../manage/slas/index.rst:0
+msgid "Email notification for a ticket that escalated."
+msgstr ""
+
+#: ../manage/slas/index.rst:47
+msgid "Notification by mail that a ticket has escalated."
+msgstr ""
+
+#: ../manage/slas/index.rst:51 ../manage/slas/index.rst:92
+#: ../system/maintenance.rst:70 ../system/maintenance.rst:94
+msgid "X"
+msgstr ""
+
+#: ../manage/slas/index.rst:54
+msgid ""
+"You can configure :doc:`/manage/overviews` to allow your agents to filter "
+"for escalated tickets or those that are about to escalate. By default Zammad "
+"comes with an overview that will show all tickets that are either escalated "
+"or escalating within the next 10 minutes: ``Escalated Tickets``."
+msgstr ""
+
+#: ../manage/slas/index.rst:61
+msgid ""
+"If you have all/most of your tickets covered by SLAs you may consider "
+"changing the default sorting of existing overviews by escalation time, "
+"instead of creation time."
+msgstr ""
+
+#: ../manage/slas/index.rst:0
+msgid "Screenshot showing overview with escalated tickets"
+msgstr ""
+
+#: ../manage/slas/index.rst:92
+msgid "SLA timings of a ticket"
+msgstr ""
+
+#: ../manage/slas/index.rst:70
+msgid ""
+"Ticket zooms provide a timestamp of the next escalation of a ticket. Agents "
+"can hover that timestamp and learn about all upcoming escalation stages."
+msgstr ""
+
+#: ../manage/slas/index.rst:0
+msgid "Screenshot showing the calculated escalation stages"
+msgstr ""
+
+#: ../manage/slas/index.rst:79
+msgid "A fresh ticket without any response by agents."
+msgstr ""
+
+#: ../manage/slas/index.rst:0
+msgid ""
+"Screenshot showing the calculated escalation stages after agents\n"
+"first response"
+msgstr ""
+
+#: ../manage/slas/index.rst:88
+msgid "A ticket after the agents initial response and a customer response."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:4
+msgid ""
+"This page contains some possible example configurations for a SLA we could "
+"think of. SLAs in general are very flexible and powerful, below doesn't have "
+"to be your standard!"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:10
+#: ../system/core-workflows/learn-by-example.rst:9
+msgid ""
+"If they don’t make sense to you, don’t worry—just skip ahead to :doc:`how-do-"
+"they-work` to learn about all the options in detail, then come back here to "
+"see them in action."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:14
+msgid ""
+"All following SLAs have the same base configurations. They may not use all "
+"of them in all samples."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:19
+#, fuzzy
+#| msgid "Groups"
+msgid "**Groups**"
+msgstr "Gruppen"
+
+#: ../manage/slas/learn-by-example.rst:18
+#: ../system/core-workflows/learn-by-example.rst:17
+msgid "Sales"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:19
+#: ../system/core-workflows/learn-by-example.rst:18
+msgid "Support"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:20
+#: ../system/core-workflows/learn-by-example.rst:19
+msgid "2nd Level"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:23
+msgid "**Attribtues**"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:22
+msgid "User / VIP (default, Boolean)"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:23
+msgid ""
+"Organization / Support-Contract (Single selection field, ``None`` as default "
+"value)"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:26
+#, fuzzy
+#| msgid "Call Settings"
+msgid "**Calendar setting**"
+msgstr "Anruf-Einstellungen"
+
+#: ../manage/slas/learn-by-example.rst:26
+msgid "The calendar is set to 8 hours per day, from Monday to Friday."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:28
+msgid "**1. Support contract levels and VIP customers**"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:30
+msgid ""
+"This approach uses a combination of contract levels (where any level except "
+"for none causes SLA escalations) and VIP customers that can have further "
+"priority."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:34
+msgid ""
+"The configuration of these SLAs ensures that either fitting support contract "
+"levels trigger or the VIP state is being used. They're not overlapping."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:39
+#: ../manage/slas/learn-by-example.rst:100
+msgid "VIP customers"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:41
+#: ../manage/slas/learn-by-example.rst:102
+msgid "SLA configuration checking if the customer is a VIP customer."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Screenshot showing SLA configuration for VIP customers."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:47
+msgid "Support contract levels"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:49
+msgid ""
+"The settings of each support contract level SLA basically are the same. The "
+"only setting that differs is the support contract level of each "
+"configuration and the SLA timings."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:53
+msgid ""
+"For this reason we're showing the bronze level configuration as an example "
+"only."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid ""
+"Screenshot showing SLA configuration for support contract\n"
+"level bronze."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:86
+#: ../manage/slas/learn-by-example.rst:116
+#: ../system/core-workflows/learn-by-example.rst:89
+#: ../system/core-workflows/learn-by-example.rst:101
+#: ../system/integrations/slack.rst:80
+msgid "The result"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:62
+msgid "This approach causes the following SLA timings for each level:"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:81
+msgid ""
+"If the customer has no VIP state and the organization has a support level"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:68
+msgid "Bronze"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "First response time: ``6 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Update time (for an agent to respond): ``6 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Solution time: ``40 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:73
+msgid "Silver"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "First response time: ``4 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Update time (for an agent to respond): ``4 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Solution time: ``32 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:78
+msgid "Gold"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "First response time: ``2 hour``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Update time (for an agent to respond): ``2 hour``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Solution time: ``24 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:81
+msgid "None"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:81
+msgid "This setting has no SLA configuration. Tickets will not escalate."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:86
+#: ../manage/slas/learn-by-example.rst:112
+msgid "If the customer has the VIP state"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "First response time: ``1 hour``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Update time (for an agent to respond): ``1 hour``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Solution time: ``16 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:88
+msgid "**2. VIP customers**"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:92
+msgid "non VIP customers"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:94
+msgid "SLA configuration checking if the customer is not a VIP customer."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Screenshot showing SLA configuration for non-VIP customers."
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:116
+msgid "If the customer has no VIP state"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "First response time: ``8 hours``"
+msgstr ""
+
+#: ../manage/slas/learn-by-example.rst:0
+msgid "Update time (for an agent to respond): ``16 hours``"
 msgstr ""
 
 #: ../manage/tags.rst:4
@@ -7583,8 +8055,8 @@ msgstr ""
 msgid ""
 "This flag is a way for your team to indicate high-status customers. Just as "
 "with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/"
-"manage/scheduler` jobs, :doc:`/manage/slas`, and :doc:`/manage/overviews` "
-"just for VIPs."
+"manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/"
+"overviews` just for VIPs."
 msgstr ""
 
 #: ../manage/users/index.rst:0
@@ -10720,29 +11192,10 @@ msgid ""
 "you can build much more complex workflows."
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:9
-msgid ""
-"If they don’t make sense to you, don’t worry—just skip ahead to :doc:`how-do-"
-"they-work` to learn about all the options in detail, then come back here to "
-"see them in action."
-msgstr ""
-
 #: ../system/core-workflows/learn-by-example.rst:13
 msgid ""
 "All following workflows have the same base configurations. The workflow may "
 "not use them all."
-msgstr ""
-
-#: ../system/core-workflows/learn-by-example.rst:17
-msgid "Sales"
-msgstr ""
-
-#: ../system/core-workflows/learn-by-example.rst:18
-msgid "Support"
-msgstr ""
-
-#: ../system/core-workflows/learn-by-example.rst:19
-msgid "2nd Level"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:21
@@ -10852,12 +11305,6 @@ msgstr ""
 msgid ""
 "Select fields may be a better approach because they allow more values than "
 "just a simple ``true`` or ``false``."
-msgstr ""
-
-#: ../system/core-workflows/learn-by-example.rst:89
-#: ../system/core-workflows/learn-by-example.rst:101
-#: ../system/integrations/slack.rst:80
-msgid "The result"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:0
@@ -12262,6 +12709,27 @@ msgid ""
 "logs"
 msgstr ""
 
+#: ../system/integrations/cti/includes/recent-logs.include.rst:31
+msgid "x"
+msgstr ""
+
+#: ../system/integrations/cti/includes/troubleshooting.include.rst:10
+#: ../system/integrations/cti/includes/troubleshooting.include.rst:9
+msgid "My Phone page stays blank, signalling does work..."
+msgstr ""
+
+#: ../system/integrations/cti/includes/troubleshooting.include.rst:5
+msgid ""
+"If you've made sure that signalling works (check Recent logs) and your "
+"Caller Log still stays empty, please ensure that you only configured one CTI "
+"integration version. Specifically defining more than one agent mapping on "
+"the different integration variants will be the issue."
+msgstr ""
+
+#: ../system/integrations/cti/includes/troubleshooting.include.rst:10
+msgid "Clear the not needed agent mapping and reload your browser page."
+msgstr ""
+
 #: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:1
 msgid ""
 "By mapping your agents extension to their existing Zammad users, Zammad can "
@@ -12730,6 +13198,7 @@ msgid ""
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:11
+#: ../system/subscription/index.rst:7
 msgid "**🚧 Hosted environment specific 🚧**"
 msgstr ""
 
@@ -14002,39 +14471,128 @@ msgstr ""
 
 #: ../system/maintenance.rst:4
 msgid ""
-"If maintenance work on the system is necessary, a number of preparations "
-"must be made. You can take care of them here."
+"Zammad comes with a maintenance mode that you can use for e.g. updating the "
+"instance or changing settings while restricting availability and functions."
 msgstr ""
 
-#: ../system/maintenance.rst:7
+#: ../system/maintenance.rst:13
 msgid "Mode"
 msgstr ""
 
-#: ../system/maintenance.rst:9
-msgid ""
-"Enable or disable the maintenance mode of Zammad. If enabled, all non-"
-"administrators get logged out and only administrators can start a new "
-"session."
+#: ../system/maintenance.rst:8
+msgid "The mode setting allows you to enable or disable the maintenance mode."
 msgstr ""
 
-#: ../system/maintenance.rst:11
-msgid ""
-"Before the maintenance mode is activated, you can not only inform about it "
-"on the login page..."
+#: ../system/maintenance.rst:10
+msgid "Defaults to *off*."
 msgstr ""
 
-#: ../system/maintenance.rst:14
+#: ../system/maintenance.rst:12
+msgid ""
+"The meintenance mode will restrict access to administrative roles only. This "
+"means agents and customers are logged off."
+msgstr ""
+
+#: ../system/maintenance.rst:23
 msgid "@Login"
 msgstr ""
 
 #: ../system/maintenance.rst:16
 msgid ""
-"You can place a short message for all users on the login page. This will "
-"then be displayed as follows:"
+"This setting allows you to provide a login message within a green banner "
+"above the login screen. Click into the green banner in the settings page to "
+"adjust your message. To activate the message, activate the *@Login* setting."
 msgstr ""
 
-#: ../system/maintenance.rst:20
-msgid "But you can also inform all agents with a message about something:"
+#: ../system/maintenance.rst:0
+msgid ""
+"Screenshot showing the default login message within the\n"
+"settings page"
+msgstr ""
+
+#: ../system/maintenance.rst:93 ../system/maintenance.rst:34
+msgid "Message"
+msgstr ""
+
+#: ../system/maintenance.rst:26
+msgid ""
+"Send an informative message to **all active sessions**. This comes handy to "
+"inform your agents e.g. about mayor outages or to force reloads after "
+"configuration changes."
+msgstr ""
+
+#: ../system/maintenance.rst:31
+msgid "This is the messages title (slightly bigger than the normal message)."
+msgstr ""
+
+#: ../system/maintenance.rst:34
+msgid "The text you want to provide to your logged in sessions."
+msgstr ""
+
+#: ../system/maintenance.rst:39
+msgid "Reload application"
+msgstr ""
+
+#: ../system/maintenance.rst:37
+msgid ""
+"Selecting this option will change the message acceptance button from *Close* "
+"(with nothing happening) to *Continue session*, which forces the application "
+"to reload."
+msgstr ""
+
+#: ../system/maintenance.rst:43
+msgid ""
+"If you have customers that are logged in to Zammad, they'll also be notified "
+"if they're active in that moment."
+msgstr ""
+
+#: ../system/maintenance.rst:48
+msgid "Example without reload application"
+msgstr ""
+
+#: ../system/maintenance.rst:52
+msgid ""
+"Message setting within Zammads admin settings without ticket reload "
+"application setting."
+msgstr ""
+
+#: ../system/maintenance.rst:0
+msgid ""
+"Screenshot showing the send message settings without ticket\n"
+"reload application set"
+msgstr ""
+
+#: ../system/maintenance.rst:61 ../system/maintenance.rst:85
+msgid ""
+"The modal all other active sessions will see upon pressing *Send to clients*."
+msgstr ""
+
+#: ../system/maintenance.rst:0
+msgid ""
+"Screenshot showing modal caused by maintenance's message\n"
+"without reload application ticket"
+msgstr ""
+
+#: ../system/maintenance.rst:72
+msgid "Example with reload application"
+msgstr ""
+
+#: ../system/maintenance.rst:76
+msgid ""
+"Message setting within Zammads admin settings with ticket reload application "
+"setting."
+msgstr ""
+
+#: ../system/maintenance.rst:0
+msgid ""
+"Screenshot showing the send message settings with ticket\n"
+"reload application set"
+msgstr ""
+
+#: ../system/maintenance.rst:0
+msgid ""
+"Screenshot showing modal caused by maintenance's message\n"
+"with reload application ticket"
 msgstr ""
 
 #: ../system/monitoring.rst:2
@@ -14403,7 +14961,7 @@ msgstr ""
 msgid "Available settings for Boolean fields"
 msgstr ""
 
-#: ../system/objects/types.rst:22
+#: ../system/objects/types.rst:22 ../system/subscription/billing.rst:50
 msgid "Date"
 msgstr ""
 
@@ -14696,6 +15254,482 @@ msgstr ""
 #: ../system/sessions.rst:4
 msgid ""
 "Shows who logged on to the Zammad instance as a user, when and from where."
+msgstr ""
+
+#: ../system/subscription/billing.rst:2
+msgid "Billing"
+msgstr ""
+
+#: ../system/subscription/billing.rst:4
+msgid ""
+"Within the billing tab you can control all billing relevant information like "
+"invoices, billing address and the option to cancel your subscription."
+msgstr ""
+
+#: ../system/subscription/billing.rst:37
+msgid "Billing information"
+msgstr ""
+
+#: ../system/subscription/billing.rst:8
+msgid ""
+"All adjusted billing information below only affect future invoices. If your "
+"invoice was issued wrong, please contact `our sales team`_."
+msgstr ""
+
+#: ../system/subscription/billing.rst:16
+msgid "Billing address"
+msgstr ""
+
+#: ../system/subscription/billing.rst:15
+msgid ""
+"Provide your company address here, make sure to include the companies name "
+"in case required. This address will be referenced on your invoice."
+msgstr ""
+
+#: ../system/subscription/billing.rst:20
+msgid "VAT ID"
+msgstr ""
+
+#: ../system/subscription/billing.rst:19
+msgid ""
+"Provide your VAT ID here. If applicable your invoice will not contain german "
+"VAT. Please make sure to pay the VAT in your country as required."
+msgstr ""
+
+#: ../system/subscription/billing.rst:31
+#, fuzzy
+#| msgid "Your email address."
+msgid "Billing Email Address"
+msgstr "Ihre Email-Adresse."
+
+#: ../system/subscription/billing.rst:23
+msgid ""
+"Usually the instance owner (the person that registered the instance) will "
+"receive all emails including the invoices. In case you have your own billing "
+"department, you can provide their email address here."
+msgstr ""
+
+#: ../system/subscription/billing.rst:27
+msgid ""
+"All billing relevant information will then be sent to this email address."
+msgstr ""
+
+#: ../system/subscription/billing.rst:31
+msgid "Invoices are sent as attachment (PDF) to this email address."
+msgstr ""
+
+#: ../system/subscription/billing.rst:33
+msgid ""
+"Don't forget to press the *Submit* button after you changed above settings."
+msgstr ""
+
+#: ../system/subscription/billing.rst:0
+msgid ""
+"Screenshot showing options for billing information within the\n"
+"subscription menu"
+msgstr ""
+
+#: ../system/subscription/billing.rst:74
+msgid "Payment history"
+msgstr ""
+
+#: ../system/subscription/billing.rst:40
+msgid ""
+"The payment history will display a history of all paid invoices. At this "
+"point you can also download these in case you need them again."
+msgstr ""
+
+#: ../system/subscription/billing.rst:45
+msgid ""
+"You will only find *paid* invoices here. Invoices that are to be billed are "
+"not available before the payment is completed."
+msgstr ""
+
+#: ../system/subscription/billing.rst:50
+msgid "Date of the invoice creation."
+msgstr ""
+
+#: ../system/subscription/billing.rst:53
+#, fuzzy
+#| msgid "Accounts"
+msgid "Amount"
+msgstr "Accounts"
+
+#: ../system/subscription/billing.rst:53
+msgid "Invoice total including VAT if applicable."
+msgstr ""
+
+#: ../system/subscription/billing.rst:56
+msgid ""
+"Contains contract period (monthly or yearly) and hosted plan for the "
+"subscription period in question."
+msgstr ""
+
+#: ../system/subscription/billing.rst:67
+msgid "Payment method / Service period"
+msgstr ""
+
+#: ../system/subscription/billing.rst:60
+msgid ""
+"Used bank account or credit card as well as the subscription period the "
+"invoice is about."
+msgstr ""
+
+#: ../system/subscription/billing.rst:65
+msgid ""
+"It might happen that the invoice date and subscription period differ. This "
+"is nothing to worry about, the subscription periods will be accounted later "
+"on."
+msgstr ""
+
+#: ../system/subscription/billing.rst:71
+msgid "Receipt"
+msgstr ""
+
+#: ../system/subscription/billing.rst:70
+msgid ""
+"Use the arrow to download the invoice in question. You can download all "
+"available invoices any time you need to here!"
+msgstr ""
+
+#: ../system/subscription/billing.rst:0
+msgid "Screenshot showing payment history of a hosted instance"
+msgstr ""
+
+#: ../system/subscription/billing.rst:98
+msgid "Do you want to cancel your subscription?"
+msgstr ""
+
+#: ../system/subscription/billing.rst:77
+msgid ""
+"In case you no longer want to use Zammads SaaS, you can cancel your "
+"subscription by using the red *Yes, please cancel my subscription* button."
+msgstr ""
+
+#: ../system/subscription/billing.rst:80
+msgid ""
+"Your subscription will end the day after your trial or billing period ends."
+msgstr ""
+
+#: ../system/subscription/billing.rst:84
+msgid ""
+"We will remind you about your cancelled subscription several times up front. "
+"After the subscription ended all instance data will be removed. A restore "
+"*is not* possible after that point!"
+msgstr ""
+
+#: ../system/subscription/billing.rst:0
+msgid "Screencast showing how to cancel a subscription"
+msgstr ""
+
+#: ../system/subscription/billing.rst:91
+msgid "**😖 Cancelled by accident?**"
+msgstr ""
+
+#: ../system/subscription/billing.rst:93
+msgid ""
+"You can always undo the cancellation via the *Yes, undo the cancellation of "
+"my subscription* button up to the last subscription day!"
+msgstr ""
+
+#: ../system/subscription/billing.rst:0
+msgid ""
+"Screenshot showing a red button to cancel the subscription\n"
+"cancellation"
+msgstr ""
+
+#: ../system/subscription/index.rst:2
+#, fuzzy
+#| msgid "Description"
+msgid "Subscription (SaaS)"
+msgstr "Beschreibung"
+
+#: ../system/subscription/index.rst:4
+msgid ""
+"The subscription settings page allows you to configure your instances "
+"package and number of agents required."
+msgstr ""
+
+#: ../system/subscription/index.rst:9
+msgid ""
+"This setting section is only available for Hosted setups. If you're looking "
+"for on premise support contracts, please see the `Zammad pricing page`_."
+msgstr ""
+
+#: ../system/subscription/index.rst:23
+msgid ""
+"The subscription section currently consists of two tabs: Plan & Billing. For "
+"your overview we've divided those two tabs into independent sub pages:"
+msgstr ""
+
+#: ../system/subscription/index.rst:28
+msgid ":doc:`💰 Subscription plan <plan>`"
+msgstr ""
+
+#: ../system/subscription/index.rst:27
+msgid ""
+"Everything affecting your instance subscription functions like number of "
+"agents, package and payment method."
+msgstr ""
+
+#: ../system/subscription/index.rst:31
+msgid ":doc:`🧾 Subscription billing <billing>`"
+msgstr ""
+
+#: ../system/subscription/index.rst:31
+msgid ""
+"Everything regarding billing address, invoices and account cancellation."
+msgstr ""
+
+#: ../system/subscription/index.rst:36
+msgid "FAQ"
+msgstr ""
+
+#: ../system/subscription/index.rst:40
+msgid "I set up a trial account but am missing functions to test"
+msgstr ""
+
+#: ../system/subscription/index.rst:39
+msgid ""
+"Sorry. The trial instance is running within the professional package "
+"allowing up to three agents."
+msgstr ""
+
+#: ../system/subscription/index.rst:43
+msgid "Can I change package within the trial?"
+msgstr ""
+
+#: ../system/subscription/index.rst:43
+msgid "No. As soon as the package is changed the subscription begins."
+msgstr ""
+
+#: ../system/subscription/index.rst:48
+msgid "What happens to my trial instance after the trial period ended?"
+msgstr ""
+
+#: ../system/subscription/index.rst:46
+msgid ""
+"Your instance will automatically be cancelled for you. Please see *What "
+"happens to my instance after it has been cancelled?* for more."
+msgstr ""
+
+#: ../system/subscription/index.rst:61
+msgid "What happens to my instance after it has been cancelled?"
+msgstr ""
+
+#: ../system/subscription/index.rst:51
+msgid "That depends slightly on your instance state:"
+msgstr ""
+
+#: ../system/subscription/index.rst:57
+msgid "Trial instance"
+msgstr ""
+
+#: ../system/subscription/index.rst:54
+msgid ""
+"If you're still on trial, we will ice your instance and remind you once "
+"again about your instance. We then will wait some days and remove your "
+"instance from our system. This is the last time we will inform you by Email."
+msgstr ""
+
+#: ../system/subscription/index.rst:61
+msgid "Paid instance"
+msgstr ""
+
+#: ../system/subscription/index.rst:60
+msgid ""
+"If you're a paying customer and cancelled your subscription, the instance "
+"removal will take place the day after your last subscription day."
+msgstr ""
+
+#: ../system/subscription/index.rst:63
+msgid "Can removed instances be restored?"
+msgstr ""
+
+#: ../system/subscription/index.rst:64
+msgid "No. Once your instance has been removed, a restoration is not possible."
+msgstr ""
+
+#: ../system/subscription/plan.rst:2 ../system/subscription/plan.rst:39
+msgid "Plan"
+msgstr ""
+
+#: ../system/subscription/plan.rst:18
+#, fuzzy
+#| msgid "Description"
+msgid "Subscription"
+msgstr "Beschreibung"
+
+#: ../system/subscription/plan.rst:5
+msgid ""
+"On the top of the subscription summary you'll find the number of used and "
+"available (booked) agent seats. By using the *see more* link you can also "
+"expand an agent list to see the currently configured, active agents."
+msgstr ""
+
+#: ../system/subscription/plan.rst:11
+msgid ""
+"You can learn more on how to manage your agents within :doc:`user management "
+"</manage/users/index>`."
+msgstr ""
+
+#: ../system/subscription/plan.rst:14
+msgid "This list *does not* count accounts with admin permissions only."
+msgstr ""
+
+#: ../system/subscription/plan.rst:0
+msgid ""
+"Within subscription you can always see how many agents are still\n"
+"available to add and who uses the seats."
+msgstr ""
+
+#: ../system/subscription/plan.rst:21
+msgid ""
+"This section gives you an overview of the available plans and their "
+"functions / limits. If you require a more detailed table, check our "
+"`detailed pricing table`_ for more."
+msgstr ""
+
+#: ../system/subscription/plan.rst:25
+msgid ""
+"Your selection in this step will decide on the base agent price and e.g. "
+"agent limits that might apply in the summary step."
+msgstr ""
+
+#: ../system/subscription/plan.rst:28
+msgid ""
+"The green *Selected* button will also tell you what plan you're currently in."
+msgstr ""
+
+#: ../system/subscription/plan.rst:32
+msgid ""
+"Trial instances are running at Professional with 3 agents. The plan cannot "
+"be changed during the trial for technical reasons, if you require more "
+"agents for testing, please contact `our sales team`_ with a reason for the "
+"raise request."
+msgstr ""
+
+#: ../system/subscription/plan.rst:0
+msgid ""
+"Screenshot showing three available packages for a hosted Zammad\n"
+"instance"
+msgstr ""
+
+#: ../system/subscription/plan.rst:89
+msgid "Summary"
+msgstr ""
+
+#: ../system/subscription/plan.rst:45
+msgid ""
+"In this section you can adjust the settings of the previous selected plan."
+msgstr ""
+
+#: ../system/subscription/plan.rst:64
+msgid "Billing cycle"
+msgstr ""
+
+#: ../system/subscription/plan.rst:48
+msgid ""
+"You can choose between either monthly or yearly billing. The price per agent "
+"will be cheaper if you decide for yearly billing."
+msgstr ""
+
+#: ../system/subscription/plan.rst:53
+msgid ""
+"If you're still trying out things and e.g. are unsure of the right package "
+"for your instance, you may want to choose monthly first and then upgrade to "
+"yearly when you're sure."
+msgstr ""
+
+#: ../system/subscription/plan.rst:59
+msgid ""
+"Note that upgrading (more agents, higher package) is always possible, "
+"however, downgrading will only happen when your billing period renews."
+msgstr ""
+
+#: ../system/subscription/plan.rst:63
+msgid ""
+"Upgrading resets your billing period and existing credit will be deducted "
+"from the new total."
+msgstr ""
+
+#: ../system/subscription/plan.rst:72
+msgid "Plan: (Starter|Professional|Plus) - Agents"
+msgstr ""
+
+#: ../system/subscription/plan.rst:67
+msgid "Choose the number of agents you require for your instance."
+msgstr ""
+
+#: ../system/subscription/plan.rst:69
+msgid ""
+"Keep in mind that some packages may have agent limits. Depending on the "
+"previous chosen package, you won't be able to exceed specific agent numbers. "
+"Also note that setting less agents than currently configured is not possible."
+msgstr ""
+
+#: ../system/subscription/plan.rst:75
+msgid "Total"
+msgstr ""
+
+#: ../system/subscription/plan.rst:75
+msgid "This will be the net total you're going to be billed."
+msgstr ""
+
+#: ../system/subscription/plan.rst:77
+msgid ""
+"By using the *Update subscription* button, the instance package will be "
+"adjusted immediately. If you didn't provide a payment method yet, Zammad "
+"will request you to provide one at this point."
+msgstr ""
+
+#: ../system/subscription/plan.rst:83
+msgid ""
+"In case you're still within the trial period, this means that the trial will "
+"be over immediately!"
+msgstr ""
+
+#: ../system/subscription/plan.rst:86
+msgid "Down- or upgrading during the trial period *is not* possible."
+msgstr ""
+
+#: ../system/subscription/plan.rst:0
+msgid "Screenshot showing payment options and a pricing summary"
+msgstr ""
+
+#: ../system/subscription/plan.rst:105
+msgid "Payment method"
+msgstr ""
+
+#: ../system/subscription/plan.rst:92
+msgid "You can pay via credit card or SEPA mandate."
+msgstr ""
+
+#: ../system/subscription/plan.rst:97
+msgid "Credit card"
+msgstr ""
+
+#: ../system/subscription/plan.rst:95
+msgid ""
+"Simply follow the dialogue by clicking *authorize* and confirm -if required "
+"by your bank- your consent to Zammad using your card for the payments."
+msgstr ""
+
+#: ../system/subscription/plan.rst:101
+msgid "SEPA"
+msgstr ""
+
+#: ../system/subscription/plan.rst:100
+msgid ""
+"Provide the requested information of the bank account holder and update if "
+"you're ready. You'll then receive an email with the SEPA mandate."
+msgstr ""
+
+#: ../system/subscription/plan.rst:103
+msgid ""
+"Technically there's also the possibility to pay via invoice, however - this "
+"method only applies to a fairly low number of instances. Please contact `our "
+"sales team`_ for more information."
 msgstr ""
 
 #: ../system/translations.rst:2
