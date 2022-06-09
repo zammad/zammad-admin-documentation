@@ -101,8 +101,8 @@ The ones that aren’t are described below.
       To add one, go to **Manage > Organizations** in the Admin Panel.
 
 🏤 Secondary Organizations
-   This option allows you to assign more organizations (which are not the users
-   primary) to users.
+   This option allows you to assign more organizations, in addition to the
+   user's primary organization.
 
    Secondary organizations behave the same like the primary ones with one
    exception: Secondaries are not as highlighted like their primaries.

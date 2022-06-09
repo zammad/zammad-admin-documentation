@@ -65,10 +65,10 @@ The ones that aren’t are described below.
    .. _ticket pane:
       https://user-docs.zammad.org/en/latest/extras/organizations.html
 
-📢 shared Organization
+📢 Shared Organization
    If you set this option to ``yes``, all organization members will be able
-   to **view** and **update** tickets of their organizational members apart
-   from their own.
+   to **view** and **update** tickets of their organizational members in
+   addition to their own.
 
    Setting this option to yes also provides access to overviews being
    available to shared organizations only. Learn more on

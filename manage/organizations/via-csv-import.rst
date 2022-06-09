@@ -1,4 +1,4 @@
-Managing Organizations via CSV Import
+Managing organizations via CSV Import
 =====================================
 
 If your organization has information about customers (or personnel)
@@ -11,21 +11,21 @@ you can batch-import them into Zammad in just three steps.
 
    Use the **Import** button to open the CSV import dialog.
 
-Step 1: Inspect the Sample .csv
+Step 1: Inspect the sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
 (**“Example CSV file for download”**)
 to see how Zammad expects you to format your organization data.
 
-Step 2: Export Your User Data to .csv
--------------------------------------
+Step 2: Export your organization data to .csv
+---------------------------------------------
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
 
 * the ``id`` attribute (column) should be left blank or removed entirely;
 * the ``name`` attribute is **required**; and
-* any others may be safely omitted
+* any other columns may be safely omitted
   as long as each row has the same number of fields (commas).
 
 For instance:
@@ -46,7 +46,7 @@ For instance:
    Several organization members can be added: Ensure to provide the users
    email address as shown above with empty values.
 
-Step 3: Import Your .csv to Zammad
+Step 3: Import your .csv to Zammad
 ----------------------------------
 
 Once your raw organization data has been submitted,
