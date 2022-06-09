@@ -37,8 +37,9 @@ Learn more about managing organizations...
 .. warning:: 🥵 **BIG organizations can cause performance issues**
 
    Organizations with many members can cause a fairly high system load in
-   some situations. This especially affects organizations that run many
-   updates or e.g. ticket creations on their members which causes overhead.
+   some situations. This especially affects organizations whose members run many
+   updates, for example ticket creations or frequent communication.
+   A lot of linked data syncs may cause an overhead.
 
    Proceed with caution.
 
