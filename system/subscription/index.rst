@@ -41,3 +41,24 @@ I set up a trial account but am missing functions to test
 
 Can I change package within the trial?
    No. As soon as the package is changed the subscription begins.
+
+What happens to my trial instance after the trial period ended?
+   Your instance will automatically be cancelled for you.
+   Please see *What happens to my instance after it has been cancelled?*
+   for more.
+
+What happens to my instance after it has been cancelled?
+   That depends slightly on your instance state:
+
+   Trial instance
+      If you're still on trial, we will ice your instance and remind you once
+      again about your instance. We then will wait some days and remove your
+      instance from our system. This is the last time we will inform you by
+      Email.
+
+   Paid instance
+      If you're a paying customer and cancelled your subscription, the instance
+      removal will take place the day after your last subscription day.
+
+Can removed instances be restored?
+   No. Once your instance has been removed, a restoration is not possible.
