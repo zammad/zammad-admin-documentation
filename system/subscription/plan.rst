@@ -23,7 +23,7 @@ Plan
    `detailed pricing table`_ for more.
 
    Your selection in this step will decide on the base agent price
-   and e.g. agent limits that might apply in the summary  step.
+   and e.g. agent limits that might apply in the summary step.
 
    The green *Selected* button will also tell you what plan you're currently in.
 
@@ -50,9 +50,9 @@ Summary
 
          .. tip::
 
-            If you're still trying out things and e.g. are unsure of the to
-            right package for your instance, you may want to choose monthly
-            first and then upgrade to yearly when you're sure.
+            If you're still trying out things and e.g. are unsure of the right
+            package for your instance, you may want to choose monthly first and
+            then upgrade to yearly when you're sure.
 
          .. note::
 

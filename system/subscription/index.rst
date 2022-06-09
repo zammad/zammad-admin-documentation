@@ -8,7 +8,7 @@ package and number of agents required.
 
    This setting section is only available for Hosted setups.
    If you're looking for on premise support contracts, please see the
-   `Zammad pricing page`_
+   `Zammad pricing page`_.
 
 .. _Zammad pricing page:
    https://zammad.com/en/pricing#selfhosted

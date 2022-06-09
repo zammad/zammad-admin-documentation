@@ -16,9 +16,8 @@ Billing information
       in case required. This address will be referenced on your invoice.
 
    VAT ID
-      Provide your VAT ID here. If applicable your invoice then will not
-      contain german VAT. Please make sure to pay the VAT in your country
-      as required.
+      Provide your VAT ID here. If applicable your invoice will not contain
+      german VAT. Please make sure to pay the VAT in your country as required.
 
    Billing Email Address
       Usually the instance owner (the person that registered the instance) will
