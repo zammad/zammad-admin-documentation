@@ -54,9 +54,9 @@ Before you continue, please note the following limitations.
            You can learn more about user accounts in general on
            :doc:`/manage/users/index`.
 
-   * When using several LDAP sources containing users with email addresses
-     on different sources, the user in question will be updated with every
-     source configured. *The last LDAP source will win.*
+   * When several LDAP sources contain the same user (meaning the same email
+     address), the user in question will be updated with every source
+     configured. *The last LDAP source will win.*
 
      This is subject to change with `Issue 4109`_ in the future.
    * Synchronization statistics currently affect *all* configured LDAP sources.

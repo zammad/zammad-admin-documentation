@@ -12,7 +12,7 @@ Add new source
    in mind that many sources will also take more time to synchronize.
 
    If you want to use LDAPs, type ``ldaps://`` instead of ``ldap://`` in front
-   of your hostname. You can use also tell Zammad to use a different port by
+   of your hostname. You can also tell Zammad to use a different port by
    appending ``:<port number>``.
 
    When providing a LDAPs source, Zammad will display an additional option
@@ -25,8 +25,8 @@ Add new source
       of your LDAP users in Zammad.
 
       This especially affects inactive users
-         As every LDAP behaves differently on which attributes and how are set,
-         Zammad doesn't care about any flags.
+         As every LDAP behaves differently on which attributes and how they are
+         set, Zammad doesn't care about any flags.
 
          Users that no longer are returned by your LDAP source will
          automatically be set to inactive. Zammad assumes that the user was
@@ -35,8 +35,7 @@ Add new source
          Users will never be removed automatically!
          If you want to remove obsolete users, use :doc:`/system/data-privacy`.
 
-      .. hint::
-
+      Active Directory admins
          Active Directories are quite specific on how to filter for active users
          only - please see the `Microsoft documentation`_ for more information.
 
@@ -73,22 +72,21 @@ Review or edit existing source
 
 Re-arrange LDAP source's order
    You can change the synchronization order for each source at any time.
-   Zammad will order the sources from top to bottom.
+   Zammad will synchronize the sources from top to bottom.
 
    .. figure:: /images/system/integrations/ldap/ldap-change-source-order.gif
       :alt: Screencasting showing how to change the source order by using
             drag and drop.
 
 Remove a source
-   If you no longer need the a LDAP source or simply want to start new,
+   If you no longer need the a LDAP source or simply want to start over,
    you can remove them at any time. This will not remove synchronized users,
    data synchronized or permissions.
 
    .. tip::
 
-      Not sure if you'd need the source to a later time?
-      Set the source to inactive instead of removing - see
-      *Review or edit existing source* for more.
+      Not sure if you'd need the source later on? Set the source to inactive
+      instead of removing it - see *Review or edit existing source* for more.
 
    .. figure:: /images/system/integrations/ldap/ldap-remove-source.gif
       :alt: Screencast showing how to remove LDAP sources.
