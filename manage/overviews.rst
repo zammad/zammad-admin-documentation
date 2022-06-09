@@ -33,10 +33,17 @@ Available for the following roles / Restrict to only the following users
       Roles are assigned to users, per default there are agents, admins and
       customers. Further information about :doc:`roles/index`.
 
-   With these settings you can choose whether to make the overviews available
-   to an entire group of people (by selecting the role) or to specific users.
-   The entries in both fields apply. This means that you can also select
-   individual users in addition to sharing the overview for all role members.
+   .. note:: The setting "available for the following roles" is mandatory.
+
+   Define roles that are supposed to see and use the overview in question.
+
+   If your overview is rather specific for a sub group of users of your role,
+   use the *"Restrict to only the following users"* option to further restrict
+   the visibility of the overview to defined users.
+
+      .. hint::
+
+         You will still have to provide a role!
 
 Only available for users with shared organization
    .. image:: /images/manage/overviews/restrict-overview-to-sharing-organizations.png
