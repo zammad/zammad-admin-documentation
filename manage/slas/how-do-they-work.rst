@@ -19,7 +19,7 @@ Name
    Give your SLA a meaningful name to quickly see what or who is affected.
 
 Ticket selector
-   Specify the conditions the SLA should apply based on your tickets.
+   Specify the conditions on which tickets this SLA should apply to.
 
 Preview
    In the preview you see the selection of the tickets and double check whether
@@ -53,13 +53,13 @@ SLA Times
       or *after* the first response was done.
 
       between agent updates
-         In this scenario your agent has to respond every ``n`` hours depending
+         In this scenario your agent have to respond every ``n`` hours depending
          on your configuration. This causes Zammad to not care if your customer
          replied or not.
 
          .. warning::
 
-            This setting can be quiet stressful for your agent.
+            This setting can be quiet stressful for your agents.
 
       for an agent to respond
          From the moment your customer replied to the ticket, your agents have

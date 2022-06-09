@@ -1,7 +1,7 @@
 SLAs
 ****
 
-Service Level Agreements , abbreviated SLAs , help you to meet specific response
+Service Level Agreements, abbreviated SLAs, help you to meet specific response
 times for your customers' requests. This way you can define goals such as
 answering every inquiry within eight hours. If you are at risk of missing this
 target, Zammad will alert you.
@@ -52,9 +52,15 @@ Email notifications
 
 Overviews
    You can configure :doc:`/manage/overviews` to allow your agents to filter
-   for escalated or to be escalated tickets. By default Zammad comes with an
-   Overview that will show all tickets that are either escalated or escalating
-   within the next 10 minutes: ``Escalated Tickets``.
+   for escalated tickets or those that are about to escalate. By default Zammad
+   comes with an overview that will show all tickets that are either escalated
+   or escalating within the next 10 minutes: ``Escalated Tickets``.
+
+   .. tip::
+
+      If you have all/most of your tickets covered by SLAs you may consider
+      changing the default sorting of existing overviews by escalation time,
+      instead of creation time.
 
    .. figure:: /images/manage/slas/overview-of-escalated-tickets.png
       :align: center
