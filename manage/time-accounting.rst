@@ -29,10 +29,10 @@ the current ticket step.
 
    .. tip::
 
-      The selector applies to the current relevant ticket state, not the future
-      state. That means if your agent is going to close a ticket but its state
-      currently is open, your ticket selector has to apply to -at least- open
-      tickets.
+      The selector applies to the ticket state before any attribute changes have
+      been saved. That means if your agent is e.g. going to close a ticket
+      alongside writing an article, the ticket selector has to match the ticket
+      state before closing for the time accounting dialog to appear.
 
 .. figure:: /images/manage/time-accounting/time-accounting-selector.png
    :align: center
@@ -43,7 +43,7 @@ Reviewing accounted time
 
 Below the selector configuration, Zammad provides "Overviews" which will contain
 all accounted times for your tickets. Accounted times are displayed per years
-month.
+and months.
 
    .. hint::
 
