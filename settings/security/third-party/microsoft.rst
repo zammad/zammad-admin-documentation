@@ -3,7 +3,7 @@ Microsoft
 
 Zammads Microsoft connection allows your users with Microsoft accounts to login. 
 This works for Azure users as well and can be an alternative to 
-:doc:`/system/integrations/ldap`.
+:doc:`/system/integrations/ldap/index`.
 
 .. hint:: **This login function was called "Office 365" prior Zammad 5.1.**
 
