@@ -78,7 +78,7 @@ Tickets and their accounted time
          * Title
          * Customer
          * Organization of customer (if applicable)
-         * Currently assigned agent (ticket owner)
+         * Agent currently assigned (ticket owner)
          * Time units accounted in the current month
          * Time units total (time accounted during ticket life)
          * Created at
