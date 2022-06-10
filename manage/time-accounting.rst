@@ -4,7 +4,7 @@ Time Accounting
 If you want to know how much time you need for your each project or ticket,
 enable time accounting (turn on the switch on the top left side of the page).
 
-.. figure:: /images/manage/time-accounting/configuration-for-time-accounting.png
+.. figure:: /images/manage/time-accounting/time-accounting-management.png
    :alt: Time accounting management page in Zammad
 
 How it works
@@ -21,6 +21,9 @@ the current ticket step.
       the agent has to update the ticket together with any article type.
       The article part is mandatory.
 
+      However, the time accounting dialogue is not mandatory and can be
+      cancelled by your agents if needed. You cannot enforce time accounting.
+
       If a ticket no longer applies for time accounting, the already accounted
       time is not lost.
 
@@ -31,8 +34,7 @@ the current ticket step.
       currently is open, your ticket selector has to apply to -at least- open
       tickets.
 
-.. figure:: /images/manage/time-accounting/configuration-for-time-accounting.png
-   :width: 90%
+.. figure:: /images/manage/time-accounting/time-accounting-selector.png
    :align: center
    :alt: Time accounting ticket selectors
 
@@ -59,7 +61,7 @@ Select the right month
 
 Tickets and their accounted time
    Zammad allows you to receive the accounted information just like you need
-   them. For this you currently have three options to view and also download
+   them. For this you currently have four options to view and also download
    the relevant data as CSV.
 
    To download the CSV data, use the arrow down ⇩ right next to each heading
@@ -68,6 +70,21 @@ Tickets and their accounted time
    .. hint::
 
       🤓 Of course you can also automate this with API calls.
+
+   Activity
+      This filter works similar to the ticket filter, with one exception:
+      You'll find each *individual* time accounting step of your agents.
+      This is what you'd also see in the tickets history before Zammad 5.2.
+
+      In this list you'll see the following ticket information:
+
+         * Number
+         * Title
+         * Customer
+         * Organization of customer (if applicable)
+         * Agent that accounted the time
+         * Time units accounted in the current month
+         * Created at
 
    Ticket
       This filter contains all relevant tickets from the selected month.
