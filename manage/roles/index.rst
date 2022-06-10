@@ -29,7 +29,7 @@ of its powerful, flexible, and fine-grained permission system.
 
    Syncing your LDAP “groups” to Zammad roles
    can make access management *way* easier.
-   To learn more, see :doc:`/system/integrations/ldap/index`.
+   To learn more, see :doc:`/system/integrations/ldap`.
 
 .. _what-is-a-role:
 

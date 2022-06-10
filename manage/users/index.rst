@@ -19,7 +19,7 @@ Learn more about managing users...
 
    via the Admin Panel <via-the-admin-panel>
    via CSV import <via-csv-import>
-   via LDAP/Active Directory integration </system/integrations/ldap/index>
+   via LDAP/Active Directory integration </system/integrations/ldap>
    via Exchange integration </system/integrations/exchange>
    via REST API <https://docs.zammad.org/en/latest/api/intro.html>
 

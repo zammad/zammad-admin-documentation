@@ -25,9 +25,9 @@ Integrations for phone systems
    :maxdepth: 1
    :titlesonly:
 
-   cti/generic
-   cti/placetel
-   cti/sipgate
+   integrations/cti/generic
+   integrations/cti/placetel
+   integrations/cti/sipgate
 
 Integrations for authentication and customers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -36,10 +36,10 @@ Integrations for authentication and customers
    :maxdepth: 1
    :titlesonly:
 
-   ldap/index
-   exchange
-   clearbit
-   smime/index
+   integrations/ldap
+   integrations/exchange
+   integrations/clearbit
+   integrations/smime/index
 
 Integrations for Monitoring Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -54,8 +54,8 @@ Integrations for Monitoring Systems
    :maxdepth: 1
    :titlesonly:
 
-   checkmk/index
-   zabbix
+   integrations/checkmk/index
+   integrations/zabbix
 
 Integrations for Issue Trackers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,8 +64,8 @@ Integrations for Issue Trackers
    :maxdepth: 1
    :titlesonly:
 
-   github
-   gitlab
+   integrations/github
+   integrations/gitlab
 
 Other Integrations
 ^^^^^^^^^^^^^^^^^^
@@ -76,6 +76,6 @@ This section will hold any other integration that can't be grouped up (yet).
    :maxdepth: 1
    :titlesonly:
 
-   slack
-   i-doit
-   elasticsearch
+   integrations/slack
+   integrations/i-doit
+   integrations/elasticsearch
