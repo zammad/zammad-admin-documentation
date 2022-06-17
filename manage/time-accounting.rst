@@ -41,9 +41,9 @@ the current ticket step.
 Reviewing accounted time
 ------------------------
 
-Below the selector configuration, Zammad provides "Overviews" which will contain
-all accounted times for your tickets. Accounted times are displayed per years
-and months.
+Below the selector configuration, Zammad provides an accounted time section
+which will contain all accounted times for your tickets.
+Accounted times are displayed per years and months.
 
    .. hint::
 
