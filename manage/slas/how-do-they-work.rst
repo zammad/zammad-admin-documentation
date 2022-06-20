@@ -18,7 +18,7 @@ SLAs as their calculations may not work as you intended them originally.
 .. tip::
 
    Communication type articles are not enough for your SLA?
-   You can also configure Zammad to allow **public** notes as fullfilments for
+   You can also configure Zammad to allow **public** notes as fulfillment for
    SLA requirements, `our console documentation`_ tells you how.
 
 .. _our console documentation:
