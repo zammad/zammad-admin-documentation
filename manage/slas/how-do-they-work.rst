@@ -15,6 +15,15 @@ SLAs as their calculations may not work as you intended them originally.
    depending on your instance size and affected tickets. You may want to perform
    those changes outside of your business hours.
 
+.. tip::
+
+   Communication type articles are not enough for your SLA?
+   You can also configure Zammad to allow **public** notes as fulfillment for
+   SLA requirements, `our console documentation`_ tells you how.
+
+.. _our console documentation:
+   https://docs.zammad.org/en/latest/admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas
+
 Name
    Give your SLA a meaningful name to quickly see what or who is affected.
 
