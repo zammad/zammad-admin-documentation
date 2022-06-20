@@ -18,8 +18,8 @@ SLAs as their calculations may not work as you intended them originally.
 .. tip::
 
    Communication type articles are not enough for your SLA?
-   You can also count notes towards your SLA, `our console documentation`_
-   tells you how.
+   You can also configure Zammad to allow **public** notes as fullfilments for
+   SLA requirements, `our console documentation`_ tells you how.
 
 .. _our console documentation:
    https://docs.zammad.org/en/latest/admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas
