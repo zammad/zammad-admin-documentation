@@ -50,8 +50,8 @@ Only available for users with shared organization
 
    .. hint::
 
-      Shared organization is a setting in the organisations-management.
-      See :doc:`organizations` for more information.
+      Shared organization is a setting in the organization management.
+      See :doc:`/manage/organizations/index` for more information.
 
    This is only important if the available role is a customer.
    When deciding whether yes or no is selected, it must be considered to what

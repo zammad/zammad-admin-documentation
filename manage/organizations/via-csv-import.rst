@@ -1,38 +1,30 @@
-Managing users via CSV Import
-=============================
+Managing organizations via CSV Import
+=====================================
 
 If your organization has information about customers (or personnel)
 already stored in a directory system that can export to CSV,
 you can batch-import them into Zammad in just three steps.
 
-.. figure:: /images/manage/users/import-user-data-with-csv.png
+.. figure:: /images/manage/organizations/import-or-update-organizations-via-csv.png
    :alt: The CSV import dialog
    :align: center
 
    Use the **Import** button to open the CSV import dialog.
-
-.. hint::
-
-   CSV import provides one-off batch processing of user records.
-   For persistent, automated user synchronization,
-   consider integration with a third-party directory system
-   like :doc:`LDAP / Active Directory </system/integrations/ldap/index>`
-   or :doc:`Exchange </system/integrations/exchange>`.
 
 Step 1: Inspect the sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
 (**“Example CSV file for download”**)
-to see how Zammad expects you to format your user data.
+to see how Zammad expects you to format your organization data.
 
-Step 2: Export your user data to .csv
--------------------------------------
+Step 2: Export your organization data to .csv
+---------------------------------------------
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
 
 * the ``id`` attribute (column) should be left blank or removed entirely;
-* the ``firstname`` and ``lastname`` attributes are **required**; and
+* the ``name`` attribute is **required**; and
 * any other columns may be safely omitted
   as long as each row has the same number of fields (commas).
 
@@ -40,17 +32,27 @@ For instance:
 
 .. code-block:: none
 
-   login,firstname,lastname,email,web,active
-   jdoe,"John","Doe",jdoe@example.com,"https://zammad.com",true
-   mmore,"Madeline","Moore",mmore@example.net,"",false
+   name,shared,domain,domain_assignment,active,members
+   Chrispresso Inc.,true,"",false,true,emma@chrispresso.com
+   "","","","","",jacob@chrispresso.com
+   "","","","","",chris@chrispresso.com
+   Awesome Customer Inc.,true,"",false,true,emily@example.com
+   "","","","","",samuel@example.com
+   "","","","","",anna@example.com
+   Zammad Foundation,true,"",false,true,nicole.braun@zammad.org
+
+.. hint::
+   
+   Several organization members can be added: Ensure to provide the users
+   email address as shown above with empty values.
 
 Step 3: Import your .csv to Zammad
 ----------------------------------
 
-Once your raw user data has been submitted,
+Once your raw organization data has been submitted,
 Zammad will perform a test run to compute the number of affected records:
 
-.. figure:: /images/manage/users/import-summary-before-importing.png
+.. figure:: /images/manage/organizations/import-summary-before-importing.png
    :alt: CSV import test run and confirmation dialog
    :align: center
    :width: 90%
@@ -59,8 +61,8 @@ Zammad will perform a test run to compute the number of affected records:
 
 .. note:: 🤔 **How does it know when to create new records and when to update?**
 
-   Records are updated when the imported data contains an ``email`` or ``login``
-   that matches an existing user account.
+   Records are updated when the imported data contains a ``name`` that matches
+   an existing organization entry.
 
 Click **Yes, start real import** to proceed.
 (If you’re importing a lot of records, be patient—it may take a minute.)

@@ -45,7 +45,7 @@ Zammad creates with Clearbit should be shared ones.
 .. note::
 
    If you're unsure what option to choose, better stick with "no".
-   You can also learn more about :doc:`/manage/organizations`.
+   You can also learn more about :doc:`/manage/organizations/index`.
 
 .. image:: /images/system/integrations/clearbit/configure-zammad.png
 

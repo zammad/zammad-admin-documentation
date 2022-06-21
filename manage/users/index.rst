@@ -8,7 +8,7 @@ or even synchronized with third-party directory services.
 .. figure:: /images/manage/users/managing-users-manually.gif
    :alt: Creating and editing users directly in the Admin Panel
    :align: center
-   :width: 80%
+   :width: 90%
 
    The simplest way to manage users is directly in the Admin Panel.
 
@@ -19,7 +19,7 @@ Learn more about managing users...
 
    via the Admin Panel <via-the-admin-panel>
    via CSV import <via-csv-import>
-   via LDAP/Active Directory integration </system/integrations/ldap>
+   via LDAP/Active Directory integration </system/integrations/ldap/index>
    via Exchange integration </system/integrations/exchange>
    via REST API <https://docs.zammad.org/en/latest/api/intro.html>
 
@@ -90,7 +90,7 @@ The ones that aren’t are described below.
    (Agents do not, though.)
 
 🏢 Organization
-   :doc:`/manage/organizations` are a way to group customers together
+   :doc:`/manage/organizations/index` are a way to group customers together
    (usually, members of the same company).
    This allows you to do things like view all tickets for that company
    or set up special :doc:`/manage/trigger` that fire only for those customers.
@@ -99,6 +99,25 @@ The ones that aren’t are described below.
       to an organization that doesn’t exist yet.**
 
       To add one, go to **Manage > Organizations** in the Admin Panel.
+
+🏤 Secondary Organizations
+   This option allows you to assign more organizations, in addition to the
+   user's primary organization.
+
+   Secondary organizations behave the same like the primary ones with one
+   exception: Secondaries are not as highlighted like their primaries.
+
+   .. hint::
+
+      Listings for all organizational tickets are not affected by this.
+      Zammad will mix primary and secondary organization tickets together.
+
+   .. warning::
+
+      While the number of secondary organizations is not limited directly,
+      you may want to keep this to a reasonable number of organizations.
+
+      30-40 organizations at maximum *should* be good enough.
 
 👑 VIP
    This flag is a way for your team to indicate high-status customers.

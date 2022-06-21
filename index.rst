@@ -10,7 +10,7 @@ Zammad - Documentation for administrators
    manage/users/index
    manage/groups/index
    manage/roles/index
-   manage/organizations
+   manage/organizations/index
    manage/overviews
    manage/text-modules
    manage/macros
@@ -59,7 +59,7 @@ Zammad - Documentation for administrators
    :caption: System
 
    system/subscription/index
-   system/integrations
+   system/integrations/index
    API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system/objects
    system/core-workflows

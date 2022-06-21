@@ -3,31 +3,29 @@ Object types
 
 When adding a new object, you can choose between the following object types.
 
-Boolean
+.. warning:: 
+
+   You cannot change the object format / type as soon as it is applied.
+   If you no longer need an object, consider disabling it instead of removing.
+
+Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
    Allows setting a default value.
 
    .. figure:: /images/system/objects/settings_boolean.png
       :alt: Available settings for Boolean fields
 
-Date
+Date field
    Provides a date picker field and does not allow default values.
    
    Default time diff (hours)
       This setting helps the user by highlighting the day from now plus the
-      provided value. It does not pre-fill the field.
-
-      .. note::
-
-         Please note that this setting is currently affected by `bug 3763`_.
-
-.. _bug 3763:
-   https://github.com/zammad/zammad/issues/3763
+      provided value. It *does not* pre-fill the field.
 
    .. figure:: /images/system/objects/settings_date.png
       :alt: Available settings for Date fields
 
-Datetime
+Date & time field
    Provides a date and time picker – does not allow default values
 
    Allow future
@@ -42,16 +40,12 @@ Datetime
       This setting helps the user by highlighting the day from now plus the
       provided value. It does not pre-fill the field.
 
-      .. note::
-
-         Please note that this setting is currently affected by `bug 3763`_.
-
    .. figure:: /images/system/objects/settings_datetime.png
-      :alt: Available settings for Date time fields
+      :alt: Available settings for Date & time fields
 
-Integer
+Integer field
    Provides an input field that allows integer usage only.
-   You may define a default value.
+   You may define a default value. You cannot enforce comma separation.
    
    Minimal
       The minimal value the field accepts.
@@ -62,8 +56,8 @@ Integer
    .. figure:: /images/system/objects/settings_integer.png
       :alt: Available settings for Integer fields
 
-Multiselect
-   Provides a multiselect field that allows the selection of one or more out
+Multiple selection field
+   Provides a selection field that allows the selection of one or more out
    of several. This field does allow setting a default value.
 
    .. include:: /system/objects/includes/adding-values-hint.include.rst
@@ -71,11 +65,11 @@ Multiselect
    .. include:: /system/objects/includes/url-template-hint.include.rst
 
    .. figure:: /images/system/objects/settings_multiselect.png
-      :alt: Available settings for Multiselect fields
+      :alt: Available settings for Multiple selection fields
 
    .. include:: /system/objects/includes/reposition-values.include.rst
 
-Select
+Single selection field
    Provides a drop-down field that allows selection of one value out of several.
    This field does allow setting a default value.
 
@@ -84,12 +78,12 @@ Select
    .. include:: /system/objects/includes/url-template-hint.include.rst
 
    .. figure:: /images/system/objects/settings_select.png
-      :alt: Available settings for Select fields
+      :alt: Available settings for Single selection fields
 
    .. include:: /system/objects/includes/reposition-values.include.rst
 
-Textarea
-   Provides a textarea input field (multiple lines) and thus allows e.g.
+Textarea field
+   Provides a text area input field (multiple lines) and thus allows e.g.
    new lines. You can set a default field value.
 
       .. note::
@@ -109,7 +103,7 @@ Textarea
    .. figure:: /images/system/objects/settings_textarea.png
       :alt: Available settings for Textarea fields
 
-Text
+Text field
    Provides a text field (one line) and allows choosing a default value.
 
    Type
@@ -132,17 +126,23 @@ Text
    .. figure:: /images/system/objects/settings_text.png
       :alt: Available settings for Text fields
 
-Tree Select
+Single tree selection field
    Provides a select-like field with up to 6 layers of options.
    Does not allow setting a default value.
+
+   .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
    .. figure:: /images/system/objects/settings_treeselect.png
       :alt: Available settings for Tree Select fields
 
-.. warning:: 
+Multiple tree selection field
+   Provides a select-like field with up to 6 layers of options allowing
+   the selection of multiple values. Does not allow setting a default value.
 
-   You cannot change the object format / type as soon as it is applied.
-   If you no longer need an object, consider disabling it instead of removing.
+   .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
+
+   .. figure:: /images/system/objects/settings_multitreeselect.png
+      :alt: Available settings for Tree Select fields
 
 .. _link-templates:
 
