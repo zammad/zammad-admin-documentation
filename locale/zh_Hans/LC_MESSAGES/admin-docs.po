@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-09 16:29+0200\n"
+"POT-Creation-Date: 2022-06-20 23:16+0200\n"
 "PO-Revision-Date: 2022-03-22 07:16+0000\n"
 "Last-Translator: PackyZhang <zhanghongbang@live.com>\n"
 "Language-Team: Chinese (Simplified) <https://translations.zammad.org/"
@@ -391,7 +391,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:77
 #: ../channels/email/accounts/secondary-addresses.rst:35
 #: ../channels/email/index.rst:2 ../manage/groups/settings.rst:58
-#: ../system/objects/types.rst:122
+#: ../system/objects/types.rst:116
 msgid "Email"
 msgstr ""
 
@@ -464,7 +464,7 @@ msgid "Email Inbound"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:113
-#: ../system/objects/types.rst:125
+#: ../system/objects/types.rst:119
 msgid "Type"
 msgstr ""
 
@@ -4339,7 +4339,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/settings.rst:14 ../manage/scheduler.rst:34
-#: ../manage/slas/how-do-they-work.rst:19
+#: ../manage/slas/how-do-they-work.rst:28
 msgid "Name"
 msgstr ""
 
@@ -4752,7 +4752,8 @@ msgid ""
 "remove URLs from either your public header menu or public footer menu."
 msgstr ""
 
-#: ../manage/knowledge-base.rst:132 ../system/maintenance.rst:31
+#: ../manage/knowledge-base.rst:132 ../manage/time-accounting.rst:82
+#: ../manage/time-accounting.rst:95 ../system/maintenance.rst:31
 msgid "Title"
 msgstr ""
 
@@ -5088,90 +5089,431 @@ msgstr ""
 msgid "Screencast showing postpone macro configuration and behavior"
 msgstr ""
 
-#: ../manage/organizations.rst:2
+#: ../manage/organizations/index.rst:16 ../manage/users/index.rst:17
+msgid "via the Admin Panel"
+msgstr ""
+
+#: ../manage/organizations/index.rst:16 ../manage/users/index.rst:17
+msgid "via CSV import"
+msgstr ""
+
+#: ../manage/organizations/index.rst:16 ../manage/users/index.rst:17
+msgid "via REST API"
+msgstr ""
+
+#: ../manage/organizations/index.rst:2
 msgid "Organizations"
 msgstr ""
 
-#: ../manage/organizations.rst:4
+#: ../manage/organizations/index.rst:4
 msgid ""
-"Organizations allow you to group customers. This has two important "
-"advantages, among other things."
+"Depending on your organization’s IT capabilities, organizations can be "
+"managed individually or in bulk."
 msgstr ""
 
-#: ../manage/organizations.rst:7
+#: ../manage/organizations/index.rst:12 ../manage/users/index.rst:13
+msgid "Creating and editing users directly in the Admin Panel"
+msgstr ""
+
+#: ../manage/organizations/index.rst:12
 msgid ""
-"1.) As an agent you not only have the overview of a customer's tickets, but "
-"also an overview of the entire organization."
+"The simplest way to manage organizations is directly in the Admin Panel."
 msgstr ""
 
-#: ../manage/organizations.rst:10
+#: ../manage/organizations/index.rst:14
+msgid "Learn more about managing organizations..."
+msgstr ""
+
+#: ../manage/organizations/index.rst:23
+msgid "😲 **Technical Limitations**"
+msgstr ""
+
+#: ../manage/organizations/index.rst:25
 msgid ""
-"For example, by searching for the organization, all the tickets for the "
-"organization are displayed and they can be opened easily by a click. This "
-"overview appears as follows:"
+"Organizations currently cannot be removed. The only exception is Zammads :"
+"doc:`/system/data-privacy` function."
 msgstr ""
 
-#: ../manage/organizations.rst:17
+#: ../manage/organizations/index.rst:27
 msgid ""
-"2.) As a customer, you can view and edit your colleagues' tickets (if the "
-"organization is a \"shared organization\", you can set this as a parameter "
-"for each organization. See the Edit-Mask)."
+"Unlike users, agents cannot just create new organizations. Check the :doc:"
+"`permission reference </manage/roles/admin-permissions>` to learn more."
 msgstr ""
 
-#: ../manage/organizations.rst:23
-msgid "**For example:**"
-msgstr ""
-
-#: ../manage/organizations.rst:22
+#: ../manage/organizations/index.rst:30
 msgid ""
-"For a customer user who has only created one ticket himself, but whose "
-"entire organization has created 6, the overview would look like this:"
+"Because of how organization references work with users, external syncs like "
+"LDAP or Exchange *do not* support organization mapping."
 msgstr ""
 
-#: ../manage/organizations.rst:29
+#: ../manage/organizations/index.rst:35
+msgid "This is relevant to you? Consider domain based assignments."
+msgstr ""
+
+#: ../manage/organizations/index.rst:37
+msgid "🥵 **BIG organizations can cause performance issues**"
+msgstr ""
+
+#: ../manage/organizations/index.rst:39
 msgid ""
-"In the organizations management area (Admin Interface --> Manage --> "
-"Organizations) you can manually add, edit or delete existing organizations. "
-"That's the Edit-Mask:"
+"Organizations with many members can cause a fairly high system load in some "
+"situations. This especially affects organizations whose members run many "
+"updates, for example ticket creations or frequent communication. A lot of "
+"linked data syncs may cause an overhead."
 msgstr ""
 
-#: ../manage/organizations.rst:36
-msgid "Within the organization the following things can be set:"
+#: ../manage/organizations/index.rst:44
+msgid "Proceed with caution."
 msgstr ""
 
-#: ../manage/organizations.rst:38
+#: ../manage/organizations/index.rst:49
+msgid "Reference Guide: Organization Details"
+msgstr ""
+
+#: ../manage/organizations/index.rst:51
 msgid ""
-"if it's a shared organization (All customers who are assigned to this "
-"organization can view and edit the group tickets)"
+"Most of the attributes you can set on organizations are self-explanatory. "
+"The ones that aren’t are described below."
 msgstr ""
 
-#: ../manage/organizations.rst:40
-msgid "if the assignment is domain based (assign users based on domain)"
-msgstr ""
-
-#: ../manage/organizations.rst:41
-msgid "note"
-msgstr ""
-
-#: ../manage/organizations.rst:42
-msgid "if it's active or inactive"
-msgstr ""
-
-#: ../manage/organizations.rst:46
-msgid "Import of organizations via CSV file"
-msgstr ""
-
-#: ../manage/organizations.rst:48 ../manage/text-modules.rst:95
+#: ../manage/organizations/index.rst:59
 msgid ""
-"With the import action (since Zammad 2.5) you can download a sample CSV file "
-"and upload your own CSV file."
+"The edit organization dialog, showing the various organization detail fields"
 msgstr ""
 
-#: ../manage/organizations.rst:51 ../manage/text-modules.rst:98
+#: ../manage/organizations/index.rst:59
+msgid "User details can be set in the **New/Edit Organization** dialog."
+msgstr ""
+
+#: ../manage/organizations/index.rst:61 ../manage/users/index.rst:57
+msgid "🕵️ **Admins aren’t the only ones who can change these settings.**"
+msgstr ""
+
+#: ../manage/organizations/index.rst:63
 msgid ""
-"To reduce the error rate of unwanted mass changes, a test import is carried "
-"out first and a summary appears at the end. If you agree with the summary, "
-"the CSV import will be executed."
+"In most cases, agents can, too (using the `ticket pane`_ or organization "
+"detail page)."
+msgstr ""
+
+#: ../manage/organizations/index.rst:97
+msgid "📢 Shared Organization"
+msgstr ""
+
+#: ../manage/organizations/index.rst:70
+msgid ""
+"If you set this option to ``yes``, all organization members will be able to "
+"**view** and **update** tickets of their organizational members in addition "
+"to their own."
+msgstr ""
+
+#: ../manage/organizations/index.rst:74
+msgid ""
+"Setting this option to yes also provides access to overviews being available "
+"to shared organizations only. Learn more on :doc:`/manage/overviews`."
+msgstr ""
+
+#: ../manage/organizations/index.rst:78
+msgid "The default value on creation dialogues is ``yes``."
+msgstr ""
+
+#: ../manage/organizations/index.rst:82
+msgid ""
+"This can cause serious issues if you have e.g.human resources working in the "
+"same Zammad instance. Shared organizations usually are relevant for Support "
+"companies with fairly big customers and support contingents."
+msgstr ""
+
+#: ../manage/organizations/index.rst:88
+msgid ""
+"Sharing organizations don't just affect customers, however, if you want to "
+"provide ticket access to agents, please see the :ref:`permission-guide`."
+msgstr ""
+
+#: ../manage/organizations/index.rst:0
+msgid ""
+"Screenshot showing \"My Organization Tickets\" overview with tickets\n"
+"belonging to all organization members"
+msgstr ""
+
+#: ../manage/organizations/index.rst:97
+msgid ""
+"Members of shared organization have access to organization based overviews"
+msgstr ""
+
+#: ../manage/organizations/index.rst:110
+msgid "🗄️ Domain based assignment"
+msgstr ""
+
+#: ../manage/organizations/index.rst:100
+msgid ""
+"Activating domain based assignment will cause Zammad to automatically add "
+"newly created users to said organization. This can greatly reduce your "
+"maintenance effort and is seen as workaround for not being able to map "
+"organizations via LDAP."
+msgstr ""
+
+#: ../manage/organizations/index.rst:105
+msgid "The default value on creation dialogues is ``no``"
+msgstr ""
+
+#: ../manage/organizations/index.rst:109
+msgid ""
+"Domain based assignment only works for *newly created* users and has no "
+"effect on existing users."
+msgstr ""
+
+#: ../manage/organizations/index.rst:121
+msgid "🌐 Domain"
+msgstr ""
+
+#: ../manage/organizations/index.rst:113
+msgid ""
+"Add the email domain of the organization with this option. It's being used "
+"on user creation to determine the assignment. This option belongs to domain "
+"based assignment and is required if set to ``yes``."
+msgstr ""
+
+#: ../manage/organizations/index.rst:119
+msgid ""
+"At the time Zammad allows *one* domain per organization. You may also want "
+"to ensure to not use free mailer domains like ``gmail.com`` for these "
+"assignments."
+msgstr ""
+
+#: ../manage/organizations/index.rst:131 ../manage/users/index.rst:143
+msgid "📑 Note"
+msgstr ""
+
+#: ../manage/organizations/index.rst:124 ../manage/users/index.rst:136
+msgid "Notes are visible to all staff members, **including agents**."
+msgstr ""
+
+#: ../manage/organizations/index.rst:126
+msgid ""
+"😵 **Are you using the Note field to keep track of your own “custom” "
+"organization attributes?**"
+msgstr ""
+
+#: ../manage/organizations/index.rst:129
+msgid "Wish you could add your own fields to the New/Edit Organization dialog?"
+msgstr ""
+
+#: ../manage/organizations/index.rst:131 ../manage/users/index.rst:143
+msgid "You can! To learn more, see :doc:`/system/objects`."
+msgstr ""
+
+#: ../manage/organizations/index.rst:146 ../manage/users/index.rst:164
+msgid "▶️ Active"
+msgstr ""
+
+#: ../manage/organizations/index.rst:134
+msgid ""
+"Disabling this flag is a soft alternative to deleting an organization. So "
+"what’s the difference?"
+msgstr ""
+
+#: ../manage/organizations/index.rst:137
+msgid ""
+"There is no way to restore a deleted organization; inactive organizations "
+"can be reactivated at any time."
+msgstr ""
+
+#: ../manage/organizations/index.rst:140
+msgid "Inactive organizations still appear in search results:"
+msgstr ""
+
+#: ../manage/organizations/index.rst:0
+msgid "An inactive organization displayed in a quick search list"
+msgstr ""
+
+#: ../manage/organizations/index.rst:146
+msgid ""
+"A slashed-out 🏢 icon indicates an inactive organization. In other cases, "
+"inactive organizations are greyed out."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:2
+msgid "Managing organizations via CSV Import"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:4
+#: ../manage/users/via-csv-import.rst:4
+msgid ""
+"If your organization has information about customers (or personnel) already "
+"stored in a directory system that can export to CSV, you can batch-import "
+"them into Zammad in just three steps."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:12
+#: ../manage/users/via-csv-import.rst:12
+msgid "The CSV import dialog"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:12
+#: ../manage/users/via-csv-import.rst:12
+msgid "Use the **Import** button to open the CSV import dialog."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:15
+#: ../manage/users/via-csv-import.rst:23
+msgid "Step 1: Inspect the sample .csv"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:17
+msgid ""
+"Use the link at the bottom of the CSV import dialog (**“Example CSV file for "
+"download”**) to see how Zammad expects you to format your organization data."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:22
+msgid "Step 2: Export your organization data to .csv"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:24
+#: ../manage/users/via-csv-import.rst:32
+msgid ""
+"Prepare your .csv file according to the format found in Step 1 above. Note "
+"that:"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:26
+#: ../manage/users/via-csv-import.rst:34
+msgid "the ``id`` attribute (column) should be left blank or removed entirely;"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:27
+msgid "the ``name`` attribute is **required**; and"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:28
+#: ../manage/users/via-csv-import.rst:36
+msgid ""
+"any other columns may be safely omitted as long as each row has the same "
+"number of fields (commas)."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:31
+#: ../manage/users/via-csv-import.rst:39
+msgid "For instance:"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:46
+msgid ""
+"Several organization members can be added: Ensure to provide the users email "
+"address as shown above with empty values."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:50
+#: ../manage/users/via-csv-import.rst:48
+msgid "Step 3: Import your .csv to Zammad"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:52
+msgid ""
+"Once your raw organization data has been submitted, Zammad will perform a "
+"test run to compute the number of affected records:"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:60
+#: ../manage/users/via-csv-import.rst:58
+msgid "CSV import test run and confirmation dialog"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:60
+#: ../manage/users/via-csv-import.rst:58
+msgid "CSV import always begins with a preview / test run."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:62
+#: ../manage/users/via-csv-import.rst:60
+msgid "🤔 **How does it know when to create new records and when to update?**"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:64
+msgid ""
+"Records are updated when the imported data contains a ``name`` that matches "
+"an existing organization entry."
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:67
+#: ../manage/users/via-csv-import.rst:65
+msgid ""
+"Click **Yes, start real import** to proceed. (If you’re importing a lot of "
+"records, be patient—it may take a minute.)"
+msgstr ""
+
+#: ../manage/organizations/via-csv-import.rst:70
+#: ../manage/users/via-csv-import.rst:68
+msgid "That’s it! 🎉🎉🎉"
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:2
+msgid "Managing organizations via the admin panel"
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:4
+msgid ""
+"The “Organizations” panel provides tools to manually manage organization "
+"entries."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:18
+#: ../manage/users/via-the-admin-panel.rst:15
+msgid "👥 Creating and editing users"
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:0
+msgid "Screencast showing an organization being created."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:12
+msgid ""
+"Click the **New Organization** button to open the New Organization dialog, "
+"or click on an existing organization to edit."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:17
+msgid ""
+"See :ref:`organization-details-reference` for help with the New/Edit "
+"Organization dialog."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:40
+msgid "🗑️ Deleting organizations"
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:21
+msgid ""
+"Organizations currently can only be removed via data privacy by deleting the "
+"last organization member and then choose ``yes`` for *Delete organization?*."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:0
+msgid ""
+"Screencast showing an organization being selected for deletion with\n"
+"its last organizational member."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:30
+#: ../manage/users/via-the-admin-panel.rst:22
+msgid "Use the ⋮ **Actions** menu to open the **Delete User** dialog."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:32
+#: ../manage/users/via-the-admin-panel.rst:24
+msgid "💥 **Deleting a customer destroys all their associated tickets!**"
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:34
+#: ../manage/users/via-the-admin-panel.rst:26
+msgid "To learn more, see :doc:`/system/data-privacy`."
+msgstr ""
+
+#: ../manage/organizations/via-the-admin-panel.rst:38
+msgid ""
+"Technically organization removal is possible via `Zammads API`_, however, "
+"this only works in very specific situations. You may want to stick to data "
+"privacy as of now."
 msgstr ""
 
 #: ../manage/overviews.rst:2 ../manage/slas/index.rst:67
@@ -5251,8 +5593,8 @@ msgstr ""
 
 #: ../manage/overviews.rst:53
 msgid ""
-"Shared organization is a setting in the organisations-management. See :doc:"
-"`organizations` for more information."
+"Shared organization is a setting in the organization management. See :doc:`/"
+"manage/organizations/index` for more information."
 msgstr ""
 
 #: ../manage/overviews.rst:56
@@ -5613,7 +5955,7 @@ msgid "``admin.integration``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:60
-msgid ":doc:`System > Integrations </system/integrations>`"
+msgid ":doc:`System > Integrations </system/integrations/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:0
@@ -5676,7 +6018,7 @@ msgid "``admin.organization``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:73
-msgid ":doc:`Manage > Organizations </manage/organizations>`"
+msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:75
@@ -6112,7 +6454,7 @@ msgstr ""
 #: ../manage/roles/index.rst:30
 msgid ""
 "Syncing your LDAP “groups” to Zammad roles can make access management *way* "
-"easier. To learn more, see :doc:`/system/integrations/ldap`."
+"easier. To learn more, see :doc:`/system/integrations/ldap/index`."
 msgstr ""
 
 #: ../manage/roles/index.rst:37
@@ -6505,7 +6847,7 @@ msgid ""
 "actions configured in step 5 are to be performed."
 msgstr ""
 
-#: ../manage/scheduler.rst:52 ../manage/slas/how-do-they-work.rst:26
+#: ../manage/scheduler.rst:52 ../manage/slas/how-do-they-work.rst:35
 msgid "Preview"
 msgstr ""
 
@@ -6609,134 +6951,141 @@ msgid ""
 "perform those changes outside of your business hours."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:19
+#: ../manage/slas/how-do-they-work.rst:20
+msgid ""
+"Communication type articles are not enough for your SLA? You can also "
+"configure Zammad to allow **public** notes as fulfillment for SLA "
+"requirements, `our console documentation`_ tells you how."
+msgstr ""
+
+#: ../manage/slas/how-do-they-work.rst:28
 msgid "Give your SLA a meaningful name to quickly see what or who is affected."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:22
+#: ../manage/slas/how-do-they-work.rst:31
 msgid "Ticket selector"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:22
+#: ../manage/slas/how-do-they-work.rst:31
 msgid "Specify the conditions on which tickets this SLA should apply to."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:25
+#: ../manage/slas/how-do-they-work.rst:34
 msgid ""
 "In the preview you see the selection of the tickets and double check whether "
 "those are correct."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:33
+#: ../manage/slas/how-do-they-work.rst:42
 msgid "Calendar"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:29
+#: ../manage/slas/how-do-they-work.rst:38
 msgid ""
 "Zammad calculates ticket escalations based on your business hours. It makes "
 "no sense to escalate tickets when you're not in."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:32
+#: ../manage/slas/how-do-they-work.rst:41
 msgid ""
 "Choose the correct calendar here. If you haven't set your business hours "
 "yet, see :doc:`/manage/calendars` to learn more."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:90
+#: ../manage/slas/how-do-they-work.rst:99
 msgid "SLA Times"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:36
+#: ../manage/slas/how-do-they-work.rst:45
 msgid ""
 "Define the escalation timings based on your working hours. Keep in mind that "
 "if you defined 8 hour business hours per day, a 16 hour escalation will take "
 "two business days."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:48
+#: ../manage/slas/how-do-they-work.rst:57
 msgid "First Response"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:41
+#: ../manage/slas/how-do-they-work.rst:50
 msgid ""
 "Time frame for the first response (external call, email). This time is "
 "calculated from the ticket creation."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:46
+#: ../manage/slas/how-do-they-work.rst:55
 msgid ""
 "The start time *does not* reset if you're e.g. moving the ticket into new "
 "groups or different SLA calculations. That is because the creation time of "
 "the ticket does not change - keep this in mind."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:66
+#: ../manage/slas/how-do-they-work.rst:75
 msgid "Update Time"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:51
+#: ../manage/slas/how-do-they-work.rst:60
 msgid ""
 "Time frame for every following response (external call, email). This time "
 "either counts from ticket creation (if no first response is set) or *after* "
 "the first response was done."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:62
+#: ../manage/slas/how-do-they-work.rst:71
 msgid "between agent updates"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:56
+#: ../manage/slas/how-do-they-work.rst:65
 msgid ""
 "In this scenario your agent have to respond every ``n`` hours depending on "
 "your configuration. This causes Zammad to not care if your customer replied "
 "or not."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:62
+#: ../manage/slas/how-do-they-work.rst:71
 msgid "This setting can be quiet stressful for your agents."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:66
+#: ../manage/slas/how-do-they-work.rst:75
 msgid "for an agent to respond"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:65
+#: ../manage/slas/how-do-they-work.rst:74
 msgid ""
 "From the moment your customer replied to the ticket, your agents have the "
 "configured time amount to respond until the ticket escalates."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:75
+#: ../manage/slas/how-do-they-work.rst:84
 msgid "Solution Time"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:69
+#: ../manage/slas/how-do-they-work.rst:78
 msgid ""
 "Time frame for solving the problem (setting the ticket to a closed state "
 "type)."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:74
+#: ../manage/slas/how-do-they-work.rst:83
 msgid ""
 "This escalation timing *does not* care about ticket responses. It's being "
 "calculated from the ticket creation."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:77
+#: ../manage/slas/how-do-they-work.rst:86
 msgid ""
 "It is up to you if you set one, two or all three times. When the SLA time is "
 "reached, the ticket escalates."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:82
+#: ../manage/slas/how-do-they-work.rst:91
 msgid ""
 "*First response* and *Solution time* can only apply once. Update time "
 "applies until the ticket has been solved or the SLA no longer matches your "
 "criteria."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:86
+#: ../manage/slas/how-do-they-work.rst:95
 msgid ""
 "The only way to stop escalations in default installations is to set the "
 "ticket to either a pending reminder or pending close. **However**: as soon "
@@ -6744,26 +7093,26 @@ msgid ""
 "ticket may instantly escalate depending on its age and your configuration."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:94
+#: ../manage/slas/how-do-they-work.rst:103
 msgid ""
 "Ticket escalations will notify all affected agents. This highly depends on "
 "their chosen notification settings (Profile). Escalated tickets can also be "
 "filtered for:"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:98
+#: ../manage/slas/how-do-they-work.rst:107
 msgid "by searching"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:99
+#: ../manage/slas/how-do-they-work.rst:108
 msgid ":doc:`/manage/trigger`"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:100
+#: ../manage/slas/how-do-they-work.rst:109
 msgid ":doc:`/manage/scheduler`"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:101
+#: ../manage/slas/how-do-they-work.rst:110
 msgid ":doc:`/manage/overviews`"
 msgstr ""
 
@@ -7317,47 +7666,234 @@ msgstr ""
 msgid "Import of text modules via CSV file"
 msgstr ""
 
+#: ../manage/text-modules.rst:95
+msgid ""
+"With the import action (since Zammad 2.5) you can download a sample CSV file "
+"and upload your own CSV file."
+msgstr ""
+
+#: ../manage/text-modules.rst:98
+msgid ""
+"To reduce the error rate of unwanted mass changes, a test import is carried "
+"out first and a summary appears at the end. If you agree with the summary, "
+"the CSV import will be executed."
+msgstr ""
+
 #: ../manage/time-accounting.rst:2
 msgid "Time Accounting"
 msgstr ""
 
 #: ../manage/time-accounting.rst:4
 msgid ""
-"If you want to know how much time you need for your each project, you can "
+"If you want to know how much time you need for your each project or ticket, "
 "enable time accounting (turn on the switch on the top left side of the page)."
 msgstr ""
 
-#: ../manage/time-accounting.rst:7
-msgid ""
-"It can be set for which tickets the time accounting is activated - that "
-"means for which tickets you can enter, how much time was needed. It's "
-"possible to set multiple conditions (these can also be arbitrarily combined "
-"and thus specified):"
+#: ../manage/time-accounting.rst:None
+msgid "Time accounting management page in Zammad"
+msgstr ""
+
+#: ../manage/time-accounting.rst:11
+msgid "How it works"
 msgstr ""
 
 #: ../manage/time-accounting.rst:13
 msgid ""
-"For all set cases (in this example, this is for each \"Update\" of tickets "
-"that are not closed and in the group 'Sales') the following field appears "
-"for entering the invested time:"
+"Zammads time accounting uses ticket selectors (filters) to check if a ticket "
+"is applicable for time accounting or not. If a ticket applies for "
+"accounting, Zammad will request the agent to provide how much time was "
+"needed to process the current ticket step."
 msgstr ""
 
-#: ../manage/time-accounting.rst:19
+#: ../manage/time-accounting.rst:20
 msgid ""
-"In the admin area there are different possibilities to get an overview of "
-"the accounted times."
+"In order for Zammad to bring up the time accounting dialogue to an agent, "
+"the agent has to update the ticket together with any article type. The "
+"article part is mandatory."
 msgstr ""
 
-#: ../manage/time-accounting.rst:22
+#: ../manage/time-accounting.rst:24
 msgid ""
-"There is a monthly overview for all counted times. By clicking on the "
-"desired year and month you can see all corresponding tickets:"
+"However, the time accounting dialogue is not mandatory and can be cancelled "
+"by your agents if needed. You cannot enforce time accounting."
 msgstr ""
 
 #: ../manage/time-accounting.rst:27
 msgid ""
-"The tickets can be arranged according to customers and organization. All "
-"views can be downloaded as a CSV file (click on the down arrow)."
+"If a ticket no longer applies for time accounting, the already accounted "
+"time is not lost."
+msgstr ""
+
+#: ../manage/time-accounting.rst:32
+msgid ""
+"The selector applies to the ticket state before any attribute changes have "
+"been saved. That means if your agent is e.g. going to close a ticket "
+"alongside writing an article, the ticket selector has to match the ticket "
+"state before closing for the time accounting dialog to appear."
+msgstr ""
+
+#: ../manage/time-accounting.rst:None
+msgid "Time accounting ticket selectors"
+msgstr ""
+
+#: ../manage/time-accounting.rst:42
+msgid "Reviewing accounted time"
+msgstr ""
+
+#: ../manage/time-accounting.rst:44
+msgid ""
+"Below the selector configuration, Zammad provides an accounted time section "
+"which will contain all accounted times for your tickets. Accounted times are "
+"displayed per years and months."
+msgstr ""
+
+#: ../manage/time-accounting.rst:0
+msgid "Having tickets that are overlapping several months?"
+msgstr ""
+
+#: ../manage/time-accounting.rst:0
+msgid ""
+"No problem! Zammad provides *time units* and *time units total* to allow "
+"partial billing."
+msgstr ""
+
+#: ../manage/time-accounting.rst:60
+msgid "Select the right month"
+msgstr ""
+
+#: ../manage/time-accounting.rst:55
+msgid ""
+"Usually you want to bill accounted time of other months than the current "
+"one. Just select the relevant year and month to receive the accounted times "
+"and ticket information"
+msgstr ""
+
+#: ../manage/time-accounting.rst:0
+msgid "Screenshot showing a selection for year and month on time accounting"
+msgstr ""
+
+#: ../manage/time-accounting.rst:133
+msgid "Tickets and their accounted time"
+msgstr ""
+
+#: ../manage/time-accounting.rst:63
+msgid ""
+"Zammad allows you to receive the accounted information just like you need "
+"them. For this you currently have four options to view and also download the "
+"relevant data as CSV."
+msgstr ""
+
+#: ../manage/time-accounting.rst:67
+msgid ""
+"To download the CSV data, use the arrow down ⇩ right next to each heading (e."
+"g. \"Ticket\")."
+msgstr ""
+
+#: ../manage/time-accounting.rst:72
+msgid "🤓 Of course you can also automate this with API calls."
+msgstr ""
+
+#: ../manage/time-accounting.rst:87
+msgid "Activity"
+msgstr ""
+
+#: ../manage/time-accounting.rst:75
+msgid ""
+"This filter works similar to the ticket filter, with one exception: You'll "
+"find each *individual* time accounting step of your agents. This is what "
+"you'd also see in the tickets history before Zammad 5.2."
+msgstr ""
+
+#: ../manage/time-accounting.rst:79 ../manage/time-accounting.rst:92
+#: ../manage/time-accounting.rst:113
+msgid "In this list you'll see the following ticket information:"
+msgstr ""
+
+#: ../manage/time-accounting.rst:81 ../manage/time-accounting.rst:94
+#: ../settings/ticket.rst:71
+msgid "Number"
+msgstr ""
+
+#: ../manage/time-accounting.rst:83 ../manage/time-accounting.rst:96
+#: ../manage/time-accounting.rst:117 ../manage/time-accounting.rst:115
+msgid "Customer"
+msgstr ""
+
+#: ../manage/time-accounting.rst:84 ../manage/time-accounting.rst:97
+#: ../manage/time-accounting.rst:116
+msgid "Organization of customer (if applicable)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:85
+msgid "Agent that accounted the time"
+msgstr ""
+
+#: ../manage/time-accounting.rst:86 ../manage/time-accounting.rst:99
+#: ../manage/time-accounting.rst:117
+msgid "Time units accounted in the current month"
+msgstr ""
+
+#: ../manage/time-accounting.rst:87 ../manage/time-accounting.rst:101
+#: ../manage/webhook/log.rst:34
+msgid "Created at"
+msgstr ""
+
+#: ../manage/time-accounting.rst:106 ../settings/ticket.rst:2
+#: ../system/variables/ticket.rst:2
+msgid "Ticket"
+msgstr ""
+
+#: ../manage/time-accounting.rst:90
+msgid "This filter contains all relevant tickets from the selected month."
+msgstr ""
+
+#: ../manage/time-accounting.rst:98
+msgid "Agent currently assigned (ticket owner)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:100
+msgid "Time units total (time accounted during ticket life)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:102
+msgid "Closed at (if applicable)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:106
+msgid "The CSV file of this filter provides all ticket meta information."
+msgstr ""
+
+#: ../manage/time-accounting.rst:109
+msgid ""
+"This provides you a per user filter on accounted time units. Each user has a "
+"total of time accounted in the current month (over all applicable tickets)."
+msgstr ""
+
+#: ../manage/time-accounting.rst:127 ../settings/branding.rst:13
+#: ../system/objects/permissions.rst:54
+msgid "Organization"
+msgstr ""
+
+#: ../manage/time-accounting.rst:120
+msgid ""
+"This provides a list of all organizations where customers have caused "
+"accounted time in that month."
+msgstr ""
+
+#: ../manage/time-accounting.rst:125
+msgid ""
+"You can also see entries for customers that are part of an primary "
+"organization. Users without organization can be found in the Customer filter."
+msgstr ""
+
+#: ../manage/time-accounting.rst:0
+msgid "Time accounting view with time accounted filters"
+msgstr ""
+
+#: ../manage/time-accounting.rst:133
+msgid ""
+"Each heading allows you to download the CSV versions of the provided view "
+"via the downwards arrow."
 msgstr ""
 
 #: ../manage/trigger.rst:2
@@ -7618,6 +8154,7 @@ msgstr ""
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/elasticsearch.rst:25
+#: ../system/integrations/ldap/index.rst:31
 #: ../system/integrations/smime/prerequisites.rst:32
 msgid "Limitations"
 msgstr ""
@@ -7756,23 +8293,11 @@ msgid ""
 msgstr ""
 
 #: ../manage/users/index.rst:17
-msgid "via the Admin Panel"
-msgstr ""
-
-#: ../manage/users/index.rst:17
-msgid "via CSV import"
-msgstr ""
-
-#: ../manage/users/index.rst:17
 msgid "via LDAP/Active Directory integration"
 msgstr ""
 
 #: ../manage/users/index.rst:17
 msgid "via Exchange integration"
-msgstr ""
-
-#: ../manage/users/index.rst:17
-msgid "via REST API"
 msgstr ""
 
 #: ../manage/users/index.rst:2
@@ -7784,10 +8309,6 @@ msgid ""
 "Depending on your organization’s IT capabilities, users can be managed "
 "individually or in bulk, or even synchronized with third-party directory "
 "services."
-msgstr ""
-
-#: ../manage/users/index.rst:13
-msgid "Creating and editing users directly in the Admin Panel"
 msgstr ""
 
 #: ../manage/users/index.rst:13
@@ -7844,10 +8365,6 @@ msgstr ""
 msgid "User details can be set in the **New/Edit User** dialog."
 msgstr ""
 
-#: ../manage/users/index.rst:57
-msgid "🕵️ **Admins aren’t the only ones who can change these settings.**"
-msgstr ""
-
 #: ../manage/users/index.rst:59
 msgid ""
 "In most cases, agents can, too (using the `new ticket dialog`_, `search "
@@ -7902,10 +8419,10 @@ msgstr ""
 
 #: ../manage/users/index.rst:93
 msgid ""
-":doc:`/manage/organizations` are a way to group customers together (usually, "
-"members of the same company). This allows you to do things like view all "
-"tickets for that company or set up special :doc:`/manage/trigger` that fire "
-"only for those customers."
+":doc:`/manage/organizations/index` are a way to group customers together "
+"(usually, members of the same company). This allows you to do things like "
+"view all tickets for that company or set up special :doc:`/manage/trigger` "
+"that fire only for those customers."
 msgstr ""
 
 #: ../manage/users/index.rst:98
@@ -7917,11 +8434,43 @@ msgstr ""
 msgid "To add one, go to **Manage > Organizations** in the Admin Panel."
 msgstr ""
 
-#: ../manage/users/index.rst:114
-msgid "👑 VIP"
+#: ../manage/users/index.rst:120
+msgid "🏤 Secondary Organizations"
 msgstr ""
 
 #: ../manage/users/index.rst:104
+msgid ""
+"This option allows you to assign more organizations, in addition to the "
+"user's primary organization."
+msgstr ""
+
+#: ../manage/users/index.rst:107
+msgid ""
+"Secondary organizations behave the same like the primary ones with one "
+"exception: Secondaries are not as highlighted like their primaries."
+msgstr ""
+
+#: ../manage/users/index.rst:112
+msgid ""
+"Listings for all organizational tickets are not affected by this. Zammad "
+"will mix primary and secondary organization tickets together."
+msgstr ""
+
+#: ../manage/users/index.rst:117
+msgid ""
+"While the number of secondary organizations is not limited directly, you may "
+"want to keep this to a reasonable number of organizations."
+msgstr ""
+
+#: ../manage/users/index.rst:120
+msgid "30-40 organizations at maximum *should* be good enough."
+msgstr ""
+
+#: ../manage/users/index.rst:133
+msgid "👑 VIP"
+msgstr ""
+
+#: ../manage/users/index.rst:123
 msgid ""
 "This flag is a way for your team to indicate high-status customers. Just as "
 "with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/"
@@ -7933,55 +8482,39 @@ msgstr ""
 msgid "Ticket view showing a VIP user’s avatar with a crown on it"
 msgstr ""
 
-#: ../manage/users/index.rst:114
+#: ../manage/users/index.rst:133
 msgid "VIPs are displayed with a crown above their avatars."
 msgstr ""
 
-#: ../manage/users/index.rst:124
-msgid "📑 Note"
-msgstr ""
-
-#: ../manage/users/index.rst:117
-msgid "Notes are visible to all staff members, **including agents**."
-msgstr ""
-
-#: ../manage/users/index.rst:119
+#: ../manage/users/index.rst:138
 msgid ""
 "😵 **Are you using the Note field to keep track of your own “custom” user "
 "attributes?**"
 msgstr ""
 
-#: ../manage/users/index.rst:122
+#: ../manage/users/index.rst:141
 msgid "Wish you could add your own fields to the New/Edit User dialog?"
 msgstr ""
 
-#: ../manage/users/index.rst:124
-msgid "You can! To learn more, see :doc:`/system/objects`."
-msgstr ""
-
-#: ../manage/users/index.rst:145
-msgid "▶️ Active"
-msgstr ""
-
-#: ../manage/users/index.rst:127
+#: ../manage/users/index.rst:146
 msgid ""
 "Disabling this flag is a soft alternative to deleting a user. So what’s the "
 "difference?"
 msgstr ""
 
-#: ../manage/users/index.rst:130
+#: ../manage/users/index.rst:149
 msgid ""
 "There is no way to restore a deleted user; inactive users can be reactivated "
 "at any time."
 msgstr ""
 
-#: ../manage/users/index.rst:133
+#: ../manage/users/index.rst:152
 msgid ""
 "When a user is deleted, all their associated tickets are lost, as well; "
 "deactivating a user keeps all associated tickets intact."
 msgstr ""
 
-#: ../manage/users/index.rst:136
+#: ../manage/users/index.rst:155
 msgid "Inactive users still appear in search results:"
 msgstr ""
 
@@ -7989,29 +8522,29 @@ msgstr ""
 msgid "An inactive user displayed in a customer search list"
 msgstr ""
 
-#: ../manage/users/index.rst:142
+#: ../manage/users/index.rst:161
 msgid ""
 "A slashed-out 👤 icon indicates an inactive user. In other cases, inactive "
 "users are greyed out."
 msgstr ""
 
-#: ../manage/users/index.rst:171
+#: ../manage/users/index.rst:190
 msgid "🔓 Permissions"
 msgstr ""
 
-#: ../manage/users/index.rst:148
+#: ../manage/users/index.rst:167
 msgid ""
 "Under this heading, you can manage two separate (but related) user details:"
 msgstr ""
 
-#: ../manage/users/index.rst:150
+#: ../manage/users/index.rst:169
 msgid ""
 ":doc:`/manage/roles/index` dictate what users can do in the system. If you "
 "need to grant someone privileges to edit the knowledge base or access part "
 "of the admin panel, roles are the answer."
 msgstr ""
 
-#: ../manage/users/index.rst:154
+#: ../manage/users/index.rst:173
 msgid ""
 ":doc:`/manage/groups/access-levels` dictate which tickets an agent can work "
 "with. If someone’s not receiving notifications for incoming tickets or can’t "
@@ -8022,40 +8555,25 @@ msgstr ""
 msgid "Permissions in the edit user dialog"
 msgstr ""
 
-#: ../manage/users/index.rst:165
+#: ../manage/users/index.rst:184
 msgid ""
 "**Top:** A user’s roles decide what kinds of actions they can perform and "
 "which :doc:`groups </manage/groups/index>` they belong to. **Bottom:** Group "
 "assignments can alternately be set on a per-user basis."
 msgstr ""
 
-#: ../manage/users/index.rst:169
+#: ../manage/users/index.rst:188
 msgid "**🤔 Huh? I don’t see the group access table...**"
 msgstr ""
 
-#: ../manage/users/index.rst:171
+#: ../manage/users/index.rst:190
 msgid ""
 "The group access table is only visible in **agent profiles**, when there is "
 "**more than one active group** in the system."
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:2
-msgid "Managing Users via CSV Import"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:4
-msgid ""
-"If your organization has information about customers (or personnel) already "
-"stored in a directory system that can export to CSV, you can batch-import "
-"them into Zammad in just three steps."
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:12
-msgid "The CSV import dialog"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:12
-msgid "Use the **Import** button to open the CSV import dialog."
+msgid "Managing users via CSV Import"
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:16
@@ -8063,11 +8581,7 @@ msgid ""
 "CSV import provides one-off batch processing of user records. For "
 "persistent, automated user synchronization, consider integration with a "
 "third-party directory system like :doc:`LDAP / Active Directory </system/"
-"integrations/ldap>` or :doc:`Exchange </system/integrations/exchange>`."
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:23
-msgid "Step 1: Inspect the Sample .csv"
+"integrations/ldap/index>` or :doc:`Exchange </system/integrations/exchange>`."
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:25
@@ -8077,35 +8591,11 @@ msgid ""
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:30
-msgid "Step 2: Export Your User Data to .csv"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:32
-msgid ""
-"Prepare your .csv file according to the format found in Step 1 above. Note "
-"that:"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:34
-msgid "the ``id`` attribute (column) should be left blank or removed entirely;"
+msgid "Step 2: Export your user data to .csv"
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:35
 msgid "the ``firstname`` and ``lastname`` attributes are **required**; and"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:36
-msgid ""
-"any others may be safely omitted as long as each row has the same number of "
-"fields (commas)."
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:39
-msgid "For instance:"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:48
-msgid "Step 3: Import Your .csv to Zammad"
 msgstr ""
 
 #: ../manage/users/via-csv-import.rst:50
@@ -8114,44 +8604,18 @@ msgid ""
 "to compute the number of affected records:"
 msgstr ""
 
-#: ../manage/users/via-csv-import.rst:58
-msgid "CSV import test run and confirmation dialog"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:58
-msgid "CSV import always begins with a preview / test run."
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:60
-msgid "🤔 **How does it know when to create new records and when to update?**"
-msgstr ""
-
 #: ../manage/users/via-csv-import.rst:62
 msgid ""
 "Records are updated when the imported data contains an ``email`` or "
 "``login`` that matches an existing user account."
 msgstr ""
 
-#: ../manage/users/via-csv-import.rst:65
-msgid ""
-"Click **Yes, start real import** to proceed. (If you’re importing a lot of "
-"records, be patient—it may take a minute.)"
-msgstr ""
-
-#: ../manage/users/via-csv-import.rst:68
-msgid "That’s it! 🎉🎉🎉"
-msgstr ""
-
 #: ../manage/users/via-the-admin-panel.rst:2
-msgid "Managing Users via the Admin Panel"
+msgid "Managing users via the admin panel"
 msgstr ""
 
 #: ../manage/users/via-the-admin-panel.rst:4
 msgid "The “Users” panel provides tools to manually manage user accounts."
-msgstr ""
-
-#: ../manage/users/via-the-admin-panel.rst:15
-msgid "👥 Creating and editing users"
 msgstr ""
 
 #: ../manage/users/via-the-admin-panel.rst:0
@@ -8175,18 +8639,6 @@ msgstr ""
 
 #: ../manage/users/via-the-admin-panel.rst:0
 msgid "Screencast showing a user being selected for deletion."
-msgstr ""
-
-#: ../manage/users/via-the-admin-panel.rst:22
-msgid "Use the ⋮ **Actions** menu to open the **Delete User** dialog."
-msgstr ""
-
-#: ../manage/users/via-the-admin-panel.rst:24
-msgid "💥 **Deleting a customer destroys all their associated tickets!**"
-msgstr ""
-
-#: ../manage/users/via-the-admin-panel.rst:26
-msgid "To learn more, see :doc:`/system/data-privacy`."
 msgstr ""
 
 #: ../manage/users/via-the-admin-panel.rst:46
@@ -8523,10 +8975,6 @@ msgstr ""
 msgid "Contains the remotes response header."
 msgstr ""
 
-#: ../manage/webhook/log.rst:34
-msgid "Created at"
-msgstr ""
-
 #: ../manage/webhook/log.rst:35
 msgid "Date and time the request was sent."
 msgstr ""
@@ -8773,10 +9221,6 @@ msgstr ""
 
 #: ../settings/branding.rst:10
 msgid "Default value: ``Zammad Helpdesk``"
-msgstr ""
-
-#: ../settings/branding.rst:13 ../system/objects/permissions.rst:54
-msgid "Organization"
 msgstr ""
 
 #: ../settings/branding.rst:13
@@ -9593,7 +10037,7 @@ msgstr ""
 msgid ""
 "Zammads Microsoft connection allows your users with Microsoft accounts to "
 "login. This works for Azure users as well and can be an alternative to :doc:"
-"`/system/integrations/ldap`."
+"`/system/integrations/ldap/index`."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:8
@@ -10134,51 +10578,34 @@ msgstr ""
 msgid "Frontend"
 msgstr ""
 
-#: ../settings/system/frontend.rst:13
-msgid "Send client stats"
-msgstr ""
-
-#: ../settings/system/frontend.rst:5
-msgid ""
-"Send client stats/error message to central server to improve the usability."
-msgstr ""
-
-#: ../settings/system/frontend.rst:7 ../settings/system/frontend.rst:18
-#: ../settings/system/frontend.rst:39
-msgid "Default: ``no`` (inactive)"
-msgstr ""
-
-#: ../settings/system/frontend.rst:11
-msgid ""
-"This sends logging to our central logging server. Log files of Zammad can "
-"contain *very sensitive* data like email addresses and other. **Do not** "
-"enable this option unless we're asking you to."
-msgstr ""
-
-#: ../settings/system/frontend.rst:18
+#: ../settings/system/frontend.rst:7
 msgid "Client storage"
 msgstr ""
 
-#: ../settings/system/frontend.rst:16
+#: ../settings/system/frontend.rst:5
 msgid "Use client storage to cache data to enhance performance of application."
 msgstr ""
 
-#: ../settings/system/frontend.rst:38
+#: ../settings/system/frontend.rst:7 ../settings/system/frontend.rst:28
+msgid "Default: ``no`` (inactive)"
+msgstr ""
+
+#: ../settings/system/frontend.rst:27
 msgid "Core Workflow Ajax Mode"
 msgstr ""
 
-#: ../settings/system/frontend.rst:23
+#: ../settings/system/frontend.rst:12
 msgid ""
 "This setting allows administrators to enforce :doc:`/system/core-workflows` "
 "to use Ajax-Calls instead of web sockets. You'll usually only need this if "
 "you experience serious issues as noted below."
 msgstr ""
 
-#: ../settings/system/frontend.rst:27
+#: ../settings/system/frontend.rst:16
 msgid "**🤓 Possible (technical) reasons**"
 msgstr ""
 
-#: ../settings/system/frontend.rst:29
+#: ../settings/system/frontend.rst:18
 msgid ""
 "In some cases, your network structure (e.g. firewalls, proxies) may "
 "disconnect long web socket connections. This leads to select fields staying "
@@ -10187,7 +10614,7 @@ msgid ""
 "till\" field not showing / hiding)."
 msgstr ""
 
-#: ../settings/system/frontend.rst:35
+#: ../settings/system/frontend.rst:24
 msgid ""
 "Please keep in mind that the Ajax fallback may cause serious pressure on "
 "your application server. If you have the choice stick to web sockets."
@@ -10363,10 +10790,6 @@ msgid ""
 "use."
 msgstr ""
 
-#: ../settings/ticket.rst:2 ../system/variables/ticket.rst:2
-msgid "Ticket"
-msgstr ""
-
 #: ../settings/ticket.rst:6
 msgid ""
 "Additional settings for the ticket composer interface can be found in the :"
@@ -10487,10 +10910,6 @@ msgstr ""
 
 #: ../settings/ticket.rst:67
 msgid "Last contact value used on :doc:`/manage/trigger`"
-msgstr ""
-
-#: ../settings/ticket.rst:71
-msgid "Number"
 msgstr ""
 
 #: ../settings/ticket.rst:90
@@ -11064,19 +11483,20 @@ msgid ""
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:21
-msgid "Category (Tree-Select, not mandatory, agents only)"
+msgid "Category (Single tree selection field, not mandatory, agents only)"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:22
-msgid "Approved (Boolean, not mandatory, not shown, ``false`` as default)"
+msgid ""
+"Approved (Boolean field, not mandatory, not shown, ``false`` as default)"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:23
-msgid "Operating System (Text, not mandatory, not shown)"
+msgid "Operating System (Text field, not mandatory, not shown)"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:24
-msgid "Software used (Select, not mandatory, not shown)"
+msgid "Software used (Single selection field, not mandatory, not shown)"
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:67
@@ -11501,73 +11921,6 @@ msgid ""
 "identity."
 msgstr ""
 
-#: ../system/integrations.rst:2
-msgid "Integrations"
-msgstr ""
-
-#: ../system/integrations.rst:4
-msgid ""
-"Zammad offers numerous integrations that add rich features to your instance."
-msgstr ""
-
-#: ../system/integrations.rst:6
-msgid "We're still working on this part of our documentation, stay tight!"
-msgstr ""
-
-#: ../system/integrations.rst:10
-msgid "Integrations for phone systems"
-msgstr ""
-
-#: ../system/integrations.rst:14
-msgid ""
-"Your VoIP provider or telephony system is not listed? Possibly your provider "
-"supports Zammad by using the generic CTI - if you're unsure ask your "
-"provider."
-msgstr ""
-
-#: ../system/integrations.rst:18
-msgid ""
-"Provider does not support Zammad? `Consider creating a feature request in "
-"the Zammad Community`_."
-msgstr ""
-
-#: ../system/integrations.rst:33
-msgid "Integrations for authentication and customers"
-msgstr ""
-
-#: ../system/integrations.rst:45
-msgid "Integrations for Monitoring Systems"
-msgstr ""
-
-#: ../system/integrations.rst:47
-msgid "This section currently misses the following integrations:"
-msgstr ""
-
-#: ../system/integrations.rst:49
-msgid "Icinga"
-msgstr ""
-
-#: ../system/integrations.rst:50
-msgid "Monit"
-msgstr ""
-
-#: ../system/integrations.rst:51
-msgid "Nagios"
-msgstr ""
-
-#: ../system/integrations.rst:61
-msgid "Integrations for Issue Trackers"
-msgstr ""
-
-#: ../system/integrations.rst:71
-msgid "Other Integrations"
-msgstr ""
-
-#: ../system/integrations.rst:73
-msgid ""
-"This section will hold any other integration that can't be grouped up (yet)."
-msgstr ""
-
 #: ../system/integrations/checkmk/admin-panel-reference.rst:2
 msgid "Admin Panel Reference"
 msgstr ""
@@ -11618,6 +11971,7 @@ msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:38
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
+#: ../system/integrations/ldap/index.rst:77
 msgid "Recent Logs"
 msgstr ""
 
@@ -12159,7 +12513,7 @@ msgstr ""
 #: ../system/integrations/clearbit.rst:47
 msgid ""
 "If you're unsure what option to choose, better stick with \"no\". You can "
-"also learn more about :doc:`/manage/organizations`."
+"also learn more about :doc:`/manage/organizations/index`."
 msgstr ""
 
 #: ../system/integrations/clearbit.rst:52
@@ -13584,68 +13938,358 @@ msgstr ""
 msgid "``https://your.zammad.domain``"
 msgstr ""
 
-#: ../system/integrations/ldap.rst:2
+#: ../system/integrations/index.rst:2
+msgid "Integrations"
+msgstr ""
+
+#: ../system/integrations/index.rst:4
+msgid ""
+"Zammad offers numerous integrations that add rich features to your instance."
+msgstr ""
+
+#: ../system/integrations/index.rst:6
+msgid "We're still working on this part of our documentation, stay tight!"
+msgstr ""
+
+#: ../system/integrations/index.rst:10
+msgid "Integrations for phone systems"
+msgstr ""
+
+#: ../system/integrations/index.rst:14
+msgid ""
+"Your VoIP provider or telephony system is not listed? Possibly your provider "
+"supports Zammad by using the generic CTI - if you're unsure ask your "
+"provider."
+msgstr ""
+
+#: ../system/integrations/index.rst:18
+msgid ""
+"Provider does not support Zammad? `Consider creating a feature request in "
+"the Zammad Community`_."
+msgstr ""
+
+#: ../system/integrations/index.rst:33
+msgid "Integrations for authentication and customers"
+msgstr ""
+
+#: ../system/integrations/index.rst:45
+msgid "Integrations for Monitoring Systems"
+msgstr ""
+
+#: ../system/integrations/index.rst:47
+msgid "This section currently misses the following integrations:"
+msgstr ""
+
+#: ../system/integrations/index.rst:49
+msgid "Icinga"
+msgstr ""
+
+#: ../system/integrations/index.rst:50
+msgid "Monit"
+msgstr ""
+
+#: ../system/integrations/index.rst:51
+msgid "Nagios"
+msgstr ""
+
+#: ../system/integrations/index.rst:61
+msgid "Integrations for Issue Trackers"
+msgstr ""
+
+#: ../system/integrations/index.rst:71
+msgid "Other Integrations"
+msgstr ""
+
+#: ../system/integrations/index.rst:73
+msgid ""
+"This section will hold any other integration that can't be grouped up (yet)."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:2
 msgid "LDAP / Active Directory"
 msgstr ""
 
-#: ../system/integrations/ldap.rst:4
+#: ../system/integrations/ldap/index.rst:4
 msgid ""
-"With our LDAP integration, you can easily use existing authentication "
-"systems without having to update more than one source. Also, e.g. password "
-"policies are ensured by your LDAP source - Zammad will always contact your "
-"LDAP server for authentications."
+"Zammad comes with a powerful LDAP integration that allows you to have a "
+"single source of truth. By this you reduce the number of login credentials "
+"your user has to remember."
 msgstr ""
 
-#: ../system/integrations/ldap.rst:7
+#: ../system/integrations/ldap/index.rst:10
 msgid ""
-"The LDAP sync is one way: LDAP => Zammad. Changes to your users inside of "
-"Zammad might be overwritten by the LDAP Sync."
+"The LDAP source is also a perfect candidate for Zammads `Kerberos Single "
+"Sign-On`_ but also works as addition to other :doc:`/settings/security/third-"
+"party`."
 msgstr ""
 
-#: ../system/integrations/ldap.rst:10
-msgid ""
-"To configure LDAP integration, simply go to System -> Integrations -> LDAP "
-"in the admin panel. Press \"change\" and follow the wizard for adding the "
-"needed LDAP information to Zammad. On the last step Zammad will ask you for "
-"your wanted LDAP mapping. By default, Zammad only Maps Login, First- and "
-"Lastname. Technically you can map any LDAP object to a Zammad user object "
-"(this also works for Custom Objects!)."
+#: ../system/integrations/ldap/index.rst:None
+msgid "Zammands LDAP management page"
 msgstr ""
 
-#: ../system/integrations/ldap.rst:15
-msgid ""
-"On this wizard step, you can also define the wanted LDAP-group-to-Zammad-"
-"role mapping."
+#: ../system/integrations/ldap/index.rst:28
+msgid "📝 :doc:`manage`"
 msgstr ""
 
-#: ../system/integrations/ldap.rst:17
-msgid "Please note that nested groups are currently not supported by Zammad."
+#: ../system/integrations/ldap/index.rst:28
+msgid "Add, modify, remove or re-arrange your LDAP-Sources as needed."
 msgstr ""
 
-#: ../system/integrations/ldap.rst:19
-msgid ""
-"If needed, you can also change the user filter for your LDAP query. The "
-"option \"Users without assigned LDAP groups\" will by default assign the "
-"*customer* role (default sign-up role) to any LDAP user, that doesn't match "
-"to the above role mapping. After pressing Continue, Zammad will check if the "
-"configuration is okay. You can then enable LDAP and start your first sync. "
-"The sync will then run hourly - if you need to change mappings, you can "
-"change the configuration at any time."
+#: ../system/integrations/ldap/index.rst:33
+msgid "Before you continue, please note the following limitations."
 msgstr ""
 
-#: ../system/integrations/ldap.rst:25
-msgid ""
-"You can use user filters to limit the search results Zammad gets. Also, you "
-"can hide deactivated Active Directory accounts (the users will be set to "
-"inactive within Zammad). You can find further information for Active "
-"Directory Filters at the Website from Microsoft_."
+#: ../system/integrations/ldap/index.rst:35
+msgid "Mapping / Synchronizing organizations is not possible"
 msgstr ""
 
-#: ../system/integrations/ldap.rst:30
+#: ../system/integrations/ldap/index.rst:39
 msgid ""
-"After the sync has finished, you can find the new LDAP users under \"Users"
-"\". Zammad integrates them just normal users, the difference is the login "
-"name."
+"You may want to consider using domain based assignments to overcome this "
+"issue. Learn more on :doc:`/manage/organizations/index`."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:42
+msgid ""
+"Zammads LDAP sync is one way. Editing user settings or permissions may be "
+"overwritten upon the next sync depending on your configuration."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:44
+msgid "Nested groups are not supported."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:45
+msgid "Synchronizing user avatars from LDAP is not supported."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:46
+msgid "Unlike user filters, group filters cannot be changed."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:47
+msgid ""
+"When a user originates from an LDAP server, Zammad will try to verify the "
+"login credentials against LDAP first - if this fails Zammad will check its "
+"local database."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:53
+msgid ""
+"Users can have local passwords even if they're LDAP users! You can learn "
+"more about user accounts in general on :doc:`/manage/users/index`."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:57
+msgid ""
+"When several LDAP sources contain the same user (meaning the same email "
+"address), the user in question will be updated with every source configured. "
+"*The last LDAP source will win.*"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:61
+msgid "This is subject to change with `Issue 4109`_ in the future."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:62
+msgid ""
+"Synchronization statistics currently affect *all* configured LDAP sources. "
+"This also applies for newly added or updated sources."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:65
+msgid "This is subject to change with `Issue 4108`_ in the future."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:66
+msgid ""
+"Zammad currently has limited fallback server support. You can workaround "
+"this by providing several sources - however, ensure to have the exact same "
+"configuration on your fallback."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:70
+msgid "This is subject to improve with `Issue 4107`_ in the future."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:79
+msgid ""
+"This section holds all requests Zammad handled for all LDAP sources. These "
+"entries can either contain synchronization information or logins "
+"(authentication attempts via Zammads login interface)."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:83
+msgid ""
+"By clicking on any request, Zammad will provide even more information. The "
+"provided information can be useful when something does not work as expected."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:88
+msgid ""
+"Especially a LDAP synchronization can cause many log entries. The web "
+"interface will always limit the number of shown entries to the last 50 "
+"entries."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:None
+msgid ""
+"Screencast showing LDAP integration log entries and a detail view on\n"
+"an entry."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:2
+msgid "Manage LDAP-Sources"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:6
+msgid ""
+"Please keep in mind all current limitations for the LDAP synchronization. "
+"This will help to understand scopes of the following operations better."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:52
+msgid "Add new source"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:10
+msgid ""
+"Using the *New Source* button allows you to add new LDAP sources to your "
+"installations. You're not limited in the number of sources, however, keep in "
+"mind that many sources will also take more time to synchronize."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:14
+msgid ""
+"If you want to use LDAPs, type ``ldaps://`` instead of ``ldap://`` in front "
+"of your hostname. You can also tell Zammad to use a different port by "
+"appending ``:<port number>``."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:18
+msgid ""
+"When providing a LDAPs source, Zammad will display an additional option *SSL "
+"verification* that allows you to disable the verification for e.g. self-"
+"signed SSL certificates."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:24
+msgid ""
+"Using an user filter can be a good idea if you only require a small subset "
+"of your LDAP users in Zammad."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:36
+msgid "This especially affects inactive users"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:28
+msgid ""
+"As every LDAP behaves differently on which attributes and how they are set, "
+"Zammad doesn't care about any flags."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:31
+msgid ""
+"Users that no longer are returned by your LDAP source will automatically be "
+"set to inactive. Zammad assumes that the user was deactivated."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:35
+msgid ""
+"Users will never be removed automatically! If you want to remove obsolete "
+"users, use :doc:`/system/data-privacy`."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:39
+msgid "Active Directory admins"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:39
+msgid ""
+"Active Directories are quite specific on how to filter for active users only "
+"- please see the `Microsoft documentation`_ for more information."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:44
+msgid ""
+"*Do not* manually write pathes of either LDAP attributes or groups. If "
+"Zammad does not display them, it either cannot find them or you have a lot "
+"of users that don't have the attributes populated."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:48
+msgid ""
+"Zammad will always only return attributes that are filled - this reduces the "
+"returned list of attributes greatly."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:0
+msgid "Screencast showing how to add a new LDAP source"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:71
+msgid "Review or edit existing source"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:58
+msgid ""
+"Clicking on a LDAP source will provide a configuration and mapping overview."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:60
+msgid ""
+"If needed you can then use the *Change* button to update either the name, "
+"active state or the whole configuration. If you're changing the whole "
+"configuration, the dialogue will be identical to the source creation."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:66
+msgid ""
+"Did your LDAP server change? Different LDAP servers have different "
+"structures and default attributes. This causes the LDAP synchronization to "
+"likely fail. Consider removing the affected source and re-add it."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:0
+msgid "Screencast showing the update of the source name."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:79
+msgid "Re-arrange LDAP source's order"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:74
+msgid ""
+"You can change the synchronization order for each source at any time. Zammad "
+"will synchronize the sources from top to bottom."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:0
+msgid ""
+"Screencasting showing how to change the source order by using\n"
+"drag and drop."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:91
+msgid "Remove a source"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:82
+msgid ""
+"If you no longer need the a LDAP source or simply want to start over, you "
+"can remove them at any time. This will not remove synchronized users, data "
+"synchronized or permissions."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:88
+msgid ""
+"Not sure if you'd need the source later on? Set the source to inactive "
+"instead of removing it - see *Review or edit existing source* for more."
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:0
+msgid "Screencast showing how to remove LDAP sources."
 msgstr ""
 
 #: ../system/integrations/slack.rst:2
@@ -14618,8 +15262,31 @@ msgid ""
 "\" after typing your values. Otherwise you may loose a value."
 msgstr ""
 
+#: ../system/objects/includes/reposition-treeselect-values.include.rst:1
 #: ../system/objects/includes/reposition-values.include.rst:1
 msgid "**↕️ This object allows position of its values ↔️**"
+msgstr ""
+
+#: ../system/objects/includes/reposition-treeselect-values.include.rst:3
+msgid ""
+"In order to re-arrange the fields options, edit the field and to the values."
+msgstr ""
+
+#: ../system/objects/includes/reposition-treeselect-values.include.rst:5
+msgid ""
+"Use ☰ to drag the values in question to the correct position. If you want to "
+"change the layer depth, double click on ☰. By this you can cycle through the "
+"available layers."
+msgstr ""
+
+#: ../system/objects/includes/reposition-treeselect-values.include.rst:9
+msgid "When you're ready, submit your changes to save the object."
+msgstr ""
+
+#: :0 ../system/objects/types.rst:0
+msgid ""
+"Screencast showing how to re-position values on tree select like\n"
+"fields"
 msgstr ""
 
 #: ../system/objects/includes/reposition-values.include.rst:3
@@ -14798,11 +15465,17 @@ msgid ""
 "When adding a new object, you can choose between the following object types."
 msgstr ""
 
-#: ../system/objects/types.rst:11
-msgid "Boolean"
+#: ../system/objects/types.rst:8
+msgid ""
+"You cannot change the object format / type as soon as it is applied. If you "
+"no longer need an object, consider disabling it instead of removing."
 msgstr ""
 
-#: ../system/objects/types.rst:7
+#: ../system/objects/types.rst:16
+msgid "Boolean field"
+msgstr ""
+
+#: ../system/objects/types.rst:12
 msgid ""
 "Provides a drop-down field with display values for ``true`` and ``false``. "
 "Allows setting a default value."
@@ -14812,41 +15485,37 @@ msgstr ""
 msgid "Available settings for Boolean fields"
 msgstr ""
 
-#: ../system/objects/types.rst:22 ../system/subscription/billing.rst:50
-msgid "Date"
+#: ../system/objects/types.rst:26
+msgid "Date field"
 msgstr ""
 
-#: ../system/objects/types.rst:14
+#: ../system/objects/types.rst:19
 msgid "Provides a date picker field and does not allow default values."
 msgstr ""
 
-#: ../system/objects/types.rst:22
+#: ../system/objects/types.rst:23
 msgid "Default time diff (hours)"
 msgstr ""
 
-#: ../system/objects/types.rst:17 ../system/objects/types.rst:42
+#: ../system/objects/types.rst:22
 msgid ""
 "This setting helps the user by highlighting the day from now plus the "
-"provided value. It does not pre-fill the field."
-msgstr ""
-
-#: ../system/objects/types.rst:22 ../system/objects/types.rst:47
-msgid "Please note that this setting is currently affected by `bug 3763`_."
+"provided value. It *does not* pre-fill the field."
 msgstr ""
 
 #: ../system/objects/types.rst:0
 msgid "Available settings for Date fields"
 msgstr ""
 
-#: ../system/objects/types.rst:50
-msgid "Datetime"
+#: ../system/objects/types.rst:44
+msgid "Date & time field"
 msgstr ""
 
-#: ../system/objects/types.rst:31
+#: ../system/objects/types.rst:29
 msgid "Provides a date and time picker – does not allow default values"
 msgstr ""
 
-#: ../system/objects/types.rst:35
+#: ../system/objects/types.rst:33
 msgid "Allow future"
 msgstr ""
 
@@ -14854,7 +15523,7 @@ msgstr ""
 msgid "Forbid dates and times in the future."
 msgstr ""
 
-#: ../system/objects/types.rst:39
+#: ../system/objects/types.rst:37
 msgid "Allow past"
 msgstr ""
 
@@ -14862,37 +15531,43 @@ msgstr ""
 msgid "Forbid dates and times in the past."
 msgstr ""
 
-#: ../system/objects/types.rst:47
+#: ../system/objects/types.rst:41
 msgid "Default time diff (minutes)"
 msgstr ""
 
-#: ../system/objects/types.rst:0
-msgid "Available settings for Date time fields"
-msgstr ""
-
-#: ../system/objects/types.rst:63
-msgid "Integer"
-msgstr ""
-
-#: ../system/objects/types.rst:53
+#: ../system/objects/types.rst:40
 msgid ""
-"Provides an input field that allows integer usage only. You may define a "
-"default value."
+"This setting helps the user by highlighting the day from now plus the "
+"provided value. It does not pre-fill the field."
+msgstr ""
+
+#: ../system/objects/types.rst:0
+msgid "Available settings for Date & time fields"
 msgstr ""
 
 #: ../system/objects/types.rst:57
+msgid "Integer field"
+msgstr ""
+
+#: ../system/objects/types.rst:47
+msgid ""
+"Provides an input field that allows integer usage only. You may define a "
+"default value. You cannot enforce comma separation."
+msgstr ""
+
+#: ../system/objects/types.rst:51
 msgid "Minimal"
 msgstr ""
 
-#: ../system/objects/types.rst:57
+#: ../system/objects/types.rst:51
 msgid "The minimal value the field accepts."
 msgstr ""
 
-#: ../system/objects/types.rst:60
+#: ../system/objects/types.rst:54
 msgid "Maximal"
 msgstr ""
 
-#: ../system/objects/types.rst:60
+#: ../system/objects/types.rst:54
 msgid "The maximum value the field accepts."
 msgstr ""
 
@@ -14900,65 +15575,65 @@ msgstr ""
 msgid "Available settings for Integer fields"
 msgstr ""
 
-#: ../system/objects/types.rst:76
-msgid "Multiselect"
+#: ../system/objects/types.rst:70
+msgid "Multiple selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:66
+#: ../system/objects/types.rst:60
 msgid ""
-"Provides a multiselect field that allows the selection of one or more out of "
+"Provides a selection field that allows the selection of one or more out of "
 "several. This field does allow setting a default value."
 msgstr ""
 
 #: ../system/objects/types.rst:0
-msgid "Available settings for Multiselect fields"
+msgid "Available settings for Multiple selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:89
-msgid "Select"
+#: ../system/objects/types.rst:83
+msgid "Single selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:79
+#: ../system/objects/types.rst:73
 msgid ""
 "Provides a drop-down field that allows selection of one value out of "
 "several. This field does allow setting a default value."
 msgstr ""
 
 #: ../system/objects/types.rst:0
-msgid "Available settings for Select fields"
+msgid "Available settings for Single selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:110
-msgid "Textarea"
+#: ../system/objects/types.rst:104
+msgid "Textarea field"
 msgstr ""
 
-#: ../system/objects/types.rst:92
+#: ../system/objects/types.rst:86
 msgid ""
-"Provides a textarea input field (multiple lines) and thus allows e.g. new "
+"Provides a text area input field (multiple lines) and thus allows e.g. new "
 "lines. You can set a default field value."
 msgstr ""
 
-#: ../system/objects/types.rst:97
+#: ../system/objects/types.rst:91
 msgid ""
 "Please note that this field *does not* support text formatting or HTML "
 "content (rich text)."
 msgstr ""
 
-#: ../system/objects/types.rst:100
+#: ../system/objects/types.rst:94
 msgid "**🥵 This field can consume a lot of visual space**"
 msgstr ""
 
-#: ../system/objects/types.rst:102
+#: ../system/objects/types.rst:96
 msgid ""
 "Depending on where you use this field type, it may use a lot of visual space "
 "if you provide a lot of text. This may be an issue to work with."
 msgstr ""
 
-#: ../system/objects/types.rst:107 ../system/objects/types.rst:128
+#: ../system/objects/types.rst:101 ../system/objects/types.rst:122
 msgid "Maxlength"
 msgstr ""
 
-#: ../system/objects/types.rst:0 ../system/objects/types.rst:128
+#: ../system/objects/types.rst:0 ../system/objects/types.rst:122
 msgid "You can pick the maximum length of the field."
 msgstr ""
 
@@ -14970,29 +15645,33 @@ msgstr ""
 msgid "Available settings for Textarea fields"
 msgstr ""
 
-#: ../system/objects/types.rst:133 ../system/objects/types.rst:124
-msgid "Text"
+#: ../system/objects/types.rst:127
+msgid "Text field"
 msgstr ""
 
-#: ../system/objects/types.rst:113
+#: ../system/objects/types.rst:107
 msgid "Provides a text field (one line) and allows choosing a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:116
+#: ../system/objects/types.rst:110
 msgid ""
 "Defines the type of the input field. This allows e.g. your browser to ensure "
 "that you provide the specific type."
 msgstr ""
 
-#: ../system/objects/types.rst:120
+#: ../system/objects/types.rst:114
 msgid "Currently available:"
 msgstr ""
 
-#: ../system/objects/types.rst:123
+#: ../system/objects/types.rst:117
 msgid "Phone"
 msgstr ""
 
-#: ../system/objects/types.rst:125
+#: ../system/objects/types.rst:118
+msgid "Text"
+msgstr ""
+
+#: ../system/objects/types.rst:119
 msgid "Url *(URL fields disable link-template availability)*"
 msgstr ""
 
@@ -15000,11 +15679,11 @@ msgstr ""
 msgid "Available settings for Text fields"
 msgstr ""
 
-#: ../system/objects/types.rst:140
-msgid "Tree Select"
+#: ../system/objects/types.rst:136
+msgid "Single tree selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:136
+#: ../system/objects/types.rst:130
 msgid ""
 "Provides a select-like field with up to 6 layers of options. Does not allow "
 "setting a default value."
@@ -15014,10 +15693,14 @@ msgstr ""
 msgid "Available settings for Tree Select fields"
 msgstr ""
 
-#: ../system/objects/types.rst:144
+#: ../system/objects/types.rst:145
+msgid "Multiple tree selection field"
+msgstr ""
+
+#: ../system/objects/types.rst:139
 msgid ""
-"You cannot change the object format / type as soon as it is applied. If you "
-"no longer need an object, consider disabling it instead of removing."
+"Provides a select-like field with up to 6 layers of options allowing the "
+"selection of multiple values. Does not allow setting a default value."
 msgstr ""
 
 #: ../system/objects/types.rst:150
@@ -15192,6 +15875,10 @@ msgstr ""
 msgid ""
 "You will only find *paid* invoices here. Invoices that are to be billed are "
 "not available before the payment is completed."
+msgstr ""
+
+#: ../system/subscription/billing.rst:50
+msgid "Date"
 msgstr ""
 
 #: ../system/subscription/billing.rst:50
