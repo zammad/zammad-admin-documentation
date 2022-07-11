@@ -53,6 +53,8 @@ Lost Password
    disable this function. Zammad **will not** change third party login
    passwords and instead set or change the local password!
 
+.. _security_session_timeout:
+
 Session Timeout
 ---------------
 
