@@ -6,17 +6,26 @@ Image Service
 
    Default: ``Zammad Image Service`` (active)
 
+      .. hint::
+
+         On premise installations behind restrictive firewalls require
+         ``HTTPS`` access to ``images.zammad.com``.
+
 Geo Calendar Service
    Defines the backend for geo calendar lookups. Used for initial calendar
    succession.
 
    Default: ``Zammad GeoCalendar Service`` (active)
 
+   .. include:: /settings/system/services.include.rst
+
 Geo IP Service
    Defines the backend for geo IP lookups. Shows also location of an IP address
    if an IP address is shown.
 
    Default: ``Zammad GeoIP Service`` (active)
+
+   .. include:: /settings/system/services.include.rst
 
 Geo Location Service
    Defines the backend for geo location lookups to store geo locations for
