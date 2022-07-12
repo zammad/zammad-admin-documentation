@@ -4,7 +4,10 @@ Sessions
 Sessions management allows reviewing currently known user sessions and allows
 to end these.
 
-.. TODO: .. image:: /
+.. figure:: /images/system/sessions/session-managenent.png
+   :width: 90%
+   :align: center
+   :alt: Screenshot showing Zammads session management
 
 .. hint::
 
