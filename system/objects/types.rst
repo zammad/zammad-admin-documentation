@@ -171,6 +171,25 @@ right. Clicking on the icon opens a new tab.
       create screens, the function is optional. It's only active if you populate
       the field.
 
+What's the different between URL and text with link template fields...?!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Both fields have different use cases.
+Use ``text`` type text fields when ever you have a *static* url that requires
+dynamic parameters. If you require a drag & drop like field that you can put in
+any URL, use ``URL`` type text fields.
+
+The difference is easier to spot when compare the fields directly,
+below screencast shows the result - the dynamic approach uses existing values
+in the moment of updating to built the URL - e.g.
+``https://google.com/search?q=cookies`` - while the URL approach uses the
+actual URL of the field - e.g. ``https://zammad.com``.
+
+.. figure:: /images/system/objects/url-vs-text-type-text-fields.gif
+   :alt: Screencast showing the differents in between URL and text type fields with actual values
+   :width: 90%
+   :align: center
+
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
 
