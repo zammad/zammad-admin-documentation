@@ -20,7 +20,8 @@ along with **all of their associated tickets**.
    On older systems that have not been updated yet,
    customers can also be `deleted via the Zammad console`_.
 
-   .. _deleted via the Zammad console: https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers
+.. _deleted via the Zammad console:
+   https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers
 
 Deleting Users
 --------------
@@ -106,7 +107,7 @@ You can keep an eye on the status of these tasks in two places:
 Frequently Asked Questions
 --------------------------
 
-🤓 **What happens if I receive an email from a deleted customer?**
+🤓 What happens if I receive an email from a deleted customer?
    Zammad automatically creates a new user account
    whenever it receives a message from an unrecognized email address,
    including deleted users.
@@ -120,7 +121,7 @@ Frequently Asked Questions
    in the Admin Panel under **System > Data Privacy >
    Completed Tasks > Delete User > Deleted Tickets**.
 
-🤔 **What about user information stored in internal notes or other messages?**
+🤔 What about user information stored in internal notes or other messages?
    The deletion process removes **user accounts and associated tickets only**.
 
    If there are references to a user’s name or information
@@ -129,9 +130,13 @@ Frequently Asked Questions
    because there is no way to safely determine
    if it actually describes the user in question.
 
-😵 **I deleted an user and can still see a message they sent!**
+😵 I deleted an user and can still see a message they sent!
    Tickets can only belong to a single customer,
    but may contain messages (“articles”) from many people.
    If you deleted a user but you’re still seeing articles they sent,
    don’t worry—those articles are for a ticket that belongs to someone else,
    and no longer contain any reference to the sender’s identity.
+
+🚮 I removed a customer, my reporting now is off!
+   When removing users and their ticket, all references are removed.
+   This also affects e.g. Reporting - these information are lost.
