@@ -14,7 +14,7 @@ Technically you can map any Exchange object to a Zammad user object (this also w
 .. note:: Please refrain from syncing all addresses, as the results may not be what you expect (Exchange collects huge amounts of addresses).
    A central address book of your company to sync makes more sense, as you can ensure that Zammad gets only the data you need and want.
 
-After pressing Continue, Zammad will check if the configuration is okay.  You can then enable LDAP and start your first sync.
+After pressing Continue, Zammad will check if the configuration is okay.  You can then enable Exchange and start your first sync.
 The sync will then run hourly - if you need to change mappings or the address book(s), you can change the configuration at any time.
 
 .. image:: /images/system/integrations/exchange/1.jpg
