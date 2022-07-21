@@ -9,7 +9,7 @@ Mode
 
    Defaults to *off*.
 
-   The meintenance mode will restrict access to administrative roles only.
+   The maintenance mode will restrict access to administrative roles only.
    This means agents and customers are logged off.
 
 @Login
