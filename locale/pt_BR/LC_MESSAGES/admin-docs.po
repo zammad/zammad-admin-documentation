@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 23:16+0200\n"
+"POT-Creation-Date: 2022-07-21 12:02+0200\n"
 "PO-Revision-Date: 2022-02-04 23:03+0000\n"
 "Last-Translator: Marcos Aurélio Silvério <maureliosilverio@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translations.zammad.org/projects/"
@@ -501,7 +501,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:243
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../settings/security/third-party/microsoft.rst:72
-#: ../system/objects/permissions.rst:53
+#: ../system/objects/permissions.rst:53 ../system/sessions.rst:23
 msgid "User"
 msgstr "Usuário"
 
@@ -6452,7 +6452,7 @@ msgid "it is typically reserved for admins and supervisors."
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:0 ../manage/roles/index.rst:0
-#: ../settings/security/base.rst:68
+#: ../settings/security/base.rst:70
 msgid "``ticket.agent``"
 msgstr ""
 
@@ -9612,85 +9612,85 @@ msgid ""
 "passwords and instead set or change the local password!"
 msgstr ""
 
-#: ../settings/security/base.rst:57
+#: ../settings/security/base.rst:59
 msgid "Session Timeout"
 msgstr ""
 
-#: ../settings/security/base.rst:59
+#: ../settings/security/base.rst:61
 msgid ""
 "All settings below by default are set to ``4 weeks``. Session Timeout "
 "defines the life time of a users session. As soon as it's reached, Zammad "
 "will automatically log off the session in question."
 msgstr ""
 
-#: ../settings/security/base.rst:64
+#: ../settings/security/base.rst:66
 msgid ""
 "Zammad takes the highest value set assigned for the user based on the "
 "permissions."
 msgstr ""
 
-#: ../settings/security/base.rst:67
+#: ../settings/security/base.rst:69
 msgid "``admin``"
 msgstr ""
 
-#: ../settings/security/base.rst:69
+#: ../settings/security/base.rst:71
 msgid "``ticket.customer``"
 msgstr ""
 
-#: ../settings/security/base.rst:70
+#: ../settings/security/base.rst:72
 msgid "``default`` (fallback if user doesn't have above permissions set)"
 msgstr ""
 
-#: ../settings/security/base.rst:72
+#: ../settings/security/base.rst:74
 msgid ""
 "All settings act independently from each other allowing you to disable the "
 "timeouts for e.g. admins, but not agents."
 msgstr ""
 
-#: ../settings/security/base.rst:75
+#: ../settings/security/base.rst:77
 msgid "**🤓 An example**"
 msgstr ""
 
-#: ../settings/security/base.rst:81
+#: ../settings/security/base.rst:83
 msgid "Let's suppose you configured the following session timeouts"
 msgstr ""
 
-#: ../settings/security/base.rst:78
+#: ../settings/security/base.rst:80
 msgid "default: 3 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:79
+#: ../settings/security/base.rst:81
 msgid "admin: 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:80
+#: ../settings/security/base.rst:82
 msgid "ticket.agent: 4 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:81
+#: ../settings/security/base.rst:83
 msgid "ticket.customer: 1 week"
 msgstr ""
 
-#: ../settings/security/base.rst:89
+#: ../settings/security/base.rst:91
 msgid "This results in the following situations"
 msgstr ""
 
-#: ../settings/security/base.rst:84
+#: ../settings/security/base.rst:86
 msgid "a user with ``admin`` permission will have a timeout of 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:85
+#: ../settings/security/base.rst:87
 msgid ""
 "a user with ``admin`` and ``ticket.agent`` permissions will have a timeout "
 "of 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:87
+#: ../settings/security/base.rst:89
 msgid ""
 "a user with ``ticket.customer`` permission will have a timeout of 1 week"
 msgstr ""
 
-#: ../settings/security/base.rst:89
+#: ../settings/security/base.rst:91
 msgid ""
 "a user with neither ``admin``, ``ticket.agent`` nor ``ticket.customer`` "
 "permissions will have a timeout of 3 weeks"
@@ -10843,7 +10843,7 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../settings/system/services.rst:7
+#: ../settings/system/services.rst:12
 msgid "Image Service"
 msgstr ""
 
@@ -10855,49 +10855,61 @@ msgstr ""
 msgid "Default: ``Zammad Image Service`` (active)"
 msgstr ""
 
-#: ../settings/system/services.rst:13
+#: ../settings/system/services.rst:11
+msgid ""
+"On premise installations behind restrictive firewalls require ``HTTPS`` "
+"access to ``images.zammad.com``."
+msgstr ""
+
+#: ../settings/system/services.rst:20
 msgid "Geo Calendar Service"
 msgstr ""
 
-#: ../settings/system/services.rst:10
+#: ../settings/system/services.rst:15
 msgid ""
 "Defines the backend for geo calendar lookups. Used for initial calendar "
 "succession."
 msgstr ""
 
-#: ../settings/system/services.rst:13
+#: ../settings/system/services.rst:18
 msgid "Default: ``Zammad GeoCalendar Service`` (active)"
 msgstr ""
 
-#: ../settings/system/services.rst:19
+#: ../settings/system/services.include.rst:3
+msgid ""
+"On premise installations behind restrictive firewalls require ``HTTPS`` "
+"access to ``geo.zammad.com``."
+msgstr ""
+
+#: ../settings/system/services.rst:28
 msgid "Geo IP Service"
 msgstr ""
 
-#: ../settings/system/services.rst:16
+#: ../settings/system/services.rst:23
 msgid ""
 "Defines the backend for geo IP lookups. Shows also location of an IP address "
 "if an IP address is shown."
 msgstr ""
 
-#: ../settings/system/services.rst:19
+#: ../settings/system/services.rst:26
 msgid "Default: ``Zammad GeoIP Service`` (active)"
 msgstr ""
 
-#: ../settings/system/services.rst:25
+#: ../settings/system/services.rst:34
 msgid "Geo Location Service"
 msgstr ""
 
-#: ../settings/system/services.rst:22
+#: ../settings/system/services.rst:31
 msgid ""
 "Defines the backend for geo location lookups to store geo locations for "
 "addresses."
 msgstr ""
 
-#: ../settings/system/services.rst:25
+#: ../settings/system/services.rst:34
 msgid "Default: ``Geo Location Service`` (active)"
 msgstr ""
 
-#: ../settings/system/services.rst:29
+#: ../settings/system/services.rst:38
 msgid ""
 "You can find a detailed privacy information on what we store for how long on "
 "our `Privacy Appendix`_ inside of our System-Administrator-Documentation."
@@ -11372,7 +11384,7 @@ msgid ""
 "need it. Otherwise the condition won't match."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:75
+#: ../system/core-workflows/how-do-they-work.rst:75 ../system/sessions.rst:61
 msgid "Action"
 msgstr ""
 
@@ -13742,8 +13754,8 @@ msgstr ""
 #: ../system/integrations/exchange.rst:17
 msgid ""
 "After pressing Continue, Zammad will check if the configuration is okay.  "
-"You can then enable LDAP and start your first sync. The sync will then run "
-"hourly - if you need to change mappings or the address book(s), you can "
+"You can then enable Exchange and start your first sync. The sync will then "
+"run hourly - if you need to change mappings or the address book(s), you can "
 "change the configuration at any time."
 msgstr ""
 
@@ -15166,7 +15178,7 @@ msgstr ""
 
 #: ../system/maintenance.rst:12
 msgid ""
-"The meintenance mode will restrict access to administrative roles only. This "
+"The maintenance mode will restrict access to administrative roles only. This "
 "means agents and customers are logged off."
 msgstr ""
 
@@ -15987,10 +15999,114 @@ msgstr "Sessões"
 
 #: ../system/sessions.rst:4
 msgid ""
-"Shows who logged on to the Zammad instance as a user, when and from where."
+"Sessions management allows reviewing currently known user sessions and "
+"allows to end these."
 msgstr ""
-"Mostra quando, de onde e quem logou-se na instância do Zammad como um "
-"usuário."
+
+#: ../system/sessions.rst:None
+msgid "Screenshot showing Zammads session management"
+msgstr ""
+
+#: ../system/sessions.rst:14
+msgid ""
+"This page indirectly is affected by :ref:`security_session_timeout` "
+"configurations from security settings."
+msgstr ""
+
+#: ../system/sessions.rst:17
+#, fuzzy
+#| msgid "This section currently misses the following integrations:"
+msgid "Zammad will provide the following information:"
+msgstr "Esta sessão atualmente carece das seguintes integrações:"
+
+#: ../system/sessions.rst:20
+msgid ""
+"The user account this session entry belongs to. It can be normal if a user "
+"has several sessions in the list. This can be due to changed browser "
+"information or if you use e.g. single sign on methods where the user does "
+"not use the log off button."
+msgstr ""
+
+#: ../system/sessions.rst:26
+msgid "Browser"
+msgstr ""
+
+#: ../system/sessions.rst:26
+msgid "The browser agent communicated to Zammad."
+msgstr ""
+
+#: ../system/sessions.rst:47
+#, fuzzy
+msgid "Location"
+msgstr "Limitação"
+
+#: ../system/sessions.rst:29
+msgid ""
+"The anticipated location based on the users IP address. Depending on the IP "
+"address the result shown may differ. This option depends on :doc:`/settings/"
+"system/services`."
+msgstr ""
+
+#: ../system/sessions.rst:33
+msgid "The following information can be shown:"
+msgstr ""
+
+#: ../system/sessions.rst:37
+msgid "IP address"
+msgstr ""
+
+#: ../system/sessions.rst:36
+msgid ""
+"Either if you set *Geo IP services* to inactive or you're using internal IP "
+"address which do not provide location information."
+msgstr ""
+
+#: ../system/sessions.rst:47
+msgid "Country (or Country + City)"
+msgstr ""
+
+#: ../system/sessions.rst:40
+msgid ""
+"If *Geo IP services* is enabled only. Depends on how detailed the available "
+"IP address information are."
+msgstr ""
+
+#: ../system/sessions.rst:45
+msgid ""
+"Depending on how long the address is assigned to a specific country the "
+"result may differ. Results can be inaccurate - this technically is not an "
+"error."
+msgstr ""
+
+#: ../system/sessions.rst:50
+msgid "Age"
+msgstr ""
+
+#: ../system/sessions.rst:50
+msgid "Provides the time when the session initially has been created."
+msgstr ""
+
+#: ../system/sessions.rst:59
+#, fuzzy
+#| msgid "Update Time"
+msgid "Update"
+msgstr "Tempo de atualização"
+
+#: ../system/sessions.rst:53
+msgid ""
+"Provides the time the user last used this session to open Zammad. This "
+"timestamp is only updated if the user e.g. reloads, not during normal work "
+"on tickets."
+msgstr ""
+
+#: ../system/sessions.rst:59
+msgid "This timestamp is being used for the session timeout."
+msgstr ""
+
+#: ../system/sessions.rst:62
+msgid ""
+"Use the delete button to remove a single session on behalf of your user."
+msgstr ""
 
 #: ../system/subscription/billing.rst:2
 msgid "Billing"
@@ -18342,6 +18458,12 @@ msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Mostra que versão está sendo atualmente utilizada pela sua instância do "
 "Zammad."
+
+#~ msgid ""
+#~ "Shows who logged on to the Zammad instance as a user, when and from where."
+#~ msgstr ""
+#~ "Mostra quando, de onde e quem logou-se na instância do Zammad como um "
+#~ "usuário."
 
 #~ msgid ""
 #~ "Organizations allow you to group customers. This has two important "
