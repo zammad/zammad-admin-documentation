@@ -137,6 +137,6 @@ Frequently Asked Questions
    don’t worry—those articles are for a ticket that belongs to someone else,
    and no longer contain any reference to the sender’s identity.
 
-🚮 I removed a customer, my reporting now is off!
-   When removing users and their ticket, all references are removed.
+🚮 I removed a customer, now my reporting is off!
+   When removing users and their tickets, all references are removed.
    This also affects e.g. Reporting - these information are lost.
