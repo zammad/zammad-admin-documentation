@@ -36,8 +36,71 @@ in third-party email clients (like Zammad).
 
 Please refer the :doc:`migrate-from-email-channel` guide.
 
+Requesting administrator consent
+--------------------------------
+
+.. hint::
+   
+   This step is only required if your organization requires admin consent.
+   If you do not use this kind of security measurement, simply skip to
+   `Add a New Account`_.
+
+Requesting the consent
+   Within Zammad click on **Request Admin Consent** in order to request consent
+   from your administrators. This is required in some tenants.
+
+      .. note::
+
+         If your admin already provided consent, you'll be automatically
+         authenticated, if this happens, continue with `Add a New Account`_.
+
+   After authenticating against Microsoft and providing a reason for your request,
+   you'll be redirect to the Zammad app. Zammad will then tell you to wait for
+   your administrators consent. The consent grant or denial will be sent by mail.
+
+   .. figure:: /images/channels/microsoft365/accounts/account-setup/request-admin-consent-if-not-granted.gif
+      :alt: Click on Request Admin Consent if your administrator did not yet grant
+            the Zammad app for your tenant.
+      :scale: 50%
+      :align: center
+
+Granting the consent (admin users)
+   Within **Enterprise applications** go to **Admin consent requests**.
+   You'll find all your user grand requests here.
+
+   Clicking on a request allows you to review which user requested the consent
+   for what app. Click on **Rewview permissions and consent** to start the
+   grand process. You'll be asked for credentials - these credentials are the
+   administrator credentials *not* the ones of the mailbox user to add.
+
+   After you've granted the request, continue with `Add a New Account`_.
+
+   .. figure:: /images/channels/microsoft365/accounts/account-setup/granting-consent-request-of-user.gif
+      :alt: Within Enterprise applications grand requests within admin consent
+            requests
+      :scale: 50%
+      :align: center
+
 Add a New Account
 -----------------
+
+.. note::
+
+   .. container:: cfloat-left
+
+      Below shown screencast shows the authentication process with enabled admin
+      consent and already tenant wide granted permission.
+
+      If you're not using admin consent in your organization or you're
+      authenticating a personal microsoft account, you'll see a additional
+      permission dialogue you'll have to approve.
+
+   .. container:: cfloat-right
+
+      .. figure:: /images/channels/microsoft365/accounts/account-setup/app-permission-dialogue.png
+         :alt: Authentication dialogue for non admin consented users
+         :scale: 40%
+         :align: center
 
 .. figure:: /images/channels/microsoft365/accounts/account-setup/add-microsoft365-account-to-zammad.gif
    :alt: Click on Add Account to add your Microsoft account to Zammad
