@@ -119,5 +119,57 @@ To get started, head over to `Microsoft’s Azure Portal`_.
             admin panel
       :align: center
 
+4. **Admin Consent related information**
+
+   .. hint::
+
+      This step is only required for tenants that require admin consent.
+      Admin consent adds another layer of security for your tenants users
+      and allows administrators to define who may share user information.
+
+   Within *Enterprise applications* select your app. When creating a app within
+   *App registrations*, Microsoft will automatically also create an enterprise
+   application for you.
+
+   Set *Assignment required* to ``Yes`` within the apps properties and hit
+   *Save*. This generally activates your app requesting admin consent already.
+
+   .. figure:: /images/channels/microsoft365/accounts/register-app/04-optional-configure-admin-consent.gif
+      :alt: Screencast showing how to enable assignment requirement
+      :align: center
+
+   4.1 **Tightening your app even further** (Recommended, optional)
+
+      .. note::
+
+         This step is not exactly required but recommended. This step will
+         protect your tenant users from -to admins- unwanted permission
+         changes (e.g. requesting more permissions than originally noted).
+
+         It also has another benefit: You can add the email account in question
+         immediately without any administrator being forced to stepped in
+         manually.
+
+      Still within *Enterprise applications* select *Users and groups*.
+      In this section you can either specific users or groups
+      (users must be direct members!) that are allowed to use your app for
+      adding mailboxes to Zammad.
+
+      After adding users and groups, go back to the Azure portals home and
+      select *App registrations*. Within your desired app go to
+      *API permissions* and use the *Grand admin consent for {company name}*
+      button to generally allow connecting users you previously consented.
+
+      .. note::
+
+         Not adding users / groups and providing the granted admin consent
+         right away will cause Microsoft to enforce at least the first user
+         to be requested to provide a reason for the consent request. After that
+         Microsoft will automatically grand the consent for your tenant.
+
+      .. figure:: /images/channels/microsoft365/accounts/register-app/04-optional-configure-admin-consent.gif
+         :alt: Screencast showing how to enable user based admin consent
+         :align: center
+
 🍾 Congratulations! Now you’re ready to connect Microsoft 365 or Outlook
 accounts to Zammad.
