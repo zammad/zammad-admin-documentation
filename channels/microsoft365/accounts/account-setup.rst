@@ -104,7 +104,7 @@ Add a New Account
 
 .. figure:: /images/channels/microsoft365/accounts/account-setup/add-microsoft365-account-to-zammad.gif
    :alt: Click on Add Account to add your Microsoft account to Zammad
-   :scale: 50%
+   :scale: 60%
    :align: center
 
 Click **Add Account** to connect your Microsoft 365 / Outlook accounts to Zammad.
