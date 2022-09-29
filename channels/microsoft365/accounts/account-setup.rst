@@ -66,17 +66,17 @@ Requesting the consent
 
 Granting the consent (admin users)
    Within **Enterprise applications** go to **Admin consent requests**.
-   You'll find all your user grand requests here.
+   You'll find all your user grant requests here.
 
    Clicking on a request allows you to review which user requested the consent
-   for what app. Click on **Rewview permissions and consent** to start the
-   grand process. You'll be asked for credentials - these credentials are the
+   for what app. Click on **Review permissions and consent** to start the
+   grant process. You'll be asked for credentials - these credentials are the
    administrator credentials *not* the ones of the mailbox user to add.
 
    After you've granted the request, continue with `Add a New Account`_.
 
    .. figure:: /images/channels/microsoft365/accounts/account-setup/granting-consent-request-of-user.gif
-      :alt: Within Enterprise applications grand requests within admin consent
+      :alt: Within Enterprise applications grant requests within admin consent
             requests
       :scale: 50%
       :align: center
@@ -92,7 +92,7 @@ Add a New Account
       consent and already tenant wide granted permission.
 
       If you're not using admin consent in your organization or you're
-      authenticating a personal microsoft account, you'll see a additional
+      authenticating a personal microsoft account, you'll see an additional
       permission dialogue you'll have to approve.
 
    .. container:: cfloat-right

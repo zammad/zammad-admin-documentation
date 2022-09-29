@@ -127,7 +127,7 @@ To get started, head over to `Microsoft’s Azure Portal`_.
       Admin consent adds another layer of security for your tenants users
       and allows administrators to define who may share user information.
 
-   Within *Enterprise applications* select your app. When creating a app within
+   Within *Enterprise applications* select your app. When creating an app within
    *App registrations*, Microsoft will automatically also create an enterprise
    application for you.
 
@@ -151,13 +151,13 @@ To get started, head over to `Microsoft’s Azure Portal`_.
          manually.
 
       Still within *Enterprise applications* select *Users and groups*.
-      In this section you can either specific users or groups
+      In this section you can select specific users and / or groups
       (users must be direct members!) that are allowed to use your app for
       adding mailboxes to Zammad.
 
       After adding users and groups, go back to the Azure portals home and
       select *App registrations*. Within your desired app go to
-      *API permissions* and use the *Grand admin consent for {company name}*
+      *API permissions* and use the *Grant admin consent for {company name}*
       button to generally allow connecting users you previously consented.
 
       .. note::
@@ -165,7 +165,7 @@ To get started, head over to `Microsoft’s Azure Portal`_.
          Not adding users / groups and providing the granted admin consent
          right away will cause Microsoft to enforce at least the first user
          to be requested to provide a reason for the consent request. After that
-         Microsoft will automatically grand the consent for your tenant.
+         Microsoft will automatically grant the consent for your tenant.
 
       .. figure:: /images/channels/microsoft365/accounts/register-app/04-optional-configure-admin-consent.gif
          :alt: Screencast showing how to enable user based admin consent
