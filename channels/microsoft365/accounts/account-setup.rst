@@ -41,7 +41,8 @@ Requesting administrator consent
 
 .. hint::
    
-   This step is only required if your organization requires admin consent.
+   This step is only required if you didn't consent the permissions in App
+   registration as administrator on behalf of your users.
    If you do not use this kind of security measurement, simply skip to
    `Add a New Account`_.
 
@@ -74,6 +75,8 @@ Granting the consent (admin users)
    administrator credentials *not* the ones of the mailbox user to add.
 
    After you've granted the request, continue with `Add a New Account`_.
+   (As mentioned in
+   :ref:`Step 3.1 of the App registration <register_ms_app_stepbystep>`)
 
    .. figure:: /images/channels/microsoft365/accounts/account-setup/granting-consent-request-of-user.gif
       :alt: Within Enterprise applications grant requests within admin consent
