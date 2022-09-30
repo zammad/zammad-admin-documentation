@@ -34,6 +34,8 @@ Zammad as you want, using only active Microsoft 365 browser sessions
    Microsoft user data; then, you have to add yourself as a Microsoft user who
    agrees to let Zammad fetch your email.
 
+.. _register_ms_app_stepbystep:
+
 Step-by-Step
 ------------
 
@@ -103,7 +105,63 @@ To get started, head over to `Microsoft’s Azure Portal`_.
             Azure Portal
       :align: center
 
-3. **Connect your Microsoft app in Zammad**
+3. **Admin Consent related information** (optional)
+
+   .. hint::
+
+      This step is only required for tenants that require admin consent.
+      Admin consent adds another layer of security for your tenants users
+      and allows administrators to define who may share user information.
+
+   Within *Enterprise applications* select your app. When creating an app within
+   *App registrations*, Microsoft will automatically also create an enterprise
+   application for you.
+
+   Set *Assignment required* to ``Yes`` within the apps properties and hit
+   *Save*. This generally activates your app requesting admin consent already.
+
+   .. figure:: /images/channels/microsoft365/accounts/register-app/03_1-optional-configure-admin-consent.gif
+      :alt: Screencast showing how to enable assignment requirement
+      :align: center
+
+   3.1 **Tightening your app even further** (Recommended, optional)
+
+      .. note::
+
+         This step is not exactly required but recommended. This step will
+         protect your tenant users from -to admins- unwanted permission
+         changes (e.g. requesting more permissions than originally noted).
+
+         It also has another benefit: You can add the email account in question
+         immediately without any administrator being forced to stepped in
+         manually.
+
+      Still within *Enterprise applications* select *Users and groups*.
+      In this section you can select specific users and / or groups
+      (users must be direct members!) that are allowed to use your app for
+      adding mailboxes to Zammad.
+
+      After adding users and groups, go back to the Azure portals home and
+      select *App registrations*. Within your desired app go to
+      *API permissions* and use the *Grant admin consent for {company name}*
+      button to generally allow connecting users you previously consented.
+
+      .. note::
+
+         Not adding users / groups nor providing the granted admin consent
+         right away will cause Microsoft to enforce at least the first user
+         to be requested to provide a reason for the consent request. After that
+         Microsoft will automatically grant the consent for your tenant.
+
+         Administrative accounts can also use the option
+         *Consent on behalf of your organization* in above mentioned permission
+         dialogue.
+
+      .. figure:: /images/channels/microsoft365/accounts/register-app/03_2-optional-provide-user-specific-consent.gif
+         :alt: Screencast showing how to enable user based admin consent
+         :align: center
+
+4. **Connect your Microsoft app in Zammad**
 
    Copy your new app registration’s **Application (client) ID** and 
    **Directory (tenant) ID** (found under **Overview > Essentials**) 
@@ -114,7 +172,7 @@ To get started, head over to `Microsoft’s Azure Portal`_.
    under **Certificates and Secrets > ➕ New Client Secret**
    and copy that into the Zammad admin panel, as well.
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/03-add-oauth-credentials.gif
+   .. figure:: /images/channels/microsoft365/accounts/register-app/04-add-oauth-credentials.gif
       :alt: Screencast demo of entering Microsoft OAuth credentials in Zammad
             admin panel
       :align: center

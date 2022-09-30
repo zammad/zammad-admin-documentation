@@ -16,7 +16,7 @@ Accounts
 
    (This step is **required**; read on to learn why.)
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/03-add-oauth-credentials.gif
+   .. figure:: /images/channels/microsoft365/accounts/register-app/04-add-oauth-credentials.gif
       :alt: Registering Zammad as a Microsoft OAuth app
       :scale: 60%
       :align: center

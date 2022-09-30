@@ -26,14 +26,6 @@ Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
    you can skip most of this—but **watch out for the “Accounts” section**,
    which has a few extra quirks due to Microsoft’s strict security measures.
 
-.. warning:: **🛡️ Admin consent is not supported**
-
-   Zammad requires the requested account permission at the time you add a new
-   mailbox. This means that security functionalities like e.g. *Admin consent*
-   are not supported!
-
-   Ensure to disable admin consent for the mailboxes in question.
-
 .. include:: /channels/email/index.rst
    :start-after: .. start-after-migration
    :end-before: Extra Options for Self-Hosted Users
