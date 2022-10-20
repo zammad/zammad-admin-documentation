@@ -38,8 +38,8 @@ Follow-up possible
       exceeded, Zammad will create a new ticket instead of reopening.
 
       Choosing this option will provide the option *Reopening time in days*
-      which requires you to provide the number of days you want this option
-      to handle.
+      which requires you to provide the number of days you want Zammad to
+      wait until it creates new tickets.
 
 Assign follow-ups
    This setting allows you to decide if, upon a reopen of a ticket, the last
