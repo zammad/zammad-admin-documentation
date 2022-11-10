@@ -132,7 +132,9 @@ after that.
 
    .. note:: **🔐 I need my Elasticsearch user password to be changed**
 
-      Currently setting the integration to inactive and back to active again
-      does the trick. We're working on a better solution!
+      Within the credentials table use the "Reset password" button to receive
+      a brand new password for the account in question. This change is
+      immediate, keep in mind that this may affect third party tools connected
+      to your instance.
 
       🤓 *Above does not change indexes.*
