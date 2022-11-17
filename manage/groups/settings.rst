@@ -32,6 +32,15 @@ Follow-up possible
       The ticket will remain closed and Zammad will create a new ticket instead.
       The new ticket contains the customers reply only.
 
+   do not reopen ticket after certain time but create new ticket
+      The ticket can be reopened unless the specified number of days
+      *after last ticket closure* has been exceeded. If the time limit is
+      exceeded, Zammad will create a new ticket instead of reopening.
+
+      Choosing this option will provide the option *Reopening time in days*
+      which requires you to provide the number of days you want Zammad to
+      wait until it creates new tickets.
+
 Assign follow-ups
    This setting allows you to decide if, upon a reopen of a ticket, the last
    assigned owner should stay assigned or if Zammad should reset the owner to
