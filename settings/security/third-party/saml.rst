@@ -106,7 +106,7 @@ Enable SAML and enter your IdP’s details in the Admin Panel under
 
 Display name
    Allows you to define a custom button name for SAML. This helps your users
-   to understand better what the button does.
+   to understand better what the button on the login page does.
 
    Defaults to ``SAML``.
 
