@@ -113,8 +113,8 @@ Admin Permissions
       Use ``knowledge_base.reader`` and ``knowledge_base.editor`` instead,
       and double-check the answer's `visibility`_.
 
-.. _visibility:
-   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#editing-answers
+   .. _visibility:
+      https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#editing-answers
 
 :``admin.macro``:
    :doc:`Manage > Macros </manage/macros>`

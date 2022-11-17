@@ -45,8 +45,8 @@ User Preferences Permissions
       Generated tokens will never have more permissions than the user that
       generated them.
 
-.. _REST API:
-   https://docs.zammad.org/en/latest/api/intro.html
+   .. _REST API:
+      https://docs.zammad.org/en/latest/api/intro.html
 
 :``user_preferences.avatar``:
    Override the default Gravatar with a custom avatar
