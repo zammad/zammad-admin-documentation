@@ -117,3 +117,15 @@ Ordering, grouping and active
    - group by: Should the tickets be displayed again grouped by a specific
      attribute within the list?
    - active: Set them active or inactive
+
+   .. note::
+
+      User can define their own overview order.
+      Renaming or reordering overviews has no effect on custom orders!
+
+      You can learn more about this setting in the `user documentation`_
+
+      .. TODO claficiation needed - https://github.com/zammad/zammad/issues/4367
+
+.. _user documentation:
+   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html#user-profile-settings

@@ -55,6 +55,15 @@ User Preferences Permissions
                                           Designating a substitute does **not** grant that person
                                           the permissions / :doc:`group access levels </manage/groups/access-levels>`
                                           of the agent they’re replacing.
+:``user_preferences.overview_sorting``:   Allow your users to define their own overview order.
+
+                                          .. note::
+
+                                             The order your user chooses here cannot be overwritten by admins.
+                                             Renaming or resorting overviews has no effect on custom orders.
+
+                                          .. TODO claficiation needed - https://github.com/zammad/zammad/issues/4367
+
 :``user_preferences.password``:        Change account password
 
                                        .. warning:: 🔑 **Third-party authentication / LDAP users:**
