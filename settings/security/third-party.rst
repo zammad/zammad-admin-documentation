@@ -26,6 +26,11 @@ another password.
       * LinkedIn
       * Weibo
 
+.. tip::
+
+   You can deactivate logging in via :ref:`security_password_login` if any
+   of above mentioned authentication providers are enabled in your instance.
+
 .. _automatic-account-linking:
 
 Automatic account link on initial logon
