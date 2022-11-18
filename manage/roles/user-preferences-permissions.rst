@@ -102,7 +102,9 @@ User Preferences Permissions
       The order your user chooses here cannot be overwritten by admins.
       Renaming or resorting overviews has no effect on custom orders.
 
-   .. TODO claficiation needed - https://github.com/zammad/zammad/issues/4367
+   .. hint::
+
+      This is an optional permission for customers and thus disabled by default.
 
 :``user_preferences.password``:
    Change account password
