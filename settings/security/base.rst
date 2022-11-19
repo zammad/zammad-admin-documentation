@@ -53,6 +53,38 @@ Lost Password
    disable this function. Zammad **will not** change third party login
    passwords and instead set or change the local password!
 
+.. _security_password_login:
+
+Password Login
+--------------
+
+.. container:: cfloat-left
+
+   Activates the username & password login by default and if no third-party
+   login is activated.
+
+   See :doc:`third-party` for supported third-party logins.
+
+   Default setting: ``yes``
+
+.. container:: cfloat-right
+
+   .. figure:: /images/settings/security/login_deactivated_password_login.png
+      :alt: Figure showing de-activated "Password Login" setting
+      :width: 60%
+      :align: center
+
+.. hint::
+
+   To help administrators to overcome "login issues", Zammad automatically
+   offers a password request for administrator users. This allows you to adjust
+   Third-Party applications even if the login does no longer work!
+
+.. note:: **😖 This function may be confusing**
+
+   Disabling password login on the Zammad login page only takes effect if
+   you enable any :doc:`third-party`.
+
 .. _security_session_timeout:
 
 Session Timeout
