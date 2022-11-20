@@ -1,11 +1,5 @@
 Frontend
 ********
-
-Client storage
-   Use client storage to cache data to enhance performance of application.
-
-   Default: ``no`` (inactive)
-
 .. _core-workflow-ajax-mode:
 
 Core Workflow Ajax Mode
