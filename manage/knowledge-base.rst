@@ -71,6 +71,23 @@ Theme
    Defines the color of the header links to use.
    Make sure that this color has a proper contrast to *Header Color*.
 
+:Show Feed Icon:
+   You can enable Zammad to provide RSS feed URLs in both internal and public
+   knowledge base. With this option being active, Zammad will provide you
+   up to two RSS links:
+
+      * a general RSS feed of the whole knowledge base (top level)
+      * a category specific RSS feed of the category you're in
+        (also applies to answers you're viewing)
+
+   This setting by default is set to ``no``.
+
+   .. hint::
+
+      Your agents will receive special RSS feed URLs with **access tokens**.
+      Agents can always renew these. Keep in mind that sharing these URLs
+      with third parties may provide access to **internal** answers!
+
 :Icon Set:
    Defines the selection of icons that may be used when creating/editing
    categories.
