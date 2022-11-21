@@ -60,30 +60,33 @@ Theme
 
    🎨 Customize the appearance of the knowledge base.
 
-:Icon & Link Color: Applies to all **category & article** entries in
-                    knowledge base menus, as well as hyperlinks in articles.
+:Icon & Link Color:
+   Applies to all **category & article** entries in knowledge base menus,
+   as well as hyperlinks in articles.
 
-:Header Color:      Applies to the area surrounding the search bar.
+:Header Color:
+   Applies to the area surrounding the search bar.
 
-:Header Link Color:  Defines the color of the header links to use.
-                     Make sure that this color has a proper contrast to
-                     *Header Color*.
+:Header Link Color:
+   Defines the color of the header links to use.
+   Make sure that this color has a proper contrast to *Header Color*.
 
-:Icon Set:          Defines the selection of icons that may be used when
-                    creating/editing categories.
+:Icon Set:
+   Defines the selection of icons that may be used when creating/editing
+   categories.
 
-                    Each category in the knowledge base *must* be given an icon.
-                    Icons appear prominently in the main menu, like so:
+   Each category in the knowledge base *must* be given an icon.
+   Icons appear prominently in the main menu, like so:
 
-                    .. figure:: /images/manage/knowledge-base/knowledge-base-icons.png
-                       :alt: Knowledge Base: Icons
-                       :align: center
+   .. figure:: /images/manage/knowledge-base/knowledge-base-icons.png
+      :alt: Knowledge Base: Icons
+      :align: center
 
-                    .. warning:: 
+   .. warning:: 
 
-                       🤦‍♀️ Re-assigning icons on all of your categories is
-                       tedious work. It’s advisable to explore your options
-                       early to avoid having to change your mind down the road.
+      🤦‍♀️ Re-assigning icons on all of your categories is tedious work.
+      It's advisable to explore your options early to avoid having to change
+      your mind down the road.
 
 Languages
 ^^^^^^^^^
