@@ -118,16 +118,15 @@ Sorting, Grouping and Active
       The direction of the sorting.
 
    :Grouping by:
-      Should the tickets be displayed again grouped by a specific attribute
-      within the list?
+      Should the tickets be grouped by a specific attribute within the list?
 
    :Grouping order:
       The direction of the grouping.
 
    :Active:
       Should the overview be active or not?
-      Inactive overviews are not available to your users but are an alternative
-      for you to deleting.
+      Rather than deleting an overview entirely, you can set it to inactive to
+      make it unavailable to your users.
 
    .. note::
 
