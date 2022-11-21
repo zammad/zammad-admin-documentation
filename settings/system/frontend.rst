@@ -20,3 +20,35 @@ Core Workflow Ajax Mode
          web sockets.
 
    Default: ``no`` (inactive)
+
+Show calendar weeks in the picker of date/datetime fields
+   This setting allows you to enforce Zammad to provide week number display
+   globally for all users. Calendar with week number display are usually used
+   in business sectors and may not be relevant for everyone.
+
+   This setting affects *all areas* - you'll also see week numbers in the
+   admin panel for e.g. triggers and macros.
+
+   Default: ``no`` (not shown)
+
+   Here's the difference:
+      .. container:: cfloat-left
+
+         .. figure:: /images/settings/system/frontend-datepicker-no-weeknumbers.png
+            :alt: Screenshot showing Zammads date picker (in the default way)
+            :align: center
+
+            Set to ``no``
+
+      .. container:: cfloat-right
+
+         .. figure:: /images/settings/system/frontend-datepicker-with-weeknumbers.png
+            :alt: Screenshot showing Zammads date picker with
+                  week numbers enabled
+            :align: center
+
+            Set to ``yes``
+
+      .. container:: cfloat-clear
+
+         X
