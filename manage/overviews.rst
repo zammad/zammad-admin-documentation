@@ -108,15 +108,26 @@ Attributes
       Please note that overview column and sort settings are global settings
       which affect all users seeing those overviews.
 
-Ordering, grouping and active
+Sorting, Grouping and Active
    .. figure:: /images/manage/overviews/ordering-and-grouping-of-overviews.png
 
-   - order: In which order should the tickets be displayed?
-     (Sorted by the attributes)
-   - direction: The direction of the order
-   - group by: Should the tickets be displayed again grouped by a specific
-     attribute within the list?
-   - active: Set them active or inactive
+   :Sorting by:
+      In which order should the tickets be displayed? (Sorted by the attributes)
+
+   :Sorting order:
+      The direction of the sorting.
+
+   :Grouping by:
+      Should the tickets be displayed again grouped by a specific attribute
+      within the list?
+
+   :Grouping order:
+      The direction of the grouping.
+
+   :Active:
+      Should the overview be active or not?
+      Inactive overviews are not available to your users but are an alternative
+      for you to deleting.
 
    .. note::
 
