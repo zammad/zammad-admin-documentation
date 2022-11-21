@@ -27,7 +27,7 @@ By clicking on "custom objects" you can edit them to suit your needs.
 
       Especially in ticket scope this also means that newly added attributes
       will be indicated as "changed" to agents that view the ticket. This may
-      interfere with Zammads tabs behavior.
+      interfere with Zammad's tabs behavior.
 
 .. toctree::
    :maxdepth: 1
