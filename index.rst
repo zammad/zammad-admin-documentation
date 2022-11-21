@@ -14,6 +14,7 @@ Zammad - Documentation for administrators
    manage/overviews
    manage/text-modules
    manage/macros
+   manage/templates
    manage/tags
    manage/calendars
    manage/slas/index

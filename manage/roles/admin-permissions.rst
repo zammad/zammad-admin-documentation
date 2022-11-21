@@ -172,6 +172,9 @@ Admin Permissions
 :``admin.tag``:
    :doc:`Manage > Tags </manage/tags>`
 
+:``admin.template``:
+   :doc:`Manage > Templates </manage/templates>`
+
 :``admin.text_module``:
    :doc:`Manage > Text Modules </manage/text-modules>`
 
