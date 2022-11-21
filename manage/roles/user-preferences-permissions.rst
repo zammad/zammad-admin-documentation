@@ -114,4 +114,4 @@ User Preferences Permissions
       Be sure to **revoke this permission** for all your users.
       When using a third-party identity server (like LDAP),
       the whole point is to let *it* take care of authentication
-      so that passwords never have to live in Zammads database.
+      so that passwords never have to live in Zammad's database.

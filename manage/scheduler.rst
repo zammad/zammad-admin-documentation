@@ -34,7 +34,7 @@ Name
    Choose a name for the scheduler.
 
 When should the job run?
-   Choose the points in time using :doc:`Zammads timezone </settings/branding>`
+   Choose the points in time using :doc:`Zammad's timezone </settings/branding>`
    when the scheduler should run.
 
    .. note::

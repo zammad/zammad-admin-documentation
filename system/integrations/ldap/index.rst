@@ -7,7 +7,7 @@ has to remember.
 
 .. hint::
 
-   The LDAP source is also a perfect candidate for Zammads
+   The LDAP source is also a perfect candidate for Zammad's
    `Kerberos Single Sign-On`_ but also works as addition to other
    :doc:`/settings/security/third-party`.
 
@@ -39,7 +39,7 @@ Before you continue, please note the following limitations.
            You may want to consider using domain based assignments to overcome
            this issue. Learn more on :doc:`/manage/organizations/index`.
 
-   * Zammads LDAP sync is one way. Editing user settings or permissions may be
+   * Zammad's LDAP sync is one way. Editing user settings or permissions may be
      overwritten upon the next sync depending on your configuration.
    * Nested groups are not supported.
    * Synchronizing user avatars from LDAP is not supported.
@@ -78,7 +78,7 @@ Recent Logs
 
 This section holds all requests Zammad handled for all LDAP sources.
 These entries can either contain synchronization information or logins
-(authentication attempts via Zammads login interface).
+(authentication attempts via Zammad's login interface).
 
 By clicking on any request, Zammad will provide even more information.
 The provided information can be useful when something does not work as expected.

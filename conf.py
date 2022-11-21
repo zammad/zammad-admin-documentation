@@ -77,7 +77,7 @@ versionwarning_messages = {
       'title="current documentation version">here</a>.'
    ),
    "old-version": (
-      "You're viewing a <strong>deprecated</strong> version of Zammads "
+      "You're viewing a <strong>deprecated</strong> version of Zammad's "
       "documentation. If you're still running that version, please consider "
       '<a href="https://docs.zammad.org/en/latest/install/update.html" '
       'title="Updating Zammad">Updating Zammad</a> asap.'

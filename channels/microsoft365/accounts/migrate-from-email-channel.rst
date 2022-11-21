@@ -18,7 +18,7 @@ If you're ready to go, simply click on the *Migrate now!* button in the red
 banner of the email channel in question. Zammad will redirect you to
 Microsoft and request you to authenticate and consent to said account.
 
-After you pressed next you'll be redirect to Zammads Microsoft 365 channel
+After you pressed next you'll be redirect to Zammad's Microsoft 365 channel
 overview. Your channel, if successful, is now migrated to an Microsoft 365
 channel.
 

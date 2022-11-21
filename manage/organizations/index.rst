@@ -23,7 +23,7 @@ Learn more about managing organizations...
 .. note:: 😲 **Technical Limitations**
 
    * Organizations currently cannot be removed. The only exception
-     is Zammads :doc:`/system/data-privacy` function.
+     is Zammad's :doc:`/system/data-privacy` function.
    * Unlike users, agents cannot just create new organizations.
      Check the :doc:`permission reference </manage/roles/admin-permissions>`
      to learn more.

@@ -7,7 +7,7 @@ These are Zammad’s built-in roles, and they’re the tip of the iceberg
 of its powerful, flexible, and fine-grained permission system.
 
 .. figure:: /images/manage/roles/role-overview.png
-   :alt: Role overview within Zammads admin settings.
+   :alt: Role overview within Zammad's admin settings.
    :align: center
    :width: 90%
 

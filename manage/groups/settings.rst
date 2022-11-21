@@ -4,7 +4,7 @@ Group Settings
 Click on a group to edit it, or click on *New group* to create a new group.
 
 .. figure:: /images/manage/groups/group-management.png
-   :alt: Screenshot showing Zammads group management
+   :alt: Screenshot showing Zammad's group management
 
 No matter if you're going to edit or create a new group, each group
 comes with the following settings you can adjust as needed.

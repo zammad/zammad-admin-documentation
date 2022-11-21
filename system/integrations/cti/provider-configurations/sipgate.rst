@@ -52,7 +52,7 @@ Step 2: Configure webhook for Zammad
       to Zammad.
 
    .. figure:: /images/system/integrations/cti/sipgate/step2-configure-sipgate-webhooks.gif
-      :alt: Screencast showing how to add Zammads endpoint URLs to sipgate.ios webhook configuration
+      :alt: Screencast showing how to add Zammad's endpoint URLs to sipgate.ios webhook configuration
 
 Step 3: Restrict the numbers to notify on
    Having a lot of numbers that shouldn't be used for notifying Zammad?
@@ -80,6 +80,6 @@ Step 3: Restrict the numbers to notify on
          :alt: Screenshot showing sample log entries for Sipgates webhook calls to Zammad
 
 Step 4 (optional): Further configurations for Sipgate
-   If needed, you can now configure Zammads Sipgate integration in more detail.
+   If needed, you can now configure Zammad's Sipgate integration in more detail.
    You can learn more about your options here:
    :ref:`Sipgate integration settings <sipgate_settings>`.
