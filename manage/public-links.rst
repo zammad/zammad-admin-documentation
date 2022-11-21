@@ -136,7 +136,7 @@ Actions for existing links
 Updating existing entries
    Got a typo in your URL or title? Want to change the context the link is
    being shown on? No problem! Just click on the affected link title and adjust
-   the entry as needed!
+   the entry as needed.
 
    You'll be given the same options as you have during the link creation.
 
