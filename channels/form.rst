@@ -1,7 +1,7 @@
 Forms
 *****
 
-Feedback or contact forms are quite often used on websites.
+Feedback or contact forms are used on websites quite often.
 Usually they will generate an email which will be sent to somebody who forwards
 it and so on. With Zammad it’s quite easy to integrate these forms into your
 website and directly generate tickets with them. In just 2 minutes.
@@ -14,8 +14,7 @@ Limitations
 
 Please note the following limitations:
 
-   * The fields provided by the form are limitted. You cannot add additional
-     fields than the following:
+   * The fields provided by the form are limited to the following:
 
      * Name
      * Email
@@ -28,7 +27,7 @@ Please note the following limitations:
 Settings
 --------
 
-Zammad comes with limited settings for forms.
+Zammad comes with certain settings for forms.
 
 Active
    By default the form channel is *inactive*.
@@ -41,23 +40,23 @@ Active
 
 Group selection for ticket creation
    The group you set here defines where tickets should be created if they're
-   supplied by Zammads web form.
+   supplied by Zammad's web form.
 
 Designer
 --------
 
-This section helps you to configure your form in the channels scope.
-If you're happy with what you've chosen you're provided with the code you
+This section helps you to configure your form in the channel's scope.
+If you're happy with what you've chosen, you're provided with the code you
 need to copy to your website.
 
    .. warning::
 
-      The designers changes *are not* stored anywhere in Zammad.
+      The designer's changes *are not* stored anywhere in Zammad.
       This means that the provided source code needs to be copied every time
       you change settings here.
 
 .. figure:: /images/channels/form/form-channel-designer.png
-   :alt: Zammads form designer supports you with the initial configuration
+   :alt: Zammad's form designer supports you with the initial configuration
          of your form.
    :width: 90%
 
@@ -71,14 +70,14 @@ So let's talk about the options the designer provides.
    Default: ``Feedback Form``
 
 :Name of form submit button:
-   If Zammads default display name of the submit button does not fit, you can
-   provide your own wording with this option. It's being used every time the
-   form is being called.
+   If Zammad's default display name of the submit button does not fit, you can
+   provide your own wording with this option. It will be used every time the
+   form is shown.
 
 :Message after sending form:
-   After your user pressed the submit button, the user will be provided with
-   a message containing the ticket number of the just created ticket.
-   
+   After your user pressed the submit button, they will be provided with
+   a message containing the ticket number of the newly created ticket.
+
    Default *after* sending a form will look like so:
 
    .. code-block:: text
@@ -89,8 +88,8 @@ So let's talk about the options the designer provides.
 :Options:
    Zammad provides the following additional configuration options for your form.
 
-   Enable debugging for Implementation
-      This option activates detailed debug information in your browsers
+   Enable debugging for implementation
+      This option activates detailed debug information in your browser's
       developer tools console.
 
       .. warning:: This option *should not* be active on productive forms!
@@ -100,7 +99,7 @@ So let's talk about the options the designer provides.
       provide the form title within the form dialogue if selected.
 
    Start modal dialog for form
-      If selected the form will be opened in a modal by clicking a button.
+      If selected, the form will be opened in a modal by clicking a button.
       Not selecting this option allows you to natively integrate the form within
       your website's body.
 
@@ -109,18 +108,18 @@ So let's talk about the options the designer provides.
       .. note::
 
          No matter what you select here, the form *is always* loaded completely
-         if your user browses the page the form lies on.
+         if your user browses the page containing the form.
 
    Don't load CSS for the form You need to generate your own CSS for the form.
-      By default Zammads form comes with basic CSS. This may not fit your
-      websites design or even interfere with it.
+      By default Zammad's form comes with basic CSS. This may not fit your
+      website's design or even interfere with it.
 
       Selecting this option allows you to freely design the form without having
       to overwrite existing directives.
 
    Add attachment option to upload
       Allows your user to upload **one attachment** to the form.
-      
+
       .. note:: **🤓 Watch allowed attachment sizes here**
 
          This function *is not* limited technically. The only limitation that
@@ -132,9 +131,9 @@ So let's talk about the options the designer provides.
             package you've chosen.
 
    Add agreement text before submit
-      If enabled will allow you define a text that the form will display
-      together with a to tick box. This allows you to make your form conform
-      to local laws, e.g. by providing data privacy notes that the user has
+      If enabled, this will allow you define a text that the form will display
+      together with a checkbox. Thereby you can ensure your form conforms
+      to legal requirements, e.g. by providing data privacy notes that the user has
       to accept before submitting the form.
 
       .. figure:: /images/channels/form/form-channel_acceptance-setting.gif
@@ -144,7 +143,7 @@ So let's talk about the options the designer provides.
          Zammad provides a free text form with limited capabilities.
          Use the *🔗 Weblink* button to add links to marked text passages.
 
-         This allows you to link to your e.g. data privacy or ToS information.
+         This allows you to link e.g. to your data privacy or ToS information.
 
 Preview
 ~~~~~~~
@@ -167,11 +166,11 @@ Requirements
 ------------
 
 The requirement section provides you with everything you need in order to
-apply Zammads web form to your website. It basically consists of two parts.
+apply Zammad's web form to your website. It basically consists of two parts.
 
 :Header section:
-   The first code block provides you with Zammads current jQuery dependency.
-   This script section usually belongs to your websites header section.
+   The first code block provides you with Zammad's current jQuery dependency.
+   This script section usually belongs to your website's header section.
 
    .. note::
 
@@ -190,7 +189,7 @@ apply Zammads web form to your website. It basically consists of two parts.
    The second code block is the actual code required for your form to run.
 
    The first line containing ``id="zammad-feedback-form"`` highly depends on
-   above selected settings. This part belongs into the place you actually
+   the settings selected above. This part belongs into the place you actually
    want the form or form button to appear.
 
    The rest can either be placed at the same level or somewhere else on the
@@ -203,7 +202,7 @@ apply Zammads web form to your website. It basically consists of two parts.
 
    .. note::
 
-      Above statement *highly* depends on your website.
+      These statements *highly* depend on your website.
       As you're responsible for your own website, you're on your own
       figuring out where exactly to place what.
 
@@ -215,18 +214,18 @@ like the following if you apply custom CSS to it.
    :scale: 90%
    :align: center
 
-Potential Spam-Issue
+Potential Spam Issue
 --------------------
 
-The Form function could be abused by sending a higher amount of
-messages / tickets to your Zammad instance. If you do not use Zammad-Forms:
+The Form function could be abused by sending a high amount of
+messages / tickets to your Zammad instance. If you do not use Zammad Forms:
 **disable** them.
 
-But don't worry! Zammad does limit the maximum created tickets based on
-different criteria. It also ensure that the email address being used is valid
-(with MX-Check on the email’s domain).
+But don't worry! Zammad does limit the maximum count of created tickets based on
+different criteria. It also ensures that the email address being used is valid
+(with MX-Check on the email's domain).
 
-.. list-table:: Form settings to limit Ticket-Creation
+.. list-table:: Form settings to limit ticket creation
    :header-rows: 1
    :widths: 20, 10, 20
 
@@ -235,32 +234,31 @@ different criteria. It also ensure that the email address being used is valid
      - Description
    * - ``form_ticket_create_by_ip_per_hour``
      - ``20``
-     - Limits Ticket-creation per IP and hour to 20 Tickets
+     - Limits ticket creation per IP and hour to 20 tickets
    * - ``form_ticket_create_by_ip_per_day``
      - ``240``
-     - Limits Ticket-creation per IP and day to 240 Tickets
+     - Limits ticket creation per IP and day to 240 tickets
    * - ``form_ticket_create_per_day``
      - ``5000``
-     - Limits Ticket-creation for forms to 5000 Tickets per day
+     - Limits ticket creation for forms to 5000 tickets per day
 
 
 .. hint::
 
-   | You can change the above default values, please keep in mind, that setting
-     those values higher might lead to problems in term of created Tickets.
-   | 
-   | Please note that the following changes require console access to your hosts
-     that runs Zammad.
+   | You can change these default values. Please keep in mind, that setting
+     those values higher might lead to problems in term of created tickets.
+   |
+   | Please note that the following changes require console access to your Zammad host.
 
-**Change the Ticket-Creation per IP and hour to 10**::
+**Change the ticket creation per IP and hour to 10**::
 
    rails> Setting.set('form_ticket_create_by_ip_per_hour','10')
 
-**Change the Ticket-Creation per IP and hour to 50**::
+**Change the ticket creation per IP and hour to 50**::
 
    rails> Setting.set('form_ticket_create_by_ip_per_day','50')
 
-**Change the Ticket-Creation per day to 500**::
+**Change the ticket creation per day to 500**::
 
    rails> Setting.set('form_ticket_create_per_day','500')
 
@@ -276,5 +274,5 @@ Please keep in mind if you change the location of ``form.js`` (by e.g. copying)
 that you need to ensure that your ``form.js`` stays up to date if you update
 Zammad.
 
-Further more it's not recommended to delete form.js from it's location, but to
-forbid the access to it with your web server configuration (if wanted).
+It's not recommended to delete form.js from it's location in that case, but to
+forbid access to it via your web server configuration.
