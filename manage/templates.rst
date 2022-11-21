@@ -15,7 +15,7 @@ ticket template for recurring tickets.
         new ticket dialogue.
 
 .. figure:: /images/manage/templates/template-management.png
-   :alt: Screenshot showing Zammads (ticket) template management page
+   :alt: Screenshot showing Zammad's (ticket) template management page
    :width: 90%
 
 .. warning:: ⚠️ Limitation ahead
@@ -33,7 +33,7 @@ Managing templates
       during ticket creation (within *Select Template*).
 
    Actions
-      Within actions Zammad will provide all available ticket attributes.
+      Within actions, Zammad will provide all available ticket attributes.
       This allows you to create granular templates with the information you
       need.
 
@@ -42,15 +42,14 @@ Managing templates
 
 :Editing templates:
    If your template no longer fits your need or contains errors, simply
-   click on the templates name to edit it.
+   click on the template name to edit it.
 
 :Cloning templates:
    Zammad allows you to clone existing templates and continue your new
    template from there.
 
    To do so, use *⋮ Actions* of the desired template in your list and choose
-   *Clone*. A new template modal will open with the templates prefilled
-   attributes.
+   *Clone*. A new template modal will open with attributes prefilled.
 
 :Removing templates:
    If you longer require a specific template, use *⋮ Actions* in the list and
