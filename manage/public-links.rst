@@ -1,10 +1,10 @@
 Public Links
 ************
 
-Public links allows you to provide important links to different places
-within Zammads UI. This allows you not just to provide law relevant information
+Public links allow you to provide important links at different places
+within the UI of Zammad. This allows you not just to provide legal information
 like e.g. data privacy or contact information. You can also provide further
-useful links to e.g. other services if needed!
+useful links to other services if needed.
 
 .. figure:: /images/manage/public-links/public-links-management.png
    :alt: Screenshot showing the public links management interface within
@@ -41,9 +41,9 @@ Link
       nor ``zammad.org``.
 
       Why?
-         Every instance is special on it's own. Every hosting is different,
+         Every instance is special on its own. Every hosting is different,
          data retention and other things do not fit as every company using
-         Zammad handles those kind of things differently.
+         Zammad handles these matters differently.
 
          This function was made to allow you to link to your *own resources*.
 
@@ -54,16 +54,16 @@ Title
 
 Description
    The description for URLs is an accessibility feature that helps users with
-   screen readers to better understand the scope of the URL. Usually also shown
-   by normal browsers by hovering the link in question.
+   screen readers to better understand the scope of the URL. It will also be shown
+   by normal browsers when hovering over the link in question.
 
    Use this to describe the link.
    This value is *optional*.
 
 Context
-   The context setting allows you to choose one or several places this URL
-   should be displayed. Depending on your setting Zammad will then show the
-   links on the fitting page.
+   The context setting allows you to choose one or several places where this link
+   should be displayed. Depending on your choice, Zammad will then show the
+   links on the relevant pages.
 
    You can currently select from:
 
@@ -85,21 +85,21 @@ Context
          .. tab:: Forgot Password Screen
 
             .. figure:: /images/manage/public-links/public-links_login-page.png
-               :alt: Screenshot showing Zammads forgot password page with custom
+               :alt: Screenshot showing Zammad's forgot password page with custom
                      public links
                :height: 540px
 
          .. tab:: Login Screen
 
             .. figure:: /images/manage/public-links/public-links_forgot-password.png
-               :alt: Screenshot showing Zammads login page with custom public
+               :alt: Screenshot showing Zammad's login page with custom public
                      links
                :height: 220px
 
          .. tab:: Signup Screen
 
             .. figure:: /images/manage/public-links/public-links_signup-page.png
-               :alt: Screenshot showing Zammads signup page with custom public links
+               :alt: Screenshot showing Zammad's signup page with custom public links
                :height: 320px
 
 Display in new tab
@@ -119,7 +119,7 @@ Manage existing public links
 Re-arrange links
 ~~~~~~~~~~~~~~~~
 
-By default Zammad orders your public links in the order you've created them.
+By default Zammad sorts your public links in the order you've created them.
 That may be a problem if you add a link later on. For this reason you can
 easily change the link order by dragging them to another position.
 
