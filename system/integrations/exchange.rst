@@ -4,8 +4,11 @@ Exchange
 With our Exchange integration, you can easily use existing address books without
 having to update more than one source.
 
-.. note:: The Exchange sync is one way: Exchange => Zammad. Changes to your users inside of Zammad might be overwritten by the Exchange Sync.
+.. warning::
 
+   The exchange sync can be overruled by Zammads LDAP integration.
+   If you have the same users in both sources, the LDAP version will always
+   be Zammad's pick.
 
 .. note::
 
