@@ -57,6 +57,15 @@ A trigger can do the following things once its conditions have been met:
 
    Date & time attributes (like **Pending till**) can be
    specified in *absolute* or *relative* terms.
+
+      .. hint::
+
+         You can also combine static text with placeholders for text fields.
+         Remember that the placeholders value has to be known during trigger
+         runtime.
+
+         Learn more about :doc:`/system/variables`.
+
 * Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in
    the system.
