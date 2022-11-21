@@ -61,7 +61,7 @@ A trigger can do the following things once its conditions have been met:
       .. hint::
 
          You can also combine static text with placeholders for text fields.
-         Remember that the placeholders value has to be known during trigger
+         Remember that the placeholders' values have to be known during trigger
          runtime.
 
          Learn more about :doc:`/system/variables`.
