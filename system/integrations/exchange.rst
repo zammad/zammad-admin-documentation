@@ -8,7 +8,7 @@ having to update more than one source.
 
    The exchange sync can be overruled by Zammads LDAP integration.
    If you have the same users in both sources, the LDAP version will always
-   be Zammads pick.
+   be Zammad's pick.
 
 .. note::
 
