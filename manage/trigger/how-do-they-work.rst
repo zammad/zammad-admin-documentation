@@ -55,7 +55,7 @@ A trigger can do the following things once its conditions have been met:
    *e.g.,* Escalate its priority, close it, reassign it, rename it,
    add tags, etc.
 
-   Date & time attributes (like **Pending till** or **Escalation at**) can be
+   Date & time attributes (like **Pending till**) can be
    specified in *absolute* or *relative* terms.
 * Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in
