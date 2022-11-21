@@ -19,6 +19,16 @@ Custom objects (will be displayed in black font and have a trash bin on
 the right site to delete unnecessary objects.
 By clicking on "custom objects" you can edit them to suit your needs.
 
+   .. note::
+
+      Attributes you add to Zammad, no matter if they have default values or
+      not, will not update existing information. This means a new ticket field
+      technically will be empty unless you populate it.
+
+      Especially in ticket scope this also means that newly added attributes
+      will be indicated as "changed" to agents that view the ticket. This may
+      interfere with Zammad's tabs behavior.
+
 .. toctree::
    :maxdepth: 1
    :caption: Learn more

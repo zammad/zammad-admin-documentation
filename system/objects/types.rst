@@ -96,9 +96,18 @@ Textarea field
          Depending on where you use this field type, it may use a lot of visual
          space if you provide a lot of text. This may be an issue to work with.
 
+   Default
+      The here provided text will be shown within the text area field or new
+      data sets.
+
    Maxlength
       | You can pick the maximum length of the field.
       | The default length of this object is ``500``.
+
+   Rows
+      | Change the number of rows to dislay so that you can use only the space
+        you really need.
+      | The default number of rows is ``4``.
 
    .. figure:: /images/system/objects/settings_textarea.png
       :alt: Available settings for Textarea fields
