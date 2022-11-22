@@ -104,15 +104,45 @@ Enable SAML and enter your IdP’s details in the Admin Panel under
 .. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty.png
    :alt: Example configuration of SAML
 
-.. note:: 🔏 **For the IdP certificate / certificate fingerprint:**
+Display name
+   Allows you to define a custom button name for SAML. This helps your users
+   to understand better what the button on the login page does.
 
-   Provide **only one or the other**—do not provide both!
-   (Between the two, we recommend the signing certificate itself:
-   fingerprints use SHA-1, which `has been broken for a while now
-   <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
+   Defaults to ``SAML``.
 
-   **Keycloak users:** Find your certificate in the Keycloak admin panel under
-   **Realm Settings > Keys > RSA > Certificate**.
+IDP SSO Target URL
+   This is the target URL Zammad shall redirect to when the user presses
+   the SAML button.
+
+IDP Certificate
+   The public certificate of your IDP for Zammad to verify during the callback
+   phase.
+
+IDP Certificate fingerprint
+   The fingerprint of your IDPs public certificate to verify during callback
+   phase.
+
+   .. note:: 🔏 **For the IdP certificate / certificate fingerprint:**
+
+      Provide **only one or the other**—do not provide both!
+      (Between the two, we recommend the signing certificate itself:
+      fingerprints use SHA-1, which `has been broken for a while now
+      <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
+
+      **Keycloak users:** Find your certificate in the Keycloak admin panel
+      under **Realm Settings > Keys > RSA > Certificate**.
+
+Name Identifier format
+   This is the unique identifiers field type. Usually should be
+   ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`` in any case.
+
+   .. warning::
+
+      Zammad expects an email address as unique identifier!
+
+Your callback URL
+   This URL is needed for your IDP configuration so it knows where to redirect
+   to after successful authentication.
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
 how to link existing Zammad accounts to IdP accounts.

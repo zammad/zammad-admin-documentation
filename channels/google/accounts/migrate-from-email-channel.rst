@@ -17,7 +17,7 @@ If you're ready to go, simply click on the *Migrate now!* button in the red
 banner of the email channel in question. Zammad will redirect you to
 Google and request you to authenticate and consent to said account.
 
-After you pressed next you'll be redirect to Zammads Google channel overview.
+After you pressed next you'll be redirect to Zammad's Google channel overview.
 Your channel, if successful, is now migrated to an Google channel.
 
    .. figure:: /images/channels/google/accounts/migrate-email-channel-to-google.gif

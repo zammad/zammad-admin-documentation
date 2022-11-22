@@ -74,7 +74,7 @@ Payment history
       :alt: Screenshot showing payment history of a hosted instance
 
 Do you want to cancel your subscription?
-   In case you no longer want to use Zammads SaaS, you can cancel your
+   In case you no longer want to use Zammad's SaaS, you can cancel your
    subscription by using the red *Yes, please cancel my subscription* button.
 
    Your subscription will end the day after your trial or billing period ends.

@@ -71,7 +71,7 @@ Number
 ------
 
 Ticket Number Format (default: ``Increment (SystemID.Counter)``)
-   This setting defines the way Zammads ticket number will look.
+   This setting defines the way Zammad's ticket number will look.
    Changing this setting in production will cause follow up detection to fail.
 
    Increment (SystemID.Counter)

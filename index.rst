@@ -14,10 +14,12 @@ Zammad - Documentation for administrators
    manage/overviews
    manage/text-modules
    manage/macros
+   manage/templates
    manage/tags
    manage/calendars
    manage/slas/index
    manage/trigger
+   manage/public-links
    manage/webhook
    manage/scheduler
    manage/report-profiles

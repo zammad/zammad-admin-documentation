@@ -49,7 +49,7 @@ Message
 
          .. container:: cfloat-left
 
-            Message setting within Zammads admin settings without ticket reload
+            Message setting within Zammad's admin settings without ticket reload
             application setting.
 
             .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png
@@ -73,7 +73,7 @@ Message
 
          .. container:: cfloat-left
 
-            Message setting within Zammads admin settings with ticket reload
+            Message setting within Zammad's admin settings with ticket reload
             application setting.
 
             .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png

@@ -1,4 +1,4 @@
-Report-Profiles
+Report Profiles
 ***************
 
 Report profiles are used to restrict / filter report-results. The idea of the

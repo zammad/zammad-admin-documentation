@@ -43,7 +43,7 @@ Step 2: Generate API Token for Placetel
          due to token resets!
 
          Copy the provided API token and insert it into the "API Token" field
-         within Zammads Placetel integration.
+         within Zammad's Placetel integration.
 
          Apply your changes by using the "Save" button on the bottom of the
          Placetel integration page and activate the Placetel integration.
@@ -67,13 +67,13 @@ Step 3: Restrict the numbers to notify on
       This menu point also provides a API request log from Placetel view.
       Just open "Recent responses of your API endpoint" to learn more.
 
-      If you want to see Zammads perspective, use the "Recent Logs" part from
+      If you want to see Zammad's perspective, use the "Recent Logs" part from
       within the Placetel integration page.
 
       .. figure:: /images/system/integrations/cti/placetel/recent-responses-of-your-api-endpoint.png
          :alt: Screenshot showing sample log entries for Placetels API calls to Zammad
 
 Step 4 (optional): Further configurations for Placetel
-   If needed, you can now configure Zammads Placetel integration in more detail.
+   If needed, you can now configure Zammad's Placetel integration in more detail.
    You can learn more about your options here:
    :ref:`Placetel integration settings <placetel_settings>`.

@@ -108,12 +108,32 @@ Attributes
       Please note that overview column and sort settings are global settings
       which affect all users seeing those overviews.
 
-Ordering, grouping and active
+Sorting, Grouping and Active
    .. figure:: /images/manage/overviews/ordering-and-grouping-of-overviews.png
 
-   - order: In which order should the tickets be displayed?
-     (Sorted by the attributes)
-   - direction: The direction of the order
-   - group by: Should the tickets be displayed again grouped by a specific
-     attribute within the list?
-   - active: Set them active or inactive
+   :Sorting by:
+      In which order should the tickets be displayed? (Sorted by the attributes)
+
+   :Sorting order:
+      The direction of the sorting.
+
+   :Grouping by:
+      Should the tickets be grouped by a specific attribute within the list?
+
+   :Grouping order:
+      The direction of the grouping.
+
+   :Active:
+      Should the overview be active or not?
+      Rather than deleting an overview entirely, you can set it to inactive to
+      make it unavailable to your users.
+
+   .. note::
+
+      Users can define their own overview order.
+      Renaming or reordering overviews has no effect on custom orders!
+
+      You can learn more about this setting in the `user documentation`_.
+
+.. _user documentation:
+   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html#user-profile-settings

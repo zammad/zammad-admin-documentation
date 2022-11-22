@@ -1,106 +1,128 @@
 Agent Permissions
 =================
 
-.. note:: The permissions listed on this page grant access to features
+.. note::
+
+   The permissions listed on this page grant access to features
    that have to be enabled or configured system-wide in the Admin Panel first.
 
-.. figure:: /images/manage/roles/permissions-agent.png
-   :alt: Agent permissions in the New Role dialog
-   :align: center
-   :width: 80%
+.. container:: cfloat-left
 
-   Agent permissions are shown in the middle of the New Role dialog...
+   .. figure:: /images/manage/roles/permissions-agent.png
+      :alt: Agent permissions in the New Role dialog
+      :align: center
+      :width: 80%
 
-.. figure:: /images/manage/roles/sidebar.png
-   :alt: Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone
-   :align: center
+      Agent permissions are shown in the middle of the New Role dialog...
 
-   ...and give users access to new sidebar tabs for communicating with customers.
+.. container:: cfloat-right
 
-:``chat.agent``:            `💬 Customer Chat`_
+   .. figure:: /images/manage/roles/sidebar.png
+      :alt: Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone
+      :align: center
 
-                            .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
+      ...and give users access to new sidebar tabs for communicating with
+      customers.
 
-.. _💬 Customer Chat:
-   https://user-docs.zammad.org/en/latest/extras/chat.html
+.. container:: cfloat-clear
 
-:``cti.agent``:             Provides access to `📞 Caller Log`_
+   x
 
-                            .. hint:: 🤓 Requires configuration of either integrations
+:``chat.agent``:
+   `💬 Customer Chat`_
 
-                                  * :doc:`Generic CTI </system/integrations/cti/generic>`
-                                  * :doc:`placetel </system/integrations/cti/placetel>`
-                                  * :doc:`sipgate </system/integrations/cti/sipgate>`
+   .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
 
-.. _📞 Caller Log:
-   https://user-docs.zammad.org/en/latest/extras/caller-log.html 
+   .. _💬 Customer Chat:
+      https://user-docs.zammad.org/en/latest/extras/chat.html
 
-:knowledge_base:            `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
+:``cti.agent``:
+   Provides access to `📞 Caller Log`_
+
+   .. hint:: 🤓 Requires configuration of either integrations
+
+      * :doc:`Generic CTI </system/integrations/cti/generic>`
+      * :doc:`placetel </system/integrations/cti/placetel>`
+      * :doc:`sipgate </system/integrations/cti/sipgate>`
+
+   .. _📞 Caller Log:
+      https://user-docs.zammad.org/en/latest/extras/caller-log.html 
+
+:knowledge_base:
+   `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
                             
-                            :``knowledge_base.editor``:     create/edit privileges
+   :``knowledge_base.editor``:
+      create/edit privileges
 
-                                                            .. hint::
+      .. hint:: Editor permissions always include reader permissions.
 
-                                                              Editor permissions always include reader permissions.
-                            :``knowledge_base.reader``:     read privileges for internal content
+   :``knowledge_base.reader``:
+      read privileges for internal content
 
-                                                            .. hint::
+      .. hint::
 
-                                                               Public articles are always visible.
+         Public articles are always visible.
 
-                            .. tip::
+      .. tip::
 
-                               Zammad supports `granular permissions on knowledge base categories`_.
+         Zammad supports `granular permissions on knowledge base categories`_.
 
-                               This function allows *agents with editor* permissions to restrict
-                               specific internal categories & answers to chosen roles.
+         This function allows *agents with editor* permissions to restrict
+         specific internal categories & answers to chosen roles.
 
-                               In order to allow your agents to set granular role permissions,
-                               the roles in question require at least reader permission for the
-                               knowledge base.
+         In order to allow your agents to set granular role permissions,
+         the roles in question require at least reader permission for the
+         knowledge base.
 
-                                 .. danger::
+      .. danger::
 
-                                    Keep in mind that this may be dangerous, as reader permission
-                                    provides access to internal answers!
+         Keep in mind that this may be dangerous, as reader permission
+         provides access to internal answers!
 
-.. _granular permissions on knowledge base categories:
-   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#granular-category-permissions
+   .. _granular permissions on knowledge base categories:
+      https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#granular-category-permissions
 
-:``report``:                :doc:`📈 Reporting </manage/report-profiles>`
+:``report``:
+   :doc:`📈 Reporting </manage/report-profiles>`
 
-                            .. warning:: 🙅 **Never grant this permission to your customers.**
+   .. warning:: 🙅 **Never grant this permission to your customers.**
 
-                               Giving customers access to reporting constitutes a serious data breach,
-                               as it includes **all ticket and user information across the entire system**!
+      Giving customers access to reporting constitutes a serious data breach, as
+      it includes **all ticket and user information across the entire system**!
 
-                            .. note:: This permission is the exception to the rule on this page:
+   .. note:: This permission is the exception to the rule on this page:
 
-                               1. the feature it enables is not for communicating with customers;
-                               2. the button appears at the *bottom* of the sidebar; and
-                               3. it is typically reserved for admins and supervisors.
+      1. the feature it enables is not for communicating with customers;
+      2. the button appears at the *bottom* of the sidebar; and
+      3. it is typically reserved for admins and supervisors.
 
-                            .. _role-settings-group-access:
-:``ticket.agent``:          `🗒️ (Agent) Overviews <https://user-docs.zammad.org/en/latest/basics/find-ticket/browse.html>`_
+   .. _role-settings-group-access:
+:``ticket.agent``:
+   `🗒️ (Agent) Overviews <https://user-docs.zammad.org/en/latest/basics/find-ticket/browse.html>`_
 
-                            .. note:: 🤔 **What’s this big table doing here in the middle of my permissions?**
+   .. note::
 
-                               .. figure:: /images/manage/roles/group-access-levels.png
-                                  :alt: Group access table in Edit Role dialog
-                                  :align: center
+      🤔 **What’s this big table doing here in the middle of my permissions?**
 
-                                  The group access table is shown
-                                  when there is **more than one active group** in the system.
+      .. figure:: /images/manage/roles/group-access-levels.png
+         :alt: Group access table in Edit Role dialog
+         :align: center
 
-                               Okay, so remember when we said that :ref:`“roles are just collections of permissions” <what-is-a-role>`?
-                               That wasn’t *entirely* true—they can also be collections of **group access levels**.
+         The group access table is shown
+         when there is **more than one active group** in the system.
 
-                               To learn more, see :doc:`/manage/groups/access-levels`.
+      Okay, so remember when we said that
+      :ref:`“roles are just collections of permissions” <what-is-a-role>`?
+      That wasn't *entirely* true—they can also be collections of
+      **group access levels**.
 
-                            .. hint:: 🤓 **Point of technicality**
+      To learn more, see :doc:`/manage/groups/access-levels`.
 
-                               As of Zammad 3.5, you can assign both agent and customer roles to the same user—but
-                               but you **can’t** assign both ``ticket.agent`` and ``ticket.customer`` *permissions* to the same *role!*
+   .. hint:: 🤓 **Point of technicality**
 
-                               To make it work, you need two separate roles:
-                               one with ``ticket.agent`` and the other with ``ticket.customer``.
+      You can assign both agent and customer roles to the same user — but you 
+      **can't** assign both ``ticket.agent`` and ``ticket.customer``
+      *permissions* to the same *role!*
+
+      To make it work, you need two separate roles:
+      one with ``ticket.agent`` and the other with ``ticket.customer``.

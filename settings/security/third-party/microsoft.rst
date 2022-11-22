@@ -1,7 +1,7 @@
 Microsoft
 =========
 
-Zammads Microsoft connection allows your users with Microsoft accounts to login. 
+Zammad's Microsoft connection allows your users with Microsoft accounts to login. 
 This works for Azure users as well and can be an alternative to 
 :doc:`/system/integrations/ldap/index`.
 
@@ -101,7 +101,7 @@ You now have all required information for Zammad.
 Step 2 - Add app credentials to Zammad
 --------------------------------------
 
-Navigate to Security → Third-party Applications (Tab) within Zammads admin 
+Navigate to Security → Third-party Applications (Tab) within Zammad's admin 
 settings. Scroll down to the section *Authentication via Microsoft* and 
 fill in the required information.
 

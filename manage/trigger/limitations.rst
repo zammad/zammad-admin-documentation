@@ -2,7 +2,7 @@ Limitations
 ===========
 
 It's important to understand when a trigger can be used and when it's better
-to use e.g. Zammads :doc:`/manage/scheduler` or
+to use e.g. Zammad's :doc:`/manage/scheduler` or
 :doc:`postmaster filters </channels/email/filters>`. 
 
 Triggers will fire during the following conditions:
@@ -22,4 +22,4 @@ Triggers always handle the current ticket attributes and the article
 (if applicable) that cause the trigger to fire.
 
 If your use case doesn't fit in above possibilities, you might want to have a
-look at Zammads :doc:`/manage/scheduler`.
+look at Zammad's :doc:`/manage/scheduler`.

@@ -60,30 +60,50 @@ Theme
 
    🎨 Customize the appearance of the knowledge base.
 
-:Icon & Link Color: Applies to all **category & article** entries in
-                    knowledge base menus, as well as hyperlinks in articles.
+:Icon & Link Color:
+   Applies to all **category & article** entries in knowledge base menus,
+   as well as hyperlinks in articles.
 
-:Header Color:      Applies to the area surrounding the search bar.
+:Header Color:
+   Applies to the area surrounding the search bar.
 
-:Header Link Color:  Defines the color of the header links to use.
-                     Make sure that this color has a proper contrast to
-                     *Header Color*.
+:Header Link Color:
+   Defines the color of the header links to use.
+   Make sure that this color has a proper contrast to *Header Color*.
 
-:Icon Set:          Defines the selection of icons that may be used when
-                    creating/editing categories.
+:Show Feed Icon:
+   You can enable Zammad to provide RSS feed URLs in both internal and public
+   knowledge base. With this option being active, Zammad will provide you
+   up to two RSS links:
 
-                    Each category in the knowledge base *must* be given an icon.
-                    Icons appear prominently in the main menu, like so:
+      * a general RSS feed of the whole knowledge base (top level)
+      * a category specific RSS feed of the category you're in
+        (also applies to answers you're viewing)
 
-                    .. figure:: /images/manage/knowledge-base/knowledge-base-icons.png
-                       :alt: Knowledge Base: Icons
-                       :align: center
+   This setting by default is set to ``no``.
 
-                    .. warning:: 
+   .. hint::
 
-                       🤦‍♀️ Re-assigning icons on all of your categories is
-                       tedious work. It’s advisable to explore your options
-                       early to avoid having to change your mind down the road.
+      Your agents will receive special RSS feed URLs with **access tokens**.
+      Agents can always renew these. Keep in mind that sharing these URLs
+      with third parties may provide access to **internal** answers!
+
+:Icon Set:
+   Defines the selection of icons that may be used when creating/editing
+   categories.
+
+   Each category in the knowledge base *must* be given an icon.
+   Icons appear prominently in the main menu, like so:
+
+   .. figure:: /images/manage/knowledge-base/knowledge-base-icons.png
+      :alt: Knowledge Base: Icons
+      :align: center
+
+   .. warning:: 
+
+      🤦‍♀️ Re-assigning icons on all of your categories is tedious work.
+      It's advisable to explore your options early to avoid having to change
+      your mind down the road.
 
 Languages
 ^^^^^^^^^

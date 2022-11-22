@@ -4,7 +4,7 @@ Group Settings
 Click on a group to edit it, or click on *New group* to create a new group.
 
 .. figure:: /images/manage/groups/group-management.png
-   :alt: Screenshot showing Zammads group management
+   :alt: Screenshot showing Zammad's group management
 
 No matter if you're going to edit or create a new group, each group
 comes with the following settings you can adjust as needed.
@@ -31,6 +31,15 @@ Follow-up possible
    do not reopen Ticket but create new Ticket
       The ticket will remain closed and Zammad will create a new ticket instead.
       The new ticket contains the customers reply only.
+
+   do not reopen ticket after certain time but create new ticket
+      The ticket can be reopened unless the specified number of days
+      *after last ticket closure* has been exceeded. If the time limit is
+      exceeded, Zammad will create a new ticket instead of reopening.
+
+      Choosing this option will provide the option *Reopening time in days*
+      which requires you to provide the number of days you want Zammad to
+      wait until it creates new tickets.
 
 Assign follow-ups
    This setting allows you to decide if, upon a reopen of a ticket, the last

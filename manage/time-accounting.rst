@@ -10,7 +10,7 @@ enable time accounting (turn on the switch on the top left side of the page).
 How it works
 ------------
 
-Zammads time accounting uses ticket selectors (filters) to check if a ticket
+Zammad's time accounting uses ticket selectors (filters) to check if a ticket
 is applicable for time accounting or not. If a ticket applies for accounting,
 Zammad will request the agent to provide how much time was needed to process
 the current ticket step.

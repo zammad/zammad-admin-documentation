@@ -7,7 +7,7 @@ to end these.
 .. figure:: /images/system/sessions/session-managenent.png
    :width: 90%
    :align: center
-   :alt: Screenshot showing Zammads session management
+   :alt: Screenshot showing Zammad's session management
 
 .. hint::
 
