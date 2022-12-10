@@ -94,6 +94,11 @@ Keycloak
 
      If your Keycloak users’ email addresses are stored on another property
      (*e.g.,* ``username``), adjust accordingly.
+     
+   * Make sure the **Client ID** matches the **Master SAML Processing URL**.
+   
+   * You need to enable **Sign assertions**.
+
 
 Step 2: Configure Zammad
 ------------------------
@@ -112,7 +117,7 @@ Display name
 
 IDP SSO Target URL
    This is the target URL Zammad shall redirect to when the user presses
-   the SAML button.
+   the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml
 
 IDP Certificate
    The public certificate of your IDP for Zammad to verify during the callback
