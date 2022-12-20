@@ -58,6 +58,8 @@ else:
    # If we're **not on latest**, we'll display a deprecation warning.
    if version == 'latest':
       branch = version
+   elif version == 'pre-release':
+      branch = "pre-release"
    else:
       branch = "old-version"
 
