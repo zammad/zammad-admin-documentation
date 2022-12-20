@@ -32,7 +32,7 @@ Information about this markup language can be found at:
 
 This documentation provides versions:
 
-- ``pre-release`` can contain develop, not yet releases functions and changes
+- ``pre-release`` can contain develop, not yet released functions and changes
 - ``main`` is the ``latest`` (and stable) version of the repository
 - ``stable-x.x`` is the old back port for an earlier version
   - These branches do not receive further updates and serve as historic help
