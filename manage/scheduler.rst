@@ -22,8 +22,11 @@ that you want to be executed on these tickets.
 
 .. hint::
 
-   Schedulers can be used to send periodic reminder emails.
-   Use :doc:`/system/variables` to build highly-customized email templates.
+   | Schedulers can be used to send periodic reminder emails.
+     Use :doc:`/system/variables` to build highly-customized email templates.
+   |
+   | Schedulers only perform ``2000`` tickets per run. This is a security
+     function in case you accidentally miss configure the scheduler.
 
 Add a new scheduler
 ===================
