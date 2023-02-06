@@ -34,6 +34,8 @@ the current ticket step.
       alongside writing an article, the ticket selector has to match the ticket
       state before closing for the time accounting dialog to appear.
 
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
 .. figure:: /images/manage/time-accounting/time-accounting-selector.png
    :align: center
    :alt: Time accounting ticket selectors

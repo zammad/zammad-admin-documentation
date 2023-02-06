@@ -49,6 +49,8 @@ Conditions for affected objects
    Determine the ticket attributes (conditions) to limit on which tickets the
    actions configured in step 5 are to be performed.
 
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
 Preview
    This list previews some tickets that your conditions are matching and shows 
    a total of how many tickets are being matched. Use this to double-check the

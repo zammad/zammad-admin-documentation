@@ -40,3 +40,6 @@ The list below the graphic shows the tickets that have been filtered out.
 This can be downloaded as CSV and processed in a statistics program:
 
 .. figure:: /images/manage/report-profiles/download-reporting-result-as-csv.png
+
+.. TODO needs rework
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
