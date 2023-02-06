@@ -42,6 +42,8 @@ the properties of:
    regular business hours. (“Regular business hours” can be defined on
    :doc:`/manage/calendars` setting.)
 
+.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
 Actions
 -------
 
