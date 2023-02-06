@@ -10,6 +10,11 @@ Triggers will fire during the following conditions:
   * Creation of a ticket
   * Updating a ticket
 
+  .. important::
+
+    Triggers are only accounted if you're adding a article to the ticket.
+    Changing ticket attributes to different values without article won't work.
+
 While the creation of tickets and triggering these actions is straight forward,
 updated of tickets are a bit trickier. In terms of triggers, a ticket is only
 updated if you press the update button on the lower right of a ticket. 
