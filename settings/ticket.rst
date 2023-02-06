@@ -118,6 +118,8 @@ OPTIONS
          ``Increment``!
 
 
+.. _auto_assignment:
+
 Auto-Assignment
 ---------------
 

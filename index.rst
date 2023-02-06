@@ -81,3 +81,4 @@ Zammad - Documentation for administrators
    :caption: Misc
 
    misc/composer
+   misc/object-conditions/index
