@@ -52,4 +52,6 @@ third-party authentication methods.
 If you want to allow your users to always be able to log in, no matter what,
 you may want to enable ``Automatic account link on initial logon``.
 
-.. image:: /images/settings/security/automatic-account-link.png
+.. figure:: /images/settings/security/automatic-account-link.png
+   :alt: Screenshot highlighting the "Automatic account link on initial logon"
+         setting
