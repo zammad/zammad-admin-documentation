@@ -30,6 +30,8 @@ Name
 Ticket selector
    Specify the conditions on which tickets this SLA should apply to.
 
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
 Preview
    In the preview you see the selection of the tickets and double check whether
    those are correct.
