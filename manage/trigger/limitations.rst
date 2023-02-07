@@ -12,7 +12,7 @@ Triggers will fire during the following conditions:
 
   .. important::
 
-    Triggers are only accounted if you're adding a article to the ticket.
+    Triggers are only accounted if you're adding an article to the ticket.
     Changing ticket attributes to different values without article won't work.
 
 While the creation of tickets and triggering these actions is straight forward,

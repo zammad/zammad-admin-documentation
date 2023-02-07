@@ -54,17 +54,17 @@ Match none (NOT)
    All conditions in this block will be matched with "AND".
    To be matched positive, no or any condition may match - but not all together.
 
-See `Evaluation order`_ to understand how Zammad evaluated triggers in expert
+See `Evaluation order`_ to understand how Zammad evaluates triggers in expert
 mode.
 
 Adding conditions and logic blocks
 ----------------------------------
 
-By using the |subclause| icon you can add as many logic blocks you need.
-New blocks will be added below the object you're using the |subclause| icon.
+By using the |subclause| icon you can add as many logic blocks as you need.
+New blocks will be added below the object you're using the |subclause| icon on.
 
-The level automatically will be a lower level than the object you're using
-is on.
+The level automatically will be set to a lower level than the object you're
+using it on.
 
    .. figure:: /images/misc/object-conditions/adding-logic-blocks.gif
       :alt: Screencast showing new logic blocks being added
@@ -72,7 +72,7 @@ is on.
 
    .. hint::
 
-      The same behavior also applies for conditions *within* logic blocks!
+      The same behavior also applies to conditions *within* logic blocks!
 
       .. figure:: /images/misc/object-conditions/adding-conditions-to-blocks.gif
          :alt: Screencast showing new conditions being added to logic blocks
@@ -80,7 +80,7 @@ is on.
 
    .. warning::
 
-      Note that removing condition blocks remove **all blocks and conditions**
+      Note that removing condition blocks removes **all blocks and conditions**
       with it!
 
 .. |subclause| image:: /images/icons/subclause-64px.png
@@ -90,13 +90,13 @@ is on.
 Re-arranging conditions and logic blocks
 ----------------------------------------
 
-Use ≡ to drag conditions or logic blocks and drop it to the position desired.
+Use ≡ to drag conditions or logic blocks and drop them to the position desired.
 By using drag and drop, you won't need to remove and re-add conditions.
 
    .. hint::
 
       Moving logic blocks will also move any condition and, if applicable,
-      logic blocks that's below it.
+      logic blocks that are below it.
 
       While you can adjust the order of conditions without any further logic
       blocks, this won't have any consequences.
@@ -119,48 +119,48 @@ blocks.
 
    subgraph ConditionCollection["Condition collection"]
       TL["Top level (match AND)"]
-      TLA(Condition 1)
-      TLB(Condition 2)
+      TLA(Condition 1-1)
+      TLB(Condition 1-2)
       subgraph SecondLevelA["2nd level A (match OR)"]
          x[" "]:::addSpacing
-         SLA1(Condition 1-1)
-         SLA2(Condition 1-2)
+         SLA1(Condition 2-1)
+         SLA2(Condition 2-2)
 
          subgraph ThirdLevelA["3rd level A (NO match)"]
-            TLA1(Condition 2-1)
-            TLA2(Condition 2-2)
+            TLA1(Condition 3-1)
+            TLA2(Condition 3-2)
          end
          subgraph ThirdLevelB["3rd level B (match AND)"]
-            TLB1(Condition 2-3)
-            TLB2(Condition 2-4)
+            TLB1(Condition 3-3)
+            TLB2(Condition 3-4)
          end
       end
       subgraph SecondLevelB["2nd level B (match AND)"]
-         SLB1(Condition 1-3)
-         SLB2(Condition 1-4)
+         SLB1(Condition 2-3)
+         SLB2(Condition 2-4)
       end
    end
 
    subgraph MTLA["Evaluate 3rd level A"]
       direction LR
 
-      MTLA1[2-1]
-      MTLA2[2-2]
+      MTLA1[3-1]
+      MTLA2[3-2]
       MTLA1 -- AND --- MTLA2
    end
 
    subgraph MTLB["Evaluate 3rd level B"]
       direction LR
-      MTLB1[2-3]
-      MTLB2[2-4]
+      MTLB1[3-3]
+      MTLB2[3-4]
       MTLB1 -- AND --- MTLB2
    end
 
    subgraph MSLC["Evaluate 2nd level A"]
       direction TB
-      MTLC1[1-1]
-      MTLC2[1-2]
-      MTLC3[Result 3rd level A]
+      MTLC1[2-1]
+      MTLC2[2-2]
+      MTLC3[Negated <br> Result 3rd level A]
       MTLC4[Result 3rd level B]
       MTLC1 -- OR --- MTLC2
       MTLC2 -- OR --- MTLC3

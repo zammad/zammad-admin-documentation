@@ -19,6 +19,6 @@
       section within next<br>(relative)
       2 days       :withinnext, after withinlast, 2d
       section til<br>(relative)
-      14.06.       :09.06.2023, 5d
+      2 days       :09.06.2023, 6d
       section from<br>(relative)
-      11.06.       :after beforeabs, 5d
+      2 days       :after beforeabs, 6d
