@@ -63,7 +63,7 @@ Adding conditions and logic blocks
 By using the |subclause| icon you can add as many logic blocks as you need.
 New blocks will be added below the object you're using the |subclause| icon on.
 
-The level automatically will be set to a lower level than the object you're
+The level will be automatically set to a lower level than the object you're
 using it on.
 
    .. figure:: /images/misc/object-conditions/adding-logic-blocks.gif
