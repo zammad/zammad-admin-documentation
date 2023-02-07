@@ -15,6 +15,8 @@ Please note that ticket conditions do not support the following:
 
    * regular expressions
    * case sensitive string conditions
+   * Basic conditions do not support the same attribute to be selected more
+     than once
 
    .. note::
 
