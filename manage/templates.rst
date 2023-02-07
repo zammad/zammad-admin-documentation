@@ -37,6 +37,11 @@ Managing templates
       This allows you to create granular templates with the information you
       need.
 
+   Active
+      Set any currently active ticket template to ``inactive`` if you don't
+      need it momentarily. This allows you to keep the template for e.g.
+      seasonal reasons without providing it as an option to your agents.
+
    .. figure:: /images/manage/templates/adding-new-template.png
       :alt: Screenshot showing the template configuration
 
