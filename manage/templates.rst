@@ -6,7 +6,7 @@ ticket template for recurring tickets.
 
    .. note:: **😖 Sounds familiar**
 
-      Right! Prior Zammad 5.3 ticket templates where managed entirely within
+      Right! Prior Zammad 5.3 ticket templates were managed entirely within
       the ticket zoom.
 
       | This has changed:
@@ -57,7 +57,7 @@ Managing templates
    *Clone*. A new template modal will open with attributes prefilled.
 
 :Removing templates:
-   If you longer require a specific template, use *⋮ Actions* in the list and
+   If you no longer require a specific template, use *⋮ Actions* in the list and
    choose *Delete*.
 
    .. danger::
