@@ -57,3 +57,43 @@ you may want to enable ``Automatic account link on initial logon``.
 .. figure:: /images/settings/security/automatic-account-link.png
    :alt: Screenshot highlighting the "Automatic account link on initial logon"
          setting
+
+.. _automatic-account-linking-notification:
+
+Automatic account linking notification
+--------------------------------------
+
+.. container:: cfloat-left
+
+   To improve security and your users awareness, you can enable Zammad to
+   notify your users when a new third-party application has been linked to their
+   account.
+
+   This notification is sent out once per third-party application.
+   Zammad does also mention the method used, e.g.: ``Microsoft``.
+
+   By default this setting is not active (set to ``no``).
+
+.. container:: cfloat-right
+
+   .. figure:: /images/settings/security/account-linking-notification-sample.png
+      :alt: x
+
+.. container:: cfloat-clear
+
+   X
+
+.. note::
+
+   This notification is only send if the account in question already exists.
+   If the login via the third-party also creates the missing account,
+   the notification will be skipped.
+
+   This means it only affects:
+
+      * manual account linking within the third-party page of the users profile
+      * logging into an existing local account by utilizing the
+        *automatic account link on initial logon* functionality
+
+.. figure:: /images/settings/security/automatic-account-link-notification.png
+      :alt: x
