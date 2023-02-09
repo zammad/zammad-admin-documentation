@@ -6,7 +6,7 @@ ticket template for recurring tickets.
 
    .. note:: **😖 Sounds familiar**
 
-      Right! Prior Zammad 5.3 ticket templates where managed entirely within
+      Right! Prior Zammad 5.3 ticket templates were managed entirely within
       the ticket zoom.
 
       | This has changed:
@@ -37,6 +37,11 @@ Managing templates
       This allows you to create granular templates with the information you
       need.
 
+   Active
+      Set any currently active ticket template to ``inactive`` if you don't
+      need it momentarily. This allows you to keep the template for e.g.
+      seasonal reasons without providing it as an option to your agents.
+
    .. figure:: /images/manage/templates/adding-new-template.png
       :alt: Screenshot showing the template configuration
 
@@ -52,7 +57,7 @@ Managing templates
    *Clone*. A new template modal will open with attributes prefilled.
 
 :Removing templates:
-   If you longer require a specific template, use *⋮ Actions* in the list and
+   If you no longer require a specific template, use *⋮ Actions* in the list and
    choose *Delete*.
 
    .. danger::
