@@ -77,7 +77,8 @@ Automatic account linking notification
 .. container:: cfloat-right
 
    .. figure:: /images/settings/security/account-linking-notification-sample.png
-      :alt: x
+      :alt: Screenshot showing sample notification mail after initial
+            third-party linking
 
 .. container:: cfloat-clear
 
@@ -85,7 +86,7 @@ Automatic account linking notification
 
 .. note::
 
-   This notification is only send if the account in question already exists.
+   This notification is only sent if the account in question already exists.
    If the login via the third-party also creates the missing account,
    the notification will be skipped.
 
@@ -96,4 +97,5 @@ Automatic account linking notification
         *automatic account link on initial logon* functionality
 
 .. figure:: /images/settings/security/automatic-account-link-notification.png
-      :alt: x
+      :alt: Screenshot showing the "automatic account linking notification"
+            setting
