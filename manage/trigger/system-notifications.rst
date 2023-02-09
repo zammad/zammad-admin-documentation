@@ -20,6 +20,7 @@ When are they sent?
 **All users** are notified of:
 
 * password change requests
+* :ref:`automatic-account-linking-notification` on initial login
 
 **Staff (admins & agents)** are notified of:
 
