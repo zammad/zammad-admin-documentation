@@ -15,7 +15,6 @@ expert mode (*AND / OR*). The following functions in Zammad are covered.
    * :doc:`/manage/trigger`
    * :doc:`/manage/scheduler`
    * :doc:`/manage/report-profiles`
-   * :doc:`/manage/time-accounting`
    * :ref:`Automatic ticket assignment <auto_assignment>`
 
 All other functions that come with an object condition configuration may not
