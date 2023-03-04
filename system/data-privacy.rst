@@ -140,3 +140,9 @@ Frequently Asked Questions
 🚮 I removed a customer, now my reporting is off!
    When removing users and their tickets, all references are removed.
    This also affects e.g. Reporting - these information are lost.
+
+🤔 How long does Zammad store created tasks?
+   Please see the on-premise data section of the `data privacy`_ section.
+
+.. _data privacy:
+   https://docs.zammad.org/en/latest/appendix/privacy.html
