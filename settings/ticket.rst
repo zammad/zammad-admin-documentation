@@ -118,6 +118,8 @@ OPTIONS
          ``Increment``!
 
 
+.. _auto_assignment:
+
 Auto-Assignment
 ---------------
 
@@ -137,6 +139,8 @@ area under within Settings -> Ticket -> Auto assignment.
 If you want to use this function for only specific tickets, you can configure
 the conditions accordingly to meet your requirement.
 By default the condition affects all tickets with the state ``open``.
+
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
 If you need to exclude users (e.g. a group leader), you can search and select
 the desired agents in the ``Exception Users`` list.

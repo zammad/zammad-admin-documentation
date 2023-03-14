@@ -88,6 +88,8 @@ Conditions for shown tickets
    to double check if your entry of the conditions makes sense by directly
    displaying tickets that match your filtering.
 
+   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
 Attributes
    .. figure:: /images/manage/overviews/sample-attributes-of-a-configured-overview.png
 
