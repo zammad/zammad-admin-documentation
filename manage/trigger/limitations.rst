@@ -15,7 +15,7 @@ Triggers will fire during the following conditions:
     Update-based triggers will trigger, when conditions match and an article was created
     or an attribute of the trigger conditions has changed.
     
-    E.g. A trigger which is listening on the priorities **1 low** will trigger if the 
+    E.g. A trigger which is listening on the priority **1 low** will trigger if the 
     ticket was changed to **1 low** or got an new article in that priority state.
 
 While the creation of tickets and triggering these actions is straight forward,
