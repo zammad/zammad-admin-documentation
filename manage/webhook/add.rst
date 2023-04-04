@@ -3,7 +3,7 @@ Adding webhooks
 
 Webhooks are defined globally.
 This allows you to use one specific endpoint on several triggers or schedulers.
-   
+
    .. warning:: **🦻 Zammad webhooks are specific**
 
       Keep in mind that the remote site has to be able to understand the
@@ -43,6 +43,12 @@ You can configure the following information to webhooks:
    SSL verify
       Defaults to ``yes`` - if you're using unsecure self signed certificates
       set this option to ``no``.
+
+   HTTP Basic Authentication Username
+      Set this if the endpoint requires HTTP basic authentication credentials.
+
+   HTTP Basic Authentication Password
+      Set this if the endpoint requires HTTP basic authentication credentials.
 
    Note
       If required you can leave useful information for other Zammad admins
