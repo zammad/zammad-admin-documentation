@@ -17,7 +17,7 @@ If you would like to improve the docs, simply:
 > (or request additional languages) [here][wbetranslate].
 > Do **NOT** submit a PR with changes to the contents of the `locale/` directory.
 
-Thanks! ❤ ❤ ❤  
+Thanks! ❤ ❤ ❤
    The Zammad Team
 
 ### ReStructuredText Markup
@@ -53,7 +53,7 @@ This will ensure that your changes are available upon merge.
 * sphinx
 
   ```
-  $ pip install sphinx sphinx-autobuild sphinx-intl sphinx_rtd_theme sphinx-tabs
+  $ pip install -r requirements.txt
   ```
 
 * gettext
