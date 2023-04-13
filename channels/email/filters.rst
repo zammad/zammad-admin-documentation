@@ -1,6 +1,11 @@
 Filters
 *******
 
+.. toctree::
+   :hidden:
+
+   /channels/email/filters/system-filters
+
 .. figure:: /images/channels/email/filters-page.png
    :alt: Account settings page
    :align: center
@@ -21,7 +26,7 @@ Automatically dispatch tickets into certain groups:
   .. note::
 
     Note that the Group action only has an effect when the matching email
-    results in a new ticket. Zammad will not change the group of existing 
+    results in a new ticket. Zammad will not change the group of existing
     tickets.
 
 Automatically increase the priority of tickets from a VIP customer:
