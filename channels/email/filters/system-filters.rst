@@ -14,7 +14,8 @@ UI. Those filters might come in handy as it can change Zammad's behavior.
 JIRA
 ====
 
-Zammad will detect Service Now emails and assign them to existing tickets, if the following requirements are met:
+Zammad will detect Service Now emails and assign them to existing tickets,
+if the following requirements are met:
 
    - Headers contain the ``X-ServiceNow-Generated`` header.
    - Subject does match the regex ``\s(INC\d+)\s`` e.g. ``INC678439``.
@@ -24,10 +25,12 @@ See `JIRA Mail Example`_ for comparison of your emails.
 Service-Now
 ===========
 
-Zammad will detect JIRA emails and assign them to existing tickets, if the following requirements are met:
+Zammad will detect JIRA emails and assign them to existing tickets,
+if the following requirements are met:
 
    - Headers contain the ``X-JIRA-FingerPrint`` header.
-   - Subject does match the regex ``\[JIRA\]\s\((\w+-\d+)\)`` e.g. ``[JIRA] (SYS-422)``.
+   - Subject does match the regex ``\[JIRA\]\s\((\w+-\d+)\)`` e.g.
+     ``[JIRA] (SYS-422)``.
 
 See `Service-Now Mail Example`_ for comparison of your emails.
 
