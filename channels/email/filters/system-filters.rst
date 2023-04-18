@@ -1,8 +1,9 @@
 System Filters
 **************
 
-On this page you can find some filters that you won't find within the Zammad
-UI. Those filters might come in handy as it can change Zammad's behavior.
+On this page you can find some pre-defined filters that you won't find within
+the Zammad's UI. Those filters might come in handy when trying to understand
+Zammad's behavior.
 
 .. note::
 
