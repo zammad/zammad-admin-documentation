@@ -4,7 +4,7 @@ Filters
 .. toctree::
    :hidden:
 
-   /channels/email/filters/system-filters
+   filters/system-filters
 
 .. figure:: /images/channels/email/filters-page.png
    :alt: Account settings page
