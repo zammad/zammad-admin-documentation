@@ -488,10 +488,12 @@ Date & Time field
       * | *has changed*
         | *The field has been changed during a ticket update.*
       * | *has reached*
-        | **This option is only available for Ticket's Pending time and Escalation time in Trigger conditions!**
+        | **This option is only available for Ticket's Pending time and
+          Escalation time in Trigger conditions!**
         | *The time set in this field was reached*
       * | *has reached warning*
-        | **This option is only available for Ticket's Escalation time in Trigger conditions!**
+        | **This option is only available for Ticket's Escalation time in
+          Trigger conditions!**
         | *The time set in this field will be reached in less than 15 minutes*
 
 .. container:: cfloat-clear

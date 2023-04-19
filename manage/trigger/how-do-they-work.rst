@@ -1,9 +1,10 @@
 How do they work?
 =================
 
-Triggers consist of three parts: **activators**, **conditions** and **changes**. Activator defines when the question is asked. Conditions
-answer the question, “when should this trigger fire?” Changes answer the
-question, “what should happen when it does?”
+Triggers consist of three parts: **activators**, **conditions** and **changes**.
+Activator defines when the question is asked. Conditions answer the question,
+“when should this trigger fire?” Changes answer the question,
+“what should happen when it does?”
 
 Triggers are evaluated in alphabetical order, by **name.**
 In some situations triggers might be the wrong choice, see
@@ -20,7 +21,8 @@ Activators
 Triggers support two types of activators:
 
 * **Action** is triggered by some actor.
-  Either a user creating or updating the ticket. Or an external action. For example an email coming in.
+  Either a user creating or updating the ticket. Or an external action. For
+  example an email coming in.
 
 * **Time event** is triggered at a specific time.
   E.g. when Ticket's Pending time is reached.
@@ -28,20 +30,24 @@ Triggers support two types of activators:
 
 **Action** activator may evaluate **Conditions** in two modes:
 
-* **Selective** execution checks if any property that is included in conditions was updated.
-  If the action was other than update, it checks if conditions match.
+* **Selective** execution checks if any property that is included in conditions
+  was updated. If the action was other than update, it checks if conditions match.
 
   .. important::
-    E.g. A selective action trigger which is listening on the priority **1 low** will trigger if the
-    ticket was changed to **1 low** or got an new article in that priority state.
+    E.g. A selective action trigger which is listening on the priority **1 low**
+    will trigger if the ticket was changed to **1 low** or got an new article in
+    that priority state.
 
-* **Always** execution checks if the current state of the ticket in question matches conditions.
+* **Always** execution checks if the current state of the ticket in question
+  matches conditions.
 
   .. important::
-    E.g. An always action trigger which is listening on the priority **1 low** will trigger if the
-    ticket was moved to another group while priority was set **1 low**.
+    E.g. An always action trigger which is listening on the priority **1 low**
+    will trigger if the ticket was moved to another group while priority was
+    set **1 low**.
 
-**Time event** activator simply checks if **Conditions** match. In other words, *Always*.
+**Time event** activator simply checks if **Conditions** match. In other words,
+*Always*.
 
 When creating a trigger, choose activator here:
 
