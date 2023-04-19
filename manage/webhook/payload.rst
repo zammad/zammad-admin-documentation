@@ -1,15 +1,15 @@
 Webhook Payload
 ===============
 
-   .. tip:: **🤓 A more personal payload...**
+.. tip:: **🤓 A more personal payload...**
 
-      Your Zammad instance also provides a payload as example. This payload 
-      *does fit your installation* and provides your custom objects!
+  Your Zammad instance also provides default payload as an example. This payload
+  *does fit your installation* and provides your custom objects!
 
-      .. figure:: /images/manage/webhook/webhook-sample-payload.png
-         :alt: The webhook menu provides a payload for the particular instance in question.
-         :align: center
-         :width: 90%
+  .. figure:: /images/manage/webhook/webhook-sample-payload.png
+      :alt: The webhook menu provides a payload for the particular instance in question.
+      :align: center
+      :width: 90%
 
 Request headers
 ---------------
@@ -22,8 +22,16 @@ Zammad sends the following headers in each webhook POST request:
 :``X-Hub-Signature``:   The SHA-1 hash of your HMAC-SHA1 signature token
                         (assuming you provided one when creating your trigger)
 
-JSON payload (example)
-----------------------
+.. _webhook-payload-default:
+
+Default JSON Payload
+--------------------
+
+When the webhook payload is not customized, requests will include default payload
+depending on the webhook type.
+
+Regular Webhooks (example)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: long-code-block
 
@@ -325,15 +333,16 @@ JSON payload (example)
 
 .. note::
 
-   * For better readability, all empty and ``null`` values
-     have been omitted from the sample payload above.
-     That means the webhooks you receive
+   * For better readability, all empty and ``null`` values have been omitted from the
+     sample payload above. That means the webhooks you receive
      *will include additional fields not shown here*.
 
    * Webhooks will also include fields for any relevant
      :doc:`custom objects </system/objects>` defined in your system.
 
    * Attachments are *not included*; links to attachments *are* (authentication required).
+
+   * Linked tickets are *not included*.
 
    * None of the following **user attributes** are included:
 
@@ -345,3 +354,9 @@ JSON payload (example)
      * ``groups``
      * ``authorization_ids``
      * ``authorizations``
+
+Pre-defined Webhooks
+~~~~~~~~~~~~~~~~~~~~
+
+Each pre-defined webhook template provides a special payload designed for a particular
+service. See :doc:`/manage/webhook/examples` for more information.
