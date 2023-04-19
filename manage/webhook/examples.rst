@@ -4,28 +4,29 @@ Webhook Examples
 Microsoft Teams Notifications
 -----------------------------
 
-Follow the steps below to configure a webhook for receiving Zammad notifications in
-a Microsoft Teams channel.
+Follow the steps below to configure a webhook for receiving Zammad notifications
+in a Microsoft Teams channel.
 
 Step 1 - Setup Incoming Webhook Connector in your Teams Channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In your target Teams Channel, click on the overflow menu in the upper right corner and
-choose **Connectors**.
+In your target Teams Channel, click on the overflow menu in the upper right
+corner and choose **Connectors**.
 
 .. figure:: /images/manage/webhook/webhook-teams-channel-connectors.png
    :alt: Connectors menu item in a Teams Channel
    :align: center
 
-Find a connector named **Incoming Webhook** in the list and click on **Configure** button
-next to it.
+Find a connector named **Incoming Webhook** in the list and click on
+**Configure** button next to it.
 
 .. figure:: /images/manage/webhook/webhook-teams-incoming-webhook.png
    :alt: Incoming Webhook in the Connectors list
    :align: center
 
-Provide an appropriate name for the incoming webhook connector, keeping in mind this will
-be used as the name for all of the notification messages in the channel.
+Provide an appropriate name for the incoming webhook connector, keeping in mind
+this will be used as the name for all of the notification messages in the
+channel.
 
 Optionally, provide a custom image which will be used as the avatar.
 
@@ -35,8 +36,9 @@ Optionally, provide a custom image which will be used as the avatar.
 
 Click on **Create** and be patient.
 
-Once created, make sure to copy *the webhook endpoint URL* to clipboard and save it for
-later. You can do this in one click via the button shown right next to the field.
+Once created, make sure to copy *the webhook endpoint URL* to clipboard and save
+it for later. You can do this in one click via the button shown right next to
+the field.
 
 .. figure:: /images/manage/webhook/webhook-teams-incoming-webhook-endpoint.png
    :alt: Copying Incoming Webhook Connector URL
@@ -47,9 +49,9 @@ Finally, close the connector configuration by clicking **Done**.
 Step 2 - Add a Pre-defined Webhook in Zammad
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go to :doc:`Webhook </manage/webhook/add>` management screen in your Zammad instance
-and click on the arrow next to the green button in the upper right corner. Choose
-**Pre-defined Webhook** from the dropdown menu.
+Go to :doc:`Webhook </manage/webhook/add>` management screen in your Zammad
+instance and click on the arrow next to the green button in the upper right
+corner. Choose **Pre-defined Webhook** from the dropdown menu.
 
 .. figure:: /images/manage/webhook/webhook-new-buttons.png
    :alt: New Pre-defined Webhook button
@@ -79,25 +81,25 @@ Finally, click on **Submit**.
 Step 3 - Configuring a Trigger on Ticket Events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As a last step, we will create a Trigger to post a notification to the Microsoft Teams
-channel whenever a ticket is created or updated.
+As a last step, we will create a Trigger to post a notification to the Microsoft
+Teams channel whenever a ticket is created or updated.
 
 Go to :doc:`Trigger </manage/trigger>` management screen, and click on the green
 **New Trigger** button.
 
-First, provide a suitable **Name** for the trigger and select *Always* for **Action
-Execution** mode.
+First, provide a suitable **Name** for the trigger and select *Always* for
+**Action Execution** mode.
 
-Then, switch on **Expert Mode** under **Conditions for affected objects** and change the
-first condition group to *Match any (OR)*.
+Then, switch on **Expert Mode** under **Conditions for affected objects** and
+change the first condition group to *Match any (OR)*.
 
-Next, change the initial condition attribute to *Action*. Click on the plus button next
-to it to add another *Action* attribute below. Change the value of the new attribute to
-*updated*.
+Next, change the initial condition attribute to *Action*. Click on the plus
+button next to it to add another *Action* attribute below. Change the value of
+the new attribute to *updated*.
 
 Under **Execute changes on objects**, change the initial attribute to
-*Notification > Webhook* and select the Microsoft Teams Notifications webhook from the
-list.
+*Notification > Webhook* and select the Microsoft Teams Notifications webhook
+from the list.
 
 .. figure:: /images/manage/webhook/webhook-teams-trigger-new.png
    :alt: Configuring Trigger for firing of Webhook
@@ -109,10 +111,11 @@ Finally, click on **Submit** and your webhook is ready for use!
 Sample Teams Channel Notification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From now on, whenever a ticket is created or updated in your Zammad system, a suitable
-notification will be posted in the configured Teams Channel. The notification will
-contain the link to the ticket, updated data and `content of the last article`_. It will
-also be `color coded`_ according to its latest state.
+From now on, whenever a ticket is created or updated in your Zammad system, a
+suitable notification will be posted in the configured Teams Channel. The
+notification will contain the link to the ticket, updated data and
+`content of the last article`_. It will also be `color coded`_ according to its
+latest state.
 
 .. _color coded:
    https://user-docs.zammad.org/en/latest/basics/service-ticket/settings/state.html#state-colors
@@ -126,17 +129,18 @@ also be `color coded`_ according to its latest state.
 Removing Article Content from the Notification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are concerned about leaking sensitive article content via notifications, there is
-a way to remove them by further customizing the webhook payload.
+If you are concerned about leaking sensitive article content via notifications,
+there is a way to remove them by further customizing the webhook payload.
 
-Find your webhook in the list on the management screen and click on it to edit it.
+Find your webhook in the list on the management screen and click on it to edit
+it.
 
-Switch on **Custom Payload** and the code editor below will be shown, pre-populated with
-the default payload.
+Switch on **Custom Payload** and the code editor below will be shown,
+pre-populated with the default payload.
 
-Next, identify ``{ "text": "#{notification.body}" }`` block in the JSON structure and
-select it. Be sure to include the comma (``,``) in the preceding line, since the new
-payload must remain a valid JSON value.
+Next, identify ``{ "text": "#{notification.body}" }`` block in the JSON
+structure and select it. Be sure to include the comma (``,``) in the preceding
+line, since the new payload must remain a valid JSON value.
 
 .. figure:: /images/manage/webhook/webhook-teams-custom-payload-with-article-content.png
    :alt: Custom Payload with Article Content
@@ -152,5 +156,5 @@ Then, simply delete the selected code block.
 
 Finally, click on **Submit** to save your webhook changes.
 
-On the next invocation of the webhook, the notification will not include content of the
-last article.
+On the next invocation of the webhook, the notification will not include content
+of the last article.

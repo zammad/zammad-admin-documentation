@@ -27,8 +27,8 @@ Zammad sends the following headers in each webhook POST request:
 Default JSON Payload
 --------------------
 
-When the webhook payload is not customized, requests will include default payload
-depending on the webhook type.
+When the webhook payload is not customized, requests will include default
+payload depending on the webhook type.
 
 Regular Webhooks (example)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -333,14 +333,15 @@ Regular Webhooks (example)
 
 .. note::
 
-   * For better readability, all empty and ``null`` values have been omitted from the
-     sample payload above. That means the webhooks you receive
+   * For better readability, all empty and ``null`` values have been omitted
+     from the sample payload above. That means the webhooks you receive
      *will include additional fields not shown here*.
 
    * Webhooks will also include fields for any relevant
      :doc:`custom objects </system/objects>` defined in your system.
 
-   * Attachments are *not included*; links to attachments *are* (authentication required).
+   * Attachments are *not included*; links to attachments *are*
+     (authentication required).
 
    * Linked tickets are *not included*.
 
@@ -358,5 +359,5 @@ Regular Webhooks (example)
 Pre-defined Webhooks
 ~~~~~~~~~~~~~~~~~~~~
 
-Each pre-defined webhook template provides a special payload designed for a particular
-service. See :doc:`/manage/webhook/examples` for more information.
+Each pre-defined webhook template provides a special payload designed for a
+particular service. See :doc:`/manage/webhook/examples` for more information.

@@ -1,14 +1,14 @@
 Adding webhooks
 ===============
 
-Webhooks are defined globally. This allows you to use one specific endpoint for several
-triggers or schedulers.
+Webhooks are defined globally. This allows you to use one specific endpoint for
+several triggers or schedulers.
 
 .. warning:: **🦻 Default Zammad webhook payloads are specific**
 
-   Keep in mind that the remote site has to be able to understand the default webhook
-   payload Zammad is sending. Simply throwing the default payload at a webhook endpoint
-   may not have the desired result!
+   Keep in mind that the remote site has to be able to understand the default
+   webhook payload Zammad is sending. Simply throwing the default payload at a
+   webhook endpoint may not have the desired result!
 
    See `Custom Payload`_ for a way to customize webhook payloads.
 
@@ -84,9 +84,9 @@ You can configure the following information for webhooks:
       to a pre-defined webhook. It is not possible to change it for existing
       webhooks.
 
-      Depending on the pre-defined webhook type, additional fields may be rendered
-      below this one. They can be used for additional customization of the webhook
-      behavior.
+      Depending on the pre-defined webhook type, additional fields may be
+      rendered below this one. They can be used for additional customization of
+      the webhook behavior.
 
       .. figure:: /images/manage/webhook/webhook-pre-defined-webhook-fields.png
          :alt: Additional pre-defined webhook fields
@@ -95,18 +95,19 @@ You can configure the following information for webhooks:
       Defaults to off - webhook will always send :ref:`webhook-payload-default`
       to the target endpoint.
 
-      When switched on, a code editor will be shown below, where you can configure
-      custom payload for your webhook in JSON format. To insert supported
-      :doc:`/system/variables` use ``::`` or ``#{`` shortcuts for autocomplete.
+      When switched on, a code editor will be shown below, where you can
+      configure custom payload for your webhook in JSON format. To insert
+      supported :doc:`/system/variables` use ``::`` or ``#{``
+      shortcuts for autocomplete.
 
       .. figure:: /images/manage/webhook/webhook-custom-payload.gif
          :alt: Custom payload code editor
 
       .. warning::
 
-         Custom payload must be valid JSON syntax! Code editor will inform you via
-         automated hints if there is an issue with the code. Also, it will not be
-         possible to save an invalid JSON structure.
+         Custom payload must be valid JSON syntax! Code editor will inform you
+         via automated hints if there is an issue with the code. Also, it will
+         not be possible to save an invalid JSON structure.
 
       .. hint::
          Pre-defined webhooks will always provide an initial custom payload,
