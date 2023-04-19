@@ -34,7 +34,7 @@ When are they sent?
 * “ticket pending” reminders
 * SLA violations (before and after the deadline)
 
-Daily reminder emails are sent at midnight (UTC)
+Daily reminder emails are sent at midnight (of the Zammad system timezone)
 for all unresolved “ticket pending” reminders and SLA violations.
 
 How can I customize them?

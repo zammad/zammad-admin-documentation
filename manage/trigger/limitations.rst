@@ -5,19 +5,6 @@ It's important to understand when a trigger can be used and when it's better
 to use e.g. Zammad's :doc:`/manage/scheduler` or
 :doc:`postmaster filters </channels/email/filters>`. 
 
-Triggers will fire during the following conditions:
-
-  * Creation of a ticket
-  * Updating a ticket
-
-  .. important::
-
-    Update-based triggers will trigger, when conditions match and an article was created
-    or an attribute of the trigger conditions has changed.
-    
-    E.g. A trigger which is listening on the priority **1 low** will trigger if the 
-    ticket was changed to **1 low** or got an new article in that priority state.
-
 While the creation of tickets and triggering these actions is straight forward,
 updated of tickets are a bit trickier. In terms of triggers, a ticket is only
 updated if you press the update button on the lower right of a ticket. 
