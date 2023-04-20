@@ -5,8 +5,8 @@ It's important to understand when a trigger can be used and when it's better
 to use e.g. Zammad's :doc:`/manage/scheduler` or
 :doc:`postmaster filters </channels/email/filters>`. 
 
-While the creation of tickets and triggering these actions is straight forward,
-updated of tickets are a bit trickier. In terms of triggers, a ticket is only
+While the creation of a ticket is straight forward,
+updating an existing ticket is a bit trickier. In terms of triggers, a ticket is only
 updated if you press the update button on the lower right of a ticket. 
 Adding tags to a ticket or switching articles visibility
 **is no ticket update**.
