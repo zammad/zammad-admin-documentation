@@ -442,8 +442,8 @@ Date & Time field
 
       .. include:: /misc/object-conditions/datetime-conditions.include.rst
 
-   * *has reached*
-   * *has reached warning*
+      * *has reached*
+      * *has reached warning*
    
 .. container:: cfloat-right
 
