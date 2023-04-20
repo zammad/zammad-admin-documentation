@@ -1,6 +1,13 @@
 Slack
 =====
 
+.. danger:: **⚠️ Deprecation warning ⚠️**
+
+   Zammad 7 will no longer support this dedicated Slack integration.
+   Please switch to using
+   :doc:`pre-defined webhooks </manage/webhook/examples/slack-notifications>`
+   instead.
+
 .. note::
 
    In order to use this feature, please add a new Slack app to your Workspace.
