@@ -3,11 +3,11 @@ Webhook Payload
 
 .. tip:: **🤓 A more personal payload...**
 
-  Your Zammad instance also provides default payload as an example. This payload
-  *does fit your installation* and provides your custom objects!
+  Your Zammad instance also provides an example for the default payload. This
+  payload *does fit your installation* and includes your custom objects!
 
   .. figure:: /images/manage/webhook/webhook-sample-payload.png
-      :alt: The webhook menu provides a payload for the particular instance in question.
+      :alt: Example Payload provides a payload for the particular instance
       :align: center
       :width: 90%
 

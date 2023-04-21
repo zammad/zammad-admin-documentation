@@ -27,7 +27,8 @@ On the next screen, search for an app called *Incoming WebHooks* and click on
    :alt: Searching for Creating Incoming Webhook Connector
    :align: center
 
-You will be redirected to Slack app website, where you can add the app.
+You will be redirected to the Slack App Directory website, where you can add the
+app.
 
 Click on **Add to Slack** button.
 

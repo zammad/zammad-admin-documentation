@@ -1,4 +1,4 @@
-Adding webhooks
+Adding Webhooks
 ===============
 
 Webhooks are defined globally. This allows you to use one specific endpoint for
@@ -123,6 +123,6 @@ You can configure the following information for webhooks:
 
       .. warning::
 
-         Setting webhooks to inactive that are used by triggers or schedulers
-         will not run. If triggers or schedulers have other actions configured
-         as well they'll still be executed.
+         Inactive webhooks used by triggers or schedulers will not be fired. If
+         triggers or schedulers have other actions configured as well they will
+         still be executed.
