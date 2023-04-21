@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-05 00:42+0100\n"
+"POT-Creation-Date: 2023-04-18 18:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -692,7 +692,7 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:116
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:178
-#: ../settings/security/third-party/saml.rst:151
+#: ../settings/security/third-party/saml.rst:156
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
@@ -996,7 +996,7 @@ msgstr ""
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0
 #: ../manage/scheduler.rst:69
-#: ../manage/webhook/add.rst:49
+#: ../manage/webhook/add.rst:55
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:10
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:9
@@ -1530,21 +1530,33 @@ msgstr ""
 msgid "Account settings page"
 msgstr ""
 
-#: ../channels/email/filters.rst:8
-#: ../channels/email/filters.rst:8
-#: ../channels/email/filters.rst:8
-msgid "Postmaster filters allow you to match email headers (e.g. ``From``, ``To``, ``Subject``, ``X-Spam-Flag`` etc.) and execute a set of actions whenever Zammad's email parser encounters a matching email. The actions will be applied to the ticket that is created or updated by this email. Here are some examples of what is possible with filters:"
+#: ../channels/email/filters.rst:13
+#: ../channels/email/filters.rst:13
+#: ../channels/email/filters.rst:13
+msgid "Postmaster filters allow you to match email headers (e.g. ``From``, ``To``, ``Subject``, ``X-Spam-Flag`` etc.) and execute a set of actions whenever Zammad's email parser encounters a matching email. The actions will be applied to the ticket that is created or updated by this email."
 msgstr ""
 
-#: ../channels/email/filters.rst:25
-#: ../channels/email/filters.rst:25
-#: ../channels/email/filters.rst:25
+#: ../channels/email/filters.rst:18
+#: ../channels/email/filters.rst:18
+#: ../channels/email/filters.rst:18
+msgid "Zammad comes with system filters as well. While you can't change them, it might be useful for you what they actually do. Learn more on :doc:`filters/system-filters`"
+msgstr ""
+
+#: ../channels/email/filters.rst:22
+#: ../channels/email/filters.rst:22
+#: ../channels/email/filters.rst:22
+msgid "Here are some examples of what is possible with filters:"
+msgstr ""
+
+#: ../channels/email/filters.rst:35
+#: ../channels/email/filters.rst:35
+#: ../channels/email/filters.rst:35
 msgid "Automatically dispatch tickets into certain groups:"
 msgstr ""
 
-#: ../channels/email/filters.rst:15
-#: ../channels/email/filters.rst:15
-#: ../channels/email/filters.rst:15
+#: ../channels/email/filters.rst:25
+#: ../channels/email/filters.rst:25
+#: ../channels/email/filters.rst:25
 msgid "For example, tickets from ``amazon.com`` could automatically be dispatched to the Purchasing group."
 msgstr ""
 
@@ -1560,15 +1572,15 @@ msgstr ""
 msgid "Group: Purchasing"
 msgstr ""
 
-#: ../channels/email/filters.rst:23
-#: ../channels/email/filters.rst:23
-#: ../channels/email/filters.rst:23
+#: ../channels/email/filters.rst:33
+#: ../channels/email/filters.rst:33
+#: ../channels/email/filters.rst:33
 msgid "Note that the Group action only has an effect when the matching email results in a new ticket. Zammad will not change the group of existing tickets."
 msgstr ""
 
-#: ../channels/email/filters.rst:35
-#: ../channels/email/filters.rst:35
-#: ../channels/email/filters.rst:35
+#: ../channels/email/filters.rst:45
+#: ../channels/email/filters.rst:45
+#: ../channels/email/filters.rst:45
 msgid "Automatically increase the priority of tickets from a VIP customer:"
 msgstr ""
 
@@ -1584,15 +1596,15 @@ msgstr ""
 msgid "Priority: 3 high"
 msgstr ""
 
-#: ../channels/email/filters.rst:33
-#: ../channels/email/filters.rst:33
-#: ../channels/email/filters.rst:33
+#: ../channels/email/filters.rst:43
+#: ../channels/email/filters.rst:43
+#: ../channels/email/filters.rst:43
 msgid "Note that the Priority action only has an effect when the matching email results in a new ticket. Zammad will not change the priority of existing tickets."
 msgstr ""
 
-#: ../channels/email/filters.rst:47
-#: ../channels/email/filters.rst:47
-#: ../channels/email/filters.rst:47
+#: ../channels/email/filters.rst:57
+#: ../channels/email/filters.rst:57
+#: ../channels/email/filters.rst:57
 msgid "Automatically tag and close spam tickets that have been marked as spam by anexternal spam filter (e.g. SpamAssassin):"
 msgstr ""
 
@@ -1614,65 +1626,143 @@ msgstr ""
 msgid "State: closed"
 msgstr ""
 
-#: ../channels/email/filters.rst:44
-#: ../channels/email/filters.rst:44
-#: ../channels/email/filters.rst:44
+#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:54
 msgid "Note that the State action only has an effect when the matching email results in a new ticket. Zammad will not change the state of existing tickets. It will add the tag though if it missing, even if the mail is an update to an existing ticket."
 msgstr ""
 
-#: ../channels/email/filters.rst:49
-#: ../channels/email/filters.rst:49
-#: ../channels/email/filters.rst:49
+#: ../channels/email/filters.rst:59
+#: ../channels/email/filters.rst:59
+#: ../channels/email/filters.rst:59
 msgid "The following actions are only effective when creating tickets:"
 msgstr ""
 
-#: ../channels/email/filters.rst:51
-#: ../channels/email/filters.rst:51
-#: ../channels/email/filters.rst:51
+#: ../channels/email/filters.rst:61
+#: ../channels/email/filters.rst:61
+#: ../channels/email/filters.rst:61
 #: ../system/integrations/checkmk/admin-panel-reference.rst:15
 #: ../system/objects/permissions.rst:55
 msgid "Group"
 msgstr ""
 
-#: ../channels/email/filters.rst:52
-#: ../channels/email/filters.rst:52
-#: ../channels/email/filters.rst:52
+#: ../channels/email/filters.rst:62
+#: ../channels/email/filters.rst:62
+#: ../channels/email/filters.rst:62
 #: ../manage/macros/learn-by-example.rst:0
 #: ../manage/macros/learn-by-example.rst:0
 msgid "State"
 msgstr ""
 
-#: ../channels/email/filters.rst:53
-#: ../channels/email/filters.rst:53
-#: ../channels/email/filters.rst:53
+#: ../channels/email/filters.rst:63
+#: ../channels/email/filters.rst:63
+#: ../channels/email/filters.rst:63
 #: ../system/core-workflows/how-do-they-work.rst:197
 msgid "Priority"
 msgstr ""
 
-#: ../channels/email/filters.rst:54
-#: ../channels/email/filters.rst:54
-#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:64
+#: ../channels/email/filters.rst:64
+#: ../channels/email/filters.rst:64
 #: ../manage/macros/learn-by-example.rst:0
 #: ../manage/macros/learn-by-example.rst:0
 msgid "Owner"
 msgstr ""
 
-#: ../channels/email/filters.rst:56
-#: ../channels/email/filters.rst:56
-#: ../channels/email/filters.rst:56
+#: ../channels/email/filters.rst:66
+#: ../channels/email/filters.rst:66
+#: ../channels/email/filters.rst:66
 msgid "Different attributes of a filter can be combined with each other. Likewise, the following actions can be combined. The supported matches are \"contains\" and \"contains not\"; for advanced matching, you can use regular expressions by prefixing the string with ``regex:``."
 msgstr ""
 
-#: ../channels/email/filters.rst:61
-#: ../channels/email/filters.rst:61
-#: ../channels/email/filters.rst:61
+#: ../channels/email/filters.rst:71
+#: ../channels/email/filters.rst:71
+#: ../channels/email/filters.rst:71
 msgid "Note that Zammad matches against the full header, e.g. for a mail with ``From: Display Name <display.name@example.com>``, the ``From`` condition will test against ``Display Name <display.name@example.com>``. This is especially important when using anchored regular expressions; ``regex:^display\\.name@example.com$`` would not match this mail!"
 msgstr ""
 
-#: ../channels/email/filters.rst:67
-#: ../channels/email/filters.rst:67
-#: ../channels/email/filters.rst:67
+#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:77
 msgid "It should be borne in mind that the combined attributes build on each other. If a filter is no longer needed, it can either be temporarily set inactive or deleted directly."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:2
+#: ../channels/email/filters/system-filters.rst:2
+#: ../channels/email/filters/system-filters.rst:2
+msgid "System Filters"
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:4
+#: ../channels/email/filters/system-filters.rst:4
+#: ../channels/email/filters/system-filters.rst:4
+msgid "On this page you can find some pre-defined filters that you won't find within the Zammad's UI. Those filters might come in handy when trying to understand Zammad's behavior."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:10
+#: ../channels/email/filters/system-filters.rst:10
+#: ../channels/email/filters/system-filters.rst:10
+msgid "Please note that this is not a full filters list, if you're missing filters, feel free to ask over at the `Community`_."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:16
+#: ../channels/email/filters/system-filters.rst:16
+#: ../channels/email/filters/system-filters.rst:16
+msgid "JIRA"
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:18
+#: ../channels/email/filters/system-filters.rst:18
+#: ../channels/email/filters/system-filters.rst:18
+msgid "Zammad will detect Service Now emails and assign them to existing tickets, if the following requirements are met:"
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:21
+#: ../channels/email/filters/system-filters.rst:21
+#: ../channels/email/filters/system-filters.rst:21
+msgid "Headers contain the ``X-ServiceNow-Generated`` header."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:22
+#: ../channels/email/filters/system-filters.rst:22
+#: ../channels/email/filters/system-filters.rst:22
+msgid "Subject does match the regex ``\\s(INC\\d+)\\s`` e.g. ``INC678439``."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:24
+#: ../channels/email/filters/system-filters.rst:24
+#: ../channels/email/filters/system-filters.rst:24
+msgid "See `JIRA Mail Example`_ for comparison of your emails."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:27
+#: ../channels/email/filters/system-filters.rst:27
+#: ../channels/email/filters/system-filters.rst:27
+msgid "Service-Now"
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:29
+#: ../channels/email/filters/system-filters.rst:29
+#: ../channels/email/filters/system-filters.rst:29
+msgid "Zammad will detect JIRA emails and assign them to existing tickets, if the following requirements are met:"
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:32
+#: ../channels/email/filters/system-filters.rst:32
+#: ../channels/email/filters/system-filters.rst:32
+msgid "Headers contain the ``X-JIRA-FingerPrint`` header."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:33
+#: ../channels/email/filters/system-filters.rst:33
+#: ../channels/email/filters/system-filters.rst:33
+msgid "Subject does match the regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` e.g. ``[JIRA] (SYS-422)``."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:36
+#: ../channels/email/filters/system-filters.rst:36
+#: ../channels/email/filters/system-filters.rst:36
+msgid "See `Service-Now Mail Example`_ for comparison of your emails."
 msgstr ""
 
 #: ../channels/email/index.rst:13
@@ -2399,7 +2489,7 @@ msgstr ""
 #: ../manage/overviews.rst:0
 #: ../manage/scheduler.rst:72
 #: ../manage/templates.rst:43
-#: ../manage/webhook/add.rst:58
+#: ../manage/webhook/add.rst:64
 #: ../system/integrations/i-doit.rst:45
 msgid "Active"
 msgstr ""
@@ -3170,6 +3260,10 @@ msgstr ""
 msgid "Filters in Google channels are **just like filters in email channels**, so this article is lifted verbatim from :doc:`here </channels/email/filters>`."
 msgstr ""
 
+#: ../channels/google/filters/system-filters.rst:3
+msgid "System Filters in Google channels are **just like system filters in email channels**, so this article is lifted verbatim from :doc:`here </channels/email/filters/system-filters>`."
+msgstr ""
+
 #: ../channels/google/index.rst:2
 #: ../settings/security/third-party/google.rst:2
 msgid "Google"
@@ -3644,6 +3738,10 @@ msgstr ""
 
 #: ../channels/microsoft365/filters.rst:3
 msgid "Filters in Microsoft 365 channels are **just like filters in email channels**, so this article is lifted verbatim from :doc:`here </channels/email/filters>`."
+msgstr ""
+
+#: ../channels/microsoft365/filters/system-filters.rst:3
+msgid "System Filters in Microsoft 365 channels are **just like system filters in email channels**, so this article is lifted verbatim from :doc:`here </channels/email/filters/system-filters>`."
 msgstr ""
 
 #: ../channels/microsoft365/index.rst:2
@@ -8113,18 +8211,22 @@ msgid "Updating a ticket"
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:15
-msgid "Triggers are only accounted if you're adding an article to the ticket. Changing ticket attributes to different values without article won't work."
+msgid "Update-based triggers will trigger, when conditions match and an article was created or an attribute of the trigger conditions has changed."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:18
+msgid "E.g. A trigger which is listening on the priority **1 low** will trigger if the ticket was changed to **1 low** or got an new article in that priority state."
+msgstr ""
+
+#: ../manage/trigger/limitations.rst:21
 msgid "While the creation of tickets and triggering these actions is straight forward, updated of tickets are a bit trickier. In terms of triggers, a ticket is only updated if you press the update button on the lower right of a ticket. Adding tags to a ticket or switching articles visibility **is no ticket update**."
 msgstr ""
 
-#: ../manage/trigger/limitations.rst:24
+#: ../manage/trigger/limitations.rst:27
 msgid "Also keep in mind that we're always only working on the last article. This means you can't trigger for past articles. Triggers always handle the current ticket attributes and the article (if applicable) that cause the trigger to fire."
 msgstr ""
 
-#: ../manage/trigger/limitations.rst:29
+#: ../manage/trigger/limitations.rst:32
 msgid "If your use case doesn't fit in above possibilities, you might want to have a look at Zammad's :doc:`/manage/scheduler`."
 msgstr ""
 
@@ -8684,14 +8786,27 @@ msgid "Defaults to ``yes`` - if you're using unsecure self signed certificates s
 msgstr ""
 
 #: ../manage/webhook/add.rst:48
+msgid "HTTP Basic Authentication Username"
+msgstr ""
+
+#: ../manage/webhook/add.rst:48
+#: ../manage/webhook/add.rst:51
+msgid "Set this if the endpoint requires HTTP basic authentication credentials."
+msgstr ""
+
+#: ../manage/webhook/add.rst:51
+msgid "HTTP Basic Authentication Password"
+msgstr ""
+
+#: ../manage/webhook/add.rst:54
 msgid "If required you can leave useful information for other Zammad admins to understand the webhook in question better."
 msgstr ""
 
-#: ../manage/webhook/add.rst:52
+#: ../manage/webhook/add.rst:58
 msgid "If set to ``inactive`` you can no longer select the webhook within trigger or scheduler actions."
 msgstr ""
 
-#: ../manage/webhook/add.rst:57
+#: ../manage/webhook/add.rst:63
 msgid "Setting webhooks to inactive that are used by triggers or schedulers will not run. If triggers or schedulers have other actions configured as well they'll still be executed."
 msgstr ""
 
@@ -10845,7 +10960,7 @@ msgstr ""
 msgid "Per-IdP Instructions"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:96
+#: ../settings/security/third-party/saml.rst:101
 msgid "Keycloak"
 msgstr ""
 
@@ -10902,11 +11017,19 @@ msgstr ""
 msgid "If your Keycloak users’ email addresses are stored on another property (*e.g.,* ``username``), adjust accordingly."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:99
+#: ../settings/security/third-party/saml.rst:98
+msgid "Make sure the **Client ID** matches the **Master SAML Processing URL**."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:100
+msgid "You need to enable **Sign assertions**."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:104
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:101
+#: ../settings/security/third-party/saml.rst:106
 msgid "Enable SAML and enter your IdP’s details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via SAML**:"
 msgstr ""
 
@@ -10914,83 +11037,83 @@ msgstr ""
 msgid "Example configuration of SAML"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:111
+#: ../settings/security/third-party/saml.rst:116
 msgid "Display name"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:108
+#: ../settings/security/third-party/saml.rst:113
 msgid "Allows you to define a custom button name for SAML. This helps your users to understand better what the button on the login page does."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:111
+#: ../settings/security/third-party/saml.rst:116
 msgid "Defaults to ``SAML``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:115
+#: ../settings/security/third-party/saml.rst:120
 msgid "IDP SSO Target URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:114
-msgid "This is the target URL Zammad shall redirect to when the user presses the SAML button."
+#: ../settings/security/third-party/saml.rst:119
+msgid "This is the target URL Zammad shall redirect to when the user presses the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:119
+#: ../settings/security/third-party/saml.rst:124
 msgid "IDP Certificate"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:118
+#: ../settings/security/third-party/saml.rst:123
 msgid "The public certificate of your IDP for Zammad to verify during the callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:133
+#: ../settings/security/third-party/saml.rst:138
 msgid "IDP Certificate fingerprint"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:122
+#: ../settings/security/third-party/saml.rst:127
 msgid "The fingerprint of your IDPs public certificate to verify during callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:125
+#: ../settings/security/third-party/saml.rst:130
 msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:127
+#: ../settings/security/third-party/saml.rst:132
 msgid "Provide **only one or the other**—do not provide both! (Between the two, we recommend the signing certificate itself: fingerprints use SHA-1, which `has been broken for a while now <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:132
+#: ../settings/security/third-party/saml.rst:137
 msgid "**Keycloak users:** Find your certificate in the Keycloak admin panel under **Realm Settings > Keys > RSA > Certificate**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:141
+#: ../settings/security/third-party/saml.rst:146
 msgid "Name Identifier format"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:136
+#: ../settings/security/third-party/saml.rst:141
 msgid "This is the unique identifiers field type. Usually should be ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`` in any case."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:141
+#: ../settings/security/third-party/saml.rst:146
 msgid "Zammad expects an email address as unique identifier!"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:145
+#: ../settings/security/third-party/saml.rst:150
 msgid "Your callback URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:144
+#: ../settings/security/third-party/saml.rst:149
 msgid "This URL is needed for your IDP configuration so it knows where to redirect to after successful authentication."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:147
+#: ../settings/security/third-party/saml.rst:152
 msgid "See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to IdP accounts."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:153
+#: ../settings/security/third-party/saml.rst:158
 msgid "Automatic account linking doesn’t work"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:154
+#: ../settings/security/third-party/saml.rst:159
 msgid "Have you double-checked your IdP’s user attribute mapping configuration?"
 msgstr ""
 
