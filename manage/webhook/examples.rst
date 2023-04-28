@@ -4,8 +4,16 @@ Webhook Examples
 .. toctree::
    :hidden:
 
+   examples/mattermost-notifications
    examples/microsoft-teams-notifications
    examples/slack-notifications
+
+:doc:`examples/mattermost-notifications`
+   Use a Mattermost Channel to receive your Zammad Notifications.
+
+   .. figure:: /images/manage/webhook/webhook-mattermost-sample-notification.png
+      :alt: Sample Mattermost Channel Notification
+      :align: center
 
 :doc:`examples/microsoft-teams-notifications`
    Use a Microsoft Teams Channel to receive your Zammad Notifications.
