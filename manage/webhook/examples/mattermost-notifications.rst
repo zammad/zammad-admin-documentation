@@ -117,8 +117,8 @@ the list.
 
 Finally, click on **Submit** and your webhook is ready for use!
 
-Sample Teams Channel Notification
----------------------------------
+Sample Mattermost Channel Notification
+--------------------------------------
 
 From now on, whenever a ticket is created or updated in your Zammad system, a
 suitable notification will be posted in the configured Mattermost Channel. The

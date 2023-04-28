@@ -6,6 +6,7 @@ Webhook Examples
 
    examples/mattermost-notifications
    examples/microsoft-teams-notifications
+   examples/rocket-chat-notifications
    examples/slack-notifications
 
 :doc:`examples/mattermost-notifications`
@@ -20,6 +21,13 @@ Webhook Examples
 
    .. figure:: /images/manage/webhook/webhook-teams-sample-notification.png
       :alt: Sample Teams Channel Notification
+      :align: center
+
+:doc:`examples/rocket-chat-notifications`
+   Use a Rocket Chat Channel to receive your Zammad Notifications.
+
+   .. figure:: /images/manage/webhook/webhook-rocket-chat-sample-notification.png
+      :alt: Sample Rocket Chat Channel Notification
       :align: center
 
 :doc:`examples/slack-notifications`
