@@ -146,7 +146,7 @@ pre-populated with the default payload.
 Next, identify the line starting with ``"text": "...`` block in the JSON
 structure.
 
-.. figure:: /images/manage/webhook/webhook-rocket-chat-custom-payload.png
+.. figure:: /images/manage/webhook/webhook-mattermost-rocket-chat-custom-payload.png
    :alt: Custom Payload for Rocket Chat Webhook
    :align: center
    :width: 80%
@@ -156,14 +156,14 @@ Scroll horizontally to the end of the line and select
 double quote with comma (``",``) in the rest of the line, since the new payload
 must remain a valid JSON value.
 
-.. figure:: /images/manage/webhook/webhook-rocket-chat-custom-payload-with-article-content.png
+.. figure:: /images/manage/webhook/webhook-mattermost-rocket-chat-custom-payload-with-article-content.png
    :alt: Custom Payload with Article Content for Rocket Chat Webhook
    :align: center
    :width: 80%
 
 Then, simply delete the selected code.
 
-.. figure:: /images/manage/webhook/webhook-rocket-chat-custom-payload-wo-article-content.png
+.. figure:: /images/manage/webhook/webhook-mattermost-rocket-chat-custom-payload-wo-article-content.png
    :alt: Custom Payload w/o Article Content for Rocket Chat Webhook
    :align: center
    :width: 80%
