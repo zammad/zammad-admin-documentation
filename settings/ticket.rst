@@ -149,3 +149,24 @@ the desired agents in the ``Exception Users`` list.
 
       The search function in this area is only effective, if you have too many
       agents to display at once to help you with the configuration.
+
+Notifications
+-------------
+
+Default Notifications
+   This setting allows you to configure the default ticket notifications that
+   will be applied to all new agent users. Simply change the notification matrix
+   to desire state and press **Save**.
+
+   However, in case an agent has already customized their ticket notifications,
+   their choice will be preserved. Optionally, you can also **Apply current
+   defaults to all agents**, overwriting their personal settings.
+
+   In case you want to go back to the initial state of ticket notifications, you
+   can click on **Reset to default** button.
+
+   .. warning:: **🥵 Potential time-consuming action**
+
+      Applying current default ticket notifications to all agent users may take
+      some time to complete, be patient! The exact time will depend on the size
+      of your system and number of active agents.
