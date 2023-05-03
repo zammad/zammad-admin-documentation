@@ -8,6 +8,7 @@ Webhook Examples
    examples/microsoft-teams-notifications
    examples/rocket-chat-notifications
    examples/slack-notifications
+   examples/generic-notifications-trigger
 
 :doc:`examples/mattermost-notifications`
    Use a Mattermost Channel to receive your Zammad Notifications.

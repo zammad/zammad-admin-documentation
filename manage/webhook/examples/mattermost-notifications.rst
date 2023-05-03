@@ -87,35 +87,14 @@ webhook.
 
 Finally, click on **Submit**.
 
-Step 3 - Configuring a Trigger on Ticket Create/Update Actions
---------------------------------------------------------------
+Step 3 - Configuring a Trigger for firing of the Webhook
+--------------------------------------------------------
 
-As a last step, we will create a Trigger to post a notification to the
-Mattermost channel whenever a ticket is created or updated.
+As a last step, you need to create a
+:doc:`Trigger <generic-notifications-trigger>` for posting a notification to the
+Mattermost channel under certain conditions.
 
-Go to :doc:`Trigger </manage/trigger>` management screen, and click on the green
-**New Trigger** button.
-
-First, provide a suitable **Name** for the trigger and select *Always* for
-**Action Execution** mode.
-
-Then, switch on **Expert Mode** under **Conditions for affected objects** and
-change the first condition group to *Match any (OR)*.
-
-Next, change the initial condition attribute to *Action*. Click on the plus
-button next to it to add another *Action* attribute below. Change the value of
-the new attribute to *updated*.
-
-Under **Execute changes on objects**, change the initial attribute to
-*Notification > Webhook* and select the Mattermost Notifications webhook from
-the list.
-
-.. figure:: /images/manage/webhook/webhook-mattermost-trigger-new.png
-   :alt: Configuring Trigger for firing of Webhook
-   :align: center
-   :width: 90%
-
-Finally, click on **Submit** and your webhook is ready for use!
+Once the trigger is in place, your webhook is ready for use!
 
 Sample Mattermost Channel Notification
 --------------------------------------

@@ -95,36 +95,14 @@ field.
 
 Finally, click on **Submit**.
 
-Step 3 - Configuring a Trigger on Ticket Escalation Events
-----------------------------------------------------------
+Step 3 - Configuring a Trigger for firing of the Webhook
+--------------------------------------------------------
 
-As a last step, we will create a Trigger to post a notification to the Slack
-channel whenever a ticket is escalated or reached escalation warning.
+As a last step, you need to create a
+:doc:`Trigger <generic-notifications-trigger>` for posting a notification to the
+Slack channel under certain conditions.
 
-Go to :doc:`Trigger </manage/trigger>` management screen, and click on the
-green **New Trigger** button.
-
-First, provide a suitable **Name** for the trigger and select *Time event* for
-**Activated by** field.
-
-Then, switch on **Expert Mode** under **Conditions for affected objects** and
-change the first condition group to *Match any (OR)*.
-
-Next, change the initial condition attribute to *Escalation at* and set its
-operator to *has reached*. Click on the plus button next to it to add another
-attribute below. Change the new attribute also to *Escalation at* and set its
-operator to *has reached warning*.
-
-Under **Execute changes on objects**, change the initial attribute to
-*Notification > Webhook* and select the Slack Notifications webhook from the
-list.
-
-.. figure:: /images/manage/webhook/webhook-slack-trigger-new.png
-   :alt: Configuring Trigger for firing of Webhook
-   :align: center
-   :width: 90%
-
-Finally, click on **Submit** and your webhook is ready for use!
+Once the trigger is in place, your webhook is ready for use!
 
 Sample Slack Channel Notification
 ---------------------------------
