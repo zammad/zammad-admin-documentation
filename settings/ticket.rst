@@ -156,7 +156,7 @@ Notifications
 Default Notifications
    This setting allows you to configure the default ticket notifications that
    will be applied to all new agent users. Simply change the notification matrix
-   to desire state and press **Save**.
+   to desired state and press **Save**.
 
    However, in case an agent has already customized their ticket notifications,
    their choice will be preserved. Optionally, you can also **Apply current
