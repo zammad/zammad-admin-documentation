@@ -49,10 +49,6 @@ Ticket Updated ``Action activator only``
    Select ticket **Action** attribute, leave the operator on *is* and set the
    value to *updated*.
 
-Ticket Merged ``Action activator only``
-   Select ticket **Action** attribute, leave the operator on *is* and set the
-   value to *merged into* or *received merge*.
-
 Ticket Pending Time Reached ``Time event activator only``
    Select ticket **Pending till** attribute and set the operator to *has
    reached*.
