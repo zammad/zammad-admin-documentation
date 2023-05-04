@@ -177,3 +177,49 @@ Default Notifications
 
    In case you want to go back to the initial state of ticket notifications, you
    can click on **Reset to default** button.
+
+Duplicate Detection
+-------------------
+
+Detect Duplicate Ticket Creation
+   This setting turns on the duplicate ticket detection mechanism during ticket
+   creation. If similar tickets are found in the system, a suitable warning will
+   be shown to the user trying to create a ticket.
+
+   .. figure:: /images/settings/ticket/ticket-duplicate-detection-warning.png
+      :align: center
+
+      A Sample Duplicate Ticket Warning
+
+   You can choose which ticket attributes will be matched by selecting them in
+   **Attributes to compare** field. Only if the ticket attribute value provided
+   by the user in the ticket create form is *equal* with the attribute in an
+   existing ticket, the warning will be shown.
+
+   **Warning title** and **Warning message** are configurable as well.
+
+   You can limit the detection only to certain user roles. By default, only
+   agents will see the warning.
+
+   If you don't want to show the matched tickets as part of the warning, you can
+   set **Show matching ticket(s) in the warning** setting to *no*.
+
+   By default, **Permission level for looking up ticket** is set to *User*,
+   which  means user permissions will be honored during sarch. The user will see
+   the warning only if tickets they have access to are matched. Alternatively,
+   you can set this setting to *System*, in which case the search will happen
+   within *all* tickets in the system, regardless of user permissions.
+
+   .. warning:: **🦺 Safety first!**
+
+      Even if the permission level is set to *System*, the user will not be
+      shown the tickets they don't have access to in the warning, even if they
+      match.
+
+      However, just the confirmation about the existence of the tickets in the
+      system may be considered an unwanted information disclosure. Use this
+      option carefully!
+
+   Finally, you can configure between matching within **All tickets** or **Open
+   tickets** only by setting **Match tickets in following states**. Depending on
+   the current ticket state, a ticket may or not be matched.
