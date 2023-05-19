@@ -8,4 +8,5 @@ For your overview we split each tab within security settings into its own page:
 
    security/base
    security/password
+   security/two-factor
    security/third-party
