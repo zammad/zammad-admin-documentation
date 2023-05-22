@@ -97,4 +97,4 @@ The “Users” panel provides tools to manually manage user accounts.
 
    It's possible to remove a single or all of the user's configured methods, if
    they lose access. They can then set it up again by themselves via
-   "Avatar -> Profile -> Password & Security".
+   "Avatar -> Profile -> Password & Authentication".
