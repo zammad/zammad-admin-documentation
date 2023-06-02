@@ -14,7 +14,7 @@ AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directo
 This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. 
 You may have sent your authentication request to the wrong tenant. 
 
-.. figure:: images/channels/microsoft365/errors/Micro1.png
+.. figure:: /images/channels/microsoft365/errors/Micro1.png
   :alt: Error message
   :scale: 90%
   :align: center
