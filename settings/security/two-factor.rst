@@ -29,7 +29,7 @@ Recovery codes can only be used as a backup method. If enabled, they will be
 automatically generated for the user once they set up their first two-factor
 authentication method.
 
-The user will be asked to print our or save generated recovery codes in a safe
+The user will be asked to print out or save generated recovery codes in a safe
 place. Once used, a recovery code can never be reused.
 
 Users will also have an option to regenerate their recovery codes at any time,
