@@ -14,7 +14,7 @@ AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directo
 This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. 
 You may have sent your authentication request to the wrong tenant. 
 
-.. figure:: /images/channels/microsoft365/errors/Micro1.png
+.. figure:: /images/channels/microsoft365/errors/Micro2.png
   :alt: Error message
   :scale: 90%
   :align: center
@@ -33,7 +33,10 @@ Wrong or expired client secret
 
 500: We're sorry, but something went wrong. 
 
-**(image)**
+.. figure:: /images/channels/microsoft365/errors/Micro1.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 	  
 This error occurs when the client uses an incorrect or expired client secret.
 
@@ -53,7 +56,10 @@ Wrong tenant
 
 AADSTS0023: Specified tenant identifier 'xxxxxxxx' is neither a valid DNS name, nor a valid external domain.
 
-**(image)**
+.. figure:: /images/channels/microsoft365/errors/Micro3.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 	  
 If a wrong tennant is used in Zammad, or the email account is not a member of the tennant created in Zammad, this error message occurs.
 
@@ -70,28 +76,10 @@ Request admin consent
 
 approval required
 
-**(image)**
-	  
-This message occurs when the admin tries to create an email account in Zammad that has not yet received approval from the Azure Global Admin.
-
-In our documentation step-by-step instructions can be found on how to request admin consent from Zammad.
-
-https://admin-docs.zammad.org/en/latest/channels/microsoft365/accounts/account-setup.html
-
-**A notice:**
-
-The request for the admin consent can be bypassed by assigning the admin consent in Azure to the APP.
-
-Home > APP Registration > Manage > API Permission > Grant admin consent for "MSFT".
-
-Request admin consent
----------------------
-
-**#Report:**
-
-approval required
-
-**(image)**
+.. figure:: /images/channels/microsoft365/errors/Micro4.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 	  
 This message occurs when the admin tries to create an email account in Zammad that has not yet received approval from the Azure Global Admin.
 
@@ -113,11 +101,17 @@ Missing permissions for the Azure user
 Can't use Chanel:Driver::SMTPAuthentificationError:
 Net::SMTPAuthentificationErr
 
-**(image)**
+.. figure:: /images/channels/microsoft365/errors/Micro6.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 	  
 or
 
-**(image)**
+.. figure:: /images/channels/microsoft365/errors/Micro5.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 	  
 This error occurs when the admin wants to create an email account in Zammad whose user does not have permission for SMTP authentication to the mail server.
 
@@ -130,7 +124,10 @@ Permission is provided at https://admin.microsoft.com
 Users > Active Users > click Users > Email > Manage Email APPs
 Add SMTP authentication permission here.
 
-**(image)** 
+.. figure:: /images/channels/microsoft365/errors/Micro7.png
+  :alt: Error message
+  :scale: 90%
+  :align: center
 
 **Shared Inbox**
 
