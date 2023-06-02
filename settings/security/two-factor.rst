@@ -30,20 +30,20 @@ they lose access to their other two-factor authentication methods.
    :align: center
 
 Recovery codes can only be used as a backup method. If enabled, they will be
-automatically generated for the user once they set up their first two-factor
+automatically generated for the user once they set up their initial two-factor
 authentication method.
 
-The user will be asked to print out or save generated recovery codes in a safe
-place. Once used, a recovery code can never be reused.
+The user will be asked to print out or save the generated recovery codes in a
+safe place. Once used, a recovery code cannot be reused.
 
 Users will also have an option to regenerate their recovery codes at any time,
-which invalidates already existing recovery codes and provides them with fresh
-tokens.
+which invalidates already existing recovery codes and provides them with a list
+of fresh codes.
 
 .. hint::
-   After you enable this setting, when the user completes a setup of their first
-   two-factor authentication method, they will be presented with a list of
-   recovery codes and instructed to save them for later use.
+   After you enable this setting, when the user completes a setup of their
+   initial two-factor authentication method, they will be presented with a list
+   of recovery codes and instructed to save them for later use.
 
    .. figure:: /images/settings/security/two-factor-recovery-codes-modal.png
       :alt: Recovery Codes Generation Modal Dialog
