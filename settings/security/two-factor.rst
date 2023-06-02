@@ -25,6 +25,10 @@ Enable Recovery Codes
 Recovery codes are one-time use security codes that can be used by the user if
 they lose access to their other two-factor authentication methods.
 
+.. figure:: /images/settings/security/two-factor-recovery-codes-setting.png
+   :alt: Enable Recovery Codes Setting
+   :align: center
+
 Recovery codes can only be used as a backup method. If enabled, they will be
 automatically generated for the user once they set up their first two-factor
 authentication method.
