@@ -1,4 +1,4 @@
-Microsoft common errors
+Microsoft 365 common errors
 =======================
 
 **The documentation is your friend** 😊:
@@ -115,6 +115,7 @@ or
 	  
 This error occurs when the admin wants to create an email account in Zammad whose user does not have permission for SMTP authentication to the mail server.
 
+
 **Private email account**
 
 In this case, the admin must grant the SMTP authentication permission to the user of the inbox.
@@ -128,6 +129,7 @@ Add SMTP authentication permission here.
   :alt: Error message
   :scale: 90%
   :align: center
+
 
 **Shared Inbox**
 
