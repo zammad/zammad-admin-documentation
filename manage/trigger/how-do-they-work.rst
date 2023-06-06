@@ -1,9 +1,10 @@
 How do they work?
 =================
 
-Triggers consist of two parts: **conditions** and **changes**. Conditions
-answer the question, “when should this trigger fire?” Changes answer the
-question, “what should happen when it does?”
+Triggers consist of three parts: **activators**, **conditions** and **changes**.
+Activator defines “when the question is asked?”. Conditions answer the question,
+“when should this trigger fire?” Changes answer the question,
+“what should happen when it does?”
 
 Triggers are evaluated in alphabetical order, by **name.**
 In some situations triggers might be the wrong choice, see
@@ -14,6 +15,42 @@ In some situations triggers might be the wrong choice, see
    Please have a look at :doc:`/channels/email/email-headers`
    in case this is a relevant use case for you.
 
+Activators
+----------
+
+Triggers support two types of activators:
+
+* **Action** is triggered by some actor.
+  Either a user creating or updating the ticket. Or an external action, e.g. an email coming in.
+
+* **Time event** is triggered at a specific time.
+  When a certain event is reached, e.g. ticket pending time.
+
+**Action** activator may evaluate **Conditions** in two modes:
+
+* **Selective** execution checks if any property that is included in conditions
+  was updated. If the action was other than update, it checks if conditions match.
+
+  .. hint::
+    A selective action trigger which is listening on the priority **1 low**
+    will trigger if the ticket was changed to **1 low** or got an new article in
+    that priority state.
+
+* **Always** execution checks if the current state of the ticket in question
+  matches conditions.
+
+  .. hint::
+    An always action trigger which is listening on the priority **1 low**
+    will trigger if the ticket was moved to another group while priority was
+    set **1 low**.
+
+**Time event** activator simply checks if **Conditions** match.
+This is the same behavior as Action-based activator's „Always“ mode.
+
+When creating a trigger, choose activator here:
+
+  .. figure:: /images/manage/trigger/activator-of-a-trigger.png
+
 Conditions
 ----------
 
@@ -21,26 +58,7 @@ When creating a trigger, define your conditions here:
 
    .. figure:: /images/manage/trigger/conditions-of-a-trigger.png
 
-Trigger conditions are **and-selectors** and thus all conditions must apply as
-configured for the trigger to fire. You can configure triggers to fire based on
-the properties of:
-
-* The **Ticket** itself
-   *e.g.,* Was this ticket newly created? Is the ticket currently open? When
-   was the last time we received contact from the customer on this ticket?
-* New **Articles** on the ticket
-   *e.g.,* Was this article added by email? by phone? Was it created by an
-   agent, or a customer? Does the subject contain a certain set of words?
-* The **Customer** that created the ticket
-   *e.g.,* What is the customer’s name? Is the customer a VIP? What department
-   does the customer work in?
-* The **Organizations** that the ticket’s customer belongs to
-   *e.g.,* What is the name of the customer’s organization? Does it have a note
-   attached to it containing a certain set of words?
-* The **Execution time** the trigger is being triggered
-   *e.g.,* Only send an auto-reply if the message was received outside of
-   regular business hours. (“Regular business hours” can be defined on
-   :doc:`/manage/calendars` setting.)
+Trigger conditions must match as configured for the trigger to fire.
 
 .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 

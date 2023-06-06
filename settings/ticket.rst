@@ -149,3 +149,77 @@ the desired agents in the ``Exception Users`` list.
 
       The search function in this area is only effective, if you have too many
       agents to display at once to help you with the configuration.
+
+Notifications
+-------------
+
+Default Notifications
+   This setting allows you to configure the default ticket notifications that
+   will be applied to all new agent users (incl. users who were just assigned
+   agent role). Simply change the notification matrix to desired state and press
+   **Save**.
+
+   In case an agent already exists, their ticket notification preferences will
+   be preserved. Optionally, you can also **Apply current defaults to all
+   agents**.
+
+   .. warning:: **🥵 Potential time-consuming action**
+
+      Applying default ticket notifications to all agent users may take some
+      time to complete, be patient! The exact time will depend on the size of
+      your system and the number of agents.
+
+   .. warning:: **Active agents only!**
+
+      When current default ticket notifications are applied, only active agent
+      users are considered. In case an agent is re-activated *after* this
+      action, they will still have the old notification configuration.
+
+   In case you want to go back to the initial state of ticket notifications, you
+   can click on **Reset to default** button.
+
+Duplicate Detection
+-------------------
+
+Detect Duplicate Ticket Creation
+   This setting turns on the duplicate ticket detection mechanism during ticket
+   creation. If similar tickets are found in the system, a suitable warning will
+   be shown to the user trying to create a ticket.
+
+   .. figure:: /images/settings/ticket/ticket-duplicate-detection-warning.png
+      :align: center
+
+      A Sample Duplicate Ticket Warning
+
+   You can choose which ticket attributes will be matched by selecting them in
+   **Attributes to compare** field. Only if the ticket attribute value provided
+   by the user in the ticket create form is *equal* with the attribute in an
+   existing ticket, the warning will be shown.
+
+   **Warning title** and **Warning message** are configurable as well.
+
+   You can limit the detection only to certain user roles. By default, only
+   agents will see the warning.
+
+   If you don't want to show the matched tickets as part of the warning, you can
+   set **Show matching ticket(s) in the warning** setting to *no*.
+
+   By default, **Permission level for looking up ticket** is set to *User*,
+   which  means user permissions will be honored during sarch. The user will see
+   the warning only if tickets they have access to are matched. Alternatively,
+   you can set this setting to *System*, in which case the search will happen
+   within *all* tickets in the system, regardless of user permissions.
+
+   .. warning:: **🦺 Safety first!**
+
+      Even if the permission level is set to *System*, the user will not be
+      shown the tickets they don't have access to in the warning, even if they
+      match.
+
+      However, just the confirmation about the existence of the tickets in the
+      system may be considered an unwanted information disclosure. Use this
+      option carefully!
+
+   Finally, you can configure between matching within **All tickets** or **Open
+   tickets** only by setting **Match tickets in following states**. Depending on
+   the current ticket state, a ticket may or not be matched.

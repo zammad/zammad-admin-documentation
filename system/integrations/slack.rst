@@ -1,6 +1,15 @@
 Slack
 =====
 
+.. danger:: **⚠️ Deprecation warning ⚠️**
+
+   Zammad 7 will no longer support this dedicated Slack integration. It is
+   recommended to switch to `pre-defined webhooks`_ instead. Existing
+   Slack integrations should be migrated manually before this feature is
+   dropped.
+
+.. _pre-defined webhooks: /manage/webhook/examples/slack-notifications
+
 .. note::
 
    In order to use this feature, please add a new Slack app to your Workspace.
@@ -37,7 +46,7 @@ Configure the integration
 
 First of all, please go to your slack workspace - go to administration =>
 Manage Apps. If you don't have an app yet, you can simply add a new one - just
-search for `` Incoming WebHooks`` and customize the app to your needs.
+search for ``Incoming WebHooks`` and customize the app to your needs.
 
 Choose (or create) the channel Zamma should post it's information to and press
 on "Add Incoming WebHooks integration". If you're ready, copy the provided

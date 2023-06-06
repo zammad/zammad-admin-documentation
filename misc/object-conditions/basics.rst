@@ -54,7 +54,7 @@ Special fields
 Some options or fields are not exactly attributes but functions Zammad offers
 for your convenience.
 
-Action *(Scope: Ticket)*
+Action *(Scope: Ticket, Ticket article)*
    .. hint:: This field is only available for Trigger conditions!
 
    .. container:: cfloat-left
@@ -74,6 +74,22 @@ Action *(Scope: Ticket)*
         | *The source ticket of a ticket merge*
       * | received merge
         | *The destination ticket of a ticket merge*
+
+   .. container:: cfloat-clear
+
+      X
+
+   .. container:: cfloat-left
+
+      | How was the ticket article in question touched?
+      | Available matching: *is* or *is not*
+      
+   .. container:: cfloat-right
+
+      Available value:
+
+      * | created
+        | *The ticket article has been created*
 
    .. container:: cfloat-clear
 
@@ -425,6 +441,9 @@ Date & Time field
    | Available matching: 
 
       .. include:: /misc/object-conditions/datetime-conditions.include.rst
+
+      * *has reached*
+      * *has reached warning*
    
 .. container:: cfloat-right
 
@@ -468,6 +487,14 @@ Date & Time field
           Year(s).*
       * | *has changed*
         | *The field has been changed during a ticket update.*
+      * | *has reached*
+        | **This option is only available for Ticket's Pending time and
+          Escalation time in Trigger conditions!**
+        | *The time set in this field was reached*
+      * | *has reached warning*
+        | **This option is only available for Ticket's Escalation time in
+          Trigger conditions!**
+        | *The time set in this field will be reached in less than 15 minutes*
 
 .. container:: cfloat-clear
 
