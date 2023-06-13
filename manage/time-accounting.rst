@@ -29,7 +29,7 @@ current ticket step.
       by your agents if needed. You cannot enforce time accounting.
 
       If a ticket is no longer considered for the time accounting, the already
-      accounted time will be.
+      accounted time will be preserved.
 
    .. tip::
 
