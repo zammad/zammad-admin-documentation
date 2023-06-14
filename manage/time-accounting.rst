@@ -103,10 +103,10 @@ times.
    :alt: New Time Accounting Activity Type Dialog
 
 .. hint::
-   | Activity types can be set as default, and in that case they will be
-   | pre-selected for the agents when they are asked to account their time.
-   | It is also possible to unset default activity type, in which case no type
-   | will be pre-selected and the agents can make their choice.
+   Activity types can be set as default, and in that case they will be
+   pre-selected for the agents when they are asked to account their time. It is
+   also possible to unset default activity type, in which case no type will be
+   pre-selected and the agents can make their choice.
 
 Accounted Time
 ~~~~~~~~~~~~~~
@@ -127,6 +127,7 @@ Select the right month
    ticket information.
 
    .. figure:: /images/manage/time-accounting/time-accounting-month-selection.png
+      :align: center
       :alt: Screenshot showing a selection for year and month on time accounting
 
 Tickets and their accounted time
