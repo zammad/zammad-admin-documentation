@@ -66,16 +66,16 @@ Ticket Last Contact Behaviour (default: ``Use the start time of the last custome
       * - Last contact value used on :doc:`/manage/overviews`
         - Last contact value used on :doc:`/manage/trigger`
 
-Ticket Organization Reassignment (default: ``Update the most recent tickets``)
+Ticket Organization Reassignment (default: ``Update the most recent tickets.``)
    This setting changes the way Zammad updates the organization field of the
    tickets whenever the primary organization of a user is changed.
 
-   Update the most recent tickets
+   Update the most recent tickets.
       If this option is chosen, Zammad will update the 100 most recent tickets
       where the user is the ticket customer. The ticket organization field will
       be automatically set to the new primary organization of the user.
 
-   Do not update any tickets
+   Do not update any tickets.
       When choosing this option, Zammad will not update any tickets when the
       user's primary organization is changed.
 
