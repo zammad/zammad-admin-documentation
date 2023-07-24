@@ -36,9 +36,10 @@ Integrations for authentication and customers
    :maxdepth: 1
    :titlesonly:
 
-   ldap/index
-   exchange
    clearbit
+   exchange
+   ldap/index
+   pgp/index
    smime/index
 
 Integrations for Monitoring Systems
