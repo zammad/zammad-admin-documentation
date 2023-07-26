@@ -46,13 +46,13 @@ from a file or you can paste the content of the key in the text box.
    your Zammad email account.
    
    For **encrypting** *outgoing* emails, you have to import the public key of
-   the cusomter's email account.
+   the customer's email account.
 
    For **verifying the signature** of signed *incoming* emails, you have to
    import the public key of the customer.
 
    For **decrypting** of encrypted *incoming* emails, you have to import the
-   public key of the customer. 
+   private key of your Zammad email account. 
 
 Import keys from a file
 ```````````````````````
@@ -134,6 +134,6 @@ Troubleshooting
 
 **How do my customers get my new key?**
    You have to provide your **public** key in advance. 
-   Your customer also has to configure PGP in his email workflow and import
+   Your customer also has to configure PGP in their email workflow and import
    your public key. The other way round, you have to get the public key of your
    customer and have to import it to Zammad.
