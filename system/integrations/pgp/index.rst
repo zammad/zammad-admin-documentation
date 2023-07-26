@@ -119,8 +119,7 @@ Troubleshooting
 **Sign button is not visible, but keys are imported.**
    * Did you choose a group in the ticket?
    * Did you import a private key for the email adress, which is used for
-   outgoing emails in the group?
-
+     outgoing emails in the group?
 
 **How to obtain keys?**
    You can create them yourself! There are some good tutorials on the web on
