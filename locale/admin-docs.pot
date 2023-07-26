@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-26 09:44+0100\n"
+"POT-Creation-Date: 2023-07-26 16:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -699,6 +699,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:57
 #: ../system/integrations/gitlab.rst:46
+#: ../system/integrations/pgp/index.rst:117
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
 msgstr ""
@@ -15392,35 +15393,35 @@ msgstr ""
 msgid "Integrations for authentication and customers"
 msgstr ""
 
-#: ../system/integrations/index.rst:45
+#: ../system/integrations/index.rst:46
 msgid "Integrations for Monitoring Systems"
 msgstr ""
 
-#: ../system/integrations/index.rst:47
+#: ../system/integrations/index.rst:48
 msgid "This section currently misses the following integrations:"
 msgstr ""
 
-#: ../system/integrations/index.rst:49
+#: ../system/integrations/index.rst:50
 msgid "Icinga"
 msgstr ""
 
-#: ../system/integrations/index.rst:50
+#: ../system/integrations/index.rst:51
 msgid "Monit"
 msgstr ""
 
-#: ../system/integrations/index.rst:51
+#: ../system/integrations/index.rst:52
 msgid "Nagios"
 msgstr ""
 
-#: ../system/integrations/index.rst:61
+#: ../system/integrations/index.rst:62
 msgid "Integrations for Issue Trackers"
 msgstr ""
 
-#: ../system/integrations/index.rst:71
+#: ../system/integrations/index.rst:72
 msgid "Other Integrations"
 msgstr ""
 
-#: ../system/integrations/index.rst:73
+#: ../system/integrations/index.rst:74
 msgid "This section will hold any other integration that can't be grouped up (yet)."
 msgstr ""
 
@@ -15638,6 +15639,209 @@ msgstr ""
 msgid "Screencast showing how to remove LDAP sources."
 msgstr ""
 
+#: ../system/integrations/pgp/index.rst:2
+msgid "PGP"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:6
+msgid "Introduction"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:8
+msgid "Pretty Good Privacy (PGP) is another method for secure email communication. With PGP, you can exchange **signed** and **encrypted** messages with others."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:14
+#: ../system/integrations/smime/index.rst:17
+msgid "Signing"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:12
+msgid "is a proof that a message hasn’t been manipulated on its way."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:14
+msgid "In other words, it guarantees message **integrity** and **authenticity**."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:20
+#: ../system/integrations/smime/index.rst:22
+msgid "Encryption"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:17
+#: ../system/integrations/smime/index.rst:20
+msgid "scrambles a message so that it can only be unscrambled by the intended recipient."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:20
+msgid "In other words, it guarantees message **privacy** and **data security**."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:26
+msgid "Screenshot of ticket creation with encrypt and sign buttons"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:26
+msgid "Once PGP has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will appear in the ticket composer."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:29
+msgid "**Sign button not visible?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:31
+msgid "Please note that the signing of emails is based on the outgoing email account. That means you have to choose a group with a sender email account, which has a private key assigned."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:36
+msgid "Handling of keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:37
+msgid "To use the PGP function, you have to enable the integration (PGP) by switching the toggle to *enabled*."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:40
+msgid "You can add keys by clicking the *add key* button. The keys can be imported from a file or you can paste the content of the key in the text box."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:43
+msgid "**Which keys do I have to import?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:45
+msgid "For **signing** *outgoing* emails, you have to import the private key of your Zammad email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:48
+msgid "For **encrypting** *outgoing* emails, you have to import the public key of the customer's email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:51
+msgid "For **verifying the signature** of signed *incoming* emails, you have to import the public key of the customer."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:54
+msgid "For **decrypting** of encrypted *incoming* emails, you have to import the private key of your Zammad email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:58
+msgid "Import keys from a file"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:59
+msgid "You can import keys from a file in the section **Upload key**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of adding a key via file"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:65
+msgid "**Supported file formats**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:67
+msgid "ASCII-armor as well as binary GPG format (basically any GPG supported key format) is supported here."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:71
+msgid "Import keys by pasting the content"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:72
+msgid "You can also paste the key's content in the section **paste key**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of adding a key via pasting"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:78
+msgid "**Supported format**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:80
+msgid "Please note that only ASCII-armor is supported here."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:83
+msgid "Deleting keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:84
+msgid "If you want to delete a specific key, you can do it by clicking on the menu in the *actions* column and select **delete**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of deleting a key"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:93
+msgid "Downloading keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:94
+msgid "If you want to download your keys, you can do this as well via corresponding action buttons. Depending on the key, you can choose wether you want to download the private or the public key."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:100
+msgid "Default behavior"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:101
+msgid "Here you can adjust on per group basis, if *sign* and *encryption* is on or off by default. Please be aware, that agents can always override the setting for each individual article."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Adjusting default behavior on per group basis"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:111
+msgid "Recent logs"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:112
+msgid "Here you can see the last actions regarding signing and encryption and if they were succesful."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:122
+msgid "**Sign button is not visible, but keys are imported.**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:120
+msgid "Did you choose a group in the ticket?"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:121
+msgid "Did you import a private key for the email adress, which is used for outgoing emails in the group?"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:127
+msgid "**How to obtain keys?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:125
+msgid "You can create them yourself! There are some good tutorials on the web on how to create them. Providing keys to Zammad is a prerequisite to use the PGP feature."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:132
+msgid "**It says a passphrase is needed, but I haven't got one.**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:130
+msgid "If the key is secured with a passphrase, you have to provide it for the import in Zammad. It is possible that keys may have an empty passphrase. However, this is *not* recommended."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:137
+msgid "**How do my customers get my new key?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:135
+msgid "You have to provide your **public** key in advance. Your customer also has to configure PGP in their email workflow and import your public key. The other way round, you have to get the public key of your customer and have to import it to Zammad."
+msgstr ""
+
 #: ../system/integrations/slack.rst:2
 msgid "Slack"
 msgstr ""
@@ -15746,24 +15950,12 @@ msgstr ""
 msgid "S/MIME is the most widely-supported method for secure email communication. With S/MIME, you can exchange **signed** and **encrypted** messages with others."
 msgstr ""
 
-#: ../system/integrations/smime/index.rst:17
-msgid "Signing"
-msgstr ""
-
 #: ../system/integrations/smime/index.rst:15
 msgid "is proof that a message hasn’t been tampered with or sent by an impersonator."
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:17
 msgid "In other words, it guarantees a message’s **integrity** and **authenticity**."
-msgstr ""
-
-#: ../system/integrations/smime/index.rst:22
-msgid "Encryption"
-msgstr ""
-
-#: ../system/integrations/smime/index.rst:20
-msgid "scrambles a message so that it can only be unscrambled by the intended recipient."
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:22
