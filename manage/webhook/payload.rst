@@ -74,7 +74,7 @@ Regular Webhooks (example)
             "updated_by": "chris@chrispresso.com",
             "updated_by_id": 3,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "created_by_id": 3,
           "customer": {
@@ -104,7 +104,7 @@ Regular Webhooks (example)
             "updated_by": "chris@chrispresso.com",
             "updated_by_id": 3,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "customer_id": 8,
           "group": {
@@ -184,7 +184,7 @@ Regular Webhooks (example)
             "updated_by": "-",
             "updated_by_id": 1,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "owner_id": 5,
           "priority": {
@@ -232,7 +232,7 @@ Regular Webhooks (example)
             "updated_by": "chris@chrispresso.com",
             "updated_by_id": 3,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "updated_by_id": 3
         },
@@ -282,7 +282,7 @@ Regular Webhooks (example)
             "updated_by": "chris@chrispresso.com",
             "updated_by_id": 3,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "created_by_id": 3,
           "from": "Emily Adams <emily@example.com>",
@@ -324,7 +324,7 @@ Regular Webhooks (example)
             "updated_by": "chris@chrispresso.com",
             "updated_by_id": 3,
             "verified": false,
-            "vip": false,
+            "vip": false
           },
           "updated_by_id": 3,
           "accounted_time": 0
