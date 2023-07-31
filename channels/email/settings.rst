@@ -146,7 +146,7 @@ Sender Format: Default value ``Agent Name + FromSeparator + System Address Displ
          | Learn more in :doc:`Settings → Ticket </settings/ticket>`.
 
 Sender Format Separator: Default value ``via``
-   This is a can be a string you can freely choose. It divides the agent's name
+   This can be a string you can freely choose. It divides the agent's name
    and the display name of the channel whenever needed.
 
 Ticket Subject Forward: Default value ``FWD``
