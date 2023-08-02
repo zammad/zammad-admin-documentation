@@ -13,15 +13,18 @@ or even synchronized with third-party directory services.
    The simplest way to manage users is directly in the Admin Panel.
 
 Learn more about managing users...
+   * :doc:`via the Admin Panel <via-the-admin-panel>`
+   * :doc:`via CSV import <via-csv-import>`
+   * :doc:`via LDAP/Active Directory integration </system/integrations/ldap/index>`
+   * :doc:`via Exchange integration </system/integrations/exchange>`
+   * `via REST API <https://docs.zammad.org/en/latest/api/intro.html>`_
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
-   via the Admin Panel <via-the-admin-panel>
-   via CSV import <via-csv-import>
-   via LDAP/Active Directory integration </system/integrations/ldap/index>
-   via Exchange integration </system/integrations/exchange>
-   via REST API <https://docs.zammad.org/en/latest/api/intro.html>
+   via-the-admin-panel
+   via-csv-import
 
 .. note:: 😲 **Customers get their own user accounts, too?**
 
