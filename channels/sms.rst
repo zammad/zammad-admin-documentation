@@ -5,14 +5,14 @@ SMS integration primarily lets you create tickets, add articles and respond to
 tickets via SMS. It is also possible to send notifications, e.g. to agents.
 
 You can configure SMS notifications in the channels section in the admin
-interface at Channels -> SMS. 
+interface at **Channels > SMS**. 
 
 Configure incoming SMS
 ----------------------
 
-To process incoming SMS, message_bird and twilio are currently the only
+To process incoming SMS, MessageBird and Twilio are currently the only
 supported providers. Setting up the channel requires your account SID and an
-authentification token. You can find an example for the twilio configuration in
+authentification token. You can find an example for the Twilio configuration in
 the following screenshots.
 
 .. figure:: /images/channels/sms/sms_twilio1.png
@@ -27,7 +27,7 @@ Enter these in the Zammad admin interface at SMS accounts.
    :align: center
 
 
-Further options are to enter a sender number and selecting a destination group.
+Further options are to enter a sender number and select a destination group.
 The sender number is published when sending SMS from the ticket. Names
 can also be entered. "Destination group" is relevant for incoming SMS
 that can't be assigned to a specific ticket. 
@@ -44,9 +44,10 @@ Notifications via SMS
 ---------------------
 
 It's also possible to receive notifications via SMS. These are messages sent by
-trigger or automation. Setup is done in the admin interface at Channels > SMS
+trigger or automation. Setup is done in the admin interface at
+**Channels > SMS**.
 
-As service providers, Massenversand, message_bird and twilio are supported.
+As service providers, Massenversand, MessageBird and Twilio are supported.
 
 Please specify the accound ID and a token here. Furthermore it is possible to
 enter a phone number or name to be shown to the recipient. 
@@ -59,6 +60,8 @@ You can either save your configuration directly, or let your settings be
 checked by running a test in advance.
 
 Now it's possible to send SMS notifications via trigger or automation. Setup
-is analogue to setting up email notifications. Please note that user objects
-belonging to the person you want to notify must contain a mobile phone number as
-an attribute. If there is no phone number registered, no SMS is sent. 
+is analogue to setting up 
+:doc:`email notifications </channels/email/accounts/email-notification>`.
+Please note that the user object belonging to the person you want to notify must
+contain a mobile phone number as an attribute. If there is no phone number
+registered, no SMS will be sent. 
