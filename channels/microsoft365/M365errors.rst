@@ -1,8 +1,9 @@
-Microsoft 365 common errors
+Common errors
 ===========================
 
-**The** :doc:`documentation </channels/microsoft365/index>` **is your
-friend** 😊
+Here you can find some common errors in M365 context. Also have a look at
+the general :doc:`M365 documentation </channels/microsoft365/index>` for the
+configuration.
 
 Incorrect client ID
 -------------------
@@ -31,7 +32,7 @@ Wrong or expired client secret
 
 **Error message:** 500: We're sorry, but something went wrong. 
 
-.. figure:: /images/channels/microsoft365/errors/Micro1.png
+.. figure:: /images/channels/microsoft365/errors/zammad_error_500.png
   :alt: Error message
   :scale: 90%
   :align: center
@@ -60,7 +61,7 @@ If a wrong tenant is used in Zammad or the email account is not a member of
 the tenant created in Zammad, this error message occurs.
 
 In this case, please check if the tenant is entered correctly in
-Zammad, or remove the tenant complete.
+Zammad, or remove the tenant completely.
 
 .. warning:: **Important notice:**
   Once the tenant is completely removed, all email accounts can be created in
@@ -93,7 +94,7 @@ can be found on how to request admin consent from Zammad.
 Missing permissions for the Azure user
 --------------------------------------
 
-**Error message:** Can't use Chanel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError
+**Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError
 
 .. figure:: /images/channels/microsoft365/errors/smtp-error-settings.png
   :alt: Error message
@@ -113,18 +114,18 @@ or
 
 This error occurs when the admin wants to create an email account in Zammad
 whose user does not have permission for SMTP authentication to the mail server.
+Please check the following two most common problems in this case.
 
 
-**Private email account:**
+Private email account
+^^^^^^^^^^^^^^^^^^^^^
 
-In this case, the admin must grant the SMTP authentication permission to the
-user of the inbox.
+If it is a private email account, the admin must grant the SMTP authentication
+permission to the user of the inbox. The permission is provided at
+https://admin.microsoft.com.
 
-Permission is provided at https://admin.microsoft.com
-
-Users > Active Users > click Users > Email > Manage Email Apps
-
-Add SMTP authentication permission here.
+Add the SMTP authentication permission under
+Users > Active Users > click on the User > Email > Manage Email Apps.
 
 .. figure:: /images/channels/microsoft365/errors/mail-permissions.png
   :alt: Error message
@@ -132,10 +133,14 @@ Add SMTP authentication permission here.
   :align: center
 
 
-**Shared inbox:**
+Shared inbox
+^^^^^^^^^^^^
 
-This isn't a Zammad problem, so we can only help to a limited extent here.
-Try to enable "SmtpClientAuthenticationDisabled" in Azure shell.
+If it is a shared inbox, you can try to enable the SMTP Authentication
+(``SmtpClientAuthenticationDisabled``) in the Azure shell. This isn't a Zammad
+problem, so we can only help to a limited extent here.
+
+To enable the SMTP Authentication, use the following commands:
 
 If not installed::
 
