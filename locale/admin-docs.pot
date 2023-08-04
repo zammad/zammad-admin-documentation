@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-03 15:22+0200\n"
+"POT-Creation-Date: 2023-08-04 09:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1897,8 +1897,8 @@ msgid "Check the ✍️ :doc:`/misc/composer`."
 msgstr ""
 
 #: ../channels/email/index.rst:68
-#: ../channels/email/index.rst:33
-#: ../channels/email/index.rst:33
+#: ../channels/email/index.rst:32
+#: ../channels/email/index.rst:32
 msgid ":doc:`📇 Header manipulation <email-headers>`"
 msgstr ""
 
@@ -1915,10 +1915,22 @@ msgid "🤓 This is a very advanced topic."
 msgstr ""
 
 #: ../channels/email/index.rst:71
+#: ../channels/email/index.rst:36
+#: ../channels/email/index.rst:36
+msgid ":doc:`🛟 Common M365 errors <email-headers>`"
+msgstr ""
+
+#: ../channels/email/index.rst:71
+#: ../channels/email/index.rst:35
+#: ../channels/email/index.rst:35
+msgid "Here you can find common errors and how to fix them."
+msgstr ""
+
+#: ../channels/email/index.rst:74
 msgid "Extra Options for Self-Hosted Users"
 msgstr ""
 
-#: ../channels/email/index.rst:73
+#: ../channels/email/index.rst:76
 msgid "If you’re too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
@@ -3291,164 +3303,6 @@ msgstr ""
 msgid "Signatures in Google channels are **just like signatures in email channels**, so this article is lifted verbatim from :doc:`here </channels/email/signatures>`."
 msgstr ""
 
-#: ../channels/microsoft365/M365errors.rst:2
-msgid "Common errors"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:4
-msgid "Here you can find some common errors in M365 context. Also have a look at the general :doc:`M365 documentation </channels/microsoft365/index>` for the configuration."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:9
-msgid "Incorrect client ID"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:11
-msgid "**Error message:** AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directory 'MSFT'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:None
-#: ../channels/microsoft365/M365errors.rst:None
-#: ../channels/microsoft365/M365errors.rst:None
-#: ../channels/microsoft365/M365errors.rst:None
-#: ../channels/microsoft365/M365errors.rst:104
-#: ../channels/microsoft365/M365errors.rst:113
-#: ../channels/microsoft365/M365errors.rst:None
-msgid "Error message"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:22
-msgid "In this case, please compare whether the client ID created in Zammad matches that in Azure for the Azure App."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:25
-msgid "The Client ID can be found in Zammad under Settings > Channels > Microsoft 365 > App Configuration. See :doc:`here </channels/microsoft365/accounts>` how to find the client ID in Azure and where to copy it to in Zammad."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:31
-msgid "Wrong or expired client secret"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:33
-msgid "**Error message:** 500: We're sorry, but something went wrong."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:40
-msgid "This error occurs when the client uses an incorrect or expired client secret."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:42
-msgid "**Important notice:** We never ask the client for the client secret as this can potentially be a security risk. We ask the customer to create a new client secret and copy the value and not the ID to Zammad."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:47
-msgid "See :doc:`here </channels/microsoft365/accounts>` for more information."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:50
-msgid "Wrong tenant"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:52
-msgid "**Error message:** AADSTS0023: Specified tenant identifier 'xxxxxxxx' is neither a valid DNS name, nor a valid external domain."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:60
-msgid "If a wrong tenant is used in Zammad or the email account is not a member of the tenant created in Zammad, this error message occurs."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:63
-msgid "In this case, please check if the tenant is entered correctly in Zammad, or remove the tenant completely."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:66
-msgid "**Important notice:** Once the tenant is completely removed, all email accounts can be created in Zammad regardless of which tenant the email account is a member of."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:71
-msgid "Request admin consent"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:73
-msgid "**Prompt:** approval required"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:80
-msgid "This message occurs when the admin tries to create an email account in Zammad that has not yet received approval from the Azure global admin."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:83
-msgid "In our documentation, :doc:`step-by-step instructions </channels/microsoft365/accounts/account-setup>` can be found on how to request admin consent from Zammad."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:88
-msgid "The request for the admin consent can be bypassed by assigning the admin consent in Azure to the App."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:91
-msgid "Home > App Registration > Manage > API Permission > Grant admin consent for \"MSFT\"."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:95
-msgid "Missing permissions for the Azure user"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:97
-msgid "**Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:104
-msgid "Error message in the M365 channel settings"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:106
-msgid "or"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:113
-msgid "Error message in the ticket"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:115
-msgid "This error occurs when the admin wants to create an email account in Zammad whose user does not have permission for SMTP authentication to the mail server. Please check the following two most common problems in this case."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:121
-msgid "Private email account"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:123
-msgid "If it is a private email account, the admin must grant the SMTP authentication permission to the user of the inbox. The permission is provided at https://admin.microsoft.com."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:127
-msgid "Add the SMTP authentication permission under Users > Active Users > click on the User > Email > Manage Email Apps."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:137
-msgid "Shared inbox"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:139
-msgid "If it is a shared inbox, you can try to enable the SMTP Authentication (``SmtpClientAuthenticationDisabled``) in the Azure shell. This isn't a Zammad problem, so we can only help to a limited extent here."
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:143
-msgid "To enable the SMTP Authentication, use the following commands:"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:145
-msgid "If not installed::"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:149
-msgid "Log in to Exchange using Powershell::"
-msgstr ""
-
-#: ../channels/microsoft365/M365errors.rst:153
-msgid "Switching on the SMTP authentication for a mailbox - also possible with a shared mailbox::"
-msgstr ""
-
 #: ../channels/microsoft365/accounts.rst:14
 msgid "Use the **Connect Microsoft 365 App** dialog to register Zammad as an OAuth app on Microsoft."
 msgstr ""
@@ -3890,6 +3744,164 @@ msgstr ""
 #: ../channels/microsoft365/accounts/secondary-addresses.warning.rst:17
 #: ../channels/microsoft365/accounts/secondary-addresses.warning.rst:17
 msgid "Contact your administrator if you don’t have access to an admin account."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:2
+msgid "Common errors"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:4
+msgid "Here you can find some common errors in M365 context. Also have a look at the general :doc:`M365 documentation </channels/microsoft365/index>` for the configuration."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:9
+msgid "Incorrect client ID"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:11
+msgid "**Error message:** AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directory 'MSFT'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:104
+#: ../channels/microsoft365/common-errors.rst:113
+#: ../channels/microsoft365/common-errors.rst:None
+msgid "Error message"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:22
+msgid "In this case, please compare whether the client ID created in Zammad matches that in Azure for the Azure App."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:25
+msgid "The Client ID can be found in Zammad under Settings > Channels > Microsoft 365 > App Configuration. See :doc:`here </channels/microsoft365/accounts>` how to find the client ID in Azure and where to copy it to in Zammad."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:31
+msgid "Wrong or expired client secret"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:33
+msgid "**Error message:** 500: We're sorry, but something went wrong."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:40
+msgid "This error occurs when the client uses an incorrect or expired client secret."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:42
+msgid "**Important notice:** We never ask the client for the client secret as this can potentially be a security risk. We ask the customer to create a new client secret and copy the value and not the ID to Zammad."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:47
+msgid "See :doc:`here </channels/microsoft365/accounts>` for more information."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:50
+msgid "Wrong tenant"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:52
+msgid "**Error message:** AADSTS0023: Specified tenant identifier 'xxxxxxxx' is neither a valid DNS name, nor a valid external domain."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:60
+msgid "If a wrong tenant is used in Zammad or the email account is not a member of the tenant created in Zammad, this error message occurs."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:63
+msgid "In this case, please check if the tenant is entered correctly in Zammad, or remove the tenant completely."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:66
+msgid "**Important notice:** Once the tenant is completely removed, all email accounts can be created in Zammad regardless of which tenant the email account is a member of."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:71
+msgid "Request admin consent"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:73
+msgid "**Prompt:** approval required"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:80
+msgid "This message occurs when the admin tries to create an email account in Zammad that has not yet received approval from the Azure global admin."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:83
+msgid "In our documentation, :doc:`step-by-step instructions </channels/microsoft365/accounts/account-setup>` can be found on how to request admin consent from Zammad."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:88
+msgid "The request for the admin consent can be bypassed by assigning the admin consent in Azure to the App."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:91
+msgid "Home > App Registration > Manage > API Permission > Grant admin consent for \"MSFT\"."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:95
+msgid "Missing permissions for the Azure user"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:97
+msgid "**Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:104
+msgid "Error message in the M365 channel settings"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:106
+msgid "or"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:113
+msgid "Error message in the ticket"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:115
+msgid "This error occurs when the admin wants to create an email account in Zammad whose user does not have permission for SMTP authentication to the mail server. Please check the following two most common problems in this case."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:121
+msgid "Private email account"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:123
+msgid "If it is a private email account, the admin must grant the SMTP authentication permission to the user of the inbox. The permission is provided at https://admin.microsoft.com."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:127
+msgid "Add the SMTP authentication permission under Users > Active Users > click on the User > Email > Manage Email Apps."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:137
+msgid "Shared inbox"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:139
+msgid "If it is a shared inbox, you can try to enable the SMTP Authentication (``SmtpClientAuthenticationDisabled``) in the Azure shell. This isn't a Zammad problem, so we can only help to a limited extent here."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:143
+msgid "To enable the SMTP Authentication, use the following commands:"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:145
+msgid "If not installed::"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:149
+msgid "Log in to Exchange using Powershell::"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:153
+msgid "Switching on the SMTP authentication for a mailbox - also possible with a shared mailbox::"
 msgstr ""
 
 #: ../channels/microsoft365/email-headers.rst:3

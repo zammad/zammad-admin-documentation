@@ -9,7 +9,7 @@ Microsoft 365
    signatures
    settings
    email-headers
-   M365errors
+   common-errors
 
 Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
 

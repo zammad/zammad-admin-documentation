@@ -1,5 +1,5 @@
 Common errors
-===========================
+=============
 
 Here you can find some common errors in M365 context. Also have a look at
 the general :doc:`M365 documentation </channels/microsoft365/index>` for the

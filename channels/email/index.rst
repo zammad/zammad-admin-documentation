@@ -67,6 +67,9 @@ Control how Zammad **sends and receives email**.
 
       .. warning:: 🤓 This is a very advanced topic.
 
+:doc:`🛟 Common M365 errors <email-headers>`
+   Here you can find common errors and how to fix them.
+
 Extra Options for Self-Hosted Users
 -----------------------------------
 
