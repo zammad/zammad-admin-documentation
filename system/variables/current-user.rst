@@ -35,6 +35,7 @@ Current user variables always return values of the current user that caused e.g.
    "Current User > Organization > Name", "``#{user.organization.name}``", ""
    "Current User > Organization > Domain based assignment", "``#{user.organization.domain_assignment}``", ""
    "Current User > Organization > Domain", "``#{user.organization.domain}``", "``Zammad GmbH`` or empty if not set"
+   "Current User > Organization > VIP", "``#{user.organization.vip}``", "``true`` or ``false``"
    "Current User > Note", "``#{user.note}``", "``Some note to this user`` or empty if not set"
    "Current User > Mobile", "``#{user.mobile}``", "``0049176123456789`` or empty if not set"
    "Current User > Login", "``#{user.login}``", "``jdoe``"

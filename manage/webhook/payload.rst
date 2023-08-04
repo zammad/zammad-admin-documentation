@@ -141,6 +141,7 @@ Regular Webhooks (example)
             "created_by": "-",
             "created_by_id": 1,
             "domain_assignment": false,
+            "vip": true,
             "id": 3,
             "member_ids": [
               8,
