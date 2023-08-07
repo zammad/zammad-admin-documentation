@@ -31,22 +31,27 @@ Prerequisites
 Certificate and private key checks on upload
 --------------------------------------------
 
-The certificate and private key validation is based on the ``X509v3``
+The certificate and public key validation is based on the ``X509v3``
 extensions. 
 
-Using the extension *Extended Key Usage*?
+Uploading a *client certificate*?
    The following attributes are required then:
-    * Extended Key Usage (``E-mail Protection``)
     * Subject Alternative Name (at least one email address has to be present)
     * Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
     * Public key algorithm (either ``RSA`` or ``EC``) 
 
-   Please note that any provided email adress has to be prefixed with ``email:``
+   The Extended Key Usage attribute is optional. If the certificate provides
+   the named attribute, than it must contain the value ``E-mail Protection``.
+
+   Please note that any usable email adress has to be prefixed with ``email:``
    or ``rfc822:``.
 
-Using a *CA certificate*?
-   In the case of an uploaded CA certificate, you can skip the above mentioned
-   validation by providing the value ``CA:TRUE`` in *Basic Contstraints*.
+   The named public key algorithms are mandatory for private keys as well.
+
+Uploading a *CA certificate*?
+   In the case of an uploaded CA certificate, providing the value ``CA:TRUE``
+   in the attribute *Basic Contstraints*, the previously mentioned attributes
+   are not verified.
 
 In general, the usage of any expired (``Not After``) or 
 not yet valid (``Not Before``) certificate is denied for outgoing emails.
