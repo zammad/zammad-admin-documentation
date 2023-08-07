@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 14:04+0200\n"
+"POT-Creation-Date: 2023-08-07 11:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2443,7 +2443,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/elasticsearch.rst:25
 #: ../system/integrations/ldap/index.rst:31
-#: ../system/integrations/smime/prerequisites.rst:32
+#: ../system/integrations/smime/prerequisites.rst:78
 msgid "Limitations"
 msgstr ""
 
@@ -16412,7 +16412,7 @@ msgid "(Use these to ✅ **verify incoming message signatures** and 🔒 **encry
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:14
-msgid "🙋 **I’m new to S/MIME. Where can I get a certificate?**"
+msgid "🙋 **I'm new to S/MIME. Where can I get a certificate?**"
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:16
@@ -16443,11 +16443,63 @@ msgstr ""
 msgid "Bear in mind that 🤝 **S/MIME only works if the other party is using it, too.**"
 msgstr ""
 
+#: ../system/integrations/smime/prerequisites.rst:32
+msgid "Certificate and private key checks on upload"
+msgstr ""
+
 #: ../system/integrations/smime/prerequisites.rst:34
+msgid "The certificate and private key validation is based on the ``X509v3`` extensions."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:45
+msgid "Using the extension *Extended Key Usage*?"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:42
+msgid "The following attributes are required then:"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:39
+msgid "Extended Key Usage (``E-mail Protection``)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:40
+msgid "Subject Alternative Name (at least one email address has to be present)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:41
+msgid "Key Usage (``Digital Signature`` and/or ``Key Encipherment``)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:42
+msgid "Public key algorithm (either ``RSA`` or ``EC``)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:44
+msgid "Please note that any provided email adress has to be prefixed with ``email:`` or ``rfc822:``."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:49
+msgid "Using a *CA certificate*?"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:48
+msgid "In the case of an uploaded CA certificate, you can skip the above mentioned validation by providing the value ``CA:TRUE`` in *Basic Contstraints*."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:51
+msgid "In general, the usage of any expired (``Not After``) or not yet valid (``Not Before``) certificate is denied for outgoing emails."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:54
+msgid "Example certificate:"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:80
 msgid "Please note that Zammad will distrust senders by default. This means that you're always required to provide certificate data, no matter if for signing or encrypting."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:38
+#: ../system/integrations/smime/prerequisites.rst:84
 msgid "This is by design and can't be adjusted."
 msgstr ""
 
