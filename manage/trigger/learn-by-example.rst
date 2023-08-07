@@ -17,7 +17,7 @@ of the kinds of automation tasks you can set up with triggers.
    the word “order” in the subject, assign it to her and make sure it’s set
    with a high priority:
 
-   .. figure:: /images/manage/trigger/trigger-based-priotize-change.png
+   .. figure:: /images/manage/trigger/trigger-based-prioritize-change.png
 
 3. Send an auto-reply email to *any customer* who responds to a ticket:
 
