@@ -61,7 +61,7 @@ Action *(Scope: Ticket, Ticket article)*
 
       | How was the ticket in question touched?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -83,7 +83,7 @@ Action *(Scope: Ticket, Ticket article)*
 
       | How was the ticket article in question touched?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Available value:
@@ -105,7 +105,7 @@ Customer *(Scope: Ticket)*
 
       | What ticket customer is affected (or not)?
       | Available matching: *is*, *is not* or *has changed*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -133,7 +133,7 @@ Organization *(Scope: Ticket, Customer)*
 
       | What ticket organization is affected (or not)?
       | Available matching: *is*, *is not* or *has changed*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -156,7 +156,7 @@ Group *(Scope: Ticket)*
 
       | What ticket group is affected (or not)?
       | Available matching: *is*, *is not* or *has changed*
-      
+
    .. container:: cfloat-right
 
       Offers all configured and active groups in Zammad.
@@ -170,7 +170,7 @@ Owner *(Scope: Ticket)*
 
       | What ticket owner is affected (or not)?
       | Available matching: *is*, *is not* or *has changed*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -201,7 +201,7 @@ State *(Scope: Ticket)*
 
       | What ticket state is affected (or not)?
       | Available matching: *is*, *is not* or *has changed*
-      
+
    .. container:: cfloat-right
 
       Offers all configured and *visible* ticket states in Zammad.
@@ -221,7 +221,7 @@ Tags *(Scope: Ticket)*
       | What ticket tags are affected (or not)?
       | Available matching: *contains all*, *contains one*,
         *contains all not* or *contains one not*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -246,7 +246,7 @@ Subscribe *(Scope: Ticket)*
 
       | What ticket subscribers (`notifications`_) are affected (or not)?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Offered values (multiple choice):
@@ -275,7 +275,7 @@ Type *(Scope: Ticket article)*
 
       | What's the articles type (or not)?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Offers all available article types of your instance (e.g. *email*).
@@ -292,7 +292,7 @@ Visibility *(Scope: Ticket article)*
 
       | What's the articles visibility (or not)?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Allows you to check if the article in question is either internal or
@@ -307,7 +307,7 @@ Sender *(Scope: Ticket article)*
 
       | What user role does the sender of the article have (or not)?
       | Available matching: *is* or *is not*
-      
+
    .. container:: cfloat-right
 
       Determine the sender of the message: System, Agent or Customer.
@@ -324,7 +324,7 @@ Calendar *(Scope: Execution time)*
       | Was the ticket touched within the calendar defined business time
         (or not)?
       | Available matching: *is in working time* or *is not in working time*
-      
+
    .. container:: cfloat-right
 
       Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to
@@ -341,10 +341,57 @@ Text field (input)
 
 .. hint::
 
-   The configured "Type" of input fields as no impact on the available options.
+   The configured "Type" of input fields has no impact on the available options.
 
-| Check if any field of type text contains a specific string (or not)?
-| Available matching: *contains*, *contains not* or *has changed*
+Check if any field of type text contains a specific string (or not)?
+
+Available operators for matching:
+
+   Contains
+      Matches if text contains a specific string.
+
+   Contains not
+      Matches if text does not contain a specific string.
+
+   Is any of
+      Matches if text is equal to any of given tokens.
+
+   Is none of
+      Matches if text is not equal to all of given tokens.
+
+   Starts with one of
+      Matches if text starts with one of given tokens.
+
+   Ends with one of
+      Matches if text ends with one of given tokens.
+
+   Matches regex
+      Evaluates if text matches provided regular expression.
+
+   Does not match regex
+      Evaluates if text does not match provided regular expression.
+
+.. hint::
+   **Regex support**
+
+   ``matches regex`` and ``does not match regex`` are supported only in
+   Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket
+   assignment and Core Workflow.
+
+.. hint::
+   **Differences in input fields**
+
+   Please note, that the input field for tokens doesn't support the comma as
+   separator (as in the input field for tags). If you use the comma in the
+   token input field, the comma is included in you token.
+
+   **Example**:
+
+   .. figure:: /images/misc/object-conditions/operator-token-input.png
+      :alt: Example of comma usage in token input field
+
+      ``A`` added with enter/tab, ``B`` and ``C`` separted with comma (resulting
+      in one token).
 
 Textarea field
 ++++++++++++++
@@ -370,10 +417,10 @@ Date field
 .. container:: cfloat-left
 
    | Check if the given date is past or relatively past a specific period?
-   | Available matching: 
+   | Available matching:
 
       .. include:: /misc/object-conditions/datetime-conditions.include.rst
-   
+
 .. container:: cfloat-right
 
    Offered values and options:
@@ -438,13 +485,13 @@ Date & Time field
 
    | Check if the given date & time is past or relatively past a specific
      period?
-   | Available matching: 
+   | Available matching:
 
       .. include:: /misc/object-conditions/datetime-conditions.include.rst
 
       * *has reached*
       * *has reached warning*
-   
+
 .. container:: cfloat-right
 
    Offered values and options:
@@ -513,7 +560,7 @@ Single selection field
 
    | Checks selected field values to match actual attribute value (or not).
    | Available matching: *is*, *is not* or *has changed*
-   
+
 .. container:: cfloat-right
 
    Allows you to select one or more values of the attribute in question.
@@ -531,7 +578,7 @@ Multiple selection field
    | What field's values are affected (or not)?
    | Available matching: *contains all*, *contains one*,
      *contains all not* or *contains one not*
-   
+
 .. container:: cfloat-right
 
    Offered values (multiple choice):
@@ -561,7 +608,7 @@ Single tree selection field
 
    | Checks selected field values to match actual attribute value (or not).
    | Available matching: *is*, *is not* or *has changed*
-   
+
 .. container:: cfloat-right
 
    Allows you to select one or more values of the attribute in question.
@@ -584,7 +631,7 @@ Multiple tree selection field
    | What field's values are affected (or not)?
    | Available matching: *contains all*, *contains one*,
      *contains all not* or *contains one not*
-   
+
 .. container:: cfloat-right
 
    Offered values (multiple choice):
