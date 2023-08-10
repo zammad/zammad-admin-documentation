@@ -347,34 +347,34 @@ Check if any field of type text contains a specific string (or not)?
 
 Available operators for matching:
 
-   Contains
+   *contains*
       Matches if text contains a specific string.
 
-   Contains not
+   *contains not*
       Matches if text does not contain a specific string.
 
-   Is any of
+   *is any of*
       Matches if text is equal to any of given tokens.
 
-   Is none of
+   *is none of*
       Matches if text is not equal to all of given tokens.
 
-   Starts with one of
+   *starts with one of*
       Matches if text starts with one of given tokens.
 
-   Ends with one of
+   *ends with one of*
       Matches if text ends with one of given tokens.
 
-   Matches regex
+   *matches regex*
       Evaluates if text matches provided regular expression.
 
-   Does not match regex
+   *does not match regex*
       Evaluates if text does not match provided regular expression.
 
 .. hint::
    **Regex support**
 
-   ``matches regex`` and ``does not match regex`` are supported only in
+   *matches regex* and *does not match regex* are supported only in
    Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket
    assignment and Core Workflow.
 
@@ -390,8 +390,8 @@ Available operators for matching:
    .. figure:: /images/misc/object-conditions/operator-token-input.png
       :alt: Example of comma usage in token input field
 
-      ``A`` added with enter/tab, ``B`` and ``C`` separted with comma (resulting
-      in one token).
+      ``A`` added with enter/tab, ``B`` and ``C`` separated with comma 
+      (resulting in one token).
 
 Textarea field
 ++++++++++++++

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 12:21+0200\n"
+"POT-Creation-Date: 2023-08-10 14:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1546,63 +1546,63 @@ msgstr ""
 #: ../channels/email/filters.rst:22
 #: ../channels/email/filters.rst:22
 #: ../channels/email/filters.rst:22
-msgid "Different attributes of a filter can be combined with each other. Likewise, the following actions can be combined. The supported matches are:"
+msgid "Different attributes of a filter can be combined with each other. Likewise, the following operators can be combined. The supported matches are:"
 msgstr ""
 
 #: ../channels/email/filters.rst:25
 #: ../channels/email/filters.rst:25
 #: ../channels/email/filters.rst:25
 #: ../misc/object-conditions/basics.rst:351
-msgid "Contains"
+msgid "*contains*"
 msgstr ""
 
 #: ../channels/email/filters.rst:26
 #: ../channels/email/filters.rst:26
 #: ../channels/email/filters.rst:26
 #: ../misc/object-conditions/basics.rst:354
-msgid "Contains not"
+msgid "*contains not*"
 msgstr ""
 
 #: ../channels/email/filters.rst:27
 #: ../channels/email/filters.rst:27
 #: ../channels/email/filters.rst:27
 #: ../misc/object-conditions/basics.rst:357
-msgid "Is any of"
+msgid "*is any of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:28
 #: ../channels/email/filters.rst:28
 #: ../channels/email/filters.rst:28
 #: ../misc/object-conditions/basics.rst:360
-msgid "Is none of"
+msgid "*is none of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:29
 #: ../channels/email/filters.rst:29
 #: ../channels/email/filters.rst:29
 #: ../misc/object-conditions/basics.rst:363
-msgid "Starts with one of"
+msgid "*starts with one of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:30
 #: ../channels/email/filters.rst:30
 #: ../channels/email/filters.rst:30
 #: ../misc/object-conditions/basics.rst:366
-msgid "Ends with one of"
+msgid "*ends with one of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:31
 #: ../channels/email/filters.rst:31
 #: ../channels/email/filters.rst:31
 #: ../misc/object-conditions/basics.rst:369
-msgid "Matches regex"
+msgid "*matches regex*"
 msgstr ""
 
 #: ../channels/email/filters.rst:32
 #: ../channels/email/filters.rst:32
 #: ../channels/email/filters.rst:32
 #: ../misc/object-conditions/basics.rst:372
-msgid "Does not match regex"
+msgid "*does not match regex*"
 msgstr ""
 
 #: ../channels/email/filters.rst:34
@@ -1614,7 +1614,7 @@ msgstr ""
 #: ../channels/email/filters.rst:40
 #: ../channels/email/filters.rst:40
 #: ../channels/email/filters.rst:40
-msgid "The following objects can only be defined by the filter when a ticket is **created**:"
+msgid "The following attributes can only be defined by the filter when a ticket is **created**:"
 msgstr ""
 
 #: ../channels/email/filters.rst:43
@@ -1651,7 +1651,7 @@ msgstr ""
 #: ../channels/email/filters.rst:48
 #: ../channels/email/filters.rst:48
 #: ../channels/email/filters.rst:48
-msgid "Zammad will **not overwrite** the attributes of these objects when a ticket is updated."
+msgid "Zammad will **not overwrite** the value of these objects when a ticket is updated."
 msgstr ""
 
 #: ../channels/email/filters.rst:51
@@ -1675,7 +1675,7 @@ msgstr ""
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
-msgid "From: Matches regex: ``(\\.|@)amazon\\.com``"
+msgid "From: *matches regex:* ``(\\.|@)amazon\\.com``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
@@ -1693,7 +1693,7 @@ msgstr ""
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
-msgid "Organization: Starts with one of: ``A`` ``B`` ``C``"
+msgid "Organization: *starts with one of:* ``A`` ``B`` ``C``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
@@ -1711,7 +1711,7 @@ msgstr ""
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
-msgid "From: contains: ``ourvipcustomer@example.com``"
+msgid "From: *contains:* ``ourvipcustomer@example.com``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
@@ -1729,7 +1729,7 @@ msgstr ""
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
 #: ../channels/email/filters.rst:0
-msgid "X-Spam-Flag: contains: ``YES``"
+msgid "X-Spam-Flag: *contains:* ``YES``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
@@ -1747,7 +1747,7 @@ msgstr ""
 #: ../channels/email/filters.rst:75
 #: ../channels/email/filters.rst:75
 #: ../channels/email/filters.rst:75
-msgid "Note that the State action only has an effect when the matching email results in a new ticket. It will add the tag though if it is missing, even if the mail is an update to an existing ticket."
+msgid "Note that the State attribute only has an effect when the matching email results in a new ticket. It will add the tag though if it is missing, even if the mail is an update to an existing ticket."
 msgstr ""
 
 #: ../channels/email/filters.rst:79
@@ -10807,7 +10807,7 @@ msgid "**Regex support**"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:377
-msgid "``matches regex`` and ``does not match regex`` are supported only in Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket assignment and Core Workflow."
+msgid "*matches regex* and *does not match regex* are supported only in Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket assignment and Core Workflow."
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:382
@@ -10827,7 +10827,7 @@ msgid "Example of comma usage in token input field"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:393
-msgid "``A`` added with enter/tab, ``B`` and ``C`` separted with comma (resulting in one token)."
+msgid "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting in one token)."
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:397
