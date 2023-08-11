@@ -16,7 +16,7 @@ where zammad_host has to be replaced with your Zammad FQDN
    :alt: Register OAuth app on gitlab instance
 
 At the moment we need the "api" scope. This is caused due a bug
-in Gitlab: https://gitlab.com/gitlab-org/gitlab-ce/issues/33022
+in Gitlab.
 
 Configure Zammad as Gitlab app
 ------------------------------
@@ -24,7 +24,8 @@ Configure Zammad as Gitlab app
 Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications
 Dashboard.
 
-.. note:: Please ensure to use ``https://{git_host}/api/v4/`` for site.
+.. note:: Please ensure to use ``https://{git_host}/`` without any ``/api/v4``
+   suffix for site.
 
 .. image:: /images/settings/security/third-party/gitlab/enable-authentication-via-gitlab-in-zammad.png
    :alt: Gitlab config in Zammad admin interface
