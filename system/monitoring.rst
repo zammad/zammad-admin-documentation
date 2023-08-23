@@ -1,12 +1,15 @@
 Monitoring
 **********
 
-**Please note:** This is only available in self hosted instances, as we're monitoring hosted instances and fix problems.
+.. note:: This is only available in self hosted instances, as we're
+   monitoring hosted instances and fix problems.
 
 On the monitoring page you can see the current health state of Zammad.
-This can be useful if you for example have the feeling that you don't receive emails anymore, you can take a look here before logging onto your Server.
+This can be useful if you for example have the feeling that you don't receive
+emails anymore, you can take a look here before logging onto your Server.
 
-Besides the optical state of an event, you can also reset the access token for this module and get the monitoring URL for a monitoring system of your choice.
+Besides the optical state of an event, you can also reset the access token for
+this module and get the monitoring URL for a monitoring system of your choice.
 
 Example output to this can be:
 
@@ -20,3 +23,9 @@ Zammad has issue (whatever nature, refer to image 2 for interface example)::
 
 .. image:: /images/system/monitoring/1.jpg
 .. image:: /images/system/monitoring/2.jpg
+
+.. note:: **Can't receive an email and the monitoring response is "healthy"?**
+
+   Zammad will just inform you about unprocessable emails. This is not the case
+   for oversized emails. You can adjust the maximum email size in
+   :doc:`../channels/email/settings`.
