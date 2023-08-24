@@ -53,7 +53,7 @@ Example output
 
    **API response**::
 
-      {"healthy"=>true, "message"=>"success", "token"=>"2432XXXXXXXXXXXXXXXXXXXXXX1761"}
+      {"healthy"=>true, "message"=>"success"}
 
 :Issues were found:
 
@@ -65,4 +65,4 @@ Example output
 
    **API response**::
 
-      {"healthy":false,"message":"Channel: Twitter::Account in key:{\"id\"=\XXXXXXXXXXXXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somewhat name\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e","issues":["Channel: Twitter::Account in key:{\"id\"=\XXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somename\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e"],"actions":[],"token":"OgitXXXXXXXXXXXXXXXXXXXXXXNxo4ptCoQ"}
+      {"healthy":false,"message":"Channel: Twitter::Account in key:{\"id\"=\XXXXXXXXXXXXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somewhat name\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e","issues":["Channel: Twitter::Account in key:{\"id\"=\XXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somename\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e"],"actions":[]}
