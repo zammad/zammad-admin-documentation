@@ -102,7 +102,7 @@ please create an issue. Thanks.
 [![Translation progress][tprogress]][wbetranslate]
 
 [badge]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest
-[docs]: https://admin-docs.zammad.org/en/latest/
-[tbadge]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/svg-badge.svg
-[wbetranslate]: https://translations.zammad.org/projects/documentations/admin-documentation/
-[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/multi-auto.svg
+[docs]: https://admin-docs.zammad.org/en/pre-release/
+[tbadge]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/svg-badge.svg
+[wbetranslate]: https://translations.zammad.org/projects/documentations/admin-documentation-pre-release/
+[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/horizontal-auto.svg
