@@ -68,12 +68,12 @@ Keycloak
    * **To add Zammad as a client,**
      save the XML configuration to disk
      (``https://your.zammad.domain/auth/saml/metadata``)
-     and use **Clients > Create > Import** in the Keycloak admin panel.
+     and use **Manage > Clients > Clients list > Import client** in the Keycloak admin panel.
 
    * **To help Zammad match its own user accounts to Keycloak users,**
-     create a user attribute (or “property”) mapper:
+     create a user attribute (or “property”) mapper. In **Clients list** click on the newly created Client with ID ``https://your.zammad.domain/auth/saml/metadata``, choose the tab **Client scopes** and click on ``https://your.zammad.domain/auth/saml/metadata-dedicated``. Click on **Add mapper > By configuration > User Property** and create a mapper with the following entries
 
-     .. list-table:: **Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > Create**
+     .. list-table:: 
 
         * - **Name**
           - ``emailAddress``
@@ -95,7 +95,7 @@ Keycloak
      If your Keycloak users’ email addresses are stored on another property
      (*e.g.,* ``username``), adjust accordingly.
      
-   * Make sure the **Client ID** matches the **Master SAML Processing URL**.
+   * Back in **Settings** enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``) in the field **Master SAML Processing URL**.
    
    * You need to enable **Sign assertions**.
 
@@ -135,7 +135,7 @@ IDP Certificate fingerprint
       <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
 
       **Keycloak users:** Find your certificate in the Keycloak admin panel
-      under **Realm Settings > Keys > RSA > Certificate**.
+      under **Realm Settings > Keys > Algorithm: RS256 > Certificate**.
 
 Name Identifier format
    This is the unique identifiers field type. Usually should be
