@@ -79,7 +79,7 @@ Admin Permissions
       That’s in :doc:`/manage/groups/access-levels`.
 
 :``admin.channel_twitter``:
-   :doc:`Channels > Twitter </channels/twitter>`
+   :doc:`Channels > Twitter </channels/twitter-x/twitter>`
 
    .. hint:: 🤓 **Trying to grant access to view/update tickets from Twitter?**
 
