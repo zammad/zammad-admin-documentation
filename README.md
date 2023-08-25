@@ -1,8 +1,12 @@
-[![Documentation Status][badge]][docs] [![Translation Status][tbadge]][wbetranslate]
+[![Documentation Status][badge_pre-release]][docs_pre-release]
+[![Translation Status][tbadge_pre-release]][wbetranslate_pre-release] (pre-release)
+
+[![Documentation Status][badge_latest]][docs_latest]
+[![Translation Status][tbadge_latest]][wbetranslate_latest] (latest)
 
 # Zammad Admin Documentation
 
-Source files for [Zammad’s admin documentation][docs].
+Source files for Zammad’s admin documentation [(latest][docs_latest] / [pre-release)][docs_pre-release].
 
 ## Contributing
 
@@ -14,7 +18,7 @@ If you would like to improve the docs, simply:
 3. submit a pull request.
 
 > 🌍 **Wanna help translate?** Submit your contributions
-> (or request additional languages) [here][wbetranslate].
+> (or request additional languages) [here][wbetranslate_pre-release].
 > Do **NOT** submit a PR with changes to the contents of the `locale/` directory.
 
 Thanks! ❤ ❤ ❤
@@ -99,10 +103,18 @@ please create an issue. Thanks.
 
 ### Localization progress
 
-[![Translation progress][tprogress]][wbetranslate]
+[![Translation progress][tprogress]][wbetranslate_pre-release]
 
-[badge]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest
-[docs]: https://admin-docs.zammad.org/en/latest/
-[tbadge]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/svg-badge.svg
-[wbetranslate]: https://translations.zammad.org/projects/documentations/admin-documentation/
-[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation/multi-auto.svg
+[badge_latest]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=latest
+[docs_latest]: https://admin-docs.zammad.org/en/latest/
+
+[badge_pre-release]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=pre-release
+[docs_pre-release]: https://admin-docs.zammad.org/en/pre-release/
+
+[tbadge_pre-release]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/svg-badge.svg
+[wbetranslate_pre-release]: https://translations.zammad.org/projects/documentations/admin-documentation-pre-release/
+
+[tbadge_latest]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-latest/svg-badge.svg
+[wbetranslate_latest]: https://translations.zammad.org/projects/documentations/admin-documentation-latest/
+
+[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/horizontal-auto.svg
