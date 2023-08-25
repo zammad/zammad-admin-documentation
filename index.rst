@@ -39,7 +39,7 @@ Zammad - Documentation for administrators
    channels/google/index
    channels/microsoft365/index
    channels/sms
-   channels/twitter
+   channels/twitter-x/twitter
    channels/facebook
    channels/telegram
 
