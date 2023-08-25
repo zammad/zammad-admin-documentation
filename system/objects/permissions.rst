@@ -28,7 +28,7 @@ Whenever needed you can restrict access to objects based on the
       * :doc:`/channels/form` (incoming)
       * :doc:`/channels/facebook` (incoming)
       * :doc:`/channels/telegram` (incoming)
-      * :doc:`/channels/twitter` (incoming)
+      * :doc:`/channels/twitter-x/twitter` (incoming)
       * SMS (incoming)
 
 About screens
