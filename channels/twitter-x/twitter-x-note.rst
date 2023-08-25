@@ -52,4 +52,4 @@ We understand that this news is unsatisfactory for you and would have preferred
 more positive news. However, we would like to play with open cards at this
 point and provide clarity.
 
-:doc:`Back to Twitter/X Channel <./twitter>`.
+⬅️ :doc:`Back to Twitter/X Channel <./twitter>`.

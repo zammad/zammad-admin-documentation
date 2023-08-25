@@ -5,7 +5,7 @@ Twitter/X
 
    *Updated: 08/2023*
 
-   Please note: currently, we keep naming it "Twitter" or "Twitter/X" in the
+   Please note: Currently, we keep naming it "Twitter" or "Twitter/X" in the
    documentation, as it is the quite common name and for better readability.
    Of course we mean just "X".
 
