@@ -9,6 +9,7 @@ Microsoft 365
    signatures
    settings
    email-headers
+   common-errors
 
 Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
 
@@ -29,3 +30,6 @@ Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
 .. include:: /channels/email/index.rst
    :start-after: .. start-after-migration
    :end-before: Extra Options for Self-Hosted Users
+
+:doc:`🛟 Common M365 errors </channels/microsoft365/common-errors>`
+   Here you can find common errors and how to fix them.
