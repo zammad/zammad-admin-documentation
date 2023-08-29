@@ -9,14 +9,13 @@ Register Gitlab app
 
 To register an app in Gitlab open your profile and select applications.
 
-As callback URL enter "https://zammad_host/auth/gitlab/callback"
-where zammad_host has to be replaced with your Zammad FQDN
+As callback URL enter "https://zammad-fqdn/auth/gitlab/callback"
+where zammad-fqdn has to be replaced with your Zammad FQDN
 
 .. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_gitlab.png
    :alt: Register OAuth app on gitlab instance
 
-At the moment we need the "api" scope. This is caused due a bug
-in Gitlab https://gitlab.com/gitlab-org/gitlab-ce/issues/33022.
+Just select *read_user* under scopes as in the screenshot and save it.
 
 Configure Zammad as Gitlab app
 ------------------------------
