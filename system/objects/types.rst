@@ -3,10 +3,32 @@ Object types
 
 When adding a new object, you can choose between the following object types.
 
-.. warning:: 
+.. warning::
 
    You cannot change the object format / type as soon as it is applied.
    If you no longer need an object, consider disabling it instead of removing.
+
+.. note:: **What about the translation of my objects?**
+
+   For some object types you can decide if they should be translatable or not.
+   To be precise, it works only for the selectable fields because the possible
+   choices are known and limited. For the following object types, you can set
+   the translatable flag:
+
+      * *Boolean field*
+      * *Single selection field*
+      * *Multiple selection field*
+      * *Single tree selection field*
+      * *Multiple tree selection field*
+
+   For these types, you can find an additional field *Translate field contents*:
+
+   .. figure:: /images/system/objects/object-types-translatable.png
+      :align: center
+      :alt: Screenshot showing translatable object types
+      :scale: 80%
+
+      Screenshot with example of translatable object type
 
 Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
@@ -17,7 +39,7 @@ Boolean field
 
 Date field
    Provides a date picker field and does not allow default values.
-   
+
    Default time diff (hours)
       This setting helps the user by highlighting the day from now plus the
       provided value. It *does not* pre-fill the field.
@@ -46,7 +68,7 @@ Date & time field
 Integer field
    Provides an input field that allows integer usage only.
    You may define a default value. You cannot enforce comma separation.
-   
+
    Minimal
       The minimal value the field accepts.
 
@@ -158,7 +180,7 @@ Multiple tree selection field
 URL fields (Link-Template)
 --------------------------
 
-.. note:: 
+.. note::
 
    This function is restricted to Text and Select objects only.
 
@@ -174,7 +196,7 @@ manually copy data from Zammad if possible.
 After filling a link-template enabled field, an URL icon will appear on its
 right. Clicking on the icon opens a new tab.
 
-   .. hint:: 
+   .. hint::
 
       Even though Zammad displays the link template within object edit and
       create screens, the function is optional. It's only active if you populate

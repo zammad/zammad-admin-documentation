@@ -38,6 +38,7 @@ Zammad - Documentation for administrators
    channels/chat
    channels/google/index
    channels/microsoft365/index
+   channels/sms
    channels/twitter-x/twitter
    channels/facebook
    channels/telegram
