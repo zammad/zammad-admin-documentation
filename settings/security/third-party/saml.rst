@@ -70,7 +70,7 @@ Keycloak
      (``https://your.zammad.domain/auth/saml/metadata``)
      and use **Clients > Clients list > Import client** in the Keycloak admin panel.
 
-   * **To help Zammad match its own user accounts to Keycloak users,**
+   * To help Zammad **match its own user accounts to Keycloak users**,
      create a user attribute (or “property”) mapper. In **Clients list**, click on your
      newly created Client ID, choose the tab **Client scopes** and click on the link which
      refers to your Zammad instance. Choose **Add mapper > By configuration > User Property**
@@ -101,7 +101,7 @@ Keycloak
    * Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``)
      in the field **Master SAML Processing URL**.
 
-   * You need to enable **Sign assertions**.
+   * You also need to enable **Sign assertions**.
 
 
 Step 2: Configure Zammad
