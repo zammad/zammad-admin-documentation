@@ -15,12 +15,12 @@ like status (open/closed), assignee, labels, and more.
 Setup
 -----
 
-1. In your GitLab profile, create a new API token under **Access Tokens**.
+1. In your GitLab preferences, create a new API token under **Access Tokens**.
 
-   Under **Select scopes**, choose ``read_user`` only.
+   Under **Select scopes**, choose ``read_api`` only.
 
-   .. figure:: /images/system/integrations/gitlab/add-api-token-gitlab.png
-      :alt: Screenshot of creating a new API token
+   .. figure:: /images/system/integrations/gitlab/add-api-token-gitlab.gif
+      :alt: Screencast showing how to create a new API token
       :align: center
       :width: 90%
 
