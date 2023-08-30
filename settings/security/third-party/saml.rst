@@ -79,7 +79,7 @@ Keycloak
      .. list-table::
 
         * - **Name**
-          - ``emailAddress``
+          - ``email``
         * - **Mapper Type**
           - ``User Property``
         * - **Property**
@@ -91,7 +91,7 @@ Keycloak
 
      In the example above, we’re telling Zammad that
      whenever it receives a SAML login request,
-     it should take the ``emailAddress`` property from Keycloak,
+     it should take the ``email`` property from Keycloak,
      look for a Zammad user with the same ``email`` attribute,
      and create a new session for that user.
 
