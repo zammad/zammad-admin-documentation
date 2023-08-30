@@ -69,5 +69,5 @@ Accounts
    <https://support.google.com/a/answer/166852>`_
    can have their accounts suspended.
 
-   Set up a generic :doc:`email channel </channels/email/index>` instead,
-   the use the :ref:`Email Notification <email-notification>` setting.
+   Set up a generic :doc:`email channel </channels/email/index>` instead and
+   use the :ref:`Email Notification <email-notification>` setting.
