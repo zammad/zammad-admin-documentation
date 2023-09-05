@@ -263,6 +263,20 @@ Subscribe *(Scope: Ticket)*
 
       X
 
+Time Accounting *(Scope: Ticket article)*
+   .. container:: cfloat-left
+
+      | Is time accounted for an article?
+      | Available matching: *is set* or *not set*
+
+   .. container:: cfloat-right
+
+      Allows you to check if time is accounted for an article.
+
+   .. container:: cfloat-clear
+
+      X
+
 Type *(Scope: Ticket article)*
    .. tip:: **If you're unsure what article type you're looking for...**
 
