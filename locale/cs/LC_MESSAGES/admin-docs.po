@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-29 13:51+0200\n"
+"POT-Creation-Date: 2023-09-01 11:35+0200\n"
 "PO-Revision-Date: 2023-07-29 15:18+0000\n"
 "Last-Translator: Tomáš Kovařík <tomas.kovarik@cdv.cz>\n"
 "Language-Team: Czech <https://translations.zammad.org/projects/"
@@ -795,7 +795,7 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:116
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:178
-#: ../settings/security/third-party/saml.rst:156
+#: ../settings/security/third-party/saml.rst:160
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:57 ../system/integrations/gitlab.rst:46
 #: ../system/integrations/pgp/index.rst:117
@@ -2929,7 +2929,7 @@ msgstr ""
 
 #: ../channels/google/accounts.rst:72
 msgid ""
-"Set up a generic :doc:`email channel </channels/email/index>` instead, the "
+"Set up a generic :doc:`email channel </channels/email/index>` instead and "
 "use the :ref:`Email Notification <email-notification>` setting."
 msgstr ""
 
@@ -3807,7 +3807,8 @@ msgid "OpenId permissions"
 msgstr ""
 
 #: ../channels/microsoft365/accounts/register-app.rst:92
-#: ../settings/security/third-party/saml.rst:85
+#: ../settings/security/third-party/saml.rst:82
+#: ../settings/security/third-party/saml.rst:88
 msgid "``email``"
 msgstr ""
 
@@ -14242,89 +14243,88 @@ msgstr ""
 msgid "Per-IdP Instructions"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:101
+#: ../settings/security/third-party/saml.rst:105
 msgid "Keycloak"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:68
 msgid ""
 "**To add Zammad as a client,** save the XML configuration to disk (``https://"
-"your.zammad.domain/auth/saml/metadata``) and use **Clients > Create > "
-"Import** in the Keycloak admin panel."
+"your.zammad.domain/auth/saml/metadata``) and use **Clients > Clients list > "
+"Import client** in the Keycloak admin panel."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:73
 msgid ""
-"**To help Zammad match its own user accounts to Keycloak users,** create a "
-"user attribute (or “property”) mapper:"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:76
-msgid ""
-"**Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > "
-"Create**"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:78
-msgid "**Name**"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:79
-#: ../settings/security/third-party/saml.rst:83
-msgid "``emailAddress``"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:80
-msgid "**Mapper Type**"
+"To help Zammad **match its own user accounts to Keycloak users**, create a "
+"user attribute (or “property”) mapper. In **Clients list**, click on your "
+"newly created Client ID, choose the tab **Client scopes** and click on the "
+"link which refers to your Zammad instance. Choose **Add mapper > By "
+"configuration > User Property** and create a mapper with the following "
+"entries:"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:81
-msgid "``User Property``"
+msgid "**Name**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:82
-msgid "**Property**"
+#: ../settings/security/third-party/saml.rst:83
+msgid "**Mapper Type**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:84
-msgid "**SAML Attribute Name**"
+msgid "``User Property``"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:85
+msgid "**Property**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:86
-msgid "**SAML Attribute NameFormat**"
+msgid "``emailAddress``"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:87
-msgid "``basic``"
+msgid "**SAML Attribute Name**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:89
-msgid ""
-"In the example above, we’re telling Zammad that whenever it receives a SAML "
-"login request, it should take the ``emailAddress`` property from Keycloak, "
-"look for a Zammad user with the same ``email`` attribute, and create a new "
-"session for that user."
+msgid "**SAML Attribute NameFormat**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:95
+#: ../settings/security/third-party/saml.rst:90
+msgid "``basic``"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:92
+msgid ""
+"In the example above, we’re telling Zammad that whenever it receives a SAML "
+"login request, it should take the ``email`` property from Keycloak, look for "
+"a Zammad user with the same ``email`` attribute, and create a new session "
+"for that user."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:98
 msgid ""
 "If your Keycloak users’ email addresses are stored on another property (*e."
 "g.,* ``username``), adjust accordingly."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:98
-msgid "Make sure the **Client ID** matches the **Master SAML Processing URL**."
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:100
-msgid "You need to enable **Sign assertions**."
+#: ../settings/security/third-party/saml.rst:101
+msgid ""
+"Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/"
+"saml/metadata``) in the field **Master SAML Processing URL**."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:104
+msgid "You also need to enable **Sign assertions**."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:108
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:106
+#: ../settings/security/third-party/saml.rst:110
 msgid ""
 "Enable SAML and enter your IdP’s details in the Admin Panel under **Settings "
 "> Security > Third Party Applications > Authentication via SAML**:"
@@ -14334,56 +14334,56 @@ msgstr ""
 msgid "Example configuration of SAML"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml.rst:120
 msgid "Display name"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:113
+#: ../settings/security/third-party/saml.rst:117
 msgid ""
 "Allows you to define a custom button name for SAML. This helps your users to "
 "understand better what the button on the login page does."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml.rst:120
 msgid "Defaults to ``SAML``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:120
+#: ../settings/security/third-party/saml.rst:124
 msgid "IDP SSO Target URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:119
+#: ../settings/security/third-party/saml.rst:123
 msgid ""
 "This is the target URL Zammad shall redirect to when the user presses the "
 "SAML button. For Keycloak, this needs to look like https://your.domain/"
 "realms/your-realm/protocol/saml"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:124
+#: ../settings/security/third-party/saml.rst:128
 msgid "IDP Certificate"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:123
+#: ../settings/security/third-party/saml.rst:127
 msgid ""
 "The public certificate of your IDP for Zammad to verify during the callback "
 "phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:138
+#: ../settings/security/third-party/saml.rst:142
 msgid "IDP Certificate fingerprint"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:127
+#: ../settings/security/third-party/saml.rst:131
 msgid ""
 "The fingerprint of your IDPs public certificate to verify during callback "
 "phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:130
+#: ../settings/security/third-party/saml.rst:134
 msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:132
+#: ../settings/security/third-party/saml.rst:136
 msgid ""
 "Provide **only one or the other**—do not provide both! (Between the two, we "
 "recommend the signing certificate itself: fingerprints use SHA-1, which `has "
@@ -14391,47 +14391,47 @@ msgid ""
 "sha1_broken.html>`_.)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:137
+#: ../settings/security/third-party/saml.rst:141
 msgid ""
 "**Keycloak users:** Find your certificate in the Keycloak admin panel under "
-"**Realm Settings > Keys > RSA > Certificate**."
+"**Realm Settings > Keys > Algorithm: RS256 > Certificate**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:146
+#: ../settings/security/third-party/saml.rst:150
 msgid "Name Identifier format"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:141
+#: ../settings/security/third-party/saml.rst:145
 msgid ""
 "This is the unique identifiers field type. Usually should be ``urn:oasis:"
 "names:tc:SAML:1.1:nameid-format:emailAddress`` in any case."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:146
+#: ../settings/security/third-party/saml.rst:150
 msgid "Zammad expects an email address as unique identifier!"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:150
+#: ../settings/security/third-party/saml.rst:154
 msgid "Your callback URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:149
+#: ../settings/security/third-party/saml.rst:153
 msgid ""
 "This URL is needed for your IDP configuration so it knows where to redirect "
 "to after successful authentication."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:152
+#: ../settings/security/third-party/saml.rst:156
 msgid ""
 "See :ref:`automatic account linking <automatic-account-linking>` for details "
 "on how to link existing Zammad accounts to IdP accounts."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:158
+#: ../settings/security/third-party/saml.rst:162
 msgid "Automatic account linking doesn’t work"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:159
+#: ../settings/security/third-party/saml.rst:163
 msgid ""
 "Have you double-checked your IdP’s user attribute mapping configuration?"
 msgstr ""
@@ -18596,77 +18596,84 @@ msgid ""
 "This will help to understand scopes of the following operations better."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:52
+#: ../system/integrations/ldap/manage.rst:58
 msgid "Add new source"
 msgstr ""
 
 #: ../system/integrations/ldap/manage.rst:10
 msgid ""
 "Using the *New Source* button allows you to add new LDAP sources to your "
-"installations. You're not limited in the number of sources, however, keep in "
+"installation. You're not limited in the number of sources, however, keep in "
 "mind that many sources will also take more time to synchronize."
 msgstr ""
 
 #: ../system/integrations/ldap/manage.rst:14
 msgid ""
-"If you want to use LDAPs, type ``ldaps://`` instead of ``ldap://`` in front "
-"of your hostname. You can also tell Zammad to use a different port by "
-"appending ``:<port number>``."
+"You can choose between different encryption types, namely *SSL* and "
+"*STARTTLS* or none of them (\"*No SSL*\"). If you choose *SSL* or "
+"*STARTTLS*, Zammad will display an additional *SSL verification* option that "
+"allows you to disable the verification, e.g. for self-signed SSL "
+"certificates. You can also tell Zammad to use a different port by appending "
+"``:<port number>`` to your hostname/IP."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:18
+#: ../system/integrations/ldap/manage.rst:0
 msgid ""
-"When providing a LDAPs source, Zammad will display an additional option *SSL "
-"verification* that allows you to disable the verification for e.g. self-"
-"signed SSL certificates."
+"Screenshot of configuring a new LDAP source with SSL encryption and SSL "
+"verification"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:24
+#: ../system/integrations/ldap/manage.rst:26
+msgid ""
+"New Source with SSL transport security enabled and certificate verification"
+msgstr ""
+
+#: ../system/integrations/ldap/manage.rst:30
 msgid ""
 "Using an user filter can be a good idea if you only require a small subset "
 "of your LDAP users in Zammad."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:36
+#: ../system/integrations/ldap/manage.rst:42
 msgid "This especially affects inactive users"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:28
+#: ../system/integrations/ldap/manage.rst:34
 msgid ""
 "As every LDAP behaves differently on which attributes and how they are set, "
 "Zammad doesn't care about any flags."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:31
+#: ../system/integrations/ldap/manage.rst:37
 msgid ""
 "Users that no longer are returned by your LDAP source will automatically be "
 "set to inactive. Zammad assumes that the user was deactivated."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:35
+#: ../system/integrations/ldap/manage.rst:41
 msgid ""
 "Users will never be removed automatically! If you want to remove obsolete "
 "users, use :doc:`/system/data-privacy`."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:39
+#: ../system/integrations/ldap/manage.rst:45
 msgid "Active Directory admins"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:39
+#: ../system/integrations/ldap/manage.rst:45
 msgid ""
 "Active Directories are quite specific on how to filter for active users only "
 "- please see the `Microsoft documentation`_ for more information."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:44
+#: ../system/integrations/ldap/manage.rst:50
 msgid ""
 "*Do not* manually write pathes of either LDAP attributes or groups. If "
 "Zammad does not display them, it either cannot find them or you have a lot "
 "of users that don't have the attributes populated."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:48
+#: ../system/integrations/ldap/manage.rst:54
 msgid ""
 "Zammad will always only return attributes that are filled - this reduces the "
 "returned list of attributes greatly."
@@ -18676,23 +18683,23 @@ msgstr ""
 msgid "Screencast showing how to add a new LDAP source"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:71
+#: ../system/integrations/ldap/manage.rst:77
 msgid "Review or edit existing source"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:58
+#: ../system/integrations/ldap/manage.rst:64
 msgid ""
 "Clicking on a LDAP source will provide a configuration and mapping overview."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:60
+#: ../system/integrations/ldap/manage.rst:66
 msgid ""
 "If needed you can then use the *Change* button to update either the name, "
 "active state or the whole configuration. If you're changing the whole "
 "configuration, the dialogue will be identical to the source creation."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:66
+#: ../system/integrations/ldap/manage.rst:72
 msgid ""
 "Did your LDAP server change? Different LDAP servers have different "
 "structures and default attributes. This causes the LDAP synchronization to "
@@ -18703,11 +18710,11 @@ msgstr ""
 msgid "Screencast showing the update of the source name."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:79
+#: ../system/integrations/ldap/manage.rst:85
 msgid "Re-arrange LDAP source's order"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:74
+#: ../system/integrations/ldap/manage.rst:80
 msgid ""
 "You can change the synchronization order for each source at any time. Zammad "
 "will synchronize the sources from top to bottom."
@@ -18719,18 +18726,18 @@ msgid ""
 "drag and drop."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:91
+#: ../system/integrations/ldap/manage.rst:97
 msgid "Remove a source"
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:82
+#: ../system/integrations/ldap/manage.rst:88
 msgid ""
 "If you no longer need the a LDAP source or simply want to start over, you "
 "can remove them at any time. This will not remove synchronized users, data "
 "synchronized or permissions."
 msgstr ""
 
-#: ../system/integrations/ldap/manage.rst:88
+#: ../system/integrations/ldap/manage.rst:94
 msgid ""
 "Not sure if you'd need the source later on? Set the source to inactive "
 "instead of removing it - see *Review or edit existing source* for more."
