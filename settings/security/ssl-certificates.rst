@@ -16,9 +16,9 @@ custom certificate.
 Prerequisites
 -------------
 
-You must have an existing certificate and/or a custom CA certificate, you want
-to add to Zammad. As filetype ``.crt`` is supported and the certificate format
-has to be PEM (Base64 ASCII).
+You should have an existing custom certificate file and/or a custom CA
+certificate file, which you want to add to Zammad. As filetype ``.crt`` is
+supported and the certificate format has to be PEM (Base64 ASCII).
 
 .. hint::
 
@@ -41,7 +41,8 @@ or paste the content of the certificate:
     :alt: Screenshot showing certificate adding dialog
 
 After selecting a file or pasting the content of the certificate, click on the
-"Add" button to finally upload it to Zammad.
+"Add" button to finally upload it to Zammad. Then, the certificates are
+immediately effective, no restart or similar required.
 
 .. note::
 
@@ -49,7 +50,7 @@ After selecting a file or pasting the content of the certificate, click on the
     you want to import a certificate / CA certificate, it must contain **only
     one** certificate.
 
-Certificate overview
+Certificate Overview
 --------------------
 
 After you added a certificate, you can see a table with information for each
@@ -63,18 +64,18 @@ added certificate:
 Here you can download the certificate or delete it, if you don't need it
 anymore.
 
-Deleting certificates
+Deleting Certificates
 ---------------------
 
 If you want to delete a specific certificate, you can do it by clicking on the
-menu in the actions column and select delete:
+menu in the actions column and selecting delete:
 
 .. figure:: /images/settings/security/ssl-delete-certificate.png
     :align: center
     :scale: 80 %
     :alt: Screenshot showing certificate deletion button
 
-Downloading certificates
+Downloading Certificates
 ------------------------
 
 If you want to download your certificates, you can do this as well via
