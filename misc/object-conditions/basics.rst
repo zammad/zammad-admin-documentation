@@ -393,12 +393,12 @@ Available operators for matching:
    assignment and Core Workflow.
 
 .. hint::
-   **What about my "old" style regex filters?**
+   **What about my "old" style** ``regex:...`` **filters?**
 
    If you update your Zammad from 6.0 or prior and you have already conditions
-   with *contains* or *contains not* including a regex filter, Zammad tries to
-   migrate them to the new *matches regex* and *does not match
-   regex* operators.
+   with *contains* or *contains not* including a regex filter
+   (i.e. ``regex:^(foo|bar)$``), Zammad tries to migrate them to the new
+   *matches regex* and *does not match regex* operators.
 
 .. hint::
    **Differences in input fields**
