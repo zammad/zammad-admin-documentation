@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-25 14:57+0200\n"
-"PO-Revision-Date: 2023-09-05 07:18+0000\n"
+"PO-Revision-Date: 2023-09-08 07:18+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -4543,14 +4543,25 @@ msgid ""
 "connect as many Microsoft 365 accounts to Zammad as you want, using only "
 "active Microsoft 365 browser sessions (no usernames or passwords required)."
 msgstr ""
+"Zunächst müssen Sie Zammad über das Microsoft Azure-Portal als **OAuth-App** "
+"mit Ihrem Microsoft-Konto verbinden. Sobald dies erledigt ist, können Sie "
+"beliebig viele Microsoft 365-Konten mit Zammad verbinden und dabei nur eine "
+"aktive Browsersitzung verwenden (keine Benutzernamen oder Passwörter "
+"erforderlich)."
 
 #: ../channels/microsoft365/accounts/register-app.rst:16
+#, fuzzy
 msgid ""
 "If you’ve ever used a website that lets you “Sign in with Google/Facebook/"
 "Twitter”, you’ve used OAuth. OAuth is a way for you to let a third-party "
 "website see a tiny slice of your Microsoft/Facebook/Twitter account data "
 "without giving them your password (which would let them see *everything*)."
 msgstr ""
+"Wenn Sie sich bereits bei einem Dienst mit \"Login über Google/Facebook/"
+"Twitter\" angemeldet haben, haben Sie OAuth bereits verwendet. OAuth ist ein "
+"Verfahren, bei dem externe Dienste nur auf einen kleinen Teil der Daten "
+"Ihres Google/Facebook/Twitter Kontos zugreifen können, ohne das Passwort "
+"preiszugeben (wodurch sie Zugriff auf *alles* hätten)."
 
 #: ../channels/microsoft365/accounts/register-app.rst:26
 msgid ""
@@ -4559,6 +4570,10 @@ msgid ""
 "receiving its users’ data, and can give users a way to revoke access if they "
 "change their minds."
 msgstr ""
+"Wenn ein Dienst OAuth benutzen möchte, muss dieser **zuerst beim Provider "
+"eingerichtet werden** (z.B. Microsoft). Dadurch weiß der Provider, wer auf "
+"die Benutzer-Daten zugreift und der Benutzer kann im Zweifelsfall den "
+"Zugriff entziehen."
 
 #: ../channels/microsoft365/accounts/register-app.rst:31
 msgid ""
@@ -4567,38 +4582,50 @@ msgid ""
 "as a website that wishes to access Microsoft user data; then, you have to "
 "add yourself as a Microsoft user who agrees to let Zammad fetch your email."
 msgstr ""
+"In diesem Fall **ist Zammad der externe Dienst**. Deshalb ist das hinzufügen "
+"eines Microsoft-Kontos ein zweistufiger Prozess: als erstes müssen Sie "
+"Zammad als Dienst bei Microsoft einrichten, der auf Daten zugreifen möchte. "
+"Anschließend müssen Sie sich als Microsoft-Benutzer hinzufügen, der Zammad "
+"den Abruf von E-Mails erlaubt."
 
 #: ../channels/microsoft365/accounts/register-app.rst:42
 msgid "To get started, head over to `Microsoft’s Azure Portal`_."
-msgstr ""
+msgstr "Um zu beginnen, gehen Sie zum `Microsoft's Azure Portal`_."
 
 #: ../channels/microsoft365/accounts/register-app.rst:47
 msgid "🔑 **Use an admin account for your organization.**"
-msgstr ""
+msgstr "🔑 **Verwenden Sie ein Administrator-Konto für Ihre Organisation.**"
 
 #: ../channels/microsoft365/accounts/register-app.rst:49
 msgid ""
 "Otherwise, an admin will have to approve your changes before they can take "
 "effect."
 msgstr ""
+"Andernfalls muss ein Administrator Ihre Änderungen genehmigen, bevor sie "
+"wirksam werden."
 
 #: ../channels/microsoft365/accounts/register-app.rst:52
 msgid "**Add an App Registration**"
-msgstr ""
+msgstr "**App-Registrierung hinzufügen**"
 
 #: ../channels/microsoft365/accounts/register-app.rst:54
 msgid "Under **App Registrations > ➕ New Registration**, use the following:"
 msgstr ""
+"Tragen Sie unter **App-Registrierung > ➕ Neue Registrierung** folgende "
+"Werte ein:"
 
 #: ../channels/microsoft365/accounts/register-app.rst:71
 msgid "Supported account types"
-msgstr ""
+msgstr "Unterstützte Konten-Typen"
 
 #: ../channels/microsoft365/accounts/register-app.rst:58
 msgid ""
 "Choose the option that’s right for your organization (or click *Help me "
 "choose...* if you’re not sure)."
 msgstr ""
+"Wählen Sie die Option, die für Ihre Organisation am besten geeignet ist ("
+"oder klicken Sie auf *Helfen Sie mir bei der Auswahl...*, wenn Sie sich "
+"nicht sicher sind)."
 
 #: ../channels/microsoft365/accounts/register-app.rst:61
 #: ../settings/security/third-party/microsoft.rst:26
@@ -4606,6 +4633,8 @@ msgid ""
 "Accounts in this organizational directory only (Default Directory only - "
 "Single tenant)"
 msgstr ""
+"Nur Konten in dieser Organisationseinheit (nur Standardverzeichnis - "
+"einzelner tenant)"
 
 #: ../channels/microsoft365/accounts/register-app.rst:63
 #: ../settings/security/third-party/microsoft.rst:28
@@ -4613,6 +4642,8 @@ msgid ""
 "Accounts in any organizational directory (Any Azure AD directory - "
 "Multitenant)"
 msgstr ""
+"Konten in einer beliebigen Organisationseinheit (beliebiges Azur AD-"
+"Verzeichnis - Multi-Tenant)"
 
 #: ../channels/microsoft365/accounts/register-app.rst:65
 #: ../settings/security/third-party/microsoft.rst:30
@@ -4620,91 +4651,103 @@ msgid ""
 "Accounts in any organizational directory (Any Azure AD directory - "
 "Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
 msgstr ""
+"Konten in einer beliebigen Organisationseinheit (beliebiges Azur AD-"
+"Verzeichnis - Multi-Tenant) und persönliche Microsoft-Konten (z.B. Skype, "
+"Xbox)"
 
 #: ../channels/microsoft365/accounts/register-app.rst:71
 msgid "🙅 **The “Personal Microsoft accounts only” option is not supported.**"
 msgstr ""
+"🙅 **Die Option „Nur persönliche Microsoft-Konten“ wird nicht unterstützt.**"
 
 #: ../channels/microsoft365/accounts/register-app.rst:79
 msgid "Redirect URI"
-msgstr ""
+msgstr "Weiterleitungs-URI"
 
 #: ../channels/microsoft365/accounts/register-app.rst:74
 msgid ""
 "**Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/"
 "microsoft365/callback``"
 msgstr ""
+"**Web** > *Z.B.* ``https://your-domain.com/api/v1/external_credentials/"
+"microsoft365/callback``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:77
 msgid ""
 "Find it in the Zammad admin panel under **Channels > Microsoft 365 > Connect "
 "Microsoft 365 App > Your callback URL**."
 msgstr ""
+"Sie finden diese in den Admin-Einstellungen unter **Kanäle > Microsoft 365 > "
+"Microsoft 365 App verbinden > Ihre Callback URL**."
 
 #: ../channels/microsoft365/accounts/register-app.rst:0
 msgid ""
 "Screencast demo of new app creation in Microsoft Azure Portal\n"
 "settings"
-msgstr ""
+msgstr "Screencast-Demo App-Erstellung im Microsoft Azure Portal"
 
 #: ../channels/microsoft365/accounts/register-app.rst:86
 msgid "**Add API permissions**"
-msgstr ""
+msgstr "**API-Berechtigungen hinzufügen**"
 
 #: ../channels/microsoft365/accounts/register-app.rst:88
 msgid ""
 "Under **API Permissions > ➕ Add a permission > Microsoft Graph > Delegated "
 "permissions**, add the following:"
 msgstr ""
+"Fügen Sie unter **API-Berechtigungen > ➕ Berechtigung hinzufügen > "
+"Microsoft Graph > Berechtigungen** folgendes hinzu:"
 
 #: ../channels/microsoft365/accounts/register-app.rst:95
 #: ../settings/security/third-party/microsoft.rst:70
 msgid "OpenId permissions"
-msgstr ""
+msgstr "OpenId-Berechtigungen"
 
 #: ../channels/microsoft365/accounts/register-app.rst:92
 #: ../settings/security/third-party/saml.rst:85
 msgid "``email``"
-msgstr ""
+msgstr "``email``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:93
 msgid "``offline_access``"
-msgstr ""
+msgstr "``offline_access``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:94
 #: ../settings/security/third-party/microsoft.rst:71
 msgid "``openid``"
-msgstr ""
+msgstr "``openid``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:95
 msgid "``profile``"
-msgstr ""
+msgstr "``profile``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:98
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: ../channels/microsoft365/accounts/register-app.rst:98
 msgid "``IMAP.AccessAsUser.all``"
-msgstr ""
+msgstr "``IMAP.AccessAsUser.all``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:101
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: ../channels/microsoft365/accounts/register-app.rst:101
 msgid "``SMTP.Send``"
-msgstr ""
+msgstr "``SMTP.Send``"
 
 #: ../channels/microsoft365/accounts/register-app.rst:0
 msgid ""
 "Screencast demo of enabling Microsoft API permissions in Microsoft\n"
 "Azure Portal"
 msgstr ""
+"Screencast Aktivierung von Microsoft API-Berechtigungen in Microsoft Azure-"
+"Portal"
 
 #: ../channels/microsoft365/accounts/register-app.rst:108
 msgid "**Admin Consent related information** (optional)"
-msgstr ""
+msgstr "**Weitere Informationen zur Administrator-Zustimmung** (optional)"
 
 #: ../channels/microsoft365/accounts/register-app.rst:112
 msgid ""
@@ -4712,6 +4755,11 @@ msgid ""
 "consent adds another layer of security for your tenants users and allows "
 "administrators to define who may share user information."
 msgstr ""
+"Dieser Schritt ist nur bei Tenants erforderlich, bei denen eine "
+"Administrator-Zustimmung eingerichtet ist. Die Zustimmung des Administrators "
+"bietet eine weitere Sicherheitsebene für die Benutzer Ihres Tenants und "
+"ermöglicht es Administratoren zu definieren, wer Benutzerinformationen "
+"weitergeben darf."
 
 #: ../channels/microsoft365/accounts/register-app.rst:116
 msgid ""
@@ -4719,20 +4767,26 @@ msgid ""
 "within *App registrations*, Microsoft will automatically also create an "
 "enterprise application for you."
 msgstr ""
+"Wählen Sie unter *Unternehmensanwendungen* Ihre App aus. Wenn Sie im Rahmen "
+"der *App-Registrierungen* eine App erstellen, erstellt Microsoft automatisch "
+"auch eine Unternehmensanwendung für Sie."
 
 #: ../channels/microsoft365/accounts/register-app.rst:120
 msgid ""
 "Set *Assignment required* to ``Yes`` within the apps properties and hit "
 "*Save*. This generally activates your app requesting admin consent already."
 msgstr ""
+"Setzen Sie *Zuweisung erforderlich* in den App-Eigenschaften auf ``Ja`` und "
+"klicken Sie auf *Speichern*. Dies aktiviert Ihre App und fordert die "
+"Zustimmung des Administrators an."
 
 #: ../channels/microsoft365/accounts/register-app.rst:0
 msgid "Screencast showing how to enable assignment requirement"
-msgstr ""
+msgstr "Screencast Aktivierung Zuweisungsanforderung"
 
 #: ../channels/microsoft365/accounts/register-app.rst:127
 msgid "3.1 **Tightening your app even further** (Recommended, optional)"
-msgstr ""
+msgstr "3.1 **Ihre App noch weiter anpassen** (empfohlen, optional)"
 
 #: ../channels/microsoft365/accounts/register-app.rst:131
 msgid ""
@@ -4740,12 +4794,18 @@ msgid ""
 "your tenant users from -to admins- unwanted permission changes (e.g. "
 "requesting more permissions than originally noted)."
 msgstr ""
+"Dieser Schritt ist nicht unbedingt erforderlich, wird aber empfohlen. Er "
+"schützt Ihre Tenant-Benutzer vor unerwünschten Anpassungen der "
+"Berechtigungen (z.B. der Anforderung von mehr Berechtigungen als "
+"ursprünglich angegeben)."
 
 #: ../channels/microsoft365/accounts/register-app.rst:135
 msgid ""
 "It also has another benefit: You can add the email account in question "
 "immediately without any administrator being forced to stepped in manually."
 msgstr ""
+"Es hat noch einen weiteren Vorteil: Sie können das betreffende E-Mail-Konto "
+"sofort hinzufügen, ohne dass ein Administrator manuell eingreifen muss."
 
 #: ../channels/microsoft365/accounts/register-app.rst:139
 msgid ""
@@ -4753,6 +4813,10 @@ msgid ""
 "section you can select specific users and / or groups (users must be direct "
 "members!) that are allowed to use your app for adding mailboxes to Zammad."
 msgstr ""
+"Wählen Sie in *Unternehmensanwendungen* > *Benutzer und Gruppen* aus. In "
+"diesem Abschnitt können Sie bestimmte Benutzer und/oder Gruppen auswählen ("
+"Benutzer müssen direkte Mitglieder sein!), die Ihre App zum Hinzufügen von "
+"Postfächern zu Zammad verwenden dürfen."
 
 #: ../channels/microsoft365/accounts/register-app.rst:144
 msgid ""
@@ -4761,6 +4825,11 @@ msgid ""
 "the *Grant admin consent for {company name}* button to generally allow "
 "connecting users you previously consented."
 msgstr ""
+"Nachdem Sie Benutzer und Gruppen hinzugefügt haben, kehren Sie zur "
+"Startseite des Azure-Portals zurück und wählen Sie *App-Registrierung* aus. "
+"Gehen Sie in Ihrer gewünschten App zu *API-Berechtigungen* und verwenden Sie "
+"die Schaltfläche *Administrator-Zustimmung für {Unternehmensname} erteilen*, "
+"um die Verbindung für Benutzer zu erlauben, denen Sie zuvor zugestimmt haben."
 
 #: ../channels/microsoft365/accounts/register-app.rst:151
 msgid ""
@@ -4769,20 +4838,26 @@ msgid ""
 "provide a reason for the consent request. After that Microsoft will "
 "automatically grant the consent for your tenant."
 msgstr ""
+"Wenn Benutzer/Gruppen nicht sofort hinzugefügt oder Administrator-Zustimmung "
+"nicht sofort erteilt wird, erzwingt Microsoft zumindest den ersten Benutzer "
+"dazu, einen Grund für die Zustimmungs-Anfrage anzugeben. Danach erteilt "
+"Microsoft automatisch die Zustimmung für Ihren Mandanten."
 
 #: ../channels/microsoft365/accounts/register-app.rst:156
 msgid ""
 "Administrative accounts can also use the option *Consent on behalf of your "
 "organization* in above mentioned permission dialogue."
 msgstr ""
+"Administrator-Konten können auch die Option „Einwilligung im Namen Ihrer "
+"Organisation“ im oben genannten Berechtigungsdialog verwenden."
 
 #: ../channels/microsoft365/accounts/register-app.rst:0
 msgid "Screencast showing how to enable user based admin consent"
-msgstr ""
+msgstr "Screencast Aktivierung Administrator-Zustimmung"
 
 #: ../channels/microsoft365/accounts/register-app.rst:164
 msgid "**Connect your Microsoft app in Zammad**"
-msgstr ""
+msgstr "**Verbinden Ihrer Microsoft-App mit Zammad**"
 
 #: ../channels/microsoft365/accounts/register-app.rst:166
 msgid ""
@@ -4790,24 +4865,35 @@ msgid ""
 "(tenant) ID** (found under **Overview > Essentials**) into Zammad in the "
 "admin panel, under **Channels > Microsoft 365 > Connect Microsoft 365 App**."
 msgstr ""
+"Kopieren Sie die **Application (client) ID** und **Directory (tenant) ID** "
+"aus Ihrer App-Registrierung (zu finden unter **Overview > Essentials**) in "
+"Zammad im Admin-Bereich unter **Kanäle > Microsoft 365 > Microsoft 365-App "
+"verbinden**."
 
 #: ../channels/microsoft365/accounts/register-app.rst:171
 msgid ""
 "Then, create a new client secret under **Certificates and Secrets > ➕ New "
 "Client Secret** and copy that into the Zammad admin panel, as well."
 msgstr ""
+"Erstellen Sie dann unter **Certificates and Secrets > ➕ New Client Secret** "
+"ein solches und kopieren Sie es ebenfalls im Zammad Admin-Bereich in das "
+"vorgesehene Feld."
 
 #: ../channels/microsoft365/accounts/register-app.rst:0
 msgid ""
 "Screencast demo of entering Microsoft OAuth credentials in Zammad\n"
 "admin panel"
 msgstr ""
+"Screencast Demo Eingabe Microsoft OAuth-Zugangsdaten in den Zammad Admin-"
+"Einstellungen"
 
 #: ../channels/microsoft365/accounts/register-app.rst:180
 msgid ""
 "🍾 Congratulations! Now you’re ready to connect Microsoft 365 or Outlook "
 "accounts to Zammad."
 msgstr ""
+"🍾 Herzlichen Glückwunsch! Jetzt können Sie Microsoft 365- oder Outlook-"
+"Konten mit Zammad verbinden."
 
 #: ../channels/microsoft365/accounts/secondary-addresses.rst:1
 msgid ""
@@ -4815,11 +4901,16 @@ msgid ""
 "do in email channels**, so this article is lifted (almost) verbatim from :"
 "doc:`here </channels/email/accounts/secondary-addresses>`."
 msgstr ""
+"Zusätzliche Adressen in Microsoft 365-Kanälen funktionieren (nahezu) **"
+"genauso wie in E-Mail-Kanälen**. Deshalb ist dieser Artikel (nahezu) "
+"wörtlich von :doc:`hier </channels/email/accounts/secondary-addresses>` "
+"übernommen."
 
 #: ../channels/microsoft365/accounts/secondary-addresses.warning.rst:3
 msgid ""
 "👀 **Secondary addresses must be added to your Microsoft account first.**"
 msgstr ""
+"👀 **Alias-Adressen müssen zuerst Ihrem Microsoft-Konto hinzugefügt werden.**"
 
 #: ../channels/microsoft365/accounts/secondary-addresses.warning.rst:8
 msgid "Personal accounts"
@@ -4862,7 +4953,7 @@ msgstr ""
 
 #: ../channels/microsoft365/common-errors.rst:2
 msgid "Common errors"
-msgstr ""
+msgstr "Häufige Fehler"
 
 #: ../channels/microsoft365/common-errors.rst:4
 msgid ""
@@ -4870,10 +4961,13 @@ msgid ""
 "the general :doc:`M365 documentation </channels/microsoft365/index>` for the "
 "configuration."
 msgstr ""
+"Hier finden Sie einige häufige Fehler im M365-Kontext. Schauen Sie sich auch "
+"die allgemeine :doc:`M365-Dokumentation </channels/microsoft365/index>` für "
+"die Konfiguration an."
 
 #: ../channels/microsoft365/common-errors.rst:9
 msgid "Incorrect client ID"
-msgstr ""
+msgstr "Nicht korrekte Client ID"
 
 #: ../channels/microsoft365/common-errors.rst:11
 msgid ""
@@ -4883,6 +4977,11 @@ msgid ""
 "user in the tenant. You may have sent your authentication request to the "
 "wrong tenant."
 msgstr ""
+"**Fehlermeldung:** AADSTS00016: Application with identifier 'xxxxxxxx' was "
+"not found in the directory 'MSFT'. This can happen if the application has "
+"not been installed by the administrator of the tenant or consented to by any "
+"user in the tenant. You may have sent your authentication request to the "
+"wrong tenant."
 
 #: ../channels/microsoft365/common-errors.rst:None
 #: ../channels/microsoft365/common-errors.rst:104
@@ -4897,6 +4996,8 @@ msgid ""
 "In this case, please compare whether the client ID created in Zammad matches "
 "that in Azure for the Azure App."
 msgstr ""
+"Vergleichen Sie in diesem Fall bitte, ob die in Zammad erstellte Client-ID "
+"mit der in Azure für die Azure-App übereinstimmt."
 
 #: ../channels/microsoft365/common-errors.rst:25
 msgid ""
@@ -4904,19 +5005,25 @@ msgid ""
 "365 > App Configuration. See :doc:`here </channels/microsoft365/accounts>` "
 "how to find the client ID in Azure and where to copy it to in Zammad."
 msgstr ""
+"Die Client-ID finden Sie in Zammad unter Einstellungen > Kanäle > Microsoft "
+"365 > App-Konfiguration. Unter :doc:`hier </channels/microsoft365/accounts>` "
+"sehen Sie, wie Sie die Client-ID in Azure finden und wohin Sie diese in "
+"Zammad kopieren müssen."
 
 #: ../channels/microsoft365/common-errors.rst:31
 msgid "Wrong or expired client secret"
-msgstr ""
+msgstr "Falsches oder abgelaufenes Client-Secret"
 
 #: ../channels/microsoft365/common-errors.rst:33
 msgid "**Error message:** 500: We're sorry, but something went wrong."
-msgstr ""
+msgstr "**Fehlermeldung:** 500: We're sorry, but something went wrong."
 
 #: ../channels/microsoft365/common-errors.rst:40
 msgid ""
 "This error occurs when the client uses an incorrect or expired client secret."
 msgstr ""
+"Dieser Fehler tritt auf, wenn der Client ein falsches oder abgelaufenes "
+"Client-Secret verwendet."
 
 #: ../channels/microsoft365/common-errors.rst:42
 msgid ""
@@ -4924,32 +5031,44 @@ msgid ""
 "can potentially be a security risk. We ask the customer to create a new "
 "client secret and copy the value and not the ID to Zammad."
 msgstr ""
+"**Wichtiger Hinweis:** Wir fragen unsere Kunden niemals nach dem Client-"
+"Secret, da dies möglicherweise ein Sicherheitsrisiko darstellen kann. Wir "
+"bitten den Kunden, ein neues Client-Secret zu erstellen und den Wert (und "
+"nicht die ID) in Zammad zu kopieren."
 
 #: ../channels/microsoft365/common-errors.rst:47
 msgid "See :doc:`here </channels/microsoft365/accounts>` for more information."
 msgstr ""
+"Siehe :doc:`hier </channels/microsoft365/accounts>` für weitere "
+"Informationen."
 
 #: ../channels/microsoft365/common-errors.rst:50
 msgid "Wrong tenant"
-msgstr ""
+msgstr "Falscher Tenant"
 
 #: ../channels/microsoft365/common-errors.rst:52
 msgid ""
 "**Error message:** AADSTS0023: Specified tenant identifier 'xxxxxxxx' is "
 "neither a valid DNS name, nor a valid external domain."
 msgstr ""
+"**Fehlermeldung:** AADSTS0023: Specified tenant identifier 'xxxxxxxx' is "
+"neither a valid DNS name, nor a valid external domain."
 
 #: ../channels/microsoft365/common-errors.rst:60
 msgid ""
 "If a wrong tenant is used in Zammad or the email account is not a member of "
 "the tenant created in Zammad, this error message occurs."
 msgstr ""
+"Wenn in Zammad ein falscher Tenant verwendet wird oder das E-Mail-Konto kein "
+"Mitglied des in Zammad erstellten Tenant ist, tritt diese Fehlermeldung auf."
 
 #: ../channels/microsoft365/common-errors.rst:63
 msgid ""
 "In this case, please check if the tenant is entered correctly in Zammad, or "
 "remove the tenant completely."
 msgstr ""
+"Bitte prüfen Sie in diesem Fall, ob der Tenant korrekt in Zammad eingetragen "
+"ist, oder entfernen Sie den Tenant komplett."
 
 #: ../channels/microsoft365/common-errors.rst:66
 msgid ""
@@ -4957,20 +5076,27 @@ msgid ""
 "accounts can be created in Zammad regardless of which tenant the email "
 "account is a member of."
 msgstr ""
+"**Wichtiger Hinweis:** Sobald der Tenant vollständig entfernt wurde, können "
+"alle E-Mail-Konten in Zammad erstellt werden, unabhängig davon, welchem "
+"Tenant das E-Mail-Konto angehört."
 
 #: ../channels/microsoft365/common-errors.rst:71
+#, fuzzy
 msgid "Request admin consent"
-msgstr ""
+msgstr "Anforderung Administrator-Zustimmung"
 
 #: ../channels/microsoft365/common-errors.rst:73
 msgid "**Prompt:** approval required"
-msgstr ""
+msgstr "**Dialog:** Genehmigung erforderlich"
 
 #: ../channels/microsoft365/common-errors.rst:80
 msgid ""
 "This message occurs when the admin tries to create an email account in "
 "Zammad that has not yet received approval from the Azure global admin."
 msgstr ""
+"Diese Meldung erscheint, wenn der Administrator versucht, ein E-Mail-Konto "
+"in Zammad zu erstellen, das noch keine Zustimmung vom Azure-Administrator "
+"erhalten hat."
 
 #: ../channels/microsoft365/common-errors.rst:83
 msgid ""
@@ -4978,32 +5104,41 @@ msgid ""
 "microsoft365/accounts/account-setup>` can be found on how to request admin "
 "consent from Zammad."
 msgstr ""
+"In unserer Dokumentation finden Sie eine :doc:`Schritt-für-Schritt-"
+"Anleitungen </channels/microsoft365/accounts/account-setup>` zum Anfordern "
+"der Administrator-Zustimmung aus Zammad."
 
 #: ../channels/microsoft365/common-errors.rst:88
 msgid ""
 "The request for the admin consent can be bypassed by assigning the admin "
 "consent in Azure to the App."
 msgstr ""
+"Die Anforderung der Administrator-Zustimmung kann umgangen werden, indem die "
+"Zustimmung zur App in Azure gewährt wird."
 
 #: ../channels/microsoft365/common-errors.rst:91
 msgid ""
 "Home > App Registration > Manage > API Permission > Grant admin consent for "
 "\"MSFT\"."
 msgstr ""
+"Home > App-Registrierung > Verwalten > API-Berechtigung > Administrator-"
+"Zustimmung für „MSFT“ gewähren."
 
 #: ../channels/microsoft365/common-errors.rst:95
 msgid "Missing permissions for the Azure user"
-msgstr ""
+msgstr "Fehlende Berechtigungen für den Azure-Benutzer"
 
 #: ../channels/microsoft365/common-errors.rst:97
 msgid ""
 "**Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::"
 "SMTPAuthentificationError"
 msgstr ""
+"**Fehlermeldung:** Can't use "
+"Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError"
 
 #: ../channels/microsoft365/common-errors.rst:104
 msgid "Error message in the M365 channel settings"
-msgstr ""
+msgstr "Fehlermeldung in den M365-Einstellungen"
 
 #: ../channels/microsoft365/common-errors.rst:106
 #, fuzzy
@@ -5013,7 +5148,7 @@ msgstr "Port"
 
 #: ../channels/microsoft365/common-errors.rst:113
 msgid "Error message in the ticket"
-msgstr ""
+msgstr "Fehlermeldung im Ticket"
 
 #: ../channels/microsoft365/common-errors.rst:115
 msgid ""
@@ -5021,6 +5156,10 @@ msgid ""
 "whose user does not have permission for SMTP authentication to the mail "
 "server. Please check the following two most common problems in this case."
 msgstr ""
+"Dieser Fehler tritt auf, wenn der Administrator in Zammad ein E-Mail-Konto "
+"erstellen möchte, dessen Benutzer keine Berechtigung zur SMTP-"
+"Authentifizierung auf dem Mailserver hat. Bitte überprüfen Sie in diesem "
+"Fall die beiden folgenden und häufigsten Probleme."
 
 #: ../channels/microsoft365/common-errors.rst:121
 #, fuzzy
@@ -5034,16 +5173,21 @@ msgid ""
 "authentication permission to the user of the inbox. The permission is "
 "provided at https://admin.microsoft.com."
 msgstr ""
+"Wenn es sich um ein privates E-Mail-Konto handelt, muss der Administrator "
+"dem Benutzer des Postfachs die SMTP-Authentifizierungsberechtigung erteilen. "
+"Die Berechtigung wird unter https://admin.microsoft.com erteilt."
 
 #: ../channels/microsoft365/common-errors.rst:127
 msgid ""
 "Add the SMTP authentication permission under Users > Active Users > click on "
 "the User > Email > Manage Email Apps."
 msgstr ""
+"Fügen Sie die SMTP-Authentifizierungsberechtigung unter Benutzer > Aktive "
+"Benutzer hinzu und klicken Sie auf Benutzer > E-Mail > E-Mail-Apps verwalten."
 
 #: ../channels/microsoft365/common-errors.rst:137
 msgid "Shared inbox"
-msgstr ""
+msgstr "Geteilter Posteingang"
 
 #: ../channels/microsoft365/common-errors.rst:139
 msgid ""
@@ -5051,24 +5195,32 @@ msgid ""
 "(``SmtpClientAuthenticationDisabled``) in the Azure shell. This isn't a "
 "Zammad problem, so we can only help to a limited extent here."
 msgstr ""
+"Wenn es sich um einen geteilten Posteingang handelt, können Sie versuchen, "
+"die SMTP-Authentifizierung („SmtpClientAuthenticationDisabled“) in der Azure-"
+"Shell zu aktivieren. Dies ist kein Zammad-Problem, daher können wir hier nur "
+"bedingt helfen."
 
 #: ../channels/microsoft365/common-errors.rst:143
 msgid "To enable the SMTP Authentication, use the following commands:"
 msgstr ""
+"Um die SMTP-Authentifizierung zu aktivieren, verwenden Sie die folgenden "
+"Befehle:"
 
 #: ../channels/microsoft365/common-errors.rst:145
 msgid "If not installed::"
-msgstr ""
+msgstr "Falls noch nicht installiert::"
 
 #: ../channels/microsoft365/common-errors.rst:149
 msgid "Log in to Exchange using Powershell::"
-msgstr ""
+msgstr "Melden Sie sich mit Powershell bei Exchange an::"
 
 #: ../channels/microsoft365/common-errors.rst:153
 msgid ""
 "Switching on the SMTP authentication for a mailbox - also possible with a "
 "shared mailbox::"
 msgstr ""
+"Einschalten der SMTP-Authentifizierung für ein Postfach – auch bei einem "
+"freigegebenen Postfach möglich::"
 
 #: ../channels/microsoft365/email-headers.rst:3
 msgid ""
@@ -5076,6 +5228,9 @@ msgid ""
 "email channels**, so this article is lifted verbatim from :doc:`here </"
 "channels/email/email-headers>`."
 msgstr ""
+"E-Mail Header-Manipulation in Microsoft 365 funktioniert (nahezu) **genauso "
+"wie in E-Mail-Kanälen**. Deshalb ist dieser Artikel (nahezu) wörtlich von "
+":doc:`hier </channels/email/email-header>` übernommen."
 
 #: ../channels/microsoft365/filters.rst:3
 msgid ""
@@ -5083,6 +5238,9 @@ msgid ""
 "channels**, so this article is lifted verbatim from :doc:`here </channels/"
 "email/filters>`."
 msgstr ""
+"Filter in Microsoft 365-Kanälen sind **genau wie Filter in E-Mail-Kanälen**, "
+"deshalb ist dieser Artikel wörtlich von :doc:`hier </channels/email/filters>`"
+" übernommen."
 
 #: ../channels/microsoft365/filters/system-filters.rst:3
 msgid ""
@@ -5090,6 +5248,9 @@ msgid ""
 "email channels**, so this article is lifted verbatim from :doc:`here </"
 "channels/email/filters/system-filters>`."
 msgstr ""
+"Systemfilter in Microsoft 365-Kanälen sind **genau wie Systemfilter in E"
+"-Mail-Kanälen**, deshalb ist dieser Artikel wörtlich von :doc:`hier </"
+"channels/email/filters/system-filters>` übernommen."
 
 #: ../channels/microsoft365/index.rst:2
 msgid "Microsoft 365"
@@ -5097,19 +5258,23 @@ msgstr "Microsoft 365"
 
 #: ../channels/microsoft365/index.rst:14
 msgid "Connect a Microsoft 365 account (formerly “Office 365”) to Zammad."
-msgstr ""
+msgstr "Verbinden Sie ein Microsoft 365-Konto (früher „Office 365“) mit Zammad."
 
 #: ../channels/microsoft365/index.rst:20
 msgid ""
 "Microsoft 365 channels are a specialized kind of :doc:`📨 email channel </"
 "channels/email/index>`."
 msgstr ""
+"Microsoft 365-Kanäle sind eine spezielle Art von :doc:`📨 E-Mail-Kanälen </"
+"channels/email/index>`."
 
 #: ../channels/microsoft365/index.rst:23
 msgid ""
 "This documentation part does not cover :doc:`🗝 user authentication </"
 "settings/security/third-party/microsoft>`."
 msgstr ""
+"Dieser Teil behandelt nicht die :doc:`🗝 Benutzerauthentifizierung </settings/"
+"security/third-party/microsoft>`."
 
 #: ../channels/microsoft365/index.rst:26
 msgid ""
@@ -5117,6 +5282,9 @@ msgid ""
 "but **watch out for the “Accounts” section**, which has a few extra quirks "
 "due to Microsoft’s strict security measures."
 msgstr ""
+"Falls Sie E-Mail-Kanäle bereits kennen, können Sie das meiste überspringen - "
+"**aber beachten Sie den Abschnitt \"Konten\"**, der ein paar extra Schritte "
+"auf Grund von Microsofts Sicherheitsmaßnahmen erfordert."
 
 #: ../channels/microsoft365/index.rst:34
 #, fuzzy
@@ -5126,7 +5294,7 @@ msgstr ":doc:`Kanäle > Microsoft 365 </channels/microsoft365/index>`"
 
 #: ../channels/microsoft365/index.rst:35
 msgid "Here you can find common errors and how to fix them."
-msgstr ""
+msgstr "Hier finden Sie häufige Fehler und deren Behebung."
 
 #: ../channels/microsoft365/settings.rst:3
 msgid ""
@@ -5134,6 +5302,9 @@ msgid ""
 "channels**, so this article is lifted verbatim from :doc:`here </channels/"
 "email/settings>`."
 msgstr ""
+"Einstellungen in Microsoft 365-Kanälen sind **genau wie Einstellungen in E"
+"-Mail-Kanälen**, deshalb ist dieser Artikel wörtlich von :doc:`hier </"
+"channels/email/settings>` übernommen."
 
 #: ../channels/microsoft365/signatures.rst:3
 msgid ""
@@ -5141,6 +5312,9 @@ msgid ""
 "channels**, so this article is lifted verbatim from :doc:`here </channels/"
 "email/signatures>`."
 msgstr ""
+"Signaturen in Microsoft-Kanälen sind **genau wie Signaturen in E-Mail-"
+"Kanälen**, deshalb ist dieser Artikel wörtlich von :doc:`hier </channels/"
+"email/signatures>` übernommen."
 
 #: ../channels/telegram.rst:2
 msgid "Telegram"
@@ -5151,134 +5325,154 @@ msgid ""
 "It's possible to put your Telegram bot communication into Zammad. To do so, "
 "you need to follow these steps."
 msgstr ""
+"Es ist möglich, Ihre Telegram-Kommunikation in Zammad einzubinden. Beachten "
+"Sie dazu bitte die folgenden Schritte."
 
 #: ../channels/telegram.rst:9
 msgid ""
 "Your Zammad instance needs to be publicly available via HTTPS (we use "
 "Telegram WebHooks)."
 msgstr ""
+"hre Zammad-Instanz muss über HTTPS öffentlich verfügbar sein (wir verwenden "
+"Telegram WebHooks)."
 
 #: ../channels/telegram.rst:14
 msgid ""
 "📎 Zammad **cannot receive file attachments larger than 20MB** in Telegram "
 "messages."
 msgstr ""
+"📎 Zammad **kann keine Dateianhänge von Telegram empfangen, die größer als "
+"20 MB sind**."
 
 #: ../channels/telegram.rst:17
 msgid "This is a hard limit imposed by the `Telegram Bot API`_."
 msgstr ""
+"Dies ist eine harte Grenze, die von der `Telegram Bot API`_ festgelegt wird."
 
 #: ../channels/telegram.rst:22
 msgid "Register a Telegram bot app"
-msgstr ""
+msgstr "Registrieren Sie eine Telegram Bot-App"
 
 #: ../channels/telegram.rst:24
 msgid ""
 "Register your Telegram bot via your Telegram client, see also here: https://"
 "core.telegram.org/bots#3-how-do-i-create-a-bot"
 msgstr ""
+"Registrieren Sie Ihren Telegram-Bot über Ihren Telegram-Client, siehe auch "
+"hier: https://core.telegram.org/bots#3-how-do-i-create-a-bot"
 
 #: ../channels/telegram.rst:27
 msgid "Go to BotFather"
-msgstr ""
+msgstr "Gehen Sie zu BotFather"
 
 #: ../channels/telegram.rst:None
 #: ../settings/security/third-party/twitter.rst:None
 msgid "inital page"
-msgstr ""
+msgstr "Startseite"
 
 #: ../channels/telegram.rst:32
 msgid ""
 "Register a new bot by using \"/newbot\" and define its name and username"
 msgstr ""
+"Registrieren Sie einen neuen Bot mit \"/newbot“ und definieren Sie dessen "
+"Namen und Benutzernamen"
 
 #: ../channels/telegram.rst:None
 msgid "/newbot"
-msgstr ""
+msgstr "/newbot"
 
 #: ../channels/telegram.rst:37
 msgid "When you're all done, you will get your Telegram bot API token"
-msgstr ""
+msgstr "Wenn das gemacht haben erhalten Sie Ihr Telegram-Bot-API-Token"
 
 #: ../channels/telegram.rst:None
 msgid "bot has been created"
-msgstr ""
+msgstr "bot wurde erstellt"
 
 #: ../channels/telegram.rst:44
 msgid "Configure Zammad as Telegram bot"
-msgstr ""
+msgstr "Zammad als Telegram Bot einrichten"
 
 #: ../channels/telegram.rst:46
 msgid "Go to \"Admin -> Channels -> Telegram\" and click \"Add Bot\""
 msgstr ""
+"Gehen Sie zu \"Admin > Kanäle > Telegram“ und klicken Sie auf \"Bot "
+"hinzufügen“"
 
 #: ../channels/telegram.rst:None
 msgid "Admin -> Channels -> Telegram"
-msgstr ""
+msgstr "Admin > Kanäle > Telegram"
 
 #: ../channels/telegram.rst:51
 msgid ""
 "Enter your \"API Token\", your \"welcome message\" and set the incoming "
 "group."
 msgstr ""
+"Geben Sie Ihr \"API-Token“ und Ihre \"Willkommensnachricht“ ein und legen "
+"Sie die Gruppe für eingehende Nachrichten fest."
 
 #: ../channels/telegram.rst:None
 msgid "Telegram bot added"
-msgstr ""
+msgstr "Telegram bot hinzugefügt"
 
 #: ../channels/telegram.rst:56
 msgid "Done, your Zammad is now configured as a Telegram bot."
-msgstr ""
+msgstr "Erledigt! Ihr Zammad ist nun als Telegram-Bot eingerichtet."
 
 #: ../channels/telegram.rst:60
 msgid "Start using your new channel"
-msgstr ""
+msgstr "Nutzen Sie Ihren neuen Kanal"
 
 #: ../channels/telegram.rst:62
 msgid ""
 "Go to your Telegram client, search for your new Telegram bot and start "
 "writing a message."
 msgstr ""
+"Gehen Sie zu Ihrem Telegram-Client, suchen Sie nach Ihrem neuen Telegram-Bot "
+"und beginnen Sie mit dem Schreiben einer Nachricht."
 
 #: ../channels/telegram.rst:None
 msgid "search for bot"
-msgstr ""
+msgstr "Suche des Bot"
 
 #: ../channels/telegram.rst:None
 msgid "enter a new message"
-msgstr ""
+msgstr "Eingabe einer neuen Nachricht"
 
 #: ../channels/telegram.rst:None
 msgid "first message"
-msgstr ""
+msgstr "Erste Nachricht"
 
 #: ../channels/telegram.rst:74
 msgid "After a few seconds a new message in Zammad appears."
-msgstr ""
+msgstr "Nach ein paar Sekunden erscheint eine Nachricht in Zammad."
 
 #: ../channels/telegram.rst:None
 msgid "A new Ticket - the message - just reply"
-msgstr ""
+msgstr "Ein neues Ticket - die Nachricht - einfach antworten"
 
 #: ../channels/telegram.rst:79
 msgid "Just click on reply button (as you do it for emails) to send a reply."
 msgstr ""
+"Klicken Sie einfach auf die Schaltfläche \"Antworten“ (wie bei E-Mails), um "
+"eine Antwort zu senden."
 
 #: ../channels/telegram.rst:None
 msgid "Ticket reply"
-msgstr ""
+msgstr "Ticket Antwort"
 
 #: ../channels/telegram.rst:84
 msgid "The message will appear in your Telegram client."
-msgstr ""
+msgstr "Die Nachricht wird in Ihrem Telegram-Client angezeigt."
 
 #: ../channels/twitter-x/twitter.rst:2
+#, fuzzy
 msgid "Twitter/X"
-msgstr ""
+msgstr "Twitter/X"
 
 #: ../channels/twitter-x/twitter.rst:6
 msgid "*Updated: 08/2023*"
-msgstr ""
+msgstr "*Aktualisiert: 08/2023*"
 
 #: ../channels/twitter-x/twitter.rst:8
 msgid ""
@@ -5286,6 +5480,9 @@ msgid ""
 "the documentation, as it is the quite common name and for better "
 "readability. Of course we mean just \"X\"."
 msgstr ""
+"Bitte beachten Sie: Derzeit nennen wir es in der Dokumentation weiterhin "
+"„Twitter“ oder „Twitter/X“, da dies der gebräuchliche Name ist und es der "
+"Lesbarkeit zugute kommt. Natürlich meinen wir damit „X“."
 
 #: ../channels/twitter-x/twitter.rst:12
 msgid ""
@@ -5293,30 +5490,38 @@ msgid ""
 "X integration. Please see :doc:`twitter-x-note` for further details before "
 "reading on!"
 msgstr ""
+"⚠️ Aufgrund der aktuellen Situation gibt es einige Probleme bezüglich der "
+"Twitter/X-Integration. Weitere Details finden Sie unter :doc:`Twitter/X "
+"Hinweis </twitter-x-note>`."
 
 #: ../channels/twitter-x/twitter.rst:16
 msgid ""
 "Zammad supports Twitter integration, meaning you can send and receive tweets "
 "and DMs just like emails!"
 msgstr ""
+"Zammad unterstützt die Twitter-Integration, was bedeutet, dass Sie Tweets "
+"und Direktnachrichten genauso wie E-Mails senden und empfangen können!"
 
 #: ../channels/twitter-x/twitter.rst:23
 msgid "Twitter Ticket with draft reply"
-msgstr ""
+msgstr "Twitter-Ticket mit Antwortentwurf"
 
 #: ../channels/twitter-x/twitter.rst:23
 msgid ""
 "Twitter tickets will show a 🐦 Twitter bird in the reply area. Just click on "
 "the reply button (as you would for an email) to tweet back."
 msgstr ""
+"Bei Twitter-Tickets wird im Antwortbereich ein 🐦 Twitter-Vogel angezeigt. "
+"Klicken Sie einfach auf die Schaltfläche „Antworten“ (wie bei einer E-Mail), "
+"um zu twittern."
 
 #: ../channels/twitter-x/twitter.rst:27
 msgid "To set it up, follow the steps below:"
-msgstr ""
+msgstr "Für die Einrichtung führen Sie folgende Schritte aus:"
 
 #: ../channels/twitter-x/twitter.rst:29
 msgid "Apply for a `Twitter Developer account`_."
-msgstr ""
+msgstr "Beantragen Sie einen `Twitter Developer account`_."
 
 #: ../channels/twitter-x/twitter.rst:30
 msgid "`Create a new Twitter app`_ for Zammad."
@@ -5557,28 +5762,34 @@ msgstr ""
 
 #: ../channels/twitter-x/twitter-x-note.rst:5
 msgid "Updated: 08/2023"
-msgstr ""
+msgstr "Aktualisiert: 08/2023"
 
 #: ../channels/twitter-x/twitter-x-note.rst:8
 msgid "Baseline situation"
-msgstr ""
+msgstr "Ausgangssituation"
 
 #: ../channels/twitter-x/twitter-x-note.rst:10
 msgid ""
 "The Twitter integration implemented in Zammad provides the following "
 "functionalities:"
 msgstr ""
+"Die in Zammad implementierte Twitter-Integration stellt folgende "
+"Funktionalitäten bereit:"
 
 #: ../channels/twitter-x/twitter-x-note.rst:13
 msgid ""
 "Search for definable terms and automatic ticket creation based on the results"
 msgstr ""
+"Suche nach definierbaren Begriffen und daraus automatischer Ticket-Erstellung"
 
 #: ../channels/twitter-x/twitter-x-note.rst:15
 msgid ""
 "Live notifications for your own Twitter account (e.g. if you are mentioned "
 "in a tweet or receive direct messages), that will be transformed into tickets"
 msgstr ""
+"Live-Benachrichtigungen für den eigenen Twitter-Account (z.B. falls man in "
+"einem Tweet erwähnt wird oder direkte Nachrichten erhält), welche wiederum "
+"in Tickets umgewandelt werden"
 
 #: ../channels/twitter-x/twitter-x-note.rst:19
 #, fuzzy
@@ -5595,6 +5806,12 @@ msgid ""
 "\"app registrations\" at the present time. These changes are heavily "
 "discussed in the Twitter community and cause discomfort."
 msgstr ""
+"Die bei Twitter/X erfolgten Anpassungen an der API (Einführung von v2) sowie "
+"die Umstrukturierung der Zugriffslevel/Preismodelle (Free, Basic, Pro - "
+"https://developer.twitter.com/en/products/twitter-api) sorgen dafür, dass "
+"die o.g. Funktionalitäten in Verbindungen mit alten \"App-Registrierungen\" "
+"zum jetzigen Zeitpunkt nicht mehr zur Verfügung stehen. Diese Änderungen "
+"sind in der Twitter-Community heftig diskutiert und sorgen für Unbehagen."
 
 #: ../channels/twitter-x/twitter-x-note.rst:28
 msgid ""
@@ -5602,10 +5819,13 @@ msgid ""
 "Twitter/X in the future that will further limit or even restore "
 "functionality."
 msgstr ""
+"Zudem wissen wir nicht, ob es in Zukunft erneut Änderung seitens Twitter/X "
+"gibt, die die Funktionstüchtigkeit weiter einschränkt oder sogar "
+"wiederherstellt."
 
 #: ../channels/twitter-x/twitter-x-note.rst:32
 msgid "Prerequisite for the continued operation of Twitter in Zammad"
-msgstr ""
+msgstr "Voraussetzung für den Weiterbetrieb der Twitter-Integration in Zammad"
 
 #: ../channels/twitter-x/twitter-x-note.rst:34
 msgid ""
@@ -5614,6 +5834,10 @@ msgid ""
 "\" access level. According to Twitter, the monthly costs for this start at "
 "42,000 USD."
 msgstr ""
+"Der Zugriff auf die \"alte\" Twitter API v1.1 bzw. auf die Account Activity "
+"API, die für unsere Funktionalitäten benötigt wird, ist nur noch im "
+"Zugriffslevel \"Enterprise\" gegeben. Die monatlichen Kosten hierfür "
+"beginnen laut Twitter bei 42.000 USD."
 
 #: ../channels/twitter-x/twitter-x-note.rst:40
 #, fuzzy
@@ -5630,10 +5854,17 @@ msgid ""
 "see if there are any alternatives to Twitter/X that we can integrate into "
 "Zammad, and if so, which ones."
 msgstr ""
+"Wir bedauern die aktuelle Situation sehr, jedoch sind uns leider die Hände "
+"gebunden. Sollte es keine Änderungen an der Twitter API bzw. den "
+"Zugriffsleveln mehr geben, werden wir erwägen die Twitter-Integration mit "
+"Zammad 7.0 zu entfernen. Momentan befinden wir uns zudem in der Phase, in "
+"der wir den Markt sehr genau beobachten und prüfen, ob und welche es "
+"Alternativen zu Twitter/X gibt, die wir in Zammad integrieren können."
 
 #: ../channels/twitter-x/twitter-x-note.rst:49
 msgid "As soon as we have news about this, we will inform you."
 msgstr ""
+"Sobald wir hierzu Neuigkeiten haben, werden wir Sie darüber informieren."
 
 #: ../channels/twitter-x/twitter-x-note.rst:51
 msgid ""
@@ -5641,6 +5872,9 @@ msgid ""
 "preferred more positive news. However, we would like to play with open cards "
 "at this point and provide clarity."
 msgstr ""
+"Wir verstehen, dass diese Nachricht für Sie unbefriedigend ist und hätten "
+"uns auch positivere Neuigkeiten gewünscht. Allerdings möchten wir an der "
+"Stelle mit offenen Karten spielen und Klarheit schaffen."
 
 #: ../channels/twitter-x/twitter-x-note.rst:55
 #, fuzzy
@@ -5649,51 +5883,62 @@ msgid "⬅️ :doc:`Back to Twitter/X Channel <./twitter>`."
 msgstr ":doc:`Kanäle > Twitter </channels/twitter>`"
 
 #: ../channels/web.rst:2
+#, fuzzy
 msgid "Web"
-msgstr ""
+msgstr "Web"
 
 #: ../channels/web.rst:4
 msgid ""
 "The web channel mainly affects your customers' using the web interface. "
 "These settings allow you to restrict your customers ticket creation."
 msgstr ""
+"Der Webkanal betrifft hauptsächlich die Nutzung der Weboberfläche durch Ihre "
+"Kunden. Mit diesen Einstellungen können Sie die Ticketerstellung Ihrer "
+"Kunden einschränken."
 
 #: ../channels/web.rst:9
 msgid ""
 ":doc:`/system/core-workflows` allow even further restrictions and actions if "
 "you need them. 🤓"
 msgstr ""
+":doc:`/system/core-workflows` erlauben sogar noch weitergehende "
+"Einschränkungen, sofern Sie diese benötigen. 🤓"
 
 #: ../channels/web.rst:None
 msgid "The web channel settings page"
-msgstr ""
+msgstr "Die Web-Kanal Einstellungs-Seite"
 
 #: ../channels/web.rst:17
 msgid "Settings affecting your customer"
-msgstr ""
+msgstr "Einstellungen betreffen Ihre Kunden"
 
 #: ../channels/web.rst:29
 msgid "Enable Ticket creation"
-msgstr ""
+msgstr "Aktivierung der Ticketerstellung"
 
 #: ../channels/web.rst:20
 msgid ""
 "You can forbid customers to create tickets via the web interface. This will "
 "remove the \"➕\" button on the lower left."
 msgstr ""
+"Sie können die Ticketerstellung über die Weboberfläche für Ihre Kunden "
+"einschränken. Dadurch wird die Schaltfläche „➕“ unten links entfernt."
 
 #: ../channels/web.rst:23 ../manage/public-links.rst:0
 #: ../system/objects/types.rst:0
 msgid "Default: ``yes``"
-msgstr ""
+msgstr "Standard: ``ja``"
 
 #: ../channels/web.rst:27
 msgid "This does not forbid updating existing tickets via UI."
 msgstr ""
+"Dies verhindert nicht, dass bestehende Tickets über die Benutzeroberfläche "
+"aktualisiert werden können."
 
 #: ../channels/web.rst:41
+#, fuzzy
 msgid "Group selection for Ticket creation"
-msgstr ""
+msgstr "Gruppenauswahl für Ticket-Erstellung"
 
 #: ../channels/web.rst:32
 msgid ""
@@ -5701,54 +5946,64 @@ msgid ""
 "an issue, especially when having several support levels or internal groups, "
 "you can always select a set of groups you want to be available."
 msgstr ""
+"Standardmäßig können Ihre Kunden Tickets in allen Gruppen erstellen. Da dies "
+"insbesondere bei mehreren Supportstufen oder nur internen Gruppen ein "
+"Problem sein kann, können Sie jederzeit die Gruppen definieren, die für Ihre "
+"Kunden verfügbar sein sollen."
 
 #: ../channels/web.rst:37
 msgid "Default: ``-``"
-msgstr ""
+msgstr "Standard: ``-``"
 
 #: ../channels/web.rst:39
 msgid "**🤓 This does not affect your agents**"
-msgstr ""
+msgstr "**🤓 Dies hat keine Auswirkungen auf Ihre Agenten**"
 
 #: ../channels/web.rst:41
 msgid "Agents are affected by :doc:`/manage/groups/access-levels`."
 msgstr ""
+"Der Zugriff von Agenten kann :doc:` hier </manage/groups/access-levels>` "
+"eingestellt werden."
 
 #: ../channels/web.rst:44
 msgid "Global settings affecting *all* users"
-msgstr ""
+msgstr "Globale Einstellungen, die *alle* Benutzer betreffen"
 
 #: ../channels/web.rst:59
 msgid "Tab behavior after ticket creation"
-msgstr ""
+msgstr "Tab-Verhalten nach Ticket-Erstellung"
 
 #: ../channels/web.rst:47
 msgid ""
 "This setting allows administrators to provide a default behavior of Zammad's "
 "tab *after* ticket update."
 msgstr ""
+"Mit dieser Einstellung können Administratoren ein Standardverhalten *nach* "
+"der Ticketaktualisierung festlegen."
 
 #: ../channels/web.rst:50
 msgid "Default: ``Stay on tab``"
-msgstr ""
+msgstr "Standard: ``Tab beibehalten``"
 
 #: ../channels/web.rst:52
 msgid "**Users can always overrule**"
-msgstr ""
+msgstr "**Benutzer können das jederzeit übersteuern**"
 
 #: ../channels/web.rst:54
 msgid ""
 "If your user decides to select a different tab behavior on any ticket, this "
 "action will be the new default behavior for that user."
 msgstr ""
+"Wenn einer Ihrer Benutzer ein anderes Tab-Verhalten auswählt, wird das "
+"Verhalten zum neuen Standard für diesen Benutzer."
 
 #: ../channels/web.rst:57
 msgid "Zammad remembers the decision of the user. 💾"
-msgstr ""
+msgstr "Zammad speichert die Einstellungen des Benutzers. 💾"
 
 #: ../channels/web.rst:0
 msgid "Ticket zoom with tab behavior to choose for the user"
-msgstr ""
+msgstr "Ticket-Ansicht mit Option zur Einstellung des Verhaltens von Zammad"
 
 #: ../index.rst:6
 msgid "Manage"
@@ -5801,6 +6056,9 @@ msgid ""
 "Define a \"standard\"-calendar which system-wide is valid. Only in the "
 "specified business hours, escalation notifications are sent to agents."
 msgstr ""
+"Definieren Sie einen \"Standard“-Kalender, der systemweit gültig ist. Nur "
+"während der angegebenen Geschäftszeiten werden Eskalationsbenachrichtigungen "
+"an Agenten gesendet."
 
 #: ../manage/calendars.rst:13
 msgid ""
@@ -5808,10 +6066,13 @@ msgid ""
 "business hours, you can create several calendars. The allocation to the "
 "customer tickets can be adjusted via the SLAs."
 msgstr ""
+"Wenn Sie für Kunden unterschiedliche Öffnungszeiten einhalten müssen, können "
+"Sie mehrere Kalender erstellen. Die Zuordnung zu den Kundentickets kann über "
+"die SLAs angepasst werden."
 
 #: ../manage/calendars.rst:18
 msgid "And this is what it looks like:"
-msgstr ""
+msgstr "Und so sieht es aus:"
 
 #: ../manage/calendars.rst:22
 msgid "All created calendars are displayed in the overview."
@@ -5826,12 +6087,17 @@ msgid ""
 "Here you can create a new calendar if agents or customers belong to another "
 "time zone."
 msgstr ""
+"Hier können Sie einen neuen Kalender erstellen, wenn Agenten oder Kunden "
+"einer anderen Zeitzone angehören."
 
 #: ../manage/calendars.rst:28
 msgid ""
 "Just push the delete-button to delete this specific calendar - all SLAs "
 "assigned to this calendar are automatically assigned to the default calendar."
 msgstr ""
+"Klicken Sie einfach auf die Schaltfläche \"Löschen“, um diesen bestimmten "
+"Kalender zu löschen. Alle diesem Kalender zugewiesenen SLAs werden "
+"automatisch dem Standardkalender zugewiesen."
 
 #: ../manage/calendars.rst:33
 msgid "Set as Default"
@@ -5842,6 +6108,8 @@ msgid ""
 "Pressing this button sets this calendar as the default calendar for the "
 "entire system."
 msgstr ""
+"Dieser Button legt den Kalender als Standardkalender für das gesamte System "
+"fest."
 
 #: ../manage/calendars.rst:36
 msgid "Edit"
@@ -5851,6 +6119,8 @@ msgstr "Editieren"
 msgid ""
 "Via this button you get to the edit-mask (same mask as in \"New Calendar\"):"
 msgstr ""
+"Über diesen Button gelangen Sie zur Bearbeitungsmaske (gleiche Maske wie in "
+"\"Neuer Kalender“):"
 
 #: ../manage/calendars.rst:40
 msgid ""
@@ -5859,10 +6129,15 @@ msgid ""
 "iCalendar, which will automatically load all holidays from Google (updated "
 "once a day) ... and you can add a note."
 msgstr ""
+"--> Legen Sie einen Namen, eine Zeitzone, die für diesen Kalender zu "
+"verwendenden Geschäftszeiten und besondere Feiertage fest. Darüber hinaus "
+"können Sie einen iCalendar abonnieren, der automatisch alle Feiertage von "
+"Google lädt (einmal täglich aktualisiert) ... und Sie können eine Notiz "
+"hinzufügen."
 
 #: ../manage/groups/access-levels.rst:2
 msgid "Group Access Levels"
-msgstr ""
+msgstr "Gruppen-Zugriffs-Levels"
 
 #: ../manage/groups/access-levels.rst:4
 msgid ""
@@ -5870,18 +6145,25 @@ msgid ""
 "gives you fine-grained control over what actions that agent can perform "
 "within it:"
 msgstr ""
+"Wenn Sie einen Agenten einer :doc:`Gruppe </manage/groups/index>` zuweisen, "
+"gibt Ihnen Zammad die Möglichkeit detailliert festzulegen, welche Aktionen "
+"dieser Agent ausführen kann:"
 
 #: ../manage/groups/access-levels.rst:13
 msgid "The group access level setting in the Edit User dialog"
-msgstr ""
+msgstr "Gruppen-Zugriffsberechtigung im Dialog \"Benutzer bearbeiten“"
 
 #: ../manage/groups/access-levels.rst:13
 msgid "Use the group access table to grant per-group privileges."
 msgstr ""
+"Verwenden Sie die Gruppenzugriffstabelle, um Berechtigungen pro Gruppe zu "
+"erteilen."
 
 #: ../manage/groups/access-levels.rst:15
 msgid "Within each group, the different access levels allow an agent to..."
 msgstr ""
+"Innerhalb jeder Gruppe ermöglichen die unterschiedlichen "
+"Zugriffsberechtigungen einem Agenten,..."
 
 #: ../manage/groups/access-levels.rst:0
 msgid "READ"
@@ -5930,55 +6212,67 @@ msgstr ""
 msgid ""
 "🔔 **Full group access also enables notifications for that group’s tickets.**"
 msgstr ""
+"🔔 **Vollständiger Gruppenzugriff ermöglicht auch Benachrichtigungen für die "
+"Tickets dieser Gruppe.**"
 
 #: ../manage/groups/access-levels.rst:29
 msgid "Setting Access Levels"
-msgstr ""
+msgstr "Zugriffsberechtigung festlegen"
 
 #: ../manage/groups/access-levels.rst:31
 msgid "There are two ways to define an agent’s per-group access levels:"
 msgstr ""
+"Es gibt zwei Möglichkeiten, die Zugriffsberechtigungen eines Agenten pro "
+"Gruppe zu definieren:"
 
 #: ../manage/groups/access-levels.rst:33
 msgid "Directly, in the :ref:`Edit User dialog <user-details-group-access>`"
 msgstr ""
+"Direkt im :ref:`Bearbeitungsdialog des Users <user-details-group-access>`"
 
 #: ../manage/groups/access-levels.rst:0
 msgid ""
 "Screencast showing a user being assigned specific group rights directly "
 "within the user."
-msgstr ""
+msgstr "Screencast Zuweisung Gruppenrechte zu User."
 
 #: ../manage/groups/access-levels.rst:40
 msgid "Simply set your access levels right on the target user."
 msgstr ""
+"Legen Sie für den gewünschten Benutzer einfach Ihre Zugriffsberechtigung "
+"direkt fest."
 
 #: ../manage/groups/access-levels.rst:42
 msgid ""
 "Implicitly, by :ref:`editing a user’s roles <role-settings-group-access>`"
 msgstr ""
+"Implizit durch :ref:`Bearbeiten der Rollen eines Benutzers <role-settings-"
+"group-access>`"
 
 #: ../manage/groups/access-levels.rst:0 ../manage/roles/agent-permissions.rst:0
 msgid "Group access table in Edit Role dialog"
-msgstr ""
+msgstr "Gruppenzugriffstabelle im Dialogfeld \"Rolle bearbeiten“"
 
 #: ../manage/groups/access-levels.rst:49
 msgid "First, set your access levels on a role..."
-msgstr ""
+msgstr "Legen Sie zunächst Ihre Zugriffsberechtigungen für eine Rolle fest..."
 
 #: ../manage/groups/access-levels.rst:0
 msgid "Screencast showing a user receiving further roles"
-msgstr ""
+msgstr "Screencast zeigt Zuweisung weiterer Rollen an Benutzer"
 
 #: ../manage/groups/access-levels.rst:56
 msgid "...then, add that role to the target user."
-msgstr ""
+msgstr "... dann fügen Sie dem gewünschten Benutzer diese Rolle hinzu."
 
 #: ../manage/groups/access-levels.rst:58
 msgid ""
 "⚖️ **We recommend choosing one or the other**; things can get confusing if "
 "you use both at the same time."
 msgstr ""
+"⚖️ **Wir empfehlen, sich für die eine oder andere Variante zu entscheiden**; "
+"Wenn Sie beide gleichzeitig verwenden, kann Ihnen der Überblick verloren "
+"gehen."
 
 #: ../manage/groups/access-levels.rst:61
 msgid ""
@@ -5986,14 +6280,19 @@ msgid ""
 "trying to assign multiple agents to the same group with the same access "
 "levels, create a role for them to share—that’s what roles are for!"
 msgstr ""
+"Welche Vorgehensweise ist also die Richtige für Sie? *Diejenige, die für Sie "
+"weniger arbeitsintensiv ist.* Wenn Sie mehreren Agenten aus einer Gruppe die "
+"selben Zugriffsberechtigungen zuzuweisen wollen, erstellen Sie eine Rolle. "
+"Diese können Sie allen Benutzern aus der Gruppe zuweisen - dafür sind Rollen "
+"da!"
 
 #: ../manage/groups/access-levels.rst:67
 msgid "Examples"
-msgstr ""
+msgstr "Beispiele"
 
 #: ../manage/groups/access-levels.rst:77
 msgid "“The Standard Issue”"
-msgstr ""
+msgstr "\"Der Standard-Fall\""
 
 #: ../manage/groups/access-levels.rst:0
 msgid "The group access table, checked \"Full\""
