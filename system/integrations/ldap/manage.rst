@@ -60,7 +60,7 @@ Add new source
    .. note::
 
       If your LDAP system doesn't allow anonymous bind, Zammad detects it and
-      provides you a editable "Base-DN" *text* field instead of a prefilled
+      provides you an editable "Base DN" *text* field instead of a prefilled
       *select* field.
 
 .. _Microsoft documentation:
