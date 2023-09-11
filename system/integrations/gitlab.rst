@@ -30,15 +30,15 @@ Setup
 
 2. Enter your new API token in Zammad and enable GitLab integration.
 
-   .. figure:: /images/system/integrations/gitlab/configure-and-active-gitlab-integration.gif
-      :alt: Screencast showing how to configure Zammad’s GitLab integration
+   .. figure:: /images/system/integrations/gitlab/configure-and-active-gitlab-integration.png
+      :alt: Screencast showing how to configure Zammad's GitLab integration
       :align: center
       :width: 90%
 
    .. hint::
 
       Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
-      unless you’re a self-hosted GitLab user.
+      unless you're a self-hosted GitLab user.
 
 Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
 
