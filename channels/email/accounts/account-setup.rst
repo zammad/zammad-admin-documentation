@@ -147,7 +147,7 @@ SSL / STARTTLS
       * SSL
       * STARTTLS
 
-SSL Verification
+SSL verification
    Here you can decide if the certificate of the email server has to be
    verified or not (default: ``yes``). In case you are using custom
    certificates, please have a look at
@@ -271,7 +271,7 @@ Port
 
    Zammad will detect and enable SSL/STARTTLS support automatically.
 
-SSL Verification
+SSL verification
    Here you can decide if the certificate of the email server has to be
    verified or not (default: ``yes``). In case you are using custom
    certificates, please have a look at

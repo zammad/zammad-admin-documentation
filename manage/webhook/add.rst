@@ -67,7 +67,7 @@ You can configure the following information for webhooks:
          `Learn more about HUB-Signatures
          <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_
 
-   SSL Verification
+   SSL verification
       Defaults to ``yes`` - if you're using unsecure self signed certificates
       set this option to ``no``.
 
