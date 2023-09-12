@@ -153,6 +153,8 @@ SSL Verification
    certificates, please have a look at
    :doc:`how to add them to Zammad </settings/security/ssl-certificate>`.
 
+   .. include:: /includes/ssl-verification-warning.rst
+
 Port
    Your email server's port (usu. ``993`` for IMAP, or ``995`` for POP3).
 
@@ -274,6 +276,8 @@ SSL Verification
    verified or not (default: ``yes``). In case you are using custom
    certificates, please have a look at
    :doc:`how to add them to Zammad </settings/security/ssl-certificate>`.
+
+   .. include:: /includes/ssl-verification-warning.rst
 
 
 Verification

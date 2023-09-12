@@ -35,6 +35,8 @@ Setup
       :align: center
       :width: 90%
 
+   .. include:: /includes/ssl-verification-warning.rst
+
    .. hint::
 
       Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
