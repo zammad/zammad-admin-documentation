@@ -3,13 +3,13 @@ Overviews
 
 You can provide overviews to your agents and customers. They can be used as a
 kind of worklist of tasks that the agent is supposed to work off.
-You can also create individual reports for individual agents or agent groups.
+You can also create individual overviews for individual agents or agent groups.
 
-In the Overview Management Area you can add new overviews, edit or delete them.
+In the overview management area you can add new overviews, edit or delete them.
 
 .. warning::
 
-   Please note that Overviews can cause performance issues leading to no longer
+   Please note that overviews can cause performance issues leading to no longer
    or less often refreshing overviews!
 
    Whenever possible, try to use the same overviews for as many agents and
@@ -24,9 +24,11 @@ In the Overview Management Area you can add new overviews, edit or delete them.
 
 The following attributes can be set when creating an overview:
 
-Available for the following roles / Restrict to only the following users
    .. figure:: /images/manage/overviews/restriction-and-availability-of-overviews-for-roles-and-users.png
       :width: 80%
+      :align: center
+
+Available for the following roles / Restrict to only the following users
 
    .. hint::
 
@@ -46,6 +48,7 @@ Available for the following roles / Restrict to only the following users
          You will still have to provide a role!
 
 Only available for users with shared organization
+
    .. image:: /images/manage/overviews/restrict-overview-to-sharing-organizations.png
 
    .. hint::
@@ -54,17 +57,16 @@ Only available for users with shared organization
       See :doc:`/manage/organizations/index` for more information.
 
    This is only important if the available role is a customer.
-   When deciding whether yes or no is selected, it must be considered to what
-   extent this makes sense - for example, if a customer sees only his own
-   tickets, many views are usually not necessary...
+   Whether you select Yes or No depends on whether you want one of your
+   customer's contacts to see all of their organization's tickets.
 
    .. note:: Users also refers to the customer role in this case.
 
-Available for users which are replacements for other users.
-   .. figure:: /images/manage/overviews/restrict-overview-to-replacement-users.png
+Only available for users which are absence replacements for other users.
 
    This selection refers to the setting in the user preferences
-   (profile-pic in the left corner --> profile -->) "out of office".
+   (profile-picture / initials of agent in the left corner >
+   profile > out of office).
    If this option is checked, this selection is only displayed if someone
    has been entered as a substitution.
 
@@ -83,27 +85,27 @@ Available for users which are replacements for other users.
 Conditions for shown tickets
    .. figure:: /images/manage/overviews/overview-conditions-for-to-be-shown-tickets.png
 
-   What conditions should the listed tickets contain? (it is like a filter)
-   You can add more than one condition. In the preview you have the possibility
-   to double check if your entry of the conditions makes sense by directly
-   displaying tickets that match your filtering.
+   Which tickets should be shown in this overview? The conditions can be seen
+   like a filter. You can add more than one condition. In the preview you have the
+   possibility to double check if your entry of the conditions makes sense by
+   directly displaying tickets that match your filtering.
 
    .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
 Attributes
    .. figure:: /images/manage/overviews/sample-attributes-of-a-configured-overview.png
 
-   Which attributes shall be shown in the overview? (column headers)
+   Which attributes (column headers) shall be shown in the overview?
 
    With this setting you can select the headlines of your overview. Depending
    on which information is important in this selection, it can be displayed
-   individually. For this example "Unassigned and open" the overview would
+   individually. For this example "Unassigned and open", the overview would
    look like this:
 
    .. figure:: /images/manage/overviews/attribute-selection-for-overviews.png
 
    These settings can also be adjusted individually by admins at a later time
-   (In the overview, top right: Options).
+   (in the overview, top right: Options).
 
    .. note::
 
