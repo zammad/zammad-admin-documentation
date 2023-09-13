@@ -57,6 +57,12 @@ Add new source
    .. figure:: /images/system/integrations/ldap/ldap-add-new-source.gif
       :alt: Screencast showing how to add a new LDAP source
 
+   .. note::
+
+      If your LDAP system doesn't allow anonymous bind, Zammad detects it and
+      provides you an editable "Base DN" *text* field instead of a prefilled
+      *select* field.
+
 .. _Microsoft documentation:
    https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
 
