@@ -77,7 +77,9 @@ Client ID
 SSL verification
    Here you can decide if the certificate of your i-doit system has to be
    verified or not. In case you are using custom certificates, please have
-   a look at :doc:`how to add them to Zammad </settings/security/ssl-certificate>`.
+   a look at :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
+
+   .. include:: /includes/ssl-verification-warning.rst
 
 2. List / Create Zammad Tickets in i-doit
 -----------------------------------------
