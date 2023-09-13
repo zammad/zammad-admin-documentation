@@ -12,9 +12,9 @@ Accounts
 :doc:`accounts/account-setup`
    Use the **New Email Account** dialog to connect your account.
 
-   .. figure:: /images/channels/email/accounts-new-success.gif
+   .. figure:: /images/channels/email/account-basic-setup-inbound.png
       :alt: New Email Account dialog
-      :scale: 60%
+      :scale: 100%
       :align: center
 
 :doc:`accounts/secondary-addresses`
