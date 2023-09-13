@@ -12,9 +12,19 @@ Storage Mechanism
 
    .. note::
 
+      🤔 **But which one to use?**
+
       We strongly encourage you to use filesystem storage on busy instances.
       This will greatly improve system performance (de-crease database load
       and size).
+
+      **You noticed slow updates of Zammad?**
+
+      While Zammad is beeing updated, it enforces a recursive "change owner"
+      (chown) for this directory. For instances with many files this can
+      be time consuming. To mitigate that you can move your files and create a
+      symlink in ``/opt/zammad/storage/`` to the new directory. Of course you
+      have to make sure on your own that the permissions are always correct.
 
    .. tip::
 
