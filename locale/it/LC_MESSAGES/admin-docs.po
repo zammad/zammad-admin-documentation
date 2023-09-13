@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-25 14:57+0200\n"
+"POT-Creation-Date: 2023-09-12 15:25+0200\n"
 "PO-Revision-Date: 2023-04-15 10:17+0000\n"
 "Last-Translator: crnfpp <crnfpp@unife.it>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
@@ -407,7 +407,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:77
 #: ../channels/email/accounts/secondary-addresses.rst:35
 #: ../channels/email/index.rst:2 ../channels/form.rst:20
-#: ../manage/groups/settings.rst:67 ../system/objects/types.rst:125
+#: ../manage/groups/settings.rst:67 ../system/objects/types.rst:147
 msgid "Email"
 msgstr ""
 
@@ -480,7 +480,7 @@ msgid "Email Inbound"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:113
-#: ../system/objects/types.rst:128
+#: ../system/objects/types.rst:150
 msgid "Type"
 msgstr ""
 
@@ -811,9 +811,10 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:116
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:178
-#: ../settings/security/third-party/saml.rst:156
+#: ../settings/security/third-party/saml.rst:160
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:57 ../system/integrations/gitlab.rst:46
+#: ../system/integrations/pgp/index.rst:117
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
 msgstr ""
@@ -1546,65 +1547,141 @@ msgstr ""
 msgid ""
 "Zammad comes with system filters as well. While you can't change them, it "
 "might be useful for you what they actually do. Learn more on :doc:`filters/"
-"system-filters`"
+"system-filters`."
 msgstr ""
 
 #: ../channels/email/filters.rst:22
+msgid ""
+"Different attributes of a filter can be combined with each other. Likewise, "
+"the following operators can be combined. The supported matches are:"
+msgstr ""
+
+#: ../channels/email/filters.rst:25 ../misc/object-conditions/basics.rst:365
+msgid "*contains*"
+msgstr ""
+
+#: ../channels/email/filters.rst:26 ../misc/object-conditions/basics.rst:368
+msgid "*contains not*"
+msgstr ""
+
+#: ../channels/email/filters.rst:27 ../misc/object-conditions/basics.rst:371
+msgid "*is any of*"
+msgstr ""
+
+#: ../channels/email/filters.rst:28 ../misc/object-conditions/basics.rst:374
+msgid "*is none of*"
+msgstr ""
+
+#: ../channels/email/filters.rst:29 ../misc/object-conditions/basics.rst:377
+msgid "*starts with one of*"
+msgstr ""
+
+#: ../channels/email/filters.rst:30 ../misc/object-conditions/basics.rst:380
+msgid "*ends with one of*"
+msgstr ""
+
+#: ../channels/email/filters.rst:31 ../misc/object-conditions/basics.rst:383
+msgid "*matches regex*"
+msgstr ""
+
+#: ../channels/email/filters.rst:32 ../misc/object-conditions/basics.rst:386
+msgid "*does not match regex*"
+msgstr ""
+
+#: ../channels/email/filters.rst:34
+msgid ""
+"You can also have a look at the :doc:`object conditions </misc/object-"
+"conditions/basics>` for text fields, where you can find a description of how "
+"the operators are working."
+msgstr ""
+
+#: ../channels/email/filters.rst:40
+msgid ""
+"The following attributes can only be defined by the filter when a ticket is "
+"**created**:"
+msgstr ""
+
+#: ../channels/email/filters.rst:43
+#: ../system/integrations/checkmk/admin-panel-reference.rst:15
+#: ../system/objects/permissions.rst:55
+msgid "Group"
+msgstr ""
+
+#: ../channels/email/filters.rst:44 ../manage/macros/learn-by-example.rst:0
+msgid "State"
+msgstr ""
+
+#: ../channels/email/filters.rst:45
+#: ../system/core-workflows/how-do-they-work.rst:197
+msgid "Priority"
+msgstr ""
+
+#: ../channels/email/filters.rst:46 ../manage/macros/learn-by-example.rst:0
+msgid "Owner"
+msgstr ""
+
+#: ../channels/email/filters.rst:48
+msgid ""
+"Zammad will **not overwrite** the value of these objects when a ticket is "
+"updated."
+msgstr ""
+
+#: ../channels/email/filters.rst:51
 msgid "Here are some examples of what is possible with filters:"
 msgstr ""
 
-#: ../channels/email/filters.rst:35
+#: ../channels/email/filters.rst:58
 msgid "Automatically dispatch tickets into certain groups:"
 msgstr ""
 
-#: ../channels/email/filters.rst:25
+#: ../channels/email/filters.rst:54
 msgid ""
 "For example, tickets from ``amazon.com`` could automatically be dispatched "
 "to the Purchasing group."
 msgstr ""
 
 #: ../channels/email/filters.rst:0
-msgid "From: contains: ``regex:(\\.|@)amazon\\.com``"
+msgid "From: *matches regex:* ``(\\.|@)amazon\\.com``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
 msgid "Group: Purchasing"
 msgstr ""
 
-#: ../channels/email/filters.rst:33
+#: ../channels/email/filters.rst:62
 msgid ""
-"Note that the Group action only has an effect when the matching email "
-"results in a new ticket. Zammad will not change the group of existing "
-"tickets."
+"Automatically dispatch tickets to responsible staff based on organization "
+"name:"
 msgstr ""
 
-#: ../channels/email/filters.rst:45
+#: ../channels/email/filters.rst:0
+msgid "Organization: *starts with one of:* ``A`` ``B`` ``C``"
+msgstr ""
+
+#: ../channels/email/filters.rst:0
+msgid "Owner: Emily Adams"
+msgstr ""
+
+#: ../channels/email/filters.rst:66
 msgid "Automatically increase the priority of tickets from a VIP customer:"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
-msgid "From: contains: ``ourvipcustomer@example.com``"
+msgid "From: *contains:* ``ourvipcustomer@example.com``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
 msgid "Priority: 3 high"
 msgstr ""
 
-#: ../channels/email/filters.rst:43
-msgid ""
-"Note that the Priority action only has an effect when the matching email "
-"results in a new ticket. Zammad will not change the priority of existing "
-"tickets."
-msgstr ""
-
-#: ../channels/email/filters.rst:57
+#: ../channels/email/filters.rst:77
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by "
 "anexternal spam filter (e.g. SpamAssassin):"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
-msgid "X-Spam-Flag: contains: ``YES``"
+msgid "X-Spam-Flag: *contains:* ``YES``"
 msgstr ""
 
 #: ../channels/email/filters.rst:0
@@ -1615,55 +1692,14 @@ msgstr ""
 msgid "State: closed"
 msgstr ""
 
-#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:75
 msgid ""
-"Note that the State action only has an effect when the matching email "
-"results in a new ticket. Zammad will not change the state of existing "
-"tickets. It will add the tag though if it missing, even if the mail is an "
-"update to an existing ticket."
+"Note that the State attribute only has an effect when the matching email "
+"results in a new ticket. It will add the tag though if it is missing, even "
+"if the mail is an update to an existing ticket."
 msgstr ""
 
-#: ../channels/email/filters.rst:59
-msgid "The following actions are only effective when creating tickets:"
-msgstr ""
-
-#: ../channels/email/filters.rst:61
-#: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:55
-msgid "Group"
-msgstr ""
-
-#: ../channels/email/filters.rst:62 ../manage/macros/learn-by-example.rst:0
-msgid "State"
-msgstr ""
-
-#: ../channels/email/filters.rst:63
-#: ../system/core-workflows/how-do-they-work.rst:197
-msgid "Priority"
-msgstr ""
-
-#: ../channels/email/filters.rst:64 ../manage/macros/learn-by-example.rst:0
-msgid "Owner"
-msgstr ""
-
-#: ../channels/email/filters.rst:66
-msgid ""
-"Different attributes of a filter can be combined with each other. Likewise, "
-"the following actions can be combined. The supported matches are \"contains"
-"\" and \"contains not\"; for advanced matching, you can use regular "
-"expressions by prefixing the string with ``regex:``."
-msgstr ""
-
-#: ../channels/email/filters.rst:71
-msgid ""
-"Note that Zammad matches against the full header, e.g. for a mail with "
-"``From: Display Name <display.name@example.com>``, the ``From`` condition "
-"will test against ``Display Name <display.name@example.com>``. This is "
-"especially important when using anchored regular expressions; ``regex:"
-"^display\\.name@example.com$`` would not match this mail!"
-msgstr ""
-
-#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:79
 msgid ""
 "It should be borne in mind that the combined attributes build on each other. "
 "If a filter is no longer needed, it can either be temporarily set inactive "
@@ -1867,7 +1903,8 @@ msgstr ""
 msgid "If you’re too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:48
+#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:49
+#: ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
 msgstr ""
@@ -2134,8 +2171,8 @@ msgstr ""
 
 #: ../channels/email/settings.rst:149
 msgid ""
-"This is a can be a string you can freely choose. It divides the agent's name "
-"and the display name of the channel whenever needed."
+"This can be a string you can freely choose. It divides the agent's name and "
+"the display name of the channel whenever needed."
 msgstr ""
 
 #: ../channels/email/settings.rst:158
@@ -2354,7 +2391,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/elasticsearch.rst:25
 #: ../system/integrations/ldap/index.rst:31
-#: ../system/integrations/smime/prerequisites.rst:32
+#: ../system/integrations/smime/prerequisites.rst:83
 msgid "Limitations"
 msgstr ""
 
@@ -2908,7 +2945,7 @@ msgstr ""
 
 #: ../channels/google/accounts.rst:72
 msgid ""
-"Set up a generic :doc:`email channel </channels/email/index>` instead, the "
+"Set up a generic :doc:`email channel </channels/email/index>` instead and "
 "use the :ref:`Email Notification <email-notification>` setting."
 msgstr ""
 
@@ -3786,7 +3823,8 @@ msgid "OpenId permissions"
 msgstr ""
 
 #: ../channels/microsoft365/accounts/register-app.rst:92
-#: ../settings/security/third-party/saml.rst:85
+#: ../settings/security/third-party/saml.rst:82
+#: ../settings/security/third-party/saml.rst:88
 msgid "``email``"
 msgstr ""
 
@@ -4251,6 +4289,106 @@ msgid ""
 "Signatures in Microsoft 365 channels are **just like signatures in email "
 "channels**, so this article is lifted verbatim from :doc:`here </channels/"
 "email/signatures>`."
+msgstr ""
+
+#: ../channels/sms.rst:2
+msgid "SMS"
+msgstr ""
+
+#: ../channels/sms.rst:4
+msgid ""
+"SMS integration primarily lets you create tickets, add articles and respond "
+"to tickets via SMS. It is also possible to send notifications, e.g. to "
+"agents."
+msgstr ""
+
+#: ../channels/sms.rst:7
+msgid ""
+"You can configure SMS notifications in the channels section in the admin "
+"interface at **Channels > SMS**."
+msgstr ""
+
+#: ../channels/sms.rst:11
+msgid "Configure incoming SMS"
+msgstr ""
+
+#: ../channels/sms.rst:13
+msgid ""
+"To process incoming SMS, MessageBird and Twilio are currently the only "
+"supported providers. Setting up the channel requires your account SID and an "
+"authentification token. You can find an example for the Twilio configuration "
+"in the following screenshots."
+msgstr ""
+
+#: ../channels/sms.rst:None
+msgid "Twilio settings"
+msgstr ""
+
+#: ../channels/sms.rst:23
+msgid "Enter these in the Zammad admin interface at SMS accounts."
+msgstr ""
+
+#: ../channels/sms.rst:None
+msgid "Channel settings SMS"
+msgstr ""
+
+#: ../channels/sms.rst:30
+msgid ""
+"Further options are to enter a sender number and select a destination group. "
+"The sender number is published when sending SMS from the ticket. Names can "
+"also be entered. \"Destination group\" is relevant for incoming SMS that "
+"can't be assigned to a specific ticket."
+msgstr ""
+
+#: ../channels/sms.rst:35
+msgid ""
+"After setting it all up, an SMS article could look like this in the ticket "
+"view:"
+msgstr ""
+
+#: ../channels/sms.rst:41
+msgid "Communication via SMS is available directly from inside Zammad."
+msgstr ""
+
+#: ../channels/sms.rst:44
+msgid "Notifications via SMS"
+msgstr ""
+
+#: ../channels/sms.rst:46
+msgid ""
+"It's also possible to receive notifications via SMS. These are messages sent "
+"by trigger or automation. Setup is done in the admin interface at **Channels "
+"> SMS**."
+msgstr ""
+
+#: ../channels/sms.rst:50
+msgid ""
+"As service providers, Massenversand, MessageBird and Twilio are supported."
+msgstr ""
+
+#: ../channels/sms.rst:52
+msgid ""
+"Please specify the accound ID and a token here. Furthermore it is possible "
+"to enter a phone number or name to be shown to the recipient."
+msgstr ""
+
+#: ../channels/sms.rst:None
+msgid "Notification settings"
+msgstr ""
+
+#: ../channels/sms.rst:59
+msgid ""
+"You can either save your configuration directly, or let your settings be "
+"checked by running a test in advance."
+msgstr ""
+
+#: ../channels/sms.rst:62
+msgid ""
+"Now it's possible to send SMS notifications via trigger or automation. Setup "
+"is analogue to setting up :doc:`email notifications </channels/email/"
+"accounts/email-notification>`. Please note that the user object belonging to "
+"the person you want to notify must contain a mobile phone number as an "
+"attribute. If there is no phone number registered, no SMS will be sent."
 msgstr ""
 
 #: ../channels/telegram.rst:2
@@ -4863,15 +5001,15 @@ msgstr ""
 msgid "Channels"
 msgstr ""
 
-#: ../index.rst:59
+#: ../index.rst:60
 msgid "API (System-Admin Documentation)"
 msgstr ""
 
-#: ../index.rst:59 ../settings/system/index.rst:2
+#: ../index.rst:60 ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
 
-#: ../index.rst:79
+#: ../index.rst:80
 msgid "Misc"
 msgstr ""
 
@@ -5694,7 +5832,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/knowledge-base.rst:152 ../manage/public-links.rst:53
-#: ../manage/time-accounting.rst:84 ../manage/time-accounting.rst:97
+#: ../manage/time-accounting.rst:157 ../manage/time-accounting.rst:171
 #: ../system/maintenance.rst:31
 msgid "Title"
 msgstr ""
@@ -6225,45 +6363,65 @@ msgid ""
 "assignments."
 msgstr ""
 
-#: ../manage/organizations/index.rst:131 ../manage/users/index.rst:146
+#: ../manage/organizations/index.rst:134 ../manage/users/index.rst:136
+msgid "👑 VIP"
+msgstr ""
+
+#: ../manage/organizations/index.rst:124
+msgid ""
+"This flag is a way for your team to indicate high-status organizations. Just "
+"as with customers, you can set up special :doc:`/manage/trigger`, :doc:`/"
+"manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/"
+"overviews` just for VIPs."
+msgstr ""
+
+#: ../manage/organizations/index.rst:0
+msgid "Ticket view showing a VIP organization’s avatar with a crown on it"
+msgstr ""
+
+#: ../manage/organizations/index.rst:134
+msgid "VIP organizations are displayed with a crown above their avatars."
+msgstr ""
+
+#: ../manage/organizations/index.rst:144 ../manage/users/index.rst:146
 msgid "📑 Note"
 msgstr ""
 
-#: ../manage/organizations/index.rst:124 ../manage/users/index.rst:139
+#: ../manage/organizations/index.rst:137 ../manage/users/index.rst:139
 msgid "Notes are visible to all staff members, **including agents**."
 msgstr ""
 
-#: ../manage/organizations/index.rst:126
+#: ../manage/organizations/index.rst:139
 msgid ""
 "😵 **Are you using the Note field to keep track of your own “custom” "
 "organization attributes?**"
 msgstr ""
 
-#: ../manage/organizations/index.rst:129
+#: ../manage/organizations/index.rst:142
 msgid "Wish you could add your own fields to the New/Edit Organization dialog?"
 msgstr ""
 
-#: ../manage/organizations/index.rst:131 ../manage/users/index.rst:146
+#: ../manage/organizations/index.rst:144 ../manage/users/index.rst:146
 msgid "You can! To learn more, see :doc:`/system/objects`."
 msgstr ""
 
-#: ../manage/organizations/index.rst:146 ../manage/users/index.rst:167
+#: ../manage/organizations/index.rst:159 ../manage/users/index.rst:167
 msgid "▶️ Active"
 msgstr ""
 
-#: ../manage/organizations/index.rst:134
+#: ../manage/organizations/index.rst:147
 msgid ""
 "Disabling this flag is a soft alternative to deleting an organization. So "
 "what’s the difference?"
 msgstr ""
 
-#: ../manage/organizations/index.rst:137
+#: ../manage/organizations/index.rst:150
 msgid ""
 "There is no way to restore a deleted organization; inactive organizations "
 "can be reactivated at any time."
 msgstr ""
 
-#: ../manage/organizations/index.rst:140
+#: ../manage/organizations/index.rst:153
 msgid "Inactive organizations still appear in search results:"
 msgstr ""
 
@@ -6271,7 +6429,7 @@ msgstr ""
 msgid "An inactive organization displayed in a quick search list"
 msgstr ""
 
-#: ../manage/organizations/index.rst:146
+#: ../manage/organizations/index.rst:159
 msgid ""
 "A slashed-out 🏢 icon indicates an inactive organization. In other cases, "
 "inactive organizations are greyed out."
@@ -6469,18 +6627,18 @@ msgstr ""
 msgid ""
 "You can provide overviews to your agents and customers. They can be used as "
 "a kind of worklist of tasks that the agent is supposed to work off. You can "
-"also create individual reports for individual agents or agent groups."
+"also create individual overviews for individual agents or agent groups."
 msgstr ""
 
 #: ../manage/overviews.rst:8
 msgid ""
-"In the Overview Management Area you can add new overviews, edit or delete "
+"In the overview management area you can add new overviews, edit or delete "
 "them."
 msgstr ""
 
 #: ../manage/overviews.rst:12
 msgid ""
-"Please note that Overviews can cause performance issues leading to no longer "
+"Please note that overviews can cause performance issues leading to no longer "
 "or less often refreshing overviews!"
 msgstr ""
 
@@ -6502,71 +6660,71 @@ msgstr ""
 msgid "The following attributes can be set when creating an overview:"
 msgstr ""
 
-#: ../manage/overviews.rst:46
+#: ../manage/overviews.rst:31
 msgid ""
 "Available for the following roles / Restrict to only the following users"
 msgstr ""
 
-#: ../manage/overviews.rst:33
+#: ../manage/overviews.rst:35
 msgid ""
 "Roles are assigned to users, per default there are agents, admins and "
 "customers. Further information about :doc:`roles/index`."
 msgstr ""
 
-#: ../manage/overviews.rst:36
+#: ../manage/overviews.rst:38
 msgid "The setting \"available for the following roles\" is mandatory."
 msgstr ""
 
-#: ../manage/overviews.rst:38
+#: ../manage/overviews.rst:40
 msgid "Define roles that are supposed to see and use the overview in question."
 msgstr ""
 
-#: ../manage/overviews.rst:40
+#: ../manage/overviews.rst:42
 msgid ""
 "If your overview is rather specific for a sub group of users of your role, "
 "use the *\"Restrict to only the following users\"* option to further "
 "restrict the visibility of the overview to defined users."
 msgstr ""
 
-#: ../manage/overviews.rst:46
+#: ../manage/overviews.rst:48
 msgid "You will still have to provide a role!"
 msgstr ""
 
-#: ../manage/overviews.rst:61
+#: ../manage/overviews.rst:50
 msgid "Only available for users with shared organization"
 msgstr ""
 
-#: ../manage/overviews.rst:53
+#: ../manage/overviews.rst:56
 msgid ""
 "Shared organization is a setting in the organization management. See :doc:`/"
 "manage/organizations/index` for more information."
 msgstr ""
 
-#: ../manage/overviews.rst:56
+#: ../manage/overviews.rst:59
 msgid ""
-"This is only important if the available role is a customer. When deciding "
-"whether yes or no is selected, it must be considered to what extent this "
-"makes sense - for example, if a customer sees only his own tickets, many "
-"views are usually not necessary..."
+"This is only important if the available role is a customer. Whether you "
+"select Yes or No depends on whether you want one of your customer's contacts "
+"to see all of their organization's tickets."
 msgstr ""
 
-#: ../manage/overviews.rst:61
+#: ../manage/overviews.rst:63
 msgid "Users also refers to the customer role in this case."
 msgstr ""
 
-#: ../manage/overviews.rst:78
-msgid "Available for users which are replacements for other users."
-msgstr ""
-
-#: ../manage/overviews.rst:66
+#: ../manage/overviews.rst:65
 msgid ""
-"This selection refers to the setting in the user preferences (profile-pic in "
-"the left corner --> profile -->) \"out of office\". If this option is "
-"checked, this selection is only displayed if someone has been entered as a "
-"substitution."
+"Only available for users which are absence replacements for other users."
 msgstr ""
 
-#: ../manage/overviews.rst:71
+#: ../manage/overviews.rst:67
+msgid ""
+"This selection refers to the setting in the user preferences (profile-"
+"picture / initials of agent in the left corner > profile > out of office). "
+"If this option is checked, this selection is only displayed if someone has "
+"been entered as a substitution."
+msgstr ""
+
+#: ../manage/overviews.rst:73
 msgid ""
 "**For example:** Agent A is on vacation and Agent B will take care of his "
 "tickets. Then an overview can be set up, which only shows Agent B all new "
@@ -6574,20 +6732,20 @@ msgid ""
 "them separately."
 msgstr ""
 
-#: ../manage/overviews.rst:78
+#: ../manage/overviews.rst:80
 msgid "Replacement users are part of our `Out of Office function`_."
 msgstr ""
 
-#: ../manage/overviews.rst:91
+#: ../manage/overviews.rst:93
 msgid "Conditions for shown tickets"
 msgstr ""
 
-#: ../manage/overviews.rst:86
+#: ../manage/overviews.rst:88
 msgid ""
-"What conditions should the listed tickets contain? (it is like a filter) You "
-"can add more than one condition. In the preview you have the possibility to "
-"double check if your entry of the conditions makes sense by directly "
-"displaying tickets that match your filtering."
+"Which tickets should be shown in this overview? The conditions can be seen "
+"like a filter. You can add more than one condition. In the preview you have "
+"the possibility to double check if your entry of the conditions makes sense "
+"by directly displaying tickets that match your filtering."
 msgstr ""
 
 #: ../misc/object-conditions/conditioning-depth-hint.include.rst:1
@@ -6606,35 +6764,35 @@ msgid ""
 "Have a look at :doc:`/misc/object-conditions/index` to learn even more! 🎉"
 msgstr ""
 
-#: ../manage/overviews.rst:111 ../system/core-workflows/learn-by-example.rst:24
+#: ../manage/overviews.rst:113 ../system/core-workflows/learn-by-example.rst:24
 msgid "Attributes"
 msgstr ""
 
-#: ../manage/overviews.rst:96
-msgid "Which attributes shall be shown in the overview? (column headers)"
+#: ../manage/overviews.rst:98
+msgid "Which attributes (column headers) shall be shown in the overview?"
 msgstr ""
 
-#: ../manage/overviews.rst:98
+#: ../manage/overviews.rst:100
 msgid ""
 "With this setting you can select the headlines of your overview. Depending "
 "on which information is important in this selection, it can be displayed "
-"individually. For this example \"Unassigned and open\" the overview would "
+"individually. For this example \"Unassigned and open\", the overview would "
 "look like this:"
 msgstr ""
 
-#: ../manage/overviews.rst:105
+#: ../manage/overviews.rst:107
 msgid ""
 "These settings can also be adjusted individually by admins at a later time "
-"(In the overview, top right: Options)."
+"(in the overview, top right: Options)."
 msgstr ""
 
-#: ../manage/overviews.rst:110
+#: ../manage/overviews.rst:112
 msgid ""
 "Please note that overview column and sort settings are global settings which "
 "affect all users seeing those overviews."
 msgstr ""
 
-#: ../manage/overviews.rst:138
+#: ../manage/overviews.rst:140
 msgid "Sorting, Grouping and Active"
 msgstr ""
 
@@ -6642,7 +6800,7 @@ msgstr ""
 msgid "Sorting by"
 msgstr ""
 
-#: ../manage/overviews.rst:117
+#: ../manage/overviews.rst:119
 msgid ""
 "In which order should the tickets be displayed? (Sorted by the attributes)"
 msgstr ""
@@ -6651,7 +6809,7 @@ msgstr ""
 msgid "Sorting order"
 msgstr ""
 
-#: ../manage/overviews.rst:120
+#: ../manage/overviews.rst:122
 msgid "The direction of the sorting."
 msgstr ""
 
@@ -6659,7 +6817,7 @@ msgstr ""
 msgid "Grouping by"
 msgstr ""
 
-#: ../manage/overviews.rst:123
+#: ../manage/overviews.rst:125
 msgid "Should the tickets be grouped by a specific attribute within the list?"
 msgstr ""
 
@@ -6667,23 +6825,23 @@ msgstr ""
 msgid "Grouping order"
 msgstr ""
 
-#: ../manage/overviews.rst:126
+#: ../manage/overviews.rst:128
 msgid "The direction of the grouping."
 msgstr ""
 
-#: ../manage/overviews.rst:129
+#: ../manage/overviews.rst:131
 msgid ""
 "Should the overview be active or not? Rather than deleting an overview "
 "entirely, you can set it to inactive to make it unavailable to your users."
 msgstr ""
 
-#: ../manage/overviews.rst:135
+#: ../manage/overviews.rst:137
 msgid ""
 "Users can define their own overview order. Renaming or reordering overviews "
 "has no effect on custom orders!"
 msgstr ""
 
-#: ../manage/overviews.rst:138
+#: ../manage/overviews.rst:140
 msgid "You can learn more about this setting in the `user documentation`_."
 msgstr ""
 
@@ -8465,16 +8623,17 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:214
 #: ../misc/object-conditions/basics.rst:240
 #: ../misc/object-conditions/basics.rst:264
-#: ../misc/object-conditions/basics.rst:285
-#: ../misc/object-conditions/basics.rst:303
+#: ../misc/object-conditions/basics.rst:278
+#: ../misc/object-conditions/basics.rst:299
 #: ../misc/object-conditions/basics.rst:317
-#: ../misc/object-conditions/basics.rst:336
-#: ../misc/object-conditions/basics.rst:422
-#: ../misc/object-conditions/basics.rst:501
-#: ../misc/object-conditions/basics.rst:524
-#: ../misc/object-conditions/basics.rst:550
-#: ../misc/object-conditions/basics.rst:572
-#: ../misc/object-conditions/basics.rst:603
+#: ../misc/object-conditions/basics.rst:331
+#: ../misc/object-conditions/basics.rst:350
+#: ../misc/object-conditions/basics.rst:491
+#: ../misc/object-conditions/basics.rst:570
+#: ../misc/object-conditions/basics.rst:593
+#: ../misc/object-conditions/basics.rst:619
+#: ../misc/object-conditions/basics.rst:641
+#: ../misc/object-conditions/basics.rst:672
 #: ../settings/security/third-party.rst:85 ../settings/system/frontend.rst:54
 #: ../system/maintenance.rst:70 ../system/maintenance.rst:94
 msgid "X"
@@ -9102,45 +9261,48 @@ msgstr "Gestione del tempo"
 #: ../manage/time-accounting.rst:4
 msgid ""
 "If you want to know how much time you need for your each project or ticket, "
-"enable time accounting (turn on the switch on the top left side of the page)."
+"enable the time accounting (turn on the switch on the top left side of the "
+"page)."
 msgstr ""
 
 #: ../manage/time-accounting.rst:None
-msgid "Time accounting management page in Zammad"
+msgid "Time Accounting Management Screen in Zammad"
 msgstr ""
 
-#: ../manage/time-accounting.rst:11
+#: ../manage/time-accounting.rst:12
+#: ../settings/security/two-factor/authenticator-app.rst:10
+#: ../settings/security/two-factor/security-keys.rst:10
 msgid "How it works"
 msgstr ""
 
-#: ../manage/time-accounting.rst:13
+#: ../manage/time-accounting.rst:17
 msgid ""
-"Zammad's time accounting uses ticket selectors (filters) to check if a "
-"ticket is applicable for time accounting or not. If a ticket applies for "
-"accounting, Zammad will request the agent to provide how much time was "
+"Zammad's time accounting uses ticket **Selector** (filter) to check if a "
+"ticket is considered for the time accounting or not. If a ticket is "
+"applicable, Zammad will request the agent to provide how much time was "
 "needed to process the current ticket step."
-msgstr ""
-
-#: ../manage/time-accounting.rst:20
-msgid ""
-"In order for Zammad to bring up the time accounting dialogue to an agent, "
-"the agent has to update the ticket together with any article type. The "
-"article part is mandatory."
 msgstr ""
 
 #: ../manage/time-accounting.rst:24
 msgid ""
-"However, the time accounting dialogue is not mandatory and can be cancelled "
-"by your agents if needed. You cannot enforce time accounting."
+"In order for Zammad to bring up the time accounting dialog to an agent, the "
+"agent has to update the ticket together with an article of any type. The "
+"article part is mandatory."
 msgstr ""
 
-#: ../manage/time-accounting.rst:27
+#: ../manage/time-accounting.rst:28
 msgid ""
-"If a ticket no longer applies for time accounting, the already accounted "
-"time is not lost."
+"However, the time accounting dialog is not mandatory and can be canceled by "
+"your agents if needed. You cannot enforce time accounting."
 msgstr ""
 
-#: ../manage/time-accounting.rst:32
+#: ../manage/time-accounting.rst:31
+msgid ""
+"If a ticket is no longer considered for the time accounting, the already "
+"accounted time will be preserved."
+msgstr ""
+
+#: ../manage/time-accounting.rst:36
 msgid ""
 "The selector applies to the ticket state before any attribute changes have "
 "been saved. That means if your agent is e.g. going to close a ticket "
@@ -9149,18 +9311,138 @@ msgid ""
 msgstr ""
 
 #: ../manage/time-accounting.rst:None
-msgid "Time accounting ticket selectors"
-msgstr ""
+#, fuzzy
+msgid "Time Accounting Ticket Selector"
+msgstr "Gestione del tempo"
 
-#: ../manage/time-accounting.rst:44
-msgid "Reviewing accounted time"
-msgstr ""
-
-#: ../manage/time-accounting.rst:46
+#: ../manage/time-accounting.rst:47
 msgid ""
-"Below the selector configuration, Zammad provides an accounted time section "
-"which will contain all accounted times for your tickets. Accounted times are "
-"displayed per years and months."
+"By default, agents account time as a unitless numerical input. However, it "
+"is possible to show a specific unit by configuring **Unit** setting, which "
+"provides several options:"
+msgstr ""
+
+#: ../manage/time-accounting.rst:51
+msgid "no unit"
+msgstr ""
+
+#: ../manage/time-accounting.rst:52
+msgid "Default behavior, no unit is shown next to the time value."
+msgstr ""
+
+#: ../manage/time-accounting.rst:53
+msgid "hour(s)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:54
+msgid "Shows ``hour(s)`` as the unit next to the time value."
+msgstr ""
+
+#: ../manage/time-accounting.rst:55
+msgid "quarter-hour(s)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:56
+msgid "Shows ``quarter-hour(s)`` as the unit next to the time value."
+msgstr ""
+
+#: ../manage/time-accounting.rst:57
+msgid "minute(s)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:58
+msgid "Shows ``minute(s)`` as the unit next to the time value."
+msgstr ""
+
+#: ../manage/time-accounting.rst:60
+msgid "custom unit"
+msgstr ""
+
+#: ../manage/time-accounting.rst:60
+msgid "Shows a custom unit that can be specified as free input."
+msgstr ""
+
+#: ../manage/time-accounting.rst:None
+#, fuzzy
+msgid "Time Accounting Unit"
+msgstr "Gestione del tempo"
+
+#: ../manage/time-accounting.rst:67
+msgid "The configurable time accounting unit is used only for display!"
+msgstr ""
+
+#: ../manage/time-accounting.rst:69
+msgid ""
+"No numerical transformation will be applied to the values, the unit is "
+"merely used to indicate to the agents in which units their time is "
+"accounted. The original time values will be preserved."
+msgstr ""
+
+#: ../manage/time-accounting.rst:0
+#, fuzzy
+msgid "Time Accounting Unit when Recording"
+msgstr "Gestione del tempo"
+
+#: ../manage/time-accounting.rst:78
+msgid "Activity Types"
+msgstr ""
+
+#: ../manage/time-accounting.rst:80
+msgid ""
+"**Activity Types** can be used to group the different ticket time accounting "
+"entries together. For example, entries that are relevant to a \"Billing\" "
+"type."
+msgstr ""
+
+#: ../manage/time-accounting.rst:None
+#, fuzzy
+msgid "Time Accounting Activity Types"
+msgstr "Gestione del tempo"
+
+#: ../manage/time-accounting.rst:87
+msgid ""
+"When you enable the recording of the **Activity Type**, the agents will be "
+"able to select a type from this list."
+msgstr ""
+
+#: ../manage/time-accounting.rst:None
+msgid "Time Accounting Activity Type Selection for Agents"
+msgstr ""
+
+#: ../manage/time-accounting.rst:94
+msgid ""
+"Additionally, a column with an associated activity type will be rendered for "
+"an entry in the **Activity** table under the **Accounted Time** tab."
+msgstr ""
+
+#: ../manage/time-accounting.rst:97
+msgid ""
+"You can manage available activity types in this screen like any other Zammad "
+"object. Only active types will be available for the selection when recording "
+"new times."
+msgstr ""
+
+#: ../manage/time-accounting.rst:None
+msgid "New Time Accounting Activity Type Dialog"
+msgstr ""
+
+#: ../manage/time-accounting.rst:106
+msgid ""
+"Activity types can be set as default, and in that case they will be pre-"
+"selected for the agents when they are asked to account their time. It is "
+"also possible to unset default activity type, in which case no type will be "
+"pre-selected and the agents can make their choice."
+msgstr ""
+
+#: ../manage/time-accounting.rst:112
+msgid "Accounted Time"
+msgstr ""
+
+#: ../manage/time-accounting.rst:114
+msgid ""
+"Under the **Accounted Time** tab, Zammad provides a section for reviewing "
+"all accounted times for your tickets. Accounted times are displayed per "
+"years and months."
 msgstr ""
 
 #: ../manage/time-accounting.rst:0
@@ -9173,143 +9455,157 @@ msgid ""
 "partial billing."
 msgstr ""
 
-#: ../manage/time-accounting.rst:62
+#: ../manage/time-accounting.rst:131
 msgid "Select the right month"
 msgstr ""
 
-#: ../manage/time-accounting.rst:57
+#: ../manage/time-accounting.rst:125
 msgid ""
 "Usually you want to bill accounted time of other months than the current "
 "one. Just select the relevant year and month to receive the accounted times "
-"and ticket information"
+"and ticket information."
 msgstr ""
 
 #: ../manage/time-accounting.rst:0
 msgid "Screenshot showing a selection for year and month on time accounting"
 msgstr ""
 
-#: ../manage/time-accounting.rst:135
+#: ../manage/time-accounting.rst:209
 msgid "Tickets and their accounted time"
 msgstr ""
 
-#: ../manage/time-accounting.rst:65
+#: ../manage/time-accounting.rst:134
 msgid ""
 "Zammad allows you to receive the accounted information just like you need "
-"them. For this you currently have four options to view and also download the "
-"relevant data as CSV."
+"them. For this you currently have four options to review and also download "
+"the relevant data as CSV."
 msgstr ""
 
-#: ../manage/time-accounting.rst:69
+#: ../manage/time-accounting.rst:138
 msgid ""
-"To download the CSV data, use the arrow down ⇩ right next to each heading (e."
-"g. \"Ticket\")."
+"To download the CSV data, use the download button right next to each heading "
+"(e.g. \"Ticket\")."
 msgstr ""
 
-#: ../manage/time-accounting.rst:74
+#: ../manage/time-accounting.rst:143
 msgid "🤓 Of course you can also automate this with API calls."
 msgstr ""
 
-#: ../manage/time-accounting.rst:89
+#: ../manage/time-accounting.rst:146
+msgid ""
+"Only the first 20 entries are shown for each table. To see all of them, "
+"simply download the records in CSV."
+msgstr ""
+
+#: ../manage/time-accounting.rst:163
 msgid "Activity"
 msgstr ""
 
-#: ../manage/time-accounting.rst:77
+#: ../manage/time-accounting.rst:150
 msgid ""
 "This filter works similar to the ticket filter, with one exception: You'll "
 "find each *individual* time accounting step of your agents. This is what "
-"you'd also see in the tickets history before Zammad 5.2."
+"you'd also see in the ticket's history before Zammad 5.2."
 msgstr ""
 
-#: ../manage/time-accounting.rst:81 ../manage/time-accounting.rst:94
-#: ../manage/time-accounting.rst:115
+#: ../manage/time-accounting.rst:154 ../manage/time-accounting.rst:168
+#: ../manage/time-accounting.rst:189
 msgid "In this list you'll see the following ticket information:"
 msgstr ""
 
-#: ../manage/time-accounting.rst:83 ../manage/time-accounting.rst:96
-#: ../settings/ticket.rst:71
+#: ../manage/time-accounting.rst:156 ../manage/time-accounting.rst:170
+#: ../settings/ticket.rst:93
 msgid "Number"
 msgstr ""
 
-#: ../manage/time-accounting.rst:85 ../manage/time-accounting.rst:98
-#: ../manage/time-accounting.rst:119 ../manage/time-accounting.rst:117
+#: ../manage/time-accounting.rst:158 ../manage/time-accounting.rst:172
+#: ../manage/time-accounting.rst:193 ../manage/time-accounting.rst:191
 msgid "Customer"
 msgstr ""
 
-#: ../manage/time-accounting.rst:86 ../manage/time-accounting.rst:99
-#: ../manage/time-accounting.rst:118
+#: ../manage/time-accounting.rst:159 ../manage/time-accounting.rst:173
+#: ../manage/time-accounting.rst:192
 msgid "Organization of customer (if applicable)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:87
+#: ../manage/time-accounting.rst:160
 msgid "Agent that accounted the time"
 msgstr ""
 
-#: ../manage/time-accounting.rst:88 ../manage/time-accounting.rst:101
-#: ../manage/time-accounting.rst:119
-msgid "Time units accounted in the current month"
+#: ../manage/time-accounting.rst:161
+msgid "Time units accounted in the current activity"
 msgstr ""
 
-#: ../manage/time-accounting.rst:89 ../manage/time-accounting.rst:103
+#: ../manage/time-accounting.rst:162
+msgid "Activity type (if enabled)"
+msgstr ""
+
+#: ../manage/time-accounting.rst:163 ../manage/time-accounting.rst:177
 #: ../manage/webhook/log.rst:34
 msgid "Created at"
 msgstr ""
 
-#: ../manage/time-accounting.rst:108 ../settings/ticket.rst:2
+#: ../manage/time-accounting.rst:182 ../settings/ticket.rst:2
 #: ../system/variables/ticket.rst:2
 msgid "Ticket"
 msgstr ""
 
-#: ../manage/time-accounting.rst:92
+#: ../manage/time-accounting.rst:166
 msgid "This filter contains all relevant tickets from the selected month."
 msgstr ""
 
-#: ../manage/time-accounting.rst:100
+#: ../manage/time-accounting.rst:174
 msgid "Agent currently assigned (ticket owner)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:102
+#: ../manage/time-accounting.rst:175 ../manage/time-accounting.rst:193
+msgid "Time units accounted in the current month"
+msgstr ""
+
+#: ../manage/time-accounting.rst:176
 msgid "Time units total (time accounted during ticket life)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:104
+#: ../manage/time-accounting.rst:178
 msgid "Closed at (if applicable)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:108
+#: ../manage/time-accounting.rst:182
 msgid "The CSV file of this filter provides all ticket meta information."
 msgstr ""
 
-#: ../manage/time-accounting.rst:111
+#: ../manage/time-accounting.rst:185
 msgid ""
 "This provides you a per user filter on accounted time units. Each user has a "
 "total of time accounted in the current month (over all applicable tickets)."
 msgstr ""
 
-#: ../manage/time-accounting.rst:129 ../settings/branding.rst:13
+#: ../manage/time-accounting.rst:203 ../settings/branding.rst:13
 #: ../system/objects/permissions.rst:54
 msgid "Organization"
 msgstr ""
 
-#: ../manage/time-accounting.rst:122
+#: ../manage/time-accounting.rst:196
 msgid ""
 "This provides a list of all organizations where customers have caused "
 "accounted time in that month."
 msgstr ""
 
-#: ../manage/time-accounting.rst:127
+#: ../manage/time-accounting.rst:201
 msgid ""
-"You can also see entries for customers that are part of an primary "
-"organization. Users without organization can be found in the Customer filter."
+"You can also see entries for customers that are part of a primary "
+"organization. Users without am organization can be found in the Customer "
+"filter."
 msgstr ""
 
 #: ../manage/time-accounting.rst:0
 msgid "Time accounting view with time accounted filters"
 msgstr ""
 
-#: ../manage/time-accounting.rst:135
+#: ../manage/time-accounting.rst:209
 msgid ""
 "Each heading allows you to download the CSV versions of the provided view "
-"via the downwards arrow."
+"via the download button next to it."
 msgstr ""
 
 #: ../manage/trigger.rst:2
@@ -9895,10 +10191,6 @@ msgstr ""
 msgid "30-40 organizations at maximum *should* be good enough."
 msgstr ""
 
-#: ../manage/users/index.rst:136
-msgid "👑 VIP"
-msgstr ""
-
 #: ../manage/users/index.rst:126
 msgid ""
 "This flag is a way for your team to indicate high-status customers. Just as "
@@ -10114,7 +10406,7 @@ msgid ""
 "Locked accounts are indicated with a 🔒 lock icon on the left side."
 msgstr ""
 
-#: ../manage/users/via-the-admin-panel.rst:87
+#: ../manage/users/via-the-admin-panel.rst:88
 msgid "🏴‍☠️ Taking over a user’s session"
 msgstr ""
 
@@ -10160,6 +10452,26 @@ msgid ""
 "When finished, use the **Back to my view ✕** button at the top of the page. "
 "If you try to exit by logging out, the “hijacked” user session will be "
 "restored when you log back in."
+msgstr ""
+
+#: ../manage/users/via-the-admin-panel.rst:99
+msgid "🔑 Manage Two-Factor Authentication"
+msgstr ""
+
+#: ../manage/users/via-the-admin-panel.rst:0
+msgid "Screencast showing removal of user's two-factor method."
+msgstr ""
+
+#: ../manage/users/via-the-admin-panel.rst:95
+msgid ""
+"Use the ⋮ **Actions** menu to remove a user's configured two-factor method."
+msgstr ""
+
+#: ../manage/users/via-the-admin-panel.rst:98
+msgid ""
+"It's possible to remove a single or all of the user's configured methods, if "
+"they lose access. They can then set it up again by themselves via \"Avatar -"
+"> Profile -> Password & Authentication\"."
 msgstr ""
 
 #: ../manage/webhook.rst:2
@@ -11500,70 +11812,70 @@ msgstr ""
 msgid "Regular Webhooks (example)"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:336
+#: ../manage/webhook/payload.rst:337
 msgid ""
 "For better readability, all empty and ``null`` values have been omitted from "
 "the sample payload above. That means the webhooks you receive *will include "
 "additional fields not shown here*."
 msgstr ""
 
-#: ../manage/webhook/payload.rst:340
+#: ../manage/webhook/payload.rst:341
 msgid ""
 "Webhooks will also include fields for any relevant :doc:`custom objects </"
 "system/objects>` defined in your system."
 msgstr ""
 
-#: ../manage/webhook/payload.rst:343
+#: ../manage/webhook/payload.rst:344
 msgid ""
 "Attachments are *not included*; links to attachments *are* (authentication "
 "required)."
 msgstr ""
 
-#: ../manage/webhook/payload.rst:346
+#: ../manage/webhook/payload.rst:347
 msgid "Linked tickets are *not included*."
 msgstr ""
 
-#: ../manage/webhook/payload.rst:348
+#: ../manage/webhook/payload.rst:349
 msgid "None of the following **user attributes** are included:"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:350
+#: ../manage/webhook/payload.rst:351
 msgid "``last_login``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:351
+#: ../manage/webhook/payload.rst:352
 msgid "``login_failed``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:352
+#: ../manage/webhook/payload.rst:353
 msgid "``password``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:353
+#: ../manage/webhook/payload.rst:354
 msgid "``preferences``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:354
+#: ../manage/webhook/payload.rst:355
 msgid "``group_ids``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:355
+#: ../manage/webhook/payload.rst:356
 msgid "``groups``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:356
+#: ../manage/webhook/payload.rst:357
 msgid "``authorization_ids``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:357
+#: ../manage/webhook/payload.rst:358
 msgid "``authorizations``"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:360
+#: ../manage/webhook/payload.rst:361
 msgid "Pre-defined Webhooks"
 msgstr ""
 
-#: ../manage/webhook/payload.rst:362
+#: ../manage/webhook/payload.rst:363
 msgid ""
 "Each pre-defined webhook template provides a special payload designed for a "
 "particular service. See :doc:`/manage/webhook/examples` for more information."
@@ -11799,8 +12111,8 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:176
 #: ../misc/object-conditions/basics.rst:227
 #: ../misc/object-conditions/basics.rst:252
-#: ../misc/object-conditions/basics.rst:537
-#: ../misc/object-conditions/basics.rst:590
+#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:659
 msgid "Offered values (multiple choice):"
 msgstr ""
 
@@ -11863,8 +12175,8 @@ msgid "What ticket customer is affected (or not)?"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
-#: ../misc/object-conditions/basics.rst:359
-#: ../misc/object-conditions/basics.rst:365
+#: ../misc/object-conditions/basics.rst:428
+#: ../misc/object-conditions/basics.rst:434
 msgid "Available matching: *is*, *is not* or *has changed*"
 msgstr ""
 
@@ -12040,15 +12352,32 @@ msgid ""
 "*Affects one or more specific users that have subscribed to the ticket.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:285
+#: ../misc/object-conditions/basics.rst:278
+#, fuzzy
+msgid "Time Accounting *(Scope: Ticket article)*"
+msgstr "Gestione del tempo"
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Is time accounted for an article?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Available matching: *is set* or *not set*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:274
+msgid "Allows you to check if time is accounted for an article."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:299
 msgid "Type *(Scope: Ticket article)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:267
+#: ../misc/object-conditions/basics.rst:281
 msgid "**If you're unsure what article type you're looking for...**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:269
+#: ../misc/object-conditions/basics.rst:283
 msgid "Click on a message to see detailed information about it."
 msgstr ""
 
@@ -12060,11 +12389,11 @@ msgstr ""
 msgid "What's the articles type (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:281
+#: ../misc/object-conditions/basics.rst:295
 msgid "Offers all available article types of your instance (e.g. *email*)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:303
+#: ../misc/object-conditions/basics.rst:317
 msgid "Visibility *(Scope: Ticket article)*"
 msgstr ""
 
@@ -12072,12 +12401,12 @@ msgstr ""
 msgid "What's the articles visibility (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:298
+#: ../misc/object-conditions/basics.rst:312
 msgid ""
 "Allows you to check if the article in question is either internal or public."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:317
+#: ../misc/object-conditions/basics.rst:331
 msgid "Sender *(Scope: Ticket article)*"
 msgstr ""
 
@@ -12085,15 +12414,15 @@ msgstr ""
 msgid "What user role does the sender of the article have (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:313
+#: ../misc/object-conditions/basics.rst:327
 msgid "Determine the sender of the message: System, Agent or Customer."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:337
+#: ../misc/object-conditions/basics.rst:351
 msgid "Calendar *(Scope: Execution time)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:320
+#: ../misc/object-conditions/basics.rst:334
 msgid "This field is only available for Trigger and Scheduler conditions!"
 msgstr ""
 
@@ -12106,58 +12435,141 @@ msgstr ""
 msgid "Available matching: *is in working time* or *is not in working time*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:330
+#: ../misc/object-conditions/basics.rst:344
 msgid ""
 "Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to "
 "check whether the defined business hours are met. This allows time based "
 "events like out of business hours responses."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:340
+#: ../misc/object-conditions/basics.rst:354
 msgid "Text field (input)"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:344
+#: ../misc/object-conditions/basics.rst:358
 msgid ""
-"The configured \"Type\" of input fields as no impact on the available "
+"The configured \"Type\" of input fields has no impact on the available "
 "options."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:346
+#: ../misc/object-conditions/basics.rst:360
 msgid "Check if any field of type text contains a specific string (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:347
-#: ../misc/object-conditions/basics.rst:353
-msgid "Available matching: *contains*, *contains not* or *has changed*"
+#: ../misc/object-conditions/basics.rst:362
+msgid "Available operators for matching:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:350 ../system/objects/types.rst:113
+#: ../misc/object-conditions/basics.rst:365
+msgid "Matches if text contains a specific string."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:368
+msgid "Matches if text does not contain a specific string."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:371
+msgid "Matches if text is equal to any of given tokens."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:374
+msgid "Matches if text is not equal to all of given tokens."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:377
+msgid "Matches if text starts with one of given tokens."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:380
+msgid "Matches if text ends with one of given tokens."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:383
+msgid "Evaluates if text matches provided regular expression."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:386
+msgid "Evaluates if text does not match provided regular expression."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:389
+msgid "**Regex support**"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:391
+msgid ""
+"*matches regex* and *does not match regex* are supported only in Triggers, "
+"Time Accounting selector, Postmaster Filters, Automatic ticket assignment "
+"and Core Workflow."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:396
+msgid "**What about my \"old\" style** ``regex:...`` **filters?**"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:398
+msgid ""
+"If you update your Zammad from 6.0 or prior and you have already conditions "
+"with *contains* or *contains not* including a regex filter (i.e. ``regex:"
+"^(foo|bar)$``), Zammad tries to migrate them to the new *matches regex* and "
+"*does not match regex* operators."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:404
+msgid "**Differences in input fields**"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:406
+msgid ""
+"Please note, that the input field for tokens doesn't support the comma as "
+"separator (as in the input field for tags). If you use the comma in the "
+"token input field, the comma is included in you token."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:410
+msgid "**Example**:"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Example of comma usage in token input field"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:415
+msgid ""
+"``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
+"in one token)."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:419 ../system/objects/types.rst:135
 msgid "Textarea field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:352
+#: ../misc/object-conditions/basics.rst:421
 msgid ""
 "Check if any field of type textarea contains a specific string (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:356 ../system/objects/types.rst:16
+#: ../misc/object-conditions/basics.rst:422
+msgid "Available matching: *contains*, *contains not* or *has changed*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:425 ../system/objects/types.rst:38
 msgid "Boolean field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:358
+#: ../misc/object-conditions/basics.rst:427
 msgid "Check if any field of type boolean is true (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:362 ../system/objects/types.rst:57
+#: ../misc/object-conditions/basics.rst:431 ../system/objects/types.rst:79
 msgid "Integer field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:364
+#: ../misc/object-conditions/basics.rst:433
 msgid "Check if any field of type integer has a specific value (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:368 ../system/objects/types.rst:26
+#: ../misc/object-conditions/basics.rst:437 ../system/objects/types.rst:48
 msgid "Date field"
 msgstr ""
 
@@ -12214,8 +12626,8 @@ msgstr ""
 msgid "*has changed*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:379
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:448
+#: ../misc/object-conditions/basics.rst:519
 msgid "Offered values and options:"
 msgstr ""
 
@@ -12277,17 +12689,17 @@ msgstr ""
 msgid "*The field has been changed during a ticket update.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:424
+#: ../misc/object-conditions/basics.rst:493
 msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:430
+#: ../misc/object-conditions/basics.rst:499
 msgid "Date & Time field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:434
+#: ../misc/object-conditions/basics.rst:503
 msgid ""
 "An example for this field type are all default fields handling updated at, "
 "created at and closed at timings."
@@ -12298,12 +12710,12 @@ msgid ""
 "Check if the given date & time is past or relatively past a specific period?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:445
+#: ../misc/object-conditions/basics.rst:514
 #: ../misc/object-conditions/basics.rst:0
 msgid "*has reached*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:446
+#: ../misc/object-conditions/basics.rst:515
 #: ../misc/object-conditions/basics.rst:0
 msgid "*has reached warning*"
 msgstr ""
@@ -12376,14 +12788,14 @@ msgstr ""
 msgid "*The time set in this field will be reached in less than 15 minutes*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:503
+#: ../misc/object-conditions/basics.rst:572
 msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you. Below is a carbon copy of the date variant and "
 "applies exactly the same just you having hours and minutes on top to use."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:510 ../system/objects/types.rst:83
+#: ../misc/object-conditions/basics.rst:579 ../system/objects/types.rst:105
 msgid "Single selection field"
 msgstr ""
 
@@ -12391,15 +12803,15 @@ msgstr ""
 msgid "Checks selected field values to match actual attribute value (or not)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:519
-#: ../misc/object-conditions/basics.rst:567
+#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:636
 msgid ""
 "Allows you to select one or more values of the attribute in question. "
 "Selecting more than one value in the condition will act like an \"OR\" "
 "clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:527 ../system/objects/types.rst:70
+#: ../misc/object-conditions/basics.rst:596 ../system/objects/types.rst:92
 msgid "Multiple selection field"
 msgstr ""
 
@@ -12423,18 +12835,18 @@ msgstr ""
 msgid "*Matches if one specific given field value is not selected.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:553 ../system/objects/types.rst:145
+#: ../misc/object-conditions/basics.rst:622 ../system/objects/types.rst:167
 msgid "Single tree selection field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:557
-#: ../misc/object-conditions/basics.rst:579
+#: ../misc/object-conditions/basics.rst:626
+#: ../misc/object-conditions/basics.rst:648
 msgid ""
 "This attribute type technically allows several layers of values. You cannot "
 "match a parent layer to match all of it's childs."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:575 ../system/objects/types.rst:154
+#: ../misc/object-conditions/basics.rst:644 ../system/objects/types.rst:176
 msgid "Multiple tree selection field"
 msgstr ""
 
@@ -12658,7 +13070,6 @@ msgstr ""
 
 #: ../misc/object-conditions/index.rst:30
 #, fuzzy
-#| msgid "Getting a fast response"
 msgid "Getting started"
 msgstr "Ottenere una risposta rapida"
 
@@ -13381,7 +13792,7 @@ msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:44
 #: ../settings/security/third-party/github.rst:43
-#: ../settings/security/third-party/gitlab.rst:49
+#: ../settings/security/third-party/gitlab.rst:46
 #: ../settings/security/third-party/twitter.rst:50
 msgid ""
 "Now you can link accounts via \"Avatar -> Profile -> Link Accounts\" or "
@@ -13449,7 +13860,7 @@ msgid "GitHub oauth page"
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:40
-#: ../settings/security/third-party/gitlab.rst:45
+#: ../settings/security/third-party/gitlab.rst:42
 msgid ""
 "When you grant the access you will be redirected to your Zammad instance and "
 "logged in as a customer."
@@ -13475,8 +13886,8 @@ msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:12
 msgid ""
-"As callback URL enter \"https://zammad_host/auth/gitlab/callback\" where "
-"zammad_host has to be replaced with your Zammad FQDN"
+"As callback URL enter \"https://zammad-fqdn/auth/gitlab/callback\" where "
+"zammad-fqdn has to be replaced with your Zammad FQDN"
 msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:None
@@ -13484,30 +13895,24 @@ msgid "Register OAuth app on gitlab instance"
 msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:18
-msgid ""
-"At the moment we need the \"api\" scope. This is caused due a bug in Gitlab: "
-"https://gitlab.com/gitlab-org/gitlab-ce/issues/33022"
+msgid "Just select *read_user* under scopes as in the screenshot and save it."
 msgstr ""
 
-#: ../settings/security/third-party/gitlab.rst:22
+#: ../settings/security/third-party/gitlab.rst:21
 msgid "Configure Zammad as Gitlab app"
 msgstr ""
 
-#: ../settings/security/third-party/gitlab.rst:24
+#: ../settings/security/third-party/gitlab.rst:23
 msgid ""
 "Enter the \"APP ID\" and the \"APP SECRET\" from the Gitlab OAUTH "
-"Applications Dashboard."
-msgstr ""
-
-#: ../settings/security/third-party/gitlab.rst:27
-msgid "Please ensure to use ``https://{git_host}/api/v4/`` for site."
+"Applications Dashboard and your Gitlab-URL in the \"SITE\" field."
 msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:None
 msgid "Gitlab config in Zammad admin interface"
 msgstr ""
 
-#: ../settings/security/third-party/gitlab.rst:33
+#: ../settings/security/third-party/gitlab.rst:30
 msgid ""
 "After you configured the Gitlab credentials and activated the login method, "
 "you should see a new icon on the login page."
@@ -13517,7 +13922,7 @@ msgstr ""
 msgid "Gitlab logo on login page"
 msgstr ""
 
-#: ../settings/security/third-party/gitlab.rst:39
+#: ../settings/security/third-party/gitlab.rst:36
 msgid ""
 "If you click on the icon you will be redirected to Gitlab and see something "
 "similar to this:"
@@ -13891,89 +14296,88 @@ msgstr ""
 msgid "Per-IdP Instructions"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:101
+#: ../settings/security/third-party/saml.rst:105
 msgid "Keycloak"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:68
 msgid ""
 "**To add Zammad as a client,** save the XML configuration to disk (``https://"
-"your.zammad.domain/auth/saml/metadata``) and use **Clients > Create > "
-"Import** in the Keycloak admin panel."
+"your.zammad.domain/auth/saml/metadata``) and use **Clients > Clients list > "
+"Import client** in the Keycloak admin panel."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:73
 msgid ""
-"**To help Zammad match its own user accounts to Keycloak users,** create a "
-"user attribute (or “property”) mapper:"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:76
-msgid ""
-"**Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > "
-"Create**"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:78
-msgid "**Name**"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:79
-#: ../settings/security/third-party/saml.rst:83
-msgid "``emailAddress``"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:80
-msgid "**Mapper Type**"
+"To help Zammad **match its own user accounts to Keycloak users**, create a "
+"user attribute (or “property”) mapper. In **Clients list**, click on your "
+"newly created Client ID, choose the tab **Client scopes** and click on the "
+"link which refers to your Zammad instance. Choose **Add mapper > By "
+"configuration > User Property** and create a mapper with the following "
+"entries:"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:81
-msgid "``User Property``"
+msgid "**Name**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:82
-msgid "**Property**"
+#: ../settings/security/third-party/saml.rst:83
+msgid "**Mapper Type**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:84
-msgid "**SAML Attribute Name**"
+msgid "``User Property``"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:85
+msgid "**Property**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:86
-msgid "**SAML Attribute NameFormat**"
+msgid "``emailAddress``"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:87
-msgid "``basic``"
+msgid "**SAML Attribute Name**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:89
-msgid ""
-"In the example above, we’re telling Zammad that whenever it receives a SAML "
-"login request, it should take the ``emailAddress`` property from Keycloak, "
-"look for a Zammad user with the same ``email`` attribute, and create a new "
-"session for that user."
+msgid "**SAML Attribute NameFormat**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:95
+#: ../settings/security/third-party/saml.rst:90
+msgid "``basic``"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:92
+msgid ""
+"In the example above, we’re telling Zammad that whenever it receives a SAML "
+"login request, it should take the ``email`` property from Keycloak, look for "
+"a Zammad user with the same ``email`` attribute, and create a new session "
+"for that user."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:98
 msgid ""
 "If your Keycloak users’ email addresses are stored on another property (*e."
 "g.,* ``username``), adjust accordingly."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:98
-msgid "Make sure the **Client ID** matches the **Master SAML Processing URL**."
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:100
-msgid "You need to enable **Sign assertions**."
+#: ../settings/security/third-party/saml.rst:101
+msgid ""
+"Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/"
+"saml/metadata``) in the field **Master SAML Processing URL**."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:104
+msgid "You also need to enable **Sign assertions**."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:108
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:106
+#: ../settings/security/third-party/saml.rst:110
 msgid ""
 "Enable SAML and enter your IdP’s details in the Admin Panel under **Settings "
 "> Security > Third Party Applications > Authentication via SAML**:"
@@ -13983,56 +14387,56 @@ msgstr ""
 msgid "Example configuration of SAML"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml.rst:120
 msgid "Display name"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:113
+#: ../settings/security/third-party/saml.rst:117
 msgid ""
 "Allows you to define a custom button name for SAML. This helps your users to "
 "understand better what the button on the login page does."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml.rst:120
 msgid "Defaults to ``SAML``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:120
+#: ../settings/security/third-party/saml.rst:124
 msgid "IDP SSO Target URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:119
+#: ../settings/security/third-party/saml.rst:123
 msgid ""
 "This is the target URL Zammad shall redirect to when the user presses the "
 "SAML button. For Keycloak, this needs to look like https://your.domain/"
 "realms/your-realm/protocol/saml"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:124
+#: ../settings/security/third-party/saml.rst:128
 msgid "IDP Certificate"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:123
+#: ../settings/security/third-party/saml.rst:127
 msgid ""
 "The public certificate of your IDP for Zammad to verify during the callback "
 "phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:138
+#: ../settings/security/third-party/saml.rst:142
 msgid "IDP Certificate fingerprint"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:127
+#: ../settings/security/third-party/saml.rst:131
 msgid ""
 "The fingerprint of your IDPs public certificate to verify during callback "
 "phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:130
+#: ../settings/security/third-party/saml.rst:134
 msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:132
+#: ../settings/security/third-party/saml.rst:136
 msgid ""
 "Provide **only one or the other**—do not provide both! (Between the two, we "
 "recommend the signing certificate itself: fingerprints use SHA-1, which `has "
@@ -14040,47 +14444,47 @@ msgid ""
 "sha1_broken.html>`_.)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:137
+#: ../settings/security/third-party/saml.rst:141
 msgid ""
 "**Keycloak users:** Find your certificate in the Keycloak admin panel under "
-"**Realm Settings > Keys > RSA > Certificate**."
+"**Realm Settings > Keys > Algorithm: RS256 > Certificate**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:146
+#: ../settings/security/third-party/saml.rst:150
 msgid "Name Identifier format"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:141
+#: ../settings/security/third-party/saml.rst:145
 msgid ""
 "This is the unique identifiers field type. Usually should be ``urn:oasis:"
 "names:tc:SAML:1.1:nameid-format:emailAddress`` in any case."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:146
+#: ../settings/security/third-party/saml.rst:150
 msgid "Zammad expects an email address as unique identifier!"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:150
+#: ../settings/security/third-party/saml.rst:154
 msgid "Your callback URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:149
+#: ../settings/security/third-party/saml.rst:153
 msgid ""
 "This URL is needed for your IDP configuration so it knows where to redirect "
 "to after successful authentication."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:152
+#: ../settings/security/third-party/saml.rst:156
 msgid ""
 "See :ref:`automatic account linking <automatic-account-linking>` for details "
 "on how to link existing Zammad accounts to IdP accounts."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:158
+#: ../settings/security/third-party/saml.rst:162
 msgid "Automatic account linking doesn’t work"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:159
+#: ../settings/security/third-party/saml.rst:163
 msgid ""
 "Have you double-checked your IdP’s user attribute mapping configuration?"
 msgstr ""
@@ -14161,6 +14565,213 @@ msgstr ""
 msgid ""
 "Fill in the \"Twitter Key\" and the \"Twitter Secret\" and click the \"Submit"
 "\" button."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:11
+msgid "Two-factor Authentication Methods"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:2
+msgid "Two-Factor Authentication"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:4
+msgid ""
+"Two-factor authentication (2FA) enhances the security of Zammad accounts by "
+"adding an extra layer of verification beyond a password. It requires users "
+"to provide two different types of authentication factors, typically "
+"something they know (like a password) and something they possess (like a "
+"mobile device or a security token), to ensure that only authorized "
+"individuals can access the account."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:19
+msgid "Enable Recovery Codes"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:22
+msgid ""
+"Recovery codes cannot be used on their own, they can only be activated if at "
+"least one two-factor authentication method is enabled."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:25
+msgid ""
+"Recovery codes are one-time use security codes that can be used by the user "
+"if they lose access to their other two-factor authentication methods."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:None
+msgid "Enable Recovery Codes Setting"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:32
+msgid ""
+"Recovery codes can only be used as a backup method. If enabled, they will be "
+"automatically generated for the user once they set up their initial two-"
+"factor authentication method."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:36
+msgid ""
+"The user will be asked to print out or save the generated recovery codes in "
+"a safe place. Once used, a recovery code cannot be reused."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:39
+msgid ""
+"Users will also have an option to regenerate their recovery codes at any "
+"time, which invalidates already existing recovery codes and provides them "
+"with a list of fresh codes."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:44
+msgid ""
+"After you enable this setting, when the user completes a setup of their "
+"initial two-factor authentication method, they will be presented with a list "
+"of recovery codes and instructed to save them for later use."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:0
+msgid "Recovery Codes Generation Modal Dialog"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:53
+msgid "Enforce the set up of the two-factor authentication"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:56
+msgid ""
+"You must have at least one two-factor authentication method enabled for this "
+"setting to take effect."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:59
+msgid ""
+"In case you wish to require your users to set up at least one two-factor "
+"authentication method for their account, you can do this by selecting "
+"specific user roles the requirement applies to in **Enforced for user "
+"roles** setting."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:None
+msgid "Enforced for User Roles Setting"
+msgstr ""
+
+#: ../settings/security/two-factor.rst:68
+msgid ""
+"After you change this setting, if the user has one of the selected roles on "
+"their account, they will be forced to set up the two-factor authentication "
+"upon next sign in or application reload."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:72
+msgid ""
+"A modal dialog with instructions will be shown, and they will not be able to "
+"do any work before they set up at least one two-factor method."
+msgstr ""
+
+#: ../settings/security/two-factor.rst:0
+msgid "Modal Dialog for Enforcing Two-Factor Authentication Set Up"
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:2
+msgid "Authenticator App"
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:4
+msgid ""
+"The authenticator app method is a type of two-factor authentication that "
+"uses a mobile application to generate one-time codes for account "
+"verification. After setting up the authenticator app on their device, the "
+"user links it to their Zammad account."
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:12
+msgid ""
+"When logging in, the user is prompted to enter a time-sensitive code "
+"generated by the app, in addition to their password. This code acts as the "
+"second factor of authentication, providing an extra layer of security as it "
+"changes periodically and is unique to the user's device."
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:None
+msgid "Security Code in Google Authenticator App"
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:22
+msgid ""
+"The app generates codes based on a shared secret key stored securely on both "
+"the user's device and the server, ensuring a synchronized and secure "
+"authentication process. The method of generating the codes is sometimes also "
+"called TOTP (time-based one-time password)."
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:28
+msgid "Enabling the Authenticator App method"
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:30
+#: ../settings/security/two-factor/security-keys.rst:28
+msgid "To enable the method, just toggle the switch on in the settings."
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:None
+msgid "Authenticator App Switch in Settings"
+msgstr ""
+
+#: ../settings/security/two-factor/authenticator-app.rst:36
+msgid ""
+"Now the users will be able to set up this two-factor authentication method "
+"for their accounts via \"Avatar -> Profile -> Password & Authentication\". "
+"Once they do, on next sign-in with password, they will be asked to provide "
+"an additional security code generated by their mobile device."
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:2
+msgid "Security Keys"
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:4
+msgid ""
+"The security keys method is a type of a two-factor authentication that uses "
+"Web Authentication API in the browser for verifying user's identity. The "
+"user can register multiple hardware or software security keys with their "
+"Zammad account and then they can use it during the sign-in process."
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:12
+msgid ""
+"When logging in, the user is prompted to provide the same security key they "
+"registered with their account, in addition to their password. This key acts "
+"as the second factor of authentication, providing an extra layer of security."
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:None
+msgid "Security Key dialog in Safari on macOS"
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:21
+msgid ""
+"The type of the key can range from hardware USB sticks to passkeys stored in "
+"a device of user's choice. Which type can be used depends on the browser "
+"flavor and the platform of the user."
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:26
+msgid "Enabling the Security Keys method"
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:None
+msgid "Security Keys Switch in Settings"
+msgstr ""
+
+#: ../settings/security/two-factor/security-keys.rst:34
+msgid ""
+"Now the users will be able to set up this two-factor authentication method "
+"for their accounts via \"Avatar -> Profile -> Password & Authentication\". "
+"Once they do, on next sign-in with password, they will be asked to provide "
+"the same security key they registered during the setup."
 msgstr ""
 
 #: ../settings/system/system-selfhosted.include.rst:1
@@ -14564,7 +15175,7 @@ msgid ""
 "unexpected results!"
 msgstr ""
 
-#: ../settings/ticket.rst:68
+#: ../settings/ticket.rst:67
 msgid ""
 "Ticket Last Contact Behaviour (default: ``Use the start time of the last "
 "customer thread (which may consist of multiple articles).``)"
@@ -14617,35 +15228,85 @@ msgid "Last contact value used on :doc:`/manage/trigger`"
 msgstr ""
 
 #: ../settings/ticket.rst:90
-msgid "Ticket Number Format (default: ``Increment (SystemID.Counter)``)"
+msgid ""
+"Ticket Organization Reassignment (default: ``Update the most recent tickets."
+"``)"
+msgstr ""
+
+#: ../settings/ticket.rst:70
+msgid ""
+"This setting changes the way Zammad updates the organization field of the "
+"tickets whenever the primary organization of a user is changed."
+msgstr ""
+
+#: ../settings/ticket.rst:76
+msgid "Update the most recent tickets."
 msgstr ""
 
 #: ../settings/ticket.rst:74
+msgid ""
+"If this option is chosen, Zammad will update the 100 most recent tickets "
+"where the user is the ticket customer. The ticket organization field will be "
+"automatically set to the new primary organization of the user."
+msgstr ""
+
+#: ../settings/ticket.rst:90
+msgid "Do not update any tickets."
+msgstr ""
+
+#: ../settings/ticket.rst:79
+msgid ""
+"When choosing this option, Zammad will not update any tickets when the "
+"user's primary organization is changed."
+msgstr ""
+
+#: ../settings/ticket.rst:82
+msgid "**Use with care!**"
+msgstr ""
+
+#: ../settings/ticket.rst:84
+msgid ""
+"Using this option may lead to inconsistencies in the system as the ticket "
+"organization may become decoupled from the ticket customer."
+msgstr ""
+
+#: ../settings/ticket.rst:87
+msgid ""
+"However, you may use this option if you wish to maintain :ref:`the shared "
+"access <organization-details-reference>` to the ticket for all organization "
+"members of the original organization of the customer."
+msgstr ""
+
+#: ../settings/ticket.rst:112
+msgid "Ticket Number Format (default: ``Increment (SystemID.Counter)``)"
+msgstr ""
+
+#: ../settings/ticket.rst:96
 msgid ""
 "This setting defines the way Zammad's ticket number will look. Changing this "
 "setting in production will cause follow up detection to fail."
 msgstr ""
 
-#: ../settings/ticket.rst:82
+#: ../settings/ticket.rst:104
 msgid "Increment (SystemID.Counter)"
 msgstr ""
 
-#: ../settings/ticket.rst:78
+#: ../settings/ticket.rst:100
 msgid ""
 "The increment value contains the SystemID (automatically generated during "
 "installation) and a increment which counts up with every new Ticket. The "
 "increment will automatically get another digit if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:82
+#: ../settings/ticket.rst:104
 msgid "Examples: ``1010138``, ``1010139``"
 msgstr ""
 
-#: ../settings/ticket.rst:90
+#: ../settings/ticket.rst:112
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr ""
 
-#: ../settings/ticket.rst:85
+#: ../settings/ticket.rst:107
 msgid ""
 "This version of the ticket number is fairly long. However, because it "
 "contains the date of ticket creation, it also allows you to see when the "
@@ -14653,48 +15314,48 @@ msgid ""
 "you've worked with OTRS already."
 msgstr ""
 
-#: ../settings/ticket.rst:90
+#: ../settings/ticket.rst:112
 msgid "Examples: ``201206231010138``, ``201206231010139``"
 msgstr ""
 
-#: ../settings/ticket.rst:119
+#: ../settings/ticket.rst:141
 msgid "OPTIONS"
 msgstr ""
 
-#: ../settings/ticket.rst:93
+#: ../settings/ticket.rst:115
 msgid ""
 "The below options allow you to further customize your ticket number. The "
 "availability of options differ depending of the chosen ticket number format "
 "above."
 msgstr ""
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:124
 msgid "Checksum (default: ``no``)"
 msgstr ""
 
-#: ../settings/ticket.rst:98
+#: ../settings/ticket.rst:120
 msgid ""
 "If set to yes, we'll built a checksum to further \"unique\" the ticket "
 "number of your system. If you're dealing with many other ticket systems this "
 "might help to prevent false positive follow up detection on tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:124
 msgid "This will also add another digit to the ticket number."
 msgstr ""
 
-#: ../settings/ticket.rst:119
+#: ../settings/ticket.rst:141
 msgid "Min. size of Number (default: ``5``)"
 msgstr ""
 
-#: ../settings/ticket.rst:105
+#: ../settings/ticket.rst:127
 msgid ""
 "This setting defines the minimum length of your ticket number. If your "
 "counter is not yet high enough, Zammad will fill the number with zeros to "
 "ensure the wanted length."
 msgstr ""
 
-#: ../settings/ticket.rst:109
+#: ../settings/ticket.rst:131
 msgid ""
 "Please note that the minimum length is ``3`` (SystemID + at least one digit "
 "if below 10). Also, if the length is no longer long enough, the number will "
@@ -14702,17 +15363,17 @@ msgid ""
 "it's save to keep it at 5 or set it lower if wanted."
 msgstr ""
 
-#: ../settings/ticket.rst:117
+#: ../settings/ticket.rst:139
 msgid ""
 "This option is only available if ticket number format is set to "
 "``Increment``!"
 msgstr ""
 
-#: ../settings/ticket.rst:124
+#: ../settings/ticket.rst:146
 msgid "Auto-Assignment"
 msgstr ""
 
-#: ../settings/ticket.rst:126
+#: ../settings/ticket.rst:148
 msgid ""
 "In a larger Zammad environment, it happens that several agents open the same "
 "ticket at the same time. Although collision detection is then effective, the "
@@ -14720,46 +15381,46 @@ msgid ""
 "assignment of tickets when a ticket is opened."
 msgstr ""
 
-#: ../settings/ticket.rst:133
+#: ../settings/ticket.rst:155
 msgid ""
 "Auto Assignment only kicks in if the ticket has no owner yet. By default the "
 "agent can always reset the ticket owner to ``-`` if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:136
+#: ../settings/ticket.rst:158
 msgid ""
 "The automatic assignment of tickets can be activated and configured in the "
 "admin area under within Settings -> Ticket -> Auto assignment."
 msgstr ""
 
-#: ../settings/ticket.rst:139
+#: ../settings/ticket.rst:161
 msgid ""
 "If you want to use this function for only specific tickets, you can "
 "configure the conditions accordingly to meet your requirement. By default "
 "the condition affects all tickets with the state ``open``."
 msgstr ""
 
-#: ../settings/ticket.rst:145
+#: ../settings/ticket.rst:167
 msgid ""
 "If you need to exclude users (e.g. a group leader), you can search and "
 "select the desired agents in the ``Exception Users`` list."
 msgstr ""
 
-#: ../settings/ticket.rst:150
+#: ../settings/ticket.rst:172
 msgid ""
 "The search function in this area is only effective, if you have too many "
 "agents to display at once to help you with the configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:154
+#: ../settings/ticket.rst:176
 msgid "Notifications"
 msgstr ""
 
-#: ../settings/ticket.rst:179
+#: ../settings/ticket.rst:201
 msgid "Default Notifications"
 msgstr ""
 
-#: ../settings/ticket.rst:157
+#: ../settings/ticket.rst:179
 msgid ""
 "This setting allows you to configure the default ticket notifications that "
 "will be applied to all new agent users (incl. users who were just assigned "
@@ -14767,61 +15428,61 @@ msgid ""
 "press **Save**."
 msgstr ""
 
-#: ../settings/ticket.rst:162
+#: ../settings/ticket.rst:184
 msgid ""
 "In case an agent already exists, their ticket notification preferences will "
 "be preserved. Optionally, you can also **Apply current defaults to all "
 "agents**."
 msgstr ""
 
-#: ../settings/ticket.rst:166
+#: ../settings/ticket.rst:188
 msgid "**🥵 Potential time-consuming action**"
 msgstr ""
 
-#: ../settings/ticket.rst:168
+#: ../settings/ticket.rst:190
 msgid ""
 "Applying default ticket notifications to all agent users may take some time "
 "to complete, be patient! The exact time will depend on the size of your "
 "system and the number of agents."
 msgstr ""
 
-#: ../settings/ticket.rst:172
+#: ../settings/ticket.rst:194
 msgid "**Active agents only!**"
 msgstr ""
 
-#: ../settings/ticket.rst:174
+#: ../settings/ticket.rst:196
 msgid ""
 "When current default ticket notifications are applied, only active agent "
 "users are considered. In case an agent is re-activated *after* this action, "
 "they will still have the old notification configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:178
+#: ../settings/ticket.rst:200
 msgid ""
 "In case you want to go back to the initial state of ticket notifications, "
 "you can click on **Reset to default** button."
 msgstr ""
 
-#: ../settings/ticket.rst:182
+#: ../settings/ticket.rst:204
 msgid "Duplicate Detection"
 msgstr ""
 
-#: ../settings/ticket.rst:224
+#: ../settings/ticket.rst:246
 msgid "Detect Duplicate Ticket Creation"
 msgstr ""
 
-#: ../settings/ticket.rst:185
+#: ../settings/ticket.rst:207
 msgid ""
 "This setting turns on the duplicate ticket detection mechanism during ticket "
 "creation. If similar tickets are found in the system, a suitable warning "
 "will be shown to the user trying to create a ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:192
+#: ../settings/ticket.rst:214
 msgid "A Sample Duplicate Ticket Warning"
 msgstr ""
 
-#: ../settings/ticket.rst:194
+#: ../settings/ticket.rst:216
 msgid ""
 "You can choose which ticket attributes will be matched by selecting them in "
 "**Attributes to compare** field. Only if the ticket attribute value provided "
@@ -14829,23 +15490,23 @@ msgid ""
 "existing ticket, the warning will be shown."
 msgstr ""
 
-#: ../settings/ticket.rst:199
+#: ../settings/ticket.rst:221
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr ""
 
-#: ../settings/ticket.rst:201
+#: ../settings/ticket.rst:223
 msgid ""
 "You can limit the detection only to certain user roles. By default, only "
 "agents will see the warning."
 msgstr ""
 
-#: ../settings/ticket.rst:204
+#: ../settings/ticket.rst:226
 msgid ""
 "If you don't want to show the matched tickets as part of the warning, you "
 "can set **Show matching ticket(s) in the warning** setting to *no*."
 msgstr ""
 
-#: ../settings/ticket.rst:207
+#: ../settings/ticket.rst:229
 msgid ""
 "By default, **Permission level for looking up ticket** is set to *User*, "
 "which  means user permissions will be honored during sarch. The user will "
@@ -14855,24 +15516,24 @@ msgid ""
 "permissions."
 msgstr ""
 
-#: ../settings/ticket.rst:213
+#: ../settings/ticket.rst:235
 msgid "**🦺 Safety first!**"
 msgstr ""
 
-#: ../settings/ticket.rst:215
+#: ../settings/ticket.rst:237
 msgid ""
 "Even if the permission level is set to *System*, the user will not be shown "
 "the tickets they don't have access to in the warning, even if they match."
 msgstr ""
 
-#: ../settings/ticket.rst:219
+#: ../settings/ticket.rst:241
 msgid ""
 "However, just the confirmation about the existence of the tickets in the "
 "system may be considered an unwanted information disclosure. Use this option "
 "carefully!"
 msgstr ""
 
-#: ../settings/ticket.rst:223
+#: ../settings/ticket.rst:245
 msgid ""
 "Finally, you can configure between matching within **All tickets** or **Open "
 "tickets** only by setting **Match tickets in following states**. Depending "
@@ -17812,35 +18473,35 @@ msgstr ""
 msgid "Integrations for authentication and customers"
 msgstr ""
 
-#: ../system/integrations/index.rst:45
+#: ../system/integrations/index.rst:46
 msgid "Integrations for Monitoring Systems"
 msgstr ""
 
-#: ../system/integrations/index.rst:47
+#: ../system/integrations/index.rst:48
 msgid "This section currently misses the following integrations:"
 msgstr ""
 
-#: ../system/integrations/index.rst:49
+#: ../system/integrations/index.rst:50
 msgid "Icinga"
 msgstr "Icinga"
 
-#: ../system/integrations/index.rst:50
+#: ../system/integrations/index.rst:51
 msgid "Monit"
 msgstr ""
 
-#: ../system/integrations/index.rst:51
+#: ../system/integrations/index.rst:52
 msgid "Nagios"
 msgstr ""
 
-#: ../system/integrations/index.rst:61
+#: ../system/integrations/index.rst:62
 msgid "Integrations for Issue Trackers"
 msgstr ""
 
-#: ../system/integrations/index.rst:71
+#: ../system/integrations/index.rst:72
 msgid "Other Integrations"
 msgstr ""
 
-#: ../system/integrations/index.rst:73
+#: ../system/integrations/index.rst:74
 msgid ""
 "This section will hold any other integration that can't be grouped up (yet)."
 msgstr ""
@@ -18132,6 +18793,256 @@ msgstr ""
 msgid "Screencast showing how to remove LDAP sources."
 msgstr ""
 
+#: ../system/integrations/pgp/index.rst:2
+msgid "PGP"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:6
+msgid "Introduction"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:8
+msgid ""
+"Pretty Good Privacy (PGP) is another method for secure email communication. "
+"With PGP, you can exchange **signed** and **encrypted** messages with others."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:14
+#: ../system/integrations/smime/index.rst:17
+msgid "Signing"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:12
+msgid "is a proof that a message hasn’t been manipulated on its way."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:14
+msgid ""
+"In other words, it guarantees message **integrity** and **authenticity**."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:20
+#: ../system/integrations/smime/index.rst:22
+msgid "Encryption"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:17
+#: ../system/integrations/smime/index.rst:20
+msgid ""
+"scrambles a message so that it can only be unscrambled by the intended "
+"recipient."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:20
+msgid ""
+"In other words, it guarantees message **privacy** and **data security**."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:26
+msgid "Screenshot of ticket creation with encrypt and sign buttons"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:26
+msgid ""
+"Once PGP has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will appear "
+"in the ticket composer."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:29
+msgid "**Sign button not visible?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:31
+msgid ""
+"Please note that the signing of emails is based on the outgoing email "
+"account. That means you have to choose a group with a sender email account, "
+"which has a private key assigned."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:36
+msgid "Handling of keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:37
+msgid ""
+"To use the PGP function, you have to enable the integration (PGP) by "
+"switching the toggle to *enabled*."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:40
+msgid ""
+"You can add keys by clicking the *add key* button. The keys can be imported "
+"from a file or you can paste the content of the key in the text box."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:43
+msgid "**Which keys do I have to import?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:45
+msgid ""
+"For **signing** *outgoing* emails, you have to import the private key of "
+"your Zammad email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:48
+msgid ""
+"For **encrypting** *outgoing* emails, you have to import the public key of "
+"the customer's email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:51
+msgid ""
+"For **verifying the signature** of signed *incoming* emails, you have to "
+"import the public key of the customer."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:54
+msgid ""
+"For **decrypting** of encrypted *incoming* emails, you have to import the "
+"private key of your Zammad email account."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:58
+msgid "Import keys from a file"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:59
+msgid "You can import keys from a file in the section **Upload key**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of adding a key via file"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:65
+msgid "**Supported file formats**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:67
+msgid ""
+"ASCII-armor as well as binary GPG format (basically any GPG supported key "
+"format) is supported here."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:71
+msgid "Import keys by pasting the content"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:72
+msgid "You can also paste the key's content in the section **paste key**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of adding a key via pasting"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:78
+msgid "**Supported format**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:80
+msgid "Please note that only ASCII-armor is supported here."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:83
+msgid "Deleting keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:84
+msgid ""
+"If you want to delete a specific key, you can do it by clicking on the menu "
+"in the *actions* column and select **delete**:"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Screenshot of deleting a key"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:93
+msgid "Downloading keys"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:94
+msgid ""
+"If you want to download your keys, you can do this as well via corresponding "
+"action buttons. Depending on the key, you can choose wether you want to "
+"download the private or the public key."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:100
+msgid "Default behavior"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:101
+msgid ""
+"Here you can adjust on per group basis, if *sign* and *encryption* is on or "
+"off by default. Please be aware, that agents can always override the setting "
+"for each individual article."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:None
+msgid "Adjusting default behavior on per group basis"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:111
+msgid "Recent logs"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:112
+msgid ""
+"Here you can see the last actions regarding signing and encryption and if "
+"they were succesful."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:122
+msgid "**Sign button is not visible, but keys are imported.**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:120
+msgid "Did you choose a group in the ticket?"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:121
+msgid ""
+"Did you import a private key for the email adress, which is used for "
+"outgoing emails in the group?"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:127
+msgid "**How to obtain keys?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:125
+msgid ""
+"You can create them yourself! There are some good tutorials on the web on "
+"how to create them. Providing keys to Zammad is a prerequisite to use the "
+"PGP feature."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:132
+msgid "**It says a passphrase is needed, but I haven't got one.**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:130
+msgid ""
+"If the key is secured with a passphrase, you have to provide it for the "
+"import in Zammad. It is possible that keys may have an empty passphrase. "
+"However, this is *not* recommended."
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:137
+msgid "**How do my customers get my new key?**"
+msgstr ""
+
+#: ../system/integrations/pgp/index.rst:135
+msgid ""
+"You have to provide your **public** key in advance. Your customer also has "
+"to configure PGP in their email workflow and import your public key. The "
+"other way round, you have to get the public key of your customer and have to "
+"import it to Zammad."
+msgstr ""
+
 #: ../system/integrations/slack.rst:2
 msgid "Slack"
 msgstr ""
@@ -18294,10 +19205,6 @@ msgid ""
 "others."
 msgstr ""
 
-#: ../system/integrations/smime/index.rst:17
-msgid "Signing"
-msgstr ""
-
 #: ../system/integrations/smime/index.rst:15
 msgid ""
 "is proof that a message hasn’t been tampered with or sent by an impersonator."
@@ -18306,16 +19213,6 @@ msgstr ""
 #: ../system/integrations/smime/index.rst:17
 msgid ""
 "In other words, it guarantees a message’s **integrity** and **authenticity**."
-msgstr ""
-
-#: ../system/integrations/smime/index.rst:22
-msgid "Encryption"
-msgstr ""
-
-#: ../system/integrations/smime/index.rst:20
-msgid ""
-"scrambles a message so that it can only be unscrambled by the intended "
-"recipient."
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:22
@@ -18556,7 +19453,7 @@ msgid ""
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:14
-msgid "🙋 **I’m new to S/MIME. Where can I get a certificate?**"
+msgid "🙋 **I'm new to S/MIME. Where can I get a certificate?**"
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:16
@@ -18595,14 +19492,81 @@ msgid ""
 "**"
 msgstr ""
 
+#: ../system/integrations/smime/prerequisites.rst:32
+msgid "Certificate and private key checks on upload"
+msgstr ""
+
 #: ../system/integrations/smime/prerequisites.rst:34
+msgid ""
+"The certificate and public key validation is based on the ``X509v3`` "
+"extensions."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:49
+msgid "Uploading a *client certificate*?"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:41
+msgid "The following attributes are required then:"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:39
+msgid "Subject Alternative Name (at least one email address has to be present)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:40
+msgid "Key Usage (``Digital Signature`` and/or ``Key Encipherment``)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:41
+msgid "Public key algorithm (either ``RSA`` or ``EC``)"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:43
+msgid ""
+"The Extended Key Usage attribute is optional. If the certificate provides "
+"the named attribute, than it must contain the value ``E-mail Protection``."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:46
+msgid ""
+"Please note that any usable email adress has to be prefixed with ``email:`` "
+"or ``rfc822:``."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:49
+msgid "The named public key algorithms are mandatory for private keys as well."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:54
+msgid "Uploading a *CA certificate*?"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:52
+msgid ""
+"In the case of an uploaded CA certificate, providing the value ``CA:TRUE`` "
+"in the attribute *Basic Contstraints*, the previously mentioned attributes "
+"are not verified."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:56
+msgid ""
+"In general, the usage of any expired (``Not After``) or not yet valid (``Not "
+"Before``) certificate is denied for outgoing emails."
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:59
+msgid "Example certificate:"
+msgstr ""
+
+#: ../system/integrations/smime/prerequisites.rst:85
 msgid ""
 "Please note that Zammad will distrust senders by default. This means that "
 "you're always required to provide certificate data, no matter if for signing "
 "or encrypting."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:38
+#: ../system/integrations/smime/prerequisites.rst:89
 msgid "This is by design and can't be adjusted."
 msgstr ""
 
@@ -18943,35 +19907,90 @@ msgstr ""
 
 #: ../system/monitoring.rst:4
 msgid ""
-"**Please note:** This is only available in self hosted instances, as we're "
-"monitoring hosted instances and fix problems."
-msgstr ""
-
-#: ../system/monitoring.rst:6
-msgid ""
-"On the monitoring page you can see the current health state of Zammad. This "
-"can be useful if you for example have the feeling that you don't receive "
-"emails anymore, you can take a look here before logging onto your Server."
+"This function is only available in self hosted instances. If you use Zammad "
+"in our cloud, we are monitoring the system on our own and take steps to fix "
+"potential problems directly."
 msgstr ""
 
 #: ../system/monitoring.rst:9
-msgid ""
-"Besides the optical state of an event, you can also reset the access token "
-"for this module and get the monitoring URL for a monitoring system of your "
-"choice."
+msgid "General"
 msgstr ""
 
 #: ../system/monitoring.rst:11
-msgid "Example output to this can be:"
-msgstr ""
-
-#: ../system/monitoring.rst:13
-msgid "Everything is OK (refer to image 2 for interface example)::"
+msgid ""
+"On the monitoring page, you can see the current health state of Zammad under "
+"\"*Current Status*\" at the bottom. This can be useful if you want to have a "
+"look if everything is up and running. As an example, you could have a look "
+"in the monitoring when you assume that some emails aren't processed from "
+"Zammad."
 msgstr ""
 
 #: ../system/monitoring.rst:17
+msgid "**Can't receive an email and the monitoring response is \"healthy\"?**"
+msgstr ""
+
+#: ../system/monitoring.rst:19
 msgid ""
-"Zammad has issue (whatever nature, refer to image 2 for interface example)::"
+"Zammad will just inform you about unprocessable emails. This is not the case "
+"for oversized emails. You can adjust the maximum email size in :doc:`../"
+"channels/email/settings`."
+msgstr ""
+
+#: ../system/monitoring.rst:24
+msgid "Monitoring API"
+msgstr ""
+
+#: ../system/monitoring.rst:26
+msgid ""
+"Beside the indication in the monitoring page, you can also use an external "
+"monitoring tool to monitor Zammad's health. To request the health of Zammad, "
+"you need to provide the API key (token) to the external monitoring tool. You "
+"can copy the token from the \"*Current Token*\" field as well as the whole "
+"API endpoint of your system (\"*Health Check*\" field), in which the API "
+"token is already included."
+msgstr ""
+
+#: ../system/monitoring.rst:37
+msgid "Screenshot showing Current Token and Health Check"
+msgstr ""
+
+#: ../system/monitoring.rst:37
+msgid "Screenshot showing Token and Health Check"
+msgstr ""
+
+#: ../system/monitoring.rst:39
+msgid ""
+"In addition to that, you can reset the auto-generated token to make sure "
+"that already configured monitoring systems won't work anymore. So, please "
+"use this \"*Reset*\" button only if you know what you do!"
+msgstr ""
+
+#: ../system/monitoring.rst:44
+msgid "Example output"
+msgstr ""
+
+#: ../system/monitoring.rst:0
+msgid "No issues found"
+msgstr ""
+
+#: ../system/monitoring.rst:48 ../system/monitoring.rst:60
+msgid "**Indicator in Zammad**:"
+msgstr ""
+
+#: ../system/monitoring.rst:0
+msgid "Screenshot showing monitoring with no issues"
+msgstr ""
+
+#: ../system/monitoring.rst:54 ../system/monitoring.rst:66
+msgid "**API response**::"
+msgstr ""
+
+#: ../system/monitoring.rst:0
+msgid "Issues were found"
+msgstr ""
+
+#: ../system/monitoring.rst:0
+msgid "Screenshot showing monitoring with issues"
 msgstr ""
 
 #: ../system/objects.rst:2
@@ -19332,7 +20351,52 @@ msgid ""
 "no longer need an object, consider disabling it instead of removing."
 msgstr ""
 
-#: ../system/objects/types.rst:12
+#: ../system/objects/types.rst:11
+msgid "**What about the translation of my objects?**"
+msgstr ""
+
+#: ../system/objects/types.rst:13
+msgid ""
+"For some object types you can decide if they should be translatable or not. "
+"To be precise, it works only for the selectable fields because the possible "
+"choices are known and limited. For the following object types, you can set "
+"the translatable flag:"
+msgstr ""
+
+#: ../system/objects/types.rst:18
+msgid "*Boolean field*"
+msgstr ""
+
+#: ../system/objects/types.rst:19
+msgid "*Single selection field*"
+msgstr ""
+
+#: ../system/objects/types.rst:20
+msgid "*Multiple selection field*"
+msgstr ""
+
+#: ../system/objects/types.rst:21
+msgid "*Single tree selection field*"
+msgstr ""
+
+#: ../system/objects/types.rst:22
+msgid "*Multiple tree selection field*"
+msgstr ""
+
+#: ../system/objects/types.rst:24
+msgid ""
+"For these types, you can find an additional field *Translate field contents*:"
+msgstr ""
+
+#: ../system/objects/types.rst:0
+msgid "Screenshot showing translatable object types"
+msgstr ""
+
+#: ../system/objects/types.rst:31
+msgid "Screenshot with example of translatable object type"
+msgstr ""
+
+#: ../system/objects/types.rst:34
 msgid ""
 "Provides a drop-down field with display values for ``true`` and ``false``. "
 "Allows setting a default value."
@@ -19342,15 +20406,15 @@ msgstr ""
 msgid "Available settings for Boolean fields"
 msgstr ""
 
-#: ../system/objects/types.rst:19
+#: ../system/objects/types.rst:41
 msgid "Provides a date picker field and does not allow default values."
 msgstr ""
 
-#: ../system/objects/types.rst:23
+#: ../system/objects/types.rst:45
 msgid "Default time diff (hours)"
 msgstr ""
 
-#: ../system/objects/types.rst:22
+#: ../system/objects/types.rst:44
 msgid ""
 "This setting helps the user by highlighting the day from now plus the "
 "provided value. It *does not* pre-fill the field."
@@ -19360,15 +20424,15 @@ msgstr ""
 msgid "Available settings for Date fields"
 msgstr ""
 
-#: ../system/objects/types.rst:44
+#: ../system/objects/types.rst:66
 msgid "Date & time field"
 msgstr ""
 
-#: ../system/objects/types.rst:29
+#: ../system/objects/types.rst:51
 msgid "Provides a date and time picker – does not allow default values"
 msgstr ""
 
-#: ../system/objects/types.rst:33
+#: ../system/objects/types.rst:55
 msgid "Allow future"
 msgstr ""
 
@@ -19376,7 +20440,7 @@ msgstr ""
 msgid "Forbid dates and times in the future."
 msgstr ""
 
-#: ../system/objects/types.rst:37
+#: ../system/objects/types.rst:59
 msgid "Allow past"
 msgstr ""
 
@@ -19384,11 +20448,11 @@ msgstr ""
 msgid "Forbid dates and times in the past."
 msgstr ""
 
-#: ../system/objects/types.rst:41
+#: ../system/objects/types.rst:63
 msgid "Default time diff (minutes)"
 msgstr ""
 
-#: ../system/objects/types.rst:40
+#: ../system/objects/types.rst:62
 msgid ""
 "This setting helps the user by highlighting the day from now plus the "
 "provided value. It does not pre-fill the field."
@@ -19398,25 +20462,25 @@ msgstr ""
 msgid "Available settings for Date & time fields"
 msgstr ""
 
-#: ../system/objects/types.rst:47
+#: ../system/objects/types.rst:69
 msgid ""
 "Provides an input field that allows integer usage only. You may define a "
 "default value. You cannot enforce comma separation."
 msgstr ""
 
-#: ../system/objects/types.rst:51
+#: ../system/objects/types.rst:73
 msgid "Minimal"
 msgstr ""
 
-#: ../system/objects/types.rst:51
+#: ../system/objects/types.rst:73
 msgid "The minimal value the field accepts."
 msgstr ""
 
-#: ../system/objects/types.rst:54
+#: ../system/objects/types.rst:76
 msgid "Maximal"
 msgstr ""
 
-#: ../system/objects/types.rst:54
+#: ../system/objects/types.rst:76
 msgid "The maximum value the field accepts."
 msgstr ""
 
@@ -19424,7 +20488,7 @@ msgstr ""
 msgid "Available settings for Integer fields"
 msgstr ""
 
-#: ../system/objects/types.rst:60
+#: ../system/objects/types.rst:82
 msgid ""
 "Provides a selection field that allows the selection of one or more out of "
 "several. This field does allow setting a default value."
@@ -19434,7 +20498,7 @@ msgstr ""
 msgid "Available settings for Multiple selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:73
+#: ../system/objects/types.rst:95
 msgid ""
 "Provides a drop-down field that allows selection of one value out of "
 "several. This field does allow setting a default value."
@@ -19444,43 +20508,43 @@ msgstr ""
 msgid "Available settings for Single selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:86
+#: ../system/objects/types.rst:108
 msgid ""
 "Provides a text area input field (multiple lines) and thus allows e.g. new "
 "lines. You can set a default field value."
 msgstr ""
 
-#: ../system/objects/types.rst:91
+#: ../system/objects/types.rst:113
 msgid ""
 "Please note that this field *does not* support text formatting or HTML "
 "content (rich text)."
 msgstr ""
 
-#: ../system/objects/types.rst:94
+#: ../system/objects/types.rst:116
 msgid "**🥵 This field can consume a lot of visual space**"
 msgstr ""
 
-#: ../system/objects/types.rst:96
+#: ../system/objects/types.rst:118
 msgid ""
 "Depending on where you use this field type, it may use a lot of visual space "
 "if you provide a lot of text. This may be an issue to work with."
 msgstr ""
 
-#: ../system/objects/types.rst:101
+#: ../system/objects/types.rst:123
 msgid "Default"
 msgstr ""
 
-#: ../system/objects/types.rst:100
+#: ../system/objects/types.rst:122
 msgid ""
 "The here provided text will be shown within the text area field or new data "
 "sets."
 msgstr ""
 
-#: ../system/objects/types.rst:105 ../system/objects/types.rst:131
+#: ../system/objects/types.rst:127 ../system/objects/types.rst:153
 msgid "Maxlength"
 msgstr ""
 
-#: ../system/objects/types.rst:0 ../system/objects/types.rst:131
+#: ../system/objects/types.rst:0 ../system/objects/types.rst:153
 msgid "You can pick the maximum length of the field."
 msgstr ""
 
@@ -19488,7 +20552,7 @@ msgstr ""
 msgid "The default length of this object is ``500``."
 msgstr ""
 
-#: ../system/objects/types.rst:110
+#: ../system/objects/types.rst:132
 msgid "Rows"
 msgstr ""
 
@@ -19506,33 +20570,33 @@ msgstr ""
 msgid "Available settings for Textarea fields"
 msgstr ""
 
-#: ../system/objects/types.rst:136
+#: ../system/objects/types.rst:158
 msgid "Text field"
 msgstr ""
 
-#: ../system/objects/types.rst:116
+#: ../system/objects/types.rst:138
 msgid "Provides a text field (one line) and allows choosing a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:119
+#: ../system/objects/types.rst:141
 msgid ""
 "Defines the type of the input field. This allows e.g. your browser to ensure "
 "that you provide the specific type."
 msgstr ""
 
-#: ../system/objects/types.rst:123
+#: ../system/objects/types.rst:145
 msgid "Currently available:"
 msgstr ""
 
-#: ../system/objects/types.rst:126
+#: ../system/objects/types.rst:148
 msgid "Phone"
 msgstr ""
 
-#: ../system/objects/types.rst:127
+#: ../system/objects/types.rst:149
 msgid "Text"
 msgstr ""
 
-#: ../system/objects/types.rst:128
+#: ../system/objects/types.rst:150
 msgid "Url *(URL fields disable link-template availability)*"
 msgstr ""
 
@@ -19540,7 +20604,7 @@ msgstr ""
 msgid "Available settings for Text fields"
 msgstr ""
 
-#: ../system/objects/types.rst:139
+#: ../system/objects/types.rst:161
 msgid ""
 "Provides a select-like field with up to 6 layers of options. Does not allow "
 "setting a default value."
@@ -19550,52 +20614,52 @@ msgstr ""
 msgid "Available settings for Tree Select fields"
 msgstr ""
 
-#: ../system/objects/types.rst:148
+#: ../system/objects/types.rst:170
 msgid ""
 "Provides a select-like field with up to 6 layers of options allowing the "
 "selection of multiple values. Does not allow setting a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:159
+#: ../system/objects/types.rst:181
 msgid "URL fields (Link-Template)"
 msgstr ""
 
-#: ../system/objects/types.rst:163
+#: ../system/objects/types.rst:185
 msgid "This function is restricted to Text and Select objects only."
 msgstr ""
 
-#: ../system/objects/types.rst:165
+#: ../system/objects/types.rst:187
 msgid ""
 "Link-Templates are an amazing way to dynamically generate URLs. They allow "
 "you to integrate other systems better without having to manually copy data "
 "from Zammad if possible."
 msgstr ""
 
-#: ../system/objects/types.rst:171
+#: ../system/objects/types.rst:193
 msgid ""
 "Another great way of communicating with another system may be Zammad's :doc:"
 "`Webhooks </manage/webhook>`."
 msgstr ""
 
-#: ../system/objects/types.rst:174
+#: ../system/objects/types.rst:196
 msgid ""
 "After filling a link-template enabled field, an URL icon will appear on its "
 "right. Clicking on the icon opens a new tab."
 msgstr ""
 
-#: ../system/objects/types.rst:179
+#: ../system/objects/types.rst:201
 msgid ""
 "Even though Zammad displays the link template within object edit and create "
 "screens, the function is optional. It's only active if you populate the "
 "field."
 msgstr ""
 
-#: ../system/objects/types.rst:184
+#: ../system/objects/types.rst:206
 msgid ""
 "What's the difference between URL and text fields with link template...?!"
 msgstr ""
 
-#: ../system/objects/types.rst:186
+#: ../system/objects/types.rst:208
 msgid ""
 "Both fields have different use cases. Use ``text`` type text fields when "
 "ever you have a *static* url that requires dynamic parameters. If you "
@@ -19603,7 +20667,7 @@ msgid ""
 "type text fields."
 msgstr ""
 
-#: ../system/objects/types.rst:191
+#: ../system/objects/types.rst:213
 msgid ""
 "The difference is easier to spot when comparing the fields directly, below "
 "screencast shows the result - the dynamic approach uses existing values in "
@@ -19618,33 +20682,33 @@ msgid ""
 "actual values"
 msgstr ""
 
-#: ../system/objects/types.rst:203
+#: ../system/objects/types.rst:225
 msgid "How does this work...?!"
 msgstr ""
 
-#: ../system/objects/types.rst:205
+#: ../system/objects/types.rst:227
 msgid ""
 "As an example, let's say you have an object called ``amazingobject`` - you "
 "want to open a google search directly with the input from that field."
 msgstr ""
 
-#: ../system/objects/types.rst:208
+#: ../system/objects/types.rst:230
 msgid ""
 "Providing below to the link-template field allows you to do so: ``https://"
 "www.google.com/search?q=#{ticket.amazingobject}``"
 msgstr ""
 
-#: ../system/objects/types.rst:213
+#: ../system/objects/types.rst:235
 msgid ""
 "You can use any :doc:`Zammad variable </system/variables>` as long as it's "
 "available in the moment you need it."
 msgstr ""
 
-#: ../system/objects/types.rst:216
+#: ../system/objects/types.rst:238
 msgid "The result will look as follows."
 msgstr ""
 
-#: ../system/objects/types.rst:221
+#: ../system/objects/types.rst:243
 msgid ""
 "The above screencast shows how the link template will perform after object "
 "creation."
@@ -20385,7 +21449,7 @@ msgid ""
 "org>`_."
 msgstr ""
 
-#: ../system/variables.rst:7
+#: ../system/variables.rst:10
 msgid ""
 "Variables can be called by typing ``::`` (just like text modules in the "
 "frontend), as long as you're in a supported text field within the Backend. "
@@ -20393,29 +21457,29 @@ msgid ""
 "and replace it to the variable as soon as you selected an entry."
 msgstr ""
 
-#: ../system/variables.rst:10
+#: ../system/variables.rst:15
 msgid ""
 "You have an empty field which you referenced and it appears as ``-``? That's "
 "currently working as designed - you might want to ensure that these fields "
 "always have a value (in text fields `` `` is a value!)."
 msgstr ""
 
-#: ../system/variables.rst:15
+#: ../system/variables.rst:21
 msgid "Variable Categories"
 msgstr ""
 
-#: ../system/variables.rst:26
+#: ../system/variables.rst:32
 msgid "Wait, what about custom objects?"
 msgstr ""
 
-#: ../system/variables.rst:28
+#: ../system/variables.rst:34
 msgid ""
 "Good point! Of course, we can't predict what objects you might create, but "
 "we can give you a hint on how to put the puzzle together to get your custom "
 "values."
 msgstr ""
 
-#: ../system/variables.rst:30
+#: ../system/variables.rst:37
 msgid ""
 "For this, we'll talk about the inner part of the variable (so everything "
 "within ``#{}``), please put the outer part around to have a valid variable. "
@@ -20423,23 +21487,23 @@ msgid ""
 "these are:"
 msgstr ""
 
-#: ../system/variables.rst:33
+#: ../system/variables.rst:42
 msgid "Ticket (``ticket``)"
 msgstr ""
 
-#: ../system/variables.rst:34
+#: ../system/variables.rst:43
 msgid "User (``user``)"
 msgstr ""
 
-#: ../system/variables.rst:35
+#: ../system/variables.rst:44
 msgid "Organization (``organization``)"
 msgstr ""
 
-#: ../system/variables.rst:36
+#: ../system/variables.rst:45
 msgid "Group (``group``)"
 msgstr ""
 
-#: ../system/variables.rst:38
+#: ../system/variables.rst:47
 msgid ""
 "The second part is the name of the object. This is the name you define "
 "during object creation and can be found within the object menu at any time. "
@@ -20447,7 +21511,7 @@ msgid ""
 "``ticket.number`` which will in total be ``#{ticket.number}``."
 msgstr ""
 
-#: ../system/variables.rst:41
+#: ../system/variables.rst:52
 msgid ""
 "Now, in some situations it's possible that you'll need to use a third part. "
 "The best example for such a situation would be a ``select`` or ``tree-"
@@ -21229,6 +22293,14 @@ msgid "``Zammad GmbH`` or empty if not set"
 msgstr ""
 
 #: ../system/variables/current-user.rst:1
+msgid "Current User > Organization > VIP"
+msgstr ""
+
+#: ../system/variables/current-user.rst:1
+msgid "``#{user.organization.vip}``"
+msgstr ""
+
+#: ../system/variables/current-user.rst:1
 msgid "Current User > Note"
 msgstr ""
 
@@ -21758,6 +22830,14 @@ msgstr ""
 
 #: ../system/variables/ticket.rst:1
 msgid "``domain.tld`` or empty if not set"
+msgstr ""
+
+#: ../system/variables/ticket.rst:1
+msgid "Ticket > Organization > VIP"
+msgstr ""
+
+#: ../system/variables/ticket.rst:1
+msgid "``#{ticket.organization.vip}``"
 msgstr ""
 
 #: ../system/variables/ticket.rst:1

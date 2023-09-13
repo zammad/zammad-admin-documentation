@@ -68,15 +68,18 @@ Keycloak
    * **To add Zammad as a client,**
      save the XML configuration to disk
      (``https://your.zammad.domain/auth/saml/metadata``)
-     and use **Clients > Create > Import** in the Keycloak admin panel.
+     and use **Clients > Clients list > Import client** in the Keycloak admin panel.
 
-   * **To help Zammad match its own user accounts to Keycloak users,**
-     create a user attribute (or “property”) mapper:
+   * To help Zammad **match its own user accounts to Keycloak users**,
+     create a user attribute (or “property”) mapper. In **Clients list**, click on your
+     newly created Client ID, choose the tab **Client scopes** and click on the link which
+     refers to your Zammad instance. Choose **Add mapper > By configuration > User Property**
+     and create a mapper with the following entries:
 
-     .. list-table:: **Clients > https://your.zammad.domain/auth/saml/metadata > Mappers > Create**
+     .. list-table::
 
         * - **Name**
-          - ``emailAddress``
+          - ``email``
         * - **Mapper Type**
           - ``User Property``
         * - **Property**
@@ -88,16 +91,17 @@ Keycloak
 
      In the example above, we’re telling Zammad that
      whenever it receives a SAML login request,
-     it should take the ``emailAddress`` property from Keycloak,
+     it should take the ``email`` property from Keycloak,
      look for a Zammad user with the same ``email`` attribute,
      and create a new session for that user.
 
      If your Keycloak users’ email addresses are stored on another property
      (*e.g.,* ``username``), adjust accordingly.
-     
-   * Make sure the **Client ID** matches the **Master SAML Processing URL**.
-   
-   * You need to enable **Sign assertions**.
+
+   * Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``)
+     in the field **Master SAML Processing URL**.
+
+   * You also need to enable **Sign assertions**.
 
 
 Step 2: Configure Zammad
@@ -135,7 +139,7 @@ IDP Certificate fingerprint
       <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
 
       **Keycloak users:** Find your certificate in the Keycloak admin panel
-      under **Realm Settings > Keys > RSA > Certificate**.
+      under **Realm Settings > Keys > Algorithm: RS256 > Certificate**.
 
 Name Identifier format
    This is the unique identifiers field type. Usually should be

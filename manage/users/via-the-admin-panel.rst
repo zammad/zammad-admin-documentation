@@ -86,3 +86,15 @@ The “Users” panel provides tools to manually manage user accounts.
       use the **Back to my view ✕** button at the top of the page.
       If you try to exit by logging out,
       the “hijacked” user session will be restored when you log back in.
+
+🔑 Manage Two-Factor Authentication
+   .. figure:: /images/manage/users/remove-two-factor-method.gif
+      :alt: Screencast showing removal of user's two-factor method.
+      :align: center
+
+      Use the ⋮ **Actions** menu to remove a user's configured two-factor
+      method.
+
+   It's possible to remove a single or all of the user's configured methods, if
+   they lose access. They can then set it up again by themselves via
+   "Avatar -> Profile -> Password & Authentication".

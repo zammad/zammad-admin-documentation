@@ -120,6 +120,19 @@ The ones that aren’t are described below.
       to ensure to not use free mailer domains like ``gmail.com`` for these
       assignments.
 
+👑 VIP
+   This flag is a way for your team to indicate high-status organizations. Just
+   as with customers, you can set up special :doc:`/manage/trigger`,
+   :doc:`/manage/scheduler` jobs, :doc:`/manage/slas/index`,
+   and :doc:`/manage/overviews` just for VIPs.
+
+   .. figure:: /images/manage/organizations/vip-org-in-a-ticket.png
+      :alt: Ticket view showing a VIP organization’s avatar with a crown on it
+      :align: center
+      :width: 90%
+
+      VIP organizations are displayed with a crown above their avatars.
+
 📑 Note
    Notes are visible to all staff members, **including agents**.
 
