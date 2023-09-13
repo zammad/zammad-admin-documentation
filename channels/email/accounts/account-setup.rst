@@ -151,7 +151,7 @@ SSL verification
    Here you can decide if the certificate of the email server has to be
    verified or not (default: ``yes``). In case you are using custom
    certificates, please have a look at
-   :doc:`how to add them to Zammad </settings/security/ssl-certificate>`.
+   :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
 
    .. include:: /includes/ssl-verification-warning.rst
 
@@ -275,7 +275,7 @@ SSL verification
    Here you can decide if the certificate of the email server has to be
    verified or not (default: ``yes``). In case you are using custom
    certificates, please have a look at
-   :doc:`how to add them to Zammad </settings/security/ssl-certificate>`.
+   :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
 
    .. include:: /includes/ssl-verification-warning.rst
 
