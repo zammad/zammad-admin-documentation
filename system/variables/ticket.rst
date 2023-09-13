@@ -51,7 +51,7 @@ The below list gives you an example what kind of data you can expect, it's not i
    "Ticket > Organization > Domain", "``#{ticket.organization.domain}``", "``domain.tld`` or empty if not set"
    "Ticket > Organization > VIP", "``#{ticket.organization.vip}``", "``false`` or ``true``"
    "Ticket > Number", "``#{ticket.number}``", "``31001``, ``201910731001``, ..."
-   "Ticket > ID", "``#{ticket.id}``", "``0017``, ``5281``, ..."
+   "Ticket > ID", "``#{ticket.id}``", "``17``, ``5281``, ..."
    "Ticket > Last contact (customer)", "``#{ticket.last_contact_customer_at}``", "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note `Ticket last contact behaviour Settings <https://admin-docs.zammad.org/en/latest/settings-ticket.html>`_ for this)"
    "Ticket > Last contact", "``#{ticket.last_contact_at}``", "``2019-10-07 16:25:00 UTC``"
    "Ticket > Last contact (agent)", "``#{ticket.last_contact_agent_at}``", "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet"
