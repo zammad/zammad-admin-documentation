@@ -59,7 +59,6 @@ else:
 
    html_js_files = [
       'theme/zammad_overrides.js',
-      'theme/language_switcher.js',
       'theme/mermaid.min.js'
    ]
 
@@ -69,11 +68,11 @@ else:
    # If we're **not on latest**, we'll display a deprecation warning.
    if rtd_version == 'latest':
       branch = rtd_version
+
+      # Inject the language switcher script.
+      html_js_files.append('theme/language_switcher.js')
    elif rtd_version == 'pre-release':
       branch = "pre-release"
-
-      # Skip the injection of the language switcher.
-      html_js_files.remove('theme/language_switcher.js')
    else:
       branch = "old-version"
 
