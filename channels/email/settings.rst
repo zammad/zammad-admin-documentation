@@ -22,18 +22,18 @@ Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}
    Your customers normally will not see this address. This email address does
    not need to receive and can't be assigned to a group.
 
-   .. note:: 
+   .. note::
 
       This address is relevant for agent notifications and password reset mails
       (also affects customers).
 
 Additional follow-up detection
-   In some situations the normal follow-up detection is not enough. 
+   In some situations the normal follow-up detection is not enough.
    This might be due to missing references in the subject
    (the ticket hook and number). These options can help to recognize follow-ups
    to existing tickets.
 
-   .. note:: 
+   .. note::
 
       Please note that searching in attachment and body might lead to false
       follow-up detection.
@@ -43,12 +43,12 @@ Maximum Email Size: Default value ``10 MB``
    Zammad will fetch. Zammad will not fetch Mails that are bigger than this
    option.
 
-   .. hint:: 
+   .. hint::
 
       This technically also affects attachments for articles.
 
 Send postmaster mail if mail too large: Default value ``yes (enabled)``
-   .. note:: 
+   .. note::
 
       Upgraded installations will, by default, have the value set to
       ``no (disabled``).
@@ -61,9 +61,8 @@ Send postmaster mail if mail too large: Default value ``yes (enabled)``
 
       .. note::
 
-         Zammad will still download and remove (if enabled) the mail from the
-         mailbox. Instead of importing it to the database, it will save the
-         affected mail to ``/opt/zammad/tmp/oversized_mail/``.
+         Zammad will still remove (if enabled) the mail from the
+         mailbox.
 
    Option set to ``no``
       If the option is set to no, Zammad will not reply to mails that are too
@@ -83,7 +82,7 @@ Sender based on Reply-To header: Default value ``not set (-)``
       ``Reply-To`` completely.
 
    Option set to ``-`` or ``Take Reply-To header as sender/from of email and use the real name of origin from.``
-      This setting will partially overwrite the initial ``FROM``. 
+      This setting will partially overwrite the initial ``FROM``.
       It uses the mail address from the ``Reply-To`` header and uses the given
       name of the ``FROM`` header, if given.
 
@@ -97,7 +96,7 @@ Customer selection based on sender and receiver list: Default value ``yes``
    Option set to ``no``
       The agent will be set as ticket customer.
 
-      .. note:: 
+      .. note::
 
          Currently agents can't be customers within the UI.
          While Email communication works, agents can't see their own tickets
