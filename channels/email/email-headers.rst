@@ -200,5 +200,11 @@ Add the ``"trusted"=>true`` flag for the inbound part of the channel:
 
    >> options[:inbound][:trusted] = true
 
+Save your changes:
+
+.. code-block:: ruby
+
+   >> channel.save!
+
 .. _console: https://docs.zammad.org/en/latest/admin/console.html
 
