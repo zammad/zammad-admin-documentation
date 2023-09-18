@@ -41,9 +41,6 @@ Building for a specific language:
 $ make -e SPHINXOPTS="-D language='en'" html
 ```
 
-If you have a problem with creating / building the documentation,
-please create an issue. Thanks.
-
 ### Localization progress
 
 [![Translation progress][tprogress]][wbetranslate_pre-release]
