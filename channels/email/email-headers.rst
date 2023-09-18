@@ -6,10 +6,11 @@ filters or triggers. Like an API call, but with emails.
 
 Header checks are case insensitive.
 
-.. warning:: **🛡 Trusted channels required 🛡**
+.. danger:: **🛡 Trusted channels required 🛡**
 
    Below options are a potential risk with external communication and
-   thus require channels being set to trusted explicitly.
+   thus require channels being set to trusted explicitly. You can find
+   instructions about how to set a channel to trusted at the end of this page.
 
 .. tip::
 
@@ -158,3 +159,46 @@ email articles.
 ``X-Zammad-Ignore``
    | Tell Zammad to silently drop the Email.
    | Example: ``X-Zammad-Ignore: true``
+
+Trusted Channel
+---------------
+.. note:: **🚧 Self Hosted only 🚧**
+
+   Below settings are only available to self hosted users.
+
+.. danger::
+   ⚠️ As stated above, this is dangerous and can lead to unexpected behavior in
+   the communication with external parties. Only follow the instructions below,
+   if you know what you are doing.
+
+Setting a channel to ``trusted`` can ony be done via `console`_. In the
+rails console, execute the following commands:
+
+| List all channels in Zammad:
+
+.. code-block:: ruby
+
+   >> Channel.all
+
+Look for the ``id`` of the channel, you want to set to ``trusted``.
+
+Select your identified channel (replace the 99 with the correct id):
+
+.. code-block:: ruby
+
+   >> channel = Channel.find(99)
+
+Show the currently acivated opions of the selected channel:
+
+.. code-block:: ruby
+
+   >> options = channel[:options]
+
+Add the ``"trusted"=>true`` flag for the inbound part of the channel:
+
+.. code-block:: ruby
+
+   >> options[:inbound][:trusted] = true
+
+.. _console: https://docs.zammad.org/en/latest/admin/console.html
+
