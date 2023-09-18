@@ -3,10 +3,14 @@ const CONTRIBUTE_URL = 'https://docs.zammad.org/en/latest/contributing/start.htm
 // Initialize the switcher only when RTD panel gets loaded.
 //   If the menu has exactly the 6 sections, the first one on top is the language chooser.
 //   We must check it in this way since the label may be translated based on the browser locale.
+//   Try to do this only for the first 3 seconds or so, otherwise the documentation may not have any translations.
 $(document).ready(() => {
+  let count = 0
+
   const intervalId = setInterval(() => {
+    if ($('.rst-other-versions dt').length !== 6 && count++ <= 30) return
+    clearInterval(intervalId)
     if ($('.rst-other-versions dt').length !== 6) return
-    clearInterval(intervalId);
     initLanguageSwitcher()
   }, 100)
 })
