@@ -188,7 +188,7 @@ Select your identified channel (replace the 99 with the correct id):
 
    >> channel = Channel.find(99)
 
-Show the currently acivated opions of the selected channel:
+Show the currently activated options of the selected channel:
 
 .. code-block:: ruby
 
