@@ -41,4 +41,4 @@ Usage
 -----
 
 For more details on how S/MIME integration works in practice, see the
-`user docs <https://user-docs.zammad.org/en/latest/extras/secure-email.html>`_.
+:user-docs:`user docs </extras/secure-email.html>`.

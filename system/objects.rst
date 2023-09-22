@@ -83,10 +83,7 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 
       | Hosted environments automatically restart for you.
       | If you're using a self-hosted installation you can use
-        `environment variables`_
-
-.. _environment variables:
-   https://docs.zammad.org/en/latest/appendix/configure-env-vars.html
+        :docs:`environment variables </appendix/configure-env-vars.html>`
 
 System objects
 --------------
@@ -99,8 +96,7 @@ This is not a bug but is to save you from possibly nuking Zammad.
    .. tip::
 
       There are technical exceptions which can be solved via console.
-      This e.g. affects ticket states and priorities, see `console section`_.
+      This e.g. affects ticket states and priorities, see
+      :docs:`console section </admin/console.html>`.
 
       💰 If you're a hosted customer, please contact your support for more. 💰
-
-.. _console section: https://docs.zammad.org/en/latest/admin/console.html

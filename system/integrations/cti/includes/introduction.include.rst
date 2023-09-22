@@ -4,15 +4,12 @@ supported by Zammad with automatically opening a new ticket dialogue or
 the user profile.
 
 If you want to learn more on how your agents can use this function, please
-refer the `user documentation`_.
+refer the :user-docs:`user documentation </extras/caller-log.html>`.
 
    .. note::
 
       Automatically opening new ticket dialogues or user profiles requires
       agent to extension mapping - see more below.
-
-.. _user documentation:
-   https://user-docs.zammad.org/en/latest/extras/caller-log.html
 
 Limitations
 -----------

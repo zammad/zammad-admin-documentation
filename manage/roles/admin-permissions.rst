@@ -33,7 +33,7 @@ Admin Permissions
    x
 
 :``admin.api``:
-   `System > API <https://docs.zammad.org/en/latest/api-intro.html>`_
+   :docs:`System > API </api/intro.html>`
 
 :``admin.branding``:
    :doc:`Settings > Branding </settings/branding>`
@@ -111,10 +111,8 @@ Admin Permissions
    .. hint:: 🤓 **Trying to grant access to read/edit knowledge base articles?**
 
       Use ``knowledge_base.reader`` and ``knowledge_base.editor`` instead,
-      and double-check the answer's `visibility`_.
-
-   .. _visibility:
-      https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#editing-answers
+      and double-check the answer's
+      :user-docs:`visibility </extras/knowledge-base.html#editing-answers>`.
 
 :``admin.macro``:
    :doc:`Manage > Macros </manage/macros>`

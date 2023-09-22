@@ -9,8 +9,7 @@ To get this to work you need to pipe your emails to rails.
 
    If you installed Zammad through a package manager (rather than from source),
    replace ``rails r`` with ``zammad run rails r`` below.
-   To learn more, see `Administration via Console
-   <https://docs.zammad.org/en/latest/admin/console.html>`_.
+   To learn more, see :docs:`Administration via Console </admin/console.html>`.
 
 **Command line**::
 

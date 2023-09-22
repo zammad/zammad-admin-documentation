@@ -28,25 +28,21 @@ User Preferences Permissions
       :align: center
       :width: 80%
 
-      ...and give users access to the pages of their `User Profile`_.
-
-.. _User Profile:
-   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html
+      ...and give users access to the pages of their
+      :user-docs:`User Profile </extras/profile-and-settings.html>`.
 
 .. container:: cfloat-clear
 
    x
 
 :``user_preferences.access_token``:
-   Generate API tokens to control Zammad via the `REST API`_
+   Generate API tokens to control Zammad via the
+   :docs:`REST API </api/intro.html>`
 
    .. note:: 💡 **Security Tip**
 
       Generated tokens will never have more permissions than the user that
       generated them.
-
-   .. _REST API:
-      https://docs.zammad.org/en/latest/api/intro.html
 
 :``user_preferences.avatar``:
    Override the default Gravatar with a custom avatar

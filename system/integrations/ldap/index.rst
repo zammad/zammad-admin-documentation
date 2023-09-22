@@ -8,11 +8,8 @@ has to remember.
 .. hint::
 
    The LDAP source is also a perfect candidate for Zammad's
-   `Kerberos Single Sign-On`_ but also works as addition to other
-   :doc:`/settings/security/third-party`.
-
-.. _Kerberos Single Sign-On:
-   https://docs.zammad.org/en/latest/appendix/single-sign-on.html
+   :docs:`Kerberos Single Sign-On </appendix/single-sign-on.html>` but also
+   works as addition to other :doc:`/settings/security/third-party`.
 
 .. figure:: /images/system/integrations/ldap/ldap-integration-management.png
    :width: 90%
