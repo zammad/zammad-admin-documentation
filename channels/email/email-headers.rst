@@ -171,8 +171,9 @@ Trusted Channel
    the communication with external parties. Only follow the instructions below,
    if you know what you are doing.
 
-Setting a channel to ``trusted`` can ony be done via `console`_. In the
-rails console, execute the following commands:
+Setting a channel to ``trusted`` can ony be done via
+:docs:`console </admin/console.html>`. In the rails console, execute the
+following commands:
 
 | List all channels in Zammad:
 
@@ -205,6 +206,3 @@ Save your changes:
 .. code-block:: ruby
 
    >> channel.save!
-
-.. _console: https://docs.zammad.org/en/latest/admin/console.html
-

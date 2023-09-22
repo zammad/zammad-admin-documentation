@@ -60,11 +60,9 @@ The ones that aren’t are described below.
 
 .. note:: 🕵️ **Admins aren’t the only ones who can change these settings.**
 
-   In most cases, agents can, too (using the `ticket pane`_ or
-   organization detail page).
-
-   .. _ticket pane:
-      https://user-docs.zammad.org/en/latest/extras/organizations.html
+   In most cases, agents can, too (using the
+   :user-docs:`ticket pane </extras/organizations.html>` or organization detail
+   page).
 
 📢 Shared Organization
    If you set this option to ``yes``, all organization members will be able

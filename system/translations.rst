@@ -43,13 +43,11 @@ But... I have custom objects?!
 ------------------------------
 
 No problem at all! If you can't find the strings of your objects already within
-the translation list, please ensure to `add the translation strings`_ to your
-installation.
+the translation list, please ensure to
+:docs:`add the translation strings </admin/console/other-useful-commands.html#add-translation>`
+to your installation.
 
 Now you can translate your objects as needed.
-
-.. _add the translation strings:
-   https://docs.zammad.org/en/latest/admin/console/other-usefull-commands.html#add-translation
 
 So how does this local translation work?
 ----------------------------------------
@@ -63,10 +61,8 @@ action.
 
 The translation strings shown by Zammad are always those of the
 profile language you've chosen. If you need to translate a different language,
-change the language in your `profile settings`_ up front.
-
-.. _profile settings:
-   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html
+change the language in your
+:user-docs:`profile settings </extras/profile-and-settings.html>` up front.
 
    .. hint::
 

@@ -4,10 +4,7 @@ Text Modules
 .. note:: 
 
    Beside text modules Zammad also allows you to use
-   `Ticket Templates for ticket creation`_.
-
-.. _Ticket Templates for ticket creation:
-   https://user-docs.zammad.org/en/latest/advanced/ticket-templates.html
+   :user-docs:`Ticket Templates for ticket creation </advanced/ticket-templates.html>`.
 
 Text modules can be edited in the admin interface under Manage --> Text modules.
 Here you will find text snippets already created in the standard version, which 
@@ -37,16 +34,13 @@ To select placeholders from a list, just enter ``::`` in the text block.
 The list can be searched with the arrow keys after inputting keywords or 
 shortcuts. All text modules can be used in articles as well as in the chat.
 
-.. note:: 
+.. note::
 
-   You can find more information on how to use text modules on our 
-   `user documentation`_.
+   You can find more information on how to use text modules on our
+   :user-docs:`user documentation </advanced/text-modules.html>`.
 
-.. _user documentation:
-   https://user-docs.zammad.org/en/latest/advanced/text-modules.html
-
-.. tip:: 
-   If text modules are to be grouped, this can be done using shortcuts. 
+.. tip::
+   If text modules are to be grouped, this can be done using shortcuts.
    Example country codes:
 
    Text modules are created for the group Germany as follows:

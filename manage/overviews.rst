@@ -77,10 +77,8 @@ Only available for users which are absence replacements for other users.
 
    .. note::
 
-      Replacement users are part of our `Out of Office function`_.
-
-.. _Out of Office function:
-   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html
+      Replacement users are part of our
+      :user-docs:`Out of Office function </extras/profile-and-settings.html>`.
 
 Conditions for shown tickets
    .. figure:: /images/manage/overviews/overview-conditions-for-to-be-shown-tickets.png
@@ -137,7 +135,5 @@ Sorting, Grouping and Active
       Users can define their own overview order.
       Renaming or reordering overviews has no effect on custom orders!
 
-      You can learn more about this setting in the `user documentation`_.
-
-.. _user documentation:
-   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html#user-profile-settings
+      You can learn more about this setting
+      :user-docs:`in the user documentation </extras/profile-and-settings.html#user-profile-settings>`.

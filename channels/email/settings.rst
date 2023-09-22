@@ -184,7 +184,4 @@ Enhanced settings
 Some less relevant settings can be changed via rails console if needed.
 As an example, Zammad allows you to send all outgoing communication to a BCC
 address for archiving reasons if needed. You can find the needed commands
-`within the advanced customization settings`_.
-
-.. _within the advanced customization settings:
-   https://docs.zammad.org/en/latest/console/hidden-settings.html
+:docs:`within the advanced customization settings </admin/console/hidden-settings.html>`.

@@ -42,10 +42,8 @@ application. By default, Zammad will not automatically link "unknown"
 authentication providers to existing accounts.
 
 This means that the user has to manually link authentication providers to their
-accounts (for more about this `consult the user documentation`_).
-
-.. _consult the user documentation:
-   https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html
+accounts (for more about this
+:user-docs:`consult the user documentation </extras/profile-and-settings.html>`).
 
 Sometimes this doesn't come in handy as this also means you'll receive
 error messages about "email address being in use already" for (yet) unknown

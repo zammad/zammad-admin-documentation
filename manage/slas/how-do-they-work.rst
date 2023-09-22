@@ -19,10 +19,8 @@ SLAs as their calculations may not work as you intended them originally.
 
    Communication type articles are not enough for your SLA?
    You can also configure Zammad to allow **public** notes as fulfillment for
-   SLA requirements, `our console documentation`_ tells you how.
-
-.. _our console documentation:
-   https://docs.zammad.org/en/latest/admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas
+   SLA requirements,
+   :docs:`our console documentation </admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas>` tells you how.
 
 Name
    Give your SLA a meaningful name to quickly see what or who is affected.
