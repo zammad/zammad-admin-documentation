@@ -33,9 +33,8 @@ Geo Location Service
 
    Default: ``Geo Location Service`` (active)
 
-.. hint:: 
+.. hint::
 
    You can find a detailed privacy information on what we store for how long on
-   our `Privacy Appendix`_ inside of our System-Administrator-Documentation.
-
-.. _Privacy Appendix: https://docs.zammad.org/en/latest/appendix/privacy.html
+   our :docs:`Privacy Appendix </appendix/privacy.html>` inside of our System
+   Documentation.

@@ -100,7 +100,8 @@ Broadly speaking, there are four types of permissions:
    they can still log in and open new tickets!
 
 :doc:`🎛️ User Preferences <user-preferences-permissions>`
-   for access to your own `user profile <https://user-docs.zammad.org/en/latest/extras/profile-and-settings.html>`_
+   for access to your own
+   :user-docs:`user profile </extras/profile-and-settings.html>`
 
 .. note:: 📁 **Permissions are namespaced**,
    which is sort of like having files inside of folders.

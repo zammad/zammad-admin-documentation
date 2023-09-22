@@ -17,7 +17,7 @@ Learn more about managing users...
    * :doc:`via CSV import <via-csv-import>`
    * :doc:`via LDAP/Active Directory integration </system/integrations/ldap/index>`
    * :doc:`via Exchange integration </system/integrations/exchange>`
-   * `via REST API <https://docs.zammad.org/en/latest/api/intro.html>`_
+   * :docs:`via REST API </api/intro.html>`
 
 .. toctree::
    :maxdepth: 1
@@ -60,14 +60,10 @@ The ones that aren’t are described below.
 .. note:: 🕵️ **Admins aren’t the only ones who can change these settings.**
 
    In most cases, agents can, too
-   (using the `new ticket dialog`_, `search bar`_ or the `ticket pane`_).
-
-   .. _new ticket dialog:
-      https://user-docs.zammad.org/en/latest/basics/service-ticket/create.html
-   .. _search bar:
-      https://user-docs.zammad.org/en/latest/basics/find-ticket/search.html
-   .. _ticket pane:
-      https://user-docs.zammad.org/en/latest/extras/customers.html
+   (using the
+   :user-docs:`new ticket dialog </basics/service-ticket/create.html>`,
+   :user-docs:`search bar </basics/find-ticket/search.html>` or the
+   :user-docs:`ticket pane </extras/customers.html>`).
 
 👤 Login
    A user’s email and login may differ, but
@@ -82,10 +78,9 @@ The ones that aren’t are described below.
          User logins are **not** shown in the New/Edit User dialog,
          but they are visible from the user overview.
 
-   This attribute **cannot** be set via the Admin Panel. Instead, use
-   the `Zammad console <https://docs.zammad.org/en/latest/admin/console.html>`_,
-   the `REST API <https://docs.zammad.org/en/latest/api/intro.html>`_, or
-   :doc:`CSV import <via-csv-import>`.
+   This attribute **cannot** be set via the Admin Panel. Instead, use the
+   :docs:`Zammad console </admin/console.html>`, the
+   :docs:`REST API </api/intro.html>`, or :doc:`CSV import <via-csv-import>`.
 
 🔑 Password
    Yes, administrators really do have the power to change other users’ passwords.

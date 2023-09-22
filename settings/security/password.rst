@@ -43,11 +43,8 @@ The default value is ``10``.
    Beside changing the user's password, you can also unlock accounts via
 
       * :ref:`user management list <locked-user-accounts>`
-      * `console`_
-      * `api`_
-
-.. _console: https://docs.zammad.org/en/latest/console/working-on-users.html
-.. _API: https://docs.zammad.org/en/latest/api/user.html
+      * :docs:`console </admin/console/working-on-users.html>`
+      * :docs:`API </api/user.html>`
 
 .. hint::
 

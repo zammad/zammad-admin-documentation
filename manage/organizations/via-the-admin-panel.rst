@@ -35,9 +35,6 @@ entries.
 
    .. hint::
 
-      Technically organization removal is possible via `Zammad's API`_, however,
-      this only works in very specific situations. You may want to stick to
-      data privacy as of now.
-
-.. _Zammad's API:
-   https://docs.zammad.org/en/latest/api/organization.html
+      Technically organization removal is possible via
+      :docs:`Zammad's API </api/organization.html>`, however, this only works in
+      very specific situations. You may want to stick to data privacy as of now.

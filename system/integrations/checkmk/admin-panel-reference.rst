@@ -25,12 +25,9 @@ Auto-close state
 
    (You may choose from the seven built-in ticket states,
    but if you change this setting from the default, you’ll more likely want to
-   `define a new ticket state`_ for this purpose.
-   This can be especially useful for tracking tickets with
+   :docs:`define a new ticket state </admin/console.html>` for this
+   purpose. This can be especially useful for tracking tickets with
    :doc:`reports </manage/report-profiles>`.)
-
-.. _define a new ticket state:
-   https://docs.zammad.org/en/latest/admin/console.html
 
 .. _checkmk-recent-logs:
 

@@ -7,7 +7,5 @@ ones!
 
    .. note::
 
-      The agent perspective is described within our `user documentation`_.
-
-.. _user documentation:
-   https://user-docs.zammad.org/en/latest/extras/caller-log.html
+      The agent perspective is described within our
+      :user-docs:`user documentation </extras/caller-log.html>`.

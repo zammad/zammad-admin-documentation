@@ -5,8 +5,8 @@ The Elasticsearch integration allows you to create a read-only user to use
 with your favorite reporting tool (e.g. like Grafana).
 
 If you want to take full advantage of the Zammad reporting, have a look at our
-`Grafana <https://docs.zammad.org/en/latest/appendix/reporting-tools-thirdparty/grafana.html>`_
-setup page as well.
+:docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>` setup page
+as well.
 
 .. warning:: **🚧 Hosted environment specific 🚧**
 

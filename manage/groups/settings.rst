@@ -76,10 +76,8 @@ Shared Drafts
    tickets) with their colleagues. By default this setting is enabled,
    disable it if you don't want your agents to use this function.
 
-   Learn more about `shared drafts in our user documentation`_.
-
-.. _shared drafts in our user documentation:
-   https://user-docs.zammad.org/en/latest/extras/shared-drafts.html
+   Learn more about shared drafts
+   :user-docs:`in our user documentation </extras/shared-drafts.html>`.
 
 Note
    An internal note about the group that is only visible to people who can
