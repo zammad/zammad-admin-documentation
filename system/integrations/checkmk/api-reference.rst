@@ -191,10 +191,8 @@ group & priority
 
 Everything Else
    To set any other attributes, it helps to know your way around the
-   `rails console`_. Valid values are those that you can set with a string:
-
-.. _rails console:
-   https://docs.zammad.org/en/latest/admin/console.html
+   :docs:`rails console </admin/console.html>`. Valid values are those that you
+   can set with a string:
 
    .. code:: ruby
 

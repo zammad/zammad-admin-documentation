@@ -103,10 +103,9 @@ From now on, whenever a ticket is created or updated in your Zammad system, a
 suitable notification will be posted in the configured Mattermost Channel. The
 notification will contain the link to the ticket, updated data and
 :ref:`content of the last article <mattermost-removing-article-body>`. It will
-also be `color coded`_ according to its latest state.
-
-.. _color coded:
-   https://user-docs.zammad.org/en/latest/basics/service-ticket/settings/state.html#state-colors
+also be
+:user-docs:`color coded </basics/service-ticket/settings/state.html#state-colors>`
+according to its latest state.
 
 .. figure:: /images/manage/webhook/webhook-mattermost-sample-notification.png
    :alt: Sample Mattermost Channel Notification

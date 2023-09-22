@@ -29,10 +29,9 @@ What users see
 i-doit integration puts a new tab in Zammad's ticket pane
 where you can add links to existing i-doit devices
 for easy reference.
-(See our `user documentation`_ to learn how it works in practice).
-
-.. _user documentation:
-   https://user-docs.zammad.org/en/latest/extras/i-doit-track-company-property.html
+(See our
+:user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
+learn how it works in practice).
 
 How to set it up
 ^^^^^^^^^^^^^^^^
@@ -93,7 +92,9 @@ What users see
 
 i-doit's ticket system integration gives you a way to see
 all the tickets for a given device without ever leaving i-doit.
-(See our `user documentation`_ to learn how it works in practice).
+(See our
+:user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
+learn how it works in practice).
 
 How to set it up
 ^^^^^^^^^^^^^^^^

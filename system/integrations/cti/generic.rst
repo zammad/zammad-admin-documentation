@@ -15,10 +15,8 @@ Please provide the following requirements:
    * Your Zammad instance must be reachable for your telephony system.
 
 If you want to learn more on what kind of requests are supported by Zammad
-and what it expects, please consult our `CTI-API documentation`_.
-
-.. _CTI-API documentation:
-   https://docs.zammad.org/en/latest/api/generic-cti/index.html
+and what it expects, please consult our
+:docs:`CTI-API documentation </api/generic-cti/index.html>`.
 
 Available settings
 ------------------
@@ -32,8 +30,8 @@ Endpoint Settings
    Zammad will list your generic CTI endpoint here.
    It contains a unique token so ensure to keep this URL save.
 
-   You'll need this endpoint for your PBX to talk to Zammad,
-   see `CTI-API documentation`_.
+   You'll need this endpoint for your PBX to talk to Zammad, see
+   :docs:`CTI-API documentation </api/generic-cti/index.html>`.
 
 .. include:: /system/integrations/cti/includes/important-dont-forget-saving.include.rst
 

@@ -195,7 +195,8 @@ State *(Scope: Ticket)*
          dialogues - if you can see ticket states only in parts of the
          admin menu and not in the front-end, your state *is not visible*.
 
-         `The system user documentation has you covered`_.
+         :docs:`The system documentation </admin/console/working-on-tickets.html#make-new-states-available-to-ui>`
+         has you covered.
 
    .. container:: cfloat-left
 
@@ -205,9 +206,6 @@ State *(Scope: Ticket)*
    .. container:: cfloat-right
 
       Offers all configured and *visible* ticket states in Zammad.
-
-.. _The system user documentation has you covered:
-   https://docs.zammad.org/en/latest/admin/console/working-on-tickets.html#make-new-states-available-to-ui
 
    .. container:: cfloat-clear
 
@@ -244,7 +242,9 @@ Subscribe *(Scope: Ticket)*
 
    .. container:: cfloat-left
 
-      | What ticket subscribers (`notifications`_) are affected (or not)?
+      | What ticket subscribers
+        (:user-docs:`notifications </advanced/suggested-workflows.html#mentions-the-subscribe-button>`)
+        are affected (or not)?
       | Available matching: *is* or *is not*
 
    .. container:: cfloat-right
@@ -297,9 +297,6 @@ Type *(Scope: Ticket article)*
    .. container:: cfloat-clear
 
       X
-
-.. _notifications:
-   https://user-docs.zammad.org/en/latest/advanced/suggested-workflows.html#mentions-the-subscribe-button
 
 Visibility *(Scope: Ticket article)*
    .. container:: cfloat-left

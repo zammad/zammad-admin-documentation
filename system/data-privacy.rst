@@ -17,11 +17,8 @@ along with **all of their associated tickets**.
    Access to this panel requires ``admin.data_privacy`` permissions
    (introduced in Zammad 3.5).
 
-   On older systems that have not been updated yet,
-   customers can also be `deleted via the Zammad console`_.
-
-.. _deleted via the Zammad console:
-   https://docs.zammad.org/en/latest/admin/console/dangerzone-for-experts.html#deleting-customers
+   On older systems that have not been updated yet, customers can also be
+   :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`.
 
 Deleting Users
 --------------
@@ -142,7 +139,5 @@ Frequently Asked Questions
    This also affects e.g. Reporting - these information are lost.
 
 🤔 How long does Zammad store created tasks?
-   Please see the on-premise data section of the `data privacy`_ section.
-
-.. _data privacy:
-   https://docs.zammad.org/en/latest/appendix/privacy.html
+   Please see the on-premise data section of the
+   :docs:`data privacy </appendix/privacy.html>` chapter.

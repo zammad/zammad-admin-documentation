@@ -29,15 +29,12 @@ Agent Permissions
    x
 
 :``chat.agent``:
-   `💬 Customer Chat`_
+   :user-docs:`💬 Customer Chat </extras/chat.html>`
 
    .. hint:: 🤓 Requires configuration of :doc:`Chat Channel </channels/chat>`
 
-   .. _💬 Customer Chat:
-      https://user-docs.zammad.org/en/latest/extras/chat.html
-
 :``cti.agent``:
-   Provides access to `📞 Caller Log`_
+   Provides access to :user-docs:`📞 Caller Log </extras/caller-log.html>`
 
    .. hint:: 🤓 Requires configuration of either integrations
 
@@ -45,12 +42,9 @@ Agent Permissions
       * :doc:`placetel </system/integrations/cti/placetel>`
       * :doc:`sipgate </system/integrations/cti/sipgate>`
 
-   .. _📞 Caller Log:
-      https://user-docs.zammad.org/en/latest/extras/caller-log.html 
-
 :knowledge_base:
-   `📕 Knowledge Base <https://user-docs.zammad.org/en/latest/extras/knowledge-base.html>`_ 
-                            
+   :user-docs:`📕 Knowledge Base </extras/knowledge-base.html>`
+
    :``knowledge_base.editor``:
       create/edit privileges
 
@@ -65,7 +59,8 @@ Agent Permissions
 
       .. tip::
 
-         Zammad supports `granular permissions on knowledge base categories`_.
+         Zammad supports
+         :user-docs:`granular permissions on knowledge base categories </extras/knowledge-base.html#granular-category-permissions>`.
 
          This function allows *agents with editor* permissions to restrict
          specific internal categories & answers to chosen roles.
@@ -78,9 +73,6 @@ Agent Permissions
 
          Keep in mind that this may be dangerous, as reader permission
          provides access to internal answers!
-
-   .. _granular permissions on knowledge base categories:
-      https://user-docs.zammad.org/en/latest/extras/knowledge-base.html#granular-category-permissions
 
 :``report``:
    :doc:`📈 Reporting </manage/report-profiles>`
@@ -98,7 +90,7 @@ Agent Permissions
 
    .. _role-settings-group-access:
 :``ticket.agent``:
-   `🗒️ (Agent) Overviews <https://user-docs.zammad.org/en/latest/basics/find-ticket/browse.html>`_
+   :user-docs:`🗒️ (Agent) Overviews </basics/find-ticket/browse.html>`
 
    .. note::
 

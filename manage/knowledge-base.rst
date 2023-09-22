@@ -13,14 +13,11 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
 .. hint:: This document describes how to ⚙ **configure** the knowledge base.
 
    For details on how to ✍️ **use and edit** it, please refer to the
-   `Zammad user documentation`_.
+   :user-docs:`Zammad User Documentation </extras/knowledge-base.html>`.
 
    By default, only admin users are permitted to create, edit, and manage
    knowledge base articles. See :doc:`roles/index` for details on how to
    grant write access to agents or other users.
-
-.. _Zammad user documentation:
-   https://user-docs.zammad.org/en/latest/extras/knowledge-base.html
 
 .. note:: The knowledge base will not appear in the main menu until it has been
    enabled in the admin panel.
