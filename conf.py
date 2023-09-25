@@ -4,9 +4,9 @@ import time
 
 import sphinx_rtd_theme
 
-html_logo = "images/zammad_logo_70x61.png"
+html_logo = "images/zammad_logo_70x61@2x.png"
 html_favicon = "images/favicon.ico"
-project = u'Zammad'
+project = u'Zammad Admin Documentation'
 copyright = u'2012 - %s, Zammad Foundation' % time.strftime("%Y")
 author = u'Zammad'
 
