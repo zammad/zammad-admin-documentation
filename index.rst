@@ -1,6 +1,11 @@
 Zammad - Documentation for administrators
 =========================================
 
+.. hint::
+   You are currently reading the Zammad administration documentation. There are
+   also :docs:`system </index.html>` and
+   :user-docs:`user manuals </index.html>` available.
+
 .. _manage-docs:
 
 .. toctree::
