@@ -1,5 +1,5 @@
-Zammad - Documentation for administrators
-=========================================
+Zammad Admin Documentation
+==========================
 
 .. hint::
    You are currently reading the Zammad administration documentation. There are
