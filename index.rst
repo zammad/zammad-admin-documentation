@@ -1,5 +1,10 @@
-Zammad - Documentation for administrators
-=========================================
+Zammad Admin Documentation
+==========================
+
+.. hint::
+   You are currently reading the Zammad administration documentation. There are
+   also :docs:`system </index.html>` and
+   :user-docs:`user manuals </index.html>` available.
 
 .. _manage-docs:
 
