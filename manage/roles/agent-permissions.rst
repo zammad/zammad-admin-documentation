@@ -94,25 +94,26 @@ Agent Permissions
 
    .. note::
 
-      🤔 **What’s this big table doing here in the middle of my permissions?**
+      🤔 **What's this table doing here under the permissions tree?**
 
       .. figure:: /images/manage/roles/group-access-levels.png
-         :alt: Group access table in Edit Role dialog
+         :alt: Group permission table in Edit Role dialog
          :align: center
 
-         The group access table is shown
-         when there is **more than one active group** in the system.
+         The group permission table is shown
+         when there is **more than one active group** in the system and
+         ``ticket.agent`` permission **is selected**.
 
       Okay, so remember when we said that
       :ref:`“roles are just collections of permissions” <what-is-a-role>`?
       That wasn't *entirely* true—they can also be collections of
-      **group access levels**.
+      **group permissions**.
 
       To learn more, see :doc:`/manage/groups/access-levels`.
 
    .. hint:: 🤓 **Point of technicality**
 
-      You can assign both agent and customer roles to the same user — but you 
+      You can assign both agent and customer roles to the same user — but you
       **can't** assign both ``ticket.agent`` and ``ticket.customer``
       *permissions* to the same *role!*
 

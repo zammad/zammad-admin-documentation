@@ -1,14 +1,14 @@
 Users
 =====
 
-Depending on your organization’s IT capabilities,
+Depending on your organization's IT capabilities,
 users can be managed individually or in bulk,
 or even synchronized with third-party directory services.
 
-.. figure:: /images/manage/users/managing-users-manually.gif
+.. figure:: /images/manage/users/managing-users-manually.png
    :alt: Creating and editing users directly in the Admin Panel
    :align: center
-   :width: 90%
+   :width: 60%
 
    The simplest way to manage users is directly in the Admin Panel.
 
@@ -35,7 +35,7 @@ Learn more about managing users...
 
    How? Zammad checks the sender of every incoming message
    at every inbox it monitors,
-   and if it doesn’t recognize the address,
+   and if it doesn't recognize the address,
    ✨ **poof**—new customer account!
 
    (Your customers never need to set a password.
@@ -48,7 +48,7 @@ Reference Guide: User Details
 -----------------------------
 
 Most of the attributes you can set on user accounts are self-explanatory.
-The ones that aren’t are described below.
+The ones that aren't are described below.
 
 .. figure:: /images/manage/users/user-details.png
    :alt: The edit user dialog, showing the various user detail fields
@@ -57,7 +57,7 @@ The ones that aren’t are described below.
 
    User details can be set in the **New/Edit User** dialog.
 
-.. note:: 🕵️ **Admins aren’t the only ones who can change these settings.**
+.. note:: 🕵️ **Admins aren't the only ones who can change these settings.**
 
    In most cases, agents can, too
    (using the
@@ -66,7 +66,7 @@ The ones that aren’t are described below.
    :user-docs:`ticket pane </extras/customers.html>`).
 
 👤 Login
-   A user’s email and login may differ, but
+   A user's email and login may differ, but
    **either one can be used to sign in.**
 
    .. note::
@@ -83,7 +83,7 @@ The ones that aren’t are described below.
    :docs:`REST API </api/intro.html>`, or :doc:`CSV import <via-csv-import>`.
 
 🔑 Password
-   Yes, administrators really do have the power to change other users’ passwords.
+   Yes, administrators really do have the power to change other users' passwords.
 
    (Agents do not, though.)
 
@@ -93,8 +93,8 @@ The ones that aren’t are described below.
    This allows you to do things like view all tickets for that company
    or set up special :doc:`/manage/trigger` that fire only for those customers.
 
-   .. hint:: 🚫 **You can’t assign a customer
-      to an organization that doesn’t exist yet.**
+   .. hint:: 🚫 **You can't assign a customer
+      to an organization that doesn't exist yet.**
 
       To add one, go to **Manage > Organizations** in the Admin Panel.
 
@@ -124,7 +124,7 @@ The ones that aren’t are described below.
    :doc:`/manage/slas/index`, and :doc:`/manage/overviews` just for VIPs.
 
    .. figure:: /images/manage/users/vip-user-in-a-ticket.png
-      :alt: Ticket view showing a VIP user’s avatar with a crown on it
+      :alt: Ticket view showing a VIP user's avatar with a crown on it
       :align: center
       :width: 90%
 
@@ -142,11 +142,11 @@ The ones that aren’t are described below.
 
 ▶️ Active
    Disabling this flag is a soft alternative to deleting a user.
-   So what’s the difference?
+   So what's the difference?
 
    1. There is no way to restore a deleted user;
       inactive users can be reactivated at any time.
-      
+
    2. When a user is deleted, all their associated tickets are lost, as well;
       deactivating a user keeps all associated tickets intact.
 
@@ -161,29 +161,30 @@ The ones that aren’t are described below.
 
          .. _user-details-group-access:
 
-🔓 Permissions
-   Under this heading, you can manage two separate (but related) user details:
+Roles
+   The :doc:`/manage/roles/index` define what users can do in the system.
+   If you need to grant someone privileges to edit the knowledge base
+   or access part of the admin panel, roles are the answer.
 
-   1. :doc:`/manage/roles/index` dictate what users can do in the system.
-      If you need to grant someone privileges to edit the knowledge base
-      or access part of the admin panel, roles are the answer.
-
-   2. :doc:`/manage/groups/access-levels` dictate which tickets
-      an agent can work with.
-      If someone’s not receiving notifications for incoming tickets
-      or can’t be assigned a ticket,
-      group access levels are likely to blame.
+Group Permissions
+   The :doc:`/manage/groups/access-levels` define which tickets
+   an agent can work with.
+   If an agent is not receiving notifications for incoming tickets
+   or can't be assigned to a ticket, you should have a look on the group
+   permissions.
+   Please note that the visibility of the group permission table depends on the
+   role selection - it has to be "Agent" that the table shows up.
 
    .. figure:: /images/manage/users/user-details-permissions.png
       :alt: Permissions in the edit user dialog
       :align: center
       :width: 70%
 
-      **Top:** A user’s roles decide what kinds of actions they can perform
-      and which :doc:`groups </manage/groups/index>` they belong to.
-      **Bottom:** Group assignments can alternately be set on a per-user basis.
+   **Top:** A user's roles decide what kinds of actions they can perform
+   and which :doc:`groups </manage/groups/index>` they belong to.
+   **Bottom:** Group assignments can alternately be set on a per-user basis.
 
-   .. hint:: **🤔 Huh? I don’t see the group access table...**
+   .. hint:: **🤔 Huh? I don't see the group access table...**
 
       The group access table is only visible in **agent profiles**,
       when there is **more than one active group** in the system.

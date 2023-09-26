@@ -34,7 +34,7 @@ Group selection for Ticket creation
    internal groups, you can always select a set of groups you want to be
    available.
 
-   Default: ``-``
+   Default: (empty selection)
 
       .. note:: **🤓 This does not affect your agents**
 
