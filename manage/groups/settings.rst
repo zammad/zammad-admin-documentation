@@ -13,6 +13,18 @@ Name
    This is the name your agents (and customers when using :doc:`/channels/web`)
    will see within the Zammad-UI.
 
+Parent group
+   You can define *another* group as a parent group here. This is useful if you
+   want to create group hierarchies. In such a hierarchy (child/parent
+   relation), the tree of the parent group is inherited to the child group. That
+   means if you move a group which itself has child groups, the child groups
+   are "moved" accordingly. However, there is no inheritance of membership or
+   permissions. That means you can treat each group as an individual group -
+   even if they have a child/parent relation.
+
+   .. hint:: Zammad doesn't show you any child group of the currently selected
+      group. This would lead to a circular reference!
+
 Assignment timeout
    The time in minutes after which the ticket's ownership will revert back to
    *unassigned* after the assigned agent hasn't worked on the ticket.
@@ -27,7 +39,7 @@ Follow-up possible
 
    yes
       The ticket will be reopened. This is the default value.
-   
+
    do not reopen Ticket but create new Ticket
       The ticket will remain closed and Zammad will create a new ticket instead.
       The new ticket contains the customers reply only.
@@ -101,7 +113,7 @@ Active
 
 .. figure:: /images/manage/groups/group-settings.png
    :alt: Screenshot showing how a group configuration can look like.
-   :width: 90%
+   :width: 60%
    :align: center
 
    A sample configuration of a group.
