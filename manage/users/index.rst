@@ -173,14 +173,15 @@ Group Permissions
    or can't be assigned to a ticket, you should have a look on the group
    permissions.
    Please note that the visibility of the group permission table depends on the
-   role selection - it has to be "Agent" that the table shows up.
+   role selection. It only shows up, if the selected role has the
+   ``ticket.agent`` permission.
 
    .. figure:: /images/manage/users/user-details-permissions.png
       :alt: Permissions in the edit user dialog
       :align: center
       :width: 70%
 
-   **Top:** A user's roles decide what kinds of actions they can perform
+   **Top:** User's roles decide what kind of actions they can perform
    and which :doc:`groups </manage/groups/index>` they belong to.
    **Bottom:** Group assignments can alternately be set on a per-user basis.
 

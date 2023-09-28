@@ -22,8 +22,8 @@ Parent group
    permissions. That means you can treat each group as an individual group -
    even if they have a child/parent relation.
 
-   Note: Zammad doesn't show you any child group of the currently selected
-   group. This would lead to a circular reference!
+   .. hint:: Zammad doesn't show you any child group of the currently selected
+      group. This would lead to a circular reference!
 
 Assignment timeout
    The time in minutes after which the ticket's ownership will revert back to
