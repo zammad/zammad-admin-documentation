@@ -43,12 +43,15 @@ Simple Storage (S3)
 
    1. Copy ``config/zammad/storage.yml.dist`` to ``config/zammad/storage.yml``
    2. Edit the copied file in one of the following ways:
-      - Either provide your S3 configuration with one attribute per line like in
-      the upper area of the file
-      - Or provide your S3 configuration as an URL (which you can find at the
-      end of the file)
-      - We recommend the deletion of the not used configuration style to avoid
-      inconsistencies.
+
+     - Either provide your S3 configuration with one attribute per line like in
+       the upper area of the file
+     - Or provide your S3 configuration as an URL (which you can find at the
+       end of the file). Note: you can also provide this URL as environment
+       variable without using this yml-file.
+     - We recommend the deletion of the not used configuration style to avoid
+       inconsistencies.
+
    3. Set the "Storage Mechanism" in Zammad to ``Simple Storage (S3)`` in
       Settings > System > Storage.
    4. Restart Zammad that the changes take effect
@@ -61,7 +64,7 @@ Simple Storage (S3)
          access_key_id: 'xxxxxxxx'
          secret_access_key: 'yyyyyyy'
          region: 's3-us-west-2'
-         endpoint: 'https://zammad.s3.us-west-2.amazonaws.com:9000'
+         endpoint: 'https://zammad.s3.us-west-2.amazonaws.com'
          bucket: 'zammad'
 
 
@@ -73,9 +76,6 @@ Simple Storage (S3)
       instead of "Database".
       This will greatly improve system performance (de-crease database load
       and size).
-
-      ⚠️ You can also give the S3 method a try. But please keep in mind, that it
-      is in its early stages in Zammad and can possibly do unexpected things.
 
 .. tip::
 
