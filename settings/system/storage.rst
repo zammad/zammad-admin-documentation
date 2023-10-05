@@ -67,6 +67,20 @@ Simple Storage (S3)
          endpoint: 'https://zammad.s3.us-west-2.amazonaws.com'
          bucket: 'zammad'
 
+.. tip::
+
+   Before setting the storage mechanism to ``Simple Storage (S3)`` (step 3),
+   please make sure to have a working setup.
+
+   You can verify this by running
+   ``rails r 'Rails.logger = Logger.new(STDOUT); pp Store::Provider::S3.ping?'``
+   in your Zammad directory. If everything is fine, you should see ``true``,
+   else you should see ``false`` and a simple error message.
+
+   If you installed Zammad through a package manager (rather than from source),
+   replace ``rails r`` with ``zammad run rails r`` above.
+   To learn more, see :docs:`Administration via Console </admin/console.html>`.
+
 
 .. note::
 
