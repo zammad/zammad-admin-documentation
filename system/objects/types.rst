@@ -1,18 +1,20 @@
-Object types
-************
+Attribute types
+***************
 
-When adding a new object, you can choose between the following object types.
+When adding a new object attribute, you can choose between the following
+attribute types.
 
 .. warning::
 
-   You cannot change the object format / type as soon as it is applied.
-   If you no longer need an object, consider disabling it instead of removing.
+   You cannot change the attribute format / type as soon as it is applied.
+   If you no longer need an object attribute, consider disabling it instead of
+   removing.
 
-.. note:: **What about the translation of my objects?**
+.. note:: **What about the translation of my attributes?**
 
-   For some object types you can decide if they should be translatable or not.
+   For some attribute types you can decide if they should be translatable or not.
    To be precise, it works only for the selectable fields because the possible
-   choices are known and limited. For the following object types, you can set
+   choices are known and limited. For the following attribute types, you can set
    the translatable flag:
 
       * *Boolean field*
@@ -25,10 +27,10 @@ When adding a new object, you can choose between the following object types.
 
    .. figure:: /images/system/objects/object-types-translatable.png
       :align: center
-      :alt: Screenshot showing translatable object types
+      :alt: Screenshot showing translatable attribute types
       :scale: 80%
 
-      Screenshot with example of translatable object type
+      Screenshot with example of translatable attribute type
 
 Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
@@ -182,7 +184,7 @@ URL fields (Link-Template)
 
 .. note::
 
-   This function is restricted to Text and Select objects only.
+   This function is restricted to Text and Select attributes only.
 
 Link-Templates are an amazing way to dynamically generate URLs.
 They allow you to integrate other systems better without having to
@@ -224,8 +226,8 @@ actual URL of the field - e.g. ``https://zammad.com``.
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-As an example, let's say you have an object called ``amazingobject`` - you want
-to open a google search directly with the input from that field.
+As an example, let's say you have an attribute called ``amazingobject`` - you
+want to open a google search directly with the input from that field.
 
 Providing below to the link-template field allows you to do so:
 ``https://www.google.com/search?q=#{ticket.amazingobject}``
