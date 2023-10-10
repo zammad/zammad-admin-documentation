@@ -1,5 +1,5 @@
-Example configuration external data source
-******************************************
+External Data Source
+********************
 
 We assume you already had a look on :doc:`types` where you can find
 a description of the individual fields.
@@ -28,12 +28,13 @@ Base configuration
 External data source configuration
 ==================================
 
-First, enter the search URL followed by ``#{search.term}``
+First, enter the search URL making sure it contains ``#{search.term}`` as a
+parameter:
 
 **Example:** ``https://dummyjson.com/products/search?q=#{search.term}``
 
-After that, head down to the preview section and enter a string you expect to
-be in the external data in the search field.
+After that, head down to the preview section and enter a search input for the
+external data source.
 
 **Example:** ``mac``
 
@@ -115,14 +116,13 @@ attributes ``id`` and ``title``.
       "limit": 3
    }
 
-To tell Zammad that the data is located below the ``products`` level, you
-have to put it in the field *Search result list key*. This makes Zammad
-searching in the stated list.
+To tell the remote system that the desired data is located below the
+``products`` level, you have to put it in the field *Search result list key*.
 
 After inserting ``products`` in the mentioned field, you get an extended preview.
 You can find an additional box *Search result list* with a JSON structure.
-This is the response based on the search string, stripped from the upper
-``products`` element.
+This is the same response as before but stripped from the upper
+``products`` element by the external data source.
 
 .. figure:: /images/system/objects/eds-example-2.png
     :align: center
@@ -131,7 +131,7 @@ This is the response based on the search string, stripped from the upper
 
 Now you need to provide the keys for the search result values and labels. As
 already mentioned, we are looking for the ``id`` and the ``title`` of our
-products. If not already happened, it is now a good time to look in the preview
+products. If you haven't already, it is now a good time to look at the preview
 of the *Search result list*.
 
 .. code::
@@ -205,13 +205,24 @@ in the preview section:
     :scale: 70 %
     :alt: Preview of product table based on search term
 
-Now just the *Link template* is missing. We can add now the domain, where
-additional product information can be found.
+According to our example story, now just the *Link template* is missing.
+
+.. note:: Please note that this is an optional feature. If you don't want to
+   use such links, of course you don't have to configure it.
+
+We can add now an address where additional product information can be found.
 
 Example: ``https://your_domain.com/q=#{ticket.product}``
 
-After configuring your *Link template*, there is another column in the preview.
-Hovering on the icons in the *Link* column will show you where it forwards you.
+In the example, the parameter means:
+
+ - ``#{}``: "Frame" for the insertion of information
+ - ``ticket``: object level, where you create your custom object
+ - ``product``: name of the (custom) object
+
+After configuring your *Link template*, there will be another column in the
+preview. Hovering on the icons in the *Link* column will show you where it
+forwards you.
 
 .. figure:: /images/system/objects/eds-example-4.png
     :align: center

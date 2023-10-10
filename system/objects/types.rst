@@ -7,7 +7,7 @@ attribute types.
 .. toctree::
    :hidden:
 
-   external-data-source-example
+   Examples <external-data-source-example>
 
 .. warning::
 
@@ -186,7 +186,7 @@ External Data Source field
    Provides a searchable field which fetches data from an external system.
    Currently, only ``GET`` is supported as request method and the data structure
    must be in JSON format. You can define in the configuration, which attribute
-   you want to be visible and searchable/selectable for the users.
+   you want to be visible and selectable for the users.
 
    .. warning:: The usage of a PostgreSQL database is required for this
       feature. In any other case, Zammad will hide the selection and you are not
@@ -200,7 +200,7 @@ External Data Source field
 
    Search URL
       Set your endpoint where Zammad fetches the data. Please make
-      sure to add ``#{search.term}`` at the end of the URL to make it work.
+      sure to include ``#{search.term}`` as an URL parameter.
 
    SSL Verification
       Here you can switch the SSL verification to no.
@@ -219,8 +219,8 @@ External Data Source field
       additional fields where you can enter your credentials/token).
 
    Search result list key
-      Defines the level in the JSON structure in which Zammad searches
-      for the data.
+      Defines the level in the JSON structure which provides the list with
+      search results.
 
    Search result value key
       Defines the attribute in the structure in which your external data
@@ -236,14 +236,14 @@ External Data Source field
       In the preview area, you can find the following items (depending on your
       configuration above):
 
-      - **Error/hint message** (only if configuration not complete): Zammad
+      - **Error/hint message** (only if configuration is not complete): Zammad
         tells you, if there is a problem and what you should change in your
         configuration.
-      - **Seach field**: search for an existing attribute in the data source to
+      - **Search field**: search for an existing attribute in the data source to
         get a preview. This is required for the fields below to show up.
-      - **Search result response** (only if configuration not complete): here
+      - **Search result response** (only if configuration is not complete): here
         you can find a syntax highlighted JSON preview of the response, based
-        on the search term, you entered.
+        on the search term you entered.
       - **Search result list** (only if *search result list key* is properly
         set): output of the structure under the configured *search result list
         key*.
@@ -264,7 +264,7 @@ URL fields (Link-Template)
 
 .. note::
 
-   This function is restricted to Text, Select and External Data Source types
+   This function is restricted to Text, Select and External data source types
    only.
 
 Link-Templates are an amazing way to dynamically generate URLs.

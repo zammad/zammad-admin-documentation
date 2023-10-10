@@ -4940,6 +4940,7 @@ msgid "Please make sure that you have selected the ``ticket.agent`` permission f
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:80
+#: ../system/objects/types.rst:4
 msgid "Examples"
 msgstr ""
 
@@ -18016,12 +18017,108 @@ msgstr ""
 msgid "Provides a select-like field with up to 6 layers of options allowing the selection of multiple values. Does not allow setting a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:183
+#: ../system/objects/types.rst:256
+msgid "External Data Source field"
+msgstr ""
+
+#: ../system/objects/types.rst:184
+msgid "Provides a searchable field which fetches data from an external system. Currently, only ``GET`` is supported as request method and the data structure must be in JSON format. You can define in the configuration, which attribute you want to be visible and selectable for the users."
+msgstr ""
+
+#: ../system/objects/types.rst:189
+msgid "The usage of a PostgreSQL database is required for this feature. In any other case, Zammad will hide the selection and you are not able to use it. If you want to use this feature, consider to :docs:`migrate your database </appendix/migrate-to-postgresql.html>`."
+msgstr ""
+
+#: ../system/objects/types.rst:0
+msgid "Available settings for external data source fields"
+msgstr ""
+
+#: ../system/objects/types.rst:201
+msgid "Search URL"
+msgstr ""
+
+#: ../system/objects/types.rst:200
+msgid "Set your endpoint where Zammad fetches the data. Please make sure to include ``#{search.term}`` as an URL parameter."
+msgstr ""
+
+#: ../system/objects/types.rst:211
+msgid "SSL Verification"
+msgstr ""
+
+#: ../system/objects/types.rst:204
+msgid "Here you can switch the SSL verification to no."
+msgstr ""
+
+#: ../system/objects/types.rst:208
+msgid "If your external data source system is using self signed certificates, please have a look :doc:`here </settings/security/ssl-certificates>` for further information about how to handle them in Zammad, so you can keep the SSL verification activated."
+msgstr ""
+
+#: ../system/objects/types.rst:217
+msgid "HTTP Authentication"
+msgstr ""
+
+#: ../system/objects/types.rst:214
+msgid "If your external data source requires an authentication, you can set it here. You can leave it empty or choose between *Basic Authentication* or *Authentication Token* (selecting one of the two methods leads to additional fields where you can enter your credentials/token)."
+msgstr ""
+
+#: ../system/objects/types.rst:221
+msgid "Search result list key"
+msgstr ""
+
+#: ../system/objects/types.rst:220
+msgid "Defines the level in the JSON structure which provides the list with search results."
+msgstr ""
+
+#: ../system/objects/types.rst:226
+msgid "Search result value key"
+msgstr ""
+
+#: ../system/objects/types.rst:224
+msgid "Defines the attribute in the structure in which your external data source provides the *value* for your data. An example would be a product *number*."
+msgstr ""
+
+#: ../system/objects/types.rst:231
+msgid "Search result label key"
+msgstr ""
+
+#: ../system/objects/types.rst:229
+msgid "Defines the attribute in the structure in which your external data source provides the *label* for your data. An example would be a product *name*."
+msgstr ""
+
+#: ../system/objects/types.rst:234
+msgid "In the preview area, you can find the following items (depending on your configuration above):"
+msgstr ""
+
+#: ../system/objects/types.rst:237
+msgid "**Error/hint message** (only if configuration is not complete): Zammad tells you, if there is a problem and what you should change in your configuration."
+msgstr ""
+
+#: ../system/objects/types.rst:240
+msgid "**Search field**: search for an existing attribute in the data source to get a preview. This is required for the fields below to show up."
+msgstr ""
+
+#: ../system/objects/types.rst:242
+msgid "**Search result response** (only if configuration is not complete): here you can find a syntax highlighted JSON preview of the response, based on the search term you entered."
+msgstr ""
+
+#: ../system/objects/types.rst:245
+msgid "**Search result list** (only if *search result list key* is properly set): output of the structure under the configured *search result list key*."
+msgstr ""
+
+#: ../system/objects/types.rst:248
+msgid "**Preview table** (when fully configured): Zammad shows you a table which includes the found items based on the search string (value, label and optional link)"
+msgstr ""
+
+#: ../system/objects/types.rst:252
+msgid "You can use the preview if you don't have the complete data structure of the external system in mind. You can also take a look :doc:`here </system/objects/external-data-source-example>`, where you can find an example configuration."
+msgstr ""
+
+#: ../system/objects/types.rst:261
 msgid "URL fields (Link-Template)"
 msgstr ""
 
-#: ../system/objects/types.rst:187
-msgid "This function is restricted to Text and Select attributes only."
+#: ../system/objects/types.rst:265
+msgid "This function is restricted to Text, Select and External data source types only."
 msgstr ""
 
 #: ../system/objects/types.rst:189
