@@ -51,9 +51,9 @@ These can be combined wherever needed.
       executed for **all roles**. This also affects your customers!
 
 Selected Conditions
-   These conditions only match if a complying selection is made (e.g. choosing
-   another group in the ticket without saving).
-   This applies also for the the creation of items and temporarily saved values.
+   These conditions are based on form values and match if an appropriate
+   selection is made (e.g. choosing another group in the ticket without saving).
+   This applies for drafts (active selection) and currently saved values.
 
 Saved Conditions
    These conditions only match if the selected values are stored in the
@@ -192,12 +192,12 @@ Stop after match
 
 Here you can decide if other workflows are executed after the current one.
 
-If set to ``no`` (default), no further worflows will be executed after the
-current one.
-
-If set to ``yes``, further workflows will be executed if they match the
+If set to ``no`` (default), further workflows will be executed if they match the
 condition. In this case, it is possible that your actions from the current
 workflow can be overwritten by another workflow.
+
+If set to ``yes``, no further worflows will be executed after the
+current one.
 
 Priority
 --------
