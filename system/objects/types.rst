@@ -226,21 +226,17 @@ actual URL of the field - e.g. ``https://zammad.com``.
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-As an example, let's say you have an attribute called ``amazingobject`` - you
-want to open a google search directly with the input from that field.
+As an example, let's say you have an attribute called ``amazing_attribute`` and
+you want to open a google search directly with the input from that field.
 
-Providing below to the link-template field allows you to do so:
-``https://www.google.com/search?q=#{ticket.amazingobject}``
+Providing the link-template field below allows you to do so:
+``https://www.google.com/search?q=#{ticket.amazing_attribute}``
 
    .. tip::
 
       You can use any :doc:`Zammad variable </system/variables>` as long as
       it's available in the moment you need it.
 
-The result will look as follows.
-
-.. figure:: /images/system/objects/link-template.gif
-   :align: center
-
-   The above screencast shows how the link template will perform after
-   object creation.
+As a result, you are redirected to Google with a search for the value of the
+attribute, if you click on the button in the ticket (as you can see in the
+screencast above).

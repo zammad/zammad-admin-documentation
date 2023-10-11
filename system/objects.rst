@@ -1,5 +1,5 @@
-Object Attributes
-*****************
+Objects
+*******
 
 In Zammad you can add your own fields to tickets, users, organizations and even
 groups (these are called "objects"). This can be useful if you need to add
@@ -17,7 +17,7 @@ Here's an overview of object attributes. On the upper right you can add new
 attributes. By default, there will be no custom fields - standard attributes
 will be grayed out, you can't delete or change those.
 You can edit custom attributes (they are displayed in black font and have a
-trash bin on the right side) just by clicking on a it.
+trash bin on the right side) just by clicking on them.
 
    .. note::
 
@@ -70,7 +70,7 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 
    After applying the changes with "Update Database", a restart of Zammad
    is **mandatory**. If you don't perform it, you may experience unexpected
-   behavior or even errors. You may want to do those kind of configurations
+   behavior or even errors. You may want to do this kind of configuration
    during maintenance windows.
 
       .. figure:: /images/system/objects/update-database.png
