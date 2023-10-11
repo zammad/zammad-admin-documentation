@@ -1,16 +1,15 @@
 How do they work?
 =================
 
-Core Workflows are evaluated by priority.
-If 2 workflows have the same priority by alphabetical order by **name**.
-Workflows are evaluated in alphabetical order, by **name.**
+Core Workflows are executed according to their priority.
+If two workflows have the same priority, they are executed in alphabetical
+order based on their **name**.
 
-Because of the way Core Workflows works all changes to attributes
-are checked with the application server – please see :doc:`limitations`
+Because of the way Core Workflows work, all changes to attributes
+are checked with the application server - please see :doc:`limitations`
 for possible issues.
 
-Below we're talking about settings that have an impact and are not
-self-explanatory.
+Below we're talking about settings that are important and not self-explanatory.
 
 Object
 ------
@@ -20,9 +19,9 @@ This will decide on your available conditions and actions.
 
 .. tip::
 
-   You will be able to use objects that are in relation to your selection in
+   You will be able to use attributes that are in relation to your selection in
    your conditions.
-   
+
    | This means:
    | Ticket objects also have access to the ticket customer.
 
@@ -30,62 +29,61 @@ Context
 -------
 
 Choose in which situation the workflow is applied.
-Contexts can be combined to reduce workflows.
+Contexts can be combined to avoid duplicate workflows.
 
 Creation mask
-   Once selected your conditions and actions will affect all applicable creation
+   If selected, your conditions and actions will affect all applicable creation
    masks.
 
 Edit mask
-   Once selected your conditions and actions will affect all applicable edit
+   If selected, your conditions and actions will affect all applicable edit
    masks.
 
 Conditions
 ----------
 
-Zammad decides in between selected and saved conditions.
+Zammad differentiates between selected and saved conditions.
 These can be combined wherever needed.
 
-   .. tip:: **🤓 Combining conditions allows "OR"-selections**
+   .. warning:: **⚠️ Restrict workflows to specific roles if needed!**
 
-      However, note that each condition type counts as *and* selector
-      and can't overrule the other condition type.
-
-      Every attribute can be used once per condition type.
-
-   .. warning:: **⚠ Restrict on role basis if needed ⚠**
-
-      By default, unless configured in conditions, workflow rules are
-      evaluated for **all roles**. This also affects your customers! 🙀
+      By default and unless configured in conditions, workflow rules are
+      executed for **all roles**. This also affects your customers!
 
 Selected Conditions
-   These conditions only match if they're active in selection.
-   This applies for drafts (active selection) and currently saved values.
+   These conditions only match if a complying selection is made (e.g. choosing
+   another group in the ticket without saving).
+   This applies also for the the creation of items and temporarily saved values.
 
 Saved Conditions
-   These conditions only apply if they're saved within the database regardless
-   of the current value or selection of the field.
+   These conditions only match if the selected values are stored in the
+   database. It ignores the current value or selection of the field, as long as
+   the changes are not saved (e.g. performing field operations for an existing
+   ticket, which is viewed/opened by an agent).
 
       .. note::
 
          Keep in mind that the value has to be available in the situation
          where you need it. Otherwise the condition won't match.
 
+         Example: you can't perform any actions with *saved condition* on a
+         ticket in creation, because there are no saved values at that time.
+
 Action
 ------
 
 Which actions should we run on the relevant fields?
-The possible actions depend on the object type, however, usually
+The possible actions depend on the object type. However, usually
 you can at least change the visibility and whether the field is mandatory.
 
-   .. note:: **🚧 Actions are not available for relations**
+   .. note:: **🚧 Actions are not available for related context**
 
-      Let's say you're working in ticket context.
-      While you can have customer conditions, you can't adjust objects with
+      Let's assume you are working in the ticket context.
+      While you can have customer *conditions*, you *can't adjust* objects with
       actions in that scope.
 
       That's because this wouldn't have any impact on the ticket dialogue.
-      All ticket attributes (state, owner, ...) are available.
+      Of course all ticket attributes (state, owner, ...) are available.
 
    .. warning::
 
@@ -99,27 +97,28 @@ Available Operators
 
    The availability of operators depends on the object type and scope.
 
-.. hint:: **🧐 Actions can cause confusion**
+.. hint:: **🤔 Actions can cause confusion!**
 
-   | Please note that actions may or may not restrict API based access to
-     attributes. We're displaying the following icons for your overview
-     to understand these limits better. 👀
+   Please note that actions may or may not restrict API based access to
+   attributes. We're displaying the following icons for your overview
+   to understand these limits better:
+
    | |api| This icon indicates the action affects the API.
    | |ui| This icon indicates the action only affects the web interface.
 
 show |ui|
-   Display the field in question. Allows setting of values.
+   Display the chosen field. Allows setting of values.
 
 hide |ui|
-   Hide the field in question however,
-   technically still allows setting the field.
+   Hide the chosen field. However, it technically still allows setting the
+   field.
 
-      .. warning::
+   .. warning::
 
-         The field is **not** gone and still contains any value it provides!
-         You may want to consider *remove* instead.
+      The field is **not** gone and still contains an existing value (if set)!
+      Consider *remove* instead, if you want this field to be gone.
 
-remove |ui| 
+remove |ui|
    Entirely removes the field. The field value will no get evaluated.
 
 set mandatory |ui| |api|
@@ -131,52 +130,54 @@ set optional |ui| |api|
 add option |ui| |api|
    Allows adding options to tree selects or selects.
 
-      .. note::
+   .. note::
 
-         This requires options to be hidden beforehand (remove option).
-         It allows to use *existing* configured values.
+      You have to use the "remove option" before to perform this action.
+      It allows you to use *existing* configured values.
 
 remove option |ui| |api|
    Allows removing options from tree selects or selects.
 
-      .. note::
+   .. note::
 
-         It allows to use *existing* configured values.
+      It allows to use *existing* configured values.
 
 set fixed to |ui| |api|
    Reduces the available options by your selection.
 
-      .. tip::
+   .. tip::
 
-         This may indirectly reduce your workflows in terms of
-         *add option* and *remove option*. 🤓
+      This may reduce your workflows in terms of *add option* and
+      *remove option*. 🤓
 
 fill in |ui|
-   Allows population of string and integer fields with your value.
+   Allows the population of string and integer fields with your value.
 
 fill in empty |ui|
-   Allows population of string and integer fields with your value
-   **if the field is empty**.   
+   Allows the population of string and integer fields with your value
+   **if the field is empty**.
 
 select |ui|
-   Select a specific value within a select, tree select or boolean fields.
+   Select a specific value within a select, tree select or boolean field.
 
 auto select |ui|
-   | Helps the user on tree selects and select fields:
-   | If the field has one option to select only and has no value yet, the
-     value is automatically set.
+   Helps users on tree select and select fields:
+
+   If the field has one option to select only and has no value yet, the
+   value is automatically set.
 
    .. warning::
 
-      This option only works if you have one value and acts passively with more
-      options.
+      This option only works if you have one value and doesn't work if there are
+      more than one option to choose.
 
 set readonly |ui|
-   Allows you to display an attribute as read only.
+   Allows you to display an attribute as read only (that means no changes are
+   possible).
 
 unset readonly |ui|
-   In case a workflow set the field in question to read only, you can
-   undo this with above option.
+   In case a workflow set the field in question to read only, you can undo this
+   with above option.
 
 .. |api| image:: /images/icons/api-symbol.png
    :height: 42px
@@ -189,15 +190,20 @@ unset readonly |ui|
 Stop after match
 ----------------
 
-Stop evaluation of other, following workflows that would match otherwise.
+Here you can decide if other workflows are executed after the current one.
 
-Default: ``no``
+If set to ``no`` (default), no further worflows will be executed after the
+current one.
+
+If set to ``yes``, further workflows will be executed if they match the
+condition. In this case, it is possible that your actions from the current
+workflow can be overwritten by another workflow.
 
 Priority
 --------
 
-You decide at which point your workflow is evaluated.
-Priorities are sorted descending – this means that a workflow matching
-can stop matching in specific situations.
+You can define the sequence, in which the workflows are executed. The default
+value is ``500``.
 
-Default: ``500``
+The workflows are executed ascending by their priority. That means lower values
+(e.g. ``100``) are executed before higher ones (e.g. ``999``).
