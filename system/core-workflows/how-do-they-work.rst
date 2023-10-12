@@ -119,7 +119,7 @@ hide |ui|
       Consider *remove* instead, if you want this field to be gone.
 
 remove |ui|
-   Entirely removes the field. The field value will no be evaluated.
+   Entirely removes the field. The field value will not be evaluated.
 
 set mandatory |ui| |api|
    Sets the field to mandatory.
