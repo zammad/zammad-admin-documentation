@@ -19,7 +19,7 @@ This will decide on your available conditions and actions.
 
 .. tip::
 
-   You will be able to use attributes that are in relation to your selection in
+   You will be able to use attributes that are related to the selection in
    your conditions.
 
    | This means:
@@ -119,7 +119,7 @@ hide |ui|
       Consider *remove* instead, if you want this field to be gone.
 
 remove |ui|
-   Entirely removes the field. The field value will no get evaluated.
+   Entirely removes the field. The field value will not be evaluated.
 
 set mandatory |ui| |api|
    Sets the field to mandatory.
@@ -132,7 +132,7 @@ add option |ui| |api|
 
    .. note::
 
-      You have to use the "remove option" before to perform this action.
+      You have to use the "remove option" before performing this action.
       It allows you to use *existing* configured values.
 
 remove option |ui| |api|
@@ -140,7 +140,7 @@ remove option |ui| |api|
 
    .. note::
 
-      It allows to use *existing* configured values.
+      It allows you to use *existing* configured values.
 
 set fixed to |ui| |api|
    Reduces the available options by your selection.
@@ -151,33 +151,33 @@ set fixed to |ui| |api|
       *remove option*. 🤓
 
 fill in |ui|
-   Allows the population of string and integer fields with your value.
+   Allows filling in of string and integer fields with your values.
 
 fill in empty |ui|
-   Allows the population of string and integer fields with your value
+   Allows filling in of string and integer fields with your values
    **if the field is empty**.
 
 select |ui|
    Select a specific value within a select, tree select or boolean field.
 
 auto select |ui|
-   Helps users on tree select and select fields:
+   Helps users with tree select and select fields:
 
-   If the field has one option to select only and has no value yet, the
-   value is automatically set.
+   If the field has only one option available for selection and no value yet,
+   the value will be automatically set.
 
    .. warning::
 
-      This option only works if you have one value and doesn't work if there are
-      more than one option to choose.
+      This option only works if you have one value and doesn't work if there is
+      more than one option available.
 
 set readonly |ui|
-   Allows you to display an attribute as read only (that means no changes are
+   Allows you to display an attribute as read only (which means no changes are
    possible).
 
 unset readonly |ui|
    In case a workflow set the field in question to read only, you can undo this
-   with above option.
+   with option above.
 
 .. |api| image:: /images/icons/api-symbol.png
    :height: 42px
@@ -205,5 +205,5 @@ Priority
 You can define the sequence, in which the workflows are executed. The default
 value is ``500``.
 
-The workflows are executed ascending by their priority. That means lower values
-(e.g. ``100``) are executed before higher ones (e.g. ``999``).
+The workflows are executed in ascending order by their priority. That means
+lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``).
