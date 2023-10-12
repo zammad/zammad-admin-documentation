@@ -1,7 +1,7 @@
 Core Workflows
 ==============
 
-Core Workflows allow you to adjust objects in many ways.
+Core Workflows allow you to adjust object attributes in many ways.
 For example:
 
    * show / hide fields

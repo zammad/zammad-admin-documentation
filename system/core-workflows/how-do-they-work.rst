@@ -19,7 +19,7 @@ This will decide on your available conditions and actions.
 
 .. tip::
 
-   You will be able to use attributes that are in relation to your selection in
+   You will be able to use attributes that are related to the selection in
    your conditions.
 
    | This means:
