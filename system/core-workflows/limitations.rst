@@ -1,7 +1,7 @@
 Limitations
 ===========
 
-Core Workflows do not replace Trigger
+Core Workflows do not replace Triggers
   Workflows manipulate the behavior of fields. However, they do not set values
   in fields because of actions.
 
