@@ -7,15 +7,14 @@ Variables
    working as expected, feel free to ask over at the
    `Community <https://community.zammad.org>`_.
 
-Variables can be called by typing ``::`` (just like text modules in the 
+Variables can be called by typing ``::`` (just like text modules in the
 frontend), as long as you're in a supported text field within the Backend.
 Zammad will show display all variables being available within this context and
 replace it to the variable as soon as you selected an entry.
 
 .. hint:: You have an empty field which you referenced and it appears as ``-``?
    That's currently working as designed - you might want to ensure that these
-   fields always have a value (in text fields `` `` is a value!).
-
+   fields always have a value.
 
 Variable Categories
 -------------------
@@ -46,7 +45,7 @@ these are:
 
 The second part is the name of the object. This is the name you define during
 object creation and can be found within the object menu at any time.
-The first and second part of a variable is divided by a point, 
+The first and second part of a variable is divided by a point,
 e.g.: ``ticket.number`` which will in total be ``#{ticket.number}``.
 
 Now, in some situations it's possible that you'll need to use a third part.
