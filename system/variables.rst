@@ -14,9 +14,7 @@ replace it to the variable as soon as you selected an entry.
 
 .. hint:: You have an empty field which you referenced and it appears as ``-``?
    That's currently working as designed - you might want to ensure that these
-   fields always have a value. If you want to avoid the ``-`` for example in
-   signatures, you can paste ``<p> </p>`` in the field as a workaround.
-
+   fields always have a value.
 
 Variable Categories
 -------------------
