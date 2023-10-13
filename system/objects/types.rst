@@ -200,7 +200,18 @@ External Data Source field
 
    Search URL
       Set your endpoint where Zammad fetches the data. Please make
-      sure to include ``#{search.term}`` as an URL parameter.
+      sure to include a valid search :doc:`variable <../variables>` as an
+      URL parameter. Example for a free text search at user input:
+      ``#{search.term}``
+
+      .. note::
+         Depending on your search variable, the preview might work or not. The
+         reason is that the context might not be available and it is no bug.
+
+         Please also make sure to use a variable which is available in your
+         object context. For example you won't be able to search for a ticket
+         in a user object context.
+
 
    SSL Verification
       Here you can switch the SSL verification to no.
@@ -220,17 +231,22 @@ External Data Source field
 
    Search result list key
       Defines the level in the JSON structure which provides the list with
-      search results.
+      search results. You can leave it empty, if the data is already
+      provided as an array. If you have to go deeper in the
+      structure, you can provide a path with ``.`` as separators, e.g.
+      ``key.subkey.sub-sub-key``.
 
    Search result value key
       Defines the attribute in the structure in which your external data
       source provides the *value* for your data. An example would be a product
-      *number*.
+      *number*. If you have to go deeper in the structure, you can provide a
+      path with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``.
 
    Search result label key
       Defines the attribute in the structure in which your external data
       source provides the *label* for your data. An example would be a product
-      *name*.
+      *name*. If you have to go deeper in the structure, you can provide a path
+      with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``.
 
    Preview
       In the preview area, you can find the following items (depending on your
