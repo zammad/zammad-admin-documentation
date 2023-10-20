@@ -23,9 +23,8 @@ Connect your SAML identity provider as a single sign-on (SSO) method.
    https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services
 .. _Okta: https://www.okta.com/
 
-.. warning:: We currently only provide basic instructions for connecting Zammad
-   with Keycloak. Other IdPs should be configured similar, but we can't provide
-   instructions for other IdPs.
+.. warning:: Please note: Our instructions are based on connecting Zammad with
+   Keycloak.
 
 Step 1: Configure Your IdP
 --------------------------
@@ -114,8 +113,8 @@ Step 2: Configure Zammad
 Enable SAML and enter your IdP's details in the Admin Panel under
 **Settings > Security > Third Party Applications > Authentication via SAML**:
 
-.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty.png
-   :alt: Example configuration of SAML
+.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_1.png
+   :alt: Example configuration of SAML part 1
    :scale: 60%
    :align: center
 
@@ -130,9 +129,8 @@ IDP SSO target URL
    the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml
 
 IDP single logout target URL
-   This is the target URL Zammad connects to when the user logs out. This is
-   required because otherwise just the session would be killed and no real
-   logout would be performed.
+   This is the URL to which the single logout request and response should be
+   sent.
 
 IDP certificate
    The public certificate of your IDP for Zammad to verify during the callback
@@ -164,21 +162,27 @@ UID attribute name
    Here you can define an attribute that uniquely identifies the user. If unset,
    the name identifier returned by the IDP is used.
 
+.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_2.png
+   :alt: Example configuration of SAML part 2
+   :scale: 60%
+   :align: center
+
 SSL verification
-   Here you can decide if the certificate of the IdP server has to be
-   verified or not (default: ``yes``).
+   Decide if the certificate for the connection to the IdP service
+   has to be verified or not (default: ``yes``).
 
    .. include:: /includes/ssl-verification-warning.rst
 
 Signing & Encrypting
-   Define if you want to sign, encrypt, do both or nothing for the requests to
-   the IdP.
+   Define if you want to sign, encrypt, do both or nothing for the requests.
 
 Certificate (PEM)
-   Paste the certificate of your IdP, if you want to enrypt the requests.
+   Paste the public certificate of your Zammad SAML client, if you want to
+   enrypt the requests.
 
 Private key (PEM)
-   Paste your private key here, if you want to sign the requests.
+   Paste the private key of your Zammad SAML client here, if you want to sign
+   the requests.
 
 Private key secret
    If your private key is secured with a secret, you can provide it here.
@@ -186,6 +190,11 @@ Private key secret
 Your callback URL
    This URL is needed for your IdP configuration so it knows where to redirect
    to after successful authentication.
+
+.. hint:: After saving your input by clicking on the "Submit" button, Zammad
+   verifies the provided keys/certificates (e.g. if they are valid for
+   signing/encrypting and if they aren't expired).
+
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
 how to link existing Zammad accounts to IdP accounts.
