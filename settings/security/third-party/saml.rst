@@ -23,6 +23,10 @@ Connect your SAML identity provider as a single sign-on (SSO) method.
    https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services
 .. _Okta: https://www.okta.com/
 
+.. warning:: We currently only provide basic instructions for connecting Zammad
+   with Keycloak. Other IdPs should be configured similar, but we can't provide
+   instructions for other IdPs.
+
 Step 1: Configure Your IdP
 --------------------------
 
@@ -32,7 +36,7 @@ Add Zammad as a client/app
 Import Zammad into your IdP using the XML configuration
 found at ``https://your.zammad.domain/auth/saml/metadata``.
 
-.. note:: 🙋 **What if my IdP doesn’t support XML import?**
+.. note:: 🙋 **What if my IdP doesn't support XML import?**
 
    You will have to configure Zammad as a new client/app manually
    using the above XML metadata file for reference.
@@ -89,13 +93,13 @@ Keycloak
         * - **SAML Attribute NameFormat**
           - ``basic``
 
-     In the example above, we’re telling Zammad that
+     In the example above, we're telling Zammad that
      whenever it receives a SAML login request,
      it should take the ``email`` property from Keycloak,
      look for a Zammad user with the same ``email`` attribute,
      and create a new session for that user.
 
-     If your Keycloak users’ email addresses are stored on another property
+     If your Keycloak users' email addresses are stored on another property
      (*e.g.,* ``username``), adjust accordingly.
 
    * Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``)
@@ -107,11 +111,13 @@ Keycloak
 Step 2: Configure Zammad
 ------------------------
 
-Enable SAML and enter your IdP’s details in the Admin Panel under
+Enable SAML and enter your IdP's details in the Admin Panel under
 **Settings > Security > Third Party Applications > Authentication via SAML**:
 
 .. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty.png
    :alt: Example configuration of SAML
+   :scale: 60%
+   :align: center
 
 Display name
    Allows you to define a custom button name for SAML. This helps your users
@@ -119,15 +125,20 @@ Display name
 
    Defaults to ``SAML``.
 
-IDP SSO Target URL
+IDP SSO target URL
    This is the target URL Zammad shall redirect to when the user presses
    the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml
 
-IDP Certificate
+IDP single logout target URL
+   This is the target URL Zammad connects to when the user logs out. This is
+   required because otherwise just the session would be killed and no real
+   logout would be performed.
+
+IDP certificate
    The public certificate of your IDP for Zammad to verify during the callback
    phase.
 
-IDP Certificate fingerprint
+IDP certificate fingerprint
    The fingerprint of your IDPs public certificate to verify during callback
    phase.
 
@@ -141,7 +152,7 @@ IDP Certificate fingerprint
       **Keycloak users:** Find your certificate in the Keycloak admin panel
       under **Realm Settings > Keys > Algorithm: RS256 > Certificate**.
 
-Name Identifier format
+Name identifier format
    This is the unique identifiers field type. Usually should be
    ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`` in any case.
 
@@ -149,8 +160,31 @@ Name Identifier format
 
       Zammad expects an email address as unique identifier!
 
+UID attribute name
+   Here you can define an attribute that uniquely identifies the user. If unset,
+   the name identifier returned by the IDP is used.
+
+SSL verification
+   Here you can decide if the certificate of the IdP server has to be
+   verified or not (default: ``yes``).
+
+   .. include:: /includes/ssl-verification-warning.rst
+
+Signing & Encrypting
+   Define if you want to sign, encrypt, do both or nothing for the requests to
+   the IdP.
+
+Certificate (PEM)
+   Paste the certificate of your IdP, if you want to enrypt the requests.
+
+Private key (PEM)
+   Paste your private key here, if you want to sign the requests.
+
+Private key secret
+   If your private key is secured with a secret, you can provide it here.
+
 Your callback URL
-   This URL is needed for your IDP configuration so it knows where to redirect
+   This URL is needed for your IdP configuration so it knows where to redirect
    to after successful authentication.
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
@@ -159,5 +193,5 @@ how to link existing Zammad accounts to IdP accounts.
 Troubleshooting
 ---------------
 
-Automatic account linking doesn’t work
-   Have you double-checked your IdP’s user attribute mapping configuration?
+Automatic account linking doesn't work
+   Have you double-checked your IdP's user attribute mapping configuration?

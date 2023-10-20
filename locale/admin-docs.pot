@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:31+0200\n"
+"POT-Creation-Date: 2023-10-20 14:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -487,6 +487,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:156
 #: ../channels/email/accounts/account-setup.rst:281
 #: ../manage/webhook/add.rst:72
+#: ../settings/security/third-party/saml.rst:171
 #: ../system/integrations/i-doit.rst:81
 msgid "SSL verification"
 msgstr ""
@@ -496,6 +497,7 @@ msgstr ""
 msgid "Here you can decide if the certificate of the email server has to be verified or not (default: ``yes``). In case you are using custom certificates, please have a look at :doc:`how to add them to Zammad </settings/security/ssl-certificates>`."
 msgstr ""
 
+#: ../includes/ssl-verification-warning.rst:4
 #: ../includes/ssl-verification-warning.rst:4
 #: ../includes/ssl-verification-warning.rst:4
 #: ../includes/ssl-verification-warning.rst:4
@@ -718,7 +720,7 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:116
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:178
-#: ../settings/security/third-party/saml.rst:160
+#: ../settings/security/third-party/saml.rst:194
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
@@ -3762,8 +3764,8 @@ msgid "OpenId permissions"
 msgstr ""
 
 #: ../channels/microsoft365/accounts/register-app.rst:92
-#: ../settings/security/third-party/saml.rst:82
-#: ../settings/security/third-party/saml.rst:88
+#: ../settings/security/third-party/saml.rst:86
+#: ../settings/security/third-party/saml.rst:92
 msgid "``email``"
 msgstr ""
 
@@ -12608,212 +12610,268 @@ msgstr ""
 msgid "This guide assumes you are already using SAML within your organization (i.e., that your IdP is fully set up)."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:27
+#: ../settings/security/third-party/saml.rst:26
+msgid "We currently only provide basic instructions for connecting Zammad with Keycloak. Other IdPs should be configured similar, but we can't provide instructions for other IdPs."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:31
 msgid "Step 1: Configure Your IdP"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:30
+#: ../settings/security/third-party/saml.rst:34
 msgid "Add Zammad as a client/app"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:32
+#: ../settings/security/third-party/saml.rst:36
 msgid "Import Zammad into your IdP using the XML configuration found at ``https://your.zammad.domain/auth/saml/metadata``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:35
-msgid "🙋 **What if my IdP doesn’t support XML import?**"
+#: ../settings/security/third-party/saml.rst:39
+msgid "🙋 **What if my IdP doesn't support XML import?**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:37
+#: ../settings/security/third-party/saml.rst:41
 msgid "You will have to configure Zammad as a new client/app manually using the above XML metadata file for reference. For instance, when you see this tag:"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:45
+#: ../settings/security/third-party/saml.rst:49
 msgid "Set the **Assertion Consumer Service Binding URL** (sometimes also listed as **Valid Redirect URIs**) to ``http://your.zammad.domain/auth/saml/callback``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:50
+#: ../settings/security/third-party/saml.rst:54
 msgid "Set up user attribute mapping"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:52
+#: ../settings/security/third-party/saml.rst:56
 msgid "Zammad requests the following user attributes (or “properties”) from the IdP:"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:54
+#: ../settings/security/third-party/saml.rst:58
 msgid "Email address (``email``)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:55
+#: ../settings/security/third-party/saml.rst:59
 msgid "Full name (``name``)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:56
+#: ../settings/security/third-party/saml.rst:60
 msgid "Given name (``first_name``)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:57
+#: ../settings/security/third-party/saml.rst:61
 msgid "Family name (``last_name``)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:59
+#: ../settings/security/third-party/saml.rst:63
 msgid "You may need to set up “mappers” (or “mappings”) to tell your IdP how user attributes in SAML correspond to those in Zammad. For a more detailed breakdown, refer to the XML metadata file referenced in the previous section."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:65
+#: ../settings/security/third-party/saml.rst:69
 msgid "Per-IdP Instructions"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:105
+#: ../settings/security/third-party/saml.rst:109
 msgid "Keycloak"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:68
+#: ../settings/security/third-party/saml.rst:72
 msgid "**To add Zammad as a client,** save the XML configuration to disk (``https://your.zammad.domain/auth/saml/metadata``) and use **Clients > Clients list > Import client** in the Keycloak admin panel."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:73
+#: ../settings/security/third-party/saml.rst:77
 msgid "To help Zammad **match its own user accounts to Keycloak users**, create a user attribute (or “property”) mapper. In **Clients list**, click on your newly created Client ID, choose the tab **Client scopes** and click on the link which refers to your Zammad instance. Choose **Add mapper > By configuration > User Property** and create a mapper with the following entries:"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:81
+#: ../settings/security/third-party/saml.rst:85
 msgid "**Name**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:83
+#: ../settings/security/third-party/saml.rst:87
 msgid "**Mapper Type**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:84
+#: ../settings/security/third-party/saml.rst:88
 msgid "``User Property``"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:85
+#: ../settings/security/third-party/saml.rst:89
 msgid "**Property**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:86
+#: ../settings/security/third-party/saml.rst:90
 msgid "``emailAddress``"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:87
+#: ../settings/security/third-party/saml.rst:91
 msgid "**SAML Attribute Name**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:89
+#: ../settings/security/third-party/saml.rst:93
 msgid "**SAML Attribute NameFormat**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:90
+#: ../settings/security/third-party/saml.rst:94
 msgid "``basic``"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:92
-msgid "In the example above, we’re telling Zammad that whenever it receives a SAML login request, it should take the ``email`` property from Keycloak, look for a Zammad user with the same ``email`` attribute, and create a new session for that user."
+#: ../settings/security/third-party/saml.rst:96
+msgid "In the example above, we're telling Zammad that whenever it receives a SAML login request, it should take the ``email`` property from Keycloak, look for a Zammad user with the same ``email`` attribute, and create a new session for that user."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:98
-msgid "If your Keycloak users’ email addresses are stored on another property (*e.g.,* ``username``), adjust accordingly."
+#: ../settings/security/third-party/saml.rst:102
+msgid "If your Keycloak users' email addresses are stored on another property (*e.g.,* ``username``), adjust accordingly."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:101
+#: ../settings/security/third-party/saml.rst:105
 msgid "Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``) in the field **Master SAML Processing URL**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:104
+#: ../settings/security/third-party/saml.rst:108
 msgid "You also need to enable **Sign assertions**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:108
+#: ../settings/security/third-party/saml.rst:112
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:110
-msgid "Enable SAML and enter your IdP’s details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via SAML**:"
+#: ../settings/security/third-party/saml.rst:114
+msgid "Enable SAML and enter your IdP's details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via SAML**:"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:None
 msgid "Example configuration of SAML"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:120
+#: ../settings/security/third-party/saml.rst:126
 msgid "Display name"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:117
+#: ../settings/security/third-party/saml.rst:123
 msgid "Allows you to define a custom button name for SAML. This helps your users to understand better what the button on the login page does."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:120
+#: ../settings/security/third-party/saml.rst:126
 msgid "Defaults to ``SAML``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:124
-msgid "IDP SSO Target URL"
+#: ../settings/security/third-party/saml.rst:130
+msgid "IDP SSO target URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:123
+#: ../settings/security/third-party/saml.rst:129
 msgid "This is the target URL Zammad shall redirect to when the user presses the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:128
-msgid "IDP Certificate"
+#: ../settings/security/third-party/saml.rst:135
+msgid "IDP single logout target URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:127
+#: ../settings/security/third-party/saml.rst:133
+msgid "This is the target URL Zammad connects to when the user logs out. This is required because otherwise just the session would be killed and no real logout would be performed."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:139
+msgid "IDP certificate"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:138
 msgid "The public certificate of your IDP for Zammad to verify during the callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:142
-msgid "IDP Certificate fingerprint"
+#: ../settings/security/third-party/saml.rst:153
+msgid "IDP certificate fingerprint"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:131
+#: ../settings/security/third-party/saml.rst:142
 msgid "The fingerprint of your IDPs public certificate to verify during callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:134
+#: ../settings/security/third-party/saml.rst:145
 msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:136
+#: ../settings/security/third-party/saml.rst:147
 msgid "Provide **only one or the other**—do not provide both! (Between the two, we recommend the signing certificate itself: fingerprints use SHA-1, which `has been broken for a while now <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:141
+#: ../settings/security/third-party/saml.rst:152
 msgid "**Keycloak users:** Find your certificate in the Keycloak admin panel under **Realm Settings > Keys > Algorithm: RS256 > Certificate**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:150
-msgid "Name Identifier format"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:145
-msgid "This is the unique identifiers field type. Usually should be ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`` in any case."
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:150
-msgid "Zammad expects an email address as unique identifier!"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:154
-msgid "Your callback URL"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:153
-msgid "This URL is needed for your IDP configuration so it knows where to redirect to after successful authentication."
+#: ../settings/security/third-party/saml.rst:161
+msgid "Name identifier format"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:156
+msgid "This is the unique identifiers field type. Usually should be ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`` in any case."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:161
+msgid "Zammad expects an email address as unique identifier!"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:165
+msgid "UID attribute name"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:164
+msgid "Here you can define an attribute that uniquely identifies the user. If unset, the name identifier returned by the IDP is used."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:168
+msgid "Here you can decide if the certificate of the IdP server has to be verified or not (default: ``yes``)."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:175
+msgid "Signing & Encrypting"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:174
+msgid "Define if you want to sign, encrypt, do both or nothing for the requests to the IdP."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:178
+msgid "Certificate (PEM)"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:178
+msgid "Paste the certificate of your IdP, if you want to enrypt the requests."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:181
+msgid "Private key (PEM)"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:181
+msgid "Paste your private key here, if you want to sign the requests."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:184
+msgid "Private key secret"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:184
+msgid "If your private key is secured with a secret, you can provide it here."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:188
+msgid "Your callback URL"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:187
+msgid "This URL is needed for your IdP configuration so it knows where to redirect to after successful authentication."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:190
 msgid "See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to IdP accounts."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:162
-msgid "Automatic account linking doesn’t work"
+#: ../settings/security/third-party/saml.rst:196
+msgid "Automatic account linking doesn't work"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:163
-msgid "Have you double-checked your IdP’s user attribute mapping configuration?"
+#: ../settings/security/third-party/saml.rst:197
+msgid "Have you double-checked your IdP's user attribute mapping configuration?"
 msgstr ""
 
 #: ../settings/security/third-party/twitter.rst:2
