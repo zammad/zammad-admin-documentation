@@ -113,7 +113,7 @@ Step 2: Configure Zammad
 Enable SAML and enter your IdP's details in the Admin Panel under
 **Settings > Security > Third Party Applications > Authentication via SAML**:
 
-.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_1.png
+.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_general.png
    :alt: Example configuration of SAML part 1
    :scale: 60%
    :align: center
@@ -162,7 +162,7 @@ UID attribute name
    Here you can define an attribute that uniquely identifies the user. If unset,
    the name identifier returned by the IDP is used.
 
-.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_2.png
+.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_security.png
    :alt: Example configuration of SAML part 2
    :scale: 60%
    :align: center
