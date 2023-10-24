@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-13 14:31+0200\n"
-"PO-Revision-Date: 2023-10-13 01:05+0000\n"
+"PO-Revision-Date: 2023-10-21 07:18+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -20018,6 +20018,8 @@ msgid ""
 "Core Workflows allow you to adjust object attributes in many ways. For "
 "example:"
 msgstr ""
+"Mit Core Workflows können Sie Objektattribute auf vielfältige Weise "
+"anpassen. Zum Beispiel:"
 
 #: ../system/core-workflows.rst:7
 #, fuzzy
@@ -20251,6 +20253,11 @@ msgid ""
 "the changes are not saved (e.g. performing field operations for an existing "
 "ticket, which is viewed/opened by an agent)."
 msgstr ""
+"Diese Bedingungen treffen nur zu, wenn die ausgewählten Werte in der "
+"Datenbank gespeichert sind. Der aktuelle Wert oder die Auswahl des Feldes "
+"wird ignoriert, solange die Änderungen nicht gespeichert werden (z.B. bei "
+"der Durchführung von Änderungen an einem bestehenden Ticket, das von einem "
+"Agenten angesehen/geöffnet wird)."
 
 #: ../system/core-workflows/how-do-they-work.rst:66
 msgid ""
@@ -20265,6 +20272,9 @@ msgid ""
 "Example: you can't perform any actions with *saved condition* on a ticket in "
 "creation, because there are no saved values at that time."
 msgstr ""
+"Beispiel: Sie können keine Aktionen mit *gespeicherter Bedingung* für ein "
+"Ticket durchführen, das gerade erstellt wird, da es zu diesem Zeitpunkt "
+"keine gespeicherten Werte gibt."
 
 #: ../system/core-workflows/how-do-they-work.rst:75
 #, fuzzy
@@ -20593,6 +20603,8 @@ msgstr "Nach Treffer stoppen"
 msgid ""
 "Here you can decide if other workflows are executed after the current one."
 msgstr ""
+"Hier können Sie festlegen, ob andere Workflows nach dem aktuellen ausgeführt "
+"werden."
 
 #: ../system/core-workflows/how-do-they-work.rst:195
 msgid ""
@@ -20600,30 +20612,43 @@ msgid ""
 "the condition. In this case, it is possible that your actions from the "
 "current workflow can be overwritten by another workflow."
 msgstr ""
+"Bei der Einstellung ``Nein`` (Standard) werden weitere Workflows ausgeführt, "
+"wenn sie die Bedingung erfüllen. In diesem Fall ist es möglich, dass Ihre "
+"Aktionen aus dem aktuellen Workflow von einem anderen Workflow überschrieben "
+"werden."
 
 #: ../system/core-workflows/how-do-they-work.rst:199
 msgid ""
 "If set to ``yes``, no further worflows will be executed after the current "
 "one."
 msgstr ""
+"Wird der Wert auf ``Ja`` gesetzt, werden nach dem aktuellen keine weiteren "
+"Workflows mehr ausgeführt."
 
 #: ../system/core-workflows/how-do-they-work.rst:205
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
 "default value is ``500``."
 msgstr ""
+"Sie können die Reihenfolge festlegen, in der die Arbeitsabläufe ausgeführt "
+"werden. Der Standardwert ist ``500``."
 
 #: ../system/core-workflows/how-do-they-work.rst:208
 msgid ""
 "The workflows are executed in ascending order by their priority. That means "
 "lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``)."
 msgstr ""
+"Die Workflows werden in aufsteigender Reihenfolge nach ihrer Priorität "
+"ausgeführt. Das heißt, niedrigere Werte (z.B. ``100``) werden vor höheren ("
+"z.B. ``999``) ausgeführt."
 
 #: ../system/core-workflows/learn-by-example.rst:4
 msgid ""
 "This page provides some basic examples for Core Workflows. Of course you can "
 "build much more complex workflows if needed."
 msgstr ""
+"Diese Seite enthält einige grundlegende Beispiele für Core Workflows. "
+"Natürlich können Sie bei Bedarf auch komplexere Workflows erstellen."
 
 #: ../system/core-workflows/learn-by-example.rst:9
 #, fuzzy
@@ -20646,93 +20671,109 @@ msgid ""
 "All following workflows have the same base configurations. The workflow may "
 "not use them all."
 msgstr ""
+"Alle folgenden Workflows haben die gleichen Basiskonfigurationen. Der "
+"Workflow muss nicht alle Konfigurationen verwenden."
 
 #: ../system/core-workflows/learn-by-example.rst:21
 msgid "Category (Single tree selection field, not mandatory, agents only)"
-msgstr ""
+msgstr "Kategorie (Einfach-Baumauswahl-Feld, kein Pflichtfeld, nur Agenten)"
 
 #: ../system/core-workflows/learn-by-example.rst:22
 msgid ""
 "Approved (Boolean field, not mandatory, not shown, ``false`` as default)"
 msgstr ""
+"Genehmigt (Boolean-Feld, kein Pflichtfeld, versteckt, ``false`` als Standard)"
 
 #: ../system/core-workflows/learn-by-example.rst:23
 msgid "Operating System (Text field, not mandatory, not shown)"
-msgstr ""
+msgstr "Betriebssystem (Textfeld, kein Pflichtfeld, versteckt)"
 
 #: ../system/core-workflows/learn-by-example.rst:24
 msgid "Software used (Single selection field, not mandatory, not shown)"
-msgstr ""
+msgstr "Verwendete Software (Einfachauswahl-Feld, kein Pflichtfeld, versteckt)"
 
 #: ../system/core-workflows/learn-by-example.rst:67
 msgid "Group specific values and fields"
-msgstr ""
+msgstr "Gruppenspezifische Werte und Felder"
 
 #: ../system/core-workflows/learn-by-example.rst:27
 msgid ""
 "This workflow set depends on the category field. It reduces the available "
 "set of values based on the group selected."
 msgstr ""
+"Dieser Workflow hängt vom Kategorie-Feld ab. Es verringert die möglichen "
+"auswählbaren Werte auf der Grundlage der ausgewählten Gruppe."
 
 #: ../system/core-workflows/learn-by-example.rst:32
 msgid "Workflow 2nd Level group"
-msgstr ""
+msgstr "Workflow 2nd Level Gruppe"
 
 #: ../system/core-workflows/learn-by-example.rst:34
 msgid ""
 "This reduces the category options to ``2nd Level/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to mandatory and visible."
 msgstr ""
+"Dies reduziert die Kategorieoptionen auf ``2nd Level/*``, ``Internal/*`` und "
+"``Others``. Außerdem werden weitere erforderliche Felder als Pflichtfelder "
+"und sichtbar gesetzt."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid "Sample workflow that shows specific values and fields for 2nd level"
-msgstr ""
+msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für 2nd Level zeigt"
 
 #: ../system/core-workflows/learn-by-example.rst:42
 msgid "Workflow Support group"
-msgstr ""
+msgstr "Workflow Support Gruppe"
 
 #: ../system/core-workflows/learn-by-example.rst:44
 msgid ""
 "This reduces the category options to ``Support/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to visible."
 msgstr ""
+"Dieser Workflow reduziert die möglichen Kategorien auf ``Support/*``, ``"
+"Intern/*`` und ``Others``. Außerdem werden weitere Felder auf sichtbar und "
+"als Pflichtfeld gesetzt."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid "Sample workflow that shows specific values and fields for support"
-msgstr ""
+msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für Support zeigt"
 
 #: ../system/core-workflows/learn-by-example.rst:52
 msgid "Workflow Sales group"
-msgstr ""
+msgstr "Workflow Sales Gruppe"
 
 #: ../system/core-workflows/learn-by-example.rst:54
 msgid ""
 "This reduces the category options to ``Sales/*``, ``Internal/*`` and "
 "``Others``."
 msgstr ""
+"Dies reduziert die möglichen Kategorien auf ``Sales/*``, ``Internal/*`` und "
+"``Others``."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid "Sample workflow that shows specific values and fields for sales"
-msgstr ""
+msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für Sales zeigt"
 
 #: ../system/core-workflows/learn-by-example.rst:67
 msgid "The Result"
-msgstr ""
+msgstr "Das Ergebnis"
 
 #: ../system/core-workflows/learn-by-example.rst:62
 msgid ""
 "This is what the agent would experience with the above workflows in place."
 msgstr ""
+"Dies zeigt die Agenten-Sicht bei Anwendung der oben genannten Workflows."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid ""
 "Workflow shows objects and limits options based on selections on the group"
 msgstr ""
+"Workflow zeigt Objektattribute an und schränkt die Optionen basierend auf "
+"der Auswahl in der Gruppe ein"
 
 #: ../system/core-workflows/learn-by-example.rst:89
 msgid "Approval process"
-msgstr ""
+msgstr "Genehmigungsprozess"
 
 #: ../system/core-workflows/learn-by-example.rst:70
 msgid ""
@@ -20740,107 +20781,136 @@ msgid ""
 "workflow, an additional role ``Approval person`` is required (no further "
 "permissions)."
 msgstr ""
+"In diesem Fall ist ``approved`` standardmäßig für Agenten sichtbar. Für "
+"diesen Workflow wird eine zusätzliche Rolle ``Approval person`` benötigt ("
+"keine weiteren Berechtigungen)."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid "Sample workflow that restricts an approval attribute to specific roles"
 msgstr ""
+"Beispiel-Workflow, der den Genehmigungs-Status auf bestimmte Rollen "
+"einschränkt"
 
 #: ../system/core-workflows/learn-by-example.rst:80
 msgid ""
 "This workflow may work best in combination with a :doc:`trigger </manage/"
 "trigger>` but technically, this is not required."
 msgstr ""
+"Dieser Workflow funktioniert am besten in Kombination mit einem :doc:`"
+"Trigger </manage/trigger>`, aber technisch ist das nicht unbedingt "
+"erforderlich."
 
 #: ../system/core-workflows/learn-by-example.rst:83
 msgid ""
 "Select fields may be a better approach because they allow more values than "
 "just a simple ``true`` or ``false``."
 msgstr ""
+"Auswahlfelder können besser geeignet sein, da sie mehr Werte zulassen als "
+"nur ein einfaches ``true`` oder ``false``."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid ""
 "Workflow fixes possible values of \"Approved ?\" to a specific selection "
 "depending on the users role"
 msgstr ""
+"Der Workflow legt die möglichen Werte von \"Approved ?\" auf eine bestimmte "
+"Auswahl fest, die von der Rolle des Benutzers abhängt"
 
 #: ../system/core-workflows/learn-by-example.rst:101
 msgid "State dependent mandatory fields"
-msgstr ""
+msgstr "Vom Status abhängige Pflichtfelder"
 
 #: ../system/core-workflows/learn-by-example.rst:92
 msgid ""
 "This workflow sets ``Category`` to mandatory if the agent wants to set the "
 "states ``closed`` or ``pending close`` to enforce categorization."
 msgstr ""
+"Dieser Workflow legt ``Category`` als Pflichtfeld fest, wenn der Agent die "
+"Tickets auf ``geschlossen`` oder ``Warten auf Schließen`` setzen will, um "
+"die Kategorisierung zu erzwingen."
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid "Sample workflow that sets fields to mandatory on specific states"
 msgstr ""
+"Beispiel-Workflow, der Felder abhängig vom Ticketstatus als Pflichtfeld "
+"definiert"
 
 #: ../system/core-workflows/learn-by-example.rst:0
 msgid ""
 "Workflow sets category field to mandatory upon choosing closed or pending "
 "close as state"
 msgstr ""
+"Der Workflow definiert das Kategorie-Feld als Pflichtfeld, wenn als Status "
+"\"geschlossen\" oder \"warten auf Schließen\" gewählt wird"
 
 #: ../system/core-workflows/limitations.rst:6
 msgid "Core Workflows do not replace Triggers"
-msgstr ""
+msgstr "Core Workflows ersetzen nicht Trigger"
 
 #: ../system/core-workflows/limitations.rst:5
 msgid ""
 "Workflows manipulate the behavior of fields. However, they do not set values "
 "in fields because of actions."
 msgstr ""
+"Workflows verändern Felder und deren Verhalten. Sie setzen jedoch keine "
+"Werte in Felder aufgrund von Aktionen."
 
 #: ../system/core-workflows/limitations.rst:16
 msgid "API calls are only partly affected"
-msgstr ""
+msgstr "API-Calls sind nur teilweise betroffen"
 
 #: ../system/core-workflows/limitations.rst:9
 msgid ""
 "Some options affect UI only and thus do not restrict responses and calls."
 msgstr ""
+"Einige Optionen wirken sich nur auf die Benutzeroberfläche aus und schränken "
+"daher API requests und responses nicht ein."
 
 #: ../system/core-workflows/limitations.rst:11
 msgid "This affects the following actions:"
-msgstr ""
+msgstr "Das betrifft die folgenden Aktionen:"
 
 #: ../system/core-workflows/limitations.rst:13
 msgid "select"
-msgstr ""
+msgstr "auswählen"
 
 #: ../system/core-workflows/limitations.rst:14
 msgid "auto select"
-msgstr ""
+msgstr "automatisch auswählen"
 
 #: ../system/core-workflows/limitations.rst:15
 msgid "show"
-msgstr ""
+msgstr "anzeigen"
 
 #: ../system/core-workflows/limitations.rst:16
 msgid "hide"
-msgstr ""
+msgstr "verstecken"
 
 #: ../system/core-workflows/limitations.rst:27
 msgid "Some fields stay unavailable to customers"
-msgstr ""
+msgstr "Einige Felder bleiben für Kunden unzugänglich"
 
 #: ../system/core-workflows/limitations.rst:19
 msgid ""
 "For technical and security reasons, some default fields (the pale ones you "
 "can't edit) stay unavailable for display and usage on customer permissions."
 msgstr ""
+"Aus technischen und sicherheitstechnischen Gründen sind einige "
+"Standardfelder (die grauen Felder, die Sie nicht bearbeiten können) für "
+"Benutzer mit Kunden-Berechtigung nicht verfügbar."
 
 #: ../system/core-workflows/limitations.rst:25
 msgid ""
 "If you require your customers to change e.g. priorities, please consider "
 "using workarounds via :doc:`/system/objects` and :doc:`/manage/trigger`."
 msgstr ""
+"Wenn Sie möchten dass Ihre Kunden z.B. Prioritäten ändern können, ziehen Sie "
+"bitte Workarounds über :doc:`/system/objects` und :doc:`/manage/trigger` in "
+"Betracht."
 
 #: ../system/core-workflows/limitations.rst:35
 msgid "What is out of scope of Core Workflows?"
-msgstr ""
+msgstr "Was fällt nicht in den Anwendungsbereich der Core-Workflows?"
 
 #: ../system/core-workflows/limitations.rst:30
 #, fuzzy
@@ -20856,15 +20926,16 @@ msgstr ""
 
 #: ../system/core-workflows/limitations.rst:33
 msgid "Such as (but not limited to):"
-msgstr ""
+msgstr "Zum Beispiel (nicht abschließend):"
 
 #: ../system/core-workflows/limitations.rst:35
 msgid "up- or downgrade permissions of users"
-msgstr ""
+msgstr "Berechtigungen von Benutzern herauf- oder herabstufen"
 
 #: ../system/core-workflows/limitations.rst:36
 msgid "affecting article creation or listing"
 msgstr ""
+"Änderungen mit Auswirkung auf die Erstellung oder Auflistung von Artikeln"
 
 #: ../system/data-privacy.rst:2
 msgid "Data Privacy"
@@ -21182,43 +21253,50 @@ msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:2
 msgid "Admin Panel Reference"
-msgstr ""
+msgstr "Admin-Bereich"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:None
 msgid "Screenshot of Checkmk settings overview"
-msgstr ""
+msgstr "Screenshot der Checkmk-Einstellungen in Zammad"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:12
 msgid ""
 "Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned "
 "to as a default (*i.e.,* when none is specified)?"
 msgstr ""
+"Welcher :doc:`Gruppe </manage/groups/index>` sollen Checkmk-Tickets "
+"standardmäßig zugewiesen werden (wenn keine angegeben ist)?"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:15
 msgid "(Applies to :ref:`API alerts <checkmk-api-alerts>` only.)"
-msgstr ""
+msgstr "(Gilt nur für :ref:`API alerts <checkmk-api-alerts>`.)"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:21
 msgid "Auto close"
-msgstr ""
+msgstr "Automatisch schließen"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:18
 msgid ""
 "Should Zammad automatically close tickets if a service has recovered on its "
 "own?"
 msgstr ""
+"Soll Zammad Tickets automatisch schließen, wenn sich ein Dienst von selbst "
+"\"erholt\" hat?"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:21
 msgid "(Agents will receive notifications for such closures as appropriate.)"
 msgstr ""
+"(Agenten werden gegebenenfalls über solche Schließungen benachrichtigt.)"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:30
 msgid "Auto-close state"
-msgstr ""
+msgstr "Automatisch-Schließen-Status"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:24
 msgid "What ticket state should be applied when “auto-closing” a ticket?"
 msgstr ""
+"Welcher Ticketstatus soll beim \"automatischen Schließen\" eines Tickets "
+"angewendet werden?"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:26
 msgid ""
@@ -21228,32 +21306,41 @@ msgid ""
 "especially useful for tracking tickets with :doc:`reports </manage/report-"
 "profiles>`.)"
 msgstr ""
+"(Sie können aus den sieben eingebauten Ticketstatus wählen oder :docs:`einen "
+"neuen Ticketstatus definieren </admin/console.html>`. Dies kann besonders "
+"nützlich sein, um Tickets mit :doc:`Berichten </manage/report-profiles>` zu "
+"verfolgen.)"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/ldap/index.rst:74
 msgid "Recent Logs"
-msgstr ""
+msgstr "Aktuellste Protokolle"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:None
 msgid "Screenshot of Checkmk \"Recent Logs\" section"
-msgstr ""
+msgstr "Screenshot des Checkmk-Bereichs \"Aktuellste Protokolle\""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:41
 msgid ""
 "If you’re having trouble getting Zammad and Checkmk to play nicely together, "
 "this section can help you troubleshoot. 🙌"
 msgstr ""
+"Wenn Sie Probleme bei der Verbindung von Zammad und Checkmk haben kann "
+"dieser Abschnitt Ihnen bei der Fehlersuche helfen. 🙌"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:44
 msgid ""
 "It contains a record of the fifty most recent transactions that Zammad knows "
 "about, including each one’s request/response details and return status."
 msgstr ""
+"Sie enthält eine Aufzeichnung der letzten 50 Einträge, die Zammad bekannt "
+"sind, einschließlich der Details zu jeder Anfrage/Antwort und des "
+"zurückgegebenen Status."
 
 #: ../system/integrations/checkmk/api-reference.rst:2
 msgid "API Reference"
-msgstr ""
+msgstr "API-Referenz"
 
 #: ../system/integrations/checkmk/api-reference.rst:4
 msgid ""
@@ -21263,6 +21350,12 @@ msgid ""
 "of system events—then you’ll have to customize the data those scripts send "
 "to Zammad."
 msgstr ""
+"Für die meisten Benutzer sind die :ref:`Beispielskripte aus dem "
+"Einrichtungsanleitung <checkmk-api-alerts>` völlig ausreichend. Wenn Sie "
+"jedoch eine feinere Steuerung wünschen, z.B. um Tickets mit hoher und "
+"niedriger Priorität für verschiedene Arten von Systemereignissen zu "
+"erstellen, müssen Sie die Daten, die diese Skripte an Zammad senden, "
+"anpassen."
 
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
@@ -21273,16 +21366,21 @@ msgid ""
 "This custom script will automatically set all tickets it creates to **high "
 "priority** and **assign them to charlie@chrispresso.com**."
 msgstr ""
+"Dieses benutzerdefinierte Skript setzt alle Tickets, die es erstellt, "
+"automatisch auf **hohe Priorität** und **weist sie charlie@chrispresso.com** "
+"zu."
 
 #: ../system/integrations/checkmk/api-reference.rst:34
 msgid ""
 "There are two kinds of data you can pass to the API, both in the form of key-"
 "value pairs:"
 msgstr ""
+"Es gibt zwei Arten von Daten, die Sie an die API übergeben können, beide in "
+"Form von Schlüssel-Wert-Paaren:"
 
 #: ../system/integrations/checkmk/api-reference.rst:44
 msgid "Checkmk parameters"
-msgstr ""
+msgstr "Checkmk-Parameter"
 
 #: ../system/integrations/checkmk/api-reference.rst:38
 msgid ""
@@ -21290,6 +21388,9 @@ msgid ""
 "articles. They also determine whether an event creates a new ticket or "
 "updates/closes an existing one."
 msgstr ""
+"sind erforderlich und bilden den **Inhalt** der resultierenden Tickets/"
+"Artikel. Sie bestimmen auch, ob ein Ereignis ein neues Ticket erstellt oder "
+"ein bestehendes aktualisiert/schließt."
 
 #: ../system/integrations/checkmk/api-reference.rst:42
 msgid ""
@@ -21297,12 +21398,18 @@ msgid ""
 "technically, they can be customized, but it’s hard to imagine a good reason "
 "for it."
 msgstr ""
+"Dies sind die einzigen Werte, die in den Beispielskripten verwendet werden. "
+"**Verwenden Sie sie am besten genau so**. Sie können auch angepasst werden, "
+"aber uns fällt kein guter Grund dafür ein."
 
 #: ../system/integrations/checkmk/api-reference.rst:47
 msgid ""
 "are optional, and can be used to **adjust settings** on newly created "
 "tickets (*e.g.,* set the owner, group, priority, or state)."
 msgstr ""
+"sind optional und können verwendet werden, um **Einstellungen** für neu "
+"erstellte Tickets vorzunehmen (*z.B.* den Besitzer, die Gruppe, die "
+"Priorität oder den Status festzulegen)."
 
 #: ../system/integrations/checkmk/api-reference.rst:50
 msgid ""
@@ -21310,16 +21417,23 @@ msgid ""
 "add an extra “form” option for each one (``-F \"key=value\"``) to your "
 "script’s ``curl`` command line, as in the example above."
 msgstr ""
+"Wenn Sie Ihr Checkmk-Warnskript anpassen wollen, können Sie dies mit diesen "
+"tun. Fügen Sie einfach eine zusätzliche \"form\"-Option für jede dieser "
+"Optionen (``-F \"key=value\"``) in die ``curl``-Befehlszeile Ihres Skripts "
+"ein, wie im obigen Beispiel."
 
 #: ../system/integrations/checkmk/api-reference.rst:54
 msgid "💡 **It's just an API endpoint!**"
-msgstr ""
+msgstr "💡 **Es ist nur ein API-Endpunkt!**"
 
 #: ../system/integrations/checkmk/api-reference.rst:56
 msgid ""
 "When using Checkmk integration, messages need to be formatted in a certain "
 "way, but that *doesn’t mean the messages actually have to come from Checkmk*."
 msgstr ""
+"Wenn Sie die Checkmk-Integration verwenden, müssen die Nachrichten auf eine "
+"bestimmte Art und Weise formatiert werden, aber das bedeutet *nicht, dass "
+"die Nachrichten tatsächlich von Checkmk kommen müssen*."
 
 #: ../system/integrations/checkmk/api-reference.rst:59
 msgid ""
@@ -21327,85 +21441,105 @@ msgid ""
 "Zammad, there’s probably a way to make it work with your Checkmk callback "
 "URL."
 msgstr ""
+"Wenn Sie ein anderes Monitoring-Tool verwenden, das nicht offiziell von "
+"Zammad unterstützt wird, gibt es wahrscheinlich eine Möglichkeit, es mit "
+"Ihrer Checkmk-Callback-URL zum Laufen zu bringen."
 
 #: ../system/integrations/checkmk/api-reference.rst:63
 msgid "Checkmk Parameters"
-msgstr ""
+msgstr "Checkmk-Parameter"
 
 #: ../system/integrations/checkmk/api-reference.rst:65
 msgid ""
 "When a notification is received, Zammad creates a new article containing the "
 "details of the event that triggered it:"
 msgstr ""
+"Wenn eine Benachrichtigung eingeht, erstellt Zammad einen neuen Artikel mit "
+"den Einzelheiten des Ereignisses, das die Benachrichtigung ausgelöst hat:"
 
 #: ../system/integrations/checkmk/api-reference.rst:None
 msgid "Checkmk article body"
-msgstr ""
+msgstr "Checkmk Artikelinhalt"
 
 #: ../system/integrations/checkmk/api-reference.rst:72
 msgid ""
 "These details come from the fields listed below, which correspond to "
 "parameters provided by Checkmk (``$NOTIFY_*``)."
 msgstr ""
+"Diese Angaben stammen aus den unten aufgeführten Feldern, die den von "
+"Checkmk bereitgestellten Parametern entsprechen (``$NOTIFY_*``)."
 
 #: ../system/integrations/checkmk/api-reference.rst:75
 msgid "**Required fields are marked with an asterisk (\\*).**"
-msgstr ""
+msgstr "**Erforderliche Felder sind mit einem Stern (\\*) gekennzeichnet.**"
 
 #: ../system/integrations/checkmk/api-reference.rst:79
 msgid "event_id\\*"
-msgstr ""
+msgstr "event_id\\*"
 
 #: ../system/integrations/checkmk/api-reference.rst:78
 msgid ""
 "A unique ID for the system event. (``$NOTIFY_SERVICEPROBLEMID`` / ``"
 "$NOTIFY_HOSTPROBLEMID``)"
 msgstr ""
+"Eine eindeutige ID für das Systemereignis. (``$NOTIFY_SERVICEPROBLEMID`` / "
+"``$NOTIFY_HOSTPROBLEMID``)"
 
 #: ../system/integrations/checkmk/api-reference.rst:86
 msgid "host\\*"
-msgstr ""
+msgstr "host\\*"
 
 #: ../system/integrations/checkmk/api-reference.rst:82
 msgid ""
 "The hostname of the system that the event originated from. (``"
 "$NOTIFY_HOSTNAME``)"
 msgstr ""
+"Der Hostname des Systems, von dem das Ereignis ausgeht. "
+"(``$NOTIFY_HOSTNAME``)"
 
 #: ../system/integrations/checkmk/api-reference.rst:85
 msgid ""
 "Used to determine if a new event belongs to an existing ticket. Also used in "
 "the subject line of the resulting article (“<host> is <state>”)."
 msgstr ""
+"Wird verwendet, um festzustellen, ob ein neues Ereignis zu einem bestehenden "
+"Ticket gehört. Wird auch in der Betreffzeile des resultierenden Artikels "
+"verwendet (\"<Host> ist <Status>\")."
 
 #: ../system/integrations/checkmk/api-reference.rst:96
 msgid "service"
-msgstr ""
+msgstr "service"
 
 #: ../system/integrations/checkmk/api-reference.rst:89
 msgid ""
 "The name of the service that the event originated from. (``"
 "$NOTIFY_SERVICEDESC``)"
 msgstr ""
+"Der Name des Dienstes, von dem das Ereignis ausgeht. "
+"(``$NOTIFY_SERVICEDESC``)"
 
 #: ../system/integrations/checkmk/api-reference.rst:92
 msgid "Used to determine if a new event belongs to an existing ticket."
 msgstr ""
+"Wird verwendet, um festzustellen, ob ein neues Ereignis zu einem bestehenden "
+"Ticket gehört."
 
 #: ../system/integrations/checkmk/api-reference.rst:94
 #: ../system/integrations/checkmk/api-reference.rst:110
 msgid "Displayed as ``-`` when omitted."
-msgstr ""
+msgstr "Wird als ``-`` angezeigt, wenn es weggelassen wird."
 
 #: ../system/integrations/checkmk/api-reference.rst:104
 msgid "state\\*"
-msgstr ""
+msgstr "state\\*"
 
 #: ../system/integrations/checkmk/api-reference.rst:99
 msgid ""
 "The current state of the service or host in question. (``"
 "$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)"
 msgstr ""
+"Der aktuelle Zustand des entsprechenden Dienstes oder Hosts. "
+"(``$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)"
 
 #: ../system/integrations/checkmk/api-reference.rst:102
 msgid ""
@@ -21413,30 +21547,38 @@ msgid ""
 "``UP``). Also used in the subject line of the resulting article (“<host> is "
 "<state>”)."
 msgstr ""
+"Wird verwendet, um zu erkennen, wann ein Ticket automatisch geschlossen "
+"werden soll (*d.h.* bei ``OK``/``UP``). Wird auch in der Betreffzeile des "
+"resultierenden Artikels verwendet (\"<Host> ist <Status>\")."
 
 #: ../system/integrations/checkmk/api-reference.rst:110
 msgid "text"
-msgstr ""
+msgstr "text"
 
 #: ../system/integrations/checkmk/api-reference.rst:107
 msgid ""
 "The output of the process that triggered the event. (``"
 "$NOTIFY_SERVICEOUTPUT`` / ``$NOTIFY_HOSTOUTPUT``)"
 msgstr ""
+"Die Ausgabe des Prozesses, der das Ereignis ausgelöst hat. "
+"(``$NOTIFY_SERVICEOUTPUT`` / ``$NOTIFY_HOSTOUTPUT``)"
 
 #: ../system/integrations/checkmk/api-reference.rst:113
 msgid "Ticket Attributes"
-msgstr ""
+msgstr "Ticket Attribute"
 
 #: ../system/integrations/checkmk/api-reference.rst:121
 msgid ""
 "The Object Manager attribute panel displays built-in and custom\n"
 "attribute names."
 msgstr ""
+"Die Attributeinstellungen des Objektmanagers zeigen integrierte und "
+"benutzerdefinierte Attributnamen an."
 
 #: ../system/integrations/checkmk/api-reference.rst:121
 msgid "Find a complete list of ticket attributes in the Object Manager."
 msgstr ""
+"Eine vollständige Liste der Ticketattribute finden Sie im Objektmanager."
 
 #: ../system/integrations/checkmk/api-reference.rst:123
 msgid ""
@@ -21444,6 +21586,10 @@ msgid ""
 "tickets that Checkmk creates. (Note that these attributes will be ignored if "
 "a new event belongs to an existing ticket.)"
 msgstr ""
+"Ticket-Attribute sind völlig optional und können verwendet werden, um die "
+"Tickets, die Checkmk erstellt, individuell zu gestalten. (Beachten Sie, dass "
+"diese Attribute ignoriert werden, wenn ein neues Ereignis zu einem "
+"bestehenden Ticket erstellt wird.)"
 
 #: ../system/integrations/checkmk/api-reference.rst:128
 msgid ""
@@ -21452,10 +21598,16 @@ msgid ""
 "you’re creating multiple notification rules so that database outages take "
 "higher priority than disk space warnings."
 msgstr ""
+"Warum sollten Sie das tun? Vielleicht haben Sie nur einen IT-Mitarbeiter, "
+"dem alle Probleme bei der Systemüberwachung automatisch zugewiesen werden "
+"sollen. Oder vielleicht erstellen Sie mehrere Benachrichtigungsregeln, so "
+"dass Datenbankausfälle höhere Priorität haben als Speicherplatzwarnungen."
 
 #: ../system/integrations/checkmk/api-reference.rst:135
 msgid "In most cases, you’ll probably want to set one of the following:"
 msgstr ""
+"In den meisten Fällen werden Sie wahrscheinlich eine der folgenden "
+"Einstellungen vornehmen wollen:"
 
 #: ../system/integrations/checkmk/api-reference.rst:137
 msgid "group"
@@ -21479,6 +21631,9 @@ msgid ""
 "but in practice, you can set almost any attribute, including :doc:`custom "
 "ones you created through the Object Manager </system/objects>`."
 msgstr ""
+"aber in der Praxis können Sie fast jedes Attribut setzen, einschließlich "
+":doc:`Benutzerdefinierte Attribute, die Sie über den Objektmanager </system/"
+"objects>` erstellt haben."
 
 #: ../system/integrations/checkmk/api-reference.rst:145
 msgid "🙅 The following attributes are **not customizable**:"
@@ -21514,7 +21669,7 @@ msgstr "Wie finde ich heraus, welche Werte gesetzt werden können?"
 
 #: ../system/integrations/checkmk/api-reference.rst:157
 msgid "😵 **Invalid values → unpredictable behavior**"
-msgstr ""
+msgstr "😵 **Ungültige Werte → unvorhersehbares Verhalten**"
 
 #: ../system/integrations/checkmk/api-reference.rst:159
 msgid ""
@@ -21523,14 +21678,18 @@ msgid ""
 "a ticket will be created with the default values instead—but in others, it "
 "may not be created at all!"
 msgstr ""
+"Wenn Sie einen Wert angeben, den Zammad nicht versteht (*z.B.* ``-F "
+"\"priority=high\"``), ist nicht immer klar, was passieren wird. In einigen "
+"Fällen wird ein Ticket stattdessen mit den Standardwerten erstellt - in "
+"anderen Fällen wird es aber vielleicht gar nicht erstellt!"
 
 #: ../system/integrations/checkmk/api-reference.rst:164
 msgid "So what values does Zammad understand, then? Well, it depends..."
-msgstr ""
+msgstr "Welche Werte versteht Zammad denn nun? Nun, das kommt darauf an..."
 
 #: ../system/integrations/checkmk/api-reference.rst:168
 msgid "Use an email address or username:"
-msgstr ""
+msgstr "Verwenden Sie eine E-Mail-Adresse oder einen Benutzernamen:"
 
 #: ../system/integrations/checkmk/api-reference.rst:190
 msgid "group & priority"
@@ -21538,25 +21697,27 @@ msgstr "Gruppe & Priorität"
 
 #: ../system/integrations/checkmk/api-reference.rst:175
 msgid "Refer to the dropdown menus in the ticket pane:"
-msgstr ""
+msgstr "Beachten Sie die Dropdown-Menüs im Ticketbereich:"
 
 #: ../system/integrations/checkmk/api-reference.rst:0
 msgid "See possible values for certain attributes in the ticket pane."
-msgstr ""
+msgstr "Siehe mögliche Werte für bestimmte Attribute im Ticketbereich."
 
 #: ../system/integrations/checkmk/api-reference.rst:187
 msgid "🙅 **Ticket state CANNOT be set this way!**"
-msgstr ""
+msgstr "🙅 **Der Ticketstatus kann auf diese Weise NICHT eingestellt werden!**"
 
 #: ../system/integrations/checkmk/api-reference.rst:189
 msgid ""
 "Why? Because ``-F \"state=...\"`` is already used :ref:`as a Checkmk "
 "parameter <checkmk-parameter-state>`."
 msgstr ""
+"Warum? Weil ``-F \"state=...\"`` bereits :ref:`als ein Checkmk-Parameter "
+"<checkmk-parameter-state>` verwendet wird."
 
 #: ../system/integrations/checkmk/api-reference.rst:222
 msgid "Everything Else"
-msgstr ""
+msgstr "Alles andere"
 
 #: ../system/integrations/checkmk/api-reference.rst:193
 msgid ""
@@ -21564,10 +21725,13 @@ msgid ""
 "`rails console </admin/console.html>`. Valid values are those that you can "
 "set with a string:"
 msgstr ""
+"Um andere Attribute zu setzen, hilft es, sich in der :docs:`rails console </"
+"admin/console.html>` auszukennen. Gültige Werte sind diejenigen, die Sie mit "
+"einer Zeichenkette setzen können:"
 
 #: ../system/integrations/checkmk/api-reference.rst:218
 msgid "These values can then be passed directly to the API:"
-msgstr ""
+msgstr "Diese Werte können dann direkt an die API übergeben werden:"
 
 #: ../system/integrations/checkmk/index.rst:2
 msgid "Checkmk"
@@ -21580,18 +21744,22 @@ msgid ""
 "Zammad will automatically create, update, and close tickets based on the "
 "health of your system:"
 msgstr ""
+"Checkmk ist ein mächtiges IT-Tool für Monitoring, das Echtzeit-Alarme an "
+"Zammad via E-Mail oder REST-API senden kann. Konfigurieren Sie die Alarme in "
+"Checkmk und Zammad wird automatisch Tickets basierend auf der Systemstatus "
+"erstellen, aktualisieren und schließen:"
 
 #: ../system/integrations/checkmk/index.rst:16
 msgid "Screenshot of ticket created by Checkmk notifications"
-msgstr ""
+msgstr "Screenshot eines durch Checkmk-Benachrichtigungen erstellten Tickets"
 
 #: ../system/integrations/checkmk/index.rst:16
 msgid "Multiple alerts, same ticket."
-msgstr ""
+msgstr "Mehrere Alarme, dasselbe Ticket."
 
 #: ../system/integrations/checkmk/setup-guide.rst:2
 msgid "Setup Guide"
-msgstr ""
+msgstr "Einrichtungs-Anleitung"
 
 #: ../system/integrations/checkmk/setup-guide.rst:4
 msgid ""
@@ -21600,6 +21768,10 @@ msgid ""
 "format, Zammad will create new tickets (or find and update existing ones) "
 "based on the message contents."
 msgstr ""
+"Immer wenn die Checkmk-Integration aktiviert ist, lauscht Zammad auf "
+"Nachrichten über seine API und per E-Mail. Solange diese Nachrichten dem "
+"erforderlichen Format entsprechen, erstellt Zammad neue Tickets (oder findet "
+"und aktualisiert bestehende) auf der Grundlage der Nachrichteninhalte."
 
 #: ../system/integrations/checkmk/setup-guide.rst:10
 msgid ""
@@ -21608,6 +21780,11 @@ msgid ""
 "messages and what to say. To do that, you’ll need to create a new "
 "**notification rule** (see `Checkmk’s official docs`_ for help with that)."
 msgstr ""
+"Das bedeutet, dass die \"Einrichtung der Checkmk-Integration\" lediglich "
+"eine Frage der **Konfiguration Ihrer Checkmk-Site** ist: Sie müssen ihr "
+"mitteilen, wann sie diese Nachrichten senden soll und was sie sagen soll. "
+"Dazu müssen Sie eine neue **Benachrichtigungsregel** erstellen (Hilfe dazu "
+"finden Sie in der offiziellen Dokumentation von Checkmk)."
 
 #: ../system/integrations/checkmk/setup-guide.rst:19
 msgid ""
@@ -21616,32 +21793,43 @@ msgid ""
 "will be written by you (samples below), and contain the logic for sending "
 "API/email messages to Zammad:"
 msgstr ""
+"Als Teil dieser neuen Regel müssen Sie eine **Benachrichtigungsmethode** "
+"wählen (*d.h.* ein Skript, das ausgeführt wird, wenn die Regel ausgelöst "
+"wird). Dieses Skript wird von Ihnen geschrieben (Beispiele unten) und "
+"enthält die Logik zum Senden von API-/E-Mail-Nachrichten an Zammad:"
 
 #: ../system/integrations/checkmk/setup-guide.rst:28
 msgid "Checkmk \"New Rule\" dialog"
-msgstr ""
+msgstr "Checkmk Dialog \"New Rule\""
 
 #: ../system/integrations/checkmk/setup-guide.rst:28
 msgid ""
 "Find your custom scripts in the Checkmk WATO under **Notifications > New "
 "Rule > Notification Method**."
 msgstr ""
+"Sie finden Ihre benutzerdefinierten Skripte in der Checkmk WATO unter **"
+"Notifications > New Rule > Notification Method**."
 
 #: ../system/integrations/checkmk/setup-guide.rst:31
 msgid ""
 "Once you’re done setting up your new rule, you’re all set! New tickets "
 "should start coming in and auto-updating any time your rule is triggered."
 msgstr ""
+"Sobald Sie Ihre neue Regel eingerichtet haben, sind Sie startklar! Neue "
+"Tickets sollten nun eingehen und jedes Mal automatisch aktualisiert werden, "
+"wenn die Regel ausgelöst wird."
 
 #: ../system/integrations/checkmk/setup-guide.rst:35
 msgid ""
 "(If you need help troubleshooting, be sure to check the :ref:`checkmk-recent-"
 "logs`.)"
 msgstr ""
+"(Wenn Sie Hilfe bei der Fehlersuche benötigen, sollten Sie die :ref:`checkmk-"
+"recent-logs` überprüfen.)"
 
 #: ../system/integrations/checkmk/setup-guide.rst:40
 msgid "API Alerts"
-msgstr ""
+msgstr "API-Warnungen"
 
 #: ../system/integrations/checkmk/setup-guide.rst:42
 msgid ""
@@ -21649,28 +21837,34 @@ msgid ""
 "installation directory and make them executable. (Be sure to replace the "
 "``zammad.example.com`` callback URL with the one found in your admin panel.)"
 msgstr ""
+"Um diese Skripte in das Checkmk-WATO einzufügen, kopieren Sie sie in Ihr "
+"Checkmk-Installationsverzeichnis und machen sie ausführbar. (Stellen Sie "
+"sicher, dass Sie die Callback-URL ``zammad.example.com`` durch Ihre "
+"ersetzen, die Sie auch im Admin-Bereich finden.)"
 
 #: ../system/integrations/checkmk/setup-guide.rst:62
 msgid "Service notification"
-msgstr ""
+msgstr "Service-Benachrichtigung"
 
 #: ../system/integrations/checkmk/setup-guide.rst:48
 msgid ""
 "For updates on the status of the software running on your server (*e.g.,* "
 "postgres)."
 msgstr ""
+"Für Updates des Status der Software, die auf Ihrem Server läuft (*z.B.* "
+"Postgres)."
 
 #: ../system/integrations/checkmk/setup-guide.rst:77
 msgid "Host notification"
-msgstr ""
+msgstr "Host-Benachrichtigung"
 
 #: ../system/integrations/checkmk/setup-guide.rst:65
 msgid "For updates on the status of the server itself."
-msgstr ""
+msgstr "Für Updates zum Status des Servers selbst."
 
 #: ../system/integrations/checkmk/setup-guide.rst:79
 msgid "🤔 **What’s with all the env vars?**"
-msgstr ""
+msgstr "🤔 **Was ist mit all den env vars?**"
 
 #: ../system/integrations/checkmk/setup-guide.rst:81
 msgid ""
@@ -21678,6 +21872,10 @@ msgid ""
 "about the event that triggered the notification. This information is passed "
 "in the form of these ``$NOTIFY_*`` environment variables."
 msgstr ""
+"Jedes Mal, wenn Checkmk diese Skripte ausführt, muss es einige Informationen "
+"über das Ereignis, das die Benachrichtigung ausgelöst hat, bereitstellen. "
+"Diese Informationen werden in Form der Umgebungsvariablen ``$NOTIFY_*`` "
+"übergeben."
 
 #: ../system/integrations/checkmk/setup-guide.rst:87
 msgid ""
@@ -21685,10 +21883,13 @@ msgid ""
 "setting up your notification rule, but the ones you see here are all "
 "provided by default."
 msgstr ""
+"Sie können beim Einrichten Ihrer Benachrichtigungsregel zusätzliche "
+"Parameter angeben, die an das Skript übergeben werden sollen, aber die hier "
+"gezeigten sind alle standardmäßig vorhanden."
 
 #: ../system/integrations/checkmk/setup-guide.rst:92
 msgid "Email Alerts"
-msgstr ""
+msgstr "E-Mail-Benachrichtigungen"
 
 #: ../system/integrations/checkmk/setup-guide.rst:96
 msgid ""
@@ -21696,10 +21897,15 @@ msgid ""
 "This section will be completed once they have been resolved. (Learn more at "
 "GitHub issues `#2377`_ & `#2180`_.)"
 msgstr ""
+"🐞 **Es gibt bekannte Fehler** bei der Verarbeitung von E-Mails von Checkmk "
+"durch Zammad. Dieser Abschnitt wird vervollständigt, sobald sie behoben "
+"sind. (Erfahren Sie mehr unter den GitHub Issues `#2377`_ & `#2180`_.)"
 
 #: ../system/integrations/checkmk/setup-guide.rst:100
 msgid "In the meantime, we encourage you to set up API alerts instead."
 msgstr ""
+"In der Zwischenzeit empfehlen wir Ihnen, stattdessen API-Benachrichtigungen "
+"einzurichten."
 
 #: ../system/integrations/clearbit.rst:2
 msgid "Clearbit"
@@ -21712,6 +21918,11 @@ msgid ""
 "Clearbit, it will share all information it has regarding the user with "
 "Zammad. Those information can include the following:"
 msgstr ""
+"Mit unserer Clearbit-Integration können Sie die von Zammad bereitgestellten "
+"Informationen ganz einfach erweitern. Wenn die E-Mail-Adresse des Kunden "
+"oder Agenten Clearbit bekannt ist, wird es alle Informationen, die es über "
+"den Benutzer hat, mit Zammad teilen. Die Informationen können Folgendes "
+"umfassen:"
 
 #: ../system/integrations/clearbit.rst:9
 msgid "Avatar"
@@ -21719,15 +21930,15 @@ msgstr "Avatar"
 
 #: ../system/integrations/clearbit.rst:10
 msgid "Address information"
-msgstr ""
+msgstr "Informationen zur Adresse"
 
 #: ../system/integrations/clearbit.rst:11
 msgid "Website information"
-msgstr ""
+msgstr "Informationen zur Website"
 
 #: ../system/integrations/clearbit.rst:12
 msgid "A BIO (as Note by default)"
-msgstr ""
+msgstr "Eine Zusammenfassung der Biografie (standardmäßig als Notiz)"
 
 #: ../system/integrations/clearbit.rst:14
 msgid ""
@@ -21736,6 +21947,10 @@ msgid ""
 "can get any information from Clearbit, as long as you have a mapping to an "
 "Zammad object."
 msgstr ""
+"Bei Bedarf können Sie weitere benutzerdefinierte Objekte hinzufügen und "
+"ihnen Mappings zuweisen. Generell können Sie alle Informationen von Clearbit "
+"anzeigen lassen , solange Sie eine Zuordnung zu einem Zammad-Objekt-Atribut "
+"eingerichtet haben."
 
 #: ../system/integrations/clearbit.rst:21
 msgid ""
@@ -21744,6 +21959,11 @@ msgid ""
 "last name field filled in already and Clearbit has other information on "
 "that, it will not be updated."
 msgstr ""
+"Clearbit hat ein Mapping von Feldern wie LDAP und Exchange, aber es "
+"überschreibt keine Zammad-Informationen. Das bedeutet, dass wenn Sie z.B. "
+"das Feld für den Nachnamen in Zammad bereits ausgefüllt haben, es von "
+"Clearbit nicht überschrieben wird, auch wenn dort andere Informationen "
+"vorliegen."
 
 #: ../system/integrations/clearbit.rst:26
 msgid ""
@@ -21751,16 +21971,22 @@ msgid ""
 "notices that the last name on the Clearbit source has changed, Zammad will "
 "also update this value."
 msgstr ""
+"Aber: Wenn der Nachname von Clearbit festgelegt wurde und Zammad feststellt, "
+"dass sich der Nachname in der Clearbit-Quelle geändert hat, wird Zammad auch "
+"diesen Wert aktualisieren."
 
 #: ../system/integrations/clearbit.rst:31
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguration"
 
 #: ../system/integrations/clearbit.rst:33
 msgid ""
 "The configuration of Clearbit is really easy and done fast! Just login to "
 "your Clearbit-Account, go to \"API\" and copy the secret-API-Key."
 msgstr ""
+"Die Konfiguration von Clearbit ist wirklich einfach und schnell erledigt! "
+"Loggen Sie sich einfach in Ihren Clearbit-Account ein, gehen Sie auf \"API\" "
+"und kopieren Sie den geheimen API-Schlüssel."
 
 #: ../system/integrations/clearbit.rst:38
 msgid ""
@@ -21770,12 +21996,21 @@ msgid ""
 "not have one yet (and Clearbit knows it). The shared option decides if the "
 "new organizations Zammad creates with Clearbit should be shared ones."
 msgstr ""
+"Wechseln Sie nun zu Ihrer Zammad-Instanz und gehen Sie im Admin-Bereich zu "
+"Integrationen (System) > Clearbit. Fügen Sie Ihren API-Schlüssel in das API-"
+"SchlüsselFeld ein und entscheiden Sie, ob Zammad automatisch unbekannte "
+"Organisationen erstellen soll, wenn der Benutzer noch keine hat (und "
+"Clearbit diese kennt). Die Option \"Geteilt\" legt fest, ob die neuen "
+"Organisationen, die Zammad aus Clearbit erstellt, \"geteilt\" sein sollen."
 
 #: ../system/integrations/clearbit.rst:47
 msgid ""
 "If you're unsure what option to choose, better stick with \"no\". You can "
 "also learn more about :doc:`/manage/organizations/index`."
 msgstr ""
+"Wenn Sie unsicher sind, welche Option Sie wählen sollen, bleiben Sie besser "
+"bei \"nein\". Sie können mehr dazu unter :doc:`/manage/organizations/index` "
+"erfahren."
 
 #: ../system/integrations/clearbit.rst:52
 msgid ""
@@ -21783,6 +22018,10 @@ msgid ""
 "sync. You can add further mappings for e.g. custom fields if you need more "
 "information that Clearbit can provide."
 msgstr ""
+"Die Mapping-Option funktioniert ähnlich wie das Mapping innerhalb des "
+"Exchange und LDAP Sync. Sie können weitere Mappings für z.B. "
+"benutzerdefinierte Felder hinzufügen, wenn Sie weitere Informationen "
+"benötigen, die Clearbit bereitstellen kann."
 
 #: ../system/integrations/clearbit.rst:58
 msgid ""
@@ -21790,6 +22029,9 @@ msgid ""
 "available fields on their API, you can take a look at their `API "
 "documentation`_ ."
 msgstr ""
+"Wenn Sie weitere Clearbit-Felder hinzufügen möchten und mehr über die "
+"verfügbaren Felder in der API erfahren möchten, können Sie einen Blick auf "
+"die `API documentation`_ werfen."
 
 #: ../system/integrations/clearbit.rst:65
 msgid ""
@@ -21797,28 +22039,39 @@ msgid ""
 "the changes and enable Clearbit integration. Zammad will now start polling "
 "the Clearbit API as users contact you."
 msgstr ""
+"Wenn Sie mit den oben gewählten Einstellungen und Ihrem Mapping zufrieden "
+"sind, speichern Sie die Änderungen und aktivieren Sie die Clearbit-"
+"Integration. Zammad wird nun die Clearbit-API abfragen, wenn Nutzer Sie "
+"kontaktieren."
 
 #: ../system/integrations/clearbit.rst:71
 msgid ""
 "Zammad does not synchronize with Clearbit on a regular basis, but on demand "
 "if needed. This saves API calls."
 msgstr ""
+"Zammad synchronisiert sich nicht regelmäßig mit Clearbit, sondern nur bei "
+"Bedarf. Das spart API-Aufrufe."
 
 #: ../system/integrations/clearbit.rst:76
 msgid ""
 "Below the Settings and Mappings, you'll find our Integration log. You can "
 "see what requests Zammad sent to Clearbit and also the APIs Response."
 msgstr ""
+"Unterhalb der Einstellungen und Zuordnungen finden Sie unser "
+"Integrationsprotokoll. Sie können sehen, welche Anfragen Zammad an Clearbit "
+"gesendet hat und auch die API-Antwort."
 
 #: ../system/integrations/clearbit.rst:81
 msgid ""
 "By the way, you can also view the API log on the Clearbit website - the "
 "information seen is basically the same."
 msgstr ""
+"Übrigens können Sie das API-Protokoll auch auf der Clearbit-Website einsehen "
+"- die Informationen sind im Grunde die gleichen."
 
 #: ../system/integrations/clearbit.rst:87
 msgid "Example when adding a user"
-msgstr ""
+msgstr "Beispiel für das Hinzufügen eines Benutzers"
 
 #: ../system/integrations/clearbit.rst:89
 msgid ""
@@ -21828,10 +22081,16 @@ msgid ""
 "did was to add further information it received from Clearbit. Really cool, "
 "right?"
 msgstr ""
+"Um Ihnen zu zeigen, wie schnell Informationen hinzugefügt werden, haben wir "
+"unten einen kleinen Screencast eingefügt. Dieser zeigt die Erstellung des "
+"Benutzers Alex aus Clearbit. Da wir den Nachnamen von Alex bereits auf \"X\" "
+"gesetzt haben, hat Zammad ihn nicht aktualisiert. Zammad hat weitere "
+"Informationen hinzuzufügt, die es von Clearbit erhalten hatte. Wirklich "
+"cool, oder?"
 
 #: ../system/integrations/cti/generic.rst:2
 msgid "CTI (generic)"
-msgstr ""
+msgstr "CTI (allgemein)"
 
 #: ../system/integrations/cti/includes/introduction.include.rst:1
 msgid ""
@@ -21839,32 +22098,45 @@ msgid ""
 "this your agents can greet your customers by their name and are supported by "
 "Zammad with automatically opening a new ticket dialogue or the user profile."
 msgstr ""
+"Diese Integration ermöglicht es Zammad, Ihren Agenten eine Anruferliste zur "
+"Verfügung zu stellen. Damit können Ihre Agenten Ihre Kunden mit ihrem Namen "
+"begrüßen und werden von Zammad duruch ein automatisches Öffnen eines Ticket-"
+"Erstell-Dialogs oder des Benutzerprofils unterstützt."
 
 #: ../system/integrations/cti/includes/introduction.include.rst:6
 msgid ""
 "If you want to learn more on how your agents can use this function, please "
 "refer the :user-docs:`user documentation </extras/caller-log.html>`."
 msgstr ""
+"Wenn Sie mehr darüber erfahren möchten, wie Ihre Agenten diese Funktion "
+"nutzen können, lesen Sie bitte die :user-docs:`Benutzerdokumentation </"
+"extras/caller-log.html>`."
 
 #: ../system/integrations/cti/includes/introduction.include.rst:11
 msgid ""
 "Automatically opening new ticket dialogues or user profiles requires agent "
 "to extension mapping - see more below."
 msgstr ""
+"Das automatische Öffnen von Ticket-Erstell-Dialogen oder Benutzerprofilen "
+"erfordert eine Zuordnung von Agenten in der CTI-Integration - siehe unten."
 
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 msgid "Please note the following limitations to reduce confusion later on:"
 msgstr ""
+"Bitte beachten Sie die folgenden Einschränkungen, um spätere Unklarheiten zu "
+"vermeiden:"
 
 #: ../system/integrations/cti/includes/introduction.include.rst:19
 msgid "CTI integrations provide caller log functions only."
-msgstr ""
+msgstr "Die CTI-Integration bieten nur Anruferprotokoll-Funktionen."
 
 #: ../system/integrations/cti/includes/introduction.include.rst:20
 msgid ""
 "This integration does not provide any VoIP functionalities; you can't make "
 "phone calls from within Zammad."
 msgstr ""
+"Diese Integration bietet keine VoIP-Funktionen; Sie können von Zammad aus "
+"keine Telefonanrufe tätigen."
 
 #: ../system/integrations/cti/includes/introduction.include.rst:22
 msgid ""
@@ -21872,30 +22144,35 @@ msgid ""
 "automatic dialing. This requires additional software / configuration on your "
 "agent's computers."
 msgstr ""
+"Wenn Ihr Browser ``tel``-URLs unterstützt, können Sie auf Telefonnummern "
+"klicken, um sie automatisch zu wählen. Dies erfordert zusätzliche Software/"
+"Konfiguration auf den Computern Ihrer Mitarbeiter."
 
 #: ../system/integrations/cti/generic.rst:9
 #: ../system/integrations/cti/placetel.rst:14
 #: ../system/integrations/cti/sipgate.rst:14
 msgid "Please provide the following requirements:"
-msgstr ""
+msgstr "Folgende Anforderungen müssen erfüllt sein:"
 
 #: ../system/integrations/cti/generic.rst:11
 msgid ""
 "A telephone system that supports webhooks (outbound) (best option are those "
 "that allow customizing the calls)."
 msgstr ""
+"Eine Telefonanlage, die Webhooks (ausgehend) unterstützt (am besten solche, "
+"die eine individuelle Anpassung der Anrufe ermöglichen)."
 
 #: ../system/integrations/cti/generic.rst:13
 msgid "A unique Call-ID during the call session."
-msgstr ""
+msgstr "Eine eindeutige Call-ID während der Gesprächssitzung."
 
 #: ../system/integrations/cti/generic.rst:14
 msgid "Call event data (both numbers and direction)."
-msgstr ""
+msgstr "Daten zu Anrufereignissen (sowohl Nummern als auch Richtung)."
 
 #: ../system/integrations/cti/generic.rst:15
 msgid "Your Zammad instance must be reachable for your telephony system."
-msgstr ""
+msgstr "Ihre Zammad-Instanz muss für Ihr Telefonsystem erreichbar sein."
 
 #: ../system/integrations/cti/generic.rst:17
 msgid ""
@@ -21903,18 +22180,23 @@ msgid ""
 "and what it expects, please consult our :docs:`CTI-API documentation </api/"
 "generic-cti/index.html>`."
 msgstr ""
+"Wenn Sie mehr darüber erfahren möchten, welche Arten von Anfragen von Zammad "
+"unterstützt werden und welche Daten erwartet werden, konsultieren Sie bitte "
+"unsere :docs:`CTI-API Dokumentation </api/generic-cti/index.html>`."
 
 #: ../system/integrations/cti/generic.rst:22
 #: ../system/integrations/cti/placetel.rst:27
 #: ../system/integrations/cti/sipgate.rst:30
 msgid "Available settings"
-msgstr ""
+msgstr "Verfügbare Einstellungen"
 
 #: ../system/integrations/cti/generic.rst:26
 msgid ""
 "Click the button next to the ``CTI (generic)`` heading to activate or "
 "deactivate this function."
 msgstr ""
+"Klicken Sie auf die Schaltfläche neben der Überschrift ``CTI (generisch)``, "
+"um diese Funktion zu aktivieren oder zu deaktivieren."
 
 #: ../system/integrations/cti/generic.rst:34
 #: ../system/integrations/cti/placetel.rst:46
@@ -21927,18 +22209,25 @@ msgid ""
 "Zammad will list your generic CTI endpoint here. It contains a unique token "
 "so ensure to keep this URL save."
 msgstr ""
+"Zammad listet hier Ihren generischen CTI-Endpunkt auf. Er enthält ein "
+"eindeutiges Token. Bitte achten Sie darauf, die URL möglichst geheim zu "
+"halten."
 
 #: ../system/integrations/cti/generic.rst:33
 msgid ""
 "You'll need this endpoint for your PBX to talk to Zammad, see :docs:`CTI-API "
 "documentation </api/generic-cti/index.html>`."
 msgstr ""
+"Sie benötigen diesen Endpunkt für Ihre Telefonanlage, um mit Zammad zu "
+"sprechen, siehe :docs:`CTI-API Dokumentation </api/generic-cti/index.html>`."
 
 #: ../system/integrations/cti/includes/important-dont-forget-saving.include.rst:3
 msgid ""
 "All following options **do not save automatically**. Always use the Save "
 "button on the lower end of the integration page!"
 msgstr ""
+"Alle folgenden Optionen werden **nicht automatisch gespeichert**. Verwenden "
+"Sie immer die Schaltfläche \"Speichern\" am unteren Ende der Seite!"
 
 #: ../system/integrations/cti/generic.rst:56
 #: ../system/integrations/cti/placetel.rst:54
@@ -21951,7 +22240,7 @@ msgstr "Anruf-Einstellungen"
 #: ../system/integrations/cti/sipgate.rst:42
 #: ../system/integrations/cti/sipgate.rst:55
 msgid "Inbound"
-msgstr ""
+msgstr "Eingehend"
 
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:1
 msgid ""
@@ -21959,20 +22248,25 @@ msgid ""
 "to temporarily reject e.g. spam callers without having to contact providers "
 "or PBX administrators."
 msgstr ""
+"Mit dieser Option können Sie bestimmte eingehende Anrufer-IDs blockieren. So "
+"können Sie z.B. Spam-Anrufer vorübergehend abweisen, ohne dass Sie sich an "
+"Ihren Provider oder PBX-Administrator wenden müssen."
 
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:6
 msgid "Caller ID to block"
-msgstr ""
+msgstr "Zu blockierende Caller-ID"
 
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:6
 msgid "Provide caller IDs to block in ``E.164`` format."
-msgstr ""
+msgstr "Geben Sie die zu blockierenden Anrufer-IDs im Format ``E.164`` an."
 
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:9
 msgid ""
 "Provide a meaningful note for your fellow administrators to remind yourself "
 "why you've chosen to block the number."
 msgstr ""
+"Verfassen Sie eine aussagekräftige Notiz für Ihre Kollegen, warum Sie die "
+"Nummer gesperrt haben."
 
 #: ../system/integrations/cti/generic.rst:48
 msgid ""
@@ -21980,16 +22274,19 @@ msgid ""
 "``reject`` response which will cause your telephony system to hang up the "
 "call."
 msgstr ""
+"Ihr Telefonsystem muss diese Funktion unterstützen. Zammad sendet eine "
+"``Abweisen``-Antwort, die Ihr Telefonsystem veranlasst, den Anruf aufzulegen."
 
 #: ../system/integrations/cti/generic.rst:52
 msgid "To callers this usually will feel like the line is busy."
 msgstr ""
+"Für die Anrufer sieht das in der Regel so aus, als sei die Leitung besetzt."
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:19
 #: ../system/integrations/cti/sipgate.rst:45
 msgid "Outbound"
-msgstr ""
+msgstr "Ausgehend"
 
 #: ../system/integrations/cti/includes/outbound-calls-intro.include.rst:1
 msgid ""
@@ -21998,48 +22295,56 @@ msgid ""
 "to other countries or because you want your customer to feel you're calling "
 "from the same country."
 msgstr ""
+"In vielen Fällen ist es sinnvoll, je nach Zielland eine andere Anrufer-ID zu "
+"verwenden. Dies kann aufgrund spezieller Verbindungstarife in andere Länder "
+"der Fall sein oder weil Sie Ihren Kunden das Gefühl geben wollen, dass Sie "
+"aus demselben Land anrufen."
 
 #: ../system/integrations/cti/includes/outbound-calls-intro.include.rst:6
 msgid "This option expects ``E.164`` number formats."
-msgstr ""
+msgstr "Diese Option erwartet ``E.164`` Nummernformate."
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:13
 msgid "Destination caller ID"
-msgstr ""
+msgstr "Ziel-Caller-ID"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:5
 msgid "The caller ID or number you're trying to call."
-msgstr ""
+msgstr "Die Anrufer-ID oder die Nummer, die Sie anzurufen versuchen."
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:9
 msgid "You can use wildcards for e.g. country specific outbound numbers like:"
 msgstr ""
+"Sie können Platzhalter für z.B. länderspezifische ausgehende Nummern "
+"verwenden, wie:"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:11
 msgid "``49*`` for Germany"
-msgstr ""
+msgstr "``49*`` für Deutschland"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:12
 msgid "``4930*`` for Berlin / Germany landlines"
-msgstr ""
+msgstr "``4930*`` für Berlin / Deutschland Festnetze"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:13
 msgid "``33*`` for France"
-msgstr ""
+msgstr "``33*`` für Frankreich"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:17
 msgid "Set Outbound caller ID"
-msgstr ""
+msgstr "Ausgehende Anrufer-ID einstellen"
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:16
 msgid ""
 "The outbound caller ID to set (the number your customer sees on his display) "
 "in ``E.164`` number format."
 msgstr ""
+"Die ausgehende Anrufer-ID (die Nummer, die Ihr Kunde auf seinem Display "
+"sieht) im Format ``E.164``."
 
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
 msgid "Provide a short description for fellow administrators."
-msgstr ""
+msgstr "Geben Sie eine kurze Beschreibung für andere Administratoren."
 
 #: ../system/integrations/cti/includes/generic-cti-support-note.includes.rst:3
 msgid ""
@@ -22047,6 +22352,9 @@ msgid ""
 "dialing*. Please consult the :docs:`CTI API </cti/api-intro.html>` in case "
 "you're not sure."
 msgstr ""
+"Diese Option erfordert, dass Ihre Telefonanlage eine spezielle Anfrage *vor "
+"dem Wählen* an Zammad sendet. Bitte konsultieren Sie die :docs:`CTI API </"
+"cti/api-intro.html>`, falls Sie sich nicht sicher sind."
 
 #: ../system/integrations/cti/generic.rst:65
 #: ../system/integrations/cti/placetel.rst:59
@@ -22060,46 +22368,51 @@ msgid ""
 "integration. For your overview we're sorting them by appearance and "
 "reference their description first."
 msgstr ""
+"Nachfolgend finden Sie alle verfügbaren zusätzlichen Einstellungen für die "
+"CTI-Integration. Sie sind sortiert nach dem Auftreten in der Admin-"
+"Oberfläche in Zammad."
 
 #: ../system/integrations/cti/includes/default-caller-id.include.rst:2
 #: ../system/integrations/cti/includes/default-caller-id.include.rst:1
 msgid "Default caller ID for outbound calls"
-msgstr ""
+msgstr "Standard-Rufnummer für ausgehende Anrufe"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:16
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:15
 msgid "Shown records in caller log"
-msgstr ""
+msgstr "Anzahl der Einträge im Anrufprotokoll"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:2
 msgid ""
 "Allows you to set the number of shown caller log entries for all users. You "
 "can choose from the following values:"
 msgstr ""
+"Ermöglicht es Ihnen, die Anzahl der angezeigten Anruf-Protokolleinträge für "
+"alle Benutzer festzulegen. Sie können zwischen den folgenden Werten wählen:"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:5
 msgid "60 (default)"
-msgstr ""
+msgstr "60 (Standard)"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:6
 msgid "120"
-msgstr ""
+msgstr "120"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:7
 msgid "180"
-msgstr ""
+msgstr "180"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:8
 msgid "240"
-msgstr ""
+msgstr "240"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:9
 msgid "300"
-msgstr ""
+msgstr "300"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:11
 msgid "**🥵 Potential performance issue**"
-msgstr ""
+msgstr "**🥵 Mögliches Performance-Problem**"
 
 #: ../system/integrations/cti/includes/records-caller-log.include.rst:13
 msgid ""
@@ -22108,16 +22421,24 @@ msgid ""
 "and send up to 300 records to *all active agent sessions* in very short time "
 "periods."
 msgstr ""
+"Wenn Sie diese Einstellung auf mehr als 60 setzen, kann dies bei sehr stark "
+"ausgelasteten Instanzen zu ernsthaften Performance-Problemen führen. "
+"Beachten Sie, dass diese Einstellung bewirkt, dass Zammad in sehr kurzen "
+"Zeiträumen bis zu 300 Datensätze bei *allen aktiven Agentensitzungen* "
+"anfragt und sendet."
 
 #: ../system/integrations/cti/generic.rst:86
 msgid "Caller Log Filter"
-msgstr ""
+msgstr "Anrufprotokoll-Filter"
 
 #: ../system/integrations/cti/generic.rst:68
 msgid ""
 "This function allows you to provide call information based on e.g. queues "
 "only to agents that really need the information."
 msgstr ""
+"Mit dieser Funktion können Sie Anrufprotokolle basierend auf Warteschleifen "
+"oder Nummern nur den Agenten zur Verfügung stellen, die diese Informationen "
+"wirklich benötigen."
 
 #: ../system/integrations/cti/generic.rst:71
 msgid ""
@@ -22125,46 +22446,60 @@ msgid ""
 "to bug your agents from other departments. Leaving these options empty will "
 "fallback to showing everything to everyone."
 msgstr ""
+"Warum? Wenn Sie ein Team für mehrere Länder oder Abteilungen haben, möchten "
+"Sie nicht, dass Ihre Mitarbeiter aus anderen Abteilungen gestört werden. "
+"Wenn Sie diese Optionen leer lassen, wird wieder alles für alle angezeigt."
 
 #: ../system/integrations/cti/generic.rst:77
 msgid "Destination caller ID or Queue"
-msgstr ""
+msgstr "Ziel-Caller-ID oder Queue"
 
 #: ../system/integrations/cti/generic.rst:76
 msgid ""
 "This depends on your PBX and usually is either a queue ID, phone number or "
 "extension."
 msgstr ""
+"Dies hängt von Ihrer Telefonanlage ab und ist in der Regel entweder eine "
+"Warteschlangen-ID, eine Telefonnummer oder eine Durchwahl."
 
 #: ../system/integrations/cti/generic.rst:82
 msgid "Agents"
-msgstr ""
+msgstr "Agenten"
 
 #: ../system/integrations/cti/generic.rst:80
 msgid ""
 "Select the agents that are responsible for the group. These agents will then "
 "see caller log entries and call notifications fitting to said queue."
 msgstr ""
+"Wählen Sie die Agenten aus, die für die Gruppe zuständig sind. Diese Agenten "
+"sehen dann Anruferprotokolle und Anrufbenachrichtigungen, die zu dieser "
+"Warteschleife gehören."
 
 #: ../system/integrations/cti/generic.rst:0
 msgid ""
 "Screenshot showing the caller log filter table with pre filled sample data"
 msgstr ""
+"Screenshot der Anrufprotokoll-Filtertabelle mit vorausgefüllten Beispieldaten"
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:6
 msgid ""
 "With recent logs Zammad allows you to view the latest calls for the CTI "
 "functionality. This usually comes in handy, when you're looking for errors."
 msgstr ""
+"Mit den \"Aktuellsten Protokollen\" ermöglicht es Zammad Ihnen, die letzten "
+"Anrufe für die CTI-Integration zu sehen. Das kann im Fehlerfall hilfreich "
+"sein."
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:0
 msgid ""
 "Screenshot showing several incoming requests within Recent logs section."
 msgstr ""
+"Screenshot mit mehreren eingehenden Anfragen im Abschnitt \"Aktuellste "
+"Protokolle\"."
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:16
 msgid "I'm just here to clear floats up."
-msgstr ""
+msgstr "Ich bin nur ein Hilfskonstrukt."
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:20
 msgid ""
@@ -22172,17 +22507,23 @@ msgid ""
 "the call in question. You'll see the payload it received and also the "
 "response that was sent."
 msgstr ""
+"Wenn Sie auf den gewünschten Eintrag klicken, zeigt Zammad weitere "
+"Einzelheiten zu dem betreffenden Anruf an. Sie sehen dann den empfangenen "
+"Payload und die gesendete Antwort."
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:0
 msgid ""
 "Screenshot showing detailed information of a specific log entry of recent "
 "logs"
 msgstr ""
+"Screenshot mit detaillierten Informationen zu einem bestimmten "
+"Protokolleintrag der Aktuellsten Protokolle"
 
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:10
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:9
 msgid "My Phone page stays blank, signalling does work..."
 msgstr ""
+"Meine Telefonliste bleibt leer, die Anruf-Signalisierung funktioniert..."
 
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:5
 msgid ""
@@ -22191,10 +22532,17 @@ msgid ""
 "integration version. Specifically defining more than one agent mapping on "
 "the different integration variants will be the issue."
 msgstr ""
+"Wenn Sie sich in den \"Aktuellsten Protokollen\" vergewissert haben, dass "
+"die Anruf-Signalisierung funktioniert und Ihr Anruferprotokoll trotzdem leer "
+"bleibt, stellen Sie bitte sicher, dass Sie nur eine CTI-Integrat "
+"konfiguriert haben. Wenn Sie mehr als eine Agentenzuordnung in verschiedenen "
+"Integrationen definieren, ist das wahrscheinlich das Problem."
 
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:10
 msgid "Clear the not needed agent mapping and reload your browser page."
 msgstr ""
+"Löschen Sie die Zuordnung nicht benötigter Agenten und laden Sie Ihre "
+"Browserseite neu."
 
 #: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:1
 msgid ""
@@ -22202,69 +22550,85 @@ msgid ""
 "provide a new ticket dialogue or open the user profile for the agent that "
 "picks up the call."
 msgstr ""
+"Indem Sie die Durchwahlen Ihrer Agenten den bestehenden Zammad-Benutzern "
+"zuordnen, kann Zammad einen neuen Ticket-Dialog bereitstellen oder das "
+"Benutzerprofil des Anrufers für den Agenten öffnen, der den Anruf "
+"entgegennimmt."
 
 #: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:5
 msgid ""
 "This speeds up ticket aiding, no matter if it's for existing tickets or new "
 "ones!"
 msgstr ""
+"Das beschleunigt die Bearbeitung von Tickets, egal ob es sich um bestehende "
+"oder neue Tickets handelt!"
 
 #: ../system/integrations/cti/includes/extenion-to-agent-mapping.include.rst:10
 msgid ""
 "The agent perspective is described within our :user-docs:`user documentation "
 "</extras/caller-log.html>`."
 msgstr ""
+"Die Agentenperspektive wird in unserer :user-docs:`Benutzerdokumentation </"
+"extras/caller-log.html>` beschrieben."
 
 #: ../system/integrations/cti/placetel.rst:2
 msgid "Placetel CTI"
-msgstr ""
+msgstr "Placetel CTI"
 
 #: ../system/integrations/cti/placetel.rst:16
 msgid "You need an administrative Placetel account for your organization."
-msgstr ""
+msgstr "Sie benötigen ein Placetel-Administrator-Konto für Ihre Organisation."
 
 #: ../system/integrations/cti/placetel.rst:17
 #: ../system/integrations/cti/sipgate.rst:20
 msgid ""
 "Your Zammad instance must be allowed to communicate to external services."
-msgstr ""
+msgstr "Ihre Zammad-Instanz muss mit externen Diensten zu kommunizieren können."
 
 #: ../system/integrations/cti/placetel.rst:18
 msgid "Placetel must be able to reach your Zammad instance."
-msgstr ""
+msgstr "Placetel muss in der Lage sein, Ihre Zammad-Instanz zu erreichen."
 
 #: ../system/integrations/cti/placetel.rst:22
 msgid ":doc:`provider-configurations/placetel`"
-msgstr ""
+msgstr ":doc:`provider-configurations/placetel`"
 
 #: ../system/integrations/cti/placetel.rst:21
 msgid ""
 "Learn how to configure Placetel to enable Zammad and Placetel to communicate "
 "with each other."
 msgstr ""
+"Erfahren Sie, wie Sie Placetel konfigurieren, damit Zammad und Placetel "
+"miteinander kommunizieren können."
 
 #: ../system/integrations/cti/placetel.rst:31
 msgid ""
 "Click the button next to the ``Placetel`` heading to activate or deactivate "
 "this function."
 msgstr ""
+"Klicken Sie auf die Schaltfläche neben der Überschrift ``Placetel``, um "
+"diese Funktion zu aktivieren oder zu deaktivieren."
 
 #: ../system/integrations/cti/placetel.rst:37
 msgid ""
 "The here listed endpoint settings are relevant for the :doc:`integration "
 "configuration with Placetel <provider-configurations/placetel>`."
 msgstr ""
+"Die hier aufgeführten Endpunkt-Einstellungen sind relevant für die :doc:`"
+"Konfiguration der Placetel-Integration <provider-configurations/placetel>`."
 
 #: ../system/integrations/cti/placetel.rst:42
 #: ../system/integrations/i-doit.rst:60
 msgid "Endpoint"
-msgstr ""
+msgstr "Endpunkt"
 
 #: ../system/integrations/cti/placetel.rst:41
 msgid ""
 "This endpoint will be required for the Zammad integration within the "
 "Placetel web interface."
 msgstr ""
+"Dieser Endpunkt wird für die Zammad-Integration innerhalb der Placetel-"
+"Weboberfläche benötigt."
 
 #: ../system/integrations/cti/placetel.rst:46
 msgid "API Token"
@@ -22275,15 +22639,19 @@ msgid ""
 "You'll receive this token within the ``Web API`` menu. Make sure to copy "
 "this value, it's only shown once!"
 msgstr ""
+"Dieses Token erhalten Sie im Menü ``Web API``. Achten Sie darauf, diesen "
+"Wert zu kopieren, er wird nur einmal angezeigt!"
 
 #: ../system/integrations/cti/placetel.rst:76
 #: ../system/integrations/cti/sipgate.rst:82
 msgid "Phone Extension to Agent Mapping"
-msgstr ""
+msgstr "Zuordnung von Telefonanschlüssen zu Agenten"
 
 #: ../system/integrations/cti/placetel.rst:0
 msgid "Screenshot showing sample user mappings in between Placetel and Zammad"
 msgstr ""
+"Screenshot mit Beispielen für Benutzerzuordnungen zwischen Placetel und "
+"Zammad"
 
 #: ../system/integrations/cti/placetel.rst:69
 msgid ""
