@@ -1,9 +1,9 @@
 Roles
 =====
 
-If you’re already using Zammad,
-you’ll know that users can be **admins**, **agents**, or **customers**.
-These are Zammad’s built-in roles, and they’re the tip of the iceberg
+If you're already using Zammad,
+you'll know that users can be **admins**, **agents**, or **customers**.
+These are Zammad's built-in roles, and they're the tip of the iceberg
 of its powerful, flexible, and fine-grained permission system.
 
 .. figure:: /images/manage/roles/role-overview.png
@@ -17,13 +17,13 @@ of its powerful, flexible, and fine-grained permission system.
 
    Why would you want this?
    Agents get :doc:`overviews </manage/overviews>`
-   of all the tickets they’re *assigned to* (among other things),
-   while customers get an overview of all the tickets they’ve *opened*.
+   of all the tickets they're *assigned to* (among other things),
+   while customers get an overview of all the tickets they've *opened*.
    But some teams use Zammad for both internal and public communication,
    so their agents need both.
 
    Having both roles also changes what you see in the ticket view,
-   depending on whether you’re the “customer” or not.
+   depending on whether you're the “customer” or not.
 
 .. tip:: 💡 **LDAP/Active Directory users:**
 
@@ -36,7 +36,7 @@ of its powerful, flexible, and fine-grained permission system.
 What Is a Role?
 ---------------
 
-**tl;dr** Some users can do things others can’t (like close a ticket).
+**tl;dr** Some users can do things others can't (like close a ticket).
 Users have roles, roles have permissions,
 and permissions are what make those actions possible.
 
@@ -45,7 +45,7 @@ So what exactly are permissions, then?
 .. figure:: /images/manage/roles/permissions-admin.png
    :alt: List of permissions in the New Role dialog
    :align: center
-   :width: 80%
+   :width: 90%
 
    The ``admin.calendar`` permission gives you access
    to the **Manage > Calendars** admin panel.
@@ -72,7 +72,7 @@ In short, roles are just collections of permissions that you can give to a user.
 The built-in admin, agent, and customer roles are enough for many teams,
 but Zammad gives you the freedom to custom-build your own.
 
-And to do that, you’ll need to know what each permission does.
+And to do that, you'll need to know what each permission does.
 
 .. _permission-guide:
 
@@ -96,7 +96,7 @@ Broadly speaking, there are four types of permissions:
 
 👤 Customer
    Without the ``ticket.customer`` permission,
-   customers can’t see the **My Ticket** overview—but
+   customers can't see the **My Ticket** overview—but
    they can still log in and open new tickets!
 
 :doc:`🎛️ User Preferences <user-preferences-permissions>`
