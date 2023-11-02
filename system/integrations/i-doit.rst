@@ -1,12 +1,11 @@
 i-doit
 ======
 
-`i-doit`_ is an open-source **configuration management database**—in other
-words, a tool for keeping tabs on every single piece of your physical and
-digital infrastructure, from network equipment to virtual machines
-on down to the faceplates on your rack shelves and more.
-
-.. _i-doit: https://www.i-doit.com/
+`i-doit <https://www.i-doit.com/>`_ is an open-source
+**configuration management database**—in other words, a tool for keeping tabs
+on every single piece of your physical and digital infrastructure, from network
+equipment to virtual machines on down to the faceplates on your rack shelves
+and more.
 
 What's that got to do with Zammad?
 Well, if you used tickets to track issues with all that hardware,
@@ -36,7 +35,7 @@ learn how it works in practice).
 How to set it up
 ^^^^^^^^^^^^^^^^
 
-.. note:: 🧩 **Requires i-doit's** `API Add-on`_.
+.. note:: 🧩 **Requires i-doit's** `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_.
 
    Use the following settings:
 
@@ -45,9 +44,6 @@ How to set it up
 
    Enforce autentication by username and password
       No
-
-.. _API Add-on:
-   https://www.i-doit.com/i-doit/add-ons/api-add-on/
 
 To set it up, enable the integration in the Zammad admin panel
 under **System > Integrations > i-doit**:

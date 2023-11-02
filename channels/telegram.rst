@@ -14,15 +14,15 @@ To do so, you need to follow these steps.
    📎 Zammad **cannot receive file attachments larger than 20MB** in
    Telegram messages.
 
-   This is a hard limit imposed by the `Telegram Bot API`_.
+   This is a hard limit imposed by the
+   `Telegram Bot API <https://core.telegram.org/bots/api#getfile>`_.
 
-.. _Telegram Bot API: https://core.telegram.org/bots/api#getfile
 
 Register a Telegram bot app
 ===========================
 
-Register your Telegram bot via your Telegram client, see also here:
-https://core.telegram.org/bots#3-how-do-i-create-a-bot
+Register your Telegram bot via your Telegram client, see also 
+`here <https://core.telegram.org/bots#3-how-do-i-create-a-bot>`_.
 
 Go to BotFather
 

@@ -58,7 +58,5 @@ Create a global macro
    For **Send to**: enter any text, as this value is not used, but is
    required.
 
-For more information, use the `Zabbix documentation`_.
-
-.. _Zabbix documentation:
-   https://www.zabbix.com/documentation/current/manual/config/notifications
+For more information, use the
+`Zabbix documentation <https://www.zabbix.com/documentation/current/manual/config/notifications>`_.

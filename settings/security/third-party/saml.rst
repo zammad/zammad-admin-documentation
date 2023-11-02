@@ -11,17 +11,13 @@ Connect your SAML identity provider as a single sign-on (SSO) method.
 
    In this case, the service provider is Zammad,
    and the IdP is a software service that you either host or subscribe to
-   (*e.g.,* `Keycloak`_, `Redhat SSO Server`_, `ADFS`_, or `Okta`_).
+   (*e.g.,* `Keycloak <https://www.keycloak.org/>`_,
+   `Redhat SSO Server <https://access.redhat.com/products/red-hat-single-sign-on>`_,
+   `ADFS <https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services>`_,
+   or `Okta <https://www.okta.com/>`_).
 
    This guide assumes you are already using SAML within your organization
    (i.e., that your IdP is fully set up).
-
-.. _Keycloak: https://www.keycloak.org/
-.. _Redhat SSO Server:
-   https://access.redhat.com/products/red-hat-single-sign-on
-.. _ADFS:
-   https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services
-.. _Okta: https://www.okta.com/
 
 .. warning:: Please note: Our instructions are based on connecting Zammad with
    Keycloak.

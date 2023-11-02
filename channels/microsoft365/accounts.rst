@@ -57,21 +57,17 @@ Accounts
       :scale: 60%
       :align: center
 
-.. note:: 🤔
+.. note:: 🤔 **How do I use my Microsoft 365 account for outgoing system notifications?**
 
-   **How do I use my Microsoft 365 account for outgoing system notifications?**
-
-   On **subscription/cloud-hosted instances**, you can’t.
+   On **subscription/cloud-hosted instances**, you can't.
    Notifications will always come from
    “Notification Master <noreply\@your.zammad.domain>”.
 
-   On **self-hosted instances**, we still don’t recommend it.
+   On **self-hosted instances**, we still don't recommend it.
    Using a Microsoft account for automated, outgoing messages is risky:
-   users who exceed Microsoft’s `email sending limits`_
+   users who exceed Microsoft's
+   `email sending limits <https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits>`_
    can have their accounts suspended.
 
    Set up a generic :doc:`email channel </channels/email/index>` instead,
    then use the :ref:`Email Notification <email-notification>` setting.
-
-.. _email sending limits:
-   https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits
