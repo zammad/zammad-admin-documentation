@@ -20,7 +20,7 @@ Subscription
 Plan
    This section gives you an overview of the available plans and their
    functions / limits. If you require a more detailed table, check our
-   `detailed pricing table`_ for more.
+   `detailed pricing table <https://zammad.com/en/pricing/table>`_ for more.
 
    Your selection in this step will decide on the base agent price
    and e.g. agent limits that might apply in the summary step.
@@ -32,14 +32,12 @@ Plan
          Trial instances are running at Professional with 3 agents.
          The plan cannot be changed during the trial for technical reasons,
          if you require more agents for testing, please contact
-         `our sales team`_ with a reason for the raise request.
+         `our sales team <https://zammad.com/en/company/contact>`_ with a
+         reason for the raise request.
 
    .. figure:: /images/system/subscription/plan-selection.png
       :alt: Screenshot showing three available packages for a hosted Zammad
             instance
-
-.. _detailed pricing table:
-   https://zammad.com/en/pricing/table
 
 Summary
    In this section you can adjust the settings of the previous selected plan.
@@ -102,7 +100,5 @@ Payment method
 
    Technically there's also the possibility to pay via invoice, however - this
    method only applies to a fairly low number of instances. Please contact
-   `our sales team`_ for more information.
-
-.. _our sales team:
-   https://zammad.com/en/company/contact
+   `our sales team <https://zammad.com/en/company/contact>`_ for more
+   information.

@@ -4,11 +4,10 @@ Slack
 .. danger:: **⚠️ Deprecation warning ⚠️**
 
    Zammad 7 will no longer support this dedicated Slack integration. It is
-   recommended to switch to `pre-defined webhooks`_ instead. Existing
-   Slack integrations should be migrated manually before this feature is
-   dropped.
-
-.. _pre-defined webhooks: /manage/webhook/examples/slack-notifications
+   recommended to switch to
+   :doc:`pre-defined webhooks </manage/webhook/examples/slack-notifications>`
+   instead. Existing Slack integrations should be migrated manually before this
+   feature is dropped.
 
 .. note::
 

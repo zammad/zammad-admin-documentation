@@ -57,10 +57,7 @@ more information that Clearbit can provide.
 
    If you want to add more Clearbit fields and want to learn more about
    available fields on their API, you can take a look at their
-   `API documentation`_ .
-
-.. _API documentation:
-   https://dashboard.clearbit.com/docs#enrichment-api
+   `API documentation <https://dashboard.clearbit.com/docs#enrichment-api>`_.
 
 If you're happy with the above chosen Settings and your mapping, just save the
 changes and enable Clearbit integration. Zammad will now start polling the

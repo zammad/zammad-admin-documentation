@@ -1,16 +1,14 @@
 Translations
 ************
 
-Translations of Zammad are processed centrally on our `Weblate instance`_.
+Translations of Zammad are processed centrally on our
+`Weblate instance <https://translations.zammad.org/>`_.
 This allows non development people to review and update translation strings of
 the language they actually speak.
 
 Your language is in an incomplete translation state or has typos?
 Please consider helping us sorting this out! All you need is either a GitHub
 account or register directly on our instance.
-
-.. _Weblate instance:
-   https://translations.zammad.org/
 
    .. hint::
 

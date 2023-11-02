@@ -43,7 +43,8 @@ Add new source
 
       Active Directory admins
          Active Directories are quite specific on how to filter for active users
-         only - please see the `Microsoft documentation`_ for more information.
+         only - please see the `Microsoft documentation <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/>`_
+         for more information.
 
    .. danger::
 
@@ -62,9 +63,6 @@ Add new source
       If your LDAP system doesn't allow anonymous bind, Zammad detects it and
       provides you an editable "Base DN" *text* field instead of a prefilled
       *select* field.
-
-.. _Microsoft documentation:
-   https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
 
 Review or edit existing source
    Clicking on a LDAP source will provide a configuration and mapping overview.

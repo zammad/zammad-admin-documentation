@@ -7,9 +7,8 @@ Setup Placetel connection for Zammad
    You may receive forbidden error messages with Placetel in case your
    permissions are not high enough.
 
-The following actions can be configured via the `Placetel web interface`_.
-
-.. _Placetel web interface: https://web.placetel.de
+The following actions can be configured via the
+`Placetel web interface <https://web.placetel.de>`_.
 
 Step 1: Activate Zammad integration
    Within Integrations, scroll down to Partner integrations and select

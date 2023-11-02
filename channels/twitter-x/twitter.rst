@@ -26,12 +26,14 @@ meaning you can send and receive tweets and DMs just like emails!
 .. note::
    To set it up, follow the steps below:
 
-   1. Apply for a `Twitter Developer account`_.
-   2. `Create a new Twitter app`_ for Zammad.
-   3. Set your new app’s permissions to *Read, write, and access direct
+   1. Apply for a `Twitter Developer account <https://developer.twitter.com/en/apply/user>`_.
+   2. `Create a new Twitter app <https://developer.twitter.com/en/apps/create>`_
+      for Zammad.
+   3. Set your new app's permissions to *Read, write, and access direct
       messages.*
    4. Generate a new access token & secret.
-   5. `Set up a dev environment`_ for the Account Activity API.
+   5. `Set up a dev environment <https://developer.twitter.com/en/account/environments>`_
+      for the Account Activity API.
    6. Add your new Twitter app in Zammad.
    7. Add your Twitter account in Zammad.
    8. Configure filters for creating new tickets based on **#tags** and
@@ -97,9 +99,9 @@ Tell us how this app will be used
    Anything is fine here. We suggest the following::
 
       This app will be used to manage Twitter communications between our
-      customers and our organization’s customer service agents on Zammad.
+      customers and our organization's customer service agents on Zammad.
 
-3. Set your new app’s permissions
+3. Set your new app's permissions
 ---------------------------------
 
    .. figure:: /images/channels/apps.twitter.com_set_permissions.png
@@ -115,7 +117,7 @@ Tell us how this app will be used
       :alt: Twitter Developer account: App keys and tokens page
       :align: center
 
-      You will need all four keys/tokens later, so don’t close this tab.
+      You will need all four keys/tokens later, so don't close this tab.
 
 5. Set up a dev environment
 ---------------------------
@@ -128,7 +130,7 @@ for the Account Activity API.
    :align: center
 
    Name it whatever you like (*e.g.,* ``zammad``). You will need the label
-   later, so don’t forget it.
+   later, so don't forget it.
 
 6. Add your new Twitter app in Zammad
 -------------------------------------
@@ -168,9 +170,5 @@ for the Account Activity API.
    Set up filters to automatically create new tickets based on **#tags** or
    **@mentions**.
 
-That’s it! Now, incoming tweets and DMs will be automatically turned into
+That's it! Now, incoming tweets and DMs will be automatically turned into
 Zammad tickets.
-
-.. _Twitter developer account: https://developer.twitter.com/en/apply/user
-.. _create a new Twitter app: https://developer.twitter.com/en/apps/create
-.. _set up a dev environment: https://developer.twitter.com/en/account/environments

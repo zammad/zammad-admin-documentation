@@ -6,10 +6,8 @@ like invoices, billing address and the option to cancel your subscription.
 
 Billing information
    All adjusted billing information below only affect future invoices.
-   If your invoice was issued wrong, please contact `our sales team`_.
-
-   .. _our sales team:
-      https://zammad.com/en/company/contact
+   If your invoice was issued wrong, please contact
+   `our sales team <https://zammad.com/en/company/contact>`_.
 
    Billing address
       Provide your company address here, make sure to include the companies name

@@ -10,13 +10,11 @@ based on the message contents.
 That means that “setting up Checkmk integration”
 is simply a matter of **adding configuration to your Checkmk site**:
 telling it when to send these messages and what to say.
-To do that, you’ll need to create a new **notification rule**
-(see `Checkmk’s official docs`_ for help with that).
+To do that, you'll need to create a new **notification rule**
+(see `Checkmk's official docs <https://checkmk.com/cms_notifications.html>`_
+for help with that).
 
-.. _Checkmk’s official docs:
-   https://checkmk.com/cms_notifications.html
-
-As part of this new rule, you’ll have to choose a **notification method**
+As part of this new rule, you'll have to choose a **notification method**
 (*i.e.,* a script to execute whenever the rule is triggered).
 This script will be written by you (samples below),
 and contain the logic for sending API/email messages to Zammad:
@@ -28,7 +26,7 @@ and contain the logic for sending API/email messages to Zammad:
    Find your custom scripts in the Checkmk WATO under
    **Notifications > New Rule > Notification Method**.
 
-Once you’re done setting up your new rule, you’re all set!
+Once you're done setting up your new rule, you're all set!
 New tickets should start coming in and auto-updating
 any time your rule is triggered.
 
@@ -76,7 +74,7 @@ Host notification
         -F "text=$NOTIFY_HOSTOUTPUT" \
         https://zammad.example.com/api/v1/... # see Admin Panel > System > Integrations > Checkmk > Usage
 
-.. note:: 🤔 **What’s with all the env vars?**
+.. note:: 🤔 **What's with all the env vars?**
 
    Whenever Checkmk runs these scripts,
    it needs to provide some information
@@ -85,7 +83,7 @@ Host notification
    these ``$NOTIFY_*`` environment variables.
 
    You can specify additional parameters to pass to the script
-   when you’re setting up your notification rule,
+   when you're setting up your notification rule,
    but the ones you see here are all provided by default.
 
 Email Alerts
@@ -93,11 +91,10 @@ Email Alerts
 
 .. warning::
 
-   🐞 **There are known bugs** in Zammad’s processing of email from Checkmk.
+   🐞 **There are known bugs** in Zammad's processing of email from Checkmk.
    This section will be completed once they have been resolved.
-   (Learn more at GitHub issues `#2377`_ & `#2180`_.)
+   (Learn more at GitHub issues
+   `#2377 <https://github.com/zammad/zammad/issues/2377>`_ &
+   `#2180 <https://github.com/zammad/zammad/issues/2180>`_.)
 
    In the meantime, we encourage you to set up API alerts instead.
-
-   .. _#2377: https://github.com/zammad/zammad/issues/2377
-   .. _#2180: https://github.com/zammad/zammad/issues/2180
