@@ -34,8 +34,8 @@ Whenever needed you can restrict access to attributes based on the
 About screens
 -------------
 
-Zammad differentiates between several screens, you can use the object attribute
-in.
+Zammad differentiates between several screens where object attributes can be
+used.
 
 create
    Every time you use a creation dialogue for not yet existing data.
