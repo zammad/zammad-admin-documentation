@@ -1,25 +1,25 @@
-Object permissions
-******************
+Attribute permissions
+*********************
 
 .. figure:: /images/system/objects/permission-and-screen-overview.png
    :align: center
 
-   Some of the possible permission and screen options for objects.
+   Some of the possible permissions and screen options for object attributes.
 
-Whenever needed you can restrict access to objects based on the 
+Whenever needed you can restrict access to attributes based on the
 :ref:`user permission <permission-guide>`
 (``admin``, ``ticket.agent`` & ``ticket.customer``).
 
-.. tip:: **🤓 Below is not set in stone 🤓**
+.. tip:: **🤓 This is not the only possibility to restrict access**
 
    You can always adjust below settings with :doc:`/system/core-workflows`.
-   This also allows role based restriction. 👀
+   This also allows role based restriction.
 
 .. note::
-   
-   In some situations, Zammad internally overrules below screen, requirement and
-   permission settings. This is because at some points you can't set fields
-   which would mean we couldn't create the ticket.
+
+   In some situations, Zammad internally overrules your chosen settings for
+   screen, requirement and permission. This affects situations where a field
+   can't be set which would be required for the ticket creation.
 
    This currently affects:
 
@@ -34,7 +34,8 @@ Whenever needed you can restrict access to objects based on the
 About screens
 -------------
 
-Zammad cares about the screen you're going to use the object in.
+Zammad differentiates between several screens where object attributes can be
+used.
 
 create
    Every time you use a creation dialogue for not yet existing data.
@@ -60,12 +61,12 @@ invite_customer & invite_agent
 About screen options
 --------------------
 
-Now that we know the different possible situations,
-let's talk about available options.
+Now that we know the different possible situations, let's talk about available
+options.
 
 shown
-   Show or hide a field.
+   Show (checked) or hide (unchecked) a field.
 
 required
-   Set a field to mandatory. Forces users (via UI and API)
+   Set a field to mandatory (checked). Forces users (via UI and API)
    to populate the field.
