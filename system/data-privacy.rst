@@ -3,7 +3,7 @@ Data Privacy
 
 For compliance with GDPR and other data privacy laws,
 you may wish to **permanently delete users from the system**,
-along with **all of their associated tickets**. 
+along with **all of their associated tickets**.
 
 .. hint:: You can even create automated deletion tasks for tickets and users
    based on custom conditions via :doc:`scheduler </manage/scheduler>`!
@@ -65,12 +65,14 @@ There are three ways to access the user deletion dialog:
       :alt: Accessing the user deletion dialog under “Data Privacy” in the Admin Panel
       :align: center
 
-      Use the **New Deletion Task** button. Search for users by name or email address.
+      Use the **New Deletion Task** button. Search for users by name or email
+      address.
 
 .. hint:: 👥 **You can delete organizations, too.**
 
    If the customer you are deleting is the last user in their organization,
-   a **Delete Organization?** option will be displayed in the user deletion dialog:
+   a **Delete Organization?** option will be displayed in the user deletion
+   dialog:
 
    .. figure:: /images/system/data-privacy/delete-organization-option.png
       :alt: Deleting an organization via the user deletion dialog
@@ -94,9 +96,11 @@ You can keep an eye on the status of these tasks in two places:
       :align: center
       :width: 90%
 
-   For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it's complete.
+   For each deleted user, the Activity Stream will be updated twice—once when
+   the task is created, and once when it's complete.
 
-   .. hint:: These notifications are only visible to users with ``admin.data_privacy`` permissions.
+   .. hint:: These notifications are only visible to users with
+      ``admin.data_privacy`` permissions.
 
 **in the “System > Data Privacy” Admin Panel**
    .. figure:: /images/system/data-privacy/data-privacy-task-list.png
@@ -152,4 +156,5 @@ What about re-assigned tickets? I want to delete them, too.
 
 Why are there so many deletion task entries, I didn't create them!
    The deletion tasks can come from the :doc:`/manage/scheduler` as well.
-   Namely the action *"Add a data privacy deletion task"* is causing the entries.
+   Namely the action *"Add a data privacy deletion task"* is causing the
+   entries.
