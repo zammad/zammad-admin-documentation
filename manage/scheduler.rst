@@ -3,61 +3,83 @@ Scheduler
 
 The scheduler performs time-based automated actions. You can set up your own
 schedulers, configure at which points in time they should run, set up conditions
-to determine which tickets they should affect, and then configure the actions
-that you want to be executed on these tickets.
-
-.. note::
-
-   Schedulers with *Action: Delete* are currently the only way in the Zammad
-   front end to permanently delete tickets. This limitation is intentional as
-   Zammad is designed to be revision-proof. A possible use case for such a
-   scheduler is to delete spam tickets some time after creation (e.g. 30 days).
+to determine which objects they should affect, and then configure the actions
+that you want to be executed on these objects.
 
 .. warning::
 
    While it is possible to delegate scheduler permissions to normal agents with
-   the ``admin/scheduler`` permission, it is inadvisable to do so. Malicious
+   the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious
    agents could use a scheduler to access tickets in restricted groups
-   (by moving them to a non-restricted group) or to delete arbitrary tickets.
+   (by moving them to a non-restricted group) or to arbitrarily delete tickets.
 
 .. hint::
 
-   | Schedulers can be used to send periodic reminder emails.
-     Use :doc:`/system/variables` to build highly-customized email templates.
-   |
-   | Schedulers only perform ``2000`` tickets per run. This is a security
-     function in case you accidentally miss configure the scheduler.
+   Schedulers can be used to send periodic reminder emails.
+   Use :doc:`/system/variables` to build highly-customized email templates.
+
+   Schedulers only perform ``2000`` objects per run. This is a security
+   function in case you accidentally misconfigured the scheduler.
 
 Add a new scheduler
 ===================
 
+Create a new scheduler job by clicking on the "New scheduler" button in the top
+right corner. Then Zammad presents a dialogue where you can create your own one.
+
+Example:
+
 .. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation.png
+   :alt: Screenshot showing dialog of creating a new scheduler job
+   :scale: 70 %
+   :align: center
 
 Name
    Choose a name for the scheduler.
 
 When should the job run?
-   Choose the points in time using :doc:`Zammad's timezone </settings/branding>`
-   when the scheduler should run.
+   Choose the points in time when the scheduler should run. It depends on the
+   configured :doc:`timezone in Zammad </settings/branding>`.
 
-   .. note::
-
-      The scheduler tasks are not saving any timezone information.
-      Thus: Scheduler tasks created prior Zammad 5.1 don't require any change.
+Object
+   Choose in which object context the scheduler should be executed. Possible
+   objects are: **Organization**, **Ticket** and **User**.
 
 Conditions for affected objects
-   Determine the ticket attributes (conditions) to limit on which tickets the
+   Determine the object attributes (conditions) to limit on which objects the
    actions configured in step 5 are to be performed.
 
    .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
 Preview
-   This list previews some tickets that your conditions are matching and shows 
-   a total of how many tickets are being matched. Use this to double-check the
+   This list previews some objects that your conditions are matching and shows
+   a total of how many objects are being matched. Use this to double-check the
    entered conditions.
 
+   .. note::
+
+      Please be aware that the preview and displayed number is just based on
+      the currently selected condition. It doesn't necessarily represent the
+      objects for execution at the defined time.
+
 Execute changes on objects
-   Determine the changes to be made to the ticket.
+   Determine the changes to be made to the object. The possible changes depend
+   on the selected object context.
+
+   .. warning::
+
+      🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data
+      privacy deletion task* are dangerous and should be used with care! If
+      executed, the objects are deleted and no rollback is possible.
+
+   .. hint::
+
+      **Delete immediately** will delete the object at the runtime of the job
+      *without any hint* in the UI.
+
+      **Add a data privacy deletion task** will delete the object at
+      the runtime of the job as a data privacy task, which means it is visible
+      in Zammad's :doc:`data privacy panel </system/data-privacy>`.
 
 Disable notifications
    By default, actions triggered by schedulers won't send notifications.
@@ -66,7 +88,7 @@ Disable notifications
 Note
    You can use the note field to describe the purpose of the scheduler.
    This is only visible to other admins when they are editing the scheduler.
-   It is *not* a way to add notes to tickets.
+   It is *not* a way to add notes to objects.
 
 Active
    With this setting you can enable/disable the scheduler.
@@ -89,4 +111,4 @@ The scheduler shown in the screenshot would have the following effects:
    process escalated tickets.
 
    Emma will not receive notifications when the scheduler assigns her these
-   tickets, and no note will be added to them.
+   tickets.

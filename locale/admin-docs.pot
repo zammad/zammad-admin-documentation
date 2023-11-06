@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-03 10:17+0100\n"
+"POT-Creation-Date: 2023-11-06 15:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1041,7 +1041,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:96
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0
-#: ../manage/scheduler.rst:69
+#: ../manage/scheduler.rst:91
 #: ../manage/webhook/add.rst:118
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:10
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
@@ -2640,7 +2640,7 @@ msgstr ""
 
 #: ../channels/form.rst:19
 #: ../manage/groups/settings.rst:14
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:38
 #: ../manage/slas/how-do-they-work.rst:26
 #: ../manage/templates.rst:33
 msgid "Name"
@@ -2672,7 +2672,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:112
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:72
+#: ../manage/scheduler.rst:94
 #: ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:127
 #: ../system/integrations/i-doit.rst:43
@@ -2850,7 +2850,7 @@ msgid "This allows you to link e.g. to your data privacy or ToS information."
 msgstr ""
 
 #: ../channels/form.rst:149
-#: ../manage/scheduler.rst:57
+#: ../manage/scheduler.rst:63
 #: ../manage/slas/how-do-they-work.rst:35
 #: ../system/objects/types.rst:268
 msgid "Preview"
@@ -7521,43 +7521,56 @@ msgid "Scheduler"
 msgstr ""
 
 #: ../manage/scheduler.rst:4
-msgid "The scheduler performs time-based automated actions. You can set up your own schedulers, configure at which points in time they should run, set up conditions to determine which tickets they should affect, and then configure the actions that you want to be executed on these tickets."
+msgid "The scheduler performs time-based automated actions. You can set up your own schedulers, configure at which points in time they should run, set up conditions to determine which objects they should affect, and then configure the actions that you want to be executed on these objects."
 msgstr ""
 
 #: ../manage/scheduler.rst:11
-msgid "Schedulers with *Action: Delete* are currently the only way in the Zammad front end to permanently delete tickets. This limitation is intentional as Zammad is designed to be revision-proof. A possible use case for such a scheduler is to delete spam tickets some time after creation (e.g. 30 days)."
+msgid "While it is possible to delegate scheduler permissions to normal agents with the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious agents could use a scheduler to access tickets in restricted groups (by moving them to a non-restricted group) or to arbitrarily delete tickets."
 msgstr ""
 
 #: ../manage/scheduler.rst:18
-msgid "While it is possible to delegate scheduler permissions to normal agents with the ``admin/scheduler`` permission, it is inadvisable to do so. Malicious agents could use a scheduler to access tickets in restricted groups (by moving them to a non-restricted group) or to delete arbitrary tickets."
-msgstr ""
-
-#: ../manage/scheduler.rst:0
 msgid "Schedulers can be used to send periodic reminder emails. Use :doc:`/system/variables` to build highly-customized email templates."
 msgstr ""
 
-#: ../manage/scheduler.rst:0
-msgid "Schedulers only perform ``2000`` tickets per run. This is a security function in case you accidentally miss configure the scheduler."
+#: ../manage/scheduler.rst:21
+msgid "Schedulers only perform ``2000`` objects per run. This is a security function in case you accidentally misconfigured the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:32
+#: ../manage/scheduler.rst:25
 msgid "Add a new scheduler"
 msgstr ""
 
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:27
+msgid "Create a new scheduler job by clicking on the \"New scheduler\" button in the top right corner. Then Zammad presents a dialogue where you can create your own one."
+msgstr ""
+
+#: ../manage/scheduler.rst:30
+msgid "Example:"
+msgstr ""
+
+#: ../manage/scheduler.rst:None
+msgid "Screenshot showing dialog of creating a new scheduler job"
+msgstr ""
+
+#: ../manage/scheduler.rst:38
 msgid "Choose a name for the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:46
+#: ../manage/scheduler.rst:42
 msgid "When should the job run?"
 msgstr ""
 
-#: ../manage/scheduler.rst:40
-msgid "Choose the points in time using :doc:`Zammad's timezone </settings/branding>` when the scheduler should run."
+#: ../manage/scheduler.rst:41
+msgid "Choose the points in time when the scheduler should run. It depends on the configured :doc:`timezone in Zammad </settings/branding>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:46
+#: ../system/core-workflows/how-do-they-work.rst:15
+msgid "Object"
 msgstr ""
 
 #: ../manage/scheduler.rst:45
-msgid "The scheduler tasks are not saving any timezone information. Thus: Scheduler tasks created prior Zammad 5.1 don't require any change."
+msgid "Choose in which object context the scheduler should be executed. Possible objects are: **Organization**, **Ticket** and **User**."
 msgstr ""
 
 #: ../manage/scheduler.rst:52
@@ -7565,75 +7578,91 @@ msgid "Conditions for affected objects"
 msgstr ""
 
 #: ../manage/scheduler.rst:49
-msgid "Determine the ticket attributes (conditions) to limit on which tickets the actions configured in step 5 are to be performed."
+msgid "Determine the object attributes (conditions) to limit on which objects the actions configured in step 5 are to be performed."
 msgstr ""
 
 #: ../manage/scheduler.rst:55
-msgid "This list previews some tickets that your conditions are matching and shows a total of how many tickets are being matched. Use this to double-check the entered conditions."
+msgid "This list previews some objects that your conditions are matching and shows a total of how many objects are being matched. Use this to double-check the entered conditions."
 msgstr ""
 
-#: ../manage/scheduler.rst:60
+#: ../manage/scheduler.rst:61
+msgid "Please be aware that the preview and displayed number is just based on the currently selected condition. It doesn't necessarily represent the objects for execution at the defined time."
+msgstr ""
+
+#: ../manage/scheduler.rst:82
 msgid "Execute changes on objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:60
-msgid "Determine the changes to be made to the ticket."
+#: ../manage/scheduler.rst:66
+msgid "Determine the changes to be made to the object. The possible changes depend on the selected object context."
 msgstr ""
 
-#: ../manage/scheduler.rst:64
-msgid "Disable notifications"
+#: ../manage/scheduler.rst:71
+msgid "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data privacy deletion task* are dangerous and should be used with care! If executed, the objects are deleted and no rollback is possible."
 msgstr ""
 
-#: ../manage/scheduler.rst:63
-msgid "By default, actions triggered by schedulers won't send notifications. You can override this here by setting this to *no*."
-msgstr ""
-
-#: ../manage/scheduler.rst:67
-msgid "You can use the note field to describe the purpose of the scheduler. This is only visible to other admins when they are editing the scheduler. It is *not* a way to add notes to tickets."
-msgstr ""
-
-#: ../manage/scheduler.rst:72
-msgid "With this setting you can enable/disable the scheduler."
-msgstr ""
-
-#: ../manage/scheduler.rst:74
-msgid "The scheduler shown in the screenshot would have the following effects:"
-msgstr ""
-
-#: ../manage/scheduler.rst:76
-msgid "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all tickets which:"
-msgstr ""
-
-#: ../manage/scheduler.rst:79
-msgid "are not closed or merged, and"
+#: ../manage/scheduler.rst:77
+msgid "**Delete immediately** will delete the object at the runtime of the job *without any hint* in the UI."
 msgstr ""
 
 #: ../manage/scheduler.rst:80
-msgid "are assigned to the Sales group, and"
-msgstr ""
-
-#: ../manage/scheduler.rst:81
-msgid "whose escalation was 30 minutes ago"
-msgstr ""
-
-#: ../manage/scheduler.rst:83
-msgid "will be:"
-msgstr ""
-
-#: ../manage/scheduler.rst:85
-msgid "assigned to Emma, and"
+msgid "**Add a data privacy deletion task** will delete the object at the runtime of the job as a data privacy task, which means it is visible in Zammad's :doc:`data privacy panel </system/data-privacy>`."
 msgstr ""
 
 #: ../manage/scheduler.rst:86
+msgid "Disable notifications"
+msgstr ""
+
+#: ../manage/scheduler.rst:85
+msgid "By default, actions triggered by schedulers won't send notifications. You can override this here by setting this to *no*."
+msgstr ""
+
+#: ../manage/scheduler.rst:89
+msgid "You can use the note field to describe the purpose of the scheduler. This is only visible to other admins when they are editing the scheduler. It is *not* a way to add notes to objects."
+msgstr ""
+
+#: ../manage/scheduler.rst:94
+msgid "With this setting you can enable/disable the scheduler."
+msgstr ""
+
+#: ../manage/scheduler.rst:96
+msgid "The scheduler shown in the screenshot would have the following effects:"
+msgstr ""
+
+#: ../manage/scheduler.rst:98
+msgid "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all tickets which:"
+msgstr ""
+
+#: ../manage/scheduler.rst:101
+msgid "are not closed or merged, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:102
+msgid "are assigned to the Sales group, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:103
+msgid "whose escalation was 30 minutes ago"
+msgstr ""
+
+#: ../manage/scheduler.rst:105
+msgid "will be:"
+msgstr ""
+
+#: ../manage/scheduler.rst:107
+msgid "assigned to Emma, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:108
 msgid "have their priority changed to 3 high."
 msgstr ""
 
-#: ../manage/scheduler.rst:88
+#: ../manage/scheduler.rst:110
 msgid "As a supervisor in the Sales group, this enables Emma to intercept and process escalated tickets."
 msgstr ""
 
-#: ../manage/scheduler.rst:91
-msgid "Emma will not receive notifications when the scheduler assigns her these tickets, and no note will be added to them."
+#: ../manage/scheduler.rst:113
+msgid "Emma will not receive notifications when the scheduler assigns her these tickets."
 msgstr ""
 
 #: ../manage/slas/how-do-they-work.rst:4
@@ -13828,10 +13857,6 @@ msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:12
 msgid "Below we're talking about settings that are important and not self-explanatory."
-msgstr ""
-
-#: ../system/core-workflows/how-do-they-work.rst:15
-msgid "Object"
 msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:17
