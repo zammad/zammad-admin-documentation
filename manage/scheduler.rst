@@ -25,13 +25,13 @@ Add a new scheduler
 ===================
 
 Create a new scheduler job by clicking on the "New scheduler" button in the top
-right corner. Then Zammad presents a dialogue where you can create your own one.
+right corner. Then Zammad presents a dialog where you can create your own one.
 
 Example:
 
 .. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation.png
    :alt: Screenshot showing dialog of creating a new scheduler job
-   :scale: 70 %
+   :scale: 70%
    :align: center
 
 Name
@@ -74,11 +74,11 @@ Execute changes on objects
 
    .. hint::
 
-      **Delete immediately** will delete the object at the runtime of the job
+      **Delete immediately** will delete the ticket at the runtime of the job
       *without any hint* in the UI.
 
-      **Add a data privacy deletion task** will delete the object at
-      the runtime of the job as a data privacy task, which means it is visible
+      **Add a data privacy deletion task** will create a data privacy deletion
+      task for the object at the runtime of the job. That means it is visible
       in Zammad's :doc:`data privacy panel </system/data-privacy>`.
 
 Disable notifications

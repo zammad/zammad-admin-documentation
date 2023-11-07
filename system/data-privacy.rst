@@ -150,8 +150,8 @@ How long does Zammad store created tasks?
    :docs:`data privacy </appendix/privacy.html>` chapter.
 
 What about re-assigned tickets? I want to delete them, too.
-   Only tickets assigned to the matching user at the time of the execution of
-   the data privacy deletion task will be deleted. The deletion will not
+   Only tickets assigned to the matching customer at the time of the execution
+   of the data privacy deletion task will be deleted. The deletion will not
    consider historical assignments.
 
 Why are there so many deletion task entries, I didn't create them!

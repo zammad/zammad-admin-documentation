@@ -151,7 +151,7 @@ Existing members *(Scope: Organization)*
 
    .. container:: cfloat-left
 
-      | Does the matching organization has members (or not)?
+      | Does the matching organization have members (or not)?
       | Available matching: *is* or *is not*
 
    .. container:: cfloat-right
@@ -174,7 +174,7 @@ Existing tickets *(Scope: Ticket Customer, Ticket Owner)*
 
    .. container:: cfloat-left
 
-      | Does the matching user has any (open) tickets assigned to them (or not)?
+      | Does the matching user have any (open) tickets assigned to them (or not)?
       | Available matching: *is* or *is not*
 
    .. container:: cfloat-right
