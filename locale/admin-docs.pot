@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-03 10:17+0100\n"
+"POT-Creation-Date: 2023-11-07 10:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1041,7 +1041,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:96
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0
-#: ../manage/scheduler.rst:69
+#: ../manage/scheduler.rst:91
 #: ../manage/webhook/add.rst:118
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:10
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
@@ -1667,56 +1667,56 @@ msgstr ""
 #: ../channels/email/filters.rst:25
 #: ../channels/email/filters.rst:25
 #: ../channels/email/filters.rst:25
-#: ../misc/object-conditions/basics.rst:362
+#: ../misc/object-conditions/basics.rst:410
 msgid "*contains*"
 msgstr ""
 
 #: ../channels/email/filters.rst:26
 #: ../channels/email/filters.rst:26
 #: ../channels/email/filters.rst:26
-#: ../misc/object-conditions/basics.rst:365
+#: ../misc/object-conditions/basics.rst:413
 msgid "*contains not*"
 msgstr ""
 
 #: ../channels/email/filters.rst:27
 #: ../channels/email/filters.rst:27
 #: ../channels/email/filters.rst:27
-#: ../misc/object-conditions/basics.rst:368
+#: ../misc/object-conditions/basics.rst:416
 msgid "*is any of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:28
 #: ../channels/email/filters.rst:28
 #: ../channels/email/filters.rst:28
-#: ../misc/object-conditions/basics.rst:371
+#: ../misc/object-conditions/basics.rst:419
 msgid "*is none of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:29
 #: ../channels/email/filters.rst:29
 #: ../channels/email/filters.rst:29
-#: ../misc/object-conditions/basics.rst:374
+#: ../misc/object-conditions/basics.rst:422
 msgid "*starts with one of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:30
 #: ../channels/email/filters.rst:30
 #: ../channels/email/filters.rst:30
-#: ../misc/object-conditions/basics.rst:377
+#: ../misc/object-conditions/basics.rst:425
 msgid "*ends with one of*"
 msgstr ""
 
 #: ../channels/email/filters.rst:31
 #: ../channels/email/filters.rst:31
 #: ../channels/email/filters.rst:31
-#: ../misc/object-conditions/basics.rst:380
+#: ../misc/object-conditions/basics.rst:428
 msgid "*matches regex*"
 msgstr ""
 
 #: ../channels/email/filters.rst:32
 #: ../channels/email/filters.rst:32
 #: ../channels/email/filters.rst:32
-#: ../misc/object-conditions/basics.rst:383
+#: ../misc/object-conditions/basics.rst:431
 msgid "*does not match regex*"
 msgstr ""
 
@@ -2640,7 +2640,7 @@ msgstr ""
 
 #: ../channels/form.rst:19
 #: ../manage/groups/settings.rst:14
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:38
 #: ../manage/slas/how-do-they-work.rst:26
 #: ../manage/templates.rst:33
 msgid "Name"
@@ -2672,7 +2672,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:112
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:72
+#: ../manage/scheduler.rst:94
 #: ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:127
 #: ../system/integrations/i-doit.rst:43
@@ -2850,7 +2850,7 @@ msgid "This allows you to link e.g. to your data privacy or ToS information."
 msgstr ""
 
 #: ../channels/form.rst:149
-#: ../manage/scheduler.rst:57
+#: ../manage/scheduler.rst:63
 #: ../manage/slas/how-do-they-work.rst:35
 #: ../system/objects/types.rst:268
 msgid "Preview"
@@ -5109,6 +5109,8 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:41
 #: ../manage/groups/settings.rst:62
+#: ../misc/object-conditions/basics.rst:0
+#: ../misc/object-conditions/basics.rst:0
 msgid "yes"
 msgstr ""
 
@@ -5149,6 +5151,8 @@ msgid "The ticket will remain to the last agent who owned it. This is the defaul
 msgstr ""
 
 #: ../manage/groups/settings.rst:65
+#: ../misc/object-conditions/basics.rst:0
+#: ../misc/object-conditions/basics.rst:0
 msgid "no"
 msgstr ""
 
@@ -7521,43 +7525,56 @@ msgid "Scheduler"
 msgstr ""
 
 #: ../manage/scheduler.rst:4
-msgid "The scheduler performs time-based automated actions. You can set up your own schedulers, configure at which points in time they should run, set up conditions to determine which tickets they should affect, and then configure the actions that you want to be executed on these tickets."
+msgid "The scheduler performs time-based automated actions. You can set up your own schedulers, configure at which points in time they should run, set up conditions to determine which objects they should affect, and then configure the actions that you want to be executed on these objects."
 msgstr ""
 
 #: ../manage/scheduler.rst:11
-msgid "Schedulers with *Action: Delete* are currently the only way in the Zammad front end to permanently delete tickets. This limitation is intentional as Zammad is designed to be revision-proof. A possible use case for such a scheduler is to delete spam tickets some time after creation (e.g. 30 days)."
+msgid "While it is possible to delegate scheduler permissions to normal agents with the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious agents could use a scheduler to access tickets in restricted groups (by moving them to a non-restricted group) or to arbitrarily delete tickets."
 msgstr ""
 
 #: ../manage/scheduler.rst:18
-msgid "While it is possible to delegate scheduler permissions to normal agents with the ``admin/scheduler`` permission, it is inadvisable to do so. Malicious agents could use a scheduler to access tickets in restricted groups (by moving them to a non-restricted group) or to delete arbitrary tickets."
-msgstr ""
-
-#: ../manage/scheduler.rst:0
 msgid "Schedulers can be used to send periodic reminder emails. Use :doc:`/system/variables` to build highly-customized email templates."
 msgstr ""
 
-#: ../manage/scheduler.rst:0
-msgid "Schedulers only perform ``2000`` tickets per run. This is a security function in case you accidentally miss configure the scheduler."
+#: ../manage/scheduler.rst:21
+msgid "Schedulers only perform ``2000`` objects per run. This is a security function in case you accidentally misconfigured the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:32
+#: ../manage/scheduler.rst:25
 msgid "Add a new scheduler"
 msgstr ""
 
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:27
+msgid "Create a new scheduler job by clicking on the \"New scheduler\" button in the top right corner. Then Zammad presents a dialog where you can create your own one."
+msgstr ""
+
+#: ../manage/scheduler.rst:30
+msgid "Example:"
+msgstr ""
+
+#: ../manage/scheduler.rst:None
+msgid "Screenshot showing dialog of creating a new scheduler job"
+msgstr ""
+
+#: ../manage/scheduler.rst:38
 msgid "Choose a name for the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:46
+#: ../manage/scheduler.rst:42
 msgid "When should the job run?"
 msgstr ""
 
-#: ../manage/scheduler.rst:40
-msgid "Choose the points in time using :doc:`Zammad's timezone </settings/branding>` when the scheduler should run."
+#: ../manage/scheduler.rst:41
+msgid "Choose the points in time when the scheduler should run. It depends on the configured :doc:`timezone in Zammad </settings/branding>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:46
+#: ../system/core-workflows/how-do-they-work.rst:15
+msgid "Object"
 msgstr ""
 
 #: ../manage/scheduler.rst:45
-msgid "The scheduler tasks are not saving any timezone information. Thus: Scheduler tasks created prior Zammad 5.1 don't require any change."
+msgid "Choose in which object context the scheduler should be executed. Possible objects are: **Organization**, **Ticket** and **User**."
 msgstr ""
 
 #: ../manage/scheduler.rst:52
@@ -7565,75 +7582,91 @@ msgid "Conditions for affected objects"
 msgstr ""
 
 #: ../manage/scheduler.rst:49
-msgid "Determine the ticket attributes (conditions) to limit on which tickets the actions configured in step 5 are to be performed."
+msgid "Determine the object attributes (conditions) to limit on which objects the actions configured in step 5 are to be performed."
 msgstr ""
 
 #: ../manage/scheduler.rst:55
-msgid "This list previews some tickets that your conditions are matching and shows a total of how many tickets are being matched. Use this to double-check the entered conditions."
+msgid "This list previews some objects that your conditions are matching and shows a total of how many objects are being matched. Use this to double-check the entered conditions."
 msgstr ""
 
-#: ../manage/scheduler.rst:60
+#: ../manage/scheduler.rst:61
+msgid "Please be aware that the preview and displayed number is just based on the currently selected condition. It doesn't necessarily represent the objects for execution at the defined time."
+msgstr ""
+
+#: ../manage/scheduler.rst:82
 msgid "Execute changes on objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:60
-msgid "Determine the changes to be made to the ticket."
+#: ../manage/scheduler.rst:66
+msgid "Determine the changes to be made to the object. The possible changes depend on the selected object context."
 msgstr ""
 
-#: ../manage/scheduler.rst:64
-msgid "Disable notifications"
+#: ../manage/scheduler.rst:71
+msgid "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data privacy deletion task* are dangerous and should be used with care! If executed, the objects are deleted and no rollback is possible."
 msgstr ""
 
-#: ../manage/scheduler.rst:63
-msgid "By default, actions triggered by schedulers won't send notifications. You can override this here by setting this to *no*."
-msgstr ""
-
-#: ../manage/scheduler.rst:67
-msgid "You can use the note field to describe the purpose of the scheduler. This is only visible to other admins when they are editing the scheduler. It is *not* a way to add notes to tickets."
-msgstr ""
-
-#: ../manage/scheduler.rst:72
-msgid "With this setting you can enable/disable the scheduler."
-msgstr ""
-
-#: ../manage/scheduler.rst:74
-msgid "The scheduler shown in the screenshot would have the following effects:"
-msgstr ""
-
-#: ../manage/scheduler.rst:76
-msgid "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all tickets which:"
-msgstr ""
-
-#: ../manage/scheduler.rst:79
-msgid "are not closed or merged, and"
+#: ../manage/scheduler.rst:77
+msgid "**Delete immediately** will delete the ticket at the runtime of the job *without any hint* in the UI."
 msgstr ""
 
 #: ../manage/scheduler.rst:80
-msgid "are assigned to the Sales group, and"
-msgstr ""
-
-#: ../manage/scheduler.rst:81
-msgid "whose escalation was 30 minutes ago"
-msgstr ""
-
-#: ../manage/scheduler.rst:83
-msgid "will be:"
-msgstr ""
-
-#: ../manage/scheduler.rst:85
-msgid "assigned to Emma, and"
+msgid "**Add a data privacy deletion task** will create a data privacy deletion task for the object at the runtime of the job. That means it is visible in Zammad's :doc:`data privacy panel </system/data-privacy>`."
 msgstr ""
 
 #: ../manage/scheduler.rst:86
+msgid "Disable notifications"
+msgstr ""
+
+#: ../manage/scheduler.rst:85
+msgid "By default, actions triggered by schedulers won't send notifications. You can override this here by setting this to *no*."
+msgstr ""
+
+#: ../manage/scheduler.rst:89
+msgid "You can use the note field to describe the purpose of the scheduler. This is only visible to other admins when they are editing the scheduler. It is *not* a way to add notes to objects."
+msgstr ""
+
+#: ../manage/scheduler.rst:94
+msgid "With this setting you can enable/disable the scheduler."
+msgstr ""
+
+#: ../manage/scheduler.rst:96
+msgid "The scheduler shown in the screenshot would have the following effects:"
+msgstr ""
+
+#: ../manage/scheduler.rst:98
+msgid "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all tickets which:"
+msgstr ""
+
+#: ../manage/scheduler.rst:101
+msgid "are not closed or merged, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:102
+msgid "are assigned to the Sales group, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:103
+msgid "whose escalation was 30 minutes ago"
+msgstr ""
+
+#: ../manage/scheduler.rst:105
+msgid "will be:"
+msgstr ""
+
+#: ../manage/scheduler.rst:107
+msgid "assigned to Emma, and"
+msgstr ""
+
+#: ../manage/scheduler.rst:108
 msgid "have their priority changed to 3 high."
 msgstr ""
 
-#: ../manage/scheduler.rst:88
+#: ../manage/scheduler.rst:110
 msgid "As a supervisor in the Sales group, this enables Emma to intercept and process escalated tickets."
 msgstr ""
 
-#: ../manage/scheduler.rst:91
-msgid "Emma will not receive notifications when the scheduler assigns her these tickets, and no note will be added to them."
+#: ../manage/scheduler.rst:113
+msgid "Emma will not receive notifications when the scheduler assigns her these tickets."
 msgstr ""
 
 #: ../manage/slas/how-do-they-work.rst:4
@@ -7827,26 +7860,28 @@ msgstr ""
 
 #: ../manage/slas/index.rst:51
 #: ../manage/slas/index.rst:92
-#: ../misc/object-conditions/basics.rst:80
-#: ../misc/object-conditions/basics.rst:96
-#: ../misc/object-conditions/basics.rst:124
-#: ../misc/object-conditions/basics.rst:152
-#: ../misc/object-conditions/basics.rst:166
-#: ../misc/object-conditions/basics.rst:189
-#: ../misc/object-conditions/basics.rst:212
-#: ../misc/object-conditions/basics.rst:238
-#: ../misc/object-conditions/basics.rst:264
-#: ../misc/object-conditions/basics.rst:278
-#: ../misc/object-conditions/basics.rst:299
-#: ../misc/object-conditions/basics.rst:314
-#: ../misc/object-conditions/basics.rst:328
-#: ../misc/object-conditions/basics.rst:347
-#: ../misc/object-conditions/basics.rst:488
-#: ../misc/object-conditions/basics.rst:567
-#: ../misc/object-conditions/basics.rst:590
-#: ../misc/object-conditions/basics.rst:616
+#: ../misc/object-conditions/basics.rst:82
+#: ../misc/object-conditions/basics.rst:98
+#: ../misc/object-conditions/basics.rst:117
+#: ../misc/object-conditions/basics.rst:145
+#: ../misc/object-conditions/basics.rst:168
+#: ../misc/object-conditions/basics.rst:191
+#: ../misc/object-conditions/basics.rst:205
+#: ../misc/object-conditions/basics.rst:233
+#: ../misc/object-conditions/basics.rst:256
+#: ../misc/object-conditions/basics.rst:270
+#: ../misc/object-conditions/basics.rst:293
+#: ../misc/object-conditions/basics.rst:319
+#: ../misc/object-conditions/basics.rst:345
+#: ../misc/object-conditions/basics.rst:359
+#: ../misc/object-conditions/basics.rst:380
+#: ../misc/object-conditions/basics.rst:395
+#: ../misc/object-conditions/basics.rst:536
+#: ../misc/object-conditions/basics.rst:615
 #: ../misc/object-conditions/basics.rst:638
-#: ../misc/object-conditions/basics.rst:669
+#: ../misc/object-conditions/basics.rst:664
+#: ../misc/object-conditions/basics.rst:686
+#: ../misc/object-conditions/basics.rst:717
 #: ../settings/security/third-party.rst:83
 #: ../settings/system/frontend.rst:54
 #: ../system/maintenance.rst:70
@@ -10601,7 +10636,7 @@ msgid "organization attributes"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:28
-msgid "user attribtues"
+msgid "user attributes"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:29
@@ -10640,11 +10675,11 @@ msgstr ""
 msgid "Some options or fields are not exactly attributes but functions Zammad offers for your convenience."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:96
+#: ../misc/object-conditions/basics.rst:98
 msgid "Action *(Scope: Ticket, Ticket article)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:58
+#: ../misc/object-conditions/basics.rst:60
 msgid "This field is only available for Trigger conditions!"
 msgstr ""
 
@@ -10658,17 +10693,19 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:0
 #: ../misc/object-conditions/basics.rst:0
 #: ../misc/object-conditions/basics.rst:0
+#: ../misc/object-conditions/basics.rst:0
+#: ../misc/object-conditions/basics.rst:0
 msgid "Available matching: *is* or *is not*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:67
-#: ../misc/object-conditions/basics.rst:111
-#: ../misc/object-conditions/basics.rst:139
-#: ../misc/object-conditions/basics.rst:176
-#: ../misc/object-conditions/basics.rst:225
-#: ../misc/object-conditions/basics.rst:252
-#: ../misc/object-conditions/basics.rst:603
-#: ../misc/object-conditions/basics.rst:656
+#: ../misc/object-conditions/basics.rst:69
+#: ../misc/object-conditions/basics.rst:132
+#: ../misc/object-conditions/basics.rst:220
+#: ../misc/object-conditions/basics.rst:243
+#: ../misc/object-conditions/basics.rst:307
+#: ../misc/object-conditions/basics.rst:332
+#: ../misc/object-conditions/basics.rst:651
+#: ../misc/object-conditions/basics.rst:704
 msgid "Offered values (multiple choice):"
 msgstr ""
 
@@ -10709,7 +10746,7 @@ msgstr ""
 msgid "How was the ticket article in question touched?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:89
+#: ../misc/object-conditions/basics.rst:91
 msgid "Available value:"
 msgstr ""
 
@@ -10717,11 +10754,31 @@ msgstr ""
 msgid "*The ticket article has been created*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:124
-msgid "Customer *(Scope: Ticket)*"
+#: ../misc/object-conditions/basics.rst:117
+msgid "Calendar *(Scope: Execution time)*"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:101
+msgid "This field is only available for Trigger and Scheduler conditions!"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Was the ticket touched within the calendar defined business time (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Available matching: *is in working time* or *is not in working time*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:111
+msgid "Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to check whether the defined business hours are met. This allows time based events like out of business hours responses."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:145
+msgid "Customer *(Scope: Ticket)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:122
 msgid "This field only affects the ticket customer which is set during ticket creation and can be changed manually by an agent."
 msgstr ""
 
@@ -10734,8 +10791,8 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:0
 #: ../misc/object-conditions/basics.rst:0
 #: ../misc/object-conditions/basics.rst:0
-#: ../misc/object-conditions/basics.rst:425
-#: ../misc/object-conditions/basics.rst:431
+#: ../misc/object-conditions/basics.rst:473
+#: ../misc/object-conditions/basics.rst:479
 #: ../misc/object-conditions/basics.rst:0
 #: ../misc/object-conditions/basics.rst:0
 msgid "Available matching: *is*, *is not* or *has changed*"
@@ -10763,11 +10820,67 @@ msgstr ""
 msgid "not set (not defined)"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:152
+#: ../misc/object-conditions/basics.rst:168
+msgid "Existing members *(Scope: Organization)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:150
+#: ../misc/object-conditions/basics.rst:173
+msgid "This field is only available for Scheduler conditions!"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Does the matching organization have members (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:159
+#: ../misc/object-conditions/basics.rst:182
+#: ../misc/object-conditions/basics.rst:493
+#: ../misc/object-conditions/basics.rst:564
+msgid "Offered values and options:"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*Select yes to select organization with members*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*Select no to select organization without members*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:191
+msgid "Existing tickets *(Scope: Ticket Customer, Ticket Owner)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "Does the matching user have any (open) tickets assigned to them (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*Select yes to select users with assigned (open) tickets*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*Select no to select users without assigned (open) tickets*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:205
+msgid "Group *(Scope: Ticket)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "What ticket group is affected (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:201
+msgid "Offers all configured and active groups in Zammad."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:233
 msgid "Organization *(Scope: Ticket, Customer)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:129
+#: ../misc/object-conditions/basics.rst:210
 msgid "This field only affects the ticket organization which is set during ticket creation and depends on the ticket customers organization."
 msgstr ""
 
@@ -10791,19 +10904,7 @@ msgstr ""
 msgid "*Select one or more organizations*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:166
-msgid "Group *(Scope: Ticket)*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "What ticket group is affected (or not)?"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:162
-msgid "Offers all configured and active groups in Zammad."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:189
+#: ../misc/object-conditions/basics.rst:256
 msgid "Owner *(Scope: Ticket)*"
 msgstr ""
 
@@ -10815,15 +10916,27 @@ msgstr ""
 msgid "*Select one or more owners*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:212
+#: ../misc/object-conditions/basics.rst:270
+msgid "Sender *(Scope: Ticket article)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "What user role does the sender of the article have (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:266
+msgid "Determine the sender of the message: System, Agent or Customer."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:293
 msgid "State *(Scope: Ticket)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:194
+#: ../misc/object-conditions/basics.rst:275
 msgid "Zammad behaves inconsistent in between certain ticket condition dialogues - if you can see ticket states only in parts of the admin menu and not in the front-end, your state *is not visible*."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:198
+#: ../misc/object-conditions/basics.rst:279
 msgid ":docs:`The system documentation </admin/console/working-on-tickets.html#make-new-states-available-to-ui>` has you covered."
 msgstr ""
 
@@ -10831,15 +10944,35 @@ msgstr ""
 msgid "What ticket state is affected (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:208
+#: ../misc/object-conditions/basics.rst:289
 msgid "Offers all configured and *visible* ticket states in Zammad."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:238
+#: ../misc/object-conditions/basics.rst:319
+msgid "Subscribe *(Scope: Ticket)*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:296
+msgid "This affects ticket subscriptions / mentions by and for agents."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "What ticket subscribers (:user-docs:`notifications </advanced/suggested-workflows.html#mentions-the-subscribe-button>`) are affected (or not)?"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*This is the user that caused the trigger run. Only can affect agents.*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:0
+msgid "*Affects one or more specific users that have subscribed to the ticket.*"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:345
 msgid "Tags *(Scope: Ticket)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:215
+#: ../misc/object-conditions/basics.rst:322
 msgid "Additional tags can be present in the ticket without issues."
 msgstr ""
 
@@ -10893,27 +11026,7 @@ msgstr ""
 msgid "*Matches if one specific given tags is not present on the ticket.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:264
-msgid "Subscribe *(Scope: Ticket)*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:241
-msgid "This affects ticket subscriptions / mentions by and for agents."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "What ticket subscribers (:user-docs:`notifications </advanced/suggested-workflows.html#mentions-the-subscribe-button>`) are affected (or not)?"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "*This is the user that caused the trigger run. Only can affect agents.*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "*Affects one or more specific users that have subscribed to the ticket.*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:278
+#: ../misc/object-conditions/basics.rst:359
 msgid "Time Accounting *(Scope: Ticket article)*"
 msgstr ""
 
@@ -10925,19 +11038,19 @@ msgstr ""
 msgid "Available matching: *is set* or *not set*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:274
+#: ../misc/object-conditions/basics.rst:355
 msgid "Allows you to check if time is accounted for an article."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:299
+#: ../misc/object-conditions/basics.rst:380
 msgid "Type *(Scope: Ticket article)*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:281
+#: ../misc/object-conditions/basics.rst:362
 msgid "**If you're unsure what article type you're looking for...**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:283
+#: ../misc/object-conditions/basics.rst:364
 msgid "Click on a message to see detailed information about it."
 msgstr ""
 
@@ -10949,11 +11062,11 @@ msgstr ""
 msgid "What's the articles type (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:295
+#: ../misc/object-conditions/basics.rst:376
 msgid "Offers all available article types of your instance (e.g. *email*)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:314
+#: ../misc/object-conditions/basics.rst:396
 msgid "Visibility *(Scope: Ticket article)*"
 msgstr ""
 
@@ -10961,115 +11074,83 @@ msgstr ""
 msgid "What's the articles visibility (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:309
+#: ../misc/object-conditions/basics.rst:390
 msgid "Allows you to check if the article in question is either internal or public."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:328
-msgid "Sender *(Scope: Ticket article)*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "What user role does the sender of the article have (or not)?"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:324
-msgid "Determine the sender of the message: System, Agent or Customer."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:348
-msgid "Calendar *(Scope: Execution time)*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:331
-msgid "This field is only available for Trigger and Scheduler conditions!"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "Was the ticket touched within the calendar defined business time (or not)?"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:0
-msgid "Available matching: *is in working time* or *is not in working time*"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:341
-msgid "Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to check whether the defined business hours are met. This allows time based events like out of business hours responses."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:351
+#: ../misc/object-conditions/basics.rst:399
 msgid "Text field (input)"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:355
+#: ../misc/object-conditions/basics.rst:403
 msgid "The configured \"Type\" of input fields has no impact on the available options."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:357
+#: ../misc/object-conditions/basics.rst:405
 msgid "Check if any field of type text contains a specific string (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:359
+#: ../misc/object-conditions/basics.rst:407
 msgid "Available operators for matching:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:362
+#: ../misc/object-conditions/basics.rst:410
 msgid "Matches if text contains a specific string."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:365
+#: ../misc/object-conditions/basics.rst:413
 msgid "Matches if text does not contain a specific string."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:368
+#: ../misc/object-conditions/basics.rst:416
 msgid "Matches if text is equal to any of given tokens."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:371
+#: ../misc/object-conditions/basics.rst:419
 msgid "Matches if text is not equal to all of given tokens."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:374
+#: ../misc/object-conditions/basics.rst:422
 msgid "Matches if text starts with one of given tokens."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:377
+#: ../misc/object-conditions/basics.rst:425
 msgid "Matches if text ends with one of given tokens."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:380
+#: ../misc/object-conditions/basics.rst:428
 msgid "Evaluates if text matches provided regular expression."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:383
+#: ../misc/object-conditions/basics.rst:431
 msgid "Evaluates if text does not match provided regular expression."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:386
+#: ../misc/object-conditions/basics.rst:434
 msgid "**Regex support**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:388
+#: ../misc/object-conditions/basics.rst:436
 msgid "*matches regex* and *does not match regex* are supported only in Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket assignment and Core Workflow."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:393
+#: ../misc/object-conditions/basics.rst:441
 msgid "**What about my \"old\" style** ``regex:...`` **filters?**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:395
+#: ../misc/object-conditions/basics.rst:443
 msgid "If you update your Zammad from 6.0 or prior and you have already conditions with *contains* or *contains not* including a regex filter (i.e. ``regex:^(foo|bar)$``), Zammad tries to migrate them to the new *matches regex* and *does not match regex* operators."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:401
+#: ../misc/object-conditions/basics.rst:449
 msgid "**Differences in input fields**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:403
+#: ../misc/object-conditions/basics.rst:451
 msgid "Please note, that the input field for tokens doesn't support the comma as separator (as in the input field for tags). If you use the comma in the token input field, the comma is included in you token."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:407
+#: ../misc/object-conditions/basics.rst:455
 msgid "**Example**:"
 msgstr ""
 
@@ -11077,42 +11158,42 @@ msgstr ""
 msgid "Example of comma usage in token input field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:412
+#: ../misc/object-conditions/basics.rst:460
 msgid "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting in one token)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:416
+#: ../misc/object-conditions/basics.rst:464
 #: ../system/objects/types.rst:142
 msgid "Textarea field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:418
+#: ../misc/object-conditions/basics.rst:466
 msgid "Check if any field of type textarea contains a specific string (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:419
+#: ../misc/object-conditions/basics.rst:467
 msgid "Available matching: *contains*, *contains not* or *has changed*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:422
+#: ../misc/object-conditions/basics.rst:470
 #: ../system/objects/types.rst:45
 msgid "Boolean field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:424
+#: ../misc/object-conditions/basics.rst:472
 msgid "Check if any field of type boolean is true (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:428
+#: ../misc/object-conditions/basics.rst:476
 #: ../system/objects/types.rst:86
 msgid "Integer field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:430
+#: ../misc/object-conditions/basics.rst:478
 msgid "Check if any field of type integer has a specific value (or not)?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:434
+#: ../misc/object-conditions/basics.rst:482
 #: ../system/objects/types.rst:55
 msgid "Date field"
 msgstr ""
@@ -11198,11 +11279,6 @@ msgstr ""
 msgid "*has changed*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:445
-#: ../misc/object-conditions/basics.rst:516
-msgid "Offered values and options:"
-msgstr ""
-
 #: ../misc/object-conditions/basics.rst:0
 msgid "*If the date field's value is before the configured date, the condition will be met.*"
 msgstr ""
@@ -11251,15 +11327,15 @@ msgstr ""
 msgid "*The field has been changed during a ticket update.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:490
+#: ../misc/object-conditions/basics.rst:538
 msgid "To help you understand the time conditions of Zammad better, below diagram might also be helpful to you."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:496
+#: ../misc/object-conditions/basics.rst:544
 msgid "Date & Time field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:500
+#: ../misc/object-conditions/basics.rst:548
 msgid "An example for this field type are all default fields handling updated at, created at and closed at timings."
 msgstr ""
 
@@ -11267,12 +11343,12 @@ msgstr ""
 msgid "Check if the given date & time is past or relatively past a specific period?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:511
+#: ../misc/object-conditions/basics.rst:559
 #: ../misc/object-conditions/basics.rst:0
 msgid "*has reached*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:512
+#: ../misc/object-conditions/basics.rst:560
 #: ../misc/object-conditions/basics.rst:0
 msgid "*has reached warning*"
 msgstr ""
@@ -11325,11 +11401,11 @@ msgstr ""
 msgid "*The time set in this field will be reached in less than 15 minutes*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:569
+#: ../misc/object-conditions/basics.rst:617
 msgid "To help you understand the time conditions of Zammad better, below diagram might also be helpful to you. Below is a carbon copy of the date variant and applies exactly the same just you having hours and minutes on top to use."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:576
+#: ../misc/object-conditions/basics.rst:624
 #: ../system/objects/types.rst:112
 msgid "Single selection field"
 msgstr ""
@@ -11339,12 +11415,12 @@ msgstr ""
 msgid "Checks selected field values to match actual attribute value (or not)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:585
 #: ../misc/object-conditions/basics.rst:633
+#: ../misc/object-conditions/basics.rst:681
 msgid "Allows you to select one or more values of the attribute in question. Selecting more than one value in the condition will act like an \"OR\" clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:593
+#: ../misc/object-conditions/basics.rst:641
 #: ../system/objects/types.rst:99
 msgid "Multiple selection field"
 msgstr ""
@@ -11374,17 +11450,17 @@ msgstr ""
 msgid "*Matches if one specific given field value is not selected.*"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:619
+#: ../misc/object-conditions/basics.rst:667
 #: ../system/objects/types.rst:174
 msgid "Single tree selection field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:623
-#: ../misc/object-conditions/basics.rst:645
+#: ../misc/object-conditions/basics.rst:671
+#: ../misc/object-conditions/basics.rst:693
 msgid "This attribute type technically allows several layers of values. You cannot match a parent layer to match all of it's childs."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:641
+#: ../misc/object-conditions/basics.rst:689
 #: ../system/objects/types.rst:183
 msgid "Multiple tree selection field"
 msgstr ""
@@ -13830,10 +13906,6 @@ msgstr ""
 msgid "Below we're talking about settings that are important and not self-explanatory."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:15
-msgid "Object"
-msgstr ""
-
 #: ../system/core-workflows/how-do-they-work.rst:17
 msgid "Choose the object context you want to run the workflow in. This will decide on your available conditions and actions."
 msgstr ""
@@ -14339,75 +14411,79 @@ msgstr ""
 msgid "For compliance with GDPR and other data privacy laws, you may wish to **permanently delete users from the system**, along with **all of their associated tickets**."
 msgstr ""
 
-#: ../system/data-privacy.rst:12
-msgid "User deletion dialog in the Data Privacy panel"
-msgstr ""
-
-#: ../system/data-privacy.rst:12
-msgid "The user deletion dialog lists some of the tickets that will be removed from the system along with the user."
+#: ../system/data-privacy.rst:8
+msgid "You can even create automated deletion tasks for tickets and users based on custom conditions via :doc:`scheduler </manage/scheduler>`!"
 msgstr ""
 
 #: ../system/data-privacy.rst:15
-msgid "🤔 **Huh? I don’t see the Data Privacy panel...**"
+msgid "User deletion dialog in the Data Privacy panel"
 msgstr ""
 
-#: ../system/data-privacy.rst:17
-msgid "Access to this panel requires ``admin.data_privacy`` permissions (introduced in Zammad 3.5)."
+#: ../system/data-privacy.rst:15
+msgid "The user deletion dialog lists some of the tickets that will be removed from the system along with the user."
+msgstr ""
+
+#: ../system/data-privacy.rst:18
+msgid "🤔 **Huh? I don't see the Data Privacy panel...**"
 msgstr ""
 
 #: ../system/data-privacy.rst:20
+msgid "Access to this panel requires ``admin.data_privacy`` permissions (introduced in Zammad 3.5)."
+msgstr ""
+
+#: ../system/data-privacy.rst:23
 msgid "On older systems that have not been updated yet, customers can also be :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`."
 msgstr ""
 
-#: ../system/data-privacy.rst:24
-msgid "Deleting Users"
+#: ../system/data-privacy.rst:27
+msgid "Deleting Users via GUI"
 msgstr ""
 
-#: ../system/data-privacy.rst:26
-msgid "💣 **All deletions are FINAL!**"
+#: ../system/data-privacy.rst:29
+msgid "🔥 **All deletions are FINAL!**"
 msgstr ""
 
-#: ../system/data-privacy.rst:28
+#: ../system/data-privacy.rst:31
 msgid "Once you click “Delete”, the action cannot be cancelled or undone."
 msgstr ""
 
-#: ../system/data-privacy.rst:30
+#: ../system/data-privacy.rst:33
 msgid "Any time you delete a user, all their tickets will be deleted, as well. It is not possible to delete a user and still keep their tickets."
 msgstr ""
 
-#: ../system/data-privacy.rst:33
-msgid "🙅 **The following records cannot be deleted:**"
+#: ../system/data-privacy.rst:36
+msgid "**The following records cannot be deleted:**"
 msgstr ""
 
-#: ../system/data-privacy.rst:35
+#: ../system/data-privacy.rst:38
 msgid "your own account"
 msgstr ""
 
-#: ../system/data-privacy.rst:36
-msgid "the system’s last remaining administrator account"
+#: ../system/data-privacy.rst:39
+msgid "the system's last remaining administrator account"
 msgstr ""
 
-#: ../system/data-privacy.rst:39
+#: ../system/data-privacy.rst:42
 msgid "Step 1: Find a user / confirm deletion"
 msgstr ""
 
-#: ../system/data-privacy.rst:41
+#: ../system/data-privacy.rst:44
 msgid "There are three ways to access the user deletion dialog:"
 msgstr ""
 
-#: ../system/data-privacy.rst:43
-msgid "**from the user’s profile**"
+#: ../system/data-privacy.rst:46
+msgid "**from the user's profile**"
 msgstr ""
 
 #: ../system/data-privacy.rst:0
 msgid "Accessing the user deletion dialog in a user profile"
 msgstr ""
 
-#: ../system/data-privacy.rst:49
+#: ../system/data-privacy.rst:52
 msgid "Click **Action > Delete**."
 msgstr ""
 
-#: ../system/data-privacy.rst:51
+#: ../system/data-privacy.rst:54
 msgid "**in the “Manage > Users” Admin Panel**"
 msgstr ""
 
@@ -14415,12 +14491,12 @@ msgstr ""
 msgid "Accessing the user deletion dialog under “Users” in the Admin Panel"
 msgstr ""
 
-#: ../system/data-privacy.rst:57
+#: ../system/data-privacy.rst:60
 msgid "Use the **⋮ Actions** menu for the target user."
 msgstr ""
 
-#: ../system/data-privacy.rst:59
-#: ../system/data-privacy.rst:102
+#: ../system/data-privacy.rst:62
+#: ../system/data-privacy.rst:109
 msgid "**in the “System > Data Privacy” Admin Panel**"
 msgstr ""
 
@@ -14428,15 +14504,15 @@ msgstr ""
 msgid "Accessing the user deletion dialog under “Data Privacy” in the Admin Panel"
 msgstr ""
 
-#: ../system/data-privacy.rst:65
+#: ../system/data-privacy.rst:68
 msgid "Use the **New Deletion Task** button. Search for users by name or email address."
 msgstr ""
 
-#: ../system/data-privacy.rst:67
+#: ../system/data-privacy.rst:71
 msgid "👥 **You can delete organizations, too.**"
 msgstr ""
 
-#: ../system/data-privacy.rst:69
+#: ../system/data-privacy.rst:73
 msgid "If the customer you are deleting is the last user in their organization, a **Delete Organization?** option will be displayed in the user deletion dialog:"
 msgstr ""
 
@@ -14444,19 +14520,19 @@ msgstr ""
 msgid "Deleting an organization via the user deletion dialog"
 msgstr ""
 
-#: ../system/data-privacy.rst:77
+#: ../system/data-privacy.rst:82
 msgid "(If this option does not appear, make sure there are no pending deletion tasks for other customers from this organization.)"
 msgstr ""
 
-#: ../system/data-privacy.rst:82
+#: ../system/data-privacy.rst:87
 msgid "Step 2: Monitor deletion job status"
 msgstr ""
 
-#: ../system/data-privacy.rst:84
+#: ../system/data-privacy.rst:89
 msgid "It may take up to ten minutes for the system to process your request, so for each user you delete, a “deletion task” is added to the queue. You can keep an eye on the status of these tasks in two places:"
 msgstr ""
 
-#: ../system/data-privacy.rst:96
+#: ../system/data-privacy.rst:103
 msgid "**in the Activity Stream**"
 msgstr ""
 
@@ -14464,11 +14540,11 @@ msgstr ""
 msgid "Activity Stream showing data privacy tasks"
 msgstr ""
 
-#: ../system/data-privacy.rst:94
-msgid "For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it’s complete."
+#: ../system/data-privacy.rst:99
+msgid "For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it's complete."
 msgstr ""
 
-#: ../system/data-privacy.rst:96
+#: ../system/data-privacy.rst:102
 msgid "These notifications are only visible to users with ``admin.data_privacy`` permissions."
 msgstr ""
 
@@ -14476,56 +14552,72 @@ msgstr ""
 msgid "The task list within Data Privacy shows removals being in progress and completed."
 msgstr ""
 
-#: ../system/data-privacy.rst:105
+#: ../system/data-privacy.rst:112
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: ../system/data-privacy.rst:119
-msgid "🤓 What happens if I receive an email from a deleted customer?"
+#: ../system/data-privacy.rst:126
+msgid "What happens if I receive an email from a deleted customer?"
 msgstr ""
 
-#: ../system/data-privacy.rst:108
+#: ../system/data-privacy.rst:115
 msgid "Zammad automatically creates a new user account whenever it receives a message from an unrecognized email address, including deleted users. Deleted users are never blocked from creating new tickets."
 msgstr ""
 
-#: ../system/data-privacy.rst:113
+#: ../system/data-privacy.rst:120
 msgid "In the unlikely event that you receive an email between the time that you click “Delete” and the system has processed your request, **that ticket will be automatically removed**. The ticket number for the lost ticket will be displayed in the Admin Panel under **System > Data Privacy > Completed Tasks > Delete User > Deleted Tickets**."
 msgstr ""
 
-#: ../system/data-privacy.rst:128
-msgid "🤔 What about user information stored in internal notes or other messages?"
+#: ../system/data-privacy.rst:135
+msgid "What about user information stored in internal notes or other messages?"
 msgstr ""
 
-#: ../system/data-privacy.rst:122
+#: ../system/data-privacy.rst:129
 msgid "The deletion process removes **user accounts and associated tickets only**."
 msgstr ""
 
-#: ../system/data-privacy.rst:124
-msgid "If there are references to a user’s name or information stored elsewhere in the system, that information **will not be removed** because there is no way to safely determine if it actually describes the user in question."
-msgstr ""
-
-#: ../system/data-privacy.rst:135
-msgid "😵 I deleted an user and can still see a message they sent!"
-msgstr ""
-
 #: ../system/data-privacy.rst:131
-msgid "Tickets can only belong to a single customer, but may contain messages (“articles”) from many people. If you deleted a user but you’re still seeing articles they sent, don’t worry—those articles are for a ticket that belongs to someone else, and no longer contain any reference to the sender’s identity."
+msgid "If there are references to a user's name or information stored elsewhere in the system, that information **will not be removed** because there is no way to safely determine if it actually describes the user in question."
 msgstr ""
 
-#: ../system/data-privacy.rst:139
-msgid "🚮 I removed a customer, now my reporting is off!"
+#: ../system/data-privacy.rst:142
+msgid "I deleted an user and can still see a message they sent!"
 msgstr ""
 
 #: ../system/data-privacy.rst:138
+msgid "Tickets can only belong to a single customer, but may contain messages (“articles”) from many people. If you deleted a user but you're still seeing articles they sent, don't worry—those articles are for a ticket that belongs to someone else, and no longer contain any reference to the sender's identity."
+msgstr ""
+
+#: ../system/data-privacy.rst:146
+msgid "I removed a customer, now my reporting is off!"
+msgstr ""
+
+#: ../system/data-privacy.rst:145
 msgid "When removing users and their tickets, all references are removed. This also affects e.g. Reporting - these information are lost."
 msgstr ""
 
-#: ../system/data-privacy.rst:142
-msgid "🤔 How long does Zammad store created tasks?"
+#: ../system/data-privacy.rst:150
+msgid "How long does Zammad store created tasks?"
 msgstr ""
 
-#: ../system/data-privacy.rst:142
+#: ../system/data-privacy.rst:149
 msgid "Please see the on-premise data section of the :docs:`data privacy </appendix/privacy.html>` chapter."
+msgstr ""
+
+#: ../system/data-privacy.rst:155
+msgid "What about re-assigned tickets? I want to delete them, too."
+msgstr ""
+
+#: ../system/data-privacy.rst:153
+msgid "Only tickets assigned to the matching customer at the time of the execution of the data privacy deletion task will be deleted. The deletion will not consider historical assignments."
+msgstr ""
+
+#: ../system/data-privacy.rst:159
+msgid "Why are there so many deletion task entries, I didn't create them!"
+msgstr ""
+
+#: ../system/data-privacy.rst:158
+msgid "The deletion tasks can come from the :doc:`/manage/scheduler` as well. Namely the action *\"Add a data privacy deletion task\"* is causing the entries."
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:2

@@ -25,7 +25,7 @@ Please note that ticket conditions do not support the following:
 
          * ticket articles attributes
          * organization attributes
-         * user attribtues
+         * user attributes
          * group attributes
 
 How they work
@@ -53,6 +53,8 @@ Special fields
 
 Some options or fields are not exactly attributes but functions Zammad offers
 for your convenience.
+
+.. alphabetical sorting
 
 Action *(Scope: Ticket, Ticket article)*
    .. hint:: This field is only available for Trigger conditions!
@@ -95,6 +97,25 @@ Action *(Scope: Ticket, Ticket article)*
 
       X
 
+Calendar *(Scope: Execution time)*
+   .. hint:: This field is only available for Trigger and Scheduler conditions!
+
+   .. container:: cfloat-left
+
+      | Was the ticket touched within the calendar defined business time
+        (or not)?
+      | Available matching: *is in working time* or *is not in working time*
+
+   .. container:: cfloat-right
+
+      Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to
+      check whether the defined business hours are met. This allows time based
+      events like out of business hours responses.
+
+   .. container:: cfloat-clear
+
+      X
+
 Customer *(Scope: Ticket)*
    .. hint::
 
@@ -118,6 +139,66 @@ Customer *(Scope: Ticket)*
       * | specific user
         | *Select one or more customers*
       * | not set (not defined)
+
+   .. container:: cfloat-clear
+
+      X
+
+Existing members *(Scope: Organization)*
+   .. hint::
+
+      This field is only available for Scheduler conditions!
+
+   .. container:: cfloat-left
+
+      | Does the matching organization have members (or not)?
+      | Available matching: *is* or *is not*
+
+   .. container:: cfloat-right
+
+      Offered values and options:
+
+      * | yes
+        | *Select yes to select organization with members*
+      * | no
+        | *Select no to select organization without members*
+
+   .. container:: cfloat-clear
+
+      X
+
+Existing tickets *(Scope: Ticket Customer, Ticket Owner)*
+   .. hint::
+
+      This field is only available for Scheduler conditions!
+
+   .. container:: cfloat-left
+
+      | Does the matching user have any (open) tickets assigned to them (or not)?
+      | Available matching: *is* or *is not*
+
+   .. container:: cfloat-right
+
+      Offered values and options:
+
+      * | yes
+        | *Select yes to select users with assigned (open) tickets*
+      * | no
+        | *Select no to select users without assigned (open) tickets*
+
+   .. container:: cfloat-clear
+
+      X
+
+Group *(Scope: Ticket)*
+   .. container:: cfloat-left
+
+      | What ticket group is affected (or not)?
+      | Available matching: *is*, *is not* or *has changed*
+
+   .. container:: cfloat-right
+
+      Offers all configured and active groups in Zammad.
 
    .. container:: cfloat-clear
 
@@ -151,20 +232,6 @@ Organization *(Scope: Ticket, Customer)*
 
       X
 
-Group *(Scope: Ticket)*
-   .. container:: cfloat-left
-
-      | What ticket group is affected (or not)?
-      | Available matching: *is*, *is not* or *has changed*
-
-   .. container:: cfloat-right
-
-      Offers all configured and active groups in Zammad.
-
-   .. container:: cfloat-clear
-
-      X
-
 Owner *(Scope: Ticket)*
    .. container:: cfloat-left
 
@@ -183,6 +250,20 @@ Owner *(Scope: Ticket)*
       * | specific user
         | *Select one or more owners*
       * | not set (not defined)
+
+   .. container:: cfloat-clear
+
+      X
+
+Sender *(Scope: Ticket article)*
+   .. container:: cfloat-left
+
+      | What user role does the sender of the article have (or not)?
+      | Available matching: *is* or *is not*
+
+   .. container:: cfloat-right
+
+      Determine the sender of the message: System, Agent or Customer.
 
    .. container:: cfloat-clear
 
@@ -211,32 +292,6 @@ State *(Scope: Ticket)*
 
       X
 
-Tags *(Scope: Ticket)*
-   .. hint:: Additional tags can be present in the ticket without issues.
-
-   .. container:: cfloat-left
-
-      | What ticket tags are affected (or not)?
-      | Available matching: *contains all*, *contains one*,
-        *contains all not* or *contains one not*
-
-   .. container:: cfloat-right
-
-      Offered values (multiple choice):
-
-      * | contains all
-        | *Matches if all given tags are present on the ticket.*
-      * | contains one
-        | *Matches if one specific given tags is present on the ticket.*
-      * | contains all not
-        | *Matches if all given tags are not present on the ticket.*
-      * | contains one not
-        | *Matches if one specific given tags is not present on the ticket.*
-
-   .. container:: cfloat-clear
-
-      X
-
 Subscribe *(Scope: Ticket)*
    .. hint:: This affects ticket subscriptions / mentions by and for agents.
 
@@ -258,6 +313,32 @@ Subscribe *(Scope: Ticket)*
         | *Affects one or more specific users that have subscribed to the
           ticket.*
       * | not set (not defined)
+
+   .. container:: cfloat-clear
+
+      X
+
+Tags *(Scope: Ticket)*
+   .. hint:: Additional tags can be present in the ticket without issues.
+
+   .. container:: cfloat-left
+
+      | What ticket tags are affected (or not)?
+      | Available matching: *contains all*, *contains one*,
+        *contains all not* or *contains one not*
+
+   .. container:: cfloat-right
+
+      Offered values (multiple choice):
+
+      * | contains all
+        | *Matches if all given tags are present on the ticket.*
+      * | contains one
+        | *Matches if one specific given tags is present on the ticket.*
+      * | contains all not
+        | *Matches if all given tags are not present on the ticket.*
+      * | contains one not
+        | *Matches if one specific given tags is not present on the ticket.*
 
    .. container:: cfloat-clear
 
@@ -308,39 +389,6 @@ Visibility *(Scope: Ticket article)*
 
       Allows you to check if the article in question is either internal or
       public.
-
-   .. container:: cfloat-clear
-
-      X
-
-Sender *(Scope: Ticket article)*
-   .. container:: cfloat-left
-
-      | What user role does the sender of the article have (or not)?
-      | Available matching: *is* or *is not*
-
-   .. container:: cfloat-right
-
-      Determine the sender of the message: System, Agent or Customer.
-
-   .. container:: cfloat-clear
-
-      X
-
-Calendar *(Scope: Execution time)*
-   .. hint:: This field is only available for Trigger and Scheduler conditions!
-
-   .. container:: cfloat-left
-
-      | Was the ticket touched within the calendar defined business time
-        (or not)?
-      | Available matching: *is in working time* or *is not in working time*
-
-   .. container:: cfloat-right
-
-      Allows selection of a pre-defined :doc:`calendars </manage/calendars>` to
-      check whether the defined business hours are met. This allows time based
-      events like out of business hours responses.
 
    .. container:: cfloat-clear
 
