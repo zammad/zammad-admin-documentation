@@ -53,7 +53,9 @@ Simple Storage (S3)
        inconsistencies.
 
    3. Set the "Storage Mechanism" in Zammad to ``Simple Storage (S3)`` in
-      Settings > System > Storage.
+      Settings > System > Storage and click on "Submit". After that, Zammad
+      checks your configuration and the connection to the service and will raise
+      an error message if something is wrong.
    4. Restart Zammad that the changes take effect
 
    A very simple storage configuration could look like this:
