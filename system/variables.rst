@@ -8,8 +8,8 @@ Variables
    `Community <https://community.zammad.org>`_.
 
 Variables can be called by typing ``::`` (just like text modules in the
-frontend), as long as you're in a supported text field within the Backend.
-Zammad will show display all variables being available within this context and
+frontend), as long as you're in a supported text field within the backend.
+Zammad will display all variables being available within this context and
 replace it to the variable as soon as you selected an entry.
 
 .. hint:: You have an empty field which you referenced and it appears as ``-``?
@@ -53,3 +53,17 @@ The best example for such a situation would be a ``select`` or ``tree-select``
 field which will by default return the key value, not it's display name.
 For this, just extend your variable with ``.value``. This will result in
 ``#{ticket.select.value}``.
+
+Using translated variables
+--------------------------
+
+If you want to use a translated variable in triggers or
+schedulers, you can extend the placeholder like this:
+``#{t(ticket.state.name)}``. The ``t`` tells Zammad to search for fitting
+translated strings. The used output language is based on the system language of
+Zammad which you can set in the admin panel under :doc:`/settings/branding`.
+
+A possible use-case: you want to send your customers updates on tickets
+via trigger or scheduler which should include the state of the ticket. Using the
+default ``#{ticket.state.name}`` (without the translation flag ``t()``) would
+lead to the output of the original (english) name of the state.
