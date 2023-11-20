@@ -57,7 +57,7 @@ For this, just extend your variable with ``.value``. This will result in
 Using translated variables
 --------------------------
 
-If you want to use a translated variable in text modules, triggers or
+If you want to use a translated variable in triggers or
 schedulers, you can extend the placeholder like this:
 ``#{t(ticket.state.name)}``. The ``t`` tells Zammad to search for fitting
 translated strings. The used output language is based on the system language of
