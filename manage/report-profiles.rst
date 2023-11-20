@@ -6,13 +6,13 @@ Report Profiles and Reporting
 
 The reporting is useful to view statistics, get an overview of the number of
 tickets (e.g. tickets of a specific customer) and to download ticket data from
-Zammad. In the following section you will find a description of how to create
-and change report profiles. In another section you can find information
+Zammad. In the following section you will find an instruction on how to create
+and change report profiles. In a separate section you can find information
 on basic usage of the reporting UI itself. If the reporting options in Zammad
-are not enough for you, we added a section about external reporting tools, you
+are not enough for you, we added a section about external reporting tools you
 can use.
 
-To create and edit report profiles, ``admin.report_profile`` permissions are
+To create and edit report profiles, ``admin.report_profile`` permission is
 required. To use the reporting itself, ``report`` permission is required.
 
 .. warning:: ⚠️ Be aware that granting users the ``reporting`` permission may
@@ -37,10 +37,10 @@ The edit dialog looks like this:
     :alt: Screenshot shows creation of report profile
 
 This example shows the statistics of all tickets of the organization
-"Awesome Customer" that were created in the last month.
+"Awesome Customer Inc." that were created in the last month.
 
 All configured report profiles are displayed in the reporting area and you can
-switch between them with one click. Have a look in the next section to learn
+switch between them with one click. Have a look at the next section to learn
 some basics about the usage of the reporting.
 
 Using the reporting
@@ -65,14 +65,14 @@ below:
    types based on your channels.
 2. **Profile switcher**: here you can easily switch between the different
    profiles, which were created in the admin panel under "Report Profiles".
-   The shown tickets and numbers are always limited to the current profile,
+   The shown tickets and numbers are always limited to the current profile
    you have selected here.
-3. **Time intervall/period switcher** and **graph** area: here you can define
-   the intervall you want to see (e.g. "Month") as well as the time period (e.g.
+3. **Time interval/period switcher** and **graph** area: here you can define
+   the interval you want to see (e.g. "Month") as well as the time period (e.g.
    "Jul").
 4. **Preview and download** section: here you can find a preview of tickets and
    a download button based on the report profile and your filtering. The
-   download feature provides the the tickets in a ``.xlsx`` spreadsheet.
+   download feature provides the tickets in a ``.xlsx`` spreadsheet.
 
    .. note:: The ticket preview and download button are only showing up if you
     selected a filter based on "Ticket Count" (see 1).
