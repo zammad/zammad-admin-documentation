@@ -104,7 +104,7 @@ The ones that aren't are described below.
    .. note::
 
       Domain based assignment only works for *newly created* users and has no
-      effect on existing users. 
+      effect on existing users.
 
 🌐 Domain
    Add the email domain of the organization with this option. It's being used
@@ -134,9 +134,9 @@ The ones that aren't are described below.
    Notes are visible to all staff members, **including agents**.
 
    .. hint:: 😵 **Are you using the Note field
-      to keep track of your own “custom” organization attributes?**
+      to keep track of your own "custom" organization attributes?**
 
-      Wish you could add your own fields to the New/Edit Organization dialog?
+      Wish you could add your own fields Organizations?
 
       You can! To learn more, see :doc:`/system/objects`.
 
@@ -146,7 +146,7 @@ The ones that aren't are described below.
 
    1. There is no way to restore a deleted organization;
       inactive organizations can be reactivated at any time.
-      
+
    2. Inactive organizations still appear in search results:
 
       .. figure:: /images/manage/organizations/search-results-showing-organizations.png
@@ -154,4 +154,4 @@ The ones that aren't are described below.
          :align: center
 
          A slashed-out 🏢 icon indicates an inactive organization.
-         In other cases, inactive organizations are greyed out.
+         In other cases, inactive organizations are grayed out.

@@ -1,5 +1,5 @@
-Learn by example
-----------------
+SLA example
+-----------
 
 This page contains some possible example configurations for a SLA we could think
 of. SLAs in general are very flexible and powerful, below doesn't have to be
@@ -7,7 +7,7 @@ your standard!
 
 .. hint::
 
-   If they don’t make sense to you, don’t worry—just skip ahead to
+   If they don't make sense to you, don't worry - just skip ahead to
    :doc:`how-do-they-work` to learn about all the options in detail,
    then come back here to see them in action.
 
@@ -18,7 +18,7 @@ them in all samples.
       * Sales
       * Support
       * 2nd Level
-   * **Attribtues**
+   * **Attributes**
       * User / VIP (default, Boolean)
       * Organization / Support-Contract
         (Single selection field, ``None`` as default value)

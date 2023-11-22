@@ -16,11 +16,11 @@ poll the Zammad server every *n* minutes.
    Webhooks are available for :doc:`/manage/trigger` and
    :doc:`/manage/scheduler`.
 
-How does it work?
------------------
+How do Webhooks work
+--------------------
 
 Under the hood, Zammad sends a POST request to a third-party URL
-(“API endpoint”) you specify in the New Webhook dialog. The application server
+("API endpoint") you specify in the New Webhook dialog. The application server
 behind this URL/endpoint must be configured to receive messages from Zammad and
 handle the provided payload accordingly.
 
@@ -31,7 +31,7 @@ following JSON data about new/updated tickets:
 
 * ticket attributes/metadata
 * *all* associated articles
-* associated users (*e.g.* article senders, owners, etc.)
+* associated users (e.g. article senders, owners, etc.)
 * associated user roles
 * associated user organizations (if applicable)
 * associated groups

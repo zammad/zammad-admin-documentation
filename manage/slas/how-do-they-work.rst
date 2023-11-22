@@ -1,5 +1,5 @@
-How do they work?
------------------
+How do SLAs work
+----------------
 
 You can define several independent SLAs, however, ensure to have no overlapping
 SLAs as their calculations may not work as you intended them originally.

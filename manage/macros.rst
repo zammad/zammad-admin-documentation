@@ -1,7 +1,7 @@
 Macros
 ======
 
-Macros are **🖱️ one-click shortcuts** for applying changes to a ticket.
+Macros are **🖱️ one-click actions** for applying changes to a ticket.
 
 If you find yourself making the same changes to lots of tickets
 (*e.g.,* close-and-tag-as-spam or reassign-to-another-group),
@@ -31,7 +31,7 @@ You can create or edit macros on the Macros page of the admin panel:
 .. figure:: /images/manage/macros/macro-overview.png
    :align: center
    :width: 80%
-   :alt: Screenshot of “Macros” page in admin panel
+   :alt: Screenshot of "Macros" page in admin panel
 
 .. toctree::
    :maxdepth: 1
