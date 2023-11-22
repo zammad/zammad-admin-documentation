@@ -1,8 +1,7 @@
 Organizations
 =============
 
-Depending on your organization’s IT capabilities,
-organizations can be managed individually or in bulk.
+Organizations can be managed individually via UI, via CSV import or the API.
 
 .. figure:: /images/manage/organizations/general-view-of-a-busy-organization.png
    :alt: Creating and editing users directly in the Admin Panel
@@ -49,7 +48,7 @@ Reference Guide: Organization Details
 -------------------------------------
 
 Most of the attributes you can set on organizations are self-explanatory.
-The ones that aren’t are described below.
+The ones that aren't are described below.
 
 .. figure:: /images/manage/organizations/administrative-changing-organization-settings.png
    :alt: The edit organization dialog, showing the various organization detail fields
@@ -58,7 +57,7 @@ The ones that aren’t are described below.
 
    User details can be set in the **New/Edit Organization** dialog.
 
-.. note:: 🕵️ **Admins aren’t the only ones who can change these settings.**
+.. note:: 🕵️ **Admins aren't the only ones who can change these settings.**
 
    In most cases, agents can, too (using the
    :user-docs:`ticket pane </extras/organizations.html>` or organization detail
@@ -125,7 +124,7 @@ The ones that aren’t are described below.
    and :doc:`/manage/overviews` just for VIPs.
 
    .. figure:: /images/manage/organizations/vip-org-in-a-ticket.png
-      :alt: Ticket view showing a VIP organization’s avatar with a crown on it
+      :alt: Ticket view showing a VIP organization's avatar with a crown on it
       :align: center
       :width: 90%
 
@@ -143,7 +142,7 @@ The ones that aren’t are described below.
 
 ▶️ Active
    Disabling this flag is a soft alternative to deleting an organization.
-   So what’s the difference?
+   So what's the difference?
 
    1. There is no way to restore a deleted organization;
       inactive organizations can be reactivated at any time.

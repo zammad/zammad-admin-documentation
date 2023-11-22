@@ -59,8 +59,8 @@ Assign follow-ups
    nobody.
 
    yes
-      The ticket will remain to the last agent who owned it.
-      This is the default value
+      The ticket will remain with the last agent who owned it.
+      This is the default value.
    no
       The owner assignment of the ticket will be removed.
 
