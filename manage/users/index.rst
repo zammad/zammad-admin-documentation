@@ -1,9 +1,8 @@
 Users
 =====
 
-Depending on your organization's IT capabilities,
-users can be managed individually or in bulk,
-or even synchronized with third-party directory services.
+Users can be managed individually via UI, via API or even synchronized with
+third-party directory services.
 
 .. figure:: /images/manage/users/managing-users-manually.png
    :alt: Creating and editing users directly in the Admin Panel
@@ -36,7 +35,7 @@ Learn more about managing users...
    How? Zammad checks the sender of every incoming message
    at every inbox it monitors,
    and if it doesn't recognize the address,
-   ✨ **poof**—new customer account!
+   ✨ **poof** - new customer account!
 
    (Your customers never need to set a password.
    Of course, they can if they want to,
@@ -134,7 +133,7 @@ The ones that aren't are described below.
    Notes are visible to all staff members, **including agents**.
 
    .. hint:: 😵 **Are you using the Note field
-      to keep track of your own “custom” user attributes?**
+      to keep track of your own "custom" user attributes?**
 
       Wish you could add your own fields to the New/Edit User dialog?
 
@@ -157,7 +156,7 @@ The ones that aren't are described below.
          :align: center
 
          A slashed-out 👤 icon indicates an inactive user.
-         In other cases, inactive users are greyed out.
+         In other cases, inactive users are grayed out.
 
          .. _user-details-group-access:
 

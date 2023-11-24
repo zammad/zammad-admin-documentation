@@ -3,7 +3,7 @@ Forms
 
 Feedback or contact forms are used on websites quite often.
 Usually they will generate an email which will be sent to somebody who forwards
-it and so on. With Zammad it’s quite easy to integrate these forms into your
+it and so on. With Zammad it's quite easy to integrate these forms into your
 website and directly generate tickets with them. In just 2 minutes.
 
 .. figure:: /images/channels/form/form-channel-management.png
@@ -62,19 +62,19 @@ need to copy to your website.
 
 So let's talk about the options the designer provides.
 
-:Title of the form:
+Title of the form
    Choose how the heading of the form should be called.
    This setting is only relevant if you choose to display the form title in the
    form.
 
    Default: ``Feedback Form``
 
-:Name of form submit button:
+Name of form submit button
    If Zammad's default display name of the submit button does not fit, you can
    provide your own wording with this option. It will be used every time the
    form is shown.
 
-:Message after sending form:
+Message after sending form
    After your user pressed the submit button, they will be provided with
    a message containing the ticket number of the newly created ticket.
 
@@ -85,7 +85,7 @@ So let's talk about the options the designer provides.
       Thank you for your inquiry (#31015)!
       We'll contact you as soon as possible.
 
-:Options:
+Options
    Zammad provides the following additional configuration options for your form.
 
    Enable debugging for implementation
@@ -168,7 +168,7 @@ Requirements
 The requirement section provides you with everything you need in order to
 apply Zammad's web form to your website. It basically consists of two parts.
 
-:Header section:
+Header section
    The first code block provides you with Zammad's current jQuery dependency.
    This script section usually belongs to your website's header section.
 
@@ -185,7 +185,7 @@ apply Zammad's web form to your website. It basically consists of two parts.
 
          Do not mix jQuery versions - it's likely to break something.
 
-:Body section:
+Body section
    The second code block is the actual code required for your form to run.
 
    The first line containing ``id="zammad-feedback-form"`` highly depends on

@@ -13,21 +13,21 @@ of its powerful, flexible, and fine-grained permission system.
 
    Assign user privileges in the Admin Panel, under **Manage > Roles**.
 
-.. note:: 👀 Users can have both “agent” and “customer” roles at the same time!
+.. note:: Users can have both "agent" and "customer" roles at the same time!
 
    Why would you want this?
    Agents get :doc:`overviews </manage/overviews>`
-   of all the tickets they're *assigned to* (among other things),
+   of all the tickets they're *assigned to* (among others),
    while customers get an overview of all the tickets they've *opened*.
    But some teams use Zammad for both internal and public communication,
    so their agents need both.
 
    Having both roles also changes what you see in the ticket view,
-   depending on whether you're the “customer” or not.
+   depending on whether you're the "customer" or not.
 
 .. tip:: 💡 **LDAP/Active Directory users:**
 
-   Syncing your LDAP “groups” to Zammad roles
+   Syncing your LDAP "groups" to Zammad roles
    can make access management *way* easier.
    To learn more, see :doc:`/system/integrations/ldap/index`.
 
@@ -60,13 +60,13 @@ users might want to do throughout the system, such as:
 
 Zammad has dozens of these permissions,
 which is a lot to keep track of.
-So instead of saying “This user has permissions A, B, and C”,
-Zammad says “The *agent role* has permissions A, B, and C,
-and this user is an agent.”
+So instead of saying "This user has permissions A, B, and C",
+Zammad says "The *agent role* has permissions A, B, and C,
+and this user is an agent."
 
 This makes creating user accounts for new agents a whole lot simpler,
 and it also makes it easier to invent a new permission D
-and say “All existing agents can do *that* now, too.”
+and say "All existing agents can do *that* now, too."
 
 In short, roles are just collections of permissions that you can give to a user.
 The built-in admin, agent, and customer roles are enough for many teams,

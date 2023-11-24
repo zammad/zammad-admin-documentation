@@ -37,7 +37,7 @@ Edit
 
 .. figure:: /images/manage/calendars/editting-calendars.png
 
---> determine a name, a time-zone, the business hours to be used for this
+Determine a name, a time-zone, the business hours to be used for this
 calendar and special holidays. In addition, you can subscribe to the iCalendar,
 which will automatically load all holidays from Google (updated once a day) ...
 and you can add a note.
