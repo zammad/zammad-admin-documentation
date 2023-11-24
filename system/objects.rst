@@ -88,15 +88,94 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 System attributes
 -----------------
 
-Zammad comes with pre-configured attributes. Some of these currently do not
-provide the possibility to edit them via UI (or at all).
+Zammad comes with pre-configured attributes. Some of them can't be edited via
+UI (or at all).
 
 This is not a bug but is to save you from possibly nuking Zammad.
 
    .. tip::
 
       There are technical exceptions which can be solved via console.
-      This e.g. affects ticket states and priorities, see
-      :docs:`console section </admin/console.html>`.
+      See :docs:`console section </admin/console.html>` for further information.
 
       💰 If you're a hosted customer, please contact your support for more. 💰
+
+Ticket State
+^^^^^^^^^^^^
+
+If the pre-configured states aren't enough for you or you want to change
+them, you can do so by clicking on the cogwheel icon in the state row in the
+ticket tab:
+
+.. figure:: /images/system/objects/ticket-state/highlighted-state-attribute.png
+   :align: center
+   :alt: Screenshot showing highlighted ticket state attribute
+
+.. danger:: Be careful when changing pre-configured states. This can lead
+   to unwanted behavior in some cases.
+
+Handling of states
+   In the state configuration screen, you can add new states, disable states or
+   change states.
+
+   .. figure:: /images/system/objects/ticket-state/table-ticket-states-default.png
+      :align: center
+      :scale: 80%
+      :alt: Screenshot showing table of default ticket states
+
+   To add a new state, click on the "New Ticket State" button in the top right
+   corner. To change an existing state, simply click on the affected state. This
+   opens an edit dialog.
+
+   You can also clone a state or set them to "Default for new tickets" or
+   "Default for follow-ups" by clicking on the ⁝ action button and select the
+   desired function.
+
+   *Default for new tickets* means that this state is used for every newly
+   created ticket.
+
+   *Default for follow-ups* means that this state is used if the ticket is
+   re-opened after it was closed.
+
+Ticket state in detail
+   .. figure:: /images/system/objects/ticket-state/state-editing-dialog.png
+      :alt: Screenshot of state editing dialog
+      :align: center
+      :scale: 80%
+
+   Name
+      This is the name of the state and what you and your agents are seeing when
+      choosing a state somewhere (e.g. in tickets, trigger configuration).
+
+   Type
+      There are different state types you can choose from. By default, Zammad
+      comes with one state per state type.
+
+        - **closed**: for states for tickets that are finished and do not need
+          to be processed further
+        - **merged**: for states for tickets that are merged with other tickets
+        - **new**: for states for tickets that are new and it hasn't been
+          worked on them
+        - **open**: for states for tickets that are in progress and agents are
+          working on them
+        - **pending action**: for states for tickets that are waiting for a
+          specified time and then change their state (default example:
+          *pending close*)
+        - **pending reminder**: for states for tickets that are in progress and
+          you want to set a reminder. (default example: *pending reminder*)
+
+      .. attention:: ⚠️ Choosing the correct state type is important! If you are
+         in doubt, have a look on the default states and their types!
+
+   Ignore escalation
+      Here you can define whether tickets of this state will count to escalation
+      time or not.
+
+   Note
+      You can create a note for the state to inform other admins about the
+      state. This has no effect on tickets.
+
+   Active
+      Set the state to *active* or *inactive*.
+
+
