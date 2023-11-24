@@ -178,4 +178,7 @@ Ticket state in detail
    Active
       Set the state to *active* or *inactive*.
 
+      .. note:: it is technically possible to set all states to inactive. To
+         keep Zammad working in such a case, the inactive flag of one of the
+         states is ignored.
 
