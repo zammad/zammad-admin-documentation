@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-09 10:01+0100\n"
+"POT-Creation-Date: 2023-11-22 08:09+0100\n"
 "PO-Revision-Date: 2021-12-03 14:33+0000\n"
 "Last-Translator: TRANSFER FROM TRANSIFEX <support@zammad.com>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/"
@@ -7227,7 +7227,7 @@ msgstr ""
 msgid ""
 "Many condition settings in Zammad, no matter if in ticket scope or not, re-"
 "appear in several places of Zammad. For this reason we created a dedicated "
-"documentation section to reduce duplicate drag."
+"documentation section to avoid duplicate content."
 msgstr ""
 
 #: ../misc/object-conditions/conditioning-depth-hint.include.rst:7
@@ -7587,16 +7587,54 @@ msgstr ""
 
 #: ../manage/report-profiles.rst:2
 #, fuzzy
-msgid "Report Profiles"
+msgid "Report Profiles and Reporting"
 msgstr "Profilleri Raporla"
 
-#: ../manage/report-profiles.rst:4
+#: ../manage/report-profiles.rst:7
 msgid ""
-"Report profiles are used to restrict / filter report-results. The idea of "
-"the profiles is to limit the number of tickets and determine the type of "
-"tickets you want to analyze. You can create any number of profiles in the "
-"Admin Interface in the \"Report Profile\" area. The edit-mask looks like "
-"this:"
+"The reporting is useful to view statistics, get an overview of the number of "
+"tickets (e.g. tickets of a specific customer) and to download ticket data "
+"from Zammad. In the following section you will find an instruction on how to "
+"create and change report profiles. In a separate section you can find "
+"information on basic usage of the reporting UI itself. If the reporting "
+"options in Zammad are not enough for you, we added a section about external "
+"reporting tools you can use."
+msgstr ""
+
+#: ../manage/report-profiles.rst:15
+msgid ""
+"To create and edit report profiles, ``admin.report_profile`` permission is "
+"required. To use the reporting itself, ``report`` permission is required."
+msgstr ""
+
+#: ../manage/report-profiles.rst:18
+msgid ""
+"⚠️ Be aware that granting users the ``reporting`` permission may leak "
+"information. On the one hand, users could see ticket metadata that they do "
+"not actually have access to. On the other hand, a possibly large scale of "
+"ticket information can easily be downloaded as a spreadsheet."
+msgstr ""
+
+#: ../manage/report-profiles.rst:24
+#, fuzzy
+#| msgid "👥 Creating and editing users"
+msgid "Create and edit profiles"
+msgstr "👥 Kullanıcıları oluşturmak ve düzenlemek"
+
+#: ../manage/report-profiles.rst:26
+#, fuzzy
+#| msgid ""
+#| "Report profiles are used to restrict / filter report-results. The idea of "
+#| "the profiles is to limit the number of tickets and determine the type of "
+#| "tickets you want to analyze. You can create any number of profiles in the "
+#| "Admin Interface in the \"Report Profile\" area. The edit-mask looks like "
+#| "this:"
+msgid ""
+"Report profiles are used to filter report results. The idea of the profiles "
+"is to limit the number of tickets and determine the type of tickets you want "
+"to analyze. You can create any number of profiles in the admin interface in "
+"the \"Report Profile\" area. You can filter the tickets as in other places "
+"in Zammad based on different conditions."
 msgstr ""
 "Rapor profilleri, rapor sonuçlarını kısıtlamak / filtrelemek için "
 "kullanılır. Profillerin fikri, bilet sayısını sınırlamak ve analiz etmek "
@@ -7604,60 +7642,120 @@ msgstr ""
 "\" alanında istediğiniz sayıda profil oluşturabilirsiniz. Düzenleme maskesi "
 "şöyle görünür:"
 
-#: ../manage/report-profiles.rst:11
+#: ../manage/report-profiles.rst:34
+#, fuzzy
+#| msgid "The final result will look like the following:"
+msgid "The edit dialog looks like this:"
+msgstr "Final sonuçları aşağıdaki gibi görünecek:"
+
+#: ../manage/report-profiles.rst:None
+msgid "Screenshot shows creation of report profile"
+msgstr ""
+
+#: ../manage/report-profiles.rst:39
+#, fuzzy
+#| msgid ""
+#| "This example shows the statistics of all tickets of the organization "
+#| "\"Awesome Customer\" that were created in the last month."
 msgid ""
 "This example shows the statistics of all tickets of the organization "
-"\"Awesome Customer\" that were created in the last month."
+"\"Awesome Customer Inc.\" that were created in the last month."
 msgstr ""
 "Bu örnek, geçen ay oluşturulan \"Mükemmel Müşteri\" kuruluşunun tüm "
 "biletlerinin istatistiklerini gösterir."
 
-#: ../manage/report-profiles.rst:14
+#: ../manage/report-profiles.rst:42
+#, fuzzy
+#| msgid ""
+#| "All configured filters are displayed in the statistics area and you can "
+#| "switch between them with one click:"
 msgid ""
-"The filters can be combined with each other as desired. The filters build on "
-"each other, which means that they are further restricted per additional "
-"attribute."
-msgstr ""
-"Filtreler istenildiği gibi birbirleri ile birleştirilebilir. Filtreler "
-"birbirinin üzerine kurulur, bu da ek nitelik başına daha fazla "
-"kısıtlandıkları anlamına gelir."
-
-#: ../manage/report-profiles.rst:18
-msgid ""
-"All configured filters are displayed in the statistics area and you can "
-"switch between them with one click:"
+"All configured report profiles are displayed in the reporting area and you "
+"can switch between them with one click. Have a look at the next section to "
+"learn some basics about the usage of the reporting."
 msgstr ""
 "Yapılandırılan tüm filtreler istatistik alanında görüntülenir ve tek "
 "tıklamayla bunlar arasında geçiş yapabilirsiniz:"
 
-#: ../manage/report-profiles.rst:25
-msgid "Further information about the reporting:"
-msgstr "Raporlama hakkında daha fazla bilgi:"
-
-#: ../manage/report-profiles.rst:27
-msgid ""
-"The time period and time interval can be changed with one click (the graphic "
-"adapts itself directly):"
-msgstr ""
-"Zaman periyodu ve zaman aralığı tek bir tıklama ile değiştirilebilir (grafik "
-"kendisini doğrudan uyarlar):"
-
-#: ../manage/report-profiles.rst:32
-msgid ""
-"You can filter the Create Channels (Phone, email, Twitter,...) and "
-"Communication (Phone, email, Twitter,...) and select metrics (choose from "
-"the menu bar in the upper left corner - currently Ticket Count, Create "
-"Channels, Communication). Here are  all tickets with a certain metric of a "
-"profile evaluated."
+#: ../manage/report-profiles.rst:47
+msgid "Using the reporting"
 msgstr ""
 
-#: ../manage/report-profiles.rst:39
+#: ../manage/report-profiles.rst:49
 msgid ""
-"The list below the graphic shows the tickets that have been filtered out. "
-"This can be downloaded as CSV and processed in a statistics program:"
+"You can find the reporting section in the bottom left corner in Zammad next "
+"to the avatar icon or your initials:"
 msgstr ""
-"Grafiğin altındaki liste, filtrelenen biletleri gösterir. Bu, CSV olarak "
-"indirilebilir ve bir istatistik programında işlenebilir:"
+
+#: ../manage/report-profiles.rst:None
+msgid "Menu bar with highlighted reporting"
+msgstr ""
+
+#: ../manage/report-profiles.rst:55
+msgid ""
+"If you can't see the reporting button, you should check the permissions."
+msgstr ""
+
+#: ../manage/report-profiles.rst:57
+msgid ""
+"The reporting screen is separated in different sections, which we describe "
+"below:"
+msgstr ""
+
+#: ../manage/report-profiles.rst:None
+msgid "Screenshot showing different sections in the reporting screen"
+msgstr ""
+
+#: ../manage/report-profiles.rst:63
+msgid ""
+"**Additional filtering** based on the selected profile (see 2). You can "
+"filter by status (\"Ticket Count\"), \"Creation Channels\" and "
+"\"Communication\" types based on your channels."
+msgstr ""
+
+#: ../manage/report-profiles.rst:66
+msgid ""
+"**Profile switcher**: here you can easily switch between the different "
+"profiles, which were created in the admin panel under \"Report Profiles\". "
+"The shown tickets and numbers are always limited to the current profile you "
+"have selected here."
+msgstr ""
+
+#: ../manage/report-profiles.rst:70
+msgid ""
+"**Time interval/period switcher** and **graph** area: here you can define "
+"the interval you want to see (e.g. \"Month\") as well as the time period (e."
+"g. \"Jul\")."
+msgstr ""
+
+#: ../manage/report-profiles.rst:73
+msgid ""
+"**Preview and download** section: here you can find a preview of tickets and "
+"a download button based on the report profile and your filtering. The "
+"download feature provides the tickets in a ``.xlsx`` spreadsheet."
+msgstr ""
+
+#: ../manage/report-profiles.rst:77
+msgid ""
+"The ticket preview and download button are only showing up if you selected a "
+"filter based on \"Ticket Count\" (see 1)."
+msgstr ""
+
+#: ../manage/report-profiles.rst:80
+msgid "Due to technical reasons, the download is limited to 6.000 entries."
+msgstr ""
+
+#: ../manage/report-profiles.rst:85
+msgid "External reporting tools"
+msgstr ""
+
+#: ../manage/report-profiles.rst:87
+msgid ""
+"If the integrated reporting is not enough for you, you can even use third "
+"party tools like Grafana! Please have a look at :docs:`Reporting Tools </"
+"appendix/reporting-tools-thirdparty.html>` in the system documentation, "
+"where you can find more information."
+msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:2
 msgid "Admin Permissions"
@@ -23264,11 +23362,18 @@ msgstr ""
 "adresinden soru sormaktan çekinmeyin."
 
 #: ../system/variables.rst:10
+#, fuzzy
+#| msgid ""
+#| "Variables can be called by typing ``::`` (just like text modules in the "
+#| "frontend), as long as you're in a supported text field within the "
+#| "Backend. Zammad will show display all variables being available within "
+#| "this context and replace it to the variable as soon as you selected an "
+#| "entry."
 msgid ""
 "Variables can be called by typing ``::`` (just like text modules in the "
-"frontend), as long as you're in a supported text field within the Backend. "
-"Zammad will show display all variables being available within this context "
-"and replace it to the variable as soon as you selected an entry."
+"frontend), as long as you're in a supported text field within the backend. "
+"Zammad will display all variables being available within this context and "
+"replace it to the variable as soon as you selected an entry."
 msgstr ""
 "Değişkenler, Backend içinde desteklenen bir metin alanında olduğunuz sürece "
 "``::`` (tıpkı ön uçtaki metin modülleri gibi) yazılarak çağrılabilir. "
@@ -23361,6 +23466,27 @@ msgstr ""
 "döndürecek olan bir \"seç\" veya \"ağaç seçimi\" alanıdır. Bunun için "
 "değişkeninizi ``.value`` ile genişletin. Bu, ``#{ticket.select.value}`` ile "
 "sonuçlanacaktır."
+
+#: ../system/variables.rst:58
+msgid "Using translated variables"
+msgstr ""
+
+#: ../system/variables.rst:60
+msgid ""
+"If you want to use a translated variable in triggers or schedulers, you can "
+"extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
+"tells Zammad to search for fitting translated strings. The used output "
+"language is based on the system language of Zammad which you can set in the "
+"admin panel under :doc:`/settings/branding`."
+msgstr ""
+
+#: ../system/variables.rst:66
+msgid ""
+"A possible use-case: you want to send your customers updates on tickets via "
+"trigger or scheduler which should include the state of the ticket. Using the "
+"default ``#{ticket.state.name}`` (without the translation flag ``t()``) "
+"would lead to the output of the original (english) name of the state."
+msgstr ""
 
 #: ../system/variables/article.rst:2
 msgid "Articles"
@@ -23917,9 +24043,13 @@ msgstr ""
 "tetikleyici) geçerli kullanıcının değerlerini döndürür."
 
 #: ../system/variables/current-user.rst:8
+#, fuzzy
+#| msgid ""
+#| "Due to the above fact, these variables are often not (yet) set or "
+#| "available for usuage."
 msgid ""
 "Due to the above fact, these variables are often not (yet) set or available "
-"for usuage."
+"for usage."
 msgstr ""
 "Yukarıdaki gerçek nedeniyle, bu değişkenler genellikle (henüz) "
 "ayarlanmamıştır veya kullanım için uygun değildir."
@@ -24077,6 +24207,22 @@ msgid "``Sales`` or empty if not set"
 msgstr "``Satışlar`` veya ayarlanmadıysa boş"
 
 #: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "Current User > Updated by > Fax"
+msgid "Current User > Updated by > Avatar"
+msgstr "Geçerli Kullanıcı > Güncelleyen > Faks"
+
+#: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "``#{user.updated_by.lastname}``"
+msgid "``#{user.updated_by.avatar(60,60)}``"
+msgstr "``#{user.updated_by.lastname}``"
+
+#: ../system/variables/current-user.rst:1 ../system/variables/ticket.rst:1
+msgid "avatar picture with width and height in pixel (e.g. 60,60)"
+msgstr ""
+
+#: ../system/variables/current-user.rst:1
 msgid "Current User > Updated by > Address"
 msgstr "Geçerli Kullanıcı > Güncelleyen > Adres"
 
@@ -24137,6 +24283,12 @@ msgid "``#{user.organization.name}``"
 msgstr "``#{user.organization.name}``"
 
 #: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "``Zammad``"
+msgid "``Zammad GmbH``"
+msgstr "``Zammad``"
+
+#: ../system/variables/current-user.rst:1
 msgid "Current User > Organization > Domain based assignment"
 msgstr "Geçerli Kullanıcı > Organizasyon > Alan adına göre atama"
 
@@ -24152,9 +24304,11 @@ msgstr "Geçerli Kullanıcı > Organizasyon > Alan adı"
 msgid "``#{user.organization.domain}``"
 msgstr "``#{user.organization.domain}``"
 
-#: ../system/variables/current-user.rst:1 ../system/variables/ticket.rst:1
-msgid "``Zammad GmbH`` or empty if not set"
-msgstr "``Zammad GmbH``` veya ayarlanmadıysa boş"
+#: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "``https://zammad.com`` or empty if not set"
+msgid "``zammad.com`` or empty if not set"
+msgstr "``https://zammad.com``` veya ayarlanmadıysa boş"
 
 #: ../system/variables/current-user.rst:1
 #, fuzzy
@@ -24319,6 +24473,18 @@ msgid "``#{user.created_by.department}``"
 msgstr "``#{user.created_by.department}``"
 
 #: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "Current User > Created by > Fax"
+msgid "Current User > Created by > Avatar"
+msgstr "Geçerli Kullanıcı > Oluşturan > Faks"
+
+#: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "``#{user.created_by.lastname}``"
+msgid "``#{user.created_by.avatar(60,60)}``"
+msgstr "``#{user.created_by.lastname}``"
+
+#: ../system/variables/current-user.rst:1
 msgid "Current User > Created by > Address"
 msgstr "Geçerli Kullanıcı > Oluşturan > Adres"
 
@@ -24333,6 +24499,18 @@ msgstr "Geçerli Kullanıcı > Oluşturulma tarihi"
 #: ../system/variables/current-user.rst:1
 msgid "``#{user.created_at}``"
 msgstr "``#{user.created_at}``"
+
+#: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "Current User > Fax"
+msgid "Current User > Avatar"
+msgstr "Geçerli Kullanıcı > Faks"
+
+#: ../system/variables/current-user.rst:1
+#, fuzzy
+#| msgid "``#{user.lastname}``"
+msgid "``#{user.avatar(60,60)}``"
+msgstr "``#{user.lastname}``"
 
 #: ../system/variables/current-user.rst:1
 msgid "Current User > Address"
@@ -24445,6 +24623,18 @@ msgstr "Bilet > Güncelleyen > Bölüm"
 #: ../system/variables/ticket.rst:1
 msgid "``#{ticket.updated_by.department}``"
 msgstr "``#{ticket.updated_by.department}``"
+
+#: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "Ticket > Updated by > Fax"
+msgid "Ticket > Updated by > Avatar"
+msgstr "Bilet > Güncelleyen > Faks"
+
+#: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "``#{ticket.updated_by.lastname}``"
+msgid "``#{ticket.updated_by.avatar(60,60)}``"
+msgstr "``#{ticket.updated_by.lastname}``"
 
 #: ../system/variables/ticket.rst:1
 msgid "Ticket > Updated by > Address"
@@ -24653,6 +24843,18 @@ msgid "``Support`` or empty if not set"
 msgstr "``Destek`` veya ayarlanmadıysa boş"
 
 #: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "Ticket > Owner > Fax"
+msgid "Ticket > Owner > Avatar"
+msgstr "Bilet > Sahip > Faks"
+
+#: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "``#{ticket.owner.lastname}``"
+msgid "``#{ticket.owner.avatar(60,60)}``"
+msgstr "``#{ticket.owner.lastname}``"
+
+#: ../system/variables/ticket.rst:1
 msgid "Ticket > Owner > Address"
 msgstr "Bilet > Sahip > Adres"
 
@@ -24683,6 +24885,10 @@ msgstr "Bilet > Organizasyon > Ad"
 #: ../system/variables/ticket.rst:1
 msgid "``#{ticket.organization.name}``"
 msgstr "``#{ticket.organization.name}``"
+
+#: ../system/variables/ticket.rst:1
+msgid "``Zammad GmbH`` or empty if not set"
+msgstr "``Zammad GmbH``` veya ayarlanmadıysa boş"
 
 #: ../system/variables/ticket.rst:1
 msgid "Ticket > Organization > Domain based assignment"
@@ -24751,9 +24957,14 @@ msgid "``#{ticket.last_contact_customer_at}``"
 msgstr "``#{ticket.last_contact_customer_at}``"
 
 #: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid ""
+#| "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note "
+#| "`Ticket last contact behaviour Settings <https://admin-docs.zammad.org/en/"
+#| "latest/settings-ticket.html>`_ for this)"
 msgid ""
 "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note "
-"`Ticket last contact behaviour Settings <https://admin-docs.zammad.org/en/"
+"`Ticket last contact behavior Settings <https://admin-docs.zammad.org/en/"
 "latest/settings-ticket.html>`_ for this)"
 msgstr ""
 "``2019-10-07 16:25:00 UTC`` veya henüz uygun değilse boş (Bunun için lütfen "
@@ -24944,6 +25155,18 @@ msgid "``#{ticket.customer.department}``"
 msgstr "``#{ticket.customer.department}``"
 
 #: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "Ticket > Customer > Fax"
+msgid "Ticket > Customer > Avatar"
+msgstr "Bilet > Müşteri > Faks"
+
+#: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "``#{ticket.customer.lastname}``"
+msgid "``#{ticket.customer.avatar(60,60)}``"
+msgstr "``#{ticket.customer.lastname}``"
+
+#: ../system/variables/ticket.rst:1
 msgid "Ticket > Customer > Address"
 msgstr "Bilet > Müşteri > Adres"
 
@@ -25040,6 +25263,18 @@ msgid "``#{ticket.created_by.department}``"
 msgstr "``#{ticket.created_by.department}``"
 
 #: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "Ticket > Created by > Fax"
+msgid "Ticket > Created by > Avatar"
+msgstr "Bilet > Oluşturan > Faks"
+
+#: ../system/variables/ticket.rst:1
+#, fuzzy
+#| msgid "``#{ticket.created_by.lastname}``"
+msgid "``#{ticket.created_by.avatar(60,60)}``"
+msgstr "``#{ticket.created_by.lastname}``"
+
+#: ../system/variables/ticket.rst:1
 msgid "Ticket > Created by > Address"
 msgstr "Bilet > Oluşturan > Adres"
 
@@ -25082,6 +25317,32 @@ msgstr "Versiyon"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını gösterir."
+
+#~ msgid ""
+#~ "The filters can be combined with each other as desired. The filters build "
+#~ "on each other, which means that they are further restricted per "
+#~ "additional attribute."
+#~ msgstr ""
+#~ "Filtreler istenildiği gibi birbirleri ile birleştirilebilir. Filtreler "
+#~ "birbirinin üzerine kurulur, bu da ek nitelik başına daha fazla "
+#~ "kısıtlandıkları anlamına gelir."
+
+#~ msgid "Further information about the reporting:"
+#~ msgstr "Raporlama hakkında daha fazla bilgi:"
+
+#~ msgid ""
+#~ "The time period and time interval can be changed with one click (the "
+#~ "graphic adapts itself directly):"
+#~ msgstr ""
+#~ "Zaman periyodu ve zaman aralığı tek bir tıklama ile değiştirilebilir "
+#~ "(grafik kendisini doğrudan uyarlar):"
+
+#~ msgid ""
+#~ "The list below the graphic shows the tickets that have been filtered out. "
+#~ "This can be downloaded as CSV and processed in a statistics program:"
+#~ msgstr ""
+#~ "Grafiğin altındaki liste, filtrelenen biletleri gösterir. Bu, CSV olarak "
+#~ "indirilebilir ve bir istatistik programında işlenebilir:"
 
 #~ msgid "Object permissions"
 #~ msgstr "Nesne izinleri"
