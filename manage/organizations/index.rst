@@ -136,7 +136,7 @@ The ones that aren't are described below.
    .. hint:: 😵 **Are you using the Note field
       to keep track of your own "custom" organization attributes?**
 
-      Wish you could add your own fields Organizations?
+      Wish you could add your own fields to organizations?
 
       You can! To learn more, see :doc:`/system/objects`.
 
