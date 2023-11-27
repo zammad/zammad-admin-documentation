@@ -200,3 +200,55 @@ Ticket state example
       :scale: 80%
       :align: center
 
+Ticket Priority
+^^^^^^^^^^^^^^^
+
+If the pre-configured priorities aren't enough for you or you want to change
+them, you can do so by clicking on the cogwheel icon in the priority row in the
+ticket tab:
+
+.. figure:: /images/system/objects/ticket-priority/highlighted-priority-attribute.png
+   :align: center
+   :alt: Screenshot showing highlighted ticket priority attribute
+
+Handling of priorities
+   In the priority configuration screen, you can add new priorities, disable
+   priorities or change priorities.
+
+   .. figure:: /images/system/objects/ticket-priority/table-ticket-priorities-default.png
+      :align: center
+      :scale: 80%
+      :alt: Screenshot showing table of default ticket priorities
+
+   To add a new priority, click on the "New Priority" button in the top right
+   corner. To change an existing priority, simply click on the affected
+   priority. This opens an edit dialog.
+
+   You can also clone a priority or set them to "Default for new tickets" by
+   clicking on the ⁝ action button and select the desired function.
+
+   *Default for new tickets* means that this priority is used for every newly
+   created ticket.
+
+Priorities in detail
+   Below you can find a description for each field and option.
+
+   Name
+      This is the name of the priority and what you and your agents are seeing
+      when choosing a priority somewhere (e.g. in tickets, trigger
+      configuration).
+
+   Highlight color
+      Switch between *Low priority* (light blue), *High priority* (red) and -
+      (default). This affects the displayed color for ticket titles in
+      overviews.
+
+      .. note:: The color options are currently limited to the mentioned
+         options.
+
+   Note
+      You can create a note for the priority to inform other admins about the
+      priority. This has no effect on tickets.
+
+   Active
+      Set the priority to *active* or *inactive*.
