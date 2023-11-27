@@ -89,16 +89,7 @@ System attributes
 -----------------
 
 Zammad comes with pre-configured attributes. Some of them can't be edited via
-UI (or at all).
-
-This is not a bug but is to save you from possibly nuking Zammad.
-
-   .. tip::
-
-      There are technical exceptions which can be solved via console.
-      See :docs:`console section </admin/console.html>` for further information.
-
-      💰 If you're a hosted customer, please contact your support for more. 💰
+UI (or at all). This is required for proper operation of Zammad and not a bug.
 
 Ticket State
 ^^^^^^^^^^^^
@@ -138,31 +129,33 @@ Handling of states
    re-opened after it was closed.
 
 Ticket state in detail
-   .. figure:: /images/system/objects/ticket-state/state-editing-dialog.png
-      :alt: Screenshot of state editing dialog
-      :align: center
-      :scale: 80%
+   Below you can find a description for each field and option. Please head over
+   to the :ref:`example <example-state>` to see the edit dialog.
 
    Name
       This is the name of the state and what you and your agents are seeing when
       choosing a state somewhere (e.g. in tickets, trigger configuration).
 
+   .. Reference for linking from Zammad state edit/create modal
+
+   .. _state-type-reference:
+
    Type
       There are different state types you can choose from. By default, Zammad
       comes with one state per state type.
 
-        - **closed**: for states for tickets that are finished and do not need
-          to be processed further
-        - **merged**: for states for tickets that are merged with other tickets
         - **new**: for states for tickets that are new and it hasn't been
           worked on them
         - **open**: for states for tickets that are in progress and agents are
           working on them
+        - **merged**: for states for tickets that are merged with other tickets
+        - **pending reminder**: for states for tickets that are in progress and
+          you want to set a reminder. (default example: *pending reminder*)
         - **pending action**: for states for tickets that are waiting for a
           specified time and then change their state (default example:
           *pending close*)
-        - **pending reminder**: for states for tickets that are in progress and
-          you want to set a reminder. (default example: *pending reminder*)
+        - **closed**: for states for tickets that are finished and do not need
+          to be processed further
 
       .. attention:: ⚠️ Choosing the correct state type is important! If you are
          in doubt, have a look on the default states and their types!
@@ -181,4 +174,29 @@ Ticket state in detail
       .. note:: it is technically possible to set all states to inactive. To
          keep Zammad working in such a case, the inactive flag of one of the
          states is ignored.
+
+   .. _example-state:
+
+Ticket state example
+   Let's assume we want to create a new state which indicates that the
+   ticket has to wait for a response of a third party (e.g. service contractor
+   or manufacturer) and we want to to be able to set a reminder.
+
+   First we give the new state a proper name. In this example we call it
+   "waiting for manufacturer".
+
+   As state type we choose "pending reminder". This indicates that the ticket is
+   still open and we can set a reminder. This reminder can be useful if our
+   manufacturer sometimes isn't responding or we want to remind him to give us
+   an answer.
+
+   We choose "no" for "ignore escalation" because we want to escalate the
+   tickets even if we are waiting on the manufacturer's feedback.
+
+   The **result** in the creation dialog will look like this:
+
+   .. figure:: /images/system/objects/ticket-state/creation-dialog-ticket-state.png
+      :alt: Screenshot showing ticket state creation dialog with example
+      :scale: 80%
+      :align: center
 
