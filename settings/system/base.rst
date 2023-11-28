@@ -4,7 +4,7 @@ Base
 .. include:: /settings/system/system-selfhosted.include.rst
 
 Fully Qualified Domain Name
-   The URL of your Zammad installation. 
+   The URL of your Zammad installation.
 
    This setting is used within :doc:`/system/variables` and notifications.
 

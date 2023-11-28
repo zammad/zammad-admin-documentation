@@ -33,18 +33,18 @@ FAQ
 ===
 
 I set up a trial account but am missing functions to test
-   Sorry. The trial instance is running within the professional package
+   The trial instance is running within the professional package
    allowing up to three agents.
 
 Can I change package within the trial?
    No. As soon as the package is changed the subscription begins.
 
 What happens to my trial instance after the trial period ended?
-   Your instance will automatically be cancelled for you.
-   Please see *What happens to my instance after it has been cancelled?*
+   Your instance will automatically be canceled for you.
+   Please see *What happens to my instance after it has been canceled?*
    for more.
 
-What happens to my instance after it has been cancelled?
+What happens to my instance after it has been canceled?
    That depends slightly on your instance state:
 
    Trial instance
@@ -54,7 +54,7 @@ What happens to my instance after it has been cancelled?
       Email.
 
    Paid instance
-      If you're a paying customer and cancelled your subscription, the instance
+      If you're a paying customer and canceled your subscription, the instance
       removal will take place the day after your last subscription day.
 
 Can removed instances be restored?

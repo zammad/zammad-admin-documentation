@@ -40,5 +40,5 @@ Encryption
 Usage
 -----
 
-For more details on how S/MIME integration works in practice, see the
+For more details on how S/MIME integration works on the agent side, see the
 :user-docs:`user docs </extras/secure-email.html>`.

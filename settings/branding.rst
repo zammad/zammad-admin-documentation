@@ -42,7 +42,7 @@ Timezone
       .. warning::
 
          Changing this value has direct consequences on the following areas:
-         
+
             * :doc:`/manage/scheduler` tasks
             * search indexing (and thus reporting)
             * notifications
@@ -63,8 +63,8 @@ Pretty Date
 
    Choose in between the following options:
       relative
-         This timestamp is the one that changes the most. Over the time
-         it will transition like so:
+         This timestamp shows a relative time span until it switches to a date.
+         Over time, it will change as follows:
 
             * just now
             * 5 minutes ago
@@ -74,23 +74,18 @@ Pretty Date
          .. tip::
 
             Hovering the timestamp helps, you'll always get a clean timestamp
-            if you do.
+            then.
 
       absolute
-         This timestamp makes Zammad to always include the week day.
-         For one week after creation the timestamp will not contain the date
+         This timestamp always includes the week day.
+         For one week after creation, the timestamp will not contain the date
          itself: Thursday 18:35.
 
-         After a week it will switch to this: Friday 4. Mar 16:00.
+         After a week it will switch to: ``Friday 4. Mar 16:00``.
 
       timestamp
          This will cause Zammad to show a complete timestamp according to your
-         locale defaults. For English this would mean:
-         e.g. ``2022/12/03 2:40 pm`` or for German e.g. ``12.03.2022 14:40``.
-
-         .. tip::
-
-            This is the most consequent timestamp in Zammad as it does
-            not change it's form and looks the same even over long time periods.
+         locale defaults. For English this could be e.g. ``2022/12/03 2:40 pm``
+         or for German e.g. ``12.03.2022 14:40``.
 
       Default setting: ``relative``.

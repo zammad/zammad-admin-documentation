@@ -54,8 +54,8 @@ Match none (NOT)
    All conditions in this block will be matched with "AND".
    To be matched positive, no or any condition may match - but not all together.
 
-See `Evaluation order`_ to understand how Zammad evaluates triggers in expert
-mode.
+See :ref:`evaluation order <evaluation-order>` to understand how Zammad
+evaluates triggers in expert mode.
 
 Adding conditions and logic blocks
 ----------------------------------
@@ -103,6 +103,8 @@ By using drag and drop, you won't need to remove and re-add conditions.
 
 .. figure:: /images/misc/object-conditions/re-arranging-conditions.gif
    :alt: Screencast showing dragging and dropping conditions
+
+.. _evaluation-order:
 
 Evaluation order
 ----------------

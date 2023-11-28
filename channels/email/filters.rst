@@ -65,7 +65,7 @@ Automatically increase the priority of tickets from a VIP customer:
   | From: *contains:* ``ourvipcustomer@example.com``
   | Priority: 3 high
 
-Automatically tag and close spam tickets that have been marked as spam by anexternal spam filter (e.g. SpamAssassin):
+Automatically tag and close spam tickets that have been marked as spam by an external spam filter (e.g. SpamAssassin):
   | X-Spam-Flag: *contains:* ``YES``
   | Tag: add: ``spam``
   | State: closed
@@ -76,6 +76,5 @@ Automatically tag and close spam tickets that have been marked as spam by anexte
     results in a new ticket. It will add the tag though if it is missing, even
     if the mail is an update to an existing ticket.
 
-It should be borne in mind that the combined attributes build on each other.
 If a filter is no longer needed, it can either be temporarily set inactive or
 deleted directly.

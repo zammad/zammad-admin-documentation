@@ -68,7 +68,7 @@ Zammad Admin Documentation
 
    system/subscription/index
    system/integrations/index
-   API (System-Admin Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
+   API (System-Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system/objects
    system/core-workflows
    system/variables
