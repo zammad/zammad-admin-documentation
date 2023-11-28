@@ -33,7 +33,7 @@ Accounts
 
 :doc:`accounts/migrate-from-email-channel`
    Use the *Migrate now!* button within your email channels to quickly move
-   your mailboxes to Microsoft 365. You can roll back if things hit the fan!
+   your mailboxes to Google. You can roll back if things hit the fan!
 
    .. figure:: /images/channels/google/accounts/migrate-email-channel-to-google.gif
       :alt: Migrate an existing email channel to Google

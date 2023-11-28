@@ -1,7 +1,7 @@
 .. note::
 
-   Signatures in Microsoft 365 channels are
-   **just like signatures in email channels**, so this article is lifted
-   verbatim from :doc:`here </channels/email/signatures>`.
+   Signatures in Microsoft 365 channels work in the same way as in email channels.
+   This is why the section has been adopted verbatim from
+   :doc:`here </channels/email/signatures>`.
 
 .. include:: /channels/email/signatures.rst

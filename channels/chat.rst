@@ -43,8 +43,7 @@ Our approach is as follows
     no strange delay coming afterwards. Zammad will fire a (configurable by
     agent) auto response as soon as the agents accepts the Chat request.
   * Zammad will try to adapt your main website colors to the chat. You can also
-    adjust those colors allowing you to integrate the chat into your website,
-    like it has been there before.
+    adjust those colors allowing you to customize it to your corporate design.
 
 Configuration of the Chat widget
 ================================
