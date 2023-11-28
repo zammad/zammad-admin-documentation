@@ -25,8 +25,8 @@ Auto-close state
 
    (You may choose from the seven built-in ticket states,
    but if you change this setting from the default, you'll more likely want to
-   :ref:`define a new ticket state <ticket-state-reference>` for this
-   purpose. This can be especially useful for tracking tickets with
+   :docs:`define a new ticket state </admin/console/working-on-tickets.html#add-new-ticket-state>`
+   for this purpose. This can be especially useful for tracking tickets with
    :doc:`reports </manage/report-profiles>`.)
 
 .. _checkmk-recent-logs:
