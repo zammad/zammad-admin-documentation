@@ -8,10 +8,10 @@ accounts.
 
    Zammad does **not** allow you to change your LDAP password, instead, it will
    set a password in its local database which might confuse your users. This
-   will be addressed in the future by
+   might be addressed in the future by
    `#1169 <https://github.com/zammad/zammad/issues/1169>`_.
 
-.. warning:: **💪 Exception for strong passwords 💪**
+.. warning:: **Exception for admins**
 
    Please note that below password policies *do not* affect administrators
    setting passwords on user accounts. While this seems strange and not safe

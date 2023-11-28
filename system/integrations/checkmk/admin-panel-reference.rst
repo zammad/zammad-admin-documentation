@@ -24,8 +24,8 @@ Auto-close state
    What ticket state should be applied when “auto-closing” a ticket?
 
    (You may choose from the seven built-in ticket states,
-   but if you change this setting from the default, you’ll more likely want to
-   :docs:`define a new ticket state </admin/console.html>` for this
+   but if you change this setting from the default, you'll more likely want to
+   :ref:`define a new ticket state <ticket-state-reference>` for this
    purpose. This can be especially useful for tracking tickets with
    :doc:`reports </manage/report-profiles>`.)
 
@@ -38,8 +38,8 @@ Recent Logs
    :alt: Screenshot of Checkmk "Recent Logs" section
    :align: center
 
-If you’re having trouble getting Zammad and Checkmk to play nicely together,
-this section can help you troubleshoot. 🙌
+If you're having trouble getting Zammad and Checkmk to play nicely together,
+this section can help you troubleshoot.
 
 It contains a record of the fifty most recent transactions that Zammad knows
-about, including each one’s request/response details and return status.
+about, including each one's request/response details and return status.

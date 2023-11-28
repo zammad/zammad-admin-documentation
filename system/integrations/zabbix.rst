@@ -50,9 +50,9 @@ Create a global macro
 
    -  **severity\_<name>**: Zammad priority ID
 
-6. Click the **Update** button to save the **Webhook** settings.
+5. Click the **Update** button to save the **Webhook** settings.
 
-7. To receive notifications in **Zammad**, you need to create a **Zabbix
+6. To receive notifications in **Zammad**, you need to create a **Zabbix
    user** and add **Media** with the **Zammad** type.
 
    For **Send to**: enter any text, as this value is not used, but is

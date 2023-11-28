@@ -12,8 +12,8 @@ For your overview we split each tab within system settings into its own page:
    /settings/system/network
    /settings/system/frontend
 
-Console based settings 🤓
--------------------------
+Console based settings
+----------------------
 
 There's some console based settings we didn't put into the UI.
 However, you may find them helpful - you can find them in our
