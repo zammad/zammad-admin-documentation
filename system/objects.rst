@@ -91,6 +91,8 @@ System attributes
 Zammad comes with pre-configured attributes. Some of them can't be edited via
 UI (or at all). This is required for proper operation of Zammad and not a bug.
 
+.. _ticket-state-reference:
+
 Ticket State
 ^^^^^^^^^^^^
 

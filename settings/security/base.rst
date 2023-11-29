@@ -19,8 +19,8 @@ New User Accounts
       :width: 60%
       :align: center
 
-.. warning:: **😖 This setting may be confusing**
-   
+.. warning::
+
    Deactivation of above function **does not** deactivate automatic account
    creation! This means: If a user writes e.g. an email to Zammad and has no
    account yet, Zammad will automatically create the account.
@@ -47,9 +47,9 @@ Lost Password
       :width: 60%
       :align: center
 
-.. tip:: **😖 This function may be confusing**
+.. tip::
 
-   With third party authentications – but especially LDAP – you may want to
+   With third party authentications - but especially LDAP - you may want to
    disable this function. Zammad **will not** change third party login
    passwords and instead set or change the local password!
 
@@ -80,7 +80,7 @@ Password Login
    offers a password request for administrator users. This allows you to adjust
    Third-Party applications even if the login does no longer work!
 
-.. note:: **😖 This function may be confusing**
+.. note::
 
    Disabling password login on the Zammad login page only takes effect if
    you enable any :doc:`third-party`.
@@ -106,19 +106,18 @@ the permissions.
 All settings act independently from each other allowing you to disable the
 timeouts for e.g. admins, but not agents.
 
-   .. note:: **🤓 An example**
+Example
+   Let's suppose you configured the following session timeouts
+      * default: 3 weeks
+      * admin: 2 weeks
+      * ticket.agent: 4 weeks
+      * ticket.customer: 1 week
 
-      Let's suppose you configured the following session timeouts
-         * default: 3 weeks
-         * admin: 2 weeks
-         * ticket.agent: 4 weeks
-         * ticket.customer: 1 week
-
-      This results in the following situations
-         - a user with ``admin`` permission will have a timeout of 2 weeks
-         - a user with ``admin`` and ``ticket.agent`` permissions will
-           have a timeout of 2 weeks
-         - a user with ``ticket.customer`` permission will have a timeout
-           of 1 week
-         - a user with neither ``admin``, ``ticket.agent`` nor
-           ``ticket.customer`` permissions will have a timeout of 3 weeks
+   This results in the following situations
+      - a user with ``admin`` permission will have a timeout of 2 weeks
+      - a user with ``admin`` and ``ticket.agent`` permissions will
+        have a timeout of 2 weeks
+      - a user with ``ticket.customer`` permission will have a timeout
+        of 1 week
+      - a user with neither ``admin``, ``ticket.agent`` nor
+        ``ticket.customer`` permissions will have a timeout of 3 weeks

@@ -1,6 +1,7 @@
-.. note:: Secondary addresses in Google channels
-   work (almost) **just like they do in email channels**,
-   so this article is lifted (almost) verbatim
+.. note::
+
+   Secondary addresses for accounts in Google channels work the same
+   way as in email channels. This is why the section has been adopted verbatim
    from :doc:`here </channels/email/accounts/secondary-addresses>`.
 
 .. include:: /channels/email/accounts/secondary-addresses.rst
