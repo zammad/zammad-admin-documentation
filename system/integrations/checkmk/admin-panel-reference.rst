@@ -23,11 +23,11 @@ Auto close
 Auto-close state
    What ticket state should be applied when “auto-closing” a ticket?
 
-   (You may choose from the seven built-in ticket states,
-   but if you change this setting from the default, you'll more likely want to
-   :docs:`define a new ticket state </admin/console/working-on-tickets.html#add-new-ticket-state>`
-   for this purpose. This can be especially useful for tracking tickets with
-   :doc:`reports </manage/report-profiles>`.)
+   You can choose from the seven built-in ticket states. If these states aren't
+   enough for you, you can
+   :ref:`define a new ticket state <ticket-state-reference>`
+   for this purpose as well. This can be especially useful for tracking
+   tickets with :doc:`reports </manage/report-profiles>`.
 
 .. _checkmk-recent-logs:
 
