@@ -18,7 +18,7 @@ Setting up a Zammad
 1. Enable **API Token Access** in Settings > System > API.
 
 2. Create a **new user** for a Zabbix alerter with an **email address**
-and create a personal user token with **ticket.agent** permissions.
+   and create a personal user token with **ticket.agent** permissions.
 
 Zabbix Webhook configuration
 ----------------------------
