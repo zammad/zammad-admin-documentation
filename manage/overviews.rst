@@ -2,10 +2,10 @@ Overviews
 *********
 
 You can provide overviews to your agents and customers. They can be used as a
-kind of worklist of tasks that the agent is supposed to work off.
-You can also create individual overviews for individual agents or agent groups.
-
-In the overview management area you can add new overviews, edit or delete them.
+kind of worklist of tasks that the agent is supposed to work on.
+You can add new overviews, edit or delete them. They can be used for individual
+agents or agent groups. Overviews only show tickets for which the user has
+permissions (group or role based).
 
 .. warning::
 
@@ -14,71 +14,51 @@ In the overview management area you can add new overviews, edit or delete them.
 
    Whenever possible, try to use the same overviews for as many agents and
    groups as possible to keep the number of overviews
-   low. For best results, you might want to use between 15-20 overviews maximum.
-   Also, any overview will only show a total of 2100 elements.
+   low. For best results, you should use a maximum of 15-20 overviews.
+   Please note that any overview will only show a maximum of 2100 elements.
 
-.. note::
-
-   Overviews will only show tickets to your users, that the user have rights on
-   (group or role based).
-
-The following attributes can be set when creating an overview:
+The following attributes can be set when creating or editing overviews. Have a
+look under the screenshot where you can find an explanation for each field.
 
    .. figure:: /images/manage/overviews/restriction-and-availability-of-overviews-for-roles-and-users.png
       :width: 80%
       :align: center
 
 Available for the following roles / Restrict to only the following users
-
-   .. hint::
-
-      Roles are assigned to users, per default there are agents, admins and
-      customers. Further information about :doc:`roles/index`.
-
-   .. note:: The setting "available for the following roles" is mandatory.
-
-   Define roles that are supposed to see and use the overview in question.
+   Define :doc:`roles <roles/index>` that are supposed to see and use the
+   overview in question.
 
    If your overview is rather specific for a sub group of users of your role,
    use the *"Restrict to only the following users"* option to further restrict
    the visibility of the overview to defined users.
 
-      .. hint::
-
-         You will still have to provide a role!
+   The setting "available for the following roles" is mandatory.
 
 Only available for users with shared organization
-
-   .. image:: /images/manage/overviews/restrict-overview-to-sharing-organizations.png
+   This is important if the available role is a customer.
+   Whether you select "Yes" or "No" depends on whether you want one of your
+   customer's contacts to see all of their organization's tickets.
 
    .. hint::
 
       Shared organization is a setting in the organization management.
       See :doc:`/manage/organizations/index` for more information.
 
-   This is only important if the available role is a customer.
-   Whether you select Yes or No depends on whether you want one of your
-   customer's contacts to see all of their organization's tickets.
+      "Users" also refers to the customer role in this case.
 
-   .. note:: Users also refers to the customer role in this case.
-
-Only available for users which are absence replacements for other users.
-
+Only available for users which are absence replacements for other users
    This selection refers to the setting in the user preferences
-   (profile-picture / initials of agent in the left corner >
-   profile > out of office).
-   If this option is checked, this selection is only displayed if someone
-   has been entered as a substitution.
+   (profile-picture / initials of agent in the left corner > profile > out of
+   office). If this option is checked, this overview is only
+   displayed for users who have been set as a substitution. See
+   "Out of office function" in the
+   :user-docs:`user documentation </extras/profile-and-settings.html>` for
+   more details.
 
    **For example:** Agent A is on vacation and Agent B will take care of his
    tickets. Then an overview can be set up, which only shows Agent B all
    new tickets from Agent A for this period of time, without having to search
    for them separately.
-
-   .. note::
-
-      Replacement users are part of our
-      :user-docs:`Out of Office function </extras/profile-and-settings.html>`.
 
 Conditions for shown tickets
    .. figure:: /images/manage/overviews/overview-conditions-for-to-be-shown-tickets.png
@@ -114,10 +94,11 @@ Sorting, Grouping and Active
    .. figure:: /images/manage/overviews/ordering-and-grouping-of-overviews.png
 
    :Sorting by:
-      In which order should the tickets be displayed? (Sorted by the attributes)
+      In which order should the tickets be displayed? Choose the attribute
+      you want to sort by.
 
    :Sorting order:
-      The direction of the sorting.
+      The direction of the sorting (ascending or descending).
 
    :Grouping by:
       Should the tickets be grouped by a specific attribute within the list?
