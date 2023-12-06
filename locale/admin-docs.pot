@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:37+0100\n"
+"POT-Creation-Date: 2023-12-05 15:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -408,6 +408,7 @@ msgid "Email Inbound"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:117
+#: ../system/objects.rst:163
 #: ../system/objects/types.rst:157
 msgid "Type"
 msgstr ""
@@ -1051,6 +1052,8 @@ msgstr ""
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:10
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:10
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:20
+#: ../system/objects.rst:171
+#: ../system/objects.rst:253
 msgid "Note"
 msgstr ""
 
@@ -2644,6 +2647,8 @@ msgstr ""
 #: ../manage/scheduler.rst:38
 #: ../manage/slas/how-do-they-work.rst:26
 #: ../manage/templates.rst:33
+#: ../system/objects.rst:139
+#: ../system/objects.rst:241
 msgid "Name"
 msgstr ""
 
@@ -2677,6 +2682,8 @@ msgstr ""
 #: ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:129
 #: ../system/integrations/i-doit.rst:43
+#: ../system/objects.rst:178
+#: ../system/objects.rst:255
 msgid "Active"
 msgstr ""
 
@@ -5930,7 +5937,7 @@ msgid "😵 **Are you using the Note field to keep track of your own \"custom\" 
 msgstr ""
 
 #: ../manage/organizations/index.rst:139
-msgid "Wish you could add your own fields Organizations?"
+msgid "Wish you could add your own fields to organizations?"
 msgstr ""
 
 #: ../manage/organizations/index.rst:141
@@ -14703,7 +14710,7 @@ msgid "What ticket state should be applied when “auto-closing” a ticket?"
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:26
-msgid "(You may choose from the seven built-in ticket states, but if you change this setting from the default, you'll more likely want to :docs:`define a new ticket state </admin/console/working-on-tickets.html#add-new-ticket-state>` for this purpose. This can be especially useful for tracking tickets with :doc:`reports </manage/report-profiles>`.)"
+msgid "You can choose from the seven built-in ticket states. If these states aren't enough for you, you can :ref:`define a new ticket state <ticket-state-reference>` for this purpose as well. This can be especially useful for tracking tickets with :doc:`reports </manage/report-profiles>`."
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
@@ -17376,7 +17383,7 @@ msgid "Enable **API Token Access** in Settings > System > API."
 msgstr ""
 
 #: ../system/integrations/zabbix.rst:20
-msgid "Create a **new user** for a Zabbix alerter with an **email address** and create a personal user token with **ticket.agent** permissions."
+msgid "2. Create a **new user** for a Zabbix alerter with an **email address** and create a personal user token with **ticket.agent** permissions."
 msgstr ""
 
 #: ../system/integrations/zabbix.rst:24
@@ -17700,19 +17707,211 @@ msgid "System attributes"
 msgstr ""
 
 #: ../system/objects.rst:91
-msgid "Zammad comes with pre-configured attributes. Some of these currently do not provide the possibility to edit them via UI (or at all)."
+msgid "Zammad comes with pre-configured attributes. Some of them can't be edited via UI (or at all). This is required for proper operation of Zammad and not a bug."
 msgstr ""
 
-#: ../system/objects.rst:94
-msgid "This is not a bug but is to save you from possibly nuking Zammad."
+#: ../system/objects.rst:97
+msgid "Ticket State"
 msgstr ""
 
-#: ../system/objects.rst:98
-msgid "There are technical exceptions which can be solved via console. This e.g. affects ticket states and priorities, see :docs:`console section </admin/console.html>`."
+#: ../system/objects.rst:99
+msgid "If the pre-configured states aren't enough for you or you want to change them, you can do so by clicking on the cogwheel icon in the state row in the ticket tab:"
 msgstr ""
 
-#: ../system/objects.rst:102
-msgid "💰 If you're a hosted customer, please contact your support for more. 💰"
+#: ../system/objects.rst:None
+msgid "Screenshot showing highlighted ticket state attribute"
+msgstr ""
+
+#: ../system/objects.rst:107
+msgid "Be careful when changing pre-configured states. This can lead to unwanted behavior in some cases."
+msgstr ""
+
+#: ../system/objects.rst:131
+msgid "Handling of states"
+msgstr ""
+
+#: ../system/objects.rst:111
+msgid "In the state configuration screen, you can add new states, disable states or change states."
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing table of default ticket states"
+msgstr ""
+
+#: ../system/objects.rst:119
+msgid "To add a new state, click on the \"New Ticket State\" button in the top right corner. To change an existing state, simply click on the affected state. This opens an edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:123
+msgid "You can also clone a state or set them to \"Default for new tickets\" or \"Default for follow-ups\" by clicking on the ⁝ action button and select the desired function."
+msgstr ""
+
+#: ../system/objects.rst:127
+msgid "*Default for new tickets* means that this state is used for every newly created ticket."
+msgstr ""
+
+#: ../system/objects.rst:130
+msgid "*Default for follow-ups* means that this state is used if the ticket is re-opened after it was closed."
+msgstr ""
+
+#: ../system/objects.rst:180
+msgid "Ticket state in detail"
+msgstr ""
+
+#: ../system/objects.rst:134
+msgid "Below you can find a description for each field and option. Please head over to the :ref:`example <example-state>` to see the edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:138
+msgid "This is the name of the state and what you and your agents are seeing when choosing a state somewhere (e.g. in tickets, trigger configuration)."
+msgstr ""
+
+#: ../system/objects.rst:146
+msgid "There are different state types you can choose from. By default, Zammad comes with one state per state type."
+msgstr ""
+
+#: ../system/objects.rst:149
+msgid "**new**: for states for tickets that are new and it hasn't been worked on them"
+msgstr ""
+
+#: ../system/objects.rst:151
+msgid "**open**: for states for tickets that are in progress and agents are working on them"
+msgstr ""
+
+#: ../system/objects.rst:153
+msgid "**merged**: for states for tickets that are merged with other tickets"
+msgstr ""
+
+#: ../system/objects.rst:154
+msgid "**pending reminder**: for states for tickets that are in progress and you want to set a reminder. (default example: *pending reminder*)"
+msgstr ""
+
+#: ../system/objects.rst:156
+msgid "**pending action**: for states for tickets that are waiting for a specified time and then change their state (default example: *pending close*)"
+msgstr ""
+
+#: ../system/objects.rst:159
+msgid "**closed**: for states for tickets that are finished and do not need to be processed further"
+msgstr ""
+
+#: ../system/objects.rst:162
+msgid "⚠️ Choosing the correct state type is important! If you are in doubt, have a look on the default states and their types!"
+msgstr ""
+
+#: ../system/objects.rst:167
+msgid "Ignore escalation"
+msgstr ""
+
+#: ../system/objects.rst:166
+msgid "Here you can define whether tickets of this state will count to escalation time or not."
+msgstr ""
+
+#: ../system/objects.rst:170
+msgid "You can create a note for the state to inform other admins about the state. This has no effect on tickets."
+msgstr ""
+
+#: ../system/objects.rst:174
+msgid "Set the state to *active* or *inactive*."
+msgstr ""
+
+#: ../system/objects.rst:176
+msgid "it is technically possible to set all states to inactive. To keep Zammad working in such a case, the inactive flag of one of the states is ignored."
+msgstr ""
+
+#: ../system/objects.rst:203
+msgid "Ticket state example"
+msgstr ""
+
+#: ../system/objects.rst:183
+msgid "Let's assume we want to create a new state which indicates that the ticket has to wait for a response of a third party (e.g. service contractor or manufacturer) and we want to to be able to set a reminder."
+msgstr ""
+
+#: ../system/objects.rst:187
+msgid "First we give the new state a proper name. In this example we call it \"waiting for manufacturer\"."
+msgstr ""
+
+#: ../system/objects.rst:190
+msgid "As state type we choose \"pending reminder\". This indicates that the ticket is still open and we can set a reminder. This reminder can be useful if our manufacturer sometimes isn't responding or we want to remind him to give us an answer."
+msgstr ""
+
+#: ../system/objects.rst:195
+msgid "We choose \"no\" for \"ignore escalation\" because we want to escalate the tickets even if we are waiting on the manufacturer's feedback."
+msgstr ""
+
+#: ../system/objects.rst:198
+msgid "The **result** in the creation dialog will look like this:"
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing ticket state creation dialog with example"
+msgstr ""
+
+#: ../system/objects.rst:206
+msgid "Ticket Priority"
+msgstr ""
+
+#: ../system/objects.rst:208
+msgid "If the pre-configured priorities aren't enough for you or you want to change them, you can do so by clicking on the cogwheel icon in the priority row in the ticket tab:"
+msgstr ""
+
+#: ../system/objects.rst:None
+msgid "Screenshot showing highlighted ticket priority attribute"
+msgstr ""
+
+#: ../system/objects.rst:233
+msgid "Handling of priorities"
+msgstr ""
+
+#: ../system/objects.rst:217
+msgid "In the priority configuration screen, you can add new priorities, disable priorities or change priorities."
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing table of default ticket priorities"
+msgstr ""
+
+#: ../system/objects.rst:225
+msgid "To add a new priority, click on the \"New Priority\" button in the top right corner. To change an existing priority, simply click on the affected priority. This opens an edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:229
+msgid "You can also clone a priority or set them to \"Default for new tickets\" by clicking on the ⁝ action button and select the desired function."
+msgstr ""
+
+#: ../system/objects.rst:232
+msgid "*Default for new tickets* means that this priority is used for every newly created ticket."
+msgstr ""
+
+#: ../system/objects.rst:255
+msgid "Priorities in detail"
+msgstr ""
+
+#: ../system/objects.rst:236
+msgid "Below you can find a description for each field and option."
+msgstr ""
+
+#: ../system/objects.rst:239
+msgid "This is the name of the priority and what you and your agents are seeing when choosing a priority somewhere (e.g. in tickets, trigger configuration)."
+msgstr ""
+
+#: ../system/objects.rst:249
+msgid "Highlight color"
+msgstr ""
+
+#: ../system/objects.rst:244
+msgid "Switch between *Low priority* (light blue), *High priority* (red) and - (default). This affects the displayed color for ticket titles in overviews."
+msgstr ""
+
+#: ../system/objects.rst:248
+msgid "The color options are currently limited to the mentioned options."
+msgstr ""
+
+#: ../system/objects.rst:252
+msgid "You can create a note for the priority to inform other admins about the priority. This has no effect on tickets."
+msgstr ""
+
+#: ../system/objects.rst:256
+msgid "Set the priority to *active* or *inactive*."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:2
