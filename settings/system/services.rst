@@ -13,7 +13,7 @@ Image Service
 
 Geo Calendar Service
    Defines the backend for geo calendar lookups. Used for initial calendar
-   succession.
+   setup.
 
    Default: ``Zammad GeoCalendar Service`` (active)
 

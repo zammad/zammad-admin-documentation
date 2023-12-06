@@ -1,10 +1,10 @@
-Learn by example
+Trigger examples
 ================
 
 To get you up and running quickly, here are some examples
 of the kinds of automation tasks you can set up with triggers.
 
-.. hint:: If they don't make sense to you, don't worry—just skip ahead to
+.. hint:: If they don't make sense to you, don't worry - just skip ahead to
    :doc:`/manage/trigger/how-do-they-work`
    to learn about all the options in detail,
    then come back here to see them in action.
@@ -14,7 +14,7 @@ of the kinds of automation tasks you can set up with triggers.
    .. figure:: /images/manage/trigger/move-tickets-of-specific-customer-to-specific-group.png
 
 2. Emma Taylor is responsible for all sales internally, so if a new ticket has
-   the word “order” in the subject, assign it to her and make sure it’s set
+   the word "order" in the subject, assign it to her and make sure it's set
    with a high priority:
 
    .. figure:: /images/manage/trigger/trigger-based-prioritize-change.png
@@ -27,7 +27,7 @@ of the kinds of automation tasks you can set up with triggers.
 
    For instance, when *agents* receive a system email
    about a newly created ticket,
-   that’s built into the system itself.
+   that's built into the system itself.
    If you need to customize those,
    you will have to
    :doc:`manually edit files on your server </manage/trigger/system-notifications>`.

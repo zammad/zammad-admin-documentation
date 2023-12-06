@@ -1,14 +1,13 @@
 i-doit
 ======
 
-`i-doit`_ is an open-source **configuration management database**—in other
-words, a tool for keeping tabs on every single piece of your physical and
-digital infrastructure, from network equipment to virtual machines
-on down to the faceplates on your rack shelves and more.
+`i-doit <https://www.i-doit.com/>`_ is an open-source
+**configuration management database**—in other words, a tool for keeping tabs
+on every single piece of your physical and digital infrastructure, from network
+equipment to virtual machines on down to the faceplates on your rack shelves
+and more.
 
-.. _i-doit: https://www.i-doit.com/
-
-What’s that got to do with Zammad?
+What's that got to do with Zammad?
 Well, if you used tickets to track issues with all that hardware,
 you might start wishing there was a way they could talk to each other.
 
@@ -21,12 +20,12 @@ What users see
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/ticket-pane-demo.gif
-   :alt: i-doit integration in Zammad’s ticket pane
+   :alt: i-doit integration in Zammad's ticket pane
    :align: center
 
    The i-doit integration will appear under a new 🖨 tab in the ticket pane.
 
-i-doit integration puts a new tab in Zammad’s ticket pane
+i-doit integration puts a new tab in Zammad's ticket pane
 where you can add links to existing i-doit devices
 for easy reference.
 (See our
@@ -36,8 +35,8 @@ learn how it works in practice).
 How to set it up
 ^^^^^^^^^^^^^^^^
 
-.. note:: 🧩 **Requires i-doit’s** `API Add-on`_.
-   
+.. note:: 🧩 **Requires i-doit's** `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_.
+
    Use the following settings:
 
    Active
@@ -45,9 +44,6 @@ How to set it up
 
    Enforce autentication by username and password
       No
-
-.. _API Add-on:
-   https://www.i-doit.com/i-doit/add-ons/api-add-on/
 
 To set it up, enable the integration in the Zammad admin panel
 under **System > Integrations > i-doit**:
@@ -73,6 +69,13 @@ Client ID
 
    (Zammad does not require you to enter a value here, but i-doit might!)
 
+SSL verification
+   Here you can decide if the certificate of your i-doit system has to be
+   verified or not. In case you are using custom certificates, please have
+   a look at :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
+
+   .. include:: /includes/ssl-verification-warning.rst
+
 2. List / Create Zammad Tickets in i-doit
 -----------------------------------------
 
@@ -80,10 +83,10 @@ What users see
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/i-doit-demo.gif
-   :alt: Zammad integration in i-doit’s device view
+   :alt: Zammad integration in i-doit's device view
    :align: center
 
-i-doit’s ticket system integration gives you a way to see
+i-doit's ticket system integration gives you a way to see
 all the tickets for a given device without ever leaving i-doit.
 (See our
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to

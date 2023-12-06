@@ -1,16 +1,16 @@
 Core Workflows
 ==============
 
-Core Workflows allow you to create complex ticket processes just as
-(but not limited to):
+Core Workflows allow you to adjust object attributes in many ways.
+For example:
 
-   * show / hide
+   * show / hide fields
    * adjust mandatory setting
    * manipulate available options
 
-With this, you're all set to provide exactly those information you really need!
+With this, you can provide exactly the information your users really need!
 
-.. note:: 
+.. note::
 
    * If the pre-defined :doc:`/system/objects` are not enough,
      please add them beforehand.

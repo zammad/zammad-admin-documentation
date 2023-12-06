@@ -1,10 +1,10 @@
-How do they work?
-=================
+How do trigger work
+===================
 
 Triggers consist of three parts: **activators**, **conditions** and **changes**.
-Activator defines “when the question is asked?”. Conditions answer the question,
-“when should this trigger fire?” Changes answer the question,
-“what should happen when it does?”
+Activator defines "when the question is asked?". Conditions answer the question,
+"when should this trigger fire?" Changes answer the question,
+"what should happen when it does?"
 
 Triggers are evaluated in alphabetical order, by **name.**
 In some situations triggers might be the wrong choice, see
@@ -45,7 +45,7 @@ Triggers support two types of activators:
     set **1 low**.
 
 **Time event** activator simply checks if **Conditions** match.
-This is the same behavior as Action-based activator's „Always“ mode.
+This is the same behavior as Action-based activator's „Always" mode.
 
 When creating a trigger, choose activator here:
 

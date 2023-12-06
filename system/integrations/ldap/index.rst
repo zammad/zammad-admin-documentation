@@ -55,20 +55,20 @@ Before you continue, please note the following limitations.
      address), the user in question will be updated with every source
      configured. *The last LDAP source will win.*
 
-     This is subject to change with `Issue 4109`_ in the future.
+     This is subject to change with
+     `Issue 4109 <https://github.com/zammad/zammad/issues/4109>`_ in the future.
    * Synchronization statistics currently affect *all* configured LDAP sources.
      This also applies for newly added or updated sources.
 
-     This is subject to change with `Issue 4108`_ in the future.
+     This is subject to change with
+     `Issue 4108 <https://github.com/zammad/zammad/issues/4108>`_ in the future.
    * Zammad currently has limited fallback server support. You can workaround
      this by providing several sources - however, ensure to have the exact same
      configuration on your fallback.
 
-     This is subject to improve with `Issue 4107`_ in the future.
+     This is subject to improve with
+     `Issue 4107 <https://github.com/zammad/zammad/issues/4107>`_ in the future.
 
-.. _Issue 4107: https://github.com/zammad/zammad/issues/4107
-.. _Issue 4108: https://github.com/zammad/zammad/issues/4108
-.. _Issue 4109: https://github.com/zammad/zammad/issues/4109
 
 Recent Logs
 -----------

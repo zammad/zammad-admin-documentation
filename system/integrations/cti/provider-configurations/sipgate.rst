@@ -7,10 +7,7 @@ Setup Sipgate connection for Zammad
      is mixing up languages badly.
    | Please also note that the availability of API addons highly depends on your
      package trier. Usage of sipgate.io packages *is not free*, please check
-     their `pricing page`_ before!
-
-.. _pricing page:
-   https://www.sipgate.io/pricing
+     their `pricing page <https://www.sipgate.io/pricing>`_ before!
 
 Step 1: Book sipgate.io package
    .. hint:: Skip to step 2 if you already have the package booked!

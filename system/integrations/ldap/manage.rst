@@ -8,16 +8,22 @@ Manage LDAP-Sources
 
 Add new source
    Using the *New Source* button allows you to add new LDAP sources to your
-   installations. You're not limited in the number of sources, however, keep
+   installation. You're not limited in the number of sources, however, keep
    in mind that many sources will also take more time to synchronize.
 
-   If you want to use LDAPs, type ``ldaps://`` instead of ``ldap://`` in front
-   of your hostname. You can also tell Zammad to use a different port by
-   appending ``:<port number>``.
+   You can choose between different encryption types, namely *SSL* and
+   *STARTTLS* or none of them ("*No SSL*"). If you choose *SSL* or *STARTTLS*,
+   Zammad will display an additional *SSL verification* option that allows you
+   to disable the verification, e.g. for self-signed SSL certificates.
+   You can also tell Zammad to use a different port by
+   appending ``:<port number>`` to your hostname/IP.
 
-   When providing a LDAPs source, Zammad will display an additional option
-   *SSL verification* that allows you to disable the verification for e.g.
-   self-signed SSL certificates.
+   .. figure:: /images/system/integrations/ldap/ldap-new-source-conf.png
+      :alt: Screenshot of configuring a new LDAP source with SSL encryption and SSL verification
+      :align: center
+      :scale: 80 %
+
+      New Source with SSL transport security enabled and certificate verification
 
    .. tip::
 
@@ -37,7 +43,8 @@ Add new source
 
       Active Directory admins
          Active Directories are quite specific on how to filter for active users
-         only - please see the `Microsoft documentation`_ for more information.
+         only - please see the `Microsoft documentation <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/>`_
+         for more information.
 
    .. danger::
 
@@ -51,8 +58,11 @@ Add new source
    .. figure:: /images/system/integrations/ldap/ldap-add-new-source.gif
       :alt: Screencast showing how to add a new LDAP source
 
-.. _Microsoft documentation:
-   https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/
+   .. note::
+
+      If your LDAP system doesn't allow anonymous bind, Zammad detects it and
+      provides you an editable "Base DN" *text* field instead of a prefilled
+      *select* field.
 
 Review or edit existing source
    Clicking on a LDAP source will provide a configuration and mapping overview.

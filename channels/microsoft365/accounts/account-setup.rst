@@ -1,7 +1,7 @@
 Account Setup
 =============
 
-After you’ve :doc:`registered Zammad as an OAuth app <register-app>`
+After you've :doc:`registered Zammad as an OAuth app <register-app>`
 in your Azure Portal, you can begin connecting Microsoft accounts to Zammad.
 
 ☠️ **But first, a word of warning!**
@@ -29,8 +29,8 @@ The import process does things you might not expect:
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 
-If you’ve already added your Microsoft 365 account as a regular email channel,
-you’ll have to convert it to a Microsoft 365 channel eventually:
+If you've already added your Microsoft 365 account as a regular email channel,
+you'll have to convert it to a Microsoft 365 channel eventually:
 Microsoft is planning to end support for simple password authentication
 in third-party email clients (like Zammad).
 
@@ -40,7 +40,7 @@ Requesting administrator consent
 --------------------------------
 
 .. hint::
-   
+
    This step is only required if you didn't consent the permissions in App
    registration as administrator on behalf of your users.
    If you do not use this kind of security measurement, simply skip to
@@ -150,12 +150,12 @@ Keep messages on server
    .. note:: 🤔 **Why does Zammad delete messages by default?**
 
       If you never clean out your inbox,
-      it’ll eventually reach its storage limit,
+      it'll eventually reach its storage limit,
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it’s set up,
+      Most Zammad users never even look at their inbox once it's set up,
       so they rely on Zammad to keep it clean for them.
 
-      If you choose **yes** here, remember that it’s your responsibility
+      If you choose **yes** here, remember that it's your responsibility
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
@@ -177,18 +177,16 @@ After adding the account
 Troubleshooting
 ---------------
 
-I successfully added my account, but Zammad isn’t fetching new email
-   If you specified a 
+I successfully added my account, but Zammad isn't fetching new email
+   If you specified a
    :ref:`custom folder/label to fetch from <microsoft365-folder>`,
    are you sure incoming mail is arriving in that folder?
 
 My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``
    This is a Microsoft 365 specific issue which you have to solve with
-   Microsoft. However, you can have a look at `Microsofts documentation`_
+   Microsoft. However, you can have a look at
+   `Microsofts documentation <https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention>`_
    which might allow you to solve the issue on your own.
 
    As soon as the issue has been fixed, the Zammad channel will recover
    automatically.
-
-   .. _Microsofts documentation:
-      https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention

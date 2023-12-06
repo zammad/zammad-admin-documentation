@@ -57,10 +57,7 @@ more information that Clearbit can provide.
 
    If you want to add more Clearbit fields and want to learn more about
    available fields on their API, you can take a look at their
-   `API documentation`_ .
-
-.. _API documentation:
-   https://dashboard.clearbit.com/docs#enrichment-api
+   `API documentation <https://dashboard.clearbit.com/docs#enrichment-api>`_.
 
 If you're happy with the above chosen Settings and your mapping, just save the
 changes and enable Clearbit integration. Zammad will now start polling the
@@ -89,6 +86,6 @@ Example when adding a user
 To show you how fast information is added, we added a small Screencast below.
 This shows the creation of the User Alex from Clearbit. As we already set the
 last name of Alex to "X", Zammad did not update it. What Zammad did was
-to add further information it received from Clearbit. Really cool, right?
+to add further information it received from Clearbit.
 
 .. image:: /images/system/integrations/clearbit/automatic-user-additions.gif

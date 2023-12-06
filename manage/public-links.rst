@@ -10,7 +10,7 @@ useful links to other services if needed.
    :alt: Screenshot showing the public links management interface within
          the settings
 
-Learn how to ...
+See here:
    * :ref:`public_links_add_new`
    * :ref:`public_links_manage_existing`
 

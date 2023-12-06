@@ -37,11 +37,10 @@ The “Users” panel provides tools to manually manage user accounts.
 
       The search list displays up to 50 users, from newest to oldest.
       That means that if there are more than 50 results,
-      the user you’re searching for might not be shown.
+      the user you're searching for might not be shown.
 
-      This is a `known bug`_ with a fix underway.
-
-      .. _known bug: https://github.com/zammad/zammad/issues/2214
+      This is a `known bug <https://github.com/zammad/zammad/issues/2214>`_
+      with a fix underway.
 
    .. _locked-user-accounts:
 
@@ -56,20 +55,20 @@ The “Users” panel provides tools to manually manage user accounts.
 
    .. _view-from-users-perspective:
 
-🏴‍☠️ Taking over a user’s session
+🏴‍☠️ Taking over a user's session
    .. figure:: /images/manage/users/takeover-user-session.gif
       :alt: Screencast showing an admin switching to the users perspective
       :align: center
 
-      Use the ⋮ **Actions** menu to 👁️ **View from user’s perspective**.
+      Use the ⋮ **Actions** menu to 👁️ **View from user's perspective**.
 
-   The **View from user’s perspective** button
-   allows you to “hijack” another user’s session
-   and confirm firsthand what they can and can’t do (or see)
-   when they’re logged in.
+   The **View from user's perspective** button
+   allows you to “hijack” another user's session
+   and confirm firsthand what they can and can't do (or see)
+   when they're logged in.
 
    This is especially useful when you need to verify
-   that you’ve set up custom permissions correctly for non-admin users.
+   that you've set up custom permissions correctly for non-admin users.
 
    .. danger:: **⚠ With great power comes with great responsibility.**
 
@@ -78,9 +77,9 @@ The “Users” panel provides tools to manually manage user accounts.
       and any actions you take
       (responding to tickets, changing passwords,
       :doc:`logging hours worked </manage/time-accounting>`)
-      will actually be performed from the user’s account.
+      will actually be performed from the user's account.
 
-      (On the other hand, if the user logs back in, you’ll be booted, too.)
+      (On the other hand, if the user logs back in, you'll be booted, too.)
 
    .. hint:: When finished,
       use the **Back to my view ✕** button at the top of the page.

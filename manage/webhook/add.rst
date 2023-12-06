@@ -4,7 +4,7 @@ Adding Webhooks
 Webhooks are defined globally. This allows you to use one specific endpoint for
 several triggers or schedulers.
 
-.. warning:: **🦻 Default Zammad webhook payloads are specific**
+.. warning:: **Default Zammad webhook payloads are specific**
 
    Keep in mind that the remote site has to be able to understand the default
    webhook payload Zammad is sending. Simply throwing the default payload at a
@@ -67,9 +67,11 @@ You can configure the following information for webhooks:
          `Learn more about HUB-Signatures
          <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_
 
-   SSL verify
+   SSL verification
       Defaults to ``yes`` - if you're using unsecure self signed certificates
       set this option to ``no``.
+
+      .. include:: /includes/ssl-verification-warning.rst
 
    _`HTTP Basic Authentication Username`
       Set this if the endpoint requires HTTP basic authentication credentials.

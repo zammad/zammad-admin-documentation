@@ -1,18 +1,25 @@
-Object types
-************
+Attribute types
+***************
 
-When adding a new object, you can choose between the following object types.
+When adding a new object attribute, you can choose between the following
+attribute types.
+
+.. toctree::
+   :hidden:
+
+   Examples <external-data-source-example>
 
 .. warning::
 
-   You cannot change the object format / type as soon as it is applied.
-   If you no longer need an object, consider disabling it instead of removing.
+   You cannot change the attribute format / type as soon as it is applied.
+   If you no longer need an object attribute, consider disabling it instead of
+   removing.
 
-.. note:: **What about the translation of my objects?**
+.. note:: **What about the translation of my attributes?**
 
-   For some object types you can decide if they should be translatable or not.
+   For some attribute types you can decide if they should be translatable or not.
    To be precise, it works only for the selectable fields because the possible
-   choices are known and limited. For the following object types, you can set
+   choices are known and limited. For the following attribute types, you can set
    the translatable flag:
 
       * *Boolean field*
@@ -25,10 +32,10 @@ When adding a new object, you can choose between the following object types.
 
    .. figure:: /images/system/objects/object-types-translatable.png
       :align: center
-      :alt: Screenshot showing translatable object types
+      :alt: Screenshot showing translatable attribute types
       :scale: 80%
 
-      Screenshot with example of translatable object type
+      Screenshot with example of translatable attribute type
 
 Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
@@ -175,6 +182,97 @@ Multiple tree selection field
    .. figure:: /images/system/objects/settings_multitreeselect.png
       :alt: Available settings for Tree Select fields
 
+External Data Source field
+   Provides a searchable field which fetches data from an external system.
+   Currently, only ``GET`` is supported as request method and the data structure
+   must be in JSON format. You can define in the configuration, which attribute
+   you want to be visible and selectable for the users.
+
+   .. warning:: The usage of a PostgreSQL database is required for this
+      feature. In any other case, Zammad will hide the selection and you are not
+      able to use it. If you want to use this feature, consider to
+      :docs:`migrate your database </appendix/migrate-to-postgresql.html>`.
+
+   .. figure:: /images/system/objects/settings-eds.png
+      :alt: Available settings for external data source fields
+      :align: center
+      :scale: 70 %
+
+   Search URL
+      Set your endpoint where Zammad fetches the data. Please make
+      sure to include a valid search :doc:`variable <../variables>` as an
+      URL parameter. Example for a free text search at user input:
+      ``#{search.term}``
+
+      .. note::
+         Depending on your search variable, the preview might work or not. The
+         reason is that the context might not be available and it is no bug.
+
+         Please also make sure to use a variable which is available in your
+         object context. For example you won't be able to search for a ticket
+         in a user object context.
+
+
+   SSL Verification
+      Here you can switch the SSL verification to no.
+
+      .. include:: /includes/ssl-verification-warning.rst
+
+      If your external data source system is using self signed certificates,
+      please have a look :doc:`here </settings/security/ssl-certificates>` for
+      further information about how to handle them in Zammad, so you can
+      keep the SSL verification activated.
+
+   HTTP Authentication
+      If your external data source requires an authentication, you can set it
+      here. You can leave it empty or choose between *Basic Authentication* or
+      *Authentication Token* (selecting one of the two methods leads to
+      additional fields where you can enter your credentials/token).
+
+   Search result list key
+      Defines the level in the JSON structure which provides the list with
+      search results. You can leave it empty, if the data is already
+      provided as an array. If you have to go deeper in the
+      structure, you can provide a path with ``.`` as separators, e.g.
+      ``key.subkey.sub-sub-key``.
+
+   Search result value key
+      Defines the attribute in the structure in which your external data
+      source provides the *value* for your data. An example would be a product
+      *number*. If you have to go deeper in the structure, you can provide a
+      path with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``.
+
+   Search result label key
+      Defines the attribute in the structure in which your external data
+      source provides the *label* for your data. An example would be a product
+      *name*. If you have to go deeper in the structure, you can provide a path
+      with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``.
+
+   Preview
+      In the preview area, you can find the following items (depending on your
+      configuration above):
+
+      - **Error/hint message** (only if configuration is not complete): Zammad
+        tells you, if there is a problem and what you should change in your
+        configuration.
+      - **Search field**: search for an existing attribute in the data source to
+        get a preview. This is required for the fields below to show up.
+      - **Search result response** (only if configuration is not complete): here
+        you can find a syntax highlighted JSON preview of the response, based
+        on the search term you entered.
+      - **Search result list** (only if *search result list key* is properly
+        set): output of the structure under the configured *search result list
+        key*.
+      - **Preview table** (when fully configured): Zammad shows you a table
+        which includes the found items based on the search string (value, label
+        and optional link)
+
+   .. tip:: You can use the preview if you don't have the complete data
+      structure of the external system in mind. You can also take a look
+      :doc:`here </system/objects/external-data-source-example>`, where you can
+      find an example configuration.
+
+
 .. _link-templates:
 
 URL fields (Link-Template)
@@ -182,7 +280,8 @@ URL fields (Link-Template)
 
 .. note::
 
-   This function is restricted to Text and Select objects only.
+   This function is restricted to Text, Select and External data source types
+   only.
 
 Link-Templates are an amazing way to dynamically generate URLs.
 They allow you to integrate other systems better without having to
@@ -224,21 +323,17 @@ actual URL of the field - e.g. ``https://zammad.com``.
 How does this work...?!
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-As an example, let's say you have an object called ``amazingobject`` - you want
-to open a google search directly with the input from that field.
+As an example, let's say you have an attribute called ``amazing_attribute`` and
+you want to open a google search directly with the input from that field.
 
-Providing below to the link-template field allows you to do so:
-``https://www.google.com/search?q=#{ticket.amazingobject}``
+Providing the link-template field below allows you to do so:
+``https://www.google.com/search?q=#{ticket.amazing_attribute}``
 
    .. tip::
 
       You can use any :doc:`Zammad variable </system/variables>` as long as
       it's available in the moment you need it.
 
-The result will look as follows.
-
-.. figure:: /images/system/objects/link-template.gif
-   :align: center
-
-   The above screencast shows how the link template will perform after
-   object creation.
+As a result, you are redirected to Google with a search for the value of the
+attribute, if you click on the button in the ticket (as you can see in the
+screencast above).

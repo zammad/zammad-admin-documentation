@@ -1,14 +1,14 @@
 Learn by example
 ================
 
-This page provides some of the ideas we had for Core Workflows.
-Of course you can build much more complex workflows.
+This page provides some basic examples for Core Workflows.
+Of course you can build much more complex workflows if needed.
 
 .. hint::
 
-   If they don’t make sense to you, don’t worry—just skip ahead to
-   :doc:`how-do-they-work` to learn about all the options in detail,
-   then come back here to see them in action.
+   If they don't make sense to you currently, don't worry - just have a look at
+   :doc:`how-do-they-work` to learn about all the options in detail and
+   then come back to understand the examples.
 
 All following workflows have the same base configurations.
 The workflow may not use them all.
@@ -31,7 +31,7 @@ The workflow may not use them all.
 
             .. tab:: Workflow 2nd Level group
 
-               This reduces the category options to ``2nd Level/*``, 
+               This reduces the category options to ``2nd Level/*``,
                ``Internal/*`` and ``Others``. It also sets further required
                fields to mandatory and visible.
 
@@ -41,7 +41,7 @@ The workflow may not use them all.
 
             .. tab:: Workflow Support group
 
-               This reduces the category options to ``Support/*``, 
+               This reduces the category options to ``Support/*``,
                ``Internal/*`` and ``Others``. It also sets further required
                fields to visible.
 
@@ -51,7 +51,7 @@ The workflow may not use them all.
 
             .. tab:: Workflow Sales group
 
-               This reduces the category options to ``Sales/*``, 
+               This reduces the category options to ``Sales/*``,
                ``Internal/*`` and ``Others``.
 
                .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_sales.png
@@ -61,7 +61,7 @@ The workflow may not use them all.
          The Result
             This is what the agent would experience with the above
             workflows in place.
-            
+
             .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_result.gif
                :alt: Workflow shows objects and limits options based on selections on the group
                :width: 90%
@@ -71,13 +71,13 @@ The workflow may not use them all.
       For this workflow, an additional role ``Approval person`` is required
       (no further permissions).
 
-      .. figure:: /images/system/core-workflows/examples/2_role-specific-approval-settingsl.png
+      .. figure:: /images/system/core-workflows/examples/2_role-specific-approval-settings.png
          :alt: Sample workflow that restricts an approval attribute to specific roles
          :width: 90%
 
       .. tip::
 
-         This workflow may work best in combination with a 
+         This workflow may work best in combination with a
          :doc:`trigger </manage/trigger>` but technically, this is not required.
 
          Select fields may be a better approach because they allow more

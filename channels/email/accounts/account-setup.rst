@@ -1,7 +1,7 @@
 Account Setup
 =============
 
-Setting up a new email account? Here’s what all the settings do.
+Setting up a new email account? Here's what all the settings do.
 
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
@@ -39,15 +39,17 @@ The import process does things you might not expect:
 Basic
 -----
 
-In most cases, Zammad is smart enough
-to figure out your email provider’s configuration
-based on your email address alone.
+In most cases, Zammad is smart enough to figure out your email provider's
+configuration based on your email address alone. If the correct configuration
+could not be retreived, Zammad asks you to provide the correct parameters
+manually.
 
-.. figure:: /images/channels/email/accounts-new-success.gif
-   :alt: Enter your email address and password, and Zammad will figure out the
-         rest.
-   :scale: 50%
+.. figure:: /images/channels/email/account-basic-setup-inbound.png
+   :alt: Screenshot showing basic email account setup inbound
+   :scale: 100 %
    :align: center
+
+   Basic email account setup inbound
 
 Organization & Department Name
    The display name used for outgoing email.
@@ -57,7 +59,7 @@ Organization & Department Name
       :scale: 40%
       :align: center
 
-      A customer’s inbox with an auto-reply from **Chrispresso Sales**.
+      A customer's inbox with an auto-reply from **Chrispresso Sales**.
 
    If you add :doc:`multiple addresses <secondary-addresses>` to a single
    account, you can define a separate Organization & Department Name for each
@@ -91,15 +93,17 @@ Destination Group
 Experts
 -------
 
-If Zammad can’t figure out how to connect your account
+If Zammad can't figure out how to connect your account
 (or if you just want to access advanced settings),
 use the *Experts* dialog.
 
-.. figure:: /images/channels/email/accounts-new-failure.gif
+.. figure:: /images/channels/email/account-setup-expert.png
    :alt: When auto-detection fails, you will be presented with the "Experts"
          account setup dialog.
-   :scale: 50%
+   :scale: 70%
    :align: center
+
+   Expert configuration dialog
 
 Email Inbound
 ^^^^^^^^^^^^^
@@ -108,14 +112,14 @@ Type
    Choose from **IMAP** and **POP3**.
 
    In most cases, you want IMAP.
-   (With POP3, you won’t be able to
+   (With POP3, you won't be able to
    :ref:`keep messages on the server <email-experts-keep-messages-on-server>`
    or :ref:`specify which folder to fetch from <email-experts-folder>`.)
 
 Host
-   Your email server’s hostname or IP address (*e.g.,* ``imap.gmail.com``).
+   Your email server's hostname or IP address (*e.g.,* ``imap.gmail.com``).
 
-   Contact your email provider or system administrator if you don’t know.
+   Contact your email provider or system administrator if you don't know.
 
 User
    This field is being pre-filled with your email address in case you've
@@ -143,10 +147,18 @@ SSL / STARTTLS
       * SSL
       * STARTTLS
 
-Port
-   Your email server’s port (usu. ``993`` for IMAP, or ``995`` for POP3).
+SSL verification
+   Here you can decide if the certificate of the email server has to be
+   verified or not (default: ``yes``). In case you are using custom
+   certificates, please have a look at
+   :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
 
-   Contact your email provider or system administrator if you don’t know.
+   .. include:: /includes/ssl-verification-warning.rst
+
+Port
+   Your email server's port (usu. ``993`` for IMAP, or ``995`` for POP3).
+
+   Contact your email provider or system administrator if you don't know.
 
    .. _email-experts-folder:
 
@@ -156,7 +168,7 @@ Folder
    If specifying a nested folder, be sure to use the full path.
    (Some systems use different **path separators**;
    *e.g.,* ``Inquiries/Tech-Support`` vs. ``Inquiries.Tech-Support``.
-   Contact your email provider or system administrator if you don’t know.)
+   Contact your email provider or system administrator if you don't know.)
 
    .. note:: 📥 **Additional Steps Required**
 
@@ -168,7 +180,7 @@ Folder
 
       If this folder does not receive incoming messages automatically,
       you may have to manually check your inbox during the verification step
-      and move Zammad’s test message there when it arrives.
+      and move Zammad's test message there when it arrives.
 
    .. _email-experts-keep-messages-on-server:
 
@@ -185,12 +197,12 @@ Keep messages on server
    .. note:: 🤔 **Why does Zammad delete messages by default?**
 
       If you never clean out your inbox,
-      it’ll eventually reach its storage limit,
+      it'll eventually reach its storage limit,
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it’s set up,
+      Most Zammad users never even look at their inbox once it's set up,
       so they rely on Zammad to keep it clean for them.
 
-      If you choose **yes** here, remember that it’s your responsibility
+      If you choose **yes** here, remember that it's your responsibility
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
@@ -205,10 +217,10 @@ Import as
       How should old emails be imported?
 
    During the import process, Zammad treats **all messages**
-   (including ones you’ve already read from months or years ago)
+   (including ones you've already read from months or years ago)
    as if they had been sent today:
    senders will receive auto-replies saying
-   “your message has been received and we’ll get back to you within 24 hours,”
+   “your message has been received and we'll get back to you within 24 hours,”
    and tickets created for each message will be marked as “new”.
 
    Use this option to disable this behavior for messages more than two weeks
@@ -228,6 +240,13 @@ Import as
 Email Outbound
 ^^^^^^^^^^^^^^
 
+.. figure:: /images/channels/email/account-setup-outbound.png
+   :align: center
+   :scale: 100 %
+   :alt: Screenshot showing email setup outbound
+
+   Configuration dialog of email channel outbound
+
 Send mails via
    Choose from **SMTP** and **local MTA** (*e.g.,* Sendmail).
 
@@ -235,7 +254,7 @@ Send mails via
    is only available on self-hosted installations.
 
 Host
-   Your email server’s hostname or IP address (*e.g.,* ``smtp.gmail.com``).
+   Your email server's hostname or IP address (*e.g.,* ``smtp.gmail.com``).
 
 User
    Your account login/username.
@@ -248,9 +267,18 @@ Password
    Leave blank to use the same value from incoming account setup.
 
 Port
-   Your email server’s port (usu. ``587`` or ``465``).
+   Your email server's port (usu. ``587`` or ``465``).
 
    Zammad will detect and enable SSL/STARTTLS support automatically.
+
+SSL verification
+   Here you can decide if the certificate of the email server has to be
+   verified or not (default: ``yes``). In case you are using custom
+   certificates, please have a look at
+   :doc:`how to add them to Zammad </settings/security/ssl-certificates>`.
+
+   .. include:: /includes/ssl-verification-warning.rst
+
 
 Verification
 ------------
@@ -263,11 +291,10 @@ As a final step, Zammad sends a test email from your own account,
 to your own account, and to ``verify-external-smtp-sending@discard.zammad.org``
 which discards the test mail right away.
 
-We've created a `landing page for discard.zammad.org`_ which describes the
-backgrounds as well.
+We've created a
+`landing page for discard.zammad.org <https://discard.zammad.org>`_
+which describes the backgrounds as well.
 
-.. _landing page for discard.zammad.org:
-   https://discard.zammad.org
 
 This this Zammad ensures that your email account is capable of sending internal
 and external - once this is verified the setup process is complete! 🎉

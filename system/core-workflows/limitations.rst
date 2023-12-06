@@ -1,8 +1,8 @@
 Limitations
 ===========
 
-Core Workflows does not replace Trigger
-  Workflows manipulate behavior of fields, however, they do not set values
+Core Workflows do not replace Triggers
+  Workflows manipulate the behavior of fields. However, they do not set values
   in fields because of actions.
 
 API calls are only partly affected
@@ -26,11 +26,11 @@ Some fields stay unavailable to customers
       consider using workarounds via :doc:`/system/objects` and
       :doc:`/manage/trigger`.
 
-What is out of scope of Core Workflows...?
+What is out of scope of Core Workflows?
   There are some things that would count as workflow but are either done via
-  :doc:`/manage/trigger`, :doc:`/manage/scheduler` or over the current top.
+  :doc:`/manage/trigger` or :doc:`/manage/scheduler`.
 
   Such as (but not limited to):
 
     * up- or downgrade permissions of users
-    * affect article creation or listing
+    * affecting article creation or listing
