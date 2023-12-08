@@ -52,11 +52,12 @@ Simple Storage (S3)
      - We recommend the deletion of the not used configuration style to avoid
        inconsistencies.
 
-   3. Set the "Storage Mechanism" in Zammad to ``Simple Storage (S3)`` in
+   3. Restart Zammad so the config file / environment variable is loaded
+   4. Set the "Storage Mechanism" in Zammad to ``Simple Storage (S3)`` in
       Settings > System > Storage and click on "Submit". After that, Zammad
       checks your configuration and the connection to the service and will raise
       an error message if something is wrong.
-   4. Restart Zammad that the changes take effect
+
 
    A very simple storage configuration could look like this:
 
@@ -71,7 +72,7 @@ Simple Storage (S3)
 
    .. tip::
 
-      Before setting the storage mechanism to ``Simple Storage (S3)`` (step 3),
+      Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4),
       please make sure to have a working setup.
 
       You can verify this by running
@@ -95,6 +96,6 @@ Simple Storage (S3)
 
 .. tip::
 
-   Moving attachments from Database to Filesystem can be run during
+   Moving attachments from "Database" to "Filesystem" can be run during
    production use. However, you should consider your framework conditions
-   (e.g. bandwith, system load in production) to define the right moment.
+   (e.g. bandwidth, system load in production) to define the right moment.
