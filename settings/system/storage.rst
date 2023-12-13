@@ -48,7 +48,8 @@ Simple Storage (S3)
        the upper area of the file
      - Or provide your S3 configuration as an URL (which you can find at the
        end of the file). Note: you can also provide this URL as environment
-       variable without using this yml-file.
+       variable (:docs:`see system documentation </appendix/configure-env-vars.html#storage-options>`)
+       without using this yml-file.
      - We recommend the deletion of the not used configuration style to avoid
        inconsistencies.
 
