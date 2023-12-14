@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 15:23+0100\n"
+"POT-Creation-Date: 2023-12-13 14:11+0100\n"
 "PO-Revision-Date: 2023-09-23 01:11+0000\n"
 "Last-Translator: Tomáš Kovařík <tomas.kovarik@cdv.cz>\n"
 "Language-Team: Czech <https://translations.zammad.org/projects/"
@@ -25,11 +25,6 @@ msgstr "Chat"
 
 #: ../channels/chat.rst:4
 #, fuzzy
-#| msgid ""
-#| "Chat has gotten very important for company and overall customer support. "
-#| "If used properly, support via chat can be a real efficiency booster. A "
-#| "downside of chats is when nobody responds or a bot responding to the "
-#| "customer."
 msgid ""
 "Chat is becoming more and more important in the customer support. If used "
 "properly, support via chat can be a real efficiency booster."
@@ -121,9 +116,6 @@ msgstr ""
 
 #: ../channels/chat.rst:37
 #, fuzzy
-#| msgid ""
-#| "If no agent is online or the agents are absend, the chat won't be "
-#| "available"
 msgid ""
 "If no agent is online or the agents are absent, the chat won't be available"
 msgstr ""
@@ -152,10 +144,6 @@ msgstr ""
 
 #: ../channels/chat.rst:45
 #, fuzzy
-#| msgid ""
-#| "Zammad will try to adapt your main website colors to the chat. You can "
-#| "also adjust those colors allowing you to integrate the chat into your "
-#| "website, like it has been there before."
 msgid ""
 "Zammad will try to adapt your main website colors to the chat. You can also "
 "adjust those colors allowing you to customize it to your corporate design."
@@ -15693,7 +15681,7 @@ msgid ""
 "to make sure on your own that the permissions are always correct."
 msgstr ""
 
-#: ../settings/system/storage.rst:85
+#: ../settings/system/storage.rst:87
 msgid "Simple Storage (S3)"
 msgstr ""
 
@@ -15738,17 +15726,22 @@ msgstr ""
 #: ../settings/system/storage.rst:49
 msgid ""
 "Or provide your S3 configuration as an URL (which you can find at the end of "
-"the file). Note: you can also provide this URL as environment variable "
-"without using this yml-file."
+"the file). Note: you can also provide this URL as environment variable (:"
+"docs:`see system documentation </appendix/configure-env-vars.html#storage-"
+"options>`) without using this yml-file."
 msgstr ""
 
-#: ../settings/system/storage.rst:52
+#: ../settings/system/storage.rst:53
 msgid ""
 "We recommend the deletion of the not used configuration style to avoid "
 "inconsistencies."
 msgstr ""
 
-#: ../settings/system/storage.rst:55
+#: ../settings/system/storage.rst:56
+msgid "Restart Zammad so the config file / environment variable is loaded"
+msgstr ""
+
+#: ../settings/system/storage.rst:57
 msgid ""
 "Set the \"Storage Mechanism\" in Zammad to ``Simple Storage (S3)`` in "
 "Settings > System > Storage and click on \"Submit\". After that, Zammad "
@@ -15756,21 +15749,17 @@ msgid ""
 "an error message if something is wrong."
 msgstr ""
 
-#: ../settings/system/storage.rst:59
-msgid "Restart Zammad that the changes take effect"
-msgstr ""
-
-#: ../settings/system/storage.rst:61
+#: ../settings/system/storage.rst:63
 msgid "A very simple storage configuration could look like this:"
 msgstr ""
 
-#: ../settings/system/storage.rst:74
+#: ../settings/system/storage.rst:76
 msgid ""
-"Before setting the storage mechanism to ``Simple Storage (S3)`` (step 3), "
+"Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4), "
 "please make sure to have a working setup."
 msgstr ""
 
-#: ../settings/system/storage.rst:77
+#: ../settings/system/storage.rst:79
 msgid ""
 "You can verify this by running ``rails r 'Rails.logger = Logger.new(STDOUT); "
 "pp Store::Provider::S3.ping?'`` in your Zammad directory. If everything is "
@@ -15778,29 +15767,29 @@ msgid ""
 "error message."
 msgstr ""
 
-#: ../settings/system/storage.rst:82
+#: ../settings/system/storage.rst:84
 msgid ""
 "If you installed Zammad through a package manager (rather than from source), "
 "replace ``rails r`` with ``zammad run rails r`` above. To learn more, see :"
 "docs:`Administration via Console </admin/console.html>`."
 msgstr ""
 
-#: ../settings/system/storage.rst:89
+#: ../settings/system/storage.rst:91
 msgid "🤔 **But which one to use?**"
 msgstr ""
 
-#: ../settings/system/storage.rst:91
+#: ../settings/system/storage.rst:93
 msgid ""
 "We strongly encourage you to use filesystem storage on busy instances "
 "instead of \"Database\". This will greatly improve system performance (de-"
 "crease database load and size)."
 msgstr ""
 
-#: ../settings/system/storage.rst:98
+#: ../settings/system/storage.rst:100
 msgid ""
-"Moving attachments from Database to Filesystem can be run during production "
-"use. However, you should consider your framework conditions (e.g. bandwith, "
-"system load in production) to define the right moment."
+"Moving attachments from \"Database\" to \"Filesystem\" can be run during "
+"production use. However, you should consider your framework conditions (e.g. "
+"bandwidth, system load in production) to define the right moment."
 msgstr ""
 
 #: ../settings/ticket.rst:6
@@ -17214,8 +17203,8 @@ msgstr ""
 msgid ""
 "You can choose from the seven built-in ticket states. If these states aren't "
 "enough for you, you can :ref:`define a new ticket state <ticket-state-"
-"reference>` for this purpose as well. This can be especially useful for "
-"tracking tickets with :doc:`reports </manage/report-profiles>`."
+"reference>` for this purpose as well. This can be useful for tracking "
+"tickets with :doc:`reports </manage/report-profiles>`, for example."
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
@@ -20498,7 +20487,7 @@ msgstr ""
 
 #: ../system/integrations/zabbix.rst:20
 msgid ""
-"2. Create a **new user** for a Zabbix alerter with an **email address** and "
+"Create a **new user** for a Zabbix alerter with an **email address** and "
 "create a personal user token with **ticket.agent** permissions."
 msgstr ""
 
@@ -24696,3 +24685,30 @@ msgstr "Verze"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
+
+#~ msgid ""
+#~ "Chat has gotten very important for company and overall customer support. "
+#~ "If used properly, support via chat can be a real efficiency booster. A "
+#~ "downside of chats is when nobody responds or a bot responding to the "
+#~ "customer."
+#~ msgstr ""
+#~ "Chat se stal velmi důležitým pro firemní a celkovou zákaznickou podporu. "
+#~ "Pokud se správně používá, může být podpora prostřednictvím chatu "
+#~ "skutečným zvýšením efektivity. Nevýhodou chatu je, když zákazníkovi nikdo "
+#~ "neodpovídá nebo odpovídá bot."
+
+#~ msgid ""
+#~ "If no agent is online or the agents are absend, the chat won't be "
+#~ "available"
+#~ msgstr ""
+#~ "Pokud není žádný agent online nebo jsou agenti nepřítomni, chat nebude k "
+#~ "dispozici"
+
+#~ msgid ""
+#~ "Zammad will try to adapt your main website colors to the chat. You can "
+#~ "also adjust those colors allowing you to integrate the chat into your "
+#~ "website, like it has been there before."
+#~ msgstr ""
+#~ "Zammad se pokusí přizpůsobit barvu chatu k barvě vašeho hlavního webu. "
+#~ "Tyto barvy můžete také upravit, což vám umožní integrovat chat do vašich "
+#~ "webových stránek, jako tomu bylo dříve."
