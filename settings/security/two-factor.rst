@@ -49,7 +49,7 @@ of fresh codes.
       :alt: Recovery Codes Generation Modal Dialog
       :align: center
 
-Enforce the set up of the two-factor authentication
+Enforce the Set Up of the Two-Factor Authentication
 ---------------------------------------------------
 
 .. warning::
@@ -76,7 +76,7 @@ user roles the requirement applies to in **Enforced for user roles** setting.
       :alt: Modal Dialog for Enforcing Two-Factor Authentication Set Up
       :align: center
 
-Reset two-factor-authentication for a specific user
+Reset Two-Factor Authentication for a Specific User
 ---------------------------------------------------
 
 In case an user isn't able to login anymore because of an inaccessible second
@@ -99,4 +99,4 @@ method or reset all of the user's 2FA methods:
 
 Choose the fitting one, click on the corresponding "Remove ..." button and
 confirm your action. The user now has to setup a new 2FA method, depending on
-the your 2FA configuration.
+your 2FA configuration.
