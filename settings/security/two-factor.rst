@@ -75,3 +75,28 @@ user roles the requirement applies to in **Enforced for user roles** setting.
    .. figure:: /images/settings/security/two-factor-after-auth-modal.png
       :alt: Modal Dialog for Enforcing Two-Factor Authentication Set Up
       :align: center
+
+Reset two-factor-authentication for a specific user
+---------------------------------------------------
+
+In case an user isn't able to login anymore because of an inaccessible second
+factor, you can reset the user's 2FA method.
+
+To do this, go to the user management and search for the relevant user. After
+you found the account, click the button in the action column and select
+"Manage Two-Factor Authentication":
+
+.. figure:: /images/settings/security/two-factor/user-action-context-menu.png
+   :alt: Context menu in action column in user management
+   :align: center
+
+After selecting this, you can see a dialog where you can either reset one 2FA
+method or reset all of the user's 2FA methods:
+
+.. figure:: /images/settings/security/two-factor/dialog-managing-user-2fa.png
+   :alt: Dialog for resetting user's 2FA method
+   :align: center
+
+Choose the fitting one, click on the corresponding "Remove ..." button and
+confirm your action. The user now has to setup a new 2FA method, depending on
+the your 2FA configuration.
