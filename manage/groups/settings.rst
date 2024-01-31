@@ -28,10 +28,7 @@ Parent group
 Assignment timeout
    The time in minutes after which the ticket's ownership will revert back to
    *unassigned* after the assigned agent hasn't worked on the ticket.
-
-      .. note::
-
-         This timeout does not take any working hours in account.
+   This timeout does *not* take any working hours in account.
 
 Follow-up possible
    This option allows you to decide how Zammad should react if a customer
@@ -101,15 +98,15 @@ Active
    longer be able to see the group and thus can't add, update or read it's
    tickets.
 
-      .. note::
+   .. note::
 
-         As of now groups cannot be removed.
+      Currently, groups cannot be removed.
 
-      .. warning::
+   .. warning::
 
-         Please keep in mind that you still can route tickets into these groups.
-         This is potentially dangerous, make sure the group is no longer part
-         of email filters or a destination group.
+      Please keep in mind that you still can route tickets into these groups.
+      This is potentially dangerous, make sure the group is no longer part
+      of email filters or a destination group.
 
 .. figure:: /images/manage/groups/group-settings.png
    :alt: Screenshot showing how a group configuration can look like.
