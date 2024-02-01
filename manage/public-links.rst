@@ -10,15 +10,6 @@ useful links to other services if needed.
    :alt: Screenshot showing the public links management interface within
          the settings
 
-See here:
-   * :ref:`public_links_add_new`
-   * :ref:`public_links_manage_existing`
-
-      * :ref:`public_links_rearrange`
-      * :ref:`public_links_actions` (Cloning & Removing)
-
---------------------------------------------------------------------------------
-
 .. _public_links_add_new:
 
 Adding new public links
@@ -28,24 +19,19 @@ You can add new public links via the *New Public Link*  button on the upper
 right. You'll see a new dialogue that consists of the following information.
 
 Link
-   This is the actual target page you're linking to.
-
-   .. note::
-
-      Zammad only allows URLs that start with either
-      ``http://`` or ``https://``.
+   This is the actual target page you're linking to. Zammad only allows URLs
+   that start with either ``http://`` or ``https://``.
 
    .. important::
 
-      You may not use data privacy and terms of service URLs of ``zammad.com``
-      nor ``zammad.org``.
+      Do not use data privacy and terms of service URLs of ``zammad.com``
+      or ``zammad.org``.
 
-      Why?
-         Every instance is special on its own. Every hosting is different,
-         data retention and other things do not fit as every company using
-         Zammad handles these matters differently.
+      Every instance is special on its own. Every hosting is different,
+      data retention and other things do not fit as every company using
+      Zammad handles these matters differently.
 
-         This function was made to allow you to link to your *own resources*.
+      This function was made to allow you to link to your *own resources*.
 
 Title
    This is the regular text your user sees as the link text.
@@ -68,12 +54,6 @@ Context
    You can currently select from:
 
       * Forgot Password Screen
-
-        .. note::
-
-           This context *does not* affect the :ref:`security_password_login`
-           function.
-
       * Login Screen
       * Signup Screen
 
@@ -82,14 +62,14 @@ Context
 
       .. tabs::
 
-         .. tab:: Forgot Password Screen
+         .. tab:: Login Screen
 
             .. figure:: /images/manage/public-links/public-links_login-page.png
                :alt: Screenshot showing Zammad's forgot password page with custom
                      public links
                :height: 540px
 
-         .. tab:: Login Screen
+         .. tab:: Forgot Password Screen
 
             .. figure:: /images/manage/public-links/public-links_forgot-password.png
                :alt: Screenshot showing Zammad's login page with custom public
@@ -153,11 +133,8 @@ Cloning
 Removing
    If you no longer require a public link, you can remove it by using ⋮ and
    selecting *Delete*. Zammad will ensure that you really want to remove the
-   entry with a modal.
-
-   .. danger::
-
-      Deleting is **final**. There's no way to bring back removed public links.
+   entry with a modal. Be aware that the deletion is **final**. There's no
+   way to bring back removed public links.
 
    .. figure:: /images/manage/public-links/public-links_delete-links.gif
       :alt: Screencast showing the public link removal via ⋮ Actions → Delete
