@@ -4,12 +4,8 @@ Macro Example
 To get you up and running quickly, here are some examples
 of the kinds of one-click actions you can set up using macros.
 
-.. hint::
-
-   If they don't make sense to you, don't worry - just skip ahead to
-   :doc:`/manage/macros/how-do-they-work`
-   to learn about all the options in detail,
-   then come back here to see them in action.
+To learn about macros in detail, go to the section
+:doc:`/manage/macros/how-do-they-work`.
 
 1. If you deal with a lot of spam, you could set up a macro that applies
    the following changes to a ticket:
