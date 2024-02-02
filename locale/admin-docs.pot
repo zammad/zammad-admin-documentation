@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 08:42+0100\n"
+"POT-Creation-Date: 2024-02-02 13:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5471,8 +5471,8 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:149
 #: ../manage/public-links.rst:39
-#: ../manage/time-accounting.rst:157
-#: ../manage/time-accounting.rst:171
+#: ../manage/time-accounting.rst:150
+#: ../manage/time-accounting.rst:164
 #: ../system/maintenance.rst:31
 msgid "Title"
 msgstr ""
@@ -8365,19 +8365,19 @@ msgstr ""
 msgid "Zammad's time accounting uses ticket **Selector** (filter) to check if a ticket is considered for the time accounting or not. If a ticket is applicable, Zammad will request the agent to provide how much time was needed to process the current ticket step."
 msgstr ""
 
-#: ../manage/time-accounting.rst:24
+#: ../manage/time-accounting.rst:22
 msgid "In order for Zammad to bring up the time accounting dialog to an agent, the agent has to update the ticket together with an article of any type. The article part is mandatory."
 msgstr ""
 
-#: ../manage/time-accounting.rst:28
+#: ../manage/time-accounting.rst:26
 msgid "However, the time accounting dialog is not mandatory and can be canceled by your agents if needed. You cannot enforce time accounting."
 msgstr ""
 
-#: ../manage/time-accounting.rst:31
+#: ../manage/time-accounting.rst:29
 msgid "If a ticket is no longer considered for the time accounting, the already accounted time will be preserved."
 msgstr ""
 
-#: ../manage/time-accounting.rst:36
+#: ../manage/time-accounting.rst:34
 msgid "The selector applies to the ticket state before any attribute changes have been saved. That means if your agent is e.g. going to close a ticket alongside writing an article, the ticket selector has to match the ticket state before closing for the time accounting dialog to appear."
 msgstr ""
 
@@ -8385,47 +8385,47 @@ msgstr ""
 msgid "Time Accounting Ticket Selector"
 msgstr ""
 
-#: ../manage/time-accounting.rst:47
+#: ../manage/time-accounting.rst:45
 msgid "By default, agents account time as a unitless numerical input. However, it is possible to show a specific unit by configuring **Unit** setting, which provides several options:"
 msgstr ""
 
-#: ../manage/time-accounting.rst:51
+#: ../manage/time-accounting.rst:49
 msgid "no unit"
 msgstr ""
 
-#: ../manage/time-accounting.rst:52
+#: ../manage/time-accounting.rst:50
 msgid "Default behavior, no unit is shown next to the time value."
 msgstr ""
 
-#: ../manage/time-accounting.rst:53
+#: ../manage/time-accounting.rst:51
 msgid "hour(s)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:54
+#: ../manage/time-accounting.rst:52
 msgid "Shows ``hour(s)`` as the unit next to the time value."
 msgstr ""
 
-#: ../manage/time-accounting.rst:55
+#: ../manage/time-accounting.rst:53
 msgid "quarter-hour(s)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:56
+#: ../manage/time-accounting.rst:54
 msgid "Shows ``quarter-hour(s)`` as the unit next to the time value."
 msgstr ""
 
-#: ../manage/time-accounting.rst:57
+#: ../manage/time-accounting.rst:55
 msgid "minute(s)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:58
+#: ../manage/time-accounting.rst:56
 msgid "Shows ``minute(s)`` as the unit next to the time value."
 msgstr ""
 
-#: ../manage/time-accounting.rst:60
+#: ../manage/time-accounting.rst:58
 msgid "custom unit"
 msgstr ""
 
-#: ../manage/time-accounting.rst:60
+#: ../manage/time-accounting.rst:58
 msgid "Shows a custom unit that can be specified as free input."
 msgstr ""
 
@@ -8433,11 +8433,11 @@ msgstr ""
 msgid "Time Accounting Unit"
 msgstr ""
 
-#: ../manage/time-accounting.rst:67
+#: ../manage/time-accounting.rst:65
 msgid "The configurable time accounting unit is used only for display!"
 msgstr ""
 
-#: ../manage/time-accounting.rst:69
+#: ../manage/time-accounting.rst:67
 msgid "No numerical transformation will be applied to the values, the unit is merely used to indicate to the agents in which units their time is accounted. The original time values will be preserved."
 msgstr ""
 
@@ -8445,11 +8445,11 @@ msgstr ""
 msgid "Time Accounting Unit when Recording"
 msgstr ""
 
-#: ../manage/time-accounting.rst:78
+#: ../manage/time-accounting.rst:76
 msgid "Activity Types"
 msgstr ""
 
-#: ../manage/time-accounting.rst:80
+#: ../manage/time-accounting.rst:78
 msgid "**Activity Types** can be used to group the different ticket time accounting entries together. For example, entries that are relevant to a \"Billing\" type."
 msgstr ""
 
@@ -8457,7 +8457,7 @@ msgstr ""
 msgid "Time Accounting Activity Types"
 msgstr ""
 
-#: ../manage/time-accounting.rst:87
+#: ../manage/time-accounting.rst:85
 msgid "When you enable the recording of the **Activity Type**, the agents will be able to select a type from this list."
 msgstr ""
 
@@ -8465,11 +8465,11 @@ msgstr ""
 msgid "Time Accounting Activity Type Selection for Agents"
 msgstr ""
 
-#: ../manage/time-accounting.rst:94
+#: ../manage/time-accounting.rst:92
 msgid "Additionally, a column with an associated activity type will be rendered for an entry in the **Activity** table under the **Accounted Time** tab."
 msgstr ""
 
-#: ../manage/time-accounting.rst:97
+#: ../manage/time-accounting.rst:95
 msgid "You can manage available activity types in this screen like any other Zammad object. Only active types will be available for the selection when recording new times."
 msgstr ""
 
@@ -8477,31 +8477,27 @@ msgstr ""
 msgid "New Time Accounting Activity Type Dialog"
 msgstr ""
 
-#: ../manage/time-accounting.rst:106
+#: ../manage/time-accounting.rst:103
 msgid "Activity types can be set as default, and in that case they will be pre-selected for the agents when they are asked to account their time. It is also possible to unset default activity type, in which case no type will be pre-selected and the agents can make their choice."
 msgstr ""
 
-#: ../manage/time-accounting.rst:112
+#: ../manage/time-accounting.rst:109
 msgid "Accounted Time"
 msgstr ""
 
-#: ../manage/time-accounting.rst:114
+#: ../manage/time-accounting.rst:111
 msgid "Under the **Accounted Time** tab, Zammad provides a section for reviewing all accounted times for your tickets. Accounted times are displayed per years and months."
 msgstr ""
 
-#: ../manage/time-accounting.rst:0
-msgid "Having tickets that are overlapping several months?"
+#: ../manage/time-accounting.rst:115
+msgid "If you have tickets that are overlapping several months, you can differentiate by *time units* and *time units total* (e.g. to allow partial billing) in the downloaded file."
 msgstr ""
 
-#: ../manage/time-accounting.rst:0
-msgid "No problem! Zammad provides *time units* and *time units total* to allow partial billing."
-msgstr ""
-
-#: ../manage/time-accounting.rst:131
+#: ../manage/time-accounting.rst:126
 msgid "Select the right month"
 msgstr ""
 
-#: ../manage/time-accounting.rst:125
+#: ../manage/time-accounting.rst:120
 msgid "Usually you want to bill accounted time of other months than the current one. Just select the relevant year and month to receive the accounted times and ticket information."
 msgstr ""
 
@@ -8509,131 +8505,127 @@ msgstr ""
 msgid "Screenshot showing a selection for year and month on time accounting"
 msgstr ""
 
-#: ../manage/time-accounting.rst:209
+#: ../manage/time-accounting.rst:196
 msgid "Tickets and their accounted time"
 msgstr ""
 
-#: ../manage/time-accounting.rst:134
+#: ../manage/time-accounting.rst:129
 msgid "Zammad allows you to receive the accounted information just like you need them. For this you currently have four options to review and also download the relevant data as CSV."
 msgstr ""
 
-#: ../manage/time-accounting.rst:138
+#: ../manage/time-accounting.rst:133
 msgid "To download the CSV data, use the download button right next to each heading (e.g. \"Ticket\")."
 msgstr ""
 
-#: ../manage/time-accounting.rst:143
-msgid "🤓 Of course you can also automate this with API calls."
+#: ../manage/time-accounting.rst:136
+msgid "This can also be automated with API calls."
 msgstr ""
 
-#: ../manage/time-accounting.rst:146
+#: ../manage/time-accounting.rst:139
 msgid "Only the first 20 entries are shown for each table. To see all of them, simply download the records in CSV."
 msgstr ""
 
-#: ../manage/time-accounting.rst:163
+#: ../manage/time-accounting.rst:156
 msgid "Activity"
 msgstr ""
 
-#: ../manage/time-accounting.rst:150
+#: ../manage/time-accounting.rst:143
 msgid "This filter works similar to the ticket filter, with one exception: You'll find each *individual* time accounting step of your agents. This is what you'd also see in the ticket's history before Zammad 5.2."
 msgstr ""
 
-#: ../manage/time-accounting.rst:154
-#: ../manage/time-accounting.rst:168
-#: ../manage/time-accounting.rst:189
+#: ../manage/time-accounting.rst:147
+#: ../manage/time-accounting.rst:161
+#: ../manage/time-accounting.rst:178
 msgid "In this list you'll see the following ticket information:"
 msgstr ""
 
-#: ../manage/time-accounting.rst:156
-#: ../manage/time-accounting.rst:170
+#: ../manage/time-accounting.rst:149
+#: ../manage/time-accounting.rst:163
 #: ../settings/ticket.rst:93
 msgid "Number"
 msgstr ""
 
-#: ../manage/time-accounting.rst:158
-#: ../manage/time-accounting.rst:172
-#: ../manage/time-accounting.rst:193
-#: ../manage/time-accounting.rst:191
+#: ../manage/time-accounting.rst:151
+#: ../manage/time-accounting.rst:165
+#: ../manage/time-accounting.rst:182
+#: ../manage/time-accounting.rst:180
 msgid "Customer"
 msgstr ""
 
-#: ../manage/time-accounting.rst:159
-#: ../manage/time-accounting.rst:173
-#: ../manage/time-accounting.rst:192
+#: ../manage/time-accounting.rst:152
+#: ../manage/time-accounting.rst:166
+#: ../manage/time-accounting.rst:181
 msgid "Organization of customer (if applicable)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:160
+#: ../manage/time-accounting.rst:153
 msgid "Agent that accounted the time"
 msgstr ""
 
-#: ../manage/time-accounting.rst:161
+#: ../manage/time-accounting.rst:154
 msgid "Time units accounted in the current activity"
 msgstr ""
 
-#: ../manage/time-accounting.rst:162
+#: ../manage/time-accounting.rst:155
 msgid "Activity type (if enabled)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:163
-#: ../manage/time-accounting.rst:177
+#: ../manage/time-accounting.rst:156
+#: ../manage/time-accounting.rst:170
 #: ../manage/webhook/log.rst:34
 msgid "Created at"
 msgstr ""
 
-#: ../manage/time-accounting.rst:182
+#: ../manage/time-accounting.rst:171
 #: ../settings/ticket.rst:2
 #: ../system/variables/ticket.rst:2
 msgid "Ticket"
 msgstr ""
 
-#: ../manage/time-accounting.rst:166
+#: ../manage/time-accounting.rst:159
 msgid "This filter contains all relevant tickets from the selected month."
 msgstr ""
 
-#: ../manage/time-accounting.rst:174
+#: ../manage/time-accounting.rst:167
 msgid "Agent currently assigned (ticket owner)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:175
-#: ../manage/time-accounting.rst:193
+#: ../manage/time-accounting.rst:168
+#: ../manage/time-accounting.rst:182
 msgid "Time units accounted in the current month"
 msgstr ""
 
-#: ../manage/time-accounting.rst:176
+#: ../manage/time-accounting.rst:169
 msgid "Time units total (time accounted during ticket life)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:178
+#: ../manage/time-accounting.rst:171
 msgid "Closed at (if applicable)"
 msgstr ""
 
-#: ../manage/time-accounting.rst:182
-msgid "The CSV file of this filter provides all ticket meta information."
-msgstr ""
-
-#: ../manage/time-accounting.rst:185
+#: ../manage/time-accounting.rst:174
 msgid "This provides you a per user filter on accounted time units. Each user has a total of time accounted in the current month (over all applicable tickets)."
 msgstr ""
 
-#: ../manage/time-accounting.rst:203
+#: ../manage/time-accounting.rst:190
 #: ../settings/branding.rst:13
 #: ../system/objects/permissions.rst:55
 msgid "Organization"
 msgstr ""
 
-#: ../manage/time-accounting.rst:196
+#: ../manage/time-accounting.rst:185
 msgid "This provides a list of all organizations where customers have caused accounted time in that month."
 msgstr ""
 
-#: ../manage/time-accounting.rst:201
-msgid "You can also see entries for customers that are part of a primary organization. Users without am organization can be found in the Customer filter."
+#: ../manage/time-accounting.rst:188
+msgid "You can also see entries for customers that are part of a primary organization. Users without an organization can be found in the Customer filter."
 msgstr ""
 
 #: ../manage/time-accounting.rst:0
 msgid "Time accounting view with time accounted filters"
 msgstr ""
 
-#: ../manage/time-accounting.rst:209
+#: ../manage/time-accounting.rst:196
 msgid "Each heading allows you to download the CSV versions of the provided view via the download button next to it."
 msgstr ""
 
