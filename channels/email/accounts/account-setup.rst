@@ -6,21 +6,16 @@ Setting up a new email account? Here's what all the settings do.
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
 
-.. danger:: 🚯 **Zammad will delete all emails in your inbox
-   during the import process.**
-
-   Use the *Experts* dialog to
-   :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
-
    .. _email-experts-import-as-warning:
 
-.. warning::
+.. danger::
 
-   📮 **Zammad will send an auto-reply message to every email it imports.**
-   (Including the old ones!)
-
-   Use the *Experts* dialog to
-   :ref:`change this behavior <email-experts-import-as>`.
+   * By default, Zammad will **delete all emails** in your inbox
+     during the import process. Use the *Experts* dialog to
+     :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
+   * Zammad will **send an auto-reply message to every email it imports**
+     (including the old ones!). Use the *Experts* dialog to
+     :ref:`change this behavior <email-experts-import-as>`.
 
 .. note::
 
@@ -135,15 +130,7 @@ SSL / STARTTLS
 
    You can choose from the following options:
 
-      * No SSL
-
-        .. warning::
-
-           Retrieving Emails, just like sending your
-           username and password without any encryption *is not secure*.
-
-           You should never use this configuration on internet machines!
-
+      * No SSL (*not recommended!*)
       * SSL
       * STARTTLS
 
@@ -170,29 +157,28 @@ Folder
    *e.g.,* ``Inquiries/Tech-Support`` vs. ``Inquiries.Tech-Support``.
    Contact your email provider or system administrator if you don't know.)
 
-   .. note:: 📥 **Additional Steps Required**
+   If you selected a folder, additional steps may be required:
+   In the last step of the account setup process,
+   Zammad sends you an email from your own account,
+   then waits for it to appear in the folder specified here.
+   **Account verification will not complete until
+   this test message has been received.**
 
-      In the last step of the account setup process,
-      Zammad sends you an email from your own account,
-      then waits for it to appear in the folder specified here.
-      **Account verification will not complete until
-      this test message has been received.**
-
-      If this folder does not receive incoming messages automatically,
-      you may have to manually check your inbox during the verification step
-      and move Zammad's test message there when it arrives.
+   If this folder does not receive incoming messages automatically,
+   you may have to manually check your inbox during the verification step
+   and move Zammad's test message there when it arrives.
 
    .. _email-experts-keep-messages-on-server:
 
 Keep messages on server
    Specify what happens to your emails after Zammad imports them:
 
-   * ``no`` Zammad deletes all imported messages
+   * ``no``: Zammad deletes all imported messages
 
-   * ``yes`` Zammad marks imported messages as read
+   * ``yes``: Zammad marks imported messages as read. With this option, Zammad
+     will only import unread messages. This means Zammad may miss messages if
+     the mailbox is externally modified.
 
-     (With this option, Zammad will only import unread messages.
-     This means Zammad may miss messages if the mailbox is externally modified.)
 
    .. note:: 🤔 **Why does Zammad delete messages by default?**
 
@@ -219,9 +205,8 @@ Import as
    During the import process, Zammad treats **all messages**
    (including ones you've already read from months or years ago)
    as if they had been sent today:
-   senders will receive auto-replies saying
-   “your message has been received and we'll get back to you within 24 hours,”
-   and tickets created for each message will be marked as “new”.
+   senders will receive auto-replies and tickets are created with state "new"
+   for each message.
 
    Use this option to disable this behavior for messages more than two weeks
    old.

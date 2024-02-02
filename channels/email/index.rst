@@ -65,12 +65,12 @@ Control how Zammad **sends and receives email**.
 :doc:`📇 Header manipulation <email-headers>`
    Manipulate auto response behavior or incoming routing.
 
-      .. warning:: 🤓 This is a very advanced topic.
+   .. warning:: 🤓 This is a very advanced topic.
 
 Extra Options for Self-Hosted Users
 -----------------------------------
 
-If you’re too cool for POP3/IMAP/SMTP...
+If you're too cool for POP3/IMAP/SMTP...
 
 .. toctree::
    :maxdepth: 1

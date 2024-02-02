@@ -21,7 +21,7 @@ Send mails via
    Choose from **SMTP** and **local MTA** (*e.g.,* Sendmail).
 
 Host
-   Your email server’s hostname or IP address (*e.g.,* ``smtp.gmail.com``).
+   Your email server's hostname or IP address (*e.g.,* ``smtp.gmail.com``).
 
 User
    Your account login/username.
@@ -33,14 +33,14 @@ Password
    Your account password.
 
 Port
-   Your email server’s port (usu. ``587`` or ``465``).
+   Your email server's port (usu. ``587`` or ``465``).
 
    Zammad will detect and enable SSL/STARTTLS support automatically.
 
 .. note:: 🤔 **This looks familiar... Where have I seen it before?**
-   
+
    This configuration step was part of the Getting Started wizard:
-   
+
    .. figure:: /images/channels/email/getting-started_notification-channel.png
       :alt: The getting started wizard asking how one wants to send out
             notifications

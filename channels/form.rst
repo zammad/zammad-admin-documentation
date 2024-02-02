@@ -33,10 +33,8 @@ Active
    By default the form channel is *inactive*.
    Use the switch in front of "Form" to activate this channel.
 
-   .. note::
-
-      Forms will not be displayed on your website if the channel is not active.
-      This does not affect the form preview on the channels setting page.
+   Forms will not be displayed on your website if the channel is not active.
+   This does not affect the form *preview* on the channels setting page.
 
 Group selection for ticket creation
    The group you set here defines where tickets should be created if they're
@@ -49,11 +47,11 @@ This section helps you to configure your form in the channel's scope.
 If you're happy with what you've chosen, you're provided with the code you
 need to copy to your website.
 
-   .. warning::
+.. warning::
 
-      The designer's changes *are not* stored anywhere in Zammad.
-      This means that the provided source code needs to be copied every time
-      you change settings here.
+   The designer's changes *are not* stored anywhere in Zammad.
+   This means that the provided source code needs to be copied every time
+   you change settings here.
 
 .. figure:: /images/channels/form/form-channel-designer.png
    :alt: Zammad's form designer supports you with the initial configuration
@@ -103,12 +101,10 @@ Options
       Not selecting this option allows you to natively integrate the form within
       your website's body.
 
+      No matter what you select here, the form *is always* loaded completely
+      if your user browses the page containing the form.
+
       This option is set by default.
-
-      .. note::
-
-         No matter what you select here, the form *is always* loaded completely
-         if your user browses the page containing the form.
 
    Don't load CSS for the form You need to generate your own CSS for the form.
       By default Zammad's form comes with basic CSS. This may not fit your
@@ -120,15 +116,13 @@ Options
    Add attachment option to upload
       Allows your user to upload **one attachment** to the form.
 
-      .. note:: **🤓 Watch allowed attachment sizes here**
+      The allowed attachment sizes *is not* limited. The only limitation that
+      applies is your web servers upload limit.
 
-         This function *is not* limited technically. The only limitation that
-         applies is your web servers upload limit.
+      .. hint:: **SaaS only**
 
-         .. hint:: **SaaS only**
-
-            If you're with Zammad hosted, attachments are limited by the
-            package you've chosen.
+         If you're with Zammad hosted, attachments are limited by the
+         package you've chosen.
 
    Add agreement text before submit
       If enabled, this will allow you define a text that the form will display
@@ -151,12 +145,8 @@ Preview
 Below the form options, Zammad provides a preview section to visualize the
 settings you've just chosen. By default you'll see a button named *Feedback*.
 
-Clicking on the button will open the form modal.
-
-   .. hint::
-
-      If the form channel is set to active, you already are able to create
-      tickets even from this preview mode.
+Clicking on the button will open the form modal. If the form channel is set
+to active, you already are able to create tickets even from this preview mode.
 
 .. figure:: /images/channels/form/form-channel-preview-your-configuration.png
    :alt: Screenshot showing the preview section for the just configured form
@@ -172,21 +162,21 @@ Header section
    The first code block provides you with Zammad's current jQuery dependency.
    This script section usually belongs to your website's header section.
 
-   .. note::
+   The channel form suggests the following script tag which loads the
+   javascript libary required **from an external site**. This may not
+   suite your local requirements. You can use locally hosted jQuery version,
+   **however** the version is fixed.
 
-      The channel form suggests the following script tag which loads the
-      javascript libary required **from an external site**. This may not
-      suite your local requirements. You can use locally hosted jQuery version,
-      **however** the version is fixed.
+   ``<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>``
 
-      ``<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>``
+   .. warning::
 
-      .. warning::
-
-         Do not mix jQuery versions - it's likely to break something.
+      Do not mix jQuery versions - it's likely to break something.
 
 Body section
    The second code block is the actual code required for your form to run.
+   It is updated automatically when changing settings in the
+   designer above.
 
    The first line containing ``id="zammad-feedback-form"`` highly depends on
    the settings selected above. This part belongs into the place you actually
@@ -194,11 +184,6 @@ Body section
 
    The rest can either be placed at the same level or somewhere else on the
    same page.
-
-   .. hint::
-
-      This code block is updated automatically when changing settings in the
-      designer above.
 
    .. note::
 
