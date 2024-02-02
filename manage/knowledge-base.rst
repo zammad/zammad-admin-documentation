@@ -54,7 +54,7 @@ Theme
    :alt: Knowledge Base: Configure theme
    :align: center
 
-   🎨 Customize the appearance of the knowledge base.
+   Customize the appearance of the knowledge base.
 
 :Icon & Link Color:
    Applies to all **category & article** entries in knowledge base menus,
@@ -106,7 +106,7 @@ Languages
    :alt: Knowledge Base: Configure languages
    :align: center
 
-   🌍 Add or remove locales, or reassign the default.
+   Add or remove locales, or reassign the default.
 
 The knowledge base will automatically display the language matching each
 visitor's locale. Visitors may always manually switch to another language via a
@@ -176,7 +176,7 @@ Custom URL
    :alt: Knowledge Base: Configure custom URL
    :align: center
 
-   📍 Relocate the knowledge base to the URL of your choosing.
+   Relocate the knowledge base to the URL of your choosing.
 
 By default, the knowledge base will appear
 at the same domain as your Zammad instance, under ``/help``.
@@ -192,8 +192,8 @@ Delete
    :alt: Knowledge Base: Delete knowledge base
    :align: center
 
-   🗑️ Permanently delete the knowledge base and all the articles within it.
+   Permanently delete the knowledge base and all the articles within it.
 
 Use this panel to delete the knowledge base.
-If you wish to unpublish it without deleting all its content,
+If you wish to unpublish it without deleting all of its content,
 simply disable it via the toggle button at the top of the window instead.
