@@ -69,59 +69,57 @@ Available Indexes
 Within this section we're displaying the -in our opinion- most important
 indexes for a Zammad instance.
 
-.. tip::
-   
-   If you require all indexes or our listing is not good enough for you,
-   point your browser to the URL we're providing and append
-   ``/_aliases?pretty=true``. The result should look like so:
-   ``https://<URL>.zammad.com/_aliases?pretty=true``.
+If you require all indexes or our listing is not good enough for you,
+point your browser to the URL we're providing and append
+``/_aliases?pretty=true``. The result should look like this:
+``https://<URL>.zammad.com/_aliases?pretty=true``.
 
-   Your browser will automatically ask for your credentials - you'll then
-   see something like this:
+Your browser will automatically ask for your credentials - you'll then
+see something like this:
 
-   .. code-block:: json
+.. code-block:: json
 
-      {
-         "XXXXXXXX" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_cti_log" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_knowledge_base_answer_translation" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_ticket" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_knowledge_base_category_translation" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_knowledge_base_translation" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_ticket_state" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_user" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_stats_store" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_chat_session" : {
-          "aliases" : { }
-         },
-         "XXXXXXXX_group" : {
-          "aliases" : { }
-         },
-         "XXXXXXXX_ticket_priority" : {
-            "aliases" : { }
-         },
-         "XXXXXXXX_organization" : {
-            "aliases" : { }
-         }
+   {
+      "XXXXXXXX" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_cti_log" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_knowledge_base_answer_translation" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_ticket" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_knowledge_base_category_translation" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_knowledge_base_translation" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_ticket_state" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_user" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_stats_store" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_chat_session" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_group" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_ticket_priority" : {
+         "aliases" : { }
+      },
+      "XXXXXXXX_organization" : {
+         "aliases" : { }
       }
+   }
 
 Credentials
 -----------
@@ -130,11 +128,7 @@ Within this section Zammad displays your available users.
 The password is provided once (upon activation) and cannot be retrieved
 after that.
 
-   .. note:: **🔐 I need my Elasticsearch user password to be changed**
-
-      Within the credentials table use the "Reset password" button to receive
-      a brand new password for the account in question. This change is
-      immediate, keep in mind that this may affect third party tools connected
-      to your instance.
-
-      🤓 *Above does not change indexes.*
+If you need to change or reset your Elasticsearch user password, use the
+"Reset password" button in the credentials table. Doing so creates a brand new
+password for the account in question. This change is immediate, keep in mind
+that this may affect third party tools connected to your instance.

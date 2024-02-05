@@ -26,11 +26,6 @@ Please provide the following requirements:
 Available settings
 ------------------
 
-.. hint::
-
-   Click the button next to the ``Placetel`` heading to activate or
-   deactivate this function.
-
 .. include:: /system/integrations/cti/includes/important-dont-forget-saving.include.rst
 
 Endpoint Settings

@@ -18,7 +18,7 @@ object.
 
 .. hint::
 
-   Clearbit does have a Mapping of fields like LDAP and Exchange have, but does
+   Clearbit does have a mapping of fields like LDAP and Exchange have, but does
    not "win" against Zammad information. This means that if you have e.g. the
    last name field filled in already and Clearbit has other information on that,
    it will not be updated.

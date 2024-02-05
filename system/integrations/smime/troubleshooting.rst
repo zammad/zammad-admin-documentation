@@ -1,7 +1,7 @@
 Troubleshooting
 ===============
 
-All of the system’s latest S/MIME activity
+All of the system's latest S/MIME activity
 is displayed in the **Recent Logs** section.
 
 .. figure:: /images/system/integrations/smime/log.gif
@@ -26,15 +26,15 @@ I received a signed/encrypted email before I set up S/MIME integration
 
    .. figure:: /images/system/integrations/smime/troubleshooting-retry.png
       :alt: Screenshot of user prompt to retry decryption
-      :scale: 50%
+      :scale: 70%
       :align: center
 
 The 🔒 **Encrypt** button is disabled
-   * Have you added the recipient’s certificate?
-   * Are you sure the recipient’s certificate is valid?
+   * Have you added the recipient's certificate?
+   * Are you sure the recipient's certificate is valid?
    * Have you checked your ``production.log`` for more details?
 
-   .. warning:: If encryption doesn’t work in the composer, it won’t work in
+   .. warning:: If encryption doesn't work in the composer, it won't work in
       :doc:`triggers </manage/trigger>` or the :doc:`scheduler </manage/scheduler>` either!
 
 The ✅ **Sign** button is disabled
@@ -42,7 +42,7 @@ The ✅ **Sign** button is disabled
    * Does the email address on the certificate match the email address of the agent/group composing the email?
 
 Error: “Fingerprint already taken”
-   * Are you sure you haven’t added this certificate already?
+   * Are you sure you haven't added this certificate already?
 
 Error: “❌ invalid byte sequence in UTF-8”
    * Please ensure to provide PEM formatted certificate and keys.

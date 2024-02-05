@@ -2,7 +2,7 @@ i-doit
 ======
 
 `i-doit <https://www.i-doit.com/>`_ is an open-source
-**configuration management database**—in other words, a tool for keeping tabs
+**configuration management database** - in other words, a tool for keeping tabs
 on every single piece of your physical and digital infrastructure, from network
 equipment to virtual machines on down to the faceplates on your rack shelves
 and more.
@@ -35,15 +35,12 @@ learn how it works in practice).
 How to set it up
 ^^^^^^^^^^^^^^^^
 
-.. note:: 🧩 **Requires i-doit's** `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_.
+It requires i-doit's
+`API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_. Make sure to
+have it properly set up. Use the following setting:
 
-   Use the following settings:
-
-   Active
-      Yes
-
-   Enforce autentication by username and password
-      No
+   * Active: ``Yes``
+   * Enforce authentication by username and password: ``No``
 
 To set it up, enable the integration in the Zammad admin panel
 under **System > Integrations > i-doit**:
@@ -109,15 +106,13 @@ TTS-Type
 Username / Password
    Login credentials for a Zammad agent.
 
-   .. note::
+   This agent must have **read permission** for all
+   :doc:`groups </manage/groups/index>` that plan on using the i-doit
+   integration.
 
-      This agent must have **read permission** for all
-      :doc:`groups </manage/groups/index>` that plan on using the i-doit
-      integration.
-
-      You may even wish to create a dedicated agent account just for this
-      integration. (Otherwise, if the agent ever changes her password,
-      you will have to remember to update it here.)
+   You may even wish to create a dedicated agent account just for this
+   integration (otherwise, if the agent ever changes her password,
+   you will have to remember to update it here).
 
 URL incl. protocol
    ``https://your.zammad.domain``
