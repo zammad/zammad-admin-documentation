@@ -19,9 +19,9 @@ Connect a Gmail or G Suite account to Zammad.
 .. note:: Google channels are a specialized kind of
    :doc:`📨 email channel </channels/email/index>`.
 
-   If you’re already familiar with email channels,
-   you can skip most of this—but **watch out for the “Accounts” section**,
-   which has a few extra quirks due to Google’s strict security measures.
+   If you're already familiar with email channels,
+   you can skip most of this - but **watch out for the “Accounts” section**,
+   which has a few extra quirks due to Google's strict security measures.
 
 .. include:: /channels/email/index.rst
    :start-after: .. start-after-migration

@@ -15,7 +15,9 @@ The import process does things you might not expect:
      :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
    * Zammad will **send an auto-reply message to every email it imports**
      (including the old ones!). Use the *Experts* dialog to
-     :ref:`change this behavior <email-experts-import-as>`.
+     :ref:`change this behavior <email-experts-import-as>` or to
+     :doc:`disable auto-replies </manage/trigger>` prior adding an email
+     account and to turn it back on once all your messages have been imported.
 
 .. note::
 
