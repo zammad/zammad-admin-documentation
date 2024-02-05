@@ -19,14 +19,11 @@ New User Accounts
       :width: 60%
       :align: center
 
-.. warning::
-
-   Deactivation of above function **does not** deactivate automatic account
-   creation! This means: If a user writes e.g. an email to Zammad and has no
-   account yet, Zammad will automatically create the account.
-
-   User accounts are a direct dependency of tickets and thus technically
-   mandatory.
+Deactivation of above function **does not** deactivate automatic account
+creation! This means: If a user writes e.g. an email to Zammad and has no
+account yet, Zammad will automatically create the account.
+User accounts are a direct dependency of tickets and thus technically
+mandatory.
 
 Lost Password
 -------------
@@ -61,7 +58,8 @@ Password Login
 .. container:: cfloat-left
 
    Activates the username & password login by default and if no third-party
-   login is activated.
+   login is activated. Disabling password login on the Zammad login page only
+   takes effect if you enable any :doc:`third-party`.
 
    See :doc:`third-party` for supported third-party logins.
 
@@ -79,11 +77,6 @@ Password Login
    To help administrators to overcome "login issues", Zammad automatically
    offers a password request for administrator users. This allows you to adjust
    Third-Party applications even if the login does no longer work!
-
-.. note::
-
-   Disabling password login on the Zammad login page only takes effect if
-   you enable any :doc:`third-party`.
 
 .. _security_session_timeout:
 

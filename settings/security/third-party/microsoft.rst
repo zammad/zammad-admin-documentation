@@ -48,11 +48,9 @@ Name:
 Supported account types:
    Choose one of the above mentioned account types (see Limitations).
 
-   .. tip::
-
-      The correct account type depends on your use case.
-      If you want to use the authentication internal only, choose the first
-      option. If you're unsure, use the "Help me choose..." link.
+   The correct account type depends on your use case.
+   If you want to use the authentication internal only, choose the first
+   option. If you're unsure, use the "Help me choose..." link.
 
 Redirect URI (optional):
    Select web and provide your callback URL.

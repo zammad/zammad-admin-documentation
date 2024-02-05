@@ -6,10 +6,8 @@ Image Service
 
    Default: ``Zammad Image Service`` (active)
 
-      .. hint::
-
-         On premise installations behind restrictive firewalls require
-         ``HTTPS`` access to ``images.zammad.com``.
+   Make sure your on premise installation has
+   ``HTTPS`` access to ``images.zammad.com``.
 
 Geo Calendar Service
    Defines the backend for geo calendar lookups. Used for initial calendar
