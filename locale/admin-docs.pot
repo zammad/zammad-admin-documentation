@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 13:34+0100\n"
+"POT-Creation-Date: 2024-02-06 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -432,7 +432,7 @@ msgstr ""
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../settings/security/third-party/microsoft.rst:68
 #: ../system/objects/permissions.rst:54
-#: ../system/sessions.rst:23
+#: ../system/sessions.rst:19
 msgid "User"
 msgstr ""
 
@@ -8620,7 +8620,7 @@ msgstr ""
 #: ../manage/trigger/how-do-they-work.rst:24
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../system/core-workflows/how-do-they-work.rst:67
-#: ../system/sessions.rst:61
+#: ../system/sessions.rst:52
 msgid "Action"
 msgstr ""
 
@@ -10383,51 +10383,47 @@ msgstr ""
 msgid "This setting affects all article types within UI, no matter if the article exists already or it's still a writing draft."
 msgstr ""
 
-#: ../misc/composer.rst:41
+#: ../misc/composer.rst:37
 msgid "Email - subject field (default: ``no``)"
 msgstr ""
 
 #: ../misc/composer.rst:32
-msgid "When setting this option to ``yes``, Zammad will also display the subject field when answering via email articles. It doesn't matter if you click on ``reply`` or switch to email article manually."
+msgid "When setting this option to ``yes``, Zammad will also display the subject field when answering via email articles. It doesn't matter if you click on ``reply`` or switch to email article manually. In this case, the subject can differ between title and email."
 msgstr ""
 
-#: ../misc/composer.rst:38
-msgid "Please note that if set to ``no``, Zammad will automatically use the tickets title as subject!"
+#: ../misc/composer.rst:37
+msgid "If set to ``no``, Zammad will automatically use the tickets title as subject."
 msgstr ""
 
-#: ../misc/composer.rst:41
-msgid "The subject can differ between title and mail subject if choosing ``yes``."
-msgstr ""
-
-#: ../misc/composer.rst:51
+#: ../misc/composer.rst:45
 msgid "Email - full quote (default: ``no``)"
 msgstr ""
 
-#: ../misc/composer.rst:44
+#: ../misc/composer.rst:40
 msgid "Setting this option to ``yes`` will always add the content of the answered article as quotation below your signature."
 msgstr ""
 
-#: ../misc/composer.rst:49
+#: ../misc/composer.rst:43
 msgid "This does not affect the \"mark and quote\" functionality, if you mark a text with this setting enabled, we'll use the marked text as quote instead."
 msgstr ""
 
-#: ../misc/composer.rst:57
+#: ../misc/composer.rst:51
 msgid "Email - quote header (default: ``yes``)"
 msgstr ""
 
-#: ../misc/composer.rst:54
+#: ../misc/composer.rst:48
 msgid "If you don't want Zammad to add the date, time and name or the article you're quoting, set this to ``no``."
 msgstr ""
 
-#: ../misc/composer.rst:57
+#: ../misc/composer.rst:51
 msgid "Example: ``On Thursday, June 27, 2019, 3:37:11 PM, Jacob Smith wrote:``"
 msgstr ""
 
-#: ../misc/composer.rst:61
+#: ../misc/composer.rst:55
 msgid "Twitter - tweet initials (default: ``yes``)"
 msgstr ""
 
-#: ../misc/composer.rst:60
+#: ../misc/composer.rst:54
 msgid "When set to yes, this will add ``/CM`` (first character of first- and last name) to the bottom of every tweet answer you create. This only affects tickets that come from the Twitter Channel."
 msgstr ""
 
@@ -14207,27 +14203,23 @@ msgid "For compliance with GDPR and other data privacy laws, you may wish to **p
 msgstr ""
 
 #: ../system/data-privacy.rst:8
-msgid "You can even create automated deletion tasks for tickets and users based on custom conditions via :doc:`scheduler </manage/scheduler>`!"
+msgid "You can create manual deletion tasks or even automated deletion tasks for tickets and users based on custom conditions via :doc:`scheduler </manage/scheduler>`!"
 msgstr ""
 
-#: ../system/data-privacy.rst:15
-msgid "User deletion dialog in the Data Privacy panel"
-msgstr ""
-
-#: ../system/data-privacy.rst:15
-msgid "The user deletion dialog lists some of the tickets that will be removed from the system along with the user."
-msgstr ""
-
-#: ../system/data-privacy.rst:18
-msgid "🤔 **Huh? I don't see the Data Privacy panel...**"
-msgstr ""
-
-#: ../system/data-privacy.rst:20
+#: ../system/data-privacy.rst:12
 msgid "Access to this panel requires ``admin.data_privacy`` permissions (introduced in Zammad 3.5)."
 msgstr ""
 
-#: ../system/data-privacy.rst:23
+#: ../system/data-privacy.rst:15
 msgid "On older systems that have not been updated yet, customers can also be :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`."
+msgstr ""
+
+#: ../system/data-privacy.rst:22
+msgid "User deletion dialog in the Data Privacy panel"
+msgstr ""
+
+#: ../system/data-privacy.rst:22
+msgid "The user deletion dialog lists some of the tickets that will be removed from the system along with the user."
 msgstr ""
 
 #: ../system/data-privacy.rst:27
@@ -14239,7 +14231,7 @@ msgid "🔥 **All deletions are FINAL!**"
 msgstr ""
 
 #: ../system/data-privacy.rst:31
-msgid "Once you click “Delete”, the action cannot be cancelled or undone."
+msgid "Once you click “Delete”, the action cannot be canceled or undone."
 msgstr ""
 
 #: ../system/data-privacy.rst:33
@@ -14266,7 +14258,7 @@ msgstr ""
 msgid "There are three ways to access the user deletion dialog:"
 msgstr ""
 
-#: ../system/data-privacy.rst:46
+#: ../system/data-privacy.rst:51
 msgid "**from the user's profile**"
 msgstr ""
 
@@ -14274,11 +14266,11 @@ msgstr ""
 msgid "Accessing the user deletion dialog in a user profile"
 msgstr ""
 
-#: ../system/data-privacy.rst:52
+#: ../system/data-privacy.rst:51
 msgid "Click **Action > Delete**."
 msgstr ""
 
-#: ../system/data-privacy.rst:54
+#: ../system/data-privacy.rst:58
 msgid "**in the “Manage > Users” Admin Panel**"
 msgstr ""
 
@@ -14286,12 +14278,12 @@ msgstr ""
 msgid "Accessing the user deletion dialog under “Users” in the Admin Panel"
 msgstr ""
 
-#: ../system/data-privacy.rst:60
+#: ../system/data-privacy.rst:58
 msgid "Use the **⋮ Actions** menu for the target user."
 msgstr ""
 
-#: ../system/data-privacy.rst:62
-#: ../system/data-privacy.rst:109
+#: ../system/data-privacy.rst:66
+#: ../system/data-privacy.rst:104
 msgid "**in the “System > Data Privacy” Admin Panel**"
 msgstr ""
 
@@ -14299,15 +14291,15 @@ msgstr ""
 msgid "Accessing the user deletion dialog under “Data Privacy” in the Admin Panel"
 msgstr ""
 
-#: ../system/data-privacy.rst:68
+#: ../system/data-privacy.rst:65
 msgid "Use the **New Deletion Task** button. Search for users by name or email address."
 msgstr ""
 
-#: ../system/data-privacy.rst:71
-msgid "👥 **You can delete organizations, too.**"
+#: ../system/data-privacy.rst:79
+msgid "**Delete organizations**"
 msgstr ""
 
-#: ../system/data-privacy.rst:73
+#: ../system/data-privacy.rst:69
 msgid "If the customer you are deleting is the last user in their organization, a **Delete Organization?** option will be displayed in the user deletion dialog:"
 msgstr ""
 
@@ -14315,19 +14307,19 @@ msgstr ""
 msgid "Deleting an organization via the user deletion dialog"
 msgstr ""
 
-#: ../system/data-privacy.rst:82
-msgid "(If this option does not appear, make sure there are no pending deletion tasks for other customers from this organization.)"
+#: ../system/data-privacy.rst:78
+msgid "If this option does not appear, make sure there are no pending deletion tasks for other customers from this organization."
 msgstr ""
 
-#: ../system/data-privacy.rst:87
+#: ../system/data-privacy.rst:82
 msgid "Step 2: Monitor deletion job status"
 msgstr ""
 
-#: ../system/data-privacy.rst:89
+#: ../system/data-privacy.rst:84
 msgid "It may take up to ten minutes for the system to process your request, so for each user you delete, a “deletion task” is added to the queue. You can keep an eye on the status of these tasks in two places:"
 msgstr ""
 
-#: ../system/data-privacy.rst:103
+#: ../system/data-privacy.rst:98
 msgid "**in the Activity Stream**"
 msgstr ""
 
@@ -14335,11 +14327,11 @@ msgstr ""
 msgid "Activity Stream showing data privacy tasks"
 msgstr ""
 
-#: ../system/data-privacy.rst:99
+#: ../system/data-privacy.rst:94
 msgid "For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it's complete."
 msgstr ""
 
-#: ../system/data-privacy.rst:102
+#: ../system/data-privacy.rst:97
 msgid "These notifications are only visible to users with ``admin.data_privacy`` permissions."
 msgstr ""
 
@@ -14347,71 +14339,71 @@ msgstr ""
 msgid "The task list within Data Privacy shows removals being in progress and completed."
 msgstr ""
 
-#: ../system/data-privacy.rst:112
+#: ../system/data-privacy.rst:107
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: ../system/data-privacy.rst:126
+#: ../system/data-privacy.rst:121
 msgid "What happens if I receive an email from a deleted customer?"
 msgstr ""
 
-#: ../system/data-privacy.rst:115
+#: ../system/data-privacy.rst:110
 msgid "Zammad automatically creates a new user account whenever it receives a message from an unrecognized email address, including deleted users. Deleted users are never blocked from creating new tickets."
 msgstr ""
 
-#: ../system/data-privacy.rst:120
+#: ../system/data-privacy.rst:115
 msgid "In the unlikely event that you receive an email between the time that you click “Delete” and the system has processed your request, **that ticket will be automatically removed**. The ticket number for the lost ticket will be displayed in the Admin Panel under **System > Data Privacy > Completed Tasks > Delete User > Deleted Tickets**."
 msgstr ""
 
-#: ../system/data-privacy.rst:135
+#: ../system/data-privacy.rst:130
 msgid "What about user information stored in internal notes or other messages?"
 msgstr ""
 
-#: ../system/data-privacy.rst:129
+#: ../system/data-privacy.rst:124
 msgid "The deletion process removes **user accounts and associated tickets only**."
 msgstr ""
 
-#: ../system/data-privacy.rst:131
+#: ../system/data-privacy.rst:126
 msgid "If there are references to a user's name or information stored elsewhere in the system, that information **will not be removed** because there is no way to safely determine if it actually describes the user in question."
 msgstr ""
 
-#: ../system/data-privacy.rst:142
+#: ../system/data-privacy.rst:137
 msgid "I deleted an user and can still see a message they sent!"
 msgstr ""
 
-#: ../system/data-privacy.rst:138
+#: ../system/data-privacy.rst:133
 msgid "Tickets can only belong to a single customer, but may contain messages (“articles”) from many people. If you deleted a user but you're still seeing articles they sent, don't worry—those articles are for a ticket that belongs to someone else, and no longer contain any reference to the sender's identity."
 msgstr ""
 
-#: ../system/data-privacy.rst:146
+#: ../system/data-privacy.rst:141
 msgid "I removed a customer, now my reporting is off!"
 msgstr ""
 
-#: ../system/data-privacy.rst:145
+#: ../system/data-privacy.rst:140
 msgid "When removing users and their tickets, all references are removed. This also affects e.g. Reporting - these information are lost."
 msgstr ""
 
-#: ../system/data-privacy.rst:150
+#: ../system/data-privacy.rst:145
 msgid "How long does Zammad store created tasks?"
 msgstr ""
 
-#: ../system/data-privacy.rst:149
+#: ../system/data-privacy.rst:144
 msgid "Please see the on-premise data section of the :docs:`data privacy </appendix/privacy.html>` chapter."
 msgstr ""
 
-#: ../system/data-privacy.rst:155
+#: ../system/data-privacy.rst:150
 msgid "What about re-assigned tickets? I want to delete them, too."
 msgstr ""
 
-#: ../system/data-privacy.rst:153
+#: ../system/data-privacy.rst:148
 msgid "Only tickets assigned to the matching customer at the time of the execution of the data privacy deletion task will be deleted. The deletion will not consider historical assignments."
 msgstr ""
 
-#: ../system/data-privacy.rst:159
+#: ../system/data-privacy.rst:154
 msgid "Why are there so many deletion task entries, I didn't create them!"
 msgstr ""
 
-#: ../system/data-privacy.rst:158
+#: ../system/data-privacy.rst:153
 msgid "The deletion tasks can come from the :doc:`/manage/scheduler` as well. Namely the action *\"Add a data privacy deletion task\"* is causing the entries."
 msgstr ""
 
@@ -18372,86 +18364,82 @@ msgid "Sessions"
 msgstr ""
 
 #: ../system/sessions.rst:4
-msgid "Sessions management allows reviewing currently known user sessions and allows to end these."
+msgid "Sessions management allows reviewing currently known user sessions and allows to end these. The session timeout is affected by :ref:`security_session_timeout` configurations from security settings."
 msgstr ""
 
 #: ../system/sessions.rst:None
 msgid "Screenshot showing Zammad's session management"
 msgstr ""
 
-#: ../system/sessions.rst:14
-msgid "This page indirectly is affected by :ref:`security_session_timeout` configurations from security settings."
-msgstr ""
-
-#: ../system/sessions.rst:17
+#: ../system/sessions.rst:13
 msgid "Zammad will provide the following information:"
 msgstr ""
 
-#: ../system/sessions.rst:20
+#: ../system/sessions.rst:16
 msgid "The user account this session entry belongs to. It can be normal if a user has several sessions in the list. This can be due to changed browser information or if you use e.g. single sign on methods where the user does not use the log off button."
 msgstr ""
 
-#: ../system/sessions.rst:26
+#: ../system/sessions.rst:22
 msgid "Browser"
 msgstr ""
 
-#: ../system/sessions.rst:26
+#: ../system/sessions.rst:22
 msgid "The browser agent communicated to Zammad."
 msgstr ""
 
-#: ../system/sessions.rst:47
+#: ../system/sessions.rst:40
 msgid "Location"
 msgstr ""
 
-#: ../system/sessions.rst:29
+#: ../system/sessions.rst:25
 msgid "The anticipated location based on the users IP address. Depending on the IP address the result shown may differ. This option depends on :doc:`/settings/system/services`."
 msgstr ""
 
-#: ../system/sessions.rst:33
+#: ../system/sessions.rst:29
 msgid "The following information can be shown:"
 msgstr ""
 
-#: ../system/sessions.rst:37
+#: ../system/sessions.rst:33
 msgid "IP address"
 msgstr ""
 
-#: ../system/sessions.rst:36
+#: ../system/sessions.rst:32
 msgid "Either if you set *Geo IP services* to inactive or you're using internal IP address which do not provide location information."
 msgstr ""
 
-#: ../system/sessions.rst:47
+#: ../system/sessions.rst:40
 msgid "Country (or Country + City)"
 msgstr ""
 
-#: ../system/sessions.rst:40
+#: ../system/sessions.rst:36
 msgid "If *Geo IP services* is enabled only. Depends on how detailed the available IP address information are."
 msgstr ""
 
-#: ../system/sessions.rst:45
-msgid "Depending on how long the address is assigned to a specific country the result may differ. Results can be inaccurate - this technically is not an error."
+#: ../system/sessions.rst:39
+msgid "Be aware that results can be inaccurate - this technically is not an error."
 msgstr ""
 
-#: ../system/sessions.rst:50
+#: ../system/sessions.rst:43
 msgid "Age"
 msgstr ""
 
-#: ../system/sessions.rst:50
+#: ../system/sessions.rst:43
 msgid "Provides the time when the session initially has been created."
 msgstr ""
 
-#: ../system/sessions.rst:59
+#: ../system/sessions.rst:50
 msgid "Update"
 msgstr ""
 
-#: ../system/sessions.rst:53
-msgid "Provides the time the user last used this session to open Zammad. This timestamp is only updated if the user e.g. reloads, not during normal work on tickets."
+#: ../system/sessions.rst:46
+msgid "Provides the time the user used this session to open Zammad. This timestamp is only updated if the user e.g. reloads, not during normal work on tickets."
 msgstr ""
 
-#: ../system/sessions.rst:59
+#: ../system/sessions.rst:50
 msgid "This timestamp is being used for the session timeout."
 msgstr ""
 
-#: ../system/sessions.rst:62
+#: ../system/sessions.rst:53
 msgid "Use the delete button to remove a single session on behalf of your user."
 msgstr ""
 
