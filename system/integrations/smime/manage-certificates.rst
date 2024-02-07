@@ -15,19 +15,19 @@ Add Certificate data
 
 Add Certificate
    Import public-key certificates for both your own organization and your contacts.
-   
+
    You can also add a bunch of certificates in one go by providing a single file
    with all relevant certificates.
 
    .. warning:: 🕵️ **ALWAYS verify certificates in-person or over the phone!**
 
       The whole point of signatures is to alert you
-      when someone is trying to pretend to be someone they’re not.
+      when someone is trying to pretend to be someone they're not.
       Never accept a certificate from someone online without verifying it first.
 
    .. note:: 📇 **What about trusted certificate authorities?**
 
-      In some cases (*e.g.,* when dealing with large enterprises),
+      In some cases (e.g. when dealing with large enterprises),
       you may be given a certificate for an entire CA,
       rather than a single contact.
       Add it here to trust *all* certificates issued by that CA.
@@ -36,7 +36,7 @@ Add Certificate
       Zammad does not include a list of built-in, trusted CAs.
 
 Add Private Key
-   Once you’ve added a public-key certificate,
+   Once you've added a public-key certificate,
    you can import its matching private key.
 
    Private keys are for **your own organization only**;
@@ -62,11 +62,9 @@ Download Certificate data
 You can download the earlier provided certificates and private keys at any
 time from your Zammad instance.
 
-   .. note:: **🔐 Passphrase-protected private keys stay protected**
-
-      Downloading private keys that originally were encrypted with a passphrase
-      will also have this state after retrieval. Knowing the password is
-      mandatory to continue working with keys in question.
+Please note that passphrase-protected private
+keys stay protected and when you download them, you have to know the passphrase
+to use them after downloading.
 
 .. figure:: /images/system/integrations/smime/downloading-certificate-data.gif
    :alt: Dialogue to download certificates or private keys

@@ -5,19 +5,16 @@ If your organization has information about customers (or personnel)
 already stored in a directory system that can export to CSV,
 you can batch-import them into Zammad in just three steps.
 
+For persistent, automated user synchronization,
+consider integration with a third-party directory system
+like :doc:`LDAP / Active Directory </system/integrations/ldap/index>`
+or :doc:`Exchange </system/integrations/exchange>`.
+
 .. figure:: /images/manage/users/import-user-data-with-csv.png
    :alt: The CSV import dialog
    :align: center
 
    Use the **Import** button to open the CSV import dialog.
-
-.. hint::
-
-   CSV import provides one-off batch processing of user records.
-   For persistent, automated user synchronization,
-   consider integration with a third-party directory system
-   like :doc:`LDAP / Active Directory </system/integrations/ldap/index>`
-   or :doc:`Exchange </system/integrations/exchange>`.
 
 Step 1: Inspect the sample .csv
 -------------------------------
@@ -63,6 +60,6 @@ Zammad will perform a test run to compute the number of affected records:
    that matches an existing user account.
 
 Click **Yes, start real import** to proceed.
-(If you’re importing a lot of records, be patient—it may take a minute.)
+(If you're importing a lot of records, be patient - it may take a minute.)
 
-That’s it! 🎉🎉🎉
+That's it! 🎉🎉🎉

@@ -1,11 +1,11 @@
 Triggers
 ========
 
-Use triggers to set up all kinds of 🎛️ **if-this-then-that** automation
+Use triggers to set up all kinds of **if-this-then-that** automation
 workflows.
 
-.. hint:: For ⏳ **every-so-often** automation workflows,
-   try :doc:`schedulers </manage/scheduler>` instead.
+For time-based or recurring automation workflows, try
+:doc:`schedulers </manage/scheduler>` instead.
 
 The first thing to know about triggers is that **you're already using them**.
 From the moment you set up Zammad, it starts sending auto-replies

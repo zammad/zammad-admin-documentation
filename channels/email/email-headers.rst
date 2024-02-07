@@ -1,4 +1,4 @@
-Email header manipulation
+Email Header Manipulation
 *************************
 
 Email header manipulation allows you to re-route or adjust tickets apart from
@@ -24,7 +24,7 @@ Header checks are case insensitive.
 Trigger auto responses
 ----------------------
 
-Normally Zammad runs internal checks to see if an email is an automatic
+Normally, Zammad runs internal checks to see if an email is an automatic
 response. In these cases Zammad will not send trigger based responses.
 
 There may be use cases where this behavior may be in your way,

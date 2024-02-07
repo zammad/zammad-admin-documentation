@@ -19,26 +19,24 @@ is considered for the time accounting or not. If a ticket is applicable, Zammad
 will request the agent to provide how much time was needed to process the
 current ticket step.
 
-   .. note::
+In order for Zammad to bring up the time accounting dialog to an agent,
+the agent has to update the ticket together with an article of any type.
+The article part is mandatory.
 
-      In order for Zammad to bring up the time accounting dialog to an agent,
-      the agent has to update the ticket together with an article of any type.
-      The article part is mandatory.
+However, the time accounting dialog is not mandatory and can be canceled
+by your agents if needed. You cannot enforce time accounting.
 
-      However, the time accounting dialog is not mandatory and can be canceled
-      by your agents if needed. You cannot enforce time accounting.
+If a ticket is no longer considered for the time accounting, the already
+accounted time will be preserved.
 
-      If a ticket is no longer considered for the time accounting, the already
-      accounted time will be preserved.
+.. tip::
 
-   .. tip::
+   The selector applies to the ticket state before any attribute changes have
+   been saved. That means if your agent is e.g. going to close a ticket
+   alongside writing an article, the ticket selector has to match the ticket
+   state before closing for the time accounting dialog to appear.
 
-      The selector applies to the ticket state before any attribute changes have
-      been saved. That means if your agent is e.g. going to close a ticket
-      alongside writing an article, the ticket selector has to match the ticket
-      state before closing for the time accounting dialog to appear.
-
-   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
 .. figure:: /images/manage/time-accounting/time-accounting-selector.png
    :align: center
@@ -102,11 +100,10 @@ times.
    :align: center
    :alt: New Time Accounting Activity Type Dialog
 
-.. hint::
-   Activity types can be set as default, and in that case they will be
-   pre-selected for the agents when they are asked to account their time. It is
-   also possible to unset default activity type, in which case no type will be
-   pre-selected and the agents can make their choice.
+Activity types can be set as default, and in that case they will be
+pre-selected for the agents when they are asked to account their time. It is
+also possible to unset default activity type, in which case no type will be
+pre-selected and the agents can make their choice.
 
 Accounted Time
 ~~~~~~~~~~~~~~
@@ -115,11 +112,9 @@ Under the **Accounted Time** tab, Zammad provides a section for reviewing all
 accounted times for your tickets. Accounted times are displayed per years and
 months.
 
-.. hint::
-
-   | Having tickets that are overlapping several months?
-   | No problem! Zammad provides *time units* and *time units total* to allow
-     partial billing.
+If you have tickets that are overlapping several months, you can differentiate
+by *time units* and *time units total* (e.g. to allow partial billing) in the
+downloaded file.
 
 Select the right month
    Usually you want to bill accounted time of other months than the current one.
@@ -138,9 +133,7 @@ Tickets and their accounted time
    To download the CSV data, use the download button right next to each heading
    (e.g. "Ticket").
 
-   .. hint::
-
-      🤓 Of course you can also automate this with API calls.
+   This can also be automated with API calls.
 
    .. hint::
       Only the first 20 entries are shown for each table. To see all of them,
@@ -177,10 +170,6 @@ Tickets and their accounted time
          * Created at
          * Closed at (if applicable)
 
-      .. hint::
-
-         The CSV file of this filter provides all ticket meta information.
-
    Customer
       This provides you a per user filter on accounted time units.
       Each user has a total of time accounted in the current month (over all
@@ -196,11 +185,9 @@ Tickets and their accounted time
       This provides a list of all organizations where customers have caused
       accounted time in that month.
 
-      .. note::
-
-         You can also see entries for customers that are part of a primary
-         organization. Users without am organization can be found in the
-         Customer filter.
+      You can also see entries for customers that are part of a primary
+      organization. Users without an organization can be found in the
+      Customer filter.
 
    .. figure:: /images/manage/time-accounting/time-accounting-download-accounted-times-as-csv.png
       :align: center

@@ -7,7 +7,7 @@ will do the job just fine.
 But if you want more fine-grained control—for instance,
 to create high- and low-priority tickets
 for different types of system events—then
-you’ll have to customize the data those scripts send to Zammad.
+you'll have to customize the data those scripts send to Zammad.
 
 Example
 -------
@@ -41,7 +41,7 @@ Checkmk parameters
 
    These are the only values used in the sample scripts.
    **Use them as-is**; technically, they can be customized,
-   but it’s hard to imagine a good reason for it.
+   but it's hard to imagine a good reason for it.
 
 Ticket attributes
    are optional, and can be used to **adjust settings** on newly created tickets
@@ -49,15 +49,15 @@ Ticket attributes
 
    If you want to customize your Checkmk alert script, do it with these.
    Simply add an extra “form” option for each one (``-F "key=value"``)
-   to your script’s ``curl`` command line, as in the example above.
+   to your script's ``curl`` command line, as in the example above.
 
 .. hint:: 💡 **It's just an API endpoint!**
 
    When using Checkmk integration, messages need to be formatted in a certain
-   way, but that *doesn’t mean the messages actually have to come from Checkmk*.
+   way, but that *doesn't mean the messages actually have to come from Checkmk*.
 
-   If you use another monitoring tool that’s not officially supported by Zammad,
-   there’s probably a way to make it work with your Checkmk callback URL.
+   If you use another monitoring tool that's not officially supported by Zammad,
+   there's probably a way to make it work with your Checkmk callback URL.
 
 Checkmk Parameters
 ------------------
@@ -128,11 +128,11 @@ if a new event belongs to an existing ticket.)
 Why would you want to do this?
 Maybe you have only one IT guy,
 and all system monitoring issues should be automatically assigned to him.
-Or, maybe you’re creating multiple notification rules
+Or, maybe you're creating multiple notification rules
 so that database outages take higher priority
 than disk space warnings.
 
-In most cases, you’ll probably want to set one of the following:
+In most cases, you'll probably want to set one of the following:
 
 * group
 * owner
@@ -142,7 +142,7 @@ In most cases, you’ll probably want to set one of the following:
 but in practice, you can set almost any attribute, including
 :doc:`custom ones you created through the Object Manager </system/objects>`.
 
-.. note:: 🙅 The following attributes are **not customizable**:
+Please note that the following attributes are **not customizable**:
 
    * title
    * id
@@ -156,9 +156,9 @@ How do I know what values I can set?
 
 .. warning:: 😵 **Invalid values → unpredictable behavior**
 
-   If you provide a value that Zammad doesn’t understand
-   (*e.g.,* ``-F "priority=high"``), it’s not always clear what will happen.
-   In some cases, a ticket will be created with the default values instead—but
+   If you provide a value that Zammad doesn't understand
+   (*e.g.,* ``-F "priority=high"``), it's not always clear what will happen.
+   In some cases, a ticket will be created with the default values instead - but
    in others, it may not be created at all!
 
 So what values does Zammad understand, then?

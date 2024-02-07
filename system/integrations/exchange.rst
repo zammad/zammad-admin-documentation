@@ -4,16 +4,19 @@ Exchange
 With Zammad's Exchange integration, you can easily use existing address books
 without having to update more than one source.
 
+However, you should refrain from syncing all addresses, as the results may not
+be what you expect (Exchange collects huge amounts of addresses).
+A central address book of your company to sync makes more sense, as you can
+ensure that Zammad gets only the data you need and want.
+
 .. warning::
 
-   The exchange sync can be overruled by Zammad's LDAP integration.
-   If you have the same users in both sources, the LDAP version will always
-   be Zammad's pick.
-
-.. note::
-
-   The Exchange sync is one way: Exchange => Zammad. Changes to your users
-   inside of Zammad might be overwritten by the Exchange sync.
+   * **Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP
+     integration. If you have the same users in both sources, the LDAP version
+     will always be Zammad's pick.
+   * **One way sync:** the Exchange sync is one way. Exchange => Zammad.
+     Changes to your users inside of Zammad might be overwritten by the
+     Exchange sync.
 
 
 To configure Exchange integration, simply go to the System > Integrations >
@@ -34,13 +37,6 @@ object (this also works for custom objects!).
    should only be used temporarily or for testing purposes. If turned off, there
    is no verification of the certificate, which means that every presented
    certificate will be accepted.
-
-.. note::
-
-   Please refrain from syncing all addresses, as the results may not be what you
-   expect (Exchange collects huge amounts of addresses).
-   A central address book of your company to sync makes more sense, as you can
-   ensure that Zammad gets only the data you need and want.
 
 After pressing Continue, Zammad will check if the configuration is okay.
 You can then enable Exchange and start your first sync.

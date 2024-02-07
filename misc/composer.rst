@@ -31,24 +31,18 @@ Article - visibility confirmation dialog
 Email - subject field (default: ``no``)
    When setting this option to ``yes``, Zammad will also display the subject
    field when answering via email articles. It doesn't matter if you click
-   on ``reply`` or switch to email article manually.
+   on ``reply`` or switch to email article manually. In this case, the subject
+   can differ between title and email.
 
-   .. warning:: 
-
-      Please note that if set to ``no``, Zammad will automatically use the
-      tickets title as subject!
-
-      The subject can differ between title and mail subject if choosing ``yes``.
+   If set to ``no``, Zammad will automatically use the tickets title as subject.
 
 Email - full quote (default: ``no``)
    Setting this option to ``yes`` will always add the content of the answered
    article as quotation below your signature.
 
-   .. note:: 
-
-      This does not affect the "mark and quote" functionality,
-      if you mark a text with this setting enabled,
-      we'll use the marked text as quote instead.
+   This does not affect the "mark and quote" functionality,
+   if you mark a text with this setting enabled,
+   we'll use the marked text as quote instead.
 
 Email - quote header (default: ``yes``)
    If you don't want Zammad to add the date, time and name or the article you're

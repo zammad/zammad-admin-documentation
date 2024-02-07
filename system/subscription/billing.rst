@@ -15,7 +15,7 @@ Billing information
 
    VAT ID
       Provide your VAT ID here. If applicable your invoice will not contain
-      german VAT. Please make sure to pay the VAT in your country as required.
+      German VAT. Please make sure to pay the VAT in your country as required.
 
    Billing Email Address
       Usually the instance owner (the person that registered the instance) will
@@ -24,9 +24,7 @@ Billing information
 
       All billing relevant information will then be sent to this email address.
 
-      .. hint::
-
-         Invoices are sent as attachment (PDF) to this email address.
+      Invoices are sent as attachment (PDF) to this email address.
 
    Don't forget to press the *Submit* button after you changed above settings.
 

@@ -7,7 +7,7 @@ SLAs as their calculations may not work as you intended them originally.
 .. figure:: /images/manage/slas/sla-settings.png
    :align: center
    :width: 60%
-   :alt: Part of the configuration dialogue for SLAs
+   :alt: Part of the configuration dialog for SLAs
 
 .. warning::
 
@@ -50,11 +50,9 @@ SLA Times
       Time frame for the first response (external call, email).
       This time is calculated from the ticket creation.
 
-      .. note::
-
-         The start time *does not* reset if you're e.g. moving the ticket into
-         new groups or different SLA calculations. That is because the creation
-         time of the ticket does not change - keep this in mind.
+      The start time *does not* reset if you're e.g. moving the ticket into
+      new groups or different SLA calculations. That is because the creation
+      time of the ticket does not change - keep this in mind.
 
    Update Time
       Time frame for every following response (external call, email).
@@ -66,9 +64,7 @@ SLA Times
          on your configuration. This causes Zammad to not care if your customer
          replied or not.
 
-         .. warning::
-
-            This setting can be quiet stressful for your agents.
+         Be aware that this setting can be quite stressful for your agents!
 
       for an agent to respond
          From the moment your customer replied to the ticket, your agents have
@@ -78,10 +74,8 @@ SLA Times
       Time frame for solving the problem (setting the ticket to a closed state
       type).
 
-      .. warning::
-
-         This escalation timing *does not* care about ticket responses.
-         It's being calculated from the ticket creation.
+      This escalation timing *does not* care about ticket responses.
+      It's simply being calculated from the ticket creation.
 
    It is up to you if you set one, two or all three times. When the SLA time is
    reached, the ticket escalates.

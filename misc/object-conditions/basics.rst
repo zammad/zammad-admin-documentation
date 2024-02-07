@@ -31,7 +31,7 @@ Please note that ticket conditions do not support the following:
 How they work
 -------------
 
-Ticket conditions allow you to granulary define a set of attributes and ticket
+Ticket conditions allow you to granular define a set of attributes and ticket
 situations to then do certain operations based on these conditions.
 
 When using the basic mode of conditions, Zammad will match all conditions
@@ -57,7 +57,7 @@ for your convenience.
 .. alphabetical sorting
 
 Action *(Scope: Ticket, Ticket article)*
-   .. hint:: This field is only available for Trigger conditions!
+   This field is only available for Trigger conditions!
 
    .. container:: cfloat-left
 
@@ -98,7 +98,7 @@ Action *(Scope: Ticket, Ticket article)*
       X
 
 Calendar *(Scope: Execution time)*
-   .. hint:: This field is only available for Trigger and Scheduler conditions!
+   This field is only available for Trigger and Scheduler conditions!
 
    .. container:: cfloat-left
 
@@ -117,10 +117,8 @@ Calendar *(Scope: Execution time)*
       X
 
 Customer *(Scope: Ticket)*
-   .. hint::
-
-      This field only affects the ticket customer which is set during ticket
-      creation and can be changed manually by an agent.
+   This field only affects the ticket customer which is set during ticket
+   creation and can be changed manually by an agent.
 
    .. container:: cfloat-left
 
@@ -145,9 +143,7 @@ Customer *(Scope: Ticket)*
       X
 
 Existing members *(Scope: Organization)*
-   .. hint::
-
-      This field is only available for Scheduler conditions!
+   This field is only available for Scheduler conditions!
 
    .. container:: cfloat-left
 
@@ -168,9 +164,7 @@ Existing members *(Scope: Organization)*
       X
 
 Existing tickets *(Scope: Ticket Customer, Ticket Owner)*
-   .. hint::
-
-      This field is only available for Scheduler conditions!
+   This field is only available for Scheduler conditions!
 
    .. container:: cfloat-left
 
@@ -205,10 +199,8 @@ Group *(Scope: Ticket)*
       X
 
 Organization *(Scope: Ticket, Customer)*
-   .. hint::
-
-      This field only affects the ticket organization which is set during ticket
-      creation and depends on the ticket customers organization.
+   This field only affects the ticket organization which is set during ticket
+   creation and depends on the ticket customers organization.
 
    .. container:: cfloat-left
 
@@ -273,7 +265,7 @@ State *(Scope: Ticket)*
    .. warning::
 
          Zammad behaves inconsistent in between certain ticket condition
-         dialogues - if you can see ticket states only in parts of the
+         dialogs - if you can see ticket states only in parts of the
          admin menu and not in the front-end, your state *is not visible*.
 
          :docs:`The system documentation </admin/console/working-on-tickets.html#make-new-states-available-to-ui>`
@@ -293,7 +285,7 @@ State *(Scope: Ticket)*
       X
 
 Subscribe *(Scope: Ticket)*
-   .. hint:: This affects ticket subscriptions / mentions by and for agents.
+   This affects ticket subscriptions / mentions by and for agents.
 
    .. container:: cfloat-left
 
@@ -319,7 +311,7 @@ Subscribe *(Scope: Ticket)*
       X
 
 Tags *(Scope: Ticket)*
-   .. hint:: Additional tags can be present in the ticket without issues.
+   Additional tags can be present in the ticket without issues.
 
    .. container:: cfloat-left
 
@@ -398,11 +390,8 @@ Visibility *(Scope: Ticket article)*
 Text field (input)
 ++++++++++++++++++
 
-.. hint::
-
-   The configured "Type" of input fields has no impact on the available options.
-
 Check if any field of type text contains a specific string (or not)?
+The configured "Type" of input fields has no impact on the available options.
 
 Available operators for matching:
 
@@ -666,10 +655,9 @@ Multiple selection field
 Single tree selection field
 +++++++++++++++++++++++++++
 
-.. note::
-
-   This attribute type technically allows several layers of values.
-   You cannot match a parent layer to match all of it's childs.
+This attribute type technically allows a hierarchy of values.
+Please note that you cannot match a parent layer to match all of
+its children.
 
 .. container:: cfloat-left
 
@@ -688,10 +676,9 @@ Single tree selection field
 Multiple tree selection field
 +++++++++++++++++++++++++++++
 
-.. note::
-
-   This attribute type technically allows several layers of values.
-   You cannot match a parent layer to match all of it's childs.
+This attribute type technically allows a hierarchy of values.
+Please note that you cannot match a parent layer to match all of
+its children.
 
 .. container:: cfloat-left
 

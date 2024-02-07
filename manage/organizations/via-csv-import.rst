@@ -41,10 +41,8 @@ For instance:
    "","","","","",anna@example.com
    Zammad Foundation,true,"",false,true,nicole.braun@zammad.org
 
-.. hint::
-   
-   Several organization members can be added: Ensure to provide the users
-   email address as shown above with empty values.
+Several *organization members* can be added: Ensure to provide the users
+email address as shown above with empty values.
 
 Step 3: Import your .csv to Zammad
 ----------------------------------
@@ -55,7 +53,7 @@ Zammad will perform a test run to compute the number of affected records:
 .. figure:: /images/manage/organizations/import-summary-before-importing.png
    :alt: CSV import test run and confirmation dialog
    :align: center
-   :width: 90%
+   :width: 70%
 
    CSV import always begins with a preview / test run.
 
@@ -65,6 +63,6 @@ Zammad will perform a test run to compute the number of affected records:
    an existing organization entry.
 
 Click **Yes, start real import** to proceed.
-(If you’re importing a lot of records, be patient—it may take a minute.)
+(If you're importing a lot of records, be patient—it may take a minute.)
 
-That’s it! 🎉🎉🎉
+That's it! 🎉🎉🎉

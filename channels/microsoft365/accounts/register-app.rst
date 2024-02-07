@@ -40,12 +40,9 @@ Step-by-Step
 ------------
 
 To get started, head over to
-`Microsoft's Azure Portal <https://portal.azure.com/>`_.
-
-.. note:: 🔑 **Use an admin account for your organization.**
-
-   Otherwise, an admin will have to approve your changes
-   before they can take effect.
+`Microsoft's Azure Portal <https://portal.azure.com/>`_. Make sure to use an
+admin account for your organization. Otherwise, an admin will have to approve
+your changes before they can take effect.
 
 1. **Add an App Registration**
 
@@ -124,15 +121,13 @@ To get started, head over to
 
    3.1 **Tightening your app even further** (Recommended, optional)
 
-      .. note::
+      This step will protect your tenant users from -to admins- unwanted
+      permission changes (e.g. requesting more permissions than originally
+      noted).
 
-         This step is not exactly required but recommended. This step will
-         protect your tenant users from -to admins- unwanted permission
-         changes (e.g. requesting more permissions than originally noted).
-
-         It also has another benefit: You can add the email account in question
-         immediately without any administrator being forced to stepped in
-         manually.
+      It also has another benefit: You can add the email account in question
+      immediately without any administrator being forced to step in
+      manually.
 
       Still within *Enterprise applications* select *Users and groups*.
       In this section you can select specific users and / or groups

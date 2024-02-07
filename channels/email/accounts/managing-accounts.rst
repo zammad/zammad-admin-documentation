@@ -1,7 +1,7 @@
 Managing Accounts
 =================
 
-Once an account has been added, use the Accounts panel to edit its
+Once an account has been added, use the accounts panel to edit its
 configuration.
 
 .. figure:: /images/channels/email/panel.png
@@ -22,8 +22,8 @@ Destination Group
 
    Changing this setting will not reassign existing tickets to the new group.
 
-   .. hint:: 📮 **Still can’t send outgoing email tickets?**
-      Check your :doc:`group settings </manage/groups/settings>`.
+   If you still can't send outgoing email tickets, check your
+   :doc:`group settings </manage/groups/settings>`.
 
 Email Address
    Use the **+ Add** or **Edit** buttons
@@ -40,11 +40,9 @@ Enabled / Disabled
    Disabling an account temporarily prevents Zammad from importing its messages.
 
    This may be necessary during scheduled maintenance
-   or when migrating your installation to a new host. 
+   or when migrating your installation to a new host.
 
-   .. note::
-
-      📮 Disabling an account disables *outgoing* messages for it, as well.
+   Disabling an account disables *outgoing* messages for it, as well.
 
 Delete
    Deleting an account removes its configuration from Zammad entirely.

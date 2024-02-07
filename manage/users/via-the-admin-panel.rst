@@ -1,7 +1,8 @@
 Managing users via the admin panel
 ==================================
 
-The “Users” panel provides tools to manually manage user accounts.
+The “Users” panel provides tools to manually manage user accounts. See
+:ref:`user-details-reference` for help with the New/Edit User dialog.
 
 👥 Creating and editing users
    .. figure:: /images/manage/users/new-user-dialog.gif
@@ -10,9 +11,6 @@ The “Users” panel provides tools to manually manage user accounts.
 
       Click the **New User** button to open the New User dialog,
       or click on an existing user to edit.
-
-   .. hint:: See :ref:`user-details-reference`
-      for help with the New/Edit User dialog.
 
 🗑️ Deleting users
    .. figure:: /images/manage/users/delete-user-via-user-management.gif
@@ -70,6 +68,10 @@ The “Users” panel provides tools to manually manage user accounts.
    This is especially useful when you need to verify
    that you've set up custom permissions correctly for non-admin users.
 
+   When finished, use the **Back to my view ✕** button at the top of the page.
+   If you try to exit by logging out,
+   the “hijacked” user session will be restored when you log back in.
+
    .. danger:: **⚠ With great power comes with great responsibility.**
 
       This feature is not a simulation;
@@ -80,11 +82,6 @@ The “Users” panel provides tools to manually manage user accounts.
       will actually be performed from the user's account.
 
       (On the other hand, if the user logs back in, you'll be booted, too.)
-
-   .. hint:: When finished,
-      use the **Back to my view ✕** button at the top of the page.
-      If you try to exit by logging out,
-      the “hijacked” user session will be restored when you log back in.
 
 🔑 Manage Two-Factor Authentication
    .. figure:: /images/manage/users/remove-two-factor-method.gif

@@ -5,12 +5,12 @@ Use GitHub integration to track GitHub issues directly within Zammad tickets.
 Add issue hyperlinks and get a live summary of metadata
 like status (open/closed), assignee, labels, and more.
 
+Please note that our GitHub integration does not support pull requests.
+
 .. figure:: /images/system/integrations/github/github-integration-page.png
    :alt: Integration page for GitHub
    :align: center
    :width: 90%
-
-.. note:: GitHub integration does not support pull requests.
 
 Setup
 -----
@@ -44,10 +44,8 @@ Setup
       :align: center
       :width: 90%
 
-   .. hint::
-
-      Leave the default API endpoint (``https://api.github.com/graphql``) as-is
-      unless you're using GitHub Enterprise Server.
+   Use the default API endpoint (``https://api.github.com/graphql``)
+   unless you're using GitHub Enterprise Server.
 
 Once completed, a new GitHub issues tab will appear in the ticket pane. 🎉
 

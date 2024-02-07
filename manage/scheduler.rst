@@ -6,12 +6,13 @@ schedulers, configure at which points in time they should run, set up conditions
 to determine which objects they should affect, and then configure the actions
 that you want to be executed on these objects.
 
-.. warning::
+.. Setting warning box to inactive, because it is missing e.g. in triggers /RSC
+.. .. warning::
 
-   While it is possible to delegate scheduler permissions to normal agents with
-   the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious
-   agents could use a scheduler to access tickets in restricted groups
-   (by moving them to a non-restricted group) or to arbitrarily delete tickets.
+..    While it is possible to delegate scheduler permissions to normal agents with
+..    the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious
+..    agents could use a scheduler to access tickets in restricted groups
+..    (by moving them to a non-restricted group) or to arbitrarily delete tickets.
 
 .. hint::
 
@@ -56,11 +57,9 @@ Preview
    a total of how many objects are being matched. Use this to double-check the
    entered conditions.
 
-   .. note::
-
-      Please be aware that the preview and displayed number is just based on
-      the currently selected condition. It doesn't necessarily represent the
-      objects for execution at the defined time.
+   Please be aware that the preview and displayed number is just based on
+   the currently selected condition. It doesn't necessarily represent the
+   objects for execution at the defined time.
 
 Execute changes on objects
    Determine the changes to be made to the object. The possible changes depend
@@ -71,8 +70,6 @@ Execute changes on objects
       🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data
       privacy deletion task* are dangerous and should be used with care! If
       executed, the objects are deleted and no rollback is possible.
-
-   .. hint::
 
       **Delete immediately** will delete the ticket at the runtime of the job
       *without any hint* in the UI.
