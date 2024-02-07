@@ -2,7 +2,8 @@ Managing organizations via the admin panel
 ==========================================
 
 The “Organizations” panel provides tools to manually manage organization
-entries.
+entries. See :ref:`organization-details-reference` for help with the
+New/Edit Organization dialog.
 
 👥 Creating and editing users
    .. figure:: /images/manage/organizations/add-new-organization-dialog.gif
@@ -11,11 +12,6 @@ entries.
 
       Click the **New Organization** button to open the New Organization dialog,
       or click on an existing organization to edit.
-
-   .. hint::
-
-      See :ref:`organization-details-reference` for help with the
-      New/Edit Organization dialog.
 
 🗑️ Deleting organizations
    Organizations currently can only be removed via data privacy by deleting

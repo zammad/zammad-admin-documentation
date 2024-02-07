@@ -2,7 +2,7 @@ Secondary Addresses
 ===================
 
 Secondary addresses (also known as *aliases*) allow you to send emails
-with a different “From:” address from the one on the account.
+with a different “From:” address than the one from the account.
 
 .. figure:: /images/channels/email/accounts-addresses.gif
    :alt: Video demonstration of adding a secondary address and configuring
@@ -26,7 +26,7 @@ Display Name
       :scale: 40%
       :align: center
 
-      A customer’s inbox with an auto-reply from **Chrispresso Sales**.
+      A customer's inbox with an auto-reply from **Chrispresso Sales**.
 
    Email display names value can be
    :ref:`further customized in the Settings tab <email-settings-sender-format>`.

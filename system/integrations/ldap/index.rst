@@ -31,10 +31,10 @@ Before you continue, please note the following limitations.
 
    * Mapping / Synchronizing organizations is not possible
 
-        .. tip::
+     .. tip::
 
-           You may want to consider using domain based assignments to overcome
-           this issue. Learn more on :doc:`/manage/organizations/index`.
+        You may want to consider using domain based assignments to overcome
+        this issue. Learn more on :doc:`/manage/organizations/index`.
 
    * Zammad's LDAP sync is one way. Editing user settings or permissions may be
      overwritten upon the next sync depending on your configuration.

@@ -4,15 +4,15 @@ Templates
 Templates allow you to create tickets at a rapid speed by defining a
 ticket template for recurring tickets.
 
-   .. note:: **😖 Sounds familiar**
+.. note:: **Sounds familiar?**
 
-      Right! Prior Zammad 5.3 ticket templates were managed entirely within
-      the ticket zoom.
+   Right! Prior Zammad 5.3 ticket templates were managed entirely within
+   the ticket zoom.
 
-      | This has changed:
-      | Your agents by default no longer have permission to manage templates by
-        default. However, they can always *load* existing templates into their
-        new ticket dialogue.
+   | This has changed:
+   | Your agents by default no longer have permission to manage templates by
+      default. However, they can always *load* existing templates into their
+      new ticket dialogue.
 
 .. figure:: /images/manage/templates/template-management.png
    :alt: Screenshot showing Zammad's (ticket) template management page
@@ -60,6 +60,4 @@ Managing templates
    If you no longer require a specific template, use *⋮ Actions* in the list and
    choose *Delete*.
 
-   .. danger::
-
-      Removals are permanent. ☠️
+   Be aware that the deletion is permanent.

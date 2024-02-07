@@ -10,10 +10,11 @@ Your language is in an incomplete translation state or has typos?
 Please consider helping us sorting this out! All you need is either a GitHub
 account or register directly on our instance.
 
-   .. hint::
+Did you know? This is also where documentation translations are handled. 🤓
 
-      | Did you know?
-      | This is also where documentation translations are handled. 🤓
+Have a look in our
+:docs:`contribution section </contributing/start.html#translation>` in the
+system documentation to get started!
 
 --------------------------------------------------------------------------------
 
@@ -21,13 +22,13 @@ Apart from these centralized translations, there's still local translations
 you can manage. This is relevant if you added custom objects that require
 translations or even states.
 
-   .. warning::
+.. warning::
 
-      You can no longer synchronize these translations upstream like prior
-      Zammad 5.1.
+   You can no longer synchronize these translations upstream like prior
+   Zammad 5.1.
 
-   .. figure:: /images/system/translations/translation-management.png
-      :alt: Translation management page within the admin menu
+.. figure:: /images/system/translations/translation-management.png
+   :alt: Translation management page within the admin menu
 
 How do I get the most recent translations?
 ------------------------------------------
@@ -52,22 +53,16 @@ So how does this local translation work?
 
 Within the translation menu, look up the string you're searching for and update
 its target as designed. As soon as you leave the target input field, the change
-will be saved.
+will be saved. Your changes are even update safe!
 
 Such locally translated strings are slightly highlighted and come with a "Reset"
-action.
+action. Due to caching you may have to reload your browser session to see the
+changes.
 
 The translation strings shown by Zammad are always those of the
 profile language you've chosen. If you need to translate a different language,
 change the language in your
 :user-docs:`profile settings </extras/profile-and-settings.html>` up front.
-
-   .. hint::
-
-      Due to caching you may have to reload your browser session to see the
-      changes.
-
-      **Yes, these changes are update safe!**
 
 .. figure:: /images/system/translations/changed-local-translation.png
    :alt: Screenshot showing an adjusted translation locally

@@ -20,11 +20,9 @@ Some fields stay unavailable to customers
   you can't edit) stay unavailable for display and usage on customer
   permissions.
 
-    .. hint::
-
-      If you require your customers to change e.g. priorities, please
-      consider using workarounds via :doc:`/system/objects` and
-      :doc:`/manage/trigger`.
+  If you require your customers to change e.g. priorities, please
+  consider using workarounds via :doc:`/system/objects` and
+  :doc:`/manage/trigger`.
 
 What is out of scope of Core Workflows?
   There are some things that would count as workflow but are either done via

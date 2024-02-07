@@ -8,7 +8,7 @@ poll the Zammad server every *n* minutes.
 .. note:: ⌛ **Webhooks may not arrive immediately.**
 
    Webhooks are sent out with the same priority and order as email triggers.
-   If webhook dispatch fails (*e.g.,* because the receiving server is
+   If webhook dispatch fails (e.g. because the receiving server is
    misconfigured), Zammad will retry up to four times.
 
 .. hint::

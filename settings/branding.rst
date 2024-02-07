@@ -15,13 +15,8 @@ Organization
 Logo
    Defines the logo of the application, shown in the login page of Zammad.
 
-      .. note::
-
-         Ensure to hit the "Submit" button after uploading the logo.
-         Other wise your change will not be saved.
-
-         .. figure:: /images/settings/branding-logo-options.png
-            :alt: Screenshot highlighting the submit button of the logo change dialogue
+   Ensure to hit the "Submit" button after uploading the logo.
+   Otherwise your change will not be saved.
 
 Locale
    Allows to set the default language of the Zammad instance.
@@ -34,32 +29,26 @@ Locale
 Timezone
    Define the timezone of your Zammad installation.
 
-      .. note::
+   This does not have any effect on timings for your agents or how
+   Zammad stores date and time values.
 
-         This does not have any effect on timings for your agents or how
-         Zammad stores date and time values.
+   Changing this value has direct consequences on the following areas:
 
-      .. warning::
+      * :doc:`/manage/scheduler` tasks
+      * search indexing (and thus reporting)
+      * notifications
+      * calendar subscriptions
+      * browser printing
 
-         Changing this value has direct consequences on the following areas:
-
-            * :doc:`/manage/scheduler` tasks
-            * search indexing (and thus reporting)
-            * notifications
-            * calendar subscriptions
-            * browser printing
-
-         Please note that some of above are fallbacks in case Zammad
-         could not detect the agents timezone correctly.
+   Please note that some of above are fallbacks in case Zammad
+   could not detect the agents timezone correctly.
 
 Pretty Date
    This setting allows you to define how Zammad should display time stamps
    within the interface to all users.
 
-      .. note::
-
-         This does not have any effect on how Zammad returns e.g. time values
-         via variables.
+   This does not have any effect on how Zammad returns e.g. time values
+   via variables.
 
    Choose in between the following options:
       relative
@@ -71,10 +60,8 @@ Pretty Date
             * 3 days 1 hour ago
             * ``03/04/2022``
 
-         .. tip::
-
-            Hovering the timestamp helps, you'll always get a clean timestamp
-            then.
+         Hovering the timestamp helps, you'll always get a clean timestamp
+         then.
 
       absolute
          This timestamp always includes the week day.

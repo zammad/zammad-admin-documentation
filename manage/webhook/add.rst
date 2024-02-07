@@ -36,7 +36,7 @@ Next, select the pre-defined webhook you want and click **Next**.
 
 .. warning:: **⚠️  Adding a new Webhook is not enough**
 
-   You must in addition, add a :doc:`Trigger </manage/trigger>` or
+   You must, in addition, add a :doc:`Trigger </manage/trigger>` or
    :doc:`Scheduler </manage/scheduler>` that references the Webhook!
 
 You can configure the following information for webhooks:
@@ -47,12 +47,10 @@ You can configure the following information for webhooks:
    Endpoint (mandatory)
       Webhook endpoint Zammad sends its payload to.
 
-      .. note::
-
-         Zammad ignores basic authentication parameters. See below how to
-         configure :ref:`username <HTTP Basic Authentication Username>` and
-         :ref:`password <HTTP Basic Authentication Password>` via separate
-         fields.
+      Zammad ignores basic authentication parameters. See below how to
+      configure :ref:`username <HTTP Basic Authentication Username>` and
+      :ref:`password <HTTP Basic Authentication Password>` via separate
+      fields.
 
    HMAC SHA1 Signature Token
       If set all sent webhooks contain a `x-hub-signature` header allowing
@@ -80,7 +78,7 @@ You can configure the following information for webhooks:
       Set this if the endpoint requires HTTP basic authentication credentials.
 
    Pre-defined Webhook
-      .. hint:: This field is only available for pre-defined webhooks!
+      This field is only available for *pre-defined webhooks*!
 
       This field is always disabled in the UI and serves only as a reference
       to a pre-defined webhook. It is not possible to change it for existing
@@ -102,14 +100,12 @@ You can configure the following information for webhooks:
       supported :doc:`/system/variables` use ``::`` or ``#{``
       shortcuts for autocomplete.
 
+      Custom payload must be valid JSON syntax! Code editor will inform you
+      via automated hints if there is an issue with the code. Also, it will
+      not be possible to save an invalid JSON structure.
+
       .. figure:: /images/manage/webhook/webhook-custom-payload.gif
          :alt: Custom payload code editor
-
-      .. warning::
-
-         Custom payload must be valid JSON syntax! Code editor will inform you
-         via automated hints if there is an issue with the code. Also, it will
-         not be possible to save an invalid JSON structure.
 
       .. hint::
          Pre-defined webhooks will always provide an initial custom payload,
@@ -123,8 +119,6 @@ You can configure the following information for webhooks:
       If set to ``inactive`` you can no longer select the webhook within
       trigger or scheduler actions.
 
-      .. warning::
-
-         Inactive webhooks used by triggers or schedulers will not be fired. If
-         triggers or schedulers have other actions configured as well they will
-         still be executed.
+      Inactive webhooks used by triggers or schedulers will not be fired. If
+      triggers or schedulers have other actions configured as well they will
+      still be executed.

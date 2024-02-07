@@ -13,18 +13,6 @@ of its powerful, flexible, and fine-grained permission system.
 
    Assign user privileges in the Admin Panel, under **Manage > Roles**.
 
-.. note:: Users can have both "agent" and "customer" roles at the same time!
-
-   Why would you want this?
-   Agents get :doc:`overviews </manage/overviews>`
-   of all the tickets they're *assigned to* (among others),
-   while customers get an overview of all the tickets they've *opened*.
-   But some teams use Zammad for both internal and public communication,
-   so their agents need both.
-
-   Having both roles also changes what you see in the ticket view,
-   depending on whether you're the "customer" or not.
-
 .. tip:: 💡 **LDAP/Active Directory users:**
 
    Syncing your LDAP "groups" to Zammad roles
@@ -74,6 +62,18 @@ but Zammad gives you the freedom to custom-build your own.
 
 And to do that, you'll need to know what each permission does.
 
+.. note:: Users can have both "agent" and "customer" roles at the same time!
+
+   Why would you want this?
+   Agents get :doc:`overviews </manage/overviews>`
+   of all the tickets they're *assigned to* (among others),
+   while customers get an overview of all the tickets they've *opened*.
+   But some teams use Zammad for both internal and public communication,
+   so their agents need both.
+
+   Having both roles also changes what you see in the ticket view,
+   depending on whether you're the "customer" or not.
+
 .. _permission-guide:
 
 Reference Guide: Permissions
@@ -86,7 +86,10 @@ Reference Guide: Permissions
    agent-permissions
    user-preferences-permissions
 
-Broadly speaking, there are four types of permissions:
+Broadly speaking, there are four types of permission groups. Click on each to
+go to the detailed list of granular permissions. You can either select the whole
+permission group (e.g. ``admin``) or a subset of it
+(e.g. ``admin.text_module``).
 
 :doc:`🛡️ Admin <admin-permissions>`
    for access to each page of the Admin Panel
@@ -102,22 +105,6 @@ Broadly speaking, there are four types of permissions:
 :doc:`🎛️ User Preferences <user-preferences-permissions>`
    for access to your own
    :user-docs:`user profile </extras/profile-and-settings.html>`
-
-.. note:: 📁 **Permissions are namespaced**,
-   which is sort of like having files inside of folders.
-
-   These permissions:
-
-   * ``admin.api``
-   * ``admin.branding``
-   * ``admin.calendar``
-   * ``admin.channel_chat``
-   * ``admin.channel_email``
-   * ...and 30+ more
-
-   all belong to the ``admin`` namespace.
-   You can select them individually,
-   or you can just select ``admin`` to enable the whole bunch.
 
 Role Details
 ------------

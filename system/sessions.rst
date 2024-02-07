@@ -2,20 +2,16 @@ Sessions
 ********
 
 Sessions management allows reviewing currently known user sessions and allows
-to end these.
+to end these. The session timeout is affected by :ref:`security_session_timeout`
+configurations from security settings.
 
 .. figure:: /images/system/sessions/session-managenent.png
    :width: 90%
    :align: center
    :alt: Screenshot showing Zammad's session management
 
-.. hint::
-
-   This page indirectly is affected by :ref:`security_session_timeout`
-   configurations from security settings.
-
 Zammad will provide the following information:
-   
+
    User
       The user account this session entry belongs to. It can be normal if a user
       has several sessions in the list. This can be due to changed browser
@@ -40,23 +36,18 @@ Zammad will provide the following information:
          If *Geo IP services* is enabled only. Depends on how detailed the
          available IP address information are.
 
-         .. note::
-
-            Depending on how long the address is assigned to a specific country
-            the result may differ. Results can be inaccurate - this technically
-            is not an error.
+         Be aware that results can be inaccurate - this technically
+         is not an error.
 
    Age
       Provides the time when the session initially has been created.
 
    Update
-      Provides the time the user last used this session to open Zammad.
+      Provides the time the user used this session to open Zammad.
       This timestamp is only updated if the user e.g. reloads, not during
       normal work on tickets.
 
-      .. hint::
-
-         This timestamp is being used for the session timeout.
+      This timestamp is being used for the session timeout.
 
    Action
       Use the delete button to remove a single session on behalf of your user.

@@ -7,18 +7,14 @@ in your Azure Portal, you can begin connecting Microsoft accounts to Zammad.
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
 
-.. danger:: 🚯 **Zammad will delete all emails in your inbox
-   during the import process.**
-
-   Use the *Keep Messages on Server* setting to
-   :ref:`disable this behavior <microsoft365-keep-messages-on-server>`.
-
-.. warning:: 📮 **Zammad will send an auto-reply message
-   to every email it imports.** (Including the old ones!)
-
-   Make sure to :doc:`disable this behavior </manage/trigger>`
-   prior adding an email account,
-   and to turn it back on once all your messages have been imported.
+.. danger::
+   * By default, Zammad will **delete all emails** in your inbox during the
+     import process. Use the *Keep Messages on Server* setting to
+     :ref:`disable this behavior <microsoft365-keep-messages-on-server>`.
+   * Zammad will **send an auto-reply message to every email it imports**
+     (including the old ones!). Make sure to :doc:`disable this behavior </manage/trigger>`
+     prior adding an email account, and to turn it back on once all your
+     messages have been imported.
 
 .. tip:: 🤓 **Shared mailboxes are possible...**
 
@@ -39,21 +35,17 @@ Please refer the :doc:`migrate-from-email-channel` guide.
 Requesting administrator consent
 --------------------------------
 
-.. hint::
-
-   This step is only required if you didn't consent the permissions in App
-   registration as administrator on behalf of your users.
-   If you do not use this kind of security measurement, simply skip to
-   `Add a New Account`_.
+This step is only required if you didn't consent the permissions in App
+registration as administrator on behalf of your users.
+If you do not use this kind of security measurement, simply skip to
+`Add a New Account`_.
 
 Requesting the consent
    Within Zammad click on **Request Admin Consent** in order to request consent
    from your administrators. This is required in some tenants.
 
-      .. note::
-
-         If your admin already provided consent, you'll be automatically
-         authenticated, if this happens, continue with `Add a New Account`_.
+   If your admin already provided consent, you'll be automatically
+   authenticated, if this happens, continue with `Add a New Account`_.
 
    After authenticating against Microsoft and providing a reason for your request,
    you'll be redirect to the Zammad app. Zammad will then tell you to wait for

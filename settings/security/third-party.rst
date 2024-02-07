@@ -7,6 +7,9 @@ automatically, without the user needed to interact (e.g. type in his name).
 Another big advantage of this feature is that your user doesn't need to remember
 another password.
 
+You can deactivate logging in via :ref:`security_password_login` if any
+of the mentioned authentication providers are enabled in your instance.
+
 .. toctree::
    :caption: Login Providers
    :maxdepth: 1
@@ -19,17 +22,12 @@ another password.
    third-party/twitter
    third-party/saml
 
-.. note:: 
+.. note::
 
    We're currently missing documentation for the following login providers:
 
       * LinkedIn
       * Weibo
-
-.. tip::
-
-   You can deactivate logging in via :ref:`security_password_login` if any
-   of above mentioned authentication providers are enabled in your instance.
 
 .. _automatic-account-linking:
 

@@ -4,6 +4,10 @@ Users
 Users can be managed individually via UI, via API or even synchronized with
 third-party directory services.
 
+Zammad creates a user for everyone who communicates with the system. That
+means even customers get their own accounts, even if they don't use it to
+log in to Zammad.
+
 .. figure:: /images/manage/users/managing-users-manually.png
    :alt: Creating and editing users directly in the Admin Panel
    :align: center
@@ -24,22 +28,6 @@ Learn more about managing users...
 
    via-the-admin-panel
    via-csv-import
-
-.. note:: 😲 **Customers get their own user accounts, too?**
-
-   Yes! Unlike e.g. OTRS, Zammad needs to store accounts
-   for *everyone* who communicates through the system.
-
-   Why? It helps us do things like show all tickets from a certain customer.
-
-   How? Zammad checks the sender of every incoming message
-   at every inbox it monitors,
-   and if it doesn't recognize the address,
-   ✨ **poof** - new customer account!
-
-   (Your customers never need to set a password.
-   Of course, they can if they want to,
-   but the account will be there even if they never use it.)
 
 .. _user-details-reference:
 
@@ -68,14 +56,12 @@ The ones that aren't are described below.
    A user's email and login may differ, but
    **either one can be used to sign in.**
 
-   .. note::
+   .. figure:: /images/manage/users/user-details-login.png
+      :alt: The user overview, showing logins in the first column
+      :align: center
 
-      .. figure:: /images/manage/users/user-details-login.png
-         :alt: The user overview, showing logins in the first column
-         :align: center
-
-         User logins are **not** shown in the New/Edit User dialog,
-         but they are visible from the user overview.
+      User logins are **not** shown in the New/Edit User dialog,
+      but they are visible from the user overview.
 
    This attribute **cannot** be set via the Admin Panel. Instead, use the
    :docs:`Zammad console </admin/console.html>`, the
@@ -92,10 +78,8 @@ The ones that aren't are described below.
    This allows you to do things like view all tickets for that company
    or set up special :doc:`/manage/trigger` that fire only for those customers.
 
-   .. hint:: 🚫 **You can't assign a customer
-      to an organization that doesn't exist yet.**
-
-      To add one, go to **Manage > Organizations** in the Admin Panel.
+   Please note that the organization has to exist before it can be assigned.
+   To add one, go to **Manage > Organizations** in the Admin Panel.
 
 🏤 Secondary Organizations
    This option allows you to assign more organizations, in addition to the
@@ -104,10 +88,8 @@ The ones that aren't are described below.
    Secondary organizations behave the same like the primary ones with one
    exception: Secondaries are not as highlighted like their primaries.
 
-   .. hint::
-
-      Listings for all organizational tickets are not affected by this.
-      Zammad will mix primary and secondary organization tickets together.
+   Listings for all organizational tickets are not affected by this.
+   Zammad will mix primary and secondary organization tickets together.
 
    .. warning::
 
@@ -173,7 +155,8 @@ Group Permissions
    permissions.
    Please note that the visibility of the group permission table depends on the
    role selection. It only shows up, if the selected role has the
-   ``ticket.agent`` permission.
+   ``ticket.agent`` permission and when there is more than one active group
+   in the system.
 
    .. figure:: /images/manage/users/user-details-permissions.png
       :alt: Permissions in the edit user dialog
@@ -183,8 +166,3 @@ Group Permissions
    **Top:** User's roles decide what kind of actions they can perform
    and which :doc:`groups </manage/groups/index>` they belong to.
    **Bottom:** Group assignments can alternately be set on a per-user basis.
-
-   .. hint:: **🤔 Huh? I don't see the group access table...**
-
-      The group access table is only visible in **agent profiles**,
-      when there is **more than one active group** in the system.

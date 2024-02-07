@@ -21,11 +21,6 @@ and what it expects, please consult our
 Available settings
 ------------------
 
-.. hint::
-
-   Click the button next to the ``CTI (generic)`` heading to activate or
-   deactivate this function.
-
 Endpoint Settings
    Zammad will list your generic CTI endpoint here.
    It contains a unique token so ensure to keep this URL save.
@@ -42,14 +37,6 @@ Call Settings
       ..
          yes above and below looks odd but is required to allow including and
          page specific content. :-/
-
-      .. note::
-
-         Your telephony system has to support this function.
-         Zammad will send a ``reject`` response which will cause your telephony
-         system to hang up the call.
-
-         To callers this usually will feel like the line is busy.
 
    .. include:: /system/integrations/cti/includes/outbound-calls.include.rst
 
