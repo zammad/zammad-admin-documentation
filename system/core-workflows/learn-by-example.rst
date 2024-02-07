@@ -4,11 +4,7 @@ Learn by example
 This page provides some basic examples for Core Workflows.
 Of course you can build much more complex workflows if needed.
 
-.. hint::
-
-   If they don't make sense to you currently, don't worry - just have a look at
-   :doc:`how-do-they-work` to learn about all the options in detail and
-   then come back to understand the examples.
+To learn about Core Workflows in detail, first go to :doc:`how-do-they-work`.
 
 All following workflows have the same base configurations.
 The workflow may not use them all.

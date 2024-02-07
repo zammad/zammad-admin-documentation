@@ -1,7 +1,6 @@
 PGP
 ===
 
-
 Introduction
 ------------
 
@@ -9,7 +8,7 @@ Pretty Good Privacy (PGP) is another method for secure email communication.
 With PGP, you can exchange **signed** and **encrypted** messages with others.
 
 Signing
-   is a proof that a message hasn’t been manipulated on its way.
+   is a proof that a message hasn't been manipulated on its way.
 
    In other words, it guarantees message **integrity** and **authenticity**.
 
@@ -35,7 +34,7 @@ Encryption
 Handling of keys
 ----------------
 To use the PGP function, you have to enable the integration (PGP) by switching
-the toggle to *enabled*. 
+the toggle to *enabled*.
 
 You can add keys by clicking the *add key* button. The keys can be imported
 from a file or you can paste the content of the key in the text box.
@@ -44,7 +43,7 @@ from a file or you can paste the content of the key in the text box.
 
    For **signing** *outgoing* emails, you have to import the private key of
    your Zammad email account.
-   
+
    For **encrypting** *outgoing* emails, you have to import the public key of
    the customer's email account.
 
@@ -52,7 +51,7 @@ from a file or you can paste the content of the key in the text box.
    import the public key of the customer.
 
    For **decrypting** of encrypted *incoming* emails, you have to import the
-   private key of your Zammad email account. 
+   private key of your Zammad email account.
 
 Import keys from a file
 ```````````````````````
@@ -62,10 +61,8 @@ You can import keys from a file in the section **Upload key**:
    :alt: Screenshot of adding a key via file
    :align: center
 
-.. note:: **Supported file formats**
-
-   ASCII-armor as well as binary GPG format (basically any GPG supported key
-   format) is supported here. 
+**Supported file formats:** ASCII-armor as well as binary GPG format
+(basically any GPG supported key format) is supported here.
 
 Import keys by pasting the content
 ``````````````````````````````````
@@ -75,9 +72,7 @@ You can also paste the key's content in the section **paste key**:
    :alt: Screenshot of adding a key via pasting
    :align: center
 
-.. note:: **Supported format**
-
-   Please note that only ASCII-armor is supported here.
+**Supported format:** Please note that only ASCII-armor is supported here.
 
 Deleting keys
 `````````````
@@ -100,7 +95,7 @@ Default behavior
 ----------------
 Here you can adjust on per group basis, if *sign* and *encryption* is on or off
 by default. Please be aware, that agents can always override the setting for
-each individual article. 
+each individual article.
 
 .. figure:: /images/system/integrations/pgp/group_default.png
    :alt: Adjusting default behavior on per group basis
@@ -110,7 +105,7 @@ each individual article.
 Recent logs
 -----------
 Here you can see the last actions regarding signing and encryption and if they
-were succesful. 
+were succesful.
 
 
 Troubleshooting
@@ -132,7 +127,7 @@ Troubleshooting
    However, this is *not* recommended.
 
 **How do my customers get my new key?**
-   You have to provide your **public** key in advance. 
+   You have to provide your **public** key in advance.
    Your customer also has to configure PGP in their email workflow and import
    your public key. The other way round, you have to get the public key of your
    customer and have to import it to Zammad.

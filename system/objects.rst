@@ -19,15 +19,15 @@ will be grayed out, you can't delete or change those.
 You can edit custom attributes (they are displayed in black font and have a
 trash bin on the right side) just by clicking on them.
 
-   .. note::
+.. note::
 
-      Attributes you add to Zammad, no matter if they have default values or
-      not, will not update existing information. This means a new ticket field
-      technically will be empty unless you populate it.
+   Attributes you add to Zammad, no matter if they have default values or
+   not, will not update existing information. This means a new ticket field
+   technically will be empty unless you populate it.
 
-      Especially in ticket scope this also means that newly added attributes
-      will be indicated as "changed" to agents that view the ticket. This may
-      interfere with Zammad's tabs behavior.
+   Especially in ticket scope this also means that newly added attributes
+   will be indicated as "changed" to agents that view the ticket. This may
+   interfere with Zammad's tabs behavior.
 
 .. toctree::
    :maxdepth: 1
@@ -43,19 +43,14 @@ Since Zammad introduced :doc:`/system/core-workflows` the need to have a
 custom positioning for attributes has become more important than ever.
 
 To adjust the position of such an attribute, simply click on the attribute
-entry in question, scroll down and adjust the position number.
+entry in question, scroll down and adjust the position number. Please note that
+you cannot change the positioning of default attributes.
+
+In case two attributes have the same position value, Zammad will sort
+alphabetically by name automatically.
 
 .. figure:: /images/system/objects/object-positioning.png
    :alt: Screenshot showing custom attribute entries ordered in between default ones
-
-.. hint::
-
-   In case two attributes have the same position value, Zammad will sort
-   alphabetically by name automatically.
-
-   | **Limitation**
-   | Please note that you cannot change the positioning of default attributes
-     at this time.
 
 Updating database after adding or editing attributes
 ----------------------------------------------------
@@ -66,24 +61,22 @@ If you're ready to go, just click on "Update database" to apply the changes
 to Zammad. If you made a mistake or just want to discard your changes, click
 "Discard changes".
 
-.. warning::
+After applying the changes with "Update Database", a restart of Zammad
+is **mandatory**. If you don't perform it, you may experience unexpected
+behavior or even errors. You may want to do this kind of configuration
+during maintenance windows.
 
-   After applying the changes with "Update Database", a restart of Zammad
-   is **mandatory**. If you don't perform it, you may experience unexpected
-   behavior or even errors. You may want to do this kind of configuration
-   during maintenance windows.
+.. figure:: /images/system/objects/update-database.png
+   :align: center
 
-      .. figure:: /images/system/objects/update-database.png
-         :align: center
+   Changes on objects require you to update the database
+   to apply these changes.
 
-         Changes on objects require you to update the database
-         to apply these changes.
+.. tip:: **🤓 Service restarts can be automated**
 
-   .. tip:: **🤓 Service restarts can be automated**
-
-      | Hosted environments automatically restart for you.
-      | If you're using a self-hosted installation you can use
-        :docs:`environment variables </appendix/configure-env-vars.html>`
+   | Hosted environments automatically restart for you.
+   | If you're using a self-hosted installation you can use
+      :docs:`environment variables </appendix/configure-env-vars.html>`
 
 System attributes
 -----------------
@@ -98,14 +91,12 @@ Ticket State
 
 If the pre-configured states aren't enough for you or you want to change
 them, you can do so by clicking on the cogwheel icon in the state row in the
-ticket tab:
+ticket tab. But you should be careful when changing pre-configured states. This
+can lead to unwanted behavior in some cases.
 
 .. figure:: /images/system/objects/ticket-state/highlighted-state-attribute.png
    :align: center
    :alt: Screenshot showing highlighted ticket state attribute
-
-.. danger:: Be careful when changing pre-configured states. This can lead
-   to unwanted behavior in some cases.
 
 Handling of states
    In the state configuration screen, you can add new states, disable states or
@@ -245,8 +236,8 @@ Priorities in detail
       (default). This affects the displayed color for ticket titles in
       overviews.
 
-      .. note:: The color options are currently limited to the mentioned
-         options.
+      The color options are currently limited to the mentioned
+      options.
 
    Note
       You can create a note for the priority to inform other admins about the

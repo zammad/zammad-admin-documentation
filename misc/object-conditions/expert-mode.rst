@@ -8,15 +8,10 @@ Expert object conditions
 
 Enabling the *expert mode* within your ticket conditions allows you to use
 *AND / OR* conditions for any supported method. You can decide which workflow
-requires this enhanced configuration individually. 
+requires this enhanced configuration individually. This section expects that
+you had a look at :doc:`basics` already.
 
-.. note::
-
-   The option "Expert mode" is available since Zammad 5.4.
-
-   This section expects that you had a look at :doc:`basics` already.
-
---------------------------------------------------------------------------------
+This feature is available since Zammad 5.4.
 
 Limitation
 ----------
@@ -70,18 +65,17 @@ using it on.
       :alt: Screencast showing new logic blocks being added
       :align: center
 
-   .. hint::
 
-      The same behavior also applies to conditions *within* logic blocks!
+   The same behavior also applies to conditions *within* logic blocks!
 
-      .. figure:: /images/misc/object-conditions/adding-conditions-to-blocks.gif
-         :alt: Screencast showing new conditions being added to logic blocks
-         :align: center
+   .. figure:: /images/misc/object-conditions/adding-conditions-to-blocks.gif
+      :alt: Screencast showing new conditions being added to logic blocks
+      :align: center
 
-   .. warning::
+.. warning::
 
-      Note that removing condition blocks removes **all blocks and conditions**
-      with it!
+   Note that removing condition blocks removes **all blocks and conditions**
+   with it!
 
 .. |subclause| image:: /images/icons/subclause-64px.png
    :alt: Icon for adding a new subclause block
@@ -93,13 +87,11 @@ Re-arranging conditions and logic blocks
 Use ≡ to drag conditions or logic blocks and drop them to the position desired.
 By using drag and drop, you won't need to remove and re-add conditions.
 
-   .. hint::
+Moving logic blocks will also move any condition and, if applicable,
+logic blocks that are below it.
 
-      Moving logic blocks will also move any condition and, if applicable,
-      logic blocks that are below it.
-
-      While you can adjust the order of conditions without any further logic
-      blocks, this won't have any consequences.
+While you can adjust the order of conditions without any further logic
+blocks, this won't have any consequences.
 
 .. figure:: /images/misc/object-conditions/re-arranging-conditions.gif
    :alt: Screencast showing dragging and dropping conditions

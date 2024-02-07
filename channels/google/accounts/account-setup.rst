@@ -1,31 +1,28 @@
 Account Setup
 =============
 
-After you’ve :doc:`registered Zammad as an OAuth app <register-app>`
+After you've :doc:`registered Zammad as an OAuth app <register-app>`
 in your Google Developer settings,
 you can begin connecting Gmail accounts to Zammad.
 
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
 
-.. danger:: 🚯 **Zammad will delete all emails in your inbox
-   during the import process.**
-
-   Use the *Keep Messages on Server* setting to
-   :ref:`disable this behavior <google-keep-messages-on-server>`.
-
-.. warning:: 📮 **Zammad will send an auto-reply message
-   to every email it imports.** (Including the old ones!)
-
-   Make sure to :doc:`disable this behavior </manage/trigger>`
-   prior adding an email account,
-   and to turn it back on once all your messages have been imported.
+.. danger::
+   * By default, Zammad will **delete all emails** in your inbox
+     during the import process. Use the *Keep Messages on Server* setting to
+     :ref:`disable this behavior <google-keep-messages-on-server>`.
+   * Zammad will send an auto-reply message
+     to every email it imports (including the old ones!).
+     Make sure to :doc:`disable this behavior </manage/trigger>`
+     prior adding an email account and to turn it back on once all your
+     messages have been imported.
 
 🚛 Migrate an Existing Email Channel
 ------------------------------------
 
-If you’ve already added your Google account as a regular email channel,
-you’ll have to convert it to a Google channel eventually:
+If you've already added your Google account as a regular email channel,
+you'll have to convert it to a Google channel eventually:
 Google is planning to end support for simple password authentication
 in third-party email clients (like Zammad).
 
@@ -88,12 +85,12 @@ Keep messages on server
    .. note:: 🤔 **Why does Zammad delete messages by default?**
 
       If you never clean out your inbox,
-      it’ll eventually reach its storage limit,
+      it'll eventually reach its storage limit,
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it’s set up,
+      Most Zammad users never even look at their inbox once it's set up,
       so they rely on Zammad to keep it clean for them.
 
-      If you choose **yes** here, remember that it’s your responsibility
+      If you choose **yes** here, remember that it's your responsibility
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
@@ -115,6 +112,6 @@ After adding the account
 Troubleshooting
 ---------------
 
-I successfully added my account, but Zammad isn’t fetching new email
+I successfully added my account, but Zammad isn't fetching new email
    If you specified a :ref:`custom folder/label to fetch from <google-folder>`,
    are you sure incoming mail is arriving in that folder?

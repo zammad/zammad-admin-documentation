@@ -5,12 +5,12 @@ Use GitLab integration to track GitLab issues directly within Zammad tickets.
 Add issue hyperlinks and get a live summary of metadata
 like status (open/closed), assignee, labels, and more.
 
+Please note that our GitLab integration does not support merge requests.
+
 .. figure:: /images/system/integrations/gitlab/gitlab-integration-page.png
    :alt: Integration page for GitLab
    :align: center
    :width: 90%
-
-.. note:: GitLab integration does not support merge requests.
 
 Setup
 -----
@@ -37,10 +37,8 @@ Setup
 
    .. include:: /includes/ssl-verification-warning.rst
 
-   .. hint::
-
-      Leave the default API endpoint (``https://gitlab.com/api/graphql``) as-is
-      unless you're a self-hosted GitLab user.
+   Use the default API endpoint (``https://gitlab.com/api/graphql``)
+   unless you're a self-hosted GitLab user.
 
 Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
 

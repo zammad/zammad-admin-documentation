@@ -1,4 +1,3 @@
-   .. hint::
 
-      On premise installations behind restrictive firewalls require ``HTTPS``
-      access to ``geo.zammad.com``.
+Make sure your on premise installation has ``HTTPS``
+access to ``geo.zammad.com``.

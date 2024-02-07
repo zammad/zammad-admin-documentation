@@ -1,8 +1,12 @@
 Knowledge Base
 **************
 
-Publish your own library of FAQs, how-tos, internal SOPs and more with the
+Publish your own library of FAQs, how-tos, internal processes and more with the
 **knowledge base**.
+
+This document describes how to **configure** the knowledge base. For details
+on how to **use and edit** it, please refer to the
+:user-docs:`Zammad User Documentation </extras/knowledge-base.html>`.
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-demo.png
    :alt: Sample Knowledge Base Index
@@ -10,14 +14,9 @@ Publish your own library of FAQs, how-tos, internal SOPs and more with the
 
    See a live demo at https://support.zammad.com/help.
 
-.. hint:: This document describes how to ⚙ **configure** the knowledge base.
-
-   For details on how to ✍️ **use and edit** it, please refer to the
-   :user-docs:`Zammad User Documentation </extras/knowledge-base.html>`.
-
-   By default, only admin users are permitted to create, edit, and manage
-   knowledge base articles. See :doc:`roles/index` for details on how to
-   grant write access to agents or other users.
+By default, only admin users are permitted to create, edit, and manage
+knowledge base articles. See :doc:`roles/index` for details on how to
+grant write access to agents or other users.
 
 .. note:: The knowledge base will not appear in the main menu until it has been
    enabled in the admin panel.
@@ -44,7 +43,7 @@ publish in:
    :align: center
 
    You must choose at least one.
-   (Don’t worry, you can always change them later!)
+   (Don't worry, you can always change them later!)
 
 Read on for details about each section of the knowledge base configuration.
 
@@ -55,7 +54,7 @@ Theme
    :alt: Knowledge Base: Configure theme
    :align: center
 
-   🎨 Customize the appearance of the knowledge base.
+   Customize the appearance of the knowledge base.
 
 :Icon & Link Color:
    Applies to all **category & article** entries in knowledge base menus,
@@ -96,11 +95,9 @@ Theme
       :alt: Knowledge Base: Icons
       :align: center
 
-   .. warning:: 
-
-      🤦‍♀️ Re-assigning icons on all of your categories is tedious work.
-      It's advisable to explore your options early to avoid having to change
-      your mind down the road.
+   Re-assigning icons on all of your categories is tedious work.
+   It's advisable to explore your options early to avoid having to change
+   your mind down the road.
 
 Languages
 ^^^^^^^^^
@@ -109,13 +106,13 @@ Languages
    :alt: Knowledge Base: Configure languages
    :align: center
 
-   🌍 Add or remove locales, or reassign the default.
+   Add or remove locales, or reassign the default.
 
 The knowledge base will automatically display the language matching each
-visitor’s locale. Visitors may always manually switch to another language via a
+visitor's locale. Visitors may always manually switch to another language via a
 dropdown menu in the footer.
 
-The default locale is displayed when the visitor’s locale is not supported.
+The default locale is displayed when the visitor's locale is not supported.
 
 Articles that have not yet been translated into a given language will be hidden
 from that locale.
@@ -123,7 +120,7 @@ from that locale.
 Public Menu
 ^^^^^^^^^^^
 
-Use this section to unify the knowledge base with your own website’s main
+Use this section to unify the knowledge base with your own website's main
 navigation. Entries added here will appear in the knowledge base like so:
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-public-menu-result.png
@@ -179,7 +176,7 @@ Custom URL
    :alt: Knowledge Base: Configure custom URL
    :align: center
 
-   📍 Relocate the knowledge base to the URL of your choosing.
+   Relocate the knowledge base to the URL of your choosing.
 
 By default, the knowledge base will appear
 at the same domain as your Zammad instance, under ``/help``.
@@ -195,8 +192,8 @@ Delete
    :alt: Knowledge Base: Delete knowledge base
    :align: center
 
-   🗑️ Permanently delete the knowledge base and all the articles within it.
+   Permanently delete the knowledge base and all the articles within it.
 
 Use this panel to delete the knowledge base.
-If you wish to unpublish it without deleting all its content,
+If you wish to unpublish it without deleting all of its content,
 simply disable it via the toggle button at the top of the window instead.

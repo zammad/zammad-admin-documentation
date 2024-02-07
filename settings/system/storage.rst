@@ -8,6 +8,11 @@ knowledge base. By default, we're writing to the ``Database`` - you can switch
 to ``Filesystem`` or ``Simple Storage (S3)`` at any time. In this case please
 have a look on the following instructions.
 
+If you have a busy Zammad instance, we strongly encourage you to use filesystem
+storage instead of "Database".
+This will greatly improve system performance (de-crease database load
+and size).
+
 Database
    This is the default storage mechanism. The attachments are stored directly in
    the database. If your Zammad instance grows, we recommend one of the other
@@ -17,6 +22,10 @@ Filesystem
    This storage mechanism is recommended for all Zammad instances, especially
    for those with a higher load. If you choose filesystem, your files are
    written to ``/opt/zammad/storage/``.
+
+   Moving attachments from "Database" to "Filesystem" can be run during
+   production use. However, you should consider your framework conditions
+   (e.g. bandwidth, system load in production) to define the right moment.
 
    .. note::
 
@@ -85,18 +94,3 @@ Simple Storage (S3)
       replace ``rails r`` with ``zammad run rails r`` above.
       To learn more, see :docs:`Administration via Console </admin/console.html>`.
 
-
-.. note::
-
-      🤔 **But which one to use?**
-
-      We strongly encourage you to use filesystem storage on busy instances
-      instead of "Database".
-      This will greatly improve system performance (de-crease database load
-      and size).
-
-.. tip::
-
-   Moving attachments from "Database" to "Filesystem" can be run during
-   production use. However, you should consider your framework conditions
-   (e.g. bandwidth, system load in production) to define the right moment.

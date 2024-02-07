@@ -10,6 +10,3 @@ Mail Server Settings
       :scale: 60%
       :align: center
 
-   .. note::
-
-      ⌨️ In some browsers, you may have to manually re-enter your password.

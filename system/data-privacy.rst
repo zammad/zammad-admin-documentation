@@ -5,8 +5,15 @@ For compliance with GDPR and other data privacy laws,
 you may wish to **permanently delete users from the system**,
 along with **all of their associated tickets**.
 
-.. hint:: You can even create automated deletion tasks for tickets and users
-   based on custom conditions via :doc:`scheduler </manage/scheduler>`!
+You can create manual deletion tasks or even automated deletion tasks for
+tickets and users based on custom conditions via
+:doc:`scheduler </manage/scheduler>`!
+
+Access to this panel requires ``admin.data_privacy`` permissions
+(introduced in Zammad 3.5).
+
+On older systems that have not been updated yet, customers can also be
+:docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`.
 
 .. figure:: /images/system/data-privacy/creating-a-new-deletion-task.png
    :alt: User deletion dialog in the Data Privacy panel
@@ -15,20 +22,13 @@ along with **all of their associated tickets**.
    The user deletion dialog lists some of the tickets
    that will be removed from the system along with the user.
 
-.. note:: 🤔 **Huh? I don't see the Data Privacy panel...**
-
-   Access to this panel requires ``admin.data_privacy`` permissions
-   (introduced in Zammad 3.5).
-
-   On older systems that have not been updated yet, customers can also be
-   :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`.
 
 Deleting Users via GUI
 ----------------------
 
 .. warning:: 🔥 **All deletions are FINAL!**
 
-   Once you click “Delete”, the action cannot be cancelled or undone.
+   Once you click “Delete”, the action cannot be canceled or undone.
 
    Any time you delete a user, all their tickets will be deleted, as well.
    It is not possible to delete a user and still keep their tickets.
@@ -44,7 +44,6 @@ Step 1: Find a user / confirm deletion
 There are three ways to access the user deletion dialog:
 
 **from the user's profile**
-
    .. figure:: /images/system/data-privacy/delete-user-via-profile.gif
       :alt: Accessing the user deletion dialog in a user profile
       :align: center
@@ -52,7 +51,6 @@ There are three ways to access the user deletion dialog:
       Click **Action > Delete**.
 
 **in the “Manage > Users” Admin Panel**
-
    .. figure:: /images/system/data-privacy/delete-user-via-user-panel.gif
       :alt: Accessing the user deletion dialog under “Users” in the Admin Panel
       :align: center
@@ -60,7 +58,6 @@ There are three ways to access the user deletion dialog:
       Use the **⋮ Actions** menu for the target user.
 
 **in the “System > Data Privacy” Admin Panel**
-
    .. figure:: /images/system/data-privacy/delete-user-via-data-privacy-panel.gif
       :alt: Accessing the user deletion dialog under “Data Privacy” in the Admin Panel
       :align: center
@@ -68,8 +65,7 @@ There are three ways to access the user deletion dialog:
       Use the **New Deletion Task** button. Search for users by name or email
       address.
 
-.. hint:: 👥 **You can delete organizations, too.**
-
+**Delete organizations**
    If the customer you are deleting is the last user in their organization,
    a **Delete Organization?** option will be displayed in the user deletion
    dialog:
@@ -77,11 +73,10 @@ There are three ways to access the user deletion dialog:
    .. figure:: /images/system/data-privacy/delete-organization-option.png
       :alt: Deleting an organization via the user deletion dialog
       :align: center
-      :width: 50%
+      :width: 60%
 
-   (If this option does not appear,
-   make sure there are no pending deletion tasks
-   for other customers from this organization.)
+   If this option does not appear, make sure there are no pending deletion
+   tasks for other customers from this organization.
 
 Step 2: Monitor deletion job status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

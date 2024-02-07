@@ -1,6 +1,4 @@
-   .. note::
-
-      This setting is automatically set by the Getting Started wizard.
+   It is automatically set by the *Getting Started wizard*.
 
    .. warning::
 

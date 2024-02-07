@@ -18,12 +18,10 @@ account.
 Enable Recovery Codes
 ---------------------
 
-.. warning::
-   Recovery codes cannot be used on their own, they can only be activated if at
-   least one two-factor authentication method is enabled.
-
 Recovery codes are one-time use security codes that can be used by the user if
-they lose access to their other two-factor authentication methods.
+they lose access to their other two-factor authentication methods. They cannot
+be used on their own, they can only be activated if at least one two-factor
+authentication method is enabled.
 
 .. figure:: /images/settings/security/two-factor-recovery-codes-setting.png
    :alt: Enable Recovery Codes Setting
@@ -40,41 +38,37 @@ Users will also have an option to regenerate their recovery codes at any time,
 which invalidates already existing recovery codes and provides them with a list
 of fresh codes.
 
-.. hint::
-   After you enable this setting, when the user completes a setup of their
-   initial two-factor authentication method, they will be presented with a list
-   of recovery codes and instructed to save them for later use.
+After you enable this setting, when the user completes a setup of their
+initial two-factor authentication method, they will be presented with a list
+of recovery codes and instructed to save them for later use.
 
-   .. figure:: /images/settings/security/two-factor-recovery-codes-modal.png
-      :alt: Recovery Codes Generation Modal Dialog
-      :align: center
+.. figure:: /images/settings/security/two-factor-recovery-codes-modal.png
+   :alt: Recovery Codes Generation Modal Dialog
+   :align: center
 
 Enforce the Set Up of the Two-Factor Authentication
 ---------------------------------------------------
 
-.. warning::
-   You must have at least one two-factor authentication method enabled for this
-   setting to take effect.
-
 In case you wish to require your users to set up at least one two-factor
 authentication method for their account, you can do this by selecting specific
 user roles the requirement applies to in **Enforced for user roles** setting.
+Of course you must have at least one two-factor authentication method enabled
+for this setting to take effect.
 
 .. figure:: /images/settings/security/two-factor-enforced-for-user-roles.png
    :alt: Enforced for User Roles Setting
    :align: center
 
-.. hint::
-   After you change this setting, if the user has one of the selected roles on
-   their account, they will be forced to set up the two-factor authentication
-   upon next sign in or application reload.
+After you change this setting, if the user has one of the selected roles on
+their account, they will be forced to set up the two-factor authentication
+upon next sign in or application reload.
 
-   A modal dialog with instructions will be shown, and they will not be able to
-   do any work before they set up at least one two-factor method.
+A modal dialog with instructions will be shown, and they will not be able to
+do any work before they set up at least one two-factor method.
 
-   .. figure:: /images/settings/security/two-factor-after-auth-modal.png
-      :alt: Modal Dialog for Enforcing Two-Factor Authentication Set Up
-      :align: center
+.. figure:: /images/settings/security/two-factor-after-auth-modal.png
+   :alt: Modal Dialog for Enforcing Two-Factor Authentication Set Up
+   :align: center
 
 Reset Two-Factor Authentication for a Specific User
 ---------------------------------------------------

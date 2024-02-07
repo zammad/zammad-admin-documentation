@@ -2,7 +2,7 @@ Migrate from Email channel to Google channel
 ============================================
 
 Zammad provides a migration logic that allows you to migrate existing Google
-accounts from the Email channel to the Google channel.
+accounts from an email channel into a Google channel.
 
 .. note:: 🧐 **Zammad is expecting specific settings**
 
