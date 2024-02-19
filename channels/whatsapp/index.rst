@@ -39,6 +39,9 @@ if you want to go to a specific step directly.
 - Create a WhatsApp Business app
 - Assign a not yet used phone number (may not be used in a WhatsApp app already)
 
+.. note:: **One phone number per app**
+   If you want to use more than one phone number, you have to create a business
+   app for each number you want to use.
 
 Limitations
 -----------
@@ -72,6 +75,9 @@ limitations.
 
 Then head over to Zammad's admin panel to add the WhatsApp channel under
 Channels > WhatsApp and follow the steps below.
+
+.. figure:: /images/channels/whatsapp/admin-panel-whatsapp-add-account.png
+   :alt: Admin panel shows dialog for adding a WhatsApp channel
 
 Generating API Key
 ^^^^^^^^^^^^^^^^^^
