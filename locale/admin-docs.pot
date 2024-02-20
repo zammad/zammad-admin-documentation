@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 11:34+0100\n"
+"POT-Creation-Date: 2024-02-20 14:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1106,187 +1106,157 @@ msgstr ""
 #: ../channels/email/email-headers.rst:2
 #: ../channels/email/email-headers.rst:2
 #: ../channels/email/email-headers.rst:2
-msgid "Email Header Manipulation"
+msgid "Header Based Actions"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:4
-#: ../channels/email/email-headers.rst:4
-#: ../channels/email/email-headers.rst:4
-msgid "Email header manipulation allows you to re-route or adjust tickets apart from filters or triggers. Like an API call, but with emails."
+#: ../channels/email/email-headers.rst:5
+#: ../channels/email/email-headers.rst:5
+#: ../channels/email/email-headers.rst:5
+msgid "With specific email headers, you can make Zammad performing different actions depending on the content of the headers. So, if you create a new email (e.g. from a form on your website) you can set these headers to perform actions or to hand over special information like custom attributes."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:7
-#: ../channels/email/email-headers.rst:7
-#: ../channels/email/email-headers.rst:7
-msgid "Header checks are case insensitive."
-msgstr ""
-
-#: ../channels/email/email-headers.rst:9
-#: ../channels/email/email-headers.rst:9
-#: ../channels/email/email-headers.rst:9
+#: ../channels/email/email-headers.rst:10
+#: ../channels/email/email-headers.rst:10
+#: ../channels/email/email-headers.rst:10
 msgid "**🛡 Trusted channels required 🛡**"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:11
-#: ../channels/email/email-headers.rst:11
-#: ../channels/email/email-headers.rst:11
+#: ../channels/email/email-headers.rst:12
+#: ../channels/email/email-headers.rst:12
+#: ../channels/email/email-headers.rst:12
 msgid "Below options are a potential risk with external communication and thus require channels being set to trusted explicitly. You can find instructions about how to set a channel to trusted at the end of this page."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:17
-#: ../channels/email/email-headers.rst:17
-#: ../channels/email/email-headers.rst:17
-msgid "Below headers are examples and –in our opinion– the most relevant ones. However: You can adjust mostly any article or ticket attribute (yes, custom ones as well) if you know the attribute's exact name."
+#: ../channels/email/email-headers.rst:18
+#: ../channels/email/email-headers.rst:18
+#: ../channels/email/email-headers.rst:18
+msgid "Below headers are examples and in our opinion the most relevant ones. However, you can adjust mostly all article or ticket attributes including custom ones if you know the attribute's exact name. Have a look :doc:`here </system/objects>` to find the attribute names."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:21
-#: ../channels/email/email-headers.rst:21
-#: ../channels/email/email-headers.rst:21
-msgid "The name column within :doc:`object's management </system/objects>` provides easy access to objects attribute names. 🤓"
+#: ../channels/email/email-headers.rst:22
+#: ../channels/email/email-headers.rst:22
+#: ../channels/email/email-headers.rst:22
+msgid "Header checks are case insensitive. However, values are case sensitive!"
 msgstr ""
 
 #: ../channels/email/email-headers.rst:25
 #: ../channels/email/email-headers.rst:25
 #: ../channels/email/email-headers.rst:25
-msgid "Trigger auto responses"
+msgid "Auto responses"
 msgstr ""
 
 #: ../channels/email/email-headers.rst:27
 #: ../channels/email/email-headers.rst:27
 #: ../channels/email/email-headers.rst:27
-msgid "Normally, Zammad runs internal checks to see if an email is an automatic response. In these cases Zammad will not send trigger based responses."
+msgid "Normally, Zammad runs internal checks to see if an incoming email is an automatic response. In such cases Zammad will not send trigger based responses. You can override this with below headers:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:30
-#: ../channels/email/email-headers.rst:30
-#: ../channels/email/email-headers.rst:30
-msgid "There may be use cases where this behavior may be in your way, below options allow you to overcome this issue."
-msgstr ""
-
-#: ../channels/email/email-headers.rst:35
-#: ../channels/email/email-headers.rst:35
-#: ../channels/email/email-headers.rst:35
-msgid "In some cases combining below headers is crucial. This is intentional but may be confusing."
-msgstr ""
-
-#: ../channels/email/email-headers.rst:45
-#: ../channels/email/email-headers.rst:45
-#: ../channels/email/email-headers.rst:45
+#: ../channels/email/email-headers.rst:36
+#: ../channels/email/email-headers.rst:36
+#: ../channels/email/email-headers.rst:36
 msgid "``x-zammad-send-auto-response``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:39
-#: ../channels/email/email-headers.rst:39
-#: ../channels/email/email-headers.rst:39
+#: ../channels/email/email-headers.rst:32
+#: ../channels/email/email-headers.rst:32
+#: ../channels/email/email-headers.rst:32
 msgid "Set to ``false`` to disable trigger based responses. If set to ``true`` Zammad will send a response."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:44
-#: ../channels/email/email-headers.rst:44
-#: ../channels/email/email-headers.rst:44
+#: ../channels/email/email-headers.rst:35
+#: ../channels/email/email-headers.rst:35
+#: ../channels/email/email-headers.rst:35
 msgid "This option *does not* work if e.g. ``precedence: list`` is set unless you use below auto response header as well."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:57
-#: ../channels/email/email-headers.rst:57
-#: ../channels/email/email-headers.rst:57
+#: ../channels/email/email-headers.rst:46
+#: ../channels/email/email-headers.rst:46
+#: ../channels/email/email-headers.rst:46
 msgid "``x-zammad-is-auto-response``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:48
-#: ../channels/email/email-headers.rst:48
-#: ../channels/email/email-headers.rst:48
+#: ../channels/email/email-headers.rst:39
+#: ../channels/email/email-headers.rst:39
+#: ../channels/email/email-headers.rst:39
 msgid "Providing this header allows you to tell Zammad that the mail in question is an auto generated response (``true``). This will cause email based triggers to be skipped."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:52
-#: ../channels/email/email-headers.rst:52
-#: ../channels/email/email-headers.rst:52
+#: ../channels/email/email-headers.rst:43
+#: ../channels/email/email-headers.rst:43
+#: ../channels/email/email-headers.rst:43
 msgid "Set this header to ``false`` if you want to generate auto responses."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:56
-#: ../channels/email/email-headers.rst:56
-#: ../channels/email/email-headers.rst:56
+#: ../channels/email/email-headers.rst:45
+#: ../channels/email/email-headers.rst:45
+#: ../channels/email/email-headers.rst:45
 msgid "This header allows you to overwrite auto detects for e.g. ``precedence: list``."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:60
-#: ../channels/email/email-headers.rst:60
-#: ../channels/email/email-headers.rst:60
+#: ../channels/email/email-headers.rst:49
+#: ../channels/email/email-headers.rst:49
+#: ../channels/email/email-headers.rst:49
 #: ../system/integrations/checkmk/api-reference.rst:52
 msgid "Ticket attributes"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:62
-#: ../channels/email/email-headers.rst:62
-#: ../channels/email/email-headers.rst:62
-msgid "Zammad allows you to use headers to manipulate ticket creations or follow ups. The manipulation can be used instead of triggers. Triggers are considered *after* header settings and thus can still overrule."
+#: ../channels/email/email-headers.rst:51
+#: ../channels/email/email-headers.rst:51
+#: ../channels/email/email-headers.rst:51
+msgid "Zammad allows you to use headers to manipulate ticket creations or follow ups. The manipulation can be used instead of triggers. Triggers are considered *after* header settings and thus can still override headers."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:66
-#: ../channels/email/email-headers.rst:66
-#: ../channels/email/email-headers.rst:66
-msgid "**🔎 Zammad differentiates between ticket creation and follow up**"
+#: ../channels/email/email-headers.rst:55
+#: ../channels/email/email-headers.rst:55
+#: ../channels/email/email-headers.rst:55
+msgid "To differentiate between ticket creation and follow:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:0
-#: ../channels/email/email-headers.rst:0
-#: ../channels/email/email-headers.rst:0
+#: ../channels/email/email-headers.rst:57
+#: ../channels/email/email-headers.rst:57
+#: ../channels/email/email-headers.rst:57
 msgid "For creations use: ``X-Zammad-Ticket-{Attribute Name}``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:0
-#: ../channels/email/email-headers.rst:0
-#: ../channels/email/email-headers.rst:0
+#: ../channels/email/email-headers.rst:58
+#: ../channels/email/email-headers.rst:58
+#: ../channels/email/email-headers.rst:58
 msgid "For follow ups use: ``X-Zammad-Ticket-FollowUp-{Attribute Name}``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:71
-#: ../channels/email/email-headers.rst:71
-#: ../channels/email/email-headers.rst:71
+#: ../channels/email/email-headers.rst:60
+#: ../channels/email/email-headers.rst:60
+#: ../channels/email/email-headers.rst:60
 msgid "This allows you to ensure the changes are only applied in the required situation."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:74
-#: ../channels/email/email-headers.rst:74
-#: ../channels/email/email-headers.rst:74
-msgid "**🧐 About values**"
-msgstr ""
-
-#: ../channels/email/email-headers.rst:76
-#: ../channels/email/email-headers.rst:76
-#: ../channels/email/email-headers.rst:76
-msgid "While headers are not case sensitive, values like e.g. priority names are case censitive: ``1 low`` will work, but ``1 lOw`` will not!"
-msgstr ""
-
-#: ../channels/email/email-headers.rst:78
-#: ../channels/email/email-headers.rst:78
-#: ../channels/email/email-headers.rst:78
+#: ../channels/email/email-headers.rst:65
+#: ../channels/email/email-headers.rst:65
+#: ../channels/email/email-headers.rst:65
 msgid "When using attributes that require date / time values, ensure to use Time Zoned Times. e.g. for 28th September 2021 on 8 am CEST, either use:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:81
-#: ../channels/email/email-headers.rst:81
-#: ../channels/email/email-headers.rst:81
+#: ../channels/email/email-headers.rst:68
+#: ../channels/email/email-headers.rst:68
+#: ../channels/email/email-headers.rst:68
 msgid "``2021-09-28T08:00:00+0200``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:82
-#: ../channels/email/email-headers.rst:82
-#: ../channels/email/email-headers.rst:82
+#: ../channels/email/email-headers.rst:69
+#: ../channels/email/email-headers.rst:69
+#: ../channels/email/email-headers.rst:69
 msgid "``2021-09-28T08:00:00+02:00``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:83
-#: ../channels/email/email-headers.rst:83
-#: ../channels/email/email-headers.rst:83
+#: ../channels/email/email-headers.rst:70
+#: ../channels/email/email-headers.rst:70
+#: ../channels/email/email-headers.rst:70
 msgid "``2021-09-28T06:00:00.000Z``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:87
-#: ../channels/email/email-headers.rst:87
-#: ../channels/email/email-headers.rst:87
+#: ../channels/email/email-headers.rst:74
+#: ../channels/email/email-headers.rst:74
+#: ../channels/email/email-headers.rst:74
 msgid "``X-Zammad-Ticket-Priority`` & ``X-Zammad-Ticket-FollowUp-Priority``"
 msgstr ""
 
@@ -1302,9 +1272,9 @@ msgstr ""
 msgid "Example: ``X-Zammad-Ticket-Priority: 1 low``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:91
-#: ../channels/email/email-headers.rst:91
-#: ../channels/email/email-headers.rst:91
+#: ../channels/email/email-headers.rst:78
+#: ../channels/email/email-headers.rst:78
+#: ../channels/email/email-headers.rst:78
 msgid "``X-Zammad-Ticket-Group`` & ``X-Zammad-Ticket-FollowUp-Group``"
 msgstr ""
 
@@ -1320,9 +1290,9 @@ msgstr ""
 msgid "Example: ``X-Zammad-Ticket-Group: Sales``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:96
-#: ../channels/email/email-headers.rst:96
-#: ../channels/email/email-headers.rst:96
+#: ../channels/email/email-headers.rst:83
+#: ../channels/email/email-headers.rst:83
+#: ../channels/email/email-headers.rst:83
 msgid "``X-Zammad-Ticket-Owner`` & ``X-Zammad-Ticket-FollowUp-Owner``"
 msgstr ""
 
@@ -1338,9 +1308,9 @@ msgstr ""
 msgid "Example: ``X-Zammad-Ticket-Owner: jdoe``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:106
-#: ../channels/email/email-headers.rst:106
-#: ../channels/email/email-headers.rst:106
+#: ../channels/email/email-headers.rst:91
+#: ../channels/email/email-headers.rst:91
+#: ../channels/email/email-headers.rst:91
 msgid "``X-Zammad-Ticket-State`` & ``X-Zammad-Ticket-FollowUp-State``"
 msgstr ""
 
@@ -1365,12 +1335,12 @@ msgstr ""
 #: ../channels/email/email-headers.rst:0
 #: ../channels/email/email-headers.rst:0
 #: ../channels/email/email-headers.rst:0
-msgid "Like so: ``X-Zammad-Ticket-Pending_Time: 2021-09-26T08:00:00+0200``"
+msgid "Example: ``X-Zammad-Ticket-Pending_Time: 2021-09-26T08:00:00+0200``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:115
-#: ../channels/email/email-headers.rst:115
-#: ../channels/email/email-headers.rst:115
+#: ../channels/email/email-headers.rst:98
+#: ../channels/email/email-headers.rst:98
+#: ../channels/email/email-headers.rst:98
 msgid "``X-Zammad-Customer-Email``"
 msgstr ""
 
@@ -1389,18 +1359,18 @@ msgstr ""
 msgid "Example: ``X-Zammad-Customer-Email: jdoe@example.com``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:115
-#: ../channels/email/email-headers.rst:124
-#: ../channels/email/email-headers.rst:115
-#: ../channels/email/email-headers.rst:124
-#: ../channels/email/email-headers.rst:115
-#: ../channels/email/email-headers.rst:124
+#: ../channels/email/email-headers.rst:98
+#: ../channels/email/email-headers.rst:105
+#: ../channels/email/email-headers.rst:98
+#: ../channels/email/email-headers.rst:105
+#: ../channels/email/email-headers.rst:98
+#: ../channels/email/email-headers.rst:105
 msgid "This header is not available for follow ups."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:124
-#: ../channels/email/email-headers.rst:124
-#: ../channels/email/email-headers.rst:124
+#: ../channels/email/email-headers.rst:105
+#: ../channels/email/email-headers.rst:105
+#: ../channels/email/email-headers.rst:105
 msgid "``X-Zammad-Customer-Login``"
 msgstr ""
 
@@ -1410,28 +1380,28 @@ msgstr ""
 msgid "Example: ``X-Zammad-Customer-Login: jdoe``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:127
-#: ../channels/email/email-headers.rst:127
-#: ../channels/email/email-headers.rst:127
+#: ../channels/email/email-headers.rst:108
+#: ../channels/email/email-headers.rst:108
+#: ../channels/email/email-headers.rst:108
 msgid "Article attributes"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:129
-#: ../channels/email/email-headers.rst:129
-#: ../channels/email/email-headers.rst:129
+#: ../channels/email/email-headers.rst:110
+#: ../channels/email/email-headers.rst:110
+#: ../channels/email/email-headers.rst:110
 msgid "If needed Zammad allows you to manipulate attributes or states of fetched email articles."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:143
-#: ../channels/email/email-headers.rst:143
-#: ../channels/email/email-headers.rst:143
+#: ../channels/email/email-headers.rst:122
+#: ../channels/email/email-headers.rst:122
+#: ../channels/email/email-headers.rst:122
 msgid "``X-Zammad-Article-Sender``"
 msgstr ""
 
 #: ../channels/email/email-headers.rst:0
 #: ../channels/email/email-headers.rst:0
 #: ../channels/email/email-headers.rst:0
-msgid "Manipulate the sender type (Agent, Customer, or System)"
+msgid "Manipulate the sender type (agent, customer or system)"
 msgstr ""
 
 #: ../channels/email/email-headers.rst:0
@@ -1440,10 +1410,10 @@ msgstr ""
 msgid "Example: ``X-Zammad-Article-Sender: System``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:138
-#: ../channels/email/email-headers.rst:138
-#: ../channels/email/email-headers.rst:138
-msgid "System Emails are indicated in a similar way as trigger-response like entries Users can't see them natively."
+#: ../channels/email/email-headers.rst:117
+#: ../channels/email/email-headers.rst:117
+#: ../channels/email/email-headers.rst:117
+msgid "System Emails are indicated in a similar way as trigger-responses. Users can't see them natively and see only a indicator like that:"
 msgstr ""
 
 #: ../channels/email/email-headers.rst:0
@@ -1452,9 +1422,9 @@ msgstr ""
 msgid "Received mail as article sender system"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:153
-#: ../channels/email/email-headers.rst:153
-#: ../channels/email/email-headers.rst:153
+#: ../channels/email/email-headers.rst:132
+#: ../channels/email/email-headers.rst:132
+#: ../channels/email/email-headers.rst:132
 msgid "``X-Zammad-Article-Type``"
 msgstr ""
 
@@ -1470,15 +1440,15 @@ msgstr ""
 msgid "Example: ``X-Zammad-Article-Type: phone``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:152
-#: ../channels/email/email-headers.rst:152
-#: ../channels/email/email-headers.rst:152
+#: ../channels/email/email-headers.rst:131
+#: ../channels/email/email-headers.rst:131
+#: ../channels/email/email-headers.rst:131
 msgid "This header can cause *serious issues* in your instance and may lead to unexpected behavior. Only use with absolute care!"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:157
-#: ../channels/email/email-headers.rst:157
-#: ../channels/email/email-headers.rst:157
+#: ../channels/email/email-headers.rst:136
+#: ../channels/email/email-headers.rst:136
+#: ../channels/email/email-headers.rst:136
 msgid "``X-Zammad-Article-Internal``"
 msgstr ""
 
@@ -1494,9 +1464,9 @@ msgstr ""
 msgid "Example: ``X-Zammad-Article-Internal: true``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:161
-#: ../channels/email/email-headers.rst:161
-#: ../channels/email/email-headers.rst:161
+#: ../channels/email/email-headers.rst:140
+#: ../channels/email/email-headers.rst:140
+#: ../channels/email/email-headers.rst:140
 msgid "``X-Zammad-Ignore``"
 msgstr ""
 
@@ -1512,15 +1482,15 @@ msgstr ""
 msgid "Example: ``X-Zammad-Ignore: true``"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:164
-#: ../channels/email/email-headers.rst:164
-#: ../channels/email/email-headers.rst:164
+#: ../channels/email/email-headers.rst:143
+#: ../channels/email/email-headers.rst:143
+#: ../channels/email/email-headers.rst:143
 msgid "Trusted Channel"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:165
-#: ../channels/email/email-headers.rst:165
-#: ../channels/email/email-headers.rst:165
+#: ../channels/email/email-headers.rst:144
+#: ../channels/email/email-headers.rst:144
+#: ../channels/email/email-headers.rst:144
 #: ../settings/system/system-selfhosted.include.rst:1
 #: ../settings/system/system-selfhosted.include.rst:1
 #: ../settings/system/system-selfhosted.include.rst:1
@@ -1528,57 +1498,57 @@ msgstr ""
 msgid "**🚧 Self Hosted only 🚧**"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:167
-#: ../channels/email/email-headers.rst:167
-#: ../channels/email/email-headers.rst:167
+#: ../channels/email/email-headers.rst:146
+#: ../channels/email/email-headers.rst:146
+#: ../channels/email/email-headers.rst:146
 msgid "Below settings are only available to self hosted users."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:170
-#: ../channels/email/email-headers.rst:170
-#: ../channels/email/email-headers.rst:170
+#: ../channels/email/email-headers.rst:149
+#: ../channels/email/email-headers.rst:149
+#: ../channels/email/email-headers.rst:149
 msgid "⚠️ As stated above, this is dangerous and can lead to unexpected behavior in the communication with external parties. Only follow the instructions below, if you know what you are doing."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:174
-#: ../channels/email/email-headers.rst:174
-#: ../channels/email/email-headers.rst:174
+#: ../channels/email/email-headers.rst:153
+#: ../channels/email/email-headers.rst:153
+#: ../channels/email/email-headers.rst:153
 msgid "Setting a channel to ``trusted`` can ony be done via :docs:`console </admin/console.html>`. In the rails console, execute the following commands:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:178
-#: ../channels/email/email-headers.rst:178
-#: ../channels/email/email-headers.rst:178
+#: ../channels/email/email-headers.rst:157
+#: ../channels/email/email-headers.rst:157
+#: ../channels/email/email-headers.rst:157
 msgid "List all channels in Zammad:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:184
-#: ../channels/email/email-headers.rst:184
-#: ../channels/email/email-headers.rst:184
+#: ../channels/email/email-headers.rst:163
+#: ../channels/email/email-headers.rst:163
+#: ../channels/email/email-headers.rst:163
 msgid "Look for the ``id`` of the channel, you want to set to ``trusted``."
 msgstr ""
 
-#: ../channels/email/email-headers.rst:186
-#: ../channels/email/email-headers.rst:186
-#: ../channels/email/email-headers.rst:186
+#: ../channels/email/email-headers.rst:165
+#: ../channels/email/email-headers.rst:165
+#: ../channels/email/email-headers.rst:165
 msgid "Select your identified channel (replace the 99 with the correct id):"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:192
-#: ../channels/email/email-headers.rst:192
-#: ../channels/email/email-headers.rst:192
+#: ../channels/email/email-headers.rst:171
+#: ../channels/email/email-headers.rst:171
+#: ../channels/email/email-headers.rst:171
 msgid "Show the currently activated options of the selected channel:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:198
-#: ../channels/email/email-headers.rst:198
-#: ../channels/email/email-headers.rst:198
+#: ../channels/email/email-headers.rst:177
+#: ../channels/email/email-headers.rst:177
+#: ../channels/email/email-headers.rst:177
 msgid "Add the ``\"trusted\"=>true`` flag for the inbound part of the channel:"
 msgstr ""
 
-#: ../channels/email/email-headers.rst:204
-#: ../channels/email/email-headers.rst:204
-#: ../channels/email/email-headers.rst:204
+#: ../channels/email/email-headers.rst:183
+#: ../channels/email/email-headers.rst:183
+#: ../channels/email/email-headers.rst:183
 msgid "Save your changes:"
 msgstr ""
 
