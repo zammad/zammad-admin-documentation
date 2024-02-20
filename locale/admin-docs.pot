@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 10:06+0100\n"
+"POT-Creation-Date: 2024-02-20 17:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2554,7 +2554,7 @@ msgid "Zammad form management page"
 msgstr ""
 
 #: ../channels/form.rst:13
-#: ../channels/whatsapp/index.rst:47
+#: ../channels/whatsapp/index.rst:48
 #: ../manage/trigger/limitations.rst:2
 #: ../misc/object-conditions/basics.rst:12
 #: ../misc/object-conditions/index.rst:7
@@ -4654,7 +4654,7 @@ msgid "With the release of Zammad 6.3, you can now connect your Zammad with a Wh
 msgstr ""
 
 #: ../channels/whatsapp/index.rst:13
-msgid "If you already dived into this topic, you can head to the setup guide. If not, we strongly encourage you to read the prerequisites and limitations of this channel carefully."
+msgid "If you already dived deep into this topic, you can head to the setup guide. If not, we strongly encourage you to read the prerequisites and limitations of this channel carefully."
 msgstr ""
 
 #: ../channels/whatsapp/index.rst:17
@@ -4699,59 +4699,195 @@ msgstr ""
 msgid "Assign a not yet used phone number (may not be used in a WhatsApp app already)"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:42
-msgid "**One phone number per app** If you want to use more than one phone number, you have to create a business app for each number you want to use."
+#: ../channels/whatsapp/index.rst:41
+msgid "Make sure your system is accessible from the internet because WhatsApp sends messages via webhooks to your system."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:49
+#: ../channels/whatsapp/index.rst:43
+msgid "Make sure to have properly setup your :doc:`FQDN in Settings > System </settings/system/base>`."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:50
 msgid "There are a number of limitations which are defined by Meta/WhatsApp. We only mention those that seem relevant to us. For further information, please have a look at their documentation."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:63
+#: ../channels/whatsapp/index.rst:64
 msgid "24 hours communication time window"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:54
+#: ../channels/whatsapp/index.rst:55
 msgid "If a customer gets in touch with you via WhatsApp, a 24 hour window is opened. In this time window, you can (and should) answer the question of the customer. If the customer isn't replying, the conversation ends after 24 hours. You can't communicate with this customer via WhatsApp due to their policy."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:60
+#: ../channels/whatsapp/index.rst:61
 msgid "If the ticket can not be closed and to keep the conversation ongoing, we suggest to create a dedicated trigger for the WhatsApp channel. For example you could send a auto-generated message to the customer after 20 hours and ask to reply to your message to keep the conversation open."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:68
+#: ../channels/whatsapp/index.rst:69
 msgid "Customer initiated communication only"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:66
+#: ../channels/whatsapp/index.rst:67
 msgid "The WhatsApp channel only supports customer initiated communication. For business initiated communication, it would be necessary to create a message template which has to be checked by Meta first."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:71
+#: ../channels/whatsapp/index.rst:72
+msgid "Supported media types"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:72
+msgid "Currently, only text messages, documents and videos are supported."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:77
+msgid "One phone number per app"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:75
+msgid "If you want to use more than one phone number, you have to create a business app for each number you want to use and add it as a separate channel in Zammad."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:80
 #: ../manage/knowledge-base.rst:36
 #: ../system/integrations/github.rst:16
 #: ../system/integrations/gitlab.rst:16
 msgid "Setup"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:73
+#: ../channels/whatsapp/index.rst:82
 msgid "First of all, make sure to meet the prerequisites and to read the limitations."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:76
-msgid "Then head over to Zammad's admin panel to add the WhatsApp channel under Channels > WhatsApp and follow the steps below."
+#: ../channels/whatsapp/index.rst:85
+msgid "Then head over to Zammad's admin panel to add the WhatsApp channel under Channels > WhatsApp > Add Account and follow the steps which are described below."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:90
+msgid "Step 1"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:92
+msgid "In the first step you have to provide credentials of your account/app:"
 msgstr ""
 
 #: ../channels/whatsapp/index.rst:None
-msgid "Admin panel shows dialog for adding a WhatsApp channel"
+msgid "Step 1 of adding a WhatsApp account"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:83
-msgid "Generating API Key"
+#: ../channels/whatsapp/index.rst:100
+msgid "WhatsApp Business Account ID"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:86
-msgid "Add API Key to Zammad"
+#: ../channels/whatsapp/index.rst:100
+msgid "Enter your WhatsApp Business Account ID. You can find it here XXXXXXXX."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:103
+msgid "Access Token"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:103
+msgid "Enter the access token from your app. You can find it here XXXXXXX."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:107
+msgid "App Secret"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:106
+msgid "Enter your app secret. You can find it in your WhatsApp business app settings."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:109
+msgid "After entering your data, click on next. In the background, Zammad tries to fetch your assigned phone number, which you can select in the next step."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:113
+msgid "Step 2"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:115
+msgid "The second step is about your phone number and messaging details:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Step 2 of adding a WhatsApp account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:125
+msgid "Phone Number"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:123
+msgid "Choose the phone number you want to use for the channel. Zammad should have fetched the numbers which are assigned to your business app. If not, your credentials from step 1 may be wrong."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:129
+msgid "Welcome Message"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:128
+msgid "Here you can define a message which is displayed to your customers when they are writing to you."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:132
+msgid "Goodbye Message"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:132
+msgid "Here you can define a message which is displayed when the conversation ends."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:136
+msgid "Target Group"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:135
+msgid "Here you can define the :doc:`group </manage/groups/index>` in which the ticket should be created."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:138
+msgid "After entering your data, click on submit. After this step, the WhatsApp channel is technically created. However, there is another important step to take."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:142
+msgid "Step 3"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:144
+msgid "This third step is about telling WhatsApp, where they should send their data:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:146
+msgid "If you don't follow the instructions properly, your account shows up but you aren't able to receive messages (because Meta/WhatsApp doesn't know where to send them)!"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Step 3 of adding a WhatsApp account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:159
+msgid "Callback URL"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:156
+msgid "Click on the copy icon on the right side and head over to your WhatsApp business app. Enter the copied URL in the corresponding field in your app. You can find it in your App Dashboard under WhatsApp > Configuration > Webhook > Callback URL (see screenshot below). Paste it there."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:163
+msgid "Verify Token"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:162
+msgid "Copy this string via the button on the right side too. Enter it directly below the pasted Callback URL."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Configuration section in WhatsApp app dashboard"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:168
+msgid "After finishing this step, you can click on the Finish button and you should now be ready to receive Tickets from your WhatsApp channel!"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:2
