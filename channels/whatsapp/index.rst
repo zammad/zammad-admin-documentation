@@ -14,7 +14,7 @@ If you already dived deep into this topic, you can head to the setup guide.
 If not, we strongly encourage you to read the prerequisites and limitations
 of this channel carefully.
 
-To keep it clear, we created separate a sub-page for the necessary steps on
+To keep it clear, we created a separate sub-page for the necessary steps on
 Meta's/WhatsApp's side.
 
 Please be aware that the usage of **WhatsApp's cloud API** is mandatory to
