@@ -2,7 +2,7 @@ Header Based Actions
 ********************
 .. header manipulation
 
-With specific email headers, you can make Zammad performing different actions
+With specific email headers, you can make Zammad perform different actions
 depending on the content of the headers. So, if you create a new email (e.g.
 from a form on your website) you can set these headers to perform actions
 or to hand over special information like custom attributes.
@@ -52,7 +52,7 @@ Zammad allows you to use headers to manipulate ticket creations or follow ups.
 The manipulation can be used instead of triggers. Triggers are considered
 *after* header settings and thus can still override headers.
 
-To differentiate between ticket creation and follow:
+To differentiate between ticket creation and follow-up:
 
    * For creations use: ``X-Zammad-Ticket-{Attribute Name}``
    * For follow ups use: ``X-Zammad-Ticket-FollowUp-{Attribute Name}``
@@ -63,7 +63,8 @@ required situation.
 .. tip::
 
    When using attributes that require date / time values, ensure to use
-   Time Zoned Times. e.g. for 28th September 2021 on 8 am CEST, either use:
+   Time Zoned Times. e.g. for 28th September 2021 on 8 am CEST, you can
+   use one of the following examples:
 
    * ``2021-09-28T08:00:00+0200``
    * ``2021-09-28T08:00:00+02:00``
