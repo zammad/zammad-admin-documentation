@@ -14,35 +14,42 @@ If you already dived deep into this topic, you can head to the setup guide.
 If not, we strongly encourage you to read the prerequisites and limitations
 of this channel carefully.
 
-To keep it clear, we created a separate sub-page for the necessary steps on
-Meta's/WhatsApp's side.
+We tried to keep it clear and created a separate sub-page for the necessary
+steps on Meta's/WhatsApp's side.
 
-Please be aware that the usage of **WhatsApp's cloud API** is mandatory to
-connect WhatsApp to Zammad. You won't be able
-to connect to WhatsApp in Zammad if you just use the WhatsApp Business *App*.
-Have a look
-`here <https://developers.facebook.com/docs/whatsapp/cloud-api?locale=en_US>`_
-for further information about the Cloud API.
+.. warning::
+   Please be aware that the usage of **WhatsApp's cloud API** is mandatory to
+   connect WhatsApp to Zammad. You won't be able
+   to connect to WhatsApp in Zammad if you just use the WhatsApp Business *App*.
+   Have a look
+   `here <https://developers.facebook.com/docs/whatsapp/cloud-api?locale=en_US>`_
+   for further information about the Cloud API.
+
+   Be aware that if you go through the whole process, it is very time consuming.
+   You should have some time to follow our guide.
 
 Prerequisites
 -------------
 
 You can find a guide for the required steps on our
 :doc:`sub-page <preparation>`.
-The following links are referring to the corresponding section on the sub-page
-if you want to go to a specific step directly.
+It covers the following steps:
 
+- Create a Meta business account
 - Create a Meta developer account
 - Create a Meta developer app
-- Verify your Meta business account
-- Add business manager contact information
-- Create a WhatsApp Business app
-- Assign a not yet used phone number (may not be used in a WhatsApp app already)
+- Add WhatsApp to your app
+- Create a system user
+- Configure your WhatsApp business platform
+- Assign a not yet used phone number
+
+Additionally, you have to meet the following requirements:
+
 - Make sure your system is accessible from the internet because WhatsApp sends
   messages via webhooks to your system.
 - Make sure to have properly setup your
-  :doc:`FQDN in Settings > System </settings/system/base>`.
-
+  :doc:`FQDN in Settings > System </settings/system/base>` (for the webhook
+  Meta will fire for new messages).
 
 Limitations
 -----------
@@ -71,6 +78,9 @@ Customer initiated communication only
 Supported media types
    Currently, only text messages, documents and videos are supported.
 
+One attachment per article
+   Currently, it's only possible to attach one file per outgoing message.
+
 One phone number per app
    If you want to use more than one phone number, you have to create a business
    app for each number you want to use and add it as a separate channel in
@@ -97,10 +107,32 @@ In the first step you have to provide credentials of your account/app:
    :scale: 80%
 
 WhatsApp Business Account ID
-   Enter your WhatsApp Business Account ID. You can find it here XXXXXXXX.
+   Enter your WhatsApp Business Account ID. You can find it in your app
+   under "WhatsApp > API Setup":
+
+   .. figure:: /images/channels/whatsapp/business-account-id.png
+     :alt: App dashboard with business account ID
+     :align: center
 
 Access Token
-   Enter the access token from your app. You can find it here XXXXXXX.
+   Enter the access token from your app. You can create it in the
+   `business settings <https://business.facebook.com/settings/system-users>`_
+   under "System Users". Be aware that you have to copy the token, it is just
+   displayed once!
+
+   .. figure:: /images/channels/whatsapp/created-system-user.png
+      :alt: Get your app token from the system user
+      :align: center
+
+
+   Choose your created app, a expiration date of the token (we recommend
+   "Never") and the permissions ``whatsapp_business_management`` and
+   ``whatsapp_business_messaging``
+
+   .. figure:: /images/channels/whatsapp/create-app-token.png
+      :alt: Create your app token
+      :align: center
+      :scale: 60%
 
 App Secret
    Enter your app secret. You can find it in your WhatsApp business app
@@ -159,8 +191,7 @@ Callback URL
    Webhook > Callback URL (see screenshot below). Paste it there.
 
 Verify Token
-   Copy this string via the button on the right side too. Enter it directly
-   below the pasted Callback URL.
+   Copy this string too. Enter it directly below the pasted Callback URL.
 
 .. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
    :alt: Configuration section in WhatsApp app dashboard
