@@ -9,31 +9,33 @@ or to hand over special information like custom attributes.
 
 .. danger:: **🛡 Trusted channels required 🛡**
 
-   Below options are a potential risk with external communication and
+   This feature is a potential risk with external communication and
    thus require channels being set to trusted explicitly. You can find
    instructions about how to set a channel to trusted at the end of this page.
 
 .. tip::
 
-   - Below headers are examples and in our opinion the most relevant ones.
-     However, you can adjust mostly all article or ticket attributes including
-     custom ones if you know the attribute's exact name. Have a look
-     :doc:`here </system/objects>` to find the attribute names.
-   - Header checks are case insensitive. However, values are case sensitive!
+   - The header names listed below are examples and in our opinion the most
+     relevant ones. However, you can adjust mostly all article or ticket
+     attributes including custom ones if you know the attribute's exact name.
+     Have a look :doc:`here </system/objects>` to find the attribute names.
+   - Please note that while header names are case insensitive, header values
+     are not. Make sure to specify values in expected case, otherwise they will
+     not match.
 
 Auto responses
 --------------
 
 Normally, Zammad runs internal checks to see if an incoming email is an
 automatic response. In such cases Zammad will not send trigger based responses.
-You can override this with below headers:
+You can override this with the below mentioned headers:
 
 ``x-zammad-send-auto-response``
    Set to ``false`` to disable trigger based responses.
    If set to ``true`` Zammad will send a response.
 
    This option *does not* work if e.g. ``precedence: list`` is set
-   unless you use below auto response header as well.
+   unless you use the auto response header below as well.
 
 ``x-zammad-is-auto-response``
    Providing this header allows you to tell Zammad that the mail in question
@@ -144,11 +146,11 @@ Trusted Channel
 ---------------
 .. note:: **🚧 Self Hosted only 🚧**
 
-   Below settings are only available to self hosted users.
+   The settings below are only available to self hosted users.
 
 .. danger::
    ⚠️ As stated above, this is dangerous and can lead to unexpected behavior in
-   the communication with external parties. Only follow the instructions below,
+   the communication with external parties. Only follow the instructions below
    if you know what you are doing.
 
 Setting a channel to ``trusted`` can ony be done via
