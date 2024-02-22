@@ -135,8 +135,14 @@ Access Token
       :scale: 60%
 
 App Secret
-   Enter your app secret. You can find it in your WhatsApp business app
-   settings.
+   Enter your app secret. You can find it in your
+   `app dashboard <https://developers.facebook.com/apps/>`_ under "App settings
+   > Basic" by clicking on the "Show" button:
+
+   .. figure:: /images/channels/whatsapp/app-secret.png
+      :alt: App dashboard with app secret
+      :scale: 60%
+
 
 After entering your data, click on next. In the background, Zammad tries
 to fetch your assigned phone number, which you can select in the next step.
