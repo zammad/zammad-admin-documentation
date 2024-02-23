@@ -12,7 +12,8 @@ WhatsApp.  🎉
 
 If you already dived deep into this topic, you can head to the setup guide.
 If not, we strongly encourage you to read the prerequisites and limitations
-of this channel carefully.
+of this channel carefully and to follow our tutorial for preparing the
+required steps.
 
 We tried to keep it clear and created a separate sub-page for the necessary
 steps on Meta's/WhatsApp's side.
@@ -25,8 +26,15 @@ steps on Meta's/WhatsApp's side.
    `here <https://developers.facebook.com/docs/whatsapp/cloud-api?locale=en_US>`_
    for further information about the Cloud API.
 
+   There may be costs for you from Meta/WhatsApp side. 1000 service
+   conversations per month are free. However, you should have a look on their
+   `pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to
+   be safe from surprises.
+
    Be aware that if you go through the whole process, it is very time consuming.
-   You should have some time to follow our guide.
+   You should have some time to follow our preparation guide.
+
+.. _prerequisites:
 
 Prerequisites
 -------------
@@ -54,16 +62,14 @@ Additionally, you have to meet the following requirements:
 Limitations
 -----------
 
-There are a number of limitations which are defined by Meta/WhatsApp. We only
-mention those that seem relevant to us. For further information, please have
-a look at their documentation.
+There are a number of limitations for this channel. Read them carefully.
 
 24 hours communication time window
    If a customer gets in touch with you via WhatsApp, a 24 hour window is
-   opened. In this time window, you can (and should) answer the question of
+   opened. In this time window you can answer the question of
    the customer. If the customer isn't replying, the conversation ends
    after 24 hours. You can't communicate with this customer via WhatsApp due to
-   their policy.
+   their policy until a new conversation is started by your customer.
 
    If the ticket can not be closed and to keep the conversation ongoing, we
    suggest to create a dedicated trigger for the WhatsApp channel. For example
@@ -73,13 +79,24 @@ a look at their documentation.
 Customer initiated communication only
    The WhatsApp channel only supports customer initiated communication.
    For business initiated communication, it would be necessary to create a
-   message template which has to be checked by Meta first.
+   message template which has to be verified by Meta first.
 
 Supported media types
    Currently, only text messages, documents and videos are supported.
 
 One attachment per article
    Currently, it's only possible to attach one file per outgoing message.
+
+File size for attachments
+   There are different maximum file sizes for different media types. To pick
+   the most important ones:
+
+   - audio: 16 MB
+   - document: 100 MB
+   - image: 50MB
+
+   To read more in detail, have a look on their `documentation of supported
+   media types <https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media?locale=en_US#supported-media-types>`_.
 
 One phone number per app
    If you want to use more than one phone number, you have to create a business
@@ -89,11 +106,13 @@ One phone number per app
 Setup
 -----
 
-First of all, make sure to meet the prerequisites and to read the
-limitations.
+First of all, make sure to match the prerequisites and to read the limitations
+above. If you did not setup your Meta developer account, Meta business account
+and your developer app, first go to our :doc:`preparation page <preparation>`
+and come back after finishing it.
 
 Then head over to Zammad's admin panel to add the WhatsApp channel under
-Channels > WhatsApp > Add Account and follow the steps which are described
+"Channels > WhatsApp > Add Account" and follow the steps which are described
 below.
 
 Step 1
@@ -127,7 +146,7 @@ Access Token
 
    Choose your created app, a expiration date of the token (we recommend
    "Never") and the permissions ``whatsapp_business_management`` and
-   ``whatsapp_business_messaging``
+   ``whatsapp_business_messaging``:
 
    .. figure:: /images/channels/whatsapp/create-app-token.png
       :alt: Create your app token
@@ -193,14 +212,34 @@ This third step is about telling WhatsApp, where they should send their data:
 Callback URL
    Click on the copy icon on the right side and head over to your WhatsApp
    business app. Enter the copied URL in the corresponding field in your app.
-   You can find it in your App Dashboard under WhatsApp > Configuration >
-   Webhook > Callback URL (see screenshot below). Paste it there.
+   You can find it in your
+   `"App Dashboard" <https://developers.facebook.com/apps/>`_ under
+   "WhatsApp > Configuration > Webhook > Callback URL" (see screenshot below).
+   Paste it there.
 
 Verify Token
    Copy this string too. Enter it directly below the pasted Callback URL.
 
 .. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
    :alt: Configuration section in WhatsApp app dashboard
+
+Define webhook fields
+   Finally, go to the field below in the app dashboard and select "Manage" in
+   the "Webhook fields" section. This is needed that you'll get the message as
+   content:
+
+   .. figure:: /images/channels/whatsapp/webhook-fields.png
+      :alt: Select webhook fields in app dashboard
+
+   Select "messages" by clicking in the checkbox:
+
+   .. figure:: /images/channels/whatsapp/select-webhook-fields.png
+      :alt: Select "message" as webhook field
+      :align: center
+      :scale: 70%
+
+   You should now see the selected "messages" under the "Webhook fields" caption
+   as in the first screenshot.
 
 After finishing this step, you can click on the Finish button and you should
 now be ready to receive Tickets from your WhatsApp channel!
