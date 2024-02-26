@@ -96,10 +96,15 @@ that you already have one. If not, go to the
 Create a System User
 --------------------
 Go to `Users > System users <https://business.facebook.com/settings/system-users/>`_
-and add a system user. This is required to get a permanent API token.
+and add a system user. This is required to get a permanent API token. Make sure
+the user has admin permissions.
 
 After creating a system user, you should see a screen similar to the one below.
 Here you can assign assets and (re-)generate an access token.
+
+For now we just assign assets to this user. The creation of the token is
+covered in the :doc:`Zammad setup section </channels/whatsapp/index>` because
+the token is only displayed once and then you can copy and paste it directly.
 
 .. figure:: /images/channels/whatsapp/created-system-user.png
     :alt: System user overview
