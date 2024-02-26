@@ -47,6 +47,7 @@ Zammad Admin Documentation
    channels/twitter-x/twitter
    channels/facebook
    channels/telegram
+   channels/whatsapp/index
 
 
 .. _settings-docs:
