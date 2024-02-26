@@ -96,7 +96,7 @@ File size for attachments
 
    - audio: 16 MB
    - document: 100 MB
-   - image: 50MB
+   - image: 5 MB
    - video: 16 MB
    - sticker: 100/500 KB (static/animated)
 
