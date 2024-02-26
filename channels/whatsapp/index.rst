@@ -7,19 +7,19 @@ WhatsApp
    preparation
 
 With the release of Zammad 6.3, you can now connect your Zammad with a
-WhatsApp business account, allowing your customers to reach out to you through
+WhatsApp Business account, allowing your customers to reach out to you through
 WhatsApp.  🎉
 
 If you already dived deep into this topic, you can head to the setup guide.
 If not, we strongly encourage you to read the prerequisites and limitations
-of this channel carefully and to follow our tutorial for preparing the
-required steps.
+of this channel carefully and to follow our tutorial for preparing your
+setup.
 
 We tried to keep it clear and created a separate sub-page for the necessary
-steps on Meta's/WhatsApp's side.
+steps on Meta/WhatsApp side.
 
 .. warning::
-   Please be aware that the usage of **WhatsApp's cloud API** is mandatory to
+   Please be aware that the usage of **WhatsApp Cloud API** is mandatory to
    connect WhatsApp to Zammad. You won't be able
    to connect to WhatsApp in Zammad if you just use the WhatsApp Business *App*.
    Have a look
@@ -39,53 +39,56 @@ steps on Meta's/WhatsApp's side.
 Prerequisites
 -------------
 
-You can find a guide for the required steps on our
+You can find a guide through the required steps on our
 :doc:`sub-page <preparation>`.
 It covers the following steps:
 
-- Create a Meta business account
+- Create a Meta Business account
 - Create a Meta developer account
 - Create a Meta developer app
-- Add WhatsApp to your app
+- Add WhatsApp product to your app
 - Create a system user
-- Configure your WhatsApp business platform
-- Assign a not yet used phone number
+- Configure your WhatsApp Business platform
+- Assign a unused phone number
 
 Additionally, you have to meet the following requirements:
 
 - Make sure your system is accessible from the internet because WhatsApp sends
   messages via webhooks to your system.
 - Make sure to have properly setup your
-  :doc:`FQDN in Settings > System </settings/system/base>` (for the webhook
-  Meta will fire for new messages).
+  :doc:`FQDN in Settings > System </settings/system/base>` (for the callback
+  URL Meta will use to deliver new messages).
 
 Limitations
 -----------
 
 There are a number of limitations for this channel. Read them carefully.
 
-24 hours communication time window
+24-hour communication time window
    If a customer gets in touch with you via WhatsApp, a 24 hour window is
    opened. In this time window you can answer the question of
    the customer. If the customer isn't replying, the conversation ends
    after 24 hours. You can't communicate with this customer via WhatsApp due to
-   their policy until a new conversation is started by your customer.
+   their privacy policy until a new conversation is started by your customer.
 
-   If the ticket can not be closed and to keep the conversation ongoing, we
+   If the ticket cannot be closed and to keep the conversation ongoing, we
    suggest to create a dedicated trigger for the WhatsApp channel. For example
-   you could send a auto-generated message to the customer after 20 hours and
+   you could send an auto-generated message to the customer after 20 hours and
    ask to reply to your message to keep the conversation open.
 
-Customer initiated communication only
+Customer-initiated communication only
    The WhatsApp channel only supports customer initiated communication.
-   For business initiated communication, it would be necessary to create a
-   message template which has to be verified by Meta first.
+   For business-initiated communication, it would be necessary to create a
+   message template which has to be verified by Meta first which is Currently
+   not supported by Zammad.
 
 Supported media types
-   Currently, only text messages, documents and videos are supported.
+   Currently text messages, documents, images, audio, videos and stickers
+   are supported.
 
 One attachment per article
    Currently, it's only possible to attach one file per outgoing message.
+   It has to be one of the supported media types (see above).
 
 File size for attachments
    There are different maximum file sizes for different media types. To pick
@@ -94,6 +97,8 @@ File size for attachments
    - audio: 16 MB
    - document: 100 MB
    - image: 50MB
+   - video: 16 MB
+   - sticker: 100/500 KB (static/animated)
 
    To read more in detail, have a look on their `documentation of supported
    media types <https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media?locale=en_US#supported-media-types>`_.
@@ -109,7 +114,7 @@ Setup
 First of all, make sure to match the prerequisites and to read the limitations
 above. If you did not setup your Meta developer account, Meta business account
 and your developer app, first go to our :doc:`preparation page <preparation>`
-and come back after finishing it.
+and come back here after finishing it.
 
 Then head over to Zammad's admin panel to add the WhatsApp channel under
 "Channels > WhatsApp > Add Account" and follow the steps which are described
@@ -136,8 +141,8 @@ WhatsApp Business Account ID
 Access Token
    Enter the access token from your app. You can create it in the
    `business settings <https://business.facebook.com/settings/system-users>`_
-   under "System Users". Be aware that you have to copy the token, it is just
-   displayed once!
+   under "System Users". The system user has to have "Admin access". Be aware
+   that you have to copy the token, it is just displayed once!
 
    .. figure:: /images/channels/whatsapp/created-system-user.png
       :alt: Get your app token from the system user
@@ -163,7 +168,7 @@ App Secret
       :scale: 60%
 
 
-After entering your data, click on next. In the background, Zammad tries
+After entering your data, click on **Next**. In the background, Zammad tries
 to fetch your assigned phone number, which you can select in the next step.
 
 Step 2
@@ -182,23 +187,24 @@ Phone Number
    credentials from step 1 may be wrong.
 
 Welcome Message
-   Here you can define a message which is displayed to your customers
+   Here you can define a message which is sent to your customers
    when they are writing to you.
 
 Goodbye Message
-   Here you can define a message which is displayed when the conversation ends.
+   Here you can define a message which is sent when the conversation ends.
 
 Target Group
    Here you can define the :doc:`group </manage/groups/index>` in which the
    ticket should be created.
 
-After entering your data, click on submit. After this step, the WhatsApp channel
-is technically created. However, there is another important step to take.
+After entering your data, click on **Submit**. After this step, the WhatsApp
+channel is technically created. However, there is another important step to
+take.
 
 Step 3
 ^^^^^^
 
-This third step is about telling WhatsApp, where they should send their data:
+This third step is about telling WhatsApp where they should send their data:
 
 .. warning:: If you don't follow the instructions properly, your
    account shows up but you aren't able to receive messages (because
@@ -220,8 +226,15 @@ Callback URL
 Verify Token
    Copy this string too. Enter it directly below the pasted Callback URL.
 
-.. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
-   :alt: Configuration section in WhatsApp app dashboard
+   .. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
+      :alt: Configuration section in WhatsApp app dashboard
+
+   After entering your data, click on **Verify and save** which triggers a
+   check if your system is accessible and configured correctly.
+
+   .. figure:: /images/channels/whatsapp/verify-webhook.png
+      :alt: Webhook dialog
+      :align: center
 
 Define webhook fields
    Finally, go to the field below in the app dashboard and select "Manage" in
@@ -231,7 +244,7 @@ Define webhook fields
    .. figure:: /images/channels/whatsapp/webhook-fields.png
       :alt: Select webhook fields in app dashboard
 
-   Select "messages" by clicking in the checkbox:
+   Subscribe to "messages" by clicking in the checkbox:
 
    .. figure:: /images/channels/whatsapp/select-webhook-fields.png
       :alt: Select "message" as webhook field
@@ -241,7 +254,7 @@ Define webhook fields
    You should now see the selected "messages" under the "Webhook fields" caption
    as in the first screenshot.
 
-After finishing this step, you can click on the Finish button and you should
-now be ready to receive Tickets from your WhatsApp channel!
+After finishing this step, you can click on the **Finish** button in Zammad
+and you should now be ready to receive Tickets from your WhatsApp channel!
 
 

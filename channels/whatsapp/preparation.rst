@@ -22,7 +22,7 @@ https://business.facebook.com/overview and click on "Create an account":
     :alt: Meta business account starting page
     :align: center
 
-Have a look on
+Have a look at
 `Meta's documentation <https://www.facebook.com/business/help/1710077379203657?id=180505742745347>`_
 if you have problems.
 
@@ -37,7 +37,7 @@ account.
 Create a Meta Developer App
 ---------------------------
 
-Already logged in with your developer account, go to
+While already logged in with your developer account, go to
 https://developers.facebook.com/apps/.
 
 You will see a screen like the following screenshot. Click on "Create App" and
@@ -74,8 +74,8 @@ If you already have a business account, you should assign it. In this step, this
 is optional, but later it is required anyway. Click on "Create App" to finish
 this step.
 
-Add WhatsApp to Your App
-------------------------
+Add WhatsApp  Product to Your App
+---------------------------------
 
 Now you have to add a product to your app. In our case, this is WhatsApp.
 Search for it and click on "Set up":
@@ -99,7 +99,7 @@ Go to `Users > System users <https://business.facebook.com/settings/system-users
 and add a system user. This is required to get a permanent API token.
 
 After creating a system user, you should see a screen similar to the one below.
-Here you can assign assets and (re-)generate a token.
+Here you can assign assets and (re-)generate an access token.
 
 .. figure:: /images/channels/whatsapp/created-system-user.png
     :alt: System user overview
@@ -124,7 +124,7 @@ presented to you. Click on "Start using the API":
     :align: center
 
 
-Assign a Not Yet Used Phone Number
+Assign an Unused Phone Number
 ----------------------------------
 
 Please note: this number may not be used in a WhatsApp app already!
@@ -133,9 +133,10 @@ Please note: this number may not be used in a WhatsApp app already!
     :align: center
     :alt: Adding a new phone number to your app
 
-Click through the steps adding your information. You have to verify your number.
+Click through the steps adding your information. You have to verify your number
+by receiving a security code and repeating it when asked.
 
-After you successfully performing these steps, you are now good to go with
+After you successfully performed these steps, you are now good to go with
 the :doc:`setup on Zammad side <index>`. 🎉
 
-We promise it will be easier! 🤓
+We promise it will become easier! 🤓
