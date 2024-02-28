@@ -88,3 +88,4 @@ Zammad Admin Documentation
 
    misc/composer
    misc/object-conditions/index
+   misc/first-steps
