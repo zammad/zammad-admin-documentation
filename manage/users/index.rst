@@ -21,6 +21,7 @@ Learn more about managing users...
    * :doc:`via LDAP/Active Directory integration </system/integrations/ldap/index>`
    * :doc:`via Exchange integration </system/integrations/exchange>`
    * :docs:`via REST API </api/intro.html>`
+   * :ref:`via invitation email <invite-agents>`
 
 .. toctree::
    :maxdepth: 1
