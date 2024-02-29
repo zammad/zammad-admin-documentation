@@ -183,9 +183,19 @@ Multiple tree selection field
       :alt: Available settings for Tree Select fields
 
 External Data Source field
-   Provides a searchable field which fetches data from an external system.
-   You can define in the configuration, which attribute you want to be visible
-   and selectable for the users.
+   Provides a searchable field which fetches data from an external system. This
+   can be useful if you have data outside of Zammad and don't want to maintain
+   both data sources.
+
+   The feature works as follows:
+
+   * Zammad sends a query with a search string (free text from agent or based
+     on a variable) in a pre-defined format ("Search URL") to an external
+     system.
+   * This external system searches for matches and provides a response as a
+     JSON structure to Zammad.
+   * Zammad just looks for the defined list and value keys, reads the content
+     and displays the value to the user. There is no search on Zammad side.
 
    .. warning::
       * The usage of a PostgreSQL database for Zammad is required. In any other
@@ -193,7 +203,8 @@ External Data Source field
         able to use it. If you want to use this feature, consider to
         :docs:`migrate your database </appendix/migrate-to-postgresql.html>`.
       * Currently, only ``GET`` is supported as request method.
-      * The data structure must be in JSON format.
+      * The data structure must be in JSON format and provide the objects in an
+        array.
       * The endpoint for the external data source has to support search. On
         Zammad side, there is no search/logic implemented; however, you can
         define the output key and value based on the result(s) from the response
@@ -284,6 +295,11 @@ External Data Source field
         which includes the found items based on the search string (value, label
         and optional link). You can use this preview if you don't have the
         complete data structure of the external system in mind.
+
+   An example of a configured external data source field from agent perspective:
+
+   .. figure:: /images/system/objects/eds-usage-ticket.gif
+      :alt: Screencast showing the search for a product in a ticket
 
 .. _link-templates:
 
