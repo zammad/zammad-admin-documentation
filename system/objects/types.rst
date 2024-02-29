@@ -7,7 +7,7 @@ attribute types.
 .. toctree::
    :hidden:
 
-   Examples <external-data-source-example>
+   Example external data source <external-data-source-example>
 
 .. warning::
 
@@ -184,14 +184,28 @@ Multiple tree selection field
 
 External Data Source field
    Provides a searchable field which fetches data from an external system.
-   Currently, only ``GET`` is supported as request method and the data structure
-   must be in JSON format. You can define in the configuration, which attribute
-   you want to be visible and selectable for the users.
+   You can define in the configuration, which attribute you want to be visible
+   and selectable for the users.
 
-   .. warning:: The usage of a PostgreSQL database is required for this
-      feature. In any other case, Zammad will hide the selection and you are not
-      able to use it. If you want to use this feature, consider to
-      :docs:`migrate your database </appendix/migrate-to-postgresql.html>`.
+   .. warning::
+      * The usage of a PostgreSQL database for Zammad is required. In any other
+        case, Zammad will hide the external data source type and you are not
+        able to use it. If you want to use this feature, consider to
+        :docs:`migrate your database </appendix/migrate-to-postgresql.html>`.
+      * Currently, only ``GET`` is supported as request method.
+      * The data structure must be in JSON format.
+      * The endpoint for the external data source has to support search. On
+        Zammad side, there is no search/logic implemented; however, you can
+        define the output key and value based on the result(s) from the response
+        (which provides already filtered content based on the search).
+      * If you receive more results as expected, your external data source
+        search may not work properly or the structure of the URL is not correct.
+        You should get in touch with a responsible person from the external
+        system.
+
+   Please have a look
+   :doc:`at our example </system/objects/external-data-source-example>`, where
+   you can find a possible configuration for a public dummy endpoint.
 
    .. figure:: /images/system/objects/settings-eds.png
       :alt: Available settings for external data source fields
@@ -203,6 +217,9 @@ External Data Source field
       sure to include a valid search :doc:`variable <../variables>` as an
       URL parameter. Example for a free text search at user input:
       ``#{search.term}``
+
+      If in doubt, ask the responsible person for the external data source how
+      they expect the strucuture of the URL.
 
       .. note::
          Depending on your search variable, the preview might work or not. The
@@ -265,13 +282,8 @@ External Data Source field
         key*.
       - **Preview table** (when fully configured): Zammad shows you a table
         which includes the found items based on the search string (value, label
-        and optional link)
-
-   .. tip:: You can use the preview if you don't have the complete data
-      structure of the external system in mind. You can also take a look
-      :doc:`here </system/objects/external-data-source-example>`, where you can
-      find an example configuration.
-
+        and optional link). You can use this preview if you don't have the
+        complete data structure of the external system in mind.
 
 .. _link-templates:
 
