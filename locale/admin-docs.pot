@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 15:56+0100\n"
+"POT-Creation-Date: 2024-02-29 14:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2755,7 +2755,7 @@ msgstr ""
 #: ../channels/form.rst:143
 #: ../manage/scheduler.rst:62
 #: ../manage/slas/how-do-they-work.rst:35
-#: ../system/objects/types.rst:268
+#: ../system/objects/types.rst:297
 msgid "Preview"
 msgstr ""
 
@@ -4836,7 +4836,6 @@ msgid "Please make sure that you have selected the ``ticket.agent`` permission f
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:80
-#: ../system/objects/types.rst:7
 msgid "Examples"
 msgstr ""
 
@@ -17820,6 +17819,10 @@ msgstr ""
 msgid "Set a field to mandatory (checked). Forces users (via UI and API) to populate the field."
 msgstr ""
 
+#: ../system/objects/types.rst:7
+msgid "Example external data source"
+msgstr ""
+
 #: ../system/objects/types.rst:2
 msgid "Attribute types"
 msgstr ""
@@ -18071,143 +18074,187 @@ msgstr ""
 msgid "Provides a select-like field with up to 6 layers of options allowing the selection of multiple values. Does not allow setting a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:274
+#: ../system/objects/types.rst:302
 msgid "External Data Source field"
 msgstr ""
 
 #: ../system/objects/types.rst:186
-msgid "Provides a searchable field which fetches data from an external system. Currently, only ``GET`` is supported as request method and the data structure must be in JSON format. You can define in the configuration, which attribute you want to be visible and selectable for the users."
+msgid "Provides a searchable field which fetches data from an external system. This can be useful if you have data outside of Zammad and don't want to maintain both data sources."
 msgstr ""
 
-#: ../system/objects/types.rst:191
-msgid "The usage of a PostgreSQL database is required for this feature. In any other case, Zammad will hide the selection and you are not able to use it. If you want to use this feature, consider to :docs:`migrate your database </appendix/migrate-to-postgresql.html>`."
+#: ../system/objects/types.rst:190
+msgid "The feature works as follows:"
+msgstr ""
+
+#: ../system/objects/types.rst:192
+msgid "Zammad sends a query with a search string (free text from agent or based on a variable) in a pre-defined format (\"Search URL\") to an external system."
+msgstr ""
+
+#: ../system/objects/types.rst:195
+msgid "This external system searches for matches and provides a response as a JSON structure to Zammad."
+msgstr ""
+
+#: ../system/objects/types.rst:197
+msgid "Zammad just looks for the defined list and value keys, reads the content and displays the value to the user. There is no search on Zammad side."
+msgstr ""
+
+#: ../system/objects/types.rst:201
+msgid "The usage of a PostgreSQL database for Zammad is required. In any other case, Zammad will hide the external data source type and you are not able to use it. If you want to use this feature, consider to :docs:`migrate your database </appendix/migrate-to-postgresql.html>`."
+msgstr ""
+
+#: ../system/objects/types.rst:205
+msgid "Currently, only ``GET`` is supported as request method."
+msgstr ""
+
+#: ../system/objects/types.rst:206
+msgid "The data structure must be in JSON format and provide the objects in an array."
+msgstr ""
+
+#: ../system/objects/types.rst:208
+msgid "The endpoint for the external data source has to support search. On Zammad side, there is no search/logic implemented; however, you can define the output key and value based on the result(s) from the response (which provides already filtered content based on the search)."
+msgstr ""
+
+#: ../system/objects/types.rst:212
+msgid "If you receive more results as expected, your external data source search may not work properly or the structure of the URL is not correct. You should get in touch with a responsible person from the external system."
+msgstr ""
+
+#: ../system/objects/types.rst:217
+msgid "Please have a look :doc:`at our example </system/objects/external-data-source-example>`, where you can find a possible configuration for a public dummy endpoint."
 msgstr ""
 
 #: ../system/objects/types.rst:0
 msgid "Available settings for external data source fields"
 msgstr ""
 
-#: ../system/objects/types.rst:214
+#: ../system/objects/types.rst:242
 msgid "Search URL"
 msgstr ""
 
-#: ../system/objects/types.rst:202
+#: ../system/objects/types.rst:227
 msgid "Set your endpoint where Zammad fetches the data. Please make sure to include a valid search :doc:`variable <../variables>` as an URL parameter. Example for a free text search at user input: ``#{search.term}``"
 msgstr ""
 
-#: ../system/objects/types.rst:208
+#: ../system/objects/types.rst:232
+msgid "If in doubt, ask the responsible person for the external data source how they expect the strucuture of the URL."
+msgstr ""
+
+#: ../system/objects/types.rst:236
 msgid "Depending on your search variable, the preview might work or not. The reason is that the context might not be available and it is no bug."
 msgstr ""
 
-#: ../system/objects/types.rst:211
+#: ../system/objects/types.rst:239
 msgid "Please also make sure to use a variable which is available in your object context. For example you won't be able to search for a ticket in a user object context."
 msgstr ""
 
-#: ../system/objects/types.rst:224
+#: ../system/objects/types.rst:252
 msgid "SSL Verification"
 msgstr ""
 
-#: ../system/objects/types.rst:217
+#: ../system/objects/types.rst:245
 msgid "Here you can switch the SSL verification to no."
 msgstr ""
 
-#: ../system/objects/types.rst:221
+#: ../system/objects/types.rst:249
 msgid "If your external data source system is using self signed certificates, please have a look :doc:`here </settings/security/ssl-certificates>` for further information about how to handle them in Zammad, so you can keep the SSL verification activated."
 msgstr ""
 
-#: ../system/objects/types.rst:230
+#: ../system/objects/types.rst:258
 msgid "HTTP Authentication"
 msgstr ""
 
-#: ../system/objects/types.rst:227
+#: ../system/objects/types.rst:255
 msgid "If your external data source requires an authentication, you can set it here. You can leave it empty or choose between *Basic Authentication* or *Authentication Token* (selecting one of the two methods leads to additional fields where you can enter your credentials/token)."
 msgstr ""
 
-#: ../system/objects/types.rst:237
+#: ../system/objects/types.rst:265
 msgid "Search result list key"
 msgstr ""
 
-#: ../system/objects/types.rst:233
+#: ../system/objects/types.rst:261
 msgid "Defines the level in the JSON structure which provides the list with search results. You can leave it empty, if the data is already provided as an array. If you have to go deeper in the structure, you can provide a path with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:243
+#: ../system/objects/types.rst:271
 msgid "Search result value key"
 msgstr ""
 
-#: ../system/objects/types.rst:240
+#: ../system/objects/types.rst:268
 msgid "Defines the attribute in the structure in which your external data source provides the *value* for your data. An example would be a product *number*. If you have to go deeper in the structure, you can provide a path with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:249
+#: ../system/objects/types.rst:277
 msgid "Search result label key"
 msgstr ""
 
-#: ../system/objects/types.rst:246
+#: ../system/objects/types.rst:274
 msgid "Defines the attribute in the structure in which your external data source provides the *label* for your data. An example would be a product *name*. If you have to go deeper in the structure, you can provide a path with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:252
+#: ../system/objects/types.rst:280
 msgid "In the preview area, you can find the following items (depending on your configuration above):"
 msgstr ""
 
-#: ../system/objects/types.rst:255
+#: ../system/objects/types.rst:283
 msgid "**Error/hint message** (only if configuration is not complete): Zammad tells you, if there is a problem and what you should change in your configuration."
 msgstr ""
 
-#: ../system/objects/types.rst:258
+#: ../system/objects/types.rst:286
 msgid "**Search field**: search for an existing attribute in the data source to get a preview. This is required for the fields below to show up."
 msgstr ""
 
-#: ../system/objects/types.rst:260
+#: ../system/objects/types.rst:288
 msgid "**Search result response** (only if configuration is not complete): here you can find a syntax highlighted JSON preview of the response, based on the search term you entered."
 msgstr ""
 
-#: ../system/objects/types.rst:263
+#: ../system/objects/types.rst:291
 msgid "**Search result list** (only if *search result list key* is properly set): output of the structure under the configured *search result list key*."
 msgstr ""
 
-#: ../system/objects/types.rst:266
-msgid "**Preview table** (when fully configured): Zammad shows you a table which includes the found items based on the search string (value, label and optional link)"
+#: ../system/objects/types.rst:294
+msgid "**Preview table** (when fully configured): Zammad shows you a table which includes the found items based on the search string (value, label and optional link). You can use this preview if you don't have the complete data structure of the external system in mind."
 msgstr ""
 
-#: ../system/objects/types.rst:270
-msgid "You can use the preview if you don't have the complete data structure of the external system in mind. You can also take a look :doc:`here </system/objects/external-data-source-example>`, where you can find an example configuration."
+#: ../system/objects/types.rst:299
+msgid "An example of a configured external data source field from agent perspective:"
 msgstr ""
 
-#: ../system/objects/types.rst:279
-msgid "URL fields (Link-Template)"
-msgstr ""
-
-#: ../system/objects/types.rst:283
-msgid "This function is restricted to Text, Select and External data source types only."
-msgstr ""
-
-#: ../system/objects/types.rst:286
-msgid "Link-Templates are an amazing way to dynamically generate URLs. They allow you to integrate other systems better without having to manually copy data from Zammad if possible."
-msgstr ""
-
-#: ../system/objects/types.rst:292
-msgid "Another great way of communicating with another system may be Zammad's :doc:`Webhooks </manage/webhook>`."
-msgstr ""
-
-#: ../system/objects/types.rst:295
-msgid "After filling a link-template enabled field, an URL icon will appear on its right. Clicking on the icon opens a new tab."
-msgstr ""
-
-#: ../system/objects/types.rst:300
-msgid "Even though Zammad displays the link template within object edit and create screens, the function is optional. It's only active if you populate the field."
-msgstr ""
-
-#: ../system/objects/types.rst:305
-msgid "What's the difference between URL and text fields with link template...?!"
+#: ../system/objects/types.rst:0
+msgid "Screencast showing the search for a product in a ticket"
 msgstr ""
 
 #: ../system/objects/types.rst:307
+msgid "URL fields (Link-Template)"
+msgstr ""
+
+#: ../system/objects/types.rst:311
+msgid "This function is restricted to Text, Select and External data source types only."
+msgstr ""
+
+#: ../system/objects/types.rst:314
+msgid "Link-Templates are an amazing way to dynamically generate URLs. They allow you to integrate other systems better without having to manually copy data from Zammad if possible."
+msgstr ""
+
+#: ../system/objects/types.rst:320
+msgid "Another great way of communicating with another system may be Zammad's :doc:`Webhooks </manage/webhook>`."
+msgstr ""
+
+#: ../system/objects/types.rst:323
+msgid "After filling a link-template enabled field, an URL icon will appear on its right. Clicking on the icon opens a new tab."
+msgstr ""
+
+#: ../system/objects/types.rst:328
+msgid "Even though Zammad displays the link template within object edit and create screens, the function is optional. It's only active if you populate the field."
+msgstr ""
+
+#: ../system/objects/types.rst:333
+msgid "What's the difference between URL and text fields with link template...?!"
+msgstr ""
+
+#: ../system/objects/types.rst:335
 msgid "Both fields have different use cases. Use ``text`` type text fields when ever you have a *static* url that requires dynamic parameters. If you require a drag & drop like field that you can put in any URL, use ``URL`` type text fields."
 msgstr ""
 
-#: ../system/objects/types.rst:312
+#: ../system/objects/types.rst:340
 msgid "The difference is easier to spot when comparing the fields directly, below screencast shows the result - the dynamic approach uses existing values in the moment of updating to built the URL - e.g. ``https://google.com/search?q=cookies`` - while the URL approach uses the actual URL of the field - e.g. ``https://zammad.com``."
 msgstr ""
 
@@ -18215,23 +18262,23 @@ msgstr ""
 msgid "Screencast showing the differents in between URL and text type fields with actual values"
 msgstr ""
 
-#: ../system/objects/types.rst:324
+#: ../system/objects/types.rst:352
 msgid "How does this work...?!"
 msgstr ""
 
-#: ../system/objects/types.rst:326
+#: ../system/objects/types.rst:354
 msgid "As an example, let's say you have an attribute called ``amazing_attribute`` and you want to open a google search directly with the input from that field."
 msgstr ""
 
-#: ../system/objects/types.rst:329
+#: ../system/objects/types.rst:357
 msgid "Providing the link-template field below allows you to do so: ``https://www.google.com/search?q=#{ticket.amazing_attribute}``"
 msgstr ""
 
-#: ../system/objects/types.rst:334
+#: ../system/objects/types.rst:362
 msgid "You can use any :doc:`Zammad variable </system/variables>` as long as it's available in the moment you need it."
 msgstr ""
 
-#: ../system/objects/types.rst:337
+#: ../system/objects/types.rst:365
 msgid "As a result, you are redirected to Google with a search for the value of the attribute, if you click on the button in the ticket (as you can see in the screencast above)."
 msgstr ""
 
