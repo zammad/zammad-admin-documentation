@@ -62,7 +62,7 @@ Control how Zammad **sends and receives email**.
 
       Check the ✍️ :doc:`/misc/composer`.
 
-:doc:`📇 Header manipulation <email-headers>`
+:doc:`📇 Header based actions <email-headers>`
    Manipulate auto response behavior or incoming routing.
 
    .. warning:: 🤓 This is a very advanced topic.
