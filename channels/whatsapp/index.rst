@@ -8,7 +8,7 @@ WhatsApp
 
 With the release of Zammad 6.3, you can now connect your Zammad with a
 WhatsApp Business account, allowing your customers to reach out to you through
-WhatsApp.  🎉
+WhatsApp. 🎉
 
 If you already dived deep into this topic, you can head to the setup guide.
 If not, we strongly encourage you to read the prerequisites and limitations
@@ -23,11 +23,11 @@ steps on Meta/WhatsApp side.
    connect WhatsApp to Zammad. You won't be able
    to connect to WhatsApp in Zammad if you just use the WhatsApp Business *App*.
    Have a look
-   `here <https://developers.facebook.com/docs/whatsapp/cloud-api?locale=en_US>`_
+   `here <https://developers.facebook.com/docs/whatsapp/cloud-api>`_
    for further information about the Cloud API.
 
-   There may be costs for you from Meta/WhatsApp side. 1000 service
-   conversations per month are free. However, you should have a look on their
+   There may be additional costs for you from Meta/WhatsApp side. 1000 service
+   conversations per month are free. However, you should have a look at their
    `pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to
    be safe from surprises.
 
@@ -44,12 +44,12 @@ You can find a guide through the required steps on our
 It covers the following steps:
 
 - Create a Meta Business account
-- Create a Meta developer account
-- Create a Meta developer app
-- Add WhatsApp product to your app
-- Create a system user
+- Create a Meta Developer account
+- Create a Meta Developer app
+- Add WhatsApp Product to your app
+- Create a System User
 - Configure your WhatsApp Business platform
-- Assign a unused phone number
+- Assign an unused Phone Number
 
 Additionally, you have to meet the following requirements:
 
@@ -64,22 +64,24 @@ Limitations
 
 There are a number of limitations for this channel. Read them carefully.
 
-24-hour communication time window
+24-hour customer service window
    If a customer gets in touch with you via WhatsApp, a 24 hour window is
-   opened. In this time window you can answer the question of
-   the customer. If the customer isn't replying, the conversation ends
-   after 24 hours. You can't communicate with this customer via WhatsApp due to
-   their privacy policy until a new conversation is started by your customer.
+   opened. Within this time window you can freely answer the question of the
+   customer. If the customer isn't replying, the service window will be
+   automatically closed after 24 hours. You will not be able to communicate with
+   this customer via WhatsApp due to their privacy policy and until a fresh reply
+   is received from your customer.
 
-   If the ticket cannot be closed and to keep the conversation ongoing, we
-   suggest to create a dedicated trigger for the WhatsApp channel. For example
-   you could send an auto-generated message to the customer after 20 hours and
-   ask to reply to your message to keep the conversation open.
+   In case the ticket cannot be closed yet and in order to facilitate an ongoing
+   conversation, automatic reminders will be sent to the customer asking them to
+   reply and keep the service window open. They are sent 23 hours after a
+   message is received, and can be optionally deactivated in the channel
+   configuration.
 
 Customer-initiated communication only
    The WhatsApp channel only supports customer initiated communication.
    For business-initiated communication, it would be necessary to create a
-   message template which has to be verified by Meta first which is Currently
+   message template which has to be verified by Meta first which is currently
    not supported by Zammad.
 
 Supported media types
@@ -100,8 +102,8 @@ File size for attachments
    - video: 16 MB
    - sticker: 100/500 KB (static/animated)
 
-   To read more in detail, have a look on their `documentation of supported
-   media types <https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media?locale=en_US#supported-media-types>`_.
+   To read more in detail, have a look at their `documentation of supported
+   media types <https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types>`_.
 
 One phone number per app
    If you want to use more than one phone number, you have to create a business
@@ -112,8 +114,8 @@ Setup
 -----
 
 First of all, make sure to match the prerequisites and to read the limitations
-above. If you did not setup your Meta developer account, Meta business account
-and your developer app, first go to our :doc:`preparation page <preparation>`
+above. If you did not setup your Meta Developer account, Meta Business account
+and Meta Developer app, first go to our :doc:`preparation page <preparation>`
 and come back here after finishing it.
 
 Then head over to Zammad's admin panel to add the WhatsApp channel under
@@ -149,7 +151,7 @@ Access Token
       :align: center
 
 
-   Choose your created app, a expiration date of the token (we recommend
+   Choose your created app, an expiration date of the token (we recommend
    "Never") and the permissions ``whatsapp_business_management`` and
    ``whatsapp_business_messaging``:
 
@@ -187,11 +189,17 @@ Phone Number
    credentials from step 1 may be wrong.
 
 Welcome Message
-   Here you can define a message which is sent to your customers
-   when they are writing to you.
+   Here you can define an optional text message which is automatically sent to
+   your customers when the initial message is received.
 
-Goodbye Message
-   Here you can define a message which is sent when the conversation ends.
+Automatic Reminders
+   Here you can control whether the automatic reminders about the customer
+   service window are sent to the customer when the window is about to expire.
+
+   For more information on 24-hour customer service windows, take a look at
+   Meta's
+   `conversation description <https://developers.facebook.com/docs/whatsapp/pricing#customer-service-windows>`_
+   under "Customer Service Windows".
 
 Target Group
    Here you can define the :doc:`group </manage/groups/index>` in which the
@@ -255,6 +263,4 @@ Define webhook fields
    as in the first screenshot.
 
 After finishing this step, you can click on the **Finish** button in Zammad
-and you should now be ready to receive Tickets from your WhatsApp channel!
-
-
+and you should now be ready to receive tickets from your WhatsApp channel!
