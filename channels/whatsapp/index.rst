@@ -69,8 +69,8 @@ There are a number of limitations for this channel. Read them carefully.
    opened. Within this time window you can freely answer the question of the
    customer. If the customer isn't replying, the service window will be
    automatically closed after 24 hours. You will not be able to communicate with
-   this customer via WhatsApp due to their privacy policy and until a fresh reply
-   is received from your customer.
+   this customer via WhatsApp due to their privacy policy and until a fresh
+   reply is received from your customer after the service window expires.
 
    In case the ticket cannot be closed yet and in order to facilitate an ongoing
    conversation, automatic reminders will be sent to the customer asking them to
