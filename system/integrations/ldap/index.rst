@@ -89,3 +89,18 @@ The provided information can be useful when something does not work as expected.
 .. figure:: /images/system/integrations/ldap/ldap-log-entries.gif
    :alt: Screencast showing LDAP integration log entries and a detail view on
          an entry.
+
+
+Usage with an Apache proxy
+--------------------------
+
+.. tip::
+
+   You can encounter an issue when authenticating on Zammad when using LDAP
+   and Apache proxy : "CSRF token verification failed!".
+
+If you are using an Apache proxy and the default ``zammad_ssl.conf`` file, 
+please add ``RequestHeader set X_FORWARDED_PROTO 'https'`` after 
+``RequestHeader unset X-Forwarded-User``.
+
+Then reload apache2 configuration (eg: ``systemctl reload apache2.service``).
