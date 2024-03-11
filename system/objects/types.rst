@@ -39,7 +39,7 @@ attribute types.
 
 Boolean field
    Provides a drop-down field with display values for ``true`` and ``false``.
-   Allows setting a default value.
+   Setting a default is mandatory.
 
    .. figure:: /images/system/objects/settings_boolean.png
       :alt: Available settings for Boolean fields
