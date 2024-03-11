@@ -45,9 +45,8 @@ Admin Permissions
 :``admin.channel_chat``:
    :doc:`Channels > Chat </channels/chat>`
 
-   .. hint:: 🤓 **Trying to grant access to send messages in live chats?**
-
-      Use ``chat.agent`` instead.
+   **Trying to grant access to send messages in live chats?**  Use
+   ``chat.agent`` instead.
 
 :``admin.channel_email``:
    :doc:`Channels > Email </channels/email/index>`
@@ -76,14 +75,14 @@ Admin Permissions
 
    .. hint:: 🤓 **Trying to grant access to view/update tickets from Telegram?**
 
-      That’s in :doc:`/manage/groups/access-levels`.
+      That's in :doc:`/manage/groups/access-levels`.
 
 :``admin.channel_twitter``:
    :doc:`Channels > Twitter </channels/twitter-x/twitter>`
 
    .. hint:: 🤓 **Trying to grant access to view/update tickets from Twitter?**
 
-      That’s in :doc:`/manage/groups/access-levels`.
+      That's in :doc:`/manage/groups/access-levels`.
 
 :``admin.channel_web``:
    :doc:`Channels > Web </channels/web>`
@@ -133,7 +132,7 @@ Admin Permissions
 
    .. note:: Agents can access existing organizations
       from the search bar, even without this permission.
-      They can even edit an organization’s name, domain, and notes!
+      They can even edit an organization's name, domain, and notes!
 
 :``admin.overview``:
    :doc:`Manage > Overviews</manage/overviews>`
@@ -200,7 +199,7 @@ Admin Permissions
 
    .. note:: 🤔 **I thought agents could already manage user accounts?**
 
-      Agents can create and edit **customers**, but they can’t:
+      Agents can create and edit **customers**, but they can't:
 
       * modify anyone's permissions (roles or groups)
       * modify anyone's passwords

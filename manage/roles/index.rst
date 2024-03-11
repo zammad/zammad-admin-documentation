@@ -24,7 +24,7 @@ of its powerful, flexible, and fine-grained permission system.
 What Is a Role?
 ---------------
 
-**tl;dr** Some users can do things others can't (like close a ticket).
+Some users can do things others can't (like close a ticket).
 Users have roles, roles have permissions,
 and permissions are what make those actions possible.
 
@@ -92,10 +92,10 @@ permission group (e.g. ``admin``) or a subset of it
 (e.g. ``admin.text_module``).
 
 :doc:`🛡️ Admin <admin-permissions>`
-   for access to each page of the Admin Panel
+   For access to each page of the admin Panel
 
 :doc:`🕵️ Agent <agent-permissions>`
-   for access to customer communications
+   For access to customer communications
 
 👤 Customer
    Without the ``ticket.customer`` permission,
@@ -103,13 +103,13 @@ permission group (e.g. ``admin``) or a subset of it
    they can still log in and open new tickets!
 
 :doc:`🎛️ User Preferences <user-preferences-permissions>`
-   for access to your own
+   For access to your own
    :user-docs:`user profile </extras/profile-and-settings.html>`
 
 Role Details
 ------------
 
-Default at signup
+Default at Signup
    Every new user must be assigned at least one role upon creation.
    This attribute decides which role to give new users by default
    (which usually happens when creating a new ticket for a new customer).
