@@ -36,7 +36,7 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    :header-rows: 1
 
    * - Permission name
-     - Allows access to
+     - Give access to
      - Note
    * - ``admin.api``
      - :docs:`System > API </api/intro.html>`
