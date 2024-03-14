@@ -24,9 +24,10 @@ of its powerful, flexible, and fine-grained permission system.
 What Is a Role?
 ---------------
 
-**tl;dr** Some users can do things others can't (like close a ticket).
+Some users can do things others can't (like close a ticket).
 Users have roles, roles have permissions,
-and permissions are what make those actions possible.
+and permissions are what make those actions possible. You can think of roles as
+a kind of a collection of permissions.
 
 So what exactly are permissions, then?
 
@@ -41,19 +42,17 @@ So what exactly are permissions, then?
 Simply put, permissions are names for all the different things
 users might want to do throughout the system, such as:
 
-:``chat.agent``: respond to live chat messages
-:``ticket.agent``: update tickets
-:``admin.user``: access the **Manage > Users** admin panel
-:``knowledge_base.editor``: create/edit knowledge base articles
+   * ``chat.agent``: respond to live chat messages
+   * ``ticket.agent``: update tickets
+   * ``admin.user``: access the **Manage > Users** admin panel
+   * ``knowledge_base.editor``: create/edit knowledge base articles
 
-Zammad has dozens of these permissions,
-which is a lot to keep track of.
-So instead of saying "This user has permissions A, B, and C",
-Zammad says "The *agent role* has permissions A, B, and C,
-and this user is an agent."
+Zammad has dozens of these permissions, which is a lot to keep track of.
+So instead of assigning a bunch of permissions to different users, the idea is
+to assign permissions to roles. And each user has an assigned role.
 
 This makes creating user accounts for new agents a whole lot simpler,
-and it also makes it easier to invent a new permission D
+and it also makes it easier to assign a new permission to a role
 and say "All existing agents can do *that* now, too."
 
 In short, roles are just collections of permissions that you can give to a user.
@@ -92,10 +91,10 @@ permission group (e.g. ``admin``) or a subset of it
 (e.g. ``admin.text_module``).
 
 :doc:`🛡️ Admin <admin-permissions>`
-   for access to each page of the Admin Panel
+   For access to each page of the admin panel
 
 :doc:`🕵️ Agent <agent-permissions>`
-   for access to customer communications
+   For access to customer communications
 
 👤 Customer
    Without the ``ticket.customer`` permission,
@@ -103,13 +102,13 @@ permission group (e.g. ``admin``) or a subset of it
    they can still log in and open new tickets!
 
 :doc:`🎛️ User Preferences <user-preferences-permissions>`
-   for access to your own
+   For access to your own
    :user-docs:`user profile </extras/profile-and-settings.html>`
 
 Role Details
 ------------
 
-Default at signup
+Default at Signup
    Every new user must be assigned at least one role upon creation.
    This attribute decides which role to give new users by default
    (which usually happens when creating a new ticket for a new customer).
