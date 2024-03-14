@@ -26,7 +26,8 @@ What Is a Role?
 
 Some users can do things others can't (like close a ticket).
 Users have roles, roles have permissions,
-and permissions are what make those actions possible.
+and permissions are what make those actions possible. You can think of roles as
+a kind of a collection of permissions.
 
 So what exactly are permissions, then?
 
@@ -41,19 +42,17 @@ So what exactly are permissions, then?
 Simply put, permissions are names for all the different things
 users might want to do throughout the system, such as:
 
-:``chat.agent``: respond to live chat messages
-:``ticket.agent``: update tickets
-:``admin.user``: access the **Manage > Users** admin panel
-:``knowledge_base.editor``: create/edit knowledge base articles
+   * ``chat.agent``: respond to live chat messages
+   * ``ticket.agent``: update tickets
+   * ``admin.user``: access the **Manage > Users** admin panel
+   * ``knowledge_base.editor``: create/edit knowledge base articles
 
-Zammad has dozens of these permissions,
-which is a lot to keep track of.
-So instead of saying "This user has permissions A, B, and C",
-Zammad says "The *agent role* has permissions A, B, and C,
-and this user is an agent."
+Zammad has dozens of these permissions, which is a lot to keep track of.
+So instead of assigning a bunch of permissions to different users, the idea is
+to assign permissions to roles. And each user has an assigned role.
 
 This makes creating user accounts for new agents a whole lot simpler,
-and it also makes it easier to invent a new permission D
+and it also makes it easier to assign a new permission to a role
 and say "All existing agents can do *that* now, too."
 
 In short, roles are just collections of permissions that you can give to a user.
