@@ -91,7 +91,7 @@ permission group (e.g. ``admin``) or a subset of it
 (e.g. ``admin.text_module``).
 
 :doc:`🛡️ Admin <admin-permissions>`
-   For access to each page of the admin Panel
+   For access to each page of the admin panel
 
 :doc:`🕵️ Agent <agent-permissions>`
    For access to customer communications
