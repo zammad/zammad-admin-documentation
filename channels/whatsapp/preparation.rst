@@ -74,8 +74,8 @@ If you already have a business account, you should assign it. In this step, this
 is optional, but later it is required anyway. Click on "Create App" to finish
 this step.
 
-Add WhatsApp  Product to Your App
----------------------------------
+Add WhatsApp Product to Your App
+--------------------------------
 
 Now you have to add a product to your app. In our case, this is WhatsApp.
 Search for it and click on "Set up":
@@ -128,9 +128,8 @@ presented to you. Click on "Start using the API":
     :alt: App dashboard overview
     :align: center
 
-
 Assign an Unused Phone Number
-----------------------------------
+-----------------------------
 
 Please note: this number may not be used in a WhatsApp app already!
 
