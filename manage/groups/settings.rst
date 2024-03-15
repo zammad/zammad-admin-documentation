@@ -22,6 +22,9 @@ Parent group
    permissions. That means you can treat each group as an individual group -
    even if they have a child/parent relation.
 
+   Zammad supports 10 levels of hierarchy for groups on PostgreSQL systems.
+   If you are using a MySQL database, it is limited to 6 levels.
+
    .. hint:: Zammad doesn't show you any child group of the currently selected
       group. This would lead to a circular reference!
 
