@@ -1,5 +1,5 @@
 Translations
-************
+============
 
 Translations of Zammad are processed centrally in our
 `Weblate instance <https://translations.zammad.org/>`_.
@@ -16,7 +16,8 @@ Have a look in our
 :docs:`contribution section </contributing/start.html#translation>` in the
 system documentation to get started!
 
---------------------------------------------------------------------------------
+Local Translations
+------------------
 
 Apart from these system translations, there's still local translations you can
 manage. This is relevant if you added custom objects that require translations
@@ -73,7 +74,7 @@ All your custom translations will show up in the overview table when added. And
 they will even persist across Zammad updates!
 
 Reverting to Original Translations
-++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to revert a custom translation to original text, simply use the
 appropriate action within the row of the overview table.
@@ -92,7 +93,7 @@ confirmation.
    :align: center
 
 Inline Translations
-+++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^
 
 If you prefer a more hands-on approach, you can activate the inline or on-screen
 translation feature by pressing ``ctrl`` + ``alt`` + ``t`` at any time and on
