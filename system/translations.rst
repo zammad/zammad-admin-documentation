@@ -1,16 +1,16 @@
 Translations
 ************
 
-Translations of Zammad are processed centrally on our
+Translations of Zammad are processed centrally in our
 `Weblate instance <https://translations.zammad.org/>`_.
-This allows non development people to review and update translation strings of
-the language they actually speak.
+This allows non-developers to review and update translation texts of the
+language they actually speak.
 
-Your language is in an incomplete translation state or has typos?
-Please consider helping us sorting this out! All you need is either a GitHub
-account or register directly on our instance.
+Your language is in an incomplete translation state or has typos? Please
+consider helping us in sorting this out! All you need is either a GitHub account
+or to register directly in our instance.
 
-Did you know? This is also where documentation translations are handled. 🤓
+Did you know? This is also where the documentation translations are handled. 🤓
 
 Have a look in our
 :docs:`contribution section </contributing/start.html#translation>` in the
@@ -18,63 +18,99 @@ system documentation to get started!
 
 --------------------------------------------------------------------------------
 
-Apart from these centralized translations, there's still local translations
-you can manage. This is relevant if you added custom objects that require
-translations or even states.
-
-.. warning::
-
-   You can no longer synchronize these translations upstream like prior
-   Zammad 5.1.
+Apart from these system translations, there's still local translations you can
+manage. This is relevant if you added custom objects that require translations
+or even custom states and priorities.
 
 .. figure:: /images/system/translations/translation-management.png
-   :alt: Translation management page within the admin menu
+   :alt: Translation management screen within the admin menu
+   :align: center
 
-How do I get the most recent translations?
-------------------------------------------
+Updating Translations
+---------------------
 
-Because of how Zammad ships translations, the only way to update the
-central translations is to update your Zammad installation. The benefit of
-this is that you no longer need internet access during a Zammad upgrade as
-the package has everything it requires already.
+Because of how Zammad ships translations, the only way to update the system
+translations is to update your Zammad installation. The benefit of this is that
+you no longer need internet access during a Zammad upgrade as the package has
+everything it requires already.
 
-But... I have custom objects?!
-------------------------------
+Translation of Custom Objects
+-----------------------------
 
-No problem at all! If you can't find the strings of your objects already within
-the translation list, please ensure to
-:docs:`add the translation strings </admin/console/other-useful-commands.html#add-translation>`
-to your installation.
+No problem at all! You can customize any translation locally, even if it is not
+initially provided by the system.
 
-Now you can translate your objects as needed.
+Translation is supported for a broad number of features, including but not
+limited to custom:
 
-So how does this local translation work?
-----------------------------------------
+* Object Attributes
+* Ticket Macros
+* Ticket Overviews
+* Ticket Priorities
+* Ticket States
 
-Within the translation menu, look up the string you're searching for and update
-its target as designed. As soon as you leave the target input field, the change
-will be saved. Your changes are even update safe!
+Customizing Translations
+------------------------
 
-Such locally translated strings are slightly highlighted and come with a "Reset"
-action. Due to caching you may have to reload your browser session to see the
-changes.
+Within the translation screen, simply click on the **New Translation** button.
 
-The translation strings shown by Zammad are always those of the
-profile language you've chosen. If you need to translate a different language,
-change the language in your
-:user-docs:`profile settings </extras/profile-and-settings.html>` up front.
+.. figure:: /images/system/translations/new-translation-dialog.png
+   :alt: New translation dialog
+   :align: center
 
-.. figure:: /images/system/translations/changed-local-translation.png
-   :alt: Screenshot showing an adjusted translation locally
+In the dialog you can immediately enter the exact translation source (if you
+know it) and your custom translation text for it and click **Submit**.
 
-Reverting to original translations
+Alternatively, try to search for translation suggestions in the list below.
+Selecting an item from the list will pre-fill the translation source for you and
+then you can just enter your custom translation.
+
+The target language will always default to your current language selection. If
+you need to translate for a different language, simply change the selection
+before submitting.
+
+All your custom translations will show up in the overview table when added. And
+they will even persist across Zammad updates!
+
+Reverting to Original Translations
 ++++++++++++++++++++++++++++++++++
 
-If you want to reset all translation changes on your instance, use the
-red "Reset" button on the upper right of the translation management.
+If you want to revert a custom translation to original text, simply use the
+appropriate action within the row of the overview table.
 
-In case you just intend to reset a specific translation, lookup the
-translation string and use the "reset" action.
+Depending on the type of the translation source, the action has a slightly
+different name:
 
-.. figure:: /images/system/translations/resetting-local-translations.png
-   :alt: Screenshot showing reset button highlighted
+* **Reset** for customized system translations
+* **Remove** for customized local translations
+
+In both cases, the action will remove the customized translation after a
+confirmation.
+
+.. figure:: /images/system/translations/revert-custom-translation.png
+   :alt: Screenshot showing the location of the Remove action
+   :align: center
+
+Inline Translations
++++++++++++++++++++
+
+If you prefer a more hands-on approach, you can activate the inline or on-screen
+translation feature by pressing ``ctrl`` + ``alt`` + ``t`` at any time and on
+any screen.
+
+All customizable translation texts will be highlighted for you on the screen.
+Just click into the highlighted area and update the text in place.
+
+.. figure:: /images/system/translations/inline-translations.png
+   :alt: Inline translation mode activated for the Overview screen
+   :align: center
+
+When finished editing, simply press ``ctrl`` + ``alt`` + ``t`` again to
+deactivate.
+
+.. note::
+
+   Even though it's available on any screen, the inline translation feature
+   requires admin permissions. It works only for the current language selection.
+   If you need to translate a different language, first change the language in
+   your :user-docs:`profile settings </extras/profile-and-settings.html>`.
