@@ -27,7 +27,7 @@ Variable Categories
    variables/article
    variables/ticket
 
-Wait, what about custom objects?
+Wait, What About Custom Objects?
 --------------------------------
 
 Good point! Of course, we can't predict what objects you might create, but we
@@ -54,7 +54,7 @@ field which will by default return the key value, not it's display name.
 For this, just extend your variable with ``.value``. This will result in
 ``#{ticket.select.value}``.
 
-Using translated variables
+Using Translated Variables
 --------------------------
 
 If you want to use a translated variable in triggers or
@@ -67,3 +67,55 @@ A possible use-case: you want to send your customers updates on tickets
 via trigger or scheduler which should include the state of the ticket. Using the
 default ``#{ticket.state.name}`` (without the translation flag ``t()``) would
 lead to the output of the original (english) name of the state.
+
+Date and Time Formatting
+------------------------
+
+If you want to use a date and time format which is different from your Zammad
+default (see :doc:`branding </settings/branding>`), you can use ``dt``
+in combination with a date/time variable.
+
+**Example variable:**
+
+``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M (Europe/Berlin)", "Europe/Berlin")}``
+
+**Example output:**
+
+Monday, 2024-03-18 15:31 (Europe/Berlin)
+
+The following parameters can be useful:
+
+.. list-table::
+   :widths: 15 30 55
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+     - Note
+   * - ``%Y``
+     - Year with 4 digits
+     - Use ``%y`` for year with 2 digits
+   * - ``%m``
+     - Month of year (as number)
+     -
+   * - ``%d``
+     - Day of month (as number with zero-padding)
+     - Use ``%e`` for day without zero-padding
+   * - ``%H``
+     - Hour of day in 24h clock
+     - Use ``%l`` for hour in 12h clock with ``%p``
+   * - ``%M``
+     - Minute of hour
+     -
+   * - ``%S``
+     - Second of hour
+     -
+   * - ``%A``
+     - Weekday name
+     - Use ``%a`` for abbreviated name
+   * - ``%B``
+     - Month name
+     - Use ``%b`` for abbreviated name
+   * - ``%U``
+     - Week number of current year
+     - Use ``%W`` for a different calculation method
