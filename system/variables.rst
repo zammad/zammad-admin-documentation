@@ -75,15 +75,13 @@ If you want to use a date and time format which is different from your Zammad
 default (see :doc:`branding </settings/branding>`), you can use ``dt``
 in combination with a date/time variable.
 
-**Example variable:**
+| **Example variable:**
+| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M (Europe/Berlin)", "Europe/Berlin")}``
 
-``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M (Europe/Berlin)", "Europe/Berlin")}``
+| **Example output:**
+| Monday, 2024-03-18 15:31 (Europe/Berlin)
 
-**Example output:**
-
-Monday, 2024-03-18 15:31 (Europe/Berlin)
-
-The following parameters can be useful:
+In the following table you can find some useful parameters:
 
 .. list-table::
    :widths: 15 30 55
@@ -96,14 +94,17 @@ The following parameters can be useful:
      - Year with 4 digits
      - Use ``%y`` for year with 2 digits
    * - ``%m``
-     - Month of year (as number)
-     -
+     - Month of year (as number with zero-padding)
+     - Use ``%-m`` for month without zero-padding
    * - ``%d``
      - Day of month (as number with zero-padding)
      - Use ``%e`` for day without zero-padding
    * - ``%H``
-     - Hour of day in 24h clock
-     - Use ``%l`` for hour in 12h clock with ``%p``
+     - Hour of day in 24h notation with zero-padding
+     - Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``
+   * - ``%I``
+     - Hour of day in 12h notation with zero-padding
+     - Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator
    * - ``%M``
      - Minute of hour
      -
@@ -112,10 +113,15 @@ The following parameters can be useful:
      -
    * - ``%A``
      - Weekday name
-     - Use ``%a`` for abbreviated name
+     - Use ``%a`` for abbreviated name or ``%^A`` for uppercase name
    * - ``%B``
      - Month name
      - Use ``%b`` for abbreviated name
    * - ``%U``
      - Week number of current year
      - Use ``%W`` for a different calculation method
+
+.. tip::
+   For those who want to go further: We support the known format directives for
+   the Ruby built-in method ``strftime`` of the ``DateTime`` class.
+   For more information, see `here <https://apidock.com/ruby/DateTime/strftime>`_.
