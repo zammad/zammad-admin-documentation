@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 08:39+0100\n"
+"POT-Creation-Date: 2024-03-19 14:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1008,7 +1008,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/objects.rst:162
 #: ../system/objects.rst:244
-#: ../system/variables.rst:92
+#: ../system/variables.rst:100
 msgid "Note"
 msgstr ""
 
@@ -2866,7 +2866,7 @@ msgstr ""
 #: ../channels/form.rst:219
 #: ../manage/public-links.rst:47
 #: ../system/subscription/billing.rst:53
-#: ../system/variables.rst:91
+#: ../system/variables.rst:99
 msgid "Description"
 msgstr ""
 
@@ -19723,146 +19723,154 @@ msgid "Date and Time Formatting"
 msgstr ""
 
 #: ../system/variables.rst:74
-msgid "If you want to use a date and time format which is different from your Zammad default (see :doc:`branding </settings/branding>`), you can use ``dt`` in combination with a date/time variable."
-msgstr ""
-
-#: ../system/variables.rst:78
-msgid "**Example variable:**"
+msgid "The ``dt`` method is used for transforming date/time values into any format. You can define a date and time format which is different from your Zammad default (see :doc:`branding </settings/branding>`). To use it, put the ``dt`` method in front of your variable as you can see below."
 msgstr ""
 
 #: ../system/variables.rst:79
-msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M (Europe/Berlin)\", \"Europe/Berlin\")}``"
-msgstr ""
-
-#: ../system/variables.rst:81
-msgid "**Example output:**"
+msgid "The syntax is as follows: ``#{dt(your.variable, parameters and text string)}``"
 msgstr ""
 
 #: ../system/variables.rst:82
-msgid "Monday, 2024-03-18 15:31 (Europe/Berlin)"
+msgid "Please note that you can use any combination of parameters and free text strings or characters. Only the parameters are replaced by the variable you want to output, see the following example."
 msgstr ""
 
-#: ../system/variables.rst:84
-msgid "In the following table you can find some useful parameters:"
+#: ../system/variables.rst:86
+msgid "**Example variable:**"
+msgstr ""
+
+#: ../system/variables.rst:87
+msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\")}``"
+msgstr ""
+
+#: ../system/variables.rst:89
+msgid "**Example output:**"
 msgstr ""
 
 #: ../system/variables.rst:90
-msgid "Parameter"
+msgid "Monday, 2024-03-18 15:31"
 msgstr ""
 
-#: ../system/variables.rst:93
-msgid "``%Y``"
-msgstr ""
-
-#: ../system/variables.rst:94
-msgid "Year with 4 digits"
-msgstr ""
-
-#: ../system/variables.rst:95
-msgid "Use ``%y`` for year with 2 digits"
-msgstr ""
-
-#: ../system/variables.rst:96
-msgid "``%m``"
-msgstr ""
-
-#: ../system/variables.rst:97
-msgid "Month of year (as number with zero-padding)"
+#: ../system/variables.rst:92
+msgid "In the following table you can find some useful parameters:"
 msgstr ""
 
 #: ../system/variables.rst:98
-msgid "Use ``%-m`` for month without zero-padding"
-msgstr ""
-
-#: ../system/variables.rst:99
-msgid "``%d``"
-msgstr ""
-
-#: ../system/variables.rst:100
-msgid "Day of month (as number with zero-padding)"
+msgid "Parameter"
 msgstr ""
 
 #: ../system/variables.rst:101
-msgid "Use ``%e`` for day without zero-padding"
+msgid "``%Y``"
 msgstr ""
 
 #: ../system/variables.rst:102
-msgid "``%H``"
+msgid "Year with 4 digits"
 msgstr ""
 
 #: ../system/variables.rst:103
-msgid "Hour of day in 24h notation with zero-padding"
+msgid "Use ``%y`` for year with 2 digits"
 msgstr ""
 
 #: ../system/variables.rst:104
-msgid "Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``"
+msgid "``%m``"
 msgstr ""
 
 #: ../system/variables.rst:105
-msgid "``%I``"
+msgid "Month of year (as number with zero-padding)"
 msgstr ""
 
 #: ../system/variables.rst:106
-msgid "Hour of day in 12h notation with zero-padding"
+msgid "Use ``%-m`` for month without zero-padding"
 msgstr ""
 
 #: ../system/variables.rst:107
-msgid "Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator"
+msgid "``%d``"
 msgstr ""
 
 #: ../system/variables.rst:108
-msgid "``%M``"
+msgid "Day of month (as number with zero-padding)"
 msgstr ""
 
 #: ../system/variables.rst:109
-msgid "Minute of hour"
+msgid "Use ``%e`` for day without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:110
+msgid "``%H``"
 msgstr ""
 
 #: ../system/variables.rst:111
-msgid "``%S``"
+msgid "Hour of day in 24h notation with zero-padding"
 msgstr ""
 
 #: ../system/variables.rst:112
-msgid "Second of hour"
+msgid "Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``"
+msgstr ""
+
+#: ../system/variables.rst:113
+msgid "``%I``"
 msgstr ""
 
 #: ../system/variables.rst:114
-msgid "``%A``"
+msgid "Hour of day in 12h notation with zero-padding"
 msgstr ""
 
 #: ../system/variables.rst:115
-msgid "Weekday name"
+msgid "Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator"
 msgstr ""
 
 #: ../system/variables.rst:116
-msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
+msgid "``%M``"
 msgstr ""
 
 #: ../system/variables.rst:117
-msgid "``%B``"
-msgstr ""
-
-#: ../system/variables.rst:118
-msgid "Month name"
+msgid "Minute of hour"
 msgstr ""
 
 #: ../system/variables.rst:119
-msgid "Use ``%b`` for abbreviated name"
+msgid "``%S``"
 msgstr ""
 
 #: ../system/variables.rst:120
-msgid "``%U``"
-msgstr ""
-
-#: ../system/variables.rst:121
-msgid "Week number of current year"
+msgid "Second of hour"
 msgstr ""
 
 #: ../system/variables.rst:122
-msgid "Use ``%W`` for a different calculation method"
+msgid "``%A``"
+msgstr ""
+
+#: ../system/variables.rst:123
+msgid "Weekday name"
+msgstr ""
+
+#: ../system/variables.rst:124
+msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
 msgstr ""
 
 #: ../system/variables.rst:125
+msgid "``%B``"
+msgstr ""
+
+#: ../system/variables.rst:126
+msgid "Month name"
+msgstr ""
+
+#: ../system/variables.rst:127
+msgid "Use ``%b`` for abbreviated name"
+msgstr ""
+
+#: ../system/variables.rst:128
+msgid "``%U``"
+msgstr ""
+
+#: ../system/variables.rst:129
+msgid "Week number of current year"
+msgstr ""
+
+#: ../system/variables.rst:130
+msgid "Use ``%W`` for a different calculation method"
+msgstr ""
+
+#: ../system/variables.rst:133
 msgid "For those who want to go further: We support the known format directives for the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
 

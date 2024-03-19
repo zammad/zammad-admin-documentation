@@ -71,15 +71,23 @@ lead to the output of the original (english) name of the state.
 Date and Time Formatting
 ------------------------
 
-If you want to use a date and time format which is different from your Zammad
-default (see :doc:`branding </settings/branding>`), you can use ``dt``
-in combination with a date/time variable.
+The ``dt`` method is used for transforming date/time values into any
+format. You can define a date and time format which is different from your
+Zammad default (see :doc:`branding </settings/branding>`). To use it, put the
+``dt`` method in front of your variable as you can see below.
+
+The syntax is as follows:
+``#{dt(your.variable, parameters and text string)}``
+
+Please note that you can use any combination of parameters and free text strings
+or characters. Only the parameters are replaced by the variable you want
+to output, see the following example.
 
 | **Example variable:**
-| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M (Europe/Berlin)", "Europe/Berlin")}``
+| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M")}``
 
 | **Example output:**
-| Monday, 2024-03-18 15:31 (Europe/Berlin)
+| Monday, 2024-03-18 15:31
 
 In the following table you can find some useful parameters:
 
