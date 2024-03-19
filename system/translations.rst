@@ -73,6 +73,9 @@ before submitting.
 All your custom translations will show up in the overview table when added. And
 they will even persist across Zammad updates!
 
+.. hint:: Make sure to reload your browser if a translated string is not
+   displayed.
+
 Reverting to Original Translations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
