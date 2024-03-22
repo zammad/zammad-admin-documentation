@@ -37,10 +37,8 @@ you can find a description of how the operators are working.
 
 .. note::
 
-   Since Zammad 6.3, the ticket actions are separated in "Ticket creation" and
+   Please note that the ticket actions are separated in "Ticket creation" and
    "Ticket update". Make sure to use the appropriate variant for your scenario.
-   If you want to apply actions to both variants, you have to create two
-   separate filters.
 
 Here are some examples of what is possible with filters:
 
