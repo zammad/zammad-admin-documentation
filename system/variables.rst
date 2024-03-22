@@ -77,14 +77,17 @@ Zammad default (see :doc:`branding </settings/branding>`). To use it, put the
 ``dt`` method in front of your variable as you can see below.
 
 The syntax is as follows:
-``#{dt(your.variable, parameters and text string)}``
+``#{dt(your.variable, "parameters and text string", "timezone")}``
 
 Please note that you can use any combination of parameters and free text strings
 or characters. Only the parameters are replaced by the variable you want
-to output, see the following example.
+to output, see the following example. The date/time output is based on the
+provided timezone. If using a specific time zone, it is recommended to mention
+it manually as a text string at the end of the variable parameters to avoid
+confusion.
 
 | **Example variable:**
-| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M")}``
+| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M", "Europe/Berlin")}``
 
 | **Example output:**
 | Monday, 2024-03-18 15:31
