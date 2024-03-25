@@ -14,12 +14,12 @@ This will greatly improve system performance (de-crease database load
 and size).
 
 Database
-   This is the default storage mechanism. The attachments are stored directly in
+   This is the default storage method. The attachments are stored directly in
    the database. If your Zammad instance grows, we recommend one of the other
-   mechanisms to maintain performance.
+   methods to maintain performance.
 
 Filesystem
-   This storage mechanism is recommended for all Zammad instances, especially
+   This storage method is recommended for all Zammad instances, especially
    for those with a higher load. If you choose filesystem, your files are
    written to ``/opt/zammad/storage/``.
 
@@ -63,7 +63,7 @@ Simple Storage (S3)
        inconsistencies.
 
    3. Restart Zammad so the config file / environment variable is loaded
-   4. Set the "Storage Mechanism" in Zammad to ``Simple Storage (S3)`` in
+   4. Set the "Storage Method" in Zammad to ``Simple Storage (S3)`` in
       Settings > System > Storage and click on "Submit". After that, Zammad
       checks your configuration and the connection to the service and will raise
       an error message if something is wrong.
@@ -82,7 +82,7 @@ Simple Storage (S3)
 
    .. tip::
 
-      Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4),
+      Before setting the storage method to ``Simple Storage (S3)`` (step 4),
       please make sure to have a working setup.
 
       You can verify this by running
