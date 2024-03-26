@@ -1,4 +1,4 @@
-How do trigger work
+How Do Trigger Work
 ===================
 
 Triggers consist of three parts:
@@ -45,7 +45,7 @@ Action activator may evaluate **conditions** in two modes:
    **1 low** will trigger if the ticket was moved to another group while
    priority was set **1 low**.
 
-Time event
+Time Event
 ^^^^^^^^^^
 
 The execution is triggered at a specific time when a certain event is
@@ -111,3 +111,20 @@ A trigger can do the following things once its conditions have been met:
    This allows you to help your agents with specific information if needed.
    (e.g. automated changes a trigger applied to the ticket)
 
+Localization of Trigger Based Notifications
+-------------------------------------------
+
+To translate the output of variables and to format date and time stamps for
+notifications in triggers, use the ``t`` and ``dt`` methods.
+The ``t`` method translates the output of variables according to the selected
+"Locale" field below.
+The ``dt`` method transforms a date and time stamp according to the selected
+"Timezone".
+
+.. figure:: /images/manage/trigger/notification-localization.png
+   :align: center
+   :scale: 90%
+   :alt: Screenshot showing localization section of trigger dialog
+
+For more information and examples, please have a look at the explanation in the
+:ref:`variables section <variable_localization>`.

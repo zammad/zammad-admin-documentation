@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 09:15+0100\n"
+"POT-Creation-Date: 2024-03-26 08:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1008,7 +1008,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/objects.rst:162
 #: ../system/objects.rst:244
-#: ../system/variables.rst:103
+#: ../system/variables.rst:105
 msgid "Note"
 msgstr ""
 
@@ -2823,7 +2823,7 @@ msgstr ""
 #: ../channels/form.rst:219
 #: ../manage/public-links.rst:47
 #: ../system/subscription/billing.rst:53
-#: ../system/variables.rst:102
+#: ../system/variables.rst:104
 msgid "Description"
 msgstr ""
 
@@ -9066,7 +9066,7 @@ msgid "Screenshot of “Triggers” page in admin panel"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:2
-msgid "How do trigger work"
+msgid "How Do Trigger Work"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:4
@@ -9145,8 +9145,7 @@ msgid "**Example:** An always action trigger which is listening on the priority 
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:49
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
-msgid "Time event"
+msgid "Time Event"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:51
@@ -9234,6 +9233,22 @@ msgstr ""
 msgid "This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
+#: ../manage/trigger/how-do-they-work.rst:115
+msgid "Localization of Trigger Based Notifications"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid "To translate the output of variables and to format date and time stamps for notifications in triggers, use the ``t`` and ``dt`` methods. The ``t`` method translates the output of variables according to the selected \"Locale\" field below. The ``dt`` method transforms a date and time stamp according to the selected \"Timezone\"."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:129
+msgid "For more information and examples, please have a look at the explanation in the :ref:`variables section <variable_localization>`."
+msgstr ""
+
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
 msgstr ""
@@ -9250,19 +9265,19 @@ msgstr ""
 msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:14
+#: ../manage/trigger/learn-by-example.rst:16
 msgid "Emma Taylor is responsible for all sales internally, so if a new ticket has the word \"order\" in the subject, assign it to her and make sure it's set with a high priority:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:20
+#: ../manage/trigger/learn-by-example.rst:24
 msgid "Send an auto-reply email to *any customer* who responds to a ticket:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:24
+#: ../manage/trigger/learn-by-example.rst:30
 msgid "📨 **Not all automated messages come from triggers!**"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger/learn-by-example.rst:32
 msgid "For instance, when *agents* receive a system email about a newly created ticket, that's built into the system itself. If you need to customize those, you will have to :doc:`manually edit files on your server </manage/trigger/system-notifications>`."
 msgstr ""
 
@@ -10049,6 +10064,10 @@ msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:31
 msgid "This will check if the current state of the ticket matches configured conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
+msgid "Time event"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:35
@@ -19686,171 +19705,171 @@ msgstr ""
 msgid "Now, in some situations it's possible that you'll need to use a third part. The best example for such a situation would be a ``select`` or ``tree-select`` field which will by default return the key value, not it's display name. For this, just extend your variable with ``.value``. This will result in ``#{ticket.select.value}``."
 msgstr ""
 
-#: ../system/variables.rst:58
+#: ../system/variables.rst:60
 msgid "Using Translated Variables"
 msgstr ""
 
-#: ../system/variables.rst:60
+#: ../system/variables.rst:62
 msgid "If you want to use a translated variable in triggers or schedulers, you can extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` tells Zammad to search for fitting translated strings. The used output language is based on the system language of Zammad which you can set in the admin panel under :doc:`/settings/branding`."
 msgstr ""
 
-#: ../system/variables.rst:66
+#: ../system/variables.rst:68
 msgid "A possible use-case: you want to send your customers updates on tickets via trigger or scheduler which should include the state of the ticket. Using the default ``#{ticket.state.name}`` (without the translation flag ``t()``) would lead to the output of the original (english) name of the state."
 msgstr ""
 
-#: ../system/variables.rst:72
+#: ../system/variables.rst:74
 msgid "Date and Time Formatting"
 msgstr ""
 
-#: ../system/variables.rst:74
+#: ../system/variables.rst:76
 msgid "The ``dt`` method is used for transforming date/time values into any format. You can define a date and time format which is different from your Zammad default (see :doc:`branding </settings/branding>`). To use it, put the ``dt`` method in front of your variable as you can see below."
 msgstr ""
 
-#: ../system/variables.rst:79
+#: ../system/variables.rst:81
 msgid "The syntax is as follows: ``#{dt(your.variable, \"parameters and text string\", \"timezone\")}``"
 msgstr ""
 
-#: ../system/variables.rst:82
+#: ../system/variables.rst:84
 msgid "Please note that you can use any combination of parameters and free text strings or characters. Only the parameters are replaced by the variable you want to output, see the following example. The date/time output is based on the provided timezone. If using a specific time zone, it is recommended to mention it manually as a text string at the end of the variable parameters to avoid confusion."
 msgstr ""
 
-#: ../system/variables.rst:89
+#: ../system/variables.rst:91
 msgid "**Example variable:**"
 msgstr ""
 
-#: ../system/variables.rst:90
+#: ../system/variables.rst:92
 msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
 msgstr ""
 
-#: ../system/variables.rst:92
+#: ../system/variables.rst:94
 msgid "**Example output:**"
 msgstr ""
 
-#: ../system/variables.rst:93
+#: ../system/variables.rst:95
 msgid "Monday, 2024-03-18 15:31"
 msgstr ""
 
-#: ../system/variables.rst:95
+#: ../system/variables.rst:97
 msgid "In the following table you can find some useful parameters:"
 msgstr ""
 
-#: ../system/variables.rst:101
+#: ../system/variables.rst:103
 msgid "Parameter"
 msgstr ""
 
-#: ../system/variables.rst:104
+#: ../system/variables.rst:106
 msgid "``%Y``"
 msgstr ""
 
-#: ../system/variables.rst:105
+#: ../system/variables.rst:107
 msgid "Year with 4 digits"
 msgstr ""
 
-#: ../system/variables.rst:106
+#: ../system/variables.rst:108
 msgid "Use ``%y`` for year with 2 digits"
 msgstr ""
 
-#: ../system/variables.rst:107
+#: ../system/variables.rst:109
 msgid "``%m``"
 msgstr ""
 
-#: ../system/variables.rst:108
+#: ../system/variables.rst:110
 msgid "Month of year (as number with zero-padding)"
 msgstr ""
 
-#: ../system/variables.rst:109
+#: ../system/variables.rst:111
 msgid "Use ``%-m`` for month without zero-padding"
 msgstr ""
 
-#: ../system/variables.rst:110
+#: ../system/variables.rst:112
 msgid "``%d``"
 msgstr ""
 
-#: ../system/variables.rst:111
+#: ../system/variables.rst:113
 msgid "Day of month (as number with zero-padding)"
 msgstr ""
 
-#: ../system/variables.rst:112
+#: ../system/variables.rst:114
 msgid "Use ``%e`` for day without zero-padding"
 msgstr ""
 
-#: ../system/variables.rst:113
+#: ../system/variables.rst:115
 msgid "``%H``"
 msgstr ""
 
-#: ../system/variables.rst:114
+#: ../system/variables.rst:116
 msgid "Hour of day in 24h notation with zero-padding"
 msgstr ""
 
-#: ../system/variables.rst:115
+#: ../system/variables.rst:117
 msgid "Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``"
 msgstr ""
 
-#: ../system/variables.rst:116
+#: ../system/variables.rst:118
 msgid "``%I``"
 msgstr ""
 
-#: ../system/variables.rst:117
+#: ../system/variables.rst:119
 msgid "Hour of day in 12h notation with zero-padding"
 msgstr ""
 
-#: ../system/variables.rst:118
+#: ../system/variables.rst:120
 msgid "Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator"
 msgstr ""
 
-#: ../system/variables.rst:119
+#: ../system/variables.rst:121
 msgid "``%M``"
 msgstr ""
 
-#: ../system/variables.rst:120
+#: ../system/variables.rst:122
 msgid "Minute of hour"
 msgstr ""
 
-#: ../system/variables.rst:122
+#: ../system/variables.rst:124
 msgid "``%S``"
 msgstr ""
 
-#: ../system/variables.rst:123
+#: ../system/variables.rst:125
 msgid "Second of hour"
 msgstr ""
 
-#: ../system/variables.rst:125
+#: ../system/variables.rst:127
 msgid "``%A``"
 msgstr ""
 
-#: ../system/variables.rst:126
+#: ../system/variables.rst:128
 msgid "Weekday name"
 msgstr ""
 
-#: ../system/variables.rst:127
+#: ../system/variables.rst:129
 msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
 msgstr ""
 
-#: ../system/variables.rst:128
+#: ../system/variables.rst:130
 msgid "``%B``"
 msgstr ""
 
-#: ../system/variables.rst:129
+#: ../system/variables.rst:131
 msgid "Month name"
 msgstr ""
 
-#: ../system/variables.rst:130
+#: ../system/variables.rst:132
 msgid "Use ``%b`` for abbreviated name"
 msgstr ""
 
-#: ../system/variables.rst:131
+#: ../system/variables.rst:133
 msgid "``%U``"
 msgstr ""
 
-#: ../system/variables.rst:132
+#: ../system/variables.rst:134
 msgid "Week number of current year"
 msgstr ""
 
-#: ../system/variables.rst:133
+#: ../system/variables.rst:135
 msgid "Use ``%W`` for a different calculation method"
 msgstr ""
 
-#: ../system/variables.rst:136
+#: ../system/variables.rst:138
 msgid "For those who want to go further: We support the known format directives for the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
 
