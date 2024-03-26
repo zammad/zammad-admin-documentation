@@ -54,6 +54,8 @@ field which will by default return the key value, not it's display name.
 For this, just extend your variable with ``.value``. This will result in
 ``#{ticket.select.value}``.
 
+.. _variable_localization:
+
 Using Translated Variables
 --------------------------
 
