@@ -120,7 +120,7 @@ In the following table you can find some useful parameters:
      - Minute of hour
      -
    * - ``%S``
-     - Second of hour
+     - Second of Minute
      -
    * - ``%A``
      - Weekday name
