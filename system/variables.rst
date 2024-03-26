@@ -114,7 +114,7 @@ In the following table you can find some useful parameters:
      - Use ``%e`` for day without zero-padding
    * - ``%H``
      - Hour of day in 24h notation with zero-padding
-     - Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``
+     - Use ``%k`` for hour without zero-padding
    * - ``%I``
      - Hour of day in 12h notation with zero-padding
      - Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator
