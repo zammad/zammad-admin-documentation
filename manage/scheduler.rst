@@ -30,9 +30,9 @@ right corner. Then Zammad presents a dialog where you can create your own one.
 
 Example:
 
-.. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation.png
+.. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation_with_locale.png
    :alt: Screenshot showing dialog of creating a new scheduler job
-   :scale: 70%
+   :scale: 40%
    :align: center
 
 Name
@@ -81,6 +81,19 @@ Execute changes on objects
 Disable notifications
    By default, actions triggered by schedulers won't send notifications.
    You can override this here by setting this to *no*.
+
+Locale
+   Set a desired language, in which the output of variables is
+   translated into. This setting only has an effect if you create an article
+   with variables by the scheduler job. Additionally, the value has to be
+   translated. For more information, please have a look at
+   the explanation in the :ref:`variables section <variable_localization>`.
+
+Timezone
+   Similar as for the "Locale" setting, you can define a time zone, which is
+   applied to the output of time stamp variables.
+   For more information, please have a look at
+   the explanation in the :ref:`variables section <variable_localization>`.
 
 Note
    You can use the note field to describe the purpose of the scheduler.
