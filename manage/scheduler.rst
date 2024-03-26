@@ -83,13 +83,18 @@ Disable notifications
    You can override this here by setting this to *no*.
 
 Locale
+   This can be activated with the switch labeled "Localization of execution
+   changes".
+
    Set a desired language, in which the output of variables is
-   translated into. This setting only has an effect if you create an article
-   with variables by the scheduler job. Additionally, the value has to be
-   translated. For more information, please have a look at
+   translated into by using the ``t`` function.
+   For more information, please have a look at
    the explanation in the :ref:`variables section <variable_localization>`.
 
 Timezone
+   This can be activated with the switch labeled "Localization of execution
+   changes".
+
    Similar as for the "Locale" setting, you can define a time zone, which is
    applied to the output of time stamp variables.
    For more information, please have a look at
