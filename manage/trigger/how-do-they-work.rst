@@ -126,5 +126,10 @@ The ``dt`` method transforms a date and time stamp according to the selected
    :scale: 90%
    :alt: Screenshot showing localization section of trigger dialog
 
+Be aware that it is not possible to perform an automatic translation for
+different languages in one trigger. That means if you want to create
+notifications for different languages/regions, you have to create one trigger
+for each language and execute them based on user or organization attributes.
+
 For more information and examples, please have a look at the explanation in the
 :ref:`variables section <variable_localization>`.
