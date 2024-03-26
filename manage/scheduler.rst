@@ -32,7 +32,7 @@ Example:
 
 .. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation_with_locale.png
    :alt: Screenshot showing dialog of creating a new scheduler job
-   :scale: 40%
+   :scale: 80%
    :align: center
 
 Name
