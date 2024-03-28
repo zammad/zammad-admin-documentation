@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 15:05+0100\n"
+"POT-Creation-Date: 2024-03-26 14:49+0100\n"
 "PO-Revision-Date: 2023-09-23 01:11+0000\n"
 "Last-Translator: Tomáš Kovařík <tomas.kovarik@cdv.cz>\n"
 "Language-Team: Czech <https://translations.zammad.org/projects/"
@@ -1099,12 +1099,13 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:40
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:36
-#: ../manage/scheduler.rst:88 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:106 ../manage/webhook/add.rst:116
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:15
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:14
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:17
 #: ../system/objects.rst:162 ../system/objects.rst:244
+#: ../system/variables.rst:105
 msgid "Note"
 msgstr ""
 
@@ -1640,44 +1641,20 @@ msgstr ""
 
 #: ../channels/email/filters.rst:40
 msgid ""
-"The following attributes can only be defined by the filter when a ticket is "
-"**created**:"
+"Please note that the ticket actions are separated in \"Ticket creation\" and "
+"\"Ticket update\". Make sure to use the appropriate variant for your "
+"scenario."
 msgstr ""
 
 #: ../channels/email/filters.rst:43
-#: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:56
-msgid "Group"
-msgstr ""
-
-#: ../channels/email/filters.rst:44 ../manage/macros/learn-by-example.rst:0
-msgid "State"
-msgstr ""
-
-#: ../channels/email/filters.rst:45
-#: ../system/core-workflows/how-do-they-work.rst:181
-msgid "Priority"
-msgstr ""
-
-#: ../channels/email/filters.rst:46 ../manage/macros/learn-by-example.rst:0
-msgid "Owner"
-msgstr ""
-
-#: ../channels/email/filters.rst:48
-msgid ""
-"Zammad will **not overwrite** the value of these objects when a ticket is "
-"updated."
-msgstr ""
-
-#: ../channels/email/filters.rst:51
 msgid "Here are some examples of what is possible with filters:"
 msgstr ""
 
-#: ../channels/email/filters.rst:58
+#: ../channels/email/filters.rst:50
 msgid "Automatically dispatch tickets into certain groups:"
 msgstr ""
 
-#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:46
 msgid ""
 "For example, tickets from ``amazon.com`` could automatically be dispatched "
 "to the Purchasing group."
@@ -1691,7 +1668,7 @@ msgstr ""
 msgid "Group: Purchasing"
 msgstr ""
 
-#: ../channels/email/filters.rst:62
+#: ../channels/email/filters.rst:54
 msgid ""
 "Automatically dispatch tickets to responsible staff based on organization "
 "name:"
@@ -1705,7 +1682,7 @@ msgstr ""
 msgid "Owner: Emily Adams"
 msgstr ""
 
-#: ../channels/email/filters.rst:66
+#: ../channels/email/filters.rst:58
 msgid "Automatically increase the priority of tickets from a VIP customer:"
 msgstr ""
 
@@ -1717,7 +1694,7 @@ msgstr ""
 msgid "Priority: 3 high"
 msgstr ""
 
-#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:63
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin):"
@@ -1735,14 +1712,7 @@ msgstr ""
 msgid "State: closed"
 msgstr ""
 
-#: ../channels/email/filters.rst:75
-msgid ""
-"Note that the State attribute only has an effect when the matching email "
-"results in a new ticket. It will add the tag though if it is missing, even "
-"if the mail is an update to an existing ticket."
-msgstr ""
-
-#: ../channels/email/filters.rst:79
+#: ../channels/email/filters.rst:65
 msgid ""
 "If a filter is no longer needed, it can either be temporarily set inactive "
 "or deleted directly."
@@ -2468,7 +2438,7 @@ msgstr ""
 
 #: ../channels/form.rst:37 ../manage/groups/settings.rst:115
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:91 ../manage/templates.rst:43
+#: ../manage/scheduler.rst:109 ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:123 ../system/objects.rst:169
 #: ../system/objects.rst:246
 msgid "Active"
@@ -2814,7 +2784,7 @@ msgid "Default value"
 msgstr ""
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
-#: ../system/subscription/billing.rst:53
+#: ../system/subscription/billing.rst:53 ../system/variables.rst:104
 msgid "Description"
 msgstr ""
 
@@ -6909,6 +6879,10 @@ msgid ""
 "following changes to a ticket:"
 msgstr ""
 
+#: ../manage/macros/learn-by-example.rst:0
+msgid "State"
+msgstr ""
+
 #: ../manage/macros/learn-by-example.rst:13
 msgid "closed"
 msgstr ""
@@ -6919,6 +6893,10 @@ msgstr ""
 
 #: ../manage/macros/learn-by-example.rst:14
 msgid "add ``spam``"
+msgstr ""
+
+#: ../manage/macros/learn-by-example.rst:0
+msgid "Owner"
 msgstr ""
 
 #: ../manage/macros/learn-by-example.rst:15
@@ -9140,58 +9118,87 @@ msgid ""
 "can override this here by setting this to *no*."
 msgstr ""
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:92 ../settings/branding.rst:27
+msgid "Locale"
+msgstr ""
+
+#: ../manage/scheduler.rst:86 ../manage/scheduler.rst:95
+msgid ""
+"This can be activated with the switch labeled \"Localization of execution "
+"changes\"."
+msgstr ""
+
+#: ../manage/scheduler.rst:89
+msgid ""
+"Set a desired language, in which the output of variables is translated into "
+"by using the ``t`` function. For more information, please have a look at the "
+"explanation in the :ref:`variables section <variable_localization>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:101 ../settings/branding.rst:44
+msgid "Timezone"
+msgstr ""
+
+#: ../manage/scheduler.rst:98
+msgid ""
+"Similar as for the \"Locale\" setting, you can define a time zone, which is "
+"applied to the output of time stamp variables. For more information, please "
+"have a look at the explanation in the :ref:`variables section "
+"<variable_localization>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:104
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
 "*not* a way to add notes to objects."
 msgstr ""
 
-#: ../manage/scheduler.rst:91
+#: ../manage/scheduler.rst:109
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:111
 msgid "The scheduler shown in the screenshot would have the following effects:"
 msgstr ""
 
-#: ../manage/scheduler.rst:95
+#: ../manage/scheduler.rst:113
 msgid ""
 "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all "
 "tickets which:"
 msgstr ""
 
-#: ../manage/scheduler.rst:98
+#: ../manage/scheduler.rst:116
 msgid "are not closed or merged, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:99
+#: ../manage/scheduler.rst:117
 msgid "are assigned to the Sales group, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:118
 msgid "whose escalation was 30 minutes ago"
 msgstr ""
 
-#: ../manage/scheduler.rst:102
+#: ../manage/scheduler.rst:120
 msgid "will be:"
 msgstr ""
 
-#: ../manage/scheduler.rst:104
+#: ../manage/scheduler.rst:122
 msgid "assigned to Emma, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:105
+#: ../manage/scheduler.rst:123
 msgid "have their priority changed to 3 high."
 msgstr ""
 
-#: ../manage/scheduler.rst:107
+#: ../manage/scheduler.rst:125
 msgid ""
 "As a supervisor in the Sales group, this enables Emma to intercept and "
 "process escalated tickets."
 msgstr ""
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:128
 msgid ""
 "Emma will not receive notifications when the scheduler assigns her these "
 "tickets."
@@ -10451,7 +10458,7 @@ msgid "Screenshot of “Triggers” page in admin panel"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:2
-msgid "How do trigger work"
+msgid "How Do Trigger Work"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:4
@@ -10543,8 +10550,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:49
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
-msgid "Time event"
+msgid "Time Event"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:51
@@ -10657,6 +10663,39 @@ msgid ""
 "g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
+#: ../manage/trigger/how-do-they-work.rst:115
+msgid "Localization of Execution Changes"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid ""
+"To translate the output of variables, use the ``t`` function. To format date "
+"and time stamps, use the ``dt`` function."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:120
+msgid ""
+"The ``t`` function translates the output of variables according to the "
+"selected \"Locale\". The ``dt`` function transforms a date and time stamp "
+"according to the selected \"Timezone\"."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:130
+msgid ""
+"Best practice is to create single separated localized triggers for each "
+"language/timezone and execute them based on user or organization attributes."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:133
+msgid ""
+"For more information and examples, please have a look at the explanation in "
+"the :ref:`variables section <variable_localization>`."
+msgstr ""
+
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
 msgstr ""
@@ -10677,22 +10716,22 @@ msgstr ""
 msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:14
+#: ../manage/trigger/learn-by-example.rst:16
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
 "with a high priority:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:20
+#: ../manage/trigger/learn-by-example.rst:24
 msgid "Send an auto-reply email to *any customer* who responds to a ticket:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:24
+#: ../manage/trigger/learn-by-example.rst:30
 msgid "📨 **Not all automated messages come from triggers!**"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger/learn-by-example.rst:32
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
@@ -11692,6 +11731,10 @@ msgstr ""
 msgid ""
 "This will check if the current state of the ticket matches configured "
 "conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
+msgid "Time event"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:35
@@ -14097,10 +14140,6 @@ msgid ""
 "change will not be saved."
 msgstr ""
 
-#: ../settings/branding.rst:27
-msgid "Locale"
-msgstr ""
-
 #: ../settings/branding.rst:22
 msgid ""
 "Allows to set the default language of the Zammad instance. The here defined "
@@ -14117,10 +14156,6 @@ msgstr ""
 
 #: ../settings/branding.rst:27 ../settings/branding.rst:39
 msgid "notifications"
-msgstr ""
-
-#: ../settings/branding.rst:44
-msgid "Timezone"
 msgstr ""
 
 #: ../settings/branding.rst:30
@@ -16255,9 +16290,9 @@ msgstr ""
 
 #: ../settings/system/storage.rst:17
 msgid ""
-"This is the default storage mechanism. The attachments are stored directly "
-"in the database. If your Zammad instance grows, we recommend one of the "
-"other mechanisms to maintain performance."
+"This is the default storage method. The attachments are stored directly in "
+"the database. If your Zammad instance grows, we recommend one of the other "
+"methods to maintain performance."
 msgstr ""
 
 #: ../settings/system/storage.rst:38
@@ -16266,9 +16301,9 @@ msgstr ""
 
 #: ../settings/system/storage.rst:22
 msgid ""
-"This storage mechanism is recommended for all Zammad instances, especially "
-"for those with a higher load. If you choose filesystem, your files are "
-"written to ``/opt/zammad/storage/``."
+"This storage method is recommended for all Zammad instances, especially for "
+"those with a higher load. If you choose filesystem, your files are written "
+"to ``/opt/zammad/storage/``."
 msgstr ""
 
 #: ../settings/system/storage.rst:26
@@ -16353,10 +16388,10 @@ msgstr ""
 
 #: ../settings/system/storage.rst:66
 msgid ""
-"Set the \"Storage Mechanism\" in Zammad to ``Simple Storage (S3)`` in "
-"Settings > System > Storage and click on \"Submit\". After that, Zammad "
-"checks your configuration and the connection to the service and will raise "
-"an error message if something is wrong."
+"Set the \"Storage Method\" in Zammad to ``Simple Storage (S3)`` in Settings "
+"> System > Storage and click on \"Submit\". After that, Zammad checks your "
+"configuration and the connection to the service and will raise an error "
+"message if something is wrong."
 msgstr ""
 
 #: ../settings/system/storage.rst:72
@@ -16365,7 +16400,7 @@ msgstr ""
 
 #: ../settings/system/storage.rst:85
 msgid ""
-"Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4), "
+"Before setting the storage method to ``Simple Storage (S3)`` (step 4), "
 "please make sure to have a working setup."
 msgstr ""
 
@@ -17197,6 +17232,10 @@ msgid ""
 "one."
 msgstr ""
 
+#: ../system/core-workflows/how-do-they-work.rst:181
+msgid "Priority"
+msgstr ""
+
 #: ../system/core-workflows/how-do-they-work.rst:183
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
@@ -17720,6 +17759,11 @@ msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:None
 msgid "Screenshot of Checkmk settings overview"
+msgstr ""
+
+#: ../system/integrations/checkmk/admin-panel-reference.rst:15
+#: ../system/objects/permissions.rst:56
+msgid "Group"
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:12
@@ -23491,7 +23535,7 @@ msgid "Variable Categories"
 msgstr ""
 
 #: ../system/variables.rst:31
-msgid "Wait, what about custom objects?"
+msgid "Wait, What About Custom Objects?"
 msgstr ""
 
 #: ../system/variables.rst:33
@@ -23542,11 +23586,11 @@ msgid ""
 "in ``#{ticket.select.value}``."
 msgstr ""
 
-#: ../system/variables.rst:58
-msgid "Using translated variables"
+#: ../system/variables.rst:60
+msgid "Using Translated Variables"
 msgstr ""
 
-#: ../system/variables.rst:60
+#: ../system/variables.rst:62
 msgid ""
 "If you want to use a translated variable in triggers or schedulers, you can "
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
@@ -23555,12 +23599,185 @@ msgid ""
 "admin panel under :doc:`/settings/branding`."
 msgstr ""
 
-#: ../system/variables.rst:66
+#: ../system/variables.rst:68
 msgid ""
 "A possible use-case: you want to send your customers updates on tickets via "
 "trigger or scheduler which should include the state of the ticket. Using the "
 "default ``#{ticket.state.name}`` (without the translation flag ``t()``) "
 "would lead to the output of the original (english) name of the state."
+msgstr ""
+
+#: ../system/variables.rst:74
+msgid "Date and Time Formatting"
+msgstr ""
+
+#: ../system/variables.rst:76
+msgid ""
+"The ``dt`` method is used for transforming date/time values into any format. "
+"You can define a date and time format which is different from your Zammad "
+"default (see :doc:`branding </settings/branding>`). To use it, put the "
+"``dt`` method in front of your variable as you can see below."
+msgstr ""
+
+#: ../system/variables.rst:81
+msgid ""
+"The syntax is as follows: ``#{dt(your.variable, \"parameters and text "
+"string\", \"timezone\")}``"
+msgstr ""
+
+#: ../system/variables.rst:84
+msgid ""
+"Please note that you can use any combination of parameters and free text "
+"strings or characters. Only the parameters are replaced by the variable you "
+"want to output, see the following example. The date/time output is based on "
+"the provided timezone. If using a specific time zone, it is recommended to "
+"mention it manually as a text string at the end of the variable parameters "
+"to avoid confusion."
+msgstr ""
+
+#: ../system/variables.rst:91
+msgid "**Example variable:**"
+msgstr ""
+
+#: ../system/variables.rst:92
+msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
+msgstr ""
+
+#: ../system/variables.rst:94
+msgid "**Example output:**"
+msgstr ""
+
+#: ../system/variables.rst:95
+msgid "Monday, 2024-03-18 15:31"
+msgstr ""
+
+#: ../system/variables.rst:97
+msgid "In the following table you can find some useful parameters:"
+msgstr ""
+
+#: ../system/variables.rst:103
+msgid "Parameter"
+msgstr ""
+
+#: ../system/variables.rst:106
+msgid "``%Y``"
+msgstr ""
+
+#: ../system/variables.rst:107
+msgid "Year with 4 digits"
+msgstr ""
+
+#: ../system/variables.rst:108
+msgid "Use ``%y`` for year with 2 digits"
+msgstr ""
+
+#: ../system/variables.rst:109
+msgid "``%m``"
+msgstr ""
+
+#: ../system/variables.rst:110
+msgid "Month of year (as number with zero-padding)"
+msgstr ""
+
+#: ../system/variables.rst:111
+msgid "Use ``%-m`` for month without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:112
+msgid "``%d``"
+msgstr ""
+
+#: ../system/variables.rst:113
+msgid "Day of month (as number with zero-padding)"
+msgstr ""
+
+#: ../system/variables.rst:114
+msgid "Use ``%e`` for day without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:115
+msgid "``%H``"
+msgstr ""
+
+#: ../system/variables.rst:116
+msgid "Hour of day in 24h notation with zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:117
+msgid "Use ``%k`` for hour without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:118
+msgid "``%I``"
+msgstr ""
+
+#: ../system/variables.rst:119
+msgid "Hour of day in 12h notation with zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:120
+msgid ""
+"Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian "
+"indicator"
+msgstr ""
+
+#: ../system/variables.rst:121
+msgid "``%M``"
+msgstr ""
+
+#: ../system/variables.rst:122
+msgid "Minute of hour"
+msgstr ""
+
+#: ../system/variables.rst:124
+msgid "``%S``"
+msgstr ""
+
+#: ../system/variables.rst:125
+msgid "Second of Minute"
+msgstr ""
+
+#: ../system/variables.rst:127
+msgid "``%A``"
+msgstr ""
+
+#: ../system/variables.rst:128
+msgid "Weekday name"
+msgstr ""
+
+#: ../system/variables.rst:129
+msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
+msgstr ""
+
+#: ../system/variables.rst:130
+msgid "``%B``"
+msgstr ""
+
+#: ../system/variables.rst:131
+msgid "Month name"
+msgstr ""
+
+#: ../system/variables.rst:132
+msgid "Use ``%b`` for abbreviated name"
+msgstr ""
+
+#: ../system/variables.rst:133
+msgid "``%U``"
+msgstr ""
+
+#: ../system/variables.rst:134
+msgid "Week number of current year"
+msgstr ""
+
+#: ../system/variables.rst:135
+msgid "Use ``%W`` for a different calculation method"
+msgstr ""
+
+#: ../system/variables.rst:138
+msgid ""
+"For those who want to go further: We support the known format directives for "
+"the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more "
+"information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
 
 #: ../system/variables/article.rst:2

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 15:05+0100\n"
-"PO-Revision-Date: 2024-03-21 10:00+0000\n"
+"POT-Creation-Date: 2024-03-26 14:49+0100\n"
+"PO-Revision-Date: 2024-03-28 09:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -1268,12 +1268,13 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:40
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:36
-#: ../manage/scheduler.rst:88 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:106 ../manage/webhook/add.rst:116
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:15
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:14
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:17
 #: ../system/objects.rst:162 ../system/objects.rst:244
+#: ../system/variables.rst:105
 msgid "Note"
 msgstr "Напомена"
 
@@ -1906,46 +1907,23 @@ msgstr ""
 
 #: ../channels/email/filters.rst:40
 msgid ""
-"The following attributes can only be defined by the filter when a ticket is "
-"**created**:"
+"Please note that the ticket actions are separated in \"Ticket creation\" and "
+"\"Ticket update\". Make sure to use the appropriate variant for your "
+"scenario."
 msgstr ""
-"Следеће атрибути могу бити дефинисани филтером само при **отварању** тикета:"
+"Обратите пажњу да су радње тикета подељене на „отварање тикета” и "
+"„освежавање тикета”. Уверите се да користите одговарајућу врсту за ваше "
+"потребе."
 
 #: ../channels/email/filters.rst:43
-#: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:56
-msgid "Group"
-msgstr "Група"
-
-#: ../channels/email/filters.rst:44 ../manage/macros/learn-by-example.rst:0
-msgid "State"
-msgstr "Стање"
-
-#: ../channels/email/filters.rst:45
-#: ../system/core-workflows/how-do-they-work.rst:181
-msgid "Priority"
-msgstr "Приоритет"
-
-#: ../channels/email/filters.rst:46 ../manage/macros/learn-by-example.rst:0
-msgid "Owner"
-msgstr "Власник"
-
-#: ../channels/email/filters.rst:48
-msgid ""
-"Zammad will **not overwrite** the value of these objects when a ticket is "
-"updated."
-msgstr ""
-"Zammad **неће преписати** вредност ових атрибута када се тикет ажурира."
-
-#: ../channels/email/filters.rst:51
 msgid "Here are some examples of what is possible with filters:"
 msgstr "Ево неколико примера шта је све могуће са филтерима:"
 
-#: ../channels/email/filters.rst:58
+#: ../channels/email/filters.rst:50
 msgid "Automatically dispatch tickets into certain groups:"
 msgstr "Аутоматски убацити тикете у одређене групе:"
 
-#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:46
 msgid ""
 "For example, tickets from ``amazon.com`` could automatically be dispatched "
 "to the Purchasing group."
@@ -1961,7 +1939,7 @@ msgstr "Од: *задовољава регуларни израз:* ``(\\.|@)ama
 msgid "Group: Purchasing"
 msgstr "Група: Куповина"
 
-#: ../channels/email/filters.rst:62
+#: ../channels/email/filters.rst:54
 msgid ""
 "Automatically dispatch tickets to responsible staff based on organization "
 "name:"
@@ -1977,7 +1955,7 @@ msgstr "Организација: *почиње са једним од:* ``A`` `
 msgid "Owner: Emily Adams"
 msgstr "Власник: Emily Adams"
 
-#: ../channels/email/filters.rst:66
+#: ../channels/email/filters.rst:58
 msgid "Automatically increase the priority of tickets from a VIP customer:"
 msgstr "Аутоматски увећајте приоритет тикета од VIP клијента:"
 
@@ -1989,7 +1967,7 @@ msgstr "Од: *садржи:* ``ourvipcustomer@example.com``"
 msgid "Priority: 3 high"
 msgstr "Приоритет: 3 висок"
 
-#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:63
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin):"
@@ -2009,17 +1987,7 @@ msgstr "Ознаке: додај: ``spam``"
 msgid "State: closed"
 msgstr "Стање: затворено"
 
-#: ../channels/email/filters.rst:75
-msgid ""
-"Note that the State attribute only has an effect when the matching email "
-"results in a new ticket. It will add the tag though if it is missing, even "
-"if the mail is an update to an existing ticket."
-msgstr ""
-"Имајте на уму да атрибут стања има ефекта само када одговарајућа порука "
-"резултира новим тикетом. Додаће ознаку ако недостаје, чак и ако је порука "
-"наставак постојећег тикета."
-
-#: ../channels/email/filters.rst:79
+#: ../channels/email/filters.rst:65
 msgid ""
 "If a filter is no longer needed, it can either be temporarily set inactive "
 "or deleted directly."
@@ -2909,7 +2877,7 @@ msgstr "Zammad долази са одређеним подешавањима з�
 
 #: ../channels/form.rst:37 ../manage/groups/settings.rst:115
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:91 ../manage/templates.rst:43
+#: ../manage/scheduler.rst:109 ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:123 ../system/objects.rst:169
 #: ../system/objects.rst:246
 msgid "Active"
@@ -3329,7 +3297,7 @@ msgid "Default value"
 msgstr "Подразумевана вредност"
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
-#: ../system/subscription/billing.rst:53
+#: ../system/subscription/billing.rst:53 ../system/variables.rst:104
 msgid "Description"
 msgstr "Опис"
 
@@ -7530,8 +7498,8 @@ msgid ""
 msgstr ""
 "Zammad подржава 10 нивоа хијерархије за групе на PostgreSQL системима. "
 "Уколико користите MySQL базу података, ограничење је 6 ивоа. У случају да "
-"још увек користите MySQL, свакако размотрите миграцију ваше базе података ("
-"погледајте docs:`овде </appendix/migrate-to-postgresql.html>` за више "
+"још увек користите MySQL, свакако размотрите миграцију ваше базе података "
+"(погледајте docs:`овде </appendix/migrate-to-postgresql.html>` за више "
 "информација). Почев од Zammad верзије 7, MySQL више неће бити подржан."
 
 #: ../manage/groups/settings.rst:37
@@ -8385,6 +8353,10 @@ msgstr ""
 "Ако имате посла са пуно нежељене поште, можете да подесите макро који "
 "примењује следеће измене на тикет:"
 
+#: ../manage/macros/learn-by-example.rst:0
+msgid "State"
+msgstr "Стање"
+
 #: ../manage/macros/learn-by-example.rst:13
 msgid "closed"
 msgstr "затворено"
@@ -8396,6 +8368,10 @@ msgstr "Ознаке"
 #: ../manage/macros/learn-by-example.rst:14
 msgid "add ``spam``"
 msgstr "додај ``spam``"
+
+#: ../manage/macros/learn-by-example.rst:0
+msgid "Owner"
+msgstr "Власник"
 
 #: ../manage/macros/learn-by-example.rst:15
 #: ../manage/macros/learn-by-example.rst:33
@@ -11011,7 +10987,43 @@ msgstr ""
 "Подразумевано, радње које покрећу планери неће слати обавештења. Ово "
 "понашање можете преиначити овде тако што ћете овај атрибут поставити на *не*."
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:92 ../settings/branding.rst:27
+msgid "Locale"
+msgstr "Језик"
+
+#: ../manage/scheduler.rst:86 ../manage/scheduler.rst:95
+msgid ""
+"This can be activated with the switch labeled \"Localization of execution "
+"changes\"."
+msgstr ""
+"Ово можете укључити дугметом под називом „Локализација при извршавању радње”."
+
+#: ../manage/scheduler.rst:89
+msgid ""
+"Set a desired language, in which the output of variables is translated into "
+"by using the ``t`` function. For more information, please have a look at the "
+"explanation in the :ref:`variables section <variable_localization>`."
+msgstr ""
+"Подесите жељени језик који ће се користити приликом превода путем ``t``"
+"функције. За више информација, погледајте објашњење у :ref:`одељку о "
+"променљивама <variable_localization>`."
+
+#: ../manage/scheduler.rst:101 ../settings/branding.rst:44
+msgid "Timezone"
+msgstr "Временска зона"
+
+#: ../manage/scheduler.rst:98
+msgid ""
+"Similar as for the \"Locale\" setting, you can define a time zone, which is "
+"applied to the output of time stamp variables. For more information, please "
+"have a look at the explanation in the :ref:`variables section "
+"<variable_localization>`."
+msgstr ""
+"Слично подешавању „Језик”, можете одредити временску зону која ће бити "
+"коришћена за променљиве временских вредности. За више информација, "
+"погледајте објашњење у :ref:`одељку о променљивама <variable_localization>`."
+
+#: ../manage/scheduler.rst:104
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
@@ -11021,15 +11033,15 @@ msgstr ""
 "само другим администраторима када уређују планер. То *није* начин додавања "
 "напомена у објекте."
 
-#: ../manage/scheduler.rst:91
+#: ../manage/scheduler.rst:109
 msgid "With this setting you can enable/disable the scheduler."
 msgstr "Овим подешавањем можете укључити/искључити планер."
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:111
 msgid "The scheduler shown in the screenshot would have the following effects:"
 msgstr "Планер приказан на снимку екрана би имао следеће ефекте:"
 
-#: ../manage/scheduler.rst:95
+#: ../manage/scheduler.rst:113
 msgid ""
 "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all "
 "tickets which:"
@@ -11037,31 +11049,31 @@ msgstr ""
 "Сваког радног дана (од понедељка до петка) у 9:00 (*Европа / Берлин UTC+1*), "
 "све тикете који:"
 
-#: ../manage/scheduler.rst:98
+#: ../manage/scheduler.rst:116
 msgid "are not closed or merged, and"
 msgstr "нису затворени или спојени, и"
 
-#: ../manage/scheduler.rst:99
+#: ../manage/scheduler.rst:117
 msgid "are assigned to the Sales group, and"
 msgstr "су додељени групи продаје, и"
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:118
 msgid "whose escalation was 30 minutes ago"
 msgstr "чија је ескалација била пре 30 минута"
 
-#: ../manage/scheduler.rst:102
+#: ../manage/scheduler.rst:120
 msgid "will be:"
 msgstr "биће:"
 
-#: ../manage/scheduler.rst:104
+#: ../manage/scheduler.rst:122
 msgid "assigned to Emma, and"
 msgstr "додељен Еми, и"
 
-#: ../manage/scheduler.rst:105
+#: ../manage/scheduler.rst:123
 msgid "have their priority changed to 3 high."
 msgstr "имају промењен приоритет на 3 висок."
 
-#: ../manage/scheduler.rst:107
+#: ../manage/scheduler.rst:125
 msgid ""
 "As a supervisor in the Sales group, this enables Emma to intercept and "
 "process escalated tickets."
@@ -11069,7 +11081,7 @@ msgstr ""
 "Као супервизор у продајној групи, ово омогућава Еми да пресретне и обради "
 "ескалиране тикете."
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:128
 msgid ""
 "Emma will not receive notifications when the scheduler assigns her these "
 "tickets."
@@ -12575,7 +12587,7 @@ msgid "Screenshot of “Triggers” page in admin panel"
 msgstr "Снимак екрана странице „Окидачи“ у административном панелу"
 
 #: ../manage/trigger/how-do-they-work.rst:2
-msgid "How do trigger work"
+msgid "How Do Trigger Work"
 msgstr "Како окидачи уствари раде"
 
 #: ../manage/trigger/how-do-they-work.rst:4
@@ -12681,8 +12693,7 @@ msgstr ""
 "**1 низак**."
 
 #: ../manage/trigger/how-do-they-work.rst:49
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
-msgid "Time event"
+msgid "Time Event"
 msgstr "Временски догађај"
 
 #: ../manage/trigger/how-do-they-work.rst:51
@@ -12820,6 +12831,48 @@ msgstr ""
 "Ово вам омогућава да својим оператерима помогнете са одређеним информацијама "
 "ако је потребно (нпр. аутоматске промене примењеног окидача на тикет)."
 
+#: ../manage/trigger/how-do-they-work.rst:115
+msgid "Localization of Execution Changes"
+msgstr "Локализација при извршавању радње"
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid ""
+"To translate the output of variables, use the ``t`` function. To format date "
+"and time stamps, use the ``dt`` function."
+msgstr ""
+"За превод вредности променљивих, користите функцију ``t`. За форматирање "
+"вредности датума и времена, користите функцију ``dt``."
+
+#: ../manage/trigger/how-do-they-work.rst:120
+msgid ""
+"The ``t`` function translates the output of variables according to the "
+"selected \"Locale\". The ``dt`` function transforms a date and time stamp "
+"according to the selected \"Timezone\"."
+msgstr ""
+"Функција ``t`` преводи вредност променљиве према одабраном „Језику”. "
+"Функција ``dt`` трансформише вредност датума и времена према одабраној „"
+"Временској зони”."
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr "Снимак екрана који приказује одељак локализација дијалога окидача"
+
+#: ../manage/trigger/how-do-they-work.rst:130
+msgid ""
+"Best practice is to create single separated localized triggers for each "
+"language/timezone and execute them based on user or organization attributes."
+msgstr ""
+"Најбоља пракса је да се додају појединачни окидачи за сваки језик/временску "
+"зону и да се извршавају на основу атрибута корисника или организације."
+
+#: ../manage/trigger/how-do-they-work.rst:133
+msgid ""
+"For more information and examples, please have a look at the explanation in "
+"the :ref:`variables section <variable_localization>`."
+msgstr ""
+"За више информација и примере, погледајте објешњење у :ref:`одељку о "
+"променљивама <variable_localization>`."
+
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
 msgstr "Примери окидача"
@@ -12844,7 +12897,7 @@ msgstr ""
 msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
 msgstr "Сваки пут када Jacob Smith отвори тикет, додели је Sales групи:"
 
-#: ../manage/trigger/learn-by-example.rst:14
+#: ../manage/trigger/learn-by-example.rst:16
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
@@ -12854,17 +12907,17 @@ msgstr ""
 "„order“ у теми, доделите јој га и уверите се да је постављен на високи "
 "приоритет:"
 
-#: ../manage/trigger/learn-by-example.rst:20
+#: ../manage/trigger/learn-by-example.rst:24
 msgid "Send an auto-reply email to *any customer* who responds to a ticket:"
 msgstr ""
 "Пошаљите имејл са аутоматским одговором *сваком клијенту* који одговори на "
 "тикет:"
 
-#: ../manage/trigger/learn-by-example.rst:24
+#: ../manage/trigger/learn-by-example.rst:30
 msgid "📨 **Not all automated messages come from triggers!**"
 msgstr "📨 **Не долазе све аутоматске поруке од окидача!**"
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger/learn-by-example.rst:32
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
@@ -14107,6 +14160,10 @@ msgid ""
 "conditions."
 msgstr ""
 "Ово ће проверити да ли тренутно стање тикета одговара подешеним условима."
+
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
+msgid "Time event"
+msgstr "Временски догађај"
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:35
 msgid ""
@@ -16931,10 +16988,6 @@ msgstr ""
 "Обавезно притисните дугме „Пошаљи“ након што отпремите логотип. У супротном, "
 "ваша промена неће бити сачувана."
 
-#: ../settings/branding.rst:27
-msgid "Locale"
-msgstr "Језик"
-
 #: ../settings/branding.rst:22
 msgid ""
 "Allows to set the default language of the Zammad instance. The here defined "
@@ -16955,10 +17008,6 @@ msgstr "CSV излаз (извештавање, обрачунато време)
 #: ../settings/branding.rst:27 ../settings/branding.rst:39
 msgid "notifications"
 msgstr "обавештења"
-
-#: ../settings/branding.rst:44
-msgid "Timezone"
-msgstr "Временска зона"
 
 #: ../settings/branding.rst:30
 msgid "Define the timezone of your Zammad installation."
@@ -19587,13 +19636,13 @@ msgstr "База података"
 
 #: ../settings/system/storage.rst:17
 msgid ""
-"This is the default storage mechanism. The attachments are stored directly "
-"in the database. If your Zammad instance grows, we recommend one of the "
-"other mechanisms to maintain performance."
+"This is the default storage method. The attachments are stored directly in "
+"the database. If your Zammad instance grows, we recommend one of the other "
+"methods to maintain performance."
 msgstr ""
-"Ово је подразумевани механизам складиштења. Прилоги се чувају директно у "
-"бази података. Ако ваша Zammad инстанца расте, препоручујемо прелазак на "
-"други механизам да бисте очували перформансе."
+"Ово је подразумевани метод складиштења. Прилоги се чувају директно у бази "
+"података. Ако ваша Zammad инстанца расте, препоручујемо прелазак на други "
+"метод да бисте очували перформансе."
 
 #: ../settings/system/storage.rst:38
 msgid "Filesystem"
@@ -19601,12 +19650,12 @@ msgstr "Систем датотека"
 
 #: ../settings/system/storage.rst:22
 msgid ""
-"This storage mechanism is recommended for all Zammad instances, especially "
-"for those with a higher load. If you choose filesystem, your files are "
-"written to ``/opt/zammad/storage/``."
+"This storage method is recommended for all Zammad instances, especially for "
+"those with a higher load. If you choose filesystem, your files are written "
+"to ``/opt/zammad/storage/``."
 msgstr ""
-"Овај систем складиштења је препоручен за све Zammad инстанце, поготову за "
-"оне са већим оптерећењем. Ако сте изабрали систем датотека, ваше датотеке се "
+"Овај метод складиштења је препоручен за све Zammad инстанце, поготову за оне "
+"са већим оптерећењем. Ако сте изабрали метод датотека, ваше датотеке се "
 "снимају у ``/opt/zammad/storage/``."
 
 #: ../settings/system/storage.rst:26
@@ -19720,15 +19769,15 @@ msgstr ""
 
 #: ../settings/system/storage.rst:66
 msgid ""
-"Set the \"Storage Mechanism\" in Zammad to ``Simple Storage (S3)`` in "
-"Settings > System > Storage and click on \"Submit\". After that, Zammad "
-"checks your configuration and the connection to the service and will raise "
-"an error message if something is wrong."
+"Set the \"Storage Method\" in Zammad to ``Simple Storage (S3)`` in Settings "
+"> System > Storage and click on \"Submit\". After that, Zammad checks your "
+"configuration and the connection to the service and will raise an error "
+"message if something is wrong."
 msgstr ""
-"Подесите „Механизам за складиштење” у Zammad-у на ``Simple Storage (S3)`` "
-"преко Подешавања > Систем > Складиште и кликните на „Пошаљи”. Након тога, "
-"Zammad ће проверити вашу конфигурацију успостављајући конекцију са сервисом "
-"и приказаће поруку грешке ако нешто пође наопако."
+"Подесите „Метод складиштењa” у Zammad-у на ``Simple Storage (S3)`` преко "
+"Подешавања > Систем > Складиште и кликните на „Пошаљи”. Након тога, Zammad "
+"ће проверити вашу конфигурацију успостављајући конекцију са сервисом и "
+"приказаће поруку грешке ако нешто пође наопако."
 
 #: ../settings/system/storage.rst:72
 msgid "A very simple storage configuration could look like this:"
@@ -19736,10 +19785,10 @@ msgstr "Врло једноставна конфигурација склади�
 
 #: ../settings/system/storage.rst:85
 msgid ""
-"Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4), "
+"Before setting the storage method to ``Simple Storage (S3)`` (step 4), "
 "please make sure to have a working setup."
 msgstr ""
-"Пре постављања механизма складиштења на ``Simple Storage (S3)`` (корак 4), "
+"Пре постављања метода складиштења на ``Simple Storage (S3)`` (корак 4), "
 "молимо проверите да ли ваш сервис функционише."
 
 #: ../settings/system/storage.rst:88
@@ -20777,6 +20826,10 @@ msgstr ""
 "Ако је подешено на ``да``, накнадни радни токови неће бити процењени након "
 "овога."
 
+#: ../system/core-workflows/how-do-they-work.rst:181
+msgid "Priority"
+msgstr "Приоритет"
+
 #: ../system/core-workflows/how-do-they-work.rst:183
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
@@ -21411,6 +21464,11 @@ msgstr "Референца администраторског панела"
 #: ../system/integrations/checkmk/admin-panel-reference.rst:None
 msgid "Screenshot of Checkmk settings overview"
 msgstr "Снимак екрана изгледа Checkmk подешавања"
+
+#: ../system/integrations/checkmk/admin-panel-reference.rst:15
+#: ../system/objects/permissions.rst:56
+msgid "Group"
+msgstr "Група"
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:12
 msgid ""
@@ -28579,7 +28637,7 @@ msgid "Variable Categories"
 msgstr "Категорије променљивих"
 
 #: ../system/variables.rst:31
-msgid "Wait, what about custom objects?"
+msgid "Wait, What About Custom Objects?"
 msgstr "Чекај, а шта са прилагођеним објектима?"
 
 #: ../system/variables.rst:33
@@ -28645,11 +28703,11 @@ msgstr ""
 "вредности, само продужите вашу променљиву са ``.value``. Ово ће резултовати "
 "у ``#{ticket.select.value}``."
 
-#: ../system/variables.rst:58
-msgid "Using translated variables"
+#: ../system/variables.rst:60
+msgid "Using Translated Variables"
 msgstr "Коришћење преведених променљивих"
 
-#: ../system/variables.rst:60
+#: ../system/variables.rst:62
 msgid ""
 "If you want to use a translated variable in triggers or schedulers, you can "
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
@@ -28663,7 +28721,7 @@ msgstr ""
 "базиран на основу системског језика Zammad-а који можете подесити у панелу "
 "администратора под :doc:`брендингом </settings/branding>`."
 
-#: ../system/variables.rst:66
+#: ../system/variables.rst:68
 msgid ""
 "A possible use-case: you want to send your customers updates on tickets via "
 "trigger or scheduler which should include the state of the ticket. Using the "
@@ -28675,6 +28733,198 @@ msgstr ""
 "подразумеване променљиве `#{ticket.state.name}`` (без функције превода "
 "``t()``) ће резултовати у вредности назива стања на оригиналном (енглеском) "
 "језику."
+
+#: ../system/variables.rst:74
+msgid "Date and Time Formatting"
+msgstr "Форматирање датума и времена"
+
+#: ../system/variables.rst:76
+msgid ""
+"The ``dt`` method is used for transforming date/time values into any format. "
+"You can define a date and time format which is different from your Zammad "
+"default (see :doc:`branding </settings/branding>`). To use it, put the "
+"``dt`` method in front of your variable as you can see below."
+msgstr ""
+"Метод ``dt`` се користи за трансформацију вредности датума/времена у било "
+"који формат. Можете одредити формат датума и времена који се разликује од "
+"подразумеваног у Zammad-у (погледајте :doc:`брендинг </settings/branding>`). "
+"Приликом коришжења, убаците метод ``dt`` испред ваше варијабле по узору на "
+"примере испод."
+
+#: ../system/variables.rst:81
+msgid ""
+"The syntax is as follows: ``#{dt(your.variable, \"parameters and text "
+"string\", \"timezone\")}``"
+msgstr ""
+"Синтакса је следећа: ``#{dt(your.variable, \"parameters and text string\", "
+"\"timezone\")}``"
+
+#: ../system/variables.rst:84
+msgid ""
+"Please note that you can use any combination of parameters and free text "
+"strings or characters. Only the parameters are replaced by the variable you "
+"want to output, see the following example. The date/time output is based on "
+"the provided timezone. If using a specific time zone, it is recommended to "
+"mention it manually as a text string at the end of the variable parameters "
+"to avoid confusion."
+msgstr ""
+"Обратите пажњу да можете користити било коју комбинацију параметара и низова "
+"текста или карактера. Биће замењени само параметри променљиве коју желите на "
+"излазу, погледајте следећи пример. Вредност датума и времена се заснива на "
+"датој временској зони. Уколико користите одређену временску зону, "
+"препоручујемо да је напоменете као додатни текст на крају параметара "
+"променљиве да бисте избегли збуњивање."
+
+#: ../system/variables.rst:91
+msgid "**Example variable:**"
+msgstr "**Пример променљиве:**"
+
+#: ../system/variables.rst:92
+msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
+msgstr ""
+"``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
+
+#: ../system/variables.rst:94
+msgid "**Example output:**"
+msgstr "**Пример вредности:**"
+
+#: ../system/variables.rst:95
+msgid "Monday, 2024-03-18 15:31"
+msgstr "Monday, 2024-03-18 15:31"
+
+#: ../system/variables.rst:97
+msgid "In the following table you can find some useful parameters:"
+msgstr "У следећој табели можете пронаћи неке корисне параметре:"
+
+#: ../system/variables.rst:103
+msgid "Parameter"
+msgstr "Параметар"
+
+#: ../system/variables.rst:106
+msgid "``%Y``"
+msgstr "``%Y``"
+
+#: ../system/variables.rst:107
+msgid "Year with 4 digits"
+msgstr "Година са 4 цифре"
+
+#: ../system/variables.rst:108
+msgid "Use ``%y`` for year with 2 digits"
+msgstr "Користите ``%y`` за годину са 2 цифре"
+
+#: ../system/variables.rst:109
+msgid "``%m``"
+msgstr "``%m``"
+
+#: ../system/variables.rst:110
+msgid "Month of year (as number with zero-padding)"
+msgstr "Месец године (као број са допуном нула)"
+
+#: ../system/variables.rst:111
+msgid "Use ``%-m`` for month without zero-padding"
+msgstr "Користите ``%-m`` за месец без допуне нула"
+
+#: ../system/variables.rst:112
+msgid "``%d``"
+msgstr "``%d``"
+
+#: ../system/variables.rst:113
+msgid "Day of month (as number with zero-padding)"
+msgstr "Дан месеца (као број са допуном нула)"
+
+#: ../system/variables.rst:114
+msgid "Use ``%e`` for day without zero-padding"
+msgstr "Користите ``%e`` за дан без допуне нула"
+
+#: ../system/variables.rst:115
+msgid "``%H``"
+msgstr "``%H``"
+
+#: ../system/variables.rst:116
+msgid "Hour of day in 24h notation with zero-padding"
+msgstr "Час дана у 24-часовном формату са допуном нула"
+
+#: ../system/variables.rst:117
+msgid "Use ``%k`` for hour without zero-padding"
+msgstr "Користите ``%k`` за час без допуне нула"
+
+#: ../system/variables.rst:118
+msgid "``%I``"
+msgstr "``%I``"
+
+#: ../system/variables.rst:119
+msgid "Hour of day in 12h notation with zero-padding"
+msgstr "Час дана у 12-часовном формату са допуном нула"
+
+#: ../system/variables.rst:120
+msgid ""
+"Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian "
+"indicator"
+msgstr ""
+"Користите ``%l`` за час без допуне нула и ``%p`` / ``%P`` за индикатор "
+"меридијана"
+
+#: ../system/variables.rst:121
+msgid "``%M``"
+msgstr "``%M``"
+
+#: ../system/variables.rst:122
+msgid "Minute of hour"
+msgstr "Минут часа"
+
+#: ../system/variables.rst:124
+msgid "``%S``"
+msgstr "``%S``"
+
+#: ../system/variables.rst:125
+msgid "Second of Minute"
+msgstr "Секунда минута"
+
+#: ../system/variables.rst:127
+msgid "``%A``"
+msgstr "``%A``"
+
+#: ../system/variables.rst:128
+msgid "Weekday name"
+msgstr "Назив дана у недељи"
+
+#: ../system/variables.rst:129
+msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
+msgstr "Користите ``%a`` за скраћеницу или ``%^A`` за велика слова"
+
+#: ../system/variables.rst:130
+msgid "``%B``"
+msgstr "``%B``"
+
+#: ../system/variables.rst:131
+msgid "Month name"
+msgstr "Назив месеца"
+
+#: ../system/variables.rst:132
+msgid "Use ``%b`` for abbreviated name"
+msgstr "Користите ``%b`` за скраћеницу"
+
+#: ../system/variables.rst:133
+msgid "``%U``"
+msgstr "``%U``"
+
+#: ../system/variables.rst:134
+msgid "Week number of current year"
+msgstr "Број недеље у текућој години"
+
+#: ../system/variables.rst:135
+msgid "Use ``%W`` for a different calculation method"
+msgstr "Користите ``%W`` за другачији обрачун"
+
+#: ../system/variables.rst:138
+msgid ""
+"For those who want to go further: We support the known format directives for "
+"the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more "
+"information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
+msgstr ""
+"За оне који желе више: подржани су све директиве Ruby метода ``strftime`` из "
+"DateTime`` класе. За више информације, погледајте `овде <https://apidock.com/"
+"ruby/DateTime/strftime>`_."
 
 #: ../system/variables/article.rst:2
 msgid "Articles"
@@ -30467,6 +30717,33 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid "Use ``%l`` / ``%I`` for hour in 12h notation with ``%p`` or  ``%P``"
+#~ msgstr ""
+#~ "Користите ``%l`` / ``%I`` за час у 12-часовном формату са ``%p`` или "
+#~ "``%P``"
+
+#~ msgid ""
+#~ "The following attributes can only be defined by the filter when a ticket "
+#~ "is **created**:"
+#~ msgstr ""
+#~ "Следеће атрибути могу бити дефинисани филтером само при **отварању** "
+#~ "тикета:"
+
+#~ msgid ""
+#~ "Zammad will **not overwrite** the value of these objects when a ticket is "
+#~ "updated."
+#~ msgstr ""
+#~ "Zammad **неће преписати** вредност ових атрибута када се тикет ажурира."
+
+#~ msgid ""
+#~ "Note that the State attribute only has an effect when the matching email "
+#~ "results in a new ticket. It will add the tag though if it is missing, "
+#~ "even if the mail is an update to an existing ticket."
+#~ msgstr ""
+#~ "Имајте на уму да атрибут стања има ефекта само када одговарајућа порука "
+#~ "резултира новим тикетом. Додаће ознаку ако недостаје, чак и ако је порука "
+#~ "наставак постојећег тикета."
 
 #~ msgid ""
 #~ "You can no longer synchronize these translations upstream like prior "
