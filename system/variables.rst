@@ -91,6 +91,10 @@ confusion.
 | **Example variable:**
 | ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M", "Europe/Berlin")}``
 
+.. hint:: If you want to use our example, make sure to paste the
+  string above without formatting (``CTRL+Shift+v``), otherwise it
+  won't work.
+
 | **Example output:**
 | Monday, 2024-03-18 15:31
 
