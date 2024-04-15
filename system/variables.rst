@@ -63,7 +63,8 @@ If you want to use a translated variable in triggers or
 schedulers, you can extend the placeholder like this:
 ``#{t(ticket.state.name)}``. The ``t`` tells Zammad to search for fitting
 translated strings. The used output language is based on the system language of
-Zammad which you can set in the admin panel under :doc:`/settings/branding`.
+Zammad which you can set in the admin panel under :doc:`/settings/branding` or
+based on the selected locale in the trigger/scheduler edit dialog.
 
 A possible use-case: you want to send your customers updates on tickets
 via trigger or scheduler which should include the state of the ticket. Using the
@@ -76,7 +77,10 @@ Date and Time Formatting
 The ``dt`` method is used for transforming date/time values into any
 format. You can define a date and time format which is different from your
 Zammad default (see :doc:`branding </settings/branding>`). To use it, put the
-``dt`` method in front of your variable as you can see below.
+``dt`` method in front of your variable as you can see below. For triggers and
+schedulers the usage is optional; you can use the
+:ref:`localization via UI <trigger-localization>` except you want to customize
+it further.
 
 The syntax is as follows:
 ``#{dt(your.variable, "parameters and text string", "timezone")}``

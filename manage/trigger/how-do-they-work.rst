@@ -111,16 +111,18 @@ A trigger can do the following things once its conditions have been met:
    This allows you to help your agents with specific information if needed.
    (e.g. automated changes a trigger applied to the ticket)
 
+.. _trigger-localization:
+
 Localization of Execution Changes
 ---------------------------------
 
-To translate the output of variables, use the ``t`` function. To format date
-and time stamps, use the ``dt`` function.
+To translate the output of variables, use the ``t`` function and select a
+"Locale" after activating the toggle.
 
-The ``t`` function translates the output of variables according to the selected
-"Locale".
-The ``dt`` function transforms a date and time stamp according to the selected
-"Timezone".
+To format date and time stamps, use the ``dt`` function. The ``dt`` function
+transforms a date and time stamp according to the selected
+"Timezone". If you just want to output time stamps in a different time zone,
+it's enough to just use the variable and select a time zone.
 
 .. figure:: /images/manage/trigger/notification-localization.png
    :align: center
