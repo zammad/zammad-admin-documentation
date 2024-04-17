@@ -379,7 +379,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:76
 #: ../channels/email/accounts/secondary-addresses.rst:35
 #: ../channels/email/index.rst:2 ../channels/form.rst:20
-#: ../manage/groups/settings.rst:76 ../system/objects/types.rst:154
+#: ../manage/groups/settings.rst:82 ../system/objects/types.rst:154
 msgid "Email"
 msgstr ""
 
@@ -455,7 +455,7 @@ msgstr ""
 msgid "Email Inbound"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:114
+#: ../channels/email/accounts/account-setup.rst:114 ../system/objects.rst:154
 #: ../system/objects/types.rst:157
 msgid "Type"
 msgstr ""
@@ -1061,16 +1061,18 @@ msgstr ""
 
 #: ../channels/email/accounts/secondary-addresses.rst:41
 #: ../channels/email/accounts/secondary-addresses.rst:42
-#: ../manage/groups/settings.rst:93 ../manage/macros/how-do-they-work.rst:0
+#: ../manage/groups/settings.rst:99 ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0
 #: ../manage/roles/admin-permissions.rst:40
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:36
-#: ../manage/scheduler.rst:88 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:106 ../manage/webhook/add.rst:116
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:15
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:14
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:17
+#: ../system/objects.rst:162 ../system/objects.rst:244
+#: ../system/variables.rst:109
 msgid "Note"
 msgstr ""
 
@@ -1606,44 +1608,20 @@ msgstr ""
 
 #: ../channels/email/filters.rst:40
 msgid ""
-"The following attributes can only be defined by the filter when a ticket is "
-"**created**:"
+"Please note that the ticket actions are separated in \"Ticket creation\" and "
+"\"Ticket update\". Make sure to use the appropriate variant for your "
+"scenario."
 msgstr ""
 
 #: ../channels/email/filters.rst:43
-#: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:56
-msgid "Group"
-msgstr ""
-
-#: ../channels/email/filters.rst:44 ../manage/macros/learn-by-example.rst:0
-msgid "State"
-msgstr ""
-
-#: ../channels/email/filters.rst:45
-#: ../system/core-workflows/how-do-they-work.rst:181
-msgid "Priority"
-msgstr ""
-
-#: ../channels/email/filters.rst:46 ../manage/macros/learn-by-example.rst:0
-msgid "Owner"
-msgstr ""
-
-#: ../channels/email/filters.rst:48
-msgid ""
-"Zammad will **not overwrite** the value of these objects when a ticket is "
-"updated."
-msgstr ""
-
-#: ../channels/email/filters.rst:51
 msgid "Here are some examples of what is possible with filters:"
 msgstr ""
 
-#: ../channels/email/filters.rst:58
+#: ../channels/email/filters.rst:50
 msgid "Automatically dispatch tickets into certain groups:"
 msgstr ""
 
-#: ../channels/email/filters.rst:54
+#: ../channels/email/filters.rst:46
 msgid ""
 "For example, tickets from ``amazon.com`` could automatically be dispatched "
 "to the Purchasing group."
@@ -1657,7 +1635,7 @@ msgstr ""
 msgid "Group: Purchasing"
 msgstr ""
 
-#: ../channels/email/filters.rst:62
+#: ../channels/email/filters.rst:54
 msgid ""
 "Automatically dispatch tickets to responsible staff based on organization "
 "name:"
@@ -1671,7 +1649,7 @@ msgstr ""
 msgid "Owner: Emily Adams"
 msgstr ""
 
-#: ../channels/email/filters.rst:66
+#: ../channels/email/filters.rst:58
 msgid "Automatically increase the priority of tickets from a VIP customer:"
 msgstr ""
 
@@ -1683,7 +1661,7 @@ msgstr ""
 msgid "Priority: 3 high"
 msgstr ""
 
-#: ../channels/email/filters.rst:77
+#: ../channels/email/filters.rst:63
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin):"
@@ -1701,14 +1679,7 @@ msgstr ""
 msgid "State: closed"
 msgstr ""
 
-#: ../channels/email/filters.rst:75
-msgid ""
-"Note that the State attribute only has an effect when the matching email "
-"results in a new ticket. It will add the tag though if it is missing, even "
-"if the mail is an update to an existing ticket."
-msgstr ""
-
-#: ../channels/email/filters.rst:79
+#: ../channels/email/filters.rst:65
 msgid ""
 "If a filter is no longer needed, it can either be temporarily set inactive "
 "or deleted directly."
@@ -1915,7 +1886,7 @@ msgstr ""
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:54
+#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:55
 #: ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
@@ -2384,8 +2355,8 @@ msgstr ""
 msgid "Zammad form management page"
 msgstr ""
 
-#: ../channels/form.rst:13 ../manage/trigger/limitations.rst:2
-#: ../misc/object-conditions/basics.rst:12
+#: ../channels/form.rst:13 ../channels/whatsapp/index.rst:63
+#: ../manage/trigger/limitations.rst:2 ../misc/object-conditions/basics.rst:12
 #: ../misc/object-conditions/index.rst:7
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
@@ -2406,7 +2377,8 @@ msgstr ""
 
 #: ../channels/form.rst:19 ../manage/groups/settings.rst:14
 #: ../manage/scheduler.rst:39 ../manage/slas/how-do-they-work.rst:26
-#: ../manage/templates.rst:33
+#: ../manage/templates.rst:33 ../system/objects.rst:130
+#: ../system/objects.rst:232
 msgid "Name"
 msgstr ""
 
@@ -2431,10 +2403,11 @@ msgstr ""
 msgid "Zammad comes with certain settings for forms."
 msgstr ""
 
-#: ../channels/form.rst:37 ../manage/groups/settings.rst:109
+#: ../channels/form.rst:37 ../manage/groups/settings.rst:115
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:91 ../manage/templates.rst:43
-#: ../manage/webhook/add.rst:123
+#: ../manage/scheduler.rst:109 ../manage/templates.rst:43
+#: ../manage/webhook/add.rst:123 ../system/objects.rst:169
+#: ../system/objects.rst:246
 msgid "Active"
 msgstr ""
 
@@ -2778,7 +2751,7 @@ msgid "Default value"
 msgstr ""
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
-#: ../system/subscription/billing.rst:53
+#: ../system/subscription/billing.rst:53 ../system/variables.rst:108
 msgid "Description"
 msgstr ""
 
@@ -5028,6 +5001,681 @@ msgstr ""
 msgid "Ticket zoom with tab behavior to choose for the user"
 msgstr ""
 
+#: ../channels/whatsapp/index.rst:2
+msgid "WhatsApp"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:9
+msgid ""
+"With the release of Zammad 6.3, you can now connect your Zammad with a "
+"WhatsApp Business account, allowing your customers to reach out to you "
+"through WhatsApp. 🎉"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:13
+msgid ""
+"If you already dived deep into this topic, you can head to the setup guide. "
+"If not, we strongly encourage you to read the prerequisites and limitations "
+"of this channel carefully and to follow our tutorial for preparing your "
+"setup."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:18
+msgid ""
+"We tried to keep it clear and created a separate sub-page for the necessary "
+"steps on Meta/WhatsApp side."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:22
+msgid ""
+"Please be aware that the usage of **WhatsApp Cloud API** is mandatory to "
+"connect WhatsApp to Zammad. You won't be able to connect to WhatsApp in "
+"Zammad if you just use the WhatsApp Business *App*. Have a look `here "
+"<https://developers.facebook.com/docs/whatsapp/cloud-api>`_ for further "
+"information about the Cloud API."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:29
+msgid ""
+"There may be additional costs for you from Meta/WhatsApp side. 1000 service "
+"conversations per month are free. However, you should have a look at their "
+"`pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to "
+"be safe from surprises."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:34
+msgid ""
+"Be aware that if you go through the whole process, it is very time "
+"consuming. You should have some time to follow our preparation guide."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:40
+#: ../settings/security/ssl-certificates.rst:17
+#: ../system/integrations/smime/prerequisites.rst:2
+msgid "Prerequisites"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:42
+msgid ""
+"You can find a guide through the required steps on our :doc:`sub-page "
+"<preparation>`. It covers the following steps:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:46
+msgid "Create a Meta Business account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:47
+msgid "Create a Meta Developer account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:48
+msgid "Create a Meta Developer app"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:49
+msgid "Add WhatsApp Product to your app"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:50 ../channels/whatsapp/preparation.rst:97
+msgid "Create a System User"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:51
+msgid "Configure your WhatsApp Business platform"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:52
+msgid "Assign an unused Phone Number"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:54
+msgid "Additionally, you have to meet the following requirements:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:56
+msgid ""
+"Make sure your system is accessible from the internet because WhatsApp sends "
+"messages via webhooks to your system."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:58
+msgid ""
+"Make sure to have properly setup your :doc:`FQDN in Settings > System </"
+"settings/system/base>` (for the callback URL Meta will use to deliver new "
+"messages)."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:65
+msgid ""
+"There are a number of limitations for this channel. Read them carefully."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:79
+msgid "24-hour customer service window"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:68
+msgid ""
+"If a customer gets in touch with you via WhatsApp, a 24 hour window is "
+"opened. Within this time window you can freely answer the question of the "
+"customer. If the customer isn't replying, the service window will be "
+"automatically closed after 24 hours. You will not be able to communicate "
+"with this customer via WhatsApp due to their privacy policy and until a "
+"fresh reply is received from your customer after the service window expires."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:75
+msgid ""
+"In case the ticket cannot be closed yet and in order to facilitate an "
+"ongoing conversation, automatic reminders will be sent to the customer "
+"asking them to reply and keep the service window open. They are sent 23 "
+"hours after a message is received, and can be optionally deactivated in the "
+"channel configuration."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:85
+msgid "Customer-initiated communication only"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:82
+msgid ""
+"The WhatsApp channel only supports customer initiated communication. For "
+"business-initiated communication, it would be necessary to create a message "
+"template which has to be verified by Meta first which is currently not "
+"supported by Zammad."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:89
+msgid "Supported media types"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:88
+msgid ""
+"Currently text messages, documents, images, audio, videos and stickers are "
+"supported."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:93
+msgid "One attachment per article"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:92
+msgid ""
+"Currently, it's only possible to attach one file per outgoing message. It "
+"has to be one of the supported media types (see above)."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:106
+msgid "File size for attachments"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:96
+msgid ""
+"There are different maximum file sizes for different media types. To pick "
+"the most important ones:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:99
+msgid "audio: 16 MB"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:100
+msgid "document: 100 MB"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:101
+msgid "image: 5 MB"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:102
+msgid "video: 16 MB"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:103
+msgid "sticker: 100/500 KB (static/animated)"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:105
+msgid ""
+"To read more in detail, have a look at their `documentation of supported "
+"media types <https://developers.facebook.com/docs/whatsapp/cloud-api/"
+"reference/media#supported-media-types>`_."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:111
+msgid "One phone number per app"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:109
+msgid ""
+"If you want to use more than one phone number, you have to create a business "
+"app for each number you want to use and add it as a separate channel in "
+"Zammad."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:114 ../manage/knowledge-base.rst:36
+#: ../system/integrations/github.rst:16 ../system/integrations/gitlab.rst:16
+msgid "Setup"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:116
+msgid ""
+"First of all, make sure to match the prerequisites and to read the "
+"limitations above. If you did not setup your Meta Developer account, Meta "
+"Business account and Meta Developer app, first go to our :doc:`preparation "
+"page <preparation>` and come back here after finishing it."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:121
+msgid ""
+"Then head over to Zammad's admin panel to add the WhatsApp channel under "
+"\"Channels > WhatsApp > Add Account\" and follow the steps which are "
+"described below."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:126
+msgid "Step 1"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:128
+msgid "In the first step you have to provide credentials of your account/app:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Step 1 of adding a WhatsApp account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:141
+msgid "WhatsApp Business Account ID"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:136
+msgid ""
+"Enter your WhatsApp Business Account ID. You can find it in your app under "
+"\"WhatsApp > API Setup\":"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "App dashboard with business account ID"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:161
+msgid "Access Token"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:144
+msgid ""
+"Enter the access token from your app. You can create it in the `business "
+"settings <https://business.facebook.com/settings/system-users>`_ under "
+"\"System Users\". The system user has to have \"Admin access\". Be aware "
+"that you have to copy the token, it is just displayed once!"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Get your app token from the system user"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:154
+msgid ""
+"Choose your created app, an expiration date of the token (we recommend "
+"\"Never\") and the permissions ``whatsapp_business_management`` and "
+"``whatsapp_business_messaging``:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Create your app token"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:171
+msgid "App Secret"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:164
+msgid ""
+"Enter your app secret. You can find it in your `app dashboard <https://"
+"developers.facebook.com/apps/>`_ under \"App settings > Basic\" by clicking "
+"on the \"Show\" button:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "App dashboard with app secret"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:173
+msgid ""
+"After entering your data, click on **Next**. In the background, Zammad tries "
+"to fetch your assigned phone number, which you can select in the next step."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:177
+msgid "Step 2"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:179
+msgid "The second step is about your phone number and messaging details:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Step 2 of adding a WhatsApp account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:189
+msgid "Phone Number"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:187
+msgid ""
+"Choose the phone number you want to use for the channel. Zammad should have "
+"fetched the numbers which are assigned to your business app. If not, your "
+"credentials from step 1 may be wrong."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:193
+msgid "Welcome Message"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:192
+msgid ""
+"Here you can define an optional text message which is automatically sent to "
+"your customers when the initial message is received."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:202
+msgid "Automatic Reminders"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:196
+msgid ""
+"Here you can control whether the automatic reminders about the customer "
+"service window are sent to the customer when the window is about to expire."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:199
+msgid ""
+"For more information on 24-hour customer service windows, take a look at "
+"Meta's `conversation description <https://developers.facebook.com/docs/"
+"whatsapp/pricing#customer-service-windows>`_ under \"Customer Service "
+"Windows\"."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:206
+msgid "Target Group"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:205
+msgid ""
+"Here you can define the :doc:`group </manage/groups/index>` in which the "
+"ticket should be created."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:208
+msgid ""
+"After entering your data, click on **Submit**. After this step, the WhatsApp "
+"channel is technically created. However, there is another important step to "
+"take."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:213
+msgid "Step 3"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:215
+msgid ""
+"This third step is about telling WhatsApp where they should send their data:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:217
+msgid ""
+"If you don't follow the instructions properly, your account shows up but you "
+"aren't able to receive messages (because Meta/WhatsApp doesn't know where to "
+"send them)!"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:None
+msgid "Step 3 of adding a WhatsApp account"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:232
+msgid "Callback URL"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:227
+msgid ""
+"Click on the copy icon on the right side and head over to your WhatsApp "
+"business app. Enter the copied URL in the corresponding field in your app. "
+"You can find it in your `\"App Dashboard\" <https://developers.facebook.com/"
+"apps/>`_ under \"WhatsApp > Configuration > Webhook > Callback URL\" (see "
+"screenshot below). Paste it there."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:245
+msgid "Verify Token"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:235
+msgid "Copy this string too. Enter it directly below the pasted Callback URL."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Configuration section in WhatsApp app dashboard"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:240
+msgid ""
+"After entering your data, click on **Verify and save** which triggers a "
+"check if your system is accessible and configured correctly."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Webhook dialog"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:263
+msgid "Define webhook fields"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:248
+msgid ""
+"Finally, go to the field below in the app dashboard and select \"Manage\" in "
+"the \"Webhook fields\" section. This is needed that you'll get the message "
+"as content:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Select webhook fields in app dashboard"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:255
+msgid "Subscribe to \"messages\" by clicking in the checkbox:"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:0
+msgid "Select \"message\" as webhook field"
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:262
+msgid ""
+"You should now see the selected \"messages\" under the \"Webhook fields\" "
+"caption as in the first screenshot."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:265
+msgid ""
+"After finishing this step, you can click on the **Finish** button in Zammad "
+"and you should now be ready to receive tickets from your WhatsApp channel!"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:2
+msgid "Preparation"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:4
+msgid ""
+"Here you can find instructions for the required steps you need to take "
+"before you can use the WhatsApp channel in Zammad."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:7
+msgid ""
+"Please note that these steps may change in the future, depending on changes "
+"on Meta's side. You should also consider to read their docs if you have "
+"issues:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:10
+msgid ""
+"`WhatsApp Cloud API <https://developers.facebook.com/docs/whatsapp/cloud-"
+"api>`_"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:11
+msgid ""
+"`WhatsApp Business Platform <https://developers.facebook.com/docs/whatsapp>`_"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:16
+msgid "Create a Meta Business Account"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:18
+msgid ""
+"If you don't already have a business account, visit https://business."
+"facebook.com/overview and click on \"Create an account\":"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta business account starting page"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:25
+msgid ""
+"Have a look at `Meta's documentation <https://www.facebook.com/business/"
+"help/1710077379203657?id=180505742745347>`_ if you have problems."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:31
+msgid "Create a Meta Developer Account"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:33
+msgid ""
+"If you don't have a developer account already, go to https://developers."
+"facebook.com/docs/development/register and register a new account."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:38
+msgid "Create a Meta Developer App"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:40
+msgid ""
+"While already logged in with your developer account, go to https://"
+"developers.facebook.com/apps/."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:43
+msgid ""
+"You will see a screen like the following screenshot. Click on \"Create App\" "
+"and follow the steps below."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta developer app overview"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:50
+msgid "Choose \"Other\" when you are asked what you want to do with your app:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta app creation step 1"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:57
+msgid "Choose \"Business\" as app type:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta app creation step 2"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:64
+msgid ""
+"Enter a name for the app, a contact email address and a business account. "
+"Please note that the name may not contain specific product names from Meta, "
+"as you can see in the screenshot below."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:73
+msgid ""
+"If you already have a business account, you should assign it. In this step, "
+"this is optional, but later it is required anyway. Click on \"Create App\" "
+"to finish this step."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:78
+msgid "Add WhatsApp Product to Your App"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:80
+msgid ""
+"Now you have to add a product to your app. In our case, this is WhatsApp. "
+"Search for it and click on \"Set up\":"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Add a product to your app"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:87
+msgid ""
+"In the next step, you have to add a \"Meta Business Account\". This guide "
+"assumes that you already have one. If not, go to the :ref:`instructions "
+"above <create-meta-business-account>` and create one."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Add the product WhatsApp to your app"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:98
+msgid ""
+"Go to `Users > System users <https://business.facebook.com/settings/system-"
+"users/>`_ and add a system user. This is required to get a permanent API "
+"token. Make sure the user has admin permissions."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:102
+msgid ""
+"After creating a system user, you should see a screen similar to the one "
+"below. Here you can assign assets and (re-)generate an access token."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:105
+msgid ""
+"For now we just assign assets to this user. The creation of the token is "
+"covered in the :doc:`Zammad setup section </channels/whatsapp/index>` "
+"because the token is only displayed once and then you can copy and paste it "
+"directly."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "System user overview"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:113
+msgid ""
+"You now have to assign assets to this user. Choose your app and \"Manage "
+"app\" permissions:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Assign assets to system user"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:122
+msgid "Configure Your WhatsApp Business Platform"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:124
+msgid ""
+"After adding a \"Meta Business Account\" to your app, the \"App Dashboard\" "
+"is presented to you. Click on \"Start using the API\":"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "App dashboard overview"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:132
+msgid "Assign an Unused Phone Number"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:134
+msgid "Please note: this number may not be used in a WhatsApp app already!"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Adding a new phone number to your app"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:140
+msgid ""
+"Click through the steps adding your information. You have to verify your "
+"number by receiving a security code and repeating it when asked."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:143
+msgid ""
+"After you successfully performed these steps, you are now good to go with "
+"the :doc:`setup on Zammad side <index>`. 🎉"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:146
+msgid "We promise it will become easier! 🤓"
+msgstr ""
+
 #: ../index.rst:11
 msgid "Manage"
 msgstr ""
@@ -5036,15 +5684,15 @@ msgstr ""
 msgid "Channels"
 msgstr ""
 
-#: ../index.rst:65
+#: ../index.rst:66
 msgid "API (System-Documentation)"
 msgstr ""
 
-#: ../index.rst:65 ../settings/system/index.rst:2
+#: ../index.rst:66 ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
 
-#: ../index.rst:85
+#: ../index.rst:86
 msgid "Misc"
 msgstr ""
 
@@ -5453,7 +6101,7 @@ msgid ""
 "will see within the Zammad-UI."
 msgstr ""
 
-#: ../manage/groups/settings.rst:26
+#: ../manage/groups/settings.rst:32
 msgid "Parent group"
 msgstr ""
 
@@ -5474,154 +6122,163 @@ msgid ""
 "This would lead to a circular reference!"
 msgstr ""
 
-#: ../manage/groups/settings.rst:31
+#: ../manage/groups/settings.rst:28
+msgid ""
+"Zammad supports 10 levels of hierarchy for groups on PostgreSQL systems. If "
+"you are using a MySQL database, it is limited to 6 levels. In case you are "
+"using MySQL, you should consider to migrate your database anyway (see :docs:"
+"`here </appendix/migrate-to-postgresql.html>` for more information). MySQL "
+"will be deprecated with Zammad 7."
+msgstr ""
+
+#: ../manage/groups/settings.rst:37
 msgid "Assignment timeout"
 msgstr ""
 
-#: ../manage/groups/settings.rst:29
+#: ../manage/groups/settings.rst:35
 msgid ""
 "The time in minutes after which the ticket's ownership will revert back to "
 "*unassigned* after the assigned agent hasn't worked on the ticket. This "
 "timeout does *not* take any working hours in account."
 msgstr ""
 
-#: ../manage/groups/settings.rst:51
+#: ../manage/groups/settings.rst:57
 msgid "Follow-up possible"
 msgstr ""
 
-#: ../manage/groups/settings.rst:34
+#: ../manage/groups/settings.rst:40
 msgid ""
 "This option allows you to decide how Zammad should react if a customer "
 "replies to a closed ticket (no matter if by e.g. email or UI)."
 msgstr ""
 
-#: ../manage/groups/settings.rst:38 ../manage/groups/settings.rst:59
+#: ../manage/groups/settings.rst:44 ../manage/groups/settings.rst:65
 #: ../misc/object-conditions/basics.rst:0
 msgid "yes"
 msgstr ""
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:44
 msgid "The ticket will be reopened. This is the default value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:48
 msgid "do not reopen Ticket but create new Ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:41
+#: ../manage/groups/settings.rst:47
 msgid ""
 "The ticket will remain closed and Zammad will create a new ticket instead. "
 "The new ticket contains the customers reply only."
 msgstr ""
 
-#: ../manage/groups/settings.rst:51
+#: ../manage/groups/settings.rst:57
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:51
 msgid ""
 "The ticket can be reopened unless the specified number of days *after last "
 "ticket closure* has been exceeded. If the time limit is exceeded, Zammad "
 "will create a new ticket instead of reopening."
 msgstr ""
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:55
 msgid ""
 "Choosing this option will provide the option *Reopening time in days* which "
 "requires you to provide the number of days you want Zammad to wait until it "
 "creates new tickets."
 msgstr ""
 
-#: ../manage/groups/settings.rst:62
+#: ../manage/groups/settings.rst:68
 msgid "Assign follow-ups"
 msgstr ""
 
-#: ../manage/groups/settings.rst:54
+#: ../manage/groups/settings.rst:60
 msgid ""
 "This setting allows you to decide if, upon a reopen of a ticket, the last "
 "assigned owner should stay assigned or if Zammad should reset the owner to "
 "nobody."
 msgstr ""
 
-#: ../manage/groups/settings.rst:59
+#: ../manage/groups/settings.rst:65
 msgid ""
 "The ticket will remain with the last agent who owned it. This is the default "
 "value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:62 ../misc/object-conditions/basics.rst:0
+#: ../manage/groups/settings.rst:68 ../misc/object-conditions/basics.rst:0
 msgid "no"
 msgstr ""
 
-#: ../manage/groups/settings.rst:62
+#: ../manage/groups/settings.rst:68
 msgid "The owner assignment of the ticket will be removed."
 msgstr ""
 
-#: ../manage/groups/settings.rst:65
+#: ../manage/groups/settings.rst:71
 msgid ""
 "Select which sender's email address Zammad will use outbound for replying on "
 "a ticket in this group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:68
+#: ../manage/groups/settings.rst:74
 msgid "**You don't have an email address configured yet?**"
 msgstr ""
 
-#: ../manage/groups/settings.rst:70
+#: ../manage/groups/settings.rst:76
 msgid "Please configure an email based channel before here"
 msgstr ""
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:78
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:73
+#: ../manage/groups/settings.rst:79
 msgid ":doc:`Channels → Microsoft 365 </channels/microsoft365/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:80
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:82
 msgid "and come back afterwards."
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:87
 msgid "Signature"
 msgstr ""
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:85
 msgid ""
 "Choose which :doc:`signature </channels/email/signatures>` to use when "
 "replying to tickets in this group. Leaving this option unset will send "
 "emails without any signature."
 msgstr ""
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:95
 msgid "Shared Drafts"
 msgstr ""
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:90
 msgid ""
 "Shared drafts allows your agents to share ticket drafts (for new and "
 "existing tickets) with their colleagues. By default this setting is enabled, "
 "disable it if you don't want your agents to use this function."
 msgstr ""
 
-#: ../manage/groups/settings.rst:88
+#: ../manage/groups/settings.rst:94
 msgid ""
 "Learn more about shared drafts :user-docs:`in our user documentation </"
 "extras/shared-drafts.html>`."
 msgstr ""
 
-#: ../manage/groups/settings.rst:92
+#: ../manage/groups/settings.rst:98
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
 msgstr ""
 
-#: ../manage/groups/settings.rst:96
+#: ../manage/groups/settings.rst:102
 msgid ""
 "Don't need the group any more? If you can't or don't want to recycle "
 "(rename) the group, you can also set it to inactive. Agents and customers "
@@ -5629,22 +6286,22 @@ msgid ""
 "it's tickets."
 msgstr ""
 
-#: ../manage/groups/settings.rst:103
+#: ../manage/groups/settings.rst:109
 msgid "Currently, groups cannot be removed."
 msgstr ""
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:113
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
 "filters or a destination group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:116
+#: ../manage/groups/settings.rst:122
 msgid "Screenshot showing how a group configuration can look like."
 msgstr ""
 
-#: ../manage/groups/settings.rst:116
+#: ../manage/groups/settings.rst:122
 msgid "A sample configuration of a group."
 msgstr ""
 
@@ -5717,11 +6374,6 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:33
 msgid "🖼️ Rich text editor + embedded images"
-msgstr ""
-
-#: ../manage/knowledge-base.rst:36 ../system/integrations/github.rst:16
-#: ../system/integrations/gitlab.rst:16
-msgid "Setup"
 msgstr ""
 
 #: ../manage/knowledge-base.rst:38
@@ -6194,6 +6846,10 @@ msgid ""
 "following changes to a ticket:"
 msgstr ""
 
+#: ../manage/macros/learn-by-example.rst:0
+msgid "State"
+msgstr ""
+
 #: ../manage/macros/learn-by-example.rst:13
 msgid "closed"
 msgstr ""
@@ -6204,6 +6860,10 @@ msgstr ""
 
 #: ../manage/macros/learn-by-example.rst:14
 msgid "add ``spam``"
+msgstr ""
+
+#: ../manage/macros/learn-by-example.rst:0
+msgid "Owner"
 msgstr ""
 
 #: ../manage/macros/learn-by-example.rst:15
@@ -6455,7 +7115,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/organizations/index.rst:120
-msgid "Wish you could add your own fields Organizations?"
+msgid "Wish you could add your own fields to organizations?"
 msgstr ""
 
 #: ../manage/organizations/index.rst:122 ../manage/users/index.rst:123
@@ -8421,58 +9081,87 @@ msgid ""
 "can override this here by setting this to *no*."
 msgstr ""
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:92 ../settings/branding.rst:27
+msgid "Locale"
+msgstr ""
+
+#: ../manage/scheduler.rst:86 ../manage/scheduler.rst:95
+msgid ""
+"This can be activated with the switch labeled \"Localization of execution "
+"changes\"."
+msgstr ""
+
+#: ../manage/scheduler.rst:89
+msgid ""
+"Set a desired language, in which the output of variables is translated into "
+"by using the ``t`` function. For more information, please have a look at the "
+"explanation in the :ref:`variables section <variable_localization>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:101 ../settings/branding.rst:44
+msgid "Timezone"
+msgstr ""
+
+#: ../manage/scheduler.rst:98
+msgid ""
+"Similar as for the \"Locale\" setting, you can define a time zone, which is "
+"applied to the output of time stamp variables. For more information, please "
+"have a look at the explanation in the :ref:`variables section "
+"<variable_localization>`."
+msgstr ""
+
+#: ../manage/scheduler.rst:104
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
 "*not* a way to add notes to objects."
 msgstr ""
 
-#: ../manage/scheduler.rst:91
+#: ../manage/scheduler.rst:109
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:111
 msgid "The scheduler shown in the screenshot would have the following effects:"
 msgstr ""
 
-#: ../manage/scheduler.rst:95
+#: ../manage/scheduler.rst:113
 msgid ""
 "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all "
 "tickets which:"
 msgstr ""
 
-#: ../manage/scheduler.rst:98
+#: ../manage/scheduler.rst:116
 msgid "are not closed or merged, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:99
+#: ../manage/scheduler.rst:117
 msgid "are assigned to the Sales group, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:118
 msgid "whose escalation was 30 minutes ago"
 msgstr ""
 
-#: ../manage/scheduler.rst:102
+#: ../manage/scheduler.rst:120
 msgid "will be:"
 msgstr ""
 
-#: ../manage/scheduler.rst:104
+#: ../manage/scheduler.rst:122
 msgid "assigned to Emma, and"
 msgstr ""
 
-#: ../manage/scheduler.rst:105
+#: ../manage/scheduler.rst:123
 msgid "have their priority changed to 3 high."
 msgstr ""
 
-#: ../manage/scheduler.rst:107
+#: ../manage/scheduler.rst:125
 msgid ""
 "As a supervisor in the Sales group, this enables Emma to intercept and "
 "process escalated tickets."
 msgstr ""
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:128
 msgid ""
 "Emma will not receive notifications when the scheduler assigns her these "
 "tickets."
@@ -9732,7 +10421,7 @@ msgid "Screenshot of “Triggers” page in admin panel"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:2
-msgid "How do trigger work"
+msgid "How Do Trigger Work"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:4
@@ -9824,8 +10513,7 @@ msgid ""
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:49
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
-msgid "Time event"
+msgid "Time Event"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:51
@@ -9938,6 +10626,39 @@ msgid ""
 "g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
+#: ../manage/trigger/how-do-they-work.rst:115
+msgid "Localization of Execution Changes"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid ""
+"To translate the output of variables, use the ``t`` function. To format date "
+"and time stamps, use the ``dt`` function."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:120
+msgid ""
+"The ``t`` function translates the output of variables according to the "
+"selected \"Locale\". The ``dt`` function transforms a date and time stamp "
+"according to the selected \"Timezone\"."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:130
+msgid ""
+"Best practice is to create single separated localized triggers for each "
+"language/timezone and execute them based on user or organization attributes."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:133
+msgid ""
+"For more information and examples, please have a look at the explanation in "
+"the :ref:`variables section <variable_localization>`."
+msgstr ""
+
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
 msgstr ""
@@ -9958,22 +10679,22 @@ msgstr ""
 msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:14
+#: ../manage/trigger/learn-by-example.rst:16
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
 "with a high priority:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:20
+#: ../manage/trigger/learn-by-example.rst:24
 msgid "Send an auto-reply email to *any customer* who responds to a ticket:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:24
+#: ../manage/trigger/learn-by-example.rst:30
 msgid "📨 **Not all automated messages come from triggers!**"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger/learn-by-example.rst:32
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
@@ -10969,6 +11690,10 @@ msgstr ""
 msgid ""
 "This will check if the current state of the ticket matches configured "
 "conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:39
+msgid "Time event"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:35
@@ -13374,10 +14099,6 @@ msgid ""
 "change will not be saved."
 msgstr ""
 
-#: ../settings/branding.rst:27
-msgid "Locale"
-msgstr ""
-
 #: ../settings/branding.rst:22
 msgid ""
 "Allows to set the default language of the Zammad instance. The here defined "
@@ -13394,10 +14115,6 @@ msgstr ""
 
 #: ../settings/branding.rst:27 ../settings/branding.rst:39
 msgid "notifications"
-msgstr ""
-
-#: ../settings/branding.rst:44
-msgid "Timezone"
 msgstr ""
 
 #: ../settings/branding.rst:30
@@ -13842,11 +14559,6 @@ msgid ""
 "An example usecase might be: You have an internal LDAP server that is not "
 "accessible from the internet, and you want a SSL-encrypted connection, using "
 "a custom certificate."
-msgstr ""
-
-#: ../settings/security/ssl-certificates.rst:17
-#: ../system/integrations/smime/prerequisites.rst:2
-msgid "Prerequisites"
 msgstr ""
 
 #: ../settings/security/ssl-certificates.rst:19
@@ -15537,9 +16249,9 @@ msgstr ""
 
 #: ../settings/system/storage.rst:17
 msgid ""
-"This is the default storage mechanism. The attachments are stored directly "
-"in the database. If your Zammad instance grows, we recommend one of the "
-"other mechanisms to maintain performance."
+"This is the default storage method. The attachments are stored directly in "
+"the database. If your Zammad instance grows, we recommend one of the other "
+"methods to maintain performance."
 msgstr ""
 
 #: ../settings/system/storage.rst:38
@@ -15548,9 +16260,9 @@ msgstr ""
 
 #: ../settings/system/storage.rst:22
 msgid ""
-"This storage mechanism is recommended for all Zammad instances, especially "
-"for those with a higher load. If you choose filesystem, your files are "
-"written to ``/opt/zammad/storage/``."
+"This storage method is recommended for all Zammad instances, especially for "
+"those with a higher load. If you choose filesystem, your files are written "
+"to ``/opt/zammad/storage/``."
 msgstr ""
 
 #: ../settings/system/storage.rst:26
@@ -15635,10 +16347,10 @@ msgstr ""
 
 #: ../settings/system/storage.rst:66
 msgid ""
-"Set the \"Storage Mechanism\" in Zammad to ``Simple Storage (S3)`` in "
-"Settings > System > Storage and click on \"Submit\". After that, Zammad "
-"checks your configuration and the connection to the service and will raise "
-"an error message if something is wrong."
+"Set the \"Storage Method\" in Zammad to ``Simple Storage (S3)`` in Settings "
+"> System > Storage and click on \"Submit\". After that, Zammad checks your "
+"configuration and the connection to the service and will raise an error "
+"message if something is wrong."
 msgstr ""
 
 #: ../settings/system/storage.rst:72
@@ -15647,7 +16359,7 @@ msgstr ""
 
 #: ../settings/system/storage.rst:85
 msgid ""
-"Before setting the storage mechanism to ``Simple Storage (S3)`` (step 4), "
+"Before setting the storage method to ``Simple Storage (S3)`` (step 4), "
 "please make sure to have a working setup."
 msgstr ""
 
@@ -16479,6 +17191,10 @@ msgid ""
 "one."
 msgstr ""
 
+#: ../system/core-workflows/how-do-they-work.rst:181
+msgid "Priority"
+msgstr ""
+
 #: ../system/core-workflows/how-do-they-work.rst:183
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
@@ -17004,6 +17720,11 @@ msgstr ""
 msgid "Screenshot of Checkmk settings overview"
 msgstr ""
 
+#: ../system/integrations/checkmk/admin-panel-reference.rst:15
+#: ../system/objects/permissions.rst:56
+msgid "Group"
+msgstr ""
+
 #: ../system/integrations/checkmk/admin-panel-reference.rst:12
 msgid ""
 "Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned "
@@ -17038,11 +17759,10 @@ msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:26
 msgid ""
-"(You may choose from the seven built-in ticket states, but if you change "
-"this setting from the default, you'll more likely want to :docs:`define a "
-"new ticket state </admin/console/working-on-tickets.html#add-new-ticket-"
-"state>` for this purpose. This can be especially useful for tracking tickets "
-"with :doc:`reports </manage/report-profiles>`.)"
+"You can choose from the seven built-in ticket states. If these states aren't "
+"enough for you, you can :ref:`define a new ticket state <ticket-state-"
+"reference>` for this purpose as well. This can be useful for tracking "
+"tickets with :doc:`reports </manage/report-profiles>`, for example."
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
@@ -20691,24 +21411,278 @@ msgstr ""
 
 #: ../system/objects.rst:84
 msgid ""
-"Zammad comes with pre-configured attributes. Some of these currently do not "
-"provide the possibility to edit them via UI (or at all)."
+"Zammad comes with pre-configured attributes. Some of them can't be edited "
+"via UI (or at all). This is required for proper operation of Zammad and not "
+"a bug."
 msgstr ""
 
-#: ../system/objects.rst:87
-msgid "This is not a bug but is to save you from possibly nuking Zammad."
+#: ../system/objects.rst:90
+msgid "Ticket State"
 msgstr ""
 
-#: ../system/objects.rst:91
+#: ../system/objects.rst:92
 msgid ""
-"There are technical exceptions which can be solved via console. This e.g. "
-"affects ticket states and priorities, see :docs:`console section </admin/"
-"console.html>`."
+"If the pre-configured states aren't enough for you or you want to change "
+"them, you can do so by clicking on the cogwheel icon in the state row in the "
+"ticket tab. But you should be careful when changing pre-configured states. "
+"This can lead to unwanted behavior in some cases."
 msgstr ""
 
-#: ../system/objects.rst:95
+#: ../system/objects.rst:None
+msgid "Screenshot showing highlighted ticket state attribute"
+msgstr ""
+
+#: ../system/objects.rst:122
+msgid "Handling of states"
+msgstr ""
+
+#: ../system/objects.rst:102
 msgid ""
-"💰 If you're a hosted customer, please contact your support for more. 💰"
+"In the state configuration screen, you can add new states, disable states or "
+"change states."
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing table of default ticket states"
+msgstr ""
+
+#: ../system/objects.rst:110
+msgid ""
+"To add a new state, click on the \"New Ticket State\" button in the top "
+"right corner. To change an existing state, simply click on the affected "
+"state. This opens an edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:114
+msgid ""
+"You can also clone a state or set them to \"Default for new tickets\" or "
+"\"Default for follow-ups\" by clicking on the ⁝ action button and select the "
+"desired function."
+msgstr ""
+
+#: ../system/objects.rst:118
+msgid ""
+"*Default for new tickets* means that this state is used for every newly "
+"created ticket."
+msgstr ""
+
+#: ../system/objects.rst:121
+msgid ""
+"*Default for follow-ups* means that this state is used if the ticket is re-"
+"opened after it was closed."
+msgstr ""
+
+#: ../system/objects.rst:171
+msgid "Ticket state in detail"
+msgstr ""
+
+#: ../system/objects.rst:125
+msgid ""
+"Below you can find a description for each field and option. Please head over "
+"to the :ref:`example <example-state>` to see the edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:129
+msgid ""
+"This is the name of the state and what you and your agents are seeing when "
+"choosing a state somewhere (e.g. in tickets, trigger configuration)."
+msgstr ""
+
+#: ../system/objects.rst:137
+msgid ""
+"There are different state types you can choose from. By default, Zammad "
+"comes with one state per state type."
+msgstr ""
+
+#: ../system/objects.rst:140
+msgid ""
+"**new**: for states for tickets that are new and it hasn't been worked on "
+"them"
+msgstr ""
+
+#: ../system/objects.rst:142
+msgid ""
+"**open**: for states for tickets that are in progress and agents are working "
+"on them"
+msgstr ""
+
+#: ../system/objects.rst:144
+msgid "**merged**: for states for tickets that are merged with other tickets"
+msgstr ""
+
+#: ../system/objects.rst:145
+msgid ""
+"**pending reminder**: for states for tickets that are in progress and you "
+"want to set a reminder. (default example: *pending reminder*)"
+msgstr ""
+
+#: ../system/objects.rst:147
+msgid ""
+"**pending action**: for states for tickets that are waiting for a specified "
+"time and then change their state (default example: *pending close*)"
+msgstr ""
+
+#: ../system/objects.rst:150
+msgid ""
+"**closed**: for states for tickets that are finished and do not need to be "
+"processed further"
+msgstr ""
+
+#: ../system/objects.rst:153
+msgid ""
+"⚠️ Choosing the correct state type is important! If you are in doubt, have a "
+"look on the default states and their types!"
+msgstr ""
+
+#: ../system/objects.rst:158
+msgid "Ignore escalation"
+msgstr ""
+
+#: ../system/objects.rst:157
+msgid ""
+"Here you can define whether tickets of this state will count to escalation "
+"time or not."
+msgstr ""
+
+#: ../system/objects.rst:161
+msgid ""
+"You can create a note for the state to inform other admins about the state. "
+"This has no effect on tickets."
+msgstr ""
+
+#: ../system/objects.rst:165
+msgid "Set the state to *active* or *inactive*."
+msgstr ""
+
+#: ../system/objects.rst:167
+msgid ""
+"it is technically possible to set all states to inactive. To keep Zammad "
+"working in such a case, the inactive flag of one of the states is ignored."
+msgstr ""
+
+#: ../system/objects.rst:194
+msgid "Ticket state example"
+msgstr ""
+
+#: ../system/objects.rst:174
+msgid ""
+"Let's assume we want to create a new state which indicates that the ticket "
+"has to wait for a response of a third party (e.g. service contractor or "
+"manufacturer) and we want to to be able to set a reminder."
+msgstr ""
+
+#: ../system/objects.rst:178
+msgid ""
+"First we give the new state a proper name. In this example we call it "
+"\"waiting for manufacturer\"."
+msgstr ""
+
+#: ../system/objects.rst:181
+msgid ""
+"As state type we choose \"pending reminder\". This indicates that the ticket "
+"is still open and we can set a reminder. This reminder can be useful if our "
+"manufacturer sometimes isn't responding or we want to remind him to give us "
+"an answer."
+msgstr ""
+
+#: ../system/objects.rst:186
+msgid ""
+"We choose \"no\" for \"ignore escalation\" because we want to escalate the "
+"tickets even if we are waiting on the manufacturer's feedback."
+msgstr ""
+
+#: ../system/objects.rst:189
+msgid "The **result** in the creation dialog will look like this:"
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing ticket state creation dialog with example"
+msgstr ""
+
+#: ../system/objects.rst:197
+msgid "Ticket Priority"
+msgstr ""
+
+#: ../system/objects.rst:199
+msgid ""
+"If the pre-configured priorities aren't enough for you or you want to change "
+"them, you can do so by clicking on the cogwheel icon in the priority row in "
+"the ticket tab:"
+msgstr ""
+
+#: ../system/objects.rst:None
+msgid "Screenshot showing highlighted ticket priority attribute"
+msgstr ""
+
+#: ../system/objects.rst:224
+msgid "Handling of priorities"
+msgstr ""
+
+#: ../system/objects.rst:208
+msgid ""
+"In the priority configuration screen, you can add new priorities, disable "
+"priorities or change priorities."
+msgstr ""
+
+#: ../system/objects.rst:0
+msgid "Screenshot showing table of default ticket priorities"
+msgstr ""
+
+#: ../system/objects.rst:216
+msgid ""
+"To add a new priority, click on the \"New Priority\" button in the top right "
+"corner. To change an existing priority, simply click on the affected "
+"priority. This opens an edit dialog."
+msgstr ""
+
+#: ../system/objects.rst:220
+msgid ""
+"You can also clone a priority or set them to \"Default for new tickets\" by "
+"clicking on the ⁝ action button and select the desired function."
+msgstr ""
+
+#: ../system/objects.rst:223
+msgid ""
+"*Default for new tickets* means that this priority is used for every newly "
+"created ticket."
+msgstr ""
+
+#: ../system/objects.rst:246
+msgid "Priorities in detail"
+msgstr ""
+
+#: ../system/objects.rst:227
+msgid "Below you can find a description for each field and option."
+msgstr ""
+
+#: ../system/objects.rst:230
+msgid ""
+"This is the name of the priority and what you and your agents are seeing "
+"when choosing a priority somewhere (e.g. in tickets, trigger configuration)."
+msgstr ""
+
+#: ../system/objects.rst:240
+msgid "Highlight color"
+msgstr ""
+
+#: ../system/objects.rst:235
+msgid ""
+"Switch between *Low priority* (light blue), *High priority* (red) and - "
+"(default). This affects the displayed color for ticket titles in overviews."
+msgstr ""
+
+#: ../system/objects.rst:239
+msgid "The color options are currently limited to the mentioned options."
+msgstr ""
+
+#: ../system/objects.rst:243
+msgid ""
+"You can create a note for the priority to inform other admins about the "
+"priority. This has no effect on tickets."
+msgstr ""
+
+#: ../system/objects.rst:247
+msgid "Set the priority to *active* or *inactive*."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:2
@@ -22285,21 +23259,22 @@ msgstr ""
 
 #: ../system/translations.rst:4
 msgid ""
-"Translations of Zammad are processed centrally on our `Weblate instance "
-"<https://translations.zammad.org/>`_. This allows non development people to "
-"review and update translation strings of the language they actually speak."
+"Translations of Zammad are processed centrally in our `Weblate instance "
+"<https://translations.zammad.org/>`_. This allows non-developers to review "
+"and update translation texts of the language they actually speak."
 msgstr ""
 
 #: ../system/translations.rst:9
 msgid ""
 "Your language is in an incomplete translation state or has typos? Please "
-"consider helping us sorting this out! All you need is either a GitHub "
-"account or register directly on our instance."
+"consider helping us in sorting this out! All you need is either a GitHub "
+"account or to register directly in our instance."
 msgstr ""
 
 #: ../system/translations.rst:13
 msgid ""
-"Did you know? This is also where documentation translations are handled. 🤓"
+"Did you know? This is also where the documentation translations are handled. "
+"🤓"
 msgstr ""
 
 #: ../system/translations.rst:15
@@ -22308,99 +23283,182 @@ msgid ""
 "html#translation>` in the system documentation to get started!"
 msgstr ""
 
-#: ../system/translations.rst:21
-msgid ""
-"Apart from these centralized translations, there's still local translations "
-"you can manage. This is relevant if you added custom objects that require "
-"translations or even states."
+#: ../system/translations.rst:20
+msgid "Local Translations"
 msgstr ""
 
-#: ../system/translations.rst:27
+#: ../system/translations.rst:22
 msgid ""
-"You can no longer synchronize these translations upstream like prior Zammad "
-"5.1."
+"Apart from these system translations, there's still local translations you "
+"can manage. This is relevant if you added custom objects that require "
+"translations or even custom states and priorities."
 msgstr ""
 
 #: ../system/translations.rst:None
-msgid "Translation management page within the admin menu"
+msgid "Translation management screen within the admin menu"
 msgstr ""
 
-#: ../system/translations.rst:34
-msgid "How do I get the most recent translations?"
+#: ../system/translations.rst:31
+msgid "Updating Translations"
 msgstr ""
 
-#: ../system/translations.rst:36
+#: ../system/translations.rst:33
 msgid ""
-"Because of how Zammad ships translations, the only way to update the central "
+"Because of how Zammad ships translations, the only way to update the system "
 "translations is to update your Zammad installation. The benefit of this is "
 "that you no longer need internet access during a Zammad upgrade as the "
 "package has everything it requires already."
 msgstr ""
 
-#: ../system/translations.rst:42
-msgid "But... I have custom objects?!"
+#: ../system/translations.rst:39
+msgid "Translation of Custom Objects"
+msgstr ""
+
+#: ../system/translations.rst:41
+msgid ""
+"No problem at all! You can customize any translation locally, even if it is "
+"not initially provided by the system."
 msgstr ""
 
 #: ../system/translations.rst:44
 msgid ""
-"No problem at all! If you can't find the strings of your objects already "
-"within the translation list, please ensure to :docs:`add the translation "
-"strings </admin/console/other-useful-commands.html#add-translation>` to your "
-"installation."
+"Translation is supported for a broad number of features, including but not "
+"limited to custom:"
+msgstr ""
+
+#: ../system/translations.rst:47
+msgid "Object Attributes"
+msgstr ""
+
+#: ../system/translations.rst:48
+msgid "Ticket Macros"
 msgstr ""
 
 #: ../system/translations.rst:49
-msgid "Now you can translate your objects as needed."
+msgid "Ticket Overviews"
 msgstr ""
 
-#: ../system/translations.rst:52
-msgid "So how does this local translation work?"
+#: ../system/translations.rst:50
+msgid "Ticket Priorities"
+msgstr ""
+
+#: ../system/translations.rst:51
+msgid "Ticket States"
 msgstr ""
 
 #: ../system/translations.rst:54
-msgid ""
-"Within the translation menu, look up the string you're searching for and "
-"update its target as designed. As soon as you leave the target input field, "
-"the change will be saved. Your changes are even update safe!"
+msgid "Customizing Translations"
 msgstr ""
 
-#: ../system/translations.rst:58
+#: ../system/translations.rst:56
 msgid ""
-"Such locally translated strings are slightly highlighted and come with a "
-"\"Reset\" action. Due to caching you may have to reload your browser session "
-"to see the changes."
+"Within the translation screen, simply click on the **New Translation** "
+"button."
+msgstr ""
+
+#: ../system/translations.rst:None
+msgid "New translation dialog"
 msgstr ""
 
 #: ../system/translations.rst:62
 msgid ""
-"The translation strings shown by Zammad are always those of the profile "
-"language you've chosen. If you need to translate a different language, "
-"change the language in your :user-docs:`profile settings </extras/profile-"
-"and-settings.html>` up front."
+"In the dialog you can immediately enter the exact translation source (if you "
+"know it) and your custom translation text for it and click **Submit**."
 msgstr ""
 
-#: ../system/translations.rst:None
-msgid "Screenshot showing an adjusted translation locally"
+#: ../system/translations.rst:65
+msgid ""
+"Alternatively, try to search for translation suggestions in the list below. "
+"Selecting an item from the list will pre-fill the translation source for you "
+"and then you can just enter your custom translation."
 msgstr ""
 
-#: ../system/translations.rst:71
-msgid "Reverting to original translations"
+#: ../system/translations.rst:69
+msgid ""
+"The target language will always default to your current language selection. "
+"If you need to translate for a different language, simply change the "
+"selection before submitting."
 msgstr ""
 
 #: ../system/translations.rst:73
 msgid ""
-"If you want to reset all translation changes on your instance, use the red "
-"\"Reset\" button on the upper right of the translation management."
+"All your custom translations will show up in the overview table when added. "
+"And they will even persist across Zammad updates!"
 msgstr ""
 
 #: ../system/translations.rst:76
 msgid ""
-"In case you just intend to reset a specific translation, lookup the "
-"translation string and use the \"reset\" action."
+"Make sure to reload your browser if a translated string is not displayed."
+msgstr ""
+
+#: ../system/translations.rst:80
+msgid "Reverting to Original Translations"
+msgstr ""
+
+#: ../system/translations.rst:82
+msgid ""
+"If you want to revert a custom translation to original text, simply use the "
+"appropriate action within the row of the overview table."
+msgstr ""
+
+#: ../system/translations.rst:85
+msgid ""
+"Depending on the type of the translation source, the action has a slightly "
+"different name:"
+msgstr ""
+
+#: ../system/translations.rst:88
+msgid "**Reset** for customized system translations"
+msgstr ""
+
+#: ../system/translations.rst:89
+msgid "**Remove** for customized local translations"
+msgstr ""
+
+#: ../system/translations.rst:91
+msgid ""
+"In both cases, the action will remove the customized translation after a "
+"confirmation."
 msgstr ""
 
 #: ../system/translations.rst:None
-msgid "Screenshot showing reset button highlighted"
+msgid "Screenshot showing the location of the Remove action"
+msgstr ""
+
+#: ../system/translations.rst:99
+msgid "Inline Translations"
+msgstr ""
+
+#: ../system/translations.rst:101
+msgid ""
+"If you prefer a more hands-on approach, you can activate the inline or on-"
+"screen translation feature by pressing ``ctrl`` + ``alt`` + ``t`` at any "
+"time and on any screen."
+msgstr ""
+
+#: ../system/translations.rst:105
+msgid ""
+"All customizable translation texts will be highlighted for you on the "
+"screen. Just click into the highlighted area and update the text in place."
+msgstr ""
+
+#: ../system/translations.rst:None
+msgid "Inline translation mode activated for the Overview screen"
+msgstr ""
+
+#: ../system/translations.rst:112
+msgid ""
+"When finished editing, simply press ``ctrl`` + ``alt`` + ``t`` again to "
+"deactivate."
+msgstr ""
+
+#: ../system/translations.rst:117
+msgid ""
+"Even though it's available on any screen, the inline translation feature "
+"requires admin permissions. It works only for the current language "
+"selection. If you need to translate a different language, first change the "
+"language in your :user-docs:`profile settings </extras/profile-and-settings."
+"html>`."
 msgstr ""
 
 #: ../system/variables.rst:2
@@ -22436,7 +23494,7 @@ msgid "Variable Categories"
 msgstr ""
 
 #: ../system/variables.rst:31
-msgid "Wait, what about custom objects?"
+msgid "Wait, What About Custom Objects?"
 msgstr ""
 
 #: ../system/variables.rst:33
@@ -22487,11 +23545,11 @@ msgid ""
 "in ``#{ticket.select.value}``."
 msgstr ""
 
-#: ../system/variables.rst:58
-msgid "Using translated variables"
+#: ../system/variables.rst:60
+msgid "Using Translated Variables"
 msgstr ""
 
-#: ../system/variables.rst:60
+#: ../system/variables.rst:62
 msgid ""
 "If you want to use a translated variable in triggers or schedulers, you can "
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
@@ -22500,12 +23558,191 @@ msgid ""
 "admin panel under :doc:`/settings/branding`."
 msgstr ""
 
-#: ../system/variables.rst:66
+#: ../system/variables.rst:68
 msgid ""
 "A possible use-case: you want to send your customers updates on tickets via "
 "trigger or scheduler which should include the state of the ticket. Using the "
 "default ``#{ticket.state.name}`` (without the translation flag ``t()``) "
 "would lead to the output of the original (english) name of the state."
+msgstr ""
+
+#: ../system/variables.rst:74
+msgid "Date and Time Formatting"
+msgstr ""
+
+#: ../system/variables.rst:76
+msgid ""
+"The ``dt`` method is used for transforming date/time values into any format. "
+"You can define a date and time format which is different from your Zammad "
+"default (see :doc:`branding </settings/branding>`). To use it, put the "
+"``dt`` method in front of your variable as you can see below."
+msgstr ""
+
+#: ../system/variables.rst:81
+msgid ""
+"The syntax is as follows: ``#{dt(your.variable, \"parameters and text "
+"string\", \"timezone\")}``"
+msgstr ""
+
+#: ../system/variables.rst:84
+msgid ""
+"Please note that you can use any combination of parameters and free text "
+"strings or characters. Only the parameters are replaced by the variable you "
+"want to output, see the following example. The date/time output is based on "
+"the provided timezone. If using a specific time zone, it is recommended to "
+"mention it manually as a text string at the end of the variable parameters "
+"to avoid confusion."
+msgstr ""
+
+#: ../system/variables.rst:91
+msgid "**Example variable:**"
+msgstr ""
+
+#: ../system/variables.rst:92
+msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
+msgstr ""
+
+#: ../system/variables.rst:94
+msgid ""
+"If you want to use our example, make sure to paste the string above without "
+"formatting (``CTRL+Shift+v``), otherwise it won't work."
+msgstr ""
+
+#: ../system/variables.rst:98
+msgid "**Example output:**"
+msgstr ""
+
+#: ../system/variables.rst:99
+msgid "Monday, 2024-03-18 15:31"
+msgstr ""
+
+#: ../system/variables.rst:101
+msgid "In the following table you can find some useful parameters:"
+msgstr ""
+
+#: ../system/variables.rst:107
+msgid "Parameter"
+msgstr ""
+
+#: ../system/variables.rst:110
+msgid "``%Y``"
+msgstr ""
+
+#: ../system/variables.rst:111
+msgid "Year with 4 digits"
+msgstr ""
+
+#: ../system/variables.rst:112
+msgid "Use ``%y`` for year with 2 digits"
+msgstr ""
+
+#: ../system/variables.rst:113
+msgid "``%m``"
+msgstr ""
+
+#: ../system/variables.rst:114
+msgid "Month of year (as number with zero-padding)"
+msgstr ""
+
+#: ../system/variables.rst:115
+msgid "Use ``%-m`` for month without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:116
+msgid "``%d``"
+msgstr ""
+
+#: ../system/variables.rst:117
+msgid "Day of month (as number with zero-padding)"
+msgstr ""
+
+#: ../system/variables.rst:118
+msgid "Use ``%e`` for day without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:119
+msgid "``%H``"
+msgstr ""
+
+#: ../system/variables.rst:120
+msgid "Hour of day in 24h notation with zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:121
+msgid "Use ``%k`` for hour without zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:122
+msgid "``%I``"
+msgstr ""
+
+#: ../system/variables.rst:123
+msgid "Hour of day in 12h notation with zero-padding"
+msgstr ""
+
+#: ../system/variables.rst:124
+msgid ""
+"Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian "
+"indicator"
+msgstr ""
+
+#: ../system/variables.rst:125
+msgid "``%M``"
+msgstr ""
+
+#: ../system/variables.rst:126
+msgid "Minute of hour"
+msgstr ""
+
+#: ../system/variables.rst:128
+msgid "``%S``"
+msgstr ""
+
+#: ../system/variables.rst:129
+msgid "Second of Minute"
+msgstr ""
+
+#: ../system/variables.rst:131
+msgid "``%A``"
+msgstr ""
+
+#: ../system/variables.rst:132
+msgid "Weekday name"
+msgstr ""
+
+#: ../system/variables.rst:133
+msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
+msgstr ""
+
+#: ../system/variables.rst:134
+msgid "``%B``"
+msgstr ""
+
+#: ../system/variables.rst:135
+msgid "Month name"
+msgstr ""
+
+#: ../system/variables.rst:136
+msgid "Use ``%b`` for abbreviated name"
+msgstr ""
+
+#: ../system/variables.rst:137
+msgid "``%U``"
+msgstr ""
+
+#: ../system/variables.rst:138
+msgid "Week number of current year"
+msgstr ""
+
+#: ../system/variables.rst:139
+msgid "Use ``%W`` for a different calculation method"
+msgstr ""
+
+#: ../system/variables.rst:142
+msgid ""
+"For those who want to go further: We support the known format directives for "
+"the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more "
+"information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
 
 #: ../system/variables/article.rst:2

@@ -37,16 +37,8 @@ you can find a description of how the operators are working.
 
 .. note::
 
-   The following attributes can only be defined by the filter when a ticket is
-   **created**:
-
-   * Group
-   * State
-   * Priority
-   * Owner
-
-   Zammad will **not overwrite** the value of these objects when a ticket
-   is updated.
+   Please note that the ticket actions are separated in "Ticket creation" and
+   "Ticket update". Make sure to use the appropriate variant for your scenario.
 
 Here are some examples of what is possible with filters:
 
@@ -69,12 +61,6 @@ Automatically tag and close spam tickets that have been marked as spam by an ext
   | X-Spam-Flag: *contains:* ``YES``
   | Tag: add: ``spam``
   | State: closed
-
-  .. note::
-
-    Note that the State attribute only has an effect when the matching email
-    results in a new ticket. It will add the tag though if it is missing, even
-    if the mail is an update to an existing ticket.
 
 If a filter is no longer needed, it can either be temporarily set inactive or
 deleted directly.

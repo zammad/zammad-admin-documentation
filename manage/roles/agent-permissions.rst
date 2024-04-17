@@ -9,7 +9,7 @@ Agent Permissions
 .. figure:: /images/manage/roles/permissions-agent.png
    :alt: Agent permissions in the New Role dialog
    :align: center
-   :scale: 70%
+   :scale: 80%
 
    Agent permissions are shown in the middle of the New Role dialog...
 
@@ -65,7 +65,7 @@ Agent Permissions
    .. figure:: /images/manage/roles/group-access-levels.png
       :alt: Group permission table in Edit Role dialog
       :align: center
-      :scale: 40%
+      :scale: 60%
 
    Roles can also include
    :doc:`group permissions </manage/groups/access-levels>`!

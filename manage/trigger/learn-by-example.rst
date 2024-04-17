@@ -9,17 +9,23 @@ To learn about triggers in detail, first go to
 
 1. Any time Jacob Smith creates a ticket, assign it to the Sales group:
 
-   .. figure:: /images/manage/trigger/move-tickets-of-specific-customer-to-specific-group.png
+   .. figure:: /images/manage/trigger/move-tickets-of-specific-customer-to-specific-group_with_locale.png
+      :align: center
+      :scale: 80%
 
 2. Emma Taylor is responsible for all sales internally, so if a new ticket has
    the word "order" in the subject, assign it to her and make sure it's set
    with a high priority:
 
-   .. figure:: /images/manage/trigger/trigger-based-prioritize-change.png
+   .. figure:: /images/manage/trigger/trigger-based-prioritize-change_with_locale.png
+      :align: center
+      :scale: 80%
 
 3. Send an auto-reply email to *any customer* who responds to a ticket:
 
-   .. figure:: /images/manage/trigger/trigger-based-auto-replies-on-follow-ups.png
+   .. figure:: /images/manage/trigger/trigger-based-auto-replies-on-follow-ups_with_locale.png
+      :align: center
+      :scale: 80%
 
 .. note:: 📨 **Not all automated messages come from triggers!**
 

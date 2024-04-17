@@ -27,7 +27,7 @@ Variable Categories
    variables/article
    variables/ticket
 
-Wait, what about custom objects?
+Wait, What About Custom Objects?
 --------------------------------
 
 Good point! Of course, we can't predict what objects you might create, but we
@@ -54,7 +54,9 @@ field which will by default return the key value, not it's display name.
 For this, just extend your variable with ``.value``. This will result in
 ``#{ticket.select.value}``.
 
-Using translated variables
+.. _variable_localization:
+
+Using Translated Variables
 --------------------------
 
 If you want to use a translated variable in triggers or
@@ -67,3 +69,76 @@ A possible use-case: you want to send your customers updates on tickets
 via trigger or scheduler which should include the state of the ticket. Using the
 default ``#{ticket.state.name}`` (without the translation flag ``t()``) would
 lead to the output of the original (english) name of the state.
+
+Date and Time Formatting
+------------------------
+
+The ``dt`` method is used for transforming date/time values into any
+format. You can define a date and time format which is different from your
+Zammad default (see :doc:`branding </settings/branding>`). To use it, put the
+``dt`` method in front of your variable as you can see below.
+
+The syntax is as follows:
+``#{dt(your.variable, "parameters and text string", "timezone")}``
+
+Please note that you can use any combination of parameters and free text strings
+or characters. Only the parameters are replaced by the variable you want
+to output, see the following example. The date/time output is based on the
+provided timezone. If using a specific time zone, it is recommended to mention
+it manually as a text string at the end of the variable parameters to avoid
+confusion.
+
+| **Example variable:**
+| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M", "Europe/Berlin")}``
+
+.. hint:: If you want to use our example, make sure to paste the
+  string above without formatting (``CTRL+Shift+v``), otherwise it
+  won't work.
+
+| **Example output:**
+| Monday, 2024-03-18 15:31
+
+In the following table you can find some useful parameters:
+
+.. list-table::
+   :widths: 15 30 55
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+     - Note
+   * - ``%Y``
+     - Year with 4 digits
+     - Use ``%y`` for year with 2 digits
+   * - ``%m``
+     - Month of year (as number with zero-padding)
+     - Use ``%-m`` for month without zero-padding
+   * - ``%d``
+     - Day of month (as number with zero-padding)
+     - Use ``%e`` for day without zero-padding
+   * - ``%H``
+     - Hour of day in 24h notation with zero-padding
+     - Use ``%k`` for hour without zero-padding
+   * - ``%I``
+     - Hour of day in 12h notation with zero-padding
+     - Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian indicator
+   * - ``%M``
+     - Minute of hour
+     -
+   * - ``%S``
+     - Second of Minute
+     -
+   * - ``%A``
+     - Weekday name
+     - Use ``%a`` for abbreviated name or ``%^A`` for uppercase name
+   * - ``%B``
+     - Month name
+     - Use ``%b`` for abbreviated name
+   * - ``%U``
+     - Week number of current year
+     - Use ``%W`` for a different calculation method
+
+.. tip::
+   For those who want to go further: We support the known format directives for
+   the Ruby built-in method ``strftime`` of the ``DateTime`` class.
+   For more information, see `here <https://apidock.com/ruby/DateTime/strftime>`_.
