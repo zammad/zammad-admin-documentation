@@ -120,21 +120,16 @@ A trigger can do the following things once its conditions have been met:
 Localization of Execution Changes
 ---------------------------------
 
-To translate the output of variables, use the ``t`` function and select a
-"Locale" after activating the toggle.
+The system locale and timezone predefines a default format of date and timestamp replacement variables. These settings are customizable for triggers.
 
-To format date and time stamps, use the ``dt`` function. The ``dt`` function
-transforms a date and time stamp according to the selected
-"Timezone". If you just want to output time stamps in a different time zone,
-it's enough to just use the variable and select a time zone.
-
-.. figure:: /images/manage/trigger/notification-localization.png
-   :align: center
-   :scale: 90%
-   :alt: Screenshot showing localization section of trigger dialog
+    .. figure:: /images/manage/trigger/notification-localization.png
+       :align: center
+       :scale: 90%
+       :alt: Screenshot showing localization section of trigger dialog
 
 Best practice is to create single separated localized triggers for each
 language/timezone and execute them based on user or organization attributes.
 
-For more information and examples, please have a look at the explanation in the
-:ref:`variables section <variable_localization>`.
+The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language.
+
+For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`.

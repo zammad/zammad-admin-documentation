@@ -74,35 +74,23 @@ lead to the output of the original (english) name of the state.
 Date and Time Formatting
 ------------------------
 
-The ``dt`` method is used for transforming date/time values into any
-format. You can define a date and time format which is different from your
-Zammad default (see :doc:`branding </settings/branding>`). To use it, put the
-``dt`` method in front of your variable as you can see below. For triggers and
-schedulers the usage is optional; you can use the
-:ref:`localization via UI <trigger-localization>` except you want to customize
-it further.
+The system (trigger/scheduler selected) locale and timezone predefines a default format of date and timestamp. This format is customizable by using the ``dt()`` method.
 
-The syntax is as follows:
-``#{dt(your.variable, "parameters and text string", "timezone")}``
+The method arguments are as follows:
 
-Please note that you can use any combination of parameters and free text strings
-or characters. Only the parameters are replaced by the variable you want
-to output, see the following example. The date/time output is based on the
-provided timezone. If using a specific time zone, it is recommended to mention
-it manually as a text string at the end of the variable parameters to avoid
-confusion.
+1. The date or timestamp variable you want to format.
+2. The output format string.
+3. The timezone to apply (optional).
 
-| **Example variable:**
-| ``#{dt(ticket.updated_at, "%A, %Y-%m-%d %H:%M", "Europe/Berlin")}``
+| **Example:**
+|    ``#{dt(ticket.updated_at, "%A %Y-%m-%d %H:%M in the office", "Europe/Berlin")}``
+|    Monday, 2024-03-18 15:31 in the office
 
 .. hint:: If you want to use our example, make sure to paste the
   string above without formatting (``CTRL+Shift+v``), otherwise it
   won't work.
 
-| **Example output:**
-| Monday, 2024-03-18 15:31
-
-In the following table you can find some useful parameters:
+The following table lists available format directives:
 
 .. list-table::
    :widths: 15 30 55
@@ -143,6 +131,6 @@ In the following table you can find some useful parameters:
      - Use ``%W`` for a different calculation method
 
 .. tip::
-   For those who want to go further: We support the known format directives for
+   We support the known format directives for
    the Ruby built-in method ``strftime`` of the ``DateTime`` class.
    For more information, see `here <https://apidock.com/ruby/DateTime/strftime>`_.
