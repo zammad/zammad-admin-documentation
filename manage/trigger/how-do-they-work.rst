@@ -45,11 +45,7 @@ Action activator may evaluate **conditions** in two modes:
    **1 low** will trigger if the ticket was moved to another group while
    priority was set **1 low**.
 
-<<<<<<< HEAD
-Time event
-=======
 Time Event
->>>>>>> pre-release
 ^^^^^^^^^^
 
 The execution is triggered at a specific time when a certain event is
