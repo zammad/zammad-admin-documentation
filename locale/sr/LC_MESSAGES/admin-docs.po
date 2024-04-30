@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-16 08:40+0200\n"
-"PO-Revision-Date: 2024-04-09 07:00+0000\n"
+"POT-Creation-Date: 2024-04-22 08:04+0100\n"
+"PO-Revision-Date: 2024-04-23 01:06+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
-"documentations/admin-documentation-pre-release/sr/>\n"
+"documentations/admin-documentation-latest/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1274,7 +1274,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:14
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:17
 #: ../system/objects.rst:162 ../system/objects.rst:244
-#: ../system/variables.rst:109
+#: ../system/variables.rst:101
 msgid "Note"
 msgstr "Напомена"
 
@@ -3297,7 +3297,7 @@ msgid "Default value"
 msgstr "Подразумевана вредност"
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
-#: ../system/subscription/billing.rst:53 ../system/variables.rst:108
+#: ../system/subscription/billing.rst:53 ../system/variables.rst:100
 msgid "Description"
 msgstr "Опис"
 
@@ -12831,33 +12831,25 @@ msgstr ""
 "Ово вам омогућава да својим оператерима помогнете са одређеним информацијама "
 "ако је потребно (нпр. аутоматске промене примењеног окидача на тикет)."
 
-#: ../manage/trigger/how-do-they-work.rst:115
+#: ../manage/trigger/how-do-they-work.rst:117
 msgid "Localization of Execution Changes"
 msgstr "Локализација при извршавању радње"
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:119
 msgid ""
-"To translate the output of variables, use the ``t`` function. To format date "
-"and time stamps, use the ``dt`` function."
+"The system locale and timezone predefines a default format of date and "
+"timestamp replacement variables. These settings are customizable for "
+"triggers."
 msgstr ""
-"За превод вредности променљивих, користите функцију ``t`. За форматирање "
-"вредности датума и времена, користите функцију ``dt``."
+"Језик и временска зона система одређују подразумевани формат датума и "
+"времена приликом замене вредности променљивих. Ова подешавања могу бити "
+"прилагођена за окидаче."
 
-#: ../manage/trigger/how-do-they-work.rst:120
-msgid ""
-"The ``t`` function translates the output of variables according to the "
-"selected \"Locale\". The ``dt`` function transforms a date and time stamp "
-"according to the selected \"Timezone\"."
-msgstr ""
-"Функција ``t`` преводи вредност променљиве према одабраном „Језику”. "
-"Функција ``dt`` трансформише вредност датума и времена према одабраној "
-"„Временској зони”."
-
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger/how-do-they-work.rst:0
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr "Снимак екрана који приказује одељак локализација дијалога окидача"
 
-#: ../manage/trigger/how-do-they-work.rst:130
+#: ../manage/trigger/how-do-they-work.rst:126
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
@@ -12865,13 +12857,24 @@ msgstr ""
 "Најбоља пракса је да се додају појединачни окидачи за сваки језик/временску "
 "зону и да се извршавају на основу атрибута корисника или организације."
 
-#: ../manage/trigger/how-do-they-work.rst:133
+#: ../manage/trigger/how-do-they-work.rst:129
 msgid ""
-"For more information and examples, please have a look at the explanation in "
-"the :ref:`variables section <variable_localization>`."
+"The format and timezone of date and timestamp replacement variables is "
+"customizable by the use of the ``dt()`` method. Further on the ``t()`` "
+"method can be used to translated string replacement variables according to "
+"the selected locale language."
 msgstr ""
-"За више информација и примере, погледајте објешњење у :ref:`одељку о "
-"променљивама <variable_localization>`."
+"Формат и временска зона вредности променљивих датума и временских ознака "
+"може да се прилагоди коришћењем ``dt()`` функције. Додатно, коришћењем "
+"``t()`` функције може се превести вредност променљиве према одабраном језику."
+
+#: ../manage/trigger/how-do-they-work.rst:131
+msgid ""
+"For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
+"in the :ref:`variables section <variable_localization>`."
+msgstr ""
+"За пример коришћења ``t()`` и``dt()`` функције, пратите упутства у :ref:"
+"`одељку о променљивама <variable_localization>`."
 
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
@@ -13520,11 +13523,6 @@ msgstr ""
 "другом корисничком атрибуту."
 
 #: ../manage/users/via-the-admin-panel.rst:36
-#, fuzzy
-#| msgid ""
-#| "The search list displays up to 50 users, from newest to oldest. That "
-#| "means that if there are more than 50 results, the user you're searching "
-#| "for might not be shown."
 msgid ""
 "The search list displays up to 50 users, from newest to oldest. That means "
 "that if there are more than 50 results, the user you're searching for might "
@@ -13532,13 +13530,16 @@ msgid ""
 msgstr ""
 "Листа за претрагу приказује до 50 корисника, од најновијих до најстаријих. "
 "То значи да ако има више од 50 резултата, корисник кога тражите можда неће "
-"бити приказан."
+"бити приказан. Да бисте пронашли траженог корисника, мораћете да сузите "
+"претрагу."
 
 #: ../manage/users/via-the-admin-panel.rst:41
 msgid ""
 "This limit is currently hard-coded and by design. We are aware of this "
 "limitation and will probably change it sometime in the future."
 msgstr ""
+"Овај лимит је тренутно неизмењив. Свесни смо овог ограничења и вероватно "
+"ћемо га изменити у будућности."
 
 #: ../manage/users/via-the-admin-panel.rst:55
 msgid "🔒 Unlock locked user accounts"
@@ -26468,6 +26469,7 @@ msgid "Initial steps to configure external data source object type"
 msgstr "Први кораци за подешавање удаљеног извора података"
 
 #: ../system/objects/external-data-source-example.rst:23
+#: ../system/variables.rst:85
 msgid "**Example:**"
 msgstr "**Пример:**"
 
@@ -28712,15 +28714,17 @@ msgid ""
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
 "tells Zammad to search for fitting translated strings. The used output "
 "language is based on the system language of Zammad which you can set in the "
-"admin panel under :doc:`/settings/branding`."
+"admin panel under :doc:`/settings/branding` or based on the selected locale "
+"in the trigger/scheduler edit dialog."
 msgstr ""
 "Ако желите да користите преведене променљиве у окидачима или планеерима, "
 "можете проширити поље променљиве на следећи начин: ``#{t(ticket.state.name)}"
 "``. Функција ``t`` ће потражити међу одговарајућим преводима. Циљни језик је "
 "базиран на основу системског језика Zammad-а који можете подесити у панелу "
-"администратора под :doc:`брендингом </settings/branding>`."
+"администратора под :doc:`брендингом </settings/branding>` или на основу "
+"одабраног језика у дијалогу окидача/планера."
 
-#: ../system/variables.rst:68
+#: ../system/variables.rst:69
 msgid ""
 "A possible use-case: you want to send your customers updates on tickets via "
 "trigger or scheduler which should include the state of the ticket. Using the "
@@ -28733,57 +28737,48 @@ msgstr ""
 "``t()``) ће резултовати у вредности назива стања на оригиналном (енглеском) "
 "језику."
 
-#: ../system/variables.rst:74
+#: ../system/variables.rst:75
 msgid "Date and Time Formatting"
 msgstr "Форматирање датума и времена"
 
-#: ../system/variables.rst:76
+#: ../system/variables.rst:77
 msgid ""
-"The ``dt`` method is used for transforming date/time values into any format. "
-"You can define a date and time format which is different from your Zammad "
-"default (see :doc:`branding </settings/branding>`). To use it, put the "
-"``dt`` method in front of your variable as you can see below."
+"The system (trigger/scheduler selected) locale and timezone predefines a "
+"default format of date and timestamp. This format is customizable by using "
+"the ``dt()`` method."
 msgstr ""
-"Метод ``dt`` се користи за трансформацију вредности датума/времена у било "
-"који формат. Можете одредити формат датума и времена који се разликује од "
-"подразумеваног у Zammad-у (погледајте :doc:`брендинг </settings/branding>`). "
-"Приликом коришжења, убаците метод ``dt`` испред ваше варијабле по узору на "
-"примере испод."
+"Језик и временска зона система одређују подразумевани формат датума и "
+"времена. Овај формат може бити прилагођен коришћењем ``dt()``функције."
+
+#: ../system/variables.rst:79
+msgid "The method arguments are as follows:"
+msgstr "Параметри функције су следећи:"
 
 #: ../system/variables.rst:81
+msgid "The date or timestamp variable you want to format."
+msgstr "Променљива датума или временске ознаке коју желите да форматирате."
+
+#: ../system/variables.rst:82
+msgid "The output format string."
+msgstr "Формаз излазног низа текста."
+
+#: ../system/variables.rst:83
+msgid "The timezone to apply (optional)."
+msgstr "Временска зона за примену (необавезно)."
+
+#: ../system/variables.rst:86
 msgid ""
-"The syntax is as follows: ``#{dt(your.variable, \"parameters and text "
-"string\", \"timezone\")}``"
+"``#{dt(ticket.updated_at, \"%A %Y-%m-%d %H:%M in the office\", \"Europe/"
+"Berlin\")}``"
 msgstr ""
-"Синтакса је следећа: ``#{dt(your.variable, \"parameters and text string\", "
-"\"timezone\")}``"
+"``#{dt(ticket.updated_at, \"%A %Y-%m-%d %H:%M у канцеларији\", \"Europe/"
+"Berlin\")}``"
 
-#: ../system/variables.rst:84
-msgid ""
-"Please note that you can use any combination of parameters and free text "
-"strings or characters. Only the parameters are replaced by the variable you "
-"want to output, see the following example. The date/time output is based on "
-"the provided timezone. If using a specific time zone, it is recommended to "
-"mention it manually as a text string at the end of the variable parameters "
-"to avoid confusion."
-msgstr ""
-"Обратите пажњу да можете користити било коју комбинацију параметара и низова "
-"текста или карактера. Биће замењени само параметри променљиве коју желите на "
-"излазу, погледајте следећи пример. Вредност датума и времена се заснива на "
-"датој временској зони. Уколико користите одређену временску зону, "
-"препоручујемо да је напоменете као додатни текст на крају параметара "
-"променљиве да бисте избегли збуњивање."
+#: ../system/variables.rst:87
+msgid "Monday, 2024-03-18 15:31 in the office"
+msgstr "Понедељак, 2024-03-18 15:31 у канцеларији"
 
-#: ../system/variables.rst:91
-msgid "**Example variable:**"
-msgstr "**Пример променљиве:**"
-
-#: ../system/variables.rst:92
-msgid "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
-msgstr ""
-"``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
-
-#: ../system/variables.rst:94
+#: ../system/variables.rst:89
 msgid ""
 "If you want to use our example, make sure to paste the string above without "
 "formatting (``CTRL+Shift+v``), otherwise it won't work."
@@ -28791,79 +28786,71 @@ msgstr ""
 "Уколико желите да користите наш пример, обавезно налепите текст изнад без "
 "формата (``Ctrl+Shift+v``), у супротном неће успети."
 
-#: ../system/variables.rst:98
-msgid "**Example output:**"
-msgstr "**Пример вредности:**"
+#: ../system/variables.rst:93
+msgid "The following table lists available format directives:"
+msgstr "Следећа табела приказује доступне директиве формата:"
 
 #: ../system/variables.rst:99
-msgid "Monday, 2024-03-18 15:31"
-msgstr "Monday, 2024-03-18 15:31"
-
-#: ../system/variables.rst:101
-msgid "In the following table you can find some useful parameters:"
-msgstr "У следећој табели можете пронаћи неке корисне параметре:"
-
-#: ../system/variables.rst:107
 msgid "Parameter"
 msgstr "Параметар"
 
-#: ../system/variables.rst:110
+#: ../system/variables.rst:102
 msgid "``%Y``"
 msgstr "``%Y``"
 
-#: ../system/variables.rst:111
+#: ../system/variables.rst:103
 msgid "Year with 4 digits"
 msgstr "Година са 4 цифре"
 
-#: ../system/variables.rst:112
+#: ../system/variables.rst:104
 msgid "Use ``%y`` for year with 2 digits"
 msgstr "Користите ``%y`` за годину са 2 цифре"
 
-#: ../system/variables.rst:113
+#: ../system/variables.rst:105
 msgid "``%m``"
 msgstr "``%m``"
 
-#: ../system/variables.rst:114
+#: ../system/variables.rst:106
 msgid "Month of year (as number with zero-padding)"
 msgstr "Месец године (као број са допуном нула)"
 
-#: ../system/variables.rst:115
+#: ../system/variables.rst:107
 msgid "Use ``%-m`` for month without zero-padding"
 msgstr "Користите ``%-m`` за месец без допуне нула"
 
-#: ../system/variables.rst:116
+#: ../system/variables.rst:108
 msgid "``%d``"
 msgstr "``%d``"
 
-#: ../system/variables.rst:117
+#: ../system/variables.rst:109
 msgid "Day of month (as number with zero-padding)"
 msgstr "Дан месеца (као број са допуном нула)"
 
-#: ../system/variables.rst:118
+#: ../system/variables.rst:110
 msgid "Use ``%e`` for day without zero-padding"
 msgstr "Користите ``%e`` за дан без допуне нула"
 
-#: ../system/variables.rst:119
+#: ../system/variables.rst:111
 msgid "``%H``"
 msgstr "``%H``"
 
-#: ../system/variables.rst:120
+#: ../system/variables.rst:112
 msgid "Hour of day in 24h notation with zero-padding"
 msgstr "Час дана у 24-часовном формату са допуном нула"
 
-#: ../system/variables.rst:121
+#: ../system/variables.rst:113
 msgid "Use ``%k`` for hour without zero-padding"
 msgstr "Користите ``%k`` за час без допуне нула"
 
-#: ../system/variables.rst:122
+#: ../system/variables.rst:114
 msgid "``%I``"
 msgstr "``%I``"
 
-#: ../system/variables.rst:123
+#: ../system/variables.rst:115
 msgid "Hour of day in 12h notation with zero-padding"
 msgstr "Час дана у 12-часовном формату са допуном нула"
 
-#: ../system/variables.rst:124
+#: ../system/variables.rst:116
 msgid ""
 "Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian "
 "indicator"
@@ -28871,67 +28858,67 @@ msgstr ""
 "Користите ``%l`` за час без допуне нула и ``%p`` / ``%P`` за индикатор "
 "меридијана"
 
-#: ../system/variables.rst:125
+#: ../system/variables.rst:117
 msgid "``%M``"
 msgstr "``%M``"
 
-#: ../system/variables.rst:126
+#: ../system/variables.rst:118
 msgid "Minute of hour"
 msgstr "Минут часа"
 
-#: ../system/variables.rst:128
+#: ../system/variables.rst:120
 msgid "``%S``"
 msgstr "``%S``"
 
-#: ../system/variables.rst:129
+#: ../system/variables.rst:121
 msgid "Second of Minute"
 msgstr "Секунда минута"
 
-#: ../system/variables.rst:131
+#: ../system/variables.rst:123
 msgid "``%A``"
 msgstr "``%A``"
 
-#: ../system/variables.rst:132
+#: ../system/variables.rst:124
 msgid "Weekday name"
 msgstr "Назив дана у недељи"
 
-#: ../system/variables.rst:133
+#: ../system/variables.rst:125
 msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
 msgstr "Користите ``%a`` за скраћеницу или ``%^A`` за велика слова"
 
-#: ../system/variables.rst:134
+#: ../system/variables.rst:126
 msgid "``%B``"
 msgstr "``%B``"
 
-#: ../system/variables.rst:135
+#: ../system/variables.rst:127
 msgid "Month name"
 msgstr "Назив месеца"
 
-#: ../system/variables.rst:136
+#: ../system/variables.rst:128
 msgid "Use ``%b`` for abbreviated name"
 msgstr "Користите ``%b`` за скраћеницу"
 
-#: ../system/variables.rst:137
+#: ../system/variables.rst:129
 msgid "``%U``"
 msgstr "``%U``"
 
-#: ../system/variables.rst:138
+#: ../system/variables.rst:130
 msgid "Week number of current year"
 msgstr "Број недеље у текућој години"
 
-#: ../system/variables.rst:139
+#: ../system/variables.rst:131
 msgid "Use ``%W`` for a different calculation method"
 msgstr "Користите ``%W`` за другачији обрачун"
 
-#: ../system/variables.rst:142
+#: ../system/variables.rst:134
 msgid ""
-"For those who want to go further: We support the known format directives for "
-"the Ruby built-in method ``strftime`` of the ``DateTime`` class. For more "
-"information, see `here <https://apidock.com/ruby/DateTime/strftime>`_."
+"We support the known format directives for the Ruby built-in method "
+"``strftime`` of the ``DateTime`` class. For more information, see `here "
+"<https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
-"За оне који желе више: подржани су све директиве Ruby метода ``strftime`` из "
-"DateTime`` класе. За више информације, погледајте `овде <https://apidock.com/"
-"ruby/DateTime/strftime>`_."
+"Подржане су све директиве Ruby метода ``strftime`` из DateTime`` класе. За "
+"више информације, погледајте `овде <https://apidock.com/ruby/DateTime/"
+"strftime>`_."
 
 #: ../system/variables/article.rst:2
 msgid "Articles"
@@ -30724,6 +30711,65 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "To translate the output of variables, use the ``t`` function. To format "
+#~ "date and time stamps, use the ``dt`` function."
+#~ msgstr ""
+#~ "За превод вредности променљивих, користите функцију ``t`. За форматирање "
+#~ "вредности датума и времена, користите функцију ``dt``."
+
+#~ msgid ""
+#~ "The ``t`` function translates the output of variables according to the "
+#~ "selected \"Locale\". The ``dt`` function transforms a date and time stamp "
+#~ "according to the selected \"Timezone\"."
+#~ msgstr ""
+#~ "Функција ``t`` преводи вредност променљиве према одабраном „Језику”. "
+#~ "Функција ``dt`` трансформише вредност датума и времена према одабраној "
+#~ "„Временској зони”."
+
+#~ msgid ""
+#~ "The ``dt`` method is used for transforming date/time values into any "
+#~ "format. You can define a date and time format which is different from "
+#~ "your Zammad default (see :doc:`branding </settings/branding>`). To use "
+#~ "it, put the ``dt`` method in front of your variable as you can see below."
+#~ msgstr ""
+#~ "Метод ``dt`` се користи за трансформацију вредности датума/времена у било "
+#~ "који формат. Можете одредити формат датума и времена који се разликује од "
+#~ "подразумеваног у Zammad-у (погледајте :doc:`брендинг </settings/"
+#~ "branding>`). Приликом коришжења, убаците метод ``dt`` испред ваше "
+#~ "варијабле по узору на примере испод."
+
+#~ msgid ""
+#~ "The syntax is as follows: ``#{dt(your.variable, \"parameters and text "
+#~ "string\", \"timezone\")}``"
+#~ msgstr ""
+#~ "Синтакса је следећа: ``#{dt(your.variable, \"parameters and text "
+#~ "string\", \"timezone\")}``"
+
+#~ msgid ""
+#~ "Please note that you can use any combination of parameters and free text "
+#~ "strings or characters. Only the parameters are replaced by the variable "
+#~ "you want to output, see the following example. The date/time output is "
+#~ "based on the provided timezone. If using a specific time zone, it is "
+#~ "recommended to mention it manually as a text string at the end of the "
+#~ "variable parameters to avoid confusion."
+#~ msgstr ""
+#~ "Обратите пажњу да можете користити било коју комбинацију параметара и "
+#~ "низова текста или карактера. Биће замењени само параметри променљиве коју "
+#~ "желите на излазу, погледајте следећи пример. Вредност датума и времена се "
+#~ "заснива на датој временској зони. Уколико користите одређену временску "
+#~ "зону, препоручујемо да је напоменете као додатни текст на крају "
+#~ "параметара променљиве да бисте избегли збуњивање."
+
+#~ msgid "**Example variable:**"
+#~ msgstr "**Пример променљиве:**"
+
+#~ msgid "**Example output:**"
+#~ msgstr "**Пример вредности:**"
+
+#~ msgid "In the following table you can find some useful parameters:"
+#~ msgstr "У следећој табели можете пронаћи неке корисне параметре:"
 
 #~ msgid "🐞 **Known bug**"
 #~ msgstr "🐞 **Позната грешка**"
