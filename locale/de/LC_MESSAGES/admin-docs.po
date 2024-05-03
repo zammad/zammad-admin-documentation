@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-22 08:04+0100\n"
-"PO-Revision-Date: 2024-04-17 06:24+0000\n"
+"PO-Revision-Date: 2024-05-01 09:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
-"documentations/admin-documentation-pre-release/de/>\n"
+"documentations/admin-documentation-latest/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.5\n"
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:88
 msgid "Chat"
@@ -13228,6 +13228,9 @@ msgid ""
 "timestamp replacement variables. These settings are customizable for "
 "triggers."
 msgstr ""
+"Die Sprache und die Zeitzone legen ein Format für Datums- und Zeitstempel "
+"fest, die bei Verwendung von Zeit-/Datums-Variablen ausgegeben werden. Diese "
+"Einstellungen sind für Trigger anpassbar."
 
 #: ../manage/trigger/how-do-they-work.rst:0
 msgid "Screenshot showing localization section of trigger dialog"
@@ -13249,18 +13252,18 @@ msgid ""
 "method can be used to translated string replacement variables according to "
 "the selected locale language."
 msgstr ""
+"Das Format und die Zeitzone von Datums- und Zeitstempel-Variablen ist durch "
+"die Verwendung der Methode ``dt()`` anpassbar. Außerdem kann die Methode "
+"``t()`` verwendet werden, um Text-Variablen entsprechend der gewählten "
+"Sprache zu übersetzen."
 
 #: ../manage/trigger/how-do-they-work.rst:131
-#, fuzzy
-#| msgid ""
-#| "For more information and examples, please have a look at the explanation "
-#| "in the :ref:`variables section <variable_localization>`."
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
 msgstr ""
-"Weitere Informationen und Beispiele finden Sie in der Erläuterung im "
-"Bereich :ref:`Variablen <variable_localization>`."
+"Für die Verwendung der ``t()`` und ``dt()`` Methoden folgen Sie bitte den "
+"Anweisungen im Bereich :ref:`Variablen <variable_localization>``."
 
 #: ../manage/trigger/learn-by-example.rst:2
 msgid "Trigger examples"
@@ -29627,13 +29630,6 @@ msgid "Using Translated Variables"
 msgstr "Verwendung übersetzter Variablen"
 
 #: ../system/variables.rst:62
-#, fuzzy
-#| msgid ""
-#| "If you want to use a translated variable in triggers or schedulers, you "
-#| "can extend the placeholder like this: ``#{t(ticket.state.name)}``. The "
-#| "``t`` tells Zammad to search for fitting translated strings. The used "
-#| "output language is based on the system language of Zammad which you can "
-#| "set in the admin panel under :doc:`/settings/branding`."
 msgid ""
 "If you want to use a translated variable in triggers or schedulers, you can "
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
@@ -29642,12 +29638,13 @@ msgid ""
 "admin panel under :doc:`/settings/branding` or based on the selected locale "
 "in the trigger/scheduler edit dialog."
 msgstr ""
-"Wenn Sie eine übersetzte Variable in Triggern oder der Automatisierung "
-"verwenden möchten, können Sie die Variable wie folgt erweitern: ``#{t(ticket."
-"state.name)}``. Das ``t`` weist Zammad an, nach passenden übersetzten "
-"Zeichenketten zu suchen. Die verwendete Ausgabesprache basiert auf der "
-"Systemsprache von Zammad, die Sie in den Einstellungen unter :doc:`/settings/"
-"branding` einstellen können."
+"Wenn Sie eine übersetzte Variable in Triggern oder Automatisierungen "
+"verwenden möchten, können Sie den Platzhalter wie folgt erweitern: "
+"``#{t(ticket.status.name)}``. Das ``t`` sagt Zammad, dass es nach passenden "
+"übersetzten Zeichenketten suchen soll. Die verwendete Ausgabesprache basiert "
+"auf der Systemsprache von Zammad, die Sie im Admin-Panel unter :doc:`/"
+"settings/branding` einstellen können oder basierend auf der ausgewählten "
+"Sprache im Trigger-/Automatisierungs-Dialog."
 
 #: ../system/variables.rst:69
 msgid ""
@@ -29672,44 +29669,37 @@ msgid ""
 "default format of date and timestamp. This format is customizable by using "
 "the ``dt()`` method."
 msgstr ""
+"Die Sprache und Zeitzone des Systems (oder in Trigger/Automatisierung "
+"ausgewählt) gibt ein Standardformat für Datum und Zeitstempel vor. Dieses "
+"Format kann mit Hilfe der Methode ``dt()`` angepasst werden."
 
 #: ../system/variables.rst:79
-#, fuzzy
-#| msgid "The feature works as follows:"
 msgid "The method arguments are as follows:"
-msgstr "Das funktioniert wie folgt:"
+msgstr "Die Argumente der Methode lauten wie folgt:"
 
 #: ../system/variables.rst:81
 msgid "The date or timestamp variable you want to format."
-msgstr ""
+msgstr "Die Datums- oder Zeitstempelvariable, die Sie formatieren möchten."
 
 #: ../system/variables.rst:82
-#, fuzzy
-#| msgid "``Test`` with formatting"
 msgid "The output format string."
-msgstr "``Test`` mit Formatierung"
+msgstr "Die Zeichenkette für das Ausgabeformat."
 
 #: ../system/variables.rst:83
-#, fuzzy
-#| msgid "Attachment upload (optional)"
 msgid "The timezone to apply (optional)."
-msgstr "Hochladen von Anhängen (optional)"
+msgstr "Die zu verwendende Zeitzone (optional)."
 
 #: ../system/variables.rst:86
-#, fuzzy
-#| msgid ""
-#| "``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europe/Berlin\")}``"
 msgid ""
 "``#{dt(ticket.updated_at, \"%A %Y-%m-%d %H:%M in the office\", \"Europe/"
 "Berlin\")}``"
 msgstr ""
-"``#{dt(ticket.updated_at, \"%A, %Y-%m-%d %H:%M\", \"Europa/Berlin\")}``"
+"``#{dt(ticket.updated_at, \"%A %Y-%m-%d %H:%M im Büro\", \"Europa/Berlin\""
+")}``"
 
 #: ../system/variables.rst:87
-#, fuzzy
-#| msgid "Monday, 2024-03-18 15:31"
 msgid "Monday, 2024-03-18 15:31 in the office"
-msgstr "Montag, 2024-03-18 15:31"
+msgstr "Montag, 2024-03-18 15:31 im Büro"
 
 #: ../system/variables.rst:89
 msgid ""
@@ -29723,6 +29713,7 @@ msgstr ""
 #: ../system/variables.rst:93
 msgid "The following table lists available format directives:"
 msgstr ""
+"In der folgenden Tabelle sind die verfügbaren Formatparameter aufgeführt:"
 
 #: ../system/variables.rst:99
 msgid "Parameter"
@@ -29848,21 +29839,14 @@ msgid "Use ``%W`` for a different calculation method"
 msgstr "Verwenden Sie ``%W`` für eine andere Berechnungsmethode"
 
 #: ../system/variables.rst:134
-#, fuzzy
-#| msgid ""
-#| "For those who want to go further: We support the known format directives "
-#| "for the Ruby built-in method ``strftime`` of the ``DateTime`` class. For "
-#| "more information, see `here <https://apidock.com/ruby/DateTime/"
-#| "strftime>`_."
 msgid ""
 "We support the known format directives for the Ruby built-in method "
 "``strftime`` of the ``DateTime`` class. For more information, see `here "
 "<https://apidock.com/ruby/DateTime/strftime>`_."
 msgstr ""
-"Für diejenigen, die noch weiter gehen wollen: Wir unterstützen die Formate "
-"für die in Ruby eingebaute Methode ``strftime`` der Klasse ``DateTime``. Für "
-"weitere Informationen siehe `hier <https://apidock.com/ruby/DateTime/"
-"strftime>`_."
+"Wir unterstützen die bekannten Formatparameter für die in Ruby eingebaute "
+"Methode ``strftime`` der Klasse ``DateTime``. Für weitere Informationen "
+"siehe `hier <https://apidock.com/ruby/DateTime/strftime>`_."
 
 #: ../system/variables/article.rst:2
 msgid "Articles"
