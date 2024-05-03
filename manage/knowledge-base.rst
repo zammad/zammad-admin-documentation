@@ -220,8 +220,10 @@ base), you can do so by following the steps below:
 .. note::
 
    - The permissions of a parent category are inherited to sub-categories.
-   - The permission ``knowledge_base.reader`` can be widened and restricted.
-   - The permission ``knowledge_base.editor`` **can't** be adjusted.
+   - The permission ``knowledge_base.reader`` can be widened or restricted in
+     sub-categories.
+   - The permission ``knowledge_base.editor`` **can't** be adjusted in
+     sub-categories.
    - Have a look at the
      :user-docs:`knowledge base section </extras/knowledge-base.html>` in
      the user documentation where you can find more information about the usage.
