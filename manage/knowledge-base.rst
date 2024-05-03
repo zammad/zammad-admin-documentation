@@ -206,7 +206,7 @@ The general access to the knowledge base is managed via
 find more information about roles and permissions
 :doc:`here <roles/index>`.
 
-If you want to grant more granular permissions than to global read/edit
+If you want to grant more granular permissions than the global read/edit
 permissions (e.g. edit permissions only for specific parts of the knowledge
 base), you can do so by following the steps below:
 
@@ -220,9 +220,10 @@ base), you can do so by following the steps below:
 .. note::
 
    - The permissions of a parent category are inherited to sub-categories.
-   - The permissions of a category tree can only be widened, not restricted.
+   - The permission ``knowledge_base.reader`` can be widened and restricted.
+   - The permission ``knowledge_base.editor`` **can't** be adjusted.
    - Have a look at the
      :user-docs:`knowledge base section </extras/knowledge-base.html>` in
-     the user documentation to find more information about the usage.
+     the user documentation where you can find more information about the usage.
 
 
