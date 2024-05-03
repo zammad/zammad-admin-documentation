@@ -197,3 +197,35 @@ Delete
 Use this panel to delete the knowledge base.
 If you wish to unpublish it without deleting all of its content,
 simply disable it via the toggle button at the top of the window instead.
+
+Permissions
+-----------
+
+The general access to the knowledge base is managed via
+``knowledge_base.reader`` and ``knowledge_base.editor`` permissions. You can
+find more information about roles and permissions
+:doc:`here <roles/index>`.
+
+If you want to grant more granular permissions than the global read/edit
+permissions (e.g. edit permissions only for specific parts of the knowledge
+base), you can do so by following the steps below:
+
+- First create the base structure of the knowledge base (if not already done)
+- Create or choose one or more roles which should have granular permissions
+- Grant the ``knowlege_base.reader`` permission to the desired role(s)
+- Edit the permissions of each (sub-)category of the knowledge base
+- Assign the role to one or more users who should be able to edit the knowledge
+  base (partially)
+
+.. note::
+
+   - The permissions of a parent category are inherited to sub-categories.
+   - The permission ``knowledge_base.reader`` can be widened or restricted in
+     sub-categories.
+   - The permission ``knowledge_base.editor`` **can't** be adjusted in
+     sub-categories.
+   - Have a look at the
+     :user-docs:`knowledge base section </extras/knowledge-base.html>` in
+     the user documentation where you can find more information about the usage.
+
+
