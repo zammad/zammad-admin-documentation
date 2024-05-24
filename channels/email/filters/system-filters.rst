@@ -11,7 +11,7 @@ Zammad's behavior.
    feel free to ask over at the `Community <https://community.zammad.org>`_.
 
 Service-Now
-====
+===========
 
 Zammad will detect Service Now emails and assign them to existing tickets,
 if the following requirements are met:
@@ -23,7 +23,7 @@ See `Service-Now Mail Example <https://github.com/zammad/zammad/blob/stable/test
 for comparison of your emails.
 
 JIRA
-===========
+====
 
 Zammad will detect JIRA emails and assign them to existing tickets,
 if the following requirements are met:
