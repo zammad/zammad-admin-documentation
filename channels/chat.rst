@@ -80,15 +80,19 @@ The final result will look like the following:
 
 **Requirements**
 
-Zammad chat requires jQuery. If you don't already use it on your website
-include it like this:
+Zammad chat comes in two flavors: a version with and without jQuery. You can
+choose which one you prefer by toggling the **With jQuery** switch that will
+display the appropriate code snippet below.
+
+For jQuery version, if you don't already use it on your website, make sure to
+first include it like this:
 
 ``<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>``
 
 You have two options to implement the chat on your website:
 
-- Automatically show chat (that's the default-setting)
-- or manually open chat.
+- Automatically show the chat (that's the default setting)
+- or manually open the chat.
 
 **Chat restrictions**
 
