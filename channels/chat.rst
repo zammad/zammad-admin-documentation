@@ -52,19 +52,20 @@ You can create chat widgets for your web pages to allow visitors to
 chat with you.
 
 The area for configuring the chat can be found in the admin area
-at Channels > Chat:
+under **Channels > Chat**:
 
 .. image:: /images/channels/channel-chat-1.png
 
 You can set up chats for different websites and edit them independently.
-The integrated designer helps the chat-widget to adapt to the website color.
+The integrated designer helps the chat widget to adapt to the website color.
 If you don't like the proposed design, you can manually adjust the design.
 Through the different previews you have the possibility to display directly
 how the presentation looks on different devices.
 
 .. image:: /images/channels/channel-chat-2.png
 
-**Usage**
+Usage
+-----
 
 Insert the widget code into the source code of every page on which you want the
 chat to be visible on. It should be placed at the end of the page's source code
@@ -72,13 +73,15 @@ before the ``</body>`` closing tag.
 
 .. image:: /images/channels/channel-chat-4.png
 
-**Result**
+Result
+------
 
 The final result will look like the following:
 
 .. image:: /images/channels/channel-chat-5.png
 
-**Requirements**
+Requirements
+------------
 
 Zammad chat comes in two flavors: a version with and without jQuery. You can
 choose which one you prefer by toggling the **With jQuery** switch that will
@@ -87,21 +90,24 @@ display the appropriate code snippet below.
 For jQuery version, if you don't already use it on your website, make sure to
 first include it like this:
 
-``<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>``
+.. code-block:: html
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 You have two options to implement the chat on your website:
 
 - Automatically show the chat (that's the default setting)
 - or manually open the chat.
 
-**Chat restrictions**
+Chat restrictions
+-----------------
 
 You offer a chat for your target group, but you don't want to activate chat for
 certain IP addresses or countries? Then you have the possibility to block the
 wished IP addresses and countries fast and easily via the chat configuration in
 the admin panel. The configuration panel looks like this:
 
-.. image:: /images/channels/channel-chat-3.jpg
+.. image:: /images/channels/channel-chat-3.png
 
 You can also find more information about the chat customization
 in the admin area.
