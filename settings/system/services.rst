@@ -29,7 +29,7 @@ Geo Location Service
    Defines the backend for geo location lookups to store geo locations for
    addresses.
 
-   Default: ``OpenStreetMap (ODbL 1.0, http:/ /osm.org/copyright)`` (active)
+   Default: ``OpenStreetMap (ODbL 1.0, http://osm.org/copyright)`` (active)
 
 .. hint::
 
