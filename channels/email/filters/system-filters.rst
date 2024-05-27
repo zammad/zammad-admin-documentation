@@ -10,8 +10,8 @@ Zammad's behavior.
    Please note that this is not a full filters list, if you're missing filters,
    feel free to ask over at the `Community <https://community.zammad.org>`_.
 
-JIRA
-====
+Service-Now
+===========
 
 Zammad will detect Service Now emails and assign them to existing tickets,
 if the following requirements are met:
@@ -19,11 +19,11 @@ if the following requirements are met:
    - Headers contain the ``X-ServiceNow-Generated`` header.
    - Subject does match the regex ``\s(INC\d+)\s`` e.g. ``INC678439``.
 
-See `JIRA Mail Example <https://github.com/zammad/zammad/blob/stable/test/data/mail/mail090.box>`_
+See `Service-Now Mail Example <https://github.com/zammad/zammad/blob/stable/test/data/mail/mail090.box>`_
 for comparison of your emails.
 
-Service-Now
-===========
+JIRA
+====
 
 Zammad will detect JIRA emails and assign them to existing tickets,
 if the following requirements are met:
@@ -32,5 +32,5 @@ if the following requirements are met:
    - Subject does match the regex ``\[JIRA\]\s\((\w+-\d+)\)`` e.g.
      ``[JIRA] (SYS-422)``.
 
-See `Service-Now Mail Example <https://github.com/zammad/zammad/blob/stable/test/data/mail/mail103.box>`_
+See `JIRA Mail Example <https://github.com/zammad/zammad/blob/stable/test/data/mail/mail103.box>`_
 for comparison of your emails.
