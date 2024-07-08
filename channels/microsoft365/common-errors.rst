@@ -22,21 +22,21 @@ request to the wrong tenant.
 In this case, please compare whether the client ID created in Zammad
 matches that in Azure for the Azure App.
 
-The Client ID can be found in Zammad under 
-Settings > Channels > Microsoft 365 > App Configuration. 
-See :doc:`here </channels/microsoft365/accounts>` how to find the client 
+The Client ID can be found in Zammad under
+Settings > Channels > Microsoft 365 > App Configuration.
+See :doc:`here </channels/microsoft365/accounts>` how to find the client
 ID in Azure and where to copy it to in Zammad.
 
 Wrong or expired client secret
 ------------------------------
 
-**Error message:** 500: We're sorry, but something went wrong. 
+**Error message:** 500: We're sorry, but something went wrong.
 
 .. figure:: /images/channels/microsoft365/errors/zammad_error_500.png
   :alt: Error message
   :scale: 90%
   :align: center
-	  
+
 This error occurs when the client uses an incorrect or expired client secret.
 
 .. warning:: **Important notice:**
@@ -56,7 +56,7 @@ neither a valid DNS name, nor a valid external domain.
   :alt: Error message
   :scale: 90%
   :align: center
-	  
+
 If a wrong tenant is used in Zammad or the email account is not a member of
 the tenant created in Zammad, this error message occurs.
 
@@ -76,7 +76,7 @@ Request admin consent
   :alt: Error message
   :scale: 90%
   :align: center
-	  
+
 This message occurs when the admin tries to create an email account in Zammad
 that has not yet received approval from the Azure global admin.
 
@@ -100,16 +100,16 @@ Missing permissions for the Azure user
   :alt: Error message
   :scale: 60%
   :align: center
-  
+
   Error message in the M365 channel settings
-	  
+
 or
 
 .. figure:: /images/channels/microsoft365/errors/smtp-error-ticket.png
   :alt: Error message
   :scale: 90%
   :align: center
-	
+
   Error message in the ticket
 
 This error occurs when the admin wants to create an email account in Zammad
@@ -153,4 +153,19 @@ Log in to Exchange using Powershell::
 Switching on the SMTP authentication for a mailbox - also possible with a
 shared mailbox::
 
-   Set-CASMailbox -Identity name@domain.net -SmtpClientAuthenticationDisabled $false  
+   Set-CASMailbox -Identity name@domain.net -SmtpClientAuthenticationDisabled $false
+
+
+Retrieval of email failed
+-------------------------
+
+**Error message:** Retrieval using the IMAP4 protocol failed for the following
+message: [...]
+
+This can be caused by Microsoft Defender for Office 365 when Zammad fetches an
+email while its attachment is still being checked.
+
+To avoid this, you should change the
+`Safe Attachments unknown malware response <https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about?view=o365-worldwide#safe-attachments-policy-settings>`_
+from "Dynamic Delivery" to something else fitting your needs (e.g. "Block") for
+your Office 365 instance.
