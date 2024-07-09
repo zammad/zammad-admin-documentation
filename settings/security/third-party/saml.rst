@@ -170,11 +170,19 @@ Signing & Encrypting
 
 Certificate (PEM)
    Paste the public certificate of your Zammad SAML client, if you want to
-   enrypt the requests.
+   encrypt the requests.
+
+   Make sure the certificate is:
+
+   - already valid and not yet expired
+   - no CA certificate
+   - valid for signing and encrypting
 
 Private key (PEM)
    Paste the private key of your Zammad SAML client here, if you want to sign
    the requests.
+
+   Make sure the key is an RSA key with a length of at least 2048 bits.
 
 Private key secret
    If your private key is secured with a secret, you can provide it here.
