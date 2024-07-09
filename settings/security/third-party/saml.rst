@@ -192,11 +192,8 @@ Your callback URL
    to after successful authentication.
 
 .. hint:: After saving your input by clicking on the "Submit" button, Zammad
-   verifies the provided keys/certificates. Make sure they are valid for
-   signing/encrypting and they aren't expired.
-
-   Make sure the certificate **is no** CA certificate and that the key is an
-   RSA key with a length of at least 2048 bits.
+   verifies the provided keys/certificates (e.g. if they are valid for
+   signing/encrypting and if they aren't expired).
 
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
