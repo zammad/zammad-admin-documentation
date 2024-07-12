@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 10:32+0200\n"
-"PO-Revision-Date: 2024-05-31 14:00+0000\n"
+"POT-Creation-Date: 2024-07-09 11:16+0200\n"
+"PO-Revision-Date: 2024-07-10 03:16+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:88
 msgid "Chat"
@@ -995,7 +995,7 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:113
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:170
-#: ../settings/security/third-party/saml.rst:195
+#: ../settings/security/third-party/saml.rst:203
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:53 ../system/integrations/gitlab.rst:46
 #: ../system/integrations/pgp/index.rst:112
@@ -5320,19 +5320,23 @@ msgstr ""
 
 #: ../channels/microsoft365/common-errors.rst:160
 msgid "Retrieval of email failed"
-msgstr ""
+msgstr "Abruf der E-Mail fehlgeschlagen"
 
 #: ../channels/microsoft365/common-errors.rst:162
 msgid ""
 "**Error message:** Retrieval using the IMAP4 protocol failed for the "
 "following message: [...]"
 msgstr ""
+"**Error message:** Retrieval using the IMAP4 protocol failed for the "
+"following message: [...]"
 
 #: ../channels/microsoft365/common-errors.rst:165
 msgid ""
 "This can be caused by Microsoft Defender for Office 365 when Zammad fetches "
 "an email while its attachment is still being checked."
 msgstr ""
+"Dies kann durch Microsoft Defender für Office 365 verursacht werden, wenn "
+"Zammad eine E-Mail abruft, während ihr Anhang noch geprüft wird."
 
 #: ../channels/microsoft365/common-errors.rst:168
 msgid ""
@@ -5342,6 +5346,11 @@ msgid ""
 "from \"Dynamic Delivery\" to something else fitting your needs (e.g. "
 "\"Block\") for your Office 365 instance."
 msgstr ""
+"Um dies zu vermeiden, sollten Sie die \"Einstellungen der Richtlinie für "
+"sichere Anhänge <https://learn.microsoft.com/de-de/defender-office-365/safe-"
+"attachments-about?view=o365-worldwide#safe-attachments-policy-settings>`_\" "
+"für Ihre Office 365-Instanz ändern von \"Dynamische Zustellung\" auf etwas "
+"anderes, das für Sie passt (z.B. \"Blockieren\")."
 
 #: ../channels/microsoft365/email-headers.rst:3
 msgid ""
@@ -19454,23 +19463,49 @@ msgstr ""
 "Legen Sie fest, ob Sie die Anfragen signieren, verschlüsseln, beides oder "
 "nichts tun wollen."
 
-#: ../settings/security/third-party/saml.rst:173
+#: ../settings/security/third-party/saml.rst:179
 msgid "Certificate (PEM)"
 msgstr "Zertifikat (PEM)"
 
 #: ../settings/security/third-party/saml.rst:172
+#, fuzzy
+#| msgid ""
+#| "Paste the public certificate of your Zammad SAML client, if you want to "
+#| "enrypt the requests."
 msgid ""
 "Paste the public certificate of your Zammad SAML client, if you want to "
-"enrypt the requests."
+"encrypt the requests."
 msgstr ""
 "Fügen Sie das öffentliche Zertifikat Ihres Zammad SAML-Clients ein, wenn Sie "
 "die Anfragen verschlüsseln möchten."
 
+#: ../settings/security/third-party/saml.rst:175
+#, fuzzy
+#| msgid "Are you sure the recipient's certificate is valid?"
+msgid "Make sure the certificate is:"
+msgstr "Sind Sie sicher, dass das Zertifikat des Empfängers gültig ist?"
+
 #: ../settings/security/third-party/saml.rst:177
+msgid "already valid and not yet expired"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:178
+#, fuzzy
+#| msgid "IDP certificate"
+msgid "no CA certificate"
+msgstr "IDP-Zertifikat"
+
+#: ../settings/security/third-party/saml.rst:179
+#, fuzzy
+#| msgid "Signing & Encrypting"
+msgid "valid for signing and encrypting"
+msgstr "Signieren & Verschlüsseln"
+
+#: ../settings/security/third-party/saml.rst:185
 msgid "Private key (PEM)"
 msgstr "Privater Schlüssel (PEM)"
 
-#: ../settings/security/third-party/saml.rst:176
+#: ../settings/security/third-party/saml.rst:182
 msgid ""
 "Paste the private key of your Zammad SAML client here, if you want to sign "
 "the requests."
@@ -19478,21 +19513,25 @@ msgstr ""
 "Fügen Sie hier den privaten Schlüssel Ihres Zammad SAML-Clients ein, wenn "
 "Sie die Anfragen signieren möchten."
 
-#: ../settings/security/third-party/saml.rst:180
+#: ../settings/security/third-party/saml.rst:185
+msgid "Make sure the key is an RSA key with a length of at least 2048 bits."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:188
 msgid "Private key secret"
 msgstr "Geheimnis des privaten Schlüssels"
 
-#: ../settings/security/third-party/saml.rst:180
+#: ../settings/security/third-party/saml.rst:188
 msgid "If your private key is secured with a secret, you can provide it here."
 msgstr ""
 "Wenn Ihr privater Schlüssel mit einem Passwort gesichert ist, können Sie es "
 "hier angeben."
 
-#: ../settings/security/third-party/saml.rst:184
+#: ../settings/security/third-party/saml.rst:192
 msgid "Your callback URL"
 msgstr "Ihre Callback-URL"
 
-#: ../settings/security/third-party/saml.rst:183
+#: ../settings/security/third-party/saml.rst:191
 msgid ""
 "This URL is needed for your IdP configuration so it knows where to redirect "
 "to after successful authentication."
@@ -19500,7 +19539,7 @@ msgstr ""
 "Diese URL wird für die IdP-Konfiguration benötigt, damit dieser weiß, wohin "
 "er nach erfolgreicher Authentifizierung weiterleiten muss."
 
-#: ../settings/security/third-party/saml.rst:186
+#: ../settings/security/third-party/saml.rst:194
 msgid ""
 "After saving your input by clicking on the \"Submit\" button, Zammad "
 "verifies the provided keys/certificates (e.g. if they are valid for signing/"
@@ -19511,7 +19550,7 @@ msgstr ""
 "Zertifikate (z.B. ob sie zum Signieren/Verschlüsseln gültig und nicht "
 "abgelaufen sind)."
 
-#: ../settings/security/third-party/saml.rst:191
+#: ../settings/security/third-party/saml.rst:199
 msgid ""
 "See :ref:`automatic account linking <automatic-account-linking>` for details "
 "on how to link existing Zammad accounts to IdP accounts."
@@ -19519,11 +19558,11 @@ msgstr ""
 "Siehe :ref:`automatische Kontoverknüpfung <automatic-account-linking>` für "
 "Details zur Verknüpfung bestehender Zammad-Konten mit IdP-Konten."
 
-#: ../settings/security/third-party/saml.rst:197
+#: ../settings/security/third-party/saml.rst:205
 msgid "Automatic account linking doesn't work"
 msgstr "Automatische Kontoverknüpfung funktioniert nicht"
 
-#: ../settings/security/third-party/saml.rst:198
+#: ../settings/security/third-party/saml.rst:206
 msgid ""
 "Have you double-checked your IdP's user attribute mapping configuration?"
 msgstr ""

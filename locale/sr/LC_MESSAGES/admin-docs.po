@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 10:32+0200\n"
-"PO-Revision-Date: 2024-05-31 14:00+0000\n"
+"POT-Creation-Date: 2024-07-09 11:16+0200\n"
+"PO-Revision-Date: 2024-07-11 08:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:88
 msgid "Chat"
@@ -960,7 +960,7 @@ msgstr ""
 #: ../channels/google/accounts/account-setup.rst:113
 #: ../channels/google/accounts/register-app.rst:116
 #: ../channels/microsoft365/accounts/account-setup.rst:170
-#: ../settings/security/third-party/saml.rst:195
+#: ../settings/security/third-party/saml.rst:203
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:53 ../system/integrations/gitlab.rst:46
 #: ../system/integrations/pgp/index.rst:112
@@ -5190,19 +5190,23 @@ msgstr ""
 
 #: ../channels/microsoft365/common-errors.rst:160
 msgid "Retrieval of email failed"
-msgstr ""
+msgstr "Неуспешно добављање имејл порука"
 
 #: ../channels/microsoft365/common-errors.rst:162
 msgid ""
 "**Error message:** Retrieval using the IMAP4 protocol failed for the "
 "following message: [...]"
 msgstr ""
+"**Порука грешке:** Retrieval using the IMAP4 protocol failed for the "
+"following message: [...]"
 
 #: ../channels/microsoft365/common-errors.rst:165
 msgid ""
 "This can be caused by Microsoft Defender for Office 365 when Zammad fetches "
 "an email while its attachment is still being checked."
 msgstr ""
+"Ово може бити изазвано од стране Microsoft Defender за Office 365 када "
+"Zammad добавља имејл поруку док се њени прилози још увек скенирају."
 
 #: ../channels/microsoft365/common-errors.rst:168
 msgid ""
@@ -5212,6 +5216,11 @@ msgid ""
 "from \"Dynamic Delivery\" to something else fitting your needs (e.g. "
 "\"Block\") for your Office 365 instance."
 msgstr ""
+"Да бисте избегли ову ситуацију, измените `Safe Attachments сигурносну полису "
+"<https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-"
+"about?view=o365-worldwide#safe-attachments-policy-settings>`_ из \"Dynamic "
+"Delivery\" на неко подешавање које вам одговара (нпр. \"Block\") у вашој "
+"Office 365 инстанци."
 
 #: ../channels/microsoft365/email-headers.rst:3
 msgid ""
@@ -18856,23 +18865,49 @@ msgid ""
 "Define if you want to sign, encrypt, do both or nothing for the requests."
 msgstr "Одређује да ли желите потписивање и шифровање захтева."
 
-#: ../settings/security/third-party/saml.rst:173
+#: ../settings/security/third-party/saml.rst:179
 msgid "Certificate (PEM)"
 msgstr "Сертификат (PEM)"
 
 #: ../settings/security/third-party/saml.rst:172
+#, fuzzy
+#| msgid ""
+#| "Paste the public certificate of your Zammad SAML client, if you want to "
+#| "enrypt the requests."
 msgid ""
 "Paste the public certificate of your Zammad SAML client, if you want to "
-"enrypt the requests."
+"encrypt the requests."
 msgstr ""
 "Налепите јавни сертификат вашег Zammad SAML клијента, уколико желите "
 "шифровање захтева."
 
+#: ../settings/security/third-party/saml.rst:175
+#, fuzzy
+#| msgid "Are you sure the recipient's certificate is valid?"
+msgid "Make sure the certificate is:"
+msgstr "Да ли сте сигурни да је сертификат примаоца важећи?"
+
 #: ../settings/security/third-party/saml.rst:177
+msgid "already valid and not yet expired"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:178
+#, fuzzy
+#| msgid "IDP certificate"
+msgid "no CA certificate"
+msgstr "IDP сертификат"
+
+#: ../settings/security/third-party/saml.rst:179
+#, fuzzy
+#| msgid "Signing & Encrypting"
+msgid "valid for signing and encrypting"
+msgstr "Потписивање и шифровање"
+
+#: ../settings/security/third-party/saml.rst:185
 msgid "Private key (PEM)"
 msgstr "Тајни кључ (PEM)"
 
-#: ../settings/security/third-party/saml.rst:176
+#: ../settings/security/third-party/saml.rst:182
 msgid ""
 "Paste the private key of your Zammad SAML client here, if you want to sign "
 "the requests."
@@ -18880,19 +18915,23 @@ msgstr ""
 "Налепите тајни кључ вашег Zammad SAML клијента, уколико желите потписивање "
 "захтева."
 
-#: ../settings/security/third-party/saml.rst:180
+#: ../settings/security/third-party/saml.rst:185
+msgid "Make sure the key is an RSA key with a length of at least 2048 bits."
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:188
 msgid "Private key secret"
 msgstr "Лозинка тајног кључа"
 
-#: ../settings/security/third-party/saml.rst:180
+#: ../settings/security/third-party/saml.rst:188
 msgid "If your private key is secured with a secret, you can provide it here."
 msgstr "Уколико је ваш тајни кључ обезбеђен лозинком, можете је унети овде."
 
-#: ../settings/security/third-party/saml.rst:184
+#: ../settings/security/third-party/saml.rst:192
 msgid "Your callback URL"
 msgstr "Ваш URL повратног позива"
 
-#: ../settings/security/third-party/saml.rst:183
+#: ../settings/security/third-party/saml.rst:191
 msgid ""
 "This URL is needed for your IdP configuration so it knows where to redirect "
 "to after successful authentication."
@@ -18900,7 +18939,7 @@ msgstr ""
 "Ова URL адреса је потребна за вашу IDP конфигурацију како би знала где да "
 "преусмери корисника након успешне аутентификације."
 
-#: ../settings/security/third-party/saml.rst:186
+#: ../settings/security/third-party/saml.rst:194
 msgid ""
 "After saving your input by clicking on the \"Submit\" button, Zammad "
 "verifies the provided keys/certificates (e.g. if they are valid for signing/"
@@ -18910,7 +18949,7 @@ msgstr ""
 "достављене кључеве/сертификате (нпр. да ли су важећи за потписивање/"
 "шифровање и да нису истекли."
 
-#: ../settings/security/third-party/saml.rst:191
+#: ../settings/security/third-party/saml.rst:199
 msgid ""
 "See :ref:`automatic account linking <automatic-account-linking>` for details "
 "on how to link existing Zammad accounts to IdP accounts."
@@ -18918,11 +18957,11 @@ msgstr ""
 "Погледајте :ref:`аутоматско повезивање налога <automatic-account-linking>` "
 "за детаље о томе како да повежете постојеће Zammad налоге са IdP налозима."
 
-#: ../settings/security/third-party/saml.rst:197
+#: ../settings/security/third-party/saml.rst:205
 msgid "Automatic account linking doesn't work"
 msgstr "Аутоматско повезивање налога не функционише"
 
-#: ../settings/security/third-party/saml.rst:198
+#: ../settings/security/third-party/saml.rst:206
 msgid ""
 "Have you double-checked your IdP's user attribute mapping configuration?"
 msgstr ""
