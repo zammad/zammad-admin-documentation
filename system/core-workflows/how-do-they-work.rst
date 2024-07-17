@@ -63,6 +63,9 @@ Saved Conditions
       Example: you can't perform any actions with *saved condition* on a
       ticket in creation, because there are no saved values at that time.
 
+You can find a description of the condition operators for core workflows
+:doc:`here </system/core-workflows/condition-operators>`.
+
 Action
 ------
 
