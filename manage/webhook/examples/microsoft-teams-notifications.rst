@@ -1,6 +1,20 @@
 Microsoft Teams Notifications
 =============================
 
+.. warning::
+
+   Microsoft decided to retire
+   `their Office 365 connectors <https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/>`_.
+   The new way of connecting MS Teams with third party tools is via the
+   `Workflow app in Teams <https://support.microsoft.com/en-us/office/browse-and-add-workflows-in-microsoft-teams-4998095c-8b72-4b0e-984c-f2ad39e6ba9a>`_.
+
+   For the transition period, we decided to keep this guide as is. Make sure
+   to follow Microsoft's guide as replacement for **Step 1** below, to
+   connect Teams and Zammad via Workflow app.
+
+   To manage the connection in Zammad, you can go on with **step 2** on this
+   page.
+
 Follow the steps below to configure a webhook for receiving Zammad notifications
 in a Microsoft Teams channel.
 
