@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 11:16+0200\n"
-"PO-Revision-Date: 2024-07-15 13:00+0000\n"
+"POT-Creation-Date: 2024-07-18 10:27+0200\n"
+"PO-Revision-Date: 2024-07-20 07:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -3304,6 +3304,7 @@ msgid "Default value"
 msgstr "Подразумевана вредност"
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
+#: ../system/core-workflows/condition-operators.rst:21
 #: ../system/subscription/billing.rst:53 ../system/variables.rst:100
 msgid "Description"
 msgstr "Опис"
@@ -7357,7 +7358,6 @@ msgid "Learn more"
 msgstr "Saznajte više"
 
 #: ../manage/groups/index.rst:2 ../manage/macros/how-do-they-work.rst:0
-#: ../system/core-workflows/learn-by-example.rst:14
 msgid "Groups"
 msgstr "Групе"
 
@@ -9202,7 +9202,7 @@ msgid ""
 msgstr ""
 "Погледајте :doc:`/misc/object-conditions/index` да бисте сазнали још више! 🎉"
 
-#: ../manage/overviews.rst:91 ../system/core-workflows/learn-by-example.rst:20
+#: ../manage/overviews.rst:91
 msgid "Attributes"
 msgstr "Атрибути"
 
@@ -11621,17 +11621,17 @@ msgid "**Groups**"
 msgstr "**Групе**"
 
 #: ../manage/slas/learn-by-example.rst:18
-#: ../system/core-workflows/learn-by-example.rst:13
+#: ../system/core-workflows/learn-by-example.rst:17
 msgid "Sales"
 msgstr "Sales"
 
 #: ../manage/slas/learn-by-example.rst:19
-#: ../system/core-workflows/learn-by-example.rst:14
+#: ../system/core-workflows/learn-by-example.rst:18
 msgid "Support"
 msgstr "Support"
 
 #: ../manage/slas/learn-by-example.rst:20
-#: ../system/core-workflows/learn-by-example.rst:15
+#: ../system/core-workflows/learn-by-example.rst:19
 msgid "2nd Level"
 msgstr "2nd Level"
 
@@ -11723,8 +11723,8 @@ msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:86
 #: ../manage/slas/learn-by-example.rst:116
-#: ../system/core-workflows/learn-by-example.rst:85
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:90
+#: ../system/core-workflows/learn-by-example.rst:103
 #: ../system/integrations/slack.rst:88
 msgid "The result"
 msgstr "Резултат"
@@ -12731,7 +12731,7 @@ msgstr "Окидачи подржавају две врсте активациј
 
 #: ../manage/trigger/how-do-they-work.rst:24
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-#: ../system/core-workflows/how-do-they-work.rst:67 ../system/sessions.rst:52
+#: ../system/core-workflows/how-do-they-work.rst:70 ../system/sessions.rst:52
 msgid "Action"
 msgstr "Радња"
 
@@ -16204,6 +16204,7 @@ msgstr ""
 "садржи једно*"
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:32
 msgid "contains all"
 msgstr "садржи све"
 
@@ -16212,6 +16213,7 @@ msgid "*Matches if all given tags are present on the ticket.*"
 msgstr "*Подудара се ако су све дате ознаке присутне на тикету.*"
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:38
 msgid "contains one"
 msgstr "садржи једно"
 
@@ -16220,6 +16222,7 @@ msgid "*Matches if one specific given tags is present on the ticket.*"
 msgstr "*Подудара се ако је једна одређена ознака присутна на тикету.*"
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:34
 msgid "contains all not"
 msgstr "не садржи све"
 
@@ -16228,6 +16231,7 @@ msgid "*Matches if all given tags are not present on the ticket.*"
 msgstr "*Одговара ако све дате ознаке нису присутне на тикету.*"
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:40
 msgid "contains one not"
 msgstr "не садржи једно"
 
@@ -20536,6 +20540,375 @@ msgstr ""
 msgid "Dialogue for adding a new workflow"
 msgstr "Дијалог за додавање новог радног тока"
 
+#: ../system/core-workflows/condition-operators.rst:2
+msgid "Core Workflow Condition Operators"
+msgstr "Оператори услова радних токова"
+
+#: ../system/core-workflows/condition-operators.rst:4
+msgid ""
+"You might know that there is a separate section for explaining :doc:"
+"`condition operators </misc/object-conditions/basics>`. Head over there to "
+"see a detailed explanation of many conditions and operators."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:8
+msgid ""
+"Due to differences to other places in Zammad which are also using conditions "
+"(e.g. triggers), you can find a dedicated description of operators for core "
+"workflows below."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:12
+msgid ""
+"Be aware that the availability of the operators depends on the selected "
+"attribute and its field type. Some of the operators may only be available "
+"for system attributes (e.g. for \"tags\", \"active\")."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:20
+msgid "Operator"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:22
+#, fuzzy
+#| msgid "*after (absolute)*"
+msgid "after (absolute)"
+msgstr "након (апсолутно)"
+
+#: ../system/core-workflows/condition-operators.rst:23
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if a date/time is after a specific point in time."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:24
+#, fuzzy
+#| msgid "*after (relative)*"
+msgid "after (relative)"
+msgstr "након (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:25
+msgid "Matches if a time span after a specified event has passed."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:26
+#, fuzzy
+#| msgid "*before (absolute)*"
+msgid "before (absolute)"
+msgstr "пре (апсолутно)"
+
+#: ../system/core-workflows/condition-operators.rst:27
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if a date/time is before a specific point in time."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:28
+#, fuzzy
+#| msgid "*before (relative)*"
+msgid "before (relative)"
+msgstr "пре (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:29
+#, fuzzy
+#| msgid "*Matches if all given field values are not selected.*"
+msgid "Matches if a time span after a specified event has not passed."
+msgstr "*Одговара ако све дате вредности поља нису изабране.*"
+
+#: ../system/core-workflows/condition-operators.rst:30
+#, fuzzy
+#| msgid "*contains*"
+msgid "contains"
+msgstr "*садржи*"
+
+#: ../system/core-workflows/condition-operators.rst:31
+#, fuzzy
+#| msgid "*Matches if one specific given field value is selected.*"
+msgid "Matches if a specified value is present."
+msgstr "*Одговара ако је изабрана одређена вредност поља.*"
+
+#: ../system/core-workflows/condition-operators.rst:33
+#, fuzzy
+#| msgid "*Matches if all given field values are selected.*"
+msgid "Matches if all of the specified values are present."
+msgstr "*Одговара ако су изабране све дате вредности поља.*"
+
+#: ../system/core-workflows/condition-operators.rst:35
+#, fuzzy
+#| msgid "*Matches if all given field values are selected.*"
+msgid "Matches if none of the specified values are present."
+msgstr "*Одговара ако су изабране све дате вредности поља.*"
+
+#: ../system/core-workflows/condition-operators.rst:36
+#, fuzzy
+#| msgid "*contains not*"
+msgid "contains not"
+msgstr "*не садржи*"
+
+#: ../system/core-workflows/condition-operators.rst:37
+#, fuzzy
+#| msgid "*Matches if one specific given field value is not selected.*"
+msgid "Matches if a specified value is not present."
+msgstr "*Одговара ако једна одређена вредност поља није изабрана.*"
+
+#: ../system/core-workflows/condition-operators.rst:39
+#, fuzzy
+#| msgid "*Matches if one specific given field value is selected.*"
+msgid "Matches if one specified value is present."
+msgstr "*Одговара ако је изабрана одређена вредност поља.*"
+
+#: ../system/core-workflows/condition-operators.rst:41
+#, fuzzy
+#| msgid "*Matches if one specific given field value is not selected.*"
+msgid "Matches if one specified value is not present."
+msgstr "*Одговара ако једна одређена вредност поља није изабрана.*"
+
+#: ../system/core-workflows/condition-operators.rst:42
+#, fuzzy
+#| msgid "*does not match regex*"
+msgid "does not match regex"
+msgstr "*не задовољава регуларни израз*"
+
+#: ../system/core-workflows/condition-operators.rst:43
+#, fuzzy
+#| msgid "Matches if text ends with one of given tokens."
+msgid "Matches if content doesn't fit to regex rule."
+msgstr "Одговара ако се текст завршава једном од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:44
+#, fuzzy
+#| msgid "*ends with one of*"
+msgid "ends with"
+msgstr "*завршава се са једним од*"
+
+#: ../system/core-workflows/condition-operators.rst:45
+#, fuzzy
+#| msgid "Matches if text ends with one of given tokens."
+msgid "Matches if content ends with specified value."
+msgstr "Одговара ако се текст завршава једном од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:46
+#, fuzzy
+#| msgid "*ends with one of*"
+msgid "ends with one of"
+msgstr "*завршава се са једним од*"
+
+#: ../system/core-workflows/condition-operators.rst:47
+#, fuzzy
+#| msgid "Matches if text ends with one of given tokens."
+msgid "Matches if content ends with one of the specified values."
+msgstr "Одговара ако се текст завршава једном од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:48
+#, fuzzy
+#| msgid "*from (relative)*"
+msgid "from (relative)"
+msgstr "од (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:49
+#, fuzzy
+#| msgid "Matches if text is equal to any of given tokens."
+msgid "Matches if date/time is after a period of time after an event."
+msgstr "Одговара ако је текст једнак било којој од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:50
+#, fuzzy
+#| msgid "Misc"
+msgid "is"
+msgstr "Остало"
+
+#: ../system/core-workflows/condition-operators.rst:51
+#, fuzzy
+#| msgid "Matches if text is equal to any of given tokens."
+msgid "Matches if content is equal to a specified value."
+msgstr "Одговара ако је текст једнак било којој од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:52
+#, fuzzy
+#| msgid "*is any of*"
+msgid "is any of"
+msgstr "*је један од*"
+
+#: ../system/core-workflows/condition-operators.rst:53
+#, fuzzy
+#| msgid "Matches if text is equal to any of given tokens."
+msgid "Matches if content is equal to any of specified values."
+msgstr "Одговара ако је текст једнак било којој од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:54
+msgid "is modified"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:55
+msgid "Matches if content is modified."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:57
+#: ../system/core-workflows/condition-operators.rst:61
+msgid "True from the moment of changing content until form submit."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:58
+msgid "is modified to"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:59
+#, fuzzy
+#| msgid "Matches if text does not contain a specific string."
+msgid "Matches if content is modified to a specific value."
+msgstr "Одговара ако текст не садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:62
+#, fuzzy
+#| msgid "*is none of*"
+msgid "is none of"
+msgstr "*није ниједан од*"
+
+#: ../system/core-workflows/condition-operators.rst:63
+#, fuzzy
+#| msgid "Matches if text does not contain a specific string."
+msgid "Matches if content is none of any specified values."
+msgstr "Одговара ако текст не садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:64
+#, fuzzy
+#| msgid "*contains not*"
+msgid "is not"
+msgstr "*не садржи*"
+
+#: ../system/core-workflows/condition-operators.rst:65
+#, fuzzy
+#| msgid "Matches if text is not equal to all of given tokens."
+msgid "Matches if content is not equal to a specified value."
+msgstr "Одговара ако текст није једнак свим датим значкама."
+
+#: ../system/core-workflows/condition-operators.rst:66
+msgid "is set"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:67
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if content is present."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:68
+#, fuzzy
+#| msgid "*has changed*"
+msgid "just changed"
+msgstr "је измењено"
+
+#: ../system/core-workflows/condition-operators.rst:69
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if content has changed."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:71
+#: ../system/core-workflows/condition-operators.rst:75
+msgid ""
+"Only true for the moment of changing content until next form field action/"
+"click."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:72
+#, fuzzy
+#| msgid "*has changed*"
+msgid "just changed to"
+msgstr "је измењено"
+
+#: ../system/core-workflows/condition-operators.rst:73
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if content has changed to a specified value."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:76
+#, fuzzy
+#| msgid "*matches regex*"
+msgid "matches regex"
+msgstr "*задовољава регуларни израз*"
+
+#: ../system/core-workflows/condition-operators.rst:77
+msgid "Matches if value fits to regex rule."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:78
+msgid "not set"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:79
+#, fuzzy
+#| msgid "Matches if text contains a specific string."
+msgid "Matches if no content is present."
+msgstr "Одговара ако текст садржи одређени низ."
+
+#: ../system/core-workflows/condition-operators.rst:80
+#, fuzzy
+#| msgid "*starts with one of*"
+msgid "starts with"
+msgstr "*почиње са једним од*"
+
+#: ../system/core-workflows/condition-operators.rst:81
+#, fuzzy
+#| msgid "Matches if text starts with one of given tokens."
+msgid "Matches if content starts with specified value."
+msgstr "Одговара ако текст почиње са једном од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:82
+#, fuzzy
+#| msgid "*starts with one of*"
+msgid "starts with one of"
+msgstr "*почиње са једним од*"
+
+#: ../system/core-workflows/condition-operators.rst:83
+#, fuzzy
+#| msgid "Matches if text starts with one of given tokens."
+msgid "Matches if content starts with one of the specified values."
+msgstr "Одговара ако текст почиње са једном од датих значки."
+
+#: ../system/core-workflows/condition-operators.rst:84
+#, fuzzy
+#| msgid "*till (relative)*"
+msgid "till (relative)"
+msgstr "до (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:85
+msgid "Matches if date/time is before a period of time before an event."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:86
+msgid "today"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:87
+msgid "Matches if date/time is today."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:88
+#, fuzzy
+#| msgid "*within last (relative)*"
+msgid "within last (relative)"
+msgstr "у последњих (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:89
+msgid ""
+"Matches if date/time content is within specified period of time before now."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:91
+#, fuzzy
+#| msgid "*within next (relative)*"
+msgid "within next (relative)"
+msgstr "у следећих (релативно)"
+
+#: ../system/core-workflows/condition-operators.rst:92
+#, fuzzy
+#| msgid "Matches if text ends with one of given tokens."
+msgid ""
+"Matches if date/time content is within specified period of time after now."
+msgstr "Одговара ако се текст завршава једном од датих значки."
+
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
 msgstr "Како то уствари функционише?"
@@ -20676,7 +21049,13 @@ msgstr ""
 "Пример: не можете извршити акције са *сачуваним условима* при отварању "
 "тикета, јер нема снимљених вредности у том тренутку."
 
-#: ../system/core-workflows/how-do-they-work.rst:69
+#: ../system/core-workflows/how-do-they-work.rst:66
+msgid ""
+"You can find a description of the condition operators for core workflows :"
+"doc:`here </system/core-workflows/condition-operators>`."
+msgstr ""
+
+#: ../system/core-workflows/how-do-they-work.rst:72
 msgid ""
 "Which actions should we run on the relevant fields? The possible actions "
 "depend on the object type. However, usually you can at least change the "
@@ -20686,11 +21065,11 @@ msgstr ""
 "типа објекта, међутим, обично можете барем променити видљивост или то да ли "
 "је поље обавезно."
 
-#: ../system/core-workflows/how-do-they-work.rst:73
+#: ../system/core-workflows/how-do-they-work.rst:76
 msgid "Be aware that actions are not available for **related** context."
 msgstr "Обратите пажњу да радње нису доступне за **повезане** објекте."
 
-#: ../system/core-workflows/how-do-they-work.rst:75
+#: ../system/core-workflows/how-do-they-work.rst:78
 msgid ""
 "**Example:** Let's assume you are working in the ticket context. While you "
 "can have customer *conditions*, you *can't adjust* objects with actions in "
@@ -20702,22 +21081,22 @@ msgstr ""
 "обиму. Ово је из разлога што неће имати било каквог утицаја на дијалог "
 "тикета. Наравно, сви атрибути тикета (стање, власник, ...) биће доступни."
 
-#: ../system/core-workflows/how-do-they-work.rst:81
+#: ../system/core-workflows/how-do-they-work.rst:84
 msgid ""
 "Please also have a look at our :doc:`limitations` to be safe from surprises."
 msgstr ""
 "Погледајте и наша :doc:`ограничења <limitations>` да не би било непријатних "
 "изненађења."
 
-#: ../system/core-workflows/how-do-they-work.rst:85
+#: ../system/core-workflows/how-do-they-work.rst:88
 msgid "Available Operators"
 msgstr "Доступни оператори"
 
-#: ../system/core-workflows/how-do-they-work.rst:87
+#: ../system/core-workflows/how-do-they-work.rst:90
 msgid "The availability of operators depends on the object type and scope."
 msgstr "Доступност оператора зависи од типа објекта и обима."
 
-#: ../system/core-workflows/how-do-they-work.rst:91
+#: ../system/core-workflows/how-do-they-work.rst:94
 msgid ""
 "Please note that actions may or may not restrict API based access to "
 "attributes. We're displaying the following icons for your overview to "
@@ -20731,7 +21110,7 @@ msgstr ""
 msgid "|api| This icon indicates the action affects the API."
 msgstr "|api| Ова иконица означава да радња утиче на API."
 
-#: ../system/core-workflows/how-do-they-work.rst:160
+#: ../system/core-workflows/how-do-they-work.rst:163
 msgid "api"
 msgstr "api"
 
@@ -20739,23 +21118,23 @@ msgstr "api"
 msgid "|ui| This icon indicates the action only affects the web interface."
 msgstr "|ui| Ова иконица означава да радња утиче само на кориснички интерфејс."
 
-#: ../system/core-workflows/how-do-they-work.rst:164
+#: ../system/core-workflows/how-do-they-work.rst:167
 msgid "ui"
 msgstr "ui"
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "show |ui|"
 msgstr "прикажи |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "Display the chosen field. Allows setting of values."
 msgstr "Прикажи дотично поље. Омогућава подешавање вредности."
 
-#: ../system/core-workflows/how-do-they-work.rst:106
+#: ../system/core-workflows/how-do-they-work.rst:109
 msgid "hide |ui|"
 msgstr "сакриј |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:102
+#: ../system/core-workflows/how-do-they-work.rst:105
 msgid ""
 "Hide the chosen field. However, it technically still allows setting the "
 "field."
@@ -20763,7 +21142,7 @@ msgstr ""
 "Сакриј дотично поље. Међутим, технички и даље дозвољава подешавање вредности "
 "поља."
 
-#: ../system/core-workflows/how-do-they-work.rst:105
+#: ../system/core-workflows/how-do-they-work.rst:108
 msgid ""
 "Please note that the field is **not** gone and still contains an existing "
 "value (if set)! Consider *remove* instead, if you want this field to be gone."
@@ -20771,39 +21150,39 @@ msgstr ""
 "Имајте на уму да поље **неће** нестати и још увек садржи вредност коју "
 "пружа! Можда бисте желели да размислите о oператору *уклони* уместо њега."
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "remove |ui|"
 msgstr "уклони |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "Entirely removes the field. The field value will not be evaluated."
 msgstr "Потпуно уклања поље. Вредност поља неће бити пружена."
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "set mandatory |ui| |api|"
 msgstr "постави обавезно |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "Sets the field to mandatory."
 msgstr "Поставља поље на обавезно."
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "set optional |ui| |api|"
 msgstr "постави необавезно |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "Sets the field to optional."
 msgstr "Поставља поље на опционо."
 
-#: ../system/core-workflows/how-do-they-work.rst:121
+#: ../system/core-workflows/how-do-they-work.rst:124
 msgid "add option |ui| |api|"
 msgstr "додај опцију |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:118
+#: ../system/core-workflows/how-do-they-work.rst:121
 msgid "Allows adding options to tree selects or selects."
 msgstr "Омогућава додавање опција у пољa за избор (стабла)."
 
-#: ../system/core-workflows/how-do-they-work.rst:120
+#: ../system/core-workflows/how-do-they-work.rst:123
 msgid ""
 "You have to use the \"remove option\" before performing this action. It "
 "allows you to use *existing* configured values."
@@ -20811,11 +21190,11 @@ msgstr ""
 "Ово захтева да се опције претходно сакрију (уклони опцију). Омогућава "
 "коришћење *постојећих* вредности."
 
-#: ../system/core-workflows/how-do-they-work.rst:125
+#: ../system/core-workflows/how-do-they-work.rst:128
 msgid "remove option |ui| |api|"
 msgstr "уклони опцију |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:124
+#: ../system/core-workflows/how-do-they-work.rst:127
 msgid ""
 "Allows removing options from tree selects or selects. It allows you to use "
 "*existing* configured values."
@@ -20823,35 +21202,35 @@ msgstr ""
 "Омогућава уклањање опција из поља једноструког и вишеструког избора. "
 "Омогућава коришћење *постојећих* вредности."
 
-#: ../system/core-workflows/how-do-they-work.rst:131
+#: ../system/core-workflows/how-do-they-work.rst:134
 msgid "set fixed to |ui| |api|"
 msgstr "постави на вредност |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:128
+#: ../system/core-workflows/how-do-they-work.rst:131
 msgid "Reduces the available options by your selection."
 msgstr "Ограничава доступне опције по вашем избору."
 
-#: ../system/core-workflows/how-do-they-work.rst:130
+#: ../system/core-workflows/how-do-they-work.rst:133
 msgid ""
 "This reduces your workflows in terms of *add option* and *remove option*."
 msgstr ""
 "Ово може смањити број ваших радних токова који користе *додај опцију* и "
 "*уклони опцију*."
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "fill in |ui|"
 msgstr "попуни |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "Allows filling in of string and integer fields with your values."
 msgstr ""
 "Омогућава попуњавање поља текста и целобројних поља са вашим вредностима."
 
-#: ../system/core-workflows/how-do-they-work.rst:138
+#: ../system/core-workflows/how-do-they-work.rst:141
 msgid "fill in empty |ui|"
 msgstr "попуни празно |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:137
+#: ../system/core-workflows/how-do-they-work.rst:140
 msgid ""
 "Allows filling in of string and integer fields with your values **if the "
 "field is empty**."
@@ -20859,25 +21238,25 @@ msgstr ""
 "Омогућава попуњавање поља текста и целобројних поља са вашим вредностима "
 "**ако су поља празна**."
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "select |ui|"
 msgstr "изабери |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "Select a specific value within a select, tree select or boolean field."
 msgstr ""
 "Изабери одређену вредност унутар поља за избор, избор стабла или логичког "
 "поља."
 
-#: ../system/core-workflows/how-do-they-work.rst:150
+#: ../system/core-workflows/how-do-they-work.rst:153
 msgid "auto select |ui|"
 msgstr "аутоматски избор |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:144
+#: ../system/core-workflows/how-do-they-work.rst:147
 msgid "Helps users with tree select and select fields:"
 msgstr "Помаже кориснику са пољима избора (стабла):"
 
-#: ../system/core-workflows/how-do-they-work.rst:146
+#: ../system/core-workflows/how-do-they-work.rst:149
 msgid ""
 "If the field has only one option available for selection and no value yet, "
 "the value will be automatically set."
@@ -20885,7 +21264,7 @@ msgstr ""
 "Ако поље има само једну опцију за избор и још увек нема вредност, вредност "
 "се аутоматски поставља."
 
-#: ../system/core-workflows/how-do-they-work.rst:149
+#: ../system/core-workflows/how-do-they-work.rst:152
 msgid ""
 "This option only works if you have one value and doesn't work if there is "
 "more than one option available."
@@ -20893,11 +21272,11 @@ msgstr ""
 "Овај оператор функционише само ако имате једну вредност и не делује ако има "
 "више од једне опције."
 
-#: ../system/core-workflows/how-do-they-work.rst:154
+#: ../system/core-workflows/how-do-they-work.rst:157
 msgid "set readonly |ui|"
 msgstr "укључи само за преглед |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:153
+#: ../system/core-workflows/how-do-they-work.rst:156
 msgid ""
 "Allows you to display an attribute as read only (which means no changes are "
 "possible)."
@@ -20905,11 +21284,11 @@ msgstr ""
 "Омогућава вам да прикажете атрибут само за читање (readonly), што значи да "
 "измене неће бити могуће."
 
-#: ../system/core-workflows/how-do-they-work.rst:158
+#: ../system/core-workflows/how-do-they-work.rst:161
 msgid "unset readonly |ui|"
 msgstr "искључи само за преглед |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:157
+#: ../system/core-workflows/how-do-they-work.rst:160
 msgid ""
 "In case a workflow set the field in question to read only, you can undo this "
 "with option above."
@@ -20917,17 +21296,17 @@ msgstr ""
 "У случају да је радни ток поставио поље на само за преглед (readonly), ово "
 "можете поништити уз помоћ горњег оператора."
 
-#: ../system/core-workflows/how-do-they-work.rst:169
+#: ../system/core-workflows/how-do-they-work.rst:172
 msgid "Stop after match"
 msgstr "Заустави после поклапања"
 
-#: ../system/core-workflows/how-do-they-work.rst:171
+#: ../system/core-workflows/how-do-they-work.rst:174
 msgid ""
 "Here you can decide if other workflows are executed after the current one."
 msgstr ""
 "Овим можете зауставити процену накнадних радних токова после тренутног."
 
-#: ../system/core-workflows/how-do-they-work.rst:173
+#: ../system/core-workflows/how-do-they-work.rst:176
 msgid ""
 "If set to ``no`` (default), further workflows will be executed if they match "
 "the condition. In this case, it is possible that your actions from the "
@@ -20937,7 +21316,7 @@ msgstr ""
 "процењени ако се поклапају услови. У овом случају, могуће да ће радње из "
 "тренутног радног тока бити поништене неким другим током."
 
-#: ../system/core-workflows/how-do-they-work.rst:177
+#: ../system/core-workflows/how-do-they-work.rst:180
 msgid ""
 "If set to ``yes``, no further worflows will be executed after the current "
 "one."
@@ -20945,11 +21324,11 @@ msgstr ""
 "Ако је подешено на ``да``, накнадни радни токови неће бити процењени након "
 "овога."
 
-#: ../system/core-workflows/how-do-they-work.rst:181
+#: ../system/core-workflows/how-do-they-work.rst:184
 msgid "Priority"
 msgstr "Приоритет"
 
-#: ../system/core-workflows/how-do-they-work.rst:183
+#: ../system/core-workflows/how-do-they-work.rst:186
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
 "default value is ``500``."
@@ -20957,7 +21336,7 @@ msgstr ""
 "Можете одредити редослед у којима ће радни токови бити процењени. "
 "Подразумевана вредност је ``500``."
 
-#: ../system/core-workflows/how-do-they-work.rst:186
+#: ../system/core-workflows/how-do-they-work.rst:189
 msgid ""
 "The workflows are executed in ascending order by their priority. That means "
 "lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``)."
@@ -20966,7 +21345,9 @@ msgstr ""
 "да се ниже вредности (нпр. ``100``) процењују пре виших (нпр. ``999``)."
 
 #: ../system/core-workflows/learn-by-example.rst:2
-msgid "Learn by example"
+#, fuzzy
+#| msgid "Learn by example"
+msgid "Learn by Example"
 msgstr "Учите на примеру"
 
 #: ../system/core-workflows/learn-by-example.rst:4
@@ -20984,7 +21365,13 @@ msgstr ""
 "Да бисте сазнали више о радним токовима, прво посетите :doc:`how-do-they-"
 "work`."
 
-#: ../system/core-workflows/learn-by-example.rst:9
+#: ../system/core-workflows/learn-by-example.rst:10
+#, fuzzy
+#| msgid "Macro Example"
+msgid "Group Based Examples"
+msgstr "Пример макроа"
+
+#: ../system/core-workflows/learn-by-example.rst:12
 msgid ""
 "All following workflows have the same base configurations. The workflow may "
 "not use them all."
@@ -20992,31 +21379,43 @@ msgstr ""
 "Сви следећи радни токови имају исту основну конфигурацију. Радни ток је "
 "можда неће користити целу."
 
-#: ../system/core-workflows/learn-by-example.rst:17
+#: ../system/core-workflows/learn-by-example.rst:15
+#, fuzzy
+#| msgid "Groups"
+msgid "Groups:"
+msgstr "Групе"
+
+#: ../system/core-workflows/learn-by-example.rst:20
+#, fuzzy
+#| msgid "Attributes"
+msgid "Attributes:"
+msgstr "Атрибути"
+
+#: ../system/core-workflows/learn-by-example.rst:22
 msgid "Category (Single tree selection field, not mandatory, agents only)"
 msgstr ""
 "Category (поље за једноструки избор стабла, необавезно, само оператери)"
 
-#: ../system/core-workflows/learn-by-example.rst:18
+#: ../system/core-workflows/learn-by-example.rst:23
 msgid ""
 "Approved (Boolean field, not mandatory, not shown, ``false`` as default)"
 msgstr ""
 "Approved (логичко поље, необавезно, сакривено, ``false`` као подразумевана "
 "вредност)"
 
-#: ../system/core-workflows/learn-by-example.rst:19
+#: ../system/core-workflows/learn-by-example.rst:24
 msgid "Operating System (Text field, not mandatory, not shown)"
 msgstr "Operating System (поље текста, необавезно, сакривено)"
 
-#: ../system/core-workflows/learn-by-example.rst:20
+#: ../system/core-workflows/learn-by-example.rst:25
 msgid "Software used (Single selection field, not mandatory, not shown)"
 msgstr "Software used (поље једноструког избора, необавезно, сакривено)"
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 msgid "Group specific values and fields"
 msgstr "Груписање специфичних вредности и поља"
 
-#: ../system/core-workflows/learn-by-example.rst:23
+#: ../system/core-workflows/learn-by-example.rst:28
 msgid ""
 "This workflow set depends on the category field. It reduces the available "
 "set of values based on the group selected."
@@ -21024,11 +21423,11 @@ msgstr ""
 "Овај колекција радних токова зависи од поља категорије. Смањује доступни "
 "скуп вредности на основу изабране групе."
 
-#: ../system/core-workflows/learn-by-example.rst:28
+#: ../system/core-workflows/learn-by-example.rst:33
 msgid "Workflow 2nd Level group"
 msgstr "Радни ток 2nd Level групе"
 
-#: ../system/core-workflows/learn-by-example.rst:30
+#: ../system/core-workflows/learn-by-example.rst:35
 msgid ""
 "This reduces the category options to ``2nd Level/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to mandatory and visible."
@@ -21041,11 +21440,11 @@ msgid "Sample workflow that shows specific values and fields for 2nd level"
 msgstr ""
 "Пример радног тока који приказује одређене вредности и поља за 2nd Level"
 
-#: ../system/core-workflows/learn-by-example.rst:38
+#: ../system/core-workflows/learn-by-example.rst:43
 msgid "Workflow Support group"
 msgstr "Радни ток Support групе"
 
-#: ../system/core-workflows/learn-by-example.rst:40
+#: ../system/core-workflows/learn-by-example.rst:45
 msgid ""
 "This reduces the category options to ``Support/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to visible."
@@ -21057,11 +21456,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for support"
 msgstr "Пример радног тока који приказује одређене вредности и поља за Support"
 
-#: ../system/core-workflows/learn-by-example.rst:48
+#: ../system/core-workflows/learn-by-example.rst:53
 msgid "Workflow Sales group"
 msgstr "Радни ток Sales групе"
 
-#: ../system/core-workflows/learn-by-example.rst:50
+#: ../system/core-workflows/learn-by-example.rst:55
 msgid ""
 "This reduces the category options to ``Sales/*``, ``Internal/*`` and "
 "``Others``."
@@ -21073,11 +21472,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for sales"
 msgstr "Пример радног тока који приказује одређене вредности и поља за Sales"
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 msgid "The Result"
 msgstr "Резултат"
 
-#: ../system/core-workflows/learn-by-example.rst:58
+#: ../system/core-workflows/learn-by-example.rst:63
 msgid ""
 "This is what the agent would experience with the above workflows in place."
 msgstr "Ово је оно што би оператер видео са горе наведеним радним токовима."
@@ -21087,11 +21486,11 @@ msgid ""
 "Workflow shows objects and limits options based on selections on the group"
 msgstr "Радни ток приказује објекте и ограничава опције на основу избора групе"
 
-#: ../system/core-workflows/learn-by-example.rst:85
+#: ../system/core-workflows/learn-by-example.rst:90
 msgid "Approval process"
 msgstr "Approval процес"
 
-#: ../system/core-workflows/learn-by-example.rst:66
+#: ../system/core-workflows/learn-by-example.rst:71
 msgid ""
 "In this case ``approved`` is visible to agents by default. For this "
 "workflow, an additional role ``Approval person`` is required (no further "
@@ -21105,7 +21504,7 @@ msgstr ""
 msgid "Sample workflow that restricts an approval attribute to specific roles"
 msgstr "Пример радног тока који ограничава атрибут Approval на одређене улоге"
 
-#: ../system/core-workflows/learn-by-example.rst:76
+#: ../system/core-workflows/learn-by-example.rst:81
 msgid ""
 "This workflow may work best in combination with a :doc:`trigger </manage/"
 "trigger>` but technically, this is not required."
@@ -21113,7 +21512,7 @@ msgstr ""
 "Овај радни ток можда најбоље функционише у комбинацији са :doc:`окидачем </"
 "manage/trigger>`, али технички није неопходан."
 
-#: ../system/core-workflows/learn-by-example.rst:79
+#: ../system/core-workflows/learn-by-example.rst:84
 msgid ""
 "Select fields may be a better approach because they allow more values than "
 "just a simple ``true`` or ``false``."
@@ -21129,11 +21528,11 @@ msgstr ""
 "Радни ток мења могуће вредности „Approved ?“ поља у зависности од улоге "
 "корисника"
 
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:103
 msgid "State dependent mandatory fields"
 msgstr "Обавезна поља зависна од стања"
 
-#: ../system/core-workflows/learn-by-example.rst:88
+#: ../system/core-workflows/learn-by-example.rst:93
 msgid ""
 "This workflow sets ``Category`` to mandatory if the agent wants to set the "
 "states ``closed`` or ``pending close`` to enforce categorization."
@@ -21153,6 +21552,68 @@ msgid ""
 msgstr ""
 "Радни ток поставља Category поље на обавезно након одабира затворено или на "
 "чека на затварање за стање"
+
+#: ../system/core-workflows/learn-by-example.rst:106
+msgid "Manual Ticket Handover Process"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:108
+msgid "This example covers the handover of a ticket from one agent to another:"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:110
+msgid ""
+"When the ticket owner is modified, a new text field (\"Handover\") shows up "
+"for a comment"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:112
+msgid ""
+"This may only be visible when the owner is changed, therefore it has to be "
+"hidden in general"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:114
+msgid "The input in this handover text field is mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:115
+msgid ""
+"After submitting changes, the value of the handover field must be added as "
+"an note to the ticket (via trigger)"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:121
+msgid "Hiding handover field"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Hiding the handover field in core workflows"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:126
+msgid "Showing handover field and setting it to mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Showing the handover field and set it as mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:131
+msgid "Trigger writing handover input to a new article"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+#, fuzzy
+#| msgid "Is time accounted for an article?"
+msgid "Write handover content to a new article"
+msgstr "Да ли је обрачунато време за чланак?"
+
+#: ../system/core-workflows/learn-by-example.rst:133
+msgid ""
+"As a result, the ticket includes an article of the type note which includes "
+"the predefined text and the handover comment."
+msgstr ""
 
 #: ../system/core-workflows/limitations.rst:6
 msgid "Core Workflows do not replace Triggers"
