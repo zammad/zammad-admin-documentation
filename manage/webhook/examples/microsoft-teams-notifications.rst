@@ -13,8 +13,9 @@ Microsoft Teams Notifications
    connect Teams and Zammad via Workflow app.
 
    If you already use this webhook and *didn't customize* the payload, the new
-   webhook is used automatically after updating Zammad. Otherwise you have to
-   manually adjust it. See
+   webhook is used automatically after updating Zammad. In this case you just
+   need to change the connection in Teams. Otherwise you have to
+   manually adjust it in Zammad, too. See
    :doc:`MS Teams webhooks </manage/webhook/examples/microsoft-teams-webhooks>`
    where you can find the old and new default ones in case you need it.
 

@@ -3,8 +3,8 @@ Microsoft Teams Webhook
 
 Microsoft is retiring their Office 365 connectors in favor of connecting
 third-party tools via their Workflow app. Because of that, the pre-defined
-Webhook in Zammad was changed. In case you need to have a look, you can find
-them below.
+webhook in Zammad was changed. In case you need the old or new default webhook,
+you can find them below.
 
 Webhook for Office Connectors (old)
 -----------------------------------
