@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 11:16+0200\n"
+"POT-Creation-Date: 2024-07-18 10:27+0200\n"
 "PO-Revision-Date: 2024-06-02 23:00+0000\n"
 "Last-Translator: Jordi Ferri <ferri1989@gmail.com>\n"
 "Language-Team: Spanish <https://translations.zammad.org/projects/"
@@ -2879,6 +2879,7 @@ msgid "Default value"
 msgstr ""
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
+#: ../system/core-workflows/condition-operators.rst:21
 #: ../system/subscription/billing.rst:53 ../system/variables.rst:100
 msgid "Description"
 msgstr "Descripción"
@@ -6143,7 +6144,6 @@ msgid "Learn more"
 msgstr ""
 
 #: ../manage/groups/index.rst:2 ../manage/macros/how-do-they-work.rst:0
-#: ../system/core-workflows/learn-by-example.rst:14
 msgid "Groups"
 msgstr ""
 
@@ -7669,7 +7669,7 @@ msgid ""
 "Have a look at :doc:`/misc/object-conditions/index` to learn even more! 🎉"
 msgstr ""
 
-#: ../manage/overviews.rst:91 ../system/core-workflows/learn-by-example.rst:20
+#: ../manage/overviews.rst:91
 msgid "Attributes"
 msgstr ""
 
@@ -9746,17 +9746,17 @@ msgid "**Groups**"
 msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:18
-#: ../system/core-workflows/learn-by-example.rst:13
+#: ../system/core-workflows/learn-by-example.rst:17
 msgid "Sales"
 msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:19
-#: ../system/core-workflows/learn-by-example.rst:14
+#: ../system/core-workflows/learn-by-example.rst:18
 msgid "Support"
 msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:20
-#: ../system/core-workflows/learn-by-example.rst:15
+#: ../system/core-workflows/learn-by-example.rst:19
 msgid "2nd Level"
 msgstr ""
 
@@ -9838,8 +9838,8 @@ msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:86
 #: ../manage/slas/learn-by-example.rst:116
-#: ../system/core-workflows/learn-by-example.rst:85
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:90
+#: ../system/core-workflows/learn-by-example.rst:103
 #: ../system/integrations/slack.rst:88
 msgid "The result"
 msgstr ""
@@ -10689,7 +10689,7 @@ msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:24
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-#: ../system/core-workflows/how-do-they-work.rst:67 ../system/sessions.rst:52
+#: ../system/core-workflows/how-do-they-work.rst:70 ../system/sessions.rst:52
 msgid "Action"
 msgstr ""
 
@@ -13581,6 +13581,7 @@ msgid ""
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:32
 msgid "contains all"
 msgstr ""
 
@@ -13589,6 +13590,7 @@ msgid "*Matches if all given tags are present on the ticket.*"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:38
 msgid "contains one"
 msgstr ""
 
@@ -13597,6 +13599,7 @@ msgid "*Matches if one specific given tags is present on the ticket.*"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:34
 msgid "contains all not"
 msgstr ""
 
@@ -13605,6 +13608,7 @@ msgid "*Matches if all given tags are not present on the ticket.*"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
+#: ../system/core-workflows/condition-operators.rst:40
 msgid "contains one not"
 msgstr ""
 
@@ -17119,6 +17123,281 @@ msgstr ""
 msgid "Dialogue for adding a new workflow"
 msgstr ""
 
+#: ../system/core-workflows/condition-operators.rst:2
+msgid "Core Workflow Condition Operators"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:4
+msgid ""
+"You might know that there is a separate section for explaining :doc:"
+"`condition operators </misc/object-conditions/basics>`. Head over there to "
+"see a detailed explanation of many conditions and operators."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:8
+msgid ""
+"Due to differences to other places in Zammad which are also using conditions "
+"(e.g. triggers), you can find a dedicated description of operators for core "
+"workflows below."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:12
+msgid ""
+"Be aware that the availability of the operators depends on the selected "
+"attribute and its field type. Some of the operators may only be available "
+"for system attributes (e.g. for \"tags\", \"active\")."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:20
+msgid "Operator"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:22
+msgid "after (absolute)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:23
+msgid "Matches if a date/time is after a specific point in time."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:24
+msgid "after (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:25
+msgid "Matches if a time span after a specified event has passed."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:26
+msgid "before (absolute)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:27
+msgid "Matches if a date/time is before a specific point in time."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:28
+msgid "before (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:29
+msgid "Matches if a time span after a specified event has not passed."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:30
+msgid "contains"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:31
+msgid "Matches if a specified value is present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:33
+msgid "Matches if all of the specified values are present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:35
+msgid "Matches if none of the specified values are present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:36
+msgid "contains not"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:37
+msgid "Matches if a specified value is not present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:39
+msgid "Matches if one specified value is present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:41
+msgid "Matches if one specified value is not present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:42
+msgid "does not match regex"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:43
+msgid "Matches if content doesn't fit to regex rule."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:44
+msgid "ends with"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:45
+msgid "Matches if content ends with specified value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:46
+msgid "ends with one of"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:47
+msgid "Matches if content ends with one of the specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:48
+msgid "from (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:49
+msgid "Matches if date/time is after a period of time after an event."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:50
+msgid "is"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:51
+msgid "Matches if content is equal to a specified value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:52
+msgid "is any of"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:53
+msgid "Matches if content is equal to any of specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:54
+msgid "is modified"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:55
+msgid "Matches if content is modified."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:57
+#: ../system/core-workflows/condition-operators.rst:61
+msgid "True from the moment of changing content until form submit."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:58
+msgid "is modified to"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:59
+msgid "Matches if content is modified to a specific value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:62
+msgid "is none of"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:63
+msgid "Matches if content is none of any specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:64
+msgid "is not"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:65
+msgid "Matches if content is not equal to a specified value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:66
+msgid "is set"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:67
+msgid "Matches if content is present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:68
+msgid "just changed"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:69
+msgid "Matches if content has changed."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:71
+#: ../system/core-workflows/condition-operators.rst:75
+msgid ""
+"Only true for the moment of changing content until next form field action/"
+"click."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:72
+msgid "just changed to"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:73
+msgid "Matches if content has changed to a specified value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:76
+msgid "matches regex"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:77
+msgid "Matches if value fits to regex rule."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:78
+msgid "not set"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:79
+msgid "Matches if no content is present."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:80
+msgid "starts with"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:81
+msgid "Matches if content starts with specified value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:82
+msgid "starts with one of"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:83
+msgid "Matches if content starts with one of the specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:84
+msgid "till (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:85
+msgid "Matches if date/time is before a period of time before an event."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:86
+msgid "today"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:87
+msgid "Matches if date/time is today."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:88
+msgid "within last (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:89
+msgid ""
+"Matches if date/time content is within specified period of time before now."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:91
+msgid "within next (relative)"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:92
+msgid ""
+"Matches if date/time content is within specified period of time after now."
+msgstr ""
+
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
 msgstr ""
@@ -17231,18 +17510,24 @@ msgid ""
 "creation, because there are no saved values at that time."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:69
+#: ../system/core-workflows/how-do-they-work.rst:66
+msgid ""
+"You can find a description of the condition operators for core workflows :"
+"doc:`here </system/core-workflows/condition-operators>`."
+msgstr ""
+
+#: ../system/core-workflows/how-do-they-work.rst:72
 msgid ""
 "Which actions should we run on the relevant fields? The possible actions "
 "depend on the object type. However, usually you can at least change the "
 "visibility and whether the field is mandatory."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:73
+#: ../system/core-workflows/how-do-they-work.rst:76
 msgid "Be aware that actions are not available for **related** context."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:75
+#: ../system/core-workflows/how-do-they-work.rst:78
 msgid ""
 "**Example:** Let's assume you are working in the ticket context. While you "
 "can have customer *conditions*, you *can't adjust* objects with actions in "
@@ -17250,20 +17535,20 @@ msgid ""
 "dialog. Of course all ticket attributes (state, owner, ...) are available."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:81
+#: ../system/core-workflows/how-do-they-work.rst:84
 msgid ""
 "Please also have a look at our :doc:`limitations` to be safe from surprises."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:85
+#: ../system/core-workflows/how-do-they-work.rst:88
 msgid "Available Operators"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:87
+#: ../system/core-workflows/how-do-they-work.rst:90
 msgid "The availability of operators depends on the object type and scope."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:91
+#: ../system/core-workflows/how-do-they-work.rst:94
 msgid ""
 "Please note that actions may or may not restrict API based access to "
 "attributes. We're displaying the following icons for your overview to "
@@ -17274,7 +17559,7 @@ msgstr ""
 msgid "|api| This icon indicates the action affects the API."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:160
+#: ../system/core-workflows/how-do-they-work.rst:163
 msgid "api"
 msgstr ""
 
@@ -17282,202 +17567,203 @@ msgstr ""
 msgid "|ui| This icon indicates the action only affects the web interface."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:164
+#: ../system/core-workflows/how-do-they-work.rst:167
 msgid "ui"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "show |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "Display the chosen field. Allows setting of values."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:106
+#: ../system/core-workflows/how-do-they-work.rst:109
 msgid "hide |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:102
+#: ../system/core-workflows/how-do-they-work.rst:105
 msgid ""
 "Hide the chosen field. However, it technically still allows setting the "
 "field."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:105
+#: ../system/core-workflows/how-do-they-work.rst:108
 msgid ""
 "Please note that the field is **not** gone and still contains an existing "
 "value (if set)! Consider *remove* instead, if you want this field to be gone."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "remove |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "Entirely removes the field. The field value will not be evaluated."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "set mandatory |ui| |api|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "Sets the field to mandatory."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "set optional |ui| |api|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "Sets the field to optional."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:121
+#: ../system/core-workflows/how-do-they-work.rst:124
 msgid "add option |ui| |api|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:118
+#: ../system/core-workflows/how-do-they-work.rst:121
 msgid "Allows adding options to tree selects or selects."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:120
+#: ../system/core-workflows/how-do-they-work.rst:123
 msgid ""
 "You have to use the \"remove option\" before performing this action. It "
 "allows you to use *existing* configured values."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:125
+#: ../system/core-workflows/how-do-they-work.rst:128
 msgid "remove option |ui| |api|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:124
+#: ../system/core-workflows/how-do-they-work.rst:127
 msgid ""
 "Allows removing options from tree selects or selects. It allows you to use "
 "*existing* configured values."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:131
+#: ../system/core-workflows/how-do-they-work.rst:134
 msgid "set fixed to |ui| |api|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:128
+#: ../system/core-workflows/how-do-they-work.rst:131
 msgid "Reduces the available options by your selection."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:130
+#: ../system/core-workflows/how-do-they-work.rst:133
 msgid ""
 "This reduces your workflows in terms of *add option* and *remove option*."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "fill in |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "Allows filling in of string and integer fields with your values."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:138
+#: ../system/core-workflows/how-do-they-work.rst:141
 msgid "fill in empty |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:137
+#: ../system/core-workflows/how-do-they-work.rst:140
 msgid ""
 "Allows filling in of string and integer fields with your values **if the "
 "field is empty**."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "select |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "Select a specific value within a select, tree select or boolean field."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:150
+#: ../system/core-workflows/how-do-they-work.rst:153
 msgid "auto select |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:144
+#: ../system/core-workflows/how-do-they-work.rst:147
 msgid "Helps users with tree select and select fields:"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:146
+#: ../system/core-workflows/how-do-they-work.rst:149
 msgid ""
 "If the field has only one option available for selection and no value yet, "
 "the value will be automatically set."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:149
+#: ../system/core-workflows/how-do-they-work.rst:152
 msgid ""
 "This option only works if you have one value and doesn't work if there is "
 "more than one option available."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:154
+#: ../system/core-workflows/how-do-they-work.rst:157
 msgid "set readonly |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:153
+#: ../system/core-workflows/how-do-they-work.rst:156
 msgid ""
 "Allows you to display an attribute as read only (which means no changes are "
 "possible)."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:158
+#: ../system/core-workflows/how-do-they-work.rst:161
 msgid "unset readonly |ui|"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:157
+#: ../system/core-workflows/how-do-they-work.rst:160
 msgid ""
 "In case a workflow set the field in question to read only, you can undo this "
 "with option above."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:169
+#: ../system/core-workflows/how-do-they-work.rst:172
 msgid "Stop after match"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:171
+#: ../system/core-workflows/how-do-they-work.rst:174
 msgid ""
 "Here you can decide if other workflows are executed after the current one."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:173
+#: ../system/core-workflows/how-do-they-work.rst:176
 msgid ""
 "If set to ``no`` (default), further workflows will be executed if they match "
 "the condition. In this case, it is possible that your actions from the "
 "current workflow can be overwritten by another workflow."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:177
+#: ../system/core-workflows/how-do-they-work.rst:180
 msgid ""
 "If set to ``yes``, no further worflows will be executed after the current "
 "one."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:181
+#: ../system/core-workflows/how-do-they-work.rst:184
 msgid "Priority"
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:183
+#: ../system/core-workflows/how-do-they-work.rst:186
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
 "default value is ``500``."
 msgstr ""
 
-#: ../system/core-workflows/how-do-they-work.rst:186
+#: ../system/core-workflows/how-do-they-work.rst:189
 msgid ""
 "The workflows are executed in ascending order by their priority. That means "
 "lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``)."
 msgstr ""
 
 #: ../system/core-workflows/learn-by-example.rst:2
-msgid "Learn by example"
-msgstr ""
+#, fuzzy
+msgid "Learn by Example"
+msgstr "Ejemplo"
 
 #: ../system/core-workflows/learn-by-example.rst:4
 msgid ""
@@ -17490,44 +17776,59 @@ msgid ""
 "To learn about Core Workflows in detail, first go to :doc:`how-do-they-work`."
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:9
+#: ../system/core-workflows/learn-by-example.rst:10
+#, fuzzy
+msgid "Group Based Examples"
+msgstr "Ejemplo"
+
+#: ../system/core-workflows/learn-by-example.rst:12
 msgid ""
 "All following workflows have the same base configurations. The workflow may "
 "not use them all."
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:17
+#: ../system/core-workflows/learn-by-example.rst:15
+#, fuzzy
+#| msgid "group"
+msgid "Groups:"
+msgstr "grupo"
+
+#: ../system/core-workflows/learn-by-example.rst:20
+msgid "Attributes:"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:22
 msgid "Category (Single tree selection field, not mandatory, agents only)"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:18
+#: ../system/core-workflows/learn-by-example.rst:23
 msgid ""
 "Approved (Boolean field, not mandatory, not shown, ``false`` as default)"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:19
+#: ../system/core-workflows/learn-by-example.rst:24
 msgid "Operating System (Text field, not mandatory, not shown)"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:20
+#: ../system/core-workflows/learn-by-example.rst:25
 msgid "Software used (Single selection field, not mandatory, not shown)"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 msgid "Group specific values and fields"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:23
+#: ../system/core-workflows/learn-by-example.rst:28
 msgid ""
 "This workflow set depends on the category field. It reduces the available "
 "set of values based on the group selected."
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:28
+#: ../system/core-workflows/learn-by-example.rst:33
 msgid "Workflow 2nd Level group"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:30
+#: ../system/core-workflows/learn-by-example.rst:35
 msgid ""
 "This reduces the category options to ``2nd Level/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to mandatory and visible."
@@ -17537,11 +17838,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for 2nd level"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:38
+#: ../system/core-workflows/learn-by-example.rst:43
 msgid "Workflow Support group"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:40
+#: ../system/core-workflows/learn-by-example.rst:45
 msgid ""
 "This reduces the category options to ``Support/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to visible."
@@ -17551,11 +17852,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for support"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:48
+#: ../system/core-workflows/learn-by-example.rst:53
 msgid "Workflow Sales group"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:50
+#: ../system/core-workflows/learn-by-example.rst:55
 msgid ""
 "This reduces the category options to ``Sales/*``, ``Internal/*`` and "
 "``Others``."
@@ -17565,11 +17866,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for sales"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 msgid "The Result"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:58
+#: ../system/core-workflows/learn-by-example.rst:63
 msgid ""
 "This is what the agent would experience with the above workflows in place."
 msgstr ""
@@ -17579,11 +17880,11 @@ msgid ""
 "Workflow shows objects and limits options based on selections on the group"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:85
+#: ../system/core-workflows/learn-by-example.rst:90
 msgid "Approval process"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:66
+#: ../system/core-workflows/learn-by-example.rst:71
 msgid ""
 "In this case ``approved`` is visible to agents by default. For this "
 "workflow, an additional role ``Approval person`` is required (no further "
@@ -17594,13 +17895,13 @@ msgstr ""
 msgid "Sample workflow that restricts an approval attribute to specific roles"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:76
+#: ../system/core-workflows/learn-by-example.rst:81
 msgid ""
 "This workflow may work best in combination with a :doc:`trigger </manage/"
 "trigger>` but technically, this is not required."
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:79
+#: ../system/core-workflows/learn-by-example.rst:84
 msgid ""
 "Select fields may be a better approach because they allow more values than "
 "just a simple ``true`` or ``false``."
@@ -17612,11 +17913,11 @@ msgid ""
 "depending on the users role"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:103
 msgid "State dependent mandatory fields"
 msgstr ""
 
-#: ../system/core-workflows/learn-by-example.rst:88
+#: ../system/core-workflows/learn-by-example.rst:93
 msgid ""
 "This workflow sets ``Category`` to mandatory if the agent wants to set the "
 "states ``closed`` or ``pending close`` to enforce categorization."
@@ -17630,6 +17931,66 @@ msgstr ""
 msgid ""
 "Workflow sets category field to mandatory upon choosing closed or pending "
 "close as state"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:106
+msgid "Manual Ticket Handover Process"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:108
+msgid "This example covers the handover of a ticket from one agent to another:"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:110
+msgid ""
+"When the ticket owner is modified, a new text field (\"Handover\") shows up "
+"for a comment"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:112
+msgid ""
+"This may only be visible when the owner is changed, therefore it has to be "
+"hidden in general"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:114
+msgid "The input in this handover text field is mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:115
+msgid ""
+"After submitting changes, the value of the handover field must be added as "
+"an note to the ticket (via trigger)"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:121
+msgid "Hiding handover field"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Hiding the handover field in core workflows"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:126
+msgid "Showing handover field and setting it to mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Showing the handover field and set it as mandatory"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:131
+msgid "Trigger writing handover input to a new article"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Write handover content to a new article"
+msgstr ""
+
+#: ../system/core-workflows/learn-by-example.rst:133
+msgid ""
+"As a result, the ticket includes an article of the type note which includes "
+"the predefined text and the handover comment."
 msgstr ""
 
 #: ../system/core-workflows/limitations.rst:6
