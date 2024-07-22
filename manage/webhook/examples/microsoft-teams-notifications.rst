@@ -8,8 +8,8 @@ Microsoft Teams Notifications
    The new way of connecting Microsoft Teams with third-party tools is via
    `Workflows in Teams <https://support.microsoft.com/en-us/office/browse-and-add-workflows-in-microsoft-teams-4998095c-8b72-4b0e-984c-f2ad39e6ba9a>`_.
 
-   For the transition period, we decided to keep this guide as is. Make sure
-   to follow Microsoft's guide as replacement for **step 1** below, to
+   In the transitional period, we decided to keep this guide as is. Make sure
+   to follow Microsoft's guide as a replacement for **step 1** below, to
    connect Teams and Zammad via Workflows.
 
    If you already use this webhook and *didn't customize* the payload, the new
@@ -17,7 +17,7 @@ Microsoft Teams Notifications
    need to create the workflow for your channel in Microsoft Teams. Otherwise
    you have to manually adjust the payload in Zammad, too. See
    :doc:`Microsoft Teams Payload </manage/webhook/examples/microsoft-teams-payload>`
-   where you can find the old and new default ones in case you need it.
+   where you can find the old and new defaults in case you need it.
 
    To manage the connection in Zammad, you can go on with **step 2** on this
    page.
