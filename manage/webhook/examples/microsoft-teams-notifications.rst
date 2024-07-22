@@ -16,7 +16,7 @@ Microsoft Teams Notifications
    webhook is used automatically after updating Zammad. In this case, you just
    need to create the workflow for your channel in Microsoft Teams. Otherwise
    you have to manually adjust the payload in Zammad, too. See
-   :doc:`Microsoft Teams Payload </manage/webhook/examples/microsoft-teams-webhooks>`
+   :doc:`Microsoft Teams Payload </manage/webhook/examples/microsoft-teams-payload>`
    where you can find the old and new default ones in case you need it.
 
    To manage the connection in Zammad, you can go on with **step 2** on this
@@ -25,7 +25,7 @@ Microsoft Teams Notifications
 .. toctree::
    :hidden:
 
-   /manage/webhook/examples/microsoft-teams-webhooks
+   /manage/webhook/examples/microsoft-teams-payload
 
 Follow the steps below to configure a webhook for receiving Zammad notifications
 in a Microsoft Teams channel.
