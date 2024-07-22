@@ -16,7 +16,7 @@ Microsoft Teams Notifications
    webhook is used automatically after updating Zammad. Otherwise you have to
    manually adjust it. See
    :doc:`MS Teams webhooks </manage/webhook/examples/microsoft-teams-webhooks>`
-   where we collected the old and new default ones in case you need it.
+   where you can find the old and new default ones in case you need it.
 
    To manage the connection in Zammad, you can go on with **step 2** on this
    page.
