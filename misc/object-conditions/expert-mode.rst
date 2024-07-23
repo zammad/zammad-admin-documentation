@@ -11,8 +11,6 @@ Enabling the *expert mode* within your ticket conditions allows you to use
 requires this enhanced configuration individually. This section expects that
 you had a look at :doc:`basics` already.
 
-This feature is available since Zammad 5.4.
-
 Limitation
 ----------
 
