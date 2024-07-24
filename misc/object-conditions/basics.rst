@@ -47,8 +47,8 @@ Have a look below where you can find a table with special functions which you
 can see as some kind of attribute type and a a listing of attribute types you
 can use in conditions in Zammad.
 
-Special Functions
-^^^^^^^^^^^^^^^^^
+Special Fields
+^^^^^^^^^^^^^^
 
 There are built in functions in Zammad which are selectable while creating or
 editing a condition. Find them in the following table.
@@ -208,8 +208,8 @@ editing a condition. Find them in the following table.
      - - internal
        - public
 
-Text field (input)
-^^^^^^^^^^^^^^^^^^
+Text Field
+^^^^^^^^^^
 
 Checks if any field of type text contains a specific string.
 The configured "Type" of input fields has no impact on the available options.
@@ -233,7 +233,7 @@ Available operators for matching:
 - | **does not match regex**:
   | Evaluates if text does not match provided regular expression.
 
-Textarea field
+Textarea Field
 ^^^^^^^^^^^^^^
 
 Checks if any field of type textarea contains a specific string.
@@ -244,7 +244,7 @@ Available operators for matching:
 - **contains not**
 - **has changed**
 
-Boolean field
+Boolean Field
 ^^^^^^^^^^^^^
 
 Checks if any field of type boolean is true.
@@ -255,7 +255,7 @@ Available operators for matching:
 - **is not**
 - **has changed**
 
-Integer field
+Integer Field
 ^^^^^^^^^^^^^
 
 Checks if any field of type integer has a specific value.
@@ -266,7 +266,7 @@ Available operators for matching:
 - **is not**
 - **has changed**
 
-Date field
+Date Field
 ^^^^^^^^^^
 
 Checks if a date is before or past (both absolute or relativ) a specific point
@@ -314,7 +314,7 @@ might also be helpful to you.
 
 .. include:: /misc/object-conditions/time-conditions-mermaid.include.rst
 
-Date & Time field
+Date & Time Field
 ^^^^^^^^^^^^^^^^^
 
 Checks if a date and time is before or past (both absolute or relativ) a
@@ -368,7 +368,7 @@ Available operators for matching:
 Have a look at the diagram above. It applies also for date & time but you
 additionally have hours and minutes on top to use.
 
-Single selection field
+Single Selection Field
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Checks if selected field values match the attribute value. It allows
@@ -381,7 +381,7 @@ Available operators for matching:
 - **is not**
 - **has changed**
 
-Multiple selection field
+Multiple Selection Field
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Checks if selected field values match the attribute value(s).
@@ -398,7 +398,7 @@ Available operators for matching:
   | Matches if one specific given field value is not selected.
 
 
-Single tree selection field
+Single Tree Selection Field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Checks if a selected field value match the attribute value.
@@ -410,7 +410,7 @@ Available operators for matching:
 - **is not**
 - **has changed**
 
-Multiple tree selection field
+Multiple Tree Selection Field
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Checks if selected field value(s) match the attribute value(s).
