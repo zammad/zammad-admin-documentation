@@ -270,7 +270,8 @@ Date Field
 ^^^^^^^^^^
 
 Checks if a date is before or past (both absolute or relativ) a specific point
-in time or time period.
+in time or time period. Relative operators allow you to define a time period in
+seconds, minutes, hours, days, weeks, months or years.
 
 Available operators for matching:
 
@@ -283,13 +284,9 @@ Available operators for matching:
 * | **before (relative)**:
   | Matches the date field's value if the value is before the current
     date minus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **after (relative)**:
   | Matches the date field's value if the value is after the current
     date plus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **within last (relative)**:
   | Matches the date field's value if the value is in between the current
     date and the current date minus the selected time period.
@@ -299,13 +296,9 @@ Available operators for matching:
 * | **till (relative)**:
   | Matches the date field's value if the value is before the current
     date plus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **from (relative)**:
   | Matches the date field's value if the value is after the current
     date minus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **has changed**:
   | The field has been changed during a ticket update.
 
@@ -318,7 +311,8 @@ Date & Time Field
 ^^^^^^^^^^^^^^^^^
 
 Checks if a date and time is before or past (both absolute or relativ) a
-specific point in time or time period.
+specific point in time or time period. Relative operators allow you to define
+a time period in seconds, minutes, hours, days, weeks, months or years.
 
 Available operators for matching:
 
@@ -331,13 +325,9 @@ Available operators for matching:
 * | **before (relative)**:
   | Matches the date & time field's value if the value is before the
     current date and time minus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **after (relative)**:
   | Matches the date & time field's value if the value is after the
     current date and time plus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **within last (relative)**:
   | Matches the date & time field's value if the value is in between the
     current time and the current time minus the selected time period.
@@ -347,13 +337,9 @@ Available operators for matching:
 * | **till (relative)**:
   | Matches the date & time field's value if the value is before the
     current date and time plus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **from (relative)**:
   | Matches the date & time field's value if the value is after the
     current date and time minus the selected time period.
-  | You can choose from Minute(s), Hour(s), Day(s), Week(s), Month(s) and
-    Year(s).
 * | **has changed**:
   | The field has been changed during a ticket update.
 * | **has reached**:
