@@ -59,7 +59,7 @@ editing a condition. Find them in the following table.
    :widths: auto
    :header-rows: 1
 
-   * - Function
+   * - Field
      - Context
      - Description
      - Operators
