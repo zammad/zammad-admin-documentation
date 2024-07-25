@@ -1,5 +1,5 @@
-Expert object conditions
-************************
+Expert Mode
+***********
 
 .. warning:: **🚧 Hosted environment specific limitation 🚧**
 
@@ -17,7 +17,7 @@ Limitation
 Zammad offers up to three layers of conditions allowing you to configure
 very detailed and complex conditions.
 
-Switching to Expert mode
+Switching to Expert Mode
 ------------------------
 
 You can enable or disable *expert mode* in any supported condition screen.
@@ -27,7 +27,7 @@ To do so, simply use the *expert mode* button on the lower right below the
 .. figure:: /images/misc/object-conditions/enable_expert-mode.gif
    :alt: Screencast showing expert mode being enabled in trigger dialog
 
-Logic block conditions
+Logic Block Conditions
 ----------------------
 
 Zammad's condition expert mode allows you to use logic blocks.
@@ -50,7 +50,7 @@ Match none (NOT)
 See :ref:`evaluation order <evaluation-order>` to understand how Zammad
 evaluates triggers in expert mode.
 
-Adding conditions and logic blocks
+Adding Conditions and Logic Blocks
 ----------------------------------
 
 By using the |subclause| icon you can add as many logic blocks as you need.
@@ -79,7 +79,7 @@ using it on.
    :alt: Icon for adding a new subclause block
    :width: 16px
 
-Re-arranging conditions and logic blocks
+Re-arranging Conditions and Logic Blocks
 ----------------------------------------
 
 Use ≡ to drag conditions or logic blocks and drop them to the position desired.
@@ -96,7 +96,7 @@ blocks, this won't have any consequences.
 
 .. _evaluation-order:
 
-Evaluation order
+Evaluation Order
 ----------------
 
 Here's a fairly complex diagram on how Zammad evaluates conditions and their
