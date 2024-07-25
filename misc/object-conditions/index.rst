@@ -1,42 +1,20 @@
-Object conditions
+Object Conditions
 *****************
 
-This page will help you to understand Zammad's object conditions better.
+In many places in Zammad you can use conditions based on attribute checks to
+filter tickets and perform actions.
 
-Limitations
------------
+Please note that the availability of the different attributes and special fields
+depend on the feature you are using and the object context.
 
-Ticket conditions differ from function to function.
-This affects the availability for certain attribute checks and the
-expert mode (*AND / OR*). The following functions in Zammad are covered.
-
-   * :doc:`/manage/overviews`
-   * :doc:`/manage/slas/index`
-   * :doc:`/manage/trigger`
-   * :doc:`/manage/scheduler`
-   * :doc:`/manage/report-profiles`
-   * :ref:`Automatic ticket assignment <auto_assignment>`
-
-All other functions that come with an object condition configuration may not
-fully support all stated functions.
-
-Some object scopes (e.g. article scope) are not available in all situations,
-this is due to the nature of each independent functionality. Check the function
-documentation page affected to learn more.
-
---------------------------------------------------------------------------------
-
-Getting started
----------------
-
-This guide is split into two major sections which depend on each other.
+This guide is split into two sections:
 
 :doc:`/misc/object-conditions/basics`
-   Learn how Zammad's basic conditions work to adapt to your environment.
+   Learn how Zammad's conditions work to adapt to your environment.
 
 :doc:`/misc/object-conditions/expert-mode`
    Learn how Zammad's expert mode for conditions allows you to create
-   even more powerful conditions. *AND / OR* conditions have you covered!
+   even more powerful conditions with AND/OR relations.
 
 .. toctree::
    :maxdepth: 1

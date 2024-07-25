@@ -425,11 +425,12 @@ Ticket context conditions do not support:
      than once
 
 *has changed* conditions:
-   * Are only available for ticket attributes
-   * Don't affect ticket articles attributes
-   * Don't affect organization attributes
-   * Don't affect user attributes
-   * Don't affect group attributes
+   Are only available for ticket attributes and don't affect:
+
+   * Ticket articles attributes
+   * Organization attributes
+   * User attributes
+   * Group attributes
 
 Differences in input fields:
    Please note that the input field for tokens doesn't support the comma as

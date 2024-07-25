@@ -1,5 +1,5 @@
-Expert Object Conditions
-************************
+Expert Mode
+***********
 
 .. warning:: **🚧 Hosted environment specific limitation 🚧**
 
