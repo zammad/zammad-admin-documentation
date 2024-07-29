@@ -455,7 +455,7 @@ Regex support
    Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket
    assignment and Core Workflow.
 
-"Old" style** ``regex:...`` conditions
+"Old" style ``regex:...`` conditions
    If you update your Zammad from 6.0 or prior and you have already conditions
    with *contains* or *contains not* including a regex filter
    (i.e. ``regex:^(foo|bar)$``), Zammad tries to migrate them to the new
