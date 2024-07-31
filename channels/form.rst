@@ -1,5 +1,5 @@
-Forms
-*****
+Form
+****
 
 Feedback or contact forms are used on websites quite often.
 Usually they will generate an email which will be sent to somebody who forwards
