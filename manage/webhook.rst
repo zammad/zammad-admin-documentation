@@ -30,7 +30,7 @@ When created from scratch, regular webhook payloads by default contain the
 following JSON data about new/updated tickets:
 
 * ticket attributes/metadata
-* *all* associated articles
+* associated article(s)
 * associated users (e.g. article senders, owners, etc.)
 * associated user roles
 * associated user organizations (if applicable)
