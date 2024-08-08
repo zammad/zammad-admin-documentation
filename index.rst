@@ -21,6 +21,7 @@ Zammad Admin Documentation
    manage/macros
    manage/templates
    manage/tags
+   manage/checklist
    manage/calendars
    manage/slas/index
    manage/trigger
