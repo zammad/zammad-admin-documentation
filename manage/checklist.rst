@@ -27,8 +27,8 @@ You can clone or delete the template by clicking on the ︙ button and select
 the corresponding action.
 
 To edit the template, simply click on the title of the template. This opens
-a dialog where you can edit the items (add, rename, reorder, delete them) as
-well as setting the template to inactive.
+a dialog where you can edit the checklist and the items (add, rename,
+reorder, delete them) and set the entire template to active/inactive.
 
 .. figure:: /images/manage/checklist/checklist-template-edit.png
    :alt: Screenshot showing the checklist template edit dialog.
