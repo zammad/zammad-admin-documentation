@@ -6,7 +6,8 @@ General
 
 The checklist feature allows agents to keep track of the tasks to be completed.
 It is activated by default and shows up in another tab in the right sidebar
-in the ticket view.
+in the ticket view (see :user-docs:`here </extras/checklist.html>` what it
+looks like from agent's perspective).
 
 .. figure:: /images/manage/checklist/checklist-settings.png
    :alt: Screenshot showing checklist feature in admin area.
@@ -14,7 +15,25 @@ in the ticket view.
 Usage
 -----
 
+To activate/deactivate the feature, simply switch the toggle labeled with
+"Enable Checklists" at the top of the page.
 
+You can optionally create one or more templates with predefined checklist
+items. For this, just click on the "New Checklist Template" button and add
+the checklist items. After submitting the form, the template can be used in
+tickets.
+
+You can clone or delete the template by clicking on the ︙ button and select
+the corresponding action.
+
+To edit the template, simply click on the title of the template. This opens
+a dialog where you can edit the items (add, rename, reorder, delete them) as
+well as setting the template to inactive.
+
+.. figure:: /images/manage/checklist/checklist-template-edit.png
+   :alt: Screenshot showing the checklist template edit dialog.
+   :align: center
+   :scale: 70%
 
 Remarks
 -------
@@ -27,3 +46,6 @@ Remarks
 - An agent can always overwrite and adjust the checklist, it can even be
   deleted from the ticket. This applies also to checklists which are
   added in a ticket based on a checklist template.
+- The checklist feature is currently a standalone feature. That means you can't
+  access the items or state of the checkboxes from other places in Zammad like
+  triggers or workflows.
