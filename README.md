@@ -51,10 +51,10 @@ $ make -e SPHINXOPTS="-D language='en'" html
 [badge_pre-release]: https://readthedocs.org/projects/zammad-admin-documentation/badge/?version=pre-release
 [docs_pre-release]: https://admin-docs.zammad.org/en/pre-release/
 
-[tbadge_pre-release]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/svg-badge.svg
+[tbadge_pre-release]: https://translations.zammad.org/widget/documentations/admin-documentation-pre-release/svg-badge.svg
 [wbetranslate_pre-release]: https://translations.zammad.org/projects/documentations/admin-documentation-pre-release/
 
-[tbadge_latest]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-latest/svg-badge.svg
+[tbadge_latest]: https://translations.zammad.org/widget/documentations/admin-documentation-latest/svg-badge.svg
 [wbetranslate_latest]: https://translations.zammad.org/projects/documentations/admin-documentation-latest/
 
-[tprogress]: https://translations.zammad.org/widgets/documentations/-/admin-documentation-pre-release/horizontal-auto.svg
+[tprogress]: https://translations.zammad.org/widget/documentations/admin-documentation-latest/horizontal-auto.svg
