@@ -4,47 +4,30 @@ Attribute Permissions
 Introduction
 ------------
 
-The object attributes allow you to set permissions and to select when they
-have to be shown and if they are required. Based on the object context (ticket,
-agent, organization, user), you can find related permissions as you can see
-in the description below.
+.. figure:: /images/system/objects/permission-and-screen-overview.png
+   :align: center
+   :alt: Screenshot shows object attribute permission table
+   :scale: 60%
 
-If this is not what you are searching for or if you want to have further
-customization possibilities, you should have a look at our
-:doc:`core workflows section </system/core-workflows>`.
+   Some of the possible permissions and screen options for a user object attribute.
 
-This section assumes that you are already aware of Zammad's
-:doc:`role permissions </manage/roles/index>`.
+In the object attributes configuration, you can set basic permissions based
+on Zammad's :doc:`role architecture </manage/roles/index>`.
+Additionally, you can differentiate in which form they have to be shown and in
+which form they are mandatory. Based on the object context (ticket, agent,
+organization, user), you can choose different roles and different forms, they
+should be included. Be aware that these permission settings aren't affecting
+the data creation via other channels than the UI.
 
-.. note::
-
-   In some situations, Zammad internally overrules your chosen settings for
-   screen, requirement and permission. This affects situations where a field
-   can't be set which would be required for the ticket creation.
-
-   This currently affects:
-
-      * merging
-      * emails no matter of the originating channel (incoming)
-      * :doc:`/channels/form` (incoming)
-      * :doc:`/channels/facebook` (incoming)
-      * :doc:`/channels/telegram` (incoming)
-      * :doc:`/channels/twitter-x/twitter` (incoming)
-      * SMS (incoming)
+If you want to have further customization possibilities, you should have a look
+at the :doc:`core workflows </system/core-workflows>`.
 
 Screens
 -------
 
 Zammad differentiates between several screens where object attributes can be
-used. You can find an example in the screenshot below:
-
-.. figure:: /images/system/objects/permission-and-screen-overview.png
-   :align: center
-
-   Some of the possible permissions and screen options for object attributes.
-
-The selectable screens depend on the object context you are in. See the table
-below to have an overview.
+used. The selectable screens depend on the object context you are in, see
+table below.
 
 .. list-table::
    :header-rows: 1
@@ -53,13 +36,15 @@ below to have an overview.
    * - Screen
      - Available for
      - Description
-   * - create & create_middle
-     - - ticket.customer
-       - ticket.agent
+   * - create
        - admin.user
        - admin.organization
        - admin.group
      - Creation dialog for not yet existing data
+   * - create_middle
+     - - ticket.customer
+       - ticket.agent
+     - Ticket create dialog between
    * - edit
      - - ticket.customer
        - ticket.agent
@@ -75,7 +60,7 @@ below to have an overview.
        - admin.group
      - View-only dialog for already existing data
    * - signup
-     - - ticket.customer
+     - ticket.customer
      - Sign-up screen for new customers
    * - invite_customer
      - - ticket.agent
@@ -91,9 +76,6 @@ Screen Options
 
 In the different screens, you can select "show" and "required" options.
 
-shown
-   Show (check) or hide (uncheck) a field.
-
-required
-   Set a field to mandatory (check). Forces users (via UI and API)
-   to populate the field.
+- **shown:** Show (check) or hide (uncheck) a field.
+- **required:** Set a field to mandatory (check). Forces users (via UI and API)
+  to populate the field.
