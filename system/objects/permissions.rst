@@ -1,19 +1,20 @@
-Attribute permissions
+Attribute Permissions
 *********************
 
-.. figure:: /images/system/objects/permission-and-screen-overview.png
-   :align: center
+Introduction
+------------
 
-   Some of the possible permissions and screen options for object attributes.
+The object attributes allow you to set permissions and to select when they
+have to be shown and if they are required. Based on the object context (ticket,
+agent, organization, user), you can find related permissions as you can see
+in the description below.
 
-Whenever needed you can restrict access to attributes based on the
-:ref:`user permission <permission-guide>`
-(``admin``, ``ticket.agent`` & ``ticket.customer``).
+If this is not what you are searching for or if you want to have further
+customization possibilities, you should have a look at our
+:doc:`core workflows section </system/core-workflows>`.
 
-.. tip:: **🤓 This is not the only possibility to restrict access**
-
-   You can always adjust below settings with :doc:`/system/core-workflows`.
-   This also allows role based restriction.
+This section assumes that you are already aware of Zammad's
+:doc:`role permissions </manage/roles/index>`.
 
 .. note::
 
@@ -31,42 +32,68 @@ Whenever needed you can restrict access to attributes based on the
       * :doc:`/channels/twitter-x/twitter` (incoming)
       * SMS (incoming)
 
-About screens
--------------
+Screens
+-------
 
 Zammad differentiates between several screens where object attributes can be
-used.
+used. You can find an example in the screenshot below:
 
-create
-   Every time you use a creation dialogue for not yet existing data.
+.. figure:: /images/system/objects/permission-and-screen-overview.png
+   :align: center
 
-edit
-   Every time you're editing existing data - viewing existing tickets counts
-   as edit screen.
+   Some of the possible permissions and screen options for object attributes.
 
-view
-   Affects view screens of existing data like e.g. user profiles.
+The selectable screens depend on the object context you are in. See the table
+below to have an overview.
 
-      .. note::
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 40, 20
 
-         This setting is available for the following object contexts:
+   * - Screen
+     - Available for
+     - Description
+   * - create & create_middle
+     - - ticket.customer
+       - ticket.agent
+       - admin.user
+       - admin.organization
+       - admin.group
+     - Creation dialog for not yet existing data
+   * - edit
+     - - ticket.customer
+       - ticket.agent
+       - admin.user
+       - admin.organization
+       - admin.group
+     - Editing dialog for already existing data
+   * - view
+     - - ticket.customer
+       - ticket.agent
+       - admin.user
+       - admin.organization
+       - admin.group
+     - View-only dialog for already existing data
+   * - signup
+     - - ticket.customer
+     - Sign-up screen for new customers
+   * - invite_customer
+     - - ticket.agent
+       - ticket.customer
+     - Customer invitation screen (from :doc:`First Steps </misc/first-steps>` area)
+   * - invite_agent
+     - admin.user
+     - Agent invitation screen (from :doc:`First Steps </misc/first-steps>` area)
 
-            * User
-            * Organization
-            * Group
 
-invite_customer & invite_agent
-   Shown when using the invitation dialogue from "First Steps" in the dashboard.
+Screen Options
+--------------
 
-About screen options
---------------------
-
-Now that we know the different possible situations, let's talk about available
-options.
+In the different screens, you can select "show" and "required" options.
 
 shown
-   Show (checked) or hide (unchecked) a field.
+   Show (check) or hide (uncheck) a field.
 
 required
-   Set a field to mandatory (checked). Forces users (via UI and API)
+   Set a field to mandatory (check). Forces users (via UI and API)
    to populate the field.
