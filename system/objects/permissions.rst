@@ -37,7 +37,7 @@ table below.
      - Available for
      - Description
    * - create
-       - admin.user
+     - - admin.user
        - admin.organization
        - admin.group
      - Creation dialog for not yet existing data
