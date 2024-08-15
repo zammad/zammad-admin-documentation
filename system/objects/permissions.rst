@@ -1,72 +1,84 @@
-Attribute permissions
+Attribute Permissions
 *********************
+
+Introduction
+------------
+
+In the object attributes configuration you can define if a field is shown
+and if the input in the field is mandatory, separated by
+different screens and for different
+:doc:`roles/permissions </manage/roles/index>`.
 
 .. figure:: /images/system/objects/permission-and-screen-overview.png
    :align: center
+   :alt: Screenshot shows object attribute permission table
+   :scale: 60%
 
-   Some of the possible permissions and screen options for object attributes.
+   Some of the possible permissions and screen options for a user object attribute.
 
-Whenever needed you can restrict access to attributes based on the
-:ref:`user permission <permission-guide>`
-(``admin``, ``ticket.agent`` & ``ticket.customer``).
+Based on the object context (ticket, agent, organization, user), the selectable
+roles (to be precise: the required permissions) and screens differ. Be aware that
+these settings aren't affecting data creation via other channels
+than the UI.
 
-.. tip:: **🤓 This is not the only possibility to restrict access**
+If you want to have further customization possibilities, you should have a look
+at the :doc:`core workflows </system/core-workflows>`.
 
-   You can always adjust below settings with :doc:`/system/core-workflows`.
-   This also allows role based restriction.
+Screens
+-------
 
-.. note::
+In the table below you can find an overview about the different
+permissions and the available screens Zammad distinguishes between.
 
-   In some situations, Zammad internally overrules your chosen settings for
-   screen, requirement and permission. This affects situations where a field
-   can't be set which would be required for the ticket creation.
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 40, 20
 
-   This currently affects:
+   * - Screen
+     - Available for
+     - Description
+   * - create
+     - - admin.user
+       - admin.organization
+       - admin.group
+     - Creation dialog for not yet existing data
+   * - create_middle
+     - - ticket.customer
+       - ticket.agent
+     - Ticket create dialog (middle section)
+   * - edit
+     - - ticket.customer
+       - ticket.agent
+       - admin.user
+       - admin.organization
+       - admin.group
+     - Editing dialog for already existing data
+   * - view
+     - - ticket.customer
+       - ticket.agent
+       - admin.user
+       - admin.organization
+       - admin.group
+     - View-only dialog for already existing data
 
-      * merging
-      * emails no matter of the originating channel (incoming)
-      * :doc:`/channels/form` (incoming)
-      * :doc:`/channels/facebook` (incoming)
-      * :doc:`/channels/telegram` (incoming)
-      * :doc:`/channels/twitter-x/twitter` (incoming)
-      * SMS (incoming)
+       (e.g. user or organization from search)
+   * - signup
+     - ticket.customer
+     - Sign-up screen for new customers
+   * - invite_customer
+     - - ticket.agent
+       - ticket.customer
+     - Customer invitation screen (from :doc:`First Steps </misc/first-steps>` area)
+   * - invite_agent
+     - admin.user
+     - Agent invitation screen (from :doc:`First Steps </misc/first-steps>` area)
 
-About screens
--------------
 
-Zammad differentiates between several screens where object attributes can be
-used.
+Screen Options
+--------------
 
-create
-   Every time you use a creation dialogue for not yet existing data.
+For the different screens you can select "show" and "required" options.
 
-edit
-   Every time you're editing existing data - viewing existing tickets counts
-   as edit screen.
-
-view
-   Affects view screens of existing data like e.g. user profiles.
-
-      .. note::
-
-         This setting is available for the following object contexts:
-
-            * User
-            * Organization
-            * Group
-
-invite_customer & invite_agent
-   Shown when using the invitation dialogue from "First Steps" in the dashboard.
-
-About screen options
---------------------
-
-Now that we know the different possible situations, let's talk about available
-options.
-
-shown
-   Show (checked) or hide (unchecked) a field.
-
-required
-   Set a field to mandatory (checked). Forces users (via UI and API)
-   to populate the field.
+- **shown:** Show (check) or hide (uncheck) a field.
+- **required:** Set a field to mandatory (check). Forces users (via UI and API)
+  to populate the field.
