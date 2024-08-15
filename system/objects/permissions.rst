@@ -4,6 +4,9 @@ Attribute Permissions
 Introduction
 ------------
 
+In the object attributes configuration you can set basic permissions based
+on Zammad's :doc:`role architecture </manage/roles/index>`.
+
 .. figure:: /images/system/objects/permission-and-screen-overview.png
    :align: center
    :alt: Screenshot shows object attribute permission table
@@ -11,12 +14,14 @@ Introduction
 
    Some of the possible permissions and screen options for a user object attribute.
 
-In the object attributes configuration, you can set basic permissions based
-on Zammad's :doc:`role architecture </manage/roles/index>`.
-Additionally, you can differentiate in which form they have to be shown and in
-which form they are mandatory. Based on the object context (ticket, agent,
-organization, user), you can choose different roles and different forms, they
-should be included. Be aware that these permission settings aren't affecting
+In this attribute settings, you can:
+
+- differentiate in which form specific fields have to be shown
+- in which form fields are mandatory
+- select for which roles it should apply
+
+Based on the object context (ticket, agent, organization, user), the available
+roles and screens are different. Be aware that these permission settings aren't affecting
 the data creation via other channels than the UI.
 
 If you want to have further customization possibilities, you should have a look
@@ -44,7 +49,7 @@ table below.
    * - create_middle
      - - ticket.customer
        - ticket.agent
-     - Ticket create dialog between
+     - Ticket create dialog (middle section)
    * - edit
      - - ticket.customer
        - ticket.agent
@@ -79,3 +84,8 @@ In the different screens, you can select "show" and "required" options.
 - **shown:** Show (check) or hide (uncheck) a field.
 - **required:** Set a field to mandatory (check). Forces users (via UI and API)
   to populate the field.
+
+
+Example
+-------
+
