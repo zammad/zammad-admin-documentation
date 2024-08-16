@@ -1,5 +1,5 @@
 Signatures
-**********
+==========
 
 .. figure:: /images/channels/email/signatures-page.png
    :alt: Account settings page
@@ -16,9 +16,8 @@ editing mask:
 Each group can be assigned its own signature, but they can also all use the
 same signature.
 
-
 Dynamic Signatures
-++++++++++++++++++
+------------------
 
 To individualize the signatures, it is possible to automatically load specific
 information into a signature via :doc:`/system/variables`. All information

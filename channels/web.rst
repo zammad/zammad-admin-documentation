@@ -1,5 +1,5 @@
 Web
-***
+===
 
 The web channel mainly affects your customers using the web interface.
 These settings allow you to restrict your customers ticket creation.
@@ -11,7 +11,7 @@ you should have a look in our :doc:`/system/core-workflows` documentation.
    :width: 90%
    :alt: The web channel settings page
 
-Settings affecting your customer
+Settings Affecting Your Customer
 --------------------------------
 
 Enable Ticket creation
@@ -33,7 +33,7 @@ Group selection for Ticket creation
    Default: (empty selection)
 
 
-Global settings affecting *all* users
+Global Settings Affecting *All* Users
 -------------------------------------
 
 Tab behavior after ticket creation

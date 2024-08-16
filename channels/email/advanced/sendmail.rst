@@ -1,4 +1,4 @@
-Dispatch messages with Sendmail
+Dispatch Messages With Sendmail
 *******************************
 
 .. warning::

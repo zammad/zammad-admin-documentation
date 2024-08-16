@@ -1,4 +1,4 @@
-Migrate from Email channel to Microsoft 365 channel
+Migrate From Email Channel to Microsoft 365 Channel
 ===================================================
 
 Zammad provides a migration logic that allows you to migrate existing Microsoft
@@ -27,7 +27,7 @@ channel.
       :scale: 90%
       :align: center
 
-Rolling back the migration
+Rolling Back the Migration
 --------------------------
 
 In case something went wrong, Zammad allows you to roll back the migration

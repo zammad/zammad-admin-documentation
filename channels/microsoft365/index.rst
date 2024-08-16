@@ -1,5 +1,5 @@
 Microsoft 365
-*************
+=============
 
 .. toctree::
    :hidden:

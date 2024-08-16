@@ -1,5 +1,5 @@
 Telegram
-********
+========
 
 It's possible to put your Telegram bot communication into Zammad.
 To do so, you need to follow these steps.
@@ -18,8 +18,8 @@ To do so, you need to follow these steps.
    `Telegram Bot API <https://core.telegram.org/bots/api#getfile>`_.
 
 
-Register a Telegram bot app
-===========================
+Register a Telegram Bot App
+---------------------------
 
 Register your Telegram bot via your Telegram client, see also 
 `here <https://core.telegram.org/bots#3-how-do-i-create-a-bot>`_.
@@ -40,8 +40,8 @@ When you're all done, you will get your Telegram bot API token
    :alt: bot has been created
 
 
-Configure Zammad as Telegram bot
-================================
+Configure Zammad as Telegram Bot
+--------------------------------
 
 Go to "Admin -> Channels -> Telegram" and click "Add Bot"
 
@@ -56,8 +56,8 @@ Enter your "API Token", your "welcome message" and set the incoming group.
 Done, your Zammad is now configured as a Telegram bot.
 
 
-Start using your new channel
-============================
+Start Using Your New Channel
+----------------------------
 
 Go to your Telegram client, search for your new Telegram bot and start writing
 a message.

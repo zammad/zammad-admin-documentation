@@ -41,7 +41,7 @@ meaning you can send and receive tweets and DMs just like emails!
 
    Read on for details about each step.
 
-1. Apply for a Twitter Developer account
+1. Apply for a Twitter Developer Account
 ----------------------------------------
 
 .. figure:: /images/channels/app.twitter.com_developer_account.png
@@ -65,7 +65,7 @@ You may use the answer below::
    4. Our application will display individual tweets in their original form to
       authorized customer service agents of our organization only.
 
-2. Create a new Twitter app for Zammad
+2. Create a New Twitter App for Zammad
 --------------------------------------
 
 .. figure:: /images/channels/apps.twitter.com_create_app_screen.png
@@ -101,7 +101,7 @@ Tell us how this app will be used
       This app will be used to manage Twitter communications between our
       customers and our organization's customer service agents on Zammad.
 
-3. Set your new app's permissions
+3. Set Your New App's Permissions
 ---------------------------------
 
    .. figure:: /images/channels/apps.twitter.com_set_permissions.png
@@ -110,7 +110,7 @@ Tell us how this app will be used
 
       Select *Read, write, and access direct messages.*
 
-4. Generate a new access token & secret
+4. Generate a New Access Token & Secret
 ---------------------------------------
 
    .. figure:: /images/channels/apps.twitter.com_get_credentials.png
@@ -119,7 +119,7 @@ Tell us how this app will be used
 
       You will need all four keys/tokens later, so don't close this tab.
 
-5. Set up a dev environment
+5. Set Up a Dev Environment
 ---------------------------
 
 After creating your app, `set up a dev environment`_
@@ -132,7 +132,7 @@ for the Account Activity API.
    Name it whatever you like (*e.g.,* ``zammad``). You will need the label
    later, so don't forget it.
 
-6. Add your new Twitter app in Zammad
+6. Add Your New Twitter App in Zammad
 -------------------------------------
 
 .. figure:: /images/channels/zammad_connect_twitter_app1.png
@@ -143,7 +143,7 @@ for the Account Activity API.
    panel. You will need the keys, tokens, and dev environment label from Steps
    4 and 5.
 
-7. Add your Twitter account in Zammad
+7. Add Your Twitter Account in Zammad
 -------------------------------------
 
 .. figure:: /images/channels/zammad_link_twitter_account.png
@@ -160,7 +160,7 @@ for the Account Activity API.
    You will be redirected to Twitter and asked to authorize Zammad to access
    your account.
 
-8. Configure filters
+8. Configure Filters
 --------------------
 
 .. figure:: /images/channels/zammad_linked_twitter_account.png
