@@ -1,5 +1,5 @@
 System
-******
+======
 
 For your overview we split each tab within system settings into its own page:
 
@@ -12,7 +12,7 @@ For your overview we split each tab within system settings into its own page:
    /settings/system/network
    /settings/system/frontend
 
-Console based settings
+Console Based Settings
 ----------------------
 
 There's some console based settings we didn't put into the UI.

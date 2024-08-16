@@ -6,7 +6,7 @@ Authentication API in the browser for verifying user's identity. The user
 can register multiple hardware or software security keys with their Zammad
 account and then they can use it during the sign-in process.
 
-How it works
+How it Works
 ------------
 
 When logging in, the user is prompted to provide the same security key they
@@ -22,7 +22,7 @@ The type of the key can range from hardware USB sticks to passkeys stored in
 a device of user's choice. Which type can be used depends on the browser flavor
 and the platform of the user.
 
-Enabling the Security Keys method
+Enabling the Security Keys Method
 ---------------------------------
 
 To enable the method, just toggle the switch on in the settings.
