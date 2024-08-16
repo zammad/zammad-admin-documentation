@@ -1,9 +1,9 @@
 Tags
-****
+====
 
 With tags, tickets can be categorized and marked.
 
-How to tag
+How to Tag
 ----------
 
 All agents can tag tickets. You can find further information about tagging of

@@ -1,4 +1,4 @@
-Managing users via CSV Import
+Managing Users via CSV Import
 =============================
 
 If your organization has information about customers (or personnel)
@@ -16,14 +16,14 @@ or :doc:`Exchange </system/integrations/exchange>`.
 
    Use the **Import** button to open the CSV import dialog.
 
-Step 1: Inspect the sample .csv
+Step 1: Inspect the Sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
 (**“Example CSV file for download”**)
 to see how Zammad expects you to format your user data.
 
-Step 2: Export your user data to .csv
+Step 2: Export Your User Data to .csv
 -------------------------------------
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
@@ -41,7 +41,7 @@ For instance:
    jdoe,"John","Doe",jdoe@example.com,"https://zammad.com",true
    mmore,"Madeline","Moore",mmore@example.net,"",false
 
-Step 3: Import your .csv to Zammad
+Step 3: Import Your .csv to Zammad
 ----------------------------------
 
 Once your raw user data has been submitted,

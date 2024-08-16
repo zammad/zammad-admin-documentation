@@ -1,7 +1,7 @@
 Webhook Logs
 ============
 
-Zammad provides a history of your recent webhooks. 
+Zammad provides a history of your recent webhooks.
 You can find them below **Recent logs**.
 
    .. figure:: /images/manage/webhook/webhook-logs-and-entries.png
@@ -9,7 +9,7 @@ You can find them below **Recent logs**.
       :align: center
       :width: 90%
 
-If you need more details you can click on the request link in question. 
+If you need more details you can click on the request link in question.
 Zammad will provide a modal with the following information:
 
    Direction
@@ -22,7 +22,7 @@ Zammad will provide a modal with the following information:
       Always ``POST``.
 
    Status
-      Contains the HTTP status code the remote server replied with. 
+      Contains the HTTP status code the remote server replied with.
       Should be ``2xx`` if successful.
 
    Request

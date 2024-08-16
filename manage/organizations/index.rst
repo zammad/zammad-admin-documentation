@@ -22,7 +22,7 @@ Learn more about managing organizations...
 
    via the Admin Panel <via-the-admin-panel>
    via CSV import <via-csv-import>
-   via REST API <https://docs.zammad.org/en/latest/api/intro.html>
+   via REST API (system documentation) <https://docs.zammad.org/en/latest/api/intro.html>
 
 **There are some technical limitations:**
 

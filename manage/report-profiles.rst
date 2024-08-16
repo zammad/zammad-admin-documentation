@@ -1,5 +1,5 @@
 Report Profiles and Reporting
-*****************************
+=============================
 
 .. Reporting included here because it fits more to the administrator role than
 .. the user role. /rsc
@@ -20,7 +20,7 @@ required. To use the reporting itself, ``report`` permission is required.
     do not actually have access to. On the other hand, a possibly large scale of
     ticket information can easily be downloaded as a spreadsheet.
 
-Create and edit profiles
+Create and Edit Profiles
 ------------------------
 
 Report profiles are used to filter report results. The idea of the
@@ -43,7 +43,7 @@ All configured report profiles are displayed in the reporting area and you can
 switch between them with one click. Have a look at the next section to learn
 some basics about the usage of the reporting.
 
-Using the reporting
+Using the Reporting
 -------------------
 
 You can find the reporting section in the bottom left corner in Zammad next to
@@ -81,7 +81,7 @@ below:
 
 .. https://github.com/zammad/zammad/issues/2433
 
-External reporting tools
+External Reporting Tools
 ------------------------
 
 If the integrated reporting is not enough for you, you can even use third

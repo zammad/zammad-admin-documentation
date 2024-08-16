@@ -14,7 +14,7 @@ these notifications are built into Zammad itself:
 if you need to customize them,
 you will have to modify some of the files on your server.
 
-When are they sent?
+When Are They Sent?
 -------------------
 
 **All users** are notified of:
@@ -37,12 +37,12 @@ When are they sent?
 Daily reminder emails are sent at midnight (of the Zammad system timezone)
 for all unresolved “ticket pending” reminders and SLA violations.
 
-How can I customize them?
+How Can I Customize Them?
 -------------------------
 
 Inside your Zammad directory (usually ``/opt/zammad``), email templates for
 various events are stored inside the ``/app/views/mailer`` directory, named
-according to the language they’re written in. Thus, ::
+according to the language they're written in. Thus, ::
 
    /opt/zammad/app/views/mailer/ticket_create/de.html.erb
 

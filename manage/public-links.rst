@@ -1,5 +1,5 @@
 Public Links
-************
+============
 
 Public links allow you to provide important links at different places
 within the UI of Zammad. This allows you not just to provide legal information
@@ -12,7 +12,7 @@ useful links to other services if needed.
 
 .. _public_links_add_new:
 
-Adding new public links
+Adding New Public Links
 -----------------------
 
 You can add new public links via the *New Public Link*  button on the upper
@@ -91,13 +91,13 @@ Display in new tab
 
 .. _public_links_manage_existing:
 
-Manage existing public links
+Manage Existing Public Links
 ----------------------------
 
 .. _public_links_rearrange:
 
-Re-arrange links
-~~~~~~~~~~~~~~~~
+Re-arrange Links
+^^^^^^^^^^^^^^^^
 
 By default Zammad sorts your public links in the order you've created them.
 That may be a problem if you add a link later on. For this reason you can
@@ -110,8 +110,8 @@ These changes are affective immediately.
 
 .. _public_links_actions:
 
-Actions for existing links
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Actions for Existing Links
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Updating existing entries
    Got a typo in your URL or title? Want to change the context the link is

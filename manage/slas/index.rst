@@ -1,5 +1,5 @@
 SLAs
-****
+====
 
 Service Level Agreements, abbreviated SLAs, help you to meet specific response
 times for your customers' requests. This way you can define goals such as
@@ -95,5 +95,5 @@ SLA timings of a ticket
    :maxdepth: 1
    :caption: Learn more
 
-   learn-by-example   
+   learn-by-example
    how-do-they-work

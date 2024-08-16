@@ -16,7 +16,7 @@ poll the Zammad server every *n* minutes.
    Webhooks are available for :doc:`/manage/trigger` and
    :doc:`/manage/scheduler`.
 
-How do Webhooks work
+How do Webhooks Work
 --------------------
 
 Under the hood, Zammad sends a POST request to a third-party URL

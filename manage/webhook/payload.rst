@@ -11,7 +11,7 @@ Webhook Payload
       :align: center
       :width: 90%
 
-Request headers
+Request Headers
 ---------------
 
 Zammad sends the following headers in each webhook POST request:
@@ -31,7 +31,7 @@ When the webhook payload is not customized, requests will include default
 payload depending on the webhook type.
 
 Regular Webhooks (example)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. container:: long-code-block
 
@@ -358,7 +358,7 @@ Regular Webhooks (example)
      * ``authorizations``
 
 Pre-defined Webhooks
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 Each pre-defined webhook template provides a special payload designed for a
 particular service. See :doc:`/manage/webhook/examples` for more information.
