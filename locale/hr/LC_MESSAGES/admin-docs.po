@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:04+0200\n"
+"POT-Creation-Date: 2024-08-15 11:11+0200\n"
 "PO-Revision-Date: 2022-06-15 13:40+0000\n"
 "Last-Translator: Ivan Perovic <ip@zammad.com>\n"
 "Language-Team: Croatian <https://translations.zammad.org/projects/"
@@ -588,8 +588,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:249
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../misc/object-conditions/basics.rst:26
-#: ../settings/security/third-party/microsoft.rst:68
-#: ../system/objects/permissions.rst:54 ../system/sessions.rst:19
+#: ../settings/security/third-party/microsoft.rst:68 ../system/sessions.rst:19
 msgid "User"
 msgstr ""
 
@@ -2849,7 +2848,8 @@ msgstr ""
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
 #: ../misc/object-conditions/basics.rst:64
 #: ../system/core-workflows/condition-operators.rst:21
-#: ../system/subscription/billing.rst:53 ../system/variables.rst:100
+#: ../system/objects/permissions.rst:39 ../system/subscription/billing.rst:53
+#: ../system/variables.rst:100
 msgid "Description"
 msgstr "Opis"
 
@@ -10613,7 +10613,6 @@ msgstr ""
 #: ../manage/time-accounting.rst:190 ../misc/object-conditions/basics.rst:27
 #: ../misc/object-conditions/basics.rst:102
 #: ../misc/object-conditions/basics.rst:133 ../settings/branding.rst:13
-#: ../system/objects/permissions.rst:55
 msgid "Organization"
 msgstr ""
 
@@ -13260,7 +13259,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
-#: ../system/integrations/pgp/index.rst:5
+#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr ""
 
@@ -13295,7 +13294,6 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:125
 #: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:56
 msgid "Group"
 msgstr ""
 
@@ -22616,146 +22614,167 @@ msgid ""
 msgstr ""
 
 #: ../system/objects/permissions.rst:2
-msgid "Attribute permissions"
+msgid "Attribute Permissions"
 msgstr ""
 
 #: ../system/objects/permissions.rst:7
 msgid ""
-"Some of the possible permissions and screen options for object attributes."
+"In the object attributes configuration you can define if a field is shown "
+"and if the input in the field is mandatory, separated by different screens "
+"and for different :doc:`roles/permissions </manage/roles/index>`."
 msgstr ""
 
-#: ../system/objects/permissions.rst:9
+#: ../system/objects/permissions.rst:17
+msgid "Screenshot shows object attribute permission table"
+msgstr ""
+
+#: ../system/objects/permissions.rst:17
 msgid ""
-"Whenever needed you can restrict access to attributes based on the :ref:"
-"`user permission <permission-guide>` (``admin``, ``ticket.agent`` & ``ticket."
-"customer``)."
+"Some of the possible permissions and screen options for a user object "
+"attribute."
 msgstr ""
 
-#: ../system/objects/permissions.rst:13
-msgid "**🤓 This is not the only possibility to restrict access**"
-msgstr ""
-
-#: ../system/objects/permissions.rst:15
+#: ../system/objects/permissions.rst:19
 msgid ""
-"You can always adjust below settings with :doc:`/system/core-workflows`. "
-"This also allows role based restriction."
-msgstr ""
-
-#: ../system/objects/permissions.rst:20
-msgid ""
-"In some situations, Zammad internally overrules your chosen settings for "
-"screen, requirement and permission. This affects situations where a field "
-"can't be set which would be required for the ticket creation."
+"Based on the object context (ticket, agent, organization, user), the "
+"selectable roles (to be precise: the required permissions) and screens "
+"differ. Be aware that these settings aren't affecting data creation via "
+"other channels than the UI."
 msgstr ""
 
 #: ../system/objects/permissions.rst:24
-msgid "This currently affects:"
-msgstr ""
-
-#: ../system/objects/permissions.rst:26
-msgid "merging"
-msgstr ""
-
-#: ../system/objects/permissions.rst:27
-msgid "emails no matter of the originating channel (incoming)"
+msgid ""
+"If you want to have further customization possibilities, you should have a "
+"look at the :doc:`core workflows </system/core-workflows>`."
 msgstr ""
 
 #: ../system/objects/permissions.rst:28
-msgid ":doc:`/channels/form` (incoming)"
-msgstr ""
-
-#: ../system/objects/permissions.rst:29
-msgid ":doc:`/channels/facebook` (incoming)"
+msgid "Screens"
 msgstr ""
 
 #: ../system/objects/permissions.rst:30
-msgid ":doc:`/channels/telegram` (incoming)"
-msgstr ""
-
-#: ../system/objects/permissions.rst:31
-msgid ":doc:`/channels/twitter-x/twitter` (incoming)"
-msgstr ""
-
-#: ../system/objects/permissions.rst:32
-msgid "SMS (incoming)"
-msgstr ""
-
-#: ../system/objects/permissions.rst:35
-msgid "About screens"
+msgid ""
+"In the table below you can find an overview about the different permissions "
+"and the available screens Zammad distinguishes between."
 msgstr ""
 
 #: ../system/objects/permissions.rst:37
-msgid ""
-"Zammad differentiates between several screens where object attributes can be "
-"used."
+msgid "Screen"
 msgstr ""
 
-#: ../system/objects/permissions.rst:41
+#: ../system/objects/permissions.rst:38
+msgid "Available for"
+msgstr ""
+
+#: ../system/objects/permissions.rst:40
 msgid "create"
 msgstr ""
 
-#: ../system/objects/permissions.rst:41
-msgid "Every time you use a creation dialogue for not yet existing data."
+#: ../system/objects/permissions.rst:41 ../system/objects/permissions.rst:52
+#: ../system/objects/permissions.rst:59 ../system/objects/permissions.rst:73
+msgid "admin.user"
+msgstr ""
+
+#: ../system/objects/permissions.rst:42 ../system/objects/permissions.rst:53
+#: ../system/objects/permissions.rst:60
+msgid "admin.organization"
+msgstr ""
+
+#: ../system/objects/permissions.rst:43 ../system/objects/permissions.rst:54
+#: ../system/objects/permissions.rst:61
+#, fuzzy
+#| msgid "group"
+msgid "admin.group"
+msgstr "grupa"
+
+#: ../system/objects/permissions.rst:44
+msgid "Creation dialog for not yet existing data"
 msgstr ""
 
 #: ../system/objects/permissions.rst:45
+msgid "create_middle"
+msgstr ""
+
+#: ../system/objects/permissions.rst:46 ../system/objects/permissions.rst:50
+#: ../system/objects/permissions.rst:57 ../system/objects/permissions.rst:66
+#: ../system/objects/permissions.rst:70
+#, fuzzy
+msgid "ticket.customer"
+msgstr "Makro-naredbe"
+
+#: ../system/objects/permissions.rst:47 ../system/objects/permissions.rst:51
+#: ../system/objects/permissions.rst:58 ../system/objects/permissions.rst:69
+#, fuzzy
+msgid "ticket.agent"
+msgstr "Makro-naredbe"
+
+#: ../system/objects/permissions.rst:48
+msgid "Ticket create dialog (middle section)"
+msgstr ""
+
+#: ../system/objects/permissions.rst:49
 msgid "edit"
 msgstr ""
 
-#: ../system/objects/permissions.rst:44
-msgid ""
-"Every time you're editing existing data - viewing existing tickets counts as "
-"edit screen."
+#: ../system/objects/permissions.rst:55
+msgid "Editing dialog for already existing data"
 msgstr ""
 
 #: ../system/objects/permissions.rst:56
 msgid "view"
 msgstr ""
 
-#: ../system/objects/permissions.rst:48
-msgid "Affects view screens of existing data like e.g. user profiles."
-msgstr ""
-
-#: ../system/objects/permissions.rst:52
-msgid "This setting is available for the following object contexts:"
-msgstr ""
-
-#: ../system/objects/permissions.rst:59
-msgid "invite_customer & invite_agent"
-msgstr ""
-
-#: ../system/objects/permissions.rst:59
-msgid ""
-"Shown when using the invitation dialogue from \"First Steps\" in the "
-"dashboard."
-msgstr ""
-
 #: ../system/objects/permissions.rst:62
-msgid "About screen options"
+msgid "View-only dialog for already existing data"
 msgstr ""
 
 #: ../system/objects/permissions.rst:64
-msgid ""
-"Now that we know the different possible situations, let's talk about "
-"available options."
+msgid "(e.g. user or organization from search)"
+msgstr ""
+
+#: ../system/objects/permissions.rst:65
+msgid "signup"
+msgstr ""
+
+#: ../system/objects/permissions.rst:67
+msgid "Sign-up screen for new customers"
 msgstr ""
 
 #: ../system/objects/permissions.rst:68
-msgid "shown"
-msgstr ""
-
-#: ../system/objects/permissions.rst:68
-msgid "Show (checked) or hide (unchecked) a field."
-msgstr ""
-
-#: ../system/objects/permissions.rst:71
-msgid "required"
+msgid "invite_customer"
 msgstr ""
 
 #: ../system/objects/permissions.rst:71
 msgid ""
-"Set a field to mandatory (checked). Forces users (via UI and API) to "
-"populate the field."
+"Customer invitation screen (from :doc:`First Steps </misc/first-steps>` area)"
+msgstr ""
+
+#: ../system/objects/permissions.rst:72
+msgid "invite_agent"
+msgstr ""
+
+#: ../system/objects/permissions.rst:74
+msgid ""
+"Agent invitation screen (from :doc:`First Steps </misc/first-steps>` area)"
+msgstr ""
+
+#: ../system/objects/permissions.rst:78
+msgid "Screen Options"
+msgstr ""
+
+#: ../system/objects/permissions.rst:80
+msgid ""
+"For the different screens you can select \"show\" and \"required\" options."
+msgstr ""
+
+#: ../system/objects/permissions.rst:82
+msgid "**shown:** Show (check) or hide (uncheck) a field."
+msgstr ""
+
+#: ../system/objects/permissions.rst:83
+msgid ""
+"**required:** Set a field to mandatory (check). Forces users (via UI and "
+"API) to populate the field."
 msgstr ""
 
 #: ../system/objects/types.rst:7
