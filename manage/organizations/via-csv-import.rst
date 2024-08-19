@@ -1,4 +1,4 @@
-Managing organizations via CSV Import
+Managing Organizations via CSV Import
 =====================================
 
 If your organization has information about customers (or personnel)
@@ -18,7 +18,7 @@ Use the link at the bottom of the CSV import dialog
 (**“Example CSV file for download”**)
 to see how Zammad expects you to format your organization data.
 
-Step 2: Export your organization data to .csv
+Step 2: Export Your Organization Data to .csv
 ---------------------------------------------
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
@@ -44,7 +44,7 @@ For instance:
 Several *organization members* can be added: Ensure to provide the users
 email address as shown above with empty values.
 
-Step 3: Import your .csv to Zammad
+Step 3: Import Your .csv to Zammad
 ----------------------------------
 
 Once your raw organization data has been submitted,

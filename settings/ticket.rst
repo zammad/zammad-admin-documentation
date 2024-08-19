@@ -1,5 +1,5 @@
 Ticket
-******
+======
 
 Here you can adjust general ticket settings. Additional ones for the ticket
 composer interface can be found in the :doc:`/misc/composer`.

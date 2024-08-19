@@ -1,5 +1,5 @@
 Settings
-********
+========
 
 .. figure:: /images/channels/email/settings-menu.png
    :alt: Settings section in email channel
@@ -149,7 +149,7 @@ Ticket Subject Size: Default value ``110``
    Example: ``RE: Test somew[...] [Ticket#123456]``
 
 
-Enhanced settings
+Enhanced Settings
 -----------------
 
 Some less relevant settings can be changed via rails console if needed.

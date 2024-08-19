@@ -4,7 +4,7 @@ Twitter
 It is possible to create a quick login for your helpdesk via Twitter. To do so,
 you need to follow these steps:
 
-Register Twitter app
+Register Twitter App
 --------------------
 
 Go to https://dev.twitter.com/apps and login with your account.
@@ -36,7 +36,7 @@ for the app.
 Go to "Keys and Access Token" tab and note the "Consumer Key" and
 "Consumer Secret".
 
-Configure Zammad as Twitter app
+Configure Zammad as Twitter App
 -------------------------------
 
 Go to "Admin > Security > Twitter > Third Party Applications > Twitter"

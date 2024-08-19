@@ -1,5 +1,5 @@
 Variables
-*********
+=========
 
 .. note:: Please note that this is just an overview of available variables.
    It might be incomplete or variables might not be available within some

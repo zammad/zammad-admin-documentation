@@ -1,5 +1,5 @@
 Form
-****
+====
 
 Feedback or contact forms are used on websites quite often.
 Usually they will generate an email which will be sent to somebody who forwards
@@ -140,7 +140,7 @@ Options
          This allows you to link e.g. to your data privacy or ToS information.
 
 Preview
-~~~~~~~
+-------
 
 Below the form options, Zammad provides a preview section to visualize the
 settings you've just chosen. By default you'll see a button named *Feedback*.
@@ -248,8 +248,8 @@ different criteria. It also ensures that the email address being used is valid
    rails> Setting.set('form_ticket_create_per_day','500')
 
 
-Further options to make it harder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Further Options to Make it Harder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Another way to make it harder for bots to automate against your Zammad instance
 is to change the location of ``form.js``

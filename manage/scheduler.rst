@@ -1,5 +1,5 @@
 Scheduler
-*********
+=========
 
 The scheduler performs time-based automated actions. You can set up your own
 schedulers, configure at which points in time they should run, set up conditions
@@ -22,8 +22,8 @@ that you want to be executed on these objects.
    Schedulers only perform ``2000`` objects per run. This is a security
    function in case you accidentally misconfigured the scheduler.
 
-Add a new scheduler
-===================
+Add a New Scheduler
+-------------------
 
 Create a new scheduler job by clicking on the "New scheduler" button in the top
 right corner. Then Zammad presents a dialog where you can create your own one.

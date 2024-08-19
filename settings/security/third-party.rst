@@ -1,5 +1,5 @@
 Third-Party Applications
-************************
+========================
 
 Third party authentication is a great way to help your users to login to Zammad
 more easily. If the account is yet unknown, Zammad will create a new user
@@ -31,7 +31,7 @@ of the mentioned authentication providers are enabled in your instance.
 
 .. _automatic-account-linking:
 
-Automatic account link on initial logon
+Automatic Account Link on Initial Logon
 ---------------------------------------
 
 In general there's two possible options for Zammad on how to deal with
@@ -56,7 +56,7 @@ you may want to enable ``Automatic account link on initial logon``.
 
 .. _automatic-account-linking-notification:
 
-Automatic account linking notification
+Automatic Account Linking Notification
 --------------------------------------
 
 .. container:: cfloat-left

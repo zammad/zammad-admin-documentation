@@ -1,5 +1,5 @@
 Branding
-********
+========
 
 .. _zammad-product-name:
 

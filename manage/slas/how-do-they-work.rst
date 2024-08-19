@@ -1,4 +1,4 @@
-How do SLAs work
+How Do SLAs Work
 ----------------
 
 You can define several independent SLAs, however, ensure to have no overlapping

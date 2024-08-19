@@ -32,7 +32,7 @@ in third-party email clients (like Zammad).
 
 Please refer the :doc:`migrate-from-email-channel` guide.
 
-Requesting administrator consent
+Requesting Administrator Consent
 --------------------------------
 
 This step is only required if you didn't consent the permissions in App

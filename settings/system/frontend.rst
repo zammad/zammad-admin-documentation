@@ -1,5 +1,5 @@
 Frontend
-********
+========
 .. _core-workflow-ajax-mode:
 
 Core Workflow Ajax Mode

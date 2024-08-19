@@ -14,8 +14,8 @@ Slack
    In order to use this feature, please add a new Slack app to your Workspace.
    The App you need is called ``Incoming WebHooks`` .
 
-Why do I need this feature?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Why Do I Need This Feature?
+---------------------------
 
 If you're already using Slack for your team communication, you'll love this
 feature! Our Slack integration can push ticket notifications about the last
@@ -40,8 +40,8 @@ sending an answer to the customer. Another possible use case would be a agent
 monitoring new agents and their answers to tickets.
 
 
-Configure the integration
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure the Integration
+-------------------------
 
 First of all, please go to your slack workspace - go to administration =>
 Manage Apps. If you don't have an app yet, you can simply add a new one - just
@@ -84,8 +84,8 @@ debugging if needed.
 .. image:: /images/system/integrations/slack/configuration-in-zammad.png
 
 
-The result
-^^^^^^^^^^
+The Result
+----------
 
 The following figure shows how it will look if you choose to receive updates
 on created and updated tickets. On every post Zammad sends to the Slack channel,

@@ -1,5 +1,5 @@
 Filters
-*******
+=======
 
 .. toctree::
    :hidden:

@@ -20,11 +20,11 @@ Setting up a Zammad
 2. Create a **new user** for a Zabbix alerter with an **email address**
    and create a personal user token with **ticket.agent** permissions.
 
-Zabbix Webhook configuration
+Zabbix Webhook Configuration
 ----------------------------
 
-Create a global macro
-~~~~~~~~~~~~~~~~~~~~~
+Create a Global Macro
+^^^^^^^^^^^^^^^^^^^^^
 
 1. Before setting up the **Webhook**, you need to setup the global macro
    **{$ZABBIX.URL}**, which must contain the **URL** to the **Zabbix

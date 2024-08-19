@@ -52,7 +52,7 @@ Invite customers to create issues in Zammad
    created automatically. For more information, a good starting point is the
    :doc:`users section </manage/users/index>`.
 
-How to use it
+How to Use it
 -------------
 
 Intro

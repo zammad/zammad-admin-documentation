@@ -4,7 +4,7 @@ Google
 With some easy and fast steps, you can enable Zammad to authenticate your users
 via Google.
 
-Register a Google app
+Register a Google App
 ---------------------
 
 First of all, we need to create a new project - you can skip this step if you

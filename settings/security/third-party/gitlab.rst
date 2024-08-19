@@ -4,7 +4,7 @@ Gitlab
 It is possible to create a quick login for your helpdesk via Gitlab.
 To activate the quick login you need to enable OAuth for Gitlab.
 
-Register Gitlab app
+Register Gitlab App
 -------------------
 
 To register an app in Gitlab open your profile and select applications.
@@ -17,7 +17,7 @@ where zammad-fqdn has to be replaced with your Zammad FQDN
 
 Just select *read_user* under scopes as in the screenshot and save it.
 
-Configure Zammad as Gitlab app
+Configure Zammad as Gitlab App
 ------------------------------
 
 Enter the "APP ID" and the "APP SECRET" from the Gitlab OAUTH Applications

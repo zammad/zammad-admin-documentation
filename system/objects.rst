@@ -1,5 +1,5 @@
 Objects
-*******
+=======
 
 In Zammad you can add your own fields to tickets, users, organizations and even
 groups (these are called "objects"). This can be useful if you need to add
@@ -36,7 +36,7 @@ trash bin on the right side) just by clicking on them.
    /system/objects/types
    /system/objects/permissions
 
-Ordering attributes
+Ordering Attributes
 -------------------
 
 Since Zammad introduced :doc:`/system/core-workflows` the need to have a
@@ -52,7 +52,7 @@ alphabetically by name automatically.
 .. figure:: /images/system/objects/object-positioning.png
    :alt: Screenshot showing custom attribute entries ordered in between default ones
 
-Updating database after adding or editing attributes
+Updating Database After Adding or Editing Attributes
 ----------------------------------------------------
 
 When adding or changing attributes, Zammad will not apply the changes instantly,
@@ -78,7 +78,7 @@ during maintenance windows.
    | If you're using a self-hosted installation you can use
       :docs:`environment variables </appendix/configure-env-vars.html>`
 
-System attributes
+System Attributes
 -----------------
 
 Zammad comes with pre-configured attributes. Some of them can't be edited via

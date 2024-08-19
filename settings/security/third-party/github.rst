@@ -4,7 +4,7 @@ GitHub
 It is possible to create a quick login for your helpdesk via GitHub.
 To activate the quick login you need to enable OAuth for GitHub.
 
-Register GitHub app
+Register GitHub App
 -------------------
 
 Visit https://www.github.com/settings/applications/new and enter the app
@@ -15,7 +15,7 @@ where zammad_host has to be replaced with your Zammad FQDN
    :alt: Register OAuth app on www.github.com
 
 
-Configure Zammad as GitHub app
+Configure Zammad as GitHub App
 ------------------------------
 
 Enter the "APP ID" and the "APP SECRET" from the GitHub OAUTH Applications

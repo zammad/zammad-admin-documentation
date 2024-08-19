@@ -1,5 +1,5 @@
 Packages
-********
+========
 
 That's the package management-area.
 

@@ -24,7 +24,7 @@ This guide assumes you are already using SAML within your organization
 Step 1: Configure Your IdP
 --------------------------
 
-Add Zammad as a client/app
+Add Zammad as a Client/App
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Import Zammad into your IdP using the XML configuration
@@ -43,7 +43,7 @@ Set the **Assertion Consumer Service Binding URL**
 (sometimes also listed as **Valid Redirect URIs**)
 to ``http://your.zammad.domain/auth/saml/callback``.
 
-Set up user attribute mapping
+Set Up User Attribute Mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Zammad requests the following user attributes (or “properties”) from the IdP:

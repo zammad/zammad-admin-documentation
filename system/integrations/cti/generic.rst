@@ -18,7 +18,7 @@ If you want to learn more on what kind of requests are supported by Zammad
 and what it expects, please consult our
 :docs:`CTI-API documentation </api/generic-cti/index.html>`.
 
-Available settings
+Available Settings
 ------------------
 
 Endpoint Settings

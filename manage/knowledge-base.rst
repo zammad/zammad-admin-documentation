@@ -1,5 +1,5 @@
 Knowledge Base
-**************
+==============
 
 Publish your own library of FAQs, how-tos, internal processes and more with the
 **knowledge base**.
@@ -212,7 +212,7 @@ base), you can do so by following the steps below:
 
 - First create the base structure of the knowledge base (if not already done)
 - Create or choose one or more roles which should have granular permissions
-- Grant the ``knowlege_base.reader`` permission to the desired role(s)
+- Grant the ``knowledge_base.reader`` permission to the desired role(s)
 - Edit the permissions of each (sub-)category of the knowledge base
 - Assign the role to one or more users who should be able to edit the knowledge
   base (partially)

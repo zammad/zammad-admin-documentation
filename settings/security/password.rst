@@ -1,5 +1,5 @@
 Password
-********
+========
 
 This section allows you to define password requirements for the local user
 accounts.
@@ -27,7 +27,7 @@ accounts.
    This way administrators are not required to set a user's password at all!
 
 
-Maximum failed logins
+Maximum Failed Logins
 ---------------------
 
 You can choose a value between ``4`` and ``20``. This defines how often a login
@@ -49,7 +49,7 @@ The default value is ``10``.
 
    Failed logins via LDAP no longer lock accounts.
 
-2 lower case and 2 upper case characters
+2 Lower Case And 2 Upper Case Characters
 ----------------------------------------
 
 You can add complexity to passwords by enforcing at least 2 upper and lower
@@ -58,7 +58,7 @@ case characters.
 The default value is ``no``.
 
 
-Minimum length
+Minimum Length
 --------------
 
 This defines the minimum password length required for users to provide
@@ -67,14 +67,14 @@ This defines the minimum password length required for users to provide
 The default value is ``6``.
 
 
-Digit required
+Digit Required
 --------------
 
 This enforces your users to use at least one digit within the password.
 
 The default value is ``yes``.
 
-Special character required
+Special Character Required
 --------------------------
 
 This setting allows you to improve your password quality even more by enforcing

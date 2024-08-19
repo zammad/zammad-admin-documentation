@@ -1,5 +1,5 @@
 Composer Settings
-*****************
+==================
 
 .. figure:: /images/misc/composer.png
    :align: center

@@ -1,11 +1,11 @@
 Chat
-****
+====
 
 Chat is becoming more and more important in the customer support.
 If used properly, support via chat can be a real efficiency booster.
 
-How to improve Support by Chat?
-===============================
+How to Improve Support by Chat?
+-------------------------------
 
 We've asked others about their opinion in our circles, to learn what people
 expect or dislike.
@@ -24,8 +24,8 @@ Bad experiences
     sending a message with my issue.
   * A Chat that doesn't integrate itself into the Website properly
 
-Our answer: The Zammad Chat Widget
-==================================
+Our Answer: The Zammad Chat Widget
+----------------------------------
 
 The task is clear: Work on the disadvantages of a regular support chat and
 improve them.
@@ -45,8 +45,8 @@ Our approach is as follows
   * Zammad will try to adapt your main website colors to the chat. You can also
     adjust those colors allowing you to customize it to your corporate design.
 
-Configuration of the Chat widget
-================================
+Configuration of the Chat Widget
+--------------------------------
 
 You can create chat widgets for your web pages to allow visitors to
 chat with you.
@@ -65,7 +65,7 @@ how the presentation looks on different devices.
 .. image:: /images/channels/channel-chat-2.png
 
 Usage
------
+^^^^^
 
 Insert the widget code into the source code of every page on which you want the
 chat to be visible on. It should be placed at the end of the page's source code
@@ -74,14 +74,14 @@ before the ``</body>`` closing tag.
 .. image:: /images/channels/channel-chat-4.png
 
 Result
-------
+^^^^^^
 
 The final result will look like the following:
 
 .. image:: /images/channels/channel-chat-5.png
 
 Requirements
-------------
+^^^^^^^^^^^^
 
 Zammad chat comes in two flavors: a version with and without jQuery. You can
 choose which one you prefer by toggling the **With jQuery** switch that will
@@ -99,8 +99,8 @@ You have two options to implement the chat on your website:
 - Automatically show the chat (that's the default setting)
 - or manually open the chat.
 
-Chat restrictions
------------------
+Chat Restrictions
+^^^^^^^^^^^^^^^^^
 
 You offer a chat for your target group, but you don't want to activate chat for
 certain IP addresses or countries? Then you have the possibility to block the

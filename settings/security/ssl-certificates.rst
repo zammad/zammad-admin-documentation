@@ -1,5 +1,5 @@
 SSL Certificates
-****************
+================
 
 Introduction
 ------------

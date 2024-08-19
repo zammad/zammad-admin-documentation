@@ -1,5 +1,5 @@
 Services
-********
+========
 
 Image Service
    Defines the backend for user and organization image lookups.

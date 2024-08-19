@@ -1,4 +1,4 @@
-Trigger examples
+Trigger Examples
 ================
 
 To get you up and running quickly, here are some examples
