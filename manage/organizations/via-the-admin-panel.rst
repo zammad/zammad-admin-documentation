@@ -1,4 +1,4 @@
-Managing organizations via the admin panel
+Managing Organizations via the Admin Panel
 ==========================================
 
 The “Organizations” panel provides tools to manually manage organization

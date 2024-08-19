@@ -1,5 +1,5 @@
 Header Based Actions
-********************
+====================
 .. header manipulation
 
 With specific email headers, you can make Zammad perform different actions
@@ -23,7 +23,7 @@ or to hand over special information like custom attributes.
      are not. Make sure to specify values in expected case, otherwise they will
      not match.
 
-Auto responses
+Auto Responses
 --------------
 
 Normally, Zammad runs internal checks to see if an incoming email is an
@@ -47,7 +47,7 @@ You can override this with the below mentioned headers:
    This header allows you to overwrite auto detects for e.g.
    ``precedence: list``.
 
-Ticket attributes
+Ticket Attributes
 -----------------
 
 Zammad allows you to use headers to manipulate ticket creations or follow ups.
@@ -107,7 +107,7 @@ required situation.
 
    This header is not available for follow ups.
 
-Article attributes
+Article Attributes
 ------------------
 
 If needed Zammad allows you to manipulate attributes or states of fetched

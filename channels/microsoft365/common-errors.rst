@@ -5,7 +5,7 @@ Here you can find some common errors in M365 context. Also have a look at
 the general :doc:`M365 documentation </channels/microsoft365/index>` for the
 configuration.
 
-Incorrect client ID
+Incorrect Client ID
 -------------------
 
 **Error message:** AADSTS00016: Application with identifier
@@ -27,7 +27,7 @@ Settings > Channels > Microsoft 365 > App Configuration.
 See :doc:`here </channels/microsoft365/accounts>` how to find the client
 ID in Azure and where to copy it to in Zammad.
 
-Wrong or expired client secret
+Wrong or Expired Client Secret
 ------------------------------
 
 **Error message:** 500: We're sorry, but something went wrong.
@@ -46,7 +46,7 @@ This error occurs when the client uses an incorrect or expired client secret.
 
 See :doc:`here </channels/microsoft365/accounts>` for more information.
 
-Wrong tenant
+Wrong Tenant
 ------------
 
 **Error message:** AADSTS0023: Specified tenant identifier 'xxxxxxxx' is
@@ -67,7 +67,7 @@ Zammad, or remove the tenant completely.
   Once the tenant is completely removed, all email accounts can be created in
   Zammad regardless of which tenant the email account is a member of.
 
-Request admin consent
+Request Admin Consent
 ---------------------
 
 **Prompt:** approval required
@@ -91,7 +91,7 @@ can be found on how to request admin consent from Zammad.
   Home > App Registration > Manage > API Permission > Grant admin consent for
   "MSFT".
 
-Missing permissions for the Azure user
+Missing Permissions for the Azure User
 --------------------------------------
 
 **Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError
@@ -117,7 +117,7 @@ whose user does not have permission for SMTP authentication to the mail server.
 Please check the following two most common problems in this case.
 
 
-Private email account
+Private Email Account
 ^^^^^^^^^^^^^^^^^^^^^
 
 If it is a private email account, the admin must grant the SMTP authentication
@@ -133,7 +133,7 @@ Users > Active Users > click on the User > Email > Manage Email Apps.
   :align: center
 
 
-Shared inbox
+Shared Inbox
 ^^^^^^^^^^^^
 
 If it is a shared inbox, you can try to enable the SMTP Authentication
@@ -156,7 +156,7 @@ shared mailbox::
    Set-CASMailbox -Identity name@domain.net -SmtpClientAuthenticationDisabled $false
 
 
-Retrieval of email failed
+Retrieval of Email Failed
 -------------------------
 
 **Error message:** Retrieval using the IMAP4 protocol failed for the following

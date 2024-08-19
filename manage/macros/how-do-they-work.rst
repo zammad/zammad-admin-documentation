@@ -1,4 +1,4 @@
-How do macros work
+How Do Macros Work
 ==================
 
 Macros are made up of **actions** (changes to a ticket).

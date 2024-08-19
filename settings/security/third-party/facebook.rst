@@ -5,7 +5,7 @@ It is possible to create a quick login for your helpdesk via Facebook To do so,
 you need to follow these steps:
 
 
-Register Facebook app
+Register Facebook App
 ---------------------
 
 Visit [https://developers.facebook.com/apps/] and click on "Add a new App"
@@ -31,7 +31,7 @@ Navigate to app review and Check "Make [appname] public?"
 
 
 
-Configure Zammad as Facebook app
+Configure Zammad as Facebook App
 --------------------------------
 
 Navigate to "Admin -> Security -> Third Party Applications" and enter the App ID

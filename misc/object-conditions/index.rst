@@ -1,5 +1,5 @@
 Object Conditions
-*****************
+=================
 
 In many places in Zammad you can use conditions based on attribute checks to
 filter tickets and perform actions.

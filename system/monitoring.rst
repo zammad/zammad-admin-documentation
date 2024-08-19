@@ -1,12 +1,12 @@
 Monitoring
-**********
+==========
 
 .. note:: This function is only available in self hosted instances. If you
    use Zammad in our cloud, we are monitoring the system on our own and take
    steps to fix potential problems directly.
 
 General
-=======
+-------
 
 On the monitoring page, you can see the current health state of Zammad under
 "*Current Status*" at the bottom. This can be useful if you want to have a look
@@ -21,7 +21,7 @@ some emails aren't processed from Zammad.
    :doc:`../channels/email/settings`.
 
 Monitoring API
-===============
+--------------
 
 Beside the indication in the monitoring page, you can also use an external
 monitoring tool to monitor Zammad's health. To request the health of Zammad,
@@ -40,8 +40,8 @@ In addition to that, you can reset the auto-generated token to make sure
 that already configured monitoring systems won't work anymore. So, please use
 this "*Reset*" button only if you know what you do!
 
-Example output
-==============
+Example Output
+--------------
 
 :No issues found:
 

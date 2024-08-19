@@ -1,5 +1,5 @@
 .. mermaid::
-   
+
    gantt
       title Date & Date Time condition timings
       dateFormat  DD.MM.YYYY

@@ -38,7 +38,7 @@ Deleting Users via GUI
   * your own account
   * the system's last remaining administrator account
 
-Step 1: Find a user / confirm deletion
+Step 1: Find a User / Confirm Deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three ways to access the user deletion dialog:
@@ -78,7 +78,7 @@ There are three ways to access the user deletion dialog:
    If this option does not appear, make sure there are no pending deletion
    tasks for other customers from this organization.
 
-Step 2: Monitor deletion job status
+Step 2: Monitor Deletion Job Status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It may take up to ten minutes for the system to process your request,

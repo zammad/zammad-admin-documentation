@@ -1,5 +1,5 @@
 Overviews
-*********
+=========
 
 You can provide overviews to your agents and customers. They can be used as a
 kind of worklist of tasks that the agent is supposed to work on.

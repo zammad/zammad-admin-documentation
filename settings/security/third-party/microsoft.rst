@@ -34,7 +34,7 @@ Avatars of signing in users:
    e.g. Gravatar, Zammad will fetch the avatar from there if enabled.
    See :doc:`Zammad Image Service </settings/system/index>` for more.
 
-Step 1 - Register a Microsoft app for Zammad
+Step 1 - Register a Microsoft App for Zammad
 --------------------------------------------
 
 Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_
@@ -94,7 +94,7 @@ You now have all required information for Zammad.
    :width: 80%
    :align: center
 
-Step 2 - Add app credentials to Zammad
+Step 2 - Add App Credentials to Zammad
 --------------------------------------
 
 Navigate to Security > Third-party Applications (Tab) within Zammad's admin

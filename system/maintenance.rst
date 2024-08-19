@@ -1,5 +1,5 @@
 Maintenance
-***********
+===========
 
 Zammad comes with a maintenance mode that you can use for e.g. updating
 the instance or changing settings while restricting availability and functions.
@@ -84,7 +84,7 @@ Message
 
             The modal all other active sessions will see upon pressing
             *Send to clients*.
-         
+
             .. figure:: /images/system/maintenance/message-with-reload-application.png
                :alt: Screenshot showing modal caused by maintenance's message
                      with reload application ticket

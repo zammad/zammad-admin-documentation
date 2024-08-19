@@ -1,5 +1,5 @@
 Base
-****
+====
 
 .. include:: /settings/system/system-selfhosted.include.rst
 

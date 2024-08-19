@@ -1,5 +1,5 @@
 Templates
-*********
+=========
 
 Templates allow you to create tickets at a rapid speed by defining a
 ticket template for recurring tickets.

@@ -35,7 +35,7 @@ any time your rule is triggered.
 .. _checkmk-api-alerts:
 
 API Alerts
-^^^^^^^^^^
+----------
 
 To add these scripts in the Checkmk WATO,
 copy them into your Checkmk installation directory and make them executable.
@@ -87,7 +87,7 @@ Host notification
    but the ones you see here are all provided by default.
 
 Email Alerts
-^^^^^^^^^^^^
+------------
 
 .. warning::
 

@@ -1,5 +1,5 @@
 SMS
-***
+===
 
 SMS integration primarily lets you create tickets, add articles and respond to
 tickets via SMS. It is also possible to send notifications, e.g. to agents.
@@ -7,7 +7,7 @@ tickets via SMS. It is also possible to send notifications, e.g. to agents.
 You can configure SMS notifications in the admin interface under
 **Channels > SMS**.
 
-Configure incoming SMS
+Configure Incoming SMS
 ----------------------
 
 MessageBird and Twilio are currently the only supported providers to process

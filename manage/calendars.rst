@@ -1,5 +1,5 @@
 Calendars
-*********
+=========
 
 A calendar is required to:
 

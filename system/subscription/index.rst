@@ -1,5 +1,5 @@
 Subscription (SaaS)
-*******************
+===================
 
 The subscription settings page allows you to configure your instances
 package and number of agents required.

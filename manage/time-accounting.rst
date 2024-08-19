@@ -1,5 +1,5 @@
 Time Accounting
-***************
+===============
 
 If you want to know how much time you need for your each project or ticket,
 enable the time accounting (turn on the switch on the top left side of the
@@ -8,11 +8,11 @@ page).
 .. figure:: /images/manage/time-accounting/time-accounting-management.png
    :alt: Time Accounting Management Screen in Zammad
 
-How it works
+How it Works
 ------------
 
 Settings
-~~~~~~~~
+^^^^^^^^
 
 Zammad's time accounting uses ticket **Selector** (filter) to check if a ticket
 is considered for the time accounting or not. If a ticket is applicable, Zammad
@@ -73,7 +73,7 @@ several options:
       :alt: Time Accounting Unit when Recording
 
 Activity Types
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 **Activity Types** can be used to group the different ticket time accounting
 entries together. For example, entries that are relevant to a "Billing" type.
@@ -106,7 +106,7 @@ also possible to unset default activity type, in which case no type will be
 pre-selected and the agents can make their choice.
 
 Accounted Time
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Under the **Accounted Time** tab, Zammad provides a section for reviewing all
 accounted times for your tickets. Accounted times are displayed per years and
