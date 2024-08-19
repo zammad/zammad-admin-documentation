@@ -1,5 +1,5 @@
 Expert Mode
-***********
+===========
 
 .. warning:: **🚧 Hosted environment specific limitation 🚧**
 

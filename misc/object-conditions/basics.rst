@@ -1,5 +1,5 @@
 Object Conditions
-*****************
+=================
 
 Introduction
 ------------
