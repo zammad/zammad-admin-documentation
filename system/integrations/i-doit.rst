@@ -16,7 +16,7 @@ Zammad gives you two:
 1. Add i-doit Links to Zammad Tickets
 -------------------------------------
 
-What users see
+What Users See
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/ticket-pane-demo.gif
@@ -32,7 +32,7 @@ for easy reference.
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
 learn how it works in practice).
 
-How to set it up
+How to Set it Up
 ^^^^^^^^^^^^^^^^
 
 It requires i-doit's
@@ -76,7 +76,7 @@ SSL verification
 2. List / Create Zammad Tickets in i-doit
 -----------------------------------------
 
-What users see
+What Users See
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/i-doit-demo.gif
@@ -89,7 +89,7 @@ all the tickets for a given device without ever leaving i-doit.
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
 learn how it works in practice).
 
-How to set it up
+How to Set it Up
 ^^^^^^^^^^^^^^^^
 
 Enable this integration in the i-doit admin panel under

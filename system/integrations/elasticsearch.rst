@@ -1,5 +1,5 @@
 Elasticsearch (SaaS)
-********************
+====================
 
 The Elasticsearch integration allows you to create a read-only user to use
 with your favorite reporting tool (e.g. like Grafana).
@@ -33,7 +33,7 @@ hosted environments:
      (like Kibana) are not supported
    * IP access restriction is currently not yet supported
 
-Activating Elasticsearch access
+Activating Elasticsearch Access
 -------------------------------
 
 By default external access to your Elasticsearch index is not active.

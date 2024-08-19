@@ -31,7 +31,7 @@ Encryption
    account. That means you have to choose a group with a sender email account,
    which has a private key assigned.
 
-Handling of keys
+Handling of Keys
 ----------------
 To use the PGP function, you have to enable the integration (PGP) by switching
 the toggle to *enabled*.
@@ -53,8 +53,8 @@ from a file or you can paste the content of the key in the text box.
    For **decrypting** of encrypted *incoming* emails, you have to import the
    private key of your Zammad email account.
 
-Import keys from a file
-```````````````````````
+Import Keys From a File
+^^^^^^^^^^^^^^^^^^^^^^^
 You can import keys from a file in the section **Upload key**:
 
 .. figure:: /images/system/integrations/pgp/import_key.png
@@ -64,8 +64,8 @@ You can import keys from a file in the section **Upload key**:
 **Supported file formats:** ASCII-armor as well as binary GPG format
 (basically any GPG supported key format) is supported here.
 
-Import keys by pasting the content
-``````````````````````````````````
+Import Keys by Pasting the Content
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You can also paste the key's content in the section **paste key**:
 
 .. figure:: /images/system/integrations/pgp/paste_key.png
@@ -74,8 +74,8 @@ You can also paste the key's content in the section **paste key**:
 
 **Supported format:** Please note that only ASCII-armor is supported here.
 
-Deleting keys
-`````````````
+Deleting Keys
+^^^^^^^^^^^^^
 If you want to delete a specific key, you can do it by clicking on the menu in
 the *actions* column and select **delete**:
 
@@ -84,14 +84,14 @@ the *actions* column and select **delete**:
    :align: center
 
 
-Downloading keys
-````````````````
+Downloading Keys
+^^^^^^^^^^^^^^^^
 If you want to download your keys, you can do this as well via corresponding
 action buttons. Depending on the key, you can choose wether you want to
 download the private or the public key.
 
 
-Default behavior
+Default Behavior
 ----------------
 Here you can adjust on per group basis, if *sign* and *encryption* is on or off
 by default. Please be aware, that agents can always override the setting for
@@ -102,10 +102,10 @@ each individual article.
    :align: center
 
 
-Recent logs
+Recent Logs
 -----------
 Here you can see the last actions regarding signing and encryption and if they
-were succesful.
+were successful.
 
 
 Troubleshooting

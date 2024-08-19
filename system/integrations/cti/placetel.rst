@@ -23,7 +23,7 @@ Please provide the following requirements:
 
 .. _placetel_settings:
 
-Available settings
+Available Settings
 ------------------
 
 .. include:: /system/integrations/cti/includes/important-dont-forget-saving.include.rst

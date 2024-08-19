@@ -26,7 +26,7 @@ Please provide the following requirements:
 
 .. _sipgate_settings:
 
-Available settings
+Available Settings
 ------------------
 
 Endpoint Settings

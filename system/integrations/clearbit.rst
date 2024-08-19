@@ -80,7 +80,7 @@ information seen is basically the same.
 
 .. image:: /images/system/integrations/clearbit/api-log.jpg
 
-Example when adding a user
+Example When Adding a User
 --------------------------
 
 To show you how fast information is added, we added a small Screencast below.
