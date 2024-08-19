@@ -1,13 +1,13 @@
 Integrations
-************
+============
 
 Zammad offers numerous integrations that add rich features to your instance.
 
 .. note:: We're still working on this part of our documentation, stay tight!
 
 
-Integrations for phone systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Integrations for Phone Systems
+------------------------------
 
 .. hint::
 
@@ -27,8 +27,8 @@ Integrations for phone systems
    cti/placetel
    cti/sipgate
 
-Integrations for authentication and customers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Integrations for Authentication and Customers
+---------------------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -41,7 +41,7 @@ Integrations for authentication and customers
    smime/index
 
 Integrations for Monitoring Systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 .. note:: This section currently misses the following integrations:
 
@@ -57,7 +57,7 @@ Integrations for Monitoring Systems
    zabbix
 
 Integrations for Issue Trackers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -67,7 +67,7 @@ Integrations for Issue Trackers
    gitlab
 
 Other Integrations
-^^^^^^^^^^^^^^^^^^
+------------------
 
 This section will hold any other integration that can't be grouped up (yet).
 

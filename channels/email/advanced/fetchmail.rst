@@ -1,5 +1,5 @@
-Watch your inbox with Fetchmail
-*******************************
+Watch Your Inbox With Fetchmail
+===============================
 
 Maybe you want to add emails via Fetchmail or Procmail to Zammad.
 
@@ -19,7 +19,7 @@ To get this to work you need to pipe your emails to rails.
 
 
 Fetchmail
-=========
+---------
 
 **Create .fetchmailrc**::
 
@@ -41,8 +41,8 @@ That's it. Emails now will be directly piped into Zammad.
 
 
 
-Using Procmail for advanced features like presorting
-====================================================
+Using Procmail for Advanced Features Like Presorting
+----------------------------------------------------
 
 If you want to do some more with your emails, like presorting to a Zammad group
 or filtering spam, you can use Procmail.

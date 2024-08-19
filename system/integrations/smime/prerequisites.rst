@@ -28,17 +28,17 @@ Prerequisites
 
    Bear in mind that 🤝 **S/MIME only works if the other party is using it, too.**
 
-Certificate and private key checks on upload
+Certificate and Private Key Checks on Upload
 --------------------------------------------
 
 The certificate and public key validation is based on the ``X509v3``
-extensions. 
+extensions.
 
 Uploading a *client certificate*?
    The following attributes are required then:
     * Subject Alternative Name (at least one email address has to be present)
     * Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
-    * Public key algorithm (either ``RSA`` or ``EC``) 
+    * Public key algorithm (either ``RSA`` or ``EC``)
 
    The Extended Key Usage attribute is optional. If the certificate provides
    the named attribute, than it must contain the value ``E-mail Protection``.
@@ -53,7 +53,7 @@ Uploading a *CA certificate*?
    in the attribute *Basic Contstraints*, the previously mentioned attributes
    are not verified.
 
-In general, the usage of any expired (``Not After``) or 
+In general, the usage of any expired (``Not After``) or
 not yet valid (``Not Before``) certificate is denied for outgoing emails.
 
 .. code-block::

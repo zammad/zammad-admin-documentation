@@ -55,7 +55,7 @@ information on how to use text modules in our
 ..    thus only the relevant text modules are displayed for each country.
 
 The example text modules below use :doc:`/system/variables` to dynamically
-insert information like the customer’s or agent’s names.
+insert information like the customer's or agent's names.
 
 **Examples of snippets are**::
 
@@ -69,7 +69,7 @@ insert information like the customer’s or agent’s names.
 
 Of course you can also use multi line snippets.
 
-Delete or clone text modules
+Delete or Clone Text Modules
 ----------------------------
 
 Often similar text modules have to be created or unnecessary ones deleted.
@@ -81,10 +81,10 @@ the right side and select the corresponding action:
 When cloning, text modules with all attributes are duplicated and can be edited
 later.
 
-Import of text modules via CSV file
+Import of Text Modules via CSV File
 -----------------------------------
 
-With the import action (since Zammad 2.5) you can download a sample CSV file
+With the import action you can download a sample CSV file
 and upload your own CSV file.
 
 To reduce the error rate of unwanted mass changes, a test import is carried out

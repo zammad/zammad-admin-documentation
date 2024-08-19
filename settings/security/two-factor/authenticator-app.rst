@@ -6,7 +6,7 @@ mobile application to generate one-time codes for account verification. After
 setting up the authenticator app on their device, the user links it to their
 Zammad account.
 
-How it works
+How it Works
 ------------
 
 When logging in, the user is prompted to enter a time-sensitive code generated
@@ -24,7 +24,7 @@ user's device and the server, ensuring a synchronized and secure authentication
 process. The method of generating the codes is sometimes also called TOTP
 (time-based one-time password).
 
-Enabling the Authenticator App method
+Enabling the Authenticator App Method
 -------------------------------------
 
 To enable the method, just toggle the switch on in the settings.

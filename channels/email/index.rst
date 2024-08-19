@@ -1,5 +1,5 @@
 Email
-*****
+=====
 
 .. toctree::
    :hidden:
@@ -51,7 +51,7 @@ Control how Zammad **sends and receives email**.
    Customize signatures for all outgoing email.
 
 :doc:`⚙️  Settings <settings>`
-   Manage options like: 
+   Manage options like:
 
    * set the “From:” address on system notifications
    * raise the limit on attachment sizes

@@ -1,5 +1,5 @@
 Google
-******
+======
 
 .. toctree::
    :hidden:

@@ -12,9 +12,9 @@ S/MIME is the most widely-supported method for secure email communication.
 With S/MIME, you can exchange **signed** and **encrypted** messages with others.
 
 Signing
-   is proof that a message hasn’t been tampered with or sent by an impersonator.
+   is proof that a message hasn't been tampered with or sent by an impersonator.
 
-   In other words, it guarantees a message’s **integrity** and **authenticity**.
+   In other words, it guarantees a message's **integrity** and **authenticity**.
 
 Encryption
    scrambles a message so that it can only be unscrambled by the intended recipient.

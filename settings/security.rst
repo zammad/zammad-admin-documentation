@@ -1,5 +1,5 @@
 Security
-********
+========
 
 For your overview we split each tab within security settings into its own page:
 

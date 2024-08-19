@@ -1,5 +1,5 @@
 Accounts
-********
+========
 
 .. toctree::
    :hidden:

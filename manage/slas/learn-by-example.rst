@@ -1,4 +1,4 @@
-SLA example
+SLA Example
 -----------
 
 This page contains some possible example configurations for a SLA we could think

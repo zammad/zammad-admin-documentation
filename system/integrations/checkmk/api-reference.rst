@@ -28,7 +28,7 @@ This custom script will automatically set all tickets it creates to
      -F "owner=charlie@chrispresso.com" \
      https://zammad.example.com/api/v1/...
 
-How does it work?
+How Does it Work?
 -----------------
 
 There are two kinds of data you can pass to the API,
@@ -151,8 +151,8 @@ Please note that the following attributes are **not customizable**:
    * created_by_id
    * updated_by_id
 
-How do I know what values I can set?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Which Values Can Be Set?
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: 😵 **Invalid values → unpredictable behavior**
 
