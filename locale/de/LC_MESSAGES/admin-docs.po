@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:04+0200\n"
-"PO-Revision-Date: 2024-08-13 08:00+0000\n"
+"POT-Creation-Date: 2024-08-15 11:11+0200\n"
+"PO-Revision-Date: 2024-08-17 08:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -618,8 +618,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:249
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../misc/object-conditions/basics.rst:26
-#: ../settings/security/third-party/microsoft.rst:68
-#: ../system/objects/permissions.rst:54 ../system/sessions.rst:19
+#: ../settings/security/third-party/microsoft.rst:68 ../system/sessions.rst:19
 msgid "User"
 msgstr "Benutzer"
 
@@ -3390,7 +3389,8 @@ msgstr "Standardwert"
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
 #: ../misc/object-conditions/basics.rst:64
 #: ../system/core-workflows/condition-operators.rst:21
-#: ../system/subscription/billing.rst:53 ../system/variables.rst:100
+#: ../system/objects/permissions.rst:39 ../system/subscription/billing.rst:53
+#: ../system/variables.rst:100
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -7300,8 +7300,8 @@ msgid ""
 msgstr ""
 "Die Checkliste ermöglicht es Agenten, den Überblick über die zu erledigenden "
 "Aufgaben zu behalten. Das Feature ist standardmäßig aktiviert und wird in "
-"einem weiteren Tab in der rechten Seitenleiste der Ticket-Ansicht angezeigt ("
-"siehe :user-docs:`hier </extras/checklist.html>`, wie es aus der Sicht von "
+"einem weiteren Tab in der rechten Seitenleiste der Ticket-Ansicht angezeigt "
+"(siehe :user-docs:`hier </extras/checklist.html>`, wie es aus der Sicht von "
 "Agenten aussieht)."
 
 #: ../manage/checklist.rst:None
@@ -13101,7 +13101,6 @@ msgstr ""
 #: ../manage/time-accounting.rst:190 ../misc/object-conditions/basics.rst:27
 #: ../misc/object-conditions/basics.rst:102
 #: ../misc/object-conditions/basics.rst:133 ../settings/branding.rst:13
-#: ../system/objects/permissions.rst:55
 msgid "Organization"
 msgstr "Organisation"
 
@@ -16435,7 +16434,7 @@ msgstr "Objektbedingungen"
 
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
-#: ../system/integrations/pgp/index.rst:5
+#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr "Einführung"
 
@@ -16483,7 +16482,6 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:125
 #: ../system/integrations/checkmk/admin-panel-reference.rst:15
-#: ../system/objects/permissions.rst:56
 msgid "Group"
 msgstr "Gruppe"
 
@@ -28208,173 +28206,189 @@ msgstr ""
 "<link-templates>`."
 
 #: ../system/objects/permissions.rst:2
-msgid "Attribute permissions"
+msgid "Attribute Permissions"
 msgstr "Berechtigungen für Attribute"
 
 #: ../system/objects/permissions.rst:7
 msgid ""
-"Some of the possible permissions and screen options for object attributes."
+"In the object attributes configuration you can define if a field is shown "
+"and if the input in the field is mandatory, separated by different screens "
+"and for different :doc:`roles/permissions </manage/roles/index>`."
 msgstr ""
-"Einige der möglichen Berechtigungs- und Ansichtsoptionen für Objektattribute."
+"In der Konfiguration der Objektattribute können Sie festlegen, ob ein Feld "
+"angezeigt wird und ob die Eingabe in das Feld verpflichtend ist, und zwar "
+"separat für verschiedene Ansichten und für verschiedene :doc:`Rollen/"
+"Berechtigungen </manage/roles/index>`."
 
-#: ../system/objects/permissions.rst:9
+#: ../system/objects/permissions.rst:17
+msgid "Screenshot shows object attribute permission table"
+msgstr "Screenshot zeigt Objektattribut-Berechtigungstabelle"
+
+#: ../system/objects/permissions.rst:17
 msgid ""
-"Whenever needed you can restrict access to attributes based on the :ref:"
-"`user permission <permission-guide>` (``admin``, ``ticket.agent`` & ``ticket."
-"customer``)."
+"Some of the possible permissions and screen options for a user object "
+"attribute."
 msgstr ""
-"Bei Bedarf können Sie den Zugriff auf Objektattribute auf der Grundlage der :"
-"ref:`Benutzerrechte <permission-guide>` (``admin``, ``ticket.agent`` & "
-"``ticket.customer``) beschränken."
+"Einige der möglichen Berechtigungen und Ansichten für ein Attribut eines "
+"Benutzerobjekts."
 
-#: ../system/objects/permissions.rst:13
-msgid "**🤓 This is not the only possibility to restrict access**"
-msgstr ""
-"**🤓 Dies ist nicht die einzige Möglichkeit, die Verwendung zu beschränken**"
-
-#: ../system/objects/permissions.rst:15
+#: ../system/objects/permissions.rst:19
 msgid ""
-"You can always adjust below settings with :doc:`/system/core-workflows`. "
-"This also allows role based restriction."
+"Based on the object context (ticket, agent, organization, user), the "
+"selectable roles (to be precise: the required permissions) and screens "
+"differ. Be aware that these settings aren't affecting data creation via "
+"other channels than the UI."
 msgstr ""
-"Sie können die folgenden Einstellungen jederzeit mit :doc:`/system/core-"
-"workflows` anpassen. Dies ermöglicht auch rollenbasierte Einschränkungen."
-
-#: ../system/objects/permissions.rst:20
-msgid ""
-"In some situations, Zammad internally overrules your chosen settings for "
-"screen, requirement and permission. This affects situations where a field "
-"can't be set which would be required for the ticket creation."
-msgstr ""
-"In manchen Situationen setzt Zammad intern die von Ihnen gewählten "
-"Einstellungen für Anzeige, Berechtigung und zu Pflichtfeldern außer Kraft. "
-"Dies betrifft Situationen, in denen ein Feld nicht gesetzt werden kann, das "
-"für die Erstellung eines Tickets erforderlich wäre."
+"Je nach Objektkontext (Ticket, Agent, Organisation, Benutzer) unterscheiden "
+"sich die auswählbaren Rollen (genauer gesagt: die erforderlichen "
+"Berechtigungen) und Ansichten. Beachten Sie, dass diese Einstellungen keinen "
+"Einfluss auf die Datenerstellung über andere Kanäle als die "
+"Benutzeroberfläche haben."
 
 #: ../system/objects/permissions.rst:24
-msgid "This currently affects:"
-msgstr "Dies betrifft derzeit:"
-
-#: ../system/objects/permissions.rst:26
-msgid "merging"
-msgstr "Zusammenfassen"
-
-#: ../system/objects/permissions.rst:27
-msgid "emails no matter of the originating channel (incoming)"
-msgstr "E-Mails, unabhängig vom Kanal (eingehend)"
+msgid ""
+"If you want to have further customization possibilities, you should have a "
+"look at the :doc:`core workflows </system/core-workflows>`."
+msgstr ""
+"Wenn Sie weitere Anpassungsmöglichkeiten brauchen, sollten Sie einen Blick "
+"in die :doc:`Core Workflows </system/core-workflows>` werfen."
 
 #: ../system/objects/permissions.rst:28
-msgid ":doc:`/channels/form` (incoming)"
-msgstr ":doc:`/channels/form` (eingehend)"
-
-#: ../system/objects/permissions.rst:29
-msgid ":doc:`/channels/facebook` (incoming)"
-msgstr ":doc:`/channels/facebook` (eingehend)"
+msgid "Screens"
+msgstr "Ansichten"
 
 #: ../system/objects/permissions.rst:30
-msgid ":doc:`/channels/telegram` (incoming)"
-msgstr ":doc:`/channels/telegram` (eingehend)"
-
-#: ../system/objects/permissions.rst:31
-msgid ":doc:`/channels/twitter-x/twitter` (incoming)"
-msgstr ":doc:`/channels/twitter-x/twitter` (eingehend)"
-
-#: ../system/objects/permissions.rst:32
-msgid "SMS (incoming)"
-msgstr "SMS (eingehend)"
-
-#: ../system/objects/permissions.rst:35
-msgid "About screens"
-msgstr "Über Ansichten"
+msgid ""
+"In the table below you can find an overview about the different permissions "
+"and the available screens Zammad distinguishes between."
+msgstr ""
+"In der folgenden Tabelle finden Sie eine Übersicht über die verschiedenen "
+"Berechtigungen und die verfügbaren Ansichten, die Zammad unterscheidet."
 
 #: ../system/objects/permissions.rst:37
-msgid ""
-"Zammad differentiates between several screens where object attributes can be "
-"used."
-msgstr ""
-"Zammad unterscheidet zwischen mehreren Ansichten, in denen Objektattribute "
-"verwendet werden können."
+msgid "Screen"
+msgstr "Ansicht"
 
-#: ../system/objects/permissions.rst:41
+#: ../system/objects/permissions.rst:38
+msgid "Available for"
+msgstr "Verfügbar für"
+
+#: ../system/objects/permissions.rst:40
 msgid "create"
 msgstr "create"
 
-#: ../system/objects/permissions.rst:41
-msgid "Every time you use a creation dialogue for not yet existing data."
-msgstr ""
-"Jedes Mal, wenn Sie den Erstell-Dialog für noch nicht vorhandene Daten "
-"verwenden."
+#: ../system/objects/permissions.rst:41 ../system/objects/permissions.rst:52
+#: ../system/objects/permissions.rst:59 ../system/objects/permissions.rst:73
+msgid "admin.user"
+msgstr "admin.user"
+
+#: ../system/objects/permissions.rst:42 ../system/objects/permissions.rst:53
+#: ../system/objects/permissions.rst:60
+msgid "admin.organization"
+msgstr "admin.organization"
+
+#: ../system/objects/permissions.rst:43 ../system/objects/permissions.rst:54
+#: ../system/objects/permissions.rst:61
+msgid "admin.group"
+msgstr "admin.group"
+
+#: ../system/objects/permissions.rst:44
+msgid "Creation dialog for not yet existing data"
+msgstr "Erstellungsdialog für noch nicht vorhandene Daten"
 
 #: ../system/objects/permissions.rst:45
+msgid "create_middle"
+msgstr "create_middle"
+
+#: ../system/objects/permissions.rst:46 ../system/objects/permissions.rst:50
+#: ../system/objects/permissions.rst:57 ../system/objects/permissions.rst:66
+#: ../system/objects/permissions.rst:70
+msgid "ticket.customer"
+msgstr "ticket.customer"
+
+#: ../system/objects/permissions.rst:47 ../system/objects/permissions.rst:51
+#: ../system/objects/permissions.rst:58 ../system/objects/permissions.rst:69
+msgid "ticket.agent"
+msgstr "ticket.agent"
+
+#: ../system/objects/permissions.rst:48
+msgid "Ticket create dialog (middle section)"
+msgstr "Ticket-Erstellungsdialog (mittlerer Bereich)"
+
+#: ../system/objects/permissions.rst:49
 msgid "edit"
 msgstr "edit"
 
-#: ../system/objects/permissions.rst:44
-msgid ""
-"Every time you're editing existing data - viewing existing tickets counts as "
-"edit screen."
-msgstr ""
-"Jedes Mal, wenn Sie vorhandene Daten bearbeiten - die Anzeige vorhandener "
-"Tickets zählt als Bearbeitungsansicht."
+#: ../system/objects/permissions.rst:55
+msgid "Editing dialog for already existing data"
+msgstr "Bearbeitungsdialog für bereits vorhandene Daten"
 
 #: ../system/objects/permissions.rst:56
 msgid "view"
 msgstr "Ansicht"
 
-#: ../system/objects/permissions.rst:48
-msgid "Affects view screens of existing data like e.g. user profiles."
-msgstr ""
-"Beeinflusst die Ansicht von bestehenden Daten wie z.B. Benutzerprofilen."
-
-#: ../system/objects/permissions.rst:52
-msgid "This setting is available for the following object contexts:"
-msgstr "Diese Einstellung ist in folgenden Objektkontexten verfügbar:"
-
-#: ../system/objects/permissions.rst:59
-msgid "invite_customer & invite_agent"
-msgstr "invite_customer & invite_agent"
-
-#: ../system/objects/permissions.rst:59
-msgid ""
-"Shown when using the invitation dialogue from \"First Steps\" in the "
-"dashboard."
-msgstr ""
-"Wird angezeigt, wenn Sie den Einladungsdialog unter \"Erste Schritte\" im "
-"Dashboard verwenden."
-
 #: ../system/objects/permissions.rst:62
-msgid "About screen options"
-msgstr "Über Anzeigeoptionen"
+msgid "View-only dialog for already existing data"
+msgstr "Lese-Ansicht für bereits vorhandene Daten"
 
 #: ../system/objects/permissions.rst:64
-msgid ""
-"Now that we know the different possible situations, let's talk about "
-"available options."
-msgstr ""
-"Da wir nun die verschiedenen möglichen Situationen kennen, sollten wir über "
-"die verfügbaren Optionen sprechen."
+msgid "(e.g. user or organization from search)"
+msgstr "(z.B. Benutzer oder Organisation über die Suche)"
+
+#: ../system/objects/permissions.rst:65
+msgid "signup"
+msgstr "signup"
+
+#: ../system/objects/permissions.rst:67
+msgid "Sign-up screen for new customers"
+msgstr "Anmelde-Ansicht für neue Kunden"
 
 #: ../system/objects/permissions.rst:68
-msgid "shown"
-msgstr "anzeigen"
-
-#: ../system/objects/permissions.rst:68
-msgid "Show (checked) or hide (unchecked) a field."
-msgstr ""
-"Ein Feld anzeigen (Checkbox gefüllt) oder ausblenden (Checkbox nicht "
-"gefüllt)."
-
-#: ../system/objects/permissions.rst:71
-msgid "required"
-msgstr "erforderlich"
+msgid "invite_customer"
+msgstr "invite_customer"
 
 #: ../system/objects/permissions.rst:71
 msgid ""
-"Set a field to mandatory (checked). Forces users (via UI and API) to "
-"populate the field."
+"Customer invitation screen (from :doc:`First Steps </misc/first-steps>` area)"
 msgstr ""
-"Setzen Sie ein Feld als erforderlich (Checkbox gefüllt). Zwingt Benutzer "
-"(über UI und API), das Feld auszufüllen."
+"Ansicht zur Einladung von Kunden (aus dem Bereich :doc:`Erste Schritte </"
+"misc/first-steps>`)"
+
+#: ../system/objects/permissions.rst:72
+msgid "invite_agent"
+msgstr "invite_agent"
+
+#: ../system/objects/permissions.rst:74
+msgid ""
+"Agent invitation screen (from :doc:`First Steps </misc/first-steps>` area)"
+msgstr ""
+"Ansicht für die Einladung von Agenten (aus dem Bereich :doc:`Erste Schritte "
+"</misc/first-steps>`)"
+
+#: ../system/objects/permissions.rst:78
+msgid "Screen Options"
+msgstr "Ansicht Optionen"
+
+#: ../system/objects/permissions.rst:80
+msgid ""
+"For the different screens you can select \"show\" and \"required\" options."
+msgstr ""
+"Für die verschiedenen Ansichten können Sie die Optionen \"anzeigen\" und "
+"\"erforderlich\" auswählen."
+
+#: ../system/objects/permissions.rst:82
+msgid "**shown:** Show (check) or hide (uncheck) a field."
+msgstr ""
+"**Anzeigen:** Ein Feld anzeigen (Haken gesetzt) oder ausblenden (Haken nicht "
+"gesetzt)."
+
+#: ../system/objects/permissions.rst:83
+msgid ""
+"**required:** Set a field to mandatory (check). Forces users (via UI and "
+"API) to populate the field."
+msgstr ""
+"**Erforderlich:** Setzen Sie ein Feld auf erforderlich (Haken gesetzt), um "
+"eine Eingabe (über UI und API) zu erzwingen."
 
 #: ../system/objects/types.rst:7
 msgid "Example external data source"
@@ -32311,6 +32325,108 @@ msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
 
+#~ msgid ""
+#~ "Whenever needed you can restrict access to attributes based on the :ref:"
+#~ "`user permission <permission-guide>` (``admin``, ``ticket.agent`` & "
+#~ "``ticket.customer``)."
+#~ msgstr ""
+#~ "Bei Bedarf können Sie den Zugriff auf Objektattribute auf der Grundlage "
+#~ "der :ref:`Benutzerrechte <permission-guide>` (``admin``, ``ticket.agent`` "
+#~ "& ``ticket.customer``) beschränken."
+
+#~ msgid "**🤓 This is not the only possibility to restrict access**"
+#~ msgstr ""
+#~ "**🤓 Dies ist nicht die einzige Möglichkeit, die Verwendung zu "
+#~ "beschränken**"
+
+#~ msgid ""
+#~ "You can always adjust below settings with :doc:`/system/core-workflows`. "
+#~ "This also allows role based restriction."
+#~ msgstr ""
+#~ "Sie können die folgenden Einstellungen jederzeit mit :doc:`/system/core-"
+#~ "workflows` anpassen. Dies ermöglicht auch rollenbasierte Einschränkungen."
+
+#~ msgid ""
+#~ "In some situations, Zammad internally overrules your chosen settings for "
+#~ "screen, requirement and permission. This affects situations where a field "
+#~ "can't be set which would be required for the ticket creation."
+#~ msgstr ""
+#~ "In manchen Situationen setzt Zammad intern die von Ihnen gewählten "
+#~ "Einstellungen für Anzeige, Berechtigung und zu Pflichtfeldern außer "
+#~ "Kraft. Dies betrifft Situationen, in denen ein Feld nicht gesetzt werden "
+#~ "kann, das für die Erstellung eines Tickets erforderlich wäre."
+
+#~ msgid "This currently affects:"
+#~ msgstr "Dies betrifft derzeit:"
+
+#~ msgid "merging"
+#~ msgstr "Zusammenfassen"
+
+#~ msgid "emails no matter of the originating channel (incoming)"
+#~ msgstr "E-Mails, unabhängig vom Kanal (eingehend)"
+
+#~ msgid ":doc:`/channels/form` (incoming)"
+#~ msgstr ":doc:`/channels/form` (eingehend)"
+
+#~ msgid ":doc:`/channels/facebook` (incoming)"
+#~ msgstr ":doc:`/channels/facebook` (eingehend)"
+
+#~ msgid ":doc:`/channels/telegram` (incoming)"
+#~ msgstr ":doc:`/channels/telegram` (eingehend)"
+
+#~ msgid ":doc:`/channels/twitter-x/twitter` (incoming)"
+#~ msgstr ":doc:`/channels/twitter-x/twitter` (eingehend)"
+
+#~ msgid "SMS (incoming)"
+#~ msgstr "SMS (eingehend)"
+
+#~ msgid "About screens"
+#~ msgstr "Über Ansichten"
+
+#~ msgid ""
+#~ "Zammad differentiates between several screens where object attributes can "
+#~ "be used."
+#~ msgstr ""
+#~ "Zammad unterscheidet zwischen mehreren Ansichten, in denen "
+#~ "Objektattribute verwendet werden können."
+
+#~ msgid ""
+#~ "Every time you're editing existing data - viewing existing tickets counts "
+#~ "as edit screen."
+#~ msgstr ""
+#~ "Jedes Mal, wenn Sie vorhandene Daten bearbeiten - die Anzeige vorhandener "
+#~ "Tickets zählt als Bearbeitungsansicht."
+
+#~ msgid "Affects view screens of existing data like e.g. user profiles."
+#~ msgstr ""
+#~ "Beeinflusst die Ansicht von bestehenden Daten wie z.B. Benutzerprofilen."
+
+#~ msgid "This setting is available for the following object contexts:"
+#~ msgstr "Diese Einstellung ist in folgenden Objektkontexten verfügbar:"
+
+#~ msgid "invite_customer & invite_agent"
+#~ msgstr "invite_customer & invite_agent"
+
+#~ msgid ""
+#~ "Shown when using the invitation dialogue from \"First Steps\" in the "
+#~ "dashboard."
+#~ msgstr ""
+#~ "Wird angezeigt, wenn Sie den Einladungsdialog unter \"Erste Schritte\" im "
+#~ "Dashboard verwenden."
+
+#~ msgid ""
+#~ "Now that we know the different possible situations, let's talk about "
+#~ "available options."
+#~ msgstr ""
+#~ "Da wir nun die verschiedenen möglichen Situationen kennen, sollten wir "
+#~ "über die verfügbaren Optionen sprechen."
+
+#~ msgid "shown"
+#~ msgstr "anzeigen"
+
+#~ msgid "required"
+#~ msgstr "erforderlich"
+
 #~ msgid "Basic object conditions"
 #~ msgstr "Standard Bedingungen für Objekte"
 
@@ -32468,9 +32584,6 @@ msgstr ""
 #~ "Kunde das Ticket aktualisiert, ist es einer der Benutzer. Wenn es sich "
 #~ "nicht um eine menschliche Interaktion handelt, verwendet Zammad den "
 #~ "Systembenutzer. Dies kann zu unerwarteten Ergebnissen führen!*"
-
-#~ msgid "*Select one or more customers*"
-#~ msgstr "*Wählen Sie einen oder mehrere Kunden*"
 
 #~ msgid "Existing members *(Scope: Organization)*"
 #~ msgstr "Bestehende Mitglieder *(Bezug: Organisation)*"
