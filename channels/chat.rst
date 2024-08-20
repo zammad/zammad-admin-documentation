@@ -81,13 +81,13 @@ first include it like this:
 
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+Usage
+^^^^^
+
 You have two options to implement the chat on your website:
 
 - Automatically show the chat (that's the default setting)
 - or manually open the chat.
-
-Usage
-^^^^^
 
 Insert the widget code into the source code of every page on which you want the
 chat to be visible on. It should be placed at the end of the page's source code
