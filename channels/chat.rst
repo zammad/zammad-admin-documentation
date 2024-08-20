@@ -42,7 +42,7 @@ want to accept chats.
 
 The integrated designer helps the chat widget to adapt to the website color.
 Zammad tries to fetch your website based on your FQDN. If this fails or you want
-to override it, you can enter a URL manually and click on load.
+to override the preview, you can enter a URL manually and click on load.
 You can get a preview for different devices by selecting the different preview
 modes.
 
