@@ -28,14 +28,12 @@ Additional follow-up detection: Default value ``Subject & References``
    number is present in the subject.
 
    Subject & References
-      Checks subject (ticket hook & number) and message IDs of emails. If
-      one of them matches with existing ones, an email is considered as a
-      follow-up.
+      Checks subject and message IDs of emails and searches for initial ticket
+      articles with the same subject and message ID. When both are matching,
+      it is considered as a follow-up.
 
    References
-      This can be used as an alternative to "Subject & References" if
-      you don't want to have the subject of the email checked but only message
-      IDs.
+      It only checks if a message ID from email matches an existing article.
 
    Attachment
       Additionally checks attachments of emails. Useful if you often get
@@ -49,8 +47,8 @@ Additional follow-up detection: Default value ``Subject & References``
       are completely independent but talking about existing tickets
       including such a ticket reference.
 
-   Please note that it can lead to false detection if you activate additional
-   checks. In productive environments, you should change this setting very
+   Please note that activating additional checks can lead to false detection.
+   In production environments, you should change this setting very
    carefully and monitor the behavior afterwards.
 
 Maximum Email Size: Default value ``10 MB``
