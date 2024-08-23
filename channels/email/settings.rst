@@ -33,7 +33,8 @@ Additional follow-up detection: Default value ``Subject & References``
       it is considered as a follow-up.
 
    References
-      It only checks if a message ID from email matches an existing article.
+      Additionally checks if a message ID from email matches an existing
+      article.
 
    Attachment
       Additionally checks attachments of emails. Useful if you often get
