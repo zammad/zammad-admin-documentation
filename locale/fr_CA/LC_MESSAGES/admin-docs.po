@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 10:56+0100\n"
+"POT-Creation-Date: 2024-08-23 13:17+0200\n"
 "PO-Revision-Date: 2021-12-03 14:33+0000\n"
 "Last-Translator: TRANSFER FROM TRANSIFEX <support@zammad.com>\n"
 "Language-Team: French (Canada) <https://translations.zammad.org/projects/"
@@ -2026,50 +2026,90 @@ msgstr ""
 "Cette adresse est pertinente pour les notifications d'agent et les courriels "
 "de réinitialisation de mot de passe (affecte également les clients)."
 
-#: ../channels/email/settings.rst:32
-msgid "Additional follow-up detection"
+#: ../channels/email/settings.rst:53
+#, fuzzy
+#| msgid "Additional follow-up detection"
+msgid "Additional follow-up detection: Default value ``Subject & References``"
 msgstr "Détection supplémentaire de suivi"
 
 #: ../channels/email/settings.rst:26
 msgid ""
-"In some situations the normal follow-up detection is not enough. This might "
-"be due to missing references in the subject (the ticket hook and number). "
-"These options can help to recognize follow-ups to existing tickets."
+"Adjust how Zammad checks if an incoming email is a follow-up or not. If you "
+"disable all checks, Zammad only checks if a matching ticket hook & number is "
+"present in the subject."
 msgstr ""
-"Dans certaines situations, la détection normale de suivi n'est pas "
-"suffisante. Ceci peut être dû à des références manquantes dans le "
-"\"Sujet\" (le crochet et le numéro du billet). Ces options peuvent aider à "
-"reconnaître les suivis des billets existants."
+
+#: ../channels/email/settings.rst:33
+msgid "Subject & References"
+msgstr ""
 
 #: ../channels/email/settings.rst:31
-#, fuzzy
 msgid ""
-"Please note that searching in attachment and body might lead to *false "
-"follow-up detection*."
+"Checks subject and message IDs of emails and searches for initial ticket "
+"articles with the same subject and message ID. When both are matching, it is "
+"considered as a follow-up."
 msgstr ""
-"Veuillez noter que la recherche dans les pièces jointes et le corps du "
-"message peut entraîner de fausses détections de suivi."
 
 #: ../channels/email/settings.rst:37
+msgid "References"
+msgstr ""
+
+#: ../channels/email/settings.rst:36
+msgid ""
+"Additionally checks if a message ID from email matches an existing article."
+msgstr ""
+
+#: ../channels/email/settings.rst:42
+msgid "Attachment"
+msgstr ""
+
+#: ../channels/email/settings.rst:40
+msgid ""
+"Additionally checks attachments of emails. Useful if you often get emails "
+"forwarded as attachments and want to have them in existing tickets, if there "
+"is a reference included in an attached email."
+msgstr ""
+
+#: ../channels/email/settings.rst:49
+msgid "Body"
+msgstr ""
+
+#: ../channels/email/settings.rst:45
+msgid ""
+"Additionally checks the body of emails. If there is a ticket identifier "
+"(ticket hook & number) in the body, it is considered as a follow-up. Useful "
+"if you want to add emails to existing tickets which are completely "
+"independent but talking about existing tickets including such a ticket "
+"reference."
+msgstr ""
+
+#: ../channels/email/settings.rst:51
+msgid ""
+"Please note that activating additional checks can lead to false detection. "
+"In production environments, you should change this setting very carefully "
+"and monitor the behavior afterwards."
+msgstr ""
+
+#: ../channels/email/settings.rst:58
 msgid "Maximum Email Size: Default value ``10 MB``"
 msgstr "Taille maximale d'un courriel: valeur par défaut ``10 MB``"
 
-#: ../channels/email/settings.rst:35
+#: ../channels/email/settings.rst:56
 msgid ""
 "This one is pretty obvious: It defines the maximum allowed size of an email "
 "Zammad will fetch. Zammad will not fetch emails that are bigger than this "
 "option (*including attachments!*)."
 msgstr ""
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Send postmaster mail if mail too large: Default value ``yes (enabled)``"
 msgstr ""
 
-#: ../channels/email/settings.rst:47 ../channels/email/settings.rst:76
+#: ../channels/email/settings.rst:68 ../channels/email/settings.rst:97
 msgid "Option set to ``yes``"
 msgstr "Option réglée sur ``yes``"
 
-#: ../channels/email/settings.rst:41
+#: ../channels/email/settings.rst:62
 msgid ""
 "This setting will cause Zammad to automatically reply to mails that exceed "
 "the above mail size limit with a postmaster style mail. This will help your "
@@ -2080,15 +2120,16 @@ msgstr ""
 "style maître de poste. Ceci aidera votre utilisateur à comprendre que son "
 "courriel n'est pas arrivé et ne sera pas examiné par un agent."
 
-#: ../channels/email/settings.rst:46
-msgid "Nvertheless, Zammad will remove the mail from the mailbox (if enabled)."
+#: ../channels/email/settings.rst:67
+msgid ""
+"Nevertheless, Zammad will remove the mail from the mailbox (if enabled)."
 msgstr ""
 
-#: ../channels/email/settings.rst:55 ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:76 ../channels/email/settings.rst:100
 msgid "Option set to ``no``"
 msgstr "Option réglée sur ``no``"
 
-#: ../channels/email/settings.rst:50
+#: ../channels/email/settings.rst:71
 msgid ""
 "If the option is set to no, Zammad will not reply to mails that are too big. "
 "Your customer will **not notice** that the mail was too large! Instead, "
@@ -2101,30 +2142,30 @@ msgstr ""
 "de surveillance pour alerter ses administrateurs qu'il ne peut pas récupérer "
 "un courriel trop volumineux."
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Learn more about :doc:`/system/monitoring`."
 msgstr "En savoir plus sur :doc:`/system/monitoring`."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 msgid "Sender based on Reply-To header: Default value ``not set (-)``"
 msgstr ""
 "Expéditeur basé sur l'en-tête \"Répondre à\": valeur par défaut ``not set "
 "(-)``"
 
-#: ../channels/email/settings.rst:58
+#: ../channels/email/settings.rst:79
 msgid ""
 "This setting decides how Zammad should recognize its customers from emails "
 "that contain a ``Reply-To`` header. This comes in useful if you're working "
 "with contact forms that need to use reply to headers."
 msgstr ""
 
-#: ../channels/email/settings.rst:64
+#: ../channels/email/settings.rst:85
 #, fuzzy
 msgid "Option set to ``Take reply-to header as sender/from of email.``"
 msgstr ""
 "Option définie sur ``-`` ou ``Take reply-to header as sender/from of email``"
 
-#: ../channels/email/settings.rst:63
+#: ../channels/email/settings.rst:84
 msgid ""
 "This setting will overwrite the initial ``FROM`` to the value used in "
 "``Reply-To`` completely."
@@ -2132,7 +2173,7 @@ msgstr ""
 "Ce réglage remplacera complètement le ``De`` initial par la valeur utilisée "
 "dans ``Répondre à``."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 #, fuzzy
 msgid ""
 "Option set to ``-`` or ``Take Reply-To header as sender/from of email and "
@@ -2141,7 +2182,7 @@ msgstr ""
 "Option définie sur ``Prendre l'en-tête \"Répondre à\" comme expéditeur "
 "\"De\" du courriel et utiliser le véritable nom \"De\"``"
 
-#: ../channels/email/settings.rst:67
+#: ../channels/email/settings.rst:88
 msgid ""
 "This setting will partially overwrite the initial ``FROM``. It uses the mail "
 "address from the ``Reply-To`` header and uses the given name of the ``FROM`` "
@@ -2151,7 +2192,7 @@ msgstr ""
 "courriel de l'en-tête ``Répondre à`` et utilise le nom de l'en-tête ``DE``, "
 "s'il est donné."
 
-#: ../channels/email/settings.rst:85
+#: ../channels/email/settings.rst:106
 #, fuzzy
 msgid ""
 "Customer selection based on sender and receiver list: Default value ``yes``"
@@ -2159,22 +2200,22 @@ msgstr ""
 "Sélection du client en fonction de l'expéditeur et de la liste de réception: "
 "valeur par défaut ``yes``"
 
-#: ../channels/email/settings.rst:72
+#: ../channels/email/settings.rst:93
 msgid ""
 "This option decides how Zammad should react if an agent sends a email to it."
 msgstr ""
 
-#: ../channels/email/settings.rst:75
+#: ../channels/email/settings.rst:96
 msgid ""
 "The first user / email address from the recipient list will be used as the "
 "ticket customer."
 msgstr ""
 
-#: ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:100
 msgid "The agent will be set as ticket customer."
 msgstr "L'agent sera défini comme client du billet."
 
-#: ../channels/email/settings.rst:83
+#: ../channels/email/settings.rst:104
 #, fuzzy
 msgid ""
 "Currently agents can't be customers within the UI. While email communication "
@@ -2186,18 +2227,18 @@ msgstr ""
 "ne peuvent pas voir leurs propres billets (en tant que client) s'ils n'ont "
 "pas accès au groupe."
 
-#: ../channels/email/settings.rst:95
+#: ../channels/email/settings.rst:116
 msgid "Block Notifications"
 msgstr "Bloquer les notifications"
 
-#: ../channels/email/settings.rst:88
+#: ../channels/email/settings.rst:109
 msgid ""
 "With the regex that can be defined here, you can ensure not to send any "
 "notifications to specific systems. By default this especially affects "
 "typical system addresses which can't receive emails anyway."
 msgstr ""
 
-#: ../channels/email/settings.rst:92
+#: ../channels/email/settings.rst:113
 msgid ""
 "The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply."
 "+?|no-reply|no-reply.+?)@.+?``"
@@ -2205,7 +2246,7 @@ msgstr ""
 "La valeur par défaut est ``(mailer-daemon | postmaster | abuse | root | "
 "noreply | noreply.+? | no-reply | no-reply.+?)@.+?``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 #, fuzzy
 msgid ""
 "Sender Format: Default value ``Agent Name + FromSeparator + System Address "
@@ -2214,7 +2255,7 @@ msgstr ""
 "Format de l'expéditeur: valeur par défaut ``Agent + séparateur de format + "
 "nom d'affichage de l'adresse système``"
 
-#: ../channels/email/settings.rst:98
+#: ../channels/email/settings.rst:119
 msgid ""
 "This configures the display name used in the ``FROM`` header of mails Zammad "
 "sends."
@@ -2222,34 +2263,34 @@ msgstr ""
 "Ceci configure le nom d'affichage utilisé dans l'en-tête ``De`` des "
 "courriels envoyés par Zammad."
 
-#: ../channels/email/settings.rst:101
+#: ../channels/email/settings.rst:122
 msgid ""
 "This does not affect notification mails (to agents) and password reset "
 "mails. Emails that are not sent by agents (e.g. trigger-based notifications) "
 "will always fallback to ``System Address Display Name`` if needed."
 msgstr ""
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 #, fuzzy
 msgid ""
 "Option set to ``Agent Name + FromSeparator + System Address Display Name``"
 msgstr "Option définie sur ``Nom d'affichage de l'adresse système``"
 
-#: ../channels/email/settings.rst:107
+#: ../channels/email/settings.rst:128
 msgid ""
 "This will cause Zammad to set the ``FROM`` header to agent name and the "
 "channel's display name, divided by a separator (configured below)."
 msgstr ""
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 msgid "Example: ``Christopher Miller via Chrispresso Inc.``."
 msgstr "Exemple: ``Christopher Miller via Chrispresso Inc.``."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Option set to ``System Address Display Name``"
 msgstr "Option définie sur ``Nom d'affichage de l'adresse système``"
 
-#: ../channels/email/settings.rst:113
+#: ../channels/email/settings.rst:134
 msgid ""
 "This will cause Zammad to always use the display name of the used channel in "
 "the ``FROM`` header."
@@ -2257,54 +2298,54 @@ msgstr ""
 "Ceci obligera Zammad à toujours utiliser le nom d'affichage du canal utilisé "
 "dans l'en-tête ``De``."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Example: ``Chrispresso Inc.``"
 msgstr "Exemple: ``Chrispresso Inc.``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 msgid "Option set to ``Agent Name``"
 msgstr ""
 
-#: ../channels/email/settings.rst:119
+#: ../channels/email/settings.rst:140
 msgid "Zammad will use the agent's name which is very personal."
 msgstr ""
 
-#: ../channels/email/settings.rst:121
+#: ../channels/email/settings.rst:142
 msgid ""
 "If you want to remove the ticket reference from the subject, you can learn "
 "more in :doc:`Settings > Ticket </settings/ticket>`."
 msgstr ""
 
-#: ../channels/email/settings.rst:126
+#: ../channels/email/settings.rst:147
 #, fuzzy
 msgid "Sender Format Separator: Default value ``via``"
 msgstr "Sender Format Separator: valeur par défaut ``via``"
 
-#: ../channels/email/settings.rst:125
+#: ../channels/email/settings.rst:146
 msgid ""
 "This can be a string you can freely choose. It divides the agent's name and "
 "the display name of the channel whenever needed."
 msgstr ""
 
-#: ../channels/email/settings.rst:132
+#: ../channels/email/settings.rst:153
 msgid "Ticket Subject Forward: Default value ``FWD``"
 msgstr "\"Sujet\" d'un billet transféré: valeur par défaut ``FWD``"
 
-#: ../channels/email/settings.rst:129
+#: ../channels/email/settings.rst:150
 msgid ""
 "The above string will be used on the subject if you forward an email from "
 "Zammad."
 msgstr ""
 
-#: ../channels/email/settings.rst:132 ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:153 ../channels/email/settings.rst:159
 msgid "``:`` will be automatically appended to the above string."
 msgstr "``:`` sera automatiquement ajouté à la chaîne ci-dessus."
 
-#: ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:159
 msgid "Ticket Subject Reply: Default value ``RE``"
 msgstr "\"Répondre à\" du \"Sujet\" du billet: valeur par défaut ``RE``"
 
-#: ../channels/email/settings.rst:135
+#: ../channels/email/settings.rst:156
 msgid ""
 "The above string will be used on the subject if you reply to a mail from "
 "Zammad."
@@ -2312,11 +2353,11 @@ msgstr ""
 "La chaîne ci-dessus sera utilisée pour le \"Sujet\" si vous répondez à un "
 "courriel de Zammad."
 
-#: ../channels/email/settings.rst:150
+#: ../channels/email/settings.rst:171
 msgid "Ticket Subject Size: Default value ``110``"
 msgstr "Taille du \"Sujet\" du billet: valeur par défaut ``110``"
 
-#: ../channels/email/settings.rst:141
+#: ../channels/email/settings.rst:162
 msgid ""
 "This setting enforces a maximum length for subjects when replying. If the "
 "subject you're using for your reply is too long, Zammad will automatically "
@@ -2328,23 +2369,23 @@ msgstr ""
 "tronquera automatiquement la longueur et insérera ``[...]`` pour montrer "
 "qu'il a raccourci le sujet."
 
-#: ../channels/email/settings.rst:146
+#: ../channels/email/settings.rst:167
 msgid ""
 "This does *not* limit ticket titles within the UI, just the subjects when "
 "replying to an email."
 msgstr ""
 
-#: ../channels/email/settings.rst:149
+#: ../channels/email/settings.rst:170
 msgid "Example: ``RE: Test somew[...] [Ticket#123456]``"
 msgstr "Exemple: ``RE: Testez un peu [...] [Billet #: 123456] ``"
 
-#: ../channels/email/settings.rst:153
+#: ../channels/email/settings.rst:174
 #, fuzzy
 #| msgid "Enhanced settings"
 msgid "Enhanced Settings"
 msgstr "Réglages avancés"
 
-#: ../channels/email/settings.rst:155
+#: ../channels/email/settings.rst:176
 msgid ""
 "Some less relevant settings can be changed via rails console if needed. As "
 "an example, Zammad allows you to send all outgoing communication to a BCC "
@@ -26570,6 +26611,25 @@ msgstr ""
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
+
+#~ msgid ""
+#~ "In some situations the normal follow-up detection is not enough. This "
+#~ "might be due to missing references in the subject (the ticket hook and "
+#~ "number). These options can help to recognize follow-ups to existing "
+#~ "tickets."
+#~ msgstr ""
+#~ "Dans certaines situations, la détection normale de suivi n'est pas "
+#~ "suffisante. Ceci peut être dû à des références manquantes dans le "
+#~ "\"Sujet\" (le crochet et le numéro du billet). Ces options peuvent aider "
+#~ "à reconnaître les suivis des billets existants."
+
+#, fuzzy
+#~ msgid ""
+#~ "Please note that searching in attachment and body might lead to *false "
+#~ "follow-up detection*."
+#~ msgstr ""
+#~ "Veuillez noter que la recherche dans les pièces jointes et le corps du "
+#~ "message peut entraîner de fausses détections de suivi."
 
 #, fuzzy
 #~ msgid ""
