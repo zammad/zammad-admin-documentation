@@ -16,8 +16,8 @@ at Meta's documentation.
 Prerequisites
 -------------
 
-- Meta business account (see `here <https://business.facebook.com/overview>`_)
-- Meta developer account (see `here <https://developers.facebook.com/docs/development/register>`_)
+- `Meta business account <https://business.facebook.com/overview>`_
+- `Meta developer account <https://developers.facebook.com/docs/development/register>`_
 - Permission to create an app inside your developer account and needed
   information for the app (see `here <https://developers.facebook.com/docs/development/create-an-app>`_)
 
