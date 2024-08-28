@@ -4,14 +4,20 @@ Facebook
 Introduction
 ------------
 
-You can connect your Facebook account to Zammad. This channel allows you to
+You can connect your Facebook account to Zammad which allows you to
 create tickets out of posts and answer them as comments.
 
-Please note that you first and foremost should have a look at Meta's
-documentation. This documentation is just a reference for steps you need to take
-on Meta's and Zammad's side to connect them. There are some more steps which are
+Please note that you first and foremost should have a look at `Meta's
+documentation <https://developers.facebook.com/docs/>`_. This documentation is
+just a reference for steps you need to take on Meta's side and includes the
+needed steps on Zammad's side as well. There are some more steps which are
 just mentioned under "Prerequisites". You can find a documentation about them
 at Meta's documentation.
+
+.. tip:: The setup of the :doc:`WhatsApp channel </channels/whatsapp/index>` has
+   similar prerequisites as the Facebook channel. So, if you managed to set one
+   of them to up, you should have a look at the other one too. It could be a
+   low hanging fruit! 🎉
 
 Prerequisites
 -------------
@@ -66,6 +72,9 @@ Add a product to your app
    .. figure:: /images/channels/facebook/oauth-settings.png
       :alt: Screenshot of app settings with highlighted "OAuth Redirect URIs"
 
+Continue with the next step on Zammad's side by connecting the Facebook with
+Zammad.
+
 Connect Facebook App in Zammad
 ------------------------------
 
@@ -101,7 +110,7 @@ clicking on "Continue as ..." or log in with another account.
    :align: center
 
 In the next screen you can choose if you want to receive tickets from all pages
-or just selected ones. Choose what fits your use case and confirm by clicking
+or just selected ones. Choose what fits your needs and confirm by clicking
 "Continue".
 
 .. figure:: /images/channels/facebook/pages-selection.png
@@ -122,7 +131,7 @@ Select a group you want to handle the Facebook tickets and click on "Submit".
 
 .. figure:: /images/channels/facebook/group-selection-dialog.png
    :alt: Screenshot showing group selection dialog in Zammad
-   :scale: 70%
+   :scale: 75%
    :align: center
 
 After that, you are technically ready to go. Test it by creating a post
