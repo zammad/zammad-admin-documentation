@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-22 10:56+0100\n"
-"PO-Revision-Date: 2024-08-22 07:00+0000\n"
+"POT-Creation-Date: 2024-08-23 13:17+0200\n"
+"PO-Revision-Date: 2024-08-24 03:16+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -2268,33 +2268,79 @@ msgstr ""
 "Ова адреса је релевантна за обавештења оператера и поруке за ресетовање "
 "лозинке (такође утиче на клијенте)."
 
-#: ../channels/email/settings.rst:32
-msgid "Additional follow-up detection"
+#: ../channels/email/settings.rst:53
+#, fuzzy
+#| msgid "Additional follow-up detection"
+msgid "Additional follow-up detection: Default value ``Subject & References``"
 msgstr "Додатна детекција наставака"
 
 #: ../channels/email/settings.rst:26
 msgid ""
-"In some situations the normal follow-up detection is not enough. This might "
-"be due to missing references in the subject (the ticket hook and number). "
-"These options can help to recognize follow-ups to existing tickets."
+"Adjust how Zammad checks if an incoming email is a follow-up or not. If you "
+"disable all checks, Zammad only checks if a matching ticket hook & number is "
+"present in the subject."
 msgstr ""
-"У неким ситуацијама подразумевана детекција наставака није довољна. Ово може "
-"бити због недостајућих референци у теми (прикључак и број тикета). Ове "
-"опције могу помоћи у препознавању наставака постојећих тикета."
+
+#: ../channels/email/settings.rst:33
+#, fuzzy
+#| msgid "Fetch Preferences"
+msgid "Subject & References"
+msgstr "Подешавања преузимања"
 
 #: ../channels/email/settings.rst:31
 msgid ""
-"Please note that searching in attachment and body might lead to *false "
-"follow-up detection*."
+"Checks subject and message IDs of emails and searches for initial ticket "
+"articles with the same subject and message ID. When both are matching, it is "
+"considered as a follow-up."
 msgstr ""
-"Имајте на уму да претраживање по прилозима и телу поруке може довести до "
-"*лажног откривања наставка*."
 
 #: ../channels/email/settings.rst:37
+#, fuzzy
+#| msgid "API Reference"
+msgid "References"
+msgstr "API референца"
+
+#: ../channels/email/settings.rst:36
+msgid ""
+"Additionally checks if a message ID from email matches an existing article."
+msgstr ""
+
+#: ../channels/email/settings.rst:42
+msgid "Attachment"
+msgstr ""
+
+#: ../channels/email/settings.rst:40
+msgid ""
+"Additionally checks attachments of emails. Useful if you often get emails "
+"forwarded as attachments and want to have them in existing tickets, if there "
+"is a reference included in an attached email."
+msgstr ""
+
+#: ../channels/email/settings.rst:49
+msgid "Body"
+msgstr ""
+
+#: ../channels/email/settings.rst:45
+msgid ""
+"Additionally checks the body of emails. If there is a ticket identifier "
+"(ticket hook & number) in the body, it is considered as a follow-up. Useful "
+"if you want to add emails to existing tickets which are completely "
+"independent but talking about existing tickets including such a ticket "
+"reference."
+msgstr ""
+
+#: ../channels/email/settings.rst:51
+msgid ""
+"Please note that activating additional checks can lead to false detection. "
+"In production environments, you should change this setting very carefully "
+"and monitor the behavior afterwards."
+msgstr ""
+
+#: ../channels/email/settings.rst:58
 msgid "Maximum Email Size: Default value ``10 MB``"
 msgstr "Максимална величина имејл поруке: подразумевана вредност ``10 MB``"
 
-#: ../channels/email/settings.rst:35
+#: ../channels/email/settings.rst:56
 msgid ""
 "This one is pretty obvious: It defines the maximum allowed size of an email "
 "Zammad will fetch. Zammad will not fetch emails that are bigger than this "
@@ -2304,17 +2350,17 @@ msgstr ""
 "поруке коју ће Zammad преузети. Zammad неће преузимати поруке које су веће "
 "од ове вредности (*укључујући и прилоге!*)."
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Send postmaster mail if mail too large: Default value ``yes (enabled)``"
 msgstr ""
 "Пошаљите postmaster поруку ако је порука превелика: подразумевана вредност "
 "„да (укључено)“"
 
-#: ../channels/email/settings.rst:47 ../channels/email/settings.rst:76
+#: ../channels/email/settings.rst:68 ../channels/email/settings.rst:97
 msgid "Option set to ``yes``"
 msgstr "Опција је подешена на ``да``"
 
-#: ../channels/email/settings.rst:41
+#: ../channels/email/settings.rst:62
 msgid ""
 "This setting will cause Zammad to automatically reply to mails that exceed "
 "the above mail size limit with a postmaster style mail. This will help your "
@@ -2325,16 +2371,20 @@ msgstr ""
 "Ово ће помоћи вашем кориснику да схвати да његова пошта није стигла и да је "
 "нећете видети."
 
-#: ../channels/email/settings.rst:46
-msgid "Nvertheless, Zammad will remove the mail from the mailbox (if enabled)."
+#: ../channels/email/settings.rst:67
+#, fuzzy
+#| msgid ""
+#| "Nvertheless, Zammad will remove the mail from the mailbox (if enabled)."
+msgid ""
+"Nevertheless, Zammad will remove the mail from the mailbox (if enabled)."
 msgstr ""
 "У сваком случају, Zammad ће уклонити пошту из сандучета (ако је подешено)."
 
-#: ../channels/email/settings.rst:55 ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:76 ../channels/email/settings.rst:100
 msgid "Option set to ``no``"
 msgstr "Опција је подешена на ``не``"
 
-#: ../channels/email/settings.rst:50
+#: ../channels/email/settings.rst:71
 msgid ""
 "If the option is set to no, Zammad will not reply to mails that are too big. "
 "Your customer will **not notice** that the mail was too large! Instead, "
@@ -2346,17 +2396,17 @@ msgstr ""
 "тога, Zammad ће користити путању мониторинга да упозори своје администраторе "
 "да не може да преузме превелику пошту."
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Learn more about :doc:`/system/monitoring`."
 msgstr "Сазнајте више у :doc:`/system/monitoring`."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 msgid "Sender based on Reply-To header: Default value ``not set (-)``"
 msgstr ""
 "Пошиљалац на основу Reply-To заглавља: подразумевана вредност ``није "
 "подешено (-)``"
 
-#: ../channels/email/settings.rst:58
+#: ../channels/email/settings.rst:79
 msgid ""
 "This setting decides how Zammad should recognize its customers from emails "
 "that contain a ``Reply-To`` header. This comes in useful if you're working "
@@ -2366,13 +2416,13 @@ msgstr ""
 "порука који садрже ``Reply-To`` заглавље. Ово је корисно ако радите са "
 "контакт формама које морају да користе ово заглавље."
 
-#: ../channels/email/settings.rst:64
+#: ../channels/email/settings.rst:85
 msgid "Option set to ``Take reply-to header as sender/from of email.``"
 msgstr ""
 "Опција је подешена на ``Преузми Reply-To заглавље као од/за поље имејл "
 "поруке.``"
 
-#: ../channels/email/settings.rst:63
+#: ../channels/email/settings.rst:84
 msgid ""
 "This setting will overwrite the initial ``FROM`` to the value used in "
 "``Reply-To`` completely."
@@ -2380,7 +2430,7 @@ msgstr ""
 "Ово подешавање ће потпуно преписати почетно ``From`` са вредношћу која се "
 "користи у ``Reply-To``."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 msgid ""
 "Option set to ``-`` or ``Take Reply-To header as sender/from of email and "
 "use the real name of origin from.``"
@@ -2388,7 +2438,7 @@ msgstr ""
 "Опција је подешена на ``-`` или ``Преузми Reply-To заглавље као од/за поље "
 "имејл поруке и користи право име изворног пошиљаоца.``"
 
-#: ../channels/email/settings.rst:67
+#: ../channels/email/settings.rst:88
 msgid ""
 "This setting will partially overwrite the initial ``FROM``. It uses the mail "
 "address from the ``Reply-To`` header and uses the given name of the ``FROM`` "
@@ -2398,21 +2448,21 @@ msgstr ""
 "поште из ``Reply-To`` заглавља и користи дати назив из ``From`` заглавља, "
 "ако је дат."
 
-#: ../channels/email/settings.rst:85
+#: ../channels/email/settings.rst:106
 msgid ""
 "Customer selection based on sender and receiver list: Default value ``yes``"
 msgstr ""
 "Избор клијента на основу листе пошиљаоца и примаоца: подразумевана вредност "
 "``да``"
 
-#: ../channels/email/settings.rst:72
+#: ../channels/email/settings.rst:93
 msgid ""
 "This option decides how Zammad should react if an agent sends a email to it."
 msgstr ""
 "Ова опција одлучује како Zammad треба да реагује ако му оператер пошаље "
 "имејл поруку."
 
-#: ../channels/email/settings.rst:75
+#: ../channels/email/settings.rst:96
 msgid ""
 "The first user / email address from the recipient list will be used as the "
 "ticket customer."
@@ -2420,11 +2470,11 @@ msgstr ""
 "Први корисник / имејл адреса у листи прималаца ће се користити као клијент "
 "тикета."
 
-#: ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:100
 msgid "The agent will be set as ticket customer."
 msgstr "Оператер ће бити постављен као клијент тикета."
 
-#: ../channels/email/settings.rst:83
+#: ../channels/email/settings.rst:104
 msgid ""
 "Currently agents can't be customers within the UI. While email communication "
 "works, agents can't see their own tickets (as a customer) if they don't have "
@@ -2434,11 +2484,11 @@ msgstr ""
 "комуникација путем имејла функционише, оператери не могу да виде своје "
 "тикете (као клијенти) уколико немају приступ групи тикета."
 
-#: ../channels/email/settings.rst:95
+#: ../channels/email/settings.rst:116
 msgid "Block Notifications"
 msgstr "Блокирај обавештења"
 
-#: ../channels/email/settings.rst:88
+#: ../channels/email/settings.rst:109
 msgid ""
 "With the regex that can be defined here, you can ensure not to send any "
 "notifications to specific systems. By default this especially affects "
@@ -2449,7 +2499,7 @@ msgstr ""
 "утиче на типичне системске адресе које ионако не могу да примају имејл "
 "поруке."
 
-#: ../channels/email/settings.rst:92
+#: ../channels/email/settings.rst:113
 msgid ""
 "The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply."
 "+?|no-reply|no-reply.+?)@.+?``"
@@ -2457,7 +2507,7 @@ msgstr ""
 "Подразумевана вредност је: ``(mailer-daemon|postmaster|abuse|root|noreply|"
 "noreply.+?|no-reply|no-reply.+?)@.+?``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 msgid ""
 "Sender Format: Default value ``Agent Name + FromSeparator + System Address "
 "Display Name``"
@@ -2465,7 +2515,7 @@ msgstr ""
 "Формат пошиљаоца: подразумевана вредност ``Назив оператера + сепаратор + "
 "назив системске адресе``"
 
-#: ../channels/email/settings.rst:98
+#: ../channels/email/settings.rst:119
 msgid ""
 "This configures the display name used in the ``FROM`` header of mails Zammad "
 "sends."
@@ -2473,7 +2523,7 @@ msgstr ""
 "Ово одређује назив за приказ који се користи у ``From`` заглављу порука које "
 "Zammad шаље."
 
-#: ../channels/email/settings.rst:101
+#: ../channels/email/settings.rst:122
 msgid ""
 "This does not affect notification mails (to agents) and password reset "
 "mails. Emails that are not sent by agents (e.g. trigger-based notifications) "
@@ -2484,13 +2534,13 @@ msgstr ""
 "заснована на окидачу) увек ће се по потреби вратити на ``Назив системске "
 "адресе``."
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 msgid ""
 "Option set to ``Agent Name + FromSeparator + System Address Display Name``"
 msgstr ""
 "Опција подешена на ``Назив оператера + сепаратор + назив системске адресе``"
 
-#: ../channels/email/settings.rst:107
+#: ../channels/email/settings.rst:128
 msgid ""
 "This will cause Zammad to set the ``FROM`` header to agent name and the "
 "channel's display name, divided by a separator (configured below)."
@@ -2498,15 +2548,15 @@ msgstr ""
 "Ово ће резултовати да Zammad постави ``From`` заглавље на име оператера и "
 "назив канала, подељено сепаратором (подешено испод)."
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 msgid "Example: ``Christopher Miller via Chrispresso Inc.``."
 msgstr "Пример: ``Christopher Miller via Chrispresso Inc.``."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Option set to ``System Address Display Name``"
 msgstr "Опција је подешена на ``Назив системске адресе``"
 
-#: ../channels/email/settings.rst:113
+#: ../channels/email/settings.rst:134
 msgid ""
 "This will cause Zammad to always use the display name of the used channel in "
 "the ``FROM`` header."
@@ -2514,19 +2564,19 @@ msgstr ""
 "Ово ће резултовати да Zammad увек користи назив коришћеног канала у ``From`` "
 "заглављу."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Example: ``Chrispresso Inc.``"
 msgstr "Пример: ``Chrispresso Inc.``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 msgid "Option set to ``Agent Name``"
 msgstr "Опција постављена на ``Назив оператера``"
 
-#: ../channels/email/settings.rst:119
+#: ../channels/email/settings.rst:140
 msgid "Zammad will use the agent's name which is very personal."
 msgstr "Zammad ће користити име оператера које је обично лично."
 
-#: ../channels/email/settings.rst:121
+#: ../channels/email/settings.rst:142
 msgid ""
 "If you want to remove the ticket reference from the subject, you can learn "
 "more in :doc:`Settings > Ticket </settings/ticket>`."
@@ -2534,11 +2584,11 @@ msgstr ""
 "За уклањање референце тикета из предмета, сазнајте више у одељку :doc:"
 "`Подешавања > Тикет </settings/ticket>`."
 
-#: ../channels/email/settings.rst:126
+#: ../channels/email/settings.rst:147
 msgid "Sender Format Separator: Default value ``via``"
 msgstr "Сепаратор формата пошиљаоца: подразумевана вредност ``via``"
 
-#: ../channels/email/settings.rst:125
+#: ../channels/email/settings.rst:146
 msgid ""
 "This can be a string you can freely choose. It divides the agent's name and "
 "the display name of the channel whenever needed."
@@ -2546,11 +2596,11 @@ msgstr ""
 "Ово може бити текст слободног избора. Он дели име оператера и назив канала "
 "кад год је то потребно."
 
-#: ../channels/email/settings.rst:132
+#: ../channels/email/settings.rst:153
 msgid "Ticket Subject Forward: Default value ``FWD``"
 msgstr "Предмет прослеђених тикета: подразумевана вредност ``FWD``"
 
-#: ../channels/email/settings.rst:129
+#: ../channels/email/settings.rst:150
 msgid ""
 "The above string will be used on the subject if you forward an email from "
 "Zammad."
@@ -2558,15 +2608,15 @@ msgstr ""
 "Горњи текст ће се користити за предмет ако проследите имејл поруку из Zammad-"
 "а."
 
-#: ../channels/email/settings.rst:132 ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:153 ../channels/email/settings.rst:159
 msgid "``:`` will be automatically appended to the above string."
 msgstr "``:`` ће аутоматски бити додато на горњи текст."
 
-#: ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:159
 msgid "Ticket Subject Reply: Default value ``RE``"
 msgstr "Предмет одговора тикета: подразумевана вредност ``RE``"
 
-#: ../channels/email/settings.rst:135
+#: ../channels/email/settings.rst:156
 msgid ""
 "The above string will be used on the subject if you reply to a mail from "
 "Zammad."
@@ -2574,11 +2624,11 @@ msgstr ""
 "Горњи текст ће се користити за предмет ако одговорите имејл поруку у Zammad-"
 "у."
 
-#: ../channels/email/settings.rst:150
+#: ../channels/email/settings.rst:171
 msgid "Ticket Subject Size: Default value ``110``"
 msgstr "Дужина предмета тикета: подразумевана вредност ``110``"
 
-#: ../channels/email/settings.rst:141
+#: ../channels/email/settings.rst:162
 msgid ""
 "This setting enforces a maximum length for subjects when replying. If the "
 "subject you're using for your reply is too long, Zammad will automatically "
@@ -2590,7 +2640,7 @@ msgstr ""
 "скратити дужину и уметнути ``[...]`` да би сигнализирао да је скратио "
 "предмет."
 
-#: ../channels/email/settings.rst:146
+#: ../channels/email/settings.rst:167
 msgid ""
 "This does *not* limit ticket titles within the UI, just the subjects when "
 "replying to an email."
@@ -2598,15 +2648,15 @@ msgstr ""
 "Ово *не* ограничава наслове тикета унутар корисничког интерфејса, већ само "
 "предмете приликом одговора на имејл поруке."
 
-#: ../channels/email/settings.rst:149
+#: ../channels/email/settings.rst:170
 msgid "Example: ``RE: Test somew[...] [Ticket#123456]``"
 msgstr "Пример: ``RE: Test somew[…] [Ticket#123456]``"
 
-#: ../channels/email/settings.rst:153
+#: ../channels/email/settings.rst:174
 msgid "Enhanced Settings"
 msgstr "Напредна подешавања"
 
-#: ../channels/email/settings.rst:155
+#: ../channels/email/settings.rst:176
 msgid ""
 "Some less relevant settings can be changed via rails console if needed. As "
 "an example, Zammad allows you to send all outgoing communication to a BCC "
@@ -18043,25 +18093,29 @@ msgstr ""
 
 #: ../settings/security/third-party.rst:100
 msgid "No User Creation on Logon"
-msgstr ""
+msgstr "Без отварања налога по пријави"
 
 #: ../settings/security/third-party.rst:102
 msgid ""
 "By default, Zammad will create a new user account if the user logs in via a "
 "third-party application and the account doesn't exist yet."
 msgstr ""
+"Подразумевано, Zammad ће отворити нови кориснички налог ако се корисник "
+"пријављује преко апликације трећег лица и налог још увек не постоји."
 
 #: ../settings/security/third-party.rst:105
 msgid ""
 "If you want to prevent Zammad from creating new accounts on logon, you can "
 "disable this feature by setting ``No user creation on logon`` to ``yes``."
 msgstr ""
+"Уколико желите да спречите Zammad да отвара нове налоге по пријави, можете "
+"искључити ову функцију постављањем ``Без отварања налога по пријави``на "
+"``да``."
 
 #: ../settings/security/third-party.rst:None
-#, fuzzy
-#| msgid "Screenshot showing the location of the Remove action"
 msgid "Screenshot showing the \"no user creation on logon\" setting"
-msgstr "Снимак екрана који приказује позицију радње Уклони"
+msgstr ""
+"Снимак екрана који приказује подешавање „Без отварања налога по пријави”"
 
 #: ../settings/security/third-party/facebook.rst:4
 msgid ""
@@ -31362,6 +31416,23 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "In some situations the normal follow-up detection is not enough. This "
+#~ "might be due to missing references in the subject (the ticket hook and "
+#~ "number). These options can help to recognize follow-ups to existing "
+#~ "tickets."
+#~ msgstr ""
+#~ "У неким ситуацијама подразумевана детекција наставака није довољна. Ово "
+#~ "може бити због недостајућих референци у теми (прикључак и број тикета). "
+#~ "Ове опције могу помоћи у препознавању наставака постојећих тикета."
+
+#~ msgid ""
+#~ "Please note that searching in attachment and body might lead to *false "
+#~ "follow-up detection*."
+#~ msgstr ""
+#~ "Имајте на уму да претраживање по прилозима и телу поруке може довести до "
+#~ "*лажног откривања наставка*."
 
 #~ msgid ""
 #~ "Chat is becoming more and more important in the customer support. If used "
