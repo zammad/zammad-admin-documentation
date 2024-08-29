@@ -2,9 +2,7 @@ Triggers
 ========
 
 Use triggers to set up all kinds of **if-this-then-that** automation
-workflows.
-
-For time-based or recurring automation workflows, try
+workflows. For time-based or recurring automation workflows, try
 :doc:`schedulers </manage/scheduler>` instead.
 
 The first thing to know about triggers is that **you're already using them**.
