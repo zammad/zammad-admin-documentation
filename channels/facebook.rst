@@ -4,15 +4,14 @@ Facebook
 Introduction
 ------------
 
-You can connect your Facebook account to Zammad which allows you to
-create tickets out of posts and answer them as comments.
+You can connect your Facebook account to Zammad, allowing you to
+create tickets from posts and respond as comments.
 
 Please note that you first and foremost should have a look at `Meta's
-documentation <https://developers.facebook.com/docs/>`_. This documentation is
-just a reference for steps you need to take on Meta's side and includes the
-needed steps on Zammad's side as well. There are some more steps which are
-just mentioned under "Prerequisites". You can find a documentation about them
-at Meta's documentation.
+documentation <https://developers.facebook.com/docs/>`_ to get the most
+recent and substantial information for the steps on their side.
+Some steps on Meta's side are only mentioned here as prerequisites, as this
+is outside the scope of this documentation.
 
 .. tip:: The setup of the :doc:`WhatsApp channel </channels/whatsapp/index>` has
    similar prerequisites as the Facebook channel. So, if you managed to set one
@@ -136,5 +135,5 @@ Select a group you want to handle the Facebook tickets and click on "Submit".
 
 After that, you are technically ready to go. Test it by creating a post
 and answer the ticket in Zammad. You should also consider to verify your
-business account as well as set switching your Meta app from "Development"
+business account as well as switch your Meta app from "Development"
 to "Live".
