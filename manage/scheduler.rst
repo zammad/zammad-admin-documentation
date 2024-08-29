@@ -63,7 +63,9 @@ Preview
 
 Execute changes on objects
    Determine the changes to be made to the object. The possible changes depend
-   on the selected object context.
+   on the selected object context. Be aware that a related object context
+   may not be available (e.g. to perform ticket actions from a user context
+   based scheduler).
 
    .. warning::
 
