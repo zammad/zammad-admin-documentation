@@ -5,11 +5,11 @@ With Zammad's Exchange integration, you can easily use existing address books
 without having to update more than one source.
 
 However, you should refrain from syncing all addresses, as the results may not
-be what you expect (Exchange collects huge amounts of addresses). Apart from
-this, it is even not possible to sync the Global Address List (GAL) of your
-Exchange system with Zammad.
+be what you expect (Exchange collects huge amounts of addresses).
 A central address book of your company to sync makes more sense, as you can
 ensure that Zammad gets only the data you need and want.
+Apart from this, it is even not possible to sync the Global Address List (GAL)
+of your Exchange system with Zammad.
 
 .. warning::
 
