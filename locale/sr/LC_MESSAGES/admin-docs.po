@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 12:01+0200\n"
-"PO-Revision-Date: 2024-08-22 07:00+0000\n"
+"POT-Creation-Date: 2024-09-03 14:44+0200\n"
+"PO-Revision-Date: 2024-09-05 07:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/sr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.7\n"
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:88
 msgid "Chat"
@@ -114,8 +114,8 @@ msgid ""
 "The area for configuring the chat can be found in the admin panel under "
 "**Channels > Chat**."
 msgstr ""
-"Област за подешавање ћаскања се може наћи у административном панелу под **"
-"Канали > Ћаскање**."
+"Област за подешавање ћаскања се може наћи у административном панелу под "
+"**Канали > Ћаскање**."
 
 #: ../channels/chat.rst:36
 msgid ""
@@ -1250,7 +1250,7 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:40
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:36
-#: ../manage/scheduler.rst:106 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:108 ../manage/webhook/add.rst:116
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:15
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:14
@@ -2858,7 +2858,7 @@ msgstr "Zammad долази са одређеним подешавањима з�
 
 #: ../channels/form.rst:37 ../manage/groups/settings.rst:115
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/overviews.rst:0
-#: ../manage/scheduler.rst:109 ../manage/templates.rst:43
+#: ../manage/scheduler.rst:111 ../manage/templates.rst:43
 #: ../manage/webhook/add.rst:123 ../system/objects.rst:169
 #: ../system/objects.rst:246
 msgid "Active"
@@ -7325,7 +7325,7 @@ msgstr ""
 "за примање телефонских позива за некога важнијег од вас."
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
-#: ../manage/slas/index.rst:94 ../manage/trigger.rst:30
+#: ../manage/slas/index.rst:94 ../manage/trigger.rst:28
 #: ../manage/webhook.rst:45 ../system/core-workflows.rst:30
 #: ../system/objects.rst:32
 msgid "Learn more"
@@ -11012,19 +11012,23 @@ msgstr ""
 "одабраним условима. Не мора да значи да ће приказати објекте на којима ће се "
 "извршити планер у одговарајуће време."
 
-#: ../manage/scheduler.rst:79
+#: ../manage/scheduler.rst:81
 msgid "Execute changes on objects"
 msgstr "Изврши измене на објектима"
 
 #: ../manage/scheduler.rst:65
 msgid ""
 "Determine the changes to be made to the object. The possible changes depend "
-"on the selected object context."
+"on the selected object context. Be aware that a related object context may "
+"not be available (e.g. to perform ticket actions from a user context based "
+"scheduler)."
 msgstr ""
 "Одредите измене које треба извршити на објекту. Могуће измене зависе од "
-"тренутно одабраног објектног контекста."
+"контекста тренутно одабраног објекта. Обратите пажњу да контекст објекта "
+"можда није доступан (нпр. за извршавање радњи тикета у контексту планера "
+"корисника)."
 
-#: ../manage/scheduler.rst:70
+#: ../manage/scheduler.rst:72
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
@@ -11034,7 +11038,7 @@ msgstr ""
 "приватних података* су опасни и треба их користити са опрезом! По "
 "извршавању, објекти ће бити обрисани и није могуће вратити их."
 
-#: ../manage/scheduler.rst:74
+#: ../manage/scheduler.rst:76
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
@@ -11042,7 +11046,7 @@ msgstr ""
 "**Избриши одмах** ће обрисати тикет по извршавању планера *без било какве "
 "назнаке* у корисничком интерфејсу."
 
-#: ../manage/scheduler.rst:77
+#: ../manage/scheduler.rst:79
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
@@ -11052,11 +11056,11 @@ msgstr ""
 "брисање објекта по извршавању планера. Ово значи да ће бити видљив у Zammad-"
 "овом :doc:`панелу приватности података </system/data-privacy>`."
 
-#: ../manage/scheduler.rst:83
+#: ../manage/scheduler.rst:85
 msgid "Disable notifications"
 msgstr "Искључи обавештења"
 
-#: ../manage/scheduler.rst:82
+#: ../manage/scheduler.rst:84
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
@@ -11064,18 +11068,18 @@ msgstr ""
 "Подразумевано, радње које покрећу планери неће слати обавештења. Ово "
 "понашање можете преиначити овде тако што ћете овај атрибут поставити на *не*."
 
-#: ../manage/scheduler.rst:92 ../settings/branding.rst:27
+#: ../manage/scheduler.rst:94 ../settings/branding.rst:27
 msgid "Locale"
 msgstr "Језик"
 
-#: ../manage/scheduler.rst:86 ../manage/scheduler.rst:95
+#: ../manage/scheduler.rst:88 ../manage/scheduler.rst:97
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
 msgstr ""
 "Ово можете укључити дугметом под називом „Локализација при извршавању радње”."
 
-#: ../manage/scheduler.rst:89
+#: ../manage/scheduler.rst:91
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
@@ -11085,11 +11089,11 @@ msgstr ""
 "``t``функције. За више информација, погледајте објашњење у :ref:`одељку о "
 "променљивама <variable_localization>`."
 
-#: ../manage/scheduler.rst:101 ../settings/branding.rst:44
+#: ../manage/scheduler.rst:103 ../settings/branding.rst:44
 msgid "Timezone"
 msgstr "Временска зона"
 
-#: ../manage/scheduler.rst:98
+#: ../manage/scheduler.rst:100
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -11100,7 +11104,7 @@ msgstr ""
 "коришћена за променљиве временских вредности. За више информација, "
 "погледајте објашњење у :ref:`одељку о променљивама <variable_localization>`."
 
-#: ../manage/scheduler.rst:104
+#: ../manage/scheduler.rst:106
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
@@ -11110,15 +11114,15 @@ msgstr ""
 "само другим администраторима када уређују планер. То *није* начин додавања "
 "напомена у објекте."
 
-#: ../manage/scheduler.rst:109
+#: ../manage/scheduler.rst:111
 msgid "With this setting you can enable/disable the scheduler."
 msgstr "Овим подешавањем можете укључити/искључити планер."
 
-#: ../manage/scheduler.rst:111
+#: ../manage/scheduler.rst:113
 msgid "The scheduler shown in the screenshot would have the following effects:"
 msgstr "Планер приказан на снимку екрана би имао следеће ефекте:"
 
-#: ../manage/scheduler.rst:113
+#: ../manage/scheduler.rst:115
 msgid ""
 "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all "
 "tickets which:"
@@ -11126,31 +11130,31 @@ msgstr ""
 "Сваког радног дана (од понедељка до петка) у 9:00 (*Европа / Берлин UTC+1*), "
 "све тикете који:"
 
-#: ../manage/scheduler.rst:116
+#: ../manage/scheduler.rst:118
 msgid "are not closed or merged, and"
 msgstr "нису затворени или спојени, и"
 
-#: ../manage/scheduler.rst:117
+#: ../manage/scheduler.rst:119
 msgid "are assigned to the Sales group, and"
 msgstr "су додељени групи продаје, и"
 
-#: ../manage/scheduler.rst:118
+#: ../manage/scheduler.rst:120
 msgid "whose escalation was 30 minutes ago"
 msgstr "чија је ескалација била пре 30 минута"
 
-#: ../manage/scheduler.rst:120
+#: ../manage/scheduler.rst:122
 msgid "will be:"
 msgstr "биће:"
 
-#: ../manage/scheduler.rst:122
+#: ../manage/scheduler.rst:124
 msgid "assigned to Emma, and"
 msgstr "додељен Еми, и"
 
-#: ../manage/scheduler.rst:123
+#: ../manage/scheduler.rst:125
 msgid "have their priority changed to 3 high."
 msgstr "имају промењен приоритет на 3 висок."
 
-#: ../manage/scheduler.rst:125
+#: ../manage/scheduler.rst:127
 msgid ""
 "As a supervisor in the Sales group, this enables Emma to intercept and "
 "process escalated tickets."
@@ -11158,7 +11162,7 @@ msgstr ""
 "Као супервизор у продајној групи, ово омогућава Еми да пресретне и обради "
 "ескалиране тикете."
 
-#: ../manage/scheduler.rst:128
+#: ../manage/scheduler.rst:130
 msgid ""
 "Emma will not receive notifications when the scheduler assigns her these "
 "tickets."
@@ -12596,20 +12600,14 @@ msgstr "Окидачи"
 #: ../manage/trigger.rst:4
 msgid ""
 "Use triggers to set up all kinds of **if-this-then-that** automation "
-"workflows."
+"workflows. For time-based or recurring automation workflows, try :doc:"
+"`schedulers </manage/scheduler>` instead."
 msgstr ""
-"Користите окидаче да бисте подесили разне врсте токова аутоматизације **ако-"
-"ово-онда-оно**."
+"Користите окидаче да бисте поставили токове аутоматизације типа **ако-ово-"
+"онда-оно**. За временске или честе токове аутоматизације, пробајте :doc:"
+"`планере </manage/scheduler>` уместо овога."
 
-#: ../manage/trigger.rst:7
-msgid ""
-"For time-based or recurring automation workflows, try :doc:`schedulers </"
-"manage/scheduler>` instead."
-msgstr ""
-"За временске или честе токове аутоматизације, пробајте :doc:`планере </"
-"manage/scheduler>` уместо овога."
-
-#: ../manage/trigger.rst:10
+#: ../manage/trigger.rst:8
 msgid ""
 "The first thing to know about triggers is that **you're already using "
 "them**. From the moment you set up Zammad, it starts sending auto-replies to "
@@ -12623,7 +12621,7 @@ msgstr ""
 msgid "Screenshot of auto-reply notification in ticket view"
 msgstr "Снимак екрана обавештења о аутоматском одговору у приказу тикета"
 
-#: ../manage/trigger.rst:17
+#: ../manage/trigger.rst:15
 msgid ""
 "It means that the ticket is from an incoming customer email, and that the "
 "customer received this message in response:"
@@ -12635,7 +12633,7 @@ msgstr ""
 msgid "Screenshot of auto-reply in customer's inbox"
 msgstr "Снимак екрана аутоматског одговора у пријемном сандучету клијента"
 
-#: ../manage/trigger.rst:23
+#: ../manage/trigger.rst:21
 msgid ""
 "This auto-reply message is a **trigger**. You can disable it, modify it, or "
 "create new ones for all sorts of automation tasks on the Trigger page of the "
@@ -12998,45 +12996,47 @@ msgstr ""
 
 #: ../manage/trigger/limitations.rst:4
 msgid ""
-"It's important to understand when a trigger can be used and when it's better "
-"to use e.g. Zammad's :doc:`/manage/scheduler` or :doc:`postmaster filters </"
-"channels/email/filters>`."
+"Triggers are one way of automated actions. In addition, there are also :doc:"
+"`scheduler </manage/scheduler>` and :doc:`postmaster filter </channels/email/"
+"filters>` based automation. Make sure to have a look at those, too. They can "
+"be more suitable, depending on your use case."
 msgstr ""
-"Важно је разумети када се окидач може користити, а када је боље користити "
-"нпр. Zammad :doc:`планер </manage/scheduler>` или :doc:`postmaster филтере </"
-"channels/email/filters>`."
+"Окидачи су један начин аутоматизованих радњи. Додатно, постоји и "
+"аутоматизација на основу :doc:`планера </manage/scheduler>` и :doc:"
+"`постмастер филтера </channels/email/filters>`. У зависности од ваших "
+"потреба, могу бити корисније."
 
-#: ../manage/trigger/limitations.rst:8
-msgid ""
-"While the creation of a ticket is straight forward, updating an existing "
-"ticket is a bit trickier. In terms of triggers, a ticket is only updated if "
-"you press the update button on the lower right of a ticket. Adding tags to a "
-"ticket or switching articles visibility **is no ticket update**."
-msgstr ""
-"Иако је отварање тикета једноставно, освежавање постојећег тикета је мало "
-"теже. Што се тиче окидача, тикет се освежава само ако притиснете дугме за "
-"освежавање у доњем десном углу панела тикета. Додавање ознака на тикет или "
-"промена видљивости чланака **није освежавање тикета**."
+#: ../manage/trigger/limitations.rst:10
+msgid "Limitations of triggers:"
+msgstr "Ограничења окидача:"
 
-#: ../manage/trigger/limitations.rst:14
+#: ../manage/trigger/limitations.rst:12
 msgid ""
-"Also keep in mind that we're always only working on the last article. This "
-"means you can't trigger for past articles. Triggers always handle the "
-"current ticket attributes and the article (if applicable) that cause the "
-"trigger to fire."
+"Triggers are executed when a ticket is updated via clicking the \"Update\" "
+"button. Changing a value without updating the ticket (e.g. setting a tag) "
+"will not execute the trigger."
 msgstr ""
-"Такође имајте на уму да увек обрађујемо само последњи чланак. То значи да не "
-"можете покренути окидач за претходне чланке. Окидачи увек управљају "
-"тренутним атрибутима тикета и чланком (ако постоји) који изазивају покретање "
-"окидача."
+"Окидачи се извршавају када је тикет освежен кликом на дугме „Освежи”. "
+"Птомена вредности без освежавања тикета (нпр. додавање ознаке) неће извршити "
+"окидач."
 
-#: ../manage/trigger/limitations.rst:19
+#: ../manage/trigger/limitations.rst:15
 msgid ""
-"If your use case doesn't fit in above possibilities, you might want to have "
-"a look at Zammad's :doc:`/manage/scheduler`."
+"Triggers are always affecting the last article of a ticket. This means you "
+"can't run triggers based on older articles."
 msgstr ""
-"Ако се ваш случај употребе не уклапа у горе наведене параметре, можда бисте "
-"желели да погледате Zammad-ов :doc:`планер </manage/scheduler>`."
+"Окидачи се увек односе на последњи чланак тикета. Ово значи да не можете "
+"извршити окидаче на основу старијих чланака."
+
+#: ../manage/trigger/limitations.rst:17
+msgid ""
+"Triggers always handle the current ticket attributes and the article (if "
+"applicable) that causes the trigger to fire. A related object context might "
+"not be available for performing changes."
+msgstr ""
+"Окидачи увек обрађују тренутне атрибуте тикета и чланка (уколико постоји) "
+"који покрећу извршавање окидача. Контекст повезаног објекта можда неће бити "
+"доступан приликом извршавања измена."
 
 #: ../manage/trigger/system-notifications.rst:2
 msgid "System Notifications"
@@ -13130,8 +13130,8 @@ msgid ""
 "according to the language they're written in. Thus, ::"
 msgstr ""
 "Унутар вашег Zammad директоријума (обично ``/opt/zammad``), шаблони имејл "
-"порука за различите догађаје се чувају у директоријуму ``/app/views/mailer``"
-", названи према језику на којем су написани::"
+"порука за различите догађаје се чувају у директоријуму ``/app/views/"
+"mailer``, названи према језику на којем су написани::"
 
 #: ../manage/trigger/system-notifications.rst:49
 msgid ""
@@ -23529,15 +23529,18 @@ msgid ""
 "However, you should refrain from syncing all addresses, as the results may "
 "not be what you expect (Exchange collects huge amounts of addresses). A "
 "central address book of your company to sync makes more sense, as you can "
-"ensure that Zammad gets only the data you need and want."
+"ensure that Zammad gets only the data you need and want. Apart from this, it "
+"is even not possible to sync the Global Address List (GAL) of your Exchange "
+"system with Zammad."
 msgstr ""
 "Међутим, требало би да се уздржите од синхронизације свих адреса, јер "
 "резултати можда неће бити оно што очекујете (Exchange прикупља огромне "
 "количине адреса). Централни адресар ваше фирме за синхронизацију има више "
 "смисла, јер можете осигурати да Zammad добија само податке који су вам "
-"потребни и који желите."
+"потребни и који желите. Поред овога, чак није ни могуће синхронизовати "
+"Global Addres List (GAL) вашег Exchange система са Zammad-ом."
 
-#: ../system/integrations/exchange.rst:14
+#: ../system/integrations/exchange.rst:16
 msgid ""
 "**Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP "
 "integration. If you have the same users in both sources, the LDAP version "
@@ -23547,7 +23550,7 @@ msgstr ""
 "LDAP интеграцијом. Ако имате исте кориснике у оба извора, LDAP верзија ће "
 "увек бити Zammad-ов избор."
 
-#: ../system/integrations/exchange.rst:17
+#: ../system/integrations/exchange.rst:19
 msgid ""
 "**One way sync:** the Exchange sync is one way. Exchange => Zammad. Changes "
 "to your users inside of Zammad might be overwritten by the Exchange sync."
@@ -23555,7 +23558,7 @@ msgstr ""
 "**Синхронизација у једном смеру:** Exchange синхронизација је једносмерна: "
 "Exchange => Zammad. Може преписати ваше измене корисника унутар Zammad-а."
 
-#: ../system/integrations/exchange.rst:22
+#: ../system/integrations/exchange.rst:24
 msgid ""
 "To configure Exchange integration, simply go to the System > Integrations > "
 "Exchange in the admin panel. Press \"change\" and follow the wizard for "
@@ -23573,7 +23576,7 @@ msgstr ""
 "Технички, можете мапирати било који Exchange објекат у Zammad кориснички "
 "објекат (ово такође функционише и за прилагођене објекте!)."
 
-#: ../system/integrations/exchange.rst:33
+#: ../system/integrations/exchange.rst:35
 msgid ""
 "If the SSL verification fails while connecting to Exchange, Zammad will ask "
 "you to turn it off temporarily."
@@ -23581,7 +23584,7 @@ msgstr ""
 "Уколико SSL провера не успе током остваривања везе са Exchange-ом, Zammad ће "
 "вас питати да је привремено искључите."
 
-#: ../system/integrations/exchange.rst:36
+#: ../system/integrations/exchange.rst:38
 msgid ""
 "Please be aware that **turning off SSL verification is a security risk**. It "
 "should only be used temporarily or for testing purposes. If turned off, "
@@ -23593,7 +23596,7 @@ msgstr ""
 "сертификати неће бити верификовани, што значи да ће било који достављени "
 "сертификат бити признат."
 
-#: ../system/integrations/exchange.rst:41
+#: ../system/integrations/exchange.rst:43
 msgid ""
 "After pressing Continue, Zammad will check if the configuration is okay. You "
 "can then enable Exchange and start your first sync. The sync will then run "
@@ -23605,7 +23608,7 @@ msgstr ""
 "Синхронизација ће се тада одвијати сваки сат - ако треба да промените "
 "мапирања или адресаре, можете променити подешавања у било ком тренутку."
 
-#: ../system/integrations/exchange.rst:48
+#: ../system/integrations/exchange.rst:50
 msgid ""
 "After the sync has finished, you can find the new Exchange contacts under "
 "\"Users\". Zammad integrates them just as normal users."
@@ -23613,7 +23616,7 @@ msgstr ""
 "Када се синхронизација заврши, нове Exchange контакте можете пронаћи у "
 "одељку „Корисници“. Zammad их приказује баш као и обичне кориснике."
 
-#: ../system/integrations/exchange.rst:53
+#: ../system/integrations/exchange.rst:55
 msgid ""
 "In some cases you might see unique IDs as \"Login\" instead of the email "
 "address. This is normal and doesn't affect the login or email mapping for "
@@ -26790,8 +26793,8 @@ msgid ""
 "If you want to have further customization possibilities, you should have a "
 "look at the :doc:`core workflows </system/core-workflows>`."
 msgstr ""
-"Уколико желите додатне могућности прилагођавања, погледајте документацију "
-":doc:`радних токова </system/core-workflows>`."
+"Уколико желите додатне могућности прилагођавања, погледајте документацију :"
+"doc:`радних токова </system/core-workflows>`."
 
 #: ../system/objects/permissions.rst:28
 msgid "Screens"
@@ -30780,6 +30783,51 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "Use triggers to set up all kinds of **if-this-then-that** automation "
+#~ "workflows."
+#~ msgstr ""
+#~ "Користите окидаче да бисте подесили разне врсте токова аутоматизације "
+#~ "**ако-ово-онда-оно**."
+
+#~ msgid ""
+#~ "It's important to understand when a trigger can be used and when it's "
+#~ "better to use e.g. Zammad's :doc:`/manage/scheduler` or :doc:`postmaster "
+#~ "filters </channels/email/filters>`."
+#~ msgstr ""
+#~ "Важно је разумети када се окидач може користити, а када је боље користити "
+#~ "нпр. Zammad :doc:`планер </manage/scheduler>` или :doc:`postmaster "
+#~ "филтере </channels/email/filters>`."
+
+#~ msgid ""
+#~ "While the creation of a ticket is straight forward, updating an existing "
+#~ "ticket is a bit trickier. In terms of triggers, a ticket is only updated "
+#~ "if you press the update button on the lower right of a ticket. Adding "
+#~ "tags to a ticket or switching articles visibility **is no ticket update**."
+#~ msgstr ""
+#~ "Иако је отварање тикета једноставно, освежавање постојећег тикета је мало "
+#~ "теже. Што се тиче окидача, тикет се освежава само ако притиснете дугме за "
+#~ "освежавање у доњем десном углу панела тикета. Додавање ознака на тикет "
+#~ "или промена видљивости чланака **није освежавање тикета**."
+
+#~ msgid ""
+#~ "Also keep in mind that we're always only working on the last article. "
+#~ "This means you can't trigger for past articles. Triggers always handle "
+#~ "the current ticket attributes and the article (if applicable) that cause "
+#~ "the trigger to fire."
+#~ msgstr ""
+#~ "Такође имајте на уму да увек обрађујемо само последњи чланак. То значи да "
+#~ "не можете покренути окидач за претходне чланке. Окидачи увек управљају "
+#~ "тренутним атрибутима тикета и чланком (ако постоји) који изазивају "
+#~ "покретање окидача."
+
+#~ msgid ""
+#~ "If your use case doesn't fit in above possibilities, you might want to "
+#~ "have a look at Zammad's :doc:`/manage/scheduler`."
+#~ msgstr ""
+#~ "Ако се ваш случај употребе не уклапа у горе наведене параметре, можда "
+#~ "бисте желели да погледате Zammad-ов :doc:`планер </manage/scheduler>`."
 
 #~ msgid ""
 #~ "Chat is becoming more and more important in the customer support. If used "
