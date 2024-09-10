@@ -95,7 +95,7 @@ Keep messages on server
       to keep it below its storage limit.
 
 After adding the account
-   After successfully adding the Microsoft 365 mail account, you can adjust
+   After successfully adding the Google mail account, you can adjust
    the default group Zammad is going to assign incoming new tickets to.
 
    .. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
