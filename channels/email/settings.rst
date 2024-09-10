@@ -43,7 +43,7 @@ Send postmaster mail if mail too large: Default value ``yes (enabled)``
       This will help your user to understand that his mail did not arrive and
       won't be reviewed by you.
 
-      Nvertheless, Zammad will remove the mail from the
+      Nevertheless, Zammad will remove the mail from the
       mailbox (if enabled).
 
    Option set to ``no``
