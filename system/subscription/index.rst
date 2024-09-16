@@ -30,7 +30,7 @@ For your overview we've divided those two tabs into independent sub pages:
 --------------------------------------------------------------------------------
 
 FAQ
-===
+---
 
 I set up a trial account but am missing functions to test
    The trial instance is running within the professional package
