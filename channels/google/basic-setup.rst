@@ -8,7 +8,8 @@ you want, using only active Gmail browser sessions (no usernames or passwords
 required).
 
 If you already set up Google email channels in Zammad, you can easily
-:ref:`migrate them to a Google channel <migrate-channel>`.
+migrate them to a Google channel. Follow the steps below but skip the step
+"Add Account".
 
 .. _register-oauth-google:
 
@@ -50,7 +51,7 @@ the following screenshot.
 1. Enter ``https://mail.google.com`` in the "Manually add scopes" text field
 2. Click on "Add to Table" to have it in the selectable scopes table above
 3. Select it by checking the box
-4. Confirm by clicking the "Update button"
+4. Confirm by clicking the "Update" button
 
 Go on by clicking "Save and Continue".
 
@@ -58,9 +59,8 @@ If your app is in "Testing" mode, add a user as which you want to sign in to
 your Google account.
 
 After that, you should see a summary screen. Check the information and confirm
-by clicking the "Back to Dashboard" button. Go on with enabling the Gmail API
-in the next section.
-
+by clicking the "Back to Dashboard" button. Go on with creating credentials for
+your app.
 
 Create Credentials
 ^^^^^^^^^^^^^^^^^^
@@ -73,8 +73,14 @@ choose "OAuth client ID".
    :align: center
 
 
-Select "Web application" as Application type, give it a name and enter a
-redirect URL. You can find this URL for copy/paste in Zammad's admin area
+Select "Web application" as Application type, give it a name and enter your
+redirect URL.
+
+.. figure:: /images/channels/google/oauth-credentials-dialog.png
+   :alt:
+   :align: center
+
+You can find this URL in Zammad's admin area
 under Channels > Google. Click on "Configure App" and find your URL under
 "Your callback URL".
 
@@ -83,13 +89,29 @@ under Channels > Google. Click on "Configure App" and find your URL under
    :align: center
    :scale: 60%
 
-.. figure:: /images/channels/google/oauth-credentials-dialog.png
-   :alt:
+Click on "Create" after inserting the information. You will see a dialog with
+your client ID and client secret. You need both of them in the next step for
+configuring Zammad to connect it to Google.
+
+Configure App
+-------------
+
+Go to Channels > Google in Zammad's admin area and click on "Configure App".
+Insert the client ID and client secret which you got in the step before.
+
+.. figure:: /images/channels/google/client-id-secret.png
+   :alt: Screenshot shows dialogs from Google and Zammad with client ID and secret
+   :scale: 70%
    :align: center
 
+Confirm by clicking the "Submit" button. Now you can add a Google account as
+channel in Zammad, see next step.
 
 Add Account
 -----------
+
+If you already have Google email channels, you can skip this step and head over
+to :ref:`migrate-channel`.
 
 After you've registered Zammad as an OAuth app in your Google Developer
 settings, you can begin connecting Gmail accounts to Zammad.
@@ -107,26 +129,37 @@ The import process does things you might not expect:
      prior adding an email account and to turn it back on once all your
      messages have been imported.
 
+To connect you Google account, click on "Add Account" in Zammad. You will be
+redirected to a consent dialog. Click through the screens and and make sure
+to select the desired Google account as well as to grant the permission for
+email handling as you can see in the following screenshot.
+
+.. figure:: /images/channels/google/consent-screen-email-permission.png
+   :alt: Screenshot shows Google's consent screen with checked email permission
+   :scale: 50%
+   :align: center
+
+After clicking on "Continue", you are redirected to Zammad where you can see a
+dialog for specifying a folder and if you want to keep messages on the server.
+
 .. _google-folder:
 
 Folder
    Specify which folder (or *label*) to fetch from,
    or leave empty to fetch from ``INBOX``.
 
-   If specifying a nested folder, be sure to use the full path;
-   *e.g.,* ``Inquiries/Tech-Support``.
+   If specifying a nested folder, be sure to use the full path,
+   e.g. ``Inquiries/Tech-Support``.
 
    .. _google-keep-messages-on-server:
 
 Keep messages on server
    Specify what happens to your emails after Zammad imports them:
 
-   * ``no`` Zammad deletes all imported messages
-
-   * ``yes`` Zammad marks imported messages as read
-
-     (With this option, Zammad will only import unread messages.
-     This means Zammad may miss messages if the mailbox is externally modified.)
+   * ``no``: Zammad deletes all imported messages
+   * ``yes``: Zammad marks imported messages as read. With this option,
+     Zammad will only import unread messages. This means Zammad may miss
+     messages if the mailbox is externally modified.
 
    .. note:: 🤔 **Why does Zammad delete messages by default?**
 
@@ -141,7 +174,7 @@ Keep messages on server
       to keep it below its storage limit.
 
 After adding the account
-   After successfully adding the Microsoft 365 mail account, you can adjust
+   After successfully adding the Google account, you can adjust
    the default group Zammad is going to assign incoming new tickets to.
 
    .. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
@@ -200,6 +233,9 @@ entirely after 7 days.
 
 Additional Settings
 -------------------
+
+If you want to use secondary addresses or want to learn more about managing
+accounts, have a look at the sub pages:
 
 :doc:`accounts/secondary-addresses`
    Send and receive email at **additional email addresses**,

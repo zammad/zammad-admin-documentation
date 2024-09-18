@@ -5,7 +5,8 @@ Google
    :hidden:
 
    basic-setup
-   additional-settings
+   accounts/managing-accounts
+   accounts/secondary-addresses
    filters
    signatures
    settings
@@ -29,9 +30,6 @@ Connect a Gmail or G Suite account to Zammad.
 
    Self-hosted users may have already completed this step during new
    system setup.
-
-Additional Configuration
-   :doc:`./accounts/secondary-addresses`
 
 :doc:`Filters <filters>`
    Make sure new tickets show up in the right place
