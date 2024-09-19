@@ -230,21 +230,6 @@ entirely after 7 days.
       :scale: 90%
       :align: center
 
-
-Additional Settings
--------------------
-
-If you want to use secondary addresses or want to learn more about managing
-accounts, have a look at the sub pages:
-
-:doc:`accounts/secondary-addresses`
-   Send and receive email at **additional email addresses**,
-   all through the same mailbox/account.
-
-:doc:`accounts/managing-accounts`
-   Edit the configuration of existing accounts in the **Accounts Panel**.
-
-
 Troubleshooting
 ---------------
 
