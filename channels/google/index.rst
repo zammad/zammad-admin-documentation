@@ -15,7 +15,7 @@ Google
 Connect a Gmail or G Suite account to Zammad.
 
 .. figure:: /images/channels/google/panel.png
-   :alt: Email settings panel
+   :alt: Google channel settings panel
    :align: center
 
 .. note:: Google channels are a specialized kind of
