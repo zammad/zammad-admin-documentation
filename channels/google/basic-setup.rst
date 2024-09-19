@@ -9,7 +9,7 @@ required).
 
 If you already set up Google email channels in Zammad, you can easily
 migrate them to a Google channel. Follow the steps below but skip the step
-"Add Account".
+"Add Account" and proceed with :ref:`migrate-channel`.
 
 .. _register-oauth-google:
 
@@ -53,14 +53,11 @@ the following screenshot.
 3. Select it by checking the box
 4. Confirm by clicking the "Update" button
 
-Go on by clicking "Save and Continue".
-
-If your app is in "Testing" mode, add a user as which you want to sign in to
-your Google account.
-
-After that, you should see a summary screen. Check the information and confirm
-by clicking the "Back to Dashboard" button. Go on with creating credentials for
-your app.
+Go on by clicking "Save and Continue". If your app is in "Testing" mode, add a
+user as which you want to sign in to your Google account.
+After that you see a summary screen where you can check the information.
+Confirm by clicking the "Back to Dashboard" button and go on with creating
+credentials for your app.
 
 Create Credentials
 ^^^^^^^^^^^^^^^^^^
@@ -72,7 +69,6 @@ choose "OAuth client ID".
    :alt: Screenshot shows credentials screen with highlighted elements
    :align: center
 
-
 Select "Web application" as Application type, give it a name and enter your
 redirect URL.
 
@@ -80,14 +76,17 @@ redirect URL.
    :alt:
    :align: center
 
-You can find this URL in Zammad's admin area
+The redirect URL is basically the domain of your Zammad instance, extended with
+``/api/v1/external_credentials/google/callback``.
+
+You can even find the complete redirect URL in Zammad's admin area
 under Channels > Google. Click on "Configure App" and find your URL under
 "Your callback URL".
 
 .. figure:: /images/channels/google/configure-app-dialog.png
    :alt: Screenshot shows Zammad's configuration dialog for a Google app
    :align: center
-   :scale: 60%
+   :scale: 70%
 
 Click on "Create" after inserting the information. You will see a dialog with
 your client ID and client secret. You need both of them in the next step for
@@ -113,8 +112,8 @@ Add Account
 If you already have Google email channels, you can skip this step and head over
 to :ref:`migrate-channel`.
 
-After you've registered Zammad as an OAuth app in your Google Developer
-settings, you can begin connecting Gmail accounts to Zammad.
+After you've registered Zammad as an OAuth app, you can connect Gmail accounts
+to Zammad.
 
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
@@ -147,7 +146,6 @@ dialog for specifying a folder and if you want to keep messages on the server.
 Folder
    Specify which folder (or *label*) to fetch from,
    or leave empty to fetch from ``INBOX``.
-
    If specifying a nested folder, be sure to use the full path,
    e.g. ``Inquiries/Tech-Support``.
 
@@ -173,18 +171,17 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
-After adding the account
-   After successfully adding the Google account, you can adjust
-   the default group Zammad is going to assign incoming new tickets to.
 
-   .. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
-      :alt: Location of "Destination Group" setting for existing accounts
-      :scale: 60%
-      :align: center
+After successfully adding the Google account, you can adjust
+the default group Zammad is going to assign incoming new tickets to.
 
-   Only **active** groups will be displayed.
+.. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
+   :alt: Location of "Destination Group" setting for existing accounts
+   :scale: 70%
+   :align: center
 
-   Changing this setting will not reassign existing tickets to the new group.
+Only **active** groups will be displayed. Changing this setting will not
+reassign existing tickets to the new group.
 
 .. _migrate-channel:
 
@@ -233,11 +230,11 @@ entirely after 7 days.
 Troubleshooting
 ---------------
 
-My OAuth credentials stopped working all of a sudden
-   Did you recently reset your Google password? Google invalidates all your
-   OAuth tokens whenever you change your password.
+My OAuth credentials stopped working
+   Did you recently change your Google password? Google invalidates all your
+   OAuth tokens whenever you change it.
 
-How to use my Gmail account for outgoing system notifications?
+How to use the Gmail account for outgoing system notifications?
    On **subscription/cloud-hosted instances**, you can't do that.
    Notifications will always come from
    “Notification Master <noreply\@your.zammad.domain>”.
