@@ -45,11 +45,6 @@ Connect a Gmail or G Suite account to Zammad.
    * raise the limit on attachment sizes
    * modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
 
-   .. hint:: Want to **manually edit email subjects**
-      or **always copy parent messages into your replies**?
-
-      Check the ✍️ :doc:`/misc/composer`.
-
 :doc:`Header based actions <email-headers>`
    Manipulate auto response behavior or incoming routing.
 

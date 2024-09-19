@@ -175,7 +175,7 @@ Keep messages on server
 After successfully adding the Google account, you can adjust
 the default group Zammad is going to assign incoming new tickets to.
 
-.. figure:: /images/channels/google/accounts/account-setup/change-destination-group.png
+.. figure:: /images/channels/google/change-destination-group.png
    :alt: Location of "Destination Group" setting for existing accounts
    :scale: 70%
    :align: center
@@ -210,7 +210,7 @@ Google and request you to authenticate and consent to said account.
 After you pressed next you'll be redirect to Zammad's Google channel overview.
 Your channel, if successful, is now migrated to an Google channel.
 
-.. figure:: /images/channels/google/accounts/migrate-email-channel-to-google.gif
+.. figure:: /images/channels/google/migrate-email-channel-to-google.gif
    :alt: Migrate an existing email channel to Google
    :align: center
 
@@ -222,7 +222,7 @@ for up to 7 days. For this time period Zammad will remember your original
 credentials and restore it if needed. These information will be removed
 entirely after 7 days.
 
-   .. figure:: /images/channels/google/accounts/managing-accounts/rollback-migration.png
+   .. figure:: /images/channels/google/rollback-migration.png
       :alt: Migrate an existing email channel to Google
       :scale: 90%
       :align: center
