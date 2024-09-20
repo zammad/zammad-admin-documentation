@@ -5,8 +5,6 @@ Google
    :hidden:
 
    basic-setup
-   accounts/managing-accounts
-   accounts/secondary-addresses
    filters
    signatures
    settings
