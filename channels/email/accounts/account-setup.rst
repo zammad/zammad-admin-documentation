@@ -25,7 +25,7 @@ The import process does things you might not expect:
       Google is in the process of upgrading its security policies.
       To stay up-to-date, do **not** add your account as an email
       channel — instead, create a
-      :doc:`Google channel </channels/google/accounts/account-setup>`.
+      :doc:`Google channel </channels/google/basic-setup>`.
 
    **Microsoft 365 users:**
       Microsoft is in the process of upgrading its security policies.
@@ -38,7 +38,7 @@ Basic
 
 In most cases, Zammad is smart enough to figure out your email provider's
 configuration based on your email address alone. If the correct configuration
-could not be retreived, Zammad asks you to provide the correct parameters
+could not be retrieved, Zammad asks you to provide the correct parameters
 manually.
 
 .. figure:: /images/channels/email/account-basic-setup-inbound.png
