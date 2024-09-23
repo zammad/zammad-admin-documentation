@@ -22,15 +22,11 @@ The import process does things you might not expect:
 .. note::
 
    **Gmail / G Suite users:**
-      Google is in the process of upgrading its security policies.
-      To stay up-to-date, do **not** add your account as an email
-      channel — instead, create a
+      To add a Google account, create a dedicated
       :doc:`Google channel </channels/google/basic-setup>`.
 
    **Microsoft 365 users:**
-      Microsoft is in the process of upgrading its security policies.
-      To stay up-to-date, do **not** add your account as an email
-      channel — instead, create a
+      To add a Microsoft 365 account, create a dedicated
       :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
 
 Basic
