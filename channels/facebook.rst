@@ -133,7 +133,14 @@ Select a group you want to handle the Facebook tickets and click on "Submit".
    :scale: 75%
    :align: center
 
-After that, you are technically ready to go. Test it by creating a post
-and answer the ticket in Zammad. You should also consider to verify your
-business account as well as switch your Meta app from "Development"
-to "Live".
+After that, you are technically ready to go. However, you have to do some
+additional steps, which aren't covered in this documentation:
+
+- Request advanced access for your app (see screenshot below)
+- Request a business review if your business is not already reviewed
+- Switch your app from development to live mode
+
+.. figure:: /images/channels/facebook/request-permissions.png
+   :alt: Screenshot showing permission and features screen in the Facebook developer portal
+   :scale: 60%
+   :align: center
