@@ -1,20 +1,20 @@
 Limitations
 ===========
 
-It's important to understand when a trigger can be used and when it's better
-to use e.g. Zammad's :doc:`/manage/scheduler` or
-:doc:`postmaster filters </channels/email/filters>`. 
+Triggers are one way of automated actions. In addition, there are also
+:doc:`scheduler </manage/scheduler>` and
+:doc:`postmaster filter </channels/email/filters>` based automation. Make sure
+to have a look at those, too. They can be more suitable, depending on your
+use case.
 
-While the creation of a ticket is straight forward,
-updating an existing ticket is a bit trickier. In terms of triggers, a ticket is only
-updated if you press the update button on the lower right of a ticket. 
-Adding tags to a ticket or switching articles visibility
-**is no ticket update**.
+Limitations of triggers:
 
-Also keep in mind that we're always only working on the last article.
-This means you can't trigger for past articles. 
-Triggers always handle the current ticket attributes and the article
-(if applicable) that cause the trigger to fire.
+- Triggers are executed when a ticket is updated via clicking the "Update"
+  button. Changing a value without updating the ticket (e.g. setting a tag) will
+  not execute the trigger.
+- Triggers are always affecting the last article of a ticket. This means you
+  can't run triggers based on older articles.
+- Triggers always handle the current ticket attributes and the article
+  (if applicable) that causes the trigger to fire. A related object context
+  might not be available for performing changes.
 
-If your use case doesn't fit in above possibilities, you might want to have a
-look at Zammad's :doc:`/manage/scheduler`.

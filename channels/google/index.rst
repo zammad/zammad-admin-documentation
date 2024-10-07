@@ -4,7 +4,9 @@ Google
 .. toctree::
    :hidden:
 
-   accounts
+   basic-setup
+   accounts/managing-accounts
+   accounts/secondary-addresses
    filters
    signatures
    settings
@@ -13,16 +15,37 @@ Google
 Connect a Gmail or G Suite account to Zammad.
 
 .. figure:: /images/channels/google/panel.png
-   :alt: Email settings panel
+   :alt: Google channel settings panel
    :align: center
 
 .. note:: Google channels are a specialized kind of
    :doc:`📨 email channel </channels/email/index>`.
 
    If you're already familiar with email channels,
-   you can skip most of this - but **watch out for the “Accounts” section**,
-   which has a few extra quirks due to Google's strict security measures.
+   you can skip most of this. However, you should have a look at the
+   :doc:`./basic-setup` to get started.
 
-.. include:: /channels/email/index.rst
-   :start-after: .. start-after-migration
-   :end-before: Extra Options for Self-Hosted Users
+:doc:`basic-setup`
+   Connect Zammad to Google and add an account to fetch emails from.
+
+   Self-hosted users may have already completed this step during new
+   system setup.
+
+:doc:`Filters <filters>`
+   Make sure new tickets show up in the right place
+   with automated, if-this-then-that rules for all incoming email.
+
+:doc:`Signatures <signatures>`
+   Customize signatures for all outgoing emails.
+
+:doc:`Settings <settings>`
+   Manage options like:
+
+   * set the “From:” address on system notifications
+   * raise the limit on attachment sizes
+   * modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
+
+:doc:`Header based actions <email-headers>`
+   Manipulate auto response behavior or incoming routing.
+
+   .. warning:: 🤓 This is a very advanced topic.

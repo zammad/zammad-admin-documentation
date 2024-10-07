@@ -28,7 +28,7 @@ Control how Zammad **sends and receives email**.
 🚛 Migrate existing email channel to "XOAUTH" channel
    At this moment Zammad supports XOAUTH for the following providers:
 
-      * :doc:`Google </channels/google/accounts/migrate-from-email-channel>`
+      * :ref:`Google <migrate-channel>`
       * :doc:`Microsoft 365 (formerly Office 365) </channels/microsoft365/accounts/migrate-from-email-channel>`
 
    Use above links to use the migration option instead of removing and re-adding
