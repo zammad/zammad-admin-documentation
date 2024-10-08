@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-23 10:25+0200\n"
-"PO-Revision-Date: 2024-05-22 09:00+0000\n"
-"Last-Translator: Berkay Gökmen <berkaygokmen24@gmail.com>\n"
+"POT-Creation-Date: 2024-10-07 18:05+0200\n"
+"PO-Revision-Date: 2024-09-27 17:00+0000\n"
+"Last-Translator: Rob <robertborge@outlook.com>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/tr/>\n"
 "Language: tr\n"
@@ -17,13 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.7\n"
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:88
 msgid "Chat"
 msgstr "Sohbet"
 
-#: ../channels/chat.rst:5 ../misc/object-conditions/basics.rst:5
+#: ../channels/chat.rst:5 ../channels/facebook.rst:5
+#: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
 #, fuzzy
@@ -1791,13 +1792,12 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/filters/system-filters.rst:10
-#, fuzzy
 msgid ""
 "Please note that this is not a full filters list, if you're missing filters, "
 "feel free to ask over at the `Community <https://community.zammad.org>`_."
 msgstr ""
 "Değişkenleri kaçırıyorsanız veya bir şeyin beklendiği gibi çalışmadığından "
-"emin değilseniz,  `Toplulukta `_ soru sormaktan çekinmeyin."
+"emin değilseniz, `Toplulukta `_ soru sormaktan çekinmeyin."
 
 #: ../channels/email/filters/system-filters.rst:14
 #, fuzzy
@@ -2443,107 +2443,267 @@ msgstr ""
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../channels/facebook.rst:6
-msgid ""
-"Please note that this part of our documentation currently is outdated. We "
-"currently are working on solutions for this topic."
-msgstr ""
-"Lütfen belgelerimizin bu bölümünün şu anda güncel olmadığını unutmayın. Şu "
-"anda bu konu için çözümler üzerinde çalışıyoruz."
-
-#: ../channels/facebook.rst:9
-msgid ""
-"You can connect Facebook Accounts with Zammad. You need to connect your "
-"Zammad with Facebook first:"
-msgstr ""
-"Facebook Hesaplarını Zammad ile bağlayabilirsiniz. Önce Zammad'ınızı "
-"Facebook'a bağlamanız gerekir:"
-
-#: ../channels/facebook.rst:12
-msgid "For this start at: https://developers.facebook.com/apps/"
-msgstr "Bunun için şuradan başla: https://developers.facebook.com/apps/"
-
-#: ../channels/facebook.rst:18
-msgid "Click on “Create App ID\" and enter app name"
-msgstr "\"Uygulama Kimliği Oluştur\"a tıklayın ve uygulama adını girin"
-
-#: ../channels/facebook.rst:39
+#: ../channels/facebook.rst:7
 #, fuzzy
-msgid "**Configure Zammad as Facebook app**"
-msgstr "***Zammad'ı Facebook uygulaması olarak yapılandır***"
-
-#: ../channels/facebook.rst:41
-msgid "Go to “Admin -> Channels -> Facebook”"
-msgstr "“Admin -> Kanallar -> Facebook” adresine git"
-
-#: ../channels/facebook.rst:42
+#| msgid ""
+#| "Now you need to link your Facebook Page from which you want to get posts "
+#| "and send out comments."
 msgid ""
-"Click on “Connect Facebook App” and enter your “App ID”, “App Secret” and "
-"verify the “Callback URL”."
-msgstr ""
-"\"Facebook Uygulamasını Bağla\"yı tıklayın ve \"Uygulama Kimliğinizi\", "
-"\"Uygulama Sırrını\" girin ve \"Geri Arama URL'sini\" doğrulayın."
-
-#: ../channels/facebook.rst:45
-msgid "Done, your Zammad is configured as Facebook App now."
-msgstr ""
-"Tamamlandı, Zammad'ınız artık Facebook uygulaması olarak yapılandırıldı."
-
-#: ../channels/facebook.rst:48
-#, fuzzy
-msgid "**Link your Facebook Page to your Zammad Facebook app**"
-msgstr "***Facebook Sayfanızı Zammad Facebook uygulamanıza bağlayın***"
-
-#: ../channels/facebook.rst:50
-msgid ""
-"Now you need to link your Facebook Page from which you want to get posts and "
-"send out comments."
+"You can connect your Facebook account to Zammad, allowing you to create "
+"tickets from posts and respond as comments."
 msgstr ""
 "Şimdi, gönderi almak ve yorum göndermek istediğiniz Facebook Sayfanızı "
 "bağlamanız gerekiyor."
 
-#: ../channels/facebook.rst:53
+#: ../channels/facebook.rst:10
 msgid ""
-"Click on “Add Account”, then you will see the authorize app page of "
-"Facebook. Click on “authorize app”."
+"Please note that you first and foremost should have a look at `Meta's "
+"documentation <https://developers.facebook.com/docs/>`_ to get the most "
+"recent and substantial information for the steps on their side. Some steps "
+"on Meta's side are only mentioned here as prerequisites, as this is outside "
+"the scope of this documentation."
 msgstr ""
-"“Hesap Ekle”ye tıklayın, ardından Facebook'un yetkilendirme uygulama "
-"sayfasını göreceksiniz. “Uygulamayı yetkilendir” seçeneğine tıklayın."
 
-#: ../channels/facebook.rst:60
+#: ../channels/facebook.rst:16
 msgid ""
-"You will get redirected back to Zammad. Now you need to configure your "
-"search keys, where mentions should get routed."
+"The setup of the :doc:`WhatsApp channel </channels/whatsapp/index>` has "
+"similar prerequisites as the Facebook channel. So, if you managed to set one "
+"of them to up, you should have a look at the other one too. It could be a "
+"low hanging fruit! 🎉"
 msgstr ""
-"Tekrar Zammad'a yönlendirileceksiniz. Şimdi, sözlerin yönlendirileceği arama "
-"anahtarlarınızı yapılandırmanız gerekiyor."
+
+#: ../channels/facebook.rst:22 ../channels/whatsapp/prerequisites.rst:2
+#: ../settings/security/ssl-certificates.rst:17
+#: ../system/integrations/smime/prerequisites.rst:2
+msgid "Prerequisites"
+msgstr ""
+
+#: ../channels/facebook.rst:24
+#, fuzzy
+msgid "`Meta business account <https://business.facebook.com/overview>`_"
+msgstr "Bunun için şuradan başla: https://developers.facebook.com/apps/"
+
+#: ../channels/facebook.rst:25
+#, fuzzy
+msgid ""
+"`Meta developer account <https://developers.facebook.com/docs/development/"
+"register>`_"
+msgstr "Bunun için şuradan başla: https://developers.facebook.com/apps/"
+
+#: ../channels/facebook.rst:26
+msgid ""
+"Permission to create an app inside your developer account and needed "
+"information for the app (see `here <https://developers.facebook.com/docs/"
+"development/create-an-app>`_)"
+msgstr ""
+
+#: ../channels/facebook.rst:30
+#, fuzzy
+#| msgid "Creating Macros"
+msgid "Creating an App"
+msgstr "Makrolar Oluşturmak"
+
+#: ../channels/facebook.rst:53
+#, fuzzy
+msgid "Create a new app"
+msgstr "1. Twitter Geliştirici hesabı için uygula"
+
+#: ../channels/facebook.rst:33
+#, fuzzy
+#| msgid ""
+#| "Visit [https://developers.facebook.com/apps/] and click on \"Add a new "
+#| "App\""
+msgid ""
+"Go to Meta's `app dashboard <https://developers.facebook.com/apps>`_ and "
+"create a new app."
+msgstr ""
+"[https://developers.facebook.com/apps/] adresini ziyaret edin ve \"Yeni "
+"Uygulama Ekle\"yi tıklayın"
+
+#: ../channels/facebook.rst:0
+msgid ""
+"Screenshot of Meta's app dashboard with highlighted \"Create App\" button"
+msgstr ""
+
+#: ../channels/facebook.rst:39
+msgid "If you have more than one business portfolio, select the desired one."
+msgstr ""
+
+#: ../channels/facebook.rst:41
+msgid "In the \"Use cases\" tab, select \"Other\" and \"Business\" app type."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+msgid "Screenshot of app creation with highlighted app type"
+msgstr ""
+
+#: ../channels/facebook.rst:49
+msgid ""
+"In the next screen, provide a fitting app name, contact email address and "
+"select your business portfolio and finally click on \"Create app\"."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+msgid "Screenshot of app creation on \"Details\" tab"
+msgstr ""
+
+#: ../channels/facebook.rst:72 ../channels/whatsapp/preparation.rst:None
+msgid "Add a product to your app"
+msgstr ""
+
+#: ../channels/facebook.rst:56
+msgid ""
+"After creating the app, you should see the app overview, where you can add a "
+"product to your app."
+msgstr ""
+
+#: ../channels/facebook.rst:59
+msgid ""
+"Scroll down and select \"Facebook Login for Business\" by clicking on the "
+"\"Set up\" button."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+msgid ""
+"Screenshot of product overview with highlighted \"Facebook Login for "
+"Business\""
+msgstr ""
 
 #: ../channels/facebook.rst:65
 msgid ""
-"After you are done, you will get an overview of all linked Facebook Accounts."
+"In the following screen, go to \"Valid OAuth Redirect URIs\" and provide the "
+"URL of your Zammad instance, followed by ``/api/v1/external_credentials/"
+"facebook/callback``. You can copy this URL from Zammad if you click on the "
+"\"Configure App\" button in Zammad's Facebook channel admin screen."
 msgstr ""
-"Bitirdikten sonra, bağlı tüm Facebook Hesaplarına genel bir bakış "
-"alacaksınız."
 
-#: ../channels/facebook.rst:70
+#: ../channels/facebook.rst:0
+msgid "Screenshot of app settings with highlighted \"OAuth Redirect URIs\""
+msgstr ""
+
+#: ../channels/facebook.rst:74
+msgid ""
+"Continue with the next step on Zammad's side by connecting the Facebook with "
+"Zammad."
+msgstr ""
+
+#: ../channels/facebook.rst:78
+msgid "Connect Facebook App in Zammad"
+msgstr ""
+
+#: ../channels/facebook.rst:80
+msgid ""
+"If not already done, go to the Facebook channel section in the admin "
+"interface in Zammad and click on \"Configure App\". This will open a dialog "
+"where you have to provide the app ID as well as the app secret."
+msgstr ""
+
+#: ../channels/facebook.rst:84
+msgid ""
+"Head over to the Meta app dashboard and switch to \"App settings\" > "
+"\"Basic\". Copy the \"App ID\" and the the \"App secret\" (after clicking on "
+"the \"Show\" button) and paste both to Zammad in the corresponding fields."
+msgstr ""
+
+#: ../channels/facebook.rst:None
 #, fuzzy
-msgid "**Start using your new channel**"
-msgstr "***Yeni kanalını kullanmaya başla***"
+msgid "Screenshot showing basic settings section of app settings"
+msgstr "İlk oturum açmada otomatik hesap bağlantısı"
 
-#: ../channels/facebook.rst:72
-msgid ""
-"Start and write a post to your page, short time later you will have a new "
-"ticket in Zammad."
+#: ../channels/facebook.rst:None
+#, fuzzy
+msgid "Screenshot showing \"Connect Facebook App\" dialog in Zammad"
 msgstr ""
-"Başlayın ve sayfanıza bir yazı yazın, kısa bir süre sonra Zammad'a yeni bir "
-"biletiniz olacak."
+"Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
+"düzenleyebilirsiniz:"
 
-#: ../channels/facebook.rst:75
-msgid ""
-"Just click on the reply button (as you do it for emails) to send a comment."
+#: ../channels/facebook.rst:96
+msgid "Confirm it by clicking on \"Submit\" and continue with the next step."
 msgstr ""
-"Yorum göndermek için (e-postalar için yaptığınız gibi) yanıtla butonuna "
-"tıklamanız yeterlidir."
+
+#: ../channels/facebook.rst:99
+#, fuzzy
+#| msgid "7. Add your Twitter account in Zammad"
+msgid "Add Facebook Account to Zammad"
+msgstr "7. Zammad'a Twitter hesabınızı ekleyin"
+
+#: ../channels/facebook.rst:101
+msgid ""
+"After you successfully connected your app with Zammad, you can now add an "
+"account by clicking the \"Add Account\" button in Zammad. This redirects you "
+"to Facebook and you will see an account selection dialog. Confirm by "
+"clicking on \"Continue as ...\" or log in with another account."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+msgid "Screenshot showing Account selection from Meta"
+msgstr ""
+"Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
+"düzenleyebilirsiniz:"
+
+#: ../channels/facebook.rst:111
+msgid ""
+"In the next screen you can choose if you want to receive tickets from all "
+"pages or just selected ones. Choose what fits your needs and confirm by "
+"clicking \"Continue\"."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+msgid "Screenshot showing pages selection from Meta"
+msgstr ""
+"Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
+"düzenleyebilirsiniz:"
+
+#: ../channels/facebook.rst:120
+msgid ""
+"Finally, you see an overview about the requested permission. Click on "
+"\"Save\" and \"Got it\" in the next screen."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+msgid "Screenshot showing permission overview"
+msgstr ""
+"Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
+"düzenleyebilirsiniz:"
+
+#: ../channels/facebook.rst:128
+msgid ""
+"You are now redirected to Zammad where you can see a configuration dialog. "
+"Select a group you want to handle the Facebook tickets and click on "
+"\"Submit\"."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+msgid "Screenshot showing group selection dialog in Zammad"
+msgstr "İlk oturum açmada otomatik hesap bağlantısı"
+
+#: ../channels/facebook.rst:136
+msgid ""
+"After that, you are technically ready to go. However, you have to do some "
+"additional steps, which aren't covered in this documentation:"
+msgstr ""
+
+#: ../channels/facebook.rst:139
+msgid "Request advanced access for your app (see screenshot below)"
+msgstr ""
+
+#: ../channels/facebook.rst:140
+msgid "Request a business review if your business is not already reviewed"
+msgstr ""
+
+#: ../channels/facebook.rst:141
+msgid "Switch your app from development to live mode"
+msgstr ""
+
+#: ../channels/facebook.rst:None
+msgid ""
+"Screenshot showing permission and features screen in the Facebook developer "
+"portal"
+msgstr ""
 
 #: ../channels/form.rst:2
 #, fuzzy
@@ -3618,10 +3778,8 @@ msgstr ""
 "göründüğünden emin olun**."
 
 #: ../channels/google/index.rst:39
-#, fuzzy
-#| msgid ":doc:`📜  Signatures <signatures>`"
 msgid ":doc:`Signatures <signatures>`"
-msgstr ":doc:`📜  İmzalar <signatures>`"
+msgstr ":doc:`📜 İmzalar <signatures>`"
 
 #: ../channels/google/index.rst:39
 #, fuzzy
@@ -3630,10 +3788,8 @@ msgid "Customize signatures for all outgoing emails."
 msgstr "Tüm giden e-postalar için imzaları özelleştir."
 
 #: ../channels/google/index.rst:46
-#, fuzzy
-#| msgid ":doc:`⚙️  Settings <settings>`"
 msgid ":doc:`Settings <settings>`"
-msgstr ":doc:`⚙️  Ayarlar <settings>`"
+msgstr ":doc:`⚙️ Ayarlar <settings>`"
 
 #: ../channels/google/index.rst:50
 msgid ":doc:`Header based actions <email-headers>`"
@@ -5735,10 +5891,6 @@ msgid ""
 "Search for it and click on \"Set up\":"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:None
-msgid "Add a product to your app"
-msgstr ""
-
 #: ../channels/whatsapp/preparation.rst:87
 msgid ""
 "In the next step, you have to add a \"Meta Business Account\". This guide "
@@ -5830,12 +5982,6 @@ msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:146
 msgid "We promise it will become easier! 🤓"
-msgstr ""
-
-#: ../channels/whatsapp/prerequisites.rst:2
-#: ../settings/security/ssl-certificates.rst:17
-#: ../system/integrations/smime/prerequisites.rst:2
-msgid "Prerequisites"
 msgstr ""
 
 #: ../channels/whatsapp/prerequisites.rst:4
@@ -11583,7 +11729,6 @@ msgid "📨 **Not all automated messages come from triggers!**"
 msgstr "📨 **Tüm otomatik mesajlar tetikleyicilerden gelmez!**"
 
 #: ../manage/trigger/learn-by-example.rst:32
-#, fuzzy
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
@@ -11592,7 +11737,7 @@ msgid ""
 msgstr ""
 "Örneğin, *temsilciler* yeni oluşturulan bir bilet hakkında sistem e-postası "
 "aldığında, bu, sistemin kendisinde yerleşiktir. Bunları özelleştirmeniz "
-"gerekiyorsa, :doc:`sunucunuzdaki dosyaları manuel olarak düzenleme  </manage/"
+"gerekiyorsa, :doc:`sunucunuzdaki dosyaları manuel olarak düzenleme </manage/"
 "trigger/system-notifications>`niz gerekir."
 
 #: ../manage/trigger/limitations.rst:4
@@ -25627,7 +25772,7 @@ msgid ""
 "org>`_."
 msgstr ""
 "Değişkenleri kaçırıyorsanız veya bir şeyin beklendiği gibi çalışmadığından "
-"emin değilseniz,  `Toplulukta `_ soru sormaktan çekinmeyin."
+"emin değilseniz, `Toplulukta `_ soru sormaktan çekinmeyin."
 
 #: ../system/variables/article.rst:6
 msgid ""
@@ -27422,6 +27567,87 @@ msgstr "Versiyon"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını gösterir."
 
+#~ msgid ""
+#~ "Please note that this part of our documentation currently is outdated. We "
+#~ "currently are working on solutions for this topic."
+#~ msgstr ""
+#~ "Lütfen belgelerimizin bu bölümünün şu anda güncel olmadığını unutmayın. "
+#~ "Şu anda bu konu için çözümler üzerinde çalışıyoruz."
+
+#~ msgid ""
+#~ "You can connect Facebook Accounts with Zammad. You need to connect your "
+#~ "Zammad with Facebook first:"
+#~ msgstr ""
+#~ "Facebook Hesaplarını Zammad ile bağlayabilirsiniz. Önce Zammad'ınızı "
+#~ "Facebook'a bağlamanız gerekir:"
+
+#~ msgid "For this start at: https://developers.facebook.com/apps/"
+#~ msgstr "Bunun için şuradan başla: https://developers.facebook.com/apps/"
+
+#~ msgid "Click on “Create App ID\" and enter app name"
+#~ msgstr "\"Uygulama Kimliği Oluştur\"a tıklayın ve uygulama adını girin"
+
+#, fuzzy
+#~ msgid "**Configure Zammad as Facebook app**"
+#~ msgstr "***Zammad'ı Facebook uygulaması olarak yapılandır***"
+
+#~ msgid "Go to “Admin -> Channels -> Facebook”"
+#~ msgstr "“Admin -> Kanallar -> Facebook” adresine git"
+
+#~ msgid ""
+#~ "Click on “Connect Facebook App” and enter your “App ID”, “App Secret” and "
+#~ "verify the “Callback URL”."
+#~ msgstr ""
+#~ "\"Facebook Uygulamasını Bağla\"yı tıklayın ve \"Uygulama Kimliğinizi\", "
+#~ "\"Uygulama Sırrını\" girin ve \"Geri Arama URL'sini\" doğrulayın."
+
+#~ msgid "Done, your Zammad is configured as Facebook App now."
+#~ msgstr ""
+#~ "Tamamlandı, Zammad'ınız artık Facebook uygulaması olarak yapılandırıldı."
+
+#, fuzzy
+#~ msgid "**Link your Facebook Page to your Zammad Facebook app**"
+#~ msgstr "***Facebook Sayfanızı Zammad Facebook uygulamanıza bağlayın***"
+
+#~ msgid ""
+#~ "Click on “Add Account”, then you will see the authorize app page of "
+#~ "Facebook. Click on “authorize app”."
+#~ msgstr ""
+#~ "“Hesap Ekle”ye tıklayın, ardından Facebook'un yetkilendirme uygulama "
+#~ "sayfasını göreceksiniz. “Uygulamayı yetkilendir” seçeneğine tıklayın."
+
+#~ msgid ""
+#~ "You will get redirected back to Zammad. Now you need to configure your "
+#~ "search keys, where mentions should get routed."
+#~ msgstr ""
+#~ "Tekrar Zammad'a yönlendirileceksiniz. Şimdi, sözlerin yönlendirileceği "
+#~ "arama anahtarlarınızı yapılandırmanız gerekiyor."
+
+#~ msgid ""
+#~ "After you are done, you will get an overview of all linked Facebook "
+#~ "Accounts."
+#~ msgstr ""
+#~ "Bitirdikten sonra, bağlı tüm Facebook Hesaplarına genel bir bakış "
+#~ "alacaksınız."
+
+#, fuzzy
+#~ msgid "**Start using your new channel**"
+#~ msgstr "***Yeni kanalını kullanmaya başla***"
+
+#~ msgid ""
+#~ "Start and write a post to your page, short time later you will have a new "
+#~ "ticket in Zammad."
+#~ msgstr ""
+#~ "Başlayın ve sayfanıza bir yazı yazın, kısa bir süre sonra Zammad'a yeni "
+#~ "bir biletiniz olacak."
+
+#~ msgid ""
+#~ "Just click on the reply button (as you do it for emails) to send a "
+#~ "comment."
+#~ msgstr ""
+#~ "Yorum göndermek için (e-postalar için yaptığınız gibi) yanıtla butonuna "
+#~ "tıklamanız yeterlidir."
+
 #, fuzzy
 #~ msgid ":doc:`Google </channels/google/accounts/migrate-from-email-channel>`"
 #~ msgstr ":doc:`Kanallar > E-posta </channels/email/index>`"
@@ -27717,10 +27943,6 @@ msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını göst
 
 #, fuzzy
 #~ msgid "Create a Meta Developer account"
-#~ msgstr "1. Twitter Geliştirici hesabı için uygula"
-
-#, fuzzy
-#~ msgid "Create a Meta Developer app"
 #~ msgstr "1. Twitter Geliştirici hesabı için uygula"
 
 #, fuzzy
