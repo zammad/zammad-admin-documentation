@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-23 10:25+0200\n"
+"POT-Creation-Date: 2024-10-07 18:05+0200\n"
 "PO-Revision-Date: 2024-09-25 07:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -23,7 +23,8 @@ msgstr ""
 msgid "Chat"
 msgstr "Chat"
 
-#: ../channels/chat.rst:5 ../misc/object-conditions/basics.rst:5
+#: ../channels/chat.rst:5 ../channels/facebook.rst:5
+#: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
 msgid "Introduction"
@@ -2807,105 +2808,295 @@ msgstr ""
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../channels/facebook.rst:6
+#: ../channels/facebook.rst:7
+#, fuzzy
+#| msgid ""
+#| "Now you need to link your Facebook Page from which you want to get posts "
+#| "and send out comments."
 msgid ""
-"Please note that this part of our documentation currently is outdated. We "
-"currently are working on solutions for this topic."
-msgstr ""
-"Bitte beachten Sie, dass dieser Teil der Dokumentation nicht mehr aktuell "
-"ist. Wir arbeiten gerade an einer Lösung für dieses Problem."
-
-#: ../channels/facebook.rst:9
-msgid ""
-"You can connect Facebook Accounts with Zammad. You need to connect your "
-"Zammad with Facebook first:"
-msgstr ""
-"Sie können Ihre Facebook-Konten mit Zammad verbinden. Sie müssen dazu "
-"zunächst Ihr Zammad mit Facebook verbinden:"
-
-#: ../channels/facebook.rst:12
-msgid "For this start at: https://developers.facebook.com/apps/"
-msgstr "Gehen Sie dafür bitte auf: https://developers.facebook.com/apps/"
-
-#: ../channels/facebook.rst:18
-msgid "Click on “Create App ID\" and enter app name"
-msgstr "Klicken Sie auf \"Create App ID\" und vergeben Sie einen Namen"
-
-#: ../channels/facebook.rst:39
-msgid "**Configure Zammad as Facebook app**"
-msgstr "**Konfigurieren von Zammad als Facebook-App**"
-
-#: ../channels/facebook.rst:41
-msgid "Go to “Admin -> Channels -> Facebook”"
-msgstr "Gehen Sie zu \"Einstellungen -> Kanäle -> Facebook\""
-
-#: ../channels/facebook.rst:42
-msgid ""
-"Click on “Connect Facebook App” and enter your “App ID”, “App Secret” and "
-"verify the “Callback URL”."
-msgstr ""
-"Klicken Sie auf \"Facebook App verbinden\" und geben die Daten zu \"Facebook "
-"App ID\" und \"Facebook-App-Zugangsdaten\" ein und prüfen die \"Callback "
-"URL\"."
-
-#: ../channels/facebook.rst:45
-msgid "Done, your Zammad is configured as Facebook App now."
-msgstr "Ihr Zammad ist nun als Facebook-App konfiguriert."
-
-#: ../channels/facebook.rst:48
-msgid "**Link your Facebook Page to your Zammad Facebook app**"
-msgstr "**Verbinden Sie Ihre Facebook-Seite mit der Zammad Facebook-App**"
-
-#: ../channels/facebook.rst:50
-msgid ""
-"Now you need to link your Facebook Page from which you want to get posts and "
-"send out comments."
+"You can connect your Facebook account to Zammad, allowing you to create "
+"tickets from posts and respond as comments."
 msgstr ""
 "Nun müssen Sie Ihre Facebook-Seite verlinken, von der Sie Posts bekommen und "
 "Kommentare abgeben wollen."
 
-#: ../channels/facebook.rst:53
+#: ../channels/facebook.rst:10
 msgid ""
-"Click on “Add Account”, then you will see the authorize app page of "
-"Facebook. Click on “authorize app”."
+"Please note that you first and foremost should have a look at `Meta's "
+"documentation <https://developers.facebook.com/docs/>`_ to get the most "
+"recent and substantial information for the steps on their side. Some steps "
+"on Meta's side are only mentioned here as prerequisites, as this is outside "
+"the scope of this documentation."
 msgstr ""
-"Klicken Sie auf \"Add Account\"; anschließend werden Sie auf eine "
-"Autorisierung-Seite von Facebook weitergeleitet. Klicken Sie auf \"authorize "
-"app\"."
 
-#: ../channels/facebook.rst:60
+#: ../channels/facebook.rst:16
 msgid ""
-"You will get redirected back to Zammad. Now you need to configure your "
-"search keys, where mentions should get routed."
+"The setup of the :doc:`WhatsApp channel </channels/whatsapp/index>` has "
+"similar prerequisites as the Facebook channel. So, if you managed to set one "
+"of them to up, you should have a look at the other one too. It could be a "
+"low hanging fruit! 🎉"
 msgstr ""
-"Sie werden danach zurück zu Zammad geleitet. Nun müssen Sie "
-"Schlüsselbegriffe definieren, mit denen Sie Erwähnungen steuern können."
+
+#: ../channels/facebook.rst:22 ../channels/whatsapp/prerequisites.rst:2
+#: ../settings/security/ssl-certificates.rst:17
+#: ../system/integrations/smime/prerequisites.rst:2
+msgid "Prerequisites"
+msgstr "Voraussetzungen"
+
+#: ../channels/facebook.rst:24
+#, fuzzy
+#| msgid ""
+#| "`WhatsApp Business Platform <https://developers.facebook.com/docs/"
+#| "whatsapp>`_"
+msgid "`Meta business account <https://business.facebook.com/overview>`_"
+msgstr ""
+"`WhatsApp Business-Plattform <https://developers.facebook.com/docs/"
+"whatsapp>`_"
+
+#: ../channels/facebook.rst:25
+#, fuzzy
+#| msgid ""
+#| "If you don't have a developer account already, go to https://developers."
+#| "facebook.com/docs/development/register and register a new account."
+msgid ""
+"`Meta developer account <https://developers.facebook.com/docs/development/"
+"register>`_"
+msgstr ""
+"Wenn Sie noch kein Entwicklerkonto haben, gehen Sie zu https://developers."
+"facebook.com/docs/development/register und erstellen Sie ein neues Konto."
+
+#: ../channels/facebook.rst:26
+msgid ""
+"Permission to create an app inside your developer account and needed "
+"information for the app (see `here <https://developers.facebook.com/docs/"
+"development/create-an-app>`_)"
+msgstr ""
+
+#: ../channels/facebook.rst:30
+#, fuzzy
+#| msgid "Create App"
+msgid "Creating an App"
+msgstr "App erstellen"
+
+#: ../channels/facebook.rst:53
+#, fuzzy
+#| msgid "**Create a new project**"
+msgid "Create a new app"
+msgstr "**Erstellen Sie ein neues Projekt**"
+
+#: ../channels/facebook.rst:33
+#, fuzzy
+#| msgid ""
+#| "Visit [https://developers.facebook.com/apps/] and click on \"Add a new "
+#| "App\""
+msgid ""
+"Go to Meta's `app dashboard <https://developers.facebook.com/apps>`_ and "
+"create a new app."
+msgstr ""
+"Besuchen Sie [https://developers.facebook.com/apps/] und klicken Sie auf "
+"\"Eine neue App hinzufügen\""
+
+#: ../channels/facebook.rst:0
+#, fuzzy
+#| msgid "Screenshot showing highlighted \"First Steps\" section"
+msgid ""
+"Screenshot of Meta's app dashboard with highlighted \"Create App\" button"
+msgstr "Screenshot mit hervorgehobenem Abschnitt \"Erste Schritte\""
+
+#: ../channels/facebook.rst:39
+msgid "If you have more than one business portfolio, select the desired one."
+msgstr ""
+
+#: ../channels/facebook.rst:41
+msgid "In the \"Use cases\" tab, select \"Other\" and \"Business\" app type."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+#, fuzzy
+#| msgid "Screenshot shows credentials screen with highlighted elements"
+msgid "Screenshot of app creation with highlighted app type"
+msgstr "Der Screenshot zeigt Credentials-Ansicht mit hervorgehobenen Elementen"
+
+#: ../channels/facebook.rst:49
+msgid ""
+"In the next screen, provide a fitting app name, contact email address and "
+"select your business portfolio and finally click on \"Create app\"."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+#, fuzzy
+#| msgid "Screenshot shows creation of report profile"
+msgid "Screenshot of app creation on \"Details\" tab"
+msgstr "Screenshot zeigt die Erstellung eines Berichtsprofils"
+
+#: ../channels/facebook.rst:72 ../channels/whatsapp/preparation.rst:None
+msgid "Add a product to your app"
+msgstr "Ein Produkt zu Ihrer App hinzufügen"
+
+#: ../channels/facebook.rst:56
+msgid ""
+"After creating the app, you should see the app overview, where you can add a "
+"product to your app."
+msgstr ""
+
+#: ../channels/facebook.rst:59
+msgid ""
+"Scroll down and select \"Facebook Login for Business\" by clicking on the "
+"\"Set up\" button."
+msgstr ""
+
+#: ../channels/facebook.rst:0
+msgid ""
+"Screenshot of product overview with highlighted \"Facebook Login for "
+"Business\""
+msgstr ""
 
 #: ../channels/facebook.rst:65
 msgid ""
-"After you are done, you will get an overview of all linked Facebook Accounts."
+"In the following screen, go to \"Valid OAuth Redirect URIs\" and provide the "
+"URL of your Zammad instance, followed by ``/api/v1/external_credentials/"
+"facebook/callback``. You can copy this URL from Zammad if you click on the "
+"\"Configure App\" button in Zammad's Facebook channel admin screen."
 msgstr ""
-"Anschließend bekommen Sie eine Übersicht über alle verbundenen Facebook-"
-"Accounts angezeigt."
 
-#: ../channels/facebook.rst:70
-msgid "**Start using your new channel**"
-msgstr "**Nutzen Sie Ihren neuen Kanal**"
+#: ../channels/facebook.rst:0
+#, fuzzy
+#| msgid "Screenshot with highlighted API selection"
+msgid "Screenshot of app settings with highlighted \"OAuth Redirect URIs\""
+msgstr "Screenshot mit hervorgehobener API-Auswahl"
 
-#: ../channels/facebook.rst:72
+#: ../channels/facebook.rst:74
 msgid ""
-"Start and write a post to your page, short time later you will have a new "
-"ticket in Zammad."
+"Continue with the next step on Zammad's side by connecting the Facebook with "
+"Zammad."
 msgstr ""
-"Wenn Sie einen Post auf Ihrer Seite schreiben, sehen Sie kurze Zeit später "
-"ein neues Ticket in Zammad."
 
-#: ../channels/facebook.rst:75
+#: ../channels/facebook.rst:78
+#, fuzzy
+#| msgid "**Connect your Google app in Zammad**"
+msgid "Connect Facebook App in Zammad"
+msgstr "**Verbinden Ihrer Google-App mit Zammad**"
+
+#: ../channels/facebook.rst:80
 msgid ""
-"Just click on the reply button (as you do it for emails) to send a comment."
+"If not already done, go to the Facebook channel section in the admin "
+"interface in Zammad and click on \"Configure App\". This will open a dialog "
+"where you have to provide the app ID as well as the app secret."
 msgstr ""
-"Um einen Kommentar zu verfassen, klicken Sie auf den Antworten-Button (so "
-"wie beim Antworten per E-Mail)."
+
+#: ../channels/facebook.rst:84
+msgid ""
+"Head over to the Meta app dashboard and switch to \"App settings\" > "
+"\"Basic\". Copy the \"App ID\" and the the \"App secret\" (after clicking on "
+"the \"Show\" button) and paste both to Zammad in the corresponding fields."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot showing the \"no user creation on logon\" setting"
+msgid "Screenshot showing basic settings section of app settings"
+msgstr ""
+"Screenshot zeigt die Einstellung \"keine Erstellung von Benutzern bei der "
+"Anmeldung\""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot showing ticket state creation dialog with example"
+msgid "Screenshot showing \"Connect Facebook App\" dialog in Zammad"
+msgstr "Screenshot zeigt Dialog zur Erstellung eines Ticketstatus mit Beispiel"
+
+#: ../channels/facebook.rst:96
+#, fuzzy
+#| msgid ""
+#| "Confirm by clicking the \"Submit\" button. Now you can add a Google "
+#| "account as channel in Zammad, see next step."
+msgid "Confirm it by clicking on \"Submit\" and continue with the next step."
+msgstr ""
+"Bestätigen Sie mit einem Klick auf die Schaltfläche \"Übermitteln\". Jetzt "
+"können Sie ein Google Konto als Kanal in Zammad hinzufügen, siehe nächster "
+"Schritt."
+
+#: ../channels/facebook.rst:99
+#, fuzzy
+#| msgid "Adding your gmail account to Zammad"
+msgid "Add Facebook Account to Zammad"
+msgstr "Hinzufügen Ihres Gmail-Kontos zu Zammad"
+
+#: ../channels/facebook.rst:101
+msgid ""
+"After you successfully connected your app with Zammad, you can now add an "
+"account by clicking the \"Add Account\" button in Zammad. This redirects you "
+"to Facebook and you will see an account selection dialog. Confirm by "
+"clicking on \"Continue as ...\" or log in with another account."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot showing certificate deletion button"
+msgid "Screenshot showing Account selection from Meta"
+msgstr "Screenshot zeigt Schaltfläche zum Löschen von Zertifikaten"
+
+#: ../channels/facebook.rst:111
+msgid ""
+"In the next screen you can choose if you want to receive tickets from all "
+"pages or just selected ones. Choose what fits your needs and confirm by "
+"clicking \"Continue\"."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot showing certificate deletion button"
+msgid "Screenshot showing pages selection from Meta"
+msgstr "Screenshot zeigt Schaltfläche zum Löschen von Zertifikaten"
+
+#: ../channels/facebook.rst:120
+msgid ""
+"Finally, you see an overview about the requested permission. Click on "
+"\"Save\" and \"Got it\" in the next screen."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot of Checkmk settings overview"
+msgid "Screenshot showing permission overview"
+msgstr "Screenshot der Checkmk-Einstellungen in Zammad"
+
+#: ../channels/facebook.rst:128
+msgid ""
+"You are now redirected to Zammad where you can see a configuration dialog. "
+"Select a group you want to handle the Facebook tickets and click on "
+"\"Submit\"."
+msgstr ""
+
+#: ../channels/facebook.rst:None
+#, fuzzy
+#| msgid "Screenshot showing admin settings within Zammad."
+msgid "Screenshot showing group selection dialog in Zammad"
+msgstr "Screenshot, der die Admin-Einstellungen in Zammad zeigt."
+
+#: ../channels/facebook.rst:136
+msgid ""
+"After that, you are technically ready to go. However, you have to do some "
+"additional steps, which aren't covered in this documentation:"
+msgstr ""
+
+#: ../channels/facebook.rst:139
+msgid "Request advanced access for your app (see screenshot below)"
+msgstr ""
+
+#: ../channels/facebook.rst:140
+msgid "Request a business review if your business is not already reviewed"
+msgstr ""
+
+#: ../channels/facebook.rst:141
+msgid "Switch your app from development to live mode"
+msgstr ""
+
+#: ../channels/facebook.rst:None
+msgid ""
+"Screenshot showing permission and features screen in the Facebook developer "
+"portal"
+msgstr ""
 
 #: ../channels/form.rst:2
 msgid "Form"
@@ -6730,10 +6921,6 @@ msgstr ""
 "Nun müssen Sie ein Produkt zu Ihrer App hinzufügen. In unserem Fall ist dies "
 "WhatsApp. Suchen Sie danach und klicken Sie auf \"Einrichten\":"
 
-#: ../channels/whatsapp/preparation.rst:None
-msgid "Add a product to your app"
-msgstr "Ein Produkt zu Ihrer App hinzufügen"
-
 #: ../channels/whatsapp/preparation.rst:87
 msgid ""
 "In the next step, you have to add a \"Meta Business Account\". This guide "
@@ -6852,12 +7039,6 @@ msgstr ""
 #: ../channels/whatsapp/preparation.rst:146
 msgid "We promise it will become easier! 🤓"
 msgstr "Wir versprechen, es wird einfacher! 🤓"
-
-#: ../channels/whatsapp/prerequisites.rst:2
-#: ../settings/security/ssl-certificates.rst:17
-#: ../system/integrations/smime/prerequisites.rst:2
-msgid "Prerequisites"
-msgstr "Voraussetzungen"
 
 #: ../channels/whatsapp/prerequisites.rst:4
 msgid ""
@@ -32412,6 +32593,85 @@ msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
 
 #~ msgid ""
+#~ "Please note that this part of our documentation currently is outdated. We "
+#~ "currently are working on solutions for this topic."
+#~ msgstr ""
+#~ "Bitte beachten Sie, dass dieser Teil der Dokumentation nicht mehr aktuell "
+#~ "ist. Wir arbeiten gerade an einer Lösung für dieses Problem."
+
+#~ msgid ""
+#~ "You can connect Facebook Accounts with Zammad. You need to connect your "
+#~ "Zammad with Facebook first:"
+#~ msgstr ""
+#~ "Sie können Ihre Facebook-Konten mit Zammad verbinden. Sie müssen dazu "
+#~ "zunächst Ihr Zammad mit Facebook verbinden:"
+
+#~ msgid "For this start at: https://developers.facebook.com/apps/"
+#~ msgstr "Gehen Sie dafür bitte auf: https://developers.facebook.com/apps/"
+
+#~ msgid "Click on “Create App ID\" and enter app name"
+#~ msgstr "Klicken Sie auf \"Create App ID\" und vergeben Sie einen Namen"
+
+#~ msgid "**Configure Zammad as Facebook app**"
+#~ msgstr "**Konfigurieren von Zammad als Facebook-App**"
+
+#~ msgid "Go to “Admin -> Channels -> Facebook”"
+#~ msgstr "Gehen Sie zu \"Einstellungen -> Kanäle -> Facebook\""
+
+#~ msgid ""
+#~ "Click on “Connect Facebook App” and enter your “App ID”, “App Secret” and "
+#~ "verify the “Callback URL”."
+#~ msgstr ""
+#~ "Klicken Sie auf \"Facebook App verbinden\" und geben die Daten zu "
+#~ "\"Facebook App ID\" und \"Facebook-App-Zugangsdaten\" ein und prüfen die "
+#~ "\"Callback URL\"."
+
+#~ msgid "Done, your Zammad is configured as Facebook App now."
+#~ msgstr "Ihr Zammad ist nun als Facebook-App konfiguriert."
+
+#~ msgid "**Link your Facebook Page to your Zammad Facebook app**"
+#~ msgstr "**Verbinden Sie Ihre Facebook-Seite mit der Zammad Facebook-App**"
+
+#~ msgid ""
+#~ "Click on “Add Account”, then you will see the authorize app page of "
+#~ "Facebook. Click on “authorize app”."
+#~ msgstr ""
+#~ "Klicken Sie auf \"Add Account\"; anschließend werden Sie auf eine "
+#~ "Autorisierung-Seite von Facebook weitergeleitet. Klicken Sie auf "
+#~ "\"authorize app\"."
+
+#~ msgid ""
+#~ "You will get redirected back to Zammad. Now you need to configure your "
+#~ "search keys, where mentions should get routed."
+#~ msgstr ""
+#~ "Sie werden danach zurück zu Zammad geleitet. Nun müssen Sie "
+#~ "Schlüsselbegriffe definieren, mit denen Sie Erwähnungen steuern können."
+
+#~ msgid ""
+#~ "After you are done, you will get an overview of all linked Facebook "
+#~ "Accounts."
+#~ msgstr ""
+#~ "Anschließend bekommen Sie eine Übersicht über alle verbundenen Facebook-"
+#~ "Accounts angezeigt."
+
+#~ msgid "**Start using your new channel**"
+#~ msgstr "**Nutzen Sie Ihren neuen Kanal**"
+
+#~ msgid ""
+#~ "Start and write a post to your page, short time later you will have a new "
+#~ "ticket in Zammad."
+#~ msgstr ""
+#~ "Wenn Sie einen Post auf Ihrer Seite schreiben, sehen Sie kurze Zeit "
+#~ "später ein neues Ticket in Zammad."
+
+#~ msgid ""
+#~ "Just click on the reply button (as you do it for emails) to send a "
+#~ "comment."
+#~ msgstr ""
+#~ "Um einen Kommentar zu verfassen, klicken Sie auf den Antworten-Button (so "
+#~ "wie beim Antworten per E-Mail)."
+
+#~ msgid ""
 #~ "Google is in the process of upgrading its security policies. To stay up-"
 #~ "to-date, do **not** add your account as an email channel — instead, "
 #~ "create a :doc:`Google channel </channels/google/basic-setup>`."
@@ -32559,9 +32819,6 @@ msgstr ""
 #~ "Um zu starten, öffnen Sie die `Google Entwickler Einstellungen <https://"
 #~ "console.developers.google.com/>`_."
 
-#~ msgid "**Create a new project**"
-#~ msgstr "**Erstellen Sie ein neues Projekt**"
-
 #~ msgid ""
 #~ "For the purposes of this guide, a “project” and an OAuth app are the same "
 #~ "thing. You may name it whatever you wish."
@@ -32654,9 +32911,6 @@ msgstr ""
 #~ msgstr ""
 #~ "*Z.B.* ``https://ihre-domain.com/api/v1/external_credentials/google/"
 #~ "callback``"
-
-#~ msgid "**Connect your Google app in Zammad**"
-#~ msgstr "**Verbinden Ihrer Google-App mit Zammad**"
 
 #~ msgid ""
 #~ "Copy your new OAuth app's credentials (**client ID** and **client "
