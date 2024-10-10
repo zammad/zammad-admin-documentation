@@ -33,16 +33,12 @@ For instance:
 .. code-block:: none
 
    name,shared,domain,domain_assignment,active,members
-   Chrispresso Inc.,true,"",false,true,emma@chrispresso.com
-   "","","","","",jacob@chrispresso.com
-   "","","","","",chris@chrispresso.com
-   Awesome Customer Inc.,true,"",false,true,emily@example.com
-   "","","","","",samuel@example.com
-   "","","","","",anna@example.com
+   Chrispresso Inc.,true,"",false,true,emma@chrispresso.com~~~jacob@chrispresso.com~~~chris@chrispresso.com
+   Awesome Customer Inc.,true,"",false,true,emily@example.com~~~samuel@example.com~~~anna@example.com
    Zammad Foundation,true,"",false,true,nicole.braun@zammad.org
 
-Several *organization members* can be added: Ensure to provide the users
-email address as shown above with empty values.
+Several *organization members* can be added. Separate multiple values for one
+field with ``~~~`` as above.
 
 Step 3: Import Your .csv to Zammad
 ----------------------------------
