@@ -22,17 +22,17 @@ Add a new Client
 Create a new client in your OP with the following settings:
 
 General settings
-* Client type: OpenID Connect
-* Client ID: ``zammad`` (or any other name you prefer)
+ * Client type: OpenID Connect
+ * Client ID: ``zammad`` (or any other name you prefer)
 
 Capability config
-* Client authentication: Off
-* Authentication flow: Standard flow
+ * Client authentication: Off
+ * Authentication flow: Standard flow
 
 Login settings
-* Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/callback``
-* Valid post logout redirect URIs: ``https://your.zammad.domain/*``
-* Web origins: ``+``
+ * Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/callback``
+ * Valid post logout redirect URIs: ``https://your.zammad.domain/*``
+ * Web origins: ``+``
 
 In the **Logout settings** for the newly created client, set the **Backchannel logout URL** to ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and switch on **Backchannel logout session required**.
 
