@@ -169,3 +169,20 @@ To avoid this, you should change the
 `Safe Attachments unknown malware response <https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about?view=o365-worldwide#safe-attachments-policy-settings>`_
 from "Dynamic Delivery" to something else fitting your needs (e.g. "Block") for
 your Office 365 instance.
+
+
+Authentication Unsuccessful
+---------------------------
+
+**Error message:** 535 5.7.3 Authentication unsuccessful
+
+.. note:: This error message can have different reasons. See description below
+  for one of them.
+
+Microsoft allows sign-in and authentication using the primary email address.
+While this works for fetching emails, SMTP authentication may not work in this
+case.
+
+Try to delete the MS account and recreate it using your username.
+In Zammad, manually change the email address to the username. Then you should
+be able to send and receive emails again.
