@@ -21,8 +21,8 @@ steps on Meta/WhatsApp side.
    `here <https://developers.facebook.com/docs/whatsapp/cloud-api>`_
    for further information about the Cloud API.
 
-   There may be additional costs for you from Meta/WhatsApp side. 1000 service
-   conversations per month are free. However, you should have a look at their
+   There may be additional costs for you from Meta/WhatsApp side. Have a look
+   at their
    `pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to
    be safe from surprises.
 
