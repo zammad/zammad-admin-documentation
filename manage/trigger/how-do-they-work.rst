@@ -84,7 +84,7 @@ A trigger can do the following things once its conditions have been met:
 
 * Modify the ticket
    Examples: escalate its priority, close it, reassign it, rename it,
-   add tags, etc.
+   add tags, subscribe and unsubscribe specific/all users, etc.
 
    Date & time attributes (like **Pending till**) can be
    specified in *absolute* or *relative* terms.
