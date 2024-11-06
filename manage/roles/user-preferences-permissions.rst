@@ -15,6 +15,7 @@ User Preferences Permissions
 .. figure:: /images/manage/roles/permissions-user-preferences.png
    :alt: User preferences permissions in the New Role dialog
    :align: center
+   :scale: 60%
 
    User preferences permissions are shown at the bottom of the
    New Role dialog...
@@ -60,7 +61,8 @@ User Preferences Permissions
        | Note: If :ref:`automatic account linking <automatic-account-linking>` fails, this
        | is the only way users can utilize third-party logins.
    * - ``user_preferences.notifications``
-     - Configuration of ticket notifications
+     - | Configuration of ticket
+       | notifications
      - | Agents only receive ticket notifications for
        | :doc:`groups they have “full” access to </manage/groups/access-levels>`.
        | Customers can't receive ticket notifications at all.
@@ -80,4 +82,11 @@ User Preferences Permissions
    * - ``user_preferences.password``
      - Change account password
      - | Make sure to **revoke this permission** for all your users
-       | when using a third-party identity server (like LDAP).
+       | when using a third-party identity server (like LDAP) as
+       | your only allowed authentication method.
+   * - ``user_preferences.two_factor_authentication``
+     - | Allow users to setup and configure
+       | their two factor authentication
+     - | :doc:`Two factor authentication </settings/security/two-factor>` has to be enabled
+       | that users can setup and configure it.
+
