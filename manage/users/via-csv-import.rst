@@ -37,9 +37,12 @@ For instance:
 
 .. code-block:: none
 
-   login,firstname,lastname,email,web,active
-   jdoe,"John","Doe",jdoe@example.com,"https://zammad.com",true
-   mmore,"Madeline","Moore",mmore@example.net,"",false
+   login,firstname,lastname,email,web,active,roles
+   jdoe,John,Doe,jdoe@example.com,https://zammad.com,true,admin~~~agent
+   mmore,Madeline,Moore,mmore@example.net,"",false,customer
+
+If you have more than one value for a field, separate them with ``~~~`` as
+above.
 
 Step 3: Import Your .csv to Zammad
 ----------------------------------

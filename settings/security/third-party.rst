@@ -95,3 +95,16 @@ Automatic Account Linking Notification
 .. figure:: /images/settings/security/automatic-account-link-notification.png
       :alt: Screenshot showing the "automatic account linking notification"
             setting
+
+No User Creation on Logon
+-------------------------
+
+By default, Zammad will create a new user account if the user logs in via a
+third-party application and the account doesn't exist yet.
+
+If you want to prevent Zammad from creating new accounts on logon, you can
+disable this feature by setting ``No user creation on logon`` to ``yes``.
+
+.. figure:: /images/settings/security/login_no_user_creation.png
+      :alt: Screenshot showing the "no user creation on logon" setting
+

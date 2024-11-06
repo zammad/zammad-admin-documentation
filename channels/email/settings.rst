@@ -22,14 +22,35 @@ Notification Sender: Default value ``Notification Master <noreply@#{config.fqdn}
    This address is relevant for agent notifications and password reset mails
    (also affects customers).
 
-Additional follow-up detection
-   In some situations the normal follow-up detection is not enough.
-   This might be due to missing references in the subject
-   (the ticket hook and number). These options can help to recognize follow-ups
-   to existing tickets.
+Additional follow-up detection: Default value ``Subject & References``
+   Adjust how Zammad checks if an incoming email is a follow-up or not.
+   If you disable all checks, Zammad only checks if a matching ticket hook &
+   number is present in the subject.
 
-   Please note that searching in attachment and body might lead to *false
-   follow-up detection*.
+   Subject & References
+      Checks subject and message IDs of emails and searches for initial ticket
+      articles with the same subject and message ID. When both are matching,
+      it is considered as a follow-up.
+
+   References
+      Additionally checks if a message ID from email matches an existing
+      article.
+
+   Attachment
+      Additionally checks attachments of emails. Useful if you often get
+      emails forwarded as attachments and want to have them in existing tickets,
+      if there is a reference included in an attached email.
+
+   Body
+      Additionally checks the body of emails. If there is a ticket
+      identifier (ticket hook & number) in the body, it is considered as a
+      follow-up. Useful if you want to add emails to existing tickets which
+      are completely independent but talking about existing tickets
+      including such a ticket reference.
+
+   Please note that activating additional checks can lead to false detection.
+   In production environments, you should change this setting very
+   carefully and monitor the behavior afterwards.
 
 Maximum Email Size: Default value ``10 MB``
    This one is pretty obvious: It defines the maximum allowed size of an email

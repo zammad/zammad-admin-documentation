@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 14:23+0200\n"
-"PO-Revision-Date: 2024-10-24 07:00+0000\n"
+"POT-Creation-Date: 2024-10-31 12:20+0100\n"
+"PO-Revision-Date: 2024-11-05 03:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
-"documentations/admin-documentation-latest/de/>\n"
+"documentations/admin-documentation-pre-release/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,8 +105,8 @@ msgstr ""
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: ../channels/chat.rst:31 ../misc/object-conditions/basics.rst:419
-#: ../system/monitoring.rst:9
+#: ../channels/chat.rst:31 ../manage/checklist.rst:5
+#: ../misc/object-conditions/basics.rst:419 ../system/monitoring.rst:9
 msgid "General"
 msgstr "Allgemein"
 
@@ -209,7 +209,8 @@ msgstr ""
 "Wenn Sie die jQuery-Version noch nicht auf Ihrer Website verwenden, sollten "
 "Sie sie zunächst wie folgt einbinden:"
 
-#: ../channels/chat.rst:85 ../system/integrations/smime/index.rst:41
+#: ../channels/chat.rst:85 ../manage/checklist.rst:16
+#: ../system/integrations/smime/index.rst:41
 msgid "Usage"
 msgstr "Nutzung"
 
@@ -2266,7 +2267,7 @@ msgstr "Extra Optionen für Nutzer einer selbst gehosteten Instanz"
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr "Wenn Sie zu cool für POP3/IMAP/SMTP sind..."
 
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:55
+#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:56
 #: ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
@@ -2326,34 +2327,92 @@ msgstr ""
 "Diese E-Mail-Adresse wird für die Benachrichtigung von Agenten und zum "
 "Zurücksetzen des Passworts verwendet (betrifft hier ggf. auch Kunden)."
 
-#: ../channels/email/settings.rst:32
-msgid "Additional follow-up detection"
-msgstr "Erweiterte Nachfrage-Erkennung"
+#: ../channels/email/settings.rst:53
+msgid "Additional follow-up detection: Default value ``Subject & References``"
+msgstr "Erweiterte Nachfrage-Erkennung: Standardwert ``Betreff & Referenzen``"
 
 #: ../channels/email/settings.rst:26
 msgid ""
-"In some situations the normal follow-up detection is not enough. This might "
-"be due to missing references in the subject (the ticket hook and number). "
-"These options can help to recognize follow-ups to existing tickets."
+"Adjust how Zammad checks if an incoming email is a follow-up or not. If you "
+"disable all checks, Zammad only checks if a matching ticket hook & number is "
+"present in the subject."
 msgstr ""
-"In manchen Szenarien ist die normale Nachfrage-Erkennung nicht ausreichend. "
-"Das kann beispielsweise sein, wenn im Betreff die Ticket-Referenz (Ticket-"
-"Hook und Nummer) fehlt. Das Einschalten dieser Option hilft, auch in solchen "
-"Fällen eine Zuordnung von E-Mails zu bestehenden Tickets zu bekommen."
+"Stellen Sie ein, wie Zammad prüft, ob eine eingehende E-Mail eine Nachfrage "
+"ist oder nicht. Wenn Sie alle Prüfungen deaktivieren, prüft Zammad nur, ob "
+"ein passender Ticket-Hook und eine Ticket-Nummer im Betreff vorhanden sind."
+
+#: ../channels/email/settings.rst:33
+msgid "Subject & References"
+msgstr "Betreff & Referenzen"
 
 #: ../channels/email/settings.rst:31
 msgid ""
-"Please note that searching in attachment and body might lead to *false "
-"follow-up detection*."
+"Checks subject and message IDs of emails and searches for initial ticket "
+"articles with the same subject and message ID. When both are matching, it is "
+"considered as a follow-up."
 msgstr ""
-"Bitte beachten Sie, dass die Suche im Anhang und im Text zu einer *falschen "
-"Erkennung von Nachfragen* führen kann."
+"Prüft die Betreff- und Nachrichten-IDs von E-Mails und sucht nach ersten "
+"Ticket-Artikeln mit demselben Betreff und derselben Nachrichten-ID. Wenn "
+"beide übereinstimmen, wird dies als Nachfrage betrachtet."
 
 #: ../channels/email/settings.rst:37
+msgid "References"
+msgstr "Referenzen"
+
+#: ../channels/email/settings.rst:36
+msgid ""
+"Additionally checks if a message ID from email matches an existing article."
+msgstr ""
+"Prüft zusätzlich, ob eine ID aus einer E-Mail mit einem vorhandenen Artikel "
+"übereinstimmt."
+
+#: ../channels/email/settings.rst:42
+msgid "Attachment"
+msgstr "Anhang"
+
+#: ../channels/email/settings.rst:40
+msgid ""
+"Additionally checks attachments of emails. Useful if you often get emails "
+"forwarded as attachments and want to have them in existing tickets, if there "
+"is a reference included in an attached email."
+msgstr ""
+"Prüft zusätzlich Anhänge von E-Mails. Nützlich, wenn Sie häufig E-Mails als "
+"Anhang weitergeleitet bekommen und diese in bestehenden Tickets haben "
+"möchten, sofern eine Referenz in einer angehängten E-Mail enthalten ist."
+
+#: ../channels/email/settings.rst:49
+msgid "Body"
+msgstr "Body"
+
+#: ../channels/email/settings.rst:45
+msgid ""
+"Additionally checks the body of emails. If there is a ticket identifier "
+"(ticket hook & number) in the body, it is considered as a follow-up. Useful "
+"if you want to add emails to existing tickets which are completely "
+"independent but talking about existing tickets including such a ticket "
+"reference."
+msgstr ""
+"Zusätzlich wird der Body von E-Mails überprüft. Wenn der Body eine Ticket-"
+"Kennung (Ticket-Hook und -Nummer) enthält, wird die E-Mail als Nachfrage "
+"betrachtet. Nützlich, wenn Sie E-Mails zu bestehenden Tickets hinzufügen "
+"möchten, die völlig unabhängig sind, sich aber auf bestehende Tickets "
+"beziehen und eine solche Ticket-Referenz enthalten."
+
+#: ../channels/email/settings.rst:51
+msgid ""
+"Please note that activating additional checks can lead to false detection. "
+"In production environments, you should change this setting very carefully "
+"and monitor the behavior afterwards."
+msgstr ""
+"Bitte beachten Sie, dass die Aktivierung zusätzlicher Prüfungen zu einer "
+"falschen Erkennung führen kann. In Produktionsumgebungen sollten Sie diese "
+"Einstellung sehr vorsichtig ändern und das Verhalten anschließend überwachen."
+
+#: ../channels/email/settings.rst:58
 msgid "Maximum Email Size: Default value ``10 MB``"
 msgstr "Maximale E-Mail-Größe: Standardwert ``10 MB``"
 
-#: ../channels/email/settings.rst:35
+#: ../channels/email/settings.rst:56
 msgid ""
 "This one is pretty obvious: It defines the maximum allowed size of an email "
 "Zammad will fetch. Zammad will not fetch emails that are bigger than this "
@@ -2363,17 +2422,17 @@ msgstr ""
 "abrufen wird. Zammad wird keine E-Mails abrufen, die größer als der "
 "angegebene Wert sind."
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Send postmaster mail if mail too large: Default value ``yes (enabled)``"
 msgstr ""
 "Senden einer Postmaster-E-Mail, wenn die E-Mail zu groß ist: Standardwert "
 "``ja``"
 
-#: ../channels/email/settings.rst:47 ../channels/email/settings.rst:76
+#: ../channels/email/settings.rst:68 ../channels/email/settings.rst:97
 msgid "Option set to ``yes``"
 msgstr "Option ist auf ``ja`` gesetzt"
 
-#: ../channels/email/settings.rst:41
+#: ../channels/email/settings.rst:62
 msgid ""
 "This setting will cause Zammad to automatically reply to mails that exceed "
 "the above mail size limit with a postmaster style mail. This will help your "
@@ -2383,17 +2442,17 @@ msgstr ""
 "verschicken, sofern E-Mails die Größenbegrenzung überschreiten. Das gibt den "
 "Kunden die Möglichkeit, die E-Mail erneut zu senden (mit reduzierter Größe)."
 
-#: ../channels/email/settings.rst:46
+#: ../channels/email/settings.rst:67
 msgid ""
 "Nevertheless, Zammad will remove the mail from the mailbox (if enabled)."
 msgstr ""
 "Zammad entfernt die E-Mails trotzdem aus dem Postfach (falls aktiviert)."
 
-#: ../channels/email/settings.rst:55 ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:76 ../channels/email/settings.rst:100
 msgid "Option set to ``no``"
 msgstr "Option ist auf ``nein`` gestellt"
 
-#: ../channels/email/settings.rst:50
+#: ../channels/email/settings.rst:71
 msgid ""
 "If the option is set to no, Zammad will not reply to mails that are too big. "
 "Your customer will **not notice** that the mail was too large! Instead, "
@@ -2405,16 +2464,16 @@ msgstr ""
 "bekommen **keine Benachrichtigung**, dass E-Mails zu groß sind. Zammad wird "
 "die Administratoren jedoch über die Monitoring-Funktion benachrichtigen."
 
-#: ../channels/email/settings.rst:55
+#: ../channels/email/settings.rst:76
 msgid "Learn more about :doc:`/system/monitoring`."
 msgstr "Erfahren Sie mehr über :doc:`/system/monitoring`."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 msgid "Sender based on Reply-To header: Default value ``not set (-)``"
 msgstr ""
 "Absender basierend auf Reply-To-Header: Standardwert ``nicht gesetzt (-)``"
 
-#: ../channels/email/settings.rst:58
+#: ../channels/email/settings.rst:79
 msgid ""
 "This setting decides how Zammad should recognize its customers from emails "
 "that contain a ``Reply-To`` header. This comes in useful if you're working "
@@ -2425,12 +2484,12 @@ msgstr ""
 "kann z.B. nützlich sein, wenn Sie mit einem Formular arbeiten, das ``Reply-"
 "To`` Header übergibt."
 
-#: ../channels/email/settings.rst:64
+#: ../channels/email/settings.rst:85
 msgid "Option set to ``Take reply-to header as sender/from of email.``"
 msgstr ""
 "Option gesetzt auf ``Nutze \"Reply-To\"-Feld als Absender einer E-Mail.``"
 
-#: ../channels/email/settings.rst:63
+#: ../channels/email/settings.rst:84
 msgid ""
 "This setting will overwrite the initial ``FROM`` to the value used in "
 "``Reply-To`` completely."
@@ -2438,7 +2497,7 @@ msgstr ""
 "Diese Einstellung überschreibt den ``Von``-Wert mit dem , der in ``Reply-"
 "To`` steht."
 
-#: ../channels/email/settings.rst:69
+#: ../channels/email/settings.rst:90
 msgid ""
 "Option set to ``-`` or ``Take Reply-To header as sender/from of email and "
 "use the real name of origin from.``"
@@ -2446,7 +2505,7 @@ msgstr ""
 "Option gesetzt auf ``-`` oder ``Nutze \"Reply-To\"-Feld als Absender einer E-"
 "Mail, aber den angezeigten Namen des \"From\"-Feldes.``"
 
-#: ../channels/email/settings.rst:67
+#: ../channels/email/settings.rst:88
 msgid ""
 "This setting will partially overwrite the initial ``FROM``. It uses the mail "
 "address from the ``Reply-To`` header and uses the given name of the ``FROM`` "
@@ -2456,20 +2515,20 @@ msgstr ""
 "Mail-Adresse des ``Reply-To``-Feldes in Kombination mit den Namen aus dem "
 "``Von``-Feld verwendet."
 
-#: ../channels/email/settings.rst:85
+#: ../channels/email/settings.rst:106
 msgid ""
 "Customer selection based on sender and receiver list: Default value ``yes``"
 msgstr ""
 "Kundenauswahl basierend auf Sender- und Empfängerliste. Standardwert: ``ja``"
 
-#: ../channels/email/settings.rst:72
+#: ../channels/email/settings.rst:93
 msgid ""
 "This option decides how Zammad should react if an agent sends a email to it."
 msgstr ""
 "Diese Einstellung legt fest, wie mit E-Mails umgegangen wird, die von "
 "Agenten an Zammad geschickt werden."
 
-#: ../channels/email/settings.rst:75
+#: ../channels/email/settings.rst:96
 msgid ""
 "The first user / email address from the recipient list will be used as the "
 "ticket customer."
@@ -2477,11 +2536,11 @@ msgstr ""
 "Wenn der Sender ein Agent ist, wird der erste Benutzer in der Empfängerliste "
 "als Kunde eingestellt."
 
-#: ../channels/email/settings.rst:79
+#: ../channels/email/settings.rst:100
 msgid "The agent will be set as ticket customer."
 msgstr "Der Agent wird als Kunde gesetzt."
 
-#: ../channels/email/settings.rst:83
+#: ../channels/email/settings.rst:104
 msgid ""
 "Currently agents can't be customers within the UI. While email communication "
 "works, agents can't see their own tickets (as a customer) if they don't have "
@@ -2492,11 +2551,11 @@ msgstr ""
 "dann Ihr Ticket (als Kunde) sehen, auch wenn Sie keine Berechtigung für die "
 "Gruppe haben."
 
-#: ../channels/email/settings.rst:95
+#: ../channels/email/settings.rst:116
 msgid "Block Notifications"
 msgstr "Benachrichtigungen stoppen"
 
-#: ../channels/email/settings.rst:88
+#: ../channels/email/settings.rst:109
 msgid ""
 "With the regex that can be defined here, you can ensure not to send any "
 "notifications to specific systems. By default this especially affects "
@@ -2506,7 +2565,7 @@ msgstr ""
 "Benachrichtigungen geschickt werden. Standardmäßig sind hier bereits "
 "typische Adressen angelegt, die sowieso keine E-Mails empfangen können."
 
-#: ../channels/email/settings.rst:92
+#: ../channels/email/settings.rst:113
 msgid ""
 "The default value is: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply."
 "+?|no-reply|no-reply.+?)@.+?``"
@@ -2514,7 +2573,7 @@ msgstr ""
 "Standardwert ist: ``(mailer-daemon|postmaster|abuse|root|noreply|noreply.+?|"
 "no-reply|no-reply.+?)@.+?``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 msgid ""
 "Sender Format: Default value ``Agent Name + FromSeparator + System Address "
 "Display Name``"
@@ -2522,7 +2581,7 @@ msgstr ""
 "Absender-Format. Standardwert: ``Name des Agenten + Von-Trenner + "
 "Anzeigename der Systemadresse``"
 
-#: ../channels/email/settings.rst:98
+#: ../channels/email/settings.rst:119
 msgid ""
 "This configures the display name used in the ``FROM`` header of mails Zammad "
 "sends."
@@ -2530,7 +2589,7 @@ msgstr ""
 "Diese Einstellung definiert den Anzeigename, der im ``Von``-Header von "
 "Zammad in ausgehenden E-Mails verwendet wird."
 
-#: ../channels/email/settings.rst:101
+#: ../channels/email/settings.rst:122
 msgid ""
 "This does not affect notification mails (to agents) and password reset "
 "mails. Emails that are not sent by agents (e.g. trigger-based notifications) "
@@ -2541,14 +2600,14 @@ msgstr ""
 "werden (z.B. Trigger-basierte Benachrichtigungen), verwenden immer den "
 "``Anzeigename System-Adresse``."
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 msgid ""
 "Option set to ``Agent Name + FromSeparator + System Address Display Name``"
 msgstr ""
 "Einstellung auf ``Name des Agenten + Von-Trenner + Anzeigename der "
 "Systemadresse`` gesetzt"
 
-#: ../channels/email/settings.rst:107
+#: ../channels/email/settings.rst:128
 msgid ""
 "This will cause Zammad to set the ``FROM`` header to agent name and the "
 "channel's display name, divided by a separator (configured below)."
@@ -2556,15 +2615,15 @@ msgstr ""
 "Zammad setzt damit den Namen des Agenten und den System-Namen in den ``Von`` "
 "Header, getrennt durch ein Trennzeichen (siehe folgende Konfiguration)."
 
-#: ../channels/email/settings.rst:110
+#: ../channels/email/settings.rst:131
 msgid "Example: ``Christopher Miller via Chrispresso Inc.``."
 msgstr "Beispiel: ``Christopher Miller via Chrispresso Inc.``."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Option set to ``System Address Display Name``"
 msgstr "Einstellung auf ``Anzeigename der Systemadresse``"
 
-#: ../channels/email/settings.rst:113
+#: ../channels/email/settings.rst:134
 msgid ""
 "This will cause Zammad to always use the display name of the used channel in "
 "the ``FROM`` header."
@@ -2572,19 +2631,19 @@ msgstr ""
 "Dadurch wird Zammad immer den Namen des E-Mail-Kanals der jeweiligen Gruppe "
 "in den ``Von`` Header eintragen."
 
-#: ../channels/email/settings.rst:116
+#: ../channels/email/settings.rst:137
 msgid "Example: ``Chrispresso Inc.``"
 msgstr "Beispiel: ``Chrispresso Inc.``"
 
-#: ../channels/email/settings.rst:122
+#: ../channels/email/settings.rst:143
 msgid "Option set to ``Agent Name``"
 msgstr "Einstellung auf ``Agenten-Name`` gesetzt"
 
-#: ../channels/email/settings.rst:119
+#: ../channels/email/settings.rst:140
 msgid "Zammad will use the agent's name which is very personal."
 msgstr "Zammad verwendet dadurch den Agentenname, was persönlicher ist."
 
-#: ../channels/email/settings.rst:121
+#: ../channels/email/settings.rst:142
 msgid ""
 "If you want to remove the ticket reference from the subject, you can learn "
 "more in :doc:`Settings > Ticket </settings/ticket>`."
@@ -2592,11 +2651,11 @@ msgstr ""
 "Wenn Sie die Ticket-Referenz aus dem Betreff entfernen möchten, können Sie "
 "in :doc:`Einstellungen > Ticket </settings/ticket>` mehr erfahren."
 
-#: ../channels/email/settings.rst:126
+#: ../channels/email/settings.rst:147
 msgid "Sender Format Separator: Default value ``via``"
 msgstr "Sender Format Trenner. Standardwert: ``via``"
 
-#: ../channels/email/settings.rst:125
+#: ../channels/email/settings.rst:146
 msgid ""
 "This can be a string you can freely choose. It divides the agent's name and "
 "the display name of the channel whenever needed."
@@ -2604,11 +2663,11 @@ msgstr ""
 "Das kann ein Text Ihrer Wahl sein. Dieser trennt den Namen des Agenten und "
 "den Anzeigenamen des Kanals einer Gruppe."
 
-#: ../channels/email/settings.rst:132
+#: ../channels/email/settings.rst:153
 msgid "Ticket Subject Forward: Default value ``FWD``"
 msgstr "Ticket Betreff bei Weiterleitung. Standardwert: ``FWD``"
 
-#: ../channels/email/settings.rst:129
+#: ../channels/email/settings.rst:150
 msgid ""
 "The above string will be used on the subject if you forward an email from "
 "Zammad."
@@ -2616,15 +2675,15 @@ msgstr ""
 "Die oben genannte Zeichenkette wird beim Weiterleiten einer E-Mail aus "
 "Zammad verwendet."
 
-#: ../channels/email/settings.rst:132 ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:153 ../channels/email/settings.rst:159
 msgid "``:`` will be automatically appended to the above string."
 msgstr "``:`` wird der Zeichenkette automatisch angehängt."
 
-#: ../channels/email/settings.rst:138
+#: ../channels/email/settings.rst:159
 msgid "Ticket Subject Reply: Default value ``RE``"
 msgstr "Ticket Betreff bei Antwort. Standardwert: ``RE``"
 
-#: ../channels/email/settings.rst:135
+#: ../channels/email/settings.rst:156
 msgid ""
 "The above string will be used on the subject if you reply to a mail from "
 "Zammad."
@@ -2632,11 +2691,11 @@ msgstr ""
 "Die oben genannte Zeichenkette wird beim Beantworten einer E-Mail aus Zammad "
 "verwendet."
 
-#: ../channels/email/settings.rst:150
+#: ../channels/email/settings.rst:171
 msgid "Ticket Subject Size: Default value ``110``"
 msgstr "Ticket Betreff Größe. Standardwert: ``110``"
 
-#: ../channels/email/settings.rst:141
+#: ../channels/email/settings.rst:162
 msgid ""
 "This setting enforces a maximum length for subjects when replying. If the "
 "subject you're using for your reply is too long, Zammad will automatically "
@@ -2647,7 +2706,7 @@ msgstr ""
 "Antworten. Falls der Betreff zu lang ist, wird Zammad diesen automatisch "
 "abschneiden und ``[...]`` einfügen, um die Kürzung anzuzeigen."
 
-#: ../channels/email/settings.rst:146
+#: ../channels/email/settings.rst:167
 msgid ""
 "This does *not* limit ticket titles within the UI, just the subjects when "
 "replying to an email."
@@ -2655,15 +2714,15 @@ msgstr ""
 "Das betrifft *nicht* den angezeigten Titel des Tickets in Zammad, sondern "
 "nur den Betreff in E-Mails."
 
-#: ../channels/email/settings.rst:149
+#: ../channels/email/settings.rst:170
 msgid "Example: ``RE: Test somew[...] [Ticket#123456]``"
 msgstr "Beispiel: ``RE: Test irgendw[...] [Ticket#123456]``"
 
-#: ../channels/email/settings.rst:153
+#: ../channels/email/settings.rst:174
 msgid "Enhanced Settings"
 msgstr "Erweiterte Einstellungen"
 
-#: ../channels/email/settings.rst:155
+#: ../channels/email/settings.rst:176
 msgid ""
 "Some less relevant settings can be changed via rails console if needed. As "
 "an example, Zammad allows you to send all outgoing communication to a BCC "
@@ -3550,8 +3609,10 @@ msgid "Default value"
 msgstr "Standardwert"
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:47
-#: ../misc/object-conditions/basics.rst:64 ../system/objects/permissions.rst:39
-#: ../system/subscription/billing.rst:53 ../system/variables.rst:100
+#: ../misc/object-conditions/basics.rst:64
+#: ../system/core-workflows/condition-operators.rst:21
+#: ../system/objects/permissions.rst:39 ../system/subscription/billing.rst:53
+#: ../system/variables.rst:100
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -7375,20 +7436,20 @@ msgstr ""
 msgid "Manage"
 msgstr "Verwalten"
 
-#: ../index.rst:36
+#: ../index.rst:37
 msgid "Channels"
 msgstr "Kanäle"
 
-#: ../index.rst:66
+#: ../index.rst:67
 msgid "API (System-Documentation)"
 msgstr "API (System-Dokumentation)"
 
-#: ../index.rst:66 ../misc/object-conditions/basics.rst:156
+#: ../index.rst:67 ../misc/object-conditions/basics.rst:156
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr "System"
 
-#: ../index.rst:86
+#: ../index.rst:87
 msgid "Misc"
 msgstr "Verschiedenes"
 
@@ -7511,6 +7572,129 @@ msgstr ""
 "können Sie einen iCalendar abonnieren, der automatisch alle Feiertage von "
 "Google lädt (einmal täglich aktualisiert) ... und Sie können eine Notiz "
 "hinzufügen."
+
+#: ../manage/checklist.rst:2
+msgid "Checklist"
+msgstr "Checkliste"
+
+#: ../manage/checklist.rst:7
+msgid ""
+"The checklist feature allows agents to keep track of the tasks to be "
+"completed. It is activated by default and shows up in another tab in the "
+"right sidebar in the ticket view (see :user-docs:`here </extras/checklist."
+"html>` what it looks like from agent's perspective)."
+msgstr ""
+"Die Checkliste ermöglicht es Agenten, den Überblick über die zu erledigenden "
+"Aufgaben zu behalten. Das Feature ist standardmäßig aktiviert und wird in "
+"einem weiteren Tab in der rechten Seitenleiste der Ticket-Ansicht angezeigt "
+"(siehe :user-docs:`hier </extras/checklist.html>`, wie es aus der Sicht von "
+"Agenten aussieht)."
+
+#: ../manage/checklist.rst:None
+msgid "Screenshot showing checklist feature in admin area."
+msgstr "Screenshot zeigt Checklistenfunktion im Adminbereich."
+
+#: ../manage/checklist.rst:18
+msgid ""
+"To activate/deactivate the feature, simply switch the toggle labeled with "
+"\"Enable Checklists\" at the top of the page."
+msgstr ""
+"Um die Funktion zu aktivieren/deaktivieren, klicken Sie einfach auf den "
+"Schalter mit der Aufschrift \"Checklisten aktivieren\" oben auf der Seite."
+
+#: ../manage/checklist.rst:21
+msgid ""
+"You can optionally create one or more templates with predefined checklist "
+"items. For this, just click on the \"New Checklist Template\" button and "
+"define the checklist name and items. After submitting the form, the template "
+"can be used in tickets."
+msgstr ""
+"Optional können Sie eine oder mehrere Vorlagen mit vordefinierten "
+"Checklistenelementen erstellen. Klicken Sie dazu einfach auf die "
+"Schaltfläche \"Neue Checklistenvorlage\" und legen Sie den Namen und die "
+"Elemente der Checkliste fest. Nach dem Absenden des Formulars kann die "
+"Vorlage in Tickets verwendet werden."
+
+#: ../manage/checklist.rst:26
+msgid ""
+"You can clone or delete a template by clicking on the ︙ button and "
+"selecting the corresponding action."
+msgstr ""
+"Sie können eine Vorlage klonen oder löschen, indem Sie auf die Schaltfläche "
+"︙ klicken und die entsprechende Aktion auswählen."
+
+#: ../manage/checklist.rst:29
+msgid ""
+"To edit the template, simply click on the name of the template. This opens a "
+"dialog where you can edit the checklist and the items (add, rename, reorder, "
+"delete them) and set the entire template to active/inactive."
+msgstr ""
+"Um die Vorlage zu bearbeiten, klicken Sie einfach auf den Namen der Vorlage. "
+"Daraufhin öffnet sich ein Dialog, in dem Sie die Checkliste und die Elemente "
+"bearbeiten (hinzufügen, umbenennen, neu anordnen, löschen) und die gesamte "
+"Vorlage auf aktiv/inaktiv setzen können."
+
+#: ../manage/checklist.rst:None
+msgid "Screenshot showing the checklist template edit dialog."
+msgstr "Screenshot zeigt Bearbeitungsdialog für Checklistenvorlagen."
+
+#: ../manage/checklist.rst:39
+msgid "Remarks"
+msgstr "Anmerkungen"
+
+#: ../manage/checklist.rst:41
+msgid "It is only possible to add one checklist per ticket."
+msgstr "Es kann nur eine Checkliste pro Ticket hinzuzugefügt werden."
+
+#: ../manage/checklist.rst:42
+msgid ""
+"There is no specific permission for the checklist feature. You can turn it "
+"off or on and provide optionally usable checklist templates."
+msgstr ""
+"Es gibt keine eigene Berechtigung für die Checklistenfunktion. Sie können "
+"sie aus- oder einschalten und optional verwendbare Checklistenvorlagen "
+"bereitstellen."
+
+#: ../manage/checklist.rst:44
+msgid ""
+"If the agent has access to the ticket, they will also have access to its "
+"checklist."
+msgstr ""
+"Wenn ein Agent Zugriff auf das Ticket hat, hat er auch Zugriff auf dessen "
+"Checkliste."
+
+#: ../manage/checklist.rst:46
+msgid ""
+"If an agent only has reading permissions for this ticket, the checklist will "
+"be displayed in read-only mode."
+msgstr ""
+"Wenn ein Agent nur Leserechte für dieses Ticket hat, wird die Checkliste nur "
+"lesbar angezeigt."
+
+#: ../manage/checklist.rst:48
+msgid "Customers have no access to the checklists at all and do not see them."
+msgstr ""
+"Kunden haben keinen Zugriff auf die Checklisten und können sie nicht sehen."
+
+#: ../manage/checklist.rst:49
+msgid ""
+"An agent can always overwrite and adjust the checklist, it can even be "
+"deleted from the ticket. This applies also to checklists which are added in "
+"a ticket based on a checklist template."
+msgstr ""
+"Ein Agent kann die Checkliste jederzeit überschreiben und anpassen, sie kann "
+"sogar aus dem Ticket gelöscht werden. Dies gilt auch für Checklisten, die "
+"auf Basis einer Checklistenvorlage in ein Ticket eingefügt werden."
+
+#: ../manage/checklist.rst:52
+msgid ""
+"The checklist feature is currently a standalone feature. That means you "
+"can't access the items or state of the checkboxes from other places in "
+"Zammad like triggers or workflows."
+msgstr ""
+"Die Checklistenfunktion ist derzeit eine eigenständige Funktion. Das heißt, "
+"Sie können nicht von anderen Stellen in Zammad wie Triggern oder Workflows "
+"auf die Elemente oder den Status der Checkboxen zugreifen."
 
 #: ../manage/groups/access-levels.rst:2 ../manage/users/index.rst:168
 msgid "Group Permissions"
@@ -7787,7 +7971,6 @@ msgid "Learn more"
 msgstr "Erfahren Sie mehr"
 
 #: ../manage/groups/index.rst:2 ../manage/macros/how-do-they-work.rst:0
-#: ../system/core-workflows/learn-by-example.rst:14
 msgid "Groups"
 msgstr "Gruppen"
 
@@ -9394,21 +9577,20 @@ msgstr ""
 msgid "For instance:"
 msgstr "Zum Beispiel:"
 
-#: ../manage/organizations/via-csv-import.rst:44
+#: ../manage/organizations/via-csv-import.rst:40
 msgid ""
-"Several *organization members* can be added: Ensure to provide the users "
-"email address as shown above with empty values."
+"Several *organization members* can be added. Separate multiple values for "
+"one field with ``~~~`` as above."
 msgstr ""
-"Es können *mehrere Organisationsmitglieder* hinzugefügt werden: Stellen Sie "
-"sicher, dass Sie die E-Mail-Adresse des Benutzers wie oben gezeigt mit "
-"ansonsten leeren Werten angeben."
+"Es können *mehrere Organisationsmitglieder* hinzugefügt werden. Trennen Sie "
+"mehrere Werte für ein Feld mit ``~~~`` wie oben angegeben."
 
-#: ../manage/organizations/via-csv-import.rst:48
-#: ../manage/users/via-csv-import.rst:45
+#: ../manage/organizations/via-csv-import.rst:44
+#: ../manage/users/via-csv-import.rst:48
 msgid "Step 3: Import Your .csv to Zammad"
 msgstr "Schritt 3: Importieren Sie Ihre CSV-Datei in Zammad"
 
-#: ../manage/organizations/via-csv-import.rst:50
+#: ../manage/organizations/via-csv-import.rst:46
 msgid ""
 "Once your raw organization data has been submitted, Zammad will perform a "
 "test run to compute the number of affected records:"
@@ -9416,24 +9598,24 @@ msgstr ""
 "Sobald die Daten übermittelt wurden, führt Zammad einen Testlauf durch, um "
 "die Anzahl der betroffenen Datensätze zu ermitteln:"
 
-#: ../manage/organizations/via-csv-import.rst:58
-#: ../manage/users/via-csv-import.rst:55
+#: ../manage/organizations/via-csv-import.rst:54
+#: ../manage/users/via-csv-import.rst:58
 msgid "CSV import test run and confirmation dialog"
 msgstr "CSV-Import-Testlauf und Bestätigungsdialog"
 
-#: ../manage/organizations/via-csv-import.rst:58
-#: ../manage/users/via-csv-import.rst:55
+#: ../manage/organizations/via-csv-import.rst:54
+#: ../manage/users/via-csv-import.rst:58
 msgid "CSV import always begins with a preview / test run."
 msgstr "Der CSV-Import beginnt immer mit einer Vorschau bzw. einem Testlauf."
 
-#: ../manage/organizations/via-csv-import.rst:60
-#: ../manage/users/via-csv-import.rst:57
+#: ../manage/organizations/via-csv-import.rst:56
+#: ../manage/users/via-csv-import.rst:60
 msgid "🤔 **How does it know when to create new records and when to update?**"
 msgstr ""
 "🤔 **Woher weiß Zammad, ob neue Datensätze erstellt oder ob Datensätze "
 "aktualisiert werden müssen?**"
 
-#: ../manage/organizations/via-csv-import.rst:62
+#: ../manage/organizations/via-csv-import.rst:58
 msgid ""
 "Records are updated when the imported data contains a ``name`` that matches "
 "an existing organization entry."
@@ -9442,7 +9624,7 @@ msgstr ""
 "Eintrag enthalten, der mit einem bereits vorhandenen Organisationsnamen "
 "übereinstimmt."
 
-#: ../manage/organizations/via-csv-import.rst:65
+#: ../manage/organizations/via-csv-import.rst:61
 msgid ""
 "Click **Yes, start real import** to proceed. (If you're importing a lot of "
 "records, be patient—it may take a minute.)"
@@ -9451,8 +9633,8 @@ msgstr ""
 "Sie viele Datensätze importieren, haben Sie etwas Geduld - es kann durchaus "
 "eine Minute dauern.)"
 
-#: ../manage/organizations/via-csv-import.rst:68
-#: ../manage/users/via-csv-import.rst:65
+#: ../manage/organizations/via-csv-import.rst:64
+#: ../manage/users/via-csv-import.rst:68
 msgid "That's it! 🎉🎉🎉"
 msgstr "Das war's! 🎉🎉🎉"
 
@@ -9721,7 +9903,7 @@ msgstr ""
 "Schauen Sie sich :doc:`/misc/object-conditions/index` an, um weitere "
 "Informationen zu erhalten! 🎉"
 
-#: ../manage/overviews.rst:91 ../system/core-workflows/learn-by-example.rst:20
+#: ../manage/overviews.rst:91
 msgid "Attributes"
 msgstr "Attribute"
 
@@ -12198,17 +12380,17 @@ msgid "**Groups**"
 msgstr "**Gruppen**"
 
 #: ../manage/slas/learn-by-example.rst:18
-#: ../system/core-workflows/learn-by-example.rst:13
+#: ../system/core-workflows/learn-by-example.rst:17
 msgid "Sales"
 msgstr "Sales"
 
 #: ../manage/slas/learn-by-example.rst:19
-#: ../system/core-workflows/learn-by-example.rst:14
+#: ../system/core-workflows/learn-by-example.rst:18
 msgid "Support"
 msgstr "Support"
 
 #: ../manage/slas/learn-by-example.rst:20
-#: ../system/core-workflows/learn-by-example.rst:15
+#: ../system/core-workflows/learn-by-example.rst:19
 msgid "2nd Level"
 msgstr "2nd Level"
 
@@ -12306,8 +12488,8 @@ msgstr ""
 
 #: ../manage/slas/learn-by-example.rst:86
 #: ../manage/slas/learn-by-example.rst:116
-#: ../system/core-workflows/learn-by-example.rst:85
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:90
+#: ../system/core-workflows/learn-by-example.rst:103
 msgid "The result"
 msgstr "Das Ergebnis"
 
@@ -13346,7 +13528,7 @@ msgstr "Trigger unterstützen zwei Arten von Aktivierungen:"
 #: ../manage/trigger/how-do-they-work.rst:24
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:67
-#: ../system/core-workflows/how-do-they-work.rst:67 ../system/sessions.rst:52
+#: ../system/core-workflows/how-do-they-work.rst:70 ../system/sessions.rst:52
 msgid "Action"
 msgstr "Aktion"
 
@@ -13475,10 +13657,11 @@ msgstr "Ändern des Tickets"
 #: ../manage/trigger/how-do-they-work.rst:86
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
-"etc."
+"subscribe and unsubscribe specific/all users, etc."
 msgstr ""
 "Beispiele: seine Priorität erhöhen, es schließen, es neu zuweisen, es "
-"umbenennen, Tags hinzufügen usw."
+"umbenennen, Tags hinzufügen, abonnieren und abbestellen von "
+"Benachrichtigungen für einzelne/alle Benutzer usw."
 
 #: ../manage/trigger/how-do-they-work.rst:89
 msgid ""
@@ -14195,7 +14378,15 @@ msgstr ""
 "die Attribute ``firstname`` (Vorname) und ``lastname`` (Nachname) sind "
 "**erforderlich**; und"
 
-#: ../manage/users/via-csv-import.rst:47
+#: ../manage/users/via-csv-import.rst:44
+msgid ""
+"If you have more than one value for a field, separate them with ``~~~`` as "
+"above."
+msgstr ""
+"Wenn Sie mehr als einen Wert für ein Feld haben, trennen Sie sie mit ``~~~`` "
+"wie oben angegeben."
+
+#: ../manage/users/via-csv-import.rst:50
 msgid ""
 "Once your raw user data has been submitted, Zammad will perform a test run "
 "to compute the number of affected records:"
@@ -14203,7 +14394,7 @@ msgstr ""
 "Sobald die Daten übermittelt wurden, führt Zammad einen Testlauf durch, um "
 "die Anzahl der betroffenen Datensätze zu berechnen:"
 
-#: ../manage/users/via-csv-import.rst:59
+#: ../manage/users/via-csv-import.rst:62
 msgid ""
 "Records are updated when the imported data contains an ``email`` or "
 "``login`` that matches an existing user account."
@@ -14212,7 +14403,7 @@ msgstr ""
 "Feldern ``E-Mail`` oder ``Login`` Werte enthalten, die mit einem bestehenden "
 "Benutzerkonto übereinstimmen."
 
-#: ../manage/users/via-csv-import.rst:62
+#: ../manage/users/via-csv-import.rst:65
 msgid ""
 "Click **Yes, start real import** to proceed. (If you're importing a lot of "
 "records, be patient - it may take a minute.)"
@@ -14817,7 +15008,7 @@ msgstr ""
 "erhalten."
 
 #: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:88
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:114
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
 msgid "Sample Teams Channel Notification"
 msgstr "Beispiel Teams Kanalbenachrichtigung"
@@ -15127,7 +15318,7 @@ msgid "Click on **Save** button."
 msgstr "Klicken Sie auf die Schaltfläche **Speichern**."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:41
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:36
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:62
 msgid ""
 "Once created, make sure to copy *the webhook endpoint URL* to clipboard and "
 "save it for later. You can do this in one click via the button shown right "
@@ -15148,14 +15339,14 @@ msgstr ""
 "**Fertig** klicken."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:52
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:47
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:73
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:48
 #: ../manage/webhook/examples/slack-notifications.rst:67
 msgid "Step 2 - Add a Pre-defined Webhook in Zammad"
 msgstr "Schritt 2 - Einen vordefinierten Webhook in Zammad hinzufügen"
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:54
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:49
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:75
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:50
 #: ../manage/webhook/examples/slack-notifications.rst:69
 msgid ""
@@ -15182,7 +15373,7 @@ msgstr ""
 "Dialog \"Neuer Webhook\" für vordefinierte Mattermost-Benachrichtigungen"
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:71
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:66
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:92
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:67
 #: ../manage/webhook/examples/slack-notifications.rst:86
 msgid "Click **Next**."
@@ -15220,14 +15411,14 @@ msgid "Configuring Mattermost Webhook endpoint"
 msgstr "Konfigurieren des Mattermost Webhook-Endpunkts"
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:88
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:76
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:102
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:84
 #: ../manage/webhook/examples/slack-notifications.rst:96
 msgid "Finally, click on **Submit**."
 msgstr "Klicken Sie abschließend auf **Übermitteln**."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:91
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:79
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:105
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:87
 #: ../manage/webhook/examples/slack-notifications.rst:99
 msgid "Step 3 - Configuring a Trigger for firing of the Webhook"
@@ -15244,7 +15435,7 @@ msgstr ""
 "an den Mattermost-Kanal zu senden."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:97
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:85
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:111
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:93
 #: ../manage/webhook/examples/slack-notifications.rst:105
 msgid "Once the trigger is in place, your webhook is ready for use!"
@@ -15272,7 +15463,7 @@ msgid "Removing Article Content from the Mattermost Notification"
 msgstr "Entfernen des Artikelinhalts aus der Mattermost-Benachrichtigung"
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:119
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:107
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:133
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:115
 #: ../manage/webhook/examples/slack-notifications.rst:128
 msgid ""
@@ -15285,7 +15476,7 @@ msgstr ""
 "entfernen. Passen Sie dazu den Webhook-Payload an."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:122
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:110
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:136
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:118
 #: ../manage/webhook/examples/slack-notifications.rst:131
 msgid ""
@@ -15296,7 +15487,7 @@ msgstr ""
 "ihn an, um ihn zu bearbeiten."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:125
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:113
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:139
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:121
 #: ../manage/webhook/examples/slack-notifications.rst:134
 msgid ""
@@ -15349,7 +15540,7 @@ msgid "Custom Payload w/o Article Content for Mattermost Webhook"
 msgstr "Benutzerdefinierter Payload ohne Artikelinhalt für Mattermost Webhook"
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:153
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:132
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:158
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:149
 #: ../manage/webhook/examples/slack-notifications.rst:162
 msgid "Finally, click on **Submit** to save your webhook changes."
@@ -15358,7 +15549,7 @@ msgstr ""
 "speichern."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:155
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:134
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:160
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:151
 #: ../manage/webhook/examples/slack-notifications.rst:164
 msgid ""
@@ -15372,7 +15563,59 @@ msgstr ""
 msgid "Microsoft Teams Notifications"
 msgstr "Benachrichtigungen für Microsoft Teams"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:4
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:6
+msgid ""
+"Microsoft decided to retire `their Office 365 connectors <https://devblogs."
+"microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-"
+"microsoft-teams/>`_. The new way of connecting Microsoft Teams with third-"
+"party tools is via `Workflows in Teams <https://support.microsoft.com/en-us/"
+"office/browse-and-add-workflows-in-microsoft-teams-4998095c-8b72-4b0e-984c-"
+"f2ad39e6ba9a>`_."
+msgstr ""
+"Microsoft hat beschlossen, seine `Office 365-Konnektoren <https://devblogs."
+"microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-"
+"microsoft-teams/>`_ einzustellen. Der neue Weg, Microsoft Teams mit Tools "
+"von Drittanbietern zu verbinden, führt über `Workflows in Teams <https://"
+"support.microsoft.com/de-de/office/durchsuchen-und-hinzuf%C3%BCgen-von-"
+"workflows-in-microsoft-teams-4998095c-8b72-4b0e-984c-f2ad39e6ba9a>`_."
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:11
+msgid ""
+"In the transitional period, we decided to keep this guide as is. Make sure "
+"to follow Microsoft's guide as a replacement for **step 1** below, to "
+"connect Teams and Zammad via Workflows."
+msgstr ""
+"Für die Übergangszeit haben wir uns entschieden, diese Anleitung so zu "
+"belassen, wie sie ist. Stellen Sie sicher, dass Sie die Anleitung von "
+"Microsoft als Ersatz für **Schritt 1** unten befolgen, um Teams und Zammad "
+"über Workflows zu verbinden."
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:15
+msgid ""
+"If you already use this webhook and *didn't customize* the payload, the new "
+"webhook is used automatically after updating Zammad. In this case, you just "
+"need to create the workflow for your channel in Microsoft Teams. Otherwise "
+"you have to manually adjust the payload in Zammad, too. See :doc:`Microsoft "
+"Teams Payload </manage/webhook/examples/microsoft-teams-payload>` where you "
+"can find the old and new defaults in case you need it."
+msgstr ""
+"Wenn Sie diesen Webhook bereits verwenden und den Payload nicht angepasst "
+"haben, wird der neue Webhook nach der Aktualisierung von Zammad automatisch "
+"verwendet. In diesem Fall müssen Sie nur den Workflow für Ihren Kanal in "
+"Microsoft Teams erstellen. Andernfalls müssen Sie den Payload auch in Zammad "
+"manuell anpassen. Siehe :doc:`Microsoft Teams Payload </manage/webhook/"
+"examples/microsoft-teams-payload>`, wo Sie den alten und den neuen Payload "
+"finden können, falls Sie sie benötigen."
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:22
+msgid ""
+"To manage the connection in Zammad, you can go on with **step 2** on this "
+"page."
+msgstr ""
+"Um die Verbindung in Zammad zu verwalten, fahren Sie mit **Schritt 2** auf "
+"dieser Seite fort."
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:30
 msgid ""
 "Follow the steps below to configure a webhook for receiving Zammad "
 "notifications in a Microsoft Teams channel."
@@ -15380,13 +15623,13 @@ msgstr ""
 "Führen Sie die folgenden Schritte aus, um einen Webhook für den Empfang von "
 "Zammad-Benachrichtigungen in einem Microsoft Teams-Kanal zu konfigurieren."
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:8
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:34
 msgid "Step 1 - Setup Incoming Webhook Connector in your Teams Channel"
 msgstr ""
 "Schritt 1 - Einrichten des eingehenden Webhook-Connectors in Ihrem Teams-"
 "Kanal"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:10
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:36
 msgid ""
 "In your target Teams Channel, click on the overflow menu in the upper right "
 "corner and choose **Connectors**."
@@ -15398,7 +15641,7 @@ msgstr ""
 msgid "Connectors menu item in a Teams Channel"
 msgstr "Menüpunkt \"Connectors\" in einem Teams Channel"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:17
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:43
 msgid ""
 "Find a connector named **Incoming Webhook** in the list and click on "
 "**Configure** button next to it."
@@ -15410,7 +15653,7 @@ msgstr ""
 msgid "Incoming Webhook in the Connectors list"
 msgstr "Eingehender Webhook in der Liste der Konnektoren"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:24
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:50
 msgid ""
 "Provide an appropriate name for the incoming webhook connector, keeping in "
 "mind this will be used as the name for all of the notification messages in "
@@ -15419,7 +15662,7 @@ msgstr ""
 "Geben Sie einen geeigneten Namen für den Webhook-Connector an. Dieser wird "
 "als Name für alle Benachrichtigungen im Kanal verwendet."
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:28
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:54
 msgid "Optionally, provide a custom image which will be used as the avatar."
 msgstr ""
 "Optional können Sie ein benutzerdefiniertes Bild angeben, das als Avatar "
@@ -15429,7 +15672,7 @@ msgstr ""
 msgid "Creating Incoming Webhook Connector"
 msgstr "Eingehenden Webhook-Konnektor erstellen"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:34
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:60
 msgid "Click on **Create** and be patient."
 msgstr "Klicken Sie auf **Erstellen** und haben Sie etwas Geduld."
 
@@ -15437,13 +15680,13 @@ msgstr "Klicken Sie auf **Erstellen** und haben Sie etwas Geduld."
 msgid "Copying Incoming Webhook Connector URL"
 msgstr "Eingehende Webhook Connector URL kopieren"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:44
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:70
 msgid "Finally, close the connector configuration by clicking **Done**."
 msgstr ""
 "Beenden Sie die Konfiguration des Connectors, indem Sie auf **Fertig** "
 "klicken."
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:58
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:84
 msgid ""
 "In the subsequent modal dialog, select **Microsoft Teams Notifications** as "
 "the pre-defined webhook."
@@ -15456,7 +15699,7 @@ msgid "New Microsoft Teams Notifications Pre-defined Webhook modal"
 msgstr ""
 "Dialog \"Neuer Webhook\" für vordefinierte Microsoft Teams-Benachrichtigungen"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:68
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:94
 msgid ""
 "In the new dialog, paste *the webhook endpoint URL* from Microsoft Teams "
 "into **Endpoint** field."
@@ -15468,7 +15711,7 @@ msgstr ""
 msgid "Configuring Microsoft Teams Webhook endpoint"
 msgstr "Konfigurieren des Microsoft Teams Webhook-Endpunkts"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:81
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:107
 msgid ""
 "As a last step, you need to create a :doc:`Trigger <generic-notifications-"
 "trigger>` for posting a notification to the Microsoft Teams channel under "
@@ -15478,7 +15721,7 @@ msgstr ""
 "trigger>` erstellen, um unter bestimmten Bedingungen eine Benachrichtigung "
 "an den Microsoft Teams-Kanal zu senden."
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:90
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:116
 msgid ""
 "From now on, whenever a ticket is created or updated in your Zammad system, "
 "a suitable notification will be posted in the configured Teams Channel. The "
@@ -15495,11 +15738,11 @@ msgstr ""
 "ihrem letzten Status :user-docs:`farblich gekennzeichnet</basics/service-"
 "ticket/settings/state.html#state-colors>`."
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:105
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:131
 msgid "Removing Article Content from the Teams Notification"
 msgstr "Entfernen des Artikelinhalts aus der Teams-Benachrichtigung"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:116
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:142
 msgid ""
 "Next, identify ``{ \"text\": \"#{notification.body}\" }`` block in the JSON "
 "structure and select it. Be sure to include the comma (``,``) in the "
@@ -15514,13 +15757,37 @@ msgstr ""
 msgid "Custom Payload with Article Content"
 msgstr "Benutzerdefinierter Payload mit Inhalt des Artikels"
 
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:125
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:151
 msgid "Then, simply delete the selected code block."
 msgstr "Löschen Sie dann einfach den ausgewählten Codeblock."
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
 msgid "Custom Payload w/o Article Content"
 msgstr "Benutzerdefinierter Payload ohne Inhalt des Artikels"
+
+#: ../manage/webhook/examples/microsoft-teams-payload.rst:2
+msgid "Microsoft Teams Webhook Payload"
+msgstr "Microsoft Teams Webhook Payload"
+
+#: ../manage/webhook/examples/microsoft-teams-payload.rst:4
+msgid ""
+"Microsoft is retiring their Office 365 connectors in favor of connecting "
+"third-party tools via their Workflows. Because of that, the pre-defined "
+"webhook in Zammad has changed. In case you need the old or new default "
+"payload, you can find them below."
+msgstr ""
+"Für die Anbindung von Drittanbieter-Tools stellt Microsoft seine Office 365-"
+"Konnektoren zugunsten der Workflows-Variante ein. Aus diesem Grund hat sich "
+"der vordefinierte Webhook in Zammad geändert. Falls Sie den alten oder neuen "
+"Standard-Payload benötigen, finden Sie diese unten."
+
+#: ../manage/webhook/examples/microsoft-teams-payload.rst:10
+msgid "Payload for Office Connectors (old)"
+msgstr "Payload für Office Konnektoren (alt)"
+
+#: ../manage/webhook/examples/microsoft-teams-payload.rst:43
+msgid "Payload for Workflows (new)"
+msgstr "Payload für Workflows (neu)"
 
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:2
 msgid "Rocket Chat Notifications"
@@ -16609,6 +16876,7 @@ msgstr "Nur in Triggern verfügbar."
 #: ../misc/object-conditions/basics.rst:172
 #: ../misc/object-conditions/basics.rst:196
 #: ../misc/object-conditions/basics.rst:206
+#: ../system/core-workflows/condition-operators.rst:50
 msgid "is"
 msgstr "ist"
 
@@ -16624,6 +16892,7 @@ msgstr "ist"
 #: ../misc/object-conditions/basics.rst:173
 #: ../misc/object-conditions/basics.rst:197
 #: ../misc/object-conditions/basics.rst:207
+#: ../system/core-workflows/condition-operators.rst:64
 msgid "is not"
 msgstr "ist nicht"
 
@@ -16688,6 +16957,7 @@ msgstr "spezifischer Benutzer"
 #: ../misc/object-conditions/basics.rst:98
 #: ../misc/object-conditions/basics.rst:142
 #: ../misc/object-conditions/basics.rst:191
+#: ../system/core-workflows/condition-operators.rst:78
 msgid "not set"
 msgstr "ist nicht gesetzt"
 
@@ -16813,18 +17083,22 @@ msgid "Checks tags of a ticket."
 msgstr "Prüft die Tags eines Tickets."
 
 #: ../misc/object-conditions/basics.rst:180
+#: ../system/core-workflows/condition-operators.rst:32
 msgid "contains all"
 msgstr "enthält alle"
 
 #: ../misc/object-conditions/basics.rst:181
+#: ../system/core-workflows/condition-operators.rst:38
 msgid "contains one"
 msgstr "enthält eins"
 
 #: ../misc/object-conditions/basics.rst:182
+#: ../system/core-workflows/condition-operators.rst:34
 msgid "contains all not"
 msgstr "enthält alle nicht"
 
 #: ../misc/object-conditions/basics.rst:183
+#: ../system/core-workflows/condition-operators.rst:40
 msgid "contains one not"
 msgstr "enthält eins nicht"
 
@@ -16845,6 +17119,7 @@ msgid "Checks if time is accounted."
 msgstr "Prüft, ob Zeit erfasst ist."
 
 #: ../misc/object-conditions/basics.rst:190
+#: ../system/core-workflows/condition-operators.rst:66
 msgid "is set"
 msgstr "ist gesetzt"
 
@@ -18644,6 +18919,34 @@ msgid ""
 msgstr ""
 "Screenshot mit der Einstellung \"Automatische Kontoverbindung bei der "
 "Erstanmeldung\""
+
+#: ../settings/security/third-party.rst:100
+msgid "No User Creation on Logon"
+msgstr "Keine Erstellung von Benutzern bei der Anmeldung"
+
+#: ../settings/security/third-party.rst:102
+msgid ""
+"By default, Zammad will create a new user account if the user logs in via a "
+"third-party application and the account doesn't exist yet."
+msgstr ""
+"Standardmäßig erstellt Zammad ein neues Benutzerkonto, wenn sich der "
+"Benutzer über eine Drittanbieteranwendung anmeldet und das Konto noch nicht "
+"existiert."
+
+#: ../settings/security/third-party.rst:105
+msgid ""
+"If you want to prevent Zammad from creating new accounts on logon, you can "
+"disable this feature by setting ``No user creation on logon`` to ``yes``."
+msgstr ""
+"Wenn Sie verhindern wollen, dass Zammad bei der Anmeldung neue Konten "
+"anlegt, können Sie diese Funktion deaktivieren, indem Sie ``Keine Erstellung "
+"von Benutzern bei der Anmeldung`` auf ``ja`` setzen."
+
+#: ../settings/security/third-party.rst:None
+msgid "Screenshot showing the \"no user creation on logon\" setting"
+msgstr ""
+"Screenshot zeigt die Einstellung \"keine Erstellung von Benutzern bei der "
+"Anmeldung\""
 
 #: ../settings/security/third-party/facebook.rst:4
 msgid ""
@@ -21333,6 +21636,293 @@ msgstr ""
 msgid "Dialogue for adding a new workflow"
 msgstr "Dialog zum Hinzufügen eines neuen Workflows"
 
+#: ../system/core-workflows/condition-operators.rst:2
+msgid "Core Workflow Condition Operators"
+msgstr "Core Workflow Bedingungsoperatoren"
+
+#: ../system/core-workflows/condition-operators.rst:4
+msgid ""
+"You might know that there is a separate section for explaining :doc:"
+"`condition operators </misc/object-conditions/basics>`. Head over there to "
+"see a detailed explanation of many conditions and operators."
+msgstr ""
+"Sie wissen vielleicht, dass es einen separaten Bereich zur Erläuterung von :"
+"doc:`Bedingungsoperatoren </misc/object-conditions/basics>` gibt. Dort "
+"finden Sie eine detaillierte Erklärung vieler Bedingungen und Operatoren."
+
+#: ../system/core-workflows/condition-operators.rst:8
+msgid ""
+"Due to differences to other places in Zammad which are also using conditions "
+"(e.g. triggers), you can find a dedicated description of operators for core "
+"workflows below."
+msgstr ""
+"Aufgrund von Unterschieden zu anderen Bereichen in Zammad, die ebenfalls "
+"Bedingungen verwenden (z.B. Trigger) , finden Sie weiter unten eine "
+"Beschreibung der Operatoren speziell für Core-Workflows."
+
+#: ../system/core-workflows/condition-operators.rst:12
+msgid ""
+"Be aware that the availability of the operators depends on the selected "
+"attribute and its field type. Some of the operators may only be available "
+"for system attributes (e.g. for \"tags\", \"active\")."
+msgstr ""
+"Beachten Sie, dass die Verfügbarkeit der Operatoren von dem ausgewählten "
+"Attribut und seinem Feldtyp abhängt. Einige der Operatoren sind "
+"möglicherweise nur für Systemattribute verfügbar (z.B. für \"Tags\", "
+"\"Aktiv\")."
+
+#: ../system/core-workflows/condition-operators.rst:20
+msgid "Operator"
+msgstr "Operator"
+
+#: ../system/core-workflows/condition-operators.rst:22
+msgid "after (absolute)"
+msgstr "nach (absolut)"
+
+#: ../system/core-workflows/condition-operators.rst:23
+msgid "Matches if a date/time is after a specific point in time."
+msgstr ""
+"Trifft zu, wenn ein Datum/Uhrzeit nach einem definierten Zeitpunkt liegt."
+
+#: ../system/core-workflows/condition-operators.rst:24
+msgid "after (relative)"
+msgstr "nach (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:25
+msgid "Matches if a time span after a specified event has passed."
+msgstr ""
+"Trifft zu, wenn eine Zeitspanne nach einem bestimmten Ereignis vergangen ist."
+
+#: ../system/core-workflows/condition-operators.rst:26
+msgid "before (absolute)"
+msgstr "vor (absolut)"
+
+#: ../system/core-workflows/condition-operators.rst:27
+msgid "Matches if a date/time is before a specific point in time."
+msgstr ""
+"Trifft zu, wenn ein Datum/Uhrzeit vor einem definierten Zeitpunkt liegt."
+
+#: ../system/core-workflows/condition-operators.rst:28
+msgid "before (relative)"
+msgstr "vor (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:29
+msgid "Matches if a time span after a specified event has not passed."
+msgstr "Trifft zu während einer definierten Zeitspanne nach einem Ereignis."
+
+#: ../system/core-workflows/condition-operators.rst:30
+msgid "contains"
+msgstr "enthält"
+
+#: ../system/core-workflows/condition-operators.rst:31
+msgid "Matches if a specified value is present."
+msgstr "Trifft zu, wenn ein definierter Wert vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:33
+msgid "Matches if all of the specified values are present."
+msgstr "Trifft zu, wenn alle definierten Werte vorhanden sind."
+
+#: ../system/core-workflows/condition-operators.rst:35
+msgid "Matches if none of the specified values are present."
+msgstr "Trifft zu, wenn keiner der definierten Werte vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:36
+msgid "contains not"
+msgstr "enthält nicht"
+
+#: ../system/core-workflows/condition-operators.rst:37
+msgid "Matches if a specified value is not present."
+msgstr "Trifft zu, wenn ein definierter Wert nicht vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:39
+msgid "Matches if one specified value is present."
+msgstr "Trifft zu, wenn ein definierter Wert vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:41
+msgid "Matches if one specified value is not present."
+msgstr "Trifft zu, wenn ein definierter Wert nicht vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:42
+msgid "does not match regex"
+msgstr "passt nicht auf regex"
+
+#: ../system/core-workflows/condition-operators.rst:43
+msgid "Matches if content doesn't fit to regex rule."
+msgstr "Trifft zu, wenn der Inhalt nicht der Regex-Regel entspricht."
+
+#: ../system/core-workflows/condition-operators.rst:44
+msgid "ends with"
+msgstr "endet auf"
+
+#: ../system/core-workflows/condition-operators.rst:45
+msgid "Matches if content ends with specified value."
+msgstr "Trifft zu, wenn der Inhalt mit dem definierten Wert endet."
+
+#: ../system/core-workflows/condition-operators.rst:46
+msgid "ends with one of"
+msgstr "endet auf eins von"
+
+#: ../system/core-workflows/condition-operators.rst:47
+msgid "Matches if content ends with one of the specified values."
+msgstr "Trifft zu, wenn der Inhalt mit einem der definierten Werte endet."
+
+#: ../system/core-workflows/condition-operators.rst:48
+msgid "from (relative)"
+msgstr "von vor (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:49
+msgid "Matches if date/time is after a period of time after an event."
+msgstr ""
+"Trifft zu, wenn Datum/Uhrzeit nach einer definierten Zeitspanne nach einem "
+"Ereignis liegen."
+
+#: ../system/core-workflows/condition-operators.rst:51
+msgid "Matches if content is equal to a specified value."
+msgstr "Trifft zu, wenn der Inhalt gleich dem definierten Wert ist."
+
+#: ../system/core-workflows/condition-operators.rst:52
+msgid "is any of"
+msgstr "ist eins von"
+
+#: ../system/core-workflows/condition-operators.rst:53
+msgid "Matches if content is equal to any of specified values."
+msgstr ""
+"Trifft zu, wenn der Inhalt mit einem der definierten Werte übereinstimmt."
+
+#: ../system/core-workflows/condition-operators.rst:54
+msgid "is modified"
+msgstr "ist geändert"
+
+#: ../system/core-workflows/condition-operators.rst:55
+msgid "Matches if content is modified."
+msgstr "Trifft zu, wenn der Inhalt geändert wurde."
+
+#: ../system/core-workflows/condition-operators.rst:57
+#: ../system/core-workflows/condition-operators.rst:61
+msgid "True from the moment of changing content until form submit."
+msgstr ""
+"Wahr ab dem Zeitpunkt der Änderung des Inhalts bis zum Absenden des "
+"Formulars."
+
+#: ../system/core-workflows/condition-operators.rst:58
+msgid "is modified to"
+msgstr "ist geändert auf"
+
+#: ../system/core-workflows/condition-operators.rst:59
+msgid "Matches if content is modified to a specific value."
+msgstr "Trifft zu, wenn der Inhalt auf einen definiertene Wert geändert wurde."
+
+#: ../system/core-workflows/condition-operators.rst:62
+msgid "is none of"
+msgstr "ist keins von"
+
+#: ../system/core-workflows/condition-operators.rst:63
+msgid "Matches if content is none of any specified values."
+msgstr "Trifft zu, wenn der Inhalt keinem der definierten Werte entspricht."
+
+#: ../system/core-workflows/condition-operators.rst:65
+msgid "Matches if content is not equal to a specified value."
+msgstr "Trifft zu, wenn der Inhalt nicht gleich dem definierten Wert ist."
+
+#: ../system/core-workflows/condition-operators.rst:67
+msgid "Matches if content is present."
+msgstr "Trifft zu, wenn ein Inhalt vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:68
+msgid "just changed"
+msgstr "gerade geändert"
+
+#: ../system/core-workflows/condition-operators.rst:69
+msgid "Matches if content has changed."
+msgstr "Trifft zu, wenn sich der Inhalt gerade geändert hat."
+
+#: ../system/core-workflows/condition-operators.rst:71
+#: ../system/core-workflows/condition-operators.rst:75
+msgid ""
+"Only true for the moment of changing content until next form field action/"
+"click."
+msgstr ""
+"Nur zutreffend für den Moment der Änderung des Inhalts bis zur nächsten "
+"Formularfeldaktion/zum nächsten Mausklick."
+
+#: ../system/core-workflows/condition-operators.rst:72
+msgid "just changed to"
+msgstr "gerade geändert auf"
+
+#: ../system/core-workflows/condition-operators.rst:73
+msgid "Matches if content has changed to a specified value."
+msgstr ""
+"Trifft zu, wenn sich der Inhalt gerade auf einen definierten Wert geändert "
+"hat."
+
+#: ../system/core-workflows/condition-operators.rst:76
+msgid "matches regex"
+msgstr "passt auf regex"
+
+#: ../system/core-workflows/condition-operators.rst:77
+msgid "Matches if value fits to regex rule."
+msgstr "Trifft zu, wenn der Wert der Regex-Regel entspricht."
+
+#: ../system/core-workflows/condition-operators.rst:79
+msgid "Matches if no content is present."
+msgstr "Trifft zu, wenn kein Inhalt vorhanden ist."
+
+#: ../system/core-workflows/condition-operators.rst:80
+msgid "starts with"
+msgstr "beginnt mit"
+
+#: ../system/core-workflows/condition-operators.rst:81
+msgid "Matches if content starts with specified value."
+msgstr "Trifft zu, wenn der Inhalt mit dem definierten Wert beginnt."
+
+#: ../system/core-workflows/condition-operators.rst:82
+msgid "starts with one of"
+msgstr "beginnt mit eins von"
+
+#: ../system/core-workflows/condition-operators.rst:83
+msgid "Matches if content starts with one of the specified values."
+msgstr "Trifft zu, wenn der Inhalt mit einem der definierten Werte beginnt."
+
+#: ../system/core-workflows/condition-operators.rst:84
+msgid "till (relative)"
+msgstr "bis in (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:85
+msgid "Matches if date/time is before a period of time before an event."
+msgstr ""
+"Triff zu, wenn Datum/Uhrzeit vor einem definierten Zeitraum vor einem "
+"Ereignis liegt."
+
+#: ../system/core-workflows/condition-operators.rst:86
+msgid "today"
+msgstr "heute"
+
+#: ../system/core-workflows/condition-operators.rst:87
+msgid "Matches if date/time is today."
+msgstr "Trifft zu, wenn Datum/Uhrzeit heute ist."
+
+#: ../system/core-workflows/condition-operators.rst:88
+msgid "within last (relative)"
+msgstr "innerhalb letzter (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:89
+msgid ""
+"Matches if date/time content is within specified period of time before now."
+msgstr ""
+"Triff zu, wenn Datum/Uhrzeit innerhalb der definierten Zeitspann vor jetzt "
+"liegt."
+
+#: ../system/core-workflows/condition-operators.rst:91
+msgid "within next (relative)"
+msgstr "innerhalb nächster (relativ)"
+
+#: ../system/core-workflows/condition-operators.rst:92
+msgid ""
+"Matches if date/time content is within specified period of time after now."
+msgstr ""
+"Trifft zu, wenn Datum/Uhrzeit innerhalb der definierten Zeitspanne nach "
+"jetzt liegt."
+
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
 msgstr "Wie funktionieren sie?"
@@ -21483,7 +22073,15 @@ msgstr ""
 "Ticket durchführen, das gerade erstellt wird, da es zu diesem Zeitpunkt "
 "keine gespeicherten Werte gibt."
 
-#: ../system/core-workflows/how-do-they-work.rst:69
+#: ../system/core-workflows/how-do-they-work.rst:66
+msgid ""
+"You can find a description of the condition operators for core workflows :"
+"doc:`here </system/core-workflows/condition-operators>`."
+msgstr ""
+"Eine Beschreibung der Bedingungsoperatoren für Core Workflows finden Sie :"
+"doc:`hier </system/core-workflows/condition-operators>`."
+
+#: ../system/core-workflows/how-do-they-work.rst:72
 msgid ""
 "Which actions should we run on the relevant fields? The possible actions "
 "depend on the object type. However, usually you can at least change the "
@@ -21493,13 +22091,13 @@ msgstr ""
 "Objekttyp ab. Normalerweise können Sie jedoch mindestens die Sichtbarkeit "
 "ändern und angeben, ob das Feld ein Pflichtfeld ist."
 
-#: ../system/core-workflows/how-do-they-work.rst:73
+#: ../system/core-workflows/how-do-they-work.rst:76
 msgid "Be aware that actions are not available for **related** context."
 msgstr ""
 "Beachten Sie, dass Aktionen nicht verfügbar sind für in Beziehungen stehende "
 "Objekte."
 
-#: ../system/core-workflows/how-do-they-work.rst:75
+#: ../system/core-workflows/how-do-they-work.rst:78
 msgid ""
 "**Example:** Let's assume you are working in the ticket context. While you "
 "can have customer *conditions*, you *can't adjust* objects with actions in "
@@ -21512,22 +22110,22 @@ msgstr ""
 "dies keine Auswirkung auf den Ticket-Dialog haben würde. Natürlich sind alle "
 "Ticket-Attribute (Status, Besitzer, ...) verfügbar."
 
-#: ../system/core-workflows/how-do-they-work.rst:81
+#: ../system/core-workflows/how-do-they-work.rst:84
 msgid ""
 "Please also have a look at our :doc:`limitations` to be safe from surprises."
 msgstr ""
 "Bitte beachten Sie auch unsere :doc:`limitations`, um vor Überraschungen "
 "sicher zu sein."
 
-#: ../system/core-workflows/how-do-they-work.rst:85
+#: ../system/core-workflows/how-do-they-work.rst:88
 msgid "Available Operators"
 msgstr "Verfügbare Operatoren"
 
-#: ../system/core-workflows/how-do-they-work.rst:87
+#: ../system/core-workflows/how-do-they-work.rst:90
 msgid "The availability of operators depends on the object type and scope."
 msgstr "Die Verfügbarkeit von Operatoren hängt von dem Objekt ab."
 
-#: ../system/core-workflows/how-do-they-work.rst:91
+#: ../system/core-workflows/how-do-they-work.rst:94
 msgid ""
 "Please note that actions may or may not restrict API based access to "
 "attributes. We're displaying the following icons for your overview to "
@@ -21541,7 +22139,7 @@ msgstr ""
 msgid "|api| This icon indicates the action affects the API."
 msgstr "|api| Dieses Symbol zeigt an, dass die Aktion die API betrifft."
 
-#: ../system/core-workflows/how-do-they-work.rst:160
+#: ../system/core-workflows/how-do-they-work.rst:163
 msgid "api"
 msgstr "api"
 
@@ -21550,23 +22148,23 @@ msgid "|ui| This icon indicates the action only affects the web interface."
 msgstr ""
 "|ui| Dieses Symbol zeigt an, dass die Aktion nur die Weboberfläche betrifft."
 
-#: ../system/core-workflows/how-do-they-work.rst:164
+#: ../system/core-workflows/how-do-they-work.rst:167
 msgid "ui"
 msgstr "ui"
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "show |ui|"
 msgstr "anzeigen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:99
+#: ../system/core-workflows/how-do-they-work.rst:102
 msgid "Display the chosen field. Allows setting of values."
 msgstr "Zeigt das ausgewählte Feld an. Ermöglicht die Einstellung von Werten."
 
-#: ../system/core-workflows/how-do-they-work.rst:106
+#: ../system/core-workflows/how-do-they-work.rst:109
 msgid "hide |ui|"
 msgstr "verstecken |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:102
+#: ../system/core-workflows/how-do-they-work.rst:105
 msgid ""
 "Hide the chosen field. However, it technically still allows setting the "
 "field."
@@ -21574,7 +22172,7 @@ msgstr ""
 "Ausblenden des gewählten Feldes. Technisch gesehen kann das Feld aber immer "
 "noch eingestellt werden."
 
-#: ../system/core-workflows/how-do-they-work.rst:105
+#: ../system/core-workflows/how-do-they-work.rst:108
 msgid ""
 "Please note that the field is **not** gone and still contains an existing "
 "value (if set)! Consider *remove* instead, if you want this field to be gone."
@@ -21584,39 +22182,39 @@ msgstr ""
 "*entfernen* in Betracht, wenn Sie wollen, dass dieses Feld wirklich "
 "verschwindet."
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "remove |ui|"
 msgstr "entfernen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:109
+#: ../system/core-workflows/how-do-they-work.rst:112
 msgid "Entirely removes the field. The field value will not be evaluated."
 msgstr "Entfernt das Feld vollständig. Der Feldwert wird nicht ausgewertet."
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "set mandatory |ui| |api|"
 msgstr "als erforderlich festlegen |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:112
+#: ../system/core-workflows/how-do-they-work.rst:115
 msgid "Sets the field to mandatory."
 msgstr "Definiert das Feld als Pflichtfeld."
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "set optional |ui| |api|"
 msgstr "als optional festlegen |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:115
+#: ../system/core-workflows/how-do-they-work.rst:118
 msgid "Sets the field to optional."
 msgstr "Definiert das Feld als optionales Feld."
 
-#: ../system/core-workflows/how-do-they-work.rst:121
+#: ../system/core-workflows/how-do-they-work.rst:124
 msgid "add option |ui| |api|"
 msgstr "Option hinzufügen |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:118
+#: ../system/core-workflows/how-do-they-work.rst:121
 msgid "Allows adding options to tree selects or selects."
 msgstr "Ermöglicht das Hinzufügen von Optionen zu Auswahlen und Baumauswahlen."
 
-#: ../system/core-workflows/how-do-they-work.rst:120
+#: ../system/core-workflows/how-do-they-work.rst:123
 msgid ""
 "You have to use the \"remove option\" before performing this action. It "
 "allows you to use *existing* configured values."
@@ -21625,11 +22223,11 @@ msgstr ""
 "verwenden. Im Anschluss können Sie damit *vorhandene* konfigurierte Werte "
 "verwenden."
 
-#: ../system/core-workflows/how-do-they-work.rst:125
+#: ../system/core-workflows/how-do-they-work.rst:128
 msgid "remove option |ui| |api|"
 msgstr "Option entfernen |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:124
+#: ../system/core-workflows/how-do-they-work.rst:127
 msgid ""
 "Allows removing options from tree selects or selects. It allows you to use "
 "*existing* configured values."
@@ -21637,34 +22235,34 @@ msgstr ""
 "Ermöglicht das Entfernen von Optionen aus Baumauswahl oder Auswahl-Feldern. "
 "Damit können Sie *vorhandene* konfigurierte Werte verwenden."
 
-#: ../system/core-workflows/how-do-they-work.rst:131
+#: ../system/core-workflows/how-do-they-work.rst:134
 msgid "set fixed to |ui| |api|"
 msgstr "fest eingestellt auf |ui| |api|"
 
-#: ../system/core-workflows/how-do-they-work.rst:128
+#: ../system/core-workflows/how-do-they-work.rst:131
 msgid "Reduces the available options by your selection."
 msgstr "Reduziert die verfügbaren Optionen um Ihre Auswahl."
 
-#: ../system/core-workflows/how-do-they-work.rst:130
+#: ../system/core-workflows/how-do-they-work.rst:133
 msgid ""
 "This reduces your workflows in terms of *add option* and *remove option*."
 msgstr ""
 "Dies reduziert Ihre Workflows bzgl. *Option hinzufügen* und *Option "
 "entfernen*."
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "fill in |ui|"
 msgstr "befüllen mit |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:134
+#: ../system/core-workflows/how-do-they-work.rst:137
 msgid "Allows filling in of string and integer fields with your values."
 msgstr "Ermöglicht die Befüllung von Text- und Zahlen-Feldern mit einem Wert."
 
-#: ../system/core-workflows/how-do-they-work.rst:138
+#: ../system/core-workflows/how-do-they-work.rst:141
 msgid "fill in empty |ui|"
 msgstr "befüllen mit (wenn leer) |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:137
+#: ../system/core-workflows/how-do-they-work.rst:140
 msgid ""
 "Allows filling in of string and integer fields with your values **if the "
 "field is empty**."
@@ -21672,25 +22270,25 @@ msgstr ""
 "Ermöglicht die Befüllung von Text- und Zahlen-Feldern mit einem Wert **wenn "
 "das Feld leer ist**."
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "select |ui|"
 msgstr "auswählen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:141
+#: ../system/core-workflows/how-do-they-work.rst:144
 msgid "Select a specific value within a select, tree select or boolean field."
 msgstr ""
 "Wählen Sie einen bestimmten Wert innerhalb eines Auswahl-, Baumauswahl- oder "
 "Boolean-Feldes aus."
 
-#: ../system/core-workflows/how-do-they-work.rst:150
+#: ../system/core-workflows/how-do-they-work.rst:153
 msgid "auto select |ui|"
 msgstr "automatisch auswählen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:144
+#: ../system/core-workflows/how-do-they-work.rst:147
 msgid "Helps users with tree select and select fields:"
 msgstr "Hilft den Benutzern bei Baumauswahl- und Auswahlfeldern:"
 
-#: ../system/core-workflows/how-do-they-work.rst:146
+#: ../system/core-workflows/how-do-they-work.rst:149
 msgid ""
 "If the field has only one option available for selection and no value yet, "
 "the value will be automatically set."
@@ -21698,7 +22296,7 @@ msgstr ""
 "Wenn für das Feld nur eine Option zur Auswahl steht und noch kein Wert "
 "vorhanden ist, wird der Wert automatisch gesetzt."
 
-#: ../system/core-workflows/how-do-they-work.rst:149
+#: ../system/core-workflows/how-do-they-work.rst:152
 msgid ""
 "This option only works if you have one value and doesn't work if there is "
 "more than one option available."
@@ -21706,11 +22304,11 @@ msgstr ""
 "Diese Option funktioniert nur, wenn Sie genau einen Wert haben. Sie "
 "funktioniert nicht, wenn mehr als eine Option verfügbar ist."
 
-#: ../system/core-workflows/how-do-they-work.rst:154
+#: ../system/core-workflows/how-do-they-work.rst:157
 msgid "set readonly |ui|"
 msgstr "als schreibgeschützt festlegen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:153
+#: ../system/core-workflows/how-do-they-work.rst:156
 msgid ""
 "Allows you to display an attribute as read only (which means no changes are "
 "possible)."
@@ -21718,11 +22316,11 @@ msgstr ""
 "Ermöglicht die schreibgeschützte Anzeige eines Attributs (was bedeutet, dass "
 "keine Änderungen möglich sind)."
 
-#: ../system/core-workflows/how-do-they-work.rst:158
+#: ../system/core-workflows/how-do-they-work.rst:161
 msgid "unset readonly |ui|"
 msgstr "als änderbar festlegen |ui|"
 
-#: ../system/core-workflows/how-do-they-work.rst:157
+#: ../system/core-workflows/how-do-they-work.rst:160
 msgid ""
 "In case a workflow set the field in question to read only, you can undo this "
 "with option above."
@@ -21730,18 +22328,18 @@ msgstr ""
 "Falls ein Workflow das betreffende Feld auf schreibgeschützt gesetzt hat, "
 "können Sie dies mit der obigen Option rückgängig machen."
 
-#: ../system/core-workflows/how-do-they-work.rst:169
+#: ../system/core-workflows/how-do-they-work.rst:172
 msgid "Stop after match"
 msgstr "Nach Treffer stoppen"
 
-#: ../system/core-workflows/how-do-they-work.rst:171
+#: ../system/core-workflows/how-do-they-work.rst:174
 msgid ""
 "Here you can decide if other workflows are executed after the current one."
 msgstr ""
 "Hier können Sie festlegen, ob andere Workflows nach dem aktuellen ausgeführt "
 "werden."
 
-#: ../system/core-workflows/how-do-they-work.rst:173
+#: ../system/core-workflows/how-do-they-work.rst:176
 msgid ""
 "If set to ``no`` (default), further workflows will be executed if they match "
 "the condition. In this case, it is possible that your actions from the "
@@ -21752,7 +22350,7 @@ msgstr ""
 "Aktionen aus dem aktuellen Workflow von einem anderen Workflow überschrieben "
 "werden."
 
-#: ../system/core-workflows/how-do-they-work.rst:177
+#: ../system/core-workflows/how-do-they-work.rst:180
 msgid ""
 "If set to ``yes``, no further worflows will be executed after the current "
 "one."
@@ -21760,11 +22358,11 @@ msgstr ""
 "Wird der Wert auf ``Ja`` gesetzt, werden nach dem aktuellen keine weiteren "
 "Workflows mehr ausgeführt."
 
-#: ../system/core-workflows/how-do-they-work.rst:181
+#: ../system/core-workflows/how-do-they-work.rst:184
 msgid "Priority"
 msgstr "Priorität"
 
-#: ../system/core-workflows/how-do-they-work.rst:183
+#: ../system/core-workflows/how-do-they-work.rst:186
 msgid ""
 "You can define the sequence, in which the workflows are executed. The "
 "default value is ``500``."
@@ -21772,7 +22370,7 @@ msgstr ""
 "Sie können die Reihenfolge festlegen, in der die Arbeitsabläufe ausgeführt "
 "werden. Der Standardwert ist ``500``."
 
-#: ../system/core-workflows/how-do-they-work.rst:186
+#: ../system/core-workflows/how-do-they-work.rst:189
 msgid ""
 "The workflows are executed in ascending order by their priority. That means "
 "lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``)."
@@ -21782,8 +22380,8 @@ msgstr ""
 "B. ``999``) ausgeführt."
 
 #: ../system/core-workflows/learn-by-example.rst:2
-msgid "Learn by example"
-msgstr "Lernen Sie anhand eines Beispiels"
+msgid "Learn by Example"
+msgstr "Lernen Sie anhand von Beispielen"
 
 #: ../system/core-workflows/learn-by-example.rst:4
 msgid ""
@@ -21800,7 +22398,11 @@ msgstr ""
 "Um mehr über Core Workflows im Detail zu erfahren, gehen Sie zuerst zu :doc:"
 "`how-do-they-work`."
 
-#: ../system/core-workflows/learn-by-example.rst:9
+#: ../system/core-workflows/learn-by-example.rst:10
+msgid "Group Based Examples"
+msgstr "Gruppenbasierte Beispiele"
+
+#: ../system/core-workflows/learn-by-example.rst:12
 msgid ""
 "All following workflows have the same base configurations. The workflow may "
 "not use them all."
@@ -21808,29 +22410,37 @@ msgstr ""
 "Alle folgenden Workflows haben die gleichen Basiskonfigurationen. Der "
 "Workflow muss nicht alle Konfigurationen verwenden."
 
-#: ../system/core-workflows/learn-by-example.rst:17
+#: ../system/core-workflows/learn-by-example.rst:15
+msgid "Groups:"
+msgstr "Gruppen:"
+
+#: ../system/core-workflows/learn-by-example.rst:20
+msgid "Attributes:"
+msgstr "Attribute:"
+
+#: ../system/core-workflows/learn-by-example.rst:22
 msgid "Category (Single tree selection field, not mandatory, agents only)"
 msgstr "Kategorie (Einfach-Baumauswahl-Feld, kein Pflichtfeld, nur Agenten)"
 
-#: ../system/core-workflows/learn-by-example.rst:18
+#: ../system/core-workflows/learn-by-example.rst:23
 msgid ""
 "Approved (Boolean field, not mandatory, not shown, ``false`` as default)"
 msgstr ""
 "Genehmigt (Boolean-Feld, kein Pflichtfeld, versteckt, ``false`` als Standard)"
 
-#: ../system/core-workflows/learn-by-example.rst:19
+#: ../system/core-workflows/learn-by-example.rst:24
 msgid "Operating System (Text field, not mandatory, not shown)"
 msgstr "Betriebssystem (Textfeld, kein Pflichtfeld, versteckt)"
 
-#: ../system/core-workflows/learn-by-example.rst:20
+#: ../system/core-workflows/learn-by-example.rst:25
 msgid "Software used (Single selection field, not mandatory, not shown)"
 msgstr "Verwendete Software (Einfachauswahl-Feld, kein Pflichtfeld, versteckt)"
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 msgid "Group specific values and fields"
 msgstr "Gruppenspezifische Werte und Felder"
 
-#: ../system/core-workflows/learn-by-example.rst:23
+#: ../system/core-workflows/learn-by-example.rst:28
 msgid ""
 "This workflow set depends on the category field. It reduces the available "
 "set of values based on the group selected."
@@ -21838,11 +22448,11 @@ msgstr ""
 "Dieser Workflow hängt vom Kategorie-Feld ab. Es verringert die möglichen "
 "auswählbaren Werte auf der Grundlage der ausgewählten Gruppe."
 
-#: ../system/core-workflows/learn-by-example.rst:28
+#: ../system/core-workflows/learn-by-example.rst:33
 msgid "Workflow 2nd Level group"
 msgstr "Workflow 2nd Level Gruppe"
 
-#: ../system/core-workflows/learn-by-example.rst:30
+#: ../system/core-workflows/learn-by-example.rst:35
 msgid ""
 "This reduces the category options to ``2nd Level/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to mandatory and visible."
@@ -21855,11 +22465,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for 2nd level"
 msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für 2nd Level zeigt"
 
-#: ../system/core-workflows/learn-by-example.rst:38
+#: ../system/core-workflows/learn-by-example.rst:43
 msgid "Workflow Support group"
 msgstr "Workflow Support Gruppe"
 
-#: ../system/core-workflows/learn-by-example.rst:40
+#: ../system/core-workflows/learn-by-example.rst:45
 msgid ""
 "This reduces the category options to ``Support/*``, ``Internal/*`` and "
 "``Others``. It also sets further required fields to visible."
@@ -21872,11 +22482,11 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for support"
 msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für Support zeigt"
 
-#: ../system/core-workflows/learn-by-example.rst:48
+#: ../system/core-workflows/learn-by-example.rst:53
 msgid "Workflow Sales group"
 msgstr "Workflow Sales Gruppe"
 
-#: ../system/core-workflows/learn-by-example.rst:50
+#: ../system/core-workflows/learn-by-example.rst:55
 msgid ""
 "This reduces the category options to ``Sales/*``, ``Internal/*`` and "
 "``Others``."
@@ -21888,12 +22498,12 @@ msgstr ""
 msgid "Sample workflow that shows specific values and fields for sales"
 msgstr "Beispiel-Workflow, der bestimmte Werte und Felder für Sales zeigt"
 
-#: ../system/core-workflows/learn-by-example.rst:63
+#: ../system/core-workflows/learn-by-example.rst:68
 #: ../system/integrations/slack.rst:88
 msgid "The Result"
 msgstr "Das Ergebnis"
 
-#: ../system/core-workflows/learn-by-example.rst:58
+#: ../system/core-workflows/learn-by-example.rst:63
 msgid ""
 "This is what the agent would experience with the above workflows in place."
 msgstr ""
@@ -21906,11 +22516,11 @@ msgstr ""
 "Workflow zeigt Objektattribute an und schränkt die Optionen basierend auf "
 "der Auswahl in der Gruppe ein"
 
-#: ../system/core-workflows/learn-by-example.rst:85
+#: ../system/core-workflows/learn-by-example.rst:90
 msgid "Approval process"
 msgstr "Genehmigungsprozess"
 
-#: ../system/core-workflows/learn-by-example.rst:66
+#: ../system/core-workflows/learn-by-example.rst:71
 msgid ""
 "In this case ``approved`` is visible to agents by default. For this "
 "workflow, an additional role ``Approval person`` is required (no further "
@@ -21926,7 +22536,7 @@ msgstr ""
 "Beispiel-Workflow, der den Genehmigungs-Status auf bestimmte Rollen "
 "einschränkt"
 
-#: ../system/core-workflows/learn-by-example.rst:76
+#: ../system/core-workflows/learn-by-example.rst:81
 msgid ""
 "This workflow may work best in combination with a :doc:`trigger </manage/"
 "trigger>` but technically, this is not required."
@@ -21935,7 +22545,7 @@ msgstr ""
 "`Trigger </manage/trigger>`, aber technisch ist das nicht unbedingt "
 "erforderlich."
 
-#: ../system/core-workflows/learn-by-example.rst:79
+#: ../system/core-workflows/learn-by-example.rst:84
 msgid ""
 "Select fields may be a better approach because they allow more values than "
 "just a simple ``true`` or ``false``."
@@ -21951,11 +22561,11 @@ msgstr ""
 "Der Workflow legt die möglichen Werte von \"Approved ?\" auf eine bestimmte "
 "Auswahl fest, die von der Rolle des Benutzers abhängt"
 
-#: ../system/core-workflows/learn-by-example.rst:97
+#: ../system/core-workflows/learn-by-example.rst:103
 msgid "State dependent mandatory fields"
 msgstr "Vom Status abhängige Pflichtfelder"
 
-#: ../system/core-workflows/learn-by-example.rst:88
+#: ../system/core-workflows/learn-by-example.rst:93
 msgid ""
 "This workflow sets ``Category`` to mandatory if the agent wants to set the "
 "states ``closed`` or ``pending close`` to enforce categorization."
@@ -21977,6 +22587,78 @@ msgid ""
 msgstr ""
 "Der Workflow definiert das Kategorie-Feld als Pflichtfeld, wenn als Status "
 "\"geschlossen\" oder \"warten auf Schließen\" gewählt wird"
+
+#: ../system/core-workflows/learn-by-example.rst:106
+msgid "Manual Ticket Handover Process"
+msgstr "Prozess manuelle Ticketübergabe"
+
+#: ../system/core-workflows/learn-by-example.rst:108
+msgid "This example covers the handover of a ticket from one agent to another:"
+msgstr ""
+"In diesem Beispiel geht es um die Übergabe eines Tickets von einem Agenten "
+"an einen anderen:"
+
+#: ../system/core-workflows/learn-by-example.rst:110
+msgid ""
+"When the ticket owner is modified, a new text field (\"Handover\") shows up "
+"for a comment"
+msgstr ""
+"Wenn der Besitzer des Tickets geändert wird, wird ein neues Textfeld "
+"(\"Handover\") für einen Kommentar eingeblendet"
+
+#: ../system/core-workflows/learn-by-example.rst:112
+msgid ""
+"This may only be visible when the owner is changed, therefore it has to be "
+"hidden in general"
+msgstr ""
+"Dies darf nur sichtbar sein, wenn der Besitzer gewechselt wird, daher muss "
+"es grundsätzlich ausgeblendet werden"
+
+#: ../system/core-workflows/learn-by-example.rst:114
+msgid "The input in this handover text field is mandatory"
+msgstr "Die Eingabe in dieses Handover-Textfeld ist verpflichtend"
+
+#: ../system/core-workflows/learn-by-example.rst:115
+msgid ""
+"After submitting changes, the value of the handover field must be added as "
+"an note to the ticket (via trigger)"
+msgstr ""
+"Nach dem Speichern muss der Wert des Handover-Felds als Notiz zum Ticket "
+"hinzugefügt werden (mittels Trigger)"
+
+#: ../system/core-workflows/learn-by-example.rst:121
+msgid "Hiding handover field"
+msgstr "Ausblenden des Handover-Feldes"
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Hiding the handover field in core workflows"
+msgstr "Ausblenden des Handover-Felds in Core Workflows"
+
+#: ../system/core-workflows/learn-by-example.rst:126
+msgid "Showing handover field and setting it to mandatory"
+msgstr "Handover-Feld einblenden und als Pflichtfeld setzen"
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Showing the handover field and set it as mandatory"
+msgstr "Das Handover-Feld anzeigen und als Pflichtfeld festlegen"
+
+#: ../system/core-workflows/learn-by-example.rst:131
+msgid "Trigger writing handover input to a new article"
+msgstr ""
+"Trigger für die Erstellung eines neuen Artikels auf Basis des Handover-"
+"Inhalts"
+
+#: ../system/core-workflows/learn-by-example.rst:0
+msgid "Write handover content to a new article"
+msgstr "Handover-Inhalt in einen neuen Artikel schreiben"
+
+#: ../system/core-workflows/learn-by-example.rst:133
+msgid ""
+"As a result, the ticket includes an article of the type note which includes "
+"the predefined text and the handover comment."
+msgstr ""
+"Als Ergebnis enthält das Ticket einen Artikel vom Typ Notiz, der den "
+"vordefinierten Text und den Inhalt des Handover-Felds enthält."
 
 #: ../system/core-workflows/limitations.rst:6
 msgid "Core Workflows do not replace Triggers"
@@ -32359,6 +33041,25 @@ msgstr ""
 #~ "Sie vielleicht einen Blick auf Zammads :doc:`/manage/scheduler` werfen."
 
 #~ msgid ""
+#~ "In some situations the normal follow-up detection is not enough. This "
+#~ "might be due to missing references in the subject (the ticket hook and "
+#~ "number). These options can help to recognize follow-ups to existing "
+#~ "tickets."
+#~ msgstr ""
+#~ "In manchen Szenarien ist die normale Nachfrage-Erkennung nicht "
+#~ "ausreichend. Das kann beispielsweise sein, wenn im Betreff die Ticket-"
+#~ "Referenz (Ticket-Hook und Nummer) fehlt. Das Einschalten dieser Option "
+#~ "hilft, auch in solchen Fällen eine Zuordnung von E-Mails zu bestehenden "
+#~ "Tickets zu bekommen."
+
+#~ msgid ""
+#~ "Please note that searching in attachment and body might lead to *false "
+#~ "follow-up detection*."
+#~ msgstr ""
+#~ "Bitte beachten Sie, dass die Suche im Anhang und im Text zu einer "
+#~ "*falschen Erkennung von Nachfragen* führen kann."
+
+#~ msgid ""
 #~ "Chat is becoming more and more important in the customer support. If used "
 #~ "properly, support via chat can be a real efficiency booster."
 #~ msgstr ""
@@ -32928,6 +33629,9 @@ msgstr ""
 
 #~ msgid "Available matching: *is set* or *not set*"
 #~ msgstr "Verfügbare Prüfung: *ist gesetzt* oder *ist nicht gesetzt*"
+
+#~ msgid "Allows you to check if time is accounted for an article."
+#~ msgstr "Damit können Sie prüfen, ob Zeit für einen Artikel erfasst wurde."
 
 #~ msgid "Type *(Scope: Ticket article)*"
 #~ msgstr "Typ *(Bezug: Artikel)*"

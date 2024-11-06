@@ -1,4 +1,4 @@
-Learn by example
+Learn by Example
 ================
 
 This page provides some basic examples for Core Workflows.
@@ -6,18 +6,23 @@ Of course you can build much more complex workflows if needed.
 
 To learn about Core Workflows in detail, first go to :doc:`how-do-they-work`.
 
+Group Based Examples
+--------------------
+
 All following workflows have the same base configurations.
 The workflow may not use them all.
 
-   * Groups
-      * Sales
-      * Support
-      * 2nd Level
-   * Attributes
-      * Category (Single tree selection field, not mandatory, agents only)
-      * Approved (Boolean field, not mandatory, not shown, ``false`` as default)
-      * Operating System (Text field, not mandatory, not shown)
-      * Software used (Single selection field, not mandatory, not shown)
+* Groups:
+
+  * Sales
+  * Support
+  * 2nd Level
+* Attributes:
+
+  * Category (Single tree selection field, not mandatory, agents only)
+  * Approved (Boolean field, not mandatory, not shown, ``false`` as default)
+  * Operating System (Text field, not mandatory, not shown)
+  * Software used (Single selection field, not mandatory, not shown)
 
 1. Group specific values and fields
       This workflow set depends on the category field.
@@ -96,3 +101,34 @@ The workflow may not use them all.
          .. figure:: /images/system/core-workflows/examples/3_state-dependent-mandatory-fields_result.gif
             :alt: Workflow sets category field to mandatory upon choosing closed or pending close as state
             :width: 90%
+
+Manual Ticket Handover Process
+------------------------------
+
+This example covers the handover of a ticket from one agent to another:
+
+- When the ticket owner is modified, a new text field ("Handover") shows up
+  for a comment
+- This may only be visible when the owner is changed, therefore it has to
+  be hidden in general
+- The input in this handover text field is mandatory
+- After submitting changes, the value of the handover field must be added as an
+  note to the ticket (via trigger)
+
+Hiding handover field
+   .. figure:: /images/system/core-workflows/examples/example-handover-hide.png
+      :alt: Hiding the handover field in core workflows
+      :width: 90%
+
+Showing handover field and setting it to mandatory
+   .. figure:: /images/system/core-workflows/examples/example-handover-show.png
+      :alt: Showing the handover field and set it as mandatory
+      :width: 90%
+
+Trigger writing handover input to a new article
+   .. figure:: /images/system/core-workflows/examples/example-handover-trigger.png
+      :alt: Write handover content to a new article
+      :width: 90%
+
+As a result, the ticket includes an article of the type note which includes
+the predefined text and the handover comment.
