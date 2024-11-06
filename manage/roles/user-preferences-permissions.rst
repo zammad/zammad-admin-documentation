@@ -82,7 +82,8 @@ User Preferences Permissions
    * - ``user_preferences.password``
      - Change account password
      - | Make sure to **revoke this permission** for all your users
-       | when using a third-party identity server (like LDAP).
+       | when using a third-party identity server (like LDAP) as
+       | your only allowed authentication method.
    * - ``user_preferences.two_factor_authentication``
      - | Allow users to setup and configure
        | their two factor authentication
