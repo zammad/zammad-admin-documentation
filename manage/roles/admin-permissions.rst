@@ -50,6 +50,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.channel_chat``
      - :doc:`Channels > Chat </channels/chat>`
      - Accessing chat for agents: ``chat.agent``
+   * - ``admin.checklist``
+     - :doc:`Manage > Checklist </manage/checklist>`
+     -
    * - ``admin.channel_email``
      - :doc:`Channels > Email </channels/email/index>`
      -
@@ -76,6 +79,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
      - Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`
    * - ``admin.channel_web``
      - :doc:`Channels > Web </channels/web>`
+     -
+   * - ``admin.channel_whatsapp``
+     - :doc:`Channels > Whatsapp </channels/whatsapp/index>`
      -
    * - ``admin.core_workflows``
      - :doc:`System > Core Workflows </system/core-workflows>`
@@ -115,6 +121,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.overview``
      - :doc:`Manage > Overviews</manage/overviews>`
      -
+   * - ``admin.public_links``
+     - :doc:`Manage > Public Links </manage/public-links>`
+     -
    * - ``admin.package``
      - :doc:`System > Packages </system/packages>`
      -
@@ -139,6 +148,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.sla``
      - :doc:`Manage > SLAs </manage/slas/index>`
      -
+   * - ``admin.system_report``
+     - :doc:`System > System Report </system/system-report>`
+     -
    * - ``admin.tag``
      - :doc:`Manage > Tags </manage/tags>`
      -
@@ -151,6 +163,18 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.ticket``
      - :doc:`Settings > Tickets </settings/ticket>`
      - Does not grant access to :doc:`/misc/composer`
+   * - ``admin.ticket_auto_assignment``
+     - :ref:`Settings > Ticket > Auto Assignment <auto_assignment>`
+     -
+   * - ``admin.ticket_duplicate_detection``
+     - :ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`
+     -
+   * - ``admin.ticket_priority``
+     - :ref:`System > Objects >Ticket Priority <ticket-priority-reference>`
+     -
+   * - ``admin.ticket_state``
+     - :ref:`System > Objects >Ticket State <ticket-state-reference>`
+     -
    * - ``admin.time_accounting``
      - :doc:`Manage > Time Accounting </manage/time-accounting>`
      - Also allows the export of timekeeping records.
@@ -166,3 +190,6 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
        | customers, but they can't modify permission etc.
        | 🏴‍☠️ This permission allows users to
         :ref:`hijack other user sessions <view-from-users-perspective>` .
+   * - ``admin.webhook``
+     - :doc:`Manage > Webhook </manage/webhook>`
+     -
