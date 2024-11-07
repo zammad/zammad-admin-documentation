@@ -15,7 +15,7 @@ User Preferences Permissions
 .. figure:: /images/manage/roles/permissions-user-preferences.png
    :alt: User preferences permissions in the New Role dialog
    :align: center
-   :scale: 60%
+   :scale: 80%
 
    User preferences permissions are shown at the bottom of the
    New Role dialog...
