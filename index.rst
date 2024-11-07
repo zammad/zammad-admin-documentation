@@ -80,6 +80,7 @@ Zammad Admin Documentation
    system/monitoring
    system/packages
    system/sessions
+   system/system-report
    system/version
 
 .. _misc-docs:
