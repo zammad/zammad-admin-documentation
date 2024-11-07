@@ -190,6 +190,8 @@ Default Notifications
    In case you want to go back to the initial state of ticket notifications, you
    can click on **Reset to default** button.
 
+.. _duplicate_detection:
+
 Duplicate Detection
 -------------------
 

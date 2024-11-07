@@ -193,6 +193,8 @@ Ticket state example
       :scale: 80%
       :align: center
 
+.. _ticket-priority-reference:
+
 Ticket Priority
 ^^^^^^^^^^^^^^^
 

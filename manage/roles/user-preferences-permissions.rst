@@ -15,7 +15,7 @@ User Preferences Permissions
 .. figure:: /images/manage/roles/permissions-user-preferences.png
    :alt: User preferences permissions in the New Role dialog
    :align: center
-   :scale: 60%
+   :scale: 80%
 
    User preferences permissions are shown at the bottom of the
    New Role dialog...
@@ -40,6 +40,10 @@ User Preferences Permissions
        | Zammad via :docs:`REST API </api/intro.html>`
      - | Generated tokens will never have more permissions
        | than the user that generated them.
+   * - ``user_preferences.appearance``
+     - Appearance configuration
+     - | Users can switch between dark, light and
+       | automatic mode.
    * - ``user_preferences.avatar``
      - Avatar settings
      - Override the default Gravatar with a custom avatar
