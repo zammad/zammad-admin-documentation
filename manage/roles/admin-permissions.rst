@@ -149,7 +149,7 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
      - :doc:`Manage > SLAs </manage/slas/index>`
      -
    * - ``admin.system_report``
-     -
+     - :doc:`System > System Report </system/system-report>`
      -
    * - ``admin.tag``
      - :doc:`Manage > Tags </manage/tags>`
