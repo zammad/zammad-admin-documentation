@@ -40,6 +40,10 @@ User Preferences Permissions
        | Zammad via :docs:`REST API </api/intro.html>`
      - | Generated tokens will never have more permissions
        | than the user that generated them.
+   * - ``user_preferences.appearance``
+     - Appearance configuration
+     - | Users can switch between dark, light and
+       | automatic mode.
    * - ``user_preferences.avatar``
      - Avatar settings
      - Override the default Gravatar with a custom avatar
