@@ -21,9 +21,10 @@ of used and available (booked) agent seats there. By using the *see more* link
 you can also expand an agent list to see the currently configured active agents.
 This list *does not* count accounts with admin permissions only.
 
-.. figure:: /images/system/subscription/active-agent-list.gif
+.. figure:: /images/system/subscription/active-agent-list.png
    :alt: Within subscription you can always see how many agents are still
          available to add and who uses the seats.
+   :align: center
 
 Learn more on how to manage your agents in general
 :doc:`here </manage/users/index>`.
