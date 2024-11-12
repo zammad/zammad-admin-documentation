@@ -73,7 +73,6 @@ Zammad Admin Documentation
    API (System-Documentation) <https://docs.zammad.org/en/latest/api-intro.html>
    system/objects
    system/core-workflows
-   system/variables
    system/translations
    system/data-privacy
    system/maintenance
@@ -89,6 +88,7 @@ Zammad Admin Documentation
    :maxdepth: 2
    :caption: Misc
 
+   misc/variables
    misc/composer
    misc/object-conditions/index
    misc/first-steps

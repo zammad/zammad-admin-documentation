@@ -97,7 +97,7 @@ You can configure the following information for webhooks:
 
       When switched on, a code editor will be shown below, where you can
       configure custom payload for your webhook in JSON format. To insert
-      supported :doc:`/system/variables` use ``::`` or ``#{``
+      supported :doc:`/misc/variables` use ``::`` or ``#{``
       shortcuts for autocomplete.
 
       Custom payload must be valid JSON syntax! Code editor will inform you
