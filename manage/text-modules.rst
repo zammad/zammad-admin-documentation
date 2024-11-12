@@ -54,7 +54,7 @@ information on how to use text modules in our
 
 ..    thus only the relevant text modules are displayed for each country.
 
-The example text modules below use :doc:`/system/variables` to dynamically
+The example text modules below use :doc:`/misc/variables` to dynamically
 insert information like the customer's or agent's names.
 
 **Examples of snippets are**::

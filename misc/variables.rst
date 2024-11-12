@@ -43,8 +43,8 @@ these are:
 * Organization (``organization``)
 * Group (``group``)
 
-The second part is the name of the object. This is the name you define during
-object creation and can be found within the object menu at any time.
+The second part is the name of the attribute. This is the name you define during
+object creation and can be found within the object attribute menu at any time.
 The first and second part of a variable is divided by a point,
 e.g.: ``ticket.number`` which will in total be ``#{ticket.number}``.
 

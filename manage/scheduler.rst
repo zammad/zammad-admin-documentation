@@ -17,7 +17,7 @@ that you want to be executed on these objects.
 .. hint::
 
    Schedulers can be used to send periodic reminder emails.
-   Use :doc:`/system/variables` to build highly-customized email templates.
+   Use :doc:`/misc/variables` to build highly-customized email templates.
 
    Schedulers only perform ``2000`` objects per run. This is a security
    function in case you accidentally misconfigured the scheduler.

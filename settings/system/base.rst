@@ -6,7 +6,7 @@ Base
 Fully Qualified Domain Name
    The URL of your Zammad installation.
 
-   This setting is used within :doc:`/system/variables` and notifications.
+   This setting is used within :doc:`/misc/variables` and notifications.
 
    .. include:: /settings/system/system-base.include.rst
 
@@ -14,7 +14,7 @@ HTTP type
    The HTTP type tells your installation how your clients connect.
    This is relevant for authentication and cookie security.
 
-   This setting is used within :doc:`/system/variables` and notifications.
+   This setting is used within :doc:`/misc/variables` and notifications.
 
    .. include:: /settings/system/system-base.include.rst
 

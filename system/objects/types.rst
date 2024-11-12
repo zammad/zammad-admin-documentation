@@ -225,12 +225,12 @@ External Data Source field
 
    Search URL
       Set your endpoint where Zammad fetches the data. Please make
-      sure to include a valid search :doc:`variable <../variables>` as an
+      sure to include a valid search :doc:`variable </misc/variables>` as an
       URL parameter. Example for a free text search at user input:
       ``#{search.term}``
 
       If in doubt, ask the responsible person for the external data source how
-      they expect the strucuture of the URL.
+      they expect the structure of the URL.
 
       .. note::
          Depending on your search variable, the preview might work or not. The
@@ -359,7 +359,7 @@ Providing the link-template field below allows you to do so:
 
    .. tip::
 
-      You can use any :doc:`Zammad variable </system/variables>` as long as
+      You can use any :doc:`Zammad variable </misc/variables>` as long as
       it's available in the moment you need it.
 
 As a result, you are redirected to Google with a search for the value of the

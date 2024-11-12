@@ -20,7 +20,7 @@ Dynamic Signatures
 ------------------
 
 To individualize the signatures, it is possible to automatically load specific
-information into a signature via :doc:`/system/variables`. All information
+information into a signature via :doc:`/misc/variables`. All information
 stored on the ticket, assigned customers or agents can be inserted.
 This makes it possible to design the signature individually.
 To load a list of available variables, enter two colons
