@@ -77,7 +77,7 @@ When creating a trigger, define your changes here:
    .. figure:: /images/manage/trigger/actions-of-a-trigger.png
 
 .. hint:: Certain actions (such as *email*, *SMS* and *notes*) support
-   :doc:`/system/variables`, which can be used to build
+   :doc:`/misc/variables`, which can be used to build
    highly-customized message templates.
 
 A trigger can do the following things once its conditions have been met:
@@ -91,7 +91,7 @@ A trigger can do the following things once its conditions have been met:
 
    You can also combine static text with placeholders for text fields.
    Remember that the placeholders' values have to be known during trigger
-   runtime. Learn more about :doc:`/system/variables`.
+   runtime. Learn more about :doc:`/misc/variables`.
 
 * Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in

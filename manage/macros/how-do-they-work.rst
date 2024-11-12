@@ -27,7 +27,7 @@ Creating Macros
 
    .. note:: Unlike triggers, the scheduler, and text modules,
       macro actions do **not** support the use of
-      :doc:`/system/variables`.
+      :doc:`/misc/variables`.
 
    .. warning:: If the ticket is missing a required attribute
       and the macro doesn't set it, then **no actions will be
