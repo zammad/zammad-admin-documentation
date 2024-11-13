@@ -102,16 +102,16 @@ will request you to provide one at this point.
 Billing Information
 ^^^^^^^^^^^^^^^^^^^
 
-You can control all billing relevant information like invoices, billing address
-and the option to cancel your subscription.
+You can control all billing relevant information like invoices and the billing
+address.
 
 All adjusted billing information below only affect future invoices.
 If your invoice was issued wrong, please contact
 `our sales team <https://zammad.com/en/company/contact>`_.
 
 Billing address
-   Provide your company address here, make sure to include the companies name
-   in case required. This address will be referenced on your invoice.
+   Provide your company address here, make sure to include the name of the
+   company in case required. This address will be referenced on your invoice.
 
 VAT ID
    Provide your VAT ID here. If applicable your invoice will not contain
