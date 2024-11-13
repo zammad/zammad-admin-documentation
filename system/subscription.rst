@@ -159,7 +159,7 @@ Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
 subscription by using the red *Yes, please cancel my subscription* button.
 
-To cancel the description, enter the FQDN of your Zammad instance and provide
+To cancel the subscription, enter the FQDN of your Zammad instance and provide
 a reason for your cancellation.
 
 Your subscription will end the day after your trial or billing period ends.
