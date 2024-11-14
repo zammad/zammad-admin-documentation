@@ -127,7 +127,7 @@ The ones that aren't are described below.
    in different places in Zammad (e.g. as ticket customer, in conditions in
    triggers and schedulers).
 
-   What's the difference between disabling and deleting a user?
+   What's the difference between deactivating and deleting a user?
 
    1. There is no way to restore a deleted user;
       inactive users can be reactivated at any time.
