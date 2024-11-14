@@ -124,7 +124,8 @@ The ones that aren't are described below.
 
 ▶️ Active
    Inactive users aren't able to login anymore. However, they can still be used
-   as a ticket customer.
+   in different places in Zammad (e.g. as ticket customer, in conditions in
+   triggers and schedulers).
 
    What's the difference between disabling and deleting a user?
 
