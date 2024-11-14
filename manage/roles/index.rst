@@ -124,6 +124,6 @@ Default at Signup
 
 Active
    Roles can't be deleted but set to inactive. If you do so, all users loose
-   the permissions of this role. If this deactivated role is the only one of a
+   the permissions of this role. If this inactive role is the only one of a
    user, this account isn't able to do anything in Zammad. The login is still
    possible.
