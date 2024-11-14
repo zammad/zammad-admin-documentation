@@ -9,6 +9,8 @@ Click on a group to edit it, or click on *New group* to create a new group.
 No matter if you're going to edit or create a new group, each group
 comes with the following settings you can adjust as needed.
 
+Please note that groups cannot be removed.
+
 Name
    This is the name your agents (and customers when using :doc:`/channels/web`)
    will see within the Zammad-UI.
@@ -99,14 +101,19 @@ Note
    access the group management area.
 
 Active
-   Don't need the group any more? If you can't or don't want to recycle (rename)
-   the group, you can also set it to inactive. Agents and customers will no
-   longer be able to see the group and thus can't add, update or read it's
-   tickets.
+   Don't need the group anymore? If you can't or don't want to recycle (rename)
+   the group, you can also set it to inactive. Agents will no longer be able to
+   see or edit tickets in this group. However, customers can still interact
+   with their existing tickets in an inactive group.
 
-   .. note::
+   .. tip::
 
-      Currently, groups cannot be removed.
+      Want to handle tickets from an inactive group, which are updated by
+      customers?
+
+      You could e.g. create a trigger which moves them to another
+      group when they got updated. Create this trigger before deactivating the
+      group so it is selectable in the trigger configuration.
 
    .. warning::
 
