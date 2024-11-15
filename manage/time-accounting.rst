@@ -94,7 +94,8 @@ entry in the **Activity** table under the **Accounted Time** tab.
 
 You can manage available activity types in this screen like any other Zammad
 object. Only active types will be available for the selection when recording new
-times.
+times. If an activity type has accounted time, it is still displayed in tickets
+and included in the accounted time overview.
 
 .. figure:: /images/manage/time-accounting/time-accounting-new-type.png
    :align: center
