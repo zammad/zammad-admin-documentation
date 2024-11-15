@@ -123,8 +123,11 @@ The ones that aren't are described below.
       You can! To learn more, see :doc:`/system/objects`.
 
 ▶️ Active
-   Disabling this flag is a soft alternative to deleting a user.
-   So what's the difference?
+   Inactive users aren't able to login anymore. However, they can still be used
+   in different places in Zammad (e.g. as ticket customer, in conditions in
+   triggers and schedulers).
+
+   What's the difference between deactivating and deleting a user?
 
    1. There is no way to restore a deleted user;
       inactive users can be reactivated at any time.
@@ -132,7 +135,8 @@ The ones that aren't are described below.
    2. When a user is deleted, all their associated tickets are lost, as well;
       deactivating a user keeps all associated tickets intact.
 
-   3. Inactive users still appear in search results:
+   3. Inactive users still appear in search results and can be used as a
+      ticket customer:
 
       .. figure:: /images/manage/users/customer-search-returns-inactive-user.png
          :alt: An inactive user displayed in a customer search list
