@@ -11,7 +11,7 @@ SAML with Microsoft 365
 - Choose "Integrate any other application you don't find in the gallery", then
   click "Create"
 
-1. Configure SAML-based Single Sign-On (SSO)
+2. Configure SAML-based Single Sign-On (SSO)
 --------------------------------------------
 
 - After the application is created, go to its overview page
@@ -62,7 +62,7 @@ In the "SAML Signing Certificate" section, download the "Certificate (Base64)":
 - SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
 - Save the settings
 
-1. Assign Users
+6. Assign Users
 ---------------
 
 In Microsoft Entra ID, assign the relevant users to the Zammad application to

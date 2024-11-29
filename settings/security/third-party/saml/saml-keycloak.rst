@@ -1,8 +1,8 @@
 SAML with Keycloak
 ==================
 
-Keycloak Configuration
-----------------------
+Step 1: Keycloak Configuration
+------------------------------
 
 * **To add Zammad as a client,**
   save the XML configuration to disk
