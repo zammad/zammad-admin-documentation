@@ -55,15 +55,19 @@ In the "SAML Signing Certificate" section, download the "Certificate (Base64)":
   > "Authentication via SAML"
 - Provide the following information:
 
-  - SAML IdP Login URL: The Login URL from the Microsoft Entra Admin Center.
-  - SAML IdP Logout URL: The Logout URL from the Microsoft Entra Admin Center.
-
-- Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``
-- SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
-- Save the settings
+  - IDP SSO target URL: The Login URL from the Microsoft Entra Admin Center.
+  - IDP single logout target URL: The Logout URL from the Microsoft Entra Admin
+    Center.
+  - Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``
+  - SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
+  - Save the settings
 
 6. Assign Users
 ---------------
 
 In Microsoft Entra ID, assign the relevant users to the Zammad application to
 grant them access.
+
+.. hint::
+  Read on at :ref:`saml-zammad` for a description of the specific fields in
+  Zammad.

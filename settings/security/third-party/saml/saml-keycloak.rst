@@ -45,106 +45,21 @@ Step 1: Keycloak Configuration
 
 * You also need to enable **Sign assertions**.
 
-Step 2: Configure Zammad
-------------------------
+2. Configure Zammad
+-------------------
 
-Enable SAML and enter your IdP's details in the Admin Panel under
-**Settings > Security > Third Party Applications > Authentication via SAML**:
+- Log in to Zammad as an administrator
+- In the admin panel go to "Settings" > "Security" > "Third-party Applications"
+  > "Authentication via SAML"
+- Provide the following information:
 
-.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_general.png
-   :alt: Example configuration of SAML part 1
-   :scale: 60%
-   :align: center
+  - SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/saml``
+  - SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/saml``
 
-Display name
-   Allows you to define a custom button name for SAML. This helps your users
-   to understand better what the button on the login page does.
+- Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``
+- SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
+- Save the settings
 
-   Defaults to ``SAML``.
-
-IDP SSO target URL
-   This is the target URL Zammad shall redirect to when the user presses
-   the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml
-
-IDP single logout target URL
-   This is the URL to which the single logout request and response should be
-   sent.
-
-IDP certificate
-   The public certificate of your IDP for Zammad to verify during the callback
-   phase.
-
-IDP certificate fingerprint
-   The fingerprint of your IDPs public certificate to verify during callback
-   phase.
-
-   .. note:: 🔏 **For the IdP certificate / certificate fingerprint:**
-
-      Provide **only one or the other**—do not provide both!
-      (Between the two, we recommend the signing certificate itself:
-      fingerprints use SHA-1, which `has been broken for a while now
-      <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
-
-      **Keycloak users:** Find your certificate in the Keycloak admin panel
-      under **Realm Settings > Keys > Algorithm: RS256 > Certificate**.
-
-Name identifier format
-   This is the unique identifiers field type. Usually it should be
-   ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``.
-
-   Zammad **expects an email address as unique identifier**!
-
-UID attribute name
-   Here you can define an attribute that uniquely identifies the user. If unset,
-   the name identifier returned by the IDP is used.
-
-.. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_security.png
-   :alt: Example configuration of SAML part 2
-   :scale: 60%
-   :align: center
-
-SSL verification
-   Decide if the certificate for the connection to the IdP service
-   has to be verified or not (default: ``yes``).
-
-   .. include:: /includes/ssl-verification-warning.rst
-
-Signing & Encrypting
-   Define if you want to sign, encrypt, do both or nothing for the requests.
-
-Certificate (PEM)
-   Paste the public certificate of your Zammad SAML client, if you want to
-   encrypt the requests.
-
-   Make sure the certificate is:
-
-   - already valid and not yet expired
-   - no CA certificate
-   - valid for signing and encrypting
-
-Private key (PEM)
-   Paste the private key of your Zammad SAML client here, if you want to sign
-   the requests.
-
-   Make sure the key is an RSA key with a length of at least 2048 bits.
-
-Private key secret
-   If your private key is secured with a secret, you can provide it here.
-
-Your callback URL
-   This URL is needed for your IdP configuration so it knows where to redirect
-   to after successful authentication.
-
-.. hint:: After saving your input by clicking on the "Submit" button, Zammad
-   verifies the provided keys/certificates (e.g. if they are valid for
-   signing/encrypting and if they aren't expired).
-
-
-See :ref:`automatic account linking <automatic-account-linking>` for details on
-how to link existing Zammad accounts to IdP accounts.
-
-Troubleshooting
----------------
-
-Automatic account linking doesn't work
-   Have you double-checked your IdP's user attribute mapping configuration?
+.. hint::
+  Read on at :ref:`saml-zammad` for a description of the specific fields in
+  Zammad.
