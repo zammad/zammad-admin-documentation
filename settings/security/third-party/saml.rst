@@ -18,8 +18,9 @@ or `Okta <https://www.okta.com/>`_).
 This guide assumes you are already using SAML within your organization
 (i.e., that your IdP is fully set up).
 
-.. warning:: Please note: Our instructions are based on connecting Zammad with
-   Keycloak.
+.. warning:: Please note: Our instructions below are based on connecting Zammad
+   with Keycloak. We have an additional example about
+   :doc:`connecting Microsoft 365 / Entra with Zammad <./saml-microsoft>`.
 
 Step 1: Configure Your IdP
 --------------------------
