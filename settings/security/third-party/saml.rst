@@ -1,31 +1,35 @@
 SAML
 ====
 
-Connect your SAML (Security Assertion Markup Language) identity provider as a
-single sign-on (SSO) method.
+Introduction
+------------
 
-SAML is an open standard for SSO authentication (among other things).
-Sign-ins are shared across multiple **service providers**
+Connect your SAML (Security Assertion Markup Language) identity provider as a
+single sign-on (SSO) method. SAML is an open standard for SSO authentication
+(among other things). Sign-ins are shared across multiple **service providers**
 and managed by a central **identity provider** (IdP).
 
 In this case, the service provider is Zammad,
 and the IdP is a software service that you either host or subscribe to
-(*e.g.,* `Keycloak <https://www.keycloak.org/>`_,
+(e.g. `Keycloak <https://www.keycloak.org/>`_,
 `Redhat SSO Server <https://access.redhat.com/products/red-hat-single-sign-on>`_,
 `ADFS <https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services>`_,
 or `Okta <https://www.okta.com/>`_).
 
 This guide assumes you are already using SAML within your organization
-(i.e., that your IdP is fully set up).
+(i.e. that your IdP is fully set up).
 
-.. warning:: Please note: Our instructions are based on connecting Zammad with
-   Keycloak.
+Basic Configuration
+-------------------
 
-Step 1: Configure Your IdP
---------------------------
+This section describes the setup of an IdP in a general way. See
+:ref:`saml-guides` for setup guides for Keycloak and Microsoft SAML.
+
+Configure Your IdP
+^^^^^^^^^^^^^^^^^^
 
 Add Zammad as a Client/App
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""
 
 Import Zammad into your IdP using the XML configuration
 found at ``https://your.zammad.domain/auth/saml/metadata``.
@@ -44,7 +48,7 @@ Set the **Assertion Consumer Service Binding URL**
 to ``http://your.zammad.domain/auth/saml/callback``.
 
 Set Up User Attribute Mapping
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 Zammad requests the following user attributes (or “properties”) from the IdP:
 
@@ -58,51 +62,30 @@ how user attributes in SAML correspond to those in Zammad.
 For a more detailed breakdown,
 refer to the XML metadata file referenced in the previous section.
 
-Per-IdP Instructions
-^^^^^^^^^^^^^^^^^^^^
+.. _saml-guides:
 
-Keycloak
-   * **To add Zammad as a client,**
-     save the XML configuration to disk
-     (``https://your.zammad.domain/auth/saml/metadata``)
-     and use **Clients > Clients list > Import client** in the Keycloak admin panel.
+Configuration Guides
+--------------------
 
-   * To help Zammad **match its own user accounts to Keycloak users**,
-     create a user attribute (or “property”) mapper. In **Clients list**, click on your
-     newly created Client ID, choose the tab **Client scopes** and click on the link which
-     refers to your Zammad instance. Choose **Add mapper > By configuration > User Property**
-     and create a mapper with the following entries:
+You can find specific configuration guides for:
 
-     .. list-table::
+- :doc:`Keycloak <./saml/saml-keycloak>`
+- :doc:`Microsoft SAML <./saml/saml-microsoft>`
 
-        * - **Name**
-          - ``email``
-        * - **Mapper Type**
-          - ``User Property``
-        * - **Property**
-          - ``emailAddress``
-        * - **SAML Attribute Name**
-          - ``email``
-        * - **SAML Attribute NameFormat**
-          - ``basic``
+If your are using another IdP, adapt it to your needs. For a description of the
+fields in Zammad, read on below.
 
-     In the example above, we're telling Zammad that
-     whenever it receives a SAML login request,
-     it should take the ``email`` property from Keycloak,
-     look for a Zammad user with the same ``email`` attribute,
-     and create a new session for that user.
+.. toctree::
+   :maxdepth: 2
+   :hidden:
 
-     If your Keycloak users' email addresses are stored on another property
-     (*e.g.,* ``username``), adjust accordingly.
+   saml/saml-keycloak
+   saml/saml-microsoft
 
-   * Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/saml/metadata``)
-     in the field **Master SAML Processing URL**.
+.. _saml-zammad:
 
-   * You also need to enable **Sign assertions**.
-
-
-Step 2: Configure Zammad
-------------------------
+General Zammad Configuration
+----------------------------
 
 Enable SAML and enter your IdP's details in the Admin Panel under
 **Settings > Security > Third Party Applications > Authentication via SAML**:
@@ -120,7 +103,7 @@ Display name
 
 IDP SSO target URL
    This is the target URL Zammad shall redirect to when the user presses
-   the SAML button. For Keycloak, this needs to look like https://your.domain/realms/your-realm/protocol/saml
+   the SAML button.
 
 IDP single logout target URL
    This is the URL to which the single logout request and response should be
