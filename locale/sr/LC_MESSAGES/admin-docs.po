@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-14 11:32+0100\n"
-"PO-Revision-Date: 2024-11-19 05:00+0000\n"
+"POT-Creation-Date: 2024-11-29 15:26+0100\n"
+"PO-Revision-Date: 2024-12-04 10:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/sr/>\n"
@@ -27,6 +27,7 @@ msgstr "Ћаскање"
 #: ../channels/chat.rst:5 ../channels/facebook.rst:5
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
+#: ../settings/security/third-party/saml.rst:5
 #: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr "Увод"
@@ -602,7 +603,7 @@ msgstr "STARTTLS"
 
 #: ../channels/email/accounts/account-setup.rst:141
 #: ../channels/email/accounts/account-setup.rst:264
-#: ../manage/webhook/add.rst:72 ../settings/security/third-party/saml.rst:166
+#: ../manage/webhook/add.rst:72 ../settings/security/third-party/saml.rst:149
 #: ../system/integrations/i-doit.rst:74
 msgid "SSL verification"
 msgstr "SSL провера"
@@ -923,7 +924,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:288
 #: ../channels/google/basic-setup.rst:231
 #: ../channels/microsoft365/accounts/account-setup.rst:170
-#: ../settings/security/third-party/saml.rst:203
+#: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:53 ../system/integrations/gitlab.rst:46
 #: ../system/integrations/pgp/index.rst:112
@@ -2779,7 +2780,7 @@ msgstr ""
 #: ../settings/security/ssl-certificates.rst:17
 #: ../system/integrations/smime/prerequisites.rst:2
 msgid "Prerequisites"
-msgstr "Услови"
+msgstr "Предуслови"
 
 #: ../channels/facebook.rst:24
 msgid "`Meta business account <https://business.facebook.com/overview>`_"
@@ -4938,8 +4939,8 @@ msgid "OpenId permissions"
 msgstr "OpenId дозволе"
 
 #: ../channels/microsoft365/accounts/register-app.rst:87
-#: ../settings/security/third-party/saml.rst:79
-#: ../settings/security/third-party/saml.rst:85
+#: ../settings/security/third-party/saml/saml-keycloak.rst:23
+#: ../settings/security/third-party/saml/saml-keycloak.rst:29
 msgid "``email``"
 msgstr "``email``"
 
@@ -21212,64 +21213,63 @@ msgstr ""
 msgid "SAML"
 msgstr "SAML"
 
-#: ../settings/security/third-party/saml.rst:4
-msgid ""
-"Connect your SAML (Security Assertion Markup Language) identity provider as "
-"a single sign-on (SSO) method."
-msgstr ""
-"Повежите свог SAML (Security Assertion Markup Language) сервис провајдера "
-"као метод јединствене пријаве (SSO)."
-
 #: ../settings/security/third-party/saml.rst:7
 msgid ""
-"SAML is an open standard for SSO authentication (among other things). Sign-"
-"ins are shared across multiple **service providers** and managed by a "
-"central **identity provider** (IdP)."
+"Connect your SAML (Security Assertion Markup Language) identity provider as "
+"a single sign-on (SSO) method. SAML is an open standard for SSO "
+"authentication (among other things). Sign-ins are shared across multiple "
+"**service providers** and managed by a central **identity provider** (IdP)."
 msgstr ""
-"SAML је отворени стандард за SSO аутентификацију (између осталог). Пријаве "
-"су подељене на више **сервисних провајдера** и њима управља централни "
-"**провајдер идентитета** (IdP)."
+"Повежите Zammad са вашoм SAML (Security Assertion Markup Language) "
+"апликацијом за јединствену пријаву (SSO). SAML је отворени стандард за SSO "
+"аутентификацију (између осталог). Пријаве су подељене на више **сервисних "
+"провајдера** и њима управља централни **провајдер идентитета** (IdP)."
 
-#: ../settings/security/third-party/saml.rst:11
+#: ../settings/security/third-party/saml.rst:12
 msgid ""
 "In this case, the service provider is Zammad, and the IdP is a software "
-"service that you either host or subscribe to (*e.g.,* `Keycloak <https://www."
+"service that you either host or subscribe to (e.g. `Keycloak <https://www."
 "keycloak.org/>`_, `Redhat SSO Server <https://access.redhat.com/products/red-"
 "hat-single-sign-on>`_, `ADFS <https://docs.microsoft.com/en-us/windows-"
 "server/identity/active-directory-federation-services>`_, or `Okta <https://"
 "www.okta.com/>`_)."
 msgstr ""
-"У овом случају, сервисни провајдер је Zammad, а IddP је софтверски сервис "
-"који или хостујете сами или се претплатите на њега (*нпр.* `Keycloak "
+"У овом случају, сервисни провајдер је Zammad, а IdP је софтверски сервис "
+"који или хостујете сами или се претплатите на њега (нпр. `Keycloak "
 "<https://www.keycloak.org/>`_, `Redhat SSO Server <https://access.redhat.com/"
 "products/red-hat-single-sign-on>`_, `ADFS <https://docs.microsoft.com/en-us/"
 "windows-server/identity/active-directory-federation-services>`_ или `Okta "
 "<https://www.okta.com/>` _)."
 
-#: ../settings/security/third-party/saml.rst:18
+#: ../settings/security/third-party/saml.rst:19
 msgid ""
-"This guide assumes you are already using SAML within your organization (i."
-"e., that your IdP is fully set up)."
+"This guide assumes you are already using SAML within your organization (i.e. "
+"that your IdP is fully set up)."
 msgstr ""
 "Овај водич претпоставља да већ користите SAML у својој организацији (тј. да "
 "је ваш IdP у потпуности подешен)."
 
-#: ../settings/security/third-party/saml.rst:21
-msgid ""
-"Please note: Our instructions are based on connecting Zammad with Keycloak."
-msgstr ""
-"Обратите пажњу: наша упутства су базирана на повезивању Zammad-а са Keycloak-"
-"ом."
+#: ../settings/security/third-party/saml.rst:23
+msgid "Basic Configuration"
+msgstr "Основна подешавања"
 
 #: ../settings/security/third-party/saml.rst:25
-msgid "Step 1: Configure Your IdP"
-msgstr "Корак 1: Подесите свој IdP"
+msgid ""
+"This section describes the setup of an IdP in a general way. See :ref:`saml-"
+"guides` for setup guides for Keycloak and Microsoft SAML."
+msgstr ""
+"Овај одељак описује уопштено подашавање IdP. Погледајте :ref:`saml-guides` "
+"за водич кроз подешавања Keycloak и Microsoft SAML провајдера."
 
-#: ../settings/security/third-party/saml.rst:28
+#: ../settings/security/third-party/saml.rst:29
+msgid "Configure Your IdP"
+msgstr "Подесите свој IdP"
+
+#: ../settings/security/third-party/saml.rst:32
 msgid "Add Zammad as a Client/App"
 msgstr "Додајте Zammad као клијента/апликацију"
 
-#: ../settings/security/third-party/saml.rst:30
+#: ../settings/security/third-party/saml.rst:34
 msgid ""
 "Import Zammad into your IdP using the XML configuration found at ``https://"
 "your.zammad.domain/auth/saml/metadata``."
@@ -21277,7 +21277,7 @@ msgstr ""
 "Увезите Zammad у свој IdP користећи XML конфигурацију која се налази на "
 "``https://your.zammad.domain/auth/saml/metadata``."
 
-#: ../settings/security/third-party/saml.rst:33
+#: ../settings/security/third-party/saml.rst:37
 msgid ""
 "If your IdP doesn't support XML import, you will have to configure Zammad as "
 "a new client/app manually using the above XML metadata file for reference."
@@ -21286,11 +21286,11 @@ msgstr ""
 "клијента/апликацију ручно, користећи горњу XML датотеку мета података као "
 "референцу."
 
-#: ../settings/security/third-party/saml.rst:36
+#: ../settings/security/third-party/saml.rst:40
 msgid "For instance, when you see this tag:"
 msgstr "На пример, када видите ову ознаку:"
 
-#: ../settings/security/third-party/saml.rst:42
+#: ../settings/security/third-party/saml.rst:46
 msgid ""
 "Set the **Assertion Consumer Service Binding URL** (sometimes also listed as "
 "**Valid Redirect URIs**) to ``http://your.zammad.domain/auth/saml/callback``."
@@ -21299,33 +21299,33 @@ msgstr ""
 "као **Valid Redirect URIs**) на ``http://your.zammad.domain/auth/saml/"
 "callback``."
 
-#: ../settings/security/third-party/saml.rst:47
+#: ../settings/security/third-party/saml.rst:51
 msgid "Set Up User Attribute Mapping"
 msgstr "Подесите мапирање корисничких атрибута"
 
-#: ../settings/security/third-party/saml.rst:49
+#: ../settings/security/third-party/saml.rst:53
 msgid ""
 "Zammad requests the following user attributes (or “properties”) from the IdP:"
 msgstr ""
 "Zammad захтева следеће корисничке атрибуте (или „properties“) од IdP-а:"
 
-#: ../settings/security/third-party/saml.rst:51
+#: ../settings/security/third-party/saml.rst:55
 msgid "Email address (``email``)"
 msgstr "Имејл адреса (``email``)"
 
-#: ../settings/security/third-party/saml.rst:52
+#: ../settings/security/third-party/saml.rst:56
 msgid "Full name (``name``)"
 msgstr "Пуно име и презиме (``name``)"
 
-#: ../settings/security/third-party/saml.rst:53
+#: ../settings/security/third-party/saml.rst:57
 msgid "Given name (``first_name``)"
 msgstr "Име (``first_name``)"
 
-#: ../settings/security/third-party/saml.rst:54
+#: ../settings/security/third-party/saml.rst:58
 msgid "Family name (``last_name``)"
 msgstr "Презиме (``last_name``)"
 
-#: ../settings/security/third-party/saml.rst:56
+#: ../settings/security/third-party/saml.rst:60
 msgid ""
 "You may need to set up “mappers” (or “mappings”) to tell your IdP how user "
 "attributes in SAML correspond to those in Zammad. For a more detailed "
@@ -21336,15 +21336,287 @@ msgstr ""
 "детаљнију анализу погледајте XML датотеку мета података наведену у "
 "претходном одељку."
 
-#: ../settings/security/third-party/saml.rst:62
-msgid "Per-IdP Instructions"
-msgstr "Упутства за IdP"
+#: ../settings/security/third-party/saml.rst:68
+msgid "Configuration Guides"
+msgstr "Водичи кроз подешавања"
+
+#: ../settings/security/third-party/saml.rst:70
+msgid "You can find specific configuration guides for:"
+msgstr "Можете пронаћи одговарајуће водиче кроз подешавања за:"
+
+#: ../settings/security/third-party/saml.rst:72
+msgid ":doc:`Keycloak <./saml/saml-keycloak>`"
+msgstr ":doc:`Keycloak <./saml/saml-keycloak>`"
+
+#: ../settings/security/third-party/saml.rst:73
+msgid ":doc:`Microsoft SAML <./saml/saml-microsoft>`"
+msgstr ":doc:`Microsoft SAML <./saml/saml-microsoft>`"
+
+#: ../settings/security/third-party/saml.rst:75
+msgid ""
+"If your are using another IdP, adapt it to your needs. For a description of "
+"the fields in Zammad, read on below."
+msgstr ""
+"Уколико користите неки други IdP, прилагодите га својим потребама. За опис "
+"поља у Zammad-у, наставите испод."
+
+#: ../settings/security/third-party/saml.rst:88
+msgid "General Zammad Configuration"
+msgstr "Општа Zammad подешавања"
+
+#: ../settings/security/third-party/saml.rst:90
+msgid ""
+"Enable SAML and enter your IdP's details in the Admin Panel under **Settings "
+"> Security > Third Party Applications > Authentication via SAML**:"
+msgstr ""
+"Укључите SAML и унесите детаље свог IdP-а у администраторском панелу под "
+"**Подешавања > Безбедност > Апликације трећег лица > Аутентификација путем "
+"SAML**:"
+
+#: ../settings/security/third-party/saml.rst:None
+msgid "Example configuration of SAML part 1"
+msgstr "Пример подешавања SAML део 1"
 
 #: ../settings/security/third-party/saml.rst:102
-msgid "Keycloak"
-msgstr "Keycloak"
+msgid "Display name"
+msgstr "Назив за приказ"
 
-#: ../settings/security/third-party/saml.rst:65
+#: ../settings/security/third-party/saml.rst:99
+msgid ""
+"Allows you to define a custom button name for SAML. This helps your users to "
+"understand better what the button on the login page does."
+msgstr ""
+"Омогућава вам да одредите прилагођени назив дугмета за SAML. Ово помаже "
+"вашим корисницима да боље разумеју шта ради дугме на страници за пријаву."
+
+#: ../settings/security/third-party/saml.rst:102
+msgid "Defaults to ``SAML``."
+msgstr "Подразумевано је ``SAML``."
+
+#: ../settings/security/third-party/saml.rst:106
+msgid "IDP SSO target URL"
+msgstr "IDP SSO URL путања"
+
+#: ../settings/security/third-party/saml.rst:105
+msgid ""
+"This is the target URL Zammad shall redirect to when the user presses the "
+"SAML button."
+msgstr ""
+"Ово је циљна URL адреса на коју ће Zammad преусмерити када корисник притисне "
+"SAML дугме."
+
+#: ../settings/security/third-party/saml.rst:110
+msgid "IDP single logout target URL"
+msgstr "IDP URL путања јединствене одјаве"
+
+#: ../settings/security/third-party/saml.rst:109
+msgid ""
+"This is the URL to which the single logout request and response should be "
+"sent."
+msgstr ""
+"Ово је URL путања на коју треба преусмерити захтеве и одговоре за "
+"јединствену одјаву."
+
+#: ../settings/security/third-party/saml.rst:114
+msgid "IDP certificate"
+msgstr "IDP сертификат"
+
+#: ../settings/security/third-party/saml.rst:113
+msgid ""
+"The public certificate of your IDP for Zammad to verify during the callback "
+"phase."
+msgstr ""
+"Јавни сертификат вашег IDP-а који Zammad треба да провери током фазе "
+"повратног позива."
+
+#: ../settings/security/third-party/saml.rst:128
+msgid "IDP certificate fingerprint"
+msgstr "IDP отисак сертификата"
+
+#: ../settings/security/third-party/saml.rst:117
+msgid ""
+"The fingerprint of your IDPs public certificate to verify during callback "
+"phase."
+msgstr ""
+"Отисак вашег јавног IDP сертификата за верификацију током фазе повратног "
+"позива."
+
+#: ../settings/security/third-party/saml.rst:120
+msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
+msgstr "🔏 **За IdP сертификат / отисак сертификата:**"
+
+#: ../settings/security/third-party/saml.rst:122
+msgid ""
+"Provide **only one or the other**—do not provide both! (Between the two, we "
+"recommend the signing certificate itself: fingerprints use SHA-1, which `has "
+"been broken for a while now <https://www.schneier.com/blog/archives/2005/02/"
+"sha1_broken.html>`_.)"
+msgstr ""
+"Обезбедите **или једно или друго**—никако обе вредности! (Између ове две, "
+"препоручујемо сам сертификат за потписивање: отисци сертификата користе "
+"SHA-1 алгоритам, који је већ неко време покварен <https://www.schneier.com/"
+"blog/archives/2005/02/sha1_broken.html>`_.)"
+
+#: ../settings/security/third-party/saml.rst:127
+msgid ""
+"**Keycloak users:** Find your certificate in the Keycloak admin panel under "
+"**Realm Settings > Keys > Algorithm: RS256 > Certificate**."
+msgstr ""
+"**Keycloak корисници:** Пронађите свој сертификат у Keycloak "
+"административном панелу под **Realm Settings > Keys > Algorithm: RS256 > "
+"Certificate**."
+
+#: ../settings/security/third-party/saml.rst:134
+msgid "Name identifier format"
+msgstr "Формат идентификатора назива"
+
+#: ../settings/security/third-party/saml.rst:131
+msgid ""
+"This is the unique identifiers field type. Usually it should be ``urn:oasis:"
+"names:tc:SAML:1.1:nameid-format:emailAddress``."
+msgstr ""
+"Ово је типа идентификатора јединствених поља. Обично би требало да буде "
+"``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``."
+
+#: ../settings/security/third-party/saml.rst:134
+msgid "Zammad **expects an email address as unique identifier**!"
+msgstr "Zammad **очекује имејл адресу као јединствени идентификатор**!"
+
+#: ../settings/security/third-party/saml.rst:138
+msgid "UID attribute name"
+msgstr "Назив UID атрибута"
+
+#: ../settings/security/third-party/saml.rst:137
+msgid ""
+"Here you can define an attribute that uniquely identifies the user. If "
+"unset, the name identifier returned by the IDP is used."
+msgstr ""
+"Овде можете одредити назив атрибута који јединствено идентификује корисника. "
+"Уколико није подешено, биће коришћен индентификатор назива који враћа IDP."
+
+#: ../settings/security/third-party/saml.rst:None
+msgid "Example configuration of SAML part 2"
+msgstr "Пример подешавања SAML део 2"
+
+#: ../settings/security/third-party/saml.rst:146
+msgid ""
+"Decide if the certificate for the connection to the IdP service has to be "
+"verified or not (default: ``yes``)."
+msgstr ""
+"Одређује да ли ће сертификат за конекцију до IdP сервиса бити проверен или "
+"не (подразумевано: ``да``)."
+
+#: ../settings/security/third-party/saml.rst:152
+msgid "Signing & Encrypting"
+msgstr "Потписивање и шифровање"
+
+#: ../settings/security/third-party/saml.rst:152
+msgid ""
+"Define if you want to sign, encrypt, do both or nothing for the requests."
+msgstr "Одређује да ли желите потписивање и шифровање захтева."
+
+#: ../settings/security/third-party/saml.rst:162
+msgid "Certificate (PEM)"
+msgstr "Сертификат (PEM)"
+
+#: ../settings/security/third-party/saml.rst:155
+msgid ""
+"Paste the public certificate of your Zammad SAML client, if you want to "
+"encrypt the requests."
+msgstr ""
+"Налепите јавни сертификат вашег Zammad SAML клијента, уколико желите "
+"шифровање захтева."
+
+#: ../settings/security/third-party/saml.rst:158
+msgid "Make sure the certificate is:"
+msgstr "Уверите се да је сертификат:"
+
+#: ../settings/security/third-party/saml.rst:160
+msgid "already valid and not yet expired"
+msgstr "већ важећи и није још истекао"
+
+#: ../settings/security/third-party/saml.rst:161
+msgid "no CA certificate"
+msgstr "није CA сертификат"
+
+#: ../settings/security/third-party/saml.rst:162
+msgid "valid for signing and encrypting"
+msgstr "важећи за потписивање и шифровање"
+
+#: ../settings/security/third-party/saml.rst:168
+msgid "Private key (PEM)"
+msgstr "Тајни кључ (PEM)"
+
+#: ../settings/security/third-party/saml.rst:165
+msgid ""
+"Paste the private key of your Zammad SAML client here, if you want to sign "
+"the requests."
+msgstr ""
+"Налепите тајни кључ вашег Zammad SAML клијента, уколико желите потписивање "
+"захтева."
+
+#: ../settings/security/third-party/saml.rst:168
+msgid "Make sure the key is an RSA key with a length of at least 2048 bits."
+msgstr "Уверите се да је тајни кључ RSA дужине од најмање 2048 бита."
+
+#: ../settings/security/third-party/saml.rst:171
+msgid "Private key secret"
+msgstr "Лозинка тајног кључа"
+
+#: ../settings/security/third-party/saml.rst:171
+msgid "If your private key is secured with a secret, you can provide it here."
+msgstr "Уколико је ваш тајни кључ обезбеђен лозинком, можете је унети овде."
+
+#: ../settings/security/third-party/saml.rst:175
+msgid "Your callback URL"
+msgstr "Ваш URL повратног позива"
+
+#: ../settings/security/third-party/saml.rst:174
+msgid ""
+"This URL is needed for your IdP configuration so it knows where to redirect "
+"to after successful authentication."
+msgstr ""
+"Ова URL адреса је потребна за вашу IDP конфигурацију како би знала где да "
+"преусмери корисника након успешне аутентификације."
+
+#: ../settings/security/third-party/saml.rst:177
+msgid ""
+"After saving your input by clicking on the \"Submit\" button, Zammad "
+"verifies the provided keys/certificates (e.g. if they are valid for signing/"
+"encrypting and if they aren't expired)."
+msgstr ""
+"По снимању вашег уноса кликом на дугме „Пошаљи”, Zammad ће проверити "
+"достављене кључеве/сертификате (нпр. да ли су важећи за потписивање/"
+"шифровање и да нису истекли."
+
+#: ../settings/security/third-party/saml.rst:182
+msgid ""
+"See :ref:`automatic account linking <automatic-account-linking>` for details "
+"on how to link existing Zammad accounts to IdP accounts."
+msgstr ""
+"Погледајте :ref:`аутоматско повезивање налога <automatic-account-linking>` "
+"за детаље о томе како да повежете постојеће Zammad налоге са IdP налозима."
+
+#: ../settings/security/third-party/saml.rst:188
+msgid "Automatic account linking doesn't work"
+msgstr "Аутоматско повезивање налога не функционише"
+
+#: ../settings/security/third-party/saml.rst:189
+msgid ""
+"Have you double-checked your IdP's user attribute mapping configuration?"
+msgstr ""
+"Да ли сте још једном проверили подешавање мапирања корисничких атрибута "
+"вашег IdP-а?"
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:2
+msgid "SAML with Keycloak"
+msgstr "SAML са Keycloak-ом"
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:5
+msgid "Step 1: Keycloak Configuration"
+msgstr "Корак 1. Keycloak подешавања"
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:7
 msgid ""
 "**To add Zammad as a client,** save the XML configuration to disk (``https://"
 "your.zammad.domain/auth/saml/metadata``) and use **Clients > Clients list > "
@@ -21354,7 +21626,7 @@ msgstr ""
 "(``https://your.zammad.domain/auth/saml/metadata``) и користите **Clients > "
 "Clients list > Import client* * у Keycloak админ панелу."
 
-#: ../settings/security/third-party/saml.rst:70
+#: ../settings/security/third-party/saml/saml-keycloak.rst:13
 msgid ""
 "To help Zammad **match its own user accounts to Keycloak users**, create a "
 "user attribute (or “property”) mapper. In **Clients list**, click on your "
@@ -21370,39 +21642,39 @@ msgstr ""
 "вашу Zammad инстанцу. Изаберите **Add mapper > By configuration > User "
 "Property** и додајте мапирање са следећим уносима:"
 
-#: ../settings/security/third-party/saml.rst:78
+#: ../settings/security/third-party/saml/saml-keycloak.rst:22
 msgid "**Name**"
 msgstr "**Name**"
 
-#: ../settings/security/third-party/saml.rst:80
+#: ../settings/security/third-party/saml/saml-keycloak.rst:24
 msgid "**Mapper Type**"
 msgstr "**Mapper Type**"
 
-#: ../settings/security/third-party/saml.rst:81
+#: ../settings/security/third-party/saml/saml-keycloak.rst:25
 msgid "``User Property``"
 msgstr "``User Property``"
 
-#: ../settings/security/third-party/saml.rst:82
+#: ../settings/security/third-party/saml/saml-keycloak.rst:26
 msgid "**Property**"
 msgstr "**Property**"
 
-#: ../settings/security/third-party/saml.rst:83
+#: ../settings/security/third-party/saml/saml-keycloak.rst:27
 msgid "``emailAddress``"
 msgstr "``emailAddress``"
 
-#: ../settings/security/third-party/saml.rst:84
+#: ../settings/security/third-party/saml/saml-keycloak.rst:28
 msgid "**SAML Attribute Name**"
 msgstr "**Назив SAML атрибута**"
 
-#: ../settings/security/third-party/saml.rst:86
+#: ../settings/security/third-party/saml/saml-keycloak.rst:30
 msgid "**SAML Attribute NameFormat**"
 msgstr "**Формат назива SAML атрибута**"
 
-#: ../settings/security/third-party/saml.rst:87
+#: ../settings/security/third-party/saml/saml-keycloak.rst:31
 msgid "``basic``"
 msgstr "``basic``"
 
-#: ../settings/security/third-party/saml.rst:89
+#: ../settings/security/third-party/saml/saml-keycloak.rst:33
 msgid ""
 "In the example above, we're telling Zammad that whenever it receives a SAML "
 "login request, it should take the ``email`` property from Keycloak, look for "
@@ -21413,7 +21685,7 @@ msgstr ""
 "треба да узме атрибут ``email`` од Keycloak-а, потражи Zammad корисника са "
 "истим атрибутом ``email`` и креира нову сесију за тог корисника."
 
-#: ../settings/security/third-party/saml.rst:95
+#: ../settings/security/third-party/saml/saml-keycloak.rst:39
 msgid ""
 "If your Keycloak users' email addresses are stored on another property (*e."
 "g.,* ``username``), adjust accordingly."
@@ -21421,7 +21693,7 @@ msgstr ""
 "Ако су имејл адресе ваших Keycloak корисника ускладиштене у другом атрибуту "
 "(*нпр.* ``username``), прилагодите мапирање у складу са тим."
 
-#: ../settings/security/third-party/saml.rst:98
+#: ../settings/security/third-party/saml/saml-keycloak.rst:42
 msgid ""
 "Back in **Settings**, enter the Client ID (``https://your.zammad.domain/auth/"
 "saml/metadata``) in the field **Master SAML Processing URL**."
@@ -21429,259 +21701,212 @@ msgstr ""
 "Вратите се у **Settings**, унесите Client ID (``https://your.zammad.domain/"
 "auth/saml/metadata``) у поље **Master SAML Processing URL**."
 
-#: ../settings/security/third-party/saml.rst:101
+#: ../settings/security/third-party/saml/saml-keycloak.rst:46
 msgid "You also need to enable **Sign assertions**."
 msgstr "Такође морате да укључите **Sign assertions**."
 
-#: ../settings/security/third-party/saml.rst:105
-msgid "Step 2: Configure Zammad"
-msgstr "Корак 2: Подесите Zammad"
+#: ../settings/security/third-party/saml/saml-keycloak.rst:49
+msgid "2. Configure Zammad"
+msgstr "2. Подесите Zammad"
 
-#: ../settings/security/third-party/saml.rst:107
+#: ../settings/security/third-party/saml/saml-keycloak.rst:51
+#: ../settings/security/third-party/saml/saml-microsoft.rst:53
+msgid "Log in to Zammad as an administrator"
+msgstr "Пријавите се у Zammad као администратор"
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:52
+#: ../settings/security/third-party/saml/saml-microsoft.rst:54
 msgid ""
-"Enable SAML and enter your IdP's details in the Admin Panel under **Settings "
-"> Security > Third Party Applications > Authentication via SAML**:"
+"In the admin panel go to \"Settings\" > \"Security\" > \"Third-party "
+"Applications\" > \"Authentication via SAML\""
 msgstr ""
-"Укључите SAML и унесите детаље свог IdP-а у администраторском панелу под "
-"**Подешавања > Безбедност > Апликације трећег лица > Аутентификација путем "
-"SAML**:"
+"Идите у администраторском панелу на „Подешавања” > „Безбедност” > „"
+"Апликације трећег лица” > „Аутентификација путем SAML”"
 
-#: ../settings/security/third-party/saml.rst:None
-msgid "Example configuration of SAML part 1"
-msgstr "Пример подешавања SAML део 1"
+#: ../settings/security/third-party/saml/saml-keycloak.rst:54
+#: ../settings/security/third-party/saml/saml-microsoft.rst:56
+msgid "Provide the following information:"
+msgstr "Обезбедите следеће информације:"
 
-#: ../settings/security/third-party/saml.rst:119
-msgid "Display name"
-msgstr "Назив за приказ"
-
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml/saml-keycloak.rst:56
 msgid ""
-"Allows you to define a custom button name for SAML. This helps your users to "
-"understand better what the button on the login page does."
+"SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/saml``"
 msgstr ""
-"Омогућава вам да одредите прилагођени назив дугмета за SAML. Ово помаже "
-"вашим корисницима да боље разумеју шта ради дугме на страници за пријаву."
+"SAML IdP URL пријаве: ``https://your.domain/realms/your-realm/protocol/saml``"
 
-#: ../settings/security/third-party/saml.rst:119
-msgid "Defaults to ``SAML``."
-msgstr "Подразумевано је ``SAML``."
-
-#: ../settings/security/third-party/saml.rst:123
-msgid "IDP SSO target URL"
-msgstr "IDP SSO URL путања"
-
-#: ../settings/security/third-party/saml.rst:122
+#: ../settings/security/third-party/saml/saml-keycloak.rst:57
 msgid ""
-"This is the target URL Zammad shall redirect to when the user presses the "
-"SAML button. For Keycloak, this needs to look like https://your.domain/"
-"realms/your-realm/protocol/saml"
+"SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/saml``"
 msgstr ""
-"Ово је циљна URL адреса на коју ће Zammad преусмерити када корисник притисне "
-"SAML дугме. За Keycloak, ово треба да изгледа као https://your.domain/realms/"
-"your-realm/protocol/saml"
+"SAML IdP URL одјаве: ``https://your.domain/realms/your-realm/protocol/saml``"
 
-#: ../settings/security/third-party/saml.rst:127
-msgid "IDP single logout target URL"
-msgstr "IDP URL путања јединствене одјаве"
-
-#: ../settings/security/third-party/saml.rst:126
+#: ../settings/security/third-party/saml/saml-keycloak.rst:59
+#: ../settings/security/third-party/saml/saml-microsoft.rst:61
 msgid ""
-"This is the URL to which the single logout request and response should be "
-"sent."
+"Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:"
+"emailAddress``"
 msgstr ""
-"Ово је URL путања на коју треба преусмерити захтеве и одговоре за "
-"јединствену одјаву."
+"Формат идентификатора назива: ``urn:oasis:names:tc:SAML:1.1:nameid-"
+"format:emailAddress``"
 
-#: ../settings/security/third-party/saml.rst:131
-msgid "IDP certificate"
-msgstr "IDP сертификат"
-
-#: ../settings/security/third-party/saml.rst:130
+#: ../settings/security/third-party/saml/saml-keycloak.rst:60
+#: ../settings/security/third-party/saml/saml-microsoft.rst:62
 msgid ""
-"The public certificate of your IDP for Zammad to verify during the callback "
-"phase."
+"SAML IdP Certificate: Upload the previously downloaded Base64 certificate."
+msgstr "SAML IdP сертификат: отпремите претходно преузет Base64 сертификат."
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:61
+#: ../settings/security/third-party/saml/saml-microsoft.rst:63
+msgid "Save the settings"
+msgstr "Сачувајте подешавања"
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:64
+#: ../settings/security/third-party/saml/saml-microsoft.rst:72
+msgid ""
+"Read on at :ref:`saml-zammad` for a description of the specific fields in "
+"Zammad."
+msgstr "Погледајте :ref:`saml-zammad` за опис појединалних поља у Zammad-у."
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:2
+msgid "SAML with Microsoft 365"
+msgstr "SAML са Microsoft 365"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:5
+msgid "1. Register Zammad as an Application in Microsoft Entra ID"
+msgstr "1. Региструјте Zammad као апликацију у Microsoft Entra ID"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:7
+msgid "Log in to the Microsoft Entra admin center with administrative rights"
 msgstr ""
-"Јавни сертификат вашег IDP-а који Zammad треба да провери током фазе "
-"повратног позива."
+"Пијавите се у Microsoft Entra администраторски панел са одговарајућим "
+"дозволама"
 
-#: ../settings/security/third-party/saml.rst:145
-msgid "IDP certificate fingerprint"
-msgstr "IDP отисак сертификата"
-
-#: ../settings/security/third-party/saml.rst:134
+#: ../settings/security/third-party/saml/saml-microsoft.rst:8
 msgid ""
-"The fingerprint of your IDPs public certificate to verify during callback "
-"phase."
+"Navigate to \"Identity\" > \"Applications\" > \"Enterprise Applications\""
+msgstr "Идите на „Identity” > „Applications” > „Enterprise Applications”"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:9
+msgid "Click \"New Application\" and select \"Create your own application\""
+msgstr "Кликните на „New Application” и одаберите „Create your own application”"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:10
+msgid "Enter a name for the application, e.g. \"Zammad SAML Integration\""
+msgstr "Унесите назив апликације, нпр. „Zammad SAML Integration”"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:11
+msgid ""
+"Choose \"Integrate any other application you don't find in the gallery\", "
+"then click \"Create\""
 msgstr ""
-"Отисак вашег јавног IDP сертификата за верификацију током фазе повратног "
-"позива."
+"Одаберите „Integrate any other application you don't find in the gallery”, "
+"па кликните на „Create”"
 
-#: ../settings/security/third-party/saml.rst:137
-msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
-msgstr "🔏 **За IdP сертификат / отисак сертификата:**"
+#: ../settings/security/third-party/saml/saml-microsoft.rst:15
+msgid "2. Configure SAML-based Single Sign-On (SSO)"
+msgstr "2. Подесите SAML јединствену пријаву (SSO)"
 
-#: ../settings/security/third-party/saml.rst:139
+#: ../settings/security/third-party/saml/saml-microsoft.rst:17
+msgid "After the application is created, go to its overview page"
+msgstr "Након креирања апликације, идите на преглед"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:18
+msgid "Select \"Single sign-on\" from the left-hand menu"
+msgstr "Одаберите „Single sign-on” из менија са леве стране"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:19
+msgid "Choose \"SAML\" as the sign-on method"
+msgstr "Одаберите „SAML” као метод пријаве"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:20
+msgid "In the \"Basic SAML Configuration\" section, click \"Edit\":"
+msgstr "У одељку „Basic SAML Configuration”, кликните на „Edit”:"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:22
 msgid ""
-"Provide **only one or the other**—do not provide both! (Between the two, we "
-"recommend the signing certificate itself: fingerprints use SHA-1, which `has "
-"been broken for a while now <https://www.schneier.com/blog/archives/2005/02/"
-"sha1_broken.html>`_.)"
+"Identifier (Entity ID): Use Zammad's Entity ID, which can be found at "
+"``https://your.zammad.domain/auth/saml/metadata``"
 msgstr ""
-"Обезбедите **или једно или друго**—никако обе вредности! (Између ове две, "
-"препоручујемо сам сертификат за потписивање: отисци сертификата користе "
-"SHA-1 алгоритам, који је већ неко време покварен <https://www.schneier.com/"
-"blog/archives/2005/02/sha1_broken.html>`_.)"
+"Идентификатор (Entity ID): искористите Zammad-ov Entity ID, који моћете "
+"пронаћи на ``https://your.zammad.domain/auth/saml/metadata``"
 
-#: ../settings/security/third-party/saml.rst:144
+#: ../settings/security/third-party/saml/saml-microsoft.rst:24
 msgid ""
-"**Keycloak users:** Find your certificate in the Keycloak admin panel under "
-"**Realm Settings > Keys > Algorithm: RS256 > Certificate**."
+"Reply URL (Assertion Consumer Service URL): Set it to ``https://your.zammad."
+"domain/auth/saml/callback``"
 msgstr ""
-"**Keycloak корисници:** Пронађите свој сертификат у Keycloak "
-"административном панелу под **Realm Settings > Keys > Algorithm: RS256 > "
-"Certificate**."
+"URL адреса одговора (Assertion Consumer Service URL): поставите на "
+"``https://your.zammad.domain/auth/saml/callback``"
 
-#: ../settings/security/third-party/saml.rst:151
-msgid "Name identifier format"
-msgstr "Формат идентификатора назива"
+#: ../settings/security/third-party/saml/saml-microsoft.rst:27
+msgid "Save the configuration"
+msgstr "Сачувајте подешавања"
 
-#: ../settings/security/third-party/saml.rst:148
+#: ../settings/security/third-party/saml/saml-microsoft.rst:30
+msgid "3. Configure User Attributes and Claims Mapping"
+msgstr "3. Подесите мапирање корисничких атрибута и захтева"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:32
 msgid ""
-"This is the unique identifiers field type. Usually it should be ``urn:oasis:"
-"names:tc:SAML:1.1:nameid-format:emailAddress``."
+"In the \"Attributes & Claims\" section, click \"Edit\". By default, some "
+"claims like User Principal Name, Email Address, First Name, and Last Name "
+"are already configured."
 msgstr ""
-"Ово је типа идентификатора јединствених поља. Обично би требало да буде "
-"``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``."
+"У одељку „Attributes & Claims”, кликните на „Edit”. Подразумевано, неки "
+"захтеви као „User Principal Name”, „Email Address”, „First Name” и „Last "
+"Name” су већ подешени."
 
-#: ../settings/security/third-party/saml.rst:151
-msgid "Zammad **expects an email address as unique identifier**!"
-msgstr "Zammad **очекује имејл адресу као јединствени идентификатор**!"
-
-#: ../settings/security/third-party/saml.rst:155
-msgid "UID attribute name"
-msgstr "Назив UID атрибута"
-
-#: ../settings/security/third-party/saml.rst:154
+#: ../settings/security/third-party/saml/saml-microsoft.rst:None
 msgid ""
-"Here you can define an attribute that uniquely identifies the user. If "
-"unset, the name identifier returned by the IDP is used."
+"Screenshots showing \"Attribute & Claims\" configuration in Entra admin "
+"center"
 msgstr ""
-"Овде можете одредити назив атрибута који јединствено идентификује корисника. "
-"Уколико није подешено, биће коришћен индентификатор назива који враћа IDP."
+"Снимак екрана који приказује „Attribute & Claims” подешавања у Entra "
+"администраторском панелу"
 
-#: ../settings/security/third-party/saml.rst:None
-msgid "Example configuration of SAML part 2"
-msgstr "Пример подешавања SAML део 2"
+#: ../settings/security/third-party/saml/saml-microsoft.rst:41
+msgid "4. Download the SAML Certificate"
+msgstr "4. Преузмите SAML сертификат"
 
-#: ../settings/security/third-party/saml.rst:163
+#: ../settings/security/third-party/saml/saml-microsoft.rst:43
 msgid ""
-"Decide if the certificate for the connection to the IdP service has to be "
-"verified or not (default: ``yes``)."
+"In the \"SAML Signing Certificate\" section, download the \"Certificate "
+"(Base64)\":"
+msgstr "У одељку „SAML Signing Certificate”, преузмите „Certificate (Base64)”:"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:None
+msgid "Screenshot showing the highlighted certificate export already"
+msgstr "Снимак екрана који приказује већ наглашен извоз сертификата"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:51
+msgid "5. Configure Zammad"
+msgstr "5. Подесите Zammad"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:58
+msgid ""
+"IDP SSO target URL: The Login URL from the Microsoft Entra Admin Center."
 msgstr ""
-"Одређује да ли ће сертификат за конекцију до IdP сервиса бити проверен или "
-"не (подразумевано: ``да``)."
+"IDP SSO URL путања: URL пријаве из Microsoft Entra администраторског панела."
 
-#: ../settings/security/third-party/saml.rst:169
-msgid "Signing & Encrypting"
-msgstr "Потписивање и шифровање"
-
-#: ../settings/security/third-party/saml.rst:169
+#: ../settings/security/third-party/saml/saml-microsoft.rst:59
 msgid ""
-"Define if you want to sign, encrypt, do both or nothing for the requests."
-msgstr "Одређује да ли желите потписивање и шифровање захтева."
-
-#: ../settings/security/third-party/saml.rst:179
-msgid "Certificate (PEM)"
-msgstr "Сертификат (PEM)"
-
-#: ../settings/security/third-party/saml.rst:172
-msgid ""
-"Paste the public certificate of your Zammad SAML client, if you want to "
-"encrypt the requests."
+"IDP single logout target URL: The Logout URL from the Microsoft Entra Admin "
+"Center."
 msgstr ""
-"Налепите јавни сертификат вашег Zammad SAML клијента, уколико желите "
-"шифровање захтева."
+"IDP Single Logout URL путања: URL одјаве из Microsoft Entra "
+"администраторског панела."
 
-#: ../settings/security/third-party/saml.rst:175
-msgid "Make sure the certificate is:"
-msgstr "Уверите се да је сертификат:"
+#: ../settings/security/third-party/saml/saml-microsoft.rst:66
+msgid "6. Assign Users"
+msgstr "6. Доделите кориснике"
 
-#: ../settings/security/third-party/saml.rst:177
-msgid "already valid and not yet expired"
-msgstr "већ важећи и није још истекао"
-
-#: ../settings/security/third-party/saml.rst:178
-msgid "no CA certificate"
-msgstr "није CA сертификат"
-
-#: ../settings/security/third-party/saml.rst:179
-msgid "valid for signing and encrypting"
-msgstr "важећи за потписивање и шифровање"
-
-#: ../settings/security/third-party/saml.rst:185
-msgid "Private key (PEM)"
-msgstr "Тајни кључ (PEM)"
-
-#: ../settings/security/third-party/saml.rst:182
+#: ../settings/security/third-party/saml/saml-microsoft.rst:68
 msgid ""
-"Paste the private key of your Zammad SAML client here, if you want to sign "
-"the requests."
+"In Microsoft Entra ID, assign the relevant users to the Zammad application "
+"to grant them access."
 msgstr ""
-"Налепите тајни кључ вашег Zammad SAML клијента, уколико желите потписивање "
-"захтева."
-
-#: ../settings/security/third-party/saml.rst:185
-msgid "Make sure the key is an RSA key with a length of at least 2048 bits."
-msgstr "Уверите се да је тајни кључ RSA дужине од најмање 2048 бита."
-
-#: ../settings/security/third-party/saml.rst:188
-msgid "Private key secret"
-msgstr "Лозинка тајног кључа"
-
-#: ../settings/security/third-party/saml.rst:188
-msgid "If your private key is secured with a secret, you can provide it here."
-msgstr "Уколико је ваш тајни кључ обезбеђен лозинком, можете је унети овде."
-
-#: ../settings/security/third-party/saml.rst:192
-msgid "Your callback URL"
-msgstr "Ваш URL повратног позива"
-
-#: ../settings/security/third-party/saml.rst:191
-msgid ""
-"This URL is needed for your IdP configuration so it knows where to redirect "
-"to after successful authentication."
-msgstr ""
-"Ова URL адреса је потребна за вашу IDP конфигурацију како би знала где да "
-"преусмери корисника након успешне аутентификације."
-
-#: ../settings/security/third-party/saml.rst:194
-msgid ""
-"After saving your input by clicking on the \"Submit\" button, Zammad "
-"verifies the provided keys/certificates (e.g. if they are valid for signing/"
-"encrypting and if they aren't expired)."
-msgstr ""
-"По снимању вашег уноса кликом на дугме „Пошаљи”, Zammad ће проверити "
-"достављене кључеве/сертификате (нпр. да ли су важећи за потписивање/"
-"шифровање и да нису истекли."
-
-#: ../settings/security/third-party/saml.rst:199
-msgid ""
-"See :ref:`automatic account linking <automatic-account-linking>` for details "
-"on how to link existing Zammad accounts to IdP accounts."
-msgstr ""
-"Погледајте :ref:`аутоматско повезивање налога <automatic-account-linking>` "
-"за детаље о томе како да повежете постојеће Zammad налоге са IdP налозима."
-
-#: ../settings/security/third-party/saml.rst:205
-msgid "Automatic account linking doesn't work"
-msgstr "Аутоматско повезивање налога не функционише"
-
-#: ../settings/security/third-party/saml.rst:206
-msgid ""
-"Have you double-checked your IdP's user attribute mapping configuration?"
-msgstr ""
-"Да ли сте још једном проверили подешавање мапирања корисничких атрибута "
-"вашег IdP-а?"
+"У Microsoft Entra ID, доделите одговрајуће кориснике Zammad апликацији и "
+"доделите им приступ."
 
 #: ../settings/security/third-party/twitter.rst:4
 msgid ""
@@ -31845,6 +32070,23 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "Connect your SAML (Security Assertion Markup Language) identity provider "
+#~ "as a single sign-on (SSO) method."
+#~ msgstr ""
+#~ "Повежите свог SAML (Security Assertion Markup Language) сервис провајдера "
+#~ "као метод јединствене пријаве (SSO)."
+
+#~ msgid ""
+#~ "Please note: Our instructions are based on connecting Zammad with "
+#~ "Keycloak."
+#~ msgstr ""
+#~ "Обратите пажњу: наша упутства су базирана на повезивању Zammad-а са "
+#~ "Keycloak-ом."
+
+#~ msgid "Per-IdP Instructions"
+#~ msgstr "Упутства за IdP"
 
 #~ msgid ""
 #~ "Disabling this flag is a soft alternative to deleting a user. So what's "
