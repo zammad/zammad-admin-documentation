@@ -57,26 +57,24 @@ Updating Database After Adding or Editing Attributes
 
 When adding or changing attributes, Zammad will not apply the changes instantly,
 but instead shows you the changed attributes first.
-If you're ready to go, just click on "Update database" to apply the changes
+If you're ready to go, just click on "Update Database" to apply the changes
 to Zammad. If you made a mistake or just want to discard your changes, click
 "Discard changes".
 
 After applying the changes with "Update Database", a restart of Zammad
-is **mandatory**. If you don't perform it, you may experience unexpected
-behavior or even errors. You may want to do this kind of configuration
-during maintenance windows.
+is **mandatory**. In most cases, the restart of the service works
+out of the box (see
+:docs:`console commands </admin/console/zammad-settings.html>` for more
+information).
+However, if your system is configured differently and you don't perform the
+restart, you may experience unexpected behavior or even errors. You may want
+to do this kind of configuration during maintenance windows.
 
 .. figure:: /images/system/objects/update-database.png
    :align: center
 
    Changes on objects require you to update the database
    to apply these changes.
-
-.. tip:: **🤓 Service restarts can be automated**
-
-   | Hosted environments automatically restart for you.
-   | If you're using a self-hosted installation you can use
-      :docs:`environment variables </appendix/configure-env-vars.html>`
 
 System Attributes
 -----------------
