@@ -64,7 +64,8 @@ to Zammad. If you made a mistake or just want to discard your changes, click
 After applying the changes with "Update Database", a restart of Zammad
 is **mandatory**. In most cases, the restart of the service works
 out of the box (see
-:docs:`environment variables </appendix/configure-env-vars.html#general-options>`).
+:docs:`console commands </admin/console/zammad-settings.html>` for more
+information).
 However, if your system is configured differently and you don't perform the
 restart, you may experience unexpected behavior or even errors. You may want
 to do this kind of configuration during maintenance windows.
