@@ -1,4 +1,4 @@
-Common errors
+Common Errors
 =============
 
 Here you can find some common errors in M365 context. Also have a look at

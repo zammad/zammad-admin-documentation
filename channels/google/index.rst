@@ -1,5 +1,5 @@
-Google
-======
+Google Email
+============
 
 .. toctree::
    :hidden:
@@ -12,7 +12,7 @@ Google
    settings
    email-headers
 
-Connect a Gmail or G Suite account to Zammad.
+Connect a Google Email account to Zammad.
 
 .. figure:: /images/channels/google/panel.png
    :alt: Google channel settings panel

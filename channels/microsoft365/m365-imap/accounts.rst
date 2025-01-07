@@ -1,5 +1,5 @@
-Accounts
-========
+Microsoft 365 IMAP Email Channel
+================================
 
 .. toctree::
    :hidden:

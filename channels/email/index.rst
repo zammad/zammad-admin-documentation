@@ -43,6 +43,8 @@ Control how Zammad **sends and receives email**.
    (Self-hosted users may have already completed this step
    during new system setup.)
 
+   .. start-after-accounts
+
 :doc:`🗂️ Filters <filters>`
    **Make sure new tickets show up in the right place**
    with automated, if-this-then-that rules for all incoming email.

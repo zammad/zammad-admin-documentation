@@ -1,7 +1,16 @@
-Microsoft 365 Graph
-===================
+Microsoft 365 Graph Email
+=========================
 
-To connect to your M365 environment via Microsoft's Graph API, you first have
-to decide if you want to connect to a user's mailbox or to a shared mailbox.
-Follow the links below to see the guides for each variant.
+You can connect to user and shared mailboxes from your M365 environment.
+Follow the steps below and skip not applicable steps.
+
+First Steps
+-----------
+
+App Registration
+----------------
+
+Connect to Zammad
+-----------------
+
 
