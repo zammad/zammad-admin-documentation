@@ -1,35 +1,18 @@
-Microsoft 365
-=============
+Microsoft 365 Channels
+======================
+
+Zammad supports two ways of connecting to your M365 environment:
+
+- Via :doc:`IMAP <m365-imap/index>`
+- Via :doc:`Graph <m365-graph/index>`
+
+Before trying to add a M365 channel to Zammad, make sure to use the right one.
+You can configure them in the admin panel under
+*Channels > Microsoft 365 IMAP Email* or *Channels > Microsoft 365 Graph Email*,
+depending on which you want to use.
 
 .. toctree::
    :hidden:
 
-   accounts
-   filters
-   signatures
-   settings
-   email-headers
-   common-errors
-
-Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
-
-.. figure:: /images/channels/microsoft365/panel.png
-   :alt: Email settings panel
-   :align: center
-
-.. note:: Microsoft 365 channels are a specialized kind of
-   :doc:`📨 email channel </channels/email/index>`.
-
-   This documentation part does not cover
-   :doc:`🗝 user authentication </settings/security/third-party/microsoft>`.
-
-   If you're already familiar with email channels,
-   you can skip most of this - but **watch out for the “Accounts” section**,
-   which has a few extra quirks due to Microsoft's strict security measures.
-
-.. include:: /channels/email/index.rst
-   :start-after: .. start-after-migration
-   :end-before: Extra Options for Self-Hosted Users
-
-:doc:`🛟 Common M365 errors </channels/microsoft365/common-errors>`
-   Here you can find common errors and how to fix them.
+   m365-imap/index
+   m365-graph/index
