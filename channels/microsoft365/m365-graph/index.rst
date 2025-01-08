@@ -94,6 +94,9 @@ steps:
 Configure the Channel in Zammad
 -------------------------------
 
+App Configuration
+^^^^^^^^^^^^^^^^^
+
 If you followed this guide, you already should have pasted your app information.
 If not, here is a short summary:
 
@@ -105,7 +108,22 @@ If not, here is a short summary:
   - Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)
 - Click on **Submit**.
 
+Add Account
+^^^^^^^^^^^
+
 Now you can add your account to Zammad. Do so by clicking the **Add account**
 button in the top right corner. Select the correct mailbox type and click
 **Authenticate**. Enter your credentials and confirm the requested permissions
 by clicking the **Accept** button.
+
+After that, Zammad will ask you to assign a destination group. Select a group
+which should (initially) handle the incoming tickets of this channel. You can
+also specify a folder from which Zammad should fetch emails from. If you do so,
+make sure that the emails are routed to this folder somehow. Otherwise you won't
+receive tickets. Leave it empty to fetch all emails from the inbox. Finally,
+choose if fetched emails should remain on the server or not and confirm by
+clicking the **Save** button.
+
+Now your channel is ready and can be used! If something doesn't work, have
+a look at the :doc:`troubleshooting section <../common-errors>`, where you can
+find common errors related to the M365 configuration.
