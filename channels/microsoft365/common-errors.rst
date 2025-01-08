@@ -1,4 +1,4 @@
-Common Errors
+Common errors
 =============
 
 Here you can find some common errors in M365 context. Also have a look at
@@ -24,7 +24,7 @@ matches that in Azure for the Azure App.
 
 The Client ID can be found in Zammad under
 Settings > Channels > Microsoft 365 > App Configuration.
-See :doc:`here </channels/microsoft365/m365-imap/accounts>` how to find the client
+See :doc:`here </channels/microsoft365/accounts>` how to find the client
 ID in Azure and where to copy it to in Zammad.
 
 Wrong or Expired Client Secret
@@ -44,7 +44,7 @@ This error occurs when the client uses an incorrect or expired client secret.
   security risk. We ask the customer to create a new client secret and copy the
   value and not the ID to Zammad.
 
-See :doc:`here </channels/microsoft365/m365-imap/accounts>` for more information.
+See :doc:`here </channels/microsoft365/accounts>` for more information.
 
 Wrong Tenant
 ------------
@@ -81,7 +81,7 @@ This message occurs when the admin tries to create an email account in Zammad
 that has not yet received approval from the Azure global admin.
 
 In our documentation,
-:doc:`step-by-step instructions </channels/microsoft365/m365-imap/accounts/account-setup>`
+:doc:`step-by-step instructions </channels/microsoft365/accounts/account-setup>`
 can be found on how to request admin consent from Zammad.
 
 .. note::

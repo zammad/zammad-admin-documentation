@@ -1,5 +1,5 @@
-Microsoft 365 Graph Email
-=========================
+Accounts
+========
 
 You can connect to user and shared mailboxes in your M365 environment.
 Follow the steps below and skip not applicable parts.
@@ -122,5 +122,5 @@ choose if fetched emails should remain on the server or not and confirm by
 clicking the **Save** button.
 
 Now your channel is ready and can be used! If something doesn't work, have
-a look at the :doc:`troubleshooting section <../common-errors>`, where you can
+a look at the :doc:`common errors section <common-errors>`, where you can
 find common errors related to the M365 configuration.

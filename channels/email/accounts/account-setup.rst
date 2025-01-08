@@ -27,7 +27,8 @@ The import process does things you might not expect:
 
    **Microsoft 365 users:**
       To add a Microsoft 365 account, create a dedicated
-      :doc:`Microsoft 365 channel </channels/microsoft365/m365-imap/accounts/account-setup>`.
+      :doc:`Microsoft 365 IMAP Email channel </channels/microsoft365/accounts>` or
+      :doc:`Microsoft 365 Graph Email channel </channels/microsoft365-graph/accounts>`.
 
 Basic
 -----
