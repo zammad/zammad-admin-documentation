@@ -25,7 +25,7 @@ Connect Channel
    (Self-hosted users may have already completed this step during new system
    setup.)
 
-   Make sure to investigate which API you have to connect before starting and
+   Make sure to investigate to which API you have to connect before starting and
    follow the corresponding link below:
 
    - :doc:`IMAP API <m365-imap/accounts>`

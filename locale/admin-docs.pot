@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-07 15:12+0100\n"
+"POT-Creation-Date: 2025-01-08 11:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,6 +68,7 @@ msgid "Zammad will try to adapt your main website colors to the chat. You can al
 msgstr ""
 
 #: ../channels/chat.rst:28
+#: ../channels/microsoft365/m365-graph/index.rst:17
 #: ../misc/first-steps.rst:20
 #: ../system/integrations/clearbit.rst:31
 msgid "Configuration"
@@ -3631,7 +3632,7 @@ msgid "**Connect Zammad to your Microsoft 365 instance** so that it can watch yo
 msgstr ""
 
 #: ../channels/microsoft365/index.rst:28
-msgid "Make sure to investigate which API you have to connect before starting and follow the corresponding link below:"
+msgid "Make sure to investigate to which API you have to connect before starting and follow the corresponding link below:"
 msgstr ""
 
 #: ../channels/microsoft365/index.rst:31
@@ -3655,7 +3656,7 @@ msgid "Microsoft 365 Graph Email"
 msgstr ""
 
 #: ../channels/microsoft365/m365-graph/index.rst:4
-msgid "You can connect to user and shared mailboxes from your M365 environment. Follow the steps below and skip not applicable steps."
+msgid "You can connect to user and shared mailboxes from your M365 environment. Follow the steps below and skip not applicable parts."
 msgstr ""
 
 #: ../channels/microsoft365/m365-graph/index.rst:8
@@ -3663,12 +3664,209 @@ msgstr ""
 msgid "First Steps"
 msgstr ""
 
-#: ../channels/microsoft365/m365-graph/index.rst:11
-msgid "App Registration"
+#: ../channels/microsoft365/m365-graph/index.rst:10
+msgid "Check your FQDN under *Settings > System > Fully Qualified Domain Name* in the admin interface of Zammad. If it is not correct, change it now. Otherwise the setup of the channel will fail."
 msgstr ""
 
-#: ../channels/microsoft365/m365-graph/index.rst:14
-msgid "Connect to Zammad"
+#: ../channels/microsoft365/m365-graph/index.rst:13
+msgid "Go to *Channels > Microsoft 365 Graph Email* and click on **Connect Microsoft 365 App**. Copy the provided callback URL."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:19
+msgid "Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ and log in with as an administrator."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:23
+#: ../settings/security/third-party/facebook.rst:None
+msgid "Create App"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:25
+msgid "Create a new app by going to *Applications > App registrations* and select **New registration**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:27
+msgid "Enter a fitting name and select an account type. Supported types are:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:29
+msgid "Accounts in this organizational directory only (Single tenant)"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:30
+msgid "Accounts in any organizational directory (Multitenant)"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:32
+msgid "Under \"Redirect URI\", select \"Web\" as platform and paste your already copied callback URL from Zammad."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:34
+msgid "Click on **Register**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:35
+msgid "In the overview screen, copy the \"Application (client) ID\", switch to Zammad and paste it in the \"Client ID\" field in the pop up."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:37
+msgid "Only required for single tenant setup: copy the \"Directory (tenant) ID\" and paste it in the \"Tenant UUID/Name\" field in Zammad."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:41
+msgid "Create Secret"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:43
+msgid "In Entra, go to \"Certificates & secrets\" and add a secret by clicking the **New client secret** button."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:45
+msgid "Enter a description, set an expiry duration and click **Add**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:46
+msgid "Copy the string under \"Value\", this is the secret. Paste it to Zammad in the \"Client Secret\" field."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:50
+msgid "Configure API Permissions"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:52
+msgid "Go to \"API permissions\" and **Add a permission**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:53
+msgid "Select \"Microsoft Graph\" and \"Delegated permissions\"."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:54
+msgid "Add the following permissions:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:56
+#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:88
+msgid "``offline_access``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:57
+#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:89
+#: ../settings/security/third-party/microsoft.rst:67
+msgid "``openid``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:58
+#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:90
+msgid "``profile``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:59
+msgid "Add the following permissions for **user mailboxes** only:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:61
+msgid "``Mail.ReadWrite``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:62
+msgid "``Mail.Send``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:63
+msgid "Add the following permissions for **shared mailboxes** only:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:65
+msgid "``Mail.ReadWrite.Shared``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:66
+msgid "``Mail.Send.Shared``"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:68
+msgid "Save it by clicking the **Add permissions** button."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:71
+msgid "Enterprise Applications"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:73
+msgid "Go to *Applications > Enterprise applications* and select your just created app."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:75
+msgid "Go to \"Users and groups\" and **Add user/group**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:76
+msgid "Click \"None selected\" to add a user."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:77
+msgid "Search and select your user and click on **Select** and then **Assign** to save it."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:81
+msgid "Additional Steps for Shared Mailboxes"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:83
+msgid "If you want to fetch email from a shared mailbox, you have to perform additional steps:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:86
+msgid "Log in to the `Exchange admin center <https://admin.exchange.microsoft.com>`_."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:87
+msgid "Go to *Recipients > Mailboxes*, select the mailbox and click on **Mailboxes delegation**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:89
+msgid "Under \"Send as\", click on **Edit** and **Add members**. Search and select the user from which you want to access the mailbox and **Save** it."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:91
+msgid "Do the same for \"Read and manage (Full Access)\"."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:95
+msgid "Configure the Channel in Zammad"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:97
+msgid "If you followed this guide, you already should have pasted your app information. If not, here is a short summary:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:100
+msgid "In Zammad's channel configuration, click on **Configure App**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:101
+msgid "Enter your app details:"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:103
+msgid "Client ID: *Application (client) ID*"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:104
+msgid "Client Secret: *Value* from client secret"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:105
+msgid "Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)"
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:106
+msgid "Click on **Submit**."
+msgstr ""
+
+#: ../channels/microsoft365/m365-graph/index.rst:108
+msgid "Now you can add your account to Zammad. Do so by clicking the **Add account** button in the top right corner. Select the correct mailbox type and click **Authenticate**. Enter your credentials and confirm the requested permissions by clicking the **Accept** button."
 msgstr ""
 
 #: ../channels/microsoft365/m365-imap/accounts.rst:2
@@ -4046,19 +4244,6 @@ msgstr ""
 #: ../settings/security/third-party/saml/saml-keycloak.rst:23
 #: ../settings/security/third-party/saml/saml-keycloak.rst:29
 msgid "``email``"
-msgstr ""
-
-#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:88
-msgid "``offline_access``"
-msgstr ""
-
-#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:89
-#: ../settings/security/third-party/microsoft.rst:67
-msgid "``openid``"
-msgstr ""
-
-#: ../channels/microsoft365/m365-imap/accounts/register-app.rst:90
-msgid "``profile``"
 msgstr ""
 
 #: ../channels/microsoft365/m365-imap/accounts/register-app.rst:93
@@ -15199,10 +15384,6 @@ msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:17
 msgid "After that enter the app settings"
-msgstr ""
-
-#: ../settings/security/third-party/facebook.rst:None
-msgid "Create App"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:22
