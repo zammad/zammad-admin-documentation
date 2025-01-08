@@ -56,12 +56,8 @@ Configure API Permissions
   - ``offline_access``
   - ``openid``
   - ``profile``
-- Add the following permissions for **user mailboxes** only:
-
   - ``Mail.ReadWrite``
   - ``Mail.Send``
-- Add the following permissions for **shared mailboxes** only:
-
   - ``Mail.ReadWrite.Shared``
   - ``Mail.Send.Shared``
 
@@ -112,9 +108,10 @@ Add Account
 ^^^^^^^^^^^
 
 Now you can add your account to Zammad. Do so by clicking the **Add account**
-button in the top right corner. Select the correct mailbox type and click
-**Authenticate**. Enter your credentials and confirm the requested permissions
-by clicking the **Accept** button.
+button in the top right corner. Select the correct mailbox type. In case you
+selected "Shared Mailbox", you have to enter the email address of the shared
+mailbox. Confirm by clicking the **Authenticate** button, enter your credentials
+and confirm the requested permissions by clicking the **Accept** button.
 
 After that, Zammad will ask you to assign a destination group. Select a group
 which should (initially) handle the incoming tickets of this channel. You can
