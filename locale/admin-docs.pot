@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-08 18:06+0100\n"
+"POT-Creation-Date: 2025-01-09 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3836,47 +3836,75 @@ msgstr ""
 
 #: ../channels/microsoft365-graph/common-errors.rst:2
 #: ../channels/microsoft365/common-errors.rst:2
-msgid "Common errors"
+msgid "Common Errors"
 msgstr ""
 
 #: ../channels/microsoft365-graph/common-errors.rst:4
-#: ../channels/microsoft365/common-errors.rst:4
-msgid "Here you can find some common errors in M365 context. Also have a look at the general :doc:`M365 documentation </channels/microsoft365/index>` for the configuration."
+msgid "Here you can find some common errors in M365 context. Also have a look at the general :doc:`M365 documentation </channels/microsoft365-graph/index>` for the configuration and the :doc:`common errors mentioned in the M365 IMAP channel <../microsoft365/common-errors>`, if your error is not covered here."
 msgstr ""
 
-#: ../channels/microsoft365-graph/common-errors.rst:9
-#: ../channels/microsoft365/common-errors.rst:9
-msgid "Incorrect Client ID"
+#: ../channels/microsoft365-graph/common-errors.rst:12
+msgid "If you try to fix a problem, make sure to remove the account after the fix first and re-add it then again."
 msgstr ""
 
-#: ../channels/microsoft365-graph/common-errors.rst:11
-msgid "JUST AN EXAMPLE, replace with error messages from app > assets > javascript > app > controllers > _channel > microsoft_graph..."
+#: ../channels/microsoft365-graph/common-errors.rst:16
+msgid "Problem with User Mailbox"
 msgstr ""
 
-#: ../channels/microsoft365-graph/common-errors.rst:13
-#: ../channels/microsoft365/common-errors.rst:11
-msgid "**Error message:** AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directory 'MSFT'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant."
+#: ../channels/microsoft365-graph/common-errors.rst:19
+msgid "``MailboxNotEnabledForRESTAPI``"
 msgstr ""
 
-#: ../channels/microsoft365-graph/common-errors.rst:None
-#: ../channels/microsoft365/common-errors.rst:None
-#: ../channels/microsoft365/common-errors.rst:None
-#: ../channels/microsoft365/common-errors.rst:None
-#: ../channels/microsoft365/common-errors.rst:None
-#: ../channels/microsoft365/common-errors.rst:104
-#: ../channels/microsoft365/common-errors.rst:113
-#: ../channels/microsoft365/common-errors.rst:None
-msgid "Error message"
+#: ../channels/microsoft365-graph/common-errors.rst:19
+msgid "*The mailbox is either inactive, soft-deleted, or is hosted on-premise.*"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:21
+msgid "Possible reasons:"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:23
+msgid "The user has no access to the mailbox."
 msgstr ""
 
 #: ../channels/microsoft365-graph/common-errors.rst:24
-#: ../channels/microsoft365/common-errors.rst:22
-msgid "In this case, please compare whether the client ID created in Zammad matches that in Azure for the Azure App."
+msgid "The account has no mailbox at all (user mailboxes)."
 msgstr ""
 
-#: ../channels/microsoft365-graph/common-errors.rst:27
-#: ../channels/microsoft365/common-errors.rst:25
-msgid "The Client ID can be found in Zammad under Settings > Channels > Microsoft 365 > App Configuration. See :doc:`here </channels/microsoft365/accounts>` how to find the client ID in Azure and where to copy it to in Zammad."
+#: ../channels/microsoft365-graph/common-errors.rst:26
+msgid "Either grant the user access to the mailbox or assign them a license and create a mailbox for this user."
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:30
+msgid "Problem with User Permissions"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:33
+msgid "``ErrorItemNotFound``"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:33
+msgid "*The specified object was not found in the store., Default folder Root not found.*"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:35
+msgid "Indicates that the user has no delegation permissions for the mailbox. Make sure that the permissions are set correctly or consider using another account."
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:40
+msgid "Problem with Shared Mailbox"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:43
+msgid "``ErrorInvalidUser``"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:43
+msgid "*The requested user '\\*' is invalid.*"
+msgstr ""
+
+#: ../channels/microsoft365-graph/common-errors.rst:45
+msgid "Possible reason could be that the shared mailbox you provided is wrong. Check if the provided shared mailbox email address is correct."
 msgstr ""
 
 #: ../channels/microsoft365-graph/email-headers.rst:3
@@ -3899,7 +3927,7 @@ msgid "Microsoft 365 Graph Email"
 msgstr ""
 
 #: ../channels/microsoft365-graph/index.rst:14
-msgid "Connect a Microsoft 365 account via Graph API (formerly \"Office 365\") to Zammad."
+msgid "Connect a Microsoft 365 account (formerly \"Office 365\") via Graph API to Zammad."
 msgstr ""
 
 #: ../channels/microsoft365-graph/index.rst:20
@@ -4453,6 +4481,36 @@ msgstr ""
 msgid "Contact your administrator if you don’t have access to an admin account."
 msgstr ""
 
+#: ../channels/microsoft365/common-errors.rst:4
+msgid "Here you can find some common errors in M365 context. Also have a look at the general :doc:`M365 documentation </channels/microsoft365/index>` for the configuration."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:9
+msgid "Incorrect Client ID"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:11
+msgid "**Error message:** AADSTS00016: Application with identifier 'xxxxxxxx' was not found in the directory 'MSFT'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:None
+#: ../channels/microsoft365/common-errors.rst:104
+#: ../channels/microsoft365/common-errors.rst:113
+#: ../channels/microsoft365/common-errors.rst:None
+msgid "Error message"
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:22
+msgid "In this case, please compare whether the client ID created in Zammad matches that in Azure for the Azure App."
+msgstr ""
+
+#: ../channels/microsoft365/common-errors.rst:25
+msgid "The Client ID can be found in Zammad under Settings > Channels > Microsoft 365 > App Configuration. See :doc:`here </channels/microsoft365/accounts>` how to find the client ID in Azure and where to copy it to in Zammad."
+msgstr ""
+
 #: ../channels/microsoft365/common-errors.rst:31
 msgid "Wrong or Expired Client Secret"
 msgstr ""
@@ -4618,7 +4676,7 @@ msgid "Microsoft 365 IMAP Email"
 msgstr ""
 
 #: ../channels/microsoft365/index.rst:14
-msgid "Connect a Microsoft 365 account via IMAP (formerly \"Office 365\") to Zammad."
+msgid "Connect a Microsoft 365 account (formerly \"Office 365\") via IMAP to Zammad."
 msgstr ""
 
 #: ../channels/sms.rst:2
