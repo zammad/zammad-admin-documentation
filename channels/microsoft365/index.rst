@@ -11,7 +11,7 @@ Microsoft 365 IMAP Email
    email-headers
    common-errors
 
-Connect a Microsoft 365 account via IMAP (formerly "Office 365") to Zammad.
+Connect a Microsoft 365 account (formerly "Office 365") via IMAP to Zammad.
 
 .. figure:: /images/channels/microsoft365/panel.png
    :alt: Email settings panel

@@ -11,7 +11,7 @@ Microsoft 365 Graph Email
    email-headers
    common-errors
 
-Connect a Microsoft 365 account via Graph API (formerly "Office 365") to Zammad.
+Connect a Microsoft 365 account (formerly "Office 365") via Graph API to Zammad.
 
 .. figure:: /images/channels/microsoft365-graph/panel.png
    :alt: Email settings panel
