@@ -17,10 +17,15 @@ Configuration
 ----------------
 
 Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ and
-log in with as an administrator.
+log in as an administrator (at least application administrator permission is
+required).
 
 Create App
 ^^^^^^^^^^
+
+.. figure:: /images/channels/microsoft365-graph/register-app.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with application registration screen.
 
 - Create a new app by going to *Applications > App registrations* and select
   **New registration**.
@@ -32,6 +37,12 @@ Create App
 - Under "Redirect URI", select "Web" as platform and paste your already copied
   callback URL from Zammad.
 - Click on **Register**.
+
+
+.. figure:: /images/channels/microsoft365-graph/app-overview.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with application overview screen.
+
 - In the overview screen, copy the "Application (client) ID", switch to Zammad
   and paste it in the "Client ID" field in the pop up.
 - Only required for single tenant setup: copy the "Directory (tenant) ID" and
@@ -39,6 +50,10 @@ Create App
 
 Create Secret
 ^^^^^^^^^^^^^
+
+.. figure:: /images/channels/microsoft365-graph/secret.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with client secret screen.
 
 - In Entra, go to "Certificates & secrets" and add a secret by clicking the
   **New client secret** button.
@@ -48,6 +63,10 @@ Create Secret
 
 Configure API Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: /images/channels/microsoft365-graph/api-permissions.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with api permission screen.
 
 - Go to "API permissions" and **Add a permission**.
 - Select "Microsoft Graph" and "Delegated permissions".
@@ -62,16 +81,6 @@ Configure API Permissions
   - ``Mail.Send.Shared``
 
 Save it by clicking the **Add permissions** button.
-
-Enterprise Applications
-^^^^^^^^^^^^^^^^^^^^^^^
-
-- Go to *Applications > Enterprise applications* and select your just created
-  app.
-- Go to "Users and groups" and **Add user/group**.
-- Click "None selected" to add a user.
-- Search and select your user and click on **Select** and then **Assign** to
-  save it.
 
 Additional Steps for Shared Mailboxes
 -------------------------------------
@@ -93,6 +102,10 @@ Configure the Channel in Zammad
 App Configuration
 ^^^^^^^^^^^^^^^^^
 
+.. figure:: /images/channels/microsoft365-graph/connect-app-dialog.png
+  :align: center
+  :alt: Screenshot shows Zammad's app configuration dialog.
+
 If you followed this guide, you already should have pasted your app information.
 If not, here is a short summary:
 
@@ -113,6 +126,10 @@ selected "Shared Mailbox", you have to enter the email address of the shared
 mailbox. Confirm by clicking the **Authenticate** button, enter your credentials
 and confirm the requested permissions by clicking the **Accept** button.
 
+.. figure:: /images/channels/microsoft365-graph/add-account-dialog.png
+  :align: center
+  :alt: Screenshot shows Zammad's dialog for account configuration.
+
 After that, Zammad will ask you to assign a destination group. Select a group
 which should (initially) handle the incoming tickets of this channel. You can
 also specify a folder from which Zammad should fetch emails from. If you do so,
@@ -124,3 +141,23 @@ clicking the **Save** button.
 Now your channel is ready and can be used! If something doesn't work, have
 a look at the :doc:`common errors section <common-errors>`, where you can
 find common errors related to the M365 configuration.
+
+
+Re-Authenticate
+^^^^^^^^^^^^^^^
+
+If your token got invalid, you have to replace the token due to other reasons,
+you want to use a shared mailbox with another user, you can use the
+**Re-Authenticate** button.
+
+In case you are using an user mailbox, the new user has to match the
+existing one, otherwise it will result in a user mismatch error. In this case,
+you should delete the channel and add a new account.
+
+Request Admin Consent
+^^^^^^^^^^^^^^^^^^^^^
+
+It is possible to request the permissions via admin consent. In this case
+Zammad will request necessary permissions for you from your admin, and then your
+admin (if it's not the same user as you) can accept them on Microsoft side.
+Trigger this process via the **Request Admin Consent** button in Zammad.
