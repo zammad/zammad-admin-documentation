@@ -1,5 +1,5 @@
-Microsoft 365 IMAP Email
-========================
+Microsoft 365 Graph Email
+=========================
 
 .. toctree::
    :hidden:
@@ -11,9 +11,9 @@ Microsoft 365 IMAP Email
    email-headers
    common-errors
 
-Connect a Microsoft 365 account (formerly "Office 365") via IMAP to Zammad.
+Connect a Microsoft 365 account (formerly "Office 365") via Graph API to Zammad.
 
-.. figure:: /images/channels/microsoft365/panel.png
+.. figure:: /images/channels/microsoft365-graph/panel.png
    :alt: Email settings panel
    :align: center
 
