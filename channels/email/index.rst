@@ -28,13 +28,14 @@ Control how Zammad **sends and receives email**.
 🚛 Migrate existing email channel to "XOAUTH" channel
    At this moment Zammad supports XOAUTH for the following providers:
 
-      * :ref:`Google <migrate-channel>`
-      * Microsoft 365 (formerly Office 365)
-        * `Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-email-channel>` (formerly Microsoft 365)
-        * `Microsoft 365 Graph Email </channels/microsoft365-graph/index/>`
+      * :ref:`Google Email <migrate-channel>`
+      * :doc:`Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-email-channel>` (formerly Office 365)
 
-   Use above links to use the migration option instead of removing and re-adding
-   the channels. This will save precious time for something else!
+   .. note::
+
+      Microsoft 365 *Graph* Email supports XOAUTH as well, but currently there
+      is no migration option. Instead, you have to
+      :doc:`add the channel manually </channels/microsoft365-graph/accounts/>`.
 
    .. start-after-migration
 
