@@ -34,8 +34,8 @@ Control how Zammad **sends and receives email**.
    .. note::
 
       Microsoft 365 *Graph* Email supports XOAUTH as well, but currently there
-      is no migration option. Instead, you have to
-      :doc:`add the channel manually </channels/microsoft365-graph/accounts/>`.
+      is no migration option. Instead, you have to remove the existing and
+      :doc:`add the new channel manually </channels/microsoft365-graph/accounts/>`.
 
    .. start-after-migration
 
