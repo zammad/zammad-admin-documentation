@@ -171,6 +171,8 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+Archive Mode
+   .. include:: /channels/email/accounts/archive-mode.rst
 
 After successfully adding the Google account, you can adjust
 the default group Zammad is going to assign incoming new tickets to.

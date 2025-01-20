@@ -151,6 +151,9 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+Archive Mode
+   .. include:: /channels/email/accounts/archive-mode.rst
+
 After adding the account
    After successfully adding the Microsoft 365 mail account, you can adjust
    the default group Zammad is going to assign incoming new tickets to.

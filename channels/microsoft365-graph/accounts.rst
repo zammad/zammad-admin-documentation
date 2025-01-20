@@ -134,9 +134,13 @@ After that, Zammad will ask you to assign a destination group. Select a group
 which should (initially) handle the incoming tickets of this channel. You can
 also specify a folder from which Zammad should fetch emails from. If you do so,
 make sure that the emails are routed to this folder somehow. Otherwise you won't
-receive tickets. Leave it empty to fetch all emails from the inbox. Finally,
-choose if fetched emails should remain on the server or not and confirm by
-clicking the **Save** button.
+receive tickets. Leave it empty to fetch all emails from the inbox. After that,
+choose if fetched emails should remain on the server or not.
+
+Depending if there are already email in this account, the archive mode dialog
+will be shown.
+
+.. include:: /channels/email/accounts/archive-mode.rst
 
 Now your channel is ready and can be used! If something doesn't work, have
 a look at the :doc:`common errors section <common-errors>`, where you can
