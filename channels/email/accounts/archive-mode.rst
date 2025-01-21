@@ -23,11 +23,10 @@ By archiving emails, their creation date and time is preserved and no automatic
 actions (e.g. trigger with auto-reply) will take place. If imported
 as regular tickets, the date and time is always the time of the import.
 
-To import all emails and convert them into new tickets, just turn the
-archive mode toggle off.
+To import all emails as regular tickets, just turn the archive mode toggle off.
 
 .. danger::
-   If you turn of the archive mode, Zammad treats **all emails** (even old ones)
+   If you turn off the archive mode, Zammad treats **all emails** (even old ones)
    as if they had been sent today. This means senders will receive
    auto-replies and tickets are created with state "new" for each message.
 

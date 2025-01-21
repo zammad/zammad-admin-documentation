@@ -137,8 +137,8 @@ make sure that the emails are routed to this folder somehow. Otherwise you won't
 receive tickets. Leave it empty to fetch all emails from the inbox. After that,
 choose if fetched emails should remain on the server or not.
 
-Depending if there are already email in this account, the archive mode dialog
-will be shown.
+Depending if there are already email messages in this account, the archive mode
+dialog may be shown.
 
 .. include:: /channels/email/accounts/archive-mode.rst
 
