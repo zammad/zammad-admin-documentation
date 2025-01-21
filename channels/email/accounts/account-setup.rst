@@ -193,33 +193,9 @@ Keep messages on server
 
    .. _email-experts-import-as:
 
-Import as
-   .. figure:: /images/channels/email/account-setup-archive-import.png
-      :alt: “Import as” option in email account setup dialog
-      :align: center
-      :width: 40%
+Archive Mode
+   .. include:: ./archive-mode.rst
 
-      How should old emails be imported?
-
-   During the import process, Zammad treats **all messages**
-   (including ones you've already read from months or years ago)
-   as if they had been sent today:
-   senders will receive auto-replies and tickets are created with state "new"
-   for each message.
-
-   Use this option to disable this behavior for messages more than two weeks
-   old.
-
-   .. note:: This option may not be shown if:
-
-      * all messages in your inbox are less than two weeks old
-      * you selected **Keep messages on server: Yes**
-      * you selected **Type: POP3**
-
-      For more fine-grained control,
-      manually disable this and other :doc:`triggers </manage/trigger>`
-      before adding an email account,
-      then turn them back on once all your messages have been imported.
 
 Email Outbound
 ^^^^^^^^^^^^^^
