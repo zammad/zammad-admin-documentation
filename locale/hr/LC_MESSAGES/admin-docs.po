@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 14:48+0100\n"
+"POT-Creation-Date: 2025-01-21 10:58+0100\n"
 "PO-Revision-Date: 2022-06-15 13:40+0000\n"
 "Last-Translator: Ivan Perovic <ip@zammad.com>\n"
 "Language-Team: Croatian <https://translations.zammad.org/projects/"
@@ -441,7 +441,7 @@ msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:76
 #: ../channels/email/accounts/account-setup.rst:125
-#: ../channels/email/accounts/account-setup.rst:251
+#: ../channels/email/accounts/account-setup.rst:227
 #: ../channels/email/accounts/email-notification.rst:33
 #: ../settings/security/password.rst:2
 msgid "Password"
@@ -449,7 +449,7 @@ msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:76
 #: ../channels/email/accounts/account-setup.rst:125
-#: ../channels/email/accounts/account-setup.rst:249
+#: ../channels/email/accounts/account-setup.rst:225
 #: ../channels/email/accounts/email-notification.rst:33
 msgid "Your account password."
 msgstr ""
@@ -513,7 +513,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:116
-#: ../channels/email/accounts/account-setup.rst:241
+#: ../channels/email/accounts/account-setup.rst:217
 #: ../channels/email/accounts/email-notification.rst:24
 msgid "Host"
 msgstr ""
@@ -529,7 +529,7 @@ msgid "Contact your email provider or system administrator if you don't know."
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:122
-#: ../channels/email/accounts/account-setup.rst:246
+#: ../channels/email/accounts/account-setup.rst:222
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../misc/object-conditions/basics.rst:26
 #: ../settings/security/third-party/microsoft.rst:68 ../system/sessions.rst:19
@@ -571,14 +571,14 @@ msgid "STARTTLS"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:142
-#: ../channels/email/accounts/account-setup.rst:265
+#: ../channels/email/accounts/account-setup.rst:241
 #: ../manage/webhook/add.rst:72 ../settings/security/third-party/saml.rst:149
 #: ../system/integrations/i-doit.rst:74
 msgid "SSL verification"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:137
-#: ../channels/email/accounts/account-setup.rst:259
+#: ../channels/email/accounts/account-setup.rst:235
 msgid ""
 "Here you can decide if the certificate of the email server has to be "
 "verified or not (default: ``yes``). In case you are using custom "
@@ -595,7 +595,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:149
-#: ../channels/email/accounts/account-setup.rst:256
+#: ../channels/email/accounts/account-setup.rst:232
 #: ../channels/email/accounts/email-notification.rst:38
 msgid "Port"
 msgstr ""
@@ -639,7 +639,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:194
-#: ../channels/google/basic-setup.rst:173
+#: ../channels/google/basic-setup.rst:172
 #: ../channels/microsoft365/accounts/account-setup.rst:152
 msgid "Keep messages on server"
 msgstr ""
@@ -687,110 +687,129 @@ msgid ""
 "out your inbox from time to time to keep it below its storage limit."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:222
-msgid "Import as"
+#: ../channels/email/accounts/account-setup.rst:198
+#: ../channels/google/basic-setup.rst:175
+#: ../channels/microsoft365/accounts/account-setup.rst:155
+msgid "Archive Mode"
 msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:0
-msgid "“Import as” option in email account setup dialog"
+#: ../channels/email/accounts/archive-mode.rst:7
+#: ../channels/google/basic-setup.rst:0
+#: ../channels/microsoft365/accounts/account-setup.rst:0
+msgid "Archive Mode dialog during email account setup"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:202
+#: ../channels/email/accounts/archive-mode.rst:7
 msgid "How should old emails be imported?"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:204
+#: ../channels/email/accounts/archive-mode.rst:9
 msgid ""
-"During the import process, Zammad treats **all messages** (including ones "
-"you've already read from months or years ago) as if they had been sent "
-"today: senders will receive auto-replies and tickets are created with state "
-"\"new\" for each message."
+"During the process of setting up an email based channel, Zammad checks if "
+"emails are present in the inbox. If Zammad detects at least one email, the "
+"archive mode dialog is triggered and the archive mode is turned on by "
+"default. This dialog is also present if you edit an existing email based "
+"channel. The archive mode lets you:"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:210
+#: ../channels/email/accounts/archive-mode.rst:15
 msgid ""
-"Use this option to disable this behavior for messages more than two weeks "
-"old."
+"Set an archive **cut-off time**, which means: older emails are imported in "
+"archive mode, newer ones as standard tickets (including auto-reply messages "
+"and in state \"new\")."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:213
-msgid "This option may not be shown if:"
-msgstr ""
-
-#: ../channels/email/accounts/account-setup.rst:215
-msgid "all messages in your inbox are less than two weeks old"
-msgstr ""
-
-#: ../channels/email/accounts/account-setup.rst:216
-msgid "you selected **Keep messages on server: Yes**"
-msgstr ""
-
-#: ../channels/email/accounts/account-setup.rst:217
-msgid "you selected **Type: POP3**"
-msgstr ""
-
-#: ../channels/email/accounts/account-setup.rst:219
+#: ../channels/email/accounts/archive-mode.rst:18
 msgid ""
-"For more fine-grained control, manually disable this and other :doc:"
-"`triggers </manage/trigger>` before adding an email account, then turn them "
-"back on once all your messages have been imported."
+"Select a **target state** for the archived emails: in most cases you might "
+"want to import these archived emails in \"closed\" state. However, if your "
+"use case is different, you can choose another one which fits for you."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:225
+#: ../channels/email/accounts/archive-mode.rst:22
+msgid ""
+"By archiving emails, their creation date and time is preserved and no "
+"automatic actions (e.g. trigger with auto-reply) will take place. If "
+"imported as regular tickets, the date and time is always the time of the "
+"import."
+msgstr ""
+
+#: ../channels/email/accounts/archive-mode.rst:26
+msgid ""
+"To import all emails as regular tickets, just turn the archive mode toggle "
+"off."
+msgstr ""
+
+#: ../channels/email/accounts/archive-mode.rst:29
+msgid ""
+"If you turn off the archive mode, Zammad treats **all emails** (even old "
+"ones) as if they had been sent today. This means senders will receive auto-"
+"replies and tickets are created with state \"new\" for each message."
+msgstr ""
+
+#: ../channels/email/accounts/archive-mode.rst:33
+msgid ""
+"If you want to differentiate even more, you have to do it manually and "
+"disable things like :doc:`triggers </manage/trigger>` before adding an email "
+"account, depending on your use case."
+msgstr ""
+
+#: ../channels/email/accounts/account-setup.rst:201
 msgid "Email Outbound"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:232
+#: ../channels/email/accounts/account-setup.rst:208
 msgid "Screenshot showing email setup outbound"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:232
+#: ../channels/email/accounts/account-setup.rst:208
 msgid "Configuration dialog of email channel outbound"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:238
+#: ../channels/email/accounts/account-setup.rst:214
 #: ../channels/email/accounts/email-notification.rst:21
 msgid "Send mails via"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:235
+#: ../channels/email/accounts/account-setup.rst:211
 #: ../channels/email/accounts/email-notification.rst:21
 msgid "Choose from **SMTP** and **local MTA** (*e.g.,* Sendmail)."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:237
+#: ../channels/email/accounts/account-setup.rst:213
 msgid ""
 "Local MTA (mail transfer agent) configuration is only available on self-"
 "hosted installations."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:241
+#: ../channels/email/accounts/account-setup.rst:217
 #: ../channels/email/accounts/email-notification.rst:24
 msgid ""
 "Your email server's hostname or IP address (*e.g.,* ``smtp.gmail.com``)."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:244
+#: ../channels/email/accounts/account-setup.rst:220
 #: ../channels/email/accounts/email-notification.rst:27
 msgid "Your account login/username."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:246
-#: ../channels/email/accounts/account-setup.rst:251
+#: ../channels/email/accounts/account-setup.rst:222
+#: ../channels/email/accounts/account-setup.rst:227
 msgid "Leave blank to use the same value from incoming account setup."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:254
+#: ../channels/email/accounts/account-setup.rst:230
 #: ../channels/email/accounts/email-notification.rst:36
 msgid "Your email server's port (usu. ``587`` or ``465``)."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:256
+#: ../channels/email/accounts/account-setup.rst:232
 #: ../channels/email/accounts/email-notification.rst:38
 msgid "Zammad will detect and enable SSL/STARTTLS support automatically."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:268
+#: ../channels/email/accounts/account-setup.rst:244
 msgid "Verification"
 msgstr ""
 
@@ -798,20 +817,20 @@ msgstr ""
 msgid "Email account verification step"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:274
+#: ../channels/email/accounts/account-setup.rst:250
 msgid ""
 "As a final step, Zammad sends a test email from your own account, to your "
 "own account, and to ``verify-external-smtp-sending@discard.zammad.org`` "
 "which discards the test mail right away."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:278
+#: ../channels/email/accounts/account-setup.rst:254
 msgid ""
 "We've created a `landing page for discard.zammad.org <https://discard.zammad."
 "org>`_ which describes the backgrounds as well."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:283
+#: ../channels/email/accounts/account-setup.rst:259
 msgid ""
 "This this Zammad ensures that your email account is capable of sending "
 "internal and external - once this is verified the setup process is complete! "
@@ -834,9 +853,9 @@ msgid ""
 "</manage/groups/settings>`."
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:289
-#: ../channels/google/basic-setup.rst:231
-#: ../channels/microsoft365/accounts/account-setup.rst:170
+#: ../channels/email/accounts/account-setup.rst:265
+#: ../channels/google/basic-setup.rst:233
+#: ../channels/microsoft365/accounts/account-setup.rst:173
 #: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:53 ../system/integrations/gitlab.rst:46
@@ -845,7 +864,7 @@ msgstr ""
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../channels/email/accounts/account-setup.rst:291
+#: ../channels/email/accounts/account-setup.rst:267
 msgid ""
 ":ref:`Is a custom incoming mail folder to blame? <email-experts-folder>`"
 msgstr ""
@@ -945,12 +964,12 @@ msgid "Location of \"Destination Group\" setting for existing accounts"
 msgstr ""
 
 #: ../channels/email/accounts/managing-accounts.rst:21
-#: ../channels/microsoft365/accounts/account-setup.rst:163
+#: ../channels/microsoft365/accounts/account-setup.rst:166
 msgid "Only **active** groups will be displayed."
 msgstr ""
 
 #: ../channels/email/accounts/managing-accounts.rst:23
-#: ../channels/microsoft365/accounts/account-setup.rst:165
+#: ../channels/microsoft365/accounts/account-setup.rst:168
 msgid ""
 "Changing this setting will not reassign existing tickets to the new group."
 msgstr ""
@@ -1820,7 +1839,7 @@ msgstr ""
 msgid "Email settings panel"
 msgstr ""
 
-#: ../channels/email/index.rst:39
+#: ../channels/email/index.rst:40
 msgid "🚛 Migrate existing email channel to \"XOAUTH\" channel"
 msgstr ""
 
@@ -1829,109 +1848,109 @@ msgid "At this moment Zammad supports XOAUTH for the following providers:"
 msgstr ""
 
 #: ../channels/email/index.rst:31
-msgid ":ref:`Google <migrate-channel>`"
+msgid ":ref:`Google Email <migrate-channel>`"
 msgstr ""
 
 #: ../channels/email/index.rst:32
 msgid ""
-"Microsoft 365 (formerly Office 365) * `Microsoft 365 IMAP Email </channels/"
-"microsoft365/accounts/migrate-from-email-channel>` (formerly Microsoft 365) "
-"* `Microsoft 365 Graph Email </channels/microsoft365-graph/index/>`"
+":doc:`Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-"
+"email-channel>` (formerly Office 365)"
 msgstr ""
 
 #: ../channels/email/index.rst:36
 msgid ""
-"Use above links to use the migration option instead of removing and re-"
-"adding the channels. This will save precious time for something else!"
+"Microsoft 365 *Graph* Email supports XOAUTH as well, but currently there is "
+"no migration option. Instead, you have to remove the existing and :doc:`add "
+"the new channel manually </channels/microsoft365-graph/accounts/>`."
 msgstr ""
 
-#: ../channels/email/index.rst:48 ../channels/email/index.rst:10
+#: ../channels/email/index.rst:49 ../channels/email/index.rst:10
 msgid ":doc:`👥 Accounts <accounts>`"
 msgstr ""
 
-#: ../channels/email/index.rst:42 ../channels/email/index.rst:4
+#: ../channels/email/index.rst:43 ../channels/email/index.rst:4
 msgid ""
 "**Connect Zammad to your email provider** so that it can watch your inbox, "
 "send auto-replies, and more."
 msgstr ""
 
-#: ../channels/email/index.rst:45 ../channels/email/index.rst:7
+#: ../channels/email/index.rst:46 ../channels/email/index.rst:7
 msgid ""
 "(Self-hosted users may have already completed this step during new system "
 "setup.)"
 msgstr ""
 
-#: ../channels/email/index.rst:52 ../channels/email/index.rst:14
+#: ../channels/email/index.rst:53 ../channels/email/index.rst:14
 msgid ":doc:`🗂️ Filters <filters>`"
 msgstr ""
 
-#: ../channels/email/index.rst:51 ../channels/email/index.rst:13
+#: ../channels/email/index.rst:52 ../channels/email/index.rst:13
 msgid ""
 "**Make sure new tickets show up in the right place** with automated, if-this-"
 "then-that rules for all incoming email."
 msgstr ""
 
-#: ../channels/email/index.rst:55 ../channels/email/index.rst:17
+#: ../channels/email/index.rst:56 ../channels/email/index.rst:17
 msgid ":doc:`📜  Signatures <signatures>`"
 msgstr ""
 
-#: ../channels/email/index.rst:55 ../channels/email/index.rst:17
+#: ../channels/email/index.rst:56 ../channels/email/index.rst:17
 msgid "Customize signatures for all outgoing email."
 msgstr ""
 
-#: ../channels/email/index.rst:67 ../channels/email/index.rst:29
+#: ../channels/email/index.rst:68 ../channels/email/index.rst:29
 msgid ":doc:`⚙️  Settings <settings>`"
 msgstr ""
 
-#: ../channels/email/index.rst:58 ../channels/google/index.rst:42
+#: ../channels/email/index.rst:59 ../channels/google/index.rst:42
 #: ../channels/email/index.rst:20
 msgid "Manage options like:"
 msgstr ""
 
-#: ../channels/email/index.rst:60 ../channels/google/index.rst:44
+#: ../channels/email/index.rst:61 ../channels/google/index.rst:44
 #: ../channels/email/index.rst:22
 msgid "set the “From:” address on system notifications"
 msgstr ""
 
-#: ../channels/email/index.rst:61 ../channels/google/index.rst:45
+#: ../channels/email/index.rst:62 ../channels/google/index.rst:45
 #: ../channels/email/index.rst:23
 msgid "raise the limit on attachment sizes"
 msgstr ""
 
-#: ../channels/email/index.rst:62 ../channels/google/index.rst:46
+#: ../channels/email/index.rst:63 ../channels/google/index.rst:46
 #: ../channels/email/index.rst:24
 msgid "modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)"
 msgstr ""
 
-#: ../channels/email/index.rst:64 ../channels/email/index.rst:26
+#: ../channels/email/index.rst:65 ../channels/email/index.rst:26
 msgid ""
 "Want to **manually edit email subjects** or **always copy parent messages "
 "into your replies**?"
 msgstr ""
 
-#: ../channels/email/index.rst:67 ../channels/email/index.rst:29
+#: ../channels/email/index.rst:68 ../channels/email/index.rst:29
 msgid "Check the ✍️ :doc:`/misc/composer`."
 msgstr ""
 
-#: ../channels/email/index.rst:72 ../channels/email/index.rst:35
+#: ../channels/email/index.rst:73 ../channels/email/index.rst:35
 msgid ":doc:`📇 Header based actions <email-headers>`"
 msgstr ""
 
-#: ../channels/email/index.rst:70 ../channels/google/index.rst:49
+#: ../channels/email/index.rst:71 ../channels/google/index.rst:49
 #: ../channels/email/index.rst:32
 msgid "Manipulate auto response behavior or incoming routing."
 msgstr ""
 
-#: ../channels/email/index.rst:72 ../channels/google/index.rst:51
+#: ../channels/email/index.rst:73 ../channels/google/index.rst:51
 #: ../channels/email/index.rst:34
 msgid "🤓 This is a very advanced topic."
 msgstr ""
 
-#: ../channels/email/index.rst:75
+#: ../channels/email/index.rst:76
 msgid "Extra Options for Self-Hosted Users"
 msgstr ""
 
-#: ../channels/email/index.rst:77
+#: ../channels/email/index.rst:78
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
@@ -3383,58 +3402,58 @@ msgid ""
 "e.g. ``Inquiries/Tech-Support``."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:175
+#: ../channels/google/basic-setup.rst:177
 msgid ""
 "After successfully adding the Google account, you can adjust the default "
 "group Zammad is going to assign incoming new tickets to."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:183
+#: ../channels/google/basic-setup.rst:185
 msgid ""
 "Only **active** groups will be displayed. Changing this setting will not "
 "reassign existing tickets to the new group."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:189
+#: ../channels/google/basic-setup.rst:191
 msgid "Migrate from Email Channel"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:192
+#: ../channels/google/basic-setup.rst:194
 msgid "Convert Email Channel to Google Channel"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:194
+#: ../channels/google/basic-setup.rst:196
 msgid ""
 "Zammad provides a migration logic that allows you to migrate existing Google "
 "accounts from an email channel into a Google channel."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:197
+#: ../channels/google/basic-setup.rst:199
 #: ../channels/microsoft365/accounts/migrate-from-email-channel.rst:7
 msgid "🧐 **Zammad is expecting specific settings**"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:199
+#: ../channels/google/basic-setup.rst:201
 msgid ""
 "In order for Zammad to display the migration option, it expects the channels "
 "hostname to be ``imap.gmail.com`` for IMAP and ``smtp.gmail.com`` for SMTP."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:202
+#: ../channels/google/basic-setup.rst:204
 msgid ""
 "The easiest way to start the migration is to :ref:`register-oauth-google` "
 "for your Google accounts before migrating. However, if you don't, Zammad "
 "will ask you to provide your app credentials before allowing you to continue."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:206
+#: ../channels/google/basic-setup.rst:208
 msgid ""
 "If you're ready to go, simply click on the *Migrate now!* button in the red "
 "banner of the email channel in question. Zammad will redirect you to Google "
 "and request you to authenticate and consent to said account."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:210
+#: ../channels/google/basic-setup.rst:212
 msgid ""
 "After you pressed next you'll be redirect to Zammad's Google channel "
 "overview. Your channel, if successful, is now migrated to an Google channel."
@@ -3444,12 +3463,12 @@ msgstr ""
 msgid "Migrate an existing email channel to Google"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:218
+#: ../channels/google/basic-setup.rst:220
 #: ../channels/microsoft365/accounts/migrate-from-email-channel.rst:31
 msgid "Rolling Back the Migration"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:220
+#: ../channels/google/basic-setup.rst:222
 #: ../channels/microsoft365/accounts/migrate-from-email-channel.rst:33
 msgid ""
 "In case something went wrong, Zammad allows you to roll back the migration "
@@ -3458,27 +3477,27 @@ msgid ""
 "entirely after 7 days."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:235
+#: ../channels/google/basic-setup.rst:237
 msgid "My OAuth credentials stopped working"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:234
+#: ../channels/google/basic-setup.rst:236
 msgid ""
 "Did you recently change your Google password? Google invalidates all your "
 "OAuth tokens whenever you change it."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:249
+#: ../channels/google/basic-setup.rst:251
 msgid "How to use the Gmail account for outgoing system notifications?"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:238
+#: ../channels/google/basic-setup.rst:240
 msgid ""
 "On **subscription/cloud-hosted instances**, you can't do that. Notifications "
 "will always come from “Notification Master <noreply\\@your.zammad.domain>”."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:242
+#: ../channels/google/basic-setup.rst:244
 msgid ""
 "On **self-hosted instances**, we still don't recommend it. Using a Gmail "
 "account for automated, outgoing messages is risky: users who exceed Google's "
@@ -3486,17 +3505,17 @@ msgid ""
 "have their accounts suspended."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:248
+#: ../channels/google/basic-setup.rst:250
 msgid ""
 "Set up a generic :doc:`email channel </channels/email/index>` instead and "
 "use the :ref:`Email Notification <email-notification>` setting."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:252
+#: ../channels/google/basic-setup.rst:254
 msgid "I successfully added my account, but Zammad isn't fetching new emails"
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:252
+#: ../channels/google/basic-setup.rst:254
 msgid ""
 "If you specified a :ref:`custom folder/label to fetch from <google-folder>`, "
 "are you sure incoming mail is arriving in that folder?"
@@ -3870,41 +3889,47 @@ msgid ""
 "You can also specify a folder from which Zammad should fetch emails from. If "
 "you do so, make sure that the emails are routed to this folder somehow. "
 "Otherwise you won't receive tickets. Leave it empty to fetch all emails from "
-"the inbox. Finally, choose if fetched emails should remain on the server or "
-"not and confirm by clicking the **Save** button."
+"the inbox. After that, choose if fetched emails should remain on the server "
+"or not."
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:141
+#: ../channels/microsoft365-graph/accounts.rst:140
+msgid ""
+"Depending if there are already email messages in this account, the archive "
+"mode dialog may be shown."
+msgstr ""
+
+#: ../channels/microsoft365-graph/accounts.rst:145
 msgid ""
 "Now your channel is ready and can be used! If something doesn't work, have a "
 "look at the :doc:`common errors section <common-errors>`, where you can find "
 "common errors related to the M365 configuration."
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:147
+#: ../channels/microsoft365-graph/accounts.rst:151
 msgid "Re-Authenticate"
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:149
+#: ../channels/microsoft365-graph/accounts.rst:153
 msgid ""
 "If your token got invalid, you have to replace the token due to other "
 "reasons, you want to use a shared mailbox with another user, you can use the "
 "**Re-Authenticate** button."
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:153
+#: ../channels/microsoft365-graph/accounts.rst:157
 msgid ""
 "In case you are using an user mailbox, the new user has to match the "
 "existing one, otherwise it will result in a user mismatch error. In this "
 "case, you should delete the channel and add a new account."
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:158
+#: ../channels/microsoft365-graph/accounts.rst:162
 #: ../channels/microsoft365/common-errors.rst:71
 msgid "Request Admin Consent"
 msgstr ""
 
-#: ../channels/microsoft365-graph/accounts.rst:160
+#: ../channels/microsoft365-graph/accounts.rst:164
 msgid ""
 "It is possible to request the permissions via admin consent. In this case "
 "Zammad will request necessary permissions for you from your admin, and then "
@@ -4352,32 +4377,32 @@ msgid ""
 "Zammad may miss messages if the mailbox is externally modified.)"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:167
+#: ../channels/microsoft365/accounts/account-setup.rst:170
 msgid "After adding the account"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:155
+#: ../channels/microsoft365/accounts/account-setup.rst:158
 msgid ""
 "After successfully adding the Microsoft 365 mail account, you can adjust the "
 "default group Zammad is going to assign incoming new tickets to."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:175
+#: ../channels/microsoft365/accounts/account-setup.rst:178
 msgid "I successfully added my account, but Zammad isn't fetching new email"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:173
+#: ../channels/microsoft365/accounts/account-setup.rst:176
 msgid ""
 "If you specified a :ref:`custom folder/label to fetch from <microsoft365-"
 "folder>`, are you sure incoming mail is arriving in that folder?"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:183
+#: ../channels/microsoft365/accounts/account-setup.rst:186
 msgid ""
 "My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:178
+#: ../channels/microsoft365/accounts/account-setup.rst:181
 msgid ""
 "This is a Microsoft 365 specific issue which you have to solve with "
 "Microsoft. However, you can have a look at `Microsofts documentation "
@@ -4386,7 +4411,7 @@ msgid ""
 "to solve the issue on your own."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/account-setup.rst:183
+#: ../channels/microsoft365/accounts/account-setup.rst:186
 msgid ""
 "As soon as the issue has been fixed, the Zammad channel will recover "
 "automatically."
