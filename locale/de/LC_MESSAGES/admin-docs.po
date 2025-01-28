@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-21 10:58+0100\n"
-"PO-Revision-Date: 2025-01-15 15:00+0000\n"
+"PO-Revision-Date: 2025-01-23 17:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -786,14 +786,14 @@ msgstr ""
 #: ../channels/google/basic-setup.rst:175
 #: ../channels/microsoft365/accounts/account-setup.rst:155
 msgid "Archive Mode"
-msgstr ""
+msgstr "Archiv-Modus"
 
 #: ../channels/email/accounts/account-setup.rst:0
 #: ../channels/email/accounts/archive-mode.rst:7
 #: ../channels/google/basic-setup.rst:0
 #: ../channels/microsoft365/accounts/account-setup.rst:0
 msgid "Archive Mode dialog during email account setup"
-msgstr ""
+msgstr "Dialogfeld \"Archivmodus\" bei der Einrichtung eines E-Mail Kontos"
 
 #: ../channels/email/accounts/archive-mode.rst:7
 msgid "How should old emails be imported?"
@@ -807,6 +807,12 @@ msgid ""
 "default. This dialog is also present if you edit an existing email based "
 "channel. The archive mode lets you:"
 msgstr ""
+"Bei der Einrichtung eines E-Mail-basierten Kanals prüft Zammad, ob E-Mails "
+"im Posteingang vorhanden sind. Wenn Zammad mindestens eine E-Mail findet, "
+"wird das Dialogfeld für den Archivierungsmodus getriggert und der "
+"Archivierungsmodus ist standardmäßig aktiviert. Dieser Dialog wird auch "
+"angezeigt, wenn Sie einen bestehenden E-Mail-basierten Kanal bearbeiten. Mit "
+"dem Archivierungsmodus können Sie:"
 
 #: ../channels/email/accounts/archive-mode.rst:15
 msgid ""
@@ -814,6 +820,9 @@ msgid ""
 "archive mode, newer ones as standard tickets (including auto-reply messages "
 "and in state \"new\")."
 msgstr ""
+"Legen Sie einen Stichtag fest, d.h. ältere E-Mails werden im Archivmodus "
+"importiert, neuere als reguläre Tickets (einschließlich Auto-Antwort-"
+"Nachrichten und im Status \"neu\")."
 
 #: ../channels/email/accounts/archive-mode.rst:18
 msgid ""
@@ -821,6 +830,10 @@ msgid ""
 "want to import these archived emails in \"closed\" state. However, if your "
 "use case is different, you can choose another one which fits for you."
 msgstr ""
+"Wählen Sie einen **Zielstatus** für die archivierten E-Mails: In den meisten "
+"Fällen werden Sie die archivierten E-Mails im Status \"geschlossen\" "
+"importieren wollen. Wenn Sie jedoch einen anderen Anwendungsfall haben, "
+"können Sie einen anderen Status wählen, der für Sie geeignet ist."
 
 #: ../channels/email/accounts/archive-mode.rst:22
 msgid ""
@@ -829,44 +842,39 @@ msgid ""
 "imported as regular tickets, the date and time is always the time of the "
 "import."
 msgstr ""
+"Bei der Archivierung von E-Mails bleiben Erstellungsdatum und -uhrzeit "
+"erhalten, und es finden keine automatischen Aktionen (z.B. Trigger mit Auto-"
+"Antwort) statt. Wenn sie als reguläre Tickets importiert werden, ist das "
+"Datum und die Uhrzeit immer die Uhrzeit des Imports."
 
 #: ../channels/email/accounts/archive-mode.rst:26
 msgid ""
 "To import all emails as regular tickets, just turn the archive mode toggle "
 "off."
 msgstr ""
+"Um alle E-Mails als reguläre Tickets zu importieren, schalten Sie einfach "
+"den Archivmodus aus."
 
 #: ../channels/email/accounts/archive-mode.rst:29
-#, fuzzy
-#| msgid ""
-#| "During the import process, Zammad treats **all messages** (including ones "
-#| "you've already read from months or years ago) as if they had been sent "
-#| "today: senders will receive auto-replies and tickets are created with "
-#| "state \"new\" for each message."
 msgid ""
 "If you turn off the archive mode, Zammad treats **all emails** (even old "
 "ones) as if they had been sent today. This means senders will receive auto-"
 "replies and tickets are created with state \"new\" for each message."
 msgstr ""
-"Während des Importvorgangs behandelt Zammad **alle Nachrichten** (auch "
-"solche, die Sie bereits vor Monaten oder Jahren gelesen haben) so, als ob "
-"sie heute versandt worden wären: Absender erhalten automatische Antworten "
-"und Tickets werden für jede Nachricht mit Status \"neu\"erstellt ."
+"Wenn Sie den Archivierungsmodus deaktivieren, behandelt Zammad **alle "
+"E-Mails** (auch alte) so, als wären sie heute versandt worden. Das bedeutet, "
+"dass die Absender automatische Antworten erhalten und Tickets im Status "
+"\"neu\" für jede Nachricht erstellt werden."
 
 #: ../channels/email/accounts/archive-mode.rst:33
-#, fuzzy
-#| msgid ""
-#| "For more fine-grained control, manually disable this and other :doc:"
-#| "`triggers </manage/trigger>` before adding an email account, then turn "
-#| "them back on once all your messages have been imported."
 msgid ""
 "If you want to differentiate even more, you have to do it manually and "
 "disable things like :doc:`triggers </manage/trigger>` before adding an email "
 "account, depending on your use case."
 msgstr ""
-"Um keine unerwünschten Effekte auszulösen deaktivieren Sie das und andere :"
-"doc:`triggers </manage/trigger>` bevor Sie einen E-Mail-Konto hinzufügen, "
-"dann schalten Sie diese wieder ein nachdem alle Mails importiert wurden."
+"Wenn Sie noch mehr differenzieren wollen, müssen Sie manuell eingreifen und "
+"Dinge wie :doc:`Trigger </manage/trigger>` deaktivieren, bevor Sie ein E-"
+"Mail Konto hinzufügen, abhängig davon was Sie erreichen möchten."
 
 #: ../channels/email/accounts/account-setup.rst:201
 msgid "Email Outbound"
@@ -4758,15 +4766,6 @@ msgstr ""
 "Der Screenshot zeigt den Dialog von Zammad zur Konfiguration des Kontos."
 
 #: ../channels/microsoft365-graph/accounts.rst:133
-#, fuzzy
-#| msgid ""
-#| "After that, Zammad will ask you to assign a destination group. Select a "
-#| "group which should (initially) handle the incoming tickets of this "
-#| "channel. You can also specify a folder from which Zammad should fetch "
-#| "emails from. If you do so, make sure that the emails are routed to this "
-#| "folder somehow. Otherwise you won't receive tickets. Leave it empty to "
-#| "fetch all emails from the inbox. Finally, choose if fetched emails should "
-#| "remain on the server or not and confirm by clicking the **Save** button."
 msgid ""
 "After that, Zammad will ask you to assign a destination group. Select a "
 "group which should (initially) handle the incoming tickets of this channel. "
@@ -4782,15 +4781,16 @@ msgstr ""
 "Mails abrufen soll. Wenn Sie dies tun, stellen Sie sicher, dass die E-Mails "
 "irgendwie an diesen Ordner weitergeleitet werden. Andernfalls werden Sie "
 "keine Tickets erhalten. Lassen Sie das Feld leer, um alle E-Mails aus dem "
-"Posteingang abzurufen. Wählen Sie abschließend, ob die abgerufenen E-Mails "
-"auf dem Server verbleiben sollen oder nicht, und bestätigen Sie mit der "
-"Schaltfläche **Speichern**."
+"Posteingang zu holen. Legen Sie anschließend fest, ob die abgerufenen E-"
+"Mails auf dem Server verbleiben sollen oder nicht."
 
 #: ../channels/microsoft365-graph/accounts.rst:140
 msgid ""
 "Depending if there are already email messages in this account, the archive "
 "mode dialog may be shown."
 msgstr ""
+"Je nachdem, ob bereits E-Mail-Nachrichten in diesem Konto vorhanden sind, "
+"wird das Dialogfeld für den Archivierungsmodus angezeigt."
 
 #: ../channels/microsoft365-graph/accounts.rst:145
 msgid ""
