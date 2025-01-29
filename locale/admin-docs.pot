@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-21 10:58+0100\n"
+"POT-Creation-Date: 2025-01-29 08:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9192,7 +9192,7 @@ msgstr ""
 
 #: ../manage/slas/index.rst:51
 #: ../manage/slas/index.rst:92
-#: ../settings/security/third-party.rst:81
+#: ../settings/security/third-party.rst:82
 #: ../settings/system/frontend.rst:54
 #: ../system/maintenance.rst:70
 #: ../system/maintenance.rst:94
@@ -15616,35 +15616,35 @@ msgstr ""
 msgid "You can deactivate logging in via :ref:`security_password_login` if any of the mentioned authentication providers are enabled in your instance."
 msgstr ""
 
-#: ../settings/security/third-party.rst:27
+#: ../settings/security/third-party.rst:28
 msgid "We're currently missing documentation for the following login providers:"
 msgstr ""
 
-#: ../settings/security/third-party.rst:29
+#: ../settings/security/third-party.rst:30
 msgid "LinkedIn"
 msgstr ""
 
-#: ../settings/security/third-party.rst:30
+#: ../settings/security/third-party.rst:31
 msgid "Weibo"
 msgstr ""
 
-#: ../settings/security/third-party.rst:35
+#: ../settings/security/third-party.rst:36
 msgid "Automatic Account Link on Initial Logon"
 msgstr ""
 
-#: ../settings/security/third-party.rst:37
+#: ../settings/security/third-party.rst:38
 msgid "In general there's two possible options for Zammad on how to deal with already known users as they try to authenticate against a third-party application. By default, Zammad will not automatically link \"unknown\" authentication providers to existing accounts."
 msgstr ""
 
-#: ../settings/security/third-party.rst:42
+#: ../settings/security/third-party.rst:43
 msgid "This means that the user has to manually link authentication providers to their accounts (for more about this :user-docs:`consult the user documentation </extras/profile-and-settings.html>`)."
 msgstr ""
 
-#: ../settings/security/third-party.rst:46
+#: ../settings/security/third-party.rst:47
 msgid "Sometimes this doesn't come in handy as this also means you'll receive error messages about \"email address being in use already\" for (yet) unknown third-party authentication methods."
 msgstr ""
 
-#: ../settings/security/third-party.rst:50
+#: ../settings/security/third-party.rst:51
 msgid "If you want to allow your users to always be able to log in, no matter what, you may want to enable ``Automatic account link on initial logon``."
 msgstr ""
 
@@ -15653,19 +15653,19 @@ msgid "Screenshot highlighting the \"Automatic account link on initial logon\"\n
 "setting"
 msgstr ""
 
-#: ../settings/security/third-party.rst:60
+#: ../settings/security/third-party.rst:61
 msgid "Automatic Account Linking Notification"
 msgstr ""
 
-#: ../settings/security/third-party.rst:64
+#: ../settings/security/third-party.rst:65
 msgid "To improve security and your users awareness, you can enable Zammad to notify your users when a new third-party application has been linked to their account."
 msgstr ""
 
-#: ../settings/security/third-party.rst:68
+#: ../settings/security/third-party.rst:69
 msgid "This notification is sent out once per third-party application. Zammad does also mention the method used, e.g.: ``Microsoft``."
 msgstr ""
 
-#: ../settings/security/third-party.rst:71
+#: ../settings/security/third-party.rst:72
 msgid "By default this setting is not active (set to ``no``)."
 msgstr ""
 
@@ -15674,19 +15674,19 @@ msgid "Screenshot showing sample notification mail after initial\n"
 "third-party linking"
 msgstr ""
 
-#: ../settings/security/third-party.rst:85
+#: ../settings/security/third-party.rst:86
 msgid "This notification is only sent if the account in question already exists. If the login via the third-party also creates the missing account, the notification will be skipped."
 msgstr ""
 
-#: ../settings/security/third-party.rst:89
+#: ../settings/security/third-party.rst:90
 msgid "This means it only affects:"
 msgstr ""
 
-#: ../settings/security/third-party.rst:91
+#: ../settings/security/third-party.rst:92
 msgid "manual account linking within the third-party page of the users profile"
 msgstr ""
 
-#: ../settings/security/third-party.rst:92
+#: ../settings/security/third-party.rst:93
 msgid "logging into an existing local account by utilizing the *automatic account link on initial logon* functionality"
 msgstr ""
 
@@ -15695,15 +15695,15 @@ msgid "Screenshot showing the \"automatic account linking notification\"\n"
 "setting"
 msgstr ""
 
-#: ../settings/security/third-party.rst:100
+#: ../settings/security/third-party.rst:101
 msgid "No User Creation on Logon"
 msgstr ""
 
-#: ../settings/security/third-party.rst:102
+#: ../settings/security/third-party.rst:103
 msgid "By default, Zammad will create a new user account if the user logs in via a third-party application and the account doesn't exist yet."
 msgstr ""
 
-#: ../settings/security/third-party.rst:105
+#: ../settings/security/third-party.rst:106
 msgid "If you want to prevent Zammad from creating new accounts on logon, you can disable this feature by setting ``No user creation on logon`` to ``yes``."
 msgstr ""
 
@@ -16089,6 +16089,155 @@ msgid "Screencast showing how to add app credentials and activating the\n"
 "authentication method"
 msgstr ""
 
+#: ../settings/security/third-party/openid-connect.rst:2
+msgid "OpenID Connect"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:4
+msgid "Connect your OpenID provider (OP) as a single sign-on (SSO) method."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:6
+msgid "OpenID is an easy and safe way for people to reuse an existing account and user profile from an OpenID provider."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:8
+msgid "The current implementation of OpenID Connect in Zammad is requiring OpenID Connect Discovery to simplify the configuration."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:10
+msgid "The relying party (RP) is Zammad, and the OpenID provider is a software service that you either host or subscribe to. (*e.g.,* `Keycloak <https://www.keycloak.org/>`_)."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:12
+msgid "This guide assumes you are already using OpenID Connect within your organization (i.e., that your OP is fully set up)."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:14
+msgid "The connection between Zammad and your OP has to be secure. Both systems must be reachable via HTTPS. Self-signed certificates are not supported."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:16
+msgid "Please note: Our instructions are based on connecting Zammad with Keycloak."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:19
+msgid "Step 1: Configure Your OP"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:22
+msgid "Add a new Client"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:24
+msgid "Create a new client in your OP with the following settings:"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:28
+msgid "General settings"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:27
+msgid "Client type: OpenID Connect"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:28
+msgid "Client ID: ``zammad`` (or any other name you prefer)"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:32
+msgid "Capability config"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:31
+msgid "Client authentication: Off"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:32
+msgid "Authentication flow: Standard flow"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:37
+msgid "Login settings"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:35
+msgid "Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/callback``"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:36
+msgid "Valid post logout redirect URIs: ``https://your.zammad.domain/*``"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:37
+msgid "Web origins: ``+``"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:39
+msgid "In the **Logout settings** for the newly created client, set the **Backchannel logout URL** to ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and switch on **Backchannel logout session required**."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:42
+msgid "Step 2: Configure Zammad"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:44
+msgid "Enable OpenID Connect and enter your OP's details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via OpenID Connect**:"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:None
+msgid "Example configuration of OpenID Connect"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:54
+#: ../settings/security/third-party/saml.rst:102
+msgid "Display name"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:52
+msgid "Allows you to define a custom button name for OpenID Connect. This helps your users to understand better what the button on the login page does."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:54
+msgid "Defaults to ``OpenID Connect``."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:57
+msgid "Identifier"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:57
+msgid "The client ID you defined in your OP."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:60
+msgid "Issuer"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:60
+msgid "The issuer URL of your OP. Used for discovery."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:63
+msgid "UID field"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:63
+msgid "Here you can define an attribute that uniquely identifies the user. If unset, ``sub`` is used."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:66
+msgid "Scopes"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:66
+msgid "The scopes that Zammad should request from the OP. Defaults to ``openid``, ``email`` and ``profile``."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:68
+msgid "See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to OP accounts."
+msgstr ""
+
 #: ../settings/security/third-party/saml.rst:2
 msgid "SAML"
 msgstr ""
@@ -16195,10 +16344,6 @@ msgstr ""
 
 #: ../settings/security/third-party/saml.rst:None
 msgid "Example configuration of SAML part 1"
-msgstr ""
-
-#: ../settings/security/third-party/saml.rst:102
-msgid "Display name"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:99
