@@ -19,8 +19,9 @@ of the mentioned authentication providers are enabled in your instance.
    third-party/gitlab
    third-party/google
    third-party/microsoft
-   third-party/twitter
+   third-party/openid-connect
    third-party/saml
+   third-party/twitter
 
 .. note::
 
@@ -107,4 +108,3 @@ disable this feature by setting ``No user creation on logon`` to ``yes``.
 
 .. figure:: /images/settings/security/login_no_user_creation.png
       :alt: Screenshot showing the "no user creation on logon" setting
-
