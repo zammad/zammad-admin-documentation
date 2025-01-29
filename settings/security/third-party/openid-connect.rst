@@ -5,13 +5,15 @@ Connect your OpenID provider (OP) as a single sign-on (SSO) method.
 
 OpenID is an easy and safe way for people to reuse an existing account and user profile from an OpenID provider.
 
-.. warning:: The current implementation of OpenID Connect in Zammad is requiring OpenID Connect Discovery to simplify the configuration.
+.. hint:: The current implementation of OpenID Connect in Zammad is requiring OpenID Connect Discovery to simplify the configuration.
 
 The relying party (RP) is Zammad, and the OpenID provider is a software service that you either host or subscribe to. (*e.g.,* `Keycloak <https://www.keycloak.org/>`_).
 
 This guide assumes you are already using OpenID Connect within your organization (i.e., that your OP is fully set up).
 
-.. warning:: Please note: Our instructions are based on connecting Zammad with Keycloak.
+.. warning: The connection between Zammad and your OP has to be secure. Both systems must be reachable via HTTPS. Self-signed certificates are not supported.
+
+.. hint:: Please note: Our instructions are based on connecting Zammad with Keycloak.
 
 Step 1: Configure Your OP
 --------------------------
