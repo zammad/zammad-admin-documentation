@@ -14,10 +14,10 @@ To learn about macros in detail, go to the section
    :Tags:  add ``spam``
    :Owner: current user
 
-   .. figure:: /images/manage/macros/macro-example-mark-ticket-as-spam.gif
+   .. figure:: /images/manage/macros/macro-example-mark-ticket-as-spam.png
       :align: center
-      :width: 70%
-      :alt: Screencast showing spam macro configuration and behavior
+      :width: 60%
+      :alt: Screenshot showing spam macro configuration
 
    .. tip:: 💡 Run this macro in a :doc:`/manage/scheduler`
       to periodically clean up unwanted tickets.
@@ -32,7 +32,7 @@ To learn about macros in detail, go to the section
    :Pending Till: relative / 7 / days
    :Owner:        current user
 
-   .. figure:: /images/manage/macros/macro-example-postpone-ticket-for-7days.gif
+   .. figure:: /images/manage/macros/macro-example-postpone-ticket-for-7days.png
       :align: center
-      :width: 70%
-      :alt: Screencast showing postpone macro configuration and behavior
+      :width: 60%
+      :alt: Screenshot showing postpone macro configuration

@@ -5,13 +5,10 @@ The “Organizations” panel provides tools to manually manage organization
 entries. See :ref:`organization-details-reference` for help with the
 New/Edit Organization dialog.
 
-👥 Creating and editing users
-   .. figure:: /images/manage/organizations/add-new-organization-dialog.gif
-      :alt: Screencast showing an organization being created.
-      :align: center
-
-      Click the **New Organization** button to open the New Organization dialog,
-      or click on an existing organization to edit.
+👥 Creating and editing organizations
+      Click the **New Organization** button to create a new one. Simply click
+      on an existing organization to edit it. You can even clone an organization
+      by using the icon in the "Action" column.
 
 🗑️ Deleting organizations
    Organizations currently can only be removed via data privacy by deleting

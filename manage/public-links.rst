@@ -101,12 +101,10 @@ Re-arrange Links
 
 By default Zammad sorts your public links in the order you've created them.
 That may be a problem if you add a link later on. For this reason you can
-easily change the link order by dragging them to another position.
+easily change the link order by dragging them to another position by using
+the ≣ handle.
 
 These changes are affective immediately.
-
-.. figure:: /images/manage/public-links/public-links_rearrange-links.gif
-   :alt: Screencast showing re-arranging public links by using drag & drop
 
 .. _public_links_actions:
 
@@ -120,21 +118,17 @@ Updating existing entries
 
    You'll be given the same options as you have during the link creation.
 
-Cloning
+Cloning & Removing
    If you want to add a new link that's very similar to an existing one, simply
    click on ⋮ and select *Clone*.
 
    Zammad will open a new public link dialogue with the existing settings
    filled in.
 
-   .. figure:: /images/manage/public-links/public-links_clone-links.gif
-      :alt: Screencast showing the public link cloning via ⋮ Actions → Clone
-
-Removing
-   If you no longer require a public link, you can remove it by using ⋮ and
+   If you no longer require a public link, you can **remove** it by using ⋮ and
    selecting *Delete*. Zammad will ensure that you really want to remove the
    entry with a modal. Be aware that the deletion is **final**. There's no
    way to bring back removed public links.
 
-   .. figure:: /images/manage/public-links/public-links_delete-links.gif
-      :alt: Screencast showing the public link removal via ⋮ Actions → Delete
+   .. figure:: /images/manage/public-links/public-links-action-menu.png
+      :alt: Screenshot showing the ⋮ action menu in public links
