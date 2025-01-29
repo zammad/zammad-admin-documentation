@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 13:25+0100\n"
+"POT-Creation-Date: 2025-01-29 16:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3664,6 +3664,7 @@ msgid "First Steps"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:10
+#: ../channels/microsoft365/accounts/register-app.rst:18
 msgid "Check your FQDN under *Settings > System > Fully Qualified Domain Name* in the admin interface of Zammad. If it is not correct, change it now. Otherwise the setup of the channel will fail."
 msgstr ""
 
@@ -3676,35 +3677,43 @@ msgid "Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:24
+#: ../channels/microsoft365/accounts/register-app.rst:33
 #: ../settings/security/third-party/facebook.rst:None
 msgid "Create App"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:None
+#: ../channels/microsoft365/accounts/register-app.rst:None
 msgid "Screenshot shows Entra admin center with application registration screen."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:30
+#: ../channels/microsoft365/accounts/register-app.rst:39
 msgid "Create a new app by going to *Applications > App registrations* and select **New registration**."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:32
+#: ../channels/microsoft365/accounts/register-app.rst:41
 msgid "Enter a fitting name and select an account type. Supported types are:"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:34
+#: ../channels/microsoft365/accounts/register-app.rst:43
 msgid "Accounts in this organizational directory only (Single tenant)"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:35
+#: ../channels/microsoft365/accounts/register-app.rst:44
 msgid "Accounts in any organizational directory (Multitenant)"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:37
+#: ../channels/microsoft365/accounts/register-app.rst:50
 msgid "Under \"Redirect URI\", select \"Web\" as platform and paste your already copied callback URL from Zammad."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:39
+#: ../channels/microsoft365/accounts/register-app.rst:52
 msgid "Click on **Register**."
 msgstr ""
 
@@ -3721,58 +3730,68 @@ msgid "Only required for single tenant setup: copy the \"Directory (tenant) ID\"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:52
+#: ../channels/microsoft365/accounts/register-app.rst:55
 msgid "Create Secret"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:None
+#: ../channels/microsoft365/accounts/register-app.rst:None
 msgid "Screenshot shows Entra admin center with client secret screen."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:58
+#: ../channels/microsoft365/accounts/register-app.rst:61
 msgid "In Entra, go to \"Certificates & secrets\" and add a secret by clicking the **New client secret** button."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:60
+#: ../channels/microsoft365/accounts/register-app.rst:63
 msgid "Enter a description, set an expiry duration and click **Add**."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:61
+#: ../channels/microsoft365/accounts/register-app.rst:64
 msgid "Copy the string under \"Value\", this is the secret. Paste it to Zammad in the \"Client Secret\" field."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:65
+#: ../channels/microsoft365/accounts/register-app.rst:68
 msgid "Configure API Permissions"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:None
+#: ../channels/microsoft365/accounts/register-app.rst:None
 msgid "Screenshot shows Entra admin center with api permission screen."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:71
+#: ../channels/microsoft365/accounts/register-app.rst:74
 msgid "Go to \"API permissions\" and **Add a permission**."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:72
+#: ../channels/microsoft365/accounts/register-app.rst:75
 msgid "Select \"Microsoft Graph\" and \"Delegated permissions\"."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:73
+#: ../channels/microsoft365/accounts/register-app.rst:76
 msgid "Add the following permissions:"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:75
-#: ../channels/microsoft365/accounts/register-app.rst:88
+#: ../channels/microsoft365/accounts/register-app.rst:81
 msgid "``offline_access``"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:76
-#: ../channels/microsoft365/accounts/register-app.rst:89
+#: ../channels/microsoft365/accounts/register-app.rst:79
 #: ../settings/security/third-party/microsoft.rst:67
 msgid "``openid``"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:77
-#: ../channels/microsoft365/accounts/register-app.rst:90
+#: ../channels/microsoft365/accounts/register-app.rst:80
 msgid "``profile``"
 msgstr ""
 
@@ -3793,6 +3812,7 @@ msgid "``Mail.Send.Shared``"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:83
+#: ../channels/microsoft365/accounts/register-app.rst:85
 msgid "Save it by clicking the **Add permissions** button."
 msgstr ""
 
@@ -4299,146 +4319,65 @@ msgid "After you pressed next you'll be redirect to Zammad's Microsoft 365 chann
 msgstr ""
 
 #: ../channels/microsoft365/accounts/register-app.rst:4
-msgid "Setting up a new Microsoft365 / Outlook account? Because of Microsoft's strict security policies, it's not as simple as entering your username and password."
+msgid "Setting up a new Microsoft 365 account? Follow our basic setup guide to get started."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:8
-msgid "First, you'll have to connect Zammad to your Microsoft account as an **OAuth app** via the Microsoft Azure Portal. Once that's done, you'll be able to connect as many Microsoft 365 accounts to Zammad as you want, using only active Microsoft 365 browser sessions (no usernames or passwords required)."
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:14
-msgid "🤔 **What the heck is OAuth?**"
+#: ../channels/microsoft365/accounts/register-app.rst:7
+msgid "First, you'll have to connect Zammad to your Microsoft account as an **OAuth app** in the Microsoft Entra portal. Once that's done, you'll be able to connect as many Microsoft 365 accounts to Zammad as you want, using only active Microsoft 365 browser sessions (no usernames or passwords required)."
 msgstr ""
 
 #: ../channels/microsoft365/accounts/register-app.rst:16
-msgid "If you've ever used a website that lets you “Sign in with Google/Facebook/Twitter”, you've used OAuth. OAuth is a way for you to let a third-party website see a tiny slice of your Microsoft/Facebook/Twitter account data without giving them your password (which would let them see *everything*)."
+#: ../channels/whatsapp/preparation.rst:2
+msgid "Preparation"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:0
-msgid "Screenshot of website with various OAuth sign-in options"
+#: ../channels/microsoft365/accounts/register-app.rst:21
+msgid "Go to *Channels > Microsoft 365 IMAP Email* and click on **Connect Microsoft 365 App**. Copy the provided callback URL."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:26
-msgid "When a third-party website wants to use OAuth, it has to **register with the provider first** (*i.e.,* Microsoft). This way, the provider knows who's receiving its users' data, and can give users a way to revoke access if they change their minds."
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:31
-msgid "In this case, **Zammad is that third-party website**. That's why adding a Microsoft account is a two-stage process: first, you have to register Zammad as a website that wishes to access Microsoft user data; then, you have to add yourself as a Microsoft user who agrees to let Zammad fetch your email."
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:40
+#: ../channels/microsoft365/accounts/register-app.rst:25
 msgid "Step-by-Step"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:42
-msgid "To get started, head over to `Microsoft's Azure Portal <https://portal.azure.com/>`_. Make sure to use an admin account for your organization. Otherwise, an admin will have to approve your changes before they can take effect."
+#: ../channels/microsoft365/accounts/register-app.rst:27
+msgid "To get started, head over to `Microsoft's Entra Portal <https://entra.microsoft.com>`_. Make sure to use an admin account for your organization. Otherwise, an admin will have to approve your changes before they can take effect."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:47
-msgid "**Add an App Registration**"
+#: ../channels/microsoft365/accounts/register-app.rst:45
+msgid "Accounts in any organizational directory (Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:49
-msgid "Under **App Registrations > ➕ New Registration**, use the following:"
+#: ../channels/microsoft365/accounts/register-app.rst:48
+msgid "\"Personal Microsoft accounts only\" are not supported."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:66
-msgid "Supported account types"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:53
-msgid "Choose the option that's right for your organization (or click *Help me choose...* if you're not sure)."
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:56
-#: ../settings/security/third-party/microsoft.rst:24
-msgid "Accounts in this organizational directory only (Default Directory only - Single tenant)"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:58
-#: ../settings/security/third-party/microsoft.rst:26
-msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant)"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:60
-#: ../settings/security/third-party/microsoft.rst:28
-msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:66
-msgid "🙅 **The “Personal Microsoft accounts only” option is not supported.**"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:74
-msgid "Redirect URI"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:69
-msgid "**Web** > *E.g.,* ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback``"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:72
-msgid "Find it in the Zammad admin panel under **Channels > Microsoft 365 > Connect Microsoft 365 App > Your callback URL**."
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:0
-msgid "Screencast demo of new app creation in Microsoft Azure Portal\n"
-"settings"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:81
-msgid "**Add API permissions**"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:83
-msgid "Under **API Permissions > ➕ Add a permission > Microsoft Graph > Delegated permissions**, add the following:"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:90
-#: ../settings/security/third-party/microsoft.rst:66
-msgid "OpenId permissions"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:87
+#: ../channels/microsoft365/accounts/register-app.rst:78
 #: ../settings/security/third-party/saml/saml-keycloak.rst:23
 #: ../settings/security/third-party/saml/saml-keycloak.rst:29
 msgid "``email``"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:93
-msgid "IMAP"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:93
+#: ../channels/microsoft365/accounts/register-app.rst:82
 msgid "``IMAP.AccessAsUser.all``"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:96
-msgid "SMTP"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:96
+#: ../channels/microsoft365/accounts/register-app.rst:83
 msgid "``SMTP.Send``"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:0
-msgid "Screencast demo of enabling Microsoft API permissions in Microsoft\n"
-"Azure Portal"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:103
+#: ../channels/microsoft365/accounts/register-app.rst:87
 msgid "**Admin Consent related information** (optional)"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:107
+#: ../channels/microsoft365/accounts/register-app.rst:91
 msgid "This step is only required for tenants that require admin consent. Admin consent adds another layer of security for your tenants users and allows administrators to define who may share user information."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:111
+#: ../channels/microsoft365/accounts/register-app.rst:95
 msgid "Within *Enterprise applications* select your app. When creating an app within *App registrations*, Microsoft will automatically also create an enterprise application for you."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:115
+#: ../channels/microsoft365/accounts/register-app.rst:99
 msgid "Set *Assignment required* to ``Yes`` within the apps properties and hit *Save*. This generally activates your app requesting admin consent already."
 msgstr ""
 
@@ -4446,56 +4385,47 @@ msgstr ""
 msgid "Screencast showing how to enable assignment requirement"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:122
+#: ../channels/microsoft365/accounts/register-app.rst:106
 msgid "3.1 **Tightening your app even further** (Recommended, optional)"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:124
+#: ../channels/microsoft365/accounts/register-app.rst:108
 msgid "This step will protect your tenant users from -to admins- unwanted permission changes (e.g. requesting more permissions than originally noted)."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:128
+#: ../channels/microsoft365/accounts/register-app.rst:112
 msgid "It also has another benefit: You can add the email account in question immediately without any administrator being forced to step in manually."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:132
+#: ../channels/microsoft365/accounts/register-app.rst:116
 msgid "Still within *Enterprise applications* select *Users and groups*. In this section you can select specific users and / or groups (users must be direct members!) that are allowed to use your app for adding mailboxes to Zammad."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:137
+#: ../channels/microsoft365/accounts/register-app.rst:121
 msgid "After adding users and groups, go back to the Azure portals home and select *App registrations*. Within your desired app go to *API permissions* and use the *Grant admin consent for {company name}* button to generally allow connecting users you previously consented."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:144
+#: ../channels/microsoft365/accounts/register-app.rst:128
 msgid "Not adding users / groups nor providing the granted admin consent right away will cause Microsoft to enforce at least the first user to be requested to provide a reason for the consent request. After that Microsoft will automatically grant the consent for your tenant."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:149
+#: ../channels/microsoft365/accounts/register-app.rst:133
 msgid "Administrative accounts can also use the option *Consent on behalf of your organization* in above mentioned permission dialogue."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:0
-msgid "Screencast showing how to enable user based admin consent"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:157
+#: ../channels/microsoft365/accounts/register-app.rst:137
 msgid "**Connect your Microsoft app in Zammad**"
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:159
+#: ../channels/microsoft365/accounts/register-app.rst:139
 msgid "Copy your new app registration's **Application (client) ID** and **Directory (tenant) ID** (found under **Overview > Essentials**) into Zammad in the admin panel, under **Channels > Microsoft 365 > Connect Microsoft 365 App**."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:164
+#: ../channels/microsoft365/accounts/register-app.rst:144
 msgid "Then, create a new client secret under **Certificates and Secrets > ➕ New Client Secret** and copy that into the Zammad admin panel, as well."
 msgstr ""
 
-#: ../channels/microsoft365/accounts/register-app.rst:0
-msgid "Screencast demo of entering Microsoft OAuth credentials in Zammad\n"
-"admin panel"
-msgstr ""
-
-#: ../channels/microsoft365/accounts/register-app.rst:173
+#: ../channels/microsoft365/accounts/register-app.rst:149
 msgid "🍾 Congratulations! Now you're ready to connect Microsoft 365 or Outlook accounts to Zammad."
 msgstr ""
 
@@ -5418,10 +5348,6 @@ msgstr ""
 
 #: ../channels/whatsapp/limitations.rst:48
 msgid "If you want to use more than one phone number, you have to create a business app for each number you want to use and add it as a separate channel in Zammad."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:2
-msgid "Preparation"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:4
@@ -15947,6 +15873,18 @@ msgstr ""
 msgid "Please note that Zammad only supports these account types (App dependent):"
 msgstr ""
 
+#: ../settings/security/third-party/microsoft.rst:24
+msgid "Accounts in this organizational directory only (Default Directory only - Single tenant)"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:26
+msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant)"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:28
+msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
+msgstr ""
+
 #: ../settings/security/third-party/microsoft.rst:35
 msgid "Avatars of signing in users:"
 msgstr ""
@@ -15993,6 +15931,10 @@ msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:71
 msgid "Within  **API permissions** add the following permissions:"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:66
+msgid "OpenId permissions"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:69
