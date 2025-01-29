@@ -11,7 +11,7 @@ The relying party (RP) is Zammad, and the OpenID provider is a software service 
 
 This guide assumes you are already using OpenID Connect within your organization (i.e., that your OP is fully set up).
 
-.. warning: The connection between Zammad and your OP has to be secure. Both systems must be reachable via HTTPS. Self-signed certificates are not supported.
+.. warning:: The connection between Zammad and your OP has to be secure. Both systems must be reachable via HTTPS. Self-signed certificates are not supported.
 
 .. hint:: Please note: Our instructions are based on connecting Zammad with Keycloak.
 
