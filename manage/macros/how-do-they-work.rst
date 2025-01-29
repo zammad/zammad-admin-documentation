@@ -51,12 +51,13 @@ Creating Macros
 Managing Macros
 ---------------
 
-You can delete or even clone existing macros in the Admin Panel under **Manage > Macros**. 
+Edit your macros by simply clicking on it. You can delete or even clone
+existing macros by clicking on the ︙ action menu and select the desired action:
 
-.. figure:: /images/manage/macros/macro-clone-and-remove.gif
+.. figure:: /images/manage/macros/macro-clone-and-remove.png
    :align: center
    :width: 80%
-   :alt: Screencast showing the creation of a new macro via cloning and its removal
+   :alt: Screenshot showing the macro action menu
 
-   When cloning a macro, you *must* click "Submit" for the duplicate
-   to be created.
+When cloning a macro, make sure to click "Submit" for the duplicate to be
+created.
