@@ -127,14 +127,14 @@ button to generally allow connecting users you previously consented.
 
 .. note::
 
-    Not adding users / groups nor providing the granted admin consent
-    right away will cause Microsoft to enforce at least the first user
-    to be requested to provide a reason for the consent request. After that
-    Microsoft will automatically grant the consent for your tenant.
+   Not adding users / groups nor providing the granted admin consent
+   right away will cause Microsoft to enforce at least the first user
+   to be requested to provide a reason for the consent request. After that
+   Microsoft will automatically grant the consent for your tenant.
 
-    Administrative accounts can also use the option
-    *Consent on behalf of your organization* in above mentioned permission
-    dialogue.
+   Administrative accounts can also use the option
+   *Consent on behalf of your organization* in above mentioned permission
+   dialogue.
 
 App Configuration
 ^^^^^^^^^^^^^^^^^
