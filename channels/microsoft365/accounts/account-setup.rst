@@ -157,5 +157,5 @@ My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``
    As soon as the issue has been fixed, the Zammad channel will recover
    automatically.
 
-Have a look at the :doc:`common errors section <../common-errors>` if you still face
-issues with your M365 account.
+Have a look at the :doc:`common errors section <../common-errors>` if you still
+face issues with your M365 account.
