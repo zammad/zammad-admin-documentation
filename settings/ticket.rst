@@ -170,23 +170,28 @@ Zammad offers a built in language detection for articles. By default, it is
 turned off. Turn it on by selecting a backend service and confirm by clicking
 **Submit**.
 
-.. note::
-   Currently, there is only one backend service:
-   `Compact Language Detection <https://github.com/jtoy/cld>`_.
-   Be aware that this feature is in its early stages. While we noticed it works
-   pretty well, it may fail in some edge cases.
-
 After enabling it, Zammad tries to detect the language of each **new** article.
 The language is not detected for existing articles.
 
+.. note::
+   - Currently, there is only one backend service:
+     `Compact Language Detection <https://github.com/jtoy/cld>`_.
+   - Be aware that this feature is in its early stages. Enhancements may come in
+     very soon.
+   - While we noticed it works pretty well, it may fail in some edge cases.
+   - The language selection in conditions and the output in the article detail
+     view is always in english. It is currently not possible to list each
+     language in their own language.
+
 You can find a label of the detected language in the detail view of an article.
-You can display this detail view by clicking on an article which opens more
+You can display this detail view by clicking on an article, which opens more
 details:
 
 .. figure:: /images/settings/ticket/article-detail-language-detection.png
    :alt: Screenshot showing detected language in article detail view
+   :align: center
 
-If you wonder what you can do with this feature, the answer is:
+If you are wondering what this feature is useful for, the answer is:
 
 - Use the detected language as a condition attribute in triggers and schedulers.
   Examples are: to send auto replies for different languages (see
