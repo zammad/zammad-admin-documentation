@@ -21,11 +21,14 @@ To learn about triggers in detail, first go to
       :align: center
       :scale: 80%
 
-3. Send an auto-reply email to *any customer* who responds to a ticket:
+.. _trigger-example-3:
+
+3. Send an auto-reply email to any customer who creates a ticket via web, if
+   the detected language is English:
 
    .. figure:: /images/manage/trigger/trigger-based-auto-replies-on-follow-ups_with_locale.png
       :align: center
-      :scale: 80%
+      :scale: 95%
 
 .. note:: 📨 **Not all automated messages come from triggers!**
 
