@@ -174,18 +174,18 @@ After enabling it, Zammad tries to detect the language of each **new** article.
 The language is not detected for existing articles.
 
 .. note::
-   - Currently, there is only one backend service:
+   - Currently, there is only one backend service available:
      `Compact Language Detection <https://github.com/jtoy/cld>`_.
    - Be aware that this feature is in its early stages. Enhancements may come in
      very soon.
-   - While we noticed it works pretty well, it may fail in some edge cases.
+   - While we noticed it works pretty well, it may fail for some edge cases.
    - The language selection in conditions and the output in the article detail
-     view is always in english. It is currently not possible to list each
-     language in their own language.
+     view is always in English. The language names are not translated into
+     user's current language.
 
-You can find a label of the detected language in the detail view of an article.
-You can display this detail view by clicking on an article, which opens more
-details:
+You can see the name of the detected language in the detail view of an article.
+You can display additional information by clicking on an article, which expands
+more details:
 
 .. figure:: /images/settings/ticket/article-detail-language-detection.png
    :alt: Screenshot showing detected language in article detail view
@@ -194,10 +194,10 @@ details:
 If you are wondering what this feature is useful for, the answer is:
 
 - Use the detected language as a condition attribute in triggers and schedulers.
-  Examples are: to send auto replies for different languages (see
+  Examples are: to send auto replies in different languages (see
   :ref:`trigger example <trigger-example-3>`) and to
-  move tickets of a specific language to a specific group.
-- Search with the new article attribute as advanced search (both via
+  move tickets in a specific language into a specific group.
+- Search by the new article attribute in the advanced search (both via
   language code and language name). Examples: ``article.detected_language:en``,
   ``article.detected_language_name:english``
 
