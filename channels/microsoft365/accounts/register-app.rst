@@ -1,174 +1,156 @@
 Register an OAuth App
 =====================
 
-Setting up a new Microsoft365 / Outlook account?
-Because of Microsoft's strict security policies,
-it's not as simple as entering your username and password.
+Setting up a new Microsoft 365 account? Follow our basic setup guide to get
+started.
 
 First, you'll have to connect Zammad to your Microsoft account as an
-**OAuth app** via the Microsoft Azure Portal.
+**OAuth app** in the Microsoft Entra portal.
 Once that's done, you'll be able to connect as many Microsoft 365 accounts to
 Zammad as you want, using only active Microsoft 365 browser sessions
 (no usernames or passwords required).
 
-.. note:: 🤔 **What the heck is OAuth?**
-
-   If you've ever used a website that lets you
-   “Sign in with Google/Facebook/Twitter”, you've used OAuth.
-   OAuth is a way for you to let a third-party website see a tiny slice
-   of your Microsoft/Facebook/Twitter account data
-   without giving them your password (which would let them see *everything*).
-
-   .. figure:: /images/channels/microsoft365/accounts/register-app/sign-in-with.png
-      :alt: Screenshot of website with various OAuth sign-in options
-      :align: center
-
-   When a third-party website wants to use OAuth,
-   it has to **register with the provider first** (*i.e.,* Microsoft).
-   This way, the provider knows who's receiving its users' data,
-   and can give users a way to revoke access if they change their minds.
-
-   In this case, **Zammad is that third-party website**.
-   That's why adding a Microsoft account is a two-stage process:
-   first, you have to register Zammad as a website that wishes to access
-   Microsoft user data; then, you have to add yourself as a Microsoft user who
-   agrees to let Zammad fetch your email.
-
 .. _register_ms_app_stepbystep:
+
+Preparation
+-----------
+
+- Check your FQDN under *Settings > System > Fully Qualified Domain Name* in the
+  admin interface of Zammad. If it is not correct, change it now. Otherwise the
+  setup of the channel will fail.
+- Go to *Channels > Microsoft 365 IMAP Email* and click on
+  **Connect Microsoft 365 App**. Copy the provided callback URL.
 
 Step-by-Step
 ------------
 
 To get started, head over to
-`Microsoft's Azure Portal <https://portal.azure.com/>`_. Make sure to use an
+`Microsoft's Entra Portal <https://entra.microsoft.com>`_. Make sure to use an
 admin account for your organization. Otherwise, an admin will have to approve
 your changes before they can take effect.
 
-1. **Add an App Registration**
+Create App
+^^^^^^^^^^
 
-   Under **App Registrations > ➕ New Registration**,
-   use the following:
+.. figure:: /images/channels/microsoft365/accounts/register-app/register-app.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with application registration screen.
 
-   Supported account types
-      Choose the option that's right for your organization
-      (or click *Help me choose...* if you're not sure).
+- Create a new app by going to *Applications > App registrations* and select
+  **New registration**.
+- Enter a fitting name and select an account type. Supported types are:
 
-      * Accounts in this organizational directory only
-        (Default Directory only - Single tenant)
-      * Accounts in any organizational directory
-        (Any Azure AD directory - Multitenant)
-      * Accounts in any organizational directory
-        (Any Azure AD directory - Multitenant)
-        and personal Microsoft accounts (e.g. Skype, Xbox)
+  * Accounts in this organizational directory only (Single tenant)
+  * Accounts in any organizational directory (Multitenant)
+  * Accounts in any organizational directory (Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
 
-      .. note::
+    .. note::
+       "Personal Microsoft accounts only" are not supported.
 
-         🙅 **The “Personal Microsoft accounts only” option is not supported.**
+- Under "Redirect URI", select "Web" as platform and paste your already copied
+  callback URL from Zammad.
+- Click on **Register**.
 
-   Redirect URI
-      **Web** > *E.g.,*
-      ``https://your-domain.com/api/v1/external_credentials/microsoft365/callback``
+Create Secret
+^^^^^^^^^^^^^
 
-      Find it in the Zammad admin panel
-      under **Channels > Microsoft 365 > Connect Microsoft 365 App >
-      Your callback URL**.
+.. figure:: /images/channels/microsoft365-graph/secret.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with client secret screen.
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/01-create-app.gif
-      :alt: Screencast demo of new app creation in Microsoft Azure Portal
-            settings
-      :align: center
+- In Entra, go to "Certificates & secrets" and add a secret by clicking the
+  **New client secret** button.
+- Enter a description, set an expiry duration and click **Add**.
+- Copy the string under "Value", this is the secret. Paste it to Zammad
+  in the "Client Secret" field.
 
-2. **Add API permissions**
+Configure API Permissions
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Under **API Permissions > ➕ Add a permission > Microsoft Graph >
-   Delegated permissions**, add the following:
+.. figure:: /images/channels/microsoft365/accounts/register-app/api-permissions.png
+  :align: center
+  :alt: Screenshot shows Entra admin center with api permission screen.
 
-   OpenId permissions
-      * ``email``
-      * ``offline_access``
-      * ``openid``
-      * ``profile``
+- Go to "API permissions" and **Add a permission**.
+- Select "Microsoft Graph" and "Delegated permissions".
+- Add the following permissions:
 
-   IMAP
-      * ``IMAP.AccessAsUser.all``
+  - ``email``
+  - ``openid``
+  - ``profile``
+  - ``offline_access``
+  - ``IMAP.AccessAsUser.all``
+  - ``SMTP.Send``
 
-   SMTP
-      * ``SMTP.Send``
+Save it by clicking the **Add permissions** button.
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/02-add-api-permissions.gif
-      :alt: Screencast demo of enabling Microsoft API permissions in Microsoft
-            Azure Portal
-      :align: center
+Admin Consent (optional)
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-3. **Admin Consent related information** (optional)
+.. hint::
 
-   .. hint::
+  This step is only required for tenants that require admin consent.
+  Admin consent adds another layer of security for your tenants users
+  and allows administrators to define who may share user information.
 
-      This step is only required for tenants that require admin consent.
-      Admin consent adds another layer of security for your tenants users
-      and allows administrators to define who may share user information.
+Within *Enterprise applications* select your app. When creating an app within
+*App registrations*, Microsoft will automatically also create an enterprise
+application for you.
 
-   Within *Enterprise applications* select your app. When creating an app within
-   *App registrations*, Microsoft will automatically also create an enterprise
-   application for you.
+Set *Assignment required* to ``Yes`` within the apps properties and hit
+*Save*. This generally activates your app requesting admin consent already.
 
-   Set *Assignment required* to ``Yes`` within the apps properties and hit
-   *Save*. This generally activates your app requesting admin consent already.
+.. figure:: /images/channels/microsoft365/accounts/register-app/03_1-optional-configure-admin-consent.png
+  :alt: Screenshot showing enabled assignment requirement
+  :align: center
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/03_1-optional-configure-admin-consent.gif
-      :alt: Screencast showing how to enable assignment requirement
-      :align: center
+Tightening your App (recommended, optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   3.1 **Tightening your app even further** (Recommended, optional)
+This step will protect your tenant users from -to admins- unwanted
+permission changes (e.g. requesting more permissions than originally
+noted).
 
-      This step will protect your tenant users from -to admins- unwanted
-      permission changes (e.g. requesting more permissions than originally
-      noted).
+It also has another benefit: You can add the email account in question
+immediately without any administrator being forced to step in
+manually.
 
-      It also has another benefit: You can add the email account in question
-      immediately without any administrator being forced to step in
-      manually.
+Still within *Enterprise applications* select *Users and groups*.
+In this section you can select specific users and / or groups
+(users must be direct members!) that are allowed to use your app for
+adding mailboxes to Zammad.
 
-      Still within *Enterprise applications* select *Users and groups*.
-      In this section you can select specific users and / or groups
-      (users must be direct members!) that are allowed to use your app for
-      adding mailboxes to Zammad.
+After adding users and groups, go back to the Azure portals home and
+select *App registrations*. Within your desired app go to
+*API permissions* and use the *Grant admin consent for {company name}*
+button to generally allow connecting users you previously consented.
 
-      After adding users and groups, go back to the Azure portals home and
-      select *App registrations*. Within your desired app go to
-      *API permissions* and use the *Grant admin consent for {company name}*
-      button to generally allow connecting users you previously consented.
+.. note::
 
-      .. note::
+   Not adding users / groups nor providing the granted admin consent
+   right away will cause Microsoft to enforce at least the first user
+   to be requested to provide a reason for the consent request. After that
+   Microsoft will automatically grant the consent for your tenant.
 
-         Not adding users / groups nor providing the granted admin consent
-         right away will cause Microsoft to enforce at least the first user
-         to be requested to provide a reason for the consent request. After that
-         Microsoft will automatically grant the consent for your tenant.
+   Administrative accounts can also use the option
+   *Consent on behalf of your organization* in above mentioned permission
+   dialogue.
 
-         Administrative accounts can also use the option
-         *Consent on behalf of your organization* in above mentioned permission
-         dialogue.
+App Configuration
+^^^^^^^^^^^^^^^^^
 
-      .. figure:: /images/channels/microsoft365/accounts/register-app/03_2-optional-provide-user-specific-consent.gif
-         :alt: Screencast showing how to enable user based admin consent
-         :align: center
+.. figure:: /images/channels/microsoft365/accounts/register-app/connect-app.png
+  :alt: Screenshot showing popup about connecting app
+  :align: center
 
-4. **Connect your Microsoft app in Zammad**
+- In Zammad's channel configuration, click on **Configure App**.
+- Enter your app details:
 
-   Copy your new app registration's **Application (client) ID** and
-   **Directory (tenant) ID** (found under **Overview > Essentials**)
-   into Zammad in the admin panel,
-   under **Channels > Microsoft 365 > Connect Microsoft 365 App**.
+  - Client ID: *Application (client) ID*
+  - Client Secret: *Value* from client secret
+  - Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)
+- Click on **Submit**.
 
-   Then, create a new client secret
-   under **Certificates and Secrets > ➕ New Client Secret**
-   and copy that into the Zammad admin panel, as well.
 
-   .. figure:: /images/channels/microsoft365/accounts/register-app/04-add-oauth-credentials.gif
-      :alt: Screencast demo of entering Microsoft OAuth credentials in Zammad
-            admin panel
-      :align: center
-
-🍾 Congratulations! Now you're ready to connect Microsoft 365 or Outlook
-accounts to Zammad.
+🍾 Congratulations! Now you're ready to connect Microsoft 365 accounts to
+Zammad.

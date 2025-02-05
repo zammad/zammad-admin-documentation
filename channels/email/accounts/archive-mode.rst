@@ -2,7 +2,7 @@
 .. figure:: /images/channels/email/account-setup-archive-import.png
    :alt: Archive Mode dialog during email account setup
    :align: center
-   :scale: 100%
+   :scale: 80%
 
    How should old emails be imported?
 
