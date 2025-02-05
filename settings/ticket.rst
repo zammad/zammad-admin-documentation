@@ -163,6 +163,44 @@ the desired agents in the ``Exception Users`` list. The search function in this
 area is only effective, if you have too many agents to display at once to help
 you with the configuration.
 
+Language Detection
+------------------
+
+Zammad offers a built in language detection for articles. By default, it is
+turned off. Turn it on by selecting a backend service and confirm by clicking
+**Submit**.
+
+After enabling it, Zammad tries to detect the language of each **new** article.
+The language is not detected for existing articles.
+
+.. note::
+   - Currently, there is only one backend service available:
+     `Compact Language Detection <https://github.com/jtoy/cld>`_.
+   - Be aware that this feature is in its early stages. Enhancements may come in
+     very soon.
+   - While we noticed it works pretty well, it may fail for some edge cases.
+   - The language selection in conditions and the output in the article detail
+     view is always in English. The language names are not translated into
+     user's current language.
+
+You can see the name of the detected language in the detail view of an article.
+You can display additional information by clicking on an article, which expands
+more details:
+
+.. figure:: /images/settings/ticket/article-detail-language-detection.png
+   :alt: Screenshot showing detected language in article detail view
+   :align: center
+
+If you are wondering what this feature is useful for, the answer is:
+
+- Use the detected language as a condition attribute in triggers and schedulers.
+  Examples are: to send auto replies in different languages (see
+  :ref:`trigger example <trigger-example-3>`) and to
+  move tickets in a specific language into a specific group.
+- Search by the new article attribute in the advanced search (both via
+  language code and language name). Examples: ``article.detected_language:en``,
+  ``article.detected_language_name:english``
+
 Notifications
 -------------
 
