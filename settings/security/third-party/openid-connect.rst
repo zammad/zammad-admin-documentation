@@ -1,29 +1,24 @@
 OpenID Connect
 ==============
 
-Connect your OpenID provider (OP) as a single sign-on (SSO) method.
-
 OpenID is an easy and safe way for people to reuse an existing account and user
-profile from an OpenID provider.
-
-.. hint:: The current implementation of OpenID Connect in Zammad is requiring
-   OpenID Connect Discovery to simplify the configuration.
+profile from an OpenID provider. Connect your OpenID provider (OP) as a
+single sign-on (SSO) method.
 
 The relying party (RP) is Zammad and the OpenID provider is a software service
 that you either host or subscribe to
 (e.g. `Keycloak <https://www.keycloak.org/>`_).
 
-This guide assumes you are already using OpenID Connect within your organization
-(i.e. that your OP is fully set up).
-
-.. warning:: The connection between Zammad and your OP has to be secure. Both
-   systems must be reachable via HTTPS. Self-signed certificates are not
-   supported.
-
-.. hint:: Please note: Our instructions are based on connecting Zammad with
-   Keycloak.
-
-.. hint:: PKCE is currently only supporting SHA256 as code challenge method.
+.. hint::
+   - This guide assumes you are already using OpenID Connect within your
+     organization (i.e. that your OP is fully set up).
+   - The current implementation of OpenID Connect in Zammad requires
+     OpenID Connect Discovery to simplify the configuration.
+   - The connection between Zammad and your OP has to be secure. Both
+     systems must be reachable via HTTPS. Self-signed certificates are not
+     supported.
+   - Our instructions are based on connecting Zammad with Keycloak.
+   - PKCE is currently only supporting SHA256 as code challenge method.
 
 Step 1: Configure Your OP
 --------------------------
@@ -51,7 +46,7 @@ In the **Logout settings** for the newly created client, set the
 ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and
 switch on **Backchannel logout session required**.
 
-If you would like to use [PKCE](https://oauth.net/2/pkce/), you need to switch
+If you would like to use `PKCE <https://oauth.net/2/pkce/>`_, you need to switch
 to the **Advanced** tab and select **S256** in **Advanced settings** as the code
 challenge method for PKCE.
 
@@ -64,7 +59,7 @@ Connect**:
 
 .. image:: /images/settings/security/third-party/openid-connect/zammad_connect_oidc_thirdparty_general.png
    :alt: Example configuration of OpenID Connect
-   :scale: 60%
+   :scale: 80%
    :align: center
 
 Display name
