@@ -86,7 +86,6 @@ Scopes
    ``email`` and ``profile``.
 
 PKCE
-   Enable PKCE (Proof Key for Code Exchange) for additional security.
    Currently only SHA256 as code challenge method is supported.
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
