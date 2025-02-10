@@ -23,6 +23,8 @@ This guide assumes you are already using OpenID Connect within your organization
 .. hint:: Please note: Our instructions are based on connecting Zammad with
    Keycloak.
 
+.. hint:: PKCE is currently only supporting SHA256 as code challenge method.
+
 Step 1: Configure Your OP
 --------------------------
 
@@ -48,6 +50,8 @@ In the **Logout settings** for the newly created client, set the
 **Backchannel logout URL** to
 ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and
 switch on **Backchannel logout session required**.
+
+If you would like to use [PKCE](https://oauth.net/2/pkce/), you need to switch to the **Advanced** tab and select **S256** in **Advanced settings* as the code challenge method for PKCE.
 
 Step 2: Configure Zammad
 ------------------------
@@ -80,6 +84,10 @@ UID field
 Scopes
    The scopes that Zammad should request from the OP. Defaults to ``openid``,
    ``email`` and ``profile``.
+
+PKCE
+   Enable PKCE (Proof Key for Code Exchange) for additional security.
+   Currently only SHA256 as code challenge method is supported.
 
 See :ref:`automatic account linking <automatic-account-linking>` for details on
 how to link existing Zammad accounts to OP accounts.
