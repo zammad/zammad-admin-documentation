@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 09:42+0100\n"
+"POT-Creation-Date: 2025-02-10 15:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16055,67 +16055,75 @@ msgstr ""
 msgid "Please note: Our instructions are based on connecting Zammad with Keycloak."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:27
+#: ../settings/security/third-party/openid-connect.rst:26
+msgid "PKCE is currently only supporting SHA256 as code challenge method."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:29
 msgid "Step 1: Configure Your OP"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:30
+#: ../settings/security/third-party/openid-connect.rst:32
 msgid "Add a new Client"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:32
+#: ../settings/security/third-party/openid-connect.rst:34
 msgid "Create a new client in your OP with the following settings:"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:36
+#: ../settings/security/third-party/openid-connect.rst:38
 msgid "General settings"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:35
+#: ../settings/security/third-party/openid-connect.rst:37
 msgid "Client type: OpenID Connect"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:36
+#: ../settings/security/third-party/openid-connect.rst:38
 msgid "Client ID: ``zammad`` (or any other name you prefer)"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:40
+#: ../settings/security/third-party/openid-connect.rst:42
 msgid "Capability config"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:39
+#: ../settings/security/third-party/openid-connect.rst:41
 msgid "Client authentication: Off"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:40
+#: ../settings/security/third-party/openid-connect.rst:42
 msgid "Authentication flow: Standard flow"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:45
+#: ../settings/security/third-party/openid-connect.rst:47
 msgid "Login settings"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:43
+#: ../settings/security/third-party/openid-connect.rst:45
 msgid "Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/callback``"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:44
+#: ../settings/security/third-party/openid-connect.rst:46
 msgid "Valid post logout redirect URIs: ``https://your.zammad.domain/*``"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:45
+#: ../settings/security/third-party/openid-connect.rst:47
 msgid "Web origins: ``+``"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:47
+#: ../settings/security/third-party/openid-connect.rst:49
 msgid "In the **Logout settings** for the newly created client, set the **Backchannel logout URL** to ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and switch on **Backchannel logout session required**."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:53
+#: ../settings/security/third-party/openid-connect.rst:54
+msgid "If you would like to use [PKCE](https://oauth.net/2/pkce/), you need to switch to the **Advanced** tab and select **S256** in **Advanced settings** as the code challenge method for PKCE."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:59
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:55
+#: ../settings/security/third-party/openid-connect.rst:61
 msgid "Enable OpenID Connect and enter your OP's details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via OpenID Connect**:"
 msgstr ""
 
@@ -16123,52 +16131,60 @@ msgstr ""
 msgid "Example configuration of OpenID Connect"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:68
+#: ../settings/security/third-party/openid-connect.rst:74
 #: ../settings/security/third-party/saml.rst:102
 msgid "Display name"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:65
+#: ../settings/security/third-party/openid-connect.rst:71
 msgid "Allows you to define a custom button name for OpenID Connect. This helps your users to understand better what the button on the login page does."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:68
+#: ../settings/security/third-party/openid-connect.rst:74
 msgid "Defaults to ``OpenID Connect``."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:71
+#: ../settings/security/third-party/openid-connect.rst:77
 msgid "Identifier"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:71
+#: ../settings/security/third-party/openid-connect.rst:77
 msgid "The client ID you defined in your OP."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:74
+#: ../settings/security/third-party/openid-connect.rst:80
 msgid "Issuer"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:74
+#: ../settings/security/third-party/openid-connect.rst:80
 msgid "The issuer URL of your OP. Used for discovery."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:78
+#: ../settings/security/third-party/openid-connect.rst:84
 msgid "UID field"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:77
+#: ../settings/security/third-party/openid-connect.rst:83
 msgid "Here you can define an attribute that uniquely identifies the user. If unset, ``sub`` is used."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:82
+#: ../settings/security/third-party/openid-connect.rst:88
 msgid "Scopes"
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:81
+#: ../settings/security/third-party/openid-connect.rst:87
 msgid "The scopes that Zammad should request from the OP. Defaults to ``openid``, ``email`` and ``profile``."
 msgstr ""
 
-#: ../settings/security/third-party/openid-connect.rst:84
+#: ../settings/security/third-party/openid-connect.rst:92
+msgid "PKCE"
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:91
+msgid "Enable PKCE (Proof Key for Code Exchange) for additional security. Currently only SHA256 as code challenge method is supported."
+msgstr ""
+
+#: ../settings/security/third-party/openid-connect.rst:94
 msgid "See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to OP accounts."
 msgstr ""
 

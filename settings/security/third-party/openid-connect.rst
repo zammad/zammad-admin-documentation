@@ -51,7 +51,9 @@ In the **Logout settings** for the newly created client, set the
 ``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and
 switch on **Backchannel logout session required**.
 
-If you would like to use [PKCE](https://oauth.net/2/pkce/), you need to switch to the **Advanced** tab and select **S256** in **Advanced settings* as the code challenge method for PKCE.
+If you would like to use [PKCE](https://oauth.net/2/pkce/), you need to switch
+to the **Advanced** tab and select **S256** in **Advanced settings** as the code
+challenge method for PKCE.
 
 Step 2: Configure Zammad
 ------------------------
