@@ -9,7 +9,7 @@
      save some license costs.
    - The selection of an inbox folder is implemented with a tree-select field in
      Zammad. So you can choose a folder from the fetched folder list, which is
-     much more error-prone.
+     much less error-prone.
    - It is the future-proof way of connecting to your M365 environment.
    - It is more secure and scalable and offers a unified endpoint.
 
