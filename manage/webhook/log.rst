@@ -29,7 +29,6 @@ If a webhook fails (e.g., receiving a ``4xx`` or ``5xx`` status code), check the
 
 Before deploying webhooks in production, use testing tools to inspect and debug requests:
 
-- **Beeceptor**: A free tool to capture and inspect webhook requests in real time. Set up a temporary endpoint to verify payload structure and headers. [Visit Beeceptor](https://beeceptor.com/)
-- **Webhook.site**: Another useful alternative for real-time request logging and debugging. [Try Webhook.site](https://webhook.site/)
+- **[Beeceptor](https://beeceptor.com/)**: A free tool to capture and inspect webhook requests in real time. Set up a temporary endpoint to verify payload structure and headers.
+- **[Webhook.site](https://webhook.site/)**: Another useful alternative for real-time request logging and debugging.
 
-Using these tools, you can validate your webhook configurations without affecting live systems.
