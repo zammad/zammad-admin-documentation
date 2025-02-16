@@ -1,35 +1,35 @@
 Webhook Logs
 ============
 
-Zammad provides a history of your recent webhooks. 
-You can find them below **Recent logs**.
+Zammad provides a history of your recent webhook events, helping you monitor and debug interactions with third-party services. You can access them under **Recent Logs** in the webhook settings.
 
    .. figure:: /images/manage/webhook/webhook-logs-and-entries.png
-      :alt: Webhook logs showing possible issues with third party communication
+      :alt: Webhook logs showing possible issues with third-party communication
       :align: center
       :width: 90%
 
-If you need more details you can click on the request link in question. 
-Zammad will provide a modal with the following information:
+Each log entry contains key details about the webhook request and response, allowing you to troubleshoot delivery issues. Clicking on a request link opens a detailed modal with the following information:
 
-   Direction
-      Always ``out``.
+Webhook Log Details
+-------------------
 
-   URL
-      The URL Zammad sent the request to.
+- **Direction**: Always ``out``, indicating outgoing requests from Zammad.
+- **URL**: The destination URL where Zammad sent the request.
+- **Method**: Always ``POST``.
+- **Status**: The HTTP status code received from the remote server. A successful request returns a ``2xx`` code.
+- **Request**: Displays the HTTP request headers and payload that Zammad sent.
+- **Response**: Shows the response headers from the remote server.
+- **Created at**: The timestamp when Zammad sent the request.
 
-   Method
-      Always ``POST``.
+### Debugging Webhook Issues
 
-   Status
-      Contains the HTTP status code the remote server replied with. 
-      Should be ``2xx`` if successful.
+If a webhook fails (e.g., receiving a ``4xx`` or ``5xx`` status code), check the request and response details to diagnose the issue. Common causes include incorrect URLs, authentication errors, or server-side failures.
 
-   Request
-      Contains the request Zammad sent (HTTP header and payload)
+### Testing Webhooks
 
-   Response
-      Contains the remotes response header.
+Before deploying webhooks in production, use testing tools to inspect and debug requests:
 
-   Created at
-      Date and time the request was sent.
+- **Beeceptor**: A free tool to capture and inspect webhook requests in real time. Set up a temporary endpoint to verify payload structure and headers. [Visit Beeceptor](https://beeceptor.com/)
+- **Webhook.site**: Another useful alternative for real-time request logging and debugging. [Try Webhook.site](https://webhook.site/)
+
+Using these tools, you can validate your webhook configurations without affecting live systems.
