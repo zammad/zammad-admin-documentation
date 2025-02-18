@@ -18,12 +18,13 @@ Destination Group
       :scale: 60%
       :align: center
 
-   Only **active** groups will be displayed.
+   Only **active** groups will be displayed. Changing this setting will not
+   reassign existing tickets to the new group.
 
-   Changing this setting will not reassign existing tickets to the new group.
-
-   If you still can't send outgoing email tickets, check your
-   :doc:`group settings </manage/groups/settings>`.
+   You can assign the related outgoing email address to the new group by
+   choosing the option under **Destination group email address** or leave it as
+   it is. To assign an outgoing email address to a group manually, have a look
+   at the :doc:`group settings </manage/groups/settings>`.
 
 Email Address
    Use the **+ Add** or **Edit** buttons

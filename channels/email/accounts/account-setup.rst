@@ -91,7 +91,7 @@ Destination group email address
 
    **Do not change email address** doesn't assign an email address to the group
    or change it. If the group has no assigned email address, it stays empty.
-   If the group already has an assigned email address, it will be overwritten.
+   If the group already has an assigned email address, it will stay the same.
 
 .. _email-new-account-experts:
 

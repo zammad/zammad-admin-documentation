@@ -157,12 +157,12 @@ Destination group email address
    Decide if the email address should be assigned to the selected group for
    outgoing emails.
 
-   **Change to channel email address** will add this email address to the group
+   **Change to ...** will add this email address to the group
    for outgoing emails. This may overwrite an already assigned email address.
 
    **Do not change email address** doesn't assign an email address to the group
    or change it. If the group has no assigned email address, it stays empty.
-   If the group already has an assigned email address, it will be overwritten.
+   If the group already has an assigned email address, it stays the same.
 
 .. _google-folder:
 
