@@ -75,12 +75,23 @@ Email
 Password
    Your account password.
 
-Destination Group
-   The :doc:`group </manage/groups/index>` that incoming mail will be assigned
+Destination group
+   The :doc:`group </manage/groups/index>` that incoming emails will be assigned
    to.
 
    Use :doc:`filters </channels/email/filters>` for more fine-grained sorting
    of incoming email.
+
+Destination group email address
+   Decide if the email address should be assigned to the selected group for
+   outgoing emails.
+
+   **Change to channel email address** will add this email address to the group
+   for outgoing emails. This may overwrite an already assigned email address.
+
+   **Do not change email address** doesn't assign an email address to the group
+   or change it. If the group has no assigned email address, it stays empty.
+   If the group already has an assigned email address, it will stay the same.
 
 .. _email-new-account-experts:
 
