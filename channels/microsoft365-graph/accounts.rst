@@ -131,11 +131,22 @@ and confirm the requested permissions by clicking the **Accept** button.
   :alt: Screenshot shows Zammad's dialog for account configuration.
 
 After that, Zammad will ask you to assign a destination group. Select a group
-which should (initially) handle the incoming tickets of this channel. You can
-also specify a folder from which Zammad should fetch emails from. If you do so,
-make sure that the emails are routed to this folder somehow. Otherwise you won't
-receive tickets. Leave it empty to fetch all emails from the inbox. After that,
-choose if fetched emails should remain on the server or not.
+which should (initially) handle the incoming tickets of this channel.
+Additionally, you can decide if assign the email address should be assigned to
+the selected group for outgoing emails. Choose between:
+
+- **Change to ...** to add this
+  email address to the group for outgoing emails. This may overwrite an already
+  assigned email address.
+- **Do not change email address** if you don't want assign an email address to
+  the group or change it. If the group has no assigned email address, it stays
+  empty. If the group already has an assigned email address, it stays the same.
+
+You can also specify a folder from which Zammad should fetch emails from. If
+you do so, make sure that the emails are routed to this folder somehow.
+Otherwise, you won't receive tickets. Leave it empty to fetch all emails from
+the inbox. After that, choose if fetched emails should remain on the server or
+not.
 
 Depending if there are already email messages in this account, the archive mode
 dialog may be shown.
