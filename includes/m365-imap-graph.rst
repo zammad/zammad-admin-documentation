@@ -1,7 +1,9 @@
 .. :orhpan:
 
 .. hint::
-   What is the difference between the Graph-API- and IMAP-based M365 channel?
+   What is the difference between the
+   :doc:`Graph-API- </channels/microsoft365-graph/index>` and
+   :doc:`IMAP-based M365 channel </channels/microsoft365/index>`?
 
    The Graph-API variant has some advantages over the IMAP-based channel:
 
