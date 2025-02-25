@@ -31,7 +31,7 @@ Accounts
 
    .. figure:: /images/channels/email/panel.png
       :alt: Existing accounts can be edited from the Accounts panel.
-      :scale: 25%
+      :scale: 50%
       :align: center
 
    .. _email-notification:
