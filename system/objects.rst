@@ -105,6 +105,9 @@ Handling of states
       :scale: 80%
       :alt: Screenshot showing table of default ticket states
 
+   .. note:: The `merged` state can't be changed because it is a required system
+      state. Otherwise, the merging of tickets would lead to errors.
+
    To add a new state, click on the "New Ticket State" button in the top right
    corner. To change an existing state, simply click on the affected state. This
    opens an edit dialog.
@@ -139,7 +142,6 @@ Ticket state in detail
           worked on them
         - **open**: for states for tickets that are in progress and agents are
           working on them
-        - **merged**: for states for tickets that are merged with other tickets
         - **pending reminder**: for states for tickets that are in progress and
           you want to set a reminder. (default example: *pending reminder*)
         - **pending action**: for states for tickets that are waiting for a
