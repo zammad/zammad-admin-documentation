@@ -133,7 +133,8 @@ and confirm the requested permissions by clicking the **Accept** button.
 After that, Zammad will ask you to assign a destination group. Select a group
 which should (initially) handle the incoming tickets of this channel.
 Additionally, you can decide if assign the email address should be assigned to
-the selected group for outgoing emails. Choose between:
+the selected group for outgoing emails
+(*Destination group > Sending email address*). Choose between:
 
 - **Change to ...** to add this
   email address to the group for outgoing emails. This may overwrite an already

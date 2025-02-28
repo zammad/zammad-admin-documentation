@@ -82,7 +82,7 @@ Destination group
    Use :doc:`filters </channels/email/filters>` for more fine-grained sorting
    of incoming email.
 
-Destination group email address
+Destination group > Sending email address
    Decide if the email address should be assigned to the selected group for
    outgoing emails.
 
