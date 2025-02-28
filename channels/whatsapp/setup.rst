@@ -89,6 +89,11 @@ Automatic Reminders
    `conversation description <https://developers.facebook.com/docs/whatsapp/pricing#customer-service-windows>`_
    under "Customer Service Windows".
 
+Reminder Message
+   If you want to use a custom reminder message before the 24-hour customer
+   service window closes, you can insert it here. Leave it empty to stay with
+   the default message.
+
 Target Group
    Here you can define the :doc:`group </manage/groups/index>` in which the
    ticket should be created.
