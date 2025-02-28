@@ -78,7 +78,8 @@ Sending Email Address
          Please configure an email based channel before here
 
             * :doc:`Channels → Email </channels/email/index>`
-            * :doc:`Channels → Microsoft 365 </channels/microsoft365/index>`
+            * :doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`
+            * :doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`
             * :doc:`Channels → Google </channels/google/index>`
 
          and come back afterwards.
