@@ -69,7 +69,7 @@ Assign follow-ups
    no
       The owner assignment of the ticket will be removed.
 
-Email
+Sending Email Address
    Select which sender's email address Zammad will use outbound for replying on
    a ticket in this group.
 
