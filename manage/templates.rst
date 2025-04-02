@@ -43,6 +43,7 @@ Managing templates
       seasonal reasons without providing it as an option to your agents.
 
    .. figure:: /images/manage/templates/adding-new-template.png
+      :scale: 70%
       :alt: Screenshot showing the template configuration
 
 :Editing templates:

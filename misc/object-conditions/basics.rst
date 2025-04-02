@@ -96,6 +96,20 @@ editing a condition. Find them in the following table.
      - - current user
        - specific user
        - not set
+   * - Detected
+
+       Language
+     - Article
+     - Checks the language of the article.
+     - - is
+       - is not
+     - All languages which
+
+       are supported by the
+
+       language detection
+
+       service.
    * - Existing
 
        members

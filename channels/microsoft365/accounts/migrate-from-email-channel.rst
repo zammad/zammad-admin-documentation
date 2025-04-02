@@ -1,6 +1,9 @@
 Migrate From Email Channel to Microsoft 365 Channel
 ===================================================
 
+Migrate
+-------
+
 Zammad provides a migration logic that allows you to migrate existing Microsoft
 365 accounts from the Email channel to the Microsoft 365 channel.
 
@@ -19,13 +22,8 @@ banner of the email channel in question. Zammad will redirect you to
 Microsoft and request you to authenticate and consent to said account.
 
 After you pressed next you'll be redirect to Zammad's Microsoft 365 channel
-overview. Your channel, if successful, is now migrated to an Microsoft 365
+overview. Your channel, if successful, is now migrated to a Microsoft 365 IMAP
 channel.
-
-   .. figure:: /images/channels/microsoft365/accounts/migrate-email-channel-to-microsoft365.gif
-      :alt: Migrate an existing email channel to Microsoft 365
-      :scale: 90%
-      :align: center
 
 Rolling Back the Migration
 --------------------------

@@ -1,7 +1,5 @@
-.. hint:: 🤓 **Don't forget to set the outgoing email address**
+.. hint:: If you did not assign the email address to the group,
+   make sure to check if the correct email address is
+   :doc:`assigned to the group </manage/groups/settings>`.
 
-   In Zammad each group decides about the email address that's used for
-   outgoing emails. The incoming group technically has no effect on it.
-
-   For this reason make sure to also adjust each affected
-   :doc:`groups setting </manage/groups/settings>`.
+   Otherwise, the agents in this group will not be able to send e-mails.

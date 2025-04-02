@@ -139,7 +139,30 @@ email handling as you can see in the following screenshot.
    :align: center
 
 After clicking on "Continue", you are redirected to Zammad where you can see a
-dialog for specifying a folder and if you want to keep messages on the server.
+dialog for specifying some settings for the channel:
+
+.. figure:: /images/channels/google/add-channel-dialog.png
+   :alt: Screenshot shows Zammad's add channel dialog
+   :scale: 70%
+   :align: center
+
+Destination group
+   The :doc:`group </manage/groups/index>` that incoming emails will be assigned
+   to.
+
+   Use :doc:`filters </channels/google/filters>` for more fine-grained sorting
+   of incoming email.
+
+Destination group > Sending email address
+   Decide if the email address should be assigned to the selected group for
+   outgoing emails.
+
+   **Change to ...** will add this email address to the group
+   for outgoing emails. This may overwrite an already assigned email address.
+
+   **Do not change email address** doesn't assign an email address to the group
+   or change it. If the group has no assigned email address, it stays empty.
+   If the group already has an assigned email address, it stays the same.
 
 .. _google-folder:
 
@@ -171,6 +194,8 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+Archive Mode
+   .. include:: /channels/email/accounts/archive-mode.rst
 
 After successfully adding the Google account, you can adjust
 the default group Zammad is going to assign incoming new tickets to.

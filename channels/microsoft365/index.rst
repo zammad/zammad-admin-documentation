@@ -1,5 +1,5 @@
-Microsoft 365
-=============
+Microsoft 365 IMAP Email
+========================
 
 .. toctree::
    :hidden:
@@ -11,11 +11,13 @@ Microsoft 365
    email-headers
    common-errors
 
-Connect a Microsoft 365 account (formerly “Office 365”) to Zammad.
+Connect a Microsoft 365 account (formerly "Office 365") via IMAP to Zammad.
 
 .. figure:: /images/channels/microsoft365/panel.png
    :alt: Email settings panel
    :align: center
+
+.. include:: ../../includes/m365-imap-graph.rst
 
 .. note:: Microsoft 365 channels are a specialized kind of
    :doc:`📨 email channel </channels/email/index>`.

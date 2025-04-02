@@ -4,11 +4,6 @@ Webhook Logs
 Zammad provides a history of your recent webhooks.
 You can find them below **Recent logs**.
 
-   .. figure:: /images/manage/webhook/webhook-logs-and-entries.png
-      :alt: Webhook logs showing possible issues with third party communication
-      :align: center
-      :width: 90%
-
 If you need more details you can click on the request link in question.
 Zammad will provide a modal with the following information:
 

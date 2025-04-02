@@ -2,7 +2,8 @@ Account Setup
 =============
 
 After you've :doc:`registered Zammad as an OAuth app <register-app>`
-in your Azure Portal, you can begin connecting Microsoft accounts to Zammad.
+in your Entra admin center, you can begin connecting Microsoft accounts to
+Zammad.
 
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
@@ -12,9 +13,9 @@ The import process does things you might not expect:
      import process. Use the *Keep Messages on Server* setting to
      :ref:`disable this behavior <microsoft365-keep-messages-on-server>`.
    * Zammad will **send an auto-reply message to every email it imports**
-     (including the old ones!). Make sure to :doc:`disable this behavior </manage/trigger>`
-     prior adding an email account, and to turn it back on once all your
-     messages have been imported.
+     (including the old ones!). Make sure to
+     :doc:`disable this behavior </manage/trigger>` prior adding an email
+     account, and to turn it back on once all your messages have been imported.
 
 .. tip:: 🤓 **Shared mailboxes are possible...**
 
@@ -47,64 +48,33 @@ Requesting the consent
    If your admin already provided consent, you'll be automatically
    authenticated, if this happens, continue with `Add a New Account`_.
 
-   After authenticating against Microsoft and providing a reason for your request,
-   you'll be redirect to the Zammad app. Zammad will then tell you to wait for
-   your administrators consent. The consent grant or denial will be sent by mail.
-
-   .. figure:: /images/channels/microsoft365/accounts/account-setup/request-admin-consent-if-not-granted.gif
-      :alt: Click on Request Admin Consent if your administrator did not yet grant
-            the Zammad app for your tenant.
-      :scale: 50%
-      :align: center
+   After authenticating against Microsoft and providing a reason for your
+   request, you'll be redirect to the Zammad app. Zammad will then tell you to
+   wait for your administrators consent. The consent grant or denial will be
+   sent by mail.
 
 Granting the consent (admin users)
-   Within **Enterprise applications** go to **Admin consent requests**.
-   You'll find all your user grant requests here.
+   Within **Enterprise applications** in the Entra admin center, go to
+   **Admin consent requests**. You'll find all your user grant requests here.
 
    Clicking on a request allows you to review which user requested the consent
    for what app. Click on **Review permissions and consent** to start the
    grant process. You'll be asked for credentials - these credentials are the
    administrator credentials *not* the ones of the mailbox user to add.
 
-   After you've granted the request, continue with `Add a New Account`_.
-   (As mentioned in
-   :ref:`Step 3.1 of the App registration <register_ms_app_stepbystep>`)
-
-   .. figure:: /images/channels/microsoft365/accounts/account-setup/granting-consent-request-of-user.gif
-      :alt: Within Enterprise applications grant requests within admin consent
-            requests
-      :scale: 50%
-      :align: center
+   After you've granted the request, continue with "Add a New Account" below.
 
 Add a New Account
 -----------------
 
-.. note::
-
-   .. container:: cfloat-left
-
-      Below shown screencast shows the authentication process with enabled admin
-      consent and already tenant wide granted permission.
-
-      If you're not using admin consent in your organization or you're
-      authenticating a personal microsoft account, you'll see an additional
-      permission dialogue you'll have to approve.
-
-   .. container:: cfloat-right
-
-      .. figure:: /images/channels/microsoft365/accounts/account-setup/app-permission-dialogue.png
-         :alt: Authentication dialogue for non admin consented users
-         :scale: 40%
-         :align: center
-
-.. figure:: /images/channels/microsoft365/accounts/account-setup/add-microsoft365-account-to-zammad.gif
-   :alt: Click on Add Account to add your Microsoft account to Zammad
+.. figure:: /images/channels/microsoft365/accounts/account-setup/add-account.png
+   :alt: Click on Add Account to add your Microsoft 365 account to Zammad
    :scale: 60%
    :align: center
 
-Click **Add Account** to connect your Microsoft 365 / Outlook accounts to Zammad.
-You will be redirected to a Microsoft sign-in and confirmation page.
-
+Click **Add Account** to connect your Microsoft 365 accounts to Zammad.
+You will be redirected to a Microsoft sign-in and confirmation page. Enter
+your credentials and confirm it by clicking the **Accept** button.
 
 .. note:: 🕵️ **Aliases are not imported automatically.**
 
@@ -114,9 +84,27 @@ Channel
 ^^^^^^^
 
 .. figure:: /images/channels/microsoft365/accounts/account-setup/microsoft365-account-settings.png
-   :alt: Click on Add Account to add your Microsoft 365 account to Zammad
-   :scale: 50%
+   :alt: Screenshot showing channel configuration during adding account for M365
+   :scale: 70%
    :align: center
+
+Destination group
+   The :doc:`group </manage/groups/index>` that incoming emails will be assigned
+   to.
+
+   Use :doc:`filters </channels/microsoft365/filters>` for more fine-grained
+   sorting of incoming email.
+
+Destination group > Sending email address
+   Decide if the email address should be assigned to the selected group for
+   outgoing emails.
+
+   **Change to ...** will add this email address to the group
+   for outgoing emails. This may overwrite an already assigned email address.
+
+   **Do not change email address** doesn't assign an email address to the group
+   or change it. If the group has no assigned email address, it stays empty.
+   If the group already has an assigned email address, it will stay the same.
 
 .. _microsoft365-folder:
 
@@ -151,9 +139,13 @@ Keep messages on server
       to clean out your inbox from time to time
       to keep it below its storage limit.
 
+Archive Mode
+   .. include:: /channels/email/accounts/archive-mode.rst
+
 After adding the account
    After successfully adding the Microsoft 365 mail account, you can adjust
-   the default group Zammad is going to assign incoming new tickets to.
+   the default group Zammad is going to assign incoming new tickets to by
+   clicking the group name under "Destination Group":
 
    .. figure:: /images/channels/microsoft365/accounts/account-setup/change-destination-group.png
       :alt: Location of "Destination Group" setting for existing accounts
@@ -182,3 +174,6 @@ My mailbox was working fine but suddenly it fails with ``EXPUNGE FAILED``
 
    As soon as the issue has been fixed, the Zammad channel will recover
    automatically.
+
+Have a look at the :doc:`common errors section <../common-errors>` if you still
+face issues with your M365 account.

@@ -21,9 +21,9 @@ Accounts
    Send and receive email at **additional email addresses**,
    all through the same mailbox/account.
 
-   .. figure:: /images/channels/email/accounts-addresses.gif
-      :alt: New Email Account dialog
-      :scale: 60%
+   .. figure:: /images/channels/email/accounts-addresses.png
+      :alt: Add email address dialog
+      :scale: 70%
       :align: center
 
 :doc:`accounts/managing-accounts`
@@ -31,7 +31,7 @@ Accounts
 
    .. figure:: /images/channels/email/panel.png
       :alt: Existing accounts can be edited from the Accounts panel.
-      :scale: 25%
+      :scale: 50%
       :align: center
 
    .. _email-notification:

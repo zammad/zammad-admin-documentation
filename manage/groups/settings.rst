@@ -69,7 +69,7 @@ Assign follow-ups
    no
       The owner assignment of the ticket will be removed.
 
-Email
+Sending Email Address
    Select which sender's email address Zammad will use outbound for replying on
    a ticket in this group.
 
@@ -78,7 +78,8 @@ Email
          Please configure an email based channel before here
 
             * :doc:`Channels → Email </channels/email/index>`
-            * :doc:`Channels → Microsoft 365 </channels/microsoft365/index>`
+            * :doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`
+            * :doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`
             * :doc:`Channels → Google </channels/google/index>`
 
          and come back afterwards.

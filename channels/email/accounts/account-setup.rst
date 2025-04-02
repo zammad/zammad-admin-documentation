@@ -27,7 +27,8 @@ The import process does things you might not expect:
 
    **Microsoft 365 users:**
       To add a Microsoft 365 account, create a dedicated
-      :doc:`Microsoft 365 channel </channels/microsoft365/accounts/account-setup>`.
+      :doc:`Microsoft 365 IMAP Email channel </channels/microsoft365/accounts>` or
+      :doc:`Microsoft 365 Graph Email channel </channels/microsoft365-graph/accounts>`.
 
 Basic
 -----
@@ -74,12 +75,23 @@ Email
 Password
    Your account password.
 
-Destination Group
-   The :doc:`group </manage/groups/index>` that incoming mail will be assigned
+Destination group
+   The :doc:`group </manage/groups/index>` that incoming emails will be assigned
    to.
 
    Use :doc:`filters </channels/email/filters>` for more fine-grained sorting
    of incoming email.
+
+Destination group > Sending email address
+   Decide if the email address should be assigned to the selected group for
+   outgoing emails.
+
+   **Change to channel email address** will add this email address to the group
+   for outgoing emails. This may overwrite an already assigned email address.
+
+   **Do not change email address** doesn't assign an email address to the group
+   or change it. If the group has no assigned email address, it stays empty.
+   If the group already has an assigned email address, it will stay the same.
 
 .. _email-new-account-experts:
 
@@ -192,33 +204,9 @@ Keep messages on server
 
    .. _email-experts-import-as:
 
-Import as
-   .. figure:: /images/channels/email/account-setup-archive-import.png
-      :alt: “Import as” option in email account setup dialog
-      :align: center
-      :width: 40%
+Archive Mode
+   .. include:: ./archive-mode.rst
 
-      How should old emails be imported?
-
-   During the import process, Zammad treats **all messages**
-   (including ones you've already read from months or years ago)
-   as if they had been sent today:
-   senders will receive auto-replies and tickets are created with state "new"
-   for each message.
-
-   Use this option to disable this behavior for messages more than two weeks
-   old.
-
-   .. note:: This option may not be shown if:
-
-      * all messages in your inbox are less than two weeks old
-      * you selected **Keep messages on server: Yes**
-      * you selected **Type: POP3**
-
-      For more fine-grained control,
-      manually disable this and other :doc:`triggers </manage/trigger>`
-      before adding an email account,
-      then turn them back on once all your messages have been imported.
 
 Email Outbound
 ^^^^^^^^^^^^^^

@@ -18,7 +18,8 @@ Control how Zammad **sends and receives email**.
       Set up a :doc:`Google channel </channels/google/index>` instead.
 
    **Using Microsoft 365?**
-      Set up a :doc:`Microsoft 365 channel </channels/microsoft365/index>`
+      Set up a :doc:`Microsoft 365 IMAP </channels/microsoft365/index>` or
+      :doc:`Microsoft 365 Graph channel </channels/microsoft365-graph/index>`
       instead.
 
 .. figure:: /images/channels/email/panel.png
@@ -28,11 +29,14 @@ Control how Zammad **sends and receives email**.
 🚛 Migrate existing email channel to "XOAUTH" channel
    At this moment Zammad supports XOAUTH for the following providers:
 
-      * :ref:`Google <migrate-channel>`
-      * :doc:`Microsoft 365 (formerly Office 365) </channels/microsoft365/accounts/migrate-from-email-channel>`
+      * :ref:`Google Email <migrate-channel>`
+      * :doc:`Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-email-channel>` (formerly Office 365)
 
-   Use above links to use the migration option instead of removing and re-adding
-   the channels. This will save precious time for something else!
+   .. note::
+
+      Microsoft 365 *Graph* Email supports XOAUTH as well, but currently there
+      is no migration option. Instead, you have to remove the existing and
+      :doc:`add the new channel manually </channels/microsoft365-graph/accounts/>`.
 
    .. start-after-migration
 
@@ -42,6 +46,8 @@ Control how Zammad **sends and receives email**.
 
    (Self-hosted users may have already completed this step
    during new system setup.)
+
+   .. start-after-accounts
 
 :doc:`🗂️ Filters <filters>`
    **Make sure new tickets show up in the right place**

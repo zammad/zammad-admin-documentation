@@ -43,6 +43,7 @@ Zammad Admin Documentation
    channels/email/index
    channels/chat
    channels/google/index
+   channels/microsoft365-graph/index
    channels/microsoft365/index
    channels/sms
    channels/twitter-x/twitter
