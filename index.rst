@@ -63,6 +63,12 @@ Zammad Admin Documentation
    settings/security
    settings/ticket
 
+.. toctree::
+   :maxdepth: 2
+   :caption: AI
+
+   ai/index
+
 .. _system-docs:
 
 .. toctree::
