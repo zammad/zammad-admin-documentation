@@ -35,6 +35,11 @@ The following providers are supported:
 Click the one you want to use. This will jump directly to the corresponding
 section below.
 
+.. note:: The AI service you have subscribed to is not available? This is just
+   the first step. We are going to add more providers soon! If you want to
+   support us or need the provider as soon as possible, just let our
+   `sales department <https://zammad.com/en/company/contact>`_ know!
+
 Ollama
 ^^^^^^
 
@@ -70,23 +75,52 @@ OpenAI
 
 You probably already heard about `OpenAI <https://openai.com/>`_, haven't
 you? To use their service as AI backend, choose them as AI provider and add
-your token.
-
-After that, make sure to click the ``Save`` button and read on in the
-`Features <#features>`_ section
+your token. After that, make sure to click the ``Save`` button and read on in
+the `Features <#features>`_ section.
 
 Zammad AI
 ^^^^^^^^^
 
+.. tip:: Don't want to deal with all this stuff or just want to have a privacy
+   respecting AI service? No problem! Get in touch with us to get your
+   token and you are ready to start.
+
+The usage of Zammad AI as a provider has some benefits:
+
+- You don't have to care about the setup and configuration compared to your own
+  setup.
+- Your requests with sensitive information aren't used for training.
+- If something isn't working as expected, you just have one place where you
+  get support.
+
+To configure it, simply choose **Zammad AI** as your provider and add your
+token. After that, make sure to click the ``Save`` button and read on in
+the `Features <#features>`_ section.
 
 Features
 --------
 
-Set the base for additional features.
+Below you find the supported AI powered features of Zammad. Make sure to
+configure a provider before activating a feature. Otherwise, a warning message
+will tell you to do so.
 
-If no provider configured, a warning message appears.
+.. note:: Currently, only one feature is available yet. This feature can be seen
+   as the foundation for other useful features. Expect more to come soon!
 
 Ticket Summary
 ^^^^^^^^^^^^^^
+
+Activating this feature generates summaries of tickets. This can be a huge
+time saver when dealing with large tickets and/or many hand-overs between
+agents.
+
+By default, **Customer Intent** and **Conversation Summary** are enabled and
+always active. You can choose to activate or deactivate **Open Questions** and
+**Suggested Next Steps**, depending on what fits your needs.
+
+Enabling the ticket summary feature triggers a request to the configured AI
+service when an agent opens a ticket. Agents then see a banner below the ticket
+articles which tells them that a summary is available. They can now simply
+click the included button to jump to the **AI Summary** sidebar tab.
 
 
