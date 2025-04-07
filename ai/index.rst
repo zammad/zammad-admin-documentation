@@ -131,3 +131,6 @@ Enabling the ticket summary feature triggers a request to the configured AI
 service when an agent opens a ticket. Agents then see a banner below the ticket
 articles which tells them that a summary is available. They can now simply
 click the included button to jump to the **AI Summary** sidebar tab.
+
+.. hint:: If you use an own Ollama server as provider, make sure to have the
+   model ``llama3.2`` available for this feature.
