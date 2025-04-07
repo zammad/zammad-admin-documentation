@@ -28,9 +28,9 @@ You can configure it in Zammad's admin settings under *AI > Provider*.
 
 The following providers are supported:
 
-- `Ollama <#ollama>`_
-- `OpenAI <#openai>`_
-- `Zammad AI <#id7>`_
+- :ref:`ollama-provider`
+- :ref:`openai-provider`
+- :ref:`zammad-ai-provider`
 
 Click the one you want to use. This will jump directly to the corresponding
 section below.
@@ -39,6 +39,8 @@ section below.
    the first step. We are going to add more providers soon! If you want to
    support us or need the provider as soon as possible, just let our
    `sales department <https://zammad.com/en/company/contact>`_ know!
+
+.. _ollama-provider:
 
 Ollama
 ^^^^^^
@@ -70,6 +72,8 @@ You can find the available models in
 and additional links in the
 `Ollama Github repository <https://ollama.com/library>`_.
 
+.. _openai-provider:
+
 OpenAI
 ^^^^^^
 
@@ -77,6 +81,8 @@ You probably already heard about `OpenAI <https://openai.com/>`_, haven't
 you? To use their service as AI backend, choose them as AI provider and add
 your token. After that, make sure to click the ``Save`` button and read on in
 the `Features <#features>`_ section.
+
+.. _zammad-ai-provider:
 
 Zammad AI
 ^^^^^^^^^
