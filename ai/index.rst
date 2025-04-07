@@ -1,7 +1,10 @@
 Zammad AI
 =========
 
-.. note:: Zammad's AI features are currently limited to our SaaS customers.
+.. note::
+   - Zammad's AI features are currently limited to SaaS customers.
+   - This page may change regularly.
+   - Consider this page in Beta state.
 
 Introduction
 ------------
@@ -70,7 +73,7 @@ executing:
 You can find the available models in
 `Ollama's model library <https://ollama.com/library>`_ and useful information
 and additional links in the
-`Ollama Github repository <https://ollama.com/library>`_.
+`Ollama Github repository <https://github.com/ollama/ollama>`_.
 
 .. _openai-provider:
 
