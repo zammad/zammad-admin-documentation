@@ -131,5 +131,3 @@ Enabling the ticket summary feature triggers a request to the configured AI
 service when an agent opens a ticket. Agents then see a banner below the ticket
 articles which tells them that a summary is available. They can now simply
 click the included button to jump to the **AI Summary** sidebar tab.
-
-
