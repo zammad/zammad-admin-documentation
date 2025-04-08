@@ -26,17 +26,15 @@ Read on how to configure it and which features are currently supported.
 Provider Configuration
 ----------------------
 
-To use Zammad, you have to configure an AI provider which handles the requests.
-You can configure it in Zammad's admin settings under *AI > Provider*.
+To use AI feature in Zammad, you have to configure an AI provider which handles
+the requests. You can configure it in Zammad's admin settings under
+*AI > Provider*.
 
 The following providers are supported:
 
 - :ref:`ollama-provider`
 - :ref:`openai-provider`
 - :ref:`zammad-ai-provider`
-
-Click the one you want to use. This will jump directly to the corresponding
-section below.
 
 .. note:: The AI service you have subscribed to is not available? This is just
    the first step. We are going to add more providers soon! If you want to
@@ -50,7 +48,7 @@ Ollama
 
 `Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your
 own AI server on a machine you control. Be aware that this only makes sense if
-you have a GPU in your system!
+you have a powerful GPU in your system!
 
 Using Ollama on an own server makes sure that your data is not transferred to
 a third party.
@@ -82,8 +80,8 @@ OpenAI
 
 You probably already heard about `OpenAI <https://openai.com/>`_, haven't
 you? To use their service as AI backend, choose them as AI provider and add
-your token. After that, make sure to click the ``Save`` button and read on in
-the `Features <#features>`_ section.
+your API token. After that, make sure to click the ``Save`` button and read on
+in the `Features <#features>`_ section.
 
 .. _zammad-ai-provider:
 
@@ -113,8 +111,8 @@ Below you find the supported AI powered features of Zammad. Make sure to
 configure a provider before activating a feature. Otherwise, a warning message
 will tell you to do so.
 
-.. note:: Currently, only one feature is available yet. This feature can be seen
-   as the foundation for other useful features. Expect more to come soon!
+.. note:: Currently, only one feature is available so far. This feature can be
+   seen as the foundation for other useful features. Expect more to come soon!
 
 Ticket Summary
 ^^^^^^^^^^^^^^
