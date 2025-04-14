@@ -38,7 +38,6 @@ Before you continue, please note the following limitations.
 
    * Zammad's LDAP sync is one way. Editing user settings or permissions may be
      overwritten upon the next sync depending on your configuration.
-   * Nested groups are not supported.
    * Synchronizing user avatars from LDAP is not supported.
    * Unlike user filters, group filters cannot be changed.
    * When a user originates from an LDAP server, Zammad will try to verify the

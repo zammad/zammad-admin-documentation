@@ -27,7 +27,7 @@ Add new source
 
    .. tip::
 
-      Using an user filter can be a good idea if you only require a small subset
+      Using a user filter can be a good idea if you only require a small subset
       of your LDAP users in Zammad.
 
       This especially affects inactive users
@@ -48,21 +48,32 @@ Add new source
 
    .. danger::
 
-      *Do not* manually write pathes of either LDAP attributes or groups.
+      *Do not* manually write paths of either LDAP attributes or groups.
       If Zammad does not display them, it either cannot find them or you have
       a lot of users that don't have the attributes populated.
 
       Zammad will always only return attributes that are filled - this reduces
       the returned list of attributes greatly.
 
-   .. figure:: /images/system/integrations/ldap/ldap-add-new-source.gif
-      :alt: Screencast showing how to add a new LDAP source
+   .. figure:: /images/system/integrations/ldap/ldap-add-new-source.png
+      :alt: Screenshot showing adding of a new sample LDAP source
 
    .. note::
 
       If your LDAP system doesn't allow anonymous bind, Zammad detects it and
       provides you an editable "Base DN" *text* field instead of a prefilled
       *select* field.
+
+   .. hint::
+
+      In case your LDAP groups follow a hierarchy, you can choose to assign
+      Zammad roles to all members of nested groups.
+
+      Simply set *Include nested* dropdown to *Yes* and all members of child
+      groups will be considered for the role assignment.
+
+      .. figure:: /images/system/integrations/ldap/ldap-add-new-source.png
+         :alt: Screenshot showing the nested groups option for the role assignment
 
 Review or edit existing source
    Clicking on a LDAP source will provide a configuration and mapping overview.
@@ -89,9 +100,9 @@ Re-arrange LDAP source's order
             drag and drop.
 
 Remove a source
-   If you no longer need the a LDAP source or simply want to start over,
-   you can remove them at any time. This will not remove synchronized users,
-   data synchronized or permissions.
+   If you no longer need an LDAP source or simply want to start over,
+   you can remove it at any time. This will not remove synchronized users,
+   synchronized data or permissions.
 
    .. tip::
 
