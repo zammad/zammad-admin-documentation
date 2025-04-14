@@ -187,7 +187,8 @@ Keep messages on server
 
    * ``yes``: Zammad marks imported messages as read. With this option, Zammad
      will only import unread messages. This means Zammad may miss messages if
-     the mailbox is externally modified.
+     the mailbox is externally modified and ``Archive mode`` (described
+     below) is unavailable.
 
 
    .. note:: 🤔 **Why does Zammad delete messages by default?**
