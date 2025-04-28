@@ -80,6 +80,25 @@ Simple Storage (S3)
          endpoint: 'https://zammad.s3.us-west-2.amazonaws.com'
          bucket: 'zammad'
 
+
+   .. hint::
+
+      If you use a different provider than AWS (e.g. Backblaze) and you observe
+      issues, try to add the ``request_checksum_calculation`` and
+      ``response_checksum_validation`` parameters as you can see in the example
+      below:
+
+      .. code::
+
+         s3:
+            access_key_id: 'xxxxxxxx'
+            secret_access_key: 'yyyyyyy'
+            region: 'us-west-004'
+            endpoint: 's3.us-west-004.backblazeb2.com'
+            bucket: 'zammad'
+            request_checksum_calculation: when_required
+            response_checksum_validation: when_required
+
    .. tip::
 
       Before setting the storage method to ``Simple Storage (S3)`` (step 4),
