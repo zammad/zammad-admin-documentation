@@ -80,6 +80,17 @@ Simple Storage (S3)
          endpoint: 'https://zammad.s3.us-west-2.amazonaws.com'
          bucket: 'zammad'
 
+
+   .. hint::
+
+      If you use a non-AWS S3 setup (e.g. Backblaze), add the following
+      parameters in case of problems:
+
+      .. code::
+
+         request_checksum_calculation: when_required
+         response_checksum_validation: when_required
+
    .. tip::
 
       Before setting the storage method to ``Simple Storage (S3)`` (step 4),
