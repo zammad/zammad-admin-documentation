@@ -83,13 +83,21 @@ Simple Storage (S3)
 
    .. hint::
 
-      If you use a non-AWS S3 setup (e.g. Backblaze), add the following
-      parameters in case of problems:
+      If you use a different provider than AWS (e.g. Backblaze) and you observe
+      issues, try to add the ``request_checksum_calculation`` and
+      ``response_checksum_validation`` parameters as you can see in the example
+      below:
 
       .. code::
 
-         request_checksum_calculation: when_required
-         response_checksum_validation: when_required
+         s3:
+            access_key_id: 'xxxxxxxx'
+            secret_access_key: 'yyyyyyy'
+            region: 'us-west-004'
+            endpoint: 's3.us-west-004.backblazeb2.com'
+            bucket: 'zammad'
+            request_checksum_calculation: when_required
+            response_checksum_validation: when_required
 
    .. tip::
 
