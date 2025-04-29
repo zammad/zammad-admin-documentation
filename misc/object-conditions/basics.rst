@@ -278,6 +278,10 @@ Available operators for matching:
 
 - **is**
 - **is not**
+- **is less than**
+- **is less than or equal to**
+- **is greater than**
+- **is greater than or equal to**
 - **has changed**
 
 Date Field
