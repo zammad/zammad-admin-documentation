@@ -39,6 +39,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../settings/security/third-party/saml.rst:5
+#: ../system/integrations/exchange.rst:8
 #: ../system/integrations/pgp/index.rst:5
 #: ../system/objects/permissions.rst:5
 msgid "Introduction"
@@ -492,6 +493,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:238
 #: ../channels/email/accounts/email-notification.rst:33
 #: ../settings/security/password.rst:2
+#: ../system/integrations/exchange.rst:51
 msgid "Password"
 msgstr ""
 
@@ -595,6 +597,7 @@ msgstr ""
 #: ../channels/email/accounts/email-notification.rst:30
 #: ../misc/object-conditions/basics.rst:26
 #: ../settings/security/third-party/microsoft.rst:68
+#: ../system/integrations/exchange.rst:50
 #: ../system/sessions.rst:19
 msgid "User"
 msgstr ""
@@ -12844,7 +12847,7 @@ msgid "Date Field"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:290
-msgid "Checks if a date is before or past (both absolute or relativ) a specific point in time or time period. Relative operators allow you to define a time period in seconds, minutes, hours, days, weeks, months or years."
+msgid "Checks if a date is before or past (both absolute or relative) a specific point in time or time period. Relative operators allow you to define a time period in seconds, minutes, hours, days, weeks, months or years."
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
@@ -12938,7 +12941,7 @@ msgid "Date & Time Field"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:331
-msgid "Checks if a date and time is before or past (both absolute or relativ) a specific point in time or time period. Relative operators allow you to define a time period in seconds, minutes, hours, days, weeks, months or years."
+msgid "Checks if a date and time is before or past (both absolute or relative) a specific point in time or time period. Relative operators allow you to define a time period in seconds, minutes, hours, days, weeks, months or years."
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
@@ -20406,39 +20409,83 @@ msgstr ""
 msgid "With Zammad's Exchange integration, you can easily use existing address books without having to update more than one source."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:7
-msgid "However, you should refrain from syncing all addresses, as the results may not be what you expect (Exchange collects huge amounts of addresses). A central address book of your company to sync makes more sense, as you can ensure that Zammad gets only the data you need and want. Apart from this, it is even not possible to sync the Global Address List (GAL) of your Exchange system with Zammad."
+#: ../system/integrations/exchange.rst:10
+msgid "There are two ways you can connect to your Exchange service, depending on your setup:"
 msgstr ""
 
-#: ../system/integrations/exchange.rst:16
+#: ../system/integrations/exchange.rst:13
+msgid "Connect to a local Exchange server via :ref:`Basic Authentication <exchange-basic-auth>`"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:14
+msgid "Connect to a M365 Exchange server by using :ref:`OAuth authentication <exchange-oauth>`"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:18
+msgid "You might not want to sync all addresses. The results may not be what you expect (because Exchange collects huge amounts of addresses)."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:20
+msgid "You might want to sync a central address book of your company. By doing so, you can ensure that Zammad only gets the data you want."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:22
+msgid "It is not possible to sync the Global Address List (GAL) of your Exchange system with Zammad."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:27
 msgid "**Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP integration. If you have the same users in both sources, the LDAP version will always be Zammad's pick."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:19
+#: ../system/integrations/exchange.rst:30
 msgid "**One way sync:** the Exchange sync is one way. Exchange => Zammad. Changes to your users inside of Zammad might be overwritten by the Exchange sync."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:24
-msgid "To configure Exchange integration, simply go to the System > Integrations > Exchange in the admin panel. Press \"change\" and follow the wizard for adding the needed Exchange information to Zammad. On the last two steps Zammad will ask you for the address book(s) and your desired attribute mapping. By default, Zammad only maps email address, first- and lastname. Technically, you can map any Exchange object to a Zammad user object (this also works for custom objects!)."
-msgstr ""
-
-#: ../system/integrations/exchange.rst:35
-msgid "If the SSL verification fails while connecting to Exchange, Zammad will ask you to turn it off temporarily."
-msgstr ""
-
-#: ../system/integrations/exchange.rst:38
-msgid "Please be aware that **turning off SSL verification is a security risk**. It should only be used temporarily or for testing purposes. If turned off, there is no verification of the certificate, which means that every presented certificate will be accepted."
+#: ../system/integrations/exchange.rst:34
+msgid "To configure the Exchange integration, go to the *System > Integrations > Exchange* in the admin panel. Depending on your setup, continue either with the configuration for the basic authentication in the next section or head over to the :ref:`OAuth section <exchange-oauth>`."
 msgstr ""
 
 #: ../system/integrations/exchange.rst:43
-msgid "After pressing Continue, Zammad will check if the configuration is okay. You can then enable Exchange and start your first sync. The sync will then run hourly - if you need to change mappings or the address book(s), you can change the configuration at any time."
+msgid "Basic Authentication"
 msgstr ""
 
-#: ../system/integrations/exchange.rst:50
-msgid "After the sync has finished, you can find the new Exchange contacts under \"Users\". Zammad integrates them just as normal users."
+#: ../system/integrations/exchange.rst:45
+msgid "In the Exchange integration screen, make sure **Basic Authentication** is selected in the dropdown. Click on ``Configure`` which opens a dialog where you have to provide the following information:"
 msgstr ""
 
 #: ../system/integrations/exchange.rst:55
+msgid "If the SSL verification fails while connecting to Exchange, Zammad will ask you to turn it off temporarily."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:58
+msgid "Please be aware that **turning off SSL verification is a security risk**. It should only be used temporarily or for testing purposes. If turned off, there is no verification of the certificate, which means that every presented certificate will be accepted."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:63
+msgid "Read on in the :ref:`additional information <exchange-additional-information>` section."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:69
+msgid "OAuth Authentication"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:74
+msgid "Additional Information"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:76
+msgid "On the last two steps Zammad will ask you for the address book(s) and your desired attribute mapping. By default, Zammad only maps email address, first- and lastname. Technically, you can map any Exchange object to a Zammad user object (this also works for custom objects!)."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:82
+msgid "After pressing Continue, Zammad will check if the configuration is okay. You can then enable Exchange and start your first sync. The sync will then run hourly - if you need to change mappings or the address book(s), you can change the configuration at any time."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:89
+msgid "After the sync has finished, you can find the new Exchange contacts under \"Users\". Zammad integrates them just as normal users."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:94
 msgid "In some cases you might see unique IDs as \"Login\" instead of the email address. This is normal and doesn't affect the login or email mapping for that entry."
 msgstr ""
 
