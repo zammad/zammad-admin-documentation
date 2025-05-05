@@ -68,6 +68,10 @@ section.
 OAuth Authentication
 ^^^^^^^^^^^^^^^^^^^^
 
+- Connect Exchange App
+- Add Account
+- Configure
+
 .. _exchange-additional-information:
 
 Additional Information
