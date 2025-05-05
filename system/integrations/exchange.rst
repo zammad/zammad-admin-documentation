@@ -4,12 +4,23 @@ Exchange
 With Zammad's Exchange integration, you can easily use existing address books
 without having to update more than one source.
 
-However, you should refrain from syncing all addresses, as the results may not
-be what you expect (Exchange collects huge amounts of addresses).
-A central address book of your company to sync makes more sense, as you can
-ensure that Zammad gets only the data you need and want.
-Apart from this, it is even not possible to sync the Global Address List (GAL)
-of your Exchange system with Zammad.
+Introduction
+^^^^^^^^^^^^
+
+There are two ways you can connect to your Exchange service, depending on your
+setup:
+
+- Connect to a local Exchange server via :ref:`Basic Authentication <exchange-basic-auth>`
+- Connect to a M365 Exchange server by using :ref:`OAuth authentication <exchange-oauth>`
+
+.. tip::
+
+   - You might not want to sync all addresses. The results may not be what you
+     expect (because Exchange collects huge amounts of addresses).
+   - You might want to sync a central address book of your company. By doing so,
+     you can ensure that Zammad only gets the data you want.
+   - It is not possible to sync the Global Address List (GAL) of your Exchange
+     system with Zammad.
 
 .. warning::
 
@@ -20,15 +31,24 @@ of your Exchange system with Zammad.
      Changes to your users inside of Zammad might be overwritten by the
      Exchange sync.
 
+To configure the Exchange integration, go to the *System > Integrations >
+Exchange* in the admin panel.
+Depending on your setup, continue either with the configuration for the basic
+authentication in the next section or head over to the
+:ref:`OAuth section <exchange-oauth>`.
 
-To configure Exchange integration, simply go to the System > Integrations >
-Exchange in the admin panel.
-Press "change" and follow the wizard for adding the needed Exchange information
-to Zammad.
-On the last two steps Zammad will ask you for the address book(s) and your
-desired attribute mapping. By default, Zammad only maps email address, first-
-and lastname. Technically, you can map any Exchange object to a Zammad user
-object (this also works for custom objects!).
+.. _exchange-basic-auth:
+
+Basic Authentication
+^^^^^^^^^^^^^^^^^^^^
+
+In the Exchange integration screen, make sure **Basic Authentication** is
+selected in the dropdown. Click on ``Configure`` which opens a dialog where you
+have to provide the following information:
+
+- Endpoint
+- User
+- Password
 
 .. warning::
 
@@ -39,6 +59,25 @@ object (this also works for custom objects!).
    should only be used temporarily or for testing purposes. If turned off, there
    is no verification of the certificate, which means that every presented
    certificate will be accepted.
+
+Read on in the :ref:`additional information <exchange-additional-information>`
+section.
+
+.. _exchange-oauth:
+
+OAuth Authentication
+^^^^^^^^^^^^^^^^^^^^
+
+.. _exchange-additional-information:
+
+Additional Information
+^^^^^^^^^^^^^^^^^^^^^^
+
+On the last two steps Zammad will ask you for the address book(s) and your
+desired attribute mapping. By default, Zammad only maps email address, first-
+and lastname. Technically, you can map any Exchange object to a Zammad user
+object (this also works for custom objects!).
+
 
 After pressing Continue, Zammad will check if the configuration is okay.
 You can then enable Exchange and start your first sync.
