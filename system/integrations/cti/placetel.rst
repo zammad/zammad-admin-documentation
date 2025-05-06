@@ -11,6 +11,13 @@ Placetel CTI
 Requirements
 ------------
 
+.. warning::
+
+   The integration relies on Placetel's legacy product "Placetel Pro".
+   If you use their current "Webex for Placetel" product, it doesn't work.
+   Our `community thread <https://community.zammad.org/t/zammad-integration-missing-in-placetel/16363/9>`_
+   has some more information.
+
 Please provide the following requirements:
 
    * You need an administrative Placetel account for your organization.
