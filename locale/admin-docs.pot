@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 16:07+0200\n"
+"POT-Creation-Date: 2025-05-09 16:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6839,7 +6839,6 @@ msgid "This is the URL title that's being displayed to your users."
 msgstr ""
 
 #: ../manage/knowledge-base.rst:149
-#: ../manage/webhook/log.rst:14
 #: ../system/integrations/elasticsearch.rst:57
 msgid "URL"
 msgstr ""
@@ -10118,7 +10117,6 @@ msgstr ""
 
 #: ../manage/time-accounting.rst:157
 #: ../manage/time-accounting.rst:171
-#: ../manage/webhook/log.rst:29
 msgid "Created at"
 msgstr ""
 
@@ -11880,63 +11878,71 @@ msgid "Custom Payload w/o Article Content for Slack Webhook"
 msgstr ""
 
 #: ../manage/webhook/log.rst:2
-msgid "Webhook Logs"
+msgid "Webhook Logs and Troubleshooting"
 msgstr ""
 
-#: ../manage/webhook/log.rst:4
-msgid "Zammad provides a history of your recent webhooks. You can find them below **Recent logs**."
+#: ../manage/webhook/log.rst:5
+msgid "Logs"
 msgstr ""
 
 #: ../manage/webhook/log.rst:7
-msgid "If you need more details you can click on the request link in question. Zammad will provide a modal with the following information:"
+msgid "Zammad provides a history of your recent webhook events, helping you monitor and debug interactions with third-party services. You can access them under **Recent Logs** in the webhook settings."
 msgstr ""
 
 #: ../manage/webhook/log.rst:11
-msgid "Direction"
+msgid "Each log entry contains details about the webhook request and response, allowing you to troubleshoot issues. Clicking on a request link opens a detailed modal with the following information:"
 msgstr ""
 
-#: ../manage/webhook/log.rst:11
-msgid "Always ``out``."
+#: ../manage/webhook/log.rst:15
+msgid "**Direction**: Always ``out``, indicating outgoing requests from Zammad."
 msgstr ""
 
-#: ../manage/webhook/log.rst:14
-msgid "The URL Zammad sent the request to."
-msgstr ""
-
-#: ../manage/webhook/log.rst:17
-msgid "Method"
+#: ../manage/webhook/log.rst:16
+msgid "**URL**: The destination URL where Zammad sent the request."
 msgstr ""
 
 #: ../manage/webhook/log.rst:17
-msgid "Always ``POST``."
+msgid "**Method**: Always ``POST``."
 msgstr ""
 
-#: ../manage/webhook/log.rst:21
-msgid "Status"
+#: ../manage/webhook/log.rst:18
+msgid "**Status**: The HTTP status code received from the remote server. A successful request returns a ``2xx`` code."
 msgstr ""
 
 #: ../manage/webhook/log.rst:20
-msgid "Contains the HTTP status code the remote server replied with. Should be ``2xx`` if successful."
+msgid "**Request**: Displays the HTTP request headers and payload that Zammad sent."
 msgstr ""
 
-#: ../manage/webhook/log.rst:24
-msgid "Request"
+#: ../manage/webhook/log.rst:21
+msgid "**Response**: Shows the response headers from the remote server."
 msgstr ""
 
-#: ../manage/webhook/log.rst:24
-msgid "Contains the request Zammad sent (HTTP header and payload)"
+#: ../manage/webhook/log.rst:22
+msgid "**Created at**: The timestamp when Zammad sent the request."
+msgstr ""
+
+#: ../manage/webhook/log.rst:25
+msgid "Debugging Webhook Issues"
 msgstr ""
 
 #: ../manage/webhook/log.rst:27
-msgid "Response"
+msgid "If a webhook fails (e.g. receiving a ``4xx`` or ``5xx`` status code), check the request and response details to diagnose the issue. Common causes include incorrect URLs, authentication errors, or server-side failures."
 msgstr ""
 
-#: ../manage/webhook/log.rst:27
-msgid "Contains the remotes response header."
+#: ../manage/webhook/log.rst:31
+msgid "Before deploying webhooks in production, you can use testing tools to inspect and debug requests. If you do so, make sure to exclude any sensitive or personal data."
 msgstr ""
 
-#: ../manage/webhook/log.rst:30
-msgid "Date and time the request was sent."
+#: ../manage/webhook/log.rst:35
+msgid "The following tools/services might be helpful:"
+msgstr ""
+
+#: ../manage/webhook/log.rst:37
+msgid "`Beeceptor <https://beeceptor.com/>`_: A free tool to capture and inspect webhook requests in real time. Set up a temporary endpoint to verify the payload structure and headers."
+msgstr ""
+
+#: ../manage/webhook/log.rst:40
+msgid "`Webhook.site <https://webhook.site/>`_: Another useful alternative for real-time request logging and debugging."
 msgstr ""
 
 #: ../manage/webhook/payload.rst:2
