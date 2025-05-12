@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-29 16:41+0300\n"
-"PO-Revision-Date: 2025-04-29 12:37+0000\n"
+"POT-Creation-Date: 2025-05-09 16:31+0200\n"
+"PO-Revision-Date: 2025-05-09 18:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -9673,8 +9673,7 @@ msgstr "Titel"
 msgid "This is the URL title that's being displayed to your users."
 msgstr "Dies ist der URL-Text, der Ihren Benutzern angezeigt wird."
 
-#: ../manage/knowledge-base.rst:149 ../manage/webhook/log.rst:14
-#: ../system/integrations/elasticsearch.rst:57
+#: ../manage/knowledge-base.rst:149 ../system/integrations/elasticsearch.rst:57
 msgid "URL"
 msgstr "URL"
 
@@ -14436,7 +14435,6 @@ msgid "Activity type (if enabled)"
 msgstr "Aktivitäts-Typ (falls aktiviert)"
 
 #: ../manage/time-accounting.rst:157 ../manage/time-accounting.rst:171
-#: ../manage/webhook/log.rst:29
 msgid "Created at"
 msgstr "Erstellt am"
 
@@ -17280,76 +17278,103 @@ msgid "Custom Payload w/o Article Content for Slack Webhook"
 msgstr "Benutzerdefinierter Payload ohne Artikelinhalt für Slack Webhook"
 
 #: ../manage/webhook/log.rst:2
-msgid "Webhook Logs"
-msgstr "Webhook-Protokolle"
+#, fuzzy
+#| msgid "Troubleshooting"
+msgid "Webhook Logs and Troubleshooting"
+msgstr "Fehlerbehebung"
 
-#: ../manage/webhook/log.rst:4
-msgid ""
-"Zammad provides a history of your recent webhooks. You can find them below "
-"**Recent logs**."
+#: ../manage/webhook/log.rst:5
+msgid "Logs"
 msgstr ""
-"Zammad bietet einen Überblick über Ihre letzten Webhooks. Sie finden sie "
-"unter **Aktuellste Protokolle**."
 
 #: ../manage/webhook/log.rst:7
 msgid ""
-"If you need more details you can click on the request link in question. "
-"Zammad will provide a modal with the following information:"
+"Zammad provides a history of your recent webhook events, helping you monitor "
+"and debug interactions with third-party services. You can access them under "
+"**Recent Logs** in the webhook settings."
 msgstr ""
-"Wenn Sie weitere Details benötigen, können Sie auf den entsprechenden Link "
-"klicken. Zammad wird einen Dialog mit den folgenden Informationen anzeigen:"
 
 #: ../manage/webhook/log.rst:11
-msgid "Direction"
-msgstr "Richtung"
+msgid ""
+"Each log entry contains details about the webhook request and response, "
+"allowing you to troubleshoot issues. Clicking on a request link opens a "
+"detailed modal with the following information:"
+msgstr ""
 
-#: ../manage/webhook/log.rst:11
-msgid "Always ``out``."
-msgstr "Immer ``ausgehend``."
+#: ../manage/webhook/log.rst:15
+msgid ""
+"**Direction**: Always ``out``, indicating outgoing requests from Zammad."
+msgstr ""
 
-#: ../manage/webhook/log.rst:14
-msgid "The URL Zammad sent the request to."
+#: ../manage/webhook/log.rst:16
+#, fuzzy
+#| msgid "The URL Zammad sent the request to."
+msgid "**URL**: The destination URL where Zammad sent the request."
 msgstr "Die URL, an die Zammad die Anfrage geschickt hat."
 
 #: ../manage/webhook/log.rst:17
-msgid "Method"
-msgstr "Methode"
-
-#: ../manage/webhook/log.rst:17
-msgid "Always ``POST``."
+#, fuzzy
+#| msgid "Always ``POST``."
+msgid "**Method**: Always ``POST``."
 msgstr "Immer ``POST``."
 
-#: ../manage/webhook/log.rst:21
-msgid "Status"
-msgstr "Status"
+#: ../manage/webhook/log.rst:18
+msgid ""
+"**Status**: The HTTP status code received from the remote server. A "
+"successful request returns a ``2xx`` code."
+msgstr ""
 
 #: ../manage/webhook/log.rst:20
 msgid ""
-"Contains the HTTP status code the remote server replied with. Should be "
-"``2xx`` if successful."
+"**Request**: Displays the HTTP request headers and payload that Zammad sent."
 msgstr ""
-"Enthält den HTTP-Statuscode, mit dem der entfernte Server geantwortet hat. "
-"Sollte bei Erfolg ``2xx`` sein."
 
-#: ../manage/webhook/log.rst:24
-msgid "Request"
-msgstr "Anfrage"
+#: ../manage/webhook/log.rst:21
+msgid "**Response**: Shows the response headers from the remote server."
+msgstr ""
 
-#: ../manage/webhook/log.rst:24
-msgid "Contains the request Zammad sent (HTTP header and payload)"
-msgstr "Enthält die gesendete Anfrage (HTTP-Header und Payload)"
+#: ../manage/webhook/log.rst:22
+#, fuzzy
+#| msgid "The URL Zammad sent the request to."
+msgid "**Created at**: The timestamp when Zammad sent the request."
+msgstr "Die URL, an die Zammad die Anfrage geschickt hat."
+
+#: ../manage/webhook/log.rst:25
+#, fuzzy
+#| msgid "Define webhook fields"
+msgid "Debugging Webhook Issues"
+msgstr "Webhook-Felder definieren"
 
 #: ../manage/webhook/log.rst:27
-msgid "Response"
-msgstr "Antwort"
+msgid ""
+"If a webhook fails (e.g. receiving a ``4xx`` or ``5xx`` status code), check "
+"the request and response details to diagnose the issue. Common causes "
+"include incorrect URLs, authentication errors, or server-side failures."
+msgstr ""
 
-#: ../manage/webhook/log.rst:27
-msgid "Contains the remotes response header."
-msgstr "Enthält den Header der Antwort des Dienstes."
+#: ../manage/webhook/log.rst:31
+msgid ""
+"Before deploying webhooks in production, you can use testing tools to "
+"inspect and debug requests. If you do so, make sure to exclude any sensitive "
+"or personal data."
+msgstr ""
 
-#: ../manage/webhook/log.rst:30
-msgid "Date and time the request was sent."
-msgstr "Datum und Uhrzeit, zu der die Anfrage gesendet wurde."
+#: ../manage/webhook/log.rst:35
+msgid "The following tools/services might be helpful:"
+msgstr ""
+
+#: ../manage/webhook/log.rst:37
+msgid ""
+"`Beeceptor <https://beeceptor.com/>`_: A free tool to capture and inspect "
+"webhook requests in real time. Set up a temporary endpoint to verify the "
+"payload structure and headers."
+msgstr ""
+
+#: ../manage/webhook/log.rst:40
+msgid ""
+"`Webhook.site <https://webhook.site/>`_: Another useful alternative for real-"
+"time request logging and debugging."
+msgstr ""
 
 #: ../manage/webhook/payload.rst:2
 msgid "Webhook Payload"
@@ -18449,22 +18474,20 @@ msgid "Checks if any field of type integer has a specific value."
 msgstr "Prüft, ob ein Zahlenfeld einen bestimmten Wert enthält oder nicht."
 
 #: ../misc/object-conditions/basics.rst:281
-#, fuzzy
-#| msgid "**is not**"
 msgid "**is less than**"
-msgstr "**ist nicht**"
+msgstr "**ist kleiner als**"
 
 #: ../misc/object-conditions/basics.rst:282
 msgid "**is less than or equal to**"
-msgstr ""
+msgstr "**ist kleiner als oder gleich**"
 
 #: ../misc/object-conditions/basics.rst:283
 msgid "**is greater than**"
-msgstr ""
+msgstr "**ist größer als**"
 
 #: ../misc/object-conditions/basics.rst:284
 msgid "**is greater than or equal to**"
-msgstr ""
+msgstr "ist größer als oder gleich"
 
 #: ../misc/object-conditions/basics.rst:288
 msgid "Date Field"
@@ -27897,7 +27920,7 @@ msgstr ""
 "Konfiguration auf den Computern Ihrer Mitarbeiter."
 
 #: ../system/integrations/cti/generic.rst:9
-#: ../system/integrations/cti/placetel.rst:14
+#: ../system/integrations/cti/placetel.rst:21
 #: ../system/integrations/cti/sipgate.rst:14
 msgid "Please provide the following requirements:"
 msgstr "Folgende Anforderungen müssen erfüllt sein:"
@@ -27933,13 +27956,13 @@ msgstr ""
 "unsere :docs:`CTI-API Dokumentation </api/generic-cti/index.html>`."
 
 #: ../system/integrations/cti/generic.rst:22
-#: ../system/integrations/cti/placetel.rst:27
+#: ../system/integrations/cti/placetel.rst:34
 #: ../system/integrations/cti/sipgate.rst:30
 msgid "Available Settings"
 msgstr "Verfügbare Einstellungen"
 
 #: ../system/integrations/cti/generic.rst:29
-#: ../system/integrations/cti/placetel.rst:41
+#: ../system/integrations/cti/placetel.rst:48
 #: ../system/integrations/cti/sipgate.rst:40
 msgid "Endpoint Settings"
 msgstr "Endpunkt-Einstellungen"
@@ -27970,13 +27993,13 @@ msgstr ""
 "Sie immer die Schaltfläche \"Speichern\" am unteren Ende der Seite!"
 
 #: ../system/integrations/cti/generic.rst:43
-#: ../system/integrations/cti/placetel.rst:49
+#: ../system/integrations/cti/placetel.rst:56
 #: ../system/integrations/cti/sipgate.rst:52
 msgid "Call Settings"
 msgstr "Anruf-Einstellungen"
 
 #: ../system/integrations/cti/generic.rst:39
-#: ../system/integrations/cti/placetel.rst:49
+#: ../system/integrations/cti/placetel.rst:56
 #: ../system/integrations/cti/sipgate.rst:37
 #: ../system/integrations/cti/sipgate.rst:50
 msgid "Inbound"
@@ -28094,7 +28117,7 @@ msgstr ""
 "cti/api-intro.html>`, falls Sie sich nicht sicher sind."
 
 #: ../system/integrations/cti/generic.rst:52
-#: ../system/integrations/cti/placetel.rst:54
+#: ../system/integrations/cti/placetel.rst:61
 #: ../system/integrations/cti/sipgate.rst:59
 msgid "Other Settings"
 msgstr "Andere Einstellungen"
@@ -28317,25 +28340,38 @@ msgid "Placetel CTI"
 msgstr "Placetel CTI"
 
 #: ../system/integrations/cti/placetel.rst:16
+msgid ""
+"The integration relies on Placetel's legacy product \"Placetel Pro\". If you "
+"use their current \"Webex for Placetel\" product, it doesn't work. Our "
+"`community thread <https://community.zammad.org/t/zammad-integration-missing-"
+"in-placetel/16363/9>`_ has some more information."
+msgstr ""
+"Die Integration basiert auf Placetels altem Produkt \"Placetel Pro\". Wenn "
+"Sie deren aktuelles Produkt \"Webex for Placetel\" verwenden, funktioniert "
+"es nicht. In unserem `Community-Thread <https://community.zammad.org/t/"
+"zammad-integration-missing-in-placetel/16363/9>`_ finden Sie weitere "
+"Informationen."
+
+#: ../system/integrations/cti/placetel.rst:23
 msgid "You need an administrative Placetel account for your organization."
 msgstr "Sie benötigen ein Placetel-Administrator-Konto für Ihre Organisation."
 
-#: ../system/integrations/cti/placetel.rst:17
+#: ../system/integrations/cti/placetel.rst:24
 #: ../system/integrations/cti/sipgate.rst:20
 msgid ""
 "Your Zammad instance must be allowed to communicate to external services."
 msgstr ""
 "Ihre Zammad-Instanz muss mit externen Diensten zu kommunizieren können."
 
-#: ../system/integrations/cti/placetel.rst:18
+#: ../system/integrations/cti/placetel.rst:25
 msgid "Placetel must be able to reach your Zammad instance."
 msgstr "Placetel muss in der Lage sein, Ihre Zammad-Instanz zu erreichen."
 
-#: ../system/integrations/cti/placetel.rst:22
+#: ../system/integrations/cti/placetel.rst:29
 msgid ":doc:`provider-configurations/placetel`"
 msgstr ":doc:`provider-configurations/placetel`"
 
-#: ../system/integrations/cti/placetel.rst:21
+#: ../system/integrations/cti/placetel.rst:28
 msgid ""
 "Learn how to configure Placetel to enable Zammad and Placetel to communicate "
 "with each other."
@@ -28343,7 +28379,7 @@ msgstr ""
 "Erfahren Sie, wie Sie Placetel konfigurieren, damit Zammad und Placetel "
 "miteinander kommunizieren können."
 
-#: ../system/integrations/cti/placetel.rst:32
+#: ../system/integrations/cti/placetel.rst:39
 msgid ""
 "The here listed endpoint settings are relevant for the :doc:`integration "
 "configuration with Placetel <provider-configurations/placetel>`."
@@ -28352,12 +28388,12 @@ msgstr ""
 "die :doc:`Konfiguration der Placetel-Integration <provider-configurations/"
 "placetel>`."
 
-#: ../system/integrations/cti/placetel.rst:37
+#: ../system/integrations/cti/placetel.rst:44
 #: ../system/integrations/i-doit.rst:53
 msgid "Endpoint"
 msgstr "Endpunkt"
 
-#: ../system/integrations/cti/placetel.rst:36
+#: ../system/integrations/cti/placetel.rst:43
 msgid ""
 "This endpoint will be required for the Zammad integration within the "
 "Placetel web interface."
@@ -28365,11 +28401,11 @@ msgstr ""
 "Dieser Endpunkt wird für die Zammad-Integration innerhalb der Placetel-"
 "Weboberfläche benötigt."
 
-#: ../system/integrations/cti/placetel.rst:41
+#: ../system/integrations/cti/placetel.rst:48
 msgid "API Token"
 msgstr "API-Token"
 
-#: ../system/integrations/cti/placetel.rst:40
+#: ../system/integrations/cti/placetel.rst:47
 msgid ""
 "You'll receive this token within the ``Web API`` menu. Make sure to copy "
 "this value, it's only shown once!"
@@ -28377,7 +28413,7 @@ msgstr ""
 "Dieses Token erhalten Sie im Menü ``Web API``. Achten Sie darauf, diesen "
 "Wert zu kopieren, er wird nur einmal angezeigt!"
 
-#: ../system/integrations/cti/placetel.rst:71
+#: ../system/integrations/cti/placetel.rst:78
 #: ../system/integrations/cti/sipgate.rst:77
 msgid "Phone Extension to Agent Mapping"
 msgstr "Zuordnung von Telefonanschlüssen zu Agenten"
@@ -28388,7 +28424,7 @@ msgstr ""
 "Screenshot mit Beispielen für Benutzerzuordnungen zwischen Placetel und "
 "Zammad"
 
-#: ../system/integrations/cti/placetel.rst:64
+#: ../system/integrations/cti/placetel.rst:71
 msgid ""
 "You can find your agents Placetel username combination required within ⚙️ PBX "
 "→ VoIP destinations. Within the \"Advanced settings\" section you're looking "
@@ -28398,7 +28434,7 @@ msgstr ""
 "Kombination unter ⚙️ PBX → VoIP destinations. Im Abschnitt \"Advanced "
 "settings\" finden Sie \"SIP user name\" und \"SIP server\"."
 
-#: ../system/integrations/cti/placetel.rst:68
+#: ../system/integrations/cti/placetel.rst:75
 msgid "Combine these two like so: ``<sip-user-name>@<sip-server>``."
 msgstr "Kombinieren Sie beides wie folgt: ``<SIP-Benutzername>@<SIP-Server>``."
 
@@ -34414,6 +34450,58 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid "Webhook Logs"
+#~ msgstr "Webhook-Protokolle"
+
+#~ msgid ""
+#~ "Zammad provides a history of your recent webhooks. You can find them "
+#~ "below **Recent logs**."
+#~ msgstr ""
+#~ "Zammad bietet einen Überblick über Ihre letzten Webhooks. Sie finden sie "
+#~ "unter **Aktuellste Protokolle**."
+
+#~ msgid ""
+#~ "If you need more details you can click on the request link in question. "
+#~ "Zammad will provide a modal with the following information:"
+#~ msgstr ""
+#~ "Wenn Sie weitere Details benötigen, können Sie auf den entsprechenden "
+#~ "Link klicken. Zammad wird einen Dialog mit den folgenden Informationen "
+#~ "anzeigen:"
+
+#~ msgid "Direction"
+#~ msgstr "Richtung"
+
+#~ msgid "Always ``out``."
+#~ msgstr "Immer ``ausgehend``."
+
+#~ msgid "Method"
+#~ msgstr "Methode"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid ""
+#~ "Contains the HTTP status code the remote server replied with. Should be "
+#~ "``2xx`` if successful."
+#~ msgstr ""
+#~ "Enthält den HTTP-Statuscode, mit dem der entfernte Server geantwortet "
+#~ "hat. Sollte bei Erfolg ``2xx`` sein."
+
+#~ msgid "Request"
+#~ msgstr "Anfrage"
+
+#~ msgid "Contains the request Zammad sent (HTTP header and payload)"
+#~ msgstr "Enthält die gesendete Anfrage (HTTP-Header und Payload)"
+
+#~ msgid "Response"
+#~ msgstr "Antwort"
+
+#~ msgid "Contains the remotes response header."
+#~ msgstr "Enthält den Header der Antwort des Dienstes."
+
+#~ msgid "Date and time the request was sent."
+#~ msgstr "Datum und Uhrzeit, zu der die Anfrage gesendet wurde."
 
 #~ msgid "Nested groups are not supported."
 #~ msgstr "Verschachtelte Gruppen werden nicht unterstützt."
