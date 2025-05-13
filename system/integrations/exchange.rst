@@ -103,8 +103,8 @@ Now you need to add some information from the app in Zammad:
   it open, click the **Connect Exchange App** button.
 - You can create a secret in Entra in the **Certificates & secrets** tab. Select
   **New client secret**, add a name and choose an expiration time. You can find
-  the created secret now in the **Value** column. Copy and paste it into the
-  app configuration dialog in Zammad.
+  the created secret now in the **Value** column (**not** the Secret ID). Copy
+  and paste it into the app configuration dialog in Zammad.
 - Finally, click on **Submit** in the app configuration dialog in Zammad and
   go on with the next section.
 
