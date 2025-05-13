@@ -58,8 +58,8 @@ Create Secret
 - In Entra, go to "Certificates & secrets" and add a secret by clicking the
   **New client secret** button.
 - Enter a description, set an expiry duration and click **Add**.
-- Copy the string under "Value", this is the secret. Paste it to Zammad
-  in the "Client Secret" field.
+- Copy the string under "Value" (not the "Secret ID"!), this is the secret.
+  Paste it to Zammad in the "Client Secret" field.
 
 Configure API Permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -113,7 +113,7 @@ If not, here is a short summary:
 - Enter your app details:
 
   - Client ID: *Application (client) ID*
-  - Client Secret: *Value* from client secret
+  - Client Secret: *Value* (not the "Secret ID"!) from client secret
   - Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)
 - Click on **Submit**.
 
