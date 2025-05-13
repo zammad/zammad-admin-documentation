@@ -287,7 +287,7 @@ Available operators for matching:
 Date Field
 ^^^^^^^^^^
 
-Checks if a date is before or past (both absolute or relativ) a specific point
+Checks if a date is before or past (both absolute or relative) a specific point
 in time or time period. Relative operators allow you to define a time period in
 seconds, minutes, hours, days, weeks, months or years.
 
@@ -328,7 +328,7 @@ might also be helpful to you.
 Date & Time Field
 ^^^^^^^^^^^^^^^^^
 
-Checks if a date and time is before or past (both absolute or relativ) a
+Checks if a date and time is before or past (both absolute or relative) a
 specific point in time or time period. Relative operators allow you to define
 a time period in seconds, minutes, hours, days, weeks, months or years.
 
