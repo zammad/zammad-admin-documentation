@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 16:31+0200\n"
-"PO-Revision-Date: 2025-05-09 18:00+0000\n"
+"POT-Creation-Date: 2025-05-13 12:08+0200\n"
+"PO-Revision-Date: 2025-05-15 07:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -27,7 +27,8 @@ msgstr "Chat"
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../settings/security/third-party/saml.rst:5
-#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
+#: ../system/integrations/exchange.rst:8 ../system/integrations/pgp/index.rst:5
+#: ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr "Einführung"
 
@@ -4103,7 +4104,7 @@ msgstr ""
 "benötigen beide im nächsten Schritt für die Konfiguration von Zammad, um es "
 "mit Google zu verbinden."
 
-#: ../channels/google/basic-setup.rst:96
+#: ../channels/google/basic-setup.rst:96 ../system/integrations/exchange.rst:82
 msgid "Configure App"
 msgstr "App konfigurieren"
 
@@ -4134,6 +4135,7 @@ msgstr ""
 
 #: ../channels/google/basic-setup.rst:110
 #: ../channels/microsoft365-graph/accounts.rst:121
+#: ../system/integrations/exchange.rst:119
 msgid "Add Account"
 msgstr "Konto hinzufügen"
 
@@ -4679,11 +4681,12 @@ msgstr ""
 #: ../channels/microsoft365-graph/accounts.rst:61
 #: ../channels/microsoft365/accounts/register-app.rst:64
 msgid ""
-"Copy the string under \"Value\", this is the secret. Paste it to Zammad in "
-"the \"Client Secret\" field."
+"Copy the string under \"Value\" (not the \"Secret ID\"!), this is the "
+"secret. Paste it to Zammad in the \"Client Secret\" field."
 msgstr ""
-"Kopieren Sie die Zeichenkette unter \"Wert\", dies ist das Geheimnis. Fügen "
-"Sie sie bei Zammad in das Feld \"Client-Secret\" ein."
+"Kopieren Sie die Zeichenkette unter \"Value\" (nicht die \"Secret ID\"!), "
+"das ist das Secret.. Fügen Sie es bei Zammad in das Feld \"Client-Secret\" "
+"ein."
 
 #: ../channels/microsoft365-graph/accounts.rst:65
 #: ../channels/microsoft365/accounts/register-app.rst:68
@@ -4834,8 +4837,8 @@ msgstr "Client-ID: *Anwendungs-ID (Client)*"
 
 #: ../channels/microsoft365-graph/accounts.rst:116
 #: ../channels/microsoft365/accounts/register-app.rst:150
-msgid "Client Secret: *Value* from client secret"
-msgstr "Client-Secret: *Wert* des geheimen Clientschlüssels"
+msgid "Client Secret: *Value* (not the \"Secret ID\"!) from client secret"
+msgstr "Client-Secret: *Value* (nicht die \"Secret ID\"!) des Client-Secrets"
 
 #: ../channels/microsoft365-graph/accounts.rst:117
 #: ../channels/microsoft365/accounts/register-app.rst:151
@@ -16987,14 +16990,12 @@ msgid "Custom Payload w/o Article Content for Slack Webhook"
 msgstr "Benutzerdefinierter Payload ohne Artikelinhalt für Slack Webhook"
 
 #: ../manage/webhook/log.rst:2
-#, fuzzy
-#| msgid "Troubleshooting"
 msgid "Webhook Logs and Troubleshooting"
-msgstr "Fehlerbehebung"
+msgstr "Webhook Protokolle und Fehlerbehebung"
 
 #: ../manage/webhook/log.rst:5
 msgid "Logs"
-msgstr ""
+msgstr "Protokolle"
 
 #: ../manage/webhook/log.rst:7
 msgid ""
@@ -17002,6 +17003,10 @@ msgid ""
 "and debug interactions with third-party services. You can access them under "
 "**Recent Logs** in the webhook settings."
 msgstr ""
+"Zammad zeigt einen Verlauf der letzten Webhook-Ereignisse, der Ihnen hilft, "
+"Interaktionen mit Diensten von Drittanbietern zu überwachen und zu beheben. "
+"Sie können diese unter **Aktuellste Protokolle** in den Webhook-"
+"Einstellungen finden."
 
 #: ../manage/webhook/log.rst:11
 msgid ""
@@ -17009,50 +17014,52 @@ msgid ""
 "allowing you to troubleshoot issues. Clicking on a request link opens a "
 "detailed modal with the following information:"
 msgstr ""
+"Jeder Protokolleintrag enthält Details über die Webhook-Anfrage und "
+"-Antwort, so dass Sie Probleme beheben können. Wenn Sie auf einen Link "
+"klicken, wird ein Dialog mit den folgenden Informationen geöffnet:"
 
 #: ../manage/webhook/log.rst:15
 msgid ""
 "**Direction**: Always ``out``, indicating outgoing requests from Zammad."
 msgstr ""
+"**Richtung**: Immer ``out``, was auf ausgehende Anfragen von Zammad hinweist."
 
 #: ../manage/webhook/log.rst:16
-#, fuzzy
-#| msgid "The URL Zammad sent the request to."
 msgid "**URL**: The destination URL where Zammad sent the request."
-msgstr "Die URL, an die Zammad die Anfrage geschickt hat."
+msgstr "**URL**: Die Ziel-URL, an die Zammad die Anfrage gesendet hat."
 
 #: ../manage/webhook/log.rst:17
-#, fuzzy
-#| msgid "Always ``POST``."
 msgid "**Method**: Always ``POST``."
-msgstr "Immer ``POST``."
+msgstr "**Methode**: Immer ``POST``."
 
 #: ../manage/webhook/log.rst:18
 msgid ""
 "**Status**: The HTTP status code received from the remote server. A "
 "successful request returns a ``2xx`` code."
 msgstr ""
+"**Status**: Der vom angesprochenen Server empfangene HTTP-Statuscode. Eine "
+"erfolgreiche Anfrage liefert einen ``2xx`` Code."
 
 #: ../manage/webhook/log.rst:20
 msgid ""
 "**Request**: Displays the HTTP request headers and payload that Zammad sent."
 msgstr ""
+"**Anfrage**: Zeigt die Header der HTTP-Anfrage und die Nutzdaten an, die "
+"Zammad gesendet hat."
 
 #: ../manage/webhook/log.rst:21
 msgid "**Response**: Shows the response headers from the remote server."
 msgstr ""
+"**Antwort**: Zeigt die Header der Antwort des angesprochenen Servers an."
 
 #: ../manage/webhook/log.rst:22
-#, fuzzy
-#| msgid "The URL Zammad sent the request to."
 msgid "**Created at**: The timestamp when Zammad sent the request."
-msgstr "Die URL, an die Zammad die Anfrage geschickt hat."
+msgstr ""
+"**Erstellt am**: Der Zeitstempel, zu dem Zammad die Anfrage gesendet hat."
 
 #: ../manage/webhook/log.rst:25
-#, fuzzy
-#| msgid "Define webhook fields"
 msgid "Debugging Webhook Issues"
-msgstr "Webhook-Felder definieren"
+msgstr "Debuggen von Webhook-Problemen"
 
 #: ../manage/webhook/log.rst:27
 msgid ""
@@ -17060,6 +17067,10 @@ msgid ""
 "the request and response details to diagnose the issue. Common causes "
 "include incorrect URLs, authentication errors, or server-side failures."
 msgstr ""
+"Wenn ein Webhook fehlschlägt (z.B. einen ``4xx`` oder ``5xx`` Statuscode als "
+"Antwort erhält), überprüfen Sie die Anfrage- und Antwortdetails, um das "
+"Problem zu diagnostizieren. Häufige Ursachen sind falsche URLs, "
+"Authentifizierungsfehler oder serverseitige Fehler."
 
 #: ../manage/webhook/log.rst:31
 msgid ""
@@ -17067,10 +17078,13 @@ msgid ""
 "inspect and debug requests. If you do so, make sure to exclude any sensitive "
 "or personal data."
 msgstr ""
+"Bevor Sie Webhooks in der Produktion einsetzen, können Sie Testwerkzeuge "
+"verwenden, um Anfragen zu prüfen und zu debuggen. Wenn Sie dies tun, achten "
+"Sie darauf, dass Sie keine sensiblen oder persönlichen Daten enthalten sind."
 
 #: ../manage/webhook/log.rst:35
 msgid "The following tools/services might be helpful:"
-msgstr ""
+msgstr "Die folgenden Tools/Dienste könnten hilfreich sein:"
 
 #: ../manage/webhook/log.rst:37
 msgid ""
@@ -17078,12 +17092,17 @@ msgid ""
 "webhook requests in real time. Set up a temporary endpoint to verify the "
 "payload structure and headers."
 msgstr ""
+"`Beeceptor <https://beeceptor.com/>`_: Ein kostenloses Tool, um Webhook-"
+"Anfragen in Echtzeit zu erfassen und zu überprüfen. Richten Sie einen "
+"temporären Endpunkt ein, um die Nutzdaten-Struktur und Header zu überprüfen."
 
 #: ../manage/webhook/log.rst:40
 msgid ""
 "`Webhook.site <https://webhook.site/>`_: Another useful alternative for real-"
 "time request logging and debugging."
 msgstr ""
+"`Webhook.site <https://webhook.site/>`_: Eine weitere nützliche Alternative "
+"für die Protokollierung und das Debugging von Echtzeit-Anfragen."
 
 #: ../manage/webhook/payload.rst:2
 msgid "Webhook Payload"
@@ -18188,7 +18207,7 @@ msgstr "Datumsfeld"
 
 #: ../misc/object-conditions/basics.rst:286
 msgid ""
-"Checks if a date is before or past (both absolute or relativ) a specific "
+"Checks if a date is before or past (both absolute or relative) a specific "
 "point in time or time period. Relative operators allow you to define a time "
 "period in seconds, minutes, hours, days, weeks, months or years."
 msgstr ""
@@ -18315,7 +18334,7 @@ msgstr "Datum & Zeit-Feld"
 
 #: ../misc/object-conditions/basics.rst:327
 msgid ""
-"Checks if a date and time is before or past (both absolute or relativ) a "
+"Checks if a date and time is before or past (both absolute or relative) a "
 "specific point in time or time period. Relative operators allow you to "
 "define a time period in seconds, minutes, hours, days, weeks, months or "
 "years."
@@ -28783,24 +28802,65 @@ msgstr ""
 "Mit der Exchange-Integration von Zammad können Sie vorhandene Adressbücher "
 "verwenden, ohne mehr als eine Datenquelle aktualisieren zu müssen."
 
-#: ../system/integrations/exchange.rst:7
+#: ../system/integrations/exchange.rst:10
 msgid ""
-"However, you should refrain from syncing all addresses, as the results may "
-"not be what you expect (Exchange collects huge amounts of addresses). A "
-"central address book of your company to sync makes more sense, as you can "
-"ensure that Zammad gets only the data you need and want. Apart from this, it "
-"is even not possible to sync the Global Address List (GAL) of your Exchange "
+"There are two ways you can connect to your Exchange service, depending on "
+"your setup:"
+msgstr ""
+"Es gibt zwei Möglichkeiten, wie Sie eine Verbindung zu Ihrem Exchange-Dienst "
+"herstellen können, abhängig von Ihrer Umgebung::"
+
+#: ../system/integrations/exchange.rst:13
+msgid ""
+"Connect to a local Exchange server via :ref:`basic authentication <exchange-"
+"basic-auth>`"
+msgstr ""
+"Verbindung zu einem lokalen Exchange-Server per :ref:`Basic Authentication "
+"<exchange-basic-auth>`"
+
+#: ../system/integrations/exchange.rst:14
+msgid ""
+"Connect to a M365 Exchange server by using :ref:`OAuth authentication "
+"<exchange-oauth>`"
+msgstr ""
+"Verbindung zu einem M365 Exchange Server per :ref:`OAuth Authentication "
+"<exchange-oauth>`"
+
+#: ../system/integrations/exchange.rst:18
+msgid ""
+"You might not want to sync all addresses. The results may not be what you "
+"expect (because Exchange collects huge amounts of addresses)."
+msgstr ""
+"Möglicherweise möchten Sie nicht alle Adressen synchronisieren. Die "
+"Ergebnisse sind möglicherweise nicht das, was Sie erwarten (da Exchange "
+"große Mengen an Adressen sammelt)."
+
+#: ../system/integrations/exchange.rst:20
+msgid ""
+"You might want to sync a central address book of your company. By doing so, "
+"you can ensure that Zammad only gets the data you want."
+msgstr ""
+"Vielleicht möchten Sie ein zentrales Adressbuch Ihrer Firma synchronisieren. "
+"Auf diese Weise können Sie sicherstellen, dass Zammad nur die von Ihnen "
+"gewünschten Daten erhält."
+
+#: ../system/integrations/exchange.rst:22
+msgid ""
+"It is not possible to sync the Global Address List (GAL) of your Exchange "
 "system with Zammad."
 msgstr ""
-"Sie sollten jedoch davon absehen, alle Adressen zu synchronisieren, da die "
-"Ergebnisse möglicherweise nicht das sind, was Sie erwarten (Exchange sammelt "
-"riesige Mengen an Adressen). Ein zentrales Adressbuch Ihrer Firma zu "
-"synchronisieren ist sinnvoller, da Sie so sicherstellen können, dass Zammad "
-"nur die Daten erhält, die Sie brauchen und wollen. Abgesehen davon ist es "
-"nicht möglich, die Globale Adressliste (GAL) Ihres Exchange-Systems mit "
-"Zammad zu synchronisieren."
+"Es ist nicht möglich, die Globale Adressliste (GAL) Ihres Exchange-Systems "
+"mit Zammad zu synchronisieren."
 
-#: ../system/integrations/exchange.rst:16
+#: ../system/integrations/exchange.rst:24
+msgid ""
+"You can map any Exchange attribute to a Zammad user attribute "
+"(even :doc:`custom object attributes </../system/objects>`!)."
+msgstr ""
+"Sie können jedes Exchange-Attribut einem Zammad-Benutzer-Attribut zuordnen ("
+"sogar :doc:`selbst definierte Objektattribute </../system/objects>`!)."
+
+#: ../system/integrations/exchange.rst:29
 msgid ""
 "**Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP "
 "integration. If you have the same users in both sources, the LDAP version "
@@ -28810,7 +28870,7 @@ msgstr ""
 "Integration von Zammad übersteuert werden. Wenn Sie die gleichen Benutzer in "
 "beiden Quellen haben, wird die LDAP-Version immer \"gewinnen\"."
 
-#: ../system/integrations/exchange.rst:19
+#: ../system/integrations/exchange.rst:32
 msgid ""
 "**One way sync:** the Exchange sync is one way. Exchange => Zammad. Changes "
 "to your users inside of Zammad might be overwritten by the Exchange sync."
@@ -28819,27 +28879,51 @@ msgstr ""
 "Synchronisation. Exchange => Zammad. Änderungen an Ihren Benutzern in von "
 "Zammad können durch die Exchange-Synchronisierung überschrieben werden."
 
-#: ../system/integrations/exchange.rst:24
+#: ../system/integrations/exchange.rst:36
 msgid ""
-"To configure Exchange integration, simply go to the System > Integrations > "
-"Exchange in the admin panel. Press \"change\" and follow the wizard for "
-"adding the needed Exchange information to Zammad. On the last two steps "
-"Zammad will ask you for the address book(s) and your desired attribute "
-"mapping. By default, Zammad only maps email address, first- and lastname. "
-"Technically, you can map any Exchange object to a Zammad user object (this "
-"also works for custom objects!)."
+"To configure the Exchange integration, go to the *System > Integrations > "
+"Exchange* in the admin panel. Depending on your setup, continue either with "
+"the configuration for the basic authentication in the next section or head "
+"over to the :ref:`OAuth section <exchange-oauth>`."
 msgstr ""
-"Um die Exchange-Integration zu konfigurieren, gehen Sie einfach zu System > "
-"Integrationen > Exchange in den Admin-Einstellungen. Wählen Sie "
-"\"Konfigurieren\" und folgen Sie dem Assistenten, um die benötigten Exchange-"
-"Informationen zu Zammad hinzuzufügen. In den letzten beiden Schritten fragt "
-"Zammad Sie nach dem Adressbuch und der gewünschten Attributzuordnung. "
-"Standardmäßig ordnet Zammad nur E-Mail-Adressen, Vor- und Nachnamen zu. "
-"Technisch gesehen können Sie jedes Exchange-Objekt einem Zammad-"
-"Benutzerobjekt zuordnen (dies funktioniert auch für benutzerdefinierte "
-"Objektattribute!)."
+"Um die Exchange-Integration zu konfigurieren, gehen Sie im Admin-Bereich zu *"
+"System > Integrationen > Exchange*. Je nach Setup fahren Sie entweder mit "
+"der Konfiguration für die Basisauthentifizierung im nächsten Abschnitt fort "
+"oder gehen Sie zum :ref:`OAuth-Abschnitt <exchange-oauth>` über."
 
-#: ../system/integrations/exchange.rst:35
+#: ../system/integrations/exchange.rst:45
+msgid "Basic Authentication Setup"
+msgstr "Einrichtung Basic Authentication"
+
+#: ../system/integrations/exchange.rst:47
+msgid ""
+"In the Exchange integration screen, make sure **Basic Authentication** is "
+"selected in the dropdown. Click on **Configure** which opens a dialog where "
+"you have to provide the following information:"
+msgstr ""
+"Vergewissern Sie sich in der Ansicht der Exchange-Integration, dass in der "
+"Dropdown-Liste **Basic Authentication** ausgewählt ist. Klicken Sie auf "
+"**Konfigurieren**, woraufhin sich ein Dialogfeld öffnet, in dem Sie die "
+"folgenden Informationen angeben müssen:"
+
+#: ../system/integrations/exchange.rst:51
+msgid "**Endpoint**: The URL/IP of your Exchange server"
+msgstr "**Endpunkt**: Die URL/IP Ihres Exchange-Servers"
+
+#: ../system/integrations/exchange.rst:52
+msgid ""
+"**User**: the user you want to use for the sync. Make sure that the user has "
+"appropriate permissions to the address book / folder you want to sync."
+msgstr ""
+"**Benutzer**: der Benutzer, den Sie für die Synchronisierung verwenden "
+"möchten. Vergewissern Sie sich, dass der Benutzer über die entsprechenden "
+"Berechtigungen für das Adressbuch verfügt, das Sie synchronisieren möchten."
+
+#: ../system/integrations/exchange.rst:54
+msgid "**Password**: Password of the user."
+msgstr "**Passwort**: Passwort des Benutzers."
+
+#: ../system/integrations/exchange.rst:58
 msgid ""
 "If the SSL verification fails while connecting to Exchange, Zammad will ask "
 "you to turn it off temporarily."
@@ -28847,7 +28931,7 @@ msgstr ""
 "Wenn die SSL-Überprüfung bei der Verbindung zu Exchange fehlschlägt, fordert "
 "Zammad Sie auf, sie vorübergehend zu deaktivieren."
 
-#: ../system/integrations/exchange.rst:38
+#: ../system/integrations/exchange.rst:61
 msgid ""
 "Please be aware that **turning off SSL verification is a security risk**. It "
 "should only be used temporarily or for testing purposes. If turned off, "
@@ -28860,20 +28944,199 @@ msgstr ""
 "keine Überprüfung des Zertifikats statt, was bedeutet, dass jedes vorgelegte "
 "Zertifikat akzeptiert wird."
 
-#: ../system/integrations/exchange.rst:43
+#: ../system/integrations/exchange.rst:66
+msgid ""
+"On the last two steps Zammad will ask you for the address book(s) and your "
+"desired attribute mapping. By default, Zammad only maps email address, "
+"first- and lastname."
+msgstr ""
+"In den letzten beiden Schritten werden Sie von Zammad nach den Adressbüchern "
+"und der gewünschten Zuordnung der Attribute gefragt. Standardmäßig ordnet "
+"Zammad nur E-Mail-Adressen, Vor- und Nachnamen zu."
+
+#: ../system/integrations/exchange.rst:70
 msgid ""
 "After pressing Continue, Zammad will check if the configuration is okay. You "
-"can then enable Exchange and start your first sync. The sync will then run "
-"hourly - if you need to change mappings or the address book(s), you can "
-"change the configuration at any time."
+"can then enable Exchange and start your first sync."
 msgstr ""
-"Nachdem Sie auf Weiter geklickt haben prüft Zammad, ob die Konfiguration in "
+"Nachdem Sie auf Weiter gedrückt haben, prüft Zammad, ob die Konfiguration in "
 "Ordnung ist. Sie können dann Exchange aktivieren und Ihre erste "
-"Synchronisierung starten. Die Synchronisierung läuft dann stündlich - wenn "
-"Sie Zuordnungen oder das Adressbuch ändern müssen, können Sie die "
-"Konfiguration jederzeit ändern."
+"Synchronisierung starten."
 
-#: ../system/integrations/exchange.rst:50
+#: ../system/integrations/exchange.rst:76
+msgid "OAuth Setup"
+msgstr "Einrichtung OAuth"
+
+#: ../system/integrations/exchange.rst:78
+msgid ""
+"For the OAuth option, you first have to configure the connection to your "
+"Exchange app and then add an account you want to use."
+msgstr ""
+"Für die OAuth-Option müssen Sie zunächst die Verbindung zu Ihrer Exchange-"
+"App konfigurieren und dann ein Konto hinzufügen, das Sie verwenden möchten."
+
+#: ../system/integrations/exchange.rst:84
+msgid ""
+"Create an app in Microsoft's `Entra admin center <https://"
+"entra.microsoft.com/#home>`_, if not already done."
+msgstr ""
+"Erstellen Sie eine App im Microsoft `Entra Admin Center <https://"
+"entra.microsoft.com/#home>`_, falls noch nicht geschehen."
+
+#: ../system/integrations/exchange.rst:87
+msgid ""
+"In addition to the mandatory information, provide a **Redirect URI**. You "
+"can copy it from Zammad's dialog which opens after clicking the **Connect "
+"Exchange App** button. Copy the URL from the **Your callback URL** field. "
+"Make sure your FQDN is correct, otherwise the setup might fail."
+msgstr ""
+"Geben Sie zusätzlich zu den erforderlichen Informationen die **Redirect URI**"
+" an. Sie können sie aus dem Dialogfeld von Zammad kopieren, das sich nach "
+"einem Klick auf die Schaltfläche **Exchange-App verbinden** öffnet. Kopieren "
+"Sie die URL aus dem Feld **Ihre Calback-URL**. Vergewissern Sie sich, dass "
+"Ihr FQDN korrekt ist, da die Einrichtung sonst fehlschlagen kann."
+
+#: ../system/integrations/exchange.rst:91
+msgid ""
+"Add the permissions to read address books / folders. The required "
+"permissions differ depending on your use case (sync users or contacts, from "
+"organization or only one account, etc.). ``Contacts.Read`` or "
+"``Contacts.Read.Shared`` may be a good starting point. Have a look at "
+"Microsoft's `Graph permission reference <https://learn.microsoft.com/en-us/"
+"graph/permissions-reference>`_ for more information."
+msgstr ""
+"Fügen Sie die Berechtigungen zum Lesen von Adressbüchern/Ordnern hinzu. Die "
+"erforderlichen Berechtigungen hängen von Ihrem Anwendungsfall ab ("
+"Synchronisierung von Benutzern oder Kontakten, von einer Organisation oder "
+"nur einem Konto, usw.). ``Contacts.Read`` oder ``Contacts.Read.Shared`` "
+"können ein guter Ausgangspunkt sein. Werfen Sie einen Blick auf Microsofts "
+"``Graph-Berechtigungsreferenz <https://learn.microsoft.com/de-de/graph/"
+"permissions-reference>`_ für weitere Informationen."
+
+#: ../system/integrations/exchange.rst:98
+msgid "Now you need to add some information from the app in Zammad:"
+msgstr "Nun müssen Sie einige Informationen aus der App in Zammad hinzufügen:"
+
+#: ../system/integrations/exchange.rst:100
+msgid ""
+"In the **Overview** tab in Entra, you can find the values for \"Application "
+"(client) ID\" and \"Directory (tenant) ID\". Copy and paste both into the "
+"corresponding fields in Zammad's app config dialog. If you don't have it "
+"open, click the **Connect Exchange App** button."
+msgstr ""
+"Auf dem Tab **Overview** in Entra finden Sie die Werte für "
+"\"Application (client) ID\" und \"Directory (tenant) ID\". Kopieren Sie "
+"beide und fügen Sie sie in die entsprechenden Felder in Zammads Dialog zur "
+"App-Konfiguration ein.. Wenn Sie diesen nicht geöffnet haben, klicken Sie "
+"auf die Schaltfläche **Exchange-App verbinden**."
+
+#: ../system/integrations/exchange.rst:104
+msgid ""
+"You can create a secret in Entra in the **Certificates & secrets** tab. "
+"Select **New client secret**, add a name and choose an expiration time. You "
+"can find the created secret now in the **Value** column (**not** the Secret "
+"ID). Copy and paste it into the app configuration dialog in Zammad."
+msgstr ""
+"Sie können ein Secret in Entra im Tab **Certificates & secrets** erstellen. "
+"Wählen Sie **New client secret**, fügen Sie einen Namen hinzu und wählen Sie "
+"eine Ablaufzeit. Das erstellte Secret finden Sie nun in der Spalte **Value** "
+"(**nicht** die Secret ID). Kopieren Sie es und fügen Sie es im "
+"Konfigurations-Dialog in Zammad ein."
+
+#: ../system/integrations/exchange.rst:108
+msgid ""
+"Finally, click on **Submit** in the app configuration dialog in Zammad and "
+"go on with the next section."
+msgstr ""
+"Klicken Sie abschließend im Konfigurationsdialog der App in Zammad auf "
+"**Übermitteln** und fahren Sie mit dem nächsten Abschnitt fort."
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows app overview in Microsoft's Entra admin center"
+msgstr "Screenshot zeigt die App-Übersicht in Microsofts Entra Admin Center"
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows app secret in Microsoft's Entra admin center"
+msgstr "Screenshot zeigt App Secret in Microsofts Entra Admin Center"
+
+#: ../system/integrations/exchange.rst:121
+msgid ""
+"After connecting to your app, simply click the **Add Account** button. You "
+"are then redirected to a Microsoft log in page. Log in by providing "
+"credentials of a user with proper permissions and confirm the requested "
+"permissions by clicking the **Accept** button."
+msgstr ""
+"Nachdem Sie eine Verbindung zu Ihrer App hergestellt haben, klicken Sie "
+"einfach auf die Schaltfläche **Konto hinzufügen**. Sie werden dann auf eine "
+"Microsoft-Anmeldeseite weitergeleitet. Melden Sie sich an, indem Sie die "
+"Zugangsdaten eines Benutzers mit den richtigen Berechtigungen angeben, und "
+"bestätigen Sie die angeforderten Berechtigungen durch Klicken auf die "
+"Schaltfläche **Accept**."
+
+#: ../system/integrations/exchange.rst:126
+msgid ""
+"This redirects you back to Zammad where you can now configure the address "
+"book(s) and how the users should be mapped."
+msgstr ""
+"Dies leitet Sie zurück in Zammad, wo Sie nun die Adressbücher auswählen und "
+"festlegen können, wie die Benutzer zugewiesen werden sollen."
+
+#: ../system/integrations/exchange.rst:132
+msgid "Address Book and User Mapping"
+msgstr "Adressbuch und Benutzer-Zuordnung"
+
+#: ../system/integrations/exchange.rst:134
+msgid ""
+"A click on **Configure** opens another configuration dialog. In the first "
+"step, choose one or more folders from which users should get synced to "
+"Zammad."
+msgstr ""
+"Ein Klick auf **Konfigurieren** öffnet einen weiteren Konfigurationsdialog. "
+"Im ersten Schritt wählen Sie einen oder mehrere Ordner aus, aus denen "
+"Benutzer mit Zammad synchronisiert werden sollen."
+
+#: ../system/integrations/exchange.rst:137
+msgid ""
+"In the second step, select which Exchange attribute should get mapped on "
+"which Zammad attribute. It is recommended to map at least email address, "
+"first and last name."
+msgstr ""
+"Im zweiten Schritt wählen Sie aus, welches Exchange-Attribut auf welches "
+"Zammad-Attribut abgebildet werden soll. Es wird empfohlen, mindestens die E-"
+"Mail Adresse, den Vor- und Nachnamen zuzuordnen."
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows Exchange mapping dialog in Zammad"
+msgstr "Screenshot zeigt den Exchange-Zuordnungsdialog in Zammad"
+
+#: ../system/integrations/exchange.rst:146
+msgid ""
+"After configuring the mapping, confirm it with a click on the **Continue** "
+"button. Zammad analyzes the configuration and the entries then and presents "
+"you an overview of your configuration. Confirm it by selecting **Save "
+"configuration**."
+msgstr ""
+"Nachdem Sie die Zuordnung konfiguriert haben, bestätigen Sie diese mit einem "
+"Klick auf die Schaltfläche **Fortfahren**. Zammad analysiert daraufhin die "
+"Konfiguration und die Eingaben und präsentiert Ihnen eine Übersicht über "
+"Ihre Konfiguration. Bestätigen Sie diese, indem Sie **Konfiguration "
+"speichern** wählen."
+
+#: ../system/integrations/exchange.rst:152
+msgid "Additional information"
+msgstr "Weitere Informationen"
+
+#: ../system/integrations/exchange.rst:154
+msgid ""
+"The sync runs hourly - if you need to change mappings or the address "
+"book(s), you can change the configuration at any time by using the "
+"**Configure app** button."
+msgstr ""
+"Die Synchronisierung erfolgt stündlich - wenn Sie Zuordnungen oder die "
+"Adressbücher ändern müssen, können Sie die Konfiguration jederzeit über die "
+"Schaltfläche **Konfigurieren** ändern."
+
+#: ../system/integrations/exchange.rst:158
 msgid ""
 "After the sync has finished, you can find the new Exchange contacts under "
 "\"Users\". Zammad integrates them just as normal users."
@@ -28881,7 +29144,7 @@ msgstr ""
 "Nach Abschluss der Synchronisierung finden Sie die neuen Exchange-Kontakte "
 "unter \"Benutzer\". Zammad integriert sie genauso wie normale Benutzer."
 
-#: ../system/integrations/exchange.rst:55
+#: ../system/integrations/exchange.rst:163
 msgid ""
 "In some cases you might see unique IDs as \"Login\" instead of the email "
 "address. This is normal and doesn't affect the login or email mapping for "
@@ -34129,6 +34392,41 @@ msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
 
+#~ msgid ""
+#~ "However, you should refrain from syncing all addresses, as the results "
+#~ "may not be what you expect (Exchange collects huge amounts of addresses). "
+#~ "A central address book of your company to sync makes more sense, as you "
+#~ "can ensure that Zammad gets only the data you need and want. Apart from "
+#~ "this, it is even not possible to sync the Global Address List (GAL) of "
+#~ "your Exchange system with Zammad."
+#~ msgstr ""
+#~ "Sie sollten jedoch davon absehen, alle Adressen zu synchronisieren, da "
+#~ "die Ergebnisse möglicherweise nicht das sind, was Sie erwarten (Exchange "
+#~ "sammelt riesige Mengen an Adressen). Ein zentrales Adressbuch Ihrer Firma "
+#~ "zu synchronisieren ist sinnvoller, da Sie so sicherstellen können, dass "
+#~ "Zammad nur die Daten erhält, die Sie brauchen und wollen. Abgesehen davon "
+#~ "ist es nicht möglich, die Globale Adressliste (GAL) Ihres Exchange-"
+#~ "Systems mit Zammad zu synchronisieren."
+
+#~ msgid ""
+#~ "To configure Exchange integration, simply go to the System > Integrations "
+#~ "> Exchange in the admin panel. Press \"change\" and follow the wizard for "
+#~ "adding the needed Exchange information to Zammad. On the last two steps "
+#~ "Zammad will ask you for the address book(s) and your desired attribute "
+#~ "mapping. By default, Zammad only maps email address, first- and lastname. "
+#~ "Technically, you can map any Exchange object to a Zammad user object "
+#~ "(this also works for custom objects!)."
+#~ msgstr ""
+#~ "Um die Exchange-Integration zu konfigurieren, gehen Sie einfach zu System "
+#~ "> Integrationen > Exchange in den Admin-Einstellungen. Wählen Sie "
+#~ "\"Konfigurieren\" und folgen Sie dem Assistenten, um die benötigten "
+#~ "Exchange-Informationen zu Zammad hinzuzufügen. In den letzten beiden "
+#~ "Schritten fragt Zammad Sie nach dem Adressbuch und der gewünschten "
+#~ "Attributzuordnung. Standardmäßig ordnet Zammad nur E-Mail-Adressen, Vor- "
+#~ "und Nachnamen zu. Technisch gesehen können Sie jedes Exchange-Objekt "
+#~ "einem Zammad-Benutzerobjekt zuordnen (dies funktioniert auch für "
+#~ "benutzerdefinierte Objektattribute!)."
+
 #~ msgid "Webhook Logs"
 #~ msgstr "Webhook-Protokolle"
 
@@ -34692,13 +34990,6 @@ msgstr ""
 #~ "Klicken Sie auf \"Add Account\"; anschließend werden Sie auf eine "
 #~ "Autorisierung-Seite von Facebook weitergeleitet. Klicken Sie auf "
 #~ "\"authorize app\"."
-
-#~ msgid ""
-#~ "You will get redirected back to Zammad. Now you need to configure your "
-#~ "search keys, where mentions should get routed."
-#~ msgstr ""
-#~ "Sie werden danach zurück zu Zammad geleitet. Nun müssen Sie "
-#~ "Schlüsselbegriffe definieren, mit denen Sie Erwähnungen steuern können."
 
 #~ msgid ""
 #~ "After you are done, you will get an overview of all linked Facebook "

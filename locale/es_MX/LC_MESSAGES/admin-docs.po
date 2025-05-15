@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 16:31+0200\n"
+"POT-Creation-Date: 2025-05-13 12:08+0200\n"
 "PO-Revision-Date: 2023-10-11 14:18+0000\n"
 "Last-Translator: morealedgar <morealedgar@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://translations.zammad.org/projects/"
@@ -27,7 +27,8 @@ msgstr "Chat"
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../settings/security/third-party/saml.rst:5
-#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
+#: ../system/integrations/exchange.rst:8 ../system/integrations/pgp/index.rst:5
+#: ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr ""
 
@@ -3297,7 +3298,7 @@ msgid ""
 "step for configuring Zammad to connect it to Google."
 msgstr ""
 
-#: ../channels/google/basic-setup.rst:96
+#: ../channels/google/basic-setup.rst:96 ../system/integrations/exchange.rst:82
 msgid "Configure App"
 msgstr ""
 
@@ -3321,6 +3322,7 @@ msgstr ""
 
 #: ../channels/google/basic-setup.rst:110
 #: ../channels/microsoft365-graph/accounts.rst:121
+#: ../system/integrations/exchange.rst:119
 msgid "Add Account"
 msgstr ""
 
@@ -3730,8 +3732,8 @@ msgstr ""
 #: ../channels/microsoft365-graph/accounts.rst:61
 #: ../channels/microsoft365/accounts/register-app.rst:64
 msgid ""
-"Copy the string under \"Value\", this is the secret. Paste it to Zammad in "
-"the \"Client Secret\" field."
+"Copy the string under \"Value\" (not the \"Secret ID\"!), this is the "
+"secret. Paste it to Zammad in the \"Client Secret\" field."
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:65
@@ -3864,7 +3866,7 @@ msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:116
 #: ../channels/microsoft365/accounts/register-app.rst:150
-msgid "Client Secret: *Value* from client secret"
+msgid "Client Secret: *Value* (not the \"Secret ID\"!) from client secret"
 msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:117
@@ -14598,7 +14600,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:286
 msgid ""
-"Checks if a date is before or past (both absolute or relativ) a specific "
+"Checks if a date is before or past (both absolute or relative) a specific "
 "point in time or time period. Relative operators allow you to define a time "
 "period in seconds, minutes, hours, days, weeks, months or years."
 msgstr ""
@@ -14703,7 +14705,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:327
 msgid ""
-"Checks if a date and time is before or past (both absolute or relativ) a "
+"Checks if a date and time is before or past (both absolute or relative) a "
 "specific point in time or time period. Relative operators allow you to "
 "define a time period in seconds, minutes, hours, days, weeks, months or "
 "years."
@@ -23334,47 +23336,101 @@ msgid ""
 "books without having to update more than one source."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:7
+#: ../system/integrations/exchange.rst:10
 msgid ""
-"However, you should refrain from syncing all addresses, as the results may "
-"not be what you expect (Exchange collects huge amounts of addresses). A "
-"central address book of your company to sync makes more sense, as you can "
-"ensure that Zammad gets only the data you need and want. Apart from this, it "
-"is even not possible to sync the Global Address List (GAL) of your Exchange "
+"There are two ways you can connect to your Exchange service, depending on "
+"your setup:"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:13
+msgid ""
+"Connect to a local Exchange server via :ref:`basic authentication <exchange-"
+"basic-auth>`"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:14
+msgid ""
+"Connect to a M365 Exchange server by using :ref:`OAuth authentication "
+"<exchange-oauth>`"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:18
+msgid ""
+"You might not want to sync all addresses. The results may not be what you "
+"expect (because Exchange collects huge amounts of addresses)."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:20
+msgid ""
+"You might want to sync a central address book of your company. By doing so, "
+"you can ensure that Zammad only gets the data you want."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:22
+msgid ""
+"It is not possible to sync the Global Address List (GAL) of your Exchange "
 "system with Zammad."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:16
+#: ../system/integrations/exchange.rst:24
+msgid ""
+"You can map any Exchange attribute to a Zammad user attribute "
+"(even :doc:`custom object attributes </../system/objects>`!)."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:29
 msgid ""
 "**Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP "
 "integration. If you have the same users in both sources, the LDAP version "
 "will always be Zammad's pick."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:19
+#: ../system/integrations/exchange.rst:32
 msgid ""
 "**One way sync:** the Exchange sync is one way. Exchange => Zammad. Changes "
 "to your users inside of Zammad might be overwritten by the Exchange sync."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:24
+#: ../system/integrations/exchange.rst:36
 msgid ""
-"To configure Exchange integration, simply go to the System > Integrations > "
-"Exchange in the admin panel. Press \"change\" and follow the wizard for "
-"adding the needed Exchange information to Zammad. On the last two steps "
-"Zammad will ask you for the address book(s) and your desired attribute "
-"mapping. By default, Zammad only maps email address, first- and lastname. "
-"Technically, you can map any Exchange object to a Zammad user object (this "
-"also works for custom objects!)."
+"To configure the Exchange integration, go to the *System > Integrations > "
+"Exchange* in the admin panel. Depending on your setup, continue either with "
+"the configuration for the basic authentication in the next section or head "
+"over to the :ref:`OAuth section <exchange-oauth>`."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:35
+#: ../system/integrations/exchange.rst:45
+msgid "Basic Authentication Setup"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:47
+msgid ""
+"In the Exchange integration screen, make sure **Basic Authentication** is "
+"selected in the dropdown. Click on **Configure** which opens a dialog where "
+"you have to provide the following information:"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:51
+msgid "**Endpoint**: The URL/IP of your Exchange server"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:52
+msgid ""
+"**User**: the user you want to use for the sync. Make sure that the user has "
+"appropriate permissions to the address book / folder you want to sync."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:54
+msgid "**Password**: Password of the user."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:58
 msgid ""
 "If the SSL verification fails while connecting to Exchange, Zammad will ask "
 "you to turn it off temporarily."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:38
+#: ../system/integrations/exchange.rst:61
 msgid ""
 "Please be aware that **turning off SSL verification is a security risk**. It "
 "should only be used temporarily or for testing purposes. If turned off, "
@@ -23382,21 +23438,149 @@ msgid ""
 "presented certificate will be accepted."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:43
+#: ../system/integrations/exchange.rst:66
 msgid ""
-"After pressing Continue, Zammad will check if the configuration is okay. You "
-"can then enable Exchange and start your first sync. The sync will then run "
-"hourly - if you need to change mappings or the address book(s), you can "
-"change the configuration at any time."
+"On the last two steps Zammad will ask you for the address book(s) and your "
+"desired attribute mapping. By default, Zammad only maps email address, "
+"first- and lastname."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:50
+#: ../system/integrations/exchange.rst:70
+msgid ""
+"After pressing Continue, Zammad will check if the configuration is okay. You "
+"can then enable Exchange and start your first sync."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:76
+msgid "OAuth Setup"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:78
+msgid ""
+"For the OAuth option, you first have to configure the connection to your "
+"Exchange app and then add an account you want to use."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:84
+msgid ""
+"Create an app in Microsoft's `Entra admin center <https://"
+"entra.microsoft.com/#home>`_, if not already done."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:87
+msgid ""
+"In addition to the mandatory information, provide a **Redirect URI**. You "
+"can copy it from Zammad's dialog which opens after clicking the **Connect "
+"Exchange App** button. Copy the URL from the **Your callback URL** field. "
+"Make sure your FQDN is correct, otherwise the setup might fail."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:91
+msgid ""
+"Add the permissions to read address books / folders. The required "
+"permissions differ depending on your use case (sync users or contacts, from "
+"organization or only one account, etc.). ``Contacts.Read`` or "
+"``Contacts.Read.Shared`` may be a good starting point. Have a look at "
+"Microsoft's `Graph permission reference <https://learn.microsoft.com/en-us/"
+"graph/permissions-reference>`_ for more information."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:98
+msgid "Now you need to add some information from the app in Zammad:"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:100
+msgid ""
+"In the **Overview** tab in Entra, you can find the values for \"Application "
+"(client) ID\" and \"Directory (tenant) ID\". Copy and paste both into the "
+"corresponding fields in Zammad's app config dialog. If you don't have it "
+"open, click the **Connect Exchange App** button."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:104
+msgid ""
+"You can create a secret in Entra in the **Certificates & secrets** tab. "
+"Select **New client secret**, add a name and choose an expiration time. You "
+"can find the created secret now in the **Value** column (**not** the Secret "
+"ID). Copy and paste it into the app configuration dialog in Zammad."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:108
+msgid ""
+"Finally, click on **Submit** in the app configuration dialog in Zammad and "
+"go on with the next section."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows app overview in Microsoft's Entra admin center"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows app secret in Microsoft's Entra admin center"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:121
+msgid ""
+"After connecting to your app, simply click the **Add Account** button. You "
+"are then redirected to a Microsoft log in page. Log in by providing "
+"credentials of a user with proper permissions and confirm the requested "
+"permissions by clicking the **Accept** button."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:126
+msgid ""
+"This redirects you back to Zammad where you can now configure the address "
+"book(s) and how the users should be mapped."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:132
+msgid "Address Book and User Mapping"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:134
+msgid ""
+"A click on **Configure** opens another configuration dialog. In the first "
+"step, choose one or more folders from which users should get synced to "
+"Zammad."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:137
+msgid ""
+"In the second step, select which Exchange attribute should get mapped on "
+"which Zammad attribute. It is recommended to map at least email address, "
+"first and last name."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:None
+msgid "Screenshot shows Exchange mapping dialog in Zammad"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:146
+msgid ""
+"After configuring the mapping, confirm it with a click on the **Continue** "
+"button. Zammad analyzes the configuration and the entries then and presents "
+"you an overview of your configuration. Confirm it by selecting **Save "
+"configuration**."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:152
+msgid "Additional information"
+msgstr ""
+
+#: ../system/integrations/exchange.rst:154
+msgid ""
+"The sync runs hourly - if you need to change mappings or the address "
+"book(s), you can change the configuration at any time by using the "
+"**Configure app** button."
+msgstr ""
+
+#: ../system/integrations/exchange.rst:158
 msgid ""
 "After the sync has finished, you can find the new Exchange contacts under "
 "\"Users\". Zammad integrates them just as normal users."
 msgstr ""
 
-#: ../system/integrations/exchange.rst:55
+#: ../system/integrations/exchange.rst:163
 msgid ""
 "In some cases you might see unique IDs as \"Login\" instead of the email "
 "address. This is normal and doesn't affect the login or email mapping for "
