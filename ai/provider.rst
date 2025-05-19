@@ -1,5 +1,5 @@
-Zammad AI
-=========
+Provider
+========
 
 .. note::
    - Zammad's AI features are currently limited to SaaS customers.
@@ -12,13 +12,15 @@ Introduction
 Zammad offers AI powered features to support your agents! The
 configuration is pretty easy so the entry barrier is low.
 
-Read on how to configure it and which features are currently supported.
+Read on how to configure it and which :doc:`features <features>` are currently
+supported.
 
 .. tip:: 🚀✨ **What's the easiest way to get AI features running?** 🚀✨
 
    Subscribe to a plan with Zammad AI, go to *AI > Provider* in the Zammad
-   settings and choose `Zammad AI <#id7>`_. Enter the token you received and you
-   can start using the `features <#features>`_ by simply enabling it.
+   settings and choose :ref:`Zammad AI <zammad-ai-provider>`. Enter the token
+   you received and you can start using the :doc:`features <features>` by
+   simply enabling it.
 
 .. figure:: /images/ai/ai-provider.png
    :alt: Screenshot shows configuration of AI provider in Zammad
@@ -32,6 +34,8 @@ the requests. You can configure it in Zammad's admin settings under
 
 The following providers are supported:
 
+- :ref:`anthropic-provider`
+- :ref:`azure-provider`
 - :ref:`ollama-provider`
 - :ref:`openai-provider`
 - :ref:`zammad-ai-provider`
@@ -40,6 +44,24 @@ The following providers are supported:
    the first step. We are going to add more providers soon! If you want to
    support us or need the provider as soon as possible, just let our
    `sales department <https://zammad.com/en/company/contact>`_ know!
+
+.. _anthropic-provider:
+
+Anthropic
+^^^^^^^^^
+
+To use Anthropic's service as AI backend, choose it as AI provider and add
+your API token. After that, make sure to click the ``Save`` button and read on
+in the :doc:`features <features>` page.
+
+.. _azure-provider:
+
+Azure AI
+^^^^^^^^
+
+To use the Azure AI service as AI backend, choose it as AI provider and add
+your URL as well as your API token. After that, make sure to click the
+``Save`` button and read on in the :doc:`features <features>` page.
 
 .. _ollama-provider:
 
@@ -81,7 +103,7 @@ OpenAI
 You probably already heard about `OpenAI <https://openai.com/>`_, haven't
 you? To use their service as AI backend, choose them as AI provider and add
 your API token. After that, make sure to click the ``Save`` button and read on
-in the `Features <#features>`_ section.
+in the :doc:`features <features>` page.
 
 .. _zammad-ai-provider:
 
@@ -103,34 +125,3 @@ The usage of Zammad AI as a provider has some benefits:
 To configure it, simply choose **Zammad AI** as your provider and add your
 token. After that, make sure to click the ``Save`` button and read on in
 the `Features <#features>`_ section.
-
-Features
---------
-
-Below you find the supported AI powered features of Zammad. Make sure to
-configure a provider before activating a feature. Otherwise, a warning message
-will tell you to do so.
-
-.. note:: Currently, only one feature is available so far. This feature can be
-   seen as the foundation for other useful features. Expect more to come soon!
-
-Ticket Summary
-^^^^^^^^^^^^^^
-
-Activating this feature generates summaries of tickets. This can be a huge
-time saver when dealing with large tickets and/or many hand-overs between
-agents.
-
-By default, **Customer Intent** and **Conversation Summary** are enabled and
-always active. You can choose to activate or deactivate **Open Questions** and
-**Suggested Next Steps**, depending on what fits your needs.
-
-Enabling the ticket summary feature triggers a request to the configured AI
-service when an agent opens a ticket. Agents then see a banner below the ticket
-articles which tells them that a summary is available. They can now simply
-click the included button to jump to the **AI Summary** sidebar tab. The
-banner can be hidden by agents. In case an agent wants to reactivate it,
-this can be done in the user's profile settings under **Appearance**.
-
-.. hint:: If you use an own Ollama server as provider, make sure to have the
-   model ``llama3.2`` available for this feature.

@@ -67,7 +67,8 @@ Zammad Admin Documentation
    :maxdepth: 2
    :caption: AI
 
-   ai/index
+   ai/provider
+   ai/features
 
 .. _system-docs:
 
