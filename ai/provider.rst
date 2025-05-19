@@ -2,9 +2,8 @@ Provider
 ========
 
 .. note::
-   - Zammad's AI features are currently limited to SaaS customers.
-   - This page may change regularly.
-   - Consider this page in Beta state.
+   - Zammad as AI provider is currently limited to SaaS customers.
+   - This page may change regularly, consider it in Beta state.
 
 Introduction
 ------------
