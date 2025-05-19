@@ -60,8 +60,9 @@ Azure AI
 ^^^^^^^^
 
 To use the Azure AI service as AI backend, choose it as AI provider and add
-your URL as well as your API token. After that, make sure to click the
-``Save`` button and read on in the :doc:`features <features>` page.
+your URL as well as your API token. You get the URL after configuring the AI
+service in Azure. After that, make sure to click the ``Save`` button and read
+on in the :doc:`features <features>` page.
 
 .. _ollama-provider:
 
