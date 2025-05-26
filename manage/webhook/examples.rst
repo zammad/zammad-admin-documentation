@@ -9,6 +9,7 @@ Webhook Examples
    examples/rocket-chat-notifications
    examples/slack-notifications
    examples/generic-notifications-trigger
+   examples/ntfy-notifications
 
 :doc:`examples/mattermost-notifications`
    Use a Mattermost Channel to receive your Zammad Notifications.
@@ -37,3 +38,7 @@ Webhook Examples
    .. figure:: /images/manage/webhook/webhook-slack-sample-notification.png
       :alt: Sample Slack Channel Notification
       :align: center
+
+:doc:`examples/ntfy-notifications`
+   Use the ntfy service to receive push notification from Zammad on different
+   devices like your smartphone.
