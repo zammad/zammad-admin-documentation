@@ -35,7 +35,7 @@ Set as Default
 Edit
    Via this button you get to the edit-mask (same mask as in "New Calendar"):
 
-.. figure:: /images/manage/calendars/editting-calendars.png
+.. figure:: /images/manage/calendars/editing-calendars.png
 
 Determine a name, a time-zone, the business hours to be used for this
 calendar and special holidays. In addition, you can subscribe to the iCalendar,
