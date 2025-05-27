@@ -31,16 +31,6 @@ The “Users” panel provides tools to manually manage user accounts. See
    Use the 🔎 **Search for users** bar and the **Roles** buttons to filter the list.
    You may search by name, email, or any other user attribute.
 
-   .. note::
-
-      The search list displays up to 50 users, from newest to oldest.
-      That means that if there are more than 50 results,
-      the user you're searching for might not be shown.
-      To find your desired user, you have to narrow down your search.
-
-      This limit is currently hard-coded and by design. We are aware of this
-      limitation and will probably change it sometime in the future.
-
    .. _locked-user-accounts:
 
 🔒 Unlock locked user accounts
