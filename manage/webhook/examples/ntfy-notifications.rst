@@ -6,7 +6,7 @@ Follow the steps below to configure a webhook for sending notification via
 `documentation <https://docs.ntfy.sh/>`_ for more information and custom
 configuration.
 
-.. hint:: This example guides you through a basic setup. Depending on your
+.. hint:: This example guides you through a basic setup for the hosted Instance. Depending on your
    setup and use case, steps may differ.
 
 
@@ -24,6 +24,8 @@ choose a random topic.
 
 Once created, make sure to copy your topic name to clipboard and save
 it for later.
+
+.. hint:: If you want to Password Protect your channel you have to use Basic auth in you Webhook with Username and Password. https://docs.ntfy.sh/publish/#username-password
 
 Step 2 - Add a New Webhook with Custom Payload
 ----------------------------------------------
@@ -59,6 +61,8 @@ Additional attributes can be:
 
 For detailed information about the possible actions, have a look at the ntfy
 `action button documentation <https://docs.ntfy.sh/publish/#action-buttons>`_.
+
+.. hint:: For actions to work from the Ntfy Webinterface you need to adjust your CORS vaule in NGINX
 
 .. code-block:: json
 
@@ -98,7 +102,7 @@ your webhook as action.
 
 Once the trigger is in place, your webhook is ready for use!
 
-Sample Mattermost Channel Notification
+Sample NTFY Channel Notification
 --------------------------------------
 
 From now on, a notification will be pushed to ntfy and all subscribed devices.
