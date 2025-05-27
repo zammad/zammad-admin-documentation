@@ -1,11 +1,11 @@
 Macros
 ======
 
-Macros are **🖱️ one-click actions** for applying changes to a ticket.
+Macros are **one-click actions** for applying pre-defined changes to a ticket.
 
 If you find yourself making the same changes to lots of tickets
-(*e.g.,* close-and-tag-as-spam or reassign-to-another-group),
-you can store those changes in a macro for easy access:
+(e.g. close-and-tag-as-spam or reassign-to-another-group),
+you can store those changes in a macro and apply it with one click:
 
 .. figure:: /images/manage/macros/macro-selection-ticket-view.png
    :alt: Example macros within a ticket detail view.
@@ -15,7 +15,7 @@ you can store those changes in a macro for easy access:
    Choose from the macros **Close & Tag as Spam**, **Move to RMA**,
    and **Reply & Close & Tag as Banana**.
 
-You can also apply macros in bulk (*i.e.,* to many tickets all at once)
+You can also apply macros in bulk (i.e. to many tickets all at once)
 via the *Overviews* page:
 
 .. figure:: /images/manage/macros/macro-bulk-operation-overview.png
