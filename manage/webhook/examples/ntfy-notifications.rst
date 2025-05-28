@@ -6,9 +6,8 @@ Follow the steps below to configure a webhook for sending notification via
 `documentation <https://docs.ntfy.sh/>`_ for more information and custom
 configuration.
 
-.. hint:: This example guides you through a basic setup for the hosted Instance. Depending on your
-   setup and use case, steps may differ.
-
+.. hint:: This example guides you through a basic setup. Depending on your
+   setup and use case, steps and available options may differ.
 
 Step 1 - Setup Ntfy Topic
 -------------------------
@@ -25,7 +24,10 @@ choose a random topic.
 Once created, make sure to copy your topic name to clipboard and save
 it for later.
 
-.. hint:: If you want to Password Protect your channel you have to use Basic auth in you Webhook with Username and Password. https://docs.ntfy.sh/publish/#username-password
+.. hint:: If you want to password protect your channel, you have to use basic
+   auth in your webhook with username and password. See
+   `ntfy documentation <https://docs.ntfy.sh/publish/#username-password>`_ for
+   more information.
 
 Step 2 - Add a New Webhook with Custom Payload
 ----------------------------------------------
@@ -62,7 +64,8 @@ Additional attributes can be:
 For detailed information about the possible actions, have a look at the ntfy
 `action button documentation <https://docs.ntfy.sh/publish/#action-buttons>`_.
 
-.. hint:: For actions to work from the Ntfy Webinterface you need to adjust your CORS vaule in NGINX
+.. hint:: For actions to work, you need to self host ntfy and adjust your CORS
+   value in NGINX.
 
 .. code-block:: json
 
@@ -103,7 +106,7 @@ your webhook as action.
 Once the trigger is in place, your webhook is ready for use!
 
 Sample NTFY Channel Notification
---------------------------------------
+--------------------------------
 
 From now on, a notification will be pushed to ntfy and all subscribed devices.
 The notification contains the link to the ticket, an image and action buttons,
