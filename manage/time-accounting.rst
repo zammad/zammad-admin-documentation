@@ -1,7 +1,7 @@
 Time Accounting
 ===============
 
-If you want to know how much time you need for your each project or ticket,
+If you want to know how much time you need for each project or ticket,
 enable the time accounting (turn on the switch on the top left side of the
 page).
 
