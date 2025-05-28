@@ -11,12 +11,16 @@ to all incoming emails. Recognize this line?
 
 .. figure:: /images/manage/trigger/trigger-based-auto-reply-in-ticket-zoom.png
    :alt: Screenshot of auto-reply notification in ticket view
+   :align: center
+   :scale: 70%
 
-It means that the ticket is from an incoming customer email,
-and that the customer received this message in response:
+It means that the ticket is from an incoming customer email and that the
+customer received this message in response:
 
 .. figure:: /images/manage/trigger/trigger-based-auto-reply-in-a-customer-mailbox.png
    :alt: Screenshot of auto-reply in customer's inbox
+   :align: center
+   :scale: 80%
 
 This auto-reply message is a **trigger**.
 You can disable it, modify it, or create new ones
