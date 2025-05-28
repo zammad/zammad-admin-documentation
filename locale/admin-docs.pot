@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-19 15:09+0200\n"
+"POT-Creation-Date: 2025-05-28 08:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11163,11 +11163,11 @@ msgstr ""
 msgid "Webhook Examples"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:18
+#: ../manage/webhook/examples.rst:19
 msgid ":doc:`examples/mattermost-notifications`"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:14
+#: ../manage/webhook/examples.rst:15
 msgid "Use a Mattermost Channel to receive your Zammad Notifications."
 msgstr ""
 
@@ -11177,11 +11177,11 @@ msgstr ""
 msgid "Sample Mattermost Channel Notification"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:25
+#: ../manage/webhook/examples.rst:26
 msgid ":doc:`examples/microsoft-teams-notifications`"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:21
+#: ../manage/webhook/examples.rst:22
 msgid "Use a Microsoft Teams Channel to receive your Zammad Notifications."
 msgstr ""
 
@@ -11191,11 +11191,11 @@ msgstr ""
 msgid "Sample Teams Channel Notification"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:32
+#: ../manage/webhook/examples.rst:33
 msgid ":doc:`examples/rocket-chat-notifications`"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:28
+#: ../manage/webhook/examples.rst:29
 msgid "Use a Rocket Chat Channel to receive your Zammad Notifications."
 msgstr ""
 
@@ -11205,11 +11205,11 @@ msgstr ""
 msgid "Sample Rocket Chat Channel Notification"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:38
+#: ../manage/webhook/examples.rst:40
 msgid ":doc:`examples/slack-notifications`"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:35
+#: ../manage/webhook/examples.rst:36
 msgid "Use a Slack Channel to receive your Zammad Notifications."
 msgstr ""
 
@@ -11217,6 +11217,14 @@ msgstr ""
 #: ../manage/webhook/examples/slack-notifications.rst:108
 #: ../manage/webhook/examples/slack-notifications.rst:None
 msgid "Sample Slack Channel Notification"
+msgstr ""
+
+#: ../manage/webhook/examples.rst:43
+msgid ":doc:`examples/ntfy-notifications`"
+msgstr ""
+
+#: ../manage/webhook/examples.rst:43
+msgid "Use the ntfy service to receive push notification from Zammad on different devices like your smartphone."
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
@@ -11451,6 +11459,7 @@ msgstr ""
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:88
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:102
+#: ../manage/webhook/examples/ntfy-notifications.rst:96
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:84
 #: ../manage/webhook/examples/slack-notifications.rst:96
 msgid "Finally, click on **Submit**."
@@ -11469,6 +11478,7 @@ msgstr ""
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:97
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:111
+#: ../manage/webhook/examples/ntfy-notifications.rst:106
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:93
 #: ../manage/webhook/examples/slack-notifications.rst:105
 msgid "Once the trigger is in place, your webhook is ready for use!"
@@ -11673,6 +11683,118 @@ msgstr ""
 
 #: ../manage/webhook/examples/microsoft-teams-payload.rst:43
 msgid "Payload for Workflows (new)"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:2
+msgid "Ntfy Notifications"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:4
+msgid "Follow the steps below to configure a webhook for sending notification via `ntfy <https://ntfy.sh>`_. Have a look at their `documentation <https://docs.ntfy.sh/>`_ for more information and custom configuration."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:9
+msgid "This example guides you through a basic setup. Depending on your setup and use case, steps and available options may differ."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:13
+msgid "Step 1 - Setup Ntfy Topic"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:15
+msgid "Go to ntfy and create a new topic by using the **Subscribe to topic** button. Either configure access to this topic (in case you are a ntfy Pro user) or choose a random topic."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:None
+msgid "Subscribe to topic dialog from ntfy"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:24
+msgid "Once created, make sure to copy your topic name to clipboard and save it for later."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:27
+msgid "If you want to password protect your channel, you have to use basic auth in your webhook with username and password. See `ntfy documentation <https://docs.ntfy.sh/publish/#username-password>`_ for more information."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:33
+msgid "Step 2 - Add a New Webhook with Custom Payload"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:35
+msgid "Go to :doc:`Webhook </manage/webhook/add>` management screen in your Zammad instance and click on the **New Webhook** button. Activate the \"Custom Payload\" toggle and add your information like in the example."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:39
+msgid "Depending on the features you want to use and your ntfy plan, it might be required to provide ``HTTP Basic Authentication Username`` as well as the appropriate password."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:None
+msgid "Webhook creation / edit dialog in Zammad with ntfy example"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:48
+msgid "You can find the example payload below. Important attributes are:"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:50
+msgid "``topic``: name of your topic. You might have copied it in Step 1."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:51
+msgid "``title``: the title/heading of the notification."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:52
+msgid "``message``: the message of your notification. You can use Zammad variables as you can see in the example."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:55
+msgid "Additional attributes can be:"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:57
+msgid "``priority``: priority of the notification from ``1`` - ``5``. This option defines how the notification is categorized on client devices."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:59
+msgid "``click``: URL to open if the notification is clicked."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:60
+msgid "``icon``: icon of your notification. Can be a a link to a .png or .jpg file."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:61
+msgid "``actions``: define quick actions which can be executed directly from the notification."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:64
+msgid "For detailed information about the possible actions, have a look at the ntfy `action button documentation <https://docs.ntfy.sh/publish/#action-buttons>`_."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:67
+msgid "For actions to work, you need to self host ntfy and adjust your CORS value in NGINX."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:99
+msgid "Step 3 - Configuring a Trigger for Firing the Webhook"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:101
+msgid "As a last step, you need to create a :doc:`Trigger <generic-notifications-trigger>` for triggering a notification. Define a condition, in which cases a notification should be generated and select your webhook as action."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:109
+msgid "Sample NTFY Channel Notification"
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:111
+msgid "From now on, a notification will be pushed to ntfy and all subscribed devices. The notification contains the link to the ticket, an image and action buttons, depending on what you configured."
+msgstr ""
+
+#: ../manage/webhook/examples/ntfy-notifications.rst:None
+msgid "Sample notification in the ntfy web dashboard"
 msgstr ""
 
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:2
