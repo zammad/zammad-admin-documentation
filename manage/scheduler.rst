@@ -4,15 +4,7 @@ Scheduler
 The scheduler performs time-based automated actions. You can set up your own
 schedulers, configure at which points in time they should run, set up conditions
 to determine which objects they should affect, and then configure the actions
-that you want to be executed on these objects.
-
-.. Setting warning box to inactive, because it is missing e.g. in triggers /RSC
-.. .. warning::
-
-..    While it is possible to delegate scheduler permissions to normal agents with
-..    the ``admin.scheduler`` permission, it is inadvisable to do so. Malicious
-..    agents could use a scheduler to access tickets in restricted groups
-..    (by moving them to a non-restricted group) or to arbitrarily delete tickets.
+that you want to execute for these objects.
 
 .. hint::
 
@@ -47,8 +39,8 @@ Object
    objects are: **Organization**, **Ticket** and **User**.
 
 Conditions for affected objects
-   Determine the object attributes (conditions) to limit on which objects the
-   actions configured in step 5 are to be performed.
+   Determine the object attributes to select the objects on which the actions
+   will be applied.
 
    .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 

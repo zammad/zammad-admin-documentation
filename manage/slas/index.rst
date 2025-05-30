@@ -7,7 +7,6 @@ answering every inquiry within eight hours. If you are at risk of missing this
 target, Zammad will alert you.
 
 .. figure:: /images/manage/slas/sla-configuration-overview.png
-   :width: 90%
    :align: center
    :alt: Screenshot showing SLA management with configured SLA levels
 
@@ -21,6 +20,7 @@ Online notifications
    your agent.
 
    .. figure:: /images/manage/slas/online-notifications-escalations.png
+      :scale: 70%
       :align: center
       :alt: Screenshot showing two notifications: One upcoming escalation and
             one escalated ticket
@@ -70,26 +70,10 @@ SLA timings of a ticket
    Ticket zooms provide a timestamp of the next escalation of a ticket. Agents
    can hover that timestamp and learn about all upcoming escalation stages.
 
-   .. container:: cfloat-left
-
-      .. figure:: /images/manage/slas/tickets-sla-timings.png
-         :align: center
-         :alt: Screenshot showing the calculated escalation stages
-
-         A fresh ticket without any response by agents.
-
-   .. container:: cfloat-right
-
-      .. figure:: /images/manage/slas/tickets-sla-timings-after-first-response.png
-         :align: center
-         :alt: Screenshot showing the calculated escalation stages after agents
-               first response
-
-         A ticket after the agents initial response and a customer response.
-
-   .. container:: cfloat-clear
-
-      X
+   .. figure:: /images/manage/slas/tickets-sla-timings.png
+      :align: center
+      :scale: 70%
+      :alt: Screenshot showing the calculated escalation stages
 
 .. toctree::
    :maxdepth: 1

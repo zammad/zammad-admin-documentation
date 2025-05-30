@@ -57,8 +57,8 @@ The ones that aren't are described below.
    A user's email and login may differ, but
    **either one can be used to sign in.**
 
-   .. figure:: /images/manage/users/user-details-login.png
-      :alt: The user overview, showing logins in the first column
+   .. figure:: /images/manage/users/login-email.png
+      :alt: Screenshot shows the user overview with highlighted "Login" column
       :align: center
 
       User logins are **not** shown in the New/Edit User dialog,

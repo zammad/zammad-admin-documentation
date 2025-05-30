@@ -21,7 +21,6 @@ Admin Permissions
 .. figure:: /images/manage/roles/admin-settings.png
    :alt: Screenshot showing admin settings within Zammad.
    :align: center
-   :width: 80%
 
    ...and give users access to the pages of the Admin Panel.
 
@@ -38,6 +37,15 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - Permission name
      - Give access to
      - Note
+   * - ``admin.ai``
+     - :doc:`AI > Provider </ai/provider>`
+     -
+   * - ``admin.ai_assistance_text_tools``
+     - AI > Smart Assist Text Tools
+     -
+   * - ``admin.ai_assistance_ticket_summary``
+     - :doc:`AI > Ticket Summary </ai/features>`
+     -
    * - ``admin.api``
      - :docs:`System > API </api/intro.html>`
      -
@@ -50,9 +58,6 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.channel_chat``
      - :doc:`Channels > Chat </channels/chat>`
      - Accessing chat for agents: ``chat.agent``
-   * - ``admin.checklist``
-     - :doc:`Manage > Checklist </manage/checklist>`
-     -
    * - ``admin.channel_email``
      - :doc:`Channels > Email </channels/email/index>`
      -
@@ -65,8 +70,11 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.channel_google``
      - :doc:`Channels > Google </channels/google/index>`
      -
+   * - ``admin.channel_microsoft_graph``
+     - :doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/index>`
+     -
    * - ``admin.channel_microsoft365``
-     - :doc:`Channels > Microsoft 365 </channels/microsoft365/index>`
+     - :doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`
      -
    * - ``admin.channel_sms``
      - :doc:`Channels > SMS </channels/sms>`
@@ -82,6 +90,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
      -
    * - ``admin.channel_whatsapp``
      - :doc:`Channels > Whatsapp </channels/whatsapp/index>`
+     -
+   * - ``admin.checklist``
+     - :doc:`Manage > Checklist </manage/checklist>`
      -
    * - ``admin.core_workflows``
      - :doc:`System > Core Workflows </system/core-workflows>`
@@ -121,11 +132,11 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.overview``
      - :doc:`Manage > Overviews</manage/overviews>`
      -
-   * - ``admin.public_links``
-     - :doc:`Manage > Public Links </manage/public-links>`
-     -
    * - ``admin.package``
      - :doc:`System > Packages </system/packages>`
+     -
+   * - ``admin.public_links``
+     - :doc:`Manage > Public Links </manage/public-links>`
      -
    * - ``admin.report_profile``
      - :doc:`Manage > Report Profiles </manage/report-profiles>`
@@ -142,11 +153,11 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.session``
      - :doc:`System > Sessions </system/sessions>`
      -
-   * - ``admin.setting_system``
-     - :doc:`Settings > System </settings/system/index>`
-     -
    * - ``admin.sla``
      - :doc:`Manage > SLAs </manage/slas/index>`
+     -
+   * - ``admin.system``
+     - :doc:`Settings > System </settings/system/index>`
      -
    * - ``admin.system_report``
      - :doc:`System > System Report </system/system-report>`

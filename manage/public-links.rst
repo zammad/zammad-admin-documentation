@@ -16,7 +16,7 @@ Adding New Public Links
 -----------------------
 
 You can add new public links via the *New Public Link*  button on the upper
-right. You'll see a new dialogue that consists of the following information.
+right. You'll see a new dialog where you can provide the following information:
 
 Link
    This is the actual target page you're linking to. Zammad only allows URLs
@@ -25,12 +25,8 @@ Link
    .. important::
 
       Do not use data privacy and terms of service URLs of ``zammad.com``
-      or ``zammad.org``.
-
-      Every instance is special on its own. Every hosting is different,
-      data retention and other things do not fit as every company using
-      Zammad handles these matters differently.
-
+      or ``zammad.org``. Every company handles it differently, so there is no
+      standardized approach to data retention and other policies.
       This function was made to allow you to link to your *own resources*.
 
 Title
@@ -83,11 +79,10 @@ Context
                :height: 320px
 
 Display in new tab
-   This setting allows you to determine if Zammad should tell the browser
-   to either open the URL in a new tab or within the existing tab.
+   This setting allows you to determine if the user's browser opens the URL in
+   a new tab or within the existing tab.
 
-   | Opening URLs in the same tab may cause inconvenience to the user.
-   | Default: ``yes``
+   Default: ``yes``
 
 .. _public_links_manage_existing:
 
@@ -104,7 +99,7 @@ That may be a problem if you add a link later on. For this reason you can
 easily change the link order by dragging them to another position by using
 the ≣ handle.
 
-These changes are affective immediately.
+These changes are applied immediately.
 
 .. _public_links_actions:
 
@@ -122,10 +117,10 @@ Cloning & Removing
    If you want to add a new link that's very similar to an existing one, simply
    click on ⋮ and select *Clone*.
 
-   Zammad will open a new public link dialogue with the existing settings
+   Zammad will open a new public link dialog with the existing settings
    filled in.
 
-   If you no longer require a public link, you can **remove** it by using ⋮ and
+   If you no longer need a public link, you can **remove** it by using ⋮ and
    selecting *Delete*. Zammad will ensure that you really want to remove the
    entry with a modal. Be aware that the deletion is **final**. There's no
    way to bring back removed public links.

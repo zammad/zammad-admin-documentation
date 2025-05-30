@@ -11,6 +11,13 @@ comes with the following settings you can adjust as needed.
 
 Please note that groups cannot be removed.
 
+.. figure:: /images/manage/groups/group-settings.png
+   :alt: Screenshot showing how a group configuration can look like.
+   :width: 60%
+   :align: center
+
+   A sample configuration of a group.
+
 Name
    This is the name your agents (and customers when using :doc:`/channels/web`)
    will see within the Zammad-UI.
@@ -25,13 +32,9 @@ Parent group
    even if they have a child/parent relation.
 
    .. hint:: Zammad doesn't show you any child group of the currently selected
-      group. This would lead to a circular reference!
+      group in the edit dialog. This would lead to a circular reference!
 
-   Zammad supports 10 levels of hierarchy for groups on PostgreSQL systems.
-   If you are using a MySQL database, it is limited to 6 levels.
-   In case you are using MySQL, you should consider to migrate your database
-   anyway (see :docs:`here </appendix/migrate-to-postgresql.html>` for more
-   information). MySQL will be deprecated with Zammad 7.
+   Zammad supports 10 hierarchy levels for groups as a maximum.
 
 Assignment timeout
    The time in minutes after which the ticket's ownership will revert back to
@@ -122,9 +125,3 @@ Active
       This is potentially dangerous, make sure the group is no longer part
       of email filters or a destination group.
 
-.. figure:: /images/manage/groups/group-settings.png
-   :alt: Screenshot showing how a group configuration can look like.
-   :width: 60%
-   :align: center
-
-   A sample configuration of a group.

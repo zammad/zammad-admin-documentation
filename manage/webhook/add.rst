@@ -1,13 +1,13 @@
 Adding Webhooks
 ===============
 
-Webhooks are defined globally. This allows you to use one specific endpoint for
-several triggers or schedulers.
+Defining a webhook allows you to use a specific endpoint in several triggers or
+schedulers.
 
 .. warning:: **Default Zammad webhook payloads are specific**
 
    Keep in mind that the remote site has to be able to understand the default
-   webhook payload Zammad is sending. Simply throwing the default payload at a
+   webhook payload, Zammad is sending. Simply throwing the default payload at a
    webhook endpoint may not have the desired result!
 
    See `Custom Payload`_ for a way to customize webhook payloads.
@@ -34,7 +34,7 @@ Next, select the pre-defined webhook you want and click **Next**.
    :align: center
    :width: 90%
 
-.. warning:: **⚠️  Adding a new Webhook is not enough**
+.. warning:: **⚠️ Adding a new webhook is not enough**
 
    You must, in addition, add a :doc:`Trigger </manage/trigger>` or
    :doc:`Scheduler </manage/scheduler>` that references the Webhook!
@@ -53,20 +53,20 @@ You can configure the following information for webhooks:
       fields.
 
    HMAC SHA1 Signature Token
-      If set all sent webhooks contain a `x-hub-signature` header allowing
+      If set, all sent webhooks contain a `x-hub-signature` header allowing
       the remote site to verify the request.
 
       .. note:: **🔐 Security note**
 
          This *does not* encrypt the payload. Use HTTPS connections to
          secure the communication. It contains a HMAC signature of the body
-         of the webhook request
+         of the webhook request.
 
          `Learn more about HUB-Signatures
          <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_
 
    SSL verification
-      Defaults to ``yes`` - if you're using unsecure self signed certificates
+      Defaults to ``yes`` - if you're using unsecure self signed certificates,
       set this option to ``no``.
 
       .. include:: /includes/ssl-verification-warning.rst

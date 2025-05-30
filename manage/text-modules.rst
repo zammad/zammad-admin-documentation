@@ -1,8 +1,8 @@
 Text Modules
 ============
 
-Text modules can be edited in the admin interface under Manage > Text modules.
-Here you will find text snippets already created in the standard version, which
+Text modules can be edited in the admin interface under *Manage > Text modules*.
+Here you find text snippets which are already shipped by Zammad, which
 can be extended as needed.
 
 Beside text modules Zammad also allows you to use
@@ -35,24 +35,6 @@ shortcuts. All text modules can be used in articles as well as in the chat.
 To use the text modules in a ticket, you can use ``::`` too! You can find more
 information on how to use text modules in our
 :user-docs:`user documentation </advanced/text-modules.html>`.
-
-.. Deactivation of following content, deletion planned /RSC
-.. .. tip::
-..    If text modules are to be grouped, this can be done using shortcuts.
-..    Example country codes:
-
-..    Text modules are created for the group Germany as follows:
-
-..    - Ger_Textmodule1
-..    - Ger_Textmodule2
-..    - ...
-
-..    for Austrian-Snippets:
-
-..    - Aut_Textmodule1
-..    - Aut_Textmodule2
-
-..    thus only the relevant text modules are displayed for each country.
 
 The example text modules below use :doc:`/misc/variables` to dynamically
 insert information like the customer's or agent's names.
