@@ -182,17 +182,14 @@ Keep messages on server
      Zammad will only import unread messages. This means Zammad may miss
      messages if the mailbox is externally modified.
 
-   .. note:: 🤔 **Why does Zammad delete messages by default?**
+   .. note:: **Why does Zammad delete messages by default?**
 
-      If you never clean out your inbox,
-      it'll eventually reach its storage limit,
+      If you never clean up your inbox, you reach a storage limit some day
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it's set up,
-      so they rely on Zammad to keep it clean for them.
 
       If you choose **yes** here, remember that it's your responsibility
-      to clean out your inbox from time to time
-      to keep it below its storage limit.
+      to clean out your inbox from time to time to keep it below its storage
+      limit.
 
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst
