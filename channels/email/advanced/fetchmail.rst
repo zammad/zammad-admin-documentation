@@ -11,17 +11,20 @@ To get this to work you need to pipe your emails to rails.
    replace ``rails r`` with ``zammad run rails r`` below.
    To learn more, see :docs:`Administration via Console </admin/console.html>`.
 
-**Command line**::
+**Command line**:
+
+.. code-block:: bash
 
    su - zammad
    cd /opt/zammad
    cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
-
 Fetchmail
 ---------
 
-**Create .fetchmailrc**::
+**Create .fetchmailrc**:
+
+.. code-block:: bash
 
    su - zammad
    cd ~
@@ -29,17 +32,16 @@ Fetchmail
    chmod 0600 .fetchmailrc
 
 
-**vi .fetchmailrc**::
+**Edit .fetchmailrc**:
+
+.. code-block:: bash
 
    #
    # zammad fetchmail config
    #
    poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda "rails r 'Channel::Driver::MailStdin.new(trusted: true)'"
 
-
 That's it. Emails now will be directly piped into Zammad.
-
-
 
 Using Procmail for Advanced Features Like Presorting
 ----------------------------------------------------
@@ -49,21 +51,26 @@ or filtering spam, you can use Procmail.
 
 Fetchmail config looks slightly different.
 
-**vi .fetchmailrc**::
+**Edit .fetchmailrc**:
+
+.. code-block:: bash
 
    #
    # zammad fetchmail config
    #
    poll your.mail.server protocol POP3 user USERNAME pass PASSWORD mda /usr/bin/procmail is zammad here
 
+**Create .procmailrc**:
 
-**Create .procmailrc**::
+.. code-block:: bash
 
    su - zammad
    cd ~
    touch .procmailrc
 
-**vi .procmailrc**::
+**Edit .procmailrc**:
+
+.. code-block::bash
 
    # --
    # Pipe all emails into Zammad

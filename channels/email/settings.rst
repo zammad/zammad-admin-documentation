@@ -4,8 +4,8 @@ Settings
 .. figure:: /images/channels/email/settings-menu.png
    :alt: Settings section in email channel
 
-Below you can find the currently available email-related settings. Most of
-these settings have default values which can be found in this list as well.
+Below you can find the available email-related settings. Most of
+these settings have default values which can be found here as well.
 
 Some email-related settings are ticket-based settings, which is why
 they can be found in the :doc:`/misc/composer`.
@@ -53,25 +53,22 @@ Additional follow-up detection: Default value ``Subject & References``
    carefully and monitor the behavior afterwards.
 
 Maximum Email Size: Default value ``10 MB``
-   This one is pretty obvious: It defines the maximum allowed size of an email
-   Zammad will fetch. Zammad will not fetch emails that are bigger than this
-   option (*including attachments!*).
+   Defines the maximum allowed size of an email Zammad fetches. Zammad will
+   not fetch larger emails (*including attachments!*).
 
 Send postmaster mail if mail too large: Default value ``yes (enabled)``
    Option set to ``yes``
-      This setting will cause Zammad to automatically reply to mails that exceed
-      the above mail size limit with a postmaster style mail.
-      This will help your user to understand that his mail did not arrive and
-      won't be reviewed by you.
+      This setting will cause Zammad to automatically reply to emails that
+      exceed the above email size limit with a postmaster style email.
+      It tells the sender that you have not received their email.
 
-      Nevertheless, Zammad will remove the mail from the
-      mailbox (if enabled).
+      Nevertheless, Zammad will remove the email from the mailbox (if enabled).
 
    Option set to ``no``
-      If the option is set to no, Zammad will not reply to mails that are too
-      big. Your customer will **not notice** that the mail was too large!
+      If the option is set to no, Zammad will not reply to emails that are too
+      big. Your customer will **not notice** that the email was too large!
       Instead, Zammad will use the monitoring endpoint to alert its
-      administrators that it can't fetch a too large mail.
+      administrators that it can't fetch a too large email.
 
       Learn more about :doc:`/system/monitoring`.
 
@@ -86,11 +83,11 @@ Sender based on Reply-To header: Default value ``not set (-)``
 
    Option set to ``-`` or ``Take Reply-To header as sender/from of email and use the real name of origin from.``
       This setting will partially overwrite the initial ``FROM``.
-      It uses the mail address from the ``Reply-To`` header and uses the given
+      It uses the email address from the ``Reply-To`` header and uses the given
       name of the ``FROM`` header, if given.
 
 Customer selection based on sender and receiver list: Default value ``yes``
-   This option decides how Zammad should react if an agent sends a email to it.
+   This option decides how Zammad should react if an agent sends an email to it.
 
    Option set to ``yes``
       The first user / email address from the recipient list will be used as
@@ -98,12 +95,6 @@ Customer selection based on sender and receiver list: Default value ``yes``
 
    Option set to ``no``
       The agent will be set as ticket customer.
-
-   .. note::
-
-      Currently agents can't be customers within the UI.
-      While email communication works, agents can't see their own tickets
-      (as a customer) if they don't have access to the group.
 
 Block Notifications
    With the regex that can be defined here, you can ensure not to send any
@@ -153,7 +144,7 @@ Ticket Subject Forward: Default value ``FWD``
    ``:`` will be automatically appended to the above string.
 
 Ticket Subject Reply: Default value ``RE``
-   The above string will be used on the subject if you reply to a mail from
+   The above string will be used on the subject if you reply to an email from
    Zammad.
 
    ``:`` will be automatically appended to the above string.
@@ -168,7 +159,6 @@ Ticket Subject Size: Default value ``110``
    when replying to an email.
 
    Example: ``RE: Test somew[...] [Ticket#123456]``
-
 
 Enhanced Settings
 -----------------
