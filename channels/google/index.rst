@@ -43,7 +43,7 @@ Connect a Google Email account to Zammad.
 
    * set the “From:” address on system notifications
    * raise the limit on attachment sizes
-   * modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
+   * modify subject-line prefixes (e.g. use “AW:” instead of "RE:"")
 
 :doc:`Header based actions <email-headers>`
    Manipulate auto response behavior or incoming routing.
