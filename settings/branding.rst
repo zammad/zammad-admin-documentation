@@ -22,9 +22,9 @@ Locale
    Allows to set the default language of the Zammad instance.
    The here defined locale mostly acts as a fallback for:
 
-      * user preferences (if Zammad can't detect the users locale)
+      * User preferences (if Zammad can't detect the users locale)
       * CSV output (reporting, time accounting)
-      * notifications
+      * Notifications
 
 Timezone
    Define the timezone of your Zammad installation.
@@ -35,10 +35,10 @@ Timezone
    Changing this value has direct consequences on the following areas:
 
       * :doc:`/manage/scheduler` tasks
-      * search indexing (and thus reporting)
-      * notifications
-      * calendar subscriptions
-      * browser printing
+      * Search indexing (and thus reporting)
+      * Notifications
+      * Calendar subscriptions
+      * Browser printing
 
    Please note that some of above are fallbacks in case Zammad
    could not detect the agents timezone correctly.
@@ -55,7 +55,7 @@ Pretty Date
          This timestamp shows a relative time span until it switches to a date.
          Over time, it will change as follows:
 
-            * just now
+            * Just now
             * 5 minutes ago
             * 3 days 1 hour ago
             * ``03/04/2022``

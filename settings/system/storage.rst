@@ -4,14 +4,13 @@ Storage
 .. include:: /settings/system/system-selfhosted.include.rst
 
 Here you can define where Zammad stores attachments for tickets and the
-knowledge base. By default, we're writing to the ``Database`` - you can switch
-to ``Filesystem`` or ``Simple Storage (S3)`` at any time. In this case please
+knowledge base. By default, Zammad writes to the **Database** - you can switch
+to **Filesystem** or **Simple Storage (S3)** at any time. In this case, please
 have a look on the following instructions.
 
 If you have a busy Zammad instance, we strongly encourage you to use filesystem
-storage instead of "Database".
-This will greatly improve system performance (de-crease database load
-and size).
+storage instead of **Database**. This improves the system performance (decreases
+database load and and size).
 
 Database
    This is the default storage method. The attachments are stored directly in
@@ -23,7 +22,7 @@ Filesystem
    for those with a higher load. If you choose filesystem, your files are
    written to ``/opt/zammad/storage/``.
 
-   Moving attachments from "Database" to "Filesystem" can be run during
+   Moving attachments from **Database** to **Filesystem** can be run during
    production use. However, you should consider your framework conditions
    (e.g. bandwidth, system load in production) to define the right moment.
 
@@ -31,11 +30,11 @@ Filesystem
 
       **You noticed slow updates of Zammad?**
 
-      While Zammad is beeing updated, it enforces a recursive "change owner"
+      While Zammad is being updated, it enforces a recursive "change owner"
       (chown) for this directory. For instances with many files this can
-      be time consuming. To mitigate that you can move your files and create a
+      be time consuming. To mitigate that, you can move your files and create a
       symlink in ``/opt/zammad/storage/`` to the new directory. Of course you
-      have to make sure on your own that the permissions are always correct.
+      have to make sure that the permissions are always correct.
 
 Simple Storage (S3)
    To use the Simple Storage (S3), you have to provide some settings, which
@@ -63,11 +62,10 @@ Simple Storage (S3)
        inconsistencies.
 
    3. Restart Zammad so the config file / environment variable is loaded
-   4. Set the "Storage Method" in Zammad to ``Simple Storage (S3)`` in
+   4. Set the "Storage Method" in Zammad to **Simple Storage (S3)** in
       Settings > System > Storage and click on "Submit". After that, Zammad
       checks your configuration and the connection to the service and will raise
       an error message if something is wrong.
-
 
    A very simple storage configuration could look like this:
 
@@ -79,7 +77,6 @@ Simple Storage (S3)
          region: 's3-us-west-2'
          endpoint: 'https://zammad.s3.us-west-2.amazonaws.com'
          bucket: 'zammad'
-
 
    .. hint::
 

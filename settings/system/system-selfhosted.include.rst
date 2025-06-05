@@ -1,5 +1,4 @@
-.. note:: **🚧 Self Hosted only 🚧**
+.. note:: **Only relevant for on-premise users.**
 
-   Below settings are only available to self hosted users.
-   In hosted environments we're handling these settings for you to ensure
-   service stability.
+   As a SaaS customer of Zammad, you don't have access to these settings.
+   We're handling these for you to ensure service stability.
