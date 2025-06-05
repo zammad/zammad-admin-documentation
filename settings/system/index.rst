@@ -17,4 +17,4 @@ Console Based Settings
 
 There's some console based settings we didn't put into the UI.
 However, you may find them helpful - you can find them in our
-:docs:`advanced customization </admin/console/hidden-settings.html>` section.
+:docs:`advanced customization section in the system documentation </admin/console/hidden-settings.html>`.
