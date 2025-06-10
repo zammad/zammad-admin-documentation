@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-10 11:49+0200\n"
+"POT-Creation-Date: 2025-06-10 16:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,6 +67,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:5
 #: ../settings/security/ssl-certificates.rst:5
 #: ../settings/security/third-party/saml.rst:5
+#: ../system/integrations/clearbit.rst:9
 #: ../system/integrations/exchange.rst:8
 #: ../system/integrations/pgp/index.rst:5
 #: ../system/objects/permissions.rst:5
@@ -249,7 +250,7 @@ msgstr ""
 #: ../channels/chat.rst:28
 #: ../channels/microsoft365-graph/accounts.rst:17
 #: ../misc/first-steps.rst:20
-#: ../system/integrations/clearbit.rst:31
+#: ../system/integrations/clearbit.rst:35
 msgid "Configuration"
 msgstr ""
 
@@ -298,10 +299,10 @@ msgstr ""
 
 #: ../channels/chat.rst:71
 #: ../channels/form.rst:156
+#: ../misc/zabbix.rst:11
 #: ../system/integrations/cti/generic.rst:7
 #: ../system/integrations/cti/placetel.rst:12
 #: ../system/integrations/cti/sipgate.rst:12
-#: ../system/integrations/zabbix.rst:10
 msgid "Requirements"
 msgstr ""
 
@@ -662,7 +663,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:249
 #: ../manage/webhook/add.rst:72
 #: ../settings/security/third-party/saml.rst:149
-#: ../system/integrations/i-doit.rst:74
+#: ../system/integrations/i-doit.rst:67
 msgid "SSL verification"
 msgstr ""
 
@@ -923,8 +924,8 @@ msgstr ""
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
-#: ../system/integrations/github.rst:53
-#: ../system/integrations/gitlab.rst:46
+#: ../system/integrations/github.rst:29
+#: ../system/integrations/gitlab.rst:33
 #: ../system/integrations/pgp/index.rst:112
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
@@ -3062,8 +3063,8 @@ msgstr ""
 #: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/cti/includes/introduction.include.rst:18
 #: ../system/integrations/elasticsearch.rst:25
-#: ../system/integrations/ldap/index.rst:28
-#: ../system/integrations/smime/prerequisites.rst:83
+#: ../system/integrations/ldap/index.rst:20
+#: ../system/integrations/smime/prerequisites.rst:78
 msgid "Limitations"
 msgstr ""
 
@@ -15498,6 +15499,94 @@ msgstr ""
 msgid "``#{ticket.updated_by.web}``"
 msgstr ""
 
+#: ../misc/zabbix.rst:2
+msgid "Create Tickets from Zabbix"
+msgstr ""
+
+#: ../misc/zabbix.rst:4
+msgid "Zabbix is a tool to monitor IT infrastructure."
+msgstr ""
+
+#: ../misc/zabbix.rst:6
+msgid "This guide describes how to connect your Zabbix installation to Zammad using webhooks in Zabbix. It provides instructions on setting up a media type, a user and an action in Zabbix."
+msgstr ""
+
+#: ../misc/zabbix.rst:13
+msgid "Zabbix version 5.4 or higher."
+msgstr ""
+
+#: ../misc/zabbix.rst:14
+msgid "A Zammad instance which is accessible from your Zabbix system."
+msgstr ""
+
+#: ../misc/zabbix.rst:17
+msgid "Steps in Zammad"
+msgstr ""
+
+#: ../misc/zabbix.rst:19
+msgid "Enable API Token Access in Zammad's settings under *System > API*."
+msgstr ""
+
+#: ../misc/zabbix.rst:20
+msgid "Create a new user for a Zabbix alerter with an email address and create a personal user token with ``ticket.agent`` permissions. Make sure to also set the appropriate group permissions."
+msgstr ""
+
+#: ../misc/zabbix.rst:25
+msgid "Zabbix Webhook Configuration"
+msgstr ""
+
+#: ../misc/zabbix.rst:28
+msgid "Create a Global Macro"
+msgstr ""
+
+#: ../misc/zabbix.rst:30
+msgid "Before setting up the webhook, you need to setup the global macro ``{$ZABBIX.URL}``, which must contain the URL to the Zabbix frontend."
+msgstr ""
+
+#: ../misc/zabbix.rst:33
+msgid "In the section *Administration > Media types*, import the `template`_."
+msgstr ""
+
+#: ../misc/zabbix.rst:34
+msgid "Open the added **Zammad** media type and set:"
+msgstr ""
+
+#: ../misc/zabbix.rst:36
+msgid "``zammad_access_token``: the personal access token you created for the user"
+msgstr ""
+
+#: ../misc/zabbix.rst:37
+msgid "``zammad_url``: the URL of your Zammad installation"
+msgstr ""
+
+#: ../misc/zabbix.rst:38
+msgid "``zammad_customer``: the email address of the created Zammad user"
+msgstr ""
+
+#: ../misc/zabbix.rst:39
+msgid "``zammad_enable_tags``: *true* or *false* to enable or disable tags. If you enable tags, each tag is set with a separate request."
+msgstr ""
+
+#: ../misc/zabbix.rst:42
+msgid "If you want to prioritize issues in Zammad according to severity values in Zabbix, you can map these parameters:"
+msgstr ""
+
+#: ../misc/zabbix.rst:45
+msgid "``severity_<name>``: Zammad priority ID"
+msgstr ""
+
+#: ../misc/zabbix.rst:46
+msgid "Click the **Update** button to save the webhook settings."
+msgstr ""
+
+#: ../misc/zabbix.rst:47
+msgid "Enter any text in ``Send to``, as this value is not used but required."
+msgstr ""
+
+#: ../misc/zabbix.rst:49
+msgid "For more information, use the `Zabbix documentation <https://www.zabbix.com/documentation/current/manual/config/notifications>`_."
+msgstr ""
+
 #: ../settings/branding.rst:10
 msgid "Product Name"
 msgstr ""
@@ -19193,7 +19282,7 @@ msgstr ""
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
-#: ../system/integrations/ldap/index.rst:73
+#: ../system/integrations/ldap/index.rst:164
 #: ../system/integrations/pgp/index.rst:106
 msgid "Recent Logs"
 msgstr ""
@@ -19562,79 +19651,75 @@ msgid "Clearbit"
 msgstr ""
 
 #: ../system/integrations/clearbit.rst:4
-msgid "With our Clearbit integration, you can easily enrich the information provided by Zammad. If the customers or agents email address is known to Clearbit, it will share all information it has regarding the user with Zammad. Those information can include the following:"
-msgstr ""
-
-#: ../system/integrations/clearbit.rst:9
-msgid "Avatar"
-msgstr ""
-
-#: ../system/integrations/clearbit.rst:10
-msgid "Address information"
+msgid "With our Clearbit integration, you can easily enrich the information provided by Zammad. If the customers or agents email address is known to Clearbit, it will share all information it has regarding the user with Zammad."
 msgstr ""
 
 #: ../system/integrations/clearbit.rst:11
-msgid "Website information"
+msgid "Information from Clearbit can include:"
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:12
-msgid "A BIO (as Note by default)"
+#: ../system/integrations/clearbit.rst:13
+msgid "Avatar"
 msgstr ""
 
 #: ../system/integrations/clearbit.rst:14
-msgid "If needed, you can add further custom objects and add mappings to them, so the Clearbit information can be filled within the database. In general you can get any information from Clearbit, as long as you have a mapping to an Zammad object."
+msgid "Address information"
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:21
+#: ../system/integrations/clearbit.rst:15
+msgid "Website information"
+msgstr ""
+
+#: ../system/integrations/clearbit.rst:16
+msgid "A bio (as note by default)"
+msgstr ""
+
+#: ../system/integrations/clearbit.rst:18
+msgid "If needed, you can add further custom objects and add mappings to them, so the Clearbit information can be filled within the database. In general you can get any information from Clearbit, as long as you have a mapping to a Zammad object attribute."
+msgstr ""
+
+#: ../system/integrations/clearbit.rst:25
 msgid "Clearbit does have a mapping of fields like LDAP and Exchange have, but does not \"win\" against Zammad information. This means that if you have e.g. the last name field filled in already and Clearbit has other information on that, it will not be updated."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:26
+#: ../system/integrations/clearbit.rst:30
 msgid "However: If let's say the last name has been set by Clearbit and Zammad notices that the last name on the Clearbit source has changed, Zammad will also update this value."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:33
-msgid "The configuration of Clearbit is really easy and done fast! Just login to your Clearbit-Account, go to \"API\" and copy the secret-API-Key."
+#: ../system/integrations/clearbit.rst:37
+msgid "The configuration of Clearbit is really easy and done fast! Just login to your Clearbit-Account, go to **API** and copy the secret API key."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:38
-msgid "Now change to your Zammad instance, go to Integrations (System) -> Clearbit in the admin panel. Paste your API-Key into the API-Key-Field and decide if Zammad should create unknown Organizations automatically, if the user does not have one yet (and Clearbit knows it). The shared option decides if the new organizations Zammad creates with Clearbit should be shared ones."
+#: ../system/integrations/clearbit.rst:40
+msgid "Now switch to your Zammad instance, go to *System > Integrations > Clearbit* in the admin panel. Paste your API-Key into the API-Key-Field and decide if Zammad should create unknown organizations automatically, if the user does not have one already (and Clearbit knows it). The shared option decides if the new organizations should be shared ones."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:47
+#: ../system/integrations/clearbit.rst:49
 msgid "If you're unsure what option to choose, better stick with \"no\". You can also learn more about :doc:`/manage/organizations/index`."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:52
-msgid "The Mapping option works similar to the mapping within the Exchange and LDAP sync. You can add further mappings for e.g. custom fields if you need more information that Clearbit can provide."
+#: ../system/integrations/clearbit.rst:54
+msgid "The mapping option works similar to the mapping within the Exchange and LDAP sync. You can add further mappings for e.g. custom fields if you need more information that Clearbit can provide."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:58
+#: ../system/integrations/clearbit.rst:60
 msgid "If you want to add more Clearbit fields and want to learn more about available fields on their API, you can take a look at their `API documentation <https://dashboard.clearbit.com/docs#enrichment-api>`_."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:62
+#: ../system/integrations/clearbit.rst:64
 msgid "If you're happy with the above chosen Settings and your mapping, just save the changes and enable Clearbit integration. Zammad will now start polling the Clearbit API as users contact you."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:68
+#: ../system/integrations/clearbit.rst:70
 msgid "Zammad does not synchronize with Clearbit on a regular basis, but on demand if needed. This saves API calls."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:73
-msgid "Below the Settings and Mappings, you'll find our Integration log. You can see what requests Zammad sent to Clearbit and also the APIs Response."
+#: ../system/integrations/clearbit.rst:75
+msgid "Below the setting and mapping section, you can find the integration logs. You can see what requests Zammad sent to Clearbit and also the APIs response."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:78
+#: ../system/integrations/clearbit.rst:80
 msgid "By the way, you can also view the API log on the Clearbit website - the information seen is basically the same."
-msgstr ""
-
-#: ../system/integrations/clearbit.rst:84
-msgid "Example When Adding a User"
-msgstr ""
-
-#: ../system/integrations/clearbit.rst:86
-msgid "To show you how fast information is added, we added a small Screencast below. This shows the creation of the User Alex from Clearbit. As we already set the last name of Alex to \"X\", Zammad did not update it. What Zammad did was to add further information it received from Clearbit."
 msgstr ""
 
 #: ../system/integrations/cti/generic.rst:2
@@ -20114,7 +20199,7 @@ msgid "The here listed endpoint settings are relevant for the :doc:`integration 
 msgstr ""
 
 #: ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:53
+#: ../system/integrations/i-doit.rst:46
 msgid "Endpoint"
 msgstr ""
 
@@ -20698,7 +20783,7 @@ msgid "In some cases you might see unique IDs as \"Login\" instead of the email 
 msgstr ""
 
 #: ../system/integrations/github.rst:4
-msgid "Use GitHub integration to track GitHub issues directly within Zammad tickets. Add issue hyperlinks and get a live summary of metadata like status (open/closed), assignee, labels, and more."
+msgid "Use GitHub integration to track GitHub issues directly within Zammad tickets. Add links to issues and get meta information like status (open/closed), assignee, labels and more."
 msgstr ""
 
 #: ../system/integrations/github.rst:8
@@ -20710,67 +20795,42 @@ msgid "Integration page for GitHub"
 msgstr ""
 
 #: ../system/integrations/github.rst:18
-msgid "In your GitHub settings, create a new API token under **Developer settings > Personal access tokens > Generate new token**. Leave the **Scopes** section empty."
+msgid "`Create a new API token in your GitHub profile <https://github.com/settings/personal-access-tokens>`_ under *Developer settings > Personal access tokens > Fine-grained tokens*."
 msgstr ""
 
-#: ../system/integrations/github.rst:0
-#: ../system/integrations/gitlab.rst:0
-msgid "Screencast showing how to create a new API token"
+#: ../system/integrations/github.rst:20
+msgid "Add a name, set an expiration date and define the repository access. Don't add additional permissions."
 msgstr ""
 
-#: ../system/integrations/github.rst:27
-msgid "Create a new API key with no scopes/privileges."
+#: ../system/integrations/github.rst:22
+msgid "Enter your new API token in Zammad and enable GitHub integration. Use the default API endpoint (``https://api.github.com/graphql``) unless you're using GitHub Enterprise Server."
 msgstr ""
 
-#: ../system/integrations/github.rst:29
-msgid "🔒 **Will this work for private repos?**"
-msgstr ""
-
-#: ../system/integrations/github.rst:31
-msgid "No. To link private repo issues, **use the** ``repo`` **scope instead**. Bear in mind that the resulting token will have `lots of permissions that it doesn't actually need <https://docs.github.com/en/developers/apps/scopes-for-oauth-apps>`_, which presents a security risk if your token ever falls into the wrong hands."
-msgstr ""
-
-#: ../system/integrations/github.rst:37
-msgid "Unfortunately, because of how GitHub's OAuth token scopes are set up, this is the only way to link issues on private repos."
-msgstr ""
-
-#: ../system/integrations/github.rst:40
-msgid "Enter your new API token in Zammad and enable GitHub integration."
-msgstr ""
-
-#: ../system/integrations/github.rst:0
-msgid "Screencast showing how to configure Zammad's GitHub integration"
-msgstr ""
-
-#: ../system/integrations/github.rst:47
-msgid "Use the default API endpoint (``https://api.github.com/graphql``) unless you're using GitHub Enterprise Server."
-msgstr ""
-
-#: ../system/integrations/github.rst:50
+#: ../system/integrations/github.rst:26
 msgid "Once completed, a new GitHub issues tab will appear in the ticket pane. 🎉"
 msgstr ""
 
-#: ../system/integrations/github.rst:59
-#: ../system/integrations/gitlab.rst:52
+#: ../system/integrations/github.rst:35
+#: ../system/integrations/gitlab.rst:39
 msgid "Token verification is taking a long time"
 msgstr ""
 
-#: ../system/integrations/github.rst:56
-#: ../system/integrations/gitlab.rst:49
+#: ../system/integrations/github.rst:32
+#: ../system/integrations/gitlab.rst:36
 msgid "Slight delays are normal (<2 min.), especially for systems under heavy load."
 msgstr ""
 
-#: ../system/integrations/github.rst:58
+#: ../system/integrations/github.rst:34
 msgid "Self-hosted administrators, please check your network settings to ensure that your Zammad server can reach ``api.github.com``."
 msgstr ""
 
-#: ../system/integrations/github.rst:62
-#: ../system/integrations/gitlab.rst:55
+#: ../system/integrations/github.rst:38
+#: ../system/integrations/gitlab.rst:42
 msgid "I reloaded the page and now the API token is gone"
 msgstr ""
 
-#: ../system/integrations/github.rst:62
-#: ../system/integrations/gitlab.rst:55
+#: ../system/integrations/github.rst:38
+#: ../system/integrations/gitlab.rst:42
 msgid "This may indicate that Zammad is still verifying your API token. Try reloading the page again in a couple minutes."
 msgstr ""
 
@@ -20779,7 +20839,7 @@ msgid "GitLab"
 msgstr ""
 
 #: ../system/integrations/gitlab.rst:4
-msgid "Use GitLab integration to track GitLab issues directly within Zammad tickets. Add issue hyperlinks and get a live summary of metadata like status (open/closed), assignee, labels, and more."
+msgid "Use GitLab integration to track GitLab issues directly within Zammad tickets. Add links to issues and get meta information like status (open/closed), assignee, labels and more."
 msgstr ""
 
 #: ../system/integrations/gitlab.rst:8
@@ -20791,38 +20851,30 @@ msgid "Integration page for GitLab"
 msgstr ""
 
 #: ../system/integrations/gitlab.rst:18
-msgid "In your GitLab preferences, create a new API token under **Access Tokens**."
+msgid "Create a new API token in your GitLab user settings under **Access Tokens**."
+msgstr ""
+
+#: ../system/integrations/gitlab.rst:19
+msgid "Add a name, set an expiration date and set the permission ``read_api``."
 msgstr ""
 
 #: ../system/integrations/gitlab.rst:20
-msgid "Under **Select scopes**, choose ``read_api`` only."
+msgid "Enter your new API token in Zammad and enable the GitLab integration. Use the default API endpoint (``https://gitlab.com/api/graphql``) unless you're a self-hosted GitLab user."
 msgstr ""
 
-#: ../system/integrations/gitlab.rst:27
+#: ../system/integrations/gitlab.rst:24
 msgid "🔒 **If you wish to link issues on any private repos...**"
 msgstr ""
 
-#: ../system/integrations/gitlab.rst:29
+#: ../system/integrations/gitlab.rst:26
 msgid "Your API token must belong to an account with access to those repos."
 msgstr ""
 
-#: ../system/integrations/gitlab.rst:31
-msgid "Enter your new API token in Zammad and enable GitLab integration."
-msgstr ""
-
-#: ../system/integrations/gitlab.rst:0
-msgid "Screencast showing how to configure Zammad's GitLab integration"
-msgstr ""
-
-#: ../system/integrations/gitlab.rst:40
-msgid "Use the default API endpoint (``https://gitlab.com/api/graphql``) unless you're a self-hosted GitLab user."
-msgstr ""
-
-#: ../system/integrations/gitlab.rst:43
+#: ../system/integrations/gitlab.rst:30
 msgid "Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉"
 msgstr ""
 
-#: ../system/integrations/gitlab.rst:51
+#: ../system/integrations/gitlab.rst:38
 msgid "Self-hosted administrators, please check your network settings to ensure that your Zammad server can reach ``gitlab.com``."
 msgstr ""
 
@@ -20831,96 +20883,88 @@ msgid "i-doit"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:4
-msgid "`i-doit <https://www.i-doit.com/>`_ is an open-source **configuration management database** - in other words, a tool for keeping tabs on every single piece of your physical and digital infrastructure, from network equipment to virtual machines on down to the faceplates on your rack shelves and more."
+msgid "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration management database) tool which is capable of managing information about your physical and digital IT infrastructure. If you use tickets to track issues with your IT components, you may want to connect them with your CMDB. With Zammad, you can do that in two ways!"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:10
-msgid "What's that got to do with Zammad? Well, if you used tickets to track issues with all that hardware, you might start wishing there was a way they could talk to each other."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:14
-msgid "Zammad gives you two:"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:17
+#: ../system/integrations/i-doit.rst:11
 msgid "1. Add i-doit Links to Zammad Tickets"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:20
-#: ../system/integrations/i-doit.rst:80
+#: ../system/integrations/i-doit.rst:14
+#: ../system/integrations/i-doit.rst:73
 msgid "What Users See"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:26
+#: ../system/integrations/i-doit.rst:20
 msgid "i-doit integration in Zammad's ticket pane"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:26
+#: ../system/integrations/i-doit.rst:20
 msgid "The i-doit integration will appear under a new 🖨 tab in the ticket pane."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:28
+#: ../system/integrations/i-doit.rst:22
 msgid "i-doit integration puts a new tab in Zammad's ticket pane where you can add links to existing i-doit devices for easy reference. (See our :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to learn how it works in practice)."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:36
-#: ../system/integrations/i-doit.rst:93
+#: ../system/integrations/i-doit.rst:29
+#: ../system/integrations/i-doit.rst:86
 msgid "How to Set it Up"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:38
+#: ../system/integrations/i-doit.rst:31
 msgid "It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_. Make sure to have it properly set up. Use the following setting:"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:42
+#: ../system/integrations/i-doit.rst:35
 msgid "Active: ``Yes``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:43
+#: ../system/integrations/i-doit.rst:36
 msgid "Enforce authentication by username and password: ``No``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:45
-msgid "To set it up, enable the integration in the Zammad admin panel under **System > Integrations > i-doit**:"
+#: ../system/integrations/i-doit.rst:38
+msgid "To set it up, enable the integration in the Zammad admin panel under *System > Integrations > i-doit*:"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:None
 msgid "i-doit settings within the integration pages"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:53
+#: ../system/integrations/i-doit.rst:46
 msgid "The root URL of your i-doit installation."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:62
+#: ../system/integrations/i-doit.rst:55
 msgid "API token"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:56
-msgid "Found in the i-doit admin panel under **Interfaces / external data > JSON-RPC API > Common Settings**."
+#: ../system/integrations/i-doit.rst:49
+msgid "Found in the i-doit admin panel under *Interfaces / external data > JSON-RPC API > Common Settings*."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:0
 msgid "i-doit administration interface with API configuration"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:67
+#: ../system/integrations/i-doit.rst:60
 msgid "Client ID"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:65
+#: ../system/integrations/i-doit.rst:58
 msgid "A unique name to identify Zammad within i-doit."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:67
+#: ../system/integrations/i-doit.rst:60
 msgid "(Zammad does not require you to enter a value here, but i-doit might!)"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:70
+#: ../system/integrations/i-doit.rst:63
 msgid "Here you can decide if the certificate of your i-doit system has to be verified or not. In case you are using custom certificates, please have a look at :doc:`how to add them to Zammad </settings/security/ssl-certificates>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:77
+#: ../system/integrations/i-doit.rst:70
 msgid "2. List / Create Zammad Tickets in i-doit"
 msgstr ""
 
@@ -20928,47 +20972,47 @@ msgstr ""
 msgid "Zammad integration in i-doit's device view"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:86
+#: ../system/integrations/i-doit.rst:79
 msgid "i-doit's ticket system integration gives you a way to see all the tickets for a given device without ever leaving i-doit. (See our :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to learn how it works in practice)."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:95
-msgid "Enable this integration in the i-doit admin panel under **Interfaces / external data > Trouble Ticket System (TTS) > Configuration**:"
+#: ../system/integrations/i-doit.rst:88
+msgid "Enable this integration in the i-doit admin panel under *Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:None
 msgid "i-doit administration interface with TTS configuration"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:104
+#: ../system/integrations/i-doit.rst:97
 msgid "TTS-Type"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:104
+#: ../system/integrations/i-doit.rst:97
 msgid "``Zammad``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:115
+#: ../system/integrations/i-doit.rst:108
 msgid "Username / Password"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:107
+#: ../system/integrations/i-doit.rst:100
 msgid "Login credentials for a Zammad agent."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:109
+#: ../system/integrations/i-doit.rst:102
 msgid "This agent must have **read permission** for all :doc:`groups </manage/groups/index>` that plan on using the i-doit integration."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:113
+#: ../system/integrations/i-doit.rst:106
 msgid "You may even wish to create a dedicated agent account just for this integration (otherwise, if the agent ever changes her password, you will have to remember to update it here)."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:117
+#: ../system/integrations/i-doit.rst:110
 msgid "URL incl. protocol"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:118
+#: ../system/integrations/i-doit.rst:111
 msgid "``https://your.zammad.domain``"
 msgstr ""
 
@@ -20980,55 +21024,55 @@ msgstr ""
 msgid "Zammad offers numerous integrations that add rich features to your instance."
 msgstr ""
 
-#: ../system/integrations/index.rst:6
-msgid "We're still working on this part of our documentation, stay tight!"
-msgstr ""
-
-#: ../system/integrations/index.rst:10
+#: ../system/integrations/index.rst:7
 msgid "Integrations for Phone Systems"
 msgstr ""
 
-#: ../system/integrations/index.rst:14
+#: ../system/integrations/index.rst:11
 msgid "Your VoIP provider or telephony system is not listed? Possibly your provider supports Zammad by using the generic CTI - if you're unsure ask your provider."
 msgstr ""
 
-#: ../system/integrations/index.rst:18
+#: ../system/integrations/index.rst:15
 msgid "Provider does not support Zammad? Consider creating a `feature request in the Zammad Community <https://community.zammad.org/c/stuff-you-like-zammad-to-have-feel-free-to-discuss-and-add-proposals/6>`_."
 msgstr ""
 
-#: ../system/integrations/index.rst:31
+#: ../system/integrations/index.rst:28
 msgid "Integrations for Authentication and Customers"
 msgstr ""
 
-#: ../system/integrations/index.rst:44
+#: ../system/integrations/index.rst:41
 msgid "Integrations for Monitoring Systems"
 msgstr ""
 
-#: ../system/integrations/index.rst:46
-msgid "This section currently misses the following integrations:"
+#: ../system/integrations/index.rst:45
+msgid "The documentation currently doesn't cover the following integrations:"
 msgstr ""
 
-#: ../system/integrations/index.rst:48
+#: ../system/integrations/index.rst:47
 msgid "Icinga"
 msgstr ""
 
-#: ../system/integrations/index.rst:49
+#: ../system/integrations/index.rst:48
 msgid "Monit"
 msgstr ""
 
-#: ../system/integrations/index.rst:50
+#: ../system/integrations/index.rst:49
 msgid "Nagios"
 msgstr ""
 
-#: ../system/integrations/index.rst:60
+#: ../system/integrations/index.rst:50
+msgid "For a guide about how to create tickets from Zabbix, head over to the :doc:`configuration guide </misc/zabbix>` outside of this integrations section."
+msgstr ""
+
+#: ../system/integrations/index.rst:61
 msgid "Integrations for Issue Trackers"
 msgstr ""
 
-#: ../system/integrations/index.rst:70
+#: ../system/integrations/index.rst:71
 msgid "Other Integrations"
 msgstr ""
 
-#: ../system/integrations/index.rst:72
+#: ../system/integrations/index.rst:73
 msgid "This section will hold any other integration that can't be grouped up (yet)."
 msgstr ""
 
@@ -21037,7 +21081,7 @@ msgid "LDAP / Active Directory"
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:4
-msgid "Zammad comes with a powerful LDAP integration that allows you to have a single source of truth. By this you reduce the number of login credentials your user has to remember."
+msgid "Zammad comes with a powerful LDAP integration that allows you to have a single source of truth. Using this integration reduces the number of login credentials your users have to remember."
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:10
@@ -21045,221 +21089,172 @@ msgid "The LDAP source is also a perfect candidate for Zammad's :docs:`Kerberos 
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:None
-msgid "Zammands LDAP management page"
+msgid "Screenshot shows Zammad's LDAP settings."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:25
-msgid "📝 :doc:`manage`"
+#: ../system/integrations/ldap/index.rst:22
+msgid "Before you continue, please note the following limitations:"
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:25
-msgid "Add, modify, remove or re-arrange your LDAP-Sources as needed."
+#: ../system/integrations/ldap/index.rst:24
+msgid "Mapping / synchronizing organizations is not possible"
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:30
-msgid "Before you continue, please note the following limitations."
-msgstr ""
-
-#: ../system/integrations/ldap/index.rst:32
-msgid "Mapping / Synchronizing organizations is not possible"
-msgstr ""
-
-#: ../system/integrations/ldap/index.rst:36
+#: ../system/integrations/ldap/index.rst:27
 msgid "You may want to consider using domain based assignments to overcome this issue. Learn more on :doc:`/manage/organizations/index`."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:39
-msgid "Zammad's LDAP sync is one way. Editing user settings or permissions may be overwritten upon the next sync depending on your configuration."
+#: ../system/integrations/ldap/index.rst:30
+msgid "Zammad's LDAP sync is one way. Edited user settings or permissions may be overwritten upon the next sync depending on your configuration."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:41
+#: ../system/integrations/ldap/index.rst:32
 msgid "Synchronizing user avatars from LDAP is not supported."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:42
+#: ../system/integrations/ldap/index.rst:33
 msgid "Unlike user filters, group filters cannot be changed."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:43
+#: ../system/integrations/ldap/index.rst:34
 msgid "When a user originates from an LDAP server, Zammad will try to verify the login credentials against LDAP first - if this fails Zammad will check its local database."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:49
+#: ../system/integrations/ldap/index.rst:39
 msgid "Users can have local passwords even if they're LDAP users! You can learn more about user accounts in general on :doc:`/manage/users/index`."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:53
-msgid "When several LDAP sources contain the same user (meaning the same email address), the user in question will be updated with every source configured. *The last LDAP source will win.*"
+#: ../system/integrations/ldap/index.rst:43
+msgid "When several LDAP sources contain the same user (meaning the same email address), the user in question will be updated with every source configured. The **last** LDAP source will win. See `Issue 4109 <https://github.com/zammad/zammad/issues/4109>`_ for more details."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:57
-msgid "This is subject to change with `Issue 4109 <https://github.com/zammad/zammad/issues/4109>`_ in the future."
+#: ../system/integrations/ldap/index.rst:48
+msgid "Synchronization statistics currently affect *all* configured LDAP sources. This also applies for newly added or updated sources. See `Issue 4108 <https://github.com/zammad/zammad/issues/4108>`_ for more details."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:52
+msgid "Zammad currently has limited fallback server support. You can workaround this by providing several sources - however, ensure to have the exact same configuration on your fallback. See `Issue 4107 <https://github.com/zammad/zammad/issues/4107>`_ for more information."
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:59
-msgid "Synchronization statistics currently affect *all* configured LDAP sources. This also applies for newly added or updated sources."
+msgid "Manage LDAP-Sources"
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:62
-msgid "This is subject to change with `Issue 4108 <https://github.com/zammad/zammad/issues/4108>`_ in the future."
+msgid "Add a New Source"
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:64
-msgid "Zammad currently has limited fallback server support. You can workaround this by providing several sources - however, ensure to have the exact same configuration on your fallback."
+msgid "Using the *New Source* button allows you to add new LDAP sources to your installation. You're not limited in the number of sources, however, keep in mind that many sources will also take more time to synchronize."
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:68
-msgid "This is subject to improve with `Issue 4107 <https://github.com/zammad/zammad/issues/4107>`_ in the future."
+msgid "You can choose between different encryption types, namely *SSL* and *STARTTLS* or none of them (\"*No SSL*\"). If you choose *SSL* or *STARTTLS*, Zammad will display an additional *SSL verification* option that allows you to disable the verification, e.g. for self-signed SSL certificates. You can also tell Zammad to use a different port by appending ``:<port number>`` to your hostname/IP."
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:75
-msgid "This section holds all requests Zammad handled for all LDAP sources. These entries can either contain synchronization information or logins (authentication attempts via Zammad's login interface)."
+#: ../system/integrations/ldap/index.rst:80
+msgid "Screenshot of configuring a new LDAP source with SSL encryption and SSL verification"
 msgstr ""
 
-#: ../system/integrations/ldap/index.rst:79
-msgid "By clicking on any request, Zammad will provide even more information. The provided information can be useful when something does not work as expected."
+#: ../system/integrations/ldap/index.rst:80
+msgid "New Source with SSL transport security enabled and certificate verification"
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:84
+msgid "Using a user filter can be a good idea if you only require a small subset of your LDAP users in Zammad. Because Active Directories are quite specific on how to filter for active users only, please see `Microsoft's documentation <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/>`_ for more information."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:90
+msgid "As every LDAP behaves differently on which attributes and how they are set, Zammad doesn't care about any flags."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:92
+msgid "Users that no longer are returned by your LDAP source will automatically be set to inactive. Zammad assumes that the user was deactivated."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:95
+msgid "Users will never be removed automatically! If you want to remove obsolete users, use :doc:`/system/data-privacy`."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:100
+msgid "*Do not* manually write paths of either LDAP attributes or groups. If Zammad does not display them, it either cannot find them or you have a lot of users that don't have the attributes populated."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:104
+msgid "Zammad will always only return attributes that are filled - this reduces the returned list of attributes greatly."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:None
+msgid "Screenshot showing adding of a new sample LDAP source"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:114
+msgid "If your LDAP system doesn't allow anonymous bind, Zammad detects it and provides you an editable \"Base DN\" *text* field instead of a prefilled *select* field."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:120
+msgid "In case your LDAP groups follow a hierarchy, you can choose to assign Zammad roles to all members of nested groups."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:123
+msgid "Simply set *Include nested* dropdown to *Yes* and all members of child groups will be considered for the role assignment."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:0
+msgid "Screenshot showing the nested groups option for the role assignment"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:132
+msgid "Review or Edit Existing Source"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:134
+msgid "Clicking on a LDAP source will provide a configuration and mapping overview."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:136
+msgid "If needed you can then use the *Change* button to update either the name, active state or the whole configuration. If you're changing the whole configuration, the dialogue will be identical to the source creation."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:142
+msgid "Did your LDAP server change? Different LDAP servers have different structures and default attributes. This causes the LDAP synchronization to likely fail. Consider removing the affected source and re-add it."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:147
+msgid "Change Order of LDAP Sources"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:149
+msgid "You can change the synchronization order for each source at any time. Zammad will synchronize the sources from top to bottom. To change the order, simply drag & drop the sources with the ≣ handle."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:154
+msgid "Remove a Source"
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:156
+msgid "If you no longer need an LDAP source or simply want to start over, you can remove it at any time. This will not remove synchronized users, synchronized data or permissions."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:160
+msgid "If you are not sure if you'd need the source later on, set it to inactive instead."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:166
+msgid "This section holds all requests Zammad handled for all LDAP sources. These entries can either contain synchronization information or logins (authentication attempts via Zammad's login interface)."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:170
+msgid "By clicking on any request, Zammad will provide even more information. The provided information can be useful when something does not work as expected."
+msgstr ""
+
+#: ../system/integrations/ldap/index.rst:175
 msgid "Especially a LDAP synchronization can cause many log entries. The web interface will always limit the number of shown entries to the last 50 entries."
 msgstr ""
 
 #: ../system/integrations/ldap/index.rst:None
 msgid "Screencast showing LDAP integration log entries and a detail view on\n"
 "an entry."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:2
-msgid "Manage LDAP-Sources"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:6
-msgid "Please keep in mind all current limitations for the LDAP synchronization. This will help to understand scopes of the following operations better."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:76
-msgid "Add new source"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:10
-msgid "Using the *New Source* button allows you to add new LDAP sources to your installation. You're not limited in the number of sources, however, keep in mind that many sources will also take more time to synchronize."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:14
-msgid "You can choose between different encryption types, namely *SSL* and *STARTTLS* or none of them (\"*No SSL*\"). If you choose *SSL* or *STARTTLS*, Zammad will display an additional *SSL verification* option that allows you to disable the verification, e.g. for self-signed SSL certificates. You can also tell Zammad to use a different port by appending ``:<port number>`` to your hostname/IP."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screenshot of configuring a new LDAP source with SSL encryption and SSL verification"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:26
-msgid "New Source with SSL transport security enabled and certificate verification"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:30
-msgid "Using a user filter can be a good idea if you only require a small subset of your LDAP users in Zammad."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:42
-msgid "This especially affects inactive users"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:34
-msgid "As every LDAP behaves differently on which attributes and how they are set, Zammad doesn't care about any flags."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:37
-msgid "Users that no longer are returned by your LDAP source will automatically be set to inactive. Zammad assumes that the user was deactivated."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:41
-msgid "Users will never be removed automatically! If you want to remove obsolete users, use :doc:`/system/data-privacy`."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:46
-msgid "Active Directory admins"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:45
-msgid "Active Directories are quite specific on how to filter for active users only - please see the `Microsoft documentation <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/>`_ for more information."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:51
-msgid "*Do not* manually write paths of either LDAP attributes or groups. If Zammad does not display them, it either cannot find them or you have a lot of users that don't have the attributes populated."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:55
-msgid "Zammad will always only return attributes that are filled - this reduces the returned list of attributes greatly."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screenshot showing adding of a new sample LDAP source"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:63
-msgid "If your LDAP system doesn't allow anonymous bind, Zammad detects it and provides you an editable \"Base DN\" *text* field instead of a prefilled *select* field."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:69
-msgid "In case your LDAP groups follow a hierarchy, you can choose to assign Zammad roles to all members of nested groups."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:72
-msgid "Simply set *Include nested* dropdown to *Yes* and all members of child groups will be considered for the role assignment."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screenshot showing the nested groups option for the role assignment"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:92
-msgid "Review or edit existing source"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:79
-msgid "Clicking on a LDAP source will provide a configuration and mapping overview."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:81
-msgid "If needed you can then use the *Change* button to update either the name, active state or the whole configuration. If you're changing the whole configuration, the dialogue will be identical to the source creation."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:87
-msgid "Did your LDAP server change? Different LDAP servers have different structures and default attributes. This causes the LDAP synchronization to likely fail. Consider removing the affected source and re-add it."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screencast showing the update of the source name."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:100
-msgid "Re-arrange LDAP source's order"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:95
-msgid "You can change the synchronization order for each source at any time. Zammad will synchronize the sources from top to bottom."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screencasting showing how to change the source order by using\n"
-"drag and drop."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:112
-msgid "Remove a source"
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:103
-msgid "If you no longer need an LDAP source or simply want to start over, you can remove it at any time. This will not remove synchronized users, synchronized data or permissions."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:109
-msgid "Not sure if you'd need the source later on? Set the source to inactive instead of removing it - see *Review or edit existing source* for more."
-msgstr ""
-
-#: ../system/integrations/ldap/manage.rst:0
-msgid "Screencast showing how to remove LDAP sources."
 msgstr ""
 
 #: ../system/integrations/pgp/index.rst:2
@@ -21579,7 +21574,7 @@ msgid "Once S/MIME has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons w
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:32
-msgid ":doc:`🔪 Prerequisites <prerequisites>`"
+msgid ":doc:`Prerequisites <prerequisites>`"
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:31
@@ -21587,7 +21582,7 @@ msgid "New to S/MIME? This section helps you to find certificate providers and p
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:35
-msgid ":doc:`📝 Manage Certificates <manage-certificates>`"
+msgid ":doc:`Manage Certificates <manage-certificates>`"
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:35
@@ -21595,7 +21590,7 @@ msgid "Add and download certificates; configure group default behaviors."
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:38
-msgid ":doc:`😦 Troubleshooting <troubleshooting>`"
+msgid ":doc:`Troubleshooting <troubleshooting>`"
 msgstr ""
 
 #: ../system/integrations/smime/index.rst:38
@@ -21727,114 +21722,102 @@ msgid "Of course, agents can always manually change these settings on each email
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:4
-msgid "A certificate *and* private key for your own organization"
+msgid "A certificate *and* private key for your own organization to **sign outgoing messages** and **decrypt incoming messages**."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:6
-msgid "(Use this to ✒️ **sign outgoing messages** and 🔓 **decrypt incoming messages**.)"
-msgstr ""
-
-#: ../system/integrations/smime/prerequisites.rst:9
-msgid "Certificates belonging your contacts, or their issuing certificate authority (CA)"
+#: ../system/integrations/smime/prerequisites.rst:7
+msgid "Certificates belonging your contacts, or their issuing certificate authority (CA) to **verify incoming message signatures** and **encrypt outgoing messages**."
 msgstr ""
 
 #: ../system/integrations/smime/prerequisites.rst:11
-msgid "(Use these to ✅ **verify incoming message signatures** and 🔒 **encrypt outgoing messages**.)"
+msgid "**Where can I get a certificate?**"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:14
-msgid "🙋 **I'm new to S/MIME. Where can I get a certificate?**"
-msgstr ""
-
-#: ../system/integrations/smime/prerequisites.rst:16
+#: ../system/integrations/smime/prerequisites.rst:13
 msgid "The easiest way to get certificates is to buy an annual subscription through a commercial CA, such as:"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:19
+#: ../system/integrations/smime/prerequisites.rst:16
 msgid "`Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-smime-certificate>`_"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:20
+#: ../system/integrations/smime/prerequisites.rst:17
 msgid "`Secorio <https://secorio.com/en/certificates/smime-email/>`_"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:21
+#: ../system/integrations/smime/prerequisites.rst:18
 msgid "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 msgstr ""
 
+#: ../system/integrations/smime/prerequisites.rst:20
+msgid "You can also generate your own self-signed certificates, but the process is complicated and usually **involves extra work for your contacts**."
+msgstr ""
+
 #: ../system/integrations/smime/prerequisites.rst:23
-msgid "(Zammad is not affiliated with these CAs in any way.)"
+msgid "Bear in mind that **S/MIME only works if the other party is using it, too.**"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:25
-msgid "You can also generate your own self-signed certificates, but the process is complicated and usually 🙅 **involves extra work for your contacts**."
-msgstr ""
-
-#: ../system/integrations/smime/prerequisites.rst:29
-msgid "Bear in mind that 🤝 **S/MIME only works if the other party is using it, too.**"
-msgstr ""
-
-#: ../system/integrations/smime/prerequisites.rst:32
+#: ../system/integrations/smime/prerequisites.rst:26
 msgid "Certificate and Private Key Checks on Upload"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:34
+#: ../system/integrations/smime/prerequisites.rst:28
 msgid "The certificate and public key validation is based on the ``X509v3`` extensions."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:49
+#: ../system/integrations/smime/prerequisites.rst:44
 msgid "Uploading a *client certificate*?"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:41
+#: ../system/integrations/smime/prerequisites.rst:32
 msgid "The following attributes are required then:"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:39
+#: ../system/integrations/smime/prerequisites.rst:34
 msgid "Subject Alternative Name (at least one email address has to be present)"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:40
+#: ../system/integrations/smime/prerequisites.rst:35
 msgid "Key Usage (``Digital Signature`` and/or ``Key Encipherment``)"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:41
+#: ../system/integrations/smime/prerequisites.rst:36
 msgid "Public key algorithm (either ``RSA`` or ``EC``)"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:43
+#: ../system/integrations/smime/prerequisites.rst:38
 msgid "The Extended Key Usage attribute is optional. If the certificate provides the named attribute, than it must contain the value ``E-mail Protection``."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:46
+#: ../system/integrations/smime/prerequisites.rst:41
 msgid "Please note that any usable email adress has to be prefixed with ``email:`` or ``rfc822:``."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:49
+#: ../system/integrations/smime/prerequisites.rst:44
 msgid "The named public key algorithms are mandatory for private keys as well."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:54
+#: ../system/integrations/smime/prerequisites.rst:49
 msgid "Uploading a *CA certificate*?"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:52
+#: ../system/integrations/smime/prerequisites.rst:47
 msgid "In the case of an uploaded CA certificate, providing the value ``CA:TRUE`` in the attribute *Basic Contstraints*, the previously mentioned attributes are not verified."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:56
+#: ../system/integrations/smime/prerequisites.rst:51
 msgid "In general, the usage of any expired (``Not After``) or not yet valid (``Not Before``) certificate is denied for outgoing emails."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:59
+#: ../system/integrations/smime/prerequisites.rst:54
 msgid "Example certificate:"
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:85
+#: ../system/integrations/smime/prerequisites.rst:80
 msgid "Please note that Zammad will distrust senders by default. This means that you're always required to provide certificate data, no matter if for signing or encrypting."
 msgstr ""
 
-#: ../system/integrations/smime/prerequisites.rst:89
+#: ../system/integrations/smime/prerequisites.rst:84
 msgid "This is by design and can't be adjusted."
 msgstr ""
 
@@ -21920,94 +21903,6 @@ msgstr ""
 
 #: ../system/integrations/smime/troubleshooting.rst:49
 msgid "Did you check if the provided file is a valid certificate or key?"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:2
-msgid "Zabbix Integration"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:5
-msgid "This guide describes how to integrate your Zabbix 5.4 installation with Zammad using the Zabbix webhook feature. This guide will provide instructions on setting up a media type, a user and an action in Zabbix."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:12
-msgid "Zammad with enabled HTTP Token Authentication"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:13
-msgid "Zabbix version 5.4 or higher"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:16
-msgid "Setting up a Zammad"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:18
-msgid "Enable **API Token Access** in Settings > System > API."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:20
-msgid "Create a **new user** for a Zabbix alerter with an **email address** and create a personal user token with **ticket.agent** permissions."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:24
-msgid "Zabbix Webhook Configuration"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:27
-msgid "Create a Global Macro"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:29
-msgid "Before setting up the **Webhook**, you need to setup the global macro **{$ZABBIX.URL}**, which must contain the **URL** to the **Zabbix frontend**."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:33
-msgid "In the **Administration** > **Media types** section, import the `Template`_."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:38
-msgid "Open the added **Zammad** media type and set:"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:40
-msgid "**zammad\\_access\\_token** to the your **Personal User Token**"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:41
-msgid "**zammad\\_url** to the **frontend URL** of your **Zammad** installation"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:43
-msgid "**zammad\\_customer** to your **Zammad user email**."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:44
-msgid "**zammad\\_enable\\_tags** to **true** or **false** to enable or disable trigger tags. **Important**: if you enable tag support, each tag is set with a separate request."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:48
-msgid "If you want to prioritize issues according to **severity** values in Zabbix, you can define mapping parameters:"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:51
-msgid "**severity\\_<name>**: Zammad priority ID"
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:53
-msgid "Click the **Update** button to save the **Webhook** settings."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:55
-msgid "To receive notifications in **Zammad**, you need to create a **Zabbix user** and add **Media** with the **Zammad** type."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:58
-msgid "For **Send to**: enter any text, as this value is not used, but is required."
-msgstr ""
-
-#: ../system/integrations/zabbix.rst:61
-msgid "For more information, use the `Zabbix documentation <https://www.zabbix.com/documentation/current/manual/config/notifications>`_."
 msgstr ""
 
 #: ../system/maintenance.rst:2

@@ -2,8 +2,8 @@ GitLab
 ======
 
 Use GitLab integration to track GitLab issues directly within Zammad tickets.
-Add issue hyperlinks and get a live summary of metadata
-like status (open/closed), assignee, labels, and more.
+Add links to issues and get meta information like status (open/closed),
+assignee, labels and more.
 
 Please note that our GitLab integration does not support merge requests.
 
@@ -15,30 +15,17 @@ Please note that our GitLab integration does not support merge requests.
 Setup
 -----
 
-1. In your GitLab preferences, create a new API token under **Access Tokens**.
-
-   Under **Select scopes**, choose ``read_api`` only.
-
-   .. figure:: /images/system/integrations/gitlab/add-api-token-gitlab.gif
-      :alt: Screencast showing how to create a new API token
-      :align: center
-      :width: 90%
-
-   .. hint:: 🔒 **If you wish to link issues on any private repos...**
-
-      Your API token must belong to an account with access to those repos.
-
-2. Enter your new API token in Zammad and enable GitLab integration.
-
-   .. figure:: /images/system/integrations/gitlab/configure-and-active-gitlab-integration.png
-      :alt: Screencast showing how to configure Zammad's GitLab integration
-      :align: center
-      :width: 90%
-
-   .. include:: /includes/ssl-verification-warning.rst
-
+1. Create a new API token in your GitLab user settings under **Access Tokens**.
+2. Add a name, set an expiration date and set the permission ``read_api``.
+3. Enter your new API token in Zammad and enable the GitLab integration.
    Use the default API endpoint (``https://gitlab.com/api/graphql``)
    unless you're a self-hosted GitLab user.
+
+.. hint:: 🔒 **If you wish to link issues on any private repos...**
+
+   Your API token must belong to an account with access to those repos.
+
+.. include:: /includes/ssl-verification-warning.rst
 
 Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
 
