@@ -3,9 +3,6 @@ Integrations
 
 Zammad offers numerous integrations that add rich features to your instance.
 
-.. note:: We're still working on this part of our documentation, stay tight!
-
-
 Integrations for Phone Systems
 ------------------------------
 
@@ -54,7 +51,6 @@ Integrations for Monitoring Systems
    :titlesonly:
 
    checkmk/index
-   zabbix
 
 Integrations for Issue Trackers
 -------------------------------
