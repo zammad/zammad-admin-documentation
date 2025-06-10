@@ -41,9 +41,9 @@ The default value is ``10``.
 
    Beside changing the user's password, you can also unlock accounts via
 
-      * :ref:`user management list <locked-user-accounts>`
-      * :docs:`console </admin/console/working-on-users.html>`
-      * :docs:`API </api/user.html>`
+      * :ref:`User management <locked-user-accounts>`
+      * :docs:`Console (system documentation) </admin/console/working-on-users.html>`
+      * :docs:`API (system documentation) </api/user.html>`
 
 .. hint::
 

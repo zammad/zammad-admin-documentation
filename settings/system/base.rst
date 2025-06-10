@@ -11,8 +11,8 @@ Fully Qualified Domain Name
    .. include:: /settings/system/system-base.include.rst
 
 HTTP type
-   The HTTP type tells your installation how your clients connect.
-   This is relevant for authentication and cookie security.
+   The HTTP type tells if your installation is accessible with transport layer
+   security (``https``) or not (``http``).
 
    This setting is used within :doc:`/misc/variables` and notifications.
 

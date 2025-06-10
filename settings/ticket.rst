@@ -7,11 +7,14 @@ composer interface can be found in the :doc:`/misc/composer`.
 Base
 ----
 
-Ticket Hook (default: ``Ticket#``)
+Ticket Hook
    The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#.
 
-Ticket Hook Position (default: ``right``)
-   With this setting you can decide (if) where to insert the ticket number.
+   Default: ``Ticket#``
+
+Ticket Hook Position
+   With this setting, you can decide if the ticket hook/number should be
+   included in the title and on which side it is inserted.
 
    *Right*
       This setting will add the ticket reference on the right site of the
@@ -37,7 +40,9 @@ Ticket Hook Position (default: ``right``)
       Disabling this and not setting up any further follow up search will lead
       to unexpected results!
 
-Ticket Last Contact Behaviour (default: ``Use the start time of the last customer thread (which may consist of multiple articles).``)
+   Default: ``right``
+
+Ticket Last Contact Behaviour
    This setting changes the way Zammad updates the ``Last Contact`` value of a
    ticket. This is fairly important for overviews and what you expect upon
    ticket updates of a customer.
@@ -64,7 +69,9 @@ Ticket Last Contact Behaviour (default: ``Use the start time of the last custome
       * - Last contact value used on :doc:`/manage/overviews`
         - Last contact value used on :doc:`/manage/trigger`
 
-Ticket Organization Reassignment (default: ``Update the most recent tickets.``)
+   Default: ``Use the start time of the last customer thread (which may consist of multiple articles).``
+
+Ticket Organization Reassignment
    This setting changes the way Zammad updates the organization field of the
    tickets whenever the primary organization of a user is changed.
 
@@ -87,10 +94,12 @@ Ticket Organization Reassignment (default: ``Update the most recent tickets.``)
          for all organization members of the original organization of the
          customer.
 
+   Default: ``Update the most recent tickets.``
+
 Number
 ------
 
-Ticket Number Format (default: ``Increment (SystemID.Counter)``)
+Ticket Number Format
    This setting defines the way Zammad's ticket number will look.
    Changing this setting in production will cause follow up detection to fail.
 
@@ -109,19 +118,23 @@ Ticket Number Format (default: ``Increment (SystemID.Counter)``)
 
       Examples: ``201206231010138``, ``201206231010139``
 
+   Default: ``Increment (SystemID.Counter)``
+
 OPTIONS
    The below options allow you to further customize your ticket number.
    The availability of options differ depending of the chosen ticket number
    format above.
 
-   Checksum (default: ``no``)
+   Checksum
       If set to yes, we'll built a checksum to further "unique" the ticket
       number of your system. If you're dealing with many other ticket systems
       this might help to prevent false positive follow up detection on tickets.
 
       This will also add another digit to the ticket number.
 
-   Min. size of Number (default: ``5``)
+      Default: ``no``
+
+   Min. size of Number
       This setting defines the minimum length of your ticket number. If your
       counter is not yet high enough, Zammad will fill the number with zeros
       to ensure the wanted length.
@@ -135,6 +148,7 @@ OPTIONS
       This option is only available if ticket number format is set to
       ``Increment``!
 
+      Default: ``5``
 
 .. _auto_assignment:
 
@@ -147,20 +161,20 @@ efficiency of processing can be increased by means of the automatic assignment
 of tickets when a ticket is opened.
 
 The automatic assignment of tickets can be activated and configured in the admin
-area under Settings > Ticket > Auto Assignment.
+area under *Settings > Ticket > Auto Assignment*.
 
 The auto assignment only works if the ticket has no owner yet. By
 default, the agent can always reset the ticket owner to ``-`` if needed.
 
 If you want to use this function for only specific tickets, you can configure
 the conditions accordingly to meet your requirement.
-By default the condition affects all tickets with the state ``open``.
+By default, the condition affects all tickets with the state ``open``.
 
-   .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
-If you need to exclude users (e.g. a group leader), you can search and select
-the desired agents in the ``Exception Users`` list. The search function in this
-area is only effective, if you have too many agents to display at once to help
+If you need to exclude users (e.g. a team leader), you can search and select
+the desired agents in the **Excepted Users** list. The search function in this
+area is only effective if you have too many agents to display at once to help
 you with the configuration.
 
 Language Detection
