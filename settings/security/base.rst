@@ -101,16 +101,18 @@ timeouts for e.g. admins, but not agents.
 
 Example
    Let's suppose you configured the following session timeouts
-      * default: 3 weeks
-      * admin: 2 weeks
-      * ticket.agent: 4 weeks
-      * ticket.customer: 1 week
 
-   This results in the following situations
-      - a user with ``admin`` permission will have a timeout of 2 weeks
-      - a user with ``admin`` and ``ticket.agent`` permissions will
-        have a timeout of 2 weeks
-      - a user with ``ticket.customer`` permission will have a timeout
-        of 1 week
-      - a user with neither ``admin``, ``ticket.agent`` nor
-        ``ticket.customer`` permissions will have a timeout of 3 weeks
+   - default: 3 weeks
+   - admin: 2 weeks
+   - ticket.agent: 4 weeks
+   - ticket.customer: 1 week
+
+   This results in the following situations:
+
+   - a user with ``admin`` permission will have a timeout of 2 weeks
+   - a user with ``admin`` and ``ticket.agent`` permissions will
+     have a timeout of 2 weeks
+   - a user with ``ticket.customer`` permission will have a timeout
+     of 1 week
+   - a user with neither ``admin``, ``ticket.agent`` nor
+     ``ticket.customer`` permissions will have a timeout of 3 weeks
