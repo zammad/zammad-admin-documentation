@@ -76,10 +76,8 @@ using it on.
 Re-arranging Conditions and Logic Blocks
 ----------------------------------------
 
-Use ≡ to drag conditions or logic blocks and drop them to the position desired.
-By using drag and drop, you won't need to remove and re-add conditions.
-
-Moving logic blocks will also move any condition and, if applicable,
+Use the ≡ handle to drag conditions or logic blocks and drop them to the desired
+position. Moving logic blocks will also move any condition and, if applicable,
 logic blocks that are below it.
 
 While you can adjust the order of conditions without any further logic
