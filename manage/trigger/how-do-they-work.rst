@@ -23,27 +23,29 @@ Triggers support two types of activators:
 Action
 ^^^^^^
 
-The execution is triggered by some actor.
-Either a user creating or updating the ticket. Or an external action,
-e.g. an email coming in.
+An action based trigger always requires a ticket update to run. This can be an
+update by an agent or even internal system updates like updated SLA times.
+See the explanation below for more details.
 
-Action activator may evaluate **conditions** in two modes:
+Selective
+   Checks if any attribute from the condition was updated. If yes, the
+   trigger runs. If the attributes from the condition weren't touched, the
+   trigger doesn't run.
 
-**Selective** execution
-   checks if any property that is included in conditions
-   was updated. If the action was other than update, it checks if conditions match.
+   **Example:** A trigger with a condition for priority **1 low** will run if
+   the ticket was changed to **1 low**.
 
-   **Example:** A selective action trigger which is listening on the
-   priority **1 low** will trigger if the ticket was changed to **1 low** or
-   got an new article in that priority state.
+Always
+   Checks if the current state of the ticket matches the condition. This means:
+   the trigger always runs when the ticket is updated, no matter what was
+   changed. This can lead to executing such a trigger more often.
 
-**Always** execution
-   checks if the current state of the ticket in question
-   matches conditions.
+   **Example:** A trigger with a condition for priority **1 low** will run if
+   the ticket was moved to another group while priority was set **1 low**.
 
-   **Example:** An always action trigger which is listening on the priority
-   **1 low** will trigger if the ticket was moved to another group while
-   priority was set **1 low**.
+   .. hint:: If in doubt, use **Selective**. The **Always** action activator can
+      lead to unexpected behavior, e.g. the trigger runs after internal system
+      changes of the ticket, which aren't visible in the ticket history.
 
 Time Event
 ^^^^^^^^^^
