@@ -1,7 +1,7 @@
 Ticket
 ======
 
-.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `community <https://community.zammad.org>`_.
 
 Below you can find all available ticket-based variables within Zammad.
 These can be called via triggers for example. If you're unsure if Zammad does support variables at the point you're at, you can try to type ``::`` to check.

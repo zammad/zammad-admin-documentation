@@ -1,7 +1,7 @@
 Config
 ======
 
-.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `community <https://community.zammad.org>`_.
 
 Below you'll find config related variables.
 These hold useful configuration information that you can use within e.g. triggers to show necessary information to your customer.
