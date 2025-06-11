@@ -1,12 +1,11 @@
 Sessions
 ========
 
-Sessions management allows reviewing currently known user sessions and allows
-to end these. The session timeout is affected by :ref:`security_session_timeout`
-configurations from security settings.
+The session management provides a list of currently known user sessions and
+allows you to end them. The :ref:`security_session_timeout` can be configured in
+the the security settings.
 
-.. figure:: /images/system/sessions/session-managenent.png
-   :width: 90%
+.. figure:: /images/system/sessions/session-management.png
    :align: center
    :alt: Screenshot showing Zammad's session management
 
