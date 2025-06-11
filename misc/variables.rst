@@ -75,7 +75,9 @@ lead to the output of the original (english) name of the state.
 Date and Time Formatting
 ------------------------
 
-The system (trigger/scheduler selected) locale and timezone predefines a default format of date and timestamp. This format is customizable by using the ``dt()`` method.
+The system (trigger/scheduler selected) locale and timezone predefines a default
+format of date and timestamp. This format is customizable by using the ``dt()``
+method.
 
 The method arguments are as follows:
 
@@ -88,8 +90,8 @@ The method arguments are as follows:
 | Monday, 2024-03-18 15:31 in the office
 
 .. hint:: If you want to use our example, make sure to paste the
-   string above without formatting (``CTRL+Shift+v``), otherwise it
-   won't work.
+   string above without formatting (:kbd:`CTRL` :kbd:`Shift` :kbd:`v`),
+   otherwise it won't work.
 
 The following table lists available format directives:
 
