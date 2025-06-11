@@ -1,32 +1,26 @@
 Prerequisites
 =============
 
-* A certificate *and* private key for your own organization
+* A certificate *and* private key for your own organization to **sign outgoing
+  messages** and **decrypt incoming messages**.
 
-   (Use this to ✒️ **sign outgoing messages**
-   and 🔓 **decrypt incoming messages**.)
+* Certificates belonging your contacts, or their issuing certificate authority
+  (CA) to **verify incoming message signatures** and **encrypt outgoing
+  messages**.
 
-* Certificates belonging your contacts, or their issuing certificate authority (CA)
+.. note:: **Where can I get a certificate?**
 
-   (Use these to ✅ **verify incoming message signatures**
-   and 🔒 **encrypt outgoing messages**.)
-
-.. note:: 🙋 **I'm new to S/MIME. Where can I get a certificate?**
-
-   The easiest way to get certificates
-   is to buy an annual subscription through a commercial CA, such as:
+   The easiest way to get certificates is to buy an annual subscription through
+   a commercial CA, such as:
 
       * `Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-smime-certificate>`_
       * `Secorio <https://secorio.com/en/certificates/smime-email/>`_
       * `GlobalSign <https://shop.globalsign.com/en/secure-email>`_
 
-   (Zammad is not affiliated with these CAs in any way.)
+   You can also generate your own self-signed certificates, but the process is
+   complicated and usually **involves extra work for your contacts**.
 
-   You can also generate your own self-signed certificates,
-   but the process is complicated
-   and usually 🙅 **involves extra work for your contacts**.
-
-   Bear in mind that 🤝 **S/MIME only works if the other party is using it, too.**
+   Bear in mind that **S/MIME only works if the other party is using it, too.**
 
 Certificate and Private Key Checks on Upload
 --------------------------------------------
@@ -36,9 +30,10 @@ extensions.
 
 Uploading a *client certificate*?
    The following attributes are required then:
-    * Subject Alternative Name (at least one email address has to be present)
-    * Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
-    * Public key algorithm (either ``RSA`` or ``EC``)
+
+   * Subject Alternative Name (at least one email address has to be present)
+   * Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
+   * Public key algorithm (either ``RSA`` or ``EC``)
 
    The Extended Key Usage attribute is optional. If the certificate provides
    the named attribute, than it must contain the value ``E-mail Protection``.

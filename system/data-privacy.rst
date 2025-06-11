@@ -1,16 +1,13 @@
 Data Privacy
 ============
 
-For compliance with GDPR and other data privacy laws,
-you may wish to **permanently delete users from the system**,
-along with **all of their associated tickets**.
+For compliance with GDPR and other data privacy laws, you can **permanently
+delete users from the system**, along with **all of their associated tickets**.
+To access this section, ``admin.data_privacy`` permission is required.
 
 You can create manual deletion tasks or even automated deletion tasks for
 tickets and users based on custom conditions via
 :doc:`scheduler </manage/scheduler>`!
-
-Access to this panel requires ``admin.data_privacy`` permissions
-(introduced in Zammad 3.5).
 
 On older systems that have not been updated yet, customers can also be
 :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`.
@@ -35,8 +32,8 @@ Deleting Users via GUI
 
 .. note:: **The following records cannot be deleted:**
 
-  * your own account
-  * the system's last remaining administrator account
+  * Your own account
+  * The system's last remaining administrator account
 
 Step 1: Find a User / Confirm Deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -3,9 +3,6 @@ Integrations
 
 Zammad offers numerous integrations that add rich features to your instance.
 
-.. note:: We're still working on this part of our documentation, stay tight!
-
-
 Integrations for Phone Systems
 ------------------------------
 
@@ -43,18 +40,22 @@ Integrations for Authentication and Customers
 Integrations for Monitoring Systems
 -----------------------------------
 
-.. note:: This section currently misses the following integrations:
+.. note::
 
-   * Icinga
-   * Monit
-   * Nagios
+   - The documentation currently doesn't cover the following integrations:
+
+     - Icinga
+     - Monit
+     - Nagios
+   - For a guide about how to create tickets from Zabbix, head over to the
+     :doc:`configuration guide </misc/zabbix>` outside of this integrations
+     section.
 
 .. toctree::
    :maxdepth: 1
    :titlesonly:
 
    checkmk/index
-   zabbix
 
 Integrations for Issue Trackers
 -------------------------------

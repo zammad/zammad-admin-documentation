@@ -85,7 +85,7 @@ Please also have a look at our :doc:`limitations` to be safe
 from surprises.
 
 Available Operators
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 The availability of operators depends on the object type and scope.
 
@@ -177,7 +177,7 @@ If set to ``no`` (default), further workflows will be executed if they match the
 condition. In this case, it is possible that your actions from the current
 workflow can be overwritten by another workflow.
 
-If set to ``yes``, no further worflows will be executed after the
+If set to ``yes``, no further workflows will be executed after the
 current one.
 
 Priority

@@ -2,9 +2,9 @@ Objects
 =======
 
 In Zammad you can add your own fields to tickets, users, organizations and even
-groups (these are called "objects"). This can be useful if you need to add
-further information to a ticket or any other object in Zammad and the
-information doesn't fit in any existing field.
+groups (these are called "objects"). These fields are called object attributes.
+This can be useful if you need to add further information to a ticket or any
+other object in Zammad and the information doesn't fit in any existing field.
 
 .. note::
 
@@ -39,18 +39,18 @@ trash bin on the right side) just by clicking on them.
 Ordering Attributes
 -------------------
 
-Since Zammad introduced :doc:`/system/core-workflows` the need to have a
-custom positioning for attributes has become more important than ever.
-
-To adjust the position of such an attribute, simply click on the attribute
-entry in question, scroll down and adjust the position number. Please note that
-you cannot change the positioning of default attributes.
-
+You can (re-)arrange the attribute order in the UI by specifying a number that
+Zammad uses for ordering. The relevant field is called **Position**. It even
+allows you to insert custom object attributes between the default attributes.
 In case two attributes have the same position value, Zammad will sort
 alphabetically by name automatically.
 
+Please note that you cannot change the positioning of default attributes.
+
 .. figure:: /images/system/objects/object-positioning.png
    :alt: Screenshot showing custom attribute entries ordered in between default ones
+   :align: center
+   :scale: 70%
 
 Updating Database After Adding or Editing Attributes
 ----------------------------------------------------
@@ -72,6 +72,7 @@ to do this kind of configuration during maintenance windows.
 
 .. figure:: /images/system/objects/update-database.png
    :align: center
+   :scale: 70%
 
    Changes on objects require you to update the database
    to apply these changes.
@@ -94,6 +95,7 @@ can lead to unwanted behavior in some cases.
 
 .. figure:: /images/system/objects/ticket-state/highlighted-state-attribute.png
    :align: center
+   :scale: 60%
    :alt: Screenshot showing highlighted ticket state attribute
 
 Handling of states
@@ -190,7 +192,7 @@ Ticket state example
 
    .. figure:: /images/system/objects/ticket-state/creation-dialog-ticket-state.png
       :alt: Screenshot showing ticket state creation dialog with example
-      :scale: 80%
+      :scale: 70%
       :align: center
 
 .. _ticket-priority-reference:
@@ -205,6 +207,7 @@ ticket tab:
 .. figure:: /images/system/objects/ticket-priority/highlighted-priority-attribute.png
    :align: center
    :alt: Screenshot showing highlighted ticket priority attribute
+   :scale: 60%
 
 Handling of priorities
    In the priority configuration screen, you can add new priorities, disable
@@ -212,7 +215,7 @@ Handling of priorities
 
    .. figure:: /images/system/objects/ticket-priority/table-ticket-priorities-default.png
       :align: center
-      :scale: 80%
+      :scale: 70%
       :alt: Screenshot showing table of default ticket priorities
 
    To add a new priority, click on the "New Priority" button in the top right

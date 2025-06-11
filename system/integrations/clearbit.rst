@@ -4,17 +4,21 @@ Clearbit
 With our Clearbit integration, you can easily enrich the information provided
 by Zammad. If the customers or agents email address is known to Clearbit,
 it will share all information it has regarding the user with Zammad.
-Those information can include the following:
+
+Introduction
+------------
+
+Information from Clearbit can include:
 
    * Avatar
    * Address information
    * Website information
-   * A BIO (as Note by default)
+   * A bio (as note by default)
 
 If needed, you can add further custom objects and add mappings to them, so the
 Clearbit information can be filled within the database. In general you can get
-any information from Clearbit, as long as you have a mapping to an Zammad
-object.
+any information from Clearbit, as long as you have a mapping to a Zammad
+object attribute.
 
 .. hint::
 
@@ -31,16 +35,14 @@ Configuration
 -------------
 
 The configuration of Clearbit is really easy and done fast! Just login to your
-Clearbit-Account, go to "API" and copy the secret-API-Key.
+Clearbit-Account, go to **API** and copy the secret API key.
 
-.. image:: /images/system/integrations/clearbit/api-key.jpg
-
-Now change to your Zammad instance, go to Integrations (System) -> Clearbit in
+Now switch to your Zammad instance, go to *System > Integrations > Clearbit* in
 the admin panel.
 Paste your API-Key into the API-Key-Field and decide if Zammad should create
-unknown Organizations automatically, if the user does not have one yet
+unknown organizations automatically, if the user does not have one already
 (and Clearbit knows it). The shared option decides if the new organizations
-Zammad creates with Clearbit should be shared ones.
+should be shared ones.
 
 .. note::
 
@@ -49,7 +51,7 @@ Zammad creates with Clearbit should be shared ones.
 
 .. image:: /images/system/integrations/clearbit/configure-zammad.png
 
-The Mapping option works similar to the mapping within the Exchange and LDAP
+The mapping option works similar to the mapping within the Exchange and LDAP
 sync. You can add further mappings for e.g. custom fields if you need
 more information that Clearbit can provide.
 
@@ -70,22 +72,10 @@ Clearbit API as users contact you.
 
 .. image:: /images/system/integrations/clearbit/zammad-mapping.png
 
-Below the Settings and Mappings, you'll find our Integration log. You can see
-what requests Zammad sent to Clearbit and also the APIs Response.
+Below the setting and mapping section, you can find the integration logs. You
+can see what requests Zammad sent to Clearbit and also the APIs response.
 
 .. image:: /images/system/integrations/clearbit/zammad-log.jpg
 
 By the way, you can also view the API log on the Clearbit website - the
 information seen is basically the same.
-
-.. image:: /images/system/integrations/clearbit/api-log.jpg
-
-Example When Adding a User
---------------------------
-
-To show you how fast information is added, we added a small Screencast below.
-This shows the creation of the User Alex from Clearbit. As we already set the
-last name of Alex to "X", Zammad did not update it. What Zammad did was
-to add further information it received from Clearbit.
-
-.. image:: /images/system/integrations/clearbit/automatic-user-additions.gif
