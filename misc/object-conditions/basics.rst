@@ -8,13 +8,14 @@ This page describes the attribute checks you can execute for different object
 attributes. You can use these checks in different places in Zammad like
 :doc:`triggers </manage/trigger>` or defining
 :doc:`overviews </manage/overviews>`. Please note that the available attributes
-and the condition operators depend on the object and where you want to use it.
+and the condition operators depend on the object context and where you want to
+use it.
 
 With these object attribute conditions you should be able to create quite
 complex conditions. However, if you need to have additional AND/OR relations
 for your conditions, have a look at the
-:doc:`expert conditions </misc/object-conditions/expert-mode>` section, where
-you can find a description how to use them.
+:doc:`expert mode </misc/object-conditions/expert-mode>` section, where
+you can find a description how to use it.
 
 Object Types
 ------------
@@ -28,7 +29,7 @@ The default basic objects in Zammad are:
 - Group
 
 Within these 4 objects, you can even create your
-:doc:`own attributes </system/objects>` and use them for
+:doc:`own custom attributes </system/objects>` and use them for
 conditions. However, there are more object types and special context depending
 on the feature you want to create a condition:
 
@@ -40,12 +41,10 @@ on the feature you want to create a condition:
 Attribute Types
 ---------------
 
-Depending on the attribute type, you can choose
-from different operators to execute checks and build your conditions.
-
-Have a look below where you can find a table with special functions which you
-can see as some kind of attribute type and a a listing of attribute types you
-can use in conditions in Zammad.
+Depending on the attribute type, you can choose from different operators to
+execute checks and build your conditions. Have a look below where you can find
+a table with special functions followed by a listing of attribute types and
+their operators.
 
 Special Fields
 ^^^^^^^^^^^^^^

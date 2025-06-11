@@ -1,27 +1,21 @@
 Expert Mode
 ===========
 
-.. warning:: **🚧 Hosted environment specific limitation 🚧**
-
-   AND / OR (expert mode) for ticket conditions are only available for
-   **Plus** package users.
+.. note::
+   - This function is only available in self hosted instances and for cloud
+     users with a **Plus** package.
+   - Up to three layers of conditions are supported.
 
 Enabling the *expert mode* within your ticket conditions allows you to use
-*AND / OR* conditions for any supported method. You can decide which workflow
-requires this enhanced configuration individually. This section expects that
-you had a look at :doc:`basics` already.
-
-Limitation
-----------
-
-Zammad offers up to three layers of conditions allowing you to configure
-very detailed and complex conditions.
+**AND / OR / NOT** operators for any supported method. You can decide which
+workflow requires this enhanced configuration individually. This section expects
+that you had a look at :doc:`basics` already.
 
 Switching to Expert Mode
 ------------------------
 
 You can enable or disable *expert mode* in any supported condition screen.
-To do so, simply use the *expert mode* button on the lower right below the
+To do so, simply use the *expert mode* toggle on the lower right below the
 *conditions for affected objects* area.
 
 .. figure:: /images/misc/object-conditions/enable_expert-mode.gif
@@ -30,22 +24,22 @@ To do so, simply use the *expert mode* button on the lower right below the
 Logic Block Conditions
 ----------------------
 
-Zammad's condition expert mode allows you to use logic blocks.
-These blocks enable you to have one or several sets of conditions that
-have to match your requirement. These blocks allow matching as *and / or* and
-*no match*.
+In Zammad's expert mode, you can establish relationships between conditions
+using logical operators. These operators enable you to have one or several sets
+of conditions that have to match your requirement.
 
 Match all (AND)
    All conditions in this block will be matched with "AND".
    This requires all conditions to be met in order to be matched positive.
 
 Match any (OR)
-   Any condition in this block will be matched with "OR".
-   This requires one condition to be met in order to be matched positive.
+   Conditions in this block will be matched with "OR".
+   This requires one or more conditions - but not all - to be met in order to
+   be matched positive.
 
 Match none (NOT)
-   All conditions in this block will be matched with "AND".
-   To be matched positive, no or any condition may match - but not all together.
+   All conditions in this block will be matched with "NOT".
+   To be matched positive, no condition may match.
 
 See :ref:`evaluation order <evaluation-order>` to understand how Zammad
 evaluates triggers in expert mode.
@@ -53,7 +47,7 @@ evaluates triggers in expert mode.
 Adding Conditions and Logic Blocks
 ----------------------------------
 
-By using the |subclause| icon you can add as many logic blocks as you need.
+By using the |subclause| icon you can add new logic blocks.
 New blocks will be added below the object you're using the |subclause| icon on.
 
 The level will be automatically set to a lower level than the object you're
