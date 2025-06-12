@@ -28,6 +28,10 @@ Ticket title changes not supported in edit mask
    It is currently not possible to perform changes of the ticket title in the
    edit mask (e.g. renaming, set to read-only).
 
+Ticket text changes not supported in edit mask
+   It is currently not possible to perform changes of the ticket text in the
+   edit mask (e.g. set to read-only).
+
 What is out of scope of Core Workflows?
    There are some things that would count as workflow but are either done via
    :doc:`/manage/trigger` or :doc:`/manage/scheduler`.
