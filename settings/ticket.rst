@@ -12,6 +12,9 @@ Ticket Hook
 
    Default: ``Ticket#``
 
+   If you change the ticket hook on a system with production data, you have to
+   :docs:`rebuild the Elasticsearch search index </install/elasticsearch.html#es-rebuild-searchindex>`.
+
 Ticket Hook Position
    With this setting, you can decide if the ticket hook/number should be
    included in the title and on which side it is inserted.
