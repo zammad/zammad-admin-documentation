@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 16:33+0200\n"
+"POT-Creation-Date: 2025-06-12 16:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9930,7 +9930,7 @@ msgstr ""
 
 #: ../manage/time-accounting.rst:150
 #: ../manage/time-accounting.rst:164
-#: ../settings/ticket.rst:103
+#: ../settings/ticket.rst:97
 msgid "Number"
 msgstr ""
 
@@ -11946,11 +11946,8 @@ msgstr ""
 msgid "This setting affects all article types within UI, no matter if the article exists already or it's still a writing draft."
 msgstr ""
 
-#: ../misc/composer.rst:35
-#: ../misc/composer.rst:47
-#: ../misc/composer.rst:57
-#: ../settings/ticket.rst:138
-msgid "Default: ``no``"
+#: ../misc/composer.rst:37
+msgid "Email - subject field (default: ``no``)"
 msgstr ""
 
 #: ../misc/composer.rst:32
@@ -15249,12 +15246,6 @@ msgstr ""
 msgid "CSV output (reporting, time accounting)"
 msgstr ""
 
-#: ../settings/branding.rst:27
-#: ../settings/branding.rst:39
-#: ../settings/ticket.rst:222
-msgid "Notifications"
-msgstr ""
-
 #: ../settings/branding.rst:30
 msgid "Define the timezone of your Zammad installation."
 msgstr ""
@@ -17431,22 +17422,22 @@ msgid "Here you can adjust general ticket settings. Additional ones for the tick
 msgstr ""
 
 #: ../settings/ticket.rst:16
-msgid "Ticket Hook"
+msgid "Ticket Hook (default: ``Ticket#``)"
 msgstr ""
 
 #: ../settings/ticket.rst:11
 msgid "The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#."
 msgstr ""
 
-#: ../settings/ticket.rst:38
-msgid "Ticket Hook Position (default: ``right``)"
+#: ../settings/ticket.rst:13
+msgid "Default: ``Ticket#``"
 msgstr ""
 
 #: ../settings/ticket.rst:15
 msgid "If you change the ticket hook on a system with production data, you have to :docs:`rebuild the Elasticsearch search index </install/elasticsearch.html#es-rebuild-searchindex>`."
 msgstr ""
 
-#: ../settings/ticket.rst:46
+#: ../settings/ticket.rst:44
 msgid "Ticket Hook Position"
 msgstr ""
 
@@ -17494,219 +17485,199 @@ msgstr ""
 msgid "Disabling this and not setting up any further follow up search will lead to unexpected results!"
 msgstr ""
 
-#: ../settings/ticket.rst:46
-msgid "Default: ``right``"
+#: ../settings/ticket.rst:71
+msgid "Ticket Last Contact Behaviour (default: ``Use the start time of the last customer thread (which may consist of multiple articles).``)"
 msgstr ""
 
-#: ../settings/ticket.rst:75
-msgid "Ticket Last Contact Behaviour"
-msgstr ""
-
-#: ../settings/ticket.rst:49
+#: ../settings/ticket.rst:47
 msgid "This setting changes the way Zammad updates the ``Last Contact`` value of a ticket. This is fairly important for overviews and what you expect upon ticket updates of a customer."
 msgstr ""
 
-#: ../settings/ticket.rst:60
+#: ../settings/ticket.rst:58
 msgid "Use the start time of the last customer thread (which may consist of multiple articles)."
 msgstr ""
 
-#: ../settings/ticket.rst:54
+#: ../settings/ticket.rst:52
 msgid "If this option is chosen, Zammad will update the last updated value just once if a customer replies. After that, Zammad will wait for an agent to react."
 msgstr ""
 
-#: ../settings/ticket.rst:58
+#: ../settings/ticket.rst:56
 msgid "This comes in handy if you want to work tickets in the order of their first update. This will not change ticket orders if customers decide to \"bump\" the ticket affected."
 msgstr ""
 
-#: ../settings/ticket.rst:65
+#: ../settings/ticket.rst:63
 msgid "Use the time of the very last customer article."
 msgstr ""
 
-#: ../settings/ticket.rst:63
+#: ../settings/ticket.rst:61
 msgid "When setting this option, Zammad will always update the last updated value. This means that if ordering by ``Last Update``, ticket orders will change if customers \"bump\" the ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:72
+#: ../settings/ticket.rst:70
 msgid "Last contact value used on :doc:`/manage/overviews`"
 msgstr ""
 
-#: ../settings/ticket.rst:73
+#: ../settings/ticket.rst:71
 msgid "Last contact value used on :doc:`/manage/trigger`"
 msgstr ""
 
-#: ../settings/ticket.rst:75
-msgid "Default: ``Use the start time of the last customer thread (which may consist of multiple articles).``"
+#: ../settings/ticket.rst:94
+msgid "Ticket Organization Reassignment (default: ``Update the most recent tickets.``)"
 msgstr ""
 
-#: ../settings/ticket.rst:100
-msgid "Ticket Organization Reassignment"
-msgstr ""
-
-#: ../settings/ticket.rst:78
+#: ../settings/ticket.rst:74
 msgid "This setting changes the way Zammad updates the organization field of the tickets whenever the primary organization of a user is changed."
 msgstr ""
 
-#: ../settings/ticket.rst:84
+#: ../settings/ticket.rst:80
 msgid "Update the most recent tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:82
+#: ../settings/ticket.rst:78
 msgid "If this option is chosen, Zammad will update the 100 most recent tickets where the user is the ticket customer. The ticket organization field will be automatically set to the new primary organization of the user."
 msgstr ""
 
-#: ../settings/ticket.rst:98
+#: ../settings/ticket.rst:94
 msgid "Do not update any tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:87
+#: ../settings/ticket.rst:83
 msgid "When choosing this option, Zammad will not update any tickets when the user's primary organization is changed."
 msgstr ""
 
-#: ../settings/ticket.rst:90
+#: ../settings/ticket.rst:86
 msgid "**Use with care!**"
 msgstr ""
 
-#: ../settings/ticket.rst:92
+#: ../settings/ticket.rst:88
 msgid "Using this option may lead to inconsistencies in the system as the ticket organization may become decoupled from the ticket customer."
 msgstr ""
 
-#: ../settings/ticket.rst:95
+#: ../settings/ticket.rst:91
 msgid "However, you may use this option if you wish to maintain :ref:`the shared access <organization-details-reference>` to the ticket for all organization members of the original organization of the customer."
 msgstr ""
 
+#: ../settings/ticket.rst:116
+msgid "Ticket Number Format (default: ``Increment (SystemID.Counter)``)"
+msgstr ""
+
 #: ../settings/ticket.rst:100
-msgid "Default: ``Update the most recent tickets.``"
-msgstr ""
-
-#: ../settings/ticket.rst:124
-msgid "Ticket Number Format"
-msgstr ""
-
-#: ../settings/ticket.rst:106
 msgid "This setting defines the way Zammad's ticket number will look. Changing this setting in production will cause follow up detection to fail."
 msgstr ""
 
-#: ../settings/ticket.rst:114
+#: ../settings/ticket.rst:108
 msgid "Increment (SystemID.Counter)"
 msgstr ""
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:104
 msgid "The increment value contains the SystemID (automatically generated during installation) and a increment which counts up with every new Ticket. The increment will automatically get another digit if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:114
+#: ../settings/ticket.rst:108
 msgid "Examples: ``1010138``, ``1010139``"
 msgstr ""
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:116
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr ""
 
-#: ../settings/ticket.rst:117
+#: ../settings/ticket.rst:111
 msgid "This version of the ticket number is fairly long. However, because it contains the date of ticket creation, it also allows you to see when the ticket has been created. You may feel familiar with this number format if you've worked with OTRS already."
 msgstr ""
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:116
 msgid "Examples: ``201206231010138``, ``201206231010139``"
 msgstr ""
 
-#: ../settings/ticket.rst:124
-msgid "Default: ``Increment (SystemID.Counter)``"
-msgstr ""
-
-#: ../settings/ticket.rst:154
+#: ../settings/ticket.rst:143
 msgid "OPTIONS"
 msgstr ""
 
-#: ../settings/ticket.rst:127
+#: ../settings/ticket.rst:119
 msgid "The below options allow you to further customize your ticket number. The availability of options differ depending of the chosen ticket number format above."
 msgstr ""
 
-#: ../settings/ticket.rst:138
-msgid "Checksum"
+#: ../settings/ticket.rst:128
+msgid "Checksum (default: ``no``)"
 msgstr ""
 
-#: ../settings/ticket.rst:132
+#: ../settings/ticket.rst:124
 msgid "If set to yes, we'll built a checksum to further \"unique\" the ticket number of your system. If you're dealing with many other ticket systems this might help to prevent false positive follow up detection on tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:136
+#: ../settings/ticket.rst:128
 msgid "This will also add another digit to the ticket number."
 msgstr ""
 
-#: ../settings/ticket.rst:154
-msgid "Min. size of Number"
+#: ../settings/ticket.rst:143
+msgid "Min. size of Number (default: ``5``)"
 msgstr ""
 
-#: ../settings/ticket.rst:141
+#: ../settings/ticket.rst:131
 msgid "This setting defines the minimum length of your ticket number. If your counter is not yet high enough, Zammad will fill the number with zeros to ensure the wanted length."
 msgstr ""
 
-#: ../settings/ticket.rst:145
+#: ../settings/ticket.rst:135
 msgid "Please note that the minimum length is ``3`` (SystemID + at least one digit if below 10). Also, if the length is no longer long enough, the number will automatically get one digit longer. Ticket-Numbers **do not overflow**, thus it's save to keep it at 5 or set it lower if wanted."
 msgstr ""
 
-#: ../settings/ticket.rst:151
+#: ../settings/ticket.rst:141
 msgid "This option is only available if ticket number format is set to ``Increment``!"
 msgstr ""
 
-#: ../settings/ticket.rst:154
-msgid "Default: ``5``"
-msgstr ""
-
-#: ../settings/ticket.rst:159
+#: ../settings/ticket.rst:148
 msgid "Auto-Assignment"
 msgstr ""
 
-#: ../settings/ticket.rst:161
+#: ../settings/ticket.rst:150
 msgid "In a larger Zammad environment, it happens that several agents open the same ticket at the same time. Although collision detection is then effective, the efficiency of processing can be increased by means of the automatic assignment of tickets when a ticket is opened."
 msgstr ""
 
-#: ../settings/ticket.rst:166
-msgid "The automatic assignment of tickets can be activated and configured in the admin area under *Settings > Ticket > Auto Assignment*."
+#: ../settings/ticket.rst:155
+msgid "The automatic assignment of tickets can be activated and configured in the admin area under Settings > Ticket > Auto Assignment."
 msgstr ""
 
-#: ../settings/ticket.rst:169
+#: ../settings/ticket.rst:158
 msgid "The auto assignment only works if the ticket has no owner yet. By default, the agent can always reset the ticket owner to ``-`` if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:172
-msgid "If you want to use this function for only specific tickets, you can configure the conditions accordingly to meet your requirement. By default, the condition affects all tickets with the state ``open``."
+#: ../settings/ticket.rst:161
+msgid "If you want to use this function for only specific tickets, you can configure the conditions accordingly to meet your requirement. By default the condition affects all tickets with the state ``open``."
 msgstr ""
 
-#: ../settings/ticket.rst:178
-msgid "If you need to exclude users (e.g. a team leader), you can search and select the desired agents in the **Excepted Users** list. The search function in this area is only effective if you have too many agents to display at once to help you with the configuration."
+#: ../settings/ticket.rst:167
+msgid "If you need to exclude users (e.g. a group leader), you can search and select the desired agents in the ``Exception Users`` list. The search function in this area is only effective, if you have too many agents to display at once to help you with the configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:184
+#: ../settings/ticket.rst:173
 msgid "Language Detection"
 msgstr ""
 
-#: ../settings/ticket.rst:186
+#: ../settings/ticket.rst:175
 msgid "Zammad offers a built in language detection for articles. By default, it is turned off. Turn it on by selecting a backend service and confirm by clicking **Submit**."
 msgstr ""
 
-#: ../settings/ticket.rst:190
+#: ../settings/ticket.rst:179
 msgid "After enabling it, Zammad tries to detect the language of each **new** article. The language is not detected for existing articles."
 msgstr ""
 
-#: ../settings/ticket.rst:194
+#: ../settings/ticket.rst:183
 msgid "Currently, there is only one backend service available: `Compact Language Detection <https://github.com/jtoy/cld>`_."
 msgstr ""
 
-#: ../settings/ticket.rst:196
+#: ../settings/ticket.rst:185
 msgid "Be aware that this feature is in its early stages. Enhancements may come in very soon."
 msgstr ""
 
-#: ../settings/ticket.rst:198
+#: ../settings/ticket.rst:187
 msgid "While we noticed it works pretty well, it may fail for some edge cases."
 msgstr ""
 
-#: ../settings/ticket.rst:199
+#: ../settings/ticket.rst:188
 msgid "The language selection in conditions and the output in the article detail view is always in English. The language names are not translated into user's current language."
 msgstr ""
 
-#: ../settings/ticket.rst:203
+#: ../settings/ticket.rst:192
 msgid "You can see the name of the detected language in the detail view of an article. You can display additional information by clicking on an article, which expands more details:"
 msgstr ""
 
@@ -17714,91 +17685,95 @@ msgstr ""
 msgid "Screenshot showing detected language in article detail view"
 msgstr ""
 
-#: ../settings/ticket.rst:211
+#: ../settings/ticket.rst:200
 msgid "If you are wondering what this feature is useful for, the answer is:"
 msgstr ""
 
-#: ../settings/ticket.rst:213
+#: ../settings/ticket.rst:202
 msgid "Use the detected language as a condition attribute in triggers and schedulers. Examples are: to send auto replies in different languages (see :ref:`trigger example <trigger-example-3>`) and to move tickets in a specific language into a specific group."
 msgstr ""
 
-#: ../settings/ticket.rst:217
+#: ../settings/ticket.rst:206
 msgid "Search by the new article attribute in the advanced search (both via language code and language name). Examples: ``article.detected_language:en``, ``article.detected_language_name:english``"
 msgstr ""
 
-#: ../settings/ticket.rst:246
+#: ../settings/ticket.rst:211
+msgid "Notifications"
+msgstr ""
+
+#: ../settings/ticket.rst:235
 msgid "Default Notifications"
 msgstr ""
 
-#: ../settings/ticket.rst:225
+#: ../settings/ticket.rst:214
 msgid "This setting allows you to configure the default ticket notifications that will be applied to all new agent users (incl. users who were just assigned agent role). Simply change the notification matrix to desired state and press **Save**."
 msgstr ""
 
-#: ../settings/ticket.rst:230
+#: ../settings/ticket.rst:219
 msgid "In case an agent already exists, their ticket notification preferences will be preserved. Optionally, you can also **Apply current defaults to all agents**."
 msgstr ""
 
-#: ../settings/ticket.rst:236
+#: ../settings/ticket.rst:225
 msgid "**Potential time-consuming action:** Applying default ticket notifications to all agent users may take some time to complete, be patient! The exact time will depend on the size of your system and the number of agents."
 msgstr ""
 
-#: ../settings/ticket.rst:240
+#: ../settings/ticket.rst:229
 msgid "**Active agents only!** When current default ticket notifications are applied, only active agent users are considered. In case an agent is re-activated *after* this action, they will still have the old notification configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:245
+#: ../settings/ticket.rst:234
 msgid "In case you want to go back to the initial state of ticket notifications, you can click on **Reset to default** button."
 msgstr ""
 
-#: ../settings/ticket.rst:251
+#: ../settings/ticket.rst:240
 msgid "Duplicate Detection"
 msgstr ""
 
-#: ../settings/ticket.rst:293
+#: ../settings/ticket.rst:282
 msgid "Detect Duplicate Ticket Creation"
 msgstr ""
 
-#: ../settings/ticket.rst:254
+#: ../settings/ticket.rst:243
 msgid "This setting turns on the duplicate ticket detection mechanism during ticket creation. If similar tickets are found in the system, a suitable warning will be shown to the user trying to create a ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:261
+#: ../settings/ticket.rst:250
 msgid "A Sample Duplicate Ticket Warning"
 msgstr ""
 
-#: ../settings/ticket.rst:263
+#: ../settings/ticket.rst:252
 msgid "You can choose which ticket attributes will be matched by selecting them in **Attributes to compare** field. Only if the ticket attribute value provided by the user in the ticket create form is *equal* with the attribute in an existing ticket, the warning will be shown."
 msgstr ""
 
-#: ../settings/ticket.rst:268
+#: ../settings/ticket.rst:257
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr ""
 
-#: ../settings/ticket.rst:270
+#: ../settings/ticket.rst:259
 msgid "You can limit the detection only to certain user roles. By default, only agents will see the warning."
 msgstr ""
 
-#: ../settings/ticket.rst:273
+#: ../settings/ticket.rst:262
 msgid "If you don't want to show the matched tickets as part of the warning, you can set **Show matching ticket(s) in the warning** setting to *no*."
 msgstr ""
 
-#: ../settings/ticket.rst:276
+#: ../settings/ticket.rst:265
 msgid "By default, **Permission level for looking up ticket** is set to *User*, which  means user permissions will be honored during sarch. The user will see the warning only if tickets they have access to are matched. Alternatively, you can set this setting to *System*, in which case the search will happen within *all* tickets in the system, regardless of user permissions."
 msgstr ""
 
-#: ../settings/ticket.rst:282
+#: ../settings/ticket.rst:271
 msgid "**🦺 Safety first!**"
 msgstr ""
 
-#: ../settings/ticket.rst:284
+#: ../settings/ticket.rst:273
 msgid "Even if the permission level is set to *System*, the user will not be shown the tickets they don't have access to in the warning, even if they match."
 msgstr ""
 
-#: ../settings/ticket.rst:288
+#: ../settings/ticket.rst:277
 msgid "However, just the confirmation about the existence of the tickets in the system may be considered an unwanted information disclosure. Use this option carefully!"
 msgstr ""
 
-#: ../settings/ticket.rst:292
+#: ../settings/ticket.rst:281
 msgid "Finally, you can configure between matching within **All tickets** or **Open tickets** only by setting **Match tickets in following states**. Depending on the current ticket state, a ticket may or not be matched."
 msgstr ""
 
