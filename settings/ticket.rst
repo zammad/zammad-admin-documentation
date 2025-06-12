@@ -10,8 +10,14 @@ Base
 Ticket Hook (default: ``Ticket#``)
    The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#.
 
-Ticket Hook Position (default: ``right``)
-   With this setting you can decide (if) where to insert the ticket number.
+   Default: ``Ticket#``
+
+   If you change the ticket hook on a system with production data, you have to
+   :docs:`rebuild the Elasticsearch search index </install/elasticsearch.html#es-rebuild-searchindex>`.
+
+Ticket Hook Position
+   With this setting, you can decide if the ticket hook/number should be
+   included in the title and on which side it is inserted.
 
    *Right*
       This setting will add the ticket reference on the right site of the
