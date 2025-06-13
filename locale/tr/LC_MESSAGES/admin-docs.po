@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-13 12:08+0200\n"
+"POT-Creation-Date: 2025-06-12 16:51+0200\n"
 "PO-Revision-Date: 2024-09-27 17:00+0000\n"
 "Last-Translator: Rob <robertborge@outlook.com>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/"
@@ -8162,7 +8162,7 @@ msgid "Screenshot showing different possible actions for macros."
 msgstr ""
 
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/templates.rst:38
-#: ../manage/trigger/how-do-they-work.rst:73
+#: ../manage/trigger/how-do-they-work.rst:75
 msgid "Actions"
 msgstr "Eylemler"
 
@@ -12065,7 +12065,7 @@ msgid "In this list you'll see the following ticket information:"
 msgstr "Bu bölümde şu anda aşağıdaki entegrasyonlar eksik:"
 
 #: ../manage/time-accounting.rst:150 ../manage/time-accounting.rst:164
-#: ../settings/ticket.rst:91
+#: ../settings/ticket.rst:97
 msgid "Number"
 msgstr "Numara"
 
@@ -12267,166 +12267,174 @@ msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:26
 msgid ""
-"The execution is triggered by some actor. Either a user creating or updating "
-"the ticket. Or an external action, e.g. an email coming in."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:30
-msgid "Action activator may evaluate **conditions** in two modes:"
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:38
-msgid "**Selective** execution"
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:33
-msgid ""
-"checks if any property that is included in conditions was updated. If the "
-"action was other than update, it checks if conditions match."
+"An action based trigger always requires a ticket update to run. This can be "
+"an update by an agent or even internal system updates like updated SLA "
+"times. See the explanation below for more details."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:36
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
+#, fuzzy
+msgid "Selective"
+msgstr "Seç"
+
+#: ../manage/trigger/how-do-they-work.rst:31
 msgid ""
-"**Example:** A selective action trigger which is listening on the priority "
-"**1 low** will trigger if the ticket was changed to **1 low** or got an new "
-"article in that priority state."
+"Checks if any attribute from the condition was updated. If yes, the trigger "
+"runs. If the attributes from the condition weren't touched, the trigger "
+"doesn't run."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:35
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was changed to **1 low**."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:48
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
+msgid "Always"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:39
+msgid ""
+"Checks if the current state of the ticket matches the condition. This means: "
+"the trigger always runs when the ticket is updated, no matter what was "
+"changed. This can lead to executing such a trigger more often."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:43
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was moved to another group while priority was set **1 low**."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:46
-msgid "**Always** execution"
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:41
 msgid ""
-"checks if the current state of the ticket in question matches conditions."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:44
-msgid ""
-"**Example:** An always action trigger which is listening on the priority **1 "
-"low** will trigger if the ticket was moved to another group while priority "
-"was set **1 low**."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:49
-msgid "Time Event"
+"If in doubt, use **Selective**. The **Always** action activator can lead to "
+"unexpected behavior, e.g. the trigger runs after internal system changes of "
+"the ticket, which aren't visible in the ticket history."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:51
+msgid "Time Event"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:53
 msgid ""
 "The execution is triggered at a specific time when a certain event is "
 "reached, e.g. ticket pending time."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:54
+#: ../manage/trigger/how-do-they-work.rst:56
 msgid ""
 "This activator simply checks if **conditions** match. This is the same "
 "behavior as action-based activator's \"always\" mode."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:57
+#: ../manage/trigger/how-do-they-work.rst:59
 msgid "When creating a trigger, choose activator here:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:62
+#: ../manage/trigger/how-do-they-work.rst:64
 #: ../system/core-workflows/how-do-they-work.rst:37
 msgid "Conditions"
 msgstr "Koşullar"
 
-#: ../manage/trigger/how-do-they-work.rst:64
+#: ../manage/trigger/how-do-they-work.rst:66
 msgid "When creating a trigger, define your conditions here:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:68
+#: ../manage/trigger/how-do-they-work.rst:70
 msgid "Trigger conditions must match as configured for the trigger to fire."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:75
+#: ../manage/trigger/how-do-they-work.rst:77
 msgid "When creating a trigger, define your changes here:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:79
+#: ../manage/trigger/how-do-they-work.rst:81
 msgid ""
 "Certain actions (such as *email*, *SMS* and *notes*) support :doc:`/misc/"
 "variables`, which can be used to build highly-customized message templates."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:83
+#: ../manage/trigger/how-do-they-work.rst:85
 msgid ""
 "A trigger can do the following things once its conditions have been met:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:94
+#: ../manage/trigger/how-do-they-work.rst:96
 msgid "Modify the ticket"
 msgstr "Bileti düzenle"
 
-#: ../manage/trigger/how-do-they-work.rst:86
+#: ../manage/trigger/how-do-they-work.rst:88
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
 "subscribe and unsubscribe specific/all users, etc."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:89
+#: ../manage/trigger/how-do-they-work.rst:91
 msgid ""
 "Date & time attributes (like **Pending till**) can be specified in "
 "*absolute* or *relative* terms."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:92
+#: ../manage/trigger/how-do-they-work.rst:94
 msgid ""
 "You can also combine static text with placeholders for text fields. Remember "
 "that the placeholders' values have to be known during trigger runtime. Learn "
 "more about :doc:`/misc/variables`."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:105
+#: ../manage/trigger/how-do-they-work.rst:107
 msgid "Send an email or SMS"
 msgstr "Bir e-posta veya SMS gönder"
 
-#: ../manage/trigger/how-do-they-work.rst:97
+#: ../manage/trigger/how-do-they-work.rst:99
 msgid ""
 "Either to the customer, the agent who owns the ticket, or every agent in the "
 "system."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:100
+#: ../manage/trigger/how-do-they-work.rst:102
 msgid ""
 "Sending emails allows you to include the attachments of the triggering "
 "article if required."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:103
+#: ../manage/trigger/how-do-they-work.rst:105
 msgid ""
 "In order to send emails with triggers, you need to configure an email "
 "address for the group, the trigger is working in. If you don't, Zammad will "
 "skip the trigger completely."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:108
+#: ../manage/trigger/how-do-they-work.rst:110
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:108
+#: ../manage/trigger/how-do-they-work.rst:110
 msgid ""
 "Connect Zammad to another web service or application to give it live updates "
 "about new tickets."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:112
+#: ../manage/trigger/how-do-they-work.rst:114
 msgid "Add internal or public notes to the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:111
+#: ../manage/trigger/how-do-they-work.rst:113
 msgid ""
 "This allows you to help your agents with specific information if needed. "
 "(e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:119
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:119
+#: ../manage/trigger/how-do-they-work.rst:121
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
@@ -12437,13 +12445,13 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:126
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:129
+#: ../manage/trigger/how-do-they-work.rst:131
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -12451,7 +12459,7 @@ msgid ""
 "the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:131
+#: ../manage/trigger/how-do-they-work.rst:133
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
@@ -13561,20 +13569,11 @@ msgid ""
 "conditions:"
 msgstr ""
 
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
-#, fuzzy
-msgid "Selective"
-msgstr "Seç"
-
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:26
 msgid ""
 "This will check if any property used as a condition attribute was updated by "
 "the action. If the action behind the trigger was one other than update, it "
 "will simply check if the conditions match."
-msgstr ""
-
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-msgid "Always"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:31
@@ -21253,7 +21252,7 @@ msgid ""
 "composer interface can be found in the :doc:`/misc/composer`."
 msgstr ""
 
-#: ../settings/ticket.rst:11
+#: ../settings/ticket.rst:16
 msgid "Ticket Hook (default: ``Ticket#``)"
 msgstr "Bilet Kancası (varsayılan: ``Bilet#``)"
 
@@ -21261,195 +21260,211 @@ msgstr "Bilet Kancası (varsayılan: ``Bilet#``)"
 msgid "The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#."
 msgstr "Bir bilet için tanımlayıcılar; *ör.,* Bilet#, Arama#, Biletim#."
 
-#: ../settings/ticket.rst:38
-msgid "Ticket Hook Position (default: ``right``)"
-msgstr "Bilet Kancası Pozisyonu (varsayılan: ``sağ``)"
+#: ../settings/ticket.rst:13
+#, fuzzy
+#| msgid "``Ticket#``"
+msgid "Default: ``Ticket#``"
+msgstr "``Bilet#``"
 
-#: ../settings/ticket.rst:14
+#: ../settings/ticket.rst:15
 msgid ""
-"With this setting you can decide (if) where to insert the ticket number."
+"If you change the ticket hook on a system with production data, you have "
+"to :docs:`rebuild the Elasticsearch search index </install/"
+"elasticsearch.html#es-rebuild-searchindex>`."
 msgstr ""
 
-#: ../settings/ticket.rst:20
+#: ../settings/ticket.rst:44
+#, fuzzy
+#| msgid "Ticket Hook Position (default: ``right``)"
+msgid "Ticket Hook Position"
+msgstr "Bilet Kancası Pozisyonu (varsayılan: ``sağ``)"
+
+#: ../settings/ticket.rst:19
+msgid ""
+"With this setting, you can decide if the ticket hook/number should be "
+"included in the title and on which side it is inserted."
+msgstr ""
+
+#: ../settings/ticket.rst:26
 msgid "*Right*"
 msgstr "*Sağ*"
 
-#: ../settings/ticket.rst:17
+#: ../settings/ticket.rst:23
 msgid ""
 "This setting will add the ticket reference on the right site of the subject."
 msgstr ""
 
-#: ../settings/ticket.rst:20
+#: ../settings/ticket.rst:26
 msgid "Example: ``Some Subject [Ticket#12345]``"
 msgstr "Örnek: ``Konu [Bilet#12345]``"
 
-#: ../settings/ticket.rst:26
+#: ../settings/ticket.rst:32
 msgid "*Left*"
 msgstr "*Sol*"
 
-#: ../settings/ticket.rst:23
+#: ../settings/ticket.rst:29
 msgid ""
 "This setting will add the ticket reference on the left site of the subject."
 msgstr ""
 
-#: ../settings/ticket.rst:26
+#: ../settings/ticket.rst:32
 msgid "Example: ``[Ticket#12345] Some Subject``"
 msgstr "Örnek: ``[Bilet#12345] Konu``"
 
-#: ../settings/ticket.rst:29
+#: ../settings/ticket.rst:35
 msgid "*None*"
 msgstr "*Hiçbiri*"
 
-#: ../settings/ticket.rst:29
+#: ../settings/ticket.rst:35
 msgid "This will completely remove ticket references from the subject."
 msgstr ""
 
-#: ../settings/ticket.rst:33
+#: ../settings/ticket.rst:39
 msgid ""
 "Please ensure to take a look at :doc:`/channels/email/settings` within the "
 "email channel to ensure you have at least one reference that helps Zammad to "
 "assign follow-ups correctly."
 msgstr ""
 
-#: ../settings/ticket.rst:37
+#: ../settings/ticket.rst:43
 msgid ""
 "Disabling this and not setting up any further follow up search will lead to "
 "unexpected results!"
 msgstr ""
 
-#: ../settings/ticket.rst:65
+#: ../settings/ticket.rst:71
 msgid ""
 "Ticket Last Contact Behaviour (default: ``Use the start time of the last "
 "customer thread (which may consist of multiple articles).``)"
 msgstr ""
 
-#: ../settings/ticket.rst:41
+#: ../settings/ticket.rst:47
 msgid ""
 "This setting changes the way Zammad updates the ``Last Contact`` value of a "
 "ticket. This is fairly important for overviews and what you expect upon "
 "ticket updates of a customer."
 msgstr ""
 
-#: ../settings/ticket.rst:52
+#: ../settings/ticket.rst:58
 msgid ""
 "Use the start time of the last customer thread (which may consist of "
 "multiple articles)."
 msgstr ""
 
-#: ../settings/ticket.rst:46
+#: ../settings/ticket.rst:52
 msgid ""
 "If this option is chosen, Zammad will update the last updated value just "
 "once if a customer replies. After that, Zammad will wait for an agent to "
 "react."
 msgstr ""
 
-#: ../settings/ticket.rst:50
+#: ../settings/ticket.rst:56
 msgid ""
 "This comes in handy if you want to work tickets in the order of their first "
 "update. This will not change ticket orders if customers decide to \"bump\" "
 "the ticket affected."
 msgstr ""
 
-#: ../settings/ticket.rst:57
+#: ../settings/ticket.rst:63
 msgid "Use the time of the very last customer article."
 msgstr ""
 
-#: ../settings/ticket.rst:55
+#: ../settings/ticket.rst:61
 msgid ""
 "When setting this option, Zammad will always update the last updated value. "
 "This means that if ordering by ``Last Update``, ticket orders will change if "
 "customers \"bump\" the ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:64
+#: ../settings/ticket.rst:70
 msgid "Last contact value used on :doc:`/manage/overviews`"
 msgstr ""
 
-#: ../settings/ticket.rst:65
+#: ../settings/ticket.rst:71
 msgid "Last contact value used on :doc:`/manage/trigger`"
 msgstr ""
 
-#: ../settings/ticket.rst:88
+#: ../settings/ticket.rst:94
 msgid ""
 "Ticket Organization Reassignment (default: ``Update the most recent "
 "tickets.``)"
 msgstr ""
 
-#: ../settings/ticket.rst:68
+#: ../settings/ticket.rst:74
 msgid ""
 "This setting changes the way Zammad updates the organization field of the "
 "tickets whenever the primary organization of a user is changed."
 msgstr ""
 
-#: ../settings/ticket.rst:74
+#: ../settings/ticket.rst:80
 msgid "Update the most recent tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:72
+#: ../settings/ticket.rst:78
 msgid ""
 "If this option is chosen, Zammad will update the 100 most recent tickets "
 "where the user is the ticket customer. The ticket organization field will be "
 "automatically set to the new primary organization of the user."
 msgstr ""
 
-#: ../settings/ticket.rst:88
+#: ../settings/ticket.rst:94
 #, fuzzy
 msgid "Do not update any tickets."
 msgstr "biletleri günceller"
 
-#: ../settings/ticket.rst:77
+#: ../settings/ticket.rst:83
 msgid ""
 "When choosing this option, Zammad will not update any tickets when the "
 "user's primary organization is changed."
 msgstr ""
 
-#: ../settings/ticket.rst:80
+#: ../settings/ticket.rst:86
 msgid "**Use with care!**"
 msgstr ""
 
-#: ../settings/ticket.rst:82
+#: ../settings/ticket.rst:88
 msgid ""
 "Using this option may lead to inconsistencies in the system as the ticket "
 "organization may become decoupled from the ticket customer."
 msgstr ""
 
-#: ../settings/ticket.rst:85
+#: ../settings/ticket.rst:91
 msgid ""
 "However, you may use this option if you wish to maintain :ref:`the shared "
 "access <organization-details-reference>` to the ticket for all organization "
 "members of the original organization of the customer."
 msgstr ""
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Ticket Number Format (default: ``Increment (SystemID.Counter)``)"
 msgstr "Bilet Numarası Formatı (varsayılan: ``Artış (SystemID.Counter)``)"
 
-#: ../settings/ticket.rst:94
+#: ../settings/ticket.rst:100
 msgid ""
 "This setting defines the way Zammad's ticket number will look. Changing this "
 "setting in production will cause follow up detection to fail."
 msgstr ""
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:108
 msgid "Increment (SystemID.Counter)"
 msgstr "Artış (SystemID.Counter)"
 
-#: ../settings/ticket.rst:98
+#: ../settings/ticket.rst:104
 msgid ""
 "The increment value contains the SystemID (automatically generated during "
 "installation) and a increment which counts up with every new Ticket. The "
 "increment will automatically get another digit if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:108
 msgid "Examples: ``1010138``, ``1010139``"
 msgstr "Örnekler: ``1010138``, ``1010139``"
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr "Tarih (Year.Month.Day.SystemID.Counter)"
 
-#: ../settings/ticket.rst:105
+#: ../settings/ticket.rst:111
 msgid ""
 "This version of the ticket number is fairly long. However, because it "
 "contains the date of ticket creation, it also allows you to see when the "
@@ -21457,48 +21472,48 @@ msgid ""
 "you've worked with OTRS already."
 msgstr ""
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Examples: ``201206231010138``, ``201206231010139``"
 msgstr "Örnekler: ``201206231010138``, ``201206231010139``"
 
-#: ../settings/ticket.rst:137
+#: ../settings/ticket.rst:143
 msgid "OPTIONS"
 msgstr "SEÇENEKLER"
 
-#: ../settings/ticket.rst:113
+#: ../settings/ticket.rst:119
 msgid ""
 "The below options allow you to further customize your ticket number. The "
 "availability of options differ depending of the chosen ticket number format "
 "above."
 msgstr ""
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:128
 msgid "Checksum (default: ``no``)"
 msgstr ""
 
-#: ../settings/ticket.rst:118
+#: ../settings/ticket.rst:124
 msgid ""
 "If set to yes, we'll built a checksum to further \"unique\" the ticket "
 "number of your system. If you're dealing with many other ticket systems this "
 "might help to prevent false positive follow up detection on tickets."
 msgstr ""
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:128
 msgid "This will also add another digit to the ticket number."
 msgstr ""
 
-#: ../settings/ticket.rst:137
+#: ../settings/ticket.rst:143
 msgid "Min. size of Number (default: ``5``)"
 msgstr ""
 
-#: ../settings/ticket.rst:125
+#: ../settings/ticket.rst:131
 msgid ""
 "This setting defines the minimum length of your ticket number. If your "
 "counter is not yet high enough, Zammad will fill the number with zeros to "
 "ensure the wanted length."
 msgstr ""
 
-#: ../settings/ticket.rst:129
+#: ../settings/ticket.rst:135
 msgid ""
 "Please note that the minimum length is ``3`` (SystemID + at least one digit "
 "if below 10). Also, if the length is no longer long enough, the number will "
@@ -21506,17 +21521,17 @@ msgid ""
 "it's save to keep it at 5 or set it lower if wanted."
 msgstr ""
 
-#: ../settings/ticket.rst:135
+#: ../settings/ticket.rst:141
 msgid ""
 "This option is only available if ticket number format is set to "
 "``Increment``!"
 msgstr ""
 
-#: ../settings/ticket.rst:142
+#: ../settings/ticket.rst:148
 msgid "Auto-Assignment"
 msgstr "Otomatik Atama"
 
-#: ../settings/ticket.rst:144
+#: ../settings/ticket.rst:150
 msgid ""
 "In a larger Zammad environment, it happens that several agents open the same "
 "ticket at the same time. Although collision detection is then effective, the "
@@ -21524,26 +21539,26 @@ msgid ""
 "assignment of tickets when a ticket is opened."
 msgstr ""
 
-#: ../settings/ticket.rst:149
+#: ../settings/ticket.rst:155
 msgid ""
 "The automatic assignment of tickets can be activated and configured in the "
 "admin area under Settings > Ticket > Auto Assignment."
 msgstr ""
 
-#: ../settings/ticket.rst:152
+#: ../settings/ticket.rst:158
 msgid ""
 "The auto assignment only works if the ticket has no owner yet. By default, "
 "the agent can always reset the ticket owner to ``-`` if needed."
 msgstr ""
 
-#: ../settings/ticket.rst:155
+#: ../settings/ticket.rst:161
 msgid ""
 "If you want to use this function for only specific tickets, you can "
 "configure the conditions accordingly to meet your requirement. By default "
 "the condition affects all tickets with the state ``open``."
 msgstr ""
 
-#: ../settings/ticket.rst:161
+#: ../settings/ticket.rst:167
 msgid ""
 "If you need to exclude users (e.g. a group leader), you can search and "
 "select the desired agents in the ``Exception Users`` list. The search "
@@ -21551,48 +21566,48 @@ msgid ""
 "display at once to help you with the configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:167
+#: ../settings/ticket.rst:173
 #, fuzzy
 msgid "Language Detection"
 msgstr "Uygulama açıklaması"
 
-#: ../settings/ticket.rst:169
+#: ../settings/ticket.rst:175
 msgid ""
 "Zammad offers a built in language detection for articles. By default, it is "
 "turned off. Turn it on by selecting a backend service and confirm by "
 "clicking **Submit**."
 msgstr ""
 
-#: ../settings/ticket.rst:173
+#: ../settings/ticket.rst:179
 msgid ""
 "After enabling it, Zammad tries to detect the language of each **new** "
 "article. The language is not detected for existing articles."
 msgstr ""
 
-#: ../settings/ticket.rst:177
+#: ../settings/ticket.rst:183
 msgid ""
 "Currently, there is only one backend service available: `Compact Language "
 "Detection <https://github.com/jtoy/cld>`_."
 msgstr ""
 
-#: ../settings/ticket.rst:179
+#: ../settings/ticket.rst:185
 msgid ""
 "Be aware that this feature is in its early stages. Enhancements may come in "
 "very soon."
 msgstr ""
 
-#: ../settings/ticket.rst:181
+#: ../settings/ticket.rst:187
 msgid "While we noticed it works pretty well, it may fail for some edge cases."
 msgstr ""
 
-#: ../settings/ticket.rst:182
+#: ../settings/ticket.rst:188
 msgid ""
 "The language selection in conditions and the output in the article detail "
 "view is always in English. The language names are not translated into user's "
 "current language."
 msgstr ""
 
-#: ../settings/ticket.rst:186
+#: ../settings/ticket.rst:192
 msgid ""
 "You can see the name of the detected language in the detail view of an "
 "article. You can display additional information by clicking on an article, "
@@ -21606,11 +21621,11 @@ msgstr ""
 "Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
 "düzenleyebilirsiniz:"
 
-#: ../settings/ticket.rst:194
+#: ../settings/ticket.rst:200
 msgid "If you are wondering what this feature is useful for, the answer is:"
 msgstr ""
 
-#: ../settings/ticket.rst:196
+#: ../settings/ticket.rst:202
 msgid ""
 "Use the detected language as a condition attribute in triggers and "
 "schedulers. Examples are: to send auto replies in different languages "
@@ -21618,24 +21633,24 @@ msgid ""
 "specific language into a specific group."
 msgstr ""
 
-#: ../settings/ticket.rst:200
+#: ../settings/ticket.rst:206
 msgid ""
 "Search by the new article attribute in the advanced search (both via "
 "language code and language name). Examples: "
 "``article.detected_language:en``, ``article.detected_language_name:english``"
 msgstr ""
 
-#: ../settings/ticket.rst:205
+#: ../settings/ticket.rst:211
 #, fuzzy
 msgid "Notifications"
 msgstr "Bildirimleri Engelle"
 
-#: ../settings/ticket.rst:229
+#: ../settings/ticket.rst:235
 #, fuzzy
 msgid "Default Notifications"
 msgstr "E-posta Bildirimi"
 
-#: ../settings/ticket.rst:208
+#: ../settings/ticket.rst:214
 msgid ""
 "This setting allows you to configure the default ticket notifications that "
 "will be applied to all new agent users (incl. users who were just assigned "
@@ -21643,21 +21658,21 @@ msgid ""
 "press **Save**."
 msgstr ""
 
-#: ../settings/ticket.rst:213
+#: ../settings/ticket.rst:219
 msgid ""
 "In case an agent already exists, their ticket notification preferences will "
 "be preserved. Optionally, you can also **Apply current defaults to all "
 "agents**."
 msgstr ""
 
-#: ../settings/ticket.rst:219
+#: ../settings/ticket.rst:225
 msgid ""
 "**Potential time-consuming action:** Applying default ticket notifications "
 "to all agent users may take some time to complete, be patient! The exact "
 "time will depend on the size of your system and the number of agents."
 msgstr ""
 
-#: ../settings/ticket.rst:223
+#: ../settings/ticket.rst:229
 msgid ""
 "**Active agents only!** When current default ticket notifications are "
 "applied, only active agent users are considered. In case an agent is re-"
@@ -21665,34 +21680,34 @@ msgid ""
 "configuration."
 msgstr ""
 
-#: ../settings/ticket.rst:228
+#: ../settings/ticket.rst:234
 msgid ""
 "In case you want to go back to the initial state of ticket notifications, "
 "you can click on **Reset to default** button."
 msgstr ""
 
-#: ../settings/ticket.rst:234
+#: ../settings/ticket.rst:240
 #, fuzzy
 msgid "Duplicate Detection"
 msgstr "Uygulama açıklaması"
 
-#: ../settings/ticket.rst:276
+#: ../settings/ticket.rst:282
 #, fuzzy
 msgid "Detect Duplicate Ticket Creation"
 msgstr "Bilet oluşturulduğunda"
 
-#: ../settings/ticket.rst:237
+#: ../settings/ticket.rst:243
 msgid ""
 "This setting turns on the duplicate ticket detection mechanism during ticket "
 "creation. If similar tickets are found in the system, a suitable warning "
 "will be shown to the user trying to create a ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:244
+#: ../settings/ticket.rst:250
 msgid "A Sample Duplicate Ticket Warning"
 msgstr ""
 
-#: ../settings/ticket.rst:246
+#: ../settings/ticket.rst:252
 msgid ""
 "You can choose which ticket attributes will be matched by selecting them in "
 "**Attributes to compare** field. Only if the ticket attribute value provided "
@@ -21700,23 +21715,23 @@ msgid ""
 "existing ticket, the warning will be shown."
 msgstr ""
 
-#: ../settings/ticket.rst:251
+#: ../settings/ticket.rst:257
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr ""
 
-#: ../settings/ticket.rst:253
+#: ../settings/ticket.rst:259
 msgid ""
 "You can limit the detection only to certain user roles. By default, only "
 "agents will see the warning."
 msgstr ""
 
-#: ../settings/ticket.rst:256
+#: ../settings/ticket.rst:262
 msgid ""
 "If you don't want to show the matched tickets as part of the warning, you "
 "can set **Show matching ticket(s) in the warning** setting to *no*."
 msgstr ""
 
-#: ../settings/ticket.rst:259
+#: ../settings/ticket.rst:265
 msgid ""
 "By default, **Permission level for looking up ticket** is set to *User*, "
 "which  means user permissions will be honored during sarch. The user will "
@@ -21726,24 +21741,24 @@ msgid ""
 "permissions."
 msgstr ""
 
-#: ../settings/ticket.rst:265
+#: ../settings/ticket.rst:271
 msgid "**🦺 Safety first!**"
 msgstr ""
 
-#: ../settings/ticket.rst:267
+#: ../settings/ticket.rst:273
 msgid ""
 "Even if the permission level is set to *System*, the user will not be shown "
 "the tickets they don't have access to in the warning, even if they match."
 msgstr ""
 
-#: ../settings/ticket.rst:271
+#: ../settings/ticket.rst:277
 msgid ""
 "However, just the confirmation about the existence of the tickets in the "
 "system may be considered an unwanted information disclosure. Use this option "
 "carefully!"
 msgstr ""
 
-#: ../settings/ticket.rst:275
+#: ../settings/ticket.rst:281
 msgid ""
 "Finally, you can configure between matching within **All tickets** or **Open "
 "tickets** only by setting **Match tickets in following states**. Depending "
@@ -22726,25 +22741,35 @@ msgid ""
 "edit mask (e.g. renaming, set to read-only)."
 msgstr ""
 
-#: ../system/core-workflows/limitations.rst:37
-msgid "What is out of scope of Core Workflows?"
+#: ../system/core-workflows/limitations.rst:33
+msgid "Ticket text changes not supported in edit mask"
 msgstr ""
 
 #: ../system/core-workflows/limitations.rst:32
+msgid ""
+"It is currently not possible to perform changes of the ticket text in the "
+"edit mask (e.g. set to read-only)."
+msgstr ""
+
+#: ../system/core-workflows/limitations.rst:41
+msgid "What is out of scope of Core Workflows?"
+msgstr ""
+
+#: ../system/core-workflows/limitations.rst:36
 msgid ""
 "There are some things that would count as workflow but are either done "
 "via :doc:`/manage/trigger` or :doc:`/manage/scheduler`."
 msgstr ""
 
-#: ../system/core-workflows/limitations.rst:35
+#: ../system/core-workflows/limitations.rst:39
 msgid "Such as (but not limited to):"
 msgstr ""
 
-#: ../system/core-workflows/limitations.rst:37
+#: ../system/core-workflows/limitations.rst:41
 msgid "up- or downgrade permissions of users"
 msgstr ""
 
-#: ../system/core-workflows/limitations.rst:38
+#: ../system/core-workflows/limitations.rst:42
 msgid "affecting article creation or listing"
 msgstr ""
 
