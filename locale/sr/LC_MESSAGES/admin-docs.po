@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-13 12:08+0200\n"
+"POT-Creation-Date: 2025-06-12 16:51+0200\n"
 "PO-Revision-Date: 2025-06-06 06:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -9348,7 +9348,7 @@ msgid "Screenshot showing different possible actions for macros."
 msgstr "Снимак екрана који приказује различите могуће радње за макрое."
 
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/templates.rst:38
-#: ../manage/trigger/how-do-they-work.rst:73
+#: ../manage/trigger/how-do-they-work.rst:75
 msgid "Actions"
 msgstr "Радње"
 
@@ -13646,7 +13646,7 @@ msgid "In this list you'll see the following ticket information:"
 msgstr "У овој листи ћете видети следеће информације о тикетима:"
 
 #: ../manage/time-accounting.rst:150 ../manage/time-accounting.rst:164
-#: ../settings/ticket.rst:91
+#: ../settings/ticket.rst:97
 msgid "Number"
 msgstr "Број"
 
@@ -13865,62 +13865,75 @@ msgstr "Радња"
 
 #: ../manage/trigger/how-do-they-work.rst:26
 msgid ""
-"The execution is triggered by some actor. Either a user creating or updating "
-"the ticket. Or an external action, e.g. an email coming in."
+"An action based trigger always requires a ticket update to run. This can be "
+"an update by an agent or even internal system updates like updated SLA "
+"times. See the explanation below for more details."
 msgstr ""
-"**Извршавање** покреће неки извршилац. Или корисник који отвара или освежава "
-"тикет. Или дејство споља, нпр. стиже имејл."
-
-#: ../manage/trigger/how-do-they-work.rst:30
-msgid "Action activator may evaluate **conditions** in two modes:"
-msgstr "Извршилац **радње** може да изврши **услове** у два режима:"
-
-#: ../manage/trigger/how-do-they-work.rst:38
-msgid "**Selective** execution"
-msgstr "**Селективно** извршење"
-
-#: ../manage/trigger/how-do-they-work.rst:33
-msgid ""
-"checks if any property that is included in conditions was updated. If the "
-"action was other than update, it checks if conditions match."
-msgstr ""
-"проверава да ли је неки од атрибута услова освежен. Ако радња није било "
-"освежавање, проверава да ли се услови подударају."
 
 #: ../manage/trigger/how-do-they-work.rst:36
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
+msgid "Selective"
+msgstr "Селективно"
+
+#: ../manage/trigger/how-do-they-work.rst:31
 msgid ""
-"**Example:** A selective action trigger which is listening on the priority "
-"**1 low** will trigger if the ticket was changed to **1 low** or got an new "
-"article in that priority state."
+"Checks if any attribute from the condition was updated. If yes, the trigger "
+"runs. If the attributes from the condition weren't touched, the trigger "
+"doesn't run."
 msgstr ""
-"**Пример:** Окидач селективне радње који проверава приоритет **1 низак** ће "
-"се покренути ако је тикет измењен на **1 низак** или је добио нови чланак у "
-"том статусу приоритета."
 
-#: ../manage/trigger/how-do-they-work.rst:46
-msgid "**Always** execution"
-msgstr "**Увек** извршење"
-
-#: ../manage/trigger/how-do-they-work.rst:41
+#: ../manage/trigger/how-do-they-work.rst:35
+#, fuzzy
+#| msgid ""
+#| "**Example:** An always action trigger which is listening on the priority "
+#| "**1 low** will trigger if the ticket was moved to another group while "
+#| "priority was set **1 low**."
 msgid ""
-"checks if the current state of the ticket in question matches conditions."
-msgstr "проверава да ли тренутно стање дотичног тикета одговара условима."
-
-#: ../manage/trigger/how-do-they-work.rst:44
-msgid ""
-"**Example:** An always action trigger which is listening on the priority **1 "
-"low** will trigger if the ticket was moved to another group while priority "
-"was set **1 low**."
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was changed to **1 low**."
 msgstr ""
 "**Пример:** Окидач радње увек који проверава приоритет **1 низак** ће се "
 "покренути ако је тикет премештен у другу групу док је приоритет подешен на "
 "**1 низак**."
 
-#: ../manage/trigger/how-do-they-work.rst:49
+#: ../manage/trigger/how-do-they-work.rst:48
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
+msgid "Always"
+msgstr "Увек"
+
+#: ../manage/trigger/how-do-they-work.rst:39
+msgid ""
+"Checks if the current state of the ticket matches the condition. This means: "
+"the trigger always runs when the ticket is updated, no matter what was "
+"changed. This can lead to executing such a trigger more often."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:43
+#, fuzzy
+#| msgid ""
+#| "**Example:** An always action trigger which is listening on the priority "
+#| "**1 low** will trigger if the ticket was moved to another group while "
+#| "priority was set **1 low**."
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was moved to another group while priority was set **1 low**."
+msgstr ""
+"**Пример:** Окидач радње увек који проверава приоритет **1 низак** ће се "
+"покренути ако је тикет премештен у другу групу док је приоритет подешен на "
+"**1 низак**."
+
+#: ../manage/trigger/how-do-they-work.rst:46
+msgid ""
+"If in doubt, use **Selective**. The **Always** action activator can lead to "
+"unexpected behavior, e.g. the trigger runs after internal system changes of "
+"the ticket, which aren't visible in the ticket history."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:51
 msgid "Time Event"
 msgstr "Временски догађај"
 
-#: ../manage/trigger/how-do-they-work.rst:51
+#: ../manage/trigger/how-do-they-work.rst:53
 msgid ""
 "The execution is triggered at a specific time when a certain event is "
 "reached, e.g. ticket pending time."
@@ -13928,7 +13941,7 @@ msgstr ""
 "Извршавање се покреће у одређено време када се достигне одређени догађај, "
 "нпр. време чекања тикета."
 
-#: ../manage/trigger/how-do-they-work.rst:54
+#: ../manage/trigger/how-do-they-work.rst:56
 msgid ""
 "This activator simply checks if **conditions** match. This is the same "
 "behavior as action-based activator's \"always\" mode."
@@ -13937,29 +13950,29 @@ msgstr ""
 "подударају. Ово је исто понашање као и режим извршења „Увек“ заснованог на "
 "радњи."
 
-#: ../manage/trigger/how-do-they-work.rst:57
+#: ../manage/trigger/how-do-they-work.rst:59
 msgid "When creating a trigger, choose activator here:"
 msgstr "Када додате окидач, изаберите активацију овде:"
 
-#: ../manage/trigger/how-do-they-work.rst:62
+#: ../manage/trigger/how-do-they-work.rst:64
 #: ../system/core-workflows/how-do-they-work.rst:37
 msgid "Conditions"
 msgstr "Услови"
 
-#: ../manage/trigger/how-do-they-work.rst:64
+#: ../manage/trigger/how-do-they-work.rst:66
 msgid "When creating a trigger, define your conditions here:"
 msgstr "Када додате окидач, одредите своје услове овде:"
 
-#: ../manage/trigger/how-do-they-work.rst:68
+#: ../manage/trigger/how-do-they-work.rst:70
 msgid "Trigger conditions must match as configured for the trigger to fire."
 msgstr ""
 "Подешени услови окидача морају да се подударају да би се окидач извршио."
 
-#: ../manage/trigger/how-do-they-work.rst:75
+#: ../manage/trigger/how-do-they-work.rst:77
 msgid "When creating a trigger, define your changes here:"
 msgstr "Када правите окидач, дефинишите своје измене овде:"
 
-#: ../manage/trigger/how-do-they-work.rst:79
+#: ../manage/trigger/how-do-they-work.rst:81
 msgid ""
 "Certain actions (such as *email*, *SMS* and *notes*) support :doc:`/misc/"
 "variables`, which can be used to build highly-customized message templates."
@@ -13968,16 +13981,16 @@ msgstr ""
 "подржавају :doc:`променљиве </misc/variables>`, које се могу користити за "
 "израду високо прилагођених шаблона порука."
 
-#: ../manage/trigger/how-do-they-work.rst:83
+#: ../manage/trigger/how-do-they-work.rst:85
 msgid ""
 "A trigger can do the following things once its conditions have been met:"
 msgstr "Окидач може да уради следеће ствари када се испуне његови услови:"
 
-#: ../manage/trigger/how-do-they-work.rst:94
+#: ../manage/trigger/how-do-they-work.rst:96
 msgid "Modify the ticket"
 msgstr "Измена тикета"
 
-#: ../manage/trigger/how-do-they-work.rst:86
+#: ../manage/trigger/how-do-they-work.rst:88
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
 "subscribe and unsubscribe specific/all users, etc."
@@ -13986,7 +13999,7 @@ msgstr ""
 "назив, додајте ознаке, претплатите и откажите претплату за одређене/све "
 "кориснике, итд."
 
-#: ../manage/trigger/how-do-they-work.rst:89
+#: ../manage/trigger/how-do-they-work.rst:91
 msgid ""
 "Date & time attributes (like **Pending till**) can be specified in "
 "*absolute* or *relative* terms."
@@ -13994,7 +14007,7 @@ msgstr ""
 "Атрибути датума и времена (као што је **На чекању до**) се могу навести у "
 "*апсолутним* или *релативним* терминима."
 
-#: ../manage/trigger/how-do-they-work.rst:92
+#: ../manage/trigger/how-do-they-work.rst:94
 msgid ""
 "You can also combine static text with placeholders for text fields. Remember "
 "that the placeholders' values have to be known during trigger runtime. Learn "
@@ -14004,25 +14017,25 @@ msgstr ""
 "текстуална поља. Запамтите да предефинисане вредности морају бити познате "
 "током времена извршавања окидача. Сазнајте више о :doc:`/misc/variables`."
 
-#: ../manage/trigger/how-do-they-work.rst:105
+#: ../manage/trigger/how-do-they-work.rst:107
 msgid "Send an email or SMS"
 msgstr "Пошаљите имејл или SMS"
 
-#: ../manage/trigger/how-do-they-work.rst:97
+#: ../manage/trigger/how-do-they-work.rst:99
 msgid ""
 "Either to the customer, the agent who owns the ticket, or every agent in the "
 "system."
 msgstr ""
 "Клијенту, оператеру који поседује карту или сваком оператеру у систему."
 
-#: ../manage/trigger/how-do-they-work.rst:100
+#: ../manage/trigger/how-do-they-work.rst:102
 msgid ""
 "Sending emails allows you to include the attachments of the triggering "
 "article if required."
 msgstr ""
 "Слање имејла вам омогућава да по потреби укључите прилоге окидајућег чланка."
 
-#: ../manage/trigger/how-do-they-work.rst:103
+#: ../manage/trigger/how-do-they-work.rst:105
 msgid ""
 "In order to send emails with triggers, you need to configure an email "
 "address for the group, the trigger is working in. If you don't, Zammad will "
@@ -14032,11 +14045,11 @@ msgstr ""
 "групу у којој окидач ради. Ако то не учините, Zammad ће у потпуности "
 "прескочити окидач."
 
-#: ../manage/trigger/how-do-they-work.rst:108
+#: ../manage/trigger/how-do-they-work.rst:110
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ":doc:`Покрените повратни позив </manage/webhook>`"
 
-#: ../manage/trigger/how-do-they-work.rst:108
+#: ../manage/trigger/how-do-they-work.rst:110
 msgid ""
 "Connect Zammad to another web service or application to give it live updates "
 "about new tickets."
@@ -14044,11 +14057,11 @@ msgstr ""
 "Повежите Zammad са другим веб сервисом или апликацијом да бисте га "
 "обавестили о новим тикетима уживо."
 
-#: ../manage/trigger/how-do-they-work.rst:112
+#: ../manage/trigger/how-do-they-work.rst:114
 msgid "Add internal or public notes to the ticket"
 msgstr "Додајте интерне или јавне напомене у тикет"
 
-#: ../manage/trigger/how-do-they-work.rst:111
+#: ../manage/trigger/how-do-they-work.rst:113
 msgid ""
 "This allows you to help your agents with specific information if needed. "
 "(e.g. automated changes a trigger applied to the ticket)"
@@ -14056,11 +14069,11 @@ msgstr ""
 "Ово вам омогућава да својим оператерима помогнете са одређеним информацијама "
 "ако је потребно (нпр. аутоматске промене примењеног окидача на тикет)."
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:119
 msgid "Localization of Execution Changes"
 msgstr "Локализација при извршавању радње"
 
-#: ../manage/trigger/how-do-they-work.rst:119
+#: ../manage/trigger/how-do-they-work.rst:121
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
@@ -14074,7 +14087,7 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr "Снимак екрана који приказује одељак локализација дијалога окидача"
 
-#: ../manage/trigger/how-do-they-work.rst:126
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
@@ -14082,7 +14095,7 @@ msgstr ""
 "Најбоља пракса је да се додају појединачни окидачи за сваки језик/временску "
 "зону и да се извршавају на основу атрибута корисника или организације."
 
-#: ../manage/trigger/how-do-they-work.rst:129
+#: ../manage/trigger/how-do-they-work.rst:131
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -14093,7 +14106,7 @@ msgstr ""
 "може да се прилагоди коришћењем ``dt()`` функције. Додатно, коришћењем "
 "``t()`` функције може се превести вредност променљиве према одабраном језику."
 
-#: ../manage/trigger/how-do-they-work.rst:131
+#: ../manage/trigger/how-do-they-work.rst:133
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
@@ -15119,9 +15132,9 @@ msgid ""
 "configure :ref:`username <HTTP Basic Authentication Username>` "
 "and :ref:`password <HTTP Basic Authentication Password>` via separate fields."
 msgstr ""
-"Zammad игнорише basic auth параметре. Погледајте испод како да подесите "
-":ref:`корисничко име <HTTP Basic Authentication Username>` и :ref:`лозинку "
-"<HTTP Basic Authentication Password>` преко посебних поља."
+"Zammad игнорише basic auth параметре. Погледајте испод како да "
+"подесите :ref:`корисничко име <HTTP Basic Authentication Username>` "
+"и :ref:`лозинку <HTTP Basic Authentication Password>` преко посебних поља."
 
 #: ../manage/webhook/add.rst:66
 msgid "HMAC SHA1 Signature Token"
@@ -15392,10 +15405,6 @@ msgstr ""
 "за **Извршавање радње**, како бисте утицали на то како окидач процењује "
 "подешене услове:"
 
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
-msgid "Selective"
-msgstr "Селективно"
-
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:26
 msgid ""
 "This will check if any property used as a condition attribute was updated by "
@@ -15405,10 +15414,6 @@ msgstr ""
 "Ово ће проверити да ли је неко својство које се користи као атрибут услова "
 "освежено радњом. Ако је радња иза окидача била другачија од освежавања, "
 "једноставно ће проверити да ли се услови подударају."
-
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-msgid "Always"
-msgstr "Увек"
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:31
 msgid ""
@@ -23813,7 +23818,7 @@ msgstr ""
 "Овде можете подесити општа подешавања тикета. Додатна подешавања за "
 "интерфејс уредника текста могу се наћи у :doc:`/misc/composer`."
 
-#: ../settings/ticket.rst:11
+#: ../settings/ticket.rst:16
 msgid "Ticket Hook (default: ``Ticket#``)"
 msgstr "Прикључак тикета (подразумевано: ``Ticket#``)"
 
@@ -23821,51 +23826,70 @@ msgstr "Прикључак тикета (подразумевано: ``Ticket#``
 msgid "The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#."
 msgstr "Идентификатор тикета, нпр. Ticket#, Call#, MyTicket#."
 
-#: ../settings/ticket.rst:38
-msgid "Ticket Hook Position (default: ``right``)"
+#: ../settings/ticket.rst:13
+#, fuzzy
+#| msgid "Default: ``yes``"
+msgid "Default: ``Ticket#``"
+msgstr "Подразумевано: ``да``"
+
+#: ../settings/ticket.rst:15
+msgid ""
+"If you change the ticket hook on a system with production data, you have "
+"to :docs:`rebuild the Elasticsearch search index </install/"
+"elasticsearch.html#es-rebuild-searchindex>`."
+msgstr ""
+
+#: ../settings/ticket.rst:44
+#, fuzzy
+#| msgid "Ticket Hook Position (default: ``right``)"
+msgid "Ticket Hook Position"
 msgstr "Положај прикључка тикета (подразумевано: ``десно``)"
 
-#: ../settings/ticket.rst:14
+#: ../settings/ticket.rst:19
+#, fuzzy
+#| msgid ""
+#| "With this setting you can decide (if) where to insert the ticket number."
 msgid ""
-"With this setting you can decide (if) where to insert the ticket number."
+"With this setting, you can decide if the ticket hook/number should be "
+"included in the title and on which side it is inserted."
 msgstr ""
 "Са овим подешавањем можете одлучити (да ли и) где се налази број тикета."
 
-#: ../settings/ticket.rst:20
+#: ../settings/ticket.rst:26
 msgid "*Right*"
 msgstr "*десно*"
 
-#: ../settings/ticket.rst:17
+#: ../settings/ticket.rst:23
 msgid ""
 "This setting will add the ticket reference on the right site of the subject."
 msgstr "Ово подешавање ће додати референцу тикета на десној страни предмета."
 
-#: ../settings/ticket.rst:20
+#: ../settings/ticket.rst:26
 msgid "Example: ``Some Subject [Ticket#12345]``"
 msgstr "Пример: ``Неки предмет [Ticket#12345]``"
 
-#: ../settings/ticket.rst:26
+#: ../settings/ticket.rst:32
 msgid "*Left*"
 msgstr "*лево*"
 
-#: ../settings/ticket.rst:23
+#: ../settings/ticket.rst:29
 msgid ""
 "This setting will add the ticket reference on the left site of the subject."
 msgstr "Ово подешавање ће додати референцу тикета на десној страни предмета."
 
-#: ../settings/ticket.rst:26
+#: ../settings/ticket.rst:32
 msgid "Example: ``[Ticket#12345] Some Subject``"
 msgstr "Пример: ``[Ticket#12345] Неки предмет``"
 
-#: ../settings/ticket.rst:29
+#: ../settings/ticket.rst:35
 msgid "*None*"
 msgstr "*празно*"
 
-#: ../settings/ticket.rst:29
+#: ../settings/ticket.rst:35
 msgid "This will completely remove ticket references from the subject."
 msgstr "Ово ће у потпуности уклонити референце тикета из предмета."
 
-#: ../settings/ticket.rst:33
+#: ../settings/ticket.rst:39
 msgid ""
 "Please ensure to take a look at :doc:`/channels/email/settings` within the "
 "email channel to ensure you have at least one reference that helps Zammad to "
@@ -23875,7 +23899,7 @@ msgstr ""
 "имејл канала да бисте били сигурни да имате бар једну референцу која помаже "
 "Zammad-у да правилно додели наставке."
 
-#: ../settings/ticket.rst:37
+#: ../settings/ticket.rst:43
 msgid ""
 "Disabling this and not setting up any further follow up search will lead to "
 "unexpected results!"
@@ -23883,7 +23907,7 @@ msgstr ""
 "Онемогућавање овога и неподешавање даље претраге наставака ће довести до "
 "неочекиваних резултата!"
 
-#: ../settings/ticket.rst:65
+#: ../settings/ticket.rst:71
 msgid ""
 "Ticket Last Contact Behaviour (default: ``Use the start time of the last "
 "customer thread (which may consist of multiple articles).``)"
@@ -23891,7 +23915,7 @@ msgstr ""
 "Понашање последњег одговора тикета (подразумевано: ``Користи време почетка "
 "последње конверзације клијента (која се може састојати од више чланака).``)"
 
-#: ../settings/ticket.rst:41
+#: ../settings/ticket.rst:47
 msgid ""
 "This setting changes the way Zammad updates the ``Last Contact`` value of a "
 "ticket. This is fairly important for overviews and what you expect upon "
@@ -23901,7 +23925,7 @@ msgstr ""
 "одговор“. Ово је прилично важно за прегледе и оно што очекујете након "
 "освежавања тикета од стране корисника."
 
-#: ../settings/ticket.rst:52
+#: ../settings/ticket.rst:58
 msgid ""
 "Use the start time of the last customer thread (which may consist of "
 "multiple articles)."
@@ -23909,7 +23933,7 @@ msgstr ""
 "Користи време почетка последње конверзације клијента (која се може састојати "
 "од више чланака)."
 
-#: ../settings/ticket.rst:46
+#: ../settings/ticket.rst:52
 msgid ""
 "If this option is chosen, Zammad will update the last updated value just "
 "once if a customer replies. After that, Zammad will wait for an agent to "
@@ -23919,7 +23943,7 @@ msgstr ""
 "приликом одговора клијента. Након тога, Zammad ће сачекати да оператер "
 "реагује."
 
-#: ../settings/ticket.rst:50
+#: ../settings/ticket.rst:56
 msgid ""
 "This comes in handy if you want to work tickets in the order of their first "
 "update. This will not change ticket orders if customers decide to \"bump\" "
@@ -23929,11 +23953,11 @@ msgstr ""
 "освежавања. Ово неће променити редослед тикета ако клијенти одлуче да само "
 "„чукну” своје тикете."
 
-#: ../settings/ticket.rst:57
+#: ../settings/ticket.rst:63
 msgid "Use the time of the very last customer article."
 msgstr "Користи време последњег чланка клијента."
 
-#: ../settings/ticket.rst:55
+#: ../settings/ticket.rst:61
 msgid ""
 "When setting this option, Zammad will always update the last updated value. "
 "This means that if ordering by ``Last Update``, ticket orders will change if "
@@ -23943,24 +23967,24 @@ msgstr ""
 "значи да ако сортирате према ``последњем одговору``, редослед тикета ће се "
 "променити ако клијенти само „чукну” тикет."
 
-#: ../settings/ticket.rst:64
+#: ../settings/ticket.rst:70
 msgid "Last contact value used on :doc:`/manage/overviews`"
 msgstr ""
 "Вредност последњег одговора коришћена у :doc:`прегледима </manage/overviews>`"
 
-#: ../settings/ticket.rst:65
+#: ../settings/ticket.rst:71
 msgid "Last contact value used on :doc:`/manage/trigger`"
 msgstr ""
 "Вредност последњег одговора коришћена у :doc:`окидачима </manage/trigger>`"
 
-#: ../settings/ticket.rst:88
+#: ../settings/ticket.rst:94
 msgid ""
 "Ticket Organization Reassignment (default: ``Update the most recent "
 "tickets.``)"
 msgstr ""
 "Пребацивање тикета организације (подразумевано: ``Освежи недавне тикете.``)"
 
-#: ../settings/ticket.rst:68
+#: ../settings/ticket.rst:74
 msgid ""
 "This setting changes the way Zammad updates the organization field of the "
 "tickets whenever the primary organization of a user is changed."
@@ -23968,11 +23992,11 @@ msgstr ""
 "Ово подешавање мења начин на који Zammad освежава поље организације тикета "
 "кад год се промени примарна организација корисника."
 
-#: ../settings/ticket.rst:74
+#: ../settings/ticket.rst:80
 msgid "Update the most recent tickets."
 msgstr "Освежи недавне тикете."
 
-#: ../settings/ticket.rst:72
+#: ../settings/ticket.rst:78
 msgid ""
 "If this option is chosen, Zammad will update the 100 most recent tickets "
 "where the user is the ticket customer. The ticket organization field will be "
@@ -23982,11 +24006,11 @@ msgstr ""
 "корисник клијент тикета. Поље организације тикета ће аутоматски бити "
 "постављено на нову примарну организацију корисника."
 
-#: ../settings/ticket.rst:88
+#: ../settings/ticket.rst:94
 msgid "Do not update any tickets."
 msgstr "Без освежавања тикета."
 
-#: ../settings/ticket.rst:77
+#: ../settings/ticket.rst:83
 msgid ""
 "When choosing this option, Zammad will not update any tickets when the "
 "user's primary organization is changed."
@@ -23994,11 +24018,11 @@ msgstr ""
 "Када изаберете ову опцију, Zammad неће освежити ниједан тикет када се "
 "промени примарна организација корисника."
 
-#: ../settings/ticket.rst:80
+#: ../settings/ticket.rst:86
 msgid "**Use with care!**"
 msgstr "**Користите пажљиво!**"
 
-#: ../settings/ticket.rst:82
+#: ../settings/ticket.rst:88
 msgid ""
 "Using this option may lead to inconsistencies in the system as the ticket "
 "organization may become decoupled from the ticket customer."
@@ -24006,7 +24030,7 @@ msgstr ""
 "Коришћење ове опције може довести до недоследности у систему јер се "
 "организација тикета може одвојити од клијента тикета."
 
-#: ../settings/ticket.rst:85
+#: ../settings/ticket.rst:91
 msgid ""
 "However, you may use this option if you wish to maintain :ref:`the shared "
 "access <organization-details-reference>` to the ticket for all organization "
@@ -24016,11 +24040,11 @@ msgstr ""
 "приступ <organization-details-reference>` на тикету за све чланове "
 "организације првобитне организације корисника."
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Ticket Number Format (default: ``Increment (SystemID.Counter)``)"
 msgstr "Формат броја тикета (подразумевано: ``Увећање (SystemID.бројач)``)"
 
-#: ../settings/ticket.rst:94
+#: ../settings/ticket.rst:100
 msgid ""
 "This setting defines the way Zammad's ticket number will look. Changing this "
 "setting in production will cause follow up detection to fail."
@@ -24029,11 +24053,11 @@ msgstr ""
 "подешавања на системима у продукцији ће довести до неуспешног откривања "
 "наставака."
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:108
 msgid "Increment (SystemID.Counter)"
 msgstr "Увећање (SystemID.бројач)"
 
-#: ../settings/ticket.rst:98
+#: ../settings/ticket.rst:104
 msgid ""
 "The increment value contains the SystemID (automatically generated during "
 "installation) and a increment which counts up with every new Ticket. The "
@@ -24043,15 +24067,15 @@ msgstr ""
 "бројач који се рачуна са сваким новом тикетом. Увећање ће аутоматски вратити "
 "другу вредност ако је потребно."
 
-#: ../settings/ticket.rst:102
+#: ../settings/ticket.rst:108
 msgid "Examples: ``1010138``, ``1010139``"
 msgstr "Примери: ``1010138``, ``1010139``"
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Date (Year.Month.Day.SystemID.Counter)"
 msgstr "Датум (година.месец.дан.системID.бројач)"
 
-#: ../settings/ticket.rst:105
+#: ../settings/ticket.rst:111
 msgid ""
 "This version of the ticket number is fairly long. However, because it "
 "contains the date of ticket creation, it also allows you to see when the "
@@ -24062,15 +24086,15 @@ msgstr ""
 "отварања тикета, такође вам омогућава да видите када је тикет отворен. Можда "
 "вам је познат овај формат броја ако сте већ радили са OTRS-ом."
 
-#: ../settings/ticket.rst:110
+#: ../settings/ticket.rst:116
 msgid "Examples: ``201206231010138``, ``201206231010139``"
 msgstr "Примери: ``201206231010138``, ``201206231010139``"
 
-#: ../settings/ticket.rst:137
+#: ../settings/ticket.rst:143
 msgid "OPTIONS"
 msgstr "Опције"
 
-#: ../settings/ticket.rst:113
+#: ../settings/ticket.rst:119
 msgid ""
 "The below options allow you to further customize your ticket number. The "
 "availability of options differ depending of the chosen ticket number format "
@@ -24080,11 +24104,11 @@ msgstr ""
 "Доступност опција се разликује у зависности од изабраног формата броја "
 "тикета изнад."
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:128
 msgid "Checksum (default: ``no``)"
 msgstr "Контролни збир (подразумевано: ``не``)"
 
-#: ../settings/ticket.rst:118
+#: ../settings/ticket.rst:124
 msgid ""
 "If set to yes, we'll built a checksum to further \"unique\" the ticket "
 "number of your system. If you're dealing with many other ticket systems this "
@@ -24094,15 +24118,15 @@ msgstr ""
 "вашег система остао „јединствен”. Ако се повезујете са другим системима "
 "тикета, ово би могло помоћи да спречите откривање лажних наставака тикета."
 
-#: ../settings/ticket.rst:122
+#: ../settings/ticket.rst:128
 msgid "This will also add another digit to the ticket number."
 msgstr "Ово ће такође додати још једну цифру броју тикета."
 
-#: ../settings/ticket.rst:137
+#: ../settings/ticket.rst:143
 msgid "Min. size of Number (default: ``5``)"
 msgstr "Минимална величина броја (подразумевано: ``5``)"
 
-#: ../settings/ticket.rst:125
+#: ../settings/ticket.rst:131
 msgid ""
 "This setting defines the minimum length of your ticket number. If your "
 "counter is not yet high enough, Zammad will fill the number with zeros to "
@@ -24112,7 +24136,7 @@ msgstr ""
 "још увек није довољно висок, Zammad ће попунити број нулама да би обезбедио "
 "жељену дужину."
 
-#: ../settings/ticket.rst:129
+#: ../settings/ticket.rst:135
 msgid ""
 "Please note that the minimum length is ``3`` (SystemID + at least one digit "
 "if below 10). Also, if the length is no longer long enough, the number will "
@@ -24124,7 +24148,7 @@ msgstr ""
 "добити додатну цифру. Бројеви тикета се **не обрћу**, тако да је безбедно да "
 "дужину задржите на 5 или је смањите ако желите."
 
-#: ../settings/ticket.rst:135
+#: ../settings/ticket.rst:141
 msgid ""
 "This option is only available if ticket number format is set to "
 "``Increment``!"
@@ -24132,11 +24156,11 @@ msgstr ""
 "Ова опција је доступна само ако је формат броја тикета подешен на "
 "``Увећање``!"
 
-#: ../settings/ticket.rst:142
+#: ../settings/ticket.rst:148
 msgid "Auto-Assignment"
 msgstr "Аутоматска додела"
 
-#: ../settings/ticket.rst:144
+#: ../settings/ticket.rst:150
 msgid ""
 "In a larger Zammad environment, it happens that several agents open the same "
 "ticket at the same time. Although collision detection is then effective, the "
@@ -24147,7 +24171,7 @@ msgstr ""
 "исто време. Иако је детекција колизије тада у игри, ефикасност обраде се "
 "може повећати аутоматском доделом тикета по отварању тикета."
 
-#: ../settings/ticket.rst:149
+#: ../settings/ticket.rst:155
 msgid ""
 "The automatic assignment of tickets can be activated and configured in the "
 "admin area under Settings > Ticket > Auto Assignment."
@@ -24155,7 +24179,7 @@ msgstr ""
 "Аутоматска додела тикета се може активирати и подесити у области "
 "администрације у одељку Подешавања > Тикет > Аутоматска додела."
 
-#: ../settings/ticket.rst:152
+#: ../settings/ticket.rst:158
 msgid ""
 "The auto assignment only works if the ticket has no owner yet. By default, "
 "the agent can always reset the ticket owner to ``-`` if needed."
@@ -24164,7 +24188,7 @@ msgstr ""
 "Подразумевано, оператер увек може да врати власника тикета на ``-`` ако је "
 "потребно."
 
-#: ../settings/ticket.rst:155
+#: ../settings/ticket.rst:161
 msgid ""
 "If you want to use this function for only specific tickets, you can "
 "configure the conditions accordingly to meet your requirement. By default "
@@ -24174,7 +24198,7 @@ msgstr ""
 "подесите услове у складу са вашим захтевима. Подразумевано услов утиче на "
 "све тикете са стањем ``отворено``."
 
-#: ../settings/ticket.rst:161
+#: ../settings/ticket.rst:167
 msgid ""
 "If you need to exclude users (e.g. a group leader), you can search and "
 "select the desired agents in the ``Exception Users`` list. The search "
@@ -24186,11 +24210,11 @@ msgstr ""
 "у овој области има ефекта само ако имате превише оператера за приказ "
 "одједном, да би вам помогла при подешавању."
 
-#: ../settings/ticket.rst:167
+#: ../settings/ticket.rst:173
 msgid "Language Detection"
 msgstr "Откривање језика"
 
-#: ../settings/ticket.rst:169
+#: ../settings/ticket.rst:175
 msgid ""
 "Zammad offers a built in language detection for articles. By default, it is "
 "turned off. Turn it on by selecting a backend service and confirm by "
@@ -24200,7 +24224,7 @@ msgstr ""
 "је искључен. Укључите га постављањем подешавања позадинског модула и "
 "потврдите кликом на **Submit**."
 
-#: ../settings/ticket.rst:173
+#: ../settings/ticket.rst:179
 msgid ""
 "After enabling it, Zammad tries to detect the language of each **new** "
 "article. The language is not detected for existing articles."
@@ -24208,7 +24232,7 @@ msgstr ""
 "По укључивању, Zаmmad ће пробати да открије језик сваког **новог** чланка. "
 "Језик неће бити откривен за постојеће чланке."
 
-#: ../settings/ticket.rst:177
+#: ../settings/ticket.rst:183
 msgid ""
 "Currently, there is only one backend service available: `Compact Language "
 "Detection <https://github.com/jtoy/cld>`_."
@@ -24216,7 +24240,7 @@ msgstr ""
 "Тренутно, подржан је само један позадински модул: `Compact Language "
 "Detection <https://github.com/jtoy/cld>`_."
 
-#: ../settings/ticket.rst:179
+#: ../settings/ticket.rst:185
 msgid ""
 "Be aware that this feature is in its early stages. Enhancements may come in "
 "very soon."
@@ -24224,13 +24248,13 @@ msgstr ""
 "Будите свесни да је ова функција у свом раном развоју. Унапређења могу стићи "
 "убрзо."
 
-#: ../settings/ticket.rst:181
+#: ../settings/ticket.rst:187
 msgid "While we noticed it works pretty well, it may fail for some edge cases."
 msgstr ""
 "Иако смо приметили да ради прилично поуздано, може бити неуспешна за неке "
 "ивичне случајеве."
 
-#: ../settings/ticket.rst:182
+#: ../settings/ticket.rst:188
 msgid ""
 "The language selection in conditions and the output in the article detail "
 "view is always in English. The language names are not translated into user's "
@@ -24239,7 +24263,7 @@ msgstr ""
 "Одабир језика у условима и приказ у детаљима чланка је увек на енглеском. "
 "Називи језика неће бити преведени у језик тренутног корисника."
 
-#: ../settings/ticket.rst:186
+#: ../settings/ticket.rst:192
 msgid ""
 "You can see the name of the detected language in the detail view of an "
 "article. You can display additional information by clicking on an article, "
@@ -24252,11 +24276,11 @@ msgstr ""
 msgid "Screenshot showing detected language in article detail view"
 msgstr "Снимак екрана који откривени језик у детаљима чланка"
 
-#: ../settings/ticket.rst:194
+#: ../settings/ticket.rst:200
 msgid "If you are wondering what this feature is useful for, the answer is:"
 msgstr "Уколико се питате чему служи ова функција, одговор је:"
 
-#: ../settings/ticket.rst:196
+#: ../settings/ticket.rst:202
 msgid ""
 "Use the detected language as a condition attribute in triggers and "
 "schedulers. Examples are: to send auto replies in different languages "
@@ -24268,7 +24292,7 @@ msgstr ""
 "(погледајте :ref:`пример окидача <trigger-example-3>`) и премештање тикета у "
 "одговарајуће групе на основу језика."
 
-#: ../settings/ticket.rst:200
+#: ../settings/ticket.rst:206
 msgid ""
 "Search by the new article attribute in the advanced search (both via "
 "language code and language name). Examples: "
@@ -24278,15 +24302,15 @@ msgstr ""
 "језика). Примери: ``article.detected_language:en``, "
 "``article.detected_language_name:english``"
 
-#: ../settings/ticket.rst:205
+#: ../settings/ticket.rst:211
 msgid "Notifications"
 msgstr "Обавештења"
 
-#: ../settings/ticket.rst:229
+#: ../settings/ticket.rst:235
 msgid "Default Notifications"
 msgstr "Подразумевана обавештења"
 
-#: ../settings/ticket.rst:208
+#: ../settings/ticket.rst:214
 msgid ""
 "This setting allows you to configure the default ticket notifications that "
 "will be applied to all new agent users (incl. users who were just assigned "
@@ -24298,7 +24322,7 @@ msgstr ""
 "кориснике којима је управо додељена улога оператера). Једноставно измените "
 "матрицу обавештења у жељено стање и притисните **Сачувај**."
 
-#: ../settings/ticket.rst:213
+#: ../settings/ticket.rst:219
 msgid ""
 "In case an agent already exists, their ticket notification preferences will "
 "be preserved. Optionally, you can also **Apply current defaults to all "
@@ -24309,7 +24333,7 @@ msgstr ""
 "оператерима** и тада ће нова подразумевана подешавања бити примењена на све "
 "оператере."
 
-#: ../settings/ticket.rst:219
+#: ../settings/ticket.rst:225
 msgid ""
 "**Potential time-consuming action:** Applying default ticket notifications "
 "to all agent users may take some time to complete, be patient! The exact "
@@ -24319,7 +24343,7 @@ msgstr ""
 "на све кориснике оператере може потрајати, будите стрпљиви! Тачно време ће "
 "зависити од величине вашег система и броја оператера."
 
-#: ../settings/ticket.rst:223
+#: ../settings/ticket.rst:229
 msgid ""
 "**Active agents only!** When current default ticket notifications are "
 "applied, only active agent users are considered. In case an agent is re-"
@@ -24331,7 +24355,7 @@ msgstr ""
 "У случају да се оператер поново активира *после* ове акције, он ће и даље "
 "имати стара подешавања обавештења."
 
-#: ../settings/ticket.rst:228
+#: ../settings/ticket.rst:234
 msgid ""
 "In case you want to go back to the initial state of ticket notifications, "
 "you can click on **Reset to default** button."
@@ -24339,15 +24363,15 @@ msgstr ""
 "У случају да желите да се вратите на почетно стање обавештења о тикету, "
 "можете да кликнете на дугме **Поништи вредности**."
 
-#: ../settings/ticket.rst:234
+#: ../settings/ticket.rst:240
 msgid "Duplicate Detection"
 msgstr "Откривање дупликата"
 
-#: ../settings/ticket.rst:276
+#: ../settings/ticket.rst:282
 msgid "Detect Duplicate Ticket Creation"
 msgstr "Откривање дупликата тикета приликом отварања"
 
-#: ../settings/ticket.rst:237
+#: ../settings/ticket.rst:243
 msgid ""
 "This setting turns on the duplicate ticket detection mechanism during ticket "
 "creation. If similar tickets are found in the system, a suitable warning "
@@ -24357,11 +24381,11 @@ msgstr ""
 "отварања тикета. Ако се пронађу слични тикети у систему, кориснику који "
 "покушава да отвори нови тикет биће приказано одговарајуће упозорење."
 
-#: ../settings/ticket.rst:244
+#: ../settings/ticket.rst:250
 msgid "A Sample Duplicate Ticket Warning"
 msgstr "Пример упозорења о дупликату тикета"
 
-#: ../settings/ticket.rst:246
+#: ../settings/ticket.rst:252
 msgid ""
 "You can choose which ticket attributes will be matched by selecting them in "
 "**Attributes to compare** field. Only if the ticket attribute value provided "
@@ -24373,11 +24397,11 @@ msgstr ""
 "атрибута тикета које је корисник навео у обрасцу за отварање новог тикета "
 "*једнака* са атрибутом постојећег тикета, упозорење ће бити приказано."
 
-#: ../settings/ticket.rst:251
+#: ../settings/ticket.rst:257
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr "**Наслов упозорења** и **Порука упозорења** се такође могу подесити."
 
-#: ../settings/ticket.rst:253
+#: ../settings/ticket.rst:259
 msgid ""
 "You can limit the detection only to certain user roles. By default, only "
 "agents will see the warning."
@@ -24385,7 +24409,7 @@ msgstr ""
 "Откривање можете ограничити само на одређене корисничке улоге. "
 "Подразумевано, само оператери ће видети упозорење."
 
-#: ../settings/ticket.rst:256
+#: ../settings/ticket.rst:262
 msgid ""
 "If you don't want to show the matched tickets as part of the warning, you "
 "can set **Show matching ticket(s) in the warning** setting to *no*."
@@ -24393,7 +24417,7 @@ msgstr ""
 "Ако не желите да прикажете пронађене тикете као део упозорења, можете да "
 "подесите **Прикажи сличне тикете као део упозорења** на *не*."
 
-#: ../settings/ticket.rst:259
+#: ../settings/ticket.rst:265
 msgid ""
 "By default, **Permission level for looking up ticket** is set to *User*, "
 "which  means user permissions will be honored during sarch. The user will "
@@ -24409,11 +24433,11 @@ msgstr ""
 "случају ће се претрага одвијати унутар *свих* тикета у систему, без обзира "
 "на корисничке дозволе."
 
-#: ../settings/ticket.rst:265
+#: ../settings/ticket.rst:271
 msgid "**🦺 Safety first!**"
 msgstr "**🦺 Безбедност на првом месту!**"
 
-#: ../settings/ticket.rst:267
+#: ../settings/ticket.rst:273
 msgid ""
 "Even if the permission level is set to *System*, the user will not be shown "
 "the tickets they don't have access to in the warning, even if they match."
@@ -24421,7 +24445,7 @@ msgstr ""
 "Чак и ако је ниво дозволе постављен на *Систем*, кориснику неће бити "
 "приказани тикети којима нема приступ у упозорењу, чак и ако се подударају."
 
-#: ../settings/ticket.rst:271
+#: ../settings/ticket.rst:277
 msgid ""
 "However, just the confirmation about the existence of the tickets in the "
 "system may be considered an unwanted information disclosure. Use this option "
@@ -24430,7 +24454,7 @@ msgstr ""
 "Међутим, сама потврда о постојању тикета у систему може се сматрати "
 "нежељеном информацијом. Користите ову опцију пажљиво!"
 
-#: ../settings/ticket.rst:275
+#: ../settings/ticket.rst:281
 msgid ""
 "Finally, you can configure between matching within **All tickets** or **Open "
 "tickets** only by setting **Match tickets in following states**. Depending "
@@ -25552,11 +25576,29 @@ msgstr ""
 "Тренутно није могуће изменити наслов тикета у форми уређивања (нпр. промена "
 "наслова, постављање само на читање)."
 
-#: ../system/core-workflows/limitations.rst:37
+#: ../system/core-workflows/limitations.rst:33
+#, fuzzy
+#| msgid "Ticket title changes not supported in edit mask"
+msgid "Ticket text changes not supported in edit mask"
+msgstr "Измена наслова тикета није подржана у форми уређивања"
+
+#: ../system/core-workflows/limitations.rst:32
+#, fuzzy
+#| msgid ""
+#| "It is currently not possible to perform changes of the ticket title in "
+#| "the edit mask (e.g. renaming, set to read-only)."
+msgid ""
+"It is currently not possible to perform changes of the ticket text in the "
+"edit mask (e.g. set to read-only)."
+msgstr ""
+"Тренутно није могуће изменити наслов тикета у форми уређивања (нпр. промена "
+"наслова, постављање само на читање)."
+
+#: ../system/core-workflows/limitations.rst:41
 msgid "What is out of scope of Core Workflows?"
 msgstr "Шта је то изван опсега радних токова?"
 
-#: ../system/core-workflows/limitations.rst:32
+#: ../system/core-workflows/limitations.rst:36
 msgid ""
 "There are some things that would count as workflow but are either done "
 "via :doc:`/manage/trigger` or :doc:`/manage/scheduler`."
@@ -25564,15 +25606,15 @@ msgstr ""
 "Постоје неке ствари које би се рачунале као радни ток, али се извршавају или "
 "преко :doc:`окидача </manage/trigger>` и :doc:`планера </manage/scheduler>`."
 
-#: ../system/core-workflows/limitations.rst:35
+#: ../system/core-workflows/limitations.rst:39
 msgid "Such as (but not limited to):"
 msgstr "Као што су (али не ограничавајући се на):"
 
-#: ../system/core-workflows/limitations.rst:37
+#: ../system/core-workflows/limitations.rst:41
 msgid "up- or downgrade permissions of users"
 msgstr "промоција или скидање дозвола корисника"
 
-#: ../system/core-workflows/limitations.rst:38
+#: ../system/core-workflows/limitations.rst:42
 msgid "affecting article creation or listing"
 msgstr "утицај на додавање или листање чланака"
 
@@ -28022,8 +28064,8 @@ msgid ""
 msgstr ""
 "За подешавање Exchange интеграције, посетите *Систем > Интеграције > "
 "Exchange* у панелу администратора. У зависности од ваше поставке, наставите "
-"са подешавањем за basic authentication у следећем одељку или прескочите на "
-":ref:`OAuth одељак <exchange-oauth>`."
+"са подешавањем за basic authentication у следећем одељку или прескочите "
+"на :ref:`OAuth одељак <exchange-oauth>`."
 
 #: ../system/integrations/exchange.rst:45
 msgid "Basic Authentication Setup"
@@ -28138,8 +28180,8 @@ msgstr ""
 "Додајте дозволе за читање адресара / фолдера. Обавезне дозволе се разликују "
 "у зависности од вашег случаја (синхронизација корисника или контаката, из "
 "организације или само једно налога, итд). ``Contacts.Read`` или "
-"``Contacts.Read.Shared`` могу бити добра почетна тачка. Погледајте `"
-"Microsoft Graph референцу дозвола <https://learn.microsoft.com/en-us/graph/"
+"``Contacts.Read.Shared`` могу бити добра почетна тачка. Погледајте "
+"`Microsoft Graph референцу дозвола <https://learn.microsoft.com/en-us/graph/"
 "permissions-reference>`_ за више информација."
 
 #: ../system/integrations/exchange.rst:98
@@ -28153,8 +28195,8 @@ msgid ""
 "corresponding fields in Zammad's app config dialog. If you don't have it "
 "open, click the **Connect Exchange App** button."
 msgstr ""
-"У **Overview** језичку у Entra центру, можете пронаћи вредности за „"
-"Application (client) ID” и „Directory (tenant) ID”. Ископирајте и налепите "
+"У **Overview** језичку у Entra центру, можете пронаћи вредности за "
+"„Application (client) ID” и „Directory (tenant) ID”. Ископирајте и налепите "
 "обе вредности у одговарајућа поља у Zammad-овом дијалогу подешавања. Уколико "
 "га нисте отворили, кликните на дугме **Повежи Exchange апликацију**."
 
@@ -28196,9 +28238,9 @@ msgid ""
 "credentials of a user with proper permissions and confirm the requested "
 "permissions by clicking the **Accept** button."
 msgstr ""
-"Када повежете вашу апликацију, једноставно кликните на дугме **Додај налог**"
-". Бићете преусмерени на Microsoft страницу за пријављивање. Пријавите се са "
-"приложеним креденцијалима корисника са неопходним дозволама и потврди "
+"Када повежете вашу апликацију, једноставно кликните на дугме **Додај "
+"налог**. Бићете преусмерени на Microsoft страницу за пријављивање. Пријавите "
+"се са приложеним креденцијалима корисника са неопходним дозволама и потврди "
 "захтеване дозволе кликом на дугме **Accept**."
 
 #: ../system/integrations/exchange.rst:126
@@ -33329,6 +33371,42 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "The execution is triggered by some actor. Either a user creating or "
+#~ "updating the ticket. Or an external action, e.g. an email coming in."
+#~ msgstr ""
+#~ "**Извршавање** покреће неки извршилац. Или корисник који отвара или "
+#~ "освежава тикет. Или дејство споља, нпр. стиже имејл."
+
+#~ msgid "Action activator may evaluate **conditions** in two modes:"
+#~ msgstr "Извршилац **радње** може да изврши **услове** у два режима:"
+
+#~ msgid "**Selective** execution"
+#~ msgstr "**Селективно** извршење"
+
+#~ msgid ""
+#~ "checks if any property that is included in conditions was updated. If the "
+#~ "action was other than update, it checks if conditions match."
+#~ msgstr ""
+#~ "проверава да ли је неки од атрибута услова освежен. Ако радња није било "
+#~ "освежавање, проверава да ли се услови подударају."
+
+#~ msgid ""
+#~ "**Example:** A selective action trigger which is listening on the "
+#~ "priority **1 low** will trigger if the ticket was changed to **1 low** or "
+#~ "got an new article in that priority state."
+#~ msgstr ""
+#~ "**Пример:** Окидач селективне радње који проверава приоритет **1 низак** "
+#~ "ће се покренути ако је тикет измењен на **1 низак** или је добио нови "
+#~ "чланак у том статусу приоритета."
+
+#~ msgid "**Always** execution"
+#~ msgstr "**Увек** извршење"
+
+#~ msgid ""
+#~ "checks if the current state of the ticket in question matches conditions."
+#~ msgstr "проверава да ли тренутно стање дотичног тикета одговара условима."
 
 #~ msgid ""
 #~ "However, you should refrain from syncing all addresses, as the results "
