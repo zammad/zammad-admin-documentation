@@ -56,6 +56,6 @@ click on **Submit**.
 .. figure:: /images/settings/security/third-party/google/configure-google-auth.png
    :align: center
    :scale: 70%
-   :alt: Screenshot shows configuration of user authentication via Google
+   :alt: Screenshot shows Google OAuth configuration in Zammad
 
 After submitting, users can log in with their Google account.
