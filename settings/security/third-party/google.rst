@@ -32,8 +32,8 @@ Register a Google App
    - **Authorized redirect URIs**: ``https://zammad_host/auth/google_oauth2/callback``
 
    .. figure:: /images/settings/security/third-party/google/google-create-oauth.png
-      :alt: Creating a consent screen
-      :scale: 70%
+      :alt: Screenshot shows OAuth credentials section in the Google console
+      :scale: 60%
       :align: center
 
 5. After adding the information, click on **Create**. This opens a dialog where
