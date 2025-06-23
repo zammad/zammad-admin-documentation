@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 16:33+0200\n"
+"POT-Creation-Date: 2025-06-23 10:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16320,7 +16320,7 @@ msgid "Google"
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:4
-msgid "With some easy and fast steps, you can enable Zammad to authenticate your users via Google."
+msgid "Configure Google as an OAuth provider so users can log in to Zammad with their Google account."
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:8
@@ -16328,54 +16328,78 @@ msgid "Register a Google App"
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:10
-msgid "First of all, we need to create a new project - you can skip this step if you already have one."
+msgid "Create a new project if you don't have one already. Do so by following this link: https://console.cloud.google.com/projectcreate"
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:15
-msgid "Use this link to create a new project: https://console.cloud.google.com/projectcreate"
+#: ../settings/security/third-party/google.rst:12
+msgid "Check if you are already in your project. If not, switch to it."
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:18
-msgid "Now expand the menu, expand **APIs & Services** and select **Credentials**. Go to the tab **OAuth consent screen** first and ensure to fill in the requested information - without doing so you can't create credentials!"
+#: ../settings/security/third-party/google.rst:13
+msgid "Go to *APIs & Services > OAuth consent screen*. If you didn't configure it before, you should see a **Get started** button. Follow the steps and provide the requested information."
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:None
-msgid "Creating a consent screen"
+#: ../settings/security/third-party/google.rst:17
+msgid "**App name**: Any fitting name. This is what the user sees when trying to log in via Google."
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:25
-msgid "After filling in and saving the consent screen information, you can go to the **Credentials** tab and create new O**Auth client ID** credentials."
+#: ../settings/security/third-party/google.rst:19
+msgid "**User support email**: choose an available email address here."
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:28
-msgid "Fill in the necessary information as follows and replace ``zammad_host`` with your FQDN:"
+#: ../settings/security/third-party/google.rst:20
+msgid "**Audience**: Choose Internal or External, depending on your use case."
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:21
+msgid "**Contact Information**: enter an email address which should get notified about changes in your project."
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:24
+msgid "Go to *APIs & Services > Credentials*. Add a configuration by clicking the **Create credentials** dropdown. Choose **OAuth client ID** and fill in the following information, replace ``zammad_host`` with the FQDN of your Zammad. You can also find the redirect URI in Zammad's Google OAuth configuration."
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:29
+msgid "**Application type**: Web application"
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:30
+msgid "**Name**: Any fitting name for your use case, e.g. Zammad."
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:31
-msgid "**Application type** ``[x] Web application``"
+msgid "**Authorized JavaScript origins**: ``https://zammad_host/``"
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:34
-msgid "**Authorized JavaScript origins** ``https://zammad_host/``"
+#: ../settings/security/third-party/google.rst:32
+msgid "**Authorized redirect URIs**: ``https://zammad_host/auth/google_oauth2/callback``"
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:37
-msgid "**Authorized redirect URIs** ``https://zammad_host/auth/google_oauth2/callback``"
+#: ../settings/security/third-party/google.rst:0
+msgid "Screenshot shows OAuth credentials section in the Google console"
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:None
-msgid "Adding a new OAuth client ID"
-msgstr ""
-
-#: ../settings/security/third-party/google.rst:43
-msgid "After creating the credentials, go to your Zammad installation and navigate to *Settings > Security > Third-party Applications > Authentication via Google*. Enter your **Client ID** and **Client secret** here."
+#: ../settings/security/third-party/google.rst:39
+msgid "After adding the information, click on **Create**. This opens a dialog where you can see important information. Make sure to leave this dialog open and/or copy the **Client ID** and **Client secret**."
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:None
-msgid "Screenshot shows configuration of user authentication via Google"
+msgid "Screenshot shows client ID and client secret dialog"
 msgstr ""
 
-#: ../settings/security/third-party/google.rst:50
+#: ../settings/security/third-party/google.rst:49
+msgid "Configure Authentication in Zammad"
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:51
+msgid "After creating the credentials, go to your Zammad installation and navigate to *Settings > Security > Third-party Applications > Authentication via Google*. Enter your **Client ID** and **Client secret** here, enable the toggle and click on **Submit**."
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:None
+msgid "Screenshot shows Google OAuth configuration in Zammad"
+msgstr ""
+
+#: ../settings/security/third-party/google.rst:61
 msgid "After submitting, users can log in with their Google account."
 msgstr ""
 

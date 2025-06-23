@@ -1,50 +1,61 @@
 Google
 ======
 
-With some easy and fast steps, you can enable Zammad to authenticate your users
-via Google.
+Configure Google as an OAuth provider so users can log in to Zammad with their
+Google account.
 
 Register a Google App
 ---------------------
 
-First of all, we need to create a new project - you can skip this step if you
-already have one.
+1. Create a new project if you don't have one already. Do so by following this
+   link: https://console.cloud.google.com/projectcreate
+2. Check if you are already in your project. If not, switch to it.
+3. Go to *APIs & Services > OAuth consent screen*. If you didn't configure it
+   before, you should see a **Get started** button. Follow the steps and provide
+   the requested information.
 
-.. hint::
+   - **App name**: Any fitting name. This is what the user sees when trying to
+     log in via Google.
+   - **User support email**: choose an available email address here.
+   - **Audience**: Choose Internal or External, depending on your use case.
+   - **Contact Information**: enter an email address which should get notified
+     about changes in your project.
 
-   Use this link to create a new project:
-   https://console.cloud.google.com/projectcreate
+4. Go to *APIs & Services > Credentials*. Add a configuration by clicking the
+   **Create credentials** dropdown. Choose **OAuth client ID** and fill in the
+   following information, replace ``zammad_host`` with the FQDN of your Zammad.
+   You can also find the redirect URI in Zammad's Google OAuth configuration.
 
-Now expand the menu, expand **APIs & Services** and select **Credentials**.
-Go to the tab **OAuth consent screen** first and ensure to fill in the requested
-information - without doing so you can't create credentials!
+   - **Application type**: Web application
+   - **Name**: Any fitting name for your use case, e.g. Zammad.
+   - **Authorized JavaScript origins**: ``https://zammad_host/``
+   - **Authorized redirect URIs**: ``https://zammad_host/auth/google_oauth2/callback``
 
-.. image:: /images/settings/security/third-party/google/goole-oauth-consent-screen.png
-   :alt: Creating a consent screen
+   .. figure:: /images/settings/security/third-party/google/google-create-oauth.png
+      :alt: Screenshot shows OAuth credentials section in the Google console
+      :scale: 60%
+      :align: center
 
-After filling in and saving the consent screen information, you can go to the
-**Credentials** tab and create new O**Auth client ID** credentials.
+5. After adding the information, click on **Create**. This opens a dialog where
+   you can see important information. Make sure to leave this dialog open and/or
+   copy the **Client ID** and **Client secret**.
 
-Fill in the necessary information as follows and replace ``zammad_host``
-with your FQDN:
+.. figure:: /images/settings/security/third-party/google/credentials-dialog.png
+   :alt: Screenshot shows client ID and client secret dialog
+   :scale: 70%
+   :align: center
 
-**Application type**
-``[x] Web application``
-
-**Authorized JavaScript origins**
-``https://zammad_host/``
-
-**Authorized redirect URIs**
-``https://zammad_host/auth/google_oauth2/callback``
-
-.. image:: /images/settings/security/third-party/google/google-create-oauth-Client-ID.png
-   :alt: Adding a new OAuth client ID
+Configure Authentication in Zammad
+----------------------------------
 
 After creating the credentials, go to your Zammad installation and navigate to
 *Settings > Security > Third-party Applications > Authentication via Google*.
-Enter your **Client ID** and **Client secret** here.
+Enter your **Client ID** and **Client secret** here, enable the toggle and
+click on **Submit**.
 
-.. image:: /images/settings/security/third-party/google/enable-authentication-via-google-in-zammad.png
-   :alt: Screenshot shows configuration of user authentication via Google
+.. figure:: /images/settings/security/third-party/google/configure-google-auth.png
+   :align: center
+   :scale: 70%
+   :alt: Screenshot shows Google OAuth configuration in Zammad
 
 After submitting, users can log in with their Google account.
