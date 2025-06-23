@@ -4,6 +4,12 @@ Accounts
 You can connect to user and shared mailboxes in your M365 environment.
 Follow the steps below and skip not applicable parts.
 
+.. hint:: Switching from M365 IMAP to M365 Graph? Make sure you don't use
+   email aliases, Microsoft doesn't support this via Graph.
+
+   In case you are using email aliases, you could create a shared mailbox for
+   each alias to solve this problem.
+
 First Steps
 -----------
 
@@ -14,7 +20,7 @@ First Steps
   **Connect Microsoft 365 App**. Copy the provided callback URL.
 
 Configuration
-----------------
+-------------
 
 Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ and
 log in as an administrator (at least application administrator permission is
