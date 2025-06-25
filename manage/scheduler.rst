@@ -1,31 +1,86 @@
 Scheduler
 =========
 
-The scheduler performs time-based automated actions. You can set up your own
-schedulers, configure at which points in time they should run, set up conditions
-to determine which objects they should affect, and then configure the actions
-that you want to execute for these objects.
+Zammad's scheduler performs time-based automated actions. The most important
+difference to :doc:`trigger` is that no action is required for the execution.
+You can set up your own scheduler jobs and configure:
+
+- At which time they should run
+- Which objects should be modified based on conditions
+- What changes or actions should be executed for matching objects
+
+As an example, scheduler jobs can be used to send periodic reminder emails. If
+this is what you want to do, have a look at :doc:`/misc/variables` to build
+highly-customized email templates.
 
 .. hint::
 
-   Schedulers can be used to send periodic reminder emails.
-   Use :doc:`/misc/variables` to build highly-customized email templates.
+   Scheduler jobs can process a maximum of ``2000`` objects per run. This is a
+   security function in case you accidentally misconfigured the scheduler.
 
-   Schedulers only perform ``2000`` objects per run. This is a security
-   function in case you accidentally misconfigured the scheduler.
+Quick Start
+-----------
 
-Add a New Scheduler
--------------------
+Manage Scheduler Jobs
+^^^^^^^^^^^^^^^^^^^^^
 
-Create a new scheduler job by clicking on the "New scheduler" button in the top
-right corner. Then Zammad presents a dialog where you can create your own one.
+You can find the scheduler configuration in the admin settings under *Manage >
+Scheduler*. Create a new scheduler job by clicking the **New Scheduler** button
+in the top right corner. This opens a dialog where you can define your scheduler
+job. To edit an existing scheduler, simply click on the row and the dialog gets
+opened again. The ︙ action menu holds the options to clone or delete the
+scheduler job.
 
-Example:
+After creating at least one scheduler job, you can find a table in the main
+area. There you can see additional information like how many objects were
+processed at the last run and how many will be processed at the next run.
 
-.. figure:: /images/manage/scheduler/scheduler-change-owner-in-case-of-ticket-escalation_with_locale.png
-   :alt: Screenshot showing dialog of creating a new scheduler job
-   :scale: 80%
+.. figure:: /images/manage/scheduler/scheduler-management.png
+   :scale: 70%
    :align: center
+   :alt: Screenshot shows Zammad's scheduler management
+
+Scheduler Job Structure
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Read on for details about the main parts of a scheduler job. A description of
+all available fields follows in the :ref:`scheduler-job-details` section.
+
+Execution Time
+   Define time(s) and day(s), when the scheduler job is supposed to run. Simply
+   click the day and time table entries to select and deselect items. You can
+   see a textual preview of what you configured above the tables.
+
+   .. figure:: /images/manage/scheduler/scheduler-date-time-section.png
+      :scale: 70%
+      :align: center
+      :alt: Screenshot shows date and time selection in scheduler job configuration
+
+Define Object Condition
+   Define a condition to specify the affected objects you want to apply changes
+   or perform an action. If you're not familiar with conditions in Zammad, you
+   can find an explanation at the :doc:`/misc/object-conditions/index` page.
+   The availability of attributes depends on the selected object context.
+
+   .. figure:: /images/manage/scheduler/scheduler-object-condition-section.png
+      :scale: 70%
+      :align: center
+      :alt: Screenshot shows object condition definition in scheduler job configuration
+
+Define Action
+   In this area, you define which changes or actions should get applied to the
+   affected objects. Depending on the selected object context, the available
+   options differ.
+
+   .. figure:: /images/manage/scheduler/scheduler-action-section.png
+      :scale: 70%
+      :align: center
+      :alt: Screenshot shows action selection in scheduler job configuration
+
+.. _scheduler-job-details:
+
+Scheduler Job Details
+---------------------
 
 Name
    Choose a name for the scheduler.
@@ -102,22 +157,3 @@ Note
 Active
    With this setting you can enable/disable the scheduler.
 
-The scheduler shown in the screenshot would have the following effects:
-
-   Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*),
-   all tickets which:
-
-      - are not closed or merged, and
-      - are assigned to the Sales group, and
-      - whose escalation was 30 minutes ago
-
-   will be:
-
-      - assigned to Emma, and
-      - have their priority changed to 3 high.
-
-   As a supervisor in the Sales group, this enables Emma to intercept and
-   process escalated tickets.
-
-   Emma will not receive notifications when the scheduler assigns her these
-   tickets.
