@@ -69,8 +69,8 @@ Define Object Condition
 
 Define Action
    In this area, you define which changes or actions should get applied to the
-   affected objects. Based on the selected object context, the available options
-   can be different.
+   affected objects. Depending on the selected object context, the available
+   options differ.
 
    .. figure:: /images/manage/scheduler/scheduler-action-section.png
       :scale: 70%
