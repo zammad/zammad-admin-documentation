@@ -11,15 +11,15 @@ You can set up your own scheduler jobs and configure:
 
 As an example, scheduler jobs can be used to send periodic reminder emails. If
 this is what you want to do, have a look at :doc:`/misc/variables` to build
-highly-customized email templates.
+customized email templates.
 
 .. hint::
 
    Scheduler jobs can process a maximum of ``2000`` objects per run. This is a
    security function in case you accidentally misconfigured the scheduler.
 
-Quick Start
------------
+Basics
+------
 
 Manage Scheduler Jobs
 ^^^^^^^^^^^^^^^^^^^^^
