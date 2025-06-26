@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 16:33+0200\n"
-"PO-Revision-Date: 2025-06-18 11:00+0000\n"
+"POT-Creation-Date: 2025-06-25 11:15+0200\n"
+"PO-Revision-Date: 2025-06-25 14:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -438,7 +438,7 @@ msgstr ""
 "Zammad versucht, die Farben Ihrer Haupt-Website an den Chat anzupassen. Sie "
 "können die Farben auch ändern, um sie an Ihr Corporate Design anzupassen."
 
-#: ../channels/chat.rst:28 ../channels/microsoft365-graph/accounts.rst:17
+#: ../channels/chat.rst:28 ../channels/microsoft365-graph/accounts.rst:23
 #: ../misc/first-steps.rst:20 ../system/integrations/clearbit.rst:35
 msgid "Configuration"
 msgstr "Konfiguration"
@@ -1710,7 +1710,7 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:39
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:37
-#: ../manage/scheduler.rst:100 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:155 ../manage/webhook/add.rst:116
 #: ../misc/variables.rst:104
 #: ../system/integrations/cti/includes/inbound-calls.include.rst:15
 #: ../system/integrations/cti/includes/outbound-calls.include.rst:18
@@ -1807,8 +1807,8 @@ msgid ""
 "it's simply not possible via the email channel setup wizard. Instead, you "
 "will have to create it via the CLI."
 msgstr ""
-"Falls Sie **nur** ein Konto für ausgehende E-Mails konfigurieren wollen ("
-"d.h. Sie möchten überhaupt kein Konto für eingehende E-Mails (IMAP/POP3) "
+"Falls Sie **nur** ein Konto für ausgehende E-Mails konfigurieren wollen "
+"(d.h. Sie möchten überhaupt kein Konto für eingehende E-Mails (IMAP/POP3) "
 "einrichten), werden Sie feststellen, dass dies über den Assistenten zur "
 "Einrichtung des E-Mail-Kanals nicht möglich ist. Deshalb müssen Sie sowas "
 "über die Kommandozeile einrichten."
@@ -2229,9 +2229,9 @@ msgid ""
 "console.html>` exclusively. To do so, go to the rails console and follow the "
 "steps below:"
 msgstr ""
-"Das Setzen eines Kanals auf ``trusted`` kann ausschließlich über :docs:`"
-"console </admin/console.html>` erfolgen. Rufen Sie dazu die Rails-Konsole "
-"auf und folgen Sie den nachstehenden Schritten:"
+"Das Setzen eines Kanals auf ``trusted`` kann ausschließlich "
+"über :docs:`console </admin/console.html>` erfolgen. Rufen Sie dazu die "
+"Rails-Konsole auf und folgen Sie den nachstehenden Schritten:"
 
 #: ../channels/email/email-headers.rst:161
 msgid "List all channels in Zammad:"
@@ -3552,7 +3552,7 @@ msgid "The fields provided by the form are limited to the following:"
 msgstr "Die im Formular nutzbaren Felder sind beschränkt auf die folgenden:"
 
 #: ../channels/form.rst:19 ../manage/groups/settings.rst:23
-#: ../manage/scheduler.rst:31 ../manage/slas/how-do-they-work.rst:26
+#: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
 #: ../manage/templates.rst:23 ../system/objects.rst:133
 #: ../system/objects.rst:237
 msgid "Name"
@@ -3581,7 +3581,7 @@ msgstr "Es gibt Einstellungen für Formulare in Zammad."
 
 #: ../channels/form.rst:37 ../manage/groups/settings.rst:126
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/overviews.rst:0
-#: ../manage/roles/index.rst:128 ../manage/scheduler.rst:103
+#: ../manage/roles/index.rst:128 ../manage/scheduler.rst:158
 #: ../manage/templates.rst:33 ../manage/webhook/add.rst:123
 #: ../system/objects.rst:171 ../system/objects.rst:251
 msgid "Active"
@@ -3848,7 +3848,7 @@ msgstr ""
 "Damit können Sie z.B. einen Link zu Ihrer Datenschutzerklärung oder Ihren "
 "AGBs einfügen."
 
-#: ../channels/form.rst:142 ../manage/scheduler.rst:54
+#: ../channels/form.rst:142 ../manage/scheduler.rst:109
 #: ../manage/slas/how-do-they-work.rst:35 ../system/objects/types.rst:297
 msgid "Preview"
 msgstr "Vorschau"
@@ -4437,7 +4437,7 @@ msgstr ""
 "Schritt."
 
 #: ../channels/google/basic-setup.rst:110
-#: ../channels/microsoft365-graph/accounts.rst:121
+#: ../channels/microsoft365-graph/accounts.rst:127
 #: ../system/integrations/exchange.rst:119
 msgid "Add Account"
 msgstr "Konto hinzufügen"
@@ -4844,11 +4844,27 @@ msgstr ""
 "M365-Umgebung herstellen. Führen Sie die folgenden Schritte aus und "
 "überspringen Sie nicht zutreffende Teile."
 
-#: ../channels/microsoft365-graph/accounts.rst:8 ../misc/first-steps.rst:2
+#: ../channels/microsoft365-graph/accounts.rst:7
+msgid ""
+"Switching from M365 IMAP to M365 Graph? Make sure you don't use email "
+"aliases, Microsoft doesn't support this via Graph."
+msgstr ""
+"Wechseln Sie von M365 IMAP zu M365 Graph? Stellen Sie sicher, dass Sie keine "
+"E-Mail-Aliasse verwenden, da Microsoft dies über Graph nicht unterstützt."
+
+#: ../channels/microsoft365-graph/accounts.rst:10
+msgid ""
+"In case you are using email aliases, you could create a shared mailbox for "
+"each alias to solve this problem."
+msgstr ""
+"Falls Sie E-Mail-Aliasse verwenden, können Sie für jeden Alias ein "
+"freigegebenes Postfach einrichten, um dieses Problem zu lösen."
+
+#: ../channels/microsoft365-graph/accounts.rst:14 ../misc/first-steps.rst:2
 msgid "First Steps"
 msgstr "Erste Schritte"
 
-#: ../channels/microsoft365-graph/accounts.rst:10
+#: ../channels/microsoft365-graph/accounts.rst:16
 #: ../channels/microsoft365/accounts/register-app.rst:18
 msgid ""
 "Check your FQDN under *Settings > System > Fully Qualified Domain Name* in "
@@ -4860,7 +4876,7 @@ msgstr ""
 "ist, ändern Sie ihn jetzt. Andernfalls wird die Einrichtung des Kanals "
 "fehlschlagen."
 
-#: ../channels/microsoft365-graph/accounts.rst:13
+#: ../channels/microsoft365-graph/accounts.rst:19
 msgid ""
 "Go to *Channels > Microsoft 365 Graph Email* and click on **Connect "
 "Microsoft 365 App**. Copy the provided callback URL."
@@ -4868,7 +4884,7 @@ msgstr ""
 "Gehen Sie zu *Kanäle > Microsoft 365 Graph E-Mail* und klicken Sie auf "
 "**Microsoft 365 App verbinden**. Kopieren Sie die angezeigte Callback-URL."
 
-#: ../channels/microsoft365-graph/accounts.rst:19
+#: ../channels/microsoft365-graph/accounts.rst:25
 msgid ""
 "Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ "
 "and log in as an administrator (at least application administrator "
@@ -4878,7 +4894,7 @@ msgstr ""
 "#home>`_ und melden Sie sich als Administrator an (mindestens die "
 "Berechtigung als Anwendungsadministrator ist erforderlich)."
 
-#: ../channels/microsoft365-graph/accounts.rst:24
+#: ../channels/microsoft365-graph/accounts.rst:30
 #: ../channels/microsoft365/accounts/register-app.rst:33
 #: ../settings/security/third-party/facebook.rst:None
 msgid "Create App"
@@ -4892,7 +4908,7 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht für die App-"
 "Registrierung."
 
-#: ../channels/microsoft365-graph/accounts.rst:30
+#: ../channels/microsoft365-graph/accounts.rst:36
 #: ../channels/microsoft365/accounts/register-app.rst:39
 msgid ""
 "Create a new app by going to *Applications > App registrations* and select "
@@ -4901,24 +4917,24 @@ msgstr ""
 "Erstellen Sie eine neue App, indem Sie zu *Anwendungen > App-"
 "Registrierungen* gehen und **Neue Registrierung** wählen."
 
-#: ../channels/microsoft365-graph/accounts.rst:32
+#: ../channels/microsoft365-graph/accounts.rst:38
 #: ../channels/microsoft365/accounts/register-app.rst:41
 msgid "Enter a fitting name and select an account type. Supported types are:"
 msgstr ""
 "Geben Sie einen passenden Namen ein und wählen Sie einen Kontotyp. "
 "Unterstützte Typen sind:"
 
-#: ../channels/microsoft365-graph/accounts.rst:34
+#: ../channels/microsoft365-graph/accounts.rst:40
 #: ../channels/microsoft365/accounts/register-app.rst:43
 msgid "Accounts in this organizational directory only (Single tenant)"
 msgstr "Nur Konten in diesem Organisationsverzeichnis (einzelner Mandant)"
 
-#: ../channels/microsoft365-graph/accounts.rst:35
+#: ../channels/microsoft365-graph/accounts.rst:41
 #: ../channels/microsoft365/accounts/register-app.rst:44
 msgid "Accounts in any organizational directory (Multitenant)"
 msgstr "Konten in einem beliebigen Organisationsverzeichnis (mandantenfähig)"
 
-#: ../channels/microsoft365-graph/accounts.rst:37
+#: ../channels/microsoft365-graph/accounts.rst:43
 #: ../channels/microsoft365/accounts/register-app.rst:50
 msgid ""
 "Under \"Redirect URI\", select \"Web\" as platform and paste your already "
@@ -4927,7 +4943,7 @@ msgstr ""
 "Wählen Sie unter \"Redirect URI\" die Plattform \"Web\" und fügen Sie die "
 "bereits kopierte Callback URL von Zammad ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:39
+#: ../channels/microsoft365-graph/accounts.rst:45
 #: ../channels/microsoft365/accounts/register-app.rst:52
 msgid "Click on **Register**."
 msgstr "Klicken Sie auf **Registrieren**."
@@ -4938,7 +4954,7 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Übersicht der "
 "Anwendungen."
 
-#: ../channels/microsoft365-graph/accounts.rst:46
+#: ../channels/microsoft365-graph/accounts.rst:52
 msgid ""
 "In the overview screen, copy the \"Application (client) ID\", switch to "
 "Zammad and paste it in the \"Client ID\" field in the pop up."
@@ -4947,7 +4963,7 @@ msgstr ""
 "wechseln Sie zu Zammad und fügen Sie sie in das Feld \"Client-ID\" im Pop-up "
 "ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:48
+#: ../channels/microsoft365-graph/accounts.rst:54
 msgid ""
 "Only required for single tenant setup: copy the \"Directory (tenant) ID\" "
 "and paste it in the \"Tenant UUID/Name\" field in Zammad."
@@ -4956,7 +4972,7 @@ msgstr ""
 "die \"Verzeichnis-ID (Mandant)\" und fügen Sie sie in das Feld \"Verzeichnis-"
 "UUID/Name (Mandant)\" in Zammad ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:52
+#: ../channels/microsoft365-graph/accounts.rst:58
 #: ../channels/microsoft365/accounts/register-app.rst:55
 msgid "Create Secret"
 msgstr "Geheimnis erstellen"
@@ -4968,7 +4984,7 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht \"Geheime "
 "Clientschlüssel\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:58
+#: ../channels/microsoft365-graph/accounts.rst:64
 #: ../channels/microsoft365/accounts/register-app.rst:61
 msgid ""
 "In Entra, go to \"Certificates & secrets\" and add a secret by clicking the "
@@ -4978,14 +4994,14 @@ msgstr ""
 "geheimen Client-Schlüssel hinzu, indem Sie auf die Schaltfläche **Neuer "
 "geheimer Clientschlüssel** klicken."
 
-#: ../channels/microsoft365-graph/accounts.rst:60
+#: ../channels/microsoft365-graph/accounts.rst:66
 #: ../channels/microsoft365/accounts/register-app.rst:63
 msgid "Enter a description, set an expiry duration and click **Add**."
 msgstr ""
 "Geben Sie eine Beschreibung ein, legen Sie eine Gültigkeitsdauer fest und "
 "klicken Sie auf **Hinzufügen**."
 
-#: ../channels/microsoft365-graph/accounts.rst:61
+#: ../channels/microsoft365-graph/accounts.rst:67
 #: ../channels/microsoft365/accounts/register-app.rst:64
 msgid ""
 "Copy the string under \"Value\" (not the \"Secret ID\"!), this is the "
@@ -4995,7 +5011,7 @@ msgstr ""
 "das ist das Secret.. Fügen Sie es bei Zammad in das Feld \"Client-Secret\" "
 "ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:65
+#: ../channels/microsoft365-graph/accounts.rst:71
 #: ../channels/microsoft365/accounts/register-app.rst:68
 msgid "Configure API Permissions"
 msgstr "API-Berechtigungen konfigurieren"
@@ -5007,67 +5023,67 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht für die API-"
 "Berechtigungen."
 
-#: ../channels/microsoft365-graph/accounts.rst:71
+#: ../channels/microsoft365-graph/accounts.rst:77
 #: ../channels/microsoft365/accounts/register-app.rst:74
 msgid "Go to \"API permissions\" and **Add a permission**."
 msgstr ""
 "Gehen Sie zu \"API-Berechtigungen\" und wählen Sie **Berechtigung "
 "hinzufügen**."
 
-#: ../channels/microsoft365-graph/accounts.rst:72
+#: ../channels/microsoft365-graph/accounts.rst:78
 #: ../channels/microsoft365/accounts/register-app.rst:75
 msgid "Select \"Microsoft Graph\" and \"Delegated permissions\"."
 msgstr "Wählen Sie \"Microsoft Graph\" und \"Delegierte Berechtigungen\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:73
+#: ../channels/microsoft365-graph/accounts.rst:79
 #: ../channels/microsoft365/accounts/register-app.rst:76
 msgid "Add the following permissions:"
 msgstr "Fügen Sie die folgenden Berechtigungen hinzu:"
 
-#: ../channels/microsoft365-graph/accounts.rst:75
+#: ../channels/microsoft365-graph/accounts.rst:81
 #: ../channels/microsoft365/accounts/register-app.rst:81
 msgid "``offline_access``"
 msgstr "``offline_access``"
 
-#: ../channels/microsoft365-graph/accounts.rst:76
+#: ../channels/microsoft365-graph/accounts.rst:82
 #: ../channels/microsoft365/accounts/register-app.rst:79
 #: ../settings/security/third-party/microsoft.rst:66
 msgid "``openid``"
 msgstr "``openid``"
 
-#: ../channels/microsoft365-graph/accounts.rst:77
+#: ../channels/microsoft365-graph/accounts.rst:83
 #: ../channels/microsoft365/accounts/register-app.rst:80
 msgid "``profile``"
 msgstr "``profile``"
 
-#: ../channels/microsoft365-graph/accounts.rst:78
+#: ../channels/microsoft365-graph/accounts.rst:84
 msgid "``Mail.ReadWrite``"
 msgstr "``Mail.ReadWrite``"
 
-#: ../channels/microsoft365-graph/accounts.rst:79
+#: ../channels/microsoft365-graph/accounts.rst:85
 msgid "``Mail.Send``"
 msgstr "``Mail.Send``"
 
-#: ../channels/microsoft365-graph/accounts.rst:80
+#: ../channels/microsoft365-graph/accounts.rst:86
 msgid "``Mail.ReadWrite.Shared``"
 msgstr "``Mail.ReadWrite.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:81
+#: ../channels/microsoft365-graph/accounts.rst:87
 msgid "``Mail.Send.Shared``"
 msgstr "``Mail.Send.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:83
+#: ../channels/microsoft365-graph/accounts.rst:89
 #: ../channels/microsoft365/accounts/register-app.rst:85
 msgid "Save it by clicking the **Add permissions** button."
 msgstr ""
 "Speichern Sie sie, indem Sie auf die Schaltfläche **Berechtigungen "
 "hinzufügen** klicken."
 
-#: ../channels/microsoft365-graph/accounts.rst:86
+#: ../channels/microsoft365-graph/accounts.rst:92
 msgid "Additional Steps for Shared Mailboxes"
 msgstr "Zusätzliche Schritte für freigegebene Postfächer"
 
-#: ../channels/microsoft365-graph/accounts.rst:88
+#: ../channels/microsoft365-graph/accounts.rst:94
 msgid ""
 "If you want to fetch email from a shared mailbox, you have to perform "
 "additional steps:"
@@ -5075,7 +5091,7 @@ msgstr ""
 "Wenn Sie E-Mails aus einem freigegebenen Postfach abrufen möchten, müssen "
 "Sie zusätzliche Schritte durchführen:"
 
-#: ../channels/microsoft365-graph/accounts.rst:91
+#: ../channels/microsoft365-graph/accounts.rst:97
 msgid ""
 "Log in to the `Exchange admin center <https://"
 "admin.exchange.microsoft.com>`_."
@@ -5083,7 +5099,7 @@ msgstr ""
 "Melden Sie sich beim `Exchange Admin Center <https://"
 "admin.exchange.microsoft.com>`_ an."
 
-#: ../channels/microsoft365-graph/accounts.rst:92
+#: ../channels/microsoft365-graph/accounts.rst:98
 msgid ""
 "Go to *Recipients > Mailboxes*, select the mailbox and click on **Mailboxes "
 "delegation**."
@@ -5091,7 +5107,7 @@ msgstr ""
 "Gehen Sie zu *Recipients > Mailboxes*, wählen Sie das Postfach aus und "
 "klicken Sie auf **Mailbox delegation**."
 
-#: ../channels/microsoft365-graph/accounts.rst:94
+#: ../channels/microsoft365-graph/accounts.rst:100
 msgid ""
 "Under \"Send as\", click on **Edit** and **Add members**. Search and select "
 "the user from which you want to access the mailbox and **Save** it."
@@ -5100,15 +5116,15 @@ msgstr ""
 "wählen Sie den Benutzer, von dem aus Sie auf die Mailbox zugreifen möchten, "
 "und wählen Sie **Save**."
 
-#: ../channels/microsoft365-graph/accounts.rst:96
+#: ../channels/microsoft365-graph/accounts.rst:102
 msgid "Do the same for \"Read and manage (Full Access)\"."
 msgstr "Machen Sie dasselbe für \"Read and manage (Full Access)\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:100
+#: ../channels/microsoft365-graph/accounts.rst:106
 msgid "Configure the Channel in Zammad"
 msgstr "Konfigurieren Sie den Kanal in Zammad"
 
-#: ../channels/microsoft365-graph/accounts.rst:103
+#: ../channels/microsoft365-graph/accounts.rst:109
 #: ../channels/microsoft365/accounts/register-app.rst:140
 msgid "App Configuration"
 msgstr "App Konfiguration"
@@ -5117,7 +5133,7 @@ msgstr "App Konfiguration"
 msgid "Screenshot shows Zammad's app configuration dialog."
 msgstr "Der Screenshot zeigt den Konfigurationsdialog in Zammad."
 
-#: ../channels/microsoft365-graph/accounts.rst:109
+#: ../channels/microsoft365-graph/accounts.rst:115
 msgid ""
 "If you followed this guide, you already should have pasted your app "
 "information. If not, here is a short summary:"
@@ -5126,39 +5142,39 @@ msgstr ""
 "bereits eingefügt haben. Falls nicht, finden Sie hier eine kurze "
 "Zusammenfassung:"
 
-#: ../channels/microsoft365-graph/accounts.rst:112
+#: ../channels/microsoft365-graph/accounts.rst:118
 #: ../channels/microsoft365/accounts/register-app.rst:146
 msgid "In Zammad's channel configuration, click on **Configure App**."
 msgstr ""
 "Klicken Sie in der Kanalkonfiguration von Zammad auf **App konfigurieren**."
 
-#: ../channels/microsoft365-graph/accounts.rst:113
+#: ../channels/microsoft365-graph/accounts.rst:119
 #: ../channels/microsoft365/accounts/register-app.rst:147
 msgid "Enter your app details:"
 msgstr "Geben Sie Ihre App-Details ein:"
 
-#: ../channels/microsoft365-graph/accounts.rst:115
+#: ../channels/microsoft365-graph/accounts.rst:121
 #: ../channels/microsoft365/accounts/register-app.rst:149
 msgid "Client ID: *Application (client) ID*"
 msgstr "Client-ID: *Anwendungs-ID (Client)*"
 
-#: ../channels/microsoft365-graph/accounts.rst:116
+#: ../channels/microsoft365-graph/accounts.rst:122
 #: ../channels/microsoft365/accounts/register-app.rst:150
 msgid "Client Secret: *Value* (not the \"Secret ID\"!) from client secret"
 msgstr "Client-Secret: *Value* (nicht die \"Secret ID\"!) des Client-Secrets"
 
-#: ../channels/microsoft365-graph/accounts.rst:117
+#: ../channels/microsoft365-graph/accounts.rst:123
 #: ../channels/microsoft365/accounts/register-app.rst:151
 msgid ""
 "Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)"
 msgstr "Verzeichnis-UUID/Name (Mandant): *Verzeichnis-ID (Mandant)*"
 
-#: ../channels/microsoft365-graph/accounts.rst:118
+#: ../channels/microsoft365-graph/accounts.rst:124
 #: ../channels/microsoft365/accounts/register-app.rst:152
 msgid "Click on **Submit**."
 msgstr "Klicken Sie auf **Übermitteln**."
 
-#: ../channels/microsoft365-graph/accounts.rst:123
+#: ../channels/microsoft365-graph/accounts.rst:129
 msgid ""
 "Now you can add your account to Zammad. Do so by clicking the **Add "
 "account** button in the top right corner. Select the correct mailbox type. "
@@ -5181,7 +5197,7 @@ msgid "Screenshot shows Zammad's dialog for account configuration."
 msgstr ""
 "Der Screenshot zeigt den Dialog von Zammad zur Konfiguration des Kontos."
 
-#: ../channels/microsoft365-graph/accounts.rst:133
+#: ../channels/microsoft365-graph/accounts.rst:139
 msgid ""
 "After that, Zammad will ask you to assign a destination group. Select a "
 "group which should (initially) handle the incoming tickets of this channel. "
@@ -5195,7 +5211,7 @@ msgstr ""
 "der ausgewählten Gruppe für ausgehende E-Mails (*E-Mail-Versandadresse der "
 "Zielgruppe*) zugewiesen werden soll. Wählen Sie zwischen:"
 
-#: ../channels/microsoft365-graph/accounts.rst:139
+#: ../channels/microsoft365-graph/accounts.rst:145
 msgid ""
 "**Change to ...** to add this email address to the group for outgoing "
 "emails. This may overwrite an already assigned email address."
@@ -5204,7 +5220,7 @@ msgstr ""
 "Mails hinzuzufügen. Dies kann eine bereits zugewiesene E-Mail-Adresse "
 "überschreiben."
 
-#: ../channels/microsoft365-graph/accounts.rst:142
+#: ../channels/microsoft365-graph/accounts.rst:148
 msgid ""
 "**Do not change email address** if you don't want assign an email address to "
 "the group or change it. If the group has no assigned email address, it stays "
@@ -5215,7 +5231,7 @@ msgstr ""
 "zugewiesen ist, bleibt sie leer. Wenn der Gruppe bereits eine E-Mail-Adresse "
 "zugewiesen wurde, bleibt diese unverändert."
 
-#: ../channels/microsoft365-graph/accounts.rst:146
+#: ../channels/microsoft365-graph/accounts.rst:152
 msgid ""
 "You can also specify a folder from which Zammad should fetch emails from. If "
 "you do so, make sure that the emails are routed to this folder somehow. "
@@ -5230,7 +5246,7 @@ msgstr ""
 "Legen Sie anschließend fest, ob die abgerufenen E-Mails auf dem Server "
 "verbleiben sollen oder nicht."
 
-#: ../channels/microsoft365-graph/accounts.rst:152
+#: ../channels/microsoft365-graph/accounts.rst:158
 msgid ""
 "Depending if there are already email messages in this account, the archive "
 "mode dialog may be shown."
@@ -5238,7 +5254,7 @@ msgstr ""
 "Je nachdem, ob bereits E-Mail-Nachrichten in diesem Konto vorhanden sind, "
 "wird das Dialogfeld für den Archivierungsmodus angezeigt."
 
-#: ../channels/microsoft365-graph/accounts.rst:157
+#: ../channels/microsoft365-graph/accounts.rst:163
 msgid ""
 "Now your channel is ready and can be used! If something doesn't work, have a "
 "look at the :doc:`common errors section <common-errors>`, where you can find "
@@ -5249,7 +5265,7 @@ msgstr ""
 "bekannte Fehlermeldungen und deren Ursache im Zusammenhang mit der M365-"
 "Konfiguration."
 
-#: ../channels/microsoft365-graph/accounts.rst:161
+#: ../channels/microsoft365-graph/accounts.rst:167
 #: ../channels/microsoft365/accounts.rst:39
 msgid ""
 "🤔 **How do I use my Microsoft 365 account for outgoing system notifications?"
@@ -5258,7 +5274,7 @@ msgstr ""
 "**Wie verwende ich mein Microsoft 365 Konto für ausgehende "
 "Systembenachrichtigungen?**"
 
-#: ../channels/microsoft365-graph/accounts.rst:163
+#: ../channels/microsoft365-graph/accounts.rst:169
 #: ../channels/microsoft365/accounts.rst:41
 msgid ""
 "On **subscription/cloud-hosted instances**, you can't. Notifications will "
@@ -5268,7 +5284,7 @@ msgstr ""
 "Benachrichtigungen werden hier immer von “Notification Master "
 "<noreply\\@your.zammad.domain>” versendet."
 
-#: ../channels/microsoft365-graph/accounts.rst:167
+#: ../channels/microsoft365-graph/accounts.rst:173
 #: ../channels/microsoft365/accounts.rst:45
 msgid ""
 "On **self-hosted instances**, we still don't recommend it. Using a Microsoft "
@@ -5285,7 +5301,7 @@ msgstr ""
 "service-description/exchange-online-limits#receiving-and-sending-limits>`_ "
 "überschreiten, kann das Konto gesperrt werden."
 
-#: ../channels/microsoft365-graph/accounts.rst:173
+#: ../channels/microsoft365-graph/accounts.rst:179
 #: ../channels/microsoft365/accounts.rst:51
 msgid ""
 "Set up a generic :doc:`email channel </channels/email/index>` instead, then "
@@ -5295,11 +5311,11 @@ msgstr ""
 "email/index>` ein und benutzen Sie die Einstellungen für die :ref:`E-Mail "
 "Benachrichtigung <email-notification>`."
 
-#: ../channels/microsoft365-graph/accounts.rst:177
+#: ../channels/microsoft365-graph/accounts.rst:183
 msgid "Re-Authenticate"
 msgstr "Re-Authentifizierung"
 
-#: ../channels/microsoft365-graph/accounts.rst:179
+#: ../channels/microsoft365-graph/accounts.rst:185
 msgid ""
 "If your token got invalid, you have to replace the token due to other "
 "reasons, you want to use a shared mailbox with another user, you can use the "
@@ -5310,7 +5326,7 @@ msgstr ""
 "Benutzer verwenden möchten, können Sie die Schaltfläche **Re-"
 "Authentifizierung** verwenden."
 
-#: ../channels/microsoft365-graph/accounts.rst:183
+#: ../channels/microsoft365-graph/accounts.rst:189
 msgid ""
 "In case you are using an user mailbox, the new user has to match the "
 "existing one, otherwise it will result in a user mismatch error. In this "
@@ -5320,12 +5336,12 @@ msgstr ""
 "vorhandenen übereinstimmen, da sonst ein Fehler auftritt. In diesem Fall "
 "sollten Sie den Kanal löschen und ein neues Konto hinzufügen."
 
-#: ../channels/microsoft365-graph/accounts.rst:188
+#: ../channels/microsoft365-graph/accounts.rst:194
 #: ../channels/microsoft365/common-errors.rst:71
 msgid "Request Admin Consent"
 msgstr "Administrator-Zustimmung beantragen"
 
-#: ../channels/microsoft365-graph/accounts.rst:190
+#: ../channels/microsoft365-graph/accounts.rst:196
 msgid ""
 "It is possible to request the permissions via admin consent. In this case "
 "Zammad will request necessary permissions for you from your admin, and then "
@@ -5560,8 +5576,9 @@ msgid ""
 "standard email setup."
 msgstr ""
 "Wenn Sie bereits mit E-Mail-Kanälen vertraut sind, können Sie das meiste "
-"hier überspringen - aber Sie sollten einen Blick auf den Abschnitt **Konten**"
-" werfen, der sich von einer Standard-E-Mail-Einrichtung unterscheidet."
+"hier überspringen - aber Sie sollten einen Blick auf den Abschnitt "
+"**Konten** werfen, der sich von einer Standard-E-Mail-Einrichtung "
+"unterscheidet."
 
 #: ../channels/microsoft365-graph/index.rst:33
 #: ../channels/microsoft365/index.rst:33
@@ -9429,8 +9446,8 @@ msgid ""
 "publish in and click on the **Create Knowledge Base** button."
 msgstr ""
 "Um die Knowledge Base zu aktivieren, wählen Sie zunächst die Sprachen aus, "
-"in denen Sie veröffentlichen möchten, und klicken Sie auf die Schaltfläche **"
-"Knowledge Base erstellen**."
+"in denen Sie veröffentlichen möchten, und klicken Sie auf die Schaltfläche "
+"**Knowledge Base erstellen**."
 
 #: ../manage/knowledge-base.rst:45
 msgid "Knowledge Base: Initial setup"
@@ -9759,8 +9776,8 @@ msgid ""
 "in combination with Nginx proxy manger (NPM) </appendix/custom-kb-url.html>` "
 "in the system documentation."
 msgstr ""
-"Sie finden in der Systemdokumentation eine Anleitung zur Verwendung einer "
-":docs:`Custom Knowledge Base URL </appendix/custom-kb-url.html>` in "
+"Sie finden in der Systemdokumentation eine Anleitung zur Verwendung "
+"einer :docs:`Custom Knowledge Base URL </appendix/custom-kb-url.html>` in "
 "Kombination mit Nginx proxy manger (NPM)."
 
 #: ../manage/knowledge-base.rst:194
@@ -10674,8 +10691,8 @@ msgid ""
 "dialog or create a deletion task in the :doc:`data privacy </system/data-"
 "privacy>` section directly."
 msgstr ""
-"Verwenden Sie das ⋮ **Aktion** Menü in der Benutzerübersicht, um den **"
-"Benutzer löschen** Dialog zu öffnen oder erstellen Sie direkt eine Aufgabe "
+"Verwenden Sie das ⋮ **Aktion** Menü in der Benutzerübersicht, um den "
+"**Benutzer löschen** Dialog zu öffnen oder erstellen Sie direkt eine Aufgabe "
 "zum Löschen im Abschnitt :doc:`Datenschutz </system/data-privacy>`."
 
 #: ../manage/organizations/via-the-admin-panel.rst:0
@@ -11613,7 +11630,8 @@ msgstr "``admin.channel_microsoft365``"
 #: ../manage/roles/admin-permissions.rst:77
 msgid ""
 ":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
-msgstr ":doc:`Kanäle > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
+msgstr ""
+":doc:`Kanäle > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
 
 #: ../manage/roles/admin-permissions.rst:79
 msgid "``admin.channel_sms``"
@@ -12785,67 +12803,169 @@ msgstr "Automatisierung"
 
 #: ../manage/scheduler.rst:4
 msgid ""
-"The scheduler performs time-based automated actions. You can set up your own "
-"schedulers, configure at which points in time they should run, set up "
-"conditions to determine which objects they should affect, and then configure "
-"the actions that you want to execute for these objects."
+"Zammad's scheduler performs time-based automated actions. The most important "
+"difference to :doc:`trigger` is that no action is required for the "
+"execution. You can set up your own scheduler jobs and configure:"
 msgstr ""
-"Die Automatisierung führt zeitbasierte automatisierte Aktionen durch. Sie "
-"können Ihre eigene Automatisierung einrichten, konfigurieren, zu welchen "
-"Zeitpunkten sie ausgeführt werden sollen, Bedingungen einrichten, um zu "
-"bestimmen, welche Objekte sie betreffen sollen, und dann die Aktionen "
-"konfigurieren, die für diese Objekte ausgeführt werden sollen."
 
-#: ../manage/scheduler.rst:11
+#: ../manage/scheduler.rst:8
+msgid "At which time they should run"
+msgstr ""
+
+#: ../manage/scheduler.rst:9
+msgid "Which objects should be modified based on conditions"
+msgstr ""
+
+#: ../manage/scheduler.rst:10
+msgid "What changes or actions should be executed for matching objects"
+msgstr ""
+
+#: ../manage/scheduler.rst:12
+#, fuzzy
+#| msgid ""
+#| "Schedulers can be used to send periodic reminder emails. Use :doc:`/misc/"
+#| "variables` to build highly-customized email templates."
 msgid ""
-"Schedulers can be used to send periodic reminder emails. Use :doc:`/misc/"
-"variables` to build highly-customized email templates."
+"As an example, scheduler jobs can be used to send periodic reminder emails. "
+"If this is what you want to do, have a look at :doc:`/misc/variables` to "
+"build highly-customized email templates."
 msgstr ""
 "Automatisierungen können verwendet werden, um periodische Erinnerungs-E-"
 "Mails zu versenden. Verwenden Sie :doc:`/misc/variables`, um individuelle E-"
 "Mail-Vorlagen zu erstellen."
 
-#: ../manage/scheduler.rst:14
+#: ../manage/scheduler.rst:18
+#, fuzzy
+#| msgid ""
+#| "Schedulers only perform ``2000`` objects per run. This is a security "
+#| "function in case you accidentally misconfigured the scheduler."
 msgid ""
-"Schedulers only perform ``2000`` objects per run. This is a security "
-"function in case you accidentally misconfigured the scheduler."
+"Scheduler jobs can process a maximum of ``2000`` objects per run. This is a "
+"security function in case you accidentally misconfigured the scheduler."
 msgstr ""
 "Automatisierungen werden nur für ``2000`` Objekte pro Lauf ausgeführt. Dies "
 "ist eine Sicherheitsfunktion für den Fall, dass Sie die Automatisierung "
 "versehentlich falsch konfigurieren."
 
-#: ../manage/scheduler.rst:18
-msgid "Add a New Scheduler"
+#: ../manage/scheduler.rst:22
+#, fuzzy
+#| msgid "Ticket State"
+msgid "Quick Start"
+msgstr "Ticket-Status"
+
+#: ../manage/scheduler.rst:25
+#, fuzzy
+#| msgid "Add a New Scheduler"
+msgid "Manage Scheduler Jobs"
 msgstr "Eine neue Automatisierung hinzufügen"
 
-#: ../manage/scheduler.rst:20
+#: ../manage/scheduler.rst:27
 msgid ""
-"Create a new scheduler job by clicking on the \"New scheduler\" button in "
-"the top right corner. Then Zammad presents a dialog where you can create "
-"your own one."
+"You can find the scheduler configuration in the admin settings under *Manage "
+"> Scheduler*. Create a new scheduler job by clicking the **New Scheduler** "
+"button in the top right corner. This opens a dialog where you can define "
+"your scheduler job. To edit an existing scheduler, simply click on the row "
+"and the dialog gets opened again. The ︙ action menu holds the options to "
+"clone or delete the scheduler job."
 msgstr ""
-"Erstellen Sie eine neue Automatisierung, indem Sie auf die Schaltfläche "
-"\"Neue Automatisierung\" in der oberen rechten Ecke klicken. Zammad zeigt "
-"dann ein Dialogfeld an, in dem Sie Ihre eigene Automatisierung erstellen "
-"können."
 
-#: ../manage/scheduler.rst:23
-msgid "Example:"
-msgstr "Beispiel:"
+#: ../manage/scheduler.rst:34
+msgid ""
+"After creating at least one scheduler job, you can find a table in the main "
+"area. There you can see additional information like how many objects were "
+"processed at the last run and how many will be processed at the next run."
+msgstr ""
 
 #: ../manage/scheduler.rst:None
-msgid "Screenshot showing dialog of creating a new scheduler job"
-msgstr "Screencast zeigt die Erstellung eines neuen Automatisierungs-Jobs"
+#, fuzzy
+#| msgid "Screenshot showing Zammad's session management"
+msgid "Screenshot shows Zammad's scheduler management"
+msgstr "Screenshot der Sitzungsverwaltung von Zammad"
 
-#: ../manage/scheduler.rst:31
+#: ../manage/scheduler.rst:44
+msgid "Scheduler Job Structure"
+msgstr ""
+
+#: ../manage/scheduler.rst:46
+msgid ""
+"Read on for details about the main parts of a scheduler job. A description "
+"of all available fields follows in the :ref:`scheduler-job-details` section."
+msgstr ""
+
+#: ../manage/scheduler.rst:57
+#, fuzzy
+#| msgid "Execution time"
+msgid "Execution Time"
+msgstr "Ausführungszeit"
+
+#: ../manage/scheduler.rst:50
+msgid ""
+"Define time(s) and day(s), when the scheduler job is supposed to run. Simply "
+"click the day and time table entries to select and deselect items. You can "
+"see a textual preview of what you configured above the tables."
+msgstr ""
+
+#: ../manage/scheduler.rst:0
+#, fuzzy
+#| msgid "Screenshot showing postpone macro configuration"
+msgid "Screenshot shows date and time selection in scheduler job configuration"
+msgstr "Screenshot der Konfiguration des Verschieben-Makros"
+
+#: ../manage/scheduler.rst:68
+#, fuzzy
+#| msgid "Object Conditions"
+msgid "Define Object Condition"
+msgstr "Objektbedingungen"
+
+#: ../manage/scheduler.rst:60
+msgid ""
+"Define a condition to specify the affected objects you want to apply changes "
+"or perform an action. If you're not familiar with conditions in Zammad, you "
+"can find an explanation at the :doc:`/misc/object-conditions/index` page. "
+"The availability of attributes depends on the selected object context."
+msgstr ""
+
+#: ../manage/scheduler.rst:0
+#, fuzzy
+#| msgid "Screenshot showing postpone macro configuration"
+msgid ""
+"Screenshot shows object condition definition in scheduler job configuration"
+msgstr "Screenshot der Konfiguration des Verschieben-Makros"
+
+#: ../manage/scheduler.rst:78
+#, fuzzy
+#| msgid "Direction"
+msgid "Define Action"
+msgstr "Richtung"
+
+#: ../manage/scheduler.rst:71
+msgid ""
+"In this area, you define which changes or actions should get applied to the "
+"affected objects. Depending on the selected object context, the available "
+"options differ."
+msgstr ""
+
+#: ../manage/scheduler.rst:0
+#, fuzzy
+#| msgid "Screenshot showing postpone macro configuration"
+msgid "Screenshot shows action selection in scheduler job configuration"
+msgstr "Screenshot der Konfiguration des Verschieben-Makros"
+
+#: ../manage/scheduler.rst:83
+#, fuzzy
+#| msgid "Role Details"
+msgid "Scheduler Job Details"
+msgstr "Details zur Rolle"
+
+#: ../manage/scheduler.rst:86
 msgid "Choose a name for the scheduler."
 msgstr "Wählen Sie einen Namen für die Automatisierung."
 
-#: ../manage/scheduler.rst:35
+#: ../manage/scheduler.rst:90
 msgid "When should the job run?"
 msgstr "Wann soll die Aufgabe ausgeführt werden?"
 
-#: ../manage/scheduler.rst:34
+#: ../manage/scheduler.rst:89
 msgid ""
 "Choose the points in time when the scheduler should run. It depends on the "
 "configured :doc:`timezone in Zammad </settings/branding>`."
@@ -12854,11 +12974,11 @@ msgstr ""
 "basiert auf der konfigurierten :doc:`Zeitzone in Zammad </settings/"
 "branding>`."
 
-#: ../manage/scheduler.rst:39 ../system/core-workflows/how-do-they-work.rst:15
+#: ../manage/scheduler.rst:94 ../system/core-workflows/how-do-they-work.rst:15
 msgid "Object"
 msgstr "Objekt"
 
-#: ../manage/scheduler.rst:38
+#: ../manage/scheduler.rst:93
 msgid ""
 "Choose in which object context the scheduler should be executed. Possible "
 "objects are: **Organization**, **Ticket** and **User**."
@@ -12866,11 +12986,11 @@ msgstr ""
 "Wählen Sie, in welchem Objektkontext die Automatisierung ausgeführt werden "
 "soll. Mögliche Objekte sind: **Organisation**, **Ticket** und **Benutzer**."
 
-#: ../manage/scheduler.rst:45
+#: ../manage/scheduler.rst:100
 msgid "Conditions for affected objects"
 msgstr "Bedingungen für zu verarbeitende Objekte"
 
-#: ../manage/scheduler.rst:42
+#: ../manage/scheduler.rst:97
 msgid ""
 "Determine the object attributes to select the objects on which the actions "
 "will be applied."
@@ -12878,7 +12998,7 @@ msgstr ""
 "Bestimmen Sie mit Objektattributen die Objekte, auf die die Aktionen "
 "angewendet werden sollen."
 
-#: ../manage/scheduler.rst:48
+#: ../manage/scheduler.rst:103
 msgid ""
 "This list previews some objects that your conditions are matching and shows "
 "a total of how many objects are being matched. Use this to double-check the "
@@ -12888,7 +13008,7 @@ msgstr ""
 "zutreffen, und gibt an, wie viele Objekte insgesamt betroffen sind. Nutzen "
 "Sie dies, um die Bedingungen zu überprüfen."
 
-#: ../manage/scheduler.rst:52
+#: ../manage/scheduler.rst:107
 msgid ""
 "Please be aware that the preview and displayed number is just based on the "
 "currently selected condition. It doesn't necessarily represent the objects "
@@ -12898,11 +13018,11 @@ msgstr ""
 "aktuell ausgewählten Bedingung basieren. Sie zeigt nicht zwingend die "
 "Objekte, die zum definierten Zeitpunkt bearbeitet werden sollen."
 
-#: ../manage/scheduler.rst:73
+#: ../manage/scheduler.rst:128
 msgid "Execute changes on objects"
 msgstr "Führt folgende Änderungen an Objekten durch"
 
-#: ../manage/scheduler.rst:57
+#: ../manage/scheduler.rst:112
 msgid ""
 "Determine the changes to be made to the object. The possible changes depend "
 "on the selected object context. Be aware that a related object context may "
@@ -12915,7 +13035,7 @@ msgstr ""
 "Durchführung von Ticket-Aktionen aus einer Benutzer-Kontext-basierten "
 "Automatisierung)."
 
-#: ../manage/scheduler.rst:64
+#: ../manage/scheduler.rst:119
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
@@ -12926,7 +13046,7 @@ msgstr ""
 "werden! Wenn sie ausgeführt werden, werden die Objekte gelöscht und es ist "
 "keine Wiederherstellung möglich."
 
-#: ../manage/scheduler.rst:68
+#: ../manage/scheduler.rst:123
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
@@ -12934,7 +13054,7 @@ msgstr ""
 "**Sofort löschen** löscht das Ticket bei der Laufzeit des Auftrags *ohne "
 "Hinweis* in der Benutzeroberfläche."
 
-#: ../manage/scheduler.rst:71
+#: ../manage/scheduler.rst:126
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
@@ -12944,11 +13064,11 @@ msgstr ""
 "Löschaufgabe für das Objekt bei der Laufzeit des Jobs. Das bedeutet, dass "
 "sie in Zammads :doc:`Datenschutzpanel </system/data-privacy>` sichtbar ist."
 
-#: ../manage/scheduler.rst:77
+#: ../manage/scheduler.rst:132
 msgid "Disable notifications"
 msgstr "Benachrichtigungen deaktivieren"
 
-#: ../manage/scheduler.rst:76
+#: ../manage/scheduler.rst:131
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
@@ -12957,11 +13077,11 @@ msgstr ""
 "werden, keine Benachrichtigungen gesendet. Sie können dies hier außer Kraft "
 "setzen, indem Sie *nein* einstellen."
 
-#: ../manage/scheduler.rst:86 ../settings/branding.rst:27
+#: ../manage/scheduler.rst:141 ../settings/branding.rst:27
 msgid "Locale"
 msgstr "Sprache"
 
-#: ../manage/scheduler.rst:80 ../manage/scheduler.rst:89
+#: ../manage/scheduler.rst:135 ../manage/scheduler.rst:144
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
@@ -12969,7 +13089,7 @@ msgstr ""
 "Dies kann mit dem Schalter \"Sprache für ausgeführte Aktionen\" aktiviert "
 "werden."
 
-#: ../manage/scheduler.rst:83
+#: ../manage/scheduler.rst:138
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
@@ -12980,11 +13100,11 @@ msgstr ""
 "sehen Sie sich bitte die Erklärung im Abschnitt :ref:`Variablen "
 "<variable_localization>` an."
 
-#: ../manage/scheduler.rst:95 ../settings/branding.rst:44
+#: ../manage/scheduler.rst:150 ../settings/branding.rst:44
 msgid "Timezone"
 msgstr "Zeitzone"
 
-#: ../manage/scheduler.rst:92
+#: ../manage/scheduler.rst:147
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -12996,7 +13116,7 @@ msgstr ""
 "Für weitere Informationen schauen Sie sich bitte die Erklärung im "
 "Bereich :ref:`Variablen <variable_localization>` an."
 
-#: ../manage/scheduler.rst:98
+#: ../manage/scheduler.rst:153
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
@@ -13007,64 +13127,11 @@ msgstr ""
 "Automatisierung bearbeiten. Es ist *keine* Möglichkeit, Notizen zu Objekten "
 "hinzuzufügen."
 
-#: ../manage/scheduler.rst:103
+#: ../manage/scheduler.rst:158
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 "Mit dieser Einstellung können Sie die Automatisierung aktivieren/"
 "deaktivieren."
-
-#: ../manage/scheduler.rst:105
-msgid "The scheduler shown in the screenshot would have the following effects:"
-msgstr ""
-"Die im Screenshot gezeigte Automatisierung hätte folgende Auswirkungen:"
-
-#: ../manage/scheduler.rst:107
-msgid ""
-"Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), all "
-"tickets which:"
-msgstr ""
-"Jeden Werktag (Montag bis Freitag) um 9:00 Uhr (*Europa / Berlin UTC+1*), "
-"alle Tickets die:"
-
-#: ../manage/scheduler.rst:110
-msgid "are not closed or merged, and"
-msgstr "nicht geschlossen oder zusammengeführt sind und"
-
-#: ../manage/scheduler.rst:111
-msgid "are assigned to the Sales group, and"
-msgstr "der Gruppe \"Sales\" zugewiesen sind, und"
-
-#: ../manage/scheduler.rst:112
-msgid "whose escalation was 30 minutes ago"
-msgstr "deren Eskalation 30 Minuten zurückliegt"
-
-#: ../manage/scheduler.rst:114
-msgid "will be:"
-msgstr "werden:"
-
-#: ../manage/scheduler.rst:116
-msgid "assigned to Emma, and"
-msgstr "Emma zugewiesen und"
-
-#: ../manage/scheduler.rst:117
-msgid "have their priority changed to 3 high."
-msgstr "die Priorität auf 3 hoch gesetzt."
-
-#: ../manage/scheduler.rst:119
-msgid ""
-"As a supervisor in the Sales group, this enables Emma to intercept and "
-"process escalated tickets."
-msgstr ""
-"Als Leiterin der Vertriebsgruppe kann Emma so eskalierte Tickets einsehen "
-"und bearbeiten."
-
-#: ../manage/scheduler.rst:122
-msgid ""
-"Emma will not receive notifications when the scheduler assigns her these "
-"tickets."
-msgstr ""
-"Emma erhält keine Benachrichtigung, wenn ihr die Tickets per Automatisierung "
-"zugewiesen werden."
 
 #: ../manage/slas/how-do-they-work.rst:2
 msgid "How Do SLAs Work"
@@ -13740,9 +13807,8 @@ msgid ""
 "Create a new overview and select \"Tag contains ...\" as condition. You can "
 "find further information in :doc:`overviews`."
 msgstr ""
-"Erstellen Sie eine neue Übersicht und wählen Sie als Bedingung "
-"\"Tag enthält eins ...\". Weitere Informationen finden Sie in "
-":doc:`overviews`."
+"Erstellen Sie eine neue Übersicht und wählen Sie als Bedingung \"Tag enthält "
+"eins ...\". Weitere Informationen finden Sie in :doc:`overviews`."
 
 #: ../manage/tags.rst:28
 msgid "By a search-query"
@@ -14620,8 +14686,8 @@ msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was changed to **1 low**."
 msgstr ""
-"**Beispiel:** Ein Trigger mit einer Bedingung für die Priorität **1 niedrig**"
-" wird ausgeführt, wenn das Ticket auf **1 niedrig** geändert wurde."
+"**Beispiel:** Ein Trigger mit einer Bedingung für die Priorität **1 "
+"niedrig** wird ausgeführt, wenn das Ticket auf **1 niedrig** geändert wurde."
 
 #: ../manage/trigger/how-do-they-work.rst:48
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
@@ -14644,9 +14710,9 @@ msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was moved to another group while priority was set **1 low**."
 msgstr ""
-"**Beispiel:** Ein Trigger mit einer Bedingung für die Priorität **1 niedrig**"
-" wird ausgeführt, wenn das Ticket in eine andere Gruppe verschoben wurde, "
-"während die Priorität **1 niedrig** eingestellt war."
+"**Beispiel:** Ein Trigger mit einer Bedingung für die Priorität **1 "
+"niedrig** wird ausgeführt, wenn das Ticket in eine andere Gruppe verschoben "
+"wurde, während die Priorität **1 niedrig** eingestellt war."
 
 #: ../manage/trigger/how-do-they-work.rst:46
 msgid ""
@@ -15035,8 +15101,8 @@ msgid ""
 "Agents can change their notification settings in their :user-docs:`user "
 "profile </extras/profile-and-settings.html>`."
 msgstr ""
-"Agenten können ihre Benachrichtigungseinstellungen in ihrem :user-docs:`"
-"Benutzerprofil </extras/profile-and-settings.html>` ändern."
+"Agenten können ihre Benachrichtigungseinstellungen in ihrem :user-"
+"docs:`Benutzerprofil </extras/profile-and-settings.html>` ändern."
 
 #: ../manage/trigger/system-notifications.rst:37
 msgid ""
@@ -15196,7 +15262,8 @@ msgstr ""
 
 #: ../manage/users/index.rst:0
 msgid "Screenshot shows the user overview with highlighted \"Login\" column"
-msgstr "Screenshot zeigt Benutzerübersicht mit hervorgehobener \"Login\" Spalte"
+msgstr ""
+"Screenshot zeigt Benutzerübersicht mit hervorgehobener \"Login\" Spalte"
 
 #: ../manage/users/index.rst:64
 msgid ""
@@ -15594,7 +15661,8 @@ msgstr "🏴‍☠️ Übernahme einer Benutzersitzung"
 
 #: ../manage/users/via-the-admin-panel.rst:0
 msgid "Screenshot shows menu with \"View from user's perspective\" option."
-msgstr "Screenshot zeigt das Menü mit der Option \"Aus Benutzersicht ansehen\"."
+msgstr ""
+"Screenshot zeigt das Menü mit der Option \"Aus Benutzersicht ansehen\"."
 
 #: ../manage/users/via-the-admin-panel.rst:52
 msgid "Use the ⋮ **Actions** menu to 👁️ **View from user's perspective**."
@@ -15666,8 +15734,8 @@ msgid ""
 "Screenshot shows menu with highlighted \"Manage Two-Factor Authentication\" "
 "option."
 msgstr ""
-"Screenshot zeigt das Menü mit der hervorgehobenen Option "
-"\"Zwei-Faktor-Authentifizierung verwalten\"."
+"Screenshot zeigt das Menü mit der hervorgehobenen Option \"Zwei-Faktor-"
+"Authentifizierung verwalten\"."
 
 #: ../manage/users/via-the-admin-panel.rst:86
 msgid ""
@@ -15924,8 +15992,8 @@ msgid ""
 "If set, all sent webhooks contain a `x-hub-signature` header allowing the "
 "remote site to verify the request."
 msgstr ""
-"Wenn diese Option gesetzt ist, enthalten alle gesendeten Webhooks einen `x"
-"-hub-signature`-Header, der es der Gegenstelle ermöglicht, die Anfrage zu "
+"Wenn diese Option gesetzt ist, enthalten alle gesendeten Webhooks einen `x-"
+"hub-signature`-Header, der es der Gegenstelle ermöglicht, die Anfrage zu "
 "überprüfen."
 
 #: ../manage/webhook/add.rst:59
@@ -16954,8 +17022,8 @@ msgid ""
 msgstr ""
 "Wenn Sie Ihren Kanal mit einem Passwort schützen wollen, müssen Sie in Ihrem "
 "Webhook die Basisauthentifizierung mit Benutzernamen und Passwort verwenden. "
-"Siehe `ntfy Dokumentation <https://docs.ntfy.sh/publish/#username-password>`"
-"_ für weitere Informationen."
+"Siehe `ntfy Dokumentation <https://docs.ntfy.sh/publish/#username-"
+"password>`_ für weitere Informationen."
 
 #: ../manage/webhook/examples/ntfy-notifications.rst:33
 msgid "Step 2 - Add a New Webhook with Custom Payload"
@@ -17028,8 +17096,8 @@ msgstr ""
 msgid ""
 "``icon``: icon of your notification. Can be a a link to a .png or .jpg file."
 msgstr ""
-"``icon``: Symbol für Ihre Benachrichtigung. Kann ein Link zu einer .png oder "
-".jpg Datei sein."
+"``icon``: Symbol für Ihre Benachrichtigung. Kann ein Link zu einer .png "
+"oder .jpg Datei sein."
 
 #: ../manage/webhook/examples/ntfy-notifications.rst:61
 msgid ""
@@ -18093,9 +18161,10 @@ msgstr ""
 "Diese Seite beschreibt die Attributprüfungen, die Sie für verschiedene "
 "Objektattribute durchführen können. Sie können diese Prüfungen an "
 "verschiedenen Stellen in Zammad verwenden, wie z.B. :doc:`Trigger </manage/"
-"trigger>` oder bei der Definition von :doc:`Übersichten </manage/overviews>`"
-". Bitte beachten Sie, dass die verfügbaren Attribute und Operatoren vom "
-"Objektkontext abhängen und davon, wo Sie diese verwenden wollen."
+"trigger>` oder bei der Definition von :doc:`Übersichten </manage/"
+"overviews>`. Bitte beachten Sie, dass die verfügbaren Attribute und "
+"Operatoren vom Objektkontext abhängen und davon, wo Sie diese verwenden "
+"wollen."
 
 #: ../misc/object-conditions/basics.rst:14
 msgid ""
@@ -19428,8 +19497,8 @@ msgstr ""
 "Bitte beachten Sie, dass dies nur eine Übersicht der verfügbaren Variablen "
 "ist. Manche Variablen können in bestimmten Funktionen inkompatibel oder "
 "nicht verfügbar sein. Wenn Sie Variablen vermissen oder sich nicht sicher "
-"sind, ob diese wie erwartet funktionieren, fragen Sie sehr gern in unserer `"
-"Community <https://community.zammad.org>`_ nach."
+"sind, ob diese wie erwartet funktionieren, fragen Sie sehr gern in unserer "
+"`Community <https://community.zammad.org>`_ nach."
 
 #: ../misc/variables.rst:14
 msgid "Basic Usage"
@@ -19481,8 +19550,8 @@ msgid ""
 "The first part of the variable name consist of the object type, e.g. "
 "``ticket``, ``config``, ``user``."
 msgstr ""
-"Der erste Teil des Variablennamens besteht aus dem Objekttyp, z.B. ``ticket``"
-", ``config``, ``user``."
+"Der erste Teil des Variablennamens besteht aus dem Objekttyp, z.B. "
+"``ticket``, ``config``, ``user``."
 
 #: ../misc/variables.rst:46
 msgid ""
@@ -19495,8 +19564,8 @@ msgstr ""
 "Der zweite Teil ist der Name des Attributs. Bei benutzerdefinierten "
 "Objektattributen ist dies der Name, den Sie für das Attribut definiert haben "
 "und der jederzeit im Menü Objektattribut zu finden ist. Der erste und zweite "
-"Teil einer Variablen wird durch einen Punkt geteilt, z.B.: ``ticket.number``"
-", was am Ende in ``#{ticket.number}`` resultiert."
+"Teil einer Variablen wird durch einen Punkt geteilt, z.B.: "
+"``ticket.number``, was am Ende in ``#{ticket.number}`` resultiert."
 
 #: ../misc/variables.rst:52
 msgid ""
@@ -19752,8 +19821,8 @@ msgid ""
 "community.zammad.org>`_."
 msgstr ""
 "Wenn Sie Variablen vermissen oder sich nicht sicher sind, ob diese wie "
-"erwartet funktionieren, fragen Sie gern in unserer `Community "
-"<https://community.zammad.org>`_ nach."
+"erwartet funktionieren, fragen Sie gern in unserer `Community <https://"
+"community.zammad.org>`_ nach."
 
 #: ../misc/variables/article.rst:6
 msgid ""
@@ -21561,8 +21630,8 @@ msgstr "Schritte in Zammad"
 #: ../misc/zabbix.rst:19
 msgid "Enable API Token Access in Zammad's settings under *System > API*."
 msgstr ""
-"Aktivieren Sie den API Token-Zugang in den Einstellungen von Zammad unter *"
-"System > API*."
+"Aktivieren Sie den API Token-Zugang in den Einstellungen von Zammad unter "
+"*System > API*."
 
 #: ../misc/zabbix.rst:20
 msgid ""
@@ -21614,7 +21683,8 @@ msgstr "``zammad_url``: die URL Ihrer Zammad-Installation"
 
 #: ../misc/zabbix.rst:38
 msgid "``zammad_customer``: the email address of the created Zammad user"
-msgstr "``zammad_customer``: die E-Mail-Adresse des erstellten Zammad Benutzers"
+msgstr ""
+"``zammad_customer``: die E-Mail-Adresse des erstellten Zammad Benutzers"
 
 #: ../misc/zabbix.rst:39
 msgid ""
@@ -22297,8 +22367,8 @@ msgid ""
 msgstr ""
 "Um ein benutzerdefiniertes Zertifikat oder ein benutzerdefiniertes CA-"
 "Zertifikat hinzuzufügen, gehen Sie im Admin-Bereich zu *Einstellungen > "
-"Sicherheit > SSL-Zertifikate*. Hier finden Sie eine Schaltfläche "
-"\"SSL-Zertifikat hinzufügen\". In dem Dialog können Sie entweder eine "
+"Sicherheit > SSL-Zertifikate*. Hier finden Sie eine Schaltfläche \"SSL-"
+"Zertifikat hinzufügen\". In dem Dialog können Sie entweder eine "
 "Zertifikatsdatei auswählen oder den Inhalt des Zertifikats einfügen:"
 
 #: ../settings/security/ssl-certificates.rst:None
@@ -22420,8 +22490,8 @@ msgid ""
 "You can find the settings in Zammad's admin panel under *Settings > Security "
 "> Third-party Applications*."
 msgstr ""
-"Sie finden die Einstellungen im Admin-Bereich von Zammad unter *"
-"Einstellungen > Sicherheit > Anwendungen von Drittanbietern*."
+"Sie finden die Einstellungen im Admin-Bereich von Zammad unter "
+"*Einstellungen > Sicherheit > Anwendungen von Drittanbietern*."
 
 #: ../settings/security/third-party.rst:31
 msgid ""
@@ -22808,11 +22878,11 @@ msgstr "Google"
 
 #: ../settings/security/third-party/google.rst:4
 msgid ""
-"With some easy and fast steps, you can enable Zammad to authenticate your "
-"users via Google."
+"Configure Google as an OAuth provider so users can log in to Zammad with "
+"their Google account."
 msgstr ""
-"In ein paar Schritten können Sie in Zammad die Authentifizierung über Google "
-"aktivieren."
+"Konfigurieren Sie Google als OAuth-Anbieter, damit sich Benutzer mit ihrem "
+"Google Konto bei Zammad anmelden können."
 
 #: ../settings/security/third-party/google.rst:8
 msgid "Register a Google App"
@@ -22820,89 +22890,131 @@ msgstr "Eine Google-App registrieren"
 
 #: ../settings/security/third-party/google.rst:10
 msgid ""
-"First of all, we need to create a new project - you can skip this step if "
-"you already have one."
+"Create a new project if you don't have one already. Do so by following this "
+"link: https://console.cloud.google.com/projectcreate"
 msgstr ""
-"Zunächst müssen wir ein neues Projekt erstellen - Sie können diesen Schritt "
-"überspringen, wenn Sie bereits ein Projekt haben."
+"Legen Sie ein neues Projekt an, wenn Sie noch keins haben. Folgen Sie dazu "
+"diesem Link: https://console.cloud.google.com/projectcreate"
 
-#: ../settings/security/third-party/google.rst:15
+#: ../settings/security/third-party/google.rst:12
+msgid "Check if you are already in your project. If not, switch to it."
+msgstr ""
+"Prüfen Sie, ob Sie sich bereits in Ihrem Projekt befinden. Wenn nicht, "
+"wechseln Sie dorthin."
+
+#: ../settings/security/third-party/google.rst:13
 msgid ""
-"Use this link to create a new project: https://console.cloud.google.com/"
-"projectcreate"
+"Go to *APIs & Services > OAuth consent screen*. If you didn't configure it "
+"before, you should see a **Get started** button. Follow the steps and "
+"provide the requested information."
 msgstr ""
-"Verwenden Sie diesen Link, um ein neues Projekt zu erstellen: https://"
-"console.cloud.google.com/projectcreate"
+"Gehen Sie zu *APIs & Services > OAuth consent screen*. Sofern noch nicht "
+"konfiguriert, sollten Sie eine Schaltfläche **Get started** sehen. Befolgen "
+"Sie die Schritte und geben Sie die angeforderten Informationen ein."
 
-#: ../settings/security/third-party/google.rst:18
+#: ../settings/security/third-party/google.rst:17
 msgid ""
-"Now expand the menu, expand **APIs & Services** and select **Credentials**. "
-"Go to the tab **OAuth consent screen** first and ensure to fill in the "
-"requested information - without doing so you can't create credentials!"
+"**App name**: Any fitting name. This is what the user sees when trying to "
+"log in via Google."
 msgstr ""
-"Erweitern Sie nun das Menü, erweitern Sie **APIs & Services** und wählen Sie "
-"**Credentials**. Gehen Sie zuerst zum Tab **OAuth consent screen** und geben "
-"Sie die erforderlichen Informationen ein - ohne diese Angaben können Sie "
-"keine Anmeldung erstellen!"
+"**App name**: Ein beliebiger passender Name. Das sieht der Benutzer, wenn er "
+"versucht, sich über Google anzumelden."
 
-#: ../settings/security/third-party/google.rst:None
-msgid "Creating a consent screen"
-msgstr "Erstellen eines Einwilligungs-Dialogs"
+#: ../settings/security/third-party/google.rst:19
+msgid "**User support email**: choose an available email address here."
+msgstr ""
+"**User support email**: Wählen Sie hier eine verfügbare E-Mail-Adresse aus."
 
-#: ../settings/security/third-party/google.rst:25
+#: ../settings/security/third-party/google.rst:20
+msgid "**Audience**: Choose Internal or External, depending on your use case."
+msgstr "**Audience**: Wählen Sie intern oder extern, je nach Anwendungsfall."
+
+#: ../settings/security/third-party/google.rst:21
 msgid ""
-"After filling in and saving the consent screen information, you can go to "
-"the **Credentials** tab and create new O**Auth client ID** credentials."
+"**Contact Information**: enter an email address which should get notified "
+"about changes in your project."
 msgstr ""
-"Nach dem Ausfüllen und Speichern der Informationen auf dem Einwilligungs-"
-"Dialog können Sie auf die Registerkarte **Credentials** wechseln und neue **"
-"OAuth client ID**-Credentials erstellen."
+"**Contact Information**: Geben Sie eine E-Mail Adresse an, die über "
+"Änderungen in Ihrem Projekt informiert werden soll."
 
-#: ../settings/security/third-party/google.rst:28
+#: ../settings/security/third-party/google.rst:24
 msgid ""
-"Fill in the necessary information as follows and replace ``zammad_host`` "
-"with your FQDN:"
+"Go to *APIs & Services > Credentials*. Add a configuration by clicking the "
+"**Create credentials** dropdown. Choose **OAuth client ID** and fill in the "
+"following information, replace ``zammad_host`` with the FQDN of your Zammad. "
+"You can also find the redirect URI in Zammad's Google OAuth configuration."
 msgstr ""
-"Geben Sie die erforderlichen Informationen wie folgt ein und ersetzen Sie "
-"``zammad_host`` durch Ihren FQDN:"
+"Gehen Sie zu *APIs & Services > Credentials*. Fügen Sie eine Konfiguration "
+"hinzu, indem Sie auf das Dropdown-Menü **Create credentials** klicken. "
+"Wählen Sie **OAuth client ID** und geben Sie die folgenden Informationen "
+"ein. Ersetzen Sie ``zammad_host`` durch den FQDN Ihres Zammads. Sie finden "
+"den Redirect-URI auch in der Google OAuth-Konfiguration von Zammad."
+
+#: ../settings/security/third-party/google.rst:29
+msgid "**Application type**: Web application"
+msgstr "**Application type**: Web application"
+
+#: ../settings/security/third-party/google.rst:30
+msgid "**Name**: Any fitting name for your use case, e.g. Zammad."
+msgstr ""
+"**Name**: Ein beliebiger passender Name für Ihren Anwendungsfall, z.B. "
+"Zammad."
 
 #: ../settings/security/third-party/google.rst:31
-msgid "**Application type** ``[x] Web application``"
-msgstr "**Application type** ``[x] Web application``"
+msgid "**Authorized JavaScript origins**: ``https://zammad_host/``"
+msgstr "**Authorized JavaScript origins**: ``https://zammad_host/``"
 
-#: ../settings/security/third-party/google.rst:34
-msgid "**Authorized JavaScript origins** ``https://zammad_host/``"
-msgstr "**Authorized JavaScript origins** ``https://zammad_host/``"
-
-#: ../settings/security/third-party/google.rst:37
+#: ../settings/security/third-party/google.rst:32
 msgid ""
-"**Authorized redirect URIs** ``https://zammad_host/auth/google_oauth2/"
+"**Authorized redirect URIs**: ``https://zammad_host/auth/google_oauth2/"
 "callback``"
 msgstr ""
-"**Authorized redirect URIs** ``https://zammad_host/auth/google_oauth2/"
+"**Authorized redirect URIs**: ``https://zammad_host/auth/google_oauth2/"
 "callback``"
 
-#: ../settings/security/third-party/google.rst:None
-msgid "Adding a new OAuth client ID"
-msgstr "Hinzufügen einer neuen OAuth-Client-ID"
+#: ../settings/security/third-party/google.rst:0
+msgid "Screenshot shows OAuth credentials section in the Google console"
+msgstr ""
+"Screenshot zeigt den Abschnitt mit den OAuth-Zugangsdaten in der Google-"
+"Console"
 
-#: ../settings/security/third-party/google.rst:43
+#: ../settings/security/third-party/google.rst:39
+msgid ""
+"After adding the information, click on **Create**. This opens a dialog where "
+"you can see important information. Make sure to leave this dialog open and/"
+"or copy the **Client ID** and **Client secret**."
+msgstr ""
+"Nachdem Sie die Informationen hinzugefügt haben, klicken Sie auf **Create**. "
+"Daraufhin wird ein Dialogfeld geöffnet, in dem Sie wichtige Informationen "
+"sehen können. Achten Sie darauf, diesen Dialog geöffnet zu lassen und/oder "
+"die **Client-ID** und das **Client-Secret** zu kopieren."
+
+#: ../settings/security/third-party/google.rst:None
+msgid "Screenshot shows client ID and client secret dialog"
+msgstr "Screenshot zeigt Client-ID- und Client-Secret-Dialog"
+
+#: ../settings/security/third-party/google.rst:49
+msgid "Configure Authentication in Zammad"
+msgstr "Authentifizierung in Zammad konfigurieren"
+
+#: ../settings/security/third-party/google.rst:51
 msgid ""
 "After creating the credentials, go to your Zammad installation and navigate "
 "to *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Enter your **Client ID** and **Client secret** here."
+"Google*. Enter your **Client ID** and **Client secret** here, enable the "
+"toggle and click on **Submit**."
 msgstr ""
 "Nachdem Sie die Zugangsdaten erstellt haben, gehen Sie zu Ihrer Zammad-"
 "Installation und navigieren Sie zu *Einstellungen > Sicherheit > Anwendungen "
-"von Drittanbietern > Google*. Geben Sie hier Ihre **Client-ID** und Ihr "
-"**Client-Secret** ein."
+"von Drittanbietern > Anmeldung über Google*. Geben Sie hier Ihre **Client "
+"ID** und Ihr **Client-Secret** ein, aktivieren Sie das Feature per Schalter "
+"und klicken Sie auf **Übermitteln**."
 
 #: ../settings/security/third-party/google.rst:None
-msgid "Screenshot shows configuration of user authentication via Google"
-msgstr ""
-"Screenshot zeigt die Konfiguration der Benutzer-Authentifizierung über Google"
+msgid "Screenshot shows Google OAuth configuration in Zammad"
+msgstr "Screenshot zeigt die Google OAuth-Konfiguration in Zammad"
 
-#: ../settings/security/third-party/google.rst:50
+#: ../settings/security/third-party/google.rst:61
 msgid "After submitting, users can log in with their Google account."
 msgstr ""
 "Nach dem Absenden können sich die Benutzer mit ihrem Google Konto anmelden."
@@ -25157,9 +25269,9 @@ msgid ""
 "to :docs:`rebuild the Elasticsearch search index </install/"
 "elasticsearch.html#es-rebuild-searchindex>`."
 msgstr ""
-"Wenn Sie den Ticket-Hook auf einem Produktivsystem ändern, müssen Sie den "
-":doc:`Elasticsearch-Suchindex neu erstellen </install/elasticsearch.html#es-"
-"rebuild-searchindex>` ."
+"Wenn Sie den Ticket-Hook auf einem Produktivsystem ändern, müssen Sie "
+"den :doc:`Elasticsearch-Suchindex neu erstellen </install/"
+"elasticsearch.html#es-rebuild-searchindex>` ."
 
 #: ../settings/ticket.rst:46
 msgid "Ticket Hook Position"
@@ -25520,8 +25632,8 @@ msgid ""
 "The automatic assignment of tickets can be activated and configured in the "
 "admin area under *Settings > Ticket > Auto Assignment*."
 msgstr ""
-"Die automatische Zuweisung von Tickets kann im Admin-Bereich unter *"
-"Einstellungen > Ticket > Automatische Zuweisung* aktiviert und konfiguriert "
+"Die automatische Zuweisung von Tickets kann im Admin-Bereich unter "
+"*Einstellungen > Ticket > Automatische Zuweisung* aktiviert und konfiguriert "
 "werden."
 
 #: ../settings/ticket.rst:169
@@ -26632,8 +26744,8 @@ msgid ""
 msgstr ""
 "Diese Seite enthält einige grundlegende Beispiele für Core-Workflows. "
 "Natürlich können Sie bei Bedarf auch viel komplexere Workflows erstellen. Um "
-"mehr über Core Workflows im Detail zu erfahren, gehen Sie zuerst zu :doc"
-":`how-do-they-work`."
+"mehr über Core Workflows im Detail zu erfahren, gehen Sie zuerst "
+"zu :doc:`how-do-they-work`."
 
 #: ../system/core-workflows/learn-by-example.rst:9
 msgid "Group Based Examples"
@@ -26978,7 +27090,8 @@ msgstr ""
 
 #: ../system/core-workflows/limitations.rst:33
 msgid "Ticket text changes not supported in edit mask"
-msgstr "Ticket-Textänderungen werden in der Bearbeitungsmaske nicht unterstützt"
+msgstr ""
+"Ticket-Textänderungen werden in der Bearbeitungsmaske nicht unterstützt"
 
 #: ../system/core-workflows/limitations.rst:32
 msgid ""
@@ -27024,8 +27137,8 @@ msgid ""
 "tickets**. To access this section, ``admin.data_privacy`` permission is "
 "required."
 msgstr ""
-"Zur Einhaltung der GDPR und anderer Datenschutzrichtlinien können Sie **"
-"Benutzer dauerhaft aus dem System löschen**, und zwar zusammen mit **allen "
+"Zur Einhaltung der GDPR und anderer Datenschutzrichtlinien können Sie "
+"**Benutzer dauerhaft aus dem System löschen**, und zwar zusammen mit **allen "
 "ihren zugehörigen Tickets**. Um auf diesen Bereich zuzugreifen, ist die "
 "Berechtigung ``admin.data_privacy`` erforderlich."
 
@@ -28099,8 +28212,8 @@ msgid ""
 "not have one already (and Clearbit knows it). The shared option decides if "
 "the new organizations should be shared ones."
 msgstr ""
-"Wechseln Sie nun zu Ihrer Zammad-Instanz und gehen Sie im Admin-Bereich zu *"
-"System > Integrationen > Clearbit*. Fügen Sie Ihren API-Key in das API-Key-"
+"Wechseln Sie nun zu Ihrer Zammad-Instanz und gehen Sie im Admin-Bereich zu "
+"*System > Integrationen > Clearbit*. Fügen Sie Ihren API-Key in das API-Key-"
 "Feld ein und entscheiden Sie, ob Zammad automatisch unbekannte "
 "Organisationen erstellen soll, wenn der Benutzer noch keine hat (und "
 "Clearbit diese kennt). Die Option shared entscheidet, ob die neuen "
@@ -29938,8 +30051,8 @@ msgid ""
 "issues with your IT components, you may want to connect them with your CMDB. "
 "With Zammad, you can do that in two ways!"
 msgstr ""
-"`i-doit <https://www.i-doit.com/>`_ ist ein quelloffenes CMDB-Tool ("
-"Configuration Management Database), mit dem Sie Informationen über Ihre "
+"`i-doit <https://www.i-doit.com/>`_ ist ein quelloffenes CMDB-Tool "
+"(Configuration Management Database), mit dem Sie Informationen über Ihre "
 "physische und digitale IT-Infrastruktur verwalten können. Wenn Sie Tickets "
 "verwenden, um Probleme mit Ihren IT-Komponenten zu verfolgen, möchten Sie "
 "diese vielleicht mit Ihrer CMDB verbinden. Mit Zammad können Sie das auf "
@@ -30002,8 +30115,8 @@ msgid ""
 "To set it up, enable the integration in the Zammad admin panel under *System "
 "> Integrations > i-doit*:"
 msgstr ""
-"Um sie einzurichten, aktivieren Sie die Integration im Adminbereich unter *"
-"System > Integrationen > i-doit*:"
+"Um sie einzurichten, aktivieren Sie die Integration im Adminbereich unter "
+"*System > Integrationen > i-doit*:"
 
 #: ../system/integrations/i-doit.rst:None
 msgid "i-doit settings within the integration pages"
@@ -30195,8 +30308,8 @@ msgid ""
 "the :doc:`configuration guide </misc/zabbix>` outside of this integrations "
 "section."
 msgstr ""
-"Eine Anleitung zum Erstellen von Tickets über Zabbix finden Sie in der :doc:`"
-"Konfigurationsanleitung </misc/zabbix>` außerhalb dieses Bereichs."
+"Eine Anleitung zum Erstellen von Tickets über Zabbix finden Sie in "
+"der :doc:`Konfigurationsanleitung </misc/zabbix>` außerhalb dieses Bereichs."
 
 #: ../system/integrations/index.rst:61
 msgid "Integrations for Issue Trackers"
@@ -30244,7 +30357,8 @@ msgstr "Screenshot zeigt die LDAP-Einstellungen von Zammad."
 
 #: ../system/integrations/ldap/index.rst:22
 msgid "Before you continue, please note the following limitations:"
-msgstr "Bevor Sie fortfahren, beachten Sie bitte die folgenden Einschränkungen:"
+msgstr ""
+"Bevor Sie fortfahren, beachten Sie bitte die folgenden Einschränkungen:"
 
 #: ../system/integrations/ldap/index.rst:24
 msgid "Mapping / synchronizing organizations is not possible"
@@ -30398,9 +30512,9 @@ msgstr ""
 "eine Teilmenge Ihrer LDAP-Benutzer in Zammad benötigen. Da Active "
 "Directories ziemlich spezifisch hinsichtlich der Filterung nach aktiven "
 "Benutzern sind, finden Sie weitere Informationen in der `Dokumentation von "
-"Microsoft <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/"
-"how-to-query-individual-properties-of-the-useraccountcontrol-active-directory-user-property-using-ldap/"
-">`_."
+"Microsoft <https://blogs.msdn.microsoft.com/muaddib/2008/10/08/how-to-query-"
+"individual-properties-of-the-useraccountcontrol-active-directory-user-"
+"property-using-ldap/>`_."
 
 #: ../system/integrations/ldap/index.rst:90
 msgid ""
@@ -31399,8 +31513,9 @@ msgid ""
 "messages**."
 msgstr ""
 "Zertifikate, die Ihren Kontakten oder der ausstellenden "
-"Zertifizierungsstelle (CA) gehören, um **Signaturen von Eingangsnachrichten**"
-" zu überprüfen und **Ausgangsnachrichten** zu verschlüsseln."
+"Zertifizierungsstelle (CA) gehören, um **Signaturen von "
+"Eingangsnachrichten** zu überprüfen und **Ausgangsnachrichten** zu "
+"verschlüsseln."
 
 #: ../system/integrations/smime/prerequisites.rst:11
 msgid "**Where can I get a certificate?**"
@@ -33752,8 +33867,8 @@ msgid ""
 "configured in the the security settings."
 msgstr ""
 "Die Sitzungsverwaltung stellt eine Liste der aktuell bekannten Benutzer-"
-"Sitzungen bereit und ermöglicht Ihnen, diese zu beenden. Der "
-":ref:`security_session_timeout` kann in den Sicherheitseinstellungen "
+"Sitzungen bereit und ermöglicht Ihnen, diese zu beenden. "
+"Der :ref:`security_session_timeout` kann in den Sicherheitseinstellungen "
 "konfiguriert werden."
 
 #: ../system/sessions.rst:None
@@ -34752,6 +34867,129 @@ msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
 
 #~ msgid ""
+#~ "The scheduler performs time-based automated actions. You can set up your "
+#~ "own schedulers, configure at which points in time they should run, set up "
+#~ "conditions to determine which objects they should affect, and then "
+#~ "configure the actions that you want to execute for these objects."
+#~ msgstr ""
+#~ "Die Automatisierung führt zeitbasierte automatisierte Aktionen durch. Sie "
+#~ "können Ihre eigene Automatisierung einrichten, konfigurieren, zu welchen "
+#~ "Zeitpunkten sie ausgeführt werden sollen, Bedingungen einrichten, um zu "
+#~ "bestimmen, welche Objekte sie betreffen sollen, und dann die Aktionen "
+#~ "konfigurieren, die für diese Objekte ausgeführt werden sollen."
+
+#~ msgid ""
+#~ "Create a new scheduler job by clicking on the \"New scheduler\" button in "
+#~ "the top right corner. Then Zammad presents a dialog where you can create "
+#~ "your own one."
+#~ msgstr ""
+#~ "Erstellen Sie eine neue Automatisierung, indem Sie auf die Schaltfläche "
+#~ "\"Neue Automatisierung\" in der oberen rechten Ecke klicken. Zammad zeigt "
+#~ "dann ein Dialogfeld an, in dem Sie Ihre eigene Automatisierung erstellen "
+#~ "können."
+
+#~ msgid "Example:"
+#~ msgstr "Beispiel:"
+
+#~ msgid "Screenshot showing dialog of creating a new scheduler job"
+#~ msgstr "Screencast zeigt die Erstellung eines neuen Automatisierungs-Jobs"
+
+#~ msgid ""
+#~ "The scheduler shown in the screenshot would have the following effects:"
+#~ msgstr ""
+#~ "Die im Screenshot gezeigte Automatisierung hätte folgende Auswirkungen:"
+
+#~ msgid ""
+#~ "Every workday (Monday to Friday) at 9:00 a.m. (*Europe / Berlin UTC+1*), "
+#~ "all tickets which:"
+#~ msgstr ""
+#~ "Jeden Werktag (Montag bis Freitag) um 9:00 Uhr (*Europa / Berlin UTC+1*), "
+#~ "alle Tickets die:"
+
+#~ msgid "are not closed or merged, and"
+#~ msgstr "nicht geschlossen oder zusammengeführt sind und"
+
+#~ msgid "are assigned to the Sales group, and"
+#~ msgstr "der Gruppe \"Sales\" zugewiesen sind, und"
+
+#~ msgid "whose escalation was 30 minutes ago"
+#~ msgstr "deren Eskalation 30 Minuten zurückliegt"
+
+#~ msgid "will be:"
+#~ msgstr "werden:"
+
+#~ msgid "assigned to Emma, and"
+#~ msgstr "Emma zugewiesen und"
+
+#~ msgid "have their priority changed to 3 high."
+#~ msgstr "die Priorität auf 3 hoch gesetzt."
+
+#~ msgid ""
+#~ "As a supervisor in the Sales group, this enables Emma to intercept and "
+#~ "process escalated tickets."
+#~ msgstr ""
+#~ "Als Leiterin der Vertriebsgruppe kann Emma so eskalierte Tickets einsehen "
+#~ "und bearbeiten."
+
+#~ msgid ""
+#~ "Emma will not receive notifications when the scheduler assigns her these "
+#~ "tickets."
+#~ msgstr ""
+#~ "Emma erhält keine Benachrichtigung, wenn ihr die Tickets per "
+#~ "Automatisierung zugewiesen werden."
+
+#~ msgid ""
+#~ "With some easy and fast steps, you can enable Zammad to authenticate your "
+#~ "users via Google."
+#~ msgstr ""
+#~ "In ein paar Schritten können Sie in Zammad die Authentifizierung über "
+#~ "Google aktivieren."
+
+#~ msgid ""
+#~ "First of all, we need to create a new project - you can skip this step if "
+#~ "you already have one."
+#~ msgstr ""
+#~ "Zunächst müssen wir ein neues Projekt erstellen - Sie können diesen "
+#~ "Schritt überspringen, wenn Sie bereits ein Projekt haben."
+
+#~ msgid ""
+#~ "Now expand the menu, expand **APIs & Services** and select "
+#~ "**Credentials**. Go to the tab **OAuth consent screen** first and ensure "
+#~ "to fill in the requested information - without doing so you can't create "
+#~ "credentials!"
+#~ msgstr ""
+#~ "Erweitern Sie nun das Menü, erweitern Sie **APIs & Services** und wählen "
+#~ "Sie **Credentials**. Gehen Sie zuerst zum Tab **OAuth consent screen** "
+#~ "und geben Sie die erforderlichen Informationen ein - ohne diese Angaben "
+#~ "können Sie keine Anmeldung erstellen!"
+
+#~ msgid "Creating a consent screen"
+#~ msgstr "Erstellen eines Einwilligungs-Dialogs"
+
+#~ msgid ""
+#~ "After filling in and saving the consent screen information, you can go to "
+#~ "the **Credentials** tab and create new O**Auth client ID** credentials."
+#~ msgstr ""
+#~ "Nach dem Ausfüllen und Speichern der Informationen auf dem Einwilligungs-"
+#~ "Dialog können Sie auf die Registerkarte **Credentials** wechseln und neue "
+#~ "**OAuth client ID**-Credentials erstellen."
+
+#~ msgid ""
+#~ "Fill in the necessary information as follows and replace ``zammad_host`` "
+#~ "with your FQDN:"
+#~ msgstr ""
+#~ "Geben Sie die erforderlichen Informationen wie folgt ein und ersetzen Sie "
+#~ "``zammad_host`` durch Ihren FQDN:"
+
+#~ msgid "Adding a new OAuth client ID"
+#~ msgstr "Hinzufügen einer neuen OAuth-Client-ID"
+
+#~ msgid "Screenshot shows configuration of user authentication via Google"
+#~ msgstr ""
+#~ "Screenshot zeigt die Konfiguration der Benutzer-Authentifizierung über "
+#~ "Google"
+
+#~ msgid ""
 #~ "The execution is triggered by some actor. Either a user creating or "
 #~ "updating the ticket. Or an external action, e.g. an email coming in."
 #~ msgstr ""
@@ -35473,9 +35711,6 @@ msgstr ""
 #~ "Wenn Sie weitere Details benötigen, können Sie auf den entsprechenden "
 #~ "Link klicken. Zammad wird einen Dialog mit den folgenden Informationen "
 #~ "anzeigen:"
-
-#~ msgid "Direction"
-#~ msgstr "Richtung"
 
 #~ msgid "Always ``out``."
 #~ msgstr "Immer ``ausgehend``."
