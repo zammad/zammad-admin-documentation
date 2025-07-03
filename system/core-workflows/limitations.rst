@@ -1,7 +1,12 @@
 Limitations
 ===========
 
-Core Workflows do not replace Triggers
+Core workflow changes are checked by the application server
+   All changes to attributes are checked by the application server. This can
+   have a performance impact on instances with many core workflows and/or high
+   load.
+
+Core workflows do not replace triggers
    Workflows manipulate the behavior of fields. However, they do not set values
    in fields because of actions.
 
@@ -10,10 +15,10 @@ API calls are only partly affected
 
    This affects the following actions:
 
-    * select
-    * auto select
-    * show
-    * hide
+   * select
+   * auto select
+   * show
+   * hide
 
 Some fields stay unavailable to customers
    For technical and security reasons, some default fields (the pale ones
@@ -32,11 +37,11 @@ Ticket text changes not supported in edit mask
    It is currently not possible to perform changes of the ticket text in the
    edit mask (e.g. set to read-only).
 
-What is out of scope of Core Workflows?
+What is out of scope of core workflows?
    There are some things that would count as workflow but are either done via
    :doc:`/manage/trigger` or :doc:`/manage/scheduler`.
 
    Such as (but not limited to):
 
-    * up- or downgrade permissions of users
-    * affecting article creation or listing
+    * Up- or downgrade permissions of users
+    * Affecting article creation or listing

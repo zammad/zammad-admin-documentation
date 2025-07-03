@@ -1,9 +1,8 @@
 Learn by Example
 ================
 
-This page provides some basic examples for Core Workflows. Of course you can
-build much more complex workflows if needed. To learn about Core Workflows in
-detail, first go to :doc:`how-do-they-work`.
+This page shows some basic examples for core workflows. To learn about core
+workflows in detail, first go to :doc:`how-do-they-work`.
 
 Group Based Examples
 --------------------
