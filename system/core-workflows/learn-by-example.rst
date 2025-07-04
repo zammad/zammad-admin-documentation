@@ -176,8 +176,8 @@ Configuration in UI
       :width: 70%
 
 
-Manual Ticket Handover Process
-------------------------------
+Ticket Handover Process
+-----------------------
 
 A handover from one agent to another might require more than just a change of
 the owner. Depending on the issue or process, it can be very helpful that the
