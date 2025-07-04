@@ -24,8 +24,8 @@ configured:
   * Operating System (text field, not mandatory, not shown)
   * Software used (single selection field, not mandatory, not shown)
 
-Group Based Workflow
---------------------
+Group Based Fields
+------------------
 
 Often, different teams (like sales, support, or 2nd level) need slightly
 different workflows to handle tickets effectively. Group-based workflows allow
@@ -35,7 +35,7 @@ ticket.
 
 Problem/scenario
    When a ticket is created in or moved to the ``2nd Level`` group, the category
-   field must be limited, some fields have to be shown and it specific fields
+   field must be limited, some fields have to be shown and specific fields
    are mandatory to have all relevant information for the 2nd level support
    present in the ticket.
 
@@ -131,11 +131,14 @@ Configuration in UI
       :alt: Sample workflow that restricts an approval attribute to specific roles
       :width: 70%
 
-State Dependent Mandatory Fields
---------------------------------
+Enforcing Ticket Categorization
+-------------------------------
+
+To have convincing numbers for your statistic, it can be a good idea to enforce
+certain attributes to be populated before the ticket can be closed.
 
 Problem/scenario
-   This workflow sets ``Category`` to mandatory if the agent wants to set the
+   The ``Category`` field must be set to mandatory if an agent wants to set the
    states ``closed`` or ``pending close`` to enforce categorization.
 
 
@@ -158,16 +161,14 @@ Workflow configuration
         -
 
       * - Selected conditions
-        - 
-        - 
+        - State *is* ``closed`` or ``pending close``
+        - Selected condition because it has to be
 
-      * - Saved conditions
-        - 
-        - 
+          checked before changes are saved.
 
       * - Action
-        - 
-        - 
+        - ``Category`` *set mandatory*
+        -
 
 Configuration in UI
    .. figure:: /images/system/core-workflows/examples/3_state-dependent-mandatory-fields.png
@@ -178,69 +179,131 @@ Configuration in UI
 Manual Ticket Handover Process
 ------------------------------
 
+A handover from one agent to another might require more than just a change of
+the owner. Depending on the issue or process, it can be very helpful that the
+original agent leaves a small note so the new agent knows immediately what's the
+reason for the handover and where to start.
 
 Problem/scenario
-   This example covers the handover of a ticket from one agent to another:
+   Agents must write a small comment when they want to change the ticket owner.
+   There is a custom ticket attribute called ``Handover``, where a text can be
+   inserted. This field is hidden by default (Workflow 1) and only shows up
+   when the owner changes. Additionally, it must be set to mandatory in such a
+   case (Workflow 2).
 
-   - When the ticket owner is modified, a new text field ("Handover") shows up
-     for a comment
-   - This may only be visible when the owner is changed, therefore it has to
-     be hidden in general
-   - The input in this handover text field is mandatory
-   - After submitting changes, the value of the handover field must be added as
-     a note to the ticket (via trigger)
-
+   Because the field is hidden after changing the ticket owner, the text of the
+   field has to be written to the ticket as an article by a trigger. Otherwise,
+   the new agent would not see it at all.
 
 Workflow configuration
-   .. list-table::
-      :widths: 20,50,30
-      :header-rows: 1
+   .. tabs::
 
-      * - Area
-        - Configuration
-        - Note
+      .. tab:: Workflow 1
 
-      * - Object
-        - Ticket
-        -
+         This workflow hides the field in general. Please note the lower
+         priority which tells Zammad to execute this workflow first.
 
-      * - Context
-        - - Creation mask
-          - Edit mask
-        -
+         .. list-table::
+            :widths: 20,50,30
+            :header-rows: 1
 
-      * - Selected conditions
-        - 
-        - 
+            * - Area
+              - Configuration
+              - Note
 
-      * - Saved conditions
-        - 
-        - 
+            * - Object
+              - Ticket
+              -
 
-      * - Action
-        - 
-        - 
+            * - Context
+              - - Creation mask
+                - Edit mask
+              -
+
+            * - Selected conditions
+              -
+              - No condition needed, because it should
+
+                always be hidden.
+
+            * - Saved conditions
+              -
+              - No condition needed, because it should
+
+                always be hidden.
+
+            * - Action
+              - ``Handover`` *hide*
+              -
+
+      .. tab:: Workflow 2
+
+         This workflow shows the field and sets it as mandatory when another
+         ticket owner is selected. This workflow has the default priority so
+         it runs after Workflow 1.
+
+         .. list-table::
+            :widths: 20,50,30
+            :header-rows: 1
+
+            * - Area
+              - Configuration
+              - Note
+
+            * - Object
+              - Ticket
+              -
+
+            * - Context
+              - - Creation mask
+                - Edit mask
+              -
+
+            * - Selected conditions
+              - Owner *is modified*
+              - Selected condition because it has to be
+
+                checked before changes are saved.
+
+            * - Saved conditions
+              -
+              -
+
+            * - Action
+              - - ``Handover`` *show*
+                - ``Handover`` *set mandatory*
+              -
+
+      .. tab:: Trigger
+
+         As mentioned above, the content of the field has to be written as a
+         ticket article by a trigger. An example configuration of such a trigger
+         could look like this:
+
+         - Condition: ``Handover`` *has changed*
+         - Action: Creation of Article > Note with variable
+           ``#{ticket.handover}`` in body
 
 Configuration in UI
    .. tabs::
 
-      .. tab:: Hide handover field
+      .. tab:: Workflow 1
 
          .. figure:: /images/system/core-workflows/examples/example-handover-hide.png
             :alt: Hiding the handover field in core workflows
             :width: 70%
 
-      .. tab:: Show handover field and set it to mandatory
+      .. tab:: Workflow 2
 
             .. figure:: /images/system/core-workflows/examples/example-handover-show.png
                :alt: Showing the handover field and set it as mandatory
                :width: 70%
 
-      .. tab:: Additional trigger creating a new article
+      .. tab:: Trigger
 
             .. figure:: /images/system/core-workflows/examples/example-handover-trigger.png
-               :alt: Write handover content to a new article
+               :alt: Write the content of the handover field to an article by a trigger
                :width: 70%
 
-As a result, the ticket includes an article of the type note which includes
-the predefined text and the handover comment.
+   As a result, the ticket includes an article of the type note which includes
+   the predefined text and the handover comment.
