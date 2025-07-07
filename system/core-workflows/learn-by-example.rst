@@ -7,22 +7,10 @@ workflows in detail, first go to :doc:`how-do-they-work`.
 Basics
 ------
 
-All workflow examples are configured in the same system. Compared to a fresh
-installation of Zammad, the system has the following object attributes
-configured:
-
-* Groups:
-
-  * Sales
-  * Support
-  * 2nd Level
-
-* Custom object attributes:
-
-  * Category (single tree selection field, not mandatory, agents only)
-  * Approved (boolean field, not mandatory, not shown, ``false`` as default)
-  * Operating System (text field, not mandatory, not shown)
-  * Software used (single selection field, not mandatory, not shown)
+All core workflow examples below are configured in the same system. Compared to
+a fresh installation of Zammad, the system has some additional groups and some
+custom object attributes you can find in the respective examples.
+See these examples as inspiration and adapt the workflows to your processes.
 
 Group Based Fields
 ------------------
@@ -58,7 +46,7 @@ Workflow configuration
         -
 
       * - Selected conditions
-        - Group *is* ``2nd Level``
+        - **Group** *is* ``2nd Level``
         -
 
       * - Saved conditions
@@ -68,10 +56,10 @@ Workflow configuration
           immediately when the group is set to 2nd Level.
 
       * - Action
-        - - ``Category`` *show*
-          - ``Category`` *set fixed to* ``2nd Level`` (and all sub categories)
-          - ``Operating System`` and ``Software used`` *show*
-          - ``Operating System`` and ``Software used`` *set mandatory*
+        - - **Category** *show*
+          - **Category** *set fixed to* ``2nd Level`` (and all sub categories)
+          - **Operating System** and **Software used** *show*
+          - **Operating System** and **Software used** *set mandatory*
         -
 
 Configuration in UI
@@ -113,17 +101,17 @@ Workflow configuration
         -
 
       * - Selected conditions
-        - Role *is not* ``Approval Person``
+        - **Role** *is not* ``Approval Person``
         - Checks if role is not ``Approval Person`` for unsaved
 
           changes in the ticket.
 
       * - Saved conditions
-        - ``Approved`` *is not* ``yes``
+        - **Approved** *is not* ``yes``
         - Checks if the approval is not yet set to ``yes``.
 
       * - Action
-        - ``Approved`` *set fixed to* ``no``
+        - **Approved** *set fixed to* ``no``
         - Prevents changes when above conditions are met.
 
 Configuration in UI
@@ -161,13 +149,13 @@ Workflow configuration
         -
 
       * - Selected conditions
-        - State *is* ``closed`` or ``pending close``
+        - **State** *is* ``closed`` or ``pending close``
         - Selected condition because it has to be
 
           checked before changes are saved.
 
       * - Action
-        - ``Category`` *set mandatory*
+        - **Category** *set mandatory*
         -
 
 Configuration in UI
@@ -186,14 +174,14 @@ reason for the handover and where to start.
 
 Problem/scenario
    Agents must write a small comment when they want to change the ticket owner.
-   There is a custom ticket attribute called ``Handover``, where a text can be
+   There is a custom ticket attribute called ``Handover`` where a text can be
    inserted. This field is hidden by default (Workflow 1) and only shows up
    when the owner changes. Additionally, it must be set to mandatory in such a
    case (Workflow 2).
 
-   Because the field is hidden after changing the ticket owner, the text of the
-   field has to be written to the ticket as an article by a trigger. Otherwise,
-   the new agent would not see it at all.
+   Because the field is hidden after saving the change of the ticket owner, the
+   text of the field has to be written to the ticket as an article by a trigger.
+   Otherwise, the new agent would not see it at all.
 
 Workflow configuration
    .. tabs::
@@ -233,7 +221,7 @@ Workflow configuration
                 always be hidden.
 
             * - Action
-              - ``Handover`` *hide*
+              - **Handover** *hide*
               -
 
       .. tab:: Workflow 2
@@ -260,7 +248,7 @@ Workflow configuration
               -
 
             * - Selected conditions
-              - Owner *is modified*
+              - **Owner** *is modified*
               - Selected condition because it has to be
 
                 checked before changes are saved.
@@ -270,8 +258,8 @@ Workflow configuration
               -
 
             * - Action
-              - - ``Handover`` *show*
-                - ``Handover`` *set mandatory*
+              - - **Handover** *show*
+                - **Handover** *set mandatory*
               -
 
       .. tab:: Trigger
@@ -280,8 +268,8 @@ Workflow configuration
          ticket article by a trigger. An example configuration of such a trigger
          could look like this:
 
-         - Condition: ``Handover`` *has changed*
-         - Action: Creation of Article > Note with variable
+         - Condition: **Handover** *has changed*
+         - Action: **Article** > **Note** with variable
            ``#{ticket.handover}`` in body
 
 Configuration in UI
