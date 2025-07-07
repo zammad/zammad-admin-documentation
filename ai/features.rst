@@ -24,4 +24,5 @@ service when an agent opens a ticket. Agents then see an indicator on the
 **AI Summary**  sidebar tab which tells them that a summary is available.
 
 .. hint:: If you use an own Ollama server as provider, make sure to have the
-   model ``llama3.2`` available for this feature.
+   ``llama3.2`` model available for this feature or specify an available model
+   in the :ref:`provider configuration <ollama-provider>`.
