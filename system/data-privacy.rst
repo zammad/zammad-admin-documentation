@@ -28,11 +28,14 @@ You can initiate a data privacy deletion task from different places in Zammad:
 - User detail page
 - Data privacy management
 
-Depending on where you initiate the deletion task, the dialog looks pretty much
+Independent of where you initiate the deletion task, the dialog always looks
 the same. If the user is the last user of an organization, the dialog asks if
 you want to delete the organization as well.
 
-SCREENSHOT DIALOG
+.. figure:: /images/system/data-privacy/deletion-task-dialog.png
+   :alt: Screenshot shows the dialog for creating a deletion task.
+   :align: center
+   :scale: 80%
 
 Have a look at the next sections about how to create a deletion task.
 
@@ -43,7 +46,8 @@ To delete a user and its tickets from the user management, simply locate the
 user in question (e.g. by searching) and choose **Delete** after clicking the
 action menu via ︙ button:
 
-SCREENSHOT
+.. figure:: /images/system/data-privacy/user-management-action-menu.png
+   :alt: Screenshot shows a user from user management and the action menu with highlighted sections.
 
 User Detail Screen
 ^^^^^^^^^^^^^^^^^^
@@ -78,10 +82,7 @@ so for each user you delete, a “deletion task” is added to the queue.
 You can keep an eye on the status of these tasks in two places:
 
 **in the Activity Stream**
-   .. figure:: /images/system/data-privacy/activity-stream-with-deletion-tasks.png
-      :alt: Activity Stream showing data privacy tasks
-      :align: center
-      :width: 90%
+   SCREENSHOT
 
    For each deleted user, the Activity Stream will be updated twice—once when
    the task is created, and once when it's complete.
@@ -90,10 +91,7 @@ You can keep an eye on the status of these tasks in two places:
       ``admin.data_privacy`` permissions.
 
 **in the “System > Data Privacy” Admin Panel**
-   .. figure:: /images/system/data-privacy/data-privacy-task-list.png
-      :alt: The task list within Data Privacy shows removals being in progress and completed.
-      :align: center
-      :width: 90%
+   SCREENSHOT
 
 Frequently Asked Questions
 --------------------------
