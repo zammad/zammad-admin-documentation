@@ -1,79 +1,74 @@
 Data Privacy
 ============
 
-For compliance with GDPR and other data privacy laws, you can **permanently
-delete users from the system**, along with **all of their associated tickets**.
-To access this section, ``admin.data_privacy`` permission is required.
+You can delete users and their tickets by creating a deletion task.
+This can be required for compliance with GDPR and other data privacy laws. This
+page describes the places where you can do it, how to do it and includes
+additional useful information.
 
-You can create manual deletion tasks or even automated deletion tasks for
-tickets and users based on custom conditions via
-:doc:`scheduler </manage/scheduler>`!
+Basic Information
+-----------------
 
-On older systems that have not been updated yet, customers can also be
-:docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`.
+- The permission ``admin.data_privacy`` is required to initiate a deletion task.
+- If you want to delete an organization, the deletion task of the last remaining
+  user of this organization asks you if you want to delete the user's
+  organization as well.
+- It is not possible to only delete a user and keep its tickets.
+- You can't delete your own account.
+- You can't delete the system's last remaining administrator account.
+- You can create :docs:`data privacy deletion task via API </api/user>`.
+- All deletions are final! Double check your commands.
 
-.. figure:: /images/system/data-privacy/creating-a-new-deletion-task.png
-   :alt: User deletion dialog in the Data Privacy panel
-   :align: center
+Manual Deletion via GUI
+-----------------------
 
-   The user deletion dialog lists some of the tickets
-   that will be removed from the system along with the user.
+You can initiate a data privacy deletion task from different places in Zammad:
 
+- User management
+- User detail page
+- Data privacy management
 
-Deleting Users via GUI
-----------------------
+Depending on where you initiate the deletion task, the dialog looks pretty much
+the same. If the user is the last user of an organization, the dialog asks if
+you want to delete the organization as well.
 
-.. warning:: 🔥 **All deletions are FINAL!**
+SCREENSHOT DIALOG
 
-   Once you click “Delete”, the action cannot be canceled or undone.
+Have a look at the next sections about how to create a deletion task.
 
-   Any time you delete a user, all their tickets will be deleted, as well.
-   It is not possible to delete a user and still keep their tickets.
+User Management
+^^^^^^^^^^^^^^^
 
-.. note:: **The following records cannot be deleted:**
+To delete a user and its tickets from the user management, simply locate the
+user in question (e.g. by searching) and choose **Delete** after clicking the
+action menu via ︙ button:
 
-  * Your own account
-  * The system's last remaining administrator account
+SCREENSHOT
 
-Step 1: Find a User / Confirm Deletion
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+User Detail Screen
+^^^^^^^^^^^^^^^^^^
 
-There are three ways to access the user deletion dialog:
+To delete a user and its tickets from the user detail screen, choose **Delete**
+from the action menu in the top right corner:
 
-**from the user's profile**
-   .. figure:: /images/system/data-privacy/delete-user-via-profile.gif
-      :alt: Accessing the user deletion dialog in a user profile
-      :align: center
+SCREENSHOT
 
-      Click **Action > Delete**.
+Data Privacy Task
+^^^^^^^^^^^^^^^^^
 
-**in the “Manage > Users” Admin Panel**
-   .. figure:: /images/system/data-privacy/delete-user-via-user-panel.gif
-      :alt: Accessing the user deletion dialog under “Users” in the Admin Panel
-      :align: center
+You can find the data privacy section in Zammad's settings under *System >
+Data Privacy*. To create a deletion task, use the **New Deletion Task** button
+in the top right corner. The difference to the two mentioned options is
+that you first have to search the user in the dialog. Everything else is the
+same.
 
-      Use the **⋮ Actions** menu for the target user.
+Automatic Deletion via Scheduler
+--------------------------------
 
-**in the “System > Data Privacy” Admin Panel**
-   .. figure:: /images/system/data-privacy/delete-user-via-data-privacy-panel.gif
-      :alt: Accessing the user deletion dialog under “Data Privacy” in the Admin Panel
-      :align: center
+In case you want to automatically clean up old tickets or tickets from specific
+customers or organizations, you can do this by creating a
+:doc:`scheduler </manage/scheduler>` task.
 
-      Use the **New Deletion Task** button. Search for users by name or email
-      address.
-
-**Delete organizations**
-   If the customer you are deleting is the last user in their organization,
-   a **Delete Organization?** option will be displayed in the user deletion
-   dialog:
-
-   .. figure:: /images/system/data-privacy/delete-organization-option.png
-      :alt: Deleting an organization via the user deletion dialog
-      :align: center
-      :width: 60%
-
-   If this option does not appear, make sure there are no pending deletion
-   tasks for other customers from this organization.
 
 Step 2: Monitor Deletion Job Status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

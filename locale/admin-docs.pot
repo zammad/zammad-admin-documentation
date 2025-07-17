@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-07 10:58+0200\n"
+"POT-Creation-Date: 2025-07-17 16:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19076,123 +19076,119 @@ msgid "Data Privacy"
 msgstr ""
 
 #: ../system/data-privacy.rst:4
-msgid "For compliance with GDPR and other data privacy laws, you can **permanently delete users from the system**, along with **all of their associated tickets**. To access this section, ``admin.data_privacy`` permission is required."
+msgid "You can delete users and their tickets by creating a deletion task. This can be required for compliance with GDPR and other data privacy laws. This page describes the places where you can do it, how to do it and includes additional useful information."
 msgstr ""
 
-#: ../system/data-privacy.rst:8
-msgid "You can create manual deletion tasks or even automated deletion tasks for tickets and users based on custom conditions via :doc:`scheduler </manage/scheduler>`!"
+#: ../system/data-privacy.rst:10
+msgid "Basic Information"
 msgstr ""
 
 #: ../system/data-privacy.rst:12
-msgid "On older systems that have not been updated yet, customers can also be :docs:`deleted via the Zammad console </admin/console/dangerzone-for-experts.html#deleting-customers>`."
+msgid "The permission ``admin.data_privacy`` is required to initiate a deletion task."
+msgstr ""
+
+#: ../system/data-privacy.rst:13
+msgid "If you want to delete an organization, the deletion task of the last remaining user of this organization asks you if you want to delete the user's organization as well."
+msgstr ""
+
+#: ../system/data-privacy.rst:16
+msgid "It is not possible to only delete a user and keep its tickets."
+msgstr ""
+
+#: ../system/data-privacy.rst:17
+msgid "You can't delete your own account."
+msgstr ""
+
+#: ../system/data-privacy.rst:18
+msgid "You can't delete the system's last remaining administrator account."
 msgstr ""
 
 #: ../system/data-privacy.rst:19
-msgid "User deletion dialog in the Data Privacy panel"
+msgid "You can create :docs:`data privacy deletion task via API </api/user>`."
 msgstr ""
 
-#: ../system/data-privacy.rst:19
-msgid "The user deletion dialog lists some of the tickets that will be removed from the system along with the user."
+#: ../system/data-privacy.rst:20
+msgid "All deletions are final! Double check your commands."
 msgstr ""
 
-#: ../system/data-privacy.rst:24
-msgid "Deleting Users via GUI"
+#: ../system/data-privacy.rst:23
+msgid "Manual Deletion via GUI"
 msgstr ""
 
-#: ../system/data-privacy.rst:26
-msgid "🔥 **All deletions are FINAL!**"
+#: ../system/data-privacy.rst:25
+msgid "You can initiate a data privacy deletion task from different places in Zammad:"
+msgstr ""
+
+#: ../system/data-privacy.rst:27
+msgid "User management"
 msgstr ""
 
 #: ../system/data-privacy.rst:28
-msgid "Once you click “Delete”, the action cannot be canceled or undone."
+msgid "User detail page"
 msgstr ""
 
-#: ../system/data-privacy.rst:30
-msgid "Any time you delete a user, all their tickets will be deleted, as well. It is not possible to delete a user and still keep their tickets."
+#: ../system/data-privacy.rst:29
+msgid "Data privacy management"
 msgstr ""
 
-#: ../system/data-privacy.rst:33
-msgid "**The following records cannot be deleted:**"
+#: ../system/data-privacy.rst:31
+msgid "Depending on where you initiate the deletion task, the dialog looks pretty much the same. If the user is the last user of an organization, the dialog asks if you want to delete the organization as well."
 msgstr ""
 
 #: ../system/data-privacy.rst:35
-msgid "Your own account"
+msgid "SCREENSHOT DIALOG"
 msgstr ""
 
-#: ../system/data-privacy.rst:36
-msgid "The system's last remaining administrator account"
+#: ../system/data-privacy.rst:37
+msgid "Have a look at the next sections about how to create a deletion task."
 msgstr ""
 
-#: ../system/data-privacy.rst:39
-msgid "Step 1: Find a User / Confirm Deletion"
+#: ../system/data-privacy.rst:40
+msgid "User Management"
 msgstr ""
 
-#: ../system/data-privacy.rst:41
-msgid "There are three ways to access the user deletion dialog:"
+#: ../system/data-privacy.rst:42
+msgid "To delete a user and its tickets from the user management, simply locate the user in question (e.g. by searching) and choose **Delete** after clicking the action menu via ︙ button:"
 msgstr ""
 
-#: ../system/data-privacy.rst:48
-msgid "**from the user's profile**"
+#: ../system/data-privacy.rst:46
+#: ../system/data-privacy.rst:54
+msgid "SCREENSHOT"
 msgstr ""
 
-#: ../system/data-privacy.rst:0
-msgid "Accessing the user deletion dialog in a user profile"
+#: ../system/data-privacy.rst:49
+msgid "User Detail Screen"
 msgstr ""
 
-#: ../system/data-privacy.rst:48
-msgid "Click **Action > Delete**."
+#: ../system/data-privacy.rst:51
+msgid "To delete a user and its tickets from the user detail screen, choose **Delete** from the action menu in the top right corner:"
 msgstr ""
 
-#: ../system/data-privacy.rst:55
-msgid "**in the “Manage > Users” Admin Panel**"
+#: ../system/data-privacy.rst:57
+msgid "Data Privacy Task"
 msgstr ""
 
-#: ../system/data-privacy.rst:0
-msgid "Accessing the user deletion dialog under “Users” in the Admin Panel"
-msgstr ""
-
-#: ../system/data-privacy.rst:55
-msgid "Use the **⋮ Actions** menu for the target user."
-msgstr ""
-
-#: ../system/data-privacy.rst:63
-#: ../system/data-privacy.rst:101
-msgid "**in the “System > Data Privacy” Admin Panel**"
-msgstr ""
-
-#: ../system/data-privacy.rst:0
-msgid "Accessing the user deletion dialog under “Data Privacy” in the Admin Panel"
-msgstr ""
-
-#: ../system/data-privacy.rst:62
-msgid "Use the **New Deletion Task** button. Search for users by name or email address."
-msgstr ""
-
-#: ../system/data-privacy.rst:76
-msgid "**Delete organizations**"
+#: ../system/data-privacy.rst:59
+msgid "You can find the data privacy section in Zammad's settings under *System > Data Privacy*. To create a deletion task, use the **New Deletion Task** button in the top right corner. The difference to the two mentioned options is that you first have to search the user in the dialog. Everything else is the same."
 msgstr ""
 
 #: ../system/data-privacy.rst:66
-msgid "If the customer you are deleting is the last user in their organization, a **Delete Organization?** option will be displayed in the user deletion dialog:"
+msgid "Automatic Deletion via Scheduler"
 msgstr ""
 
-#: ../system/data-privacy.rst:0
-msgid "Deleting an organization via the user deletion dialog"
+#: ../system/data-privacy.rst:68
+msgid "In case you want to automatically clean up old tickets or tickets from specific customers or organizations, you can do this by creating a :doc:`scheduler </manage/scheduler>` task."
 msgstr ""
 
-#: ../system/data-privacy.rst:75
-msgid "If this option does not appear, make sure there are no pending deletion tasks for other customers from this organization."
-msgstr ""
-
-#: ../system/data-privacy.rst:79
+#: ../system/data-privacy.rst:74
 msgid "Step 2: Monitor Deletion Job Status"
 msgstr ""
 
-#: ../system/data-privacy.rst:81
+#: ../system/data-privacy.rst:76
 msgid "It may take up to ten minutes for the system to process your request, so for each user you delete, a “deletion task” is added to the queue. You can keep an eye on the status of these tasks in two places:"
 msgstr ""
 
-#: ../system/data-privacy.rst:95
+#: ../system/data-privacy.rst:90
 msgid "**in the Activity Stream**"
 msgstr ""
 
@@ -19200,83 +19196,87 @@ msgstr ""
 msgid "Activity Stream showing data privacy tasks"
 msgstr ""
 
-#: ../system/data-privacy.rst:91
+#: ../system/data-privacy.rst:86
 msgid "For each deleted user, the Activity Stream will be updated twice—once when the task is created, and once when it's complete."
 msgstr ""
 
-#: ../system/data-privacy.rst:94
+#: ../system/data-privacy.rst:89
 msgid "These notifications are only visible to users with ``admin.data_privacy`` permissions."
+msgstr ""
+
+#: ../system/data-privacy.rst:96
+msgid "**in the “System > Data Privacy” Admin Panel**"
 msgstr ""
 
 #: ../system/data-privacy.rst:0
 msgid "The task list within Data Privacy shows removals being in progress and completed."
 msgstr ""
 
-#: ../system/data-privacy.rst:104
+#: ../system/data-privacy.rst:99
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: ../system/data-privacy.rst:118
+#: ../system/data-privacy.rst:113
 msgid "What happens if I receive an email from a deleted customer?"
 msgstr ""
 
-#: ../system/data-privacy.rst:107
+#: ../system/data-privacy.rst:102
 msgid "Zammad automatically creates a new user account whenever it receives a message from an unrecognized email address, including deleted users. Deleted users are never blocked from creating new tickets."
 msgstr ""
 
-#: ../system/data-privacy.rst:112
+#: ../system/data-privacy.rst:107
 msgid "In the unlikely event that you receive an email between the time that you click “Delete” and the system has processed your request, **that ticket will be automatically removed**. The ticket number for the lost ticket will be displayed in the Admin Panel under **System > Data Privacy > Completed Tasks > Delete User > Deleted Tickets**."
 msgstr ""
 
-#: ../system/data-privacy.rst:127
+#: ../system/data-privacy.rst:122
 msgid "What about user information stored in internal notes or other messages?"
 msgstr ""
 
-#: ../system/data-privacy.rst:121
+#: ../system/data-privacy.rst:116
 msgid "The deletion process removes **user accounts and associated tickets only**."
 msgstr ""
 
-#: ../system/data-privacy.rst:123
+#: ../system/data-privacy.rst:118
 msgid "If there are references to a user's name or information stored elsewhere in the system, that information **will not be removed** because there is no way to safely determine if it actually describes the user in question."
 msgstr ""
 
-#: ../system/data-privacy.rst:134
+#: ../system/data-privacy.rst:129
 msgid "I deleted an user and can still see a message they sent!"
 msgstr ""
 
-#: ../system/data-privacy.rst:130
+#: ../system/data-privacy.rst:125
 msgid "Tickets can only belong to a single customer, but may contain messages (“articles”) from many people. If you deleted a user but you're still seeing articles they sent, don't worry—those articles are for a ticket that belongs to someone else, and no longer contain any reference to the sender's identity."
 msgstr ""
 
-#: ../system/data-privacy.rst:138
+#: ../system/data-privacy.rst:133
 msgid "I removed a customer, now my reporting is off!"
 msgstr ""
 
-#: ../system/data-privacy.rst:137
+#: ../system/data-privacy.rst:132
 msgid "When removing users and their tickets, all references are removed. This also affects e.g. Reporting - these information are lost."
 msgstr ""
 
-#: ../system/data-privacy.rst:142
+#: ../system/data-privacy.rst:137
 msgid "How long does Zammad store created tasks?"
 msgstr ""
 
-#: ../system/data-privacy.rst:141
+#: ../system/data-privacy.rst:136
 msgid "Please see the on-premise data section of the :docs:`data privacy </appendix/privacy.html>` chapter."
 msgstr ""
 
-#: ../system/data-privacy.rst:147
+#: ../system/data-privacy.rst:142
 msgid "What about re-assigned tickets? I want to delete them, too."
 msgstr ""
 
-#: ../system/data-privacy.rst:145
+#: ../system/data-privacy.rst:140
 msgid "Only tickets assigned to the matching customer at the time of the execution of the data privacy deletion task will be deleted. The deletion will not consider historical assignments."
 msgstr ""
 
-#: ../system/data-privacy.rst:151
+#: ../system/data-privacy.rst:146
 msgid "Why are there so many deletion task entries, I didn't create them!"
 msgstr ""
 
-#: ../system/data-privacy.rst:150
+#: ../system/data-privacy.rst:145
 msgid "The deletion tasks can come from the :doc:`/manage/scheduler` as well. Namely the action *\"Add a data privacy deletion task\"* is causing the entries."
 msgstr ""
 
