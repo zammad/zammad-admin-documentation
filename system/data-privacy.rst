@@ -37,14 +37,14 @@ you want to delete the organization as well.
    :align: center
    :scale: 80%
 
-Have a look at the next sections about how to create a deletion task.
+Read on to know how to create a deletion task in the different places.
 
 User Management
 ^^^^^^^^^^^^^^^
 
 To delete a user and its tickets from the user management, simply locate the
-user in question (e.g. by searching) and choose **Delete** after clicking the
-action menu via ︙ button:
+user in question (e.g. by searching) and choose **Delete** from the action
+menu via ︙ button in the user table:
 
 .. figure:: /images/system/data-privacy/user-management-action-menu.png
    :alt: Screenshot shows a user from user management and the action menu with highlighted sections.
@@ -55,7 +55,10 @@ User Detail Screen
 To delete a user and its tickets from the user detail screen, choose **Delete**
 from the action menu in the top right corner:
 
-SCREENSHOT
+.. figure:: /images/system/data-privacy/user-detail-action-menu.png
+   :alt: Screenshot shows an user detail dialog and the action menu with highlighted sections.
+   :align: center
+   :scale: 80%
 
 Data Privacy Task
 ^^^^^^^^^^^^^^^^^
@@ -66,6 +69,14 @@ in the top right corner. The difference to the two mentioned options is
 that you first have to search the user in the dialog. Everything else is the
 same.
 
+.. figure:: /images/system/data-privacy/data-privacy-deletion-task.png
+   :alt: Screenshot shows the data privacy section in Zammad's settings with highlighted sections.
+   :align: center
+   :scale: 80%
+
+In this section, you can also see logs of scheduled and finished deletion tasks.
+Read on in :ref:`monitor-deletion-job` to learn more.
+
 Automatic Deletion via Scheduler
 --------------------------------
 
@@ -73,9 +84,10 @@ In case you want to automatically clean up old tickets or tickets from specific
 customers or organizations, you can do this by creating a
 :doc:`scheduler </manage/scheduler>` task.
 
+.. _monitor-deletion-job:
 
-Step 2: Monitor Deletion Job Status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Monitor Deletion Job Status
+---------------------------
 
 It may take up to ten minutes for the system to process your request,
 so for each user you delete, a “deletion task” is added to the queue.
