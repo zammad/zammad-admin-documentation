@@ -35,7 +35,7 @@ you want to delete the organization as well.
 .. figure:: /images/system/data-privacy/deletion-task-dialog.png
    :alt: Screenshot shows the dialog for creating a deletion task.
    :align: center
-   :scale: 80%
+   :width: 60%
 
 Read on to know how to create a deletion task in the different places.
 
@@ -48,6 +48,8 @@ menu via ︙ button in the user table:
 
 .. figure:: /images/system/data-privacy/user-management-action-menu.png
    :alt: Screenshot shows a user from user management and the action menu with highlighted sections.
+   :align: center
+   :width: 80%
 
 User Detail Screen
 ^^^^^^^^^^^^^^^^^^
@@ -58,7 +60,7 @@ from the action menu in the top right corner:
 .. figure:: /images/system/data-privacy/user-detail-action-menu.png
    :alt: Screenshot shows an user detail dialog and the action menu with highlighted sections.
    :align: center
-   :scale: 80%
+   :width: 60%
 
 Data Privacy Task
 ^^^^^^^^^^^^^^^^^
@@ -72,7 +74,7 @@ same.
 .. figure:: /images/system/data-privacy/data-privacy-deletion-task.png
    :alt: Screenshot shows the data privacy section in Zammad's settings with highlighted sections.
    :align: center
-   :scale: 80%
+   :width: 60%
 
 In this section, you can also see logs of scheduled and finished deletion tasks.
 Read on in :ref:`monitor-deletion-job` to learn more.
