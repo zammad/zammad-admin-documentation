@@ -77,7 +77,34 @@ same.
    :width: 60%
 
 In this section, you can also see logs of scheduled and finished deletion tasks.
-Read on in :ref:`monitor-deletion-job` to learn more.
+Read on in the next section to learn more.
+
+
+Monitor Deletion Jobs
+---------------------
+
+For each user you delete, a deletion task is added to the deletion queue.
+It may take up to ten minutes for the system to process your request. Depending
+on the amount of tickets of the user, the deletion itself can also take some
+time. You can see status messages of these tasks in two places:
+
+- Data privacy management (Zammad's admin settings)
+- Activity stream (by opening the dashboard; only visible with
+  ``admin.data_privacy`` permission)
+
+For each deleted user, you can see two entries: one when the task is created and
+one when the task has finished.
+
+Activity stream in dashboard
+   .. figure:: /images/system/data-privacy/deletion-task-activity-stream.png
+      :alt: Screenshot shows the activity stream from Zammad's dashboard with 2 deletion task entries
+      :align: center
+
+Data privacy management in admin settings
+   .. figure:: /images/system/data-privacy/data-privacy-tasks.png
+      :alt: Screenshot shows the data privacy section in Zammad's settings with a finished and a running task
+      :align: center
+      :width: 80%
 
 Automatic Deletion via Scheduler
 --------------------------------
@@ -85,27 +112,6 @@ Automatic Deletion via Scheduler
 In case you want to automatically clean up old tickets or tickets from specific
 customers or organizations, you can do this by creating a
 :doc:`scheduler </manage/scheduler>` task.
-
-.. _monitor-deletion-job:
-
-Monitor Deletion Job Status
----------------------------
-
-It may take up to ten minutes for the system to process your request,
-so for each user you delete, a “deletion task” is added to the queue.
-You can keep an eye on the status of these tasks in two places:
-
-**in the Activity Stream**
-   SCREENSHOT
-
-   For each deleted user, the Activity Stream will be updated twice—once when
-   the task is created, and once when it's complete.
-
-   .. hint:: These notifications are only visible to users with
-      ``admin.data_privacy`` permissions.
-
-**in the “System > Data Privacy” Admin Panel**
-   SCREENSHOT
 
 Frequently Asked Questions
 --------------------------
