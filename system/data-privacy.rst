@@ -17,6 +17,8 @@ Basic Information
 - You can't delete your own account.
 - You can't delete the system's last remaining administrator account.
 - You can create :docs:`data privacy deletion task via API </api/user>`.
+- Only customer tickets of a user are deleted. If the user is also agent, only
+  the owner gets removed from the affected tickets.
 - All deletions are final! Double check your commands.
 
 Manual Deletion via GUI
@@ -32,12 +34,24 @@ Independent of where you initiate the deletion task, the dialog always looks
 the same. If the user is the last user of an organization, the dialog asks if
 you want to delete the organization as well.
 
+The deletion dialog consists of the following elements:
+
+- User: either the user is pre-selected or you can search for a user by typing
+  its name.
+- Delete organization: optional; only available if user is last user of the
+  organization.
+- Preview customer tickets: shows a preview of the affected ticket. Be aware
+  that this is just a preview and it may change, depending on the execution
+  time.
+- Confirmation: this is a safety feature where you have to enter ``DELETE``
+  manually to make sure you are not deleting data by accident.
+
 .. figure:: /images/system/data-privacy/deletion-task-dialog.png
    :alt: Screenshot shows the dialog for creating a deletion task.
    :align: center
    :width: 60%
 
-Read on to know how to create a deletion task in the different places.
+Read on about how to create a deletion task in the different places.
 
 User Management
 ^^^^^^^^^^^^^^^
@@ -79,7 +93,6 @@ same.
 In this section, you can also see logs of scheduled and finished deletion tasks.
 Read on in the next section to learn more.
 
-
 Monitor Deletion Jobs
 ---------------------
 
@@ -106,60 +119,70 @@ Data privacy management in admin settings
       :align: center
       :width: 80%
 
+.. _automatic-deletion-scheduler:
+
 Automatic Deletion via Scheduler
 --------------------------------
 
-In case you want to automatically clean up old tickets or tickets from specific
-customers or organizations, you can do this by creating a
-:doc:`scheduler </manage/scheduler>` task.
+In case you want to automatically clean up old customers with their tickets or
+specific customers or organizations, you can do this by creating a
+:doc:`scheduler </manage/scheduler>` task. Such a scheduler task checks which
+users are affected based on conditions and runs at pre-defined times and days.
+
+The relevant object is **User** and the action to execute is **Action** > **Add
+a data privacy deletion task**. You can create a condition to narrow down the
+users you exactly want to delete. A basic example of a scheduler could look like
+this:
+
+.. figure:: /images/system/data-privacy/scheduler-deletion-task.png
+   :alt: Screenshot shows important scheduler configuration for a deletion task
+   :align: center
+   :width: 80%
+
+You can delete only tickets if you choose **Ticket** as object in the scheduler
+task. This gives you an additional action named **Delete immediately** which
+does exactly that. Customers of these tickets aren't deleted.
 
 Frequently Asked Questions
 --------------------------
 
 What happens if I receive an email from a deleted customer?
-   Zammad automatically creates a new user account
-   whenever it receives a message from an unrecognized email address,
-   including deleted users.
+   Zammad automatically creates a new user account whenever it receives a
+   message from an unrecognized email address, including deleted users.
    Deleted users are never blocked from creating new tickets.
 
-   In the unlikely event that you receive an email
-   between the time that you click “Delete”
-   and the system has processed your request,
-   **that ticket will be automatically removed**.
-   The ticket number for the lost ticket will be displayed
-   in the Admin Panel under **System > Data Privacy >
-   Completed Tasks > Delete User > Deleted Tickets**.
+   In case you receive an email between the time that you click delete and
+   the system has processed your request, that ticket will be automatically
+   **deleted**. The ticket number of the lost ticket is displayed in the data
+   privacy management in Zammad's admin settings in the deletion task entry
+   under  **Deleted Tickets**.
 
 What about user information stored in internal notes or other messages?
-   The deletion process removes **user accounts and associated tickets only**.
+   The deletion process removes user accounts and associated tickets **only**.
+   If there are references to a user's name or information stored somewhere else
+   in the system, this information **will not be removed** because there is no
+   way to safely determine which information is relevant.
 
-   If there are references to a user's name or information
-   stored elsewhere in the system,
-   that information **will not be removed**
-   because there is no way to safely determine
-   if it actually describes the user in question.
-
-I deleted an user and can still see a message they sent!
-   Tickets can only belong to a single customer,
-   but may contain messages (“articles”) from many people.
-   If you deleted a user but you're still seeing articles they sent,
-   don't worry—those articles are for a ticket that belongs to someone else,
-   and no longer contain any reference to the sender's identity.
+I deleted a user and can still see a message they sent!
+   Tickets can only belong to a single customer, but may contain messages from
+   many people. If you deleted a user but you're still seeing articles they
+   sent, then it is an article in a ticket from another customer. The user
+   information of the deleted user is removed but the articles in question are
+   still available.
 
 I removed a customer, now my reporting is off!
-   When removing users and their tickets, all references are removed.
-   This also affects e.g. Reporting - these information are lost.
+   When removing users and their tickets, all references are removed. This also
+   affects reporting - these information are lost.
 
 How long does Zammad store created tasks?
    Please see the on-premise data section of the
    :docs:`data privacy </appendix/privacy.html>` chapter.
 
 What about re-assigned tickets? I want to delete them, too.
-   Only tickets assigned to the matching customer at the time of the execution
-   of the data privacy deletion task will be deleted. The deletion will not
-   consider historical assignments.
+   Only tickets which are currently assigned to the matching customer at the
+   time of the execution of the data privacy deletion task will be deleted.
+   The deletion will not consider historical assignments.
 
 Why are there so many deletion task entries, I didn't create them!
-   The deletion tasks can come from the :doc:`/manage/scheduler` as well.
-   Namely the action *"Add a data privacy deletion task"* is causing the
-   entries.
+   The deletion tasks can come from :doc:`scheduler</manage/scheduler>` tasks
+   as well. See :ref:`automatic-deletion-scheduler` above.
