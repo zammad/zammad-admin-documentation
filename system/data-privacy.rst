@@ -6,8 +6,8 @@ This can be required for compliance with GDPR and other data privacy laws. This
 page describes the places where you can do it, how to do it and includes
 additional useful information.
 
-Basic Information
------------------
+Important Information
+---------------------
 
 - The permission ``admin.data_privacy`` is required to initiate a deletion task.
 - If you want to delete an organization, the deletion task of the last remaining
