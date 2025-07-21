@@ -31,10 +31,7 @@ You can initiate a data privacy deletion task from different places in Zammad:
 - Data privacy management
 
 Independent of where you initiate the deletion task, the dialog always looks
-the same. If the user is the last user of an organization, the dialog asks if
-you want to delete the organization as well.
-
-The deletion dialog consists of the following elements:
+the same and consists of the following sections:
 
 - User: either the user is pre-selected or you can search for a user by typing
   its name.
@@ -56,9 +53,10 @@ Read on about how to create a deletion task in the different places.
 User Management
 ^^^^^^^^^^^^^^^
 
-To delete a user and its tickets from the user management, simply locate the
-user in question (e.g. by searching) and choose **Delete** from the action
-menu via ︙ button in the user table:
+To delete a user and its tickets from within the
+:doc:`user management </manage/users/index>`, simply locate the user in question
+(e.g. by searching) and choose **Delete** from the action menu via ︙ button in
+the user table:
 
 .. figure:: /images/system/data-privacy/user-management-action-menu.png
    :alt: Screenshot shows a user from user management and the action menu with highlighted sections.
@@ -102,8 +100,8 @@ on the amount of tickets of the user, the deletion itself can also take some
 time. You can see status messages of these tasks in two places:
 
 - Data privacy management (Zammad's admin settings)
-- Activity stream (by opening the dashboard; only visible with
-  ``admin.data_privacy`` permission)
+- Activity stream (by opening the dashboard; deletion task entries only visible
+  for users with ``admin.data_privacy`` permission)
 
 For each deleted user, you can see two entries: one when the task is created and
 one when the task has finished.
