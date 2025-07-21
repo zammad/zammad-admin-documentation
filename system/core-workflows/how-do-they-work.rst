@@ -1,22 +1,13 @@
 How do they work?
 =================
 
-Core Workflows are executed according to their priority.
-If two workflows have the same priority, they are executed in alphabetical
-order based on their **name**.
-
-Because of the way Core Workflows work, all changes to attributes
-are checked with the application server - please see :doc:`limitations`
-for possible issues.
-
-Below we're talking about settings that are important and not self-explanatory.
+Find a description of the different parts of the core workflows below.
 
 Object
 ------
 
 Choose the object context you want to run the workflow in.
 This will decide on your available attributes and actions.
-
 Ticket objects also have access to the ticket customer.
 
 Context
@@ -38,6 +29,8 @@ Conditions
 
 Zammad differentiates between selected and saved conditions.
 These can be combined wherever needed.
+You can find a description of the condition operators for core workflows in
+:doc:`/system/core-workflows/condition-operators`.
 
 .. warning:: **⚠️ Restrict workflows to specific roles if needed!**
 
@@ -63,26 +56,19 @@ Saved Conditions
       Example: you can't perform any actions with *saved condition* on a
       ticket in creation, because there are no saved values at that time.
 
-You can find a description of the condition operators for core workflows
-:doc:`here </system/core-workflows/condition-operators>`.
-
 Action
 ------
 
-Which actions should we run on the relevant fields?
+Define which actions should get applied to the relevant fields.
 The possible actions depend on the object type. However, usually
 you can at least change the visibility and whether the field is mandatory.
 
 Be aware that actions are not available for **related** context.
-
-**Example:** Let's assume you are working in the ticket context.
+Example: Let's assume you are working in the ticket context.
 While you can have customer *conditions*, you *can't adjust* objects with
 actions in that scope. That's because this wouldn't have any impact on the
 ticket dialog. Of course all ticket attributes (state, owner, ...) are
 available.
-
-Please also have a look at our :doc:`limitations` to be safe
-from surprises.
 
 Available Operators
 -------------------
@@ -171,20 +157,19 @@ unset readonly |ui|
 Stop after match
 ----------------
 
-Here you can decide if other workflows are executed after the current one.
+Decide if other workflows are executed after the current one.
 
 If set to ``no`` (default), further workflows will be executed if they match the
 condition. In this case, it is possible that your actions from the current
 workflow can be overwritten by another workflow.
-
 If set to ``yes``, no further workflows will be executed after the
 current one.
 
 Priority
 --------
 
-You can define the sequence, in which the workflows are executed. The default
-value is ``500``.
+You can define the sequence of execution of the workflows by settings a numeric
+value. The execution runs in ascending order. That means lower values
+(e.g. ``100``) are executed before higher ones (e.g. ``999``).
 
-The workflows are executed in ascending order by their priority. That means
-lower values (e.g. ``100``) are executed before higher ones (e.g. ``999``).
+The default value is ``500``.
