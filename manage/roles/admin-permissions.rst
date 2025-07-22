@@ -44,7 +44,7 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
      - AI > Smart Assist Text Tools
      -
    * - ``admin.ai_assistance_ticket_summary``
-     - :doc:`AI > Ticket Summary </ai/features>`
+     - :doc:`AI > Ticket Summary </ai/summary>`
      -
    * - ``admin.api``
      - :docs:`System > API </api/intro.html>`
