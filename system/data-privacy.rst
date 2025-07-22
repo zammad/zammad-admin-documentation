@@ -16,7 +16,7 @@ Important Information
 - It is not possible to only delete a user and keep its tickets.
 - You can't delete your own account.
 - You can't delete the system's last remaining administrator account.
-- You can create :docs:`data privacy deletion task via API </api/user>`.
+- You can create :docs:`data privacy deletion task via API </api/user.html>`.
 - Only customer tickets of a user are deleted. If the user is also agent, only
   the owner gets removed from the affected tickets.
 - All deletions are final! Double check your commands.
