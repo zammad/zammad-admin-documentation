@@ -7,14 +7,27 @@ admin settings under *AI > AI Agents*. Make sure to configure an
 :doc:`AI provider <provider>` before activating the feature. Otherwise, a
 warning message will tell you to do so.
 
+While an AI agent works on a ticket, an avatar is displayed in the
+live user section in the bottom bar of the ticket detail view, see example
+below. In such a short period of time, the agents should not apply changes to
+the ticket because they could get overwritten, depending on the AI agent type.
+
+.. figure:: /images/ai/ai-live-user.png
+  :alt: Screenshot shows avatar of AI agent from the live user section in ticket detail's bottom bar
+  :scale: 60%
+  :align: center
+
+  Avatar of an AI agent which shows up in the live user section.
+
 Important Information
 ---------------------
 
 - To configure AI agents, the ``admin.ai_agent`` permission is required
 - The types of AI agents are limited to the available options.
-- AI agents don't run on their own. They have to be executed by a
+- AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>` or a
-  :doc:`scheduler job </manage/scheduler>` by the action **AI** > **AI Agent**.
+  :doc:`scheduler job </manage/scheduler>` with the action
+  **AI** > **AI Agent**.
 
 Manage AI Agents
 ----------------
