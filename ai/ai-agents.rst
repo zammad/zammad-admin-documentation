@@ -1,7 +1,7 @@
 AI Agents
 =========
 
-To help your agents focussing on more important tasks, you can create AI agents
+To help your agents focusing on more important tasks, you can create AI agents
 which can take over routine tasks. These AI agents are managed in Zammad's
 admin settings under *AI > AI Agents*. Make sure to configure an
 :doc:`AI provider <provider>` before activating the feature. Otherwise, a
@@ -13,7 +13,7 @@ below. In such a short period of time, the agents should not apply changes to
 the ticket because they could get overwritten, depending on the AI agent type.
 
 .. figure:: /images/ai/ai-live-user.png
-  :alt: Screenshot shows avatar of AI agent from the live user section in ticket detail's bottom bar
+  :alt: Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar
   :scale: 60%
   :align: center
 
@@ -57,11 +57,14 @@ Ticket Group Dispatcher
 
 This AI agent is capable of assigning tickets to different groups. It compares
 the content of the ticket in question with your group names in Zammad. If a
-suitable group can be found, it selects this group in the ticket. You can use
+suitable group can be found, it selects this group for the ticket. You can use
 all of your groups or just specific ones by limiting it for the AI agent in the
 configuration wizard.
 
-A useful trigger configuration of such an AI agent could look like this:
+.. hint:: If you limit the available groups for this agent, make sure to select
+  at least two groups.
+
+A useful trigger configuration for such AI agent could look like this:
 
 - Activated by: **Action**
 - Action execution: **Selective**
