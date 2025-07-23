@@ -12,7 +12,7 @@ Important Information
 - The types of AI agents are limited to the available options.
 - AI agents don't run on their own. They have to be executed by a
   :doc:`trigger </manage/trigger>` or a
-  :doc:`scheduler job </manage/scheduler>` with the action **AI Agent**.
+  :doc:`scheduler job </manage/scheduler>` by the action **AI** > **AI Agent**.
 
 Manage AI Agents
 ----------------
