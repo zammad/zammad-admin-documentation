@@ -40,6 +40,9 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.ai``
      - :doc:`AI > Provider </ai/provider>`
      -
+   * - ``admin.ai_agent``
+     - :doc:`AI > AI Agents </ai/ai-agents>`
+     -
    * - ``admin.ai_assistance_text_tools``
      - AI > Smart Assist Text Tools
      -

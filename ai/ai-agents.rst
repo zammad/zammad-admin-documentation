@@ -10,11 +10,17 @@ Important Information
 
 - To configure AI agents, the ``admin.ai_agent`` permission is required
 - The types of AI agents are limited to the available options.
-- An AI agent run has to be executed by a :doc:`trigger </manage/trigger>` or a
-  :doc:`scheduler job </manage/scheduler>`.
+- AI agents don't run on their own. They have to be executed by a
+  :doc:`trigger </manage/trigger>` or a
+  :doc:`scheduler job </manage/scheduler>` with the action **AI Agent**.
 
 Manage AI Agents
 ----------------
+
+.. figure:: /images/ai/manage-agents.png
+  :alt: Screenshot shows AI agents management
+  :align: center
+  :scale: 80%
 
 Create an AI agent by clicking the **New AI Agent** button in the top right
 corner. This opens a wizard where you can choose the type of the agent and
@@ -38,16 +44,9 @@ suitable group can be found, it selects this group. You can use all of your
 groups or just specific ones by limiting it for the AI agent in the
 configuration wizard.
 
-Example configuration for triggers:
+A useful trigger configuration of such an AI agent could look like this:
 
-
-Run AI Agents
--------------
-
-AI agents don't run on their own. You must trigger an AI agent run by creating
-a trigger or scheduler. Select the desired objects by defining a
-condition and choose **AI Agent** as executable action. Choose the relevant
-AI agent by its name. This will execute the AI agent when the condition matches.
-
-
-
+- Activated by: **Action**
+- Action execution: **Selective**
+- Conditions for affected objects: **Action** *is* ``created``
+- Execute changes on objects: **AI Agent** > Select your AI agent

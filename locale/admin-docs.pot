@@ -8,13 +8,115 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 13:14+0200\n"
+"POT-Creation-Date: 2025-07-23 09:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../ai/ai-agents.rst:2
+msgid "AI Agents"
+msgstr ""
+
+#: ../ai/ai-agents.rst:4
+msgid "To help your agents focussing on more important tasks, you can create AI agents which can take over routine tasks. These AI agents are managed in Zammad's admin settings under *AI > AI Agents*."
+msgstr ""
+
+#: ../ai/ai-agents.rst:9
+#: ../system/data-privacy.rst:10
+msgid "Important Information"
+msgstr ""
+
+#: ../ai/ai-agents.rst:11
+msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
+msgstr ""
+
+#: ../ai/ai-agents.rst:12
+msgid "The types of AI agents are limited to the available options."
+msgstr ""
+
+#: ../ai/ai-agents.rst:13
+msgid "AI agents don't run on their own. They have to be executed by a :doc:`trigger </manage/trigger>` or a :doc:`scheduler job </manage/scheduler>` with the action **AI Agent**."
+msgstr ""
+
+#: ../ai/ai-agents.rst:18
+msgid "Manage AI Agents"
+msgstr ""
+
+#: ../ai/ai-agents.rst:None
+msgid "Screenshot shows AI agents management"
+msgstr ""
+
+#: ../ai/ai-agents.rst:25
+msgid "Create an AI agent by clicking the **New AI Agent** button in the top right corner. This opens a wizard where you can choose the type of the agent and additional settings based on the selected type, see :ref:`ai-agent-types` for details. The action column with the ︙ button allows you to clone or delete an AI agent. You can only delete AI agents which are not used in triggers and schedulers. You can find this information in the two columns in the AI agent table."
+msgstr ""
+
+#: ../ai/ai-agents.rst:36
+msgid "AI Agent Types"
+msgstr ""
+
+#: ../ai/ai-agents.rst:39
+msgid "Ticket Group Dispatcher"
+msgstr ""
+
+#: ../ai/ai-agents.rst:41
+msgid "This AI agent is capable of assigning tickets to different groups. It compares the content of the ticket in question with your group names in Zammad. If a suitable group can be found, it selects this group. You can use all of your groups or just specific ones by limiting it for the AI agent in the configuration wizard."
+msgstr ""
+
+#: ../ai/ai-agents.rst:47
+msgid "A useful trigger configuration of such an AI agent could look like this:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:49
+msgid "Activated by: **Action**"
+msgstr ""
+
+#: ../ai/ai-agents.rst:50
+msgid "Action execution: **Selective**"
+msgstr ""
+
+#: ../ai/ai-agents.rst:51
+msgid "Conditions for affected objects: **Action** *is* ``created``"
+msgstr ""
+
+#: ../ai/ai-agents.rst:52
+msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+msgstr ""
+
+#: ../ai/features.rst:2
+#: ../manage/knowledge-base.rst:25
+msgid "Features"
+msgstr ""
+
+#: ../ai/features.rst:4
+msgid "Below you find the supported AI powered features of Zammad. Make sure to configure a provider before activating a feature. Otherwise, a warning message will tell you to do so."
+msgstr ""
+
+#: ../ai/features.rst:8
+msgid "Currently, only one feature is available so far. This feature can be seen as the foundation for other useful features. Expect more to come soon!"
+msgstr ""
+
+#: ../ai/features.rst:12
+msgid "Ticket Summary"
+msgstr ""
+
+#: ../ai/features.rst:14
+msgid "Activating this feature generates summaries of tickets. This can be a huge time saver when dealing with large tickets and/or many hand-overs between agents."
+msgstr ""
+
+#: ../ai/features.rst:18
+msgid "By default, **Customer Intent** and **Conversation Summary** are enabled and always active. You can choose to activate or deactivate **Open Questions** and **Suggested Next Steps**, depending on what fits your needs."
+msgstr ""
+
+#: ../ai/features.rst:22
+msgid "Enabling the ticket summary feature triggers a request to the configured AI service when an agent opens a ticket. Agents then see an indicator on the **AI Summary**  sidebar tab which tells them that a summary is available."
+msgstr ""
+
+#: ../ai/features.rst:26
+msgid "If you use an own Ollama server as provider, make sure to have the ``llama3.2`` model available for this feature or specify an available model in the :ref:`provider configuration <ollama-provider>`."
+msgstr ""
 
 #: ../ai/provider.rst:2
 msgid "Provider"
@@ -6053,19 +6155,19 @@ msgstr ""
 msgid "AI"
 msgstr ""
 
-#: ../index.rst:75
+#: ../index.rst:76
 msgid "API (System-Documentation)"
 msgstr ""
 
-#: ../index.rst:75
-#: ../index.rst:75
+#: ../index.rst:76
+#: ../index.rst:76
 #: ../misc/object-conditions/basics.rst:169
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
 
-#: ../index.rst:95
-#: ../index.rst:95
+#: ../index.rst:96
+#: ../index.rst:96
 msgid "Misc"
 msgstr ""
 
@@ -8016,15 +8118,15 @@ msgid ":doc:`AI > Provider </ai/provider>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:43
-msgid "``admin.ai_assistance_text_tools``"
+msgid "``admin.ai_agent``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:44
-msgid "AI > Smart Assist Text Tools"
+msgid ":doc:`AI > AI Agents </ai/ai-agents>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:46
-msgid "``admin.ai_assistance_ticket_summary``"
+msgid "``admin.ai_assistance_text_tools``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:47
@@ -8032,194 +8134,202 @@ msgid ":doc:`AI > Ticket Summary </ai/summary>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:49
-msgid "``admin.api``"
+msgid "``admin.ai_assistance_ticket_summary``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:50
-msgid ":docs:`System > API </api/intro.html>`"
+msgid ":doc:`AI > Ticket Summary </ai/features>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:52
-msgid "``admin.branding``"
+msgid "``admin.api``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:53
-msgid ":doc:`Settings > Branding </settings/branding>`"
+msgid ":docs:`System > API </api/intro.html>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:55
-msgid "``admin.calendar``"
+msgid "``admin.branding``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:56
-msgid ":doc:`Manage > Calendars </manage/calendars>`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:57
-msgid "Required for :doc:`/manage/slas/index`"
+msgid ":doc:`Settings > Branding </settings/branding>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:58
-msgid "``admin.channel_chat``"
+msgid "``admin.calendar``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:59
-msgid ":doc:`Channels > Chat </channels/chat>`"
+msgid ":doc:`Manage > Calendars </manage/calendars>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:60
-msgid "Accessing chat for agents: ``chat.agent``"
+msgid "Required for :doc:`/manage/slas/index`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:61
-msgid "``admin.channel_email``"
+msgid "``admin.channel_chat``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:62
-msgid ":doc:`Channels > Email </channels/email/index>`"
+msgid ":doc:`Channels > Chat </channels/chat>`"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:63
+msgid "Accessing chat for agents: ``chat.agent``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:64
-msgid "``admin.channel_facebook``"
+msgid "``admin.channel_email``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:65
-msgid ":doc:`Channels > Facebook </channels/facebook>`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:66
-msgid "Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
+msgid ":doc:`Channels > Email </channels/email/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:67
-msgid "``admin.channel_formular``"
+msgid "``admin.channel_facebook``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:68
-msgid ":doc:`Channels > Form </channels/form>`"
+msgid ":doc:`Channels > Facebook </channels/facebook>`"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:69
+msgid "Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:70
-msgid "``admin.channel_google``"
+msgid "``admin.channel_formular``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:71
-msgid ":doc:`Channels > Google </channels/google/index>`"
+msgid ":doc:`Channels > Form </channels/form>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:73
-msgid "``admin.channel_microsoft_graph``"
+msgid "``admin.channel_google``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:74
-msgid ":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/index>`"
+msgid ":doc:`Channels > Google </channels/google/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:76
-msgid "``admin.channel_microsoft365``"
+msgid "``admin.channel_microsoft_graph``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:77
-msgid ":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
+msgid ":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:79
-msgid "``admin.channel_sms``"
+msgid "``admin.channel_microsoft365``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:80
-msgid ":doc:`Channels > SMS </channels/sms>`"
+msgid ":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:82
-msgid "``admin.channel_telegram``"
+msgid "``admin.channel_sms``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:83
-msgid ":doc:`Channels > Telegram </channels/telegram>`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:84
-msgid "Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
+msgid ":doc:`Channels > SMS </channels/sms>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:85
-msgid "``admin.channel_twitter``"
+msgid "``admin.channel_telegram``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:86
-msgid ":doc:`Channels > Twitter </channels/twitter-x/twitter>`"
+msgid ":doc:`Channels > Telegram </channels/telegram>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:87
-msgid "Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`"
+msgid "Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:88
-msgid "``admin.channel_web``"
+msgid "``admin.channel_twitter``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:89
-msgid ":doc:`Channels > Web </channels/web>`"
+msgid ":doc:`Channels > Twitter </channels/twitter-x/twitter>`"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:90
+msgid "Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:91
-msgid "``admin.channel_whatsapp``"
+msgid "``admin.channel_web``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:92
-msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
+msgid ":doc:`Channels > Web </channels/web>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:94
-msgid "``admin.checklist``"
+msgid "``admin.channel_whatsapp``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:95
-msgid ":doc:`Manage > Checklist </manage/checklist>`"
+msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:97
-msgid "``admin.core_workflows``"
+msgid "``admin.checklist``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:98
-msgid ":doc:`System > Core Workflows </system/core-workflows>`"
+msgid ":doc:`Manage > Checklist </manage/checklist>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:100
-msgid "``admin.data_privacy``"
+msgid "``admin.core_workflows``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:101
-msgid ":doc:`System > Data Privacy </system/data-privacy>`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:102
-msgid "🔥 Be careful, it allows users to permanently delete data on the system."
+msgid ":doc:`System > Core Workflows </system/core-workflows>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:103
-msgid "``admin.group``"
+msgid "``admin.data_privacy``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:104
-msgid ":doc:`Manage > Groups </manage/groups/index>`"
+msgid ":doc:`System > Data Privacy </system/data-privacy>`"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:105
+msgid "🔥 Be careful, it allows users to permanently delete data on the system."
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:106
-msgid "``admin.integration``"
+msgid "``admin.group``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:107
-msgid ":doc:`System > Integrations </system/integrations/index>`"
+msgid ":doc:`Manage > Groups </manage/groups/index>`"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:109
-msgid "``admin.knowledge_base``"
+msgid "``admin.integration``"
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:110
+msgid ":doc:`System > Integrations </system/integrations/index>`"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:112
+msgid "``admin.knowledge_base``"
+msgstr ""
+
+#: ../manage/roles/admin-permissions.rst:113
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
 msgstr ""
 
@@ -8235,47 +8345,47 @@ msgstr ""
 msgid "Make sure to double-check the answer's :user-docs:`visibility </extras/knowledge-base.html#editing-answers>`."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:115
+#: ../manage/roles/admin-permissions.rst:118
 msgid "``admin.macro``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:116
+#: ../manage/roles/admin-permissions.rst:119
 msgid ":doc:`Manage > Macros </manage/macros>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:117
+#: ../manage/roles/admin-permissions.rst:120
 msgid "In some cases, macros may also require ``admin.tag``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:118
+#: ../manage/roles/admin-permissions.rst:121
 msgid "``admin.maintenance``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:119
+#: ../manage/roles/admin-permissions.rst:122
 msgid ":doc:`System > Maintenance </system/maintenance>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:121
+#: ../manage/roles/admin-permissions.rst:124
 msgid "``admin.monitoring``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:122
+#: ../manage/roles/admin-permissions.rst:125
 msgid ":doc:`System > Monitoring </system/monitoring>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:124
+#: ../manage/roles/admin-permissions.rst:127
 msgid "``admin.object``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:125
+#: ../manage/roles/admin-permissions.rst:128
 msgid ":doc:`System > Objects </system/objects>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:127
+#: ../manage/roles/admin-permissions.rst:130
 msgid "``admin.organization``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:128
+#: ../manage/roles/admin-permissions.rst:131
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ""
 
@@ -8291,211 +8401,211 @@ msgstr ""
 msgid "They can even edit an organization's name, domain, and notes!"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:132
+#: ../manage/roles/admin-permissions.rst:135
 msgid "``admin.overview``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:133
+#: ../manage/roles/admin-permissions.rst:136
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:135
+#: ../manage/roles/admin-permissions.rst:138
 msgid "``admin.package``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:136
+#: ../manage/roles/admin-permissions.rst:139
 msgid ":doc:`System > Packages </system/packages>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:138
+#: ../manage/roles/admin-permissions.rst:141
 msgid "``admin.public_links``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:139
+#: ../manage/roles/admin-permissions.rst:142
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:141
+#: ../manage/roles/admin-permissions.rst:144
 msgid "``admin.report_profile``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:142
+#: ../manage/roles/admin-permissions.rst:145
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:143
+#: ../manage/roles/admin-permissions.rst:146
 msgid "Access to view reports: ``report``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:144
+#: ../manage/roles/admin-permissions.rst:147
 msgid "``admin.role``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:145
+#: ../manage/roles/admin-permissions.rst:148
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:147
+#: ../manage/roles/admin-permissions.rst:150
 msgid "``admin.scheduler``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:148
+#: ../manage/roles/admin-permissions.rst:151
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:149
+#: ../manage/roles/admin-permissions.rst:152
 msgid "For automation on tickets"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:150
+#: ../manage/roles/admin-permissions.rst:153
 msgid "``admin.security``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:151
+#: ../manage/roles/admin-permissions.rst:154
 msgid ":doc:`Settings > Security </settings/security>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:152
+#: ../manage/roles/admin-permissions.rst:155
 msgid "Settings of Zammad. This also covers third party authentications."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:153
+#: ../manage/roles/admin-permissions.rst:156
 msgid "``admin.session``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:154
+#: ../manage/roles/admin-permissions.rst:157
 msgid ":doc:`System > Sessions </system/sessions>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:156
+#: ../manage/roles/admin-permissions.rst:159
 msgid "``admin.sla``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:157
+#: ../manage/roles/admin-permissions.rst:160
 msgid ":doc:`Manage > SLAs </manage/slas/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:159
+#: ../manage/roles/admin-permissions.rst:162
 msgid "``admin.system``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:160
+#: ../manage/roles/admin-permissions.rst:163
 msgid ":doc:`Settings > System </settings/system/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:162
+#: ../manage/roles/admin-permissions.rst:165
 msgid "``admin.system_report``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:163
+#: ../manage/roles/admin-permissions.rst:166
 msgid ":doc:`System > System Report </system/system-report>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:165
+#: ../manage/roles/admin-permissions.rst:168
 msgid "``admin.tag``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:166
+#: ../manage/roles/admin-permissions.rst:169
 msgid ":doc:`Manage > Tags </manage/tags>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:168
+#: ../manage/roles/admin-permissions.rst:171
 msgid "``admin.template``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:169
+#: ../manage/roles/admin-permissions.rst:172
 msgid ":doc:`Manage > Templates </manage/templates>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:171
+#: ../manage/roles/admin-permissions.rst:174
 msgid "``admin.text_module``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:172
+#: ../manage/roles/admin-permissions.rst:175
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:174
+#: ../manage/roles/admin-permissions.rst:177
 msgid "``admin.ticket``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:175
+#: ../manage/roles/admin-permissions.rst:178
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:176
+#: ../manage/roles/admin-permissions.rst:179
 msgid "Does not grant access to :doc:`/misc/composer`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:177
+#: ../manage/roles/admin-permissions.rst:180
 msgid "``admin.ticket_auto_assignment``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:178
+#: ../manage/roles/admin-permissions.rst:181
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:180
+#: ../manage/roles/admin-permissions.rst:183
 msgid "``admin.ticket_duplicate_detection``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:181
+#: ../manage/roles/admin-permissions.rst:184
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:183
+#: ../manage/roles/admin-permissions.rst:186
 msgid "``admin.ticket_priority``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:184
+#: ../manage/roles/admin-permissions.rst:187
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:186
+#: ../manage/roles/admin-permissions.rst:189
 msgid "``admin.ticket_state``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:187
+#: ../manage/roles/admin-permissions.rst:190
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:189
+#: ../manage/roles/admin-permissions.rst:192
 msgid "``admin.time_accounting``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:190
+#: ../manage/roles/admin-permissions.rst:193
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:191
+#: ../manage/roles/admin-permissions.rst:194
 msgid "Also allows the export of timekeeping records."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:192
+#: ../manage/roles/admin-permissions.rst:195
 msgid "``admin.translation``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:193
+#: ../manage/roles/admin-permissions.rst:196
 msgid ":doc:`System > Translations </system/translations>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:194
+#: ../manage/roles/admin-permissions.rst:197
 msgid "Also enables inline translation"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:195
+#: ../manage/roles/admin-permissions.rst:198
 msgid "``admin.trigger``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:196
+#: ../manage/roles/admin-permissions.rst:199
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:198
+#: ../manage/roles/admin-permissions.rst:201
 msgid "``admin.user``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:199
+#: ../manage/roles/admin-permissions.rst:202
 msgid ":doc:`Manage > Users </manage/users/index>`"
 msgstr ""
 
@@ -8511,11 +8621,11 @@ msgstr ""
 msgid "🏴‍☠️ This permission allows users to :ref:`hijack other user sessions <view-from-users-perspective>` ."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:204
+#: ../manage/roles/admin-permissions.rst:207
 msgid "``admin.webhook``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:205
+#: ../manage/roles/admin-permissions.rst:208
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
 msgstr ""
 
@@ -19175,10 +19285,6 @@ msgstr ""
 
 #: ../system/data-privacy.rst:4
 msgid "You can delete users and their tickets by creating a deletion task. This can be required for compliance with GDPR and other data privacy laws. This page describes the places where you can do it, how to do it and includes additional useful information."
-msgstr ""
-
-#: ../system/data-privacy.rst:10
-msgid "Important Information"
 msgstr ""
 
 #: ../system/data-privacy.rst:12
