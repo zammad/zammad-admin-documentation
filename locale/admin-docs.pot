@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-23 09:58+0200\n"
+"POT-Creation-Date: 2025-07-23 11:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,27 +21,27 @@ msgid "AI Agents"
 msgstr ""
 
 #: ../ai/ai-agents.rst:4
-msgid "To help your agents focussing on more important tasks, you can create AI agents which can take over routine tasks. These AI agents are managed in Zammad's admin settings under *AI > AI Agents*."
+msgid "To help your agents focussing on more important tasks, you can create AI agents which can take over routine tasks. These AI agents are managed in Zammad's admin settings under *AI > AI Agents*. Make sure to configure an :doc:`AI provider <provider>` before activating the feature. Otherwise, a warning message will tell you to do so."
 msgstr ""
 
-#: ../ai/ai-agents.rst:9
+#: ../ai/ai-agents.rst:11
 #: ../system/data-privacy.rst:10
 msgid "Important Information"
 msgstr ""
 
-#: ../ai/ai-agents.rst:11
+#: ../ai/ai-agents.rst:13
 msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
 msgstr ""
 
-#: ../ai/ai-agents.rst:12
+#: ../ai/ai-agents.rst:14
 msgid "The types of AI agents are limited to the available options."
 msgstr ""
 
-#: ../ai/ai-agents.rst:13
+#: ../ai/ai-agents.rst:15
 msgid "AI agents don't run on their own. They have to be executed by a :doc:`trigger </manage/trigger>` or a :doc:`scheduler job </manage/scheduler>` by the action **AI** > **AI Agent**."
 msgstr ""
 
-#: ../ai/ai-agents.rst:18
+#: ../ai/ai-agents.rst:20
 msgid "Manage AI Agents"
 msgstr ""
 
@@ -49,39 +49,39 @@ msgstr ""
 msgid "Screenshot shows AI agents management"
 msgstr ""
 
-#: ../ai/ai-agents.rst:25
+#: ../ai/ai-agents.rst:27
 msgid "Create an AI agent by clicking the **New AI Agent** button in the top right corner. This opens a wizard where you can choose the type of the agent and additional settings based on the selected type, see :ref:`ai-agent-types` for details. The action column with the ︙ button allows you to clone or delete an AI agent. You can only delete AI agents which are not used in triggers and schedulers. You can find this information in the two columns in the AI agent table."
 msgstr ""
 
-#: ../ai/ai-agents.rst:36
+#: ../ai/ai-agents.rst:38
 msgid "AI Agent Types"
 msgstr ""
 
-#: ../ai/ai-agents.rst:39
+#: ../ai/ai-agents.rst:41
 msgid "Ticket Group Dispatcher"
 msgstr ""
 
-#: ../ai/ai-agents.rst:41
+#: ../ai/ai-agents.rst:43
 msgid "This AI agent is capable of assigning tickets to different groups. It compares the content of the ticket in question with your group names in Zammad. If a suitable group can be found, it selects this group. You can use all of your groups or just specific ones by limiting it for the AI agent in the configuration wizard."
 msgstr ""
 
-#: ../ai/ai-agents.rst:47
+#: ../ai/ai-agents.rst:49
 msgid "A useful trigger configuration of such an AI agent could look like this:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:49
+#: ../ai/ai-agents.rst:51
 msgid "Activated by: **Action**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:50
+#: ../ai/ai-agents.rst:52
 msgid "Action execution: **Selective**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:51
+#: ../ai/ai-agents.rst:53
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 
-#: ../ai/ai-agents.rst:52
+#: ../ai/ai-agents.rst:54
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
 msgstr ""
 
@@ -240,7 +240,7 @@ msgid "Activating this feature generates summaries of tickets which are displaye
 msgstr ""
 
 #: ../ai/summary.rst:8
-msgid "Make sure to configure a provider before activating the feature. Otherwise, a warning message will tell you to do so."
+msgid "Make sure to configure an :doc:`AI provider <provider>` before activating the feature. Otherwise, a warning message will tell you to do so."
 msgstr ""
 
 #: ../ai/summary.rst:None
@@ -1282,7 +1282,7 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:39
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:37
-#: ../manage/scheduler.rst:155
+#: ../manage/scheduler.rst:158
 #: ../manage/webhook/add.rst:116
 #: ../misc/variables.rst:104
 #: ../system/core-workflows/learn-by-example.rst:37
@@ -3180,7 +3180,7 @@ msgstr ""
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0
 #: ../manage/roles/index.rst:128
-#: ../manage/scheduler.rst:158
+#: ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33
 #: ../manage/webhook/add.rst:123
 #: ../system/objects.rst:171
@@ -9289,7 +9289,7 @@ msgstr ""
 msgid "Please be aware that the preview and displayed number is just based on the currently selected condition. It doesn't necessarily represent the objects for execution at the defined time."
 msgstr ""
 
-#: ../manage/scheduler.rst:128
+#: ../manage/scheduler.rst:131
 msgid "Execute changes on objects"
 msgstr ""
 
@@ -9297,54 +9297,58 @@ msgstr ""
 msgid "Determine the changes to be made to the object. The possible changes depend on the selected object context. Be aware that a related object context may not be available (e.g. to perform ticket actions from a user context based scheduler)."
 msgstr ""
 
-#: ../manage/scheduler.rst:119
+#: ../manage/scheduler.rst:117
+msgid "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler jobs."
+msgstr ""
+
+#: ../manage/scheduler.rst:122
 msgid "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data privacy deletion task* are dangerous and should be used with care! If executed, the objects are deleted and no rollback is possible."
 msgstr ""
 
-#: ../manage/scheduler.rst:123
+#: ../manage/scheduler.rst:126
 msgid "**Delete immediately** will delete the ticket at the runtime of the job *without any hint* in the UI."
 msgstr ""
 
-#: ../manage/scheduler.rst:126
+#: ../manage/scheduler.rst:129
 msgid "**Add a data privacy deletion task** will create a data privacy deletion task for the object at the runtime of the job. That means it is visible in Zammad's :doc:`data privacy panel </system/data-privacy>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:132
+#: ../manage/scheduler.rst:135
 msgid "Disable notifications"
 msgstr ""
 
-#: ../manage/scheduler.rst:131
+#: ../manage/scheduler.rst:134
 msgid "By default, actions triggered by schedulers won't send notifications. You can override this here by setting this to *no*."
 msgstr ""
 
-#: ../manage/scheduler.rst:141
+#: ../manage/scheduler.rst:144
 #: ../settings/branding.rst:27
 msgid "Locale"
 msgstr ""
 
-#: ../manage/scheduler.rst:135
-#: ../manage/scheduler.rst:144
+#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:147
 msgid "This can be activated with the switch labeled \"Localization of execution changes\"."
 msgstr ""
 
-#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:141
 msgid "Set a desired language, in which the output of variables is translated into by using the ``t`` function. For more information, please have a look at the explanation in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:150
+#: ../manage/scheduler.rst:153
 #: ../settings/branding.rst:44
 msgid "Timezone"
 msgstr ""
 
-#: ../manage/scheduler.rst:147
+#: ../manage/scheduler.rst:150
 msgid "Similar as for the \"Locale\" setting, you can define a time zone, which is applied to the output of time stamp variables. For more information, please have a look at the explanation in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:153
+#: ../manage/scheduler.rst:156
 msgid "You can use the note field to describe the purpose of the scheduler. This is only visible to other admins when they are editing the scheduler. It is *not* a way to add notes to objects."
 msgstr ""
 
-#: ../manage/scheduler.rst:158
+#: ../manage/scheduler.rst:161
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 
@@ -10503,11 +10507,19 @@ msgstr ""
 msgid "This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:119
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid ":doc:`Run an AI agent </ai/ai-agents>`"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid "Trigger an AI agent to run using triggers."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:122
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:121
+#: ../manage/trigger/how-do-they-work.rst:124
 msgid "The system locale and timezone predefines a default format of date and timestamp replacement variables. These settings are customizable for triggers."
 msgstr ""
 
@@ -10515,15 +10527,15 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:128
+#: ../manage/trigger/how-do-they-work.rst:131
 msgid "Best practice is to create single separated localized triggers for each language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:131
+#: ../manage/trigger/how-do-they-work.rst:134
 msgid "The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:133
+#: ../manage/trigger/how-do-they-work.rst:136
 msgid "For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`."
 msgstr ""
 

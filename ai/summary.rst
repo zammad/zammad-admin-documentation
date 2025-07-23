@@ -5,8 +5,8 @@ Activating this feature generates summaries of tickets which are displayed in a
 new ticket sidebar tab. This can be a huge time saver when dealing with large
 tickets and/or many hand-overs between agents.
 
-Make sure to configure a provider before activating the feature. Otherwise, a
-warning message will tell you to do so.
+Make sure to configure an :doc:`AI provider <provider>` before activating the
+feature. Otherwise, a warning message will tell you to do so.
 
 .. figure:: /images/ai/summary-settings.png
    :alt: Screenshot shows AI ticket summary configuration

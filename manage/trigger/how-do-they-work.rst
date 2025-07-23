@@ -113,6 +113,9 @@ A trigger can do the following things once its conditions have been met:
    This allows you to help your agents with specific information if needed.
    (e.g. automated changes a trigger applied to the ticket)
 
+* :doc:`Run an AI agent </ai/ai-agents>`
+   Trigger an AI agent to run using triggers.
+
 .. _trigger-localization:
 
 Localization of Execution Changes

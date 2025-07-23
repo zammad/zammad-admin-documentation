@@ -3,7 +3,9 @@ AI Agents
 
 To help your agents focussing on more important tasks, you can create AI agents
 which can take over routine tasks. These AI agents are managed in Zammad's
-admin settings under *AI > AI Agents*.
+admin settings under *AI > AI Agents*. Make sure to configure an
+:doc:`AI provider <provider>` before activating the feature. Otherwise, a
+warning message will tell you to do so.
 
 Important Information
 ---------------------
