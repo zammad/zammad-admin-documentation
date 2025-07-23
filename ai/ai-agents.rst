@@ -28,6 +28,8 @@ Important Information
   :doc:`trigger </manage/trigger>` or a
   :doc:`scheduler job </manage/scheduler>` with the action
   **AI** > **AI Agent**.
+- If an AI agent applies changes to a ticket, you can find an entry in the
+  ticket history with the name of the AI agent.
 
 Manage AI Agents
 ----------------
@@ -55,8 +57,8 @@ Ticket Group Dispatcher
 
 This AI agent is capable of assigning tickets to different groups. It compares
 the content of the ticket in question with your group names in Zammad. If a
-suitable group can be found, it selects this group. You can use all of your
-groups or just specific ones by limiting it for the AI agent in the
+suitable group can be found, it selects this group in the ticket. You can use
+all of your groups or just specific ones by limiting it for the AI agent in the
 configuration wizard.
 
 A useful trigger configuration of such an AI agent could look like this:
