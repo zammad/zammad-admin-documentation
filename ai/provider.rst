@@ -11,15 +11,13 @@ Introduction
 Zammad offers AI powered features to support your agents! The
 configuration is pretty easy so the entry barrier is low.
 
-Read on how to configure it and which :doc:`features <features>` are currently
-supported.
+Read on how to configure it and check which features are currently supported.
 
 .. tip:: 🚀✨ **What's the easiest way to get AI features running?** 🚀✨
 
    Subscribe to a plan with Zammad AI, go to *AI > Provider* in the Zammad
    settings and choose :ref:`Zammad AI <zammad-ai-provider>`. Enter the token
-   you received and you can start using the :doc:`features <features>` by
-   simply enabling it.
+   you received and read on in the desired feature's section.
 
 .. figure:: /images/ai/ai-provider.png
    :alt: Screenshot shows configuration of AI provider in Zammad
@@ -51,9 +49,9 @@ Anthropic
 
 To use Anthropic's service as AI backend, choose it as AI provider and add
 your API token. After that, make sure to click the ``Save`` button and read on
-in the :doc:`features <features>` page. To use a specific model, add its name
-in the **Model** field. Leave it empty to use the default which is shown as
-placeholder in the field.
+in the desired feature's section. To use a specific model, add its name in the **Model**
+field. Leave it empty to use the default which is shown as  placeholder in the
+field.
 
 .. _azure-provider:
 
@@ -62,8 +60,8 @@ Azure AI
 
 To use the Azure AI service as AI backend, choose it as AI provider and add
 your URL as well as your API token. You get the URL after configuring the AI
-service in Azure. After that, make sure to click the ``Save`` button and read
-on in the :doc:`features <features>` page.
+service in Azure. After that, make sure to click the ``Save`` button and read on
+in the desired feature's section.
 
 .. _ollama-provider:
 
@@ -92,8 +90,8 @@ installed Ollama, you can pull and run a model by executing:
 
     ollama run llama3.2
 
-Make sure to click the ``Save`` button and read on in the
-`Features <#features>`_ section.
+Make sure to click the ``Save`` button and read on in the desired feature's
+section.
 
 .. _openai-provider:
 
@@ -105,8 +103,8 @@ you? To use their service as AI backend, choose them as AI provider and add
 your API token. To use a specific model, add its name in the **Model** field.
 Leave it empty to use the default which is shown as placeholder in the field.
 
-Make sure to click the ``Save`` button and read on in the
-:doc:`features <features>` page.
+Make sure to click the ``Save`` button and read on in the desired feature's
+section.
 
 .. _zammad-ai-provider:
 
@@ -127,4 +125,4 @@ The usage of Zammad AI as a provider has some benefits:
 
 To configure it, simply choose **Zammad AI** as your provider and add your
 token. After that, make sure to click the ``Save`` button and read on in
-the `Features <#features>`_ section.
+the desired feature's section.

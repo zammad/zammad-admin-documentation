@@ -68,7 +68,7 @@ Zammad Admin Documentation
    :caption: AI
 
    ai/provider
-   ai/features
+   ai/summary
 
 .. _system-docs:
 
