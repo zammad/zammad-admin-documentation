@@ -114,6 +114,9 @@ Execute changes on objects
    may not be available (e.g. to perform ticket actions from a user context
    based scheduler).
 
+   You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler
+   jobs.
+
    .. warning::
 
       🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data

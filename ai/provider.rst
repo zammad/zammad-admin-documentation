@@ -1,16 +1,11 @@
 Provider
 ========
 
-.. note::
-   - Zammad as AI provider is currently limited to SaaS customers.
-   - This page may change regularly, consider it in Beta state.
-
 Introduction
 ------------
 
 Zammad offers AI powered features to support your agents! The
 configuration is pretty easy so the entry barrier is low.
-
 Read on how to configure it and check which features are currently supported.
 
 .. tip:: 🚀✨ **What's the easiest way to get AI features running?** 🚀✨
@@ -126,3 +121,5 @@ The usage of Zammad AI as a provider has some benefits:
 To configure it, simply choose **Zammad AI** as your provider and add your
 token. After that, make sure to click the ``Save`` button and read on in
 the desired feature's section.
+
+.. note:: Zammad as AI provider is currently limited to SaaS customers.
