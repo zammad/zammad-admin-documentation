@@ -11,13 +11,6 @@ comes with the following settings you can adjust as needed.
 
 Please note that groups cannot be removed.
 
-.. figure:: /images/manage/groups/group-settings.png
-   :alt: Screenshot showing how a group configuration can look like.
-   :width: 60%
-   :align: center
-
-   A sample configuration of a group.
-
 Name
    This is the name your agents (and customers when using :doc:`/channels/web`)
    will see within the Zammad-UI.
@@ -99,6 +92,10 @@ Shared Drafts
 
    Learn more about shared drafts
    :user-docs:`in our user documentation </extras/shared-drafts.html>`.
+
+Summary Generation
+   Allows to override the setting about when to generate the
+   :doc:`AI ticket summary </ai/summary>` on group level.
 
 Note
    An internal note about the group that is only visible to people who can
