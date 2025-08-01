@@ -59,6 +59,10 @@ An example for a trigger configuration could look like this:
 - Conditions for affected objects: **Action** *is* ``created``
 - Execute changes on objects: **AI Agent** > Select your AI agent
 
+.. hint:: Depending on the agent type, you can limit the available options for
+  the AI agents. If you do so, make sure to select at least two options the
+  agent can choose from.
+
 Ticket Categorizer
 ^^^^^^^^^^^^^^^^^^
 
@@ -81,8 +85,6 @@ suitable group can be found, it selects this group for the ticket. You can use
 all of your groups or just specific ones by limiting it for the AI agent in the
 configuration wizard.
 
-.. hint:: If you limit the available groups for this agent, make sure to select
-  at least two groups.
 
 Ticket Prioritizer
 ^^^^^^^^^^^^^^^^^^
