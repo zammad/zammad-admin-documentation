@@ -23,7 +23,6 @@ Important Information
 ---------------------
 
 - To configure AI agents, the ``admin.ai_agent`` permission is required
-- The types of AI agents are limited to the available options.
 - AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>` or a
   :doc:`scheduler job </manage/scheduler>` with the action
