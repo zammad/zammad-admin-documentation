@@ -25,7 +25,7 @@ msgid "To help your agents focusing on more important tasks, you can create AI a
 msgstr ""
 
 #: ../ai/ai-agents.rst:10
-msgid "While an AI agent works on a ticket, an avatar is displayed in the live user section in the bottom bar of the ticket detail view, see example below. In such a short period of time, the agents should not apply changes to the ticket because they could get overwritten, depending on the AI agent type."
+msgid "While an AI agent works on a ticket, an avatar is displayed in the live user section in the bottom bar of the ticket detail view, see example below. In such a short period of time, the agents should not apply changes to the ticket because they could get overwritten."
 msgstr ""
 
 #: ../ai/ai-agents.rst:20
@@ -73,36 +73,64 @@ msgstr ""
 msgid "AI Agent Types"
 msgstr ""
 
-#: ../ai/ai-agents.rst:56
-msgid "Ticket Group Dispatcher"
+#: ../ai/ai-agents.rst:55
+msgid "Define your AI agents and use them afterwards in triggers or scheduler jobs. An example for a trigger configuration could look like this:"
 msgstr ""
 
 #: ../ai/ai-agents.rst:58
-msgid "This AI agent is capable of assigning tickets to different groups. It compares the content of the ticket in question with your group names in Zammad. If a suitable group can be found, it selects this group for the ticket. You can use all of your groups or just specific ones by limiting it for the AI agent in the configuration wizard."
-msgstr ""
-
-#: ../ai/ai-agents.rst:64
-msgid "If you limit the available groups for this agent, make sure to select at least two groups."
-msgstr ""
-
-#: ../ai/ai-agents.rst:67
-msgid "A useful trigger configuration for such AI agent could look like this:"
-msgstr ""
-
-#: ../ai/ai-agents.rst:69
 msgid "Activated by: **Action**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:70
+#: ../ai/ai-agents.rst:59
 msgid "Action execution: **Selective**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:71
+#: ../ai/ai-agents.rst:60
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 
-#: ../ai/ai-agents.rst:72
+#: ../ai/ai-agents.rst:61
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+msgstr ""
+
+#: ../ai/ai-agents.rst:64
+msgid "Ticket Categorizer"
+msgstr ""
+
+#: ../ai/ai-agents.rst:66
+msgid "This AI agent is capable of assigning categories to tickets. Because there is no built in category field in Zammad, you first have to create a :doc:`custom ticket attribute </system/objects>` in which you want to track the ticket's category. The field type must be one of the select types."
+msgstr ""
+
+#: ../ai/ai-agents.rst:71
+msgid "The ticket categorizer AI agent uses the title and the content of the article to compare it with your category names. You can limit from which categories the AI agent can choose from and define if multiple values are possible (if using a multi-select field type) in the wizard."
+msgstr ""
+
+#: ../ai/ai-agents.rst:77
+msgid "Ticket Group Dispatcher"
+msgstr ""
+
+#: ../ai/ai-agents.rst:79
+msgid "This AI agent is capable of assigning tickets to different groups. It compares the content of the ticket in question with your group names in Zammad. If a suitable group can be found, it selects this group for the ticket. You can use all of your groups or just specific ones by limiting it for the AI agent in the configuration wizard."
+msgstr ""
+
+#: ../ai/ai-agents.rst:85
+msgid "If you limit the available groups for this agent, make sure to select at least two groups."
+msgstr ""
+
+#: ../ai/ai-agents.rst:89
+msgid "Ticket Prioritizer"
+msgstr ""
+
+#: ../ai/ai-agents.rst:91
+msgid "This AI agent is capable of setting a ticket priority based on the title and the content of the article. You can choose to use all priorities or limit them to specific ones. In case you limit the categories, you can also provide a description for each priority the AI agent can choose from."
+msgstr ""
+
+#: ../ai/ai-agents.rst:97
+msgid "Ticket Title Rewriter"
+msgstr ""
+
+#: ../ai/ai-agents.rst:99
+msgid "This AI agent is capable of rephrasing the ticket title based on the content of the article. This can be useful if your customers often send requests with unclear subjects or if you have a specific channel which only creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
 #: ../ai/provider.rst:2
