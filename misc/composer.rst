@@ -64,9 +64,3 @@ Email - quote header
 
    Default: ``yes``
 
-Twitter - tweet initials
-   When set to yes, this will add ``/CM`` (first character of first- and
-   last name) to the bottom of every tweet answer you create.
-   This only affects tickets that come from the Twitter Channel.
-
-   Default: ``yes``

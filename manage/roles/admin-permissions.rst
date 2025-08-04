@@ -85,9 +85,6 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.channel_telegram``
      - :doc:`Channels > Telegram </channels/telegram>`
      - Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`
-   * - ``admin.channel_twitter``
-     - :doc:`Channels > Twitter </channels/twitter-x/twitter>`
-     - Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`
    * - ``admin.channel_web``
      - :doc:`Channels > Web </channels/web>`
      -
