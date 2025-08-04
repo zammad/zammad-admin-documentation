@@ -74,7 +74,9 @@ ticket's category. The field type must be one of the select types.
 The ticket categorizer AI agent uses the title and the content of the article
 to compare it with your category names. You can limit from which categories the
 AI agent can choose from and define if multiple values are possible (if
-using a multi-select field type) in the wizard.
+using a multi-select field type) in the wizard. In case you limit the
+categories, you can also provide a description for each category the AI agent
+can choose from.
 
 Ticket Group Dispatcher
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +93,7 @@ Ticket Prioritizer
 
 This AI agent is capable of setting a ticket priority based on the title and
 the content of the article. You can choose to use all priorities or limit them
-to specific ones. In case you limit the categories, you can also provide a
+to specific ones. In case you limit the priorities, you can also provide a
 description for each priority the AI agent can choose from.
 
 Ticket Title Rewriter
