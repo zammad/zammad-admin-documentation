@@ -71,7 +71,7 @@ no built in category field in Zammad, you first have to create a
 :doc:`custom ticket attribute </system/objects>` in which you want to track the
 ticket's category. The field type must be one of the select types.
 
-The ticket categorizer AI agent uses the title and the content of the article
+The ticket categorizer AI agent uses the content of all articles and the title
 to compare it with your category names. You can limit from which categories the
 AI agent can choose from and define if multiple values are possible (if
 using a multi-select field type) in the wizard. In case you limit the
@@ -91,15 +91,16 @@ configuration wizard.
 Ticket Prioritizer
 ^^^^^^^^^^^^^^^^^^
 
-This AI agent is capable of setting a ticket priority based on the title and
-the content of the article. You can choose to use all priorities or limit them
-to specific ones. In case you limit the priorities, you can also provide a
-description for each priority the AI agent can choose from.
+This AI agent is capable of setting a ticket priority based on the title of the
+ticket and the content of the last article. You can choose to use all priorities
+or limit them to specific ones. In case you limit the priorities, you can also
+provide a description for each priority the AI agent can choose from.
 
 Ticket Title Rewriter
 ^^^^^^^^^^^^^^^^^^^^^
 
 This AI agent is capable of rephrasing the ticket title based on the content of
-the article. This can be useful if your customers often send requests with
+the last article. The title is not considered by the agent and gets completely
+rewritten. This can be useful if your customers often send requests with
 unclear subjects or if you have a specific channel which only creates tickets
 with generic titles (e.g. from a web form).
