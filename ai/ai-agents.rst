@@ -10,7 +10,7 @@ warning message will tell you to do so.
 While an AI agent works on a ticket, an avatar is displayed in the
 live user section in the bottom bar of the ticket detail view, see example
 below. In such a short period of time, the agents should not apply changes to
-the ticket because they could get overwritten, depending on the AI agent type.
+the ticket because they could get overwritten.
 
 .. figure:: /images/ai/ai-live-user.png
   :alt: Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar
@@ -23,7 +23,6 @@ Important Information
 ---------------------
 
 - To configure AI agents, the ``admin.ai_agent`` permission is required
-- The types of AI agents are limited to the available options.
 - AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>` or a
   :doc:`scheduler job </manage/scheduler>` with the action
@@ -52,6 +51,33 @@ table.
 AI Agent Types
 --------------
 
+Define your AI agents and use them afterwards in triggers or scheduler jobs.
+An example for a trigger configuration could look like this:
+
+- Activated by: **Action**
+- Action execution: **Selective**
+- Conditions for affected objects: **Action** *is* ``created``
+- Execute changes on objects: **AI Agent** > Select your AI agent
+
+.. hint:: Depending on the agent type, you can limit the available options for
+  the AI agents. If you do so, make sure to select at least two options the
+  agent can choose from.
+
+Ticket Categorizer
+^^^^^^^^^^^^^^^^^^
+
+This AI agent is capable of assigning categories to tickets. Because there is
+no built in category field in Zammad, you first have to create a
+:doc:`custom ticket attribute </system/objects>` in which you want to track the
+ticket's category. The field type must be one of the select types.
+
+The ticket categorizer AI agent uses the content of all articles and the title
+to compare it with your category names. You can limit from which categories the
+AI agent can choose from and define if multiple values are possible (if
+using a multi-select field type) in the wizard. In case you limit the
+categories, you can also provide a description for each category the AI agent
+can choose from.
+
 Ticket Group Dispatcher
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -61,12 +87,20 @@ suitable group can be found, it selects this group for the ticket. You can use
 all of your groups or just specific ones by limiting it for the AI agent in the
 configuration wizard.
 
-.. hint:: If you limit the available groups for this agent, make sure to select
-  at least two groups.
 
-A useful trigger configuration for such AI agent could look like this:
+Ticket Prioritizer
+^^^^^^^^^^^^^^^^^^
 
-- Activated by: **Action**
-- Action execution: **Selective**
-- Conditions for affected objects: **Action** *is* ``created``
-- Execute changes on objects: **AI Agent** > Select your AI agent
+This AI agent is capable of setting a ticket priority based on the title of the
+ticket and the content of the last article. You can choose to use all priorities
+or limit them to specific ones. In case you limit the priorities, you can also
+provide a description for each priority the AI agent can choose from.
+
+Ticket Title Rewriter
+^^^^^^^^^^^^^^^^^^^^^
+
+This AI agent is capable of rephrasing the ticket title based on the content of
+the last article. The title is not considered by the agent and gets completely
+rewritten. This can be useful if your customers often send requests with
+unclear subjects or if you have a specific channel which only creates tickets
+with generic titles (e.g. from a web form).
