@@ -76,6 +76,5 @@ This section will hold any other integration that can't be grouped up (yet).
    :maxdepth: 1
    :titlesonly:
 
-   slack
    i-doit
    elasticsearch
