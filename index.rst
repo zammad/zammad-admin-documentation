@@ -46,7 +46,6 @@ Zammad Admin Documentation
    channels/microsoft365-graph/index
    channels/microsoft365/index
    channels/sms
-   channels/twitter-x/twitter
    channels/facebook
    channels/telegram
    channels/whatsapp/index

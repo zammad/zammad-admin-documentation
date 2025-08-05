@@ -75,7 +75,5 @@ Clearbit API as users contact you.
 Below the setting and mapping section, you can find the integration logs. You
 can see what requests Zammad sent to Clearbit and also the APIs response.
 
-.. image:: /images/system/integrations/clearbit/zammad-log.jpg
-
 By the way, you can also view the API log on the Clearbit website - the
 information seen is basically the same.
