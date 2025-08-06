@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-25 11:09+0200\n"
+"POT-Creation-Date: 2025-08-05 11:55+0200\n"
 "PO-Revision-Date: 2025-08-02 16:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -38,7 +38,7 @@ msgid ""
 "While an AI agent works on a ticket, an avatar is displayed in the live user "
 "section in the bottom bar of the ticket detail view, see example below. In "
 "such a short period of time, the agents should not apply changes to the "
-"ticket because they could get overwritten, depending on the AI agent type."
+"ticket because they could get overwritten."
 msgstr ""
 
 #: ../ai/ai-agents.rst:20
@@ -66,12 +66,6 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:26
 #, fuzzy
-#| msgid "The color options are currently limited to the mentioned options."
-msgid "The types of AI agents are limited to the available options."
-msgstr "Доступне боје су тренутно ограничене на поменуте опције."
-
-#: ../ai/ai-agents.rst:27
-#, fuzzy
 #| msgid ""
 #| "If encryption doesn't work in the composer, it won't work "
 #| "in :doc:`triggers </manage/trigger>` or the :doc:`scheduler </manage/"
@@ -84,13 +78,13 @@ msgstr ""
 "Ако шифровање не функционише приликом слања, неће радити ни "
 "у :doc:`окидачима </manage/trigger>` и :doc:`планерима </manage/scheduler>`!"
 
-#: ../ai/ai-agents.rst:31
+#: ../ai/ai-agents.rst:30
 msgid ""
 "If an AI agent applies changes to a ticket, you can find an entry in the "
 "ticket history with the name of the AI agent."
 msgstr ""
 
-#: ../ai/ai-agents.rst:35
+#: ../ai/ai-agents.rst:34
 #, fuzzy
 #| msgid "Managing Accounts"
 msgid "Manage AI Agents"
@@ -102,7 +96,7 @@ msgstr "Управљање налозима"
 msgid "Screenshot shows AI agents management"
 msgstr "Снимак екрана који приказује уређивање планера у Zammad-у"
 
-#: ../ai/ai-agents.rst:42
+#: ../ai/ai-agents.rst:41
 msgid ""
 "Create an AI agent by clicking the **New AI Agent** button in the top right "
 "corner. This opens a wizard where you can choose the type of the agent and "
@@ -113,19 +107,74 @@ msgid ""
 "the AI agent table."
 msgstr ""
 
-#: ../ai/ai-agents.rst:53
+#: ../ai/ai-agents.rst:52
 #, fuzzy
 #| msgid "Object Types"
 msgid "AI Agent Types"
 msgstr "Врсте објеката"
 
-#: ../ai/ai-agents.rst:56
+#: ../ai/ai-agents.rst:54
+msgid ""
+"Define your AI agents and use them afterwards in triggers or scheduler jobs. "
+"An example for a trigger configuration could look like this:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:57
+msgid "Activated by: **Action**"
+msgstr ""
+
+#: ../ai/ai-agents.rst:58
+msgid "Action execution: **Selective**"
+msgstr ""
+
+#: ../ai/ai-agents.rst:59
+#, fuzzy
+#| msgid "Conditions for affected objects"
+msgid "Conditions for affected objects: **Action** *is* ``created``"
+msgstr "Услови за захваћене објекте"
+
+#: ../ai/ai-agents.rst:60
+msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+msgstr ""
+
+#: ../ai/ai-agents.rst:62
+msgid ""
+"Depending on the agent type, you can limit the available options for the AI "
+"agents. If you do so, make sure to select at least two options the agent can "
+"choose from."
+msgstr ""
+
+#: ../ai/ai-agents.rst:67
+#, fuzzy
+#| msgid "Ticket attributes"
+msgid "Ticket Categorizer"
+msgstr "Атрибути тикета"
+
+#: ../ai/ai-agents.rst:69
+msgid ""
+"This AI agent is capable of assigning categories to tickets. Because there "
+"is no built in category field in Zammad, you first have to create "
+"a :doc:`custom ticket attribute </system/objects>` in which you want to "
+"track the ticket's category. The field type must be one of the select types."
+msgstr ""
+
+#: ../ai/ai-agents.rst:74
+msgid ""
+"The ticket categorizer AI agent uses the content of all articles and the "
+"title to compare it with your category names. You can limit from which "
+"categories the AI agent can choose from and define if multiple values are "
+"possible (if using a multi-select field type) in the wizard. In case you "
+"limit the categories, you can also provide a description for each category "
+"the AI agent can choose from."
+msgstr ""
+
+#: ../ai/ai-agents.rst:82
 #, fuzzy
 #| msgid "Ticket > Group > Name"
 msgid "Ticket Group Dispatcher"
 msgstr "Тикет > Група > Назив"
 
-#: ../ai/ai-agents.rst:58
+#: ../ai/ai-agents.rst:84
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
 "compares the content of the ticket in question with your group names in "
@@ -134,34 +183,34 @@ msgid ""
 "for the AI agent in the configuration wizard."
 msgstr ""
 
-#: ../ai/ai-agents.rst:64
+#: ../ai/ai-agents.rst:92
+#, fuzzy
+#| msgid "Ticket Priorities"
+msgid "Ticket Prioritizer"
+msgstr "Приоритети тикета"
+
+#: ../ai/ai-agents.rst:94
 msgid ""
-"If you limit the available groups for this agent, make sure to select at "
-"least two groups."
+"This AI agent is capable of setting a ticket priority based on the title of "
+"the ticket and the content of the last article. You can choose to use all "
+"priorities or limit them to specific ones. In case you limit the priorities, "
+"you can also provide a description for each priority the AI agent can choose "
+"from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:67
+#: ../ai/ai-agents.rst:100
 #, fuzzy
-#| msgid "A very simple storage configuration could look like this:"
-msgid "A useful trigger configuration for such AI agent could look like this:"
-msgstr "Врло једноставна конфигурација складишта би могла личити на следеће:"
+#| msgid "Ticket > Title"
+msgid "Ticket Title Rewriter"
+msgstr "Тикет > Наслов"
 
-#: ../ai/ai-agents.rst:69
-msgid "Activated by: **Action**"
-msgstr ""
-
-#: ../ai/ai-agents.rst:70
-msgid "Action execution: **Selective**"
-msgstr ""
-
-#: ../ai/ai-agents.rst:71
-#, fuzzy
-#| msgid "Conditions for affected objects"
-msgid "Conditions for affected objects: **Action** *is* ``created``"
-msgstr "Услови за захваћене објекте"
-
-#: ../ai/ai-agents.rst:72
-msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+#: ../ai/ai-agents.rst:102
+msgid ""
+"This AI agent is capable of rephrasing the ticket title based on the content "
+"of the last article. The title is not considered by the agent and gets "
+"completely rewritten. This can be useful if your customers often send "
+"requests with unclear subjects or if you have a specific channel which only "
+"creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
 #: ../ai/provider.rst:2
@@ -538,7 +587,7 @@ msgstr ""
 "Уколико користите сопствени Ollama сервер као провајдера, проверите да ли "
 "сте одабрали модел `llama3.2`` пре коришћења ове функције."
 
-#: ../channels/chat.rst:2 ../misc/first-steps.rst:88
+#: ../channels/chat.rst:2 ../misc/first-steps.rst:84
 msgid "Chat"
 msgstr "Ћаскање"
 
@@ -2785,7 +2834,7 @@ msgstr "Додатне опције за кориснике који сами х
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr "Ако сте превише кул за POP3/IMAP/SMTP..."
 
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:57
+#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:56
 #: ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
@@ -3314,7 +3363,7 @@ msgid ""
 msgstr ""
 "Ево примера потписа са променљивама и резултат када пишете имејл поруку:"
 
-#: ../channels/facebook.rst:2 ../misc/first-steps.rst:84
+#: ../channels/facebook.rst:2 ../misc/first-steps.rst:80
 #: ../settings/security/third-party/facebook.rst:2
 msgid "Facebook"
 msgstr "Facebook"
@@ -6966,458 +7015,6 @@ msgstr "Одговор у тикету"
 msgid "The message will appear in your Telegram client."
 msgstr "Порука ће се појавити у вашем Telegram клијенту."
 
-#: ../channels/twitter-x/twitter.rst:2
-msgid "Twitter/X"
-msgstr "Twitter/X"
-
-#: ../channels/twitter-x/twitter.rst:6
-msgid "*Updated: 08/2023*"
-msgstr "*Ажурирано: 08/2023*"
-
-#: ../channels/twitter-x/twitter.rst:8
-msgid ""
-"Please note: Currently, we keep naming it \"Twitter\" or \"Twitter/X\" in "
-"the documentation, as it is the quite common name and for better "
-"readability. Of course we mean just \"X\"."
-msgstr ""
-"Напомена: Тренутно у документацији користимо назив „Twitter“ или „Twitter/"
-"X“, јер је то прилично уобичајен назив и ради боље прегледности. Наравно, "
-"мислимо само на „X”."
-
-#: ../channels/twitter-x/twitter.rst:12
-msgid ""
-"⚠️ Due to the current situation, there are some issues regarding the Twitter/"
-"X integration. Please see :doc:`twitter-x-note` for further details before "
-"reading on!"
-msgstr ""
-"⚠️ Због тренутне ситуације, постоје неки проблеми у вези са интеграцијом "
-"Twitter/X. Молимо погледајте :doc:`twitter-x-note` за више детаља пре него "
-"што наставите!"
-
-#: ../channels/twitter-x/twitter.rst:16
-msgid ""
-"Zammad supports Twitter integration, meaning you can send and receive tweets "
-"and DMs just like emails!"
-msgstr ""
-"Zammad подржава интеграцију са Twitter-ом, што значи да можете слати и "
-"примати твитове и директне поруке баш као имејл!"
-
-#: ../channels/twitter-x/twitter.rst:23
-msgid "Twitter Ticket with draft reply"
-msgstr "Twitter тикет са нацртом одговора"
-
-#: ../channels/twitter-x/twitter.rst:23
-msgid ""
-"Twitter tickets will show a 🐦 Twitter bird in the reply area. Just click on "
-"the reply button (as you would for an email) to tweet back."
-msgstr ""
-"Twitter тикети ће приказати 🐦 Twitter птичицу у оквиру за одговоре. Само "
-"кликните на дугме за одговор (као за имејл поруке) да бисте твитовали."
-
-#: ../channels/twitter-x/twitter.rst:27
-msgid "To set it up, follow the steps below:"
-msgstr "Да бисте га подесили, следите доле наведене кораке:"
-
-#: ../channels/twitter-x/twitter.rst:29
-msgid ""
-"Apply for a `Twitter Developer account <https://developer.twitter.com/en/"
-"apply/user>`_."
-msgstr ""
-"Пријавите се за `Twitter Developer налог <https://developer.twitter.com/en/"
-"apply/user>`_."
-
-#: ../channels/twitter-x/twitter.rst:30
-msgid ""
-"`Create a new Twitter app <https://developer.twitter.com/en/apps/create>`_ "
-"for Zammad."
-msgstr ""
-"`Креирајте нову Twitter апликацију <https://developer.twitter.com/en/apps/"
-"create>`_ за Zammad."
-
-#: ../channels/twitter-x/twitter.rst:32
-msgid ""
-"Set your new app's permissions to *Read, write, and access direct messages.*"
-msgstr ""
-"Подесите дозволе нове апликације на *Read, write, and access direct "
-"messages.*"
-
-#: ../channels/twitter-x/twitter.rst:34
-msgid "Generate a new access token & secret."
-msgstr "Генеришите нови приступни кључ и шифру."
-
-#: ../channels/twitter-x/twitter.rst:35
-msgid ""
-"`Set up a dev environment <https://developer.twitter.com/en/account/"
-"environments>`_ for the Account Activity API."
-msgstr ""
-"`Подесите развојно окружење <https://developer.twitter.com/en/account/"
-"environments>`_ за Account Activity API."
-
-#: ../channels/twitter-x/twitter.rst:37
-msgid "Add your new Twitter app in Zammad."
-msgstr "Додајте своју нову Twitter апликацију у Zammad."
-
-#: ../channels/twitter-x/twitter.rst:38
-msgid "Add your Twitter account in Zammad."
-msgstr "Додајте свој Twitter налог у Zammad."
-
-#: ../channels/twitter-x/twitter.rst:39
-msgid ""
-"Configure filters for creating new tickets based on **#tags** and "
-"**@mentions**."
-msgstr ""
-"Подесите филтере за прављење нових тикета на основу **#ознаке** и "
-"**@помињања**."
-
-#: ../channels/twitter-x/twitter.rst:42
-msgid "Read on for details about each step."
-msgstr "Читајте даље за детаље о сваком кораку."
-
-#: ../channels/twitter-x/twitter.rst:45
-msgid "1. Apply for a Twitter Developer Account"
-msgstr "1. Пријавите се за Twitter Developer налог"
-
-#: ../channels/twitter-x/twitter.rst:51
-msgid "Twitter Developer account: Welcome page"
-msgstr "Twitter Developer налог: Welcome страница"
-
-#: ../channels/twitter-x/twitter.rst:51
-msgid ""
-"This welcome page is displayed after completing the application for a "
-"Developer account."
-msgstr ""
-"Ова страница добродошлице се приказује након завршетка пријаве за Developer "
-"налог."
-
-#: ../channels/twitter-x/twitter.rst:54
-msgid ""
-"You will need a regular Twitter account with a verified phone number to "
-"apply for a `Twitter Developer account`_ (at https://developer.twitter.com)."
-msgstr ""
-"Биће вам потребан обичан Twitter налог са верификованим бројем телефона да "
-"бисте се пријавили за `Twitter Developer налог`_ (на https://"
-"developer.twitter.com)."
-
-#: ../channels/twitter-x/twitter.rst:57
-msgid ""
-"During the application process, you will be asked to **Describe in your own "
-"words what you are building**. You may use the answer below::"
-msgstr ""
-"Током процеса пријаве, од вас ће се затражити да **својим речима опишете шта "
-"градите**. Можете користити одговор испод:"
-
-#: ../channels/twitter-x/twitter.rst:69
-msgid "2. Create a New Twitter App for Zammad"
-msgstr "2. Направите нову Twitter апликацију за Zammad"
-
-#: ../channels/twitter-x/twitter.rst:75
-msgid "Twitter Developer account: Create app page"
-msgstr "Twitter Developer налог: Create app страница"
-
-#: ../channels/twitter-x/twitter.rst:75
-msgid ""
-"To create a new app, select **Apps** under your user menu, then click "
-"**Create an app**."
-msgstr ""
-"Да бисте направили нову апликацију, изаберите **Apps** у корисничком менију, "
-"а затим кликните на **Create an app**."
-
-#: ../channels/twitter-x/twitter.rst:78
-msgid ""
-"Once you have finished setting up your Developer account, use it to `create "
-"a new Twitter app`_. The following fields are **required:**"
-msgstr ""
-"Када завршите са подешавањем Developer налога, користите га да `направите "
-"нову Twitter апликацију`_. Следећа поља су **обавезна:**"
-
-#: ../channels/twitter-x/twitter.rst:84
-msgid "App name"
-msgstr "App name"
-
-#: ../channels/twitter-x/twitter.rst:83
-msgid ""
-"Must be unique *across all of Twitter.* No other developer account may "
-"create an app with the same name."
-msgstr ""
-"Мора да буде јединствен *на целом Twitter-у.* Ниједан други Developer налог "
-"не сме да креира апликацију са истим именом."
-
-#: ../channels/twitter-x/twitter.rst:87
-msgid "Application description"
-msgstr "Application description"
-
-#: ../channels/twitter-x/twitter.rst:87
-msgid "Anything is fine here."
-msgstr "Овде је прихватљиво било шта."
-
-#: ../channels/twitter-x/twitter.rst:90
-msgid "Website URL"
-msgstr "Website URL"
-
-#: ../channels/twitter-x/twitter.rst:90
-msgid "The URL of your Zammad instance."
-msgstr "URL адреса ваше Zammad инстанце."
-
-#: ../channels/twitter-x/twitter.rst:96
-msgid "Callback URLs"
-msgstr "Callback URLs"
-
-#: ../channels/twitter-x/twitter.rst:93
-msgid ""
-"``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``"
-msgstr ""
-"``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``"
-
-#: ../channels/twitter-x/twitter.rst:95
-msgid ""
-"This URL is also visible in the **Connect Twitter App** dialog of your "
-"Zammad admin settings panel."
-msgstr ""
-"Ова URL адреса је такође видљива у дијалогу **Повежи Twitter апликацију** у "
-"вашем администраторском панелу Zammad-а."
-
-#: ../channels/twitter-x/twitter.rst:102
-msgid "Tell us how this app will be used"
-msgstr "Tell us how this app will be used"
-
-#: ../channels/twitter-x/twitter.rst:99
-msgid "Anything is fine here. We suggest the following::"
-msgstr "Овде је прихватљиво било шта. Предлажемо следеће:"
-
-#: ../channels/twitter-x/twitter.rst:105
-msgid "3. Set Your New App's Permissions"
-msgstr "3. Подесите дозволе за нову апликацију"
-
-#: ../channels/twitter-x/twitter.rst:0
-msgid "Twitter Developer account: App permissions page"
-msgstr "Twitter Developer налог: страница са дозволама за апликацију"
-
-#: ../channels/twitter-x/twitter.rst:111
-msgid "Select *Read, write, and access direct messages.*"
-msgstr "Изаберите *Read, write, and access direct messages.*"
-
-#: ../channels/twitter-x/twitter.rst:114
-msgid "4. Generate a New Access Token & Secret"
-msgstr "4. Генеришите нови приступни кључ и шифру"
-
-#: ../channels/twitter-x/twitter.rst:0
-msgid "Twitter Developer account: App keys and tokens page"
-msgstr "Twitter Developer налог: App keys and tokens страница"
-
-#: ../channels/twitter-x/twitter.rst:120
-msgid "You will need all four keys/tokens later, so don't close this tab."
-msgstr ""
-"Касније ће вам требати сва четири кључа/шифре, тако да не затварајте ову "
-"страну."
-
-#: ../channels/twitter-x/twitter.rst:123
-msgid "5. Set Up a Dev Environment"
-msgstr "5. Подесите окружење за развој"
-
-#: ../channels/twitter-x/twitter.rst:125
-msgid ""
-"After creating your app, `set up a dev environment`_ for the Account "
-"Activity API."
-msgstr ""
-"Након што направите апликацију, `подесите развојно окружење`_ за Account "
-"Activity API."
-
-#: ../channels/twitter-x/twitter.rst:132
-msgid "Twitter Developer account: Dev environments page"
-msgstr "Twitter Developer налог: Dev environments страница"
-
-#: ../channels/twitter-x/twitter.rst:132
-msgid ""
-"Name it whatever you like (*e.g.,* ``zammad``). You will need the label "
-"later, so don't forget it."
-msgstr ""
-"Именујте га како год желите (*нпр.* ``zammad``). Ознака ће вам требати "
-"касније, тако да је не заборавите."
-
-#: ../channels/twitter-x/twitter.rst:136
-msgid "6. Add Your New Twitter App in Zammad"
-msgstr "6. Додајте своју нову Twitter апликацију у Zammad"
-
-#: ../channels/twitter-x/twitter.rst:142
-msgid "Zammad: Configure Twitter app"
-msgstr "Zammad: подешавање Twitter апликације"
-
-#: ../channels/twitter-x/twitter.rst:142
-msgid ""
-"Add your new Twitter app under **Channels > Twitter** in the admin settings "
-"panel. You will need the keys, tokens, and dev environment label from Steps "
-"4 and 5."
-msgstr ""
-"Додајте своју нову Twitter апликацију под **Канали > Twitter** у "
-"администраторском панелу. Биће вам потребни кључеви, шифре и назив развојног "
-"окружења из корака 4 и 5."
-
-#: ../channels/twitter-x/twitter.rst:147
-msgid "7. Add Your Twitter Account in Zammad"
-msgstr "7. Додајте свој Twitter налог у Zammad"
-
-#: ../channels/twitter-x/twitter.rst:153
-msgid "Zammad: Add Twitter account"
-msgstr "Zammad: додавање Twitter налога"
-
-#: ../channels/twitter-x/twitter.rst:153
-msgid ""
-"Click **Add Account** under **Channels > Twitter** in the admin settings "
-"panel."
-msgstr ""
-"Кликните на **Додај налог** у оквиру **Канали > Twitter** у "
-"администраторском панелу."
-
-#: ../channels/twitter-x/twitter.rst:160
-msgid "Twitter: Authorize Zammad"
-msgstr "Twitter: ауторизација Zammad-а"
-
-#: ../channels/twitter-x/twitter.rst:160
-msgid ""
-"You will be redirected to Twitter and asked to authorize Zammad to access "
-"your account."
-msgstr ""
-"Бићете преусмерени на Twitter и од вас ће се тражити да овластите Zammad-а "
-"да приступи вашем налогу."
-
-#: ../channels/twitter-x/twitter.rst:164
-msgid "8. Configure Filters"
-msgstr "8. Подешавање филтера"
-
-#: ../channels/twitter-x/twitter.rst:170
-msgid "Zammad: Configure Twitter accounts"
-msgstr "Zammad: подешавање Twitter налога"
-
-#: ../channels/twitter-x/twitter.rst:170
-msgid ""
-"Set up filters to automatically create new tickets based on **#tags** or "
-"**@mentions**."
-msgstr ""
-"Подесите филтере да аутоматски отварате нове тикете на основу **#ознаке** "
-"или **@помињања**."
-
-#: ../channels/twitter-x/twitter.rst:173
-msgid ""
-"That's it! Now, incoming tweets and DMs will be automatically turned into "
-"Zammad tickets."
-msgstr ""
-"То је то! Сада ће се долазни твитови и директне поруке аутоматски претворити "
-"у Zammad тикете."
-
-#: ../channels/twitter-x/twitter-x-note.rst:4
-msgid "Twitter/X note"
-msgstr "Twitter/X белешка"
-
-#: ../channels/twitter-x/twitter-x-note.rst:5
-msgid "Updated: 08/2023"
-msgstr "Ажурирано: 08/2023"
-
-#: ../channels/twitter-x/twitter-x-note.rst:8
-msgid "Baseline situation"
-msgstr "Полазна ситуација"
-
-#: ../channels/twitter-x/twitter-x-note.rst:10
-msgid ""
-"The Twitter integration implemented in Zammad provides the following "
-"functionalities:"
-msgstr ""
-"Twitter интеграција имплементирана у Zammad-у пружа следеће функционалности:"
-
-#: ../channels/twitter-x/twitter-x-note.rst:13
-msgid ""
-"Search for definable terms and automatic ticket creation based on the results"
-msgstr ""
-"Потрага по кључним речима и аутоматско отварање тикета на основу резултата"
-
-#: ../channels/twitter-x/twitter-x-note.rst:15
-msgid ""
-"Live notifications for your own Twitter account (e.g. if you are mentioned "
-"in a tweet or receive direct messages), that will be transformed into tickets"
-msgstr ""
-"Обавештења о вашем Twitter налогу (нпр. ако сте напоменути у твиту или "
-"примате директне поруке), која ће се претворити у тикете"
-
-#: ../channels/twitter-x/twitter-x-note.rst:19
-msgid "Current situation"
-msgstr "Тренутна ситуација"
-
-#: ../channels/twitter-x/twitter-x-note.rst:21
-msgid ""
-"The adjustments made to the API at Twitter/X (introduction of v2) as well as "
-"the restructuring of the access levels/pricing models (Free, Basic, Pro - "
-"https://developer.twitter.com/en/products/twitter-api) mean that the above-"
-"mentioned functionalities are no longer available in connection with old "
-"\"app registrations\" at the present time. These changes are heavily "
-"discussed in the Twitter community and cause discomfort."
-msgstr ""
-"Развој API-ја на Twitter/X (увођење v2) као и реструктурирање нивоа приступа/"
-"модела цена (Free, Basic, Pro - https://developer.twitter.com/en/products/"
-"twitter-api) значи да горе поменуте функционалности више нису доступне за "
-"старе „регистроване апликације“ у овом тренутку. О овим променама се увелико "
-"расправља у Twitter заједници и изазивају нелагоду."
-
-#: ../channels/twitter-x/twitter-x-note.rst:28
-msgid ""
-"In addition, we don't know if there will be another change on the part of "
-"Twitter/X in the future that will further limit or even restore "
-"functionality."
-msgstr ""
-"Поред тога, не знамо да ли ће у будућности бити још неке промене на Twitter/"
-"X-у која ће додатно ограничити или чак вратити функционалност."
-
-#: ../channels/twitter-x/twitter-x-note.rst:32
-msgid "Prerequisite for the continued operation of Twitter in Zammad"
-msgstr "Предуслов за наставак рада Twitter-а у Zammad-у"
-
-#: ../channels/twitter-x/twitter-x-note.rst:34
-msgid ""
-"Access to the \"old\" Twitter API v1.1 or the Account Activity API, which is "
-"required for our functionalities, is now only available at the "
-"\"Enterprise\" access level. According to Twitter, the monthly costs for "
-"this start at 42,000 USD."
-msgstr ""
-"Приступ „старом“ Twitter API v1.1 или Account Activity API, који је "
-"неопходан за наше функционалности, сада је доступан само на „Enterprise“ "
-"нивоу приступа. Према Twitter-у, месечни трошкови за ово почињу од 42.000 "
-"USD."
-
-#: ../channels/twitter-x/twitter-x-note.rst:40
-msgid "Future"
-msgstr "Будућност"
-
-#: ../channels/twitter-x/twitter-x-note.rst:42
-msgid ""
-"We sincerely regret the current situation, but unfortunately our hands are "
-"tied. If there are no more changes to the Twitter API or access levels, we "
-"will consider removing the Twitter integration with Zammad 7.0. At the "
-"moment, we are also in the process of monitoring the market very closely to "
-"see if there are any alternatives to Twitter/X that we can integrate into "
-"Zammad, and if so, which ones."
-msgstr ""
-"Искрено жалимо због тренутне ситуације, али су нам нажалост руке везане. Ако "
-"више не буде промена у Twitter API или нивоима приступа, размотрићемо "
-"уклањање Twitter интеграције од Zammad 7.0. Тренутно смо такође у процесу "
-"веома пажљивог праћења тржишта да видимо да ли постоје алтернативе за "
-"Twitter/X које можемо да интегришемо у Zammad, и ако јесте, које тачно."
-
-#: ../channels/twitter-x/twitter-x-note.rst:49
-msgid "As soon as we have news about this, we will inform you."
-msgstr "Чим будемо имали новости о овој теми, обавестићемо вас."
-
-#: ../channels/twitter-x/twitter-x-note.rst:51
-msgid ""
-"We understand that this news is unsatisfactory for you and would have "
-"preferred more positive news. However, we would like to play with open cards "
-"at this point and provide clarity."
-msgstr ""
-"Разумемо да су ове вести незадовољавајуће за вас и да бисмо више волели "
-"позитивније вести. Међутим, желели бисмо да отворимо све карте у овом "
-"тренутку и пружимо јасноћу."
-
-#: ../channels/twitter-x/twitter-x-note.rst:55
-msgid "⬅️ :doc:`Back to Twitter/X Channel <./twitter>`."
-msgstr "⬅️ :doc:`Назад на Twitter/X канал <./twitter>`."
-
 #: ../channels/web.rst:2
 msgid "Web"
 msgstr "Веб"
@@ -7463,7 +7060,7 @@ msgstr ""
 "постојећих тикета путем корисничког интерфејса."
 
 #: ../channels/web.rst:21 ../manage/public-links.rst:85 ../misc/composer.rst:65
-#: ../misc/composer.rst:72 ../system/objects/types.rst:0
+#: ../system/objects/types.rst:0
 msgid "Default: ``yes``"
 msgstr "Подразумевано: ``да``"
 
@@ -8344,20 +7941,20 @@ msgstr "Управљање"
 msgid "Channels"
 msgstr "Канали"
 
-#: ../index.rst:66
+#: ../index.rst:65
 msgid "AI"
 msgstr "AI"
 
-#: ../index.rst:76
+#: ../index.rst:75
 msgid "API (System-Documentation)"
 msgstr "API (системска документација)"
 
-#: ../index.rst:76 ../misc/object-conditions/basics.rst:169
+#: ../index.rst:75 ../misc/object-conditions/basics.rst:169
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr "Систем"
 
-#: ../index.rst:96
+#: ../index.rst:95
 msgid "Misc"
 msgstr "Остало"
 
@@ -11479,86 +11076,72 @@ msgstr ""
 "Приступ Telegram тикетима за оператере: :doc:`/manage/groups/access-levels`"
 
 #: ../manage/roles/admin-permissions.rst:88
-msgid "``admin.channel_twitter``"
-msgstr "``admin.channel_twitter``"
-
-#: ../manage/roles/admin-permissions.rst:89
-msgid ":doc:`Channels > Twitter </channels/twitter-x/twitter>`"
-msgstr ":doc:`Канали > Twitter </channels/twitter-x/twitter>`"
-
-#: ../manage/roles/admin-permissions.rst:90
-msgid ""
-"Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-"Приступ Twitter/X тикетима за оператере: :doc:`/manage/groups/access-levels`"
-
-#: ../manage/roles/admin-permissions.rst:91
 msgid "``admin.channel_web``"
 msgstr "``admin.channel_web``"
 
-#: ../manage/roles/admin-permissions.rst:92
+#: ../manage/roles/admin-permissions.rst:89
 msgid ":doc:`Channels > Web </channels/web>`"
 msgstr ":doc:`Канали > Веб </channels/web>`"
 
-#: ../manage/roles/admin-permissions.rst:94
+#: ../manage/roles/admin-permissions.rst:91
 msgid "``admin.channel_whatsapp``"
 msgstr "``admin.channel_whatsapp``"
 
-#: ../manage/roles/admin-permissions.rst:95
+#: ../manage/roles/admin-permissions.rst:92
 msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
 msgstr ":doc:`Канали > Whatsapp </channels/whatsapp/index>`"
 
-#: ../manage/roles/admin-permissions.rst:97
+#: ../manage/roles/admin-permissions.rst:94
 msgid "``admin.checklist``"
 msgstr "``admin.checklist``"
 
-#: ../manage/roles/admin-permissions.rst:98
+#: ../manage/roles/admin-permissions.rst:95
 msgid ":doc:`Manage > Checklist </manage/checklist>`"
 msgstr ":doc:`Управљање > Списак задатака </manage/checklist>`"
 
-#: ../manage/roles/admin-permissions.rst:100
+#: ../manage/roles/admin-permissions.rst:97
 msgid "``admin.core_workflows``"
 msgstr "``admin.core_workflows``"
 
-#: ../manage/roles/admin-permissions.rst:101
+#: ../manage/roles/admin-permissions.rst:98
 msgid ":doc:`System > Core Workflows </system/core-workflows>`"
 msgstr ":doc:`Систем > Радни токови </system/core-workflows>`"
 
-#: ../manage/roles/admin-permissions.rst:103
+#: ../manage/roles/admin-permissions.rst:100
 msgid "``admin.data_privacy``"
 msgstr "``admin.data_privacy``"
 
-#: ../manage/roles/admin-permissions.rst:104
+#: ../manage/roles/admin-permissions.rst:101
 msgid ":doc:`System > Data Privacy </system/data-privacy>`"
 msgstr ":doc:`Систем > Приватност података </system/data-privacy>`"
 
-#: ../manage/roles/admin-permissions.rst:105
+#: ../manage/roles/admin-permissions.rst:102
 msgid ""
 "🔥 Be careful, it allows users to permanently delete data on the system."
 msgstr ""
 "🔥 Будите опрезни, омогућава корисницима да трајно бришу податке на систему."
 
-#: ../manage/roles/admin-permissions.rst:106
+#: ../manage/roles/admin-permissions.rst:103
 msgid "``admin.group``"
 msgstr "``admin.group``"
 
-#: ../manage/roles/admin-permissions.rst:107
+#: ../manage/roles/admin-permissions.rst:104
 msgid ":doc:`Manage > Groups </manage/groups/index>`"
 msgstr ":doc:`Управљање > Групе </manage/groups/index>`"
 
-#: ../manage/roles/admin-permissions.rst:109
+#: ../manage/roles/admin-permissions.rst:106
 msgid "``admin.integration``"
 msgstr "``admin.integration``"
 
-#: ../manage/roles/admin-permissions.rst:110
+#: ../manage/roles/admin-permissions.rst:107
 msgid ":doc:`System > Integrations </system/integrations/index>`"
 msgstr ":doc:`Систем > Интеграције </system/integrations/index>`"
 
-#: ../manage/roles/admin-permissions.rst:112
+#: ../manage/roles/admin-permissions.rst:109
 msgid "``admin.knowledge_base``"
 msgstr "``admin.knowledge_base``"
 
-#: ../manage/roles/admin-permissions.rst:113
+#: ../manage/roles/admin-permissions.rst:110
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
 msgstr ":doc:`Управљање > База знања </manage/knowledge-base>`"
 
@@ -11580,47 +11163,47 @@ msgstr ""
 "Проверите још једном :user-docs:`видљивост чланака </extras/knowledge-"
 "base.html#editing-answers>`."
 
-#: ../manage/roles/admin-permissions.rst:118
+#: ../manage/roles/admin-permissions.rst:115
 msgid "``admin.macro``"
 msgstr "``admin.macro``"
 
-#: ../manage/roles/admin-permissions.rst:119
+#: ../manage/roles/admin-permissions.rst:116
 msgid ":doc:`Manage > Macros </manage/macros>`"
 msgstr ":doc:`Управљање > Макрои </manage/macros>`"
 
-#: ../manage/roles/admin-permissions.rst:120
+#: ../manage/roles/admin-permissions.rst:117
 msgid "In some cases, macros may also require ``admin.tag``"
 msgstr "У неким случајевима, макрои могу такође захтевати ``admin.tag``"
 
-#: ../manage/roles/admin-permissions.rst:121
+#: ../manage/roles/admin-permissions.rst:118
 msgid "``admin.maintenance``"
 msgstr "``admin.maintenance``"
 
-#: ../manage/roles/admin-permissions.rst:122
+#: ../manage/roles/admin-permissions.rst:119
 msgid ":doc:`System > Maintenance </system/maintenance>`"
 msgstr ":doc:`Систем > Одржавање </system/maintenance>`"
 
-#: ../manage/roles/admin-permissions.rst:124
+#: ../manage/roles/admin-permissions.rst:121
 msgid "``admin.monitoring``"
 msgstr "``admin.monitoring``"
 
-#: ../manage/roles/admin-permissions.rst:125
+#: ../manage/roles/admin-permissions.rst:122
 msgid ":doc:`System > Monitoring </system/monitoring>`"
 msgstr ":doc:`Систем > Надгледање </system/monitoring>`"
 
-#: ../manage/roles/admin-permissions.rst:127
+#: ../manage/roles/admin-permissions.rst:124
 msgid "``admin.object``"
 msgstr "``admin.object``"
 
-#: ../manage/roles/admin-permissions.rst:128
+#: ../manage/roles/admin-permissions.rst:125
 msgid ":doc:`System > Objects </system/objects>`"
 msgstr ":doc:`Систем > Објекти </system/objects>`"
 
-#: ../manage/roles/admin-permissions.rst:130
+#: ../manage/roles/admin-permissions.rst:127
 msgid "``admin.organization``"
 msgstr "``admin.organization``"
 
-#: ../manage/roles/admin-permissions.rst:131
+#: ../manage/roles/admin-permissions.rst:128
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ":doc:`Управљање > Организације </manage/organizations/index>`"
 
@@ -11636,212 +11219,212 @@ msgstr "из траке за претрагу, чак и без ове дозв�
 msgid "They can even edit an organization's name, domain, and notes!"
 msgstr "Могу чак изменити назив, домен и напомену организације!"
 
-#: ../manage/roles/admin-permissions.rst:135
+#: ../manage/roles/admin-permissions.rst:132
 msgid "``admin.overview``"
 msgstr "``admin.overview``"
 
-#: ../manage/roles/admin-permissions.rst:136
+#: ../manage/roles/admin-permissions.rst:133
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
 msgstr ":doc:`Управљање > Прегледи </manage/overviews>`"
 
-#: ../manage/roles/admin-permissions.rst:138
+#: ../manage/roles/admin-permissions.rst:135
 msgid "``admin.package``"
 msgstr "``admin.package``"
 
-#: ../manage/roles/admin-permissions.rst:139
+#: ../manage/roles/admin-permissions.rst:136
 msgid ":doc:`System > Packages </system/packages>`"
 msgstr ":doc:`Систем > Пакети </system/packages>`"
 
-#: ../manage/roles/admin-permissions.rst:141
+#: ../manage/roles/admin-permissions.rst:138
 msgid "``admin.public_links``"
 msgstr "``admin.public_links``"
 
-#: ../manage/roles/admin-permissions.rst:142
+#: ../manage/roles/admin-permissions.rst:139
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
 msgstr ":doc:`Управљање > Јавни линкови </manage/public-links>`"
 
-#: ../manage/roles/admin-permissions.rst:144
+#: ../manage/roles/admin-permissions.rst:141
 msgid "``admin.report_profile``"
 msgstr "``admin.report_profile``"
 
-#: ../manage/roles/admin-permissions.rst:145
+#: ../manage/roles/admin-permissions.rst:142
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
 msgstr ":doc:`Управљање > Профили извештаја </manage/report-profiles>`"
 
-#: ../manage/roles/admin-permissions.rst:146
+#: ../manage/roles/admin-permissions.rst:143
 msgid "Access to view reports: ``report``"
 msgstr "Приступ за преглед извештаја: ``report``"
 
-#: ../manage/roles/admin-permissions.rst:147
+#: ../manage/roles/admin-permissions.rst:144
 msgid "``admin.role``"
 msgstr "``admin.role``"
 
-#: ../manage/roles/admin-permissions.rst:148
+#: ../manage/roles/admin-permissions.rst:145
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
 msgstr ":doc:`Управљање > Улоге </manage/roles/index>`"
 
-#: ../manage/roles/admin-permissions.rst:150
+#: ../manage/roles/admin-permissions.rst:147
 msgid "``admin.scheduler``"
 msgstr "``admin.scheduler``"
 
-#: ../manage/roles/admin-permissions.rst:151
+#: ../manage/roles/admin-permissions.rst:148
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
 msgstr ":doc:`Управљање > Планер </manage/scheduler>`"
 
-#: ../manage/roles/admin-permissions.rst:152
+#: ../manage/roles/admin-permissions.rst:149
 msgid "For automation on tickets"
 msgstr "За аутоматизацију тикета"
 
-#: ../manage/roles/admin-permissions.rst:153
+#: ../manage/roles/admin-permissions.rst:150
 msgid "``admin.security``"
 msgstr "``admin.security``"
 
-#: ../manage/roles/admin-permissions.rst:154
+#: ../manage/roles/admin-permissions.rst:151
 msgid ":doc:`Settings > Security </settings/security>`"
 msgstr ":doc:`Подешавања > Безбедност </settings/security>`"
 
-#: ../manage/roles/admin-permissions.rst:155
+#: ../manage/roles/admin-permissions.rst:152
 msgid "Settings of Zammad. This also covers third party authentications."
 msgstr ""
 "подешавања Zammad-а. Ово такође покрива аутентификацију преко трећег лица."
 
-#: ../manage/roles/admin-permissions.rst:156
+#: ../manage/roles/admin-permissions.rst:153
 msgid "``admin.session``"
 msgstr "``admin.session``"
 
-#: ../manage/roles/admin-permissions.rst:157
+#: ../manage/roles/admin-permissions.rst:154
 msgid ":doc:`System > Sessions </system/sessions>`"
 msgstr ":doc:`Систем > Сесије </system/sessions>`"
 
-#: ../manage/roles/admin-permissions.rst:159
+#: ../manage/roles/admin-permissions.rst:156
 msgid "``admin.sla``"
 msgstr "``admin.sla``"
 
-#: ../manage/roles/admin-permissions.rst:160
+#: ../manage/roles/admin-permissions.rst:157
 msgid ":doc:`Manage > SLAs </manage/slas/index>`"
 msgstr ":doc:`Управљање > SLA </manage/slas/index>`"
 
-#: ../manage/roles/admin-permissions.rst:162
+#: ../manage/roles/admin-permissions.rst:159
 msgid "``admin.system``"
 msgstr "``admin.system``"
 
-#: ../manage/roles/admin-permissions.rst:163
+#: ../manage/roles/admin-permissions.rst:160
 msgid ":doc:`Settings > System </settings/system/index>`"
 msgstr ":doc:`Подешавања > Систем </settings/system/index>`"
 
-#: ../manage/roles/admin-permissions.rst:165
+#: ../manage/roles/admin-permissions.rst:162
 msgid "``admin.system_report``"
 msgstr "``admin.system_report``"
 
-#: ../manage/roles/admin-permissions.rst:166
+#: ../manage/roles/admin-permissions.rst:163
 msgid ":doc:`System > System Report </system/system-report>`"
 msgstr ":doc:`Систем > Системски извештај </system/system-report>`"
 
-#: ../manage/roles/admin-permissions.rst:168
+#: ../manage/roles/admin-permissions.rst:165
 msgid "``admin.tag``"
 msgstr "``admin.tag``"
 
-#: ../manage/roles/admin-permissions.rst:169
+#: ../manage/roles/admin-permissions.rst:166
 msgid ":doc:`Manage > Tags </manage/tags>`"
 msgstr ":doc:`Управљање > Ознаке </manage/tags>`"
 
-#: ../manage/roles/admin-permissions.rst:171
+#: ../manage/roles/admin-permissions.rst:168
 msgid "``admin.template``"
 msgstr "``admin.template``"
 
-#: ../manage/roles/admin-permissions.rst:172
+#: ../manage/roles/admin-permissions.rst:169
 msgid ":doc:`Manage > Templates </manage/templates>`"
 msgstr ":doc:`Управљање > Шаблони </manage/templates>`"
 
-#: ../manage/roles/admin-permissions.rst:174
+#: ../manage/roles/admin-permissions.rst:171
 msgid "``admin.text_module``"
 msgstr "``admin.text_module``"
 
-#: ../manage/roles/admin-permissions.rst:175
+#: ../manage/roles/admin-permissions.rst:172
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
 msgstr ":doc:`Управљање > Текстуални исечци </manage/text-modules>`"
 
-#: ../manage/roles/admin-permissions.rst:177
+#: ../manage/roles/admin-permissions.rst:174
 msgid "``admin.ticket``"
 msgstr "``admin.ticket``"
 
-#: ../manage/roles/admin-permissions.rst:178
+#: ../manage/roles/admin-permissions.rst:175
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ":doc:`Подешавања > Тикети </settings/ticket>`"
 
-#: ../manage/roles/admin-permissions.rst:179
+#: ../manage/roles/admin-permissions.rst:176
 msgid "Does not grant access to :doc:`/misc/composer`"
 msgstr "Не дозвољава приступ :doc:`/misc/composer`"
 
-#: ../manage/roles/admin-permissions.rst:180
+#: ../manage/roles/admin-permissions.rst:177
 msgid "``admin.ticket_auto_assignment``"
 msgstr "``admin.ticket_auto_assignment``"
 
-#: ../manage/roles/admin-permissions.rst:181
+#: ../manage/roles/admin-permissions.rst:178
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
 msgstr ":ref:`Подешавања > Тикет > Аутоматска додела тикета <auto_assignment>`"
 
-#: ../manage/roles/admin-permissions.rst:183
+#: ../manage/roles/admin-permissions.rst:180
 msgid "``admin.ticket_duplicate_detection``"
 msgstr "``admin.ticket_duplicate_detection``"
 
-#: ../manage/roles/admin-permissions.rst:184
+#: ../manage/roles/admin-permissions.rst:181
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
 msgstr ":ref:`Подешавања > Тикет > Откривање дупликата <duplicate_detection>`"
 
-#: ../manage/roles/admin-permissions.rst:186
+#: ../manage/roles/admin-permissions.rst:183
 msgid "``admin.ticket_priority``"
 msgstr "``admin.ticket_priority``"
 
-#: ../manage/roles/admin-permissions.rst:187
+#: ../manage/roles/admin-permissions.rst:184
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
 msgstr ":ref:`Систем > Објекти >Приоритет тикета <ticket-priority-reference>`"
 
-#: ../manage/roles/admin-permissions.rst:189
+#: ../manage/roles/admin-permissions.rst:186
 msgid "``admin.ticket_state``"
 msgstr "``admin.ticket_state``"
 
-#: ../manage/roles/admin-permissions.rst:190
+#: ../manage/roles/admin-permissions.rst:187
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
 msgstr ":ref:`Систем > Објекти > Стање тикета <ticket-state-reference>`"
 
-#: ../manage/roles/admin-permissions.rst:192
+#: ../manage/roles/admin-permissions.rst:189
 msgid "``admin.time_accounting``"
 msgstr "``admin.time_accounting``"
 
-#: ../manage/roles/admin-permissions.rst:193
+#: ../manage/roles/admin-permissions.rst:190
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
 msgstr ":doc:`Управљање > Обрачун времена </manage/time-accounting>`"
 
-#: ../manage/roles/admin-permissions.rst:194
+#: ../manage/roles/admin-permissions.rst:191
 msgid "Also allows the export of timekeeping records."
 msgstr "Такоће омогућује извоз уноса обрачуна времена."
 
-#: ../manage/roles/admin-permissions.rst:195
+#: ../manage/roles/admin-permissions.rst:192
 msgid "``admin.translation``"
 msgstr "``admin.translation``"
 
-#: ../manage/roles/admin-permissions.rst:196
+#: ../manage/roles/admin-permissions.rst:193
 msgid ":doc:`System > Translations </system/translations>`"
 msgstr ":doc:`Систем > Преводи </system/translations>`"
 
-#: ../manage/roles/admin-permissions.rst:197
+#: ../manage/roles/admin-permissions.rst:194
 msgid "Also enables inline translation"
 msgstr "Такође омогућује непосредне преводе"
 
-#: ../manage/roles/admin-permissions.rst:198
+#: ../manage/roles/admin-permissions.rst:195
 msgid "``admin.trigger``"
 msgstr "``admin.trigger``"
 
-#: ../manage/roles/admin-permissions.rst:199
+#: ../manage/roles/admin-permissions.rst:196
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
 msgstr ":doc:`Управљање > Окидачи </manage/trigger>`"
 
-#: ../manage/roles/admin-permissions.rst:201
+#: ../manage/roles/admin-permissions.rst:198
 msgid "``admin.user``"
 msgstr "``admin.user``"
 
-#: ../manage/roles/admin-permissions.rst:202
+#: ../manage/roles/admin-permissions.rst:199
 msgid ":doc:`Manage > Users </manage/users/index>`"
 msgstr ":doc:`Управљање > Корисници </manage/users/index>`"
 
@@ -11861,11 +11444,11 @@ msgstr ""
 "🏴‍☠ Ова дозвола омогућава корисницима :ref:`преотму сесије других корисника "
 "<view-from-users-perspective>`."
 
-#: ../manage/roles/admin-permissions.rst:207
+#: ../manage/roles/admin-permissions.rst:204
 msgid "``admin.webhook``"
 msgstr "``admin.webhook``"
 
-#: ../manage/roles/admin-permissions.rst:208
+#: ../manage/roles/admin-permissions.rst:205
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
 msgstr ":doc:`Управљање > Повратни позив </manage/webhook>`"
 
@@ -14127,7 +13710,7 @@ msgid "Screenshot showing a selection for year and month on time accounting"
 msgstr ""
 "Снимак екрана који приказује избор за годишњи и месечни обрачун времена"
 
-#: ../manage/time-accounting.rst:197
+#: ../manage/time-accounting.rst:190
 msgid "Tickets and their accounted time"
 msgstr "Тикети и њихово обрачунато време"
 
@@ -14259,7 +13842,7 @@ msgstr ""
 "корисник има обрачунато укупно време у текућем месецу (за све тикете који се "
 "подударају)."
 
-#: ../manage/time-accounting.rst:191 ../misc/object-conditions/basics.rst:28
+#: ../manage/time-accounting.rst:190 ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:115
 #: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:13
 msgid "Organization"
@@ -14281,18 +13864,6 @@ msgid ""
 msgstr ""
 "Такође можете видети уносе за клијенте који су део примарне организације. "
 "Корисници без организације могу се наћи у филтеру за клијенте."
-
-#: ../manage/time-accounting.rst:0
-msgid "Time accounting view with time accounted filters"
-msgstr "Приказ обрачуна времена са филтерима"
-
-#: ../manage/time-accounting.rst:197
-msgid ""
-"Each heading allows you to download the CSV versions of the provided view "
-"via the download button next to it."
-msgstr ""
-"Сваки наслов вам омогућава да преузмете CSV верзије датог приказа путем "
-"дугмета за преузимање поред њега."
 
 #: ../manage/trigger.rst:2
 msgid "Triggers"
@@ -17596,20 +17167,6 @@ msgid "Example: ``On Thursday, June 27, 2019, 3:37:11 PM, Jacob Smith wrote:``"
 msgstr ""
 "Пример: ``У четвртак, 27. јун 2019. 15:37:11, Jacob Smith је написао/ла:``"
 
-#: ../misc/composer.rst:71
-msgid "Twitter - tweet initials"
-msgstr "Твитер - иницијали твита"
-
-#: ../misc/composer.rst:68
-msgid ""
-"When set to yes, this will add ``/CM`` (first character of first- and last "
-"name) to the bottom of every tweet answer you create. This only affects "
-"tickets that come from the Twitter Channel."
-msgstr ""
-"Када је постављено на да, ово ће додати ``/CM`` (прво слово имена и "
-"презимена) при дну сваког одговора на твит који додате. Ово утиче само на "
-"тикете који долазе са Twitter канала."
-
 #: ../misc/first-steps.rst:4
 msgid ""
 "After the basic setup of Zammad with the getting started wizard, you will "
@@ -17757,31 +17314,20 @@ msgstr "Линк на :doc:`одељак макроа у подешавањим�
 msgid "Additional Channels"
 msgstr "Додатни канали"
 
-#: ../misc/first-steps.rst:80 ../settings/security/third-party/twitter.rst:2
-msgid "Twitter"
-msgstr "Twitter"
-
 #: ../misc/first-steps.rst:79
-msgid ""
-"Link to the :doc:`Twitter channel in the settings </channels/twitter-x/"
-"twitter>`."
-msgstr ""
-"Линк на :doc:`Twitter канал у подешавањима </channels/twitter-x/twitter>`."
-
-#: ../misc/first-steps.rst:83
 msgid ""
 "Link to the :doc:`Facebook channel in the settings </channels/facebook>`."
 msgstr "Линк на :doc:`Facebook канал у подешавањима </channels/facebook>`."
 
-#: ../misc/first-steps.rst:87
+#: ../misc/first-steps.rst:83
 msgid "Link to the :doc:`chat channel in the settings </channels/chat>`."
 msgstr "Линк на :doc:`канал ћаскања у подешавањима </channels/chat>`."
 
-#: ../misc/first-steps.rst:91
+#: ../misc/first-steps.rst:87
 msgid "Online Forms"
 msgstr "Онлајн форме"
 
-#: ../misc/first-steps.rst:91
+#: ../misc/first-steps.rst:87
 msgid "Link to the :doc:`form channel in the settings </channels/form>`."
 msgstr "Линк на :doc:`канал форми у подешавањима </channels/form>`."
 
@@ -23750,6 +23296,10 @@ msgstr ""
 "У Microsoft Entra ID, доделите одговрајуће кориснике Zammad апликацији и "
 "доделите им приступ."
 
+#: ../settings/security/third-party/twitter.rst:2
+msgid "Twitter"
+msgstr "Twitter"
+
 #: ../settings/security/third-party/twitter.rst:4
 msgid ""
 "It is possible to create a quick login for your helpdesk via Twitter. To do "
@@ -28019,7 +27569,7 @@ msgstr ""
 "Испод подешавања и мапирања, наћи ћете нашу евиденцију захтева. Можете "
 "видети које је захтеве Zammad послао Clearbit-у, као и одговоре преко API-ја."
 
-#: ../system/integrations/clearbit.rst:80
+#: ../system/integrations/clearbit.rst:78
 msgid ""
 "By the way, you can also view the API log on the Clearbit website - the "
 "information seen is basically the same."
@@ -30751,215 +30301,6 @@ msgstr ""
 "да подеси PGP у свом имејл окружењу и увезе ваш јавни кључ. Обрнуто, морате "
 "да добавите јавни кључ вашег клијента и да га увезете у Zammad."
 
-#: ../system/integrations/slack.rst:2
-msgid "Slack"
-msgstr "Slack"
-
-#: ../system/integrations/slack.rst:4
-msgid "**⚠️ Deprecation warning ⚠️**"
-msgstr "**⚠️ Упозорење о застаревању ⚠️**"
-
-#: ../system/integrations/slack.rst:6
-msgid ""
-"Zammad 7 will no longer support this dedicated Slack integration. It is "
-"recommended to switch to :doc:`pre-defined webhooks </manage/webhook/"
-"examples/slack-notifications>` instead. Existing Slack integrations should "
-"be migrated manually before this feature is dropped."
-msgstr ""
-"Zammad 7 више неће подржавати ову наменску Slack интеграцију. Препоручује се "
-"да се уместо тога пребаците на :doc:`повратне позиве по шаблону </manage/"
-"webhook/examples/slack-notifications>`. Постојеће Slack интеграције је "
-"потребно ручно мигрирати пре него што се ова функција укине."
-
-#: ../system/integrations/slack.rst:14
-msgid ""
-"In order to use this feature, please add a new Slack app to your Workspace. "
-"The App you need is called ``Incoming WebHooks`` ."
-msgstr ""
-"Да бисте користили ову функцију, додајте нову Slack апликацију у своје "
-"окружење. Апликација која вам је потребна зове се ``Incoming WebHooks``."
-
-#: ../system/integrations/slack.rst:18
-msgid "Why Do I Need This Feature?"
-msgstr "Зашто ми треба ова функција?"
-
-#: ../system/integrations/slack.rst:20
-msgid ""
-"If you're already using Slack for your team communication, you'll love this "
-"feature! Our Slack integration can push ticket notifications about the last "
-"ticket article based on the following events:"
-msgstr ""
-"Ако већ користите Slack за комуникацију у оквиру вашег тима, свидеће вам се "
-"ова функција! Наша Slack интеграција може да објави обавештења о последњем "
-"чланку тикета на основу следећих догађаја:"
-
-#: ../system/integrations/slack.rst:24
-msgid "on Ticket creation"
-msgstr "при отварању тикета"
-
-#: ../system/integrations/slack.rst:25
-msgid "on Ticket updates"
-msgstr "при освежавању тикета"
-
-#: ../system/integrations/slack.rst:26
-msgid "on reached reminders"
-msgstr "по достигнутим подсетницима"
-
-#: ../system/integrations/slack.rst:27
-msgid "a Ticket has escalated"
-msgstr "по ескалирању тикета"
-
-#: ../system/integrations/slack.rst:28
-msgid "a Ticket is going to escalate"
-msgstr "пре ескалације тикета"
-
-#: ../system/integrations/slack.rst:30
-msgid ""
-"Zammad will provide the Ticket title, a direct link to the Ticket, the event "
-"type (creation, updated, escalation), the customer, time and the last "
-"article that has triggered the notification."
-msgstr ""
-"Zammad ће обезбедити наслов тикета, директан линк до тикета, тип догађаја "
-"(отварање, освежавање, ескалација), клијента, време и последњи чланак који "
-"је окинуо обавештење."
-
-#: ../system/integrations/slack.rst:34
-msgid ""
-"This will give you further options, as you can see e.g. escalating tickets "
-"that are assigned to an agent that's e.g. absent. You can interact faster, "
-"as you might see problems earlier (or even before the problem gets one)."
-msgstr ""
-"Ово ће вам пружити додатне опције, као што су ескалације тикета које су "
-"додељене оператеру који је нпр. одсутан. Можете да комуницирате брже, јер "
-"ћете можда раније уочити проблеме (или чак и пре него што се проблем појави)."
-
-#: ../system/integrations/slack.rst:38
-msgid ""
-"If needed and wanted, you can even discuss directly about the topic before "
-"sending an answer to the customer. Another possible use case would be a "
-"agent monitoring new agents and their answers to tickets."
-msgstr ""
-"Ако је потребно и желите, можете чак и директно да разговарате о теми пре "
-"него што пошаљете одговор клијенту. Други могући случај употребе би био да "
-"оператер надгледа нове оператере и њихове одговоре на тикете."
-
-#: ../system/integrations/slack.rst:44
-msgid "Configure the Integration"
-msgstr "Конфигуришите интеграцију"
-
-#: ../system/integrations/slack.rst:46
-msgid ""
-"First of all, please go to your slack workspace - go to administration => "
-"Manage Apps. If you don't have an app yet, you can simply add a new one - "
-"just search for ``Incoming WebHooks`` and customize the app to your needs."
-msgstr ""
-"Пре свега, у административном панелу вашег окружења идите на Manage Apps. "
-"Ако још увек немате апликацију, можете једноставно да додате нову - само "
-"потражите ``Incoming WebHooks`` и прилагодите апликацију својим потребама."
-
-#: ../system/integrations/slack.rst:50
-msgid ""
-"Choose (or create) the channel Zammad should post it's information to and "
-"press on \"Add Incoming WebHooks integration\". If you're ready, copy the "
-"provided WebHook URL and go to your Zammad installation."
-msgstr ""
-"Изаберите (или додајте) канал у ком Zammad треба да објави своје информације "
-"и притисните „Add Incoming WebHooks integration“. Ако сте спремни, копирајте "
-"наведени WebHook URL и идите на своју Zammad инсталацију."
-
-#: ../system/integrations/slack.rst:56
-msgid ""
-"You need administrative rights on the Slack Workspace. The link to the app "
-"directory is normally ``https://[workspace-name].slack.com/apps`` ."
-msgstr ""
-"Потребна су вам административна права за ваше Slack окружење. Линк на "
-"директоријум апликација је обично ``https://[назив-окружења].slack.com/"
-"apps``."
-
-#: ../system/integrations/slack.rst:63
-msgid ""
-"To configure the slack integration, log in to Zammad and go to Integrations "
-"(System) => Slack in the admin panel."
-msgstr ""
-"Да бисте подесили Slack интеграцију, пријавите се у Zammad и идите на "
-"Интеграције (Систем) => Slack у панелу администратора."
-
-#: ../system/integrations/slack.rst:66
-msgid ""
-"Here you can choose on what evens Zammad should post information about a "
-"ticket to your Slack channel. Next you need to device what groups shall be "
-"affected by this, as anybody with access to that specific Slack channel can "
-"read at least parts of the ticket this might be a privacy issue, if you "
-"select the wrong groups. The username is simply the name that Zammad uses as "
-"display name inside the Slack chat. The channel defines the Slack channel "
-"the information is being posted in. As last option, you can set a custom "
-"icon for posting to slack."
-msgstr ""
-"Овде можете да изаберете у ком периоду Zammad треба да објави информације о "
-"тикету у вашем Slack каналу. Затим, морате одредити на које групе ће ово "
-"утицати, јер свако ко има приступ дотичном Slack каналу може да прочита бар "
-"делове тикета, што може представљати проблем приватности ако изаберете "
-"погрешне групе. Корисничко име је једноставно назив који Zammad користи као "
-"име за приказ у Slack порукама. Канал одређује Slack канал у ком ће бити "
-"објављене информације. Као последња опција, можете поставити прилагођену "
-"иконицу за слање у Slack."
-
-#: ../system/integrations/slack.rst:74
-msgid ""
-"When you're ready, just hit \"Submit\" and enable the integration. Zammad "
-"will now post new ticket information based on the trigger you chose. Below "
-"the options you have the recent log that shows the latest requests to Slack "
-"for debugging if needed."
-msgstr ""
-"Када будете спремни, само притисните „Пошаљи“ и укључите интеграцију. Zammad "
-"ће од сада објављивати нове информације о тикету на основу окидача који сте "
-"изабрали. Испод опција имате недавне уносе евиденције који приказује "
-"најновије захтеве упућене Slack-у за помоћ приликом отклањања грешака."
-
-#: ../system/integrations/slack.rst:81
-msgid ""
-"If you leave the Icon URL empty, Zammad will use the Zammad logo instead. "
-"The icon should be a square PNG file."
-msgstr ""
-"Ако оставите URL иконице празан, Zammad ће уместо ње користити Zammad лого. "
-"Иконица треба да буде квадратна PNG сличица."
-
-#: ../system/integrations/slack.rst:88
-msgid "The Result"
-msgstr "Резултат"
-
-#: ../system/integrations/slack.rst:90
-msgid ""
-"The following figure shows how it will look if you choose to receive updates "
-"on created and updated tickets. On every post Zammad sends to the Slack "
-"channel, you can create new threads to discuss about the new article."
-msgstr ""
-"Следећа слика приказује како изгледа ако одаберете да примате обавештења о "
-"отвореним и освеженим тикетима. На сваки пост који Zammad пошаље у Slack "
-"канал, можете отворити тему за дискусију о новом чланку."
-
-#: ../system/integrations/slack.rst:96
-msgid ""
-"If you just want to keep track of soon escalating or already escalated "
-"tickets, it will look the the following figure. Zammad changes the color in "
-"front of the post so you can easily see the state of the ticket."
-msgstr ""
-"Ако само желите да пратите тикете који скоро ескалирају или су већ "
-"ескалирали, то ће изгледати као на следећој слици. Zammad мења боју испред "
-"поста тако да можете лако да процените стање тикета."
-
-#: ../system/integrations/slack.rst:102
-msgid ""
-"If you change the state, Zammad will also put information on what state the "
-"ticket gets and (if pending state) the date until it pends. You'll also "
-"recognize the color codes in front of posts on slack, as they are exact the "
-"same the ticket state colors you'll see in Zammad!"
-msgstr ""
-"Ако промените стање, Zammad ће такође ставити информацију о томе у ком стању "
-"је тикет и (ако је на чекању) време чекања тикета. Такође ћете препознати "
-"боју стања испред Slack постова, јер су потпуности исте које моћете видети у "
-"Zammad-у!"
-
 #: ../system/integrations/smime/index.rst:2
 msgid "S/MIME"
 msgstr "S/MIME"
@@ -31742,15 +31083,15 @@ msgstr ""
 "из поља „*Тренутни кључ*“, као и комплетну API путању вашег система (поље "
 "„*Провера доступности*“), у коју је API кључ већ укључен."
 
-#: ../system/monitoring.rst:37
+#: ../system/monitoring.rst:36
 msgid "Screenshot showing Current Token and Health Check"
 msgstr "Снимак екрана који приказује тренутни кључ и проверу доступности"
 
-#: ../system/monitoring.rst:37
+#: ../system/monitoring.rst:36
 msgid "Screenshot showing Token and Health Check"
 msgstr "Снимак екрана који приказује кључ и проверу доступности"
 
-#: ../system/monitoring.rst:39
+#: ../system/monitoring.rst:38
 msgid ""
 "In addition to that, you can reset the auto-generated token to make sure "
 "that already configured monitoring systems won't work anymore. So, please "
@@ -31760,7 +31101,7 @@ msgstr ""
 "сигурни да већ конфигурисани системи за надгледање више неће радити. Дакле, "
 "користите дугме „*Поништи*” само ако знате шта радите!"
 
-#: ../system/monitoring.rst:44
+#: ../system/monitoring.rst:43
 msgid "Example Output"
 msgstr "Пример резултата"
 
@@ -31768,7 +31109,7 @@ msgstr "Пример резултата"
 msgid "No issues found"
 msgstr "Није пронађен ниједан проблем"
 
-#: ../system/monitoring.rst:48 ../system/monitoring.rst:60
+#: ../system/monitoring.rst:47 ../system/monitoring.rst:62
 msgid "**Indicator in Zammad**:"
 msgstr "**Индикатор у Zammad-у**:"
 
@@ -31776,7 +31117,7 @@ msgstr "**Индикатор у Zammad-у**:"
 msgid "Screenshot showing monitoring with no issues"
 msgstr "Снимак екрана који приказује преглед надгледања без проблема"
 
-#: ../system/monitoring.rst:54 ../system/monitoring.rst:66
+#: ../system/monitoring.rst:53 ../system/monitoring.rst:68
 msgid "**API response**::"
 msgstr "**API одговор**::"
 
@@ -34518,6 +33859,630 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#, fuzzy
+#~| msgid "The color options are currently limited to the mentioned options."
+#~ msgid "The types of AI agents are limited to the available options."
+#~ msgstr "Доступне боје су тренутно ограничене на поменуте опције."
+
+#, fuzzy
+#~| msgid "A very simple storage configuration could look like this:"
+#~ msgid ""
+#~ "A useful trigger configuration for such AI agent could look like this:"
+#~ msgstr ""
+#~ "Врло једноставна конфигурација складишта би могла личити на следеће:"
+
+#~ msgid "Twitter/X"
+#~ msgstr "Twitter/X"
+
+#~ msgid "*Updated: 08/2023*"
+#~ msgstr "*Ажурирано: 08/2023*"
+
+#~ msgid ""
+#~ "Please note: Currently, we keep naming it \"Twitter\" or \"Twitter/X\" in "
+#~ "the documentation, as it is the quite common name and for better "
+#~ "readability. Of course we mean just \"X\"."
+#~ msgstr ""
+#~ "Напомена: Тренутно у документацији користимо назив „Twitter“ или „Twitter/"
+#~ "X“, јер је то прилично уобичајен назив и ради боље прегледности. Наравно, "
+#~ "мислимо само на „X”."
+
+#~ msgid ""
+#~ "⚠️ Due to the current situation, there are some issues regarding the "
+#~ "Twitter/X integration. Please see :doc:`twitter-x-note` for further "
+#~ "details before reading on!"
+#~ msgstr ""
+#~ "⚠️ Због тренутне ситуације, постоје неки проблеми у вези са интеграцијом "
+#~ "Twitter/X. Молимо погледајте :doc:`twitter-x-note` за више детаља пре "
+#~ "него што наставите!"
+
+#~ msgid ""
+#~ "Zammad supports Twitter integration, meaning you can send and receive "
+#~ "tweets and DMs just like emails!"
+#~ msgstr ""
+#~ "Zammad подржава интеграцију са Twitter-ом, што значи да можете слати и "
+#~ "примати твитове и директне поруке баш као имејл!"
+
+#~ msgid "Twitter Ticket with draft reply"
+#~ msgstr "Twitter тикет са нацртом одговора"
+
+#~ msgid ""
+#~ "Twitter tickets will show a 🐦 Twitter bird in the reply area. Just click "
+#~ "on the reply button (as you would for an email) to tweet back."
+#~ msgstr ""
+#~ "Twitter тикети ће приказати 🐦 Twitter птичицу у оквиру за одговоре. Само "
+#~ "кликните на дугме за одговор (као за имејл поруке) да бисте твитовали."
+
+#~ msgid "To set it up, follow the steps below:"
+#~ msgstr "Да бисте га подесили, следите доле наведене кораке:"
+
+#~ msgid ""
+#~ "Apply for a `Twitter Developer account <https://developer.twitter.com/en/"
+#~ "apply/user>`_."
+#~ msgstr ""
+#~ "Пријавите се за `Twitter Developer налог <https://developer.twitter.com/"
+#~ "en/apply/user>`_."
+
+#~ msgid ""
+#~ "`Create a new Twitter app <https://developer.twitter.com/en/apps/"
+#~ "create>`_ for Zammad."
+#~ msgstr ""
+#~ "`Креирајте нову Twitter апликацију <https://developer.twitter.com/en/apps/"
+#~ "create>`_ за Zammad."
+
+#~ msgid ""
+#~ "Set your new app's permissions to *Read, write, and access direct "
+#~ "messages.*"
+#~ msgstr ""
+#~ "Подесите дозволе нове апликације на *Read, write, and access direct "
+#~ "messages.*"
+
+#~ msgid "Generate a new access token & secret."
+#~ msgstr "Генеришите нови приступни кључ и шифру."
+
+#~ msgid ""
+#~ "`Set up a dev environment <https://developer.twitter.com/en/account/"
+#~ "environments>`_ for the Account Activity API."
+#~ msgstr ""
+#~ "`Подесите развојно окружење <https://developer.twitter.com/en/account/"
+#~ "environments>`_ за Account Activity API."
+
+#~ msgid "Add your new Twitter app in Zammad."
+#~ msgstr "Додајте своју нову Twitter апликацију у Zammad."
+
+#~ msgid "Add your Twitter account in Zammad."
+#~ msgstr "Додајте свој Twitter налог у Zammad."
+
+#~ msgid ""
+#~ "Configure filters for creating new tickets based on **#tags** and "
+#~ "**@mentions**."
+#~ msgstr ""
+#~ "Подесите филтере за прављење нових тикета на основу **#ознаке** и "
+#~ "**@помињања**."
+
+#~ msgid "Read on for details about each step."
+#~ msgstr "Читајте даље за детаље о сваком кораку."
+
+#~ msgid "1. Apply for a Twitter Developer Account"
+#~ msgstr "1. Пријавите се за Twitter Developer налог"
+
+#~ msgid "Twitter Developer account: Welcome page"
+#~ msgstr "Twitter Developer налог: Welcome страница"
+
+#~ msgid ""
+#~ "This welcome page is displayed after completing the application for a "
+#~ "Developer account."
+#~ msgstr ""
+#~ "Ова страница добродошлице се приказује након завршетка пријаве за "
+#~ "Developer налог."
+
+#~ msgid ""
+#~ "You will need a regular Twitter account with a verified phone number to "
+#~ "apply for a `Twitter Developer account`_ (at https://"
+#~ "developer.twitter.com)."
+#~ msgstr ""
+#~ "Биће вам потребан обичан Twitter налог са верификованим бројем телефона "
+#~ "да бисте се пријавили за `Twitter Developer налог`_ (на https://"
+#~ "developer.twitter.com)."
+
+#~ msgid ""
+#~ "During the application process, you will be asked to **Describe in your "
+#~ "own words what you are building**. You may use the answer below::"
+#~ msgstr ""
+#~ "Током процеса пријаве, од вас ће се затражити да **својим речима опишете "
+#~ "шта градите**. Можете користити одговор испод:"
+
+#~ msgid "2. Create a New Twitter App for Zammad"
+#~ msgstr "2. Направите нову Twitter апликацију за Zammad"
+
+#~ msgid "Twitter Developer account: Create app page"
+#~ msgstr "Twitter Developer налог: Create app страница"
+
+#~ msgid ""
+#~ "To create a new app, select **Apps** under your user menu, then click "
+#~ "**Create an app**."
+#~ msgstr ""
+#~ "Да бисте направили нову апликацију, изаберите **Apps** у корисничком "
+#~ "менију, а затим кликните на **Create an app**."
+
+#~ msgid ""
+#~ "Once you have finished setting up your Developer account, use it to "
+#~ "`create a new Twitter app`_. The following fields are **required:**"
+#~ msgstr ""
+#~ "Када завршите са подешавањем Developer налога, користите га да `направите "
+#~ "нову Twitter апликацију`_. Следећа поља су **обавезна:**"
+
+#~ msgid "App name"
+#~ msgstr "App name"
+
+#~ msgid ""
+#~ "Must be unique *across all of Twitter.* No other developer account may "
+#~ "create an app with the same name."
+#~ msgstr ""
+#~ "Мора да буде јединствен *на целом Twitter-у.* Ниједан други Developer "
+#~ "налог не сме да креира апликацију са истим именом."
+
+#~ msgid "Application description"
+#~ msgstr "Application description"
+
+#~ msgid "Anything is fine here."
+#~ msgstr "Овде је прихватљиво било шта."
+
+#~ msgid "Website URL"
+#~ msgstr "Website URL"
+
+#~ msgid "The URL of your Zammad instance."
+#~ msgstr "URL адреса ваше Zammad инстанце."
+
+#~ msgid "Callback URLs"
+#~ msgstr "Callback URLs"
+
+#~ msgid ""
+#~ "``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``"
+#~ msgstr ""
+#~ "``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``"
+
+#~ msgid ""
+#~ "This URL is also visible in the **Connect Twitter App** dialog of your "
+#~ "Zammad admin settings panel."
+#~ msgstr ""
+#~ "Ова URL адреса је такође видљива у дијалогу **Повежи Twitter апликацију** "
+#~ "у вашем администраторском панелу Zammad-а."
+
+#~ msgid "Tell us how this app will be used"
+#~ msgstr "Tell us how this app will be used"
+
+#~ msgid "Anything is fine here. We suggest the following::"
+#~ msgstr "Овде је прихватљиво било шта. Предлажемо следеће:"
+
+#~ msgid "3. Set Your New App's Permissions"
+#~ msgstr "3. Подесите дозволе за нову апликацију"
+
+#~ msgid "Twitter Developer account: App permissions page"
+#~ msgstr "Twitter Developer налог: страница са дозволама за апликацију"
+
+#~ msgid "Select *Read, write, and access direct messages.*"
+#~ msgstr "Изаберите *Read, write, and access direct messages.*"
+
+#~ msgid "4. Generate a New Access Token & Secret"
+#~ msgstr "4. Генеришите нови приступни кључ и шифру"
+
+#~ msgid "Twitter Developer account: App keys and tokens page"
+#~ msgstr "Twitter Developer налог: App keys and tokens страница"
+
+#~ msgid "You will need all four keys/tokens later, so don't close this tab."
+#~ msgstr ""
+#~ "Касније ће вам требати сва четири кључа/шифре, тако да не затварајте ову "
+#~ "страну."
+
+#~ msgid "5. Set Up a Dev Environment"
+#~ msgstr "5. Подесите окружење за развој"
+
+#~ msgid ""
+#~ "After creating your app, `set up a dev environment`_ for the Account "
+#~ "Activity API."
+#~ msgstr ""
+#~ "Након што направите апликацију, `подесите развојно окружење`_ за Account "
+#~ "Activity API."
+
+#~ msgid "Twitter Developer account: Dev environments page"
+#~ msgstr "Twitter Developer налог: Dev environments страница"
+
+#~ msgid ""
+#~ "Name it whatever you like (*e.g.,* ``zammad``). You will need the label "
+#~ "later, so don't forget it."
+#~ msgstr ""
+#~ "Именујте га како год желите (*нпр.* ``zammad``). Ознака ће вам требати "
+#~ "касније, тако да је не заборавите."
+
+#~ msgid "6. Add Your New Twitter App in Zammad"
+#~ msgstr "6. Додајте своју нову Twitter апликацију у Zammad"
+
+#~ msgid "Zammad: Configure Twitter app"
+#~ msgstr "Zammad: подешавање Twitter апликације"
+
+#~ msgid ""
+#~ "Add your new Twitter app under **Channels > Twitter** in the admin "
+#~ "settings panel. You will need the keys, tokens, and dev environment label "
+#~ "from Steps 4 and 5."
+#~ msgstr ""
+#~ "Додајте своју нову Twitter апликацију под **Канали > Twitter** у "
+#~ "администраторском панелу. Биће вам потребни кључеви, шифре и назив "
+#~ "развојног окружења из корака 4 и 5."
+
+#~ msgid "7. Add Your Twitter Account in Zammad"
+#~ msgstr "7. Додајте свој Twitter налог у Zammad"
+
+#~ msgid "Zammad: Add Twitter account"
+#~ msgstr "Zammad: додавање Twitter налога"
+
+#~ msgid ""
+#~ "Click **Add Account** under **Channels > Twitter** in the admin settings "
+#~ "panel."
+#~ msgstr ""
+#~ "Кликните на **Додај налог** у оквиру **Канали > Twitter** у "
+#~ "администраторском панелу."
+
+#~ msgid "Twitter: Authorize Zammad"
+#~ msgstr "Twitter: ауторизација Zammad-а"
+
+#~ msgid ""
+#~ "You will be redirected to Twitter and asked to authorize Zammad to access "
+#~ "your account."
+#~ msgstr ""
+#~ "Бићете преусмерени на Twitter и од вас ће се тражити да овластите Zammad-"
+#~ "а да приступи вашем налогу."
+
+#~ msgid "8. Configure Filters"
+#~ msgstr "8. Подешавање филтера"
+
+#~ msgid "Zammad: Configure Twitter accounts"
+#~ msgstr "Zammad: подешавање Twitter налога"
+
+#~ msgid ""
+#~ "Set up filters to automatically create new tickets based on **#tags** or "
+#~ "**@mentions**."
+#~ msgstr ""
+#~ "Подесите филтере да аутоматски отварате нове тикете на основу **#ознаке** "
+#~ "или **@помињања**."
+
+#~ msgid ""
+#~ "That's it! Now, incoming tweets and DMs will be automatically turned into "
+#~ "Zammad tickets."
+#~ msgstr ""
+#~ "То је то! Сада ће се долазни твитови и директне поруке аутоматски "
+#~ "претворити у Zammad тикете."
+
+#~ msgid "Twitter/X note"
+#~ msgstr "Twitter/X белешка"
+
+#~ msgid "Updated: 08/2023"
+#~ msgstr "Ажурирано: 08/2023"
+
+#~ msgid "Baseline situation"
+#~ msgstr "Полазна ситуација"
+
+#~ msgid ""
+#~ "The Twitter integration implemented in Zammad provides the following "
+#~ "functionalities:"
+#~ msgstr ""
+#~ "Twitter интеграција имплементирана у Zammad-у пружа следеће "
+#~ "функционалности:"
+
+#~ msgid ""
+#~ "Search for definable terms and automatic ticket creation based on the "
+#~ "results"
+#~ msgstr ""
+#~ "Потрага по кључним речима и аутоматско отварање тикета на основу резултата"
+
+#~ msgid ""
+#~ "Live notifications for your own Twitter account (e.g. if you are "
+#~ "mentioned in a tweet or receive direct messages), that will be "
+#~ "transformed into tickets"
+#~ msgstr ""
+#~ "Обавештења о вашем Twitter налогу (нпр. ако сте напоменути у твиту или "
+#~ "примате директне поруке), која ће се претворити у тикете"
+
+#~ msgid "Current situation"
+#~ msgstr "Тренутна ситуација"
+
+#~ msgid ""
+#~ "The adjustments made to the API at Twitter/X (introduction of v2) as well "
+#~ "as the restructuring of the access levels/pricing models (Free, Basic, "
+#~ "Pro - https://developer.twitter.com/en/products/twitter-api) mean that "
+#~ "the above-mentioned functionalities are no longer available in connection "
+#~ "with old \"app registrations\" at the present time. These changes are "
+#~ "heavily discussed in the Twitter community and cause discomfort."
+#~ msgstr ""
+#~ "Развој API-ја на Twitter/X (увођење v2) као и реструктурирање нивоа "
+#~ "приступа/модела цена (Free, Basic, Pro - https://developer.twitter.com/en/"
+#~ "products/twitter-api) значи да горе поменуте функционалности више нису "
+#~ "доступне за старе „регистроване апликације“ у овом тренутку. О овим "
+#~ "променама се увелико расправља у Twitter заједници и изазивају нелагоду."
+
+#~ msgid ""
+#~ "In addition, we don't know if there will be another change on the part of "
+#~ "Twitter/X in the future that will further limit or even restore "
+#~ "functionality."
+#~ msgstr ""
+#~ "Поред тога, не знамо да ли ће у будућности бити још неке промене на "
+#~ "Twitter/X-у која ће додатно ограничити или чак вратити функционалност."
+
+#~ msgid "Prerequisite for the continued operation of Twitter in Zammad"
+#~ msgstr "Предуслов за наставак рада Twitter-а у Zammad-у"
+
+#~ msgid ""
+#~ "Access to the \"old\" Twitter API v1.1 or the Account Activity API, which "
+#~ "is required for our functionalities, is now only available at the "
+#~ "\"Enterprise\" access level. According to Twitter, the monthly costs for "
+#~ "this start at 42,000 USD."
+#~ msgstr ""
+#~ "Приступ „старом“ Twitter API v1.1 или Account Activity API, који је "
+#~ "неопходан за наше функционалности, сада је доступан само на „Enterprise“ "
+#~ "нивоу приступа. Према Twitter-у, месечни трошкови за ово почињу од 42.000 "
+#~ "USD."
+
+#~ msgid "Future"
+#~ msgstr "Будућност"
+
+#~ msgid ""
+#~ "We sincerely regret the current situation, but unfortunately our hands "
+#~ "are tied. If there are no more changes to the Twitter API or access "
+#~ "levels, we will consider removing the Twitter integration with Zammad "
+#~ "7.0. At the moment, we are also in the process of monitoring the market "
+#~ "very closely to see if there are any alternatives to Twitter/X that we "
+#~ "can integrate into Zammad, and if so, which ones."
+#~ msgstr ""
+#~ "Искрено жалимо због тренутне ситуације, али су нам нажалост руке везане. "
+#~ "Ако више не буде промена у Twitter API или нивоима приступа, размотрићемо "
+#~ "уклањање Twitter интеграције од Zammad 7.0. Тренутно смо такође у процесу "
+#~ "веома пажљивог праћења тржишта да видимо да ли постоје алтернативе за "
+#~ "Twitter/X које можемо да интегришемо у Zammad, и ако јесте, које тачно."
+
+#~ msgid "As soon as we have news about this, we will inform you."
+#~ msgstr "Чим будемо имали новости о овој теми, обавестићемо вас."
+
+#~ msgid ""
+#~ "We understand that this news is unsatisfactory for you and would have "
+#~ "preferred more positive news. However, we would like to play with open "
+#~ "cards at this point and provide clarity."
+#~ msgstr ""
+#~ "Разумемо да су ове вести незадовољавајуће за вас и да бисмо више волели "
+#~ "позитивније вести. Међутим, желели бисмо да отворимо све карте у овом "
+#~ "тренутку и пружимо јасноћу."
+
+#~ msgid "⬅️ :doc:`Back to Twitter/X Channel <./twitter>`."
+#~ msgstr "⬅️ :doc:`Назад на Twitter/X канал <./twitter>`."
+
+#~ msgid "``admin.channel_twitter``"
+#~ msgstr "``admin.channel_twitter``"
+
+#~ msgid ":doc:`Channels > Twitter </channels/twitter-x/twitter>`"
+#~ msgstr ":doc:`Канали > Twitter </channels/twitter-x/twitter>`"
+
+#~ msgid ""
+#~ "Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-"
+#~ "levels`"
+#~ msgstr ""
+#~ "Приступ Twitter/X тикетима за оператере: :doc:`/manage/groups/access-"
+#~ "levels`"
+
+#~ msgid "Time accounting view with time accounted filters"
+#~ msgstr "Приказ обрачуна времена са филтерима"
+
+#~ msgid ""
+#~ "Each heading allows you to download the CSV versions of the provided view "
+#~ "via the download button next to it."
+#~ msgstr ""
+#~ "Сваки наслов вам омогућава да преузмете CSV верзије датог приказа путем "
+#~ "дугмета за преузимање поред њега."
+
+#~ msgid "Twitter - tweet initials"
+#~ msgstr "Твитер - иницијали твита"
+
+#~ msgid ""
+#~ "When set to yes, this will add ``/CM`` (first character of first- and "
+#~ "last name) to the bottom of every tweet answer you create. This only "
+#~ "affects tickets that come from the Twitter Channel."
+#~ msgstr ""
+#~ "Када је постављено на да, ово ће додати ``/CM`` (прво слово имена и "
+#~ "презимена) при дну сваког одговора на твит који додате. Ово утиче само на "
+#~ "тикете који долазе са Twitter канала."
+
+#~ msgid ""
+#~ "Link to the :doc:`Twitter channel in the settings </channels/twitter-x/"
+#~ "twitter>`."
+#~ msgstr ""
+#~ "Линк на :doc:`Twitter канал у подешавањима </channels/twitter-x/twitter>`."
+
+#~ msgid "Slack"
+#~ msgstr "Slack"
+
+#~ msgid "**⚠️ Deprecation warning ⚠️**"
+#~ msgstr "**⚠️ Упозорење о застаревању ⚠️**"
+
+#~ msgid ""
+#~ "Zammad 7 will no longer support this dedicated Slack integration. It is "
+#~ "recommended to switch to :doc:`pre-defined webhooks </manage/webhook/"
+#~ "examples/slack-notifications>` instead. Existing Slack integrations "
+#~ "should be migrated manually before this feature is dropped."
+#~ msgstr ""
+#~ "Zammad 7 више неће подржавати ову наменску Slack интеграцију. Препоручује "
+#~ "се да се уместо тога пребаците на :doc:`повратне позиве по шаблону </"
+#~ "manage/webhook/examples/slack-notifications>`. Постојеће Slack "
+#~ "интеграције је потребно ручно мигрирати пре него што се ова функција "
+#~ "укине."
+
+#~ msgid ""
+#~ "In order to use this feature, please add a new Slack app to your "
+#~ "Workspace. The App you need is called ``Incoming WebHooks`` ."
+#~ msgstr ""
+#~ "Да бисте користили ову функцију, додајте нову Slack апликацију у своје "
+#~ "окружење. Апликација која вам је потребна зове се ``Incoming WebHooks``."
+
+#~ msgid "Why Do I Need This Feature?"
+#~ msgstr "Зашто ми треба ова функција?"
+
+#~ msgid ""
+#~ "If you're already using Slack for your team communication, you'll love "
+#~ "this feature! Our Slack integration can push ticket notifications about "
+#~ "the last ticket article based on the following events:"
+#~ msgstr ""
+#~ "Ако већ користите Slack за комуникацију у оквиру вашег тима, свидеће вам "
+#~ "се ова функција! Наша Slack интеграција може да објави обавештења о "
+#~ "последњем чланку тикета на основу следећих догађаја:"
+
+#~ msgid "on Ticket creation"
+#~ msgstr "при отварању тикета"
+
+#~ msgid "on Ticket updates"
+#~ msgstr "при освежавању тикета"
+
+#~ msgid "on reached reminders"
+#~ msgstr "по достигнутим подсетницима"
+
+#~ msgid "a Ticket has escalated"
+#~ msgstr "по ескалирању тикета"
+
+#~ msgid "a Ticket is going to escalate"
+#~ msgstr "пре ескалације тикета"
+
+#~ msgid ""
+#~ "Zammad will provide the Ticket title, a direct link to the Ticket, the "
+#~ "event type (creation, updated, escalation), the customer, time and the "
+#~ "last article that has triggered the notification."
+#~ msgstr ""
+#~ "Zammad ће обезбедити наслов тикета, директан линк до тикета, тип догађаја "
+#~ "(отварање, освежавање, ескалација), клијента, време и последњи чланак "
+#~ "који је окинуо обавештење."
+
+#~ msgid ""
+#~ "This will give you further options, as you can see e.g. escalating "
+#~ "tickets that are assigned to an agent that's e.g. absent. You can "
+#~ "interact faster, as you might see problems earlier (or even before the "
+#~ "problem gets one)."
+#~ msgstr ""
+#~ "Ово ће вам пружити додатне опције, као што су ескалације тикета које су "
+#~ "додељене оператеру који је нпр. одсутан. Можете да комуницирате брже, јер "
+#~ "ћете можда раније уочити проблеме (или чак и пре него што се проблем "
+#~ "појави)."
+
+#~ msgid ""
+#~ "If needed and wanted, you can even discuss directly about the topic "
+#~ "before sending an answer to the customer. Another possible use case would "
+#~ "be a agent monitoring new agents and their answers to tickets."
+#~ msgstr ""
+#~ "Ако је потребно и желите, можете чак и директно да разговарате о теми пре "
+#~ "него што пошаљете одговор клијенту. Други могући случај употребе би био "
+#~ "да оператер надгледа нове оператере и њихове одговоре на тикете."
+
+#~ msgid "Configure the Integration"
+#~ msgstr "Конфигуришите интеграцију"
+
+#~ msgid ""
+#~ "First of all, please go to your slack workspace - go to administration => "
+#~ "Manage Apps. If you don't have an app yet, you can simply add a new one - "
+#~ "just search for ``Incoming WebHooks`` and customize the app to your needs."
+#~ msgstr ""
+#~ "Пре свега, у административном панелу вашег окружења идите на Manage Apps. "
+#~ "Ако још увек немате апликацију, можете једноставно да додате нову - само "
+#~ "потражите ``Incoming WebHooks`` и прилагодите апликацију својим потребама."
+
+#~ msgid ""
+#~ "Choose (or create) the channel Zammad should post it's information to and "
+#~ "press on \"Add Incoming WebHooks integration\". If you're ready, copy the "
+#~ "provided WebHook URL and go to your Zammad installation."
+#~ msgstr ""
+#~ "Изаберите (или додајте) канал у ком Zammad треба да објави своје "
+#~ "информације и притисните „Add Incoming WebHooks integration“. Ако сте "
+#~ "спремни, копирајте наведени WebHook URL и идите на своју Zammad "
+#~ "инсталацију."
+
+#~ msgid ""
+#~ "You need administrative rights on the Slack Workspace. The link to the "
+#~ "app directory is normally ``https://[workspace-name].slack.com/apps`` ."
+#~ msgstr ""
+#~ "Потребна су вам административна права за ваше Slack окружење. Линк на "
+#~ "директоријум апликација је обично ``https://[назив-окружења].slack.com/"
+#~ "apps``."
+
+#~ msgid ""
+#~ "To configure the slack integration, log in to Zammad and go to "
+#~ "Integrations (System) => Slack in the admin panel."
+#~ msgstr ""
+#~ "Да бисте подесили Slack интеграцију, пријавите се у Zammad и идите на "
+#~ "Интеграције (Систем) => Slack у панелу администратора."
+
+#~ msgid ""
+#~ "Here you can choose on what evens Zammad should post information about a "
+#~ "ticket to your Slack channel. Next you need to device what groups shall "
+#~ "be affected by this, as anybody with access to that specific Slack "
+#~ "channel can read at least parts of the ticket this might be a privacy "
+#~ "issue, if you select the wrong groups. The username is simply the name "
+#~ "that Zammad uses as display name inside the Slack chat. The channel "
+#~ "defines the Slack channel the information is being posted in. As last "
+#~ "option, you can set a custom icon for posting to slack."
+#~ msgstr ""
+#~ "Овде можете да изаберете у ком периоду Zammad треба да објави информације "
+#~ "о тикету у вашем Slack каналу. Затим, морате одредити на које групе ће "
+#~ "ово утицати, јер свако ко има приступ дотичном Slack каналу може да "
+#~ "прочита бар делове тикета, што може представљати проблем приватности ако "
+#~ "изаберете погрешне групе. Корисничко име је једноставно назив који Zammad "
+#~ "користи као име за приказ у Slack порукама. Канал одређује Slack канал у "
+#~ "ком ће бити објављене информације. Као последња опција, можете поставити "
+#~ "прилагођену иконицу за слање у Slack."
+
+#~ msgid ""
+#~ "When you're ready, just hit \"Submit\" and enable the integration. Zammad "
+#~ "will now post new ticket information based on the trigger you chose. "
+#~ "Below the options you have the recent log that shows the latest requests "
+#~ "to Slack for debugging if needed."
+#~ msgstr ""
+#~ "Када будете спремни, само притисните „Пошаљи“ и укључите интеграцију. "
+#~ "Zammad ће од сада објављивати нове информације о тикету на основу окидача "
+#~ "који сте изабрали. Испод опција имате недавне уносе евиденције који "
+#~ "приказује најновије захтеве упућене Slack-у за помоћ приликом отклањања "
+#~ "грешака."
+
+#~ msgid ""
+#~ "If you leave the Icon URL empty, Zammad will use the Zammad logo instead. "
+#~ "The icon should be a square PNG file."
+#~ msgstr ""
+#~ "Ако оставите URL иконице празан, Zammad ће уместо ње користити Zammad "
+#~ "лого. Иконица треба да буде квадратна PNG сличица."
+
+#~ msgid "The Result"
+#~ msgstr "Резултат"
+
+#~ msgid ""
+#~ "The following figure shows how it will look if you choose to receive "
+#~ "updates on created and updated tickets. On every post Zammad sends to the "
+#~ "Slack channel, you can create new threads to discuss about the new "
+#~ "article."
+#~ msgstr ""
+#~ "Следећа слика приказује како изгледа ако одаберете да примате обавештења "
+#~ "о отвореним и освеженим тикетима. На сваки пост који Zammad пошаље у "
+#~ "Slack канал, можете отворити тему за дискусију о новом чланку."
+
+#~ msgid ""
+#~ "If you just want to keep track of soon escalating or already escalated "
+#~ "tickets, it will look the the following figure. Zammad changes the color "
+#~ "in front of the post so you can easily see the state of the ticket."
+#~ msgstr ""
+#~ "Ако само желите да пратите тикете који скоро ескалирају или су већ "
+#~ "ескалирали, то ће изгледати као на следећој слици. Zammad мења боју "
+#~ "испред поста тако да можете лако да процените стање тикета."
+
+#~ msgid ""
+#~ "If you change the state, Zammad will also put information on what state "
+#~ "the ticket gets and (if pending state) the date until it pends. You'll "
+#~ "also recognize the color codes in front of posts on slack, as they are "
+#~ "exact the same the ticket state colors you'll see in Zammad!"
+#~ msgstr ""
+#~ "Ако промените стање, Zammad ће такође ставити информацију о томе у ком "
+#~ "стању је тикет и (ако је на чекању) време чекања тикета. Такође ћете "
+#~ "препознати боју стања испред Slack постова, јер су потпуности исте које "
+#~ "моћете видети у Zammad-у!"
 
 #~ msgid "Screenshot showing how a group configuration can look like."
 #~ msgstr "Снимак екрана који показује како подешавање групе може изгледати."
