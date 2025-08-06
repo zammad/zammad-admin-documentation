@@ -8,21 +8,16 @@ Zammad offers AI powered features to support your agents! The
 configuration is pretty easy so the entry barrier is low.
 Read on how to configure it and check which features are currently supported.
 
-.. tip:: 🚀✨ **What's the easiest way to get AI features running?** 🚀✨
-
-   Subscribe to a plan with Zammad AI, go to *AI > Provider* in the Zammad
-   settings and choose :ref:`Zammad AI <zammad-ai-provider>`. Enter the token
-   you received and read on in the desired feature's section.
-
-.. figure:: /images/ai/ai-provider.png
-   :alt: Screenshot shows configuration of AI provider in Zammad
-
 Provider Configuration
 ----------------------
 
 To use AI feature in Zammad, you have to configure an AI provider which handles
 the requests. You can configure it in Zammad's admin settings under
 *AI > Provider*.
+
+.. figure:: /images/ai/ai-provider.png
+   :alt: Screenshot shows configuration of AI provider in Zammad
+   :align: center
 
 The following providers are supported:
 
@@ -106,9 +101,9 @@ section.
 Zammad AI
 ^^^^^^^^^
 
-.. tip:: Don't want to deal with all this stuff or just want to have a privacy
-   respecting AI service? No problem! Get in touch with us to get your
-   token and you are ready to start.
+.. note:: Zammad as AI provider is currently limited to specific customers for
+   testing. If you're interested as well, please
+   `let our sales department know <https://zammad.com/en/company/contact>`_.
 
 The usage of Zammad AI as a provider has some benefits:
 
@@ -121,5 +116,3 @@ The usage of Zammad AI as a provider has some benefits:
 To configure it, simply choose **Zammad AI** as your provider and add your
 token. After that, make sure to click the ``Save`` button and read on in
 the desired feature's section.
-
-.. note:: Zammad as AI provider is currently limited to SaaS customers.
