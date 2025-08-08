@@ -14,8 +14,8 @@ feature. Otherwise, a warning message will tell you to do so.
    :scale: 80%
 
 If you activate this feature, **Customer Intent** and **Conversation Summary**
-are enabled by default. You can choose to activate **Open Questions** and
-**Suggested Next Steps**, depending if this is helpful in your use case.
+are enabled by default. You can choose to activate **Open Questions**,
+**Upcoming Events** and **Customer Sentiment**, depending on your use case.
 
 Enabling the ticket summary feature triggers a request to the configured AI
 service at the configured action (see below). After the summary is generated,
