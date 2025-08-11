@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-25 11:09+0200\n"
+"POT-Creation-Date: 2025-08-05 11:55+0200\n"
 "PO-Revision-Date: 2025-06-16 15:00+0000\n"
 "Last-Translator: LomaxThomas <thomas.hartvig@lomax.dk>\n"
 "Language-Team: Danish <https://translations.zammad.org/projects/"
@@ -37,7 +37,7 @@ msgid ""
 "While an AI agent works on a ticket, an avatar is displayed in the live user "
 "section in the bottom bar of the ticket detail view, see example below. In "
 "such a short period of time, the agents should not apply changes to the "
-"ticket because they could get overwritten, depending on the AI agent type."
+"ticket because they could get overwritten."
 msgstr ""
 
 #: ../ai/ai-agents.rst:20
@@ -59,23 +59,19 @@ msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
 msgstr ""
 
 #: ../ai/ai-agents.rst:26
-msgid "The types of AI agents are limited to the available options."
-msgstr ""
-
-#: ../ai/ai-agents.rst:27
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
 "</manage/trigger>` or a :doc:`scheduler job </manage/scheduler>` with the "
 "action **AI** > **AI Agent**."
 msgstr ""
 
-#: ../ai/ai-agents.rst:31
+#: ../ai/ai-agents.rst:30
 msgid ""
 "If an AI agent applies changes to a ticket, you can find an entry in the "
 "ticket history with the name of the AI agent."
 msgstr ""
 
-#: ../ai/ai-agents.rst:35
+#: ../ai/ai-agents.rst:34
 msgid "Manage AI Agents"
 msgstr ""
 
@@ -83,7 +79,7 @@ msgstr ""
 msgid "Screenshot shows AI agents management"
 msgstr ""
 
-#: ../ai/ai-agents.rst:42
+#: ../ai/ai-agents.rst:41
 msgid ""
 "Create an AI agent by clicking the **New AI Agent** button in the top right "
 "corner. This opens a wizard where you can choose the type of the agent and "
@@ -94,15 +90,66 @@ msgid ""
 "the AI agent table."
 msgstr ""
 
-#: ../ai/ai-agents.rst:53
+#: ../ai/ai-agents.rst:52
 msgid "AI Agent Types"
 msgstr ""
 
-#: ../ai/ai-agents.rst:56
-msgid "Ticket Group Dispatcher"
+#: ../ai/ai-agents.rst:54
+msgid ""
+"Define your AI agents and use them afterwards in triggers or scheduler jobs. "
+"An example for a trigger configuration could look like this:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:57
+msgid "Activated by: **Action**"
 msgstr ""
 
 #: ../ai/ai-agents.rst:58
+msgid "Action execution: **Selective**"
+msgstr ""
+
+#: ../ai/ai-agents.rst:59
+msgid "Conditions for affected objects: **Action** *is* ``created``"
+msgstr ""
+
+#: ../ai/ai-agents.rst:60
+msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+msgstr ""
+
+#: ../ai/ai-agents.rst:62
+msgid ""
+"Depending on the agent type, you can limit the available options for the AI "
+"agents. If you do so, make sure to select at least two options the agent can "
+"choose from."
+msgstr ""
+
+#: ../ai/ai-agents.rst:67
+msgid "Ticket Categorizer"
+msgstr ""
+
+#: ../ai/ai-agents.rst:69
+msgid ""
+"This AI agent is capable of assigning categories to tickets. Because there "
+"is no built in category field in Zammad, you first have to create "
+"a :doc:`custom ticket attribute </system/objects>` in which you want to "
+"track the ticket's category. The field type must be one of the select types."
+msgstr ""
+
+#: ../ai/ai-agents.rst:74
+msgid ""
+"The ticket categorizer AI agent uses the content of all articles and the "
+"title to compare it with your category names. You can limit from which "
+"categories the AI agent can choose from and define if multiple values are "
+"possible (if using a multi-select field type) in the wizard. In case you "
+"limit the categories, you can also provide a description for each category "
+"the AI agent can choose from."
+msgstr ""
+
+#: ../ai/ai-agents.rst:82
+msgid "Ticket Group Dispatcher"
+msgstr ""
+
+#: ../ai/ai-agents.rst:84
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
 "compares the content of the ticket in question with your group names in "
@@ -111,30 +158,30 @@ msgid ""
 "for the AI agent in the configuration wizard."
 msgstr ""
 
-#: ../ai/ai-agents.rst:64
+#: ../ai/ai-agents.rst:92
+msgid "Ticket Prioritizer"
+msgstr ""
+
+#: ../ai/ai-agents.rst:94
 msgid ""
-"If you limit the available groups for this agent, make sure to select at "
-"least two groups."
+"This AI agent is capable of setting a ticket priority based on the title of "
+"the ticket and the content of the last article. You can choose to use all "
+"priorities or limit them to specific ones. In case you limit the priorities, "
+"you can also provide a description for each priority the AI agent can choose "
+"from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:67
-msgid "A useful trigger configuration for such AI agent could look like this:"
+#: ../ai/ai-agents.rst:100
+msgid "Ticket Title Rewriter"
 msgstr ""
 
-#: ../ai/ai-agents.rst:69
-msgid "Activated by: **Action**"
-msgstr ""
-
-#: ../ai/ai-agents.rst:70
-msgid "Action execution: **Selective**"
-msgstr ""
-
-#: ../ai/ai-agents.rst:71
-msgid "Conditions for affected objects: **Action** *is* ``created``"
-msgstr ""
-
-#: ../ai/ai-agents.rst:72
-msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
+#: ../ai/ai-agents.rst:102
+msgid ""
+"This AI agent is capable of rephrasing the ticket title based on the content "
+"of the last article. The title is not considered by the agent and gets "
+"completely rewritten. This can be useful if your customers often send "
+"requests with unclear subjects or if you have a specific channel which only "
+"creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
 #: ../ai/provider.rst:2
@@ -386,7 +433,7 @@ msgid ""
 "in the :ref:`provider configuration <ollama-provider>`."
 msgstr ""
 
-#: ../channels/chat.rst:2 ../misc/first-steps.rst:88
+#: ../channels/chat.rst:2 ../misc/first-steps.rst:84
 msgid "Chat"
 msgstr ""
 
@@ -2282,7 +2329,7 @@ msgstr ""
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:57
+#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:56
 #: ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
@@ -2691,7 +2738,7 @@ msgid ""
 "write a mail:"
 msgstr ""
 
-#: ../channels/facebook.rst:2 ../misc/first-steps.rst:84
+#: ../channels/facebook.rst:2 ../misc/first-steps.rst:80
 #: ../settings/security/third-party/facebook.rst:2
 msgid "Facebook"
 msgstr ""
@@ -5621,382 +5668,6 @@ msgstr ""
 msgid "The message will appear in your Telegram client."
 msgstr ""
 
-#: ../channels/twitter-x/twitter.rst:2
-msgid "Twitter/X"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:6
-msgid "*Updated: 08/2023*"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:8
-msgid ""
-"Please note: Currently, we keep naming it \"Twitter\" or \"Twitter/X\" in "
-"the documentation, as it is the quite common name and for better "
-"readability. Of course we mean just \"X\"."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:12
-msgid ""
-"⚠️ Due to the current situation, there are some issues regarding the Twitter/"
-"X integration. Please see :doc:`twitter-x-note` for further details before "
-"reading on!"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:16
-msgid ""
-"Zammad supports Twitter integration, meaning you can send and receive tweets "
-"and DMs just like emails!"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:23
-msgid "Twitter Ticket with draft reply"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:23
-msgid ""
-"Twitter tickets will show a 🐦 Twitter bird in the reply area. Just click on "
-"the reply button (as you would for an email) to tweet back."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:27
-msgid "To set it up, follow the steps below:"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:29
-msgid ""
-"Apply for a `Twitter Developer account <https://developer.twitter.com/en/"
-"apply/user>`_."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:30
-msgid ""
-"`Create a new Twitter app <https://developer.twitter.com/en/apps/create>`_ "
-"for Zammad."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:32
-msgid ""
-"Set your new app's permissions to *Read, write, and access direct messages.*"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:34
-msgid "Generate a new access token & secret."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:35
-msgid ""
-"`Set up a dev environment <https://developer.twitter.com/en/account/"
-"environments>`_ for the Account Activity API."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:37
-msgid "Add your new Twitter app in Zammad."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:38
-msgid "Add your Twitter account in Zammad."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:39
-msgid ""
-"Configure filters for creating new tickets based on **#tags** and "
-"**@mentions**."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:42
-msgid "Read on for details about each step."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:45
-msgid "1. Apply for a Twitter Developer Account"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:51
-msgid "Twitter Developer account: Welcome page"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:51
-msgid ""
-"This welcome page is displayed after completing the application for a "
-"Developer account."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:54
-msgid ""
-"You will need a regular Twitter account with a verified phone number to "
-"apply for a `Twitter Developer account`_ (at https://developer.twitter.com)."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:57
-msgid ""
-"During the application process, you will be asked to **Describe in your own "
-"words what you are building**. You may use the answer below::"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:69
-msgid "2. Create a New Twitter App for Zammad"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:75
-msgid "Twitter Developer account: Create app page"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:75
-msgid ""
-"To create a new app, select **Apps** under your user menu, then click "
-"**Create an app**."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:78
-msgid ""
-"Once you have finished setting up your Developer account, use it to `create "
-"a new Twitter app`_. The following fields are **required:**"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:84
-msgid "App name"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:83
-msgid ""
-"Must be unique *across all of Twitter.* No other developer account may "
-"create an app with the same name."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:87
-msgid "Application description"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:87
-msgid "Anything is fine here."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:90
-msgid "Website URL"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:90
-msgid "The URL of your Zammad instance."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:96
-msgid "Callback URLs"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:93
-msgid ""
-"``https://<zammad_instance>/api/v1/external_credentials/twitter/callback``"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:95
-msgid ""
-"This URL is also visible in the **Connect Twitter App** dialog of your "
-"Zammad admin settings panel."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:102
-msgid "Tell us how this app will be used"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:99
-msgid "Anything is fine here. We suggest the following::"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:105
-msgid "3. Set Your New App's Permissions"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:0
-msgid "Twitter Developer account: App permissions page"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:111
-msgid "Select *Read, write, and access direct messages.*"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:114
-msgid "4. Generate a New Access Token & Secret"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:0
-msgid "Twitter Developer account: App keys and tokens page"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:120
-msgid "You will need all four keys/tokens later, so don't close this tab."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:123
-msgid "5. Set Up a Dev Environment"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:125
-msgid ""
-"After creating your app, `set up a dev environment`_ for the Account "
-"Activity API."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:132
-msgid "Twitter Developer account: Dev environments page"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:132
-msgid ""
-"Name it whatever you like (*e.g.,* ``zammad``). You will need the label "
-"later, so don't forget it."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:136
-msgid "6. Add Your New Twitter App in Zammad"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:142
-msgid "Zammad: Configure Twitter app"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:142
-msgid ""
-"Add your new Twitter app under **Channels > Twitter** in the admin settings "
-"panel. You will need the keys, tokens, and dev environment label from Steps "
-"4 and 5."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:147
-msgid "7. Add Your Twitter Account in Zammad"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:153
-msgid "Zammad: Add Twitter account"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:153
-msgid ""
-"Click **Add Account** under **Channels > Twitter** in the admin settings "
-"panel."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:160
-msgid "Twitter: Authorize Zammad"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:160
-msgid ""
-"You will be redirected to Twitter and asked to authorize Zammad to access "
-"your account."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:164
-msgid "8. Configure Filters"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:170
-msgid "Zammad: Configure Twitter accounts"
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:170
-msgid ""
-"Set up filters to automatically create new tickets based on **#tags** or "
-"**@mentions**."
-msgstr ""
-
-#: ../channels/twitter-x/twitter.rst:173
-msgid ""
-"That's it! Now, incoming tweets and DMs will be automatically turned into "
-"Zammad tickets."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:4
-msgid "Twitter/X note"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:5
-msgid "Updated: 08/2023"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:8
-msgid "Baseline situation"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:10
-msgid ""
-"The Twitter integration implemented in Zammad provides the following "
-"functionalities:"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:13
-msgid ""
-"Search for definable terms and automatic ticket creation based on the results"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:15
-msgid ""
-"Live notifications for your own Twitter account (e.g. if you are mentioned "
-"in a tweet or receive direct messages), that will be transformed into tickets"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:19
-msgid "Current situation"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:21
-msgid ""
-"The adjustments made to the API at Twitter/X (introduction of v2) as well as "
-"the restructuring of the access levels/pricing models (Free, Basic, Pro - "
-"https://developer.twitter.com/en/products/twitter-api) mean that the above-"
-"mentioned functionalities are no longer available in connection with old "
-"\"app registrations\" at the present time. These changes are heavily "
-"discussed in the Twitter community and cause discomfort."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:28
-msgid ""
-"In addition, we don't know if there will be another change on the part of "
-"Twitter/X in the future that will further limit or even restore "
-"functionality."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:32
-msgid "Prerequisite for the continued operation of Twitter in Zammad"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:34
-msgid ""
-"Access to the \"old\" Twitter API v1.1 or the Account Activity API, which is "
-"required for our functionalities, is now only available at the "
-"\"Enterprise\" access level. According to Twitter, the monthly costs for "
-"this start at 42,000 USD."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:40
-msgid "Future"
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:42
-msgid ""
-"We sincerely regret the current situation, but unfortunately our hands are "
-"tied. If there are no more changes to the Twitter API or access levels, we "
-"will consider removing the Twitter integration with Zammad 7.0. At the "
-"moment, we are also in the process of monitoring the market very closely to "
-"see if there are any alternatives to Twitter/X that we can integrate into "
-"Zammad, and if so, which ones."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:49
-msgid "As soon as we have news about this, we will inform you."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:51
-msgid ""
-"We understand that this news is unsatisfactory for you and would have "
-"preferred more positive news. However, we would like to play with open cards "
-"at this point and provide clarity."
-msgstr ""
-
-#: ../channels/twitter-x/twitter-x-note.rst:55
-msgid "⬅️ :doc:`Back to Twitter/X Channel <./twitter>`."
-msgstr ""
-
 #: ../channels/web.rst:2
 msgid "Web"
 msgstr ""
@@ -6034,7 +5705,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/web.rst:21 ../manage/public-links.rst:85 ../misc/composer.rst:65
-#: ../misc/composer.rst:72 ../system/objects/types.rst:0
+#: ../system/objects/types.rst:0
 msgid "Default: ``yes``"
 msgstr ""
 
@@ -6746,20 +6417,20 @@ msgstr ""
 msgid "Channels"
 msgstr ""
 
-#: ../index.rst:66
+#: ../index.rst:65
 msgid "AI"
 msgstr ""
 
-#: ../index.rst:76
+#: ../index.rst:75
 msgid "API (System-Documentation)"
 msgstr ""
 
-#: ../index.rst:76 ../misc/object-conditions/basics.rst:169
+#: ../index.rst:75 ../misc/object-conditions/basics.rst:169
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
 
-#: ../index.rst:96
+#: ../index.rst:95
 msgid "Misc"
 msgstr ""
 
@@ -9328,84 +8999,71 @@ msgid ""
 msgstr ""
 
 #: ../manage/roles/admin-permissions.rst:88
-msgid "``admin.channel_twitter``"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:89
-msgid ":doc:`Channels > Twitter </channels/twitter-x/twitter>`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:90
-msgid ""
-"Accessing Twitter/X tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-
-#: ../manage/roles/admin-permissions.rst:91
 msgid "``admin.channel_web``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:92
+#: ../manage/roles/admin-permissions.rst:89
 msgid ":doc:`Channels > Web </channels/web>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:94
+#: ../manage/roles/admin-permissions.rst:91
 msgid "``admin.channel_whatsapp``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:95
+#: ../manage/roles/admin-permissions.rst:92
 msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:97
+#: ../manage/roles/admin-permissions.rst:94
 msgid "``admin.checklist``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:98
+#: ../manage/roles/admin-permissions.rst:95
 msgid ":doc:`Manage > Checklist </manage/checklist>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:100
+#: ../manage/roles/admin-permissions.rst:97
 msgid "``admin.core_workflows``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:101
+#: ../manage/roles/admin-permissions.rst:98
 msgid ":doc:`System > Core Workflows </system/core-workflows>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:103
+#: ../manage/roles/admin-permissions.rst:100
 msgid "``admin.data_privacy``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:104
+#: ../manage/roles/admin-permissions.rst:101
 msgid ":doc:`System > Data Privacy </system/data-privacy>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:105
+#: ../manage/roles/admin-permissions.rst:102
 msgid ""
 "🔥 Be careful, it allows users to permanently delete data on the system."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:106
+#: ../manage/roles/admin-permissions.rst:103
 msgid "``admin.group``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:107
+#: ../manage/roles/admin-permissions.rst:104
 msgid ":doc:`Manage > Groups </manage/groups/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:109
+#: ../manage/roles/admin-permissions.rst:106
 msgid "``admin.integration``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:110
+#: ../manage/roles/admin-permissions.rst:107
 msgid ":doc:`System > Integrations </system/integrations/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:112
+#: ../manage/roles/admin-permissions.rst:109
 msgid "``admin.knowledge_base``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:113
+#: ../manage/roles/admin-permissions.rst:110
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
 msgstr ""
 
@@ -9424,47 +9082,47 @@ msgid ""
 "knowledge-base.html#editing-answers>`."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:118
+#: ../manage/roles/admin-permissions.rst:115
 msgid "``admin.macro``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:119
+#: ../manage/roles/admin-permissions.rst:116
 msgid ":doc:`Manage > Macros </manage/macros>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:120
+#: ../manage/roles/admin-permissions.rst:117
 msgid "In some cases, macros may also require ``admin.tag``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:121
+#: ../manage/roles/admin-permissions.rst:118
 msgid "``admin.maintenance``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:122
+#: ../manage/roles/admin-permissions.rst:119
 msgid ":doc:`System > Maintenance </system/maintenance>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:124
+#: ../manage/roles/admin-permissions.rst:121
 msgid "``admin.monitoring``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:125
+#: ../manage/roles/admin-permissions.rst:122
 msgid ":doc:`System > Monitoring </system/monitoring>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:127
+#: ../manage/roles/admin-permissions.rst:124
 msgid "``admin.object``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:128
+#: ../manage/roles/admin-permissions.rst:125
 msgid ":doc:`System > Objects </system/objects>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:130
+#: ../manage/roles/admin-permissions.rst:127
 msgid "``admin.organization``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:131
+#: ../manage/roles/admin-permissions.rst:128
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ""
 
@@ -9480,211 +9138,211 @@ msgstr ""
 msgid "They can even edit an organization's name, domain, and notes!"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:135
+#: ../manage/roles/admin-permissions.rst:132
 msgid "``admin.overview``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:136
+#: ../manage/roles/admin-permissions.rst:133
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:138
+#: ../manage/roles/admin-permissions.rst:135
 msgid "``admin.package``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:139
+#: ../manage/roles/admin-permissions.rst:136
 msgid ":doc:`System > Packages </system/packages>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:141
+#: ../manage/roles/admin-permissions.rst:138
 msgid "``admin.public_links``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:142
+#: ../manage/roles/admin-permissions.rst:139
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:144
+#: ../manage/roles/admin-permissions.rst:141
 msgid "``admin.report_profile``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:145
+#: ../manage/roles/admin-permissions.rst:142
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:146
+#: ../manage/roles/admin-permissions.rst:143
 msgid "Access to view reports: ``report``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:147
+#: ../manage/roles/admin-permissions.rst:144
 msgid "``admin.role``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:148
+#: ../manage/roles/admin-permissions.rst:145
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:150
+#: ../manage/roles/admin-permissions.rst:147
 msgid "``admin.scheduler``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:151
+#: ../manage/roles/admin-permissions.rst:148
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:152
+#: ../manage/roles/admin-permissions.rst:149
 msgid "For automation on tickets"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:153
+#: ../manage/roles/admin-permissions.rst:150
 msgid "``admin.security``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:154
+#: ../manage/roles/admin-permissions.rst:151
 msgid ":doc:`Settings > Security </settings/security>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:155
+#: ../manage/roles/admin-permissions.rst:152
 msgid "Settings of Zammad. This also covers third party authentications."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:156
+#: ../manage/roles/admin-permissions.rst:153
 msgid "``admin.session``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:157
+#: ../manage/roles/admin-permissions.rst:154
 msgid ":doc:`System > Sessions </system/sessions>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:159
+#: ../manage/roles/admin-permissions.rst:156
 msgid "``admin.sla``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:160
+#: ../manage/roles/admin-permissions.rst:157
 msgid ":doc:`Manage > SLAs </manage/slas/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:162
+#: ../manage/roles/admin-permissions.rst:159
 msgid "``admin.system``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:163
+#: ../manage/roles/admin-permissions.rst:160
 msgid ":doc:`Settings > System </settings/system/index>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:165
+#: ../manage/roles/admin-permissions.rst:162
 msgid "``admin.system_report``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:166
+#: ../manage/roles/admin-permissions.rst:163
 msgid ":doc:`System > System Report </system/system-report>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:168
+#: ../manage/roles/admin-permissions.rst:165
 msgid "``admin.tag``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:169
+#: ../manage/roles/admin-permissions.rst:166
 msgid ":doc:`Manage > Tags </manage/tags>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:171
+#: ../manage/roles/admin-permissions.rst:168
 msgid "``admin.template``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:172
+#: ../manage/roles/admin-permissions.rst:169
 msgid ":doc:`Manage > Templates </manage/templates>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:174
+#: ../manage/roles/admin-permissions.rst:171
 msgid "``admin.text_module``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:175
+#: ../manage/roles/admin-permissions.rst:172
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:177
+#: ../manage/roles/admin-permissions.rst:174
 msgid "``admin.ticket``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:178
+#: ../manage/roles/admin-permissions.rst:175
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:179
+#: ../manage/roles/admin-permissions.rst:176
 msgid "Does not grant access to :doc:`/misc/composer`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:180
+#: ../manage/roles/admin-permissions.rst:177
 msgid "``admin.ticket_auto_assignment``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:181
+#: ../manage/roles/admin-permissions.rst:178
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:183
+#: ../manage/roles/admin-permissions.rst:180
 msgid "``admin.ticket_duplicate_detection``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:184
+#: ../manage/roles/admin-permissions.rst:181
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:186
+#: ../manage/roles/admin-permissions.rst:183
 msgid "``admin.ticket_priority``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:187
+#: ../manage/roles/admin-permissions.rst:184
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:189
+#: ../manage/roles/admin-permissions.rst:186
 msgid "``admin.ticket_state``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:190
+#: ../manage/roles/admin-permissions.rst:187
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:192
+#: ../manage/roles/admin-permissions.rst:189
 msgid "``admin.time_accounting``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:193
+#: ../manage/roles/admin-permissions.rst:190
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:194
+#: ../manage/roles/admin-permissions.rst:191
 msgid "Also allows the export of timekeeping records."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:195
+#: ../manage/roles/admin-permissions.rst:192
 msgid "``admin.translation``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:196
+#: ../manage/roles/admin-permissions.rst:193
 msgid ":doc:`System > Translations </system/translations>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:197
+#: ../manage/roles/admin-permissions.rst:194
 msgid "Also enables inline translation"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:198
+#: ../manage/roles/admin-permissions.rst:195
 msgid "``admin.trigger``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:199
+#: ../manage/roles/admin-permissions.rst:196
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:201
+#: ../manage/roles/admin-permissions.rst:198
 msgid "``admin.user``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:202
+#: ../manage/roles/admin-permissions.rst:199
 msgid ":doc:`Manage > Users </manage/users/index>`"
 msgstr ""
 
@@ -9702,11 +9360,11 @@ msgid ""
 "from-users-perspective>` ."
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:207
+#: ../manage/roles/admin-permissions.rst:204
 msgid "``admin.webhook``"
 msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:208
+#: ../manage/roles/admin-permissions.rst:205
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
 msgstr ""
 
@@ -11609,7 +11267,7 @@ msgstr ""
 msgid "Screenshot showing a selection for year and month on time accounting"
 msgstr ""
 
-#: ../manage/time-accounting.rst:197
+#: ../manage/time-accounting.rst:190
 msgid "Tickets and their accounted time"
 msgstr ""
 
@@ -11728,7 +11386,7 @@ msgid ""
 "total of time accounted in the current month (over all applicable tickets)."
 msgstr ""
 
-#: ../manage/time-accounting.rst:191 ../misc/object-conditions/basics.rst:28
+#: ../manage/time-accounting.rst:190 ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:115
 #: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:13
 msgid "Organization"
@@ -11745,16 +11403,6 @@ msgid ""
 "You can also see entries for customers that are part of a primary "
 "organization. Users without an organization can be found in the Customer "
 "filter."
-msgstr ""
-
-#: ../manage/time-accounting.rst:0
-msgid "Time accounting view with time accounted filters"
-msgstr ""
-
-#: ../manage/time-accounting.rst:197
-msgid ""
-"Each heading allows you to download the CSV versions of the provided view "
-"via the download button next to it."
 msgstr ""
 
 #: ../manage/trigger.rst:2
@@ -14437,17 +14085,6 @@ msgstr ""
 msgid "Example: ``On Thursday, June 27, 2019, 3:37:11 PM, Jacob Smith wrote:``"
 msgstr ""
 
-#: ../misc/composer.rst:71
-msgid "Twitter - tweet initials"
-msgstr ""
-
-#: ../misc/composer.rst:68
-msgid ""
-"When set to yes, this will add ``/CM`` (first character of first- and last "
-"name) to the bottom of every tweet answer you create. This only affects "
-"tickets that come from the Twitter Channel."
-msgstr ""
-
 #: ../misc/first-steps.rst:4
 msgid ""
 "After the basic setup of Zammad with the getting started wizard, you will "
@@ -14569,30 +14206,20 @@ msgstr ""
 msgid "Additional Channels"
 msgstr ""
 
-#: ../misc/first-steps.rst:80 ../settings/security/third-party/twitter.rst:2
-msgid "Twitter"
-msgstr ""
-
 #: ../misc/first-steps.rst:79
-msgid ""
-"Link to the :doc:`Twitter channel in the settings </channels/twitter-x/"
-"twitter>`."
-msgstr ""
-
-#: ../misc/first-steps.rst:83
 msgid ""
 "Link to the :doc:`Facebook channel in the settings </channels/facebook>`."
 msgstr ""
 
-#: ../misc/first-steps.rst:87
+#: ../misc/first-steps.rst:83
 msgid "Link to the :doc:`chat channel in the settings </channels/chat>`."
 msgstr ""
 
-#: ../misc/first-steps.rst:91
+#: ../misc/first-steps.rst:87
 msgid "Online Forms"
 msgstr ""
 
-#: ../misc/first-steps.rst:91
+#: ../misc/first-steps.rst:87
 msgid "Link to the :doc:`form channel in the settings </channels/form>`."
 msgstr ""
 
@@ -19882,6 +19509,10 @@ msgid ""
 "to grant them access."
 msgstr ""
 
+#: ../settings/security/third-party/twitter.rst:2
+msgid "Twitter"
+msgstr ""
+
 #: ../settings/security/third-party/twitter.rst:4
 msgid ""
 "It is possible to create a quick login for your helpdesk via Twitter. To do "
@@ -23219,7 +22850,7 @@ msgid ""
 "You can see what requests Zammad sent to Clearbit and also the APIs response."
 msgstr ""
 
-#: ../system/integrations/clearbit.rst:80
+#: ../system/integrations/clearbit.rst:78
 msgid ""
 "By the way, you can also view the API log on the Clearbit website - the "
 "information seen is basically the same."
@@ -25315,162 +24946,6 @@ msgid ""
 "import it to Zammad."
 msgstr ""
 
-#: ../system/integrations/slack.rst:2
-msgid "Slack"
-msgstr ""
-
-#: ../system/integrations/slack.rst:4
-msgid "**⚠️ Deprecation warning ⚠️**"
-msgstr ""
-
-#: ../system/integrations/slack.rst:6
-msgid ""
-"Zammad 7 will no longer support this dedicated Slack integration. It is "
-"recommended to switch to :doc:`pre-defined webhooks </manage/webhook/"
-"examples/slack-notifications>` instead. Existing Slack integrations should "
-"be migrated manually before this feature is dropped."
-msgstr ""
-
-#: ../system/integrations/slack.rst:14
-msgid ""
-"In order to use this feature, please add a new Slack app to your Workspace. "
-"The App you need is called ``Incoming WebHooks`` ."
-msgstr ""
-
-#: ../system/integrations/slack.rst:18
-msgid "Why Do I Need This Feature?"
-msgstr ""
-
-#: ../system/integrations/slack.rst:20
-msgid ""
-"If you're already using Slack for your team communication, you'll love this "
-"feature! Our Slack integration can push ticket notifications about the last "
-"ticket article based on the following events:"
-msgstr ""
-
-#: ../system/integrations/slack.rst:24
-msgid "on Ticket creation"
-msgstr ""
-
-#: ../system/integrations/slack.rst:25
-msgid "on Ticket updates"
-msgstr ""
-
-#: ../system/integrations/slack.rst:26
-msgid "on reached reminders"
-msgstr ""
-
-#: ../system/integrations/slack.rst:27
-msgid "a Ticket has escalated"
-msgstr ""
-
-#: ../system/integrations/slack.rst:28
-msgid "a Ticket is going to escalate"
-msgstr ""
-
-#: ../system/integrations/slack.rst:30
-msgid ""
-"Zammad will provide the Ticket title, a direct link to the Ticket, the event "
-"type (creation, updated, escalation), the customer, time and the last "
-"article that has triggered the notification."
-msgstr ""
-
-#: ../system/integrations/slack.rst:34
-msgid ""
-"This will give you further options, as you can see e.g. escalating tickets "
-"that are assigned to an agent that's e.g. absent. You can interact faster, "
-"as you might see problems earlier (or even before the problem gets one)."
-msgstr ""
-
-#: ../system/integrations/slack.rst:38
-msgid ""
-"If needed and wanted, you can even discuss directly about the topic before "
-"sending an answer to the customer. Another possible use case would be a "
-"agent monitoring new agents and their answers to tickets."
-msgstr ""
-
-#: ../system/integrations/slack.rst:44
-msgid "Configure the Integration"
-msgstr ""
-
-#: ../system/integrations/slack.rst:46
-msgid ""
-"First of all, please go to your slack workspace - go to administration => "
-"Manage Apps. If you don't have an app yet, you can simply add a new one - "
-"just search for ``Incoming WebHooks`` and customize the app to your needs."
-msgstr ""
-
-#: ../system/integrations/slack.rst:50
-msgid ""
-"Choose (or create) the channel Zammad should post it's information to and "
-"press on \"Add Incoming WebHooks integration\". If you're ready, copy the "
-"provided WebHook URL and go to your Zammad installation."
-msgstr ""
-
-#: ../system/integrations/slack.rst:56
-msgid ""
-"You need administrative rights on the Slack Workspace. The link to the app "
-"directory is normally ``https://[workspace-name].slack.com/apps`` ."
-msgstr ""
-
-#: ../system/integrations/slack.rst:63
-msgid ""
-"To configure the slack integration, log in to Zammad and go to Integrations "
-"(System) => Slack in the admin panel."
-msgstr ""
-
-#: ../system/integrations/slack.rst:66
-msgid ""
-"Here you can choose on what evens Zammad should post information about a "
-"ticket to your Slack channel. Next you need to device what groups shall be "
-"affected by this, as anybody with access to that specific Slack channel can "
-"read at least parts of the ticket this might be a privacy issue, if you "
-"select the wrong groups. The username is simply the name that Zammad uses as "
-"display name inside the Slack chat. The channel defines the Slack channel "
-"the information is being posted in. As last option, you can set a custom "
-"icon for posting to slack."
-msgstr ""
-
-#: ../system/integrations/slack.rst:74
-msgid ""
-"When you're ready, just hit \"Submit\" and enable the integration. Zammad "
-"will now post new ticket information based on the trigger you chose. Below "
-"the options you have the recent log that shows the latest requests to Slack "
-"for debugging if needed."
-msgstr ""
-
-#: ../system/integrations/slack.rst:81
-msgid ""
-"If you leave the Icon URL empty, Zammad will use the Zammad logo instead. "
-"The icon should be a square PNG file."
-msgstr ""
-
-#: ../system/integrations/slack.rst:88
-msgid "The Result"
-msgstr ""
-
-#: ../system/integrations/slack.rst:90
-msgid ""
-"The following figure shows how it will look if you choose to receive updates "
-"on created and updated tickets. On every post Zammad sends to the Slack "
-"channel, you can create new threads to discuss about the new article."
-msgstr ""
-
-#: ../system/integrations/slack.rst:96
-msgid ""
-"If you just want to keep track of soon escalating or already escalated "
-"tickets, it will look the the following figure. Zammad changes the color in "
-"front of the post so you can easily see the state of the ticket."
-msgstr ""
-
-#: ../system/integrations/slack.rst:102
-msgid ""
-"If you change the state, Zammad will also put information on what state the "
-"ticket gets and (if pending state) the date until it pends. You'll also "
-"recognize the color codes in front of posts on slack, as they are exact the "
-"same the ticket state colors you'll see in Zammad!"
-msgstr ""
-
 #: ../system/integrations/smime/index.rst:2
 msgid "S/MIME"
 msgstr ""
@@ -26088,22 +25563,22 @@ msgid ""
 "token is already included."
 msgstr ""
 
-#: ../system/monitoring.rst:37
+#: ../system/monitoring.rst:36
 msgid "Screenshot showing Current Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:37
+#: ../system/monitoring.rst:36
 msgid "Screenshot showing Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:39
+#: ../system/monitoring.rst:38
 msgid ""
 "In addition to that, you can reset the auto-generated token to make sure "
 "that already configured monitoring systems won't work anymore. So, please "
 "use this \"*Reset*\" button only if you know what you do!"
 msgstr ""
 
-#: ../system/monitoring.rst:44
+#: ../system/monitoring.rst:43
 msgid "Example Output"
 msgstr ""
 
@@ -26111,7 +25586,7 @@ msgstr ""
 msgid "No issues found"
 msgstr ""
 
-#: ../system/monitoring.rst:48 ../system/monitoring.rst:60
+#: ../system/monitoring.rst:47 ../system/monitoring.rst:62
 msgid "**Indicator in Zammad**:"
 msgstr ""
 
@@ -26119,7 +25594,7 @@ msgstr ""
 msgid "Screenshot showing monitoring with no issues"
 msgstr ""
 
-#: ../system/monitoring.rst:54 ../system/monitoring.rst:66
+#: ../system/monitoring.rst:53 ../system/monitoring.rst:68
 msgid "**API response**::"
 msgstr ""
 
