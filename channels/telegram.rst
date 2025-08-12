@@ -51,5 +51,8 @@ see your bot now in the channel detail section.
 .. image:: /images/channels/telegram/telegram_created.png
    :alt: Screenshot shows existing Telegram bot in Zammad
    :align: center
+   :scale: 80%
 
-That's all! Now you can start using the Telegram channel in Zammad.
+That's it. Now you can start using the Telegram channel in Zammad. To add
+another bot or edit, deactivate or delete the created bot, use the respective
+buttons to do so.
