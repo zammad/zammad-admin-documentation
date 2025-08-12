@@ -2,11 +2,11 @@ Telegram
 ========
 
 It's possible to put your Telegram bot communication into Zammad.
-To do so, you need to follow these steps.
+To do so, you need to follow the steps below.
 
 .. note::
 
-   - Your Zammad instance needs to be publicly available via HTTPS (we use
+   - Your Zammad instance needs to be publicly available via HTTPS (usage of
      Telegram webhooks).
    - The attachment size is limited to 20MB by
      `Telegram's Bot API <https://core.telegram.org/bots/api#getfile>`_.
@@ -14,65 +14,42 @@ To do so, you need to follow these steps.
 Register a Telegram Bot App
 ---------------------------
 
-Register your Telegram bot via your Telegram client, see also
-`here <https://core.telegram.org/bots#3-how-do-i-create-a-bot>`_.
+Register your Telegram bot via your Telegram client according to the steps
+below. You can find additional information in
+`Telegram's bot documentation <https://core.telegram.org/bots#3-how-do-i-create-a-bot>`_.
 
 Go to BotFather
+   .. image:: /images/channels/telegram/telegram_bot_start.png
+      :alt: Screenshot shows initial BotFather chat in Telegram
 
-.. image:: /images/channels/telegram/telegram_bot_start.png
-   :alt: initial page
+Register a new bot
+   Register a new bot by using ``/newbot`` and define its name and username.
 
-Register a new bot by using "/newbot" and define its name and username
+   .. image:: /images/channels/telegram/telegram_bot_name_and_username.png
+      :alt: Screenshot shows BotFather chat where a new bot is created
 
-.. image:: /images/channels/telegram/telegram_bot_name_and_username.png
-   :alt: /newbot
+Get your API token
+   When you're all done, you will get your Telegram bot API token
 
-When you're all done, you will get your Telegram bot API token
-
-.. image:: /images/channels/telegram/telegram_bot_finish.png
-   :alt: bot has been created
+   .. image:: /images/channels/telegram/telegram_bot_finish.png
+      :alt: Screenshot shows BotFather chat after creating the bot
 
 Configure Zammad as Telegram Bot
 --------------------------------
 
-Go to "Admin > Channels > Telegram" and click "Add Bot"
+Go to *Channels > Telegram* in Zammad's settings and click ``Add Bot``. Enter
+your API token, a welcome message and a goodbye message and choose a group in
+which the tickets will be created.
 
-.. image:: /images/channels/telegram/telegram_admin_new.png
-   :alt: Admin > Channels > Telegram
+.. image:: /images/channels/telegram/telegram-configuration.png
+   :alt: Screenshot shows Zammad's Telegram configuration dialog
+   :align: center
 
-Enter your "API Token", your "welcome message" and set the incoming group.
+After successfully creating the bot by clicking the ``Submit`` button, you can
+see your bot now in the channel detail section.
 
-.. image:: /images/channels/telegram/telegram_admin_new_done.png
-   :alt: Telegram bot added
+.. image:: /images/channels/telegram/telegram_created.png
+   :alt: Screenshot shows existing Telegram bot in Zammad
+   :align: center
 
-Done, your Zammad is now configured as a Telegram bot.
-
-Start Using Your New Channel
-----------------------------
-
-Go to your Telegram client, search for your new Telegram bot and start writing
-a message.
-
-.. image:: /images/channels/telegram/telegram_client_search_bot.png
-   :alt: search for bot
-
-.. image:: /images/channels/telegram/telegram_client_start.png
-   :alt: enter a new message
-
-.. image:: /images/channels/telegram/telegram_client_start_with_first_message.png
-   :alt: first message
-
-After a few seconds a new message in Zammad appears.
-
-.. image:: /images/channels/telegram/telegram_agent_new_message.png
-   :alt: A new Ticket - the message - just reply
-
-Just click on reply button (as you do it for emails) to send a reply.
-
-.. image:: /images/channels/telegram/telegram_agent_reply.png
-   :alt: Ticket reply
-
-The message will appear in your Telegram client.
-
-.. image:: /images/channels/telegram/telegram_client_start_with_messages.png
-   :alt: enter a new message
+That's all! Now you can start using the Telegram channel in Zammad.
