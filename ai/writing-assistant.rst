@@ -3,10 +3,9 @@ Writing Assistant
 
 Zammad's writing assistant tools allow agents to apply AI based changes to
 their text before saving or sending it. You can access the settings in Zammad's
-admin section under *AI > Writing Assistant*.
-
-Make sure to configure an :doc:`AI provider <provider>` before activating the
-feature. Otherwise, a warning message will tell you to do so.
+admin section under *AI > Writing Assistant*. Make sure to configure an
+:doc:`AI provider <provider>` before activating the feature. Otherwise, a
+warning message will tell you to do so.
 
 Default Tools
 -------------
@@ -29,9 +28,9 @@ shipped by an update of Zammad.
 Add Custom Tools
 ----------------
 
-You can add your own custom text tools by providing instructions for the AI
+You can add your own custom write tools by providing instructions for the AI
 about how to check or perform changes to a given text. Use cases for such
-individual text tools could be:
+individual tools could be:
 
 - Apply branch specific wording
 - Apply company specific wording
@@ -42,9 +41,27 @@ individual text tools could be:
 Click the ``New Writing Assistant Tool`` button in the header. This opens a
 dialog where you have to provide some information:
 
-- Name:
-- Limit to groups:
-- ...
+- **Name**: Add a name for the write tool. This is what your agents see when they
+  access the write assistant tools.
+- **Custom instructions**: Here you have to provide the instructions for the AI.
+  To get proper responses, the instructions should be constructed in a certain
+  way:
+
+   - They should be unambiguous and precise.
+   - They can include one or more examples.
+   - They should not include superfluous or redundant information.
+- **Groups**: Define groups which can access the write tool.
+- **Note**: Add a note about the write tool for other admins. This field is
+  **not** considered as context for the AI.
+- **Active**: Set the write tool to active or inactive.
+
+Note that the **Custom instructions** are a very important part of the
+configuration. They get included in the system prompt and tell the AI what
+to do with a given text.
+
+After saving your writing tool, you should test if the result is as expected. In
+case you are not happy, feel free to adjust the instructions until it fits your
+expectations.
 
 Manage Text Tools
 -----------------
