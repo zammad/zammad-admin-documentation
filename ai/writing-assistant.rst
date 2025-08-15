@@ -60,7 +60,9 @@ you have to add or edit some information:
 
 Note that the **Custom instructions** are a very important part of the
 configuration. They get included in the system prompt and tell the AI what
-to do with a given text.
+to do with a given text. You can even use variables by typing ``::``. This
+triggers a list of available variables where you can choose from. By using a
+variable, you can include object specific information in the instructions.
 
 After creating or editing, you should test if the result is as expected. In
 case you are not happy, feel free to adjust the instructions until it fits your
@@ -70,7 +72,7 @@ Usage for Agents
 ----------------
 
 If enabled, agents have access to the default tools as well as the custom tools
-which are available in the group or are not limited to any group. They simply
+which are available for the group or are not limited to any group. They simply
 have to select the text they want to check/change and select the writing
 assistant tool they want to use.
 The :user-docs:`AI section in the user documentation </extras/ai-features.html>`
