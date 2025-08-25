@@ -226,5 +226,5 @@ base), you can do so by following the steps below:
    - Have a look at the
      :user-docs:`knowledge base section </extras/knowledge-base.html>` in
      the user documentation where you can find more information about the usage.
-
-
+   - The permission ``knowledge_base.reader`` is not relevant for public answers.
+     They are **always visible to everyone**.
