@@ -8,6 +8,9 @@ admin section under *AI > Writing Assistant*. Make sure to configure an
 warning message will tell you to do so. Activate the feature by turning on the
 switch.
 
+.. figure:: /images/ai/writing-assistant.png
+  :alt: Screenshots shows writing assistant settings screen with available default tools
+
 Manage Tools
 ------------
 
@@ -32,6 +35,7 @@ You can even add your own custom write assistance tools by providing
 instructions for the AI about how to check or perform changes to a given text.
 Use cases for such individual tools could be:
 
+- Translation
 - Apply branch specific wording
 - Apply company specific wording
 - Change the mood of the text
@@ -46,11 +50,7 @@ you have to add or edit some information:
   see when they access the write assistant tools.
 - **Custom instructions**: Here you have to provide the instructions for the AI.
   To get proper responses, the instructions should be constructed in a certain
-  way:
-
-   - They should be unambiguous and precise.
-   - They can include one or more examples.
-   - They should not include superfluous or redundant information.
+  way, see details below.
 - **Groups**: Define groups which can access the write assistance tool. If no
   group is selected (moved on the left side by clicking on it), the tool is
   available for tickets in all groups.
@@ -63,6 +63,20 @@ configuration. They get included in the system prompt and tell the AI what
 to do with a given text. You can even use variables by typing ``::``. This
 triggers a list of available variables where you can choose from. By using a
 variable, you can include object specific information in the instructions.
+
+.. tip::
+
+   **How should custom instructions be written?**
+
+   - They should be unambiguous and precise.
+   - They can include one or more examples.
+   - They should not include superfluous or redundant information.
+
+   **Snippets as inspiration for useful instructions:**
+
+   - Maintain the language of the given input text for the output.
+   - Preserve all existing HTML markup without alteration.
+   - Ensure the output is well-formatted, engaging, and free of errors.
 
 After creating or editing, you should test if the result is as expected. In
 case you are not happy, feel free to adjust the instructions until it fits your
