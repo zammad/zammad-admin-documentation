@@ -25,8 +25,7 @@ tool, simply click on its row. To add a new one, click the
 individual tools could be:
 
 - Translation
-- Apply branch specific wording
-- Apply company specific wording
+- Apply company and/or sector specific wording
 - Change the mood of the text
 - Reduce or eliminate subjective or uninformative parts
 - Combine different instructions in one tool
