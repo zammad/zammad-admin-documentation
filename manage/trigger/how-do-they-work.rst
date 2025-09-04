@@ -1,5 +1,5 @@
-How Do Trigger Work
-===================
+How Do Triggers Work
+====================
 
 Triggers consist of three parts:
 
