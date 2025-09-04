@@ -50,10 +50,12 @@ Custom instructions
    - They should be unambiguous and precise.
    - They can include one or more examples.
    - They should not include superfluous or redundant information.
+   - They can specify an output format to keep the formatting and structure
+     (namely HTML, see examples below).
 
-   You can even use variables by typing ``::``. This
-   triggers a list of available variables where you can choose from. By using a
-   variable, you can include object specific information in the instructions.
+   You can even use variables by typing ``::``. This triggers a list of
+   available variables where you can choose from. By using a variable, you can
+   include object specific information in the instructions.
 
    .. tip::
 
@@ -68,8 +70,7 @@ Custom instructions
         - Preserve all existing HTML markup without alteration.
         - Ensure the output is well-formatted, engaging, and free of errors.
         - Do not introduce new or unrelated ideas that change the original message.
-        - Preserve all HTML tags (e.g. links, images) and formatting (e.g. bold,
-          italic) whenever it makes sense.
+        - Preserve all HTML tags (e.g. links, images) and formatting (e.g. bold, italic) whenever it makes sense.
         - Preserve all key information, main arguments, and important details.
 
 Groups
