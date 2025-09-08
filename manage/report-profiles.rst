@@ -1,16 +1,14 @@
-Report Profiles and Reporting
-=============================
-
-.. Reporting included here because it fits more to the administrator role than
-.. the user role. /rsc
+Report Profiles
+===============
 
 The reporting is useful to view statistics, get an overview of the number of
 tickets (e.g. tickets of a specific customer) and to download ticket data from
-Zammad. In the following section you will find an instruction on how to create
-and change report profiles. In a separate section you can find information
-on basic usage of the reporting UI itself. If the reporting options in Zammad
-are not enough for you, we added a section about external reporting tools you
-can use.
+Zammad. In the following section you will find instructions about how to create
+and change report profiles. You can find an explanation about how to use the
+reporting in the
+:user-docs:`reporting section of the user documentation </extras/reporting>`.
+If the reporting in Zammad is not enough for you, you can even connect
+third-party reporting tools like Grafana to Zammad.
 
 To create and edit report profiles, ``admin.report_profile`` permission is
 required. To use the reporting itself, ``report`` permission is required.
@@ -43,8 +41,8 @@ All configured report profiles are displayed in the reporting area and you can
 switch between them with one click. Have a look at the next section to learn
 some basics about the usage of the reporting.
 
-Using the Reporting
--------------------
+Use the Reporting
+-----------------
 
 You can find the reporting section in the bottom left corner in Zammad next to
 the avatar icon or your initials:
@@ -54,32 +52,9 @@ the avatar icon or your initials:
 
 If you can't see the reporting button, you should check the permissions.
 
-The reporting screen is separated in different sections, which we describe
-below:
-
-.. figure:: /images/manage/report-profiles/reporting-sections.png
-    :alt: Screenshot showing different sections in the reporting screen
-
-1. **Additional filtering** based on the selected profile (see 2). You can
-   filter by status ("Ticket Count"), "Creation Channels" and "Communication"
-   types based on your channels.
-2. **Profile switcher**: here you can easily switch between the different
-   profiles, which were created in the admin panel under "Report Profiles".
-   The shown tickets and numbers are always limited to the current profile
-   you have selected here.
-3. **Time interval/period switcher** and **graph** area: here you can define
-   the interval you want to see (e.g. "Month") as well as the time period (e.g.
-   "Jul").
-4. **Preview and download** section: here you can find a preview of tickets and
-   a download button based on the report profile and your filtering. The
-   download feature provides the tickets in a ``.xlsx`` spreadsheet.
-
-   .. note:: The ticket preview and download button are only showing up if you
-    selected a filter based on "Ticket Count" (see 1).
-
-    Due to technical reasons, the download is limited to 6.000 entries.
-
-.. https://github.com/zammad/zammad/issues/2433
+Have a look at the
+:user-docs:`reporting section of the user documentation </extras/reporting>`
+for more information about the usage.
 
 External Reporting Tools
 ------------------------
