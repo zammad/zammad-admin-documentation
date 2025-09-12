@@ -31,7 +31,7 @@ a profile by clicking the ``⠇`` in the action column.
 Configuration
 ^^^^^^^^^^^^^
 
-To configure a reporting profile, you need to provide some information.
+To configure a report profile, you need to provide some information:
 
 Name
    Name of the reporting profile. This name is also shown in the reporting
@@ -39,7 +39,8 @@ Name
 
 Filter
    Define which tickets you want to include in a report. You can filter the
-   tickets as in other places in Zammad by using conditions to match.
+   tickets as in other places in Zammad by using conditions which your tickets
+   must match.
 
    .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
@@ -48,8 +49,8 @@ Preview
    filter.
 
 Available for the following roles
-   Here you can define if the reporting profile is limited to one or more
-   specific roles (click on it to move it to the left side for limitation).
+   Define if the reporting profile is limited to one or more specific roles
+   (click on it to move it to the left side for limitation).
    If no role is specified (i.e. on the left side), all users with ``reporting``
    permission can see the profile and its tickets.
 
