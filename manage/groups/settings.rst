@@ -102,10 +102,11 @@ Note
    access the group management area.
 
 Active
-   Don't need the group anymore? If you can't or don't want to recycle (rename)
-   the group, you can also set it to inactive. Agents will no longer be able to
-   see or edit tickets in this group. However, customers can still interact
-   with their existing tickets in an inactive group.
+   Don't need the group anymore or want to restrict the selection of this group?
+   If you can't or don't want to recycle (rename) the group, you can also set it
+   to inactive. Agents will no longer be able to see or edit tickets in this
+   group. However, customers can still interact with their existing tickets in
+   an inactive group.
 
    .. tip::
 

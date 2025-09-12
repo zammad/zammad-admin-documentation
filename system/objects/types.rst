@@ -165,8 +165,9 @@ Text field
       :alt: Available settings for Text fields
 
 Single tree selection field
-   Provides a select-like field with up to 6 layers of options.
-   Does not allow setting a default value.
+   Provides a select-like field with up to 6 layers of options. To restrict
+   the selection of a value, uncheck the box in the "Active" column.
+   This type does not allow setting a default value.
 
    .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
@@ -174,8 +175,9 @@ Single tree selection field
       :alt: Available settings for Tree Select fields
 
 Multiple tree selection field
-   Provides a select-like field with up to 6 layers of options allowing
-   the selection of multiple values. Does not allow setting a default value.
+   Provides a multi-select field with up to 6 layers of options. To restrict
+   the selection of a value, uncheck the box in the "Active" column.
+   This type does not allow setting a default value.
 
    .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
