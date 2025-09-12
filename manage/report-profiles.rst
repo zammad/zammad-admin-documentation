@@ -73,14 +73,13 @@ Use the Reporting
 -----------------
 
 You can find the reporting section in the bottom left corner in Zammad next to
-the avatar icon or your initials:
+the avatar icon or your initials. If you can't see the reporting button, check
+the permissions.
 
 .. figure:: /images/manage/report-profiles/menu-bar-reporting.png
     :alt: Menu bar with highlighted reporting
 
-If you can't see the reporting button, you should check the permissions.
-
-Have a look at the
+Also have a look at the
 :user-docs:`reporting section of the user documentation </extras/reporting>`
 for more information about the usage.
 
