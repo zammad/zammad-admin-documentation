@@ -15,7 +15,10 @@ Please note that our GitLab integration does not support merge requests.
 Setup
 -----
 
-1. Create a new API token in your GitLab user settings under **Access Tokens**.
+1. Create a new API token in GitLab. Zammad supports the usage of a
+   `group access token <https://docs.gitlab.com/user/group/settings/group_access_tokens/>`_,
+   a `project access token <https://docs.gitlab.com/user/project/settings/project_access_tokens/>`_
+   and a `personal access token <https://docs.gitlab.com/user/profile/personal_access_tokens/>`_.
 2. Add a name, set an expiration date and set the permission ``read_api``.
 3. Enter your new API token in Zammad and enable the GitLab integration.
    Use the default API endpoint (``https://gitlab.com/api/graphql``)
