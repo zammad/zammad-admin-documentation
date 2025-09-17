@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 15:45+0200\n"
+"POT-Creation-Date: 2025-09-16 14:49+0200\n"
 "PO-Revision-Date: 2025-09-02 16:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -575,7 +575,8 @@ msgid "Combine different instructions in one tool"
 msgstr ""
 
 #: ../ai/writing-assistant.rst:34 ../channels/chat.rst:28
-#: ../channels/microsoft365-graph/accounts.rst:23 ../misc/first-steps.rst:20
+#: ../channels/microsoft365-graph/accounts.rst:23
+#: ../manage/report-profiles.rst:32 ../misc/first-steps.rst:20
 #: ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
 #: ../system/core-workflows/learn-by-example.rst:139
@@ -593,9 +594,10 @@ msgid ""
 msgstr ""
 
 #: ../ai/writing-assistant.rst:42 ../channels/form.rst:19
-#: ../manage/groups/settings.rst:16 ../manage/scheduler.rst:86
-#: ../manage/slas/how-do-they-work.rst:26 ../manage/templates.rst:23
-#: ../system/objects.rst:133 ../system/objects.rst:237
+#: ../manage/groups/settings.rst:16 ../manage/report-profiles.rst:38
+#: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
+#: ../manage/templates.rst:23 ../system/objects.rst:133
+#: ../system/objects.rst:237
 msgid "Name"
 msgstr "Назив"
 
@@ -701,10 +703,10 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:90 ../channels/form.rst:37
 #: ../manage/groups/settings.rst:124 ../manage/macros/how-do-they-work.rst:0
-#: ../manage/overviews.rst:0 ../manage/roles/index.rst:128
-#: ../manage/scheduler.rst:161 ../manage/templates.rst:33
-#: ../manage/webhook/add.rst:123 ../system/objects.rst:171
-#: ../system/objects.rst:251
+#: ../manage/overviews.rst:0 ../manage/report-profiles.rst:58
+#: ../manage/roles/index.rst:128 ../manage/scheduler.rst:161
+#: ../manage/templates.rst:33 ../manage/webhook/add.rst:123
+#: ../system/objects.rst:171 ../system/objects.rst:251
 msgid "Active"
 msgstr "Активно"
 
@@ -1695,7 +1697,7 @@ msgstr "У супротном, оператери ове групе неће м�
 #: ../channels/microsoft365/accounts/account-setup.rst:159
 #: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
-#: ../system/integrations/github.rst:29 ../system/integrations/gitlab.rst:33
+#: ../system/integrations/github.rst:29 ../system/integrations/gitlab.rst:36
 #: ../system/integrations/pgp/index.rst:112
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
@@ -4090,8 +4092,9 @@ msgstr ""
 "Ово вам омогућава да повежете нпр. ваше напомене о приватности података или "
 "информације о условима коришћења услуге."
 
-#: ../channels/form.rst:142 ../manage/scheduler.rst:109
-#: ../manage/slas/how-do-they-work.rst:35 ../system/objects/types.rst:299
+#: ../channels/form.rst:142 ../manage/report-profiles.rst:49
+#: ../manage/scheduler.rst:109 ../manage/slas/how-do-they-work.rst:35
+#: ../system/objects/types.rst:299
 msgid "Preview"
 msgstr "Преглед"
 
@@ -10760,14 +10763,13 @@ msgstr "Профили извештаја и извештавање"
 #| "reporting options in Zammad are not enough for you, we added a section "
 #| "about external reporting tools you can use."
 msgid ""
-"The reporting is useful to view statistics, get an overview of the number of "
-"tickets (e.g. tickets of a specific customer) and to download ticket data "
-"from Zammad. In the following section you will find instructions about how "
-"to create and change report profiles. You can find an explanation about how "
-"to use the reporting in the :user-docs:`reporting section of the user "
-"documentation </extras/reporting>`. If the reporting in Zammad is not enough "
-"for you, you can even connect third-party reporting tools like Grafana to "
-"Zammad."
+"In the following section you can find instructions about how to create and "
+"change report profiles. These report profiles define which kind of tickets "
+"should be included in a report. You can find an explanation about how to use "
+"the reporting in the :user-docs:`reporting section of the user documentation "
+"</extras/reporting.html>`. The reporting is useful to view statistics, get "
+"an overview of the number of tickets (e.g. of a specific customer) and to "
+"download ticket data from Zammad."
 msgstr ""
 "Извештавање је корисно за преглед статистика, увид у број тикета (нпр. "
 "тикете одређеног клијента) и за преузимање података тикета из Zammad-а. У "
@@ -10778,80 +10780,128 @@ msgstr ""
 "извештавање које можете пробати."
 
 #: ../manage/report-profiles.rst:13
+#, fuzzy
+#| msgid ""
+#| "To create and edit report profiles, ``admin.report_profile`` permission "
+#| "is required. To use the reporting itself, ``report`` permission is "
+#| "required."
 msgid ""
-"To create and edit report profiles, ``admin.report_profile`` permission is "
-"required. To use the reporting itself, ``report`` permission is required."
+"You can find the configuration in Zammad's admin settings under *Manage > "
+"Report Profiles*. To create and edit report profiles, "
+"``admin.report_profile`` permission is required. To access the reporting "
+"itself, ``report`` permission is required."
 msgstr ""
 "За додавање и уређивање профила извештавања, неопходна је "
 "``admin.report_profile`` дозвола. За коришћење самог извештавања, неопходна "
 "је ``report`` дозвола."
 
-#: ../manage/report-profiles.rst:16
+#: ../manage/report-profiles.rst:18
 msgid ""
 "⚠️ Be aware that granting users the ``reporting`` permission may leak "
-"information. On the one hand, users could see ticket metadata that they do "
-"not actually have access to. On the other hand, a possibly large scale of "
-"ticket information can easily be downloaded as a spreadsheet."
+"information. Consider to limit the available profiles to specific roles, "
+"instead of just granting or not granting access to **all** profiles. "
+"Creating specific :doc:`/manage/roles/index` for this purpose may be helpul."
 msgstr ""
-"⚠️ Будите свесни да давање ``report`` дозволе може да доведе до цурења "
-"информација. Са једне стране, корисници могу да виде мета податке тикета "
-"којима уствари немају приступ. Са друге стране, велика количина података о "
-"тикетима се може једноставно презуети у табеларном формату."
 
-#: ../manage/report-profiles.rst:22
+#: ../manage/report-profiles.rst:25
 msgid "Create and Edit Profiles"
 msgstr "Додавање и уређивање профила"
 
-#: ../manage/report-profiles.rst:24
+#: ../manage/report-profiles.rst:27
 msgid ""
-"Report profiles are used to filter report results. The idea of the profiles "
-"is to limit the number of tickets and determine the type of tickets you want "
-"to analyze. You can create any number of profiles in the admin interface in "
-"the \"Report Profile\" area. You can filter the tickets as in other places "
-"in Zammad based on different conditions."
+"To create a new reporting profile, click the **New Profile** button. To edit "
+"an existing profile, simply click on the row. You can **Clone** or "
+"**Delete** a profile by clicking the ``⠇`` in the action column."
 msgstr ""
-"Профили извештаја се користе за филтрирање резултата извештаја. Идеја "
-"профила је да ограниче број тикета и одреде врсту тикета које желите да "
-"анализирате. Можете додати било који број профила у интерфејсу "
-"администратора у области „Профили извештаја“. Можете филтрирати тикете на "
-"исти начин као и другим областима Zammad-а на основу услова тикета."
 
-#: ../manage/report-profiles.rst:32
-msgid "The edit dialog looks like this:"
-msgstr "Форма за уређивање изгледа овако:"
-
-#: ../manage/report-profiles.rst:None
-msgid "Screenshot shows creation of report profile"
-msgstr "Снимак екрана приказује додавање профила извештаја"
+#: ../manage/report-profiles.rst:34
+msgid "To configure a report profile, you need to provide some information:"
+msgstr ""
 
 #: ../manage/report-profiles.rst:37
 msgid ""
+"Name of the reporting profile. This name is also shown in the reporting "
+"itself where your users can choose between the profiles."
+msgstr ""
+
+#: ../manage/report-profiles.rst:45
+#, fuzzy
+#| msgid "Filters"
+msgid "Filter"
+msgstr "Филтери"
+
+#: ../manage/report-profiles.rst:41
+msgid ""
+"Define which tickets you want to include in a report. You can filter the "
+"tickets as in other places in Zammad by using conditions which your tickets "
+"must match."
+msgstr ""
+
+#: ../manage/report-profiles.rst:48
+msgid ""
+"This section gives you a preview of tickets which match your configured "
+"filter."
+msgstr ""
+
+#: ../manage/report-profiles.rst:55
+#, fuzzy
+#| msgid "The setting \"available for the following roles\" is mandatory."
+msgid "Available for the following roles"
+msgstr "Атрибут „Доступно следећим улогама“ је обавезан."
+
+#: ../manage/report-profiles.rst:52
+msgid ""
+"Define if the reporting profile is limited to one or more specific roles "
+"(click on it to move it to the left side for limitation). If no role is "
+"specified (i.e. on the left side), all users with ``reporting`` permission "
+"can see the profile and its tickets."
+msgstr ""
+
+#: ../manage/report-profiles.rst:58
+#, fuzzy
+#| msgid "Set the priority to *active* or *inactive*."
+msgid "Set the profile to active or inactive."
+msgstr "Поставите приоритет на *укључено* или *искључено*."
+
+#: ../manage/report-profiles.rst:61 ../settings/security/base.rst:117
+#: ../system/integrations/checkmk/api-reference.rst:13
+msgid "Example"
+msgstr "Пример"
+
+#: ../manage/report-profiles.rst:None
+#, fuzzy
+#| msgid "Screenshot showing certificate adding dialog"
+msgid "Screenshot shows report profile creation/edit dialog"
+msgstr "Снимак екрана који приказује дијалог за додавање сертификата"
+
+#: ../manage/report-profiles.rst:68
+#, fuzzy
+#| msgid ""
+#| "This example shows the statistics of all tickets of the organization "
+#| "\"Awesome Customer Inc.\" that were created in the last month."
+msgid ""
 "This example shows the statistics of all tickets of the organization "
-"\"Awesome Customer Inc.\" that were created in the last month."
+"\"Awesome Customer Inc.\" that were created during the last month. This "
+"profile is limited to the roles \"Admin\" and \"Reporting\"."
 msgstr ""
 "Овај пример приказује статистику свих тикета организације „Awesome Customer "
 "Inc.” отворених у последњих месец дана."
 
-#: ../manage/report-profiles.rst:40
-msgid ""
-"All configured report profiles are displayed in the reporting area and you "
-"can switch between them with one click. Have a look at the next section to "
-"learn some basics about the usage of the reporting."
-msgstr ""
-"Сви подешени профили извештаја су приказани у области извештавања и можете "
-"да прелазите између њих једним кликом. Погледајте следећи одељак за неке "
-"основе коришћења извештавања."
-
-#: ../manage/report-profiles.rst:45
+#: ../manage/report-profiles.rst:73
 #, fuzzy
 #| msgid "Using the Reporting"
 msgid "Use the Reporting"
 msgstr "Коришћење извештавања"
 
-#: ../manage/report-profiles.rst:47
+#: ../manage/report-profiles.rst:75
+#, fuzzy
+#| msgid ""
+#| "You can find the reporting section in the bottom left corner in Zammad "
+#| "next to the avatar icon or your initials:"
 msgid ""
 "You can find the reporting section in the bottom left corner in Zammad next "
-"to the avatar icon or your initials:"
+"to the avatar icon or your initials. If you can't see the reporting button, "
+"check the permissions."
 msgstr ""
 "Одељак извештавања можете пронаћи у доњем левом углу Zammad-а одмах поред "
 "аватар сличице или ваших иницијала:"
@@ -10860,29 +10910,24 @@ msgstr ""
 msgid "Menu bar with highlighted reporting"
 msgstr "Трака са менијем и наглашеним извештавањем"
 
-#: ../manage/report-profiles.rst:53
-msgid ""
-"If you can't see the reporting button, you should check the permissions."
-msgstr "Ако не видите дугме извештавања, проверите ваше дозволе."
-
-#: ../manage/report-profiles.rst:55
+#: ../manage/report-profiles.rst:82
 #, fuzzy
 #| msgid ""
 #| "Have a look at the :user-docs:`knowledge base section </extras/knowledge-"
 #| "base.html>` in the user documentation where you can find more information "
 #| "about the usage."
 msgid ""
-"Have a look at the :user-docs:`reporting section of the user documentation </"
-"extras/reporting>` for more information about the usage."
+"Also have a look at the :user-docs:`reporting section of the user "
+"documentation </extras/reporting>` for more information about the usage."
 msgstr ""
 "Погледајте user-docs:`одељак о бази знања </extras/knowledge-base.html>` у "
 "корисничкој документацији за више информација о коришћењу."
 
-#: ../manage/report-profiles.rst:60
+#: ../manage/report-profiles.rst:87
 msgid "External Reporting Tools"
 msgstr "Екстерни алати за извештавање"
 
-#: ../manage/report-profiles.rst:62
+#: ../manage/report-profiles.rst:89
 msgid ""
 "If the integrated reporting is not enough for you, you can even use third "
 "party tools like Grafana! Please have a look at :docs:`Reporting Tools </"
@@ -21243,11 +21288,6 @@ msgstr ""
 "Сва подешавања делују независно једно од другог омогућавајући вам да "
 "искључите временска ограничења за нпр. администраторе, али не и оператере."
 
-#: ../settings/security/base.rst:117
-#: ../system/integrations/checkmk/api-reference.rst:13
-msgid "Example"
-msgstr "Пример"
-
 #: ../settings/security/base.rst:103
 msgid "Let's suppose you configured the following session timeouts"
 msgstr "Претпоставимо да сте подесили следећа временска ограничења сесије"
@@ -29039,11 +29079,11 @@ msgstr ""
 "По завршетку, нови језичак са GitHub извештајима ће се појавити у панелу "
 "тикета. 🎉"
 
-#: ../system/integrations/github.rst:35 ../system/integrations/gitlab.rst:39
+#: ../system/integrations/github.rst:35 ../system/integrations/gitlab.rst:42
 msgid "Token verification is taking a long time"
 msgstr "Провера кључа траје дуго"
 
-#: ../system/integrations/github.rst:32 ../system/integrations/gitlab.rst:36
+#: ../system/integrations/github.rst:32 ../system/integrations/gitlab.rst:39
 msgid ""
 "Slight delays are normal (<2 min.), especially for systems under heavy load."
 msgstr ""
@@ -29058,11 +29098,11 @@ msgstr ""
 "Администратори који сами хостујете, проверите мрежна подешавања да бисте "
 "били сигурни да ваш Zammad сервер може да приступи ``api.github.com``."
 
-#: ../system/integrations/github.rst:38 ../system/integrations/gitlab.rst:42
+#: ../system/integrations/github.rst:38 ../system/integrations/gitlab.rst:45
 msgid "I reloaded the page and now the API token is gone"
 msgstr "АПИ кључ је нестао по поновном учитавању странице"
 
-#: ../system/integrations/github.rst:38 ../system/integrations/gitlab.rst:42
+#: ../system/integrations/github.rst:38 ../system/integrations/gitlab.rst:45
 msgid ""
 "This may indicate that Zammad is still verifying your API token. Try "
 "reloading the page again in a couple minutes."
@@ -29097,16 +29137,19 @@ msgid "Integration page for GitLab"
 msgstr "Страница GitLab интеграције"
 
 #: ../system/integrations/gitlab.rst:18
-#, fuzzy
 msgid ""
-"Create a new API token in your GitLab user settings under **Access Tokens**."
-msgstr "У GitLab подешавањима, направите нови API кључ под **Access Tokens**."
+"Create a new API token in GitLab. Zammad supports the usage of a `group "
+"access token <https://docs.gitlab.com/user/group/settings/"
+"group_access_tokens/>`_, a `project access token <https://docs.gitlab.com/"
+"user/project/settings/project_access_tokens/>`_ and a `personal access token "
+"<https://docs.gitlab.com/user/profile/personal_access_tokens/>`_."
+msgstr ""
 
-#: ../system/integrations/gitlab.rst:19
+#: ../system/integrations/gitlab.rst:22
 msgid "Add a name, set an expiration date and set the permission ``read_api``."
 msgstr ""
 
-#: ../system/integrations/gitlab.rst:20
+#: ../system/integrations/gitlab.rst:23
 #, fuzzy
 msgid ""
 "Enter your new API token in Zammad and enable the GitLab integration. Use "
@@ -29116,23 +29159,23 @@ msgstr ""
 "Користите подразумевану API путању (``https://gitlab.com/api/graphql``) осим "
 "ако хостујете GitLab сами."
 
-#: ../system/integrations/gitlab.rst:24
+#: ../system/integrations/gitlab.rst:27
 msgid "🔒 **If you wish to link issues on any private repos...**"
 msgstr ""
 "🔒 **Ако желите да повежете извештаје из било ког приватног репозиторија...**"
 
-#: ../system/integrations/gitlab.rst:26
+#: ../system/integrations/gitlab.rst:29
 msgid "Your API token must belong to an account with access to those repos."
 msgstr "Ваш API кључ мора припадати налогу са приступом тим репозиторијумима."
 
-#: ../system/integrations/gitlab.rst:30
+#: ../system/integrations/gitlab.rst:33
 msgid ""
 "Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉"
 msgstr ""
 "По завршетку, нови језичак са GitLab исвештајима ће се појавити у панелу "
 "тикета. 🎉"
 
-#: ../system/integrations/gitlab.rst:38
+#: ../system/integrations/gitlab.rst:41
 msgid ""
 "Self-hosted administrators, please check your network settings to ensure "
 "that your Zammad server can reach ``gitlab.com``."
@@ -33599,6 +33642,56 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#, fuzzy
+#~ msgid ""
+#~ "Create a new API token in your GitLab user settings under **Access "
+#~ "Tokens**."
+#~ msgstr ""
+#~ "У GitLab подешавањима, направите нови API кључ под **Access Tokens**."
+
+#~ msgid ""
+#~ "⚠️ Be aware that granting users the ``reporting`` permission may leak "
+#~ "information. On the one hand, users could see ticket metadata that they "
+#~ "do not actually have access to. On the other hand, a possibly large scale "
+#~ "of ticket information can easily be downloaded as a spreadsheet."
+#~ msgstr ""
+#~ "⚠️ Будите свесни да давање ``report`` дозволе може да доведе до цурења "
+#~ "информација. Са једне стране, корисници могу да виде мета податке тикета "
+#~ "којима уствари немају приступ. Са друге стране, велика количина података "
+#~ "о тикетима се може једноставно презуети у табеларном формату."
+
+#~ msgid ""
+#~ "Report profiles are used to filter report results. The idea of the "
+#~ "profiles is to limit the number of tickets and determine the type of "
+#~ "tickets you want to analyze. You can create any number of profiles in the "
+#~ "admin interface in the \"Report Profile\" area. You can filter the "
+#~ "tickets as in other places in Zammad based on different conditions."
+#~ msgstr ""
+#~ "Профили извештаја се користе за филтрирање резултата извештаја. Идеја "
+#~ "профила је да ограниче број тикета и одреде врсту тикета које желите да "
+#~ "анализирате. Можете додати било који број профила у интерфејсу "
+#~ "администратора у области „Профили извештаја“. Можете филтрирати тикете на "
+#~ "исти начин као и другим областима Zammad-а на основу услова тикета."
+
+#~ msgid "The edit dialog looks like this:"
+#~ msgstr "Форма за уређивање изгледа овако:"
+
+#~ msgid "Screenshot shows creation of report profile"
+#~ msgstr "Снимак екрана приказује додавање профила извештаја"
+
+#~ msgid ""
+#~ "All configured report profiles are displayed in the reporting area and "
+#~ "you can switch between them with one click. Have a look at the next "
+#~ "section to learn some basics about the usage of the reporting."
+#~ msgstr ""
+#~ "Сви подешени профили извештаја су приказани у области извештавања и "
+#~ "можете да прелазите између њих једним кликом. Погледајте следећи одељак "
+#~ "за неке основе коришћења извештавања."
+
+#~ msgid ""
+#~ "If you can't see the reporting button, you should check the permissions."
+#~ msgstr "Ако не видите дугме извештавања, проверите ваше дозволе."
 
 #~ msgid "When you're ready, submit your changes to save the object attribute."
 #~ msgstr ""
