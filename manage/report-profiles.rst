@@ -80,7 +80,7 @@ the permissions.
     :alt: Menu bar with highlighted reporting
 
 Also have a look at the
-:user-docs:`reporting section of the user documentation </extras/reporting>`
+:user-docs:`reporting section of the user documentation </extras/reporting.html>`
 for more information about the usage.
 
 External Reporting Tools
