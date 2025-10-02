@@ -13,8 +13,13 @@ poll the Zammad server every *n* minutes.
 
 .. hint::
 
-   Webhooks are available for :doc:`/manage/trigger` and
-   :doc:`/manage/scheduler`.
+   - Webhooks have to be triggered by :doc:`/manage/trigger` or
+     :doc:`/manage/scheduler` jobs.
+   - The usage of variables is limited compared to their usage in other places.
+     The ``.value`` extension as well as the translation
+     (``#{t(object.attribute)}``) and time formatting
+     (``#{dt(object.time_attribute, [...]``) functions are not available in
+     webhooks.
 
 How do Webhooks Work
 --------------------

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 11:25+0200\n"
+"POT-Creation-Date: 2025-10-01 09:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6286,8 +6286,8 @@ msgstr ""
 #: ../manage/slas/index.rst:78
 #: ../manage/trigger.rst:32
 #: ../manage/trigger.rst:32
-#: ../manage/webhook.rst:45
-#: ../manage/webhook.rst:45
+#: ../manage/webhook.rst:50
+#: ../manage/webhook.rst:50
 #: ../system/core-workflows.rst:23
 #: ../system/core-workflows.rst:23
 #: ../system/objects.rst:32
@@ -10856,54 +10856,58 @@ msgid "Webhooks are sent out with the same priority and order as email triggers.
 msgstr ""
 
 #: ../manage/webhook.rst:16
-msgid "Webhooks are available for :doc:`/manage/trigger` and :doc:`/manage/scheduler`."
+msgid "Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/scheduler` jobs."
 msgstr ""
 
-#: ../manage/webhook.rst:20
+#: ../manage/webhook.rst:18
+msgid "The usage of variables is limited compared to their usage in other places. The ``.value`` extension as well as the translation (``#{t(object.attribute)}``) and time formatting (``#{dt(object.time_attribute, [...]``) functions are not available in webhooks."
+msgstr ""
+
+#: ../manage/webhook.rst:25
 msgid "How do Webhooks Work"
 msgstr ""
 
-#: ../manage/webhook.rst:22
+#: ../manage/webhook.rst:27
 msgid "Under the hood, Zammad sends a POST request to a third-party URL (\"API endpoint\") you specify in the New Webhook dialog. The application server behind this URL/endpoint must be configured to receive messages from Zammad and handle the provided payload accordingly."
 msgstr ""
 
-#: ../manage/webhook.rst:27
+#: ../manage/webhook.rst:32
 msgid "Webhooks can be created both from scratch and from pre-defined templates."
 msgstr ""
 
-#: ../manage/webhook.rst:29
+#: ../manage/webhook.rst:34
 msgid "When created from scratch, regular webhook payloads by default contain the following JSON data about new/updated tickets:"
 msgstr ""
 
-#: ../manage/webhook.rst:32
+#: ../manage/webhook.rst:37
 msgid "ticket attributes/metadata"
 msgstr ""
 
-#: ../manage/webhook.rst:33
+#: ../manage/webhook.rst:38
 msgid "associated article(s)"
 msgstr ""
 
-#: ../manage/webhook.rst:34
+#: ../manage/webhook.rst:39
 msgid "associated users (e.g. article senders, owners, etc.)"
 msgstr ""
 
-#: ../manage/webhook.rst:35
+#: ../manage/webhook.rst:40
 msgid "associated user roles"
 msgstr ""
 
-#: ../manage/webhook.rst:36
+#: ../manage/webhook.rst:41
 msgid "associated user organizations (if applicable)"
 msgstr ""
 
-#: ../manage/webhook.rst:37
+#: ../manage/webhook.rst:42
 msgid "associated groups"
 msgstr ""
 
-#: ../manage/webhook.rst:39
+#: ../manage/webhook.rst:44
 msgid "On the other hand, pre-defined webhooks are designed to work with specific services, containing special payloads that these services understand."
 msgstr ""
 
-#: ../manage/webhook.rst:42
+#: ../manage/webhook.rst:47
 msgid "In both cases, however, it is possible to further customize the webhook payload to your own needs."
 msgstr ""
 
