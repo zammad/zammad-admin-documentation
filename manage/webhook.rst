@@ -5,16 +5,18 @@ Webhooks are a way to integrate Zammad with other web services or applications,
 allowing them to subscribe to live updates about tickets instead of having to
 poll the Zammad server every *n* minutes.
 
-.. note:: ⌛ **Webhooks may not arrive immediately.**
-
-   Webhooks are sent out with the same priority and order as email triggers.
-   If webhook dispatch fails (e.g. because the receiving server is
-   misconfigured), Zammad will retry up to four times.
-
 .. hint::
 
-   Webhooks are available for :doc:`/manage/trigger` and
-   :doc:`/manage/scheduler`.
+   - Webhooks may not arrive immediately. They are sent out with the same
+     priority and order as email triggers. If webhook dispatch fails (e.g.
+     because the receiving server is misconfigured), Zammad will retry up to
+     four times.
+   - Webhooks have to be triggered by :doc:`/manage/trigger` or
+     :doc:`/manage/scheduler` jobs.
+   - The usage of variables is limited compared to other places.
+     Some features are not available in webhooks (e.g. the ``.value`` extension,
+     translation (``#{t(object.attribute)}``) and time formatting
+     (``#{dt(object.time_attribute, [...]``) functions).
 
 How do Webhooks Work
 --------------------
