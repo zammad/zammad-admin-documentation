@@ -35,12 +35,12 @@ Either install the dependencies on your machine or use a devcontainer, see next 
 ### Devcontainer
 
 If you can't or don't want to install the dependencies on your system, you can use a devcontainer. The repo
-is prepared so you just need a supported editor (e.g. VS Code) and a Docker installation on your system. 
+is prepared so you just need a supported editor (e.g. VS Code) and a Docker installation on your system.
 
 Simply open the cloned repo in a supported editor and it should ask you to open the folder in a container. After it got
 set up, you can compile the docs with your changes locally.
 
-For more information, check these ressources:
+For more information, check these resources:
 
 - https://github.com/devcontainers/
 - https://containers.dev/
