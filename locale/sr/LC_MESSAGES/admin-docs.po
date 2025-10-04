@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-25 12:46+0200\n"
-"PO-Revision-Date: 2025-09-20 13:00+0000\n"
+"POT-Creation-Date: 2025-10-02 13:23+0200\n"
+"PO-Revision-Date: 2025-10-04 10:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/sr/>\n"
@@ -8332,7 +8332,7 @@ msgstr ""
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
 #: ../manage/slas/index.rst:94 ../manage/trigger.rst:28
-#: ../manage/webhook.rst:45 ../system/core-workflows.rst:30
+#: ../manage/webhook.rst:47 ../system/core-workflows.rst:30
 #: ../system/objects.rst:32
 msgid "Learn more"
 msgstr "Saznajte više"
@@ -9247,8 +9247,8 @@ msgid ""
 "The permission ``knowledge_base.reader`` is not relevant for public answers. "
 "They are **always visible to everyone**."
 msgstr ""
-"Дозвола ``knowledge_base.reader`` није релевантна за јавне чланке. Они су **"
-"увек видљиви свима**."
+"Дозвола ``knowledge_base.reader`` није релевантна за јавне чланке. Они су "
+"**увек видљиви свима**."
 
 #: ../manage/macros.rst:2
 msgid "Macros"
@@ -14977,33 +14977,43 @@ msgstr ""
 "апликацијама, омогућавајући им да се претплате на освежавања тикета уместо "
 "да морају да испитују Zammad сервер сваких *n* минута."
 
-#: ../manage/webhook.rst:8
-msgid "⌛ **Webhooks may not arrive immediately.**"
-msgstr "⌛ **Повратни позиви можда неће бити обављени одмах.**"
-
 #: ../manage/webhook.rst:10
 msgid ""
-"Webhooks are sent out with the same priority and order as email triggers. If "
-"webhook dispatch fails (e.g. because the receiving server is misconfigured), "
-"Zammad will retry up to four times."
+"Webhooks may not arrive immediately. They are sent out with the same "
+"priority and order as email triggers. If webhook dispatch fails (e.g. "
+"because the receiving server is misconfigured), Zammad will retry up to four "
+"times."
 msgstr ""
-"Повратни позиви се шаљу са истим приоритетом и редоследом као и имејл "
-"окидачи. Ако слање побратног позива не успе (нпр. зато што је долазни сервер "
-"погрешно подешен), Zammad ће покушати поново до четири пута."
+"Повратни позиви можда неће стићи одмах. Шаљу се са истим приоритетом и "
+"редоследом као и имејл окидачи. Ако слање повратног позива не успе (нпр. "
+"зато што је долазни сервер погрешно подешен), Zammad ће покушати поново до "
+"четири пута."
+
+#: ../manage/webhook.rst:14
+msgid ""
+"Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/"
+"scheduler` jobs."
+msgstr ""
+"Повратни позиви морају бити извршени преко :doc:`окидача </manage/trigger>` "
+"или :doc:`планера </manage/scheduler>`."
 
 #: ../manage/webhook.rst:16
 msgid ""
-"Webhooks are available for :doc:`/manage/trigger` and :doc:`/manage/"
-"scheduler`."
+"The usage of variables is limited compared to other places. Some features "
+"are not available in webhooks (e.g. the ``.value`` extension, translation "
+"(``#{t(object.attribute)}``) and time formatting "
+"(``#{dt(object.time_attribute, [...]``) functions)."
 msgstr ""
-"Повратни позиви су доступни за :doc:`окидаче </manage/trigger>` "
-"и :doc:`планере </manage/scheduler>`."
+"Коришћење променљивих је ограничено у односу на остале контексте. Неке "
+"функције нису доступне у повратним позивима, нпр. екстензија ``.value``, "
+"превод (``#{t(object.attribute)}``) и функције форматирање времена (``#{dt("
+"object.time_attribute, [...])}``)."
 
-#: ../manage/webhook.rst:20
+#: ../manage/webhook.rst:22
 msgid "How do Webhooks Work"
 msgstr "Како повратни позиви уствари раде"
 
-#: ../manage/webhook.rst:22
+#: ../manage/webhook.rst:24
 msgid ""
 "Under the hood, Zammad sends a POST request to a third-party URL (\"API "
 "endpoint\") you specify in the New Webhook dialog. The application server "
@@ -15015,13 +15025,13 @@ msgstr ""
 "адресе/путање мора бити подешен да прима поруке од Zammad-а и у складу са "
 "тим обради примљене податке."
 
-#: ../manage/webhook.rst:27
+#: ../manage/webhook.rst:29
 msgid ""
 "Webhooks can be created both from scratch and from pre-defined templates."
 msgstr ""
 "Повратни позиви се могу додати и од нуле и од унапред дефинисаних шаблона."
 
-#: ../manage/webhook.rst:29
+#: ../manage/webhook.rst:31
 msgid ""
 "When created from scratch, regular webhook payloads by default contain the "
 "following JSON data about new/updated tickets:"
@@ -15029,31 +15039,31 @@ msgstr ""
 "Када се додају од нуле, уобичајени подаци повратног позива подразумевано "
 "садрже следећу JSON структуру о новим/освеженим тикетима:"
 
-#: ../manage/webhook.rst:32
+#: ../manage/webhook.rst:34
 msgid "ticket attributes/metadata"
 msgstr "атрибути тикета/метаподаци"
 
-#: ../manage/webhook.rst:33
+#: ../manage/webhook.rst:35
 msgid "associated article(s)"
 msgstr "повезани чланци"
 
-#: ../manage/webhook.rst:34
+#: ../manage/webhook.rst:36
 msgid "associated users (e.g. article senders, owners, etc.)"
 msgstr "повезани корисници (нпр. пошиљаоци чланака, власници, итд.)"
 
-#: ../manage/webhook.rst:35
+#: ../manage/webhook.rst:37
 msgid "associated user roles"
 msgstr "повезане улоге корисника"
 
-#: ../manage/webhook.rst:36
+#: ../manage/webhook.rst:38
 msgid "associated user organizations (if applicable)"
 msgstr "повезане корисничке организације (ако постоје)"
 
-#: ../manage/webhook.rst:37
+#: ../manage/webhook.rst:39
 msgid "associated groups"
 msgstr "повезане групе"
 
-#: ../manage/webhook.rst:39
+#: ../manage/webhook.rst:41
 msgid ""
 "On the other hand, pre-defined webhooks are designed to work with specific "
 "services, containing special payloads that these services understand."
@@ -15061,7 +15071,7 @@ msgstr ""
 "С друге стране, унапред дефинисани повратни позиви су дизајнирани да раде са "
 "одређеним сервисима, који садрже посебне податке које ови сервиси очекују."
 
-#: ../manage/webhook.rst:42
+#: ../manage/webhook.rst:44
 msgid ""
 "In both cases, however, it is possible to further customize the webhook "
 "payload to your own needs."
@@ -33410,6 +33420,9 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid "⌛ **Webhooks may not arrive immediately.**"
+#~ msgstr "⌛ **Повратни позиви можда неће бити обављени одмах.**"
 
 #~ msgid ""
 #~ "📎 Zammad **cannot receive file attachments larger than 20MB** in "
