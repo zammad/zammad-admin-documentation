@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 11:25+0200\n"
+"POT-Creation-Date: 2025-10-02 13:05+0200\n"
 "PO-Revision-Date: 2023-10-11 14:18+0000\n"
 "Last-Translator: morealedgar <morealedgar@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://translations.zammad.org/projects/"
@@ -6980,7 +6980,7 @@ msgstr ""
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
 #: ../manage/slas/index.rst:78 ../manage/trigger.rst:32
-#: ../manage/webhook.rst:45 ../system/core-workflows.rst:23
+#: ../manage/webhook.rst:47 ../system/core-workflows.rst:23
 #: ../system/objects.rst:32
 msgid "Learn more"
 msgstr ""
@@ -12502,28 +12502,33 @@ msgid ""
 "instead of having to poll the Zammad server every *n* minutes."
 msgstr ""
 
-#: ../manage/webhook.rst:8
-msgid "⌛ **Webhooks may not arrive immediately.**"
-msgstr ""
-
 #: ../manage/webhook.rst:10
 msgid ""
-"Webhooks are sent out with the same priority and order as email triggers. If "
-"webhook dispatch fails (e.g. because the receiving server is misconfigured), "
-"Zammad will retry up to four times."
+"Webhooks may not arrive immediately. They are sent out with the same "
+"priority and order as email triggers. If webhook dispatch fails (e.g. "
+"because the receiving server is misconfigured), Zammad will retry up to four "
+"times."
+msgstr ""
+
+#: ../manage/webhook.rst:14
+msgid ""
+"Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/"
+"scheduler` jobs."
 msgstr ""
 
 #: ../manage/webhook.rst:16
 msgid ""
-"Webhooks are available for :doc:`/manage/trigger` and :doc:`/manage/"
-"scheduler`."
-msgstr ""
-
-#: ../manage/webhook.rst:20
-msgid "How do Webhooks Work"
+"The usage of variables is limited compared to other places. Some features "
+"are not available in webhooks (e.g. the ``.value`` extension, translation "
+"(``#{t(object.attribute)}``) and time formatting "
+"(``#{dt(object.time_attribute, [...]``) functions)."
 msgstr ""
 
 #: ../manage/webhook.rst:22
+msgid "How do Webhooks Work"
+msgstr ""
+
+#: ../manage/webhook.rst:24
 msgid ""
 "Under the hood, Zammad sends a POST request to a third-party URL (\"API "
 "endpoint\") you specify in the New Webhook dialog. The application server "
@@ -12531,48 +12536,48 @@ msgid ""
 "and handle the provided payload accordingly."
 msgstr ""
 
-#: ../manage/webhook.rst:27
+#: ../manage/webhook.rst:29
 msgid ""
 "Webhooks can be created both from scratch and from pre-defined templates."
 msgstr ""
 
-#: ../manage/webhook.rst:29
+#: ../manage/webhook.rst:31
 msgid ""
 "When created from scratch, regular webhook payloads by default contain the "
 "following JSON data about new/updated tickets:"
 msgstr ""
 
-#: ../manage/webhook.rst:32
+#: ../manage/webhook.rst:34
 msgid "ticket attributes/metadata"
 msgstr ""
 
-#: ../manage/webhook.rst:33
+#: ../manage/webhook.rst:35
 msgid "associated article(s)"
 msgstr ""
 
-#: ../manage/webhook.rst:34
+#: ../manage/webhook.rst:36
 msgid "associated users (e.g. article senders, owners, etc.)"
 msgstr ""
 
-#: ../manage/webhook.rst:35
+#: ../manage/webhook.rst:37
 msgid "associated user roles"
 msgstr ""
 
-#: ../manage/webhook.rst:36
+#: ../manage/webhook.rst:38
 msgid "associated user organizations (if applicable)"
 msgstr ""
 
-#: ../manage/webhook.rst:37
+#: ../manage/webhook.rst:39
 msgid "associated groups"
 msgstr ""
 
-#: ../manage/webhook.rst:39
+#: ../manage/webhook.rst:41
 msgid ""
 "On the other hand, pre-defined webhooks are designed to work with specific "
 "services, containing special payloads that these services understand."
 msgstr ""
 
-#: ../manage/webhook.rst:42
+#: ../manage/webhook.rst:44
 msgid ""
 "In both cases, however, it is possible to further customize the webhook "
 "payload to your own needs."
