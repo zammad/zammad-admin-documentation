@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-25 12:46+0200\n"
+"POT-Creation-Date: 2025-10-02 13:23+0200\n"
 "PO-Revision-Date: 2025-09-11 07:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -8611,7 +8611,7 @@ msgstr ""
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
 #: ../manage/slas/index.rst:94 ../manage/trigger.rst:28
-#: ../manage/webhook.rst:45 ../system/core-workflows.rst:30
+#: ../manage/webhook.rst:47 ../system/core-workflows.rst:30
 #: ../system/objects.rst:32
 msgid "Learn more"
 msgstr "Erfahren Sie mehr"
@@ -15497,34 +15497,48 @@ msgstr ""
 "zu integrieren. Dadurch können diese Live-Updates zu Tickets abonnieren, "
 "anstatt Zammad alle *n* Minuten abzufragen."
 
-#: ../manage/webhook.rst:8
-msgid "⌛ **Webhooks may not arrive immediately.**"
-msgstr "⌛ **Webhooks kommen möglicherweise nicht sofort an.**"
-
 #: ../manage/webhook.rst:10
+#, fuzzy
+#| msgid ""
+#| "Webhooks are sent out with the same priority and order as email triggers. "
+#| "If webhook dispatch fails (e.g. because the receiving server is "
+#| "misconfigured), Zammad will retry up to four times."
 msgid ""
-"Webhooks are sent out with the same priority and order as email triggers. If "
-"webhook dispatch fails (e.g. because the receiving server is misconfigured), "
-"Zammad will retry up to four times."
+"Webhooks may not arrive immediately. They are sent out with the same "
+"priority and order as email triggers. If webhook dispatch fails (e.g. "
+"because the receiving server is misconfigured), Zammad will retry up to four "
+"times."
 msgstr ""
 "Webhooks werden mit der gleichen Priorität und in der gleichen Reihenfolge "
 "wie per Trigger ausgelöste E-Mails verschickt. Wenn die Ausführung des "
 "Webhooks fehlschlägt (z.B. weil der empfangende Server falsch konfiguriert "
 "ist), versucht Zammad es bis zu vier Mal erneut."
 
-#: ../manage/webhook.rst:16
+#: ../manage/webhook.rst:14
+#, fuzzy
+#| msgid ""
+#| "Webhooks are available for :doc:`/manage/trigger` and :doc:`/manage/"
+#| "scheduler`."
 msgid ""
-"Webhooks are available for :doc:`/manage/trigger` and :doc:`/manage/"
-"scheduler`."
+"Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/"
+"scheduler` jobs."
 msgstr ""
 "Webhooks sind für :doc:`/manage/trigger` und :doc:`/manage/scheduler` "
 "verfügbar."
 
-#: ../manage/webhook.rst:20
+#: ../manage/webhook.rst:16
+msgid ""
+"The usage of variables is limited compared to other places. Some features "
+"are not available in webhooks (e.g. the ``.value`` extension, translation "
+"(``#{t(object.attribute)}``) and time formatting "
+"(``#{dt(object.time_attribute, [...]``) functions)."
+msgstr ""
+
+#: ../manage/webhook.rst:22
 msgid "How do Webhooks Work"
 msgstr "Wie funktionieren Webhooks"
 
-#: ../manage/webhook.rst:22
+#: ../manage/webhook.rst:24
 msgid ""
 "Under the hood, Zammad sends a POST request to a third-party URL (\"API "
 "endpoint\") you specify in the New Webhook dialog. The application server "
@@ -15537,14 +15551,14 @@ msgstr ""
 "er Nachrichten von Zammad empfängt und die bereitgestellten Nutzdaten "
 "entsprechend verarbeitet."
 
-#: ../manage/webhook.rst:27
+#: ../manage/webhook.rst:29
 msgid ""
 "Webhooks can be created both from scratch and from pre-defined templates."
 msgstr ""
 "Webhooks können sowohl komplett neu als auch aus vordefinierten Vorlagen "
 "erstellt werden."
 
-#: ../manage/webhook.rst:29
+#: ../manage/webhook.rst:31
 msgid ""
 "When created from scratch, regular webhook payloads by default contain the "
 "following JSON data about new/updated tickets:"
@@ -15553,31 +15567,31 @@ msgstr ""
 "Payloads standardmäßig die folgenden JSON-Daten zu neuen/aktualisierten "
 "Tickets:"
 
-#: ../manage/webhook.rst:32
+#: ../manage/webhook.rst:34
 msgid "ticket attributes/metadata"
 msgstr "Ticket-Attribute/Metadaten"
 
-#: ../manage/webhook.rst:33
+#: ../manage/webhook.rst:35
 msgid "associated article(s)"
 msgstr "zugehörige(r) Artikel"
 
-#: ../manage/webhook.rst:34
+#: ../manage/webhook.rst:36
 msgid "associated users (e.g. article senders, owners, etc.)"
 msgstr "jeweilige Benutzer (z.B. Absender von Artikeln, Besitzer usw.)"
 
-#: ../manage/webhook.rst:35
+#: ../manage/webhook.rst:37
 msgid "associated user roles"
 msgstr "jeweilige Benutzerrollen"
 
-#: ../manage/webhook.rst:36
+#: ../manage/webhook.rst:38
 msgid "associated user organizations (if applicable)"
 msgstr "jeweilige Organisationen der Benutzer (falls vorhanden)"
 
-#: ../manage/webhook.rst:37
+#: ../manage/webhook.rst:39
 msgid "associated groups"
 msgstr "jeweilige Gruppen"
 
-#: ../manage/webhook.rst:39
+#: ../manage/webhook.rst:41
 msgid ""
 "On the other hand, pre-defined webhooks are designed to work with specific "
 "services, containing special payloads that these services understand."
@@ -15586,7 +15600,7 @@ msgstr ""
 "bestimmten Diensten konzipiert und enthalten spezielle Nutzdaten, die diese "
 "Dienste verstehen."
 
-#: ../manage/webhook.rst:42
+#: ../manage/webhook.rst:44
 msgid ""
 "In both cases, however, it is possible to further customize the webhook "
 "payload to your own needs."
@@ -34480,6 +34494,9 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid "⌛ **Webhooks may not arrive immediately.**"
+#~ msgstr "⌛ **Webhooks kommen möglicherweise nicht sofort an.**"
 
 #~ msgid ""
 #~ "📎 Zammad **cannot receive file attachments larger than 20MB** in "
