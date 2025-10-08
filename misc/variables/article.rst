@@ -7,9 +7,10 @@ Articles
 
 Below you can find a list with examples of article variables.
 Depending on the context and if you want to use an attribute of a specific
-article, you can choose from specific article types in Zammad. To trigger
-the suggestions, type ``::`` and search for the variable you want to use.
-The following article types are available, depending on the context:
+article, you can choose from specific article types in Zammad. To access
+suggestions for variables, type ``::`` followed by your search query to trigger
+a list of relevant options. The following article types are available, depending
+on the context:
 
 - ``last_internal_article``
 - ``last_external_article``
