@@ -1,15 +1,16 @@
 Config
 ======
 
-.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+.. note:: If you're missing variables or are not sure if something is not
+   working as expected, feel free to ask over at the
+   `community <https://community.zammad.org>`_.
 
 Below you'll find config related variables.
-These hold useful configuration information that you can use within e.g. triggers to show necessary information to your customer.
-
-The below list gives you an example what kind of data you can expect, it's not intended to explain the data itself.
+These hold useful configuration information that you can use within e.g.
+triggers to show necessary information to your customer.
 
 .. csv-table:: Config Variables
-   :header: "name", "variable", "example"
+   :header: "Name", "Variable", "Example"
    :widths: 20, 10, 20
 
    "Config > Fully Qualified Domain Name", "``#{config.fqdn}``", "``zammad.example.com``"

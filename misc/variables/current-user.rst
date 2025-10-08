@@ -1,17 +1,21 @@
 Current User
 ============
 
-.. note:: If you're missing variables or are not sure if something is not working as expected, feel free to ask over at the `Community <https://community.zammad.org>`_.
+.. note:: If you're missing variables or are not sure if something is not
+   working as expected, feel free to ask over at the
+   `community <https://community.zammad.org>`_.
 
-Current user variables always return values of the current user that caused e.g. a trigger to run.
+Current user variables always return values of the current user that caused e.g.
+a trigger to run.
 
-.. note:: Due to the above fact, these variables are often not (yet) set or available for usage.
+.. note:: Due to the above fact, these variables are often not (yet) set or
+   available for usage.
 
-   In situations where e.g. schedulers or triggers run, this most likely is nothing you want to use.
-
+   In situations where e.g. schedulers or triggers run, this most likely is
+   nothing you want to use.
 
 .. csv-table:: Current User Variables
-   :header: "name", "variable", "example"
+   :header: "Name", "Variable", "Example"
    :widths: 20,10,20
 
    "Current User > Address", "``#{user.address}``", "``Some street 1, 12345 Berlin`` or empty if not set"
