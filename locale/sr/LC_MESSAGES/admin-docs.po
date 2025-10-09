@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-02 13:23+0200\n"
+"POT-Creation-Date: 2025-10-08 05:37+0000\n"
 "PO-Revision-Date: 2025-10-04 10:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -3166,7 +3166,9 @@ msgstr "Поља наведена у форми су ограничена на �
 
 #: ../channels/form.rst:19 ../manage/groups/settings.rst:16
 #: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
-#: ../manage/templates.rst:33 ../system/objects.rst:131
+#: ../manage/templates.rst:33 ../misc/variables/article.rst:1
+#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
+#: ../misc/variables/ticket.rst:1 ../system/objects.rst:131
 #: ../system/objects.rst:234
 msgid "Name"
 msgstr "Назив"
@@ -15006,8 +15008,8 @@ msgid ""
 msgstr ""
 "Коришћење променљивих је ограничено у односу на остале контексте. Неке "
 "функције нису доступне у повратним позивима, нпр. екстензија ``.value``, "
-"превод (``#{t(object.attribute)}``) и функције форматирање времена (``#{dt("
-"object.time_attribute, [...])}``)."
+"превод (``#{t(object.attribute)}``) и функције форматирање времена "
+"(``#{dt(object.time_attribute, [...])}``)."
 
 #: ../manage/webhook.rst:22
 msgid "How do Webhooks Work"
@@ -18695,57 +18697,86 @@ msgstr "Чланци"
 
 #: ../misc/variables/article.rst:4 ../misc/variables/config.rst:4
 #: ../misc/variables/current-user.rst:4 ../misc/variables/ticket.rst:4
+#, fuzzy
+#| msgid ""
+#| "If you're missing variables or are not sure if something is not working "
+#| "as expected, feel free to ask over at the `Community <https://"
+#| "community.zammad.org>`_."
 msgid ""
 "If you're missing variables or are not sure if something is not working as "
-"expected, feel free to ask over at the `Community <https://"
+"expected, feel free to ask over at the `community <https://"
 "community.zammad.org>`_."
 msgstr ""
 "Ако вам недостају променљиве или нисте сигурни да ли нешто функционише на "
 "очелован начин, слободно питајте у `Community форуму <https://"
 "community.zammad.org>`_."
 
-#: ../misc/variables/article.rst:6
+#: ../misc/variables/article.rst:8
 msgid ""
-"Below you can find all available ticket article-based variables within "
-"Zammad. These can be called via triggers for example. If you're unsure if "
-"Zammad does support variables at the point you're at, you can try to type "
-"``::`` to check."
+"Below you can find a list with examples of article variables. Depending on "
+"the context and if you want to use an attribute of a specific article, you "
+"can choose from specific article types in Zammad. To access suggestions for "
+"variables, type ``::`` followed by your search query to trigger a list of "
+"relevant options. The following article types are available, depending on "
+"the context:"
 msgstr ""
-"Испод можете пронажи све доступне променљиве чланака тикета у оквиру Zammad-"
-"а. Могу се користити унутар нпр. окидача. Ако нисте сигурни да ли Zammad "
-"подржава променљиве у делу у коме се налазите, пробајте да откуцате ``::``да "
-"бисте проверили."
 
-#: ../misc/variables/article.rst:9 ../misc/variables/config.rst:9
-#: ../misc/variables/ticket.rst:9
+#: ../misc/variables/article.rst:15
+msgid "``last_internal_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:16
+msgid "``last_external_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:17
+#, fuzzy
+#| msgid "``last_login``"
+msgid "``last_article``"
+msgstr "``last_login``"
+
+#: ../misc/variables/article.rst:18
+msgid "``created_internal_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:19
+msgid "``created_external_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:20
+#, fuzzy
+#| msgid "``#{user.created_at}``"
+msgid "``created_article``"
+msgstr "``#{user.created_at}``"
+
+#: ../misc/variables/article.rst:22
 msgid ""
-"The below list gives you an example what kind of data you can expect, it's "
-"not intended to explain the data itself."
+"The table uses ``last_article`` as example. In case you want another "
+"article, replace it with one of the mentioned article types."
 msgstr ""
-"Листа испод вам пружа пример какав тип података можете очекивати, није јој "
-"циљ да објасни саме податке."
 
-#: ../misc/variables/article.rst:11
+#: ../misc/variables/article.rst:25
 msgid "Article Variables"
 msgstr "Променљиве чланка"
 
 #: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "name"
-msgstr "назив"
+#, fuzzy
+#| msgid "Variables"
+msgid "Variable"
+msgstr "Променљиве"
 
 #: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "variable"
-msgstr "променљива"
-
-#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
-#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "example"
-msgstr "пример"
+#: ../settings/security/base.rst:115
+#: ../system/integrations/checkmk/api-reference.rst:13
+msgid "Example"
+msgstr "Пример"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Cc"
+#, fuzzy
+#| msgid "Article > Cc"
+msgid "Last Article > Cc"
 msgstr "Чланак > Cc"
 
 #: ../misc/variables/article.rst:1
@@ -18757,7 +18788,9 @@ msgid "``jdoe@example.com, company@example.com``"
 msgstr "``jdoe@example.com, company@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Address"
+#, fuzzy
+#| msgid "Article > Created by > Address"
+msgid "Last Article > Created by > Address"
 msgstr "Чланак > Додато од стране > Адреса"
 
 #: ../misc/variables/article.rst:1
@@ -18771,7 +18804,9 @@ msgstr ""
 "објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Department"
+#, fuzzy
+#| msgid "Article > Created by > Department"
+msgid "Last Article > Created by > Department"
 msgstr "Чланак > Додато од стране > Одељење"
 
 #: ../misc/variables/article.rst:1
@@ -18783,7 +18818,9 @@ msgid "``Sales`` or empty if not set in user object"
 msgstr "``Sales`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Email"
+#, fuzzy
+#| msgid "Article > Created by > Email"
+msgid "Last Article > Created by > Email"
 msgstr "Чланак > Додато од стране > Имејл"
 
 #: ../misc/variables/article.rst:1
@@ -18795,7 +18832,9 @@ msgid "``jdoe@example.com``"
 msgstr "``jdoe@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Fax"
+#, fuzzy
+#| msgid "Article > Created by > Fax"
+msgid "Last Article > Created by > Fax"
 msgstr "Чланак > Додато од стране > Факс"
 
 #: ../misc/variables/article.rst:1
@@ -18807,7 +18846,9 @@ msgid "``+4930123456789`` or empty if not set in user object"
 msgstr "``+4930123456789`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Firstname"
+#, fuzzy
+#| msgid "Article > Created by > Firstname"
+msgid "Last Article > Created by > Firstname"
 msgstr "Чланак > Додато од стране > Име"
 
 #: ../misc/variables/article.rst:1
@@ -18819,7 +18860,9 @@ msgid "``Joe`` or empty if not set"
 msgstr "``Joe`` или празно ако није постављено"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Lastname"
+#, fuzzy
+#| msgid "Article > Created by > Lastname"
+msgid "Last Article > Created by > Lastname"
 msgstr "Чланак > Додато од стране > Презиме"
 
 #: ../misc/variables/article.rst:1
@@ -18832,7 +18875,9 @@ msgid "``Doe`` or empty if not set"
 msgstr "``Doe`` или празно ако није постављено"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Login"
+#, fuzzy
+#| msgid "Article > Created by > Login"
+msgid "Last Article > Created by > Login"
 msgstr "Чланак > Додато од стране > Пријава"
 
 #: ../misc/variables/article.rst:1
@@ -18845,7 +18890,9 @@ msgid "``jdoe``"
 msgstr "``jdoe``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Mobile"
+#, fuzzy
+#| msgid "Article > Created by > Mobile"
+msgid "Last Article > Created by > Mobile"
 msgstr "Чланак > Додато од стране > Мобилни"
 
 #: ../misc/variables/article.rst:1
@@ -18853,7 +18900,9 @@ msgid "``#{article.created_by.mobile}``"
 msgstr "``#{article.created_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Note"
+#, fuzzy
+#| msgid "Article > Created by > Note"
+msgid "Last Article > Created by > Note"
 msgstr "Чланак > Додато од стране > Напомена"
 
 #: ../misc/variables/article.rst:1
@@ -18867,7 +18916,9 @@ msgstr ""
 "корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Phone"
+#, fuzzy
+#| msgid "Article > Created by > Phone"
+msgid "Last Article > Created by > Phone"
 msgstr "Чланак > Додато од стране > Телефон"
 
 #: ../misc/variables/article.rst:1
@@ -18875,7 +18926,9 @@ msgid "``#{article.created_by.phone}``"
 msgstr "``#{article.created_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > VIP"
+#, fuzzy
+#| msgid "Article > Created by > VIP"
+msgid "Last Article > Created by > VIP"
 msgstr "Чланак > Додато од стране > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -18887,7 +18940,9 @@ msgid "``true`` or ``false``"
 msgstr "``true`` или ``false``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Web"
+#, fuzzy
+#| msgid "Article > Created by > Web"
+msgid "Last Article > Created by > Web"
 msgstr "Чланак > Додато од стране > Веб"
 
 #: ../misc/variables/article.rst:1
@@ -18900,7 +18955,9 @@ msgstr ""
 "``https://zammad.com`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created"
+#, fuzzy
+#| msgid "Article > Created"
+msgid "Last Article > Created"
 msgstr "Article > Додато у"
 
 #: ../misc/variables/article.rst:1
@@ -18912,7 +18969,9 @@ msgid "``2019-10-08 15:24:47 UTC``"
 msgstr "``2019-10-08 15:24:47 UTC``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > From"
+#, fuzzy
+#| msgid "Article > From"
+msgid "Last Article > From"
 msgstr "Чланак > Од"
 
 #: ../misc/variables/article.rst:1
@@ -18927,7 +18986,9 @@ msgstr ""
 "атрибута имејл поруке"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Sender > Name"
+#, fuzzy
+#| msgid "Article > Sender > Name"
+msgid "Last Article > Sender > Name"
 msgstr "Чланак > Пошиљалац > Назив"
 
 #: ../misc/variables/article.rst:1
@@ -18939,7 +19000,9 @@ msgid "``Customer``, ``Agent`` or ``System``"
 msgstr "``Customer``, ``Agent`` или ``System``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Subject"
+#, fuzzy
+#| msgid "Article > Subject"
+msgid "Last Article > Subject"
 msgstr "Чланак > Предмет"
 
 #: ../misc/variables/article.rst:1
@@ -18951,7 +19014,9 @@ msgid "``My amazing subject``"
 msgstr "``Мој екстра предмет`"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Text"
+#, fuzzy
+#| msgid "Article > Text"
+msgid "Last Article > Text"
 msgstr "Чланак > Текст"
 
 #: ../misc/variables/article.rst:1
@@ -18963,7 +19028,23 @@ msgid "``Test`` without formatting (plain)"
 msgstr "``Test`` без форматираног текста (обичан)"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > TicketID"
+#, fuzzy
+#| msgid "Article > Text"
+msgid "Last Article > Text (HTML)"
+msgstr "Чланак > Текст"
+
+#: ../misc/variables/article.rst:1
+msgid "``#{article.body_as_html}``"
+msgstr "``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:1
+msgid "``Test`` with formatting"
+msgstr "``Тест`` са форматираним текстом"
+
+#: ../misc/variables/article.rst:1
+#, fuzzy
+#| msgid "Article > TicketID"
+msgid "Last Article > TicketID"
 msgstr "Чланак > TicketID"
 
 #: ../misc/variables/article.rst:1
@@ -18975,7 +19056,9 @@ msgid "``1`` (not ticket number)"
 msgstr "``1`` (не представља број тикета)"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > To"
+#, fuzzy
+#| msgid "Article > To"
+msgid "Last Article > To"
 msgstr "Чланак > За"
 
 #: ../misc/variables/article.rst:1
@@ -18987,7 +19070,9 @@ msgid "``helpdesk@example.com``"
 msgstr "``helpdesk@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Type > Name"
+#, fuzzy
+#| msgid "Article > Type > Name"
+msgid "Last Article > Type > Name"
 msgstr "Чланак > Тип > Назив"
 
 #: ../misc/variables/article.rst:1
@@ -19003,7 +19088,9 @@ msgstr ""
 "develop/db/seeds/ticket_article_types.rb>`_)"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Address"
+#, fuzzy
+#| msgid "Article > Updated by > Address"
+msgid "Last Article > Updated by > Address"
 msgstr "Чланак > Освежено од стране > Адреса"
 
 #: ../misc/variables/article.rst:1
@@ -19011,7 +19098,9 @@ msgid "``#{article.updated_by.address}``"
 msgstr "``#{article.updated_by.address}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Department"
+#, fuzzy
+#| msgid "Article > Updated by > Department"
+msgid "Last Article > Updated by > Department"
 msgstr "Чланак > Освежено од стране > Одељење"
 
 #: ../misc/variables/article.rst:1
@@ -19019,7 +19108,9 @@ msgid "``#{article.updated_by.department}``"
 msgstr "``#{article.updated_by.department}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Email"
+#, fuzzy
+#| msgid "Article > Updated by > Email"
+msgid "Last Article > Updated by > Email"
 msgstr "Чланак > Освежено од стране > Имејл"
 
 #: ../misc/variables/article.rst:1
@@ -19027,7 +19118,9 @@ msgid "``#{article.updated_by.email}``"
 msgstr "``#{article.updated_by.email}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Fax"
+#, fuzzy
+#| msgid "Article > Updated by > Fax"
+msgid "Last Article > Updated by > Fax"
 msgstr "Чланак > Освежено од стране > Факс"
 
 #: ../misc/variables/article.rst:1
@@ -19035,7 +19128,9 @@ msgid "``#{article.updated_by.fax}``"
 msgstr "``#{article.updated_by.fax}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Firstname"
+#, fuzzy
+#| msgid "Article > Updated by > Firstname"
+msgid "Last Article > Updated by > Firstname"
 msgstr "Чланак > Освежено од стране > Име"
 
 #: ../misc/variables/article.rst:1
@@ -19043,7 +19138,9 @@ msgid "``#{article.updated_by.firstname}``"
 msgstr "``#{article.updated_by.firstname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Lastname"
+#, fuzzy
+#| msgid "Article > Updated by > Lastname"
+msgid "Last Article > Updated by > Lastname"
 msgstr "Чланак > Освежено од стране > Презиме"
 
 #: ../misc/variables/article.rst:1
@@ -19051,7 +19148,9 @@ msgid "``#{article.updated_by.lastname}``"
 msgstr "``#{article.updated_by.lastname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Login"
+#, fuzzy
+#| msgid "Article > Updated by > Login"
+msgid "Last Article > Updated by > Login"
 msgstr "Чланак > Освежено од стране > Пријава"
 
 #: ../misc/variables/article.rst:1
@@ -19059,7 +19158,9 @@ msgid "``#{article.updated_by.login}``"
 msgstr "``#{article.updated_by.login}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Mobile"
+#, fuzzy
+#| msgid "Article > Updated by > Mobile"
+msgid "Last Article > Updated by > Mobile"
 msgstr "Чланак > Освежено од стране > Мобилни"
 
 #: ../misc/variables/article.rst:1
@@ -19067,7 +19168,9 @@ msgid "``#{article.updated_by.mobile}``"
 msgstr "``#{article.updated_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Note"
+#, fuzzy
+#| msgid "Article > Updated by > Note"
+msgid "Last Article > Updated by > Note"
 msgstr "Чланак > Освежено од стране > Напомена"
 
 #: ../misc/variables/article.rst:1
@@ -19075,7 +19178,9 @@ msgid "``#{article.updated_by.note}``"
 msgstr "``#{article.updated_by.note}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Phone"
+#, fuzzy
+#| msgid "Article > Updated by > Phone"
+msgid "Last Article > Updated by > Phone"
 msgstr "Чланак > Освежено од стране > Телефон"
 
 #: ../misc/variables/article.rst:1
@@ -19083,7 +19188,9 @@ msgid "``#{article.updated_by.phone}``"
 msgstr "``#{article.updated_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > VIP"
+#, fuzzy
+#| msgid "Article > Updated by > VIP"
+msgid "Last Article > Updated by > VIP"
 msgstr "Чланак > Освежено од стране > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -19091,7 +19198,9 @@ msgid "``#{article.updated_by.vip}``"
 msgstr "``#{article.updated_by.vip}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Web"
+#, fuzzy
+#| msgid "Article > Updated by > Web"
+msgid "Last Article > Updated by > Web"
 msgstr "Чланак > Освежено од стране > Веб"
 
 #: ../misc/variables/article.rst:1
@@ -19099,7 +19208,9 @@ msgid "``#{article.updated_by.web}``"
 msgstr "``#{article.updated_by.web}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated"
+#, fuzzy
+#| msgid "Article > Updated"
+msgid "Last Article > Updated"
 msgstr "Чланак > Освежено у"
 
 #: ../misc/variables/article.rst:1
@@ -19107,7 +19218,9 @@ msgid "``#{article.updated_at}``"
 msgstr "``#{article.updated_at}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Visibility"
+#, fuzzy
+#| msgid "Article > Visibility"
+msgid "Last Article > Visibility"
 msgstr "Чланак > Видљивост"
 
 #: ../misc/variables/article.rst:1
@@ -19117,18 +19230,6 @@ msgstr "``#{article.internal}``"
 #: ../misc/variables/article.rst:1
 msgid "``false`` or ``true`` (false if not internal)"
 msgstr "``false`` или ``true`` (false ако није интерни)"
-
-#: ../misc/variables/article.rst:1
-msgid "Article Text as HTML (not referenced)"
-msgstr "Текст чланка у HTML формату (без референцирања)"
-
-#: ../misc/variables/article.rst:1
-msgid "``#{article.body_as_html}``"
-msgstr "``#{article.body_as_html}``"
-
-#: ../misc/variables/article.rst:1
-msgid "``Test`` with formatting"
-msgstr "``Тест`` са форматираним текстом"
 
 #: ../misc/variables/article.rst:1 ../misc/variables/ticket.rst:1
 msgid "Ticket > Article#"
@@ -19146,7 +19247,7 @@ msgstr "``1`` број чланака тикета"
 msgid "Config"
 msgstr "Конфигурација"
 
-#: ../misc/variables/config.rst:6
+#: ../misc/variables/config.rst:8
 msgid ""
 "Below you'll find config related variables. These hold useful configuration "
 "information that you can use within e.g. triggers to show necessary "
@@ -19156,7 +19257,7 @@ msgstr ""
 "корисне податке које бисте желели да користите унутар нпр. окидача за приказ "
 "потребних информација вашим клијентима."
 
-#: ../misc/variables/config.rst:11
+#: ../misc/variables/config.rst:12
 msgid "Config Variables"
 msgstr "Променљиве конфигурације"
 
@@ -19244,7 +19345,7 @@ msgstr "``Ticket#``"
 msgid "Current User"
 msgstr "Тренутни корисник"
 
-#: ../misc/variables/current-user.rst:6
+#: ../misc/variables/current-user.rst:8
 msgid ""
 "Current user variables always return values of the current user that caused "
 "e.g. a trigger to run."
@@ -19252,7 +19353,7 @@ msgstr ""
 "Променљиве тренутног корисника увек враћају вредности корисника који је "
 "покренуо нпр. окидач."
 
-#: ../misc/variables/current-user.rst:8
+#: ../misc/variables/current-user.rst:11
 msgid ""
 "Due to the above fact, these variables are often not (yet) set or available "
 "for usage."
@@ -19260,7 +19361,7 @@ msgstr ""
 "С обзиром на горњу чињеницу, ове променљиве често немају (још увек) вредност "
 "или нису доступне."
 
-#: ../misc/variables/current-user.rst:10
+#: ../misc/variables/current-user.rst:14
 msgid ""
 "In situations where e.g. schedulers or triggers run, this most likely is "
 "nothing you want to use."
@@ -19268,7 +19369,7 @@ msgstr ""
 "У ситуацијама када се извршавају нпр. планери или окидачи, ово није нешто на "
 "шта бисте желели да се ослоните."
 
-#: ../misc/variables/current-user.rst:13
+#: ../misc/variables/current-user.rst:17
 msgid "Current User Variables"
 msgstr "Променљиве тренутног корисника"
 
@@ -19708,9 +19809,15 @@ msgstr "Тренутни корисник > Веб"
 msgid "``#{user.web}``"
 msgstr "``#{user.web}``"
 
-#: ../misc/variables/ticket.rst:6
+#: ../misc/variables/ticket.rst:8
+#, fuzzy
+#| msgid ""
+#| "Below you can find all available ticket-based variables within Zammad. "
+#| "These can be called via triggers for example. If you're unsure if Zammad "
+#| "does support variables at the point you're at, you can try to type ``::`` "
+#| "to check."
 msgid ""
-"Below you can find all available ticket-based variables within Zammad. These "
+"Below you can find examples of ticket-based variables within Zammad. These "
 "can be called via triggers for example. If you're unsure if Zammad does "
 "support variables at the point you're at, you can try to type ``::`` to "
 "check."
@@ -20815,11 +20922,6 @@ msgid ""
 msgstr ""
 "Сва подешавања делују независно једно од другог омогућавајући вам да "
 "искључите временска ограничења за нпр. администраторе, али не и оператере."
-
-#: ../settings/security/base.rst:115
-#: ../system/integrations/checkmk/api-reference.rst:13
-msgid "Example"
-msgstr "Пример"
 
 #: ../settings/security/base.rst:107
 msgid "Let's suppose you configured the following session timeouts"
@@ -33420,6 +33522,36 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
+
+#~ msgid ""
+#~ "Below you can find all available ticket article-based variables within "
+#~ "Zammad. These can be called via triggers for example. If you're unsure if "
+#~ "Zammad does support variables at the point you're at, you can try to type "
+#~ "``::`` to check."
+#~ msgstr ""
+#~ "Испод можете пронажи све доступне променљиве чланака тикета у оквиру "
+#~ "Zammad-а. Могу се користити унутар нпр. окидача. Ако нисте сигурни да ли "
+#~ "Zammad подржава променљиве у делу у коме се налазите, пробајте да "
+#~ "откуцате ``::``да бисте проверили."
+
+#~ msgid ""
+#~ "The below list gives you an example what kind of data you can expect, "
+#~ "it's not intended to explain the data itself."
+#~ msgstr ""
+#~ "Листа испод вам пружа пример какав тип података можете очекивати, није "
+#~ "јој циљ да објасни саме податке."
+
+#~ msgid "name"
+#~ msgstr "назив"
+
+#~ msgid "variable"
+#~ msgstr "променљива"
+
+#~ msgid "example"
+#~ msgstr "пример"
+
+#~ msgid "Article Text as HTML (not referenced)"
+#~ msgstr "Текст чланка у HTML формату (без референцирања)"
 
 #~ msgid "⌛ **Webhooks may not arrive immediately.**"
 #~ msgstr "⌛ **Повратни позиви можда неће бити обављени одмах.**"
