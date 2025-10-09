@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-02 13:05+0200\n"
+"POT-Creation-Date: 2025-10-08 05:20+0000\n"
 "PO-Revision-Date: 2025-10-07 06:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -677,7 +677,9 @@ msgstr ""
 #: ../ai/writing-assistant.rst:42 ../channels/form.rst:19
 #: ../manage/groups/settings.rst:16 ../manage/report-profiles.rst:38
 #: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
-#: ../manage/templates.rst:23 ../system/objects.rst:133
+#: ../manage/templates.rst:23 ../misc/variables/article.rst:1
+#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
+#: ../misc/variables/ticket.rst:1 ../system/objects.rst:133
 #: ../system/objects.rst:237
 msgid "Name"
 msgstr "Name"
@@ -11376,7 +11378,9 @@ msgstr ""
 msgid "Set the profile to active or inactive."
 msgstr "Setzen Sie das Profil auf aktiv oder inaktiv."
 
-#: ../manage/report-profiles.rst:61 ../settings/security/base.rst:117
+#: ../manage/report-profiles.rst:61 ../misc/variables/article.rst:1
+#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
+#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:117
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr "Beispiel"
@@ -19819,48 +19823,65 @@ msgstr ""
 "erwartet funktionieren, fragen Sie gern in unserer `Community <https://"
 "community.zammad.org>`_ nach."
 
-#: ../misc/variables/article.rst:6
+#: ../misc/variables/article.rst:8
 msgid ""
-"Below you can find all available ticket article-based variables within "
-"Zammad. These can be called via triggers for example. If you're unsure if "
-"Zammad does support variables at the point you're at, you can try to type "
-"``::`` to check."
+"Below you can find a list with examples of article variables. Depending on "
+"the context and if you want to use an attribute of a specific article, you "
+"can choose from specific article types in Zammad. To access suggestions for "
+"variables, type ``::`` followed by your search query to trigger a list of "
+"relevant options. The following article types are available, depending on "
+"the context:"
 msgstr ""
-"Nachfolgend finden Sie alle verfügbaren Ticketartikel-basierten Variablen in "
-"Zammad. Diese können z.B. über Trigger aufgerufen werden. Wenn Sie sich "
-"nicht sicher sind, ob Zammad an der von Ihnen gewünschten Stelle Variablen "
-"unterstützt, können Sie das prüfen indem Sie ``::`` einzugeben."
 
-#: ../misc/variables/article.rst:9 ../misc/variables/config.rst:9
-#: ../misc/variables/ticket.rst:9
+#: ../misc/variables/article.rst:15
+msgid "``last_internal_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:16
+msgid "``last_external_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:17
+#, fuzzy
+#| msgid "``last_login``"
+msgid "``last_article``"
+msgstr "``last_login``"
+
+#: ../misc/variables/article.rst:18
+msgid "``created_internal_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:19
+msgid "``created_external_article``"
+msgstr ""
+
+#: ../misc/variables/article.rst:20
+#, fuzzy
+#| msgid "``#{user.created_at}``"
+msgid "``created_article``"
+msgstr "``#{user.created_at}``"
+
+#: ../misc/variables/article.rst:22
 msgid ""
-"The below list gives you an example what kind of data you can expect, it's "
-"not intended to explain the data itself."
+"The table uses ``last_article`` as example. In case you want another "
+"article, replace it with one of the mentioned article types."
 msgstr ""
-"Die folgende Liste gibt Ihnen ein Beispiel dafür, welche Art von Daten Sie "
-"erwarten können. Sie ist nicht dazu gedacht, die Daten selbst zu erklären."
 
-#: ../misc/variables/article.rst:11
+#: ../misc/variables/article.rst:25
 msgid "Article Variables"
 msgstr "Artikel-Variablen"
 
 #: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "name"
-msgstr "Name"
-
-#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
-#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "variable"
-msgstr "Variable"
-
-#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
-#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-msgid "example"
-msgstr "Beispiel"
+#, fuzzy
+#| msgid "Variables"
+msgid "Variable"
+msgstr "Variablen"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Cc"
+#, fuzzy
+#| msgid "Article > Cc"
+msgid "Last Article > Cc"
 msgstr "Artikel > CC"
 
 #: ../misc/variables/article.rst:1
@@ -19872,7 +19893,9 @@ msgid "``jdoe@example.com, company@example.com``"
 msgstr "``jdoe@example.com, firma@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Address"
+#, fuzzy
+#| msgid "Article > Created by > Address"
+msgid "Last Article > Created by > Address"
 msgstr "Artikel > Erstellt von > Adresse"
 
 #: ../misc/variables/article.rst:1
@@ -19886,7 +19909,9 @@ msgstr ""
 "gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Department"
+#, fuzzy
+#| msgid "Article > Created by > Department"
+msgid "Last Article > Created by > Department"
 msgstr "Artikel > Erstellt von > Abteilung"
 
 #: ../misc/variables/article.rst:1
@@ -19898,7 +19923,9 @@ msgid "``Sales`` or empty if not set in user object"
 msgstr "``Sales`` oder leer wenn nicht am Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Email"
+#, fuzzy
+#| msgid "Article > Created by > Email"
+msgid "Last Article > Created by > Email"
 msgstr "Artikel > Erstellt von > Email"
 
 #: ../misc/variables/article.rst:1
@@ -19910,7 +19937,9 @@ msgid "``jdoe@example.com``"
 msgstr "``jdoe@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Fax"
+#, fuzzy
+#| msgid "Article > Created by > Fax"
+msgid "Last Article > Created by > Fax"
 msgstr "Artikel > Erstellt von > Fax"
 
 #: ../misc/variables/article.rst:1
@@ -19922,7 +19951,9 @@ msgid "``+4930123456789`` or empty if not set in user object"
 msgstr "``+4930123456789`` oder leer wenn nicht im Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Firstname"
+#, fuzzy
+#| msgid "Article > Created by > Firstname"
+msgid "Last Article > Created by > Firstname"
 msgstr "Artikel > Erstellt von > Vorname"
 
 #: ../misc/variables/article.rst:1
@@ -19934,7 +19965,9 @@ msgid "``Joe`` or empty if not set"
 msgstr "``Joe`` oder leer wenn nicht gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Lastname"
+#, fuzzy
+#| msgid "Article > Created by > Lastname"
+msgid "Last Article > Created by > Lastname"
 msgstr "Artikel > Erstellt von > Nachname"
 
 #: ../misc/variables/article.rst:1
@@ -19947,7 +19980,9 @@ msgid "``Doe`` or empty if not set"
 msgstr "``Doe`` oder leer wenn nicht gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Login"
+#, fuzzy
+#| msgid "Article > Created by > Login"
+msgid "Last Article > Created by > Login"
 msgstr "Artikel > Erstellt von > Login"
 
 #: ../misc/variables/article.rst:1
@@ -19960,7 +19995,9 @@ msgid "``jdoe``"
 msgstr "``jdoe``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Mobile"
+#, fuzzy
+#| msgid "Article > Created by > Mobile"
+msgid "Last Article > Created by > Mobile"
 msgstr "Artikel > Erstellt von > Mobil"
 
 #: ../misc/variables/article.rst:1
@@ -19968,7 +20005,9 @@ msgid "``#{article.created_by.mobile}``"
 msgstr "``#{article.created_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Note"
+#, fuzzy
+#| msgid "Article > Created by > Note"
+msgid "Last Article > Created by > Note"
 msgstr "Artikel > Erstellt von > Notiz"
 
 #: ../misc/variables/article.rst:1
@@ -19982,7 +20021,9 @@ msgstr ""
 "gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Phone"
+#, fuzzy
+#| msgid "Article > Created by > Phone"
+msgid "Last Article > Created by > Phone"
 msgstr "Artikel > Erstellt von > Telefon"
 
 #: ../misc/variables/article.rst:1
@@ -19990,7 +20031,9 @@ msgid "``#{article.created_by.phone}``"
 msgstr "``#{article.created_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > VIP"
+#, fuzzy
+#| msgid "Article > Created by > VIP"
+msgid "Last Article > Created by > VIP"
 msgstr "Artikel > Erstellt von > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -20002,7 +20045,9 @@ msgid "``true`` or ``false``"
 msgstr "``true`` oder ``false``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created by > Web"
+#, fuzzy
+#| msgid "Article > Created by > Web"
+msgid "Last Article > Created by > Web"
 msgstr "Artikel > Erstellt von > Web"
 
 #: ../misc/variables/article.rst:1
@@ -20014,7 +20059,9 @@ msgid "``https://zammad.com`` or empty if not set in user object"
 msgstr "``https://zammad.com`` oder leer wenn nicht im Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Created"
+#, fuzzy
+#| msgid "Article > Created"
+msgid "Last Article > Created"
 msgstr "Artikel > Erstellt"
 
 #: ../misc/variables/article.rst:1
@@ -20026,7 +20073,9 @@ msgid "``2019-10-08 15:24:47 UTC``"
 msgstr "``2019-10-08 15:24:47 UTC``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > From"
+#, fuzzy
+#| msgid "Article > From"
+msgid "Last Article > From"
 msgstr "Artikel > Von"
 
 #: ../misc/variables/article.rst:1
@@ -20041,7 +20090,9 @@ msgstr ""
 "gesendeten E-Mail an"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Sender > Name"
+#, fuzzy
+#| msgid "Article > Sender > Name"
+msgid "Last Article > Sender > Name"
 msgstr "Artikel > Sender > Name"
 
 #: ../misc/variables/article.rst:1
@@ -20053,7 +20104,9 @@ msgid "``Customer``, ``Agent`` or ``System``"
 msgstr "``Customer``, ``Agent`` oder ``System``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Subject"
+#, fuzzy
+#| msgid "Article > Subject"
+msgid "Last Article > Subject"
 msgstr "Artikel > Betreff"
 
 #: ../misc/variables/article.rst:1
@@ -20065,7 +20118,9 @@ msgid "``My amazing subject``"
 msgstr "``Mein tolles Betreff``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Text"
+#, fuzzy
+#| msgid "Article > Text"
+msgid "Last Article > Text"
 msgstr "Artikel > Text"
 
 #: ../misc/variables/article.rst:1
@@ -20077,7 +20132,23 @@ msgid "``Test`` without formatting (plain)"
 msgstr "``Test`` ohne Formatierung"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > TicketID"
+#, fuzzy
+#| msgid "Article > Text"
+msgid "Last Article > Text (HTML)"
+msgstr "Artikel > Text"
+
+#: ../misc/variables/article.rst:1
+msgid "``#{article.body_as_html}``"
+msgstr "``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:1
+msgid "``Test`` with formatting"
+msgstr "``Test`` mit Formatierung"
+
+#: ../misc/variables/article.rst:1
+#, fuzzy
+#| msgid "Article > TicketID"
+msgid "Last Article > TicketID"
 msgstr "Artikel > Ticket-ID"
 
 #: ../misc/variables/article.rst:1
@@ -20089,7 +20160,9 @@ msgid "``1`` (not ticket number)"
 msgstr "``1`` (nicht Ticketnummer)"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > To"
+#, fuzzy
+#| msgid "Article > To"
+msgid "Last Article > To"
 msgstr "Artikel > An"
 
 #: ../misc/variables/article.rst:1
@@ -20101,7 +20174,9 @@ msgid "``helpdesk@example.com``"
 msgstr "``helpdesk@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Type > Name"
+#, fuzzy
+#| msgid "Article > Type > Name"
+msgid "Last Article > Type > Name"
 msgstr "Artikel > Typ > Name"
 
 #: ../misc/variables/article.rst:1
@@ -20117,7 +20192,9 @@ msgstr ""
 "develop/db/seeds/ticket_article_types.rb>`_)"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Address"
+#, fuzzy
+#| msgid "Article > Updated by > Address"
+msgid "Last Article > Updated by > Address"
 msgstr "Artikel > Aktualisiert von > Adresse"
 
 #: ../misc/variables/article.rst:1
@@ -20125,7 +20202,9 @@ msgid "``#{article.updated_by.address}``"
 msgstr "``#{article.updated_by.address}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Department"
+#, fuzzy
+#| msgid "Article > Updated by > Department"
+msgid "Last Article > Updated by > Department"
 msgstr "Artikel > Aktualisiert von > Abteilung"
 
 #: ../misc/variables/article.rst:1
@@ -20133,7 +20212,9 @@ msgid "``#{article.updated_by.department}``"
 msgstr "``#{article.updated_by.department}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Email"
+#, fuzzy
+#| msgid "Article > Updated by > Email"
+msgid "Last Article > Updated by > Email"
 msgstr "Artikel > Aktualisiert von > Email"
 
 #: ../misc/variables/article.rst:1
@@ -20141,7 +20222,9 @@ msgid "``#{article.updated_by.email}``"
 msgstr "``#{article.updated_by.email}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Fax"
+#, fuzzy
+#| msgid "Article > Updated by > Fax"
+msgid "Last Article > Updated by > Fax"
 msgstr "Artikel > Aktualisiert von > Fax"
 
 #: ../misc/variables/article.rst:1
@@ -20149,7 +20232,9 @@ msgid "``#{article.updated_by.fax}``"
 msgstr "``#{article.updated_by.fax}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Firstname"
+#, fuzzy
+#| msgid "Article > Updated by > Firstname"
+msgid "Last Article > Updated by > Firstname"
 msgstr "Artikel > Aktualisiert von > Vorname"
 
 #: ../misc/variables/article.rst:1
@@ -20157,7 +20242,9 @@ msgid "``#{article.updated_by.firstname}``"
 msgstr "``#{article.updated_by.firstname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Lastname"
+#, fuzzy
+#| msgid "Article > Updated by > Lastname"
+msgid "Last Article > Updated by > Lastname"
 msgstr "Artikel > Aktualisiert von > Nachname"
 
 #: ../misc/variables/article.rst:1
@@ -20165,7 +20252,9 @@ msgid "``#{article.updated_by.lastname}``"
 msgstr "``#{article.updated_by.lastname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Login"
+#, fuzzy
+#| msgid "Article > Updated by > Login"
+msgid "Last Article > Updated by > Login"
 msgstr "Artikel > Aktualisiert von > Login"
 
 #: ../misc/variables/article.rst:1
@@ -20173,7 +20262,9 @@ msgid "``#{article.updated_by.login}``"
 msgstr "``#{article.updated_by.login}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Mobile"
+#, fuzzy
+#| msgid "Article > Updated by > Mobile"
+msgid "Last Article > Updated by > Mobile"
 msgstr "Artikel > Aktualisiert von > Mobil"
 
 #: ../misc/variables/article.rst:1
@@ -20181,7 +20272,9 @@ msgid "``#{article.updated_by.mobile}``"
 msgstr "``#{article.updated_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Note"
+#, fuzzy
+#| msgid "Article > Updated by > Note"
+msgid "Last Article > Updated by > Note"
 msgstr "Artikel > Aktualisiert von > Notiz"
 
 #: ../misc/variables/article.rst:1
@@ -20189,7 +20282,9 @@ msgid "``#{article.updated_by.note}``"
 msgstr "``#{article.updated_by.note}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Phone"
+#, fuzzy
+#| msgid "Article > Updated by > Phone"
+msgid "Last Article > Updated by > Phone"
 msgstr "Artikel > Aktualisiert von > Telefon"
 
 #: ../misc/variables/article.rst:1
@@ -20197,7 +20292,9 @@ msgid "``#{article.updated_by.phone}``"
 msgstr "``#{article.updated_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > VIP"
+#, fuzzy
+#| msgid "Article > Updated by > VIP"
+msgid "Last Article > Updated by > VIP"
 msgstr "Artikel > Aktualisiert von > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -20205,7 +20302,9 @@ msgid "``#{article.updated_by.vip}``"
 msgstr "``#{article.updated_by.vip}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated by > Web"
+#, fuzzy
+#| msgid "Article > Updated by > Web"
+msgid "Last Article > Updated by > Web"
 msgstr "Artikel > Aktualisiert von > Web"
 
 #: ../misc/variables/article.rst:1
@@ -20213,7 +20312,9 @@ msgid "``#{article.updated_by.web}``"
 msgstr "``#{article.updated_by.web}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Updated"
+#, fuzzy
+#| msgid "Article > Updated"
+msgid "Last Article > Updated"
 msgstr "Artikel > Aktualisiert"
 
 #: ../misc/variables/article.rst:1
@@ -20221,7 +20322,9 @@ msgid "``#{article.updated_at}``"
 msgstr "``#{article.updated_at}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Article > Visibility"
+#, fuzzy
+#| msgid "Article > Visibility"
+msgid "Last Article > Visibility"
 msgstr "Artikel > Sichtbarkeit"
 
 #: ../misc/variables/article.rst:1
@@ -20231,18 +20334,6 @@ msgstr "``#{article.internal}``"
 #: ../misc/variables/article.rst:1
 msgid "``false`` or ``true`` (false if not internal)"
 msgstr "``false`` oder ``true`` (false wenn nicht intern)"
-
-#: ../misc/variables/article.rst:1
-msgid "Article Text as HTML (not referenced)"
-msgstr "Artikel-Text als HTML (nicht referenziert)"
-
-#: ../misc/variables/article.rst:1
-msgid "``#{article.body_as_html}``"
-msgstr "``#{article.body_as_html}``"
-
-#: ../misc/variables/article.rst:1
-msgid "``Test`` with formatting"
-msgstr "``Test`` mit Formatierung"
 
 #: ../misc/variables/article.rst:1 ../misc/variables/ticket.rst:1
 msgid "Ticket > Article#"
@@ -20260,7 +20351,7 @@ msgstr "``1`` Anzahl der Ticket-Artikel"
 msgid "Config"
 msgstr "Konfiguration"
 
-#: ../misc/variables/config.rst:6
+#: ../misc/variables/config.rst:8
 msgid ""
 "Below you'll find config related variables. These hold useful configuration "
 "information that you can use within e.g. triggers to show necessary "
@@ -20270,7 +20361,7 @@ msgstr ""
 "nützliche Informationen zur Konfigurationen die in z.B. Triggern zum "
 "Anzeigen notwendiger Informationen für die Kunden genutzt werden können."
 
-#: ../misc/variables/config.rst:11
+#: ../misc/variables/config.rst:12
 msgid "Config Variables"
 msgstr "Konfigurations-Variablen"
 
@@ -20358,7 +20449,7 @@ msgstr "``Ticket#``"
 msgid "Current User"
 msgstr "Aktueller Benutzer"
 
-#: ../misc/variables/current-user.rst:6
+#: ../misc/variables/current-user.rst:8
 msgid ""
 "Current user variables always return values of the current user that caused "
 "e.g. a trigger to run."
@@ -20366,7 +20457,7 @@ msgstr ""
 "Variablen für den aktuellen Benutzer geben immer die Werte zurück, die den "
 "z.B. Trigger ausgelöst haben."
 
-#: ../misc/variables/current-user.rst:8
+#: ../misc/variables/current-user.rst:11
 msgid ""
 "Due to the above fact, these variables are often not (yet) set or available "
 "for usage."
@@ -20374,7 +20465,7 @@ msgstr ""
 "Aus diesem Grund sind diese Variablen oft (noch) nicht gesetzt oder stehen "
 "nicht zur Verfügung."
 
-#: ../misc/variables/current-user.rst:10
+#: ../misc/variables/current-user.rst:14
 msgid ""
 "In situations where e.g. schedulers or triggers run, this most likely is "
 "nothing you want to use."
@@ -20382,7 +20473,7 @@ msgstr ""
 "In Situationen, in denen z.B. Automatisierungen oder Trigger laufen, werden "
 "Sie das höchstwahrscheinlich nicht verwenden wollen."
 
-#: ../misc/variables/current-user.rst:13
+#: ../misc/variables/current-user.rst:17
 msgid "Current User Variables"
 msgstr "Aktueller Benutzer-Variablen"
 
@@ -20824,9 +20915,15 @@ msgstr "Aktueller Benutzer > Web"
 msgid "``#{user.web}``"
 msgstr "``#{user.web}``"
 
-#: ../misc/variables/ticket.rst:6
+#: ../misc/variables/ticket.rst:8
+#, fuzzy
+#| msgid ""
+#| "Below you can find all available ticket-based variables within Zammad. "
+#| "These can be called via triggers for example. If you're unsure if Zammad "
+#| "does support variables at the point you're at, you can try to type ``::`` "
+#| "to check."
 msgid ""
-"Below you can find all available ticket-based variables within Zammad. These "
+"Below you can find examples of ticket-based variables within Zammad. These "
 "can be called via triggers for example. If you're unsure if Zammad does "
 "support variables at the point you're at, you can try to type ``::`` to "
 "check."
@@ -34861,6 +34958,37 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid ""
+#~ "Below you can find all available ticket article-based variables within "
+#~ "Zammad. These can be called via triggers for example. If you're unsure if "
+#~ "Zammad does support variables at the point you're at, you can try to type "
+#~ "``::`` to check."
+#~ msgstr ""
+#~ "Nachfolgend finden Sie alle verfügbaren Ticketartikel-basierten Variablen "
+#~ "in Zammad. Diese können z.B. über Trigger aufgerufen werden. Wenn Sie "
+#~ "sich nicht sicher sind, ob Zammad an der von Ihnen gewünschten Stelle "
+#~ "Variablen unterstützt, können Sie das prüfen indem Sie ``::`` einzugeben."
+
+#~ msgid ""
+#~ "The below list gives you an example what kind of data you can expect, "
+#~ "it's not intended to explain the data itself."
+#~ msgstr ""
+#~ "Die folgende Liste gibt Ihnen ein Beispiel dafür, welche Art von Daten "
+#~ "Sie erwarten können. Sie ist nicht dazu gedacht, die Daten selbst zu "
+#~ "erklären."
+
+#~ msgid "name"
+#~ msgstr "Name"
+
+#~ msgid "variable"
+#~ msgstr "Variable"
+
+#~ msgid "example"
+#~ msgstr "Beispiel"
+
+#~ msgid "Article Text as HTML (not referenced)"
+#~ msgstr "Artikel-Text als HTML (nicht referenziert)"
 
 #~ msgid "⌛ **Webhooks may not arrive immediately.**"
 #~ msgstr "⌛ **Webhooks kommen möglicherweise nicht sofort an.**"
