@@ -48,11 +48,9 @@ object creation and can be found within the object attribute menu at any time.
 The first and second part of a variable is divided by a point,
 e.g.: ``ticket.number`` which will in total be ``#{ticket.number}``.
 
-Now, in some situations it's possible that you'll need to use a third part.
-The best example for such a situation would be a ``select`` or ``tree-select``
-field which will by default return the key value, not it's display name.
-For this, just extend your variable with ``.value``. This will result in
-``#{ticket.select.value}``.
+For key/value pair attributes like select fields, Zammad replaces the variable
+with the key name. In case you want Zammad to replace a variable with the value
+instead of the key, you have to add a third part: ``#{ticket.select.value}``.
 
 .. _variable_localization:
 
