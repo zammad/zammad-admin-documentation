@@ -28,9 +28,9 @@ update by an agent or even internal system updates like updated SLA times.
 See the explanation below for more details.
 
 Selective
-   Checks if any attribute from the condition was updated. If yes, the
-   trigger runs. If the attributes from the condition weren't touched, the
-   trigger doesn't run.
+   Checks if any attribute from the condition was updated OR an article was
+   added and the condition matches. If the attributes of the condition weren't
+   touched and no new article was added, the trigger doesn't run.
 
    **Example:** A trigger with a condition for priority **1 low** will run if
    the ticket was changed to **1 low**.
@@ -38,7 +38,7 @@ Selective
 Always
    Checks if the current state of the ticket matches the condition. This means:
    the trigger always runs when the ticket is updated, no matter what was
-   changed. This can lead to executing such a trigger more often.
+   changed. This can lead to more often executions of such a trigger.
 
    **Example:** A trigger with a condition for priority **1 low** will run if
    the ticket was moved to another group while priority was set **1 low**.
@@ -50,11 +50,14 @@ Always
 Time Event
 ^^^^^^^^^^
 
-The execution is triggered at a specific time when a certain event is
-reached, e.g. ticket pending time.
+The execution is triggered when one of the following events occur:
 
-This activator simply checks if **conditions** match.
-This is the same behavior as action-based activator's "always" mode.
+- Time of a reminder is reached
+- Escalation is reached
+- Escalation warning is reached
+
+When such a time event is reached, the trigger runs if the condition
+matches. This is the same behavior as action-based activator's "always" mode.
 
 When creating a trigger, choose activator here:
 

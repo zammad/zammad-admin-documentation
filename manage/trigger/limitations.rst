@@ -12,8 +12,9 @@ Limitations of triggers:
 - Triggers are executed when a ticket is updated via clicking the "Update"
   button. Changing a value without updating the ticket (e.g. setting a tag) will
   not execute the trigger.
-- Triggers are always affecting the last article of a ticket. This means you
-  can't run triggers based on older articles.
+- If a trigger runs because an article was added, the context for the trigger
+  is always this last article. Triggers aren't running based on older ticket
+  states or articles.
 - Triggers always handle the current ticket attributes and the article
   (if applicable) that causes the trigger to fire. A related object context
   might not be available for performing changes.
