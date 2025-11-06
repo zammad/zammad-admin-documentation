@@ -6288,8 +6288,8 @@ msgstr ""
 #: ../manage/macros.rst:36
 #: ../manage/slas/index.rst:78
 #: ../manage/slas/index.rst:78
-#: ../manage/trigger.rst:32
-#: ../manage/trigger.rst:32
+#: ../manage/trigger.rst:24
+#: ../manage/trigger.rst:24
 #: ../manage/webhook.rst:47
 #: ../manage/webhook.rst:47
 #: ../system/core-workflows.rst:23
@@ -10107,27 +10107,15 @@ msgid "Triggers"
 msgstr ""
 
 #: ../manage/trigger.rst:4
-msgid "Use triggers to set up all kinds of **if-this-then-that** automation workflows. For time-based or recurring automation workflows, try :doc:`schedulers </manage/scheduler>` instead."
+msgid "Triggers are one way to automate Zammad. You can create *if this then that* rules by defining which tickets should get changed and which changes you want to apply to them."
 msgstr ""
 
 #: ../manage/trigger.rst:8
-msgid "The first thing to know about triggers is that **you're already using them**. From the moment you set up Zammad, it starts sending auto-replies to all incoming emails. Recognize this line?"
+msgid "In case you are looking for a time-based automation, use :doc:`scheduler jobs </manage/scheduler>` instead. To execute pre-defined changes manually via UI (without a condition), use :doc:`/manage/macros` instead."
 msgstr ""
 
-#: ../manage/trigger.rst:None
-msgid "Screenshot of auto-reply notification in ticket view"
-msgstr ""
-
-#: ../manage/trigger.rst:17
-msgid "It means that the ticket is from an incoming customer email and that the customer received this message in response:"
-msgstr ""
-
-#: ../manage/trigger.rst:None
-msgid "Screenshot of auto-reply in customer's inbox"
-msgstr ""
-
-#: ../manage/trigger.rst:25
-msgid "This auto-reply message is a **trigger**. You can disable it, modify it, or create new ones for all sorts of automation tasks on the Trigger page of the admin panel:"
+#: ../manage/trigger.rst:13
+msgid "Zammad ships one active trigger by default: an auto reply trigger which sends an email to the customer after a new ticket is created. This leads to an article in the ticket. This article only displays the title and the recipient as a text string to maintain clarity in the ticket view. You can disable it, modify it or create new ones for all sorts of automation tasks in the **Triggers** section in the admin settings:"
 msgstr ""
 
 #: ../manage/trigger.rst:None
@@ -10302,7 +10290,7 @@ msgstr ""
 msgid "In order to send emails with triggers, you need to configure an email address for the group, the trigger is working in. If you don't, Zammad will skip the trigger completely."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:120
+#: ../manage/trigger/how-do-they-work.rst:121
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ""
 
@@ -10310,27 +10298,27 @@ msgstr ""
 msgid "Connect Zammad to another web service or application to give it live updates about new tickets."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:124
+#: ../manage/trigger/how-do-they-work.rst:125
 msgid "Add internal or public notes to the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:123
+#: ../manage/trigger/how-do-they-work.rst:124
 msgid "This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:127
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid ":doc:`Run an AI agent </ai/ai-agents>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:127
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid "Trigger an AI agent to run using triggers."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:132
+#: ../manage/trigger/how-do-they-work.rst:133
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:134
+#: ../manage/trigger/how-do-they-work.rst:135
 msgid "The system locale and timezone predefines a default format of date and timestamp replacement variables. These settings are customizable for triggers."
 msgstr ""
 
@@ -10338,15 +10326,15 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:141
+#: ../manage/trigger/how-do-they-work.rst:142
 msgid "Best practice is to create single separated localized triggers for each language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:144
+#: ../manage/trigger/how-do-they-work.rst:145
 msgid "The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:146
+#: ../manage/trigger/how-do-they-work.rst:147
 msgid "For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
@@ -10383,7 +10371,7 @@ msgid "For instance, when *agents* receive a system email about a newly created 
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:4
-msgid "Triggers are one way of automated actions. In addition, there are also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </channels/email/filters>` based automation. Make sure to have a look at those, too. They can be more suitable, depending on your use case."
+msgid "Triggers are one way of automated actions. In addition, there are also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </channels/email/filters>` based automation. Make sure to have a look at those too. They can be more suitable, depending on your use case."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:10
@@ -10391,15 +10379,15 @@ msgid "Limitations of triggers:"
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:12
-msgid "Triggers are executed when a ticket is updated via clicking the \"Update\" button. Changing a value without updating the ticket (e.g. setting a tag) will not execute the trigger."
+msgid "Triggers are executed when a ticket is updated via clicking the \"Update\" button. Changing a value without updating the ticket (e.g. setting a tag) does not lead to a trigger execution."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:15
-msgid "If a trigger runs because an article was added, the context for the trigger is always this last article. Triggers aren't running based on older ticket states or articles."
+msgid "If a trigger runs due to an an  added article, the context for the trigger is always this last article. Triggers aren't running based on older ticket states or articles."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:18
-msgid "Triggers always handle the current ticket attributes and the article (if applicable) that causes the trigger to fire. A related object context might not be available for performing changes."
+msgid "Related object attributes might not be available for performing changes."
 msgstr ""
 
 #: ../manage/trigger/system-notifications.rst:2

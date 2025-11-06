@@ -1,30 +1,22 @@
 Triggers
 ========
 
-Use triggers to set up all kinds of **if-this-then-that** automation
-workflows. For time-based or recurring automation workflows, try
-:doc:`schedulers </manage/scheduler>` instead.
+Triggers are one way to automate Zammad. You can create *if this then that*
+rules by defining which tickets should get changed and which changes you want
+to apply to them.
 
-The first thing to know about triggers is that **you're already using them**.
-From the moment you set up Zammad, it starts sending auto-replies
-to all incoming emails. Recognize this line?
+In case you are looking for a time-based automation, use
+:doc:`scheduler jobs </manage/scheduler>` instead. To execute pre-defined
+changes manually via UI (without a condition), use :doc:`/manage/macros`
+instead.
 
-.. figure:: /images/manage/trigger/trigger-based-auto-reply-in-ticket-zoom.png
-   :alt: Screenshot of auto-reply notification in ticket view
-   :align: center
-   :scale: 70%
-
-It means that the ticket is from an incoming customer email and that the
-customer received this message in response:
-
-.. figure:: /images/manage/trigger/trigger-based-auto-reply-in-a-customer-mailbox.png
-   :alt: Screenshot of auto-reply in customer's inbox
-   :align: center
-   :scale: 80%
-
-This auto-reply message is a **trigger**.
-You can disable it, modify it, or create new ones
-for all sorts of automation tasks on the Trigger page of the admin panel:
+Zammad ships one active trigger by default: an auto reply trigger which sends an
+email to the customer after a new ticket is created. This leads to an article in
+the ticket. This article only displays the title and the recipient as a text
+string to maintain clarity in the ticket view.
+You can disable it, modify it or create new ones
+for all sorts of automation tasks in the **Triggers** section in the admin
+settings:
 
 .. figure:: /images/manage/trigger/trigger-management.png
    :alt: Screenshot of “Triggers” page in admin panel

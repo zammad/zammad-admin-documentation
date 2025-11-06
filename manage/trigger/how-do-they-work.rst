@@ -94,7 +94,7 @@ Define which changes to apply for tickets which match your condition in the
 
 A trigger can do the following things once its conditions have been met:
 
-* Modify the ticket
+Modify the ticket
    Examples: escalate its priority, close it, reassign it, rename it,
    add tags, subscribe and unsubscribe specific/all users, etc.
 
@@ -105,7 +105,7 @@ A trigger can do the following things once its conditions have been met:
    Remember that the placeholders' values have to be known during trigger
    runtime. Learn more about :doc:`/misc/variables`.
 
-* Send an email or SMS
+Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in
    the system.
 
@@ -116,14 +116,15 @@ A trigger can do the following things once its conditions have been met:
    an email address for the group, the trigger is working in. If you
    don't, Zammad will skip the trigger completely.
 
-* :doc:`Fire a webhook </manage/webhook>`
+:doc:`Fire a webhook </manage/webhook>`
    Connect Zammad to another web service or application to give it live updates
    about new tickets.
-* Add internal or public notes to the ticket
+
+Add internal or public notes to the ticket
    This allows you to help your agents with specific information if needed.
    (e.g. automated changes a trigger applied to the ticket)
 
-* :doc:`Run an AI agent </ai/ai-agents>`
+:doc:`Run an AI agent </ai/ai-agents>`
    Trigger an AI agent to run using triggers.
 
 .. _trigger-localization:
