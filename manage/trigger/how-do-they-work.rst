@@ -1,24 +1,27 @@
 How Do Triggers Work
 ====================
 
-Triggers consist of three parts:
+Triggers consist mainly of three parts:
 
-* **Activators:** define "when the question is asked?"
-* **Conditions:** answer the question "when should this trigger fire?"
-* **Actions:** answer the question "what should happen when it does?"
+* **Activator:** defines when and how the trigger has to be evaluated.
+* **Condition:** defines the tickets for which an action has to be executed
+  based on attributes.
+* **Actions:** define what to change in a ticket which matches the condition.
 
 Triggers are evaluated in alphabetical order by **name.**
 In some situations, triggers might be the wrong choice, see
 :doc:`/manage/trigger/limitations` for more information.
 
-.. hint:: **🤓 Emails can adjust some behavior on their own**
+Activator
+---------
 
-   See :doc:`/channels/email/email-headers` for more information.
+Choose between an action- or time-based activator in the **Activated by**
+section.
 
-Activators
-----------
-
-Triggers support two types of activators:
+.. figure:: /images/manage/trigger/activator-of-a-trigger.png
+   :alt: Screenshot of activator section in trigger dialog.
+   :scale: 80%
+   :align: center
 
 Action
 ^^^^^^
@@ -37,15 +40,16 @@ Selective
 
 Always
    Checks if the current state of the ticket matches the condition. This means:
-   the trigger always runs when the ticket is updated, no matter what was
-   changed. This can lead to more often executions of such a trigger.
+   the trigger always runs when the ticket is updated and the condition matches,
+   no matter what was changed. This can lead to more often executions of such a
+   trigger.
 
    **Example:** A trigger with a condition for priority **1 low** will run if
    the ticket was moved to another group while priority was set **1 low**.
 
-   .. hint:: If in doubt, use **Selective**. The **Always** action activator can
-      lead to unexpected behavior, e.g. the trigger runs after internal system
-      changes of the ticket, which aren't visible in the ticket history.
+.. hint:: If in doubt, use **Selective**. The **Always** action activator can
+   lead to unexpected behavior, e.g. the trigger runs after internal system
+   changes of the ticket, which aren't visible in the ticket history.
 
 Time Event
 ^^^^^^^^^^
@@ -59,30 +63,33 @@ The execution is triggered when one of the following events occur:
 When such a time event is reached, the trigger runs if the condition
 matches. This is the same behavior as action-based activator's "always" mode.
 
-When creating a trigger, choose activator here:
+Condition
+---------
 
-.. figure:: /images/manage/trigger/activator-of-a-trigger.png
+Use one or more attributes and values in a condition, which the tickets have to
+match you want to apply changes to. Create your condition in the
+**Conditions for affected objects** section:
 
-Conditions
-----------
-
-When creating a trigger, define your conditions here:
-
-   .. figure:: /images/manage/trigger/conditions-of-a-trigger.png
-
-Trigger conditions must match as configured for the trigger to fire.
+.. figure:: /images/manage/trigger/conditions-of-a-trigger.png
+   :alt: Screenshot of condition section in trigger dialog.
+   :scale: 80%
+   :align: center
 
 .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
-Actions
--------
+Action
+------
 
-When creating a trigger, define your changes here:
+Define which changes to apply for tickets which match your condition in the
+**Execute changes on objects** section:
 
-   .. figure:: /images/manage/trigger/actions-of-a-trigger.png
+.. figure:: /images/manage/trigger/actions-of-a-trigger.png
+   :alt: Screenshot of action section in trigger dialog.
+   :scale: 80%
+   :align: center
 
-.. hint:: Certain actions (such as *email*, *SMS* and *notes*) support
-   :doc:`/misc/variables`, which can be used to build
+.. hint:: Certain actions (such as email, SMS and notes) support
+   :doc:`/misc/variables` (see screenshot above), which can be used to build
    highly-customized message templates.
 
 A trigger can do the following things once its conditions have been met:

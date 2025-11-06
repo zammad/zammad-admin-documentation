@@ -6943,7 +6943,6 @@ msgstr ""
 
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/templates.rst:28
-#: ../manage/trigger/how-do-they-work.rst:78
 msgid "Actions"
 msgstr ""
 
@@ -10140,42 +10139,39 @@ msgid "How Do Triggers Work"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:4
-msgid "Triggers consist of three parts:"
+msgid "Triggers consist mainly of three parts:"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:6
-msgid "**Activators:** define \"when the question is asked?\""
+msgid "**Activator:** defines when and how the trigger has to be evaluated."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:7
-msgid "**Conditions:** answer the question \"when should this trigger fire?\""
+msgid "**Condition:** defines the tickets for which an action has to be executed based on attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:8
-msgid "**Actions:** answer the question \"what should happen when it does?\""
+#: ../manage/trigger/how-do-they-work.rst:9
+msgid "**Actions:** define what to change in a ticket which matches the condition."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:10
+#: ../manage/trigger/how-do-they-work.rst:11
 msgid "Triggers are evaluated in alphabetical order by **name.** In some situations, triggers might be the wrong choice, see :doc:`/manage/trigger/limitations` for more information."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:14
-msgid "**🤓 Emails can adjust some behavior on their own**"
-msgstr ""
-
 #: ../manage/trigger/how-do-they-work.rst:16
-msgid "See :doc:`/channels/email/email-headers` for more information."
+msgid "Activator"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:19
-msgid "Activators"
+#: ../manage/trigger/how-do-they-work.rst:18
+msgid "Choose between an action- or time-based activator in the **Activated by** section."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:21
-msgid "Triggers support two types of activators:"
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of activator section in trigger dialog."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:24
+#: ../manage/trigger/how-do-they-work.rst:27
+#: ../manage/trigger/how-do-they-work.rst:81
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -10188,20 +10184,20 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:26
+#: ../manage/trigger/how-do-they-work.rst:29
 msgid "An action based trigger always requires a ticket update to run. This can be an update by an agent or even internal system updates like updated SLA times. See the explanation below for more details."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:36
+#: ../manage/trigger/how-do-they-work.rst:39
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:28
 msgid "Selective"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:31
+#: ../manage/trigger/how-do-they-work.rst:34
 msgid "Checks if any attribute from the condition was updated OR an article was added and the condition matches. If the attributes of the condition weren't touched and no new article was added, the trigger doesn't run."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:35
+#: ../manage/trigger/how-do-they-work.rst:38
 msgid "**Example:** A trigger with a condition for priority **1 low** will run if the ticket was changed to **1 low**."
 msgstr ""
 
@@ -10210,132 +10206,131 @@ msgstr ""
 msgid "Always"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:39
-msgid "Checks if the current state of the ticket matches the condition. This means: the trigger always runs when the ticket is updated, no matter what was changed. This can lead to more often executions of such a trigger."
+#: ../manage/trigger/how-do-they-work.rst:42
+msgid "Checks if the current state of the ticket matches the condition. This means: the trigger always runs when the ticket is updated and the condition matches, no matter what was changed. This can lead to more often executions of such a trigger."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:43
+#: ../manage/trigger/how-do-they-work.rst:47
 msgid "**Example:** A trigger with a condition for priority **1 low** will run if the ticket was moved to another group while priority was set **1 low**."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:46
+#: ../manage/trigger/how-do-they-work.rst:50
 msgid "If in doubt, use **Selective**. The **Always** action activator can lead to unexpected behavior, e.g. the trigger runs after internal system changes of the ticket, which aren't visible in the ticket history."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:51
+#: ../manage/trigger/how-do-they-work.rst:55
 msgid "Time Event"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:53
+#: ../manage/trigger/how-do-they-work.rst:57
 msgid "The execution is triggered when one of the following events occur:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:55
+#: ../manage/trigger/how-do-they-work.rst:59
 msgid "Time of a reminder is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:56
+#: ../manage/trigger/how-do-they-work.rst:60
 msgid "Escalation is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:57
+#: ../manage/trigger/how-do-they-work.rst:61
 msgid "Escalation warning is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:59
+#: ../manage/trigger/how-do-they-work.rst:63
 msgid "When such a time event is reached, the trigger runs if the condition matches. This is the same behavior as action-based activator's \"always\" mode."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:62
-msgid "When creating a trigger, choose activator here:"
-msgstr ""
-
 #: ../manage/trigger/how-do-they-work.rst:67
-#: ../system/core-workflows/how-do-they-work.rst:28
-msgid "Conditions"
+msgid "Condition"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:69
-msgid "When creating a trigger, define your conditions here:"
+msgid "Use one or more attributes and values in a condition, which the tickets have to match you want to apply changes to. Create your condition in the **Conditions for affected objects** section:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:73
-msgid "Trigger conditions must match as configured for the trigger to fire."
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of condition section in trigger dialog."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:80
-msgid "When creating a trigger, define your changes here:"
+#: ../manage/trigger/how-do-they-work.rst:83
+msgid "Define which changes to apply for tickets which match your condition in the **Execute changes on objects** section:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:84
-msgid "Certain actions (such as *email*, *SMS* and *notes*) support :doc:`/misc/variables`, which can be used to build highly-customized message templates."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:88
-msgid "A trigger can do the following things once its conditions have been met:"
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:99
-msgid "Modify the ticket"
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of action section in trigger dialog."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:91
+msgid "Certain actions (such as email, SMS and notes) support :doc:`/misc/variables` (see screenshot above), which can be used to build highly-customized message templates."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:95
+msgid "A trigger can do the following things once its conditions have been met:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:106
+msgid "Modify the ticket"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:98
 msgid "Examples: escalate its priority, close it, reassign it, rename it, add tags, subscribe and unsubscribe specific/all users, etc."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:94
+#: ../manage/trigger/how-do-they-work.rst:101
 msgid "Date & time attributes (like **Pending till**) can be specified in *absolute* or *relative* terms."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:97
+#: ../manage/trigger/how-do-they-work.rst:104
 msgid "You can also combine static text with placeholders for text fields. Remember that the placeholders' values have to be known during trigger runtime. Learn more about :doc:`/misc/variables`."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:110
+#: ../manage/trigger/how-do-they-work.rst:117
 msgid "Send an email or SMS"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:102
+#: ../manage/trigger/how-do-they-work.rst:109
 msgid "Either to the customer, the agent who owns the ticket, or every agent in the system."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:105
+#: ../manage/trigger/how-do-they-work.rst:112
 msgid "Sending emails allows you to include the attachments of the triggering article if required."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:108
+#: ../manage/trigger/how-do-they-work.rst:115
 msgid "In order to send emails with triggers, you need to configure an email address for the group, the trigger is working in. If you don't, Zammad will skip the trigger completely."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:113
+#: ../manage/trigger/how-do-they-work.rst:120
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:113
+#: ../manage/trigger/how-do-they-work.rst:120
 msgid "Connect Zammad to another web service or application to give it live updates about new tickets."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:124
 msgid "Add internal or public notes to the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:116
+#: ../manage/trigger/how-do-they-work.rst:123
 msgid "This allows you to help your agents with specific information if needed. (e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:120
+#: ../manage/trigger/how-do-they-work.rst:127
 msgid ":doc:`Run an AI agent </ai/ai-agents>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:120
+#: ../manage/trigger/how-do-they-work.rst:127
 msgid "Trigger an AI agent to run using triggers."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:125
+#: ../manage/trigger/how-do-they-work.rst:132
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:127
+#: ../manage/trigger/how-do-they-work.rst:134
 msgid "The system locale and timezone predefines a default format of date and timestamp replacement variables. These settings are customizable for triggers."
 msgstr ""
 
@@ -10343,15 +10338,15 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:134
+#: ../manage/trigger/how-do-they-work.rst:141
 msgid "Best practice is to create single separated localized triggers for each language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:137
+#: ../manage/trigger/how-do-they-work.rst:144
 msgid "The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:139
+#: ../manage/trigger/how-do-they-work.rst:146
 msgid "For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
@@ -18442,6 +18437,10 @@ msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:24
 msgid "If selected, your conditions and actions will affect all applicable edit masks."
+msgstr ""
+
+#: ../system/core-workflows/how-do-they-work.rst:28
+msgid "Conditions"
 msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:30
