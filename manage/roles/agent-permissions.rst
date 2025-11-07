@@ -23,7 +23,7 @@ Agent Permissions
 .. _role-settings-group-access:
 
 .. list-table::
-   :widths: 30 80 20
+   :widths: 20 30 50
    :header-rows: 1
 
    * - Permission name
@@ -46,16 +46,13 @@ Agent Permissions
        | Keep in mind that this may be dangerous, as reader permission provides
        | access to internal answers!
    * - ``report``
-     - :doc:`Reporting </manage/report-profiles>`
-     - | Make sure to never grant this permission to your customers!
-       | Giving customers access to reporting constitutes a serious data breach, as
-       | it includes **all ticket and user information across the entire system**!
-       | Please also note:
-       |   1. the feature it enables is not for communicating with customers;
-       |   2. the button appears at the *bottom* of the sidebar; and
-       |   3. it is typically reserved for admins and supervisors.
+     - :user-docs:`Reporting (user docs)</extras/reporting.html>`
+     - | Make sure to **never** grant this permission to your customers
+       | because it includes **all ticket and user information** across the
+       | entire system! Consider setting up a new role for your admins or
+       | supervisors and limit the access via :doc:`/manage/report-profiles` first.
    * - ``ticket.agent``
-     - :user-docs:`(Agent) Overviews </basics/find-ticket/browse.html>`
+     - Access to overviews and tickets.
      - See notes below
 
 .. note::
