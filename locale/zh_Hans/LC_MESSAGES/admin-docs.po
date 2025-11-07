@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 05:20+0000\n"
+"POT-Creation-Date: 2025-11-04 07:41+0000\n"
 "PO-Revision-Date: 2023-08-14 12:18+0000\n"
 "Last-Translator: chen <chenchen@4chian.com>\n"
 "Language-Team: Chinese (Simplified) <https://translations.zammad.org/"
@@ -596,7 +596,7 @@ msgstr ""
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:37
 #: ../manage/scheduler.rst:158 ../manage/webhook/add.rst:116
-#: ../misc/variables.rst:104 ../system/core-workflows/learn-by-example.rst:37
+#: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
 #: ../system/core-workflows/learn-by-example.rst:200
@@ -3648,7 +3648,7 @@ msgid "Default value"
 msgstr ""
 
 #: ../channels/form.rst:219 ../manage/public-links.rst:43
-#: ../misc/object-conditions/basics.rst:63 ../misc/variables.rst:103
+#: ../misc/object-conditions/basics.rst:63 ../misc/variables.rst:101
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/objects/permissions.rst:39 ../system/subscription.rst:208
 msgid "Description"
@@ -15795,18 +15795,17 @@ msgstr ""
 
 #: ../misc/variables.rst:52
 msgid ""
-"In some situations it might be needed to use a third part. The best example "
-"for such a situation is a **select** or **tree-select** field which will "
-"return the key value by default, not it's display name. For this, just "
-"extend your variable with ``.value``. This will result in "
+"For key/value pair attributes like select fields, Zammad replaces the "
+"variable with the key name. In case you want Zammad to replace a variable "
+"with the value instead of the key, you have to add a third part: "
 "``#{ticket.select.value}``."
 msgstr ""
 
-#: ../misc/variables.rst:61
+#: ../misc/variables.rst:59
 msgid "Using Translated Variables"
 msgstr ""
 
-#: ../misc/variables.rst:63
+#: ../misc/variables.rst:61
 msgid ""
 "If you want to use a translated variable in triggers or schedulers, you can "
 "extend the placeholder like this: ``#{t(ticket.state.name)}``. The ``t`` "
@@ -15816,7 +15815,7 @@ msgid ""
 "in the trigger/scheduler edit dialog."
 msgstr ""
 
-#: ../misc/variables.rst:70
+#: ../misc/variables.rst:68
 msgid ""
 "A possible use-case: you want to send your customers updates on tickets via "
 "trigger or scheduler which should include the state of the ticket. Using the "
@@ -15824,178 +15823,178 @@ msgid ""
 "would lead to the output of the original (english) name of the state."
 msgstr ""
 
-#: ../misc/variables.rst:76
+#: ../misc/variables.rst:74
 msgid "Date and Time Formatting"
 msgstr ""
 
-#: ../misc/variables.rst:78
+#: ../misc/variables.rst:76
 msgid ""
 "The system (trigger/scheduler selected) locale and timezone predefines a "
 "default format of date and timestamp. This format is customizable by using "
 "the ``dt()`` method."
 msgstr ""
 
-#: ../misc/variables.rst:82
+#: ../misc/variables.rst:80
 msgid "The method arguments are as follows:"
 msgstr ""
 
-#: ../misc/variables.rst:84
+#: ../misc/variables.rst:82
 msgid "The date or timestamp variable you want to format."
 msgstr ""
 
-#: ../misc/variables.rst:85
+#: ../misc/variables.rst:83
 msgid "The output format string."
 msgstr ""
 
-#: ../misc/variables.rst:86
+#: ../misc/variables.rst:84
 msgid "The timezone to apply (optional)."
 msgstr ""
 
-#: ../misc/variables.rst:88
+#: ../misc/variables.rst:86
 #: ../system/objects/external-data-source-example.rst:23
 #, fuzzy
 msgid "**Example:**"
 msgstr "例如"
 
-#: ../misc/variables.rst:89
+#: ../misc/variables.rst:87
 msgid ""
 "``#{dt(ticket.updated_at, \"%A %Y-%m-%d %H:%M in the office\", \"Europe/"
 "Berlin\")}``"
 msgstr ""
 
-#: ../misc/variables.rst:90
+#: ../misc/variables.rst:88
 msgid "Monday, 2024-03-18 15:31 in the office"
 msgstr ""
 
-#: ../misc/variables.rst:92
+#: ../misc/variables.rst:90
 msgid ""
 "If you want to use our example, make sure to paste the string above without "
 "formatting (:kbd:`CTRL` :kbd:`Shift` :kbd:`v`), otherwise it won't work."
 msgstr ""
 
-#: ../misc/variables.rst:96
+#: ../misc/variables.rst:94
 msgid "The following table lists available format directives:"
 msgstr ""
 
-#: ../misc/variables.rst:102
+#: ../misc/variables.rst:100
 msgid "Parameter"
 msgstr ""
 
-#: ../misc/variables.rst:105
+#: ../misc/variables.rst:103
 msgid "``%Y``"
 msgstr ""
 
-#: ../misc/variables.rst:106
+#: ../misc/variables.rst:104
 msgid "Year with 4 digits"
 msgstr ""
 
-#: ../misc/variables.rst:107
+#: ../misc/variables.rst:105
 msgid "Use ``%y`` for year with 2 digits"
 msgstr ""
 
-#: ../misc/variables.rst:108
+#: ../misc/variables.rst:106
 msgid "``%m``"
 msgstr ""
 
-#: ../misc/variables.rst:109
+#: ../misc/variables.rst:107
 msgid "Month of year (as number with zero-padding)"
 msgstr ""
 
-#: ../misc/variables.rst:110
+#: ../misc/variables.rst:108
 msgid "Use ``%-m`` for month without zero-padding"
 msgstr ""
 
-#: ../misc/variables.rst:111
+#: ../misc/variables.rst:109
 msgid "``%d``"
 msgstr ""
 
-#: ../misc/variables.rst:112
+#: ../misc/variables.rst:110
 msgid "Day of month (as number with zero-padding)"
 msgstr ""
 
-#: ../misc/variables.rst:113
+#: ../misc/variables.rst:111
 msgid "Use ``%e`` for day without zero-padding"
 msgstr ""
 
-#: ../misc/variables.rst:114
+#: ../misc/variables.rst:112
 msgid "``%H``"
 msgstr ""
 
-#: ../misc/variables.rst:115
+#: ../misc/variables.rst:113
 msgid "Hour of day in 24h notation with zero-padding"
 msgstr ""
 
-#: ../misc/variables.rst:116
+#: ../misc/variables.rst:114
 msgid "Use ``%k`` for hour without zero-padding"
 msgstr ""
 
-#: ../misc/variables.rst:117
+#: ../misc/variables.rst:115
 msgid "``%I``"
 msgstr ""
 
-#: ../misc/variables.rst:118
+#: ../misc/variables.rst:116
 msgid "Hour of day in 12h notation with zero-padding"
 msgstr ""
 
-#: ../misc/variables.rst:119
+#: ../misc/variables.rst:117
 msgid ""
 "Use ``%l`` for hour without zero-padding and ``%p`` / ``%P`` for meridian "
 "indicator"
 msgstr ""
 
-#: ../misc/variables.rst:120
+#: ../misc/variables.rst:118
 msgid "``%M``"
 msgstr ""
 
-#: ../misc/variables.rst:121
+#: ../misc/variables.rst:119
 msgid "Minute of hour"
 msgstr ""
 
-#: ../misc/variables.rst:123
+#: ../misc/variables.rst:121
 msgid "``%S``"
 msgstr ""
 
-#: ../misc/variables.rst:124
+#: ../misc/variables.rst:122
 msgid "Second of Minute"
 msgstr ""
 
-#: ../misc/variables.rst:126
+#: ../misc/variables.rst:124
 msgid "``%A``"
 msgstr ""
 
-#: ../misc/variables.rst:127
+#: ../misc/variables.rst:125
 msgid "Weekday name"
 msgstr ""
 
-#: ../misc/variables.rst:128
+#: ../misc/variables.rst:126
 msgid "Use ``%a`` for abbreviated name or ``%^A`` for uppercase name"
 msgstr ""
 
-#: ../misc/variables.rst:129
+#: ../misc/variables.rst:127
 msgid "``%B``"
 msgstr ""
 
-#: ../misc/variables.rst:130
+#: ../misc/variables.rst:128
 msgid "Month name"
 msgstr ""
 
-#: ../misc/variables.rst:131
+#: ../misc/variables.rst:129
 msgid "Use ``%b`` for abbreviated name"
 msgstr ""
 
-#: ../misc/variables.rst:132
+#: ../misc/variables.rst:130
 msgid "``%U``"
 msgstr ""
 
-#: ../misc/variables.rst:133
+#: ../misc/variables.rst:131
 msgid "Week number of current year"
 msgstr ""
 
-#: ../misc/variables.rst:134
+#: ../misc/variables.rst:132
 msgid "Use ``%W`` for a different calculation method"
 msgstr ""
 
-#: ../misc/variables.rst:137
+#: ../misc/variables.rst:135
 msgid ""
 "We support the known format directives for the Ruby built-in method "
 "``strftime`` of the ``DateTime`` class. For more information, see `here "
