@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-04 08:32+0000\n"
-"PO-Revision-Date: 2025-11-07 10:16+0000\n"
+"PO-Revision-Date: 2025-11-08 01:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -5625,7 +5625,7 @@ msgid ""
 "If you specified a :ref:`custom folder/label to fetch from <microsoft365-"
 "folder>`, are you sure incoming mail is arriving in that folder?"
 msgstr ""
-"Falls Sie einen :ref:` speziellen Ordner oder ein spezielles Label "
+"Falls Sie einen :ref:`speziellen Ordner oder ein spezielles Label "
 "<microsoft365-folder>` angegeben haben, stellen Sie bitte sicher, dass E-"
 "Mails auch dort ankommen."
 
@@ -11829,56 +11829,50 @@ msgid "``report``"
 msgstr "``report``"
 
 #: ../manage/roles/agent-permissions.rst:49
-msgid ":doc:`Reporting </manage/report-profiles>`"
-msgstr ":doc:`Berichte </manage/report-profiles>`"
+#, fuzzy
+#| msgid ":user-docs:`Caller Log </extras/caller-log.html>`"
+msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
+msgstr ":user-docs:`Anruferprotokoll </extras/caller-log.html>`"
 
 #: ../manage/roles/agent-permissions.rst:0
-msgid "Make sure to never grant this permission to your customers!"
+#, fuzzy
+#| msgid "Make sure to never grant this permission to your customers!"
+msgid "Make sure to **never** grant this permission to your customers"
 msgstr ""
 "Stellen Sie sicher, dass Sie Ihren Kunden diese Erlaubnis nicht erteilen!"
 
 #: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"Giving customers access to reporting constitutes a serious data breach, as"
-msgstr ""
-"Den Kunden die Berechtigung für Berichte zu geben stellt einen "
-"Datenschutzverstoß dar, da"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"it includes **all ticket and user information across the entire system**!"
+#, fuzzy
+#| msgid ""
+#| "it includes **all ticket and user information across the entire system**!"
+msgid "because it includes **all ticket and user information** across the"
 msgstr ""
 "dadurch **alle Ticket- und Benutzerinformationen** eingesehen werden können!"
 
 #: ../manage/roles/agent-permissions.rst:0
-msgid "Please also note:"
-msgstr "Bitte beachten Sie auch:"
+msgid "entire system! Consider setting up a new role for your admins or"
+msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:0
-msgid "1. the feature it enables is not for communicating with customers;"
-msgstr "1. Die Funktion dient nicht der Kommunikation mit Kunden;"
+msgid ""
+"supervisors and limit the access via :doc:`/manage/report-profiles` first."
+msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:0
-msgid "2. the button appears at the *bottom* of the sidebar; and"
-msgstr "2. Die Schaltfläche erscheint am *unteren* Rand der Seitenleiste; und"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "3. it is typically reserved for admins and supervisors."
-msgstr "3. Sie ist in der Regel Admins und Teamleitern vorbehalten."
-
-#: ../manage/roles/agent-permissions.rst:57 ../settings/security/base.rst:95
+#: ../manage/roles/agent-permissions.rst:54 ../settings/security/base.rst:95
 msgid "``ticket.agent``"
 msgstr "``ticket.agent``"
 
-#: ../manage/roles/agent-permissions.rst:58
-msgid ":user-docs:`(Agent) Overviews </basics/find-ticket/browse.html>`"
-msgstr ":user-docs:`(Agenten) Übersichten </basics/find-ticket/browse.html>`"
+#: ../manage/roles/agent-permissions.rst:55
+#, fuzzy
+#| msgid "Screenshot showing overview with escalated tickets"
+msgid "Access to overviews and tickets."
+msgstr "Screenshot der Übersicht mit eskalierten Tickets"
 
-#: ../manage/roles/agent-permissions.rst:59
+#: ../manage/roles/agent-permissions.rst:56
 msgid "See notes below"
 msgstr "Siehe Anmerkungen unten"
 
-#: ../manage/roles/agent-permissions.rst:63
+#: ../manage/roles/agent-permissions.rst:60
 msgid "🤔 **What about this table under the permissions tree?**"
 msgstr "🤔 **Was ist mit dieser Tabelle unter dem Berechtigungsbaum?**"
 
@@ -11886,7 +11880,7 @@ msgstr "🤔 **Was ist mit dieser Tabelle unter dem Berechtigungsbaum?**"
 msgid "Group permission table in Edit Role dialog"
 msgstr "Tabelle mit Gruppenberechtigung im Rollenbearbeitungsdialog"
 
-#: ../manage/roles/agent-permissions.rst:70
+#: ../manage/roles/agent-permissions.rst:67
 msgid ""
 "Roles can also include :doc:`group permissions </manage/groups/access-"
 "levels>`! The group permission table is shown when there is **more than one "
@@ -11897,7 +11891,7 @@ msgstr ""
 "wenn **mehr als eine aktive Gruppe** im System vorhanden ist und die "
 "Berechtigung ``ticket.agent`` **ausgewählt ist**."
 
-#: ../manage/roles/agent-permissions.rst:78
+#: ../manage/roles/agent-permissions.rst:75
 msgid ""
 "You can assign both agent and customer roles to the same user — but you "
 "**can't** assign both ``ticket.agent`` and ``ticket.customer`` *permissions* "
@@ -11908,7 +11902,7 @@ msgstr ""
 "gleichzeitig die *Berechtigungen* für \"Ticket.agent\" und "
 "\"Ticket.customer\" zuweisen!"
 
-#: ../manage/roles/agent-permissions.rst:82
+#: ../manage/roles/agent-permissions.rst:79
 msgid ""
 "To make it work, you need two separate roles: one with ``ticket.agent`` and "
 "the other with ``ticket.customer``."
@@ -24651,9 +24645,9 @@ msgid ""
 "to :docs:`rebuild the Elasticsearch search index </install/"
 "elasticsearch.html#es-rebuild-searchindex>`."
 msgstr ""
-"Wenn Sie den Ticket-Hook auf einem Produktivsystem ändern, müssen Sie den "
-":docs:`Elasticsearch-Suchindex neu erstellen </install/elasticsearch.html#es-"
-"rebuild-searchindex>` ."
+"Wenn Sie den Ticket-Hook auf einem Produktivsystem ändern, müssen Sie "
+"den :docs:`Elasticsearch-Suchindex neu erstellen </install/"
+"elasticsearch.html#es-rebuild-searchindex>` ."
 
 #: ../settings/ticket.rst:44
 msgid "Ticket Hook Position"
@@ -29124,8 +29118,8 @@ msgid ""
 "graph/permissions-reference>`_ for more information."
 msgstr ""
 "Fügen Sie die Berechtigungen zum Lesen von Adressbüchern/Ordnern hinzu. Die "
-"erforderlichen Berechtigungen hängen von Ihrem Anwendungsfall ab ("
-"Synchronisierung von Benutzern oder Kontakten, von einer Organisation oder "
+"erforderlichen Berechtigungen hängen von Ihrem Anwendungsfall ab "
+"(Synchronisierung von Benutzern oder Kontakten, von einer Organisation oder "
 "nur einem Konto, usw.). ``Contacts.Read`` oder ``Contacts.Read.Shared`` "
 "können ein guter Ausgangspunkt sein. Werfen Sie einen Blick auf Microsofts "
 "`Graph-Berechtigungsdokumentation <https://learn.microsoft.com/de-de/graph/"
@@ -34509,6 +34503,32 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid ":doc:`Reporting </manage/report-profiles>`"
+#~ msgstr ":doc:`Berichte </manage/report-profiles>`"
+
+#~ msgid ""
+#~ "Giving customers access to reporting constitutes a serious data breach, as"
+#~ msgstr ""
+#~ "Den Kunden die Berechtigung für Berichte zu geben stellt einen "
+#~ "Datenschutzverstoß dar, da"
+
+#~ msgid "Please also note:"
+#~ msgstr "Bitte beachten Sie auch:"
+
+#~ msgid "1. the feature it enables is not for communicating with customers;"
+#~ msgstr "1. Die Funktion dient nicht der Kommunikation mit Kunden;"
+
+#~ msgid "2. the button appears at the *bottom* of the sidebar; and"
+#~ msgstr ""
+#~ "2. Die Schaltfläche erscheint am *unteren* Rand der Seitenleiste; und"
+
+#~ msgid "3. it is typically reserved for admins and supervisors."
+#~ msgstr "3. Sie ist in der Regel Admins und Teamleitern vorbehalten."
+
+#~ msgid ":user-docs:`(Agent) Overviews </basics/find-ticket/browse.html>`"
+#~ msgstr ""
+#~ ":user-docs:`(Agenten) Übersichten </basics/find-ticket/browse.html>`"
 
 #~ msgid ""
 #~ "Now, in some situations it's possible that you'll need to use a third "
