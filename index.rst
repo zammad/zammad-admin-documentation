@@ -6,6 +6,13 @@ Zammad Admin Documentation
    also :docs:`system </index.html>` and
    :user-docs:`user manuals </index.html>` available.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Guides
+
+   guides/start-with-zammad
+   guides/additional-customization
+
 .. _manage-docs:
 
 .. toctree::
