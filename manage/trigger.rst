@@ -20,7 +20,7 @@ customer received this message in response:
 .. figure:: /images/manage/trigger/trigger-based-auto-reply-in-a-customer-mailbox.png
    :alt: Screenshot of auto-reply in customer's inbox
    :align: center
-   :scale: 80%
+   :scale: 100%
 
 This auto-reply message is a **trigger**.
 You can disable it, modify it, or create new ones
