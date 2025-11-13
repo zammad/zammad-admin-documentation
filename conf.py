@@ -69,6 +69,9 @@ else:
    else:
       branch = "old-version"
 
+# Ensure `version` config is set due to translation integration.
+version = branch
+
 # Default definitions for this documentations version warnings if applicable
 # https://sphinx-version-warning.readthedocs.io/en/latest/configuration.html
 versionwarning_project_slug = "zammad-admin-documentation"
