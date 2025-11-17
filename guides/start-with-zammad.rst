@@ -10,10 +10,10 @@ What is Zammad?
 
 Zammad is a ticketing and helpdesk software which helps you manage your
 communication with customers and internal departments. Like a shared inbox
-with superpowers.
-
-Even without advanced configuration, Zammad helps you working much more
-structured and transparent and avoids duplicate work.
+with superpowers. Even without advanced configuration, Zammad helps you working
+much more structured and transparent and avoids duplicate work. If you deal with
+third party communication with more than one person (which is not recommended,
+though), Zammad is your go-to solution and improves your communication a lot.
 
 Concept
 -------
@@ -35,14 +35,15 @@ it automatically creates a user with the customer role, which is the third one.
 
 The relation between users, roles and groups should be clear when you follow
 this guide. However, you can find a visual representation in the following
-image. If this is confusing for you currently, just ignore it and follow the
-guide on this page.
+image. If this is confusing for you currently, just ignore it and read on in
+this page.
 
 .. figure:: /images/guides/roles-permissions.svg
 
 And just a note at this point so you are aware: Zammad allows you to automate
 many tasks. Keywords are :doc:`/manage/trigger`, :doc:`/manage/scheduler` and
-:doc:`/manage/macros`. However, we recommend to follow this guide first.
+:doc:`/manage/macros`. However, we recommend to follow this guide first and
+then do the advanced configuration.
 
 Basic Setup
 -----------
@@ -62,7 +63,43 @@ Company Details
 
 The basic customizatio step in Zammad is to add your company name and your
 logo. If not already set up, visit Zammad's admin settings and go to
-*Settings > Branding* to adjust it.
+*Settings > Branding* to adjust it. Additional information on this topic can
+be found in the :doc:`branding settings section </settings/branding>`.
+
+Create Groups
+^^^^^^^^^^^^^
+
+A group in Zammad typically represents a department of a company. You can define
+which agent has access to which group and define permissions. A group can
+have a specific email address and department name. Use the default shipped
+**Users** group by renaming it. 
+At this point, just add your groups and give them a fitting name. Create A
+structure in case you need it by setting parent groups. It is totally fine to
+stay with one group too, of course.
+
+.. note::
+   Video which covers the next 3 sections, including:
+   
+   - Assigned email address to group
+   - Group / department name and email adress of group should be visible
+
+Create or Modify Roles
+^^^^^^^^^^^^^^^^^^^^^^
+
+Zammad comes with three pre-defined :doc:`roles </manage/roles/index>` for
+customers, agents and admins. A user can have one or more roles assigned. In a
+role, you can define the application permissions (what areas/features are
+accessible) as well as the access level to groups (read, create, change,
+overview, full). These three roles should cover standard scenarios. In case you
+wonder which additional roles could make sense, here are some examples:
+
+- Team leader
+- Reporting person
+- Knowledgebase editor
+
+You can assign application and group permissions to a specific user as well. In
+case you expect more than one person with specific permissions, creating a role
+may be a good idea.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -76,38 +113,21 @@ Depending on your used email system, follow the actual guide for it:
 
 After adding an email channel, create one or more signatures. You can use one
 signature for many groups or create different signatures, depending on your
-company's structure.
+company's department structure.
 
-Create Groups
-^^^^^^^^^^^^^
+Configure Groups
+^^^^^^^^^^^^^^^^
 
-A group in Zammad typically represents a department of a company. You can define
-which agent has access to which group and define permissions. A group can
-have a specific email address and department name. Use the default shipped
-**Users** group by renaming it. 
-
-Make sure to assign an email address to each of your groups as well as a
-signature.
-
-.. note::
-   Video which covers the next 3 sections, including:
-   
-   - Assigned email address to group
-   - Group / department name and email adress of group should be visible
-
-Create or Modify Roles
-^^^^^^^^^^^^^^^^^^^^^^
-
-Zammad comes with 3 pre-defined :doc:`roles </manage/roles/index>` for customer,
-agents and admins. A user can have one or more roles assigned. In a role, you
-can define the application permissions as well as access to groups.
+After setting up an email based channel, we have to revisit the groups. Go to
+*Manage > Groups*, select each group and set an outbound email adress as well
+as a signature.
 
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
 
 Create a :doc:`user </manage/users/index>` for each of your support agents by
-going to the first steps section and
-use the **Invite agents/colleagues to help working on tickets** function.
+going to the first steps section and use the
+**Invite agents/colleagues to help working on tickets** function.
 Make sure to assign the right role to each of the agents.
 This step may send out invitation emails to your agents.
 
