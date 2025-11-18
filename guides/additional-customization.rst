@@ -1,21 +1,35 @@
 Additional Customization
 ========================
 
+You can find useful customization options on this page. They mainly refer to
+the actual section in the documentation and should give you an idea what could
+be useful.
+It is recommended to follow the basic configuration of Zammad first, as
+described in the :doc:`start-with-zammad` section.
+
 Automation for Incoming Messages
 --------------------------------
 
-There are different ways in Zammad how to automate things. Namely triggers,
-schedulers and macros. By default, there is already one active trigger which
-sends out auto-reply emails to customers after they contacted you in a new
-support case. You can even decide in the channel configuration, where specific
-messages should be dispatched to.
+There are different ways in Zammad how to automate things. Namely
+:doc:`triggers </manage/trigger>`, :doc:`schedulers </manage/scheduler>` and
+:doc:`macros </manage/macros>`. In simple terms, the execution of a trigger is
+action based, the execution of a scheduler job is time based and the execution
+of a macro is done manually (without a condition).
+
+By default, there is already one active trigger which sends out auto-reply
+emails to customers after they contacted you in a new support case. You can even
+define in the channel configuration, to which group specific messages should be
+dispatched to and what attributes you want to set for those tickets. You can
+find it in the **Filter** tab in the email based channels.
 
 Add Text Modules
 ----------------
 
 Text modules/templates are a nice time saver for your agents. In case they
 answer similar questions over and over again and/or you want to unify their
-answers, add text modules for that. 
+answers, add text modules for that. Your agents can then fetch a text by
+typing :kbd:`@` :kbd:`@` in the editor, followed by the name or content of the
+text module.
 
 Adjust and Add Overviews
 ------------------------
@@ -27,8 +41,7 @@ Enable Checklist Feature
 For a quick start, watch the video about enabling the checklist feature and
 adding a default checklist.
 
-.. video:: /images/guides/checklists_demo.mp4
-   :width: 100%
+ADD VIDEO HERE.
 
 And here is an explanation in text form.
 
@@ -36,8 +49,7 @@ And here is an explanation in text form.
 Add AI Agents
 -------------
 
-.. video:: /images/guides/ai-agent.mp4
-   :width: 100%
+ADD VIDEO HERE.
 
 Next Steps
 ----------
