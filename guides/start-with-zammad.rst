@@ -53,10 +53,7 @@ information via getting started wizard or skip the steps and configure it
 afterwards.
 The guide assumes your Zammad is not yet configured. In case you see the
 getting started wizard, provide as much information as you desire or skip it
-for a later configuration. See video of an example setup.
-
-.. video:: /images/guides/gs-wizard.mp4
-   :width: 100%
+for a later configuration.
 
 Company Details
 ^^^^^^^^^^^^^^^
@@ -77,11 +74,9 @@ At this point, just add your groups and give them a fitting name. Create A
 structure in case you need it by setting parent groups. It is totally fine to
 stay with one group too, of course.
 
-.. note::
-   Video which covers the next 3 sections, including:
-   
-   - Assigned email address to group
-   - Group / department name and email adress of group should be visible
+Follow the video for a simple group and role setup.
+
+VIDEO HERE.
 
 Create or Modify Roles
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -115,12 +110,17 @@ After adding an email channel, create one or more signatures. You can use one
 signature for many groups or create different signatures, depending on your
 company's department structure.
 
+The following video shows a dummy email channel configuration as well as adding
+email adresses and signatures to different groups.
+
+VIDEO HERE.
+
 Configure Groups
 ^^^^^^^^^^^^^^^^
 
-After setting up an email based channel, we have to revisit the groups. Go to
-*Manage > Groups*, select each group and set an outbound email adress as well
-as a signature.
+After setting up an email based channel, a revisiting of the groups is
+indicated. Go to *Manage > Groups*, select each group and set an outbound email
+adress as well as a signature.
 
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
@@ -129,7 +129,7 @@ Create a :doc:`user </manage/users/index>` for each of your support agents by
 going to the first steps section and use the
 **Invite agents/colleagues to help working on tickets** function.
 Make sure to assign the right role to each of the agents.
-This step may send out invitation emails to your agents.
+This step sends out invitation emails to your agents.
 
 Further Steps
 -------------
