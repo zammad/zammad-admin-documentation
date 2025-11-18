@@ -53,15 +53,19 @@ information via getting started wizard or skip the steps and configure it
 afterwards.
 The guide assumes your Zammad is not yet configured. In case you see the
 getting started wizard, provide as much information as you desire or skip it
-for a later configuration.
+for a later configuration. The video below shows an example with providing
+minimal information in the wizard.
+
+ADD VIDEO HERE (created).
 
 Company Details
 ^^^^^^^^^^^^^^^
 
-The basic customizatio step in Zammad is to add your company name and your
-logo. If not already set up, visit Zammad's admin settings and go to
-*Settings > Branding* to adjust it. Additional information on this topic can
-be found in the :doc:`branding settings section </settings/branding>`.
+The basic customization step in Zammad is to add your company name and your
+logo. If not already set in the getting started wizard, visit Zammad's admin
+settings and go to *Settings > Branding* to adjust it. Additional information
+on this topic can be found in the
+:doc:`branding settings section </settings/branding>`.
 
 Create Groups
 ^^^^^^^^^^^^^
@@ -74,9 +78,8 @@ At this point, just add your groups and give them a fitting name. Create A
 structure in case you need it by setting parent groups. It is totally fine to
 stay with one group too, of course.
 
-Follow the video for a simple group and role setup.
-
-VIDEO HERE.
+You can find a video about a simple group and role configuration in the next
+section.
 
 Create or Modify Roles
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -96,6 +99,8 @@ You can assign application and group permissions to a specific user as well. In
 case you expect more than one person with specific permissions, creating a role
 may be a good idea.
 
+ADD VIDEO HERE (created).
+
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -113,7 +118,7 @@ company's department structure.
 The following video shows a dummy email channel configuration as well as adding
 email adresses and signatures to different groups.
 
-VIDEO HERE.
+VIDEO HERE (created).
 
 Configure Groups
 ^^^^^^^^^^^^^^^^
@@ -130,6 +135,8 @@ going to the first steps section and use the
 **Invite agents/colleagues to help working on tickets** function.
 Make sure to assign the right role to each of the agents.
 This step sends out invitation emails to your agents.
+
+ADD VIDEO HERE.
 
 Further Steps
 -------------
