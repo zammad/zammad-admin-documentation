@@ -4,12 +4,6 @@ Accounts
 You can connect to user and shared mailboxes in your M365 environment.
 Follow the steps below and skip not applicable parts.
 
-.. hint:: Switching from M365 IMAP to M365 Graph? Make sure you don't use
-   email aliases, Microsoft doesn't support this via Graph.
-
-   In case you are using email aliases, you could create a shared mailbox for
-   each alias to solve this problem.
-
 First Steps
 -----------
 
@@ -101,7 +95,6 @@ steps:
   user from which you want to access the mailbox and **Save** it.
 - Do the same for "Read and manage (Full Access)".
 
-
 Configure the Channel in Zammad
 -------------------------------
 
@@ -178,6 +171,22 @@ find common errors related to the M365 configuration.
 
    Set up a generic :doc:`email channel </channels/email/index>` instead,
    then use the :ref:`Email Notification <email-notification>` setting.
+
+Using Aliases
+^^^^^^^^^^^^^
+
+In case you want to use secondary addresses (aliases), make sure to add the
+aliases to the desired mailbox first. You can find additional information in
+Microsoft's documentation:
+
+- https://learn.microsoft.com/en-us/graph/outlook-send-mail-from-other-user
+- https://learn.microsoft.com/en-us/microsoft-365/admin/email/add-another-email-alias-for-a-user
+
+To add an alias, click on ``+ Add`` in the **Email Address** section and provide
+the requested information. It works the same way as for other email based
+channels. Because of this, have a look at the
+:doc:`section in the standard email configuration </channels/email/accounts/secondary-addresses>`
+for more information.
 
 Re-Authenticate
 ^^^^^^^^^^^^^^^
