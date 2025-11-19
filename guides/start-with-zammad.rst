@@ -136,7 +136,7 @@ going to the first steps section and use the
 Make sure to assign the right role to each of the agents.
 This step sends out invitation emails to your agents.
 
-ADD VIDEO HERE.
+ADD VIDEO HERE (created).
 
 Further Steps
 -------------
