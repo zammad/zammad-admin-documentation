@@ -22,7 +22,7 @@ It is all about tickets. A ticket is a central entity which holds all informatio
 of a customer request in one place. Such a ticket is created when someone
 gets in touch with you by sending a message or manually by support agents when
 they receive a call from a customer. A ticket includes every conversation part
-as an article. 
+as an article.
 
 Zammad can be invisible to customers and doesn't require your customers to use
 the system at all (but they can, if you allow them to). You just connect a
