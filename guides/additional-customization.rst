@@ -7,8 +7,8 @@ be useful.
 It is recommended to follow the basic configuration of Zammad first, as
 described in the :doc:`start-with-zammad` section.
 
-Automation for Incoming Messages
---------------------------------
+Set Up Automation
+-----------------
 
 There are different ways in Zammad how to automate things. Namely
 :doc:`triggers </manage/trigger>`, :doc:`schedulers </manage/scheduler>` and
@@ -20,34 +20,50 @@ By default, there is already one active trigger which sends out auto-reply
 emails to customers after they contacted you in a new support case. You can even
 define in the channel configuration, to which group specific messages should be
 dispatched to and what attributes you want to set for those tickets. You can
-find it in the **Filter** tab in the email based channels.
+find it in the :doc:`Filter </channels/email/filters>` tab in the email based
+channels.
+
+The following video shows three examples:
+
+- An automatic deletion of old tickets and customers via scheduler
+- An email rule (postmaster filter) for a specific customer
+- A trigger to increase priority for tickets when a specific organization member
+  is involved.
+
+ADD VIDEO HERE (created).
 
 Add Text Modules
 ----------------
 
-Text modules/templates are a nice time saver for your agents. In case they
-answer similar questions over and over again and/or you want to unify their
-answers, add text modules for that. Your agents can then fetch a text by
-typing :kbd:`@` :kbd:`@` in the editor, followed by the name or content of the
-text module.
+:doc:`Text modules </manage/text-modules>` are a nice time saver for your agents.
+In case they answer similar questions over and over again and/or you want to
+unify their answers, add text modules for that. Your agents can then fetch a
+text by typing :kbd:`:` :kbd:`:` in the editor, followed by the name or content
+of the text module. You can even use variables to automatically include ticket-
+or customer specific text like ticket title or customer name. Just type
+:kbd:`:` :kbd:`:` in the text module content editor to search for available
+variables.
+
+ADD VIDEO HERE (created).
 
 Adjust and Add Overviews
 ------------------------
 
+TODO
 
 Enable Checklist Feature
 ------------------------
 
-For a quick start, watch the video about enabling the checklist feature and
-adding a default checklist.
+Zammad's :doc:`checklist feature </manage/checklist>` allows you to keept track
+of certain tasks in a ticket. The feature allows you to create checklist
+templates and link to other tickets as checklist item too.
 
-ADD VIDEO HERE.
-
-And here is an explanation in text form.
-
+ADD VIDEO HERE (created).
 
 Add AI Agents
 -------------
+
+TODO.
 
 ADD VIDEO HERE.
 
