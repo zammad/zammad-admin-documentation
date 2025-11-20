@@ -7,6 +7,20 @@ be useful.
 It is recommended to follow the basic configuration of Zammad first, as
 described in the :doc:`start-with-zammad` section.
 
+Create Custom Field
+-------------------
+
+Zammad allows you to easily add new fields for different objects like tickets
+users and groups. You want to have a ticket category field where your agents
+can select from pre-defined categories? No problem! You can even set it to
+required to have a proper base for statistics.
+
+Head over to the :doc:`object attributes page </system/objects>` where it is
+explained in detail or watch the video about how to create a mandatory category
+field for tickets.
+
+ADD VIDEO HERE (created).
+
 Set Up Automation
 -----------------
 
@@ -46,19 +60,6 @@ variables.
 
 ADD VIDEO HERE (created).
 
-Adjust and Add Overviews
-------------------------
-
-TODO
-
-An :doc:`overview </manage/overviews>` is basically a list of tickets with
-common attributes. You can edit the built-in overviews and create new ones.
-An overview shows matching tickets based on the defined condition.
-It allows agents to find and track tickets which they have to work on and/or are
-not yet resolved.
-
-ADD VIDEO HERE.
-
 Enable Checklist Feature
 ------------------------
 
@@ -71,9 +72,20 @@ ADD VIDEO HERE (created).
 Add AI Agents
 -------------
 
-TODO.
+:doc:`AI agents </ai/ai-agents>` can work on specific routine tasks and relieve
+your agents so they can concentrate on more important things. To break the
+configuration down:
 
-ADD VIDEO HERE.
+- Prerequisite: add an AI provider
+- Create an AI agent with the type of task you want to delegate
+- Call the AI agent in a trigger or scheduler job
+
+The video shows an example of how to set up an AI agent which rewrites the
+title of a ticket. A use case for this is when your customers often tend to use
+generic titles (like "problem") or you receive tickets from a web form which
+all have the same title.
+
+ADD VIDEO HERE (created).
 
 Next Steps
 ----------
@@ -93,9 +105,9 @@ all features in Zammad.
 
 - In case you want to bill the support provided, use the
   :doc:`time accounting </manage/time-accounting>` feature
-- Add your own custom fields for users or tickets where you can add needed
-  information. You can do so in the :doc:`object attributes </system/objects>`
-  section in Zammad.
+- Add and customize your :doc:`overviews </manage/overviews>` for agents. This
+  is useful for team leaders or in case your needs are not covered by the
+  default overviews.
 - And don't forget to sign up for our
   `cloud services <https://zammad.com/en/pricing>`_ or get in touch with our
   `sales colleagues <https://zammad.com/en/pricing>`_ about a support contract
