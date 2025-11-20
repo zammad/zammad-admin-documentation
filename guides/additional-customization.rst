@@ -58,6 +58,9 @@ or customer specific text like ticket title or customer name. Just type
 :kbd:`:` :kbd:`:` in the text module content editor to search for available
 variables.
 
+The video shows how to create a text module, including usage of variables and
+how it works for agents when dealing with a ticket.
+
 ADD VIDEO HERE (created).
 
 Enable Checklist Feature
@@ -66,6 +69,9 @@ Enable Checklist Feature
 Zammad's :doc:`checklist feature </manage/checklist>` allows you to keep track
 of certain tasks in a ticket. The feature allows you to create checklist
 templates and link to other tickets as checklist item too.
+
+See how to set it up, create a template and reference to another ticket in a
+checklist item in the video.
 
 ADD VIDEO HERE (created).
 
@@ -100,8 +106,8 @@ all features in Zammad.
 
    - Automate additional things via :doc:`/manage/trigger`,
      :doc:`/manage/scheduler` and :doc:`/manage/macros`
-   - Use :doc:`AI features </ai/provider>` to relieve your agents so they can
-     focus on more important tasks.
+   - Use additional :doc:`AI features </ai/provider>` to relieve your agents so
+     they can focus on more important tasks.
 
 - In case you want to bill the support provided, use the
   :doc:`time accounting </manage/time-accounting>` feature
