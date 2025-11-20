@@ -73,7 +73,7 @@ Create Groups
 A group in Zammad typically represents a department of a company. You can define
 which agent has access to which group and define permissions. A group can
 have a specific email address and department name. Use the default shipped
-**Users** group by renaming it. 
+**Users** group by renaming it.
 At this point, just add your groups and give them a fitting name. Create A
 structure in case you need it by setting parent groups. It is totally fine to
 stay with one group too, of course.
