@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-21 11:00+0100\n"
+"POT-Creation-Date: 2025-11-21 13:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11054,35 +11054,95 @@ msgid "Webhook Examples"
 msgstr ""
 
 #: ../manage/webhook/examples.rst:15
-msgid "Find links to configuration examples below. They are split into individual pages for reasons of clearness. Make sure to invoke the webhook via trigger or scheduler, see :doc:`trigger example <examples/generic-notifications-trigger>`."
+msgid "Find links to configuration examples below. They are split into individual pages for reasons of clearness. Make sure to invoke the webhook via trigger or scheduler after creation, see :doc:`trigger example <examples/generic-notifications-trigger>`."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:19
+#: ../manage/webhook/examples.rst:20
 msgid ":doc:`examples/mattermost-notifications`: Use a Mattermost channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:21
+#: ../manage/webhook/examples.rst:22
 msgid ":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:23
+#: ../manage/webhook/examples.rst:24
 msgid ":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:25
+#: ../manage/webhook/examples.rst:26
 msgid ":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:27
+#: ../manage/webhook/examples.rst:28
 msgid ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push notification from Zammad on different devices like your smartphone."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:29
-msgid ":doc:`examples/add-checklist-template-to-ticket`: Add a checklist from a template to new tickets."
+#: ../manage/webhook/examples.rst:30
+msgid ":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to new tickets."
 msgstr ""
 
-#: ../manage/webhook/examples/add-checklist-template-to-ticket.rst:2
-msgid "Add a Checklist Template to Tickets"
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:2
+msgid "Add Checklist to Tickets"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:4
+msgid "Follow the steps below to add a checklist from a template to all tickets after they get created."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:8
+msgid "Create a Token"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:10
+msgid "Create a personal access token in the account you want to use to create the checklists in the tickets. Make sure the account has appropriate permissions. To create the token, go to the :user-docs:`profile settings (user docs) </extras/profile-and-settings.html>` by clicking on the avatar image (either image or initials) on the left bottom corner and select **Token Access**. Make sure that the token has ``ticket.agent`` permission and the user is able to change tickets in the groups you want to add the checklist to tickets."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:20
+msgid "Add Webhook"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:22
+msgid "Create a new webhook with the following configuration:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:24
+msgid "Endpoint: ``https://{your.domain.tld}/api/v1/checklists`` (replace the value in {} with the domain of your Zammad)"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:26
+msgid "Request method: ``POST``"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:27
+msgid "Authentication: **Bearer Token**"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:28
+msgid "Bearer token: paste the token you created before"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:29
+msgid "Custom payload: activate it and add the following snippet. Make sure to replace the value ``1`` for ``template_id`` with the ID of your checklist template."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:41
+msgid "Create Trigger"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:43
+msgid "Configure a trigger which fires the webhook after ticket creation. In case you want to additionally narrow the condition down, just enhance the example (e.g. by checking the group of a ticket or limit it for specific ticket titles). Have a look at the :doc:`example configuration <generic-notifications-trigger>`. For the scenario to add a checklist to every ticket after creation, the condition could look like this:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:50
+msgid "Activated by: Action"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:51
+msgid "Action execution: Selective"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
+msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2

@@ -9,12 +9,13 @@ Webhook Examples
    examples/rocket-chat-notifications
    examples/slack-notifications
    examples/ntfy-notifications
-   examples/add-checklist-template-to-ticket
+   examples/add-checklist-to-ticket
    examples/generic-notifications-trigger
 
 Find links to configuration examples below. They are split into individual
 pages for reasons of clearness. Make sure to invoke the webhook via trigger
-or scheduler, see :doc:`trigger example <examples/generic-notifications-trigger>`.
+or scheduler after creation, see
+:doc:`trigger example <examples/generic-notifications-trigger>`.
 
 - :doc:`examples/mattermost-notifications`: Use a Mattermost channel to receive
   Zammad notifications.
@@ -26,5 +27,5 @@ or scheduler, see :doc:`trigger example <examples/generic-notifications-trigger>
   notifications.
 - :doc:`examples/ntfy-notifications`: Use the ntfy service to receive push
   notification from Zammad on different devices like your smartphone.
-- :doc:`examples/add-checklist-template-to-ticket`: Add a checklist from a
+- :doc:`examples/add-checklist-to-ticket`: Add a checklist from a
   template to new tickets.
