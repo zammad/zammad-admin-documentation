@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 16:27+0000\n"
+"POT-Creation-Date: 2025-11-21 14:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,6 +343,7 @@ msgstr ""
 #: ../channels/chat.rst:28
 #: ../channels/microsoft365-graph/accounts.rst:17
 #: ../manage/report-profiles.rst:32
+#: ../manage/webhook/add.rst:32
 #: ../misc/first-steps.rst:20
 #: ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
@@ -364,6 +365,7 @@ msgstr ""
 #: ../manage/scheduler.rst:86
 #: ../manage/slas/how-do-they-work.rst:26
 #: ../manage/templates.rst:23
+#: ../manage/webhook/add.rst:37
 #: ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1
@@ -434,7 +436,7 @@ msgstr ""
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:37
 #: ../manage/scheduler.rst:158
-#: ../manage/webhook/add.rst:116
+#: ../manage/webhook/add.rst:114
 #: ../misc/variables.rst:102
 #: ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
@@ -466,7 +468,7 @@ msgstr ""
 #: ../manage/roles/index.rst:128
 #: ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33
-#: ../manage/webhook/add.rst:123
+#: ../manage/webhook/add.rst:120
 #: ../system/objects.rst:171
 #: ../system/objects.rst:251
 msgid "Active"
@@ -795,6 +797,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:136
 #: ../channels/email/accounts/account-setup.rst:235
 #: ../channels/email/accounts/email-notification.rst:34
+#: ../manage/webhook/add.rst:66
 #: ../settings/security/password.rst:2
 msgid "Password"
 msgstr ""
@@ -936,7 +939,7 @@ msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:249
-#: ../manage/webhook/add.rst:72
+#: ../manage/webhook/add.rst:52
 #: ../settings/security/third-party/saml.rst:149
 #: ../system/integrations/i-doit.rst:67
 msgid "SSL verification"
@@ -6290,8 +6293,8 @@ msgstr ""
 #: ../manage/slas/index.rst:78
 #: ../manage/trigger.rst:24
 #: ../manage/trigger.rst:24
-#: ../manage/webhook.rst:47
-#: ../manage/webhook.rst:47
+#: ../manage/webhook.rst:46
+#: ../manage/webhook.rst:46
 #: ../system/core-workflows.rst:23
 #: ../system/core-workflows.rst:23
 #: ../system/objects.rst:32
@@ -8990,6 +8993,7 @@ msgid "Scheduler jobs can process a maximum of ``2000`` objects per run. This is
 msgstr ""
 
 #: ../manage/scheduler.rst:22
+#: ../manage/webhook/add.rst:8
 #: ../system/core-workflows/learn-by-example.rst:8
 msgid "Basics"
 msgstr ""
@@ -10831,67 +10835,59 @@ msgid "Webhook"
 msgstr ""
 
 #: ../manage/webhook.rst:4
-msgid "Webhooks are a way to integrate Zammad with other web services or applications, allowing them to subscribe to live updates about tickets instead of having to poll the Zammad server every *n* minutes."
+msgid "Webhooks are a way to integrate Zammad with other web services or applications, allowing them to subscribe to live updates about tickets instead of having to poll the Zammad server every *n* minutes. You can find the webhook configuration in Zammad's settings under *Manage > Webhooks*."
 msgstr ""
 
-#: ../manage/webhook.rst:10
+#: ../manage/webhook.rst:11
 msgid "Webhooks may not arrive immediately. They are sent out with the same priority and order as email triggers. If webhook dispatch fails (e.g. because the receiving server is misconfigured), Zammad will retry up to four times."
 msgstr ""
 
-#: ../manage/webhook.rst:14
+#: ../manage/webhook.rst:15
 msgid "Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/scheduler` jobs."
 msgstr ""
 
-#: ../manage/webhook.rst:16
+#: ../manage/webhook.rst:17
 msgid "The usage of variables is limited compared to other places. Some features are not available in webhooks (e.g. the ``.value`` extension, translation (``#{t(object.attribute)}``) and time formatting (``#{dt(object.time_attribute, [...]``) functions)."
 msgstr ""
 
-#: ../manage/webhook.rst:22
+#: ../manage/webhook.rst:23
 msgid "How do Webhooks Work"
 msgstr ""
 
-#: ../manage/webhook.rst:24
-msgid "Under the hood, Zammad sends a POST request to a third-party URL (\"API endpoint\") you specify in the New Webhook dialog. The application server behind this URL/endpoint must be configured to receive messages from Zammad and handle the provided payload accordingly."
+#: ../manage/webhook.rst:25
+msgid "Under the hood, Zammad sends a request to a third-party URL (\"API endpoint\") you specify in the webhook configuration. The application server behind this URL/endpoint must be configured to receive messages from Zammad and handle the provided payload accordingly."
 msgstr ""
 
-#: ../manage/webhook.rst:29
-msgid "Webhooks can be created both from scratch and from pre-defined templates."
-msgstr ""
-
-#: ../manage/webhook.rst:31
-msgid "When created from scratch, regular webhook payloads by default contain the following JSON data about new/updated tickets:"
+#: ../manage/webhook.rst:30
+msgid "Webhooks can be created both from scratch and from pre-defined templates. When created from scratch, regular webhook payloads by default contain the following JSON data about new/updated tickets:"
 msgstr ""
 
 #: ../manage/webhook.rst:34
-msgid "ticket attributes/metadata"
+msgid "Ticket attributes/metadata"
 msgstr ""
 
 #: ../manage/webhook.rst:35
-msgid "associated article(s)"
+msgid "Associated article(s)"
 msgstr ""
 
 #: ../manage/webhook.rst:36
-msgid "associated users (e.g. article senders, owners, etc.)"
+msgid "Associated users (e.g. article senders, owners, etc.)"
 msgstr ""
 
 #: ../manage/webhook.rst:37
-msgid "associated user roles"
+msgid "Associated user roles"
 msgstr ""
 
 #: ../manage/webhook.rst:38
-msgid "associated user organizations (if applicable)"
+msgid "Associated user organizations (if applicable)"
 msgstr ""
 
 #: ../manage/webhook.rst:39
-msgid "associated groups"
+msgid "Associated groups"
 msgstr ""
 
 #: ../manage/webhook.rst:41
-msgid "On the other hand, pre-defined webhooks are designed to work with specific services, containing special payloads that these services understand."
-msgstr ""
-
-#: ../manage/webhook.rst:44
-msgid "In both cases, however, it is possible to further customize the webhook payload to your own needs."
+msgid "On the other hand, pre-defined webhooks are designed to work with specific services, containing special payloads that these services understand. In both cases, however, it is possible to further customize the webhook payload to your own needs."
 msgstr ""
 
 #: ../manage/webhook/add.rst:2
@@ -10902,237 +10898,251 @@ msgstr ""
 msgid "Defining a webhook allows you to use a specific endpoint in several triggers or schedulers."
 msgstr ""
 
-#: ../manage/webhook/add.rst:7
-msgid "**Default Zammad webhook payloads are specific**"
+#: ../manage/webhook/add.rst:12
+msgid "Keep in mind that the remote site has to be able to understand the default webhook payload, Zammad is sending. Find more information about the customization of a payload in the next section."
 msgstr ""
 
-#: ../manage/webhook/add.rst:9
-msgid "Keep in mind that the remote site has to be able to understand the default webhook payload, Zammad is sending. Simply throwing the default payload at a webhook endpoint may not have the desired result!"
-msgstr ""
-
-#: ../manage/webhook/add.rst:13
-msgid "See `Custom Payload`_ for a way to customize webhook payloads."
-msgstr ""
-
-#: ../manage/webhook/add.rst:15
-msgid "To add a new regular webhook, use the big green **New Webhook** button."
-msgstr ""
-
-#: ../manage/webhook/add.rst:None
-msgid "Modal showing webhook configuration"
+#: ../manage/webhook/add.rst:16
+msgid "To add a new regular webhook, click the **New Webhook** button. For a pre-defined webhook, click on the arrow button to the right and choose **Pre-defined Webhook** from the dropdown menu. In case you select a pre-defined webhook, you get asked to choose from one of the available pre-defined ones:"
 msgstr ""
 
 #: ../manage/webhook/add.rst:22
-msgid "For a pre-defined webhook, click on the arrow button to the right and choose **Pre-defined Webhook** from the dropdown menu."
+msgid "Mattermost"
 msgstr ""
 
-#: ../manage/webhook/add.rst:None
-#: ../manage/webhook/examples/mattermost-notifications.rst:None
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
-#: ../manage/webhook/examples/slack-notifications.rst:None
-msgid "New Pre-defined Webhook button"
+#: ../manage/webhook/add.rst:23
+msgid "Microsoft Teams"
 msgstr ""
 
-#: ../manage/webhook/add.rst:30
-msgid "Next, select the pre-defined webhook you want and click **Next**."
+#: ../manage/webhook/add.rst:24
+msgid "Rocket Chat"
 msgstr ""
 
-#: ../manage/webhook/add.rst:None
-msgid "New pre-defined webhook modal"
+#: ../manage/webhook/add.rst:25
+msgid "Slack"
 msgstr ""
 
-#: ../manage/webhook/add.rst:37
-msgid "**⚠️ Adding a new webhook is not enough**"
+#: ../manage/webhook/add.rst:27
+msgid "After you select one and click on **Next**, Zammad shows the webhook configuration dialog. This is what you see directly when creating a webhook from scratch. Read on for more information about the configuration of a webhook."
 msgstr ""
 
-#: ../manage/webhook/add.rst:39
-msgid "You must, in addition, add a :doc:`Trigger </manage/trigger>` or :doc:`Scheduler </manage/scheduler>` that references the Webhook!"
-msgstr ""
-
-#: ../manage/webhook/add.rst:42
+#: ../manage/webhook/add.rst:34
 msgid "You can configure the following information for webhooks:"
 msgstr ""
 
-#: ../manage/webhook/add.rst:45
-msgid "Name (mandatory)"
-msgstr ""
-
-#: ../manage/webhook/add.rst:45
+#: ../manage/webhook/add.rst:37
 msgid "This name will be displayed within trigger and scheduler selections."
 msgstr ""
 
-#: ../manage/webhook/add.rst:53
-msgid "Endpoint (mandatory)"
+#: ../manage/webhook/add.rst:42
+#: ../system/integrations/cti/placetel.rst:44
+#: ../system/integrations/i-doit.rst:46
+msgid "Endpoint"
 msgstr ""
 
-#: ../manage/webhook/add.rst:48
-msgid "Webhook endpoint Zammad sends its payload to."
+#: ../manage/webhook/add.rst:40
+msgid "Webhook endpoint Zammad sends its payload to. Please note that Zammad ignores basic authentication parameters here. See below how to configure username and password via separate fields."
 msgstr ""
 
-#: ../manage/webhook/add.rst:50
-msgid "Zammad ignores basic authentication parameters. See below how to configure :ref:`username <HTTP Basic Authentication Username>` and :ref:`password <HTTP Basic Authentication Password>` via separate fields."
+#: ../manage/webhook/add.rst:46
+msgid "Request method"
 msgstr ""
 
-#: ../manage/webhook/add.rst:66
-msgid "HMAC SHA1 Signature Token"
+#: ../manage/webhook/add.rst:45
+msgid "Choose between ``DELETE``, ``PATCH``, ``POST`` and ``PUT``, depending on your use case."
 msgstr ""
 
-#: ../manage/webhook/add.rst:56
-msgid "If set, all sent webhooks contain a `x-hub-signature` header allowing the remote site to verify the request."
-msgstr ""
-
-#: ../manage/webhook/add.rst:59
-msgid "**🔐 Security note**"
-msgstr ""
-
-#: ../manage/webhook/add.rst:61
-msgid "This *does not* encrypt the payload. Use HTTPS connections to secure the communication. It contains a HMAC signature of the body of the webhook request."
-msgstr ""
-
-#: ../manage/webhook/add.rst:65
-msgid "`Learn more about HUB-Signatures <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_"
-msgstr ""
-
-#: ../manage/webhook/add.rst:69
+#: ../manage/webhook/add.rst:49
 msgid "Defaults to ``yes`` - if you're using unsecure self signed certificates, set this option to ``no``."
 msgstr ""
 
-#: ../manage/webhook/add.rst:75
-msgid "_`HTTP Basic Authentication Username`"
+#: ../manage/webhook/add.rst:66
+#: ../system/integrations/elasticsearch.rst:64
+msgid "Authentication"
 msgstr ""
 
-#: ../manage/webhook/add.rst:75
-#: ../manage/webhook/add.rst:78
-msgid "Set this if the endpoint requires HTTP basic authentication credentials."
+#: ../manage/webhook/add.rst:55
+msgid "Choose between **HTTP Basic Authentication**, **Bearer Token** or no authentication, depending on what the target service supports."
 msgstr ""
 
-#: ../manage/webhook/add.rst:78
-msgid "_`HTTP Basic Authentication Password`"
+#: ../manage/webhook/add.rst:59
+msgid "Bearer Token"
 msgstr ""
 
-#: ../manage/webhook/add.rst:92
+#: ../manage/webhook/add.rst:59
+msgid "In case you selected this authentication method, add your token here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:62
+msgid "Username"
+msgstr ""
+
+#: ../manage/webhook/add.rst:62
+msgid "In case of **HTTP Basic Authentication**, provide your username here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:65
+msgid "In case of **HTTP Basic Authentication**, provide the password of the user here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:77
+msgid "HMAC SHA1 Signature Token"
+msgstr ""
+
+#: ../manage/webhook/add.rst:69
+msgid "If set, all sent webhooks contain a `x-hub-signature` header allowing the remote site to verify the request."
+msgstr ""
+
+#: ../manage/webhook/add.rst:74
+msgid "This **does not** encrypt the payload. Use HTTPS connections to secure the communication. It contains a HMAC signature of the body of the webhook request. Learn more about HUB-Signatures `here <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_."
+msgstr ""
+
+#: ../manage/webhook/add.rst:90
 msgid "Pre-defined Webhook"
 msgstr ""
 
-#: ../manage/webhook/add.rst:81
-msgid "This field is only available for *pre-defined webhooks*!"
-msgstr ""
-
-#: ../manage/webhook/add.rst:83
-msgid "This field is always disabled in the UI and serves only as a reference to a pre-defined webhook. It is not possible to change it for existing webhooks."
+#: ../manage/webhook/add.rst:80
+msgid "This field is only displayed for *pre-defined webhooks*! It only serves as a reference to a pre-defined webhook. It is not possible to change it for existing webhooks. Depending on the pre-defined webhook type, additional fields may be rendered below this one. They can be used for additional customization of the webhook behavior."
 msgstr ""
 
 #: ../manage/webhook/add.rst:87
-msgid "Depending on the pre-defined webhook type, additional fields may be rendered below this one. They can be used for additional customization of the webhook behavior."
+msgid "Example for Mattermost:"
 msgstr ""
 
 #: ../manage/webhook/add.rst:0
 msgid "Additional pre-defined webhook fields"
 msgstr ""
 
-#: ../manage/webhook/add.rst:112
-msgid "_`Custom Payload`"
+#: ../manage/webhook/add.rst:110
+msgid "Custom Payload"
 msgstr ""
 
-#: ../manage/webhook/add.rst:95
+#: ../manage/webhook/add.rst:93
 msgid "Defaults to off - webhook will always send :ref:`webhook-payload-default` to the target endpoint."
 msgstr ""
 
-#: ../manage/webhook/add.rst:98
-msgid "When switched on, a code editor will be shown below, where you can configure custom payload for your webhook in JSON format. To insert supported :doc:`/misc/variables` use ``::`` or ``#{`` shortcuts for autocomplete."
+#: ../manage/webhook/add.rst:96
+msgid "When switched on, a code editor will be shown below, where you can configure a custom payload for your webhook in JSON format. To insert supported :doc:`/misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{`` for autocomplete."
 msgstr ""
 
-#: ../manage/webhook/add.rst:103
-msgid "Custom payload must be valid JSON syntax! Code editor will inform you via automated hints if there is an issue with the code. Also, it will not be possible to save an invalid JSON structure."
+#: ../manage/webhook/add.rst:101
+msgid "The custom payload must have a valid JSON syntax! The code editor will highlight if there is an issue with the syntax. Also, it will not be possible to save an invalid JSON structure."
 msgstr ""
 
 #: ../manage/webhook/add.rst:0
 msgid "Custom payload code editor"
 msgstr ""
 
-#: ../manage/webhook/add.rst:111
+#: ../manage/webhook/add.rst:109
 msgid "Pre-defined webhooks will always provide an initial custom payload, specific for the associated service."
 msgstr ""
 
-#: ../manage/webhook/add.rst:115
+#: ../manage/webhook/add.rst:113
 msgid "If required you can leave useful information for other Zammad admins to understand the webhook in question better."
 msgstr ""
 
-#: ../manage/webhook/add.rst:119
-msgid "If set to ``inactive`` you can no longer select the webhook within trigger or scheduler actions."
+#: ../manage/webhook/add.rst:117
+msgid "If set to ``inactive``, you can no longer select the webhook in the trigger or scheduler configuration. Inactive webhooks will not be fired. If triggers or schedulers have other actions configured as well, they will still be executed."
 msgstr ""
 
 #: ../manage/webhook/add.rst:122
-msgid "Inactive webhooks used by triggers or schedulers will not be fired. If triggers or schedulers have other actions configured as well they will still be executed."
+msgid "After you set up your webhook, make sure to invoke it via trigger or scheduler. In case something doesn't work, have a look at the :doc:`troubleshooting <log>` section."
 msgstr ""
 
 #: ../manage/webhook/examples.rst:2
 msgid "Webhook Examples"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:19
-msgid ":doc:`examples/mattermost-notifications`"
-msgstr ""
-
 #: ../manage/webhook/examples.rst:15
-msgid "Use a Mattermost Channel to receive your Zammad Notifications."
+msgid "Find links to configuration examples below. They are split into individual pages for reasons of clearness. Make sure to invoke the webhook via trigger or scheduler after creation, see :doc:`trigger example <examples/generic-notifications-trigger>`."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/mattermost-notifications.rst:100
-#: ../manage/webhook/examples/mattermost-notifications.rst:None
-msgid "Sample Mattermost Channel Notification"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:26
-msgid ":doc:`examples/microsoft-teams-notifications`"
+#: ../manage/webhook/examples.rst:20
+msgid ":doc:`examples/mattermost-notifications`: Use a Mattermost channel to receive Zammad notifications."
 msgstr ""
 
 #: ../manage/webhook/examples.rst:22
-msgid "Use a Microsoft Teams Channel to receive your Zammad Notifications."
+msgid ":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:114
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
-msgid "Sample Teams Channel Notification"
+#: ../manage/webhook/examples.rst:24
+msgid ":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:33
-msgid ":doc:`examples/rocket-chat-notifications`"
+#: ../manage/webhook/examples.rst:26
+msgid ":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:29
-msgid "Use a Rocket Chat Channel to receive your Zammad Notifications."
+#: ../manage/webhook/examples.rst:28
+msgid ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push notification from Zammad on different devices like your smartphone."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:96
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
-msgid "Sample Rocket Chat Channel Notification"
+#: ../manage/webhook/examples.rst:30
+msgid ":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to new tickets."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:40
-msgid ":doc:`examples/slack-notifications`"
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:2
+msgid "Add Checklist to Tickets"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:36
-msgid "Use a Slack Channel to receive your Zammad Notifications."
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:4
+msgid "Follow the steps below to add a checklist from a template to all tickets after they get created."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/slack-notifications.rst:108
-#: ../manage/webhook/examples/slack-notifications.rst:None
-msgid "Sample Slack Channel Notification"
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:8
+msgid "Create a Token"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:43
-msgid ":doc:`examples/ntfy-notifications`"
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:10
+msgid "Create a personal access token in the account you want to use to create the checklists in the tickets. Make sure the account has appropriate permissions. To create the token, go to the :user-docs:`profile settings (user docs) </extras/profile-and-settings.html>` by clicking on the avatar image (either image or initials) on the left bottom corner and select **Token Access**. Make sure that the token has ``ticket.agent`` permission and the user is able to change tickets in the groups you want to add the checklist to tickets."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:43
-msgid "Use the ntfy service to receive push notification from Zammad on different devices like your smartphone."
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:20
+msgid "Add Webhook"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:22
+msgid "Create a new webhook with the following configuration:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:24
+msgid "Endpoint: ``https://{your.domain.tld}/api/v1/checklists`` (replace the value in {} with the domain of your Zammad)"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:26
+msgid "Request method: ``POST``"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:27
+msgid "Authentication: **Bearer Token**"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:28
+msgid "Bearer token: paste the token you created before"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:29
+msgid "Custom payload: activate it and add the following snippet. Make sure to replace the value ``1`` for ``template_id`` with the ID of your checklist template."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:41
+msgid "Create Trigger"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:43
+msgid "Configure a trigger which invokes the webhook after ticket creation. In case you additionally want to narrow down affected tickets, just enhance the condition (e.g. by checking the group of a ticket or limit it for specific ticket titles). Have a look at the :doc:`example configuration <generic-notifications-trigger>` of a trigger for sending notifications. For this scenario, the condition could look like this:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:50
+msgid "Activated by: Action"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:51
+msgid "Action execution: Selective"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
+msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
@@ -11326,6 +11336,13 @@ msgstr ""
 msgid "Go to :doc:`Webhook </manage/webhook/add>` management screen in your Zammad instance and click on the arrow next to the green button in the upper right corner. Choose **Pre-defined Webhook** from the dropdown menu."
 msgstr ""
 
+#: ../manage/webhook/examples/mattermost-notifications.rst:None
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
+#: ../manage/webhook/examples/slack-notifications.rst:None
+msgid "New Pre-defined Webhook button"
+msgstr ""
+
 #: ../manage/webhook/examples/mattermost-notifications.rst:63
 msgid "In the subsequent modal dialog, select **Mattermost Notifications** as the pre-defined webhook."
 msgstr ""
@@ -11382,6 +11399,11 @@ msgstr ""
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:93
 #: ../manage/webhook/examples/slack-notifications.rst:105
 msgid "Once the trigger is in place, your webhook is ready for use!"
+msgstr ""
+
+#: ../manage/webhook/examples/mattermost-notifications.rst:100
+#: ../manage/webhook/examples/mattermost-notifications.rst:None
+msgid "Sample Mattermost Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:102
@@ -11543,6 +11565,11 @@ msgstr ""
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:107
 msgid "As a last step, you need to create a :doc:`Trigger <generic-notifications-trigger>` for posting a notification to the Microsoft Teams channel under certain conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:114
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
+msgid "Sample Teams Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:116
@@ -11785,6 +11812,11 @@ msgstr ""
 msgid "As a last step, you need to create a :doc:`Trigger <generic-notifications-trigger>` for posting a notification to the Rocket Chat channel under certain conditions."
 msgstr ""
 
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:96
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
+msgid "Sample Rocket Chat Channel Notification"
+msgstr ""
+
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:98
 msgid "From now on, whenever a ticket is created or updated in your Zammad system, a suitable notification will be posted in the configured Rocket Chat Channel. The notification will contain the link to the ticket, updated data and :ref:`content of the last article <rocket-chat-removing-article-body>`. It will also be :user-docs:`color coded </basics/service-ticket/settings/state.html#state-colors>` according to its latest state."
 msgstr ""
@@ -11903,6 +11935,11 @@ msgstr ""
 
 #: ../manage/webhook/examples/slack-notifications.rst:101
 msgid "As a last step, you need to create a :doc:`Trigger <generic-notifications-trigger>` for posting a notification to the Slack channel under certain conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/slack-notifications.rst:108
+#: ../manage/webhook/examples/slack-notifications.rst:None
+msgid "Sample Slack Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/slack-notifications.rst:110
@@ -20252,11 +20289,6 @@ msgstr ""
 msgid "The here listed endpoint settings are relevant for the :doc:`integration configuration with Placetel <provider-configurations/placetel>`."
 msgstr ""
 
-#: ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
-msgid "Endpoint"
-msgstr ""
-
 #: ../system/integrations/cti/placetel.rst:43
 msgid "This endpoint will be required for the Zammad integration within the Placetel web interface."
 msgstr ""
@@ -20626,10 +20658,6 @@ msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:60
 msgid "The major version of the search index being used. This is required by some Reporting tools like Grafana."
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:64
-msgid "Authentication"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:64

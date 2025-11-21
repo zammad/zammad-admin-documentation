@@ -8,37 +8,24 @@ Webhook Examples
    examples/microsoft-teams-notifications
    examples/rocket-chat-notifications
    examples/slack-notifications
-   examples/generic-notifications-trigger
    examples/ntfy-notifications
+   examples/add-checklist-to-ticket
+   examples/generic-notifications-trigger
 
-:doc:`examples/mattermost-notifications`
-   Use a Mattermost Channel to receive your Zammad Notifications.
+Find links to configuration examples below. They are split into individual
+pages for reasons of clearness. Make sure to invoke the webhook via trigger
+or scheduler after creation, see
+:doc:`trigger example <examples/generic-notifications-trigger>`.
 
-   .. figure:: /images/manage/webhook/webhook-mattermost-sample-notification.png
-      :alt: Sample Mattermost Channel Notification
-      :align: center
-
-:doc:`examples/microsoft-teams-notifications`
-   Use a Microsoft Teams Channel to receive your Zammad Notifications.
-
-   .. figure:: /images/manage/webhook/webhook-teams-sample-notification.png
-      :alt: Sample Teams Channel Notification
-      :align: center
-
-:doc:`examples/rocket-chat-notifications`
-   Use a Rocket Chat Channel to receive your Zammad Notifications.
-
-   .. figure:: /images/manage/webhook/webhook-rocket-chat-sample-notification.png
-      :alt: Sample Rocket Chat Channel Notification
-      :align: center
-
-:doc:`examples/slack-notifications`
-   Use a Slack Channel to receive your Zammad Notifications.
-
-   .. figure:: /images/manage/webhook/webhook-slack-sample-notification.png
-      :alt: Sample Slack Channel Notification
-      :align: center
-
-:doc:`examples/ntfy-notifications`
-   Use the ntfy service to receive push notification from Zammad on different
-   devices like your smartphone.
+- :doc:`examples/mattermost-notifications`: Use a Mattermost channel to receive
+  Zammad notifications.
+- :doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel
+  to receive Zammad notifications.
+- :doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to
+  receive Zammad notifications.
+- :doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad
+  notifications.
+- :doc:`examples/ntfy-notifications`: Use the ntfy service to receive push
+  notification from Zammad on different devices like your smartphone.
+- :doc:`examples/add-checklist-to-ticket`: Add a checklist from a
+  template to new tickets.

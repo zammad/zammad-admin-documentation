@@ -4,121 +4,121 @@ Adding Webhooks
 Defining a webhook allows you to use a specific endpoint in several triggers or
 schedulers.
 
-.. warning:: **Default Zammad webhook payloads are specific**
+Basics
+------
+
+.. hint::
 
    Keep in mind that the remote site has to be able to understand the default
-   webhook payload, Zammad is sending. Simply throwing the default payload at a
-   webhook endpoint may not have the desired result!
+   webhook payload, Zammad is sending. Find more information about the
+   customization of a payload in the next section.
 
-   See `Custom Payload`_ for a way to customize webhook payloads.
-
-To add a new regular webhook, use the big green **New Webhook** button.
-
-.. figure:: /images/manage/webhook/webhook-add.png
-   :alt: Modal showing webhook configuration
-   :align: center
-   :width: 90%
-
+To add a new regular webhook, click the **New Webhook** button.
 For a pre-defined webhook, click on the arrow button to the right and choose
 **Pre-defined Webhook** from the dropdown menu.
+In case you select a pre-defined webhook, you get asked to choose from one of
+the available pre-defined ones:
 
-.. figure:: /images/manage/webhook/webhook-new-buttons.png
-   :alt: New Pre-defined Webhook button
-   :align: center
-   :width: 90%
+- Mattermost
+- Microsoft Teams
+- Rocket Chat
+- Slack
 
-Next, select the pre-defined webhook you want and click **Next**.
+After you select one and click on **Next**, Zammad shows the webhook
+configuration dialog. This is what you see directly when creating a webhook from
+scratch. Read on for more information about the configuration of a webhook.
 
-.. figure:: /images/manage/webhook/webhook-new-pre-defined-webhook.png
-   :alt: New pre-defined webhook modal
-   :align: center
-   :width: 90%
-
-.. warning:: **⚠️ Adding a new webhook is not enough**
-
-   You must, in addition, add a :doc:`Trigger </manage/trigger>` or
-   :doc:`Scheduler </manage/scheduler>` that references the Webhook!
+Configuration
+-------------
 
 You can configure the following information for webhooks:
 
-   Name (mandatory)
-      This name will be displayed within trigger and scheduler selections.
+Name
+   This name will be displayed within trigger and scheduler selections.
 
-   Endpoint (mandatory)
-      Webhook endpoint Zammad sends its payload to.
+Endpoint
+   Webhook endpoint Zammad sends its payload to. Please note that
+   Zammad ignores basic authentication parameters here. See below how to
+   configure username and password via separate fields.
 
-      Zammad ignores basic authentication parameters. See below how to
-      configure :ref:`username <HTTP Basic Authentication Username>` and
-      :ref:`password <HTTP Basic Authentication Password>` via separate
-      fields.
+Request method
+   Choose between ``DELETE``, ``PATCH``, ``POST`` and ``PUT``, depending
+   on your use case.
 
-   HMAC SHA1 Signature Token
-      If set, all sent webhooks contain a `x-hub-signature` header allowing
-      the remote site to verify the request.
+SSL verification
+   Defaults to ``yes`` - if you're using unsecure self signed certificates,
+   set this option to ``no``.
 
-      .. note:: **🔐 Security note**
+   .. include:: /includes/ssl-verification-warning.rst
 
-         This *does not* encrypt the payload. Use HTTPS connections to
-         secure the communication. It contains a HMAC signature of the body
-         of the webhook request.
+Authentication
+   Choose between **HTTP Basic Authentication**, **Bearer Token** or no
+   authentication, depending on what the target service supports.
 
-         `Learn more about HUB-Signatures
-         <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_
+   Bearer Token
+      In case you selected this authentication method, add your token here.
 
-   SSL verification
-      Defaults to ``yes`` - if you're using unsecure self signed certificates,
-      set this option to ``no``.
+   Username
+      In case of **HTTP Basic Authentication**, provide your username here.
 
-      .. include:: /includes/ssl-verification-warning.rst
+   Password
+      In case of **HTTP Basic Authentication**, provide the password of the user
+      here.
 
-   _`HTTP Basic Authentication Username`
-      Set this if the endpoint requires HTTP basic authentication credentials.
+HMAC SHA1 Signature Token
+   If set, all sent webhooks contain a `x-hub-signature` header allowing
+   the remote site to verify the request.
 
-   _`HTTP Basic Authentication Password`
-      Set this if the endpoint requires HTTP basic authentication credentials.
+   .. note::
 
-   Pre-defined Webhook
-      This field is only available for *pre-defined webhooks*!
+      This **does not** encrypt the payload. Use HTTPS connections to
+      secure the communication. It contains a HMAC signature of the body
+      of the webhook request. Learn more about HUB-Signatures
+      `here <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_.
 
-      This field is always disabled in the UI and serves only as a reference
-      to a pre-defined webhook. It is not possible to change it for existing
-      webhooks.
+Pre-defined Webhook
+   This field is only displayed for *pre-defined webhooks*!
+   It only serves as a reference to a pre-defined webhook. It is not possible
+   to change it for existing webhooks.
+   Depending on the pre-defined webhook type, additional fields may be
+   rendered below this one. They can be used for additional customization of
+   the webhook behavior.
 
-      Depending on the pre-defined webhook type, additional fields may be
-      rendered below this one. They can be used for additional customization of
-      the webhook behavior.
+   Example for Mattermost:
 
-      .. figure:: /images/manage/webhook/webhook-pre-defined-webhook-fields.png
-         :alt: Additional pre-defined webhook fields
+   .. figure:: /images/manage/webhook/webhook-pre-defined-webhook-fields.png
+      :alt: Additional pre-defined webhook fields
 
-   _`Custom Payload`
-      Defaults to off - webhook will always send :ref:`webhook-payload-default`
-      to the target endpoint.
+Custom Payload
+   Defaults to off - webhook will always send :ref:`webhook-payload-default`
+   to the target endpoint.
 
-      When switched on, a code editor will be shown below, where you can
-      configure custom payload for your webhook in JSON format. To insert
-      supported :doc:`/misc/variables` use ``::`` or ``#{``
-      shortcuts for autocomplete.
+   When switched on, a code editor will be shown below, where you can
+   configure a custom payload for your webhook in JSON format. To insert
+   supported :doc:`/misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{``
+   for autocomplete.
 
-      Custom payload must be valid JSON syntax! Code editor will inform you
-      via automated hints if there is an issue with the code. Also, it will
-      not be possible to save an invalid JSON structure.
+   The custom payload must have a valid JSON syntax! The code editor will
+   highlight if there is an issue with the syntax. Also, it will not be
+   possible to save an invalid JSON structure.
 
-      .. figure:: /images/manage/webhook/webhook-custom-payload.gif
-         :alt: Custom payload code editor
+   .. figure:: /images/manage/webhook/webhook-custom-payload.gif
+      :alt: Custom payload code editor
 
-      .. hint::
-         Pre-defined webhooks will always provide an initial custom payload,
-         specific for the associated service.
+   .. hint::
+      Pre-defined webhooks will always provide an initial custom payload,
+      specific for the associated service.
 
-   Note
-      If required you can leave useful information for other Zammad admins
-      to understand the webhook in question better.
+Note
+   If required you can leave useful information for other Zammad admins
+   to understand the webhook in question better.
 
-   Active
-      If set to ``inactive`` you can no longer select the webhook within
-      trigger or scheduler actions.
+Active
+   If set to ``inactive``, you can no longer select the webhook in the
+   trigger or scheduler configuration.
+   Inactive webhooks will not be fired. If triggers or schedulers have other
+   actions configured as well, they will still be executed.
 
-      Inactive webhooks used by triggers or schedulers will not be fired. If
-      triggers or schedulers have other actions configured as well they will
-      still be executed.
+After you set up your webhook, make sure to invoke it via trigger or scheduler.
+In case something doesn't work, have a look at the :doc:`troubleshooting <log>`
+section.
