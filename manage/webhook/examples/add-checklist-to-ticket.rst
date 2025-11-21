@@ -34,7 +34,7 @@ Create a new webhook with the following configuration:
 
    {
       "ticket_id": "#{ticket.id}",
-      "template_id": 1
+      "template_id": "1"
    }
 
 Create Trigger
