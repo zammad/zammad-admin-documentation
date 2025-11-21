@@ -40,12 +40,12 @@ Create a new webhook with the following configuration:
 Create Trigger
 --------------
 
-Configure a trigger which fires the webhook after ticket creation. In case
-you want to additionally narrow the condition down, just enhance the example
+Configure a trigger which invokes the webhook after ticket creation. In case
+you additionally want to narrow down affected tickets, just enhance the condition
 (e.g. by checking the group of a ticket or limit it for specific ticket titles).
-Have a look at the :doc:`example configuration <generic-notifications-trigger>`.
-For the scenario to add a checklist to every ticket after creation, the
-condition could look like this:
+Have a look at the :doc:`example configuration <generic-notifications-trigger>`
+of a trigger for sending notifications. For this scenario, the condition could
+look like this:
 
 - Activated by: Action
 - Action execution: Selective
