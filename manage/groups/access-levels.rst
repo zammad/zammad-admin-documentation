@@ -95,9 +95,9 @@ Examples
       :align: center
       :width: 80%
 
-   Agents with all permissions except for “full” **cannot be assigned tickets**.
-   Otherwise, their privileges are identical to agents with “full” access.
-   Great for letting other people do the real work.
+   Agents with all permissions except for “full” **cannot be assigned tickets**
+   and don't receive notifications. Otherwise, their privileges are identical to
+   agents with “full” access. Great for letting other people do the real work.
 
 “The Meddler”
    .. figure:: /images/manage/groups/access-levels/read-change-and-overview.png
