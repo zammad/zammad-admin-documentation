@@ -69,12 +69,3 @@ Agent Permissions
    The group permission table is shown
    when there is **more than one active group** in the system and
    ``ticket.agent`` permission **is selected**.
-
-.. hint::
-
-   You can assign both agent and customer roles to the same user — but you
-   **can't** assign both ``ticket.agent`` and ``ticket.customer``
-   *permissions* to the same *role!*
-
-   To make it work, you need two separate roles:
-   one with ``ticket.agent`` and the other with ``ticket.customer``.
