@@ -16,10 +16,10 @@ can select from pre-defined categories? No problem! You can even set it to
 required to have a proper base for statistics.
 
 Head over to the :doc:`object attributes page </system/objects>` where it is
-explained in detail or watch the video about how to create a mandatory category
-field for tickets.
+explained in detail.
 
-ADD VIDEO HERE (created).
+.. or watch the video about how to create a mandatory category field for tickets.
+.. ADD VIDEO HERE.
 
 Set Up Automation
 -----------------
@@ -37,14 +37,14 @@ dispatched to and what attributes you want to set for those tickets. You can
 find it in the :doc:`Filter </channels/email/filters>` tab in the email based
 channels.
 
-The following video shows three examples:
+.. The following video shows three examples:
 
-- An automatic deletion of old tickets and customers via scheduler
-- An email rule (postmaster filter) for a specific customer
-- A trigger to increase priority for tickets when a specific organization member
-  is involved.
+.. - An automatic deletion of old tickets and customers via scheduler
+.. - An email rule (postmaster filter) for a specific customer
+.. - A trigger to increase priority for tickets when a specific organization member
+..   is involved.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Add Text Modules
 ----------------
@@ -58,10 +58,10 @@ or customer specific text like ticket title or customer name. Just type
 :kbd:`:` :kbd:`:` in the text module content editor to search for available
 variables.
 
-The video shows how to create a text module, including usage of variables and
-how it works for agents when dealing with a ticket.
+.. The video shows how to create a text module, including usage of variables and
+.. how it works for agents when dealing with a ticket.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Enable Checklist Feature
 ------------------------
@@ -70,10 +70,10 @@ Zammad's :doc:`checklist feature </manage/checklist>` allows you to keep track
 of certain tasks in a ticket. The feature allows you to create checklist
 templates and link to other tickets as checklist item too.
 
-See how to set it up, create a template and reference to another ticket in a
-checklist item in the video.
+.. See how to set it up, create a template and reference to another ticket in a
+.. checklist item in the video.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Add AI Agents
 -------------
@@ -86,12 +86,12 @@ configuration down:
 - Create an AI agent with the type of task you want to delegate
 - Call the AI agent in a trigger or scheduler job
 
-The video shows an example of how to set up an AI agent which rewrites the
-title of a ticket. A use case for this is when your customers often tend to use
-generic titles (like "problem") or you receive tickets from a web form which
-all have the same title.
+.. The video shows an example of how to set up an AI agent which rewrites the
+.. title of a ticket. A use case for this is when your customers often tend to use
+.. generic titles (like "problem") or you receive tickets from a web form which
+.. all have the same title.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE (created).
 
 Next Steps
 ----------

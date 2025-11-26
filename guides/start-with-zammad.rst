@@ -51,12 +51,13 @@ Basic Setup
 Follow the steps below for a simple setup of Zammad. You can add some
 information via getting started wizard or skip the steps and configure it
 afterwards.
+
 The guide assumes your Zammad is not yet configured. In case you see the
 getting started wizard, provide as much information as you desire or skip it
-for a later configuration. The video below shows an example with providing
-minimal information in the wizard.
+for later configuration.
 
-ADD VIDEO HERE (created).
+.. The video below shows an example with providing minimal information in the wizard.
+.. ADD VIDEO HERE.
 
 Company Details
 ^^^^^^^^^^^^^^^
@@ -78,8 +79,8 @@ At this point, just add your groups and give them a fitting name. Create A
 structure in case you need it by setting parent groups. It is totally fine to
 stay with one group too, of course.
 
-You can find a video about a simple group and role configuration in the next
-section.
+.. You can find a video about a simple group and role configuration in the next
+.. section.
 
 Create or Modify Roles
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -99,7 +100,7 @@ You can assign application and group permissions to a specific user as well. In
 case you expect more than one person with specific permissions, creating a role
 may be a good idea.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -115,10 +116,10 @@ After adding an email channel, create one or more signatures. You can use one
 signature for many groups or create different signatures, depending on your
 company's department structure.
 
-The following video shows a dummy email channel configuration as well as adding
-email adresses and signatures to different groups.
+.. The following video shows a dummy email channel configuration as well as adding
+.. email adresses and signatures to different groups.
 
-VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Configure Groups
 ^^^^^^^^^^^^^^^^
@@ -136,7 +137,7 @@ going to the first steps section and use the
 Make sure to assign the right role to each of the agents.
 This step sends out invitation emails to your agents.
 
-ADD VIDEO HERE (created).
+.. ADD VIDEO HERE.
 
 Further Steps
 -------------
