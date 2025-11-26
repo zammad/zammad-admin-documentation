@@ -18,7 +18,6 @@ extensions = [
       'sphinx_tabs.tabs',
       'sphinxcontrib.mermaid',
       'sphinx.ext.extlinks',
-      'sphinxcontrib.video',
    ]
 
 locale_dirs = ['locale/']
