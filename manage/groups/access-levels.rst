@@ -96,7 +96,8 @@ Examples
       :width: 80%
 
    Agents with all permissions except for “full” **cannot be assigned tickets**
-   and don't receive notifications. Otherwise, their privileges are identical to
+   and don't receive notifications (unless they are subscribed to or mentioned
+   in the ticket). Otherwise, their privileges are identical to
    agents with “full” access. Great for letting other people do the real work.
 
 “The Meddler”
