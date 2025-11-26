@@ -7,9 +7,10 @@ Follow the steps below and skip not applicable parts.
 First Steps
 -----------
 
-- Check your FQDN under *Settings > System > Fully Qualified Domain Name* in the
-  admin interface of Zammad. If it is not correct, change it now. Otherwise the
-  setup of the channel will fail.
+- Only relevant for self-hosted Zammad instances: Check your FQDN under
+  *Settings > System > Fully Qualified Domain Name* in the admin interface of
+  Zammad. If it is not correct, change it now. Otherwise the setup of the
+  channel will fail.
 - Go to *Channels > Microsoft 365 Graph Email* and click on
   **Connect Microsoft 365 App**. Copy the provided callback URL.
 
