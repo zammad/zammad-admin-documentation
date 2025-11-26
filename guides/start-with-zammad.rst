@@ -133,7 +133,9 @@ Create Agent Accounts
 
 Create a :doc:`user </manage/users/index>` for each of your support agents by
 going to the first steps section and use the
-**Invite agents/colleagues to help working on tickets** function.
+**Invite agents/colleagues to help working on tickets** function. You can find
+it by activating the **Dashboard** on the taskbar and switch to the
+**First Steps** tab.
 Make sure to assign the right role to each of the agents.
 This step sends out invitation emails to your agents.
 

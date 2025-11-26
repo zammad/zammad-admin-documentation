@@ -68,7 +68,9 @@ Enable Checklist Feature
 
 Zammad's :doc:`checklist feature </manage/checklist>` allows you to keep track
 of certain tasks in a ticket. The feature allows you to create checklist
-templates and link to other tickets as checklist item too.
+templates and link to other tickets as checklist item too. In case an agent
+wants to close a ticket which still has open checklist items, a dialog asks
+if the agents really wants to close it.
 
 .. See how to set it up, create a template and reference to another ticket in a
 .. checklist item in the video.
