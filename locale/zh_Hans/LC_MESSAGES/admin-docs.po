@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-04 07:41+0000\n"
+"POT-Creation-Date: 2025-11-24 09:43+0100\n"
 "PO-Revision-Date: 2023-08-14 12:18+0000\n"
 "Last-Translator: chen <chenchen@4chian.com>\n"
 "Language-Team: Chinese (Simplified) <https://translations.zammad.org/"
@@ -489,8 +489,8 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:34 ../channels/chat.rst:28
 #: ../channels/microsoft365-graph/accounts.rst:17
-#: ../manage/report-profiles.rst:32 ../misc/first-steps.rst:20
-#: ../system/core-workflows/learn-by-example.rst:36
+#: ../manage/report-profiles.rst:32 ../manage/webhook/add.rst:32
+#: ../misc/first-steps.rst:20 ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
 #: ../system/core-workflows/learn-by-example.rst:139
 #: ../system/core-workflows/learn-by-example.rst:199
@@ -509,10 +509,10 @@ msgstr ""
 #: ../ai/writing-assistant.rst:42 ../channels/form.rst:19
 #: ../manage/groups/settings.rst:16 ../manage/report-profiles.rst:38
 #: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
-#: ../manage/templates.rst:23 ../misc/variables/article.rst:1
-#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
-#: ../misc/variables/ticket.rst:1 ../system/objects.rst:133
-#: ../system/objects.rst:237
+#: ../manage/templates.rst:23 ../manage/webhook/add.rst:37
+#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
+#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
+#: ../system/objects.rst:133 ../system/objects.rst:237
 msgid "Name"
 msgstr ""
 
@@ -595,7 +595,7 @@ msgstr ""
 #: ../manage/roles/admin-permissions.rst:39
 #: ../manage/roles/agent-permissions.rst:31
 #: ../manage/roles/user-preferences-permissions.rst:37
-#: ../manage/scheduler.rst:158 ../manage/webhook/add.rst:116
+#: ../manage/scheduler.rst:158 ../manage/webhook/add.rst:114
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -620,7 +620,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:124 ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:58
 #: ../manage/roles/index.rst:128 ../manage/scheduler.rst:161
-#: ../manage/templates.rst:33 ../manage/webhook/add.rst:123
+#: ../manage/templates.rst:33 ../manage/webhook/add.rst:120
 #: ../system/objects.rst:171 ../system/objects.rst:251
 msgid "Active"
 msgstr ""
@@ -1067,7 +1067,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:136
 #: ../channels/email/accounts/account-setup.rst:235
 #: ../channels/email/accounts/email-notification.rst:34
-#: ../settings/security/password.rst:2
+#: ../manage/webhook/add.rst:66 ../settings/security/password.rst:2
 msgid "Password"
 msgstr "密码"
 
@@ -1246,7 +1246,7 @@ msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:249
-#: ../manage/webhook/add.rst:72 ../settings/security/third-party/saml.rst:149
+#: ../manage/webhook/add.rst:52 ../settings/security/third-party/saml.rst:149
 #: ../system/integrations/i-doit.rst:67
 msgid "SSL verification"
 msgstr ""
@@ -7125,8 +7125,8 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
-#: ../manage/slas/index.rst:78 ../manage/trigger.rst:32
-#: ../manage/webhook.rst:47 ../system/core-workflows.rst:23
+#: ../manage/slas/index.rst:78 ../manage/trigger.rst:24
+#: ../manage/webhook.rst:46 ../system/core-workflows.rst:23
 #: ../system/objects.rst:32
 msgid "Learn more"
 msgstr ""
@@ -7955,7 +7955,6 @@ msgid "Screenshot showing different possible actions for macros."
 msgstr ""
 
 #: ../manage/macros/how-do-they-work.rst:0 ../manage/templates.rst:28
-#: ../manage/trigger/how-do-they-work.rst:75
 msgid "Actions"
 msgstr ""
 
@@ -9769,52 +9768,39 @@ msgid "``report``"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:49
-msgid ":doc:`Reporting </manage/report-profiles>`"
+msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:0
-msgid "Make sure to never grant this permission to your customers!"
+msgid "Make sure to **never** grant this permission to your customers"
+msgstr ""
+
+#: ../manage/roles/agent-permissions.rst:0
+msgid "because it includes **all ticket and user information** across the"
+msgstr ""
+
+#: ../manage/roles/agent-permissions.rst:0
+msgid "entire system! Consider setting up a new role for your admins or"
 msgstr ""
 
 #: ../manage/roles/agent-permissions.rst:0
 msgid ""
-"Giving customers access to reporting constitutes a serious data breach, as"
+"supervisors and limit the access via :doc:`/manage/report-profiles` first."
 msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"it includes **all ticket and user information across the entire system**!"
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Please also note:"
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "1. the feature it enables is not for communicating with customers;"
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "2. the button appears at the *bottom* of the sidebar; and"
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "3. it is typically reserved for admins and supervisors."
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:57 ../settings/security/base.rst:95
+#: ../manage/roles/agent-permissions.rst:54 ../settings/security/base.rst:95
 msgid "``ticket.agent``"
 msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:58
-msgid ":user-docs:`(Agent) Overviews </basics/find-ticket/browse.html>`"
+#: ../manage/roles/agent-permissions.rst:55
+msgid "Access to overviews and tickets."
 msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:59
+#: ../manage/roles/agent-permissions.rst:56
 msgid "See notes below"
 msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:63
+#: ../manage/roles/agent-permissions.rst:60
 msgid "🤔 **What about this table under the permissions tree?**"
 msgstr ""
 
@@ -9822,24 +9808,11 @@ msgstr ""
 msgid "Group permission table in Edit Role dialog"
 msgstr ""
 
-#: ../manage/roles/agent-permissions.rst:70
+#: ../manage/roles/agent-permissions.rst:67
 msgid ""
 "Roles can also include :doc:`group permissions </manage/groups/access-"
 "levels>`! The group permission table is shown when there is **more than one "
 "active group** in the system and ``ticket.agent`` permission **is selected**."
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:78
-msgid ""
-"You can assign both agent and customer roles to the same user — but you "
-"**can't** assign both ``ticket.agent`` and ``ticket.customer`` *permissions* "
-"to the same *role!*"
-msgstr ""
-
-#: ../manage/roles/agent-permissions.rst:82
-msgid ""
-"To make it work, you need two separate roles: one with ``ticket.agent`` and "
-"the other with ``ticket.customer``."
 msgstr ""
 
 #: ../manage/roles/index.rst:2 ../manage/users/index.rst:153
@@ -10348,7 +10321,8 @@ msgid ""
 "security function in case you accidentally misconfigured the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:22 ../system/core-workflows/learn-by-example.rst:8
+#: ../manage/scheduler.rst:22 ../manage/webhook/add.rst:8
+#: ../system/core-workflows/learn-by-example.rst:8
 #, fuzzy
 #| msgid "Basic"
 msgid "Basics"
@@ -11725,37 +11699,26 @@ msgstr ""
 
 #: ../manage/trigger.rst:4
 msgid ""
-"Use triggers to set up all kinds of **if-this-then-that** automation "
-"workflows. For time-based or recurring automation workflows, "
-"try :doc:`schedulers </manage/scheduler>` instead."
+"Triggers are one way to automate Zammad. You can create *if this then that* "
+"rules by defining which tickets should get changed and which changes you "
+"want to apply to them."
 msgstr ""
 
 #: ../manage/trigger.rst:8
 msgid ""
-"The first thing to know about triggers is that **you're already using "
-"them**. From the moment you set up Zammad, it starts sending auto-replies to "
-"all incoming emails. Recognize this line?"
+"In case you are looking for a time-based automation, use :doc:`scheduler "
+"jobs </manage/scheduler>` instead. To execute pre-defined changes manually "
+"via UI (without a condition), use :doc:`/manage/macros` instead."
 msgstr ""
 
-#: ../manage/trigger.rst:None
-msgid "Screenshot of auto-reply notification in ticket view"
-msgstr ""
-
-#: ../manage/trigger.rst:17
+#: ../manage/trigger.rst:13
 msgid ""
-"It means that the ticket is from an incoming customer email and that the "
-"customer received this message in response:"
-msgstr ""
-
-#: ../manage/trigger.rst:None
-msgid "Screenshot of auto-reply in customer's inbox"
-msgstr ""
-
-#: ../manage/trigger.rst:25
-msgid ""
-"This auto-reply message is a **trigger**. You can disable it, modify it, or "
-"create new ones for all sorts of automation tasks on the Trigger page of the "
-"admin panel:"
+"Zammad ships one active trigger by default: an auto reply trigger which "
+"sends an email to the customer after a new ticket is created. This leads to "
+"an article in the ticket. This article only displays the title and the "
+"recipient as a text string to maintain clarity in the ticket view. You can "
+"disable it, modify it or create new ones for all sorts of automation tasks "
+"in the **Triggers** section in the admin settings:"
 msgstr ""
 
 #: ../manage/trigger.rst:None
@@ -11767,46 +11730,47 @@ msgid "How Do Triggers Work"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:4
-msgid "Triggers consist of three parts:"
+msgid "Triggers consist mainly of three parts:"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:6
-msgid "**Activators:** define \"when the question is asked?\""
+msgid "**Activator:** defines when and how the trigger has to be evaluated."
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:7
-msgid "**Conditions:** answer the question \"when should this trigger fire?\""
+msgid ""
+"**Condition:** defines the tickets for which an action has to be executed "
+"based on attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:8
-msgid "**Actions:** answer the question \"what should happen when it does?\""
+#: ../manage/trigger/how-do-they-work.rst:9
+msgid ""
+"**Actions:** define what to change in a ticket which matches the condition."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:10
+#: ../manage/trigger/how-do-they-work.rst:11
 msgid ""
 "Triggers are evaluated in alphabetical order by **name.** In some "
 "situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
 "limitations` for more information."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:14
-msgid "**🤓 Emails can adjust some behavior on their own**"
-msgstr ""
-
 #: ../manage/trigger/how-do-they-work.rst:16
-#, fuzzy
-msgid "See :doc:`/channels/email/email-headers` for more information."
-msgstr "使用 :doc:`过滤器 </channels/email/filters>` 来进行更精细的收件排序。"
-
-#: ../manage/trigger/how-do-they-work.rst:19
-msgid "Activators"
+msgid "Activator"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:21
-msgid "Triggers support two types of activators:"
+#: ../manage/trigger/how-do-they-work.rst:18
+msgid ""
+"Choose between an action- or time-based activator in the **Activated by** "
+"section."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:24
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of activator section in trigger dialog."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:27
+#: ../manage/trigger/how-do-they-work.rst:81
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -11818,26 +11782,26 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:26
+#: ../manage/trigger/how-do-they-work.rst:29
 msgid ""
 "An action based trigger always requires a ticket update to run. This can be "
 "an update by an agent or even internal system updates like updated SLA "
 "times. See the explanation below for more details."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:36
+#: ../manage/trigger/how-do-they-work.rst:39
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:28
 msgid "Selective"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:31
+#: ../manage/trigger/how-do-they-work.rst:34
 msgid ""
-"Checks if any attribute from the condition was updated. If yes, the trigger "
-"runs. If the attributes from the condition weren't touched, the trigger "
-"doesn't run."
+"Checks if any attribute from the condition was updated OR an article was "
+"added and the condition matches. If the attributes of the condition weren't "
+"touched and no new article was added, the trigger doesn't run."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:35
+#: ../manage/trigger/how-do-they-work.rst:38
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was changed to **1 low**."
@@ -11848,153 +11812,172 @@ msgstr ""
 msgid "Always"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:39
+#: ../manage/trigger/how-do-they-work.rst:42
 msgid ""
 "Checks if the current state of the ticket matches the condition. This means: "
-"the trigger always runs when the ticket is updated, no matter what was "
-"changed. This can lead to executing such a trigger more often."
+"the trigger always runs when the ticket is updated and the condition "
+"matches, no matter what was changed. This can lead to more often executions "
+"of such a trigger."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:43
+#: ../manage/trigger/how-do-they-work.rst:47
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was moved to another group while priority was set **1 low**."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:46
+#: ../manage/trigger/how-do-they-work.rst:50
 msgid ""
 "If in doubt, use **Selective**. The **Always** action activator can lead to "
 "unexpected behavior, e.g. the trigger runs after internal system changes of "
 "the ticket, which aren't visible in the ticket history."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:51
+#: ../manage/trigger/how-do-they-work.rst:55
 msgid "Time Event"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:53
-msgid ""
-"The execution is triggered at a specific time when a certain event is "
-"reached, e.g. ticket pending time."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:56
-msgid ""
-"This activator simply checks if **conditions** match. This is the same "
-"behavior as action-based activator's \"always\" mode."
+#: ../manage/trigger/how-do-they-work.rst:57
+msgid "The execution is triggered when one of the following events occur:"
 msgstr ""
 
 #: ../manage/trigger/how-do-they-work.rst:59
-msgid "When creating a trigger, choose activator here:"
+msgid "Time of a reminder is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:64
-#: ../system/core-workflows/how-do-they-work.rst:28
-msgid "Conditions"
+#: ../manage/trigger/how-do-they-work.rst:60
+msgid "Escalation is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:66
-msgid "When creating a trigger, define your conditions here:"
+#: ../manage/trigger/how-do-they-work.rst:61
+msgid "Escalation warning is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:70
-msgid "Trigger conditions must match as configured for the trigger to fire."
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:77
-msgid "When creating a trigger, define your changes here:"
-msgstr ""
-
-#: ../manage/trigger/how-do-they-work.rst:81
+#: ../manage/trigger/how-do-they-work.rst:63
 msgid ""
-"Certain actions (such as *email*, *SMS* and *notes*) support :doc:`/misc/"
-"variables`, which can be used to build highly-customized message templates."
+"When such a time event is reached, the trigger runs if the condition "
+"matches. This is the same behavior as action-based activator's \"always\" "
+"mode."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:85
+#: ../manage/trigger/how-do-they-work.rst:67
+#, fuzzy
+#| msgid "Configuration of the Chat widget"
+msgid "Condition"
+msgstr "聊天小部件的配置"
+
+#: ../manage/trigger/how-do-they-work.rst:69
+msgid ""
+"Use one or more attributes and values in a condition, which the tickets have "
+"to match you want to apply changes to. Create your condition in the "
+"**Conditions for affected objects** section:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of condition section in trigger dialog."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:83
+msgid ""
+"Define which changes to apply for tickets which match your condition in the "
+"**Execute changes on objects** section:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+msgid "Screenshot of action section in trigger dialog."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:91
+msgid ""
+"Certain actions (such as email, SMS and notes) support :doc:`/misc/"
+"variables` (see screenshot above), which can be used to build highly-"
+"customized message templates."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:95
 msgid ""
 "A trigger can do the following things once its conditions have been met:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:96
+#: ../manage/trigger/how-do-they-work.rst:106
 msgid "Modify the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:88
+#: ../manage/trigger/how-do-they-work.rst:98
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
 "subscribe and unsubscribe specific/all users, etc."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:91
+#: ../manage/trigger/how-do-they-work.rst:101
 msgid ""
 "Date & time attributes (like **Pending till**) can be specified in "
 "*absolute* or *relative* terms."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:94
+#: ../manage/trigger/how-do-they-work.rst:104
 msgid ""
 "You can also combine static text with placeholders for text fields. Remember "
 "that the placeholders' values have to be known during trigger runtime. Learn "
 "more about :doc:`/misc/variables`."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:107
+#: ../manage/trigger/how-do-they-work.rst:117
 msgid "Send an email or SMS"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:99
+#: ../manage/trigger/how-do-they-work.rst:109
 msgid ""
 "Either to the customer, the agent who owns the ticket, or every agent in the "
 "system."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:102
+#: ../manage/trigger/how-do-they-work.rst:112
 msgid ""
 "Sending emails allows you to include the attachments of the triggering "
 "article if required."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:105
+#: ../manage/trigger/how-do-they-work.rst:115
 msgid ""
 "In order to send emails with triggers, you need to configure an email "
 "address for the group, the trigger is working in. If you don't, Zammad will "
 "skip the trigger completely."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:110
+#: ../manage/trigger/how-do-they-work.rst:121
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:110
+#: ../manage/trigger/how-do-they-work.rst:120
 msgid ""
 "Connect Zammad to another web service or application to give it live updates "
 "about new tickets."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:114
+#: ../manage/trigger/how-do-they-work.rst:125
 msgid "Add internal or public notes to the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:113
+#: ../manage/trigger/how-do-they-work.rst:124
 msgid ""
 "This allows you to help your agents with specific information if needed. "
 "(e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid ":doc:`Run an AI agent </ai/ai-agents>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger/how-do-they-work.rst:128
 msgid "Trigger an AI agent to run using triggers."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:122
+#: ../manage/trigger/how-do-they-work.rst:133
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:124
+#: ../manage/trigger/how-do-they-work.rst:135
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
@@ -12005,13 +11988,13 @@ msgstr ""
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:131
+#: ../manage/trigger/how-do-they-work.rst:142
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:134
+#: ../manage/trigger/how-do-they-work.rst:145
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -12019,7 +12002,7 @@ msgid ""
 "the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:136
+#: ../manage/trigger/how-do-they-work.rst:147
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
@@ -12075,8 +12058,8 @@ msgstr ""
 msgid ""
 "Triggers are one way of automated actions. In addition, there are "
 "also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
-"channels/email/filters>` based automation. Make sure to have a look at "
-"those, too. They can be more suitable, depending on your use case."
+"channels/email/filters>` based automation. Make sure to have a look at those "
+"too. They can be more suitable, depending on your use case."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:10
@@ -12085,22 +12068,16 @@ msgstr ""
 
 #: ../manage/trigger/limitations.rst:12
 msgid ""
-"Triggers are executed when a ticket is updated via clicking the \"Update\" "
-"button. Changing a value without updating the ticket (e.g. setting a tag) "
-"will not execute the trigger."
+"Triggers are executed when a ticket is updated by clicking the \"Update\" "
+"button. Changing an element which doesn't require an explicit ticket update "
+"(e.g. setting a tag) does not necessarily lead to a trigger execution."
 msgstr ""
 
 #: ../manage/trigger/limitations.rst:15
 msgid ""
-"Triggers are always affecting the last article of a ticket. This means you "
-"can't run triggers based on older articles."
-msgstr ""
-
-#: ../manage/trigger/limitations.rst:17
-msgid ""
-"Triggers always handle the current ticket attributes and the article (if "
-"applicable) that causes the trigger to fire. A related object context might "
-"not be available for performing changes."
+"If a trigger runs due to an an added article, the context for the trigger is "
+"always this last article. Triggers aren't running based on older ticket "
+"states or articles."
 msgstr ""
 
 #: ../manage/trigger/system-notifications.rst:2
@@ -12677,10 +12654,11 @@ msgstr ""
 msgid ""
 "Webhooks are a way to integrate Zammad with other web services or "
 "applications, allowing them to subscribe to live updates about tickets "
-"instead of having to poll the Zammad server every *n* minutes."
+"instead of having to poll the Zammad server every *n* minutes. You can find "
+"the webhook configuration in Zammad's settings under *Manage > Webhooks*."
 msgstr ""
 
-#: ../manage/webhook.rst:10
+#: ../manage/webhook.rst:11
 msgid ""
 "Webhooks may not arrive immediately. They are sent out with the same "
 "priority and order as email triggers. If webhook dispatch fails (e.g. "
@@ -12688,13 +12666,13 @@ msgid ""
 "times."
 msgstr ""
 
-#: ../manage/webhook.rst:14
+#: ../manage/webhook.rst:15
 msgid ""
 "Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/"
 "scheduler` jobs."
 msgstr ""
 
-#: ../manage/webhook.rst:16
+#: ../manage/webhook.rst:17
 msgid ""
 "The usage of variables is limited compared to other places. Some features "
 "are not available in webhooks (e.g. the ``.value`` extension, translation "
@@ -12702,63 +12680,56 @@ msgid ""
 "(``#{dt(object.time_attribute, [...]``) functions)."
 msgstr ""
 
-#: ../manage/webhook.rst:22
+#: ../manage/webhook.rst:23
 msgid "How do Webhooks Work"
 msgstr ""
 
-#: ../manage/webhook.rst:24
+#: ../manage/webhook.rst:25
 msgid ""
-"Under the hood, Zammad sends a POST request to a third-party URL (\"API "
-"endpoint\") you specify in the New Webhook dialog. The application server "
+"Under the hood, Zammad sends a request to a third-party URL (\"API "
+"endpoint\") you specify in the webhook configuration. The application server "
 "behind this URL/endpoint must be configured to receive messages from Zammad "
 "and handle the provided payload accordingly."
 msgstr ""
 
-#: ../manage/webhook.rst:29
+#: ../manage/webhook.rst:30
 msgid ""
-"Webhooks can be created both from scratch and from pre-defined templates."
-msgstr ""
-
-#: ../manage/webhook.rst:31
-msgid ""
+"Webhooks can be created both from scratch and from pre-defined templates. "
 "When created from scratch, regular webhook payloads by default contain the "
 "following JSON data about new/updated tickets:"
 msgstr ""
 
 #: ../manage/webhook.rst:34
-msgid "ticket attributes/metadata"
-msgstr ""
+#, fuzzy
+msgid "Ticket attributes/metadata"
+msgstr "优先级"
 
 #: ../manage/webhook.rst:35
-msgid "associated article(s)"
+msgid "Associated article(s)"
 msgstr ""
 
 #: ../manage/webhook.rst:36
-msgid "associated users (e.g. article senders, owners, etc.)"
+msgid "Associated users (e.g. article senders, owners, etc.)"
 msgstr ""
 
 #: ../manage/webhook.rst:37
-msgid "associated user roles"
+msgid "Associated user roles"
 msgstr ""
 
 #: ../manage/webhook.rst:38
-msgid "associated user organizations (if applicable)"
+msgid "Associated user organizations (if applicable)"
 msgstr ""
 
 #: ../manage/webhook.rst:39
-msgid "associated groups"
+msgid "Associated groups"
 msgstr ""
 
 #: ../manage/webhook.rst:41
 msgid ""
 "On the other hand, pre-defined webhooks are designed to work with specific "
-"services, containing special payloads that these services understand."
-msgstr ""
-
-#: ../manage/webhook.rst:44
-msgid ""
-"In both cases, however, it is possible to further customize the webhook "
-"payload to your own needs."
+"services, containing special payloads that these services understand. In "
+"both cases, however, it is possible to further customize the webhook payload "
+"to your own needs."
 msgstr ""
 
 #: ../manage/webhook/add.rst:2
@@ -12771,180 +12742,177 @@ msgid ""
 "or schedulers."
 msgstr ""
 
-#: ../manage/webhook/add.rst:7
-msgid "**Default Zammad webhook payloads are specific**"
-msgstr ""
-
-#: ../manage/webhook/add.rst:9
+#: ../manage/webhook/add.rst:12
 msgid ""
 "Keep in mind that the remote site has to be able to understand the default "
-"webhook payload, Zammad is sending. Simply throwing the default payload at a "
-"webhook endpoint may not have the desired result!"
+"webhook payload, Zammad is sending. Find more information about the "
+"customization of a payload in the next section."
 msgstr ""
 
-#: ../manage/webhook/add.rst:13
-msgid "See `Custom Payload`_ for a way to customize webhook payloads."
-msgstr ""
-
-#: ../manage/webhook/add.rst:15
-msgid "To add a new regular webhook, use the big green **New Webhook** button."
-msgstr ""
-
-#: ../manage/webhook/add.rst:None
-msgid "Modal showing webhook configuration"
+#: ../manage/webhook/add.rst:16
+msgid ""
+"To add a new regular webhook, click the **New Webhook** button. For a pre-"
+"defined webhook, click on the arrow button to the right and choose **Pre-"
+"defined Webhook** from the dropdown menu. In case you select a pre-defined "
+"webhook, you get asked to choose from one of the available pre-defined ones:"
 msgstr ""
 
 #: ../manage/webhook/add.rst:22
+msgid "Mattermost"
+msgstr ""
+
+#: ../manage/webhook/add.rst:23
+#, fuzzy
+#| msgid "**Microsoft 365 users:**"
+msgid "Microsoft Teams"
+msgstr "**Microsoft 365用户：**"
+
+#: ../manage/webhook/add.rst:24
+msgid "Rocket Chat"
+msgstr ""
+
+#: ../manage/webhook/add.rst:25
+msgid "Slack"
+msgstr ""
+
+#: ../manage/webhook/add.rst:27
 msgid ""
-"For a pre-defined webhook, click on the arrow button to the right and choose "
-"**Pre-defined Webhook** from the dropdown menu."
+"After you select one and click on **Next**, Zammad shows the webhook "
+"configuration dialog. This is what you see directly when creating a webhook "
+"from scratch. Read on for more information about the configuration of a "
+"webhook."
 msgstr ""
 
-#: ../manage/webhook/add.rst:None
-#: ../manage/webhook/examples/mattermost-notifications.rst:None
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
-#: ../manage/webhook/examples/slack-notifications.rst:None
-msgid "New Pre-defined Webhook button"
-msgstr ""
-
-#: ../manage/webhook/add.rst:30
-msgid "Next, select the pre-defined webhook you want and click **Next**."
-msgstr ""
-
-#: ../manage/webhook/add.rst:None
-msgid "New pre-defined webhook modal"
-msgstr ""
-
-#: ../manage/webhook/add.rst:37
-msgid "**⚠️ Adding a new webhook is not enough**"
-msgstr ""
-
-#: ../manage/webhook/add.rst:39
-msgid ""
-"You must, in addition, add a :doc:`Trigger </manage/trigger>` "
-"or :doc:`Scheduler </manage/scheduler>` that references the Webhook!"
-msgstr ""
-
-#: ../manage/webhook/add.rst:42
+#: ../manage/webhook/add.rst:34
 msgid "You can configure the following information for webhooks:"
 msgstr ""
 
-#: ../manage/webhook/add.rst:45
-msgid "Name (mandatory)"
-msgstr ""
-
-#: ../manage/webhook/add.rst:45
+#: ../manage/webhook/add.rst:37
 msgid "This name will be displayed within trigger and scheduler selections."
 msgstr ""
 
-#: ../manage/webhook/add.rst:53
-msgid "Endpoint (mandatory)"
+#: ../manage/webhook/add.rst:42 ../system/integrations/cti/placetel.rst:44
+#: ../system/integrations/i-doit.rst:46
+msgid "Endpoint"
 msgstr ""
 
-#: ../manage/webhook/add.rst:48
-msgid "Webhook endpoint Zammad sends its payload to."
-msgstr ""
-
-#: ../manage/webhook/add.rst:50
+#: ../manage/webhook/add.rst:40
 msgid ""
-"Zammad ignores basic authentication parameters. See below how to "
-"configure :ref:`username <HTTP Basic Authentication Username>` "
-"and :ref:`password <HTTP Basic Authentication Password>` via separate fields."
+"Webhook endpoint Zammad sends its payload to. Please note that Zammad "
+"ignores basic authentication parameters here. See below how to configure "
+"username and password via separate fields."
 msgstr ""
 
-#: ../manage/webhook/add.rst:66
-msgid "HMAC SHA1 Signature Token"
+#: ../manage/webhook/add.rst:46
+msgid "Request method"
 msgstr ""
 
-#: ../manage/webhook/add.rst:56
+#: ../manage/webhook/add.rst:45
 msgid ""
-"If set, all sent webhooks contain a `x-hub-signature` header allowing the "
-"remote site to verify the request."
+"Choose between ``DELETE``, ``PATCH``, ``POST`` and ``PUT``, depending on "
+"your use case."
 msgstr ""
 
-#: ../manage/webhook/add.rst:59
-msgid "**🔐 Security note**"
-msgstr ""
-
-#: ../manage/webhook/add.rst:61
-msgid ""
-"This *does not* encrypt the payload. Use HTTPS connections to secure the "
-"communication. It contains a HMAC signature of the body of the webhook "
-"request."
-msgstr ""
-
-#: ../manage/webhook/add.rst:65
-msgid ""
-"`Learn more about HUB-Signatures <https://www.w3.org/TR/websub/"
-"#authenticated-content-distribution>`_"
-msgstr ""
-
-#: ../manage/webhook/add.rst:69
+#: ../manage/webhook/add.rst:49
 msgid ""
 "Defaults to ``yes`` - if you're using unsecure self signed certificates, set "
 "this option to ``no``."
 msgstr ""
 
-#: ../manage/webhook/add.rst:75
-msgid "_`HTTP Basic Authentication Username`"
+#: ../manage/webhook/add.rst:66 ../system/integrations/elasticsearch.rst:64
+msgid "Authentication"
 msgstr ""
 
-#: ../manage/webhook/add.rst:75 ../manage/webhook/add.rst:78
+#: ../manage/webhook/add.rst:55
 msgid ""
-"Set this if the endpoint requires HTTP basic authentication credentials."
+"Choose between **HTTP Basic Authentication**, **Bearer Token** or no "
+"authentication, depending on what the target service supports."
 msgstr ""
 
-#: ../manage/webhook/add.rst:78
-msgid "_`HTTP Basic Authentication Password`"
+#: ../manage/webhook/add.rst:59
+msgid "Bearer Token"
 msgstr ""
 
-#: ../manage/webhook/add.rst:92
+#: ../manage/webhook/add.rst:59
+msgid "In case you selected this authentication method, add your token here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:62
+#, fuzzy
+#| msgid "User"
+msgid "Username"
+msgstr "用户"
+
+#: ../manage/webhook/add.rst:62
+msgid "In case of **HTTP Basic Authentication**, provide your username here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:65
+msgid ""
+"In case of **HTTP Basic Authentication**, provide the password of the user "
+"here."
+msgstr ""
+
+#: ../manage/webhook/add.rst:77
+msgid "HMAC SHA1 Signature Token"
+msgstr ""
+
+#: ../manage/webhook/add.rst:69
+msgid ""
+"If set, all sent webhooks contain a `x-hub-signature` header allowing the "
+"remote site to verify the request."
+msgstr ""
+
+#: ../manage/webhook/add.rst:74
+msgid ""
+"This **does not** encrypt the payload. Use HTTPS connections to secure the "
+"communication. It contains a HMAC signature of the body of the webhook "
+"request. Learn more about HUB-Signatures `here <https://www.w3.org/TR/websub/"
+"#authenticated-content-distribution>`_."
+msgstr ""
+
+#: ../manage/webhook/add.rst:90
 msgid "Pre-defined Webhook"
 msgstr ""
 
-#: ../manage/webhook/add.rst:81
-msgid "This field is only available for *pre-defined webhooks*!"
-msgstr ""
-
-#: ../manage/webhook/add.rst:83
+#: ../manage/webhook/add.rst:80
 msgid ""
-"This field is always disabled in the UI and serves only as a reference to a "
-"pre-defined webhook. It is not possible to change it for existing webhooks."
+"This field is only displayed for *pre-defined webhooks*! It only serves as a "
+"reference to a pre-defined webhook. It is not possible to change it for "
+"existing webhooks. Depending on the pre-defined webhook type, additional "
+"fields may be rendered below this one. They can be used for additional "
+"customization of the webhook behavior."
 msgstr ""
 
 #: ../manage/webhook/add.rst:87
-msgid ""
-"Depending on the pre-defined webhook type, additional fields may be rendered "
-"below this one. They can be used for additional customization of the webhook "
-"behavior."
+msgid "Example for Mattermost:"
 msgstr ""
 
 #: ../manage/webhook/add.rst:0
 msgid "Additional pre-defined webhook fields"
 msgstr ""
 
-#: ../manage/webhook/add.rst:112
-msgid "_`Custom Payload`"
+#: ../manage/webhook/add.rst:110
+msgid "Custom Payload"
 msgstr ""
 
-#: ../manage/webhook/add.rst:95
+#: ../manage/webhook/add.rst:93
 msgid ""
 "Defaults to off - webhook will always send :ref:`webhook-payload-default` to "
 "the target endpoint."
 msgstr ""
 
-#: ../manage/webhook/add.rst:98
+#: ../manage/webhook/add.rst:96
 msgid ""
 "When switched on, a code editor will be shown below, where you can configure "
-"custom payload for your webhook in JSON format. To insert supported :doc:`/"
-"misc/variables` use ``::`` or ``#{`` shortcuts for autocomplete."
+"a custom payload for your webhook in JSON format. To insert supported :doc:`/"
+"misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{`` for autocomplete."
 msgstr ""
 
-#: ../manage/webhook/add.rst:103
+#: ../manage/webhook/add.rst:101
 msgid ""
-"Custom payload must be valid JSON syntax! Code editor will inform you via "
-"automated hints if there is an issue with the code. Also, it will not be "
+"The custom payload must have a valid JSON syntax! The code editor will "
+"highlight if there is an issue with the syntax. Also, it will not be "
 "possible to save an invalid JSON structure."
 msgstr ""
 
@@ -12952,101 +12920,166 @@ msgstr ""
 msgid "Custom payload code editor"
 msgstr ""
 
-#: ../manage/webhook/add.rst:111
+#: ../manage/webhook/add.rst:109
 msgid ""
 "Pre-defined webhooks will always provide an initial custom payload, specific "
 "for the associated service."
 msgstr ""
 
-#: ../manage/webhook/add.rst:115
+#: ../manage/webhook/add.rst:113
 msgid ""
 "If required you can leave useful information for other Zammad admins to "
 "understand the webhook in question better."
 msgstr ""
 
-#: ../manage/webhook/add.rst:119
+#: ../manage/webhook/add.rst:117
 msgid ""
-"If set to ``inactive`` you can no longer select the webhook within trigger "
-"or scheduler actions."
+"If set to ``inactive``, you can no longer select the webhook in the trigger "
+"or scheduler configuration. Inactive webhooks will not be fired. If triggers "
+"or schedulers have other actions configured as well, they will still be "
+"executed."
 msgstr ""
 
 #: ../manage/webhook/add.rst:122
 msgid ""
-"Inactive webhooks used by triggers or schedulers will not be fired. If "
-"triggers or schedulers have other actions configured as well they will still "
-"be executed."
+"After you set up your webhook, make sure to invoke it via trigger or "
+"scheduler. In case something doesn't work, have a look at "
+"the :doc:`troubleshooting <log>` section."
 msgstr ""
 
 #: ../manage/webhook/examples.rst:2
 msgid "Webhook Examples"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:19
-msgid ":doc:`examples/mattermost-notifications`"
-msgstr ""
-
 #: ../manage/webhook/examples.rst:15
-msgid "Use a Mattermost Channel to receive your Zammad Notifications."
+msgid ""
+"Find links to configuration examples below. They are split into individual "
+"pages for reasons of clearness. Make sure to invoke the webhook via trigger "
+"or scheduler after creation, see :doc:`trigger example <examples/generic-"
+"notifications-trigger>`."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/mattermost-notifications.rst:100
-#: ../manage/webhook/examples/mattermost-notifications.rst:None
-msgid "Sample Mattermost Channel Notification"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:26
-msgid ":doc:`examples/microsoft-teams-notifications`"
+#: ../manage/webhook/examples.rst:20
+msgid ""
+":doc:`examples/mattermost-notifications`: Use a Mattermost channel to "
+"receive Zammad notifications."
 msgstr ""
 
 #: ../manage/webhook/examples.rst:22
-msgid "Use a Microsoft Teams Channel to receive your Zammad Notifications."
-msgstr ""
-
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:114
-#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
-msgid "Sample Teams Channel Notification"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:33
-msgid ":doc:`examples/rocket-chat-notifications`"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:29
-msgid "Use a Rocket Chat Channel to receive your Zammad Notifications."
-msgstr ""
-
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:96
-#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
-msgid "Sample Rocket Chat Channel Notification"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:40
-msgid ":doc:`examples/slack-notifications`"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:36
-msgid "Use a Slack Channel to receive your Zammad Notifications."
-msgstr ""
-
-#: ../manage/webhook/examples.rst:0
-#: ../manage/webhook/examples/slack-notifications.rst:108
-#: ../manage/webhook/examples/slack-notifications.rst:None
-msgid "Sample Slack Channel Notification"
-msgstr ""
-
-#: ../manage/webhook/examples.rst:43
-#, fuzzy
-#| msgid ":doc:`accounts/email-notification`"
-msgid ":doc:`examples/ntfy-notifications`"
-msgstr ":doc:`accounts/email-notification`"
-
-#: ../manage/webhook/examples.rst:43
 msgid ""
-"Use the ntfy service to receive push notification from Zammad on different "
-"devices like your smartphone."
+":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel "
+"to receive Zammad notifications."
+msgstr ""
+
+#: ../manage/webhook/examples.rst:24
+msgid ""
+":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to "
+"receive Zammad notifications."
+msgstr ""
+
+#: ../manage/webhook/examples.rst:26
+msgid ""
+":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad "
+"notifications."
+msgstr ""
+
+#: ../manage/webhook/examples.rst:28
+msgid ""
+":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push "
+"notification from Zammad on different devices like your smartphone."
+msgstr ""
+
+#: ../manage/webhook/examples.rst:30
+msgid ""
+":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to "
+"new tickets."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:2
+msgid "Add Checklist to Tickets"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:4
+msgid ""
+"Follow the steps below to add a checklist from a template to all tickets "
+"after they get created."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:8
+#, fuzzy
+msgid "Create a Token"
+msgstr "宏"
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:10
+msgid ""
+"Create a personal access token in the account you want to use to create the "
+"checklists in the tickets. Make sure the account has appropriate "
+"permissions. To create the token, go to the :user-docs:`profile settings "
+"(user docs) </extras/profile-and-settings.html>` by clicking on the avatar "
+"image (either image or initials) on the left bottom corner and select "
+"**Token Access**. Make sure that the token has ``ticket.agent`` permission "
+"and the user is able to change tickets in the groups you want to add the "
+"checklist to tickets."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:20
+msgid "Add Webhook"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:22
+msgid "Create a new webhook with the following configuration:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:24
+msgid ""
+"Endpoint: ``https://{your.domain.tld}/api/v1/checklists`` (replace the value "
+"in {} with the domain of your Zammad)"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:26
+msgid "Request method: ``POST``"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:27
+msgid "Authentication: **Bearer Token**"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:28
+msgid "Bearer token: paste the token you created before"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:29
+msgid ""
+"Custom payload: activate it and add the following snippet. Make sure to "
+"replace the value ``1`` for ``template_id`` with the ID of your checklist "
+"template."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:41
+#, fuzzy
+msgid "Create Trigger"
+msgstr "宏"
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:43
+msgid ""
+"Configure a trigger which invokes the webhook after ticket creation. In case "
+"you additionally want to narrow down affected tickets, just enhance the "
+"condition (e.g. by checking the group of a ticket or limit it for specific "
+"ticket titles). Have a look at the :doc:`example configuration <generic-"
+"notifications-trigger>` of a trigger for sending notifications. For this "
+"scenario, the condition could look like this:"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:50
+msgid "Activated by: Action"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:51
+msgid "Action execution: Selective"
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
+msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
@@ -13293,6 +13326,13 @@ msgid ""
 "corner. Choose **Pre-defined Webhook** from the dropdown menu."
 msgstr ""
 
+#: ../manage/webhook/examples/mattermost-notifications.rst:None
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
+#: ../manage/webhook/examples/slack-notifications.rst:None
+msgid "New Pre-defined Webhook button"
+msgstr ""
+
 #: ../manage/webhook/examples/mattermost-notifications.rst:63
 msgid ""
 "In the subsequent modal dialog, select **Mattermost Notifications** as the "
@@ -13361,6 +13401,11 @@ msgstr ""
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:93
 #: ../manage/webhook/examples/slack-notifications.rst:105
 msgid "Once the trigger is in place, your webhook is ready for use!"
+msgstr ""
+
+#: ../manage/webhook/examples/mattermost-notifications.rst:100
+#: ../manage/webhook/examples/mattermost-notifications.rst:None
+msgid "Sample Mattermost Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:102
@@ -13576,6 +13621,11 @@ msgid ""
 "As a last step, you need to create a :doc:`Trigger <generic-notifications-"
 "trigger>` for posting a notification to the Microsoft Teams channel under "
 "certain conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:114
+#: ../manage/webhook/examples/microsoft-teams-notifications.rst:None
+msgid "Sample Teams Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:116
@@ -13898,6 +13948,11 @@ msgid ""
 "certain conditions."
 msgstr ""
 
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:96
+#: ../manage/webhook/examples/rocket-chat-notifications.rst:None
+msgid "Sample Rocket Chat Channel Notification"
+msgstr ""
+
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:98
 msgid ""
 "From now on, whenever a ticket is created or updated in your Zammad system, "
@@ -14046,6 +14101,11 @@ msgid ""
 "As a last step, you need to create a :doc:`Trigger <generic-notifications-"
 "trigger>` for posting a notification to the Slack channel under certain "
 "conditions."
+msgstr ""
+
+#: ../manage/webhook/examples/slack-notifications.rst:108
+#: ../manage/webhook/examples/slack-notifications.rst:None
+msgid "Sample Slack Channel Notification"
 msgstr ""
 
 #: ../manage/webhook/examples/slack-notifications.rst:110
@@ -21534,6 +21594,10 @@ msgid ""
 "masks."
 msgstr ""
 
+#: ../system/core-workflows/how-do-they-work.rst:28
+msgid "Conditions"
+msgstr ""
+
 #: ../system/core-workflows/how-do-they-work.rst:30
 msgid ""
 "Zammad differentiates between selected and saved conditions. These can be "
@@ -23663,11 +23727,6 @@ msgid ""
 "configuration with Placetel <provider-configurations/placetel>`."
 msgstr ""
 
-#: ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
-msgid "Endpoint"
-msgstr ""
-
 #: ../system/integrations/cti/placetel.rst:43
 msgid ""
 "This endpoint will be required for the Zammad integration within the "
@@ -24151,10 +24210,6 @@ msgstr ""
 msgid ""
 "The major version of the search index being used. This is required by some "
 "Reporting tools like Grafana."
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:64
-msgid "Authentication"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:64
@@ -28209,6 +28264,16 @@ msgstr ""
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "显示当前在您的Zammad实例上使用的版本。"
+
+#, fuzzy
+#~| msgid ":doc:`accounts/email-notification`"
+#~ msgid ":doc:`examples/ntfy-notifications`"
+#~ msgstr ":doc:`accounts/email-notification`"
+
+#, fuzzy
+#~ msgid "See :doc:`/channels/email/email-headers` for more information."
+#~ msgstr ""
+#~ "使用 :doc:`过滤器 </channels/email/filters>` 来进行更精细的收件排序。"
 
 #, fuzzy
 #~ msgid "The edit dialog looks like this:"
