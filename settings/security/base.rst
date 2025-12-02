@@ -33,7 +33,7 @@ Lost Password
    Activates the `lost password` function on the login page.
    If set to ``no`` only administrators may change the user's password - users
    may update their own password if they're still logged in and they have the
-   required :doc:`permission </manage/roles/user-preferences-permissions>`.
+   required :doc:`permission </manage/roles/permissions>`.
 
    Default setting: ``yes``
 

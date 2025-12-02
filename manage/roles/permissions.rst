@@ -1,41 +1,66 @@
-Admin Permissions
-=================
+Permissions
+===========
 
-.. note::
+Find a short description about the permissions in Zammad below. Be aware that
+some of the features require activation and configuration before they are
+usable. Even though the permissions are grouped by commoon use cases, you can
+mix them as you like. Just make sure to maintain an overview of the permissions.
 
-   📁 **Permissions are namespaced**,
-   which is sort of like having files inside of folders.
+Agent
+-----
 
-   The permissions listed on this page all belong to the ``admin`` namespace.
-   You can select them individually,
-   or you can just select ``admin`` to enable the whole bunch.
+.. _role-settings-group-access:
 
-.. figure:: /images/manage/roles/permissions-admin.png
-   :alt: Admin permissions in the New Role dialog
-   :align: center
-   :width: 80%
+.. list-table::
+   :widths: 20 30 50
+   :header-rows: 1
 
-   Admin permissions are shown at the top of the New Role dialog...
+   * - Permission
+     - Access To
+     - Note
+   * - ``chat.agent``
+     - :user-docs:`Customer Chat </extras/chat.html>`
+     - Requires configuration of :doc:`Chat Channel </channels/chat>`
+   * - ``cti.agent``
+     - :user-docs:`Caller Log </extras/caller-log.html>`
+     - Configuration of a CTI integration is required
+   * - ``knowledge_base.editor``
+     - Create/edit privileges
+     - Editor permissions always include reader permissions.
+   * - ``knowledge_base.reader``
+     - Read privileges for internal content
+     - | Public articles are always visible.
+       | See :user-docs:`here </extras/knowledge-base.html#granular-category-permissions>`
+         how to set up granular reader permissions for the knowledge base.
+       | Keep in mind that this may be dangerous, as reader permission provides
+       | access to internal answers!
+   * - ``report``
+     - :user-docs:`Reporting (user docs)</extras/reporting.html>`
+     - | Make sure to **never** grant this permission to your customers
+       | because it includes **all ticket and user information** across the
+       | entire system! Consider setting up a new role for your admins or
+       | supervisors and limit the access via :doc:`/manage/report-profiles` first.
+   * - ``ticket.agent``
+     - | This is the main permission for agents
+       | to access overviews and tickets.
+     - | When this permission is granted and more
+       | than one group exists, the group permission
+       | table appears to configure the :doc:`group access levels </manage/groups/access-levels>`.
 
-
-.. figure:: /images/manage/roles/admin-settings.png
-   :alt: Screenshot showing admin settings within Zammad.
-   :align: center
-
-   ...and give users access to the pages of the Admin Panel.
-
+Admin
+-----
 
 Please be aware that these permissions only grant access to the
-**settings/configuration** in Zammad. If you want to grant agents access to
-tickets, see :doc:`agent permissions <agent-permissions>` and
-:doc:`group permissions <../groups/access-levels>`
+settings/configuration in Zammad. If you want to grant agents access to
+tickets, check the section above and learn more about
+:doc:`group permissions <../groups/access-levels>`.
 
 .. list-table::
    :widths: 30 80 20
    :header-rows: 1
 
-   * - Permission name
-     - Give access to
+   * - Permission
+     - Access To
      - Note
    * - ``admin.ai``
      - :doc:`AI > Provider </ai/provider>`
@@ -44,7 +69,7 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
      - :doc:`AI > AI Agents </ai/ai-agents>`
      -
    * - ``admin.ai_assistance_text_tools``
-     - AI > Smart Assist Text Tools
+     - :doc:`AI > Writing Assistant </ai/writing-assistant>`
      -
    * - ``admin.ai_assistance_ticket_summary``
      - :doc:`AI > Ticket Summary </ai/summary>`
@@ -204,3 +229,74 @@ tickets, see :doc:`agent permissions <agent-permissions>` and
    * - ``admin.webhook``
      - :doc:`Manage > Webhook </manage/webhook>`
      -
+
+User Preferences
+----------------
+
+
+.. list-table::
+   :widths: 30 80 20
+   :header-rows: 1
+
+   * - Permission
+     - Access To
+     - Note
+   * - ``user_preferences.access_token``
+     - | Generate API tokens to control Zammad via
+       | :docs:`REST API (system documentation) </api/intro.html>`.
+     - | Generated tokens will never have more permissions
+       | than the user that generated them.
+   * - ``user_preferences.appearance``
+     - Appearance configuration
+     - | Users can switch between dark, light and
+       | automatic mode.
+   * - ``user_preferences.avatar``
+     - Avatar settings
+     - Override the default Gravatar with a custom avatar
+   * - ``user_preferences.calendar``
+     - Configure the calendar feed
+     -
+   * - ``user_preferences.device``
+     - Manage device login sessions
+     - | Revoking this permission disables
+       | “Login detected from a new location” emails.
+       | To learn more, see :doc:`/manage/trigger/system-notifications`.
+   * - ``user_preferences.language``
+     - Configure the UI locale/language
+     -
+   * - ``user_preferences.linked_accounts``
+     - Account linking
+     - | Manually link accounts after signing in
+       | with :doc:`third-party authentication </settings/security/third-party>`.
+       | Note: If :ref:`automatic account linking <automatic-account-linking>` fails, this
+       | is the only way users can utilize third-party logins.
+   * - ``user_preferences.notifications``
+     - | Configuration of ticket
+       | notifications
+     - | Agents only receive ticket notifications for
+       | :doc:`groups they have “full” access to </manage/groups/access-levels>`.
+       | Customers can't receive ticket notifications at all.
+   * - ``user_preferences.out_of_office``
+     - | Designate a substitute for
+       | out-of-office hours
+     - | This does **not** grant that person the permissions /
+       | :doc:`group access levels </manage/groups/access-levels>` of the agent
+       | they're replacing.
+   * - ``user_preferences.overview_sorting``
+     - | Allow users to define their own
+       | overview order.
+     - | Optional permission; disabled by default.
+       | The order your user chooses here cannot be
+       | overwritten by admins. Renaming or resorting
+       | overviews has no effect on custom orders.
+   * - ``user_preferences.password``
+     - Change account password
+     - | Make sure to **revoke this permission** for all your users
+       | when using a third-party identity server (like LDAP) as
+       | your only allowed authentication method.
+   * - ``user_preferences.two_factor_authentication``
+     - | Allow users to setup and configure
+       | their two factor authentication
+     - | :doc:`Two factor authentication </settings/security/two-factor>` has to be enabled
+       | that users can setup and configure it.
+

@@ -1,126 +1,88 @@
 Roles
 =====
 
-If you're already using Zammad,
-you'll know that users can be **admins**, **agents**, or **customers**.
-These are Zammad's built-in roles, and they're the tip of the iceberg
-of its powerful, flexible, and fine-grained permission system.
+Roles are a crucial part of Zammad's permission system. They determine what
+users can do within the application and can also contain group permissions.
+You can manage roles in Zammad's settings under *Manage > Roles*.
+This page gives you an explanation of what roles and permissions are. You can
+find details about each permission in a :doc:`separate sub page <permissions>`.
 
-.. figure:: /images/manage/roles/role-overview.png
-   :alt: Role overview within Zammad's admin settings.
-   :align: center
-   :width: 90%
+Basics
+------
 
-   Assign user privileges in the Admin Panel, under **Manage > Roles**.
+A role is the place where you define permissions. Each user has an assigned role
+and inherits the permissions of this role. The permissions define what a user is
+allowed to do and which parts and features of Zammad are accessible for them.
+Zammad ships three roles by default: **Admin**, **Agent** and **Customer**.
+You can adjust these roles or create new ones to fit your company's needs. In
+case you are using LDAP/Active Directory, you can even sync your existing groups
+to Zammad with the :doc:`LDAP integration </system/integrations/ldap/index>`.
 
-.. tip:: 💡 **LDAP/Active Directory users:**
+This makes creating user accounts for new agents much simpler because you just
+have to assign the correct role instead of configuring permissions and group
+access for each user individually. Examples of some important permissions are:
 
-   Syncing your LDAP "groups" to Zammad roles
-   can make access management *way* easier.
-   To learn more, see :doc:`/system/integrations/ldap/index`.
+* ``ticket.agent``: allows a user to work on tickets
+* ``admin.user``: allows to manage users in Zammad's admin settings
+* ``knowledge_base.editor``: allows a user to create/edit knowledge base
+  articles
+* ``user_preferences``: allows a user to change their own profile setting
 
-.. _what-is-a-role:
-
-What Is a Role?
----------------
-
-Some users can do things others can't (like close a ticket).
-Users have roles, roles have permissions,
-and permissions are what make those actions possible. You can think of roles as
-a kind of a collection of permissions.
-
-So what exactly are permissions, then?
-
-.. figure:: /images/manage/roles/permissions-admin.png
-   :alt: List of permissions in the New Role dialog
-   :align: center
-   :width: 90%
-
-   The ``admin.calendar`` permission gives you access
-   to the **Manage > Calendars** admin panel.
-
-Simply put, permissions are names for all the different things
-users might want to do throughout the system, such as:
-
-   * ``chat.agent``: respond to live chat messages
-   * ``ticket.agent``: update tickets
-   * ``admin.user``: access the **Manage > Users** admin panel
-   * ``knowledge_base.editor``: create/edit knowledge base articles
-
-Zammad has dozens of these permissions, which is a lot to keep track of.
-So instead of assigning a bunch of permissions to different users, the idea is
-to assign permissions to roles. And each user has an assigned role.
-
-This makes creating user accounts for new agents a whole lot simpler,
-and it also makes it easier to assign a new permission to a role
-and say "All existing agents can do *that* now, too."
-
-In short, roles are just collections of permissions that you can give to a user.
-The built-in admin, agent, and customer roles are enough for many teams,
-but Zammad gives you the freedom to custom-build your own.
-
-And to do that, you'll need to know what each permission does.
-
-.. note:: Users can have both "agent" and "customer" roles at the same time!
-
-   Why would you want this?
-   Agents get :doc:`overviews </manage/overviews>`
-   of all the tickets they're *assigned to* (among others),
-   while customers get an overview of all the tickets they've *opened*.
-   But some teams use Zammad for both internal and public communication,
-   so their agents need both.
-
-   Having both roles also changes what you see in the ticket view,
-   depending on whether you're the "customer" or not.
+To adjust a permission of a role, simply click on it. To create a new role, use
+the **New Role** button in the top right corner. In both cases, a dialog opens
+where you can configure it.
 
 .. _permission-guide:
 
-Reference Guide: Permissions
-----------------------------
+Permissions
+-----------
 
 .. toctree::
    :hidden:
 
-   admin-permissions
-   agent-permissions
-   user-preferences-permissions
+   permissions
 
-Broadly speaking, there are four types of permission groups. Click on each to
-go to the detailed list of granular permissions. You can either select the whole
-permission group (e.g. ``admin``) or a subset of it
-(e.g. ``admin.text_module``).
+You can configure the permissions in the configuration dialog of a role by
+checking or unchecking the relevant boxes. The admin and user preferences
+permissions are hierarchical, so you can grant all by checking the parent
+(e.g. ``admin``).
 
-:doc:`🛡️ Admin <admin-permissions>`
-   For access to each page of the admin panel
+Details about each permission are described in a separate
+:doc:`permission sub page <permissions>`, split by common use cases.
 
-:doc:`🕵️ Agent <agent-permissions>`
-   For access to customer communications
+.. note:: Users can have multiple roles assigned!
+   An agent can also be a customer or could have admin permissions as a team
+   leader, for example. If agents create a ticket with the own user as
+   customer, they just see reduced information in the ticket (as customers do).
 
-👤 Customer
-   Without the ``ticket.customer`` permission,
-   customers can't see the **My Ticket** overview—but
-   they can still log in and open new tickets!
+Group Permissions
+-----------------
 
-:doc:`🎛️ User Preferences <user-preferences-permissions>`
-   For access to your own
-   :user-docs:`user profile </extras/profile-and-settings.html>`
+In addition to the feature permissions, **agent** roles can also contain group
+permissions. This means that you can define to which groups agents
+with this role have access to. To see the group permission table, the role
+must include agent permissions and more than one group has to exist in your
+system.
 
-Role Details
-------------
+You can also set the group permissions for each user individually in the user
+settings. However, this comes with the downside that you have to configure this
+for each user. Please have a look at the
+:doc:`group permission section </manage/groups/access-levels>` for details.
+
+
+Additional Settings
+-------------------
 
 Default at Signup
-   Every new user must be assigned at least one role upon creation.
-   This attribute decides which role to give new users by default
-   (which usually happens when creating a new ticket for a new customer).
+   Define if the role is assigned to new users by default by setting
+   it to ``yes``. Typically,  new users which are created automatically are
+   customers. Unless you have a specific use case, you should only set this for
+   a customer role without additional permissions. Otherwise, new users would
+   get access to features and data they shouldn't have access to.
 
-   .. figure:: /images/manage/roles/default-role.png
-      :alt: Role overview in the admin panel, showing default role
-      :align: center
-
-      The default role is identified in the overview
-      of the **Manage > Roles** admin panel.
-
-   .. warning:: 🙅 **Default roles should never provide admin/agent permissions.**
+Note
+   Add a note to this role. This is only for internal use and not visible to
+   users (except admins with the permission to view or change the role).
 
 Active
    Roles can't be deleted but set to inactive. If you do so, all users loose

@@ -28,8 +28,8 @@ Learn more about managing organizations...
 
 * Organizations currently cannot be removed. The only exception
   is Zammad's :doc:`/system/data-privacy` function.
-* Unlike users, agents cannot just create new organizations.
-  Check the :doc:`permission reference </manage/roles/admin-permissions>`
+* Unlike users, agents cannot create new organizations.
+  Check the :doc:`roles section </manage/roles/index>`
   to learn more.
 * Because of how organization references work with users, external syncs
   like LDAP or Exchange *do not* support organization mapping. If this is
