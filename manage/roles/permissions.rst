@@ -3,8 +3,9 @@ Permissions
 
 Find a short description about the permissions in Zammad below. Be aware that
 some of the features require activation and configuration before they are
-usable. Even though the permissions are grouped by commoon use cases, you can
-mix them as you like. Just make sure to maintain an overview of the permissions.
+usable. Even though the permissions are grouped by common use cases, you can
+mix them as you like. Just make sure to maintain an overview over your
+permissions.
 
 Agent
 -----
@@ -19,27 +20,11 @@ Agent
      - Access To
      - Note
    * - ``chat.agent``
-     - :user-docs:`Customer Chat </extras/chat.html>`
-     - Requires configuration of :doc:`Chat Channel </channels/chat>`
+     - :user-docs:`Customer chat </extras/chat.html>`
+     - Requires configuration of :doc:`chat channel </channels/chat>`.
    * - ``cti.agent``
-     - :user-docs:`Caller Log </extras/caller-log.html>`
-     - Configuration of a CTI integration is required
-   * - ``knowledge_base.editor``
-     - Create/edit privileges
-     - Editor permissions always include reader permissions.
-   * - ``knowledge_base.reader``
-     - Read privileges for internal content
-     - | Public articles are always visible.
-       | See :user-docs:`here </extras/knowledge-base.html#granular-category-permissions>`
-         how to set up granular reader permissions for the knowledge base.
-       | Keep in mind that this may be dangerous, as reader permission provides
-       | access to internal answers!
-   * - ``report``
-     - :user-docs:`Reporting (user docs)</extras/reporting.html>`
-     - | Make sure to **never** grant this permission to your customers
-       | because it includes **all ticket and user information** across the
-       | entire system! Consider setting up a new role for your admins or
-       | supervisors and limit the access via :doc:`/manage/report-profiles` first.
+     - :user-docs:`Caller log </extras/caller-log.html>`
+     - Requires configuration of :doc:`CTI integration </system/integrations/cti/generic>`.
    * - ``ticket.agent``
      - | This is the main permission for agents
        | to access overviews and tickets.
@@ -62,9 +47,6 @@ tickets, check the section above and learn more about
    * - Permission
      - Access To
      - Note
-   * - ``admin.ai``
-     - :doc:`AI > Provider </ai/provider>`
-     -
    * - ``admin.ai_agent``
      - :doc:`AI > AI Agents </ai/ai-agents>`
      -
@@ -73,6 +55,9 @@ tickets, check the section above and learn more about
      -
    * - ``admin.ai_assistance_ticket_summary``
      - :doc:`AI > Ticket Summary </ai/summary>`
+     -
+   * - ``admin.ai_provider``
+     - :doc:`AI > Provider </ai/provider>`
      -
    * - ``admin.api``
      - :docs:`System > API </api/intro.html>`
@@ -85,13 +70,14 @@ tickets, check the section above and learn more about
      - Required for :doc:`/manage/slas/index`
    * - ``admin.channel_chat``
      - :doc:`Channels > Chat </channels/chat>`
-     - Accessing chat for agents: ``chat.agent``
+     - | Configuration of chat channel.
+       | Access for agents: ``chat.agent``
    * - ``admin.channel_email``
      - :doc:`Channels > Email </channels/email/index>`
      -
    * - ``admin.channel_facebook``
      - :doc:`Channels > Facebook </channels/facebook>`
-     - Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`
+     -
    * - ``admin.channel_formular``
      - :doc:`Channels > Form </channels/form>`
      -
@@ -109,7 +95,7 @@ tickets, check the section above and learn more about
      -
    * - ``admin.channel_telegram``
      - :doc:`Channels > Telegram </channels/telegram>`
-     - Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`
+     -
    * - ``admin.channel_web``
      - :doc:`Channels > Web </channels/web>`
      -
@@ -124,7 +110,8 @@ tickets, check the section above and learn more about
      -
    * - ``admin.data_privacy``
      - :doc:`System > Data Privacy </system/data-privacy>`
-     - 🔥 Be careful, it allows users to permanently delete data on the system.
+     - | Be careful, this allows users to permanently
+       | delete data on the system.
    * - ``admin.group``
      - :doc:`Manage > Groups </manage/groups/index>`
      -
@@ -133,10 +120,9 @@ tickets, check the section above and learn more about
      -
    * - ``admin.knowledge_base``
      - :doc:`Manage > Knowledge Base </manage/knowledge-base>`
-     - | Accessing knowledge base to read/edit articles: ``knowledge_base.reader``
-       | and ``knowledge_base.editor``
-       | Make sure to double-check the answer's
-         :user-docs:`visibility </extras/knowledge-base.html#editing-answers>`.
+     - | Configure knowledge base. For viewing or creating
+       | articles, ``knowledge_base.reader`` or
+       | ``knowledge_base.editor`` are required.
    * - ``admin.macro``
      - :doc:`Manage > Macros </manage/macros>`
      - In some cases, macros may also require ``admin.tag``
@@ -151,9 +137,9 @@ tickets, check the section above and learn more about
      -
    * - ``admin.organization``
      - :doc:`Manage > Organizations </manage/organizations/index>`
-     - | Agents can access existing organizations
-       | from the search bar, even without this permission.
-       | They can even edit an organization's name, domain, and notes!
+     - | Agents can access existing organizations from the
+       | search bar, even without this permission. They can even
+       | edit an organization's name, domain, and notes!
    * - ``admin.overview``
      - :doc:`Manage > Overviews</manage/overviews>`
      -
@@ -174,7 +160,7 @@ tickets, check the section above and learn more about
      - For automation on tickets
    * - ``admin.security``
      - :doc:`Settings > Security </settings/security>`
-     - Settings of Zammad. This also covers third party authentications.
+     - This also includes third party authentications.
    * - ``admin.session``
      - :doc:`System > Sessions </system/sessions>`
      -
@@ -198,7 +184,8 @@ tickets, check the section above and learn more about
      -
    * - ``admin.ticket``
      - :doc:`Settings > Tickets </settings/ticket>`
-     - Does not grant access to :doc:`/misc/composer`
+     - | Ticket settings. To access tickets for agents,
+       | ``ticket.agent`` is required.
    * - ``admin.ticket_auto_assignment``
      - :ref:`Settings > Ticket > Auto Assignment <auto_assignment>`
      -
@@ -222,17 +209,16 @@ tickets, check the section above and learn more about
      -
    * - ``admin.user``
      - :doc:`Manage > Users </manage/users/index>`
-     - | Independent from this permission, agents can create and edit
-       | customers, but they can't modify permission etc.
+     - | Agents can always create and edit customers, but they
+       | can't modify permission etc.
        | 🏴‍☠️ This permission allows users to
-        :ref:`hijack other user sessions <view-from-users-perspective>` .
+       | :ref:`hijack other user sessions <view-from-users-perspective>` .
    * - ``admin.webhook``
      - :doc:`Manage > Webhook </manage/webhook>`
      -
 
 User Preferences
 ----------------
-
 
 .. list-table::
    :widths: 30 80 20
@@ -242,8 +228,8 @@ User Preferences
      - Access To
      - Note
    * - ``user_preferences.access_token``
-     - | Generate API tokens to control Zammad via
-       | :docs:`REST API (system documentation) </api/intro.html>`.
+     - | Generate API tokens to control Zammad
+       | via :docs:`REST API (system documentation) </api/intro.html>`.
      - | Generated tokens will never have more permissions
        | than the user that generated them.
    * - ``user_preferences.appearance``
@@ -253,6 +239,10 @@ User Preferences
    * - ``user_preferences.avatar``
      - Avatar settings
      - Override the default Gravatar with a custom avatar
+   * - ``user_preferences.beta_ui_switch``
+     - New UI
+     - | Allows users to swith between old and new
+       | UI via switch.
    * - ``user_preferences.calendar``
      - Configure the calendar feed
      -
@@ -263,7 +253,7 @@ User Preferences
        | To learn more, see :doc:`/manage/trigger/system-notifications`.
    * - ``user_preferences.language``
      - Configure the UI locale/language
-     -
+     - Allows users to set their preferred language.
    * - ``user_preferences.linked_accounts``
      - Account linking
      - | Manually link accounts after signing in
@@ -294,9 +284,41 @@ User Preferences
      - | Make sure to **revoke this permission** for all your users
        | when using a third-party identity server (like LDAP) as
        | your only allowed authentication method.
-   * - ``user_preferences.two_factor_authentication``
+   * - | ``user_preferences.``
+       | ``two_factor_authentication``
      - | Allow users to setup and configure
        | their two factor authentication
      - | :doc:`Two factor authentication </settings/security/two-factor>` has to be enabled
        | that users can setup and configure it.
 
+Others
+------
+
+.. list-table::
+   :widths: 30 80 20
+   :header-rows: 1
+
+   * - Permission
+     - Access To
+     - Note
+   * - ``knowledge_base.editor``
+     - Create/edit privileges
+     - Editor permissions always include reader permissions.
+   * - ``knowledge_base.reader``
+     - Read privileges for internal content
+     - | Public articles are always visible.
+       | See :user-docs:`here </extras/knowledge-base.html#granular-category-permissions>`
+         how to set up granular reader permissions for the
+       | knowledge base. Keep in mind that this may be dangerous,
+       | as reader permission provides access to internal answers!
+   * - ``report``
+     - :user-docs:`Reporting (user docs)</extras/reporting.html>`
+     - | Make sure to **never** grant this permission to your customers
+       | because it includes **all ticket and user information** across the
+       | entire system! Consider setting up a new role for your admins or
+       | supervisors and limit the access via :doc:`/manage/report-profiles` first.
+   * - ``ticket.customer``
+     - Allows a user to be set as customer of a ticket.
+     - | Without this permission, customers can't see the
+       | **My Ticket** overview. But they can still log in
+       | and open new tickets.
