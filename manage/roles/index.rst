@@ -81,8 +81,8 @@ Default at Signup
    get access to features and data they shouldn't have access to.
 
 Note
-   Add a note to this role. This is only for internal use and not visible to
-   users (except admins with the permission to view or change the role).
+   Add a note to the role. This is used as explanation in the add/edit user
+   dialog.
 
 Active
    Roles can't be deleted but set to inactive. If you do so, all users loose

@@ -27,7 +27,7 @@ Agent
      - Requires configuration of :doc:`CTI integration </system/integrations/cti/generic>`.
    * - ``ticket.agent``
      - | This is the main permission for agents
-       | to access overviews and tickets.
+       | to access overviews and tickets
      - | When this permission is granted and more
        | than one group exists, the group permission
        | table appears to configure the :doc:`group access levels </manage/groups/access-levels>`.
@@ -67,11 +67,11 @@ tickets, check the section above and learn more about
      -
    * - ``admin.calendar``
      - :doc:`Manage > Calendars </manage/calendars>`
-     - Required for :doc:`/manage/slas/index`
+     - Required for :doc:`/manage/slas/index`.
    * - ``admin.channel_chat``
      - :doc:`Channels > Chat </channels/chat>`
      - | Configuration of chat channel.
-       | Access for agents: ``chat.agent``
+       | Access for agents: ``chat.agent``.
    * - ``admin.channel_email``
      - :doc:`Channels > Email </channels/email/index>`
      -
@@ -125,7 +125,7 @@ tickets, check the section above and learn more about
        | ``knowledge_base.editor`` are required.
    * - ``admin.macro``
      - :doc:`Manage > Macros </manage/macros>`
-     - In some cases, macros may also require ``admin.tag``
+     - In some cases, macros may also require ``admin.tag``.
    * - ``admin.maintenance``
      - :doc:`System > Maintenance </system/maintenance>`
      -
@@ -157,7 +157,7 @@ tickets, check the section above and learn more about
      -
    * - ``admin.scheduler``
      - :doc:`Manage > Scheduler </manage/scheduler>`
-     - For automation on tickets
+     -
    * - ``admin.security``
      - :doc:`Settings > Security </settings/security>`
      - This also includes third party authentications.
@@ -200,10 +200,10 @@ tickets, check the section above and learn more about
      -
    * - ``admin.time_accounting``
      - :doc:`Manage > Time Accounting </manage/time-accounting>`
-     - Also allows the export of timekeeping records.
+     - Also allows the export of accounted time records.
    * - ``admin.translation``
      - :doc:`System > Translations </system/translations>`
-     - Also enables inline translation
+     - Also enables inline translation.
    * - ``admin.trigger``
      - :doc:`Manage > Triggers </manage/trigger>`
      -
@@ -211,8 +211,8 @@ tickets, check the section above and learn more about
      - :doc:`Manage > Users </manage/users/index>`
      - | Agents can always create and edit customers, but they
        | can't modify permission etc.
-       | 🏴‍☠️ This permission allows users to
-       | :ref:`hijack other user sessions <view-from-users-perspective>` .
+       | Be aware that this permission allows users to
+       | :ref:`hijack other user sessions <view-from-users-perspective>`.
    * - ``admin.webhook``
      - :doc:`Manage > Webhook </manage/webhook>`
      -
@@ -238,7 +238,7 @@ User Preferences
        | automatic mode.
    * - ``user_preferences.avatar``
      - Avatar settings
-     - Override the default Gravatar with a custom avatar
+     - Allows users to add a custom avatar image.
    * - ``user_preferences.beta_ui_switch``
      - New UI
      - | Allows users to swith between old and new
@@ -274,7 +274,7 @@ User Preferences
        | they're replacing.
    * - ``user_preferences.overview_sorting``
      - | Allow users to define their own
-       | overview order.
+       | overview order
      - | Optional permission; disabled by default.
        | The order your user chooses here cannot be
        | overwritten by admins. Renaming or resorting
@@ -318,7 +318,7 @@ Others
        | entire system! Consider setting up a new role for your admins or
        | supervisors and limit the access via :doc:`/manage/report-profiles` first.
    * - ``ticket.customer``
-     - Allows a user to be set as customer of a ticket.
+     - Allows a user to be set as customer of a ticket
      - | Without this permission, customers can't see the
        | **My Ticket** overview. But they can still log in
        | and open new tickets.
