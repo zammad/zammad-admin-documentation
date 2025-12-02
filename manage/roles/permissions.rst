@@ -302,10 +302,12 @@ Others
      - Access To
      - Note
    * - ``knowledge_base.editor``
-     - Create/edit privileges
+     - | Create and edit permission
+       | for knowledge base articles
      - Editor permissions always include reader permissions.
    * - ``knowledge_base.reader``
-     - Read privileges for internal content
+     - | Read permission for internal
+       | (not published) knowledge base articles
      - | Public articles are always visible.
        | See :user-docs:`here </extras/knowledge-base.html#granular-category-permissions>`
          how to set up granular reader permissions for the

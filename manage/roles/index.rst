@@ -81,7 +81,7 @@ Default at Signup
    get access to features and data they shouldn't have access to.
 
 Note
-   Add a note to the role. This is used as explanation in the add/edit user
+   Add a note to the role. This note is used as explanation in the add/edit user
    dialog.
 
 Active
