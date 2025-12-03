@@ -12,6 +12,9 @@ suggestions for variables, type ``::`` followed by your search query to trigger
 a list of relevant options. The following article types are available, depending
 on the context:
 
+- ``first_internal_article``
+- ``first_external_article``
+- ``first_article``
 - ``last_internal_article``
 - ``last_external_article``
 - ``last_article``
