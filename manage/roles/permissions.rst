@@ -239,10 +239,6 @@ User Preferences
    * - ``user_preferences.avatar``
      - Avatar settings
      - Allows users to add a custom avatar image.
-   * - ``user_preferences.beta_ui_switch``
-     - New UI
-     - | Allows users to swith between old and new
-       | UI via switch.
    * - ``user_preferences.calendar``
      - Configure the calendar feed
      -
