@@ -86,7 +86,7 @@ article types.
 
    .. tabs::
 
-      .. tab:: Plain text as quote
+      .. tab:: Plain text as quote with HTML linebreaks
 
          Variable: ``#{article.body}``
 
