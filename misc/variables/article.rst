@@ -90,14 +90,14 @@ article types.
 
          Variable: ``#{article.body}``
 
-         Body in plain text with quote character (``>``) at the beginning of
-         each line. Example:
+         Body in plain text, converted to HTML with quote character (``>``) at
+         the beginning of each line. Example:
 
          .. code-block:: text
 
-            > This is the body of an\n
-            > article you want to use\n
-            > in a variable.\n
+            > This is the body of an<br>
+            > article you want to use<br>
+            > in a variable.<br>
 
       .. tab:: HTML
 
