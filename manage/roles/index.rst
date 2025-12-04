@@ -13,7 +13,7 @@ Basics
 A role is the place where you define permissions. Each user has an assigned role
 and inherits the permissions of this role. The permissions define what a user is
 allowed to do and which parts and features of Zammad are accessible for them.
-Zammad ships three roles by default: **Admin**, **Agent** and **Customer**.
+Zammad ships with three roles by default: **Admin**, **Agent** and **Customer**.
 You can adjust these roles or create new ones to fit your company's needs. In
 case you are using LDAP/Active Directory, you can even sync your existing groups
 to Zammad with the :doc:`LDAP integration </system/integrations/ldap/index>`.
@@ -52,8 +52,9 @@ Details about each permission are described in a separate
 
 .. note:: Users can have multiple roles assigned!
    An agent can also be a customer or could have admin permissions as a team
-   leader, for example. If agents create a ticket with the own user as
-   customer, they just see reduced information in the ticket (as customers do).
+   leader, for example. If an agent is customer and the ticket is in a group
+   where the agent doesn't have at least reading permissions, the ticket only
+   shows a reduced customer view for this agent.
 
 Group Permissions
 -----------------
@@ -61,7 +62,7 @@ Group Permissions
 In addition to the feature permissions, **agent** roles can also contain group
 permissions. This means that you can define to which groups agents
 with this role have access to. To see the group permission table, the role
-must include agent permissions and more than one group has to exist in your
+must include the agent permission and more than one group has to exist in your
 system.
 
 You can also set the group permissions for each user individually in the user
@@ -75,7 +76,7 @@ Additional Settings
 
 Default at Signup
    Define if the role is assigned to new users by default by setting
-   it to ``yes``. Typically,  new users which are created automatically are
+   it to ``yes``. Typically, new users which are created automatically are
    customers. Unless you have a specific use case, you should only set this for
    a customer role without additional permissions. Otherwise, new users would
    get access to features and data they shouldn't have access to.
@@ -85,7 +86,7 @@ Note
    dialog.
 
 Active
-   Roles can't be deleted but set to inactive. If you do so, all users loose
+   Roles can't be deleted, only set to inactive. If you do so, all users lose
    the permissions of this role. If this inactive role is the only one of a
-   user, this account isn't able to do anything in Zammad. The login is still
-   possible.
+   user, this account will not be able to do anything in Zammad. The login will
+   be still possible.
