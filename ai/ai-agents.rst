@@ -26,7 +26,7 @@ Important Information
 - AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>`, a :doc:`scheduler job </manage/scheduler>`
   or a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**.
-- Using it in a macro allows your agents to run an AI agent on demand.
+- By creating a macro with an AI agent action, your agents can run it on demand.
 - If an AI agent applies changes to a ticket, you can find an entry in the
   ticket history with the name of the AI agent.
 
