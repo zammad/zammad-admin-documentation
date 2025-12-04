@@ -20,6 +20,7 @@ Creating Macros
 
    * set ticket attributes (priority, state, group, etc.)
    * add new notes to a ticket
+   * run an :doc:`AI agent </ai/ai-agents>`
 
    There are **no** actions for:
 

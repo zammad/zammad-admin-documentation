@@ -24,9 +24,9 @@ Important Information
 
 - To configure AI agents, the ``admin.ai_agent`` permission is required
 - AI agents don't run on their own. They have to be invoked by a
-  :doc:`trigger </manage/trigger>` or a
-  :doc:`scheduler job </manage/scheduler>` with the action
-  **AI** > **AI Agent**.
+  :doc:`trigger </manage/trigger>`, a :doc:`scheduler job </manage/scheduler>`
+  or a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**.
+- Using it in a macro allows your agents to run an AI agent on demand.
 - If an AI agent applies changes to a ticket, you can find an entry in the
   ticket history with the name of the AI agent.
 
@@ -42,17 +42,17 @@ Create an AI agent by clicking the **New AI Agent** button in the top right
 corner. This opens a wizard where you can choose the type of the agent and
 additional settings based on the selected type, see :ref:`ai-agent-types` for
 details. The action column with the ︙ button allows you to clone or delete an
-AI agent. You can only delete AI agents which are not used in triggers and
-schedulers. You can find this information in the two columns in the AI agent
-table.
+AI agent. You can only delete AI agents which are not used in triggers,
+scheduler jobs and macros. Check the **Used in** column and hover over an
+entry to see where an AI agent is used.
 
 .. _ai-agent-types:
 
 AI Agent Types
 --------------
 
-Define your AI agents and use them afterwards in triggers or scheduler jobs.
-An example for a trigger configuration could look like this:
+Define your AI agents and use them afterwards in triggers, scheduler jobs or
+macros. An example for a trigger configuration could look like this:
 
 - Activated by: **Action**
 - Action execution: **Selective**
