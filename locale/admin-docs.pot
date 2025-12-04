@@ -432,7 +432,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:102
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/macros/learn-by-example.rst:0
-#: ../manage/roles/index.rst:85
+#: ../manage/roles/index.rst:86
 #: ../manage/roles/permissions.rst:21
 #: ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:229
@@ -467,7 +467,7 @@ msgstr ""
 #: ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0
 #: ../manage/report-profiles.rst:58
-#: ../manage/roles/index.rst:90
+#: ../manage/roles/index.rst:91
 #: ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33
 #: ../manage/webhook/add.rst:120
@@ -5972,6 +5972,7 @@ msgstr ""
 
 #: ../index.rst:96
 #: ../index.rst:96
+#: ../manage/roles/permissions.rst:291
 msgid "Misc"
 msgstr ""
 
@@ -6116,7 +6117,7 @@ msgid "The checklist feature is currently a standalone feature. That means you c
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:2
-#: ../manage/roles/index.rst:59
+#: ../manage/roles/index.rst:60
 #: ../manage/users/index.rst:172
 msgid "Group Permissions"
 msgstr ""
@@ -7888,7 +7889,7 @@ msgid "Basics"
 msgstr ""
 
 #: ../manage/roles/index.rst:13
-msgid "A role is the place where you define permissions. Each user has an assigned role and inherits the permissions of this role. The permissions define what a user is allowed to do and which parts and features of Zammad are accessible for them. Zammad ships three roles by default: **Admin**, **Agent** and **Customer**. You can adjust these roles or create new ones to fit your company's needs. In case you are using LDAP/Active Directory, you can even sync your existing groups to Zammad with the :doc:`LDAP integration </system/integrations/ldap/index>`."
+msgid "A role is the place where you define permissions. Each user has an assigned role and inherits the permissions of this role. The permissions define what a user is allowed to do and which parts and features of Zammad are accessible for them. Zammad ships with three roles by default: **Admin**, **Agent** and **Customer**. You can adjust these roles or create new ones to fit your company's needs. In case you are using LDAP/Active Directory, you can even sync your existing groups to Zammad with the :doc:`LDAP integration </system/integrations/ldap/index>`."
 msgstr ""
 
 #: ../manage/roles/index.rst:21
@@ -7924,39 +7925,39 @@ msgid "Details about each permission are described in a separate :doc:`permissio
 msgstr ""
 
 #: ../manage/roles/index.rst:53
-msgid "Users can have multiple roles assigned! An agent can also be a customer or could have admin permissions as a team leader, for example. If agents create a ticket with the own user as customer, they just see reduced information in the ticket (as customers do)."
+msgid "Users can have multiple roles assigned! An agent can also be a customer or could have admin permissions as a team leader, for example. If an agent is customer and the ticket is in a group where the agent doesn't have at least reading permissions, the ticket only shows a reduced customer view for this agent."
 msgstr ""
 
-#: ../manage/roles/index.rst:61
-msgid "In addition to the feature permissions, **agent** roles can also contain group permissions. This means that you can define to which groups agents with this role have access to. To see the group permission table, the role must include agent permissions and more than one group has to exist in your system."
+#: ../manage/roles/index.rst:62
+msgid "In addition to the feature permissions, **agent** roles can also contain group permissions. This means that you can define to which groups agents with this role have access to. To see the group permission table, the role must include the agent permission and more than one group has to exist in your system."
 msgstr ""
 
-#: ../manage/roles/index.rst:67
+#: ../manage/roles/index.rst:68
 msgid "You can also set the group permissions for each user individually in the user settings. However, this comes with the downside that you have to configure this for each user. Please have a look at the :doc:`group permission section </manage/groups/access-levels>` for details."
 msgstr ""
 
-#: ../manage/roles/index.rst:74
+#: ../manage/roles/index.rst:75
 msgid "Additional Settings"
 msgstr ""
 
-#: ../manage/roles/index.rst:81
+#: ../manage/roles/index.rst:82
 msgid "Default at Signup"
 msgstr ""
 
-#: ../manage/roles/index.rst:77
-msgid "Define if the role is assigned to new users by default by setting it to ``yes``. Typically,  new users which are created automatically are customers. Unless you have a specific use case, you should only set this for a customer role without additional permissions. Otherwise, new users would get access to features and data they shouldn't have access to."
+#: ../manage/roles/index.rst:78
+msgid "Define if the role is assigned to new users by default by setting it to ``yes``. Typically, new users which are created automatically are customers. Unless you have a specific use case, you should only set this for a customer role without additional permissions. Otherwise, new users would get access to features and data they shouldn't have access to."
 msgstr ""
 
-#: ../manage/roles/index.rst:84
+#: ../manage/roles/index.rst:85
 msgid "Add a note to the role. This note is used as explanation in the add/edit user dialog."
 msgstr ""
 
-#: ../manage/roles/index.rst:88
-msgid "Roles can't be deleted but set to inactive. If you do so, all users loose the permissions of this role. If this inactive role is the only one of a user, this account isn't able to do anything in Zammad. The login is still possible."
+#: ../manage/roles/index.rst:89
+msgid "Roles can't be deleted, only set to inactive. If you do so, all users lose the permissions of this role. If this inactive role is the only one of a user, this account will not be able to do anything in Zammad. The login will be still possible."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:4
-msgid "Find a short description about the permissions in Zammad below. Be aware that some of the features require activation and configuration before they are usable. Even though the permissions are grouped by common use cases, you can mix them as you like. Just make sure to maintain an overview over your permissions."
+msgid "Find a short description about the permissions in Zammad below. Be aware that some of the features require activation and configuration before they are usable. Even though the permissions are grouped by common use cases, you can mix them as you like. Just make sure to maintain an overview of your permissions."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:11
@@ -8020,7 +8021,7 @@ msgid "When this permission is granted and more"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
-msgid "than one group exists, the group permission"
+msgid "than one group exists, the group permissions"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
@@ -8444,7 +8445,7 @@ msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
-msgid "Ticket settings. To access tickets for agents,"
+msgid "Ticket settings. To access tickets as agents,"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
@@ -8528,7 +8529,7 @@ msgid "Agents can always create and edit customers, but they"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
-msgid "can't modify permission etc."
+msgid "can't modify permissions etc."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
@@ -8783,10 +8784,6 @@ msgstr ""
 msgid "that users can setup and configure it."
 msgstr ""
 
-#: ../manage/roles/permissions.rst:291
-msgid "Others"
-msgstr ""
-
 #: ../manage/roles/permissions.rst:300
 msgid "``knowledge_base.editor``"
 msgstr ""
@@ -8800,7 +8797,7 @@ msgid "for knowledge base articles"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:303
-msgid "Editor permissions always include reader permissions."
+msgid "The editor permission always includes the reader permission."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:304
@@ -8873,7 +8870,7 @@ msgid "**My Ticket** overview. But they can still log in"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
-msgid "and open new tickets."
+msgid "and create new tickets."
 msgstr ""
 
 #: ../manage/scheduler.rst:2

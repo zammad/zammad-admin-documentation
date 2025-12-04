@@ -4,7 +4,7 @@ Permissions
 Find a short description about the permissions in Zammad below. Be aware that
 some of the features require activation and configuration before they are
 usable. Even though the permissions are grouped by common use cases, you can
-mix them as you like. Just make sure to maintain an overview over your
+mix them as you like. Just make sure to maintain an overview of your
 permissions.
 
 Agent
@@ -29,7 +29,7 @@ Agent
      - | This is the main permission for agents
        | to access overviews and tickets
      - | When this permission is granted and more
-       | than one group exists, the group permission
+       | than one group exists, the group permissions
        | table appears to configure the :doc:`group access levels </manage/groups/access-levels>`.
 
 Admin
@@ -184,7 +184,7 @@ tickets, check the section above and learn more about
      -
    * - ``admin.ticket``
      - :doc:`Settings > Tickets </settings/ticket>`
-     - | Ticket settings. To access tickets for agents,
+     - | Ticket settings. To access tickets as agents,
        | ``ticket.agent`` is required.
    * - ``admin.ticket_auto_assignment``
      - :ref:`Settings > Ticket > Auto Assignment <auto_assignment>`
@@ -210,7 +210,7 @@ tickets, check the section above and learn more about
    * - ``admin.user``
      - :doc:`Manage > Users </manage/users/index>`
      - | Agents can always create and edit customers, but they
-       | can't modify permission etc.
+       | can't modify permissions etc.
        | Be aware that this permission allows users to
        | :ref:`hijack other user sessions <view-from-users-perspective>`.
    * - ``admin.webhook``
@@ -287,8 +287,8 @@ User Preferences
      - | :doc:`Two factor authentication </settings/security/two-factor>` has to be enabled
        | that users can setup and configure it.
 
-Others
-------
+Misc
+----
 
 .. list-table::
    :widths: 30 80 20
@@ -300,7 +300,7 @@ Others
    * - ``knowledge_base.editor``
      - | Create and edit permission
        | for knowledge base articles
-     - Editor permissions always include reader permissions.
+     - The editor permission always includes the reader permission.
    * - ``knowledge_base.reader``
      - | Read permission for internal
        | (not published) knowledge base articles
@@ -319,4 +319,4 @@ Others
      - Allows a user to be set as customer of a ticket
      - | Without this permission, customers can't see the
        | **My Ticket** overview. But they can still log in
-       | and open new tickets.
+       | and create new tickets.
