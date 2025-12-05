@@ -26,6 +26,7 @@ The following providers are supported:
 - :ref:`ollama-provider`
 - :ref:`openai-provider`
 - :ref:`zammad-ai-provider`
+- :ref:`openai-compatible-provider`
 
 .. note:: The AI service you have subscribed to is not available? This is just
    the first step. We are going to add more providers soon! If you want to
@@ -96,6 +97,9 @@ Leave it empty to use the default which is shown as placeholder in the field.
 Make sure to click the ``Save`` button and read on in the desired feature's
 section.
 
+.. hint:: You can also use an
+   :ref:`OpenAI compatible custom provider <openai-compatible-provider>`.
+
 .. _zammad-ai-provider:
 
 Zammad AI
@@ -116,3 +120,16 @@ The usage of Zammad AI as a provider has some benefits:
 To configure it, simply choose **Zammad AI** as your provider and add your
 token. After that, make sure to click the ``Save`` button and read on in
 the desired feature's section.
+
+.. _openai-compatible-provider:
+
+Custom (OpenAI Compatible)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this option to connect to an OpenAI compatible provider. To use OpenAI
+itself, choose :ref:`OpenAI as provider <openai-provider>` instead. Add a URL,
+a token and a model you want to use. The model is mandatory and must match the
+model name from your AI provider.
+
+Make sure to click the ``Save`` button and read on in the desired feature's
+section.
