@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 09:43+0100\n"
-"PO-Revision-Date: 2025-11-23 14:00+0000\n"
+"POT-Creation-Date: 2025-12-09 09:26+0100\n"
+"PO-Revision-Date: 2025-12-06 03:00+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -74,12 +74,20 @@ msgstr "За подешавања AI агената, неопходна је д�
 #: ../ai/ai-agents.rst:26
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
-"</manage/trigger>` or a :doc:`scheduler job </manage/scheduler>` with the "
-"action **AI** > **AI Agent**."
+"</manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or "
+"a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**."
 msgstr ""
 "AI агенти неће бити извршени сами од себе. Морају бити покренути од "
-"стране :doc:`окидача </manage/trigger>` или a :doc:`планера </manage/"
-"scheduler>` преко радње **AI** > **AI агент**."
+"стране :doc:`окидача </manage/trigger>`, :doc:`планера </manage/scheduler>` "
+"или doc:`макроа </manage/macros>` преко радње **AI** > **AI агент**."
+
+#: ../ai/ai-agents.rst:29
+msgid ""
+"By creating a macro with an AI agent action, your agents can run it on "
+"demand."
+msgstr ""
+"Додавањем макроа са радњом AI агента, ваши агенти их могу извршавати по "
+"потреби."
 
 #: ../ai/ai-agents.rst:30
 msgid ""
@@ -104,16 +112,16 @@ msgid ""
 "additional settings based on the selected type, see :ref:`ai-agent-types` "
 "for details. The action column with the ︙ button allows you to clone or "
 "delete an AI agent. You can only delete AI agents which are not used in "
-"triggers and schedulers. You can find this information in the two columns in "
-"the AI agent table."
+"triggers, scheduler jobs and macros. Check the **Used in** column and hover "
+"over an entry to see where an AI agent is used."
 msgstr ""
 "Додајте AI агента кликом на дугме **Нови AI агент** у горњем десном углу. "
 "Ово ће отворити чаробњака где можете одабрати тип агента и додатна "
 "подешавања у зависности од врсте, видите :ref:`ai-agent-types` за детаље. "
 "Колона радње са ︙ дугметом вам омогућава да клонирате или обришете AI "
 "агента. Можете обрисати само AI агенте који се тренутно не користе у "
-"окидачима и планерима. Ове информације можете пронаћи у две колоне у табели "
-"AI агената."
+"окидачима, планерима и макроима. Пронађите колону **Користи се у** и пређите "
+"курсором преко ње да видите где се AI агент користи."
 
 #: ../ai/ai-agents.rst:52
 msgid "AI Agent Types"
@@ -121,11 +129,11 @@ msgstr "Типови AI агената"
 
 #: ../ai/ai-agents.rst:54
 msgid ""
-"Define your AI agents and use them afterwards in triggers or scheduler jobs. "
-"An example for a trigger configuration could look like this:"
+"Define your AI agents and use them afterwards in triggers, scheduler jobs or "
+"macros. An example for a trigger configuration could look like this:"
 msgstr ""
-"Дефинишите своје AI агенте и накнадно их искористите у окидачима или "
-"планерима. На пример, окидач може бити подешен на следећи начин:"
+"Дефинишите своје AI агенте и накнадно их искористите у окидачима, планерима "
+"или макроима. На пример, окидач може бити подешен на следећи начин:"
 
 #: ../ai/ai-agents.rst:57
 msgid "Activated by: **Action**"
@@ -303,7 +311,13 @@ msgstr ":ref:`openai-provider`"
 msgid ":ref:`zammad-ai-provider`"
 msgstr ":ref:`zammad-ai-provider`"
 
-#: ../ai/provider.rst:30
+#: ../ai/provider.rst:29
+#, fuzzy
+#| msgid ":ref:`openai-provider`"
+msgid ":ref:`openai-compatible-provider`"
+msgstr ":ref:`openai-provider`"
+
+#: ../ai/provider.rst:31
 msgid ""
 "The AI service you have subscribed to is not available? This is just the "
 "first step. We are going to add more providers soon! If you want to support "
@@ -315,11 +329,11 @@ msgstr ""
 "желите неки провајдер што је пре могуће, обратите се нашем `одељењу продаје "
 "<https://zammad.com/en/company/contact>`_!"
 
-#: ../ai/provider.rst:38
+#: ../ai/provider.rst:39
 msgid "Anthropic"
 msgstr "Anthropic"
 
-#: ../ai/provider.rst:40
+#: ../ai/provider.rst:41
 msgid ""
 "To use Anthropic's service as AI backend, choose it as AI provider and add "
 "your API token. After that, make sure to click the ``Save`` button and read "
@@ -333,11 +347,11 @@ msgstr ""
 "у поље **Модел**. Оставите га празним за подразумевани модел који ће бити "
 "приказан као предложена вредност поља."
 
-#: ../ai/provider.rst:49
+#: ../ai/provider.rst:50
 msgid "Azure AI"
 msgstr "Azure AI"
 
-#: ../ai/provider.rst:51
+#: ../ai/provider.rst:52
 msgid ""
 "To use the Azure AI service as AI backend, choose it as AI provider and add "
 "your URL as well as your API token. You get the URL after configuring the AI "
@@ -349,11 +363,11 @@ msgstr ""
 "AI сервиса у Azure панелу. Након тога, обавезно клините на дугме ``Сними`` и "
 "прочитајте даље о жељеним функцијама."
 
-#: ../ai/provider.rst:59
+#: ../ai/provider.rst:60
 msgid "Ollama"
 msgstr "Ollama"
 
-#: ../ai/provider.rst:61
+#: ../ai/provider.rst:62
 msgid ""
 "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your "
 "own AI server on a machine you control. That means your data is not "
@@ -365,7 +379,7 @@ msgstr ""
 "подаци неће бити слати трећим лицима. Обратите пажњу да ово има смисла само "
 "ако поседујете моћан GPU хардвер у вашем систему!"
 
-#: ../ai/provider.rst:66
+#: ../ai/provider.rst:67
 msgid ""
 "When choosing Ollama as your AI provider, you just have to provide the IP/"
 "URL of your instance with appended port number. To use a specific model, add "
@@ -379,7 +393,7 @@ msgstr ""
 "коришћење подразумеваног модела који ће бити приказан као предложена "
 "вредност поља."
 
-#: ../ai/provider.rst:71
+#: ../ai/provider.rst:72
 msgid ""
 "If you don't have an Ollama running already, their `deployment guide "
 "<https://github.com/ollama/ollama/blob/main/docs/linux.md>`_ is a good "
@@ -396,18 +410,18 @@ msgstr ""
 "сте управо инсталирали Ollama сервис, можете преузети и инсталирати модел "
 "извршавањем следеће команде:"
 
-#: ../ai/provider.rst:83 ../ai/provider.rst:96
+#: ../ai/provider.rst:84 ../ai/provider.rst:97 ../ai/provider.rst:134
 msgid ""
 "Make sure to click the ``Save`` button and read on in the desired feature's "
 "section."
 msgstr ""
 "Обавезно кликните на дугме ``Сними`` и прочитајте даље о жељеним функцијама."
 
-#: ../ai/provider.rst:89
+#: ../ai/provider.rst:90
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:92
 msgid ""
 "You probably already heard about `OpenAI <https://openai.com/>`_, haven't "
 "you? To use their service as AI backend, choose them as AI provider and add "
@@ -421,11 +435,17 @@ msgstr ""
 "**Модел**. Оставите га празним за коришћење подразумеваног модела који ће "
 "бити приказан као предложена вредност поља."
 
-#: ../ai/provider.rst:102
+#: ../ai/provider.rst:100
+msgid ""
+"You can also use an :ref:`OpenAI compatible custom provider <openai-"
+"compatible-provider>`."
+msgstr ""
+
+#: ../ai/provider.rst:106
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
-#: ../ai/provider.rst:104
+#: ../ai/provider.rst:108
 msgid ""
 "Zammad as AI provider is currently limited to specific customers for "
 "testing. If you're interested as well, please `let our sales department know "
@@ -435,11 +455,11 @@ msgstr ""
 "сврху тестирања. Уколико сте и ви заинтересовани за исто, молимо "
 "контактирајте `наш тим продаје <https://zammad.com/en/company/contact>`_."
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:112
 msgid "The usage of Zammad AI as a provider has some benefits:"
 msgstr "Коришћење Zammad AI као провајдера долази са неким погодностима:"
 
-#: ../ai/provider.rst:110
+#: ../ai/provider.rst:114
 msgid ""
 "You don't have to care about the setup and configuration compared to your "
 "own setup."
@@ -447,20 +467,20 @@ msgstr ""
 "Не морате да бринете о поставци и подешавањима у односу на ваш сопствени "
 "сервис."
 
-#: ../ai/provider.rst:112
+#: ../ai/provider.rst:116
 msgid "Your requests with sensitive information aren't used for training."
 msgstr ""
 "Ваши захтеви за осетљивим информацијама неће бити коришћени за тренинг "
 "модела."
 
-#: ../ai/provider.rst:113
+#: ../ai/provider.rst:117
 msgid ""
 "If something isn't working as expected, you just have one place where you "
 "get support."
 msgstr ""
 "Уколико нешто не функционише очекивано, имате подршку на само једном месту."
 
-#: ../ai/provider.rst:116
+#: ../ai/provider.rst:120
 msgid ""
 "To configure it, simply choose **Zammad AI** as your provider and add your "
 "token. After that, make sure to click the ``Save`` button and read on in the "
@@ -469,6 +489,18 @@ msgstr ""
 "За подешавање, једноставно одаберите **Zammad AI** као вашег провајдера и "
 "додајте ваш кључ. Након тога, обавезно кликните на дугме ``Сними`` и "
 "прочитајте даље о жељеним функцијама."
+
+#: ../ai/provider.rst:127
+msgid "Custom (OpenAI Compatible)"
+msgstr ""
+
+#: ../ai/provider.rst:129
+msgid ""
+"Use this option to connect to an OpenAI compatible provider. To use OpenAI "
+"itself, choose :ref:`OpenAI as provider <openai-provider>` instead. Add a "
+"URL, a token and a model you want to use. The model is mandatory and must "
+"match the model name from your AI provider."
+msgstr ""
 
 #: ../ai/summary.rst:2
 msgid "Ticket Summary"
@@ -623,7 +655,7 @@ msgid "Combine different instructions in one tool"
 msgstr "Комбинација више инструкција у једној алатки"
 
 #: ../ai/writing-assistant.rst:34 ../channels/chat.rst:28
-#: ../channels/microsoft365-graph/accounts.rst:17
+#: ../channels/microsoft365-graph/accounts.rst:18
 #: ../manage/report-profiles.rst:32 ../manage/webhook/add.rst:32
 #: ../misc/first-steps.rst:20 ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
@@ -747,10 +779,9 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/accounts/secondary-addresses.rst:46
 #: ../manage/groups/settings.rst:102 ../manage/macros/how-do-they-work.rst:0
-#: ../manage/macros/learn-by-example.rst:0
-#: ../manage/roles/admin-permissions.rst:39
-#: ../manage/roles/agent-permissions.rst:31
-#: ../manage/roles/user-preferences-permissions.rst:37
+#: ../manage/macros/learn-by-example.rst:0 ../manage/roles/index.rst:87
+#: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
+#: ../manage/roles/permissions.rst:229 ../manage/roles/permissions.rst:299
 #: ../manage/scheduler.rst:158 ../manage/webhook/add.rst:114
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
@@ -778,7 +809,7 @@ msgstr ""
 #: ../ai/writing-assistant.rst:90 ../channels/form.rst:37
 #: ../manage/groups/settings.rst:124 ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:58
-#: ../manage/roles/index.rst:128 ../manage/scheduler.rst:161
+#: ../manage/roles/index.rst:92 ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33 ../manage/webhook/add.rst:120
 #: ../system/objects.rst:171 ../system/objects.rst:251
 msgid "Active"
@@ -4736,7 +4767,7 @@ msgstr ""
 "канал у Zammad, видите следећи корак."
 
 #: ../channels/google/basic-setup.rst:110
-#: ../channels/microsoft365-graph/accounts.rst:120
+#: ../channels/microsoft365-graph/accounts.rst:124
 #: ../system/integrations/exchange.rst:119
 msgid "Add Account"
 msgstr "Додавање налога"
@@ -5134,15 +5165,17 @@ msgstr "Први кораци"
 #: ../channels/microsoft365-graph/accounts.rst:10
 #: ../channels/microsoft365/accounts/register-app.rst:18
 msgid ""
-"Check your FQDN under *Settings > System > Fully Qualified Domain Name* in "
-"the admin interface of Zammad. If it is not correct, change it now. "
-"Otherwise the setup of the channel will fail."
+"Only relevant for self-hosted Zammad instances: Check your FQDN under "
+"*Settings > System > Fully Qualified Domain Name* in the admin interface of "
+"Zammad. If it is not correct, change it now. Otherwise the setup of the "
+"channel will fail."
 msgstr ""
-"Проверите ваш FQDN у *Подешавања > Систем > Квалификовани назив домена* у "
-"Zammad интерфејсу администратора. Уколико није исправан, промените га сад. У "
-"супротном поставка канала неће успети."
+"Релевантно само за Zammad инстанце које сами хостујете: проверите ваш FQDN у "
+"*Подешавања > Систем > Квалификовани назив домена* у Zammad интерфејсу "
+"администратора. Уколико није исправан, промените га сад. У супротном "
+"поставка канала неће успети."
 
-#: ../channels/microsoft365-graph/accounts.rst:13
+#: ../channels/microsoft365-graph/accounts.rst:14
 msgid ""
 "Go to *Channels > Microsoft 365 Graph Email* and click on **Connect "
 "Microsoft 365 App**. Copy the provided callback URL."
@@ -5150,7 +5183,7 @@ msgstr ""
 "Идите на *Канали > Microsoft 365 Graph имејл* и кликните на **Повежи "
 "Microsoft 365 апликацију**. Ископирајте наведени URL повратног позива."
 
-#: ../channels/microsoft365-graph/accounts.rst:19
+#: ../channels/microsoft365-graph/accounts.rst:20
 msgid ""
 "Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ "
 "and log in as an administrator (at least application administrator "
@@ -5160,8 +5193,8 @@ msgstr ""
 "и пријавите се као администратор (или са одговарајућим дозволама "
 "администратора апликација)."
 
-#: ../channels/microsoft365-graph/accounts.rst:24
-#: ../channels/microsoft365/accounts/register-app.rst:33
+#: ../channels/microsoft365-graph/accounts.rst:25
+#: ../channels/microsoft365/accounts/register-app.rst:34
 #: ../settings/security/third-party/facebook.rst:None
 msgid "Create App"
 msgstr "Create App"
@@ -5173,8 +5206,8 @@ msgid ""
 msgstr ""
 "Снимак екрана који Entra admin center са страницом регистрације апликација."
 
-#: ../channels/microsoft365-graph/accounts.rst:30
-#: ../channels/microsoft365/accounts/register-app.rst:39
+#: ../channels/microsoft365-graph/accounts.rst:31
+#: ../channels/microsoft365/accounts/register-app.rst:40
 msgid ""
 "Create a new app by going to *Applications > App registrations* and select "
 "**New registration**."
@@ -5182,24 +5215,24 @@ msgstr ""
 "Креирајте нову апликацију преко *Applications > App registrations* и "
 "одаберите **New registration**."
 
-#: ../channels/microsoft365-graph/accounts.rst:32
-#: ../channels/microsoft365/accounts/register-app.rst:41
+#: ../channels/microsoft365-graph/accounts.rst:33
+#: ../channels/microsoft365/accounts/register-app.rst:42
 msgid "Enter a fitting name and select an account type. Supported types are:"
 msgstr ""
 "Унесите одговарајући назив и изаберите врсту налога. Подржане врсте су:"
 
-#: ../channels/microsoft365-graph/accounts.rst:34
-#: ../channels/microsoft365/accounts/register-app.rst:43
+#: ../channels/microsoft365-graph/accounts.rst:35
+#: ../channels/microsoft365/accounts/register-app.rst:44
 msgid "Accounts in this organizational directory only (Single tenant)"
 msgstr "Налози само у овом организационом директоријуму (један корисник)"
 
-#: ../channels/microsoft365-graph/accounts.rst:35
-#: ../channels/microsoft365/accounts/register-app.rst:44
+#: ../channels/microsoft365-graph/accounts.rst:36
+#: ../channels/microsoft365/accounts/register-app.rst:45
 msgid "Accounts in any organizational directory (Multitenant)"
 msgstr "Налози у било ком организационом директоријуму (више корисника)"
 
-#: ../channels/microsoft365-graph/accounts.rst:37
-#: ../channels/microsoft365/accounts/register-app.rst:50
+#: ../channels/microsoft365-graph/accounts.rst:38
+#: ../channels/microsoft365/accounts/register-app.rst:51
 msgid ""
 "Under \"Redirect URI\", select \"Web\" as platform and paste your already "
 "copied callback URL from Zammad."
@@ -5207,8 +5240,8 @@ msgstr ""
 "Под „Redirect URI” одаберите „Web” као платформу и налепите ваш већ "
 "ископирани URL повратног позива."
 
-#: ../channels/microsoft365-graph/accounts.rst:39
-#: ../channels/microsoft365/accounts/register-app.rst:52
+#: ../channels/microsoft365-graph/accounts.rst:40
+#: ../channels/microsoft365/accounts/register-app.rst:53
 msgid "Click on **Register**."
 msgstr "Кликните на **Register**."
 
@@ -5217,7 +5250,7 @@ msgid "Screenshot shows Entra admin center with application overview screen."
 msgstr ""
 "Снимак екрана који приказује Entra admin center са прегледом апликација."
 
-#: ../channels/microsoft365-graph/accounts.rst:46
+#: ../channels/microsoft365-graph/accounts.rst:47
 msgid ""
 "In the overview screen, copy the \"Application (client) ID\", switch to "
 "Zammad and paste it in the \"Client ID\" field in the pop up."
@@ -5225,7 +5258,7 @@ msgstr ""
 "Из прегледа ископирајте „Application (client) ID”, пребаците се у Zammad и "
 "налепите га у поље „Клијент ID” у дијалогу."
 
-#: ../channels/microsoft365-graph/accounts.rst:48
+#: ../channels/microsoft365-graph/accounts.rst:49
 msgid ""
 "Only required for single tenant setup: copy the \"Directory (tenant) ID\" "
 "and paste it in the \"Tenant UUID/Name\" field in Zammad."
@@ -5234,8 +5267,8 @@ msgstr ""
 "(tenant) ID” и налепите га у „UUID/назив корисника апликације” поље у Zammad-"
 "у."
 
-#: ../channels/microsoft365-graph/accounts.rst:52
-#: ../channels/microsoft365/accounts/register-app.rst:55
+#: ../channels/microsoft365-graph/accounts.rst:53
+#: ../channels/microsoft365/accounts/register-app.rst:56
 msgid "Create Secret"
 msgstr "Креирајте шифру"
 
@@ -5244,8 +5277,8 @@ msgstr "Креирајте шифру"
 msgid "Screenshot shows Entra admin center with client secret screen."
 msgstr "Снимак екрана који приказује Entra admin center са клијентском шифром."
 
-#: ../channels/microsoft365-graph/accounts.rst:58
-#: ../channels/microsoft365/accounts/register-app.rst:61
+#: ../channels/microsoft365-graph/accounts.rst:59
+#: ../channels/microsoft365/accounts/register-app.rst:62
 msgid ""
 "In Entra, go to \"Certificates & secrets\" and add a secret by clicking the "
 "**New client secret** button."
@@ -5253,22 +5286,30 @@ msgstr ""
 "У Entra-и, идите на „Certificates & secrets” и додајте шифру кликом на дугме "
 "**New client secret**."
 
-#: ../channels/microsoft365-graph/accounts.rst:60
-#: ../channels/microsoft365/accounts/register-app.rst:63
+#: ../channels/microsoft365-graph/accounts.rst:61
+#: ../channels/microsoft365/accounts/register-app.rst:64
 msgid "Enter a description, set an expiry duration and click **Add**."
 msgstr "Унесите опис, одаберите истек и кликните на **Add**."
 
-#: ../channels/microsoft365-graph/accounts.rst:61
-#: ../channels/microsoft365/accounts/register-app.rst:64
+#: ../channels/microsoft365-graph/accounts.rst:62
+#: ../channels/microsoft365/accounts/register-app.rst:65
 msgid ""
-"Copy the string under \"Value\" (not the \"Secret ID\"!), this is the "
-"secret. Paste it to Zammad in the \"Client Secret\" field."
+"Copy the string under \"Value\", this is the secret. Paste it to Zammad in "
+"the \"Client Secret\" field."
 msgstr ""
-"Ископирајте низ текста под „Value” (не под „Secret ID”!), ово је ваша шифра. "
-"Налепите је у Zammad-у у поље „Клијентска шифра”."
+"Ископирајте вредност испод „Value”, ово је ваша шифра. Налепите је у Zammad-"
+"у у поље „Клијентска шифра”."
 
-#: ../channels/microsoft365-graph/accounts.rst:65
-#: ../channels/microsoft365/accounts/register-app.rst:68
+#: ../channels/microsoft365-graph/accounts.rst:66
+#: ../channels/microsoft365/accounts/register-app.rst:69
+msgid ""
+"Make sure to copy the **value**, not the ID. Otherwise your setup fails."
+msgstr ""
+"Обратите пажњу да ископирате **вредност**, не ID. У супротном ваша поставка "
+"неће успети."
+
+#: ../channels/microsoft365-graph/accounts.rst:69
+#: ../channels/microsoft365/accounts/register-app.rst:72
 msgid "Configure API Permissions"
 msgstr "Подешавање API дозвола"
 
@@ -5277,63 +5318,63 @@ msgstr "Подешавање API дозвола"
 msgid "Screenshot shows Entra admin center with api permission screen."
 msgstr "Снимак екрана приказује Entra admin center са API дозволама."
 
-#: ../channels/microsoft365-graph/accounts.rst:71
-#: ../channels/microsoft365/accounts/register-app.rst:74
+#: ../channels/microsoft365-graph/accounts.rst:75
+#: ../channels/microsoft365/accounts/register-app.rst:78
 msgid "Go to \"API permissions\" and **Add a permission**."
 msgstr "Идите на „API permissions” и кликните на **Add a permission**."
 
-#: ../channels/microsoft365-graph/accounts.rst:72
-#: ../channels/microsoft365/accounts/register-app.rst:75
+#: ../channels/microsoft365-graph/accounts.rst:76
+#: ../channels/microsoft365/accounts/register-app.rst:79
 msgid "Select \"Microsoft Graph\" and \"Delegated permissions\"."
 msgstr "Одаберите „Microsoft Graph” и „Delegated permissions”."
 
-#: ../channels/microsoft365-graph/accounts.rst:73
-#: ../channels/microsoft365/accounts/register-app.rst:76
+#: ../channels/microsoft365-graph/accounts.rst:77
+#: ../channels/microsoft365/accounts/register-app.rst:80
 msgid "Add the following permissions:"
 msgstr "Додајте следеће дозволе:"
 
-#: ../channels/microsoft365-graph/accounts.rst:75
-#: ../channels/microsoft365/accounts/register-app.rst:81
+#: ../channels/microsoft365-graph/accounts.rst:79
+#: ../channels/microsoft365/accounts/register-app.rst:85
 msgid "``offline_access``"
 msgstr "``offline_access``"
 
-#: ../channels/microsoft365-graph/accounts.rst:76
-#: ../channels/microsoft365/accounts/register-app.rst:79
+#: ../channels/microsoft365-graph/accounts.rst:80
+#: ../channels/microsoft365/accounts/register-app.rst:83
 #: ../settings/security/third-party/microsoft.rst:66
 msgid "``openid``"
 msgstr "``openid``"
 
-#: ../channels/microsoft365-graph/accounts.rst:77
-#: ../channels/microsoft365/accounts/register-app.rst:80
+#: ../channels/microsoft365-graph/accounts.rst:81
+#: ../channels/microsoft365/accounts/register-app.rst:84
 msgid "``profile``"
 msgstr "``profile``"
 
-#: ../channels/microsoft365-graph/accounts.rst:78
+#: ../channels/microsoft365-graph/accounts.rst:82
 msgid "``Mail.ReadWrite``"
 msgstr "``Mail.ReadWrite``"
 
-#: ../channels/microsoft365-graph/accounts.rst:79
+#: ../channels/microsoft365-graph/accounts.rst:83
 msgid "``Mail.Send``"
 msgstr "``Mail.Send``"
 
-#: ../channels/microsoft365-graph/accounts.rst:80
+#: ../channels/microsoft365-graph/accounts.rst:84
 msgid "``Mail.ReadWrite.Shared``"
 msgstr "``Mail.ReadWrite.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:81
+#: ../channels/microsoft365-graph/accounts.rst:85
 msgid "``Mail.Send.Shared``"
 msgstr "``Mail.Send.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:83
-#: ../channels/microsoft365/accounts/register-app.rst:85
+#: ../channels/microsoft365-graph/accounts.rst:87
+#: ../channels/microsoft365/accounts/register-app.rst:89
 msgid "Save it by clicking the **Add permissions** button."
 msgstr "Снимите их кликом на дугме **Add permissions**."
 
-#: ../channels/microsoft365-graph/accounts.rst:86
+#: ../channels/microsoft365-graph/accounts.rst:90
 msgid "Additional Steps for Shared Mailboxes"
 msgstr "Додатни кораци за заједничке поштанске сандучиће"
 
-#: ../channels/microsoft365-graph/accounts.rst:88
+#: ../channels/microsoft365-graph/accounts.rst:92
 msgid ""
 "If you want to fetch email from a shared mailbox, you have to perform "
 "additional steps:"
@@ -5341,7 +5382,7 @@ msgstr ""
 "Уколико желите да преузимате имејл из заједничког поштанског сандучића, "
 "морате да обавите додатне кораке:"
 
-#: ../channels/microsoft365-graph/accounts.rst:91
+#: ../channels/microsoft365-graph/accounts.rst:95
 msgid ""
 "Log in to the `Exchange admin center <https://"
 "admin.exchange.microsoft.com>`_."
@@ -5349,7 +5390,7 @@ msgstr ""
 "Пријавите се у `Exchange admin center <https://"
 "admin.exchange.microsoft.com>`_."
 
-#: ../channels/microsoft365-graph/accounts.rst:92
+#: ../channels/microsoft365-graph/accounts.rst:96
 msgid ""
 "Go to *Recipients > Mailboxes*, select the mailbox and click on **Mailboxes "
 "delegation**."
@@ -5357,7 +5398,7 @@ msgstr ""
 "Идите на *Recipients > Mailboxes*, одаберите сандуче и кликните на "
 "**Mailboxes delegation**."
 
-#: ../channels/microsoft365-graph/accounts.rst:94
+#: ../channels/microsoft365-graph/accounts.rst:98
 msgid ""
 "Under \"Send as\", click on **Edit** and **Add members**. Search and select "
 "the user from which you want to access the mailbox and **Save** it."
@@ -5366,16 +5407,16 @@ msgstr ""
 "одаберите корисника под којим желите да приступите сандучету и кликните на "
 "**Save** ."
 
-#: ../channels/microsoft365-graph/accounts.rst:96
+#: ../channels/microsoft365-graph/accounts.rst:100
 msgid "Do the same for \"Read and manage (Full Access)\"."
 msgstr "Одрадите исте кораке за „Read and manage (Full Access)”."
 
-#: ../channels/microsoft365-graph/accounts.rst:99
+#: ../channels/microsoft365-graph/accounts.rst:103
 msgid "Configure the Channel in Zammad"
 msgstr "Подешавање канала у Zammad-у"
 
-#: ../channels/microsoft365-graph/accounts.rst:102
-#: ../channels/microsoft365/accounts/register-app.rst:140
+#: ../channels/microsoft365-graph/accounts.rst:106
+#: ../channels/microsoft365/accounts/register-app.rst:144
 msgid "App Configuration"
 msgstr "Подешавање апликације"
 
@@ -5383,7 +5424,7 @@ msgstr "Подешавање апликације"
 msgid "Screenshot shows Zammad's app configuration dialog."
 msgstr "Снимак екрана који приказује Zammad дијалог подешавања апликације."
 
-#: ../channels/microsoft365-graph/accounts.rst:108
+#: ../channels/microsoft365-graph/accounts.rst:112
 msgid ""
 "If you followed this guide, you already should have pasted your app "
 "information. If not, here is a short summary:"
@@ -5391,40 +5432,40 @@ msgstr ""
 "Уколико сте пратили овај водич, већ би требало да сте налепили информације о "
 "апликацији. Уколико нисте, ево кратког прегледа:"
 
-#: ../channels/microsoft365-graph/accounts.rst:111
-#: ../channels/microsoft365/accounts/register-app.rst:146
+#: ../channels/microsoft365-graph/accounts.rst:115
+#: ../channels/microsoft365/accounts/register-app.rst:150
 msgid "In Zammad's channel configuration, click on **Configure App**."
 msgstr "У Zammad-овом подешавању канала, кликните на **Подеси апликацију**."
 
-#: ../channels/microsoft365-graph/accounts.rst:112
-#: ../channels/microsoft365/accounts/register-app.rst:147
+#: ../channels/microsoft365-graph/accounts.rst:116
+#: ../channels/microsoft365/accounts/register-app.rst:151
 msgid "Enter your app details:"
 msgstr "Унесите детаље ваше апликације:"
 
-#: ../channels/microsoft365-graph/accounts.rst:114
-#: ../channels/microsoft365/accounts/register-app.rst:149
+#: ../channels/microsoft365-graph/accounts.rst:118
+#: ../channels/microsoft365/accounts/register-app.rst:153
 msgid "Client ID: *Application (client) ID*"
 msgstr "Kлијент ID: *Application (client) ID*"
 
-#: ../channels/microsoft365-graph/accounts.rst:115
-#: ../channels/microsoft365/accounts/register-app.rst:150
+#: ../channels/microsoft365-graph/accounts.rst:119
+#: ../channels/microsoft365/accounts/register-app.rst:154
 msgid "Client Secret: *Value* (not the \"Secret ID\"!) from client secret"
 msgstr "Клијентска шифра: *Value* (не „Secret ID”!) од клијентске шифре"
 
-#: ../channels/microsoft365-graph/accounts.rst:116
-#: ../channels/microsoft365/accounts/register-app.rst:151
+#: ../channels/microsoft365-graph/accounts.rst:120
+#: ../channels/microsoft365/accounts/register-app.rst:155
 msgid ""
 "Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)"
 msgstr ""
 "UUID/назив корисника апликације: *Directory (tenant) ID* (није обавезно за "
 "заједничке поштанске сандучиће)"
 
-#: ../channels/microsoft365-graph/accounts.rst:117
-#: ../channels/microsoft365/accounts/register-app.rst:152
+#: ../channels/microsoft365-graph/accounts.rst:121
+#: ../channels/microsoft365/accounts/register-app.rst:156
 msgid "Click on **Submit**."
 msgstr "Кликните на **Пошаљи**."
 
-#: ../channels/microsoft365-graph/accounts.rst:122
+#: ../channels/microsoft365-graph/accounts.rst:126
 msgid ""
 "Now you can add your account to Zammad. Do so by clicking the **Add "
 "account** button in the top right corner. Select the correct mailbox type. "
@@ -5444,7 +5485,7 @@ msgstr ""
 msgid "Screenshot shows Zammad's dialog for account configuration."
 msgstr "Снимак екрана који приказује Zammad дијалог подешавања налога."
 
-#: ../channels/microsoft365-graph/accounts.rst:132
+#: ../channels/microsoft365-graph/accounts.rst:136
 msgid ""
 "After that, Zammad will ask you to assign a destination group. Select a "
 "group which should (initially) handle the incoming tickets of this channel. "
@@ -5457,7 +5498,7 @@ msgstr ""
 "можете одлучити да ли имејл адреса треба да буде додељена одабраној групи за "
 "одлазну пошту (*Одредишна група > Имејл адреса за слање*). Изаберите између:"
 
-#: ../channels/microsoft365-graph/accounts.rst:138
+#: ../channels/microsoft365-graph/accounts.rst:142
 msgid ""
 "**Change to ...** to add this email address to the group for outgoing "
 "emails. This may overwrite an already assigned email address."
@@ -5465,7 +5506,7 @@ msgstr ""
 "**Измени на ...** за доделу ове имејл адресе групи за одлазну пошту. Ово "
 "може преиначити већ додељену имејл адресу."
 
-#: ../channels/microsoft365-graph/accounts.rst:141
+#: ../channels/microsoft365-graph/accounts.rst:145
 msgid ""
 "**Do not change email address** if you don't want assign an email address to "
 "the group or change it. If the group has no assigned email address, it stays "
@@ -5475,7 +5516,7 @@ msgstr ""
 "или да је измените. Уколико група нема додељену имејл адресу, остаје празна. "
 "Уколико група већ има додељену имејл адресу, остаје иста."
 
-#: ../channels/microsoft365-graph/accounts.rst:145
+#: ../channels/microsoft365-graph/accounts.rst:149
 msgid ""
 "You can also specify a folder from which Zammad should fetch emails from. If "
 "you do so, make sure that the emails are routed to this folder somehow. "
@@ -5489,7 +5530,7 @@ msgstr ""
 "за преузимање свих имејл порука из сандучета. Након тога, одлучите да ли се "
 "преузете поруке чувају на серверу или не."
 
-#: ../channels/microsoft365-graph/accounts.rst:151
+#: ../channels/microsoft365-graph/accounts.rst:155
 msgid ""
 "Depending if there are already email messages in this account, the archive "
 "mode dialog may be shown."
@@ -5497,7 +5538,7 @@ msgstr ""
 "У зависности од тога да ли већ постоје имејл поруке у овом сандучету, биће "
 "приказан дијалог архивског режима."
 
-#: ../channels/microsoft365-graph/accounts.rst:156
+#: ../channels/microsoft365-graph/accounts.rst:160
 msgid ""
 "Now your channel is ready and can be used! If something doesn't work, have a "
 "look at the :doc:`common errors section <common-errors>`, where you can find "
@@ -5507,7 +5548,7 @@ msgstr ""
 "како треба, погледајте у :doc:`одељку о уобичајеним грешкама <common-"
 "errors>`, где можете пронаћи детаље у вези неисправне M365 конфигурације."
 
-#: ../channels/microsoft365-graph/accounts.rst:160
+#: ../channels/microsoft365-graph/accounts.rst:164
 #: ../channels/microsoft365/accounts.rst:39
 msgid ""
 "🤔 **How do I use my Microsoft 365 account for outgoing system notifications?"
@@ -5516,7 +5557,7 @@ msgstr ""
 "🤔 **Како да користим свој Microsoft 365 налог за одлазна системска "
 "обавештења?**"
 
-#: ../channels/microsoft365-graph/accounts.rst:162
+#: ../channels/microsoft365-graph/accounts.rst:166
 #: ../channels/microsoft365/accounts.rst:41
 msgid ""
 "On **subscription/cloud-hosted instances**, you can't. Notifications will "
@@ -5525,7 +5566,7 @@ msgstr ""
 "На **хостованим инстанцама које се плаћају**, не можете. Обавештења ће увек "
 "долазити од „Notification Master <noreply\\@your.zammad.domain>“."
 
-#: ../channels/microsoft365-graph/accounts.rst:166
+#: ../channels/microsoft365-graph/accounts.rst:170
 #: ../channels/microsoft365/accounts.rst:45
 msgid ""
 "On **self-hosted instances**, we still don't recommend it. Using a Microsoft "
@@ -5542,7 +5583,7 @@ msgstr ""
 "exchange-online-limits#receiving-and-sending-limits>`_ могу бити "
 "суспендовани."
 
-#: ../channels/microsoft365-graph/accounts.rst:172
+#: ../channels/microsoft365-graph/accounts.rst:176
 #: ../channels/microsoft365/accounts.rst:51
 msgid ""
 "Set up a generic :doc:`email channel </channels/email/index>` instead, then "
@@ -5551,11 +5592,11 @@ msgstr ""
 "Подесите генерички :doc:`имејл канал </channels/email/index>` уместо тога, "
 "користите подешавање :ref:`имејл обавештења <email-notification>`."
 
-#: ../channels/microsoft365-graph/accounts.rst:176
+#: ../channels/microsoft365-graph/accounts.rst:180
 msgid "Using Aliases"
 msgstr "Коришћење алијаса"
 
-#: ../channels/microsoft365-graph/accounts.rst:178
+#: ../channels/microsoft365-graph/accounts.rst:182
 msgid ""
 "In case you want to use secondary addresses (aliases), make sure to add the "
 "aliases to the desired mailbox first. You can find additional information in "
@@ -5565,14 +5606,14 @@ msgstr ""
 "прво додајте жељеном поштанском сандучету. Додатне информације можете наћи у "
 "Microsoft документацији:"
 
-#: ../channels/microsoft365-graph/accounts.rst:182
+#: ../channels/microsoft365-graph/accounts.rst:186
 msgid ""
 "https://learn.microsoft.com/en-us/graph/outlook-send-mail-from-other-user"
 msgstr ""
 "https://learn.microsoft.com/sr-cyrl-rs/graph/outlook-send-mail-from-other-"
 "user"
 
-#: ../channels/microsoft365-graph/accounts.rst:183
+#: ../channels/microsoft365-graph/accounts.rst:187
 msgid ""
 "https://learn.microsoft.com/en-us/microsoft-365/admin/email/add-another-"
 "email-alias-for-a-user"
@@ -5580,7 +5621,7 @@ msgstr ""
 "https://learn.microsoft.com/sr-cyrl-rs/microsoft-365/admin/email/add-another-"
 "email-alias-for-a-user"
 
-#: ../channels/microsoft365-graph/accounts.rst:185
+#: ../channels/microsoft365-graph/accounts.rst:189
 msgid ""
 "To add an alias, click on ``+ Add`` in the **Email Address** section and "
 "provide the requested information. It works the same way as for other email "
@@ -5594,11 +5635,11 @@ msgstr ""
 "имејл канала</channels/email/accounts/secondary-addresses>` за више "
 "информација."
 
-#: ../channels/microsoft365-graph/accounts.rst:192
+#: ../channels/microsoft365-graph/accounts.rst:196
 msgid "Re-Authenticate"
 msgstr "Реаутентификација"
 
-#: ../channels/microsoft365-graph/accounts.rst:194
+#: ../channels/microsoft365-graph/accounts.rst:198
 msgid ""
 "If your token got invalid, you have to replace the token due to other "
 "reasons, you want to use a shared mailbox with another user, you can use the "
@@ -5608,7 +5649,7 @@ msgstr ""
 "или желите да преузимате из заједничког поштанског сандучета под другим "
 "корисником, можете користити дугме **Реаутентификација**."
 
-#: ../channels/microsoft365-graph/accounts.rst:198
+#: ../channels/microsoft365-graph/accounts.rst:202
 msgid ""
 "In case you are using an user mailbox, the new user has to match the "
 "existing one, otherwise it will result in a user mismatch error. In this "
@@ -5618,12 +5659,12 @@ msgstr ""
 "се поклапа са постојећим, у супротном ће резултирати у грешци. У овом "
 "случају, требало би да уклоните постојећи канал и додате нови налог."
 
-#: ../channels/microsoft365-graph/accounts.rst:203
+#: ../channels/microsoft365-graph/accounts.rst:207
 #: ../channels/microsoft365/common-errors.rst:71
 msgid "Request Admin Consent"
 msgstr "Захтев за сагласност администратора"
 
-#: ../channels/microsoft365-graph/accounts.rst:205
+#: ../channels/microsoft365-graph/accounts.rst:209
 msgid ""
 "It is possible to request the permissions via admin consent. In this case "
 "Zammad will request necessary permissions for you from your admin, and then "
@@ -6335,7 +6376,7 @@ msgstr ""
 msgid "Preparation"
 msgstr "Припрема"
 
-#: ../channels/microsoft365/accounts/register-app.rst:21
+#: ../channels/microsoft365/accounts/register-app.rst:22
 msgid ""
 "Go to *Channels > Microsoft 365 IMAP Email* and click on **Connect Microsoft "
 "365 App**. Copy the provided callback URL."
@@ -6343,11 +6384,11 @@ msgstr ""
 "Идите на *Канали > Microsoft 365 IMAP имејл* и кликните на **Повежи "
 "Microsoft 365 апликацију**. Ископирајте наведени URL повратног позива."
 
-#: ../channels/microsoft365/accounts/register-app.rst:25
+#: ../channels/microsoft365/accounts/register-app.rst:26
 msgid "Step-by-Step"
 msgstr "Корак по корак"
 
-#: ../channels/microsoft365/accounts/register-app.rst:27
+#: ../channels/microsoft365/accounts/register-app.rst:28
 msgid ""
 "To get started, head over to `Microsoft's Entra Portal <https://"
 "entra.microsoft.com>`_. Make sure to use an admin account for your "
@@ -6359,7 +6400,7 @@ msgstr ""
 "своје организације. У супротном, администратор ће морати да одобри ваше "
 "промене пре него што буду уважене."
 
-#: ../channels/microsoft365/accounts/register-app.rst:45
+#: ../channels/microsoft365/accounts/register-app.rst:46
 msgid ""
 "Accounts in any organizational directory (Multitenant) and personal "
 "Microsoft accounts (e.g. Skype, Xbox)"
@@ -6367,29 +6408,29 @@ msgstr ""
 "Налози у било ком организационом директоријуму (за више корисника) и лични "
 "Microsoft налози (нпр. Skype, Xbox)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:48
+#: ../channels/microsoft365/accounts/register-app.rst:49
 msgid "\"Personal Microsoft accounts only\" are not supported."
 msgstr "„Само лични Microsoft налози“ нису подржани."
 
-#: ../channels/microsoft365/accounts/register-app.rst:78
+#: ../channels/microsoft365/accounts/register-app.rst:82
 #: ../settings/security/third-party/saml/saml-keycloak.rst:23
 #: ../settings/security/third-party/saml/saml-keycloak.rst:29
 msgid "``email``"
 msgstr "``email``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:82
+#: ../channels/microsoft365/accounts/register-app.rst:86
 msgid "``IMAP.AccessAsUser.all``"
 msgstr "``IMAP.AccessAsUser.all``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:83
+#: ../channels/microsoft365/accounts/register-app.rst:87
 msgid "``SMTP.Send``"
 msgstr "``SMTP.Send``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:88
+#: ../channels/microsoft365/accounts/register-app.rst:92
 msgid "Admin Consent (optional)"
 msgstr "Сагласност администратора (необавезно)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:92
+#: ../channels/microsoft365/accounts/register-app.rst:96
 msgid ""
 "This step is only required for tenants that require admin consent. Admin "
 "consent adds another layer of security for your tenants users and allows "
@@ -6400,7 +6441,7 @@ msgstr ""
 "за ваше кориснике и омогућава администраторима да дефинишу ко може да дели "
 "информације о корисницима."
 
-#: ../channels/microsoft365/accounts/register-app.rst:96
+#: ../channels/microsoft365/accounts/register-app.rst:100
 msgid ""
 "Within *Enterprise applications* select your app. When creating an app "
 "within *App registrations*, Microsoft will automatically also create an "
@@ -6410,7 +6451,7 @@ msgstr ""
 "апликацију у оквиру *App registrations*, Microsoft ће аутоматски креирати и "
 "пословну апликацију за вас."
 
-#: ../channels/microsoft365/accounts/register-app.rst:100
+#: ../channels/microsoft365/accounts/register-app.rst:104
 msgid ""
 "Set *Assignment required* to ``Yes`` within the apps properties and hit "
 "*Save*. This generally activates your app requesting admin consent already."
@@ -6423,11 +6464,11 @@ msgstr ""
 msgid "Screenshot showing enabled assignment requirement"
 msgstr "Снимак екрана који приказује омогућавање захтева за доделу"
 
-#: ../channels/microsoft365/accounts/register-app.rst:108
+#: ../channels/microsoft365/accounts/register-app.rst:112
 msgid "Tightening your App (recommended, optional)"
 msgstr "Пооштравање безбедности ваше апликације (препоручено, необавезно)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:110
+#: ../channels/microsoft365/accounts/register-app.rst:114
 msgid ""
 "This step will protect your tenant users from -to admins- unwanted "
 "permission changes (e.g. requesting more permissions than originally noted)."
@@ -6435,7 +6476,7 @@ msgstr ""
 "Овај корак ће заштитити кориснике од нежељених промена дозвола за "
 "администраторе (нпр. захтевање више дозвола него што је првобитно наведено)."
 
-#: ../channels/microsoft365/accounts/register-app.rst:114
+#: ../channels/microsoft365/accounts/register-app.rst:118
 msgid ""
 "It also has another benefit: You can add the email account in question "
 "immediately without any administrator being forced to step in manually."
@@ -6443,7 +6484,7 @@ msgstr ""
 "Такође има још једну предност: можете одмах додати дотични имејл налог без "
 "да било који администратор буде приморан да се умешта."
 
-#: ../channels/microsoft365/accounts/register-app.rst:118
+#: ../channels/microsoft365/accounts/register-app.rst:122
 msgid ""
 "Still within *Enterprise applications* select *Users and groups*. In this "
 "section you can select specific users and / or groups (users must be direct "
@@ -6454,7 +6495,7 @@ msgstr ""
 "морају бити директни чланови!) којима је дозвољено да користе вашу "
 "апликацију за додавање поштанских сандучића у Zammad."
 
-#: ../channels/microsoft365/accounts/register-app.rst:123
+#: ../channels/microsoft365/accounts/register-app.rst:127
 msgid ""
 "After adding users and groups, go back to the Azure portals home and select "
 "*App registrations*. Within your desired app go to *API permissions* and use "
@@ -6467,7 +6508,7 @@ msgstr ""
 "да бисте генерално дозволили повезивање корисника за које сте претходно дали "
 "сагласност."
 
-#: ../channels/microsoft365/accounts/register-app.rst:130
+#: ../channels/microsoft365/accounts/register-app.rst:134
 msgid ""
 "Not adding users / groups nor providing the granted admin consent right away "
 "will cause Microsoft to enforce at least the first user to be requested to "
@@ -6479,7 +6520,7 @@ msgstr ""
 "затражено да наведе разлог за захтев за сагласност. Након тога ће Microsoft "
 "аутоматски дати сагласност вашем кориснику."
 
-#: ../channels/microsoft365/accounts/register-app.rst:135
+#: ../channels/microsoft365/accounts/register-app.rst:139
 msgid ""
 "Administrative accounts can also use the option *Consent on behalf of your "
 "organization* in above mentioned permission dialogue."
@@ -6491,7 +6532,7 @@ msgstr ""
 msgid "Screenshot showing popup about connecting app"
 msgstr "Снимак екрана који приказује дијалог повезивања апликације"
 
-#: ../channels/microsoft365/accounts/register-app.rst:155
+#: ../channels/microsoft365/accounts/register-app.rst:159
 msgid ""
 "🍾 Congratulations! Now you're ready to connect Microsoft 365 accounts to "
 "Zammad."
@@ -8134,7 +8175,7 @@ msgstr "API (системска документација)"
 msgid "System"
 msgstr "Систем"
 
-#: ../index.rst:96
+#: ../index.rst:96 ../manage/roles/permissions.rst:291
 msgid "Misc"
 msgstr "Остало"
 
@@ -8373,7 +8414,8 @@ msgstr ""
 "приступити задацима или њиховом стању са других места у Zammad-у као што су "
 "окидачи или радни токови."
 
-#: ../manage/groups/access-levels.rst:2 ../manage/users/index.rst:172
+#: ../manage/groups/access-levels.rst:2 ../manage/roles/index.rst:61
+#: ../manage/users/index.rst:172
 msgid "Group Permissions"
 msgstr "Групне дозволе"
 
@@ -8562,7 +8604,7 @@ msgstr ""
 "свим оператерима. Осим ако немате посебне потребе на уму, ово је права ствар "
 "за вас."
 
-#: ../manage/groups/access-levels.rst:100
+#: ../manage/groups/access-levels.rst:101
 msgid "“The Supervisor”"
 msgstr "„Шеф”"
 
@@ -8575,15 +8617,17 @@ msgstr ""
 
 #: ../manage/groups/access-levels.rst:98
 msgid ""
-"Agents with all permissions except for “full” **cannot be assigned "
-"tickets**. Otherwise, their privileges are identical to agents with “full” "
-"access. Great for letting other people do the real work."
+"Agents with all permissions except for “full” **cannot be assigned tickets** "
+"and don't receive notifications (unless they are subscribed to or mentioned "
+"in the ticket). Otherwise, their privileges are identical to agents with "
+"“full” access. Great for letting other people do the real work."
 msgstr ""
-"Оператерима са свим дозволама осим „све“ **не могу бити додељени тикети**. "
-"Иначе, њихове привилегије су идентичне оператерима са пуним приступом. "
-"Одлично је за пуштање других људи да раде на прави начин."
+"Оператерима са свим дозволама осим „све“ **не могу бити додељени тикети** и "
+"не могу примати обавештења (осим уколико су претплаћени или поменути у "
+"тикету). Иначе, њихове привилегије су идентичне оператерима са пуним "
+"приступом. Одлично је за пуштање других људи да раде на прави начин."
 
-#: ../manage/groups/access-levels.rst:110
+#: ../manage/groups/access-levels.rst:111
 msgid "“The Meddler”"
 msgstr "„Мирођија“"
 
@@ -8592,7 +8636,7 @@ msgid ""
 "The group permission table, checked \"Read\", \"Change\", and \"Overview"
 msgstr "Табела групних дозвола означена са „читање“, „измена“ и „преглед“"
 
-#: ../manage/groups/access-levels.rst:108
+#: ../manage/groups/access-levels.rst:109
 msgid ""
 "Agents with “read”, “change”, and “overview” access can do everything except "
 "create tickets or be assigned to them. Great for getting involved in other "
@@ -8602,7 +8646,7 @@ msgstr ""
 "да отварају тикете или да им буду додељени. Одлично за мешање у послове "
 "других људи."
 
-#: ../manage/groups/access-levels.rst:119
+#: ../manage/groups/access-levels.rst:120
 msgid "“The Intern”"
 msgstr "„Приправник“"
 
@@ -8610,7 +8654,7 @@ msgstr "„Приправник“"
 msgid "The group permission table, checked \"Create\""
 msgstr "Табела групних дозвола означена са „додавање“"
 
-#: ../manage/groups/access-levels.rst:118
+#: ../manage/groups/access-levels.rst:119
 msgid ""
 "Agents with only “create” permission can do just that, and nothing else—once "
 "they hit **Save**, they'll never see that ticket again. Great for taking "
@@ -9447,7 +9491,8 @@ msgstr ""
 "објављивање без брисања њеног садржаја, једноставно је искључите преко "
 "дугмета при врху прозора."
 
-#: ../manage/knowledge-base.rst:201
+#: ../manage/knowledge-base.rst:201 ../manage/roles/index.rst:39
+#: ../manage/roles/permissions.rst:2
 msgid "Permissions"
 msgstr "Дозволе"
 
@@ -9643,15 +9688,19 @@ msgstr "подешавање атрибута тикета (приоритет, 
 msgid "add new notes to a ticket"
 msgstr "додавање нових напомена у тикет"
 
-#: ../manage/macros/how-do-they-work.rst:24
+#: ../manage/macros/how-do-they-work.rst:23
+msgid "run an :doc:`AI agent </ai/ai-agents>`"
+msgstr "извршавање :doc:`AI агента </ai/ai-agents>`"
+
+#: ../manage/macros/how-do-they-work.rst:25
 msgid "There are **no** actions for:"
 msgstr "**Не постоје** радње за:"
 
-#: ../manage/macros/how-do-they-work.rst:26
+#: ../manage/macros/how-do-they-work.rst:27
 msgid "sending a reply to the customer"
 msgstr "слање одговора клијенту"
 
-#: ../manage/macros/how-do-they-work.rst:28
+#: ../manage/macros/how-do-they-work.rst:29
 msgid ""
 "Unlike triggers, the scheduler, and text modules, macro actions do **not** "
 "support the use of :doc:`/misc/variables`."
@@ -9659,7 +9708,7 @@ msgstr ""
 "За разлику од окидача, планера и текстуалних исечака, макро радње **не "
 "подржавају** употребу :doc:`/misc/variables`."
 
-#: ../manage/macros/how-do-they-work.rst:32
+#: ../manage/macros/how-do-they-work.rst:33
 msgid ""
 "If the ticket is missing a required attribute and the macro doesn't set it, "
 "then **no actions will be applied**."
@@ -9671,7 +9720,7 @@ msgstr ""
 msgid "Once completed..."
 msgstr "Када се заврши…"
 
-#: ../manage/macros/how-do-they-work.rst:37
+#: ../manage/macros/how-do-they-work.rst:38
 msgid ""
 "After running this macro, should Zammad remain on the current tab, close it, "
 "or automatically switch to the next ticket? (Does not apply when running "
@@ -9681,7 +9730,7 @@ msgstr ""
 "прозору, затвори га или аутоматски пређе на следећи тикет? (Не примењује се "
 "када се макрои покрећу „масовном радњом“.)"
 
-#: ../manage/macros/how-do-they-work.rst:42
+#: ../manage/macros/how-do-they-work.rst:43
 msgid ""
 "What should other Zammad admins know about this macro? (Visible only via the "
 "\"Edit: Macro\" dialog, Rails console, and API.)"
@@ -9689,20 +9738,20 @@ msgstr ""
 "Шта други Zammad администратори треба да знају о овом макроу? (Видљиво само "
 "преко дијалога „Измена: Макро“, Rails конзоле и API-ја.)"
 
-#: ../manage/macros/how-do-they-work.rst:46
+#: ../manage/macros/how-do-they-work.rst:47
 msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
 msgstr ""
 "Који :doc:`групе </manage/groups/index>` смеју да виде/користе овај макро?"
 
-#: ../manage/macros/how-do-they-work.rst:49
+#: ../manage/macros/how-do-they-work.rst:50
 msgid "Choose \"inactive\" to disable this macro without deleting it."
 msgstr "Изаберите „искључено“ да бисте онемогућили овај макро без брисања."
 
-#: ../manage/macros/how-do-they-work.rst:52
+#: ../manage/macros/how-do-they-work.rst:53
 msgid "Managing Macros"
 msgstr "Управљање макроима"
 
-#: ../manage/macros/how-do-they-work.rst:54
+#: ../manage/macros/how-do-they-work.rst:55
 msgid ""
 "Edit your macros by simply clicking on it. You can delete or even clone "
 "existing macros by clicking on the ︙ action menu and select the desired "
@@ -9715,7 +9764,7 @@ msgstr ""
 msgid "Screenshot showing the macro action menu"
 msgstr "Снимак екрана који приказује мени макро радњи"
 
-#: ../manage/macros/how-do-they-work.rst:62
+#: ../manage/macros/how-do-they-work.rst:63
 msgid ""
 "When cloning a macro, make sure to click \"Submit\" for the duplicate to be "
 "created."
@@ -9889,13 +9938,12 @@ msgstr ""
 
 #: ../manage/organizations/index.rst:31
 msgid ""
-"Unlike users, agents cannot just create new organizations. Check "
-"the :doc:`permission reference </manage/roles/admin-permissions>` to learn "
-"more."
+"Unlike users, agents cannot create new organizations. Check the :doc:`roles "
+"section </manage/roles/index>` to learn more."
 msgstr ""
-"За разлику од корисника, оператери не могу само да додају нове организације. "
-"Консултујте :doc:`референцу дозволa </manage/roles/admin-permissions>` да "
-"бисте сазнали више."
+"За разлику од корисника, оператери не могу да додају нове организације. "
+"Консултујте :doc:`одељак о улогама </manage/roles/index>` да бисте сазнали "
+"више."
 
 #: ../manage/organizations/index.rst:34
 msgid ""
@@ -11029,184 +11077,438 @@ msgstr ""
 "извештавање </appendix/reporting-tools-thirdparty.html>` у системској "
 "документацији, где можете пронаћи више информација."
 
-#: ../manage/roles/admin-permissions.rst:2
-msgid "Admin Permissions"
-msgstr "Дозволе администратора"
+#: ../manage/roles/index.rst:2 ../manage/users/index.rst:153
+msgid "Roles"
+msgstr "Улоге"
 
-#: ../manage/roles/admin-permissions.rst:6
-#: ../manage/roles/user-preferences-permissions.rst:6
+#: ../manage/roles/index.rst:4
 msgid ""
-"📁 **Permissions are namespaced**, which is sort of like having files inside "
-"of folders."
+"Roles are a crucial part of Zammad's permission system. They determine what "
+"users can do within the application and can also contain group permissions. "
+"You can manage roles in Zammad's settings under *Manage > Roles*. This page "
+"gives you an explanation of what roles and permissions are. You can find "
+"details about each permission in a :doc:`separate sub page <permissions>`."
 msgstr ""
-"📁 **Дозволе су у организоване по називу**, што је као да имате датотеке "
-"унутар фолдера."
+"Улоге су кључни део Zammad-овог система дозвола. Оне одређују шта корисници "
+"могу да раде у оквиру апликације и могу да садрже и групне дозволе. Улогама "
+"можете управљати у Zammad подешавањима под *Управљање > Улоге*. Ова страница "
+"вам објашњава шта су улоге и дозволе. Детаље о свакој дозволи можете пронаћи "
+"на :doc:`посебној страници <permissions>`."
 
-#: ../manage/roles/admin-permissions.rst:9
+#: ../manage/roles/index.rst:11 ../manage/scheduler.rst:22
+#: ../manage/webhook/add.rst:8 ../system/core-workflows/learn-by-example.rst:8
+msgid "Basics"
+msgstr "Основе"
+
+#: ../manage/roles/index.rst:13
 msgid ""
-"The permissions listed on this page all belong to the ``admin`` namespace. "
-"You can select them individually, or you can just select ``admin`` to enable "
-"the whole bunch."
+"A role is the place where you define permissions. Each user has an assigned "
+"role and inherits the permissions of this role. The permissions define what "
+"a user is allowed to do and which parts and features of Zammad are "
+"accessible for them. Zammad ships with three roles by default: **Admin**, "
+"**Agent** and **Customer**. You can adjust these roles or create new ones to "
+"fit your company's needs. In case you are using LDAP/Active Directory, you "
+"can even sync your existing groups to Zammad with the :doc:`LDAP integration "
+"</system/integrations/ldap/index>`."
 msgstr ""
-"Све дозволе наведене на овој страници припадају групи ``admin``. Можете их "
-"одабрати појединачно, или једноставно одабрати ``admin`` да бисте укључили "
-"читаву групу."
+"Улога је место где дефинишете дозволе. Сваки корисник има додељену улогу и "
+"наслеђује дозволе те улоге. Дозволе дефинишу шта корисник може да ради и "
+"који делови и функције Zammad-а су им доступни. Zammad долази са три "
+"подразумеване улоге: **Администратор**, **Оператер** и **Клијент**. Можете "
+"прилагодити ове улоге или додати нове које одговарају потребама ваше фирме. "
+"У случају да користите LDAP/Active Directory, можете чак и синхронизовати "
+"своје постојеће групе са Zammad-ом помоћу :doc:`LDAP интеграције </system/"
+"integrations/ldap/index>`."
 
-#: ../manage/roles/admin-permissions.rst:18
-msgid "Admin permissions in the New Role dialog"
-msgstr "Дозволе администратора у дијалогу нове улоге"
-
-#: ../manage/roles/admin-permissions.rst:18
-msgid "Admin permissions are shown at the top of the New Role dialog..."
-msgstr "Дозволе администратора су приказане при врху дијалога нове улоге..."
-
-#: ../manage/roles/admin-permissions.rst:25
-msgid "Screenshot showing admin settings within Zammad."
-msgstr "Снимак екрана који приказује подешавања администратора у Zammad-у."
-
-#: ../manage/roles/admin-permissions.rst:25
-msgid "...and give users access to the pages of the Admin Panel."
-msgstr "...и омогућити корисницима приступ страницама панела администратора."
-
-#: ../manage/roles/admin-permissions.rst:28
+#: ../manage/roles/index.rst:21
 msgid ""
-"Please be aware that these permissions only grant access to the **settings/"
-"configuration** in Zammad. If you want to grant agents access to tickets, "
-"see :doc:`agent permissions <agent-permissions>` and :doc:`group permissions "
-"<../groups/access-levels>`"
+"This makes creating user accounts for new agents much simpler because you "
+"just have to assign the correct role instead of configuring permissions and "
+"group access for each user individually. Examples of some important "
+"permissions are:"
+msgstr ""
+"Ово чини креирање корисничких налога за нове оператере много једноставнијим "
+"јер само треба да доделите исправну улогу уместо да подесите дозволе и "
+"приступ групама за сваког корисника појединачно. Примери неких важних "
+"дозвола су:"
+
+#: ../manage/roles/index.rst:25
+msgid "``ticket.agent``: allows a user to work on tickets"
+msgstr "``ticket.agent``: омогућава рад са тикетима"
+
+#: ../manage/roles/index.rst:26
+msgid ""
+"``admin.user``: allows a user to manage other users in Zammad's admin "
+"settings"
+msgstr ""
+"``admin.user``: омогућава кориснику да управља другим корисницима преко "
+"Zammad администраторског панела"
+
+#: ../manage/roles/index.rst:27
+msgid ""
+"``knowledge_base.editor``: allows a user to create/edit knowledge base "
+"articles"
+msgstr ""
+"``knowledge_base.editor``: омогућава кориснику додавање/уређивање чланака "
+"базе знања"
+
+#: ../manage/roles/index.rst:29
+msgid ""
+"``user_preferences.language``: allows a user to change the language of "
+"Zammad's UI for their account."
+msgstr ""
+"``user_preferences.language``: омогућава кориснику да промени језик Zammad "
+"корисничког интерфејса за свој налог."
+
+#: ../manage/roles/index.rst:32
+msgid ""
+"To adjust a permission of a role, simply click on it. To create a new role, "
+"use the **New Role** button in the top right corner. In both cases, a dialog "
+"opens where you can configure it."
+msgstr ""
+"Да бисте подесили дозволе улоге, једноставно кликните на њу. Да бисте додали "
+"нову улогу, користите дугме **Нова улога** у горњем десном углу. У оба "
+"случаја, отвара се дијалог где је можете подесити."
+
+#: ../manage/roles/index.rst:46
+msgid ""
+"You can configure the permissions in the configuration dialog of a role by "
+"checking or unchecking the relevant boxes. The admin and user preferences "
+"permissions are hierarchical, so you can grant all by checking the parent "
+"(e.g. ``admin``)."
+msgstr ""
+"Дозволе можете подесити у дијалогу за конфигурацију улоге тако што ћете "
+"означити или одзначити одговарајуће поље. Дозволе за администраторска и "
+"корисничка подешавања су хијерархијске, тако да можете доделити све тако што "
+"ћете означити надређену дозволу (нпр. ``admin``)."
+
+#: ../manage/roles/index.rst:51
+msgid ""
+"Details about each permission are described in a separate :doc:`permission "
+"sub page <permissions>`, split by common use cases."
+msgstr ""
+"Детаљи о свакој дозволи су описани на посебној :doc:`страници о дозволама "
+"<permissions>`, подељени по уобичајеним случајевима употребе."
+
+#: ../manage/roles/index.rst:54
+msgid ""
+"Users can have multiple roles assigned! An agent can also be a customer or "
+"could have admin permissions as a team leader, for example. If an agent is "
+"customer and the ticket is in a group where the agent doesn't have at least "
+"reading permissions, the ticket only shows a reduced customer view for this "
+"agent."
+msgstr ""
+"Корисницима може бити додељено више улога! Оператер такође може бити клијент "
+"или може имати администраторске дозволе као вођа тима, на пример. Ако је "
+"оператер клијент и тикет је у групи где оператер нема дозволе читања, тикет "
+"ће приказати само смањени излед клијента за овог оператера."
+
+#: ../manage/roles/index.rst:63
+msgid ""
+"In addition to the feature permissions, **agent** roles can also contain "
+"group permissions. This means that you can define to which groups agents "
+"with this role have access to. To see the group permission table, the role "
+"must include the agent permission and more than one group has to exist in "
+"your system."
+msgstr ""
+"Поред дозвола за функције, улоге **оператера** могу да садрже и групне "
+"дозволе. То значи да можете да дефинишете којим групама оператери са овом "
+"улогом имају приступ. Да бисте видели табелу групних дозвола, улога мора да "
+"садржи дозволу оператера и у вашем систему мора да постоји више од једне "
+"групе."
+
+#: ../manage/roles/index.rst:69
+msgid ""
+"You can also set the group permissions for each user individually in the "
+"user settings. However, this comes with the downside that you have to "
+"configure this for each user. Please have a look at the :doc:`group "
+"permission section </manage/groups/access-levels>` for details."
+msgstr ""
+"Такође можете подесити групне дозволе за сваког корисника појединачно у "
+"подешавањима корисника. Међутим, ово долази са маном што морате да их "
+"подесите за сваког корисника. Молимо погледајте :doc:`одељак о групним "
+"дозволама </manage/groups/access-levels>` за детаље."
+
+#: ../manage/roles/index.rst:76
+msgid "Additional Settings"
+msgstr "Додатна подешавања"
+
+#: ../manage/roles/index.rst:83
+msgid "Default at Signup"
+msgstr "Подразумевано приликом регистрације"
+
+#: ../manage/roles/index.rst:79
+msgid ""
+"Define if the role is assigned to new users by default by setting it to "
+"``yes``. Typically, new users which are created automatically are customers. "
+"Unless you have a specific use case, you should only set this for a customer "
+"role without additional permissions. Otherwise, new users would get access "
+"to features and data they shouldn't have access to."
+msgstr ""
+
+#: ../manage/roles/index.rst:86
+msgid ""
+"Add a note to the role. This note is used as explanation in the add/edit "
+"user dialog."
+msgstr ""
+
+#: ../manage/roles/index.rst:90
+#, fuzzy
+#| msgid ""
+#| "Roles can't be deleted but set to inactive. If you do so, all users loose "
+#| "the permissions of this role. If this inactive role is the only one of a "
+#| "user, this account isn't able to do anything in Zammad. The login is "
+#| "still possible."
+msgid ""
+"Roles can't be deleted, only set to inactive. If you do so, all users lose "
+"the permissions of this role. If this inactive role is the only one of a "
+"user, this account will not be able to do anything in Zammad. The login will "
+"be still possible."
+msgstr ""
+"Улоге није могуће избрисати али се могу искључити. Уколико то учините, сви "
+"корисници ће изгубити дозволе на основу ове улоге. Уколико је искључена "
+"улога једина коју корисник поседује, тај налог неће моћи да ишта уради у "
+"Zammad-у. Пријава ће и даље бити могућа."
+
+#: ../manage/roles/permissions.rst:4
+msgid ""
+"Find a short description about the permissions in Zammad below. Be aware "
+"that some of the features require activation and configuration before they "
+"are usable. Even though the permissions are grouped by common use cases, you "
+"can mix them as you like. Just make sure to maintain an overview of your "
+"permissions."
+msgstr ""
+
+#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:170
+msgid "Agent"
+msgstr "Оператер"
+
+#: ../manage/roles/permissions.rst:19 ../manage/roles/permissions.rst:47
+#: ../manage/roles/permissions.rst:227 ../manage/roles/permissions.rst:297
+#, fuzzy
+#| msgid "Permissions"
+msgid "Permission"
+msgstr "Дозволе"
+
+#: ../manage/roles/permissions.rst:20 ../manage/roles/permissions.rst:48
+#: ../manage/roles/permissions.rst:228 ../manage/roles/permissions.rst:298
+#, fuzzy
+#| msgid "Access Token"
+msgid "Access To"
+msgstr "Приступни кључ"
+
+#: ../manage/roles/permissions.rst:22
+msgid "``chat.agent``"
+msgstr "``chat.agent``"
+
+#: ../manage/roles/permissions.rst:23
+#, fuzzy
+#| msgid ":user-docs:`Customer Chat </extras/chat.html>`"
+msgid ":user-docs:`Customer chat </extras/chat.html>`"
+msgstr ":user-docs:`Клијент ћаскање </extras/chat.html>`"
+
+#: ../manage/roles/permissions.rst:24
+#, fuzzy
+#| msgid "Requires configuration of :doc:`Chat Channel </channels/chat>`"
+msgid "Requires configuration of :doc:`chat channel </channels/chat>`."
+msgstr "Захтева подешавање :doc:`канала за ћаскање </channels/chat>`"
+
+#: ../manage/roles/permissions.rst:25
+msgid "``cti.agent``"
+msgstr "``cti.agent``"
+
+#: ../manage/roles/permissions.rst:26
+#, fuzzy
+#| msgid ":user-docs:`Caller Log </extras/caller-log.html>`"
+msgid ":user-docs:`Caller log </extras/caller-log.html>`"
+msgstr ":user-docs:`Евиденција позива </extras/caller-log.html>`"
+
+#: ../manage/roles/permissions.rst:27
+#, fuzzy
+#| msgid ":doc:`Generic CTI </system/integrations/cti/generic>`"
+msgid ""
+"Requires configuration of :doc:`CTI integration </system/integrations/cti/"
+"generic>`."
+msgstr ":doc:`Генеричка CTI </system/integrations/cti/generic>`"
+
+#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:95
+msgid "``ticket.agent``"
+msgstr "``ticket.agent``"
+
+#: ../manage/roles/permissions.rst:0
+msgid "This is the main permission for agents"
+msgstr ""
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Access to overviews and tickets."
+msgid "to access overviews and tickets"
+msgstr "Приступ прегледима и тикетима."
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Revoking this permission disables"
+msgid "When this permission is granted and more"
+msgstr "Опозив ове дозволе искључује"
+
+#: ../manage/roles/permissions.rst:0
+msgid "than one group exists, the group permissions"
+msgstr ""
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ""
+#| ":doc:`group access levels </manage/groups/access-levels>` of the agent"
+msgid ""
+"table appears to configure the :doc:`group access levels </manage/groups/"
+"access-levels>`."
+msgstr ":doc:`ниова групних дозвола </manage/groups/access-levels>` особи"
+
+#: ../manage/roles/permissions.rst:36
+msgid "Admin"
+msgstr "Администратор"
+
+#: ../manage/roles/permissions.rst:38
+#, fuzzy
+#| msgid ""
+#| "Please be aware that these permissions only grant access to the "
+#| "**settings/configuration** in Zammad. If you want to grant agents access "
+#| "to tickets, see :doc:`agent permissions <agent-permissions>` "
+#| "and :doc:`group permissions <../groups/access-levels>`"
+msgid ""
+"Please be aware that these permissions only grant access to the settings/"
+"configuration in Zammad. If you want to grant agents access to tickets, "
+"check the section above and learn more about :doc:`group permissions <../"
+"groups/access-levels>`."
 msgstr ""
 "Обратите пажњу да ове дозволе контролишу само приступ Zammad **подешавањима/"
 "конфигурацији**. Уколико желите да одобрите оператерима приступ тикетима, "
 "погледајте :doc:`дозволе оператера <agent-permissions>` и :doc:`групне "
 "дозволе <../groups/access-levels>`"
 
-#: ../manage/roles/admin-permissions.rst:37
-#: ../manage/roles/agent-permissions.rst:29
-#: ../manage/roles/user-preferences-permissions.rst:35
-msgid "Permission name"
-msgstr "Назив дозволе"
-
-#: ../manage/roles/admin-permissions.rst:38
-#: ../manage/roles/agent-permissions.rst:30
-#: ../manage/roles/user-preferences-permissions.rst:36
-msgid "Give access to"
-msgstr "Омогућује приступ"
-
-#: ../manage/roles/admin-permissions.rst:40
-msgid "``admin.ai``"
-msgstr "``admin.ai``"
-
-#: ../manage/roles/admin-permissions.rst:41
-msgid ":doc:`AI > Provider </ai/provider>`"
-msgstr ":doc:`AI > Провајдер </ai/provider>`"
-
-#: ../manage/roles/admin-permissions.rst:43
+#: ../manage/roles/permissions.rst:50
 msgid "``admin.ai_agent``"
 msgstr "``admin.ai_agent``"
 
-#: ../manage/roles/admin-permissions.rst:44
+#: ../manage/roles/permissions.rst:51
 msgid ":doc:`AI > AI Agents </ai/ai-agents>`"
 msgstr ":doc:`AI > AI агенти </ai/ai-agents>`"
 
-#: ../manage/roles/admin-permissions.rst:46
+#: ../manage/roles/permissions.rst:53
 msgid "``admin.ai_assistance_text_tools``"
 msgstr "``admin.ai_assistance_text_tools``"
 
-#: ../manage/roles/admin-permissions.rst:47
-msgid "AI > Smart Assist Text Tools"
-msgstr "AI > Smart Assist текстуалне алатке"
+#: ../manage/roles/permissions.rst:54
+#, fuzzy
+#| msgid ":doc:`AI > AI Agents </ai/ai-agents>`"
+msgid ":doc:`AI > Writing Assistant </ai/writing-assistant>`"
+msgstr ":doc:`AI > AI агенти </ai/ai-agents>`"
 
-#: ../manage/roles/admin-permissions.rst:49
+#: ../manage/roles/permissions.rst:56
 msgid "``admin.ai_assistance_ticket_summary``"
 msgstr "``admin.ai_assistance_ticket_summary``"
 
-#: ../manage/roles/admin-permissions.rst:50
+#: ../manage/roles/permissions.rst:57
 msgid ":doc:`AI > Ticket Summary </ai/summary>`"
 msgstr ":doc:`AI > Сажети опис тикета </ai/summary>`"
 
-#: ../manage/roles/admin-permissions.rst:52
+#: ../manage/roles/permissions.rst:59
+#, fuzzy
+#| msgid "``admin.api``"
+msgid "``admin.ai_provider``"
+msgstr "``admin.api``"
+
+#: ../manage/roles/permissions.rst:60
+msgid ":doc:`AI > Provider </ai/provider>`"
+msgstr ":doc:`AI > Провајдер </ai/provider>`"
+
+#: ../manage/roles/permissions.rst:62
 msgid "``admin.api``"
 msgstr "``admin.api``"
 
-#: ../manage/roles/admin-permissions.rst:53
+#: ../manage/roles/permissions.rst:63
 msgid ":docs:`System > API </api/intro.html>`"
 msgstr ":docs:`Систем > API </api/intro.html>`"
 
-#: ../manage/roles/admin-permissions.rst:55
+#: ../manage/roles/permissions.rst:65
 msgid "``admin.branding``"
 msgstr "``admin.branding``"
 
-#: ../manage/roles/admin-permissions.rst:56
+#: ../manage/roles/permissions.rst:66
 msgid ":doc:`Settings > Branding </settings/branding>`"
 msgstr ":doc:`Подешавања > Брендинг </settings/branding>`"
 
-#: ../manage/roles/admin-permissions.rst:58
+#: ../manage/roles/permissions.rst:68
 msgid "``admin.calendar``"
 msgstr "``admin.calendar``"
 
-#: ../manage/roles/admin-permissions.rst:59
+#: ../manage/roles/permissions.rst:69
 msgid ":doc:`Manage > Calendars </manage/calendars>`"
 msgstr ":doc:`Управљање > Календари </manage/calendars>`"
 
-#: ../manage/roles/admin-permissions.rst:60
-msgid "Required for :doc:`/manage/slas/index`"
+#: ../manage/roles/permissions.rst:70
+#, fuzzy
+#| msgid "Required for :doc:`/manage/slas/index`"
+msgid "Required for :doc:`/manage/slas/index`."
 msgstr "Обавезно за :doc:`/manage/slas/index`"
 
-#: ../manage/roles/admin-permissions.rst:61
+#: ../manage/roles/permissions.rst:71
 msgid "``admin.channel_chat``"
 msgstr "``admin.channel_chat``"
 
-#: ../manage/roles/admin-permissions.rst:62
+#: ../manage/roles/permissions.rst:72
 msgid ":doc:`Channels > Chat </channels/chat>`"
 msgstr ":doc:`Канали > Ћаскање </channels/chat>`"
 
-#: ../manage/roles/admin-permissions.rst:63
-msgid "Accessing chat for agents: ``chat.agent``"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Configuration of ticket"
+msgid "Configuration of chat channel."
+msgstr "Подешавање тикета"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Accessing chat for agents: ``chat.agent``"
+msgid "Access for agents: ``chat.agent``."
 msgstr "Приступ ћаскању за оператере: ``chat.agent``"
 
-#: ../manage/roles/admin-permissions.rst:64
+#: ../manage/roles/permissions.rst:75
 msgid "``admin.channel_email``"
 msgstr "``admin.channel_email``"
 
-#: ../manage/roles/admin-permissions.rst:65
+#: ../manage/roles/permissions.rst:76
 msgid ":doc:`Channels > Email </channels/email/index>`"
 msgstr ":doc:`Канали > Имејл </channels/email/index>`"
 
-#: ../manage/roles/admin-permissions.rst:67
+#: ../manage/roles/permissions.rst:78
 msgid "``admin.channel_facebook``"
 msgstr "``admin.channel_facebook``"
 
-#: ../manage/roles/admin-permissions.rst:68
+#: ../manage/roles/permissions.rst:79
 msgid ":doc:`Channels > Facebook </channels/facebook>`"
 msgstr ":doc:`Канали > Facebook </channels/facebook>`"
 
-#: ../manage/roles/admin-permissions.rst:69
-msgid ""
-"Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-"Приступ Facebook тикетима за оператере: :doc:`/manage/groups/access-levels`"
-
-#: ../manage/roles/admin-permissions.rst:70
+#: ../manage/roles/permissions.rst:81
 msgid "``admin.channel_formular``"
 msgstr "``admin.channel_formular``"
 
-#: ../manage/roles/admin-permissions.rst:71
+#: ../manage/roles/permissions.rst:82
 msgid ":doc:`Channels > Form </channels/form>`"
 msgstr ":doc:`Канали > Форма </channels/form>`"
 
-#: ../manage/roles/admin-permissions.rst:73
+#: ../manage/roles/permissions.rst:84
 msgid "``admin.channel_google``"
 msgstr "``admin.channel_google``"
 
-#: ../manage/roles/admin-permissions.rst:74
+#: ../manage/roles/permissions.rst:85
 msgid ":doc:`Channels > Google </channels/google/index>`"
 msgstr ":doc:`Канали > Google </channels/google/index>`"
 
-#: ../manage/roles/admin-permissions.rst:76
+#: ../manage/roles/permissions.rst:87
 msgid "``admin.channel_microsoft_graph``"
 msgstr "``admin.channel_microsoft_graph``"
 
-#: ../manage/roles/admin-permissions.rst:77
+#: ../manage/roles/permissions.rst:88
 msgid ""
 ":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/"
 "index>`"
@@ -11214,971 +11516,565 @@ msgstr ""
 ":doc:`Канали > Microsoft 365 Graph имејл </channels/microsoft365-graph/"
 "index>`"
 
-#: ../manage/roles/admin-permissions.rst:79
+#: ../manage/roles/permissions.rst:90
 msgid "``admin.channel_microsoft365``"
 msgstr "``admin.channel_microsoft365``"
 
-#: ../manage/roles/admin-permissions.rst:80
+#: ../manage/roles/permissions.rst:91
 msgid ""
 ":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
 msgstr ""
 ":doc:`Канали > Microsoft 365 IMAP имејл </channels/microsoft365/index>`"
 
-#: ../manage/roles/admin-permissions.rst:82
+#: ../manage/roles/permissions.rst:93
 msgid "``admin.channel_sms``"
 msgstr "``admin.channel_sms``"
 
-#: ../manage/roles/admin-permissions.rst:83
+#: ../manage/roles/permissions.rst:94
 msgid ":doc:`Channels > SMS </channels/sms>`"
 msgstr ":doc:`Канали > SMS </channels/sms>`"
 
-#: ../manage/roles/admin-permissions.rst:85
+#: ../manage/roles/permissions.rst:96
 msgid "``admin.channel_telegram``"
 msgstr "``admin.channel_telegram``"
 
-#: ../manage/roles/admin-permissions.rst:86
+#: ../manage/roles/permissions.rst:97
 msgid ":doc:`Channels > Telegram </channels/telegram>`"
 msgstr ":doc:`Канали > Telegram </channels/telegram>`"
 
-#: ../manage/roles/admin-permissions.rst:87
-msgid ""
-"Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-"Приступ Telegram тикетима за оператере: :doc:`/manage/groups/access-levels`"
-
-#: ../manage/roles/admin-permissions.rst:88
+#: ../manage/roles/permissions.rst:99
 msgid "``admin.channel_web``"
 msgstr "``admin.channel_web``"
 
-#: ../manage/roles/admin-permissions.rst:89
+#: ../manage/roles/permissions.rst:100
 msgid ":doc:`Channels > Web </channels/web>`"
 msgstr ":doc:`Канали > Веб </channels/web>`"
 
-#: ../manage/roles/admin-permissions.rst:91
+#: ../manage/roles/permissions.rst:102
 msgid "``admin.channel_whatsapp``"
 msgstr "``admin.channel_whatsapp``"
 
-#: ../manage/roles/admin-permissions.rst:92
+#: ../manage/roles/permissions.rst:103
 msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
 msgstr ":doc:`Канали > Whatsapp </channels/whatsapp/index>`"
 
-#: ../manage/roles/admin-permissions.rst:94
+#: ../manage/roles/permissions.rst:105
 msgid "``admin.checklist``"
 msgstr "``admin.checklist``"
 
-#: ../manage/roles/admin-permissions.rst:95
+#: ../manage/roles/permissions.rst:106
 msgid ":doc:`Manage > Checklist </manage/checklist>`"
 msgstr ":doc:`Управљање > Списак задатака </manage/checklist>`"
 
-#: ../manage/roles/admin-permissions.rst:97
+#: ../manage/roles/permissions.rst:108
 msgid "``admin.core_workflows``"
 msgstr "``admin.core_workflows``"
 
-#: ../manage/roles/admin-permissions.rst:98
+#: ../manage/roles/permissions.rst:109
 msgid ":doc:`System > Core Workflows </system/core-workflows>`"
 msgstr ":doc:`Систем > Радни токови </system/core-workflows>`"
 
-#: ../manage/roles/admin-permissions.rst:100
+#: ../manage/roles/permissions.rst:111
 msgid "``admin.data_privacy``"
 msgstr "``admin.data_privacy``"
 
-#: ../manage/roles/admin-permissions.rst:101
+#: ../manage/roles/permissions.rst:112
 msgid ":doc:`System > Data Privacy </system/data-privacy>`"
 msgstr ":doc:`Систем > Приватност података </system/data-privacy>`"
 
-#: ../manage/roles/admin-permissions.rst:102
-msgid ""
-"🔥 Be careful, it allows users to permanently delete data on the system."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ""
+#| "🔥 Be careful, it allows users to permanently delete data on the system."
+msgid "Be careful, this allows users to permanently"
 msgstr ""
 "🔥 Будите опрезни, омогућава корисницима да трајно бришу податке на систему."
 
-#: ../manage/roles/admin-permissions.rst:103
+#: ../manage/roles/permissions.rst:0
+msgid "delete data on the system."
+msgstr ""
+
+#: ../manage/roles/permissions.rst:115
 msgid "``admin.group``"
 msgstr "``admin.group``"
 
-#: ../manage/roles/admin-permissions.rst:104
+#: ../manage/roles/permissions.rst:116
 msgid ":doc:`Manage > Groups </manage/groups/index>`"
 msgstr ":doc:`Управљање > Групе </manage/groups/index>`"
 
-#: ../manage/roles/admin-permissions.rst:106
+#: ../manage/roles/permissions.rst:118
 msgid "``admin.integration``"
 msgstr "``admin.integration``"
 
-#: ../manage/roles/admin-permissions.rst:107
+#: ../manage/roles/permissions.rst:119
 msgid ":doc:`System > Integrations </system/integrations/index>`"
 msgstr ":doc:`Систем > Интеграције </system/integrations/index>`"
 
-#: ../manage/roles/admin-permissions.rst:109
+#: ../manage/roles/permissions.rst:121
 msgid "``admin.knowledge_base``"
 msgstr "``admin.knowledge_base``"
 
-#: ../manage/roles/admin-permissions.rst:110
+#: ../manage/roles/permissions.rst:122
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
 msgstr ":doc:`Управљање > База знања </manage/knowledge-base>`"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"Accessing knowledge base to read/edit articles: ``knowledge_base.reader``"
+#: ../manage/roles/permissions.rst:0
+msgid "Configure knowledge base. For viewing or creating"
 msgstr ""
-"Приступ бази знања за читање/уређивање чланака: ``knowledge_base.reader``"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "and ``knowledge_base.editor``"
-msgstr "и ``knowledge_base.editor``"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "``knowledge_base.reader``"
+msgid "articles, ``knowledge_base.reader`` or"
+msgstr "``knowledge_base.reader``"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"Make sure to double-check the answer's :user-docs:`visibility </extras/"
-"knowledge-base.html#editing-answers>`."
-msgstr ""
-"Проверите још једном :user-docs:`видљивост чланака </extras/knowledge-"
-"base.html#editing-answers>`."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "``knowledge_base.editor``"
+msgid "``knowledge_base.editor`` are required."
+msgstr "``knowledge_base.editor``"
 
-#: ../manage/roles/admin-permissions.rst:115
+#: ../manage/roles/permissions.rst:126
 msgid "``admin.macro``"
 msgstr "``admin.macro``"
 
-#: ../manage/roles/admin-permissions.rst:116
+#: ../manage/roles/permissions.rst:127
 msgid ":doc:`Manage > Macros </manage/macros>`"
 msgstr ":doc:`Управљање > Макрои </manage/macros>`"
 
-#: ../manage/roles/admin-permissions.rst:117
-msgid "In some cases, macros may also require ``admin.tag``"
+#: ../manage/roles/permissions.rst:128
+#, fuzzy
+#| msgid "In some cases, macros may also require ``admin.tag``"
+msgid "In some cases, macros may also require ``admin.tag``."
 msgstr "У неким случајевима, макрои могу такође захтевати ``admin.tag``"
 
-#: ../manage/roles/admin-permissions.rst:118
+#: ../manage/roles/permissions.rst:129
 msgid "``admin.maintenance``"
 msgstr "``admin.maintenance``"
 
-#: ../manage/roles/admin-permissions.rst:119
+#: ../manage/roles/permissions.rst:130
 msgid ":doc:`System > Maintenance </system/maintenance>`"
 msgstr ":doc:`Систем > Одржавање </system/maintenance>`"
 
-#: ../manage/roles/admin-permissions.rst:121
+#: ../manage/roles/permissions.rst:132
 msgid "``admin.monitoring``"
 msgstr "``admin.monitoring``"
 
-#: ../manage/roles/admin-permissions.rst:122
+#: ../manage/roles/permissions.rst:133
 msgid ":doc:`System > Monitoring </system/monitoring>`"
 msgstr ":doc:`Систем > Надгледање </system/monitoring>`"
 
-#: ../manage/roles/admin-permissions.rst:124
+#: ../manage/roles/permissions.rst:135
 msgid "``admin.object``"
 msgstr "``admin.object``"
 
-#: ../manage/roles/admin-permissions.rst:125
+#: ../manage/roles/permissions.rst:136
 msgid ":doc:`System > Objects </system/objects>`"
 msgstr ":doc:`Систем > Објекти </system/objects>`"
 
-#: ../manage/roles/admin-permissions.rst:127
+#: ../manage/roles/permissions.rst:138
 msgid "``admin.organization``"
 msgstr "``admin.organization``"
 
-#: ../manage/roles/admin-permissions.rst:128
+#: ../manage/roles/permissions.rst:139
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ":doc:`Управљање > Организације </manage/organizations/index>`"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "Agents can access existing organizations"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Agents can access existing organizations"
+msgid "Agents can access existing organizations from the"
 msgstr "Оператери могу приступити постојећим организацијама"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "from the search bar, even without this permission."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "from the search bar, even without this permission."
+msgid "search bar, even without this permission. They can even"
 msgstr "из траке за претрагу, чак и без ове дозволе."
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "They can even edit an organization's name, domain, and notes!"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "They can even edit an organization's name, domain, and notes!"
+msgid "edit an organization's name, domain, and notes!"
 msgstr "Могу чак изменити назив, домен и напомену организације!"
 
-#: ../manage/roles/admin-permissions.rst:132
+#: ../manage/roles/permissions.rst:143
 msgid "``admin.overview``"
 msgstr "``admin.overview``"
 
-#: ../manage/roles/admin-permissions.rst:133
+#: ../manage/roles/permissions.rst:144
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
 msgstr ":doc:`Управљање > Прегледи </manage/overviews>`"
 
-#: ../manage/roles/admin-permissions.rst:135
+#: ../manage/roles/permissions.rst:146
 msgid "``admin.package``"
 msgstr "``admin.package``"
 
-#: ../manage/roles/admin-permissions.rst:136
+#: ../manage/roles/permissions.rst:147
 msgid ":doc:`System > Packages </system/packages>`"
 msgstr ":doc:`Систем > Пакети </system/packages>`"
 
-#: ../manage/roles/admin-permissions.rst:138
+#: ../manage/roles/permissions.rst:149
 msgid "``admin.public_links``"
 msgstr "``admin.public_links``"
 
-#: ../manage/roles/admin-permissions.rst:139
+#: ../manage/roles/permissions.rst:150
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
 msgstr ":doc:`Управљање > Јавни линкови </manage/public-links>`"
 
-#: ../manage/roles/admin-permissions.rst:141
+#: ../manage/roles/permissions.rst:152
 msgid "``admin.report_profile``"
 msgstr "``admin.report_profile``"
 
-#: ../manage/roles/admin-permissions.rst:142
+#: ../manage/roles/permissions.rst:153
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
 msgstr ":doc:`Управљање > Профили извештаја </manage/report-profiles>`"
 
-#: ../manage/roles/admin-permissions.rst:143
+#: ../manage/roles/permissions.rst:154
 msgid "Access to view reports: ``report``"
 msgstr "Приступ за преглед извештаја: ``report``"
 
-#: ../manage/roles/admin-permissions.rst:144
+#: ../manage/roles/permissions.rst:155
 msgid "``admin.role``"
 msgstr "``admin.role``"
 
-#: ../manage/roles/admin-permissions.rst:145
+#: ../manage/roles/permissions.rst:156
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
 msgstr ":doc:`Управљање > Улоге </manage/roles/index>`"
 
-#: ../manage/roles/admin-permissions.rst:147
+#: ../manage/roles/permissions.rst:158
 msgid "``admin.scheduler``"
 msgstr "``admin.scheduler``"
 
-#: ../manage/roles/admin-permissions.rst:148
+#: ../manage/roles/permissions.rst:159
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
 msgstr ":doc:`Управљање > Планер </manage/scheduler>`"
 
-#: ../manage/roles/admin-permissions.rst:149
-msgid "For automation on tickets"
-msgstr "За аутоматизацију тикета"
-
-#: ../manage/roles/admin-permissions.rst:150
+#: ../manage/roles/permissions.rst:161
 msgid "``admin.security``"
 msgstr "``admin.security``"
 
-#: ../manage/roles/admin-permissions.rst:151
+#: ../manage/roles/permissions.rst:162
 msgid ":doc:`Settings > Security </settings/security>`"
 msgstr ":doc:`Подешавања > Безбедност </settings/security>`"
 
-#: ../manage/roles/admin-permissions.rst:152
-msgid "Settings of Zammad. This also covers third party authentications."
+#: ../manage/roles/permissions.rst:163
+#, fuzzy
+#| msgid "Settings of Zammad. This also covers third party authentications."
+msgid "This also includes third party authentications."
 msgstr ""
 "подешавања Zammad-а. Ово такође покрива аутентификацију преко трећег лица."
 
-#: ../manage/roles/admin-permissions.rst:153
+#: ../manage/roles/permissions.rst:164
 msgid "``admin.session``"
 msgstr "``admin.session``"
 
-#: ../manage/roles/admin-permissions.rst:154
+#: ../manage/roles/permissions.rst:165
 msgid ":doc:`System > Sessions </system/sessions>`"
 msgstr ":doc:`Систем > Сесије </system/sessions>`"
 
-#: ../manage/roles/admin-permissions.rst:156
+#: ../manage/roles/permissions.rst:167
 msgid "``admin.sla``"
 msgstr "``admin.sla``"
 
-#: ../manage/roles/admin-permissions.rst:157
+#: ../manage/roles/permissions.rst:168
 msgid ":doc:`Manage > SLAs </manage/slas/index>`"
 msgstr ":doc:`Управљање > SLA </manage/slas/index>`"
 
-#: ../manage/roles/admin-permissions.rst:159
+#: ../manage/roles/permissions.rst:170
 msgid "``admin.system``"
 msgstr "``admin.system``"
 
-#: ../manage/roles/admin-permissions.rst:160
+#: ../manage/roles/permissions.rst:171
 msgid ":doc:`Settings > System </settings/system/index>`"
 msgstr ":doc:`Подешавања > Систем </settings/system/index>`"
 
-#: ../manage/roles/admin-permissions.rst:162
+#: ../manage/roles/permissions.rst:173
 msgid "``admin.system_report``"
 msgstr "``admin.system_report``"
 
-#: ../manage/roles/admin-permissions.rst:163
+#: ../manage/roles/permissions.rst:174
 msgid ":doc:`System > System Report </system/system-report>`"
 msgstr ":doc:`Систем > Системски извештај </system/system-report>`"
 
-#: ../manage/roles/admin-permissions.rst:165
+#: ../manage/roles/permissions.rst:176
 msgid "``admin.tag``"
 msgstr "``admin.tag``"
 
-#: ../manage/roles/admin-permissions.rst:166
+#: ../manage/roles/permissions.rst:177
 msgid ":doc:`Manage > Tags </manage/tags>`"
 msgstr ":doc:`Управљање > Ознаке </manage/tags>`"
 
-#: ../manage/roles/admin-permissions.rst:168
+#: ../manage/roles/permissions.rst:179
 msgid "``admin.template``"
 msgstr "``admin.template``"
 
-#: ../manage/roles/admin-permissions.rst:169
+#: ../manage/roles/permissions.rst:180
 msgid ":doc:`Manage > Templates </manage/templates>`"
 msgstr ":doc:`Управљање > Шаблони </manage/templates>`"
 
-#: ../manage/roles/admin-permissions.rst:171
+#: ../manage/roles/permissions.rst:182
 msgid "``admin.text_module``"
 msgstr "``admin.text_module``"
 
-#: ../manage/roles/admin-permissions.rst:172
+#: ../manage/roles/permissions.rst:183
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
 msgstr ":doc:`Управљање > Текстуални исечци </manage/text-modules>`"
 
-#: ../manage/roles/admin-permissions.rst:174
+#: ../manage/roles/permissions.rst:185
 msgid "``admin.ticket``"
 msgstr "``admin.ticket``"
 
-#: ../manage/roles/admin-permissions.rst:175
+#: ../manage/roles/permissions.rst:186
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ":doc:`Подешавања > Тикети </settings/ticket>`"
 
-#: ../manage/roles/admin-permissions.rst:176
-msgid "Does not grant access to :doc:`/misc/composer`"
-msgstr "Не дозвољава приступ :doc:`/misc/composer`"
+#: ../manage/roles/permissions.rst:0
+msgid "Ticket settings. To access tickets as agents,"
+msgstr ""
 
-#: ../manage/roles/admin-permissions.rst:177
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "``ticket.agent``"
+msgid "``ticket.agent`` is required."
+msgstr "``ticket.agent``"
+
+#: ../manage/roles/permissions.rst:189
 msgid "``admin.ticket_auto_assignment``"
 msgstr "``admin.ticket_auto_assignment``"
 
-#: ../manage/roles/admin-permissions.rst:178
+#: ../manage/roles/permissions.rst:190
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
 msgstr ":ref:`Подешавања > Тикет > Аутоматска додела тикета <auto_assignment>`"
 
-#: ../manage/roles/admin-permissions.rst:180
+#: ../manage/roles/permissions.rst:192
 msgid "``admin.ticket_duplicate_detection``"
 msgstr "``admin.ticket_duplicate_detection``"
 
-#: ../manage/roles/admin-permissions.rst:181
+#: ../manage/roles/permissions.rst:193
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
 msgstr ":ref:`Подешавања > Тикет > Откривање дупликата <duplicate_detection>`"
 
-#: ../manage/roles/admin-permissions.rst:183
+#: ../manage/roles/permissions.rst:195
 msgid "``admin.ticket_priority``"
 msgstr "``admin.ticket_priority``"
 
-#: ../manage/roles/admin-permissions.rst:184
+#: ../manage/roles/permissions.rst:196
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
 msgstr ":ref:`Систем > Објекти >Приоритет тикета <ticket-priority-reference>`"
 
-#: ../manage/roles/admin-permissions.rst:186
+#: ../manage/roles/permissions.rst:198
 msgid "``admin.ticket_state``"
 msgstr "``admin.ticket_state``"
 
-#: ../manage/roles/admin-permissions.rst:187
+#: ../manage/roles/permissions.rst:199
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
 msgstr ":ref:`Систем > Објекти > Стање тикета <ticket-state-reference>`"
 
-#: ../manage/roles/admin-permissions.rst:189
+#: ../manage/roles/permissions.rst:201
 msgid "``admin.time_accounting``"
 msgstr "``admin.time_accounting``"
 
-#: ../manage/roles/admin-permissions.rst:190
+#: ../manage/roles/permissions.rst:202
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
 msgstr ":doc:`Управљање > Обрачун времена </manage/time-accounting>`"
 
-#: ../manage/roles/admin-permissions.rst:191
-msgid "Also allows the export of timekeeping records."
+#: ../manage/roles/permissions.rst:203
+#, fuzzy
+#| msgid "Also allows the export of timekeeping records."
+msgid "Also allows the export of accounted time records."
 msgstr "Такоће омогућује извоз уноса обрачуна времена."
 
-#: ../manage/roles/admin-permissions.rst:192
+#: ../manage/roles/permissions.rst:204
 msgid "``admin.translation``"
 msgstr "``admin.translation``"
 
-#: ../manage/roles/admin-permissions.rst:193
+#: ../manage/roles/permissions.rst:205
 msgid ":doc:`System > Translations </system/translations>`"
 msgstr ":doc:`Систем > Преводи </system/translations>`"
 
-#: ../manage/roles/admin-permissions.rst:194
-msgid "Also enables inline translation"
+#: ../manage/roles/permissions.rst:206
+#, fuzzy
+#| msgid "Also enables inline translation"
+msgid "Also enables inline translation."
 msgstr "Такође омогућује непосредне преводе"
 
-#: ../manage/roles/admin-permissions.rst:195
+#: ../manage/roles/permissions.rst:207
 msgid "``admin.trigger``"
 msgstr "``admin.trigger``"
 
-#: ../manage/roles/admin-permissions.rst:196
+#: ../manage/roles/permissions.rst:208
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
 msgstr ":doc:`Управљање > Окидачи </manage/trigger>`"
 
-#: ../manage/roles/admin-permissions.rst:198
+#: ../manage/roles/permissions.rst:210
 msgid "``admin.user``"
 msgstr "``admin.user``"
 
-#: ../manage/roles/admin-permissions.rst:199
+#: ../manage/roles/permissions.rst:211
 msgid ":doc:`Manage > Users </manage/users/index>`"
 msgstr ":doc:`Управљање > Корисници </manage/users/index>`"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "Independent from this permission, agents can create and edit"
-msgstr "Независно од ове дозволе, оператери могу додавати и уређивати"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Agents can create and edit **customers**, but they can’t:"
+msgid "Agents can always create and edit customers, but they"
+msgstr "Оператери могу да додају и освежавају **клијенте**, али не могу:"
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid "customers, but they can't modify permission etc."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "customers, but they can't modify permission etc."
+msgid "can't modify permissions etc."
 msgstr "клијенте, али не могу мењати њихове дозволе и сл."
 
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"🏴‍☠️ This permission allows users to :ref:`hijack other user sessions <view-"
-"from-users-perspective>` ."
-msgstr ""
-"🏴‍☠ Ова дозвола омогућава корисницима :ref:`преотму сесије других корисника "
-"<view-from-users-perspective>`."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Make sure to **revoke this permission** for all your users"
+msgid "Be aware that this permission allows users to"
+msgstr "Обавезно **опозовите ову дозволу** за све своје кориснике"
 
-#: ../manage/roles/admin-permissions.rst:204
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ""
+#| "To learn more, see :ref:`Taking over a user's session <view-from-users-"
+#| "perspective>`."
+msgid ":ref:`hijack other user sessions <view-from-users-perspective>`."
+msgstr ""
+"Да бисте сазнали више, погледајте :ref:`Преузимање сесије корисника <view-"
+"from-users-perspective>`."
+
+#: ../manage/roles/permissions.rst:216
 msgid "``admin.webhook``"
 msgstr "``admin.webhook``"
 
-#: ../manage/roles/admin-permissions.rst:205
+#: ../manage/roles/permissions.rst:217
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
 msgstr ":doc:`Управљање > Повратни позив </manage/webhook>`"
 
-#: ../manage/roles/agent-permissions.rst:2
-msgid "Agent Permissions"
-msgstr "Дозволе оператера"
-
-#: ../manage/roles/agent-permissions.rst:6
-msgid ""
-"The permissions listed on this page grant access to features that have to be "
-"enabled or configured system-wide in the Admin Panel first."
-msgstr ""
-"Дозволе наведене на овој страници дају приступ функцијама које прво морају "
-"бити укључене или подешене на целом систему путем административног панела."
-
-#: ../manage/roles/agent-permissions.rst:14
-msgid "Agent permissions in the New Role dialog"
-msgstr "Дозволе оператера у дијалогу нове улоге"
-
-#: ../manage/roles/agent-permissions.rst:14
-msgid "Agent permissions are shown in the middle of the New Role dialog..."
-msgstr "Дозволе оператера су приказане при средини дијалога нове улоге…"
-
-#: ../manage/roles/agent-permissions.rst:20
-msgid "Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone"
-msgstr "Језичци на бочној траци: Прегледи, База знања, Клијент ћаскање, Позив"
-
-#: ../manage/roles/agent-permissions.rst:20
-msgid ""
-"...and give users access to new sidebar tabs for communicating with "
-"customers."
-msgstr ""
-"...и даје корисницима приступ новим језичцима бочне траке за комуникацију са "
-"клијентима."
-
-#: ../manage/roles/agent-permissions.rst:32
-msgid "``chat.agent``"
-msgstr "``chat.agent``"
-
-#: ../manage/roles/agent-permissions.rst:33
-msgid ":user-docs:`Customer Chat </extras/chat.html>`"
-msgstr ":user-docs:`Клијент ћаскање </extras/chat.html>`"
-
-#: ../manage/roles/agent-permissions.rst:34
-msgid "Requires configuration of :doc:`Chat Channel </channels/chat>`"
-msgstr "Захтева подешавање :doc:`канала за ћаскање </channels/chat>`"
-
-#: ../manage/roles/agent-permissions.rst:35
-msgid "``cti.agent``"
-msgstr "``cti.agent``"
-
-#: ../manage/roles/agent-permissions.rst:36
-msgid ":user-docs:`Caller Log </extras/caller-log.html>`"
-msgstr ":user-docs:`Евиденција позива </extras/caller-log.html>`"
-
-#: ../manage/roles/agent-permissions.rst:37
-msgid "Configuration of a CTI integration is required"
-msgstr "Захтева подешену CTI интеграцију"
-
-#: ../manage/roles/agent-permissions.rst:38
-msgid "``knowledge_base.editor``"
-msgstr "``knowledge_base.editor``"
-
-#: ../manage/roles/agent-permissions.rst:39
-msgid "Create/edit privileges"
-msgstr "Дозволе додавања/уређивања"
-
-#: ../manage/roles/agent-permissions.rst:40
-msgid "Editor permissions always include reader permissions."
-msgstr "Дозволе уредника увек укључују дозволе читаоца."
-
-#: ../manage/roles/agent-permissions.rst:41
-msgid "``knowledge_base.reader``"
-msgstr "``knowledge_base.reader``"
-
-#: ../manage/roles/agent-permissions.rst:42
-msgid "Read privileges for internal content"
-msgstr "Дозволе прегледа интерног садржаја"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Public articles are always visible."
-msgstr "Јавни чланци су увек видљиви."
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"See :user-docs:`here </extras/knowledge-base.html#granular-category-"
-"permissions>` how to set up granular reader permissions for the knowledge "
-"base."
-msgstr ""
-"Прочитајте :user-docs:`овде </extras/knowledge-base.html#granular-category-"
-"permissions>` како да подесите грануларне дозволе читаоца за базу знања."
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Keep in mind that this may be dangerous, as reader permission provides"
-msgstr "Имајте на уму да ово може бити опасно, јер дозвола читаоца омогућава"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "access to internal answers!"
-msgstr "приступ интерним чланцима!"
-
-#: ../manage/roles/agent-permissions.rst:48
-msgid "``report``"
-msgstr "``report``"
-
-#: ../manage/roles/agent-permissions.rst:49
-msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
-msgstr ""
-":user-docs:`Извештавање (корисничка документација)</extras/reporting.html>`"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Make sure to **never** grant this permission to your customers"
-msgstr "**Никада** не додељујте ову дозволу својим клијентима"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "because it includes **all ticket and user information** across the"
-msgstr ""
-"зато што укључује **све информације о тикетима и корисницима** из целог"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "entire system! Consider setting up a new role for your admins or"
-msgstr "система! Размотрите додавање нове улоге за ваше администраторе или"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"supervisors and limit the access via :doc:`/manage/report-profiles` first."
-msgstr ""
-"супервизоре и ограничите приступ преко :doc:`профила извештаја </manage/"
-"report-profiles>`."
-
-#: ../manage/roles/agent-permissions.rst:54 ../settings/security/base.rst:95
-msgid "``ticket.agent``"
-msgstr "``ticket.agent``"
-
-#: ../manage/roles/agent-permissions.rst:55
-msgid "Access to overviews and tickets."
-msgstr "Приступ прегледима и тикетима."
-
-#: ../manage/roles/agent-permissions.rst:56
-msgid "See notes below"
-msgstr "Погледајте напомене испод"
-
-#: ../manage/roles/agent-permissions.rst:60
-msgid "🤔 **What about this table under the permissions tree?**"
-msgstr "🤔 **Шта ова табела тражи овде испод стабла дозвола?**"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Group permission table in Edit Role dialog"
-msgstr "Табела групних дозвола у дијалогу уређивања улоге"
-
-#: ../manage/roles/agent-permissions.rst:67
-msgid ""
-"Roles can also include :doc:`group permissions </manage/groups/access-"
-"levels>`! The group permission table is shown when there is **more than one "
-"active group** in the system and ``ticket.agent`` permission **is selected**."
-msgstr ""
-"Улоге такође укључују :doc:`групне дозволе </manage/groups/access-levels>`! "
-"Табела групних дозвола је приказана ако постоји **више од једне активне "
-"групе** у систему и **одабрана је** дозвола ``ticket.agent``."
-
-#: ../manage/roles/index.rst:2 ../manage/users/index.rst:153
-msgid "Roles"
-msgstr "Улоге"
-
-#: ../manage/roles/index.rst:4
-msgid ""
-"If you're already using Zammad, you'll know that users can be **admins**, "
-"**agents**, or **customers**. These are Zammad's built-in roles, and they're "
-"the tip of the iceberg of its powerful, flexible, and fine-grained "
-"permission system."
-msgstr ""
-"Ако већ користите Zammad, знате да корисници могу бити **администратори**, "
-"**оператери** или **клијенти**. Ово су Zammad-ове подразумеване улоге, и оне "
-"су врх леденог брега његовог моћног, флексибилног и прецизног система "
-"дозвола."
-
-#: ../manage/roles/index.rst:14
-msgid "Role overview within Zammad's admin settings."
-msgstr "Преглед улога у оквиру Zammad-ових администраторских подешавања."
-
-#: ../manage/roles/index.rst:14
-msgid "Assign user privileges in the Admin Panel, under **Manage > Roles**."
-msgstr ""
-"Доделите привилегије корисника преко административног панела, под "
-"**Управљање > Улоге**."
-
-#: ../manage/roles/index.rst:16
-msgid "💡 **LDAP/Active Directory users:**"
-msgstr "💡 **Корисници LDAP/активног директоријума:**"
-
-#: ../manage/roles/index.rst:18
-msgid ""
-"Syncing your LDAP \"groups\" to Zammad roles can make access management "
-"*way* easier. To learn more, see :doc:`/system/integrations/ldap/index`."
-msgstr ""
-"Синхронизација ваших LDAP „група” са Zammad улогама може да олакша *начин* "
-"управљања приступом. Да бисте сазнали више, погледајте :doc:`/system/"
-"integrations/ldap/index`."
-
-#: ../manage/roles/index.rst:25
-msgid "What Is a Role?"
-msgstr "Шта је то улога?"
-
-#: ../manage/roles/index.rst:27
-msgid ""
-"Some users can do things others can't (like close a ticket). Users have "
-"roles, roles have permissions, and permissions are what make those actions "
-"possible. You can think of roles as a kind of a collection of permissions."
-msgstr ""
-"Неки корисници могу да раде ствари које други не могу (као што је затварање "
-"тикета). Корисници имају улоге, улоге имају дозволе, а дозволе су оно што "
-"чини те радње могућим. Можете посматрати улоге као колекцију дозвола."
-
-#: ../manage/roles/index.rst:32
-msgid "So what exactly are permissions, then?"
-msgstr "Дакле, шта су то тачно дозволе?"
-
-#: ../manage/roles/index.rst:39
-msgid "List of permissions in the New Role dialog"
-msgstr "Листа дозвола у дијалогу нове улоге"
-
-#: ../manage/roles/index.rst:39
-msgid ""
-"The ``admin.calendar`` permission gives you access to the **Manage > "
-"Calendars** admin panel."
-msgstr ""
-"Дозвола ``admin.calendar`` вам даје приступ административном панелу "
-"**Управљање > Календари**."
-
-#: ../manage/roles/index.rst:42
-msgid ""
-"Simply put, permissions are names for all the different things users might "
-"want to do throughout the system, such as:"
-msgstr ""
-"Једноставно речено, дозволе су називи за све различите ствари које корисници "
-"желе да раде у целом систему, као што су:"
-
-#: ../manage/roles/index.rst:45
-msgid "``chat.agent``: respond to live chat messages"
-msgstr "``chat.agent``: одговорање на поруке ћаскања"
-
-#: ../manage/roles/index.rst:46
-msgid "``ticket.agent``: update tickets"
-msgstr "``ticket.agent``: освежавање тикета"
-
-#: ../manage/roles/index.rst:47
-msgid "``admin.user``: access the **Manage > Users** admin panel"
-msgstr ""
-"``admin.user``: приступ административном панелу **Управљање > Корисници**"
-
-#: ../manage/roles/index.rst:48
-msgid "``knowledge_base.editor``: create/edit knowledge base articles"
-msgstr "``knowledge_base.editor``: додавање/уређивање чланака базе знања"
-
-#: ../manage/roles/index.rst:50
-msgid ""
-"Zammad has dozens of these permissions, which is a lot to keep track of. So "
-"instead of assigning a bunch of permissions to different users, the idea is "
-"to assign permissions to roles. And each user has an assigned role."
-msgstr ""
-"Zammad има на десетине ових дозвола, што је превише за памћење. Дакле, "
-"уместо доделе гомиле дозвола различитим корисницима, приступ је да се доделе "
-"дозволе улогама. А сваки корисник има додељену улогу."
-
-#: ../manage/roles/index.rst:54
-msgid ""
-"This makes creating user accounts for new agents a whole lot simpler, and it "
-"also makes it easier to assign a new permission to a role and say \"All "
-"existing agents can do *that* now, too.\""
-msgstr ""
-"Ово чини додавање корисничких налога за нове оператере много једноставнијим, "
-"а такође олакшава додавање нове дозволе улози ради остваривања следеће "
-"реченице: „Сви постојећи оператери такође могу да ураде *ово* сада.“"
-
-#: ../manage/roles/index.rst:58
-msgid ""
-"In short, roles are just collections of permissions that you can give to a "
-"user. The built-in admin, agent, and customer roles are enough for many "
-"teams, but Zammad gives you the freedom to custom-build your own."
-msgstr ""
-"Укратко, улоге су само колекције дозвола које можете дати кориснику. "
-"Подразумеване улоге администратора, оператера и клијента довољне су за многе "
-"тимове, али Zammad вам даје слободу да дефинишете сопствене."
-
-#: ../manage/roles/index.rst:62
-msgid "And to do that, you'll need to know what each permission does."
-msgstr "А да бисте то урадили, мораћете да знате шта свака дозвола ради."
-
-#: ../manage/roles/index.rst:64
-msgid "Users can have both \"agent\" and \"customer\" roles at the same time!"
-msgstr "Корисници могу имати и улоге „оператера” и „клијента” у исто време!"
-
-#: ../manage/roles/index.rst:66
-msgid ""
-"Why would you want this? Agents get :doc:`overviews </manage/overviews>` of "
-"all the tickets they're *assigned to* (among others), while customers get an "
-"overview of all the tickets they've *opened*. But some teams use Zammad for "
-"both internal and public communication, so their agents need both."
-msgstr ""
-"Зашто ми ово треба? Оператери имају приступ :doc:`прегледима </manage/"
-"overviews>` свих тикета којима су *додељени* (између осталог), док клијенти "
-"имају приступ прегледу свих тикета које су *отворили*. Али, неки тимови "
-"користе Zammad и за интерну и за јавну комуникацију, тако да њиховим "
-"оператерима требају оба."
-
-#: ../manage/roles/index.rst:73
-msgid ""
-"Having both roles also changes what you see in the ticket view, depending on "
-"whether you're the \"customer\" or not."
-msgstr ""
-"Обе улоге такође мењају оно што видите у приказу тикета, у зависности од "
-"тога да ли сте „клијент” тикета или не."
-
-#: ../manage/roles/index.rst:79
-msgid "Reference Guide: Permissions"
-msgstr "Референтни водич: Дозволе"
-
-#: ../manage/roles/index.rst:88
-msgid ""
-"Broadly speaking, there are four types of permission groups. Click on each "
-"to go to the detailed list of granular permissions. You can either select "
-"the whole permission group (e.g. ``admin``) or a subset of it (e.g. "
-"``admin.text_module``)."
-msgstr ""
-"Уопштено говорећи, постоји четири врсте група дозвола. Кликом на сваку "
-"можете прегледати списак грануларних дозвола. Можете одабрати или комплетну "
-"групу дозвола (нпр. ``admin``) или њен подскуп (нпр. ``admin.text_module``)."
-
-#: ../manage/roles/index.rst:94
-msgid ":doc:`🛡️ Admin <admin-permissions>`"
-msgstr ":doc:`🛡 администраторске <admin-permissions>`"
-
-#: ../manage/roles/index.rst:94
-msgid "For access to each page of the admin panel"
-msgstr "За приступ свакој страни администраторског панела"
-
-#: ../manage/roles/index.rst:97
-msgid ":doc:`🕵️ Agent <agent-permissions>`"
-msgstr ":doc:`🕵 оператерске <agent-permissions>`"
-
-#: ../manage/roles/index.rst:97
-msgid "For access to customer communications"
-msgstr "За приступ комуникацији са клијентима"
-
-#: ../manage/roles/index.rst:102
-msgid "👤 Customer"
-msgstr "👤 Клијент"
-
-#: ../manage/roles/index.rst:100
-msgid ""
-"Without the ``ticket.customer`` permission, customers can't see the **My "
-"Ticket** overview—but they can still log in and open new tickets!"
-msgstr ""
-"Без дозволе ``ticket.customer``, клијенти не могу да виде преглед **Моји "
-"тикети**—али и даље могу да се пријаве и отворе нове тикете!"
-
-#: ../manage/roles/index.rst:106
-msgid ":doc:`🎛️ User Preferences <user-preferences-permissions>`"
-msgstr ":doc:`🎛 Корисничка подешавања <user-preferences-permissions>`"
-
-#: ../manage/roles/index.rst:105
-msgid ""
-"For access to your own :user-docs:`user profile </extras/profile-and-"
-"settings.html>`"
-msgstr ""
-"За приступ сопственом :user-docs:`корисничком профилу </extras/profile-and-"
-"settings.html>`"
-
-#: ../manage/roles/index.rst:109
-msgid "Role Details"
-msgstr "Детаљи улоге"
-
-#: ../manage/roles/index.rst:123
-msgid "Default at Signup"
-msgstr "Подразумевано приликом регистрације"
-
-#: ../manage/roles/index.rst:112
-msgid ""
-"Every new user must be assigned at least one role upon creation. This "
-"attribute decides which role to give new users by default (which usually "
-"happens when creating a new ticket for a new customer)."
-msgstr ""
-"Сваком новом клијенту мора бити додељена бар једна улога приликом креирања. "
-"Овај атрибут одлучује коју улогу ће подразумевано дати новим корисницима "
-"(што се обично дешава када се отвори нов тикет за новог клијента)."
-
-#: ../manage/roles/index.rst:0
-msgid "Role overview in the admin panel, showing default role"
-msgstr ""
-"Преглед улога у административном панелу, са приказом подразумеване улоге"
-
-#: ../manage/roles/index.rst:120
-msgid ""
-"The default role is identified in the overview of the **Manage > Roles** "
-"admin panel."
-msgstr ""
-"Подразумевана улога је идентификована у прегледу **Управљање > Улоге** "
-"административног панела."
-
-#: ../manage/roles/index.rst:123
-msgid "🙅 **Default roles should never provide admin/agent permissions.**"
-msgstr ""
-"🙅 **Подразумеване улоге никада не би требало да дају дозволе администратора/"
-"оператера.**"
-
-#: ../manage/roles/index.rst:126
-msgid ""
-"Roles can't be deleted but set to inactive. If you do so, all users loose "
-"the permissions of this role. If this inactive role is the only one of a "
-"user, this account isn't able to do anything in Zammad. The login is still "
-"possible."
-msgstr ""
-"Улоге није могуће избрисати али се могу искључити. Уколико то учините, сви "
-"корисници ће изгубити дозволе на основу ове улоге. Уколико је искључена "
-"улога једина коју корисник поседује, тај налог неће моћи да ишта уради у "
-"Zammad-у. Пријава ће и даље бити могућа."
-
-#: ../manage/roles/user-preferences-permissions.rst:2
-msgid "User Preferences Permissions"
-msgstr "Дозволе за корисничка подешавања"
-
-#: ../manage/roles/user-preferences-permissions.rst:9
-msgid ""
-"The permissions listed on this page all belong to the ``user_preferences`` "
-"namespace. You can select them individually, or you can just select "
-"``user_preferences`` to enable the whole bunch."
-msgstr ""
-"Све дозволе наведене на овој страници почињу са називом "
-"``user_preferences``. Можете их одабрати појединачно или једноставно "
-"одабрати ``user_preferences`` да бисте омогућили читав низ."
-
-#: ../manage/roles/user-preferences-permissions.rst:20
-msgid "User preferences permissions in the New Role dialog"
-msgstr "Дозволе за корисничка подешавања у дијалогу нове улоге"
-
-#: ../manage/roles/user-preferences-permissions.rst:20
-msgid ""
-"User preferences permissions are shown at the bottom of the New Role "
-"dialog..."
-msgstr ""
-"Дозволе за корисничка подешавања су приказане при дну дијалога нове улоге…"
-
-#: ../manage/roles/user-preferences-permissions.rst:28
-msgid "User profile page"
-msgstr "Страница корисничког профила"
-
-#: ../manage/roles/user-preferences-permissions.rst:28
-msgid ""
-"...and give users access to the pages of their :user-docs:`User Profile </"
-"extras/profile-and-settings.html>`."
-msgstr ""
-"...и омогућује корисницима приступ страницама њиховог :user-"
-"docs:`корисничког профила </extras/profile-and-settings.html>`."
-
-#: ../manage/roles/user-preferences-permissions.rst:38
+#: ../manage/roles/permissions.rst:221
+#, fuzzy
+#| msgid "Fetch Preferences"
+msgid "User Preferences"
+msgstr "Подешавања преузимања"
+
+#: ../manage/roles/permissions.rst:230
 msgid "``user_preferences.access_token``"
 msgstr "``user_preferences.access_token``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "Generate API tokens to control"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Generate API tokens to control"
+msgid "Generate API tokens to control Zammad"
 msgstr "Генерисање API кључева за контролу"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "Zammad via :docs:`REST API </api/intro.html>`"
-msgstr "Zammad-а преко :docs:`REST API-ја </api/intro.html>`"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ":docs:`API (system documentation) </api/user.html>`"
+msgid "via :docs:`REST API (system documentation) </api/intro.html>`."
+msgstr ":docs:`API (системска документација) </api/user.html>`"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Generated tokens will never have more permissions"
 msgstr "Генерисани кључеви никада неће имати више дозвола"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "than the user that generated them."
 msgstr "од корисника који их је генерисао."
 
-#: ../manage/roles/user-preferences-permissions.rst:43
+#: ../manage/roles/permissions.rst:235
 msgid "``user_preferences.appearance``"
 msgstr "``user_preferences.appearance``"
 
-#: ../manage/roles/user-preferences-permissions.rst:44
+#: ../manage/roles/permissions.rst:236
 msgid "Appearance configuration"
 msgstr "Подешавање изгледа"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Users can switch between dark, light and"
 msgstr "Корисници могу да изаберу између тамног, светлог и"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "automatic mode."
 msgstr "аутоматског мода."
 
-#: ../manage/roles/user-preferences-permissions.rst:47
+#: ../manage/roles/permissions.rst:239
 msgid "``user_preferences.avatar``"
 msgstr "``user_preferences.avatar``"
 
-#: ../manage/roles/user-preferences-permissions.rst:48
+#: ../manage/roles/permissions.rst:240
 msgid "Avatar settings"
 msgstr "Подешавања аватара"
 
-#: ../manage/roles/user-preferences-permissions.rst:49
-msgid "Override the default Gravatar with a custom avatar"
-msgstr "Замена подразумеваног Gravatar-а са прилагођеним аватаром"
+#: ../manage/roles/permissions.rst:241
+#, fuzzy
+#| msgid "Allow users to setup and configure"
+msgid "Allows users to add a custom avatar image."
+msgstr "Дозвољава корисницима подесе и конфигуришу"
 
-#: ../manage/roles/user-preferences-permissions.rst:50
+#: ../manage/roles/permissions.rst:242
 msgid "``user_preferences.calendar``"
 msgstr "``user_preferences.calendar``"
 
-#: ../manage/roles/user-preferences-permissions.rst:51
+#: ../manage/roles/permissions.rst:243
 msgid "Configure the calendar feed"
 msgstr "Подешавање извора календара"
 
-#: ../manage/roles/user-preferences-permissions.rst:53
+#: ../manage/roles/permissions.rst:245
 msgid "``user_preferences.device``"
 msgstr "``user_preferences.device``"
 
-#: ../manage/roles/user-preferences-permissions.rst:54
+#: ../manage/roles/permissions.rst:246
 msgid "Manage device login sessions"
 msgstr "Управљање сесијама пријаве преко уређаја"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Revoking this permission disables"
 msgstr "Опозив ове дозволе искључује"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "“Login detected from a new location” emails."
 msgstr "имејл обавештења „логовање из нове земље”."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
 msgstr ""
 "Да бисте сазнали више, погледајте :doc:`/manage/trigger/system-"
 "notifications`."
 
-#: ../manage/roles/user-preferences-permissions.rst:58
+#: ../manage/roles/permissions.rst:250
 msgid "``user_preferences.language``"
 msgstr "``user_preferences.language``"
 
-#: ../manage/roles/user-preferences-permissions.rst:59
+#: ../manage/roles/permissions.rst:251
 msgid "Configure the UI locale/language"
 msgstr "Подешавање језика корисничког интерфејса"
 
-#: ../manage/roles/user-preferences-permissions.rst:61
+#: ../manage/roles/permissions.rst:252
+#, fuzzy
+#| msgid "Allow users to setup and configure"
+msgid "Allows users to set their preferred language."
+msgstr "Дозвољава корисницима подесе и конфигуришу"
+
+#: ../manage/roles/permissions.rst:253
 msgid "``user_preferences.linked_accounts``"
 msgstr "``user_preferences.linked_accounts``"
 
-#: ../manage/roles/user-preferences-permissions.rst:62
+#: ../manage/roles/permissions.rst:254
 msgid "Account linking"
 msgstr "Повезивање налога"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Manually link accounts after signing in"
 msgstr "Ручно повезивање налога након пријављивања"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 "with :doc:`third-party authentication </settings/security/third-party>`."
 msgstr ""
 "помоћу :doc:`аутентификације преко трећег лица </settings/security/third-"
 "party>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 "Note: If :ref:`automatic account linking <automatic-account-linking>` fails, "
 "this"
@@ -12186,122 +12082,132 @@ msgstr ""
 "Напомена: ако :ref:`аутоматско повезивање налога <automatic-account-"
 "linking>` не успе, ово"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "is the only way users can utilize third-party logins."
 msgstr ""
 "је једини начин на који ваши корисници могу да се пријаве преко трећег лица."
 
-#: ../manage/roles/user-preferences-permissions.rst:67
+#: ../manage/roles/permissions.rst:259
 msgid "``user_preferences.notifications``"
 msgstr "``user_preferences.notifications``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Configuration of ticket"
 msgstr "Подешавање тикета"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "notifications"
 msgstr "обавештења"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Agents only receive ticket notifications for"
 msgstr "Само оператери могу да примају обавештења о тикетима"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 ":doc:`groups they have “full” access to </manage/groups/access-levels>`."
 msgstr ""
 "за :doc:`групе у којима имају „пун” приступ </manage/groups/access-levels>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Customers can't receive ticket notifications at all."
 msgstr "Клијенти уопште не могу да примају обавештења о тикетима."
 
-#: ../manage/roles/user-preferences-permissions.rst:73
+#: ../manage/roles/permissions.rst:265
 msgid "``user_preferences.out_of_office``"
 msgstr "``user_preferences.out_of_office``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Designate a substitute for"
 msgstr "Одређивање заменe за"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "out-of-office hours"
 msgstr "функцију ван канцеларије"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "This does **not** grant that person the permissions /"
 msgstr "Ово *не омогућава** доделу"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ":doc:`group access levels </manage/groups/access-levels>` of the agent"
 msgstr ":doc:`ниова групних дозвола </manage/groups/access-levels>` особи"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "they're replacing."
 msgstr "која замењује оператера."
 
-#: ../manage/roles/user-preferences-permissions.rst:79
+#: ../manage/roles/permissions.rst:271
 msgid "``user_preferences.overview_sorting``"
 msgstr "``user_preferences.overview_sorting``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Allow users to define their own"
 msgstr "Дозвољава корисницима да одреде сопствени"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "overview order."
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "overview order."
+msgid "overview order"
 msgstr "редослед сортирања прегледа."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Optional permission; disabled by default."
 msgstr "Опциона дозвола; подразумевано искључена."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "The order your user chooses here cannot be"
 msgstr "Редослед који корисник одабере овде не може бити"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "overwritten by admins. Renaming or resorting"
 msgstr "преписан од стране администратора. Промена назива или редоследа"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "overviews has no effect on custom orders."
 msgstr "прегледа нема утицаја на прилагођене редоследе."
 
-#: ../manage/roles/user-preferences-permissions.rst:86
+#: ../manage/roles/permissions.rst:278
 msgid "``user_preferences.password``"
 msgstr "``user_preferences.password``"
 
-#: ../manage/roles/user-preferences-permissions.rst:87
+#: ../manage/roles/permissions.rst:279
 msgid "Change account password"
 msgstr "Промена лозинке налога"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Make sure to **revoke this permission** for all your users"
 msgstr "Обавезно **опозовите ову дозволу** за све своје кориснике"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "when using a third-party identity server (like LDAP) as"
 msgstr "када користите сервис идентификације преко трећег лица (нпр. LDAP) као"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "your only allowed authentication method."
 msgstr "ваш једини метод аутентификације."
 
-#: ../manage/roles/user-preferences-permissions.rst:91
-msgid "``user_preferences.two_factor_authentication``"
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "``user_preferences.avatar``"
+msgid "``user_preferences.``"
+msgstr "``user_preferences.avatar``"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "``user_preferences.two_factor_authentication``"
+msgid "``two_factor_authentication``"
 msgstr "``user_preferences.two_factor_authentication``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Allow users to setup and configure"
 msgstr "Дозвољава корисницима подесе и конфигуришу"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "their two factor authentication"
 msgstr "своју двофакторску аутентификацију"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 ":doc:`Two factor authentication </settings/security/two-factor>` has to be "
 "enabled"
@@ -12309,9 +12215,128 @@ msgstr ""
 ":doc:`Двофакторска аутентификација </settings/security/two-factor>` мора "
 "бити укључена"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "that users can setup and configure it."
 msgstr "да би корисници могли да је подесе и конфигуришу."
+
+#: ../manage/roles/permissions.rst:300
+msgid "``knowledge_base.editor``"
+msgstr "``knowledge_base.editor``"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Create and Edit Profiles"
+msgid "Create and edit permission"
+msgstr "Додавање и уређивање профила"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "knowledge_base"
+msgid "for knowledge base articles"
+msgstr "knowledge_base"
+
+#: ../manage/roles/permissions.rst:303
+#, fuzzy
+#| msgid "Editor permissions always include reader permissions."
+msgid "The editor permission always includes the reader permission."
+msgstr "Дозволе уредника увек укључују дозволе читаоца."
+
+#: ../manage/roles/permissions.rst:304
+msgid "``knowledge_base.reader``"
+msgstr "``knowledge_base.reader``"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "Read privileges for internal content"
+msgid "Read permission for internal"
+msgstr "Дозволе прегледа интерног садржаја"
+
+#: ../manage/roles/permissions.rst:0
+msgid "(not published) knowledge base articles"
+msgstr ""
+
+#: ../manage/roles/permissions.rst:0
+msgid "Public articles are always visible."
+msgstr "Јавни чланци су увек видљиви."
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ""
+#| "See :user-docs:`here </extras/knowledge-base.html#granular-category-"
+#| "permissions>` how to set up granular reader permissions for the knowledge "
+#| "base."
+msgid ""
+"See :user-docs:`here </extras/knowledge-base.html#granular-category-"
+"permissions>` how to set up granular reader permissions for the"
+msgstr ""
+"Прочитајте :user-docs:`овде </extras/knowledge-base.html#granular-category-"
+"permissions>` како да подесите грануларне дозволе читаоца за базу знања."
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid ""
+#| "Keep in mind that this may be dangerous, as reader permission provides"
+msgid "knowledge base. Keep in mind that this may be dangerous,"
+msgstr "Имајте на уму да ово може бити опасно, јер дозвола читаоца омогућава"
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "access to internal answers!"
+msgid "as reader permission provides access to internal answers!"
+msgstr "приступ интерним чланцима!"
+
+#: ../manage/roles/permissions.rst:312
+msgid "``report``"
+msgstr "``report``"
+
+#: ../manage/roles/permissions.rst:313
+msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
+msgstr ""
+":user-docs:`Извештавање (корисничка документација)</extras/reporting.html>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Make sure to **never** grant this permission to your customers"
+msgstr "**Никада** не додељујте ову дозволу својим клијентима"
+
+#: ../manage/roles/permissions.rst:0
+msgid "because it includes **all ticket and user information** across the"
+msgstr ""
+"зато што укључује **све информације о тикетима и корисницима** из целог"
+
+#: ../manage/roles/permissions.rst:0
+msgid "entire system! Consider setting up a new role for your admins or"
+msgstr "система! Размотрите додавање нове улоге за ваше администраторе или"
+
+#: ../manage/roles/permissions.rst:0
+msgid ""
+"supervisors and limit the access via :doc:`/manage/report-profiles` first."
+msgstr ""
+"супервизоре и ограничите приступ преко :doc:`профила извештаја </manage/"
+"report-profiles>`."
+
+#: ../manage/roles/permissions.rst:318 ../settings/security/base.rst:96
+msgid "``ticket.customer``"
+msgstr "``ticket.customer``"
+
+#: ../manage/roles/permissions.rst:319
+#, fuzzy
+#| msgid "Allow users to setup and configure"
+msgid "Allows a user to be set as customer of a ticket"
+msgstr "Дозвољава корисницима подесе и конфигуришу"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Without this permission, customers can't see the"
+msgstr ""
+
+#: ../manage/roles/permissions.rst:0
+msgid "**My Ticket** overview. But they can still log in"
+msgstr ""
+
+#: ../manage/roles/permissions.rst:0
+#, fuzzy
+#| msgid "...create new tickets"
+msgid "and create new tickets."
+msgstr "…отвара нове карте"
 
 #: ../manage/scheduler.rst:2
 msgid "Scheduler"
@@ -12358,11 +12383,6 @@ msgid ""
 msgstr ""
 "Планери могу да обраде највише ``2000`` објеката по сваком извршавању. Ово "
 "је безбедносна функција у случају да случајно пропустите да подесите планер."
-
-#: ../manage/scheduler.rst:22 ../manage/webhook/add.rst:8
-#: ../system/core-workflows/learn-by-example.rst:8
-msgid "Basics"
-msgstr "Основе"
 
 #: ../manage/scheduler.rst:25
 msgid "Manage Scheduler Jobs"
@@ -18039,10 +18059,6 @@ msgstr "Пошиљалац"
 msgid "Checks the type of sender."
 msgstr "Проверава врсту пошиљаоца."
 
-#: ../misc/object-conditions/basics.rst:170
-msgid "Agent"
-msgstr "Оператер"
-
 #: ../misc/object-conditions/basics.rst:174
 msgid "Checks ticket state."
 msgstr "Проверава стање тикета."
@@ -19321,13 +19337,21 @@ msgstr ""
 "community.zammad.org>`_."
 
 #: ../misc/variables/article.rst:8
+#, fuzzy
+#| msgid ""
+#| "Below you can find a list with examples of article variables. Depending "
+#| "on the context and if you want to use an attribute of a specific article, "
+#| "you can choose from specific article types in Zammad. To access "
+#| "suggestions for variables, type ``::`` followed by your search query to "
+#| "trigger a list of relevant options. The following article types are "
+#| "available, depending on the context:"
 msgid ""
 "Below you can find a list with examples of article variables. Depending on "
 "the context and if you want to use an attribute of a specific article, you "
 "can choose from specific article types in Zammad. To access suggestions for "
-"variables, type ``::`` followed by your search query to trigger a list of "
-"relevant options. The following article types are available, depending on "
-"the context:"
+"variables, type :kbd:`:` :kbd:`:` followed by your search query to trigger a "
+"list of relevant options. The following article types are available, "
+"depending on the context:"
 msgstr ""
 "Испод можете пронаћи листу са примерима променљивих чланака тикета. У "
 "зависности од тога да ли тражите одговарајући атрибут чланка, можете бирати "
@@ -19337,38 +19361,60 @@ msgstr ""
 "чланака:"
 
 #: ../misc/variables/article.rst:15
-msgid "``last_internal_article``"
+#, fuzzy
+#| msgid "``last_internal_article``"
+msgid "``first_internal_article``"
 msgstr "``last_internal_article``"
 
 #: ../misc/variables/article.rst:16
-msgid "``last_external_article``"
+#, fuzzy
+#| msgid "``last_external_article``"
+msgid "``first_external_article``"
 msgstr "``last_external_article``"
 
 #: ../misc/variables/article.rst:17
-msgid "``last_article``"
+#, fuzzy
+#| msgid "``last_article``"
+msgid "``first_article``"
 msgstr "``last_article``"
 
 #: ../misc/variables/article.rst:18
+msgid "``last_internal_article``"
+msgstr "``last_internal_article``"
+
+#: ../misc/variables/article.rst:19
+msgid "``last_external_article``"
+msgstr "``last_external_article``"
+
+#: ../misc/variables/article.rst:20
+msgid "``last_article``"
+msgstr "``last_article``"
+
+#: ../misc/variables/article.rst:21
 msgid "``created_internal_article``"
 msgstr "``created_internal_article``"
 
-#: ../misc/variables/article.rst:19
+#: ../misc/variables/article.rst:22
 msgid "``created_external_article``"
 msgstr "``created_external_article``"
 
-#: ../misc/variables/article.rst:20
+#: ../misc/variables/article.rst:23
 msgid "``created_article``"
 msgstr "``created_article``"
 
-#: ../misc/variables/article.rst:22
+#: ../misc/variables/article.rst:25
+#, fuzzy
+#| msgid ""
+#| "The table uses ``last_article`` as example. In case you want another "
+#| "article, replace it with one of the mentioned article types."
 msgid ""
-"The table uses ``last_article`` as example. In case you want another "
-"article, replace it with one of the mentioned article types."
+"The table uses \"Article\" as example. Replace it with one of the "
+"aforementioned article types."
 msgstr ""
 "Табела користи ``last_article`` као пример. У случају да желите други "
 "чланак, замените га са једним од излистаних врста."
 
-#: ../misc/variables/article.rst:25
+#: ../misc/variables/article.rst:28
 msgid "Article Variables"
 msgstr "Променљиве чланка"
 
@@ -19378,7 +19424,9 @@ msgid "Variable"
 msgstr "Променљива"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Cc"
+#, fuzzy
+#| msgid "Last Article > Cc"
+msgid "Article > Cc"
 msgstr "Последњи чланак > Cc"
 
 #: ../misc/variables/article.rst:1
@@ -19390,7 +19438,9 @@ msgid "``jdoe@example.com, company@example.com``"
 msgstr "``jdoe@example.com, company@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Address"
+#, fuzzy
+#| msgid "Last Article > Created by > Address"
+msgid "Article > Created by > Address"
 msgstr "Последњи чланак > Додато од стране > Адреса"
 
 #: ../misc/variables/article.rst:1
@@ -19404,7 +19454,9 @@ msgstr ""
 "објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Department"
+#, fuzzy
+#| msgid "Last Article > Created by > Department"
+msgid "Article > Created by > Department"
 msgstr "Последњи чланак > Додато од стране > Одељење"
 
 #: ../misc/variables/article.rst:1
@@ -19416,7 +19468,9 @@ msgid "``Sales`` or empty if not set in user object"
 msgstr "``Sales`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Email"
+#, fuzzy
+#| msgid "Last Article > Created by > Email"
+msgid "Article > Created by > Email"
 msgstr "Последњи чланак > Додато од стране > Имејл"
 
 #: ../misc/variables/article.rst:1
@@ -19428,7 +19482,9 @@ msgid "``jdoe@example.com``"
 msgstr "``jdoe@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Fax"
+#, fuzzy
+#| msgid "Last Article > Created by > Fax"
+msgid "Article > Created by > Fax"
 msgstr "Последњи чланак > Додато од стране > Факс"
 
 #: ../misc/variables/article.rst:1
@@ -19440,7 +19496,9 @@ msgid "``+4930123456789`` or empty if not set in user object"
 msgstr "``+4930123456789`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Firstname"
+#, fuzzy
+#| msgid "Last Article > Created by > Firstname"
+msgid "Article > Created by > Firstname"
 msgstr "Последњи чланак > Додато од стране > Име"
 
 #: ../misc/variables/article.rst:1
@@ -19452,7 +19510,9 @@ msgid "``Joe`` or empty if not set"
 msgstr "``Joe`` или празно ако није постављено"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Lastname"
+#, fuzzy
+#| msgid "Last Article > Created by > Lastname"
+msgid "Article > Created by > Lastname"
 msgstr "Последњи чланак > Додато од стране > Презиме"
 
 #: ../misc/variables/article.rst:1
@@ -19465,7 +19525,9 @@ msgid "``Doe`` or empty if not set"
 msgstr "``Doe`` или празно ако није постављено"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Login"
+#, fuzzy
+#| msgid "Last Article > Created by > Login"
+msgid "Article > Created by > Login"
 msgstr "Последњи чланак > Додато од стране > Пријава"
 
 #: ../misc/variables/article.rst:1
@@ -19478,7 +19540,9 @@ msgid "``jdoe``"
 msgstr "``jdoe``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Mobile"
+#, fuzzy
+#| msgid "Last Article > Created by > Mobile"
+msgid "Article > Created by > Mobile"
 msgstr "Последњи чланак > Додато од стране > Мобилни"
 
 #: ../misc/variables/article.rst:1
@@ -19486,7 +19550,9 @@ msgid "``#{article.created_by.mobile}``"
 msgstr "``#{article.created_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Note"
+#, fuzzy
+#| msgid "Last Article > Created by > Note"
+msgid "Article > Created by > Note"
 msgstr "Последњи чланак > Додато од стране > Напомена"
 
 #: ../misc/variables/article.rst:1
@@ -19500,7 +19566,9 @@ msgstr ""
 "корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Phone"
+#, fuzzy
+#| msgid "Last Article > Created by > Phone"
+msgid "Article > Created by > Phone"
 msgstr "Последњи чланак > Додато од стране > Телефон"
 
 #: ../misc/variables/article.rst:1
@@ -19508,7 +19576,9 @@ msgid "``#{article.created_by.phone}``"
 msgstr "``#{article.created_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > VIP"
+#, fuzzy
+#| msgid "Last Article > Created by > VIP"
+msgid "Article > Created by > VIP"
 msgstr "Последњи чланак > Додато од стране > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -19520,7 +19590,9 @@ msgid "``true`` or ``false``"
 msgstr "``true`` или ``false``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Web"
+#, fuzzy
+#| msgid "Last Article > Created by > Web"
+msgid "Article > Created by > Web"
 msgstr "Последњи чланак > Додато од стране > Веб"
 
 #: ../misc/variables/article.rst:1
@@ -19533,7 +19605,9 @@ msgstr ""
 "``https://zammad.com`` или празно ако није постављено у објекту корисника"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created"
+#, fuzzy
+#| msgid "Last Article > Created"
+msgid "Article > Created"
 msgstr "Последњи чланак > Додато у"
 
 #: ../misc/variables/article.rst:1
@@ -19545,7 +19619,9 @@ msgid "``2019-10-08 15:24:47 UTC``"
 msgstr "``2019-10-08 15:24:47 UTC``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > From"
+#, fuzzy
+#| msgid "Last Article > From"
+msgid "Article > From"
 msgstr "Последњи чланак > Од"
 
 #: ../misc/variables/article.rst:1
@@ -19560,7 +19636,9 @@ msgstr ""
 "атрибута имејл поруке"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Sender > Name"
+#, fuzzy
+#| msgid "Last Article > Sender > Name"
+msgid "Article > Sender > Name"
 msgstr "Последњи чланак > Пошиљалац > Назив"
 
 #: ../misc/variables/article.rst:1
@@ -19572,7 +19650,9 @@ msgid "``Customer``, ``Agent`` or ``System``"
 msgstr "``Customer``, ``Agent`` или ``System``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Subject"
+#, fuzzy
+#| msgid "Last Article > Subject"
+msgid "Article > Subject"
 msgstr "Последњи чланак > Предмет"
 
 #: ../misc/variables/article.rst:1
@@ -19584,7 +19664,9 @@ msgid "``My amazing subject``"
 msgstr "``Мој екстра предмет`"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Text"
+#, fuzzy
+#| msgid "Last Article > Text"
+msgid "Article > Text"
 msgstr "Последњи чланак > Текст"
 
 #: ../misc/variables/article.rst:1
@@ -19592,11 +19674,15 @@ msgid "``#{article.body}``"
 msgstr "``#{article.body}``"
 
 #: ../misc/variables/article.rst:1
-msgid "``Test`` without formatting (plain)"
+#, fuzzy
+#| msgid "``Test`` without formatting (plain)"
+msgid "``Test`` without formatting (plain). See also note below."
 msgstr "``Test`` без форматираног текста (обичан)"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Text (HTML)"
+#, fuzzy
+#| msgid "Last Article > Text (HTML)"
+msgid "Article > Text (HTML)"
 msgstr "Последњи чланак > Текст"
 
 #: ../misc/variables/article.rst:1
@@ -19604,11 +19690,15 @@ msgid "``#{article.body_as_html}``"
 msgstr "``#{article.body_as_html}``"
 
 #: ../misc/variables/article.rst:1
-msgid "``Test`` with formatting"
+#, fuzzy
+#| msgid "``Test`` with formatting"
+msgid "``Test`` with formatting. See also note below."
 msgstr "``Тест`` са форматираним текстом"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > TicketID"
+#, fuzzy
+#| msgid "Last Article > TicketID"
+msgid "Article > TicketID"
 msgstr "Последњи чланак > TicketID"
 
 #: ../misc/variables/article.rst:1
@@ -19620,7 +19710,9 @@ msgid "``1`` (not ticket number)"
 msgstr "``1`` (не представља број тикета)"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > To"
+#, fuzzy
+#| msgid "Last Article > To"
+msgid "Article > To"
 msgstr "Последњи чланак > За"
 
 #: ../misc/variables/article.rst:1
@@ -19632,7 +19724,9 @@ msgid "``helpdesk@example.com``"
 msgstr "``helpdesk@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Type > Name"
+#, fuzzy
+#| msgid "Last Article > Type > Name"
+msgid "Article > Type > Name"
 msgstr "Последњи чланак > Тип > Назив"
 
 #: ../misc/variables/article.rst:1
@@ -19648,7 +19742,9 @@ msgstr ""
 "develop/db/seeds/ticket_article_types.rb>`_)"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Address"
+#, fuzzy
+#| msgid "Last Article > Updated by > Address"
+msgid "Article > Updated by > Address"
 msgstr "Последњи чланак > Освежено од стране > Адреса"
 
 #: ../misc/variables/article.rst:1
@@ -19656,7 +19752,9 @@ msgid "``#{article.updated_by.address}``"
 msgstr "``#{article.updated_by.address}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Department"
+#, fuzzy
+#| msgid "Last Article > Updated by > Department"
+msgid "Article > Updated by > Department"
 msgstr "Последњи чланак > Освежено од стране > Одељење"
 
 #: ../misc/variables/article.rst:1
@@ -19664,7 +19762,9 @@ msgid "``#{article.updated_by.department}``"
 msgstr "``#{article.updated_by.department}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Email"
+#, fuzzy
+#| msgid "Last Article > Updated by > Email"
+msgid "Article > Updated by > Email"
 msgstr "Последњи чланак > Освежено од стране > Имејл"
 
 #: ../misc/variables/article.rst:1
@@ -19672,7 +19772,9 @@ msgid "``#{article.updated_by.email}``"
 msgstr "``#{article.updated_by.email}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Fax"
+#, fuzzy
+#| msgid "Last Article > Updated by > Fax"
+msgid "Article > Updated by > Fax"
 msgstr "Последњи чланак > Освежено од стране > Факс"
 
 #: ../misc/variables/article.rst:1
@@ -19680,7 +19782,9 @@ msgid "``#{article.updated_by.fax}``"
 msgstr "``#{article.updated_by.fax}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Firstname"
+#, fuzzy
+#| msgid "Last Article > Updated by > Firstname"
+msgid "Article > Updated by > Firstname"
 msgstr "Последњи чланак > Освежено од стране > Име"
 
 #: ../misc/variables/article.rst:1
@@ -19688,7 +19792,9 @@ msgid "``#{article.updated_by.firstname}``"
 msgstr "``#{article.updated_by.firstname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Lastname"
+#, fuzzy
+#| msgid "Last Article > Updated by > Lastname"
+msgid "Article > Updated by > Lastname"
 msgstr "Последњи чланак > Освежено од стране > Презиме"
 
 #: ../misc/variables/article.rst:1
@@ -19696,7 +19802,9 @@ msgid "``#{article.updated_by.lastname}``"
 msgstr "``#{article.updated_by.lastname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Login"
+#, fuzzy
+#| msgid "Last Article > Updated by > Login"
+msgid "Article > Updated by > Login"
 msgstr "Последњи чланак > Освежено од стране > Пријава"
 
 #: ../misc/variables/article.rst:1
@@ -19704,7 +19812,9 @@ msgid "``#{article.updated_by.login}``"
 msgstr "``#{article.updated_by.login}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Mobile"
+#, fuzzy
+#| msgid "Last Article > Updated by > Mobile"
+msgid "Article > Updated by > Mobile"
 msgstr "Последњи чланак > Освежено од стране > Мобилни"
 
 #: ../misc/variables/article.rst:1
@@ -19712,7 +19822,9 @@ msgid "``#{article.updated_by.mobile}``"
 msgstr "``#{article.updated_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Note"
+#, fuzzy
+#| msgid "Last Article > Updated by > Note"
+msgid "Article > Updated by > Note"
 msgstr "Последњи чланак > Освежено од стране > Напомена"
 
 #: ../misc/variables/article.rst:1
@@ -19720,7 +19832,9 @@ msgid "``#{article.updated_by.note}``"
 msgstr "``#{article.updated_by.note}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Phone"
+#, fuzzy
+#| msgid "Last Article > Updated by > Phone"
+msgid "Article > Updated by > Phone"
 msgstr "Последњи чланак > Освежено од стране > Телефон"
 
 #: ../misc/variables/article.rst:1
@@ -19728,7 +19842,9 @@ msgid "``#{article.updated_by.phone}``"
 msgstr "``#{article.updated_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > VIP"
+#, fuzzy
+#| msgid "Last Article > Updated by > VIP"
+msgid "Article > Updated by > VIP"
 msgstr "Последњи чланак > Освежено од стране > VIP"
 
 #: ../misc/variables/article.rst:1
@@ -19736,7 +19852,9 @@ msgid "``#{article.updated_by.vip}``"
 msgstr "``#{article.updated_by.vip}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Web"
+#, fuzzy
+#| msgid "Last Article > Updated by > Web"
+msgid "Article > Updated by > Web"
 msgstr "Последњи чланак > Освежено од стране > Веб"
 
 #: ../misc/variables/article.rst:1
@@ -19744,7 +19862,9 @@ msgid "``#{article.updated_by.web}``"
 msgstr "``#{article.updated_by.web}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated"
+#, fuzzy
+#| msgid "Last Article > Updated"
+msgid "Article > Updated"
 msgstr "Последњи чланак > Освежено у"
 
 #: ../misc/variables/article.rst:1
@@ -19752,7 +19872,9 @@ msgid "``#{article.updated_at}``"
 msgstr "``#{article.updated_at}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Visibility"
+#, fuzzy
+#| msgid "Last Article > Visibility"
+msgid "Article > Visibility"
 msgstr "Последњи чланак > Видљивост"
 
 #: ../misc/variables/article.rst:1
@@ -19774,6 +19896,83 @@ msgstr "``#{ticket.article_count}``"
 #: ../misc/variables/article.rst:1
 msgid "``1`` number of ticket articles"
 msgstr "``1`` број чланака тикета"
+
+#: ../misc/variables/article.rst:72
+msgid ""
+"There are different variables for the body of an article. In addition to the "
+"mentioned variables in the table above, there are even two more which are "
+"not in the suggestion list when typing :kbd:`:` :kbd:`:`."
+msgstr ""
+
+#: ../misc/variables/article.rst:76
+msgid ""
+"Let's have a look at an example to make it more clear. The following text is "
+"the body of an article with some HTML formatting:"
+msgstr ""
+
+#: ../misc/variables/article.rst:85
+msgid "Depending on the variable, the result differs:"
+msgstr ""
+
+#: ../misc/variables/article.rst:89
+msgid "Plain text as quote with HTML linebreaks"
+msgstr ""
+
+#: ../misc/variables/article.rst:91
+#, fuzzy
+#| msgid "``#{article.body}``"
+msgid "Variable: ``#{article.body}``"
+msgstr "``#{article.body}``"
+
+#: ../misc/variables/article.rst:93
+msgid ""
+"Body in plain text, converted to HTML with quote character (``>``) at the "
+"beginning of each line. Example:"
+msgstr ""
+
+#: ../misc/variables/article.rst:102
+msgid "HTML"
+msgstr ""
+
+#: ../misc/variables/article.rst:104
+#, fuzzy
+#| msgid "``#{article.body_as_html}``"
+msgid "Variable: ``#{article.body_as_html}``"
+msgstr "``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:106
+msgid "Body as HTML without quote character (``>``). Example:"
+msgstr ""
+
+#: ../misc/variables/article.rst:114
+msgid "Plain text with HTML linebreaks"
+msgstr ""
+
+#: ../misc/variables/article.rst:116
+#, fuzzy
+#| msgid "``#{article.body_as_html}``"
+msgid "Variable: ``#{article.body_as_text.text2html}``"
+msgstr "``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:118
+msgid ""
+"Body as plain text, converted to HTML without quote character (``>``). "
+"Example:"
+msgstr ""
+
+#: ../misc/variables/article.rst:127
+msgid "Plain text"
+msgstr ""
+
+#: ../misc/variables/article.rst:129
+#, fuzzy
+#| msgid "``#{article.body_as_html}``"
+msgid "Variable: ``#{article.body_as_text}``"
+msgstr "``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:131
+msgid "Body as plain text without quote character (``>``). Example:"
+msgstr ""
 
 #: ../misc/variables/config.rst:2
 msgid "Config"
@@ -20342,18 +20541,24 @@ msgid "``#{user.web}``"
 msgstr "``#{user.web}``"
 
 #: ../misc/variables/ticket.rst:8
+#, fuzzy
+#| msgid ""
+#| "Below you can find examples of ticket-based variables within Zammad. "
+#| "These can be called via triggers for example. If you're unsure if Zammad "
+#| "does support variables at the point you're at, you can try to type ``::`` "
+#| "to check."
 msgid ""
 "Below you can find examples of ticket-based variables within Zammad. These "
 "can be called via triggers for example. If you're unsure if Zammad does "
-"support variables at the point you're at, you can try to type ``::`` to "
-"check."
+"support variables at the point you're at, you can try to "
+"type :kbd:`:` :kbd:`:` to check."
 msgstr ""
 "Испод можете пронаћи примере доступних променљивих тикета унутар Zammad-а. "
 "Могуће их је користити у окидачима, на пример. Ако нисте сигурни да ли "
 "Zammad подржава променљиве у неком делу, можете откуцати ``::`` да бисте "
 "проверили."
 
-#: ../misc/variables/ticket.rst:12
+#: ../misc/variables/ticket.rst:13
 msgid "Ticket Variables"
 msgstr "Променљиве тикета"
 
@@ -21474,11 +21679,17 @@ msgid "Lost Password"
 msgstr "Изгубљена лозинка"
 
 #: ../settings/security/base.rst:33
+#, fuzzy
+#| msgid ""
+#| "Activates the `lost password` function on the login page. If set to "
+#| "``no`` only administrators may change the user's password - users may "
+#| "update their own password if they're still logged in and they have the "
+#| "required :doc:`permission </manage/roles/user-preferences-permissions>`."
 msgid ""
 "Activates the `lost password` function on the login page. If set to ``no`` "
 "only administrators may change the user's password - users may update their "
 "own password if they're still logged in and they have the "
-"required :doc:`permission </manage/roles/user-preferences-permissions>`."
+"required :doc:`permission </manage/roles/permissions>`."
 msgstr ""
 "Активира функцију `Изгубљена лозинка` на страници за пријаву. Ако је "
 "подешено на ``не`` само администратори могу да промене корисничку лозинку - "
@@ -21560,10 +21771,6 @@ msgstr ""
 #: ../settings/security/base.rst:94
 msgid "``admin``"
 msgstr "``admin``"
-
-#: ../settings/security/base.rst:96
-msgid "``ticket.customer``"
-msgstr "``ticket.customer``"
 
 #: ../settings/security/base.rst:97
 msgid "``default`` (fallback if user doesn't have above permissions set)"
@@ -23344,7 +23551,7 @@ msgstr ""
 "Погледајте :ref:`аутоматско повезивање налога <automatic-account-linking>` "
 "за детаље о томе како да повежете постојеће Zammad налоге са IdP налозима."
 
-#: ../settings/security/third-party/saml.rst:188
+#: ../settings/security/third-party/saml.rst:189
 msgid "Automatic account linking doesn't work"
 msgstr "Аутоматско повезивање налога не функционише"
 
@@ -23354,6 +23561,19 @@ msgid ""
 msgstr ""
 "Да ли сте још једном проверили подешавање мапирања корисничких атрибута "
 "вашег IdP-а?"
+
+#: ../settings/security/third-party/saml.rst:193
+#, fuzzy
+#| msgid "How does it work?"
+msgid "Logout doesn't work"
+msgstr "Како то уствари функционише?"
+
+#: ../settings/security/third-party/saml.rst:192
+msgid ""
+"In case your logout process doesn't work, you can try ``https://<your-zammad-"
+"url>/auth/saml/slo`` as an alternative. However, no logout is sent to your "
+"IdP then."
+msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:2
 msgid "SAML with Keycloak"
@@ -23462,7 +23682,6 @@ msgid "Log in to Zammad as an administrator"
 msgstr "Пријавите се у Zammad као администратор"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:52
-#: ../settings/security/third-party/saml/saml-microsoft.rst:54
 msgid ""
 "In the admin panel go to \"Settings\" > \"Security\" > \"Third-party "
 "Applications\" > \"Authentication via SAML\""
@@ -23629,6 +23848,18 @@ msgstr "Снимак екрана који приказује већ нагла�
 #: ../settings/security/third-party/saml/saml-microsoft.rst:51
 msgid "5. Configure Zammad"
 msgstr "5. Подесите Zammad"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:54
+#, fuzzy
+#| msgid ""
+#| "In the admin panel go to \"Settings\" > \"Security\" > \"Third-party "
+#| "Applications\" > \"Authentication via SAML\""
+msgid ""
+"Go to *Settings > Security > Third-party Applications > Authentication via "
+"SAML* in the admin settings."
+msgstr ""
+"Идите у администраторском панелу на „Подешавања” > „Безбедност” > "
+"„Апликације трећег лица” > „Аутентификација путем SAML”"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:58
 msgid ""
@@ -33930,6 +34161,381 @@ msgstr "Верзија"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Приказује која верзија се користи тренутно на вашој Zammad инстанци."
 
+#~ msgid "Admin Permissions"
+#~ msgstr "Дозволе администратора"
+
+#~ msgid ""
+#~ "📁 **Permissions are namespaced**, which is sort of like having files "
+#~ "inside of folders."
+#~ msgstr ""
+#~ "📁 **Дозволе су у организоване по називу**, што је као да имате датотеке "
+#~ "унутар фолдера."
+
+#~ msgid ""
+#~ "The permissions listed on this page all belong to the ``admin`` "
+#~ "namespace. You can select them individually, or you can just select "
+#~ "``admin`` to enable the whole bunch."
+#~ msgstr ""
+#~ "Све дозволе наведене на овој страници припадају групи ``admin``. Можете "
+#~ "их одабрати појединачно, или једноставно одабрати ``admin`` да бисте "
+#~ "укључили читаву групу."
+
+#~ msgid "Admin permissions in the New Role dialog"
+#~ msgstr "Дозволе администратора у дијалогу нове улоге"
+
+#~ msgid "Admin permissions are shown at the top of the New Role dialog..."
+#~ msgstr "Дозволе администратора су приказане при врху дијалога нове улоге..."
+
+#~ msgid "Screenshot showing admin settings within Zammad."
+#~ msgstr "Снимак екрана који приказује подешавања администратора у Zammad-у."
+
+#~ msgid "...and give users access to the pages of the Admin Panel."
+#~ msgstr ""
+#~ "...и омогућити корисницима приступ страницама панела администратора."
+
+#~ msgid "Permission name"
+#~ msgstr "Назив дозволе"
+
+#~ msgid "Give access to"
+#~ msgstr "Омогућује приступ"
+
+#~ msgid "``admin.ai``"
+#~ msgstr "``admin.ai``"
+
+#~ msgid "AI > Smart Assist Text Tools"
+#~ msgstr "AI > Smart Assist текстуалне алатке"
+
+#~ msgid ""
+#~ "Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
+#~ msgstr ""
+#~ "Приступ Facebook тикетима за оператере: :doc:`/manage/groups/access-"
+#~ "levels`"
+
+#~ msgid ""
+#~ "Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
+#~ msgstr ""
+#~ "Приступ Telegram тикетима за оператере: :doc:`/manage/groups/access-"
+#~ "levels`"
+
+#~ msgid ""
+#~ "Accessing knowledge base to read/edit articles: ``knowledge_base.reader``"
+#~ msgstr ""
+#~ "Приступ бази знања за читање/уређивање чланака: ``knowledge_base.reader``"
+
+#~ msgid "and ``knowledge_base.editor``"
+#~ msgstr "и ``knowledge_base.editor``"
+
+#~ msgid ""
+#~ "Make sure to double-check the answer's :user-docs:`visibility </extras/"
+#~ "knowledge-base.html#editing-answers>`."
+#~ msgstr ""
+#~ "Проверите још једном :user-docs:`видљивост чланака </extras/knowledge-"
+#~ "base.html#editing-answers>`."
+
+#~ msgid "For automation on tickets"
+#~ msgstr "За аутоматизацију тикета"
+
+#~ msgid "Does not grant access to :doc:`/misc/composer`"
+#~ msgstr "Не дозвољава приступ :doc:`/misc/composer`"
+
+#~ msgid "Independent from this permission, agents can create and edit"
+#~ msgstr "Независно од ове дозволе, оператери могу додавати и уређивати"
+
+#~ msgid ""
+#~ "🏴‍☠️ This permission allows users to :ref:`hijack other user sessions "
+#~ "<view-from-users-perspective>` ."
+#~ msgstr ""
+#~ "🏴‍☠ Ова дозвола омогућава корисницима :ref:`преотму сесије других "
+#~ "корисника <view-from-users-perspective>`."
+
+#~ msgid "Agent Permissions"
+#~ msgstr "Дозволе оператера"
+
+#~ msgid ""
+#~ "The permissions listed on this page grant access to features that have to "
+#~ "be enabled or configured system-wide in the Admin Panel first."
+#~ msgstr ""
+#~ "Дозволе наведене на овој страници дају приступ функцијама које прво "
+#~ "морају бити укључене или подешене на целом систему путем административног "
+#~ "панела."
+
+#~ msgid "Agent permissions in the New Role dialog"
+#~ msgstr "Дозволе оператера у дијалогу нове улоге"
+
+#~ msgid "Agent permissions are shown in the middle of the New Role dialog..."
+#~ msgstr "Дозволе оператера су приказане при средини дијалога нове улоге…"
+
+#~ msgid "Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone"
+#~ msgstr ""
+#~ "Језичци на бочној траци: Прегледи, База знања, Клијент ћаскање, Позив"
+
+#~ msgid ""
+#~ "...and give users access to new sidebar tabs for communicating with "
+#~ "customers."
+#~ msgstr ""
+#~ "...и даје корисницима приступ новим језичцима бочне траке за комуникацију "
+#~ "са клијентима."
+
+#~ msgid "Configuration of a CTI integration is required"
+#~ msgstr "Захтева подешену CTI интеграцију"
+
+#~ msgid "Create/edit privileges"
+#~ msgstr "Дозволе додавања/уређивања"
+
+#~ msgid "See notes below"
+#~ msgstr "Погледајте напомене испод"
+
+#~ msgid "🤔 **What about this table under the permissions tree?**"
+#~ msgstr "🤔 **Шта ова табела тражи овде испод стабла дозвола?**"
+
+#~ msgid "Group permission table in Edit Role dialog"
+#~ msgstr "Табела групних дозвола у дијалогу уређивања улоге"
+
+#~ msgid ""
+#~ "Roles can also include :doc:`group permissions </manage/groups/access-"
+#~ "levels>`! The group permission table is shown when there is **more than "
+#~ "one active group** in the system and ``ticket.agent`` permission **is "
+#~ "selected**."
+#~ msgstr ""
+#~ "Улоге такође укључују :doc:`групне дозволе </manage/groups/access-"
+#~ "levels>`! Табела групних дозвола је приказана ако постоји **више од једне "
+#~ "активне групе** у систему и **одабрана је** дозвола ``ticket.agent``."
+
+#~ msgid ""
+#~ "If you're already using Zammad, you'll know that users can be **admins**, "
+#~ "**agents**, or **customers**. These are Zammad's built-in roles, and "
+#~ "they're the tip of the iceberg of its powerful, flexible, and fine-"
+#~ "grained permission system."
+#~ msgstr ""
+#~ "Ако већ користите Zammad, знате да корисници могу бити "
+#~ "**администратори**, **оператери** или **клијенти**. Ово су Zammad-ове "
+#~ "подразумеване улоге, и оне су врх леденог брега његовог моћног, "
+#~ "флексибилног и прецизног система дозвола."
+
+#~ msgid "Role overview within Zammad's admin settings."
+#~ msgstr "Преглед улога у оквиру Zammad-ових администраторских подешавања."
+
+#~ msgid "Assign user privileges in the Admin Panel, under **Manage > Roles**."
+#~ msgstr ""
+#~ "Доделите привилегије корисника преко административног панела, под "
+#~ "**Управљање > Улоге**."
+
+#~ msgid "💡 **LDAP/Active Directory users:**"
+#~ msgstr "💡 **Корисници LDAP/активног директоријума:**"
+
+#~ msgid ""
+#~ "Syncing your LDAP \"groups\" to Zammad roles can make access management "
+#~ "*way* easier. To learn more, see :doc:`/system/integrations/ldap/index`."
+#~ msgstr ""
+#~ "Синхронизација ваших LDAP „група” са Zammad улогама може да олакша "
+#~ "*начин* управљања приступом. Да бисте сазнали више, погледајте :doc:`/"
+#~ "system/integrations/ldap/index`."
+
+#~ msgid "What Is a Role?"
+#~ msgstr "Шта је то улога?"
+
+#~ msgid ""
+#~ "Some users can do things others can't (like close a ticket). Users have "
+#~ "roles, roles have permissions, and permissions are what make those "
+#~ "actions possible. You can think of roles as a kind of a collection of "
+#~ "permissions."
+#~ msgstr ""
+#~ "Неки корисници могу да раде ствари које други не могу (као што је "
+#~ "затварање тикета). Корисници имају улоге, улоге имају дозволе, а дозволе "
+#~ "су оно што чини те радње могућим. Можете посматрати улоге као колекцију "
+#~ "дозвола."
+
+#~ msgid "So what exactly are permissions, then?"
+#~ msgstr "Дакле, шта су то тачно дозволе?"
+
+#~ msgid "List of permissions in the New Role dialog"
+#~ msgstr "Листа дозвола у дијалогу нове улоге"
+
+#~ msgid ""
+#~ "The ``admin.calendar`` permission gives you access to the **Manage > "
+#~ "Calendars** admin panel."
+#~ msgstr ""
+#~ "Дозвола ``admin.calendar`` вам даје приступ административном панелу "
+#~ "**Управљање > Календари**."
+
+#~ msgid ""
+#~ "Simply put, permissions are names for all the different things users "
+#~ "might want to do throughout the system, such as:"
+#~ msgstr ""
+#~ "Једноставно речено, дозволе су називи за све различите ствари које "
+#~ "корисници желе да раде у целом систему, као што су:"
+
+#~ msgid "``chat.agent``: respond to live chat messages"
+#~ msgstr "``chat.agent``: одговорање на поруке ћаскања"
+
+#~ msgid ""
+#~ "Zammad has dozens of these permissions, which is a lot to keep track of. "
+#~ "So instead of assigning a bunch of permissions to different users, the "
+#~ "idea is to assign permissions to roles. And each user has an assigned "
+#~ "role."
+#~ msgstr ""
+#~ "Zammad има на десетине ових дозвола, што је превише за памћење. Дакле, "
+#~ "уместо доделе гомиле дозвола различитим корисницима, приступ је да се "
+#~ "доделе дозволе улогама. А сваки корисник има додељену улогу."
+
+#~ msgid ""
+#~ "This makes creating user accounts for new agents a whole lot simpler, and "
+#~ "it also makes it easier to assign a new permission to a role and say "
+#~ "\"All existing agents can do *that* now, too.\""
+#~ msgstr ""
+#~ "Ово чини додавање корисничких налога за нове оператере много "
+#~ "једноставнијим, а такође олакшава додавање нове дозволе улози ради "
+#~ "остваривања следеће реченице: „Сви постојећи оператери такође могу да "
+#~ "ураде *ово* сада.“"
+
+#~ msgid ""
+#~ "In short, roles are just collections of permissions that you can give to "
+#~ "a user. The built-in admin, agent, and customer roles are enough for many "
+#~ "teams, but Zammad gives you the freedom to custom-build your own."
+#~ msgstr ""
+#~ "Укратко, улоге су само колекције дозвола које можете дати кориснику. "
+#~ "Подразумеване улоге администратора, оператера и клијента довољне су за "
+#~ "многе тимове, али Zammad вам даје слободу да дефинишете сопствене."
+
+#~ msgid "And to do that, you'll need to know what each permission does."
+#~ msgstr "А да бисте то урадили, мораћете да знате шта свака дозвола ради."
+
+#~ msgid ""
+#~ "Users can have both \"agent\" and \"customer\" roles at the same time!"
+#~ msgstr "Корисници могу имати и улоге „оператера” и „клијента” у исто време!"
+
+#~ msgid ""
+#~ "Why would you want this? Agents get :doc:`overviews </manage/overviews>` "
+#~ "of all the tickets they're *assigned to* (among others), while customers "
+#~ "get an overview of all the tickets they've *opened*. But some teams use "
+#~ "Zammad for both internal and public communication, so their agents need "
+#~ "both."
+#~ msgstr ""
+#~ "Зашто ми ово треба? Оператери имају приступ :doc:`прегледима </manage/"
+#~ "overviews>` свих тикета којима су *додељени* (између осталог), док "
+#~ "клијенти имају приступ прегледу свих тикета које су *отворили*. Али, неки "
+#~ "тимови користе Zammad и за интерну и за јавну комуникацију, тако да "
+#~ "њиховим оператерима требају оба."
+
+#~ msgid ""
+#~ "Having both roles also changes what you see in the ticket view, depending "
+#~ "on whether you're the \"customer\" or not."
+#~ msgstr ""
+#~ "Обе улоге такође мењају оно што видите у приказу тикета, у зависности од "
+#~ "тога да ли сте „клијент” тикета или не."
+
+#~ msgid "Reference Guide: Permissions"
+#~ msgstr "Референтни водич: Дозволе"
+
+#~ msgid ""
+#~ "Broadly speaking, there are four types of permission groups. Click on "
+#~ "each to go to the detailed list of granular permissions. You can either "
+#~ "select the whole permission group (e.g. ``admin``) or a subset of it "
+#~ "(e.g. ``admin.text_module``)."
+#~ msgstr ""
+#~ "Уопштено говорећи, постоји четири врсте група дозвола. Кликом на сваку "
+#~ "можете прегледати списак грануларних дозвола. Можете одабрати или "
+#~ "комплетну групу дозвола (нпр. ``admin``) или њен подскуп (нпр. "
+#~ "``admin.text_module``)."
+
+#~ msgid ":doc:`🛡️ Admin <admin-permissions>`"
+#~ msgstr ":doc:`🛡 администраторске <admin-permissions>`"
+
+#~ msgid "For access to each page of the admin panel"
+#~ msgstr "За приступ свакој страни администраторског панела"
+
+#~ msgid ":doc:`🕵️ Agent <agent-permissions>`"
+#~ msgstr ":doc:`🕵 оператерске <agent-permissions>`"
+
+#~ msgid "For access to customer communications"
+#~ msgstr "За приступ комуникацији са клијентима"
+
+#~ msgid "👤 Customer"
+#~ msgstr "👤 Клијент"
+
+#~ msgid ""
+#~ "Without the ``ticket.customer`` permission, customers can't see the **My "
+#~ "Ticket** overview—but they can still log in and open new tickets!"
+#~ msgstr ""
+#~ "Без дозволе ``ticket.customer``, клијенти не могу да виде преглед **Моји "
+#~ "тикети**—али и даље могу да се пријаве и отворе нове тикете!"
+
+#~ msgid ":doc:`🎛️ User Preferences <user-preferences-permissions>`"
+#~ msgstr ":doc:`🎛 Корисничка подешавања <user-preferences-permissions>`"
+
+#~ msgid ""
+#~ "For access to your own :user-docs:`user profile </extras/profile-and-"
+#~ "settings.html>`"
+#~ msgstr ""
+#~ "За приступ сопственом :user-docs:`корисничком профилу </extras/profile-"
+#~ "and-settings.html>`"
+
+#~ msgid "Role Details"
+#~ msgstr "Детаљи улоге"
+
+#~ msgid ""
+#~ "Every new user must be assigned at least one role upon creation. This "
+#~ "attribute decides which role to give new users by default (which usually "
+#~ "happens when creating a new ticket for a new customer)."
+#~ msgstr ""
+#~ "Сваком новом клијенту мора бити додељена бар једна улога приликом "
+#~ "креирања. Овај атрибут одлучује коју улогу ће подразумевано дати новим "
+#~ "корисницима (што се обично дешава када се отвори нов тикет за новог "
+#~ "клијента)."
+
+#~ msgid "Role overview in the admin panel, showing default role"
+#~ msgstr ""
+#~ "Преглед улога у административном панелу, са приказом подразумеване улоге"
+
+#~ msgid ""
+#~ "The default role is identified in the overview of the **Manage > Roles** "
+#~ "admin panel."
+#~ msgstr ""
+#~ "Подразумевана улога је идентификована у прегледу **Управљање > Улоге** "
+#~ "административног панела."
+
+#~ msgid "🙅 **Default roles should never provide admin/agent permissions.**"
+#~ msgstr ""
+#~ "🙅 **Подразумеване улоге никада не би требало да дају дозволе "
+#~ "администратора/оператера.**"
+
+#~ msgid "User Preferences Permissions"
+#~ msgstr "Дозволе за корисничка подешавања"
+
+#~ msgid ""
+#~ "The permissions listed on this page all belong to the "
+#~ "``user_preferences`` namespace. You can select them individually, or you "
+#~ "can just select ``user_preferences`` to enable the whole bunch."
+#~ msgstr ""
+#~ "Све дозволе наведене на овој страници почињу са називом "
+#~ "``user_preferences``. Можете их одабрати појединачно или једноставно "
+#~ "одабрати ``user_preferences`` да бисте омогућили читав низ."
+
+#~ msgid "User preferences permissions in the New Role dialog"
+#~ msgstr "Дозволе за корисничка подешавања у дијалогу нове улоге"
+
+#~ msgid ""
+#~ "User preferences permissions are shown at the bottom of the New Role "
+#~ "dialog..."
+#~ msgstr ""
+#~ "Дозволе за корисничка подешавања су приказане при дну дијалога нове улоге…"
+
+#~ msgid "User profile page"
+#~ msgstr "Страница корисничког профила"
+
+#~ msgid ""
+#~ "...and give users access to the pages of their :user-docs:`User Profile </"
+#~ "extras/profile-and-settings.html>`."
+#~ msgstr ""
+#~ "...и омогућује корисницима приступ страницама њиховог :user-"
+#~ "docs:`корисничког профила </extras/profile-and-settings.html>`."
+
+#~ msgid "Zammad via :docs:`REST API </api/intro.html>`"
+#~ msgstr "Zammad-а преко :docs:`REST API-ја </api/intro.html>`"
+
+#~ msgid "Override the default Gravatar with a custom avatar"
+#~ msgstr "Замена подразумеваног Gravatar-а са прилагођеним аватаром"
+
 #~ msgid ""
 #~ "You can assign both agent and customer roles to the same user — but you "
 #~ "**can't** assign both ``ticket.agent`` and ``ticket.customer`` "
@@ -38181,9 +38787,6 @@ msgstr "Приказује која верзија се користи трен�
 #~ "🤔 **Мислио/ла сам да оператери већ могу да управљају корисничким "
 #~ "налозима?**"
 
-#~ msgid "Agents can create and edit **customers**, but they can’t:"
-#~ msgstr "Оператери могу да додају и освежавају **клијенте**, али не могу:"
-
 #~ msgid "modify anyone's permissions (roles or groups)"
 #~ msgstr "изменити било чије дозволе (улоге или групе)"
 
@@ -38193,27 +38796,14 @@ msgstr "Приказује која верзија се користи трен�
 #~ msgid "edit other agent's accounts"
 #~ msgstr "уредити налоге других оператера"
 
-#~ msgid ""
-#~ "To learn more, see :ref:`Taking over a user's session <view-from-users-"
-#~ "perspective>`."
-#~ msgstr ""
-#~ "Да бисте сазнали више, погледајте :ref:`Преузимање сесије корисника <view-"
-#~ "from-users-perspective>`."
-
 #~ msgid "🤓 Requires configuration of either integrations"
 #~ msgstr "🤓 Захтева подешавање било које интеграције"
-
-#~ msgid ":doc:`Generic CTI </system/integrations/cti/generic>`"
-#~ msgstr ":doc:`Генеричка CTI </system/integrations/cti/generic>`"
 
 #~ msgid ":doc:`placetel </system/integrations/cti/placetel>`"
 #~ msgstr ":doc:`placetel </system/integrations/cti/placetel>`"
 
 #~ msgid ":doc:`sipgate </system/integrations/cti/sipgate>`"
 #~ msgstr ":doc:`sipgate </system/integrations/cti/sipgate>`"
-
-#~ msgid "knowledge_base"
-#~ msgstr "knowledge_base"
 
 #~ msgid ":user-docs:`📕 Knowledge Base </extras/knowledge-base.html>`"
 #~ msgstr ":user-docs:`📕 База знања </extras/knowledge-base.html>`"
