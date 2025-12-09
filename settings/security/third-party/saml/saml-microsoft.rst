@@ -51,13 +51,15 @@ In the "SAML Signing Certificate" section, download the "Certificate (Base64)":
 -------------------
 
 - Log in to Zammad as an administrator
-- In the admin panel go to "Settings" > "Security" > "Third-party Applications"
-  > "Authentication via SAML"
+- Go to *Settings > Security > Third-party Applications > Authentication via SAML*
+  in the admin settings.
 - Provide the following information:
 
   - IDP SSO target URL: The Login URL from the Microsoft Entra Admin Center.
   - IDP single logout target URL: The Logout URL from the Microsoft Entra Admin
-    Center.
+    Center. In case you have issues, you can try
+    ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However,
+    no logout is sent to your IdP then.
   - Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``
   - SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
   - Save the settings

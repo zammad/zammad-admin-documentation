@@ -107,7 +107,9 @@ IDP SSO target URL
 
 IDP single logout target URL
    This is the URL to which the single logout request and response should be
-   sent.
+   sent. You should use the URL which is provided by your IdP. In case you have
+   issues, you can try ``https://<your-zammad-url>/auth/saml/slo`` as an
+   alternative. However, no logout is sent to your IdP then.
 
 IDP certificate
    The public certificate of your IDP for Zammad to verify during the callback
