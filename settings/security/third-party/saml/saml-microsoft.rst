@@ -57,9 +57,7 @@ In the "SAML Signing Certificate" section, download the "Certificate (Base64)":
 
   - IDP SSO target URL: The Login URL from the Microsoft Entra Admin Center.
   - IDP single logout target URL: The Logout URL from the Microsoft Entra Admin
-    Center. In case you have issues, you can try
-    ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However,
-    no logout is sent to your IdP then.
+    Center.
   - Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``
   - SAML IdP Certificate: Upload the previously downloaded Base64 certificate.
   - Save the settings

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 09:11+0100\n"
+"POT-Creation-Date: 2025-12-09 09:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -963,7 +963,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:249
 #: ../manage/webhook/add.rst:52
-#: ../settings/security/third-party/saml.rst:151
+#: ../settings/security/third-party/saml.rst:149
 #: ../system/integrations/i-doit.rst:67
 msgid "SSL verification"
 msgstr ""
@@ -1220,7 +1220,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:273
 #: ../channels/google/basic-setup.rst:253
 #: ../channels/microsoft365/accounts/account-setup.rst:159
-#: ../settings/security/third-party/saml.rst:188
+#: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
@@ -16795,59 +16795,59 @@ msgstr ""
 msgid "This is the target URL Zammad shall redirect to when the user presses the SAML button."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:112
+#: ../settings/security/third-party/saml.rst:110
 msgid "IDP single logout target URL"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:109
-msgid "This is the URL to which the single logout request and response should be sent. You should use the URL which is provided by your IdP. In case you have issues, you can try ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However, no logout is sent to your IdP then."
+msgid "This is the URL to which the single logout request and response should be sent."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:116
+#: ../settings/security/third-party/saml.rst:114
 msgid "IDP certificate"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:115
+#: ../settings/security/third-party/saml.rst:113
 msgid "The public certificate of your IDP for Zammad to verify during the callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:130
+#: ../settings/security/third-party/saml.rst:128
 msgid "IDP certificate fingerprint"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:119
+#: ../settings/security/third-party/saml.rst:117
 msgid "The fingerprint of your IDPs public certificate to verify during callback phase."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:122
+#: ../settings/security/third-party/saml.rst:120
 msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:124
+#: ../settings/security/third-party/saml.rst:122
 msgid "Provide **only one or the other**—do not provide both! (Between the two, we recommend the signing certificate itself: fingerprints use SHA-1, which `has been broken for a while now <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:129
+#: ../settings/security/third-party/saml.rst:127
 msgid "**Keycloak users:** Find your certificate in the Keycloak admin panel under **Realm Settings > Keys > Algorithm: RS256 > Certificate**."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:136
+#: ../settings/security/third-party/saml.rst:134
 msgid "Name identifier format"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:133
+#: ../settings/security/third-party/saml.rst:131
 msgid "This is the unique identifiers field type. Usually it should be ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:136
+#: ../settings/security/third-party/saml.rst:134
 msgid "Zammad **expects an email address as unique identifier**!"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:140
+#: ../settings/security/third-party/saml.rst:138
 msgid "UID attribute name"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:139
+#: ../settings/security/third-party/saml.rst:137
 msgid "Here you can define an attribute that uniquely identifies the user. If unset, the name identifier returned by the IDP is used."
 msgstr ""
 
@@ -16855,84 +16855,92 @@ msgstr ""
 msgid "Example configuration of SAML part 2"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:148
+#: ../settings/security/third-party/saml.rst:146
 msgid "Decide if the certificate for the connection to the IdP service has to be verified or not (default: ``yes``)."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:154
+#: ../settings/security/third-party/saml.rst:152
 msgid "Signing & Encrypting"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:154
+#: ../settings/security/third-party/saml.rst:152
 msgid "Define if you want to sign, encrypt, do both or nothing for the requests."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:164
+#: ../settings/security/third-party/saml.rst:162
 msgid "Certificate (PEM)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:157
+#: ../settings/security/third-party/saml.rst:155
 msgid "Paste the public certificate of your Zammad SAML client, if you want to encrypt the requests."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:160
+#: ../settings/security/third-party/saml.rst:158
 msgid "Make sure the certificate is:"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:162
+#: ../settings/security/third-party/saml.rst:160
 msgid "already valid and not yet expired"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:163
+#: ../settings/security/third-party/saml.rst:161
 msgid "no CA certificate"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:164
+#: ../settings/security/third-party/saml.rst:162
 msgid "valid for signing and encrypting"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:170
+#: ../settings/security/third-party/saml.rst:168
 msgid "Private key (PEM)"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:167
+#: ../settings/security/third-party/saml.rst:165
 msgid "Paste the private key of your Zammad SAML client here, if you want to sign the requests."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:170
+#: ../settings/security/third-party/saml.rst:168
 msgid "Make sure the key is an RSA key with a length of at least 2048 bits."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:173
+#: ../settings/security/third-party/saml.rst:171
 msgid "Private key secret"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:173
+#: ../settings/security/third-party/saml.rst:171
 msgid "If your private key is secured with a secret, you can provide it here."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:177
+#: ../settings/security/third-party/saml.rst:175
 msgid "Your callback URL"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:176
+#: ../settings/security/third-party/saml.rst:174
 msgid "This URL is needed for your IdP configuration so it knows where to redirect to after successful authentication."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:179
+#: ../settings/security/third-party/saml.rst:177
 msgid "After saving your input by clicking on the \"Submit\" button, Zammad verifies the provided keys/certificates (e.g. if they are valid for signing/encrypting and if they aren't expired)."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:184
+#: ../settings/security/third-party/saml.rst:182
 msgid "See :ref:`automatic account linking <automatic-account-linking>` for details on how to link existing Zammad accounts to IdP accounts."
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:190
+#: ../settings/security/third-party/saml.rst:189
 msgid "Automatic account linking doesn't work"
 msgstr ""
 
-#: ../settings/security/third-party/saml.rst:191
+#: ../settings/security/third-party/saml.rst:189
 msgid "Have you double-checked your IdP's user attribute mapping configuration?"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:193
+msgid "Logout doesn't work"
+msgstr ""
+
+#: ../settings/security/third-party/saml.rst:192
+msgid "In case your logout process doesn't work, you can try ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However, no logout is sent to your IdP then."
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:2
@@ -17026,22 +17034,22 @@ msgid "SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/sam
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:59
-#: ../settings/security/third-party/saml/saml-microsoft.rst:63
+#: ../settings/security/third-party/saml/saml-microsoft.rst:61
 msgid "Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:60
-#: ../settings/security/third-party/saml/saml-microsoft.rst:64
+#: ../settings/security/third-party/saml/saml-microsoft.rst:62
 msgid "SAML IdP Certificate: Upload the previously downloaded Base64 certificate."
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:61
-#: ../settings/security/third-party/saml/saml-microsoft.rst:65
+#: ../settings/security/third-party/saml/saml-microsoft.rst:63
 msgid "Save the settings"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:64
-#: ../settings/security/third-party/saml/saml-microsoft.rst:74
+#: ../settings/security/third-party/saml/saml-microsoft.rst:72
 msgid "Read on at :ref:`saml-zammad` for a description of the specific fields in Zammad."
 msgstr ""
 
@@ -17142,14 +17150,14 @@ msgid "IDP SSO target URL: The Login URL from the Microsoft Entra Admin Center."
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:59
-msgid "IDP single logout target URL: The Logout URL from the Microsoft Entra Admin Center. In case you have issues, you can try ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However, no logout is sent to your IdP then."
+msgid "IDP single logout target URL: The Logout URL from the Microsoft Entra Admin Center."
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-microsoft.rst:68
+#: ../settings/security/third-party/saml/saml-microsoft.rst:66
 msgid "6. Assign Users"
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-microsoft.rst:70
+#: ../settings/security/third-party/saml/saml-microsoft.rst:68
 msgid "In Microsoft Entra ID, assign the relevant users to the Zammad application to grant them access."
 msgstr ""
 
