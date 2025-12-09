@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 09:43+0100\n"
-"PO-Revision-Date: 2025-11-28 08:14+0000\n"
+"POT-Creation-Date: 2025-12-09 09:26+0100\n"
+"PO-Revision-Date: 2025-12-09 10:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -75,12 +75,21 @@ msgstr ""
 #: ../ai/ai-agents.rst:26
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
-"</manage/trigger>` or a :doc:`scheduler job </manage/scheduler>` with the "
-"action **AI** > **AI Agent**."
+"</manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or "
+"a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**."
 msgstr ""
 "KI-Agenten laufen nicht von selbst. Sie müssen durch einen :doc:`Trigger </"
-"manage/trigger>` oder eine :doc:`Automatisierungsaufgabe </manage/"
-"scheduler>` mit der Aktion **KI** > **KI-Agent** aufgerufen werden."
+"manage/trigger>` eine :doc:`Automatisierungsaufgabe </manage/scheduler>` "
+"oder ein :doc:`Makro </manage/macros>` mit der Aktion **KI** > **KI-Agent** "
+"aufgerufen werden."
+
+#: ../ai/ai-agents.rst:29
+msgid ""
+"By creating a macro with an AI agent action, your agents can run it on "
+"demand."
+msgstr ""
+"Wenn Sie ein Makro mit einer KI-Agenten-Aktion erstellen, können Ihre "
+"Agenten es bei Bedarf ausführen."
 
 #: ../ai/ai-agents.rst:30
 msgid ""
@@ -105,8 +114,8 @@ msgid ""
 "additional settings based on the selected type, see :ref:`ai-agent-types` "
 "for details. The action column with the ︙ button allows you to clone or "
 "delete an AI agent. You can only delete AI agents which are not used in "
-"triggers and schedulers. You can find this information in the two columns in "
-"the AI agent table."
+"triggers, scheduler jobs and macros. Check the **Used in** column and hover "
+"over an entry to see where an AI agent is used."
 msgstr ""
 "Erstellen Sie einen KI-Agenten, indem Sie auf die Schaltfläche **Neuer KI-"
 "Agent** in der oberen rechten Ecke klicken. Dies öffnet einen Assistenten, "
@@ -114,8 +123,9 @@ msgstr ""
 "dem gewählten Typ auswählen können, siehe :ref:`ai-agent-types` für Details. "
 "In der Aktionsspalte mit der Schaltfläche ︙ können Sie einen KI-Agenten "
 "klonen oder löschen. Sie können nur KI-Agenten löschen, die nicht in "
-"Triggern und Automatisierungsaufgaben verwendet werden. Sie finden diese "
-"Informationen in den beiden Spalten der Tabelle der KI-Agenten."
+"Triggern, Automatisierungsaufgaben und Makros verwendet werden. Prüfen Sie "
+"die Spalte **Verwendet in** und bewegen Sie den Mauszeiger über einen "
+"Eintrag, um zu sehen, wo ein KI Agent verwendet wird."
 
 #: ../ai/ai-agents.rst:52
 msgid "AI Agent Types"
@@ -123,11 +133,11 @@ msgstr "KI-Agenten-Typen"
 
 #: ../ai/ai-agents.rst:54
 msgid ""
-"Define your AI agents and use them afterwards in triggers or scheduler jobs. "
-"An example for a trigger configuration could look like this:"
+"Define your AI agents and use them afterwards in triggers, scheduler jobs or "
+"macros. An example for a trigger configuration could look like this:"
 msgstr ""
 "Definieren Sie Ihre KI-Agenten und verwenden Sie sie anschließend in "
-"Triggern oder der Automatisierung. Ein Beispiel für eine Trigger-"
+"Triggern, der Automatisierung oder Makros. Ein Beispiel für eine Trigger-"
 "Konfiguration könnte wie folgt aussehen:"
 
 #: ../ai/ai-agents.rst:57
@@ -316,7 +326,11 @@ msgstr ":ref:`openai-provider`"
 msgid ":ref:`zammad-ai-provider`"
 msgstr ":ref:`zammad-ai-provider`"
 
-#: ../ai/provider.rst:30
+#: ../ai/provider.rst:29
+msgid ":ref:`openai-compatible-provider`"
+msgstr ":ref:`openai-compatible-provider`"
+
+#: ../ai/provider.rst:31
 msgid ""
 "The AI service you have subscribed to is not available? This is just the "
 "first step. We are going to add more providers soon! If you want to support "
@@ -329,11 +343,11 @@ msgstr ""
 "benötigen, lassen Sie es einfach unser `Vertriebs-Team <https://zammad.com/"
 "en/company/contact>`_ wissen!"
 
-#: ../ai/provider.rst:38
+#: ../ai/provider.rst:39
 msgid "Anthropic"
 msgstr "Anthropic"
 
-#: ../ai/provider.rst:40
+#: ../ai/provider.rst:41
 msgid ""
 "To use Anthropic's service as AI backend, choose it as AI provider and add "
 "your API token. After that, make sure to click the ``Save`` button and read "
@@ -348,11 +362,11 @@ msgstr ""
 "dessen Namen in das Feld **Modell** ein. Lassen Sie es leer, um das "
 "Standardmodell zu verwenden, das als Platzhalter in dem Feld angezeigt wird."
 
-#: ../ai/provider.rst:49
+#: ../ai/provider.rst:50
 msgid "Azure AI"
 msgstr "Azure AI"
 
-#: ../ai/provider.rst:51
+#: ../ai/provider.rst:52
 msgid ""
 "To use the Azure AI service as AI backend, choose it as AI provider and add "
 "your URL as well as your API token. You get the URL after configuring the AI "
@@ -365,11 +379,11 @@ msgstr ""
 "anschließend auf die Schaltfläche ``Speichern`` und lesen Sie im Abschnitt "
 "über die gewünschte Funktion weiter."
 
-#: ../ai/provider.rst:59
+#: ../ai/provider.rst:60
 msgid "Ollama"
 msgstr "Ollama"
 
-#: ../ai/provider.rst:61
+#: ../ai/provider.rst:62
 msgid ""
 "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your "
 "own AI server on a machine you control. That means your data is not "
@@ -382,7 +396,7 @@ msgstr ""
 "Sie sich bewusst, dass dies nur Sinn macht, wenn Sie eine leistungsstarke "
 "GPU in Ihrem System haben!"
 
-#: ../ai/provider.rst:66
+#: ../ai/provider.rst:67
 msgid ""
 "When choosing Ollama as your AI provider, you just have to provide the IP/"
 "URL of your instance with appended port number. To use a specific model, add "
@@ -396,7 +410,7 @@ msgstr ""
 "Sie es leer, um das Standardmodel zu verwenden, das als Platzhalter in dem "
 "Feld angezeigt wird. In jedem Fall muss das richtige Model verfügbar sein."
 
-#: ../ai/provider.rst:71
+#: ../ai/provider.rst:72
 msgid ""
 "If you don't have an Ollama running already, their `deployment guide "
 "<https://github.com/ollama/ollama/blob/main/docs/linux.md>`_ is a good "
@@ -413,7 +427,7 @@ msgstr ""
 "github.com/ollama/ollama>`_. Wenn Sie Ollama installiert haben, können Sie "
 "ein Modell abrufen und ausführen, indem Sie folgendes ausführen:"
 
-#: ../ai/provider.rst:83 ../ai/provider.rst:96
+#: ../ai/provider.rst:84 ../ai/provider.rst:97 ../ai/provider.rst:134
 msgid ""
 "Make sure to click the ``Save`` button and read on in the desired feature's "
 "section."
@@ -421,11 +435,11 @@ msgstr ""
 "Stellen Sie sicher, dass Sie auf ``Speichern`` klicken und lesen Sie im "
 "Abschnitt der gewünschten Funktion weiter."
 
-#: ../ai/provider.rst:89
+#: ../ai/provider.rst:90
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:92
 msgid ""
 "You probably already heard about `OpenAI <https://openai.com/>`_, haven't "
 "you? To use their service as AI backend, choose them as AI provider and add "
@@ -440,11 +454,19 @@ msgstr ""
 "leer, um das Standardmodel zu verwenden, das als Platzhalter in dem Feld "
 "angezeigt wird."
 
-#: ../ai/provider.rst:102
+#: ../ai/provider.rst:100
+msgid ""
+"You can also use an :ref:`OpenAI compatible custom provider <openai-"
+"compatible-provider>`."
+msgstr ""
+"Sie können auch einen anderen :ref:`OpenAI-kompatiblen Anbieter <openai-"
+"compatible-provider>` verwenden."
+
+#: ../ai/provider.rst:106
 msgid "Zammad AI"
 msgstr "Zammad KI"
 
-#: ../ai/provider.rst:104
+#: ../ai/provider.rst:108
 msgid ""
 "Zammad as AI provider is currently limited to specific customers for "
 "testing. If you're interested as well, please `let our sales department know "
@@ -454,11 +476,11 @@ msgstr ""
 "beschränkt. Wenn auch Sie Interesse haben, melden Sie sich bitte bei "
 "`unserer Vertriebsabteilung <https://zammad.com/de/company/contact>`_."
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:112
 msgid "The usage of Zammad AI as a provider has some benefits:"
 msgstr "Die Nutzung von Zammad AI als Provider hat einige Vorteile:"
 
-#: ../ai/provider.rst:110
+#: ../ai/provider.rst:114
 msgid ""
 "You don't have to care about the setup and configuration compared to your "
 "own setup."
@@ -466,13 +488,13 @@ msgstr ""
 "Im Gegensatz zu einem eigenen Setup müssen Sie sich nicht um die Einrichtung "
 "und Konfiguration kümmern."
 
-#: ../ai/provider.rst:112
+#: ../ai/provider.rst:116
 msgid "Your requests with sensitive information aren't used for training."
 msgstr ""
 "Ihre Anfragen mit sensiblen Informationen werden nicht zum KI-Training "
 "verwendet."
 
-#: ../ai/provider.rst:113
+#: ../ai/provider.rst:117
 msgid ""
 "If something isn't working as expected, you just have one place where you "
 "get support."
@@ -480,7 +502,7 @@ msgstr ""
 "Wenn etwas nicht wie erwartet funktioniert, haben Sie eine Anlaufstelle, bei "
 "der Sie Unterstützung erhalten."
 
-#: ../ai/provider.rst:116
+#: ../ai/provider.rst:120
 msgid ""
 "To configure it, simply choose **Zammad AI** as your provider and add your "
 "token. After that, make sure to click the ``Save`` button and read on in the "
@@ -489,6 +511,24 @@ msgstr ""
 "Um es zu konfigurieren, wählen Sie einfach **Zammad AI** als Anbieter und "
 "fügen Sie Ihr Token hinzu. Klicken Sie anschließend auf die Schaltfläche "
 "``Speichern`` und lesen Sie im Abschnitt der gewünschten Funktion weiter."
+
+#: ../ai/provider.rst:127
+msgid "Custom (OpenAI Compatible)"
+msgstr "Benutzerdefiniert (OpenAI-kompatibel)"
+
+#: ../ai/provider.rst:129
+msgid ""
+"Use this option to connect to an OpenAI compatible provider. To use OpenAI "
+"itself, choose :ref:`OpenAI as provider <openai-provider>` instead. Add a "
+"URL, a token and a model you want to use. The model is mandatory and must "
+"match the model name from your AI provider."
+msgstr ""
+"Verwenden Sie diese Option, um sich mit einem OpenAI-kompatiblen Anbieter zu "
+"verbinden. Um OpenAI selbst zu verwenden, wählen Sie "
+"stattdessen :ref:`OpenAI als Anbieter <openai-provider>`. Fügen Sie eine "
+"URL, ein Token und ein Modell hinzu, das Sie verwenden möchten. Die Angabe "
+"eines Modells ist ein Pflichtfeld und muss mit dem Modellnamen Ihres KI-"
+"Anbieters übereinstimmen."
 
 #: ../ai/summary.rst:2
 msgid "Ticket Summary"
@@ -651,7 +691,7 @@ msgid "Combine different instructions in one tool"
 msgstr "Kombinieren verschiedener Anweisungen in einem Werkzeug"
 
 #: ../ai/writing-assistant.rst:34 ../channels/chat.rst:28
-#: ../channels/microsoft365-graph/accounts.rst:17
+#: ../channels/microsoft365-graph/accounts.rst:18
 #: ../manage/report-profiles.rst:32 ../manage/webhook/add.rst:32
 #: ../misc/first-steps.rst:20 ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
@@ -782,10 +822,9 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/accounts/secondary-addresses.rst:46
 #: ../manage/groups/settings.rst:102 ../manage/macros/how-do-they-work.rst:0
-#: ../manage/macros/learn-by-example.rst:0
-#: ../manage/roles/admin-permissions.rst:39
-#: ../manage/roles/agent-permissions.rst:31
-#: ../manage/roles/user-preferences-permissions.rst:37
+#: ../manage/macros/learn-by-example.rst:0 ../manage/roles/index.rst:87
+#: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
+#: ../manage/roles/permissions.rst:229 ../manage/roles/permissions.rst:299
 #: ../manage/scheduler.rst:158 ../manage/webhook/add.rst:114
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
@@ -813,7 +852,7 @@ msgstr ""
 #: ../ai/writing-assistant.rst:90 ../channels/form.rst:37
 #: ../manage/groups/settings.rst:124 ../manage/macros/how-do-they-work.rst:0
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:58
-#: ../manage/roles/index.rst:128 ../manage/scheduler.rst:161
+#: ../manage/roles/index.rst:92 ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33 ../manage/webhook/add.rst:120
 #: ../system/objects.rst:171 ../system/objects.rst:251
 msgid "Active"
@@ -4891,7 +4930,7 @@ msgstr ""
 "Schritt."
 
 #: ../channels/google/basic-setup.rst:110
-#: ../channels/microsoft365-graph/accounts.rst:120
+#: ../channels/microsoft365-graph/accounts.rst:124
 #: ../system/integrations/exchange.rst:119
 msgid "Add Account"
 msgstr "Konto hinzufügen"
@@ -5305,16 +5344,17 @@ msgstr "Erste Schritte"
 #: ../channels/microsoft365-graph/accounts.rst:10
 #: ../channels/microsoft365/accounts/register-app.rst:18
 msgid ""
-"Check your FQDN under *Settings > System > Fully Qualified Domain Name* in "
-"the admin interface of Zammad. If it is not correct, change it now. "
-"Otherwise the setup of the channel will fail."
+"Only relevant for self-hosted Zammad instances: Check your FQDN under "
+"*Settings > System > Fully Qualified Domain Name* in the admin interface of "
+"Zammad. If it is not correct, change it now. Otherwise the setup of the "
+"channel will fail."
 msgstr ""
-"Überprüfen Sie Ihren FQDN unter *Einstellungen > System > Vollqualifizierter "
-"Domainname* in der Verwaltungsoberfläche von Zammad. Wenn er nicht korrekt "
-"ist, ändern Sie ihn jetzt. Andernfalls wird die Einrichtung des Kanals "
-"fehlschlagen."
+"Nur relevant für selbst gehostete Zammad-Instanzen: Überprüfen Sie Ihren "
+"FQDN unter *Einstellungen > System > Vollqualifizierter Domainname* in den "
+"Einstellungen von Zammad. Wenn er nicht korrekt ist, ändern Sie ihn jetzt. "
+"Andernfalls wird die Einrichtung des Kanals fehlschlagen."
 
-#: ../channels/microsoft365-graph/accounts.rst:13
+#: ../channels/microsoft365-graph/accounts.rst:14
 msgid ""
 "Go to *Channels > Microsoft 365 Graph Email* and click on **Connect "
 "Microsoft 365 App**. Copy the provided callback URL."
@@ -5322,7 +5362,7 @@ msgstr ""
 "Gehen Sie zu *Kanäle > Microsoft 365 Graph E-Mail* und klicken Sie auf "
 "**Microsoft 365 App verbinden**. Kopieren Sie die angezeigte Callback-URL."
 
-#: ../channels/microsoft365-graph/accounts.rst:19
+#: ../channels/microsoft365-graph/accounts.rst:20
 msgid ""
 "Go to Microsoft's `Entra admin center <https://entra.microsoft.com/#home>`_ "
 "and log in as an administrator (at least application administrator "
@@ -5332,8 +5372,8 @@ msgstr ""
 "#home>`_ und melden Sie sich als Administrator an (mindestens die "
 "Berechtigung als Anwendungsadministrator ist erforderlich)."
 
-#: ../channels/microsoft365-graph/accounts.rst:24
-#: ../channels/microsoft365/accounts/register-app.rst:33
+#: ../channels/microsoft365-graph/accounts.rst:25
+#: ../channels/microsoft365/accounts/register-app.rst:34
 #: ../settings/security/third-party/facebook.rst:None
 msgid "Create App"
 msgstr "App erstellen"
@@ -5346,8 +5386,8 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht für die App-"
 "Registrierung."
 
-#: ../channels/microsoft365-graph/accounts.rst:30
-#: ../channels/microsoft365/accounts/register-app.rst:39
+#: ../channels/microsoft365-graph/accounts.rst:31
+#: ../channels/microsoft365/accounts/register-app.rst:40
 msgid ""
 "Create a new app by going to *Applications > App registrations* and select "
 "**New registration**."
@@ -5355,25 +5395,25 @@ msgstr ""
 "Erstellen Sie eine neue App, indem Sie zu *Anwendungen > App-"
 "Registrierungen* gehen und **Neue Registrierung** wählen."
 
-#: ../channels/microsoft365-graph/accounts.rst:32
-#: ../channels/microsoft365/accounts/register-app.rst:41
+#: ../channels/microsoft365-graph/accounts.rst:33
+#: ../channels/microsoft365/accounts/register-app.rst:42
 msgid "Enter a fitting name and select an account type. Supported types are:"
 msgstr ""
 "Geben Sie einen passenden Namen ein und wählen Sie einen Kontotyp. "
 "Unterstützte Typen sind:"
 
-#: ../channels/microsoft365-graph/accounts.rst:34
-#: ../channels/microsoft365/accounts/register-app.rst:43
+#: ../channels/microsoft365-graph/accounts.rst:35
+#: ../channels/microsoft365/accounts/register-app.rst:44
 msgid "Accounts in this organizational directory only (Single tenant)"
 msgstr "Nur Konten in diesem Organisationsverzeichnis (einzelner Mandant)"
 
-#: ../channels/microsoft365-graph/accounts.rst:35
-#: ../channels/microsoft365/accounts/register-app.rst:44
+#: ../channels/microsoft365-graph/accounts.rst:36
+#: ../channels/microsoft365/accounts/register-app.rst:45
 msgid "Accounts in any organizational directory (Multitenant)"
 msgstr "Konten in einem beliebigen Organisationsverzeichnis (mandantenfähig)"
 
-#: ../channels/microsoft365-graph/accounts.rst:37
-#: ../channels/microsoft365/accounts/register-app.rst:50
+#: ../channels/microsoft365-graph/accounts.rst:38
+#: ../channels/microsoft365/accounts/register-app.rst:51
 msgid ""
 "Under \"Redirect URI\", select \"Web\" as platform and paste your already "
 "copied callback URL from Zammad."
@@ -5381,8 +5421,8 @@ msgstr ""
 "Wählen Sie unter \"Redirect URI\" die Plattform \"Web\" und fügen Sie die "
 "bereits kopierte Callback URL von Zammad ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:39
-#: ../channels/microsoft365/accounts/register-app.rst:52
+#: ../channels/microsoft365-graph/accounts.rst:40
+#: ../channels/microsoft365/accounts/register-app.rst:53
 msgid "Click on **Register**."
 msgstr "Klicken Sie auf **Registrieren**."
 
@@ -5392,7 +5432,7 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Übersicht der "
 "Anwendungen."
 
-#: ../channels/microsoft365-graph/accounts.rst:46
+#: ../channels/microsoft365-graph/accounts.rst:47
 msgid ""
 "In the overview screen, copy the \"Application (client) ID\", switch to "
 "Zammad and paste it in the \"Client ID\" field in the pop up."
@@ -5401,7 +5441,7 @@ msgstr ""
 "wechseln Sie zu Zammad und fügen Sie sie in das Feld \"Client-ID\" im Pop-up "
 "ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:48
+#: ../channels/microsoft365-graph/accounts.rst:49
 msgid ""
 "Only required for single tenant setup: copy the \"Directory (tenant) ID\" "
 "and paste it in the \"Tenant UUID/Name\" field in Zammad."
@@ -5410,8 +5450,8 @@ msgstr ""
 "die \"Verzeichnis-ID (Mandant)\" und fügen Sie sie in das Feld \"Verzeichnis-"
 "UUID/Name (Mandant)\" in Zammad ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:52
-#: ../channels/microsoft365/accounts/register-app.rst:55
+#: ../channels/microsoft365-graph/accounts.rst:53
+#: ../channels/microsoft365/accounts/register-app.rst:56
 msgid "Create Secret"
 msgstr "Geheimnis erstellen"
 
@@ -5422,8 +5462,8 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht \"Geheime "
 "Clientschlüssel\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:58
-#: ../channels/microsoft365/accounts/register-app.rst:61
+#: ../channels/microsoft365-graph/accounts.rst:59
+#: ../channels/microsoft365/accounts/register-app.rst:62
 msgid ""
 "In Entra, go to \"Certificates & secrets\" and add a secret by clicking the "
 "**New client secret** button."
@@ -5432,25 +5472,32 @@ msgstr ""
 "geheimen Client-Schlüssel hinzu, indem Sie auf die Schaltfläche **Neuer "
 "geheimer Clientschlüssel** klicken."
 
-#: ../channels/microsoft365-graph/accounts.rst:60
-#: ../channels/microsoft365/accounts/register-app.rst:63
+#: ../channels/microsoft365-graph/accounts.rst:61
+#: ../channels/microsoft365/accounts/register-app.rst:64
 msgid "Enter a description, set an expiry duration and click **Add**."
 msgstr ""
 "Geben Sie eine Beschreibung ein, legen Sie eine Gültigkeitsdauer fest und "
 "klicken Sie auf **Hinzufügen**."
 
-#: ../channels/microsoft365-graph/accounts.rst:61
-#: ../channels/microsoft365/accounts/register-app.rst:64
+#: ../channels/microsoft365-graph/accounts.rst:62
+#: ../channels/microsoft365/accounts/register-app.rst:65
 msgid ""
-"Copy the string under \"Value\" (not the \"Secret ID\"!), this is the "
-"secret. Paste it to Zammad in the \"Client Secret\" field."
+"Copy the string under \"Value\", this is the secret. Paste it to Zammad in "
+"the \"Client Secret\" field."
 msgstr ""
-"Kopieren Sie die Zeichenkette unter \"Value\" (nicht die \"Secret ID\"!), "
-"das ist das Secret.. Fügen Sie es bei Zammad in das Feld \"Client-Secret\" "
-"ein."
+"Kopieren Sie die Zeichenkette unter \"Value\", dies ist das Secret. Fügen "
+"Sie es bei Zammad in das Feld \"Client-Secret\" ein."
 
-#: ../channels/microsoft365-graph/accounts.rst:65
-#: ../channels/microsoft365/accounts/register-app.rst:68
+#: ../channels/microsoft365-graph/accounts.rst:66
+#: ../channels/microsoft365/accounts/register-app.rst:69
+msgid ""
+"Make sure to copy the **value**, not the ID. Otherwise your setup fails."
+msgstr ""
+"Achten Sie darauf, den Wert des **Value** zu kopieren, nicht die ID. "
+"Andernfalls schlägt Ihre Einrichtung fehl."
+
+#: ../channels/microsoft365-graph/accounts.rst:69
+#: ../channels/microsoft365/accounts/register-app.rst:72
 msgid "Configure API Permissions"
 msgstr "API-Berechtigungen konfigurieren"
 
@@ -5461,67 +5508,67 @@ msgstr ""
 "Der Screenshot zeigt das Entra Admin Center mit der Ansicht für die API-"
 "Berechtigungen."
 
-#: ../channels/microsoft365-graph/accounts.rst:71
-#: ../channels/microsoft365/accounts/register-app.rst:74
+#: ../channels/microsoft365-graph/accounts.rst:75
+#: ../channels/microsoft365/accounts/register-app.rst:78
 msgid "Go to \"API permissions\" and **Add a permission**."
 msgstr ""
 "Gehen Sie zu \"API-Berechtigungen\" und wählen Sie **Berechtigung "
 "hinzufügen**."
 
-#: ../channels/microsoft365-graph/accounts.rst:72
-#: ../channels/microsoft365/accounts/register-app.rst:75
+#: ../channels/microsoft365-graph/accounts.rst:76
+#: ../channels/microsoft365/accounts/register-app.rst:79
 msgid "Select \"Microsoft Graph\" and \"Delegated permissions\"."
 msgstr "Wählen Sie \"Microsoft Graph\" und \"Delegierte Berechtigungen\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:73
-#: ../channels/microsoft365/accounts/register-app.rst:76
+#: ../channels/microsoft365-graph/accounts.rst:77
+#: ../channels/microsoft365/accounts/register-app.rst:80
 msgid "Add the following permissions:"
 msgstr "Fügen Sie die folgenden Berechtigungen hinzu:"
 
-#: ../channels/microsoft365-graph/accounts.rst:75
-#: ../channels/microsoft365/accounts/register-app.rst:81
+#: ../channels/microsoft365-graph/accounts.rst:79
+#: ../channels/microsoft365/accounts/register-app.rst:85
 msgid "``offline_access``"
 msgstr "``offline_access``"
 
-#: ../channels/microsoft365-graph/accounts.rst:76
-#: ../channels/microsoft365/accounts/register-app.rst:79
+#: ../channels/microsoft365-graph/accounts.rst:80
+#: ../channels/microsoft365/accounts/register-app.rst:83
 #: ../settings/security/third-party/microsoft.rst:66
 msgid "``openid``"
 msgstr "``openid``"
 
-#: ../channels/microsoft365-graph/accounts.rst:77
-#: ../channels/microsoft365/accounts/register-app.rst:80
+#: ../channels/microsoft365-graph/accounts.rst:81
+#: ../channels/microsoft365/accounts/register-app.rst:84
 msgid "``profile``"
 msgstr "``profile``"
 
-#: ../channels/microsoft365-graph/accounts.rst:78
+#: ../channels/microsoft365-graph/accounts.rst:82
 msgid "``Mail.ReadWrite``"
 msgstr "``Mail.ReadWrite``"
 
-#: ../channels/microsoft365-graph/accounts.rst:79
+#: ../channels/microsoft365-graph/accounts.rst:83
 msgid "``Mail.Send``"
 msgstr "``Mail.Send``"
 
-#: ../channels/microsoft365-graph/accounts.rst:80
+#: ../channels/microsoft365-graph/accounts.rst:84
 msgid "``Mail.ReadWrite.Shared``"
 msgstr "``Mail.ReadWrite.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:81
+#: ../channels/microsoft365-graph/accounts.rst:85
 msgid "``Mail.Send.Shared``"
 msgstr "``Mail.Send.Shared``"
 
-#: ../channels/microsoft365-graph/accounts.rst:83
-#: ../channels/microsoft365/accounts/register-app.rst:85
+#: ../channels/microsoft365-graph/accounts.rst:87
+#: ../channels/microsoft365/accounts/register-app.rst:89
 msgid "Save it by clicking the **Add permissions** button."
 msgstr ""
 "Speichern Sie sie, indem Sie auf die Schaltfläche **Berechtigungen "
 "hinzufügen** klicken."
 
-#: ../channels/microsoft365-graph/accounts.rst:86
+#: ../channels/microsoft365-graph/accounts.rst:90
 msgid "Additional Steps for Shared Mailboxes"
 msgstr "Zusätzliche Schritte für freigegebene Postfächer"
 
-#: ../channels/microsoft365-graph/accounts.rst:88
+#: ../channels/microsoft365-graph/accounts.rst:92
 msgid ""
 "If you want to fetch email from a shared mailbox, you have to perform "
 "additional steps:"
@@ -5529,7 +5576,7 @@ msgstr ""
 "Wenn Sie E-Mails aus einem freigegebenen Postfach abrufen möchten, müssen "
 "Sie zusätzliche Schritte durchführen:"
 
-#: ../channels/microsoft365-graph/accounts.rst:91
+#: ../channels/microsoft365-graph/accounts.rst:95
 msgid ""
 "Log in to the `Exchange admin center <https://"
 "admin.exchange.microsoft.com>`_."
@@ -5537,7 +5584,7 @@ msgstr ""
 "Melden Sie sich beim `Exchange Admin Center <https://"
 "admin.exchange.microsoft.com>`_ an."
 
-#: ../channels/microsoft365-graph/accounts.rst:92
+#: ../channels/microsoft365-graph/accounts.rst:96
 msgid ""
 "Go to *Recipients > Mailboxes*, select the mailbox and click on **Mailboxes "
 "delegation**."
@@ -5545,7 +5592,7 @@ msgstr ""
 "Gehen Sie zu *Recipients > Mailboxes*, wählen Sie das Postfach aus und "
 "klicken Sie auf **Mailbox delegation**."
 
-#: ../channels/microsoft365-graph/accounts.rst:94
+#: ../channels/microsoft365-graph/accounts.rst:98
 msgid ""
 "Under \"Send as\", click on **Edit** and **Add members**. Search and select "
 "the user from which you want to access the mailbox and **Save** it."
@@ -5554,16 +5601,16 @@ msgstr ""
 "wählen Sie den Benutzer, von dem aus Sie auf die Mailbox zugreifen möchten, "
 "und wählen Sie **Save**."
 
-#: ../channels/microsoft365-graph/accounts.rst:96
+#: ../channels/microsoft365-graph/accounts.rst:100
 msgid "Do the same for \"Read and manage (Full Access)\"."
 msgstr "Machen Sie dasselbe für \"Read and manage (Full Access)\"."
 
-#: ../channels/microsoft365-graph/accounts.rst:99
+#: ../channels/microsoft365-graph/accounts.rst:103
 msgid "Configure the Channel in Zammad"
 msgstr "Konfigurieren Sie den Kanal in Zammad"
 
-#: ../channels/microsoft365-graph/accounts.rst:102
-#: ../channels/microsoft365/accounts/register-app.rst:140
+#: ../channels/microsoft365-graph/accounts.rst:106
+#: ../channels/microsoft365/accounts/register-app.rst:144
 msgid "App Configuration"
 msgstr "App Konfiguration"
 
@@ -5571,7 +5618,7 @@ msgstr "App Konfiguration"
 msgid "Screenshot shows Zammad's app configuration dialog."
 msgstr "Der Screenshot zeigt den Konfigurationsdialog in Zammad."
 
-#: ../channels/microsoft365-graph/accounts.rst:108
+#: ../channels/microsoft365-graph/accounts.rst:112
 msgid ""
 "If you followed this guide, you already should have pasted your app "
 "information. If not, here is a short summary:"
@@ -5580,39 +5627,39 @@ msgstr ""
 "bereits eingefügt haben. Falls nicht, finden Sie hier eine kurze "
 "Zusammenfassung:"
 
-#: ../channels/microsoft365-graph/accounts.rst:111
-#: ../channels/microsoft365/accounts/register-app.rst:146
+#: ../channels/microsoft365-graph/accounts.rst:115
+#: ../channels/microsoft365/accounts/register-app.rst:150
 msgid "In Zammad's channel configuration, click on **Configure App**."
 msgstr ""
 "Klicken Sie in der Kanalkonfiguration von Zammad auf **App konfigurieren**."
 
-#: ../channels/microsoft365-graph/accounts.rst:112
-#: ../channels/microsoft365/accounts/register-app.rst:147
+#: ../channels/microsoft365-graph/accounts.rst:116
+#: ../channels/microsoft365/accounts/register-app.rst:151
 msgid "Enter your app details:"
 msgstr "Geben Sie Ihre App-Details ein:"
 
-#: ../channels/microsoft365-graph/accounts.rst:114
-#: ../channels/microsoft365/accounts/register-app.rst:149
+#: ../channels/microsoft365-graph/accounts.rst:118
+#: ../channels/microsoft365/accounts/register-app.rst:153
 msgid "Client ID: *Application (client) ID*"
 msgstr "Client-ID: *Anwendungs-ID (Client)*"
 
-#: ../channels/microsoft365-graph/accounts.rst:115
-#: ../channels/microsoft365/accounts/register-app.rst:150
+#: ../channels/microsoft365-graph/accounts.rst:119
+#: ../channels/microsoft365/accounts/register-app.rst:154
 msgid "Client Secret: *Value* (not the \"Secret ID\"!) from client secret"
 msgstr "Client-Secret: *Value* (nicht die \"Secret ID\"!) des Client-Secrets"
 
-#: ../channels/microsoft365-graph/accounts.rst:116
-#: ../channels/microsoft365/accounts/register-app.rst:151
+#: ../channels/microsoft365-graph/accounts.rst:120
+#: ../channels/microsoft365/accounts/register-app.rst:155
 msgid ""
 "Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)"
 msgstr "Verzeichnis-UUID/Name (Mandant): *Verzeichnis-ID (Mandant)*"
 
-#: ../channels/microsoft365-graph/accounts.rst:117
-#: ../channels/microsoft365/accounts/register-app.rst:152
+#: ../channels/microsoft365-graph/accounts.rst:121
+#: ../channels/microsoft365/accounts/register-app.rst:156
 msgid "Click on **Submit**."
 msgstr "Klicken Sie auf **Übermitteln**."
 
-#: ../channels/microsoft365-graph/accounts.rst:122
+#: ../channels/microsoft365-graph/accounts.rst:126
 msgid ""
 "Now you can add your account to Zammad. Do so by clicking the **Add "
 "account** button in the top right corner. Select the correct mailbox type. "
@@ -5635,7 +5682,7 @@ msgid "Screenshot shows Zammad's dialog for account configuration."
 msgstr ""
 "Der Screenshot zeigt den Dialog von Zammad zur Konfiguration des Kontos."
 
-#: ../channels/microsoft365-graph/accounts.rst:132
+#: ../channels/microsoft365-graph/accounts.rst:136
 msgid ""
 "After that, Zammad will ask you to assign a destination group. Select a "
 "group which should (initially) handle the incoming tickets of this channel. "
@@ -5649,7 +5696,7 @@ msgstr ""
 "der ausgewählten Gruppe für ausgehende E-Mails (*E-Mail-Versandadresse der "
 "Zielgruppe*) zugewiesen werden soll. Wählen Sie zwischen:"
 
-#: ../channels/microsoft365-graph/accounts.rst:138
+#: ../channels/microsoft365-graph/accounts.rst:142
 msgid ""
 "**Change to ...** to add this email address to the group for outgoing "
 "emails. This may overwrite an already assigned email address."
@@ -5658,7 +5705,7 @@ msgstr ""
 "Mails hinzuzufügen. Dies kann eine bereits zugewiesene E-Mail-Adresse "
 "überschreiben."
 
-#: ../channels/microsoft365-graph/accounts.rst:141
+#: ../channels/microsoft365-graph/accounts.rst:145
 msgid ""
 "**Do not change email address** if you don't want assign an email address to "
 "the group or change it. If the group has no assigned email address, it stays "
@@ -5669,7 +5716,7 @@ msgstr ""
 "zugewiesen ist, bleibt sie leer. Wenn der Gruppe bereits eine E-Mail-Adresse "
 "zugewiesen wurde, bleibt diese unverändert."
 
-#: ../channels/microsoft365-graph/accounts.rst:145
+#: ../channels/microsoft365-graph/accounts.rst:149
 msgid ""
 "You can also specify a folder from which Zammad should fetch emails from. If "
 "you do so, make sure that the emails are routed to this folder somehow. "
@@ -5684,7 +5731,7 @@ msgstr ""
 "Legen Sie anschließend fest, ob die abgerufenen E-Mails auf dem Server "
 "verbleiben sollen oder nicht."
 
-#: ../channels/microsoft365-graph/accounts.rst:151
+#: ../channels/microsoft365-graph/accounts.rst:155
 msgid ""
 "Depending if there are already email messages in this account, the archive "
 "mode dialog may be shown."
@@ -5692,7 +5739,7 @@ msgstr ""
 "Je nachdem, ob bereits E-Mail-Nachrichten in diesem Konto vorhanden sind, "
 "wird das Dialogfeld für den Archivierungsmodus angezeigt."
 
-#: ../channels/microsoft365-graph/accounts.rst:156
+#: ../channels/microsoft365-graph/accounts.rst:160
 msgid ""
 "Now your channel is ready and can be used! If something doesn't work, have a "
 "look at the :doc:`common errors section <common-errors>`, where you can find "
@@ -5703,7 +5750,7 @@ msgstr ""
 "bekannte Fehlermeldungen und deren Ursache im Zusammenhang mit der M365-"
 "Konfiguration."
 
-#: ../channels/microsoft365-graph/accounts.rst:160
+#: ../channels/microsoft365-graph/accounts.rst:164
 #: ../channels/microsoft365/accounts.rst:39
 msgid ""
 "🤔 **How do I use my Microsoft 365 account for outgoing system notifications?"
@@ -5712,7 +5759,7 @@ msgstr ""
 "**Wie verwende ich mein Microsoft 365 Konto für ausgehende "
 "Systembenachrichtigungen?**"
 
-#: ../channels/microsoft365-graph/accounts.rst:162
+#: ../channels/microsoft365-graph/accounts.rst:166
 #: ../channels/microsoft365/accounts.rst:41
 msgid ""
 "On **subscription/cloud-hosted instances**, you can't. Notifications will "
@@ -5722,7 +5769,7 @@ msgstr ""
 "Benachrichtigungen werden hier immer von “Notification Master "
 "<noreply\\@your.zammad.domain>” versendet."
 
-#: ../channels/microsoft365-graph/accounts.rst:166
+#: ../channels/microsoft365-graph/accounts.rst:170
 #: ../channels/microsoft365/accounts.rst:45
 msgid ""
 "On **self-hosted instances**, we still don't recommend it. Using a Microsoft "
@@ -5739,7 +5786,7 @@ msgstr ""
 "service-description/exchange-online-limits#receiving-and-sending-limits>`_ "
 "überschreiten, kann das Konto gesperrt werden."
 
-#: ../channels/microsoft365-graph/accounts.rst:172
+#: ../channels/microsoft365-graph/accounts.rst:176
 #: ../channels/microsoft365/accounts.rst:51
 msgid ""
 "Set up a generic :doc:`email channel </channels/email/index>` instead, then "
@@ -5749,11 +5796,11 @@ msgstr ""
 "email/index>` ein und benutzen Sie die Einstellungen für die :ref:`E-Mail "
 "Benachrichtigung <email-notification>`."
 
-#: ../channels/microsoft365-graph/accounts.rst:176
+#: ../channels/microsoft365-graph/accounts.rst:180
 msgid "Using Aliases"
 msgstr "Aliasse verwenden"
 
-#: ../channels/microsoft365-graph/accounts.rst:178
+#: ../channels/microsoft365-graph/accounts.rst:182
 msgid ""
 "In case you want to use secondary addresses (aliases), make sure to add the "
 "aliases to the desired mailbox first. You can find additional information in "
@@ -5763,13 +5810,13 @@ msgstr ""
 "Aliasse zuerst dem gewünschten Postfach hinzu. Weitere Informationen finden "
 "Sie in der Dokumentation von Microsoft:"
 
-#: ../channels/microsoft365-graph/accounts.rst:182
+#: ../channels/microsoft365-graph/accounts.rst:186
 msgid ""
 "https://learn.microsoft.com/en-us/graph/outlook-send-mail-from-other-user"
 msgstr ""
 "https://learn.microsoft.com/de-de/graph/outlook-send-mail-from-other-user"
 
-#: ../channels/microsoft365-graph/accounts.rst:183
+#: ../channels/microsoft365-graph/accounts.rst:187
 msgid ""
 "https://learn.microsoft.com/en-us/microsoft-365/admin/email/add-another-"
 "email-alias-for-a-user"
@@ -5777,7 +5824,7 @@ msgstr ""
 "https://learn.microsoft.com/de-de/microsoft-365/admin/email/add-another-"
 "email-alias-for-a-user"
 
-#: ../channels/microsoft365-graph/accounts.rst:185
+#: ../channels/microsoft365-graph/accounts.rst:189
 msgid ""
 "To add an alias, click on ``+ Add`` in the **Email Address** section and "
 "provide the requested information. It works the same way as for other email "
@@ -5791,11 +5838,11 @@ msgstr ""
 "Sie sich deshalb diesen :doc:`Bereich in der Standard-E-Mail-Konfiguration </"
 "channels/email/accounts/secondary-addresses>` für weitere Informationen an."
 
-#: ../channels/microsoft365-graph/accounts.rst:192
+#: ../channels/microsoft365-graph/accounts.rst:196
 msgid "Re-Authenticate"
 msgstr "Re-Authentifizierung"
 
-#: ../channels/microsoft365-graph/accounts.rst:194
+#: ../channels/microsoft365-graph/accounts.rst:198
 msgid ""
 "If your token got invalid, you have to replace the token due to other "
 "reasons, you want to use a shared mailbox with another user, you can use the "
@@ -5806,7 +5853,7 @@ msgstr ""
 "Benutzer verwenden möchten, können Sie die Schaltfläche **Re-"
 "Authentifizierung** verwenden."
 
-#: ../channels/microsoft365-graph/accounts.rst:198
+#: ../channels/microsoft365-graph/accounts.rst:202
 msgid ""
 "In case you are using an user mailbox, the new user has to match the "
 "existing one, otherwise it will result in a user mismatch error. In this "
@@ -5816,12 +5863,12 @@ msgstr ""
 "vorhandenen übereinstimmen, da sonst ein Fehler auftritt. In diesem Fall "
 "sollten Sie den Kanal löschen und ein neues Konto hinzufügen."
 
-#: ../channels/microsoft365-graph/accounts.rst:203
+#: ../channels/microsoft365-graph/accounts.rst:207
 #: ../channels/microsoft365/common-errors.rst:71
 msgid "Request Admin Consent"
 msgstr "Administrator-Zustimmung beantragen"
 
-#: ../channels/microsoft365-graph/accounts.rst:205
+#: ../channels/microsoft365-graph/accounts.rst:209
 msgid ""
 "It is possible to request the permissions via admin consent. In this case "
 "Zammad will request necessary permissions for you from your admin, and then "
@@ -6560,7 +6607,7 @@ msgstr ""
 msgid "Preparation"
 msgstr "Vorbereitung"
 
-#: ../channels/microsoft365/accounts/register-app.rst:21
+#: ../channels/microsoft365/accounts/register-app.rst:22
 msgid ""
 "Go to *Channels > Microsoft 365 IMAP Email* and click on **Connect Microsoft "
 "365 App**. Copy the provided callback URL."
@@ -6568,11 +6615,11 @@ msgstr ""
 "Gehen Sie zu *Kanäle > Microsoft 365 IMAP E-Mail* und klicken Sie auf "
 "**Microsoft 365 App verbinden**. Kopieren Sie die angezeigte Callback-URL."
 
-#: ../channels/microsoft365/accounts/register-app.rst:25
+#: ../channels/microsoft365/accounts/register-app.rst:26
 msgid "Step-by-Step"
 msgstr "Schritt für Schritt"
 
-#: ../channels/microsoft365/accounts/register-app.rst:27
+#: ../channels/microsoft365/accounts/register-app.rst:28
 msgid ""
 "To get started, head over to `Microsoft's Entra Portal <https://"
 "entra.microsoft.com>`_. Make sure to use an admin account for your "
@@ -6584,7 +6631,7 @@ msgstr ""
 "für Ihre Organisation verwenden. Andernfalls muss ein Administrator Ihre "
 "Änderungen genehmigen, bevor sie loslegen können."
 
-#: ../channels/microsoft365/accounts/register-app.rst:45
+#: ../channels/microsoft365/accounts/register-app.rst:46
 msgid ""
 "Accounts in any organizational directory (Multitenant) and personal "
 "Microsoft accounts (e.g. Skype, Xbox)"
@@ -6592,29 +6639,29 @@ msgstr ""
 "Konten in beliebigen Organisationsverzeichnissen (Multitenant) und "
 "persönliche Microsoft Konten (z.B. Skype, Xbox)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:48
+#: ../channels/microsoft365/accounts/register-app.rst:49
 msgid "\"Personal Microsoft accounts only\" are not supported."
 msgstr "\"Nur persönliche Microsoft-Konten\" werden nicht unterstützt."
 
-#: ../channels/microsoft365/accounts/register-app.rst:78
+#: ../channels/microsoft365/accounts/register-app.rst:82
 #: ../settings/security/third-party/saml/saml-keycloak.rst:23
 #: ../settings/security/third-party/saml/saml-keycloak.rst:29
 msgid "``email``"
 msgstr "``email``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:82
+#: ../channels/microsoft365/accounts/register-app.rst:86
 msgid "``IMAP.AccessAsUser.all``"
 msgstr "``IMAP.AccessAsUser.all``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:83
+#: ../channels/microsoft365/accounts/register-app.rst:87
 msgid "``SMTP.Send``"
 msgstr "``SMTP.Send``"
 
-#: ../channels/microsoft365/accounts/register-app.rst:88
+#: ../channels/microsoft365/accounts/register-app.rst:92
 msgid "Admin Consent (optional)"
 msgstr "Administrator-Zustimmung (optional)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:92
+#: ../channels/microsoft365/accounts/register-app.rst:96
 msgid ""
 "This step is only required for tenants that require admin consent. Admin "
 "consent adds another layer of security for your tenants users and allows "
@@ -6626,7 +6673,7 @@ msgstr ""
 "ermöglicht es Administratoren zu definieren, wer Benutzerinformationen "
 "weitergeben darf."
 
-#: ../channels/microsoft365/accounts/register-app.rst:96
+#: ../channels/microsoft365/accounts/register-app.rst:100
 msgid ""
 "Within *Enterprise applications* select your app. When creating an app "
 "within *App registrations*, Microsoft will automatically also create an "
@@ -6636,7 +6683,7 @@ msgstr ""
 "der *App-Registrierungen* eine App erstellen, erstellt Microsoft automatisch "
 "auch eine Unternehmensanwendung für Sie."
 
-#: ../channels/microsoft365/accounts/register-app.rst:100
+#: ../channels/microsoft365/accounts/register-app.rst:104
 msgid ""
 "Set *Assignment required* to ``Yes`` within the apps properties and hit "
 "*Save*. This generally activates your app requesting admin consent already."
@@ -6649,11 +6696,11 @@ msgstr ""
 msgid "Screenshot showing enabled assignment requirement"
 msgstr "Screenshot mit aktivierter Anforderung der Zuweisung"
 
-#: ../channels/microsoft365/accounts/register-app.rst:108
+#: ../channels/microsoft365/accounts/register-app.rst:112
 msgid "Tightening your App (recommended, optional)"
 msgstr "Optimierung der App (empfohlen, optional)"
 
-#: ../channels/microsoft365/accounts/register-app.rst:110
+#: ../channels/microsoft365/accounts/register-app.rst:114
 msgid ""
 "This step will protect your tenant users from -to admins- unwanted "
 "permission changes (e.g. requesting more permissions than originally noted)."
@@ -6662,7 +6709,7 @@ msgstr ""
 "der Berechtigungen (z.B. der Anforderung von mehr Berechtigungen als "
 "ursprünglich angegeben)."
 
-#: ../channels/microsoft365/accounts/register-app.rst:114
+#: ../channels/microsoft365/accounts/register-app.rst:118
 msgid ""
 "It also has another benefit: You can add the email account in question "
 "immediately without any administrator being forced to step in manually."
@@ -6670,7 +6717,7 @@ msgstr ""
 "Es hat noch einen weiteren Vorteil: Sie können das betreffende E-Mail-Konto "
 "sofort hinzufügen, ohne dass ein Administrator manuell eingreifen muss."
 
-#: ../channels/microsoft365/accounts/register-app.rst:118
+#: ../channels/microsoft365/accounts/register-app.rst:122
 msgid ""
 "Still within *Enterprise applications* select *Users and groups*. In this "
 "section you can select specific users and / or groups (users must be direct "
@@ -6681,7 +6728,7 @@ msgstr ""
 "(Benutzer müssen direkte Mitglieder sein!), die Ihre App zum Hinzufügen von "
 "Postfächern zu Zammad verwenden dürfen."
 
-#: ../channels/microsoft365/accounts/register-app.rst:123
+#: ../channels/microsoft365/accounts/register-app.rst:127
 msgid ""
 "After adding users and groups, go back to the Azure portals home and select "
 "*App registrations*. Within your desired app go to *API permissions* and use "
@@ -6694,7 +6741,7 @@ msgstr ""
 "die Schaltfläche *Administrator-Zustimmung für {Unternehmensname} erteilen*, "
 "um die Verbindung für Benutzer zu erlauben, denen Sie zuvor zugestimmt haben."
 
-#: ../channels/microsoft365/accounts/register-app.rst:130
+#: ../channels/microsoft365/accounts/register-app.rst:134
 msgid ""
 "Not adding users / groups nor providing the granted admin consent right away "
 "will cause Microsoft to enforce at least the first user to be requested to "
@@ -6706,7 +6753,7 @@ msgstr ""
 "dazu, einen Grund für die Zustimmungs-Anfrage anzugeben. Danach erteilt "
 "Microsoft automatisch die Zustimmung für Ihren Mandanten."
 
-#: ../channels/microsoft365/accounts/register-app.rst:135
+#: ../channels/microsoft365/accounts/register-app.rst:139
 msgid ""
 "Administrative accounts can also use the option *Consent on behalf of your "
 "organization* in above mentioned permission dialogue."
@@ -6718,7 +6765,7 @@ msgstr ""
 msgid "Screenshot showing popup about connecting app"
 msgstr "Screenshot mit Popup-Fenster zum Verbinden der App"
 
-#: ../channels/microsoft365/accounts/register-app.rst:155
+#: ../channels/microsoft365/accounts/register-app.rst:159
 msgid ""
 "🍾 Congratulations! Now you're ready to connect Microsoft 365 accounts to "
 "Zammad."
@@ -8418,7 +8465,7 @@ msgstr "API (System-Dokumentation)"
 msgid "System"
 msgstr "System"
 
-#: ../index.rst:96
+#: ../index.rst:96 ../manage/roles/permissions.rst:291
 msgid "Misc"
 msgstr "Verschiedenes"
 
@@ -8665,7 +8712,8 @@ msgstr ""
 "Sie können nicht von anderen Stellen in Zammad wie Triggern oder Workflows "
 "auf die Elemente oder den Status der Checkboxen zugreifen."
 
-#: ../manage/groups/access-levels.rst:2 ../manage/users/index.rst:172
+#: ../manage/groups/access-levels.rst:2 ../manage/roles/index.rst:61
+#: ../manage/users/index.rst:172
 msgid "Group Permissions"
 msgstr "Gruppenberechtigungen"
 
@@ -8844,7 +8892,7 @@ msgid ""
 "Please make sure that you have selected the ``ticket.agent`` permission for "
 "the user or role."
 msgstr ""
-"Achten Sie darauf, dass Sie die Berechtigung``ticket.agent`` für den "
+"Achten Sie darauf, dass Sie die Berechtigung ``ticket.agent`` für den "
 "Benutzer oder die Rolle gesetzt haben."
 
 #: ../manage/groups/access-levels.rst:80
@@ -8869,7 +8917,7 @@ msgstr ""
 "Standardberechtigung, die allen Agenten zugewiesen ist. Sofern Sie keine "
 "speziellen Anforderungen haben, ist dies die einfachste Einstellung."
 
-#: ../manage/groups/access-levels.rst:100
+#: ../manage/groups/access-levels.rst:101
 msgid "“The Supervisor”"
 msgstr "\"Der Überwacher\""
 
@@ -8883,16 +8931,18 @@ msgstr ""
 
 #: ../manage/groups/access-levels.rst:98
 msgid ""
-"Agents with all permissions except for “full” **cannot be assigned "
-"tickets**. Otherwise, their privileges are identical to agents with “full” "
-"access. Great for letting other people do the real work."
+"Agents with all permissions except for “full” **cannot be assigned tickets** "
+"and don't receive notifications (unless they are subscribed to or mentioned "
+"in the ticket). Otherwise, their privileges are identical to agents with "
+"“full” access. Great for letting other people do the real work."
 msgstr ""
-"Agenten mit allen Berechtigungen außer \"Voll“ können **keine Tickets "
-"zugewiesen werden**. Ansonsten sind ihre Berechtigungen identisch mit denen "
-"von Agenten mit \"vollem“ Zugriff. Großartig, um andere Leute die "
-"eigentliche Arbeit machen zu lassen."
+"Agenten mit allen Berechtigungen außer \"Voll\" können **keine Tickets "
+"zugewiesen werden** und erhalten keine Benachrichtigungen (außer sie haben "
+"Benachrichtigungen für ein Ticket abonniert oder wurden erwähnt). Ansonsten "
+"sind ihre Berechtigungen identisch mit denen von Agenten mit \"Voll\" "
+"Zugriff. Großartig, um andere Leute die eigentliche Arbeit machen zu lassen."
 
-#: ../manage/groups/access-levels.rst:110
+#: ../manage/groups/access-levels.rst:111
 msgid "“The Meddler”"
 msgstr "\"Der Einmischer\""
 
@@ -8903,7 +8953,7 @@ msgstr ""
 "In der Gruppenberechtigungstabelle sind \"Lesen“, \"Ändern“ und \"Übersicht“ "
 "aktiviert"
 
-#: ../manage/groups/access-levels.rst:108
+#: ../manage/groups/access-levels.rst:109
 msgid ""
 "Agents with “read”, “change”, and “overview” access can do everything except "
 "create tickets or be assigned to them. Great for getting involved in other "
@@ -8913,7 +8963,7 @@ msgstr ""
 "können alles tun, außer Tickets erstellen oder ihnen zugewiesen werden. "
 "Ideal, um sich in fremden Tickets einzumischen."
 
-#: ../manage/groups/access-levels.rst:119
+#: ../manage/groups/access-levels.rst:120
 msgid "“The Intern”"
 msgstr "\"Der Interne\""
 
@@ -8921,7 +8971,7 @@ msgstr "\"Der Interne\""
 msgid "The group permission table, checked \"Create\""
 msgstr "Gruppenberechtigungstabelle, \"Erstellen\" ausgewählt"
 
-#: ../manage/groups/access-levels.rst:118
+#: ../manage/groups/access-levels.rst:119
 msgid ""
 "Agents with only “create” permission can do just that, and nothing else—once "
 "they hit **Save**, they'll never see that ticket again. Great for taking "
@@ -9794,7 +9844,8 @@ msgstr ""
 "Veröffentlichung aufheben möchten, ohne den gesamten Inhalt zu löschen, "
 "deaktivieren Sie diese stattdessen einfach über den Schalter oben im Fenster."
 
-#: ../manage/knowledge-base.rst:201
+#: ../manage/knowledge-base.rst:201 ../manage/roles/index.rst:39
+#: ../manage/roles/permissions.rst:2
 msgid "Permissions"
 msgstr "Berechtigungen"
 
@@ -10000,15 +10051,19 @@ msgstr "Ticketattribute festzulegen (Priorität, Status, Gruppe, usw.)"
 msgid "add new notes to a ticket"
 msgstr "Notizen zu Tickets hinzuzufügen"
 
-#: ../manage/macros/how-do-they-work.rst:24
+#: ../manage/macros/how-do-they-work.rst:23
+msgid "run an :doc:`AI agent </ai/ai-agents>`"
+msgstr "ausführen eines :doc:`KI-Agenten </ai/ai-agents>`"
+
+#: ../manage/macros/how-do-they-work.rst:25
 msgid "There are **no** actions for:"
 msgstr "Es gibt **keine** Aktionen für:"
 
-#: ../manage/macros/how-do-they-work.rst:26
+#: ../manage/macros/how-do-they-work.rst:27
 msgid "sending a reply to the customer"
 msgstr "Eine Antwort an Ihren Kunden zu senden"
 
-#: ../manage/macros/how-do-they-work.rst:28
+#: ../manage/macros/how-do-they-work.rst:29
 msgid ""
 "Unlike triggers, the scheduler, and text modules, macro actions do **not** "
 "support the use of :doc:`/misc/variables`."
@@ -10017,7 +10072,7 @@ msgstr ""
 "Aktionen in Makros **keine** Verwendung von :doc:`Variablen </misc/"
 "variables>`."
 
-#: ../manage/macros/how-do-they-work.rst:32
+#: ../manage/macros/how-do-they-work.rst:33
 msgid ""
 "If the ticket is missing a required attribute and the macro doesn't set it, "
 "then **no actions will be applied**."
@@ -10029,7 +10084,7 @@ msgstr ""
 msgid "Once completed..."
 msgstr "Nach Abschluss..."
 
-#: ../manage/macros/how-do-they-work.rst:37
+#: ../manage/macros/how-do-they-work.rst:38
 msgid ""
 "After running this macro, should Zammad remain on the current tab, close it, "
 "or automatically switch to the next ticket? (Does not apply when running "
@@ -10039,7 +10094,7 @@ msgstr ""
 "Registerkarte bleiben, diese schließen oder automatisch zum nächsten Ticket "
 "wechseln? (Gilt nicht, wenn Makros auf mehrere Tickets angewandt werden.)"
 
-#: ../manage/macros/how-do-they-work.rst:42
+#: ../manage/macros/how-do-they-work.rst:43
 msgid ""
 "What should other Zammad admins know about this macro? (Visible only via the "
 "\"Edit: Macro\" dialog, Rails console, and API.)"
@@ -10048,21 +10103,21 @@ msgstr ""
 "sichtbar über das Dialogfeld \"Bearbeiten: Makro“, die Rails-Konsole und die "
 "API.)"
 
-#: ../manage/macros/how-do-they-work.rst:46
+#: ../manage/macros/how-do-they-work.rst:47
 msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
 msgstr ""
 "Welche :doc:`/manage/groups/index` dürfen das Makro sehen und verwenden?"
 
-#: ../manage/macros/how-do-they-work.rst:49
+#: ../manage/macros/how-do-they-work.rst:50
 msgid "Choose \"inactive\" to disable this macro without deleting it."
 msgstr ""
 "Wählen Sie \"inaktiv“, um dieses Makro zu deaktivieren, ohne es zu löschen."
 
-#: ../manage/macros/how-do-they-work.rst:52
+#: ../manage/macros/how-do-they-work.rst:53
 msgid "Managing Macros"
 msgstr "Verwaltung von Makros"
 
-#: ../manage/macros/how-do-they-work.rst:54
+#: ../manage/macros/how-do-they-work.rst:55
 msgid ""
 "Edit your macros by simply clicking on it. You can delete or even clone "
 "existing macros by clicking on the ︙ action menu and select the desired "
@@ -10076,7 +10131,7 @@ msgstr ""
 msgid "Screenshot showing the macro action menu"
 msgstr "Screenshot des Makro-Aktionsmenüs"
 
-#: ../manage/macros/how-do-they-work.rst:62
+#: ../manage/macros/how-do-they-work.rst:63
 msgid ""
 "When cloning a macro, make sure to click \"Submit\" for the duplicate to be "
 "created."
@@ -10251,13 +10306,12 @@ msgstr ""
 
 #: ../manage/organizations/index.rst:31
 msgid ""
-"Unlike users, agents cannot just create new organizations. Check "
-"the :doc:`permission reference </manage/roles/admin-permissions>` to learn "
-"more."
+"Unlike users, agents cannot create new organizations. Check the :doc:`roles "
+"section </manage/roles/index>` to learn more."
 msgstr ""
-"Im Gegensatz zu Benutzern können Agenten nicht einfach neue Organisationen "
-"erstellen. Weitere Informationen finden Sie unter :doc:`Berechtigungen </"
-"manage/roles/admin-permissions>`."
+"Agenten können, im Gegensatz zu neuen Benutzern, keine neuen Organisationen "
+"erstellen. Lesen Sie im Bereich :doc:`Rollen</manage/roles/index>` weiter, "
+"um mehr zu erfahren."
 
 #: ../manage/organizations/index.rst:34
 msgid ""
@@ -11442,1180 +11496,946 @@ msgstr ""
 "auf :docs:`Reporting Tools </appendix/reporting-tools-thirdparty.html>` in "
 "der Systemdokumentation, wo Sie weitere Informationen finden können."
 
-#: ../manage/roles/admin-permissions.rst:2
-msgid "Admin Permissions"
-msgstr "Admin-Berechtigungen"
-
-#: ../manage/roles/admin-permissions.rst:6
-#: ../manage/roles/user-preferences-permissions.rst:6
-msgid ""
-"📁 **Permissions are namespaced**, which is sort of like having files inside "
-"of folders."
-msgstr ""
-"📁 **Berechtigungen sind hierarchisch**, was in etwa so ist, als ob sich "
-"Dateien in Ordnern befinden."
-
-#: ../manage/roles/admin-permissions.rst:9
-msgid ""
-"The permissions listed on this page all belong to the ``admin`` namespace. "
-"You can select them individually, or you can just select ``admin`` to enable "
-"the whole bunch."
-msgstr ""
-"Die auf dieser Seite aufgeführten Berechtigungen gehören alle zum "
-"Berechtigungsgruppe ``Admin``. Sie können sie einzeln auswählen oder einfach "
-"``Admin`` auswählen, um die gesamte Gruppe zu aktivieren."
-
-#: ../manage/roles/admin-permissions.rst:18
-msgid "Admin permissions in the New Role dialog"
-msgstr "Administratorberechtigungen im Dialogfeld \"Neue Rolle“"
-
-#: ../manage/roles/admin-permissions.rst:18
-msgid "Admin permissions are shown at the top of the New Role dialog..."
-msgstr ""
-"Admin-Berechtigungen werden oben im Dialogfeld \"Neue Rolle“ angezeigt ..."
-
-#: ../manage/roles/admin-permissions.rst:25
-msgid "Screenshot showing admin settings within Zammad."
-msgstr "Screenshot, der die Admin-Einstellungen in Zammad zeigt."
-
-#: ../manage/roles/admin-permissions.rst:25
-msgid "...and give users access to the pages of the Admin Panel."
-msgstr "...und geben Benutzern Zugriff auf den Admin-Bereich."
-
-#: ../manage/roles/admin-permissions.rst:28
-msgid ""
-"Please be aware that these permissions only grant access to the **settings/"
-"configuration** in Zammad. If you want to grant agents access to tickets, "
-"see :doc:`agent permissions <agent-permissions>` and :doc:`group permissions "
-"<../groups/access-levels>`"
-msgstr ""
-"Bitte beachten Sie, dass diese Berechtigungen nur Zugriff auf die "
-"**Einstellungen/Konfiguration** in Zammad gewähren. Wenn Sie Agenten Zugriff "
-"auf Tickets gewähren möchten, siehe :doc:`Agent-Berechtigungen <agent-"
-"permissions>` und :doc:`Gruppen-Berechtigungen <../groups/access-levels>`"
-
-#: ../manage/roles/admin-permissions.rst:37
-#: ../manage/roles/agent-permissions.rst:29
-#: ../manage/roles/user-preferences-permissions.rst:35
-msgid "Permission name"
-msgstr "Name der Berechtigung"
-
-#: ../manage/roles/admin-permissions.rst:38
-#: ../manage/roles/agent-permissions.rst:30
-#: ../manage/roles/user-preferences-permissions.rst:36
-msgid "Give access to"
-msgstr "Gewährt Zugriff auf"
-
-#: ../manage/roles/admin-permissions.rst:40
-msgid "``admin.ai``"
-msgstr "``admin.ai``"
-
-#: ../manage/roles/admin-permissions.rst:41
-msgid ":doc:`AI > Provider </ai/provider>`"
-msgstr ":doc:`KI > Anbieter </ai/provider>`"
-
-#: ../manage/roles/admin-permissions.rst:43
-msgid "``admin.ai_agent``"
-msgstr "``admin.ai_agent``"
-
-#: ../manage/roles/admin-permissions.rst:44
-msgid ":doc:`AI > AI Agents </ai/ai-agents>`"
-msgstr ":doc:`KI > KI-Agenten </ai/ai-agents>`"
-
-#: ../manage/roles/admin-permissions.rst:46
-msgid "``admin.ai_assistance_text_tools``"
-msgstr "``admin.ai_assistance_text_tools``"
-
-#: ../manage/roles/admin-permissions.rst:47
-msgid "AI > Smart Assist Text Tools"
-msgstr "KI > Smart Assist Text Werkzeuge"
-
-#: ../manage/roles/admin-permissions.rst:49
-msgid "``admin.ai_assistance_ticket_summary``"
-msgstr "``admin.ai_assistance_ticket_summary``"
-
-#: ../manage/roles/admin-permissions.rst:50
-msgid ":doc:`AI > Ticket Summary </ai/summary>`"
-msgstr ":doc:`KI > Ticket-Zusammenfassung </ai/summary>`"
-
-#: ../manage/roles/admin-permissions.rst:52
-msgid "``admin.api``"
-msgstr "``admin.api``"
-
-#: ../manage/roles/admin-permissions.rst:53
-msgid ":docs:`System > API </api/intro.html>`"
-msgstr ":docs:`System > API </api/intro.html>`"
-
-#: ../manage/roles/admin-permissions.rst:55
-msgid "``admin.branding``"
-msgstr "``admin.branding``"
-
-#: ../manage/roles/admin-permissions.rst:56
-msgid ":doc:`Settings > Branding </settings/branding>`"
-msgstr ":doc:`Einstellungen > Branding </settings/branding>`"
-
-#: ../manage/roles/admin-permissions.rst:58
-msgid "``admin.calendar``"
-msgstr "``admin.calendar``"
-
-#: ../manage/roles/admin-permissions.rst:59
-msgid ":doc:`Manage > Calendars </manage/calendars>`"
-msgstr ":doc:`Verwalten > Kalender </manage/calendars>`"
-
-#: ../manage/roles/admin-permissions.rst:60
-msgid "Required for :doc:`/manage/slas/index`"
-msgstr "Erforderlich für :doc:`/manage/slas/index`"
-
-#: ../manage/roles/admin-permissions.rst:61
-msgid "``admin.channel_chat``"
-msgstr "``admin.channel_chat``"
-
-#: ../manage/roles/admin-permissions.rst:62
-msgid ":doc:`Channels > Chat </channels/chat>`"
-msgstr ":doc:`Kanäle > Chat </channels/chat>`"
-
-#: ../manage/roles/admin-permissions.rst:63
-msgid "Accessing chat for agents: ``chat.agent``"
-msgstr "Zugang zum Chat für Agenten: ``chat.agent``"
-
-#: ../manage/roles/admin-permissions.rst:64
-msgid "``admin.channel_email``"
-msgstr "``admin.channel_email``"
-
-#: ../manage/roles/admin-permissions.rst:65
-msgid ":doc:`Channels > Email </channels/email/index>`"
-msgstr ":doc:`Kanäle > Email </channels/email/index>`"
-
-#: ../manage/roles/admin-permissions.rst:67
-msgid "``admin.channel_facebook``"
-msgstr "``admin.channel_facebook``"
-
-#: ../manage/roles/admin-permissions.rst:68
-msgid ":doc:`Channels > Facebook </channels/facebook>`"
-msgstr ":doc:`Kanäle > Facebook </channels/facebook>`"
-
-#: ../manage/roles/admin-permissions.rst:69
-msgid ""
-"Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-"Zugriff auf Facebook Tickets für Agenten: :doc:`/manage/groups/access-levels`"
-
-#: ../manage/roles/admin-permissions.rst:70
-msgid "``admin.channel_formular``"
-msgstr "``admin.channel_formular``"
-
-#: ../manage/roles/admin-permissions.rst:71
-msgid ":doc:`Channels > Form </channels/form>`"
-msgstr ":doc:`Kanäle > Formulare </channels/form>`"
-
-#: ../manage/roles/admin-permissions.rst:73
-msgid "``admin.channel_google``"
-msgstr "``admin.channel_google``"
-
-#: ../manage/roles/admin-permissions.rst:74
-msgid ":doc:`Channels > Google </channels/google/index>`"
-msgstr ":doc:`Kanäle > Google </channels/google/index>`"
-
-#: ../manage/roles/admin-permissions.rst:76
-msgid "``admin.channel_microsoft_graph``"
-msgstr "``admin.channel_microsoft_graph``"
-
-#: ../manage/roles/admin-permissions.rst:77
-msgid ""
-":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/"
-"index>`"
-msgstr ""
-":doc:`Kanäle > Microsoft 365 Graph Email </channels/microsoft365/index>`"
-
-#: ../manage/roles/admin-permissions.rst:79
-msgid "``admin.channel_microsoft365``"
-msgstr "``admin.channel_microsoft365``"
-
-#: ../manage/roles/admin-permissions.rst:80
-msgid ""
-":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
-msgstr ""
-":doc:`Kanäle > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
-
-#: ../manage/roles/admin-permissions.rst:82
-msgid "``admin.channel_sms``"
-msgstr "``admin.channel_sms``"
-
-#: ../manage/roles/admin-permissions.rst:83
-msgid ":doc:`Channels > SMS </channels/sms>`"
-msgstr ":doc:`Kanäle > SMS </channels/sms>`"
-
-#: ../manage/roles/admin-permissions.rst:85
-msgid "``admin.channel_telegram``"
-msgstr "``admin.channel_telegram``"
-
-#: ../manage/roles/admin-permissions.rst:86
-msgid ":doc:`Channels > Telegram </channels/telegram>`"
-msgstr ":doc:`Kanäle > Telegram </channels/telegram>`"
-
-#: ../manage/roles/admin-permissions.rst:87
-msgid ""
-"Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
-msgstr ""
-"Zugriff auf Telegram-Tickets für Agenten: :doc:`/manage/groups/access-levels`"
-
-#: ../manage/roles/admin-permissions.rst:88
-msgid "``admin.channel_web``"
-msgstr "``admin.channel_web``"
-
-#: ../manage/roles/admin-permissions.rst:89
-msgid ":doc:`Channels > Web </channels/web>`"
-msgstr ":doc:`Kanäle > Web </channels/web>`"
-
-#: ../manage/roles/admin-permissions.rst:91
-msgid "``admin.channel_whatsapp``"
-msgstr "``admin.channel_whatsapp``"
-
-#: ../manage/roles/admin-permissions.rst:92
-msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
-msgstr ":doc:`Kanäle > Whatsapp </channels/whatsapp/index>`"
-
-#: ../manage/roles/admin-permissions.rst:94
-msgid "``admin.checklist``"
-msgstr "``admin.checklist``"
-
-#: ../manage/roles/admin-permissions.rst:95
-msgid ":doc:`Manage > Checklist </manage/checklist>`"
-msgstr ":doc:`Verwalten > Checklisten </manage/checklist>`"
-
-#: ../manage/roles/admin-permissions.rst:97
-msgid "``admin.core_workflows``"
-msgstr "``admin.core_workflows``"
-
-#: ../manage/roles/admin-permissions.rst:98
-msgid ":doc:`System > Core Workflows </system/core-workflows>`"
-msgstr ":doc:`System > Core-Workflows </system/core-workflows>`"
-
-#: ../manage/roles/admin-permissions.rst:100
-msgid "``admin.data_privacy``"
-msgstr "``admin.data_privacy``"
-
-#: ../manage/roles/admin-permissions.rst:101
-msgid ":doc:`System > Data Privacy </system/data-privacy>`"
-msgstr ":doc:`System > Datenschutz </system/data-privacy>`"
-
-#: ../manage/roles/admin-permissions.rst:102
-msgid ""
-"🔥 Be careful, it allows users to permanently delete data on the system."
-msgstr ""
-"🔥 Seien Sie vorsichtig, es erlaubt Benutzern, Daten auf dem System "
-"dauerhaft zu löschen."
-
-#: ../manage/roles/admin-permissions.rst:103
-msgid "``admin.group``"
-msgstr "``admin.group``"
-
-#: ../manage/roles/admin-permissions.rst:104
-msgid ":doc:`Manage > Groups </manage/groups/index>`"
-msgstr ":doc:`Verwalten > Gruppen </manage/groups/index>`"
-
-#: ../manage/roles/admin-permissions.rst:106
-msgid "``admin.integration``"
-msgstr "``admin.integration``"
-
-#: ../manage/roles/admin-permissions.rst:107
-msgid ":doc:`System > Integrations </system/integrations/index>`"
-msgstr ":doc:`System > Integrationen </system/integrations/index>`"
-
-#: ../manage/roles/admin-permissions.rst:109
-msgid "``admin.knowledge_base``"
-msgstr "``admin.knowledge_base``"
-
-#: ../manage/roles/admin-permissions.rst:110
-msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
-msgstr ":doc:`Verwalten > Knowledge Base </manage/knowledge-base>`"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"Accessing knowledge base to read/edit articles: ``knowledge_base.reader``"
-msgstr ""
-"Zugriff auf die Knowledge Base zum Lesen/Bearbeiten von Artikeln: "
-"``knowledge_base.reader``"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "and ``knowledge_base.editor``"
-msgstr "und ``knowledge_base.editor``"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"Make sure to double-check the answer's :user-docs:`visibility </extras/"
-"knowledge-base.html#editing-answers>`."
-msgstr ""
-"Stellen Sie sicher, dass Sie die :user-docs:`Sichtbarkeit </extras/knowledge-"
-"base.html#editing-answers>` in der Antwort überprüfen."
-
-#: ../manage/roles/admin-permissions.rst:115
-msgid "``admin.macro``"
-msgstr "``admin.macro``"
-
-#: ../manage/roles/admin-permissions.rst:116
-msgid ":doc:`Manage > Macros </manage/macros>`"
-msgstr ":doc:`Verwalten > Makros</manage/macros>`"
-
-#: ../manage/roles/admin-permissions.rst:117
-msgid "In some cases, macros may also require ``admin.tag``"
-msgstr ""
-"In einigen Fällen erfordern Makros möglicherweise auch die Berechtigung "
-"``admin.tag``"
-
-#: ../manage/roles/admin-permissions.rst:118
-msgid "``admin.maintenance``"
-msgstr "``admin.maintenance``"
-
-#: ../manage/roles/admin-permissions.rst:119
-msgid ":doc:`System > Maintenance </system/maintenance>`"
-msgstr ":doc:`System > Wartung </system/maintenance>`"
-
-#: ../manage/roles/admin-permissions.rst:121
-msgid "``admin.monitoring``"
-msgstr "``admin.monitoring``"
-
-#: ../manage/roles/admin-permissions.rst:122
-msgid ":doc:`System > Monitoring </system/monitoring>`"
-msgstr ":doc:`System > Monitoring </system/monitoring>`"
-
-#: ../manage/roles/admin-permissions.rst:124
-msgid "``admin.object``"
-msgstr "``admin.object``"
-
-#: ../manage/roles/admin-permissions.rst:125
-msgid ":doc:`System > Objects </system/objects>`"
-msgstr ":doc:`System > Objekte </system/objects>`"
-
-#: ../manage/roles/admin-permissions.rst:127
-msgid "``admin.organization``"
-msgstr "``admin.organization``"
-
-#: ../manage/roles/admin-permissions.rst:128
-msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
-msgstr ":doc:`Verwalten > Organisationen </manage/organizations/index>`"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "Agents can access existing organizations"
-msgstr "Agenten können auf bestehende Organisationen zugreifen"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "from the search bar, even without this permission."
-msgstr "über die Suchleiste, auch ohne diese Erlaubnis."
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "They can even edit an organization's name, domain, and notes!"
-msgstr ""
-"Sie können sogar den Namen, die Domain und die Notizen einer Organisation "
-"bearbeiten!"
-
-#: ../manage/roles/admin-permissions.rst:132
-msgid "``admin.overview``"
-msgstr "``admin.overview``"
-
-#: ../manage/roles/admin-permissions.rst:133
-msgid ":doc:`Manage > Overviews</manage/overviews>`"
-msgstr ":doc:`Verwalten > Übersichten </manage/overviews>`"
-
-#: ../manage/roles/admin-permissions.rst:135
-msgid "``admin.package``"
-msgstr "``admin.package``"
-
-#: ../manage/roles/admin-permissions.rst:136
-msgid ":doc:`System > Packages </system/packages>`"
-msgstr ":doc:`System > Pakete </system/packages>`"
-
-#: ../manage/roles/admin-permissions.rst:138
-msgid "``admin.public_links``"
-msgstr "``admin.public_links``"
-
-#: ../manage/roles/admin-permissions.rst:139
-msgid ":doc:`Manage > Public Links </manage/public-links>`"
-msgstr ":doc:`Verwalten > Öffentliche Links </manage/public-links>`"
-
-#: ../manage/roles/admin-permissions.rst:141
-msgid "``admin.report_profile``"
-msgstr "``admin.report_profile``"
-
-#: ../manage/roles/admin-permissions.rst:142
-msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
-msgstr ":doc:`Verwalten > Report-Profile </manage/report-profiles>`"
-
-#: ../manage/roles/admin-permissions.rst:143
-msgid "Access to view reports: ``report``"
-msgstr "Zugang zu Berichten: ``report``"
-
-#: ../manage/roles/admin-permissions.rst:144
-msgid "``admin.role``"
-msgstr "``admin.role``"
-
-#: ../manage/roles/admin-permissions.rst:145
-msgid ":doc:`Manage > Roles </manage/roles/index>`"
-msgstr ":doc:`Verwalten > Rollen </manage/roles/index>`"
-
-#: ../manage/roles/admin-permissions.rst:147
-msgid "``admin.scheduler``"
-msgstr "``admin.scheduler``"
-
-#: ../manage/roles/admin-permissions.rst:148
-msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
-msgstr ":doc:`Verwalten > Automatisierung </manage/scheduler>`"
-
-#: ../manage/roles/admin-permissions.rst:149
-msgid "For automation on tickets"
-msgstr "Für die Automatisierung von Tickets"
-
-#: ../manage/roles/admin-permissions.rst:150
-msgid "``admin.security``"
-msgstr "``admin.security``"
-
-#: ../manage/roles/admin-permissions.rst:151
-msgid ":doc:`Settings > Security </settings/security>`"
-msgstr ":doc:`Einstellungen > Sicherheit </settings/security>`"
-
-#: ../manage/roles/admin-permissions.rst:152
-msgid "Settings of Zammad. This also covers third party authentications."
-msgstr ""
-"Einstellungen von Zammad. Dies gilt auch für die Authentifizierung über "
-"Drittanbietern."
-
-#: ../manage/roles/admin-permissions.rst:153
-msgid "``admin.session``"
-msgstr "``admin.session``"
-
-#: ../manage/roles/admin-permissions.rst:154
-msgid ":doc:`System > Sessions </system/sessions>`"
-msgstr ":doc:`System > Sitzungen </system/sessions>`"
-
-#: ../manage/roles/admin-permissions.rst:156
-msgid "``admin.sla``"
-msgstr "``admin.sla``"
-
-#: ../manage/roles/admin-permissions.rst:157
-msgid ":doc:`Manage > SLAs </manage/slas/index>`"
-msgstr ":doc:`Verwalten > SLAs </manage/slas/index>`"
-
-#: ../manage/roles/admin-permissions.rst:159
-msgid "``admin.system``"
-msgstr "``admin.system``"
-
-#: ../manage/roles/admin-permissions.rst:160
-msgid ":doc:`Settings > System </settings/system/index>`"
-msgstr ":doc:`Einstellungen > System </settings/system/index>`"
-
-#: ../manage/roles/admin-permissions.rst:162
-msgid "``admin.system_report``"
-msgstr "``admin.system_report``"
-
-#: ../manage/roles/admin-permissions.rst:163
-msgid ":doc:`System > System Report </system/system-report>`"
-msgstr ":doc:`System > System-Bericht </system/system-report>`"
-
-#: ../manage/roles/admin-permissions.rst:165
-msgid "``admin.tag``"
-msgstr "``admin.tag``"
-
-#: ../manage/roles/admin-permissions.rst:166
-msgid ":doc:`Manage > Tags </manage/tags>`"
-msgstr ":doc:`Verwalten > Tags </manage/tags>`"
-
-#: ../manage/roles/admin-permissions.rst:168
-msgid "``admin.template``"
-msgstr "``admin.template``"
-
-#: ../manage/roles/admin-permissions.rst:169
-msgid ":doc:`Manage > Templates </manage/templates>`"
-msgstr ":doc:`Verwalten > Textbausteine </manage/templates>`"
-
-#: ../manage/roles/admin-permissions.rst:171
-msgid "``admin.text_module``"
-msgstr "``admin.text_module``"
-
-#: ../manage/roles/admin-permissions.rst:172
-msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
-msgstr ":doc:`Verwalten > Textbausteine </manage/text-modules>`"
-
-#: ../manage/roles/admin-permissions.rst:174
-msgid "``admin.ticket``"
-msgstr "``admin.ticket``"
-
-#: ../manage/roles/admin-permissions.rst:175
-msgid ":doc:`Settings > Tickets </settings/ticket>`"
-msgstr ":doc:`Einstellungen > Tickets </settings/ticket>`"
-
-#: ../manage/roles/admin-permissions.rst:176
-msgid "Does not grant access to :doc:`/misc/composer`"
-msgstr "Gewährt keinen Zugriff auf :doc:`/misc/composer`"
-
-#: ../manage/roles/admin-permissions.rst:177
-msgid "``admin.ticket_auto_assignment``"
-msgstr "``admin.ticket_auto_assignment``"
-
-#: ../manage/roles/admin-permissions.rst:178
-msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
-msgstr ""
-":ref:`Einstellungen > Ticket > Automatische Zuweisung <auto_assignment>`"
-
-#: ../manage/roles/admin-permissions.rst:180
-msgid "``admin.ticket_duplicate_detection``"
-msgstr "``admin.ticket_duplicate_detection``"
-
-#: ../manage/roles/admin-permissions.rst:181
-msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
-msgstr ""
-":ref:`Einstellungen > Ticket > Duplikaterkennung <duplicate_detection>`"
-
-#: ../manage/roles/admin-permissions.rst:183
-msgid "``admin.ticket_priority``"
-msgstr "``admin.ticket_priority``"
-
-#: ../manage/roles/admin-permissions.rst:184
-msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
-msgstr ":ref:`System > Objekte >Ticket-Priorität <ticket-priority-reference>`"
-
-#: ../manage/roles/admin-permissions.rst:186
-msgid "``admin.ticket_state``"
-msgstr "``admin.ticket_state``"
-
-#: ../manage/roles/admin-permissions.rst:187
-msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
-msgstr ":ref:`System > Objekte >Ticket-Status <ticket-state-reference>`"
-
-#: ../manage/roles/admin-permissions.rst:189
-msgid "``admin.time_accounting``"
-msgstr "``admin.time_accounting``"
-
-#: ../manage/roles/admin-permissions.rst:190
-msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
-msgstr ":doc:`Verwalten > Zeiterfassung </manage/time-accounting>`"
-
-#: ../manage/roles/admin-permissions.rst:191
-msgid "Also allows the export of timekeeping records."
-msgstr "Ermöglicht auch den Export von Zeiterfassungsdaten."
-
-#: ../manage/roles/admin-permissions.rst:192
-msgid "``admin.translation``"
-msgstr "``admin.translation``"
-
-#: ../manage/roles/admin-permissions.rst:193
-msgid ":doc:`System > Translations </system/translations>`"
-msgstr ":doc:`System > Übersetzungen </system/translations>`"
-
-#: ../manage/roles/admin-permissions.rst:194
-msgid "Also enables inline translation"
-msgstr "Ermöglicht auch Inline-Übersetzung"
-
-#: ../manage/roles/admin-permissions.rst:195
-msgid "``admin.trigger``"
-msgstr "``admin.trigger``"
-
-#: ../manage/roles/admin-permissions.rst:196
-msgid ":doc:`Manage > Triggers </manage/trigger>`"
-msgstr ":doc:`Verwalten > Trigger </manage/trigger>`"
-
-#: ../manage/roles/admin-permissions.rst:198
-msgid "``admin.user``"
-msgstr "``admin.user``"
-
-#: ../manage/roles/admin-permissions.rst:199
-msgid ":doc:`Manage > Users </manage/users/index>`"
-msgstr ":doc:`Verwalten > Benutzer </manage/users/index>`"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "Independent from this permission, agents can create and edit"
-msgstr "Unabhängig von dieser Berechtigung können Agenten"
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid "customers, but they can't modify permission etc."
-msgstr "Kunden erstellen und ändern, aber keine Berechtigungen, etc."
-
-#: ../manage/roles/admin-permissions.rst:0
-msgid ""
-"🏴‍☠️ This permission allows users to :ref:`hijack other user sessions <view-"
-"from-users-perspective>` ."
-msgstr ""
-"🏴‍☠️ Mit dieser Berechtigung können Benutzer :ref:`die Sitzungen anderer "
-"Benutzer übernehmen <view-from-users-perspective>` ."
-
-#: ../manage/roles/admin-permissions.rst:204
-msgid "``admin.webhook``"
-msgstr "``admin.webhook``"
-
-#: ../manage/roles/admin-permissions.rst:205
-msgid ":doc:`Manage > Webhook </manage/webhook>`"
-msgstr ":doc:`Verwalten > Webhook </manage/webhook>`"
-
-#: ../manage/roles/agent-permissions.rst:2
-msgid "Agent Permissions"
-msgstr "Agenten-Berechtigungen"
-
-#: ../manage/roles/agent-permissions.rst:6
-msgid ""
-"The permissions listed on this page grant access to features that have to be "
-"enabled or configured system-wide in the Admin Panel first."
-msgstr ""
-"Die auf dieser Seite aufgeführten Berechtigungen gewähren Zugriff auf "
-"Funktionen, die zunächst systemweit im Admin-Panel aktiviert oder "
-"konfiguriert werden müssen."
-
-#: ../manage/roles/agent-permissions.rst:14
-msgid "Agent permissions in the New Role dialog"
-msgstr "Agentenberechtigungen im Dialogfeld \"Neue Rolle“"
-
-#: ../manage/roles/agent-permissions.rst:14
-msgid "Agent permissions are shown in the middle of the New Role dialog..."
-msgstr ""
-"Agenten-Berechtigungen werden in der Mitte im Dialogfeld \"Neue Rolle“ "
-"angezeigt ..."
-
-#: ../manage/roles/agent-permissions.rst:20
-msgid "Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone"
-msgstr ""
-"Tabs in der Seitenleiste: Übersichten, Knowledge Base, Kundenchat, Telefon"
-
-#: ../manage/roles/agent-permissions.rst:20
-msgid ""
-"...and give users access to new sidebar tabs for communicating with "
-"customers."
-msgstr ""
-"...und geben Benutzern Zugriff auf neue Seitenleisten-Tabs für die "
-"Kommunikation mit Kunden."
-
-#: ../manage/roles/agent-permissions.rst:32
-msgid "``chat.agent``"
-msgstr "``chat.agent``"
-
-#: ../manage/roles/agent-permissions.rst:33
-msgid ":user-docs:`Customer Chat </extras/chat.html>`"
-msgstr ":user-docs:`Kunden-Chat </extras/chat.html>`"
-
-#: ../manage/roles/agent-permissions.rst:34
-msgid "Requires configuration of :doc:`Chat Channel </channels/chat>`"
-msgstr "Erfordert die Konfiguration des :doc:`Chat-Kanals </channels/chat>`"
-
-#: ../manage/roles/agent-permissions.rst:35
-msgid "``cti.agent``"
-msgstr "``cti.agent``"
-
-#: ../manage/roles/agent-permissions.rst:36
-msgid ":user-docs:`Caller Log </extras/caller-log.html>`"
-msgstr ":user-docs:`Anruferprotokoll </extras/caller-log.html>`"
-
-#: ../manage/roles/agent-permissions.rst:37
-msgid "Configuration of a CTI integration is required"
-msgstr "Konfiguration einer CTI-Integration ist erforderlich"
-
-#: ../manage/roles/agent-permissions.rst:38
-msgid "``knowledge_base.editor``"
-msgstr "``knowledge_base.editor``"
-
-#: ../manage/roles/agent-permissions.rst:39
-msgid "Create/edit privileges"
-msgstr "Berechtigungen zum Erstellen/Bearbeiten"
-
-#: ../manage/roles/agent-permissions.rst:40
-msgid "Editor permissions always include reader permissions."
-msgstr "Die Editor-Berechtigung beinhaltet immer auch die Lese-Berechtigungen."
-
-#: ../manage/roles/agent-permissions.rst:41
-msgid "``knowledge_base.reader``"
-msgstr "``knowledge_base.reader``"
-
-#: ../manage/roles/agent-permissions.rst:42
-msgid "Read privileges for internal content"
-msgstr "Leserechte für interne Inhalte"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Public articles are always visible."
-msgstr "Öffentliche Artikel sind immer sichtbar."
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"See :user-docs:`here </extras/knowledge-base.html#granular-category-"
-"permissions>` how to set up granular reader permissions for the knowledge "
-"base."
-msgstr ""
-"Siehe :user-docs:`hier </extras/knowledge-base.html#granular-category-"
-"permissions>`, wie man granulare Leseberechtigungen für die Knowledge Base "
-"einrichtet."
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Keep in mind that this may be dangerous, as reader permission provides"
-msgstr ""
-"Denken Sie daran, dass dies gefährlich sein kann, da die Leseberechtigung"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "access to internal answers!"
-msgstr "Zugriff auf interne Antworten beinhalten!"
-
-#: ../manage/roles/agent-permissions.rst:48
-msgid "``report``"
-msgstr "``report``"
-
-#: ../manage/roles/agent-permissions.rst:49
-msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
-msgstr ":user-docs:`Reporting (Benutzer-Doku)</extras/reporting.html>`"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Make sure to **never** grant this permission to your customers"
-msgstr ""
-"Vergewissern Sie sich, dass Sie Ihren Kunden diese Erlaubnis **niemals** "
-"erteilen"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "because it includes **all ticket and user information** across the"
-msgstr "da darin **alle Ticket- und Benutzerinformationen** des"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "entire system! Consider setting up a new role for your admins or"
-msgstr ""
-"Systems sichtbar sind! Erwägen Sie, eine neue Rolle für Ihre Administratoren "
-"oder"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid ""
-"supervisors and limit the access via :doc:`/manage/report-profiles` first."
-msgstr ""
-"Vorgesetzte einzurichten und schränken Sie den Zugriff über :doc:`/manage/"
-"report-profiles` zunächst ein."
-
-#: ../manage/roles/agent-permissions.rst:54 ../settings/security/base.rst:95
-msgid "``ticket.agent``"
-msgstr "``ticket.agent``"
-
-#: ../manage/roles/agent-permissions.rst:55
-msgid "Access to overviews and tickets."
-msgstr "Zugang zu Übersichten und Tickets."
-
-#: ../manage/roles/agent-permissions.rst:56
-msgid "See notes below"
-msgstr "Siehe Anmerkungen unten"
-
-#: ../manage/roles/agent-permissions.rst:60
-msgid "🤔 **What about this table under the permissions tree?**"
-msgstr "🤔 **Was ist mit dieser Tabelle unter dem Berechtigungsbaum?**"
-
-#: ../manage/roles/agent-permissions.rst:0
-msgid "Group permission table in Edit Role dialog"
-msgstr "Tabelle mit Gruppenberechtigung im Rollenbearbeitungsdialog"
-
-#: ../manage/roles/agent-permissions.rst:67
-msgid ""
-"Roles can also include :doc:`group permissions </manage/groups/access-"
-"levels>`! The group permission table is shown when there is **more than one "
-"active group** in the system and ``ticket.agent`` permission **is selected**."
-msgstr ""
-"Rollen können auch :doc:`Gruppenberechtigungen </manage/groups/access-"
-"levels>` enthalten! Die Tabelle der Gruppenberechtigungen wird angezeigt, "
-"wenn **mehr als eine aktive Gruppe** im System vorhanden ist und die "
-"Berechtigung ``ticket.agent`` **ausgewählt ist**."
-
 #: ../manage/roles/index.rst:2 ../manage/users/index.rst:153
 msgid "Roles"
 msgstr "Rollen"
 
 #: ../manage/roles/index.rst:4
 msgid ""
-"If you're already using Zammad, you'll know that users can be **admins**, "
-"**agents**, or **customers**. These are Zammad's built-in roles, and they're "
-"the tip of the iceberg of its powerful, flexible, and fine-grained "
-"permission system."
+"Roles are a crucial part of Zammad's permission system. They determine what "
+"users can do within the application and can also contain group permissions. "
+"You can manage roles in Zammad's settings under *Manage > Roles*. This page "
+"gives you an explanation of what roles and permissions are. You can find "
+"details about each permission in a :doc:`separate sub page <permissions>`."
 msgstr ""
-"Wenn Sie Zammad bereits benutzen, werden Sie wissen, dass Benutzer "
-"**Administratoren**, **Agenten** oder **Kunden** sein können. Dies sind die "
-"eingebauten Rollen von Zammad, das mit einem leistungsstarken, flexiblen und "
-"feinkörnigen Berechtigungssystem ausgestattet ist."
+"Rollen sind ein wichtiger Teil des Berechtigungssystems von Zammad. Sie "
+"bestimmen, was Benutzer innerhalb der Anwendung tun können und können auch "
+"Gruppenberechtigungen enthalten. Sie können Rollen in den Einstellungen von "
+"Zammad unter *Verwalten > Rollen* anpassen. Auf dieser Seite lesen Sie, was "
+"Rollen und Berechtigungen sind. Sie finden Details über die einzelnen "
+"Berechtigungen in einer :doc:`separaten Unterseite <permissions>`."
 
-#: ../manage/roles/index.rst:14
-msgid "Role overview within Zammad's admin settings."
-msgstr "Rollenübersicht in den Einstellungen von Zammad."
+#: ../manage/roles/index.rst:11 ../manage/scheduler.rst:22
+#: ../manage/webhook/add.rst:8 ../system/core-workflows/learn-by-example.rst:8
+msgid "Basics"
+msgstr "Grundlagen"
 
-#: ../manage/roles/index.rst:14
-msgid "Assign user privileges in the Admin Panel, under **Manage > Roles**."
-msgstr ""
-"Vergeben Sie Benutzerrechte im Admin Panel unter **Verwalten > Rollen**."
-
-#: ../manage/roles/index.rst:16
-msgid "💡 **LDAP/Active Directory users:**"
-msgstr "💡 **LDAP/Active Directory-Benutzer:**"
-
-#: ../manage/roles/index.rst:18
+#: ../manage/roles/index.rst:13
 msgid ""
-"Syncing your LDAP \"groups\" to Zammad roles can make access management "
-"*way* easier. To learn more, see :doc:`/system/integrations/ldap/index`."
+"A role is the place where you define permissions. Each user has an assigned "
+"role and inherits the permissions of this role. The permissions define what "
+"a user is allowed to do and which parts and features of Zammad are "
+"accessible for them. Zammad ships with three roles by default: **Admin**, "
+"**Agent** and **Customer**. You can adjust these roles or create new ones to "
+"fit your company's needs. In case you are using LDAP/Active Directory, you "
+"can even sync your existing groups to Zammad with the :doc:`LDAP integration "
+"</system/integrations/ldap/index>`."
 msgstr ""
-"Die Synchronisierung Ihrer LDAP-\"Gruppen\" mit Zammad-Rollen kann die "
-"Zugriffsverwaltung *sehr* vereinfachen. Um mehr zu erfahren, siehe :doc:`/"
-"system/integrations/ldap/index`."
+"Eine Rolle ist die Stelle, an der Berechtigungen festgelegt werden. Jeder "
+"Benutzer hat eine zugewiesene Rolle und erbt die Berechtigungen dieser "
+"Rolle. Die Berechtigungen definieren, was ein Benutzer tun darf und welche "
+"Teile und Funktionen von Zammad für ihn zugänglich sind. Zammad wird "
+"standardmäßig mit drei Rollen ausgeliefert: **Admin**, **Agent** und "
+"**Customer**. Sie können diese Rollen anpassen oder neue erstellen, um sie "
+"an die Bedürfnisse Ihrer Organisation anzupassen. Falls Sie LDAP/Active "
+"Directory verwenden, können Sie sogar Ihre bestehenden Gruppen mit Zammad "
+"über die :doc:`LDAP Integration </system/integrations/ldap/index>` "
+"synchronisieren."
+
+#: ../manage/roles/index.rst:21
+msgid ""
+"This makes creating user accounts for new agents much simpler because you "
+"just have to assign the correct role instead of configuring permissions and "
+"group access for each user individually. Examples of some important "
+"permissions are:"
+msgstr ""
+"Dadurch wird das Anlegen von Konten für neue Agenten wesentlich einfacher, "
+"da Sie nur noch die richtige Rolle zuweisen müssen, anstatt die "
+"Berechtigungen und den Gruppenzugriff für jeden Benutzer einzeln zu "
+"konfigurieren. Beispiele für wichtige Berechtigungen sind:"
 
 #: ../manage/roles/index.rst:25
-msgid "What Is a Role?"
-msgstr "Was ist eine Rolle?"
+msgid "``ticket.agent``: allows a user to work on tickets"
+msgstr "``ticket.agent``: erlaubt einem Benutzer, Tickets zu bearbeiten"
+
+#: ../manage/roles/index.rst:26
+msgid ""
+"``admin.user``: allows a user to manage other users in Zammad's admin "
+"settings"
+msgstr ""
+"``admin.user``: erlaubt einem Benutzer, andere Benutzer in Zammads Admin-"
+"Einstellungen zu verwalten"
 
 #: ../manage/roles/index.rst:27
 msgid ""
-"Some users can do things others can't (like close a ticket). Users have "
-"roles, roles have permissions, and permissions are what make those actions "
-"possible. You can think of roles as a kind of a collection of permissions."
+"``knowledge_base.editor``: allows a user to create/edit knowledge base "
+"articles"
 msgstr ""
-"Einige Benutzer können Dinge tun, die andere nicht können (z.B. ein Ticket "
-"schließen). Benutzer haben Rollen, Rollen haben Berechtigungen, und die "
-"Berechtigungen erlauben diese Aktionen. Sie können sich die Rollen als eine "
-"Art Sammlung von Berechtigungen vorstellen."
+"``knowledge_base.editor``: ermöglicht einem Benutzer das Erstellen/"
+"Bearbeiten von Knowledge Base Artikeln"
+
+#: ../manage/roles/index.rst:29
+msgid ""
+"``user_preferences.language``: allows a user to change the language of "
+"Zammad's UI for their account."
+msgstr ""
+"``user_preferences.language``: erlaubt einem Benutzer, die Sprache der "
+"Benutzeroberfläche für sein Konto zu ändern."
 
 #: ../manage/roles/index.rst:32
-msgid "So what exactly are permissions, then?"
-msgstr "Was genau sind denn nun Berechtigungen?"
-
-#: ../manage/roles/index.rst:39
-msgid "List of permissions in the New Role dialog"
-msgstr "Liste der Berechtigungen im Dialogfeld \"Neue Rolle“"
-
-#: ../manage/roles/index.rst:39
 msgid ""
-"The ``admin.calendar`` permission gives you access to the **Manage > "
-"Calendars** admin panel."
+"To adjust a permission of a role, simply click on it. To create a new role, "
+"use the **New Role** button in the top right corner. In both cases, a dialog "
+"opens where you can configure it."
 msgstr ""
-"Mit der Berechtigung ``admin.calendar`` haben Sie Zugriff auf den Bereich "
-"**Verwalten > Kalender**."
-
-#: ../manage/roles/index.rst:42
-msgid ""
-"Simply put, permissions are names for all the different things users might "
-"want to do throughout the system, such as:"
-msgstr ""
-"Einfach ausgedrückt, sind Berechtigungen Namen für all die verschiedenen "
-"Dinge, die Benutzer im System tun möchten, wie z.B.:"
-
-#: ../manage/roles/index.rst:45
-msgid "``chat.agent``: respond to live chat messages"
-msgstr "``chat.agent``: Antwort auf Live-Chat-Nachrichten"
+"Um eine Berechtigung einer Rolle zu ändern, klicken Sie einfach auf sie. Um "
+"eine neue Rolle zu erstellen, verwenden Sie die Schaltfläche **Neue Rolle** "
+"in der oberen rechten Ecke. In beiden Fällen öffnet sich ein Dialog, in dem "
+"Sie die Rolle konfigurieren können."
 
 #: ../manage/roles/index.rst:46
-msgid "``ticket.agent``: update tickets"
-msgstr "``ticket.agent``: Tickets aktualisieren"
-
-#: ../manage/roles/index.rst:47
-msgid "``admin.user``: access the **Manage > Users** admin panel"
-msgstr "``admin.user``: Zugriff auf **Verwalten > Benutzer**"
-
-#: ../manage/roles/index.rst:48
-msgid "``knowledge_base.editor``: create/edit knowledge base articles"
-msgstr ""
-"``knowledge_base.editor``: Erstellen/Bearbeiten von Knowledge Base Artikeln"
-
-#: ../manage/roles/index.rst:50
 msgid ""
-"Zammad has dozens of these permissions, which is a lot to keep track of. So "
-"instead of assigning a bunch of permissions to different users, the idea is "
-"to assign permissions to roles. And each user has an assigned role."
+"You can configure the permissions in the configuration dialog of a role by "
+"checking or unchecking the relevant boxes. The admin and user preferences "
+"permissions are hierarchical, so you can grant all by checking the parent "
+"(e.g. ``admin``)."
 msgstr ""
-"Zammad hat Dutzende dieser Berechtigungen, und das ist eine Menge, die man "
-"im Auge behalten muss. Anstatt also verschiedenen Benutzern eine Reihe von "
-"Berechtigungen zuzuweisen, besteht die Idee darin, den Rollen Berechtigungen "
-"zuzuweisen. Und jeder Benutzer hat eine zugewiesene Rolle."
+"Sie können die Berechtigungen im Konfigurationsdialog einer Rolle "
+"konfigurieren, indem Sie die entsprechenden Kästchen aktivieren oder "
+"deaktivieren. Die Berechtigungen für die Administrations-Oberfläche und den "
+"Profil-Einstellungen sind hierarchisch aufgebaut, so dass Sie alle "
+"Berechtigungen durch setzen der übergeordneten Berechtigung (z. B. "
+"``admin``) erteilen können."
+
+#: ../manage/roles/index.rst:51
+msgid ""
+"Details about each permission are described in a separate :doc:`permission "
+"sub page <permissions>`, split by common use cases."
+msgstr ""
+"Details zu den Berechtigungen werden in einer :doc:`separaten Seite "
+"<permissions>` beschrieben, gegliedert nach allgemeinen Anwendungsfällen."
 
 #: ../manage/roles/index.rst:54
 msgid ""
-"This makes creating user accounts for new agents a whole lot simpler, and it "
-"also makes it easier to assign a new permission to a role and say \"All "
-"existing agents can do *that* now, too.\""
+"Users can have multiple roles assigned! An agent can also be a customer or "
+"could have admin permissions as a team leader, for example. If an agent is "
+"customer and the ticket is in a group where the agent doesn't have at least "
+"reading permissions, the ticket only shows a reduced customer view for this "
+"agent."
 msgstr ""
-"Dadurch wird das Anlegen von Benutzerkonten für neue Agenten sehr viel "
-"einfacher, und es ist auch einfacher, einer Rolle eine neue Berechtigung "
-"zuzuweisen und zu sagen: \"Alle vorhandenen Agenten können *das* jetzt auch."
-"\""
+"Benutzern können mehrere Rollen zugewiesen werden! Ein Agent kann auch Kunde "
+"sein oder z.B. als Teamleiter Admin-Rechte haben. Wenn ein Agent Kunde ist "
+"und das Ticket in einer Gruppe ist, in der der Agent nicht mindestens "
+"Leserechte hat, zeigt das Ticket nur eine reduzierte Kundenansicht für "
+"diesen Agent."
 
-#: ../manage/roles/index.rst:58
+#: ../manage/roles/index.rst:63
 msgid ""
-"In short, roles are just collections of permissions that you can give to a "
-"user. The built-in admin, agent, and customer roles are enough for many "
-"teams, but Zammad gives you the freedom to custom-build your own."
+"In addition to the feature permissions, **agent** roles can also contain "
+"group permissions. This means that you can define to which groups agents "
+"with this role have access to. To see the group permission table, the role "
+"must include the agent permission and more than one group has to exist in "
+"your system."
 msgstr ""
-"Kurz gesagt, sind Rollen nur Sammlungen von Berechtigungen, die Sie einem "
-"Benutzer geben können. Die eingebauten Admin-, Agenten- und Kundenrollen "
-"sind für viele Teams ausreichend, aber Zammad gibt Ihnen die Freiheit, Ihre "
-"eigenen Rollen zu erstellen."
+"Zusätzlich zu den Funktionsberechtigungen können **Agenten**-Rollen auch "
+"Gruppenberechtigungen enthalten. Das bedeutet, dass Sie festlegen können, zu "
+"welchen Gruppen die Agenten mit dieser Rolle Zugang haben. Um die "
+"Gruppenberechtigungstabelle zu sehen, muss die Rolle die Agent-Berechtigung "
+"enthalten und es muss mehr als eine Gruppe in Ihrem System existieren."
 
-#: ../manage/roles/index.rst:62
-msgid "And to do that, you'll need to know what each permission does."
-msgstr "Und dazu müssen Sie wissen, was die einzelnen Berechtigungen bewirken."
-
-#: ../manage/roles/index.rst:64
-msgid "Users can have both \"agent\" and \"customer\" roles at the same time!"
-msgstr "Benutzer können gleichzeitig die Rollen \"Agent\" und \"Kunde\" haben!"
-
-#: ../manage/roles/index.rst:66
+#: ../manage/roles/index.rst:69
 msgid ""
-"Why would you want this? Agents get :doc:`overviews </manage/overviews>` of "
-"all the tickets they're *assigned to* (among others), while customers get an "
-"overview of all the tickets they've *opened*. But some teams use Zammad for "
-"both internal and public communication, so their agents need both."
+"You can also set the group permissions for each user individually in the "
+"user settings. However, this comes with the downside that you have to "
+"configure this for each user. Please have a look at the :doc:`group "
+"permission section </manage/groups/access-levels>` for details."
 msgstr ""
-"Warum sollten Sie das wollen? Agenten erhalten :doc:`Übersichten </manage/"
-"overviews>` über alle Tickets, denen sie *zugewiesen* sind (neben anderen), "
-"während Kunden einen Überblick über alle Tickets erhalten, die sie "
-"*erstellt* haben. Einige Teams verwenden Zammad jedoch sowohl für die "
-"interne als auch für die öffentliche Kommunikation, so dass deren "
-"Mitarbeiter beides benötigen."
+"Sie können die Gruppenberechtigungen auch für jeden Benutzer einzeln in den "
+"Benutzereinstellungen festlegen. Dies hat jedoch den Nachteil, dass Sie dies "
+"für jeden Benutzer konfigurieren müssen. Bitte werfen Sie einen Blick auf "
+"die Seite :doc:`Gruppenberechtigungen </manage/groups/access-levels>` für "
+"Details."
 
-#: ../manage/roles/index.rst:73
-msgid ""
-"Having both roles also changes what you see in the ticket view, depending on "
-"whether you're the \"customer\" or not."
-msgstr ""
-"Wenn Sie beide Rollen haben, ändert sich auch die Darstellung in der "
-"Ticketansicht, je nachdem, ob Sie der \"Kunde\" sind oder nicht."
+#: ../manage/roles/index.rst:76
+msgid "Additional Settings"
+msgstr "Zusätzliche Einstellungen"
 
-#: ../manage/roles/index.rst:79
-msgid "Reference Guide: Permissions"
-msgstr "Anleitung: Berechtigungen"
-
-#: ../manage/roles/index.rst:88
-msgid ""
-"Broadly speaking, there are four types of permission groups. Click on each "
-"to go to the detailed list of granular permissions. You can either select "
-"the whole permission group (e.g. ``admin``) or a subset of it (e.g. "
-"``admin.text_module``)."
-msgstr ""
-"Grob gesagt gibt es vier Arten von Berechtigungsgruppen. Klicken Sie auf "
-"jede Gruppe, um die detaillierte Liste der einzelnen Berechtigungen "
-"aufzurufen. Sie können entweder die gesamte Gruppe (z.B. ``admin``) oder "
-"eine Teilmenge davon (z.B. ``admin.text_module``) auswählen."
-
-#: ../manage/roles/index.rst:94
-msgid ":doc:`🛡️ Admin <admin-permissions>`"
-msgstr ":doc:`🛡️ Admin <admin-permissions>`"
-
-#: ../manage/roles/index.rst:94
-msgid "For access to each page of the admin panel"
-msgstr "Für den Zugang zu den einzelnen Einstellungsbereichen"
-
-#: ../manage/roles/index.rst:97
-msgid ":doc:`🕵️ Agent <agent-permissions>`"
-msgstr ":doc:`🕵️ Agent <agent-permissions>`"
-
-#: ../manage/roles/index.rst:97
-msgid "For access to customer communications"
-msgstr "Für den Zugriff auf die Kundenkommunikation"
-
-#: ../manage/roles/index.rst:102
-msgid "👤 Customer"
-msgstr "👤 Kunde"
-
-#: ../manage/roles/index.rst:100
-msgid ""
-"Without the ``ticket.customer`` permission, customers can't see the **My "
-"Ticket** overview—but they can still log in and open new tickets!"
-msgstr ""
-"Ohne die Berechtigung ``ticket.customer`` können Kunden die Übersicht **Mein "
-"Ticket** nicht sehen - sie können sich aber trotzdem anmelden und neue "
-"Tickets eröffnen!"
-
-#: ../manage/roles/index.rst:106
-msgid ":doc:`🎛️ User Preferences <user-preferences-permissions>`"
-msgstr ":doc:`🎛️ Benutzereinstellungen <user-preferences-permissions>`"
-
-#: ../manage/roles/index.rst:105
-msgid ""
-"For access to your own :user-docs:`user profile </extras/profile-and-"
-"settings.html>`"
-msgstr ""
-"Für den Zugriff auf Ihr eigenes :user-docs:`Benutzerprofil </extras/profile-"
-"and-settings.html>`"
-
-#: ../manage/roles/index.rst:109
-msgid "Role Details"
-msgstr "Details zur Rolle"
-
-#: ../manage/roles/index.rst:123
+#: ../manage/roles/index.rst:83
 msgid "Default at Signup"
 msgstr "Aktiv bei Neuanmeldung"
 
-#: ../manage/roles/index.rst:112
+#: ../manage/roles/index.rst:79
 msgid ""
-"Every new user must be assigned at least one role upon creation. This "
-"attribute decides which role to give new users by default (which usually "
-"happens when creating a new ticket for a new customer)."
+"Define if the role is assigned to new users by default by setting it to "
+"``yes``. Typically, new users which are created automatically are customers. "
+"Unless you have a specific use case, you should only set this for a customer "
+"role without additional permissions. Otherwise, new users would get access "
+"to features and data they shouldn't have access to."
 msgstr ""
-"Jedem neuen Benutzer muss bei der Erstellung mindestens eine Rolle "
-"zugewiesen werden. Dieses Attribut entscheidet darüber, welche Rolle neuen "
-"Benutzern standardmäßig zugewiesen wird (was normalerweise bei der "
-"Erstellung eines neuen Tickets für einen neuen Kunden geschieht)."
+"Legen Sie fest, ob die Rolle standardmäßig neuen Benutzern zugewiesen wird, "
+"indem Sie den Wert ``Ja`` wählen. Normalerweise sind neue Benutzer, die "
+"automatisch angelegt werden, Kunden. Sofern Sie keinen speziellen "
+"Anwendungsfall haben, sollten Sie dies nur für eine Kundenrolle ohne "
+"zusätzliche Berechtigungen festlegen. Andernfalls würden neue Benutzer "
+"Zugriff auf Funktionen und Daten erhalten, auf die sie keinen Zugriff haben "
+"sollten."
 
-#: ../manage/roles/index.rst:0
-msgid "Role overview in the admin panel, showing default role"
-msgstr "Rollenübersicht in den Einstellungen mit Anzeige der Standardrolle"
-
-#: ../manage/roles/index.rst:120
+#: ../manage/roles/index.rst:86
 msgid ""
-"The default role is identified in the overview of the **Manage > Roles** "
-"admin panel."
+"Add a note to the role. This note is used as explanation in the add/edit "
+"user dialog."
 msgstr ""
-"Die Standardrolle wird in der Übersicht des Einstellungsbereichs **Verwalten "
-"> Rollen** angezeigt."
+"Fügen Sie der Rolle eine Notiz hinzu. Diese Notiz wird als Erklärung im "
+"Benutzerdialog (Hinzufügen/Bearbeiten) verwendet."
 
-#: ../manage/roles/index.rst:123
-msgid "🙅 **Default roles should never provide admin/agent permissions.**"
-msgstr ""
-"🙅 **Standard-Rollen sollten niemals Admin- oder Agenten-Berechtigen "
-"beinhalten.**"
-
-#: ../manage/roles/index.rst:126
+#: ../manage/roles/index.rst:90
 msgid ""
-"Roles can't be deleted but set to inactive. If you do so, all users loose "
+"Roles can't be deleted, only set to inactive. If you do so, all users lose "
 "the permissions of this role. If this inactive role is the only one of a "
-"user, this account isn't able to do anything in Zammad. The login is still "
-"possible."
+"user, this account will not be able to do anything in Zammad. The login will "
+"be still possible."
 msgstr ""
 "Rollen können nicht gelöscht, sondern auf inaktiv gesetzt werden. Wenn Sie "
 "dies tun, verlieren alle Benutzer die Berechtigungen dieser Rolle. Wenn "
 "diese inaktive Rolle die einzige eines Benutzers ist, kann dieser Benutzer "
-"nichts in Zammad tun. Die Anmeldung ist aber weiterhin möglich."
+"nichts in Zammad tun. Eine Anmeldung ist aber weiterhin möglich."
 
-#: ../manage/roles/user-preferences-permissions.rst:2
-msgid "User Preferences Permissions"
-msgstr "Benutzereinstellungen Berechtigungen"
-
-#: ../manage/roles/user-preferences-permissions.rst:9
+#: ../manage/roles/permissions.rst:4
 msgid ""
-"The permissions listed on this page all belong to the ``user_preferences`` "
-"namespace. You can select them individually, or you can just select "
-"``user_preferences`` to enable the whole bunch."
+"Find a short description about the permissions in Zammad below. Be aware "
+"that some of the features require activation and configuration before they "
+"are usable. Even though the permissions are grouped by common use cases, you "
+"can mix them as you like. Just make sure to maintain an overview of your "
+"permissions."
 msgstr ""
-"Die auf dieser Seite aufgeführten Berechtigungen gehören alle zur "
-"Berechtigungsgruppe ``user_preferences``. Sie können sie einzeln auswählen "
-"oder Sie können einfach ``user_preferences`` auswählen, um alle Rechte der "
-"Gruppe zu aktivieren."
+"Im Folgenden finden Sie eine kurze Beschreibung der Berechtigungen in "
+"Zammad. Beachten Sie, dass einige der Funktionen aktiviert und konfiguriert "
+"werden müssen, bevor sie genutzt werden können. Auch wenn die Berechtigungen "
+"nach gemeinsamen Anwendungsfällen gruppiert sind, können Sie sie nach "
+"Belieben mischen. Stellen Sie nur sicher, dass Sie die Übersicht über Ihre "
+"Berechtigungen behalten."
 
-#: ../manage/roles/user-preferences-permissions.rst:20
-msgid "User preferences permissions in the New Role dialog"
-msgstr "Berechtigungen für Benutzereinstellungen im Dialogfeld \"Neue Rolle\""
+#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:170
+msgid "Agent"
+msgstr "Agent"
 
-#: ../manage/roles/user-preferences-permissions.rst:20
+#: ../manage/roles/permissions.rst:19 ../manage/roles/permissions.rst:47
+#: ../manage/roles/permissions.rst:227 ../manage/roles/permissions.rst:297
+msgid "Permission"
+msgstr "Berechtigung"
+
+#: ../manage/roles/permissions.rst:20 ../manage/roles/permissions.rst:48
+#: ../manage/roles/permissions.rst:228 ../manage/roles/permissions.rst:298
+msgid "Access To"
+msgstr "Zugang zu"
+
+#: ../manage/roles/permissions.rst:22
+msgid "``chat.agent``"
+msgstr "``chat.agent``"
+
+#: ../manage/roles/permissions.rst:23
+msgid ":user-docs:`Customer chat </extras/chat.html>`"
+msgstr ":user-docs:`Kunden-Chat </extras/chat.html>`"
+
+#: ../manage/roles/permissions.rst:24
+msgid "Requires configuration of :doc:`chat channel </channels/chat>`."
+msgstr "Erfordert die Konfiguration eines :doc:`Chat-Kanals </channels/chat>`"
+
+#: ../manage/roles/permissions.rst:25
+msgid "``cti.agent``"
+msgstr "``cti.agent``"
+
+#: ../manage/roles/permissions.rst:26
+msgid ":user-docs:`Caller log </extras/caller-log.html>`"
+msgstr ":user-docs:`Anruferprotokoll </extras/caller-log.html>`"
+
+#: ../manage/roles/permissions.rst:27
 msgid ""
-"User preferences permissions are shown at the bottom of the New Role "
-"dialog..."
+"Requires configuration of :doc:`CTI integration </system/integrations/cti/"
+"generic>`."
 msgstr ""
-"Benutzer-Berechtigungen werden unten im Dialogfeld \"Neue Rolle“ "
-"angezeigt ..."
+"Erfordert die Konfiguration der :doc:`CTI-Integration </system/integrations/"
+"cti/generic>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:28
-msgid "User profile page"
-msgstr "Benutzerprofil-Seite"
+#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:95
+msgid "``ticket.agent``"
+msgstr "``ticket.agent``"
 
-#: ../manage/roles/user-preferences-permissions.rst:28
+#: ../manage/roles/permissions.rst:0
+msgid "This is the main permission for agents"
+msgstr "Dies ist die Hauptberechtigung für Agenten"
+
+#: ../manage/roles/permissions.rst:0
+msgid "to access overviews and tickets"
+msgstr "für den Zugriff auf Übersichten und Tickets"
+
+#: ../manage/roles/permissions.rst:0
+msgid "When this permission is granted and more"
+msgstr "Wenn diese Berechtigung erteilt wird und mehr"
+
+#: ../manage/roles/permissions.rst:0
+msgid "than one group exists, the group permissions"
+msgstr "als eine Gruppe existiert, wird die Tabelle"
+
+#: ../manage/roles/permissions.rst:0
 msgid ""
-"...and give users access to the pages of their :user-docs:`User Profile </"
-"extras/profile-and-settings.html>`."
+"table appears to configure the :doc:`group access levels </manage/groups/"
+"access-levels>`."
 msgstr ""
-"...und geben Benutzern Zugriff auf deren :user-docs:`Benutzerprofile </"
-"extras/profile-and-settings.html>`."
+"der :doc:`Gruppen-Berechtigungen </manage/groups/access-levels>` angezeigt."
 
-#: ../manage/roles/user-preferences-permissions.rst:38
+#: ../manage/roles/permissions.rst:36
+msgid "Admin"
+msgstr "Admin"
+
+#: ../manage/roles/permissions.rst:38
+msgid ""
+"Please be aware that these permissions only grant access to the settings/"
+"configuration in Zammad. If you want to grant agents access to tickets, "
+"check the section above and learn more about :doc:`group permissions <../"
+"groups/access-levels>`."
+msgstr ""
+"Bitte beachten Sie, dass diese Berechtigungen nur Zugriff auf die "
+"Einstellungen/Konfiguration in Zammad gewähren. Wenn Sie Agenten Zugriff auf "
+"Tickets gewähren möchten, lesen Sie den obigen Abschnitt und schauen Sie "
+"sich die Seite über :doc:`Gruppenberechtigungen <../groups/access-levels>` "
+"an."
+
+#: ../manage/roles/permissions.rst:50
+msgid "``admin.ai_agent``"
+msgstr "``admin.ai_agent``"
+
+#: ../manage/roles/permissions.rst:51
+msgid ":doc:`AI > AI Agents </ai/ai-agents>`"
+msgstr ":doc:`KI > KI-Agenten </ai/ai-agents>`"
+
+#: ../manage/roles/permissions.rst:53
+msgid "``admin.ai_assistance_text_tools``"
+msgstr "``admin.ai_assistance_text_tools``"
+
+#: ../manage/roles/permissions.rst:54
+msgid ":doc:`AI > Writing Assistant </ai/writing-assistant>`"
+msgstr ":doc:`KI > Schreibassistent </ai/writing-assistant>`"
+
+#: ../manage/roles/permissions.rst:56
+msgid "``admin.ai_assistance_ticket_summary``"
+msgstr "``admin.ai_assistance_ticket_summary``"
+
+#: ../manage/roles/permissions.rst:57
+msgid ":doc:`AI > Ticket Summary </ai/summary>`"
+msgstr ":doc:`KI > Ticket-Zusammenfassung </ai/summary>`"
+
+#: ../manage/roles/permissions.rst:59
+msgid "``admin.ai_provider``"
+msgstr "``admin.ai_provider``"
+
+#: ../manage/roles/permissions.rst:60
+msgid ":doc:`AI > Provider </ai/provider>`"
+msgstr ":doc:`KI > Anbieter </ai/provider>`"
+
+#: ../manage/roles/permissions.rst:62
+msgid "``admin.api``"
+msgstr "``admin.api``"
+
+#: ../manage/roles/permissions.rst:63
+msgid ":docs:`System > API </api/intro.html>`"
+msgstr ":docs:`System > API </api/intro.html>`"
+
+#: ../manage/roles/permissions.rst:65
+msgid "``admin.branding``"
+msgstr "``admin.branding``"
+
+#: ../manage/roles/permissions.rst:66
+msgid ":doc:`Settings > Branding </settings/branding>`"
+msgstr ":doc:`Einstellungen > Branding </settings/branding>`"
+
+#: ../manage/roles/permissions.rst:68
+msgid "``admin.calendar``"
+msgstr "``admin.calendar``"
+
+#: ../manage/roles/permissions.rst:69
+msgid ":doc:`Manage > Calendars </manage/calendars>`"
+msgstr ":doc:`Verwalten > Kalender </manage/calendars>`"
+
+#: ../manage/roles/permissions.rst:70
+msgid "Required for :doc:`/manage/slas/index`."
+msgstr "Erforderlich für :doc:`/manage/slas/index`."
+
+#: ../manage/roles/permissions.rst:71
+msgid "``admin.channel_chat``"
+msgstr "``admin.channel_chat``"
+
+#: ../manage/roles/permissions.rst:72
+msgid ":doc:`Channels > Chat </channels/chat>`"
+msgstr ":doc:`Kanäle > Chat </channels/chat>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Configuration of chat channel."
+msgstr "Konfiguration des Chat-Kanals."
+
+#: ../manage/roles/permissions.rst:0
+msgid "Access for agents: ``chat.agent``."
+msgstr "Zugang für Agenten: ``chat.agent``."
+
+#: ../manage/roles/permissions.rst:75
+msgid "``admin.channel_email``"
+msgstr "``admin.channel_email``"
+
+#: ../manage/roles/permissions.rst:76
+msgid ":doc:`Channels > Email </channels/email/index>`"
+msgstr ":doc:`Kanäle > Email </channels/email/index>`"
+
+#: ../manage/roles/permissions.rst:78
+msgid "``admin.channel_facebook``"
+msgstr "``admin.channel_facebook``"
+
+#: ../manage/roles/permissions.rst:79
+msgid ":doc:`Channels > Facebook </channels/facebook>`"
+msgstr ":doc:`Kanäle > Facebook </channels/facebook>`"
+
+#: ../manage/roles/permissions.rst:81
+msgid "``admin.channel_formular``"
+msgstr "``admin.channel_formular``"
+
+#: ../manage/roles/permissions.rst:82
+msgid ":doc:`Channels > Form </channels/form>`"
+msgstr ":doc:`Kanäle > Formulare </channels/form>`"
+
+#: ../manage/roles/permissions.rst:84
+msgid "``admin.channel_google``"
+msgstr "``admin.channel_google``"
+
+#: ../manage/roles/permissions.rst:85
+msgid ":doc:`Channels > Google </channels/google/index>`"
+msgstr ":doc:`Kanäle > Google </channels/google/index>`"
+
+#: ../manage/roles/permissions.rst:87
+msgid "``admin.channel_microsoft_graph``"
+msgstr "``admin.channel_microsoft_graph``"
+
+#: ../manage/roles/permissions.rst:88
+msgid ""
+":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/"
+"index>`"
+msgstr ""
+":doc:`Kanäle > Microsoft 365 Graph Email </channels/microsoft365/index>`"
+
+#: ../manage/roles/permissions.rst:90
+msgid "``admin.channel_microsoft365``"
+msgstr "``admin.channel_microsoft365``"
+
+#: ../manage/roles/permissions.rst:91
+msgid ""
+":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
+msgstr ""
+":doc:`Kanäle > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
+
+#: ../manage/roles/permissions.rst:93
+msgid "``admin.channel_sms``"
+msgstr "``admin.channel_sms``"
+
+#: ../manage/roles/permissions.rst:94
+msgid ":doc:`Channels > SMS </channels/sms>`"
+msgstr ":doc:`Kanäle > SMS </channels/sms>`"
+
+#: ../manage/roles/permissions.rst:96
+msgid "``admin.channel_telegram``"
+msgstr "``admin.channel_telegram``"
+
+#: ../manage/roles/permissions.rst:97
+msgid ":doc:`Channels > Telegram </channels/telegram>`"
+msgstr ":doc:`Kanäle > Telegram </channels/telegram>`"
+
+#: ../manage/roles/permissions.rst:99
+msgid "``admin.channel_web``"
+msgstr "``admin.channel_web``"
+
+#: ../manage/roles/permissions.rst:100
+msgid ":doc:`Channels > Web </channels/web>`"
+msgstr ":doc:`Kanäle > Web </channels/web>`"
+
+#: ../manage/roles/permissions.rst:102
+msgid "``admin.channel_whatsapp``"
+msgstr "``admin.channel_whatsapp``"
+
+#: ../manage/roles/permissions.rst:103
+msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
+msgstr ":doc:`Kanäle > Whatsapp </channels/whatsapp/index>`"
+
+#: ../manage/roles/permissions.rst:105
+msgid "``admin.checklist``"
+msgstr "``admin.checklist``"
+
+#: ../manage/roles/permissions.rst:106
+msgid ":doc:`Manage > Checklist </manage/checklist>`"
+msgstr ":doc:`Verwalten > Checklisten </manage/checklist>`"
+
+#: ../manage/roles/permissions.rst:108
+msgid "``admin.core_workflows``"
+msgstr "``admin.core_workflows``"
+
+#: ../manage/roles/permissions.rst:109
+msgid ":doc:`System > Core Workflows </system/core-workflows>`"
+msgstr ":doc:`System > Core-Workflows </system/core-workflows>`"
+
+#: ../manage/roles/permissions.rst:111
+msgid "``admin.data_privacy``"
+msgstr "``admin.data_privacy``"
+
+#: ../manage/roles/permissions.rst:112
+msgid ":doc:`System > Data Privacy </system/data-privacy>`"
+msgstr ":doc:`System > Datenschutz </system/data-privacy>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Be careful, this allows users to permanently"
+msgstr "Seien Sie vorsichtig, denn dadurch können Benutzer dauerhaft"
+
+#: ../manage/roles/permissions.rst:0
+msgid "delete data on the system."
+msgstr "Daten auf dem System löschen."
+
+#: ../manage/roles/permissions.rst:115
+msgid "``admin.group``"
+msgstr "``admin.group``"
+
+#: ../manage/roles/permissions.rst:116
+msgid ":doc:`Manage > Groups </manage/groups/index>`"
+msgstr ":doc:`Verwalten > Gruppen </manage/groups/index>`"
+
+#: ../manage/roles/permissions.rst:118
+msgid "``admin.integration``"
+msgstr "``admin.integration``"
+
+#: ../manage/roles/permissions.rst:119
+msgid ":doc:`System > Integrations </system/integrations/index>`"
+msgstr ":doc:`System > Integrationen </system/integrations/index>`"
+
+#: ../manage/roles/permissions.rst:121
+msgid "``admin.knowledge_base``"
+msgstr "``admin.knowledge_base``"
+
+#: ../manage/roles/permissions.rst:122
+msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
+msgstr ":doc:`Verwalten > Knowledge Base </manage/knowledge-base>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Configure knowledge base. For viewing or creating"
+msgstr "Konfigurieren Sie die Knowledge Base. Zum Anzeigen oder Erstellen"
+
+#: ../manage/roles/permissions.rst:0
+msgid "articles, ``knowledge_base.reader`` or"
+msgstr "von Artikeln sind ``knowledge_base.reader`` oder"
+
+#: ../manage/roles/permissions.rst:0
+msgid "``knowledge_base.editor`` are required."
+msgstr "``knowledge_base.editor`` erforderlich."
+
+#: ../manage/roles/permissions.rst:126
+msgid "``admin.macro``"
+msgstr "``admin.macro``"
+
+#: ../manage/roles/permissions.rst:127
+msgid ":doc:`Manage > Macros </manage/macros>`"
+msgstr ":doc:`Verwalten > Makros</manage/macros>`"
+
+#: ../manage/roles/permissions.rst:128
+msgid "In some cases, macros may also require ``admin.tag``."
+msgstr ""
+"In einigen Fällen erfordern Makros möglicherweise auch die Berechtigung "
+"``admin.tag``."
+
+#: ../manage/roles/permissions.rst:129
+msgid "``admin.maintenance``"
+msgstr "``admin.maintenance``"
+
+#: ../manage/roles/permissions.rst:130
+msgid ":doc:`System > Maintenance </system/maintenance>`"
+msgstr ":doc:`System > Wartung </system/maintenance>`"
+
+#: ../manage/roles/permissions.rst:132
+msgid "``admin.monitoring``"
+msgstr "``admin.monitoring``"
+
+#: ../manage/roles/permissions.rst:133
+msgid ":doc:`System > Monitoring </system/monitoring>`"
+msgstr ":doc:`System > Monitoring </system/monitoring>`"
+
+#: ../manage/roles/permissions.rst:135
+msgid "``admin.object``"
+msgstr "``admin.object``"
+
+#: ../manage/roles/permissions.rst:136
+msgid ":doc:`System > Objects </system/objects>`"
+msgstr ":doc:`System > Objekte </system/objects>`"
+
+#: ../manage/roles/permissions.rst:138
+msgid "``admin.organization``"
+msgstr "``admin.organization``"
+
+#: ../manage/roles/permissions.rst:139
+msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
+msgstr ":doc:`Verwalten > Organisationen </manage/organizations/index>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Agents can access existing organizations from the"
+msgstr "Agenten können auf bestehende Organisationen über die"
+
+#: ../manage/roles/permissions.rst:0
+msgid "search bar, even without this permission. They can even"
+msgstr "Suchleiste auch ohne diese Erlaubnis zugreifen. Sie können sogar"
+
+#: ../manage/roles/permissions.rst:0
+msgid "edit an organization's name, domain, and notes!"
+msgstr "den Namen, die Domain und die Notizen einer Organisation bearbeiten!"
+
+#: ../manage/roles/permissions.rst:143
+msgid "``admin.overview``"
+msgstr "``admin.overview``"
+
+#: ../manage/roles/permissions.rst:144
+msgid ":doc:`Manage > Overviews</manage/overviews>`"
+msgstr ":doc:`Verwalten > Übersichten </manage/overviews>`"
+
+#: ../manage/roles/permissions.rst:146
+msgid "``admin.package``"
+msgstr "``admin.package``"
+
+#: ../manage/roles/permissions.rst:147
+msgid ":doc:`System > Packages </system/packages>`"
+msgstr ":doc:`System > Pakete </system/packages>`"
+
+#: ../manage/roles/permissions.rst:149
+msgid "``admin.public_links``"
+msgstr "``admin.public_links``"
+
+#: ../manage/roles/permissions.rst:150
+msgid ":doc:`Manage > Public Links </manage/public-links>`"
+msgstr ":doc:`Verwalten > Öffentliche Links </manage/public-links>`"
+
+#: ../manage/roles/permissions.rst:152
+msgid "``admin.report_profile``"
+msgstr "``admin.report_profile``"
+
+#: ../manage/roles/permissions.rst:153
+msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
+msgstr ":doc:`Verwalten > Report-Profile </manage/report-profiles>`"
+
+#: ../manage/roles/permissions.rst:154
+msgid "Access to view reports: ``report``"
+msgstr "Zugang zu Berichten: ``report``"
+
+#: ../manage/roles/permissions.rst:155
+msgid "``admin.role``"
+msgstr "``admin.role``"
+
+#: ../manage/roles/permissions.rst:156
+msgid ":doc:`Manage > Roles </manage/roles/index>`"
+msgstr ":doc:`Verwalten > Rollen </manage/roles/index>`"
+
+#: ../manage/roles/permissions.rst:158
+msgid "``admin.scheduler``"
+msgstr "``admin.scheduler``"
+
+#: ../manage/roles/permissions.rst:159
+msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
+msgstr ":doc:`Verwalten > Automatisierung </manage/scheduler>`"
+
+#: ../manage/roles/permissions.rst:161
+msgid "``admin.security``"
+msgstr "``admin.security``"
+
+#: ../manage/roles/permissions.rst:162
+msgid ":doc:`Settings > Security </settings/security>`"
+msgstr ":doc:`Einstellungen > Sicherheit </settings/security>`"
+
+#: ../manage/roles/permissions.rst:163
+msgid "This also includes third party authentications."
+msgstr "Dazu gehören auch Drittanbieter-Authentifizierungen."
+
+#: ../manage/roles/permissions.rst:164
+msgid "``admin.session``"
+msgstr "``admin.session``"
+
+#: ../manage/roles/permissions.rst:165
+msgid ":doc:`System > Sessions </system/sessions>`"
+msgstr ":doc:`System > Sitzungen </system/sessions>`"
+
+#: ../manage/roles/permissions.rst:167
+msgid "``admin.sla``"
+msgstr "``admin.sla``"
+
+#: ../manage/roles/permissions.rst:168
+msgid ":doc:`Manage > SLAs </manage/slas/index>`"
+msgstr ":doc:`Verwalten > SLAs </manage/slas/index>`"
+
+#: ../manage/roles/permissions.rst:170
+msgid "``admin.system``"
+msgstr "``admin.system``"
+
+#: ../manage/roles/permissions.rst:171
+msgid ":doc:`Settings > System </settings/system/index>`"
+msgstr ":doc:`Einstellungen > System </settings/system/index>`"
+
+#: ../manage/roles/permissions.rst:173
+msgid "``admin.system_report``"
+msgstr "``admin.system_report``"
+
+#: ../manage/roles/permissions.rst:174
+msgid ":doc:`System > System Report </system/system-report>`"
+msgstr ":doc:`System > System-Bericht </system/system-report>`"
+
+#: ../manage/roles/permissions.rst:176
+msgid "``admin.tag``"
+msgstr "``admin.tag``"
+
+#: ../manage/roles/permissions.rst:177
+msgid ":doc:`Manage > Tags </manage/tags>`"
+msgstr ":doc:`Verwalten > Tags </manage/tags>`"
+
+#: ../manage/roles/permissions.rst:179
+msgid "``admin.template``"
+msgstr "``admin.template``"
+
+#: ../manage/roles/permissions.rst:180
+msgid ":doc:`Manage > Templates </manage/templates>`"
+msgstr ":doc:`Verwalten > Textbausteine </manage/templates>`"
+
+#: ../manage/roles/permissions.rst:182
+msgid "``admin.text_module``"
+msgstr "``admin.text_module``"
+
+#: ../manage/roles/permissions.rst:183
+msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
+msgstr ":doc:`Verwalten > Textbausteine </manage/text-modules>`"
+
+#: ../manage/roles/permissions.rst:185
+msgid "``admin.ticket``"
+msgstr "``admin.ticket``"
+
+#: ../manage/roles/permissions.rst:186
+msgid ":doc:`Settings > Tickets </settings/ticket>`"
+msgstr ":doc:`Einstellungen > Tickets </settings/ticket>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Ticket settings. To access tickets as agents,"
+msgstr "Ticket-Einstellungen. Um auf Tickets als Agent zuzugreifen"
+
+#: ../manage/roles/permissions.rst:0
+msgid "``ticket.agent`` is required."
+msgstr "ist ``ticket.agent`` erforderlich."
+
+#: ../manage/roles/permissions.rst:189
+msgid "``admin.ticket_auto_assignment``"
+msgstr "``admin.ticket_auto_assignment``"
+
+#: ../manage/roles/permissions.rst:190
+msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
+msgstr ""
+":ref:`Einstellungen > Ticket > Automatische Zuweisung <auto_assignment>`"
+
+#: ../manage/roles/permissions.rst:192
+msgid "``admin.ticket_duplicate_detection``"
+msgstr "``admin.ticket_duplicate_detection``"
+
+#: ../manage/roles/permissions.rst:193
+msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
+msgstr ""
+":ref:`Einstellungen > Ticket > Duplikaterkennung <duplicate_detection>`"
+
+#: ../manage/roles/permissions.rst:195
+msgid "``admin.ticket_priority``"
+msgstr "``admin.ticket_priority``"
+
+#: ../manage/roles/permissions.rst:196
+msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
+msgstr ":ref:`System > Objekte >Ticket-Priorität <ticket-priority-reference>`"
+
+#: ../manage/roles/permissions.rst:198
+msgid "``admin.ticket_state``"
+msgstr "``admin.ticket_state``"
+
+#: ../manage/roles/permissions.rst:199
+msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
+msgstr ":ref:`System > Objekte >Ticket-Status <ticket-state-reference>`"
+
+#: ../manage/roles/permissions.rst:201
+msgid "``admin.time_accounting``"
+msgstr "``admin.time_accounting``"
+
+#: ../manage/roles/permissions.rst:202
+msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
+msgstr ":doc:`Verwalten > Zeiterfassung </manage/time-accounting>`"
+
+#: ../manage/roles/permissions.rst:203
+msgid "Also allows the export of accounted time records."
+msgstr "Erlaubt auch den Export von erfassten Zeiten."
+
+#: ../manage/roles/permissions.rst:204
+msgid "``admin.translation``"
+msgstr "``admin.translation``"
+
+#: ../manage/roles/permissions.rst:205
+msgid ":doc:`System > Translations </system/translations>`"
+msgstr ":doc:`System > Übersetzungen </system/translations>`"
+
+#: ../manage/roles/permissions.rst:206
+msgid "Also enables inline translation."
+msgstr "Ermöglicht auch Inline-Übersetzung."
+
+#: ../manage/roles/permissions.rst:207
+msgid "``admin.trigger``"
+msgstr "``admin.trigger``"
+
+#: ../manage/roles/permissions.rst:208
+msgid ":doc:`Manage > Triggers </manage/trigger>`"
+msgstr ":doc:`Verwalten > Trigger </manage/trigger>`"
+
+#: ../manage/roles/permissions.rst:210
+msgid "``admin.user``"
+msgstr "``admin.user``"
+
+#: ../manage/roles/permissions.rst:211
+msgid ":doc:`Manage > Users </manage/users/index>`"
+msgstr ":doc:`Verwalten > Benutzer </manage/users/index>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Agents can always create and edit customers, but they"
+msgstr "Agenten können immer Kunden anlegen und bearbeiten, aber sie"
+
+#: ../manage/roles/permissions.rst:0
+msgid "can't modify permissions etc."
+msgstr "können keine Berechtigungen ändern usw."
+
+#: ../manage/roles/permissions.rst:0
+msgid "Be aware that this permission allows users to"
+msgstr "Beachten Sie, dass diese Berechtigung den Benutzern erlaubt"
+
+#: ../manage/roles/permissions.rst:0
+msgid ":ref:`hijack other user sessions <view-from-users-perspective>`."
+msgstr ""
+":ref:`andere Benutzer-Sitzungen zu kapern <view-from-users-perspective>`."
+
+#: ../manage/roles/permissions.rst:216
+msgid "``admin.webhook``"
+msgstr "``admin.webhook``"
+
+#: ../manage/roles/permissions.rst:217
+msgid ":doc:`Manage > Webhook </manage/webhook>`"
+msgstr ":doc:`Verwalten > Webhook </manage/webhook>`"
+
+#: ../manage/roles/permissions.rst:221
+msgid "User Preferences"
+msgstr "Profil-Einstellungen"
+
+#: ../manage/roles/permissions.rst:230
 msgid "``user_preferences.access_token``"
 msgstr "``user_preferences.access_token``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "Generate API tokens to control"
-msgstr "Generieren von API-Tokens zur Kontrolle"
+#: ../manage/roles/permissions.rst:0
+msgid "Generate API tokens to control Zammad"
+msgstr "Generierung von API-Tokens zur Steuerung von Zammad"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "Zammad via :docs:`REST API </api/intro.html>`"
-msgstr "von Zammad über die :docs:`REST API </api/intro.html>`"
+#: ../manage/roles/permissions.rst:0
+msgid "via :docs:`REST API (system documentation) </api/intro.html>`."
+msgstr "via :docs:`REST API (System Dokumentation) </api/intro.html>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Generated tokens will never have more permissions"
 msgstr "Erstellte Token haben nie mehr Berechtigungen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "than the user that generated them."
 msgstr "als der Benutzer, der sie erstellt hat."
 
-#: ../manage/roles/user-preferences-permissions.rst:43
+#: ../manage/roles/permissions.rst:235
 msgid "``user_preferences.appearance``"
 msgstr "``user_preferences.appearance``"
 
-#: ../manage/roles/user-preferences-permissions.rst:44
+#: ../manage/roles/permissions.rst:236
 msgid "Appearance configuration"
 msgstr "Konfiguration Aussehen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Users can switch between dark, light and"
 msgstr "Benutzer können zwischen Dunkel-, Hell- und"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "automatic mode."
 msgstr "Automatik-Modus wechseln."
 
-#: ../manage/roles/user-preferences-permissions.rst:47
+#: ../manage/roles/permissions.rst:239
 msgid "``user_preferences.avatar``"
 msgstr "``user_preferences.avatar``"
 
-#: ../manage/roles/user-preferences-permissions.rst:48
+#: ../manage/roles/permissions.rst:240
 msgid "Avatar settings"
 msgstr "Avatar-Einstellungen"
 
-#: ../manage/roles/user-preferences-permissions.rst:49
-msgid "Override the default Gravatar with a custom avatar"
-msgstr "Überschreiben Sie den Standard-Gravatar mit einem eigenen Avatar"
+#: ../manage/roles/permissions.rst:241
+msgid "Allows users to add a custom avatar image."
+msgstr ""
+"Ermöglicht es Benutzern, ein benutzerdefiniertes Avatarbild hinzuzufügen."
 
-#: ../manage/roles/user-preferences-permissions.rst:50
+#: ../manage/roles/permissions.rst:242
 msgid "``user_preferences.calendar``"
 msgstr "``user_preferences.calendar``"
 
-#: ../manage/roles/user-preferences-permissions.rst:51
+#: ../manage/roles/permissions.rst:243
 msgid "Configure the calendar feed"
 msgstr "Konfigurieren Sie den Kalender-Feed"
 
-#: ../manage/roles/user-preferences-permissions.rst:53
+#: ../manage/roles/permissions.rst:245
 msgid "``user_preferences.device``"
 msgstr "``user_preferences.device``"
 
-#: ../manage/roles/user-preferences-permissions.rst:54
+#: ../manage/roles/permissions.rst:246
 msgid "Manage device login sessions"
 msgstr "Verwalten von Login Sitzungen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Revoking this permission disables"
 msgstr "Der Entzug dieser Berechtigung deaktiviert"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "“Login detected from a new location” emails."
 msgstr ""
 "Benachrichtigungs-E-Mails \"Anmeldung von einem neuen Standort erkannt\"."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
 msgstr "Mehr erfahren Sie unter :doc:`/manage/trigger/system-notifications`."
 
-#: ../manage/roles/user-preferences-permissions.rst:58
+#: ../manage/roles/permissions.rst:250
 msgid "``user_preferences.language``"
 msgstr "``user_preferences.language``"
 
-#: ../manage/roles/user-preferences-permissions.rst:59
+#: ../manage/roles/permissions.rst:251
 msgid "Configure the UI locale/language"
 msgstr "Konfigurieren Sie die Sprache der Benutzeroberfläche"
 
-#: ../manage/roles/user-preferences-permissions.rst:61
+#: ../manage/roles/permissions.rst:252
+msgid "Allows users to set their preferred language."
+msgstr "Ermöglicht den Benutzern, ihre bevorzugte Sprache einzustellen."
+
+#: ../manage/roles/permissions.rst:253
 msgid "``user_preferences.linked_accounts``"
 msgstr "``user_preferences.linked_accounts``"
 
-#: ../manage/roles/user-preferences-permissions.rst:62
+#: ../manage/roles/permissions.rst:254
 msgid "Account linking"
 msgstr "Verknüpfte Konten"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Manually link accounts after signing in"
 msgstr "Konten nach der Anmeldung manuell verknüpfen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 "with :doc:`third-party authentication </settings/security/third-party>`."
 msgstr ""
 "mit :doc:`Drittanbieter-Authentifizierung </settings/security/third-party>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 "Note: If :ref:`automatic account linking <automatic-account-linking>` fails, "
 "this"
@@ -12623,128 +12443,132 @@ msgstr ""
 "Hinweis: Wenn die :ref:`automatische Verknüpfung von Konten <automatic-"
 "account-linking>` fehlschlägt,"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "is the only way users can utilize third-party logins."
 msgstr ""
 "ist dies die einzige Möglichkeit für Benutzer, Logins von Drittanbietern zu "
 "verwenden."
 
-#: ../manage/roles/user-preferences-permissions.rst:67
+#: ../manage/roles/permissions.rst:259
 msgid "``user_preferences.notifications``"
 msgstr "``user_preferences.notifications``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Configuration of ticket"
 msgstr "Konfiguration von Ticket"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "notifications"
 msgstr "Benachrichtigungen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Agents only receive ticket notifications for"
 msgstr "Agenten erhalten nur Ticket-Benachrichtigungen für"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 ":doc:`groups they have “full” access to </manage/groups/access-levels>`."
 msgstr ""
 ":doc:`Gruppen, auf die sie \"vollen\" Zugriff haben </manage/groups/access-"
 "levels>`."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Customers can't receive ticket notifications at all."
 msgstr "Kunden können überhaupt keine Ticket-Benachrichtigungen erhalten."
 
-#: ../manage/roles/user-preferences-permissions.rst:73
+#: ../manage/roles/permissions.rst:265
 msgid "``user_preferences.out_of_office``"
 msgstr "``user_preferences.out_of_office``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Designate a substitute for"
 msgstr "Bestimmen Sie einen Vertreter für"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "out-of-office hours"
 msgstr "Abwesenheitszeiten"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "This does **not** grant that person the permissions /"
 msgstr "Dies verleiht dieser Person **nicht** die Berechtigung /"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ":doc:`group access levels </manage/groups/access-levels>` of the agent"
 msgstr ""
 ":doc:`Gruppen-Berechtigungen </manage/groups/access-levels>` des Agenten"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "they're replacing."
 msgstr "den sie ersetzen."
 
-#: ../manage/roles/user-preferences-permissions.rst:79
+#: ../manage/roles/permissions.rst:271
 msgid "``user_preferences.overview_sorting``"
 msgstr "``user_preferences.overview_sorting``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Allow users to define their own"
 msgstr "Ermöglicht Benutzern das Festlegen ihrer eigenen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
-msgid "overview order."
-msgstr "Reihenfolge ihrer Übersichten."
+#: ../manage/roles/permissions.rst:0
+msgid "overview order"
+msgstr "Reihenfolge der Übersichten"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Optional permission; disabled by default."
 msgstr "Optionale Berechtigung; standardmäßig deaktiviert."
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "The order your user chooses here cannot be"
 msgstr "Die Reihenfolge, die Ihr Benutzer hier wählt, kann nicht"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "overwritten by admins. Renaming or resorting"
 msgstr "von Admins überschrieben werden. Umbenennen oder Umsortieren"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "overviews has no effect on custom orders."
 msgstr ""
 "von Übersichten hat keine Auswirkungen auf benutzerdefinierte Anpassungen."
 
-#: ../manage/roles/user-preferences-permissions.rst:86
+#: ../manage/roles/permissions.rst:278
 msgid "``user_preferences.password``"
 msgstr "``user_preferences.password``"
 
-#: ../manage/roles/user-preferences-permissions.rst:87
+#: ../manage/roles/permissions.rst:279
 msgid "Change account password"
 msgstr "Account Kennwort ändern"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "Make sure to **revoke this permission** for all your users"
 msgstr ""
 "Stellen Sie sicher, dass Sie diese Berechtigung für alle Ihre Benutzer "
 "**widerrufen**"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "when using a third-party identity server (like LDAP) as"
 msgstr "falls Sie einen Identitätsserver eines Drittanbieters (wie LDAP)"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "your only allowed authentication method."
 msgstr "als Ihre einzige zulässige Authentifizierungsmethode verwenden."
 
-#: ../manage/roles/user-preferences-permissions.rst:91
-msgid "``user_preferences.two_factor_authentication``"
-msgstr "``user_preferences.two_factor_authentication``"
+#: ../manage/roles/permissions.rst:0
+msgid "``user_preferences.``"
+msgstr "``user_preferences.``"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
+msgid "``two_factor_authentication``"
+msgstr "``two_factor_authentication``"
+
+#: ../manage/roles/permissions.rst:0
 msgid "Allow users to setup and configure"
 msgstr "Ermöglicht Benutzern das Festlegen ihrer eigenen"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "their two factor authentication"
 msgstr "Zwei-Faktor-Authentifizierung"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid ""
 ":doc:`Two factor authentication </settings/security/two-factor>` has to be "
 "enabled"
@@ -12752,9 +12576,112 @@ msgstr ""
 "Die :doc:`Zwei-Faktor-Authentifizierung </settings/security/two-factor>` "
 "muss dazu aktiviert sein"
 
-#: ../manage/roles/user-preferences-permissions.rst:0
+#: ../manage/roles/permissions.rst:0
 msgid "that users can setup and configure it."
 msgstr "damit die Benutzer es einrichten und konfigurieren können."
+
+#: ../manage/roles/permissions.rst:300
+msgid "``knowledge_base.editor``"
+msgstr "``knowledge_base.editor``"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Create and edit permission"
+msgstr "Erstell- und Bearbeitungsrechte"
+
+#: ../manage/roles/permissions.rst:0
+msgid "for knowledge base articles"
+msgstr "für Knowledge Base Artikel"
+
+#: ../manage/roles/permissions.rst:303
+msgid "The editor permission always includes the reader permission."
+msgstr "Die Editor-Berechtigung beinhaltet immer auch die Lese-Berechtigung."
+
+#: ../manage/roles/permissions.rst:304
+msgid "``knowledge_base.reader``"
+msgstr "``knowledge_base.reader``"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Read permission for internal"
+msgstr "Leseberechtigung für interne"
+
+#: ../manage/roles/permissions.rst:0
+msgid "(not published) knowledge base articles"
+msgstr "(nicht veröffentlichte) Knowledge Base Artikel"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Public articles are always visible."
+msgstr "Öffentliche Artikel sind immer sichtbar."
+
+#: ../manage/roles/permissions.rst:0
+msgid ""
+"See :user-docs:`here </extras/knowledge-base.html#granular-category-"
+"permissions>` how to set up granular reader permissions for the"
+msgstr ""
+"Lesen Sie :user-docs:`hier </extras/knowledge-base.html#granular-category-"
+"permissions>` wie man granulare Leseberechtigungen für die"
+
+#: ../manage/roles/permissions.rst:0
+msgid "knowledge base. Keep in mind that this may be dangerous,"
+msgstr ""
+"Knowledge Base konfiguriert. Denken Sie daran, dass dies gefährlich sein "
+"kann,"
+
+#: ../manage/roles/permissions.rst:0
+msgid "as reader permission provides access to internal answers!"
+msgstr "da die Leseberechtigung Zugang zu internen Antworten beinhaltet!"
+
+#: ../manage/roles/permissions.rst:312
+msgid "``report``"
+msgstr "``report``"
+
+#: ../manage/roles/permissions.rst:313
+msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
+msgstr ":user-docs:`Reporting (Benutzer-Doku)</extras/reporting.html>`"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Make sure to **never** grant this permission to your customers"
+msgstr ""
+"Vergewissern Sie sich, dass Sie Ihren Kunden diese Erlaubnis **niemals** "
+"erteilen"
+
+#: ../manage/roles/permissions.rst:0
+msgid "because it includes **all ticket and user information** across the"
+msgstr "da darin **alle Ticket- und Benutzerinformationen** des"
+
+#: ../manage/roles/permissions.rst:0
+msgid "entire system! Consider setting up a new role for your admins or"
+msgstr ""
+"Systems sichtbar sind! Erwägen Sie, eine neue Rolle für Ihre Administratoren "
+"oder"
+
+#: ../manage/roles/permissions.rst:0
+msgid ""
+"supervisors and limit the access via :doc:`/manage/report-profiles` first."
+msgstr ""
+"Vorgesetzte einzurichten und schränken Sie den Zugriff über :doc:`/manage/"
+"report-profiles` zunächst ein."
+
+#: ../manage/roles/permissions.rst:318 ../settings/security/base.rst:96
+msgid "``ticket.customer``"
+msgstr "``ticket.customer``"
+
+#: ../manage/roles/permissions.rst:319
+msgid "Allows a user to be set as customer of a ticket"
+msgstr "Ermöglicht, einen Benutzer als Kunde eines Tickets zu setzen"
+
+#: ../manage/roles/permissions.rst:0
+msgid "Without this permission, customers can't see the"
+msgstr "Ohne diese Erlaubnis können die Kunden nicht die"
+
+#: ../manage/roles/permissions.rst:0
+msgid "**My Ticket** overview. But they can still log in"
+msgstr ""
+"Übersicht **Meine Tickets** Übersicht sehen. Sie können sich aber trotzdem "
+"anmelden"
+
+#: ../manage/roles/permissions.rst:0
+msgid "and create new tickets."
+msgstr "und neue Tickets erstellen."
 
 #: ../manage/scheduler.rst:2
 msgid "Scheduler"
@@ -12804,11 +12731,6 @@ msgstr ""
 "Automatisierungsaufgaben können maximal ``2000`` Objekte pro Lauf "
 "verarbeiten. Dies ist eine Sicherheitsfunktion für den Fall, dass Sie eine "
 "Automatisierungsaufgabe versehentlich falsch konfiguriert haben."
-
-#: ../manage/scheduler.rst:22 ../manage/webhook/add.rst:8
-#: ../system/core-workflows/learn-by-example.rst:8
-msgid "Basics"
-msgstr "Grundlagen"
 
 #: ../manage/scheduler.rst:25
 msgid "Manage Scheduler Jobs"
@@ -15768,8 +15690,8 @@ msgstr ""
 "Webhooks sind eine Möglichkeit, Zammad mit anderen Webdiensten oder "
 "Anwendungen zu verbinden, so dass diese Live-Aktualisierungen über Tickets "
 "abonnieren können, anstatt den Zammad-Server alle *n* Minuten abzufragen. "
-"Sie finden die Webhook-Konfiguration in den Einstellungen von Zammad unter *"
-"Verwalten > Webhooks*."
+"Sie finden die Webhook-Konfiguration in den Einstellungen von Zammad unter "
+"*Verwalten > Webhooks*."
 
 #: ../manage/webhook.rst:11
 msgid ""
@@ -15899,8 +15821,8 @@ msgid ""
 msgstr ""
 "Um einen neuen regulären Webhook hinzuzufügen, klicken Sie auf die "
 "Schaltfläche **Neuer Webhook**. Um einen vordefinierten Webhook "
-"hinzuzufügen, klicken Sie auf den Pfeil rechts daneben und wählen Sie **"
-"Vordefinierter Webhook** aus dem Dropdown-Menü. Wenn Sie einen "
+"hinzuzufügen, klicken Sie auf den Pfeil rechts daneben und wählen Sie "
+"**Vordefinierter Webhook** aus dem Dropdown-Menü. Wenn Sie einen "
 "vordefinierten Webhook auswählen, werden Sie aufgefordert, aus einem der "
 "verfügbaren Webhooks auszuwählen:"
 
@@ -16089,8 +16011,9 @@ msgid ""
 msgstr ""
 "Wenn aktiviert, wird unten ein Code-Editor angezeigt, in dem Sie eine eigene "
 "Nutzlast für Ihren Webhook im JSON-Format konfigurieren können. Um "
-"unterstützte :doc:`/misc/variables` einzufügen, verwenden Sie :kbd:`:` "
-":kbd:`:` oder fügen Sie ``#{`` zur automatischen Vervollständigung ein."
+"unterstützte :doc:`/misc/variables` einzufügen, verwenden "
+"Sie :kbd:`:` :kbd:`:` oder fügen Sie ``#{`` zur automatischen "
+"Vervollständigung ein."
 
 #: ../manage/webhook/add.rst:101
 msgid ""
@@ -16143,8 +16066,8 @@ msgid ""
 msgstr ""
 "Nachdem Sie Ihren Webhook eingerichtet haben, stellen Sie sicher, dass Sie "
 "ihn per Trigger oder Automatisierung aufrufen. Falls etwas nicht "
-"funktioniert, werfen Sie einen Blick in den Abschnitt :doc:`"
-"Problembehandlung <log>`."
+"funktioniert, werfen Sie einen Blick in den "
+"Abschnitt :doc:`Problembehandlung <log>`."
 
 #: ../manage/webhook/examples.rst:2
 msgid "Webhook Examples"
@@ -16160,8 +16083,8 @@ msgstr ""
 "Nachstehend finden Sie Links zu Konfigurationsbeispielen. Sie sind aus "
 "Gründen der Übersichtlichkeit auf einzelne Seiten aufgeteilt. Stellen Sie "
 "sicher, dass Sie den Webhook nach der Erstellung per Trigger oder "
-"Automatisierung aufrufen, siehe :doc:`Beispiel-Konfiguration eines Triggers <"
-"examples/generic-notifications-trigger>`."
+"Automatisierung aufrufen, siehe :doc:`Beispiel-Konfiguration eines Triggers "
+"<examples/generic-notifications-trigger>`."
 
 #: ../manage/webhook/examples.rst:20
 msgid ""
@@ -16319,7 +16242,8 @@ msgstr "Aktions-Ausführung: Selektiv"
 
 #: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
 msgid "Condidions for affected objects: **Action** > *is* > created"
-msgstr "Bedingungen für zu verarbeitende Objekte: **Aktion** > *ist* > erstellt"
+msgstr ""
+"Bedingungen für zu verarbeitende Objekte: **Aktion** > *ist* > erstellt"
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
 msgid "Generic Notifications Trigger"
@@ -18600,10 +18524,6 @@ msgstr "Absender"
 msgid "Checks the type of sender."
 msgstr "Prüft den Typ des Absenders."
 
-#: ../misc/object-conditions/basics.rst:170
-msgid "Agent"
-msgstr "Agent"
-
 #: ../misc/object-conditions/basics.rst:174
 msgid "Checks ticket state."
 msgstr "Prüft den Status des Tickets."
@@ -19926,50 +19846,62 @@ msgid ""
 "Below you can find a list with examples of article variables. Depending on "
 "the context and if you want to use an attribute of a specific article, you "
 "can choose from specific article types in Zammad. To access suggestions for "
-"variables, type ``::`` followed by your search query to trigger a list of "
-"relevant options. The following article types are available, depending on "
-"the context:"
+"variables, type :kbd:`:` :kbd:`:` followed by your search query to trigger a "
+"list of relevant options. The following article types are available, "
+"depending on the context:"
 msgstr ""
 "Nachstehend finden Sie eine Liste mit Beispielen für Artikelvariablen. Je "
 "nach Kontext und wenn Sie ein Attribut eines speziellen Artikels verwenden "
 "möchten, können Sie aus verschiedenen Artikeln wählen. Um auf Vorschläge für "
-"Variablen zuzugreifen, geben Sie ``::`` gefolgt von Ihrer Suchanfrage ein, "
-"um eine Liste mit relevanten Optionen zu triggern. Je nach Kontext stehen "
-"die folgenden Artikelvarianten zur Verfügung:"
+"Variablen zuzugreifen, geben Sie :kbd:`:` :kbd:`:` gefolgt von Ihrer "
+"Suchanfrage ein, um eine Liste mit relevanten Optionen zu triggern. Je nach "
+"Kontext stehen die folgenden Artikelvarianten zur Verfügung:"
 
 #: ../misc/variables/article.rst:15
+msgid "``first_internal_article``"
+msgstr "``first_internal_article``"
+
+#: ../misc/variables/article.rst:16
+msgid "``first_external_article``"
+msgstr "``first_external_article``"
+
+#: ../misc/variables/article.rst:17
+msgid "``first_article``"
+msgstr "``first_article``"
+
+#: ../misc/variables/article.rst:18
 msgid "``last_internal_article``"
 msgstr "``last_internal_article``"
 
-#: ../misc/variables/article.rst:16
+#: ../misc/variables/article.rst:19
 msgid "``last_external_article``"
 msgstr "``last_external_article``"
 
-#: ../misc/variables/article.rst:17
+#: ../misc/variables/article.rst:20
 msgid "``last_article``"
 msgstr "``last_article``"
 
-#: ../misc/variables/article.rst:18
+#: ../misc/variables/article.rst:21
 msgid "``created_internal_article``"
 msgstr "``created_internal_article``"
 
-#: ../misc/variables/article.rst:19
+#: ../misc/variables/article.rst:22
 msgid "``created_external_article``"
 msgstr "``created_external_article``"
 
-#: ../misc/variables/article.rst:20
+#: ../misc/variables/article.rst:23
 msgid "``created_article``"
 msgstr "``created_article``"
 
-#: ../misc/variables/article.rst:22
-msgid ""
-"The table uses ``last_article`` as example. In case you want another "
-"article, replace it with one of the mentioned article types."
-msgstr ""
-"Die Tabelle verwendet ``last_article`` als Beispiel. Falls Sie einen anderen "
-"Artikel wünschen, ersetzen Sie es durch eine der genannten Artikelvarianten."
-
 #: ../misc/variables/article.rst:25
+msgid ""
+"The table uses \"Article\" as example. Replace it with one of the "
+"aforementioned article types."
+msgstr ""
+"In der Tabelle wird \"Artikel\" als Platzhalter verwendet. Ersetzen Sie dies "
+"durch einen der oben genannten Artikeltypen."
+
+#: ../misc/variables/article.rst:28
 msgid "Article Variables"
 msgstr "Artikel-Variablen"
 
@@ -19979,8 +19911,8 @@ msgid "Variable"
 msgstr "Variable"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Cc"
-msgstr "Letzter Artikel > CC"
+msgid "Article > Cc"
+msgstr "Artikel > CC"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.cc}``"
@@ -19991,8 +19923,8 @@ msgid "``jdoe@example.com, company@example.com``"
 msgstr "``jdoe@example.com, firma@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Address"
-msgstr "Letzter Artikel > Erstellt von > Adresse"
+msgid "Article > Created by > Address"
+msgstr "Artikel > Erstellt von > Adresse"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.address}``"
@@ -20005,8 +19937,8 @@ msgstr ""
 "gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Department"
-msgstr "Letzter Artikel > Erstellt von > Abteilung"
+msgid "Article > Created by > Department"
+msgstr "Artikel > Erstellt von > Abteilung"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.department}``"
@@ -20017,7 +19949,7 @@ msgid "``Sales`` or empty if not set in user object"
 msgstr "``Sales`` oder leer wenn nicht am Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Email"
+msgid "Article > Created by > Email"
 msgstr "Letzter Artikel > Erstellt von > Email"
 
 #: ../misc/variables/article.rst:1
@@ -20029,8 +19961,8 @@ msgid "``jdoe@example.com``"
 msgstr "``jdoe@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Fax"
-msgstr "Letzter Artikel > Erstellt von > Fax"
+msgid "Article > Created by > Fax"
+msgstr "Artikel > Erstellt von > Fax"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.fax}``"
@@ -20041,8 +19973,8 @@ msgid "``+4930123456789`` or empty if not set in user object"
 msgstr "``+4930123456789`` oder leer wenn nicht im Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Firstname"
-msgstr "Letzter Artikel > Erstellt von > Vorname"
+msgid "Article > Created by > Firstname"
+msgstr "Artikel > Erstellt von > Vorname"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.firstname}``"
@@ -20053,8 +19985,8 @@ msgid "``Joe`` or empty if not set"
 msgstr "``Joe`` oder leer wenn nicht gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Lastname"
-msgstr "Letzter Artikel > Erstellt von > Nachname"
+msgid "Article > Created by > Lastname"
+msgstr "Artikel > Erstellt von > Nachname"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.lastname}``"
@@ -20066,8 +19998,8 @@ msgid "``Doe`` or empty if not set"
 msgstr "``Doe`` oder leer wenn nicht gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Login"
-msgstr "Letzter Artikel > Erstellt von > Login"
+msgid "Article > Created by > Login"
+msgstr "Artikel > Erstellt von > Login"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.login}``"
@@ -20079,16 +20011,16 @@ msgid "``jdoe``"
 msgstr "``jdoe``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Mobile"
-msgstr "Letzter Artikel > Erstellt von > Mobil"
+msgid "Article > Created by > Mobile"
+msgstr "Artikel > Erstellt von > Mobil"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.mobile}``"
 msgstr "``#{article.created_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Note"
-msgstr "Letzter Artikel > Erstellt von > Notiz"
+msgid "Article > Created by > Note"
+msgstr "Artikel > Erstellt von > Notiz"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.note}``"
@@ -20101,16 +20033,16 @@ msgstr ""
 "gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Phone"
-msgstr "Letzter Artikel > Erstellt von > Telefon"
+msgid "Article > Created by > Phone"
+msgstr "Artikel > Erstellt von > Telefon"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.phone}``"
 msgstr "``#{article.created_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > VIP"
-msgstr "Letzter Artikel > Erstellt von > VIP"
+msgid "Article > Created by > VIP"
+msgstr "Artikel > Erstellt von > VIP"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.vip}``"
@@ -20121,8 +20053,8 @@ msgid "``true`` or ``false``"
 msgstr "``true`` oder ``false``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created by > Web"
-msgstr "Letzter Artikel > Erstellt von > Web"
+msgid "Article > Created by > Web"
+msgstr "Artikel > Erstellt von > Web"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_by.web}``"
@@ -20133,8 +20065,8 @@ msgid "``https://zammad.com`` or empty if not set in user object"
 msgstr "``https://zammad.com`` oder leer wenn nicht im Benutzerobjekt gesetzt"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Created"
-msgstr "Letzter Artikel > Erstellt"
+msgid "Article > Created"
+msgstr "Artikel > Erstellt"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.created_at}``"
@@ -20145,8 +20077,8 @@ msgid "``2019-10-08 15:24:47 UTC``"
 msgstr "``2019-10-08 15:24:47 UTC``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > From"
-msgstr "Letzter Artikel > Von"
+msgid "Article > From"
+msgstr "Artikel > Von"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.from}``"
@@ -20160,8 +20092,8 @@ msgstr ""
 "gesendeten E-Mail an"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Sender > Name"
-msgstr "Letzter Artikel > Sender > Name"
+msgid "Article > Sender > Name"
+msgstr "Artikel > Sender > Name"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.sender.name}``"
@@ -20172,8 +20104,8 @@ msgid "``Customer``, ``Agent`` or ``System``"
 msgstr "``Customer``, ``Agent`` oder ``System``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Subject"
-msgstr "Letzter Artikel > Betreff"
+msgid "Article > Subject"
+msgstr "Artikel > Betreff"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.subject}``"
@@ -20184,32 +20116,32 @@ msgid "``My amazing subject``"
 msgstr "``Mein tolles Betreff``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Text"
-msgstr "Letzter Artikel > Text"
+msgid "Article > Text"
+msgstr "Artikel > Text"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.body}``"
 msgstr "``#{article.body}``"
 
 #: ../misc/variables/article.rst:1
-msgid "``Test`` without formatting (plain)"
-msgstr "``Test`` ohne Formatierung"
+msgid "``Test`` without formatting (plain). See also note below."
+msgstr "``Test`` ohne Formatierung (plain). Siehe auch Anmerkung unten."
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Text (HTML)"
-msgstr "Letzter Artikel > Text (HTML)"
+msgid "Article > Text (HTML)"
+msgstr "Artikel > Text (HTML)"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.body_as_html}``"
 msgstr "``#{article.body_as_html}``"
 
 #: ../misc/variables/article.rst:1
-msgid "``Test`` with formatting"
-msgstr "``Test`` mit Formatierung"
+msgid "``Test`` with formatting. See also note below."
+msgstr "``Test`` mit Formatierung. Siehe auch Anmerkung unten."
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > TicketID"
-msgstr "Letzter Artikel > Ticket-ID"
+msgid "Article > TicketID"
+msgstr "Artikel > Ticket-ID"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.ticket_id}``"
@@ -20220,8 +20152,8 @@ msgid "``1`` (not ticket number)"
 msgstr "``1`` (nicht Ticketnummer)"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > To"
-msgstr "Letzter Artikel > An"
+msgid "Article > To"
+msgstr "Artikel > An"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.to}``"
@@ -20232,8 +20164,8 @@ msgid "``helpdesk@example.com``"
 msgstr "``helpdesk@example.com``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Type > Name"
-msgstr "Letzter Artikel > Typ > Name"
+msgid "Article > Type > Name"
+msgstr "Artikel > Typ > Name"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.type.name}``"
@@ -20248,112 +20180,112 @@ msgstr ""
 "develop/db/seeds/ticket_article_types.rb>`_)"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Address"
-msgstr "Letzter Artikel > Aktualisiert von > Adresse"
+msgid "Article > Updated by > Address"
+msgstr "Artikel > Aktualisiert von > Adresse"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.address}``"
 msgstr "``#{article.updated_by.address}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Department"
-msgstr "Letzter Artikel > Aktualisiert von > Abteilung"
+msgid "Article > Updated by > Department"
+msgstr "Artikel > Aktualisiert von > Abteilung"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.department}``"
 msgstr "``#{article.updated_by.department}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Email"
-msgstr "Letzter Artikel > Aktualisiert von > Email"
+msgid "Article > Updated by > Email"
+msgstr "Artikel > Aktualisiert von > Email"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.email}``"
 msgstr "``#{article.updated_by.email}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Fax"
-msgstr "Letzter Artikel > Aktualisiert von > Fax"
+msgid "Article > Updated by > Fax"
+msgstr "Artikel > Aktualisiert von > Fax"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.fax}``"
 msgstr "``#{article.updated_by.fax}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Firstname"
-msgstr "Letzter Artikel > Aktualisiert von > Vorname"
+msgid "Article > Updated by > Firstname"
+msgstr "Artikel > Aktualisiert von > Vorname"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.firstname}``"
 msgstr "``#{article.updated_by.firstname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Lastname"
-msgstr "Letzter Artikel > Aktualisiert von > Nachname"
+msgid "Article > Updated by > Lastname"
+msgstr "Artikel > Aktualisiert von > Nachname"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.lastname}``"
 msgstr "``#{article.updated_by.lastname}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Login"
-msgstr "Letzter Artikel > Aktualisiert von > Login"
+msgid "Article > Updated by > Login"
+msgstr "Artikel > Aktualisiert von > Login"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.login}``"
 msgstr "``#{article.updated_by.login}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Mobile"
-msgstr "Letzter Artikel > Aktualisiert von > Mobil"
+msgid "Article > Updated by > Mobile"
+msgstr "Artikel > Aktualisiert von > Mobil"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.mobile}``"
 msgstr "``#{article.updated_by.mobile}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Note"
-msgstr "Letzter Artikel > Aktualisiert von > Notiz"
+msgid "Article > Updated by > Note"
+msgstr "Artikel > Aktualisiert von > Notiz"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.note}``"
 msgstr "``#{article.updated_by.note}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Phone"
-msgstr "Letzter Artikel > Aktualisiert von > Telefon"
+msgid "Article > Updated by > Phone"
+msgstr "Artikel > Aktualisiert von > Telefon"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.phone}``"
 msgstr "``#{article.updated_by.phone}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > VIP"
-msgstr "Letzter Artikel > Aktualisiert von > VIP"
+msgid "Article > Updated by > VIP"
+msgstr "Artikel > Aktualisiert von > VIP"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.vip}``"
 msgstr "``#{article.updated_by.vip}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated by > Web"
-msgstr "Letzter Artikel > Aktualisiert von > Web"
+msgid "Article > Updated by > Web"
+msgstr "Artikel > Aktualisiert von > Web"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_by.web}``"
 msgstr "``#{article.updated_by.web}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Updated"
-msgstr "Letzter Artikel > Aktualisiert"
+msgid "Article > Updated"
+msgstr "Artikel > Aktualisiert"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.updated_at}``"
 msgstr "``#{article.updated_at}``"
 
 #: ../misc/variables/article.rst:1
-msgid "Last Article > Visibility"
-msgstr "Letzter Artikel > Sichtbarkeit"
+msgid "Article > Visibility"
+msgstr "Artikel > Sichtbarkeit"
 
 #: ../misc/variables/article.rst:1
 msgid "``#{article.internal}``"
@@ -20374,6 +20306,84 @@ msgstr "``#{ticket.article_count}``"
 #: ../misc/variables/article.rst:1
 msgid "``1`` number of ticket articles"
 msgstr "``1`` Anzahl der Ticket-Artikel"
+
+#: ../misc/variables/article.rst:72
+msgid ""
+"There are different variables for the body of an article. In addition to the "
+"mentioned variables in the table above, there are even two more which are "
+"not in the suggestion list when typing :kbd:`:` :kbd:`:`."
+msgstr ""
+"Es gibt verschiedene Variablen für den Textkörper eines Artikels. Zusätzlich "
+"zu den in der obigen Tabelle genannten Variablen gibt es noch zwei weitere, "
+"die bei der Eingabe von :kbd:`:` :kbd:`:` nicht in der Vorschlagsliste "
+"stehen."
+
+#: ../misc/variables/article.rst:76
+msgid ""
+"Let's have a look at an example to make it more clear. The following text is "
+"the body of an article with some HTML formatting:"
+msgstr ""
+"Schauen wir uns ein Beispiel an, um dies zu verdeutlichen. Der folgende "
+"Block ist ein Textkörper eines Artikels mit einigen HTML-Formatierungen:"
+
+#: ../misc/variables/article.rst:85
+msgid "Depending on the variable, the result differs:"
+msgstr "Je nach Variable ist das Ergebnis unterschiedlich:"
+
+#: ../misc/variables/article.rst:89
+msgid "Plain text as quote with HTML linebreaks"
+msgstr "Einfacher Text mit Zitatzeichen und HTML-Zeilenumbrüchen"
+
+#: ../misc/variables/article.rst:91
+msgid "Variable: ``#{article.body}``"
+msgstr "Variable: ``#{article.body}``"
+
+#: ../misc/variables/article.rst:93
+msgid ""
+"Body in plain text, converted to HTML with quote character (``>``) at the "
+"beginning of each line. Example:"
+msgstr ""
+"Einfacher Text, umgewandelt in HTML mit Zitatzeichen (``>``) am Anfang jeder "
+"Zeile. Beispiel:"
+
+#: ../misc/variables/article.rst:102
+msgid "HTML"
+msgstr "HTML"
+
+#: ../misc/variables/article.rst:104
+msgid "Variable: ``#{article.body_as_html}``"
+msgstr "Variable: ``#{article.body_as_html}``"
+
+#: ../misc/variables/article.rst:106
+msgid "Body as HTML without quote character (``>``). Example:"
+msgstr "Textkörper als HTML ohne Zitatzeichen (``>``). Beispiel:"
+
+#: ../misc/variables/article.rst:114
+msgid "Plain text with HTML linebreaks"
+msgstr "Einfacher Text mit HTML-Zeilenumbrüchen"
+
+#: ../misc/variables/article.rst:116
+msgid "Variable: ``#{article.body_as_text.text2html}``"
+msgstr "Variable: ``#{article.body_as_text.text2html}``"
+
+#: ../misc/variables/article.rst:118
+msgid ""
+"Body as plain text, converted to HTML without quote character (``>``). "
+"Example:"
+msgstr ""
+"Einfacher Text, umgewandelt in HTML ohne Zitatzeichen (``>``). Beispiel:"
+
+#: ../misc/variables/article.rst:127
+msgid "Plain text"
+msgstr "Einfacher Text"
+
+#: ../misc/variables/article.rst:129
+msgid "Variable: ``#{article.body_as_text}``"
+msgstr "Variable: ``#{article.body_as_text}``"
+
+#: ../misc/variables/article.rst:131
+msgid "Body as plain text without quote character (``>``). Example:"
+msgstr "Einfacher Text ohne Zitatzeichen (``>``). Beispiel:"
 
 #: ../misc/variables/config.rst:2
 msgid "Config"
@@ -20947,15 +20957,15 @@ msgstr "``#{user.web}``"
 msgid ""
 "Below you can find examples of ticket-based variables within Zammad. These "
 "can be called via triggers for example. If you're unsure if Zammad does "
-"support variables at the point you're at, you can try to type ``::`` to "
-"check."
+"support variables at the point you're at, you can try to "
+"type :kbd:`:` :kbd:`:` to check."
 msgstr ""
 "Unten finden Sie alle verfügbaren ticketbasierten Variablen in Zammad. Diese "
 "können zum Beispiel in Triggern aufgerufen werden. Wenn Sie unsicher sind, "
-"welche Variablen gerade unterstützt werden, tippen Sie einfach ``::``, um "
-"eine Auswahl zu sehen."
+"welche Variablen gerade unterstützt werden, tippen Sie "
+"einfach :kbd:`:` :kbd:`:`, um eine Auswahl zu sehen."
 
-#: ../misc/variables/ticket.rst:12
+#: ../misc/variables/ticket.rst:13
 msgid "Ticket Variables"
 msgstr "Ticket-Variablen"
 
@@ -22097,13 +22107,13 @@ msgid ""
 "Activates the `lost password` function on the login page. If set to ``no`` "
 "only administrators may change the user's password - users may update their "
 "own password if they're still logged in and they have the "
-"required :doc:`permission </manage/roles/user-preferences-permissions>`."
+"required :doc:`permission </manage/roles/permissions>`."
 msgstr ""
-"Aktiviert die Funktion `Kennwort vergessen` auf der Login-Seite. Wenn auf "
-"``nein`` gesetzt, können nur Administratoren das Passwort des Benutzers "
+"Aktiviert die \"Passwort vergessen?\" Funktion auf der Login-Seite. Wenn auf "
+"``Nein`` gesetzt, können nur Administratoren das Passwort des Benutzers "
 "ändern - Benutzer können ihr eigenes Passwort aktualisieren, wenn sie noch "
-"eingeloggt sind und die erforderliche :doc:`Berechtigung </manage/roles/user-"
-"preferences-permissions>` haben."
+"eingeloggt sind und die entsprechende :doc:`Berechtigung </manage/roles/"
+"permissions>` haben."
 
 #: ../settings/security/base.rst:0
 msgid "Figure showing activated \"Lost Password\" setting"
@@ -22180,10 +22190,6 @@ msgstr ""
 #: ../settings/security/base.rst:94
 msgid "``admin``"
 msgstr "``admin``"
-
-#: ../settings/security/base.rst:96
-msgid "``ticket.customer``"
-msgstr "``ticket.customer``"
 
 #: ../settings/security/base.rst:97
 msgid "``default`` (fallback if user doesn't have above permissions set)"
@@ -24007,7 +24013,7 @@ msgstr ""
 "Siehe :ref:`automatische Kontoverknüpfung <automatic-account-linking>` für "
 "Details zur Verknüpfung bestehender Zammad-Konten mit IdP-Konten."
 
-#: ../settings/security/third-party/saml.rst:188
+#: ../settings/security/third-party/saml.rst:189
 msgid "Automatic account linking doesn't work"
 msgstr "Automatische Kontoverknüpfung funktioniert nicht"
 
@@ -24017,6 +24023,19 @@ msgid ""
 msgstr ""
 "Haben Sie die Konfiguration der Benutzerattribut-Zuordnung Ihres IdP "
 "überprüft?"
+
+#: ../settings/security/third-party/saml.rst:193
+#, fuzzy
+#| msgid "How does it work?"
+msgid "Logout doesn't work"
+msgstr "Wie funktioniert das?"
+
+#: ../settings/security/third-party/saml.rst:192
+msgid ""
+"In case your logout process doesn't work, you can try ``https://<your-zammad-"
+"url>/auth/saml/slo`` as an alternative. However, no logout is sent to your "
+"IdP then."
+msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:2
 msgid "SAML with Keycloak"
@@ -24130,7 +24149,6 @@ msgid "Log in to Zammad as an administrator"
 msgstr "Als Administrator bei Zammad anmelden"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:52
-#: ../settings/security/third-party/saml/saml-microsoft.rst:54
 msgid ""
 "In the admin panel go to \"Settings\" > \"Security\" > \"Third-party "
 "Applications\" > \"Authentication via SAML\""
@@ -24306,6 +24324,18 @@ msgstr "Screenshot zeigt den hervorgehobenen Zertifikatexport"
 #: ../settings/security/third-party/saml/saml-microsoft.rst:51
 msgid "5. Configure Zammad"
 msgstr "5. Zammad konfigurieren"
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:54
+#, fuzzy
+#| msgid ""
+#| "In the admin panel go to \"Settings\" > \"Security\" > \"Third-party "
+#| "Applications\" > \"Authentication via SAML\""
+msgid ""
+"Go to *Settings > Security > Third-party Applications > Authentication via "
+"SAML* in the admin settings."
+msgstr ""
+"Gehen Sie im Admin-Bereich zu \"Einstellungen\" > \"Sicherheit\" > "
+"\"Anwendungen von Drittanbietern\" > \"Authentifizierung über SAML\""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:58
 msgid ""
@@ -34976,6 +35006,392 @@ msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
 
+#~ msgid "Admin Permissions"
+#~ msgstr "Admin-Berechtigungen"
+
+#~ msgid ""
+#~ "📁 **Permissions are namespaced**, which is sort of like having files "
+#~ "inside of folders."
+#~ msgstr ""
+#~ "📁 **Berechtigungen sind hierarchisch**, was in etwa so ist, als ob sich "
+#~ "Dateien in Ordnern befinden."
+
+#~ msgid ""
+#~ "The permissions listed on this page all belong to the ``admin`` "
+#~ "namespace. You can select them individually, or you can just select "
+#~ "``admin`` to enable the whole bunch."
+#~ msgstr ""
+#~ "Die auf dieser Seite aufgeführten Berechtigungen gehören alle zum "
+#~ "Berechtigungsgruppe ``Admin``. Sie können sie einzeln auswählen oder "
+#~ "einfach ``Admin`` auswählen, um die gesamte Gruppe zu aktivieren."
+
+#~ msgid "Admin permissions in the New Role dialog"
+#~ msgstr "Administratorberechtigungen im Dialogfeld \"Neue Rolle“"
+
+#~ msgid "Admin permissions are shown at the top of the New Role dialog..."
+#~ msgstr ""
+#~ "Admin-Berechtigungen werden oben im Dialogfeld \"Neue Rolle“ angezeigt ..."
+
+#~ msgid "Screenshot showing admin settings within Zammad."
+#~ msgstr "Screenshot, der die Admin-Einstellungen in Zammad zeigt."
+
+#~ msgid "...and give users access to the pages of the Admin Panel."
+#~ msgstr "...und geben Benutzern Zugriff auf den Admin-Bereich."
+
+#~ msgid "Permission name"
+#~ msgstr "Name der Berechtigung"
+
+#~ msgid "Give access to"
+#~ msgstr "Gewährt Zugriff auf"
+
+#~ msgid "``admin.ai``"
+#~ msgstr "``admin.ai``"
+
+#~ msgid "AI > Smart Assist Text Tools"
+#~ msgstr "KI > Smart Assist Text Werkzeuge"
+
+#~ msgid ""
+#~ "Accessing Facebook tickets for agents: :doc:`/manage/groups/access-levels`"
+#~ msgstr ""
+#~ "Zugriff auf Facebook Tickets für Agenten: :doc:`/manage/groups/access-"
+#~ "levels`"
+
+#~ msgid ""
+#~ "Accessing Telegram tickets for agents: :doc:`/manage/groups/access-levels`"
+#~ msgstr ""
+#~ "Zugriff auf Telegram-Tickets für Agenten: :doc:`/manage/groups/access-"
+#~ "levels`"
+
+#~ msgid ""
+#~ "Accessing knowledge base to read/edit articles: ``knowledge_base.reader``"
+#~ msgstr ""
+#~ "Zugriff auf die Knowledge Base zum Lesen/Bearbeiten von Artikeln: "
+#~ "``knowledge_base.reader``"
+
+#~ msgid "and ``knowledge_base.editor``"
+#~ msgstr "und ``knowledge_base.editor``"
+
+#~ msgid ""
+#~ "Make sure to double-check the answer's :user-docs:`visibility </extras/"
+#~ "knowledge-base.html#editing-answers>`."
+#~ msgstr ""
+#~ "Stellen Sie sicher, dass Sie die :user-docs:`Sichtbarkeit </extras/"
+#~ "knowledge-base.html#editing-answers>` in der Antwort überprüfen."
+
+#~ msgid "For automation on tickets"
+#~ msgstr "Für die Automatisierung von Tickets"
+
+#~ msgid "Does not grant access to :doc:`/misc/composer`"
+#~ msgstr "Gewährt keinen Zugriff auf :doc:`/misc/composer`"
+
+#~ msgid "Independent from this permission, agents can create and edit"
+#~ msgstr "Unabhängig von dieser Berechtigung können Agenten"
+
+#~ msgid ""
+#~ "🏴‍☠️ This permission allows users to :ref:`hijack other user sessions "
+#~ "<view-from-users-perspective>` ."
+#~ msgstr ""
+#~ "🏴‍☠️ Mit dieser Berechtigung können Benutzer :ref:`die Sitzungen anderer "
+#~ "Benutzer übernehmen <view-from-users-perspective>` ."
+
+#~ msgid "Agent Permissions"
+#~ msgstr "Agenten-Berechtigungen"
+
+#~ msgid ""
+#~ "The permissions listed on this page grant access to features that have to "
+#~ "be enabled or configured system-wide in the Admin Panel first."
+#~ msgstr ""
+#~ "Die auf dieser Seite aufgeführten Berechtigungen gewähren Zugriff auf "
+#~ "Funktionen, die zunächst systemweit im Admin-Panel aktiviert oder "
+#~ "konfiguriert werden müssen."
+
+#~ msgid "Agent permissions in the New Role dialog"
+#~ msgstr "Agentenberechtigungen im Dialogfeld \"Neue Rolle“"
+
+#~ msgid "Agent permissions are shown in the middle of the New Role dialog..."
+#~ msgstr ""
+#~ "Agenten-Berechtigungen werden in der Mitte im Dialogfeld \"Neue Rolle“ "
+#~ "angezeigt ..."
+
+#~ msgid "Sidebar tabs: Overviews, Knowledge Base, Customer Chat, Phone"
+#~ msgstr ""
+#~ "Tabs in der Seitenleiste: Übersichten, Knowledge Base, Kundenchat, Telefon"
+
+#~ msgid ""
+#~ "...and give users access to new sidebar tabs for communicating with "
+#~ "customers."
+#~ msgstr ""
+#~ "...und geben Benutzern Zugriff auf neue Seitenleisten-Tabs für die "
+#~ "Kommunikation mit Kunden."
+
+#~ msgid "Configuration of a CTI integration is required"
+#~ msgstr "Konfiguration einer CTI-Integration ist erforderlich"
+
+#~ msgid "Create/edit privileges"
+#~ msgstr "Berechtigungen zum Erstellen/Bearbeiten"
+
+#~ msgid "See notes below"
+#~ msgstr "Siehe Anmerkungen unten"
+
+#~ msgid "🤔 **What about this table under the permissions tree?**"
+#~ msgstr "🤔 **Was ist mit dieser Tabelle unter dem Berechtigungsbaum?**"
+
+#~ msgid "Group permission table in Edit Role dialog"
+#~ msgstr "Tabelle mit Gruppenberechtigung im Rollenbearbeitungsdialog"
+
+#~ msgid ""
+#~ "Roles can also include :doc:`group permissions </manage/groups/access-"
+#~ "levels>`! The group permission table is shown when there is **more than "
+#~ "one active group** in the system and ``ticket.agent`` permission **is "
+#~ "selected**."
+#~ msgstr ""
+#~ "Rollen können auch :doc:`Gruppenberechtigungen </manage/groups/access-"
+#~ "levels>` enthalten! Die Tabelle der Gruppenberechtigungen wird angezeigt, "
+#~ "wenn **mehr als eine aktive Gruppe** im System vorhanden ist und die "
+#~ "Berechtigung ``ticket.agent`` **ausgewählt ist**."
+
+#~ msgid ""
+#~ "If you're already using Zammad, you'll know that users can be **admins**, "
+#~ "**agents**, or **customers**. These are Zammad's built-in roles, and "
+#~ "they're the tip of the iceberg of its powerful, flexible, and fine-"
+#~ "grained permission system."
+#~ msgstr ""
+#~ "Wenn Sie Zammad bereits benutzen, werden Sie wissen, dass Benutzer "
+#~ "**Administratoren**, **Agenten** oder **Kunden** sein können. Dies sind "
+#~ "die eingebauten Rollen von Zammad, das mit einem leistungsstarken, "
+#~ "flexiblen und feinkörnigen Berechtigungssystem ausgestattet ist."
+
+#~ msgid "Role overview within Zammad's admin settings."
+#~ msgstr "Rollenübersicht in den Einstellungen von Zammad."
+
+#~ msgid "Assign user privileges in the Admin Panel, under **Manage > Roles**."
+#~ msgstr ""
+#~ "Vergeben Sie Benutzerrechte im Admin Panel unter **Verwalten > Rollen**."
+
+#~ msgid "💡 **LDAP/Active Directory users:**"
+#~ msgstr "💡 **LDAP/Active Directory-Benutzer:**"
+
+#~ msgid ""
+#~ "Syncing your LDAP \"groups\" to Zammad roles can make access management "
+#~ "*way* easier. To learn more, see :doc:`/system/integrations/ldap/index`."
+#~ msgstr ""
+#~ "Die Synchronisierung Ihrer LDAP-\"Gruppen\" mit Zammad-Rollen kann die "
+#~ "Zugriffsverwaltung *sehr* vereinfachen. Um mehr zu erfahren, siehe :doc:`/"
+#~ "system/integrations/ldap/index`."
+
+#~ msgid "What Is a Role?"
+#~ msgstr "Was ist eine Rolle?"
+
+#~ msgid ""
+#~ "Some users can do things others can't (like close a ticket). Users have "
+#~ "roles, roles have permissions, and permissions are what make those "
+#~ "actions possible. You can think of roles as a kind of a collection of "
+#~ "permissions."
+#~ msgstr ""
+#~ "Einige Benutzer können Dinge tun, die andere nicht können (z.B. ein "
+#~ "Ticket schließen). Benutzer haben Rollen, Rollen haben Berechtigungen, "
+#~ "und die Berechtigungen erlauben diese Aktionen. Sie können sich die "
+#~ "Rollen als eine Art Sammlung von Berechtigungen vorstellen."
+
+#~ msgid "So what exactly are permissions, then?"
+#~ msgstr "Was genau sind denn nun Berechtigungen?"
+
+#~ msgid "List of permissions in the New Role dialog"
+#~ msgstr "Liste der Berechtigungen im Dialogfeld \"Neue Rolle“"
+
+#~ msgid ""
+#~ "The ``admin.calendar`` permission gives you access to the **Manage > "
+#~ "Calendars** admin panel."
+#~ msgstr ""
+#~ "Mit der Berechtigung ``admin.calendar`` haben Sie Zugriff auf den Bereich "
+#~ "**Verwalten > Kalender**."
+
+#~ msgid ""
+#~ "Simply put, permissions are names for all the different things users "
+#~ "might want to do throughout the system, such as:"
+#~ msgstr ""
+#~ "Einfach ausgedrückt, sind Berechtigungen Namen für all die verschiedenen "
+#~ "Dinge, die Benutzer im System tun möchten, wie z.B.:"
+
+#~ msgid "``chat.agent``: respond to live chat messages"
+#~ msgstr "``chat.agent``: Antwort auf Live-Chat-Nachrichten"
+
+#~ msgid ""
+#~ "Zammad has dozens of these permissions, which is a lot to keep track of. "
+#~ "So instead of assigning a bunch of permissions to different users, the "
+#~ "idea is to assign permissions to roles. And each user has an assigned "
+#~ "role."
+#~ msgstr ""
+#~ "Zammad hat Dutzende dieser Berechtigungen, und das ist eine Menge, die "
+#~ "man im Auge behalten muss. Anstatt also verschiedenen Benutzern eine "
+#~ "Reihe von Berechtigungen zuzuweisen, besteht die Idee darin, den Rollen "
+#~ "Berechtigungen zuzuweisen. Und jeder Benutzer hat eine zugewiesene Rolle."
+
+#~ msgid ""
+#~ "This makes creating user accounts for new agents a whole lot simpler, and "
+#~ "it also makes it easier to assign a new permission to a role and say "
+#~ "\"All existing agents can do *that* now, too.\""
+#~ msgstr ""
+#~ "Dadurch wird das Anlegen von Benutzerkonten für neue Agenten sehr viel "
+#~ "einfacher, und es ist auch einfacher, einer Rolle eine neue Berechtigung "
+#~ "zuzuweisen und zu sagen: \"Alle vorhandenen Agenten können *das* jetzt "
+#~ "auch.\""
+
+#~ msgid ""
+#~ "In short, roles are just collections of permissions that you can give to "
+#~ "a user. The built-in admin, agent, and customer roles are enough for many "
+#~ "teams, but Zammad gives you the freedom to custom-build your own."
+#~ msgstr ""
+#~ "Kurz gesagt, sind Rollen nur Sammlungen von Berechtigungen, die Sie einem "
+#~ "Benutzer geben können. Die eingebauten Admin-, Agenten- und Kundenrollen "
+#~ "sind für viele Teams ausreichend, aber Zammad gibt Ihnen die Freiheit, "
+#~ "Ihre eigenen Rollen zu erstellen."
+
+#~ msgid "And to do that, you'll need to know what each permission does."
+#~ msgstr ""
+#~ "Und dazu müssen Sie wissen, was die einzelnen Berechtigungen bewirken."
+
+#~ msgid ""
+#~ "Users can have both \"agent\" and \"customer\" roles at the same time!"
+#~ msgstr ""
+#~ "Benutzer können gleichzeitig die Rollen \"Agent\" und \"Kunde\" haben!"
+
+#~ msgid ""
+#~ "Why would you want this? Agents get :doc:`overviews </manage/overviews>` "
+#~ "of all the tickets they're *assigned to* (among others), while customers "
+#~ "get an overview of all the tickets they've *opened*. But some teams use "
+#~ "Zammad for both internal and public communication, so their agents need "
+#~ "both."
+#~ msgstr ""
+#~ "Warum sollten Sie das wollen? Agenten erhalten :doc:`Übersichten </manage/"
+#~ "overviews>` über alle Tickets, denen sie *zugewiesen* sind (neben "
+#~ "anderen), während Kunden einen Überblick über alle Tickets erhalten, die "
+#~ "sie *erstellt* haben. Einige Teams verwenden Zammad jedoch sowohl für die "
+#~ "interne als auch für die öffentliche Kommunikation, so dass deren "
+#~ "Mitarbeiter beides benötigen."
+
+#~ msgid ""
+#~ "Having both roles also changes what you see in the ticket view, depending "
+#~ "on whether you're the \"customer\" or not."
+#~ msgstr ""
+#~ "Wenn Sie beide Rollen haben, ändert sich auch die Darstellung in der "
+#~ "Ticketansicht, je nachdem, ob Sie der \"Kunde\" sind oder nicht."
+
+#~ msgid "Reference Guide: Permissions"
+#~ msgstr "Anleitung: Berechtigungen"
+
+#~ msgid ""
+#~ "Broadly speaking, there are four types of permission groups. Click on "
+#~ "each to go to the detailed list of granular permissions. You can either "
+#~ "select the whole permission group (e.g. ``admin``) or a subset of it "
+#~ "(e.g. ``admin.text_module``)."
+#~ msgstr ""
+#~ "Grob gesagt gibt es vier Arten von Berechtigungsgruppen. Klicken Sie auf "
+#~ "jede Gruppe, um die detaillierte Liste der einzelnen Berechtigungen "
+#~ "aufzurufen. Sie können entweder die gesamte Gruppe (z.B. ``admin``) oder "
+#~ "eine Teilmenge davon (z.B. ``admin.text_module``) auswählen."
+
+#~ msgid ":doc:`🛡️ Admin <admin-permissions>`"
+#~ msgstr ":doc:`🛡️ Admin <admin-permissions>`"
+
+#~ msgid "For access to each page of the admin panel"
+#~ msgstr "Für den Zugang zu den einzelnen Einstellungsbereichen"
+
+#~ msgid ":doc:`🕵️ Agent <agent-permissions>`"
+#~ msgstr ":doc:`🕵️ Agent <agent-permissions>`"
+
+#~ msgid "For access to customer communications"
+#~ msgstr "Für den Zugriff auf die Kundenkommunikation"
+
+#~ msgid "👤 Customer"
+#~ msgstr "👤 Kunde"
+
+#~ msgid ""
+#~ "Without the ``ticket.customer`` permission, customers can't see the **My "
+#~ "Ticket** overview—but they can still log in and open new tickets!"
+#~ msgstr ""
+#~ "Ohne die Berechtigung ``ticket.customer`` können Kunden die Übersicht "
+#~ "**Mein Ticket** nicht sehen - sie können sich aber trotzdem anmelden und "
+#~ "neue Tickets eröffnen!"
+
+#~ msgid ":doc:`🎛️ User Preferences <user-preferences-permissions>`"
+#~ msgstr ":doc:`🎛️ Benutzereinstellungen <user-preferences-permissions>`"
+
+#~ msgid ""
+#~ "For access to your own :user-docs:`user profile </extras/profile-and-"
+#~ "settings.html>`"
+#~ msgstr ""
+#~ "Für den Zugriff auf Ihr eigenes :user-docs:`Benutzerprofil </extras/"
+#~ "profile-and-settings.html>`"
+
+#~ msgid "Role Details"
+#~ msgstr "Details zur Rolle"
+
+#~ msgid ""
+#~ "Every new user must be assigned at least one role upon creation. This "
+#~ "attribute decides which role to give new users by default (which usually "
+#~ "happens when creating a new ticket for a new customer)."
+#~ msgstr ""
+#~ "Jedem neuen Benutzer muss bei der Erstellung mindestens eine Rolle "
+#~ "zugewiesen werden. Dieses Attribut entscheidet darüber, welche Rolle "
+#~ "neuen Benutzern standardmäßig zugewiesen wird (was normalerweise bei der "
+#~ "Erstellung eines neuen Tickets für einen neuen Kunden geschieht)."
+
+#~ msgid "Role overview in the admin panel, showing default role"
+#~ msgstr "Rollenübersicht in den Einstellungen mit Anzeige der Standardrolle"
+
+#~ msgid ""
+#~ "The default role is identified in the overview of the **Manage > Roles** "
+#~ "admin panel."
+#~ msgstr ""
+#~ "Die Standardrolle wird in der Übersicht des Einstellungsbereichs "
+#~ "**Verwalten > Rollen** angezeigt."
+
+#~ msgid "🙅 **Default roles should never provide admin/agent permissions.**"
+#~ msgstr ""
+#~ "🙅 **Standard-Rollen sollten niemals Admin- oder Agenten-Berechtigen "
+#~ "beinhalten.**"
+
+#~ msgid "User Preferences Permissions"
+#~ msgstr "Benutzereinstellungen Berechtigungen"
+
+#~ msgid ""
+#~ "The permissions listed on this page all belong to the "
+#~ "``user_preferences`` namespace. You can select them individually, or you "
+#~ "can just select ``user_preferences`` to enable the whole bunch."
+#~ msgstr ""
+#~ "Die auf dieser Seite aufgeführten Berechtigungen gehören alle zur "
+#~ "Berechtigungsgruppe ``user_preferences``. Sie können sie einzeln "
+#~ "auswählen oder Sie können einfach ``user_preferences`` auswählen, um alle "
+#~ "Rechte der Gruppe zu aktivieren."
+
+#~ msgid "User preferences permissions in the New Role dialog"
+#~ msgstr ""
+#~ "Berechtigungen für Benutzereinstellungen im Dialogfeld \"Neue Rolle\""
+
+#~ msgid ""
+#~ "User preferences permissions are shown at the bottom of the New Role "
+#~ "dialog..."
+#~ msgstr ""
+#~ "Benutzer-Berechtigungen werden unten im Dialogfeld \"Neue Rolle“ "
+#~ "angezeigt ..."
+
+#~ msgid "User profile page"
+#~ msgstr "Benutzerprofil-Seite"
+
+#~ msgid ""
+#~ "...and give users access to the pages of their :user-docs:`User Profile </"
+#~ "extras/profile-and-settings.html>`."
+#~ msgstr ""
+#~ "...und geben Benutzern Zugriff auf deren :user-docs:`Benutzerprofile </"
+#~ "extras/profile-and-settings.html>`."
+
+#~ msgid "Zammad via :docs:`REST API </api/intro.html>`"
+#~ msgstr "von Zammad über die :docs:`REST API </api/intro.html>`"
+
+#~ msgid "Override the default Gravatar with a custom avatar"
+#~ msgstr "Überschreiben Sie den Standard-Gravatar mit einem eigenen Avatar"
+
 #~ msgid ""
 #~ "You can assign both agent and customer roles to the same user — but you "
 #~ "**can't** assign both ``ticket.agent`` and ``ticket.customer`` "
@@ -39443,10 +39859,6 @@ msgstr ""
 #~ msgstr ""
 #~ "🤔 **Ich dachte Agenten können bereits Benutzeraccounts verwalten?**"
 
-#~ msgid "Agents can create and edit **customers**, but they can’t:"
-#~ msgstr ""
-#~ "Agenten können **Kunden** erstellen und bearbeiten, aber sie können nicht:"
-
 #~ msgid "modify anyone's permissions (roles or groups)"
 #~ msgstr "Berechtigungen anpassen (Rollen oder Gruppen)"
 
@@ -39456,27 +39868,14 @@ msgstr ""
 #~ msgid "edit other agent's accounts"
 #~ msgstr "Agenten-Konten ändern"
 
-#~ msgid ""
-#~ "To learn more, see :ref:`Taking over a user's session <view-from-users-"
-#~ "perspective>`."
-#~ msgstr ""
-#~ "Weitere Informationen finden Sie unter :ref:`Aus Benutzersicht ansehen "
-#~ "<view-from-users-perspective>`."
-
 #~ msgid "🤓 Requires configuration of either integrations"
 #~ msgstr "🤓 Erfordert die Konfiguration einer der folgenden Integrationen"
-
-#~ msgid ":doc:`Generic CTI </system/integrations/cti/generic>`"
-#~ msgstr ":doc:`Generische CTI </system/integrations/cti/generic>`"
 
 #~ msgid ":doc:`placetel </system/integrations/cti/placetel>`"
 #~ msgstr ":doc:`Placetel </system/integrations/cti/placetel>`"
 
 #~ msgid ":doc:`sipgate </system/integrations/cti/sipgate>`"
 #~ msgstr ":doc:`Sipgate </system/integrations/cti/sipgate>`"
-
-#~ msgid "knowledge_base"
-#~ msgstr "knowledge_base"
 
 #~ msgid ":user-docs:`📕 Knowledge Base </extras/knowledge-base.html>`"
 #~ msgstr ":user-docs:`📕 Knowledge Base </extras/knowledge-base.html>`"
