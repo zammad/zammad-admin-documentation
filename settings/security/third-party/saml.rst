@@ -187,3 +187,8 @@ Troubleshooting
 
 Automatic account linking doesn't work
    Have you double-checked your IdP's user attribute mapping configuration?
+
+Logout doesn't work
+   In case your logout process doesn't work, you can try
+   ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However, no
+   logout is sent to your IdP then.
