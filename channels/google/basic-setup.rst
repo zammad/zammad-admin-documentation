@@ -37,28 +37,26 @@ Configure OAuth App
 - After saving your app, a dialog will be shown with the "Client ID" and the
   "Client secret". Copy and add them to Zammad in the app configuration
   dialog.
-- Submit the app configuration in Zammad and switch back to Google's Cloud
+- **Submit** the app configuration in Zammad and switch back to Google's Cloud
   console.
 - Go back to the dashboard, select *APIs & Services > Enabled APIs & Services*
   and click on **Enable APIs & services** button. Search for ``gmail``, open it
   and hit the **Enable** button.
-- Go to **OAuth consent screen > Data Access** and click the
+- Go to *OAuth consent screen > Data Access* and click the
   **Add or remove scopes** button. Search for ``gmail`` and add the scope
   ``https://mail.google.com/``. Confirm with the **Update** button.
 
 Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
 on your scenario, you should also have a look at the **Audience** section in
-the Cloud console. Either add a test user to the app or publish it for a
+the Cloud console. Either add a test user to the app or publish it for
 production use.
 
 Add Account
 -----------
 
+After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
 If you already have Google email channels, you can skip this step and head over
 to :ref:`migrate-channel`.
-
-After you've registered Zammad as an OAuth app, you can connect Gmail accounts
-to Zammad.
 
 ☠️ **But first, a word of warning!**
 The import process does things you might not expect:
@@ -161,8 +159,7 @@ Convert Email Channel to Google Channel
 Zammad provides a migration logic that allows you to migrate existing Google
 accounts from an email channel into a Google channel.
 
-.. note:: 🧐 **Zammad is expecting specific settings**
-
+.. note:: **Zammad is expecting specific settings.**
    In order for Zammad to display the migration option, it expects the channels
    hostname to be ``imap.gmail.com`` for IMAP and ``smtp.gmail.com`` for SMTP.
 
@@ -176,10 +173,6 @@ Google and request you to authenticate and consent to said account.
 
 After you pressed next you'll be redirect to Zammad's Google channel overview.
 Your channel, if successful, is now migrated to an Google channel.
-
-.. figure:: /images/channels/google/migrate-email-channel-to-google.gif
-   :alt: Migrate an existing email channel to Google
-   :align: center
 
 Rolling Back the Migration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
