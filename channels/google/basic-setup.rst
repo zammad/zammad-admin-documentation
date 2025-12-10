@@ -1,16 +1,6 @@
 Basic Setup
 ===========
 
-.. ### Notes
-.. 1. OAuth > Create OAuth client > Client ID, Client Secret angezeigt
-
-.. 2. After OAuth creation, go to Data Access and click "Add or remove scopes" button. Check if email / https://main.google.com/ enabled.
-
-.. Enable API (APIs > Enabled APIs & Services > Make sure Gmail is enabled or enable it by clicking the **+ Enable APIs and services** button.)
-
-.. Credentials
-.. ###
-
 To set up a new Gmail or G Suite channel in Zammad, you first have
 to create an **OAuth client** in Google's Cloud console. Then you can connect
 Zammad with your Google account and add as many Gmail accounts to Zammad as
@@ -58,13 +48,11 @@ After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
 If you already have Google email channels, you can skip this step and head over
 to :ref:`migrate-channel`.
 
-☠️ **But first, a word of warning!**
-The import process does things you might not expect:
-
 .. danger::
    * By default, Zammad will **delete all emails** in your inbox
      during the import process. Use the *Keep Messages on Server* setting to
-     :ref:`disable this behavior <google-keep-messages-on-server>`.
+     :ref:`disable this behavior <google-keep-messages-on-server>` or enable
+     :ref:`archive mode <archive-mode>`.
    * Zammad will send an auto-reply message
      to every email it imports (including the old ones!).
      Make sure to :doc:`disable this behavior </manage/trigger>`
@@ -133,6 +121,8 @@ Keep messages on server
       If you choose **yes** here, remember that it's your responsibility
       to clean out your inbox from time to time to keep it below its storage
       limit.
+
+.. _archive-mode:
 
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst
