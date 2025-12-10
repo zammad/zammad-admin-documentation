@@ -1,110 +1,55 @@
 Basic Setup
 ===========
 
+.. ### Notes
+.. 1. OAuth > Create OAuth client > Client ID, Client Secret angezeigt
+
+.. 2. After OAuth creation, go to Data Access and click "Add or remove scopes" button. Check if email / https://main.google.com/ enabled.
+
+.. Enable API (APIs > Enabled APIs & Services > Make sure Gmail is enabled or enable it by clicking the **+ Enable APIs and services** button.)
+
+.. Credentials
+.. ###
+
 To set up a new Gmail or G Suite channel in Zammad, you first have
-to create an **OAuth app** in Google's Cloud console. Then you can connect
+to create an **OAuth client** in Google's Cloud console. Then you can connect
 Zammad with your Google account and add as many Gmail accounts to Zammad as
 you want, using only active Gmail browser sessions (no usernames or passwords
 required).
 
-If you already set up Google email channels in Zammad, you can easily
+If you already set up Google email channels via IMAP in Zammad, you can easily
 migrate them to a Google channel. Follow the steps below but skip the step
 "Add Account" and proceed with :ref:`migrate-channel`.
 
 .. _register-oauth-google:
 
-Register an OAuth App
----------------------
+Configure OAuth App
+-------------------
 
-Sign in to the `Google Cloud console <https://console.cloud.google.com/>`_.
-You should see a dashboard where you can add a new project. If you already
-have an app which is in production, create a new one and follow the steps
-below.
+- Sign in to the `Google Cloud console <https://console.cloud.google.com/>`_.
+- Create a new app if you don't have one already.
+- Go to *APIs & Services > OAuth consent screen* and create an OAuth client by
+  clicking the **Create OAuth client** button.
+- Choose "Web application" as type, provide a fitting name and add a redirect
+  URI. You can find the redirect URI in the Google account settings dialog of
+  Zammad by opening the configuration dialog via **Connect Google App** button
+  (called "Your callback URL").
+- After saving your app, a dialog will be shown with the "Client ID" and the
+  "Client secret". Copy and add them to Zammad in the app configuration
+  dialog.
+- Submit the app configuration in Zammad and switch back to Google's Cloud
+  console.
+- Go back to the dashboard, select *APIs & Services > Enabled APIs & Services*
+  and click on **Enable APIs & services** button. Search for ``gmail``, open it
+  and hit the **Enable** button.
+- Go to **OAuth consent screen > Data Access** and click the
+  **Add or remove scopes** button. Search for ``gmail`` and add the scope
+  ``https://mail.google.com/``. Confirm with the **Update** button.
 
-Create an OAuth Consent Screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In the left sidebar of your project's "APIs & Services" section, select
-OAuth consent screen and provide the requested information.
-
-.. figure:: /images/channels/google/oauth-consent-screen.png
-   :alt: Screenshot shows OAuth consent screen creation in Google Cloud console
-
-In the first screen, select "Internal" as User Type and click on "Create".
-
-Provide the following information in the next screen:
-
-- **App name**: enter a suitable name for this app
-- **User support email**: select an email address from the dropdown
-- **Authorized domain**: the domain of your Zammad without http or https prefix
-- **Developer contact information**: enter a valid email address
-
-After entering the information, click on "Save and Continue". You should be
-on the "Scopes" screen. Click on "Add or Remove Scopes" to see the dialog as in
-the following screenshot.
-
-.. figure:: /images/channels/google/add-api.png
-   :scale: 60%
-   :align: center
-   :alt: Screenshot with highlighted API selection
-
-1. Enter ``https://mail.google.com`` in the "Manually add scopes" text field
-2. Click on "Add to Table" to have it in the selectable scopes table above
-3. Select it by checking the box
-4. Confirm by clicking the "Update" button
-
-Go on by clicking "Save and Continue". If your app is in "Testing" mode, add a
-user as which you want to sign in to your Google account.
-After that you see a summary screen where you can check the information.
-Confirm by clicking the "Back to Dashboard" button and go on with creating
-credentials for your app.
-
-Create Credentials
-^^^^^^^^^^^^^^^^^^
-
-Select "Credentials" in the left sidebar, click on "➕ Create Credentials" and
-choose "OAuth client ID".
-
-.. figure:: /images/channels/google/add-credentials-oauth.png
-   :alt: Screenshot shows credentials screen with highlighted elements
-   :align: center
-
-Select "Web application" as Application type, give it a name and enter your
-redirect URL.
-
-.. figure:: /images/channels/google/oauth-credentials-dialog.png
-   :alt:
-   :align: center
-
-The redirect URL is basically the domain of your Zammad instance, extended with
-``/api/v1/external_credentials/google/callback``.
-
-You can even find the complete redirect URL in Zammad's admin area
-under Channels > Google. Click on "Configure App" and find your URL under
-"Your callback URL".
-
-.. figure:: /images/channels/google/configure-app-dialog.png
-   :alt: Screenshot shows Zammad's configuration dialog for a Google app
-   :align: center
-   :scale: 70%
-
-Click on "Create" after inserting the information. You will see a dialog with
-your client ID and client secret. You need both of them in the next step for
-configuring Zammad to connect it to Google.
-
-Configure App
--------------
-
-Go to Channels > Google in Zammad's admin area and click on "Configure App".
-Insert the client ID and client secret which you got in the step before.
-
-.. figure:: /images/channels/google/client-id-secret.png
-   :alt: Screenshot shows dialogs from Google and Zammad with client ID and secret
-   :scale: 70%
-   :align: center
-
-Confirm by clicking the "Submit" button. Now you can add a Google account as
-channel in Zammad, see next step.
+Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
+on your scenario, you should also have a look at the **Audience** section in
+the Cloud console. Either add a test user to the app or publish it for a
+production use.
 
 Add Account
 -----------
