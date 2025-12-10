@@ -1,11 +1,10 @@
 Basic Setup
 ===========
 
-To set up a new Gmail or G Suite channel in Zammad, you first have
+To set up a new Google email channel in Zammad, you first have
 to create an **OAuth client** in Google's Cloud console. Then you can connect
-Zammad with your Google account and add as many Gmail accounts to Zammad as
-you want, using only active Gmail browser sessions (no usernames or passwords
-required).
+Zammad with your Google account and add as many mailboxes to Zammad as
+you want.
 
 If you already set up Google email channels via IMAP in Zammad, you can easily
 migrate them to a Google channel. Follow the steps below but skip the step
@@ -38,15 +37,13 @@ Configure OAuth App
 
 Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
 on your scenario, you should also have a look at the **Audience** section in
-the Cloud console. Either add a test user to the app or publish it for
+the Cloud console. Either add a test account for the app or publish it for
 production use.
 
 Add Account
 -----------
 
 After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
-If you already have Google email channels, you can skip this step and head over
-to :ref:`migrate-channel`.
 
 .. danger::
    * By default, Zammad will **delete all emails** in your inbox
