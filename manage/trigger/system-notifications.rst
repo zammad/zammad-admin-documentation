@@ -29,13 +29,13 @@ When Are They Sent?
 
 * New tickets
 * Ticket updates
-* "Ticket pending" reminders
+* Pending reached tickets
 * SLA violations (before and after the deadline)
 
 Agents can change their notification settings in their :user-docs:`user profile </extras/profile-and-settings.html>`.
 
 Daily reminder emails are sent at midnight (of the Zammad system timezone)
-for all unresolved "ticket pending" reminders and SLA violations.
+for all pending reached tickets and SLA violations.
 
 How Can I Customize Them?
 -------------------------
