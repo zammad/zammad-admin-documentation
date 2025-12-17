@@ -19,8 +19,9 @@ When Are They Sent?
 
 **All users** are notified of:
 
-* Password change requests
-* :ref:`Automatic-account-linking-notification` on initial login
+* Password changes
+* :ref:`Account linking notification <automatic-account-linking-notification>`
+  on initial login
 
 **Staff (admins & agents)** are notified of:
 
@@ -34,8 +35,12 @@ When Are They Sent?
 * Pending reached tickets
 * SLA violations (before and after the deadline)
 
+Agents can change their notification settings in their
+:user-docs:`user profile </extras/profile-and-settings.html>`.
+
 Daily reminder emails are sent at midnight (of the Zammad system timezone)
-for all pending reached tickets and SLA violations.
+for all tickets where the *pending till* time is reached or SLA violations
+exist.
 
 How Can I Customize Them?
 -------------------------
