@@ -18,6 +18,7 @@ the requests. You can configure it in Zammad's admin settings under
 .. figure:: /images/ai/ai-provider.png
    :alt: Screenshot shows configuration of AI provider in Zammad
    :align: center
+   :width: 60%
 
 The following providers are supported:
 
