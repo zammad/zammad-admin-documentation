@@ -17,8 +17,9 @@ When Are They Sent?
 
 **All users** are notified about:
 
-* Password change requests
-* :ref:`automatic-account-linking-notification` on initial login
+* Password changes
+* :ref:`Account linking notification <automatic-account-linking-notification>`
+  on initial login
 
 **Staff (admins & agents)** are notified of:
 
