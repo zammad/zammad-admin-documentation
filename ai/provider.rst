@@ -1,7 +1,7 @@
 Provider
 ========
 
-Zammad offers AI powered features to support your agents!
+Zammad offers AI-powered features to support your agents!
 To use AI features in Zammad, you have to configure an AI provider which handles
 the requests first. Add your provider in Zammad's admin settings under
 *AI > Provider*. To access this page, the ``admin.ai_provider`` permission is
@@ -50,7 +50,7 @@ URL (Completions)
 Model
    Enter the exact name of the model here. This model has to be available on
    your provider's side. Leave it empty (if not mandatory) to use the default
-   which is shown as placeholder.
+   which is shown as a placeholder.
 
 Recognize Image Text (OCR)
    Zammad allows you to use optical character recognition (OCR) to extract text
@@ -74,7 +74,7 @@ Excursion
 ---------
 
 In case you want to know more about Zammad AI or Ollama, read on here. Otherwise,
-head over to :ref:`feedback-logs` or check out the AI powered features and how
+head over to :ref:`feedback-logs` or check out the AI-powered features and how
 to use them.
 
 .. _zammad-ai-provider:
@@ -82,11 +82,12 @@ to use them.
 Zammad AI
 ^^^^^^^^^
 
-Using Zammad AI as a provider is the most easy way you can get started with
-Zammad's AI feature. It has some big advantages:
+Using Zammad AI as a provider is the easiest way you can get started with
+Zammad's AI features. It has some big advantages like:
 
-- You don't have to care for the AI setup and configuration compared to do
-  it yourself.
+- You don't have to take care of the setup of an AI system and its
+  configuration.
+- Hosted in Germany and compliant with GDPR.
 - No configuration in Zammad needed (for SaaS customers) or only an API key
   required (for self-hosted customers).
 - Your requests with sensitive information aren't used for training.
@@ -96,15 +97,17 @@ Zammad's AI feature. It has some big advantages:
 SaaS Customers
    Using Zammad AI requires a "V2" plan. Check your
    :doc:`subscription settings </system/subscription>` and consider to switch
-   your plan. If a "V2" plan is active, you can buy tokens for AI processing.
+   your plan. If a "V2" plan is active, you can buy AI calls for AI processing.
    After doing so, Zammad AI is automatically configured as AI provider and
-   you can activate and configure AI features as you like.
+   you can activate and configure AI features as you like. Check your remaining
+   AI calls from time to time or activate the notification to be alerted when
+   few calls remain.
 
 Self-Hosted Customers
    Please `get in touch with our sales department <https://zammad.com/en/company/contact>`_
-   to obtain a Zammad AI API key and to buy tokens.
+   to obtain a Zammad AI API key and to buy AI calls.
    After receiving your API key, simply add and save it. Then you are ready to
-   activate an configure AI features as you like.
+   activate and configure AI features as you like.
 
 Ollama
 ^^^^^^
@@ -114,22 +117,12 @@ own AI server on a machine you control. That means your data is not transferred
 to a third party. Be aware that this only makes sense if you have a powerful
 GPU in your system!
 
-When choosing Ollama as your AI provider, you just have to provide the IP/URL
-of your instance with appended port number. To use a specific model, add its
-name in the **Model** field. Leave it empty to use the default which is shown as
-placeholder in the field. In any case, the correct model has to be available.
-
 If you don't have an Ollama running already, their
-`deployment guide <https://github.com/ollama/ollama/blob/main/docs/linux.md>`_
+`documentation <https://docs.ollama.com/>`_
 is a good starting point. You can find the available models in
 `Ollama's model library <https://ollama.com/library>`_ and useful information
 and additional links in the
-`Ollama Github repository <https://github.com/ollama/ollama>`_. If you just
-installed Ollama, you can pull and run a model by executing:
-
-.. code-block:: sh
-
-    ollama run llama3.2
+`Ollama Github repository <https://github.com/ollama/ollama>`_.
 
 .. _feedback-logs:
 
