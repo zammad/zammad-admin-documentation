@@ -1,60 +1,110 @@
 Provider
 ========
 
-Introduction
-------------
+Zammad offers AI powered features to support your agents!
+To use AI features in Zammad, you have to configure an AI provider which handles
+the requests first. Add your provider in Zammad's admin settings under
+*AI > Provider*. To access this page, the ``admin.ai_provider`` permission is
+required.
 
-Zammad offers AI powered features to support your agents! The
-configuration is pretty easy so the entry barrier is low.
-Read on how to configure it and check which features are currently supported.
-
-Provider Configuration
-----------------------
-
-To use AI feature in Zammad, you have to configure an AI provider which handles
-the requests. You can configure it in Zammad's admin settings under
-*AI > Provider*.
+Settings
+--------
 
 .. figure:: /images/ai/ai-provider.png
    :alt: Screenshot shows configuration of AI provider in Zammad
    :align: center
+   :width: 60%
 
-The following providers are supported:
+Provider
+   You can choose from different supported providers:
 
-- :ref:`anthropic-provider`
-- :ref:`azure-provider`
-- :ref:`ollama-provider`
-- :ref:`openai-provider`
-- :ref:`zammad-ai-provider`
-- :ref:`openai-compatible-provider`
+   - Zammad AI
+   - OpenAI
+   - Ollama
+   - Anthropic
+   - Azure AI
+   - Mistral AI
+   - Custom (OpenAI Compatible)
 
-.. note:: The AI service you have subscribed to is not available? This is just
-   the first step. We are going to add more providers soon! If you want to
-   support us or need the provider as soon as possible, just let our
-   `sales department <https://zammad.com/en/company/contact>`_ know!
+   Depending on which provider you choose, Zammad displays different fields you
+   can configure.
 
-.. _anthropic-provider:
+   .. note:: The AI service you have subscribed to is not available? This is just
+      the first step. We are going to add more providers soon! If you want to
+      support us or need the provider as soon as possible, just let our
+      `sales department <https://zammad.com/en/company/contact>`_ know!
 
-Anthropic
+Token
+   Add your API token which you got from your provider here. Don't confuse it
+   with the tokens a large language model (LLM) is dealing with when processing
+   a request.
+
+URL
+   Provide the URL or IP address of your provider. This is required for Ollama
+   and OpenAI compatible providers.
+
+URL (Completions)
+   Only for Azure AI as provider. Add the endpoint where your text generation
+   model is available.
+
+Model
+   Enter the exact name of the model here. This model has to be available on
+   your provider's side. Leave it empty (if not mandatory) to use the default
+   which is shown as placeholder.
+
+Recognize Image Text (OCR)
+   Zammad allows you to use optical character recognition (OCR) to extract text
+   from images. This can be useful if you often get error messages or other
+   important information, which is only present in images.
+
+   Simply switch the toggle on or off. Be aware that using this feature can
+   cause a high consumption of tokens.
+
+OCR Model
+   Specify a model to use for the OCR feature. Leave it empty to use the default
+   model of your provider.
+
+   Note: the field is called **URL (OCR)** for Azure AI and expects a URL where
+   the OCR model is available instead of a model itself.
+
+After providing the information, make sure to click the ``Save`` button and
+activate AI features.
+
+Excursion
+---------
+
+In case you want to know more about Zammad AI or Ollama, read on here. Otherwise,
+head over to :ref:`feedback-logs` or check out the AI powered features and how
+to use them.
+
+.. _zammad-ai-provider:
+
+Zammad AI
 ^^^^^^^^^
 
-To use Anthropic's service as AI backend, choose it as AI provider and add
-your API token. After that, make sure to click the ``Save`` button and read on
-in the desired feature's section. To use a specific model, add its name in the **Model**
-field. Leave it empty to use the default which is shown as  placeholder in the
-field.
+Using Zammad AI as a provider is the most easy way you can get started with
+Zammad's AI feature. It has some big advantages:
 
-.. _azure-provider:
+- You don't have to care for the AI setup and configuration compared to do
+  it yourself.
+- No configuration in Zammad needed (for SaaS customers) or only an API key
+  required (for self-hosted customers).
+- Your requests with sensitive information aren't used for training.
+- If something isn't working as expected, you just have one place where you
+  get support.
 
-Azure AI
-^^^^^^^^
+SaaS Customers
+   Using Zammad AI requires a "V2" plan. Check your
+   :doc:`subscription settings </system/subscription>` and consider to switch
+   your plan. If a "V2" plan is active, you can buy tokens for AI processing.
+   After doing so, Zammad AI is automatically configured as AI provider and
+   you can activate and configure AI features as you like.
 
-To use the Azure AI service as AI backend, choose it as AI provider and add
-your URL as well as your API token. You get the URL after configuring the AI
-service in Azure. After that, make sure to click the ``Save`` button and read on
-in the desired feature's section.
-
-.. _ollama-provider:
+Self-Hosted Customers
+   Please `get in touch with our sales department <https://zammad.com/en/company/contact>`_
+   to obtain a Zammad AI API key and to buy tokens.
+   After receiving your API key, simply add and save it. Then you are ready to
+   activate an configure AI features as you like.
 
 Ollama
 ^^^^^^
@@ -81,55 +131,29 @@ installed Ollama, you can pull and run a model by executing:
 
     ollama run llama3.2
 
-Make sure to click the ``Save`` button and read on in the desired feature's
-section.
+.. _feedback-logs:
 
-.. _openai-provider:
+Feedback & Logs
+---------------
 
-OpenAI
-^^^^^^
+At the top of the settings page, you can switch to the **Feedback & Logs** tab.
 
-You probably already heard about `OpenAI <https://openai.com/>`_, haven't
-you? To use their service as AI backend, choose them as AI provider and add
-your API token. To use a specific model, add its name in the **Model** field.
-Leave it empty to use the default which is shown as placeholder in the field.
+.. figure:: /images/ai/provider-feedback-logs.png
+   :alt: Screenshot shows AI provider settings with activated "Feedback & Logs" tab
+   :align: center
+   :width: 60%
 
-Make sure to click the ``Save`` button and read on in the desired feature's
-section.
-
-.. hint:: You can also use an
-   :ref:`OpenAI compatible custom provider <openai-compatible-provider>`.
-
-.. _zammad-ai-provider:
-
-Zammad AI
+Downloads
 ^^^^^^^^^
 
-.. note:: Zammad as AI provider is currently limited to specific customers for
-   testing. If you're interested as well, please
-   `let our sales department know <https://zammad.com/en/company/contact>`_.
+Your agents can provide feedback like thumbs up or down and leave a comment in
+case they gave thumbs down. You can download this feedback as well as error
+logs. Both downloads provide an Excel file (.xlsx) with the requested
+information.
 
-The usage of Zammad AI as a provider has some benefits:
+Recent Logs
+^^^^^^^^^^^
 
-- You don't have to care about the setup and configuration compared to your own
-  setup.
-- Your requests with sensitive information aren't used for training.
-- If something isn't working as expected, you just have one place where you
-  get support.
-
-To configure it, simply choose **Zammad AI** as your provider and add your
-token. After that, make sure to click the ``Save`` button and read on in
-the desired feature's section.
-
-.. _openai-compatible-provider:
-
-Custom (OpenAI Compatible)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Use this option to connect to an OpenAI compatible provider. To use OpenAI
-itself, choose :ref:`OpenAI as provider <openai-provider>` instead. Add a URL,
-a token and a model you want to use. The model is mandatory and must match the
-model name from your AI provider.
-
-Make sure to click the ``Save`` button and read on in the desired feature's
-section.
+Zammad shows the last requests and responses in the UI as well. So in case
+something isn't working, have a look there. When you open an entry, you can
+find the request as well as the response from your AI provider.
