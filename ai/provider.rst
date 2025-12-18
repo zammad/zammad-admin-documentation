@@ -87,7 +87,7 @@ Zammad's AI features. It has some big advantages like:
 
 - You don't have to take care of the setup of an AI system and its
   configuration.
-- Hosted in Germany and compliant with GDPR.
+- Hosted in the EU and compliant with GDPR.
 - No configuration in Zammad needed (for SaaS customers) or only an API key
   required (for self-hosted customers).
 - Your requests with sensitive information aren't used for training.
