@@ -31,4 +31,4 @@ individually in the :doc:`group management </manage/groups/index>`.
 
 .. hint:: If you use an own Ollama server as provider, make sure to have the
    ``llama3.2`` model available for this feature or specify an available model
-   in the :ref:`provider configuration <ollama-provider>`.
+   in the :doc:`provider configuration <provider>`.
