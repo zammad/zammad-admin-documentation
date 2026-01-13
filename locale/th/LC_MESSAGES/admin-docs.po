@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-11 10:08+0100\n"
+"POT-Creation-Date: 2026-01-12 11:16+0100\n"
 "PO-Revision-Date: 2025-05-30 05:00+0000\n"
 "Last-Translator: Sumonchai Wongphithak <sumonchai@gmail.com>\n"
 "Language-Team: Thai <https://translations.zammad.org/projects/documentations/"
@@ -198,70 +198,67 @@ msgid ""
 "creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
-#: ../ai/provider.rst:2
+#: ../ai/provider.rst:2 ../ai/provider.rst:35
 msgid "Provider"
 msgstr ""
 
-#: ../ai/provider.rst:5 ../channels/chat.rst:5 ../channels/facebook.rst:5
-#: ../misc/object-conditions/basics.rst:5
-#: ../settings/security/ssl-certificates.rst:5
-#: ../settings/security/third-party/saml.rst:5
-#: ../system/integrations/clearbit.rst:9 ../system/integrations/exchange.rst:8
-#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
-msgid "Introduction"
-msgstr ""
-
-#: ../ai/provider.rst:7
+#: ../ai/provider.rst:4
 msgid ""
-"Zammad offers AI powered features to support your agents! The configuration "
-"is pretty easy so the entry barrier is low. Read on how to configure it and "
-"check which features are currently supported."
+"Zammad offers AI-powered features to support your agents! To use AI features "
+"in Zammad, you have to configure an AI provider which handles the requests "
+"first. Add your provider in Zammad's admin settings under *AI > Provider*. "
+"To access this page, the ``admin.ai_provider`` permission is required."
 msgstr ""
 
-#: ../ai/provider.rst:12
-msgid "Provider Configuration"
-msgstr ""
-
-#: ../ai/provider.rst:14
-msgid ""
-"To use AI feature in Zammad, you have to configure an AI provider which "
-"handles the requests. You can configure it in Zammad's admin settings under "
-"*AI > Provider*."
-msgstr ""
+#: ../ai/provider.rst:11 ../channels/email/settings.rst:2
+#: ../channels/form.rst:28 ../index.rst:56 ../manage/time-accounting.rst:15
+#: ../system/integrations/checkmk/admin-panel-reference.rst:5
+msgid "Settings"
+msgstr "ตั้งค่า"
 
 #: ../ai/provider.rst:None
 msgid "Screenshot shows configuration of AI provider in Zammad"
 msgstr ""
 
+#: ../ai/provider.rst:19
+msgid "You can choose from different supported providers:"
+msgstr ""
+
+#: ../ai/provider.rst:21 ../ai/provider.rst:83
+msgid "Zammad AI"
+msgstr ""
+
 #: ../ai/provider.rst:22
-msgid "The following providers are supported:"
+msgid "OpenAI"
+msgstr ""
+
+#: ../ai/provider.rst:23 ../ai/provider.rst:113
+msgid "Ollama"
 msgstr ""
 
 #: ../ai/provider.rst:24
-msgid ":ref:`anthropic-provider`"
+msgid "Anthropic"
 msgstr ""
 
 #: ../ai/provider.rst:25
-msgid ":ref:`azure-provider`"
+msgid "Azure AI"
 msgstr ""
 
 #: ../ai/provider.rst:26
-msgid ":ref:`ollama-provider`"
+msgid "Mistral AI"
 msgstr ""
 
 #: ../ai/provider.rst:27
-msgid ":ref:`openai-provider`"
-msgstr ""
-
-#: ../ai/provider.rst:28
-msgid ":ref:`zammad-ai-provider`"
+msgid "Custom (OpenAI Compatible)"
 msgstr ""
 
 #: ../ai/provider.rst:29
-msgid ":ref:`openai-compatible-provider`"
+msgid ""
+"Depending on which provider you choose, Zammad displays different fields you "
+"can configure."
 msgstr ""
 
-#: ../ai/provider.rst:31
+#: ../ai/provider.rst:32
 msgid ""
 "The AI service you have subscribed to is not available? This is just the "
 "first step. We are going to add more providers soon! If you want to support "
@@ -269,36 +266,159 @@ msgid ""
 "<https://zammad.com/en/company/contact>`_ know!"
 msgstr ""
 
-#: ../ai/provider.rst:39
-msgid "Anthropic"
+#: ../ai/provider.rst:40
+msgid "Token"
 msgstr ""
 
-#: ../ai/provider.rst:41
+#: ../ai/provider.rst:38
 msgid ""
-"To use Anthropic's service as AI backend, choose it as AI provider and add "
-"your API token. After that, make sure to click the ``Save`` button and read "
-"on in the desired feature's section. To use a specific model, add its name "
-"in the **Model** field. Leave it empty to use the default which is shown as  "
-"placeholder in the field."
+"Add your API token which you got from your provider here. Don't confuse it "
+"with the tokens a large language model (LLM) is dealing with when processing "
+"a request."
 msgstr ""
 
-#: ../ai/provider.rst:50
-msgid "Azure AI"
+#: ../ai/provider.rst:44 ../manage/knowledge-base.rst:151
+#: ../system/integrations/elasticsearch.rst:57
+msgid "URL"
 msgstr ""
 
-#: ../ai/provider.rst:52
+#: ../ai/provider.rst:43
 msgid ""
-"To use the Azure AI service as AI backend, choose it as AI provider and add "
-"your URL as well as your API token. You get the URL after configuring the AI "
-"service in Azure. After that, make sure to click the ``Save`` button and "
-"read on in the desired feature's section."
+"Provide the URL or IP address of your provider. This is required for Ollama "
+"and OpenAI compatible providers."
+msgstr ""
+
+#: ../ai/provider.rst:48
+msgid "URL (Completions)"
+msgstr ""
+
+#: ../ai/provider.rst:47
+msgid ""
+"Only for Azure AI as provider. Add the endpoint where your text generation "
+"model is available."
+msgstr ""
+
+#: ../ai/provider.rst:53
+msgid "Model"
+msgstr ""
+
+#: ../ai/provider.rst:51
+msgid ""
+"Enter the exact name of the model here. This model has to be available on "
+"your provider's side. Leave it empty (if not mandatory) to use the default "
+"which is shown as a placeholder."
+msgstr ""
+
+#: ../ai/provider.rst:61
+msgid "Recognize Image Text (OCR)"
+msgstr ""
+
+#: ../ai/provider.rst:56
+msgid ""
+"Zammad allows you to use optical character recognition (OCR) to extract text "
+"from images. This can be useful if you often get error messages or other "
+"important information, which is only present in images."
 msgstr ""
 
 #: ../ai/provider.rst:60
-msgid "Ollama"
+msgid ""
+"Simply switch the toggle on or off. Be aware that using this feature can "
+"cause a high consumption of tokens."
 msgstr ""
 
-#: ../ai/provider.rst:62
+#: ../ai/provider.rst:68
+msgid "OCR Model"
+msgstr ""
+
+#: ../ai/provider.rst:64
+msgid ""
+"Specify a model to use for the OCR feature. Leave it empty to use the "
+"default model of your provider."
+msgstr ""
+
+#: ../ai/provider.rst:67
+msgid ""
+"Note: the field is called **URL (OCR)** for Azure AI and expects a URL where "
+"the OCR model is available instead of a model itself."
+msgstr ""
+
+#: ../ai/provider.rst:70
+msgid ""
+"After providing the information, make sure to click the ``Save`` button and "
+"activate AI features."
+msgstr ""
+
+#: ../ai/provider.rst:74
+msgid "Excursion"
+msgstr ""
+
+#: ../ai/provider.rst:76
+msgid ""
+"In case you want to know more about Zammad AI or Ollama, read on here. "
+"Otherwise, head over to :ref:`feedback-logs` or check out the AI-powered "
+"features and how to use them."
+msgstr ""
+
+#: ../ai/provider.rst:85
+msgid ""
+"Using Zammad AI as a provider is the easiest way you can get started with "
+"Zammad's AI features. It has some big advantages like:"
+msgstr ""
+
+#: ../ai/provider.rst:88
+msgid ""
+"You don't have to take care of the setup of an AI system and its "
+"configuration."
+msgstr ""
+
+#: ../ai/provider.rst:90
+msgid "Hosted in the EU and compliant with GDPR."
+msgstr ""
+
+#: ../ai/provider.rst:91
+msgid ""
+"No configuration in Zammad needed (for SaaS customers) or only an API key "
+"required (for self-hosted customers)."
+msgstr ""
+
+#: ../ai/provider.rst:93
+msgid "Your requests with sensitive information aren't used for training."
+msgstr ""
+
+#: ../ai/provider.rst:94
+msgid ""
+"If something isn't working as expected, you just have one place where you "
+"get support."
+msgstr ""
+
+#: ../ai/provider.rst:104
+msgid "SaaS Customers"
+msgstr ""
+
+#: ../ai/provider.rst:98
+msgid ""
+"Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
+"settings </system/subscription>` and consider to switch your plan. If a "
+"\"V2\" plan is active, you can buy AI calls for AI processing. After doing "
+"so, Zammad AI is automatically configured as AI provider and you can "
+"activate and configure AI features as you like. Check your remaining AI "
+"calls from time to time or activate the notification to be alerted when few "
+"calls remain."
+msgstr ""
+
+#: ../ai/provider.rst:110
+msgid "Self-Hosted Customers"
+msgstr ""
+
+#: ../ai/provider.rst:107
+msgid ""
+"Please `get in touch with our sales department <https://zammad.com/en/"
+"company/contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
+"receiving your API key, simply add and save it. Then you are ready to "
+"activate and configure AI features as you like."
+msgstr ""
+
+#: ../ai/provider.rst:115
 msgid ""
 "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your "
 "own AI server on a machine you control. That means your data is not "
@@ -306,98 +426,55 @@ msgid ""
 "have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:67
-msgid ""
-"When choosing Ollama as your AI provider, you just have to provide the IP/"
-"URL of your instance with appended port number. To use a specific model, add "
-"its name in the **Model** field. Leave it empty to use the default which is "
-"shown as placeholder in the field. In any case, the correct model has to be "
-"available."
-msgstr ""
-
-#: ../ai/provider.rst:72
-msgid ""
-"If you don't have an Ollama running already, their `deployment guide "
-"<https://github.com/ollama/ollama/blob/main/docs/linux.md>`_ is a good "
-"starting point. You can find the available models in `Ollama's model library "
-"<https://ollama.com/library>`_ and useful information and additional links "
-"in the `Ollama Github repository <https://github.com/ollama/ollama>`_. If "
-"you just installed Ollama, you can pull and run a model by executing:"
-msgstr ""
-
-#: ../ai/provider.rst:84 ../ai/provider.rst:97 ../ai/provider.rst:134
-msgid ""
-"Make sure to click the ``Save`` button and read on in the desired feature's "
-"section."
-msgstr ""
-
-#: ../ai/provider.rst:90
-msgid "OpenAI"
-msgstr ""
-
-#: ../ai/provider.rst:92
-msgid ""
-"You probably already heard about `OpenAI <https://openai.com/>`_, haven't "
-"you? To use their service as AI backend, choose them as AI provider and add "
-"your API token. To use a specific model, add its name in the **Model** "
-"field. Leave it empty to use the default which is shown as placeholder in "
-"the field."
-msgstr ""
-
-#: ../ai/provider.rst:100
-msgid ""
-"You can also use an :ref:`OpenAI compatible custom provider <openai-"
-"compatible-provider>`."
-msgstr ""
-
-#: ../ai/provider.rst:106
-msgid "Zammad AI"
-msgstr ""
-
-#: ../ai/provider.rst:108
-msgid ""
-"Zammad as AI provider is currently limited to specific customers for "
-"testing. If you're interested as well, please `let our sales department know "
-"<https://zammad.com/en/company/contact>`_."
-msgstr ""
-
-#: ../ai/provider.rst:112
-msgid "The usage of Zammad AI as a provider has some benefits:"
-msgstr ""
-
-#: ../ai/provider.rst:114
-msgid ""
-"You don't have to care about the setup and configuration compared to your "
-"own setup."
-msgstr ""
-
-#: ../ai/provider.rst:116
-msgid "Your requests with sensitive information aren't used for training."
-msgstr ""
-
-#: ../ai/provider.rst:117
-msgid ""
-"If something isn't working as expected, you just have one place where you "
-"get support."
-msgstr ""
-
 #: ../ai/provider.rst:120
 msgid ""
-"To configure it, simply choose **Zammad AI** as your provider and add your "
-"token. After that, make sure to click the ``Save`` button and read on in the "
-"desired feature's section."
+"If you don't have an Ollama running already, their `documentation <https://"
+"docs.ollama.com/>`_ is a good starting point. You can find the available "
+"models in `Ollama's model library <https://ollama.com/library>`_ and useful "
+"information and additional links in the `Ollama Github repository <https://"
+"github.com/ollama/ollama>`_."
 msgstr ""
 
-#: ../ai/provider.rst:127
-msgid "Custom (OpenAI Compatible)"
+#: ../ai/provider.rst:130
+msgid "Feedback & Logs"
 msgstr ""
 
-#: ../ai/provider.rst:129
+#: ../ai/provider.rst:132
 msgid ""
-"Use this option to connect to an OpenAI compatible provider. To use OpenAI "
-"itself, choose :ref:`OpenAI as provider <openai-provider>` instead. Add a "
-"URL, a token and a model you want to use. The model is mandatory and must "
-"match the model name from your AI provider."
+"At the top of the settings page, you can switch to the **Feedback & Logs** "
+"tab."
+msgstr ""
+
+#: ../ai/provider.rst:None
+msgid ""
+"Screenshot shows AI provider settings with activated \"Feedback & Logs\" tab"
+msgstr ""
+
+#: ../ai/provider.rst:140
+msgid "Downloads"
+msgstr ""
+
+#: ../ai/provider.rst:142
+msgid ""
+"Your agents can provide feedback like thumbs up or down and leave a comment "
+"in case they gave thumbs down. You can download this feedback as well as "
+"error logs. Both downloads provide an Excel file (.xlsx) with the requested "
+"information."
+msgstr ""
+
+#: ../ai/provider.rst:148
+#: ../system/integrations/checkmk/admin-panel-reference.rst:35
+#: ../system/integrations/cti/includes/recent-logs.include.rst:2
+#: ../system/integrations/ldap/index.rst:164
+#: ../system/integrations/pgp/index.rst:106
+msgid "Recent Logs"
+msgstr ""
+
+#: ../ai/provider.rst:150
+msgid ""
+"Zammad shows the last requests and responses in the UI as well. So in case "
+"something isn't working, have a look there. When you open an entry, you can "
+"find the request as well as the response from your AI provider."
 msgstr ""
 
 #: ../ai/summary.rst:2
@@ -451,7 +528,7 @@ msgstr ""
 msgid ""
 "If you use an own Ollama server as provider, make sure to have the "
 "``llama3.2`` model available for this feature or specify an available model "
-"in the :ref:`provider configuration <ollama-provider>`."
+"in the :doc:`provider configuration <provider>`."
 msgstr ""
 
 #: ../ai/writing-assistant.rst:2
@@ -676,6 +753,15 @@ msgstr ""
 
 #: ../channels/chat.rst:2 ../misc/first-steps.rst:84
 msgid "Chat"
+msgstr ""
+
+#: ../channels/chat.rst:5 ../channels/facebook.rst:5
+#: ../misc/object-conditions/basics.rst:5
+#: ../settings/security/ssl-certificates.rst:5
+#: ../settings/security/third-party/saml.rst:5
+#: ../system/integrations/clearbit.rst:9 ../system/integrations/exchange.rst:8
+#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
+msgid "Introduction"
 msgstr ""
 
 #: ../channels/chat.rst:7
@@ -2537,12 +2623,6 @@ msgstr ""
 #: ../channels/email/index.rst:79
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr ""
-
-#: ../channels/email/settings.rst:2 ../channels/form.rst:28 ../index.rst:56
-#: ../manage/time-accounting.rst:15
-#: ../system/integrations/checkmk/admin-panel-reference.rst:5
-msgid "Settings"
-msgstr "ตั้งค่า"
 
 #: ../channels/email/settings.rst:None
 msgid "Settings section in email channel"
@@ -7518,10 +7598,6 @@ msgstr ""
 msgid "This is the URL title that's being displayed to your users."
 msgstr ""
 
-#: ../manage/knowledge-base.rst:151 ../system/integrations/elasticsearch.rst:57
-msgid "URL"
-msgstr ""
-
 #: ../manage/knowledge-base.rst:151
 msgid "The actual URL the user is going to open upon clicking."
 msgstr ""
@@ -11765,78 +11841,81 @@ msgid "**All users** are notified about:"
 msgstr ""
 
 #: ../manage/trigger/system-notifications.rst:20
-msgid "Password change requests"
+msgid "Password changes"
 msgstr ""
 
 #: ../manage/trigger/system-notifications.rst:21
-msgid ":ref:`automatic-account-linking-notification` on initial login"
+msgid ""
+":ref:`Account linking notification <automatic-account-linking-notification>` "
+"on initial login"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:23
+#: ../manage/trigger/system-notifications.rst:24
 msgid "**Staff (admins & agents)** are notified of:"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:25
+#: ../manage/trigger/system-notifications.rst:26
 msgid "Logins from a new device"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:26
+#: ../manage/trigger/system-notifications.rst:27
 msgid "Logins from a new country"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:28
+#: ../manage/trigger/system-notifications.rst:29
 msgid "**Agents** are notified about:"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:30
+#: ../manage/trigger/system-notifications.rst:31
 msgid "New tickets"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:31
+#: ../manage/trigger/system-notifications.rst:32
 #, fuzzy
 #| msgid "Ticket Attributes"
 msgid "Ticket updates"
 msgstr "คุณลักษณะของตั๋ว"
 
-#: ../manage/trigger/system-notifications.rst:32
+#: ../manage/trigger/system-notifications.rst:33
 msgid "Pending reached tickets"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:33
+#: ../manage/trigger/system-notifications.rst:34
 msgid "SLA violations (before and after the deadline)"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:35
+#: ../manage/trigger/system-notifications.rst:36
 msgid ""
 "Agents can change their notification settings in their :user-docs:`user "
 "profile </extras/profile-and-settings.html>`."
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:37
+#: ../manage/trigger/system-notifications.rst:39
 msgid ""
 "Daily reminder emails are sent at midnight (of the Zammad system timezone) "
-"for all pending reached tickets and SLA violations."
+"for all tickets where the *pending till* time is reached or SLA violations "
+"exist."
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:41
+#: ../manage/trigger/system-notifications.rst:44
 msgid "How Can I Customize Them?"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:43
+#: ../manage/trigger/system-notifications.rst:46
 msgid ""
 "Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
 "various events are stored inside the ``/app/views/mailer`` directory, named "
 "according to the language they're written in. Thus, ::"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:49
+#: ../manage/trigger/system-notifications.rst:52
 msgid ""
 "is the German-language template used to notify agents whenever a new ticket "
 "is created. To modify this template, create another file with the same name "
 "and add a ``.custom`` suffix::"
 msgstr ""
 
-#: ../manage/trigger/system-notifications.rst:55
+#: ../manage/trigger/system-notifications.rst:58
 msgid ""
 "Now, this file will be used instead of the original when sending "
 "notification emails in German."
@@ -22411,13 +22490,6 @@ msgid ""
 "enough for you, you can :ref:`define a new ticket state <ticket-state-"
 "reference>` for this purpose as well. This can be useful for tracking "
 "tickets with :doc:`reports </manage/report-profiles>`, for example."
-msgstr ""
-
-#: ../system/integrations/checkmk/admin-panel-reference.rst:35
-#: ../system/integrations/cti/includes/recent-logs.include.rst:2
-#: ../system/integrations/ldap/index.rst:164
-#: ../system/integrations/pgp/index.rst:106
-msgid "Recent Logs"
 msgstr ""
 
 #: ../system/integrations/checkmk/admin-panel-reference.rst:None
