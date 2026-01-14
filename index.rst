@@ -68,8 +68,8 @@ Zammad Admin Documentation
 
    ai/provider
    ai/summary
-   ai/ai-agents
    ai/writing-assistant
+   ai/ai-agents
 
 .. _system-docs:
 
