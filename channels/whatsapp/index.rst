@@ -1,7 +1,7 @@
 WhatsApp
 ========
 
-Connect your Zammad with a WhatsApp Business account so your customers can
+Connect Zammad with a WhatsApp Business account so your customers can
 reach out to you through WhatsApp. 🎉
 
 .. warning::
