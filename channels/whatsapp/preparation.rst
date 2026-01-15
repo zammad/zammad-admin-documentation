@@ -16,16 +16,10 @@ Create a Meta Business Account
 ------------------------------
 
 If you don't already have a business account, visit
-https://business.facebook.com/overview and click on "Create an account":
-
-.. figure:: /images/channels/whatsapp/create-meta-business-account.png
-    :alt: Meta business account starting page
-    :align: center
-
+https://business.facebook.com/overview and click on "Create an account".
 Have a look at
 `Meta's documentation <https://www.facebook.com/business/help/1710077379203657?id=180505742745347>`_
 if you have problems.
-
 
 Create a Meta Developer Account
 -------------------------------
@@ -38,41 +32,38 @@ Create a Meta Developer App
 ---------------------------
 
 While already logged in with your developer account, go to
-https://developers.facebook.com/apps/.
-
-You will see a screen like the following screenshot. Click on "Create App" and
-follow the steps below.
+https://developers.facebook.com/apps/. Click on "Create App" and follow the
+steps below.
 
 .. figure:: /images/channels/whatsapp/meta-create-app.png
     :alt: Meta developer app overview
     :align: center
 
-Choose "Other" when you are asked what you want to do with your app:
+Enter a fitting name and provide a contact email address for your app:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step1.png
     :alt: Meta app creation step 1
     :align: center
-    :scale: 50%
 
-Choose "Business" as app type:
+Choose a business portfolio, in case you have more than one:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step2.png
     :alt: Meta app creation step 2
     :align: center
-    :scale: 50%
 
-Enter a name for the app, a contact email address and a business account.
-Please note that the name may not contain specific product names from Meta, as
-you can see in the screenshot below.
+Check if additional steps are required and follow them. In case everything is
+fine, you should see a screen like this:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step3.png
-    :alt: Meta app creation step 2
+    :alt: Meta app creation step 3
     :align: center
-    :scale: 50%
 
-If you already have a business account, you should assign it. In this step, this
-is optional, but later it is required anyway. Click on "Create App" to finish
-this step.
+After that, you see a summary of your configuration. Check if everything is
+correct and go back to the dashboard via button:
+
+.. figure:: /images/channels/whatsapp/meta-create-app-step4.png
+    :alt: Meta app creation step 4
+    :align: center
 
 Add WhatsApp Product to Your App
 --------------------------------
