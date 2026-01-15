@@ -103,7 +103,7 @@ This third step is about telling WhatsApp where, how and what data to send.
 .. figure:: /images/channels/whatsapp/setup-step-3.png
    :alt: Step 3 of adding a WhatsApp account
    :align: center
-   :scale: 80%
+   :width: 40%
 
 Go to *Use cases > Configuration* and copy/paste the values from
 **Callback URL** as well as **Verify Token** from Zammad. Confirm with
