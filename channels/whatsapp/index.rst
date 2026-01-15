@@ -1,37 +1,33 @@
 WhatsApp
 ========
 
-With the release of Zammad 6.3, you can now connect your Zammad with a
-WhatsApp Business account, allowing your customers to reach out to you through
-WhatsApp. 🎉
-
-If you already dived deep into this topic, you can head to the setup guide.
-If not, we strongly encourage you to read the prerequisites and limitations
-of this channel carefully and to follow our tutorial for preparing your
-setup.
-
-We tried to keep it clear and created a separate sub-page for the necessary
-steps on Meta/WhatsApp side.
+Connect your Zammad with a WhatsApp Business account so your customers can
+reach out to you through WhatsApp. 🎉
 
 .. warning::
-   Please be aware that the usage of **WhatsApp Cloud API** is mandatory to
-   connect WhatsApp to Zammad. You won't be able
-   to connect to WhatsApp in Zammad if you just use the WhatsApp Business *App*.
-   Have a look
-   `here <https://developers.facebook.com/docs/whatsapp/cloud-api>`_
-   for further information about the Cloud API.
 
-   There may be additional costs for you from Meta/WhatsApp side. Have a look
-   at their
-   `pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to
-   be safe from surprises.
+   - The usage of **WhatsApp Cloud API** is mandatory to connect WhatsApp to
+     Zammad. You won't be able to connect to WhatsApp in Zammad if you just use
+     the WhatsApp Business *App*. Have a look
+     `here <https://developers.facebook.com/docs/whatsapp/cloud-api>`_
+     for further information about the Cloud API.
+   - There may be additional costs for you from Meta/WhatsApp side. Have a look
+     at their
+     `pricing page <https://developers.facebook.com/docs/whatsapp/pricing>`_ to
+     be safe from surprises.
+   - This setup process can be very time consuming. You should have some time to
+     follow this guide.
 
-   Be aware that if you go through the whole process, it is very time consuming.
-   You should have some time to follow our preparation guide.
+If you are already familiar with Meta's app creation process and their developer
+console, you can directly jump to the setup page.
+In all other cases, we strongly encourage you to read about the limitations
+of this channel carefully and to follow the preparation steps first.
+
+This guide is separated in 3 sub-pages:
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
-   preparation
    limitations
+   preparation
    setup

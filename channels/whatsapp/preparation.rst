@@ -104,4 +104,4 @@ Now go to **API Setup** and choose or add a phone number.
 Click through the steps adding your information. You have to verify your number
 by receiving a security code and repeating it when asked.
 After you successfully performed these steps, you are now good to go with
-the :doc:`setup on Zammad side <setup>`. 🎉
+the :doc:`channel setup on Zammad side <setup>`.
