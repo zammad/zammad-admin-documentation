@@ -7,7 +7,7 @@ and Meta Developer app, first go to our :doc:`preparation page <preparation>`
 and come back here after finishing it.
 
 Then head over to Zammad's admin panel to add the WhatsApp channel under
-"Channels > WhatsApp > Add Account" and follow the steps which are described
+*Channels > WhatsApp > Add Account* and follow the steps which are described
 below.
 
 Step 1
@@ -22,7 +22,7 @@ In the first step you have to provide credentials of your account/app:
 
 WhatsApp Business Account ID
    Enter your WhatsApp Business Account ID. You can find it in your app
-   under "WhatsApp > API Setup":
+   under *WhatsApp > API Setup*:
 
    .. figure:: /images/channels/whatsapp/business-account-id.png
      :alt: App dashboard with business account ID
@@ -48,15 +48,22 @@ Access Token
       :align: center
       :scale: 60%
 
+   MOVED FROM PREPARATION:
+   Switch to **API Setup** and generate a token. Follow the steps and confirm it so
+   you finally see the token. Make sure to copy it
+
+   .. figure:: /images/channels/whatsapp/config-use-case-api-setup.png
+      :alt: App dashboard shows API configuration and highlighted token generation.
+      :align: center
+
 App Secret
    Enter your app secret. You can find it in your
-   `app dashboard <https://developers.facebook.com/apps/>`_ under "App settings
-   > Basic" by clicking on the "Show" button:
+   `app dashboard <https://developers.facebook.com/apps/>`_ under *App settings
+   > Basic* by clicking on the "Show" button:
 
    .. figure:: /images/channels/whatsapp/app-secret.png
       :alt: App dashboard with app secret
       :scale: 60%
-
 
 After entering your data, click on **Next**. In the background, Zammad tries
 to fetch your assigned phone number, which you can select in the next step.
@@ -105,7 +112,7 @@ take.
 Step 3
 ------
 
-This third step is about telling WhatsApp where they should send their data:
+This third step is about telling WhatsApp where, how and what data to send.
 
 .. warning:: If you don't follow the instructions properly, your
    account shows up but you aren't able to receive messages (because
@@ -116,44 +123,17 @@ This third step is about telling WhatsApp where they should send their data:
    :align: center
    :scale: 80%
 
-Callback URL
-   Click on the copy icon on the right side and head over to your WhatsApp
-   business app. Enter the copied URL in the corresponding field in your app.
-   You can find it in your
-   `"App Dashboard" <https://developers.facebook.com/apps/>`_ under
-   "WhatsApp > Configuration > Webhook > Callback URL" (see screenshot below).
-   Paste it there.
+Go to *Use cases > Configuration* and copy/paste the values from
+**Callback URL** as well as **Verify Token**. Confirm with **Verify and save**.
 
-Verify Token
-   Copy this string too. Enter it directly below the pasted Callback URL.
+.. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
+   :alt: Configuration section in WhatsApp app dashboard
 
-   .. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
-      :alt: Configuration section in WhatsApp app dashboard
+Scroll down and switch on the toggle for ``messages`` under **Webhook fields**.
 
-   After entering your data, click on **Verify and save** which triggers a
-   check if your system is accessible and configured correctly.
-
-   .. figure:: /images/channels/whatsapp/verify-webhook.png
-      :alt: Webhook dialog
-      :align: center
-
-Define webhook fields
-   Finally, go to the field below in the app dashboard and select "Manage" in
-   the "Webhook fields" section. This is needed that you'll get the message as
-   content:
-
-   .. figure:: /images/channels/whatsapp/webhook-fields.png
-      :alt: Select webhook fields in app dashboard
-
-   Subscribe to "messages" by clicking in the checkbox:
-
-   .. figure:: /images/channels/whatsapp/select-webhook-fields.png
-      :alt: Select "message" as webhook field
-      :align: center
-      :scale: 70%
-
-   You should now see the selected "messages" under the "Webhook fields" caption
-   as in the first screenshot.
+.. figure:: /images/channels/whatsapp/select-webhook-fields.png
+   :alt: Select "message" as webhook field
+   :align: center
 
 After finishing this step, you can click on the **Finish** button in Zammad
 and you should now be ready to receive tickets from your WhatsApp channel!

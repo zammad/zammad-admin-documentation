@@ -32,7 +32,7 @@ Create a Meta Developer App
 ---------------------------
 
 While already logged in with your developer account, go to
-https://developers.facebook.com/apps/. Click on "Create App" and follow the
+https://developers.facebook.com/apps/. Click on **Create App** and follow the
 steps below.
 
 .. figure:: /images/channels/whatsapp/meta-create-app.png
@@ -45,84 +45,49 @@ Enter a fitting name and provide a contact email address for your app:
     :alt: Meta app creation step 1
     :align: center
 
-Choose a business portfolio, in case you have more than one:
+Choose **Connect with customers through WhatsApp** as use case:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step2.png
     :alt: Meta app creation step 2
     :align: center
 
-Check if additional steps are required and follow them. In case everything is
-fine, you should see a screen like this:
+Choose a business portfolio, in case you have more than one:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step3.png
     :alt: Meta app creation step 3
     :align: center
 
-After that, you see a summary of your configuration. Check if everything is
-correct and go back to the dashboard via button:
+Check if additional steps are required and follow them. In case everything is
+fine, you should see a screen like this:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step4.png
     :alt: Meta app creation step 4
     :align: center
 
-Add WhatsApp Product to Your App
---------------------------------
+After that, you see a summary of your configuration. Check if everything is
+correct and go back to the dashboard via the button:
 
-Now you have to add a product to your app. In our case, this is WhatsApp.
-Search for it and click on "Set up":
-
-.. figure:: /images/channels/whatsapp/meta-add-product.png
-    :alt: Add a product to your app
+.. figure:: /images/channels/whatsapp/meta-create-app-step5.png
+    :alt: Meta app creation step 5
     :align: center
 
-In the next step, you have to add a "Meta Business Account". This guide assumes
-that you already have one. If not, go to the
-:ref:`instructions above <create-meta-business-account>` and create one.
 
-.. figure:: /images/channels/whatsapp/meta-add-product-step1.png
-    :alt: Add the product WhatsApp to your app
-    :align: center
-    :scale: 70%
+Assign a Phone Number
+---------------------
 
-Create a System User
---------------------
-Go to `Users > System users <https://business.facebook.com/settings/system-users/>`_
-and add a system user. This is required to get a permanent API token. Make sure
-the user has admin permissions.
+In the app dashboard, first re-open the configuration:
 
-After creating a system user, you should see a screen similar to the one below.
-Here you can assign assets and (re-)generate an access token.
-
-For now we just assign assets to this user. The creation of the token is
-covered in the :doc:`Zammad setup section </channels/whatsapp/index>` because
-the token is only displayed once and then you can copy and paste it directly.
-
-.. figure:: /images/channels/whatsapp/created-system-user.png
-    :alt: System user overview
+.. figure:: /images/channels/whatsapp/meta-app-dashboard.png
+    :alt: Meta app dashboard configuration option.
     :align: center
 
-You now have to assign assets to this user. Choose your app
-and "Manage app" permissions:
+Now go to **API Setup** and choose or add a phone number.
 
-.. figure:: /images/channels/whatsapp/system-user-assign-assets.png
-    :alt: Assign assets to system user
-    :align: center
-    :scale: 70%
-
-Configure Your WhatsApp Business Platform
------------------------------------------
-
-After adding a "Meta Business Account" to your app, the "App Dashboard" is
-presented to you. Click on "Start using the API":
-
-.. figure:: /images/channels/whatsapp/meta-app-dashboard-overview.png
-    :alt: App dashboard overview
-    :align: center
-
-Assign an Unused Phone Number
------------------------------
-
-Please note: this number may not be used in a WhatsApp app already!
+.. note::
+    - This number may not be used in a WhatsApp app already.
+    - In case you want to test it with a provided test number, additional
+      steps might be required (see
+      `Reddit thread <https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_).
 
 .. figure:: /images/channels/whatsapp/add-phone-number.png
     :align: center
@@ -130,8 +95,5 @@ Please note: this number may not be used in a WhatsApp app already!
 
 Click through the steps adding your information. You have to verify your number
 by receiving a security code and repeating it when asked.
-
 After you successfully performed these steps, you are now good to go with
 the :doc:`setup on Zammad side <index>`. 🎉
-
-We promise it will become easier! 🤓
