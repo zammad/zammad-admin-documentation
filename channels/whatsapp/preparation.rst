@@ -3,12 +3,20 @@ Preparation
 
 Here you can find instructions for the required steps you need to take before
 you can use the WhatsApp channel in Zammad.
-
 Please note that these steps may change in the future, depending on changes on
 Meta's side. You should also consider to read their docs if you have issues:
 
 - `WhatsApp Cloud API <https://developers.facebook.com/docs/whatsapp/cloud-api>`_
 - `WhatsApp Business Platform <https://developers.facebook.com/docs/whatsapp>`_
+
+Prerequisites
+-------------
+
+- Make sure your system is accessible from the internet because WhatsApp sends
+  messages via webhooks to your system.
+- Make sure to have properly set up your
+  :doc:`FQDN in Settings > System </settings/system/base>` (for the callback
+  URL Meta will use to deliver new messages).
 
 .. _create-meta-business-account:
 
@@ -96,4 +104,4 @@ Now go to **API Setup** and choose or add a phone number.
 Click through the steps adding your information. You have to verify your number
 by receiving a security code and repeating it when asked.
 After you successfully performed these steps, you are now good to go with
-the :doc:`setup on Zammad side <index>`. 🎉
+the :doc:`setup on Zammad side <setup>`. 🎉

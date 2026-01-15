@@ -1,13 +1,13 @@
-Setup
-=====
+Channel Setup
+=============
 
-First of all, make sure to match the prerequisites and to read the limitations
-above. If you did not setup your Meta Developer account, Meta Business account
-and Meta Developer app, first go to our :doc:`preparation page <preparation>`
-and come back here after finishing it.
+First of all, make sure to match the prerequisites and to read the
+:doc:`limitations <limitations>`. If this is not the case, first go to the
+:doc:`preparation page <preparation>` and come back after you followed the steps
+there.
 
-Then head over to Zammad's admin panel to add the WhatsApp channel under
-*Channels > WhatsApp > Add Account* and follow the steps which are described
+To set up the channel in Zammad, head over to the admin settings to add the
+WhatsApp channel under *Channels > WhatsApp > Add Account* and follow the steps
 below.
 
 Step 1

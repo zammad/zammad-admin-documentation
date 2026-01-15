@@ -33,6 +33,5 @@ steps on Meta/WhatsApp side.
    :hidden:
 
    preparation
-   prerequisites
    limitations
    setup
