@@ -72,7 +72,7 @@ fine, you should see a screen like this:
     :alt: Meta app creation step 4
     :align: center
 
-After that, you see a summary of your configuration. Check if everything is
+After that, you will see a summary of your configuration. Check if everything is
 correct and go back to the dashboard via the button:
 
 .. figure:: /images/channels/whatsapp/meta-create-app-step5.png
@@ -92,7 +92,8 @@ In the app dashboard, first re-open the configuration:
 Now go to **API Setup** and choose or add a phone number.
 
 .. note::
-    - This number may not be used in a WhatsApp app already.
+    - This number may not be used in a WhatsApp app already, not even in a
+      WhatsApp Business app.
     - In case you want to test it with a provided test number, additional
       steps might be required (see
       `Reddit thread <https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_).
