@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-12 11:16+0100\n"
+"POT-Creation-Date: 2026-01-16 08:19+0100\n"
 "PO-Revision-Date: 2023-08-14 12:18+0000\n"
 "Last-Translator: chen <chenchen@4chian.com>\n"
 "Language-Team: Chinese (Simplified) <https://translations.zammad.org/"
@@ -3154,7 +3154,7 @@ msgid ""
 "low hanging fruit! 🎉"
 msgstr ""
 
-#: ../channels/facebook.rst:22 ../channels/whatsapp/prerequisites.rst:2
+#: ../channels/facebook.rst:22 ../channels/whatsapp/preparation.rst:13
 #: ../settings/security/ssl-certificates.rst:17
 #: ../system/integrations/smime/prerequisites.rst:2
 msgid "Prerequisites"
@@ -3218,7 +3218,7 @@ msgstr ""
 msgid "Screenshot of app creation on \"Details\" tab"
 msgstr ""
 
-#: ../channels/facebook.rst:72 ../channels/whatsapp/preparation.rst:None
+#: ../channels/facebook.rst:72
 msgid "Add a product to your app"
 msgstr ""
 
@@ -6074,45 +6074,42 @@ msgstr ""
 
 #: ../channels/whatsapp/index.rst:4
 msgid ""
-"With the release of Zammad 6.3, you can now connect your Zammad with a "
-"WhatsApp Business account, allowing your customers to reach out to you "
-"through WhatsApp. 🎉"
+"Connect Zammad with a WhatsApp Business account so your customers can reach "
+"out to you through WhatsApp. 🎉"
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:8
+#: ../channels/whatsapp/index.rst:9
 msgid ""
-"If you already dived deep into this topic, you can head to the setup guide. "
-"If not, we strongly encourage you to read the prerequisites and limitations "
-"of this channel carefully and to follow our tutorial for preparing your "
-"setup."
+"The usage of **WhatsApp Cloud API** is mandatory to connect WhatsApp to "
+"Zammad. You won't be able to connect to WhatsApp in Zammad if you just use "
+"the WhatsApp Business *App*. Have a look `here <https://"
+"developers.facebook.com/docs/whatsapp/cloud-api>`_ for further information "
+"about the Cloud API."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:13
-msgid ""
-"We tried to keep it clear and created a separate sub-page for the necessary "
-"steps on Meta/WhatsApp side."
-msgstr ""
-
-#: ../channels/whatsapp/index.rst:17
-msgid ""
-"Please be aware that the usage of **WhatsApp Cloud API** is mandatory to "
-"connect WhatsApp to Zammad. You won't be able to connect to WhatsApp in "
-"Zammad if you just use the WhatsApp Business *App*. Have a look `here "
-"<https://developers.facebook.com/docs/whatsapp/cloud-api>`_ for further "
-"information about the Cloud API."
-msgstr ""
-
-#: ../channels/whatsapp/index.rst:24
+#: ../channels/whatsapp/index.rst:14
 msgid ""
 "There may be additional costs for you from Meta/WhatsApp side. Have a look "
 "at their `pricing page <https://developers.facebook.com/docs/whatsapp/"
 "pricing>`_ to be safe from surprises."
 msgstr ""
 
-#: ../channels/whatsapp/index.rst:29
+#: ../channels/whatsapp/index.rst:18
 msgid ""
-"Be aware that if you go through the whole process, it is very time "
-"consuming. You should have some time to follow our preparation guide."
+"This setup process can be very time consuming. You should have some time to "
+"follow this guide."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:21
+msgid ""
+"If you are already familiar with Meta's app creation process and their "
+"developer console, you can directly jump to the setup page. In all other "
+"cases, we strongly encourage you to read about the limitations of this "
+"channel carefully and to follow the preparation steps first."
+msgstr ""
+
+#: ../channels/whatsapp/index.rst:26
+msgid "This guide is separated in 3 sub-pages:"
 msgstr ""
 
 #: ../channels/whatsapp/limitations.rst:4
@@ -6226,71 +6223,66 @@ msgstr ""
 #: ../channels/whatsapp/preparation.rst:4
 msgid ""
 "Here you can find instructions for the required steps you need to take "
-"before you can use the WhatsApp channel in Zammad."
+"before you can use the WhatsApp channel in Zammad. Please note that these "
+"steps may change in the future, depending on changes on Meta's side. You "
+"should also consider to read their docs if you have issues:"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:7
-msgid ""
-"Please note that these steps may change in the future, depending on changes "
-"on Meta's side. You should also consider to read their docs if you have "
-"issues:"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:10
+#: ../channels/whatsapp/preparation.rst:9
 msgid ""
 "`WhatsApp Cloud API <https://developers.facebook.com/docs/whatsapp/cloud-"
 "api>`_"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:11
+#: ../channels/whatsapp/preparation.rst:10
 msgid ""
 "`WhatsApp Business Platform <https://developers.facebook.com/docs/whatsapp>`_"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:16
+#: ../channels/whatsapp/preparation.rst:15
+msgid ""
+"Make sure your system is accessible from the internet because WhatsApp sends "
+"messages via webhooks to your system."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:17
+msgid ""
+"Make sure to have properly set up your :doc:`FQDN in Settings > System </"
+"settings/system/base>` (for the callback URL Meta will use to deliver new "
+"messages)."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:24
 msgid "Create a Meta Business Account"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:18
+#: ../channels/whatsapp/preparation.rst:26
 msgid ""
 "If you don't already have a business account, visit https://"
-"business.facebook.com/overview and click on \"Create an account\":"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:None
-msgid "Meta business account starting page"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:25
-msgid ""
-"Have a look at `Meta's documentation <https://www.facebook.com/business/help/"
+"business.facebook.com/overview and click on \"Create an account\". Have a "
+"look at `Meta's documentation <https://www.facebook.com/business/help/"
 "1710077379203657?id=180505742745347>`_ if you have problems."
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:31
+#: ../channels/whatsapp/preparation.rst:33
 msgid "Create a Meta Developer Account"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:33
+#: ../channels/whatsapp/preparation.rst:35
 msgid ""
 "If you don't have a developer account already, go to https://"
 "developers.facebook.com/docs/development/register and register a new account."
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:38
+#: ../channels/whatsapp/preparation.rst:40
 msgid "Create a Meta Developer App"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:40
+#: ../channels/whatsapp/preparation.rst:42
 msgid ""
 "While already logged in with your developer account, go to https://"
-"developers.facebook.com/apps/."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:43
-msgid ""
-"You will see a screen like the following screenshot. Click on \"Create App\" "
-"and follow the steps below."
+"developers.facebook.com/apps/. Click on **Create App** and follow the steps "
+"below."
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:None
@@ -6298,177 +6290,107 @@ msgid "Meta developer app overview"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:50
-msgid "Choose \"Other\" when you are asked what you want to do with your app:"
+msgid "Enter a fitting name and provide a contact email address for your app:"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:None
 msgid "Meta app creation step 1"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:57
-msgid "Choose \"Business\" as app type:"
+#: ../channels/whatsapp/preparation.rst:56
+msgid "Choose **Connect with customers through WhatsApp** as use case:"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:None
 msgid "Meta app creation step 2"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:64
-msgid ""
-"Enter a name for the app, a contact email address and a business account. "
-"Please note that the name may not contain specific product names from Meta, "
-"as you can see in the screenshot below."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:73
-msgid ""
-"If you already have a business account, you should assign it. In this step, "
-"this is optional, but later it is required anyway. Click on \"Create App\" "
-"to finish this step."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:78
-msgid "Add WhatsApp Product to Your App"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:80
-msgid ""
-"Now you have to add a product to your app. In our case, this is WhatsApp. "
-"Search for it and click on \"Set up\":"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:87
-msgid ""
-"In the next step, you have to add a \"Meta Business Account\". This guide "
-"assumes that you already have one. If not, go to the :ref:`instructions "
-"above <create-meta-business-account>` and create one."
+#: ../channels/whatsapp/preparation.rst:62
+msgid "Choose a business portfolio, in case you have more than one:"
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:None
-msgid "Add the product WhatsApp to your app"
+msgid "Meta app creation step 3"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:68
+msgid ""
+"Check if additional steps are required and follow them. In case everything "
+"is fine, you should see a screen like this:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta app creation step 4"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:75
+msgid ""
+"After that, you will see a summary of your configuration. Check if "
+"everything is correct and go back to the dashboard via the button:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta app creation step 5"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:84
+msgid "Assign a Phone Number"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:86
+msgid "In the app dashboard, first re-open the configuration:"
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:None
+msgid "Meta app dashboard configuration option."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:92
+msgid "Now go to **API Setup** and choose or add a phone number."
+msgstr ""
+
+#: ../channels/whatsapp/preparation.rst:95
+msgid ""
+"This number may not be used in a WhatsApp app already, not even in a "
+"WhatsApp Business app."
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:97
-msgid "Create a System User"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:98
 msgid ""
-"Go to `Users > System users <https://business.facebook.com/settings/system-"
-"users/>`_ and add a system user. This is required to get a permanent API "
-"token. Make sure the user has admin permissions."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:102
-msgid ""
-"After creating a system user, you should see a screen similar to the one "
-"below. Here you can assign assets and (re-)generate an access token."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:105
-msgid ""
-"For now we just assign assets to this user. The creation of the token is "
-"covered in the :doc:`Zammad setup section </channels/whatsapp/index>` "
-"because the token is only displayed once and then you can copy and paste it "
-"directly."
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:None
-msgid "System user overview"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:113
-msgid ""
-"You now have to assign assets to this user. Choose your app and \"Manage "
-"app\" permissions:"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:None
-msgid "Assign assets to system user"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:122
-msgid "Configure Your WhatsApp Business Platform"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:124
-msgid ""
-"After adding a \"Meta Business Account\" to your app, the \"App Dashboard\" "
-"is presented to you. Click on \"Start using the API\":"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:None
-msgid "App dashboard overview"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:132
-msgid "Assign an Unused Phone Number"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:134
-msgid "Please note: this number may not be used in a WhatsApp app already!"
+"In case you want to test it with a provided test number, additional steps "
+"might be required (see `Reddit thread <https://www.reddit.com/r/"
+"WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_)."
 msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:None
 msgid "Adding a new phone number to your app"
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:140
+#: ../channels/whatsapp/preparation.rst:105
 msgid ""
 "Click through the steps adding your information. You have to verify your "
-"number by receiving a security code and repeating it when asked."
+"number by receiving a security code and repeating it when asked. After you "
+"successfully performed these steps, you are now good to go with "
+"the :doc:`channel setup on Zammad side <setup>`."
 msgstr ""
 
-#: ../channels/whatsapp/preparation.rst:143
-msgid ""
-"After you successfully performed these steps, you are now good to go with "
-"the :doc:`setup on Zammad side <index>`. 🎉"
-msgstr ""
-
-#: ../channels/whatsapp/preparation.rst:146
-msgid "We promise it will become easier! 🤓"
-msgstr ""
-
-#: ../channels/whatsapp/prerequisites.rst:4
-msgid ""
-"First, make sure you have followed our :doc:`preparation guide<preparation>`."
-msgstr ""
-
-#: ../channels/whatsapp/prerequisites.rst:6
-msgid "Then, check if you meet the following requirements:"
-msgstr ""
-
-#: ../channels/whatsapp/prerequisites.rst:8
-msgid ""
-"Make sure your system is accessible from the internet because WhatsApp sends "
-"messages via webhooks to your system."
-msgstr ""
-
-#: ../channels/whatsapp/prerequisites.rst:10
-msgid ""
-"Make sure to have properly setup your :doc:`FQDN in Settings > System </"
-"settings/system/base>` (for the callback URL Meta will use to deliver new "
-"messages)."
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:2 ../manage/knowledge-base.rst:36
-#: ../system/integrations/github.rst:16 ../system/integrations/gitlab.rst:16
-msgid "Setup"
+#: ../channels/whatsapp/setup.rst:2
+msgid "Channel Setup"
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:4
 msgid ""
-"First of all, make sure to match the prerequisites and to read the "
-"limitations above. If you did not setup your Meta Developer account, Meta "
-"Business account and Meta Developer app, first go to our :doc:`preparation "
-"page <preparation>` and come back here after finishing it."
+"First of all, make sure to match the prerequisites and to read "
+"the :doc:`limitations <limitations>`. If this is not the case, first go to "
+"the :doc:`preparation page <preparation>` and come back after you followed "
+"the steps there."
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:9
 msgid ""
-"Then head over to Zammad's admin panel to add the WhatsApp channel under "
-"\"Channels > WhatsApp > Add Account\" and follow the steps which are "
-"described below."
+"To set up the channel in Zammad, head over to the admin settings to add the "
+"WhatsApp channel under *Channels > WhatsApp*, click on **Add Account** and "
+"follow the steps below."
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:14
@@ -6476,80 +6398,72 @@ msgid "Step 1"
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:16
-msgid "In the first step you have to provide credentials of your account/app:"
+msgid ""
+"Add your credentials of your account/app in Zammad. The dialog looks like "
+"this:"
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:None
 msgid "Step 1 of adding a WhatsApp account"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:29
+#: ../channels/whatsapp/setup.rst:31
 msgid "WhatsApp Business Account ID"
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:24
 msgid ""
-"Enter your WhatsApp Business Account ID. You can find it in your app under "
-"\"WhatsApp > API Setup\":"
+"Configure your app on Meta's developer page and switch to **API Setup**. In "
+"case you have more than one phone number, make sure to select the right one "
+"before you copy the Business Account ID, because the ID is tied to the "
+"number."
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:0
 msgid "App dashboard with business account ID"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:49
+#: ../channels/whatsapp/setup.rst:40
 msgid "Access Token"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:32
+#: ../channels/whatsapp/setup.rst:34
 msgid ""
-"Enter the access token from your app. You can create it in the `business "
-"settings <https://business.facebook.com/settings/system-users>`_ under "
-"\"System Users\". The system user has to have \"Admin access\". Be aware "
-"that you have to copy the token, it is just displayed once!"
+"On the same **API Setup** page, you can generate a token. Follow the steps "
+"and confirm it so you finally see the token. Make sure to copy it directly "
+"because it gets displayed only once."
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:0
-msgid "Get your app token from the system user"
+msgid "App dashboard shows API configuration and highlighted token generation."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:42
-msgid ""
-"Choose your created app, an expiration date of the token (we recommend "
-"\"Never\") and the permissions ``whatsapp_business_management`` and "
-"``whatsapp_business_messaging``:"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:0
-msgid "Create your app token"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:59
+#: ../channels/whatsapp/setup.rst:47
 msgid "App Secret"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:52
+#: ../channels/whatsapp/setup.rst:43
 msgid ""
-"Enter your app secret. You can find it in your `app dashboard <https://"
-"developers.facebook.com/apps/>`_ under \"App settings > Basic\" by clicking "
-"on the \"Show\" button:"
+"Enter your app secret. You can find it in your app configuration under *App "
+"settings > Basic*. Click the **Show** button to be able to copy it."
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:0
 msgid "App dashboard with app secret"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:61
+#: ../channels/whatsapp/setup.rst:49
 msgid ""
-"After entering your data, click on **Next**. In the background, Zammad tries "
-"to fetch your assigned phone number, which you can select in the next step."
+"After providing these three values, click on **Next** in Zammad. This "
+"performs a check and fetches your assigned phone number. If everything is "
+"fine, the dialog switches to the next step."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:65
+#: ../channels/whatsapp/setup.rst:54
 msgid "Step 2"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:67
+#: ../channels/whatsapp/setup.rst:56
 msgid "The second step is about your phone number and messaging details:"
 msgstr ""
 
@@ -6557,38 +6471,38 @@ msgstr ""
 msgid "Step 2 of adding a WhatsApp account"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:77
+#: ../channels/whatsapp/setup.rst:66
 msgid "Phone Number"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:75
+#: ../channels/whatsapp/setup.rst:64
 msgid ""
 "Choose the phone number you want to use for the channel. Zammad should have "
-"fetched the numbers which are assigned to your business app. If not, your "
-"credentials from step 1 may be wrong."
+"fetched the number which is assigned to your app. If not, your credentials "
+"from step 1 may be wrong."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:81
+#: ../channels/whatsapp/setup.rst:70
 msgid "Welcome Message"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:80
+#: ../channels/whatsapp/setup.rst:69
 msgid ""
 "Here you can define an optional text message which is automatically sent to "
 "your customers when the initial message is received."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:90
+#: ../channels/whatsapp/setup.rst:79
 msgid "Automatic Reminders"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:84
+#: ../channels/whatsapp/setup.rst:73
 msgid ""
 "Here you can control whether the automatic reminders about the customer "
 "service window are sent to the customer when the window is about to expire."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:87
+#: ../channels/whatsapp/setup.rst:76
 msgid ""
 "For more information on 24-hour customer service windows, take a look at "
 "Meta's `conversation description <https://developers.facebook.com/docs/"
@@ -6596,45 +6510,47 @@ msgid ""
 "Windows\"."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:95
+#: ../channels/whatsapp/setup.rst:84
 msgid "Reminder Message"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:93
+#: ../channels/whatsapp/setup.rst:82
 msgid ""
 "If you want to use a custom reminder message before the 24-hour customer "
 "service window closes, you can insert it here. Leave it empty to stay with "
 "the default message."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:99
-msgid "Target Group"
+#: ../channels/whatsapp/setup.rst:88 ../misc/object-conditions/basics.rst:29
+#: ../misc/object-conditions/basics.rst:138
+#: ../system/integrations/checkmk/admin-panel-reference.rst:15
+msgid "Group"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:98
+#: ../channels/whatsapp/setup.rst:87
 #, fuzzy
 msgid ""
 "Here you can define the :doc:`group </manage/groups/index>` in which the "
 "ticket should be created."
 msgstr "接收邮件将被分配到的 :doc:`群组 </manage/groups/index>`。"
 
-#: ../channels/whatsapp/setup.rst:101
+#: ../channels/whatsapp/setup.rst:90
 msgid ""
-"After entering your data, click on **Submit**. After this step, the WhatsApp "
-"channel is technically created. However, there is another important step to "
-"take."
+"After you are configured everything, click on **Submit**. Now the WhatsApp "
+"channel is technically created on Zammad side. However, you need to take "
+"another important step to make it work."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:106
+#: ../channels/whatsapp/setup.rst:95
 msgid "Step 3"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:108
+#: ../channels/whatsapp/setup.rst:97
 msgid ""
-"This third step is about telling WhatsApp where they should send their data:"
+"This third step is about telling WhatsApp where, how and what data to send."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:110
+#: ../channels/whatsapp/setup.rst:99
 msgid ""
 "If you don't follow the instructions properly, your account shows up but you "
 "aren't able to receive messages (because Meta/WhatsApp doesn't know where to "
@@ -6645,71 +6561,28 @@ msgstr ""
 msgid "Step 3 of adding a WhatsApp account"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:125
-msgid "Callback URL"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:120
+#: ../channels/whatsapp/setup.rst:108
 msgid ""
-"Click on the copy icon on the right side and head over to your WhatsApp "
-"business app. Enter the copied URL in the corresponding field in your app. "
-"You can find it in your `\"App Dashboard\" <https://developers.facebook.com/"
-"apps/>`_ under \"WhatsApp > Configuration > Webhook > Callback URL\" (see "
-"screenshot below). Paste it there."
+"Go to *Use cases > Configuration* and copy/paste the values from **Callback "
+"URL** as well as **Verify Token** from Zammad. Confirm with **Verify and "
+"save**."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:138
-msgid "Verify Token"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:128
-msgid "Copy this string too. Enter it directly below the pasted Callback URL."
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:0
+#: ../channels/whatsapp/setup.rst:None
 msgid "Configuration section in WhatsApp app dashboard"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:133
+#: ../channels/whatsapp/setup.rst:115
 msgid ""
-"After entering your data, click on **Verify and save** which triggers a "
-"check if your system is accessible and configured correctly."
+"Scroll down and switch on the toggle for ``messages`` under **Webhook "
+"fields**."
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:0
-msgid "Webhook dialog"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:156
-msgid "Define webhook fields"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:141
-msgid ""
-"Finally, go to the field below in the app dashboard and select \"Manage\" in "
-"the \"Webhook fields\" section. This is needed that you'll get the message "
-"as content:"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:0
-msgid "Select webhook fields in app dashboard"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:148
-msgid "Subscribe to \"messages\" by clicking in the checkbox:"
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:0
+#: ../channels/whatsapp/setup.rst:None
 msgid "Select \"message\" as webhook field"
 msgstr ""
 
-#: ../channels/whatsapp/setup.rst:155
-msgid ""
-"You should now see the selected \"messages\" under the \"Webhook fields\" "
-"caption as in the first screenshot."
-msgstr ""
-
-#: ../channels/whatsapp/setup.rst:158
+#: ../channels/whatsapp/setup.rst:121
 msgid ""
 "After finishing this step, you can click on the **Finish** button in Zammad "
 "and you should now be ready to receive tickets from your WhatsApp channel!"
@@ -7530,6 +7403,11 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:33
 msgid "🖼️ Rich text editor + embedded images"
+msgstr ""
+
+#: ../manage/knowledge-base.rst:36 ../system/integrations/github.rst:16
+#: ../system/integrations/gitlab.rst:16
+msgid "Setup"
 msgstr ""
 
 #: ../manage/knowledge-base.rst:38
@@ -14555,12 +14433,6 @@ msgstr ""
 msgid ""
 "Depending on the location and selected attribute, the object context may "
 "change. The default basic objects in Zammad are:"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:29
-#: ../misc/object-conditions/basics.rst:138
-#: ../system/integrations/checkmk/admin-panel-reference.rst:15
-msgid "Group"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:31
