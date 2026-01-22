@@ -109,68 +109,56 @@ Tips
 ----
 
 Avoid Escalations
-^^^^^^^^^^^^^^^^^
+   Create a trigger or scheduler job to move escalated tickets to a
+   special group or agent. You can even re-dispatch tickets *before* they
+   escalate.
 
+Adjust SLA-Relevant Article Types
+   If communication type articles are not enough for your use-case, you can
+   configure Zammad to consider *public* notes as fulfillment for an SLA. To
+   turn this on, please have a look at the
+   :docs:`console commands (system docs) </admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas>`.
 
-Create a trigger or scheduler job to move escalated tickets to a
-special group or agent. You can even re-dispatch tickets **before** they
-escalate.
+Multiple SLAs
+   In case you define several independent SLAs, ensure to have no overlapping
+   tickets as their calculations may not work as intended or are conflicting.
 
-.. tip::
+Ticket State Conditions
+   For standard use-cases, you can safely skip ticket states in your ticket
+   selector conditions. Zammad's built-in states already have a flag SLA ignored
+   flag so tickets in closed state types are ignored from SLA calculations.
 
-   Communication type articles are not enough for your SLA?
-   You can also configure Zammad to allow **public** notes as fulfillment for
-   SLA requirements,
-   :docs:`our console documentation </admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas>` tells you how.
-
-You can define several independent SLAs, however, ensure to have no overlapping
-SLAs as their calculations may not work as you intended them originally.
-
-.. note::
-
-   Ticket escalations will notify all affected agents. This highly depends on
-   their chosen notification settings (Profile). Escalated tickets can also be
-   filtered for:
-
-      * by searching
-      * :doc:`/manage/trigger`
-      * :doc:`/manage/scheduler`
-      * :doc:`/manage/overviews`
+Overviews
+   If you have all/most of your tickets covered by SLAs, you may consider
+   changing the default sorting of existing overviews by escalation time,
+   instead of creation time.
 
 Agent Perspective
 -----------------
 
-Agents will be notified via several, optional ways. You can provide overviews
-for escalated or soon to escalate tickets to help you agents. Also, agents can
-check the current applying SLA timings of tickets at any time.
+Now that you set up SLAs, you might wonder how this works in practice. Read on
+about what your agents will see and what they can do.
 
-Online notifications
-   Zammad will warn agents roughly 15 minute before escalation and when the
-   ticket finally escalates. This depends on the notification configuration of
-   your agent.
-
-Email notifications
-   Zammad will warn agents roughly 15 minute before escalation and when the
-   ticket finally escalates. This depends on the notification configuration of
-   your agent.
-
-Overviews
-   You can configure :doc:`/manage/overviews` to allow your agents to filter
-   for escalated tickets or those that are about to escalate. By default Zammad
-   comes with an overview that will show all tickets that are either escalated
-   or escalating within the next 10 minutes: ``Escalated Tickets``.
-
-   .. tip::
-
-      If you have all/most of your tickets covered by SLAs you may consider
-      changing the default sorting of existing overviews by escalation time,
-      instead of creation time.
-
-SLA timings of a ticket
-   Ticket zooms provide a timestamp of the next escalation of a ticket. Agents
-   can hover that timestamp and learn about all upcoming escalation stages.
+SLA Times in a Ticket
+   The ticket detail view provides a timestamp of the next escalation. By
+   hovering over that timestamp, agents can see all upcoming escalation times
+   in a pop-up.
 
    .. figure:: /images/manage/slas/tickets-sla-timings.png
       :align: center
       :scale: 70%
       :alt: Screenshot showing the calculated escalation stages
+
+Notifications
+   Zammad will warn agents roughly 15 minute before escalation and when the
+   ticket finally escalates. In addition to the built-in notifications,
+   Zammad will also warn agents by sending out an email.
+   This depends on the notification configuration of your agents (which can be
+   configured in the
+   :user-docs:`profile settings </extras/profile-and-settings.html>`).
+
+Overviews
+   You can configure :doc:`/manage/overviews` to allow your agents to filter
+   for escalated tickets or those that are about to escalate. By default, Zammad
+   comes with an overview that will show all tickets that are either escalated
+   or escalating within the next 10 minutes: ``Escalated Tickets``.
