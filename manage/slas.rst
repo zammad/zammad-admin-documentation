@@ -38,10 +38,10 @@ Create a new SLA by clicking the **New SLA** button. To edit an existing SLA,
 click on the **Edit** button in the SLA list. Both actions open the SLA
 configuration dialog, where you can adjust the settings below:
 
-.. figure:: /images/manage/slas/sla-settings.png
+.. figure:: /images/manage/slas/sla-dialog.png
    :align: center
    :width: 60%
-   :alt: Part of the configuration dialog for SLAs
+   :alt: Screenshot shows configuration dialog for SLAs
 
 .. warning::
 
@@ -108,7 +108,11 @@ SLA Times
 Tips
 ----
 
-Tip: Create a trigger or scheduler job to move escalated tickets to a
+Avoid Escalations
+^^^^^^^^^^^^^^^^^
+
+
+Create a trigger or scheduler job to move escalated tickets to a
 special group or agent. You can even re-dispatch tickets **before** they
 escalate.
 
@@ -145,36 +149,10 @@ Online notifications
    ticket finally escalates. This depends on the notification configuration of
    your agent.
 
-   .. figure:: /images/manage/slas/online-notifications-escalations.png
-      :scale: 70%
-      :align: center
-      :alt: Screenshot showing two notifications: One upcoming escalation and
-            one escalated ticket
-
 Email notifications
    Zammad will warn agents roughly 15 minute before escalation and when the
    ticket finally escalates. This depends on the notification configuration of
    your agent.
-
-   .. container:: cfloat-left
-
-      .. figure:: /images/manage/slas/email-notficiation-to-be-escalated-ticket.png
-         :align: center
-         :alt: Email notification for a ticket that's going to escalate.
-
-         Notification by mail that a ticket is going to escalate.
-
-   .. container:: cfloat-right
-
-      .. figure:: /images/manage/slas/email-notficiation-escalated-ticket.png
-         :align: center
-         :alt: Email notification for a ticket that escalated.
-
-         Notification by mail that a ticket has escalated.
-
-   .. container:: cfloat-clear
-
-      X
 
 Overviews
    You can configure :doc:`/manage/overviews` to allow your agents to filter
@@ -188,10 +166,6 @@ Overviews
       changing the default sorting of existing overviews by escalation time,
       instead of creation time.
 
-   .. figure:: /images/manage/slas/overview-of-escalated-tickets.png
-      :align: center
-      :alt: Screenshot showing overview with escalated tickets
-
 SLA timings of a ticket
    Ticket zooms provide a timestamp of the next escalation of a ticket. Agents
    can hover that timestamp and learn about all upcoming escalation stages.
@@ -200,10 +174,3 @@ SLA timings of a ticket
       :align: center
       :scale: 70%
       :alt: Screenshot showing the calculated escalation stages
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Learn more
-
-   learn-by-example
-   how-do-they-work
