@@ -67,7 +67,7 @@ tickets, check the section above and learn more about
      -
    * - ``admin.calendar``
      - :doc:`Manage > Calendars </manage/calendars>`
-     - Required for :doc:`/manage/slas/index`.
+     - Required for :doc:`/manage/slas`.
    * - ``admin.channel_chat``
      - :doc:`Channels > Chat </channels/chat>`
      - | Configuration of chat channel.
@@ -165,7 +165,7 @@ tickets, check the section above and learn more about
      - :doc:`System > Sessions </system/sessions>`
      -
    * - ``admin.sla``
-     - :doc:`Manage > SLAs </manage/slas/index>`
+     - :doc:`Manage > SLAs </manage/slas>`
      -
    * - ``admin.system``
      - :doc:`Settings > System </settings/system/index>`
