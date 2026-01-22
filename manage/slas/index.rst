@@ -77,33 +77,33 @@ SLA Times
    SLA time interval will lead to a ticket escalation in 2 business days.
 
    - **First Response**: Time interval for the first response (external call,
-     email). This time is calculated from the ticket creation.
-     The start time *does not* reset if you're e.g. moving the ticket into
-     new groups or different SLA calculations. That is because the creation
-     time of the ticket does not change - keep this in mind.
+     email). This time is calculated based on the ticket creation time and
+     does not reset if you're moving the ticket into another group or apply
+     other changes.
    - **Update Time**: Time interval for every following response (external call,
      email). This time either counts from ticket creation (if no first response
-     is set) or *after* the first response was done.
+     is set) or after the last response time. You can choose between two modes:
 
-     - **between agent updates**: In this scenario your agent have to respond
-       every ``n`` hours depending on your configuration. This causes Zammad to
-       not care if your customer replied or not.
-       Be aware that this setting can be quite stressful for your agents!
-     - **for an agent to respond**: From the moment your customer replied to the
-       ticket, your agents have the configured time amount to respond until the
-       ticket escalates.
-   - **Solution Time**: Time frame for solving the problem (setting the ticket
-     to a closed state type). This escalation timing *does not* care about
-     ticket responses. It's simply being calculated from the ticket creation.
+     - **between agent updates**: In this mode, agents have to respond
+       every defined interval, no matter if the customer replied or not.
+     - **for an agent to respond**: In this mode, agents have to respond after
+       a customer replies. In case there is no new customer reply after the last
+       agent response, no escalation time is calculated for updating the ticket.
+   - **Solution Time**: Time interval for solving the problem and setting the
+     ticket to a closed state type. This calculation ignores ticket updates
+     unless they solve and close it.
 
-   **First Response** and **Solution Time** can only apply once. **Update Time**
-   applies until the ticket has been solved or the SLA no longer matches
-   your criteria.
+   **First Response** and **Solution Time** can only apply once per ticket.
+   **Update Time** can apply once ("for an agent to respond" mode when no new
+   customer reply has been received) or applies multiple times until the ticket
+   has been solved ("between agent updates" mode).
 
-   The only way to stop escalations in default installations is to set the
-   ticket to either a pending reminder or pending close. However, as soon as
-   the ticket is being set to open (e.g. by a customer responding), the ticket
-   may instantly escalate depending on its age and your configuration.
+   By default, the states *pending close*, *pending reminder* and *closed* are
+   ignored for the SLA calculation. Tickets in one of these states are freezed:
+   they are displayed as not escalated and escalation times are not visible.
+   However, as soon as the ticket set to open (e.g. by a customer responding),
+   the ticket may instantly escalate, depending on its age and your set
+   intervals.
 
 Tips
 ----
