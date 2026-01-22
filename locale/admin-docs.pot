@@ -454,7 +454,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:16
 #: ../manage/report-profiles.rst:38
 #: ../manage/scheduler.rst:86
-#: ../manage/slas/how-do-they-work.rst:26
+#: ../manage/slas.rst:53
 #: ../manage/templates.rst:23
 #: ../manage/webhook/add.rst:37
 #: ../misc/variables/article.rst:1
@@ -6184,8 +6184,6 @@ msgstr ""
 #: ../manage/groups/index.rst:30
 #: ../manage/macros.rst:36
 #: ../manage/macros.rst:36
-#: ../manage/slas/index.rst:78
-#: ../manage/slas/index.rst:78
 #: ../manage/trigger.rst:24
 #: ../manage/trigger.rst:24
 #: ../manage/webhook.rst:46
@@ -6491,6 +6489,7 @@ msgid "🖼️ Rich text editor + embedded images"
 msgstr ""
 
 #: ../manage/knowledge-base.rst:36
+#: ../manage/slas.rst:21
 #: ../system/integrations/github.rst:16
 #: ../system/integrations/gitlab.rst:16
 msgid "Setup"
@@ -7133,7 +7132,7 @@ msgid "👑 VIP"
 msgstr ""
 
 #: ../manage/organizations/index.rst:102
-msgid "This flag is a way for your team to indicate high-status organizations. Just as with customers, you can set up special :doc:`/manage/trigger`, :doc:`/manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/overviews` just for VIPs."
+msgid "This flag is a way for your team to indicate high-status organizations. Just as with customers, you can set up special :doc:`/manage/trigger`, :doc:`/manage/scheduler` jobs, :doc:`/manage/slas`, and :doc:`/manage/overviews` just for VIPs."
 msgstr ""
 
 #: ../manage/organizations/index.rst:0
@@ -7335,7 +7334,8 @@ msgid "To learn more, see :doc:`/system/data-privacy`."
 msgstr ""
 
 #: ../manage/overviews.rst:2
-#: ../manage/slas/index.rst:67
+#: ../manage/slas.rst:134
+#: ../manage/slas.rst:163
 msgid "Overviews"
 msgstr ""
 
@@ -7984,7 +7984,7 @@ msgid ":doc:`Manage > Calendars </manage/calendars>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:70
-msgid "Required for :doc:`/manage/slas/index`."
+msgid "Required for :doc:`/manage/slas`."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:71
@@ -8284,7 +8284,7 @@ msgid "``admin.sla``"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:168
-msgid ":doc:`Manage > SLAs </manage/slas/index>`"
+msgid ":doc:`Manage > SLAs </manage/slas>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:170
@@ -8961,440 +8961,185 @@ msgstr ""
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:2
-msgid "How Do SLAs Work"
+#: ../manage/slas.rst:2
+msgid "SLAs"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:4
-msgid "You can define several independent SLAs, however, ensure to have no overlapping SLAs as their calculations may not work as you intended them originally."
+#: ../manage/slas.rst:4
+msgid "Service Level Agreements (SLAs) ensure timely responses to customer requests. You can set these goals - such as responding to all inquiries within eight hours - with optional custom deadlines for specific customers. When such a deadline is passed, the ticket escalates. In other words: SLAs reflect the agreement you have with your customer about the processing time of tickets. To add or edit SLAs, navigate to `Manage > SLAs`. You need the permission ``admin.sla`` to manage them."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:None
-msgid "Part of the configuration dialog for SLAs"
+#: ../manage/slas.rst:13
+msgid "Quick Start"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:14
-msgid "Updating existing SLA configurations *may* cause temporary performance issues depending on your instance size and affected tickets. You may want to perform those changes outside of your business hours."
+#: ../manage/slas.rst:15
+msgid "Set up your business hours in a :doc:`calendar </manage/calendars>`."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:20
-msgid "Communication type articles are not enough for your SLA? You can also configure Zammad to allow **public** notes as fulfillment for SLA requirements, :docs:`our console documentation </admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas>` tells you how."
+#: ../manage/slas.rst:16
+msgid "Create SLAs with different conditions and escalation time intervals."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:26
-msgid "Give your SLA a meaningful name to quickly see what or who is affected."
+#: ../manage/slas.rst:17
+msgid "Optionally create triggers or scheduler jobs to handle escalated tickets and/or tickets about to escalate."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:31
-msgid "Ticket selector"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:29
-msgid "Specify the conditions on which tickets this SLA should apply to."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:34
-msgid "In the preview you see the selection of the tickets and double check whether those are correct."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:42
+#: ../manage/slas.rst:24
+#: ../manage/slas.rst:70
 #: ../misc/object-conditions/basics.rst:79
 msgid "Calendar"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:38
-msgid "Zammad calculates ticket escalations based on your business hours. It makes no sense to escalate tickets when you're not in."
+#: ../manage/slas.rst:26
+msgid "First of all, set up your business hours in a :doc:`calendar </manage/calendars>`. A calendar is used in an SLA to calculate escalation times based on your business hours. You can set up one general calendar or use multiple calendars which you can assign individually to your SLAs. In case you have specific business times for different customers or service levels, make sure that your calendars match the business hours of your service levels or individual customer agreements."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:41
-msgid "Choose the correct calendar here. If you haven't set your business hours yet, see :doc:`/manage/calendars` to learn more."
+#: ../manage/slas.rst:35
+msgid "SLA Configuration"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:93
+#: ../manage/slas.rst:37
+msgid "Create a new SLA by clicking the **New SLA** button. To edit an existing SLA, click on the **Edit** button in the SLA list. Both actions open the SLA configuration dialog, where you can adjust the settings below:"
+msgstr ""
+
+#: ../manage/slas.rst:None
+msgid "Screenshot shows configuration dialog for SLAs"
+msgstr ""
+
+#: ../manage/slas.rst:48
+msgid "Updating existing SLA configurations can cause temporary performance issues depending on your instance size and affected tickets. Try to perform such changes outside of your business hours."
+msgstr ""
+
+#: ../manage/slas.rst:53
+msgid "Provide a meaningful name to quickly see what the SLA is about."
+msgstr ""
+
+#: ../manage/slas.rst:60
+msgid "Ticket Selector"
+msgstr ""
+
+#: ../manage/slas.rst:56
+msgid "Specify to which tickets this SLA should apply to based on conditions. This means you can filter tickets by checking their attributes, e.g. customer, organization or group."
+msgstr ""
+
+#: ../manage/slas.rst:63
+msgid "Based on your condition, you can see a preview of the matching tickets to double check if your condition is correct."
+msgstr ""
+
+#: ../manage/slas.rst:67
+msgid "As mentioned above, SLAs use calendars to calculate escalation times. Choose the correct calendar here, otherwise the SLA calculation may be incorrect. If you haven't set your business hours yet, see :doc:`/manage/calendars` to learn more."
+msgstr ""
+
+#: ../manage/slas.rst:106
 msgid "SLA Times"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:45
-msgid "Define the escalation timings based on your working hours. Keep in mind that if you defined 8 hour business hours per day, a 16 hour escalation will take two business days."
+#: ../manage/slas.rst:73
+msgid "Define the escalation time intervals based on your working hours. It is up to you if you set one, two or all three times. When a SLA time is reached, the ticket escalates. Keep in mind: if you define 8 hour business hours per day, a 16 hour SLA time interval will lead to a ticket escalation in 2 business days."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:55
-msgid "First Response"
+#: ../manage/slas.rst:79
+msgid "**First Response**: Time interval for the first response (external call, email). This time is calculated based on the ticket creation time and does not reset if you're moving the ticket into another group or apply other changes."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:50
-msgid "Time frame for the first response (external call, email). This time is calculated from the ticket creation."
+#: ../manage/slas.rst:83
+msgid "**Update Time**: Time interval for every following response (external call, email). This time either counts from ticket creation (if no first response is set) or after the last response time. You can choose between two modes:"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:53
-msgid "The start time *does not* reset if you're e.g. moving the ticket into new groups or different SLA calculations. That is because the creation time of the ticket does not change - keep this in mind."
+#: ../manage/slas.rst:87
+msgid "**between agent updates**: In this mode, agents have to respond every defined interval, no matter if the customer replied or not."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:71
-msgid "Update Time"
+#: ../manage/slas.rst:89
+msgid "**for an agent to respond**: In this mode, agents have to respond after a customer replies. In case there is no new customer reply after the last agent response, no escalation time is calculated for updating the ticket."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:58
-msgid "Time frame for every following response (external call, email). This time either counts from ticket creation (if no first response is set) or *after* the first response was done."
+#: ../manage/slas.rst:92
+msgid "**Solution Time**: Time interval for solving the problem and setting the ticket to a closed state type. This calculation ignores ticket updates unless they solve and close it."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:67
-msgid "between agent updates"
+#: ../manage/slas.rst:96
+msgid "**First Response** and **Solution Time** can only apply once per ticket. **Update Time** can apply once (\"for an agent to respond\" mode when no new customer reply has been received) or applies multiple times until the ticket has been solved (\"between agent updates\" mode)."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:63
-msgid "In this scenario your agent have to respond every ``n`` hours depending on your configuration. This causes Zammad to not care if your customer replied or not."
+#: ../manage/slas.rst:101
+msgid "By default, the states *pending close*, *pending reminder* and *closed* are ignored for the SLA calculation. Tickets in one of these states are freezed: they are displayed as not escalated and escalation times are not visible. However, as soon as the ticket set to open (e.g. by a customer responding), the ticket may instantly escalate, depending on its age and your set intervals."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:67
-msgid "Be aware that this setting can be quite stressful for your agents!"
+#: ../manage/slas.rst:109
+msgid "Tips"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:71
-msgid "for an agent to respond"
+#: ../manage/slas.rst:114
+msgid "Avoid Escalations"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:70
-msgid "From the moment your customer replied to the ticket, your agents have the configured time amount to respond until the ticket escalates."
+#: ../manage/slas.rst:112
+msgid "Create a trigger or scheduler job to move escalated tickets to a special group or agent. You can even re-dispatch tickets *before* they escalate."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:78
-msgid "Solution Time"
+#: ../manage/slas.rst:120
+msgid "Adjust SLA-Relevant Article Types"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:74
-msgid "Time frame for solving the problem (setting the ticket to a closed state type)."
+#: ../manage/slas.rst:117
+msgid "If communication type articles are not enough for your use-case, you can configure Zammad to consider *public* notes as fulfillment for an SLA. To turn this on, please have a look at the :docs:`console commands (system docs) </admin/console/working-on-ticket-articles.html#count-public-notes-toward-slas>`."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:77
-msgid "This escalation timing *does not* care about ticket responses. It's simply being calculated from the ticket creation."
+#: ../manage/slas.rst:124
+msgid "Multiple SLAs"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:80
-msgid "It is up to you if you set one, two or all three times. When the SLA time is reached, the ticket escalates."
+#: ../manage/slas.rst:123
+msgid "In case you define several independent SLAs, ensure to have no overlapping tickets as their calculations may not work as intended or are conflicting."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:85
-msgid "*First response* and *Solution time* can only apply once. Update time applies until the ticket has been solved or the SLA no longer matches your criteria."
+#: ../manage/slas.rst:129
+msgid "Ticket State Conditions"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:89
-msgid "The only way to stop escalations in default installations is to set the ticket to either a pending reminder or pending close. **However**: as soon as the ticket is being set to open (e.g. by a customer responding) the ticket may instantly escalate depending on its age and your configuration."
+#: ../manage/slas.rst:127
+msgid "For standard use-cases, you can safely skip ticket states in your ticket selector conditions. Zammad's built-in states already have a flag SLA ignored flag so tickets in closed state types are ignored from SLA calculations."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:97
-msgid "Ticket escalations will notify all affected agents. This highly depends on their chosen notification settings (Profile). Escalated tickets can also be filtered for:"
+#: ../manage/slas.rst:132
+msgid "If you have all/most of your tickets covered by SLAs, you may consider changing the default sorting of existing overviews by escalation time, instead of creation time."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:101
-msgid "by searching"
+#: ../manage/slas.rst:137
+msgid "Agent Perspective"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:102
-msgid ":doc:`/manage/trigger`"
+#: ../manage/slas.rst:139
+msgid "Now that you set up SLAs, you might wonder how this works in practice. Read on about what your agents will see and what they can do."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:103
-msgid ":doc:`/manage/scheduler`"
+#: ../manage/slas.rst:150
+msgid "SLA Times in a Ticket"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:104
-msgid ":doc:`/manage/overviews`"
+#: ../manage/slas.rst:143
+msgid "The ticket detail view provides a timestamp of the next escalation. By hovering over that timestamp, agents can see all upcoming escalation times in a pop-up."
 msgstr ""
 
-#: ../manage/slas/index.rst:2
-msgid "SLAs"
-msgstr ""
-
-#: ../manage/slas/index.rst:4
-msgid "Service Level Agreements, abbreviated SLAs, help you to meet specific response times for your customers' requests. This way you can define goals such as answering every inquiry within eight hours. If you are at risk of missing this target, Zammad will alert you."
-msgstr ""
-
-#: ../manage/slas/index.rst:None
-msgid "Screenshot showing SLA management with configured SLA levels"
-msgstr ""
-
-#: ../manage/slas/index.rst:13
-msgid "Agents will be notified via several, optional ways. You can provide overviews for escalated or soon to escalate tickets to help you agents. Also, agents can check the current applying SLA timings of tickets at any time."
-msgstr ""
-
-#: ../manage/slas/index.rst:26
-msgid "Online notifications"
-msgstr ""
-
-#: ../manage/slas/index.rst:18
-#: ../manage/slas/index.rst:29
-msgid "Zammad will warn agents roughly 15 minute before escalation and when the ticket finally escalates. This depends on the notification configuration of your agent."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Screenshot showing two notifications: One upcoming escalation and\n"
-"one escalated ticket"
-msgstr ""
-
-#: ../manage/slas/index.rst:51
-msgid "Email notifications"
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Email notification for a ticket that's going to escalate."
-msgstr ""
-
-#: ../manage/slas/index.rst:39
-msgid "Notification by mail that a ticket is going to escalate."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Email notification for a ticket that escalated."
-msgstr ""
-
-#: ../manage/slas/index.rst:47
-msgid "Notification by mail that a ticket has escalated."
-msgstr ""
-
-#: ../manage/slas/index.rst:51
-#: ../settings/system/frontend.rst:54
-#: ../system/maintenance.rst:70
-#: ../system/maintenance.rst:94
-msgid "X"
-msgstr ""
-
-#: ../manage/slas/index.rst:54
-msgid "You can configure :doc:`/manage/overviews` to allow your agents to filter for escalated tickets or those that are about to escalate. By default Zammad comes with an overview that will show all tickets that are either escalated or escalating within the next 10 minutes: ``Escalated Tickets``."
-msgstr ""
-
-#: ../manage/slas/index.rst:61
-msgid "If you have all/most of your tickets covered by SLAs you may consider changing the default sorting of existing overviews by escalation time, instead of creation time."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Screenshot showing overview with escalated tickets"
-msgstr ""
-
-#: ../manage/slas/index.rst:76
-msgid "SLA timings of a ticket"
-msgstr ""
-
-#: ../manage/slas/index.rst:70
-msgid "Ticket zooms provide a timestamp of the next escalation of a ticket. Agents can hover that timestamp and learn about all upcoming escalation stages."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
+#: ../manage/slas.rst:0
 msgid "Screenshot showing the calculated escalation stages"
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:2
-msgid "SLA Example"
+#: ../manage/slas.rst:158
+#: ../settings/branding.rst:27
+#: ../settings/branding.rst:39
+#: ../settings/ticket.rst:222
+msgid "Notifications"
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:4
-msgid "This page contains some possible example configurations for a SLA we could think of. SLAs in general are very flexible and powerful, below doesn't have to be your standard!"
+#: ../manage/slas.rst:153
+msgid "Zammad will warn agents roughly 15 minute before escalation and when the ticket finally escalates. In addition to the built-in notifications, Zammad will also warn agents by sending out an email. This depends on the notification configuration of your agents (which can be configured in the :user-docs:`profile settings </extras/profile-and-settings.html>`)."
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:10
-msgid "If they don't make sense to you, don't worry - just skip ahead to :doc:`how-do-they-work` to learn about all the options in detail, then come back here to see them in action."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:14
-msgid "All following SLAs have the same base configurations. They may not use all of them in all samples."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:19
-msgid "**Groups**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:18
-msgid "Sales"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:19
-msgid "Support"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:20
-msgid "2nd Level"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:23
-msgid "**Attributes**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:22
-msgid "User / VIP (default, Boolean)"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:23
-msgid "Organization / Support-Contract (Single selection field, ``None`` as default value)"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:26
-msgid "**Calendar setting**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:26
-msgid "The calendar is set to 8 hours per day, from Monday to Friday."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:28
-msgid "**1. Support contract levels and VIP customers**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:30
-msgid "This approach uses a combination of contract levels (where any level except for none causes SLA escalations) and VIP customers that can have further priority."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:34
-msgid "The configuration of these SLAs ensures that either fitting support contract levels trigger or the VIP state is being used. They're not overlapping."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:39
-#: ../manage/slas/learn-by-example.rst:100
-msgid "VIP customers"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:41
-#: ../manage/slas/learn-by-example.rst:102
-msgid "SLA configuration checking if the customer is a VIP customer."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Screenshot showing SLA configuration for VIP customers."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:47
-msgid "Support contract levels"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:49
-msgid "The settings of each support contract level SLA basically are the same. The only setting that differs is the support contract level of each configuration and the SLA timings."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:53
-msgid "For this reason we're showing the bronze level configuration as an example only."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Screenshot showing SLA configuration for support contract\n"
-"level bronze."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:86
-#: ../manage/slas/learn-by-example.rst:116
-msgid "The result"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:62
-msgid "This approach causes the following SLA timings for each level:"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid "If the customer has no VIP state and the organization has a support level"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:68
-msgid "Bronze"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``6 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``6 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``40 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:73
-msgid "Silver"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``4 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``4 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``32 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:78
-msgid "Gold"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``2 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``2 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``24 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid "None"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid "This setting has no SLA configuration. Tickets will not escalate."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:86
-#: ../manage/slas/learn-by-example.rst:112
-msgid "If the customer has the VIP state"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``1 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``1 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``16 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:88
-msgid "**2. VIP customers**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:92
-msgid "non VIP customers"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:94
-msgid "SLA configuration checking if the customer is not a VIP customer."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Screenshot showing SLA configuration for non-VIP customers."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:116
-msgid "If the customer has no VIP state"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``8 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``16 hours``"
+#: ../manage/slas.rst:161
+msgid "You can configure :doc:`/manage/overviews` to allow your agents to filter for escalated tickets or those that are about to escalate. By default, Zammad comes with an overview that will show all tickets that are either escalated or escalating within the next 10 minutes: ``Escalated Tickets``."
 msgstr ""
 
 #: ../manage/tags.rst:4
@@ -10405,7 +10150,7 @@ msgid "30-40 organizations at maximum *should* be good enough."
 msgstr ""
 
 #: ../manage/users/index.rst:103
-msgid "This flag is a way for your team to indicate high-status customers. Just as with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/overviews` just for VIPs."
+msgid "This flag is a way for your team to indicate high-status customers. Just as with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/manage/scheduler` jobs, :doc:`/manage/slas`, and :doc:`/manage/overviews` just for VIPs."
 msgstr ""
 
 #: ../manage/users/index.rst:0
@@ -15443,12 +15188,6 @@ msgstr ""
 msgid "CSV output (reporting, time accounting)"
 msgstr ""
 
-#: ../settings/branding.rst:27
-#: ../settings/branding.rst:39
-#: ../settings/ticket.rst:222
-msgid "Notifications"
-msgstr ""
-
 #: ../settings/branding.rst:30
 msgid "Define the timezone of your Zammad installation."
 msgstr ""
@@ -17402,6 +17141,12 @@ msgstr ""
 
 #: ../settings/system/frontend.rst:50
 msgid "Set to ``yes``"
+msgstr ""
+
+#: ../settings/system/frontend.rst:54
+#: ../system/maintenance.rst:70
+#: ../system/maintenance.rst:94
+msgid "X"
 msgstr ""
 
 #: ../settings/system/index.rst:4
