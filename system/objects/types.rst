@@ -45,29 +45,32 @@ Boolean field
       :alt: Available settings for Boolean fields
 
 Date field
-   Provides a date picker field and does not allow default values.
+   Provides a date picker field. It gets pre-populated with the current date
+   during object creation with the configured difference/offset applied.
 
    Default time diff (hours)
-      This setting helps the user by highlighting the day from now plus the
-      provided value. It *does not* pre-fill the field.
+      Define the default time difference/offset (in hours) for pre-population
+      of the field during object creation.
 
    .. figure:: /images/system/objects/settings_date.png
       :alt: Available settings for Date fields
 
 Date & time field
-   Provides a date and time picker – does not allow default values
+   Provides a date and time picker field. It gets pre-populated with the current
+   date and time during object creation with the configured difference/offset
+   applied.
 
    Allow future
-      | Forbid dates and times in the future.
+      | Allows dates and times in the future.
       | Default: ``yes``
 
    Allow past
-      | Forbid dates and times in the past.
+      | Allows dates and times in the past.
       | Default: ``yes``
 
    Default time diff (minutes)
-      This setting helps the user by highlighting the day from now plus the
-      provided value. It does not pre-fill the field.
+      Define the default time difference/offset (in minutes) for pre-population
+      of the field during object creation.
 
    .. figure:: /images/system/objects/settings_datetime.png
       :alt: Available settings for Date & time fields
@@ -89,7 +92,10 @@ Multiple selection field
    Provides a selection field that allows the selection of one or more out
    of several. This field does allow setting a default value.
 
-   .. include:: /system/objects/includes/adding-values-hint.include.rst
+   .. tip::
+
+      Don't forget to press "➕ Add" after adding your values. Otherwise, you may
+      lose a value.
 
    .. include:: /system/objects/includes/url-template-hint.include.rst
 
@@ -102,7 +108,11 @@ Single selection field
    Provides a drop-down field that allows selection of one value out of several.
    This field does allow setting a default value.
 
-   .. include:: /system/objects/includes/adding-values-hint.include.rst
+   .. tip::
+
+      Don't forget to press "➕ Add" after adding your values. Otherwise, you may
+      lose a value.
+
 
    .. include:: /system/objects/includes/url-template-hint.include.rst
 
