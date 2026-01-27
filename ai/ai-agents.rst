@@ -14,7 +14,7 @@ the ticket because they could get overwritten.
 
 .. figure:: /images/ai/ai-live-user.png
   :alt: Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar
-  :width: 10%
+  :scale: 60%
   :align: center
 
   Avatar of an AI agent which shows up in the live user section.
