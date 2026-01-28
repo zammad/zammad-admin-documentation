@@ -45,8 +45,8 @@ Boolean field
       :alt: Available settings for Boolean fields
 
 Date field
-   Provides a date picker field. It gets pre-populated with the current date
-   during object creation with the configured difference/offset applied.
+   Provides a date selection field. During object creation, it gets pre-filled
+   with the current date and the specified difference/offset is applied.
 
    Default time diff (hours)
       Define the default time difference/offset (in hours) for pre-population
@@ -56,9 +56,9 @@ Date field
       :alt: Available settings for Date fields
 
 Date & time field
-   Provides a date and time picker field. It gets pre-populated with the current
-   date and time during object creation with the configured difference/offset
-   applied.
+   Provides a date and time selection field. During object creation, it gets
+   pre-filled with the current date and time and the specified difference/offset
+   is applied.
 
    Allow future
       | Allows dates and times in the future.
