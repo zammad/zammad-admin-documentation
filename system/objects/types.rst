@@ -68,15 +68,16 @@ You may define a default value. You cannot enforce comma separation.
 Multiple Selection Field
 ------------------------
 
-Provides a selection field that allows the selection of one or more out
-of several pre-defined values. You can set a default value.
+Provides a field with pre-defined values from which the user can select one or
+more. It does not support a hierarchy (like a Multiple Tree Selection Field).
+You can define a default value.
 
 .. tip::
 
    Don't forget to press "+ Add" after adding your values. Otherwise, you may
    lose a value.
 
-- **Link template:** See :ref:`link-templates` for more information.
+**Link template:** See :ref:`link-templates` for more information.
 
 .. figure:: /images/system/objects/settings_multiselect.png
    :alt: Available settings for Multiple selection fields
@@ -86,15 +87,16 @@ of several pre-defined values. You can set a default value.
 Single Selection Field
 ----------------------
 
-   Provides a drop-down field that allows selection of one value out of several.
-   You can set a default value.
+Provides a field with pre-defined values from which the user can select one.
+It does not support a hierarchy (like a Single Tree Selection Field). You can
+define a default value.
 
 .. tip::
 
    Don't forget to press "+ Add" after adding your values. Otherwise, you may
    lose a value.
 
-- **Link template:** See :ref:`link-templates` for more information.
+**Link template:** See :ref:`link-templates` for more information.
 
 .. figure:: /images/system/objects/settings_select.png
    :alt: Available settings for Single selection fields
@@ -110,7 +112,7 @@ It does not support text formatting or HTML content (rich text).
 - **Default:** This text will be shown for not yet filled fields.
 - **Maxlength:** Set the maximum length of the field. Default: ``500``.
 - **Rows:** Set the size of the field. In any case, the field is scrollable if
-  the content exceeds the number of rows. Default: ``4``.
+  the content exceeds the number of displayed rows. Default: ``4``.
 
 .. figure:: /images/system/objects/settings_textarea.png
    :alt: Available settings for Textarea fields
@@ -137,9 +139,10 @@ Provides a text field (one line). You can set a default value.
 Single Tree Selection Field
 ---------------------------
 
-Provides a select-like field with up to 6 layers of options. To restrict
-the selection of a value, uncheck the box in the "Active" column.
-This type does not allow setting a default value.
+Provides a field with pre-defined values from which the user can select one.
+It supports up to 6 hierarchy levels. To restrict the
+selection of a value (e.g. for parent values), uncheck the box in the "Active"
+column.
 
 .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
@@ -149,9 +152,9 @@ This type does not allow setting a default value.
 Multiple Tree Selection Field
 -----------------------------
 
-Provides a multi-select field with up to 6 layers of options. To restrict
-the selection of a value, uncheck the box in the "Active" column.
-This type does not allow setting a default value.
+Provides a field with pre-defined values from which the user can select one or
+more. It supports up to 6 hierarchy levels. To restrict the selection of a value
+(e.g. for parent values), uncheck the box in the "Active" column.
 
 .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
@@ -281,68 +284,36 @@ Misc
 
 .. _link-templates:
 
-URL fields (Link-Template)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Link-Template
+^^^^^^^^^^^^^
+
+Link templates allow you to generate dynamic URLs based on the content of the
+attribute. This way you can define a base URL and add a variable for the
+field's content, for example in a search query or as a product ID.
+After adding content to a link-template field, a URL icon appears on its right
+side. Clicking the icon opens a new browser tab with the generated URL.
+
+Example for a search query URL:
+
+- Ticket attribute type: **Text Field**
+- Text field type: **Text**
+- Ticket attribute name: ``my_attribute``
+- Link template content: ``https://www.duckduckgo.com/&q=#{ticket.my_attribute}``
+- Added field content: ``zammad``
+- Resulting URL: ``https://www.duckduckgo.com/&q=zammad``
+
+.. tip::
+
+   You can use any :doc:`Zammad variable </misc/variables>` as long as
+   it's available in the moment you need it.
+
+Available for the field types *Text* (type: text), *Single Selection*,
+*Multiple Selection* and *External Data Source*.
 
 .. note::
 
-   This function is restricted to Text, Select and External data source types
-   only.
-
-Link-Templates are an amazing way to dynamically generate URLs.
-They allow you to integrate other systems better without having to
-manually copy data from Zammad if possible.
-
-   .. note::
-
-      Another great way of communicating with another system may be Zammad's
-      :doc:`Webhooks </manage/webhook>`.
-
-After filling a link-template enabled field, an URL icon will appear on its
-right. Clicking on the icon opens a new tab.
-
-   .. hint::
-
-      Even though Zammad displays the link template within object edit and
-      create screens, the function is optional. It's only active if you populate
-      the field.
-
-Difference Between URL Type and Link Template
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Both fields have different use cases.
-Use ``text`` type fields whenever you have a *static* URL that requires
-dynamic parameters. If you require a drag & drop like field that you can put in
-any URL, use ``URL`` type text fields.
-
-The difference is easier to spot when comparing the fields directly,
-below screencast shows the result - the dynamic approach uses existing values
-in the moment of updating to built the URL - e.g.
-``https://google.com/search?q=cookies`` - while the URL approach uses the
-actual URL of the field - e.g. ``https://zammad.com``.
-
-.. figure:: /images/system/objects/url-vs-text-type-text-fields.gif
-   :alt: Screencast showing the differents in between URL and text type fields with actual values
-   :width: 90%
-   :align: center
-
-How does this work...?!
-^^^^^^^^^^^^^^^^^^^^^^^
-
-As an example, let's say you have an attribute called ``amazing_attribute`` and
-you want to open a google search directly with the input from that field.
-
-Providing the link-template field below allows you to do so:
-``https://www.google.com/search?q=#{ticket.amazing_attribute}``
-
-   .. tip::
-
-      You can use any :doc:`Zammad variable </misc/variables>` as long as
-      it's available in the moment you need it.
-
-As a result, you are redirected to Google with a search for the value of the
-attribute, if you click on the button in the ticket (as you can see in the
-screencast above).
+   Another great way of communicating with another system may be Zammad's
+   :doc:`Webhooks </manage/webhook>`.
 
 Translate Field Contents
 ^^^^^^^^^^^^^^^^^^^^^^^^
