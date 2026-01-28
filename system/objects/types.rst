@@ -4,11 +4,6 @@ Attribute Types
 When adding a new object attribute, you can choose between the attribute types
 described on this page.
 
-.. toctree::
-   :hidden:
-
-   Example external data source <external-data-source-example>
-
 .. warning::
 
    You cannot change the attribute format / type as soon as it is applied.
@@ -163,6 +158,11 @@ more. It supports up to 6 hierarchy levels. To restrict the selection of a value
 
 External Data Source Field
 --------------------------
+
+.. toctree::
+   :hidden:
+
+   External Data Source Example <external-data-source-example>
 
 Provides a searchable field which fetches data from an external system. This
 can be useful if you have data outside of Zammad and don't want to maintain
