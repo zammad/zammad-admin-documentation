@@ -12,14 +12,16 @@ over what actions that agent can perform within it:
 
    Use the group permission table to grant per-group privileges.
 
-Within each group, the different permissions allow an agent to...
+The group permissions grant access to:
 
-:READ:     ...view tickets
-:CREATE:   ...create new tickets
-:CHANGE:   ...modify existing tickets
-:OVERVIEW: ...see ticket overviews (but not ticket details)
-:FULL:     ...all of the above
-           **and be assigned / receive notifications for tickets**
+- **Read:** View, search for and find tickets.
+- **Create:** Create new tickets and move existing tickets into the group.
+- **Change:** Modify existing tickets.
+- **Overview:** See tickets in overviews (but no ticket details).
+- **Full:** All of the above and:
+
+  - To be set as ticket owner.
+  - Receive notifications for tickets.
 
 .. note::
 
