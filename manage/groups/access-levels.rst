@@ -23,10 +23,6 @@ The group permissions grant access to:
   - To be set as ticket owner.
   - Receive notifications for tickets.
 
-.. note::
-
-   🔔 **Full group access also enables notifications for that group's tickets.**
-
 Setting Permissions
 -------------------
 
