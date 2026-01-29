@@ -1,19 +1,19 @@
 External Data Source
-********************
+====================
 
-We assume you already had a look on :doc:`types` where you can find
+We assume you already had a look at :doc:`types` where you can find
 a description of the individual fields.
 
-To reproduce this example, choose a category you want to add a custom
-field, click on *New Attribute* and select *External data source field* under
-*Format*.
+To reproduce this example, choose an object type you want to add a custom
+field to, click on **New Attribute** and select *External data source field*
+under *Format*.
 
-Our example story is to fetch data from an external product database. We want
+Our example is about fetching data from an external product database. We want
 to add our products to the tickets so that the products can be searched and
 chosen from a list and also create a link to the product website.
 
-Base configuration
-==================
+Base Configuration
+------------------
 
 .. figure:: /images/system/objects/eds-example-base.png
     :alt: Initial steps to configure external data source object type
@@ -25,8 +25,8 @@ Base configuration
 - Name: *product*
 - Display: *Product*
 
-External data source configuration
-==================================
+External Data Source Configuration
+----------------------------------
 
 First, enter the search URL making sure it contains ``#{search.term}`` as a
 parameter:
@@ -205,12 +205,12 @@ in the preview section:
     :scale: 70 %
     :alt: Preview of product table based on search term
 
-According to our example story, now just the *Link template* is missing.
+According to our example use-case, just the *Link template* is missing.
 
 .. note:: Please note that this is an optional feature. If you don't want to
    use such links, of course you don't have to configure it.
 
-We can add now an address where additional product information can be found.
+We can add an address where additional product information can be found.
 
 Example: ``https://your_domain.com/q=#{ticket.product}``
 

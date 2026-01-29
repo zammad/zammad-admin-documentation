@@ -2,12 +2,6 @@
 
    In order to re-arrange the field values, edit the field and scroll below
    the values. Make sure to tick the option "Use custom option sort".
-
-      .. warning::
-
-         If you do not tick this field, all manual positioning you did above
-         will be lost upon saving! ☠️
-
    Now use ☰ to drag the values in question to the correct position.
    When you're ready, submit your changes to save the object attribute.
 
