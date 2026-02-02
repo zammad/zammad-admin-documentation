@@ -101,7 +101,7 @@ The ones that aren't are described below.
 👑 VIP
    This flag is a way for your team to indicate high-status organizations. Just
    as with customers, you can set up special :doc:`/manage/trigger`,
-   :doc:`/manage/scheduler` jobs, :doc:`/manage/slas/index`,
+   :doc:`/manage/scheduler` jobs, :doc:`/manage/slas`,
    and :doc:`/manage/overviews` just for VIPs.
 
    .. figure:: /images/manage/organizations/vip-org-in-a-ticket.png
