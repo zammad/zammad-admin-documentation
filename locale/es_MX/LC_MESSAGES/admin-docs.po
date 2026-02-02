@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 08:19+0100\n"
+"POT-Creation-Date: 2026-01-29 12:22+0100\n"
 "PO-Revision-Date: 2025-11-19 13:00+0000\n"
 "Last-Translator: Sebastian Diaz <sebdiazf@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://translations.zammad.org/projects/"
@@ -615,11 +615,11 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:42 ../channels/form.rst:19
 #: ../manage/groups/settings.rst:16 ../manage/report-profiles.rst:38
-#: ../manage/scheduler.rst:86 ../manage/slas/how-do-they-work.rst:26
-#: ../manage/templates.rst:23 ../manage/webhook/add.rst:37
-#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
-#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-#: ../system/objects.rst:133 ../system/objects.rst:237
+#: ../manage/scheduler.rst:86 ../manage/slas.rst:53 ../manage/templates.rst:23
+#: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
+#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
+#: ../misc/variables/ticket.rst:1 ../system/objects.rst:133
+#: ../system/objects.rst:237
 msgid "Name"
 msgstr ""
 
@@ -1119,7 +1119,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:73
 #: ../channels/email/accounts/secondary-addresses.rst:39
 #: ../channels/email/index.rst:2 ../channels/form.rst:20
-#: ../system/objects/types.rst:154
+#: ../system/objects/types.rst:123
 msgid "Email"
 msgstr ""
 
@@ -1229,7 +1229,6 @@ msgstr ""
 
 #: ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:206 ../system/objects.rst:156
-#: ../system/objects/types.rst:157
 msgid "Type"
 msgstr ""
 
@@ -3558,8 +3557,8 @@ msgid "This allows you to link e.g. to your data privacy or ToS information."
 msgstr ""
 
 #: ../channels/form.rst:142 ../manage/report-profiles.rst:49
-#: ../manage/scheduler.rst:109 ../manage/slas/how-do-they-work.rst:35
-#: ../system/objects/types.rst:299
+#: ../manage/scheduler.rst:109 ../manage/slas.rst:64
+#: ../system/objects/types.rst:275
 msgid "Preview"
 msgstr ""
 
@@ -5905,7 +5904,6 @@ msgid ""
 msgstr ""
 
 #: ../channels/web.rst:21 ../manage/public-links.rst:85 ../misc/composer.rst:65
-#: ../system/objects/types.rst:0
 msgid "Default: ``yes``"
 msgstr ""
 
@@ -6504,6 +6502,7 @@ msgid "System"
 msgstr ""
 
 #: ../index.rst:96 ../manage/roles/permissions.rst:291
+#: ../system/objects/types.rst:283
 msgid "Misc"
 msgstr ""
 
@@ -6714,64 +6713,47 @@ msgid "Use the group permission table to grant per-group privileges."
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:15
-msgid "Within each group, the different permissions allow an agent to..."
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:0
-msgid "READ"
+msgid "The group permissions grant access to:"
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:17
-msgid "...view tickets"
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:0
-msgid "CREATE"
+msgid "**Read:** View, search for and find tickets."
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:18
-msgid "...create new tickets"
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:0
-msgid "CHANGE"
+msgid ""
+"**Create:** Create new tickets and move existing tickets into the group."
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:19
-msgid "...modify existing tickets"
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:0
-msgid "OVERVIEW"
+msgid "**Change:** Modify existing tickets."
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:20
-msgid "...see ticket overviews (but not ticket details)"
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:0
-msgid "FULL"
+msgid "**Overview:** See tickets in overviews (but no ticket details)."
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:21
-msgid ""
-"...all of the above **and be assigned / receive notifications for tickets**"
+msgid "**Full:** All of the above and:"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:26
-msgid ""
-"🔔 **Full group access also enables notifications for that group's tickets.**"
+#: ../manage/groups/access-levels.rst:23
+msgid "To be set as ticket owner."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:29
+#: ../manage/groups/access-levels.rst:24
+msgid "Receive notifications for tickets."
+msgstr ""
+
+#: ../manage/groups/access-levels.rst:27
 msgid "Setting Permissions"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:31
+#: ../manage/groups/access-levels.rst:29
 msgid "There are two ways to define an agent's per-group permission levels:"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:33
+#: ../manage/groups/access-levels.rst:31
 msgid ""
 "Directly, in the :ref:`Edit User dialog <user-details-group-access>` in the "
 "table of group permissions:"
@@ -6782,15 +6764,15 @@ msgid ""
 "Screenshot showing the group assignment to a user in the user edit dialog."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:41
+#: ../manage/groups/access-levels.rst:39
 msgid "Simply set your permission levels right on the target user."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:43
+#: ../manage/groups/access-levels.rst:41
 msgid "Implicitly, by :ref:`editing a user role <role-settings-group-access>`"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:45
+#: ../manage/groups/access-levels.rst:43
 msgid ""
 "First, head over to :doc:`Roles </manage/roles/index>` to set up the "
 "permissions you want to assign. Example:"
@@ -6800,7 +6782,7 @@ msgstr ""
 msgid "Group permissions table in edit role dialog"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:54
+#: ../manage/groups/access-levels.rst:52
 msgid ""
 "Then you are good to go to assign the role to a user in the user edit "
 "dialog. Example:"
@@ -6810,40 +6792,40 @@ msgstr ""
 msgid "Screenshot shows the role assignment in the user edit dialog"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:63
+#: ../manage/groups/access-levels.rst:61
 msgid ""
 "Make sure to click on the ➕ *Add* button after assigning the last group. "
 "Otherwise, your last selection *will not* be saved."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:66
+#: ../manage/groups/access-levels.rst:64
 msgid ""
 "⚖️ **We recommend choosing one or the other**; things can get confusing if "
 "you use both at the same time."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:69
+#: ../manage/groups/access-levels.rst:67
 msgid ""
 "So which one is right for you? *Whichever one is less work.* If you're "
 "trying to assign multiple agents to the same group with the same "
 "permissions, create a role for them to share—that's what roles are for!"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:74
+#: ../manage/groups/access-levels.rst:72
 msgid "🤔 **Can't see the group permission table?**"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:76
+#: ../manage/groups/access-levels.rst:74
 msgid ""
 "Please make sure that you have selected the ``ticket.agent`` permission for "
 "the user or role."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:80
+#: ../manage/groups/access-levels.rst:78
 msgid "Examples"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:90
+#: ../manage/groups/access-levels.rst:88
 msgid "“The Standard Issue”"
 msgstr ""
 
@@ -6851,14 +6833,14 @@ msgstr ""
 msgid "The group permission table, checked \"Full\""
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:88
+#: ../manage/groups/access-levels.rst:86
 msgid ""
 "When a system only has one group, this is the default permission level "
 "assigned to all agents. Unless you have special needs in mind, this is the "
 "way to go."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:101
+#: ../manage/groups/access-levels.rst:99
 msgid "“The Supervisor”"
 msgstr ""
 
@@ -6868,7 +6850,7 @@ msgid ""
 "\"Overview"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:98
+#: ../manage/groups/access-levels.rst:96
 msgid ""
 "Agents with all permissions except for “full” **cannot be assigned tickets** "
 "and don't receive notifications (unless they are subscribed to or mentioned "
@@ -6876,7 +6858,7 @@ msgid ""
 "“full” access. Great for letting other people do the real work."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:111
+#: ../manage/groups/access-levels.rst:109
 msgid "“The Meddler”"
 msgstr ""
 
@@ -6885,14 +6867,14 @@ msgid ""
 "The group permission table, checked \"Read\", \"Change\", and \"Overview"
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:109
+#: ../manage/groups/access-levels.rst:107
 msgid ""
 "Agents with “read”, “change”, and “overview” access can do everything except "
 "create tickets or be assigned to them. Great for getting involved in other "
 "people's business."
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:120
+#: ../manage/groups/access-levels.rst:118
 msgid "“The Intern”"
 msgstr ""
 
@@ -6900,7 +6882,7 @@ msgstr ""
 msgid "The group permission table, checked \"Create\""
 msgstr ""
 
-#: ../manage/groups/access-levels.rst:119
+#: ../manage/groups/access-levels.rst:117
 msgid ""
 "Agents with only “create” permission can do just that, and nothing else—once "
 "they hit **Save**, they'll never see that ticket again. Great for taking "
@@ -6908,9 +6890,8 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/index.rst:30 ../manage/macros.rst:36
-#: ../manage/slas/index.rst:78 ../manage/trigger.rst:24
-#: ../manage/webhook.rst:46 ../system/core-workflows.rst:23
-#: ../system/objects.rst:32
+#: ../manage/trigger.rst:24 ../manage/webhook.rst:46
+#: ../system/core-workflows.rst:23 ../system/objects.rst:32
 msgid "Learn more"
 msgstr ""
 
@@ -7297,8 +7278,8 @@ msgstr ""
 msgid "🖼️ Rich text editor + embedded images"
 msgstr ""
 
-#: ../manage/knowledge-base.rst:36 ../system/integrations/github.rst:16
-#: ../system/integrations/gitlab.rst:16
+#: ../manage/knowledge-base.rst:36 ../manage/slas.rst:21
+#: ../system/integrations/github.rst:16 ../system/integrations/gitlab.rst:16
 msgid "Setup"
 msgstr ""
 
@@ -8092,8 +8073,8 @@ msgstr ""
 msgid ""
 "This flag is a way for your team to indicate high-status organizations. Just "
 "as with customers, you can set up special :doc:`/manage/trigger`, :doc:`/"
-"manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/"
-"overviews` just for VIPs."
+"manage/scheduler` jobs, :doc:`/manage/slas`, and :doc:`/manage/overviews` "
+"just for VIPs."
 msgstr ""
 
 #: ../manage/organizations/index.rst:0
@@ -8327,7 +8308,7 @@ msgstr ""
 msgid "To learn more, see :doc:`/system/data-privacy`."
 msgstr ""
 
-#: ../manage/overviews.rst:2 ../manage/slas/index.rst:67
+#: ../manage/overviews.rst:2 ../manage/slas.rst:134 ../manage/slas.rst:163
 msgid "Overviews"
 msgstr ""
 
@@ -9152,7 +9133,7 @@ msgid ":doc:`Manage > Calendars </manage/calendars>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:70
-msgid "Required for :doc:`/manage/slas/index`."
+msgid "Required for :doc:`/manage/slas`."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:71
@@ -9456,7 +9437,7 @@ msgid "``admin.sla``"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:168
-msgid ":doc:`Manage > SLAs </manage/slas/index>`"
+msgid ":doc:`Manage > SLAs </manage/slas>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:170
@@ -10209,523 +10190,274 @@ msgstr ""
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:2
-msgid "How Do SLAs Work"
+#: ../manage/slas.rst:2
+msgid "SLAs"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:4
+#: ../manage/slas.rst:4
 msgid ""
-"You can define several independent SLAs, however, ensure to have no "
-"overlapping SLAs as their calculations may not work as you intended them "
-"originally."
+"Service Level Agreements (SLAs) ensure timely responses to customer "
+"requests. You can set these goals - such as responding to all inquiries "
+"within eight hours - with optional custom deadlines for specific customers. "
+"When such a deadline is passed, the ticket escalates. In other words: SLAs "
+"reflect the agreement you have with your customer about the processing time "
+"of tickets. To add or edit SLAs, navigate to `Manage > SLAs`. You need the "
+"permission ``admin.sla`` to manage them."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:None
-msgid "Part of the configuration dialog for SLAs"
+#: ../manage/slas.rst:13
+msgid "Quick Start"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:14
+#: ../manage/slas.rst:15
+msgid "Set up your business hours in a :doc:`calendar </manage/calendars>`."
+msgstr ""
+
+#: ../manage/slas.rst:16
+msgid "Create SLAs with different conditions and escalation time intervals."
+msgstr ""
+
+#: ../manage/slas.rst:17
 msgid ""
-"Updating existing SLA configurations *may* cause temporary performance "
-"issues depending on your instance size and affected tickets. You may want to "
-"perform those changes outside of your business hours."
+"Optionally create triggers or scheduler jobs to handle escalated tickets and/"
+"or tickets about to escalate."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:20
-msgid ""
-"Communication type articles are not enough for your SLA? You can also "
-"configure Zammad to allow **public** notes as fulfillment for SLA "
-"requirements, :docs:`our console documentation </admin/console/working-on-"
-"ticket-articles.html#count-public-notes-toward-slas>` tells you how."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:26
-msgid "Give your SLA a meaningful name to quickly see what or who is affected."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:31
-msgid "Ticket selector"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:29
-msgid "Specify the conditions on which tickets this SLA should apply to."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:34
-msgid ""
-"In the preview you see the selection of the tickets and double check whether "
-"those are correct."
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:42
+#: ../manage/slas.rst:24 ../manage/slas.rst:70
 #: ../misc/object-conditions/basics.rst:79
 msgid "Calendar"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:38
+#: ../manage/slas.rst:26
 msgid ""
-"Zammad calculates ticket escalations based on your business hours. It makes "
-"no sense to escalate tickets when you're not in."
+"First of all, set up your business hours in a :doc:`calendar </manage/"
+"calendars>`. A calendar is used in an SLA to calculate escalation times "
+"based on your business hours. You can set up one general calendar or use "
+"multiple calendars which you can assign individually to your SLAs. In case "
+"you have specific business times for different customers or service levels, "
+"make sure that your calendars match the business hours of your service "
+"levels or individual customer agreements."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:41
+#: ../manage/slas.rst:35
+#, fuzzy
+msgid "SLA Configuration"
+msgstr "Configuración"
+
+#: ../manage/slas.rst:37
 msgid ""
-"Choose the correct calendar here. If you haven't set your business hours "
-"yet, see :doc:`/manage/calendars` to learn more."
+"Create a new SLA by clicking the **New SLA** button. To edit an existing "
+"SLA, click on the **Edit** button in the SLA list. Both actions open the SLA "
+"configuration dialog, where you can adjust the settings below:"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:93
+#: ../manage/slas.rst:None
+msgid "Screenshot shows configuration dialog for SLAs"
+msgstr ""
+
+#: ../manage/slas.rst:48
+msgid ""
+"Updating existing SLA configurations can cause temporary performance issues "
+"depending on your instance size and affected tickets. Try to perform such "
+"changes outside of your business hours."
+msgstr ""
+
+#: ../manage/slas.rst:53
+msgid "Provide a meaningful name to quickly see what the SLA is about."
+msgstr ""
+
+#: ../manage/slas.rst:60
+msgid "Ticket Selector"
+msgstr ""
+
+#: ../manage/slas.rst:56
+msgid ""
+"Specify to which tickets this SLA should apply to based on conditions. This "
+"means you can filter tickets by checking their attributes, e.g. customer, "
+"organization or group."
+msgstr ""
+
+#: ../manage/slas.rst:63
+msgid ""
+"Based on your condition, you can see a preview of the matching tickets to "
+"double check if your condition is correct."
+msgstr ""
+
+#: ../manage/slas.rst:67
+msgid ""
+"As mentioned above, SLAs use calendars to calculate escalation times. Choose "
+"the correct calendar here, otherwise the SLA calculation may be incorrect. "
+"If you haven't set your business hours yet, see :doc:`/manage/calendars` to "
+"learn more."
+msgstr ""
+
+#: ../manage/slas.rst:106
 msgid "SLA Times"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:45
+#: ../manage/slas.rst:73
 msgid ""
-"Define the escalation timings based on your working hours. Keep in mind that "
-"if you defined 8 hour business hours per day, a 16 hour escalation will take "
-"two business days."
+"Define the escalation time intervals based on your working hours. It is up "
+"to you if you set one, two or all three times. When a SLA time is reached, "
+"the ticket escalates. Keep in mind: if you define 8 hour business hours per "
+"day, a 16 hour SLA time interval will lead to a ticket escalation in 2 "
+"business days."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:55
-msgid "First Response"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:50
+#: ../manage/slas.rst:79
 msgid ""
-"Time frame for the first response (external call, email). This time is "
-"calculated from the ticket creation."
+"**First Response**: Time interval for the first response (external call, "
+"email). This time is calculated based on the ticket creation time and does "
+"not reset if you're moving the ticket into another group or apply other "
+"changes."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:53
+#: ../manage/slas.rst:83
 msgid ""
-"The start time *does not* reset if you're e.g. moving the ticket into new "
-"groups or different SLA calculations. That is because the creation time of "
-"the ticket does not change - keep this in mind."
+"**Update Time**: Time interval for every following response (external call, "
+"email). This time either counts from ticket creation (if no first response "
+"is set) or after the last response time. You can choose between two modes:"
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:71
-msgid "Update Time"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:58
+#: ../manage/slas.rst:87
 msgid ""
-"Time frame for every following response (external call, email). This time "
-"either counts from ticket creation (if no first response is set) or *after* "
-"the first response was done."
+"**between agent updates**: In this mode, agents have to respond every "
+"defined interval, no matter if the customer replied or not."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:67
-msgid "between agent updates"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:63
+#: ../manage/slas.rst:89
 msgid ""
-"In this scenario your agent have to respond every ``n`` hours depending on "
-"your configuration. This causes Zammad to not care if your customer replied "
-"or not."
+"**for an agent to respond**: In this mode, agents have to respond after a "
+"customer replies. In case there is no new customer reply after the last "
+"agent response, no escalation time is calculated for updating the ticket."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:67
-msgid "Be aware that this setting can be quite stressful for your agents!"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:71
-msgid "for an agent to respond"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:70
+#: ../manage/slas.rst:92
 msgid ""
-"From the moment your customer replied to the ticket, your agents have the "
-"configured time amount to respond until the ticket escalates."
+"**Solution Time**: Time interval for solving the problem and setting the "
+"ticket to a closed state type. This calculation ignores ticket updates "
+"unless they solve and close it."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:78
-msgid "Solution Time"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:74
+#: ../manage/slas.rst:96
 msgid ""
-"Time frame for solving the problem (setting the ticket to a closed state "
-"type)."
+"**First Response** and **Solution Time** can only apply once per ticket. "
+"**Update Time** can apply once (\"for an agent to respond\" mode when no new "
+"customer reply has been received) or applies multiple times until the ticket "
+"has been solved (\"between agent updates\" mode)."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:77
+#: ../manage/slas.rst:101
 msgid ""
-"This escalation timing *does not* care about ticket responses. It's simply "
-"being calculated from the ticket creation."
+"By default, the states *pending close*, *pending reminder* and *closed* are "
+"ignored for the SLA calculation. Tickets in one of these states are freezed: "
+"they are displayed as not escalated and escalation times are not visible. "
+"However, as soon as the ticket set to open (e.g. by a customer responding), "
+"the ticket may instantly escalate, depending on its age and your set "
+"intervals."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:80
+#: ../manage/slas.rst:109
+msgid "Tips"
+msgstr ""
+
+#: ../manage/slas.rst:114
+msgid "Avoid Escalations"
+msgstr ""
+
+#: ../manage/slas.rst:112
 msgid ""
-"It is up to you if you set one, two or all three times. When the SLA time is "
-"reached, the ticket escalates."
+"Create a trigger or scheduler job to move escalated tickets to a special "
+"group or agent. You can even re-dispatch tickets *before* they escalate."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:85
+#: ../manage/slas.rst:120
+msgid "Adjust SLA-Relevant Article Types"
+msgstr ""
+
+#: ../manage/slas.rst:117
 msgid ""
-"*First response* and *Solution time* can only apply once. Update time "
-"applies until the ticket has been solved or the SLA no longer matches your "
-"criteria."
+"If communication type articles are not enough for your use-case, you can "
+"configure Zammad to consider *public* notes as fulfillment for an SLA. To "
+"turn this on, please have a look at the :docs:`console commands (system "
+"docs) </admin/console/working-on-ticket-articles.html#count-public-notes-"
+"toward-slas>`."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:89
+#: ../manage/slas.rst:124
+msgid "Multiple SLAs"
+msgstr ""
+
+#: ../manage/slas.rst:123
 msgid ""
-"The only way to stop escalations in default installations is to set the "
-"ticket to either a pending reminder or pending close. **However**: as soon "
-"as the ticket is being set to open (e.g. by a customer responding) the "
-"ticket may instantly escalate depending on its age and your configuration."
+"In case you define several independent SLAs, ensure to have no overlapping "
+"tickets as their calculations may not work as intended or are conflicting."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:97
+#: ../manage/slas.rst:129
+msgid "Ticket State Conditions"
+msgstr ""
+
+#: ../manage/slas.rst:127
 msgid ""
-"Ticket escalations will notify all affected agents. This highly depends on "
-"their chosen notification settings (Profile). Escalated tickets can also be "
-"filtered for:"
+"For standard use-cases, you can safely skip ticket states in your ticket "
+"selector conditions. Zammad's built-in states already have a flag SLA "
+"ignored flag so tickets in closed state types are ignored from SLA "
+"calculations."
 msgstr ""
 
-#: ../manage/slas/how-do-they-work.rst:101
-msgid "by searching"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:102
-msgid ":doc:`/manage/trigger`"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:103
-msgid ":doc:`/manage/scheduler`"
-msgstr ""
-
-#: ../manage/slas/how-do-they-work.rst:104
-msgid ":doc:`/manage/overviews`"
-msgstr ""
-
-#: ../manage/slas/index.rst:2
-msgid "SLAs"
-msgstr ""
-
-#: ../manage/slas/index.rst:4
+#: ../manage/slas.rst:132
 msgid ""
-"Service Level Agreements, abbreviated SLAs, help you to meet specific "
-"response times for your customers' requests. This way you can define goals "
-"such as answering every inquiry within eight hours. If you are at risk of "
-"missing this target, Zammad will alert you."
-msgstr ""
-
-#: ../manage/slas/index.rst:None
-msgid "Screenshot showing SLA management with configured SLA levels"
-msgstr ""
-
-#: ../manage/slas/index.rst:13
-msgid ""
-"Agents will be notified via several, optional ways. You can provide "
-"overviews for escalated or soon to escalate tickets to help you agents. "
-"Also, agents can check the current applying SLA timings of tickets at any "
-"time."
-msgstr ""
-
-#: ../manage/slas/index.rst:26
-msgid "Online notifications"
-msgstr ""
-
-#: ../manage/slas/index.rst:18 ../manage/slas/index.rst:29
-msgid ""
-"Zammad will warn agents roughly 15 minute before escalation and when the "
-"ticket finally escalates. This depends on the notification configuration of "
-"your agent."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid ""
-"Screenshot showing two notifications: One upcoming escalation and\n"
-"one escalated ticket"
-msgstr ""
-
-#: ../manage/slas/index.rst:51
-msgid "Email notifications"
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Email notification for a ticket that's going to escalate."
-msgstr ""
-
-#: ../manage/slas/index.rst:39
-msgid "Notification by mail that a ticket is going to escalate."
-msgstr ""
-
-#: ../manage/slas/index.rst:0
-msgid "Email notification for a ticket that escalated."
-msgstr ""
-
-#: ../manage/slas/index.rst:47
-msgid "Notification by mail that a ticket has escalated."
-msgstr ""
-
-#: ../manage/slas/index.rst:51 ../settings/system/frontend.rst:54
-#: ../system/maintenance.rst:70 ../system/maintenance.rst:94
-msgid "X"
-msgstr ""
-
-#: ../manage/slas/index.rst:54
-msgid ""
-"You can configure :doc:`/manage/overviews` to allow your agents to filter "
-"for escalated tickets or those that are about to escalate. By default Zammad "
-"comes with an overview that will show all tickets that are either escalated "
-"or escalating within the next 10 minutes: ``Escalated Tickets``."
-msgstr ""
-
-#: ../manage/slas/index.rst:61
-msgid ""
-"If you have all/most of your tickets covered by SLAs you may consider "
+"If you have all/most of your tickets covered by SLAs, you may consider "
 "changing the default sorting of existing overviews by escalation time, "
 "instead of creation time."
 msgstr ""
 
-#: ../manage/slas/index.rst:0
-msgid "Screenshot showing overview with escalated tickets"
+#: ../manage/slas.rst:137
+msgid "Agent Perspective"
 msgstr ""
 
-#: ../manage/slas/index.rst:76
-msgid "SLA timings of a ticket"
-msgstr ""
-
-#: ../manage/slas/index.rst:70
+#: ../manage/slas.rst:139
 msgid ""
-"Ticket zooms provide a timestamp of the next escalation of a ticket. Agents "
-"can hover that timestamp and learn about all upcoming escalation stages."
+"Now that you set up SLAs, you might wonder how this works in practice. Read "
+"on about what your agents will see and what they can do."
 msgstr ""
 
-#: ../manage/slas/index.rst:0
+#: ../manage/slas.rst:150
+msgid "SLA Times in a Ticket"
+msgstr ""
+
+#: ../manage/slas.rst:143
+msgid ""
+"The ticket detail view provides a timestamp of the next escalation. By "
+"hovering over that timestamp, agents can see all upcoming escalation times "
+"in a pop-up."
+msgstr ""
+
+#: ../manage/slas.rst:0
 msgid "Screenshot showing the calculated escalation stages"
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:2
-msgid "SLA Example"
+#: ../manage/slas.rst:158 ../settings/branding.rst:27
+#: ../settings/branding.rst:39 ../settings/ticket.rst:222
+msgid "Notifications"
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:4
+#: ../manage/slas.rst:153
 msgid ""
-"This page contains some possible example configurations for a SLA we could "
-"think of. SLAs in general are very flexible and powerful, below doesn't have "
-"to be your standard!"
+"Zammad will warn agents roughly 15 minute before escalation and when the "
+"ticket finally escalates. In addition to the built-in notifications, Zammad "
+"will also warn agents by sending out an email. This depends on the "
+"notification configuration of your agents (which can be configured in "
+"the :user-docs:`profile settings </extras/profile-and-settings.html>`)."
 msgstr ""
 
-#: ../manage/slas/learn-by-example.rst:10
+#: ../manage/slas.rst:161
 msgid ""
-"If they don't make sense to you, don't worry - just skip ahead to :doc:`how-"
-"do-they-work` to learn about all the options in detail, then come back here "
-"to see them in action."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:14
-msgid ""
-"All following SLAs have the same base configurations. They may not use all "
-"of them in all samples."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:19
-msgid "**Groups**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:18
-msgid "Sales"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:19
-msgid "Support"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:20
-msgid "2nd Level"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:23
-msgid "**Attributes**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:22
-msgid "User / VIP (default, Boolean)"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:23
-msgid ""
-"Organization / Support-Contract (Single selection field, ``None`` as default "
-"value)"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:26
-msgid "**Calendar setting**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:26
-msgid "The calendar is set to 8 hours per day, from Monday to Friday."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:28
-msgid "**1. Support contract levels and VIP customers**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:30
-msgid ""
-"This approach uses a combination of contract levels (where any level except "
-"for none causes SLA escalations) and VIP customers that can have further "
-"priority."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:34
-msgid ""
-"The configuration of these SLAs ensures that either fitting support contract "
-"levels trigger or the VIP state is being used. They're not overlapping."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:39
-#: ../manage/slas/learn-by-example.rst:100
-msgid "VIP customers"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:41
-#: ../manage/slas/learn-by-example.rst:102
-msgid "SLA configuration checking if the customer is a VIP customer."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Screenshot showing SLA configuration for VIP customers."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:47
-msgid "Support contract levels"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:49
-msgid ""
-"The settings of each support contract level SLA basically are the same. The "
-"only setting that differs is the support contract level of each "
-"configuration and the SLA timings."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:53
-msgid ""
-"For this reason we're showing the bronze level configuration as an example "
-"only."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid ""
-"Screenshot showing SLA configuration for support contract\n"
-"level bronze."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:86
-#: ../manage/slas/learn-by-example.rst:116
-msgid "The result"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:62
-msgid "This approach causes the following SLA timings for each level:"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid ""
-"If the customer has no VIP state and the organization has a support level"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:68
-msgid "Bronze"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``6 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``6 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``40 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:73
-msgid "Silver"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``4 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``4 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``32 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:78
-msgid "Gold"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``2 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``2 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``24 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid "None"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:81
-msgid "This setting has no SLA configuration. Tickets will not escalate."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:86
-#: ../manage/slas/learn-by-example.rst:112
-msgid "If the customer has the VIP state"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``1 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``1 hour``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Solution time: ``16 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:88
-msgid "**2. VIP customers**"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:92
-msgid "non VIP customers"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:94
-msgid "SLA configuration checking if the customer is not a VIP customer."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Screenshot showing SLA configuration for non-VIP customers."
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:116
-msgid "If the customer has no VIP state"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "First response time: ``8 hours``"
-msgstr ""
-
-#: ../manage/slas/learn-by-example.rst:0
-msgid "Update time (for an agent to respond): ``16 hours``"
+"You can configure :doc:`/manage/overviews` to allow your agents to filter "
+"for escalated tickets or those that are about to escalate. By default, "
+"Zammad comes with an overview that will show all tickets that are either "
+"escalated or escalating within the next 10 minutes: ``Escalated Tickets``."
 msgstr ""
 
 #: ../manage/tags.rst:4
@@ -12008,8 +11740,8 @@ msgstr ""
 msgid ""
 "This flag is a way for your team to indicate high-status customers. Just as "
 "with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/"
-"manage/scheduler` jobs, :doc:`/manage/slas/index`, and :doc:`/manage/"
-"overviews` just for VIPs."
+"manage/scheduler` jobs, :doc:`/manage/slas`, and :doc:`/manage/overviews` "
+"just for VIPs."
 msgstr ""
 
 #: ../manage/users/index.rst:0
@@ -14307,7 +14039,7 @@ msgstr ""
 msgid "Session"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:42
+#: ../misc/object-conditions/basics.rst:42 ../system/objects/types.rst:2
 msgid "Attribute Types"
 msgstr ""
 
@@ -14678,7 +14410,7 @@ msgstr ""
 msgid "public"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:225
+#: ../misc/object-conditions/basics.rst:225 ../system/objects/types.rst:116
 msgid "Text Field"
 msgstr ""
 
@@ -14763,7 +14495,7 @@ msgstr ""
 msgid "Evaluates if text does not match provided regular expression."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:250
+#: ../misc/object-conditions/basics.rst:250 ../system/objects/types.rst:102
 msgid "Textarea Field"
 msgstr ""
 
@@ -14787,7 +14519,7 @@ msgstr ""
 msgid "**has changed**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:261
+#: ../misc/object-conditions/basics.rst:261 ../system/objects/types.rst:14
 msgid "Boolean Field"
 msgstr ""
 
@@ -14809,7 +14541,7 @@ msgstr ""
 msgid "**is not**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:272
+#: ../misc/object-conditions/basics.rst:272 ../system/objects/types.rst:52
 msgid "Integer Field"
 msgstr ""
 
@@ -14833,7 +14565,7 @@ msgstr ""
 msgid "**is greater than or equal to**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:287
+#: ../misc/object-conditions/basics.rst:287 ../system/objects/types.rst:23
 msgid "Date Field"
 msgstr ""
 
@@ -14938,7 +14670,7 @@ msgid ""
 "might also be helpful to you."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:328
+#: ../misc/object-conditions/basics.rst:328 ../system/objects/types.rst:36
 msgid "Date & Time Field"
 msgstr ""
 
@@ -15029,7 +14761,7 @@ msgid ""
 "additionally have hours and minutes on top to use."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:375
+#: ../misc/object-conditions/basics.rst:375 ../system/objects/types.rst:83
 msgid "Single Selection Field"
 msgstr ""
 
@@ -15040,7 +14772,7 @@ msgid ""
 "one value in the condition will act like an \"OR\" clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:388
+#: ../misc/object-conditions/basics.rst:388 ../system/objects/types.rst:64
 msgid "Multiple Selection Field"
 msgstr ""
 
@@ -15080,7 +14812,7 @@ msgstr ""
 msgid "Matches if one specific given field value is not selected."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:405
+#: ../misc/object-conditions/basics.rst:405 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr ""
 
@@ -15090,7 +14822,7 @@ msgid ""
 "than one value in the condition will act like an \"OR\" clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:417
+#: ../misc/object-conditions/basics.rst:417 ../system/objects/types.rst:148
 msgid "Multiple Tree Selection Field"
 msgstr ""
 
@@ -17662,11 +17394,6 @@ msgstr ""
 msgid "CSV output (reporting, time accounting)"
 msgstr ""
 
-#: ../settings/branding.rst:27 ../settings/branding.rst:39
-#: ../settings/ticket.rst:222
-msgid "Notifications"
-msgstr ""
-
 #: ../settings/branding.rst:30
 msgid "Define the timezone of your Zammad installation."
 msgstr ""
@@ -17956,45 +17683,43 @@ msgstr ""
 #: ../settings/security/password.rst:9
 msgid ""
 "Zammad does **not** allow you to change your LDAP password, instead, it will "
-"set a password in its local database which might confuse your users. This "
-"might be addressed in the future by `#1169 <https://github.com/zammad/zammad/"
-"issues/1169>`_."
+"set a password in its local database."
 msgstr ""
 
-#: ../settings/security/password.rst:14
+#: ../settings/security/password.rst:12
 msgid "**Exception for admins**"
 msgstr ""
 
-#: ../settings/security/password.rst:16
+#: ../settings/security/password.rst:14
 msgid ""
 "Please note that below password policies *do not* affect administrators "
 "setting passwords on user accounts. While this seems strange and not safe we "
 "believe that an administrator knowing an user's password is insecure as well."
 msgstr ""
 
-#: ../settings/security/password.rst:21
+#: ../settings/security/password.rst:19
 msgid "The suggested workflow is either:"
 msgstr ""
 
-#: ../settings/security/password.rst:23
+#: ../settings/security/password.rst:21
 msgid ""
 "to use third party logins to not require local passwords at all **- or -**"
 msgstr ""
 
-#: ../settings/security/password.rst:25
+#: ../settings/security/password.rst:23
 msgid "to require your *user to reset the password* upon first login."
 msgstr ""
 
-#: ../settings/security/password.rst:27
+#: ../settings/security/password.rst:25
 msgid ""
 "This way administrators are not required to set a user's password at all!"
 msgstr ""
 
-#: ../settings/security/password.rst:31
+#: ../settings/security/password.rst:29
 msgid "Maximum Failed Logins"
 msgstr ""
 
-#: ../settings/security/password.rst:33
+#: ../settings/security/password.rst:31
 msgid ""
 "You can choose a value between ``4`` and ``20``. This defines how often a "
 "login to a user account may fail until Zammad will lock it. Your users can "
@@ -18002,76 +17727,76 @@ msgid ""
 "unlock their account."
 msgstr ""
 
-#: ../settings/security/password.rst:38
+#: ../settings/security/password.rst:36
 msgid "The default value is ``10``."
 msgstr ""
 
-#: ../settings/security/password.rst:42
+#: ../settings/security/password.rst:40
 msgid "Beside changing the user's password, you can also unlock accounts via"
 msgstr ""
 
-#: ../settings/security/password.rst:44
+#: ../settings/security/password.rst:42
 msgid ":ref:`User management <locked-user-accounts>`"
 msgstr ""
 
-#: ../settings/security/password.rst:45
+#: ../settings/security/password.rst:43
 msgid ""
 ":docs:`Console (system documentation) </admin/console/working-on-users.html>`"
 msgstr ""
 
-#: ../settings/security/password.rst:46
+#: ../settings/security/password.rst:44
 msgid ":docs:`API (system documentation) </api/user.html>`"
 msgstr ""
 
-#: ../settings/security/password.rst:50
+#: ../settings/security/password.rst:48
 msgid "Failed logins via LDAP no longer lock accounts."
 msgstr ""
 
-#: ../settings/security/password.rst:53
+#: ../settings/security/password.rst:51
 msgid "2 Lower Case And 2 Upper Case Characters"
 msgstr ""
 
-#: ../settings/security/password.rst:55
+#: ../settings/security/password.rst:53
 msgid ""
 "You can add complexity to passwords by enforcing at least 2 upper and lower "
 "case characters."
 msgstr ""
 
-#: ../settings/security/password.rst:58 ../settings/security/password.rst:83
+#: ../settings/security/password.rst:56 ../settings/security/password.rst:81
 msgid "The default value is ``no``."
 msgstr ""
 
-#: ../settings/security/password.rst:62
+#: ../settings/security/password.rst:60
 msgid "Minimum Length"
 msgstr ""
 
-#: ../settings/security/password.rst:64
+#: ../settings/security/password.rst:62
 msgid ""
 "This defines the minimum password length required for users to provide (from "
 "``4`` to ``20``)."
 msgstr ""
 
-#: ../settings/security/password.rst:67
+#: ../settings/security/password.rst:65
 msgid "The default value is ``6``."
 msgstr ""
 
-#: ../settings/security/password.rst:71
+#: ../settings/security/password.rst:69
 msgid "Digit Required"
 msgstr ""
 
-#: ../settings/security/password.rst:73
+#: ../settings/security/password.rst:71
 msgid "This enforces your users to use at least one digit within the password."
 msgstr ""
 
-#: ../settings/security/password.rst:75
+#: ../settings/security/password.rst:73
 msgid "The default value is ``yes``."
 msgstr ""
 
-#: ../settings/security/password.rst:78
+#: ../settings/security/password.rst:76
 msgid "Special Character Required"
 msgstr ""
 
-#: ../settings/security/password.rst:80
+#: ../settings/security/password.rst:78
 msgid ""
 "This setting allows you to improve your password quality even more by "
 "enforcing the password to contain at least one special character."
@@ -20099,6 +19824,11 @@ msgstr ""
 
 #: ../settings/system/frontend.rst:50
 msgid "Set to ``yes``"
+msgstr ""
+
+#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:70
+#: ../system/maintenance.rst:94
+msgid "X"
 msgstr ""
 
 #: ../settings/system/index.rst:4
@@ -26103,27 +25833,28 @@ msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:4
 msgid ""
-"We assume you already had a look on :doc:`types` where you can find a "
+"We assume you already had a look at :doc:`types` where you can find a "
 "description of the individual fields."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:7
 msgid ""
-"To reproduce this example, choose a category you want to add a custom field, "
-"click on *New Attribute* and select *External data source field* under "
-"*Format*."
+"To reproduce this example, choose an object type you want to add a custom "
+"field to, click on **New Attribute** and select *External data source field* "
+"under *Format*."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:11
 msgid ""
-"Our example story is to fetch data from an external product database. We "
+"Our example is about fetching data from an external product database. We "
 "want to add our products to the tickets so that the products can be searched "
 "and chosen from a list and also create a link to the product website."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:16
-msgid "Base configuration"
-msgstr ""
+#, fuzzy
+msgid "Base Configuration"
+msgstr "Configuración"
 
 #: ../system/objects/external-data-source-example.rst:None
 msgid "Initial steps to configure external data source object type"
@@ -26138,7 +25869,7 @@ msgid "Display: *Product*"
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:29
-msgid "External data source configuration"
+msgid "External Data Source Configuration"
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:31
@@ -26223,8 +25954,7 @@ msgid "Preview of product table based on search term"
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:208
-msgid ""
-"According to our example story, now just the *Link template* is missing."
+msgid "According to our example use-case, just the *Link template* is missing."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:210
@@ -26235,7 +25965,7 @@ msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:213
 msgid ""
-"We can add now an address where additional product information can be found."
+"We can add an address where additional product information can be found."
 msgstr ""
 
 #: ../system/objects/external-data-source-example.rst:215
@@ -26275,12 +26005,6 @@ msgstr ""
 msgid "You can find more information regarding the URL in :doc:`types`."
 msgstr ""
 
-#: ../system/objects/includes/adding-values-hint.include.rst:3
-msgid ""
-"Adding values can be tricky for first timers, don't forget to press \"➕ "
-"Add\" after typing your values. Otherwise you may loose a value."
-msgstr ""
-
 #: ../system/objects/includes/reposition-treeselect-values.include.rst:1
 #: ../system/objects/includes/reposition-values.include.rst:1
 msgid "**↕️ This field type allows the positioning of its values ↔️**"
@@ -26297,28 +26021,13 @@ msgstr ""
 #: ../system/objects/includes/reposition-values.include.rst:3
 msgid ""
 "In order to re-arrange the field values, edit the field and scroll below the "
-"values. Make sure to tick the option \"Use custom option sort\"."
-msgstr ""
-
-#: ../system/objects/includes/reposition-values.include.rst:8
-msgid ""
-"If you do not tick this field, all manual positioning you did above will be "
-"lost upon saving! ☠️"
-msgstr ""
-
-#: ../system/objects/includes/reposition-values.include.rst:11
-msgid ""
-"Now use ☰ to drag the values in question to the correct position. When "
-"you're ready, submit your changes to save the object attribute."
+"values. Make sure to tick the option \"Use custom option sort\". Now use ☰ "
+"to drag the values in question to the correct position. When you're ready, "
+"submit your changes to save the object attribute."
 msgstr ""
 
 #: :0 ../system/objects/types.rst:0
 msgid "Screencast showing how to re-position values"
-msgstr ""
-
-#: ../system/objects/includes/url-template-hint.include.rst:3
-msgid ""
-"This field allows using :ref:`URL fields (Link Templates) <link-templates>`."
 msgstr ""
 
 #: ../system/objects/permissions.rst:2
@@ -26481,364 +26190,231 @@ msgid ""
 "API) to populate the field."
 msgstr ""
 
-#: ../system/objects/types.rst:7
-msgid "Example external data source"
-msgstr ""
-
-#: ../system/objects/types.rst:2
-msgid "Attribute types"
+#: ../system/objects/types.rst:162
+msgid "External Data Source Example"
 msgstr ""
 
 #: ../system/objects/types.rst:4
 msgid ""
-"When adding a new object attribute, you can choose between the following "
-"attribute types."
+"When adding a new object attribute, you can choose between the attribute "
+"types described on this page."
 msgstr ""
 
-#: ../system/objects/types.rst:14
+#: ../system/objects/types.rst:9
 msgid ""
 "You cannot change the attribute format / type as soon as it is applied. If "
 "you no longer need an object attribute, consider disabling it instead of "
 "removing."
 msgstr ""
 
-#: ../system/objects/types.rst:18
-msgid "**What about the translation of my attributes?**"
-msgstr ""
-
-#: ../system/objects/types.rst:20
-msgid ""
-"For some attribute types you can decide if they should be translatable or "
-"not. To be precise, it works only for the selectable fields because the "
-"possible choices are known and limited. For the following attribute types, "
-"you can set the translatable flag:"
-msgstr ""
-
-#: ../system/objects/types.rst:25
-msgid "*Boolean field*"
-msgstr ""
-
-#: ../system/objects/types.rst:26
-msgid "*Single selection field*"
-msgstr ""
-
-#: ../system/objects/types.rst:27
-msgid "*Multiple selection field*"
-msgstr ""
-
-#: ../system/objects/types.rst:28
-msgid "*Single tree selection field*"
-msgstr ""
-
-#: ../system/objects/types.rst:29
-msgid "*Multiple tree selection field*"
-msgstr ""
-
-#: ../system/objects/types.rst:31
-msgid ""
-"For these types, you can find an additional field *Translate field contents*:"
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "Screenshot showing translatable attribute types"
-msgstr ""
-
-#: ../system/objects/types.rst:38
-msgid "Screenshot with example of translatable attribute type"
-msgstr ""
-
-#: ../system/objects/types.rst:45
-msgid "Boolean field"
-msgstr ""
-
-#: ../system/objects/types.rst:41
+#: ../system/objects/types.rst:16
 msgid ""
 "Provides a drop-down field with display values for ``true`` and ``false``. "
 "Setting a default is mandatory."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Available settings for Boolean fields"
 msgstr ""
 
-#: ../system/objects/types.rst:55
-msgid "Date field"
-msgstr ""
-
-#: ../system/objects/types.rst:48
-msgid "Provides a date picker field and does not allow default values."
-msgstr ""
-
-#: ../system/objects/types.rst:52
-msgid "Default time diff (hours)"
-msgstr ""
-
-#: ../system/objects/types.rst:51
+#: ../system/objects/types.rst:25
 msgid ""
-"This setting helps the user by highlighting the day from now plus the "
-"provided value. It *does not* pre-fill the field."
+"Provides a date selection field. During object creation (e.g. ticket "
+"creation), it gets pre-filled with the current date and the specified "
+"difference/offset is applied."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:29
+msgid ""
+"**Default time diff (hours)**: Define the default time difference/offset (in "
+"hours) which gets applied when the field is pre-filled during object "
+"creation."
+msgstr ""
+
+#: ../system/objects/types.rst:None
 msgid "Available settings for Date fields"
 msgstr ""
 
-#: ../system/objects/types.rst:73
-msgid "Date & time field"
-msgstr ""
-
-#: ../system/objects/types.rst:58
-msgid "Provides a date and time picker – does not allow default values"
-msgstr ""
-
-#: ../system/objects/types.rst:62
-msgid "Allow future"
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "Forbid dates and times in the future."
-msgstr ""
-
-#: ../system/objects/types.rst:66
-msgid "Allow past"
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "Forbid dates and times in the past."
-msgstr ""
-
-#: ../system/objects/types.rst:70
-msgid "Default time diff (minutes)"
-msgstr ""
-
-#: ../system/objects/types.rst:69
+#: ../system/objects/types.rst:38
 msgid ""
-"This setting helps the user by highlighting the day from now plus the "
-"provided value. It does not pre-fill the field."
+"Provides a date and time selection field. During object creation (e.g. "
+"ticket creation), it gets pre-filled with the current date and time and the "
+"specified difference/offset is applied."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:42
+msgid ""
+"**Allow future:** Allows dates and times in the future. Default: ``yes``."
+msgstr ""
+
+#: ../system/objects/types.rst:43
+msgid "**Allow past:** Allows dates and times in the past. Default: ``yes``."
+msgstr ""
+
+#: ../system/objects/types.rst:44
+msgid ""
+"**Default time diff (minutes):** Define the default time difference/offset "
+"(in minutes) which gets applied when the field is pre-filled during object "
+"creation."
+msgstr ""
+
+#: ../system/objects/types.rst:None
 msgid "Available settings for Date & time fields"
 msgstr ""
 
-#: ../system/objects/types.rst:86
-msgid "Integer field"
-msgstr ""
-
-#: ../system/objects/types.rst:76
+#: ../system/objects/types.rst:54
 msgid ""
 "Provides an input field that allows integer usage only. You may define a "
 "default value. You cannot enforce comma separation."
 msgstr ""
 
-#: ../system/objects/types.rst:80
-msgid "Minimal"
+#: ../system/objects/types.rst:57
+msgid "**Minimal:** The minimal value the field accepts."
 msgstr ""
 
-#: ../system/objects/types.rst:80
-msgid "The minimal value the field accepts."
+#: ../system/objects/types.rst:58
+msgid "**Maximal:** The maximum value the field accepts."
 msgstr ""
 
-#: ../system/objects/types.rst:83
-msgid "Maximal"
-msgstr ""
-
-#: ../system/objects/types.rst:83
-msgid "The maximum value the field accepts."
-msgstr ""
-
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Available settings for Integer fields"
 msgstr ""
 
-#: ../system/objects/types.rst:99
-msgid "Multiple selection field"
-msgstr ""
-
-#: ../system/objects/types.rst:89
+#: ../system/objects/types.rst:66
 msgid ""
-"Provides a selection field that allows the selection of one or more out of "
-"several. This field does allow setting a default value."
+"Provides a field with pre-defined values from which the user can select one "
+"or more. It does not support a hierarchy (like a Multiple Tree Selection "
+"Field). You can define a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:72 ../system/objects/types.rst:91
+msgid ""
+"Don't forget to press \"+ Add\" after adding your values. Otherwise, you may "
+"lose a value."
+msgstr ""
+
+#: ../system/objects/types.rst:75 ../system/objects/types.rst:94
+#: ../system/objects/types.rst:129
+msgid "**Link template:** See :ref:`link-templates` for more information."
+msgstr ""
+
+#: ../system/objects/types.rst:None
 msgid "Available settings for Multiple selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:112
-msgid "Single selection field"
-msgstr ""
-
-#: ../system/objects/types.rst:102
+#: ../system/objects/types.rst:85
 msgid ""
-"Provides a drop-down field that allows selection of one value out of "
-"several. This field does allow setting a default value."
+"Provides a field with pre-defined values from which the user can select one. "
+"It does not support a hierarchy (like a Single Tree Selection Field). You "
+"can define a default value."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Available settings for Single selection fields"
 msgstr ""
 
-#: ../system/objects/types.rst:142
-msgid "Textarea field"
+#: ../system/objects/types.rst:104
+msgid ""
+"Provides a text area input field (multiple lines). You can set a default "
+"value. It does not support text formatting or HTML content (rich text)."
 msgstr ""
 
-#: ../system/objects/types.rst:115
+#: ../system/objects/types.rst:107
+msgid "**Default:** This text will be shown for not yet filled fields."
+msgstr ""
+
+#: ../system/objects/types.rst:108
+msgid "**Maxlength:** Set the maximum length of the field. Default: ``500``."
+msgstr ""
+
+#: ../system/objects/types.rst:109
 msgid ""
-"Provides a text area input field (multiple lines) and thus allows e.g. new "
-"lines. You can set a default field value."
+"**Rows:** Set the size of the field. In any case, the field is scrollable if "
+"the content exceeds the number of displayed rows. Default: ``4``."
+msgstr ""
+
+#: ../system/objects/types.rst:None
+msgid "Available settings for Textarea fields"
+msgstr ""
+
+#: ../system/objects/types.rst:118
+msgid "Provides a text field (one line). You can set a default value."
 msgstr ""
 
 #: ../system/objects/types.rst:120
 msgid ""
-"Please note that this field *does not* support text formatting or HTML "
-"content (rich text)."
+"**Type:** Defines the type of the input field. This allows your browser to "
+"ensure that you provide the specific format. Available options:"
 msgstr ""
 
-#: ../system/objects/types.rst:123
-msgid "**🥵 This field can consume a lot of visual space**"
-msgstr ""
-
-#: ../system/objects/types.rst:125
-msgid ""
-"Depending on where you use this field type, it may use a lot of visual space "
-"if you provide a lot of text. This may be an issue to work with."
-msgstr ""
-
-#: ../system/objects/types.rst:130
-msgid "Default"
-msgstr ""
-
-#: ../system/objects/types.rst:129
-msgid ""
-"The here provided text will be shown within the text area field or new data "
-"sets."
-msgstr ""
-
-#: ../system/objects/types.rst:134 ../system/objects/types.rst:160
-msgid "Maxlength"
-msgstr ""
-
-#: ../system/objects/types.rst:0 ../system/objects/types.rst:160
-msgid "You can pick the maximum length of the field."
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "The default length of this object is ``500``."
-msgstr ""
-
-#: ../system/objects/types.rst:139
-msgid "Rows"
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid ""
-"Change the number of rows to dislay so that you can use only the space you "
-"really need."
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "The default number of rows is ``4``."
-msgstr ""
-
-#: ../system/objects/types.rst:0
-msgid "Available settings for Textarea fields"
-msgstr ""
-
-#: ../system/objects/types.rst:165
-msgid "Text field"
-msgstr ""
-
-#: ../system/objects/types.rst:145
-msgid "Provides a text field (one line) and allows choosing a default value."
-msgstr ""
-
-#: ../system/objects/types.rst:148
-msgid ""
-"Defines the type of the input field. This allows e.g. your browser to ensure "
-"that you provide the specific type."
-msgstr ""
-
-#: ../system/objects/types.rst:152
-msgid "Currently available:"
-msgstr ""
-
-#: ../system/objects/types.rst:155
+#: ../system/objects/types.rst:124
 msgid "Phone"
 msgstr ""
 
-#: ../system/objects/types.rst:156
+#: ../system/objects/types.rst:125
 msgid "Text"
 msgstr ""
 
-#: ../system/objects/types.rst:157
-msgid "Url *(URL fields disable link-template availability)*"
+#: ../system/objects/types.rst:126
+msgid "Url (note: disables link-template availability)"
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:128
+msgid "**Maxlength:** Set the maximum length of the field. Default: ``120``."
+msgstr ""
+
+#: ../system/objects/types.rst:None
 msgid "Available settings for Text fields"
 msgstr ""
 
-#: ../system/objects/types.rst:175
-msgid "Single tree selection field"
-msgstr ""
-
-#: ../system/objects/types.rst:168
+#: ../system/objects/types.rst:137
 msgid ""
-"Provides a select-like field with up to 6 layers of options. To restrict the "
-"selection of a value, uncheck the box in the \"Active\" column. This type "
-"does not allow setting a default value."
+"Provides a field with pre-defined values from which the user can select one. "
+"It supports up to 6 hierarchy levels. To restrict the selection of a value "
+"(e.g. for parent values), uncheck the box in the \"Active\" column."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Available settings for Tree Select fields"
 msgstr ""
 
-#: ../system/objects/types.rst:185
-msgid "Multiple tree selection field"
-msgstr ""
-
-#: ../system/objects/types.rst:178
+#: ../system/objects/types.rst:150
 msgid ""
-"Provides a multi-select field with up to 6 layers of options. To restrict "
-"the selection of a value, uncheck the box in the \"Active\" column. This "
-"type does not allow setting a default value."
+"Provides a field with pre-defined values from which the user can select one "
+"or more. It supports up to 6 hierarchy levels. To restrict the selection of "
+"a value (e.g. for parent values), uncheck the box in the \"Active\" column."
 msgstr ""
 
-#: ../system/objects/types.rst:304
-msgid "External Data Source field"
+#: ../system/objects/types.rst:160
+msgid "External Data Source Field"
 msgstr ""
 
-#: ../system/objects/types.rst:188
+#: ../system/objects/types.rst:167
 msgid ""
 "Provides a searchable field which fetches data from an external system. This "
 "can be useful if you have data outside of Zammad and don't want to maintain "
-"both data sources."
+"both data sources. It works like this:"
 msgstr ""
 
-#: ../system/objects/types.rst:192
-msgid "The feature works as follows:"
-msgstr ""
-
-#: ../system/objects/types.rst:194
+#: ../system/objects/types.rst:171
 msgid ""
 "Zammad sends a query with a search string (free text from agent or based on "
 "a variable) in a pre-defined format (\"Search URL\") to an external system."
 msgstr ""
 
-#: ../system/objects/types.rst:197
+#: ../system/objects/types.rst:174
 msgid ""
 "This external system searches for matches and provides a response as a JSON "
 "structure to Zammad."
 msgstr ""
 
-#: ../system/objects/types.rst:199
+#: ../system/objects/types.rst:176
 msgid ""
 "Zammad just looks for the defined list and value keys, reads the content and "
 "displays the value to the user. There is no search on Zammad side."
 msgstr ""
 
-#: ../system/objects/types.rst:203
+#: ../system/objects/types.rst:180
 msgid ""
 "The usage of a PostgreSQL database for Zammad is required. In any other "
 "case, Zammad will hide the external data source type and you are not able to "
@@ -26846,17 +26422,17 @@ msgid ""
 "database </appendix/migrate-to-postgresql.html>`."
 msgstr ""
 
-#: ../system/objects/types.rst:207
-msgid "Currently, only ``GET`` is supported as request method."
+#: ../system/objects/types.rst:184
+msgid "Only ``GET`` is supported as request method."
 msgstr ""
 
-#: ../system/objects/types.rst:208
+#: ../system/objects/types.rst:185
 msgid ""
 "The data structure must be in JSON format and provide the objects in an "
 "array."
 msgstr ""
 
-#: ../system/objects/types.rst:210
+#: ../system/objects/types.rst:187
 msgid ""
 "The endpoint for the external data source has to support search. On Zammad "
 "side, there is no search/logic implemented; however, you can define the "
@@ -26864,63 +26440,63 @@ msgid ""
 "provides already filtered content based on the search)."
 msgstr ""
 
-#: ../system/objects/types.rst:214
+#: ../system/objects/types.rst:191
 msgid ""
 "If you receive more results as expected, your external data source search "
 "may not work properly or the structure of the URL is not correct. You should "
 "get in touch with a responsible person from the external system."
 msgstr ""
 
-#: ../system/objects/types.rst:219
+#: ../system/objects/types.rst:196
 msgid ""
 "Please have a look :doc:`at our example </system/objects/external-data-"
-"source-example>`, where you can find a possible configuration for a public "
-"dummy endpoint."
+"source-example>`, where you can find a possible configuration, using a "
+"public dummy endpoint."
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Available settings for external data source fields"
 msgstr ""
 
-#: ../system/objects/types.rst:244
+#: ../system/objects/types.rst:220
 msgid "Search URL"
 msgstr ""
 
-#: ../system/objects/types.rst:229
+#: ../system/objects/types.rst:206
 msgid ""
 "Set your endpoint where Zammad fetches the data. Please make sure to include "
 "a valid search :doc:`variable </misc/variables>` as an URL parameter. "
 "Example for a free text search at user input: ``#{search.term}``"
 msgstr ""
 
-#: ../system/objects/types.rst:234
+#: ../system/objects/types.rst:211
 msgid ""
 "If in doubt, ask the responsible person for the external data source how "
 "they expect the structure of the URL."
 msgstr ""
 
-#: ../system/objects/types.rst:238
+#: ../system/objects/types.rst:215
 msgid ""
 "Depending on your search variable, the preview might work or not. The reason "
 "is that the context might not be available and it is no bug."
 msgstr ""
 
-#: ../system/objects/types.rst:241
+#: ../system/objects/types.rst:218
 msgid ""
 "Please also make sure to use a variable which is available in your object "
 "context. For example you won't be able to search for a ticket in a user "
 "object context."
 msgstr ""
 
-#: ../system/objects/types.rst:254
+#: ../system/objects/types.rst:230
 msgid "SSL Verification"
 msgstr ""
 
-#: ../system/objects/types.rst:247
+#: ../system/objects/types.rst:223
 msgid "Here you can switch the SSL verification to no."
 msgstr ""
 
-#: ../system/objects/types.rst:251
+#: ../system/objects/types.rst:227
 msgid ""
 "If your external data source system is using self signed certificates, "
 "please have a look :doc:`here </settings/security/ssl-certificates>` for "
@@ -26928,11 +26504,11 @@ msgid ""
 "SSL verification activated."
 msgstr ""
 
-#: ../system/objects/types.rst:260
+#: ../system/objects/types.rst:236
 msgid "HTTP Authentication"
 msgstr ""
 
-#: ../system/objects/types.rst:257
+#: ../system/objects/types.rst:233
 msgid ""
 "If your external data source requires an authentication, you can set it "
 "here. You can leave it empty or choose between *Basic Authentication* or "
@@ -26940,11 +26516,11 @@ msgid ""
 "fields where you can enter your credentials/token)."
 msgstr ""
 
-#: ../system/objects/types.rst:267
+#: ../system/objects/types.rst:243
 msgid "Search result list key"
 msgstr ""
 
-#: ../system/objects/types.rst:263
+#: ../system/objects/types.rst:239
 msgid ""
 "Defines the level in the JSON structure which provides the list with search "
 "results. You can leave it empty, if the data is already provided as an "
@@ -26952,11 +26528,11 @@ msgid ""
 "with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:273
+#: ../system/objects/types.rst:249
 msgid "Search result value key"
 msgstr ""
 
-#: ../system/objects/types.rst:270
+#: ../system/objects/types.rst:246
 msgid ""
 "Defines the attribute in the structure in which your external data source "
 "provides the *value* for your data. An example would be a product *number*. "
@@ -26964,11 +26540,11 @@ msgid ""
 "as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:279
+#: ../system/objects/types.rst:255
 msgid "Search result label key"
 msgstr ""
 
-#: ../system/objects/types.rst:276
+#: ../system/objects/types.rst:252
 msgid ""
 "Defines the attribute in the structure in which your external data source "
 "provides the *label* for your data. An example would be a product *name*. If "
@@ -26976,38 +26552,38 @@ msgid ""
 "separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:282
+#: ../system/objects/types.rst:258
 msgid ""
 "In the preview area, you can find the following items (depending on your "
 "configuration above):"
 msgstr ""
 
-#: ../system/objects/types.rst:285
+#: ../system/objects/types.rst:261
 msgid ""
 "**Error/hint message** (only if configuration is not complete): Zammad tells "
 "you, if there is a problem and what you should change in your configuration."
 msgstr ""
 
-#: ../system/objects/types.rst:288
+#: ../system/objects/types.rst:264
 msgid ""
 "**Search field**: search for an existing attribute in the data source to get "
 "a preview. This is required for the fields below to show up."
 msgstr ""
 
-#: ../system/objects/types.rst:290
+#: ../system/objects/types.rst:266
 msgid ""
 "**Search result response** (only if configuration is not complete): here you "
 "can find a syntax highlighted JSON preview of the response, based on the "
 "search term you entered."
 msgstr ""
 
-#: ../system/objects/types.rst:293
+#: ../system/objects/types.rst:269
 msgid ""
 "**Search result list** (only if *search result list key* is properly set): "
 "output of the structure under the configured *search result list key*."
 msgstr ""
 
-#: ../system/objects/types.rst:296
+#: ../system/objects/types.rst:272
 msgid ""
 "**Preview table** (when fully configured): Zammad shows you a table which "
 "includes the found items based on the search string (value, label and "
@@ -27015,106 +26591,112 @@ msgid ""
 "structure of the external system in mind."
 msgstr ""
 
-#: ../system/objects/types.rst:301
+#: ../system/objects/types.rst:277
 msgid ""
 "An example of a configured external data source field from agent perspective:"
 msgstr ""
 
-#: ../system/objects/types.rst:0
+#: ../system/objects/types.rst:None
 msgid "Screencast showing the search for a product in a ticket"
 msgstr ""
 
-#: ../system/objects/types.rst:309
-msgid "URL fields (Link-Template)"
+#: ../system/objects/types.rst:288
+msgid "Link-Template"
 msgstr ""
 
-#: ../system/objects/types.rst:313
+#: ../system/objects/types.rst:290
 msgid ""
-"This function is restricted to Text, Select and External data source types "
-"only."
+"Link templates allow you to generate dynamic URLs based on the content of "
+"the attribute. This way you can define a base URL and add a variable for the "
+"field's content, for example in a search query or as a product ID. After "
+"adding content to a link-template field, a URL icon appears on its right "
+"side. Clicking the icon opens a new browser tab with the generated URL."
 msgstr ""
 
-#: ../system/objects/types.rst:316
+#: ../system/objects/types.rst:296
+msgid "Example for a search query URL:"
+msgstr ""
+
+#: ../system/objects/types.rst:298
+msgid "Ticket attribute type: **Text Field**"
+msgstr ""
+
+#: ../system/objects/types.rst:299
+msgid "Text field type: **Text**"
+msgstr ""
+
+#: ../system/objects/types.rst:300
+msgid "Ticket attribute name: ``my_attribute``"
+msgstr ""
+
+#: ../system/objects/types.rst:301
 msgid ""
-"Link-Templates are an amazing way to dynamically generate URLs. They allow "
-"you to integrate other systems better without having to manually copy data "
-"from Zammad if possible."
+"Link template content: ``https://www.duckduckgo.com/&q=#{ticket.my_attribute}"
+"``"
 msgstr ""
 
-#: ../system/objects/types.rst:322
-msgid ""
-"Another great way of communicating with another system may be "
-"Zammad's :doc:`Webhooks </manage/webhook>`."
+#: ../system/objects/types.rst:302
+msgid "Added field content: ``zammad``"
 msgstr ""
 
-#: ../system/objects/types.rst:325
-msgid ""
-"After filling a link-template enabled field, an URL icon will appear on its "
-"right. Clicking on the icon opens a new tab."
+#: ../system/objects/types.rst:303
+msgid "Resulting URL: ``https://www.duckduckgo.com/&q=zammad``"
 msgstr ""
 
-#: ../system/objects/types.rst:330
-msgid ""
-"Even though Zammad displays the link template within object edit and create "
-"screens, the function is optional. It's only active if you populate the "
-"field."
-msgstr ""
-
-#: ../system/objects/types.rst:335
-msgid ""
-"What's the difference between URL and text fields with link template...?!"
-msgstr ""
-
-#: ../system/objects/types.rst:337
-msgid ""
-"Both fields have different use cases. Use ``text`` type text fields when "
-"ever you have a *static* url that requires dynamic parameters. If you "
-"require a drag & drop like field that you can put in any URL, use ``URL`` "
-"type text fields."
-msgstr ""
-
-#: ../system/objects/types.rst:342
-msgid ""
-"The difference is easier to spot when comparing the fields directly, below "
-"screencast shows the result - the dynamic approach uses existing values in "
-"the moment of updating to built the URL - e.g. ``https://google.com/search?"
-"q=cookies`` - while the URL approach uses the actual URL of the field - e.g. "
-"``https://zammad.com``."
-msgstr ""
-
-#: ../system/objects/types.rst:None
-msgid ""
-"Screencast showing the differents in between URL and text type fields with "
-"actual values"
-msgstr ""
-
-#: ../system/objects/types.rst:354
-msgid "How does this work...?!"
-msgstr ""
-
-#: ../system/objects/types.rst:356
-msgid ""
-"As an example, let's say you have an attribute called ``amazing_attribute`` "
-"and you want to open a google search directly with the input from that field."
-msgstr ""
-
-#: ../system/objects/types.rst:359
-msgid ""
-"Providing the link-template field below allows you to do so: ``https://"
-"www.google.com/search?q=#{ticket.amazing_attribute}``"
-msgstr ""
-
-#: ../system/objects/types.rst:364
+#: ../system/objects/types.rst:307
 msgid ""
 "You can use any :doc:`Zammad variable </misc/variables>` as long as it's "
 "available in the moment you need it."
 msgstr ""
 
-#: ../system/objects/types.rst:367
+#: ../system/objects/types.rst:310
 msgid ""
-"As a result, you are redirected to Google with a search for the value of the "
-"attribute, if you click on the button in the ticket (as you can see in the "
-"screencast above)."
+"Available for the field types *Text* (type: text), *Single Selection*, "
+"*Multiple Selection* and *External Data Source*."
+msgstr ""
+
+#: ../system/objects/types.rst:315
+msgid ""
+"Another great way of communicating with another system may be "
+"Zammad's :doc:`Webhooks </manage/webhook>`."
+msgstr ""
+
+#: ../system/objects/types.rst:319
+msgid "Translate Field Contents"
+msgstr ""
+
+#: ../system/objects/types.rst:321
+msgid ""
+"For some attribute types, you can decide if their values should be "
+"translatable or not. If they are configured as translatable, they appear in "
+"the :doc:`translation interface </system/translations>` as other strings in "
+"Zammad. This works only for fields with selectable options because the "
+"possible choices are known and limited. You can set the translatable flag "
+"for these types:"
+msgstr ""
+
+#: ../system/objects/types.rst:328
+msgid "Boolean field"
+msgstr ""
+
+#: ../system/objects/types.rst:329
+msgid "Single selection field"
+msgstr ""
+
+#: ../system/objects/types.rst:330
+msgid "Multiple selection field"
+msgstr ""
+
+#: ../system/objects/types.rst:331
+msgid "Single tree selection field"
+msgstr ""
+
+#: ../system/objects/types.rst:332
+msgid "Multiple tree selection field"
+msgstr ""
+
+#: ../system/objects/types.rst:None
+msgid "Screenshot showing translatable attribute types"
 msgstr ""
 
 #: ../system/packages.rst:2
