@@ -91,7 +91,7 @@ In the app dashboard, first re-open the configuration:
 
 Now go to **API Setup** and choose or add a phone number.
 
-.. note::
+.. warning::
     - This number may not be used in a WhatsApp app already, not even in a
       WhatsApp Business app.
     - In case you want to test it with a provided test number, additional
