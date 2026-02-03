@@ -31,13 +31,19 @@ WhatsApp Business Account ID
      :align: center
 
 Access Token
-   On the same **API Setup** page, you can generate a token. Follow the steps
-   and confirm it so you finally see the token. Make sure to copy it directly
-   because it gets displayed only once.
+   Enter the access token of a system user with the permission to manage the
+   app. You can create it in the
+   `business settings <https://business.facebook.com/settings/system-users>`_
+   under *Users > System users*. Make sure to assign the created app to the
+   system user ("Assign assets") and to grant admin access by enabling the
+   **Manage app** toggle. After clicking the **Generate token** button, choose
+   your created app, an expiration date of the token (we recommend "Never") and
+   the permissions ``whatsapp_business_management`` and
+   ``whatsapp_business_messaging``.
+   Be aware that you have to copy the token, it is just displayed once!
 
-   .. figure:: /images/channels/whatsapp/config-use-case-api-setup.png
-      :alt: App dashboard shows API configuration and highlighted token generation.
-      :align: center
+   .. figure:: /images/channels/whatsapp/system-user-token-generation.png
+      :alt: System user access token generation
 
 App Secret
    Enter your app secret. You can find it in your app configuration under
