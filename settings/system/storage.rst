@@ -41,9 +41,6 @@ Simple Storage (S3)
    To use the Simple Storage (S3), you have to provide some settings, which
    can't be accessed in the UI (see instructions below).
 
-   .. warning:: ⚠️ Please note that the current implementation is in its early
-      stages and can be modified in the future.
-
    The prerequisite is to have access to a S3-compatible storage and to have all
    necessary parameters available (which depends on your storage provider; if
    in doubt, please ask there for help).
@@ -63,8 +60,8 @@ Simple Storage (S3)
        inconsistencies.
 
    3. Restart Zammad so the config file / environment variable is loaded
-   4. Set the "Storage Method" in Zammad to ``Simple Storage (S3)`` in
-      Settings > System > Storage and click on "Submit". After that, Zammad
+   4. Set the "Storage Method" in Zammad to **Simple Storage (S3)** in
+      *Settings > System > Storage* and click on "Submit". After that, Zammad
       checks your configuration and the connection to the service and will raise
       an error message if something is wrong.
 
