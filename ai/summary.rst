@@ -11,7 +11,6 @@ feature. Otherwise, a warning message will tell you to do so.
 .. figure:: /images/ai/summary-settings.png
    :alt: Screenshot shows AI ticket summary configuration
    :align: center
-   :scale: 80%
 
 If you activate this feature, **Customer Intent** and **Conversation Summary**
 are enabled by default. You can choose to activate **Open Questions**,

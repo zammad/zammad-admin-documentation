@@ -9,7 +9,7 @@ warning message will tell you to do so. Activate the feature by turning on the
 switch.
 
 .. figure:: /images/ai/writing-assistant.png
-  :alt: Screenshots shows writing assistant settings screen with available default tools
+   :alt: Screenshots shows writing assistant settings screen with available default tools
 
 Manage Tools
 ------------

@@ -13,7 +13,6 @@ Settings
 .. figure:: /images/ai/ai-provider.png
    :alt: Screenshot shows configuration of AI provider in Zammad
    :align: center
-   :width: 60%
 
 Provider
    You can choose from different supported providers:
