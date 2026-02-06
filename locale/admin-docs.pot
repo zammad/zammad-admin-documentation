@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-05 10:44+0100\n"
+"POT-Creation-Date: 2026-02-06 13:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,36 +28,36 @@ msgstr ""
 msgid "While an AI agent works on a ticket, an avatar is displayed in the live user section in the bottom bar of the ticket detail view, see example below. In such a short period of time, the agents should not apply changes to the ticket because they could get overwritten."
 msgstr ""
 
-#: ../ai/ai-agents.rst:20
+#: ../ai/ai-agents.rst:19
 msgid "Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar"
 msgstr ""
 
-#: ../ai/ai-agents.rst:20
+#: ../ai/ai-agents.rst:19
 msgid "Avatar of an AI agent which shows up in the live user section."
 msgstr ""
 
-#: ../ai/ai-agents.rst:23
+#: ../ai/ai-agents.rst:22
 #: ../system/data-privacy.rst:10
 msgid "Important Information"
 msgstr ""
 
-#: ../ai/ai-agents.rst:25
+#: ../ai/ai-agents.rst:24
 msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
 msgstr ""
 
-#: ../ai/ai-agents.rst:26
+#: ../ai/ai-agents.rst:25
 msgid "AI agents don't run on their own. They have to be invoked by a :doc:`trigger </manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**."
 msgstr ""
 
-#: ../ai/ai-agents.rst:29
+#: ../ai/ai-agents.rst:28
 msgid "By creating a macro with an AI agent action, your agents can run it on demand."
 msgstr ""
 
-#: ../ai/ai-agents.rst:30
+#: ../ai/ai-agents.rst:29
 msgid "If an AI agent applies changes to a ticket, you can find an entry in the ticket history with the name of the AI agent."
 msgstr ""
 
-#: ../ai/ai-agents.rst:34
+#: ../ai/ai-agents.rst:33
 msgid "Manage AI Agents"
 msgstr ""
 
@@ -65,76 +65,76 @@ msgstr ""
 msgid "Screenshot shows AI agents management"
 msgstr ""
 
-#: ../ai/ai-agents.rst:41
+#: ../ai/ai-agents.rst:39
 msgid "Create an AI agent by clicking the **New AI Agent** button in the top right corner. This opens a wizard where you can choose the type of the agent and additional settings based on the selected type, see :ref:`ai-agent-types` for details. The action column with the ︙ button allows you to clone or delete an AI agent. You can only delete AI agents which are not used in triggers, scheduler jobs and macros. Check the **Used in** column and hover over an entry to see where an AI agent is used."
 msgstr ""
 
-#: ../ai/ai-agents.rst:52
+#: ../ai/ai-agents.rst:50
 msgid "AI Agent Types"
 msgstr ""
 
-#: ../ai/ai-agents.rst:54
+#: ../ai/ai-agents.rst:52
 msgid "Define your AI agents and use them afterwards in triggers, scheduler jobs or macros. An example for a trigger configuration could look like this:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:57
+#: ../ai/ai-agents.rst:55
 msgid "Activated by: **Action**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:58
+#: ../ai/ai-agents.rst:56
 msgid "Action execution: **Selective**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:59
+#: ../ai/ai-agents.rst:57
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 
-#: ../ai/ai-agents.rst:60
+#: ../ai/ai-agents.rst:58
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
 msgstr ""
 
-#: ../ai/ai-agents.rst:62
+#: ../ai/ai-agents.rst:60
 msgid "Depending on the agent type, you can limit the available options for the AI agents. If you do so, make sure to select at least two options the agent can choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:67
+#: ../ai/ai-agents.rst:65
 msgid "Ticket Categorizer"
 msgstr ""
 
-#: ../ai/ai-agents.rst:69
+#: ../ai/ai-agents.rst:67
 msgid "This AI agent is capable of assigning categories to tickets. Because there is no built in category field in Zammad, you first have to create a :doc:`custom ticket attribute </system/objects>` in which you want to track the ticket's category. The field type must be one of the select types."
 msgstr ""
 
-#: ../ai/ai-agents.rst:74
+#: ../ai/ai-agents.rst:72
 msgid "The ticket categorizer AI agent uses the content of all articles and the title to compare it with your category names. You can limit from which categories the AI agent can choose from and define if multiple values are possible (if using a multi-select field type) in the wizard. In case you limit the categories, you can also provide a description for each category the AI agent can choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:82
+#: ../ai/ai-agents.rst:80
 msgid "Ticket Group Dispatcher"
 msgstr ""
 
-#: ../ai/ai-agents.rst:84
+#: ../ai/ai-agents.rst:82
 msgid "This AI agent is capable of assigning tickets to different groups. It compares the content of the ticket in question with your group names in Zammad. If a suitable group can be found, it selects this group for the ticket. You can use all of your groups or just specific ones by limiting it for the AI agent in the configuration wizard."
 msgstr ""
 
-#: ../ai/ai-agents.rst:92
+#: ../ai/ai-agents.rst:90
 msgid "Ticket Prioritizer"
 msgstr ""
 
-#: ../ai/ai-agents.rst:94
+#: ../ai/ai-agents.rst:92
 msgid "This AI agent is capable of setting a ticket priority based on the title of the ticket and the content of the last article. You can choose to use all priorities or limit them to specific ones. In case you limit the priorities, you can also provide a description for each priority the AI agent can choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:100
+#: ../ai/ai-agents.rst:98
 msgid "Ticket Title Rewriter"
 msgstr ""
 
-#: ../ai/ai-agents.rst:102
+#: ../ai/ai-agents.rst:100
 msgid "This AI agent is capable of rephrasing the ticket title based on the content of the last article. The title is not considered by the agent and gets completely rewritten. This can be useful if your customers often send requests with unclear subjects or if you have a specific channel which only creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
 #: ../ai/provider.rst:2
-#: ../ai/provider.rst:35
+#: ../ai/provider.rst:34
 msgid "Provider"
 msgstr ""
 
@@ -159,171 +159,171 @@ msgstr ""
 msgid "Screenshot shows configuration of AI provider in Zammad"
 msgstr ""
 
-#: ../ai/provider.rst:19
+#: ../ai/provider.rst:18
 msgid "You can choose from different supported providers:"
 msgstr ""
 
-#: ../ai/provider.rst:21
-#: ../ai/provider.rst:83
+#: ../ai/provider.rst:20
+#: ../ai/provider.rst:82
 msgid "Zammad AI"
 msgstr ""
 
-#: ../ai/provider.rst:22
+#: ../ai/provider.rst:21
 msgid "OpenAI"
 msgstr ""
 
-#: ../ai/provider.rst:23
-#: ../ai/provider.rst:113
+#: ../ai/provider.rst:22
+#: ../ai/provider.rst:112
 msgid "Ollama"
 msgstr ""
 
-#: ../ai/provider.rst:24
+#: ../ai/provider.rst:23
 msgid "Anthropic"
 msgstr ""
 
-#: ../ai/provider.rst:25
+#: ../ai/provider.rst:24
 msgid "Azure AI"
 msgstr ""
 
-#: ../ai/provider.rst:26
+#: ../ai/provider.rst:25
 msgid "Mistral AI"
 msgstr ""
 
-#: ../ai/provider.rst:27
+#: ../ai/provider.rst:26
 msgid "Custom (OpenAI Compatible)"
 msgstr ""
 
-#: ../ai/provider.rst:29
+#: ../ai/provider.rst:28
 msgid "Depending on which provider you choose, Zammad displays different fields you can configure."
 msgstr ""
 
-#: ../ai/provider.rst:32
+#: ../ai/provider.rst:31
 msgid "The AI service you have subscribed to is not available? This is just the first step. We are going to add more providers soon! If you want to support us or need the provider as soon as possible, just let our `sales department <https://zammad.com/en/company/contact>`_ know!"
 msgstr ""
 
-#: ../ai/provider.rst:40
+#: ../ai/provider.rst:39
 msgid "Token"
 msgstr ""
 
-#: ../ai/provider.rst:38
+#: ../ai/provider.rst:37
 msgid "Add your API token which you got from your provider here. Don't confuse it with the tokens a large language model (LLM) is dealing with when processing a request."
 msgstr ""
 
-#: ../ai/provider.rst:44
+#: ../ai/provider.rst:43
 #: ../manage/knowledge-base.rst:151
 #: ../system/integrations/elasticsearch.rst:57
 msgid "URL"
 msgstr ""
 
-#: ../ai/provider.rst:43
+#: ../ai/provider.rst:42
 msgid "Provide the URL or IP address of your provider. This is required for Ollama and OpenAI compatible providers."
 msgstr ""
 
-#: ../ai/provider.rst:48
+#: ../ai/provider.rst:47
 msgid "URL (Completions)"
 msgstr ""
 
-#: ../ai/provider.rst:47
+#: ../ai/provider.rst:46
 msgid "Only for Azure AI as provider. Add the endpoint where your text generation model is available."
 msgstr ""
 
-#: ../ai/provider.rst:53
+#: ../ai/provider.rst:52
 msgid "Model"
 msgstr ""
 
-#: ../ai/provider.rst:51
+#: ../ai/provider.rst:50
 msgid "Enter the exact name of the model here. This model has to be available on your provider's side. Leave it empty (if not mandatory) to use the default which is shown as a placeholder."
 msgstr ""
 
-#: ../ai/provider.rst:61
+#: ../ai/provider.rst:60
 msgid "Recognize Image Text (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:56
+#: ../ai/provider.rst:55
 msgid "Zammad allows you to use optical character recognition (OCR) to extract text from images. This can be useful if you often get error messages or other important information, which is only present in images."
 msgstr ""
 
-#: ../ai/provider.rst:60
+#: ../ai/provider.rst:59
 msgid "Simply switch the toggle on or off. Be aware that using this feature can cause a high consumption of tokens."
 msgstr ""
 
-#: ../ai/provider.rst:68
+#: ../ai/provider.rst:67
 msgid "OCR Model"
 msgstr ""
 
-#: ../ai/provider.rst:64
+#: ../ai/provider.rst:63
 msgid "Specify a model to use for the OCR feature. Leave it empty to use the default model of your provider."
 msgstr ""
 
-#: ../ai/provider.rst:67
+#: ../ai/provider.rst:66
 msgid "Note: the field is called **URL (OCR)** for Azure AI and expects a URL where the OCR model is available instead of a model itself."
 msgstr ""
 
-#: ../ai/provider.rst:70
+#: ../ai/provider.rst:69
 msgid "After providing the information, make sure to click the ``Save`` button and activate AI features."
 msgstr ""
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:73
 msgid "Excursion"
 msgstr ""
 
-#: ../ai/provider.rst:76
+#: ../ai/provider.rst:75
 msgid "In case you want to know more about Zammad AI or Ollama, read on here. Otherwise, head over to :ref:`feedback-logs` or check out the AI-powered features and how to use them."
 msgstr ""
 
-#: ../ai/provider.rst:85
+#: ../ai/provider.rst:84
 msgid "Using Zammad AI as a provider is the easiest way you can get started with Zammad's AI features. It has some big advantages like:"
 msgstr ""
 
-#: ../ai/provider.rst:88
+#: ../ai/provider.rst:87
 msgid "You don't have to take care of the setup of an AI system and its configuration."
 msgstr ""
 
-#: ../ai/provider.rst:90
+#: ../ai/provider.rst:89
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr ""
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:90
 msgid "No configuration in Zammad needed (for SaaS customers) or only an API key required (for self-hosted customers)."
 msgstr ""
 
-#: ../ai/provider.rst:93
+#: ../ai/provider.rst:92
 msgid "Your requests with sensitive information aren't used for training."
 msgstr ""
 
-#: ../ai/provider.rst:94
+#: ../ai/provider.rst:93
 msgid "If something isn't working as expected, you just have one place where you get support."
 msgstr ""
 
-#: ../ai/provider.rst:104
+#: ../ai/provider.rst:103
 msgid "SaaS Customers"
 msgstr ""
 
-#: ../ai/provider.rst:98
+#: ../ai/provider.rst:97
 msgid "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription settings </system/subscription>` and consider to switch your plan. If a \"V2\" plan is active, you can buy AI calls for AI processing. After doing so, Zammad AI is automatically configured as AI provider and you can activate and configure AI features as you like. Check your remaining AI calls from time to time or activate the notification to be alerted when few calls remain."
 msgstr ""
 
-#: ../ai/provider.rst:110
+#: ../ai/provider.rst:109
 msgid "Self-Hosted Customers"
 msgstr ""
 
-#: ../ai/provider.rst:107
+#: ../ai/provider.rst:106
 msgid "Please `get in touch with our sales department <https://zammad.com/en/company/contact>`_ to obtain a Zammad AI API key and to buy AI calls. After receiving your API key, simply add and save it. Then you are ready to activate and configure AI features as you like."
 msgstr ""
 
-#: ../ai/provider.rst:115
+#: ../ai/provider.rst:114
 msgid "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your own AI server on a machine you control. That means your data is not transferred to a third party. Be aware that this only makes sense if you have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:120
+#: ../ai/provider.rst:119
 msgid "If you don't have an Ollama running already, their `documentation <https://docs.ollama.com/>`_ is a good starting point. You can find the available models in `Ollama's model library <https://ollama.com/library>`_ and useful information and additional links in the `Ollama Github repository <https://github.com/ollama/ollama>`_."
 msgstr ""
 
-#: ../ai/provider.rst:130
+#: ../ai/provider.rst:129
 msgid "Feedback & Logs"
 msgstr ""
 
-#: ../ai/provider.rst:132
+#: ../ai/provider.rst:131
 msgid "At the top of the settings page, you can switch to the **Feedback & Logs** tab."
 msgstr ""
 
@@ -331,15 +331,15 @@ msgstr ""
 msgid "Screenshot shows AI provider settings with activated \"Feedback & Logs\" tab"
 msgstr ""
 
-#: ../ai/provider.rst:140
+#: ../ai/provider.rst:139
 msgid "Downloads"
 msgstr ""
 
-#: ../ai/provider.rst:142
+#: ../ai/provider.rst:141
 msgid "Your agents can provide feedback like thumbs up or down and leave a comment in case they gave thumbs down. You can download this feedback as well as error logs. Both downloads provide an Excel file (.xlsx) with the requested information."
 msgstr ""
 
-#: ../ai/provider.rst:148
+#: ../ai/provider.rst:147
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
@@ -350,7 +350,7 @@ msgstr ""
 msgid "Recent Logs"
 msgstr ""
 
-#: ../ai/provider.rst:150
+#: ../ai/provider.rst:149
 msgid "Zammad shows the last requests and responses in the UI as well. So in case something isn't working, have a look there. When you open an entry, you can find the request as well as the response from your AI provider."
 msgstr ""
 
@@ -370,19 +370,19 @@ msgstr ""
 msgid "Screenshot shows AI ticket summary configuration"
 msgstr ""
 
-#: ../ai/summary.rst:16
+#: ../ai/summary.rst:15
 msgid "If you activate this feature, **Customer Intent** and **Conversation Summary** are enabled by default. You can choose to activate **Open Questions**, **Upcoming Events** and **Customer Sentiment**, depending on your use case."
 msgstr ""
 
-#: ../ai/summary.rst:20
+#: ../ai/summary.rst:19
 msgid "Enabling the ticket summary feature triggers a request to the configured AI service at the configured action (see below). After the summary is generated, agents are notified by an indicator on the summary sidebar tab."
 msgstr ""
 
-#: ../ai/summary.rst:24
+#: ../ai/summary.rst:23
 msgid "Decide when the summary is generated via **Generation** dropdown. It is generated when the ticket got updated and an agent either opens the ticket or opens the summary sidebar tab of the ticket. The first mentioned option is more comfortable for agents, the latter saves computing resources if the AI summary is not always viewed. If you want to have a more granular control, you can override this setting for each group individually in the :doc:`group management </manage/groups/index>`."
 msgstr ""
 
-#: ../ai/summary.rst:32
+#: ../ai/summary.rst:31
 msgid "If you use an own Ollama server as provider, make sure to have the ``llama3.2`` model available for this feature or specify an available model in the :doc:`provider configuration <provider>`."
 msgstr ""
 
