@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-06 13:10+0100\n"
+"POT-Creation-Date: 2026-02-12 11:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -529,7 +529,7 @@ msgstr ""
 #: ../manage/roles/permissions.rst:229
 #: ../manage/roles/permissions.rst:299
 #: ../manage/scheduler.rst:158
-#: ../manage/webhook/add.rst:114
+#: ../manage/webhook/add.rst:128
 #: ../misc/variables.rst:102
 #: ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
@@ -561,7 +561,7 @@ msgstr ""
 #: ../manage/roles/index.rst:92
 #: ../manage/scheduler.rst:161
 #: ../manage/templates.rst:33
-#: ../manage/webhook/add.rst:120
+#: ../manage/webhook/add.rst:134
 #: ../system/objects.rst:171
 #: ../system/objects.rst:251
 msgid "Active"
@@ -6186,8 +6186,8 @@ msgstr ""
 #: ../manage/macros.rst:36
 #: ../manage/trigger.rst:24
 #: ../manage/trigger.rst:24
-#: ../manage/webhook.rst:46
-#: ../manage/webhook.rst:46
+#: ../manage/webhook.rst:42
+#: ../manage/webhook.rst:42
 #: ../system/core-workflows.rst:23
 #: ../system/core-workflows.rst:23
 #: ../system/objects.rst:32
@@ -10385,47 +10385,43 @@ msgstr ""
 msgid "Webhooks have to be triggered by :doc:`/manage/trigger` or :doc:`/manage/scheduler` jobs."
 msgstr ""
 
-#: ../manage/webhook.rst:17
-msgid "The usage of variables is limited compared to other places. Some features are not available in webhooks (e.g. the ``.value`` extension, translation (``#{t(object.attribute)}``) and time formatting (``#{dt(object.time_attribute, [...]``) functions)."
-msgstr ""
-
-#: ../manage/webhook.rst:23
+#: ../manage/webhook.rst:19
 msgid "How do Webhooks Work"
 msgstr ""
 
-#: ../manage/webhook.rst:25
+#: ../manage/webhook.rst:21
 msgid "Under the hood, Zammad sends a request to a third-party URL (\"API endpoint\") you specify in the webhook configuration. The application server behind this URL/endpoint must be configured to receive messages from Zammad and handle the provided payload accordingly."
 msgstr ""
 
-#: ../manage/webhook.rst:30
+#: ../manage/webhook.rst:26
 msgid "Webhooks can be created both from scratch and from pre-defined templates. When created from scratch, regular webhook payloads by default contain the following JSON data about new/updated tickets:"
 msgstr ""
 
-#: ../manage/webhook.rst:34
+#: ../manage/webhook.rst:30
 msgid "Ticket attributes/metadata"
 msgstr ""
 
-#: ../manage/webhook.rst:35
+#: ../manage/webhook.rst:31
 msgid "Associated article(s)"
 msgstr ""
 
-#: ../manage/webhook.rst:36
+#: ../manage/webhook.rst:32
 msgid "Associated users (e.g. article senders, owners, etc.)"
 msgstr ""
 
-#: ../manage/webhook.rst:37
+#: ../manage/webhook.rst:33
 msgid "Associated user roles"
 msgstr ""
 
-#: ../manage/webhook.rst:38
+#: ../manage/webhook.rst:34
 msgid "Associated user organizations (if applicable)"
 msgstr ""
 
-#: ../manage/webhook.rst:39
+#: ../manage/webhook.rst:35
 msgid "Associated groups"
 msgstr ""
 
-#: ../manage/webhook.rst:41
+#: ../manage/webhook.rst:37
 msgid "On the other hand, pre-defined webhooks are designed to work with specific services, containing special payloads that these services understand. In both cases, however, it is possible to further customize the webhook payload to your own needs."
 msgstr ""
 
@@ -10552,39 +10548,43 @@ msgstr ""
 msgid "Additional pre-defined webhook fields"
 msgstr ""
 
-#: ../manage/webhook/add.rst:110
+#: ../manage/webhook/add.rst:124
 msgid "Custom Payload"
 msgstr ""
 
 #: ../manage/webhook/add.rst:93
-msgid "Defaults to off - webhook will always send :ref:`webhook-payload-default` to the target endpoint."
+msgid "By default, it is turned off and the webhook will always send :ref:`webhook-payload-default` to the target endpoint. When switched on, a code editor will be shown below, where you can configure a custom payload for your webhook in JSON format. To insert supported :doc:`/misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{`` for autocomplete."
 msgstr ""
 
-#: ../manage/webhook/add.rst:96
-msgid "When switched on, a code editor will be shown below, where you can configure a custom payload for your webhook in JSON format. To insert supported :doc:`/misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{`` for autocomplete."
+#: ../manage/webhook/add.rst:102
+msgid "The usage of variables is limited compared to other places. Some features are not available in webhooks (e.g. the ``.value`` extension, translation (``#{t(object.attribute)}``) and time formatting (``#{dt(object.time_attribute, [...]``) functions). Make sure to select a variable from the autocomplete suggestions."
 msgstr ""
 
-#: ../manage/webhook/add.rst:101
+#: ../manage/webhook/add.rst:107
 msgid "The custom payload must have a valid JSON syntax! The code editor will highlight if there is an issue with the syntax. Also, it will not be possible to save an invalid JSON structure."
 msgstr ""
 
-#: ../manage/webhook/add.rst:0
-msgid "Custom payload code editor"
-msgstr ""
-
-#: ../manage/webhook/add.rst:109
+#: ../manage/webhook/add.rst:110
 msgid "Pre-defined webhooks will always provide an initial custom payload, specific for the associated service."
 msgstr ""
 
-#: ../manage/webhook/add.rst:113
+#: ../manage/webhook/add.rst:0
+msgid "Custom payload code editor with variable auto completion"
+msgstr ""
+
+#: ../manage/webhook/add.rst:116
+msgid "A basic example for the structure looks like this:"
+msgstr ""
+
+#: ../manage/webhook/add.rst:127
 msgid "If required you can leave useful information for other Zammad admins to understand the webhook in question better."
 msgstr ""
 
-#: ../manage/webhook/add.rst:117
+#: ../manage/webhook/add.rst:131
 msgid "If set to ``inactive``, you can no longer select the webhook in the trigger or scheduler configuration. Inactive webhooks will not be fired. If triggers or schedulers have other actions configured as well, they will still be executed."
 msgstr ""
 
-#: ../manage/webhook/add.rst:122
+#: ../manage/webhook/add.rst:136
 msgid "After you set up your webhook, make sure to invoke it via trigger or scheduler. In case something doesn't work, have a look at the :doc:`troubleshooting <log>` section."
 msgstr ""
 
