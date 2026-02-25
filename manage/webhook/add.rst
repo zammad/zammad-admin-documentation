@@ -90,24 +90,38 @@ Pre-defined Webhook
       :alt: Additional pre-defined webhook fields
 
 Custom Payload
-   Defaults to off - webhook will always send :ref:`webhook-payload-default`
-   to the target endpoint.
-
+   By default, it is turned off and the webhook will always send
+   :ref:`webhook-payload-default` to the target endpoint.
    When switched on, a code editor will be shown below, where you can
    configure a custom payload for your webhook in JSON format. To insert
    supported :doc:`/misc/variables`, use :kbd:`:` :kbd:`:` or insert ``#{``
    for autocomplete.
 
-   The custom payload must have a valid JSON syntax! The code editor will
-   highlight if there is an issue with the syntax. Also, it will not be
-   possible to save an invalid JSON structure.
-
-   .. figure:: /images/manage/webhook/webhook-custom-payload.gif
-      :alt: Custom payload code editor
-
    .. hint::
-      Pre-defined webhooks will always provide an initial custom payload,
-      specific for the associated service.
+
+     - The usage of variables is limited compared to other places.
+       Some features are not available in webhooks (e.g. the ``.value`` extension,
+       translation (``#{t(object.attribute)}``) and time formatting
+       (``#{dt(object.time_attribute, [...]``) functions). Make sure to select
+       a variable from the autocomplete suggestions.
+     - The custom payload must have a valid JSON syntax! The code editor will
+       highlight if there is an issue with the syntax. Also, it will not be
+       possible to save an invalid JSON structure.
+     - Pre-defined webhooks will always provide an initial custom payload,
+       specific for the associated service.
+
+   .. figure:: /images/manage/webhook/custom-payload-variable-autocomplete.png
+      :alt: Custom payload code editor with variable auto completion
+
+   A basic example for the structure looks like this:
+
+   .. code-block:: json
+
+      {
+        "ticket": "#{ticket.title}",
+        "message": "#{notification.message}",
+        "customer": "#{ticket.customer.fullname}"
+      }
 
 Note
    If required you can leave useful information for other Zammad admins

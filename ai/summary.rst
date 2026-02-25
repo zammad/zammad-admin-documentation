@@ -11,7 +11,6 @@ feature. Otherwise, a warning message will tell you to do so.
 .. figure:: /images/ai/summary-settings.png
    :alt: Screenshot shows AI ticket summary configuration
    :align: center
-   :scale: 80%
 
 If you activate this feature, **Customer Intent** and **Conversation Summary**
 are enabled by default. You can choose to activate **Open Questions**,
@@ -31,4 +30,4 @@ individually in the :doc:`group management </manage/groups/index>`.
 
 .. hint:: If you use an own Ollama server as provider, make sure to have the
    ``llama3.2`` model available for this feature or specify an available model
-   in the :ref:`provider configuration <ollama-provider>`.
+   in the :doc:`provider configuration <provider>`.

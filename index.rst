@@ -30,7 +30,7 @@ Zammad Admin Documentation
    manage/tags
    manage/checklist
    manage/calendars
-   manage/slas/index
+   manage/slas
    manage/trigger
    manage/public-links
    manage/webhook
@@ -75,8 +75,8 @@ Zammad Admin Documentation
 
    ai/provider
    ai/summary
-   ai/ai-agents
    ai/writing-assistant
+   ai/ai-agents
 
 .. _system-docs:
 

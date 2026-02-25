@@ -14,10 +14,6 @@ in Zammad's settings under *Manage > Webhooks*.
      four times.
    - Webhooks have to be triggered by :doc:`/manage/trigger` or
      :doc:`/manage/scheduler` jobs.
-   - The usage of variables is limited compared to other places.
-     Some features are not available in webhooks (e.g. the ``.value`` extension,
-     translation (``#{t(object.attribute)}``) and time formatting
-     (``#{dt(object.time_attribute, [...]``) functions).
 
 How do Webhooks Work
 --------------------

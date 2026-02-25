@@ -13,11 +13,10 @@ below. In such a short period of time, the agents should not apply changes to
 the ticket because they could get overwritten.
 
 .. figure:: /images/ai/ai-live-user.png
-  :alt: Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar
-  :scale: 60%
-  :align: center
+   :alt: Screenshot shows avatar of AI agent in the live user section in ticket detail's bottom bar
+   :align: center
 
-  Avatar of an AI agent which shows up in the live user section.
+   Avatar of an AI agent which shows up in the live user section.
 
 Important Information
 ---------------------
@@ -34,9 +33,8 @@ Manage AI Agents
 ----------------
 
 .. figure:: /images/ai/manage-agents.png
-  :alt: Screenshot shows AI agents management
-  :align: center
-  :scale: 80%
+   :alt: Screenshot shows AI agents management
+   :align: center
 
 Create an AI agent by clicking the **New AI Agent** button in the top right
 corner. This opens a wizard where you can choose the type of the agent and
@@ -60,8 +58,8 @@ macros. An example for a trigger configuration could look like this:
 - Execute changes on objects: **AI Agent** > Select your AI agent
 
 .. hint:: Depending on the agent type, you can limit the available options for
-  the AI agents. If you do so, make sure to select at least two options the
-  agent can choose from.
+   the AI agents. If you do so, make sure to select at least two options the
+   agent can choose from.
 
 Ticket Categorizer
 ^^^^^^^^^^^^^^^^^^
