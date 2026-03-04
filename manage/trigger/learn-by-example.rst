@@ -5,7 +5,7 @@ To get you up and running quickly, here are some examples
 of the kinds of automation tasks you can set up with triggers.
 
 To learn about triggers in detail, first go to
-:doc:`/manage/trigger/how-do-they-work`.
+:doc:`/manage/trigger`.
 
 1. Any time Jacob Smith creates a ticket, assign it to the Sales group:
 

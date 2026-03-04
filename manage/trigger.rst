@@ -26,6 +26,5 @@ settings:
    :caption: Learn more
 
    /manage/trigger/learn-by-example
-   /manage/trigger/how-do-they-work
    /manage/trigger/limitations
    /manage/trigger/system-notifications
