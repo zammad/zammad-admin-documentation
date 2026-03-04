@@ -28,8 +28,8 @@ Learn more about managing organizations...
 
 * Organizations currently cannot be removed. The only exception
   is Zammad's :doc:`/system/data-privacy` function.
-* Unlike users, agents cannot just create new organizations.
-  Check the :doc:`permission reference </manage/roles/admin-permissions>`
+* Unlike users, agents cannot create new organizations.
+  Check the :doc:`roles section </manage/roles/index>`
   to learn more.
 * Because of how organization references work with users, external syncs
   like LDAP or Exchange *do not* support organization mapping. If this is
@@ -101,7 +101,7 @@ The ones that aren't are described below.
 👑 VIP
    This flag is a way for your team to indicate high-status organizations. Just
    as with customers, you can set up special :doc:`/manage/trigger`,
-   :doc:`/manage/scheduler` jobs, :doc:`/manage/slas/index`,
+   :doc:`/manage/scheduler` jobs, :doc:`/manage/slas`,
    and :doc:`/manage/overviews` just for VIPs.
 
    .. figure:: /images/manage/organizations/vip-org-in-a-ticket.png

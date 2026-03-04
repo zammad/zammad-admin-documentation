@@ -75,10 +75,6 @@ Create Macros
 Additional Channels
 -------------------
 
-Twitter
-   Link to the
-   :doc:`Twitter channel in the settings </channels/twitter-x/twitter>`.
-
 Facebook
    Link to the
    :doc:`Facebook channel in the settings </channels/facebook>`.

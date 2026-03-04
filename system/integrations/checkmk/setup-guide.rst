@@ -7,7 +7,7 @@ As long as those messages follow the required format,
 Zammad will create new tickets (or find and update existing ones)
 based on the message contents.
 
-That means that “setting up Checkmk integration”
+That means that "setting up Checkmk integration"
 is simply a matter of **adding configuration to your Checkmk site**:
 telling it when to send these messages and what to say.
 To do that, you'll need to create a new **notification rule**
@@ -86,15 +86,16 @@ Host notification
    when you're setting up your notification rule,
    but the ones you see here are all provided by default.
 
+.. _checkmk-email-alerts:
+
 Email Alerts
 ------------
 
 .. warning::
 
-   🐞 **There are known bugs** in Zammad's processing of email from Checkmk.
-   This section will be completed once they have been resolved.
-   (Learn more at GitHub issues
-   `#2377 <https://github.com/zammad/zammad/issues/2377>`_ &
+   🐞 **There are known bugs** in Zammad's processing of emails from Checkmk.
+   This section will be complete once they have been resolved.
+   (Learn more in GitHub issue
    `#2180 <https://github.com/zammad/zammad/issues/2180>`_.)
 
    In the meantime, we encourage you to set up API alerts instead.

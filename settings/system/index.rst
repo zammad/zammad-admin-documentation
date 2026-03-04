@@ -1,7 +1,7 @@
 System
 ======
 
-For your overview we split each tab within system settings into its own page:
+We split each tab within system settings into its own page:
 
 .. toctree::
    :maxdepth: 1
@@ -12,9 +12,7 @@ For your overview we split each tab within system settings into its own page:
    /settings/system/network
    /settings/system/frontend
 
-Console Based Settings
-----------------------
-
-There's some console based settings we didn't put into the UI.
-However, you may find them helpful - you can find them in our
-:docs:`hidden settings </admin/console/hidden-settings.html>` section.
+Additionally, there are console based settings which aren't accessible from
+Zammad's UI. Although they are meant for special use cases, they could be
+helpful. You can find them in our
+:docs:`advanced customization section in the system documentation </admin/console/hidden-settings.html>`.

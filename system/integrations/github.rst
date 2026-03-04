@@ -2,8 +2,8 @@ GitHub
 ======
 
 Use GitHub integration to track GitHub issues directly within Zammad tickets.
-Add issue hyperlinks and get a live summary of metadata
-like status (open/closed), assignee, labels, and more.
+Add links to issues and get meta information like status (open/closed),
+assignee, labels and more.
 
 Please note that our GitHub integration does not support pull requests.
 
@@ -15,35 +15,11 @@ Please note that our GitHub integration does not support pull requests.
 Setup
 -----
 
-1. In your GitHub settings, create a new API token under
-   **Developer settings > Personal access tokens > Generate new token**.
-   Leave the **Scopes** section empty.
-
-   .. figure:: /images/system/integrations/github/add-api-token-github.gif
-      :alt: Screencast showing how to create a new API token
-      :align: center
-      :width: 90%
-
-      Create a new API key with no scopes/privileges.
-
-   .. hint:: 🔒 **Will this work for private repos?**
-
-      No. To link private repo issues, **use the** ``repo`` **scope instead**.
-      Bear in mind that the resulting token will have
-      `lots of permissions that it doesn't actually need <https://docs.github.com/en/developers/apps/scopes-for-oauth-apps>`_,
-      which presents a security risk if your token ever falls into the wrong
-      hands.
-
-      Unfortunately, because of how GitHub's OAuth token scopes are set up,
-      this is the only way to link issues on private repos.
-
-2. Enter your new API token in Zammad and enable GitHub integration.
-
-   .. figure:: /images/system/integrations/github/configure-and-active-github-integration.gif
-      :alt: Screencast showing how to configure Zammad's GitHub integration
-      :align: center
-      :width: 90%
-
+1. `Create a new API token in your GitHub profile <https://github.com/settings/personal-access-tokens>`_
+   under *Developer settings > Personal access tokens > Fine-grained tokens*.
+2. Add a name, set an expiration date and define the repository access. Don't
+   add additional permissions.
+3. Enter your new API token in Zammad and enable GitHub integration.
    Use the default API endpoint (``https://api.github.com/graphql``)
    unless you're using GitHub Enterprise Server.
 

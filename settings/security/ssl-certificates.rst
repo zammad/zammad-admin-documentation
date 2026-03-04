@@ -9,7 +9,7 @@ Certificate Authority (CA) certificates. This can be useful if you want to
 connect Zammad the secure way to other systems which are using custom
 certificates.
 
-An example usecase might be: You have an internal LDAP server that is not
+An example use case might be: You have an internal LDAP server that is not
 accessible from the internet, and you want a SSL-encrypted connection, using a
 custom certificate.
 
@@ -30,10 +30,10 @@ supported and the certificate format has to be PEM (Base64 ASCII).
 Add a Certificate
 -----------------
 
-To add a custom certificate or a custom CA certificate, head over to the Admin
-panel > Settings > Security > SSL Certificates. Here you can find a "Add SSL
-Certificate" button. In the dialog you can either select a certificate file
-or paste the content of the certificate:
+To add a custom certificate or a custom CA certificate, head over to
+*Settings > Security > SSL Certificates* in the admin panel. Here you can find a
+"Add SSL Certificate" button. In the dialog you can either select a certificate
+file or paste the content of the certificate:
 
 .. figure:: /images/settings/security/ssl-add-certificate-dialog.png
     :align: center

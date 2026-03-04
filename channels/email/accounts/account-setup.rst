@@ -122,7 +122,7 @@ Type
    or :ref:`specify which folder to fetch from <email-experts-folder>`.)
 
 Host
-   Your email server's hostname or IP address (*e.g.,* ``imap.gmail.com``).
+   Your email server's hostname or IP address (e.g. ``imap.gmail.com``).
 
    Contact your email provider or system administrator if you don't know.
 
@@ -153,7 +153,7 @@ SSL verification
    .. include:: /includes/ssl-verification-warning.rst
 
 Port
-   Your email server's port (usu. ``993`` for IMAP, or ``995`` for POP3).
+   Your email server's port (usually ``993`` for IMAP, or ``995`` for POP3).
 
    Contact your email provider or system administrator if you don't know.
 
@@ -190,17 +190,14 @@ Keep messages on server
      the mailbox is externally modified.
 
 
-   .. note:: 🤔 **Why does Zammad delete messages by default?**
+   .. note:: **Why does Zammad delete messages by default?**
 
-      If you never clean out your inbox,
-      it'll eventually reach its storage limit,
+      If you never clean up your inbox, you reach a storage limit some day
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it's set up,
-      so they rely on Zammad to keep it clean for them.
 
       If you choose **yes** here, remember that it's your responsibility
-      to clean out your inbox from time to time
-      to keep it below its storage limit.
+      to clean out your inbox from time to time to keep it below its storage
+      limit.
 
    .. _email-experts-import-as:
 
@@ -219,13 +216,13 @@ Email Outbound
    Configuration dialog of email channel outbound
 
 Send mails via
-   Choose from **SMTP** and **local MTA** (*e.g.,* Sendmail).
+   Choose from **SMTP** and **local MTA** (e.g. Sendmail).
 
    Local MTA (mail transfer agent) configuration
    is only available on self-hosted installations.
 
 Host
-   Your email server's hostname or IP address (*e.g.,* ``smtp.gmail.com``).
+   Your email server's hostname or IP address (e.g. ``smtp.gmail.com``).
 
 User
    Your account login/username.
@@ -238,7 +235,7 @@ Password
    Leave blank to use the same value from incoming account setup.
 
 Port
-   Your email server's port (usu. ``587`` or ``465``).
+   Your email server's port (usually ``587`` or ``465``).
 
    Zammad will detect and enable SSL/STARTTLS support automatically.
 

@@ -7,9 +7,7 @@ accounts.
 .. note::
 
    Zammad does **not** allow you to change your LDAP password, instead, it will
-   set a password in its local database which might confuse your users. This
-   might be addressed in the future by
-   `#1169 <https://github.com/zammad/zammad/issues/1169>`_.
+   set a password in its local database.
 
 .. warning:: **Exception for admins**
 
@@ -41,9 +39,9 @@ The default value is ``10``.
 
    Beside changing the user's password, you can also unlock accounts via
 
-      * :ref:`user management list <locked-user-accounts>`
-      * :docs:`console </admin/console/working-on-users.html>`
-      * :docs:`API </api/user.html>`
+      * :ref:`User management <locked-user-accounts>`
+      * :docs:`Console (system documentation) </admin/console/working-on-users.html>`
+      * :docs:`API (system documentation) </api/user.html>`
 
 .. hint::
 

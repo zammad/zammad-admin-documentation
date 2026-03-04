@@ -1,134 +1,297 @@
 Learn by Example
 ================
 
-This page provides some basic examples for Core Workflows.
-Of course you can build much more complex workflows if needed.
+This page showcases some examples for core workflows. To learn about core
+workflows in detail, first go to :doc:`how-do-they-work`.
 
-To learn about Core Workflows in detail, first go to :doc:`how-do-they-work`.
+Basics
+------
 
-Group Based Examples
---------------------
+All core workflow examples below are configured in the same system. Compared to
+a fresh installation of Zammad, the system has some additional groups and some
+custom object attributes you can find in the respective examples.
+See these examples as inspiration and adapt the workflows to your processes.
 
-All following workflows have the same base configurations.
-The workflow may not use them all.
+Group Based Fields
+------------------
 
-* Groups:
+Often, different teams (like sales, support, or 2nd level) need slightly
+different workflows to handle tickets effectively. Group-based workflows allow
+you to customize the ticket experience by defining the fields displayed, the
+required input and the available options based on the group assigned to the
+ticket.
 
-  * Sales
-  * Support
-  * 2nd Level
-* Attributes:
+Problem/scenario
+   When a ticket is created in or moved to the ``2nd Level`` group, the category
+   field must be limited, some fields have to be shown and specific fields
+   are mandatory to have all relevant information for the 2nd level support
+   present in the ticket.
 
-  * Category (Single tree selection field, not mandatory, agents only)
-  * Approved (Boolean field, not mandatory, not shown, ``false`` as default)
-  * Operating System (Text field, not mandatory, not shown)
-  * Software used (Single selection field, not mandatory, not shown)
+Workflow configuration
+   .. list-table::
+      :widths: 20,50,30
+      :header-rows: 1
 
-1. Group specific values and fields
-      This workflow set depends on the category field.
-      It reduces the available set of values based on the group selected.
+      * - Area
+        - Configuration
+        - Note
 
-         .. tabs::
+      * - Object
+        - Ticket
+        -
 
-            .. tab:: Workflow 2nd Level group
+      * - Context
+        - - Creation mask
+          - Edit mask
+        -
 
-               This reduces the category options to ``2nd Level/*``,
-               ``Internal/*`` and ``Others``. It also sets further required
-               fields to mandatory and visible.
+      * - Selected conditions
+        - **Group** *is* ``2nd Level``
+        -
 
-               .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_2nd-level.png
-                  :alt: Sample workflow that shows specific values and fields for 2nd level
-                  :width: 90%
+      * - Saved conditions
+        -
+        - Not used because the UI has to change
 
-            .. tab:: Workflow Support group
+          immediately when the group is set to 2nd Level.
 
-               This reduces the category options to ``Support/*``,
-               ``Internal/*`` and ``Others``. It also sets further required
-               fields to visible.
+      * - Action
+        - - **Category** *show*
+          - **Category** *set fixed to* ``2nd Level`` (and all sub categories)
+          - **Operating System** and **Software used** *show*
+          - **Operating System** and **Software used** *set mandatory*
+        -
 
-               .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_support.png
-                  :alt: Sample workflow that shows specific values and fields for support
-                  :width: 90%
+Configuration in UI
+   .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_2nd-level.png
+      :alt: Sample workflow that shows specific values and fields for 2nd level
+      :width: 70%
 
-            .. tab:: Workflow Sales group
+Approval Process
+----------------
 
-               This reduces the category options to ``Sales/*``,
-               ``Internal/*`` and ``Others``.
+In many organizations, an approval is required to initiate subsequent processes.
+This approval is usually limited to a specific group of people to ensure that
+all requirements for the subsequent process are fulfilled.
 
-               .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_sales.png
-                  :alt: Sample workflow that shows specific values and fields for sales
-                  :width: 90%
+Problem/scenario
+   The approval of a customer issue can only be done by users with the role
+   ``Approval Person``. As long as this approval has not been done, the value
+   must be set fixed to  ``no``, unless the approval person views the ticket.
 
-         The Result
-            This is what the agent would experience with the above
-            workflows in place.
+   Based on the approval state, additional automation processes can be
+   established (e.g. a trigger to raise the priority or assign a specific agent).
 
-            .. figure:: /images/system/core-workflows/examples/1_group-specific-fields-and-values_result.gif
-               :alt: Workflow shows objects and limits options based on selections on the group
-               :width: 90%
+Workflow configuration
+   .. list-table::
+      :widths: 20,50,30
+      :header-rows: 1
 
-2. Approval process
-      In this case ``approved`` is visible to agents by default.
-      For this workflow, an additional role ``Approval person`` is required
-      (no further permissions).
+      * - Area
+        - Configuration
+        - Note
 
-      .. figure:: /images/system/core-workflows/examples/2_role-specific-approval-settings.png
-         :alt: Sample workflow that restricts an approval attribute to specific roles
-         :width: 90%
+      * - Object
+        - Ticket
+        -
 
-      .. tip::
+      * - Context
+        - - Creation mask
+          - Edit mask
+        -
 
-         This workflow may work best in combination with a
-         :doc:`trigger </manage/trigger>` but technically, this is not required.
+      * - Selected conditions
+        - **Role** *is not* ``Approval Person``
+        - Checks if role is not ``Approval Person`` for unsaved
 
-         Select fields may be a better approach because they allow more
-         values than just a simple ``true`` or ``false``.
+          changes in the ticket.
 
-      The result
-         .. figure:: /images/system/core-workflows/examples/2_role-specific-approval-settingsl_result.gif
-            :alt: Workflow fixes possible values of "Approved ?" to a specific selection depending on the users role
-            :width: 90%
+      * - Saved conditions
+        - **Approved** *is not* ``yes``
+        - Checks if the approval is not yet set to ``yes``.
 
-3. State dependent mandatory fields
-      This workflow sets ``Category`` to mandatory if the agent wants to set the
-      states ``closed`` or ``pending close`` to enforce categorization.
+      * - Action
+        - **Approved** *set fixed to* ``no``
+        - Prevents changes when above conditions are met.
 
-      .. figure:: /images/system/core-workflows/examples/3_state-dependent-mandatory-fields.png
-         :alt: Sample workflow that sets fields to mandatory on specific states
-         :width: 90%
+Configuration in UI
+   .. figure:: /images/system/core-workflows/examples/2_role-specific-approval-settings.png
+      :alt: Sample workflow that restricts an approval attribute to specific roles
+      :width: 70%
 
-      The result
-         .. figure:: /images/system/core-workflows/examples/3_state-dependent-mandatory-fields_result.gif
-            :alt: Workflow sets category field to mandatory upon choosing closed or pending close as state
-            :width: 90%
+Enforcing Ticket Categorization
+-------------------------------
 
-Manual Ticket Handover Process
-------------------------------
+To have convincing numbers for your statistic, it can be a good idea to enforce
+certain attributes to be populated before the ticket can be closed.
 
-This example covers the handover of a ticket from one agent to another:
+Problem/scenario
+   The ``Category`` field must be set to mandatory if an agent wants to set the
+   states ``closed`` or ``pending close`` to enforce categorization.
 
-- When the ticket owner is modified, a new text field ("Handover") shows up
-  for a comment
-- This may only be visible when the owner is changed, therefore it has to
-  be hidden in general
-- The input in this handover text field is mandatory
-- After submitting changes, the value of the handover field must be added as an
-  note to the ticket (via trigger)
 
-Hiding handover field
-   .. figure:: /images/system/core-workflows/examples/example-handover-hide.png
-      :alt: Hiding the handover field in core workflows
-      :width: 90%
+Workflow configuration
+   .. list-table::
+      :widths: 20,50,30
+      :header-rows: 1
 
-Showing handover field and setting it to mandatory
-   .. figure:: /images/system/core-workflows/examples/example-handover-show.png
-      :alt: Showing the handover field and set it as mandatory
-      :width: 90%
+      * - Area
+        - Configuration
+        - Note
 
-Trigger writing handover input to a new article
-   .. figure:: /images/system/core-workflows/examples/example-handover-trigger.png
-      :alt: Write handover content to a new article
-      :width: 90%
+      * - Object
+        - Ticket
+        -
 
-As a result, the ticket includes an article of the type note which includes
-the predefined text and the handover comment.
+      * - Context
+        - - Creation mask
+          - Edit mask
+        -
+
+      * - Selected conditions
+        - **State** *is* ``closed`` or ``pending close``
+        - Selected condition because it has to be
+
+          checked before changes are saved.
+
+      * - Action
+        - **Category** *set mandatory*
+        -
+
+Configuration in UI
+   .. figure:: /images/system/core-workflows/examples/3_state-dependent-mandatory-fields.png
+      :alt: Sample workflow that sets fields to mandatory on specific states
+      :width: 70%
+
+
+Ticket Handover Process
+-----------------------
+
+A handover from one agent to another might require more than just a change of
+the owner. Depending on the issue or process, it can be very helpful that the
+original agent leaves a small note so the new agent knows immediately what's the
+reason for the handover and where to start.
+
+Problem/scenario
+   Agents must write a small comment when they want to change the ticket owner.
+   There is a custom ticket attribute called ``Handover`` where a text can be
+   inserted. This field is hidden by default (Workflow 1) and only shows up
+   when the owner changes. Additionally, it must be set to mandatory in such a
+   case (Workflow 2).
+
+   Because the field is hidden after saving the change of the ticket owner, the
+   text of the field has to be written to the ticket as an article by a trigger.
+   Otherwise, the new agent would not see it at all.
+
+Workflow configuration
+   .. tabs::
+
+      .. tab:: Workflow 1
+
+         This workflow hides the field in general. Please note the lower
+         priority which tells Zammad to execute this workflow first.
+
+         .. list-table::
+            :widths: 20,50,30
+            :header-rows: 1
+
+            * - Area
+              - Configuration
+              - Note
+
+            * - Object
+              - Ticket
+              -
+
+            * - Context
+              - - Creation mask
+                - Edit mask
+              -
+
+            * - Selected conditions
+              -
+              - No condition needed, because it should
+
+                always be hidden.
+
+            * - Saved conditions
+              -
+              - No condition needed, because it should
+
+                always be hidden.
+
+            * - Action
+              - **Handover** *hide*
+              -
+
+      .. tab:: Workflow 2
+
+         This workflow shows the field and sets it as mandatory when another
+         ticket owner is selected. This workflow has the default priority so
+         it runs after Workflow 1.
+
+         .. list-table::
+            :widths: 20,50,30
+            :header-rows: 1
+
+            * - Area
+              - Configuration
+              - Note
+
+            * - Object
+              - Ticket
+              -
+
+            * - Context
+              - - Creation mask
+                - Edit mask
+              -
+
+            * - Selected conditions
+              - **Owner** *is modified*
+              - Selected condition because it has to be
+
+                checked before changes are saved.
+
+            * - Saved conditions
+              -
+              -
+
+            * - Action
+              - - **Handover** *show*
+                - **Handover** *set mandatory*
+              -
+
+      .. tab:: Trigger
+
+         As mentioned above, the content of the field has to be written as a
+         ticket article by a trigger. An example configuration of such a trigger
+         could look like this:
+
+         - Condition: **Handover** *has changed*
+         - Action: **Article** > **Note** with variable
+           ``#{ticket.handover}`` in body
+
+Configuration in UI
+   .. tabs::
+
+      .. tab:: Workflow 1
+
+         .. figure:: /images/system/core-workflows/examples/example-handover-hide.png
+            :alt: Hiding the handover field in core workflows
+            :width: 70%
+
+      .. tab:: Workflow 2
+
+            .. figure:: /images/system/core-workflows/examples/example-handover-show.png
+               :alt: Showing the handover field and set it as mandatory
+               :width: 70%
+
+      .. tab:: Trigger
+
+            .. figure:: /images/system/core-workflows/examples/example-handover-trigger.png
+               :alt: Write the content of the handover field to an article by a trigger
+               :width: 70%
+
+   As a result, the ticket includes an article of the type note which includes
+   the predefined text and the handover comment.

@@ -6,11 +6,12 @@ Translations of Zammad are processed centrally in our
 This allows non-developers to review and update translation texts of the
 language they actually speak.
 
-Your language is in an incomplete translation state or has typos? Please
-consider helping us in sorting this out! All you need is either a GitHub account
-or to register directly in our instance.
+.. tip::
+   Your language is in an incomplete translation state or has typos? Please
+   consider helping us in sorting this out! All you need is either a GitHub account
+   or to register directly in our instance.
 
-Did you know? This is also where the documentation translations are handled. 🤓
+   Did you know? This is also where the documentation translations are handled. 🤓
 
 Have a look in our
 :docs:`contribution section </contributing/start.html#translation>` in the

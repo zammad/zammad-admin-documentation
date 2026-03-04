@@ -2,16 +2,10 @@ i-doit
 ======
 
 `i-doit <https://www.i-doit.com/>`_ is an open-source
-**configuration management database** - in other words, a tool for keeping tabs
-on every single piece of your physical and digital infrastructure, from network
-equipment to virtual machines on down to the faceplates on your rack shelves
-and more.
-
-What's that got to do with Zammad?
-Well, if you used tickets to track issues with all that hardware,
-you might start wishing there was a way they could talk to each other.
-
-Zammad gives you two:
+CMDB (configuration management database) tool which is capable of managing
+information about your physical and digital IT infrastructure.
+If you use tickets to track issues with your IT components, you may want
+to connect them with your CMDB. With Zammad, you can do that in two ways!
 
 1. Add i-doit Links to Zammad Tickets
 -------------------------------------
@@ -25,9 +19,8 @@ What Users See
 
    The i-doit integration will appear under a new 🖨 tab in the ticket pane.
 
-i-doit integration puts a new tab in Zammad's ticket pane
-where you can add links to existing i-doit devices
-for easy reference.
+i-doit integration puts a new tab in Zammad's ticket pane where you can add
+links to existing i-doit devices for easy reference.
 (See our
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
 learn how it works in practice).
@@ -43,7 +36,7 @@ have it properly set up. Use the following setting:
    * Enforce authentication by username and password: ``No``
 
 To set it up, enable the integration in the Zammad admin panel
-under **System > Integrations > i-doit**:
+under *System > Integrations > i-doit*:
 
 .. figure:: /images/system/integrations/i-doit/settings.png
    :alt: i-doit settings within the integration pages
@@ -54,7 +47,7 @@ Endpoint
 
 API token
    Found in the i-doit admin panel
-   under **Interfaces / external data > JSON-RPC API > Common Settings**.
+   under *Interfaces / external data > JSON-RPC API > Common Settings*.
 
    .. figure:: /images/system/integrations/i-doit/api-configuration.png
       :alt: i-doit administration interface with API configuration
@@ -93,7 +86,7 @@ How to Set it Up
 ^^^^^^^^^^^^^^^^
 
 Enable this integration in the i-doit admin panel under
-**Interfaces / external data > Trouble Ticket System (TTS) > Configuration**:
+*Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:
 
 .. figure:: /images/system/integrations/i-doit/trouble-ticket-system-configuration.png
    :alt: i-doit administration interface with TTS configuration

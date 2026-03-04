@@ -27,14 +27,14 @@ Encryption
 
    Once S/MIME has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will appear in the ticket composer.
 
-:doc:`🔪 Prerequisites <prerequisites>`
+:doc:`Prerequisites <prerequisites>`
    New to S/MIME? This section helps you to find certificate providers and
    points out Limitations.
 
-:doc:`📝 Manage Certificates <manage-certificates>`
+:doc:`Manage Certificates <manage-certificates>`
    Add and download certificates; configure group default behaviors.
 
-:doc:`😦 Troubleshooting <troubleshooting>`
+:doc:`Troubleshooting <troubleshooting>`
    Took a wrong turn? About recent logs and common issues.
 
 Usage

@@ -57,8 +57,8 @@ The ones that aren't are described below.
    A user's email and login may differ, but
    **either one can be used to sign in.**
 
-   .. figure:: /images/manage/users/user-details-login.png
-      :alt: The user overview, showing logins in the first column
+   .. figure:: /images/manage/users/login-email.png
+      :alt: Screenshot shows the user overview with highlighted "Login" column
       :align: center
 
       User logins are **not** shown in the New/Edit User dialog,
@@ -103,7 +103,7 @@ The ones that aren't are described below.
    This flag is a way for your team to indicate high-status customers.
    Just as with organizations,
    you can set up special :doc:`/manage/trigger`, :doc:`/manage/scheduler` jobs,
-   :doc:`/manage/slas/index`, and :doc:`/manage/overviews` just for VIPs.
+   :doc:`/manage/slas`, and :doc:`/manage/overviews` just for VIPs.
 
    .. figure:: /images/manage/users/vip-user-in-a-ticket.png
       :alt: Ticket view showing a VIP user's avatar with a crown on it

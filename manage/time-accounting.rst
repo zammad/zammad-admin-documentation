@@ -1,7 +1,7 @@
 Time Accounting
 ===============
 
-If you want to know how much time you need for your each project or ticket,
+If you want to know how much time you need for each project or ticket,
 enable the time accounting (turn on the switch on the top left side of the
 page).
 
@@ -189,10 +189,3 @@ Tickets and their accounted time
       You can also see entries for customers that are part of a primary
       organization. Users without an organization can be found in the
       Customer filter.
-
-   .. figure:: /images/manage/time-accounting/time-accounting-download-accounted-times-as-csv.png
-      :align: center
-      :alt: Time accounting view with time accounted filters
-
-      Each heading allows you to download the CSV versions of the provided
-      view via the download button next to it.

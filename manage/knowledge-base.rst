@@ -36,7 +36,7 @@ Setup
 -----
 
 To enable the knowledge base, first select the languages/locales you wish to
-publish in:
+publish in and click on the **Create Knowledge Base** button.
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-setup.png
    :alt: Knowledge Base: Initial setup
@@ -109,19 +109,20 @@ Languages
    Add or remove locales, or reassign the default.
 
 The knowledge base will automatically display the language matching each
-visitor's locale. Visitors may always manually switch to another language via a
-dropdown menu in the footer.
+visitor's locale. Visitors may always manually switch to another language via
+language selection menu in the header.
 
 The default locale is displayed when the visitor's locale is not supported.
 
-Articles that have not yet been translated into a given language will be hidden
-from that locale.
+Articles which are not yet translated into a given language will be hidden
+when the language is selected by the reader.
 
 Public Menu
 ^^^^^^^^^^^
 
 Use this section to unify the knowledge base with your own website's main
-navigation. Entries added here will appear in the knowledge base like so:
+navigation. Entries added here will appear in the knowledge base like in the
+following screenshot:
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-public-menu-result.png
    :alt: Knowledge Base: Public menu
@@ -136,7 +137,8 @@ You can adjust every URL on language level.
    :alt: Knowledge Base: Configure public menu
    :align: center
 
-   🧭 Customize the nav menu that appears in the header of the knowledge base.
+   Customize the navigation menu that appears in the header of your
+   knowledge base.
 
 Arranging URLs
    By clicking on "Edit", Zammad allows you to add, update, re-arrange or
@@ -160,13 +162,6 @@ Arranging URLs
       Use ☰ to drag & drop the URLs in question to the new desired position.
       Your changes will be saved with pressing the "Submit" button.
 
-      .. figure:: /images/manage/knowledge-base/repositioning-public-menu-urls.gif
-         :alt: Screencast showing the repositioning of URLs
-         :align: center
-
-         Re-arranging URL positions works for the header menu just as the
-         footer menu
-
 Custom URL
 ^^^^^^^^^^
 
@@ -178,12 +173,16 @@ Custom URL
 
    Relocate the knowledge base to the URL of your choosing.
 
-By default, the knowledge base will appear
-at the same domain as your Zammad instance, under ``/help``.
+By default, the knowledge base will appear at the same domain as your Zammad
+instance, under ``/help``.
 
-If you wish to customize where it can be accessed,
-enter your desired URL here and configure your web server as described
-(instructions provided for Apache and NGINX only).
+If you wish to customize where it can be accessed, enter your desired URL here
+and configure your web server accordingly. Zammad provides a snippet for Apache
+and Nginx webserver after clicking the **Web Server Configuration**.
+
+You can find a tutorial about how to use a
+:docs:`custom knowledge base URL in combination with Nginx proxy manger (NPM) </appendix/custom-kb-url.html>`
+in the system documentation.
 
 Delete
 ^^^^^^

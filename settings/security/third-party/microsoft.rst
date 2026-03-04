@@ -63,14 +63,11 @@ Redirect URI (optional):
    :align: center
 
 Within  **API permissions** add the following permissions:
-   OpenId permissions
-      * ``openid``
-   User
-      * ``User.Read``
-   Contacts
-      * ``Contacts.Read``
+    * ``openid``
+    * ``User.Read``
+    * ``Contacts.Read``
 
-You can find these permissions within *Microsoft Graph → Delegated permissions*.
+You can find these permissions within *Microsoft Graph > Delegated permissions*.
 
 .. figure:: /images/settings/security/third-party/microsoft/microsoft-app-add-api-permissions.gif
    :alt: Screencast showing how to add required API permissions
@@ -97,8 +94,8 @@ You now have all required information for Zammad.
 Step 2 - Add App Credentials to Zammad
 --------------------------------------
 
-Navigate to Security > Third-party Applications (Tab) within Zammad's admin
-settings. Scroll down to the section *Authentication via Microsoft* and
+Navigate to *Settings > Security > Third-party Applications* within Zammad's
+admin settings. Scroll down to the section *Authentication via Microsoft* and
 fill in the required information.
 
 App ID:

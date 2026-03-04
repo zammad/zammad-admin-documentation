@@ -8,7 +8,6 @@ If you even further want to configure what your customers can see and select,
 you should have a look in our :doc:`/system/core-workflows` documentation.
 
 .. figure:: /images/channels/web/setting-overview_web-channel.png
-   :width: 90%
    :alt: The web channel settings page
 
 Settings Affecting Your Customer
@@ -50,3 +49,4 @@ Tab behavior after ticket creation
 
    .. figure:: /images/channels/web/tab-behavior-ticket-zoom.png
       :alt: Ticket zoom with tab behavior to choose for the user
+      :align: center

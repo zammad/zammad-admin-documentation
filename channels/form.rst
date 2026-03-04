@@ -56,7 +56,7 @@ need to copy to your website.
 .. figure:: /images/channels/form/form-channel-designer.png
    :alt: Zammad's form designer supports you with the initial configuration
          of your form.
-   :width: 90%
+   :align: center
 
 So let's talk about the options the designer provides.
 
@@ -106,7 +106,7 @@ Options
 
       This option is set by default.
 
-   Don't load CSS for the form You need to generate your own CSS for the form.
+   Don't load CSS for the form. You need to generate your own CSS for the form.
       By default Zammad's form comes with basic CSS. This may not fit your
       website's design or even interfere with it.
 
@@ -119,9 +119,7 @@ Options
       The allowed attachment sizes *is not* limited. The only limitation that
       applies is your web servers upload limit.
 
-      .. hint:: **SaaS only**
-
-         If you're with Zammad hosted, attachments are limited by the
+      .. hint:: If you are a SaaS customer, attachments are limited by the
          package you've chosen.
 
    Add agreement text before submit
@@ -130,9 +128,10 @@ Options
       to legal requirements, e.g. by providing data privacy notes that the user has
       to accept before submitting the form.
 
-      .. figure:: /images/channels/form/form-channel_acceptance-setting.gif
-         :alt: Screencast showing a sample on how to configure the agreement
-               text setting
+      .. figure:: /images/channels/form/form-channel_acceptance-setting.png
+         :alt: Screenshot shows form designer with activated agreement text setting and selected text to add a hyperlink.
+         :scale: 70%
+         :align: center
 
          Zammad provides a free text form with limited capabilities.
          Use the *🔗 Weblink* button to add links to marked text passages.
@@ -150,7 +149,8 @@ to active, you already are able to create tickets even from this preview mode.
 
 .. figure:: /images/channels/form/form-channel-preview-your-configuration.png
    :alt: Screenshot showing the preview section for the just configured form
-   :width: 85%
+   :scale: 70%
+   :align: center
 
 Requirements
 ------------
@@ -163,7 +163,7 @@ Header section
    This script section usually belongs to your website's header section.
 
    The channel form suggests the following script tag which loads the
-   javascript libary required **from an external site**. This may not
+   javascript library required **from an external site**. This may not
    suite your local requirements. You can use locally hosted jQuery version,
    **however** the version is fixed.
 
@@ -194,9 +194,9 @@ Body section
 Take the Zammad website as an example, the embedded form version can look
 like the following if you apply custom CSS to it.
 
-.. figure:: /images/channels/form/form-channel-live-result-without-button.png
+.. figure:: /images/channels/form/zammad-contact-form.png
    :alt: Screenshot showing the zammad.com website with embedded web form
-   :scale: 90%
+   :scale: 50%
    :align: center
 
 Potential Spam Issue

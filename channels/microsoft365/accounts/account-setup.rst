@@ -76,7 +76,7 @@ Click **Add Account** to connect your Microsoft 365 accounts to Zammad.
 You will be redirected to a Microsoft sign-in and confirmation page. Enter
 your credentials and confirm it by clicking the **Accept** button.
 
-.. note:: 🕵️ **Aliases are not imported automatically.**
+.. note:: **Aliases are not imported automatically.**
 
    See :doc:`secondary-addresses` to add them yourself.
 
@@ -113,7 +113,7 @@ Folder
    or leave empty to fetch from ``INBOX``.
 
    If specifying a nested folder, be sure to use the full path;
-   *e.g.,* ``Inquiries/Tech-Support``.
+   e.g. ``Inquiries/Tech-Support``.
 
    .. _microsoft365-keep-messages-on-server:
 
@@ -127,17 +127,14 @@ Keep messages on server
      (With this option, Zammad will only import unread messages.
      This means Zammad may miss messages if the mailbox is externally modified.)
 
-   .. note:: 🤔 **Why does Zammad delete messages by default?**
+   .. note:: **Why does Zammad delete messages by default?**
 
-      If you never clean out your inbox,
-      it'll eventually reach its storage limit,
+      If you never clean up your inbox, you reach a storage limit some day
       and your mail server will start **rejecting incoming messages**.
-      Most Zammad users never even look at their inbox once it's set up,
-      so they rely on Zammad to keep it clean for them.
 
       If you choose **yes** here, remember that it's your responsibility
-      to clean out your inbox from time to time
-      to keep it below its storage limit.
+      to clean out your inbox from time to time to keep it below its storage
+      limit.
 
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst

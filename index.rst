@@ -23,7 +23,7 @@ Zammad Admin Documentation
    manage/tags
    manage/checklist
    manage/calendars
-   manage/slas/index
+   manage/slas
    manage/trigger
    manage/public-links
    manage/webhook
@@ -46,7 +46,6 @@ Zammad Admin Documentation
    channels/microsoft365-graph/index
    channels/microsoft365/index
    channels/sms
-   channels/twitter-x/twitter
    channels/facebook
    channels/telegram
    channels/whatsapp/index
@@ -62,6 +61,15 @@ Zammad Admin Documentation
    settings/system/index
    settings/security
    settings/ticket
+
+.. toctree::
+   :maxdepth: 2
+   :caption: AI
+
+   ai/provider
+   ai/summary
+   ai/writing-assistant
+   ai/ai-agents
 
 .. _system-docs:
 
@@ -93,3 +101,4 @@ Zammad Admin Documentation
    misc/composer
    misc/object-conditions/index
    misc/first-steps
+   misc/zabbix

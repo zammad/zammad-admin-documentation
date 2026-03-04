@@ -144,6 +144,7 @@ email articles.
 
 Trusted Channel
 ---------------
+
 .. note:: **🚧 Self Hosted only 🚧**
 
    The settings below are only available to self hosted users.
@@ -153,11 +154,11 @@ Trusted Channel
    the communication with external parties. Only follow the instructions below
    if you know what you are doing.
 
-Setting a channel to ``trusted`` can ony be done via
-:docs:`console </admin/console.html>`. In the rails console, execute the
-following commands:
+Setting a channel to ``trusted`` can be done via
+:docs:`console </admin/console.html>` exclusively. To do so, go to the rails
+console and follow the steps below:
 
-| List all channels in Zammad:
+List all channels in Zammad:
 
 .. code-block:: ruby
 

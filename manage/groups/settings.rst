@@ -25,13 +25,9 @@ Parent group
    even if they have a child/parent relation.
 
    .. hint:: Zammad doesn't show you any child group of the currently selected
-      group. This would lead to a circular reference!
+      group in the edit dialog. This would lead to a circular reference!
 
-   Zammad supports 10 levels of hierarchy for groups on PostgreSQL systems.
-   If you are using a MySQL database, it is limited to 6 levels.
-   In case you are using MySQL, you should consider to migrate your database
-   anyway (see :docs:`here </appendix/migrate-to-postgresql.html>` for more
-   information). MySQL will be deprecated with Zammad 7.
+   Zammad supports 10 hierarchy levels for groups as a maximum.
 
 Assignment timeout
    The time in minutes after which the ticket's ownership will revert back to
@@ -97,15 +93,20 @@ Shared Drafts
    Learn more about shared drafts
    :user-docs:`in our user documentation </extras/shared-drafts.html>`.
 
+Summary Generation
+   Allows to override the setting about when to generate the
+   :doc:`AI ticket summary </ai/summary>` on group level.
+
 Note
    An internal note about the group that is only visible to people who can
    access the group management area.
 
 Active
-   Don't need the group anymore? If you can't or don't want to recycle (rename)
-   the group, you can also set it to inactive. Agents will no longer be able to
-   see or edit tickets in this group. However, customers can still interact
-   with their existing tickets in an inactive group.
+   Don't need the group anymore or want to restrict the selection of this group?
+   If you can't or don't want to recycle (rename) the group, you can also set it
+   to inactive. Agents will no longer be able to see or edit tickets in this
+   group. However, customers can still interact with their existing tickets in
+   an inactive group.
 
    .. tip::
 
@@ -122,9 +123,3 @@ Active
       This is potentially dangerous, make sure the group is no longer part
       of email filters or a destination group.
 
-.. figure:: /images/manage/groups/group-settings.png
-   :alt: Screenshot showing how a group configuration can look like.
-   :width: 60%
-   :align: center
-
-   A sample configuration of a group.

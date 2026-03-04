@@ -33,7 +33,7 @@ Lost Password
    Activates the `lost password` function on the login page.
    If set to ``no`` only administrators may change the user's password - users
    may update their own password if they're still logged in and they have the
-   required :doc:`permission </manage/roles/user-preferences-permissions>`.
+   required :doc:`permission </manage/roles/permissions>`.
 
    Default setting: ``yes``
 
@@ -101,16 +101,18 @@ timeouts for e.g. admins, but not agents.
 
 Example
    Let's suppose you configured the following session timeouts
-      * default: 3 weeks
-      * admin: 2 weeks
-      * ticket.agent: 4 weeks
-      * ticket.customer: 1 week
 
-   This results in the following situations
-      - a user with ``admin`` permission will have a timeout of 2 weeks
-      - a user with ``admin`` and ``ticket.agent`` permissions will
-        have a timeout of 2 weeks
-      - a user with ``ticket.customer`` permission will have a timeout
-        of 1 week
-      - a user with neither ``admin``, ``ticket.agent`` nor
-        ``ticket.customer`` permissions will have a timeout of 3 weeks
+   - default: 3 weeks
+   - admin: 2 weeks
+   - ticket.agent: 4 weeks
+   - ticket.customer: 1 week
+
+   This results in the following situations:
+
+   - a user with ``admin`` permission will have a timeout of 2 weeks
+   - a user with ``admin`` and ``ticket.agent`` permissions will
+     have a timeout of 2 weeks
+   - a user with ``ticket.customer`` permission will have a timeout
+     of 1 week
+   - a user with neither ``admin``, ``ticket.agent`` nor
+     ``ticket.customer`` permissions will have a timeout of 3 weeks

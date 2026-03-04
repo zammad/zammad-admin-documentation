@@ -94,8 +94,8 @@ Object
    objects are: **Organization**, **Ticket** and **User**.
 
 Conditions for affected objects
-   Determine the object attributes (conditions) to limit on which objects the
-   actions configured in step 5 are to be performed.
+   Determine the object attributes to select the objects on which the actions
+   will be applied.
 
    .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
@@ -113,6 +113,9 @@ Execute changes on objects
    on the selected object context. Be aware that a related object context
    may not be available (e.g. to perform ticket actions from a user context
    based scheduler).
+
+   You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler
+   jobs.
 
    .. warning::
 

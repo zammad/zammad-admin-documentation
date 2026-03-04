@@ -4,20 +4,18 @@ System Notifications
 .. note:: System notifications can only be customized
    on **self-hosted installations**.
 
-System notifications are automated emails
-sent by Zammad for critical system events,
-such as account changes or SLA violations.
+System notifications are automated emails sent by Zammad for critical system
+events, such as account changes or SLA violations.
 
-Unlike the automated emails you can set up
-using :doc:`/manage/trigger` or the :doc:`/manage/scheduler`,
-these notifications are built into Zammad itself:
-if you need to customize them,
-you will have to modify some of the files on your server.
+Unlike the automated emails you can set up using :doc:`/manage/trigger` or the
+:doc:`/manage/scheduler`, these notifications are built into Zammad itself:
+if you need to customize them, you will have to modify some of the files on
+your server.
 
 When Are They Sent?
 -------------------
 
-**All users** are notified of:
+**All users** are notified about:
 
 * Password changes
 * :ref:`Account linking notification <automatic-account-linking-notification>`
@@ -28,7 +26,7 @@ When Are They Sent?
 * Logins from a new device
 * Logins from a new country
 
-**Agents** are notified of:
+**Agents** are notified about:
 
 * New tickets
 * Ticket updates

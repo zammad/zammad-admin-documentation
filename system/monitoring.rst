@@ -32,7 +32,6 @@ already included.
 
 .. figure:: /images/system/monitoring/monitoring-token-health-check.png
    :alt: Screenshot showing Current Token and Health Check
-   :scale: 100%
 
    Screenshot showing Token and Health Check
 
@@ -53,7 +52,10 @@ Example Output
 
    **API response**::
 
-      {"healthy"=>true, "message"=>"success"}
+      {
+         "healthy": true,
+         "message": "success"
+      }
 
 :Issues were found:
 
@@ -65,4 +67,14 @@ Example Output
 
    **API response**::
 
-      {"healthy":false,"message":"Channel: Twitter::Account in key:{\"id\"=\XXXXXXXXXXXXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somewhat name\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e","issues":["Channel: Twitter::Account in key:{\"id\"=\XXXXXXX, \"screen_name\"=\u003e\"Name\", \"name\"=\u003e\"Somename\"}; Can't use stream for channel (42): #\u003cJSON::ParserError: 765: unexpected token at 'The Site Streams and User Streams endpoints have been turned off. Please migrate to alternate APIs. See https://t.co/usss'\u003e"],"actions":[]}
+      {
+         "healthy": false,
+         "message": "Failed to run background job #1 'TicketArticleCommunicateEmailJob' 1 time(s) with 2 attempt(s).;Channel: Email::Account in  Imap: Connection refused - connect(2) for 127.0.0.1:143 (Errno::ECONNREFUSED);Channel: Email::Account out  Smtp: Connection refused - Network connection to 'localhost' (port 25) could not be established: Connection refused - connect(2) for \"localhost\" port 25 (Errno::ECONNREFUSED)",
+         "issues": [
+            "Failed to run background job #1 'TicketArticleCommunicateEmailJob' 1 time(s) with 2 attempt(s).",
+            "Channel: Email::Account in  Imap: Connection refused - connect(2) for 127.0.0.1:143 (Errno::ECONNREFUSED)",
+            "Channel: Email::Account out  Smtp: Connection refused - Network connection to 'localhost' (port 25) could not be established: Connection refused - connect(2) for \"localhost\" port 25 (Errno::ECONNREFUSED)"
+         ],
+         "actions": [],
+         "token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
+      }
