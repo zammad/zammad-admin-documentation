@@ -25,3 +25,7 @@ No proxy for the following hosts
    proxy server.
 
    Default: ``localhost,127.0.0.0,::1``
+
+   .. hint:: In case you are using the default Docker Compose stack behind a
+      proxy, make sure to add the Elasticsearch container to the exception list.
+      The default container name is ``zammad-elasticsearch``.
