@@ -7,6 +7,11 @@ the requests first. Add your provider in Zammad's admin settings under
 *AI > Provider*. To access this page, the ``admin.ai_provider`` permission is
 required.
 
+.. note:: Zammad's AI feature is completely optional and requires a
+   configuration before any AI request is made. However, if you don't want to
+   see the settings at all, read about
+   :docs:`how to hide it in the system docs </admin/console/other-useful-commands.html#remove-ai-feature>`.
+
 Settings
 --------
 
