@@ -25,6 +25,7 @@ settings:
    :maxdepth: 1
    :caption: Learn more
 
+   /manage/trigger/how-do-they-work
    /manage/trigger/learn-by-example
    /manage/trigger/limitations
    /manage/trigger/system-notifications
