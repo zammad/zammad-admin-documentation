@@ -177,10 +177,6 @@ both data sources. It works like this:
   and displays the value to the user. There is no search on Zammad side.
 
 .. warning::
-   * The usage of a PostgreSQL database for Zammad is required. In any other
-     case, Zammad will hide the external data source type and you are not
-     able to use it. If you want to use this feature, consider to
-     :docs:`migrate your database </appendix/migrate-to-postgresql.html>`.
    * Only ``GET`` is supported as request method.
    * The data structure must be in JSON format and provide the objects in an
      array.
