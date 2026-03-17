@@ -2,10 +2,11 @@ Provider
 ========
 
 Zammad offers AI-powered features to support your agents!
-To use AI features in Zammad, you have to configure an AI provider which handles
-the requests first. Add your provider in Zammad's admin settings under
-*AI > Provider*. To access this page, the ``admin.ai_provider`` permission is
-required.
+To use AI features in Zammad, you must first configure and enable an AI
+provider. Such an AI provider processes all your AI requests and is required for
+any AI functionality. Add your provider in Zammad's admin settings
+under *AI > Provider* and make sure to activate the toggle. This setting
+requires ``admin.ai_provider`` permission to access it.
 
 .. note:: Zammad's AI feature is completely optional and requires a
    configuration before any AI request is made. However, if you don't want to
