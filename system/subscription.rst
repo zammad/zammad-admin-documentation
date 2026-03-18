@@ -24,7 +24,7 @@ This section gives you an overview of the available plans and their
 functions / limits and to choose another plan. If you require a
 more detailed table, check our
 `pricing table <https://zammad.com/en/pricing/table>`_ for more information.
-Your selection (green *Selected* button) in this step will decide on the base
+Your selection (green **Selected** button) in this step will decide on the base
 agent price
 and e.g. agent limits that might apply in the summary step.
 
@@ -45,10 +45,8 @@ settings of the previous selected plan.
 
 .. note::
 
-   Note that upgrading (more agents, higher package) is always
-   possible, however, downgrading will only happen when your
-   billing period renews.
-
+   Note that upgrading (more agents, higher package) is always possible.
+   However, downgrading will only happen when your billing period renews.
    Upgrading resets your billing period and existing credit will be
    deducted from the new total.
 
@@ -68,7 +66,7 @@ Plan: (Starter|Professional|Plus) V2 - Agents
 Total
    This will be the net total you're going to be billed.
 
-By using the *Update subscription* button, the instance package is getting
+By using the **Update subscription** button, the instance package is getting
 adjusted immediately. If you didn't provide a payment method yet, Zammad
 will request you to provide it at this point.
 
@@ -127,7 +125,7 @@ Billing Email Address
    All billing relevant information will then be sent to this email address.
    Invoices are sent as attachment (PDF) to this email address.
 
-Don't forget to press the *Update billing information* button after you changed
+Don't forget to press the **Update billing information** button after you changed
 above settings.
 
 .. figure:: /images/system/subscription/billing-information.png
@@ -140,7 +138,7 @@ Payment Method
 You can pay via credit card or SEPA mandate.
 
 Credit card
-   Simply follow the dialogue by clicking *authorize credit card* and confirm
+   Simply follow the dialogue by clicking **authorize credit card** and confirm
    -if required by your bank- your consent to Zammad using your card for
    the payments.
 
@@ -158,7 +156,7 @@ Cancel Subscription
 
 Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
-subscription by using the red *Yes, please cancel my subscription* button.
+subscription by using the red **Yes, please cancel my subscription** button.
 Enter the FQDN of your Zammad instance and provide a reason for your
 cancellation. Your subscription will end the day after your trial or billing
 period ends.
@@ -177,7 +175,7 @@ period ends.
 .. hint:: **😖 Cancelled by accident?**
 
    You can always undo the cancellation via the
-   *Yes, undo the cancellation of my subscription* button up to the last
+   **Yes, undo the cancellation of my subscription** button up to the last
    subscription day!
 
    .. figure:: /images/system/subscription/undo-cancellation.png
