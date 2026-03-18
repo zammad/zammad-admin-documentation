@@ -70,21 +70,21 @@ no built in category field in Zammad, you first have to create a
 ticket's category. The field type must be one of the select types.
 
 The ticket categorizer AI agent uses the content of all articles and the title
-to compare it with your category names. You can limit from which categories the
-AI agent can choose from and define if multiple values are possible (if
-using a multi-select field type) in the wizard. In case you limit the
-categories, you can also provide a description for each category the AI agent
-can choose from.
+to compare it with your category names (and optionally descriptions). To add
+descriptions for your categories, limit the categories the AI agent can choose
+from. Then add the categories which should be available for the AI agent and
+optionally provide a description for them. Additionally, you can decide in the
+wizard if multiple values are allowed (only if category field is a multi-select
+field type).
 
 Ticket Group Dispatcher
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This AI agent is capable of assigning tickets to different groups. It compares
-the content of the ticket in question with your group names in Zammad. If a
-suitable group can be found, it selects this group for the ticket. You can use
-all of your groups or just specific ones by limiting it for the AI agent in the
-configuration wizard.
-
+the content of the ticket in question with your group names (and optionally
+descriptions). To add descriptions for your groups, limit the groups the AI
+agent can choose from. Then add the groups which should be available for the AI
+agent and optionally provide a description for them.
 
 Ticket Prioritizer
 ^^^^^^^^^^^^^^^^^^
