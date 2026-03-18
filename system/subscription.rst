@@ -1,54 +1,40 @@
 Subscription (SaaS)
 ===================
 
-The subscription settings page allows you to configure your instances
-package and number of agents required.
-
-.. warning:: **🚧 Hosted environment specific 🚧**
-
-   This setting section is only available for Hosted setups.
-   If you're looking for on premise support contracts, please see the
-   `Zammad pricing page <https://zammad.com/en/pricing#selfhosted>`_.
+The subscription settings page allows you to configure everything around your
+subscription. It is only visible for hosted SaaS customers. The
+permission ``admin.package`` is required to access this page, which is only
+available in SaaS environments.
 
 Plan
 ----
 
-Here you can set up everything affecting your instance subscription functions
-like number of agents and package.
-
-On top of the page you can find a subscription summary. You'll find the number
-of used and available (booked) agent seats there. By using the *see more* link
-you can also expand an agent list to see the currently configured active agents.
-This list *does not* count accounts with admin permissions only.
-
-.. figure:: /images/system/subscription/active-agent-list.png
-   :alt: Within subscription you can always see how many agents are still
-         available to add and who uses the seats.
-   :align: center
-
+Here you can see and adjust everything affecting your instance subscription
+like the plan, the number of agents and and the billing cycle. You can also
+find a summary of your current subscription at the top of the page. By using
+the *see more* link you can expand an agent list to see the currently configured
+active agents. This list *does not* count accounts with admin permissions only.
 Learn more on how to manage your agents in general
 :doc:`here </manage/users/index>`.
-
 
 Plan
 ^^^^
 
 This section gives you an overview of the available plans and their
-functions / limits. If you require a more detailed table, check our
-`detailed pricing table <https://zammad.com/en/pricing/table>`_ for more.
-
-Your selection in this step will decide on the base agent price
+functions / limits and to choose another plan. If you require a
+more detailed table, check our
+`pricing table <https://zammad.com/en/pricing/table>`_ for more information.
+Your selection (green *Selected* button) in this step will decide on the base
+agent price
 and e.g. agent limits that might apply in the summary step.
-
-The green *Selected* button will also tell you what plan you're currently in.
 
 .. hint::
 
-   Trial instances are running at Professional with 3 agents.
-   The plan cannot be changed during the trial for technical reasons,
-   if you require more agents for testing, please contact
-   `our sales team <https://zammad.com/en/company/contact>`_ with a
-   reason for the raise request.
+   Trial instances are running on a *Professional v2* plan with 3 agents.
+   The plan cannot be changed during the trial period for technical reasons.
+   If you require more agents for testing, please contact
+   `our sales team <https://zammad.com/en/company/contact>`_ and tell them
+   what you want to do.
 
 .. figure:: /images/system/subscription/plan-selection.png
    :alt: Screenshot showing three available packages for a hosted Zammad
@@ -67,37 +53,45 @@ settings of the previous selected plan.
    deducted from the new total.
 
 Billing cycle
-   You can choose between either monthly or yearly billing.
+   You can choose between monthly or yearly billing period.
    The price per agent will be cheaper if you decide for yearly billing.
-
    If you're still trying out things and are unsure of the right
    package for your instance, you may want to choose monthly first and
    then upgrade to yearly when you're sure.
 
-Plan: (Starter|Professional|Plus) - Agents
+Plan: (Starter|Professional|Plus) V2 - Agents
    Choose the number of agents you require for your instance.
-
-   Keep in mind that some packages may have agent limits.
-   Depending on the previous chosen package, you won't be able to exceed
-   specific agent numbers. Also note that setting less agents than currently
-   configured is not possible.
+   Keep in mind that some plans have agent limits.
+   Decreasing the number of agents to less than currently configured is not
+   possible.
 
 Total
    This will be the net total you're going to be billed.
 
-By using the *Update subscription* button, the instance package will be
+By using the *Update subscription* button, the instance package is getting
 adjusted immediately. If you didn't provide a payment method yet, Zammad
-will request you to provide one at this point.
+will request you to provide it at this point.
 
 .. warning::
 
    In case you're still within the trial period, this means that the
    trial will be over immediately!
-
    Down- or upgrading during the trial period *is not* possible.
 
-.. figure:: /images/system/subscription/payment-summary.png
-   :alt: Screenshot showing payment options and a pricing summary
+Zammad AI - API Call Credits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to use Zammad's AI features, you can use Zammad AI as your
+:doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to test the
+feature for free. Re-charge them manually or automatically when 90 % of the
+calls are used.
+
+Usage
+   Shows the available API calls for Zammad AI and how much are already used up.
+   One AI action like an AI agent run or a ticket summary uses one AI call.
+
+Re-Charge Settings
+   Enable or disable a notification when 80 % are used.
 
 Billing Information
 ^^^^^^^^^^^^^^^^^^^
