@@ -84,40 +84,47 @@ Zammad AI - API Call Credits
 If you want to use Zammad's AI features, you can use Zammad AI as your
 :doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to test the
 feature for free. Re-charge them manually or automatically when 90 % of the
-calls are used.
+calls are used. One AI action like an AI agent run or an AI ticket summary uses
+one AI call. To apply any kind of re-charge, a valid payment method is required.
 
 Usage
    Shows the available API calls for Zammad AI and how much are already used up.
-   One AI action like an AI agent run or a ticket summary uses one AI call.
 
 Re-Charge Settings
-   Enable or disable a notification when 80 % are used.
+   - Enable or disable a notification when 80 % of AI calls are used.
+   - Configure an automatic re-charge when 90 % of AI calls are used. Enter an
+     amount between 400 and 500,000 AI calls for automatic re-charge and confirm
+     with the **Update Re-charge settings** button. The costs per call and the
+     sum based on your input are displayed next to the field.
+
+One-Time Charge Settings
+   Add an amount of AI calls for a one time charge. Enter an amount between 400
+   and 500,000 AI calls for the one-time charge and confirm
+   with the **One-Time Charge Settings** button. The costs per call and the
+   sum based on your input are displayed next to the field.
 
 Billing Information
 ^^^^^^^^^^^^^^^^^^^
 
 You can control all billing relevant information like invoices and the billing
-address.
-
-All adjusted billing information below only affect future invoices.
+address. All adjusted billing information below only affect future invoices.
 If your invoice was issued wrong, please contact
 `our sales team <https://zammad.com/en/company/contact>`_.
 
 Billing address
-   Provide your company address here, make sure to include the name of the
-   company in case required. This address will be referenced on your invoice.
+   Provide your company's address here, make sure to include the name of the
+   company in case required. This address will be used in your invoice.
 
 VAT ID
-   Provide your VAT ID here. If applicable your invoice will not contain
+   Provide your VAT ID here. If applicable, your invoice will not contain
    German VAT. Please make sure to pay the VAT in your country as required.
 
 Billing Email Address
-   Usually the instance owner (the person that registered the instance) will
+   Usually the instance owner (the person who registered the instance) will
    receive all emails including the invoices. In case you have your own
    billing department, you can provide their email address here.
 
    All billing relevant information will then be sent to this email address.
-
    Invoices are sent as attachment (PDF) to this email address.
 
 Don't forget to press the *Update billing information* button after you changed
@@ -152,11 +159,9 @@ Cancel Subscription
 Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
 subscription by using the red *Yes, please cancel my subscription* button.
-
-To cancel the subscription, enter the FQDN of your Zammad instance and provide
-a reason for your cancellation.
-
-Your subscription will end the day after your trial or billing period ends.
+Enter the FQDN of your Zammad instance and provide a reason for your
+cancellation. Your subscription will end the day after your trial or billing
+period ends.
 
 .. figure:: /images/system/subscription/cancel-hosted-subscription.png
    :alt: Screenshot showing subscription cancellation dialog
@@ -165,9 +170,9 @@ Your subscription will end the day after your trial or billing period ends.
 
 .. warning::
 
-   We will remind you about your cancelled subscription several times up
-   front. After the subscription ended all instance data will be removed.
-   A restore *is not* possible after that point!
+   We will remind you about your cancelled subscription several times before the
+   subscription period ends. After the subscription ended, all instance data
+   will be removed. A restore *is not* possible after that point!
 
 .. hint:: **😖 Cancelled by accident?**
 
@@ -223,11 +228,11 @@ FAQ
 ---
 
 I set up a trial account but am missing functions to test
-   The trial instance is running within the professional package
-   allowing up to three agents.
+   The trial instance is running on a professional plan allowing up to three
+   agents.
 
-Can I change package within the trial?
-   No. As soon as the package is changed the subscription begins.
+Can I change the plan within the trial?
+   No. As soon as the plan is changed, the subscription begins.
 
 What happens to my trial instance after the trial period ended?
    Your instance will automatically be canceled for you.
@@ -241,7 +246,7 @@ What happens to my instance after it has been canceled?
       If you're still on trial, we will ice your instance and remind you once
       again about your instance. We then will wait some days and remove your
       instance from our system. This is the last time we will inform you by
-      Email.
+      email.
 
    Paid instance
       If you're a paying customer and canceled your subscription, the instance
