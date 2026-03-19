@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 08:48+0100\n"
+"POT-Creation-Date: 2026-03-19 07:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -707,6 +707,7 @@ msgstr ""
 #: ../channels/chat.rst:85
 #: ../manage/checklist.rst:16
 #: ../system/integrations/smime/index.rst:41
+#: ../system/subscription.rst:80
 msgid "Usage"
 msgstr ""
 
@@ -3713,7 +3714,7 @@ msgstr ""
 #: ../misc/variables.rst:101
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/objects/permissions.rst:39
-#: ../system/subscription.rst:208
+#: ../system/subscription.rst:196
 msgid "Description"
 msgstr ""
 
@@ -20205,7 +20206,6 @@ msgid "If you want to take full advantage of the Zammad reporting, have a look a
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:11
-#: ../system/subscription.rst:7
 msgid "**🚧 Hosted environment specific 🚧**"
 msgstr ""
 
@@ -22743,49 +22743,19 @@ msgid "Subscription (SaaS)"
 msgstr ""
 
 #: ../system/subscription.rst:4
-msgid "The subscription settings page allows you to configure your instances package and number of agents required."
+msgid "The subscription settings page allows you to configure everything around your subscription. It is only visible for hosted SaaS customers. The permission ``admin.package`` is required to access this page, which is only available in SaaS environments."
 msgstr ""
 
-#: ../system/subscription.rst:9
-msgid "This setting section is only available for Hosted setups. If you're looking for on premise support contracts, please see the `Zammad pricing page <https://zammad.com/en/pricing#selfhosted>`_."
-msgstr ""
-
-#: ../system/subscription.rst:14
-#: ../system/subscription.rst:34
+#: ../system/subscription.rst:10
 msgid "Plan"
 msgstr ""
 
-#: ../system/subscription.rst:16
-msgid "Here you can set up everything affecting your instance subscription functions like number of agents and package."
+#: ../system/subscription.rst:12
+msgid "This section gives you an overview of the available plans and their functions / limits and the ability to choose another plan. If you require a more detailed table, check our `pricing table <https://zammad.com/en/pricing/table>`_ for more information. Your selection (green **Selected** button) in this step will decide on the base agent price and agent limits. You can also find your currently used number of agents there and see the accounts. This list *does not* count accounts with admin permissions only. Learn more about how to :doc:`manage your agents </manage/users/index>`"
 msgstr ""
 
-#: ../system/subscription.rst:19
-msgid "On top of the page you can find a subscription summary. You'll find the number of used and available (booked) agent seats there. By using the *see more* link you can also expand an agent list to see the currently configured active agents. This list *does not* count accounts with admin permissions only."
-msgstr ""
-
-#: ../system/subscription.rst:None
-msgid "Within subscription you can always see how many agents are still\n"
-"available to add and who uses the seats."
-msgstr ""
-
-#: ../system/subscription.rst:29
-msgid "Learn more on how to manage your agents in general :doc:`here </manage/users/index>`."
-msgstr ""
-
-#: ../system/subscription.rst:36
-msgid "This section gives you an overview of the available plans and their functions / limits. If you require a more detailed table, check our `detailed pricing table <https://zammad.com/en/pricing/table>`_ for more."
-msgstr ""
-
-#: ../system/subscription.rst:40
-msgid "Your selection in this step will decide on the base agent price and e.g. agent limits that might apply in the summary step."
-msgstr ""
-
-#: ../system/subscription.rst:43
-msgid "The green *Selected* button will also tell you what plan you're currently in."
-msgstr ""
-
-#: ../system/subscription.rst:47
-msgid "Trial instances are running at Professional with 3 agents. The plan cannot be changed during the trial for technical reasons, if you require more agents for testing, please contact `our sales team <https://zammad.com/en/company/contact>`_ with a reason for the raise request."
+#: ../system/subscription.rst:24
+msgid "Trial instances are running on a *Professional v2* plan with 3 agents. The plan cannot be changed during the trial period for technical reasons. If you require more agents for testing, please contact `our sales team <https://zammad.com/en/company/contact>`_ and tell them what you want to do."
 msgstr ""
 
 #: ../system/subscription.rst:None
@@ -22793,112 +22763,116 @@ msgid "Screenshot showing three available packages for a hosted Zammad\n"
 "instance"
 msgstr ""
 
-#: ../system/subscription.rst:57
+#: ../system/subscription.rst:34
 msgid "At the bottom of this block you can find a summary where you can adjust the settings of the previous selected plan."
 msgstr ""
 
-#: ../system/subscription.rst:62
-msgid "Note that upgrading (more agents, higher package) is always possible, however, downgrading will only happen when your billing period renews."
+#: ../system/subscription.rst:39
+msgid "Note that upgrading (more agents, higher package) is always possible. However, downgrading will only happen when your billing period renews. Upgrading resets your billing period and existing credit will be deducted from the new total."
 msgstr ""
 
-#: ../system/subscription.rst:66
-msgid "Upgrading resets your billing period and existing credit will be deducted from the new total."
-msgstr ""
-
-#: ../system/subscription.rst:75
+#: ../system/subscription.rst:49
 msgid "Billing cycle"
 msgstr ""
 
-#: ../system/subscription.rst:70
-msgid "You can choose between either monthly or yearly billing. The price per agent will be cheaper if you decide for yearly billing."
+#: ../system/subscription.rst:45
+msgid "You can choose between monthly or yearly billing period. The price per agent will be cheaper if you decide for yearly billing. If you're still trying out things and are unsure of the right package for your instance, you may want to choose monthly first and then upgrade to yearly when you're sure."
 msgstr ""
 
-#: ../system/subscription.rst:73
-msgid "If you're still trying out things and are unsure of the right package for your instance, you may want to choose monthly first and then upgrade to yearly when you're sure."
+#: ../system/subscription.rst:55
+msgid "Plan: (Starter|Professional|Plus) V2 - Agents"
 msgstr ""
 
-#: ../system/subscription.rst:83
-msgid "Plan: (Starter|Professional|Plus) - Agents"
+#: ../system/subscription.rst:52
+msgid "Choose the number of agents you require for your instance. Keep in mind that some plans have agent limits. Decreasing the number of agents to less than currently configured is not possible."
 msgstr ""
 
-#: ../system/subscription.rst:78
-msgid "Choose the number of agents you require for your instance."
-msgstr ""
-
-#: ../system/subscription.rst:80
-msgid "Keep in mind that some packages may have agent limits. Depending on the previous chosen package, you won't be able to exceed specific agent numbers. Also note that setting less agents than currently configured is not possible."
-msgstr ""
-
-#: ../system/subscription.rst:86
+#: ../system/subscription.rst:58
 msgid "Total"
 msgstr ""
 
-#: ../system/subscription.rst:86
+#: ../system/subscription.rst:58
 msgid "This will be the net total you're going to be billed."
 msgstr ""
 
-#: ../system/subscription.rst:88
-msgid "By using the *Update subscription* button, the instance package will be adjusted immediately. If you didn't provide a payment method yet, Zammad will request you to provide one at this point."
+#: ../system/subscription.rst:60
+msgid "By using the **Update subscription** button, the instance package is getting adjusted immediately. If you didn't provide a payment method yet, Zammad will request you to provide it at this point."
 msgstr ""
 
-#: ../system/subscription.rst:94
-msgid "In case you're still within the trial period, this means that the trial will be over immediately!"
+#: ../system/subscription.rst:66
+msgid "In case you're still within the trial period, this means that the trial will be over immediately! Down- or upgrading during the trial period *is not* possible."
 msgstr ""
 
-#: ../system/subscription.rst:97
-msgid "Down- or upgrading during the trial period *is not* possible."
+#: ../system/subscription.rst:71
+msgid "Zammad AI - API Call Credits"
 msgstr ""
 
-#: ../system/subscription.rst:None
-msgid "Screenshot showing payment options and a pricing summary"
+#: ../system/subscription.rst:73
+msgid "If you want to use Zammad's AI features, you can use Zammad AI as your :doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to test the feature for free. Re-charge them manually or automatically when 90% of the calls are used. One AI action like an AI agent run or an AI ticket summary uses one AI call. To apply any kind of re-charge, a valid payment method is required."
 msgstr ""
 
-#: ../system/subscription.rst:103
+#: ../system/subscription.rst:80
+msgid "Shows the available API calls for Zammad AI and how much are already used up."
+msgstr ""
+
+#: ../system/subscription.rst:87
+msgid "Re-Charge Settings"
+msgstr ""
+
+#: ../system/subscription.rst:83
+msgid "Enable or disable a notification when 80% of AI calls are used."
+msgstr ""
+
+#: ../system/subscription.rst:84
+msgid "Configure an automatic re-charge when 90% of AI calls are used. Enter an amount between 400 and 500,000 AI calls for automatic re-charge and confirm with the **Update Re-charge settings** button. The costs per call and the sum based on your input are displayed next to the field."
+msgstr ""
+
+#: ../system/subscription.rst:93
+msgid "One-Time Charge Settings"
+msgstr ""
+
+#: ../system/subscription.rst:90
+msgid "Add an amount of AI calls for a one time charge. Enter an amount between 400 and 500,000 AI calls for the one-time charge and confirm with the **One-Time Charge Settings** button. The costs per call and the sum based on your input are displayed next to the field."
+msgstr ""
+
+#: ../system/subscription.rst:96
 msgid "Billing Information"
 msgstr ""
 
+#: ../system/subscription.rst:98
+msgid "You can control all billing relevant information like invoices and the billing address. All adjusted billing information below only affect future invoices. If your invoice was issued wrong, please contact `our sales team <https://zammad.com/en/company/contact>`_."
+msgstr ""
+
 #: ../system/subscription.rst:105
-msgid "You can control all billing relevant information like invoices and the billing address."
-msgstr ""
-
-#: ../system/subscription.rst:108
-msgid "All adjusted billing information below only affect future invoices. If your invoice was issued wrong, please contact `our sales team <https://zammad.com/en/company/contact>`_."
-msgstr ""
-
-#: ../system/subscription.rst:114
 msgid "Billing address"
 msgstr ""
 
-#: ../system/subscription.rst:113
-msgid "Provide your company address here, make sure to include the name of the company in case required. This address will be referenced on your invoice."
+#: ../system/subscription.rst:104
+msgid "Provide your company's address here, make sure to include the name of the company in case required. This address will be used in your invoice."
 msgstr ""
 
-#: ../system/subscription.rst:118
+#: ../system/subscription.rst:109
 msgid "VAT ID"
 msgstr ""
 
-#: ../system/subscription.rst:117
-msgid "Provide your VAT ID here. If applicable your invoice will not contain German VAT. Please make sure to pay the VAT in your country as required."
+#: ../system/subscription.rst:108
+msgid "Provide your VAT ID here. If applicable, your invoice will not contain German VAT. Please make sure to pay the VAT in your country as required."
 msgstr ""
 
-#: ../system/subscription.rst:127
+#: ../system/subscription.rst:117
 msgid "Billing Email Address"
 msgstr ""
 
-#: ../system/subscription.rst:121
-msgid "Usually the instance owner (the person that registered the instance) will receive all emails including the invoices. In case you have your own billing department, you can provide their email address here."
+#: ../system/subscription.rst:112
+msgid "Usually the instance owner (the person who registered the instance) will receive all emails including the invoices. In case you have your own billing department, you can provide their email address here."
 msgstr ""
 
-#: ../system/subscription.rst:125
-msgid "All billing relevant information will then be sent to this email address."
+#: ../system/subscription.rst:116
+msgid "All billing relevant information will then be sent to this email address. Invoices are sent as an attachment (PDF) to this email address."
 msgstr ""
 
-#: ../system/subscription.rst:127
-msgid "Invoices are sent as attachment (PDF) to this email address."
-msgstr ""
-
-#: ../system/subscription.rst:129
-msgid "Don't forget to press the *Update billing information* button after you changed above settings."
+#: ../system/subscription.rst:119
+msgid "Don't forget to press the **Update billing information** button after you changed above settings."
 msgstr ""
 
 #: ../system/subscription.rst:None
@@ -22906,64 +22880,56 @@ msgid "Screenshot showing options for billing information within the\n"
 "subscription menu"
 msgstr ""
 
-#: ../system/subscription.rst:137
+#: ../system/subscription.rst:127
 msgid "Payment Method"
 msgstr ""
 
-#: ../system/subscription.rst:139
+#: ../system/subscription.rst:129
 msgid "You can pay via credit card or SEPA mandate."
 msgstr ""
 
-#: ../system/subscription.rst:144
+#: ../system/subscription.rst:134
 msgid "Credit card"
 msgstr ""
 
-#: ../system/subscription.rst:142
-msgid "Simply follow the dialogue by clicking *authorize credit card* and confirm -if required by your bank- your consent to Zammad using your card for the payments."
+#: ../system/subscription.rst:132
+msgid "Simply follow the flow by clicking **authorize credit card** and confirm -if required by your bank- your consent to Zammad using your card for the payments."
 msgstr ""
 
-#: ../system/subscription.rst:148
+#: ../system/subscription.rst:138
 msgid "SEPA Direct Debit"
 msgstr ""
 
-#: ../system/subscription.rst:147
+#: ../system/subscription.rst:137
 msgid "Provide the requested information of the bank account holder and update if you're ready. You'll then receive an email with the SEPA mandate."
 msgstr ""
 
-#: ../system/subscription.rst:150
+#: ../system/subscription.rst:140
 msgid "Technically there's also the possibility to pay via invoice, however - this method only applies to a fairly low number of instances. Please contact `our sales team <https://zammad.com/en/company/contact>`_ for more information."
 msgstr ""
 
-#: ../system/subscription.rst:156
+#: ../system/subscription.rst:146
 msgid "Cancel Subscription"
 msgstr ""
 
-#: ../system/subscription.rst:158
-msgid "Do you want to cancel your subscription? In case you no longer want to use Zammad's SaaS, you can cancel your subscription by using the red *Yes, please cancel my subscription* button."
-msgstr ""
-
-#: ../system/subscription.rst:162
-msgid "To cancel the subscription, enter the FQDN of your Zammad instance and provide a reason for your cancellation."
-msgstr ""
-
-#: ../system/subscription.rst:165
-msgid "Your subscription will end the day after your trial or billing period ends."
+#: ../system/subscription.rst:148
+msgid "Do you want to cancel your subscription? In case you no longer want to use Zammad's SaaS, you can cancel your subscription by using the red **Yes, please cancel my subscription** button. Enter the FQDN of your Zammad instance and provide a reason for your cancellation. Your subscription will end the day after your trial or billing period ends."
 msgstr ""
 
 #: ../system/subscription.rst:None
 msgid "Screenshot showing subscription cancellation dialog"
 msgstr ""
 
-#: ../system/subscription.rst:174
-msgid "We will remind you about your cancelled subscription several times up front. After the subscription ended all instance data will be removed. A restore *is not* possible after that point!"
+#: ../system/subscription.rst:162
+msgid "We will remind you about your canceled subscription several times before the subscription period ends. After the subscription has ended, all instance data will be removed. A restore *is not* possible after that point!"
 msgstr ""
 
-#: ../system/subscription.rst:178
-msgid "**😖 Cancelled by accident?**"
+#: ../system/subscription.rst:166
+msgid "**Canceled by accident?**"
 msgstr ""
 
-#: ../system/subscription.rst:180
-msgid "You can always undo the cancellation via the *Yes, undo the cancellation of my subscription* button up to the last subscription day!"
+#: ../system/subscription.rst:168
+msgid "You can always undo the cancellation via the **Yes, undo the cancellation of my subscription** button up to the last subscription day!"
 msgstr ""
 
 #: ../system/subscription.rst:0
@@ -22971,55 +22937,55 @@ msgid "Screenshot showing a red button to cancel the subscription\n"
 "cancellation"
 msgstr ""
 
-#: ../system/subscription.rst:189
+#: ../system/subscription.rst:177
 msgid "Payment History"
 msgstr ""
 
-#: ../system/subscription.rst:191
+#: ../system/subscription.rst:179
 msgid "The payment history will display a history of all paid invoices. At this point you can also download these in case you need them again."
 msgstr ""
 
-#: ../system/subscription.rst:196
+#: ../system/subscription.rst:184
 msgid "You will only find *paid* invoices here. Invoices that are to be billed are not available before the payment is completed."
 msgstr ""
 
-#: ../system/subscription.rst:201
+#: ../system/subscription.rst:189
 msgid "Date"
 msgstr ""
 
-#: ../system/subscription.rst:201
+#: ../system/subscription.rst:189
 msgid "Date of the invoice creation."
 msgstr ""
 
-#: ../system/subscription.rst:204
+#: ../system/subscription.rst:192
 msgid "Amount"
 msgstr ""
 
-#: ../system/subscription.rst:204
+#: ../system/subscription.rst:192
 msgid "Invoice total including VAT if applicable."
 msgstr ""
 
-#: ../system/subscription.rst:207
+#: ../system/subscription.rst:195
 msgid "Contains contract period (monthly or yearly) and hosted plan for the subscription period in question."
 msgstr ""
 
-#: ../system/subscription.rst:218
+#: ../system/subscription.rst:206
 msgid "Payment method / Service period"
 msgstr ""
 
-#: ../system/subscription.rst:211
+#: ../system/subscription.rst:199
 msgid "Used bank account or credit card as well as the subscription period the invoice is about."
 msgstr ""
 
-#: ../system/subscription.rst:216
+#: ../system/subscription.rst:204
 msgid "It might happen that the invoice date and subscription period differ. This is nothing to worry about, the subscription periods will be accounted later on."
 msgstr ""
 
-#: ../system/subscription.rst:222
+#: ../system/subscription.rst:210
 msgid "Receipt"
 msgstr ""
 
-#: ../system/subscription.rst:221
+#: ../system/subscription.rst:209
 msgid "Use the arrow to download the invoice in question. You can download all available invoices any time you need to here!"
 msgstr ""
 
@@ -23027,63 +22993,63 @@ msgstr ""
 msgid "Screenshot showing payment history of a hosted instance"
 msgstr ""
 
-#: ../system/subscription.rst:229
+#: ../system/subscription.rst:217
 msgid "FAQ"
 msgstr ""
 
-#: ../system/subscription.rst:233
+#: ../system/subscription.rst:221
 msgid "I set up a trial account but am missing functions to test"
 msgstr ""
 
-#: ../system/subscription.rst:232
-msgid "The trial instance is running within the professional package allowing up to three agents."
+#: ../system/subscription.rst:220
+msgid "The trial instance is running on a professional plan allowing up to three agents."
 msgstr ""
 
-#: ../system/subscription.rst:236
-msgid "Can I change package within the trial?"
+#: ../system/subscription.rst:224
+msgid "Can I change the plan within the trial?"
 msgstr ""
 
-#: ../system/subscription.rst:236
-msgid "No. As soon as the package is changed the subscription begins."
+#: ../system/subscription.rst:224
+msgid "No. As soon as the plan is changed, the subscription begins."
 msgstr ""
 
-#: ../system/subscription.rst:241
+#: ../system/subscription.rst:229
 msgid "What happens to my trial instance after the trial period ended?"
 msgstr ""
 
-#: ../system/subscription.rst:239
+#: ../system/subscription.rst:227
 msgid "Your instance will automatically be canceled for you. Please see *What happens to my instance after it has been canceled?* for more."
 msgstr ""
 
-#: ../system/subscription.rst:254
+#: ../system/subscription.rst:241
 msgid "What happens to my instance after it has been canceled?"
 msgstr ""
 
-#: ../system/subscription.rst:244
+#: ../system/subscription.rst:232
 msgid "That depends slightly on your instance state:"
 msgstr ""
 
-#: ../system/subscription.rst:250
+#: ../system/subscription.rst:237
 msgid "Trial instance"
 msgstr ""
 
-#: ../system/subscription.rst:247
-msgid "If you're still on trial, we will ice your instance and remind you once again about your instance. We then will wait some days and remove your instance from our system. This is the last time we will inform you by Email."
+#: ../system/subscription.rst:235
+msgid "If you're still on trial, we will freeze your instance and remind you once again about it. We then will wait some days and remove it from our system. This is the last time we will inform you by email."
 msgstr ""
 
-#: ../system/subscription.rst:254
+#: ../system/subscription.rst:241
 msgid "Paid instance"
 msgstr ""
 
-#: ../system/subscription.rst:253
+#: ../system/subscription.rst:240
 msgid "If you're a paying customer and canceled your subscription, the instance removal will take place the day after your last subscription day."
 msgstr ""
 
-#: ../system/subscription.rst:256
+#: ../system/subscription.rst:243
 msgid "Can removed instances be restored?"
 msgstr ""
 
-#: ../system/subscription.rst:257
+#: ../system/subscription.rst:244
 msgid "No. Once your instance has been removed, a restoration is not possible."
 msgstr ""
 
