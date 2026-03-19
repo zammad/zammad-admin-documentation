@@ -34,6 +34,11 @@ Provider
    Depending on which provider you choose, Zammad displays different fields you
    can configure.
 
+   .. tip:: Keep in mind that your AI provider might require some configuration
+      before you can connect to it. That is the case for Azure AI, anyway.
+      As this configuration is beyond the scope of this documentation, please
+      refer to the documentation of the service you are using.
+
    .. note:: The AI service you have subscribed to is not available? This is just
       the first step. We are going to add more providers soon! If you want to
       support us or need the provider as soon as possible, just let our
