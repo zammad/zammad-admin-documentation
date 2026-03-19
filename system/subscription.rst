@@ -9,24 +9,15 @@ available in SaaS environments.
 Plan
 ----
 
-Here you can see and adjust everything affecting your instance subscription
-like the plan, the number of agents and and the billing cycle. You can also
-find a summary of your current subscription at the top of the page. By using
-the *see more* link you can expand an agent list to see the currently configured
-active agents. This list *does not* count accounts with admin permissions only.
-Learn more on how to manage your agents in general
-:doc:`here </manage/users/index>`.
-
-Plan
-^^^^
-
 This section gives you an overview of the available plans and their
-functions / limits and to choose another plan. If you require a
+functions / limits and the ability to choose another plan. If you require a
 more detailed table, check our
 `pricing table <https://zammad.com/en/pricing/table>`_ for more information.
 Your selection (green **Selected** button) in this step will decide on the base
-agent price
-and e.g. agent limits that might apply in the summary step.
+agent price and agent limits. You can also find your currently used number of
+agents there and see the accounts. This list *does not* count accounts with
+admin permissions only. Learn more about how to
+:doc:`manage your agents </manage/users/index>`
 
 .. hint::
 
@@ -77,11 +68,11 @@ will request you to provide it at this point.
    Down- or upgrading during the trial period *is not* possible.
 
 Zammad AI - API Call Credits
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 If you want to use Zammad's AI features, you can use Zammad AI as your
 :doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to test the
-feature for free. Re-charge them manually or automatically when 90 % of the
+feature for free. Re-charge them manually or automatically when 90% of the
 calls are used. One AI action like an AI agent run or an AI ticket summary uses
 one AI call. To apply any kind of re-charge, a valid payment method is required.
 
@@ -89,8 +80,8 @@ Usage
    Shows the available API calls for Zammad AI and how much are already used up.
 
 Re-Charge Settings
-   - Enable or disable a notification when 80 % of AI calls are used.
-   - Configure an automatic re-charge when 90 % of AI calls are used. Enter an
+   - Enable or disable a notification when 80% of AI calls are used.
+   - Configure an automatic re-charge when 90% of AI calls are used. Enter an
      amount between 400 and 500,000 AI calls for automatic re-charge and confirm
      with the **Update Re-charge settings** button. The costs per call and the
      sum based on your input are displayed next to the field.
@@ -102,7 +93,7 @@ One-Time Charge Settings
    sum based on your input are displayed next to the field.
 
 Billing Information
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 You can control all billing relevant information like invoices and the billing
 address. All adjusted billing information below only affect future invoices.
@@ -123,7 +114,7 @@ Billing Email Address
    billing department, you can provide their email address here.
 
    All billing relevant information will then be sent to this email address.
-   Invoices are sent as attachment (PDF) to this email address.
+   Invoices are sent as an attachment (PDF) to this email address.
 
 Don't forget to press the **Update billing information** button after you changed
 above settings.
@@ -133,12 +124,12 @@ above settings.
          subscription menu
 
 Payment Method
-^^^^^^^^^^^^^^
+--------------
 
 You can pay via credit card or SEPA mandate.
 
 Credit card
-   Simply follow the dialogue by clicking **authorize credit card** and confirm
+   Simply follow the flow by clicking **authorize credit card** and confirm
    -if required by your bank- your consent to Zammad using your card for
    the payments.
 
@@ -152,7 +143,7 @@ method only applies to a fairly low number of instances. Please contact
 information.
 
 Cancel Subscription
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
@@ -168,11 +159,11 @@ period ends.
 
 .. warning::
 
-   We will remind you about your cancelled subscription several times before the
-   subscription period ends. After the subscription ended, all instance data
+   We will remind you about your canceled subscription several times before the
+   subscription period ends. After the subscription has ended, all instance data
    will be removed. A restore *is not* possible after that point!
 
-.. hint:: **😖 Cancelled by accident?**
+.. hint:: **Canceled by accident?**
 
    You can always undo the cancellation via the
    **Yes, undo the cancellation of my subscription** button up to the last
@@ -241,10 +232,9 @@ What happens to my instance after it has been canceled?
    That depends slightly on your instance state:
 
    Trial instance
-      If you're still on trial, we will ice your instance and remind you once
-      again about your instance. We then will wait some days and remove your
-      instance from our system. This is the last time we will inform you by
-      email.
+      If you're still on trial, we will freeze your instance and remind you once
+      again about it. We then will wait some days and remove it from our system.
+      This is the last time we will inform you by email.
 
    Paid instance
       If you're a paying customer and canceled your subscription, the instance
