@@ -1,54 +1,31 @@
 Subscription (SaaS)
 ===================
 
-The subscription settings page allows you to configure your instances
-package and number of agents required.
-
-.. warning:: **🚧 Hosted environment specific 🚧**
-
-   This setting section is only available for Hosted setups.
-   If you're looking for on premise support contracts, please see the
-   `Zammad pricing page <https://zammad.com/en/pricing#selfhosted>`_.
+The subscription settings page allows you to configure everything around your
+subscription. It is only visible for hosted SaaS customers. The
+permission ``admin.package`` is required to access this page, which is only
+available in SaaS environments.
 
 Plan
 ----
 
-Here you can set up everything affecting your instance subscription functions
-like number of agents and package.
-
-On top of the page you can find a subscription summary. You'll find the number
-of used and available (booked) agent seats there. By using the *see more* link
-you can also expand an agent list to see the currently configured active agents.
-This list *does not* count accounts with admin permissions only.
-
-.. figure:: /images/system/subscription/active-agent-list.png
-   :alt: Within subscription you can always see how many agents are still
-         available to add and who uses the seats.
-   :align: center
-
-Learn more on how to manage your agents in general
-:doc:`here </manage/users/index>`.
-
-
-Plan
-^^^^
-
 This section gives you an overview of the available plans and their
-functions / limits. If you require a more detailed table, check our
-`detailed pricing table <https://zammad.com/en/pricing/table>`_ for more.
-
-Your selection in this step will decide on the base agent price
-and e.g. agent limits that might apply in the summary step.
-
-The green *Selected* button will also tell you what plan you're currently in.
+functions / limits and the ability to choose another plan. If you require a
+more detailed table, check our
+`pricing table <https://zammad.com/en/pricing/table>`_ for more information.
+Your selection (green **Selected** button) in this step will decide on the base
+agent price and agent limits. You can also find your currently used number of
+agents there and see the accounts. This list *does not* count accounts with
+admin permissions only. Learn more about how to
+:doc:`manage your agents </manage/users/index>`
 
 .. hint::
 
-   Trial instances are running at Professional with 3 agents.
-   The plan cannot be changed during the trial for technical reasons,
-   if you require more agents for testing, please contact
-   `our sales team <https://zammad.com/en/company/contact>`_ with a
-   reason for the raise request.
+   Trial instances are running on a *Professional v2* plan with 3 agents.
+   The plan cannot be changed during the trial period for technical reasons.
+   If you require more agents for testing, please contact
+   `our sales team <https://zammad.com/en/company/contact>`_ and tell them
+   what you want to do.
 
 .. figure:: /images/system/subscription/plan-selection.png
    :alt: Screenshot showing three available packages for a hosted Zammad
@@ -59,74 +36,87 @@ settings of the previous selected plan.
 
 .. note::
 
-   Note that upgrading (more agents, higher package) is always
-   possible, however, downgrading will only happen when your
-   billing period renews.
-
+   Note that upgrading (more agents, higher package) is always possible.
+   However, downgrading will only happen when your billing period renews.
    Upgrading resets your billing period and existing credit will be
    deducted from the new total.
 
 Billing cycle
-   You can choose between either monthly or yearly billing.
+   You can choose between monthly or yearly billing period.
    The price per agent will be cheaper if you decide for yearly billing.
-
    If you're still trying out things and are unsure of the right
    package for your instance, you may want to choose monthly first and
    then upgrade to yearly when you're sure.
 
-Plan: (Starter|Professional|Plus) - Agents
+Plan: (Starter|Professional|Plus) V2 - Agents
    Choose the number of agents you require for your instance.
-
-   Keep in mind that some packages may have agent limits.
-   Depending on the previous chosen package, you won't be able to exceed
-   specific agent numbers. Also note that setting less agents than currently
-   configured is not possible.
+   Keep in mind that some plans have agent limits.
+   Decreasing the number of agents to less than currently configured is not
+   possible.
 
 Total
    This will be the net total you're going to be billed.
 
-By using the *Update subscription* button, the instance package will be
+By using the **Update subscription** button, the instance package is getting
 adjusted immediately. If you didn't provide a payment method yet, Zammad
-will request you to provide one at this point.
+will request you to provide it at this point.
 
 .. warning::
 
    In case you're still within the trial period, this means that the
    trial will be over immediately!
-
    Down- or upgrading during the trial period *is not* possible.
 
-.. figure:: /images/system/subscription/payment-summary.png
-   :alt: Screenshot showing payment options and a pricing summary
+Zammad AI - API Call Credits
+----------------------------
+
+If you want to use Zammad's AI features, you can use Zammad AI as your
+:doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to test the
+feature for free. Re-charge them manually or automatically when 90% of the
+calls are used. One AI action like an AI agent run or an AI ticket summary uses
+one AI call. To apply any kind of re-charge, a valid payment method is required.
+
+Usage
+   Shows the available API calls for Zammad AI and how much are already used up.
+
+Re-Charge Settings
+   - Enable or disable a notification when 80% of AI calls are used.
+   - Configure an automatic re-charge when 90% of AI calls are used. Enter an
+     amount between 400 and 500,000 AI calls for automatic re-charge and confirm
+     with the **Update Re-charge settings** button. The costs per call and the
+     sum based on your input are displayed next to the field.
+
+One-Time Charge Settings
+   Add an amount of AI calls for a one time charge. Enter an amount between 400
+   and 500,000 AI calls for the one-time charge and confirm
+   with the **One-Time Charge Settings** button. The costs per call and the
+   sum based on your input are displayed next to the field.
 
 Billing Information
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 You can control all billing relevant information like invoices and the billing
-address.
-
-All adjusted billing information below only affect future invoices.
+address. All adjusted billing information below only affect future invoices.
 If your invoice was issued wrong, please contact
 `our sales team <https://zammad.com/en/company/contact>`_.
 
 Billing address
-   Provide your company address here, make sure to include the name of the
-   company in case required. This address will be referenced on your invoice.
+   Provide your company's address here, make sure to include the name of the
+   company in case required. This address will be used in your invoice.
 
 VAT ID
-   Provide your VAT ID here. If applicable your invoice will not contain
+   Provide your VAT ID here. If applicable, your invoice will not contain
    German VAT. Please make sure to pay the VAT in your country as required.
 
 Billing Email Address
-   Usually the instance owner (the person that registered the instance) will
+   Usually the instance owner (the person who registered the instance) will
    receive all emails including the invoices. In case you have your own
    billing department, you can provide their email address here.
 
    All billing relevant information will then be sent to this email address.
+   Invoices are sent as an attachment (PDF) to this email address.
 
-   Invoices are sent as attachment (PDF) to this email address.
-
-Don't forget to press the *Update billing information* button after you changed
+Don't forget to press the **Update billing information** button after you changed
 above settings.
 
 .. figure:: /images/system/subscription/billing-information.png
@@ -134,12 +124,12 @@ above settings.
          subscription menu
 
 Payment Method
-^^^^^^^^^^^^^^
+--------------
 
 You can pay via credit card or SEPA mandate.
 
 Credit card
-   Simply follow the dialogue by clicking *authorize credit card* and confirm
+   Simply follow the flow by clicking **authorize credit card** and confirm
    -if required by your bank- your consent to Zammad using your card for
    the payments.
 
@@ -153,16 +143,14 @@ method only applies to a fairly low number of instances. Please contact
 information.
 
 Cancel Subscription
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
-subscription by using the red *Yes, please cancel my subscription* button.
-
-To cancel the subscription, enter the FQDN of your Zammad instance and provide
-a reason for your cancellation.
-
-Your subscription will end the day after your trial or billing period ends.
+subscription by using the red **Yes, please cancel my subscription** button.
+Enter the FQDN of your Zammad instance and provide a reason for your
+cancellation. Your subscription will end the day after your trial or billing
+period ends.
 
 .. figure:: /images/system/subscription/cancel-hosted-subscription.png
    :alt: Screenshot showing subscription cancellation dialog
@@ -171,14 +159,14 @@ Your subscription will end the day after your trial or billing period ends.
 
 .. warning::
 
-   We will remind you about your cancelled subscription several times up
-   front. After the subscription ended all instance data will be removed.
-   A restore *is not* possible after that point!
+   We will remind you about your canceled subscription several times before the
+   subscription period ends. After the subscription has ended, all instance data
+   will be removed. A restore *is not* possible after that point!
 
-.. hint:: **😖 Cancelled by accident?**
+.. hint:: **Canceled by accident?**
 
    You can always undo the cancellation via the
-   *Yes, undo the cancellation of my subscription* button up to the last
+   **Yes, undo the cancellation of my subscription** button up to the last
    subscription day!
 
    .. figure:: /images/system/subscription/undo-cancellation.png
@@ -229,11 +217,11 @@ FAQ
 ---
 
 I set up a trial account but am missing functions to test
-   The trial instance is running within the professional package
-   allowing up to three agents.
+   The trial instance is running on a professional plan allowing up to three
+   agents.
 
-Can I change package within the trial?
-   No. As soon as the package is changed the subscription begins.
+Can I change the plan within the trial?
+   No. As soon as the plan is changed, the subscription begins.
 
 What happens to my trial instance after the trial period ended?
    Your instance will automatically be canceled for you.
@@ -244,10 +232,9 @@ What happens to my instance after it has been canceled?
    That depends slightly on your instance state:
 
    Trial instance
-      If you're still on trial, we will ice your instance and remind you once
-      again about your instance. We then will wait some days and remove your
-      instance from our system. This is the last time we will inform you by
-      Email.
+      If you're still on trial, we will freeze your instance and remind you once
+      again about it. We then will wait some days and remove it from our system.
+      This is the last time we will inform you by email.
 
    Paid instance
       If you're a paying customer and canceled your subscription, the instance
