@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-11 11:37+0100\n"
+"POT-Creation-Date: 2026-03-19 07:14+0100\n"
 "PO-Revision-Date: 2024-10-08 00:00+0000\n"
 "Last-Translator: Misha <misha@association-enoria.org>\n"
 "Language-Team: French <https://translations.zammad.org/projects/"
@@ -148,25 +148,26 @@ msgstr ""
 #: ../ai/ai-agents.rst:72
 msgid ""
 "The ticket categorizer AI agent uses the content of all articles and the "
-"title to compare it with your category names. You can limit from which "
-"categories the AI agent can choose from and define if multiple values are "
-"possible (if using a multi-select field type) in the wizard. In case you "
-"limit the categories, you can also provide a description for each category "
-"the AI agent can choose from."
+"title to compare it with your category names (and optionally descriptions). "
+"To add descriptions for your categories, limit the categories the AI agent "
+"can choose from. Then add the categories which should be available for the "
+"AI agent and optionally provide a description for them. Additionally, you "
+"can decide in the wizard if multiple values are allowed (only if category "
+"field is a multi-select field type)."
 msgstr ""
 
-#: ../ai/ai-agents.rst:80
+#: ../ai/ai-agents.rst:81
 #, fuzzy
 msgid "Ticket Group Dispatcher"
 msgstr "exemple"
 
-#: ../ai/ai-agents.rst:82
+#: ../ai/ai-agents.rst:83
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
-"compares the content of the ticket in question with your group names in "
-"Zammad. If a suitable group can be found, it selects this group for the "
-"ticket. You can use all of your groups or just specific ones by limiting it "
-"for the AI agent in the configuration wizard."
+"compares the content of the ticket in question with your group names (and "
+"optionally descriptions). To add descriptions for your groups, limit the "
+"groups the AI agent can choose from. Then add the groups which should be "
+"available for the AI agent and optionally provide a description for them."
 msgstr ""
 
 #: ../ai/ai-agents.rst:90
@@ -197,19 +198,21 @@ msgid ""
 "creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
-#: ../ai/provider.rst:2 ../ai/provider.rst:39
+#: ../ai/provider.rst:2 ../ai/provider.rst:45
 msgid "Provider"
 msgstr ""
 
 #: ../ai/provider.rst:4
 msgid ""
 "Zammad offers AI-powered features to support your agents! To use AI features "
-"in Zammad, you have to configure an AI provider which handles the requests "
-"first. Add your provider in Zammad's admin settings under *AI > Provider*. "
-"To access this page, the ``admin.ai_provider`` permission is required."
+"in Zammad, you must first configure and enable an AI provider. Such an AI "
+"provider processes all your AI requests and is required for any AI "
+"functionality. Add your provider in Zammad's admin settings under *AI > "
+"Provider* and make sure to activate the toggle. This setting requires "
+"``admin.ai_provider`` permission to access it."
 msgstr ""
 
-#: ../ai/provider.rst:10
+#: ../ai/provider.rst:11
 msgid ""
 "Zammad's AI feature is completely optional and requires a configuration "
 "before any AI request is made. However, if you don't want to see the "
@@ -217,7 +220,7 @@ msgid ""
 "console/other-useful-commands.html#remove-ai-feature>`."
 msgstr ""
 
-#: ../ai/provider.rst:16 ../channels/email/settings.rst:2
+#: ../ai/provider.rst:17 ../channels/email/settings.rst:2
 #: ../channels/form.rst:28 ../index.rst:56 ../manage/time-accounting.rst:15
 #: ../system/integrations/checkmk/admin-panel-reference.rst:5
 msgid "Settings"
@@ -229,46 +232,54 @@ msgid "Screenshot shows configuration of AI provider in Zammad"
 msgstr ""
 "Capture d'écran montrant la configuration de base d'une boîte de réception"
 
-#: ../ai/provider.rst:23
+#: ../ai/provider.rst:24
 #, fuzzy
 msgid "You can choose from different supported providers:"
 msgstr "Vous avez le choix entre les options suivantes :"
 
-#: ../ai/provider.rst:25 ../ai/provider.rst:87
+#: ../ai/provider.rst:26 ../ai/provider.rst:93
 msgid "Zammad AI"
 msgstr ""
 
-#: ../ai/provider.rst:26
+#: ../ai/provider.rst:27
 msgid "OpenAI"
 msgstr ""
 
-#: ../ai/provider.rst:27 ../ai/provider.rst:117
+#: ../ai/provider.rst:28 ../ai/provider.rst:123
 msgid "Ollama"
 msgstr ""
 
-#: ../ai/provider.rst:28
+#: ../ai/provider.rst:29
 msgid "Anthropic"
 msgstr ""
 
-#: ../ai/provider.rst:29
+#: ../ai/provider.rst:30
 msgid "Azure AI"
 msgstr ""
 
-#: ../ai/provider.rst:30
+#: ../ai/provider.rst:31
 msgid "Mistral AI"
 msgstr ""
 
-#: ../ai/provider.rst:31
+#: ../ai/provider.rst:32
 msgid "Custom (OpenAI Compatible)"
 msgstr ""
 
-#: ../ai/provider.rst:33
+#: ../ai/provider.rst:34
 msgid ""
 "Depending on which provider you choose, Zammad displays different fields you "
 "can configure."
 msgstr ""
 
-#: ../ai/provider.rst:36
+#: ../ai/provider.rst:37
+msgid ""
+"Keep in mind that your AI provider might require some configuration before "
+"you can connect to it. That is the case for Azure AI, anyway. As this "
+"configuration is beyond the scope of this documentation, please refer to the "
+"documentation of the service you are using."
+msgstr ""
+
+#: ../ai/provider.rst:42
 msgid ""
 "The AI service you have subscribed to is not available? This is just the "
 "first step. We are going to add more providers soon! If you want to support "
@@ -276,138 +287,138 @@ msgid ""
 "<https://zammad.com/en/company/contact>`_ know!"
 msgstr ""
 
-#: ../ai/provider.rst:44
+#: ../ai/provider.rst:50
 msgid "Token"
 msgstr ""
 
-#: ../ai/provider.rst:42
+#: ../ai/provider.rst:48
 msgid ""
 "Add your API token which you got from your provider here. Don't confuse it "
 "with the tokens a large language model (LLM) is dealing with when processing "
 "a request."
 msgstr ""
 
-#: ../ai/provider.rst:48 ../manage/knowledge-base.rst:151
+#: ../ai/provider.rst:54 ../manage/knowledge-base.rst:151
 #: ../system/integrations/elasticsearch.rst:57
 msgid "URL"
 msgstr ""
 
-#: ../ai/provider.rst:47
+#: ../ai/provider.rst:53
 msgid ""
 "Provide the URL or IP address of your provider. This is required for Ollama "
 "and OpenAI compatible providers."
 msgstr ""
 
-#: ../ai/provider.rst:52
+#: ../ai/provider.rst:58
 msgid "URL (Completions)"
 msgstr ""
 
-#: ../ai/provider.rst:51
+#: ../ai/provider.rst:57
 msgid ""
 "Only for Azure AI as provider. Add the endpoint where your text generation "
 "model is available."
 msgstr ""
 
-#: ../ai/provider.rst:57
+#: ../ai/provider.rst:63
 msgid "Model"
 msgstr ""
 
-#: ../ai/provider.rst:55
+#: ../ai/provider.rst:61
 msgid ""
 "Enter the exact name of the model here. This model has to be available on "
 "your provider's side. Leave it empty (if not mandatory) to use the default "
 "which is shown as a placeholder."
 msgstr ""
 
-#: ../ai/provider.rst:65
+#: ../ai/provider.rst:71
 msgid "Recognize Image Text (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:60
+#: ../ai/provider.rst:66
 msgid ""
 "Zammad allows you to use optical character recognition (OCR) to extract text "
 "from images. This can be useful if you often get error messages or other "
 "important information, which is only present in images."
 msgstr ""
 
-#: ../ai/provider.rst:64
+#: ../ai/provider.rst:70
 msgid ""
 "Simply switch the toggle on or off. Be aware that using this feature can "
 "cause a high consumption of tokens."
 msgstr ""
 
-#: ../ai/provider.rst:72
+#: ../ai/provider.rst:78
 msgid "OCR Model"
 msgstr ""
 
-#: ../ai/provider.rst:68
+#: ../ai/provider.rst:74
 msgid ""
 "Specify a model to use for the OCR feature. Leave it empty to use the "
 "default model of your provider."
 msgstr ""
 
-#: ../ai/provider.rst:71
+#: ../ai/provider.rst:77
 msgid ""
 "Note: the field is called **URL (OCR)** for Azure AI and expects a URL where "
 "the OCR model is available instead of a model itself."
 msgstr ""
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:80
 msgid ""
 "After providing the information, make sure to click the ``Save`` button and "
 "activate AI features."
 msgstr ""
 
-#: ../ai/provider.rst:78
+#: ../ai/provider.rst:84
 #, fuzzy
 msgid "Excursion"
 msgstr "Version"
 
-#: ../ai/provider.rst:80
+#: ../ai/provider.rst:86
 msgid ""
 "In case you want to know more about Zammad AI or Ollama, read on here. "
 "Otherwise, head over to :ref:`feedback-logs` or check out the AI-powered "
 "features and how to use them."
 msgstr ""
 
-#: ../ai/provider.rst:89
+#: ../ai/provider.rst:95
 msgid ""
 "Using Zammad AI as a provider is the easiest way you can get started with "
 "Zammad's AI features. It has some big advantages like:"
 msgstr ""
 
-#: ../ai/provider.rst:92
+#: ../ai/provider.rst:98
 msgid ""
 "You don't have to take care of the setup of an AI system and its "
 "configuration."
 msgstr ""
 
-#: ../ai/provider.rst:94
+#: ../ai/provider.rst:100
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr ""
 
-#: ../ai/provider.rst:95
+#: ../ai/provider.rst:101
 msgid ""
 "No configuration in Zammad needed (for SaaS customers) or only an API key "
 "required (for self-hosted customers)."
 msgstr ""
 
-#: ../ai/provider.rst:97
+#: ../ai/provider.rst:103
 msgid "Your requests with sensitive information aren't used for training."
 msgstr ""
 
-#: ../ai/provider.rst:98
+#: ../ai/provider.rst:104
 msgid ""
 "If something isn't working as expected, you just have one place where you "
 "get support."
 msgstr ""
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:114
 #, fuzzy
 msgid "SaaS Customers"
 msgstr "Client"
 
-#: ../ai/provider.rst:102
+#: ../ai/provider.rst:108
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider to switch your plan. If a "
@@ -418,11 +429,11 @@ msgid ""
 "calls remain."
 msgstr ""
 
-#: ../ai/provider.rst:114
+#: ../ai/provider.rst:120
 msgid "Self-Hosted Customers"
 msgstr ""
 
-#: ../ai/provider.rst:111
+#: ../ai/provider.rst:117
 msgid ""
 "Please `get in touch with our sales department <https://zammad.com/en/"
 "company/contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -430,7 +441,7 @@ msgid ""
 "activate and configure AI features as you like."
 msgstr ""
 
-#: ../ai/provider.rst:119
+#: ../ai/provider.rst:125
 msgid ""
 "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your "
 "own AI server on a machine you control. That means your data is not "
@@ -438,7 +449,7 @@ msgid ""
 "have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:124
+#: ../ai/provider.rst:130
 msgid ""
 "If you don't have an Ollama running already, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. You can find the available "
@@ -447,11 +458,11 @@ msgid ""
 "github.com/ollama/ollama>`_."
 msgstr ""
 
-#: ../ai/provider.rst:134
+#: ../ai/provider.rst:140
 msgid "Feedback & Logs"
 msgstr ""
 
-#: ../ai/provider.rst:136
+#: ../ai/provider.rst:142
 msgid ""
 "At the top of the settings page, you can switch to the **Feedback & Logs** "
 "tab."
@@ -462,11 +473,11 @@ msgid ""
 "Screenshot shows AI provider settings with activated \"Feedback & Logs\" tab"
 msgstr ""
 
-#: ../ai/provider.rst:144
+#: ../ai/provider.rst:150
 msgid "Downloads"
 msgstr ""
 
-#: ../ai/provider.rst:146
+#: ../ai/provider.rst:152
 msgid ""
 "Your agents can provide feedback like thumbs up or down and leave a comment "
 "in case they gave thumbs down. You can download this feedback as well as "
@@ -474,7 +485,7 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../ai/provider.rst:152
+#: ../ai/provider.rst:158
 #: ../system/integrations/checkmk/admin-panel-reference.rst:35
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/ldap/index.rst:164
@@ -482,7 +493,7 @@ msgstr ""
 msgid "Recent Logs"
 msgstr ""
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:160
 msgid ""
 "Zammad shows the last requests and responses in the UI as well. So in case "
 "something isn't working, have a look there. When you open an entry, you can "
@@ -941,7 +952,7 @@ msgstr ""
 "votre site web, ajoutez le comme suit :"
 
 #: ../channels/chat.rst:85 ../manage/checklist.rst:16
-#: ../system/integrations/smime/index.rst:41
+#: ../system/integrations/smime/index.rst:41 ../system/subscription.rst:80
 msgid "Usage"
 msgstr "Utilisation"
 
@@ -3722,7 +3733,7 @@ msgstr ""
 
 #: ../channels/form.rst:142 ../manage/report-profiles.rst:49
 #: ../manage/scheduler.rst:109 ../manage/slas.rst:64
-#: ../system/objects/types.rst:275
+#: ../system/objects/types.rst:271
 #, fuzzy
 msgid "Preview"
 msgstr "Aperçus"
@@ -3852,7 +3863,7 @@ msgstr ""
 #: ../channels/form.rst:219 ../manage/public-links.rst:43
 #: ../misc/object-conditions/basics.rst:63 ../misc/variables.rst:101
 #: ../system/core-workflows/condition-operators.rst:21
-#: ../system/objects/permissions.rst:39 ../system/subscription.rst:208
+#: ../system/objects/permissions.rst:39 ../system/subscription.rst:196
 msgid "Description"
 msgstr ""
 
@@ -6739,7 +6750,7 @@ msgid "System"
 msgstr ""
 
 #: ../index.rst:96 ../manage/roles/permissions.rst:291
-#: ../system/objects/types.rst:283
+#: ../system/objects/types.rst:279
 msgid "Misc"
 msgstr ""
 
@@ -11414,6 +11425,296 @@ msgstr ""
 msgid "Screenshot of “Triggers” page in admin panel"
 msgstr ""
 
+#: ../manage/trigger/how-do-they-work.rst:2
+msgid "How Do Trigger Work"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:4
+msgid "Triggers consist mainly of three parts:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:6
+msgid "**Activator:** defines when and how the trigger has to be evaluated."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:7
+msgid ""
+"**Condition:** defines the tickets for which an action has to be executed "
+"based on attributes."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:9
+msgid ""
+"**Actions:** define what to change in a ticket which matches the condition."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:11
+msgid ""
+"Triggers are evaluated in alphabetical order by **name.** In some "
+"situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
+"limitations` for more information."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:16
+msgid "Activator"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:18
+msgid ""
+"Choose between an action- or time-based activator in the **Activated by** "
+"section."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+#, fuzzy
+msgid "Screenshot of activator section in trigger dialog."
+msgstr ""
+"Capture d'écran montrant la configuration de base d'une boîte de réception"
+
+#: ../manage/trigger/how-do-they-work.rst:27
+#: ../manage/trigger/how-do-they-work.rst:81
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
+#: ../misc/object-conditions/basics.rst:66
+#: ../system/core-workflows/how-do-they-work.rst:60
+#: ../system/core-workflows/learn-by-example.rst:58
+#: ../system/core-workflows/learn-by-example.rst:113
+#: ../system/core-workflows/learn-by-example.rst:157
+#: ../system/core-workflows/learn-by-example.rst:223
+#: ../system/core-workflows/learn-by-example.rst:260 ../system/sessions.rst:51
+msgid "Action"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:29
+msgid ""
+"An action based trigger always requires a ticket update to run. This can be "
+"an update by an agent or even internal system updates like updated SLA "
+"times. See the explanation below for more details."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:39
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
+msgid "Selective"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:34
+msgid ""
+"Checks if any attribute from the condition was updated OR an article was "
+"added and the condition matches. If the attributes of the condition weren't "
+"touched and no new article was added, the trigger doesn't run."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:38
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was changed to **1 low**."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:48
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
+msgid "Always"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:42
+msgid ""
+"Checks if the current state of the ticket matches the condition. This means: "
+"the trigger always runs when the ticket is updated and the condition "
+"matches, no matter what was changed. This can lead to more often executions "
+"of such a trigger."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:47
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was moved to another group while priority was set **1 low**."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:50
+msgid ""
+"If in doubt, use **Selective**. The **Always** action activator can lead to "
+"unexpected behavior, e.g. the trigger runs after internal system changes of "
+"the ticket, which aren't visible in the ticket history."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:55
+msgid "Time Event"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:57
+msgid "The execution is triggered when one of the following events occur:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:59
+msgid "Time of a reminder is reached"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:60
+msgid "Escalation is reached"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:61
+msgid "Escalation warning is reached"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:63
+msgid ""
+"When such a time event is reached, the trigger runs if the condition "
+"matches. This is the same behavior as action-based activator's \"always\" "
+"mode."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:67
+#, fuzzy
+msgid "Condition"
+msgstr "Boîte de dialogue de configuration avancée"
+
+#: ../manage/trigger/how-do-they-work.rst:69
+msgid ""
+"Use one or more attributes and values in a condition, which the tickets have "
+"to match you want to apply changes to. Create your condition in the "
+"**Conditions for affected objects** section:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+#, fuzzy
+msgid "Screenshot of condition section in trigger dialog."
+msgstr ""
+"Capture d'écran montrant la configuration de base d'une boîte de réception"
+
+#: ../manage/trigger/how-do-they-work.rst:83
+msgid ""
+"Define which changes to apply for tickets which match your condition in the "
+"**Execute changes on objects** section:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:None
+#, fuzzy
+msgid "Screenshot of action section in trigger dialog."
+msgstr ""
+"Capture d'écran montrant la configuration de base d'une boîte de réception"
+
+#: ../manage/trigger/how-do-they-work.rst:91
+msgid ""
+"Certain actions (such as email, SMS and notes) support :doc:`/misc/"
+"variables` (see screenshot above), which can be used to build highly-"
+"customized message templates."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:95
+msgid ""
+"A trigger can do the following things once its conditions have been met:"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:106
+msgid "Modify the ticket"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:98
+msgid ""
+"Examples: escalate its priority, close it, reassign it, rename it, add tags, "
+"subscribe and unsubscribe specific/all users, etc."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:101
+msgid ""
+"Date & time attributes (like **Pending till**) can be specified in "
+"*absolute* or *relative* terms."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:104
+msgid ""
+"You can also combine static text with placeholders for text fields. Remember "
+"that the placeholders' values have to be known during trigger runtime. Learn "
+"more about :doc:`/misc/variables`."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:117
+msgid "Send an email or SMS"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:109
+msgid ""
+"Either to the customer, the agent who owns the ticket, or every agent in the "
+"system."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:112
+msgid ""
+"Sending emails allows you to include the attachments of the triggering "
+"article if required."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:115
+msgid ""
+"In order to send emails with triggers, you need to configure an email "
+"address for the group, the trigger is working in. If you don't, Zammad will "
+"skip the trigger completely."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:121
+msgid ":doc:`Fire a webhook </manage/webhook>`"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:120
+msgid ""
+"Connect Zammad to another web service or application to give it live updates "
+"about new tickets."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:125
+msgid "Add internal or public notes to the ticket"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:124
+msgid ""
+"This allows you to help your agents with specific information if needed. "
+"(e.g. automated changes a trigger applied to the ticket)"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:128
+msgid ":doc:`Run an AI agent </ai/ai-agents>`"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:128
+msgid "Trigger an AI agent to run using triggers."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:133
+msgid "Localization of Execution Changes"
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:135
+msgid ""
+"The system locale and timezone predefines a default format of date and "
+"timestamp replacement variables. These settings are customizable for "
+"triggers."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:0
+#, fuzzy
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr ""
+"Capture d'écran montrant la configuration de base d'une boîte de réception"
+
+#: ../manage/trigger/how-do-they-work.rst:142
+msgid ""
+"Best practice is to create single separated localized triggers for each "
+"language/timezone and execute them based on user or organization attributes."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:145
+msgid ""
+"The format and timezone of date and timestamp replacement variables is "
+"customizable by the use of the ``dt()`` method. Further on the ``t()`` "
+"method can be used to translated string replacement variables according to "
+"the selected locale language."
+msgstr ""
+
+#: ../manage/trigger/how-do-they-work.rst:147
+msgid ""
+"For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
+"in the :ref:`variables section <variable_localization>`."
+msgstr ""
+
 #: ../manage/trigger/learn-by-example.rst:2
 #, fuzzy
 msgid "Trigger Examples"
@@ -12535,17 +12836,6 @@ msgstr ""
 msgid "Next, choose a suitable activator type under **Activated by** field:"
 msgstr ""
 
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-#: ../misc/object-conditions/basics.rst:66
-#: ../system/core-workflows/how-do-they-work.rst:60
-#: ../system/core-workflows/learn-by-example.rst:58
-#: ../system/core-workflows/learn-by-example.rst:113
-#: ../system/core-workflows/learn-by-example.rst:157
-#: ../system/core-workflows/learn-by-example.rst:223
-#: ../system/core-workflows/learn-by-example.rst:260 ../system/sessions.rst:51
-msgid "Action"
-msgstr ""
-
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:18
 msgid ""
 "This will execute the trigger on a specific action, e.g. user creating or "
@@ -12559,19 +12849,11 @@ msgid ""
 "conditions:"
 msgstr ""
 
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
-msgid "Selective"
-msgstr ""
-
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:26
 msgid ""
 "This will check if any property used as a condition attribute was updated by "
 "the action. If the action behind the trigger was one other than update, it "
 "will simply check if the conditions match."
-msgstr ""
-
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-msgid "Always"
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:31
@@ -23738,7 +24020,7 @@ msgid ""
 "setup page as well."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:11 ../system/subscription.rst:7
+#: ../system/integrations/elasticsearch.rst:11
 msgid "**🚧 Hosted environment specific 🚧**"
 msgstr ""
 
@@ -26663,24 +26945,16 @@ msgid ""
 msgstr ""
 
 #: ../system/objects/types.rst:180
-msgid ""
-"The usage of a PostgreSQL database for Zammad is required. In any other "
-"case, Zammad will hide the external data source type and you are not able to "
-"use it. If you want to use this feature, consider to :docs:`migrate your "
-"database </appendix/migrate-to-postgresql.html>`."
-msgstr ""
-
-#: ../system/objects/types.rst:184
 msgid "Only ``GET`` is supported as request method."
 msgstr ""
 
-#: ../system/objects/types.rst:185
+#: ../system/objects/types.rst:181
 msgid ""
 "The data structure must be in JSON format and provide the objects in an "
 "array."
 msgstr ""
 
-#: ../system/objects/types.rst:187
+#: ../system/objects/types.rst:183
 msgid ""
 "The endpoint for the external data source has to support search. On Zammad "
 "side, there is no search/logic implemented; however, you can define the "
@@ -26688,14 +26962,14 @@ msgid ""
 "provides already filtered content based on the search)."
 msgstr ""
 
-#: ../system/objects/types.rst:191
+#: ../system/objects/types.rst:187
 msgid ""
 "If you receive more results as expected, your external data source search "
 "may not work properly or the structure of the URL is not correct. You should "
 "get in touch with a responsible person from the external system."
 msgstr ""
 
-#: ../system/objects/types.rst:196
+#: ../system/objects/types.rst:192
 msgid ""
 "Please have a look :doc:`at our example </system/objects/external-data-"
 "source-example>`, where you can find a possible configuration, using a "
@@ -26706,46 +26980,46 @@ msgstr ""
 msgid "Available settings for external data source fields"
 msgstr ""
 
-#: ../system/objects/types.rst:220
+#: ../system/objects/types.rst:216
 msgid "Search URL"
 msgstr ""
 
-#: ../system/objects/types.rst:206
+#: ../system/objects/types.rst:202
 msgid ""
 "Set your endpoint where Zammad fetches the data. Please make sure to include "
 "a valid search :doc:`variable </misc/variables>` as an URL parameter. "
 "Example for a free text search at user input: ``#{search.term}``"
 msgstr ""
 
-#: ../system/objects/types.rst:211
+#: ../system/objects/types.rst:207
 msgid ""
 "If in doubt, ask the responsible person for the external data source how "
 "they expect the structure of the URL."
 msgstr ""
 
-#: ../system/objects/types.rst:215
+#: ../system/objects/types.rst:211
 msgid ""
 "Depending on your search variable, the preview might work or not. The reason "
 "is that the context might not be available and it is no bug."
 msgstr ""
 
-#: ../system/objects/types.rst:218
+#: ../system/objects/types.rst:214
 msgid ""
 "Please also make sure to use a variable which is available in your object "
 "context. For example you won't be able to search for a ticket in a user "
 "object context."
 msgstr ""
 
-#: ../system/objects/types.rst:230
+#: ../system/objects/types.rst:226
 #, fuzzy
 msgid "SSL Verification"
 msgstr "Intégrations"
 
-#: ../system/objects/types.rst:223
+#: ../system/objects/types.rst:219
 msgid "Here you can switch the SSL verification to no."
 msgstr ""
 
-#: ../system/objects/types.rst:227
+#: ../system/objects/types.rst:223
 msgid ""
 "If your external data source system is using self signed certificates, "
 "please have a look :doc:`here </settings/security/ssl-certificates>` for "
@@ -26753,11 +27027,11 @@ msgid ""
 "SSL verification activated."
 msgstr ""
 
-#: ../system/objects/types.rst:236
+#: ../system/objects/types.rst:232
 msgid "HTTP Authentication"
 msgstr ""
 
-#: ../system/objects/types.rst:233
+#: ../system/objects/types.rst:229
 msgid ""
 "If your external data source requires an authentication, you can set it "
 "here. You can leave it empty or choose between *Basic Authentication* or "
@@ -26765,11 +27039,11 @@ msgid ""
 "fields where you can enter your credentials/token)."
 msgstr ""
 
-#: ../system/objects/types.rst:243
+#: ../system/objects/types.rst:239
 msgid "Search result list key"
 msgstr ""
 
-#: ../system/objects/types.rst:239
+#: ../system/objects/types.rst:235
 msgid ""
 "Defines the level in the JSON structure which provides the list with search "
 "results. You can leave it empty, if the data is already provided as an "
@@ -26777,11 +27051,11 @@ msgid ""
 "with ``.`` as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:249
+#: ../system/objects/types.rst:245
 msgid "Search result value key"
 msgstr ""
 
-#: ../system/objects/types.rst:246
+#: ../system/objects/types.rst:242
 msgid ""
 "Defines the attribute in the structure in which your external data source "
 "provides the *value* for your data. An example would be a product *number*. "
@@ -26789,11 +27063,11 @@ msgid ""
 "as separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:255
+#: ../system/objects/types.rst:251
 msgid "Search result label key"
 msgstr ""
 
-#: ../system/objects/types.rst:252
+#: ../system/objects/types.rst:248
 msgid ""
 "Defines the attribute in the structure in which your external data source "
 "provides the *label* for your data. An example would be a product *name*. If "
@@ -26801,38 +27075,38 @@ msgid ""
 "separators, e.g. ``key.subkey.sub-sub-key``."
 msgstr ""
 
-#: ../system/objects/types.rst:258
+#: ../system/objects/types.rst:254
 msgid ""
 "In the preview area, you can find the following items (depending on your "
 "configuration above):"
 msgstr ""
 
-#: ../system/objects/types.rst:261
+#: ../system/objects/types.rst:257
 msgid ""
 "**Error/hint message** (only if configuration is not complete): Zammad tells "
 "you, if there is a problem and what you should change in your configuration."
 msgstr ""
 
-#: ../system/objects/types.rst:264
+#: ../system/objects/types.rst:260
 msgid ""
 "**Search field**: search for an existing attribute in the data source to get "
 "a preview. This is required for the fields below to show up."
 msgstr ""
 
-#: ../system/objects/types.rst:266
+#: ../system/objects/types.rst:262
 msgid ""
 "**Search result response** (only if configuration is not complete): here you "
 "can find a syntax highlighted JSON preview of the response, based on the "
 "search term you entered."
 msgstr ""
 
-#: ../system/objects/types.rst:269
+#: ../system/objects/types.rst:265
 msgid ""
 "**Search result list** (only if *search result list key* is properly set): "
 "output of the structure under the configured *search result list key*."
 msgstr ""
 
-#: ../system/objects/types.rst:272
+#: ../system/objects/types.rst:268
 msgid ""
 "**Preview table** (when fully configured): Zammad shows you a table which "
 "includes the found items based on the search string (value, label and "
@@ -26840,7 +27114,7 @@ msgid ""
 "structure of the external system in mind."
 msgstr ""
 
-#: ../system/objects/types.rst:277
+#: ../system/objects/types.rst:273
 msgid ""
 "An example of a configured external data source field from agent perspective:"
 msgstr ""
@@ -26849,11 +27123,11 @@ msgstr ""
 msgid "Screencast showing the search for a product in a ticket"
 msgstr ""
 
-#: ../system/objects/types.rst:288
+#: ../system/objects/types.rst:284
 msgid "Link-Template"
 msgstr ""
 
-#: ../system/objects/types.rst:290
+#: ../system/objects/types.rst:286
 msgid ""
 "Link templates allow you to generate dynamic URLs based on the content of "
 "the attribute. This way you can define a base URL and add a variable for the "
@@ -26862,62 +27136,62 @@ msgid ""
 "side. Clicking the icon opens a new browser tab with the generated URL."
 msgstr ""
 
-#: ../system/objects/types.rst:296
+#: ../system/objects/types.rst:292
 msgid "Example for a search query URL:"
 msgstr ""
 
-#: ../system/objects/types.rst:298
+#: ../system/objects/types.rst:294
 #, fuzzy
 msgid "Ticket attribute type: **Text Field**"
 msgstr "Attributs du ticket"
 
-#: ../system/objects/types.rst:299
+#: ../system/objects/types.rst:295
 msgid "Text field type: **Text**"
 msgstr ""
 
-#: ../system/objects/types.rst:300
+#: ../system/objects/types.rst:296
 #, fuzzy
 msgid "Ticket attribute name: ``my_attribute``"
 msgstr "Variables Article"
 
-#: ../system/objects/types.rst:301
+#: ../system/objects/types.rst:297
 msgid ""
 "Link template content: ``https://www.duckduckgo.com/&q=#{ticket.my_attribute}"
 "``"
 msgstr ""
 
-#: ../system/objects/types.rst:302
+#: ../system/objects/types.rst:298
 msgid "Added field content: ``zammad``"
 msgstr ""
 
-#: ../system/objects/types.rst:303
+#: ../system/objects/types.rst:299
 msgid "Resulting URL: ``https://www.duckduckgo.com/&q=zammad``"
 msgstr ""
 
-#: ../system/objects/types.rst:307
+#: ../system/objects/types.rst:303
 msgid ""
 "You can use any :doc:`Zammad variable </misc/variables>` as long as it's "
 "available in the moment you need it."
 msgstr ""
 
-#: ../system/objects/types.rst:310
+#: ../system/objects/types.rst:306
 msgid ""
 "Available for the field types *Text* (type: text), *Single Selection*, "
 "*Multiple Selection* and *External Data Source*."
 msgstr ""
 
-#: ../system/objects/types.rst:315
+#: ../system/objects/types.rst:311
 msgid ""
 "Another great way of communicating with another system may be "
 "Zammad's :doc:`Webhooks </manage/webhook>`."
 msgstr ""
 
-#: ../system/objects/types.rst:319
+#: ../system/objects/types.rst:315
 #, fuzzy
 msgid "Translate Field Contents"
 msgstr "Traductions"
 
-#: ../system/objects/types.rst:321
+#: ../system/objects/types.rst:317
 msgid ""
 "For some attribute types, you can decide if their values should be "
 "translatable or not. If they are configured as translatable, they appear in "
@@ -26927,23 +27201,23 @@ msgid ""
 "for these types:"
 msgstr ""
 
-#: ../system/objects/types.rst:328
+#: ../system/objects/types.rst:324
 msgid "Boolean field"
 msgstr ""
 
-#: ../system/objects/types.rst:329
+#: ../system/objects/types.rst:325
 msgid "Single selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:330
+#: ../system/objects/types.rst:326
 msgid "Multiple selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:331
+#: ../system/objects/types.rst:327
 msgid "Single tree selection field"
 msgstr ""
 
-#: ../system/objects/types.rst:332
+#: ../system/objects/types.rst:328
 msgid "Multiple tree selection field"
 msgstr ""
 
@@ -27072,72 +27346,34 @@ msgstr ""
 
 #: ../system/subscription.rst:4
 msgid ""
-"The subscription settings page allows you to configure your instances "
-"package and number of agents required."
+"The subscription settings page allows you to configure everything around "
+"your subscription. It is only visible for hosted SaaS customers. The "
+"permission ``admin.package`` is required to access this page, which is only "
+"available in SaaS environments."
 msgstr ""
 
-#: ../system/subscription.rst:9
-msgid ""
-"This setting section is only available for Hosted setups. If you're looking "
-"for on premise support contracts, please see the `Zammad pricing page "
-"<https://zammad.com/en/pricing#selfhosted>`_."
-msgstr ""
-
-#: ../system/subscription.rst:14 ../system/subscription.rst:34
+#: ../system/subscription.rst:10
 msgid "Plan"
 msgstr ""
 
-#: ../system/subscription.rst:16
-msgid ""
-"Here you can set up everything affecting your instance subscription "
-"functions like number of agents and package."
-msgstr ""
-
-#: ../system/subscription.rst:19
-msgid ""
-"On top of the page you can find a subscription summary. You'll find the "
-"number of used and available (booked) agent seats there. By using the *see "
-"more* link you can also expand an agent list to see the currently configured "
-"active agents. This list *does not* count accounts with admin permissions "
-"only."
-msgstr ""
-
-#: ../system/subscription.rst:None
-msgid ""
-"Within subscription you can always see how many agents are still\n"
-"available to add and who uses the seats."
-msgstr ""
-
-#: ../system/subscription.rst:29
-msgid ""
-"Learn more on how to manage your agents in general :doc:`here </manage/users/"
-"index>`."
-msgstr ""
-
-#: ../system/subscription.rst:36
+#: ../system/subscription.rst:12
 msgid ""
 "This section gives you an overview of the available plans and their "
-"functions / limits. If you require a more detailed table, check our "
-"`detailed pricing table <https://zammad.com/en/pricing/table>`_ for more."
+"functions / limits and the ability to choose another plan. If you require a "
+"more detailed table, check our `pricing table <https://zammad.com/en/pricing/"
+"table>`_ for more information. Your selection (green **Selected** button) in "
+"this step will decide on the base agent price and agent limits. You can also "
+"find your currently used number of agents there and see the accounts. This "
+"list *does not* count accounts with admin permissions only. Learn more about "
+"how to :doc:`manage your agents </manage/users/index>`"
 msgstr ""
 
-#: ../system/subscription.rst:40
+#: ../system/subscription.rst:24
 msgid ""
-"Your selection in this step will decide on the base agent price and e.g. "
-"agent limits that might apply in the summary step."
-msgstr ""
-
-#: ../system/subscription.rst:43
-msgid ""
-"The green *Selected* button will also tell you what plan you're currently in."
-msgstr ""
-
-#: ../system/subscription.rst:47
-msgid ""
-"Trial instances are running at Professional with 3 agents. The plan cannot "
-"be changed during the trial for technical reasons, if you require more "
-"agents for testing, please contact `our sales team <https://zammad.com/en/"
-"company/contact>`_ with a reason for the raise request."
+"Trial instances are running on a *Professional v2* plan with 3 agents. The "
+"plan cannot be changed during the trial period for technical reasons. If you "
+"require more agents for testing, please contact `our sales team <https://"
+"zammad.com/en/company/contact>`_ and tell them what you want to do."
 msgstr ""
 
 #: ../system/subscription.rst:None
@@ -27146,145 +27382,166 @@ msgid ""
 "instance"
 msgstr ""
 
-#: ../system/subscription.rst:57
+#: ../system/subscription.rst:34
 msgid ""
 "At the bottom of this block you can find a summary where you can adjust the "
 "settings of the previous selected plan."
 msgstr ""
 
-#: ../system/subscription.rst:62
+#: ../system/subscription.rst:39
 msgid ""
-"Note that upgrading (more agents, higher package) is always possible, "
-"however, downgrading will only happen when your billing period renews."
-msgstr ""
-
-#: ../system/subscription.rst:66
-msgid ""
+"Note that upgrading (more agents, higher package) is always possible. "
+"However, downgrading will only happen when your billing period renews. "
 "Upgrading resets your billing period and existing credit will be deducted "
 "from the new total."
 msgstr ""
 
-#: ../system/subscription.rst:75
+#: ../system/subscription.rst:49
 msgid "Billing cycle"
 msgstr ""
 
-#: ../system/subscription.rst:70
+#: ../system/subscription.rst:45
 msgid ""
-"You can choose between either monthly or yearly billing. The price per agent "
-"will be cheaper if you decide for yearly billing."
+"You can choose between monthly or yearly billing period. The price per agent "
+"will be cheaper if you decide for yearly billing. If you're still trying out "
+"things and are unsure of the right package for your instance, you may want "
+"to choose monthly first and then upgrade to yearly when you're sure."
+msgstr ""
+
+#: ../system/subscription.rst:55
+msgid "Plan: (Starter|Professional|Plus) V2 - Agents"
+msgstr ""
+
+#: ../system/subscription.rst:52
+msgid ""
+"Choose the number of agents you require for your instance. Keep in mind that "
+"some plans have agent limits. Decreasing the number of agents to less than "
+"currently configured is not possible."
+msgstr ""
+
+#: ../system/subscription.rst:58
+msgid "Total"
+msgstr ""
+
+#: ../system/subscription.rst:58
+msgid "This will be the net total you're going to be billed."
+msgstr ""
+
+#: ../system/subscription.rst:60
+msgid ""
+"By using the **Update subscription** button, the instance package is getting "
+"adjusted immediately. If you didn't provide a payment method yet, Zammad "
+"will request you to provide it at this point."
+msgstr ""
+
+#: ../system/subscription.rst:66
+msgid ""
+"In case you're still within the trial period, this means that the trial will "
+"be over immediately! Down- or upgrading during the trial period *is not* "
+"possible."
+msgstr ""
+
+#: ../system/subscription.rst:71
+msgid "Zammad AI - API Call Credits"
 msgstr ""
 
 #: ../system/subscription.rst:73
 msgid ""
-"If you're still trying out things and are unsure of the right package for "
-"your instance, you may want to choose monthly first and then upgrade to "
-"yearly when you're sure."
-msgstr ""
-
-#: ../system/subscription.rst:83
-msgid "Plan: (Starter|Professional|Plus) - Agents"
-msgstr ""
-
-#: ../system/subscription.rst:78
-msgid "Choose the number of agents you require for your instance."
+"If you want to use Zammad's AI features, you can use Zammad AI as "
+"your :doc:`AI provider </ai/provider>`. Initially, you have 500 AI calls to "
+"test the feature for free. Re-charge them manually or automatically when 90% "
+"of the calls are used. One AI action like an AI agent run or an AI ticket "
+"summary uses one AI call. To apply any kind of re-charge, a valid payment "
+"method is required."
 msgstr ""
 
 #: ../system/subscription.rst:80
 msgid ""
-"Keep in mind that some packages may have agent limits. Depending on the "
-"previous chosen package, you won't be able to exceed specific agent numbers. "
-"Also note that setting less agents than currently configured is not possible."
+"Shows the available API calls for Zammad AI and how much are already used up."
 msgstr ""
 
-#: ../system/subscription.rst:86
-msgid "Total"
+#: ../system/subscription.rst:87
+#, fuzzy
+msgid "Re-Charge Settings"
+msgstr "Paramètres"
+
+#: ../system/subscription.rst:83
+msgid "Enable or disable a notification when 80% of AI calls are used."
 msgstr ""
 
-#: ../system/subscription.rst:86
-msgid "This will be the net total you're going to be billed."
-msgstr ""
-
-#: ../system/subscription.rst:88
+#: ../system/subscription.rst:84
 msgid ""
-"By using the *Update subscription* button, the instance package will be "
-"adjusted immediately. If you didn't provide a payment method yet, Zammad "
-"will request you to provide one at this point."
+"Configure an automatic re-charge when 90% of AI calls are used. Enter an "
+"amount between 400 and 500,000 AI calls for automatic re-charge and confirm "
+"with the **Update Re-charge settings** button. The costs per call and the "
+"sum based on your input are displayed next to the field."
 msgstr ""
 
-#: ../system/subscription.rst:94
+#: ../system/subscription.rst:93
+#, fuzzy
+msgid "One-Time Charge Settings"
+msgstr "Paramètres"
+
+#: ../system/subscription.rst:90
 msgid ""
-"In case you're still within the trial period, this means that the trial will "
-"be over immediately!"
+"Add an amount of AI calls for a one time charge. Enter an amount between 400 "
+"and 500,000 AI calls for the one-time charge and confirm with the **One-Time "
+"Charge Settings** button. The costs per call and the sum based on your input "
+"are displayed next to the field."
 msgstr ""
 
-#: ../system/subscription.rst:97
-msgid "Down- or upgrading during the trial period *is not* possible."
-msgstr ""
-
-#: ../system/subscription.rst:None
-msgid "Screenshot showing payment options and a pricing summary"
-msgstr ""
-
-#: ../system/subscription.rst:103
+#: ../system/subscription.rst:96
 msgid "Billing Information"
 msgstr ""
 
-#: ../system/subscription.rst:105
+#: ../system/subscription.rst:98
 msgid ""
 "You can control all billing relevant information like invoices and the "
-"billing address."
+"billing address. All adjusted billing information below only affect future "
+"invoices. If your invoice was issued wrong, please contact `our sales team "
+"<https://zammad.com/en/company/contact>`_."
+msgstr ""
+
+#: ../system/subscription.rst:105
+msgid "Billing address"
+msgstr ""
+
+#: ../system/subscription.rst:104
+msgid ""
+"Provide your company's address here, make sure to include the name of the "
+"company in case required. This address will be used in your invoice."
+msgstr ""
+
+#: ../system/subscription.rst:109
+msgid "VAT ID"
 msgstr ""
 
 #: ../system/subscription.rst:108
 msgid ""
-"All adjusted billing information below only affect future invoices. If your "
-"invoice was issued wrong, please contact `our sales team <https://zammad.com/"
-"en/company/contact>`_."
-msgstr ""
-
-#: ../system/subscription.rst:114
-msgid "Billing address"
-msgstr ""
-
-#: ../system/subscription.rst:113
-msgid ""
-"Provide your company address here, make sure to include the name of the "
-"company in case required. This address will be referenced on your invoice."
-msgstr ""
-
-#: ../system/subscription.rst:118
-msgid "VAT ID"
+"Provide your VAT ID here. If applicable, your invoice will not contain "
+"German VAT. Please make sure to pay the VAT in your country as required."
 msgstr ""
 
 #: ../system/subscription.rst:117
-msgid ""
-"Provide your VAT ID here. If applicable your invoice will not contain German "
-"VAT. Please make sure to pay the VAT in your country as required."
-msgstr ""
-
-#: ../system/subscription.rst:127
 msgid "Billing Email Address"
 msgstr ""
 
-#: ../system/subscription.rst:121
+#: ../system/subscription.rst:112
 msgid ""
-"Usually the instance owner (the person that registered the instance) will "
+"Usually the instance owner (the person who registered the instance) will "
 "receive all emails including the invoices. In case you have your own billing "
 "department, you can provide their email address here."
 msgstr ""
 
-#: ../system/subscription.rst:125
+#: ../system/subscription.rst:116
 msgid ""
-"All billing relevant information will then be sent to this email address."
+"All billing relevant information will then be sent to this email address. "
+"Invoices are sent as an attachment (PDF) to this email address."
 msgstr ""
 
-#: ../system/subscription.rst:127
-msgid "Invoices are sent as attachment (PDF) to this email address."
-msgstr ""
-
-#: ../system/subscription.rst:129
+#: ../system/subscription.rst:119
 msgid ""
-"Don't forget to press the *Update billing information* button after you "
+"Don't forget to press the **Update billing information** button after you "
 "changed above settings."
 msgstr ""
 
@@ -27294,62 +27551,53 @@ msgid ""
 "subscription menu"
 msgstr ""
 
-#: ../system/subscription.rst:137
+#: ../system/subscription.rst:127
 msgid "Payment Method"
 msgstr ""
 
-#: ../system/subscription.rst:139
+#: ../system/subscription.rst:129
 msgid "You can pay via credit card or SEPA mandate."
 msgstr ""
 
-#: ../system/subscription.rst:144
+#: ../system/subscription.rst:134
 msgid "Credit card"
 msgstr ""
 
-#: ../system/subscription.rst:142
+#: ../system/subscription.rst:132
 msgid ""
-"Simply follow the dialogue by clicking *authorize credit card* and confirm "
-"-if required by your bank- your consent to Zammad using your card for the "
+"Simply follow the flow by clicking **authorize credit card** and confirm -if "
+"required by your bank- your consent to Zammad using your card for the "
 "payments."
 msgstr ""
 
-#: ../system/subscription.rst:148
+#: ../system/subscription.rst:138
 msgid "SEPA Direct Debit"
 msgstr ""
 
-#: ../system/subscription.rst:147
+#: ../system/subscription.rst:137
 msgid ""
 "Provide the requested information of the bank account holder and update if "
 "you're ready. You'll then receive an email with the SEPA mandate."
 msgstr ""
 
-#: ../system/subscription.rst:150
+#: ../system/subscription.rst:140
 msgid ""
 "Technically there's also the possibility to pay via invoice, however - this "
 "method only applies to a fairly low number of instances. Please contact `our "
 "sales team <https://zammad.com/en/company/contact>`_ for more information."
 msgstr ""
 
-#: ../system/subscription.rst:156
+#: ../system/subscription.rst:146
 msgid "Cancel Subscription"
 msgstr ""
 
-#: ../system/subscription.rst:158
+#: ../system/subscription.rst:148
 msgid ""
 "Do you want to cancel your subscription? In case you no longer want to use "
-"Zammad's SaaS, you can cancel your subscription by using the red *Yes, "
-"please cancel my subscription* button."
-msgstr ""
-
-#: ../system/subscription.rst:162
-msgid ""
-"To cancel the subscription, enter the FQDN of your Zammad instance and "
-"provide a reason for your cancellation."
-msgstr ""
-
-#: ../system/subscription.rst:165
-msgid ""
-"Your subscription will end the day after your trial or billing period ends."
+"Zammad's SaaS, you can cancel your subscription by using the red **Yes, "
+"please cancel my subscription** button. Enter the FQDN of your Zammad "
+"instance and provide a reason for your cancellation. Your subscription will "
+"end the day after your trial or billing period ends."
 msgstr ""
 
 #: ../system/subscription.rst:None
@@ -27358,21 +27606,21 @@ msgid "Screenshot showing subscription cancellation dialog"
 msgstr ""
 "Capture d'écran montrant la configuration de base d'une boîte de réception"
 
-#: ../system/subscription.rst:174
+#: ../system/subscription.rst:162
 msgid ""
-"We will remind you about your cancelled subscription several times up front. "
-"After the subscription ended all instance data will be removed. A restore "
-"*is not* possible after that point!"
+"We will remind you about your canceled subscription several times before the "
+"subscription period ends. After the subscription has ended, all instance "
+"data will be removed. A restore *is not* possible after that point!"
 msgstr ""
 
-#: ../system/subscription.rst:178
-msgid "**😖 Cancelled by accident?**"
+#: ../system/subscription.rst:166
+msgid "**Canceled by accident?**"
 msgstr ""
 
-#: ../system/subscription.rst:180
+#: ../system/subscription.rst:168
 msgid ""
-"You can always undo the cancellation via the *Yes, undo the cancellation of "
-"my subscription* button up to the last subscription day!"
+"You can always undo the cancellation via the **Yes, undo the cancellation of "
+"my subscription** button up to the last subscription day!"
 msgstr ""
 
 #: ../system/subscription.rst:0
@@ -27381,67 +27629,67 @@ msgid ""
 "cancellation"
 msgstr ""
 
-#: ../system/subscription.rst:189
+#: ../system/subscription.rst:177
 msgid "Payment History"
 msgstr ""
 
-#: ../system/subscription.rst:191
+#: ../system/subscription.rst:179
 msgid ""
 "The payment history will display a history of all paid invoices. At this "
 "point you can also download these in case you need them again."
 msgstr ""
 
-#: ../system/subscription.rst:196
+#: ../system/subscription.rst:184
 msgid ""
 "You will only find *paid* invoices here. Invoices that are to be billed are "
 "not available before the payment is completed."
 msgstr ""
 
-#: ../system/subscription.rst:201
+#: ../system/subscription.rst:189
 msgid "Date"
 msgstr ""
 
-#: ../system/subscription.rst:201
+#: ../system/subscription.rst:189
 msgid "Date of the invoice creation."
 msgstr ""
 
-#: ../system/subscription.rst:204
+#: ../system/subscription.rst:192
 #, fuzzy
 msgid "Amount"
 msgstr "Les comptes"
 
-#: ../system/subscription.rst:204
+#: ../system/subscription.rst:192
 msgid "Invoice total including VAT if applicable."
 msgstr ""
 
-#: ../system/subscription.rst:207
+#: ../system/subscription.rst:195
 msgid ""
 "Contains contract period (monthly or yearly) and hosted plan for the "
 "subscription period in question."
 msgstr ""
 
-#: ../system/subscription.rst:218
+#: ../system/subscription.rst:206
 msgid "Payment method / Service period"
 msgstr ""
 
-#: ../system/subscription.rst:211
+#: ../system/subscription.rst:199
 msgid ""
 "Used bank account or credit card as well as the subscription period the "
 "invoice is about."
 msgstr ""
 
-#: ../system/subscription.rst:216
+#: ../system/subscription.rst:204
 msgid ""
 "It might happen that the invoice date and subscription period differ. This "
 "is nothing to worry about, the subscription periods will be accounted later "
 "on."
 msgstr ""
 
-#: ../system/subscription.rst:222
+#: ../system/subscription.rst:210
 msgid "Receipt"
 msgstr ""
 
-#: ../system/subscription.rst:221
+#: ../system/subscription.rst:209
 msgid ""
 "Use the arrow to download the invoice in question. You can download all "
 "available invoices any time you need to here!"
@@ -27451,74 +27699,74 @@ msgstr ""
 msgid "Screenshot showing payment history of a hosted instance"
 msgstr ""
 
-#: ../system/subscription.rst:229
+#: ../system/subscription.rst:217
 msgid "FAQ"
 msgstr ""
 
-#: ../system/subscription.rst:233
+#: ../system/subscription.rst:221
 msgid "I set up a trial account but am missing functions to test"
 msgstr ""
 
-#: ../system/subscription.rst:232
+#: ../system/subscription.rst:220
 msgid ""
-"The trial instance is running within the professional package allowing up to "
-"three agents."
+"The trial instance is running on a professional plan allowing up to three "
+"agents."
 msgstr ""
 
-#: ../system/subscription.rst:236
-msgid "Can I change package within the trial?"
+#: ../system/subscription.rst:224
+msgid "Can I change the plan within the trial?"
 msgstr ""
 
-#: ../system/subscription.rst:236
-msgid "No. As soon as the package is changed the subscription begins."
+#: ../system/subscription.rst:224
+msgid "No. As soon as the plan is changed, the subscription begins."
 msgstr ""
 
-#: ../system/subscription.rst:241
+#: ../system/subscription.rst:229
 msgid "What happens to my trial instance after the trial period ended?"
 msgstr ""
 
-#: ../system/subscription.rst:239
+#: ../system/subscription.rst:227
 msgid ""
 "Your instance will automatically be canceled for you. Please see *What "
 "happens to my instance after it has been canceled?* for more."
 msgstr ""
 
-#: ../system/subscription.rst:254
+#: ../system/subscription.rst:241
 msgid "What happens to my instance after it has been canceled?"
 msgstr ""
 
-#: ../system/subscription.rst:244
+#: ../system/subscription.rst:232
 msgid "That depends slightly on your instance state:"
 msgstr ""
 
-#: ../system/subscription.rst:250
+#: ../system/subscription.rst:237
 #, fuzzy
 msgid "Trial instance"
 msgstr "Maintenance"
 
-#: ../system/subscription.rst:247
+#: ../system/subscription.rst:235
 msgid ""
-"If you're still on trial, we will ice your instance and remind you once "
-"again about your instance. We then will wait some days and remove your "
-"instance from our system. This is the last time we will inform you by Email."
+"If you're still on trial, we will freeze your instance and remind you once "
+"again about it. We then will wait some days and remove it from our system. "
+"This is the last time we will inform you by email."
 msgstr ""
 
-#: ../system/subscription.rst:254
+#: ../system/subscription.rst:241
 #, fuzzy
 msgid "Paid instance"
 msgstr "Maintenance"
 
-#: ../system/subscription.rst:253
+#: ../system/subscription.rst:240
 msgid ""
 "If you're a paying customer and canceled your subscription, the instance "
 "removal will take place the day after your last subscription day."
 msgstr ""
 
-#: ../system/subscription.rst:256
+#: ../system/subscription.rst:243
 msgid "Can removed instances be restored?"
 msgstr ""
 
-#: ../system/subscription.rst:257
+#: ../system/subscription.rst:244
 msgid "No. Once your instance has been removed, a restoration is not possible."
 msgstr ""
 
@@ -27772,23 +28020,10 @@ msgstr ""
 "Voir quelle version est actuellement utilisée pour votre instance Zammad."
 
 #, fuzzy
-#~ msgid "Screenshot of activator section in trigger dialog."
+#~ msgid "See :doc:`/channels/email/email-headers` for more information."
 #~ msgstr ""
-#~ "Capture d'écran montrant la configuration de base d'une boîte de réception"
-
-#, fuzzy
-#~ msgid "Condition"
-#~ msgstr "Boîte de dialogue de configuration avancée"
-
-#, fuzzy
-#~ msgid "Screenshot of condition section in trigger dialog."
-#~ msgstr ""
-#~ "Capture d'écran montrant la configuration de base d'une boîte de réception"
-
-#, fuzzy
-#~ msgid "Screenshot of action section in trigger dialog."
-#~ msgstr ""
-#~ "Capture d'écran montrant la configuration de base d'une boîte de réception"
+#~ "Utilisez les :doc:`filtres </channels/email/filters>` pour un tri plus "
+#~ "précis des e-mails entrants."
 
 #, fuzzy
 #~ msgid "Online notifications"
