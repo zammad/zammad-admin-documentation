@@ -94,9 +94,11 @@ Now go to **API Setup** and choose or add a phone number.
 .. warning::
     - This number may not be used in a WhatsApp app already, not even in a
       WhatsApp Business app.
-    - In case you want to test it with a provided test number, additional
-      steps might be required (see
-      `Reddit thread <https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_).
+    - In case you want to test it with a provided test number or you don't
+      receive messages after the complete setup, additional steps might be
+      required (see
+      `Reddit thread <https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_
+      and Meta's `Managing Webhooks documentation <https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/manage-webhooks#subscribing-to-webhooks-on-a-business-customer-s-waba>`_).
 
 .. figure:: /images/channels/whatsapp/add-phone-number.png
     :align: center
