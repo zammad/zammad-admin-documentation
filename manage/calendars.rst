@@ -1,7 +1,7 @@
 Calendars
 =========
 
-A calender defines your business hours and holidays. You can even create multiple
+A calendar defines your business hours and holidays. You can even create multiple
 calendars for different customers. To access the calendar settings under
 *Manage > Calendars*, the permission ``admin.calendar`` is required.
 A configured calendar is required for some features like
@@ -58,7 +58,8 @@ Business Hours
    of a day. You can define different business hours for each day of the week.
    To reflect closing times during a day, add another time frame for the same
    day by clicking the ``+`` button at the bottom of the table (can be done
-   multiple times).
+   multiple times). Make sure that your time frames do not overlap and that
+   the end time is after the start time.
 
 Holidays iCalendar Feed
    Here you can subscribe to an iCalendar feed to automatically fetch holidays.
