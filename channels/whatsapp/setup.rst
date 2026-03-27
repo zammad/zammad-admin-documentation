@@ -126,3 +126,16 @@ Scroll down and switch on the toggle for ``messages`` under **Webhook fields**.
 
 After finishing this step, you can click on the **Finish** button in Zammad
 and you should now be ready to receive tickets from your WhatsApp channel!
+
+Troubleshooting
+---------------
+
+No Messages Incoming
+^^^^^^^^^^^^^^^^^^^^
+
+If you followed all the steps but you don't receive any messages, check if the
+used number is connected to WhatsApp Business Account. In some cases, you also
+need to manually subscribe to your WABA/app to get notifications and new
+messages. Have a look at
+Meta's `Managing Webhooks documentation <https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/manage-webhooks#subscribing-to-webhooks-on-a-business-customer-s-waba>`_
+for more information.
