@@ -59,7 +59,8 @@ Business Hours
    To reflect closing times during a day, add another time frame for the same
    day by clicking the ``+`` button at the bottom of the table (can be done
    multiple times). Make sure that your time frames do not overlap and that
-   the end time is after the start time.
+   the end time is after the start time. Otherwise, a red frame will notify you
+   that there is an error in your configuration.
 
 Holidays iCalendar Feed
    Here you can subscribe to an iCalendar feed to automatically fetch holidays.
