@@ -1,43 +1,78 @@
 Calendars
 =========
 
-A calendar is required to:
+A calender defines your business hours and holidays. You can even create multiple
+calendars for different customers. To access the calendar settings under
+*Manage > Calendars*, the permission ``admin.calendar`` is required.
+A configured calendar is required for some features like
+:doc:`slas`, time-sensitive automation with :doc:`triggers <trigger>` or
+:doc:`scheduler jobs <scheduler>` and :doc:`reports <report-profiles>`.
 
-   * automate ticket escalations,
-   * generate reports that only capture activity during business hours, or
-   * set up time-sensitive triggers.
+You can define a default calendar and create specific calendars for customers.
+The connection between customers and calendars are SLAs. In an SLA you
+choose a calendar. Only your opening hours are counted towards an escalation.
+The already created calendars are displayed in a card style and show the most
+important information in the overview.
 
-Define a "standard"-calendar which system-wide is valid. Only in the specified
-business hours, escalation notifications are sent to agents.
-
-If you have customers for which you have to comply with different customer
-business hours, you can create several calendars. The allocation to the customer
-tickets can be adjusted via the SLAs.
-
-
-And this is what it looks like:
+Manage Calendars
+----------------
 
 .. figure:: /images/manage/calendars/calendar-management.png
-
-All created calendars are displayed in the overview.
+   :alt: Screenshot shows Zammad's calendar configuration.
 
 New Calendar
-   Here you can create a new calendar if agents or customers belong to another time zone.
+   To create a new calendar, click the **New Calendar** button on the top right
+   corner.
 
 Delete
-   Just push the delete-button to delete this specific calendar - all SLAs
+   Click the **Delete** button to delete a specific calendar. All SLAs
    assigned to this calendar are automatically assigned to the default calendar.
+   You cannot delete the default calendar.
 
 Set as Default
-   Pressing this button sets this calendar as the default calendar for the
-   entire system.
+   Sets this calendar as the default general calendar. Deleting a calendar
+   referenced by an SLA causes the system to apply the default calendar instead.
 
 Edit
-   Via this button you get to the edit-mask (same mask as in "New Calendar"):
+   The **Edit** button opens the edit dialog (same as for "New Calendar"). The
+   specific configuration options are explained in the next section.
+
+Configure Calendars
+-------------------
 
 .. figure:: /images/manage/calendars/editing-calendars.png
+   :alt: Screenshot shows the calendar configuration dialog.
 
-Determine a name, a time-zone, the business hours to be used for this
-calendar and special holidays. In addition, you can subscribe to the iCalendar,
-which will automatically load all holidays from Google (updated once a day) ...
-and you can add a note.
+Name
+   Name of the calendar. Add a descriptive name to easily identify the calendar.
+   This is especially important if you have multiple calendars for different
+   customers.
+
+Time Zone
+   Set the time zone for this calendar. This should either be the time zone
+   of your business location or - in case of a calendar for SLAs - the time zone
+   on which you agreed with your customer.
+
+Business Hours
+   Add your business hours by adding a start and end time for each time frame
+   of a day. You can define different business hours for each day of the week.
+   To reflect closing times during a day, add another time frame for the same
+   day by clicking the ``+`` button at the bottom of the table (can be done
+   multiple times).
+
+Holidays iCalendar Feed
+   Here you can subscribe to an iCalendar feed to automatically fetch holidays.
+   Either choose **Subscribe to public holidays in** and select a country to
+   automatically load the holidays for this country from Google.
+
+   The other option **Subscribe to iCalendar feed** allows you to add a custom
+   iCalendar feed URL.
+   Both options allow you to add custom and/or additional holidays as well, see
+   next section.
+
+Holidays
+   Add additional holidays or custom closing times here. After adding a date and
+   an optional description, make sure to finally click the **+ Add** button to
+   save the entry.
+
+After you configured the calendar, click the **Submit** button to save it.
