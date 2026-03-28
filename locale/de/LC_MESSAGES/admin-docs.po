@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 07:14+0100\n"
+"POT-Creation-Date: 2026-03-27 13:00+0100\n"
 "PO-Revision-Date: 2026-03-21 09:00+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
@@ -219,8 +219,8 @@ msgid ""
 "available for the AI agent and optionally provide a description for them."
 msgstr ""
 "Dieser KI-Agent ist in der Lage, Tickets verschiedenen Gruppen zuzuordnen. "
-"Er vergleicht den Inhalt des betreffenden Tickets mit Ihren Gruppennamen ("
-"und optional mit deren Beschreibungen). Um Beschreibungen für Ihre Gruppen "
+"Er vergleicht den Inhalt des betreffenden Tickets mit Ihren Gruppennamen "
+"(und optional mit deren Beschreibungen). Um Beschreibungen für Ihre Gruppen "
 "hinzuzufügen, schränken Sie die Gruppen ein, aus denen der KI-Agent wählen "
 "kann. Fügen Sie dann die Gruppen hinzu, die dem KI-Agenten zur Verfügung "
 "stehen sollen, und geben Sie optional eine Beschreibung für diese Gruppen an."
@@ -841,8 +841,9 @@ msgstr ""
 "Felder zu sehen."
 
 #: ../ai/writing-assistant.rst:42 ../channels/form.rst:19
-#: ../manage/groups/settings.rst:16 ../manage/report-profiles.rst:38
-#: ../manage/scheduler.rst:86 ../manage/slas.rst:53 ../manage/templates.rst:23
+#: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
+#: ../manage/report-profiles.rst:38 ../manage/scheduler.rst:86
+#: ../manage/slas.rst:53 ../manage/templates.rst:23
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1 ../system/objects.rst:133
@@ -2027,6 +2028,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:273
 #: ../channels/google/basic-setup.rst:180
 #: ../channels/microsoft365/accounts/account-setup.rst:159
+#: ../channels/whatsapp/setup.rst:131
 #: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:29 ../system/integrations/gitlab.rst:36
@@ -2232,7 +2234,7 @@ msgstr ""
 
 #: ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
-#: ../manage/calendars.rst:29 ../manage/knowledge-base.rst:159
+#: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:159
 #: ../manage/knowledge-base.rst:188
 msgid "Delete"
 msgstr "Löschen"
@@ -7984,20 +7986,20 @@ msgstr ""
 
 #: ../channels/whatsapp/preparation.rst:97
 msgid ""
-"In case you want to test it with a provided test number, additional steps "
-"might be required (see `Reddit thread <https://www.reddit.com/r/"
-"WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_)."
+"In case you want to test it with a provided test number or you don't receive "
+"messages after the complete setup, additional steps might be required (see "
+"`Reddit thread <https://www.reddit.com/r/WhatsappBusinessAPI/comments/"
+"1oa4ftw/comment/nk7sxtq/>`_ and Meta's `Managing Webhooks documentation "
+"<https://developers.facebook.com/documentation/business-messaging/whatsapp/"
+"solution-providers/manage-webhooks#subscribing-to-webhooks-on-a-business-"
+"customer-s-waba>`_)."
 msgstr ""
-"Falls Sie es mit einer bereitgestellten Testnummer testen möchten, sind "
-"möglicherweise zusätzliche Schritte erforderlich (siehe `Reddit-Thread "
-"<https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/"
-"nk7sxtq/>`_)."
 
 #: ../channels/whatsapp/preparation.rst:None
 msgid "Adding a new phone number to your app"
 msgstr "Hinzufügen einer neuen Telefonnummer zu Ihrer App"
 
-#: ../channels/whatsapp/preparation.rst:105
+#: ../channels/whatsapp/preparation.rst:107
 msgid ""
 "Click through the steps adding your information. You have to verify your "
 "number by receiving a security code and repeating it when asked. After you "
@@ -8296,6 +8298,21 @@ msgstr ""
 "Schaltfläche **Fertigstellen** klicken und Sie sollten nun Tickets über "
 "Ihren WhatsApp-Kanal empfangen können!"
 
+#: ../channels/whatsapp/setup.rst:134
+msgid "No Messages Incoming"
+msgstr ""
+
+#: ../channels/whatsapp/setup.rst:136
+msgid ""
+"If you followed all the steps but you don't receive any messages, check if "
+"the used number is connected to WhatsApp Business Account. In some cases, "
+"you also need to manually subscribe to your WABA/app to get notifications "
+"and new messages. Have a look at Meta's `Managing Webhooks documentation "
+"<https://developers.facebook.com/documentation/business-messaging/whatsapp/"
+"solution-providers/manage-webhooks#subscribing-to-webhooks-on-a-business-"
+"customer-s-waba>`_ for more information."
+msgstr ""
+
 #: ../index.rst:11
 msgid "Manage"
 msgstr "Verwalten"
@@ -8341,106 +8358,169 @@ msgid "Calendars"
 msgstr "Kalender"
 
 #: ../manage/calendars.rst:4
-msgid "A calendar is required to:"
-msgstr "Ein Kalender ist notwendig für:"
-
-#: ../manage/calendars.rst:6
-msgid "automate ticket escalations,"
-msgstr "automatisierte Ticket-Eskalationen,"
-
-#: ../manage/calendars.rst:7
-msgid "generate reports that only capture activity during business hours, or"
-msgstr ""
-"das Generieren von Berichten, die Aktivitäten nur innerhalb der "
-"Geschäftszeiten anzeigen oder"
-
-#: ../manage/calendars.rst:8
-msgid "set up time-sensitive triggers."
-msgstr "die Konfiguration von zeitgesteuerten Triggern."
-
-#: ../manage/calendars.rst:10
 msgid ""
-"Define a \"standard\"-calendar which system-wide is valid. Only in the "
-"specified business hours, escalation notifications are sent to agents."
+"A calendar defines your business hours and holidays. You can even create "
+"multiple calendars for different customers. To access the calendar settings "
+"under *Manage > Calendars*, the permission ``admin.calendar`` is required. A "
+"configured calendar is required for some features like :doc:`slas`, time-"
+"sensitive automation with :doc:`triggers <trigger>` or :doc:`scheduler jobs "
+"<scheduler>` and :doc:`reports <report-profiles>`."
 msgstr ""
-"Definieren Sie einen \"Standard“-Kalender, der systemweit gültig ist. Nur "
-"während der angegebenen Geschäftszeiten werden Eskalationsbenachrichtigungen "
-"an Agenten gesendet."
 
-#: ../manage/calendars.rst:13
+#: ../manage/calendars.rst:11
 msgid ""
-"If you have customers for which you have to comply with different customer "
-"business hours, you can create several calendars. The allocation to the "
-"customer tickets can be adjusted via the SLAs."
+"You can define a default calendar and create specific calendars for "
+"customers. The connection between customers and calendars are SLAs. In an "
+"SLA you choose a calendar. Only your opening hours are counted towards an "
+"escalation. The already created calendars are displayed in a card style and "
+"show the most important information in the overview."
 msgstr ""
-"Wenn Sie für Kunden unterschiedliche Öffnungszeiten einhalten müssen, können "
-"Sie mehrere Kalender erstellen. Die Zuordnung zu den Kundentickets kann über "
-"die SLAs angepasst werden."
 
 #: ../manage/calendars.rst:18
-msgid "And this is what it looks like:"
-msgstr "Und so sieht es aus:"
+#, fuzzy
+#| msgid "Calendars"
+msgid "Manage Calendars"
+msgstr "Kalender"
 
-#: ../manage/calendars.rst:22
-msgid "All created calendars are displayed in the overview."
-msgstr "Alle erstellten Kalender werden in der Übersicht angezeigt."
+#: ../manage/calendars.rst:None
+#, fuzzy
+#| msgid "Screenshot shows Zammad's app configuration dialog."
+msgid "Screenshot shows Zammad's calendar configuration."
+msgstr "Der Screenshot zeigt den Konfigurationsdialog in Zammad."
 
 #: ../manage/calendars.rst:25
 msgid "New Calendar"
 msgstr "Neuer Kalender"
 
-#: ../manage/calendars.rst:25
+#: ../manage/calendars.rst:24
+#, fuzzy
+#| msgid ""
+#| "In the left sidebar choose **Integrations** and then click on the **New** "
+#| "button in the upper right corner."
 msgid ""
-"Here you can create a new calendar if agents or customers belong to another "
-"time zone."
+"To create a new calendar, click the **New Calendar** button on the top right "
+"corner."
 msgstr ""
-"Hier können Sie einen neuen Kalender erstellen, wenn Agenten oder Kunden "
-"einer anderen Zeitzone angehören."
+"Wählen Sie in der linken Seitenleiste **Integrationen** und klicken Sie dann "
+"auf die Schaltfläche **Neu** in der oberen rechten Ecke."
 
 #: ../manage/calendars.rst:28
+#, fuzzy
+#| msgid ""
+#| "Just push the delete-button to delete this specific calendar - all SLAs "
+#| "assigned to this calendar are automatically assigned to the default "
+#| "calendar."
 msgid ""
-"Just push the delete-button to delete this specific calendar - all SLAs "
-"assigned to this calendar are automatically assigned to the default calendar."
+"Click the **Delete** button to delete a specific calendar. All SLAs assigned "
+"to this calendar are automatically assigned to the default calendar. You "
+"cannot delete the default calendar."
 msgstr ""
 "Klicken Sie einfach auf die Schaltfläche \"Löschen“, um diesen bestimmten "
 "Kalender zu löschen. Alle diesem Kalender zugewiesenen SLAs werden "
 "automatisch dem Standardkalender zugewiesen."
 
-#: ../manage/calendars.rst:33
+#: ../manage/calendars.rst:34
 msgid "Set as Default"
 msgstr "Als Standard setzen"
 
-#: ../manage/calendars.rst:32
+#: ../manage/calendars.rst:33
 msgid ""
-"Pressing this button sets this calendar as the default calendar for the "
-"entire system."
+"Sets this calendar as the default general calendar. Deleting a calendar "
+"referenced by an SLA causes the system to apply the default calendar instead."
 msgstr ""
-"Dieser Button legt den Kalender als Standardkalender für das gesamte System "
-"fest."
 
-#: ../manage/calendars.rst:36
+#: ../manage/calendars.rst:38
 msgid "Edit"
 msgstr "Editieren"
 
-#: ../manage/calendars.rst:36
+#: ../manage/calendars.rst:37
 msgid ""
-"Via this button you get to the edit-mask (same mask as in \"New Calendar\"):"
+"The **Edit** button opens the edit dialog (same as for \"New Calendar\"). "
+"The specific configuration options are explained in the next section."
 msgstr ""
-"Über diesen Button gelangen Sie zur Bearbeitungsmaske (gleiche Maske wie in "
-"\"Neuer Kalender“):"
 
-#: ../manage/calendars.rst:40
+#: ../manage/calendars.rst:41
+#, fuzzy
+#| msgid "Configure the calendar feed"
+msgid "Configure Calendars"
+msgstr "Konfigurieren Sie den Kalender-Feed"
+
+#: ../manage/calendars.rst:None
+#, fuzzy
+#| msgid "Screenshot shows Zammad's app configuration dialog."
+msgid "Screenshot shows the calendar configuration dialog."
+msgstr "Der Screenshot zeigt den Konfigurationsdialog in Zammad."
+
+#: ../manage/calendars.rst:47
 msgid ""
-"Determine a name, a time-zone, the business hours to be used for this "
-"calendar and special holidays. In addition, you can subscribe to the "
-"iCalendar, which will automatically load all holidays from Google (updated "
-"once a day) ... and you can add a note."
+"Name of the calendar. Add a descriptive name to easily identify the "
+"calendar. This is especially important if you have multiple calendars for "
+"different customers."
 msgstr ""
-"Legen Sie einen Namen, eine Zeitzone, die für diesen Kalender zu "
-"verwendenden Geschäftszeiten und besondere Feiertage fest. Darüber hinaus "
-"können Sie einen iCalendar abonnieren, der automatisch alle Feiertage von "
-"Google lädt (einmal täglich aktualisiert) ... und Sie können eine Notiz "
-"hinzufügen."
+
+#: ../manage/calendars.rst:54
+#, fuzzy
+#| msgid "Timezone"
+msgid "Time Zone"
+msgstr "Zeitzone"
+
+#: ../manage/calendars.rst:52
+msgid ""
+"Set the time zone for this calendar. This should either be the time zone of "
+"your business location or - in case of a calendar for SLAs - the time zone "
+"on which you agreed with your customer."
+msgstr ""
+
+#: ../manage/calendars.rst:63
+msgid "Business Hours"
+msgstr ""
+
+#: ../manage/calendars.rst:57
+msgid ""
+"Add your business hours by adding a start and end time for each time frame "
+"of a day. You can define different business hours for each day of the week. "
+"To reflect closing times during a day, add another time frame for the same "
+"day by clicking the ``+`` button at the bottom of the table (can be done "
+"multiple times). Make sure that your time frames do not overlap and that the "
+"end time is after the start time. Otherwise, a red frame will notify you "
+"that there is an error in your configuration."
+msgstr ""
+
+#: ../manage/calendars.rst:73
+#, fuzzy
+#| msgid "Geo Calendar Service"
+msgid "Holidays iCalendar Feed"
+msgstr "Geo-Kalender-Dienst"
+
+#: ../manage/calendars.rst:66
+msgid ""
+"Here you can subscribe to an iCalendar feed to automatically fetch holidays. "
+"Either choose **Subscribe to public holidays in** and select a country to "
+"automatically load the holidays for this country from Google."
+msgstr ""
+
+#: ../manage/calendars.rst:70
+msgid ""
+"The other option **Subscribe to iCalendar feed** allows you to add a custom "
+"iCalendar feed URL. Both options allow you to add custom and/or additional "
+"holidays as well, see next section."
+msgstr ""
+
+#: ../manage/calendars.rst:78
+msgid "Holidays"
+msgstr ""
+
+#: ../manage/calendars.rst:76
+msgid ""
+"Add additional holidays or custom closing times here. After adding a date "
+"and an optional description, make sure to finally click the **+ Add** button "
+"to save the entry."
+msgstr ""
+
+#: ../manage/calendars.rst:80
+msgid ""
+"After you configured the calendar, click the **Submit** button to save it."
+msgstr ""
 
 #: ../manage/checklist.rst:2
 msgid "Checklist"
@@ -34406,6 +34486,87 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid ""
+#~ "In case you want to test it with a provided test number, additional steps "
+#~ "might be required (see `Reddit thread <https://www.reddit.com/r/"
+#~ "WhatsappBusinessAPI/comments/1oa4ftw/comment/nk7sxtq/>`_)."
+#~ msgstr ""
+#~ "Falls Sie es mit einer bereitgestellten Testnummer testen möchten, sind "
+#~ "möglicherweise zusätzliche Schritte erforderlich (siehe `Reddit-Thread "
+#~ "<https://www.reddit.com/r/WhatsappBusinessAPI/comments/1oa4ftw/comment/"
+#~ "nk7sxtq/>`_)."
+
+#~ msgid "A calendar is required to:"
+#~ msgstr "Ein Kalender ist notwendig für:"
+
+#~ msgid "automate ticket escalations,"
+#~ msgstr "automatisierte Ticket-Eskalationen,"
+
+#~ msgid ""
+#~ "generate reports that only capture activity during business hours, or"
+#~ msgstr ""
+#~ "das Generieren von Berichten, die Aktivitäten nur innerhalb der "
+#~ "Geschäftszeiten anzeigen oder"
+
+#~ msgid "set up time-sensitive triggers."
+#~ msgstr "die Konfiguration von zeitgesteuerten Triggern."
+
+#~ msgid ""
+#~ "Define a \"standard\"-calendar which system-wide is valid. Only in the "
+#~ "specified business hours, escalation notifications are sent to agents."
+#~ msgstr ""
+#~ "Definieren Sie einen \"Standard“-Kalender, der systemweit gültig ist. Nur "
+#~ "während der angegebenen Geschäftszeiten werden "
+#~ "Eskalationsbenachrichtigungen an Agenten gesendet."
+
+#~ msgid ""
+#~ "If you have customers for which you have to comply with different "
+#~ "customer business hours, you can create several calendars. The allocation "
+#~ "to the customer tickets can be adjusted via the SLAs."
+#~ msgstr ""
+#~ "Wenn Sie für Kunden unterschiedliche Öffnungszeiten einhalten müssen, "
+#~ "können Sie mehrere Kalender erstellen. Die Zuordnung zu den Kundentickets "
+#~ "kann über die SLAs angepasst werden."
+
+#~ msgid "And this is what it looks like:"
+#~ msgstr "Und so sieht es aus:"
+
+#~ msgid "All created calendars are displayed in the overview."
+#~ msgstr "Alle erstellten Kalender werden in der Übersicht angezeigt."
+
+#~ msgid ""
+#~ "Here you can create a new calendar if agents or customers belong to "
+#~ "another time zone."
+#~ msgstr ""
+#~ "Hier können Sie einen neuen Kalender erstellen, wenn Agenten oder Kunden "
+#~ "einer anderen Zeitzone angehören."
+
+#~ msgid ""
+#~ "Pressing this button sets this calendar as the default calendar for the "
+#~ "entire system."
+#~ msgstr ""
+#~ "Dieser Button legt den Kalender als Standardkalender für das gesamte "
+#~ "System fest."
+
+#~ msgid ""
+#~ "Via this button you get to the edit-mask (same mask as in \"New "
+#~ "Calendar\"):"
+#~ msgstr ""
+#~ "Über diesen Button gelangen Sie zur Bearbeitungsmaske (gleiche Maske wie "
+#~ "in \"Neuer Kalender“):"
+
+#~ msgid ""
+#~ "Determine a name, a time-zone, the business hours to be used for this "
+#~ "calendar and special holidays. In addition, you can subscribe to the "
+#~ "iCalendar, which will automatically load all holidays from Google "
+#~ "(updated once a day) ... and you can add a note."
+#~ msgstr ""
+#~ "Legen Sie einen Namen, eine Zeitzone, die für diesen Kalender zu "
+#~ "verwendenden Geschäftszeiten und besondere Feiertage fest. Darüber hinaus "
+#~ "können Sie einen iCalendar abonnieren, der automatisch alle Feiertage von "
+#~ "Google lädt (einmal täglich aktualisiert) ... und Sie können eine Notiz "
+#~ "hinzufügen."
 
 #~ msgid ""
 #~ "**Conditions:** answer the question \"when should this trigger fire?\""
