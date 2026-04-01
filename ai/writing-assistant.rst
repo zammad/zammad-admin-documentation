@@ -69,7 +69,7 @@ longer present in the feedback report. A reset can be useful if
 you made adjustments to the instructions and want to start collecting feedback
 for the adjusted version. After a reset, you can still access the old feedback
 by downloading the global feedback report in the
-:doc:`provider settings <provider>`.
+:doc:`provider configuration <provider>`.
 
 .. tip::
 
@@ -80,7 +80,7 @@ by downloading the global feedback report in the
       feature specific feedback report no longer includes the feedback from the
       time before the reset.
       Either download the report **before** doing the reset or download the
-      global feedback report from the :doc:`provider configuration <provider>`.
+      global feedback report from the provider configuration.
    2. Clone the tool, deactivate the old and adjust the cloned one.
       This allows you to even compare the like and dislike ratio directly
       in the UI.
