@@ -64,18 +64,25 @@ To get more insights, you can download the feedback data (including your agents'
 comments) by clicking **Download feedback report** in the ︙ action menu.
 
 To **Reset feedback**, use the corresponding entry in the ︙ action menu. This
-removes all existing feedback data. This is useful if you made adjustments to
-the instructions and want to start collecting feedback for the adjusted version.
+clears the feedback ratio in the table and the already collected feedback is no
+longer present in the feedback report. A reset can be useful if
+you made adjustments to the instructions and want to start collecting feedback
+for the adjusted version. After a reset, you can still access the old feedback
+by downloading the global feedback report in the
+:doc:`provider settings <provider>`.
 
 .. tip::
 
    To improve a writing assistant tool and compare the results before and
    after your adjustments, you have two options:
 
-   1. Download the current feedback data, apply changes to the tool and
-      reset the feedback.
-   2. Clone the tool, deactivate the old one and adjust the cloned tool.
-      This allows you to even compare the like and dislike ration directly
+   1. Apply changes to the tool and reset the feedback. Be aware that the
+      feature specific feedback report no longer includes the feedback from the
+      time before the reset.
+      Either download the report **before** doing the reset or download the
+      global feedback report from the :doc:`provider configuration <provider>`.
+   2. Clone the tool, deactivate the old and adjust the cloned one.
+      This allows you to even compare the like and dislike ratio directly
       in the UI.
 
 .. _configuration:
