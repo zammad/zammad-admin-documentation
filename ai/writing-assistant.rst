@@ -59,9 +59,10 @@ adjustments are necessary. The agents can choose between a like (thumb up) and
 dislike (thumb down) reaction. For the dislike reaction, they can optionally add
 a comment to explain why they are not satisfied with the result.
 
-You can see the ratio of likes and dislikes in the feedback column of the table.
-To get more insights, you can download the feedback data (including your agents'
-comments) by clicking **Download feedback report** in the ︙ action menu.
+You can see the ratio of likes and dislikes relative to the total tool usage
+in the feedback column of the table. To get more insights, you can download the
+feedback data (including your agents' comments) by clicking
+**Download feedback report** in the ︙ action menu.
 
 To **Reset feedback**, use the corresponding entry in the ︙ action menu. This
 clears the feedback ratio in the table and the already collected feedback is no
