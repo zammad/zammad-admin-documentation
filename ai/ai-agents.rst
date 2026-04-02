@@ -97,13 +97,12 @@ Ticket Text Extractor
 ^^^^^^^^^^^^^^^^^^^^^
 
 This AI agent is capable of extracting specific information from the ticket's
-content. You can use it to extract information like a product name, an order
-or a serial number or any other information you want.
+content. You can use it to extract information such as a product name, an
+order number, a serial number or any other information you want.
 
 Make sure to have a :doc:`custom ticket attribute </system/objects>` in which
 you want to store the extracted information. Otherwise, create a suitable one
-before configuring the AI agent. The type of the field must be one of the
-following:
+before configuring the AI agent. The field type must be one of the following:
 
 - Text
 - Textarea
@@ -111,8 +110,8 @@ following:
 - Single selection
 - Single tree selection
 
-For select type attributes, the wizard allows you to limit the options the AI
-agent can choose from and add descriptions for them. For these types, the
+For select-type attributes, the wizard allows you to limit the options the AI
+agent can choose from and to add descriptions for them. For these types, the
 AI agent also receives the list of allowed options to choose from in case of a
 match.
 
@@ -121,17 +120,17 @@ Extraction Rules
 
 Here you tell the agent what information to extract. It is highly recommended
 to provide some examples and include different variants of how the information
-could be mentioned in the ticket. There is an example shown by default about
-extracting an order number. Replace or adjust it to fit your own use case.
-We collected a few examples in the :ref:`extractor-examples` section below. Be
-aware that these instructions should be considered as a base only.
+might appear in the ticket. The wizard includes a default example for
+extracting an order number. Replace or adjust it to your own
+use case. You can find a few examples in the :ref:`extractor-examples` section
+below as inspiration.
 
 Priority Rules
 """"""""""""""
 
-The priority rules tell the agent how to deal with multiple matches. There is an
-example shown by default which should cover common scenarios. Adjust it if your
-scenario differs.
+The priority rules tell the agent how to deal with multiple matches. There is a
+default example that should cover common scenarios. Adjust it if your scenario
+differs.
 
 Example priority rules:
 
@@ -153,16 +152,22 @@ Choose between:
 - Last article (newest)
 - First article (oldest)
 
-Depending on the way, time and condition you trigger the run of the AI agent,
-choose which article(s) to consider. In most scenarios, *Last article (newest)*
-should do the job. In certain cases, however, it might make sense to use another
-option. For example, if the agent is triggered by a macro, *All articles* could
-fit as well.
+Depending on the way, time and condition an AI agent runs, the relevant
+article(s) can be different. In most cases, *Last article (newest)* should be
+fine. In certain cases, however, it might make sense to use another
+option. For example, if the agent is triggered manually by a macro,
+*All articles* could fit as well.
 
 .. _extractor-examples:
 
 Examples
 """"""""
+
+Expand the following code block to see these **extraction rules** examples:
+
+- Extract order number
+- Extract contact person for insurance claim
+- Extract product name
 
 .. code-block:: none
 
@@ -191,12 +196,12 @@ Examples
    Extract Contact Person for Insurance Claim
    ------------------------------------------
 
-   Extract name of the contact person for an insurance claim. This should be the person who is insured by an active policy
+   Extract name of the contact person for an insurance claim. This should be the person who is insured by an active policy.
 
    The name may be mentioned in one of the following contexts:
    - Someone claiming on the insurance policy for themselves
    - Someone claiming on the insurance policy on behalf of another person
-   - A colleague asking for help on an insurance claim which is originally sent by someone else
+   - A colleague asking for help with an insurance claim that was originally sent by someone else
 
    Consider only the name of the person who is actually insured, no matter who is claiming against their policy.
 
