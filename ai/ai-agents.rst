@@ -3,9 +3,9 @@ AI Agents
 
 To help your agents focusing on more important tasks, you can create AI agents
 which can take over routine tasks. These AI agents are managed in Zammad's
-admin settings under *AI > AI Agents*. Make sure to configure an
-:doc:`AI provider <provider>` before activating the feature. Otherwise, a
-warning message will tell you to do so.
+admin settings under *AI > AI Agents* and require ``admin.ai_agent`` permission.
+Make sure to configure an :doc:`AI provider <provider>` before activating the
+feature. Otherwise, a warning message will tell you to do so.
 
 While an AI agent works on a ticket, an avatar is displayed in the
 live user section in the bottom bar of the ticket detail view, see example
@@ -21,7 +21,6 @@ the ticket because they could get overwritten.
 Important Information
 ---------------------
 
-- To configure AI agents, the ``admin.ai_agent`` permission is required
 - AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>`, a :doc:`scheduler job </manage/scheduler>`
   or a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**.
@@ -93,6 +92,26 @@ This AI agent is capable of setting a ticket priority based on the title of the
 ticket and the content of the last article. You can choose to use all priorities
 or limit them to specific ones. In case you limit the priorities, you can also
 provide a description for each priority the AI agent can choose from.
+
+Ticket Text Extractor
+^^^^^^^^^^^^^^^^^^^^^
+
+This AI agent is capable of extracting specific information from the ticket's
+content. You can use it to extract information like a product name, an order
+or serial number or any other information you want.
+
+First, you have to create a :doc:`custom ticket attribute </system/objects>` in
+which you want to store the extracted information, unless you already have one.
+The type of the field must be one of the following:
+
+- Text
+- Textarea
+- Integer
+- Single selection
+- Single tree selection
+
+The configuration dialog allows you to define which article(s) to consider for
+the extraction.
 
 Ticket Title Rewriter
 ^^^^^^^^^^^^^^^^^^^^^
