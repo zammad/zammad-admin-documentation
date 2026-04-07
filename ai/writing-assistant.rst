@@ -42,7 +42,7 @@ The last column in the table includes the ︙ action menu where you can find the
 (more on that below).
 
 To edit a tool, simply click on its row. This opens a configuration dialog like
-for creating a new ticket where you can configure it.
+for creating a new writing assistant tool where you can configure it.
 
 .. tip::
 
