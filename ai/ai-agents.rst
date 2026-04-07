@@ -3,9 +3,9 @@ AI Agents
 
 To help your agents focusing on more important tasks, you can create AI agents
 which can take over routine tasks. These AI agents are managed in Zammad's
-admin settings under *AI > AI Agents* and require ``admin.ai_agent`` permission.
-Make sure to configure an :doc:`AI provider <provider>` before activating the
-feature. Otherwise, a warning message will tell you to do so.
+admin settings under *AI > AI Agents*. Make sure to configure an
+:doc:`AI provider <provider>` before activating the feature. Otherwise, a
+warning message will tell you to do so.
 
 While an AI agent works on a ticket, an avatar is displayed in the
 live user section in the bottom bar of the ticket detail view, see example
@@ -21,6 +21,7 @@ the ticket because they could get overwritten.
 Important Information
 ---------------------
 
+- To configure AI agents, the ``admin.ai_agent`` permission is required
 - AI agents don't run on their own. They have to be invoked by a
   :doc:`trigger </manage/trigger>`, a :doc:`scheduler job </manage/scheduler>`
   or a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**.
@@ -92,131 +93,6 @@ This AI agent is capable of setting a ticket priority based on the title of the
 ticket and the content of the last article. You can choose to use all priorities
 or limit them to specific ones. In case you limit the priorities, you can also
 provide a description for each priority the AI agent can choose from.
-
-Ticket Text Extractor
-^^^^^^^^^^^^^^^^^^^^^
-
-This AI agent is capable of extracting specific information from the ticket's
-content. You can use it to extract information such as a product name, an
-order number, a serial number or any other information you want.
-
-Make sure to have a :doc:`custom ticket attribute </system/objects>` in which
-you want to store the extracted information. Otherwise, create a suitable one
-before configuring the AI agent. The field type must be one of the following:
-
-- Text
-- Textarea
-- Integer
-- Single selection
-- Single tree selection
-
-For select-type attributes, the wizard allows you to limit the options the AI
-agent can choose from and to add descriptions for them. For these types, the
-AI agent also receives the list of allowed options to choose from in case of a
-match.
-
-Extraction Rules
-""""""""""""""""
-
-Here you tell the agent what information to extract. It is highly recommended
-to provide some examples and include different variants of how the information
-might appear in the ticket. The wizard includes a default example for
-extracting an order number. Replace or adjust it to your own
-use case. You can find a few examples in the :ref:`extractor-examples` section
-below as inspiration.
-
-Priority Rules
-""""""""""""""
-
-The priority rules tell the agent how to deal with multiple matches. There is a
-default example that should cover common scenarios. Adjust it if your scenario
-differs.
-
-Example priority rules:
-
-.. code-block:: none
-
-   If multiple matches are found, prioritize based on the following rules:
-   - If one of the matches is in the ticket title, prioritize that one.
-   - If there are multiple matches in the same article, prioritize the one that appears first in the text.
-
-   Always return only one match.
-
-
-Article(s) to Analyze
-"""""""""""""""""""""
-
-Choose between:
-
-- All articles
-- Last article (newest)
-- First article (oldest)
-
-Depending on the way, time and condition an AI agent runs, the relevant
-article(s) can be different. In most cases, *Last article (newest)* should be
-fine. In certain cases, however, it might make sense to use another
-option. For example, if the agent is triggered manually by a macro,
-*All articles* could fit as well.
-
-.. _extractor-examples:
-
-Examples
-""""""""
-
-Expand the following code block to see these **extraction rules** examples:
-
-- Extract order number
-- Extract contact person for insurance claim
-- Extract product name
-
-.. code-block:: none
-
-   Extract Order Number
-   --------------------
-
-   Extract value of an order number from the input.
-
-   The value may be provided in one of the following formats:
-   - Order#1234567
-   - Order No: 1234567
-   - Order number: 1234567
-
-   Take only the number as the value, without any additional text.
-
-   Priority rules:
-
-   If multiple matches are found, prioritize based on the following rules:
-   - If one of the matches is in the ticket title, prioritize that one.
-   - If there are multiple matches in the same article, prioritize the one that appears first in the text.
-
-   Always return only one match.
-
-   #########################################################################
-
-   Extract Contact Person for Insurance Claim
-   ------------------------------------------
-
-   Extract name of the contact person for an insurance claim. This should be the person who is insured by an active policy.
-
-   The name may be mentioned in one of the following contexts:
-   - Someone claiming on the insurance policy for themselves
-   - Someone claiming on the insurance policy on behalf of another person
-   - A colleague asking for help with an insurance claim that was originally sent by someone else
-
-   Consider only the name of the person who is actually insured, no matter who is claiming against their policy.
-
-   In case the request is not an insurance claim, return an empty string.
-
-   #########################################################################
-
-   Extract Product Name
-   --------------------
-
-   Extract name of the affected product from the input.
-
-   The value may be one of the listed values (exact match), or one that resembles one of the listed values (partial match).
-
-   Take only the product name as the value, without any additional text.
 
 Ticket Title Rewriter
 ^^^^^^^^^^^^^^^^^^^^^
