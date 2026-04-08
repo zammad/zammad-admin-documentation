@@ -138,7 +138,7 @@ button to generally allow connecting users you previously consented.
 
    Administrative accounts can also use the option
    *Consent on behalf of your organization* in above mentioned permission
-   dialogue.
+   dialog.
 
 App Configuration
 ^^^^^^^^^^^^^^^^^

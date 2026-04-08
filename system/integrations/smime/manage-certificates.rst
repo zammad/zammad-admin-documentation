@@ -4,7 +4,7 @@ Manage Certificates
 S/MIME is **disabled by default**. Enable it to start adding certificates.
 
 .. figure:: /images/system/integrations/smime/adding-certificate-and-private-key.gif
-   :alt: Dialogue to add new certificates or private keys
+   :alt: dialog to add new certificates or private keys
    :align: center
 
    Manage certificates in the Admin Panel under **System > Integrations > S/MIME**.
@@ -67,7 +67,7 @@ keys stay protected and when you download them, you have to know the passphrase
 to use them after downloading.
 
 .. figure:: /images/system/integrations/smime/downloading-certificate-data.gif
-   :alt: Dialogue to download certificates or private keys
+   :alt: dialog to download certificates or private keys
    :align: center
 
    Download stored certificates and their keys

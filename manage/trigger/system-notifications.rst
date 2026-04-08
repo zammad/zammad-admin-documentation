@@ -45,13 +45,17 @@ How Can I Customize Them?
 
 Inside your Zammad directory (usually ``/opt/zammad``), email templates for
 various events are stored inside the ``/app/views/mailer`` directory, named
-according to the language they're written in. Thus, ::
+according to the language they're written in. Thus,
+
+.. code-block:: text
 
    /opt/zammad/app/views/mailer/ticket_create/de.html.erb
 
 is the German-language template used to notify agents whenever a new ticket is
 created. To modify this template, create another file with the same name and
-add a ``.custom`` suffix::
+add a ``.custom`` suffix:
+
+.. code-block:: text
 
    /opt/zammad/app/views/mailer/ticket_create/de.html.erb.custom
 

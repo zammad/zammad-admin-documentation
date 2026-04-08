@@ -21,7 +21,7 @@ Step 1: Book sipgate.io package
    ``Produkte anzeigen``-Button.
 
    On the next page select either one of the ``sipgate.io`` packages or
-   ``Push-API Package Free``. Follow the dialogue by booking the addon.
+   ``Push-API Package Free``. Follow the dialog by booking the addon.
    You'll be returned to your contract overview and now should see the selected
    addon in your list.
 

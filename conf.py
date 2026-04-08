@@ -18,6 +18,7 @@ extensions = [
       'sphinx_tabs.tabs',
       'sphinxcontrib.mermaid',
       'sphinx.ext.extlinks',
+      'sphinx_copybutton',
    ]
 
 locale_dirs = ['locale/']
@@ -115,3 +116,9 @@ extlinks = {
    'docs': (f'https://docs.zammad.org/en/{branch}%s', ''),
    'user-docs': (f'https://user-docs.zammad.org/en/{branch}%s', ''),
 }
+
+copybutton_exclude = '.gp'
+copybutton_line_continuation_character = '\\'
+
+# Copy button can be disabled by adding the `:class: no-copybutton` to the code block.
+copybutton_selector = 'div:not(.no-copybutton) > div.highlight > pre'

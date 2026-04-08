@@ -6,7 +6,7 @@ You can set these goals - such as responding to all inquiries within eight
 hours - with optional custom deadlines for specific customers. When such a
 deadline is passed, the ticket escalates. In other words: SLAs reflect the
 agreement you have with your customer about the processing time of tickets.
-To add or edit SLAs, navigate to `Manage > SLAs`. You need the permission
+To add or edit SLAs, navigate to *Manage > SLAs*. You need the permission
 ``admin.sla`` to manage them.
 
 Quick Start

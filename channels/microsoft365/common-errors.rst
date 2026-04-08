@@ -15,17 +15,17 @@ consented to by any user in the tenant. You may have sent your authentication
 request to the wrong tenant.
 
 .. figure:: /images/channels/microsoft365/errors/wrong-id.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
 In this case, please compare whether the client ID created in Zammad
 matches that in Azure for the Azure App.
 
 The Client ID can be found in Zammad under
-Settings > Channels > Microsoft 365 > App Configuration.
-See :doc:`here </channels/microsoft365/accounts>` how to find the client
-ID in Azure and where to copy it to in Zammad.
+*Settings > Channels > Microsoft 365 > App Configuration*.
+See :doc:`account setup </channels/microsoft365/accounts>` how to find
+the client ID in Azure and where to copy it to Zammad.
 
 Wrong or Expired Client Secret
 ------------------------------
@@ -33,9 +33,9 @@ Wrong or Expired Client Secret
 **Error message:** 500: We're sorry, but something went wrong.
 
 .. figure:: /images/channels/microsoft365/errors/zammad_error_500.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
 This error occurs when the client uses an incorrect or expired client secret.
 
@@ -44,7 +44,8 @@ This error occurs when the client uses an incorrect or expired client secret.
   security risk. We ask the customer to create a new client secret and copy the
   value and not the ID to Zammad.
 
-See :doc:`here </channels/microsoft365/accounts>` for more information.
+See :doc:`account setup </channels/microsoft365/accounts>` for more
+information.
 
 Wrong Tenant
 ------------
@@ -53,9 +54,9 @@ Wrong Tenant
 neither a valid DNS name, nor a valid external domain.
 
 .. figure:: /images/channels/microsoft365/errors/wrong-tenant.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
 If a wrong tenant is used in Zammad or the email account is not a member of
 the tenant created in Zammad, this error message occurs.
@@ -64,8 +65,8 @@ In this case, please check if the tenant is entered correctly in
 Zammad, or remove the tenant completely.
 
 .. warning:: **Important notice:**
-  Once the tenant is completely removed, all email accounts can be created in
-  Zammad regardless of which tenant the email account is a member of.
+   Once the tenant is completely removed, all email accounts can be created in
+   Zammad regardless of which tenant the email account is a member of.
 
 Request Admin Consent
 ---------------------
@@ -73,9 +74,9 @@ Request Admin Consent
 **Prompt:** approval required
 
 .. figure:: /images/channels/microsoft365/errors/admin-request.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
 This message occurs when the admin tries to create an email account in Zammad
 that has not yet received approval from the Azure global admin.
@@ -85,11 +86,11 @@ In our documentation,
 can be found on how to request admin consent from Zammad.
 
 .. note::
-  The request for the admin consent can be bypassed by assigning the admin
-  consent in Azure to the App.
+   The request for the admin consent can be bypassed by assigning the admin
+   consent in Azure to the App.
 
-  Home > App Registration > Manage > API Permission > Grant admin consent for
-  "MSFT".
+   Home > App Registration > Manage > API Permission > Grant admin consent for
+   "MSFT".
 
 Missing Permissions for the Azure User
 --------------------------------------
@@ -97,25 +98,24 @@ Missing Permissions for the Azure User
 **Error message:** Can't use Channel:Driver::SMTPAuthentificationError:Net::SMTPAuthentificationError
 
 .. figure:: /images/channels/microsoft365/errors/smtp-error-settings.png
-  :alt: Error message
-  :scale: 60%
-  :align: center
+   :alt: Error message
+   :scale: 60%
+   :align: center
 
-  Error message in the M365 channel settings
+   Error message in the M365 channel settings
 
 or
 
 .. figure:: /images/channels/microsoft365/errors/smtp-error-ticket.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
-  Error message in the ticket
+   Error message in the ticket
 
 This error occurs when the admin wants to create an email account in Zammad
 whose user does not have permission for SMTP authentication to the mail server.
 Please check the following two most common problems in this case.
-
 
 Private Email Account
 ^^^^^^^^^^^^^^^^^^^^^
@@ -125,12 +125,12 @@ permission to the user of the inbox. The permission is provided at
 https://admin.microsoft.com.
 
 Add the SMTP authentication permission under
-Users > Active Users > click on the User > Email > Manage Email Apps.
+*Users > Active Users > click on the User > Email > Manage Email Apps*.
 
 .. figure:: /images/channels/microsoft365/errors/mail-permissions.png
-  :alt: Error message
-  :scale: 90%
-  :align: center
+   :alt: Error message
+   :scale: 90%
+   :align: center
 
 
 Shared Inbox
@@ -142,19 +142,24 @@ problem, so we can only help to a limited extent here.
 
 To enable the SMTP Authentication, use the following commands:
 
-If not installed::
+If not installed:
+
+.. code-block:: powershell
 
    Import-Module ExchangeOnlineManagement
 
-Log in to Exchange using Powershell::
+Log in to Exchange using Powershell:
+
+.. code-block:: powershell
 
    Connect-ExchangeOnline
 
 Switching on the SMTP authentication for a mailbox - also possible with a
-shared mailbox::
+shared mailbox:
+
+.. code-block:: powershell
 
    Set-CASMailbox -Identity name@domain.net -SmtpClientAuthenticationDisabled $false
-
 
 Retrieval of Email Failed
 -------------------------
@@ -177,7 +182,7 @@ Authentication Unsuccessful
 **Error message:** 535 5.7.3 Authentication unsuccessful
 
 .. note:: This error message can have different reasons. See description below
-  for one of them.
+   for one of them.
 
 Microsoft allows sign-in and authentication using the primary email address.
 While this works for fetching emails, SMTP authentication may not work in this
