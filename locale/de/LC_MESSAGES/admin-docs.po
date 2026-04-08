@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 10:14+0200\n"
-"PO-Revision-Date: 2026-04-02 16:02+0000\n"
+"POT-Creation-Date: 2026-04-07 11:43+0200\n"
+"PO-Revision-Date: 2026-04-07 16:02+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -24,12 +24,20 @@ msgid "AI Agents"
 msgstr "KI-Agenten"
 
 #: ../ai/ai-agents.rst:4
+#, fuzzy
+#| msgid ""
+#| "To help your agents focusing on more important tasks, you can create AI "
+#| "agents which can take over routine tasks. These AI agents are managed in "
+#| "Zammad's admin settings under *AI > AI Agents*. Make sure to configure "
+#| "an :doc:`AI provider <provider>` before activating the feature. "
+#| "Otherwise, a warning message will tell you to do so."
 msgid ""
 "To help your agents focusing on more important tasks, you can create AI "
 "agents which can take over routine tasks. These AI agents are managed in "
-"Zammad's admin settings under *AI > AI Agents*. Make sure to configure "
-"an :doc:`AI provider <provider>` before activating the feature. Otherwise, a "
-"warning message will tell you to do so."
+"Zammad's admin settings under *AI > AI Agents* and require "
+"``admin.ai_agent`` permission. Make sure to configure an :doc:`AI provider "
+"<provider>` before activating the feature. Otherwise, a warning message will "
+"tell you to do so."
 msgstr ""
 "Damit sich Ihre Agenten auf wichtigere Aufgaben konzentrieren können, können "
 "Sie KI-Agenten erstellen, die Routineaufgaben übernehmen können. Diese KI-"
@@ -67,12 +75,6 @@ msgid "Important Information"
 msgstr "Wichtige Informationen"
 
 #: ../ai/ai-agents.rst:24
-msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
-msgstr ""
-"Um KI-Agenten zu konfigurieren ist die Berechtigung ``admin.ai_agent`` "
-"erforderlich"
-
-#: ../ai/ai-agents.rst:25
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
 "</manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or "
@@ -83,7 +85,7 @@ msgstr ""
 "oder ein :doc:`Makro </manage/macros>` mit der Aktion **KI** > **KI-Agent** "
 "aufgerufen werden."
 
-#: ../ai/ai-agents.rst:28
+#: ../ai/ai-agents.rst:27
 msgid ""
 "By creating a macro with an AI agent action, your agents can run it on "
 "demand."
@@ -91,7 +93,7 @@ msgstr ""
 "Wenn Sie ein Makro mit einer KI-Agenten-Aktion erstellen, können Ihre "
 "Agenten es bei Bedarf ausführen."
 
-#: ../ai/ai-agents.rst:29
+#: ../ai/ai-agents.rst:28
 msgid ""
 "If an AI agent applies changes to a ticket, you can find an entry in the "
 "ticket history with the name of the AI agent."
@@ -99,7 +101,7 @@ msgstr ""
 "Wenn ein KI-Agent Änderungen an einem Ticket vornimmt, finden Sie in der "
 "Ticket-Historie einen Eintrag mit dem Namen des KI Agenten."
 
-#: ../ai/ai-agents.rst:33
+#: ../ai/ai-agents.rst:32
 msgid "Manage AI Agents"
 msgstr "KI-Agenten verwalten"
 
@@ -107,7 +109,7 @@ msgstr "KI-Agenten verwalten"
 msgid "Screenshot shows AI agents management"
 msgstr "Screenshot zeigt die Verwaltung von KI-Agenten"
 
-#: ../ai/ai-agents.rst:39
+#: ../ai/ai-agents.rst:38
 msgid ""
 "Create an AI agent by clicking the **New AI Agent** button in the top right "
 "corner. This opens a wizard where you can choose the type of the agent and "
@@ -127,11 +129,11 @@ msgstr ""
 "die Spalte **Verwendet in** und bewegen Sie den Mauszeiger über einen "
 "Eintrag, um zu sehen, wo ein KI Agent verwendet wird."
 
-#: ../ai/ai-agents.rst:50
+#: ../ai/ai-agents.rst:49
 msgid "AI Agent Types"
 msgstr "KI-Agenten-Typen"
 
-#: ../ai/ai-agents.rst:52
+#: ../ai/ai-agents.rst:51
 msgid ""
 "Define your AI agents and use them afterwards in triggers, scheduler jobs or "
 "macros. An example for a trigger configuration could look like this:"
@@ -140,26 +142,26 @@ msgstr ""
 "Triggern, der Automatisierung oder Makros. Ein Beispiel für eine Trigger-"
 "Konfiguration könnte wie folgt aussehen:"
 
-#: ../ai/ai-agents.rst:55
+#: ../ai/ai-agents.rst:54
 msgid "Activated by: **Action**"
 msgstr "Aktiviert durch: **Aktion**"
 
-#: ../ai/ai-agents.rst:56
+#: ../ai/ai-agents.rst:55
 msgid "Action execution: **Selective**"
 msgstr "Aktions-Ausführung: **Selektiv**"
 
-#: ../ai/ai-agents.rst:57
+#: ../ai/ai-agents.rst:56
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 "Bedingungen für zu verarbeitende Objekte: **Aktion** *ist* ``erstellt``"
 
-#: ../ai/ai-agents.rst:58
+#: ../ai/ai-agents.rst:57
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
 msgstr ""
 "Führt folgende Änderungen an Objekten durch: **KI Agent** > Wählen Sie Ihren "
 "KI-Agenten"
 
-#: ../ai/ai-agents.rst:60
+#: ../ai/ai-agents.rst:59
 msgid ""
 "Depending on the agent type, you can limit the available options for the AI "
 "agents. If you do so, make sure to select at least two options the agent can "
@@ -169,11 +171,11 @@ msgstr ""
 "einschränken. Wenn Sie dies tun, achten Sie darauf, dass Sie mindestens zwei "
 "Optionen auswählen, aus denen der Agent wählen kann."
 
-#: ../ai/ai-agents.rst:65
+#: ../ai/ai-agents.rst:64
 msgid "Ticket Categorizer"
 msgstr "Ticket-Kategorisierung"
 
-#: ../ai/ai-agents.rst:67
+#: ../ai/ai-agents.rst:66
 msgid ""
 "This AI agent is capable of assigning categories to tickets. Because there "
 "is no built in category field in Zammad, you first have to create "
@@ -186,7 +188,7 @@ msgstr ""
 "in das Sie die Kategorie des Tickets eintragen wollen. Der Feldtyp muss "
 "einer der Auswahltypen sein."
 
-#: ../ai/ai-agents.rst:72
+#: ../ai/ai-agents.rst:71
 msgid ""
 "The ticket categorizer AI agent uses the content of all articles and the "
 "title to compare it with your category names (and optionally descriptions). "
@@ -206,11 +208,11 @@ msgstr ""
 "mehrere Werte zulässig sind (nur wenn das Kategorie-Feld ein Mehrfachauswahl-"
 "Feld ist)."
 
-#: ../ai/ai-agents.rst:81
+#: ../ai/ai-agents.rst:80
 msgid "Ticket Group Dispatcher"
 msgstr "Ticket Gruppen-Zuweiser"
 
-#: ../ai/ai-agents.rst:83
+#: ../ai/ai-agents.rst:82
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
 "compares the content of the ticket in question with your group names (and "
@@ -225,11 +227,11 @@ msgstr ""
 "kann. Fügen Sie dann die Gruppen hinzu, die dem KI-Agenten zur Verfügung "
 "stehen sollen, und geben Sie optional eine Beschreibung für diese Gruppen an."
 
-#: ../ai/ai-agents.rst:90
+#: ../ai/ai-agents.rst:89
 msgid "Ticket Prioritizer"
 msgstr "Ticket-Priorisierung"
 
-#: ../ai/ai-agents.rst:92
+#: ../ai/ai-agents.rst:91
 msgid ""
 "This AI agent is capable of setting a ticket priority based on the title of "
 "the ticket and the content of the last article. You can choose to use all "
@@ -244,11 +246,163 @@ msgstr ""
 "eine Beschreibung für alle Prioritäten angeben, aus denen der KI-Agent "
 "wählen kann."
 
-#: ../ai/ai-agents.rst:98
+#: ../ai/ai-agents.rst:97
+#, fuzzy
+#| msgid "Ticket Selector"
+msgid "Ticket Text Extractor"
+msgstr "Ticket-Auswahl"
+
+#: ../ai/ai-agents.rst:99
+msgid ""
+"This AI agent is capable of extracting specific information from the "
+"ticket's content. You can use it to extract information such as a product "
+"name, an order number, a serial number or any other information you want."
+msgstr ""
+
+#: ../ai/ai-agents.rst:103
+msgid ""
+"Make sure to have a :doc:`custom ticket attribute </system/objects>` in "
+"which you want to store the extracted information. Otherwise, create a "
+"suitable one before configuring the AI agent. The field type must be one of "
+"the following:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:107 ../system/objects/types.rst:125
+msgid "Text"
+msgstr "Text"
+
+#: ../ai/ai-agents.rst:108
+#, fuzzy
+#| msgid "Textarea Field"
+msgid "Textarea"
+msgstr "Textbereich-Feld"
+
+#: ../ai/ai-agents.rst:109
+#, fuzzy
+#| msgid "Integer Field"
+msgid "Integer"
+msgstr "Zahlen-Feld"
+
+#: ../ai/ai-agents.rst:110
+#, fuzzy
+#| msgid "Single selection field"
+msgid "Single selection"
+msgstr "Einfachauswahl-Feld"
+
+#: ../ai/ai-agents.rst:111
+#, fuzzy
+#| msgid "Single tree selection field"
+msgid "Single tree selection"
+msgstr "Einfach-Baumauswahl-Feld"
+
+#: ../ai/ai-agents.rst:113
+msgid ""
+"For select-type attributes, the wizard allows you to limit the options the "
+"AI agent can choose from and to add descriptions for them. For these types, "
+"the AI agent also receives the list of allowed options to choose from in "
+"case of a match."
+msgstr ""
+
+#: ../ai/ai-agents.rst:119
+#, fuzzy
+#| msgid "Execution Time"
+msgid "Extraction Rules"
+msgstr "Ausführungszeit"
+
+#: ../ai/ai-agents.rst:121
+msgid ""
+"Here you tell the agent what information to extract. It is highly "
+"recommended to provide some examples and include different variants of how "
+"the information might appear in the ticket. The wizard includes a default "
+"example for extracting an order number. Replace or adjust it to your own use "
+"case. You can find a few examples in the :ref:`extractor-examples` section "
+"below as inspiration."
+msgstr ""
+
+#: ../ai/ai-agents.rst:129
+#, fuzzy
+#| msgid "Priority"
+msgid "Priority Rules"
+msgstr "Priorität"
+
+#: ../ai/ai-agents.rst:131
+msgid ""
+"The priority rules tell the agent how to deal with multiple matches. There "
+"is a default example that should cover common scenarios. Adjust it if your "
+"scenario differs."
+msgstr ""
+
+#: ../ai/ai-agents.rst:135
+#, fuzzy
+#| msgid "Example certificate:"
+msgid "Example priority rules:"
+msgstr "Beispiel für ein Zertifikat:"
+
+#: ../ai/ai-agents.rst:147
+msgid "Article(s) to Analyze"
+msgstr ""
+
+#: ../ai/ai-agents.rst:149
+msgid "Choose between:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:151
+#, fuzzy
+#| msgid "Articles"
+msgid "All articles"
+msgstr "Artikel"
+
+#: ../ai/ai-agents.rst:152
+#, fuzzy
+#| msgid "Associated article(s)"
+msgid "Last article (newest)"
+msgstr "Zugehörige(r) Artikel"
+
+#: ../ai/ai-agents.rst:153
+#, fuzzy
+#| msgid "Associated article(s)"
+msgid "First article (oldest)"
+msgstr "Zugehörige(r) Artikel"
+
+#: ../ai/ai-agents.rst:155
+msgid ""
+"Depending on the way, time and condition an AI agent runs, the relevant "
+"article(s) can be different. In most cases, *Last article (newest)* should "
+"be fine. In certain cases, however, it might make sense to use another "
+"option. For example, if the agent is triggered manually by a macro, *All "
+"articles* could fit as well."
+msgstr ""
+
+#: ../ai/ai-agents.rst:164 ../manage/groups/access-levels.rst:78
+msgid "Examples"
+msgstr "Beispiele"
+
+#: ../ai/ai-agents.rst:166
+msgid ""
+"Expand the following code block to see these **extraction rules** examples:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:168
+#, fuzzy
+#| msgid "ticket number"
+msgid "Extract order number"
+msgstr "ticket number"
+
+#: ../ai/ai-agents.rst:169
+msgid "Extract contact person for insurance claim"
+msgstr ""
+
+#: ../ai/ai-agents.rst:170
+#, fuzzy
+#| msgid "Product Name"
+msgid "Extract product name"
+msgstr "Produktname"
+
+#: ../ai/ai-agents.rst:222
 msgid "Ticket Title Rewriter"
 msgstr "Ticket-Titel-Umschreibung"
 
-#: ../ai/ai-agents.rst:100
+#: ../ai/ai-agents.rst:224
 msgid ""
 "This AI agent is capable of rephrasing the ticket title based on the content "
 "of the last article. The title is not considered by the agent and gets "
@@ -742,14 +896,6 @@ msgid "Writing Assistant"
 msgstr "Schreibassistent"
 
 #: ../ai/writing-assistant.rst:4
-#, fuzzy
-#| msgid ""
-#| "Zammad's writing assistant tools allow agents to apply AI based changes "
-#| "to their text before saving or sending it. You can access the settings in "
-#| "Zammad's admin section under *AI > Writing Assistant*. Make sure to "
-#| "configure an :doc:`AI provider <provider>` before activating the feature. "
-#| "Otherwise, a warning message will tell you to do so. Activate the feature "
-#| "by turning on the switch."
 msgid ""
 "Zammad's writing assistant tools allow agents to apply AI based changes to "
 "their text before saving or sending it. The permission "
@@ -761,11 +907,12 @@ msgid ""
 msgstr ""
 "Die Schreibassistent Werkzeuge von Zammad ermöglichen es den Agenten, KI-"
 "basierte Änderungen an ihrem Text vor dem Speichern oder Senden vorzunehmen. "
-"Sie können die Einstellungen im Admin-Bereich von Zammad unter *KI > "
-"Schreibassistent* aufrufen. Stellen Sie sicher, dass Sie einen :doc:`KI-"
-"Anbieter <provider>` konfigurieren, bevor Sie die Funktion aktivieren. "
-"Andernfalls werden Sie durch eine Warnmeldung darauf hingewiesen. Aktivieren "
-"Sie die Funktion, indem Sie den Schalter einschalten."
+"Die Berechtigung ``admin.ai_assistance_text_tools`` ist erforderlich, um im "
+"Admin-Bereich von Zammad unter *KI > Schreibassistent* darauf zugreifen zu "
+"können. Stellen Sie sicher, dass Sie einen :doc:`KI-Anbieter <provider>` "
+"konfigurieren, bevor Sie die Funktion aktivieren. Andernfalls werden Sie "
+"durch eine Warnmeldung darauf hingewiesen. Aktivieren Sie die Funktion, "
+"indem Sie den Schalter aktivieren."
 
 #: ../ai/writing-assistant.rst:13
 msgid "Manage Tools"
@@ -780,28 +927,20 @@ msgstr ""
 "verfügbaren Standardwerkzeugen"
 
 #: ../ai/writing-assistant.rst:18
-#, fuzzy
-#| msgid ""
-#| "The main section of the screen holds a table where you can find all "
-#| "available writing tools. The table includes the name of the tool, an "
-#| "optional description in the **Note** column as well as an information "
-#| "about an optional limitation to specific groups."
 msgid ""
 "The main section of the screen shows a table where you can find all "
 "available writing tools. The table includes the name of the tool, the "
 "limitation to specific groups, a feedback summary, the last feedback reset "
 "time and a description."
 msgstr ""
-"Der Hauptbereich enthält eine Tabelle, in der Sie alle verfügbaren "
-"Schreibassistent-Werkzeuge finden können. Die Tabelle enthält den Namen des "
-"Werkzeugs, eine optionale Beschreibung in der Spalte **Notiz** sowie die "
-"Information über eine optionale Beschränkung auf bestimmte Gruppen."
+"Die Hauptansicht zeigt eine Tabelle, in der Sie alle verfügbaren "
+"Schreibwerkzeuge finden können. Die Tabelle enthält den Namen, die "
+"Begrenzung auf bestimmte Gruppen, eine Feedback-Zusammenfassung, die Zeit "
+"des letzten Zurücksetzens des Feedbacks und eine Beschreibung."
 
 #: ../ai/writing-assistant.rst:24
-#, fuzzy
-#| msgid "General settings"
 msgid "General Handling"
-msgstr "General settings"
+msgstr "Allgemeine Handhabung"
 
 #: ../ai/writing-assistant.rst:26
 msgid ""
@@ -813,10 +952,19 @@ msgid ""
 "field in the :ref:`configuration` section below. Some use cases for "
 "individual writing assistant tools could be:"
 msgstr ""
+"Um ein neues Schreibassistent-Werkzeug zu erstellen, können Sie entweder ein "
+"komplett neues erstellen, indem Sie auf die Schaltfläche **Neues "
+"Schreibassistent-Werkzeug** in der oberen rechten Ecke klicken, oder ein "
+"bestehendes Tool, das Ihrem Anwendungsfall ähnelt, klonen und anpassen. In "
+"beiden Fällen wird ein Konfigurationsdialog geöffnet, in dem Sie die "
+"Einstellungen des Schreibassistent-Werkzeugs anpassen können. Eine "
+"Beschreibung der einzelnen Felder finden Sie im "
+"Abschnitt :ref:`configuration` weiter unten. Anwendungsfälle für "
+"individuelle Schreibassistent-Werkzeuge könnten zum Beispiel sein:"
 
 #: ../ai/writing-assistant.rst:34
 msgid "Translation to a specific language"
-msgstr ""
+msgstr "In eine bestimmte Sprache zu übersetzen"
 
 #: ../ai/writing-assistant.rst:35
 msgid "Apply company and/or sector specific wording"
@@ -841,12 +989,22 @@ msgid ""
 "the **Clone** and **Delete** action as well as download and reset the "
 "feedback (more on that below)."
 msgstr ""
+"Die letzte Spalte in der Tabelle enthält das ︙ Aktionsmenü, in dem Sie die "
+"Aktionen **Klonen** und **Löschen** sowie das Herunterladen und Zurücksetzen "
+"des Feedbacks finden (dazu später mehr)."
 
 #: ../ai/writing-assistant.rst:44
+#, fuzzy
+#| msgid ""
+#| "To edit a tool, simply click on its row. This opens a configuration "
+#| "dialog like for creating a new ticket where you can configure it."
 msgid ""
 "To edit a tool, simply click on its row. This opens a configuration dialog "
-"like for creating a new ticket where you can configure it."
+"like for creating a new writing assistant tool where you can configure it."
 msgstr ""
+"Um ein Werkzeug zu bearbeiten, klicken Sie einfach auf die entsprechende "
+"Zeile. Dadurch öffnet sich ein Konfigurationsdialog wie bei der Erstellung "
+"eines Werkzeugs, in dem Sie es konfigurieren können."
 
 #: ../ai/writing-assistant.rst:49
 msgid ""
@@ -855,12 +1013,14 @@ msgid ""
 "as expected, you can still have a look at the instructions of the default "
 "tools."
 msgstr ""
+"Erwägen Sie, ein bestehendes Tool zu klonen. So können Sie die bestehenden "
+"Anweisungen als Ausgangspunkt verwenden und diese an Ihre Bedürfnisse "
+"anpassen. Falls etwas nicht wie erwartet funktioniert, können Sie somit "
+"immer noch die Anweisungen der Standard-Tools einsehen."
 
 #: ../ai/writing-assistant.rst:54
-#, fuzzy
-#| msgid "Feedback & Logs"
 msgid "Feedback Handling"
-msgstr "Feedback & Protokolle"
+msgstr "Feedback Handhabung"
 
 #: ../ai/writing-assistant.rst:56
 msgid ""
@@ -871,6 +1031,13 @@ msgid ""
 "optionally add a comment to explain why they are not satisfied with the "
 "result."
 msgstr ""
+"Ihre Agenten können Feedback zu den Ergebnissen der Schreibassistent-"
+"Werkzeuge geben. Dies ermöglicht es Ihnen, die Leistung der Werkzeuge im "
+"Auge zu behalten und zu prüfen, ob Anpassungen erforderlich sind. Die "
+"Agenten können zwischen einem \"Gefällt mir\" (Daumen hoch; *Like*) und "
+"\"Gefällt mir nicht\" (Daumen runter; *Dislike*) wählen. Für die Reaktion "
+"\"Gefällt mir nicht\" können die Agenten optional einen Kommentar "
+"hinzufügen, um zu erklären, warum sie mit dem Ergebnis nicht zufrieden sind."
 
 #: ../ai/writing-assistant.rst:62
 msgid ""
@@ -879,6 +1046,11 @@ msgid ""
 "the feedback data (including your agents' comments) by clicking **Download "
 "feedback report** in the ︙ action menu."
 msgstr ""
+"Sie können das Verhältnis von Likes und Dislikes im Verhältnis zur gesamten "
+"Werkzeug-Nutzung in der Feedback-Spalte der Tabelle sehen. Um weitere "
+"Einblicke zu erhalten, können Sie die Feedback-Daten (einschließlich der "
+"Kommentare Ihrer Agenten) herunterladen, indem Sie im ︙ Aktionsmenü auf "
+"**Feedback-Bericht herunterladen** klicken."
 
 #: ../ai/writing-assistant.rst:67
 msgid ""
@@ -890,12 +1062,22 @@ msgid ""
 "old feedback by downloading the global feedback report in the :doc:`provider "
 "configuration <provider>`."
 msgstr ""
+"Um das Feedback zurückzusetzen, verwenden Sie den entsprechenden Eintrag im "
+"︙Aktionsmenü. Dadurch wird das Feedback-Verhältnis in der Tabelle gelöscht, "
+"und das bereits erfasste Feedback ist nicht mehr im Feedback-Bericht "
+"enthalten. Ein Zurücksetzen kann nützlich sein, wenn Sie Änderungen an den "
+"Anweisungen vorgenommen haben und Feedback für die nun angepasste Version "
+"sammeln möchten. Nach einem Zurücksetzen können Sie das alte Feedback "
+"weiterhin per Download des globalen Feedback-Berichts unter "
+"der :doc:`Provider-Konfiguration <provider>` einsehen."
 
 #: ../ai/writing-assistant.rst:77
 msgid ""
 "To improve a writing assistant tool and compare the results before and after "
 "your adjustments, you have two options:"
 msgstr ""
+"Um ein Schreibassistent-Werkzeug zu verbessern und die Ergebnisse vor und "
+"nach Ihren Anpassungen zu vergleichen, haben Sie zwei Möglichkeiten:"
 
 #: ../ai/writing-assistant.rst:80
 msgid ""
@@ -904,12 +1086,20 @@ msgid ""
 "before the reset. Either download the report **before** doing the reset or "
 "download the global feedback report from the provider configuration."
 msgstr ""
+"Nehmen Sie Änderungen an dem Tool vor und setzen Sie das Feedback zurück. "
+"Beachten Sie, dass der Feature-spezifische Feedback-Bericht nach dem "
+"Zurücksetzen kein Feedback von vor dem Zurücksetzen mehr enthält. Laden Sie "
+"den Bericht entweder **vorher** herunter oder laden Sie den globalen "
+"Feedback-Bericht von der Anbieter-Konfiguration herunter."
 
 #: ../ai/writing-assistant.rst:85
 msgid ""
 "Clone the tool, deactivate the old and adjust the cloned one. This allows "
 "you to even compare the like and dislike ratio directly in the UI."
 msgstr ""
+"Klonen Sie das Werkzeug, deaktivieren das alte und passen das geklonte an. "
+"Auf diese Weise können Sie auch das Like-/Dislike-Verhältnis direkt in der "
+"Benutzeroberfläche vergleichen."
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:28
 #: ../channels/microsoft365-graph/accounts.rst:18
@@ -924,20 +1114,14 @@ msgid "Configuration"
 msgstr "Konfiguration"
 
 #: ../ai/writing-assistant.rst:94
-#, fuzzy
-#| msgid ""
-#| "Adding or editing a tool opens a dialog where you can configure it. If "
-#| "you want to add a new tool, consider cloning an existing one to have a "
-#| "good starting point. Read on for an explanation of each field."
 msgid ""
 "Adding or editing a tool opens a configuration dialog. If you want to add a "
 "new tool, consider cloning an existing one to have a good starting point."
 msgstr ""
-"Wenn Sie ein Werkzeug hinzufügen oder bearbeiten, öffnet sich ein Dialog, in "
-"dem Sie die Konfiguration vornehmen können. Wenn Sie ein neues Werkzeug "
-"hinzufügen möchten, können Sie ein bestehendes klonen, um eine gute "
-"Grundlage zu haben. Lesen Sie weiter, um eine Beschreibung der einzelnen "
-"Felder zu sehen."
+"Das Hinzufügen oder Bearbeiten eines Werkzeugs öffnet einen "
+"Konfigurationsdialog. Wenn Sie ein neues Werkzeug hinzufügen möchten, "
+"erwägen Sie für einen einfachen Start das Klonen eines existierenden "
+"Werkzeugs."
 
 #: ../ai/writing-assistant.rst:99 ../channels/form.rst:19
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
@@ -951,16 +1135,13 @@ msgid "Name"
 msgstr "Name"
 
 #: ../ai/writing-assistant.rst:98
-#, fuzzy
-#| msgid ""
-#| "Add a name for the write assistant tool. This is what your agents see "
-#| "when they access the write assistant tools."
 msgid ""
 "Add a name for the writing assistant tool. This is what your agents see when "
 "they open the writing assistant tool menu in an article they write."
 msgstr ""
-"**Name**: Fügen Sie einen Namen für das Schreibassistent-Werkzeug hinzu. "
-"Dies ist das, was Ihre Agenten sehen, wenn sie auf die Werkzeuge zugreifen."
+"Fügen Sie einen Namen für das Schreibassistent-Werkzeug hinzu. Dies ist das, "
+"was Ihre Agenten sehen, wenn sie das Schreibassistent-Menü in einem in "
+"Bearbeitung befindlichen Artikel öffnen."
 
 #: ../ai/writing-assistant.rst:131
 msgid "Custom instructions"
@@ -1089,8 +1270,6 @@ msgid "Active"
 msgstr "Aktiv"
 
 #: ../ai/writing-assistant.rst:147
-#, fuzzy
-#| msgid "Set the write assistant tool to active or inactive."
 msgid "Set the writing assistant tool to active or inactive."
 msgstr "Setzen Sie das Schreibassistent-Werkzeug auf aktiv oder inaktiv."
 
@@ -8953,10 +9132,6 @@ msgid ""
 msgstr ""
 "Achten Sie darauf, dass Sie die Berechtigung ``ticket.agent`` für den "
 "Benutzer oder die Rolle gesetzt haben."
-
-#: ../manage/groups/access-levels.rst:78
-msgid "Examples"
-msgstr "Beispiele"
 
 #: ../manage/groups/access-levels.rst:88
 msgid "“The Standard Issue”"
@@ -33165,10 +33340,6 @@ msgstr ""
 msgid "Phone"
 msgstr "Telefon"
 
-#: ../system/objects/types.rst:125
-msgid "Text"
-msgstr "Text"
-
 #: ../system/objects/types.rst:126
 msgid "Url (note: disables link-template availability)"
 msgstr "Url (Hinweis: deaktiviert die Verfügbarkeit von Link-Vorlagen)"
@@ -34619,6 +34790,12 @@ msgstr "Version"
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr ""
 "Zeigt an, welche Version derzeit auf Ihrer Zammad-Instanz verwendet wird."
+
+#~ msgid ""
+#~ "To configure AI agents, the ``admin.ai_agent`` permission is required"
+#~ msgstr ""
+#~ "Um KI-Agenten zu konfigurieren ist die Berechtigung ``admin.ai_agent`` "
+#~ "erforderlich"
 
 #~ msgid ""
 #~ "You can **Clone** or **Delete** existing tools via ︙ action menu. To "
@@ -43514,3 +43691,53 @@ msgstr ""
 
 #~ msgid "How Do Triggers Work"
 #~ msgstr "Wie funktionieren Trigger"
+
+#~ msgid ""
+#~ "Zammad's writing assistant tools allow agents to apply AI based changes "
+#~ "to their text before saving or sending it. You can access the settings in "
+#~ "Zammad's admin section under *AI > Writing Assistant*. Make sure to "
+#~ "configure an :doc:`AI provider <provider>` before activating the feature. "
+#~ "Otherwise, a warning message will tell you to do so. Activate the feature "
+#~ "by turning on the switch."
+#~ msgstr ""
+#~ "Die Schreibassistent Werkzeuge von Zammad ermöglichen es den Agenten, KI-"
+#~ "basierte Änderungen an ihrem Text vor dem Speichern oder Senden "
+#~ "vorzunehmen. Sie können die Einstellungen im Admin-Bereich von Zammad "
+#~ "unter *KI > Schreibassistent* aufrufen. Stellen Sie sicher, dass Sie "
+#~ "einen :doc:`KI-Anbieter <provider>` konfigurieren, bevor Sie die Funktion "
+#~ "aktivieren. Andernfalls werden Sie durch eine Warnmeldung darauf "
+#~ "hingewiesen. Aktivieren Sie die Funktion, indem Sie den Schalter "
+#~ "einschalten."
+
+#~ msgid ""
+#~ "The main section of the screen holds a table where you can find all "
+#~ "available writing tools. The table includes the name of the tool, an "
+#~ "optional description in the **Note** column as well as an information "
+#~ "about an optional limitation to specific groups."
+#~ msgstr ""
+#~ "Der Hauptbereich enthält eine Tabelle, in der Sie alle verfügbaren "
+#~ "Schreibassistent-Werkzeuge finden können. Die Tabelle enthält den Namen "
+#~ "des Werkzeugs, eine optionale Beschreibung in der Spalte **Notiz** sowie "
+#~ "die Information über eine optionale Beschränkung auf bestimmte Gruppen."
+
+#~ msgid ""
+#~ "Adding or editing a tool opens a dialog where you can configure it. If "
+#~ "you want to add a new tool, consider cloning an existing one to have a "
+#~ "good starting point. Read on for an explanation of each field."
+#~ msgstr ""
+#~ "Wenn Sie ein Werkzeug hinzufügen oder bearbeiten, öffnet sich ein Dialog, "
+#~ "in dem Sie die Konfiguration vornehmen können. Wenn Sie ein neues "
+#~ "Werkzeug hinzufügen möchten, können Sie ein bestehendes klonen, um eine "
+#~ "gute Grundlage zu haben. Lesen Sie weiter, um eine Beschreibung der "
+#~ "einzelnen Felder zu sehen."
+
+#~ msgid ""
+#~ "Add a name for the write assistant tool. This is what your agents see "
+#~ "when they access the write assistant tools."
+#~ msgstr ""
+#~ "**Name**: Fügen Sie einen Namen für das Schreibassistent-Werkzeug hinzu. "
+#~ "Dies ist das, was Ihre Agenten sehen, wenn sie auf die Werkzeuge "
+#~ "zugreifen."
+
+#~ msgid "Set the write assistant tool to active or inactive."
+#~ msgstr "Setzen Sie das Schreibassistent-Werkzeug auf aktiv oder inaktiv."
