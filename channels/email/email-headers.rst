@@ -160,7 +160,7 @@ console and follow the steps below:
 
 List all channels in Zammad:
 
-.. code-block:: ruby
+.. code-block:: irb
 
    >> Channel.all
 
@@ -168,24 +168,24 @@ Look for the ``id`` of the channel, you want to set to ``trusted``.
 
 Select your identified channel (replace the 99 with the correct id):
 
-.. code-block:: ruby
+.. code-block:: irb
 
    >> channel = Channel.find(99)
 
 Show the currently activated options of the selected channel:
 
-.. code-block:: ruby
+.. code-block:: irb
 
    >> options = channel[:options]
 
 Add the ``"trusted"=>true`` flag for the inbound part of the channel:
 
-.. code-block:: ruby
+.. code-block:: irb
 
    >> options[:inbound][:trusted] = true
 
 Save your changes:
 
-.. code-block:: ruby
+.. code-block:: irb
 
    >> channel.save!

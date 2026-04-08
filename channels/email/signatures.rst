@@ -27,7 +27,7 @@ information into a signature via :doc:`/misc/variables`. All information
 stored on the ticket, assigned customers or agents can be inserted.
 This makes it possible to design the signature individually.
 To load a list of available variables, enter two colons
-(``::``) into the *Text* box of the signature editor.
+(``::``) into the text box of the signature editor.
 
 .. figure:: /images/channels/email/adding-variables-to-signatures.png
    :alt: Screenshot shows signature editor with highlighted variable usage

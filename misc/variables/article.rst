@@ -76,7 +76,7 @@ article types.
    Let's have a look at an example to make it more clear. The following text
    is the body of an article with some HTML formatting:
 
-   .. code-block:: HTML
+   .. code-block:: html
 
       This is the <b>body</b> of an<br>
       article you want to use<br>
@@ -105,7 +105,7 @@ article types.
 
          Body as HTML without quote character (``>``). Example:
 
-         .. code-block:: HTML
+         .. code-block:: html
 
             This is the <b>body</b> of an<br>
             article you want to use<br>
@@ -118,7 +118,7 @@ article types.
          Body as plain text, converted to HTML without quote character (``>``).
          Example:
 
-         .. code-block:: HTML
+         .. code-block:: html
 
             This is the body of an<br>
             article you want to use<br>

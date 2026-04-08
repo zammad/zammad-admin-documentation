@@ -68,7 +68,7 @@ The ones that aren't are described below.
    available to shared organizations only. Learn more on
    :doc:`/manage/overviews`.
 
-   The default value on creation dialogues is ``yes``.
+   The default value on creation dialogs is ``yes``.
 
    If you want to provide ticket access to agents, please see the
    :ref:`permission-guide`.
@@ -87,7 +87,7 @@ The ones that aren't are described below.
    maintenance effort and is seen as workaround for not being able to map
    organizations via LDAP.
 
-   The default value on creation dialogues is ``no``
+   The default value on creation dialogs is ``no``
 
 🌐 Domain
    Add the email domain of the organization with this option. It's being used

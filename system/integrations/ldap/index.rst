@@ -135,7 +135,7 @@ Clicking on a LDAP source will provide a configuration and mapping overview.
 
 If needed you can then use the *Change* button to update either the name,
 active state or the whole configuration. If you're changing the whole
-configuration, the dialogue will be identical to the source creation.
+configuration, the dialog will be identical to the source creation.
 
 .. note::
 
