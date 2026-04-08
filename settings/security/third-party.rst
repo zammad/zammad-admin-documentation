@@ -24,6 +24,7 @@ Third-party Applications*.
    third-party/microsoft
    third-party/openid-connect
    third-party/saml
+   third-party/sso
    third-party/twitter
 
 .. note::
