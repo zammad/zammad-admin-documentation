@@ -94,7 +94,7 @@ Options
 
    Show title in form
       This setting belongs to the setting ``Title of the form`` and will
-      provide the form title within the form dialogue if selected.
+      provide the form title within the form dialog if selected.
 
    Start modal dialog for form
       If selected, the form will be opened in a modal by clicking a button.

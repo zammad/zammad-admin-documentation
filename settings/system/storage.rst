@@ -8,8 +8,8 @@ knowledge base. By default, Zammad writes to the **Database** - you can switch
 to **Filesystem** or **Simple Storage (S3)** at any time. In this case, please
 have a look on the following instructions.
 
-If you have a busy Zammad instance, we strongly encourage you to use filesystem
-storage instead of **Database**. This improves the system performance (decreases
+If you have a busy Zammad instance, we strongly encourage you to use **filesystem
+storage** instead of database. This improves the system performance (decreases
 database load and and size).
 
 Database
