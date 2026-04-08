@@ -253,7 +253,6 @@ different criteria. It also ensures that the email address being used is valid
 
    >> Setting.set('form_ticket_create_per_day','500')
 
-
 Further Options to Make it Harder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
