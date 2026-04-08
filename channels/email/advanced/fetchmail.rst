@@ -15,9 +15,15 @@ To get this to work you need to pipe your emails to rails.
 
 .. code-block:: bash
 
-   su - zammad
-   cd /opt/zammad
-   cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
+   $ su - zammad
+
+.. code-block:: bash
+
+   $ cd /opt/zammad
+
+.. code-block:: bash
+
+   $ cat test/fixtures/mail1.box | rails r 'Channel::Driver::MailStdin.new(trusted: true)'
 
 Fetchmail
 ---------
@@ -26,15 +32,24 @@ Fetchmail
 
 .. code-block:: bash
 
-   su - zammad
-   cd ~
-   touch .fetchmailrc
-   chmod 0600 .fetchmailrc
+   $ su - zammad
+
+.. code-block:: bash
+
+   $ cd ~
+
+.. code-block:: bash
+
+   $ touch .fetchmailrc
+
+.. code-block:: bash
+
+   $ chmod 0600 .fetchmailrc
 
 
 **Edit .fetchmailrc**:
 
-.. code-block:: bash
+.. code-block:: text
 
    #
    # zammad fetchmail config
@@ -53,7 +68,7 @@ Fetchmail config looks slightly different.
 
 **Edit .fetchmailrc**:
 
-.. code-block:: bash
+.. code-block:: text
 
    #
    # zammad fetchmail config
@@ -64,13 +79,19 @@ Fetchmail config looks slightly different.
 
 .. code-block:: bash
 
-   su - zammad
-   cd ~
-   touch .procmailrc
+   $ su - zammad
+
+.. code-block:: bash
+
+   $ cd ~
+
+.. code-block:: bash
+
+   $ touch .procmailrc
 
 **Edit .procmailrc**:
 
-.. code-block::bash
+.. code-block:: bash
 
    # --
    # Pipe all emails into Zammad
@@ -81,6 +102,5 @@ Fetchmail config looks slightly different.
    GEM_PATH=/opt/zammad/vendor/bundle/ruby/2.4.1/
    LOGFILE="$SYS_HOME/procmail.log"
    #VERBOSE="on"
-
    :0 :
    | rails r 'Channel::Driver::MailStdin.new(trusted: true)'

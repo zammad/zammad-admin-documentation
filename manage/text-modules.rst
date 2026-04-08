@@ -39,7 +39,9 @@ information on how to use text modules in our
 The example text modules below use :doc:`/misc/variables` to dynamically
 insert information like the customer's or agent's names.
 
-**Examples of snippets are**::
+**Examples of snippets are**:
+
+.. code-block:: text
 
    Hello Mrs. #{ticket.customer.lastname},
 

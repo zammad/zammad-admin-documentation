@@ -50,7 +50,9 @@ Example Output
       :alt: Screenshot showing monitoring with no issues
       :scale: 70%
 
-   **API response**::
+   **API response**:
+
+   .. code-block:: json
 
       {
          "healthy": true,
@@ -65,7 +67,9 @@ Example Output
       :alt: Screenshot showing monitoring with issues
       :scale: 70%
 
-   **API response**::
+   **API response**:
+
+   .. code-block:: json
 
       {
          "healthy": false,

@@ -11,7 +11,7 @@ refer the :user-docs:`user documentation </extras/caller-log.html>`.
 
 .. note::
 
-  Automatically opening new ticket dialogues or user profiles requires
+  Automatically opening new ticket dialogs or user profiles requires
   agent to extension mapping - see more below.
 
 Limitations
