@@ -134,7 +134,7 @@ Options
          :align: center
 
          Zammad provides a free text form with limited capabilities.
-         Use the *🔗 Weblink* button to add links to marked text passages.
+         Use the **🔗 Weblink** button to add links to marked text passages.
 
          This allows you to link e.g. to your data privacy or ToS information.
 
@@ -142,7 +142,7 @@ Preview
 -------
 
 Below the form options, Zammad provides a preview section to visualize the
-settings you've just chosen. By default you'll see a button named *Feedback*.
+settings you've just chosen. By default, you'll see a button named **Feedback**.
 
 Clicking on the button will open the form modal. If the form channel is set
 to active, you already are able to create tickets even from this preview mode.
@@ -235,17 +235,23 @@ different criteria. It also ensures that the email address being used is valid
    |
    | Please note that the following changes require console access to your Zammad host.
 
-**Change the ticket creation per IP and hour to 10**::
+**Change the ticket creation per IP and hour to 10**:
 
-   rails> Setting.set('form_ticket_create_by_ip_per_hour','10')
+.. code-block:: irb
 
-**Change the ticket creation per IP and hour to 50**::
+   >> Setting.set('form_ticket_create_by_ip_per_hour','10')
 
-   rails> Setting.set('form_ticket_create_by_ip_per_day','50')
+**Change the ticket creation per IP and hour to 50**:
 
-**Change the ticket creation per day to 500**::
+.. code-block:: irb
 
-   rails> Setting.set('form_ticket_create_per_day','500')
+   >> Setting.set('form_ticket_create_by_ip_per_day','50')
+
+**Change the ticket creation per day to 500**:
+
+.. code-block:: irb
+
+   >> Setting.set('form_ticket_create_per_day','500')
 
 
 Further Options to Make it Harder
