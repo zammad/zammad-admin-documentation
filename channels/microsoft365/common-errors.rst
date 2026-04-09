@@ -22,8 +22,8 @@ request to the wrong tenant.
 In this case, please compare whether the client ID created in Zammad
 matches that in Azure for the Azure App.
 
-The Client ID can be found in Zammad under
-*Settings > Channels > Microsoft 365 > App Configuration*.
+The Client ID can be found in the Zammad settings under
+*Channels > Microsoft 365 IMAP Email > App Configuration*.
 See :doc:`account setup </channels/microsoft365/accounts>` how to find
 the client ID in Azure and where to copy it to Zammad.
 
@@ -125,13 +125,12 @@ permission to the user of the inbox. The permission is provided at
 https://admin.microsoft.com.
 
 Add the SMTP authentication permission under
-*Users > Active Users > click on the User > Email > Manage Email Apps*.
+*Users > Active Users*  and click on *User > Email > Manage Email Apps*.
 
 .. figure:: /images/channels/microsoft365/errors/mail-permissions.png
    :alt: Error message
    :scale: 90%
    :align: center
-
 
 Shared Inbox
 ^^^^^^^^^^^^
