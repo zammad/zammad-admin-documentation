@@ -10,7 +10,7 @@ Settings
 
 Group
    Which :doc:`group </manage/groups/index>` should Checkmk tickets be assigned
-   to as a default (*i.e.,* when none is specified)?
+   to as a default (i.e. when none is specified)?
 
    (Applies to :ref:`API alerts <checkmk-api-alerts>` only.)
 
