@@ -99,7 +99,7 @@ state\*
    The current state of the service or host in question.
    (``$NOTIFY_SERVICESTATE`` / ``$NOTIFY_HOSTSTATE``)
 
-   Used to detect when a ticket should be auto-closed (*i.e.,* on
+   Used to detect when a ticket should be auto-closed (i.e. on
    ``OK``/``UP``). Also used in the subject line of the resulting article
    (“<host> is <state>”).
 
