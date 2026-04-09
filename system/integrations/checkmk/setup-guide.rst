@@ -15,7 +15,7 @@ To do that, you'll need to create a new **notification rule**
 for help with that).
 
 As part of this new rule, you'll have to choose a **notification method**
-(*i.e.,* a script to execute whenever the rule is triggered).
+(i.e. a script to execute whenever the rule is triggered).
 This script will be written by you (samples below),
 and contain the logic for sending API/email messages to Zammad:
 
