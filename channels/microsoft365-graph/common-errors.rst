@@ -15,10 +15,10 @@ your error is not covered here.
 Problem with User Mailbox
 -------------------------
 
-``MailboxNotEnabledForRESTAPI``
-  *The mailbox is either inactive, soft-deleted, or is hosted on-premise.*
+**Error message:** ``MailboxNotEnabledForRESTAPI. The mailbox is either inactive,
+soft-deleted, or is hosted on-premise.``
 
-Possible reasons:
+**Possible reasons:**
 
 - The user has no access to the mailbox.
 - The account has no mailbox at all (user mailboxes).
@@ -29,8 +29,8 @@ a mailbox for this user.
 Problem with User Permissions
 -----------------------------
 
-``ErrorItemNotFound``
-  *The specified object was not found in the store., Default folder Root not found.*
+**Error message:** ``ErrorItemNotFound. The specified object was not found in the
+store. Default folder Root not found.``
 
 Indicates that the user has no delegation permissions for the mailbox.
 Make sure that the permissions are set correctly or consider using another
@@ -39,8 +39,7 @@ account.
 Problem with Shared Mailbox
 ---------------------------
 
-``ErrorInvalidUser``
-  *The requested user '\*' is invalid.*
+**Error message:** ``ErrorInvalidUser. The requested user '\*' is invalid.``
 
 Possible reason could be that the shared mailbox you provided is wrong.
 Check if the provided shared mailbox email address is correct.

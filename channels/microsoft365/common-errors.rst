@@ -21,11 +21,8 @@ request to the wrong tenant.
 
 In this case, please compare whether the client ID created in Zammad
 matches that in Azure for the Azure App.
-
 The Client ID can be found in the Zammad settings under
 *Channels > Microsoft 365 IMAP Email > App Configuration*.
-See :doc:`account setup </channels/microsoft365/accounts>` how to find
-the client ID in Azure and where to copy it to Zammad.
 
 Wrong or Expired Client Secret
 ------------------------------
@@ -38,12 +35,6 @@ Wrong or Expired Client Secret
    :align: center
 
 This error occurs when the client uses an incorrect or expired client secret.
-
-.. warning:: **Important notice:**
-  We never ask the client for the client secret as this can potentially be a
-  security risk. We ask the customer to create a new client secret and copy the
-  value and not the ID to Zammad.
-
 See :doc:`account setup </channels/microsoft365/accounts>` for more
 information.
 
@@ -59,10 +50,9 @@ neither a valid DNS name, nor a valid external domain.
    :align: center
 
 If a wrong tenant is used in Zammad or the email account is not a member of
-the tenant created in Zammad, this error message occurs.
-
-In this case, please check if the tenant is entered correctly in
-Zammad, or remove the tenant completely.
+the tenant created in Zammad, this error message occurs. In such a case, please
+check if the tenant is entered correctly in Zammad, or remove the tenant
+completely.
 
 .. warning:: **Important notice:**
    Once the tenant is completely removed, all email accounts can be created in
@@ -89,8 +79,8 @@ can be found on how to request admin consent from Zammad.
    The request for the admin consent can be bypassed by assigning the admin
    consent in Azure to the App.
 
-   Home > App Registration > Manage > API Permission > Grant admin consent for
-   "MSFT".
+   *Home > App Registration > Manage > API Permission > Grant admin consent for
+   "MSFT"*.
 
 Missing Permissions for the Azure User
 --------------------------------------
@@ -173,7 +163,6 @@ To avoid this, you should change the
 `Safe Attachments unknown malware response <https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about?view=o365-worldwide#safe-attachments-policy-settings>`_
 from "Dynamic Delivery" to something else fitting your needs (e.g. "Block") for
 your Office 365 instance.
-
 
 Authentication Unsuccessful
 ---------------------------
