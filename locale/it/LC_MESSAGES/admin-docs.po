@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 10:14+0200\n"
-"PO-Revision-Date: 2026-02-04 21:00+0000\n"
-"Last-Translator: Adajkkp0 <Giulioranran@gmail.com>\n"
+"POT-Creation-Date: 2026-04-07 11:43+0200\n"
+"PO-Revision-Date: 2026-04-07 16:02+0000\n"
+"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -27,9 +27,10 @@ msgstr "Agenti AI"
 msgid ""
 "To help your agents focusing on more important tasks, you can create AI "
 "agents which can take over routine tasks. These AI agents are managed in "
-"Zammad's admin settings under *AI > AI Agents*. Make sure to configure "
-"an :doc:`AI provider <provider>` before activating the feature. Otherwise, a "
-"warning message will tell you to do so."
+"Zammad's admin settings under *AI > AI Agents* and require "
+"``admin.ai_agent`` permission. Make sure to configure an :doc:`AI provider "
+"<provider>` before activating the feature. Otherwise, a warning message will "
+"tell you to do so."
 msgstr ""
 
 #: ../ai/ai-agents.rst:10
@@ -55,29 +56,25 @@ msgid "Important Information"
 msgstr ""
 
 #: ../ai/ai-agents.rst:24
-msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
-msgstr ""
-
-#: ../ai/ai-agents.rst:25
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
 "</manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or "
 "a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**."
 msgstr ""
 
-#: ../ai/ai-agents.rst:28
+#: ../ai/ai-agents.rst:27
 msgid ""
 "By creating a macro with an AI agent action, your agents can run it on "
 "demand."
 msgstr ""
 
-#: ../ai/ai-agents.rst:29
+#: ../ai/ai-agents.rst:28
 msgid ""
 "If an AI agent applies changes to a ticket, you can find an entry in the "
 "ticket history with the name of the AI agent."
 msgstr ""
 
-#: ../ai/ai-agents.rst:33
+#: ../ai/ai-agents.rst:32
 msgid "Manage AI Agents"
 msgstr ""
 
@@ -85,7 +82,7 @@ msgstr ""
 msgid "Screenshot shows AI agents management"
 msgstr ""
 
-#: ../ai/ai-agents.rst:39
+#: ../ai/ai-agents.rst:38
 msgid ""
 "Create an AI agent by clicking the **New AI Agent** button in the top right "
 "corner. This opens a wizard where you can choose the type of the agent and "
@@ -96,45 +93,45 @@ msgid ""
 "over an entry to see where an AI agent is used."
 msgstr ""
 
-#: ../ai/ai-agents.rst:50
+#: ../ai/ai-agents.rst:49
 msgid "AI Agent Types"
 msgstr ""
 
-#: ../ai/ai-agents.rst:52
+#: ../ai/ai-agents.rst:51
 msgid ""
 "Define your AI agents and use them afterwards in triggers, scheduler jobs or "
 "macros. An example for a trigger configuration could look like this:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:55
+#: ../ai/ai-agents.rst:54
 msgid "Activated by: **Action**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:56
+#: ../ai/ai-agents.rst:55
 msgid "Action execution: **Selective**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:57
+#: ../ai/ai-agents.rst:56
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 
-#: ../ai/ai-agents.rst:58
+#: ../ai/ai-agents.rst:57
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
 msgstr ""
 
-#: ../ai/ai-agents.rst:60
+#: ../ai/ai-agents.rst:59
 msgid ""
 "Depending on the agent type, you can limit the available options for the AI "
 "agents. If you do so, make sure to select at least two options the agent can "
 "choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:65
+#: ../ai/ai-agents.rst:64
 #, fuzzy
 msgid "Ticket Categorizer"
 msgstr "Macros"
 
-#: ../ai/ai-agents.rst:67
+#: ../ai/ai-agents.rst:66
 msgid ""
 "This AI agent is capable of assigning categories to tickets. Because there "
 "is no built in category field in Zammad, you first have to create "
@@ -142,7 +139,7 @@ msgid ""
 "track the ticket's category. The field type must be one of the select types."
 msgstr ""
 
-#: ../ai/ai-agents.rst:72
+#: ../ai/ai-agents.rst:71
 msgid ""
 "The ticket categorizer AI agent uses the content of all articles and the "
 "title to compare it with your category names (and optionally descriptions). "
@@ -153,12 +150,12 @@ msgid ""
 "field is a multi-select field type)."
 msgstr ""
 
-#: ../ai/ai-agents.rst:81
+#: ../ai/ai-agents.rst:80
 #, fuzzy
 msgid "Ticket Group Dispatcher"
 msgstr "Macros"
 
-#: ../ai/ai-agents.rst:83
+#: ../ai/ai-agents.rst:82
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
 "compares the content of the ticket in question with your group names (and "
@@ -167,12 +164,12 @@ msgid ""
 "available for the AI agent and optionally provide a description for them."
 msgstr ""
 
-#: ../ai/ai-agents.rst:90
+#: ../ai/ai-agents.rst:89
 #, fuzzy
 msgid "Ticket Prioritizer"
 msgstr "Macros"
 
-#: ../ai/ai-agents.rst:92
+#: ../ai/ai-agents.rst:91
 msgid ""
 "This AI agent is capable of setting a ticket priority based on the title of "
 "the ticket and the content of the last article. You can choose to use all "
@@ -181,11 +178,142 @@ msgid ""
 "from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:98
+#: ../ai/ai-agents.rst:97
+#, fuzzy
+msgid "Ticket Text Extractor"
+msgstr "Gestione del tempo"
+
+#: ../ai/ai-agents.rst:99
+msgid ""
+"This AI agent is capable of extracting specific information from the "
+"ticket's content. You can use it to extract information such as a product "
+"name, an order number, a serial number or any other information you want."
+msgstr ""
+
+#: ../ai/ai-agents.rst:103
+msgid ""
+"Make sure to have a :doc:`custom ticket attribute </system/objects>` in "
+"which you want to store the extracted information. Otherwise, create a "
+"suitable one before configuring the AI agent. The field type must be one of "
+"the following:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:107 ../system/objects/types.rst:125
+msgid "Text"
+msgstr ""
+
+#: ../ai/ai-agents.rst:108
+msgid "Textarea"
+msgstr ""
+
+#: ../ai/ai-agents.rst:109
+msgid "Integer"
+msgstr ""
+
+#: ../ai/ai-agents.rst:110
+msgid "Single selection"
+msgstr ""
+
+#: ../ai/ai-agents.rst:111
+msgid "Single tree selection"
+msgstr ""
+
+#: ../ai/ai-agents.rst:113
+msgid ""
+"For select-type attributes, the wizard allows you to limit the options the "
+"AI agent can choose from and to add descriptions for them. For these types, "
+"the AI agent also receives the list of allowed options to choose from in "
+"case of a match."
+msgstr ""
+
+#: ../ai/ai-agents.rst:119
+msgid "Extraction Rules"
+msgstr ""
+
+#: ../ai/ai-agents.rst:121
+msgid ""
+"Here you tell the agent what information to extract. It is highly "
+"recommended to provide some examples and include different variants of how "
+"the information might appear in the ticket. The wizard includes a default "
+"example for extracting an order number. Replace or adjust it to your own use "
+"case. You can find a few examples in the :ref:`extractor-examples` section "
+"below as inspiration."
+msgstr ""
+
+#: ../ai/ai-agents.rst:129
+#, fuzzy
+#| msgid "Priority"
+msgid "Priority Rules"
+msgstr "Priorità"
+
+#: ../ai/ai-agents.rst:131
+msgid ""
+"The priority rules tell the agent how to deal with multiple matches. There "
+"is a default example that should cover common scenarios. Adjust it if your "
+"scenario differs."
+msgstr ""
+
+#: ../ai/ai-agents.rst:135
+msgid "Example priority rules:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:147
+msgid "Article(s) to Analyze"
+msgstr ""
+
+#: ../ai/ai-agents.rst:149
+msgid "Choose between:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:151
+#, fuzzy
+#| msgid "Article"
+msgid "All articles"
+msgstr "Articolo"
+
+#: ../ai/ai-agents.rst:152
+msgid "Last article (newest)"
+msgstr ""
+
+#: ../ai/ai-agents.rst:153
+msgid "First article (oldest)"
+msgstr ""
+
+#: ../ai/ai-agents.rst:155
+msgid ""
+"Depending on the way, time and condition an AI agent runs, the relevant "
+"article(s) can be different. In most cases, *Last article (newest)* should "
+"be fine. In certain cases, however, it might make sense to use another "
+"option. For example, if the agent is triggered manually by a macro, *All "
+"articles* could fit as well."
+msgstr ""
+
+#: ../ai/ai-agents.rst:164 ../manage/groups/access-levels.rst:78
+msgid "Examples"
+msgstr ""
+
+#: ../ai/ai-agents.rst:166
+msgid ""
+"Expand the following code block to see these **extraction rules** examples:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:168
+msgid "Extract order number"
+msgstr ""
+
+#: ../ai/ai-agents.rst:169
+msgid "Extract contact person for insurance claim"
+msgstr ""
+
+#: ../ai/ai-agents.rst:170
+msgid "Extract product name"
+msgstr ""
+
+#: ../ai/ai-agents.rst:222
 msgid "Ticket Title Rewriter"
 msgstr ""
 
-#: ../ai/ai-agents.rst:100
+#: ../ai/ai-agents.rst:224
 msgid ""
 "This AI agent is capable of rephrasing the ticket title based on the content "
 "of the last article. The title is not considered by the agent and gets "
@@ -492,9 +620,8 @@ msgid ""
 msgstr ""
 
 #: ../ai/summary.rst:2
-#, fuzzy
 msgid "Ticket Summary"
-msgstr "Macros"
+msgstr "Riepilogo Ticket"
 
 #: ../ai/summary.rst:4
 msgid ""
@@ -581,7 +708,6 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:24
 #, fuzzy
-#| msgid "General"
 msgid "General Handling"
 msgstr "Generale"
 
@@ -626,7 +752,7 @@ msgstr ""
 #: ../ai/writing-assistant.rst:44
 msgid ""
 "To edit a tool, simply click on its row. This opens a configuration dialog "
-"like for creating a new ticket where you can configure it."
+"like for creating a new writing assistant tool where you can configure it."
 msgstr ""
 
 #: ../ai/writing-assistant.rst:49
@@ -773,7 +899,7 @@ msgstr ""
 #: ../ai/writing-assistant.rst:139 ../manage/groups/index.rst:2
 #: ../manage/macros/how-do-they-work.rst:0
 msgid "Groups"
-msgstr ""
+msgstr "Gruppi"
 
 #: ../ai/writing-assistant.rst:134
 msgid ""
@@ -1041,7 +1167,6 @@ msgstr ""
 
 #: ../channels/chat.rst:85 ../manage/checklist.rst:16
 #: ../system/integrations/smime/index.rst:41 ../system/subscription.rst:80
-#, fuzzy
 msgid "Usage"
 msgstr "Utilizzo"
 
@@ -1368,7 +1493,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:206 ../system/objects.rst:156
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: ../channels/email/accounts/account-setup.rst:117
 msgid "Choose from **IMAP** and **POP3**."
@@ -1401,7 +1526,7 @@ msgstr ""
 #: ../channels/email/accounts/email-notification.rst:31
 #: ../misc/object-conditions/basics.rst:27 ../system/sessions.rst:18
 msgid "User"
-msgstr ""
+msgstr "Utente"
 
 #: ../channels/email/accounts/account-setup.rst:130
 msgid ""
@@ -1723,7 +1848,7 @@ msgstr ""
 #: ../system/integrations/pgp/index.rst:112
 #: ../system/integrations/smime/troubleshooting.rst:2
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Risoluzione problemi"
 
 #: ../channels/email/accounts/account-setup.rst:275
 msgid ""
@@ -1979,7 +2104,7 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:42
 #: ../channels/microsoft365/accounts/account-setup.rst:84
 msgid "Channel"
-msgstr ""
+msgstr "Canale"
 
 #: ../channels/email/accounts/secondary-addresses.rst:42
 msgid ""
@@ -2178,7 +2303,7 @@ msgstr ""
 #: ../channels/email/email-headers.rst:51
 #: ../system/integrations/checkmk/api-reference.rst:113
 msgid "Ticket Attributes"
-msgstr ""
+msgstr "Attributi del Ticket"
 
 #: ../channels/email/email-headers.rst:53
 msgid ""
@@ -2311,7 +2436,7 @@ msgstr ""
 
 #: ../channels/email/email-headers.rst:111
 msgid "Article Attributes"
-msgstr ""
+msgstr "Attributi degli articoli"
 
 #: ../channels/email/email-headers.rst:113
 msgid ""
@@ -3228,7 +3353,7 @@ msgstr ""
 #: ../settings/security/ssl-certificates.rst:17
 #: ../system/integrations/smime/prerequisites.rst:2
 msgid "Prerequisites"
-msgstr ""
+msgstr "Prerequisiti"
 
 #: ../channels/facebook.rst:24
 msgid "`Meta business account <https://business.facebook.com/overview>`_"
@@ -3455,7 +3580,7 @@ msgstr ""
 #: ../system/integrations/ldap/index.rst:20
 #: ../system/integrations/smime/prerequisites.rst:78
 msgid "Limitations"
-msgstr ""
+msgstr "Limitazioni"
 
 #: ../channels/form.rst:15
 msgid "Please note the following limitations:"
@@ -3825,7 +3950,7 @@ msgstr ""
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/objects/permissions.rst:39 ../system/subscription.rst:196
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #: ../channels/form.rst:220
 msgid "``form_ticket_create_by_ip_per_hour``"
@@ -6568,7 +6693,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:138
 #: ../system/integrations/checkmk/admin-panel-reference.rst:15
 msgid "Group"
-msgstr ""
+msgstr "Gruppo"
 
 #: ../channels/whatsapp/setup.rst:93
 msgid ""
@@ -6752,7 +6877,6 @@ msgstr ""
 
 #: ../manage/calendars.rst:41
 #, fuzzy
-#| msgid "Configuration"
 msgid "Configure Calendars"
 msgstr "Configurazione"
 
@@ -6829,7 +6953,7 @@ msgstr ""
 
 #: ../manage/checklist.rst:2
 msgid "Checklist"
-msgstr ""
+msgstr "Checklist"
 
 #: ../manage/checklist.rst:7
 msgid ""
@@ -7045,10 +7169,6 @@ msgstr ""
 msgid ""
 "Please make sure that you have selected the ``ticket.agent`` permission for "
 "the user or role."
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:78
-msgid "Examples"
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:88
@@ -7362,7 +7482,7 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:86
 msgid "Signature"
-msgstr ""
+msgstr "Firma"
 
 #: ../manage/groups/settings.rst:84
 msgid ""
@@ -7373,7 +7493,7 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:94
 msgid "Shared Drafts"
-msgstr ""
+msgstr "Bozze condivise"
 
 #: ../manage/groups/settings.rst:89
 msgid ""
@@ -7435,7 +7555,7 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:2
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Knowledge Base"
 
 #: ../manage/knowledge-base.rst:4
 msgid ""
@@ -7473,7 +7593,7 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:25
 msgid "Features"
-msgstr ""
+msgstr "Funzionalità"
 
 #: ../manage/knowledge-base.rst:27
 msgid "🌍 Multi-language support"
@@ -7709,7 +7829,7 @@ msgstr ""
 #: ../manage/time-accounting.rst:151 ../manage/time-accounting.rst:165
 #: ../system/maintenance.rst:31
 msgid "Title"
-msgstr ""
+msgstr "Titolo"
 
 #: ../manage/knowledge-base.rst:148
 msgid "This is the URL title that's being displayed to your users."
@@ -8058,7 +8178,7 @@ msgstr ""
 #: ../manage/macros/learn-by-example.rst:0
 #: ../misc/object-conditions/basics.rst:172
 msgid "State"
-msgstr ""
+msgstr "Stato"
 
 #: ../manage/macros/learn-by-example.rst:13
 msgid "closed"
@@ -8067,7 +8187,7 @@ msgstr ""
 #: ../manage/macros/learn-by-example.rst:0 ../manage/tags.rst:2
 #: ../misc/object-conditions/basics.rst:190
 msgid "Tags"
-msgstr ""
+msgstr "Etichette"
 
 #: ../manage/macros/learn-by-example.rst:14
 msgid "add ``spam``"
@@ -8076,7 +8196,7 @@ msgstr ""
 #: ../manage/macros/learn-by-example.rst:0
 #: ../misc/object-conditions/basics.rst:156
 msgid "Owner"
-msgstr ""
+msgstr "Proprietario"
 
 #: ../manage/macros/learn-by-example.rst:15
 #: ../manage/macros/learn-by-example.rst:33
@@ -8138,7 +8258,7 @@ msgstr ""
 
 #: ../manage/organizations/index.rst:2
 msgid "Organizations"
-msgstr ""
+msgstr "Organizzazioni"
 
 #: ../manage/organizations/index.rst:4
 msgid ""
@@ -8539,7 +8659,7 @@ msgstr ""
 
 #: ../manage/overviews.rst:2 ../manage/slas.rst:134 ../manage/slas.rst:163
 msgid "Overviews"
-msgstr ""
+msgstr "Panoramiche"
 
 #: ../manage/overviews.rst:4
 msgid ""
@@ -8839,7 +8959,7 @@ msgstr ""
 
 #: ../manage/public-links.rst:53 ../manage/public-links.rst:61
 msgid "Login Screen"
-msgstr ""
+msgstr "Schermata di Accesso"
 
 #: ../manage/public-links.rst:54 ../manage/public-links.rst:75
 msgid "Signup Screen"
@@ -9034,7 +9154,7 @@ msgstr ""
 #: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:117
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
-msgstr ""
+msgstr "Esempio"
 
 #: ../manage/report-profiles.rst:None
 msgid "Screenshot shows report profile creation/edit dialog"
@@ -9060,7 +9180,7 @@ msgstr ""
 
 #: ../manage/report-profiles.rst:None
 msgid "Menu bar with highlighted reporting"
-msgstr ""
+msgstr "Barra menu con reporting evidenziato"
 
 #: ../manage/report-profiles.rst:82
 msgid ""
@@ -9229,7 +9349,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:170
 msgid "Agent"
-msgstr ""
+msgstr "Agente"
 
 #: ../manage/roles/permissions.rst:19 ../manage/roles/permissions.rst:47
 #: ../manage/roles/permissions.rst:227 ../manage/roles/permissions.rst:297
@@ -9295,7 +9415,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:36
 msgid "Admin"
-msgstr ""
+msgstr "Amministratore"
 
 #: ../manage/roles/permissions.rst:38
 msgid ""
@@ -10157,7 +10277,7 @@ msgstr ""
 
 #: ../manage/scheduler.rst:2
 msgid "Scheduler"
-msgstr ""
+msgstr "Scheduler"
 
 #: ../manage/scheduler.rst:4
 msgid ""
@@ -10454,7 +10574,7 @@ msgstr ""
 #: ../manage/slas.rst:24 ../manage/slas.rst:70
 #: ../misc/object-conditions/basics.rst:79
 msgid "Calendar"
-msgstr ""
+msgstr "Calendario"
 
 #: ../manage/slas.rst:26
 msgid ""
@@ -10669,7 +10789,7 @@ msgstr ""
 #: ../manage/slas.rst:158 ../settings/branding.rst:27
 #: ../settings/branding.rst:39 ../settings/ticket.rst:222
 msgid "Notifications"
-msgstr ""
+msgstr "Notifiche"
 
 #: ../manage/slas.rst:153
 msgid ""
@@ -11065,9 +11185,8 @@ msgid "Shows a custom unit that can be specified as free input."
 msgstr ""
 
 #: ../manage/time-accounting.rst:None
-#, fuzzy
 msgid "Time Accounting Unit"
-msgstr "Gestione del tempo"
+msgstr "Unità di Contabilità del Tempo"
 
 #: ../manage/time-accounting.rst:65
 msgid "The configurable time accounting unit is used only for display!"
@@ -11087,7 +11206,7 @@ msgstr "Gestione del tempo"
 
 #: ../manage/time-accounting.rst:76
 msgid "Activity Types"
-msgstr ""
+msgstr "Tipi di attività"
 
 #: ../manage/time-accounting.rst:78
 msgid ""
@@ -11224,7 +11343,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:89
 #: ../misc/object-conditions/basics.rst:171
 msgid "Customer"
-msgstr ""
+msgstr "Cliente"
 
 #: ../manage/time-accounting.rst:153 ../manage/time-accounting.rst:167
 #: ../manage/time-accounting.rst:182
@@ -11293,7 +11412,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:115
 #: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:13
 msgid "Organization"
-msgstr ""
+msgstr "Organizzazione"
 
 #: ../manage/time-accounting.rst:186
 msgid ""
@@ -11743,9 +11862,8 @@ msgid "**Agents** are notified about:"
 msgstr ""
 
 #: ../manage/trigger/system-notifications.rst:31
-#, fuzzy
 msgid "New tickets"
-msgstr "Macros"
+msgstr "Nuovi ticket"
 
 #: ../manage/trigger/system-notifications.rst:32
 #, fuzzy
@@ -11799,7 +11917,7 @@ msgstr ""
 
 #: ../manage/users/index.rst:2
 msgid "Users"
-msgstr ""
+msgstr "Utenti"
 
 #: ../manage/users/index.rst:4
 msgid ""
@@ -14107,7 +14225,7 @@ msgstr ""
 
 #: ../misc/first-steps.rst:23 ../settings/branding.rst:2
 msgid "Branding"
-msgstr ""
+msgstr "Branding"
 
 #: ../misc/first-steps.rst:23
 msgid ""
@@ -14266,7 +14384,7 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:207
 #: ../misc/object-conditions/basics.rst:215
 msgid "Article"
-msgstr ""
+msgstr "Articolo"
 
 #: ../misc/object-conditions/basics.rst:38
 msgid "Execution time"
@@ -14431,7 +14549,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:100
 msgid "Language"
-msgstr ""
+msgstr "Lingua"
 
 #: ../misc/object-conditions/basics.rst:102
 msgid "Checks the language of the article."
@@ -14483,7 +14601,7 @@ msgstr ""
 #: ../system/integrations/checkmk/api-reference.rst:138
 #: ../system/integrations/checkmk/api-reference.rst:172
 msgid "owner"
-msgstr ""
+msgstr "proprietario"
 
 #: ../misc/object-conditions/basics.rst:131
 msgid "Checks if tickets are assigned."
@@ -14632,7 +14750,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:214
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilità"
 
 #: ../misc/object-conditions/basics.rst:216
 msgid "Checks the visibility"
@@ -18353,7 +18471,7 @@ msgstr ""
 #: ../settings/security/third-party/github.rst:2
 #: ../system/integrations/github.rst:2
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: ../settings/security/third-party/github.rst:4
 msgid ""
@@ -19689,7 +19807,7 @@ msgstr ""
 
 #: ../settings/security/two-factor.rst:2
 msgid "Two-Factor Authentication"
-msgstr ""
+msgstr "Autenticazione a due fattori"
 
 #: ../settings/security/two-factor.rst:4
 msgid ""
@@ -19842,7 +19960,7 @@ msgstr ""
 
 #: ../settings/security/two-factor/authenticator-app.rst:None
 msgid "Security Code in Google Authenticator App"
-msgstr ""
+msgstr "Codice di sicurezza nell'app Google Authenticator"
 
 #: ../settings/security/two-factor/authenticator-app.rst:22
 msgid ""
@@ -20070,7 +20188,7 @@ msgstr ""
 #: ../settings/system/frontend.rst:54 ../system/maintenance.rst:70
 #: ../system/maintenance.rst:94
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: ../settings/system/index.rst:4
 msgid "We split each tab within system settings into its own page:"
@@ -20904,7 +21022,7 @@ msgstr ""
 
 #: ../system/core-workflows.rst:2
 msgid "Core Workflows"
-msgstr ""
+msgstr "Workflow Principali"
 
 #: ../system/core-workflows.rst:4
 msgid ""
@@ -21532,7 +21650,7 @@ msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:169
 msgid "Priority"
-msgstr ""
+msgstr "Priorità"
 
 #: ../system/core-workflows/how-do-they-work.rst:171
 msgid ""
@@ -21836,7 +21954,7 @@ msgstr ""
 #: ../system/core-workflows/learn-by-example.rst:265
 #: ../system/core-workflows/learn-by-example.rst:290
 msgid "Trigger"
-msgstr ""
+msgstr "Trigger"
 
 #: ../system/core-workflows/learn-by-example.rst:267
 msgid ""
@@ -22594,7 +22712,7 @@ msgstr ""
 
 #: ../system/integrations/checkmk/api-reference.rst:137
 msgid "group"
-msgstr ""
+msgstr "gruppo"
 
 #: ../system/integrations/checkmk/api-reference.rst:139
 msgid "state"
@@ -22602,7 +22720,7 @@ msgstr ""
 
 #: ../system/integrations/checkmk/api-reference.rst:140
 msgid "priority"
-msgstr ""
+msgstr "priorità"
 
 #: ../system/integrations/checkmk/api-reference.rst:142
 msgid ""
@@ -22616,7 +22734,7 @@ msgstr ""
 
 #: ../system/integrations/checkmk/api-reference.rst:147
 msgid "title"
-msgstr ""
+msgstr "title"
 
 #: ../system/integrations/checkmk/api-reference.rst:148
 msgid "id"
@@ -22701,7 +22819,7 @@ msgstr ""
 
 #: ../system/integrations/checkmk/index.rst:2
 msgid "Checkmk"
-msgstr ""
+msgstr "Checkmk"
 
 #: ../system/integrations/checkmk/index.rst:4
 msgid ""
@@ -22834,7 +22952,7 @@ msgstr ""
 
 #: ../system/integrations/clearbit.rst:2
 msgid "Clearbit"
-msgstr ""
+msgstr "Clearbit"
 
 #: ../system/integrations/clearbit.rst:4
 msgid ""
@@ -22850,7 +22968,7 @@ msgstr ""
 
 #: ../system/integrations/clearbit.rst:13
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #: ../system/integrations/clearbit.rst:14
 msgid "Address information"
@@ -23295,7 +23413,7 @@ msgstr ""
 
 #: ../system/integrations/cti/includes/recent-logs.include.rst:31
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:10
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:9
@@ -24238,7 +24356,7 @@ msgstr ""
 
 #: ../system/integrations/gitlab.rst:2
 msgid "GitLab"
-msgstr ""
+msgstr "GitLab"
 
 #: ../system/integrations/gitlab.rst:4
 msgid ""
@@ -24297,7 +24415,7 @@ msgstr ""
 
 #: ../system/integrations/i-doit.rst:2
 msgid "i-doit"
-msgstr ""
+msgstr "i-doit"
 
 #: ../system/integrations/i-doit.rst:4
 msgid ""
@@ -24507,11 +24625,11 @@ msgstr "Icinga"
 
 #: ../system/integrations/index.rst:48
 msgid "Monit"
-msgstr ""
+msgstr "Monit"
 
 #: ../system/integrations/index.rst:49
 msgid "Nagios"
-msgstr ""
+msgstr "Nagios"
 
 #: ../system/integrations/index.rst:50
 msgid ""
@@ -24813,21 +24931,23 @@ msgstr ""
 #: ../system/integrations/pgp/index.rst:13
 #: ../system/integrations/smime/index.rst:17
 msgid "Signing"
-msgstr ""
+msgstr "Firma"
 
 #: ../system/integrations/pgp/index.rst:11
 msgid "is a proof that a message hasn't been manipulated on its way."
-msgstr ""
+msgstr "è una prova che un messaggio non è stato manipolato in transito."
 
 #: ../system/integrations/pgp/index.rst:13
 msgid ""
 "In other words, it guarantees message **integrity** and **authenticity**."
 msgstr ""
+"In altre parole, garantisce l'**integrità** e l'**autenticità** del "
+"messaggio."
 
 #: ../system/integrations/pgp/index.rst:19
 #: ../system/integrations/smime/index.rst:22
 msgid "Encryption"
-msgstr ""
+msgstr "Cifratura"
 
 #: ../system/integrations/pgp/index.rst:16
 #: ../system/integrations/smime/index.rst:20
@@ -24835,11 +24955,15 @@ msgid ""
 "scrambles a message so that it can only be unscrambled by the intended "
 "recipient."
 msgstr ""
+"mescola un messaggio in modo che possa essere smontato solo dal destinatario "
+"previsto."
 
 #: ../system/integrations/pgp/index.rst:19
 msgid ""
 "In other words, it guarantees message **privacy** and **data security**."
 msgstr ""
+"In altre parole, garantisce la **riservatezza** del messaggio e la "
+"**sicurezza dei dati**."
 
 #: ../system/integrations/pgp/index.rst:25
 msgid "Screenshot of ticket creation with encrypt and sign buttons"
@@ -25038,7 +25162,7 @@ msgstr ""
 
 #: ../system/integrations/smime/index.rst:2
 msgid "S/MIME"
-msgstr ""
+msgstr "S/MIME"
 
 #: ../system/integrations/smime/index.rst:11
 msgid ""
@@ -25064,6 +25188,8 @@ msgstr ""
 #: ../system/integrations/smime/index.rst:28
 msgid "Screencast demo of S/MIME features for both new tickets and replies"
 msgstr ""
+"Demo screencast delle funzionalità S/MIME sia per nuovi ticket che per "
+"risposte"
 
 #: ../system/integrations/smime/index.rst:28
 msgid ""
@@ -25144,7 +25270,7 @@ msgstr ""
 
 #: ../system/integrations/smime/manage-certificates.rst:22
 msgid "🕵️ **ALWAYS verify certificates in-person or over the phone!**"
-msgstr ""
+msgstr "🕵️ **VERIFICA SEMPRE i certificati di persona o al telefono!**"
 
 #: ../system/integrations/smime/manage-certificates.rst:24
 msgid ""
@@ -25426,7 +25552,7 @@ msgstr ""
 
 #: ../system/integrations/smime/troubleshooting.rst:38
 msgid "The 🔒 **Encrypt** button is disabled"
-msgstr ""
+msgstr "Il pulsante 🔒 **Cripta** è disabilitato"
 
 #: ../system/integrations/smime/troubleshooting.rst:33
 msgid "Have you added the recipient's certificate?"
@@ -25448,7 +25574,7 @@ msgstr ""
 
 #: ../system/integrations/smime/troubleshooting.rst:42
 msgid "The ✅ **Sign** button is disabled"
-msgstr ""
+msgstr "Il pulsante ✅ **Firma** è disabilitato"
 
 #: ../system/integrations/smime/troubleshooting.rst:41
 msgid ""
@@ -26595,11 +26721,7 @@ msgstr ""
 
 #: ../system/objects/types.rst:124
 msgid "Phone"
-msgstr ""
-
-#: ../system/objects/types.rst:125
-msgid "Text"
-msgstr ""
+msgstr "Telefono"
 
 #: ../system/objects/types.rst:126
 msgid "Url (note: disables link-template availability)"
@@ -27173,7 +27295,6 @@ msgstr ""
 
 #: ../system/subscription.rst:87
 #, fuzzy
-#| msgid "Settings"
 msgid "Re-Charge Settings"
 msgstr "Impostazioni"
 
@@ -27500,7 +27621,7 @@ msgstr ""
 
 #: ../system/translations.rst:2
 msgid "Translations"
-msgstr ""
+msgstr "Traduzioni"
 
 #: ../system/translations.rst:4
 msgid ""
@@ -27576,9 +27697,8 @@ msgid "Object Attributes"
 msgstr ""
 
 #: ../system/translations.rst:49
-#, fuzzy
 msgid "Ticket Macros"
-msgstr "Macros"
+msgstr "Macro ticket"
 
 #: ../system/translations.rst:50
 msgid "Ticket Overviews"

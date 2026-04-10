@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 10:14+0200\n"
+"POT-Creation-Date: 2026-04-07 11:43+0200\n"
 "PO-Revision-Date: 2024-10-08 00:00+0000\n"
 "Last-Translator: Misha <misha@association-enoria.org>\n"
 "Language-Team: French <https://translations.zammad.org/projects/"
@@ -27,9 +27,10 @@ msgstr ""
 msgid ""
 "To help your agents focusing on more important tasks, you can create AI "
 "agents which can take over routine tasks. These AI agents are managed in "
-"Zammad's admin settings under *AI > AI Agents*. Make sure to configure "
-"an :doc:`AI provider <provider>` before activating the feature. Otherwise, a "
-"warning message will tell you to do so."
+"Zammad's admin settings under *AI > AI Agents* and require "
+"``admin.ai_agent`` permission. Make sure to configure an :doc:`AI provider "
+"<provider>` before activating the feature. Otherwise, a warning message will "
+"tell you to do so."
 msgstr ""
 
 #: ../ai/ai-agents.rst:10
@@ -55,29 +56,25 @@ msgid "Important Information"
 msgstr ""
 
 #: ../ai/ai-agents.rst:24
-msgid "To configure AI agents, the ``admin.ai_agent`` permission is required"
-msgstr ""
-
-#: ../ai/ai-agents.rst:25
 msgid ""
 "AI agents don't run on their own. They have to be invoked by a :doc:`trigger "
 "</manage/trigger>`, a :doc:`scheduler job </manage/scheduler>` or "
 "a :doc:`macro </manage/macros>` with the action **AI** > **AI Agent**."
 msgstr ""
 
-#: ../ai/ai-agents.rst:28
+#: ../ai/ai-agents.rst:27
 msgid ""
 "By creating a macro with an AI agent action, your agents can run it on "
 "demand."
 msgstr ""
 
-#: ../ai/ai-agents.rst:29
+#: ../ai/ai-agents.rst:28
 msgid ""
 "If an AI agent applies changes to a ticket, you can find an entry in the "
 "ticket history with the name of the AI agent."
 msgstr ""
 
-#: ../ai/ai-agents.rst:33
+#: ../ai/ai-agents.rst:32
 msgid "Manage AI Agents"
 msgstr ""
 
@@ -87,7 +84,7 @@ msgid "Screenshot shows AI agents management"
 msgstr ""
 "Capture d'écran montrant la configuration de base d'une boîte de réception"
 
-#: ../ai/ai-agents.rst:39
+#: ../ai/ai-agents.rst:38
 msgid ""
 "Create an AI agent by clicking the **New AI Agent** button in the top right "
 "corner. This opens a wizard where you can choose the type of the agent and "
@@ -98,46 +95,46 @@ msgid ""
 "over an entry to see where an AI agent is used."
 msgstr ""
 
-#: ../ai/ai-agents.rst:50
+#: ../ai/ai-agents.rst:49
 #, fuzzy
 msgid "AI Agent Types"
 msgstr "Objets"
 
-#: ../ai/ai-agents.rst:52
+#: ../ai/ai-agents.rst:51
 msgid ""
 "Define your AI agents and use them afterwards in triggers, scheduler jobs or "
 "macros. An example for a trigger configuration could look like this:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:55
+#: ../ai/ai-agents.rst:54
 msgid "Activated by: **Action**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:56
+#: ../ai/ai-agents.rst:55
 msgid "Action execution: **Selective**"
 msgstr ""
 
-#: ../ai/ai-agents.rst:57
+#: ../ai/ai-agents.rst:56
 msgid "Conditions for affected objects: **Action** *is* ``created``"
 msgstr ""
 
-#: ../ai/ai-agents.rst:58
+#: ../ai/ai-agents.rst:57
 msgid "Execute changes on objects: **AI Agent** > Select your AI agent"
 msgstr ""
 
-#: ../ai/ai-agents.rst:60
+#: ../ai/ai-agents.rst:59
 msgid ""
 "Depending on the agent type, you can limit the available options for the AI "
 "agents. If you do so, make sure to select at least two options the agent can "
 "choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:65
+#: ../ai/ai-agents.rst:64
 #, fuzzy
 msgid "Ticket Categorizer"
 msgstr "Attributs du ticket"
 
-#: ../ai/ai-agents.rst:67
+#: ../ai/ai-agents.rst:66
 msgid ""
 "This AI agent is capable of assigning categories to tickets. Because there "
 "is no built in category field in Zammad, you first have to create "
@@ -145,7 +142,7 @@ msgid ""
 "track the ticket's category. The field type must be one of the select types."
 msgstr ""
 
-#: ../ai/ai-agents.rst:72
+#: ../ai/ai-agents.rst:71
 msgid ""
 "The ticket categorizer AI agent uses the content of all articles and the "
 "title to compare it with your category names (and optionally descriptions). "
@@ -156,12 +153,12 @@ msgid ""
 "field is a multi-select field type)."
 msgstr ""
 
-#: ../ai/ai-agents.rst:81
+#: ../ai/ai-agents.rst:80
 #, fuzzy
 msgid "Ticket Group Dispatcher"
 msgstr "exemple"
 
-#: ../ai/ai-agents.rst:83
+#: ../ai/ai-agents.rst:82
 msgid ""
 "This AI agent is capable of assigning tickets to different groups. It "
 "compares the content of the ticket in question with your group names (and "
@@ -170,12 +167,12 @@ msgid ""
 "available for the AI agent and optionally provide a description for them."
 msgstr ""
 
-#: ../ai/ai-agents.rst:90
+#: ../ai/ai-agents.rst:89
 #, fuzzy
 msgid "Ticket Prioritizer"
 msgstr "priorité"
 
-#: ../ai/ai-agents.rst:92
+#: ../ai/ai-agents.rst:91
 msgid ""
 "This AI agent is capable of setting a ticket priority based on the title of "
 "the ticket and the content of the last article. You can choose to use all "
@@ -184,12 +181,147 @@ msgid ""
 "from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:98
+#: ../ai/ai-agents.rst:97
+#, fuzzy
+msgid "Ticket Text Extractor"
+msgstr "exemple"
+
+#: ../ai/ai-agents.rst:99
+msgid ""
+"This AI agent is capable of extracting specific information from the "
+"ticket's content. You can use it to extract information such as a product "
+"name, an order number, a serial number or any other information you want."
+msgstr ""
+
+#: ../ai/ai-agents.rst:103
+msgid ""
+"Make sure to have a :doc:`custom ticket attribute </system/objects>` in "
+"which you want to store the extracted information. Otherwise, create a "
+"suitable one before configuring the AI agent. The field type must be one of "
+"the following:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:107 ../system/objects/types.rst:125
+msgid "Text"
+msgstr "Texte"
+
+#: ../ai/ai-agents.rst:108
+#, fuzzy
+#| msgid "Text"
+msgid "Textarea"
+msgstr "Texte"
+
+#: ../ai/ai-agents.rst:109
+#, fuzzy
+#| msgid "Integrations"
+msgid "Integer"
+msgstr "Intégrations"
+
+#: ../ai/ai-agents.rst:110
+msgid "Single selection"
+msgstr ""
+
+#: ../ai/ai-agents.rst:111
+msgid "Single tree selection"
+msgstr ""
+
+#: ../ai/ai-agents.rst:113
+msgid ""
+"For select-type attributes, the wizard allows you to limit the options the "
+"AI agent can choose from and to add descriptions for them. For these types, "
+"the AI agent also receives the list of allowed options to choose from in "
+"case of a match."
+msgstr ""
+
+#: ../ai/ai-agents.rst:119
+msgid "Extraction Rules"
+msgstr ""
+
+#: ../ai/ai-agents.rst:121
+msgid ""
+"Here you tell the agent what information to extract. It is highly "
+"recommended to provide some examples and include different variants of how "
+"the information might appear in the ticket. The wizard includes a default "
+"example for extracting an order number. Replace or adjust it to your own use "
+"case. You can find a few examples in the :ref:`extractor-examples` section "
+"below as inspiration."
+msgstr ""
+
+#: ../ai/ai-agents.rst:129
+#, fuzzy
+#| msgid "Priority"
+msgid "Priority Rules"
+msgstr "Priorité"
+
+#: ../ai/ai-agents.rst:131
+msgid ""
+"The priority rules tell the agent how to deal with multiple matches. There "
+"is a default example that should cover common scenarios. Adjust it if your "
+"scenario differs."
+msgstr ""
+
+#: ../ai/ai-agents.rst:135
+msgid "Example priority rules:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:147
+msgid "Article(s) to Analyze"
+msgstr ""
+
+#: ../ai/ai-agents.rst:149
+msgid "Choose between:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:151
+#, fuzzy
+#| msgid "Articles"
+msgid "All articles"
+msgstr "Articles"
+
+#: ../ai/ai-agents.rst:152
+msgid "Last article (newest)"
+msgstr ""
+
+#: ../ai/ai-agents.rst:153
+msgid "First article (oldest)"
+msgstr ""
+
+#: ../ai/ai-agents.rst:155
+msgid ""
+"Depending on the way, time and condition an AI agent runs, the relevant "
+"article(s) can be different. In most cases, *Last article (newest)* should "
+"be fine. In certain cases, however, it might make sense to use another "
+"option. For example, if the agent is triggered manually by a macro, *All "
+"articles* could fit as well."
+msgstr ""
+
+#: ../ai/ai-agents.rst:164 ../manage/groups/access-levels.rst:78
+msgid "Examples"
+msgstr ""
+
+#: ../ai/ai-agents.rst:166
+msgid ""
+"Expand the following code block to see these **extraction rules** examples:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:168
+msgid "Extract order number"
+msgstr ""
+
+#: ../ai/ai-agents.rst:169
+msgid "Extract contact person for insurance claim"
+msgstr ""
+
+#: ../ai/ai-agents.rst:170
+msgid "Extract product name"
+msgstr ""
+
+#: ../ai/ai-agents.rst:222
 #, fuzzy
 msgid "Ticket Title Rewriter"
 msgstr "Variables Article"
 
-#: ../ai/ai-agents.rst:100
+#: ../ai/ai-agents.rst:224
 msgid ""
 "This AI agent is capable of rephrasing the ticket title based on the content "
 "of the last article. The title is not considered by the agent and gets "
@@ -638,7 +770,7 @@ msgstr ""
 #: ../ai/writing-assistant.rst:44
 msgid ""
 "To edit a tool, simply click on its row. This opens a configuration dialog "
-"like for creating a new ticket where you can configure it."
+"like for creating a new writing assistant tool where you can configure it."
 msgstr ""
 
 #: ../ai/writing-assistant.rst:49
@@ -7240,10 +7372,6 @@ msgstr ""
 msgid ""
 "Please make sure that you have selected the ``ticket.agent`` permission for "
 "the user or role."
-msgstr ""
-
-#: ../manage/groups/access-levels.rst:78
-msgid "Examples"
 msgstr ""
 
 #: ../manage/groups/access-levels.rst:88
@@ -27048,10 +27176,6 @@ msgstr ""
 #: ../system/objects/types.rst:124
 msgid "Phone"
 msgstr ""
-
-#: ../system/objects/types.rst:125
-msgid "Text"
-msgstr "Texte"
 
 #: ../system/objects/types.rst:126
 msgid "Url (note: disables link-template availability)"
