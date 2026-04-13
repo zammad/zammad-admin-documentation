@@ -13,31 +13,29 @@ Introduction
    :alt: Account settings page
    :align: center
 
-With filters in email based channels ("postmaster filters"), you can
+With filters in email-based channels ("postmaster filters"), you can
 adjust Zammad's behavior, automate actions and extract information when an email
 is received. The filters are based on conditions and differentiate between
-actions for the ticket creation and the ticket update. The available options are
-limited to email specific attributes, which means you have options in filters
-which aren't available in other automation types. And the other automation types
-are lacking some of the email specific options. So if your use case can't be
-solved with filters, consider to use triggers or scheduler jobs instead.
+actions for the ticket creation and the ticket update. The available options
+differ from those available in other automation types (triggers and scheduler
+jobs). So if your use case isn't covered by filters, consider using triggers or
+scheduler jobs instead.
 
-Zammad includes some built-in system filters by default. You can't see or modify
-them, they cover useful tweaks for common systems. Check the system filters
-section below for more information.
+Zammad includes some built-in system filters by default which you can't see or
+modify. Check the system filters section below for more information.
 
 Usage
 -----
 
 To create a new filter, click on the **New** button. This opens a dialog where
-you can configure it. To modify an already existing filter, just click on its
-row in the table, which opens the same dialog.
+you can configure it. To modify an existing filter, just click on its row in the
+table, which opens the same dialog.
 
 In addition to that, you can clone or delete a filter by clicking on the ``⠇``
 to open the action menu and select the corresponding option. The cloning can be
 useful if you have a complex configuration and don't want to start from scratch.
-Instead of deleting a filter, consider to set it inactive so you can easily
-activate it again later.
+Instead of deleting a filter, consider to setting it to inactive so you can
+easily activate it again later.
 
 In addition to some meta information, the configuration basically consists of
 two parts: the condition to define which emails are affected
@@ -52,11 +50,11 @@ Match all of the following
    Define which emails should be affected by the filter based on conditions.
    You can use various email attribute checks such as sender, subject, or custom
    headers. They all have to match for the action to get applied. The conditions
-   work similar to other places in Zammad. Have a look at
+   work similarly to other places in Zammad. Have a look at
    the :doc:`object conditions page </misc/object-conditions/basics>`, where
-   you can find details about how the operators are working.
+   you can find details about how the operators work.
 
-   It is even possible to extract information of the incoming emails and to
+   It is even possible to extract information from incoming emails and to
    use it in actions. An example for this could be to extract an order number
    from the subject and write it into a custom object attribute. This is done
    via regular expressions and their capture groups. To extract a string,
@@ -94,8 +92,8 @@ Active
 Examples
 --------
 
-Action Based on Email Sender Domain
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Group Assignment Based on Sender Domain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Example
    Automatically move emails from ``@amazon.com`` to the "Purchasing" group.
@@ -106,7 +104,7 @@ Condition
 Action
    **Group:** Purchasing
 
-Organization Based Ticket Assignment
+Organization-Based Ticket Assignment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Example
@@ -168,7 +166,7 @@ Example
    "Order number".
 
 Condition
-   **Body:** *matches regex:* ``(.*[Oo]rder.*\D(?<order_number>\d+).*``
+   **Body:** *matches regex:* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
 
 Action
    **Order number:** ``#{regex.order_number}``
@@ -176,7 +174,7 @@ Action
 System Filters
 --------------
 
-Zammad comes with some built-in system filter by default. You can't see them in
+Zammad comes with some built-in system filters by default. You can't see them in
 the UI. The intention is to tweak the behavior of Zammad for emails from common
 systems which have some kind of special formatting. Have a look at our separate
-sub page about :doc:`filters/system-filters` where you can find more details.
+subpage about :doc:`filters/system-filters` where you can find more details.
