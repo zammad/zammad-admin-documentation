@@ -93,6 +93,8 @@ ticket and the content of the last article. You can choose to use all priorities
 or limit them to specific ones. In case you limit the priorities, you can also
 provide a description for each priority the AI agent can choose from.
 
+.. _text-extractor-ai-agent:
+
 Ticket Text Extractor
 ^^^^^^^^^^^^^^^^^^^^^
 
