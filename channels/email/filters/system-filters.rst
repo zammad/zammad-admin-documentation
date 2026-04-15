@@ -120,8 +120,8 @@ Routes follow-up emails for merged tickets to the correct ticket.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sets the owner for follow-up emails based on the
-**Follow-up possible** configuration of the
-:doc:`group's settings </manage/groups/settings>` .
+**Assign follow-ups** configuration of the
+:doc:`group's settings </manage/groups/settings>`.
 
 0011_postmaster_sender_based_on_reply_to
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -151,82 +151,62 @@ cases to prevent email loops.
 0015_postmaster_filter_identify_session_user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Checks if sender can be identified as Zammad user.
+Checks if sender can be identified as Zammad user and optionally creates a
+new user.
 
 6500_postmaster_filter_identify_sender
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Identifies and optionally creates the sender.
-
-state: Channel::Filter::IdentifySender
-
+Checks if sender can be identified as Zammad user and optionally creates a
+new user.
 
 0001_postmaster_filter_secure_mailing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to handle secure mailing.
-
-state: Channel::Filter::SecureMailing
+Handles PGP and S/MIME emails.
 
 0030_postmaster_filter_out_of_office_check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to identify out-of-office emails for follow-up
-detection and keeping current ticket state.
-
-state: Channel::Filter::OutOfOfficeCheck
-
+Identifies out-of-office auto-responder emails, assigns them to the correct
+ticket and keeps the current ticket state.
 
 0200_postmaster_filter_follow_up_possible_check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Define postmaster filter to check if follow-ups get created (based on admin
-settings).
-
-state: Channel::Filter::FollowUpPossibleCheck
+Handles the emails based on the **Follow-up possible** configuration of the
+:doc:`group's settings </manage/groups/settings>`.
 
 0900_postmaster_filter_bounce_follow_up_check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to identify postmaster bounces; and handles them as
+Identifies postmaster bounce notification emails and handles them as
 follow-up of the original tickets.
-
-state: Channel::Filter::BounceFollowUpCheck
 
 0950_postmaster_filter_bounce_delivery_permanent_failed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to identify postmaster bounces; and disables sending
-notification if delivery fails permanently.
-
-state: Channel::Filter::BounceDeliveryPermanentFailed
+Identifies postmaster bounce notification emails about permanent delivery
+failures and disables sending notifications for the affected ticket.
 
 0955_postmaster_filter_bounce_delivery_temporary_failed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to identify postmaster bounces; and reopens tickets if
-delivery fails permanently.
-
-state: Channel::Filter::BounceDeliveryTemporaryFailed
+Identifies postmaster bounce notification emails about temporary delivery
+failures and reopens an already closed ticket if the delivery fails temporarily.
 
 1000_postmaster_filter_database_check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter for filters managed via admin interface.
-
-state: Channel::Filter::Database
+Checks the existence of custom filters and adds their processing to the log.
 
 5500_postmaster_internal_article_check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter which sets the articles visibility to internal if it
-is a rely to an internal article or the last outgoing email is internal.
-
-state: Channel::Filter::InternalArticleCheck
+Sets the articles visibility to internal if it is a reply to an internal
+article or the last outgoing email is internal.
 
 6005_postmaster_filter_identify_group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Defines postmaster filter to identify ticket group.
-
-state: Channel::Filter::IdentifyGroup',
+Sets the group which is configured for the mailbox in case of a new ticket.
