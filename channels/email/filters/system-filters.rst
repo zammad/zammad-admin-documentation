@@ -4,13 +4,15 @@ System Filters
 Zammad includes so-called system filters by default. They detect specific
 information to guarantee the correct handling of emails and adjust some
 information automatically, depending on the filter and your settings.
-
 These filters are neither visible in the Zammad UI nor configurable at all, but
 it is important to be aware of them, as they can affect the behavior of Zammad
 when processing incoming emails. So this page has only informative character.
 
 External Services
 -----------------
+
+These filters identify incoming emails from certain external services and extract
+specific information to add them to tickets.
 
 Service-Now
 ^^^^^^^^^^^
@@ -75,9 +77,10 @@ integration.
 Internal Email Handling
 -----------------------
 
-Zammad includes system filters to handle the internal email processing, e.g. to
-check for a follow-up email or choose the correct customer. These filters are
-mostly configurable via the admin settings in Zammad's UI.
+Zammad's internal email processing also uses system filters, e.g. to
+check for a follow-up email or choose the correct customer. Some of these
+filters are configurable via Zammad's admin settings. The following section
+titles include the complete filter name for easier reference.
 
 .. Just adding a coarse general description of each of the system filters here. Otherwise, we are on a detail level like the code itself.
 
