@@ -136,6 +136,8 @@ Keep messages on server
       to clean out your inbox from time to time to keep it below its storage
       limit.
 
+.. _archive-mode-microsoft365:
+
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst
 

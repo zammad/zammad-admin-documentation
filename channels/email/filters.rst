@@ -75,11 +75,11 @@ Perform actions
    If you extracted information in a condition, you can use it in the actions
    and write it to any available and fitting attribute which is capable of
    storing the extracted string (e.g. title or a custom object attribute).
-   To insert the extracted string, use ``#{regex.name}`` where ``name`` is the
+   To insert the extracted string, use ``#{regexp.name}`` where ``name`` is the
    name of the capture group you defined in the condition, e.g.
-   ``#{regex.order_number}``. For unnamed capture groups, use the number of the
-   capture group, e.g. ``#{regex.1}`` for the first capture group. Make sure to
-   always use the ``regex`` namespace.
+   ``#{regexp.order_number}``. For unnamed capture groups, use the number of the
+   capture group, e.g. ``#{regexp.1}`` for the first capture group. Make sure to
+   always use the ``regexp`` namespace.
 
 Note
    Add a note about the filter. This note is only for internal use and visible
@@ -155,7 +155,7 @@ Condition
    **Subject:** *matches regex:* ``.*[Ii]nvoice.*\D(\d+).*``
 
 Action
-   **Invoice number:** ``#{regex.1}``
+   **Invoice number:** ``#{regexp.1}``
 
 Extract Information from Email Body
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -169,7 +169,7 @@ Condition
    **Body:** *matches regex:* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
 
 Action
-   **Order number:** ``#{regex.order_number}``
+   **Order number:** ``#{regexp.order_number}``
 
 System Filters
 --------------
