@@ -155,6 +155,8 @@ not.
 Depending if there are already email messages in this account, the archive mode
 dialog may be shown.
 
+.. _archive-mode-microsoft365-graph:
+
 .. include:: /channels/email/accounts/archive-mode.rst
 
 Now your channel is ready and can be used! If something doesn't work, have

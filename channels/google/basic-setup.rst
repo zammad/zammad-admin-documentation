@@ -49,7 +49,7 @@ After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
    * By default, Zammad will **delete all emails** in your inbox
      during the import process. Use the *Keep Messages on Server* setting to
      :ref:`disable this behavior <google-keep-messages-on-server>` or enable
-     :ref:`archive mode <archive-mode>`.
+     :ref:`archive mode <archive-mode-google>`.
    * Zammad will send an auto-reply message
      to every email it imports (including the old ones!).
      Make sure to :doc:`disable this behavior </manage/trigger>`
@@ -119,9 +119,7 @@ Keep messages on server
       to clean out your inbox from time to time to keep it below its storage
       limit.
 
-.. _archive-mode:
-
-.. _archive-mode:
+.. _archive-mode-google:
 
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst
