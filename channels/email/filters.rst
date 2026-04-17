@@ -61,16 +61,15 @@ Match all of the following
    use *matches regex* as operator, add a named capture group in parentheses
    like ``(?<name>)`` and include the part you want to extract. For the order
    number example, it could look like ``.*[Oo]rder.*\D(?<order_number>\d+).*``.
-   Technically, you can use unnamed captures too, but it is recommended to
-   use named capture groups to avoid confusion. When using multiple captures in
-   a single filter, unnamed capture groups can get merged and overwritten in
-   edge cases.
 
-   You can even use multiple capture groups in one condition or use them in
-   multiple conditions for different attributes. Be aware that all parts of
-   the condition have to match for the action to get applied. Consider using
-   a separate filter in case you want to extract information from different
-   attributes and the information might not always be present.
+   You can even use multiple capture groups in one part of the condition or use
+   them in multiple condition parts for different attributes. Be aware that all
+   parts of the condition have to match for the action to get applied. Consider
+   using a separate filter in case you want to extract information from
+   different attributes and the information might not always be present.
+   Even though you could use unnamed captures, it is recommended to use named
+   capture groups to prevent them from getting overwritten when using them in
+   more than one condition part in a single filter.
 
    .. hint:: Another way to extract text is by using an
       :ref:`text extractor AI agent <text-extractor-ai-agent>`.
