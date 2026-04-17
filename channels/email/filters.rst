@@ -58,12 +58,13 @@ Match all of the following
    use it in actions. An example for this could be to extract an order number
    from the subject and write it into a custom object attribute. This is done
    via regular expressions and their capture groups. To extract a string,
-   use *matches regex* as operator and add a named capture group in parentheses
+   use *matches regex* as operator, add a named capture group in parentheses
    like ``(?<name>)`` and include the part you want to extract. For the order
    number example, it could look like ``.*[Oo]rder.*\D(?<order_number>\d+).*``.
    Technically, you can use unnamed captures too, but it is recommended to
-   use named capture groups to avoid confusion and that an extraction gets
-   overwritten in edge cases.
+   use named capture groups to avoid confusion. When using multiple captures in
+   a single filter, unnamed capture groups can get merged and overwritten in
+   edge cases.
 
    You can even use multiple capture groups in one condition or use them in
    multiple conditions for different attributes. Be aware that all parts of
