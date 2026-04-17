@@ -100,7 +100,9 @@ Ticket Text Extractor
 
 This AI agent is capable of extracting specific information from the ticket's
 content. You can use it to extract information such as a product name, an
-order number, a serial number or any other information you want.
+order number, a serial number or any other information you want. Another way
+without using AI is to use :doc:`/channels/email/filters` for email based
+channels.
 
 Make sure to have a :doc:`custom ticket attribute </system/objects>` in which
 you want to store the extracted information. Otherwise, create a suitable one
@@ -143,7 +145,6 @@ Example priority rules:
    - If there are multiple matches in the same article, prioritize the one that appears first in the text.
 
    Always return only one match.
-
 
 Article(s) to Analyze
 """""""""""""""""""""
