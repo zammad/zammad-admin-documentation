@@ -71,7 +71,7 @@ Match all of the following
    capture groups to prevent them from getting overwritten when using them in
    more than one condition part in a single filter.
 
-   .. hint:: Another way to extract text is by using an
+   .. hint:: Another way to extract text is by using a
       :ref:`text extractor AI agent <text-extractor-ai-agent>`.
 
 Perform actions
