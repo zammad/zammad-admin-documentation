@@ -122,7 +122,7 @@ Example
    name.
 
 Condition
-   **Organization:** *starts with one of:* ``A`` ``B`` ``C``
+   **Organization:** *starts with one of* ``A`` ``B`` ``C``
 
 Action
    **Owner:** Emily Adams
@@ -134,7 +134,7 @@ Example
    Automatically increase the priority of tickets from a VIP customer.
 
 Condition
-   **From:** *contains:* ``ourvipcustomer@example.com``
+   **From:** *contains* ``ourvipcustomer@example.com``
 
 Action
    **Priority:** 3 high
@@ -147,10 +147,11 @@ Example
    external spam filter (e.g. SpamAssassin).
 
 Condition
-   **X-Spam-Flag:** *contains:* ``YES``
+   **X-Spam-Flag:** *contains* ``YES``
 
 Action
-   **Tag:** add: ``spam``
+   **Tag:** *add* ``spam``
+
    **State:** closed
 
 Extract Information from Subject
@@ -162,7 +163,7 @@ Example
    "Invoice number".
 
 Condition
-   **Subject:** *matches regex:* ``.*[Ii]nvoice.*\D(\d+).*``
+   **Subject:** *matches regex* ``.*[Ii]nvoice.*\D(\d+).*``
 
 Action
    **Invoice number:** ``#{regexp.1}``
@@ -176,7 +177,7 @@ Example
    "Order number".
 
 Condition
-   **Body:** *matches regex:* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
+   **Body:** *matches regex* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
 
 Action
    **Order number:** ``#{regexp.order_number}``
