@@ -70,15 +70,18 @@ Internal Email Handling
    Zammad's internal email processing also uses system filters, e.g. to
    check for a follow-up email or choose the correct customer. Some of these
    filters are configurable via Zammad's admin settings. The following titles
-   include the complete filter name for easier reference.
-
-   .. Just adding a coarse general description of each of the system filters here. Otherwise, we are on a detail level like the code itself.
+   include the complete filter name for easier reference. The execution order
+   is based on the filter number prefix. Because some of the filters depend on the
+   results of previous filters.
 
 0000_postmaster_filter_trusted
    This filter removes ``X-Zammad`` headers from untrustworthy sources to prevent
    manipulation of the email processing. Check the trusted channel section
    in the :doc:`header based actions </channels/email/email-headers>`
    documentation for more information.
+
+0001_postmaster_filter_secure_mailing
+   Handles PGP and S/MIME emails.
 
 0006_postmaster_filter_auto_response_check
    Checks if the email is an auto response. If yes, no auto reply
@@ -114,15 +117,6 @@ Internal Email Handling
    **Sender based on Reply-To header** configuration of the
    :doc:`channel's settings <../settings>`.
 
-0018_postmaster_import_archive
-   Handles the emails which are imported in
-   :ref:`archive mode <archive-mode-email>`.
-
-6105_postmaster_filter_sender_is_system_address
-   Detects system or agent senders and sets the article sender role
-   (``Agent`` or ``Customer``), depending on sender address, permissions,
-   group access and ticket customer relation.
-
 0014_postmaster_filter_own_notification_loop_detection
    Checks if the email is a self-created notification email, and ignores it in
    such cases to prevent email loops.
@@ -130,13 +124,13 @@ Internal Email Handling
 0015_postmaster_filter_identify_session_user
    Identifies a session user via ``x-zammad-session-user-id``. If none is
    provided or valid, it falls back to sender data and can create a user.
+   This filter also makes sure that tickets which got forwarded from an agent's
+   personal inboxes to the system show up as coming from the customers
+   instead of the agent.
 
-6500_postmaster_filter_identify_sender
-   Checks if sender can be identified as Zammad user and optionally creates a
-   new user.
-
-0001_postmaster_filter_secure_mailing
-   Handles PGP and S/MIME emails.
+0018_postmaster_import_archive
+   Handles the emails which are imported in
+   :ref:`archive mode <archive-mode-email>`.
 
 0030_postmaster_filter_out_of_office_check
    Identifies out-of-office auto-responder emails, assigns them to the correct
@@ -171,3 +165,12 @@ Internal Email Handling
 6005_postmaster_filter_identify_group
    Sets ticket group by using explicit group headers first, then existing ticket
    context (ID/number), then mailbox/group mapping or fallback default group.
+
+6105_postmaster_filter_sender_is_system_address
+   Detects system or agent senders and sets the article sender role
+   (``Agent`` or ``Customer``), depending on sender address, permissions,
+   group access and ticket customer relation.
+
+6500_postmaster_filter_identify_sender
+   Checks if sender can be identified as Zammad user and optionally creates a
+   new user.
