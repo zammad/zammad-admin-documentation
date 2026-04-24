@@ -9,6 +9,7 @@ Webhook Examples
    examples/rocket-chat-notifications
    examples/slack-notifications
    examples/ntfy-notifications
+   examples/basic-notification
    examples/add-checklist-to-ticket
    examples/generic-notifications-trigger
 
@@ -27,5 +28,7 @@ or scheduler after creation, see
   notifications.
 - :doc:`examples/ntfy-notifications`: Use the ntfy service to receive push
   notification from Zammad on different devices like your smartphone.
+- :doc:`examples/basic-notification`: A simple generic notification example you
+  can use and adjust for different services.
 - :doc:`examples/add-checklist-to-ticket`: Add a checklist from a
   template to new tickets.
