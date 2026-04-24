@@ -36,8 +36,9 @@ The payload contains the following variables:
    A short description of the triggering event.
 
    Examples:
-   ``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``,
-   ``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``
+
+   - ``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``
+   - ``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``
 
 ``notification.link``
    A link to the ticket which triggered the webhook.
