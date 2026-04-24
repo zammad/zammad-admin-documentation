@@ -2,8 +2,10 @@ Basic Notification
 ==================
 
 This page serves as a basic example of a simple generic notification webhook.
-Make sure that the external service is able to understand and parse the output
-and adjust or enhance it, where necessary.
+It uses the ``notification.`` variables like the pre-defined notification
+webhooks do. These variables provide human readable output for different ticket
+events. Make sure your external service can understand and parse the output and
+adjust or enhance it, where necessary.
 
 Payload Example
 ---------------
@@ -25,16 +27,17 @@ Variables
 The payload contains the following variables:
 
 ``ticket.number``
-   The ticket number of the ticket which triggered the webhook.
+   The ticket number of the triggering ticket.
 
 ``notification.subject``
-   The subject of the ticket.
+   The subject of the triggering ticket.
 
 ``notification.message``
-   The message of the notification, which is a short description of the event
-   which triggered the webhook.
+   A short description of the triggering event.
 
-   Example: ``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``
+   Examples:
+   ``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``,
+   ``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``
 
 ``notification.link``
    A link to the ticket which triggered the webhook.
@@ -42,11 +45,12 @@ The payload contains the following variables:
    Example: ``https://zammad.example.com/#ticket/zoom/123``.
 
 ``notification.changes``
-   A list of changes which were applied to the ticket attributes.
+   A list of changes which were applied to the ticket attributes. In case the
+   webhook was triggered without a ticket change, the last changes are listed
+   here.
 
    Example: ``* Priority: 2 normal -> 1 low\n* Owner: - -> Emma Taylor``
 
 ``notification.body``
    If an article triggered the webhook or was part of the ticket changes, the
    variable contains the article's content. Otherwise, it is empty.
-
