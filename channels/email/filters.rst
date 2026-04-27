@@ -58,12 +58,20 @@ Match all of the following
    use it in actions. An example for this could be to extract an order number
    from the subject and write it into a custom object attribute. This is done
    via regular expressions and their capture groups. To extract a string,
-   use *matches regex* as operator and add a capture group by using parentheses
-   for the part of the string you want to extract. Optionally, you can name
-   the capture group by adding ``?<name>`` at the beginning of the capture
-   group, e.g. ``.*order.*\D(?<order_number>\d+).*``.
+   use *matches regex* as operator, add a named capture group in parentheses
+   like ``(?<name>)`` and include the part you want to extract. For the order
+   number example, it could look like ``.*[Oo]rder.*\D(?<order_number>\d+).*``.
 
-   .. hint:: Another way of extracting text is to use the
+   You can even use multiple capture groups in one part of the condition or use
+   them in multiple condition parts for different attributes. Be aware that all
+   parts of the condition have to match for the action to get applied. Consider
+   using a separate filter in case you want to extract information from
+   different attributes and the information might not always be present.
+   Even though you could use unnamed captures, it is recommended to use named
+   capture groups to prevent them from getting overwritten when using them in
+   more than one condition part in a single filter.
+
+   .. hint:: Another way to extract text is by using a
       :ref:`text extractor AI agent <text-extractor-ai-agent>`.
 
 Perform actions
@@ -74,9 +82,11 @@ Perform actions
 
    If you extracted information in a condition, you can use it in the actions
    and write it to any available and fitting attribute which is capable of
-   storing the extracted string (e.g. title or a custom object attribute).
-   To insert the extracted string, use ``#{regexp.name}`` where ``name`` is the
-   name of the capture group you defined in the condition, e.g.
+   storing the extracted string (e.g. ticket title or a custom object attribute
+   of a text type).
+
+   To write the extracted string, use the variable ``#{regexp.name}``, where
+   ``name`` is the name of the capture group you defined in the condition, e.g.
    ``#{regexp.order_number}``. For unnamed capture groups, use the number of the
    capture group, e.g. ``#{regexp.1}`` for the first capture group. Make sure to
    always use the ``regexp`` namespace.
@@ -112,7 +122,7 @@ Example
    name.
 
 Condition
-   **Organization:** *starts with one of:* ``A`` ``B`` ``C``
+   **Organization:** *starts with one of* ``A`` ``B`` ``C``
 
 Action
    **Owner:** Emily Adams
@@ -124,7 +134,7 @@ Example
    Automatically increase the priority of tickets from a VIP customer.
 
 Condition
-   **From:** *contains:* ``ourvipcustomer@example.com``
+   **From:** *contains* ``ourvipcustomer@example.com``
 
 Action
    **Priority:** 3 high
@@ -137,10 +147,11 @@ Example
    external spam filter (e.g. SpamAssassin).
 
 Condition
-   **X-Spam-Flag:** *contains:* ``YES``
+   **X-Spam-Flag:** *contains* ``YES``
 
 Action
-   **Tag:** add: ``spam``
+   **Tag:** *add* ``spam``
+
    **State:** closed
 
 Extract Information from Subject
@@ -152,7 +163,7 @@ Example
    "Invoice number".
 
 Condition
-   **Subject:** *matches regex:* ``.*[Ii]nvoice.*\D(\d+).*``
+   **Subject:** *matches regex* ``.*[Ii]nvoice.*\D(\d+).*``
 
 Action
    **Invoice number:** ``#{regexp.1}``
@@ -166,7 +177,7 @@ Example
    "Order number".
 
 Condition
-   **Body:** *matches regex:* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
+   **Body:** *matches regex* ``.*[Oo]rder.*\D(?<order_number>\d+).*``
 
 Action
    **Order number:** ``#{regexp.order_number}``
