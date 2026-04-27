@@ -68,6 +68,7 @@ Zammad Admin Documentation
 
    ai/provider
    ai/summary
+   ai/kb-answer-generation
    ai/writing-assistant
    ai/ai-agents
 
