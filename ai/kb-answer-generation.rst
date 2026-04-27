@@ -18,10 +18,12 @@ Important information:
 - The knowledge base answer is generated as draft and doesn't get published
   automatically.
 - The answer is generated in the default language of your knowledge base.
-- The answer includes a note in the content and a tag about the AI generation.
+- The answer includes a note in the content and a tag (``ai-generated``) about
+  the AI generation.
 - A link to the answer is included in the ticket it was generated from.
-- The AI request includes a list of your knowledge base categories for the AI
-  to choose from.
+- The AI request includes a list of the knowledge base categories for which the
+  (human) agent has editor permissions. The AI then chooses one of these
+  categories.
 
 .. warning::
    Even though there are instructions to remove personal and customer specific
