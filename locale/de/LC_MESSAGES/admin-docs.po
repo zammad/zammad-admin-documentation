@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-23 13:15+0200\n"
-"PO-Revision-Date: 2026-04-15 08:02+0000\n"
+"POT-Creation-Date: 2026-04-24 11:27+0200\n"
+"PO-Revision-Date: 2026-04-28 15:02+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -1338,13 +1338,6 @@ msgstr ""
 "server>`."
 
 #: ../channels/email/accounts/account-setup.rst:16
-#, fuzzy
-#| msgid ""
-#| "Zammad will **send an auto-reply message to every email it imports** "
-#| "(including the old ones!). Use the *Experts* dialog to :ref:`change this "
-#| "behavior <email-experts-import-as>` or to :doc:`disable auto-replies </"
-#| "manage/trigger>` prior adding an email account and to turn it back on "
-#| "once all your messages have been imported."
 msgid ""
 "Zammad will **send an auto-reply message to every email it imports** "
 "(including the old ones!). Use the *Experts* dialog to :ref:`change this "
@@ -1354,8 +1347,8 @@ msgid ""
 msgstr ""
 "Zammad **schickt eine automatische Eingangsbenachrichtigung an den Absender "
 "jeder importierten E-Mail** (auch für alte E-Mails!). Verwenden Sie den "
-"*Experten*-Dialog, um :ref:`dieses Verhalten zu ändern <email-experts-import-"
-"as>` oder :doc:`deaktivieren Sie Auto-Antworten </manage/trigger>` vor dem "
+"*Experten*-Dialog, um :ref:`dieses Verhalten zu ändern <archive-mode-email>` "
+"oder :doc:`deaktivieren Sie Auto-Antworten </manage/trigger>` vor dem "
 "Hinzufügen eines E-Mail Kontos und schalten sie wieder ein, sobald alle Ihre "
 "Konten importiert wurden."
 
@@ -3095,106 +3088,93 @@ msgid ""
 "is important to be aware of them, as they can affect the behavior of Zammad "
 "when processing incoming emails. So this page has only informative character."
 msgstr ""
+"Zammad enthält standardmäßig sogenannte Systemfilter. Diese erkennen "
+"bestimmte Informationen, um die korrekte Bearbeitung von E-Mails "
+"sicherzustellen und passen einige Informationen automatisch an, abhängig vom "
+"Filter und Ihren Einstellungen. Diese Filter sind weder sicht- noch "
+"konfigurierbar in der Zammad-Benutzeroberfläche, es ist jedoch wichtig, sie "
+"zu kennen, da sie das Verhalten von Zammad bei der Verarbeitung eingehender "
+"E-Mails beeinflussen können. Diese Seite dient daher lediglich "
+"Informationszwecken."
 
 #: ../channels/email/filters/system-filters.rst:12
-#, fuzzy
-#| msgid "External Data Source"
 msgid "External Services"
-msgstr "Externe Datenquelle"
+msgstr "Externe Dienste"
 
 #: ../channels/email/filters/system-filters.rst:14
 msgid ""
 "These filters identify incoming emails from certain external services and "
 "extract specific information to add them to tickets."
 msgstr ""
+"Diese Filter identifizieren eingehende E-Mails von bestimmten externen "
+"Diensten und extrahieren spezifische Informationen, um sie zu Tickets "
+"hinzuzufügen."
 
 #: ../channels/email/filters/system-filters.rst:26
 msgid "Service-Now"
 msgstr "Service-Now"
 
 #: ../channels/email/filters/system-filters.rst:18
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect Service Now emails and assign them to existing "
-#| "tickets, if the following requirements are met:"
 msgid ""
 "Detects `Service-Now <https://www.servicenow.com/>`_ emails and can assign "
 "them to existing tickets based on the incident ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad erkennt Service Now E-Mails und ordnet diese existierenden Tickets "
-"zu, sofern folgende Voraussetzungen erfüllt sind:"
+"Erkennt E-Mails von `Service-Now <https://www.servicenow.com/>` und kann "
+"diese zu bestehenden Tickets zuordnen, wenn die folgenden Anforderungen "
+"erfüllt sind:"
 
 #: ../channels/email/filters/system-filters.rst:22
-#, fuzzy
-#| msgid "Headers contain the ``X-ServiceNow-Generated`` header."
 msgid "Header contains ``X-ServiceNow-Generated``."
 msgstr "Header enthält ``X-ServiceNow-Generated``."
 
 #: ../channels/email/filters/system-filters.rst:23
-#, fuzzy
-#| msgid "Subject does match the regex ``\\s(INC\\d+)\\s`` e.g. ``INC678439``."
 msgid "Subject matches regex ``\\s(INC\\d+)\\s``, e.g. ``INC678439``."
-msgstr "Titel enthält regex ``\\s(INC\\d+)\\s`` z.B. ``INC678439``."
+msgstr ""
+"Der Betreff entspricht der Regex-Regel ``\\s(INC\\d+)\\s``, z.B. "
+"``INC678439``."
 
 #: ../channels/email/filters/system-filters.rst:25
-#, fuzzy
-#| msgid ""
-#| "See `Service-Now Mail Example <https://github.com/zammad/zammad/blob/"
-#| "stable/test/data/mail/mail090.box>`_ for comparison of your emails."
 msgid ""
 "See `Service-Now email example <https://github.com/zammad/zammad/blob/stable/"
 "test/data/mail/mail090.box>`_ for comparison of your emails."
 msgstr ""
-"Siehe `Service-Now Mail Beispiel <https://github.com/zammad/zammad/blob/"
-"stable/test/data/mail/mail090.box>`_ für den Vergleich Ihrer E-Mails."
+"Siehe `Service-Now Email Beispiel <https://github.com/zammad/zammad/blob/"
+"stable/test/data/mail/mail090.box>`_ für einen Vergleich mit Ihren E-Mails."
 
 #: ../channels/email/filters/system-filters.rst:37
 msgid "JIRA"
 msgstr "JIRA"
 
 #: ../channels/email/filters/system-filters.rst:29
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect JIRA emails and assign them to existing tickets, if "
-#| "the following requirements are met:"
 msgid ""
 "Detects `JIRA <https://www.atlassian.com/software/jira>`_ emails and can "
 "assign them to existing tickets based on the issue ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad erkennt JIRA E-Mails und ordnet diese existierenden Ticket zu, sofern "
-"folgende Bedingungen erfüllt sind:"
+"Erkennt `JIRA <https://www.atlassian.com/software/jira>`_ E-Mails und kann "
+"diese anhand der Issue ID bestehenden Tickets zuordnen, wenn die folgenden "
+"Voraussetzungen erfüllt sind:"
 
 #: ../channels/email/filters/system-filters.rst:33
-#, fuzzy
-#| msgid "Headers contain the ``X-JIRA-FingerPrint`` header."
 msgid "Header contains ``X-JIRA-FingerPrint``."
-msgstr "Headers enthält ``X-JIRA-FingerPrint``."
+msgstr "Header enthält ``X-JIRA-FingerPrint``."
 
 #: ../channels/email/filters/system-filters.rst:34
-#, fuzzy
-#| msgid ""
-#| "Subject does match the regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` e.g. "
-#| "``[JIRA] (SYS-422)``."
 msgid ""
 "Subject matches regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)``, e.g. ``[JIRA] "
 "(SYS-422)``."
 msgstr ""
-"Titel passt auf regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` z.B. ``[JIRA] "
-"(SYS-422)``."
+"Der Betreff entspricht der Regex-Regel ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)``, "
+"z.B. ``[JIRA] (SYS-422)``."
 
 #: ../channels/email/filters/system-filters.rst:36
-#, fuzzy
-#| msgid ""
-#| "See `JIRA Mail Example <https://github.com/zammad/zammad/blob/stable/test/"
-#| "data/mail/mail103.box>`_ for comparison of your emails."
 msgid ""
 "See `JIRA email example <https://github.com/zammad/zammad/blob/stable/test/"
 "data/mail/mail103.box>`_ for comparison of your emails."
 msgstr ""
-"Siehe `JIRA Mail Beispiel <https://github.com/zammad/zammad/blob/stable/test/"
-"data/mail/mail103.box>`_ für den Vergleich Ihrer E-Mails."
+"Siehe `JIRA Email Beispiel <https://github.com/zammad/zammad/blob/stable/"
+"test/data/mail/mail103.box>`_ für den Vergleich mit Ihren E-Mails."
 
 #: ../channels/email/filters/system-filters.rst:44
 #: ../system/integrations/index.rst:47
@@ -3209,6 +3189,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Icinga integration."
 msgstr ""
+"Erkennt `Icinga <http://www.icinga.org>`_ E-Mails. Wenn eine E-Mail von "
+"Icinga erkannt wird, extrahiert der Filter Überwachungsinformationen (z.B. "
+"Host, Service, Status) aus der E-Mail und fügt sie dem Ticket hinzu. Wenn "
+"der betroffene Dienst wieder funktioniert, kann der Filter das Ticket "
+"automatisch schließen, je nach Einstellungen in der Icinga-Integration."
 
 #: ../channels/email/filters/system-filters.rst:51
 #: ../system/integrations/index.rst:49
@@ -3223,6 +3208,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Nagios integration."
 msgstr ""
+"Erkennt `Nagios <http://www.nagios.org>`_ E-Mails. Wenn eine E-Mail von "
+"Nagios erkannt wird, extrahiert der Filter Überwachungsinformationen (z.B. "
+"Host, Service, Status) aus der E-Mail und fügt sie dem Ticket hinzu. Wenn "
+"der betroffene Dienst wieder in Betrieb ist, kann der Filter das Ticket "
+"automatisch schließen, je nach Einstellungen in der Nagios-Integration."
 
 #: ../channels/email/filters/system-filters.rst:58
 #: ../system/integrations/checkmk/index.rst:2
@@ -3237,6 +3227,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Checkmk integration."
 msgstr ""
+"Erkennt `Checkmk <https://checkmk.com/>`_ E-Mails. Wenn eine E-Mail von "
+"Checkmk erkannt wird, extrahiert der Filter Überwachungsinformationen (z.B. "
+"Host, Service, Status) aus der E-Mail und fügt sie dem Ticket hinzu. Wenn "
+"der betroffene Dienst wieder funktioniert, kann der Filter das Ticket "
+"automatisch schließen, je nach Einstellungen in der Checkmk-Integration."
 
 #: ../channels/email/filters/system-filters.rst:65
 #: ../system/integrations/index.rst:48
@@ -3251,10 +3246,15 @@ msgid ""
 "service is up again, the filter can automatically close the ticket, "
 "depending on your settings of the Monit integration."
 msgstr ""
+"Erkennt `Monit <https://mmonit.com/monit/>`_ E-Mails. Wenn eine E-Mail von "
+"Monit erkannt wird, extrahiert der Filter Überwachungsinformationen (z. B. "
+"Host, Service, Status) aus der E-Mail und fügt sie dem Ticket hinzu. Wenn "
+"der betroffene Dienst wieder funktioniert, kann der Filter das Ticket "
+"automatisch schließen, je nach Einstellungen in der Monit-Integration."
 
 #: ../channels/email/filters/system-filters.rst:68
 msgid "Internal Email Handling"
-msgstr ""
+msgstr "Internes E-Mail-Handling"
 
 #: ../channels/email/filters/system-filters.rst:70
 msgid ""
@@ -3265,10 +3265,17 @@ msgid ""
 "on the filter number prefix. Because some of the filters depend on the "
 "results of previous filters."
 msgstr ""
+"Die interne E-Mail-Verarbeitung von Zammad verwendet ebenfalls Systemfilter, "
+"um zum Beispiel zu prüfen, ob eine Rückfrage-E-Mail vorliegt oder um den "
+"richtigen Kunden auszuwählen. Einige dieser Filter sind über die "
+"Einstellungen von Zammad konfigurierbar. Die folgenden Titel enthalten den "
+"vollständigen Namen des Filters für einen einfacheren Abgleich mit Zammads "
+"Code. Die Reihenfolge der Ausführung basiert auf dem Filternummer-Präfix. "
+"Einige der Filter hängen von den Ergebnissen vorheriger Filter ab."
 
 #: ../channels/email/filters/system-filters.rst:81
 msgid "0000_postmaster_filter_trusted"
-msgstr ""
+msgstr "0000_postmaster_filter_trusted"
 
 #: ../channels/email/filters/system-filters.rst:78
 msgid ""
@@ -3277,116 +3284,127 @@ msgid ""
 "section in the :doc:`header based actions </channels/email/email-headers>` "
 "documentation for more information."
 msgstr ""
+"Dieser Filter entfernt ``X-Zammad`` Header von nicht vertrauenswürdigen "
+"Quellen, um eine Manipulation der E-Mail-Verarbeitung zu verhindern. Weitere "
+"Informationen finden Sie im Abschnitt über vertrauenswürdige Kanäle auf der "
+"Seite :doc:`Header basierte Aktionen </channels/email/email-headers>`."
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "0001_postmaster_filter_secure_mailing"
-msgstr ""
+msgstr "0001_postmaster_filter_secure_mailing"
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "Handles PGP and S/MIME emails."
-msgstr ""
+msgstr "Verarbeitet PGP- und S/MIME-E-Mails."
 
 #: ../channels/email/filters/system-filters.rst:100
 msgid "0006_postmaster_filter_auto_response_check"
-msgstr ""
+msgstr "0006_postmaster_filter_auto_response_check"
 
 #: ../channels/email/filters/system-filters.rst:87
 msgid ""
 "Checks if the email is an auto response. If yes, no auto reply from Zammad "
 "gets sent."
 msgstr ""
+"Prüft, ob die E-Mail eine automatische Antwort ist. Wenn ja, wird keine "
+"automatische Antwort von Zammad gesendet."
 
 #: ../channels/email/filters/system-filters.rst:90
 msgid "These headers are checked:"
-msgstr ""
+msgstr "Diese Header werden überprüft:"
 
 #: ../channels/email/filters/system-filters.rst:92
 msgid "``list-unsubscribe``"
-msgstr ""
+msgstr "``list-unsubscribe``"
 
 #: ../channels/email/filters/system-filters.rst:93
 msgid "``x-loop``"
-msgstr ""
+msgstr "``x-loop``"
 
 #: ../channels/email/filters/system-filters.rst:94
-#, fuzzy
-#| msgid "``preferences``"
 msgid "``precedence``"
-msgstr "``preferences``"
+msgstr "``precedence``"
 
 #: ../channels/email/filters/system-filters.rst:95
 msgid "``auto-submitted``"
-msgstr ""
+msgstr "``auto-submitted``"
 
 #: ../channels/email/filters/system-filters.rst:96
-#, fuzzy
-#| msgid "``x-zammad-is-auto-response``"
 msgid "``x-auto-response-suppress``"
-msgstr "``x-zammad-is-auto-response``"
+msgstr "``x-auto-response-suppress``"
 
 #: ../channels/email/filters/system-filters.rst:99
 msgid ""
 "If ``x-zammad-is-auto-response`` is present, further auto-response header "
 "checks are skipped."
 msgstr ""
+"Wenn ``x-zammad-is-auto-response`` vorhanden ist, werden weitere Auto-"
+"Response-Header-Prüfungen übersprungen."
 
 #: ../channels/email/filters/system-filters.rst:105
 msgid "0007_postmaster_filter_follow_up_check"
-msgstr ""
+msgstr "0007_postmaster_filter_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:103
 msgid ""
 "Identifies and routes follow-up emails based on the **Additional follow-up "
 "detection** in the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Identifiziert und ordnet Nachfragen per E-Mail Tickets hinzu, basierend auf "
+"den Einstellungen der **Erweiterte Nachfrage-Erkennung** in "
+"den :doc:`Kanaleinstellungen <../settings>`."
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "0008_postmaster_filter_follow_up_merged"
-msgstr ""
+msgstr "0008_postmaster_filter_follow_up_merged"
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "Routes follow-up emails for merged tickets to the correct ticket."
 msgstr ""
+"Ordnet Nachfragen für zusammengefasste Tickets dem richtigen Ticket zu."
 
 #: ../channels/email/filters/system-filters.rst:113
 msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr ""
+msgstr "0009_postmaster_filter_follow_up_assignment"
 
 #: ../channels/email/filters/system-filters.rst:111
-#, fuzzy
-#| msgid ""
-#| "For this reason make sure to also adjust each affected :doc:`groups "
-#| "setting </manage/groups/settings>`."
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
-"Stellen Sie aus diesem Grund sicher, dass Sie auch die :doc:`Gruppen-"
-"Einstellungen </manage/groups/settings>` anpassen."
+"Legt den Besitzer bei Nachfragen per E-Mail fest, basierend auf der "
+"Einstellung **Zuweisung bei Nachfrage** in den :doc:`Gruppeneinstellungen </"
+"manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:118
 msgid "0011_postmaster_sender_based_on_reply_to"
-msgstr ""
+msgstr "0011_postmaster_sender_based_on_reply_to"
 
 #: ../channels/email/filters/system-filters.rst:116
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Ermittlung des Absenders bzw. der Adresse für den Artikel auf der Grundlage "
+"der Einstellung **Absender basierend auf Reply-To-Header** in "
+"den :doc:`Kanaleinstellungen<../settings>`."
 
 #: ../channels/email/filters/system-filters.rst:122
 msgid "0014_postmaster_filter_own_notification_loop_detection"
-msgstr ""
+msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
 #: ../channels/email/filters/system-filters.rst:121
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
 msgstr ""
+"Prüft, ob es sich bei der E-Mail um eine selbst erstellte Benachrichtigungs-"
+"E-Mail handelt und ignoriert sie in solchen Fällen, um E-Mail-Schleifen zu "
+"vermeiden."
 
 #: ../channels/email/filters/system-filters.rst:129
 msgid "0015_postmaster_filter_identify_session_user"
-msgstr ""
+msgstr "0015_postmaster_filter_identify_session_user"
 
 #: ../channels/email/filters/system-filters.rst:125
 msgid ""
@@ -3396,56 +3414,64 @@ msgid ""
 "personal inboxes to the system show up as coming from the customers instead "
 "of the agent."
 msgstr ""
+"Identifiziert einen Sitzungs-Benutzer über ``x-zammad-session-user-id``. "
+"Wenn keine Daten vorhanden oder gültig sind, greift der Filter auf die "
+"Absenderdaten zurück und kann einen neuen Benutzer erstellen. Dieser Filter "
+"sorgt auch dafür, dass Tickets, die aus dem persönlichen Postfach eines "
+"Agenten an das System weitergeleitet wurden, als vom Kunden und nicht vom "
+"Agent stammend angezeigt werden."
 
 #: ../channels/email/filters/system-filters.rst:133
 msgid "0018_postmaster_import_archive"
-msgstr ""
+msgstr "0018_postmaster_import_archive"
 
 #: ../channels/email/filters/system-filters.rst:132
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
 msgstr ""
+"Verarbeitet die E-Mails, die im :ref:`Archivmodus <archive-mode-email>` "
+"importiert werden."
 
 #: ../channels/email/filters/system-filters.rst:137
 msgid "0030_postmaster_filter_out_of_office_check"
-msgstr ""
+msgstr "0030_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:136
 msgid ""
 "Identifies out-of-office auto-responder emails, assigns them to the correct "
 "ticket and keeps the current ticket state."
 msgstr ""
+"Identifiziert Abwesenheitsbenachrichtigungen, weist sie dem entsprechenden "
+"Ticket zu und behält den aktuellen Ticket-Status bei."
 
 #: ../channels/email/filters/system-filters.rst:141
 msgid "0200_postmaster_filter_follow_up_possible_check"
-msgstr ""
+msgstr "0200_postmaster_filter_follow_up_possible_check"
 
 #: ../channels/email/filters/system-filters.rst:140
-#, fuzzy
-#| msgid ""
-#| "For this reason make sure to also adjust each affected :doc:`groups "
-#| "setting </manage/groups/settings>`."
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
-"Stellen Sie aus diesem Grund sicher, dass Sie auch die :doc:`Gruppen-"
-"Einstellungen </manage/groups/settings>` anpassen."
+"Verarbeitet die E-Mails basierend auf der **Nachfrage möglich** "
+"Konfiguration in den :doc:`Gruppeneinstellungen</manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:145
 msgid "0900_postmaster_filter_bounce_follow_up_check"
-msgstr ""
+msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
 msgstr ""
+"Identifiziert Postmaster-Bounce-Benachrichtigungen und ordnet sie als "
+"Nachfrage dem ursprünglichen Ticket zu."
 
 #: ../channels/email/filters/system-filters.rst:150
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
-msgstr ""
+msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
 #: ../channels/email/filters/system-filters.rst:148
 msgid ""
@@ -3453,10 +3479,14 @@ msgid ""
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
 "their user preferences to suppress future notifications."
 msgstr ""
+"Identifiziert Postmaster-E-Mail-Benachrichtigungen über dauerhafte "
+"Zustellfehler und kennzeichnet die betroffenen Empfänger mit "
+"``mail_delivery_failed`` in den Benutzereinstellungen, um zukünftige "
+"Benachrichtigungen zu unterdrücken."
 
 #: ../channels/email/filters/system-filters.rst:155
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
-msgstr ""
+msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
 #: ../channels/email/filters/system-filters.rst:153
 msgid ""
@@ -3464,32 +3494,38 @@ msgid ""
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
 "of-office handling context."
 msgstr ""
+"Identifiziert Postmaster-E-Mail-Benachrichtigungen über vorübergehende "
+"Zustellfehler (verzögert, wiederholbar, Status ``4.4.1``) und behandelt die "
+"E-Mail im Kontext einer Abwesenheitsbenachrichtigung."
 
 #: ../channels/email/filters/system-filters.rst:159
 msgid "1000_postmaster_filter_database_check"
-msgstr ""
+msgstr "1000_postmaster_filter_database_check"
 
 #: ../channels/email/filters/system-filters.rst:158
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
 msgstr ""
+"Führt aktive benutzerdefinierte Email-Filter aus der Datenbank aus und "
+"protokolliert deren Verarbeitung."
 
 #: ../channels/email/filters/system-filters.rst:163
-#, fuzzy
-#| msgid "``last_internal_article``"
 msgid "5500_postmaster_internal_article_check"
-msgstr "``last_internal_article``"
+msgstr "5500_postmaster_internal_article_check"
 
 #: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
 msgstr ""
+"Setzt die Sichtbarkeit des Artikels auf intern, wenn es sich um eine Antwort "
+"auf einen internen Artikel handelt oder die letzte ausgehende E-Mail intern "
+"ist."
 
 #: ../channels/email/filters/system-filters.rst:167
 msgid "6005_postmaster_filter_identify_group"
-msgstr ""
+msgstr "6005_postmaster_filter_identify_group"
 
 #: ../channels/email/filters/system-filters.rst:166
 msgid ""
@@ -3497,10 +3533,13 @@ msgid ""
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
 "group."
 msgstr ""
+"Legt die Ticket-Gruppe fest, indem zuerst die expliziten Gruppen-Header "
+"geprüft werden, dann der vorhandene Ticket-Kontext (ID/Nummer), dann die "
+"Mailbox-/Gruppen-Zuordnung oder die Fallback-Standardgruppe."
 
 #: ../channels/email/filters/system-filters.rst:172
 msgid "6105_postmaster_filter_sender_is_system_address"
-msgstr ""
+msgstr "6105_postmaster_filter_sender_is_system_address"
 
 #: ../channels/email/filters/system-filters.rst:170
 msgid ""
@@ -3508,17 +3547,22 @@ msgid ""
 "or ``Customer``), depending on sender address, permissions, group access and "
 "ticket customer relation."
 msgstr ""
+"Erkennt System- oder Agenten-Absender und legt die Rolle des Artikel-"
+"Absenders fest (``Agent`` oder ``Kunde``), je nach Absenderadresse, "
+"Berechtigungen, Gruppenzugriff und Ticket-Kundenbeziehung."
 
 #: ../channels/email/filters/system-filters.rst:175
 #: ../channels/email/filters/system-filters.rst:176
 msgid "6500_postmaster_filter_identify_sender"
-msgstr ""
+msgstr "6500_postmaster_filter_identify_sender"
 
 #: ../channels/email/filters/system-filters.rst:175
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
 msgstr ""
+"Prüft, ob der Absender als Zammad Benutzer identifiziert werden kann und "
+"erstellt optional einen neuen Benutzer."
 
 #: ../channels/email/index.rst:13
 msgid "Control how Zammad **sends and receives email**."
@@ -5313,23 +5357,17 @@ msgstr ""
 "Zammad verbinden."
 
 #: ../channels/google/basic-setup.rst:49
-#, fuzzy
-#| msgid ""
-#| "By default, Zammad will **delete all emails** in your inbox during the "
-#| "import process. Use the *Keep Messages on Server* setting "
-#| "to :ref:`disable this behavior <google-keep-messages-on-server>` or "
-#| "enable :ref:`archive mode <archive-mode>`."
 msgid ""
 "By default, Zammad will **delete all emails** in your inbox during the "
 "import process. Use the *Keep Messages on Server* setting to :ref:`disable "
 "this behavior <google-keep-messages-on-server>` or enable :ref:`archive mode "
 "<archive-mode-google>`."
 msgstr ""
-"Standardmäßig **löscht Zammad alle E-Mails** in Ihrem Posteingang während "
-"des Importvorgangs. Verwenden Sie die Einstellung *Nachrichten auf dem "
-"Server behalten*, um :ref:`dieses Verhalten zu deaktivieren <google-keep-"
-"messages-on-server>` oder aktivieren Sie den :ref:`Archivmodus <archive-"
-"mode>`."
+":ref:`archive mode <archive-mode-google>`Standardmäßig **löscht Zammad alle "
+"E-Mails** in Ihrem Posteingang während des Importvorgangs. Verwenden Sie die "
+"Einstellung *Nachrichten auf dem Server behalten*, um :ref:`dieses Verhalten "
+"zu deaktivieren <google-keep-messages-on-server>` oder aktivieren Sie "
+"den :ref:`Archivmodus <archive-mode-google>`."
 
 #: ../channels/google/basic-setup.rst:53
 msgid ""
@@ -16124,7 +16162,7 @@ msgstr ""
 msgid "Webhook Examples"
 msgstr "Webhook-Beispiele"
 
-#: ../manage/webhook/examples.rst:15
+#: ../manage/webhook/examples.rst:16
 msgid ""
 "Find links to configuration examples below. They are split into individual "
 "pages for reasons of clearness. Make sure to invoke the webhook via trigger "
@@ -16137,7 +16175,7 @@ msgstr ""
 "Automatisierung aufrufen, siehe :doc:`Beispiel-Konfiguration eines Triggers "
 "<examples/generic-notifications-trigger>`."
 
-#: ../manage/webhook/examples.rst:20
+#: ../manage/webhook/examples.rst:21
 msgid ""
 ":doc:`examples/mattermost-notifications`: Use a Mattermost channel to "
 "receive Zammad notifications."
@@ -16145,7 +16183,7 @@ msgstr ""
 ":doc:`examples/mattermost-notifications`: Verwenden Sie einen Mattermost-"
 "Kanal, um Zammad-Benachrichtigungen zu erhalten."
 
-#: ../manage/webhook/examples.rst:22
+#: ../manage/webhook/examples.rst:23
 msgid ""
 ":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel "
 "to receive Zammad notifications."
@@ -16153,7 +16191,7 @@ msgstr ""
 ":doc:`examples/microsoft-teams-notifications`: Verwenden Sie einen Microsoft "
 "Teams-Kanal, um Zammad-Benachrichtigungen zu erhalten."
 
-#: ../manage/webhook/examples.rst:24
+#: ../manage/webhook/examples.rst:25
 msgid ""
 ":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to "
 "receive Zammad notifications."
@@ -16161,7 +16199,7 @@ msgstr ""
 ":doc:`examples/rocket-chat-notifications`: Verwenden Sie einen Rocket-Chat-"
 "Kanal, um Zammad-Benachrichtigungen zu erhalten."
 
-#: ../manage/webhook/examples.rst:26
+#: ../manage/webhook/examples.rst:27
 msgid ""
 ":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad "
 "notifications."
@@ -16169,7 +16207,7 @@ msgstr ""
 ":doc:`examples/slack-notifications`: Verwenden Sie einen Slack-Kanal, um "
 "Zammad-Benachrichtigungen zu erhalten."
 
-#: ../manage/webhook/examples.rst:28
+#: ../manage/webhook/examples.rst:29
 msgid ""
 ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push "
 "notification from Zammad on different devices like your smartphone."
@@ -16178,7 +16216,16 @@ msgstr ""
 "Benachrichtigungen von Zammad auf verschiedenen Geräten wie Ihrem Smartphone "
 "zu erhalten."
 
-#: ../manage/webhook/examples.rst:30
+#: ../manage/webhook/examples.rst:31
+msgid ""
+":doc:`examples/basic-notification`: A simple generic notification example "
+"you can use and adjust for different services."
+msgstr ""
+":doc:`examples/basic-notification`: Ein einfaches Beispiel für eine "
+"generische Benachrichtigung, die Sie für verschiedene Dienste verwenden und "
+"anpassen können."
+
+#: ../manage/webhook/examples.rst:33
 msgid ""
 ":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to "
 "new tickets."
@@ -16295,6 +16342,115 @@ msgstr "Aktions-Ausführung: Selektiv"
 msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr ""
 "Bedingungen für zu verarbeitende Objekte: **Aktion** > *ist* > erstellt"
+
+#: ../manage/webhook/examples/basic-notification.rst:2
+msgid "Basic Notification"
+msgstr "Einfache Benachrichtigung"
+
+#: ../manage/webhook/examples/basic-notification.rst:4
+msgid ""
+"This page serves as a basic example of a simple generic notification "
+"webhook. It uses the ``notification.`` variables like the pre-defined "
+"notification webhooks do. These variables provide human readable output for "
+"different ticket events. Make sure your external service can understand and "
+"parse the output and adjust or enhance it, where necessary."
+msgstr ""
+"Diese Seite dient als einfaches Beispiel für einen generischen "
+"Benachrichtigungs-Webhook. Sie verwendet die ``notification.`` Variablen wie "
+"die vordefinierten Benachrichtigungs-Webhooks. Diese Variablen liefern eine "
+"für den Menschen lesbare Ausgabe für verschiedene Ticket-Ereignisse. "
+"Vergewissern Sie sich, dass Ihr externer Dienst die Ausgabe verstehen und "
+"analysieren kann und passen das Beispiel gegebenenfalls an."
+
+#: ../manage/webhook/examples/basic-notification.rst:11
+msgid "Payload Example"
+msgstr "Nutzlast-Beispiel"
+
+#: ../manage/webhook/examples/basic-notification.rst:25 ../misc/variables.rst:2
+msgid "Variables"
+msgstr "Variablen"
+
+#: ../manage/webhook/examples/basic-notification.rst:27
+msgid "The payload contains the following variables:"
+msgstr "Die Nutzlast enthält die folgenden Variablen:"
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+msgid "``ticket.number``"
+msgstr "``ticket.number``"
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+msgid "The ticket number of the triggering ticket."
+msgstr "Die Ticket-Nummer des auslösenden Tickets."
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "``notification.subject``"
+msgstr "``notification.subject``"
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "The subject of the triggering ticket."
+msgstr "Der Betreff des auslösenden Tickets."
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``notification.message``"
+msgstr "``notification.message``"
+
+#: ../manage/webhook/examples/basic-notification.rst:36
+msgid "A short description of the triggering event."
+msgstr "Eine kurze Beschreibung des auslösenden Ereignisses."
+
+#: ../manage/webhook/examples/basic-notification.rst:38
+msgid "Examples:"
+msgstr "Beispiele:"
+
+#: ../manage/webhook/examples/basic-notification.rst:40
+msgid "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
+msgstr "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
+msgstr "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "``notification.link``"
+msgstr "``notification.link``"
+
+#: ../manage/webhook/examples/basic-notification.rst:44
+msgid "A link to the ticket which triggered the webhook."
+msgstr "Ein Link zu dem Ticket, das den Webhook ausgelöst hat."
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
+msgstr "Beispiel: ``https://zammad.example.com/#ticket/zoom/123``."
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "``notification.changes``"
+msgstr "``notification.changes``"
+
+#: ../manage/webhook/examples/basic-notification.rst:49
+msgid ""
+"A list of changes which were applied to the ticket attributes. In case the "
+"webhook was triggered without a ticket change, the last changes are listed "
+"here."
+msgstr ""
+"Eine Liste der Änderungen, die an den Ticket-Attributen vorgenommen wurden. "
+"Falls der Webhook ohne Ticketänderung ausgelöst wurde, werden hier die "
+"letzten Änderungen aufgeführt."
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "Example: ``* Priority: 2 normal -> 1 low\\n* Owner: - -> Emma Taylor``"
+msgstr "Beispiel: ``* Priority: 2 normal -> 1 low\\n* Owner: - -> Emma Taylor``"
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid "``notification.body``"
+msgstr "``notification.body``"
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid ""
+"If an article triggered the webhook or was part of the ticket changes, the "
+"variable contains the article's content. Otherwise, it is empty."
+msgstr ""
+"Wenn ein Artikel den Webhook getriggert hat oder Teil der Ticketänderungen "
+"war, enthält die Variable den Inhalt des Artikels. Andernfalls ist sie leer."
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
 msgid "Generic Notifications Trigger"
@@ -19536,10 +19692,6 @@ msgid ""
 msgstr ""
 "Erfahren Sie, wie Sie mit dem Expertenmodus von Zammad noch "
 "leistungsfähigere Bedingungen mit UND/ODER-Beziehungen erstellen können."
-
-#: ../misc/variables.rst:2
-msgid "Variables"
-msgstr "Variablen"
 
 #: ../misc/variables.rst:4
 msgid ""
