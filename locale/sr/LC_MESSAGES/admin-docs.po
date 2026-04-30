@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-23 13:15+0200\n"
-"PO-Revision-Date: 2026-04-16 10:02+0000\n"
+"POT-Creation-Date: 2026-04-24 11:27+0200\n"
+"PO-Revision-Date: 2026-04-28 15:02+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/sr/>\n"
@@ -1281,13 +1281,6 @@ msgstr ""
 "понашање <email-experts-keep-messages-on-server>`."
 
 #: ../channels/email/accounts/account-setup.rst:16
-#, fuzzy
-#| msgid ""
-#| "Zammad will **send an auto-reply message to every email it imports** "
-#| "(including the old ones!). Use the *Experts* dialog to :ref:`change this "
-#| "behavior <email-experts-import-as>` or to :doc:`disable auto-replies </"
-#| "manage/trigger>` prior adding an email account and to turn it back on "
-#| "once all your messages have been imported."
 msgid ""
 "Zammad will **send an auto-reply message to every email it imports** "
 "(including the old ones!). Use the *Experts* dialog to :ref:`change this "
@@ -1297,9 +1290,9 @@ msgid ""
 msgstr ""
 "Zammad ће **послати аутоматски одговор на сваку имејл поруку коју увезе** "
 "(укључујући и пређашње!). Користите дијалог *Стручњаци* да би "
-"сте :ref:`променили ово понашање <email-experts-import-as>` "
-"или :doc:`искључите аутоматске одговоре </manage/trigger>` пре него што "
-"додате имејл налог, и укључите их поново када све ваше поруке буду увезене."
+"сте :ref:`променили ово понашање <archive-mode-email>` или :doc:`искључите "
+"аутоматске одговоре </manage/trigger>` пре него што додате имејл налог, и "
+"укључите их поново када све ваше поруке буду увезене."
 
 #: ../channels/email/accounts/account-setup.rst:26
 msgid "**Gmail / G Suite users:**"
@@ -2977,55 +2970,50 @@ msgid ""
 "is important to be aware of them, as they can affect the behavior of Zammad "
 "when processing incoming emails. So this page has only informative character."
 msgstr ""
+"Zammad по подразумевано укључује такозване системске филтере. Они откривају "
+"одређене информације како би гарантовали исправну обраду имејл порука и "
+"аутоматски прилагођавали неке информације, у зависности од филтера и ваших "
+"подешавања. Ови филтери нису видљиви у Zammad корисничком интерфејсу нити се "
+"уопште могу подесити, али је важно бити свестан њиховог постојања јер могу "
+"утицати на понашање Zammada при обради долазних имејл порука. Дакле, ова "
+"страница има само информативни карактер."
 
 #: ../channels/email/filters/system-filters.rst:12
-#, fuzzy
-#| msgid "External Data Source"
 msgid "External Services"
-msgstr "Удаљени извор података"
+msgstr "Удаљени сервиси"
 
 #: ../channels/email/filters/system-filters.rst:14
 msgid ""
 "These filters identify incoming emails from certain external services and "
 "extract specific information to add them to tickets."
 msgstr ""
+"Ови филтери идентификују долазне имејл поруке од неких удаљених сервиса и "
+"издвајају одговарајуће информације ради њиховог снимања у тикете."
 
 #: ../channels/email/filters/system-filters.rst:26
 msgid "Service-Now"
 msgstr "Service-Now"
 
 #: ../channels/email/filters/system-filters.rst:18
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect Service Now emails and assign them to existing "
-#| "tickets, if the following requirements are met:"
 msgid ""
 "Detects `Service-Now <https://www.servicenow.com/>`_ emails and can assign "
 "them to existing tickets based on the incident ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad ће детектовати Service Now поруке и доделити их постојећим тикетима, "
-"ако су испуњени следећи услови:"
+"Детектује `Service-Now <https://www.servicenow.com/>`_ имејл поруке и "
+"додељује их постојећим тикетима на основу ID инцидента, ако су испуњени "
+"следећи услови:"
 
 #: ../channels/email/filters/system-filters.rst:22
-#, fuzzy
-#| msgid "Headers contain the ``X-ServiceNow-Generated`` header."
 msgid "Header contains ``X-ServiceNow-Generated``."
-msgstr "Порука садржи ``X-ServiceNow-Generated`` заглавље."
+msgstr "Заглавље садржи ``X-ServiceNow-Generated``."
 
 #: ../channels/email/filters/system-filters.rst:23
-#, fuzzy
-#| msgid "Subject does match the regex ``\\s(INC\\d+)\\s`` e.g. ``INC678439``."
 msgid "Subject matches regex ``\\s(INC\\d+)\\s``, e.g. ``INC678439``."
 msgstr ""
-"Предмет не задовољава регуларни израз ``\\s(INC\\d+)\\s``, нпр. "
-"``INC678439``."
+"Предмет задовољава регуларни израз ``\\s(INC\\d+)\\s``, нпр. ``INC678439``."
 
 #: ../channels/email/filters/system-filters.rst:25
-#, fuzzy
-#| msgid ""
-#| "See `Service-Now Mail Example <https://github.com/zammad/zammad/blob/"
-#| "stable/test/data/mail/mail090.box>`_ for comparison of your emails."
 msgid ""
 "See `Service-Now email example <https://github.com/zammad/zammad/blob/stable/"
 "test/data/mail/mail090.box>`_ for comparison of your emails."
@@ -3038,29 +3026,20 @@ msgid "JIRA"
 msgstr "JIRA"
 
 #: ../channels/email/filters/system-filters.rst:29
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect JIRA emails and assign them to existing tickets, if "
-#| "the following requirements are met:"
 msgid ""
 "Detects `JIRA <https://www.atlassian.com/software/jira>`_ emails and can "
 "assign them to existing tickets based on the issue ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad ће детектовати JIRA поруке и доделити их постојећим тикетима, ако су "
-"испуњени следећи услови:"
+"Детектује `JIRA <https://www.atlassian.com/software/jira>`_ имејл поруке и "
+"додељује их постојећим тикетима на основу ID проблема, ако су испуњени "
+"следећи услови:"
 
 #: ../channels/email/filters/system-filters.rst:33
-#, fuzzy
-#| msgid "Headers contain the ``X-JIRA-FingerPrint`` header."
 msgid "Header contains ``X-JIRA-FingerPrint``."
-msgstr "Порука садржи ``X-JIRA-FingerPrint`` заглавље."
+msgstr "Заглавље садржи ``X-JIRA-FingerPrint``."
 
 #: ../channels/email/filters/system-filters.rst:34
-#, fuzzy
-#| msgid ""
-#| "Subject does match the regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` e.g. "
-#| "``[JIRA] (SYS-422)``."
 msgid ""
 "Subject matches regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)``, e.g. ``[JIRA] "
 "(SYS-422)``."
@@ -3069,10 +3048,6 @@ msgstr ""
 "``[JIRA] (SYS-422)``."
 
 #: ../channels/email/filters/system-filters.rst:36
-#, fuzzy
-#| msgid ""
-#| "See `JIRA Mail Example <https://github.com/zammad/zammad/blob/stable/test/"
-#| "data/mail/mail103.box>`_ for comparison of your emails."
 msgid ""
 "See `JIRA email example <https://github.com/zammad/zammad/blob/stable/test/"
 "data/mail/mail103.box>`_ for comparison of your emails."
@@ -3093,6 +3068,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Icinga integration."
 msgstr ""
+"Детектује `Icinga <http://www.icinga.org>`_ имејл поруке. Када се открије "
+"имејл порука од Icinga-е, филтер издваја информације о надгледању (нпр. "
+"хост, сервис, стање) из поруке и додаје их у тикет. Када се погођен сервис "
+"врати, филтер може аутоматски да затвори тикет, у зависности од ваших "
+"подешавања Icinga интеграције."
 
 #: ../channels/email/filters/system-filters.rst:51
 #: ../system/integrations/index.rst:49
@@ -3107,6 +3087,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Nagios integration."
 msgstr ""
+"Детектује `Nagios <http://www.nagios.org>`_ имејл поруке. Када се открије "
+"имејл порука од Nagios-е, филтер издваја информације о надгледању (нпр. "
+"хост, сервис, стање) из поруке и додаје их у тикет. Када се погођен сервис "
+"врати, филтер може аутоматски да затвори тикет, у зависности од ваших "
+"подешавања Nagios интеграције."
 
 #: ../channels/email/filters/system-filters.rst:58
 #: ../system/integrations/checkmk/index.rst:2
@@ -3121,6 +3106,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Checkmk integration."
 msgstr ""
+"Детектује `Checkmk <https://checkmk.com/>`_ имејл поруке. Када се открије "
+"имејл порука од Checkmk-a, филтер издваја информације о надгледању (нпр. "
+"хост, сервис, стање) из поруке и додаје их у тикет. Када се погођен сервис "
+"врати, филтер може аутоматски да затвори тикет, у зависности од ваших "
+"подешавања Checkmk интеграције."
 
 #: ../channels/email/filters/system-filters.rst:65
 #: ../system/integrations/index.rst:48
@@ -3135,10 +3125,15 @@ msgid ""
 "service is up again, the filter can automatically close the ticket, "
 "depending on your settings of the Monit integration."
 msgstr ""
+"Детектује `Monit <https://mmonit.com/monit/>`_ имејл поруке. Када се открије "
+"имејл порука од Monit-a, филтер издваја информације о надгледању (нпр. хост, "
+"сервис, стање) из поруке и додаје их у тикет. Када се погођен сервис врати, "
+"филтер може аутоматски да затвори тикет, у зависности од ваших подешавања "
+"Monit интеграције."
 
 #: ../channels/email/filters/system-filters.rst:68
 msgid "Internal Email Handling"
-msgstr ""
+msgstr "Интерна обрада имејл порука"
 
 #: ../channels/email/filters/system-filters.rst:70
 msgid ""
@@ -3149,10 +3144,16 @@ msgid ""
 "on the filter number prefix. Because some of the filters depend on the "
 "results of previous filters."
 msgstr ""
+"Zammad-ова интерна обрада имејл порука се такође заснива на системским "
+"филтерима, нпр. провера наставка тикета или одабир одговарајућег клијента. "
+"Неки од ових филтера се могу подесити преко Zammad панела администратора. "
+"Следећи наслови укључују комплетан назив филтера ради лакше референце. "
+"Редослед извршавања се заснива на префикс броју филтера. Ово стога што неки "
+"од филтера зависе од резултата претходно извршених филтера."
 
 #: ../channels/email/filters/system-filters.rst:81
 msgid "0000_postmaster_filter_trusted"
-msgstr ""
+msgstr "0000_postmaster_filter_trusted"
 
 #: ../channels/email/filters/system-filters.rst:78
 msgid ""
@@ -3161,116 +3162,122 @@ msgid ""
 "section in the :doc:`header based actions </channels/email/email-headers>` "
 "documentation for more information."
 msgstr ""
+"Овај филтер уклања ``X-Zammad`` заглавља из непоузданих извора ради "
+"спречавања манипулације обраде имејл порука. Погледајте одељак о поузданим "
+"каналима у документацији о :doc:`радњама заглавља </channels/email/email-"
+"headers>` за више информација."
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "0001_postmaster_filter_secure_mailing"
-msgstr ""
+msgstr "0001_postmaster_filter_secure_mailing"
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "Handles PGP and S/MIME emails."
-msgstr ""
+msgstr "Обрађује PGP и S/MIME имејл поруке."
 
 #: ../channels/email/filters/system-filters.rst:100
 msgid "0006_postmaster_filter_auto_response_check"
-msgstr ""
+msgstr "0006_postmaster_filter_auto_response_check"
 
 #: ../channels/email/filters/system-filters.rst:87
 msgid ""
 "Checks if the email is an auto response. If yes, no auto reply from Zammad "
 "gets sent."
 msgstr ""
+"Проверава да ли је имејл порука аутоматски одговор. Уколико јесте, Zammad "
+"неће слати још један аутоматски одговор."
 
 #: ../channels/email/filters/system-filters.rst:90
 msgid "These headers are checked:"
-msgstr ""
+msgstr "Проверавају се следећа заглавља:"
 
 #: ../channels/email/filters/system-filters.rst:92
 msgid "``list-unsubscribe``"
-msgstr ""
+msgstr "``list-unsubscribe``"
 
 #: ../channels/email/filters/system-filters.rst:93
 msgid "``x-loop``"
-msgstr ""
+msgstr "``x-loop``"
 
 #: ../channels/email/filters/system-filters.rst:94
-#, fuzzy
-#| msgid "``preferences``"
 msgid "``precedence``"
-msgstr "``preferences``"
+msgstr "``precedence``"
 
 #: ../channels/email/filters/system-filters.rst:95
 msgid "``auto-submitted``"
-msgstr ""
+msgstr "``auto-submitted``"
 
 #: ../channels/email/filters/system-filters.rst:96
-#, fuzzy
-#| msgid "``x-zammad-is-auto-response``"
 msgid "``x-auto-response-suppress``"
-msgstr "``x-zammad-is-auto-response``"
+msgstr "``x-auto-response-suppress``"
 
 #: ../channels/email/filters/system-filters.rst:99
 msgid ""
 "If ``x-zammad-is-auto-response`` is present, further auto-response header "
 "checks are skipped."
 msgstr ""
+"Уколико је присутно ``x-zammad-is-auto-response``, даље провере заглавља "
+"аутоматског одговора ће бити прескочене."
 
 #: ../channels/email/filters/system-filters.rst:105
 msgid "0007_postmaster_filter_follow_up_check"
-msgstr ""
+msgstr "0007_postmaster_filter_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:103
 msgid ""
 "Identifies and routes follow-up emails based on the **Additional follow-up "
 "detection** in the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Идентификује и усмерава имејл поруке наставка на основу **Додатне детекције "
+"наставака** у :doc:`подешавањима канала <../settings>`."
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "0008_postmaster_filter_follow_up_merged"
-msgstr ""
+msgstr "0008_postmaster_filter_follow_up_merged"
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "Routes follow-up emails for merged tickets to the correct ticket."
-msgstr ""
+msgstr "Усмерава имејл поруке наставка за спојене тикете у одговарајући тикет."
 
 #: ../channels/email/filters/system-filters.rst:113
 msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr ""
+msgstr "0009_postmaster_filter_follow_up_assignment"
 
 #: ../channels/email/filters/system-filters.rst:111
-#, fuzzy
-#| msgid ""
-#| "For this reason make sure to also adjust each affected :doc:`groups "
-#| "setting </manage/groups/settings>`."
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
-"Из тог разлога обавезно прилагодите и сваку :doc:`групу </manage/groups/"
-"settings>`."
+"Поставља власника за имејл поруке наставка на основу **Доделе наставака** "
+"у :doc:`подешавањима групе </manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:118
 msgid "0011_postmaster_sender_based_on_reply_to"
-msgstr ""
+msgstr "0011_postmaster_sender_based_on_reply_to"
 
 #: ../channels/email/filters/system-filters.rst:116
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Поставља атрибут пошиљаоца/од чланка на основу **Пошиљалац на основу Reply-"
+"To заглавља** у :doc:`подешавањима канала <../settings>`."
 
 #: ../channels/email/filters/system-filters.rst:122
 msgid "0014_postmaster_filter_own_notification_loop_detection"
-msgstr ""
+msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
 #: ../channels/email/filters/system-filters.rst:121
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
 msgstr ""
+"Проверава да ли је имејл порука генерисано обавештење, и у том случају га "
+"игнорише ради спречавања имејл петље."
 
 #: ../channels/email/filters/system-filters.rst:129
 msgid "0015_postmaster_filter_identify_session_user"
-msgstr ""
+msgstr "0015_postmaster_filter_identify_session_user"
 
 #: ../channels/email/filters/system-filters.rst:125
 msgid ""
@@ -3280,56 +3287,63 @@ msgid ""
 "personal inboxes to the system show up as coming from the customers instead "
 "of the agent."
 msgstr ""
+"Идентификује корисника сесије преко ``x-zammad-session-user-id``. Уколико "
+"није наведен или је неважећи, враћа се на податке о пошиљаоцу и може додати "
+"корисника. Овај филтер такође обезбеђује да се тикети који су прослеђени на "
+"систем преко личног сандучета оператера приказују као да стижу од стране "
+"клијента."
 
 #: ../channels/email/filters/system-filters.rst:133
 msgid "0018_postmaster_import_archive"
-msgstr ""
+msgstr "0018_postmaster_import_archive"
 
 #: ../channels/email/filters/system-filters.rst:132
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
 msgstr ""
+"Обрађује имеј поруке које су увежене у :ref:`архивском режиму <archive-mode-"
+"email>`."
 
 #: ../channels/email/filters/system-filters.rst:137
 msgid "0030_postmaster_filter_out_of_office_check"
-msgstr ""
+msgstr "0030_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:136
 msgid ""
 "Identifies out-of-office auto-responder emails, assigns them to the correct "
 "ticket and keeps the current ticket state."
 msgstr ""
+"Идентификује имејл поруке аутоматског одговора ван канцеларије, додељује их "
+"одговарајућем тикету и одржава тренутно стање тикета."
 
 #: ../channels/email/filters/system-filters.rst:141
 msgid "0200_postmaster_filter_follow_up_possible_check"
-msgstr ""
+msgstr "0200_postmaster_filter_follow_up_possible_check"
 
 #: ../channels/email/filters/system-filters.rst:140
-#, fuzzy
-#| msgid ""
-#| "For this reason make sure to also adjust each affected :doc:`groups "
-#| "setting </manage/groups/settings>`."
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
-"Из тог разлога обавезно прилагодите и сваку :doc:`групу </manage/groups/"
-"settings>`."
+"Обрађује имејл поруке на основу **Могућег наставка** у :doc:`подешавањима "
+"групе </manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:145
 msgid "0900_postmaster_filter_bounce_follow_up_check"
-msgstr ""
+msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
 msgstr ""
+"Идентификује имејл поруке обавештења о postmaster преусмерењима и обрађује "
+"их као наставке изворних тикета."
 
 #: ../channels/email/filters/system-filters.rst:150
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
-msgstr ""
+msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
 #: ../channels/email/filters/system-filters.rst:148
 msgid ""
@@ -3337,10 +3351,14 @@ msgid ""
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
 "their user preferences to suppress future notifications."
 msgstr ""
+"Идентификује имејл поруке обавештења о postmaster преусмерењима трајно "
+"неуспелих испорука и обележава одговарајуће примаоце са "
+"``mail_delivery_failed`` у њиховим корисничким профилима ради сузбијања "
+"будућих обавештења."
 
 #: ../channels/email/filters/system-filters.rst:155
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
-msgstr ""
+msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
 #: ../channels/email/filters/system-filters.rst:153
 msgid ""
@@ -3348,32 +3366,37 @@ msgid ""
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
 "of-office handling context."
 msgstr ""
+"Идентификује имејл поруке обавештења о postmaster преусмерешињима привремено "
+"неуспелих испорука (одложено, поновљено, статус ``4.4.1``) и обележава "
+"поруке контекстом ван канцеларије."
 
 #: ../channels/email/filters/system-filters.rst:159
 msgid "1000_postmaster_filter_database_check"
-msgstr ""
+msgstr "1000_postmaster_filter_database_check"
 
 #: ../channels/email/filters/system-filters.rst:158
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
 msgstr ""
+"Извршава укључене прилагођене имејл postmaster филтере из базе података и "
+"води евиденцију њихове обраде."
 
 #: ../channels/email/filters/system-filters.rst:163
-#, fuzzy
-#| msgid "``last_internal_article``"
 msgid "5500_postmaster_internal_article_check"
-msgstr "``last_internal_article``"
+msgstr "5500_postmaster_internal_article_check"
 
 #: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
 msgstr ""
+"Поставља видљивост чланка на интерну уколико је у питању одговор на интерни "
+"чланак или последња одлазна имејл порука је интерна."
 
 #: ../channels/email/filters/system-filters.rst:167
 msgid "6005_postmaster_filter_identify_group"
-msgstr ""
+msgstr "6005_postmaster_filter_identify_group"
 
 #: ../channels/email/filters/system-filters.rst:166
 msgid ""
@@ -3381,10 +3404,13 @@ msgid ""
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
 "group."
 msgstr ""
+"Поставља групу тикета прво на основу изричитих заглавља групе, затим "
+"контекста тикета (ID/број), затим мапирања сандучета и групе или на "
+"подразумевану групу као последњу опцију."
 
 #: ../channels/email/filters/system-filters.rst:172
 msgid "6105_postmaster_filter_sender_is_system_address"
-msgstr ""
+msgstr "6105_postmaster_filter_sender_is_system_address"
 
 #: ../channels/email/filters/system-filters.rst:170
 msgid ""
@@ -3392,17 +3418,22 @@ msgid ""
 "or ``Customer``), depending on sender address, permissions, group access and "
 "ticket customer relation."
 msgstr ""
+"Детектује ситемске пошиљаоце или пошиљаоце оператера и поставља улогу "
+"пошиљаоца чланка (``Оператер`` или ``Клијент``), у зависности од адресе "
+"пошиљаоца, дозвола, приступа групи и клијента тикета."
 
 #: ../channels/email/filters/system-filters.rst:175
 #: ../channels/email/filters/system-filters.rst:176
 msgid "6500_postmaster_filter_identify_sender"
-msgstr ""
+msgstr "6500_postmaster_filter_identify_sender"
 
 #: ../channels/email/filters/system-filters.rst:175
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
 msgstr ""
+"Проеверава да ли пошиљалац може бити идентификован као Zammad корисник и "
+"опционо додаје новог корисника."
 
 #: ../channels/email/index.rst:13
 msgid "Control how Zammad **sends and receives email**."
@@ -5159,12 +5190,6 @@ msgstr ""
 "Zammad-ом."
 
 #: ../channels/google/basic-setup.rst:49
-#, fuzzy
-#| msgid ""
-#| "By default, Zammad will **delete all emails** in your inbox during the "
-#| "import process. Use the *Keep Messages on Server* setting "
-#| "to :ref:`disable this behavior <google-keep-messages-on-server>` or "
-#| "enable :ref:`archive mode <archive-mode>`."
 msgid ""
 "By default, Zammad will **delete all emails** in your inbox during the "
 "import process. Use the *Keep Messages on Server* setting to :ref:`disable "
@@ -5174,7 +5199,7 @@ msgstr ""
 "Подразумевано, Zammad **брише све имејл поруке** из вашег сандучета приликом "
 "увоза. Користите подешавање *Чувај поруке на серверу* да "
 "бисте :ref:`онемогућили ово понашање <google-keep-messages-on-server>` или "
-"укључите :ref:`архивски режим <archive-mode>`."
+"укључите :ref:`архивски режим <archive-mode-google>`."
 
 #: ../channels/google/basic-setup.rst:53
 msgid ""
@@ -15555,7 +15580,7 @@ msgstr ""
 msgid "Webhook Examples"
 msgstr "Примери повратних позива"
 
-#: ../manage/webhook/examples.rst:15
+#: ../manage/webhook/examples.rst:16
 msgid ""
 "Find links to configuration examples below. They are split into individual "
 "pages for reasons of clearness. Make sure to invoke the webhook via trigger "
@@ -15567,7 +15592,7 @@ msgstr ""
 "окидача или планера након додавања, погледајте :doc:`пример окидача "
 "<examples/generic-notifications-trigger>`."
 
-#: ../manage/webhook/examples.rst:20
+#: ../manage/webhook/examples.rst:21
 msgid ""
 ":doc:`examples/mattermost-notifications`: Use a Mattermost channel to "
 "receive Zammad notifications."
@@ -15575,7 +15600,7 @@ msgstr ""
 ":doc:`examples/mattermost-notifications`: Користите Mattermost канал да "
 "бисте примали Zammad обавештења."
 
-#: ../manage/webhook/examples.rst:22
+#: ../manage/webhook/examples.rst:23
 msgid ""
 ":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel "
 "to receive Zammad notifications."
@@ -15583,7 +15608,7 @@ msgstr ""
 ":doc:`examples/microsoft-teams-notifications`: Користите Microsoft Teams "
 "канал да бисте примали Zammad обавештења."
 
-#: ../manage/webhook/examples.rst:24
+#: ../manage/webhook/examples.rst:25
 msgid ""
 ":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to "
 "receive Zammad notifications."
@@ -15591,7 +15616,7 @@ msgstr ""
 ":doc:`examples/rocket-chat-notifications`: Користите Rocket Chat канал да "
 "бисте примали Zammad обавештења."
 
-#: ../manage/webhook/examples.rst:26
+#: ../manage/webhook/examples.rst:27
 msgid ""
 ":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad "
 "notifications."
@@ -15599,7 +15624,7 @@ msgstr ""
 ":doc:`examples/slack-notifications`: Користите Slack канал да бисте примали "
 "Zammad обавештења."
 
-#: ../manage/webhook/examples.rst:28
+#: ../manage/webhook/examples.rst:29
 msgid ""
 ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push "
 "notification from Zammad on different devices like your smartphone."
@@ -15607,7 +15632,15 @@ msgstr ""
 ":doc:`examples/ntfy-notifications`: Користите ntfy сервис за пријем пуш "
 "обавештења од Zammad-а на различитим уређајима као што су мобилни телефони."
 
-#: ../manage/webhook/examples.rst:30
+#: ../manage/webhook/examples.rst:31
+msgid ""
+":doc:`examples/basic-notification`: A simple generic notification example "
+"you can use and adjust for different services."
+msgstr ""
+":doc:`examples/basic-notification`: Једноставан пример генеричког обавештања "
+"који можете да искористите и прилагодите различитим сервисима."
+
+#: ../manage/webhook/examples.rst:33
 msgid ""
 ":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to "
 "new tickets."
@@ -15719,6 +15752,116 @@ msgstr "Извршавање радње: Селективно"
 #: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
 msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr "Услови за захваћене објекте: **Радња** > *је* > додато"
+
+#: ../manage/webhook/examples/basic-notification.rst:2
+msgid "Basic Notification"
+msgstr "Основно обавештење"
+
+#: ../manage/webhook/examples/basic-notification.rst:4
+msgid ""
+"This page serves as a basic example of a simple generic notification "
+"webhook. It uses the ``notification.`` variables like the pre-defined "
+"notification webhooks do. These variables provide human readable output for "
+"different ticket events. Make sure your external service can understand and "
+"parse the output and adjust or enhance it, where necessary."
+msgstr ""
+"Ова страница служи као основни пример једноставног генеричког обавештења "
+"путем повратног позива. Користи ``notification.`` променљиве на исти начин "
+"као и повратни позиви по шаблону. Ове променљиве пружају податке о "
+"различитим догађајима тикета. Обезбедите да ваш удаљени сервис разуме и може "
+"да обради податке, и по потреби их прилагодите или унапредите."
+
+#: ../manage/webhook/examples/basic-notification.rst:11
+msgid "Payload Example"
+msgstr "Пример података"
+
+#: ../manage/webhook/examples/basic-notification.rst:25 ../misc/variables.rst:2
+msgid "Variables"
+msgstr "Променљиве"
+
+#: ../manage/webhook/examples/basic-notification.rst:27
+msgid "The payload contains the following variables:"
+msgstr "Подаци садрже следеће променљиве:"
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+msgid "``ticket.number``"
+msgstr "``ticket.number``"
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+msgid "The ticket number of the triggering ticket."
+msgstr "Број тикета који је покренуо позив."
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "``notification.subject``"
+msgstr "``notification.subject``"
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "The subject of the triggering ticket."
+msgstr "Предметни назив тикета који је покренуо позив."
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``notification.message``"
+msgstr "``notification.message``"
+
+#: ../manage/webhook/examples/basic-notification.rst:36
+msgid "A short description of the triggering event."
+msgstr "Кратак опис догађаја који је покренуо позив."
+
+#: ../manage/webhook/examples/basic-notification.rst:38
+msgid "Examples:"
+msgstr "Примери:"
+
+#: ../manage/webhook/examples/basic-notification.rst:40
+msgid "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
+msgstr ""
+"``Измењено од стране \"Nicole Braun\" у 04/24/2026 10:26 (Europe/Belgrade)``"
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
+msgstr "``Последњи пут измењено у 04/24/2026  9:23 am (Europe/Belgrade)``"
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "``notification.link``"
+msgstr "``notification.link``"
+
+#: ../manage/webhook/examples/basic-notification.rst:44
+msgid "A link to the ticket which triggered the webhook."
+msgstr "Линк на тикет који је покренуо повратни позив."
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
+msgstr "Пример: ``https://zammad.example.com/#ticket/zoom/123``."
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "``notification.changes``"
+msgstr "``notification.changes``"
+
+#: ../manage/webhook/examples/basic-notification.rst:49
+msgid ""
+"A list of changes which were applied to the ticket attributes. In case the "
+"webhook was triggered without a ticket change, the last changes are listed "
+"here."
+msgstr ""
+"Списак измена које су примењене на атрибуте тикета. У случају да је повратни "
+"позив покренут без измене тикета, овде ће бити излистане последње промене."
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "Example: ``* Priority: 2 normal -> 1 low\\n* Owner: - -> Emma Taylor``"
+msgstr ""
+"Пример: ``* Приоритет: 2 нормалан -> 1 низак\\n* Власник: - -> Emma Taylor``"
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid "``notification.body``"
+msgstr "``notification.body``"
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid ""
+"If an article triggered the webhook or was part of the ticket changes, the "
+"variable contains the article's content. Otherwise, it is empty."
+msgstr ""
+"Уколико је додати чланак покренуо повратни позив или је био део измена "
+"тикета, променљива ће имати вредност садржаја чланка. У супротном, биће "
+"празна."
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
 msgid "Generic Notifications Trigger"
@@ -18860,10 +19003,6 @@ msgid ""
 msgstr ""
 "Сазнајте како вам Zammad-ов стручни режим за услове омогућава да дефинишете "
 "још моћније услове са AND/OR клаузулама."
-
-#: ../misc/variables.rst:2
-msgid "Variables"
-msgstr "Променљиве"
 
 #: ../misc/variables.rst:4
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-23 13:15+0200\n"
+"POT-Creation-Date: 2026-04-24 11:27+0200\n"
 "PO-Revision-Date: 2026-04-13 06:57+0000\n"
 "Last-Translator: chen <chenchen@4chian.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
@@ -12800,7 +12800,7 @@ msgstr ""
 msgid "Webhook Examples"
 msgstr ""
 
-#: ../manage/webhook/examples.rst:15
+#: ../manage/webhook/examples.rst:16
 msgid ""
 "Find links to configuration examples below. They are split into individual "
 "pages for reasons of clearness. Make sure to invoke the webhook via trigger "
@@ -12808,37 +12808,43 @@ msgid ""
 "notifications-trigger>`."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:20
+#: ../manage/webhook/examples.rst:21
 msgid ""
 ":doc:`examples/mattermost-notifications`: Use a Mattermost channel to "
 "receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:22
+#: ../manage/webhook/examples.rst:23
 msgid ""
 ":doc:`examples/microsoft-teams-notifications`: Use a Microsoft Teams channel "
 "to receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:24
+#: ../manage/webhook/examples.rst:25
 msgid ""
 ":doc:`examples/rocket-chat-notifications`: Use a Rocket Chat channel to "
 "receive Zammad notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:26
+#: ../manage/webhook/examples.rst:27
 msgid ""
 ":doc:`examples/slack-notifications`: Use a Slack channel to receive Zammad "
 "notifications."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:28
+#: ../manage/webhook/examples.rst:29
 msgid ""
 ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push "
 "notification from Zammad on different devices like your smartphone."
 msgstr ""
 
-#: ../manage/webhook/examples.rst:30
+#: ../manage/webhook/examples.rst:31
+msgid ""
+":doc:`examples/basic-notification`: A simple generic notification example "
+"you can use and adjust for different services."
+msgstr ""
+
+#: ../manage/webhook/examples.rst:33
 msgid ""
 ":doc:`examples/add-checklist-to-ticket`: Add a checklist from a template to "
 "new tickets."
@@ -12929,6 +12935,109 @@ msgstr ""
 
 #: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
 msgid "Condidions for affected objects: **Action** > *is* > created"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:2
+#, fuzzy
+msgid "Basic Notification"
+msgstr "聊天小部件的配置"
+
+#: ../manage/webhook/examples/basic-notification.rst:4
+msgid ""
+"This page serves as a basic example of a simple generic notification "
+"webhook. It uses the ``notification.`` variables like the pre-defined "
+"notification webhooks do. These variables provide human readable output for "
+"different ticket events. Make sure your external service can understand and "
+"parse the output and adjust or enhance it, where necessary."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:11
+#, fuzzy
+msgid "Payload Example"
+msgstr "例如"
+
+#: ../manage/webhook/examples/basic-notification.rst:25 ../misc/variables.rst:2
+msgid "Variables"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:27
+#, fuzzy
+msgid "The payload contains the following variables:"
+msgstr "最终结果将如下所示："
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+#, fuzzy
+msgid "``ticket.number``"
+msgstr "宏"
+
+#: ../manage/webhook/examples/basic-notification.rst:30
+msgid "The ticket number of the triggering ticket."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "``notification.subject``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:33
+msgid "The subject of the triggering ticket."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``notification.message``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:36
+msgid "A short description of the triggering event."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:38
+#, fuzzy
+msgid "Examples:"
+msgstr "例如"
+
+#: ../manage/webhook/examples/basic-notification.rst:40
+msgid "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:41
+msgid "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "``notification.link``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:44
+msgid "A link to the ticket which triggered the webhook."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:46
+msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "``notification.changes``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:49
+msgid ""
+"A list of changes which were applied to the ticket attributes. In case the "
+"webhook was triggered without a ticket change, the last changes are listed "
+"here."
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:53
+msgid "Example: ``* Priority: 2 normal -> 1 low\\n* Owner: - -> Emma Taylor``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid "``notification.body``"
+msgstr ""
+
+#: ../manage/webhook/examples/basic-notification.rst:56
+msgid ""
+"If an article triggered the webhook or was part of the ticket changes, the "
+"variable contains the article's content. Otherwise, it is empty."
 msgstr ""
 
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:2
@@ -15614,10 +15723,6 @@ msgstr ""
 msgid ""
 "Learn how Zammad's expert mode for conditions allows you to create even more "
 "powerful conditions with AND/OR relations."
-msgstr ""
-
-#: ../misc/variables.rst:2
-msgid "Variables"
 msgstr ""
 
 #: ../misc/variables.rst:4
@@ -28021,10 +28126,6 @@ msgstr "显示当前在您的Zammad实例上使用的版本。"
 #, fuzzy
 #~ msgid "Groups:"
 #~ msgstr "组"
-
-#, fuzzy
-#~ msgid "Example:"
-#~ msgstr "例如"
 
 #, fuzzy
 #~ msgid ""
