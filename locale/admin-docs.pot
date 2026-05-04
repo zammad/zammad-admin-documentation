@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-29 13:10+0200\n"
+"POT-Creation-Date: 2026-05-04 11:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,88 +121,124 @@ msgstr ""
 msgid "This AI agent is capable of setting a ticket priority based on the title of the ticket and the content of the last article. You can choose to use all priorities or limit them to specific ones. In case you limit the priorities, you can also provide a description for each priority the AI agent can choose from."
 msgstr ""
 
-#: ../ai/ai-agents.rst:99
-msgid "Ticket Text Extractor"
+#: ../ai/ai-agents.rst:97
+msgid "Ticket Tagger"
 msgstr ""
 
-#: ../ai/ai-agents.rst:101
-msgid "This AI agent is capable of extracting specific information from the ticket's content. You can use it to extract information such as a product name, an order number, a serial number or any other information you want. Another way without using AI is to use :doc:`/channels/email/filters` for email based channels."
+#: ../ai/ai-agents.rst:99
+msgid "This AI agent is capable of assigning :doc:`tags </manage/tags>` to tickets. The instructions are pre-filled with a general example so you can easily adjust them to your use case. The instructions are separated into three sections:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:103
+msgid "**General tagging principles**: Here you can give general instructions how tickets should be tagged and how they are used in your organization."
+msgstr ""
+
+#: ../ai/ai-agents.rst:105
+msgid "**Priority tagging rules**: Rules about how specific the tags should be and which tags are preferred in case of multiple fitting tags."
 msgstr ""
 
 #: ../ai/ai-agents.rst:107
-msgid "Make sure to have a :doc:`custom ticket attribute </system/objects>` in which you want to store the extracted information. Otherwise, create a suitable one before configuring the AI agent. The field type must be one of the following:"
+msgid "**New tag strategy**: Define instructions on how the agent should deal with existing and new tags (e.g. prefer existing tags over new ones). This configuration option is only available if new tags are allowed in your system."
 msgstr ""
 
 #: ../ai/ai-agents.rst:111
+msgid "After adjusting the instructions, you have to configure the assigning mode and specify a number of tags for the chosen option. The available **Tag assignment mode** options are:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:115
+msgid "**Add to existing tags**: existing tags remain unchanged and the AI agent adds the specified number of tags to the ticket."
+msgstr ""
+
+#: ../ai/ai-agents.rst:117
+msgid "**Total shouldn't exceed**: the total number of tags in the ticket should not exceed the configured number of tags."
+msgstr ""
+
+#: ../ai/ai-agents.rst:119
+msgid "**Replace existing tags with**: This option removes all existing tags in the ticket and adds the specified number of tags."
+msgstr ""
+
+#: ../ai/ai-agents.rst:125
+msgid "Ticket Text Extractor"
+msgstr ""
+
+#: ../ai/ai-agents.rst:127
+msgid "This AI agent is capable of extracting specific information from the ticket's content. You can use it to extract information such as a product name, an order number, a serial number or any other information you want. Another way without using AI is to use :doc:`/channels/email/filters` for email based channels."
+msgstr ""
+
+#: ../ai/ai-agents.rst:133
+msgid "Make sure to have a :doc:`custom ticket attribute </system/objects>` in which you want to store the extracted information. Otherwise, create a suitable one before configuring the AI agent. The field type must be one of the following:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:137
 #: ../system/objects/types.rst:125
 msgid "Text"
 msgstr ""
 
-#: ../ai/ai-agents.rst:112
+#: ../ai/ai-agents.rst:138
 msgid "Textarea"
 msgstr ""
 
-#: ../ai/ai-agents.rst:113
+#: ../ai/ai-agents.rst:139
 msgid "Integer"
 msgstr ""
 
-#: ../ai/ai-agents.rst:114
+#: ../ai/ai-agents.rst:140
 msgid "Single selection"
 msgstr ""
 
-#: ../ai/ai-agents.rst:115
+#: ../ai/ai-agents.rst:141
 msgid "Single tree selection"
 msgstr ""
 
-#: ../ai/ai-agents.rst:117
+#: ../ai/ai-agents.rst:143
 msgid "For select-type attributes, the wizard allows you to limit the options the AI agent can choose from and to add descriptions for them. For these types, the AI agent also receives the list of allowed options to choose from in case of a match."
 msgstr ""
 
-#: ../ai/ai-agents.rst:123
+#: ../ai/ai-agents.rst:149
 msgid "Extraction Rules"
 msgstr ""
 
-#: ../ai/ai-agents.rst:125
+#: ../ai/ai-agents.rst:151
 msgid "Here you tell the agent what information to extract. It is highly recommended to provide some examples and include different variants of how the information might appear in the ticket. The wizard includes a default example for extracting an order number. Replace or adjust it to your own use case. You can find a few examples in the :ref:`extractor-examples` section below as inspiration."
 msgstr ""
 
-#: ../ai/ai-agents.rst:133
+#: ../ai/ai-agents.rst:159
 msgid "Priority Rules"
 msgstr ""
 
-#: ../ai/ai-agents.rst:135
+#: ../ai/ai-agents.rst:161
 msgid "The priority rules tell the agent how to deal with multiple matches. There is a default example that should cover common scenarios. Adjust it if your scenario differs."
 msgstr ""
 
-#: ../ai/ai-agents.rst:139
+#: ../ai/ai-agents.rst:165
 msgid "Example priority rules:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:150
+#: ../ai/ai-agents.rst:176
 msgid "Article(s) to Analyze"
 msgstr ""
 
-#: ../ai/ai-agents.rst:152
+#: ../ai/ai-agents.rst:178
 msgid "Choose between:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:154
+#: ../ai/ai-agents.rst:180
 msgid "All articles"
 msgstr ""
 
-#: ../ai/ai-agents.rst:155
+#: ../ai/ai-agents.rst:181
 msgid "Last article (newest)"
 msgstr ""
 
-#: ../ai/ai-agents.rst:156
+#: ../ai/ai-agents.rst:182
 msgid "First article (oldest)"
 msgstr ""
 
-#: ../ai/ai-agents.rst:158
+#: ../ai/ai-agents.rst:184
 msgid "Depending on the way, time and condition an AI agent runs, the relevant article(s) can be different. In most cases, *Last article (newest)* should be fine. In certain cases, however, it might make sense to use another option. For example, if the agent is triggered manually by a macro, *All articles* could fit as well."
 msgstr ""
 
-#: ../ai/ai-agents.rst:167
+#: ../ai/ai-agents.rst:193
 #: ../channels/email/filters.rst:103
 #: ../channels/email/filters.rst:103
 #: ../channels/email/filters.rst:103
@@ -211,27 +247,27 @@ msgstr ""
 msgid "Examples"
 msgstr ""
 
-#: ../ai/ai-agents.rst:169
+#: ../ai/ai-agents.rst:195
 msgid "Expand the following code block to see these **extraction rules** examples:"
 msgstr ""
 
-#: ../ai/ai-agents.rst:171
+#: ../ai/ai-agents.rst:197
 msgid "Extract order number"
 msgstr ""
 
-#: ../ai/ai-agents.rst:172
+#: ../ai/ai-agents.rst:198
 msgid "Extract contact person for insurance claim"
 msgstr ""
 
-#: ../ai/ai-agents.rst:173
+#: ../ai/ai-agents.rst:199
 msgid "Extract product name"
 msgstr ""
 
-#: ../ai/ai-agents.rst:225
+#: ../ai/ai-agents.rst:251
 msgid "Ticket Title Rewriter"
 msgstr ""
 
-#: ../ai/ai-agents.rst:227
+#: ../ai/ai-agents.rst:253
 msgid "This AI agent is capable of rephrasing the ticket title based on the content of the last article. The title is not considered by the agent and gets completely rewritten. This can be useful if your customers often send requests with unclear subjects or if you have a specific channel which only creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 

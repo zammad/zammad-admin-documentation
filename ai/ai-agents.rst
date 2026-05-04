@@ -93,6 +93,32 @@ ticket and the content of the last article. You can choose to use all priorities
 or limit them to specific ones. In case you limit the priorities, you can also
 provide a description for each priority the AI agent can choose from.
 
+Ticket Tagger
+^^^^^^^^^^^^^
+
+This AI agent is capable of assigning :doc:`tags </manage/tags>` to tickets.
+The instructions are pre-filled with a general example so you can easily adjust
+them to your use case. The instructions are separated into three sections:
+
+- **General tagging principles**: Here you can give general instructions how
+  tickets should be tagged and how they are used in your organization.
+- **Priority tagging rules**: Rules about how specific the tags should be and
+  which tags are preferred in case of multiple fitting tags.
+- **New tag strategy**: Define instructions on how the agent should deal with
+  existing and new tags (e.g. prefer existing tags over new ones). This
+  configuration option is only available if new tags are allowed in your system.
+
+After adjusting the instructions, you have to configure the assigning mode and
+specify a number of tags for the chosen option. The available **Tag assignment
+mode** options are:
+
+- **Add to existing tags**: existing tags remain unchanged and the AI agent adds
+  the specified number of tags to the ticket.
+- **Total shouldn't exceed**: the total number of tags in the ticket should not
+  exceed the configured number of tags.
+- **Replace existing tags with**: This option removes all existing tags in the
+  ticket and adds the specified number of tags.
+
 .. _text-extractor-ai-agent:
 
 Ticket Text Extractor
