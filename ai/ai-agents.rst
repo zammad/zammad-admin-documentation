@@ -96,9 +96,9 @@ provide a description for each priority the AI agent can choose from.
 Ticket Tagger
 ^^^^^^^^^^^^^
 
-This AI agent is capable of assigning tags to tickets. The instructions are
-pre-filled with a general example so you can easily adjust them to your use
-case. The instructions are separated into three sections:
+This AI agent is capable of assigning :doc:`tags </manage/tags>` to tickets.
+The instructions are pre-filled with a general example so you can easily adjust
+them to your use case. The instructions are separated into three sections:
 
 - **General tagging principles**: Here you can give general instructions how
   tickets should be tagged and how they are used in your organization.
@@ -106,10 +106,11 @@ case. The instructions are separated into three sections:
   which tags are preferred in case of multiple fitting tags.
 - **New tag strategy**: Define instructions on how the agent should deal with
   existing and new tags (e.g. prefer existing tags over new ones). This
-  configuration option is only available if new tags are allowed in your system).
+  configuration option is only available if new tags are allowed in your system.
 
 After adjusting the instructions, you have to configure the assigning mode and
-specify a number of tags for the chosen option. The available options are:
+specify a number of tags for the chosen option. The available **Tag assignment
+mode** options are:
 
 - **Add to existing tags**: existing tags remain unchanged and the AI agent adds
   the specified number of tags to the ticket.
