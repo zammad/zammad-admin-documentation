@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-27 10:47+0200\n"
-"PO-Revision-Date: 2026-04-26 11:02+0000\n"
+"POT-Creation-Date: 2026-04-29 13:10+0200\n"
+"PO-Revision-Date: 2026-05-02 17:02+0000\n"
 "Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/it/>\n"
@@ -32,6 +32,13 @@ msgid ""
 "<provider>` before activating the feature. Otherwise, a warning message will "
 "tell you to do so."
 msgstr ""
+"Per aiutare i tuoi agenti a concentrarsi su attività più importanti, puoi "
+"creare agenti IA in grado di farsi carico delle mansioni di routine. Questi "
+"agenti IA sono gestiti nelle impostazioni di amministrazione di Zammad alla "
+"voce *IA > Agenti IA* e richiedono il permesso ``admin.ai_agent``.Assicurati "
+"di configurare un :doc:provider IA <provider> prima di attivare la "
+"funzionalità. In caso contrario, un messaggio di avviso ti segnalerà di "
+"farlo."
 
 #: ../ai/ai-agents.rst:10
 msgid ""
@@ -230,9 +237,8 @@ msgstr ""
 "l'agente AI può scegliere."
 
 #: ../ai/ai-agents.rst:99
-#, fuzzy
 msgid "Ticket Text Extractor"
-msgstr "Gestione del tempo"
+msgstr "Estrattore di testo del ticket"
 
 #: ../ai/ai-agents.rst:101
 msgid ""
@@ -242,6 +248,12 @@ msgid ""
 "Another way without using AI is to use :doc:`/channels/email/filters` for "
 "email based channels."
 msgstr ""
+"Questo agente IA è in grado di estrarre informazioni specifiche dal "
+"contenuto del ticket. Puoi usarlo per estrarre dati come il nome di un "
+"prodotto, un numero d'ordine,un numero di serie o qualsiasi altra "
+"informazione desiderata. Un'alternativa che non prevede l'uso dell'IA "
+"consiste nell'utilizzare i :doc:/channels/email/filters per i canali basati "
+"su e-mail."
 
 #: ../ai/ai-agents.rst:107
 msgid ""
@@ -250,6 +262,10 @@ msgid ""
 "suitable one before configuring the AI agent. The field type must be one of "
 "the following:"
 msgstr ""
+"Assicurati di avere un :doc:attributo ticket personalizzato </system/"
+"objects> in cui memorizzare le informazioni estratte. In caso contrario, "
+"creane uno adatto prima di configurare l'agente IA. Il tipo di campo deve "
+"essere uno dei seguenti:"
 
 #: ../ai/ai-agents.rst:111 ../system/objects/types.rst:125
 msgid "Text"
@@ -257,19 +273,19 @@ msgstr "Testo"
 
 #: ../ai/ai-agents.rst:112
 msgid "Textarea"
-msgstr ""
+msgstr "Area di testo"
 
 #: ../ai/ai-agents.rst:113
 msgid "Integer"
-msgstr ""
+msgstr "Intero"
 
 #: ../ai/ai-agents.rst:114
 msgid "Single selection"
-msgstr ""
+msgstr "Selezione singola"
 
 #: ../ai/ai-agents.rst:115
 msgid "Single tree selection"
-msgstr ""
+msgstr "Selezione ad albero singola"
 
 #: ../ai/ai-agents.rst:117
 msgid ""
@@ -278,10 +294,14 @@ msgid ""
 "the AI agent also receives the list of allowed options to choose from in "
 "case of a match."
 msgstr ""
+"Per gli attributi di tipo selezione, la procedura guidata consente di "
+"limitare le opzioni tra cui l'agente AI può scegliere e di aggiungere "
+"descrizioni per esse. Per questi tipi, l'agente AI riceve anche l'elenco "
+"delle opzioni consentite tra cui scegliere in caso di corrispondenza."
 
 #: ../ai/ai-agents.rst:123
 msgid "Extraction Rules"
-msgstr ""
+msgstr "Regole di estrazione"
 
 #: ../ai/ai-agents.rst:125
 msgid ""
@@ -292,11 +312,16 @@ msgid ""
 "case. You can find a few examples in the :ref:`extractor-examples` section "
 "below as inspiration."
 msgstr ""
+"Qui si indica all'agente quali informazioni estrarre. È altamente "
+"raccomandato fornire alcuni esempi e includere diverse varianti di come le "
+"informazioni potrebbero apparire nel ticket. La procedura guidata include un "
+"esempio predefinito per l'estrazione di un numero d'ordine. Sostituiscilo o "
+"adattalo al tuo caso d'uso. Puoi trovare alcuni esempi nella sezione "
+":ref:`extractor-examples` qui sotto come ispirazione."
 
 #: ../ai/ai-agents.rst:133
-#, fuzzy
 msgid "Priority Rules"
-msgstr "Priorità"
+msgstr "Regole di priorità"
 
 #: ../ai/ai-agents.rst:135
 msgid ""
@@ -304,31 +329,33 @@ msgid ""
 "is a default example that should cover common scenarios. Adjust it if your "
 "scenario differs."
 msgstr ""
+"Le regole di priorità indicano all'agente come gestire corrispondenze "
+"multiple. Esiste un esempio predefinito che dovrebbe coprire scenari comuni. "
+"Modificalo se il tuo scenario è diverso."
 
 #: ../ai/ai-agents.rst:139
 msgid "Example priority rules:"
-msgstr ""
+msgstr "Esempio di regole di priorità:"
 
 #: ../ai/ai-agents.rst:150
 msgid "Article(s) to Analyze"
-msgstr ""
+msgstr "Articolo/i da Analizzare"
 
 #: ../ai/ai-agents.rst:152
 msgid "Choose between:"
-msgstr ""
+msgstr "Scegli tra:"
 
 #: ../ai/ai-agents.rst:154
-#, fuzzy
 msgid "All articles"
-msgstr "Articolo"
+msgstr "Tutti gli articoli"
 
 #: ../ai/ai-agents.rst:155
 msgid "Last article (newest)"
-msgstr ""
+msgstr "Ultimo articolo (il più recente)"
 
 #: ../ai/ai-agents.rst:156
 msgid "First article (oldest)"
-msgstr ""
+msgstr "Primo articolo (il più vecchio)"
 
 #: ../ai/ai-agents.rst:158
 msgid ""
@@ -338,6 +365,12 @@ msgid ""
 "option. For example, if the agent is triggered manually by a macro, *All "
 "articles* could fit as well."
 msgstr ""
+"A seconda del modo, del tempo e della condizione in cui un agente AI viene "
+"eseguito, l'articolo (o gli articoli) pertinente può essere diverso. Nella "
+"maggior parte dei casi, *Ultimo articolo (il più recente)* dovrebbe andare "
+"bene. In certi casi, tuttavia, potrebbe avere senso utilizzare un'altra "
+"opzione. Ad esempio, se l'agente viene attivato manualmente da una macro, "
+"*Tutti gli articoli* potrebbe essere appropriato."
 
 #: ../ai/ai-agents.rst:167 ../channels/email/filters.rst:103
 #: ../manage/groups/access-levels.rst:78
@@ -348,18 +381,20 @@ msgstr "Esempi"
 msgid ""
 "Expand the following code block to see these **extraction rules** examples:"
 msgstr ""
+"Espandi il seguente blocco di codice per vedere questi esempi di **regole di "
+"estrazione**:"
 
 #: ../ai/ai-agents.rst:171
 msgid "Extract order number"
-msgstr ""
+msgstr "Estrai numero d'ordine"
 
 #: ../ai/ai-agents.rst:172
 msgid "Extract contact person for insurance claim"
-msgstr ""
+msgstr "Estrai persona di contatto per richiesta di risarcimento assicurativo"
 
 #: ../ai/ai-agents.rst:173
 msgid "Extract product name"
-msgstr ""
+msgstr "Estrai nome del prodotto"
 
 #: ../ai/ai-agents.rst:225
 msgid "Ticket Title Rewriter"
@@ -381,10 +416,8 @@ msgstr ""
 "web)."
 
 #: ../ai/kb-answer-generation.rst:2
-#, fuzzy
-#| msgid "Knowledge Base: Icons"
 msgid "Knowledge Base Answer Generation"
-msgstr "Knowledge Base: Icone"
+msgstr "Generazione di Risposte dalla Conoscenza di base"
 
 #: ../ai/kb-answer-generation.rst:4
 msgid ""
@@ -394,6 +427,11 @@ msgid ""
 "tickets more efficiently and your customers to resolve their issues on their "
 "own."
 msgstr ""
+"Questa funzionalità consente ai tuoi agenti di avviare la creazione di una "
+"risposta per la knowledge base basata sull'IA a partire da un ticket. Ciò "
+"può essere utile per creare contenuti della knowledge base per problemi "
+"comuni, aiutando i tuoi agenti a rispondere ai futuri ticket in modo più "
+"efficiente e i tuoi clienti a risolvere i problemi in autonomia."
 
 #: ../ai/kb-answer-generation.rst:9
 msgid ""
@@ -404,38 +442,43 @@ msgid ""
 "``admin.ai_assistance_kb_answer_from_ticket_generation`` is required to "
 "access it."
 msgstr ""
+"Per utilizzare questa funzionalità, sono richiesti una :doc:`knowledge base "
+"</manage/knowledge-base>` e un :doc:`provider IA </ai/provider>` configurati "
+"e abilitati. Per abilitare questa funzione, vai su *IA > Generazione "
+"risposte KB* nelle impostazioni di amministrazione di Zammad. Per accedervi "
+"è necessario il permesso "
+"``admin.ai_assistance_kb_answer_from_ticket_generation``."
 
 #: ../ai/kb-answer-generation.rst:16
-#, fuzzy
-#| msgid "Important Information"
 msgid "Important information:"
-msgstr "Informazioni Importanti"
+msgstr "Informazione importante:"
 
 #: ../ai/kb-answer-generation.rst:18
 msgid ""
 "The knowledge base answer is generated as draft and doesn't get published "
 "automatically."
 msgstr ""
+"La risposta della knowledge base viene generata come bozza e non viene "
+"pubblicata automaticamente."
 
 #: ../ai/kb-answer-generation.rst:20
-#, fuzzy
-#| msgid ""
-#| "Customize the navigation menu that appears in the header of your "
-#| "knowledge base."
 msgid "The answer is generated in the default language of your knowledge base."
 msgstr ""
-"Personalizza il menu di navigazione che appare nell'intestazione della tua "
-"knowledge base."
+"La risposta viene generata nella lingua predefinita della tua knowledge base."
 
 #: ../ai/kb-answer-generation.rst:21
 msgid ""
 "The answer includes a note in the content and a tag (``ai-generated``) about "
 "the AI generation."
 msgstr ""
+"La risposta include una nota nel contenuto e un tag (``ai-generated``) "
+"riguardo alla generazione tramite IA."
 
 #: ../ai/kb-answer-generation.rst:23
 msgid "A link to the answer is included in the ticket it was generated from."
 msgstr ""
+"Un collegamento alla risposta viene incluso nel ticket da cui è stata "
+"generata."
 
 #: ../ai/kb-answer-generation.rst:24
 msgid ""
@@ -443,6 +486,9 @@ msgid ""
 "the (human) agent has editor permissions. The AI then chooses one of these "
 "categories."
 msgstr ""
+"La richiesta all'IA include un elenco delle categorie della knowledge base "
+"per le quali l'agente (umano) ha permessi di modifica. L'IA sceglie quindi "
+"una di queste categorie."
 
 #: ../ai/kb-answer-generation.rst:29
 msgid ""
@@ -450,6 +496,9 @@ msgid ""
 "information in the response, make sure your agents carefully review it "
 "before the answer gets used or even published."
 msgstr ""
+"Sebbene vi siano istruzioni per rimuovere le informazioni personali e "
+"specifiche del cliente nella risposta, assicurati che i tuoi agenti la "
+"rivedano attentamente prima che venga utilizzata o pubblicata."
 
 #: ../ai/kb-answer-generation.rst:33
 msgid ""
@@ -457,10 +506,13 @@ msgid ""
 "the **Related knowledge** section and trigger it by clicking the ``AI "
 "generate`` button."
 msgstr ""
+"Gli agenti possono trovare l'opzione nella scheda del ticket nella vista "
+"dettaglio del ticket, sotto la sezione **Conoscenza correlata**, e attivarla "
+"cliccando sul pulsante ``Genera con IA``."
 
 #: ../ai/kb-answer-generation.rst:None
 msgid "KB answer generation in ticket tab"
-msgstr ""
+msgstr "Generazione risposte KB nella scheda del ticket"
 
 #: ../ai/provider.rst:2 ../ai/provider.rst:45
 msgid "Provider"
@@ -942,6 +994,14 @@ msgid ""
 "warning message will tell you to do so. Activate the feature by turning on "
 "the switch."
 msgstr ""
+"Gli strumenti dell'assistente di scrittura di Zammad consentono agli agenti "
+"di applicare modifiche basate sull'IA ai propri testi prima di salvarli o "
+"inviarli. Per accedervi nella sezione di amministrazione di Zammad, sotto "
+"*IA > Assistente di scrittura*, è necessario il permesso "
+"``admin.ai_assistance_text_tools``. Assicurati di configurare un "
+":doc:`provider IA <provider>` prima di attivare la funzionalità. In caso "
+"contrario, un messaggio di avviso ti segnalerà di farlo. Attiva la funzione "
+"azionando l'interruttore."
 
 #: ../ai/writing-assistant.rst:13
 msgid "Manage Tools"
@@ -962,11 +1022,14 @@ msgid ""
 "limitation to specific groups, a feedback summary, the last feedback reset "
 "time and a description."
 msgstr ""
+"La sezione principale dello schermo mostra una tabella in cui puoi trovare "
+"tutti gli strumenti di scrittura disponibili. La tabella include il nome "
+"dello strumento, la limitazione a gruppi specifici, un riepilogo dei "
+"feedback, l'ora dell'ultimo ripristino dei feedback e una descrizione."
 
 #: ../ai/writing-assistant.rst:24
-#, fuzzy
 msgid "General Handling"
-msgstr "Generale"
+msgstr "Gestione generale"
 
 #: ../ai/writing-assistant.rst:26
 msgid ""
@@ -978,10 +1041,17 @@ msgid ""
 "field in the :ref:`configuration` section below. Some use cases for "
 "individual writing assistant tools could be:"
 msgstr ""
+"Per creare un nuovo strumento dell'assistente di scrittura, puoi iniziare da "
+"zero utilizzando il pulsante **Nuovo strumento assistente di scrittura** in "
+"alto a destra, oppure clonarne uno esistente simile al tuo caso d'uso e "
+"adattarlo. In entrambi i casi, si aprirà una finestra di configurazione dove "
+"potrai regolare le impostazioni dello strumento. Puoi trovare una "
+"spiegazione di ogni campo nella sezione :ref:`configuration` sottostante. "
+"Alcuni casi d'uso per i singoli strumenti di scrittura potrebbero essere:"
 
 #: ../ai/writing-assistant.rst:34
 msgid "Translation to a specific language"
-msgstr ""
+msgstr "Traduzione in una lingua specifica"
 
 #: ../ai/writing-assistant.rst:35
 msgid "Apply company and/or sector specific wording"
@@ -1005,12 +1075,18 @@ msgid ""
 "the **Clone** and **Delete** action as well as download and reset the "
 "feedback (more on that below)."
 msgstr ""
+"L'ultima colonna della tabella include il menu delle azioni ︙ dove puoi "
+"trovare le opzioni **Clona** ed **Elimina**, oltre alla possibilità di "
+"scaricare e ripristinare i feedback (maggiori dettagli in seguito)."
 
 #: ../ai/writing-assistant.rst:44
 msgid ""
 "To edit a tool, simply click on its row. This opens a configuration dialog "
 "like for creating a new writing assistant tool where you can configure it."
 msgstr ""
+"Per modificare uno strumento, clicca semplicemente sulla riga "
+"corrispondente. Si aprirà una finestra di configurazione simile a quella per "
+"la creazione di un nuovo strumento, dove potrai configurarlo."
 
 #: ../ai/writing-assistant.rst:49
 msgid ""
@@ -1019,10 +1095,14 @@ msgid ""
 "as expected, you can still have a look at the instructions of the default "
 "tools."
 msgstr ""
+"Valuta l'idea di clonare uno strumento esistente. In questo modo potrai "
+"usare le istruzioni attuali come punto di partenza e adattarle alle tue "
+"esigenze. Nel caso in cui non funzioni come previsto, potrai sempre "
+"consultare le istruzioni degli strumenti predefiniti."
 
 #: ../ai/writing-assistant.rst:54
 msgid "Feedback Handling"
-msgstr ""
+msgstr "Gestione dei feedback"
 
 #: ../ai/writing-assistant.rst:56
 msgid ""
@@ -1033,6 +1113,12 @@ msgid ""
 "optionally add a comment to explain why they are not satisfied with the "
 "result."
 msgstr ""
+"I tuoi agenti possono fornire feedback sui risultati degli strumenti "
+"dell'assistente di scrittura. Questo ti permette di monitorare l'efficacia "
+"degli strumenti e se siano necessari degli aggiustamenti. Gli agenti possono "
+"scegliere tra una reazione positiva (pollice su) e una negativa (pollice giù)"
+". In caso di reazione negativa, possono facoltativamente aggiungere un "
+"commento per spiegare perché non sono soddisfatti del risultato."
 
 #: ../ai/writing-assistant.rst:62
 msgid ""
@@ -1041,6 +1127,11 @@ msgid ""
 "the feedback data (including your agents' comments) by clicking **Download "
 "feedback report** in the ︙ action menu."
 msgstr ""
+"Nella colonna dei feedback della tabella puoi vedere il rapporto tra "
+"reazioni positive e negative rispetto all'utilizzo totale dello strumento. "
+"Per approfondire, puoi scaricare i dati dei feedback (inclusi i commenti "
+"degli agenti) cliccando su **Scarica report feedback** nel menu delle azioni "
+"︙."
 
 #: ../ai/writing-assistant.rst:67
 msgid ""
@@ -1052,12 +1143,21 @@ msgid ""
 "old feedback by downloading the global feedback report in the :doc:`provider "
 "configuration <provider>`."
 msgstr ""
+"Per **Ripristinare i feedback**, usa la voce corrispondente nel menu delle "
+"azioni ︙. Questo azzera il rapporto dei feedback nella tabella e i feedback "
+"già raccolti non saranno più presenti nel report. Il ripristino può essere "
+"utile se hai apportato modifiche alle istruzioni e vuoi iniziare a "
+"raccogliere feedback per la versione aggiornata. Dopo un ripristino, puoi "
+"comunque accedere ai vecchi feedback scaricando il report globale nella "
+":doc:`configurazione del provider <provider>`."
 
 #: ../ai/writing-assistant.rst:77
 msgid ""
 "To improve a writing assistant tool and compare the results before and after "
 "your adjustments, you have two options:"
 msgstr ""
+"Per migliorare uno strumento dell'assistente di scrittura e confrontare i "
+"risultati prima e dopo le modifiche, hai due opzioni:"
 
 #: ../ai/writing-assistant.rst:80
 msgid ""
@@ -1066,12 +1166,20 @@ msgid ""
 "before the reset. Either download the report **before** doing the reset or "
 "download the global feedback report from the provider configuration."
 msgstr ""
+"Apporta le modifiche allo strumento e ripristina i feedback. Tieni presente "
+"che il report dei feedback specifico per quella funzione non includerà più i "
+"dati precedenti al ripristino. Scarica il report **prima** di eseguire il "
+"ripristino oppure scarica il report globale dalla configurazione del "
+"provider."
 
 #: ../ai/writing-assistant.rst:85
 msgid ""
 "Clone the tool, deactivate the old and adjust the cloned one. This allows "
 "you to even compare the like and dislike ratio directly in the UI."
 msgstr ""
+"Clona lo strumento, disattiva quello vecchio e modifica quello clonato. "
+"Questo ti permette di confrontare direttamente nell'interfaccia il rapporto "
+"tra reazioni positive e negative."
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:28
 #: ../channels/microsoft365-graph/accounts.rst:18
@@ -1090,6 +1198,9 @@ msgid ""
 "Adding or editing a tool opens a configuration dialog. If you want to add a "
 "new tool, consider cloning an existing one to have a good starting point."
 msgstr ""
+"L'aggiunta o la modifica di uno strumento apre una finestra di "
+"configurazione. Se desideri aggiungere un nuovo strumento, valuta l'idea di "
+"clonarne uno esistente per avere un buon punto di partenza."
 
 #: ../ai/writing-assistant.rst:99 ../channels/email/filters.rst:47
 #: ../channels/form.rst:19 ../manage/calendars.rst:49
@@ -1107,6 +1218,9 @@ msgid ""
 "Add a name for the writing assistant tool. This is what your agents see when "
 "they open the writing assistant tool menu in an article they write."
 msgstr ""
+"Aggiungi un nome per lo strumento dell'assistente di scrittura. Questo è ciò "
+"che i tuoi agenti vedranno quando apriranno il menu dell'assistente di "
+"scrittura in un articolo che stanno scrivendo."
 
 #: ../ai/writing-assistant.rst:131
 msgid "Custom instructions"
@@ -1236,6 +1350,7 @@ msgstr "Attivo"
 #: ../ai/writing-assistant.rst:147
 msgid "Set the writing assistant tool to active or inactive."
 msgstr ""
+"Imposta lo strumento dell'assistente di scrittura come attivo o inattivo."
 
 #: ../ai/writing-assistant.rst:149
 msgid ""
@@ -1592,6 +1707,12 @@ msgid ""
 "trigger>` prior adding an email account and to turn it back on once all your "
 "messages have been imported."
 msgstr ""
+"Zammad **invierà un messaggio di risposta automatica a ogni e-mail "
+"importata** (comprese quelle vecchie!). Usa la finestra *Esperti* per "
+":ref:`cambiare questo comportamento <archive-mode-email>` o per "
+":doc:`disattivare le risposte automatiche </manage/trigger>` prima di "
+"aggiungere un account e-mail, e riattivarle una volta importati tutti i "
+"messaggi."
 
 #: ../channels/email/accounts/account-setup.rst:26
 msgid "**Gmail / G Suite users:**"
@@ -2318,6 +2439,8 @@ msgid ""
 "The “From:” address on system notifications can be configured "
 "under :doc:`Channels > Email > Settings > Notification Sender <../settings>`."
 msgstr ""
+"L'indirizzo \"Da:\" per le notifiche di sistema può essere configurato in "
+":doc:`Canali > E-mail > Impostazioni > Mittente notifiche <../settings>`."
 
 #: ../channels/email/accounts/email-notification.rst:41
 msgid "🤔 **This looks familiar... Where have I seen it before?**"
@@ -3142,12 +3265,22 @@ msgid ""
 "scheduler jobs). So if your use case isn't covered by filters, consider "
 "using triggers or scheduler jobs instead."
 msgstr ""
+"Con i filtri nei canali basati su e-mail (\"filtri postmaster\"), puoi "
+"regolare il comportamento di Zammad, automatizzare azioni ed estrarre "
+"informazioni quando viene ricevuta un'e-mail. I filtri si basano su "
+"condizioni e distinguono tra azioni per la creazione del ticket e per il suo "
+"aggiornamento. Le opzioni disponibili differiscono da quelle presenti in "
+"altri tipi di automazione (trigger e pianificazioni). Se il tuo caso d'uso "
+"non è coperto dai filtri, valuta l'uso di trigger o pianificazioni."
 
 #: ../channels/email/filters.rst:24
 msgid ""
 "Zammad includes some built-in system filters by default which you can't see "
 "or modify. Check the system filters section below for more information."
 msgstr ""
+"Zammad include per impostazione predefinita alcuni filtri di sistema "
+"integrati che non possono essere visualizzati o modificati. Consulta la "
+"sezione dei filtri di sistema qui sotto per ulteriori informazioni."
 
 #: ../channels/email/filters.rst:30
 msgid ""
@@ -3155,6 +3288,10 @@ msgid ""
 "where you can configure it. To modify an existing filter, just click on its "
 "row in the table, which opens the same dialog."
 msgstr ""
+"Per creare un nuovo filtro, clicca sul pulsante **Nuovo**. Si aprirà una "
+"finestra dove potrai configurarlo. Per modificare un filtro esistente, "
+"clicca semplicemente sulla sua riga nella tabella per aprire la stessa "
+"finestra."
 
 #: ../channels/email/filters.rst:34
 msgid ""
@@ -3164,6 +3301,11 @@ msgid ""
 "start from scratch. Instead of deleting a filter, consider to setting it to "
 "inactive so you can easily activate it again later."
 msgstr ""
+"In aggiunta a ciò, puoi clonare o eliminare un filtro cliccando su ``⠇`` per "
+"aprire il menu delle azioni e selezionare l'opzione corrispondente. La "
+"clonazione può essere utile se hai una configurazione complessa e non vuoi "
+"iniziare da zero. Invece di eliminare un filtro, valuta di impostarlo come "
+"inattivo in modo da poterlo riattivare facilmente in seguito."
 
 #: ../channels/email/filters.rst:40
 msgid ""
@@ -3172,16 +3314,22 @@ msgid ""
 "of the following**) and the action to define the changes for matching emails "
 "(**Perform actions**)."
 msgstr ""
+"Oltre ad alcune meta-informazioni, la configurazione consiste "
+"fondamentalmente in due parti: la condizione per definire quali e-mail sono "
+"interessate (**Soddisfa tutte le seguenti**) e l'azione per definire le "
+"modifiche per le e-mail corrispondenti (**Esegui azioni**)."
 
 #: ../channels/email/filters.rst:46
 msgid ""
 "Name of the filter. This is also shown in the ticket history if the filter "
 "has been applied to a ticket."
 msgstr ""
+"Nome del filtro. Questo viene visualizzato anche nella cronologia del ticket "
+"se il filtro è stato applicato a un ticket."
 
 #: ../channels/email/filters.rst:75
 msgid "Match all of the following"
-msgstr ""
+msgstr "Soddisfa tutte le seguenti"
 
 #: ../channels/email/filters.rst:50
 msgid ""
@@ -3192,6 +3340,13 @@ msgid ""
 "the :doc:`object conditions page </misc/object-conditions/basics>`, where "
 "you can find details about how the operators work."
 msgstr ""
+"Definisci quali e-mail devono essere interessate dal filtro in base alle "
+"condizioni. Puoi utilizzare diversi controlli sugli attributi dell'e-mail, "
+"come il mittente, l'oggetto o le intestazioni personalizzate. Tutti devono "
+"corrispondere affinché l'azione venga applicata. Le condizioni funzionano in "
+"modo simile ad altre sezioni di Zammad. Consulta la pagina :doc:`condizioni "
+"degli oggetti </misc/object-conditions/basics>`, dove puoi trovare dettagli "
+"sul funzionamento degli operatori."
 
 #: ../channels/email/filters.rst:57
 msgid ""
@@ -3203,6 +3358,15 @@ msgid ""
 "``(?<name>)`` and include the part you want to extract. For the order number "
 "example, it could look like ``.*[Oo]rder.*\\D(?<order_number>\\d+).*``."
 msgstr ""
+"È persino possibile estrarre informazioni dalle e-mail in arrivo e "
+"utilizzarle nelle azioni. Un esempio potrebbe essere l'estrazione di un "
+"numero d'ordine dall'oggetto per scriverlo in un attributo personalizzato "
+"dell'oggetto. Questo avviene tramite le espressioni regolari (regex) e i "
+"loro gruppi di acquisizione. Per estrarre una stringa, usa l'operatore "
+"*corrisponde alla regex*, aggiungi un gruppo di acquisizione denominato tra "
+"parentesi come ``(?<nome>)`` e includi la parte che vuoi estrarre. Per "
+"l'esempio del numero d'ordine, potrebbe apparire così: ``.*[Oo]rder.*\\D"
+"(?<order_number>\\d+).*``."
 
 #: ../channels/email/filters.rst:65
 msgid ""
@@ -3215,16 +3379,27 @@ msgid ""
 "capture groups to prevent them from getting overwritten when using them in "
 "more than one condition part in a single filter."
 msgstr ""
+"Puoi anche utilizzare più gruppi di acquisizione in una singola parte della "
+"condizione o usarli in più parti della condizione per diversi attributi. "
+"Tieni presente che tutte le parti della condizione devono corrispondere "
+"affinché l'azione venga applicata. Valuta l'uso di un filtro separato nel "
+"caso in cui tu voglia estrarre informazioni da attributi diversi e tali "
+"informazioni potrebbero non essere sempre presenti. Sebbene sia possibile "
+"utilizzare acquisizioni non denominate, si consiglia di utilizzare gruppi di "
+"acquisizione denominati per evitare che vengano sovrascritti quando vengono "
+"usati in più di una parte della condizione in un singolo filtro."
 
 #: ../channels/email/filters.rst:74
 msgid ""
 "Another way to extract text is by using a :ref:`text extractor AI agent "
 "<text-extractor-ai-agent>`."
 msgstr ""
+"Un altro modo per estrarre testo è l'utilizzo di un :ref:`agente IA "
+"estrattore di testo <text-extractor-ai-agent>`."
 
 #: ../channels/email/filters.rst:92
 msgid "Perform actions"
-msgstr ""
+msgstr "Esegui azioni"
 
 #: ../channels/email/filters.rst:78
 msgid ""
@@ -3233,6 +3408,10 @@ msgid ""
 "Additionally, you have some related options available like changing the "
 "visibility of the article."
 msgstr ""
+"Definisci quali azioni devono essere eseguite sulle e-mail corrispondenti. "
+"Puoi distinguere tra le azioni per la creazione del ticket e quelle per "
+"l'aggiornamento del ticket. Inoltre, sono disponibili alcune opzioni "
+"correlate, come la modifica della visibilità dell'articolo."
 
 #: ../channels/email/filters.rst:83
 msgid ""
@@ -3241,6 +3420,10 @@ msgid ""
 "storing the extracted string (e.g. ticket title or a custom object attribute "
 "of a text type)."
 msgstr ""
+"Se hai estratto informazioni in una condizione, puoi utilizzarle nelle "
+"azioni e scriverle in qualsiasi attributo disponibile e idoneo a memorizzare "
+"la stringa estratta (ad esempio, il titolo del ticket o un attributo "
+"personalizzato dell'oggetto di tipo testo)."
 
 #: ../channels/email/filters.rst:88
 msgid ""
@@ -3250,22 +3433,31 @@ msgid ""
 "the capture group, e.g. ``#{regexp.1}`` for the first capture group. Make "
 "sure to always use the ``regexp`` namespace."
 msgstr ""
+"Per scrivere la stringa estratta, usa la variabile ``#{regexp.nome}``, dove "
+"``nome`` è il nome del gruppo di acquisizione definito nella condizione, ad "
+"es. ``#{regexp.order_number}``. Per i gruppi di acquisizione non denominati, "
+"usa il numero del gruppo, ad es. ``#{regexp.1}`` per il primo gruppo. "
+"Assicurati di utilizzare sempre il namespace ``regexp``."
 
 #: ../channels/email/filters.rst:95
 msgid ""
 "Add a note about the filter. This note is only for internal use and visible "
 "for other admins."
 msgstr ""
+"Aggiungi una nota sul filtro. Questa nota è solo per uso interno e visibile "
+"agli altri amministratori."
 
 #: ../channels/email/filters.rst:99
 msgid ""
 "Set the filter to active or inactive. Only active filters are applied to "
 "incoming emails."
 msgstr ""
+"Imposta il filtro come attivo o inattivo. Solo i filtri attivi vengono "
+"applicati alle e-mail in arrivo."
 
 #: ../channels/email/filters.rst:106
 msgid "Group Assignment Based on Sender Domain"
-msgstr ""
+msgstr "Assegnazione del gruppo in base al dominio del mittente"
 
 #: ../channels/email/filters.rst:109 ../channels/email/filters.rst:122
 #: ../channels/email/filters.rst:134 ../channels/email/filters.rst:147
@@ -3281,6 +3473,7 @@ msgstr "Esempio"
 msgid ""
 "Automatically move emails from ``@amazon.com`` to the \"Purchasing\" group."
 msgstr ""
+"Sposta automaticamente le e-mail da ``@amazon.com`` al gruppo \"Acquisti\"."
 
 #: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
 #: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
@@ -3291,7 +3484,7 @@ msgstr "Condizione"
 
 #: ../channels/email/filters.rst:112
 msgid "**From:** *matches regex:* ``(\\.|@)amazon\\.com``"
-msgstr ""
+msgstr "**Da:** *corrisponde alla regex:* ``(\\.|@)amazon\\.com``"
 
 #: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
 #: ../channels/email/filters.rst:140 ../channels/email/filters.rst:155
@@ -3311,70 +3504,72 @@ msgstr "Azione"
 
 #: ../channels/email/filters.rst:115
 msgid "**Group:** Purchasing"
-msgstr ""
+msgstr "**Gruppo:** Acquisti"
 
 #: ../channels/email/filters.rst:118
 msgid "Organization-Based Ticket Assignment"
-msgstr ""
+msgstr "Assegnazione ticket basata sull'organizzazione"
 
 #: ../channels/email/filters.rst:121
 msgid ""
 "Automatically dispatch tickets to responsible staff based on the "
 "organization name."
 msgstr ""
+"Smista automaticamente i ticket al personale responsabile in base al nome "
+"dell'organizzazione."
 
 #: ../channels/email/filters.rst:125
 msgid "**Organization:** *starts with one of* ``A`` ``B`` ``C``"
-msgstr ""
+msgstr "**Organizzazione:** *inizia con uno di* ``A`` ``B`` ``C``"
 
 #: ../channels/email/filters.rst:128
 msgid "**Owner:** Emily Adams"
-msgstr ""
+msgstr "**Proprietario:** Emily Adams"
 
 #: ../channels/email/filters.rst:131
 msgid "VIP Customer Handling"
-msgstr ""
+msgstr "Gestione clienti VIP"
 
 #: ../channels/email/filters.rst:134
 msgid "Automatically increase the priority of tickets from a VIP customer."
 msgstr ""
+"Aumenta automaticamente la priorità dei ticket provenienti da un cliente VIP."
 
 #: ../channels/email/filters.rst:137
 msgid "**From:** *contains* ``ourvipcustomer@example.com``"
-msgstr ""
+msgstr "**Da:** *contiene* ``ourvipcustomer@example.com``"
 
 #: ../channels/email/filters.rst:140
 msgid "**Priority:** 3 high"
-msgstr ""
+msgstr "**Priorità:** 3 alta"
 
 #: ../channels/email/filters.rst:143
-#, fuzzy
 msgid "Spam Handling"
-msgstr "Generale"
+msgstr "Gestione dello spam"
 
 #: ../channels/email/filters.rst:146
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin)."
 msgstr ""
+"Aggiunge automaticamente un tag e chiude i ticket di spam che sono stati "
+"contrassegnati come tali da un filtro antispam esterno (es. SpamAssassin)."
 
 #: ../channels/email/filters.rst:150
 msgid "**X-Spam-Flag:** *contains* ``YES``"
-msgstr ""
+msgstr "**X-Spam-Flag:** *contiene* ``YES``"
 
 #: ../channels/email/filters.rst:153
-#, fuzzy
-#| msgid "add ``spam``"
 msgid "**Tag:** *add* ``spam``"
-msgstr "aggiungi ``spam``"
+msgstr "**Tag:** *add* ``spam``"
 
 #: ../channels/email/filters.rst:155
 msgid "**State:** closed"
-msgstr ""
+msgstr "**Stato:** chiuso"
 
 #: ../channels/email/filters.rst:158
 msgid "Extract Information from Subject"
-msgstr ""
+msgstr "Estrarre informazioni dall'oggetto"
 
 #: ../channels/email/filters.rst:161
 msgid ""
@@ -3382,32 +3577,40 @@ msgid ""
 "unnamed capture group) and write it to the custom object attribute \"Invoice "
 "number\"."
 msgstr ""
+"Estrai automaticamente un numero di fattura dall'oggetto dell'e-mail (con un "
+"gruppo di acquisizione non denominato) e scrivilo nell'attributo "
+"personalizzato dell'oggetto \"Numero fattura\"."
 
 #: ../channels/email/filters.rst:166
 msgid "**Subject:** *matches regex* ``.*[Ii]nvoice.*\\D(\\d+).*``"
-msgstr ""
+msgstr "**Oggetto:** *corrisponde alla regex* ``.*[Ii]nvoice.*\\D(\\d+).*``"
 
 #: ../channels/email/filters.rst:169
 msgid "**Invoice number:** ``#{regexp.1}``"
-msgstr ""
+msgstr "**Numero fattura:** ``#{regexp.1}``"
 
 #: ../channels/email/filters.rst:172
 msgid "Extract Information from Email Body"
-msgstr ""
+msgstr "Estrarre informazioni dal corpo dell'e-mail"
 
 #: ../channels/email/filters.rst:175
 msgid ""
 "Automatically extract an order number from the email body (with a named "
 "capture group) and write it to the custom object attribute \"Order number\"."
 msgstr ""
+"Estrai automaticamente un numero d'ordine dal corpo dell'e-mail (con un "
+"gruppo di acquisizione denominato) e scrivilo nell'attributo personalizzato "
+"dell'oggetto \"Numero d'ordine\"."
 
 #: ../channels/email/filters.rst:180
 msgid "**Body:** *matches regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+).*``"
 msgstr ""
+"**Corpo:** *corrisponde alla regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+)"
+".*``"
 
 #: ../channels/email/filters.rst:183
 msgid "**Order number:** ``#{regexp.order_number}``"
-msgstr ""
+msgstr "**Numero d'ordine:** ``#{regexp.order_number}``"
 
 #: ../channels/email/filters.rst:186
 #: ../channels/email/filters/system-filters.rst:2
@@ -3422,6 +3625,12 @@ msgid ""
 "at our separate subpage about :doc:`filters/system-filters` where you can "
 "find more details."
 msgstr ""
+"Zammad include per impostazione predefinita alcuni filtri di sistema "
+"integrati. Non sono visibili nell'interfaccia utente. Lo scopo è quello di "
+"affinare il comportamento di Zammad per le e-mail provenienti da sistemi "
+"comuni che presentano formattazioni particolari. Consulta la nostra "
+"sottopagina dedicata ai :doc:`filtri di sistema <filters/system-filters>` "
+"per trovare maggiori dettagli."
 
 #: ../channels/email/filters/system-filters.rst:4
 msgid ""
@@ -3457,30 +3666,23 @@ msgid "Service-Now"
 msgstr "Service-Now"
 
 #: ../channels/email/filters/system-filters.rst:18
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect Service Now emails and assign them to existing "
-#| "tickets, if the following requirements are met:"
 msgid ""
 "Detects `Service-Now <https://www.servicenow.com/>`_ emails and can assign "
 "them to existing tickets based on the incident ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad rileverà le email di Service Now e le assegnerà ai ticket esistenti, "
-"se sono soddisfatti i seguenti requisiti:"
+"Rileva le e-mail di `Service-Now <https://www.servicenow.com/>`_ e può "
+"assegnarle ai ticket esistenti in base all'ID dell'incidente, se sono "
+"soddisfatti i seguenti requisiti:"
 
 #: ../channels/email/filters/system-filters.rst:22
-#, fuzzy
-#| msgid "Headers contain the ``X-ServiceNow-Generated`` header."
 msgid "Header contains ``X-ServiceNow-Generated``."
-msgstr "Gli header contengono l'header ``X-ServiceNow-Generated``."
+msgstr "L'intestazione contiene ``X-ServiceNow-Generated``."
 
 #: ../channels/email/filters/system-filters.rst:23
-#, fuzzy
-#| msgid "Subject does match the regex ``\\s(INC\\d+)\\s`` e.g. ``INC678439``."
 msgid "Subject matches regex ``\\s(INC\\d+)\\s``, e.g. ``INC678439``."
 msgstr ""
-"L'oggetto corrisponde alla regex ``\\s(INC\\d+)\\s`` ad es. ``INC678439``."
+"L'oggetto corrisponde alla regex ``\\s(INC\\d+)\\s``, ad es. ``INC678439``."
 
 #: ../channels/email/filters/system-filters.rst:25
 msgid ""
@@ -3495,47 +3697,34 @@ msgid "JIRA"
 msgstr "JIRA"
 
 #: ../channels/email/filters/system-filters.rst:29
-#, fuzzy
-#| msgid ""
-#| "Zammad will detect JIRA emails and assign them to existing tickets, if "
-#| "the following requirements are met:"
 msgid ""
 "Detects `JIRA <https://www.atlassian.com/software/jira>`_ emails and can "
 "assign them to existing tickets based on the issue ID, if the following "
 "requirements are met:"
 msgstr ""
-"Zammad rileverà le email di JIRA e le assegnerà ai ticket esistenti, se sono "
+"Rileva le e-mail di `JIRA <https://www.atlassian.com/software/jira>`_ e può "
+"assegnarle ai ticket esistenti in base all'ID del problema, se sono "
 "soddisfatti i seguenti requisiti:"
 
 #: ../channels/email/filters/system-filters.rst:33
-#, fuzzy
-#| msgid "Headers contain the ``X-JIRA-FingerPrint`` header."
 msgid "Header contains ``X-JIRA-FingerPrint``."
-msgstr "Gli header contengono l'header ``X-JIRA-FingerPrint``."
+msgstr "L'intestazione contiene ``X-JIRA-FingerPrint``."
 
 #: ../channels/email/filters/system-filters.rst:34
-#, fuzzy
-#| msgid ""
-#| "Subject does match the regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` e.g. "
-#| "``[JIRA] (SYS-422)``."
 msgid ""
 "Subject matches regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)``, e.g. ``[JIRA] "
 "(SYS-422)``."
 msgstr ""
-"L'oggetto corrisponde alla regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)`` ad es. "
+"L'oggetto corrisponde alla regex ``\\[JIRA\\]\\s\\((\\w+-\\d+)\\)``, ad es. "
 "``[JIRA] (SYS-422)``."
 
 #: ../channels/email/filters/system-filters.rst:36
-#, fuzzy
-#| msgid ""
-#| "See `JIRA Mail Example <https://github.com/zammad/zammad/blob/stable/test/"
-#| "data/mail/mail103.box>`_ for comparison of your emails."
 msgid ""
 "See `JIRA email example <https://github.com/zammad/zammad/blob/stable/test/"
 "data/mail/mail103.box>`_ for comparison of your emails."
 msgstr ""
-"Vedi `Esempio email JIRA <https://github.com/zammad/zammad/blob/stable/test/"
-"data/mail/mail103.box>`_ per il confronto con le tue email."
+"Vedi l'esempio di email `JIRA <https://github.com/zammad/zammad/blob/stable/"
+"test/data/mail/mail103.box>`_ per il confronto delle tue email."
 
 #: ../channels/email/filters/system-filters.rst:44
 #: ../system/integrations/index.rst:47
@@ -3590,6 +3779,11 @@ msgid ""
 "is up again, the filter can automatically close the ticket, depending on "
 "your settings of the Checkmk integration."
 msgstr ""
+"Rileva le e-mail di `Checkmk <https://checkmk.com/>`_. Quando viene rilevata "
+"un'e-mail da Checkmk, il filtro estrae le informazioni di monitoraggio (ad "
+"es. host, servizio, stato) dall'e-mail e le aggiunge al ticket. Quando il "
+"servizio interessato torna operativo, il filtro può chiudere automaticamente "
+"il ticket, a seconda delle impostazioni dell'integrazione Checkmk."
 
 #: ../channels/email/filters/system-filters.rst:65
 #: ../system/integrations/index.rst:48
@@ -3604,11 +3798,16 @@ msgid ""
 "service is up again, the filter can automatically close the ticket, "
 "depending on your settings of the Monit integration."
 msgstr ""
+"Rileva le e-mail di `Monit <https://mmonit.com/monit/>`_. Quando viene "
+"rilevata un'e-mail da Monit, il filtro estrae le informazioni di "
+"monitoraggio (ad es. host, servizio, stato) dall'e-mail e le aggiunge al "
+"ticket. Quando il servizio interessato torna operativo, il filtro può "
+"chiudere automaticamente il ticket, a seconda delle impostazioni "
+"dell'integrazione Monit."
 
 #: ../channels/email/filters/system-filters.rst:68
-#, fuzzy
 msgid "Internal Email Handling"
-msgstr "Generale"
+msgstr "Gestione e-mail interne"
 
 #: ../channels/email/filters/system-filters.rst:70
 msgid ""
@@ -3619,10 +3818,17 @@ msgid ""
 "on the filter number prefix. Because some of the filters depend on the "
 "results of previous filters."
 msgstr ""
+"L'elaborazione interna delle e-mail di Zammad utilizza anche filtri di "
+"sistema, ad esempio per verificare la presenza di una e-mail di follow-up o "
+"per scegliere il cliente corretto. Alcuni di questi filtri sono "
+"configurabili tramite le impostazioni di amministrazione di Zammad. I titoli "
+"seguenti includono il nome completo del filtro per un riferimento più "
+"agevole. L'ordine di esecuzione si basa sul prefisso numerico del filtro, "
+"poiché alcuni filtri dipendono dai risultati dei filtri precedenti."
 
 #: ../channels/email/filters/system-filters.rst:81
 msgid "0000_postmaster_filter_trusted"
-msgstr ""
+msgstr "0000_postmaster_filter_trusted"
 
 #: ../channels/email/filters/system-filters.rst:78
 msgid ""
@@ -3631,110 +3837,127 @@ msgid ""
 "section in the :doc:`header based actions </channels/email/email-headers>` "
 "documentation for more information."
 msgstr ""
+"Questo filtro rimuove le intestazioni ``X-Zammad`` provenienti da fonti non "
+"attendibili per prevenire la manipolazione dell'elaborazione delle e-mail. "
+"Consulta la sezione sui canali attendibili nella documentazione sulle "
+":doc:`azioni basate sulle intestazioni </channels/email/email-headers>` per "
+"ulteriori informazioni."
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "0001_postmaster_filter_secure_mailing"
-msgstr ""
+msgstr "0001_postmaster_filter_secure_mailing"
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "Handles PGP and S/MIME emails."
-msgstr ""
+msgstr "Gestisce le e-mail PGP e S/MIME."
 
 #: ../channels/email/filters/system-filters.rst:100
 msgid "0006_postmaster_filter_auto_response_check"
-msgstr ""
+msgstr "0006_postmaster_filter_auto_response_check"
 
 #: ../channels/email/filters/system-filters.rst:87
 msgid ""
 "Checks if the email is an auto response. If yes, no auto reply from Zammad "
 "gets sent."
 msgstr ""
+"Verifica se l'e-mail è una risposta automatica. In caso positivo, non viene "
+"inviata alcuna risposta automatica da parte di Zammad."
 
 #: ../channels/email/filters/system-filters.rst:90
 msgid "These headers are checked:"
-msgstr ""
+msgstr "Vengono controllate queste intestazioni:"
 
 #: ../channels/email/filters/system-filters.rst:92
 msgid "``list-unsubscribe``"
-msgstr ""
+msgstr "``list-unsubscribe``"
 
 #: ../channels/email/filters/system-filters.rst:93
 msgid "``x-loop``"
-msgstr ""
+msgstr "``x-loop``"
 
 #: ../channels/email/filters/system-filters.rst:94
-#, fuzzy
-#| msgid "``preferences``"
 msgid "``precedence``"
-msgstr "``preferences``"
+msgstr "``precedence``"
 
 #: ../channels/email/filters/system-filters.rst:95
 msgid "``auto-submitted``"
-msgstr ""
+msgstr "``auto-submitted``"
 
 #: ../channels/email/filters/system-filters.rst:96
-#, fuzzy
-#| msgid "``x-zammad-is-auto-response``"
 msgid "``x-auto-response-suppress``"
-msgstr "``x-zammad-is-auto-response``"
+msgstr "``x-auto-response-suppress``"
 
 #: ../channels/email/filters/system-filters.rst:99
 msgid ""
 "If ``x-zammad-is-auto-response`` is present, further auto-response header "
 "checks are skipped."
 msgstr ""
+"Se è presente ``x-zammad-is-auto-response``, i successivi controlli delle "
+"intestazioni di risposta automatica vengono saltati."
 
 #: ../channels/email/filters/system-filters.rst:105
 msgid "0007_postmaster_filter_follow_up_check"
-msgstr ""
+msgstr "0007_postmaster_filter_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:103
 msgid ""
 "Identifies and routes follow-up emails based on the **Additional follow-up "
 "detection** in the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Identifica e instrada le e-mail di follow-up in base al parametro "
+"**Rilevamento follow-up aggiuntivo** nelle :doc:`impostazioni del canale <../"
+"settings>`."
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "0008_postmaster_filter_follow_up_merged"
-msgstr ""
+msgstr "0008_postmaster_filter_follow_up_merged"
 
 #: ../channels/email/filters/system-filters.rst:108
 msgid "Routes follow-up emails for merged tickets to the correct ticket."
 msgstr ""
+"Instrada le e-mail di follow-up per i ticket uniti verso il ticket corretto."
 
 #: ../channels/email/filters/system-filters.rst:113
 msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr ""
+msgstr "0009_postmaster_filter_follow_up_assignment"
 
 #: ../channels/email/filters/system-filters.rst:111
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
+"Imposta il proprietario per le e-mail di follow-up in base alla "
+"configurazione **Assegna follow-up** nelle :doc:`impostazioni del gruppo </"
+"manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:118
 msgid "0011_postmaster_sender_based_on_reply_to"
-msgstr ""
+msgstr "0011_postmaster_sender_based_on_reply_to"
 
 #: ../channels/email/filters/system-filters.rst:116
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
 msgstr ""
+"Imposta il mittente/da per l'articolo in base alla configurazione **Mittente "
+"basato sull'intestazione Reply-To** nelle :doc:`impostazioni del canale <../"
+"settings>`."
 
 #: ../channels/email/filters/system-filters.rst:122
 msgid "0014_postmaster_filter_own_notification_loop_detection"
-msgstr ""
+msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
 #: ../channels/email/filters/system-filters.rst:121
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
 msgstr ""
+"Verifica se l'e-mail è una notifica creata dal sistema stesso e, in tal "
+"caso, la ignora per prevenire loop di e-mail."
 
 #: ../channels/email/filters/system-filters.rst:129
 msgid "0015_postmaster_filter_identify_session_user"
-msgstr ""
+msgstr "0015_postmaster_filter_identify_session_user"
 
 #: ../channels/email/filters/system-filters.rst:125
 msgid ""
@@ -3744,50 +3967,63 @@ msgid ""
 "personal inboxes to the system show up as coming from the customers instead "
 "of the agent."
 msgstr ""
+"Identifica l'utente della sessione tramite ``x-zammad-session-user-id``. Se "
+"non viene fornito alcun ID o se non è valido, utilizza i dati del mittente e "
+"può creare un utente. Questo filtro assicura inoltre che i ticket inoltrati "
+"dalle caselle personali degli agenti al sistema appaiano come provenienti "
+"dai clienti anziché dall'agente."
 
 #: ../channels/email/filters/system-filters.rst:133
 msgid "0018_postmaster_import_archive"
-msgstr ""
+msgstr "0018_postmaster_import_archive"
 
 #: ../channels/email/filters/system-filters.rst:132
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
 msgstr ""
+"Gestisce le e-mail che vengono importate in :ref:`modalità archivio <archive-"
+"mode-email>`."
 
 #: ../channels/email/filters/system-filters.rst:137
 msgid "0030_postmaster_filter_out_of_office_check"
-msgstr ""
+msgstr "0030_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:136
 msgid ""
 "Identifies out-of-office auto-responder emails, assigns them to the correct "
 "ticket and keeps the current ticket state."
 msgstr ""
+"Identifica le e-mail di risposta automatica per fuori sede, le assegna al "
+"ticket corretto e mantiene lo stato attuale del ticket."
 
 #: ../channels/email/filters/system-filters.rst:141
 msgid "0200_postmaster_filter_follow_up_possible_check"
-msgstr ""
+msgstr "0200_postmaster_filter_follow_up_possible_check"
 
 #: ../channels/email/filters/system-filters.rst:140
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
+"Gestisce le e-mail in base alla configurazione **Follow-up possibile** nelle "
+":doc:`impostazioni del gruppo </manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:145
 msgid "0900_postmaster_filter_bounce_follow_up_check"
-msgstr ""
+msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
 #: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
 msgstr ""
+"Identifica le e-mail di notifica di errore (bounce) del postmaster e le "
+"gestisce come follow-up dei ticket originali."
 
 #: ../channels/email/filters/system-filters.rst:150
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
-msgstr ""
+msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
 #: ../channels/email/filters/system-filters.rst:148
 msgid ""
@@ -3795,10 +4031,14 @@ msgid ""
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
 "their user preferences to suppress future notifications."
 msgstr ""
+"Identifica le e-mail di notifica di errore (bounce) relative a fallimenti di "
+"consegna permanenti e contrassegna i destinatari interessati con "
+"``mail_delivery_failed`` nelle loro preferenze utente per sopprimere le "
+"notifiche future."
 
 #: ../channels/email/filters/system-filters.rst:155
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
-msgstr ""
+msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
 #: ../channels/email/filters/system-filters.rst:153
 msgid ""
@@ -3806,32 +4046,37 @@ msgid ""
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
 "of-office handling context."
 msgstr ""
+"Identifica le e-mail di notifica di errore (bounce) relative a fallimenti di "
+"consegna temporanei (ritardati, riproducibili, stato ``4.4.1``) e "
+"contrassegna l'e-mail come contesto di gestione fuori sede."
 
 #: ../channels/email/filters/system-filters.rst:159
 msgid "1000_postmaster_filter_database_check"
-msgstr ""
+msgstr "1000_postmaster_filter_database_check"
 
 #: ../channels/email/filters/system-filters.rst:158
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
 msgstr ""
+"Esegue i filtri postmaster personalizzati attivi dal database e ne registra "
+"l'elaborazione nei log."
 
 #: ../channels/email/filters/system-filters.rst:163
-#, fuzzy
-#| msgid "``last_internal_article``"
 msgid "5500_postmaster_internal_article_check"
-msgstr "``last_internal_article``"
+msgstr "5500_postmaster_internal_article_check"
 
 #: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
 msgstr ""
+"Imposta la visibilità degli articoli come interna se si tratta di una "
+"risposta a un articolo interno o se l'ultima e-mail in uscita è interna."
 
 #: ../channels/email/filters/system-filters.rst:167
 msgid "6005_postmaster_filter_identify_group"
-msgstr ""
+msgstr "6005_postmaster_filter_identify_group"
 
 #: ../channels/email/filters/system-filters.rst:166
 msgid ""
@@ -3839,10 +4084,13 @@ msgid ""
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
 "group."
 msgstr ""
+"Imposta il gruppo del ticket utilizzando innanzitutto le intestazioni "
+"esplicite del gruppo, quindi il contesto del ticket esistente (ID/numero), "
+"poi la mappatura casella postale/gruppo o il gruppo predefinito di fallback."
 
 #: ../channels/email/filters/system-filters.rst:172
 msgid "6105_postmaster_filter_sender_is_system_address"
-msgstr ""
+msgstr "6105_postmaster_filter_sender_is_system_address"
 
 #: ../channels/email/filters/system-filters.rst:170
 msgid ""
@@ -3850,17 +4098,23 @@ msgid ""
 "or ``Customer``), depending on sender address, permissions, group access and "
 "ticket customer relation."
 msgstr ""
+"Rileva mittenti di sistema o agenti e imposta il ruolo del mittente "
+"dell'articolo (``Agente`` o ``Cliente``), in base all'indirizzo del "
+"mittente, ai permessi, all'accesso al gruppo e alla relazione cliente del "
+"ticket."
 
 #: ../channels/email/filters/system-filters.rst:175
 #: ../channels/email/filters/system-filters.rst:176
 msgid "6500_postmaster_filter_identify_sender"
-msgstr ""
+msgstr "6500_postmaster_filter_identify_sender"
 
 #: ../channels/email/filters/system-filters.rst:175
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
 msgstr ""
+"Verifica se il mittente può essere identificato come utente Zammad e, "
+"facoltativamente, crea un nuovo utente."
 
 #: ../channels/email/index.rst:13
 msgid "Control how Zammad **sends and receives email**."
@@ -5015,17 +5269,19 @@ msgstr ""
 
 #: ../channels/form.rst:84
 msgid "Message after sending form"
-msgstr ""
+msgstr "Messaggio dopo l'invio del modulo"
 
 #: ../channels/form.rst:76
 msgid ""
 "After your user pressed the submit button, they will be provided with a "
 "message containing the ticket number of the newly created ticket."
 msgstr ""
+"Dopo che l'utente avrà premuto il pulsante \"Invia\", visualizzerà un "
+"messaggio contenente il numero del ticket appena creato."
 
 #: ../channels/form.rst:79
 msgid "Default *after* sending a form will look like so:"
-msgstr ""
+msgstr "Di default, *dopo* l'invio di un modulo, l'aspetto sarà il seguente:"
 
 #: ../channels/form.rst:139
 msgid "Options"
@@ -5661,6 +5917,11 @@ msgid ""
 "this behavior <google-keep-messages-on-server>` or enable :ref:`archive mode "
 "<archive-mode-google>`."
 msgstr ""
+"Per impostazione predefinita, Zammad eliminerà tutte le email nella tua "
+"casella di posta durante il processo di importazione. Utilizza "
+"l'impostazione Keep Messages on Server (Mantieni i messaggi sul server) per "
+":ref:disattivare questo comportamento <google-keep-messages-on-server> o per "
+"attivare la :ref:modalità archivio <archive-mode-google>."
 
 #: ../channels/google/basic-setup.rst:53
 msgid ""
@@ -6744,6 +7005,8 @@ msgid ""
 "So, if you are in doubt which one to use, we recommend using the Graph "
 "channel."
 msgstr ""
+"Quindi, se avete dubbi su quale utilizzare, vi consigliamo di usare il "
+"canale grafico."
 
 #: ../channels/microsoft365-graph/index.rst:22
 #: ../channels/microsoft365/index.rst:22
@@ -6751,6 +7014,8 @@ msgid ""
 "Microsoft 365 channels are a specialized kind of :doc:`📨 email channel </"
 "channels/email/index>`."
 msgstr ""
+"I canali di Microsoft 365 sono un tipo specializzato di canale di posta "
+"elettronica :doc:`📨 </channels/email/index>`."
 
 #: ../channels/microsoft365-graph/index.rst:25
 #: ../channels/microsoft365/index.rst:25
@@ -6759,16 +7024,20 @@ msgid ""
 "but you should have a look at the **Accounts** section, which differs from a "
 "standard email setup."
 msgstr ""
+"Se hai già familiarità con i canali di posta elettronica, puoi saltare la "
+"maggior parte di questa sezione, ma ti consigliamo di dare un'occhiata alla "
+"sezione **Account**, che differisce da una configurazione di posta "
+"elettronica standard."
 
 #: ../channels/microsoft365-graph/index.rst:33
 #: ../channels/microsoft365/index.rst:33
 msgid ":doc:`🛟 Common M365 errors </channels/microsoft365/common-errors>`"
-msgstr ""
+msgstr ":doc:`🛟 Common M365 errors </channels/microsoft365/common-errors>`"
 
 #: ../channels/microsoft365-graph/index.rst:34
 #: ../channels/microsoft365/index.rst:34
 msgid "Here you can find common errors and how to fix them."
-msgstr ""
+msgstr "Qui puoi trovare gli errori più comuni e le relative soluzioni."
 
 #: ../channels/microsoft365-graph/settings.rst:3
 #: ../channels/microsoft365/settings.rst:3
@@ -6777,6 +7046,9 @@ msgid ""
 "channels. This is why the section has been adopted verbatim from :doc:`here "
 "</channels/email/settings>`."
 msgstr ""
+"Le impostazioni nei canali di Microsoft 365 funzionano allo stesso modo dei "
+"canali di posta elettronica. Per questo motivo, la sezione è stata ripresa "
+"integralmente da :doc:`qui </channels/email/settings>`."
 
 #: ../channels/microsoft365-graph/signatures.rst:3
 #: ../channels/microsoft365/signatures.rst:3
@@ -6785,38 +7057,50 @@ msgid ""
 "channels. This is why the section has been adopted verbatim from :doc:`here "
 "</channels/email/signatures>`."
 msgstr ""
+"Le firme nei canali di Microsoft 365 funzionano allo stesso modo dei canali "
+"di posta elettronica. Per questo motivo, la sezione è stata ripresa "
+"integralmente da :doc:`qui </channels/email/signatures>`."
 
 #: ../channels/microsoft365/accounts.rst:13
 msgid ""
 "Use the links below to step through the process of adding an M365 IMAP "
 "channel to Zammad."
 msgstr ""
+"Utilizza i link sottostanti per seguire la procedura di aggiunta di un "
+"canale IMAP M365 a Zammad."
 
 #: ../channels/microsoft365/accounts.rst:20
 msgid ":doc:`accounts/register-app`"
-msgstr ""
+msgstr ":doc:`accounts/register-app`"
 
 #: ../channels/microsoft365/accounts.rst:17
 msgid ""
 "Use the **Connect Microsoft 365 App** dialog to register Zammad as an OAuth "
 "app on Microsoft."
 msgstr ""
+"Utilizza la finestra di dialogo **Connetti app Microsoft 365** per "
+"registrare Zammad come app OAuth su Microsoft."
 
 #: ../channels/microsoft365/accounts.rst:20
 msgid "This step is **required** before adding an account to Zammad."
 msgstr ""
+"Questo passaggio è **obbligatorio** prima di aggiungere un account a Zammad."
 
 #: ../channels/microsoft365/accounts.rst:23
 msgid "Use the **Add Account** dialog to connect your account."
 msgstr ""
+"Utilizza la finestra di dialogo **Aggiungi account** per collegare il tuo "
+"account."
 
 #: ../channels/microsoft365/accounts.rst:25
 msgid "If you want to migrate an existing email channel, see next section."
 msgstr ""
+"Se desideri migrare un canale di posta elettronica esistente, consulta la "
+"sezione successiva."
 
 #: ../channels/microsoft365/accounts.rst:30
 msgid ":doc:`accounts/migrate-from-email-channel`"
-msgstr ""
+msgstr ":doc:`accounts/migrate-from-email-channel`"
 
 #: ../channels/microsoft365/accounts.rst:28
 msgid ""
@@ -6824,12 +7108,18 @@ msgid ""
 "M365 IMAP channel in Zammad to quickly move your mailboxes. You can roll "
 "back if something goes wrong!"
 msgstr ""
+"Migra i tuoi canali email esistenti dal canale IMAP standard al canale IMAP "
+"dedicato di M365 in Zammad per spostare rapidamente le tue caselle di posta. "
+"Puoi annullare l'operazione in caso di problemi!"
 
 #: ../channels/microsoft365/accounts/account-setup.rst:4
 msgid ""
 "After you've :doc:`registered Zammad as an OAuth app <register-app>` in your "
 "Entra admin center, you can begin connecting Microsoft accounts to Zammad."
 msgstr ""
+"Dopo aver registrato Zammad come app OAuth <register-app> nel centro di "
+"amministrazione di Entra, puoi iniziare a connettere gli account Microsoft a "
+"Zammad."
 
 #: ../channels/microsoft365/accounts/account-setup.rst:12
 msgid ""
@@ -6837,6 +7127,10 @@ msgid ""
 "import process. Use the *Keep Messages on Server* setting to :ref:`disable "
 "this behavior <microsoft365-keep-messages-on-server>`."
 msgstr ""
+"Per impostazione predefinita, Zammad **eliminerà tutte le email** dalla tua "
+"casella di posta durante il processo di importazione. Utilizza "
+"l'impostazione *Mantieni i messaggi sul server* in :ref:`disable this "
+"behavior <microsoft365-keep-messages-on-server>`."
 
 #: ../channels/microsoft365/accounts/account-setup.rst:15
 msgid ""
@@ -6845,6 +7139,10 @@ msgid ""
 "trigger>` prior adding an email account, and to turn it back on once all "
 "your messages have been imported."
 msgstr ""
+"Zammad **invierà un messaggio di risposta automatica a ogni email che "
+"importa** (incluse quelle vecchie!). Assicurati di :doc:`disabilitare questo "
+"comportamento </manage/trigger>` prima di aggiungere un account email e per "
+"riattivarlo una volta importati tutti i messaggi."
 
 #: ../channels/microsoft365/accounts/account-setup.rst:20
 msgid "🤓 **Shared mailboxes are possible...**"
@@ -7135,6 +7433,10 @@ msgid ""
 "group’s assigned address, agents belonging to that group won’t be able to "
 "send emails until you assign it a new one."
 msgstr ""
+"Ai gruppi è necessario assegnare un indirizzo e-mail per inviare email in "
+"uscita. Se si elimina l'indirizzo email assegnato a un gruppo, gli agenti "
+"appartenenti a tale gruppo non potranno inviare email finché non ne verrà "
+"assegnato uno nuovo."
 
 #: ../channels/microsoft365/accounts/migrate-from-email-channel.rst:2
 msgid "Migrate From Email Channel to Microsoft 365 Channel"
@@ -7453,6 +7755,8 @@ msgstr "aggiungi un alias sotto **indirizzo email**."
 msgid ""
 "Contact your administrator if you don’t have access to an admin account."
 msgstr ""
+"Contatta il tuo amministratore se non hai accesso a un account "
+"amministratore."
 
 #: ../channels/microsoft365/common-errors.rst:4
 msgid ""
@@ -8196,7 +8500,7 @@ msgstr "Predefinito: ``Rimani sulla scheda``"
 msgid "Ticket zoom with tab behavior to choose for the user"
 msgstr "Dettaglio ticket con comportamento schede da scegliere per l'utente"
 
-#: ../channels/whatsapp/index.rst:2
+#: ../channels/whatsapp/index.rst:2 ../settings/system/network.rst:23
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
@@ -12442,7 +12746,7 @@ msgstr ":doc:`Canali > Whatsapp </channels/whatsapp/index>`"
 
 #: ../manage/roles/permissions.rst:105
 msgid "``admin.checklist``"
-msgstr ""
+msgstr "``admin.checklist``"
 
 #: ../manage/roles/permissions.rst:106
 msgid ":doc:`Manage > Checklist </manage/checklist>`"
@@ -12450,7 +12754,7 @@ msgstr ":doc:`Gestisci > Checklist </manage/checklist>`"
 
 #: ../manage/roles/permissions.rst:108
 msgid "``admin.core_workflows``"
-msgstr ""
+msgstr "``admin.core_workflows``"
 
 #: ../manage/roles/permissions.rst:109
 msgid ":doc:`System > Core Workflows </system/core-workflows>`"
@@ -12458,7 +12762,7 @@ msgstr ":doc:`Sistema > Flussi di lavoro principali </system/core-workflows>`"
 
 #: ../manage/roles/permissions.rst:111
 msgid "``admin.data_privacy``"
-msgstr ""
+msgstr "``admin.data_privacy``"
 
 #: ../manage/roles/permissions.rst:112
 msgid ":doc:`System > Data Privacy </system/data-privacy>`"
@@ -12474,7 +12778,7 @@ msgstr "eliminare dati dal sistema."
 
 #: ../manage/roles/permissions.rst:115
 msgid "``admin.group``"
-msgstr ""
+msgstr "``admin.group``"
 
 #: ../manage/roles/permissions.rst:116
 msgid ":doc:`Manage > Groups </manage/groups/index>`"
@@ -12482,7 +12786,7 @@ msgstr ":doc:`Gestisci > Gruppi </manage/groups/index>`"
 
 #: ../manage/roles/permissions.rst:118
 msgid "``admin.integration``"
-msgstr ""
+msgstr "``admin.integration``"
 
 #: ../manage/roles/permissions.rst:119
 msgid ":doc:`System > Integrations </system/integrations/index>`"
@@ -12490,7 +12794,7 @@ msgstr ":doc:`Sistema > Integrazioni </system/integrations/index>`"
 
 #: ../manage/roles/permissions.rst:121
 msgid "``admin.knowledge_base``"
-msgstr ""
+msgstr "``admin.knowledge_base``"
 
 #: ../manage/roles/permissions.rst:122
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
@@ -12510,7 +12814,7 @@ msgstr "``knowledge_base.editor``."
 
 #: ../manage/roles/permissions.rst:126
 msgid "``admin.macro``"
-msgstr ""
+msgstr "``admin.macro``"
 
 #: ../manage/roles/permissions.rst:127
 msgid ":doc:`Manage > Macros </manage/macros>`"
@@ -12522,7 +12826,7 @@ msgstr "In alcuni casi, le macro potrebbero richiedere anche ``admin.tag``."
 
 #: ../manage/roles/permissions.rst:129
 msgid "``admin.maintenance``"
-msgstr ""
+msgstr "``admin.maintenance``"
 
 #: ../manage/roles/permissions.rst:130
 msgid ":doc:`System > Maintenance </system/maintenance>`"
@@ -12530,7 +12834,7 @@ msgstr ":doc:`Sistema > Manutenzione </system/maintenance>`"
 
 #: ../manage/roles/permissions.rst:132
 msgid "``admin.monitoring``"
-msgstr ""
+msgstr "``admin.monitoring``"
 
 #: ../manage/roles/permissions.rst:133
 msgid ":doc:`System > Monitoring </system/monitoring>`"
@@ -12538,7 +12842,7 @@ msgstr ":doc:`Sistema > Monitoraggio </system/monitoring>`"
 
 #: ../manage/roles/permissions.rst:135
 msgid "``admin.object``"
-msgstr ""
+msgstr "``admin.object``"
 
 #: ../manage/roles/permissions.rst:136
 msgid ":doc:`System > Objects </system/objects>`"
@@ -12546,7 +12850,7 @@ msgstr ":doc:`Sistema > Oggetti </system/objects>`"
 
 #: ../manage/roles/permissions.rst:138
 msgid "``admin.organization``"
-msgstr ""
+msgstr "``admin.organization``"
 
 #: ../manage/roles/permissions.rst:139
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
@@ -12566,7 +12870,7 @@ msgstr "modificare il nome, il dominio e le note di un'organizzazione!"
 
 #: ../manage/roles/permissions.rst:143
 msgid "``admin.overview``"
-msgstr ""
+msgstr "``admin.overview``"
 
 #: ../manage/roles/permissions.rst:144
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
@@ -12574,7 +12878,7 @@ msgstr ":doc:`Gestisci > Panoramiche</manage/overviews>`"
 
 #: ../manage/roles/permissions.rst:146
 msgid "``admin.package``"
-msgstr ""
+msgstr "``admin.package``"
 
 #: ../manage/roles/permissions.rst:147
 msgid ":doc:`System > Packages </system/packages>`"
@@ -12582,7 +12886,7 @@ msgstr ":doc:`Sistema > Pacchetti </system/packages>`"
 
 #: ../manage/roles/permissions.rst:149
 msgid "``admin.public_links``"
-msgstr ""
+msgstr "``admin.public_links``"
 
 #: ../manage/roles/permissions.rst:150
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
@@ -12590,7 +12894,7 @@ msgstr ":doc:`Gestisci > Link Pubblici </manage/public-links>`"
 
 #: ../manage/roles/permissions.rst:152
 msgid "``admin.report_profile``"
-msgstr ""
+msgstr "``admin.report_profile``"
 
 #: ../manage/roles/permissions.rst:153
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
@@ -12602,7 +12906,7 @@ msgstr "Accesso per visualizzare i report: ``report``"
 
 #: ../manage/roles/permissions.rst:155
 msgid "``admin.role``"
-msgstr ""
+msgstr "``admin.role``"
 
 #: ../manage/roles/permissions.rst:156
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
@@ -12610,7 +12914,7 @@ msgstr ":doc:`Gestisci > Ruoli </manage/roles/index>`"
 
 #: ../manage/roles/permissions.rst:158
 msgid "``admin.scheduler``"
-msgstr ""
+msgstr "``admin.scheduler``"
 
 #: ../manage/roles/permissions.rst:159
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
@@ -12618,7 +12922,7 @@ msgstr ":doc:`Gestisci > Scheduler </manage/scheduler>`"
 
 #: ../manage/roles/permissions.rst:161
 msgid "``admin.security``"
-msgstr ""
+msgstr "``admin.security``"
 
 #: ../manage/roles/permissions.rst:162
 msgid ":doc:`Settings > Security </settings/security>`"
@@ -12630,7 +12934,7 @@ msgstr "Ciò include anche autenticazioni di terze parti."
 
 #: ../manage/roles/permissions.rst:164
 msgid "``admin.session``"
-msgstr ""
+msgstr "``admin.session``"
 
 #: ../manage/roles/permissions.rst:165
 msgid ":doc:`System > Sessions </system/sessions>`"
@@ -12638,7 +12942,7 @@ msgstr ":doc:`Sistema > Sessioni </system/sessions>`"
 
 #: ../manage/roles/permissions.rst:167
 msgid "``admin.sla``"
-msgstr ""
+msgstr "``admin.sla``"
 
 #: ../manage/roles/permissions.rst:168
 msgid ":doc:`Manage > SLAs </manage/slas>`"
@@ -12646,7 +12950,7 @@ msgstr ":doc:`Gestisci > SLA </manage/slas>`"
 
 #: ../manage/roles/permissions.rst:170
 msgid "``admin.system``"
-msgstr ""
+msgstr "``admin.system``"
 
 #: ../manage/roles/permissions.rst:171
 msgid ":doc:`Settings > System </settings/system/index>`"
@@ -12654,7 +12958,7 @@ msgstr ":doc:`Impostazioni > Sistema </settings/system/index>`"
 
 #: ../manage/roles/permissions.rst:173
 msgid "``admin.system_report``"
-msgstr ""
+msgstr "``admin.system_report``"
 
 #: ../manage/roles/permissions.rst:174
 msgid ":doc:`System > System Report </system/system-report>`"
@@ -12662,7 +12966,7 @@ msgstr ":doc:`Sistema > Report di Sistema </system/system-report>`"
 
 #: ../manage/roles/permissions.rst:176
 msgid "``admin.tag``"
-msgstr ""
+msgstr "``admin.tag``"
 
 #: ../manage/roles/permissions.rst:177
 msgid ":doc:`Manage > Tags </manage/tags>`"
@@ -12670,7 +12974,7 @@ msgstr ":doc:`Gestisci > Tag </manage/tags>`"
 
 #: ../manage/roles/permissions.rst:179
 msgid "``admin.template``"
-msgstr ""
+msgstr "``admin.template``"
 
 #: ../manage/roles/permissions.rst:180
 msgid ":doc:`Manage > Templates </manage/templates>`"
@@ -12678,7 +12982,7 @@ msgstr ":doc:`Gestisci > Modelli </manage/templates>`"
 
 #: ../manage/roles/permissions.rst:182
 msgid "``admin.text_module``"
-msgstr ""
+msgstr "``admin.text_module``"
 
 #: ../manage/roles/permissions.rst:183
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
@@ -12686,7 +12990,7 @@ msgstr ":doc:`Gestisci > Moduli di Testo </manage/text-modules>`"
 
 #: ../manage/roles/permissions.rst:185
 msgid "``admin.ticket``"
-msgstr ""
+msgstr "``admin.ticket``"
 
 #: ../manage/roles/permissions.rst:186
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
@@ -12702,7 +13006,7 @@ msgstr "è richiesto ``ticket.agent``."
 
 #: ../manage/roles/permissions.rst:189
 msgid "``admin.ticket_auto_assignment``"
-msgstr ""
+msgstr "``admin.ticket_auto_assignment``"
 
 #: ../manage/roles/permissions.rst:190
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
@@ -12711,7 +13015,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:192
 msgid "``admin.ticket_duplicate_detection``"
-msgstr ""
+msgstr "``admin.ticket_duplicate_detection``"
 
 #: ../manage/roles/permissions.rst:193
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
@@ -12720,7 +13024,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:195
 msgid "``admin.ticket_priority``"
-msgstr ""
+msgstr "``admin.ticket_priority``"
 
 #: ../manage/roles/permissions.rst:196
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
@@ -12728,7 +13032,7 @@ msgstr ":ref:`Sistema > Oggetti >Priorità Ticket <ticket-priority-reference>`"
 
 #: ../manage/roles/permissions.rst:198
 msgid "``admin.ticket_state``"
-msgstr ""
+msgstr "``admin.ticket_state``"
 
 #: ../manage/roles/permissions.rst:199
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
@@ -12736,7 +13040,7 @@ msgstr ":ref:`Sistema > Oggetti >Stato Ticket <ticket-state-reference>`"
 
 #: ../manage/roles/permissions.rst:201
 msgid "``admin.time_accounting``"
-msgstr ""
+msgstr "``admin.time_accounting``"
 
 #: ../manage/roles/permissions.rst:202
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
@@ -12748,7 +13052,7 @@ msgstr "Consente anche l'esportazione dei record di tempo contabilizzato."
 
 #: ../manage/roles/permissions.rst:204
 msgid "``admin.translation``"
-msgstr ""
+msgstr "``admin.translation``"
 
 #: ../manage/roles/permissions.rst:205
 msgid ":doc:`System > Translations </system/translations>`"
@@ -12760,7 +13064,7 @@ msgstr "Abilita anche la traduzione inline."
 
 #: ../manage/roles/permissions.rst:207
 msgid "``admin.trigger``"
-msgstr ""
+msgstr "``admin.trigger``"
 
 #: ../manage/roles/permissions.rst:208
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
@@ -12768,7 +13072,7 @@ msgstr ":doc:`Gestisci > Trigger </manage/trigger>`"
 
 #: ../manage/roles/permissions.rst:210
 msgid "``admin.user``"
-msgstr ""
+msgstr "``admin.user``"
 
 #: ../manage/roles/permissions.rst:211
 msgid ":doc:`Manage > Users </manage/users/index>`"
@@ -12793,7 +13097,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:216
 msgid "``admin.webhook``"
-msgstr ""
+msgstr "``admin.webhook``"
 
 #: ../manage/roles/permissions.rst:217
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
@@ -12805,7 +13109,7 @@ msgstr "Preferenze utente"
 
 #: ../manage/roles/permissions.rst:230
 msgid "``user_preferences.access_token``"
-msgstr ""
+msgstr "``user_preferences.access_token``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Generate API tokens to control Zammad"
@@ -12826,7 +13130,7 @@ msgstr "dell'utente che li ha generati."
 
 #: ../manage/roles/permissions.rst:235
 msgid "``user_preferences.appearance``"
-msgstr ""
+msgstr "``user_preferences.appearance``"
 
 #: ../manage/roles/permissions.rst:236
 msgid "Appearance configuration"
@@ -12842,7 +13146,7 @@ msgstr "automatica."
 
 #: ../manage/roles/permissions.rst:239
 msgid "``user_preferences.avatar``"
-msgstr ""
+msgstr "``user_preferences.avatar``"
 
 #: ../manage/roles/permissions.rst:240
 msgid "Avatar settings"
@@ -12854,7 +13158,7 @@ msgstr "Consente agli utenti di aggiungere un'immagine avatar personalizzata."
 
 #: ../manage/roles/permissions.rst:242
 msgid "``user_preferences.calendar``"
-msgstr ""
+msgstr "``user_preferences.calendar``"
 
 #: ../manage/roles/permissions.rst:243
 msgid "Configure the calendar feed"
@@ -12862,7 +13166,7 @@ msgstr "Configura il feed del calendario"
 
 #: ../manage/roles/permissions.rst:245
 msgid "``user_preferences.device``"
-msgstr ""
+msgstr "``user_preferences.device``"
 
 #: ../manage/roles/permissions.rst:246
 msgid "Manage device login sessions"
@@ -12882,7 +13186,7 @@ msgstr "Per saperne di più, vedi :doc:`/manage/trigger/system-notifications`."
 
 #: ../manage/roles/permissions.rst:250
 msgid "``user_preferences.language``"
-msgstr ""
+msgstr "``user_preferences.language``"
 
 #: ../manage/roles/permissions.rst:251
 msgid "Configure the UI locale/language"
@@ -12894,7 +13198,7 @@ msgstr "Consente agli utenti di impostare la loro lingua preferita."
 
 #: ../manage/roles/permissions.rst:253
 msgid "``user_preferences.linked_accounts``"
-msgstr ""
+msgstr "\"``user_preferences.linked_accounts``"
 
 #: ../manage/roles/permissions.rst:254
 msgid "Account linking"
@@ -12926,7 +13230,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:259
 msgid "``user_preferences.notifications``"
-msgstr ""
+msgstr "``user_preferences.notifications``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Configuration of ticket"
@@ -12953,7 +13257,7 @@ msgstr "I clienti non possono ricevere notifiche sui ticket."
 
 #: ../manage/roles/permissions.rst:265
 msgid "``user_preferences.out_of_office``"
-msgstr ""
+msgstr "``user_preferences.out_of_office``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Designate a substitute for"
@@ -12979,7 +13283,7 @@ msgstr "che stanno sostituendo."
 
 #: ../manage/roles/permissions.rst:271
 msgid "``user_preferences.overview_sorting``"
-msgstr ""
+msgstr "``user_preferences.overview_sorting``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Allow users to define their own"
@@ -13007,7 +13311,7 @@ msgstr "le panoramiche non ha effetto sugli ordini personalizzati."
 
 #: ../manage/roles/permissions.rst:278
 msgid "``user_preferences.password``"
-msgstr ""
+msgstr "``user_preferences.password``"
 
 #: ../manage/roles/permissions.rst:279
 msgid "Change account password"
@@ -13027,11 +13331,11 @@ msgstr "il tuo unico metodo di autenticazione consentito."
 
 #: ../manage/roles/permissions.rst:0
 msgid "``user_preferences.``"
-msgstr ""
+msgstr "`user_preferences.``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "``two_factor_authentication``"
-msgstr ""
+msgstr "``two_factor_authentication``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Allow users to setup and configure"
@@ -13055,7 +13359,7 @@ msgstr "affinché gli utenti possano configurarla e impostarla."
 
 #: ../manage/roles/permissions.rst:300
 msgid "``knowledge_base.editor``"
-msgstr ""
+msgstr "``knowledge_base.editor``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Create and edit permission"
@@ -13071,7 +13375,7 @@ msgstr "Il permesso di editor include sempre il permesso di lettore."
 
 #: ../manage/roles/permissions.rst:304
 msgid "``knowledge_base.reader``"
-msgstr ""
+msgstr "``knowledge_base.reader``"
 
 #: ../manage/roles/permissions.rst:0
 msgid "Read permission for internal"
@@ -13103,7 +13407,7 @@ msgstr "poiché il permesso di lettore fornisce accesso alle risposte interne!"
 
 #: ../manage/roles/permissions.rst:312
 msgid "``report``"
-msgstr ""
+msgstr "``report``"
 
 #: ../manage/roles/permissions.rst:313
 msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
@@ -13133,7 +13437,7 @@ msgstr ""
 
 #: ../manage/roles/permissions.rst:318 ../settings/security/base.rst:96
 msgid "``ticket.customer``"
-msgstr ""
+msgstr "``ticket.customer``"
 
 #: ../manage/roles/permissions.rst:319
 msgid "Allows a user to be set as customer of a ticket"
@@ -16291,16 +16595,12 @@ msgstr ""
 "notifiche push da Zammad su diversi dispositivi come il tuo smartphone."
 
 #: ../manage/webhook/examples.rst:31
-#, fuzzy
-#| msgid ""
-#| ":doc:`examples/ntfy-notifications`: Use the ntfy service to receive push "
-#| "notification from Zammad on different devices like your smartphone."
 msgid ""
 ":doc:`examples/basic-notification`: A simple generic notification example "
 "you can use and adjust for different services."
 msgstr ""
-":doc:`examples/ntfy-notifications`: Usa il servizio ntfy per ricevere "
-"notifiche push da Zammad su diversi dispositivi come il tuo smartphone."
+":doc:`examples/basic-notification`: Un semplice esempio di notifica generica "
+"che puoi utilizzare e adattare per diversi servizi."
 
 #: ../manage/webhook/examples.rst:33
 msgid ""
@@ -16418,10 +16718,8 @@ msgid "Condidions for affected objects: **Action** > *is* > created"
 msgstr "Condizioni per gli oggetti interessati: **Azione** > *è* > creato"
 
 #: ../manage/webhook/examples/basic-notification.rst:2
-#, fuzzy
-#| msgid "Email Notification"
 msgid "Basic Notification"
-msgstr "Notifica E-mail"
+msgstr "Notifica di base"
 
 #: ../manage/webhook/examples/basic-notification.rst:4
 msgid ""
@@ -16431,94 +16729,76 @@ msgid ""
 "different ticket events. Make sure your external service can understand and "
 "parse the output and adjust or enhance it, where necessary."
 msgstr ""
+"Questa pagina funge da esempio base per un semplice webhook di notifica "
+"generico. Utilizza le variabili ``notification.`` proprio come i webhook di "
+"notifica predefiniti. Queste variabili forniscono un output leggibile per i "
+"diversi eventi dei ticket. Assicurati che il tuo servizio esterno sia in "
+"grado di comprendere e analizzare l'output e, se necessario, adattalo o "
+"miglioralo."
 
 #: ../manage/webhook/examples/basic-notification.rst:11
-#, fuzzy
-#| msgid "Macro Example"
 msgid "Payload Example"
-msgstr "Esempio Macro"
+msgstr "Esempio di payload"
 
 #: ../manage/webhook/examples/basic-notification.rst:25 ../misc/variables.rst:2
 msgid "Variables"
 msgstr "Variabili"
 
 #: ../manage/webhook/examples/basic-notification.rst:27
-#, fuzzy
-#| msgid "This affects the following actions:"
 msgid "The payload contains the following variables:"
-msgstr "Questo influisce sulle seguenti azioni:"
+msgstr "Il payload contiene le seguenti variabili:"
 
 #: ../manage/webhook/examples/basic-notification.rst:30
-#, fuzzy
-#| msgid "``#{ticket.number}``"
 msgid "``ticket.number``"
-msgstr "``#{ticket.number}``"
+msgstr "``ticket.number``"
 
 #: ../manage/webhook/examples/basic-notification.rst:30
-#, fuzzy
-#| msgid "The name of the originating trigger"
 msgid "The ticket number of the triggering ticket."
-msgstr "Il nome del trigger di origine"
+msgstr "Il numero del ticket che ha generato l'evento."
 
 #: ../manage/webhook/examples/basic-notification.rst:33
-#, fuzzy
-#| msgid "notifications"
 msgid "``notification.subject``"
-msgstr "ticket"
+msgstr "``notification.subject``"
 
 #: ../manage/webhook/examples/basic-notification.rst:33
-#, fuzzy
-#| msgid "The name of the originating trigger"
 msgid "The subject of the triggering ticket."
-msgstr "Il nome del trigger di origine"
+msgstr "L'oggetto del ticket che ha generato l'evento."
 
 #: ../manage/webhook/examples/basic-notification.rst:41
-#, fuzzy
-#| msgid "notifications"
 msgid "``notification.message``"
-msgstr "ticket"
+msgstr "``notification.message``"
 
 #: ../manage/webhook/examples/basic-notification.rst:36
-#, fuzzy
-#| msgid "The direction of the grouping."
 msgid "A short description of the triggering event."
-msgstr "La direzione del raggruppamento."
+msgstr "Breve descrizione dell'evento scatenante."
 
 #: ../manage/webhook/examples/basic-notification.rst:38
-#, fuzzy
-#| msgid "Examples"
 msgid "Examples:"
-msgstr "Esempi"
+msgstr "Esempi:"
 
 #: ../manage/webhook/examples/basic-notification.rst:40
 msgid "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
-msgstr ""
+msgstr "``Aggiornato da Nicole Braun il 24/04/2026 alle 10:26 (Europe/Berlin)``"
 
 #: ../manage/webhook/examples/basic-notification.rst:41
 msgid "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
-msgstr ""
+msgstr "``Ultimo aggiornamento il 24/04/2026 alle 09:23 (Europe/Berlin)``"
 
 #: ../manage/webhook/examples/basic-notification.rst:46
-#, fuzzy
-#| msgid "notifications"
 msgid "``notification.link``"
-msgstr "ticket"
+msgstr "``notification.link``"
 
 #: ../manage/webhook/examples/basic-notification.rst:44
 msgid "A link to the ticket which triggered the webhook."
-msgstr ""
+msgstr "Un link al ticket che ha generato il webhook."
 
 #: ../manage/webhook/examples/basic-notification.rst:46
-#, fuzzy
-#| msgid "Example: ``https://your_domain.com/q=#{ticket.product}``"
 msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
-msgstr "Esempio: ``https://tuo_dominio.com/q=#{ticket.product}``"
+msgstr "Esempio: ``https://zammad.example.com/#ticket/zoom/123``."
 
 #: ../manage/webhook/examples/basic-notification.rst:53
-#, fuzzy
-#| msgid "notifications"
 msgid "``notification.changes``"
-msgstr "ticket"
+msgstr "``notification.changes``"
 
 #: ../manage/webhook/examples/basic-notification.rst:49
 msgid ""
@@ -16537,8 +16817,6 @@ msgstr ""
 "Taylor``"
 
 #: ../manage/webhook/examples/basic-notification.rst:56
-#, fuzzy
-#| msgid "notifications"
 msgid "``notification.body``"
 msgstr "``notification.body``"
 
@@ -22377,6 +22655,10 @@ msgid ""
 "login is activated. Disabling password login on the Zammad login page only "
 "takes effect if you enable any :doc:`third-party`."
 msgstr ""
+"Attiva l'accesso tramite nome utente & password per impostazione predefinita "
+"e se non è attivato alcun accesso di terze parti. La disabilitazione "
+"dell'accesso tramite password nella pagina di accesso di Zammad ha effetto "
+"solo se si abilita qualsiasi :doc:`third-party`."
 
 #: ../settings/security/base.rst:64
 msgid "See :doc:`third-party` for supported third-party logins."
@@ -24501,6 +24783,8 @@ msgid ""
 "Screenshots showing \"Attribute & Claims\" configuration in Entra admin "
 "center"
 msgstr ""
+"Screenshot che mostrano la configurazione di \"Attributi & Claims\" nel "
+"centro di amministrazione di Entra"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:41
 msgid "4. Download the SAML Certificate"
@@ -25220,19 +25504,115 @@ msgstr ""
 msgid "Network"
 msgstr "Rete"
 
-#: ../settings/system/network.rst:8
+#: ../settings/system/network.rst:6
 msgid ""
-"The proxy settings can only be saved after successfully testing the proxy "
-"connection."
+"This page covers the proxy configuration in Zammad via GUI. As an "
+"alternative, the proxy configuration is also possible via environment "
+"variables. You can find more information about that in the :docs:`proxy "
+"section of the system documentation </appendix/proxy.html>`."
 msgstr ""
-"Le impostazioni del proxy possono essere salvate solo dopo aver testato con "
-"successo la connessione al proxy."
+"Questa pagina descrive la configurazione del proxy in Zammad tramite "
+"interfaccia grafica. In alternativa, è possibile configurare il proxy anche "
+"tramite variabili d'ambiente. Puoi trovare maggiori informazioni a riguardo "
+"nella :docs:`sezione proxy della documentazione di sistema </appendix/"
+"proxy.html>`."
 
-#: ../settings/system/network.rst:15
+#: ../settings/system/network.rst:11
+msgid "Proxy configuration comparison"
+msgstr "Confronto della configurazione del proxy"
+
+#: ../settings/system/network.rst:1
+msgid "GUI configuration"
+msgstr "Configurazione GUI"
+
+#: ../settings/system/network.rst:1
+msgid "Environment variable"
+msgstr "Variabile ambientale"
+
+#: ../settings/system/network.rst:1
+msgid "Host OS access required"
+msgstr "È necessario l'accesso al sistema operativo host"
+
+#: ../settings/system/network.rst:1
+msgid "No"
+msgstr "No"
+
+#: ../settings/system/network.rst:1
+msgid "Yes"
+msgstr "Sì"
+
+#: ../settings/system/network.rst:1
+msgid "Automatically excluded loopback addresses"
+msgstr "Indirizzi di loopback esclusi automaticamente"
+
+#: ../settings/system/network.rst:1
+msgid "Configuration check"
+msgstr "Verifica della configurazione"
+
+#: ../settings/system/network.rst:1
+msgid "Manually via test script"
+msgstr "Manualmente tramite script di test"
+
+#: ../settings/system/network.rst:1
+msgid "Exceptions (see note below)"
+msgstr "Eccezioni (vedi nota sotto)"
+
+#: ../settings/system/network.rst:20
+msgid ""
+"The following features/services are not affected by the GUI proxy "
+"configuration:"
+msgstr ""
+"Le seguenti funzionalità/servizi non sono influenzati dalla configurazione "
+"del proxy GUI:"
+
+#: ../settings/system/network.rst:24
+msgid "Massenversand"
+msgstr "Invio massivo"
+
+#: ../settings/system/network.rst:25
+msgid "Zendesk Migrator"
+msgstr "Zendesk Migrator"
+
+#: ../settings/system/network.rst:26
+msgid "Elasticsearch plugin installation (ES < 8)"
+msgstr "Installazione del plugin Elasticsearch (ES < 8)"
+
+#: ../settings/system/network.rst:27
+msgid "Zammad update process"
+msgstr "Processo di aggiornamento di Zammad"
+
+#: ../settings/system/network.rst:29
+msgid ""
+"If you use one of these features/services and want to route their traffic "
+"through a proxy, you need to provide the proxy configuration via environment "
+"variables."
+msgstr ""
+"Se utilizzi una di queste funzionalità/servizi e desideri instradare il "
+"relativo traffico attraverso un proxy, devi fornire la configurazione del "
+"proxy tramite variabili d'ambiente."
+
+#: ../settings/system/network.rst:33
+msgid ""
+"Find the individual settings you can configure below. Be aware that the "
+"proxy settings can only be saved after successfully testing proxy "
+"connection. To do so, click the ``Test Connection`` button after providing "
+"the required information. Zammad then shows you if the test was successful "
+"or not. If the test was successful, make sure to click the ``Submit`` button "
+"to save the configuration."
+msgstr ""
+"Di seguito trovi le singole impostazioni che puoi configurare. Tieni "
+"presente che le impostazioni del proxy possono essere salvate solo dopo aver "
+"testato con successo la connessione. Per farlo, clicca sul pulsante ``Test "
+"Connection`` (Verifica connessione) dopo aver fornito le informazioni "
+"richieste. Zammad ti mostrerà quindi se il test è andato a buon fine o meno. "
+"Se il test ha avuto esito positivo, assicurati di cliccare sul pulsante "
+"Submit (Invia) per salvare la configurazione."
+
+#: ../settings/system/network.rst:44
 msgid "Proxy Address"
 msgstr "Indirizzo Proxy"
 
-#: ../settings/system/network.rst:12
+#: ../settings/system/network.rst:41
 msgid ""
 "Allows you to provide a proxy server if needed. This is relevant for network "
 "communication by Zammad."
@@ -25240,47 +25620,49 @@ msgstr ""
 "Consente di fornire un server proxy, se necessario. Questo è rilevante per "
 "la comunicazione di rete da parte di Zammad."
 
-#: ../settings/system/network.rst:15
+#: ../settings/system/network.rst:44
 msgid "It **does not** affect the update process or Elasticsearch."
 msgstr "Non influisce sul processo di aggiornamento o su Elasticsearch."
 
-#: ../settings/system/network.rst:18
+#: ../settings/system/network.rst:47
 msgid "Username for proxy connection"
 msgstr "Nome utente per la connessione proxy"
 
-#: ../settings/system/network.rst:18
+#: ../settings/system/network.rst:47
 msgid ""
 "If your proxy server requires authentication, provide the username here."
 msgstr ""
 "Se il tuo server proxy richiede l'autenticazione, fornisci qui il nome "
 "utente."
 
-#: ../settings/system/network.rst:21
+#: ../settings/system/network.rst:51
 msgid "Password for proxy connection"
 msgstr "Password per la connessione proxy"
 
-#: ../settings/system/network.rst:21
+#: ../settings/system/network.rst:50
 msgid ""
-"If your proxy server requires authentication, provide the password here."
+"If your proxy server requires authentication, provide the password of the "
+"user here."
 msgstr ""
-"Se il tuo server proxy richiede l'autenticazione, fornisci qui la password."
+"Se il tuo server proxy richiede l'autenticazione, inserisci qui la password "
+"dell'utente."
 
-#: ../settings/system/network.rst:30
+#: ../settings/system/network.rst:59
 msgid "No proxy for the following hosts"
 msgstr "Nessun proxy per i seguenti host"
 
-#: ../settings/system/network.rst:24
+#: ../settings/system/network.rst:54
 msgid ""
-"Exception list for hosts you can't or don't want to reach via proxy server."
+"Exception list for hosts you can't or don't want to reach via proxy server. "
+"It supports wildcards (e.g. ``*.example.com``). Connections to loopback "
+"addresses are always excepted when configuring the proxy via UI."
 msgstr ""
-"Elenco di eccezioni per gli host che non puoi o non vuoi raggiungere tramite "
-"server proxy."
+"Elenco di eccezioni per gli host che non è possibile o non si desidera "
+"raggiungere tramite server proxy. Supporta i caratteri jolly (ad esempio "
+"``*.example.com``). Le connessioni agli indirizzi di loopback sono sempre "
+"consentite durante la configurazione del proxy tramite interfaccia utente."
 
-#: ../settings/system/network.rst:27
-msgid "Default: ``localhost,127.0.0.0,::1``"
-msgstr "Predefinito: ``localhost,127.0.0.0,::1``"
-
-#: ../settings/system/network.rst:29
+#: ../settings/system/network.rst:58
 msgid ""
 "In case you are using the default Docker Compose stack behind a proxy, make "
 "sure to add the Elasticsearch container to the exception list. The default "
@@ -29684,6 +30066,10 @@ msgid ""
 "In the newly opened tab, switch from \"Clients\" to \"Webhooks\" and paste "
 "the endpoint URLs from your Zammad instance like so:"
 msgstr ""
+"All'interno della tua Accountverwaltung (Gestione account), naviga verso il "
+"prodotto sipgate.io. Nella nuova scheda appena aperta, passa da \"Clients\" "
+"a \"Webhooks\" e incolla gli URL degli endpoint della tua istanza Zammad "
+"come segue:"
 
 #: ../system/integrations/cti/provider-configurations/sipgate.rst:42
 msgid "Inbound endpoint to \"Incoming\""
@@ -34951,6 +35337,23 @@ msgstr "Versione"
 #: ../system/version.rst:4
 msgid "Shows which version is currently being used on your Zammad-instance."
 msgstr "Mostra quale versione è attualmente in uso sulla tua istanza Zammad."
+
+#~ msgid ""
+#~ "The proxy settings can only be saved after successfully testing the proxy "
+#~ "connection."
+#~ msgstr ""
+#~ "Le impostazioni del proxy possono essere salvate solo dopo aver testato "
+#~ "con successo la connessione al proxy."
+
+#~ msgid ""
+#~ "Exception list for hosts you can't or don't want to reach via proxy "
+#~ "server."
+#~ msgstr ""
+#~ "Elenco di eccezioni per gli host che non puoi o non vuoi raggiungere "
+#~ "tramite server proxy."
+
+#~ msgid "Default: ``localhost,127.0.0.0,::1``"
+#~ msgstr "Predefinito: ``localhost,127.0.0.0,::1``"
 
 #~ msgid ""
 #~ "On this page you can find some pre-defined filters that you won't find "
