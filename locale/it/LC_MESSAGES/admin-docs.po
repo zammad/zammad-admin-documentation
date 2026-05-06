@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-29 13:10+0200\n"
+"POT-Creation-Date: 2026-05-04 11:20+0200\n"
 "PO-Revision-Date: 2026-05-02 17:02+0000\n"
 "Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
@@ -236,11 +236,70 @@ msgstr ""
 "priorità, puoi anche fornire una descrizione per ciascuna priorità tra cui "
 "l'agente AI può scegliere."
 
+#: ../ai/ai-agents.rst:97
+#, fuzzy
+#| msgid "Ticket > Tags"
+msgid "Ticket Tagger"
+msgstr "Ticket > Tag"
+
 #: ../ai/ai-agents.rst:99
+msgid ""
+"This AI agent is capable of assigning :doc:`tags </manage/tags>` to tickets. "
+"The instructions are pre-filled with a general example so you can easily "
+"adjust them to your use case. The instructions are separated into three "
+"sections:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:103
+msgid ""
+"**General tagging principles**: Here you can give general instructions how "
+"tickets should be tagged and how they are used in your organization."
+msgstr ""
+
+#: ../ai/ai-agents.rst:105
+msgid ""
+"**Priority tagging rules**: Rules about how specific the tags should be and "
+"which tags are preferred in case of multiple fitting tags."
+msgstr ""
+
+#: ../ai/ai-agents.rst:107
+msgid ""
+"**New tag strategy**: Define instructions on how the agent should deal with "
+"existing and new tags (e.g. prefer existing tags over new ones). This "
+"configuration option is only available if new tags are allowed in your "
+"system."
+msgstr ""
+
+#: ../ai/ai-agents.rst:111
+msgid ""
+"After adjusting the instructions, you have to configure the assigning mode "
+"and specify a number of tags for the chosen option. The available **Tag "
+"assignment mode** options are:"
+msgstr ""
+
+#: ../ai/ai-agents.rst:115
+msgid ""
+"**Add to existing tags**: existing tags remain unchanged and the AI agent "
+"adds the specified number of tags to the ticket."
+msgstr ""
+
+#: ../ai/ai-agents.rst:117
+msgid ""
+"**Total shouldn't exceed**: the total number of tags in the ticket should "
+"not exceed the configured number of tags."
+msgstr ""
+
+#: ../ai/ai-agents.rst:119
+msgid ""
+"**Replace existing tags with**: This option removes all existing tags in the "
+"ticket and adds the specified number of tags."
+msgstr ""
+
+#: ../ai/ai-agents.rst:125
 msgid "Ticket Text Extractor"
 msgstr "Estrattore di testo del ticket"
 
-#: ../ai/ai-agents.rst:101
+#: ../ai/ai-agents.rst:127
 msgid ""
 "This AI agent is capable of extracting specific information from the "
 "ticket's content. You can use it to extract information such as a product "
@@ -255,7 +314,7 @@ msgstr ""
 "consiste nell'utilizzare i :doc:/channels/email/filters per i canali basati "
 "su e-mail."
 
-#: ../ai/ai-agents.rst:107
+#: ../ai/ai-agents.rst:133
 msgid ""
 "Make sure to have a :doc:`custom ticket attribute </system/objects>` in "
 "which you want to store the extracted information. Otherwise, create a "
@@ -267,27 +326,27 @@ msgstr ""
 "creane uno adatto prima di configurare l'agente IA. Il tipo di campo deve "
 "essere uno dei seguenti:"
 
-#: ../ai/ai-agents.rst:111 ../system/objects/types.rst:125
+#: ../ai/ai-agents.rst:137 ../system/objects/types.rst:125
 msgid "Text"
 msgstr "Testo"
 
-#: ../ai/ai-agents.rst:112
+#: ../ai/ai-agents.rst:138
 msgid "Textarea"
 msgstr "Area di testo"
 
-#: ../ai/ai-agents.rst:113
+#: ../ai/ai-agents.rst:139
 msgid "Integer"
 msgstr "Intero"
 
-#: ../ai/ai-agents.rst:114
+#: ../ai/ai-agents.rst:140
 msgid "Single selection"
 msgstr "Selezione singola"
 
-#: ../ai/ai-agents.rst:115
+#: ../ai/ai-agents.rst:141
 msgid "Single tree selection"
 msgstr "Selezione ad albero singola"
 
-#: ../ai/ai-agents.rst:117
+#: ../ai/ai-agents.rst:143
 msgid ""
 "For select-type attributes, the wizard allows you to limit the options the "
 "AI agent can choose from and to add descriptions for them. For these types, "
@@ -299,11 +358,11 @@ msgstr ""
 "descrizioni per esse. Per questi tipi, l'agente AI riceve anche l'elenco "
 "delle opzioni consentite tra cui scegliere in caso di corrispondenza."
 
-#: ../ai/ai-agents.rst:123
+#: ../ai/ai-agents.rst:149
 msgid "Extraction Rules"
 msgstr "Regole di estrazione"
 
-#: ../ai/ai-agents.rst:125
+#: ../ai/ai-agents.rst:151
 msgid ""
 "Here you tell the agent what information to extract. It is highly "
 "recommended to provide some examples and include different variants of how "
@@ -316,14 +375,14 @@ msgstr ""
 "raccomandato fornire alcuni esempi e includere diverse varianti di come le "
 "informazioni potrebbero apparire nel ticket. La procedura guidata include un "
 "esempio predefinito per l'estrazione di un numero d'ordine. Sostituiscilo o "
-"adattalo al tuo caso d'uso. Puoi trovare alcuni esempi nella sezione "
-":ref:`extractor-examples` qui sotto come ispirazione."
+"adattalo al tuo caso d'uso. Puoi trovare alcuni esempi nella "
+"sezione :ref:`extractor-examples` qui sotto come ispirazione."
 
-#: ../ai/ai-agents.rst:133
+#: ../ai/ai-agents.rst:159
 msgid "Priority Rules"
 msgstr "Regole di priorità"
 
-#: ../ai/ai-agents.rst:135
+#: ../ai/ai-agents.rst:161
 msgid ""
 "The priority rules tell the agent how to deal with multiple matches. There "
 "is a default example that should cover common scenarios. Adjust it if your "
@@ -333,31 +392,31 @@ msgstr ""
 "multiple. Esiste un esempio predefinito che dovrebbe coprire scenari comuni. "
 "Modificalo se il tuo scenario è diverso."
 
-#: ../ai/ai-agents.rst:139
+#: ../ai/ai-agents.rst:165
 msgid "Example priority rules:"
 msgstr "Esempio di regole di priorità:"
 
-#: ../ai/ai-agents.rst:150
+#: ../ai/ai-agents.rst:176
 msgid "Article(s) to Analyze"
 msgstr "Articolo/i da Analizzare"
 
-#: ../ai/ai-agents.rst:152
+#: ../ai/ai-agents.rst:178
 msgid "Choose between:"
 msgstr "Scegli tra:"
 
-#: ../ai/ai-agents.rst:154
+#: ../ai/ai-agents.rst:180
 msgid "All articles"
 msgstr "Tutti gli articoli"
 
-#: ../ai/ai-agents.rst:155
+#: ../ai/ai-agents.rst:181
 msgid "Last article (newest)"
 msgstr "Ultimo articolo (il più recente)"
 
-#: ../ai/ai-agents.rst:156
+#: ../ai/ai-agents.rst:182
 msgid "First article (oldest)"
 msgstr "Primo articolo (il più vecchio)"
 
-#: ../ai/ai-agents.rst:158
+#: ../ai/ai-agents.rst:184
 msgid ""
 "Depending on the way, time and condition an AI agent runs, the relevant "
 "article(s) can be different. In most cases, *Last article (newest)* should "
@@ -372,35 +431,35 @@ msgstr ""
 "opzione. Ad esempio, se l'agente viene attivato manualmente da una macro, "
 "*Tutti gli articoli* potrebbe essere appropriato."
 
-#: ../ai/ai-agents.rst:167 ../channels/email/filters.rst:103
+#: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../manage/groups/access-levels.rst:78
 msgid "Examples"
 msgstr "Esempi"
 
-#: ../ai/ai-agents.rst:169
+#: ../ai/ai-agents.rst:195
 msgid ""
 "Expand the following code block to see these **extraction rules** examples:"
 msgstr ""
 "Espandi il seguente blocco di codice per vedere questi esempi di **regole di "
 "estrazione**:"
 
-#: ../ai/ai-agents.rst:171
+#: ../ai/ai-agents.rst:197
 msgid "Extract order number"
 msgstr "Estrai numero d'ordine"
 
-#: ../ai/ai-agents.rst:172
+#: ../ai/ai-agents.rst:198
 msgid "Extract contact person for insurance claim"
 msgstr "Estrai persona di contatto per richiesta di risarcimento assicurativo"
 
-#: ../ai/ai-agents.rst:173
+#: ../ai/ai-agents.rst:199
 msgid "Extract product name"
 msgstr "Estrai nome del prodotto"
 
-#: ../ai/ai-agents.rst:225
+#: ../ai/ai-agents.rst:251
 msgid "Ticket Title Rewriter"
 msgstr "Riscrittore di Titoli di Ticket"
 
-#: ../ai/ai-agents.rst:227
+#: ../ai/ai-agents.rst:253
 msgid ""
 "This AI agent is capable of rephrasing the ticket title based on the content "
 "of the last article. The title is not considered by the agent and gets "
@@ -998,8 +1057,8 @@ msgstr ""
 "di applicare modifiche basate sull'IA ai propri testi prima di salvarli o "
 "inviarli. Per accedervi nella sezione di amministrazione di Zammad, sotto "
 "*IA > Assistente di scrittura*, è necessario il permesso "
-"``admin.ai_assistance_text_tools``. Assicurati di configurare un "
-":doc:`provider IA <provider>` prima di attivare la funzionalità. In caso "
+"``admin.ai_assistance_text_tools``. Assicurati di configurare "
+"un :doc:`provider IA <provider>` prima di attivare la funzionalità. In caso "
 "contrario, un messaggio di avviso ti segnalerà di farlo. Attiva la funzione "
 "azionando l'interruttore."
 
@@ -1116,8 +1175,8 @@ msgstr ""
 "I tuoi agenti possono fornire feedback sui risultati degli strumenti "
 "dell'assistente di scrittura. Questo ti permette di monitorare l'efficacia "
 "degli strumenti e se siano necessari degli aggiustamenti. Gli agenti possono "
-"scegliere tra una reazione positiva (pollice su) e una negativa (pollice giù)"
-". In caso di reazione negativa, possono facoltativamente aggiungere un "
+"scegliere tra una reazione positiva (pollice su) e una negativa (pollice "
+"giù). In caso di reazione negativa, possono facoltativamente aggiungere un "
 "commento per spiegare perché non sono soddisfatti del risultato."
 
 #: ../ai/writing-assistant.rst:62
@@ -1148,8 +1207,8 @@ msgstr ""
 "già raccolti non saranno più presenti nel report. Il ripristino può essere "
 "utile se hai apportato modifiche alle istruzioni e vuoi iniziare a "
 "raccogliere feedback per la versione aggiornata. Dopo un ripristino, puoi "
-"comunque accedere ai vecchi feedback scaricando il report globale nella "
-":doc:`configurazione del provider <provider>`."
+"comunque accedere ai vecchi feedback scaricando il report globale "
+"nella :doc:`configurazione del provider <provider>`."
 
 #: ../ai/writing-assistant.rst:77
 msgid ""
@@ -1708,9 +1767,9 @@ msgid ""
 "messages have been imported."
 msgstr ""
 "Zammad **invierà un messaggio di risposta automatica a ogni e-mail "
-"importata** (comprese quelle vecchie!). Usa la finestra *Esperti* per "
-":ref:`cambiare questo comportamento <archive-mode-email>` o per "
-":doc:`disattivare le risposte automatiche </manage/trigger>` prima di "
+"importata** (comprese quelle vecchie!). Usa la finestra *Esperti* "
+"per :ref:`cambiare questo comportamento <archive-mode-email>` o "
+"per :doc:`disattivare le risposte automatiche </manage/trigger>` prima di "
 "aggiungere un account e-mail, e riattivarle una volta importati tutti i "
 "messaggi."
 
@@ -2439,8 +2498,8 @@ msgid ""
 "The “From:” address on system notifications can be configured "
 "under :doc:`Channels > Email > Settings > Notification Sender <../settings>`."
 msgstr ""
-"L'indirizzo \"Da:\" per le notifiche di sistema può essere configurato in "
-":doc:`Canali > E-mail > Impostazioni > Mittente notifiche <../settings>`."
+"L'indirizzo \"Da:\" per le notifiche di sistema può essere configurato "
+"in :doc:`Canali > E-mail > Impostazioni > Mittente notifiche <../settings>`."
 
 #: ../channels/email/accounts/email-notification.rst:41
 msgid "🤔 **This looks familiar... Where have I seen it before?**"
@@ -3365,8 +3424,8 @@ msgstr ""
 "loro gruppi di acquisizione. Per estrarre una stringa, usa l'operatore "
 "*corrisponde alla regex*, aggiungi un gruppo di acquisizione denominato tra "
 "parentesi come ``(?<nome>)`` e includi la parte che vuoi estrarre. Per "
-"l'esempio del numero d'ordine, potrebbe apparire così: ``.*[Oo]rder.*\\D"
-"(?<order_number>\\d+).*``."
+"l'esempio del numero d'ordine, potrebbe apparire così: ``.*[Oo]rder.*\\D(?"
+"<order_number>\\d+).*``."
 
 #: ../channels/email/filters.rst:65
 msgid ""
@@ -3605,8 +3664,8 @@ msgstr ""
 #: ../channels/email/filters.rst:180
 msgid "**Body:** *matches regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+).*``"
 msgstr ""
-"**Corpo:** *corrisponde alla regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+)"
-".*``"
+"**Corpo:** *corrisponde alla regex* ``.*[Oo]rder.*\\D(?"
+"<order_number>\\d+).*``"
 
 #: ../channels/email/filters.rst:183
 msgid "**Order number:** ``#{regexp.order_number}``"
@@ -3839,9 +3898,9 @@ msgid ""
 msgstr ""
 "Questo filtro rimuove le intestazioni ``X-Zammad`` provenienti da fonti non "
 "attendibili per prevenire la manipolazione dell'elaborazione delle e-mail. "
-"Consulta la sezione sui canali attendibili nella documentazione sulle "
-":doc:`azioni basate sulle intestazioni </channels/email/email-headers>` per "
-"ulteriori informazioni."
+"Consulta la sezione sui canali attendibili nella documentazione "
+"sulle :doc:`azioni basate sulle intestazioni </channels/email/email-"
+"headers>` per ulteriori informazioni."
 
 #: ../channels/email/filters/system-filters.rst:84
 msgid "0001_postmaster_filter_secure_mailing"
@@ -4006,8 +4065,8 @@ msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
 msgstr ""
-"Gestisce le e-mail in base alla configurazione **Follow-up possibile** nelle "
-":doc:`impostazioni del gruppo </manage/groups/settings>`."
+"Gestisce le e-mail in base alla configurazione **Follow-up possibile** "
+"nelle :doc:`impostazioni del gruppo </manage/groups/settings>`."
 
 #: ../channels/email/filters/system-filters.rst:145
 msgid "0900_postmaster_filter_bounce_follow_up_check"
@@ -5919,9 +5978,9 @@ msgid ""
 msgstr ""
 "Per impostazione predefinita, Zammad eliminerà tutte le email nella tua "
 "casella di posta durante il processo di importazione. Utilizza "
-"l'impostazione Keep Messages on Server (Mantieni i messaggi sul server) per "
-":ref:disattivare questo comportamento <google-keep-messages-on-server> o per "
-"attivare la :ref:modalità archivio <archive-mode-google>."
+"l'impostazione Keep Messages on Server (Mantieni i messaggi sul server) "
+"per :ref:disattivare questo comportamento <google-keep-messages-on-server> o "
+"per attivare la :ref:modalità archivio <archive-mode-google>."
 
 #: ../channels/google/basic-setup.rst:53
 msgid ""
@@ -16778,7 +16837,8 @@ msgstr "Esempi:"
 
 #: ../manage/webhook/examples/basic-notification.rst:40
 msgid "``Updated by Nicole Braun at 04/24/2026 10:26 am (Europe/Berlin)``"
-msgstr "``Aggiornato da Nicole Braun il 24/04/2026 alle 10:26 (Europe/Berlin)``"
+msgstr ""
+"``Aggiornato da Nicole Braun il 24/04/2026 alle 10:26 (Europe/Berlin)``"
 
 #: ../manage/webhook/examples/basic-notification.rst:41
 msgid "``Last updated at 04/24/2026  9:23 am (Europe/Berlin)``"
