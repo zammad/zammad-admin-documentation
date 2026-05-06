@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-29 13:10+0200\n"
-"PO-Revision-Date: 2026-04-30 12:02+0000\n"
+"POT-Creation-Date: 2026-05-04 11:20+0200\n"
+"PO-Revision-Date: 2026-05-06 08:02+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -240,11 +240,90 @@ msgstr ""
 "eine Beschreibung für alle Prioritäten angeben, aus denen der KI-Agent "
 "wählen kann."
 
+#: ../ai/ai-agents.rst:97
+msgid "Ticket Tagger"
+msgstr "Ticket-Tagger"
+
 #: ../ai/ai-agents.rst:99
+msgid ""
+"This AI agent is capable of assigning :doc:`tags </manage/tags>` to tickets. "
+"The instructions are pre-filled with a general example so you can easily "
+"adjust them to your use case. The instructions are separated into three "
+"sections:"
+msgstr ""
+"Dieser KI-Agent ist in der Lage, :doc:`Tags </manage/tags>` zu Tickets "
+"zuzuweisen. Die Anweisungen sind mit einem allgemeinen Beispiel vorbefüllt, "
+"sodass Sie es an Ihren Anwendungsfall anpassen können. Die Anweisungen sind "
+"in drei Abschnitte unterteilt:"
+
+#: ../ai/ai-agents.rst:103
+msgid ""
+"**General tagging principles**: Here you can give general instructions how "
+"tickets should be tagged and how they are used in your organization."
+msgstr ""
+"**Allgemeine Tagging-Prinzipien**: Hier können Sie allgemeine Anweisungen "
+"zum Tagging von Tickets geben und wie sie in Ihrer Organisation verwendet "
+"werden."
+
+#: ../ai/ai-agents.rst:105
+msgid ""
+"**Priority tagging rules**: Rules about how specific the tags should be and "
+"which tags are preferred in case of multiple fitting tags."
+msgstr ""
+"**Prioritätsregeln für Tags**: Regeln darüber, wie spezifisch die Tags sein "
+"sollten und welche Tags bei mehreren Treffern bevorzugt werden."
+
+#: ../ai/ai-agents.rst:107
+msgid ""
+"**New tag strategy**: Define instructions on how the agent should deal with "
+"existing and new tags (e.g. prefer existing tags over new ones). This "
+"configuration option is only available if new tags are allowed in your "
+"system."
+msgstr ""
+"**Strategie für neue Tags**: Anweisungen, wie der Agent mit bestehenden und "
+"neuen Tags umgehen soll (z.B. bestehende Tags gegenüber neuen Tags "
+"bevorzugen). Diese Konfiguration ist nur verfügbar, wenn neue Tags in Ihrem "
+"System erlaubt sind."
+
+#: ../ai/ai-agents.rst:111
+msgid ""
+"After adjusting the instructions, you have to configure the assigning mode "
+"and specify a number of tags for the chosen option. The available **Tag "
+"assignment mode** options are:"
+msgstr ""
+"Nachdem Sie die Anweisungen angepasst haben, müssen Sie den Zuweisungsmodus "
+"konfigurieren und eine Anzahl von Tags für die gewählte Option angeben. Die "
+"verfügbaren Optionen für den **Tag-Zuweisungsmodus** sind:"
+
+#: ../ai/ai-agents.rst:115
+msgid ""
+"**Add to existing tags**: existing tags remain unchanged and the AI agent "
+"adds the specified number of tags to the ticket."
+msgstr ""
+"**Zu bestehenden Tags hinzufügen**: bestehende Tags bleiben unverändert und "
+"der KI-Agent fügt die angegebene Anzahl an Tags zum Ticket hinzu."
+
+#: ../ai/ai-agents.rst:117
+msgid ""
+"**Total shouldn't exceed**: the total number of tags in the ticket should "
+"not exceed the configured number of tags."
+msgstr ""
+"**Die Summe sollte nicht höher sein als**: Die Gesamtzahl der Tags im Ticket "
+"sollte die konfigurierte Anzahl der Tags nicht überschreiten."
+
+#: ../ai/ai-agents.rst:119
+msgid ""
+"**Replace existing tags with**: This option removes all existing tags in the "
+"ticket and adds the specified number of tags."
+msgstr ""
+"**Ersetzen vorhandener Tags durch**: Diese Option entfernt alle bestehenden "
+"Tags im Ticket und fügt die angegebene Anzahl von Tags hinzu."
+
+#: ../ai/ai-agents.rst:125
 msgid "Ticket Text Extractor"
 msgstr "Ticket-Text-Extraktor"
 
-#: ../ai/ai-agents.rst:101
+#: ../ai/ai-agents.rst:127
 msgid ""
 "This AI agent is capable of extracting specific information from the "
 "ticket's content. You can use it to extract information such as a product "
@@ -259,7 +338,7 @@ msgstr ""
 "arbeiten, ist die Verwendung von :doc:`/channels/email/filters` für E-Mail-"
 "basierte Kanäle."
 
-#: ../ai/ai-agents.rst:107
+#: ../ai/ai-agents.rst:133
 msgid ""
 "Make sure to have a :doc:`custom ticket attribute </system/objects>` in "
 "which you want to store the extracted information. Otherwise, create a "
@@ -271,27 +350,27 @@ msgstr ""
 "wollen. Andernfalls erstellen Sie ein solches bevor Sie den KI-Agenten "
 "konfigurieren. Der Feldtyp muss einer der folgenden sein:"
 
-#: ../ai/ai-agents.rst:111 ../system/objects/types.rst:125
+#: ../ai/ai-agents.rst:137 ../system/objects/types.rst:125
 msgid "Text"
 msgstr "Text"
 
-#: ../ai/ai-agents.rst:112
+#: ../ai/ai-agents.rst:138
 msgid "Textarea"
 msgstr "Textfeld"
 
-#: ../ai/ai-agents.rst:113
+#: ../ai/ai-agents.rst:139
 msgid "Integer"
 msgstr "Integer"
 
-#: ../ai/ai-agents.rst:114
+#: ../ai/ai-agents.rst:140
 msgid "Single selection"
 msgstr "Einfachauswahl"
 
-#: ../ai/ai-agents.rst:115
+#: ../ai/ai-agents.rst:141
 msgid "Single tree selection"
 msgstr "Einfach-Baumauswahl"
 
-#: ../ai/ai-agents.rst:117
+#: ../ai/ai-agents.rst:143
 msgid ""
 "For select-type attributes, the wizard allows you to limit the options the "
 "AI agent can choose from and to add descriptions for them. For these types, "
@@ -304,11 +383,11 @@ msgstr ""
 "außerdem die Liste der zulässigen Optionen zur Auswahl für den Fall einer "
 "Übereinstimmung."
 
-#: ../ai/ai-agents.rst:123
+#: ../ai/ai-agents.rst:149
 msgid "Extraction Rules"
 msgstr "Extraktionsregeln"
 
-#: ../ai/ai-agents.rst:125
+#: ../ai/ai-agents.rst:151
 msgid ""
 "Here you tell the agent what information to extract. It is highly "
 "recommended to provide some examples and include different variants of how "
@@ -325,11 +404,11 @@ msgstr ""
 "Beispiele finden Sie im Abschnitt :ref:`extractor-examples` weiter unten zur "
 "Inspiration."
 
-#: ../ai/ai-agents.rst:133
+#: ../ai/ai-agents.rst:159
 msgid "Priority Rules"
 msgstr "Prioritätsregeln"
 
-#: ../ai/ai-agents.rst:135
+#: ../ai/ai-agents.rst:161
 msgid ""
 "The priority rules tell the agent how to deal with multiple matches. There "
 "is a default example that should cover common scenarios. Adjust it if your "
@@ -340,31 +419,31 @@ msgstr ""
 "meisten gängigen Szenarien abdeckt. Passen Sie es an, wenn sich Ihr Szenario "
 "unterscheidet."
 
-#: ../ai/ai-agents.rst:139
+#: ../ai/ai-agents.rst:165
 msgid "Example priority rules:"
 msgstr "Beispiel für Prioritätsregeln:"
 
-#: ../ai/ai-agents.rst:150
+#: ../ai/ai-agents.rst:176
 msgid "Article(s) to Analyze"
 msgstr "Zu analysierende(r) Artikel"
 
-#: ../ai/ai-agents.rst:152
+#: ../ai/ai-agents.rst:178
 msgid "Choose between:"
 msgstr "Wählen Sie zwischen:"
 
-#: ../ai/ai-agents.rst:154
+#: ../ai/ai-agents.rst:180
 msgid "All articles"
 msgstr "Alle Artikeln"
 
-#: ../ai/ai-agents.rst:155
+#: ../ai/ai-agents.rst:181
 msgid "Last article (newest)"
 msgstr "Letzter Artikel (neuester)"
 
-#: ../ai/ai-agents.rst:156
+#: ../ai/ai-agents.rst:182
 msgid "First article (oldest)"
 msgstr "Erster Artikel (ältester)"
 
-#: ../ai/ai-agents.rst:158
+#: ../ai/ai-agents.rst:184
 msgid ""
 "Depending on the way, time and condition an AI agent runs, the relevant "
 "article(s) can be different. In most cases, *Last article (newest)* should "
@@ -379,35 +458,35 @@ msgstr ""
 "beispielsweise manuell durch ein Makro ausgelöst wird, könnte *Alle Artikel* "
 "ebenfalls passen."
 
-#: ../ai/ai-agents.rst:167 ../channels/email/filters.rst:103
+#: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../manage/groups/access-levels.rst:78
 msgid "Examples"
 msgstr "Beispiele"
 
-#: ../ai/ai-agents.rst:169
+#: ../ai/ai-agents.rst:195
 msgid ""
 "Expand the following code block to see these **extraction rules** examples:"
 msgstr ""
 "Erweitern Sie den folgenden Code-Block, um die Beispiele für "
 "**Extraktionsregeln** zu sehen:"
 
-#: ../ai/ai-agents.rst:171
+#: ../ai/ai-agents.rst:197
 msgid "Extract order number"
 msgstr "Bestellnummer extrahieren"
 
-#: ../ai/ai-agents.rst:172
+#: ../ai/ai-agents.rst:198
 msgid "Extract contact person for insurance claim"
 msgstr "Kontaktperson in Versicherungsfall extrahieren"
 
-#: ../ai/ai-agents.rst:173
+#: ../ai/ai-agents.rst:199
 msgid "Extract product name"
 msgstr "Produktname extrahieren"
 
-#: ../ai/ai-agents.rst:225
+#: ../ai/ai-agents.rst:251
 msgid "Ticket Title Rewriter"
 msgstr "Ticket-Titel-Umschreibung"
 
-#: ../ai/ai-agents.rst:227
+#: ../ai/ai-agents.rst:253
 msgid ""
 "This AI agent is capable of rephrasing the ticket title based on the content "
 "of the last article. The title is not considered by the agent and gets "
@@ -3725,7 +3804,7 @@ msgid ""
 "them to existing tickets based on the incident ID, if the following "
 "requirements are met:"
 msgstr ""
-"Erkennt E-Mails von `Service-Now <https://www.servicenow.com/>` und kann "
+"Erkennt E-Mails von `Service-Now <https://www.servicenow.com/>`_ und kann "
 "diese zu bestehenden Tickets zuordnen, wenn die folgenden Anforderungen "
 "erfüllt sind:"
 
@@ -5968,11 +6047,11 @@ msgid ""
 "this behavior <google-keep-messages-on-server>` or enable :ref:`archive mode "
 "<archive-mode-google>`."
 msgstr ""
-":ref:`archive mode <archive-mode-google>`Standardmäßig **löscht Zammad alle "
-"E-Mails** in Ihrem Posteingang während des Importvorgangs. Verwenden Sie die "
-"Einstellung *Nachrichten auf dem Server behalten*, um :ref:`dieses Verhalten "
-"zu deaktivieren <google-keep-messages-on-server>` oder aktivieren Sie "
-"den :ref:`Archivmodus <archive-mode-google>`."
+"Standardmäßig **löscht Zammad alle E-Mails** in Ihrem Posteingang während "
+"des Importvorgangs. Verwenden Sie die Einstellung *Nachrichten auf dem "
+"Server behalten*, um :ref:`dieses Verhalten zu deaktivieren <google-keep-"
+"messages-on-server>` oder aktivieren Sie den :ref:`Archivmodus <archive-mode-"
+"google>`."
 
 #: ../channels/google/basic-setup.rst:53
 msgid ""
@@ -25799,28 +25878,26 @@ msgid ""
 "variables. You can find more information about that in the :docs:`proxy "
 "section of the system documentation </appendix/proxy.html>`."
 msgstr ""
+"Diese Seite behandelt die Proxy-Konfiguration in Zammad über die grafische "
+"Benutzeroberfläche (GUI). Alternativ ist die Proxy-Konfiguration auch über "
+"Umgebungsvariablen möglich. Weitere Informationen dazu finden Sie auf "
+"der :docs:`Proxy-Seite der System-Dokumentation </appendix/proxy.html>`."
 
 #: ../settings/system/network.rst:11
-#, fuzzy
-#| msgid "Expert configuration dialog"
 msgid "Proxy configuration comparison"
-msgstr "Experten-Konfigurationsdialog"
+msgstr "Vergleich Proxy-Konfiguration"
 
 #: ../settings/system/network.rst:1
-#, fuzzy
-#| msgid "Configuration"
 msgid "GUI configuration"
-msgstr "Konfiguration"
+msgstr "GUI-Konfiguration"
 
 #: ../settings/system/network.rst:1
-#, fuzzy
-#| msgid "Ticket Variables"
 msgid "Environment variable"
-msgstr "Ticket-Variablen"
+msgstr "Umgebungsvariable"
 
 #: ../settings/system/network.rst:1
 msgid "Host OS access required"
-msgstr ""
+msgstr "Zugriff auf Host-OS erforderlich"
 
 #: ../settings/system/network.rst:1
 msgid "No"
@@ -25832,45 +25909,43 @@ msgstr "Ja"
 
 #: ../settings/system/network.rst:1
 msgid "Automatically excluded loopback addresses"
-msgstr ""
+msgstr "Automatisch ausgenommene Loopback-Adressen"
 
 #: ../settings/system/network.rst:1
-#, fuzzy
-#| msgid "Configuration"
 msgid "Configuration check"
-msgstr "Konfiguration"
+msgstr "Konfigurationsprüfung"
 
 #: ../settings/system/network.rst:1
 msgid "Manually via test script"
-msgstr ""
+msgstr "Manuell per Testskript"
 
 #: ../settings/system/network.rst:1
-#, fuzzy
-#| msgid "See notes below"
 msgid "Exceptions (see note below)"
-msgstr "Siehe Anmerkungen unten"
+msgstr "Ausnahmen (siehe Bemerkung unten)"
 
 #: ../settings/system/network.rst:20
 msgid ""
 "The following features/services are not affected by the GUI proxy "
 "configuration:"
 msgstr ""
+"Die folgenden Funktionen/Dienste sind von der Proxy-Konfiguration via GUI "
+"ausgeschlossen:"
 
 #: ../settings/system/network.rst:24
 msgid "Massenversand"
-msgstr ""
+msgstr "Massenversand"
 
 #: ../settings/system/network.rst:25
 msgid "Zendesk Migrator"
-msgstr ""
+msgstr "Zendesk Migrator"
 
 #: ../settings/system/network.rst:26
 msgid "Elasticsearch plugin installation (ES < 8)"
-msgstr ""
+msgstr "Elasticsearch Plugin-Installation (ES < 8)"
 
 #: ../settings/system/network.rst:27
 msgid "Zammad update process"
-msgstr ""
+msgstr "Zammad Aktualisierungsprozess"
 
 #: ../settings/system/network.rst:29
 msgid ""
@@ -25878,6 +25953,9 @@ msgid ""
 "through a proxy, you need to provide the proxy configuration via environment "
 "variables."
 msgstr ""
+"Wenn Sie eine dieser Funktionen/Dienste verwenden und ihren Datenverkehr "
+"über einen Proxy leiten möchten, müssen Sie die Proxy-Konfiguration per "
+"Umgebungsvariablen vornehmen."
 
 #: ../settings/system/network.rst:33
 msgid ""
@@ -25888,6 +25966,14 @@ msgid ""
 "or not. If the test was successful, make sure to click the ``Submit`` button "
 "to save the configuration."
 msgstr ""
+"Nachfolgend finden Sie die einzelnen Einstellungen, die Sie konfigurieren "
+"können. Beachten Sie, dass die Proxy-Einstellungen erst gespeichert werden "
+"können, nachdem Sie die Proxy-Verbindung erfolgreich getestet haben. Klicken "
+"Sie dazu auf die Schaltfläche ``Verbindung testen``, nachdem Sie die "
+"erforderlichen Informationen eingegeben haben. Zammad zeigt Ihnen dann an, "
+"ob der Test erfolgreich war oder nicht. Wenn der Test erfolgreich war, "
+"klicken Sie auf die Schaltfläche ``Übermitteln``, um die Konfiguration zu "
+"speichern."
 
 #: ../settings/system/network.rst:44
 msgid "Proxy Address"
@@ -25922,15 +26008,12 @@ msgid "Password for proxy connection"
 msgstr "Passwort für Verbindung zum Proxy"
 
 #: ../settings/system/network.rst:50
-#, fuzzy
-#| msgid ""
-#| "If your proxy server requires authentication, provide the password here."
 msgid ""
 "If your proxy server requires authentication, provide the password of the "
 "user here."
 msgstr ""
-"Wenn Ihr Proxyserver eine Authentifizierung erfordert, geben Sie hier das "
-"Passwort ein."
+"Wenn Ihr Proxy-Server eine Authentifizierung erfordert, geben Sie hier das "
+"Passwort des Benutzers ein."
 
 #: ../settings/system/network.rst:59
 msgid "No proxy for the following hosts"
@@ -25942,6 +26025,10 @@ msgid ""
 "It supports wildcards (e.g. ``*.example.com``). Connections to loopback "
 "addresses are always excepted when configuring the proxy via UI."
 msgstr ""
+"Ausnahmeliste für Hosts, die Sie nicht über einen Proxyserver erreichen "
+"können oder wollen. Es werden Platzhalter unterstützt (z.B. "
+"``*.example.com``). Verbindungen zu Loopback-Adressen sind immer "
+"ausgenommen, wenn Sie den Proxy über die Benutzeroberfläche konfigurieren."
 
 #: ../settings/system/network.rst:58
 msgid ""
