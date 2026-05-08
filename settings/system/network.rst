@@ -21,7 +21,6 @@ more information about that in the
    configuration:
 
    - WhatsApp
-   - Massenversand
    - Zendesk Migrator
    - Elasticsearch plugin installation (ES < 8)
    - Zammad update process
