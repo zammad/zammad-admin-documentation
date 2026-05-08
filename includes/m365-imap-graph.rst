@@ -15,5 +15,9 @@
    - It is the future-proof way of connecting to your M365 environment.
    - It is more secure and scalable and offers a unified endpoint.
 
-   So, if you are in doubt which one to use, we recommend using the Graph
-   channel.
+   However, there is also a known issue for the Graph-based M365 channel which
+   is caused by Microsoft: it can happen that the ``From:`` header in outgoing
+   emails gets replaced with the configured display name of your M365
+   configuration. This means that your email sender format configuration is
+   basically ignored, even though Zammad sends the email as configured. The
+   IMAP-based channel doesn't have this issue.
