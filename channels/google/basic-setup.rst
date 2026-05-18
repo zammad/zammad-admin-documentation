@@ -165,14 +165,10 @@ Rolling Back the Migration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In case something went wrong, Zammad allows you to roll back the migration
-for up to 7 days. For this time period Zammad will remember your original
+for up to 7 days. You can do so by using the ``Rollback migration`` button in
+the account details. For this time period, Zammad will remember your original
 credentials and restore it if needed. These information will be removed
 entirely after 7 days.
-
-   .. figure:: /images/channels/google/rollback-migration.png
-      :alt: Migrate an existing email channel to Google
-      :scale: 90%
-      :align: center
 
 Troubleshooting
 ---------------

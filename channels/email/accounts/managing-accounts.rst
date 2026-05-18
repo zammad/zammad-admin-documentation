@@ -8,7 +8,7 @@ configuration.
    :alt: Existing accounts can be edited from the Accounts panel.
    :align: center
 
-.. include:: managing-accounts.inbound-outbound.rst
+.. include:: /channels/email/accounts/managing-accounts.inbound-outbound.rst
 
 Destination Group
    Click on the group name to reassign the account.
