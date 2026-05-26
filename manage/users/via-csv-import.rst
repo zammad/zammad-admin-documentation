@@ -6,7 +6,7 @@ already stored in a directory system that can export to CSV,
 you can batch-import them into Zammad in just three steps.
 
 For persistent, automated user synchronization,
-consider integration with a third-party directory system
+consider to use an integration with a third-party directory system
 like :doc:`LDAP / Active Directory </system/integrations/ldap/index>`
 or :doc:`Exchange </system/integrations/exchange>`.
 
@@ -14,13 +14,13 @@ or :doc:`Exchange </system/integrations/exchange>`.
    :alt: The CSV import dialog
    :align: center
 
-   Use the **Import** button to open the CSV import dialog.
+   Use the ``Import`` button to open the CSV import dialog.
 
 Step 1: Inspect the Sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
-(**“Example CSV file for download”**)
+(**"Example CSV file for download"**)
 to see how Zammad expects you to format your user data.
 
 Step 2: Export Your User Data to .csv
@@ -30,19 +30,16 @@ Prepare your .csv file according to the format found in Step 1 above. Note that:
 
 * the ``id`` attribute (column) should be left blank or removed entirely;
 * the ``firstname`` and ``lastname`` attributes are **required**; and
-* any other columns may be safely omitted
-  as long as each row has the same number of fields (commas).
+* any other columns may be safely omitted as long as each row has the same
+  number of fields (commas).
 
-For instance:
+If you have more than one value for a field, separate them with ``~~~``:
 
 .. code-block:: none
 
    login,firstname,lastname,email,web,active,roles
    jdoe,John,Doe,jdoe@example.com,https://zammad.com,true,admin~~~agent
    mmore,Madeline,Moore,mmore@example.net,"",false,customer
-
-If you have more than one value for a field, separate them with ``~~~`` as
-above.
 
 Step 3: Import Your .csv to Zammad
 ----------------------------------
@@ -57,12 +54,12 @@ Zammad will perform a test run to compute the number of affected records:
 
    CSV import always begins with a preview / test run.
 
-.. note:: 🤔 **How does it know when to create new records and when to update?**
+.. note:: **How does it know when to create new records and when to update?**
 
    Records are updated when the imported data contains an ``email`` or ``login``
    that matches an existing user account.
 
-Click **Yes, start real import** to proceed.
-(If you're importing a lot of records, be patient - it may take a minute.)
+Click ``Yes, start real import`` to proceed. If you're importing a lot of
+records, be patient - it may take some time.
 
 That's it! 🎉🎉🎉
