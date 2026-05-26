@@ -1,19 +1,38 @@
 Tags
 ====
 
-With tags, tickets can be categorized and marked.
-
-How to Tag
-----------
+Tags allow to categorize and mark tickets. Think of tags as some kind of labels
+which can be attached to a ticket or a knowledge base answer. Manage tags in
+Zammad's admin settings under *Manage > Tags* with the ``admin.tag`` permission.
 
 All agents can tag tickets. You can find further information about tagging of
-tickets on our
+tickets in our
 :user-docs:`user documentation </basics/service-ticket/settings/tags.html>`.
-If you don't want your agents to create new tags, disable the creation of new
-tags by setting the toggle to inactive.
+It is even possible to use an AI agent for ticket tagging. Check out the
+:doc:`AI Agents section </ai/ai-agents>` for more information.
 
-Tag-Overviews
--------------
+New Tags
+--------
+
+Allow or disable the creation of new tags by agents. If disabled and you want
+to use tags in your instance, make sure to have a working set of tags available,
+your agents can choose from.
+
+Add Tags
+--------
+
+Use this field to add new tags. The field allows you to add more tags by
+using :kbd:`enter` or :kbd:`tab`. Click the ``Add`` button to save them.
+If new tags aren't allowed, this is the only way to add tags via UI .
+
+Delete Tags
+-----------
+
+If you don't need a tag, delete it by clicking the trash icon in the **Action**
+column.
+
+Find Tagged Tickets
+-------------------
 
 You can find tickets based on their tags in different ways:
 
@@ -26,14 +45,15 @@ By a search-query
    tickets that have been tagged accordingly.
 
    .. figure:: /images/manage/tags/tags-search.png
+      :alt: Screenshot shows Zammad's search with a search string "tags:americano".
 
 By clicking on the tag in the tag management
    In the tag management you can find an overview of existing tags used in the
    system (and a counter how often they are used):
 
    .. figure:: /images/manage/tags/tag-management.png
+      :alt: Screenshot shows tag management settings.
 
-   For more information about the individual tags, just click on the blue
-   counter. This creates a search for this tag. Select one of the tickets that
-   appears below the search box or get a complete overview of all tickets by
-   clicking on "Show Search Details"
+   By clicking the blue counter, a search for this tag is pre-populated in the
+   search bar. Select one of the tickets or get a complete overview of all
+   tickets that have this tag attached by clicking the **Show Search Details**.
