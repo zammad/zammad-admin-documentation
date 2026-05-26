@@ -3,7 +3,9 @@ Roles
 
 Roles are a crucial part of Zammad's permission system. They determine what
 users can do within the application and can also contain group permissions.
-You can manage roles in Zammad's settings under *Manage > Roles*.
+You can manage roles in Zammad's settings under *Manage > Roles* with the
+``admin.role`` permission.
+
 This page gives you an explanation of what roles and permissions are. You can
 find details about each permission in a :doc:`separate sub page <permissions>`.
 
