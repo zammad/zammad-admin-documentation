@@ -1,18 +1,19 @@
 Text Modules
 ============
 
-Text modules can be edited in the admin interface under *Manage > Text modules*.
+Text modules can be added and edited in the admin interface under
+*Manage > Text modules* with the ``admin.text_module`` permission.
 Here you find text snippets which are already shipped by Zammad, which
 can be extended as needed.
 
-Beside text modules Zammad also allows you to use
-:user-docs:`Ticket Templates for ticket creation </advanced/ticket-templates.html>`.
+Beside text modules, Zammad also allows you to use
+:user-docs:`Ticket templates </advanced/ticket-templates.html>` which can
+include even more information.
 
 .. figure:: /images/manage/text-modules/managing-text-modules.png
+   :alt: Screenshot shows the article editor with the usage of text modules.
 
-Here you can add new text modules, delete or edit them.
-
-Creating keywords makes it easier to find the right text module.
+Creating keywords makes it easier to find the right text module:
 
 .. figure:: /images/manage/text-modules/text-module-keywords-example.png
    :alt: You can find text modules either by their name or keyword.
@@ -28,12 +29,12 @@ or one or several specific groups.
 .. figure:: /images/manage/text-modules/text-module-group-specific.png
    :alt: Example: Restricting text modules to 2nd Level group only.
 
-To select placeholders from a list, just enter ``::`` in the text block.
-The list can be searched with the arrow keys after inputting keywords or
-shortcuts. All text modules can be used in articles as well as in the chat.
+To select variables from a list, just enter ``::`` in the text block.
+Search placeholders in the list with the arrow keys after entering keywords.
+All text modules can be used in articles as well as in the chat.
 
-To use the text modules in a ticket, you can use ``::`` too! You can find more
-information on how to use text modules in our
+The text modules themselves can be used by ``::`` in a ticket too! You can find
+more information on how to use text modules in our
 :user-docs:`user documentation </advanced/text-modules.html>`.
 
 The example text modules below use :doc:`/misc/variables` to dynamically
@@ -61,6 +62,7 @@ For these cases you can click on the 3 points in the text module overview on
 the right side and select the corresponding action:
 
 .. figure:: /images/manage/text-modules/clone-or-delete-text-modules.png
+   :alt: Screenshot shows action menu of a text module with highlighted clone and delete buttons.
 
 When cloning, text modules with all attributes are duplicated and can be edited
 later.
