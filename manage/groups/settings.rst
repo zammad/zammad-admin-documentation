@@ -1,7 +1,7 @@
 Group Settings
 ==============
 
-Click on a group to edit it, or click on *New group* to create a new group.
+Click on a group to edit it, or click on ``New Group`` to create a new group.
 
 .. figure:: /images/manage/groups/group-management.png
    :alt: Screenshot showing Zammad's group management
@@ -122,4 +122,3 @@ Active
       Please keep in mind that you still can route tickets into these groups.
       This is potentially dangerous, make sure the group is no longer part
       of email filters or a destination group.
-

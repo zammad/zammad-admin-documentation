@@ -1,8 +1,8 @@
 Groups
 ======
 
-This is the group management area. Here you can edit existing groups and
-add new groups.
+Access the group management area under *Manage > Groups* with ``admin.group``
+permission. Here you can edit existing and add new groups.
 
 Groups in Zammad are similar to working groups that deal with different topics
 within a company. For example, the tickets relevant to the sales department
@@ -13,7 +13,7 @@ how you structure your groups is up to you.
 Tickets enter Zammad through various channels (e.g. via email) and are then
 sorted into these groups. The tickets (cases) are thus made available to the
 agents responsible for the group. Each ticket can only belong to one group,
-and you can decide via **access levels** (see below) what access your agents
+and you can decide via **group permissions** (see below), what access your agents
 have in each group.
 
 For example, you might want set up a group *Management* for
@@ -32,7 +32,7 @@ For an additional way to categorize tickets, have a look at :doc:`/manage/tags`.
    :caption: Learn more
 
    settings
-   access-levels
+   group-permissions
 
 .. hint:: If the *Group* field does not appear in the ticket view, ensure that:
 
