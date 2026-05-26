@@ -23,12 +23,12 @@ Add Tags
 
 Use this field to add new tags. The field allows you to add more tags by
 using :kbd:`enter` or :kbd:`tab`. Click the ``Add`` button to save them.
-If new tags aren't allowed, this is the only way to add tags via UI .
+If new tags aren't allowed, this is the only way to add tags via UI.
 
 Delete Tags
 -----------
 
-If you don't need a tag, delete it by clicking the trash icon in the **Action**
+If you don't need a tag, delete it with a click on the trash icon in the **Action**
 column.
 
 Find Tagged Tickets
