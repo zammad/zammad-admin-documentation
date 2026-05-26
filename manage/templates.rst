@@ -1,15 +1,15 @@
 Templates
 =========
 
-Templates allow you to create tickets at a rapid speed by defining a
-ticket template for recurring tickets.
+Templates allow you to create tickets at a rapid speed by pre-defining a
+ticket template for recurring tickets. Manage templates in Zammad's admin
+settings under *Manage > Templates* with the ``admin.template`` permission.
 
 .. figure:: /images/manage/templates/template-management.png
    :alt: Screenshot showing Zammad's (ticket) template management page
    :width: 90%
 
-.. warning:: ⚠️ Limitation ahead
-
+.. warning::
    Please note that ticket templates do not allow the use of variables.
 
 Managing templates
