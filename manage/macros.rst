@@ -1,11 +1,11 @@
 Macros
 ======
 
-Macros are **one-click actions** for applying pre-defined changes to a ticket.
-
-If you find yourself making the same changes to lots of tickets
-(e.g. close-and-tag-as-spam or reassign-to-another-group),
-you can store those changes in a macro and apply it with one click:
+Zammad's macro feature lets you pre-define ticket changes which can be applied
+with just a click. So, when you or your agents apply the same changes to many
+tickets over and over again, you can bundle those changes in a macro to apply
+them by executing it. To add or edit macros in Zammad's admin settings under
+*Manage > Macros*, you need the ``admin.macro`` permission.
 
 .. figure:: /images/manage/macros/macro-selection-ticket-view.png
    :alt: Example macros within a ticket detail view.
