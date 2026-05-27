@@ -1,5 +1,5 @@
-Triggers
-========
+Trigger
+=======
 
 Triggers are one way to automate Zammad. You can create *if this then that*
 rules by defining which tickets should get changed and which changes you want
