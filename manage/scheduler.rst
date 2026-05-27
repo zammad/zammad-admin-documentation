@@ -25,7 +25,10 @@ Manage Scheduler Jobs
 ^^^^^^^^^^^^^^^^^^^^^
 
 You can find the scheduler configuration in the admin settings under *Manage >
-Scheduler*. Create a new scheduler job by clicking the **New Scheduler** button
+Scheduler*. To access the configuration, the permission ``admin.scheduler``
+is required.
+
+Create a new scheduler job by clicking the ``New Scheduler`` button
 in the top right corner. This opens a dialog where you can define your scheduler
 job. To edit an existing scheduler, simply click on the row and the dialog gets
 opened again. The ︙ action menu holds the options to clone or delete the
