@@ -3,10 +3,10 @@ How Do Trigger Work
 
 Triggers consist mainly of three parts:
 
-* **Activator:** defines when and how the trigger has to be evaluated.
-* **Condition:** defines the tickets for which an action has to be executed
+- **Activator:** defines when and how the trigger has to be evaluated.
+- **Condition:** defines the tickets for which an action has to be executed
   based on attributes.
-* **Actions:** define what to change in a ticket which matches the condition.
+- **Actions:** define what to change in a ticket which matches the condition.
 
 Triggers are evaluated in alphabetical order by **name.**
 In some situations, triggers might be the wrong choice, see

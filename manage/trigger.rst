@@ -3,7 +3,8 @@ Triggers
 
 Triggers are one way to automate Zammad. You can create *if this then that*
 rules by defining which tickets should get changed and which changes you want
-to apply to them.
+to apply to them. To manage triggers in Zammad's admin settings under
+*Manage > Trigger*, you need the permission ``admin.trigger``.
 
 In case you are looking for a time-based automation, use
 :doc:`scheduler jobs </manage/scheduler>` instead. To execute pre-defined
