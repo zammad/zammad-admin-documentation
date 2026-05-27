@@ -15,7 +15,7 @@ You can find the configuration in Zammad's admin settings under
 ``admin.report_profile`` permission is required. To access the reporting itself,
 ``report`` permission is required.
 
-.. warning:: ⚠️ Be aware that granting users the ``reporting`` permission may
+.. warning:: Be aware that granting users the ``report`` permission may
     leak information. Consider to limit the available profiles to specific
     roles, instead of just granting or not granting access to **all** profiles.
     Creating specific :doc:`/manage/roles/index` for this purpose may be
@@ -24,9 +24,10 @@ You can find the configuration in Zammad's admin settings under
 Create and Edit Profiles
 ------------------------
 
-To create a new reporting profile, click the **New Profile** button. To edit
+To create a new reporting profile, click the ``New Profile`` button. To edit
 an existing profile, simply click on the row. You can **Clone** or **Delete**
-a profile by clicking the ``⠇`` in the action column.
+a profile by choosing the corresponding action from the ⠇ menu in the action
+column.
 
 Configuration
 ^^^^^^^^^^^^^
