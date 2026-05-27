@@ -2,11 +2,12 @@ Knowledge Base
 ==============
 
 Publish your own library of FAQs, how-tos, internal processes and more with the
-**knowledge base**.
+knowledge base. To configure it under *Manage > Knowledge Base*, you need the
+``admin.knowledge_base`` permission.
 
-This document describes how to **configure** the knowledge base. For details
-on how to **use and edit** it, please refer to the
-:user-docs:`Zammad User Documentation </extras/knowledge-base.html>`.
+This page describes how to configure the knowledge base. For details
+on how to use and edit it, please head over to the
+:user-docs:`knowledge base section in the user documentation </extras/knowledge-base.html>`.
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-demo.png
    :alt: Sample Knowledge Base Index
@@ -14,36 +15,35 @@ on how to **use and edit** it, please refer to the
 
    See a live demo at https://support.zammad.com/help.
 
-By default, only admin users are permitted to create, edit, and manage
+By default, only admin users are permitted to create, edit and manage
 knowledge base articles. See :doc:`roles/index` for details on how to
 grant write access to agents or other users.
 
-.. note:: The knowledge base will not appear in the main menu until it has been
-   enabled in the admin panel.
+.. note:: The knowledge base will not appear in the primary navigation until it
+   has been enabled in the admin settings.
 
 Features
 --------
 
-* 🌍 Multi-language support
-* 🙈 Visibility settings (**draft**, **staff-only**, or **public**)
-* 🔍 Full text search
-* 📅 Scheduled publishing
-* 📎 File attachments
-* 🔗 Wiki-style internal linking to both 💡 **KB answers** and 📋 **tickets**
-* 🖼️ Rich text editor + embedded images
+- 🌍 Multi-language support
+- 🙈 Visibility settings (**draft**, **staff-only**, or **public**)
+- 🔍 Full text search
+- 📅 Scheduled publishing
+- 📎 File attachments
+- 🔗 Wiki-style internal linking to both 💡 **KB answers** and 📋 **tickets**
+- 🖼️ Rich text editor + embedded images
 
 Setup
 -----
 
 To enable the knowledge base, first select the languages/locales you wish to
-publish in and click on the **Create Knowledge Base** button.
+publish in and click on the ``Create Knowledge Base`` button.
 
 .. figure:: /images/manage/knowledge-base/knowledge-base-setup.png
    :alt: Knowledge Base: Initial setup
    :align: center
 
-   You must choose at least one.
-   (Don't worry, you can always change them later!)
+   Choose at least one language (don't worry, you can always change them later).
 
 Read on for details about each section of the knowledge base configuration.
 
@@ -72,8 +72,8 @@ Theme
    knowledge base. With this option being active, Zammad will provide you
    up to two RSS links:
 
-      * a general RSS feed of the whole knowledge base (top level)
-      * a category specific RSS feed of the category you're in
+      - a general RSS feed of the whole knowledge base (top level)
+      - a category specific RSS feed of the category you're in
         (also applies to answers you're viewing)
 
    This setting by default is set to ``no``.
@@ -179,7 +179,6 @@ instance, under ``/help``.
 If you wish to customize where it can be accessed, enter your desired URL here
 and configure your web server accordingly. Zammad provides a snippet for Apache
 and Nginx webserver after clicking the **Web Server Configuration**.
-
 You can find a tutorial about how to use a
 :docs:`custom knowledge base URL in combination with Nginx proxy manger (NPM) </appendix/custom-kb-url.html>`
 in the system documentation.
@@ -202,14 +201,13 @@ Permissions
 
 The general access to the knowledge base is managed via
 ``knowledge_base.reader`` and ``knowledge_base.editor`` permissions. You can
-find more information about roles and permissions
-:doc:`here <roles/index>`.
+find details in the :doc:`roles and permissions page <roles/index>`.
 
 If you want to grant more granular permissions than the global read/edit
 permissions (e.g. edit permissions only for specific parts of the knowledge
 base), you can do so by following the steps below:
 
-- First create the base structure of the knowledge base (if not already done)
+- First, create the base structure of the knowledge base (if not already done)
 - Create or choose one or more roles which should have granular permissions
 - Grant the ``knowledge_base.reader`` permission to the desired role(s)
 - Edit the permissions of each (sub-)category of the knowledge base
