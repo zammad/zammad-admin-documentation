@@ -334,28 +334,24 @@ Regular Webhooks (example)
 
 .. note::
 
-   * For better readability, all empty and ``null`` values have been omitted
+   - For better readability, all empty and ``null`` values have been omitted
      from the sample payload above. That means the webhooks you receive
      *will include additional fields not shown here*.
-
-   * Webhooks will also include fields for any relevant
+   - Webhooks will also include fields for any relevant
      :doc:`custom objects </system/objects>` defined in your system.
-
-   * Attachments are *not included*; links to attachments *are*
+   - Attachments are *not included*; links to attachments *are*
      (authentication required).
+   - Linked tickets are *not included*.
+   - None of the following **user attributes** are included:
 
-   * Linked tickets are *not included*.
-
-   * None of the following **user attributes** are included:
-
-     * ``last_login``
-     * ``login_failed``
-     * ``password``
-     * ``preferences``
-     * ``group_ids``
-     * ``groups``
-     * ``authorization_ids``
-     * ``authorizations``
+     - ``last_login``
+     - ``login_failed``
+     - ``password``
+     - ``preferences``
+     - ``group_ids``
+     - ``groups``
+     - ``authorization_ids``
+     - ``authorizations``
 
 Pre-defined Webhooks
 ^^^^^^^^^^^^^^^^^^^^
