@@ -1,9 +1,6 @@
 SSL Certificates
 ================
 
-Introduction
-------------
-
 Zammad offers the possibility to upload custom certificates and custom
 Certificate Authority (CA) certificates. This can be useful if you want to
 connect Zammad the secure way to other systems which are using custom
@@ -31,9 +28,9 @@ Add a Certificate
 -----------------
 
 To add a custom certificate or a custom CA certificate, head over to
-*Settings > Security > SSL Certificates* in the admin panel. Here you can find a
-"Add SSL Certificate" button. In the dialog you can either select a certificate
-file or paste the content of the certificate:
+*Settings > Security > SSL Certificates* in the admin settings. Here you can
+find a ``Add SSL Certificate`` button. In the dialog you can either select a
+certificate file or paste the content of the certificate:
 
 .. figure:: /images/settings/security/ssl-add-certificate-dialog.png
     :align: center
@@ -41,8 +38,8 @@ file or paste the content of the certificate:
     :alt: Screenshot showing certificate adding dialog
 
 After selecting a file or pasting the content of the certificate, click on the
-"Add" button to finally upload it to Zammad. Then, the certificates are
-immediately effective, no restart or similar required.
+``Add`` button to finally upload it to Zammad. Then, the certificates are
+immediately effective, no restart is required.
 
 .. note::
 
@@ -64,19 +61,19 @@ added certificate:
 Here you can download the certificate or delete it, if you don't need it
 anymore.
 
-Deleting Certificates
----------------------
+Delete Certificates
+-------------------
 
 If you want to delete a specific certificate, you can do it by clicking on the
-menu in the actions column and selecting delete:
+menu in the actions column and selecting **Delete**:
 
 .. figure:: /images/settings/security/ssl-delete-certificate.png
     :align: center
     :scale: 80 %
     :alt: Screenshot showing certificate deletion button
 
-Downloading Certificates
-------------------------
+Download Certificates
+---------------------
 
 If you want to download your certificates, you can do this as well via
 corresponding action buttons.

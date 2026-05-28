@@ -6,11 +6,11 @@ New User Accounts
 
 .. container:: cfloat-left
 
-   Activates the `register as a new customer` function on the login page.
-   If set to ``no`` only administrators or agents can create new accounts
+   Activates the **Register as a new customer** function on the login page.
+   If set to ``no``, only administrators or agents can create new accounts
    manually.
 
-   Default setting: ``yes``
+   Default: ``yes``
 
 .. container:: cfloat-right
 
@@ -30,12 +30,13 @@ Lost Password
 
 .. container:: cfloat-left
 
-   Activates the `lost password` function on the login page.
-   If set to ``no`` only administrators may change the user's password - users
-   may update their own password if they're still logged in and they have the
-   required :doc:`permission </manage/roles/permissions>`.
+   Activates the **Forgot password?** and **You can request your password here.**
+   function on the login page. If set to ``no``, only administrators may change
+   the user's password - users may update their own password if they're still
+   logged in and they have the required
+   :doc:`permission </manage/roles/permissions>`.
 
-   Default setting: ``yes``
+   Default: ``yes``
 
 .. container:: cfloat-right
 
@@ -57,13 +58,12 @@ Password Login
 
 .. container:: cfloat-left
 
-   Activates the username & password login by default and if no third-party
-   login is activated. Disabling password login on the Zammad login page only
-   takes effect if you enable any :doc:`third-party`.
+   Username & password login is enabled by default. If you set it to ``no``,
+   make sure to configure a :doc:`third-party` login. Otherwise, the login
+   via username and password is still enabled. The login screen without
+   username and password login can look like in the screenshot.
 
-   See :doc:`third-party` for supported third-party logins.
-
-   Default setting: ``yes``
+   Default: ``yes``
 
 .. container:: cfloat-right
 
@@ -74,9 +74,10 @@ Password Login
 
 .. hint::
 
-   To help administrators to overcome "login issues", Zammad automatically
-   offers a password request for administrator users. This allows you to adjust
-   Third-Party applications even if the login does no longer work!
+   To help administrators to overcome login issues, Zammad automatically
+   offers a password request for administrator users as you can see in the
+   screenshot above. This allows you to adjust third-party applications, even
+   if the login doesn't work.
 
 .. _security_session_timeout:
 
@@ -88,31 +89,30 @@ Session Timeout defines the life time of a users session.
 As soon as it's reached, Zammad will automatically log off the
 session in question.
 
-Zammad takes the highest value set assigned for the user based on
-the permissions.
+Zammad takes the highest value assigned for the user based on the permissions.
 
-   #. ``admin``
-   #. ``ticket.agent``
-   #. ``ticket.customer``
-   #. ``default`` (fallback if user doesn't have above permissions set)
+#. ``admin``
+#. ``ticket.agent``
+#. ``ticket.customer``
+#. ``default`` (fallback if user doesn't have above permissions set)
 
 All settings act independently from each other allowing you to disable the
 timeouts for e.g. admins, but not agents.
 
 Example
-   Let's suppose you configured the following session timeouts
+   Let's suppose you configured the following session timeouts:
 
-   - default: 3 weeks
-   - admin: 2 weeks
-   - ticket.agent: 4 weeks
-   - ticket.customer: 1 week
+   - Default: 3 weeks
+   - Admin: 2 weeks
+   - Ticket.agent: 4 weeks
+   - Ticket.customer: 1 week
 
    This results in the following situations:
 
-   - a user with ``admin`` permission will have a timeout of 2 weeks
-   - a user with ``admin`` and ``ticket.agent`` permissions will
+   - A user with ``admin`` permission will have a timeout of 2 weeks
+   - A user with ``admin`` and ``ticket.agent`` permissions will
      have a timeout of 2 weeks
-   - a user with ``ticket.customer`` permission will have a timeout
+   - A user with ``ticket.customer`` permission will have a timeout
      of 1 week
-   - a user with neither ``admin``, ``ticket.agent`` nor
+   - A user with neither ``admin``, ``ticket.agent`` nor
      ``ticket.customer`` permissions will have a timeout of 3 weeks

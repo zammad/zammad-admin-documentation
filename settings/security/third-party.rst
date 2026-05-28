@@ -1,17 +1,20 @@
 Third-Party Applications
 ========================
 
-Third party authentication is a great way to help your users to login to Zammad
-more easily. If the account is yet unknown, Zammad will create a new user
-automatically, without the user needed to interact (e.g. type in his name).
-Another big advantage of this feature is that your user doesn't need to remember
-another password.
+Third-party authentication is a great way to help your users to login to Zammad
+more easily. If the account is not yet known, Zammad will create a new user
+automatically without users being required to interact (e.g. type in their name).
+Another big advantage of this feature is that users don't need to remember
+another password. You can deactivate the login via
+:ref:`password <security_password_login>` if any of the mentioned authentication
+providers are enabled in your instance.
 
-You can deactivate logging in via :ref:`security_password_login` if any
-of the mentioned authentication providers are enabled in your instance.
+You can find the configuration in Zammad's admin settings under
+*Settings > Security > Third-party Applications*.
 
-You can find the settings in Zammad's admin panel under *Settings > Security >
-Third-party Applications*.
+We recommend to check your third-party authentication provider's
+documentation first. We collected configuration examples for some of them, but
+they are partially outdated.
 
 .. toctree::
    :caption: Login Providers
@@ -26,13 +29,6 @@ Third-party Applications*.
    third-party/saml
    third-party/sso
    third-party/twitter
-
-.. note::
-
-   We're currently missing documentation for the following login providers:
-
-      * LinkedIn
-      * Weibo
 
 .. _automatic-account-linking:
 
