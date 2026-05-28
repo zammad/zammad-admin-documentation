@@ -1,6 +1,9 @@
 Branding
 ========
 
+Manage branding related settings in Zammad under *Settings > Branding*. Make
+sure to have the permission ``admin.branding``.
+
 .. _zammad-product-name:
 
 Product Name

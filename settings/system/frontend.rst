@@ -7,7 +7,7 @@ Core Workflow Ajax Mode
    to use Ajax-Calls instead of web sockets. You'll usually only need this if
    you experience serious issues as noted below.
 
-   .. hint:: **🤓 Possible (technical) reasons**
+   .. hint:: **Possible (technical) reasons**
 
       In some cases, your network structure (e.g. firewalls, proxies)
       may disconnect long web socket connections. This leads to
@@ -16,7 +16,7 @@ Core Workflow Ajax Mode
       or from pending states, the "pending till" field not showing / hiding).
 
       Please keep in mind that the Ajax fallback may cause serious
-      pressure on your application server. If you have the choice stick to
+      pressure on your application server. If you have the choice, stick to
       web sockets.
 
    Default: ``no`` (inactive)
@@ -27,7 +27,7 @@ Show calendar weeks in the picker of date/datetime fields
    in business sectors and may not be relevant for everyone.
 
    This setting affects *all areas* - you'll also see week numbers in the
-   admin panel for e.g. triggers and macros.
+   admin panel, e.g. in trigger and macro configuration.
 
    Default: ``no`` (not shown)
 

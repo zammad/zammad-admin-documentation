@@ -1,27 +1,25 @@
 Base
 ====
 
-.. include:: /settings/system/system-selfhosted.include.rst
+The first two settings got automatically set by the *Getting Started wizard*.
+Be aware that changing these settings also changes callback URLs for your
+channels etc. It can even lead to being no longer able to login.
 
 Fully Qualified Domain Name
    The URL of your Zammad installation.
 
-   This setting is used within :doc:`/misc/variables` and notifications.
-
-   .. include:: /settings/system/system-base.include.rst
+   This value is used by :doc:`/misc/variables` and in notifications.
 
 HTTP type
    The HTTP type tells if your installation is accessible with transport layer
    security (``https``) or not (``http``).
 
-   This setting is used within :doc:`/misc/variables` and notifications.
-
-   .. include:: /settings/system/system-base.include.rst
+   This value is used by :doc:`/misc/variables` and in notifications.
 
 SystemID
    This ID is being used within your ticket number.
    In case you're communicating with another ticket system with similar
-   ticket number schemes this ID greatly reduces the risk of false follow ups.
+   ticket number schemes, this ID greatly reduces the risk of false follow ups.
 
    The SystemID is randomly selected upon installation of Zammad (``1-99``).
 
