@@ -1,8 +1,9 @@
 Telegram
 ========
 
-It's possible to put your Telegram bot communication into Zammad.
-To do so, you need to follow the steps below.
+Enable the Telegram channel to allow ticket creation and answering from within
+Zammad. To configure it under *Channels > Telegram*, you need the permission
+``admin.channel_telegram``.
 
 .. note::
 
@@ -37,9 +38,9 @@ Get your API token
 Configure Zammad as Telegram Bot
 --------------------------------
 
-Go to *Channels > Telegram* in Zammad's settings and click ``Add Bot``. Enter
+In Zammad's Telegram configuration, click ``Add Bot``. Enter
 your API token, a welcome message and a goodbye message and choose a group in
-which the tickets will be created.
+which the tickets should be created.
 
 .. image:: /images/channels/telegram/telegram-configuration.png
    :alt: Screenshot shows Zammad's Telegram configuration dialog
