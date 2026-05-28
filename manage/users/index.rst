@@ -141,7 +141,7 @@ Roles
    or access parts of the admin panel, roles are the answer.
 
 Group Permissions
-   The :doc:`/manage/groups/access-levels` define which tickets
+   The :doc:`/manage/groups/group-permissions` define which tickets
    an agent can work with.
    If an agent is not receiving notifications for incoming tickets
    or can't be assigned to a ticket, you should have a look at the group

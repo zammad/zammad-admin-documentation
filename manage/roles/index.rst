@@ -71,7 +71,7 @@ system.
 You can also set the group permissions for each user individually in the user
 settings. However, this comes with the downside that you have to configure this
 for each user. Please have a look at the
-:doc:`group permission section </manage/groups/access-levels>` for details.
+:doc:`group permission section </manage/groups/group-permissions>` for details.
 
 
 Additional Settings
