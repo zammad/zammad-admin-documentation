@@ -14,31 +14,29 @@ Organization
 
 Logo
    Defines the logo of the application, shown in the login page of Zammad.
-
-   Ensure to hit the "Submit" button after uploading the logo.
+   Ensure to hit the ``Submit`` button after uploading the logo.
    Otherwise your change will not be saved.
 
 Locale
    Allows to set the default language of the Zammad instance.
    The here defined locale mostly acts as a fallback for:
 
-      * User preferences (if Zammad can't detect the users locale)
-      * CSV output (reporting, time accounting)
-      * Notifications
+   - User preferences (if Zammad can't detect the users locale)
+   - CSV output (reporting, time accounting)
+   - Notifications
 
 Timezone
    Define the timezone of your Zammad installation.
-
    This does not have any effect on timings for your agents or how
    Zammad stores date and time values.
 
    Changing this value has direct consequences on the following areas:
 
-      * :doc:`/manage/scheduler` tasks
-      * Search indexing (and thus reporting)
-      * Notifications
-      * Calendar subscriptions
-      * Browser printing
+   - :doc:`/manage/scheduler` tasks
+   - Search indexing (and thus reporting)
+   - Notifications
+   - Calendar subscriptions
+   - Browser printing
 
    Please note that some of above are fallbacks in case Zammad
    could not detect the agents timezone correctly.
@@ -46,7 +44,6 @@ Timezone
 Pretty Date
    This setting allows you to define how Zammad should display time stamps
    within the interface to all users.
-
    This does not have any effect on how Zammad returns e.g. time values
    via variables.
 
@@ -55,20 +52,18 @@ Pretty Date
          This timestamp shows a relative time span until it switches to a date.
          Over time, it will change as follows:
 
-            * Just now
-            * 5 minutes ago
-            * 3 days 1 hour ago
-            * ``03/04/2022``
+         - Just now
+         - 5 minutes ago
+         - 3 days 1 hour ago
+         - ``03/04/2022``
 
-         Hovering the timestamp helps, you'll always get a clean timestamp
-         then.
+         Hovering over the timestamp shows you the absolute timestamp.
 
       absolute
          This timestamp always includes the week day.
          For one week after creation, the timestamp will not contain the date
-         itself: Thursday 18:35.
-
-         After a week it will switch to: ``Friday 4. Mar 16:00``.
+         itself: ``Thursday 18:35``. After a week, it switches then to
+         ``Thursday, 4. Mar 18:35``.
 
       timestamp
          This will cause Zammad to show a complete timestamp according to your
