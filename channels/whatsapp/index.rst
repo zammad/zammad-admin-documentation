@@ -2,7 +2,8 @@ WhatsApp
 ========
 
 Connect Zammad with a WhatsApp Business account so your customers can
-reach out to you through WhatsApp. 🎉
+reach out to you through WhatsApp. To configure it under *Channels > Whatsapp*,
+you need the permission ``admin.channel_whatsapp``.
 
 .. warning::
 

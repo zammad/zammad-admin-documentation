@@ -24,7 +24,7 @@ Create a Meta Business Account
 ------------------------------
 
 If you don't already have a business account, visit
-https://business.facebook.com/overview and click on "Create an account".
+https://business.facebook.com/overview and click on ``Create an account``.
 Have a look at
 `Meta's documentation <https://www.facebook.com/business/help/1710077379203657?id=180505742745347>`_
 if you have problems.
@@ -40,7 +40,7 @@ Create a Meta Developer App
 ---------------------------
 
 While already logged in with your developer account, go to
-https://developers.facebook.com/apps/. Click on **Create App** and follow the
+https://developers.facebook.com/apps/. Click on ``Create App`` and follow the
 steps below.
 
 .. figure:: /images/channels/whatsapp/meta-create-app.png
