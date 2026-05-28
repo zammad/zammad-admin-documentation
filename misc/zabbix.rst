@@ -43,7 +43,7 @@ Create a Global Macro
    in Zabbix, you can map these parameters:
 
    ``severity_<name>``: Zammad priority ID
-5. Click the **Update** button to save the webhook settings.
+5. Click the ``Update`` button to save the webhook settings.
 6. Enter any text in ``Send to``, as this value is not used but required.
 
 For more information, use the

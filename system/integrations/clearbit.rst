@@ -10,10 +10,10 @@ Introduction
 
 Information from Clearbit can include:
 
-   * Avatar
-   * Address information
-   * Website information
-   * A bio (as note by default)
+   - Avatar
+   - Address information
+   - Website information
+   - A bio (as note by default)
 
 If needed, you can add further custom objects and add mappings to them, so the
 Clearbit information can be filled within the database. In general you can get
@@ -38,7 +38,7 @@ The configuration of Clearbit is really easy and done fast! Just login to your
 Clearbit-Account, go to **API** and copy the secret API key.
 
 Now switch to your Zammad instance, go to *System > Integrations > Clearbit* in
-the admin panel.
+the admin settings.
 Paste your API-Key into the API-Key-Field and decide if Zammad should create
 unknown organizations automatically, if the user does not have one already
 (and Clearbit knows it). The shared option decides if the new organizations

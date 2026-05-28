@@ -53,7 +53,7 @@ Saved Conditions
       Keep in mind that the value has to be available in the situation
       where you need it. Otherwise the condition won't match.
 
-      Example: you can't perform any actions with *saved condition* on a
+      Example: you can't perform any actions with **saved condition** on a
       ticket in creation, because there are no saved values at that time.
 
 Action
@@ -65,7 +65,7 @@ you can at least change the visibility and whether the field is mandatory.
 
 Be aware that actions are not available for **related** context.
 Example: Let's assume you are working in the ticket context.
-While you can have customer *conditions*, you *can't adjust* objects with
+While you can have customer **conditions**, you *can't adjust* objects with
 actions in that scope. That's because this wouldn't have any impact on the
 ticket dialog. Of course all ticket attributes (state, owner, ...) are
 available.
@@ -92,7 +92,7 @@ hide |ui|
    field.
 
    Please note that the field is **not** gone and still contains an existing
-   value (if set)! Consider *remove* instead, if you want this field to be gone.
+   value (if set)! Consider **remove** instead, if you want this field to be gone.
 
 remove |ui|
    Entirely removes the field. The field value will not be evaluated.
@@ -116,8 +116,8 @@ remove option |ui| |api|
 set fixed to |ui| |api|
    Reduces the available options by your selection.
 
-   This reduces your workflows in terms of *add option* and
-   *remove option*.
+   This reduces your workflows in terms of **add option** and
+   **remove option**.
 
 fill in |ui|
    Allows filling in of string and integer fields with your values.

@@ -11,7 +11,7 @@ language they actually speak.
    consider helping us in sorting this out! All you need is either a GitHub account
    or to register directly in our instance.
 
-   Did you know? This is also where the documentation translations are handled. 🤓
+   Did you know? This is also where the documentation translations are handled.
 
 Have a look in our
 :docs:`contribution section </contributing/start.html#translation>` in the
@@ -45,23 +45,23 @@ initially provided by the system.
 Translation is supported for a broad number of features, including but not
 limited to custom:
 
-* Object Attributes
-* Ticket Macros
-* Ticket Overviews
-* Ticket Priorities
-* Ticket States
+- Object Attributes
+- Ticket Macros
+- Ticket Overviews
+- Ticket Priorities
+- Ticket States
 
 Customizing Translations
 ------------------------
 
-Within the translation screen, simply click on the **New Translation** button.
+Within the translation screen, simply click on the ``New Translation`` button.
 
 .. figure:: /images/system/translations/new-translation-dialog.png
    :alt: New translation dialog
    :align: center
 
 In the dialog you can immediately enter the exact translation source (if you
-know it) and your custom translation text for it and click **Submit**.
+know it) and your custom translation text for it and click ``Submit``.
 
 Alternatively, try to search for translation suggestions in the list below.
 Selecting an item from the list will pre-fill the translation source for you and
@@ -86,8 +86,8 @@ appropriate action within the row of the overview table.
 Depending on the type of the translation source, the action has a slightly
 different name:
 
-* **Reset** for customized system translations
-* **Remove** for customized local translations
+- ``Reset`` for customized system translations
+- ``Remove`` for customized local translations
 
 In both cases, the action will remove the customized translation after a
 confirmation.

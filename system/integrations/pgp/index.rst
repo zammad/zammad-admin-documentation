@@ -34,9 +34,9 @@ Encryption
 Handling of Keys
 ----------------
 To use the PGP function, you have to enable the integration (PGP) by switching
-the toggle to *enabled*.
+the toggle to **enabled**.
 
-You can add keys by clicking the *add key* button. The keys can be imported
+You can add keys by clicking the ``add key`` button. The keys can be imported
 from a file or you can paste the content of the key in the text box.
 
 .. note:: **Which keys do I have to import?**
@@ -77,7 +77,7 @@ You can also paste the key's content in the section **paste key**:
 Deleting Keys
 ^^^^^^^^^^^^^
 If you want to delete a specific key, you can do it by clicking on the menu in
-the *actions* column and select **delete**:
+the **actions** column and select **delete**:
 
 .. figure:: /images/system/integrations/pgp/delete_key.png
    :alt: Screenshot of deleting a key
@@ -93,7 +93,7 @@ download the private or the public key.
 
 Default Behavior
 ----------------
-Here you can adjust on per group basis, if *sign* and *encryption* is on or off
+Here you can adjust on per group basis, if **sign** and **encryption** is on or off
 by default. Please be aware, that agents can always override the setting for
 each individual article.
 
@@ -112,8 +112,8 @@ Troubleshooting
 ---------------
 
 **Sign button is not visible, but keys are imported.**
-   * Did you choose a group in the ticket?
-   * Did you import a private key for the email adress, which is used for
+   - Did you choose a group in the ticket?
+   - Did you import a private key for the email adress, which is used for
      outgoing emails in the group?
 
 **How to obtain keys?**

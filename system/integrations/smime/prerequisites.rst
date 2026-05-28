@@ -1,10 +1,10 @@
 Prerequisites
 =============
 
-* A certificate *and* private key for your own organization to **sign outgoing
+- A certificate *and* private key for your own organization to **sign outgoing
   messages** and **decrypt incoming messages**.
 
-* Certificates belonging your contacts, or their issuing certificate authority
+- Certificates belonging your contacts, or their issuing certificate authority
   (CA) to **verify incoming message signatures** and **encrypt outgoing
   messages**.
 
@@ -13,9 +13,9 @@ Prerequisites
    The easiest way to get certificates is to buy an annual subscription through
    a commercial CA, such as:
 
-      * `Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-smime-certificate>`_
-      * `Secorio <https://secorio.com/en/certificates/smime-email/>`_
-      * `GlobalSign <https://shop.globalsign.com/en/secure-email>`_
+      - `Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-smime-certificate>`_
+      - `Secorio <https://secorio.com/en/certificates/smime-email/>`_
+      - `GlobalSign <https://shop.globalsign.com/en/secure-email>`_
 
    You can also generate your own self-signed certificates, but the process is
    complicated and usually **involves extra work for your contacts**.
@@ -28,12 +28,12 @@ Certificate and Private Key Checks on Upload
 The certificate and public key validation is based on the ``X509v3``
 extensions.
 
-Uploading a *client certificate*?
+Uploading a **client certificate**?
    The following attributes are required then:
 
-   * Subject Alternative Name (at least one email address has to be present)
-   * Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
-   * Public key algorithm (either ``RSA`` or ``EC``)
+   - Subject Alternative Name (at least one email address has to be present)
+   - Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
+   - Public key algorithm (either ``RSA`` or ``EC``)
 
    The Extended Key Usage attribute is optional. If the certificate provides
    the named attribute, than it must contain the value ``E-mail Protection``.
@@ -43,9 +43,9 @@ Uploading a *client certificate*?
 
    The named public key algorithms are mandatory for private keys as well.
 
-Uploading a *CA certificate*?
+Uploading a **CA certificate**?
    In the case of an uploaded CA certificate, providing the value ``CA:TRUE``
-   in the attribute *Basic Contstraints*, the previously mentioned attributes
+   in the attribute **Basic Constraints**, the previously mentioned attributes
    are not verified.
 
 In general, the usage of any expired (``Not After``) or

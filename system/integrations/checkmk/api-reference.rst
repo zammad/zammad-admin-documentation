@@ -134,22 +134,22 @@ than disk space warnings.
 
 In most cases, you'll probably want to set one of the following:
 
-* group
-* owner
-* state
-* priority
+- group
+- owner
+- state
+- priority
 
 but in practice, you can set almost any attribute, including
 :doc:`custom ones you created through the Object Manager </system/objects>`.
 
 Please note that the following attributes are **not customizable**:
 
-   * title
-   * id
-   * ticket number
-   * customer
-   * created_by_id
-   * updated_by_id
+   - title
+   - id
+   - ticket number
+   - customer
+   - created_by_id
+   - updated_by_id
 
 Which Values Can Be Set?
 ^^^^^^^^^^^^^^^^^^^^^^^^

@@ -6,9 +6,9 @@ Outbound
 
       You can use wildcards for e.g. country specific outbound numbers like:
 
-         * ``49*`` for Germany
-         * ``4930*`` for Berlin / Germany landlines
-         * ``33*`` for France
+      - ``49*`` for Germany
+      - ``4930*`` for Berlin / Germany landlines
+      - ``33*`` for France
 
    Set Outbound caller ID
       The outbound caller ID to set (the number your customer sees on his

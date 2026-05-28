@@ -5,8 +5,8 @@ We assume you already had a look at :doc:`types` where you can find
 a description of the individual fields.
 
 To reproduce this example, choose an object type you want to add a custom
-field to, click on **New Attribute** and select *External data source field*
-under *Format*.
+field to, click on **New Attribute** and select **External data source field**
+under **Format**.
 
 Our example is about fetching data from an external product database. We want
 to add our products to the tickets so that the products can be searched and
@@ -117,10 +117,10 @@ attributes ``id`` and ``title``.
    }
 
 To tell the remote system that the desired data is located below the
-``products`` level, you have to put it in the field *Search result list key*.
+``products`` level, you have to put it in the field **Search result list key**.
 
 After inserting ``products`` in the mentioned field, you get an extended preview.
-You can find an additional box *Search result list* with a JSON structure.
+You can find an additional box **Search result list** with a JSON structure.
 This is the same response as before but stripped from the upper
 ``products`` element by the external data source.
 
@@ -132,7 +132,7 @@ This is the same response as before but stripped from the upper
 Now you need to provide the keys for the search result values and labels. As
 already mentioned, we are looking for the ``id`` and the ``title`` of our
 products. If you haven't already, it is now a good time to look at the preview
-of the *Search result list*.
+of the **Search result list**.
 
 .. code::
 
@@ -194,8 +194,8 @@ of the *Search result list*.
       }
    ]
 
-After locating our two keys, we insert them in *search result value key*
-(``id``) and in *Search result label key* (``title``).
+After locating our two keys, we insert them in **search result value key**
+(``id``) and in **Search result label key** (``title``).
 
 Basically, we configured the external data source already and we can see a table
 in the preview section:
@@ -205,7 +205,7 @@ in the preview section:
     :scale: 70 %
     :alt: Preview of product table based on search term
 
-According to our example use-case, just the *Link template* is missing.
+According to our example use-case, just the **Link template** is missing.
 
 .. note:: Please note that this is an optional feature. If you don't want to
    use such links, of course you don't have to configure it.
@@ -220,8 +220,8 @@ In the example, the parameter means:
  - ``ticket``: object level, where you create your custom object
  - ``product``: name of the (custom) object
 
-After configuring your *Link template*, there will be another column in the
-preview. Hovering on the icons in the *Link* column will show you where it
+After configuring your **Link template**, there will be another column in the
+preview. Hovering on the icons in the **Link** column will show you where it
 forwards you.
 
 .. figure:: /images/system/objects/eds-example-4.png

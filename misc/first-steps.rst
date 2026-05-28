@@ -57,7 +57,7 @@ How to Use it
 
 Intro
    Here you can access the hints which you have seen after finishing the
-   getting started wizard. Click on "Next" to see all of them or click on the
+   getting started wizard. Click on ``Next`` to see all of them or click on the
    X-button on the top right corner to close them.
 
    .. figure:: /images/misc/first-steps/start-hints.png

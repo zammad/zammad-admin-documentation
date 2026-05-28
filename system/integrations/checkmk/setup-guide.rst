@@ -24,7 +24,7 @@ and contain the logic for sending API/email messages to Zammad:
    :align: center
 
    Find your custom scripts in the Checkmk WATO under
-   **Notifications > New Rule > Notification Method**.
+   *Notifications > New Rule > Notification Method*.
 
 Once you're done setting up your new rule, you're all set!
 New tickets should start coming in and auto-updating
@@ -40,7 +40,7 @@ API Alerts
 To add these scripts in the Checkmk WATO,
 copy them into your Checkmk installation directory and make them executable.
 (Be sure to replace the ``zammad.example.com`` callback URL
-with the one found in your admin panel.)
+with the one found in your admin settings.)
 
 Service notification
    For updates on the status of the software running on your server

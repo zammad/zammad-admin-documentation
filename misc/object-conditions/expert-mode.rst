@@ -6,7 +6,7 @@ Expert Mode
      users with a **Plus** package.
    - Up to three layers of conditions are supported.
 
-Enabling the *expert mode* within your ticket conditions allows you to use
+Enabling the **expert mode** within your ticket conditions allows you to use
 **AND / OR / NOT** operators for any supported method. You can decide which
 workflow requires this enhanced configuration individually. This section expects
 that you had a look at :doc:`basics` already.
@@ -14,9 +14,9 @@ that you had a look at :doc:`basics` already.
 Switching to Expert Mode
 ------------------------
 
-You can enable or disable *expert mode* in any supported condition screen.
-To do so, simply use the *expert mode* toggle on the lower right below the
-*conditions for affected objects* area.
+You can enable or disable **expert mode** in any supported condition screen.
+To do so, simply use the **expert mode** toggle on the lower right below the
+**conditions for affected objects** area.
 
 .. figure:: /images/misc/object-conditions/enable_expert-mode.gif
    :alt: Screencast showing expert mode being enabled in trigger dialog

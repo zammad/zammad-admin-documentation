@@ -62,7 +62,7 @@ If you want to use a translated variable in triggers or
 schedulers, you can extend the placeholder like this:
 ``#{t(ticket.state.name)}``. The ``t`` tells Zammad to search for fitting
 translated strings. The used output language is based on the system language of
-Zammad which you can set in the admin panel under :doc:`/settings/branding` or
+Zammad which you can set in the admin settings under :doc:`/settings/branding` or
 based on the selected locale in the trigger/scheduler edit dialog.
 
 A possible use-case: you want to send your customers updates on tickets

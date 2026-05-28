@@ -3,7 +3,7 @@ Sessions
 
 The session management provides a list of currently known user sessions and
 allows you to end them. The :ref:`security_session_timeout` can be configured in
-the the security settings.
+the security settings.
 
 .. figure:: /images/system/sessions/session-management.png
    :align: center
@@ -28,11 +28,11 @@ Zammad will provide the following information:
       The following information can be shown:
 
       IP address
-         Either if you set *Geo IP services* to inactive or you're using
+         Either if you set **Geo IP services** to inactive or you're using
          internal IP address which do not provide location information.
 
       Country (or Country + City)
-         If *Geo IP services* is enabled only. Depends on how detailed the
+         If **Geo IP services** is enabled only. Depends on how detailed the
          available IP address information are.
 
          Be aware that results can be inaccurate - this technically

@@ -164,7 +164,7 @@ Ticket state in detail
       state. This has no effect on tickets.
 
    Active
-      Set the state to *active* or *inactive*.
+      Set the state to **active** or **inactive**.
 
       .. note:: it is technically possible to set all states to inactive. To
          keep Zammad working in such a case, the inactive flag of one of the
@@ -237,7 +237,7 @@ Priorities in detail
       configuration).
 
    Highlight color
-      Switch between *Low priority* (light blue), *High priority* (red) and -
+      Switch between **Low priority** (light blue), **High priority** (red) and -
       (default). This affects the displayed color for ticket titles in
       overviews.
 
@@ -249,4 +249,4 @@ Priorities in detail
       priority. This has no effect on tickets.
 
    Active
-      Set the priority to *active* or *inactive*.
+      Set the priority to **active** or **inactive**.

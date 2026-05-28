@@ -21,17 +21,17 @@ Limitations
 
 Before you continue, please note the following limitations:
 
-* Mapping / synchronizing organizations is not possible
+- Mapping / synchronizing organizations is not possible
 
   .. tip::
      You may want to consider using domain based assignments to overcome
      this issue. Learn more on :doc:`/manage/organizations/index`.
 
-* Zammad's LDAP sync is one way. Edited user settings or permissions may be
+- Zammad's LDAP sync is one way. Edited user settings or permissions may be
   overwritten upon the next sync depending on your configuration.
-* Synchronizing user avatars from LDAP is not supported.
-* Unlike user filters, group filters cannot be changed.
-* When a user originates from an LDAP server, Zammad will try to verify the
+- Synchronizing user avatars from LDAP is not supported.
+- Unlike user filters, group filters cannot be changed.
+- When a user originates from an LDAP server, Zammad will try to verify the
   login credentials against LDAP first - if this fails Zammad will check its
   local database.
 
@@ -40,16 +40,16 @@ Before you continue, please note the following limitations:
      You can learn more about user accounts in general on
      :doc:`/manage/users/index`.
 
-* When several LDAP sources contain the same user (meaning the same email
+- When several LDAP sources contain the same user (meaning the same email
   address), the user in question will be updated with every source
   configured. The **last** LDAP source will win. See
   `Issue 4109 <https://github.com/zammad/zammad/issues/4109>`_ for more
   details.
-* Synchronization statistics currently affect *all* configured LDAP sources.
+- Synchronization statistics currently affect *all* configured LDAP sources.
   This also applies for newly added or updated sources. See
   `Issue 4108 <https://github.com/zammad/zammad/issues/4108>`_ for more
   details.
-* Zammad currently has limited fallback server support. You can workaround
+- Zammad currently has limited fallback server support. You can workaround
   this by providing several sources - however, ensure to have the exact same
   configuration on your fallback. See
   `Issue 4107 <https://github.com/zammad/zammad/issues/4107>`_ for more
@@ -61,13 +61,13 @@ Manage LDAP-Sources
 Add a New Source
 ^^^^^^^^^^^^^^^^
 
-Using the *New Source* button allows you to add new LDAP sources to your
+Using the ``New Source`` button allows you to add new LDAP sources to your
 installation. You're not limited in the number of sources, however, keep
 in mind that many sources will also take more time to synchronize.
 
-You can choose between different encryption types, namely *SSL* and
-*STARTTLS* or none of them ("*No SSL*"). If you choose *SSL* or *STARTTLS*,
-Zammad will display an additional *SSL verification* option that allows you
+You can choose between different encryption types, namely **SSL** and
+**STARTTLS** or none of them ("**No SSL**"). If you choose **SSL** or **STARTTLS**,
+Zammad will display an additional **SSL verification** option that allows you
 to disable the verification, e.g. for self-signed SSL certificates.
 You can also tell Zammad to use a different port by
 appending ``:<port number>`` to your hostname/IP.
@@ -120,7 +120,7 @@ appending ``:<port number>`` to your hostname/IP.
    In case your LDAP groups follow a hierarchy, you can choose to assign
    Zammad roles to all members of nested groups.
 
-   Simply set *Include nested* dropdown to *Yes* and all members of child
+   Simply set **Include nested** dropdown to **Yes** and all members of child
    groups will be considered for the role assignment.
 
    .. figure:: /images/system/integrations/ldap/ldap-add-new-source.png
@@ -133,7 +133,7 @@ Review or Edit Existing Source
 
 Clicking on a LDAP source will provide a configuration and mapping overview.
 
-If needed you can then use the *Change* button to update either the name,
+If needed you can then use the ``Change`` button to update either the name,
 active state or the whole configuration. If you're changing the whole
 configuration, the dialog will be identical to the source creation.
 

@@ -7,7 +7,7 @@ S/MIME is **disabled by default**. Enable it to start adding certificates.
    :alt: dialog to add new certificates or private keys
    :align: center
 
-   Manage certificates in the Admin Panel under **System > Integrations > S/MIME**.
+   Manage certificates in the admin settings under *System > Integrations > S/MIME*.
    Certificates may be pasted in as plain text or uploaded from a file.
 
 Add Certificate Data

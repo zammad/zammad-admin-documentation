@@ -26,15 +26,15 @@ setup:
 
 .. warning::
 
-   * **Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP
+   - **Exchange and LDAP:** The exchange sync can be overruled by Zammad's LDAP
      integration. If you have the same users in both sources, the LDAP version
      will always be Zammad's pick.
-   * **One way sync:** the Exchange sync is one way. Exchange => Zammad.
+   - **One way sync:** the Exchange sync is one way. Exchange => Zammad.
      Changes to your users inside of Zammad might be overwritten by the
      Exchange sync.
 
-To configure the Exchange integration, go to the *System > Integrations >
-Exchange* in the admin panel.
+To configure the Exchange integration, go to *System > Integrations >
+Exchange* in the admin settings.
 Depending on your setup, continue either with the configuration for the basic
 authentication in the next section or head over to the
 :ref:`OAuth section <exchange-oauth>`.

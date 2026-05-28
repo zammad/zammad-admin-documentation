@@ -27,11 +27,11 @@ Limitations
 Please note the following limitations of Elasticsearch access on
 hosted environments:
 
-   * access to the Elasticsearch index is read-only access
-   * currently you're limited to user only
-   * Reporting tools that require to write into the indexes
+   - access to the Elasticsearch index is read-only access
+   - currently you're limited to user only
+   - Reporting tools that require to write into the indexes
      (like Kibana) are not supported
-   * IP access restriction is currently not yet supported
+   - IP access restriction is currently not yet supported
 
 Activating Elasticsearch Access
 -------------------------------

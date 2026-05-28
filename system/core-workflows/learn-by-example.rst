@@ -56,10 +56,10 @@ Workflow configuration
           immediately when the group is set to 2nd Level.
 
       * - Action
-        - - **Category** *show*
-          - **Category** *set fixed to* ``2nd Level`` (and all sub categories)
-          - **Operating System** and **Software used** *show*
-          - **Operating System** and **Software used** *set mandatory*
+        - - **Category** **show**
+          - **Category** **set fixed to** ``2nd Level`` (and all sub categories)
+          - **Operating System** and **Software used** **show**
+          - **Operating System** and **Software used** **set mandatory**
         -
 
 Configuration in UI
@@ -111,7 +111,7 @@ Workflow configuration
         - Checks if the approval is not yet set to ``yes``.
 
       * - Action
-        - **Approved** *set fixed to* ``no``
+        - **Approved** **set fixed to** ``no``
         - Prevents changes when above conditions are met.
 
 Configuration in UI
@@ -155,7 +155,7 @@ Workflow configuration
           checked before changes are saved.
 
       * - Action
-        - **Category** *set mandatory*
+        - **Category** **set mandatory**
         -
 
 Configuration in UI
@@ -221,7 +221,7 @@ Workflow configuration
                 always be hidden.
 
             * - Action
-              - **Handover** *hide*
+              - **Handover** **hide**
               -
 
       .. tab:: Workflow 2
@@ -258,8 +258,8 @@ Workflow configuration
               -
 
             * - Action
-              - - **Handover** *show*
-                - **Handover** *set mandatory*
+              - - **Handover** **show**
+                - **Handover** **set mandatory**
               -
 
       .. tab:: Trigger

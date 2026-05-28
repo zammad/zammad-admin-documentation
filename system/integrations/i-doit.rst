@@ -32,10 +32,10 @@ It requires i-doit's
 `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_. Make sure to
 have it properly set up. Use the following setting:
 
-   * Active: ``Yes``
-   * Enforce authentication by username and password: ``No``
+   - Active: ``Yes``
+   - Enforce authentication by username and password: ``No``
 
-To set it up, enable the integration in the Zammad admin panel
+To set it up, enable the integration in the Zammad admin settings
 under *System > Integrations > i-doit*:
 
 .. figure:: /images/system/integrations/i-doit/settings.png
