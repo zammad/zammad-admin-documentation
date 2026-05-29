@@ -14,12 +14,12 @@ What Users See
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/ticket-pane-demo.gif
-   :alt: i-doit integration in Zammad's ticket pane
+   :alt: i-doit integration in Zammad's ticket sidebar
    :align: center
 
-   The i-doit integration will appear under a new 🖨 tab in the ticket pane.
+   The i-doit integration will appear under a new 🖨 tab in the ticket sidebar.
 
-i-doit integration puts a new tab in Zammad's ticket pane where you can add
+i-doit integration puts a new tab in Zammad's ticket sidebar where you can add
 links to existing i-doit devices for easy reference.
 (See our
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
@@ -55,9 +55,8 @@ API token
       :width: 80%
 
 Client ID
-   A unique name to identify Zammad within i-doit.
-
-   (Zammad does not require you to enter a value here, but i-doit might!)
+   A unique name to identify Zammad within i-doit. Zammad does not require you
+   to enter a value here, but i-doit might!
 
 SSL verification
    Here you can decide if the certificate of your i-doit system has to be
@@ -85,7 +84,7 @@ learn how it works in practice).
 How to Set it Up
 ^^^^^^^^^^^^^^^^
 
-Enable this integration in the i-doit admin panel under
+Enable this integration in the i-doit admin settings under
 *Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:
 
 .. figure:: /images/system/integrations/i-doit/trouble-ticket-system-configuration.png

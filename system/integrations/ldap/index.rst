@@ -53,7 +53,7 @@ Before you continue, please note the following limitations:
   this by providing several sources - however, ensure to have the exact same
   configuration on your fallback. See
   `Issue 4107 <https://github.com/zammad/zammad/issues/4107>`_ for more
-  information.
+  details.
 
 Manage LDAP-Sources
 -------------------
@@ -166,7 +166,6 @@ Recent Logs
 This section holds all requests Zammad handled for all LDAP sources.
 These entries can either contain synchronization information or logins
 (authentication attempts via Zammad's login interface).
-
 By clicking on any request, Zammad will provide even more information.
 The provided information can be useful when something does not work as expected.
 
@@ -175,7 +174,3 @@ The provided information can be useful when something does not work as expected.
    Especially a LDAP synchronization can cause many log entries.
    The web interface will always limit the number of shown entries to the last
    50 entries.
-
-.. figure:: /images/system/integrations/ldap/ldap-log-entries.gif
-   :alt: Screencast showing LDAP integration log entries and a detail view on
-         an entry.

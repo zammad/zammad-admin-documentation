@@ -28,9 +28,8 @@ and contain the logic for sending API/email messages to Zammad:
 
 Once you're done setting up your new rule, you're all set!
 New tickets should start coming in and auto-updating
-any time your rule is triggered.
-
-(If you need help troubleshooting, be sure to check the :ref:`checkmk-recent-logs`.)
+any time your rule is triggered. If you need help troubleshooting, be sure to
+check the :ref:`checkmk-recent-logs`.
 
 .. _checkmk-api-alerts:
 
@@ -95,7 +94,6 @@ Email Alerts
 
    🐞 **There are known bugs** in Zammad's processing of emails from Checkmk.
    This section will be complete once they have been resolved.
-   (Learn more in GitHub issue
-   `#2180 <https://github.com/zammad/zammad/issues/2180>`_.)
-
-   In the meantime, we encourage you to set up API alerts instead.
+   Learn more in GitHub issue
+   `#2180 <https://github.com/zammad/zammad/issues/2180>`_. In the meantime, we
+   encourage you to set up API alerts instead.

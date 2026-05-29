@@ -144,12 +144,12 @@ but in practice, you can set almost any attribute, including
 
 Please note that the following attributes are **not customizable**:
 
-   - title
-   - id
-   - ticket number
-   - customer
-   - created_by_id
-   - updated_by_id
+- title
+- id
+- ticket number
+- customer
+- created_by_id
+- updated_by_id
 
 Which Values Can Be Set?
 ^^^^^^^^^^^^^^^^^^^^^^^^

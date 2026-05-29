@@ -1,20 +1,12 @@
 Integrations
 ============
 
-Zammad offers numerous integrations that add rich features to your instance.
+Zammad offers many integrations that add additional features to your instance.
+To configure them under *System > Integrations*, the permission
+``admin.integration`` is required.
 
 Integrations for Phone Systems
 ------------------------------
-
-.. hint::
-
-   Your VoIP provider or telephony system is not listed?
-   Possibly your provider supports Zammad by using the generic CTI - if you're
-   unsure ask your provider.
-
-   Provider does not support Zammad?
-   Consider creating a
-   `feature request in the Zammad Community <https://community.zammad.org/c/stuff-you-like-zammad-to-have-feel-free-to-discuss-and-add-proposals/6>`_.
 
 .. toctree::
    :maxdepth: 1
@@ -23,6 +15,13 @@ Integrations for Phone Systems
    cti/generic
    cti/placetel
    cti/sipgate
+
+.. hint::
+
+   If your VoIP provider is not listed, it is possible that your provider
+   supports Zammad by using the generic CTI integration. If you're unsure, ask
+   your provider. If the provider doesn't support Zammad, consider creating a
+   `feature request in the Zammad Community <https://community.zammad.org/c/stuff-you-like-zammad-to-have-feel-free-to-discuss-and-add-proposals/6>`_.
 
 Integrations for Authentication and Customers
 ---------------------------------------------

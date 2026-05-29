@@ -132,7 +132,7 @@ If you don't have an Ollama running already, their
 is a good starting point. You can find the available models in
 `Ollama's model library <https://ollama.com/library>`_ and useful information
 and additional links in the
-`Ollama Github repository <https://github.com/ollama/ollama>`_.
+`Ollama GitHub repository <https://github.com/ollama/ollama>`_.
 
 .. _feedback-logs:
 

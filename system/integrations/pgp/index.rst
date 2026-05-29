@@ -4,8 +4,9 @@ PGP
 Introduction
 ------------
 
-Pretty Good Privacy (PGP) is another method for secure email communication.
-With PGP, you can exchange **signed** and **encrypted** messages with others.
+Pretty Good Privacy (PGP) is one method for secure email communication in
+Zammad (in addition to :doc:`../smime/index`). It allows you to exchange
+**signed** and **encrypted** messages with others.
 
 Signing
    is a proof that a message hasn't been manipulated on its way.
@@ -22,7 +23,7 @@ Encryption
    :alt: Screenshot of ticket creation with encrypt and sign buttons
    :align: center
 
-   Once PGP has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will
+   Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will
    appear in the ticket composer.
 
 .. note:: **Sign button not visible?**
@@ -33,10 +34,11 @@ Encryption
 
 Handling of Keys
 ----------------
+
 To use the PGP function, you have to enable the integration (PGP) by switching
 the toggle to **enabled**.
 
-You can add keys by clicking the ``add key`` button. The keys can be imported
+You can add keys by clicking the ``Add Key`` button. The keys can be imported
 from a file or you can paste the content of the key in the text box.
 
 .. note:: **Which keys do I have to import?**
@@ -55,7 +57,8 @@ from a file or you can paste the content of the key in the text box.
 
 Import Keys From a File
 ^^^^^^^^^^^^^^^^^^^^^^^
-You can import keys from a file in the section **Upload key**:
+
+You can import keys from a file in the **Upload key** section:
 
 .. figure:: /images/system/integrations/pgp/import_key.png
    :alt: Screenshot of adding a key via file
@@ -66,7 +69,8 @@ You can import keys from a file in the section **Upload key**:
 
 Import Keys by Pasting the Content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You can also paste the key's content in the section **paste key**:
+
+You can also paste the key's content in the **Paste key** section:
 
 .. figure:: /images/system/integrations/pgp/paste_key.png
    :alt: Screenshot of adding a key via pasting
@@ -76,6 +80,7 @@ You can also paste the key's content in the section **paste key**:
 
 Deleting Keys
 ^^^^^^^^^^^^^
+
 If you want to delete a specific key, you can do it by clicking on the menu in
 the **actions** column and select **delete**:
 
@@ -83,30 +88,29 @@ the **actions** column and select **delete**:
    :alt: Screenshot of deleting a key
    :align: center
 
-
 Downloading Keys
 ^^^^^^^^^^^^^^^^
+
 If you want to download your keys, you can do this as well via corresponding
 action buttons. Depending on the key, you can choose wether you want to
 download the private or the public key.
 
-
 Default Behavior
 ----------------
-Here you can adjust on per group basis, if **sign** and **encryption** is on or off
-by default. Please be aware, that agents can always override the setting for
+
+Here, you can adjust on per group basis, if **sign** and **encryption** is on or
+off by default. Please be aware, that agents can always override the setting for
 each individual article.
 
 .. figure:: /images/system/integrations/pgp/group_default.png
    :alt: Adjusting default behavior on per group basis
    :align: center
 
-
 Recent Logs
 -----------
+
 Here you can see the last actions regarding signing and encryption and if they
 were successful.
-
 
 Troubleshooting
 ---------------

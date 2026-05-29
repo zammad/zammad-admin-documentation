@@ -2,17 +2,12 @@ Elasticsearch (SaaS)
 ====================
 
 The Elasticsearch integration allows you to create a read-only user to use
-with your favorite reporting tool (e.g. like Grafana).
+with your favorite reporting tool
+(e.g. :docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`).
 
-If you want to take full advantage of the Zammad reporting, have a look at our
-:docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>` setup page
-as well.
+.. warning:: **Only available for SaaS customers.**
 
-.. warning:: **🚧 Hosted environment specific 🚧**
-
-   This integration is only available for Hosted setups.
-   In order to use Elasticsearch you'll need the **Plus** subscription.
-
+   In order to use Elasticsearch, you'll need the **Plus** subscription.
    Self hosted users have all the control over their self hosted Elasticsearch
    instances.
 
@@ -27,11 +22,11 @@ Limitations
 Please note the following limitations of Elasticsearch access on
 hosted environments:
 
-   - access to the Elasticsearch index is read-only access
-   - currently you're limited to user only
-   - Reporting tools that require to write into the indexes
-     (like Kibana) are not supported
-   - IP access restriction is currently not yet supported
+- access to the Elasticsearch index is read-only access
+- currently you're limited to user only
+- Reporting tools that require to write into the indexes
+  (like Kibana) are not supported
+- IP access restriction is currently not yet supported
 
 Activating Elasticsearch Access
 -------------------------------

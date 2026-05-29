@@ -3,9 +3,8 @@ GitLab
 
 Use GitLab integration to track GitLab issues directly within Zammad tickets.
 Add links to issues and get meta information like status (open/closed),
-assignee, labels and more.
-
-Please note that our GitLab integration does not support merge requests.
+assignee, labels and more. Please note that our GitLab integration does not
+support merge requests.
 
 .. figure:: /images/system/integrations/gitlab/gitlab-integration-page.png
    :alt: Integration page for GitLab
@@ -30,7 +29,7 @@ Setup
 
 .. include:: /includes/ssl-verification-warning.rst
 
-Once completed, a new GitLab issues tab will appear in the ticket pane. 🎉
+Once completed, a new GitLab issues tab will appear in the ticket sidebar. 
 
 Troubleshooting
 ---------------
