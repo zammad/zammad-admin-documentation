@@ -66,7 +66,7 @@ Taking over a user's session
       :alt: Screenshot shows the view of another user's account.
       :align: center
 
-   .. danger:: **With great power comes with great responsibility.**
+   .. danger:: **With great power comes great responsibility.**
 
       This feature is not a simulation; entering this mode will boot the user
       from their session and any actions you take like responding to tickets,
