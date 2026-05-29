@@ -49,7 +49,7 @@ Step 1: Keycloak Configuration
 -------------------
 
 - Log in to Zammad as an administrator
-- In the admin settings, go to *Settings > Security > "hird-party Applications
+- In the admin settings, go to *Settings > Security > Third-party Applications
   > Authentication via SAML*
 - Provide the following information:
 
