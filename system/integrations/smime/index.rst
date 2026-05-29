@@ -10,7 +10,7 @@ S/MIME
 
 S/MIME is one method for secure email communication in Zammad (in addition to
 :doc:`../pgp/index`). It is the most widely-supported method for secure email
-communication and allows you to can exchange **signed** and **encrypted**
+communication and allows you to exchange **signed** and **encrypted**
 messages with others.
 
 Signing
