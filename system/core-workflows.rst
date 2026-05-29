@@ -7,8 +7,11 @@ For example:
 - Show and hide fields
 - Adjust if fields are mandatory or not
 - Set available options for select fields
+- Apply these adjustments based on conditions
 
-This allows you to provide exactly the information that your users really need.
+This allows you to provide exactly the information your users really need,
+enforce an input for certain fields, distinguish between different roles or
+groups and much more.
 
 .. note::
 
