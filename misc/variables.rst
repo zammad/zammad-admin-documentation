@@ -14,7 +14,7 @@ Basic Usage
 -----------
 
 Variables can be called by typing ``::`` (just like text modules in the
-frontend), as long as you're in a supported text field in the settings.
+article editor), as long as you're in a supported text field in the settings.
 Zammad will display all variables being available within this context and
 add the variable to your text as soon as you selected an entry. You can even
 search for and use variables for custom object attributes.
