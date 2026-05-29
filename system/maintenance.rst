@@ -7,7 +7,7 @@ the instance or changing settings while restricting availability and functions.
 Mode
    The mode setting allows you to enable or disable the maintenance mode.
 
-   Defaults to **off**.
+   Default: ``off``
 
    The maintenance mode will restrict access to administrative roles only.
    This means agents and customers are logged off.
@@ -76,7 +76,7 @@ Message
             Message setting within Zammad's admin settings with ticket reload
             application setting.
 
-            .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png
+            .. figure:: /images/system/maintenance/maintenance-message-with-reload-application.png
                :alt: Screenshot showing the send message settings with ticket
                      reload application set
 
