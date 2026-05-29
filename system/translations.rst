@@ -9,20 +9,18 @@ language they actually speak.
 .. tip::
    Your language is in an incomplete translation state or has typos? Please
    consider helping us in sorting this out! All you need is either a GitHub account
-   or to register directly in our instance.
-
-   Did you know? This is also where the documentation translations are handled.
-
-Have a look in our
-:docs:`contribution section </contributing/start.html#translation>` in the
-system documentation to get started!
+   or to register directly in our instance. By the way, this is also the place
+   where the documentation translation is done. Have a look at our
+   :docs:`contribution section </contributing/start.html#translation>` in the
+   system documentation to get started!
 
 Local Translations
 ------------------
 
 Apart from these system translations, there's still local translations you can
 manage. This is relevant if you added custom objects that require translations
-or even custom states and priorities.
+or even custom states and priorities. To manage them under
+*System > Translations*, the permission ``admin.translation`` is required.
 
 .. figure:: /images/system/translations/translation-management.png
    :alt: Translation management screen within the admin menu
@@ -81,13 +79,13 @@ Reverting to Original Translations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to revert a custom translation to original text, simply use the
-appropriate action within the row of the overview table.
+appropriate action from the ⠇ menu in the **Action** column.
 
 Depending on the type of the translation source, the action has a slightly
 different name:
 
-- ``Reset`` for customized system translations
-- ``Remove`` for customized local translations
+- **Reset** for customized system translations
+- **Remove** for customized local translations
 
 In both cases, the action will remove the customized translation after a
 confirmation.
@@ -100,22 +98,21 @@ Inline Translations
 ^^^^^^^^^^^^^^^^^^^
 
 If you prefer a more hands-on approach, you can activate the inline or on-screen
-translation feature by pressing ``ctrl`` + ``alt`` + ``t`` at any time and on
-any screen.
-
-All customizable translation texts will be highlighted for you on the screen.
-Just click into the highlighted area and update the text in place.
+translation feature by pressing :kbd:`ctrl` + :kbd:`alt` + :kbd:`t` at any time
+and on any screen. All customizable translation texts will be highlighted for
+you on the screen then. Just click the highlighted area and update the text in
+place.
 
 .. figure:: /images/system/translations/inline-translations.png
    :alt: Inline translation mode activated for the Overview screen
    :align: center
 
-When finished editing, simply press ``ctrl`` + ``alt`` + ``t`` again to
+When finished editing, simply press :kbd:`ctrl` + :kbd:`alt` + :kbd:`t` again to
 deactivate.
 
 .. note::
 
    Even though it's available on any screen, the inline translation feature
    requires admin permissions. It works only for the current language selection.
-   If you need to translate a different language, first change the language in
-   your :user-docs:`profile settings </extras/profile-and-settings.html>`.
+   If you need to translate to a different language, first change the language
+   in your :user-docs:`profile settings </extras/profile-and-settings.html>`.
