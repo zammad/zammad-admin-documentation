@@ -18,7 +18,7 @@ and if the input in the field is mandatory for different screens and
 Based on the object context (ticket, agent, organization, user), the selectable
 roles (to be precise: the required permissions) and screens differ. Be aware that
 these settings aren't affecting data creation via other channels
-than the UI. If you want to have further customize it, have a look at Zammad's
+than the UI. If you want further customization, have a look at Zammad's
 :doc:`core workflows </system/core-workflows>`.
 
 Screens
