@@ -28,9 +28,9 @@ Step 2: Export Your User Data to .csv
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
 
-* the ``id`` attribute (column) should be left blank or removed entirely;
-* the ``firstname`` and ``lastname`` attributes are **required**; and
-* any other columns may be safely omitted as long as each row has the same
+- the ``id`` attribute (column) should be left blank or removed entirely;
+- the ``firstname`` and ``lastname`` attributes are **required**; and
+- any other columns may be safely omitted as long as each row has the same
   number of fields (commas).
 
 If you have more than one value for a field, separate them with ``~~~``:

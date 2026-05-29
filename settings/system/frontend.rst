@@ -27,7 +27,7 @@ Show calendar weeks in the picker of date/datetime fields
    in business sectors and may not be relevant for everyone.
 
    This setting affects *all areas* - you'll also see week numbers in the
-   admin panel, e.g. in trigger and macro configuration.
+   admin settings, e.g. in trigger and macro configuration.
 
    Default: ``no`` (not shown)
 

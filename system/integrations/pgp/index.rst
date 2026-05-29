@@ -92,7 +92,7 @@ Downloading Keys
 ^^^^^^^^^^^^^^^^
 
 If you want to download your keys, you can do this as well via corresponding
-action buttons. Depending on the key, you can choose wether you want to
+action buttons. Depending on the key, you can choose whether you want to
 download the private or the public key.
 
 Default Behavior
@@ -117,7 +117,7 @@ Troubleshooting
 
 **Sign button is not visible, but keys are imported.**
    - Did you choose a group in the ticket?
-   - Did you import a private key for the email adress, which is used for
+   - Did you import a private key for the email address, which is used for
      outgoing emails in the group?
 
 **How to obtain keys?**

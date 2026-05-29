@@ -27,7 +27,7 @@ modify. Check the system filters section below for more information.
 Usage
 -----
 
-To create a new filter, click on the **New** button. This opens a dialog where
+To create a new filter, click on the ``New`` button. This opens a dialog where
 you can configure it. To modify an existing filter, just click on its row in the
 table, which opens the same dialog.
 

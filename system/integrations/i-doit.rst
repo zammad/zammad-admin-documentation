@@ -46,7 +46,7 @@ Endpoint
    The root URL of your i-doit installation.
 
 API token
-   Found in the i-doit admin panel
+   Found in the i-doit admin area
    under *Interfaces / external data > JSON-RPC API > Common Settings*.
 
    .. figure:: /images/system/integrations/i-doit/api-configuration.png

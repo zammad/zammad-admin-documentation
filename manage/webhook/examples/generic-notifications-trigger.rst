@@ -5,7 +5,7 @@ For posting a notification to an external service, you can use a dedicated
 :doc:`Trigger </manage/trigger>`. Here we will outline steps needed to create a
 Trigger which will fire a webhook under certain conditions.
 
-Go to Trigger management screen, and click on the green **New Trigger** button.
+Go to Trigger management screen, and click on the green ``New Trigger`` button.
 
 First, provide a suitable **Name** for the trigger.
 
@@ -73,4 +73,4 @@ Next, under **Execute changes on objects**, change the initial attribute to
    :align: center
    :width: 90%
 
-Finally, click on **Submit** to save the trigger.
+Finally, click on ``Submit`` to save the trigger.

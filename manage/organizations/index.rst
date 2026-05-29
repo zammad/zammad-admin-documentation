@@ -27,15 +27,15 @@ Learn more about managing organizations...
 
 **There are some technical limitations:**
 
-* Organizations currently cannot be removed. The only exception
+- Organizations currently cannot be removed. The only exception
   is Zammad's :doc:`/system/data-privacy` function.
-* Unlike users, agents cannot create new organizations.
+- Unlike users, agents cannot create new organizations.
   Check the :doc:`roles section </manage/roles/index>`
   to learn more.
-* Because of how organization references work with users, external syncs
+- Because of how organization references work with users, external syncs
   like LDAP or Exchange *do not* support organization mapping. If this is
   relevant to you, consider domain based assignments.
-* BIG organizations can cause *performance issues*. Especially organizations
+- BIG organizations can cause *performance issues*. Especially organizations
   with many members can cause a fairly high system load if their members run
   many updates, for example ticket creations or frequent communication.
 

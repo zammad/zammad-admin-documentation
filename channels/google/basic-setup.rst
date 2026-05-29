@@ -18,22 +18,22 @@ Configure OAuth App
 - Sign in to the `Google Cloud console <https://console.cloud.google.com/>`_.
 - Create a new app if you don't have one already.
 - Go to *APIs & Services > OAuth consent screen* and create an OAuth client by
-  clicking the **Create OAuth client** button.
-- Choose "Web application" as type, provide a fitting name and add a redirect
+  clicking the ``Create OAuth client`` button.
+- Choose **Web application** as type, provide a fitting name and add a redirect
   URI. You can find the redirect URI in the Google account settings dialog of
-  Zammad by opening the configuration dialog via **Connect Google App** button
-  (called "Your callback URL").
-- After saving your app, a dialog will be shown with the "Client ID" and the
-  "Client secret". Copy and add them to Zammad in the app configuration
+  Zammad by opening the configuration dialog via ``Connect Google App`` button
+  (called **Your callback URL**).
+- After saving your app, a dialog will be shown with the **Client ID** and the
+  **Client secret**. Copy and add them to Zammad in the app configuration
   dialog.
-- **Submit** the app configuration in Zammad and switch back to Google's Cloud
+- ``Submit`` the app configuration in Zammad and switch back to Google's Cloud
   console.
-- Go back to the dashboard, select *APIs & Services > Enabled APIs & Services*
-  and click on **Enable APIs & services** button. Search for ``gmail``, open it
-  and hit the **Enable** button.
+- Go back to the dashboard and to *APIs & Services > Enabled APIs & Services*
+  and click on ``Enable APIs & services`` button. Search for ``gmail``, open it
+  and hit the ``Enable`` button.
 - Go to *OAuth consent screen > Data Access* and click the
-  **Add or remove scopes** button. Search for ``gmail`` and add the scope
-  ``https://mail.google.com/``. Confirm with the **Update** button.
+  ``Add or remove scopes`` button. Search for ``gmail`` and add the scope
+  ``https://mail.google.com/``. Confirm with the ``Update`` button.
 
 Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
 on your scenario, you should also have a look at the **Audience** section in
@@ -46,17 +46,17 @@ Add Account
 After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
 
 .. danger::
-   * By default, Zammad will **delete all emails** in your inbox
+   - By default, Zammad will **delete all emails** in your inbox
      during the import process. Use the *Keep Messages on Server* setting to
      :ref:`disable this behavior <google-keep-messages-on-server>` or enable
      :ref:`archive mode <archive-mode-google>`.
-   * Zammad will send an auto-reply message
+   - Zammad will send an auto-reply message
      to every email it imports (including the old ones!).
      Make sure to :doc:`disable this behavior </manage/trigger>`
      prior adding an email account and to turn it back on once all your
      messages have been imported.
 
-To connect you Google account, click on "Add Account" in Zammad. You will be
+To connect you Google account, click on ``Add Account`` in Zammad. You will be
 redirected to a consent dialog. Click through the screens and and make sure
 to select the desired Google account as well as to grant the permission for
 email handling as you can see in the following screenshot.
@@ -66,7 +66,7 @@ email handling as you can see in the following screenshot.
    :scale: 50%
    :align: center
 
-After clicking on "Continue", you are redirected to Zammad where you can see a
+After clicking on ``Continue``, you are redirected to Zammad where you can see a
 dialog for specifying some settings for the channel:
 
 .. figure:: /images/channels/google/add-channel-dialog.png
@@ -105,8 +105,8 @@ Folder
 Keep messages on server
    Specify what happens to your emails after Zammad imports them:
 
-   * ``no``: Zammad deletes all imported messages
-   * ``yes``: Zammad marks imported messages as read. With this option,
+   - ``no``: Zammad deletes all imported messages
+   - ``yes``: Zammad marks imported messages as read. With this option,
      Zammad will only import unread messages. This means Zammad may miss
      messages if the mailbox is externally modified.
 
@@ -154,7 +154,7 @@ The easiest way to start the migration is to :ref:`register-oauth-google` for
 your Google accounts before migrating. However, if you don't, Zammad will ask
 you to provide your app credentials before allowing you to continue.
 
-If you're ready to go, simply click on the *Migrate now!* button in the red
+If you're ready to go, simply click on the ``Migrate now!`` button in the red
 banner of the email channel in question. Zammad will redirect you to
 Google and request you to authenticate and consent to said account.
 

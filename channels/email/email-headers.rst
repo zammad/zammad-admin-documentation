@@ -56,8 +56,8 @@ The manipulation can be used instead of triggers. Triggers are considered
 
 To differentiate between ticket creation and follow-up:
 
-   * For creations use: ``X-Zammad-Ticket-{Attribute Name}``
-   * For follow ups use: ``X-Zammad-Ticket-FollowUp-{Attribute Name}``
+   - For creations use: ``X-Zammad-Ticket-{Attribute Name}``
+   - For follow ups use: ``X-Zammad-Ticket-FollowUp-{Attribute Name}``
 
 This allows you to ensure the changes are only applied in the
 required situation.
@@ -68,9 +68,9 @@ required situation.
    Time Zoned Times. e.g. for 28th September 2021 on 8 am CEST, you can
    use one of the following examples:
 
-   * ``2021-09-28T08:00:00+0200``
-   * ``2021-09-28T08:00:00+02:00``
-   * ``2021-09-28T06:00:00.000Z``
+   - ``2021-09-28T08:00:00+0200``
+   - ``2021-09-28T08:00:00+02:00``
+   - ``2021-09-28T06:00:00.000Z``
 
 ``X-Zammad-Ticket-Priority`` & ``X-Zammad-Ticket-FollowUp-Priority``
    | Allows you to adjust a ticket's priority.

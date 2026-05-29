@@ -1,4 +1,4 @@
-.. :orhpan:
+.. :orphan:
 
 .. hint::
    What is the difference between the

@@ -172,7 +172,7 @@ owner
       -F "owner=it@chrispresso.com"
 
 group & priority
-   Refer to the dropdown menus in the ticket pane:
+   Refer to the dropdown menus in the ticket sidebar:
 
    .. code:: bash
 
@@ -180,7 +180,7 @@ group & priority
       -F "priority=3 high"
 
    .. figure:: /images/system/integrations/checkmk/ticket-attribute-names.png
-      :alt: See possible values for certain attributes in the ticket pane.
+      :alt: See possible values for certain attributes in the ticket sidebar.
       :scale: 50%
       :align: center
 

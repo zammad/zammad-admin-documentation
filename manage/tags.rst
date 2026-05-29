@@ -56,4 +56,4 @@ By clicking on the tag in the tag management
 
    By clicking the blue counter, a search for this tag is pre-populated in the
    search bar. Select one of the tickets or get a complete overview of all
-   tickets that have this tag attached by clicking the **Show Search Details**.
+   tickets that have this tag attached by clicking the ``Show Search Details``.

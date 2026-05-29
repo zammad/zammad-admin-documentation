@@ -26,12 +26,12 @@ via the *Overviews* page:
    Select your desired tickets, then click-and-drag
    to apply a macro to all of them.
 
-You can create or edit macros on the Macros page of the admin panel:
+You can create or edit macros on the Macros page of the admin settings:
 
 .. figure:: /images/manage/macros/macro-overview.png
    :align: center
    :width: 80%
-   :alt: Screenshot of "Macros" page in admin panel
+   :alt: Screenshot of "Macros" page in admin settings
 
 .. toctree::
    :maxdepth: 1

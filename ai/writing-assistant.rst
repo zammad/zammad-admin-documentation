@@ -24,7 +24,7 @@ General Handling
 ^^^^^^^^^^^^^^^^
 
 To create a new writing assistant tool, you can either start from scratch by
-using the **New Writing Assistant Tool** button in the top right corner or clone
+using the ``New Writing Assistant Tool`` button in the top right corner or clone
 an existing one which is similar to your use case and adjust it. In both cases,
 a configuration dialog gets opened where you can adjust the settings of the
 writing assistant tool. You can find an explanation of each field in the

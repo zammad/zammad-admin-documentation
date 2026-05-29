@@ -230,11 +230,11 @@ Default Notifications
 
    .. warning::
 
-      * **Potential time-consuming action:**
+      - **Potential time-consuming action:**
         Applying default ticket notifications to all agent users may take some
         time to complete, be patient! The exact time will depend on the size of
         your system and the number of agents.
-      * **Active agents only!**
+      - **Active agents only!**
         When current default ticket notifications are applied, only active agent
         users are considered. In case an agent is re-activated *after* this
         action, they will still have the old notification configuration.
@@ -271,7 +271,7 @@ Detect Duplicate Ticket Creation
    set **Show matching ticket(s) in the warning** setting to *no*.
 
    By default, **Permission level for looking up ticket** is set to *User*,
-   which  means user permissions will be honored during sarch. The user will see
+   which  means user permissions will be honored during search. The user will see
    the warning only if tickets they have access to are matched. Alternatively,
    you can set this setting to *System*, in which case the search will happen
    within *all* tickets in the system, regardless of user permissions.

@@ -72,9 +72,9 @@ Theme
    knowledge base. With this option being active, Zammad will provide you
    up to two RSS links:
 
-      - a general RSS feed of the whole knowledge base (top level)
-      - a category specific RSS feed of the category you're in
-        (also applies to answers you're viewing)
+   - a general RSS feed of the whole knowledge base (top level)
+   - a category specific RSS feed of the category you're in
+      (also applies to answers you're viewing)
 
    This setting by default is set to ``no``.
 
@@ -178,7 +178,7 @@ instance, under ``/help``.
 
 If you wish to customize where it can be accessed, enter your desired URL here
 and configure your web server accordingly. Zammad provides a snippet for Apache
-and Nginx webserver after clicking the **Web Server Configuration**.
+and Nginx webserver after clicking the ``Web Server Configuration``.
 You can find a tutorial about how to use a
 :docs:`custom knowledge base URL in combination with Nginx proxy manger (NPM) </appendix/custom-kb-url.html>`
 in the system documentation.

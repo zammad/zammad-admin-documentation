@@ -74,8 +74,8 @@ By default this setting is not active (set to ``no``).
 
    This means it only affects:
 
-      * manual account linking within the third-party page of the users profile
-      * logging into an existing local account by utilizing the
+      - manual account linking within the third-party page of the users profile
+      - logging into an existing local account by utilizing the
         **automatic account link on initial logon** functionality
 
 No User Creation on Logon

@@ -38,7 +38,7 @@ Uploading a **client certificate**?
    The Extended Key Usage attribute is optional. If the certificate provides
    the named attribute, than it must contain the value ``E-mail Protection``.
 
-   Please note that any usable email adress has to be prefixed with ``email:``
+   Please note that any usable email address has to be prefixed with ``email:``
    or ``rfc822:``.
 
    The named public key algorithms are mandatory for private keys as well.

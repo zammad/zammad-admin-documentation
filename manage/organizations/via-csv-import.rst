@@ -9,13 +9,13 @@ you can batch-import them into Zammad in just three steps.
    :alt: The CSV import dialog
    :align: center
 
-   Use the **Import** button to open the CSV import dialog.
+   Use the ``Import`` button to open the CSV import dialog.
 
 Step 1: Inspect the sample .csv
 -------------------------------
 
 Use the link at the bottom of the CSV import dialog
-(**“Example CSV file for download”**)
+(**Example CSV file for download**)
 to see how Zammad expects you to format your organization data.
 
 Step 2: Export Your Organization Data to .csv
@@ -23,9 +23,9 @@ Step 2: Export Your Organization Data to .csv
 
 Prepare your .csv file according to the format found in Step 1 above. Note that:
 
-* the ``id`` attribute (column) should be left blank or removed entirely;
-* the ``name`` attribute is **required**; and
-* any other columns may be safely omitted
+- the ``id`` attribute (column) should be left blank or removed entirely;
+- the ``name`` attribute is **required**; and
+- any other columns may be safely omitted
   as long as each row has the same number of fields (commas).
 
 For instance:

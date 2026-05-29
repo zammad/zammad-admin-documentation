@@ -20,7 +20,7 @@ for all sorts of automation tasks in the **Triggers** section in the admin
 settings:
 
 .. figure:: /images/manage/trigger/trigger-management.png
-   :alt: Screenshot of “Triggers” page in admin panel
+   :alt: Screenshot of "Triggers" page in admin settings
 
 .. toctree::
    :maxdepth: 1

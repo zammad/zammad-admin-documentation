@@ -36,8 +36,8 @@ For an additional way to categorize tickets, have a look at :doc:`/manage/tags`.
 
 .. hint:: If the *Group* field does not appear in the ticket view, ensure that:
 
-   * you have created more than one group
-   * the current user has "change" permissions to more than one group
+   - you have created more than one group
+   - the current user has "change" permissions to more than one group
 
    This is necessary because Zammad automatically hides selection fields with
    only one option.

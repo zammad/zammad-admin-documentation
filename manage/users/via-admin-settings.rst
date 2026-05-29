@@ -29,7 +29,7 @@ Filtering the user list
       :alt: Screenshot shows selected role and search term in user management.
       :align: center
 
-   Use the **Search for users** bar and the **Roles** buttons to filter the list.
+   Use the **Search for users** bar and the **Roles** tabs to filter the list.
    You may search by name, email, or any other user attribute.
 
    .. _locked-user-accounts:

@@ -41,7 +41,7 @@ corner and choose **Connectors**.
    :align: center
 
 Find a connector named **Incoming Webhook** in the list and click on
-**Configure** button next to it.
+``Configure`` button next to it.
 
 .. figure:: /images/manage/webhook/webhook-teams-incoming-webhook.png
    :alt: Incoming Webhook in the Connectors list
@@ -57,17 +57,17 @@ Optionally, provide a custom image which will be used as the avatar.
    :alt: Creating Incoming Webhook Connector
    :align: center
 
-Click on **Create** and be patient.
+Click on ``Create`` and be patient.
 
-Once created, make sure to copy *the webhook endpoint URL* to clipboard and save
-it for later. You can do this in one click via the button shown right next to
-the field.
+Once created, make sure to copy the **webhook endpoint URL** to clipboard and
+save it for later. You can do this in one click via the button shown right next
+to the field.
 
 .. figure:: /images/manage/webhook/webhook-teams-incoming-webhook-endpoint.png
    :alt: Copying Incoming Webhook Connector URL
    :align: center
 
-Finally, close the connector configuration by clicking **Done**.
+Finally, close the connector configuration by clicking ``Done``.
 
 Step 2 - Add a Pre-defined Webhook in Zammad
 --------------------------------------------
@@ -89,9 +89,9 @@ pre-defined webhook.
    :align: center
    :width: 90%
 
-Click **Next**.
+Click ``Next``.
 
-In the new dialog, paste *the webhook endpoint URL* from Microsoft Teams into
+In the new dialog, paste the **webhook endpoint URL** from Microsoft Teams into
 **Endpoint** field.
 
 .. figure:: /images/manage/webhook/webhook-teams-webhook-endpoint.png
@@ -99,7 +99,7 @@ In the new dialog, paste *the webhook endpoint URL* from Microsoft Teams into
    :align: center
    :width: 90%
 
-Finally, click on **Submit**.
+Finally, click on ``Submit``.
 
 Step 3 - Configuring a Trigger for firing of the Webhook
 --------------------------------------------------------
@@ -155,7 +155,7 @@ Then, simply delete the selected code block.
    :align: center
    :width: 80%
 
-Finally, click on **Submit** to save your webhook changes.
+Finally, click on ``Submit`` to save your webhook changes.
 
 On the next invocation of the webhook, the notification will not include content
 of the last article.

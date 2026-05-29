@@ -52,10 +52,10 @@ Set Up User Attribute Mapping
 
 Zammad requests the following user attributes (or “properties”) from the IdP:
 
-* Email address (``email``)
-* Full name (``name``)
-* Given name (``first_name``)
-* Family name (``last_name``)
+- Email address (``email``)
+- Full name (``name``)
+- Given name (``first_name``)
+- Family name (``last_name``)
 
 You may need to set up “mappers” (or “mappings”) to tell your IdP
 how user attributes in SAML correspond to those in Zammad.
@@ -124,7 +124,7 @@ IDP certificate fingerprint
       fingerprints use SHA-1, which `has been broken for a while now
       <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
 
-      **Keycloak users:** Find your certificate in the Keycloak admin panel
+      **Keycloak users:** Find your certificate in the Keycloak admin settings
       under **Realm Settings > Keys > Algorithm: RS256 > Certificate**.
 
 Name identifier format

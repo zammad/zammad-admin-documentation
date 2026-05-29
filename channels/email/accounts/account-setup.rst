@@ -10,10 +10,10 @@ The import process does things you might not expect:
 
 .. danger::
 
-   * By default, Zammad will **delete all emails** in your inbox
+   - By default, Zammad will **delete all emails** in your inbox
      during the import process. Use the *Experts* dialog to
      :ref:`disable this behavior <email-experts-keep-messages-on-server>`.
-   * Zammad will **send an auto-reply message to every email it imports**
+   - Zammad will **send an auto-reply message to every email it imports**
      (including the old ones!). Use the *Experts* dialog to
      :ref:`change this behavior <archive-mode-email>` or to
      :doc:`disable auto-replies </manage/trigger>` prior adding an email
@@ -140,9 +140,9 @@ SSL / STARTTLS
 
    You can choose from the following options:
 
-      * No SSL (*not recommended!*)
-      * SSL
-      * STARTTLS
+      - No SSL (*not recommended!*)
+      - SSL
+      - STARTTLS
 
 SSL verification
    Here you can decide if the certificate of the email server has to be
@@ -183,9 +183,9 @@ Folder
 Keep messages on server
    Specify what happens to your emails after Zammad imports them:
 
-   * ``no``: Zammad deletes all imported messages
+   - ``no``: Zammad deletes all imported messages
 
-   * ``yes``: Zammad marks imported messages as read. With this option, Zammad
+   - ``yes``: Zammad marks imported messages as read. With this option, Zammad
      will only import unread messages. This means Zammad may miss messages if
      the mailbox is externally modified.
 
@@ -271,4 +271,4 @@ and external - once this is verified the setup process is complete! 🎉
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
-* :ref:`Is a custom incoming mail folder to blame? <email-experts-folder>`
+- :ref:`Is a custom incoming mail folder to blame? <email-experts-folder>`

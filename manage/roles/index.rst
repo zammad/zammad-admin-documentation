@@ -24,15 +24,15 @@ This makes creating user accounts for new agents much simpler because you just
 have to assign the correct role instead of configuring permissions and group
 access for each user individually. Examples of some important permissions are:
 
-* ``ticket.agent``: allows a user to work on tickets
-* ``admin.user``: allows a user to manage other users in Zammad's admin settings
-* ``knowledge_base.editor``: allows a user to create/edit knowledge base
+- ``ticket.agent``: allows a user to work on tickets
+- ``admin.user``: allows a user to manage other users in Zammad's admin settings
+- ``knowledge_base.editor``: allows a user to create/edit knowledge base
   articles
-* ``user_preferences.language``: allows a user to change the language of
+- ``user_preferences.language``: allows a user to change the language of
   Zammad's UI for their account.
 
 To adjust a permission of a role, simply click on it. To create a new role, use
-the **New Role** button in the top right corner. In both cases, a dialog opens
+the ``New Role`` button in the top right corner. In both cases, a dialog opens
 where you can configure it.
 
 .. _permission-guide:

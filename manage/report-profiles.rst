@@ -19,13 +19,13 @@ You can find the configuration in Zammad's admin settings under
     leak information. Consider to limit the available profiles to specific
     roles, instead of just granting or not granting access to **all** profiles.
     Creating specific :doc:`/manage/roles/index` for this purpose may be
-    helpul.
+    helpful.
 
 Create and Edit Profiles
 ------------------------
 
 To create a new reporting profile, click the ``New Profile`` button. To edit
-an existing profile, simply click on the row. You can **Clone** or **Delete**
+an existing profile, simply click on the row. You can ``Clone`` or ``Delete``
 a profile by choosing the corresponding action from the ⠇ menu in the action
 column.
 

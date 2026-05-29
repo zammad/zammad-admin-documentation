@@ -35,7 +35,7 @@ Manage AI Agents
    :alt: Screenshot shows AI agents management
    :align: center
 
-Create an AI agent by clicking the **New AI Agent** button in the top right
+Create an AI agent by clicking the ``New AI Agent`` button in the top right
 corner. This opens a wizard where you can choose the type of the agent and
 additional settings based on the selected type, see :ref:`ai-agent-types` for
 details. The action column with the ︙ button allows you to clone or delete an

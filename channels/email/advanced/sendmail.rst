@@ -20,5 +20,5 @@ Now, you should see a new **Email Account** entry in the admin settings panel:
          email panel.
    :align: center
 
-   Use the **Add** button under the **Email Address** heading to add new email
+   Use the ``Add`` button under the **Email Address** heading to add new email
    addresses to send from.

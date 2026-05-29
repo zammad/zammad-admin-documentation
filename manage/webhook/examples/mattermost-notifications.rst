@@ -16,10 +16,10 @@ In your Mattermost top-left corner product menu, choose **Integrations**.
 Click on **Incoming Webhooks** integration button.
 
 .. figure:: /images/manage/webhook/webhook-mattermost-incoming-webhooks.png
-   :alt: Incoming Webhooks in Mattermost Integratons
+   :alt: Incoming Webhooks in Mattermost Integrations
    :align: center
 
-Click on **Add Incoming Webhook** button.
+Click on ``Add Incoming Webhook`` button.
 
 .. figure:: /images/manage/webhook/webhook-mattermost-add-incoming-webhook.png
    :alt: Add Incoming Webhook button
@@ -36,7 +36,7 @@ configure the target channel from Zammad side as well.
    :alt: Incoming Webhook Setup
    :align: center
 
-Click on **Save** button.
+Click on ``Save`` button.
 
 Once created, make sure to copy *the webhook endpoint URL* to clipboard and save
 it for later. You can do this in one click via the button shown right next to
@@ -46,7 +46,7 @@ the field.
    :alt: Copying Incoming Webhook URL
    :align: center
 
-Finally, close the incoming webhook setup by clicking **Done**.
+Finally, close the incoming webhook setup by clicking ``Done``.
 
 Step 2 - Add a Pre-defined Webhook in Zammad
 --------------------------------------------
@@ -68,9 +68,9 @@ pre-defined webhook.
    :align: center
    :width: 90%
 
-Click **Next**.
+Click ``Next``.
 
-In the new dialog, paste *the webhook endpoint URL* from Mattermost into
+In the new dialog, paste the **webhook endpoint URL** from Mattermost into
 **Endpoint** field.
 
 Optionally, you can set **Messaging Username** which will be used to post the
@@ -85,7 +85,7 @@ webhook.
    :align: center
    :width: 90%
 
-Finally, click on **Submit**.
+Finally, click on ``Submit``.
 
 Step 3 - Configuring a Trigger for firing of the Webhook
 --------------------------------------------------------
@@ -150,7 +150,7 @@ Then, simply delete the selected code.
    :align: center
    :width: 80%
 
-Finally, click on **Submit** to save your webhook changes.
+Finally, click on ``Submit`` to save your webhook changes.
 
 On the next invocation of the webhook, the notification will not include content
 of the last article.

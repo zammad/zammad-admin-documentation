@@ -138,7 +138,7 @@ The ones that aren't are described below.
 Roles
    The :doc:`/manage/roles/index` define what users can do in the system.
    If you need to grant someone privileges to edit the knowledge base
-   or access parts of the admin panel, roles are the answer.
+   or access parts of the admin settings, roles are the answer.
 
 Group Permissions
    The :doc:`/manage/groups/group-permissions` define which tickets

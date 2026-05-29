@@ -13,7 +13,7 @@ This section gives you an overview of the available plans and their
 functions / limits and the ability to choose another plan. If you require a
 more detailed table, check our
 `pricing table <https://zammad.com/en/pricing/table>`_ for more information.
-Your selection (green **Selected** button) in this step will decide on the base
+Your selection (green ``Selected`` button) in this step will decide on the base
 agent price and agent limits. You can also find your currently used number of
 agents there and see the accounts. This list *does not* count accounts with
 admin permissions only. Learn more about how to

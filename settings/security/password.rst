@@ -15,8 +15,8 @@ This section allows you to define password requirements for the user accounts.
    we believe that an administrator knowing a user's password is insecure as
    well. The suggested workflow is to use one of the following suggestions:
 
-      - Use third-party logins to not require local passwords at all
-      - Require your users to reset their password upon first login
+   - Use third-party logins to not require local passwords at all
+   - Require your users to reset their password upon first login
 
    This way administrators are not required to set a user's password at all!
 
@@ -34,9 +34,9 @@ Default: ``10``
 
    Beside changing the user's password, you can also unlock accounts via
 
-      * :ref:`User management <locked-user-accounts>`
-      * :docs:`Console (system documentation) </admin/console/working-on-users.html>`
-      * :docs:`API (system documentation) </api/user.html>`
+   - :ref:`User management <locked-user-accounts>`
+   - :docs:`Console (system documentation) </admin/console/working-on-users.html>`
+   - :docs:`API (system documentation) </api/user.html>`
 
 .. hint::
 
