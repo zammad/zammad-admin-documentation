@@ -70,7 +70,7 @@ Taking over a user's session
 
       This feature is not a simulation; entering this mode will boot the user
       from their session and any actions you take like responding to tickets,
-      changing passwords, :doc:`logging hours worked </manage/time-accounting>`)
+      changing passwords or :doc:`logging hours worked </manage/time-accounting>`
       will actually be performed from the user's account. On the other hand, if
       the user logs back in, you'll be booted, too.
 
