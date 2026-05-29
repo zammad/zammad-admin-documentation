@@ -113,7 +113,7 @@ Options
 
    Add agreement text before submit
       If enabled, this allows you to define a text that the form displays
-      together with a checkbox. Whit this, you can ensure your form conforms
+      together with a checkbox. With this, you can ensure your form conforms
       to legal requirements, e.g. by providing data privacy notes which the user
       has to accept before submitting the form. Use the ``🔗 Weblink`` button to
       add links to marked text passages.
@@ -148,7 +148,7 @@ Header section
 
    The channel form suggests the following script tag, which loads the
    javascript library required from an external site. This may not
-   suite your local requirements. You can use a locally hosted jQuery version,
+   suit your local requirements. You can use a locally hosted jQuery version,
    however the version is fixed.
 
    ``<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>``
@@ -244,5 +244,5 @@ is to change the location of ``form.js`` ( ``/opt/zammad/assets/form/form.js`` )
 
 Please keep in mind: if you change the location of ``form.js``
 (e.g. by copying), you need to ensure that your ``form.js`` stays up to date if
-you update Zammad. It's not recommended to delete ``form.js`` from it's location
+you update Zammad. It's not recommended to delete ``form.js`` from its location
 in that case, but to forbid access to it via your web server configuration.

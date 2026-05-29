@@ -56,8 +56,8 @@ After you've registered an OAuth app, you can connect Gmail accounts to Zammad.
      prior adding an email account and to turn it back on once all your
      messages have been imported.
 
-To connect you Google account, click on ``Add Account`` in Zammad. You will be
-redirected to a consent dialog. Click through the screens and and make sure
+To connect your Google account, click on ``Add Account`` in Zammad. You will be
+redirected to a consent dialog. Click through the screens and make sure
 to select the desired Google account as well as to grant the permission for
 email handling as you can see in the following screenshot.
 
