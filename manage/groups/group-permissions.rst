@@ -1,9 +1,8 @@
 Group Permissions
 =================
 
-When assigning an agent to a :doc:`group </manage/groups/index>`,
-Zammad gives you fine-grained control
-over what actions that agent can perform within it:
+When assigning a group to an agent or a role, Zammad gives you fine-grained control
+about the access levels:
 
 .. figure:: /images/manage/groups/access-levels/access-table.png
    :alt: The group permission setting in the Edit User dialog
@@ -12,7 +11,7 @@ over what actions that agent can perform within it:
 
    Use the group permission table to grant per-group privileges.
 
-The group permissions grant access to:
+The group permissions access levels are:
 
 - **Read:** View, search for and find tickets.
 - **Create:** Create new tickets and move existing tickets into the group.
@@ -26,10 +25,9 @@ The group permissions grant access to:
 Setting Permissions
 -------------------
 
-There are two ways to define an agent's per-group permission levels:
+There are two ways to set the permission level for an agent:
 
-1. Directly, in the :ref:`Edit User dialog <user-details-group-access>` in the
-   table of group permissions:
+1. User-based (directly in the :ref:`Edit User dialog <user-details-group-access>`):
 
    .. figure:: /images/manage/groups/access-levels/assign-group-access-per-user.png
       :alt: Screenshot showing the group assignment to a user in the user edit dialog.
@@ -38,7 +36,7 @@ There are two ways to define an agent's per-group permission levels:
 
       Simply set your permission levels right on the target user.
 
-2. Implicitly, by :ref:`editing a user role <role-settings-group-access>`
+2. Role-based (by :ref:`editing a user role <role-settings-group-access>`):
 
    First, head over to :doc:`Roles </manage/roles/index>` to set up the
    permissions you want to assign.
@@ -61,18 +59,17 @@ There are two ways to define an agent's per-group permission levels:
    Make sure to click on the ➕ *Add* button after assigning the last
    group. Otherwise, your last selection *will not* be saved.
 
-.. note:: ⚖️ **We recommend choosing one or the other**;
+.. note:: **We recommend choosing one or the other**;
    things can get confusing if you use both at the same time.
 
    So which one is right for you? *Whichever one is less work.*
    If you're trying to assign multiple agents
    to the same group with the same permissions,
-   create a role for them to share—that's what roles are for!
+   create a role for them to share - that's what roles are for!
 
-   🤔 **Can't see the group permission table?**
-
-   Please make sure that you have selected the ``ticket.agent`` permission for
-   the user or role.
+.. hint::
+   If you can't see the group permission table, make sure that you have
+   selected the ``ticket.agent`` permission for the user or role.
 
 Examples
 --------

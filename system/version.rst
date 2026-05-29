@@ -1,4 +1,4 @@
 Version
 =======
 
-Shows which version is currently being used on your Zammad-instance.
+Shows the current Zammad version of your instance.

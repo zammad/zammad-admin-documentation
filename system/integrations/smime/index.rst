@@ -8,8 +8,10 @@ S/MIME
    manage-certificates
    troubleshooting
 
-S/MIME is the most widely-supported method for secure email communication.
-With S/MIME, you can exchange **signed** and **encrypted** messages with others.
+S/MIME is one method for secure email communication in Zammad (in addition to
+:doc:`../pgp/index`). It is the most widely-supported method for secure email
+communication and allows you to exchange **signed** and **encrypted**
+messages with others.
 
 Signing
    is proof that a message hasn't been tampered with or sent by an impersonator.
@@ -25,7 +27,7 @@ Encryption
    :alt: Screencast demo of S/MIME features for both new tickets and replies
    :align: center
 
-   Once S/MIME has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will appear in the ticket composer.
+   Once S/MIME has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will appear in the ticket composer.
 
 :doc:`Prerequisites <prerequisites>`
    New to S/MIME? This section helps you to find certificate providers and

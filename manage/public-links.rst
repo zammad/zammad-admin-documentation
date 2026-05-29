@@ -4,18 +4,18 @@ Public Links
 Public links allow you to provide important links at different places
 within the UI of Zammad. This allows you not just to provide legal information
 like e.g. data privacy or contact information. You can also provide further
-useful links to other services if needed.
+useful links to other services, if needed. To configure them under
+*Manage > Public links*, you need the ``admin.public_links`` permission.
 
 .. figure:: /images/manage/public-links/public-links-management.png
-   :alt: Screenshot showing the public links management interface within
-         the settings
+   :alt: Screenshot shows the public links management interface in Zammad's settings
 
 .. _public_links_add_new:
 
 Adding New Public Links
 -----------------------
 
-You can add new public links via the *New Public Link*  button on the upper
+You can add new public links via the ``New Public Link`` button on the upper
 right. You'll see a new dialog where you can provide the following information:
 
 Link
@@ -40,7 +40,7 @@ Description
    by normal browsers when hovering over the link in question.
 
    Use this to describe the link.
-   This value is *optional*.
+   This value is optional.
 
 Context
    The context setting allows you to choose one or several places where this link
@@ -49,12 +49,12 @@ Context
 
    You can currently select from:
 
-      * Forgot Password Screen
-      * Login Screen
-      * Signup Screen
+   - Forgot Password Screen
+   - Login Screen
+   - Signup Screen
 
    To help you understand scopes better, here's the different scopes as a
-   screenshot. Note that we intentionally did set all links for all contexts. 🤓
+   screenshot. Note that we intentionally did set all links for all contexts.
 
       .. tabs::
 
@@ -97,9 +97,7 @@ Re-arrange Links
 By default Zammad sorts your public links in the order you've created them.
 That may be a problem if you add a link later on. For this reason you can
 easily change the link order by dragging them to another position by using
-the ≣ handle.
-
-These changes are applied immediately.
+the ≣ handle. These changes are applied immediately.
 
 .. _public_links_actions:
 

@@ -1,15 +1,15 @@
 Monitoring
 ==========
 
-.. note:: This function is only available in self hosted instances. If you
-   use Zammad in our cloud, we are monitoring the system on our own and take
-   steps to fix potential problems directly.
+.. note:: This function is only available in self hosted instances. For our
+   SaaS customers, we're monitoring the system on our own and take steps to fix
+   potential problems directly.
 
 General
 -------
 
 On the monitoring page, you can see the current health state of Zammad under
-"*Current Status*" at the bottom. This can be useful if you want to have a look
+**Current Status** at the bottom. This can be useful if you want to have a look
 if everything is up and running.
 As an example, you could have a look in the monitoring when you assume that
 some emails aren't processed from Zammad.
@@ -26,8 +26,8 @@ Monitoring API
 Beside the indication in the monitoring page, you can also use an external
 monitoring tool to monitor Zammad's health. To request the health of Zammad,
 you need to provide the API key (token) to the external monitoring tool.
-You can copy the token from the "*Current Token*" field as well as the whole API
-endpoint of your system ("*Health Check*" field), in which the API token is
+You can copy the token from the **Current Token** field as well as the whole API
+endpoint of your system (**Health Check** field), in which the API token is
 already included.
 
 .. figure:: /images/system/monitoring/monitoring-token-health-check.png
@@ -37,7 +37,7 @@ already included.
 
 In addition to that, you can reset the auto-generated token to make sure
 that already configured monitoring systems won't work anymore. So, please use
-this "*Reset*" button only if you know what you do!
+this ``Reset`` button only if you know what you do!
 
 Example Output
 --------------

@@ -21,11 +21,11 @@ Manage Calendars
    :alt: Screenshot shows Zammad's calendar configuration.
 
 New Calendar
-   To create a new calendar, click the **New Calendar** button on the top right
+   To create a new calendar, click the ``New Calendar`` button on the top right
    corner.
 
 Delete
-   Click the **Delete** button to delete a specific calendar. All SLAs
+   Click the ``Delete`` button to delete a specific calendar. All SLAs
    assigned to this calendar are automatically assigned to the default calendar.
    You cannot delete the default calendar.
 
@@ -34,7 +34,7 @@ Set as Default
    referenced by an SLA causes the system to apply the default calendar instead.
 
 Edit
-   The **Edit** button opens the edit dialog (same as for "New Calendar"). The
+   The ``Edit`` button opens the edit dialog (same as for ``New Calendar``). The
    specific configuration options are explained in the next section.
 
 Configure Calendars
@@ -74,7 +74,7 @@ Holidays iCalendar Feed
 
 Holidays
    Add additional holidays or custom closing times here. After adding a date and
-   an optional description, make sure to finally click the **+ Add** button to
+   an optional description, make sure to finally click the ``+ Add`` button to
    save the entry.
 
-After you configured the calendar, click the **Submit** button to save it.
+After you configured the calendar, click the ``Submit`` button to save it.

@@ -1,12 +1,11 @@
 Attribute Permissions
-*********************
+=====================
 
 Introduction
 ------------
 
-In the object attributes configuration you can define if a field is shown
-and if the input in the field is mandatory, separated by
-different screens and for different
+In the object attributes configuration, you can define if a field is shown
+and if the input in the field is mandatory for different screens and
 :doc:`roles/permissions </manage/roles/index>`.
 
 .. figure:: /images/system/objects/permission-and-screen-overview.png
@@ -19,10 +18,8 @@ different screens and for different
 Based on the object context (ticket, agent, organization, user), the selectable
 roles (to be precise: the required permissions) and screens differ. Be aware that
 these settings aren't affecting data creation via other channels
-than the UI.
-
-If you want to have further customization possibilities, you should have a look
-at the :doc:`core workflows </system/core-workflows>`.
+than the UI. If you want further customization, have a look at Zammad's
+:doc:`core workflows </system/core-workflows>`.
 
 Screens
 -------

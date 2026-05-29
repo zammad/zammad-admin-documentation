@@ -12,7 +12,7 @@ First Steps
   Zammad. If it is not correct, change it now. Otherwise the setup of the
   channel will fail.
 - Go to *Channels > Microsoft 365 Graph Email* and click on
-  **Connect Microsoft 365 App**. Copy the provided callback URL.
+  ``Connect Microsoft 365 App``. Copy the provided callback URL.
 
 Configuration
 -------------
@@ -29,25 +29,24 @@ Create App
   :alt: Screenshot shows Entra admin center with application registration screen.
 
 - Create a new app by going to *Applications > App registrations* and select
-  **New registration**.
+  ``New registration``.
 - Enter a fitting name and select an account type. Supported types are:
 
   - Accounts in this organizational directory only (Single tenant)
   - Accounts in any organizational directory (Multitenant)
 
-- Under "Redirect URI", select "Web" as platform and paste your already copied
-  callback URL from Zammad.
-- Click on **Register**.
-
+- Under **Redirect URI**, select **Web** as platform and paste your already
+  copied callback URL from Zammad.
+- Click on ``Register``.
 
 .. figure:: /images/channels/microsoft365-graph/app-overview.png
   :align: center
   :alt: Screenshot shows Entra admin center with application overview screen.
 
-- In the overview screen, copy the "Application (client) ID", switch to Zammad
-  and paste it in the "Client ID" field in the pop up.
-- Only required for single tenant setup: copy the "Directory (tenant) ID" and
-  paste it in the "Tenant UUID/Name" field in Zammad.
+- In the overview screen, copy the **Application (client) ID**, switch to Zammad
+  and paste it in the **Client ID** field in the dialog.
+- Only required for single tenant setup: copy the **Directory (tenant) ID** and
+  paste it in the **Tenant UUID/Name** field in Zammad.
 
 Create Secret
 ^^^^^^^^^^^^^
@@ -56,11 +55,11 @@ Create Secret
   :align: center
   :alt: Screenshot shows Entra admin center with client secret screen.
 
-- In Entra, go to "Certificates & secrets" and add a secret by clicking the
-  **New client secret** button.
-- Enter a description, set an expiry duration and click **Add**.
-- Copy the string under "Value", this is the secret. Paste it to Zammad in the
-  "Client Secret" field.
+- In Entra, go to **Certificates & secrets** and add a secret by clicking the
+  ``New client secret`` button.
+- Enter a description, set an expiry duration and click ``Add``.
+- Copy the string under **Value**, this is the secret. Paste it to Zammad in the
+  **Client Secret** field.
 
   .. warning::
      Make sure to copy the **value**, not the ID. Otherwise your setup fails.
@@ -72,8 +71,8 @@ Configure API Permissions
   :align: center
   :alt: Screenshot shows Entra admin center with api permission screen.
 
-- Go to "API permissions" and **Add a permission**.
-- Select "Microsoft Graph" and "Delegated permissions".
+- Go to **API permissions** and ``Add a permission``.
+- Select **Microsoft Graph** and **Delegated permissions**.
 - Add the following permissions:
 
   - ``offline_access``
@@ -84,7 +83,7 @@ Configure API Permissions
   - ``Mail.ReadWrite.Shared``
   - ``Mail.Send.Shared``
 
-Save it by clicking the **Add permissions** button.
+Save it by clicking the ``Add permissions`` button.
 
 Additional Steps for Shared Mailboxes
 -------------------------------------
@@ -93,11 +92,11 @@ If you want to fetch email from a shared mailbox, you have to perform additional
 steps:
 
 - Log in to the `Exchange admin center <https://admin.exchange.microsoft.com>`_.
-- Go to *Recipients > Mailboxes*, select the mailbox and click on **Mailboxes
-  delegation**.
-- Under "Send as", click on **Edit** and **Add members**. Search and select the
-  user from which you want to access the mailbox and **Save** it.
-- Do the same for "Read and manage (Full Access)".
+- Go to *Recipients > Mailboxes*, select the mailbox and click on
+  ``Mailboxes delegation``.
+- Under **Send as**, click on ``Edit`` and ``Add members``. Search and select
+  the user from which you want to access the mailbox and ``Save`` it.
+- Do the same for **Read and manage (Full Access)**.
 
 Configure the Channel in Zammad
 -------------------------------
@@ -112,22 +111,23 @@ App Configuration
 If you followed this guide, you already should have pasted your app information.
 If not, here is a short summary:
 
-- In Zammad's channel configuration, click on **Configure App**.
+- In Zammad's channel configuration, click on ``Configure App``.
 - Enter your app details:
 
-  - Client ID: *Application (client) ID*
-  - Client Secret: *Value* (not the "Secret ID"!) from client secret
-  - Tenant UUID/Name: *Directory (tenant) ID* (not required for shared mailboxes)
-- Click on **Submit**.
+  - **Client ID**: *Application (client) ID*
+  - **Client Secret**: *Value* (not the "Secret ID"!) from client secret
+  - **Tenant UUID/Name**: *Directory (tenant) ID* (not required for shared
+    mailboxes)
+- Click on ``Submit``.
 
 Add Account
 ^^^^^^^^^^^
 
-Now you can add your account to Zammad. Do so by clicking the **Add account**
+Now you can add your account to Zammad. Do so by clicking the ``Add account``
 button in the top right corner. Select the correct mailbox type. In case you
-selected "Shared Mailbox", you have to enter the email address of the shared
-mailbox. Confirm by clicking the **Authenticate** button, enter your credentials
-and confirm the requested permissions by clicking the **Accept** button.
+selected **Shared Mailbox**, you have to enter the email address of the shared
+mailbox. Confirm by clicking the ``Authenticate`` button, enter your credentials
+and confirm the requested permissions by clicking the ``Accept`` button.
 
 .. figure:: /images/channels/microsoft365-graph/add-account-dialog.png
   :align: center
@@ -199,7 +199,7 @@ Re-Authenticate
 
 If your token got invalid, you have to replace the token due to other reasons,
 you want to use a shared mailbox with another user, you can use the
-**Re-Authenticate** button.
+``Re-Authenticate`` button.
 
 In case you are using an user mailbox, the new user has to match the
 existing one, otherwise it will result in a user mismatch error. In this case,
@@ -211,4 +211,4 @@ Request Admin Consent
 It is possible to request the permissions via admin consent. In this case
 Zammad will request necessary permissions for you from your admin, and then your
 admin (if it's not the same user as you) can accept them on Microsoft side.
-Trigger this process via the **Request Admin Consent** button in Zammad.
+Trigger this process via the ``Request Admin Consent`` button in Zammad.

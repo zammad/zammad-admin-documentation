@@ -13,7 +13,7 @@ Basics
    webhook payload, Zammad is sending. Find more information about the
    customization of a payload in the next section.
 
-To add a new regular webhook, click the **New Webhook** button.
+To add a new regular webhook, click the ``New Webhook`` button.
 For a pre-defined webhook, click on the arrow button to the right and choose
 **Pre-defined Webhook** from the dropdown menu.
 In case you select a pre-defined webhook, you get asked to choose from one of
@@ -24,7 +24,7 @@ the available pre-defined ones:
 - Rocket Chat
 - Slack
 
-After you select one and click on **Next**, Zammad shows the webhook
+After you select one and click on ``Next``, Zammad shows the webhook
 configuration dialog. This is what you see directly when creating a webhook from
 scratch. Read on for more information about the configuration of a webhook.
 

@@ -292,31 +292,31 @@ seconds, minutes, hours, days, weeks, months or years.
 
 Available operators for matching:
 
-* | **before (absolute)**:
+- | **before (absolute)**:
   | If the date field's value is before the configured date,
     the condition will be met.
-* | **after (absolute)**:
+- | **after (absolute)**:
   | If the date field's value is after the configured date,
     the condition will be met.
-* | **before (relative)**:
+- | **before (relative)**:
   | Matches the date field's value if the value is before the current
     date minus the selected time period.
-* | **after (relative)**:
+- | **after (relative)**:
   | Matches the date field's value if the value is after the current
     date plus the selected time period.
-* | **within last (relative)**:
+- | **within last (relative)**:
   | Matches the date field's value if the value is in between the current
     date and the current date minus the selected time period.
-* | **within next (relative)**:
+- | **within next (relative)**:
   | Matches the date field's value if the value is in between the current
     date and the current date plus the selected time period.
-* | **till (relative)**:
+- | **till (relative)**:
   | Matches the date field's value if the value is before the current
     date plus the selected time period.
-* | **from (relative)**:
+- | **from (relative)**:
   | Matches the date field's value if the value is after the current
     date minus the selected time period.
-* | **has changed**:
+- | **has changed**:
   | The field has been changed during a ticket update.
 
 To help you understand the time conditions of Zammad better, below diagram
@@ -333,37 +333,37 @@ a time period in seconds, minutes, hours, days, weeks, months or years.
 
 Available operators for matching:
 
-* | **before (absolute)**:
+- | **before (absolute)**:
   | If the date & time field's value is before the configured date and
     time, the condition will be met.
-* | **after (absolute)**:
+- | **after (absolute)**:
   | If the date & time field's value is after the configured date and
     time, the condition will be met.
-* | **before (relative)**:
+- | **before (relative)**:
   | Matches the date & time field's value if the value is before the
     current date and time minus the selected time period.
-* | **after (relative)**:
+- | **after (relative)**:
   | Matches the date & time field's value if the value is after the
     current date and time plus the selected time period.
-* | **within last (relative)**:
+- | **within last (relative)**:
   | Matches the date & time field's value if the value is in between the
     current time and the current time minus the selected time period.
-* | **within next (relative)**:
+- | **within next (relative)**:
   | Matches the date & time field's value if the value is in between the
     current time and the current time plus the selected time period.
-* | **till (relative)**:
+- | **till (relative)**:
   | Matches the date & time field's value if the value is before the
     current date and time plus the selected time period.
-* | **from (relative)**:
+- | **from (relative)**:
   | Matches the date & time field's value if the value is after the
     current date and time minus the selected time period.
-* | **has changed**:
+- | **has changed**:
   | The field has been changed during a ticket update.
-* | **has reached**:
+- | **has reached**:
   | Checks if the time set in this field was reached.
   | Only available for Pending time and
     Escalation time in Trigger conditions.
-* | **has reached warning**:
+- | **has reached warning**:
   | The time set in this field will be reached in less than 15 minutes.
   | Only available for Ticket's Escalation time in
     Trigger conditions.
@@ -391,13 +391,13 @@ Checks if selected field values match the attribute value(s).
 
 Available operators for matching:
 
-* | **contains all**:
+- | **contains all**:
   | Matches if all given field values are selected.
-* | **contains one**:
+- | **contains one**:
   | Matches if one specific given field value is selected.
-* | **contains all not**:
+- | **contains all not**:
   | Matches if all given field values are not selected.
-* | **contains one not**:
+- | **contains one not**:
   | Matches if one specific given field value is not selected.
 
 
@@ -420,13 +420,13 @@ Checks if selected field value(s) match the attribute value(s).
 
 Available operators for matching:
 
-* | **contains all**
+- | **contains all**
   | Matches if all given field values are selected.
-* | **contains one**
+- | **contains one**
   | Matches if one specific given field value is selected.
-* | **contains all not**
+- | **contains all not**
   | Matches if all given field values are not selected.
-* | **contains one not**
+- | **contains one not**
   | Matches if one specific given field value is not selected.
 
 Additional Information and Remarks
@@ -436,18 +436,18 @@ General
 ^^^^^^^
 
 Ticket context conditions do not support:
-   * regular expressions
-   * case sensitive string conditions
-   * Basic conditions do not support the same attribute to be selected more
+   - regular expressions
+   - case sensitive string conditions
+   - Basic conditions do not support the same attribute to be selected more
      than once
 
-*has changed* conditions:
+**has changed** conditions:
    Are only available for ticket attributes and don't affect:
 
-   * Ticket articles attributes
-   * Organization attributes
-   * User attributes
-   * Group attributes
+   - Ticket articles attributes
+   - Organization attributes
+   - User attributes
+   - Group attributes
 
 Differences in input fields:
    Please note that the input field for tokens doesn't support the comma as
@@ -468,12 +468,12 @@ Regex
 ^^^^^
 
 Regex support
-   *matches regex* and *does not match regex* are supported only in
+   **matches regex** and **does not match regex** are supported only in
    Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket
    assignment and Core Workflow.
 
 "Old" style ``regex:...`` conditions
    If you update your Zammad from 6.0 or prior and you have already conditions
-   with *contains* or *contains not* including a regex filter
+   with **contains** or **contains not** including a regex filter
    (i.e. ``regex:^(foo|bar)$``), Zammad tries to migrate them to the new
-   *matches regex* and *does not match regex* operators.
+   **matches regex** and **does not match regex** operators.

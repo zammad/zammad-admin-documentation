@@ -51,7 +51,7 @@ Enforce the Set Up of the Two-Factor Authentication
 
 In case you wish to require your users to set up at least one two-factor
 authentication method for their account, you can do this by selecting specific
-user roles the requirement applies to in **Enforced for user roles** setting.
+user roles in the **Enforced for user roles** setting.
 Of course you must have at least one two-factor authentication method enabled
 for this setting to take effect.
 
@@ -78,7 +78,7 @@ factor, you can reset the user's 2FA method.
 
 To do this, go to the user management and search for the relevant user. After
 you found the account, click the button in the action column and select
-"Manage Two-Factor Authentication":
+**Manage Two-Factor Authentication**:
 
 .. figure:: /images/settings/security/two-factor/user-action-context-menu.png
    :alt: Context menu in action column in user management
@@ -91,6 +91,6 @@ method or reset all of the user's 2FA methods:
    :alt: Dialog for resetting user's 2FA method
    :align: center
 
-Choose the fitting one, click on the corresponding "Remove ..." button and
+Choose the fitting one, click on the corresponding ``Remove ...`` button and
 confirm your action. The user now has to setup a new 2FA method, depending on
 your 2FA configuration.

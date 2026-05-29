@@ -18,13 +18,13 @@ Creating Macros
 :Actions:
    You can create actions to:
 
-   * set ticket attributes (priority, state, group, etc.)
-   * add new notes to a ticket
-   * run an :doc:`AI agent </ai/ai-agents>`
+   - set ticket attributes (priority, state, group, etc.)
+   - add new notes to a ticket
+   - run an :doc:`AI agent </ai/ai-agents>`
 
    There are **no** actions for:
 
-   * sending a reply to the customer
+   - sending a reply to the customer
 
    .. note:: Unlike triggers, the scheduler, and text modules,
       macro actions do **not** support the use of

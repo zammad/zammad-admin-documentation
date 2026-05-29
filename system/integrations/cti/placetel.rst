@@ -20,9 +20,9 @@ Requirements
 
 Please provide the following requirements:
 
-   * You need an administrative Placetel account for your organization.
-   * Your Zammad instance must be allowed to communicate to external services.
-   * Placetel must be able to reach your Zammad instance.
+- You need an administrative Placetel account for your organization.
+- Your Zammad instance must be allowed to communicate to external services.
+- Placetel must be able to reach your Zammad instance.
 
 :doc:`provider-configurations/placetel`
    Learn how to configure Placetel to enable Zammad and Placetel to communicate

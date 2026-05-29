@@ -4,7 +4,8 @@ Webhook
 Webhooks are a way to integrate Zammad with other web services or applications,
 allowing them to subscribe to live updates about tickets instead of having to
 poll the Zammad server every *n* minutes. You can find the webhook configuration
-in Zammad's settings under *Manage > Webhooks*.
+in Zammad's settings under *Manage > Webhooks*. The permission ``admin.webhook``
+is required to manage them.
 
 .. hint::
 
@@ -27,12 +28,12 @@ Webhooks can be created both from scratch and from pre-defined templates.
 When created from scratch, regular webhook payloads by default contain the
 following JSON data about new/updated tickets:
 
-* Ticket attributes/metadata
-* Associated article(s)
-* Associated users (e.g. article senders, owners, etc.)
-* Associated user roles
-* Associated user organizations (if applicable)
-* Associated groups
+- Ticket attributes/metadata
+- Associated article(s)
+- Associated users (e.g. article senders, owners, etc.)
+- Associated user roles
+- Associated user organizations (if applicable)
+- Associated groups
 
 On the other hand, pre-defined webhooks are designed to work with specific
 services, containing special payloads that these services understand.

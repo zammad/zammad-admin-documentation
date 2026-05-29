@@ -78,7 +78,7 @@ Data Privacy Task
 ^^^^^^^^^^^^^^^^^
 
 You can find the data privacy section in Zammad's settings under *System >
-Data Privacy*. To create a deletion task, use the **New Deletion Task** button
+Data Privacy*. To create a deletion task, use the ``New Deletion Task`` button
 in the top right corner. The difference to the two mentioned options is
 that you first have to search the user in the dialog. Everything else is the
 same.

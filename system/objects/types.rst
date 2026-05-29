@@ -168,23 +168,23 @@ Provides a searchable field which fetches data from an external system. This
 can be useful if you have data outside of Zammad and don't want to maintain
 both data sources. It works like this:
 
-* Zammad sends a query with a search string (free text from agent or based
+- Zammad sends a query with a search string (free text from agent or based
   on a variable) in a pre-defined format ("Search URL") to an external
   system.
-* This external system searches for matches and provides a response as a
+- This external system searches for matches and provides a response as a
   JSON structure to Zammad.
-* Zammad just looks for the defined list and value keys, reads the content
+- Zammad just looks for the defined list and value keys, reads the content
   and displays the value to the user. There is no search on Zammad side.
 
 .. warning::
-   * Only ``GET`` is supported as request method.
-   * The data structure must be in JSON format and provide the objects in an
+   - Only ``GET`` is supported as request method.
+   - The data structure must be in JSON format and provide the objects in an
      array.
-   * The endpoint for the external data source has to support search. On
+   - The endpoint for the external data source has to support search. On
      Zammad side, there is no search/logic implemented; however, you can
      define the output key and value based on the result(s) from the response
      (which provides already filtered content based on the search).
-   * If you receive more results as expected, your external data source
+   - If you receive more results as expected, your external data source
      search may not work properly or the structure of the URL is not correct.
      You should get in touch with a responsible person from the external
      system.
@@ -227,8 +227,8 @@ SSL Verification
 
 HTTP Authentication
    If your external data source requires an authentication, you can set it
-   here. You can leave it empty or choose between *Basic Authentication* or
-   *Authentication Token* (selecting one of the two methods leads to
+   here. You can leave it empty or choose between **Basic Authentication** or
+   **Authentication Token** (selecting one of the two methods leads to
    additional fields where you can enter your credentials/token).
 
 Search result list key
@@ -321,11 +321,11 @@ This works only for fields with selectable options because the possible
 choices are known and limited. You can set the translatable flag for these
 types:
 
-   * Boolean field
-   * Single selection field
-   * Multiple selection field
-   * Single tree selection field
-   * Multiple tree selection field
+   - Boolean field
+   - Single selection field
+   - Multiple selection field
+   - Single tree selection field
+   - Multiple tree selection field
 
 .. figure:: /images/system/objects/object-types-translatable.png
    :align: center

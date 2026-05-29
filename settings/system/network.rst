@@ -1,8 +1,6 @@
 Network
 =======
 
-.. include:: /settings/system/system-selfhosted.include.rst
-
 This page covers the proxy configuration in Zammad via GUI. As an alternative,
 the proxy configuration is also possible via environment variables. You can find
 more information about that in the

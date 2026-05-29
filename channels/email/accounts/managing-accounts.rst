@@ -27,7 +27,7 @@ Destination Group
    at the :doc:`group settings </manage/groups/settings>`.
 
 Email Address
-   Use the **+ Add** or **Edit** buttons
+   Use the ``+ Add`` or ``Edit`` buttons
    to set up secondary addresses on this account.
 
    See :doc:`secondary-addresses` for a detailed description of each option.

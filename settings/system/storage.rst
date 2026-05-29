@@ -1,8 +1,6 @@
 Storage
 =======
 
-.. include:: /settings/system/system-selfhosted.include.rst
-
 Here you can define where Zammad stores attachments for tickets and the
 knowledge base. By default, Zammad writes to the **Database** - you can switch
 to **Filesystem** or **Simple Storage (S3)** at any time. In this case, please
@@ -59,8 +57,8 @@ Simple Storage (S3)
        inconsistencies.
 
    3. Restart Zammad so the config file / environment variable is loaded
-   4. Set the "Storage Method" in Zammad to **Simple Storage (S3)** in
-      *Settings > System > Storage* and click on "Submit". After that, Zammad
+   4. Set the **Storage Method** in Zammad to **Simple Storage (S3)** in
+      *Settings > System > Storage* and click on ``Submit``. After that, Zammad
       checks your configuration and the connection to the service and will raise
       an error message if something is wrong.
 
@@ -95,7 +93,7 @@ Simple Storage (S3)
 
    .. tip::
 
-      Before setting the storage method to ``Simple Storage (S3)`` (step 4),
+      Before setting the storage method to **Simple Storage (S3)** (step 4),
       please make sure to have a working setup.
 
       You can verify this by running

@@ -7,7 +7,7 @@ the instance or changing settings while restricting availability and functions.
 Mode
    The mode setting allows you to enable or disable the maintenance mode.
 
-   Defaults to *off*.
+   Default: ``off``
 
    The maintenance mode will restrict access to administrative roles only.
    This means agents and customers are logged off.
@@ -15,7 +15,7 @@ Mode
 @Login
    This setting allows you to provide a login message within a green banner
    above the login screen. Click into the green banner in the settings page
-   to adjust your message. To activate the message, activate the *@Login*
+   to adjust your message. To activate the message, activate the **@Login**
    setting.
 
    .. figure:: /images/system/maintenance/login-message-setting.png
@@ -35,7 +35,7 @@ Message
 
    Reload application
       Selecting this option will change the message acceptance button from
-      *Close* (with nothing happening) to *Continue session*, which forces
+      ``Close`` (with nothing happening) to ``Continue session``, which forces
       the application to reload.
 
    .. warning::
@@ -59,7 +59,7 @@ Message
          .. container:: cfloat-right
 
             The modal all other active sessions will see upon pressing
-            *Send to clients*.
+            ``Send to clients``.
 
             .. figure:: /images/system/maintenance/message-without-reload-application.png
                :alt: Screenshot showing modal caused by maintenance's message
@@ -76,14 +76,14 @@ Message
             Message setting within Zammad's admin settings with ticket reload
             application setting.
 
-            .. figure:: /images/system/maintenance/maintenance-message-without-reload-application.png
+            .. figure:: /images/system/maintenance/maintenance-message-with-reload-application.png
                :alt: Screenshot showing the send message settings with ticket
                      reload application set
 
          .. container:: cfloat-right
 
             The modal all other active sessions will see upon pressing
-            *Send to clients*.
+            ``Send to clients``.
 
             .. figure:: /images/system/maintenance/message-with-reload-application.png
                :alt: Screenshot showing modal caused by maintenance's message

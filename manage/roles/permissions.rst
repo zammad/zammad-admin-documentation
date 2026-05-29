@@ -30,7 +30,7 @@ Agent
        | to access overviews and tickets
      - | When this permission is granted and more
        | than one group exists, the group permissions
-       | table appears to configure the :doc:`group access levels </manage/groups/access-levels>`.
+       | table appears to configure the :doc:`group access levels </manage/groups/group-permissions>`.
 
 Admin
 -----
@@ -38,7 +38,7 @@ Admin
 Please be aware that these permissions only grant access to the
 settings/configuration in Zammad. If you want to grant agents access to
 tickets, check the section above and learn more about
-:doc:`group permissions <../groups/access-levels>`.
+:doc:`group permissions <../groups/group-permissions>`.
 
 .. list-table::
    :widths: 30 80 20
@@ -260,13 +260,13 @@ User Preferences
      - | Configuration of ticket
        | notifications
      - | Agents only receive ticket notifications for
-       | :doc:`groups they have “full” access to </manage/groups/access-levels>`.
+       | :doc:`groups they have “full” access to </manage/groups/group-permissions>`.
        | Customers can't receive ticket notifications at all.
    * - ``user_preferences.out_of_office``
      - | Designate a substitute for
        | out-of-office hours
      - | This does **not** grant that person the permissions /
-       | :doc:`group access levels </manage/groups/access-levels>` of the agent
+       | :doc:`group access levels </manage/groups/group-permissions>` of the agent
        | they're replacing.
    * - ``user_preferences.overview_sorting``
      - | Allow users to define their own

@@ -11,7 +11,7 @@ Register a Google App
    link: https://console.cloud.google.com/projectcreate
 2. Check if you are already in your project. If not, switch to it.
 3. Go to *APIs & Services > OAuth consent screen*. If you didn't configure it
-   before, you should see a **Get started** button. Follow the steps and provide
+   before, you should see a ``Get started`` button. Follow the steps and provide
    the requested information.
 
    - **App name**: Any fitting name. This is what the user sees when trying to
@@ -36,7 +36,7 @@ Register a Google App
       :scale: 60%
       :align: center
 
-5. After adding the information, click on **Create**. This opens a dialog where
+5. After adding the information, click on ``Create``. This opens a dialog where
    you can see important information. Make sure to leave this dialog open and/or
    copy the **Client ID** and **Client secret**.
 
@@ -51,7 +51,7 @@ Configure Authentication in Zammad
 After creating the credentials, go to your Zammad installation and navigate to
 *Settings > Security > Third-party Applications > Authentication via Google*.
 Enter your **Client ID** and **Client secret** here, enable the toggle and
-click on **Submit**.
+click on ``Submit``.
 
 .. figure:: /images/settings/security/third-party/google/configure-google-auth.png
    :align: center

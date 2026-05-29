@@ -49,4 +49,4 @@ look like this:
 
 - Activated by: Action
 - Action execution: Selective
-- Condidions for affected objects: **Action** > *is* > created
+- Conditions for affected objects: **Action** > *is* > created

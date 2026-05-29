@@ -1,11 +1,12 @@
 Overviews
 =========
 
-You can provide overviews to your agents and customers. They can be used as a
-kind of worklist of tasks that the agent is supposed to work on.
-You can add new overviews, edit or delete them. They can be used for individual
-agents or agent groups. Overviews only show tickets for which the user has
-permissions (group or role based).
+Provide overviews to your agents and customers in Zammad's admin settings under
+*Manage > Overviews*. The permission ``admin.overview`` is required.
+Overviews can be used as a kind of worklist of tasks that the agent is supposed
+to work on. You can add new overviews, edit or delete them. They can be assigned
+to roles and restricted to specific users. Overviews only show tickets for which
+the user has at least viewing permission.
 
 .. warning::
 
@@ -17,19 +18,14 @@ permissions (group or role based).
    low. For best results, you should use a maximum of 15-20 overviews.
    Please note that any overview will only show a maximum of 2100 elements.
 
-The following attributes can be set when creating or editing overviews. Have a
-look under the screenshot where you can find an explanation for each field.
-
-   .. figure:: /images/manage/overviews/restriction-and-availability-of-overviews-for-roles-and-users.png
-      :width: 80%
-      :align: center
+The following attributes can be set when creating or editing overviews.
 
 Available for the following roles / Restrict to only the following users
    Define :doc:`roles <roles/index>` that are supposed to see and use the
    overview in question.
 
    If your overview is rather specific for a sub group of users of your role,
-   use the *"Restrict to only the following users"* option to further restrict
+   use the **Restrict to only the following users** option to further restrict
    the visibility of the overview to defined users.
 
    The setting "available for the following roles" is mandatory.
@@ -48,12 +44,10 @@ Only available for users with shared organization
 
 Only available for users which are absence replacements for other users
    This selection refers to the setting in the user preferences
-   (profile-picture / initials of agent in the left corner > profile > out of
-   office). If this option is checked, this overview is only
-   displayed for users who have been set as a substitution. See
-   "Out of office function" in the
-   :user-docs:`user documentation </extras/profile-and-settings.html>` for
-   more details.
+   (*Avatar > Profile > Out of office*). If this option is checked, this
+   overview is only displayed for users who have been set as a substitution.
+   See :user-docs:`Out of Office section (user documentation) </extras/profile-and-settings.html>`
+   for more details.
 
    **For example:** Agent A is on vacation and Agent B will take care of his
    tickets. Then an overview can be set up, which only shows Agent B all

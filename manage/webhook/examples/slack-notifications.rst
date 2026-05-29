@@ -14,14 +14,14 @@ of the screen to get to channel details.
    :alt: Accessing Channel Details in a Slack Channel
    :align: center
 
-Switch to **Integrations** tab and click on **Add an App** button.
+Switch to **Integrations** tab and click on ``Add an App`` button.
 
 .. figure:: /images/manage/webhook/webhook-slack-channel-integrations.png
    :alt: Adding an App to Slack Channel
    :align: center
 
 On the next screen, search for an app called *Incoming WebHooks* and click on
-**Install** button next to it.
+``Install`` button next to it.
 
 .. figure:: /images/manage/webhook/webhook-slack-channel-app-search.png
    :alt: Searching for Creating Incoming Webhook Connector
@@ -30,7 +30,7 @@ On the next screen, search for an app called *Incoming WebHooks* and click on
 You will be redirected to the Slack App Directory website, where you can add the
 app.
 
-Click on **Add to Slack** button.
+Click on ``Add to Slack`` button.
 
 .. figure:: /images/manage/webhook/webhook-slack-incoming-webhooks-add.png
    :alt: Adding Incoming WebHooks App to Slack
@@ -38,7 +38,7 @@ Click on **Add to Slack** button.
    :width: 80%
 
 On the next screen, in **Post to Channel** choose your channel from the list
-and click on **Add Incoming WebHooks integration** button.
+and click on ``Add Incoming WebHooks integration`` button.
 
 .. figure:: /images/manage/webhook/webhook-slack-incoming-webhooks-post.png
    :alt: Configuring Post to Channel Settings of Incoming WebHooks App
@@ -61,7 +61,7 @@ Optionally, you can **Customize Icon** which will be used as the avatar.
    :align: center
    :width: 80%
 
-Finally, save your app configuration by clicking **Save Settings**.
+Finally, save your app configuration by clicking ``Save Settings``.
 
 Step 2 - Add a Pre-defined Webhook in Zammad
 --------------------------------------------
@@ -93,7 +93,7 @@ field.
    :align: center
    :width: 90%
 
-Finally, click on **Submit**.
+Finally, click on ``Submit``.
 
 Step 3 - Configuring a Trigger for firing of the Webhook
 --------------------------------------------------------
@@ -159,7 +159,7 @@ Then, simply delete the selected code.
    :align: center
    :width: 80%
 
-Finally, click on **Submit** to save your webhook changes.
+Finally, click on ``Submit`` to save your webhook changes.
 
 On the next invocation of the webhook, the notification will not include content
 of the last article.

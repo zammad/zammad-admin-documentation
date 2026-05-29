@@ -1,33 +1,35 @@
 Users
 =====
 
-Users can be managed individually via UI, via API or even synchronized with
-third-party directory services.
-
 Zammad creates a user for everyone who communicates with the system. That
-means even customers get their own accounts, even if they don't use it to
-log in to Zammad.
+means all customers get their own accounts, even if they just communicate
+through a channel with Zammad. Users can be managed individually via UI, via
+API or even synchronized with third-party services.
 
-.. figure:: /images/manage/users/managing-users-manually.png
-   :alt: Creating and editing users directly in the Admin Panel
-   :align: center
-   :width: 60%
+To manage users, you need to have ``admin.user`` permission.
 
-   The simplest way to manage users is directly in the Admin Panel.
+.. note:: Be aware that agents can create, view and change customer users as
+   well, for example:
 
-Learn more about managing users...
-   * :doc:`via the Admin Panel <via-the-admin-panel>`
-   * :doc:`via CSV import <via-csv-import>`
-   * :doc:`via LDAP/Active Directory integration </system/integrations/ldap/index>`
-   * :doc:`via Exchange integration </system/integrations/exchange>`
-   * :docs:`via REST API </api/intro.html>`
-   * :ref:`via invitation email <invite-agents>`
+   - While creating a new ticket
+   - When opening a user's detail page in the navigation sidebar by clicking on
+     an avatar.
+
+Read on for a description of the individual user attributes below. The different
+ways of managing users are described in separate pages:
+
+- :doc:`via admin settings <via-admin-settings>`
+- :doc:`via CSV import <via-csv-import>`
+- :doc:`via LDAP/Active Directory integration </system/integrations/ldap/index>`
+- :doc:`via Exchange integration </system/integrations/exchange>`
+- :docs:`via REST API (system documentation) </api/intro.html>`
+- :ref:`via invitation email <invite-agents>`
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
-   via-the-admin-panel
+   via-admin-settings
    via-csv-import
 
 .. _user-details-reference:
@@ -45,14 +47,6 @@ The ones that aren't are described below.
 
    User details can be set in the **New/Edit User** dialog.
 
-.. note:: 🕵️ **Admins aren't the only ones who can change these settings.**
-
-   In most cases, agents can, too
-   (using the
-   :user-docs:`new ticket dialog </basics/service-ticket/create.html>`,
-   :user-docs:`search bar </basics/find-ticket/search.html>` or the
-   :user-docs:`ticket pane </extras/customers.html>`).
-
 👤 Login
    A user's email and login may differ, but
    **either one can be used to sign in.**
@@ -64,14 +58,12 @@ The ones that aren't are described below.
       User logins are **not** shown in the New/Edit User dialog,
       but they are visible from the user overview.
 
-   This attribute **cannot** be set via the Admin Panel. Instead, use the
+   This attribute **cannot** be set via UI. Instead, use the
    :docs:`Zammad console </admin/console.html>`, the
    :docs:`REST API </api/intro.html>`, or :doc:`CSV import <via-csv-import>`.
 
 🔑 Password
    Yes, administrators really do have the power to change other users' passwords.
-
-   (Agents do not, though.)
 
 🏢 Organization
    :doc:`/manage/organizations/index` are a way to group customers together
@@ -80,7 +72,7 @@ The ones that aren't are described below.
    or set up special :doc:`/manage/trigger` that fire only for those customers.
 
    Please note that the organization has to exist before it can be assigned.
-   To add one, go to **Manage > Organizations** in the Admin Panel.
+   To add one, go to *Manage > Organizations* in the admin settings.
 
 🏤 Secondary Organizations
    This option allows you to assign more organizations, in addition to the
@@ -96,7 +88,6 @@ The ones that aren't are described below.
 
       While the number of secondary organizations is not limited directly,
       you may want to keep this to a reasonable number of organizations.
-
       30-40 organizations at maximum *should* be good enough.
 
 👑 VIP
@@ -115,12 +106,9 @@ The ones that aren't are described below.
 📑 Note
    Notes are visible to all staff members, **including agents**.
 
-   .. hint:: 😵 **Are you using the Note field
-      to keep track of your own "custom" user attributes?**
-
-      Wish you could add your own fields to the New/Edit User dialog?
-
-      You can! To learn more, see :doc:`/system/objects`.
+   .. hint:: Are you using the **Note** field to keep track of specific user
+      individual information? Consider creating a separate field for this!
+      Learn more in the :doc:`/system/objects` section.
 
 ▶️ Active
    Inactive users aren't able to login anymore. However, they can still be used
@@ -150,14 +138,15 @@ The ones that aren't are described below.
 Roles
    The :doc:`/manage/roles/index` define what users can do in the system.
    If you need to grant someone privileges to edit the knowledge base
-   or access part of the admin panel, roles are the answer.
+   or access parts of the admin settings, roles are the answer.
 
 Group Permissions
-   The :doc:`/manage/groups/access-levels` define which tickets
+   The :doc:`/manage/groups/group-permissions` define which tickets
    an agent can work with.
    If an agent is not receiving notifications for incoming tickets
-   or can't be assigned to a ticket, you should have a look on the group
+   or can't be assigned to a ticket, you should have a look at the group
    permissions.
+
    Please note that the visibility of the group permission table depends on the
    role selection. It only shows up, if the selected role has the
    ``ticket.agent`` permission and when there is more than one active group

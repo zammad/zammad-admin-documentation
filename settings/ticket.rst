@@ -1,47 +1,48 @@
 Ticket
 ======
 
-Here you can adjust general ticket settings. Additional ones for the ticket
-composer interface can be found in the :doc:`/misc/composer`.
+To configure general ticket settings under *Settings > Ticket*, the permission
+``admin.ticket`` is required. Additional settings for the ticket composer
+interface can be found in the :doc:`/misc/composer`.
 
 Base
 ----
 
 Ticket Hook
-   The identifier for a ticket; *e.g.,* Ticket#, Call#, MyTicket#.
+   The identifier for a ticket, e.g. Ticket#, Call#, MyTicket#.
 
    Default: ``Ticket#``
 
    If you change the ticket hook on a system with production data, you have to
-   :docs:`rebuild the Elasticsearch search index </install/elasticsearch.html#es-rebuild-searchindex>`.
+   :docs:`rebuild the Elasticsearch index </install/elasticsearch.html#es-rebuild-searchindex>`.
 
 Ticket Hook Position
    With this setting, you can decide if the ticket hook/number should be
    included in the title and on which side it is inserted.
 
-   *Right*
+   Right
       This setting will add the ticket reference on the right site of the
       subject.
 
       Example: ``Some Subject [Ticket#12345]``
 
-   *Left*
+   Left
       This setting will add the ticket reference on the left site of the
       subject.
 
       Example: ``[Ticket#12345] Some Subject``
 
-   *None*
+   None
       This will completely remove ticket references from the subject.
 
    .. warning::
 
-      Please ensure to take a look at :doc:`/channels/email/settings` within the
-      email channel to ensure you have at least one reference that helps Zammad
-      to assign follow-ups correctly.
+      Please ensure to take a look at your channel settings when using
+      email-based channels to ensure you have at least one reference
+      that helps Zammad to assign follow-ups correctly.
 
-      Disabling this and not setting up any further follow up search will lead
-      to unexpected results!
+      Disabling this and not setting up any further follow up detection will
+      lead to unexpected results!
 
    Default: ``right``
 
@@ -91,7 +92,6 @@ Ticket Organization Reassignment
 
          Using this option may lead to inconsistencies in the system as the
          ticket organization may become decoupled from the ticket customer.
-
          However, you may use this option if you wish to maintain
          :ref:`the shared access <organization-details-reference>` to the ticket
          for all organization members of the original organization of the
@@ -163,9 +163,6 @@ ticket at the same time. Although collision detection is then effective, the
 efficiency of processing can be increased by means of the automatic assignment
 of tickets when a ticket is opened.
 
-The automatic assignment of tickets can be activated and configured in the admin
-area under *Settings > Ticket > Auto Assignment*.
-
 The auto assignment only works if the ticket has no owner yet. By
 default, the agent can always reset the ticket owner to ``-`` if needed.
 
@@ -185,7 +182,7 @@ Language Detection
 
 Zammad offers a built in language detection for articles. By default, it is
 turned off. Turn it on by selecting a backend service and confirm by clicking
-**Submit**.
+``Submit``.
 
 After enabling it, Zammad tries to detect the language of each **new** article.
 The language is not detected for existing articles.
@@ -208,7 +205,7 @@ more details:
    :alt: Screenshot showing detected language in article detail view
    :align: center
 
-If you are wondering what this feature is useful for, the answer is:
+If you are wondering what this feature is useful for, some ideas:
 
 - Use the detected language as a condition attribute in triggers and schedulers.
   Examples are: to send auto replies in different languages (see
@@ -224,26 +221,26 @@ Notifications
 Default Notifications
    This setting allows you to configure the default ticket notifications that
    will be applied to all new agent users (incl. users who were just assigned
-   agent role). Simply change the notification matrix to desired state and press
-   **Save**.
+   agent role). Simply change the notification matrix to desired state and click
+   on ``Save``.
 
    In case an agent already exists, their ticket notification preferences will
-   be preserved. Optionally, you can also **Apply current defaults to all
-   agents**.
+   be preserved. Optionally, you can also ``Apply current defaults to all
+   agents``.
 
    .. warning::
 
-      * **Potential time-consuming action:**
+      - **Potential time-consuming action:**
         Applying default ticket notifications to all agent users may take some
         time to complete, be patient! The exact time will depend on the size of
         your system and the number of agents.
-      * **Active agents only!**
+      - **Active agents only!**
         When current default ticket notifications are applied, only active agent
         users are considered. In case an agent is re-activated *after* this
         action, they will still have the old notification configuration.
 
-   In case you want to go back to the initial state of ticket notifications, you
-   can click on **Reset to default** button.
+   In case you want to go back to the initial state of ticket notifications,
+   just use the ``Reset to default`` button.
 
 .. _duplicate_detection:
 
@@ -274,7 +271,7 @@ Detect Duplicate Ticket Creation
    set **Show matching ticket(s) in the warning** setting to *no*.
 
    By default, **Permission level for looking up ticket** is set to *User*,
-   which  means user permissions will be honored during sarch. The user will see
+   which  means user permissions will be honored during search. The user will see
    the warning only if tickets they have access to are matched. Alternatively,
    you can set this setting to *System*, in which case the search will happen
    within *all* tickets in the system, regardless of user permissions.
