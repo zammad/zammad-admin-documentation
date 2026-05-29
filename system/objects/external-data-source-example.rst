@@ -5,7 +5,7 @@ We assume you already had a look at :doc:`types` where you can find
 a description of the individual fields.
 
 To reproduce this example, choose an object type you want to add a custom
-field to, click on **New Attribute** and select **External data source field**
+field to, click on ``New Attribute`` and select **External data source field**
 under **Format**.
 
 Our example is about fetching data from an external product database. We want
