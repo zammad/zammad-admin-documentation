@@ -1,9 +1,9 @@
 Monitoring
 ==========
 
-.. note:: This function is only available in self hosted instances. If you
-   use Zammad in our cloud, we are monitoring the system on our own and take
-   steps to fix potential problems directly.
+.. note:: This function is only available in self hosted instances. For our
+   SaaS customers, we're monitoring the system on our own and take steps to fix
+   potential problems directly.
 
 General
 -------
