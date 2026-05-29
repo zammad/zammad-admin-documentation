@@ -2,11 +2,11 @@ Expert Mode
 ===========
 
 .. note::
-   - This function is only available in self hosted instances and for cloud
-     users with a **Plus** package.
+   - This function is only available in self hosted instances and for SaaS
+     customers with a **Plus** subscription.
    - Up to three layers of conditions are supported.
 
-Enabling the **expert mode** within your ticket conditions allows you to use
+Enabling the **Expert mode** within your ticket conditions allows you to use
 **AND / OR / NOT** operators for any supported method. You can decide which
 workflow requires this enhanced configuration individually. This section expects
 that you had a look at :doc:`basics` already.
@@ -14,8 +14,8 @@ that you had a look at :doc:`basics` already.
 Switching to Expert Mode
 ------------------------
 
-You can enable or disable **expert mode** in any supported condition screen.
-To do so, simply use the **expert mode** toggle on the lower right below the
+You can enable or disable expert mode in any supported condition screen.
+To do so, simply use the **Expert mode** toggle on the lower right below the
 **conditions for affected objects** area.
 
 .. figure:: /images/misc/object-conditions/enable_expert-mode.gif
@@ -56,7 +56,6 @@ using it on.
    .. figure:: /images/misc/object-conditions/adding-logic-blocks.gif
       :alt: Screencast showing new logic blocks being added
       :align: center
-
 
    The same behavior also applies to conditions *within* logic blocks!
 
