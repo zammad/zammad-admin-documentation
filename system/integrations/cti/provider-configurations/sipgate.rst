@@ -39,8 +39,8 @@ Step 2: Configure webhook for Zammad
    In the newly opened tab, switch from "Clients" to "Webhooks" and paste
    the endpoint URLs from your Zammad instance like so:
 
-      - Inbound endpoint to "Incoming"
-      - Outbound endpoint to "Outgoing"
+   - Inbound endpoint to "Incoming"
+   - Outbound endpoint to "Outgoing"
 
    .. note::
 
