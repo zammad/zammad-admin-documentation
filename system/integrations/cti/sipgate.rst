@@ -11,6 +11,15 @@ Sipgate (sipgate.io)
 Requirements
 ------------
 
+.. warning::
+
+   The integration works with sipgate's legacy version.
+   If you use their
+   `new Neo version <https://teamhelp.sipgate.co.uk/first-steps/sipgate-general-information/blogpost-the-future-of-telephony-begins-now-with-sipgate-neo>`_,
+   it will not work. Use their `telephony API <https://www.sipgate.io/>`_ or a
+   `third-party tool <https://help.sipgate.de/cloud-telefonanlage/en/connections-and-integrations/cti/kann-ich-meine-datenbankmein-crm-system-an-sipgate-anbinden>`_
+   instead or create a new `feature request in the Zammad Community <https://community.zammad.org/c/stuff-you-like-zammad-to-have-feel-free-to-discuss-and-add-proposals/6>`_.
+
 Please provide the following requirements:
 
 * You need an administrative Sipgate account for your organization.
