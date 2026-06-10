@@ -7,7 +7,7 @@ communication and allows you to exchange **signed** and **encrypted** messages
 with others.
 
 Signing
-   is a proof that a message hasn't been tampered with or sent by an
+   is proof that a message hasn't been tampered with or sent by an
    impersonator. In other words, it guarantees the message **integrity** and
    **authenticity**.
 
@@ -43,38 +43,21 @@ Prerequisites
    complicated and usually involves extra work for your contacts.
    Bear in mind that S/MIME only works if the other party is using it, too.
 
+Limitations
+~~~~~~~~~~~
+
 Please note that Zammad will distrust senders by default. This means that you're
 always required to provide certificate data, no matter if for signing or
 encrypting. This is by design and can't be adjusted.
 
-Certificate and Key Validation
-------------------------------
-
-When uploading certificates and keys, Zammad checks them. This validation is
-based on the ``X509v3`` extensions.
-
-Client certificate
-   The following attributes are required:
-
-   - Subject Alternative Name (at least one email address has to be present)
-   - Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
-   - Public key algorithm (either ``RSA`` or ``EC``)
-
-   The Extended Key Usage attribute is optional. If the certificate provides
-   the named attribute, then it must contain the value ``E-mail Protection``.
-   Any usable email address has to be prefixed with ``email:`` or ``rfc822:``.
-   The named public key algorithms are mandatory for private keys as well.
-
-CA certificate
-   In the case of an uploaded CA certificate, providing the value ``CA:TRUE``
-   in the attribute **Basic Constraints**, the previously mentioned attributes
-   are not verified.
-
 Handling of Certificates
 ------------------------
 
+When adding certificates and keys, Zammad validates them based on the
+``X509v3`` extensions.
+
 Add Certificates and Keys
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Add Certificate
    Import public-key certificates for both your own organization and your
@@ -119,8 +102,28 @@ Add Private Key
 
       Please note that bulk imports of private keys are not possible.
 
+Certificate Validation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Client certificate
+   The following attributes are required:
+
+   - Subject Alternative Name (at least one email address has to be present)
+   - Key Usage (``Digital Signature`` and/or ``Key Encipherment``)
+   - Public key algorithm (either ``RSA`` or ``EC``)
+
+   The Extended Key Usage attribute is optional. If the certificate provides
+   the named attribute, then it must contain the value ``E-mail Protection``.
+   Any usable email address has to be prefixed with ``email:`` or ``rfc822:``.
+   The named public key algorithms are mandatory for private keys as well.
+
+CA certificate
+   In the case of an uploaded CA certificate, providing the value ``CA:TRUE``
+   in the attribute **Basic Constraints**, the previously mentioned attributes
+   are not verified.
+
 Download Certificate Data
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can download the previously provided certificates and private keys at any
 time from your Zammad instance. Please note that passphrase-protected private
@@ -131,7 +134,8 @@ Default Behavior
 ----------------
 
 By default, Zammad tries to send all outgoing emails **signed and encrypted**,
-if possible. This behaviro can be adjusted on a per-group basis:
+if possible. This behavior can be adjusted on a per-group basis. You can choose
+to sign only, encrypt only, both, or neither:
 
 .. figure:: /images/system/integrations/smime/default-behaviour-on-per-group-basis.png
    :alt: Zammad allowing to choose the default behavior on per group basis
@@ -146,9 +150,12 @@ Troubleshooting
 All of the system's latest S/MIME activity is displayed in the **Recent Logs**
 section. The logs contain the status and details of all emails (both incoming
 and outgoing), that used signing/verification or encryption/decryption.
-However, this log does **not** include emails sent by
+This log does **not** include emails sent by
 :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`.
-For those, you have to check your ``production.log``.
+For those, check your ``production.log``.
+
+Common Issues
+~~~~~~~~~~~~~
 
 I received a signed/encrypted email before I set up S/MIME integration
    No problem. Once S/MIME has been enabled and the appropriate certificates
@@ -165,7 +172,7 @@ The ``Encrypt`` button is disabled
    - Are you sure the recipient's certificate is valid?
    - Have you checked your ``production.log`` for more details?
 
-   .. warning:: If encryption doesn't work in for outgoing email articles, it
+   .. warning:: If encryption doesn't work for outgoing email articles, it
       won't work in :doc:`triggers </manage/trigger>` or
       :doc:`scheduler jobs </manage/scheduler>` either.
 
