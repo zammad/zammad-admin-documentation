@@ -18,8 +18,8 @@ Encryption
    :alt: Screenshot of ticket creation with encrypt and sign buttons
    :align: center
 
-   Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will
-   appear in the ticket composer.
+   Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will
+   appear for outgoing email email drafts.
 
 .. note:: **Sign button not visible?**
 

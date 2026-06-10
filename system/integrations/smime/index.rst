@@ -21,10 +21,6 @@ article. For more details about how S/MIME works on the agent side, read the
 :user-docs:`secure email section </extras/secure-email.html>` in the user
 documentation.
 
-Please note that Zammad distrusts senders by default. This means that you're
-always required to provide certificate data, no matter if for signing or
-encrypting. This is by design and can't be adjusted.
-
 Prerequisites
 -------------
 
@@ -47,57 +43,39 @@ Prerequisites
    complicated and usually involves extra work for your contacts.
    Bear in mind that S/MIME only works if the other party is using it, too.
 
-Handling of Certificates
-------------------------
-
-When adding certificates and keys, Zammad validates them based on the
-``X509v3`` extensions.
+Certificate and Key Handling
+----------------------------
 
 Add Certificates and Keys
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+When adding certificates and keys, Zammad validates them based on the
+``X509v3`` extensions. If your certificate and private key are bundled together
+in the same file or PEM block, import them twice (once using each button). 
+
 Add Certificate
    Import public-key certificates for both your own organization and your
-   contacts.
+   contacts. You can add a bunch of certificates all at once by providing a
+   single file with all relevant certificates.
 
-   You can also add a bunch of certificates in one go by providing a single file
-   with all relevant certificates.
-
-   .. warning:: **ALWAYS verify certificates in-person or over the phone!**
-
-      The whole point of signatures is to alert you when someone is trying to
-      pretend to be someone they're not. Never accept a certificate from someone
-      online without verifying it first.
-
-   .. note:: **What about trusted certificate authorities?**
-
-      In some cases (e.g. when dealing with large enterprises), you may be given
-      a certificate for an entire CA, rather than a single contact. Add it here
-      to trust *all* certificates issued by that CA.
-
-      Commercial CAs can usually be verified online. Zammad does not include a
-      list of built-in, trusted CAs.
+   In some cases (e.g. when dealing with large enterprises), you may be given
+   a certificate for an entire certificate authority (CA), rather than a single
+   contact. You can add it here as well to trust *all* certificates issued by
+   that CA. Commercial CAs can usually be verified online. Zammad does not
+   include a list of built-in, trusted CAs.
 
 Add Private Key
    Once you've added a public-key certificate, you can import its matching
-   private key.
-
-   Private keys are for **your own organization only**; never ask your contacts
-   for their private keys.
+   private key. Private keys are for **your own organization only**; never ask
+   your contacts for their private keys. A bulk import of private keys is not
+   possible.
 
    .. figure:: /images/system/integrations/smime/private-key-indicator.png
       :alt: S/MIME integration showing configured certificates and possible issues with Logging
-      :scale: 50%
+      :scale: 70%
       :align: center
 
       A note is displayed on certificates with a matching private key (see line 2).
-
-   .. note:: **Certificates and private keys must be uploaded separately.**
-
-      If your certificate and private key are bundled together in the same file
-      or PEM block, import it twice (once using each button).
-
-      Please note that bulk imports of private keys are not possible.
 
 Certificate Validation
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -119,13 +97,21 @@ CA certificate
    in the attribute **Basic Constraints**, the previously mentioned attributes
    are not verified.
 
-Download Certificate Data
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Download Certificate or Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can download the previously provided certificates and private keys at any
 time from your Zammad instance. Please note that passphrase-protected private
 keys stay protected. When you download them, you have to know the passphrase to
-use them after downloading.
+use them after downloading. To download a certificate, use the ⠇ menu in the
+**Actions** column and select ``Download Certificate``. To download a private
+key, use the other option labeled ``Download Private Key``.
+
+Delete Certificate and Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To delete a certificate (with an optional private key included), use the ⠇ menu
+in the **Actions** column and select ``Delete``.
 
 Default Behavior
 ----------------
@@ -151,9 +137,6 @@ This log does **not** include emails sent by
 :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`.
 For those, check your ``production.log``.
 
-Common Issues
-^^^^^^^^^^^^^
-
 I received a signed/encrypted email before I set up S/MIME integration
    No problem. Once S/MIME has been enabled and the appropriate certificates
    have been added, agents will be prompted to retry verification/decryption on
@@ -169,9 +152,9 @@ The ``Encrypt`` button is disabled
    - Are you sure the recipient's certificate is valid?
    - Have you checked your ``production.log`` for more details?
 
-   .. warning:: If encryption doesn't work for outgoing email articles, it
-      won't work in :doc:`triggers </manage/trigger>` or
-      :doc:`scheduler jobs </manage/scheduler>` either.
+   If encryption doesn't work for outgoing email articles, it won't work in
+   :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`
+   either.
 
 The ``Sign`` button is disabled
    - Have you added **both the certificate and private key** for your organization?
