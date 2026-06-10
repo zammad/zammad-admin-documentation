@@ -46,5 +46,5 @@ On ticket summary sidebar activation
 Hide ticket summary sidebar
    This hides the summary sidebar tab at all. This option can be useful if
    you want to enable the summary for specific groups only. Check the
-   :doc:`group settings </manage/groups/settings>` section about how to
+   :doc:`group settings </manage/groups/settings>` section about where to
    configure the summary for each group individually.
