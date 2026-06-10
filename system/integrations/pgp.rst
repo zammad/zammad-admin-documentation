@@ -2,7 +2,7 @@ PGP
 ===
 
 Pretty Good Privacy (PGP) is one method for secure email communication in
-Zammad (in addition to :doc:`../smime/index`). It allows you to exchange
+Zammad (in addition to :doc:`smime`). It allows you to exchange
 **signed** and **encrypted** messages with others.
 
 Signing
