@@ -21,6 +21,10 @@ article. For more details about how S/MIME works on the agent side, read the
 :user-docs:`secure email section </extras/secure-email.html>` in the user
 documentation.
 
+Please note that Zammad distrusts senders by default. This means that you're
+always required to provide certificate data, no matter if for signing or
+encrypting. This is by design and can't be adjusted.
+
 Prerequisites
 -------------
 
@@ -43,13 +47,6 @@ Prerequisites
    complicated and usually involves extra work for your contacts.
    Bear in mind that S/MIME only works if the other party is using it, too.
 
-Limitations
-~~~~~~~~~~~
-
-Please note that Zammad will distrust senders by default. This means that you're
-always required to provide certificate data, no matter if for signing or
-encrypting. This is by design and can't be adjusted.
-
 Handling of Certificates
 ------------------------
 
@@ -57,7 +54,7 @@ When adding certificates and keys, Zammad validates them based on the
 ``X509v3`` extensions.
 
 Add Certificates and Keys
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Add Certificate
    Import public-key certificates for both your own organization and your
@@ -103,7 +100,7 @@ Add Private Key
       Please note that bulk imports of private keys are not possible.
 
 Certificate Validation
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 Client certificate
    The following attributes are required:
@@ -123,7 +120,7 @@ CA certificate
    are not verified.
 
 Download Certificate Data
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can download the previously provided certificates and private keys at any
 time from your Zammad instance. Please note that passphrase-protected private
@@ -155,7 +152,7 @@ This log does **not** include emails sent by
 For those, check your ``production.log``.
 
 Common Issues
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 I received a signed/encrypted email before I set up S/MIME integration
    No problem. Once S/MIME has been enabled and the appropriate certificates
