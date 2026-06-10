@@ -94,8 +94,9 @@ Shared Drafts
    :user-docs:`in our user documentation </extras/shared-drafts.html>`.
 
 Summary Generation
-   Allows to override the setting about when to generate the
-   :doc:`AI ticket summary </ai/summary>` on group level.
+   Allows you to override the :doc:`AI ticket summary </ai/summary>`
+   configuration. Choose when the summary should get generated or hide the 
+   ticket summary sidebar tab at all for this group.
 
 Note
    An internal note about the group that is only visible to people who can
