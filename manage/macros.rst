@@ -7,7 +7,7 @@ tickets repeatedly, you can bundle those changes in a macro to apply them
 by executing it. To add or edit macros in Zammad's admin settings under
 **Manage > Macros**, you need the ``admin.macro`` permission. For action- or
 time-based automation, have a look at Zammad's :doc:`triggers <trigger>` and
-:doc:`scheduler <scheduler>`.
+:doc:`schedulers <scheduler>`.
 
 Macros can be executed in two ways:
 
@@ -44,15 +44,16 @@ Actions
 
    - Set ticket attributes (priority, state, group, etc.)
    - Add new notes to a ticket
+   - Send a notification
    - Run an :doc:`AI agent </ai/ai-agents>`
 
    There are **no** actions for sending a reply to the customer.
 
    .. note:: Unlike triggers, the scheduler, and text modules, macro actions do
-      **not** support the use of :doc:`/misc/variables`.
+      not support the use of :doc:`variables </misc/variables>`.
 
    .. warning:: If the ticket is missing a required attribute and the macro
-      doesn't set it, then **no actions will be applied**.
+      doesn't set it, then no actions will be applied.
 
 Once completed
    After running this macro, should Zammad remain on the current tab, close it
@@ -60,8 +61,8 @@ Once completed
    executing macros in bulk.
 
 Note
-   What should other Zammad admins know about this macro? Only visible via the
-   **Edit: Macro** dialog, Rails console, and API.
+   What should other Zammad admins know about this macro? Only visible for
+   admins.
 
 Groups
    Which :doc:`groups </manage/groups/index>` are allowed to use this macro?
