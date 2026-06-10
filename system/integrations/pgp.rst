@@ -6,7 +6,7 @@ Zammad (in addition to :doc:`smime`). It allows you to exchange
 **signed** and **encrypted** messages with others.
 
 Signing
-   is a proof that a message hasn't been manipulated on its way. In other words,
+   is proof that a message hasn't been manipulated on its way. In other words,
    it guarantees message **integrity** and **authenticity**.
 
 Encryption
@@ -19,7 +19,7 @@ Encryption
    :align: center
 
    Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will
-   appear for outgoing email email drafts.
+   appear for outgoing email drafts.
 
 .. note:: **Sign button not visible?**
 
