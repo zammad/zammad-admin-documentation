@@ -33,8 +33,8 @@ Integrations for Authentication and Customers
    clearbit
    exchange
    ldap/index
-   pgp/index
-   smime/index
+   pgp
+   smime
 
 Integrations for Monitoring Systems
 -----------------------------------

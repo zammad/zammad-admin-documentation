@@ -1,30 +1,25 @@
 PGP
 ===
 
-Introduction
-------------
-
 Pretty Good Privacy (PGP) is one method for secure email communication in
-Zammad (in addition to :doc:`../smime/index`). It allows you to exchange
+Zammad (in addition to :doc:`smime`). It allows you to exchange
 **signed** and **encrypted** messages with others.
 
 Signing
-   is a proof that a message hasn't been manipulated on its way.
-
-   In other words, it guarantees message **integrity** and **authenticity**.
+   is proof that a message hasn't been manipulated on its way. In other words,
+   it guarantees message **integrity** and **authenticity**.
 
 Encryption
    scrambles a message so that it can only be unscrambled by the intended
-   recipient.
-
-   In other words, it guarantees message **privacy** and **data security**.
+   recipient. In other words, it guarantees message **privacy** and
+   **data security**.
 
 .. figure:: /images/system/integrations/pgp/pgp_ticket_creation.png
    :alt: Screenshot of ticket creation with encrypt and sign buttons
    :align: center
 
-   Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will
-   appear in the ticket composer.
+   Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will
+   appear for outgoing email drafts.
 
 .. note:: **Sign button not visible?**
 
@@ -36,10 +31,9 @@ Handling of Keys
 ----------------
 
 To use the PGP function, you have to enable the integration (PGP) by switching
-the toggle to **enabled**.
-
-You can add keys by clicking the ``Add Key`` button. The keys can be imported
-from a file or you can paste the content of the key in the text box.
+the toggle to **enabled**. You can add keys by clicking the ``Add Key`` button.
+The keys can be imported from a file or you can paste the content of the key in
+the text box.
 
 .. note:: **Which keys do I have to import?**
 
@@ -100,38 +94,36 @@ Default Behavior
 
 Here, you can adjust on per group basis, if **sign** and **encryption** is on or
 off by default. Please be aware, that agents can always override the setting for
-each individual article.
+each individual email.
 
 .. figure:: /images/system/integrations/pgp/group_default.png
    :alt: Adjusting default behavior on per group basis
    :align: center
 
-Recent Logs
------------
-
-Here you can see the last actions regarding signing and encryption and if they
-were successful.
-
 Troubleshooting
 ---------------
 
-**Sign button is not visible, but keys are imported.**
+All of the system's latest PGP activity is displayed in the **Recent Logs**
+section. The logs contain the status and details of all emails (both incoming
+and outgoing), that used signing/verification or encryption/decryption.
+
+Sign button is not visible, but keys are imported.
    - Did you choose a group in the ticket?
    - Did you import a private key for the email address, which is used for
      outgoing emails in the group?
 
-**How to obtain keys?**
+How to obtain keys?
    You can create them yourself! There are some good tutorials on the web on
    how to create them. Providing keys to Zammad is a prerequisite to use the
    PGP feature.
 
-**It says a passphrase is needed, but I haven't got one.**
+It says a passphrase is needed, but I haven't got one.
    If the key is secured with a passphrase, you have to provide it for the
    import in Zammad. It is possible that keys may have an empty passphrase.
    However, this is *not* recommended.
 
-**How do my customers get my new key?**
-   You have to provide your **public** key in advance.
+How do my customers get my new key?
+   You have to provide your *public* key in advance.
    Your customer also has to configure PGP in their email workflow and import
    your public key. The other way round, you have to get the public key of your
    customer and have to import it to Zammad.
