@@ -41,7 +41,7 @@ On ticket detail opening
 On ticket summary sidebar activation
    This option can save computing resources if the AI summary is not always
    viewed. However, it can happen that an agent has to wait for the summary
-   being generated, depending on the ticket size and the resources.
+   to be generated, depending on the ticket size and the resources.
 
 Hide ticket summary sidebar
    This hides the summary sidebar tab at all. This option can be useful if
