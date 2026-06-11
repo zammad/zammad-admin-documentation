@@ -3,23 +3,32 @@ Trigger
 
 Triggers are one way to automate Zammad. You can create *if this then that*
 rules by defining which tickets should get changed and which changes you want
-to apply to them.
-
-To manage triggers in Zammad's admin settings under *Manage > Trigger*, you
-need the permission ``admin.trigger``.
+to apply to them. To manage triggers in Zammad's admin settings under
+*Manage > Trigger*, you need the permission ``admin.trigger``.
 
 Zammad ships one active trigger by default: an auto reply trigger which sends
 an email to the customer after a new ticket is created. You can disable it,
 modify it, or create new ones for all sorts of automation tasks.
 
-.. note::
+Important Information
+---------------------
 
-   - For time-based automation, use :doc:`scheduler jobs </manage/scheduler>`.
-   - To execute pre-defined changes manually via the UI (without a condition),
-     use :doc:`/manage/macros`.
+Triggers are executed when a ticket is updated by clicking the ``Update``
+button. Changing an element which doesn't require an explicit ticket update
+(e.g. setting a tag) does not necessarily lead to a trigger execution.
 
-How Triggers Work
------------------
+If a trigger runs due to an added article, the context for the trigger
+is always this last article. Triggers aren't running based on older ticket
+states or articles.
+
+In addition to triggers, there are also
+:doc:`scheduler jobs </manage/scheduler>` for time-based automation,
+:doc:`email filters </channels/email/filters>` for channel-based
+automation and :doc:`macros </manage/macros>` for manually applying pre-defined
+changes via the UI. Depending on your use case, consider using them instead. 
+
+Configuration
+-------------
 
 Triggers consist mainly of three parts:
 
@@ -28,7 +37,7 @@ Triggers consist mainly of three parts:
   based on attributes.
 - **Actions:** define what to change in a ticket which matches the condition.
 
-Triggers are evaluated in alphabetical order by **name.**
+Triggers are evaluated in alphabetical order by their **name.**
 
 Activator
 ^^^^^^^^^
@@ -107,8 +116,8 @@ Define which changes to apply for tickets which match your condition in the
    :align: center
 
 .. hint:: Certain actions (such as email, SMS and notes) support
-   :doc:`/misc/variables` (see screenshot above), which can be used to build
-   highly-customized message templates.
+   :doc:`variables </misc/variables>` (see screenshot above), which can be used
+   to build highly-customized message templates.
 
 A trigger can do the following things once its conditions have been met:
 
@@ -121,7 +130,7 @@ Modify the ticket
 
    You can also combine static text with placeholders for text fields.
    Remember that the placeholders' values have to be known during trigger
-   runtime. Learn more about :doc:`/misc/variables`.
+   runtime. Learn more about :doc:`variables </misc/variables>`.
 
 Send an email or SMS
    Either to the customer, the agent who owns the ticket, or every agent in
@@ -148,19 +157,24 @@ Add internal or public notes to the ticket
 Localization of Execution Changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The system locale and timezone predefines a default format of date and timestamp replacement variables. These settings are customizable for triggers.
+The system locale and timezone predefines a default format of date and timestamp
+replacement variables. These settings are customizable for triggers.
 
-    .. figure:: /images/manage/trigger/notification-localization.png
-       :align: center
-       :scale: 90%
-       :alt: Screenshot showing localization section of trigger dialog
+.. figure:: /images/manage/trigger/notification-localization.png
+   :align: center
+   :scale: 90%
+   :alt: Screenshot showing localization section of trigger dialog
 
 Best practice is to create single separated localized triggers for each
 language/timezone and execute them based on user or organization attributes.
 
-The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language.
+The format and timezone of date and timestamp replacement variables is
+customizable by the use of the ``dt()`` method. Further on the ``t()`` method
+can be used to translated string replacement variables according to the selected
+locale language.
 
-For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`.
+For usage of the ``t()`` and ``dt()`` method, please follow the instructions in
+the :ref:`variables section <variable_localization>`.
 
 Examples
 --------
@@ -168,37 +182,41 @@ Examples
 To get you up and running quickly, here are some examples
 of the kinds of automation tasks you can set up with triggers.
 
-1. Any time Jacob Smith creates a ticket, assign it to the Sales group.
+Group assignment based on customer
+   Any time Jacob Smith creates a ticket, assign it to the "Sales" group.
 
-2. Emma Taylor is responsible for all sales internally, so if a new ticket has
+   - Condition: **Customer** *is* *specific user* Jacob Smith
+   - Action: **Group** Sales
+
+Owner assignment based on subject
+   Emma Taylor is responsible for all sales internally, so if a new ticket has
    the word "order" in the subject, assign it to her and make sure it's set
    with a high priority.
 
-3. Send an auto-reply email to any customer who creates a ticket via web, if
+   - Condition: **Title** *contains* order
+   - Action:
+
+     - **Group** Sales
+     - **Owner** *specific user* Emma Taylor
+     - **Priority** 3 high
+
+Auto-reply based on channel and language
+   Send an auto-reply email to any customer who creates a ticket via web, if
    the detected language is English.
 
-.. note:: 📨 **Not all automated messages come from triggers!**
+   - Condition:
+      
+     - **Action** *is* created
+     - **State** *is not* closed
+     - **Type** *is* web
+     - **Sender** *is* customer
+     - **Detected Language** *is* English
 
-   For instance, when *agents* receive a system email
-   about a newly created ticket,
-   that's built into the system itself.
-   If you need to customize those,
-   you will have to
-   :doc:`manually edit files on your server </misc/system-notifications>`.
+   - Action: **Email** (public, recipient: customer; with subject and body)
 
-Limitations
------------
+   .. note:: **Not all automated messages come from triggers!**
 
-Triggers are executed when a ticket is updated by clicking the **Update**
-button. Changing an element which doesn't require an explicit ticket update
-(e.g. setting a tag) does not necessarily lead to a trigger execution.
-
-If a trigger runs due to an added article, the context for the trigger
-is always this last article. Triggers aren't running based on older ticket
-states or articles.
-
-In addition to triggers, there are also
-:doc:`scheduler </manage/scheduler>` and
-:doc:`postmaster filter </channels/email/filters>` based automation. Make sure
-to have a look at those too. They can be more suitable, depending on your
-use case.
+      For instance, when *agents* receive a system email about a newly created
+      ticket, that's built into the system itself. If you need to customize those,
+      you will have to
+      :doc:`manually edit files on your server </misc/system-notifications>`.
