@@ -1,5 +1,5 @@
-How Do Trigger Work
-===================
+How Do Triggers Work
+====================
 
 Triggers consist mainly of three parts:
 
@@ -9,8 +9,6 @@ Triggers consist mainly of three parts:
 - **Actions:** define what to change in a ticket which matches the condition.
 
 Triggers are evaluated in alphabetical order by **name.**
-In some situations, triggers might be the wrong choice, see
-:doc:`/manage/trigger/limitations` for more information.
 
 Activator
 ---------
@@ -145,3 +143,44 @@ language/timezone and execute them based on user or organization attributes.
 The format and timezone of date and timestamp replacement variables is customizable by the use of the ``dt()`` method. Further on the ``t()`` method can be used to translated string replacement variables according to the selected locale language.
 
 For usage of the ``t()`` and ``dt()`` method, please follow the instructions in the :ref:`variables section <variable_localization>`.
+
+Examples
+--------
+
+To get you up and running quickly, here are some examples
+of the kinds of automation tasks you can set up with triggers.
+
+1. Any time Jacob Smith creates a ticket, assign it to the Sales group.
+
+2. Emma Taylor is responsible for all sales internally, so if a new ticket has
+   the word "order" in the subject, assign it to her and make sure it's set
+   with a high priority.
+
+3. Send an auto-reply email to any customer who creates a ticket via web, if
+   the detected language is English.
+
+.. note:: 📨 **Not all automated messages come from triggers!**
+
+   For instance, when *agents* receive a system email
+   about a newly created ticket,
+   that's built into the system itself.
+   If you need to customize those,
+   you will have to
+   :doc:`manually edit files on your server </settings/system/system-notifications>`.
+
+Limitations
+-----------
+
+Triggers are executed when a ticket is updated by clicking the **Update**
+button. Changing an element which doesn't require an explicit ticket update
+(e.g. setting a tag) does not necessarily lead to a trigger execution.
+
+If a trigger runs due to an added article, the context for the trigger
+is always this last article. Triggers aren't running based on older ticket
+states or articles.
+
+In addition to triggers, there are also
+:doc:`scheduler </manage/scheduler>` and
+:doc:`postmaster filter </channels/email/filters>` based automation. Make sure
+to have a look at those too. They can be more suitable, depending on your
+use case.

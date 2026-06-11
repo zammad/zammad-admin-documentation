@@ -246,7 +246,7 @@ User Preferences
      - Manage device login sessions
      - | Revoking this permission disables
        | “Login detected from a new location” emails.
-       | To learn more, see :doc:`/manage/trigger/system-notifications`.
+       | To learn more, see :doc:`/settings/system/system-notifications`.
    * - ``user_preferences.language``
      - Configure the UI locale/language
      - Allows users to set their preferred language.

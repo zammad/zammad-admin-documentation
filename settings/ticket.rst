@@ -209,7 +209,7 @@ If you are wondering what this feature is useful for, some ideas:
 
 - Use the detected language as a condition attribute in triggers and schedulers.
   Examples are: to send auto replies in different languages (see
-  :ref:`trigger example <trigger-example-3>`) and to
+  :doc:`trigger examples </manage/trigger/how-do-they-work>`) and to
   move tickets in a specific language into a specific group.
 - Search by the new article attribute in the advanced search (both via
   language code and language name). Examples: ``article.detected_language:en``,
