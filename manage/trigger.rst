@@ -4,29 +4,219 @@ Trigger
 Triggers are one way to automate Zammad. You can create *if this then that*
 rules by defining which tickets should get changed and which changes you want
 to apply to them. To manage triggers in Zammad's admin settings under
-*Manage > Trigger*, you need the permission ``admin.trigger``.
+*Manage > Trigger*, the permission ``admin.trigger`` is required.
 
-In case you are looking for a time-based automation, use
-:doc:`scheduler jobs </manage/scheduler>` instead. To execute pre-defined
-changes manually via UI (without a condition), use :doc:`/manage/macros`
-instead.
+Zammad ships one active trigger by default: an auto reply trigger which sends
+an email to the customer after a new ticket is created. You can disable it,
+modify it, or create new ones for all sorts of automation tasks.
 
-Zammad ships one active trigger by default: an auto reply trigger which sends an
-email to the customer after a new ticket is created. This leads to an article in
-the ticket. This article only displays the title and the recipient as a text
-string to maintain clarity in the ticket view.
-You can disable it, modify it or create new ones
-for all sorts of automation tasks in the **Triggers** section in the admin
-settings:
+Important Information
+---------------------
 
-.. figure:: /images/manage/trigger/trigger-management.png
-   :alt: Screenshot of "Triggers" page in admin settings
+Triggers are executed when a ticket is updated by clicking the ``Update``
+button. Changing an element which doesn't require an explicit ticket update
+(e.g. setting a tag) does not necessarily lead to a trigger execution.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Learn more
+If a trigger runs due to an added article, the context for the trigger
+is always this last article. Triggers aren't running based on older ticket
+states or articles.
 
-   /manage/trigger/how-do-they-work
-   /manage/trigger/learn-by-example
-   /manage/trigger/limitations
-   /manage/trigger/system-notifications
+In addition to triggers, there are also
+:doc:`scheduler jobs </manage/scheduler>` for time-based automation,
+:doc:`email filters </channels/email/filters>` for channel-based
+automation and :doc:`macros </manage/macros>` for manually applying pre-defined
+changes via the UI. Depending on your use case, consider using them instead. 
+
+Configuration
+-------------
+
+Triggers consist mainly of three parts:
+
+- **Activator:** defines when and how the trigger has to be evaluated.
+- **Condition:** defines the tickets for which an action has to be executed
+  based on attributes.
+- **Actions:** define what to change in a ticket which matches the condition.
+
+Triggers are evaluated in alphabetical order by their **name.**
+
+Activator
+^^^^^^^^^
+
+Choose between an action- or time-based activator in the **Activated by**
+section.
+
+.. figure:: /images/manage/trigger/activator-of-a-trigger.png
+   :alt: Screenshot of activator section in trigger dialog.
+   :scale: 80%
+   :align: center
+
+Action
+""""""
+
+An action based trigger always requires a ticket update to run. This can be an
+update by an agent or even internal system updates like updated SLA times.
+See the explanation below for more details.
+
+Selective
+   Checks if any attribute from the condition was updated OR an article was
+   added and the condition matches. If the attributes of the condition weren't
+   touched and no new article was added, the trigger doesn't run.
+
+   **Example:** A trigger with a condition for priority **1 low** will run if
+   the ticket was changed to **1 low**.
+
+Always
+   Checks if the current state of the ticket matches the condition. This means:
+   the trigger always runs when the ticket is updated and the condition matches,
+   no matter what was changed. This can lead to more often executions of such a
+   trigger.
+
+   **Example:** A trigger with a condition for priority **1 low** will run if
+   the ticket was moved to another group while priority was set **1 low**.
+
+.. hint:: If in doubt, use **Selective**. The **Always** action activator can
+   lead to unexpected behavior, e.g. the trigger runs after internal system
+   changes of the ticket, which aren't visible in the ticket history.
+
+Time Event
+""""""""""
+
+The execution is triggered when one of the following events occur:
+
+- Time of a reminder is reached
+- Escalation is reached
+- Escalation warning is reached
+
+When such a time event is reached, the trigger runs if the condition
+matches. This is the same behavior as action-based activator's "always" mode.
+
+Condition
+^^^^^^^^^
+
+Use one or more attributes and values in a condition, which the tickets have to
+match you want to apply changes to. Create your condition in the
+**Conditions for affected objects** section:
+
+.. figure:: /images/manage/trigger/conditions-of-a-trigger.png
+   :alt: Screenshot of condition section in trigger dialog.
+   :scale: 80%
+   :align: center
+
+.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
+Action
+^^^^^^
+
+Define which changes to apply for tickets which match your condition in the
+**Execute changes on objects** section:
+
+.. figure:: /images/manage/trigger/actions-of-a-trigger.png
+   :alt: Screenshot of action section in trigger dialog.
+   :scale: 80%
+   :align: center
+
+.. hint:: Certain actions (such as email, SMS and notes) support
+   :doc:`variables </misc/variables>` (see screenshot above), which can be used
+   to build highly-customized message templates.
+
+A trigger can do the following things once its conditions have been met:
+
+Modify the ticket
+   Examples: escalate its priority, close it, reassign it, rename it,
+   add tags, subscribe and unsubscribe specific/all users, etc.
+
+   Date & time attributes (like **Pending till**) can be
+   specified in *absolute* or *relative* terms.
+
+   You can also combine static text with placeholders for text fields.
+   Remember that the placeholders' values have to be known during trigger
+   runtime. Learn more about :doc:`variables </misc/variables>`.
+
+Send an email or SMS
+   Either to the customer, the agent who owns the ticket, or every agent in
+   the system.
+
+   Sending emails allows you to include the attachments of the triggering
+   article if required.
+
+   In order to send emails with triggers, you need to configure
+   an email address for the group, the trigger is working in. If you
+   don't, Zammad will skip the trigger completely.
+
+:doc:`Fire a webhook </manage/webhook>`
+   Connect Zammad to another web service or application to give it live updates
+   about new tickets.
+
+Add internal or public notes to the ticket
+   This allows you to help your agents with specific information if needed.
+   (e.g. automated changes a trigger applied to the ticket)
+
+:doc:`Run an AI agent </ai/ai-agents>`
+   Trigger an AI agent to run using triggers.
+
+Localization of Execution Changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The system locale and timezone predefines a default format of date and timestamp
+replacement variables. These settings are customizable for triggers.
+
+.. figure:: /images/manage/trigger/notification-localization.png
+   :align: center
+   :scale: 90%
+   :alt: Screenshot showing localization section of trigger dialog
+
+Best practice is to create single separated localized triggers for each
+language/timezone and execute them based on user or organization attributes.
+
+The format and timezone of date and timestamp replacement variables is
+customizable by the use of the ``dt()`` method. Further on the ``t()`` method
+can be used to translated string replacement variables according to the selected
+locale language.
+
+For usage of the ``t()`` and ``dt()`` method, please follow the instructions in
+the :ref:`variables section <variable_localization>`.
+
+Examples
+--------
+
+To get you up and running quickly, here are some examples
+of the kinds of automation tasks you can set up with triggers.
+
+Group assignment based on customer
+   Any time Jacob Smith creates a ticket, assign it to the "Sales" group.
+
+   - Condition: **Customer** *is* *specific user* Jacob Smith
+   - Action: **Group** Sales
+
+Owner assignment based on subject
+   Emma Taylor is responsible for all sales internally, so if a new ticket has
+   the word "order" in the subject, assign it to her and make sure it's set
+   with a high priority.
+
+   - Condition: **Title** *contains* order
+   - Action:
+
+     - **Group** Sales
+     - **Owner** *specific user* Emma Taylor
+     - **Priority** 3 high
+
+Auto-reply based on channel and language
+   Send an auto-reply email to any customer who creates a ticket via web, if
+   the detected language is English.
+
+   - Condition:
+      
+     - **Action** *is* created
+     - **State** *is not* closed
+     - **Type** *is* web
+     - **Sender** *is* customer
+     - **Detected Language** *is* English
+
+   - Action: **Email** (public, recipient: customer; with subject and body)
+
+   .. note:: **Not all automated messages come from triggers!**
+
+      For instance, when *agents* receive a system email about a newly created
+      ticket, that's built into the system itself. If you need to customize those,
+      you will have to
+      :doc:`manually edit files on your server </misc/system-notifications>`.

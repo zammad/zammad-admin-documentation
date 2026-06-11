@@ -4,7 +4,7 @@ Email Notification
 .. note:: The notification channel can only be configured
    on **self-hosted installations**.
 
-   For more information, see :doc:`/manage/trigger/system-notifications`.
+   For more information, see :doc:`/misc/system-notifications`.
 
 System notifications are automated emails
 sent by Zammad for critical system events,
