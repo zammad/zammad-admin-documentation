@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 15:13+0200\n"
-"PO-Revision-Date: 2026-06-07 09:58+0000\n"
-"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
+"POT-Creation-Date: 2026-06-10 16:30+0200\n"
+"PO-Revision-Date: 2026-06-10 15:31+0000\n"
+"Last-Translator: lenny76 <lenny76@lenny76.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/it/>\n"
 "Language: it\n"
@@ -453,6 +453,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../channels/form.rst:219 ../manage/groups/group-permissions.rst:75
+#: ../manage/macros.rst:74
 msgid "Examples"
 msgstr "Esempi"
 
@@ -866,7 +867,6 @@ msgstr ""
 #: ../ai/provider.rst:158 ../system/integrations/checkmk/admin-settings.rst:32
 #: ../system/integrations/cti/includes/recent-logs.include.rst:2
 #: ../system/integrations/ldap/index.rst:164
-#: ../system/integrations/pgp/index.rst:110
 msgid "Recent Logs"
 msgstr "Log Recenti"
 
@@ -888,68 +888,19 @@ msgstr "Riepilogo Ticket"
 msgid ""
 "Activating this feature generates summaries of tickets which are displayed "
 "in a new ticket sidebar tab. This can be a huge time saver when dealing with "
-"large tickets and/or many hand-overs between agents."
+"large tickets and/or many hand-overs between agents. To configure it under "
+"*AI > Ticket Summary*, the permission ``admin.ai_assistance_ticket_summary`` "
+"is required. Make sure to configure an :doc:`AI provider <provider>` before "
+"you activate the feature. Otherwise, a warning message will tell you to do "
+"so. Agents get notified for a new AI summary by a pulsing dot as indicator "
+"on the summary sidebar tab."
 msgstr ""
-"L'attivazione di questa funzionalità genera riepiloghi dei ticket che "
-"vengono visualizzati in una nuova scheda della barra laterale del ticket. "
-"Questo può far risparmiare molto tempo quando si hanno a che fare con ticket "
-"di grandi dimensioni e/o molti passaggi di consegna tra agenti."
-
-#: ../ai/summary.rst:8
-msgid ""
-"Make sure to configure an :doc:`AI provider <provider>` before activating "
-"the feature. Otherwise, a warning message will tell you to do so."
-msgstr ""
-"Assicurati di configurare un :doc:`provider AI <provider>` prima di attivare "
-"la funzionalità. Altrimenti, un messaggio di avviso ti inviterà a farlo."
 
 #: ../ai/summary.rst:None
 msgid "Screenshot shows AI ticket summary configuration"
 msgstr "Lo screenshot mostra la configurazione del riepilogo ticket AI"
 
-#: ../ai/summary.rst:15
-msgid ""
-"If you activate this feature, **Customer Intent** and **Conversation "
-"Summary** are enabled by default. You can choose to activate **Open "
-"Questions**, **Upcoming Events** and **Customer Sentiment**, depending on "
-"your use case."
-msgstr ""
-"Se attivi questa funzionalità, **Intenzione Cliente** e **Riepilogo "
-"Conversazione** sono abilitati per default. Puoi scegliere di attivare "
-"**Domande Aperte**, **Eventi Imminenti** e **Sentimento Cliente**, a seconda "
-"del tuo caso d'uso."
-
-#: ../ai/summary.rst:19
-msgid ""
-"Enabling the ticket summary feature triggers a request to the configured AI "
-"service at the configured action (see below). After the summary is "
-"generated, agents are notified by an indicator on the summary sidebar tab."
-msgstr ""
-"L'abilitazione della funzionalità di riepilogo ticket attiva una richiesta "
-"al servizio AI configurato all'azione configurata (vedi sotto). Dopo che il "
-"riepilogo è stato generato, gli agenti vengono notificati da un indicatore "
-"sulla scheda della barra laterale riepilogo."
-
-#: ../ai/summary.rst:23
-msgid ""
-"Decide when the summary is generated via **Generation** dropdown. It is "
-"generated when the ticket got updated and an agent either opens the ticket "
-"or opens the summary sidebar tab of the ticket. The first mentioned option "
-"is more comfortable for agents, the latter saves computing resources if the "
-"AI summary is not always viewed. If you want to have a more granular "
-"control, you can override this setting for each group individually in "
-"the :doc:`group management </manage/groups/index>`."
-msgstr ""
-"Decidi quando il riepilogo viene generato tramite il menu a discesa "
-"**Generazione**. Viene generato quando il ticket viene aggiornato e un "
-"agente apre il ticket o apre la scheda della barra laterale riepilogo del "
-"ticket. La prima opzione menzionata è più comoda per gli agenti, la seconda "
-"salva risorse di calcolo se il riepilogo AI non viene sempre visualizzato. "
-"Se vuoi avere un controllo più granulare, puoi sovrascrivere questa "
-"impostazione per ciascun gruppo singolarmente nella :doc:`gestione gruppi </"
-"manage/groups/index>`."
-
-#: ../ai/summary.rst:31
+#: ../ai/summary.rst:17
 msgid ""
 "If you use an own Ollama server as provider, make sure to have the "
 "``llama3.2`` model available for this feature or specify an available model "
@@ -958,6 +909,75 @@ msgstr ""
 "Se utilizzi un tuo server Ollama come provider, assicurati di avere il "
 "modello ``llama3.2`` disponibile per questa funzionalità o specifica un "
 "modello disponibile nella :doc:`configurazione del provider <provider>`."
+
+#: ../ai/summary.rst:22
+#, fuzzy
+#| msgid "Image Service"
+msgid "Summary Services"
+msgstr "Servizio Immagini"
+
+#: ../ai/summary.rst:24
+#, fuzzy
+#| msgid ""
+#| "If you activate this feature, **Customer Intent** and **Conversation "
+#| "Summary** are enabled by default. You can choose to activate **Open "
+#| "Questions**, **Upcoming Events** and **Customer Sentiment**, depending on "
+#| "your use case."
+msgid ""
+"Configure what the summary should include. After activating the feature, "
+"**Customer Intent** and **Conversation Summary** are enabled by default. You "
+"can choose to activate **Open Questions**, **Upcoming Events** and "
+"**Customer Sentiment**, depending on your use case."
+msgstr ""
+"Se attivi questa funzionalità, **Intenzione Cliente** e **Riepilogo "
+"Conversazione** sono abilitati per default. Puoi scegliere di attivare "
+"**Domande Aperte**, **Eventi Imminenti** e **Sentimento Cliente**, a seconda "
+"del tuo caso d'uso."
+
+#: ../ai/summary.rst:30 ../manage/groups/settings.rst:99
+msgid "Summary Generation"
+msgstr "Generazione Riepilogo"
+
+#: ../ai/summary.rst:32
+msgid ""
+"In general, the ticket summary is only triggered if the ticket got updated "
+"since the last summary generation. You can choose the timing of the "
+"generation or hide the sidebar tab at all via the dropdown:"
+msgstr ""
+
+#: ../ai/summary.rst:39
+msgid "On ticket detail opening"
+msgstr ""
+
+#: ../ai/summary.rst:37
+msgid ""
+"The summary is generated when an agent opens the ticket. This can be more "
+"comfortable for agents as the summary is already present or at least "
+"triggered when the agent wants to read it."
+msgstr ""
+
+#: ../ai/summary.rst:44
+msgid "On ticket summary sidebar activation"
+msgstr ""
+
+#: ../ai/summary.rst:42
+msgid ""
+"This option can save computing resources if the AI summary is not always "
+"viewed. However, it can happen that an agent has to wait for the summary to "
+"be generated, depending on the ticket size and the resources."
+msgstr ""
+
+#: ../ai/summary.rst:49
+msgid "Hide ticket summary sidebar"
+msgstr ""
+
+#: ../ai/summary.rst:47
+msgid ""
+"This hides the summary sidebar tab at all. This option can be useful if you "
+"want to enable the summary for specific groups only. Check the :doc:`group "
+"settings </manage/groups/settings>` section about where to configure the "
+"summary for each group individually."
+msgstr ""
 
 #: ../ai/writing-assistant.rst:2
 msgid "Writing Assistant"
@@ -1162,7 +1182,7 @@ msgstr ""
 "tra reazioni positive e negative."
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:25
-#: ../channels/microsoft365-graph/accounts.rst:18
+#: ../channels/microsoft365-graph/accounts.rst:18 ../manage/macros.rst:31
 #: ../manage/report-profiles.rst:33 ../manage/webhook/add.rst:32
 #: ../misc/first-steps.rst:18 ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
@@ -1262,7 +1282,7 @@ msgstr ""
 "clonare uno strumento di testo esistente e modificarlo."
 
 #: ../ai/writing-assistant.rst:139 ../manage/groups/index.rst:2
-#: ../manage/macros/how-do-they-work.rst:0
+#: ../manage/macros.rst:68
 msgid "Groups"
 msgstr "Gruppi"
 
@@ -1290,8 +1310,7 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:102 ../manage/macros/how-do-they-work.rst:0
-#: ../manage/macros/learn-by-example.rst:0
+#: ../manage/groups/settings.rst:103 ../manage/macros.rst:65
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:229 ../manage/roles/permissions.rst:299
@@ -1320,13 +1339,12 @@ msgstr ""
 "degli strumenti. **Non** viene considerata come contesto per l'IA."
 
 #: ../ai/writing-assistant.rst:147 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:123
-#: ../manage/macros/how-do-they-work.rst:0
-#: ../manage/organizations/index.rst:135 ../manage/overviews.rst:0
-#: ../manage/report-profiles.rst:59 ../manage/roles/index.rst:94
-#: ../manage/scheduler.rst:164 ../manage/templates.rst:33
-#: ../manage/webhook/add.rst:134 ../system/objects.rst:170
-#: ../system/objects.rst:250
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:124
+#: ../manage/macros.rst:71 ../manage/organizations/index.rst:135
+#: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
+#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:164
+#: ../manage/templates.rst:33 ../manage/webhook/add.rst:134
+#: ../system/objects.rst:170 ../system/objects.rst:250
 msgid "Active"
 msgstr "Attivo"
 
@@ -2331,8 +2349,7 @@ msgstr ""
 #: ../settings/security/third-party/saml.rst:186
 #: ../system/integrations/cti/includes/troubleshooting.include.rst:2
 #: ../system/integrations/github.rst:28 ../system/integrations/gitlab.rst:35
-#: ../system/integrations/pgp/index.rst:116
-#: ../system/integrations/smime/troubleshooting.rst:2
+#: ../system/integrations/pgp.rst:104 ../system/integrations/smime.rst:131
 msgid "Troubleshooting"
 msgstr "Risoluzione problemi"
 
@@ -3199,7 +3216,7 @@ msgstr "Filtri"
 #: ../channels/email/filters.rst:5 ../misc/object-conditions/basics.rst:5
 #: ../settings/security/third-party/saml.rst:5
 #: ../system/integrations/clearbit.rst:9 ../system/integrations/exchange.rst:8
-#: ../system/integrations/pgp/index.rst:5 ../system/objects/permissions.rst:5
+#: ../system/objects/permissions.rst:5
 msgid "Introduction"
 msgstr "Introduzione"
 
@@ -3235,7 +3252,7 @@ msgstr ""
 "sezione dei filtri di sistema qui sotto per ulteriori informazioni."
 
 #: ../channels/email/filters.rst:28 ../manage/checklist.rst:15
-#: ../system/integrations/smime/index.rst:43 ../system/subscription.rst:80
+#: ../system/subscription.rst:80
 msgid "Usage"
 msgstr "Utilizzo"
 
@@ -4811,7 +4828,7 @@ msgstr ""
 
 #: ../channels/facebook.rst:20 ../channels/whatsapp/preparation.rst:13
 #: ../settings/security/ssl-certificates.rst:14
-#: ../system/integrations/smime/prerequisites.rst:2
+#: ../system/integrations/smime.rst:25
 msgid "Prerequisites"
 msgstr "Prerequisiti"
 
@@ -5107,7 +5124,6 @@ msgstr ""
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 #: ../system/integrations/elasticsearch.rst:20
 #: ../system/integrations/ldap/index.rst:20
-#: ../system/integrations/smime/prerequisites.rst:78
 msgid "Limitations"
 msgstr "Limitazioni"
 
@@ -9720,9 +9736,9 @@ msgstr ""
 "nient'altro: una volta premuto **Salva**, non vedranno mai più quel ticket. "
 "Ottimo per rispondere alle telefonate per qualcuno più importante di te."
 
-#: ../manage/groups/index.rst:30 ../manage/macros.rst:36
-#: ../manage/trigger.rst:25 ../manage/webhook.rst:43
-#: ../system/core-workflows.rst:26 ../system/objects.rst:32
+#: ../manage/groups/index.rst:30 ../manage/trigger.rst:25
+#: ../manage/webhook.rst:43 ../system/core-workflows.rst:26
+#: ../system/objects.rst:32
 msgid "Learn more"
 msgstr "Scopri di più"
 
@@ -10065,19 +10081,14 @@ msgstr ""
 "Scopri di più sulle bozze condivise :user-docs:`nella nostra documentazione "
 "per utenti </extras/shared-drafts.html>`."
 
-#: ../manage/groups/settings.rst:98
-msgid "Summary Generation"
-msgstr "Generazione Riepilogo"
-
 #: ../manage/groups/settings.rst:97
 msgid ""
-"Allows to override the setting about when to generate the :doc:`AI ticket "
-"summary </ai/summary>` on group level."
+"Allows you to override the :doc:`AI ticket summary </ai/summary>` "
+"configuration. Choose when the summary should get generated or hide the "
+"ticket summary sidebar tab at all for this group."
 msgstr ""
-"Consente di sovrascrivere l'impostazione su quando generare "
-"il :doc:`riepilogo ticket IA </ai/summary>` a livello di gruppo."
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:102
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
@@ -10085,7 +10096,7 @@ msgstr ""
 "Una nota interna sul gruppo che è visibile solo alle persone che possono "
 "accedere all'area di gestione dei gruppi."
 
-#: ../manage/groups/settings.rst:105
+#: ../manage/groups/settings.rst:106
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -10099,7 +10110,7 @@ msgstr ""
 "ticket in questo gruppo. Tuttavia, i clienti possono ancora interagire con i "
 "loro ticket esistenti in un gruppo inattivo."
 
-#: ../manage/groups/settings.rst:113
+#: ../manage/groups/settings.rst:114
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
@@ -10107,7 +10118,7 @@ msgstr ""
 "Vuoi gestire ticket da un gruppo inattivo, che vengono aggiornati dai "
 "clienti?"
 
-#: ../manage/groups/settings.rst:116
+#: ../manage/groups/settings.rst:117
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
@@ -10117,7 +10128,7 @@ msgstr ""
 "quando vengono aggiornati. Crea questo trigger prima di disattivare il "
 "gruppo in modo che sia selezionabile nella configurazione del trigger."
 
-#: ../manage/groups/settings.rst:122
+#: ../manage/groups/settings.rst:123
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -10662,13 +10673,22 @@ msgid "Macros"
 msgstr "Macros"
 
 #: ../manage/macros.rst:4
+#, fuzzy
+#| msgid ""
+#| "Zammad's macro feature lets you pre-define ticket changes which can be "
+#| "applied with just a click. So, when you or your agents apply the same "
+#| "changes to many tickets over and over again, you can bundle those changes "
+#| "in a macro to apply them by executing it. To add or edit macros in "
+#| "Zammad's admin settings under *Manage > Macros*, you need the "
+#| "``admin.macro`` permission."
 msgid ""
 "Zammad's macro feature lets you pre-define ticket changes which can be "
-"applied with just a click. So, when you or your agents apply the same "
-"changes to many tickets over and over again, you can bundle those changes in "
-"a macro to apply them by executing it. To add or edit macros in Zammad's "
-"admin settings under *Manage > Macros*, you need the ``admin.macro`` "
-"permission."
+"applied with just a click. When you or your agents apply the same changes to "
+"many tickets repeatedly, you can bundle those changes in a macro to apply "
+"them by executing it. To add or edit macros in Zammad's admin settings under "
+"**Manage > Macros**, you need the ``admin.macro`` permission. For action- or "
+"time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
+"and :doc:`schedulers <scheduler>`."
 msgstr ""
 "La funzione macro di Zammad consente di predefinire le modifiche ai ticket, "
 "che possono essere applicate con un solo clic. Pertanto, quando tu o i tuoi "
@@ -10678,258 +10698,244 @@ msgstr ""
 "Zammad, nella sezione *Gestisci > Macro*, è necessario disporre "
 "dell'autorizzazione ``admin.macro``."
 
+#: ../manage/macros.rst:12
+msgid "Macros can be executed in two ways:"
+msgstr ""
+
+#: ../manage/macros.rst:14
+msgid ""
+"In the ticket detail view via the **^** section of the ``Update`` button."
+msgstr ""
+
 #: ../manage/macros.rst:15
-msgid "Example macros within a ticket detail view."
-msgstr "Esempio di macro all'interno di una vista dettagli ticket."
-
-#: ../manage/macros.rst:15
 msgid ""
-"Choose from the macros **Close & Tag as Spam**, **Move to RMA**, and **Reply "
-"& Close & Tag as Banana**."
+"As bulk action for multiple tickets inside an overview or the detailed "
+"search (bulk action via field selection or via drag & drop)."
 msgstr ""
-"Scegli tra le macro **Chiudi e Tagga come Spam**, **Sposta in RMA** e "
-"**Rispondi e Chiudi e Tagga come Banana**."
 
-#: ../manage/macros.rst:18
-msgid ""
-"You can also apply macros in bulk (i.e. to many tickets all at once) via the "
-"*Overviews* page:"
-msgstr ""
-"Puoi anche applicare macro in blocco (cioè a molti ticket "
-"contemporaneamente) tramite la pagina *Panoramiche*:"
-
-#: ../manage/macros.rst:26
-msgid "Example macros within an overview (bulk operation)."
-msgstr "Esempio di macro all'interno di una panoramica (operazione in blocco)."
-
-#: ../manage/macros.rst:26
-msgid ""
-"Select your desired tickets, then click-and-drag to apply a macro to all of "
-"them."
-msgstr ""
-"Seleziona i tuoi ticket desiderati, quindi fai clic e trascina per applicare "
-"una macro a tutti loro."
-
-#: ../manage/macros.rst:29
-msgid "You can create or edit macros on the Macros page of the admin settings:"
-msgstr ""
-"Puoi creare o modificare le macro nella pagina Macro delle impostazioni di "
-"amministrazione:"
-
-#: ../manage/macros.rst:None
-msgid "Screenshot of \"Macros\" page in admin settings"
-msgstr ""
-"Lo screenshot mostra la pagina \"Macro\" nelle impostazioni di "
-"amministrazione"
-
-#: ../manage/macros/how-do-they-work.rst:2
-msgid "How Do Macros Work"
-msgstr "Come funzionano le macro"
-
-#: ../manage/macros/how-do-they-work.rst:4
-msgid ""
-"Macros are made up of **actions** (changes to a ticket). You can add as many "
-"actions to a macro as you want."
-msgstr ""
-"Le macro sono composte da **azioni** (modifiche a un ticket). Puoi "
-"aggiungere quante azioni desideri a una macro."
-
-#: ../manage/macros/how-do-they-work.rst:7
-msgid ""
-"There are also a few other settings that affect who can use a macro or how "
-"it behaves."
-msgstr ""
-"Ci sono anche alcune altre impostazioni che influenzano chi può usare una "
-"macro o come si comporta."
-
-#: ../manage/macros/how-do-they-work.rst:11
-msgid "Creating Macros"
-msgstr "Creazione Macro"
-
-#: ../manage/macros/how-do-they-work.rst:None
-msgid "Screenshot showing different possible actions for macros."
-msgstr "Screenshot che mostra diverse azioni possibili per le macro."
-
-#: ../manage/macros/how-do-they-work.rst:0 ../manage/templates.rst:28
-msgid "Actions"
-msgstr "Azioni"
-
-#: ../manage/macros/how-do-they-work.rst:19
-msgid "You can create actions to:"
-msgstr "Puoi creare azioni per:"
-
-#: ../manage/macros/how-do-they-work.rst:21
-msgid "set ticket attributes (priority, state, group, etc.)"
-msgstr "impostare attributi del ticket (priorità, stato, gruppo, ecc.)"
-
-#: ../manage/macros/how-do-they-work.rst:22
-msgid "add new notes to a ticket"
-msgstr "aggiungere nuove note a un ticket"
-
-#: ../manage/macros/how-do-they-work.rst:23
-msgid "run an :doc:`AI agent </ai/ai-agents>`"
-msgstr "eseguire un :doc:`agente IA </ai/ai-agents>`"
-
-#: ../manage/macros/how-do-they-work.rst:25
-msgid "There are **no** actions for:"
-msgstr "Non ci sono azioni per:"
-
-#: ../manage/macros/how-do-they-work.rst:27
-msgid "sending a reply to the customer"
-msgstr "inviare una risposta al cliente"
-
-#: ../manage/macros/how-do-they-work.rst:29
-msgid ""
-"Unlike triggers, the scheduler, and text modules, macro actions do **not** "
-"support the use of :doc:`/misc/variables`."
-msgstr ""
-"A differenza di trigger, scheduler e moduli di testo, le azioni delle macro "
-"**non** supportano l'uso di :doc:`/misc/variables`."
-
-#: ../manage/macros/how-do-they-work.rst:33
-msgid ""
-"If the ticket is missing a required attribute and the macro doesn't set it, "
-"then **no actions will be applied**."
-msgstr ""
-"Se al ticket manca un attributo richiesto e la macro non lo imposta, allora "
-"**nessuna azione verrà applicata**."
-
-#: ../manage/macros/how-do-they-work.rst:0
-msgid "Once completed..."
-msgstr "Una volta completato..."
-
-#: ../manage/macros/how-do-they-work.rst:38
-msgid ""
-"After running this macro, should Zammad remain on the current tab, close it, "
-"or automatically switch to the next ticket? (Does not apply when running "
-"macros \"in bulk\".)"
-msgstr ""
-"Dopo aver eseguito questa macro, Zammad dovrebbe rimanere sulla scheda "
-"corrente, chiuderla o passare automaticamente al ticket successivo? (Non si "
-"applica quando si eseguono macro \"in blocco\".)"
-
-#: ../manage/macros/how-do-they-work.rst:43
-msgid ""
-"What should other Zammad admins know about this macro? (Visible only via the "
-"\"Edit: Macro\" dialog, Rails console, and API.)"
-msgstr ""
-"Cosa dovrebbero sapere gli altri amministratori Zammad su questa macro? "
-"(Visibile solo tramite la finestra di dialogo \"Modifica: Macro\", console "
-"Rails e API.)"
-
-#: ../manage/macros/how-do-they-work.rst:47
-msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
-msgstr ""
-"Quali :doc:`/manage/groups/index` sono autorizzati a vedere/usare questa "
-"macro?"
-
-#: ../manage/macros/how-do-they-work.rst:50
-msgid "Choose \"inactive\" to disable this macro without deleting it."
-msgstr "Scegli \"inattivo\" per disabilitare questa macro senza eliminarla."
-
-#: ../manage/macros/how-do-they-work.rst:53
-msgid "Managing Macros"
+#: ../manage/macros.rst:19
+#, fuzzy
+#| msgid "Managing Macros"
+msgid "Manage Macros"
 msgstr "Gestione Macro"
 
-#: ../manage/macros/how-do-they-work.rst:55
+#: ../manage/macros.rst:21
+#, fuzzy
+#| msgid ""
+#| "Edit your macros by simply clicking on it. You can delete or even clone "
+#| "existing macros by clicking on the ︙ action menu and select the desired "
+#| "action:"
 msgid ""
-"Edit your macros by simply clicking on it. You can delete or even clone "
-"existing macros by clicking on the ︙ action menu and select the desired "
-"action:"
+"Edit your macros by clicking on it. You can delete or clone existing macros "
+"by using the ︙ action menu. When cloning a macro, make sure to click "
+"``Submit`` for the duplicate to be created."
 msgstr ""
 "Modifica le tue macro semplicemente facendo clic su di esse. Puoi eliminare "
 "o persino clonare macro esistenti facendo clic sul menu azioni ︙ e "
 "selezionando l'azione desiderata:"
 
-#: ../manage/macros/how-do-they-work.rst:None
+#: ../manage/macros.rst:None
 msgid "Screenshot showing the macro action menu"
 msgstr "Screenshot che mostra il menu azioni macro"
 
-#: ../manage/macros/how-do-they-work.rst:63
+#: ../manage/macros.rst:33
+#, fuzzy
+#| msgid ""
+#| "Macros are made up of **actions** (changes to a ticket). You can add as "
+#| "many actions to a macro as you want."
 msgid ""
-"When cloning a macro, make sure to click \"Submit\" for the duplicate to be "
-"created."
+"Macros are a collection of actions (changes to a ticket). You can add as "
+"many actions to a macro as you want. The configuration is the same, whether "
+"you're creating a new macro or editing an existing one."
 msgstr ""
-"Quando cloni una macro, assicurati di fare clic su \"Invia\" affinché il "
-"duplicato venga creato."
+"Le macro sono composte da **azioni** (modifiche a un ticket). Puoi "
+"aggiungere quante azioni desideri a una macro."
 
-#: ../manage/macros/learn-by-example.rst:2
-msgid "Macro Example"
-msgstr "Esempio Macro"
+#: ../manage/macros.rst:None
+msgid "Screenshot showing different possible actions for macros."
+msgstr "Screenshot che mostra diverse azioni possibili per le macro."
 
-#: ../manage/macros/learn-by-example.rst:4
+#: ../manage/macros.rst:56 ../manage/templates.rst:28
+msgid "Actions"
+msgstr "Azioni"
+
+#: ../manage/macros.rst:43
+msgid "You can create actions to:"
+msgstr "Puoi creare azioni per:"
+
+#: ../manage/macros.rst:45
+#, fuzzy
+#| msgid "set ticket attributes (priority, state, group, etc.)"
+msgid "Set ticket attributes (priority, state, group, etc.)"
+msgstr "impostare attributi del ticket (priorità, stato, gruppo, ecc.)"
+
+#: ../manage/macros.rst:46
+#, fuzzy
+#| msgid "add new notes to a ticket"
+msgid "Add new notes to a ticket"
+msgstr "aggiungere nuove note a un ticket"
+
+#: ../manage/macros.rst:47
+#, fuzzy
+#| msgid "Service notification"
+msgid "Send a notification"
+msgstr "Notifica servizio"
+
+#: ../manage/macros.rst:48
+#, fuzzy
+#| msgid "run an :doc:`AI agent </ai/ai-agents>`"
+msgid "Run an :doc:`AI agent </ai/ai-agents>`"
+msgstr "eseguire un :doc:`agente IA </ai/ai-agents>`"
+
+#: ../manage/macros.rst:50
+#, fuzzy
+#| msgid "sending a reply to the customer"
+msgid "There are **no** actions for sending a reply to the customer."
+msgstr "inviare una risposta al cliente"
+
+#: ../manage/macros.rst:52
+#, fuzzy
+#| msgid ""
+#| "Unlike triggers, the scheduler, and text modules, macro actions do "
+#| "**not** support the use of :doc:`/misc/variables`."
 msgid ""
-"To get you up and running quickly, here are some examples of the kinds of "
-"one-click actions you can set up using macros."
+"Unlike triggers, the scheduler, and text modules, macro actions do not "
+"support the use of :doc:`variables </misc/variables>`."
 msgstr ""
-"Per metterti subito in grado di operare, ecco alcuni esempi dei tipi di "
-"azioni con un clic che puoi configurare utilizzando le macro."
+"A differenza di trigger, scheduler e moduli di testo, le azioni delle macro "
+"**non** supportano l'uso di :doc:`/misc/variables`."
 
-#: ../manage/macros/learn-by-example.rst:7
+#: ../manage/macros.rst:55
+#, fuzzy
+#| msgid ""
+#| "If the ticket is missing a required attribute and the macro doesn't set "
+#| "it, then **no actions will be applied**."
 msgid ""
-"To learn about macros in detail, go to the section :doc:`/manage/macros/how-"
-"do-they-work`."
+"If the ticket is missing a required attribute and the macro doesn't set it, "
+"then no actions will be applied."
 msgstr ""
-"Per saperne di più sulle macro in dettaglio, vai alla sezione :doc:`/manage/"
-"macros/how-do-they-work`."
+"Se al ticket manca un attributo richiesto e la macro non lo imposta, allora "
+"**nessuna azione verrà applicata**."
 
-#: ../manage/macros/learn-by-example.rst:10
+#: ../manage/macros.rst:61
+#, fuzzy
+#| msgid "Once completed..."
+msgid "Once completed"
+msgstr "Una volta completato..."
+
+#: ../manage/macros.rst:59
+#, fuzzy
+#| msgid ""
+#| "After running this macro, should Zammad remain on the current tab, close "
+#| "it, or automatically switch to the next ticket? (Does not apply when "
+#| "running macros \"in bulk\".)"
 msgid ""
-"If you deal with a lot of spam, you could set up a macro that applies the "
+"After running this macro, should Zammad remain on the current tab, close it "
+"or automatically switch to the next ticket? This does not apply when "
+"executing macros in bulk."
+msgstr ""
+"Dopo aver eseguito questa macro, Zammad dovrebbe rimanere sulla scheda "
+"corrente, chiuderla o passare automaticamente al ticket successivo? (Non si "
+"applica quando si eseguono macro \"in blocco\".)"
+
+#: ../manage/macros.rst:64
+#, fuzzy
+#| msgid ""
+#| "What should other Zammad admins know about this macro? (Visible only via "
+#| "the \"Edit: Macro\" dialog, Rails console, and API.)"
+msgid ""
+"What should other Zammad admins know about this macro? Only visible for "
+"admins."
+msgstr ""
+"Cosa dovrebbero sapere gli altri amministratori Zammad su questa macro? "
+"(Visibile solo tramite la finestra di dialogo \"Modifica: Macro\", console "
+"Rails e API.)"
+
+#: ../manage/macros.rst:68
+#, fuzzy
+#| msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
+msgid ""
+"Which :doc:`groups </manage/groups/index>` are allowed to use this macro?"
+msgstr ""
+"Quali :doc:`/manage/groups/index` sono autorizzati a vedere/usare questa "
+"macro?"
+
+#: ../manage/macros.rst:71
+#, fuzzy
+#| msgid "Choose \"inactive\" to disable this macro without deleting it."
+msgid "Choose **inactive** to disable this macro without deleting it."
+msgstr "Scegli \"inattivo\" per disabilitare questa macro senza eliminarla."
+
+#: ../manage/macros.rst:76
+msgid "Find examples of useful macros below."
+msgstr ""
+
+#: ../manage/macros.rst:79
+msgid "Mark Ticket as Spam"
+msgstr ""
+
+#: ../manage/macros.rst:81
+#, fuzzy
+#| msgid ""
+#| "If you deal with a lot of spam, you could set up a macro that applies the "
+#| "following changes to a ticket:"
+msgid ""
+"If you deal with a lot of spam, you can set up a macro that applies the "
 "following changes to a ticket:"
 msgstr ""
 "Se hai a che fare con molto spam, potresti configurare una macro che applica "
 "le seguenti modifiche a un ticket:"
 
-#: ../manage/macros/learn-by-example.rst:0
-#: ../misc/object-conditions/basics.rst:172
-msgid "State"
-msgstr "Stato"
+#: ../manage/macros.rst:84
+#, fuzzy
+#| msgid "**State:** closed"
+msgid "**State:** ``closed``"
+msgstr "**Stato:** chiuso"
 
-#: ../manage/macros/learn-by-example.rst:13
-msgid "closed"
-msgstr "chiuso"
+#: ../manage/macros.rst:85
+#, fuzzy
+#| msgid "**Tag:** *add* ``spam``"
+msgid "**Tags:** add ``spam``"
+msgstr "**Tag:** *add* ``spam``"
 
-#: ../manage/macros/learn-by-example.rst:0 ../manage/tags.rst:2
-#: ../misc/object-conditions/basics.rst:190
-msgid "Tags"
-msgstr "Etichette"
-
-#: ../manage/macros/learn-by-example.rst:14
-msgid "add ``spam``"
-msgstr "aggiungi ``spam``"
-
-#: ../manage/macros/learn-by-example.rst:0
-#: ../misc/object-conditions/basics.rst:156
-msgid "Owner"
-msgstr "Proprietario"
-
-#: ../manage/macros/learn-by-example.rst:15
-#: ../manage/macros/learn-by-example.rst:33
-#: ../misc/object-conditions/basics.rst:95
-#: ../misc/object-conditions/basics.rst:161
-#: ../misc/object-conditions/basics.rst:187
-msgid "current user"
+#: ../manage/macros.rst:86 ../manage/macros.rst:107
+#, fuzzy
+#| msgid "current user"
+msgid "**Owner:** current user"
 msgstr "utente corrente"
 
-#: ../manage/macros/learn-by-example.rst:0
+#: ../manage/macros.rst:None
 msgid "Screenshot showing spam macro configuration"
 msgstr "Screenshot che mostra la configurazione della macro spam"
 
-#: ../manage/macros/learn-by-example.rst:22
+#: ../manage/macros.rst:93
+#, fuzzy
+#| msgid ""
+#| "💡 Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
+#| "unwanted tickets."
 msgid ""
-"💡 Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
+"Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
 "unwanted tickets."
 msgstr ""
 "💡 Esegui questa macro in uno :doc:`/manage/scheduler` per pulire "
 "periodicamente i ticket indesiderati."
 
-#: ../manage/macros/learn-by-example.rst:25
+#: ../manage/macros.rst:97
+msgid "Postpone Ticket for a Fixed Time"
+msgstr ""
+
+#: ../manage/macros.rst:99
+#, fuzzy
+#| msgid ""
+#| "If you want to set a ticket's state to *pending reminder*, it's usually a "
+#| "two-step process - first select the state, then select a date. To always "
+#| "set a reminder for the same, fixed amount of time (say, seven days "
+#| "later), you can bundle the whole change into a macro:"
 msgid ""
-"If you want to set a ticket's state to *pending reminder*, it's usually a "
-"two-step process - first select the state, then select a date. To always set "
-"a reminder for the same, fixed amount of time (say, seven days later), you "
-"can bundle the whole change into a macro:"
+"Setting a ticket's state to *pending reminder* normally requires two steps: "
+"first select the state, then select a date. You can bundle this into a macro "
+"to always set a reminder for the same fixed amount of time (for example, "
+"seven days later):"
 msgstr ""
 "Se vuoi impostare lo stato di un ticket su *in attesa di promemoria*, di "
 "solito è un processo in due fasi: prima seleziona lo stato, poi seleziona "
@@ -10937,23 +10943,26 @@ msgstr ""
 "fisso (ad esempio, sette giorni dopo), puoi raggruppare l'intera modifica in "
 "una macro:"
 
-#: ../manage/macros/learn-by-example.rst:30
-msgid "\"Postponing ticket for 7 days.\" (🔒 internal visibility only)"
+#: ../manage/macros.rst:104
+#, fuzzy
+#| msgid "\"Postponing ticket for 7 days.\" (🔒 internal visibility only)"
+msgid ""
+"**Note:** ``\"Postponing ticket for 7 days.\"`` (🔒 internal visibility only)"
 msgstr "\"Rimandare il ticket per 7 giorni.\" (🔒 visibilità interna solo)"
 
-#: ../manage/macros/learn-by-example.rst:31
-msgid "pending reminder"
+#: ../manage/macros.rst:105
+#, fuzzy
+#| msgid "pending reminder"
+msgid "**State:** ``pending reminder``"
 msgstr "in attesa di promemoria"
 
-#: ../manage/macros/learn-by-example.rst:0
-msgid "Pending Till"
-msgstr "In attesa fino a"
-
-#: ../manage/macros/learn-by-example.rst:32
-msgid "relative / 7 / days"
+#: ../manage/macros.rst:106
+#, fuzzy
+#| msgid "relative / 7 / days"
+msgid "**Pending Till:** ``relative / 7 / days``"
 msgstr "relativo / 7 / giorni"
 
-#: ../manage/macros/learn-by-example.rst:0
+#: ../manage/macros.rst:None
 msgid "Screenshot showing postpone macro configuration"
 msgstr "Screenshot che mostra la configurazione della macro di rinvio"
 
@@ -14130,6 +14139,10 @@ msgstr ""
 "impostazione predefinita, Zammad fornisce una panoramica che mostrerà tutti "
 "i ticket che sono escalati o in procinto di escalare entro i prossimi 10 "
 "minuti: ``Ticket Escalati``."
+
+#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:190
+msgid "Tags"
+msgstr "Etichette"
 
 #: ../manage/tags.rst:4
 msgid ""
@@ -19044,6 +19057,12 @@ msgstr "Controlla il cliente del ticket."
 msgid "has changed"
 msgstr "è cambiato"
 
+#: ../misc/object-conditions/basics.rst:95
+#: ../misc/object-conditions/basics.rst:161
+#: ../misc/object-conditions/basics.rst:187
+msgid "current user"
+msgstr "utente corrente"
+
 #: ../misc/object-conditions/basics.rst:96
 #: ../misc/object-conditions/basics.rst:162
 #: ../misc/object-conditions/basics.rst:188
@@ -19157,6 +19176,10 @@ msgstr "organizzazione utente corrente"
 msgid "specific organization"
 msgstr "organizzazione specifica"
 
+#: ../misc/object-conditions/basics.rst:156
+msgid "Owner"
+msgstr "Proprietario"
+
 #: ../misc/object-conditions/basics.rst:158
 msgid "Checks the owner."
 msgstr "Controlla il proprietario."
@@ -19173,6 +19196,10 @@ msgstr "Mittente"
 #: ../misc/object-conditions/basics.rst:166
 msgid "Checks the type of sender."
 msgstr "Controlla il tipo di mittente."
+
+#: ../misc/object-conditions/basics.rst:172
+msgid "State"
+msgstr "Stato"
 
 #: ../misc/object-conditions/basics.rst:174
 msgid "Checks ticket state."
@@ -31969,11 +31996,11 @@ msgstr ""
 "In particolare una sincronizzazione LDAP può causare molte voci di log. "
 "L'interfaccia web limiterà sempre il numero di voci mostrate alle ultime 50."
 
-#: ../system/integrations/pgp/index.rst:2
+#: ../system/integrations/pgp.rst:2
 msgid "PGP"
 msgstr "PGP"
 
-#: ../system/integrations/pgp/index.rst:7
+#: ../system/integrations/pgp.rst:4
 #, fuzzy
 #| msgid ""
 #| "Pretty Good Privacy (PGP) is another method for secure email "
@@ -31981,68 +32008,67 @@ msgstr "PGP"
 #| "messages with others."
 msgid ""
 "Pretty Good Privacy (PGP) is one method for secure email communication in "
-"Zammad (in addition to :doc:`../smime/index`). It allows you to exchange "
-"**signed** and **encrypted** messages with others."
+"Zammad (in addition to :doc:`smime`). It allows you to exchange **signed** "
+"and **encrypted** messages with others."
 msgstr ""
 "Pretty Good Privacy (PGP) è un altro metodo per la comunicazione email "
 "sicura. Con PGP, puoi scambiare messaggi **firmati** e **crittografati** con "
 "altri."
 
-#: ../system/integrations/pgp/index.rst:14
-#: ../system/integrations/smime/index.rst:19
+#: ../system/integrations/pgp.rst:10 ../system/integrations/smime.rst:12
 msgid "Signing"
 msgstr "Firma"
 
-#: ../system/integrations/pgp/index.rst:12
-msgid "is a proof that a message hasn't been manipulated on its way."
-msgstr "è una prova che un messaggio non è stato manipolato in transito."
-
-#: ../system/integrations/pgp/index.rst:14
+#: ../system/integrations/pgp.rst:9
+#, fuzzy
+#| msgid ""
+#| "In other words, it guarantees message **integrity** and **authenticity**."
 msgid ""
-"In other words, it guarantees message **integrity** and **authenticity**."
+"is proof that a message hasn't been manipulated on its way. In other words, "
+"it guarantees message **integrity** and **authenticity**."
 msgstr ""
 "In altre parole, garantisce l'**integrità** e l'**autenticità** del "
 "messaggio."
 
-#: ../system/integrations/pgp/index.rst:20
-#: ../system/integrations/smime/index.rst:24
+#: ../system/integrations/pgp.rst:15 ../system/integrations/smime.rst:16
 msgid "Encryption"
 msgstr "Cifratura"
 
-#: ../system/integrations/pgp/index.rst:17
-#: ../system/integrations/smime/index.rst:22
+#: ../system/integrations/pgp.rst:13
+#, fuzzy
+#| msgid ""
+#| "scrambles a message so that it can only be unscrambled by the intended "
+#| "recipient."
 msgid ""
 "scrambles a message so that it can only be unscrambled by the intended "
-"recipient."
+"recipient. In other words, it guarantees message **privacy** and **data "
+"security**."
 msgstr ""
 "mescola un messaggio in modo che possa essere decifrato solo dal "
 "destinatario previsto."
 
-#: ../system/integrations/pgp/index.rst:20
-msgid ""
-"In other words, it guarantees message **privacy** and **data security**."
-msgstr ""
-"In altre parole, garantisce la **riservatezza** del messaggio e la "
-"**sicurezza dei dati**."
-
-#: ../system/integrations/pgp/index.rst:26
+#: ../system/integrations/pgp.rst:21
 msgid "Screenshot of ticket creation with encrypt and sign buttons"
 msgstr ""
 "Screenshot della creazione di un ticket con pulsanti crittografa e firma"
 
-#: ../system/integrations/pgp/index.rst:26
+#: ../system/integrations/pgp.rst:21
+#, fuzzy
+#| msgid ""
+#| "Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will "
+#| "appear in the ticket composer."
 msgid ""
-"Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will "
-"appear in the ticket composer."
+"Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will appear for "
+"outgoing email drafts."
 msgstr ""
 "Una volta abilitato PGP, i pulsanti 🔒 ``Crittografa`` e ✅ ``Firma`` "
 "appariranno nel compositore di ticket."
 
-#: ../system/integrations/pgp/index.rst:29
+#: ../system/integrations/pgp.rst:24
 msgid "**Sign button not visible?**"
 msgstr "**Pulsante Firma non visibile?**"
 
-#: ../system/integrations/pgp/index.rst:31
+#: ../system/integrations/pgp.rst:26
 msgid ""
 "Please note that the signing of emails is based on the outgoing email "
 "account. That means you have to choose a group with a sender email account, "
@@ -32052,32 +32078,31 @@ msgstr ""
 "uscita. Ciò significa che devi scegliere un gruppo con un account email del "
 "mittente, a cui è assegnata una chiave privata."
 
-#: ../system/integrations/pgp/index.rst:36
+#: ../system/integrations/pgp.rst:31
 msgid "Handling of Keys"
 msgstr "Gestione delle chiavi"
 
-#: ../system/integrations/pgp/index.rst:38
+#: ../system/integrations/pgp.rst:33
+#, fuzzy
+#| msgid ""
+#| "You can add keys by clicking the ``Add Key`` button. The keys can be "
+#| "imported from a file or you can paste the content of the key in the text "
+#| "box."
 msgid ""
 "To use the PGP function, you have to enable the integration (PGP) by "
-"switching the toggle to **enabled**."
-msgstr ""
-"Per utilizzare la funzione PGP, devi abilitare l'integrazione (PGP) "
-"spostando l'interruttore su **abilitato**."
-
-#: ../system/integrations/pgp/index.rst:41
-msgid ""
-"You can add keys by clicking the ``Add Key`` button. The keys can be "
-"imported from a file or you can paste the content of the key in the text box."
+"switching the toggle to **enabled**. You can add keys by clicking the ``Add "
+"Key`` button. The keys can be imported from a file or you can paste the "
+"content of the key in the text box."
 msgstr ""
 "Puoi aggiungere chiavi facendo clic sul pulsante ``aggiungi chiave``. Le "
 "chiavi possono essere importate da un file o puoi incollare il contenuto "
 "della chiave nella casella di testo."
 
-#: ../system/integrations/pgp/index.rst:44
+#: ../system/integrations/pgp.rst:38
 msgid "**Which keys do I have to import?**"
 msgstr "**Quali chiavi devo importare?**"
 
-#: ../system/integrations/pgp/index.rst:46
+#: ../system/integrations/pgp.rst:40
 msgid ""
 "For **signing** *outgoing* emails, you have to import the private key of "
 "your Zammad email account."
@@ -32085,7 +32110,7 @@ msgstr ""
 "Per **firmare** le email *in uscita*, devi importare la chiave privata del "
 "tuo account email Zammad."
 
-#: ../system/integrations/pgp/index.rst:49
+#: ../system/integrations/pgp.rst:43
 msgid ""
 "For **encrypting** *outgoing* emails, you have to import the public key of "
 "the customer's email account."
@@ -32093,7 +32118,7 @@ msgstr ""
 "Per **crittografare** le email *in uscita*, devi importare la chiave "
 "pubblica dell'account email del cliente."
 
-#: ../system/integrations/pgp/index.rst:52
+#: ../system/integrations/pgp.rst:46
 msgid ""
 "For **verifying the signature** of signed *incoming* emails, you have to "
 "import the public key of the customer."
@@ -32101,7 +32126,7 @@ msgstr ""
 "Per **verificare la firma** delle email *in entrata* firmate, devi importare "
 "la chiave pubblica del cliente."
 
-#: ../system/integrations/pgp/index.rst:55
+#: ../system/integrations/pgp.rst:49
 msgid ""
 "For **decrypting** of encrypted *incoming* emails, you have to import the "
 "private key of your Zammad email account."
@@ -32109,21 +32134,21 @@ msgstr ""
 "Per **decifrare** le email *in entrata* crittografate, devi importare la "
 "chiave privata del tuo account email Zammad."
 
-#: ../system/integrations/pgp/index.rst:59
+#: ../system/integrations/pgp.rst:53
 msgid "Import Keys From a File"
 msgstr "Importa chiavi da un file"
 
-#: ../system/integrations/pgp/index.rst:61
+#: ../system/integrations/pgp.rst:55
 #, fuzzy
 #| msgid "You can import keys from a file in the section **Upload key**:"
 msgid "You can import keys from a file in the **Upload key** section:"
 msgstr "Puoi importare chiavi da un file nella sezione **Carica chiave**:"
 
-#: ../system/integrations/pgp/index.rst:None
+#: ../system/integrations/pgp.rst:None
 msgid "Screenshot of adding a key via file"
 msgstr "Screenshot dell'aggiunta di una chiave tramite file"
 
-#: ../system/integrations/pgp/index.rst:67
+#: ../system/integrations/pgp.rst:61
 msgid ""
 "**Supported file formats:** ASCII-armor as well as binary GPG format "
 "(basically any GPG supported key format) is supported here."
@@ -32132,11 +32157,11 @@ msgstr ""
 "formato binario GPG (praticamente qualsiasi formato di chiave supportato da "
 "GPG)."
 
-#: ../system/integrations/pgp/index.rst:71
+#: ../system/integrations/pgp.rst:65
 msgid "Import Keys by Pasting the Content"
 msgstr "Importa chiavi incollando il contenuto"
 
-#: ../system/integrations/pgp/index.rst:73
+#: ../system/integrations/pgp.rst:67
 #, fuzzy
 #| msgid "You can also paste the key's content in the section **paste key**:"
 msgid "You can also paste the key's content in the **Paste key** section:"
@@ -32144,22 +32169,22 @@ msgstr ""
 "Puoi anche incollare il contenuto della chiave nella sezione **incolla "
 "chiave**:"
 
-#: ../system/integrations/pgp/index.rst:None
+#: ../system/integrations/pgp.rst:None
 msgid "Screenshot of adding a key via pasting"
 msgstr "Screenshot dell'aggiunta di una chiave tramite incolla"
 
-#: ../system/integrations/pgp/index.rst:79
+#: ../system/integrations/pgp.rst:73
 msgid ""
 "**Supported format:** Please note that only ASCII-armor is supported here."
 msgstr ""
 "**Formato supportato:** Si prega di notare che qui è supportato solo ASCII-"
 "armor."
 
-#: ../system/integrations/pgp/index.rst:82
+#: ../system/integrations/pgp.rst:76
 msgid "Deleting Keys"
 msgstr "Eliminazione chiavi"
 
-#: ../system/integrations/pgp/index.rst:84
+#: ../system/integrations/pgp.rst:78
 msgid ""
 "If you want to delete a specific key, you can do it by clicking on the menu "
 "in the **actions** column and select **delete**:"
@@ -32167,15 +32192,15 @@ msgstr ""
 "Se desideri eliminare una chiave specifica, puoi farlo facendo clic sul menu "
 "nella colonna **azioni ** e selezionando **elimina**:"
 
-#: ../system/integrations/pgp/index.rst:None
+#: ../system/integrations/pgp.rst:None
 msgid "Screenshot of deleting a key"
 msgstr "Screenshot dell'eliminazione di una chiave"
 
-#: ../system/integrations/pgp/index.rst:92
+#: ../system/integrations/pgp.rst:86
 msgid "Downloading Keys"
 msgstr "Download chiavi"
 
-#: ../system/integrations/pgp/index.rst:94
+#: ../system/integrations/pgp.rst:88
 #, fuzzy
 #| msgid ""
 #| "If you want to download your keys, you can do this as well via "
@@ -32190,44 +32215,56 @@ msgstr ""
 "pulsanti di azione. A seconda della chiave, puoi scegliere se desideri "
 "scaricare la chiave privata o quella pubblica."
 
-#: ../system/integrations/pgp/index.rst:99
-#: ../system/integrations/smime/manage-certificates.rst:76
+#: ../system/integrations/pgp.rst:93 ../system/integrations/smime.rst:117
 msgid "Default Behavior"
 msgstr "Comportamento predefinito"
 
-#: ../system/integrations/pgp/index.rst:101
+#: ../system/integrations/pgp.rst:95
+#, fuzzy
+#| msgid ""
+#| "Here, you can adjust on per group basis, if **sign** and **encryption** "
+#| "is on or off by default. Please be aware, that agents can always override "
+#| "the setting for each individual article."
 msgid ""
 "Here, you can adjust on per group basis, if **sign** and **encryption** is "
 "on or off by default. Please be aware, that agents can always override the "
-"setting for each individual article."
+"setting for each individual email."
 msgstr ""
 "Qui, puoi regolare su base per gruppo, se **firma ** e **crittografia ** "
 "sono attive o disattive per impostazione predefinita. Si prega di notare che "
 "gli agenti possono sempre sovrascrivere l'impostazione per ogni singolo "
 "articolo."
 
-#: ../system/integrations/pgp/index.rst:None
+#: ../system/integrations/pgp.rst:None
 msgid "Adjusting default behavior on per group basis"
 msgstr "Regolazione del comportamento predefinito su base per gruppo"
 
-#: ../system/integrations/pgp/index.rst:112
+#: ../system/integrations/pgp.rst:106
+#, fuzzy
+#| msgid ""
+#| "Logs report the status and details of all mail, both incoming and "
+#| "outgoing, that used signing/verification or encryption/decryption."
 msgid ""
-"Here you can see the last actions regarding signing and encryption and if "
-"they were successful."
+"All of the system's latest PGP activity is displayed in the **Recent Logs** "
+"section. The logs contain the status and details of all emails (both "
+"incoming and outgoing), that used signing/verification or encryption/"
+"decryption."
 msgstr ""
-"Qui puoi vedere le ultime azioni relative a firma e crittografia e se hanno "
-"avuto successo."
+"I log riportano lo stato e i dettagli di tutte le email, sia in entrata che "
+"in uscita, che hanno utilizzato firma/verifica o crittografia/decifratura."
 
-#: ../system/integrations/pgp/index.rst:121
-msgid "**Sign button is not visible, but keys are imported.**"
+#: ../system/integrations/pgp.rst:113
+#, fuzzy
+#| msgid "**Sign button is not visible, but keys are imported.**"
+msgid "Sign button is not visible, but keys are imported."
 msgstr ""
 "**Il pulsante Firma non è visibile, ma le chiavi sono state importate.**"
 
-#: ../system/integrations/pgp/index.rst:119
+#: ../system/integrations/pgp.rst:111
 msgid "Did you choose a group in the ticket?"
 msgstr "Hai scelto un gruppo nel ticket?"
 
-#: ../system/integrations/pgp/index.rst:120
+#: ../system/integrations/pgp.rst:112
 msgid ""
 "Did you import a private key for the email address, which is used for "
 "outgoing emails in the group?"
@@ -32235,11 +32272,13 @@ msgstr ""
 "Hai importato una chiave privata per l'indirizzo email, che viene utilizzato "
 "per le email in uscita nel gruppo?"
 
-#: ../system/integrations/pgp/index.rst:126
-msgid "**How to obtain keys?**"
+#: ../system/integrations/pgp.rst:118
+#, fuzzy
+#| msgid "**How to obtain keys?**"
+msgid "How to obtain keys?"
 msgstr "**Come ottenere le chiavi?**"
 
-#: ../system/integrations/pgp/index.rst:124
+#: ../system/integrations/pgp.rst:116
 msgid ""
 "You can create them yourself! There are some good tutorials on the web on "
 "how to create them. Providing keys to Zammad is a prerequisite to use the "
@@ -32249,11 +32288,13 @@ msgstr ""
 "Fornire le chiavi a Zammad è un prerequisito per utilizzare la funzionalità "
 "PGP."
 
-#: ../system/integrations/pgp/index.rst:131
-msgid "**It says a passphrase is needed, but I haven't got one.**"
+#: ../system/integrations/pgp.rst:123
+#, fuzzy
+#| msgid "**It says a passphrase is needed, but I haven't got one.**"
+msgid "It says a passphrase is needed, but I haven't got one."
 msgstr "**Dice che è necessaria una passphrase, ma non ne ho una.**"
 
-#: ../system/integrations/pgp/index.rst:129
+#: ../system/integrations/pgp.rst:121
 msgid ""
 "If the key is secured with a passphrase, you have to provide it for the "
 "import in Zammad. It is possible that keys may have an empty passphrase. "
@@ -32263,15 +32304,23 @@ msgstr ""
 "in Zammad. È possibile che le chiavi abbiano una passphrase vuota. Tuttavia, "
 "questo *non* è raccomandato."
 
-#: ../system/integrations/pgp/index.rst:136
-msgid "**How do my customers get my new key?**"
+#: ../system/integrations/pgp.rst:128
+#, fuzzy
+#| msgid "**How do my customers get my new key?**"
+msgid "How do my customers get my new key?"
 msgstr "**Come fanno i miei clienti a ottenere la mia nuova chiave?**"
 
-#: ../system/integrations/pgp/index.rst:134
+#: ../system/integrations/pgp.rst:126
+#, fuzzy
+#| msgid ""
+#| "You have to provide your **public** key in advance. Your customer also "
+#| "has to configure PGP in their email workflow and import your public key. "
+#| "The other way round, you have to get the public key of your customer and "
+#| "have to import it to Zammad."
 msgid ""
-"You have to provide your **public** key in advance. Your customer also has "
-"to configure PGP in their email workflow and import your public key. The "
-"other way round, you have to get the public key of your customer and have to "
+"You have to provide your *public* key in advance. Your customer also has to "
+"configure PGP in their email workflow and import your public key. The other "
+"way round, you have to get the public key of your customer and have to "
 "import it to Zammad."
 msgstr ""
 "Devi fornire la tua chiave **pubblica** in anticipo. Anche il tuo cliente "
@@ -32279,11 +32328,11 @@ msgstr ""
 "chiave pubblica. Viceversa, devi ottenere la chiave pubblica del tuo cliente "
 "e importarla in Zammad."
 
-#: ../system/integrations/smime/index.rst:2
+#: ../system/integrations/smime.rst:2
 msgid "S/MIME"
 msgstr "S/MIME"
 
-#: ../system/integrations/smime/index.rst:11
+#: ../system/integrations/smime.rst:4
 #, fuzzy
 #| msgid ""
 #| "S/MIME is the most widely-supported method for secure email "
@@ -32291,321 +32340,99 @@ msgstr "S/MIME"
 #| "messages with others."
 msgid ""
 "S/MIME is one method for secure email communication in Zammad (in addition "
-"to :doc:`../pgp/index`). It is the most widely-supported method for secure "
-"email communication and allows you to exchange **signed** and **encrypted** "
+"to :doc:`pgp`). It is the most widely-supported method for secure email "
+"communication and allows you to exchange **signed** and **encrypted** "
 "messages with others."
 msgstr ""
 "S/MIME è il metodo più ampiamente supportato per la comunicazione email "
 "sicura. Con S/MIME, puoi scambiare messaggi **firmati** e **crittografati** "
 "con altri."
 
-#: ../system/integrations/smime/index.rst:17
+#: ../system/integrations/smime.rst:10
+#, fuzzy
+#| msgid ""
+#| "is proof that a message hasn't been tampered with or sent by an "
+#| "impersonator."
 msgid ""
-"is proof that a message hasn't been tampered with or sent by an impersonator."
+"is proof that a message hasn't been tampered with or sent by an "
+"impersonator. In other words, it guarantees the message **integrity** and "
+"**authenticity**."
 msgstr ""
 "è la prova che un messaggio non è stato manomesso o inviato da un impostore."
 
-#: ../system/integrations/smime/index.rst:19
-msgid ""
-"In other words, it guarantees a message's **integrity** and **authenticity**."
-msgstr ""
-"In altre parole, garantisce l'**integrità** e l'**autenticità** di un "
-"messaggio."
-
-#: ../system/integrations/smime/index.rst:24
-msgid "In other words, it guarantees **privacy** and **data security**."
-msgstr ""
-"In altre parole, garantisce la **riservatezza** e la **sicurezza dei dati**."
-
-#: ../system/integrations/smime/index.rst:30
-msgid "Screencast demo of S/MIME features for both new tickets and replies"
-msgstr ""
-"Demo screencast delle funzionalità S/MIME sia per nuovi ticket che per "
-"risposte"
-
-#: ../system/integrations/smime/index.rst:30
-msgid ""
-"Once S/MIME has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will "
-"appear in the ticket composer."
-msgstr ""
-"Una volta abilitato S/MIME, i pulsanti 🔒 ``Crittografa`` e ✅ ``Firma`` "
-"appariranno nel compositore di ticket."
-
-#: ../system/integrations/smime/index.rst:34
-msgid ":doc:`Prerequisites <prerequisites>`"
-msgstr ":doc:`Prerequisiti <prerequisites>`"
-
-#: ../system/integrations/smime/index.rst:33
-msgid ""
-"New to S/MIME? This section helps you to find certificate providers and "
-"points out Limitations."
-msgstr ""
-"Nuovo per S/MIME? Questa sezione ti aiuta a trovare fornitori di certificati "
-"e indica le limitazioni."
-
-#: ../system/integrations/smime/index.rst:37
-msgid ":doc:`Manage Certificates <manage-certificates>`"
-msgstr ":doc:`Gestisci Certificati <manage-certificates>`"
-
-#: ../system/integrations/smime/index.rst:37
-msgid "Add and download certificates; configure group default behaviors."
-msgstr ""
-"Aggiungi e scarica certificati; configura i comportamenti predefiniti dei "
-"gruppi."
-
-#: ../system/integrations/smime/index.rst:40
-msgid ":doc:`Troubleshooting <troubleshooting>`"
-msgstr ":doc:`Risoluzione problemi <troubleshooting>`"
-
-#: ../system/integrations/smime/index.rst:40
-msgid "Took a wrong turn? About recent logs and common issues."
-msgstr ""
-"Hai preso una strada sbagliata? Informazioni sui log recenti e problemi "
-"comuni."
-
-#: ../system/integrations/smime/index.rst:45
-msgid ""
-"For more details on how S/MIME integration works on the agent side, see "
-"the :user-docs:`user docs </extras/secure-email.html>`."
-msgstr ""
-"Per maggiori dettagli su come funziona l'integrazione S/MIME dal lato "
-"agente, vedi la :user-docs:`documentazione utente </extras/secure-"
-"email.html>`."
-
-#: ../system/integrations/smime/manage-certificates.rst:2
-msgid "Manage Certificates"
-msgstr "Gestisci Certificati"
-
-#: ../system/integrations/smime/manage-certificates.rst:4
-msgid ""
-"S/MIME is **disabled by default**. Enable it to start adding certificates."
-msgstr ""
-"S/MIME è **disabilitato per impostazione predefinita**. Abilitalo per "
-"iniziare ad aggiungere certificati."
-
-#: ../system/integrations/smime/manage-certificates.rst:10
-msgid "dialog to add new certificates or private keys"
-msgstr "finestra di dialogo per aggiungere nuovi certificati o chiavi private"
-
-#: ../system/integrations/smime/manage-certificates.rst:10
+#: ../system/integrations/smime.rst:15
 #, fuzzy
 #| msgid ""
-#| "Manage certificates in the Admin Panel under **System > Integrations > S/"
-#| "MIME**. Certificates may be pasted in as plain text or uploaded from a "
-#| "file."
+#| "scrambles a message so that it can only be unscrambled by the intended "
+#| "recipient."
 msgid ""
-"Manage certificates in the admin settings under *System > Integrations > S/"
-"MIME*. Certificates may be pasted in as plain text or uploaded from a file."
+"scrambles a message so that it can only be unscrambled by the intended "
+"recipient. In other words, it guarantees **privacy** and **data security**."
 msgstr ""
-"Gestisci i certificati nel Pannello di Amministrazione sotto **Sistema > "
-"Integrazioni > S/MIME**. I certificati possono essere incollati come testo "
-"semplice o caricati da un file."
+"mescola un messaggio in modo che possa essere decifrato solo dal "
+"destinatario previsto."
 
-#: ../system/integrations/smime/manage-certificates.rst:14
-msgid "Add Certificate Data"
-msgstr "Aggiungi dati certificato"
-
-#: ../system/integrations/smime/manage-certificates.rst:36
-msgid "Add Certificate"
-msgstr "Aggiungi Certificato"
-
-#: ../system/integrations/smime/manage-certificates.rst:17
+#: ../system/integrations/smime.rst:18
 msgid ""
-"Import public-key certificates for both your own organization and your "
-"contacts."
+"Once S/MIME has been enabled via the toggle at the top, ``Encrypt`` and "
+"``Sign`` buttons will appear in the ticket detail view when creating an "
+"email-based article. For more details about how S/MIME works on the agent "
+"side, read the :user-docs:`secure email section </extras/secure-email.html>` "
+"in the user documentation."
 msgstr ""
-"Importa certificati a chiave pubblica sia per la tua organizzazione che per "
-"i tuoi contatti."
 
-#: ../system/integrations/smime/manage-certificates.rst:19
+#: ../system/integrations/smime.rst:27
+#, fuzzy
+#| msgid ""
+#| "A certificate *and* private key for your own organization to **sign "
+#| "outgoing messages** and **decrypt incoming messages**."
 msgid ""
-"You can also add a bunch of certificates in one go by providing a single "
-"file with all relevant certificates."
-msgstr ""
-"Puoi anche aggiungere un gruppo di certificati in una sola volta fornendo un "
-"singolo file con tutti i certificati pertinenti."
-
-#: ../system/integrations/smime/manage-certificates.rst:22
-msgid "🕵️ **ALWAYS verify certificates in-person or over the phone!**"
-msgstr "🕵️ **VERIFICA SEMPRE i certificati di persona o al telefono!**"
-
-#: ../system/integrations/smime/manage-certificates.rst:24
-msgid ""
-"The whole point of signatures is to alert you when someone is trying to "
-"pretend to be someone they're not. Never accept a certificate from someone "
-"online without verifying it first."
-msgstr ""
-"L'intero scopo delle firme è avvisarti quando qualcuno sta cercando di "
-"fingersi qualcun altro. Non accettare mai un certificato da qualcuno online "
-"senza averlo verificato prima."
-
-#: ../system/integrations/smime/manage-certificates.rst:28
-msgid "📇 **What about trusted certificate authorities?**"
-msgstr ""
-"📇 **E per quanto riguarda le autorità di certificazione attendibili?**"
-
-#: ../system/integrations/smime/manage-certificates.rst:30
-msgid ""
-"In some cases (e.g. when dealing with large enterprises), you may be given a "
-"certificate for an entire CA, rather than a single contact. Add it here to "
-"trust *all* certificates issued by that CA."
-msgstr ""
-"In alcuni casi (ad esempio, quando si ha a che fare con grandi imprese), "
-"potresti ricevere un certificato per un'intera CA, piuttosto che per un "
-"singolo contatto. Aggiungilo qui per fidarti di *tutti* i certificati emessi "
-"da quella CA."
-
-#: ../system/integrations/smime/manage-certificates.rst:35
-msgid ""
-"Commercial CAs can usually be verified online. Zammad does not include a "
-"list of built-in, trusted CAs."
-msgstr ""
-"Le CA commerciali possono solitamente essere verificate online. Zammad non "
-"include un elenco di CA attendibili integrate."
-
-#: ../system/integrations/smime/manage-certificates.rst:57
-msgid "Add Private Key"
-msgstr "Aggiungi Chiave Privata"
-
-#: ../system/integrations/smime/manage-certificates.rst:39
-msgid ""
-"Once you've added a public-key certificate, you can import its matching "
-"private key."
-msgstr ""
-"Una volta aggiunto un certificato a chiave pubblica, puoi importare la sua "
-"chiave privata corrispondente."
-
-#: ../system/integrations/smime/manage-certificates.rst:42
-msgid ""
-"Private keys are for **your own organization only**; never ask your contacts "
-"for their private keys."
-msgstr ""
-"Le chiavi private sono **solo per la tua organizzazione**; non chiedere mai "
-"ai tuoi contatti le loro chiavi private."
-
-#: ../system/integrations/smime/manage-certificates.rst:0
-msgid ""
-"S/MIME integration showing configured certificates and possible issues with "
-"Logging"
-msgstr ""
-"Integrazione S/MIME che mostra certificati configurati e possibili problemi "
-"con il Logging"
-
-#: ../system/integrations/smime/manage-certificates.rst:50
-msgid ""
-"A note is displayed on certificates with a matching private key (see line 2)."
-msgstr ""
-"Viene visualizzata una nota sui certificati con una chiave privata "
-"corrispondente (vedi riga 2)."
-
-#: ../system/integrations/smime/manage-certificates.rst:52
-msgid "📤 **Certificates and private keys must be uploaded separately.**"
-msgstr ""
-"📤 **Certificati e chiavi private devono essere caricati separatamente.**"
-
-#: ../system/integrations/smime/manage-certificates.rst:54
-msgid ""
-"If your certificate and private key are bundled together in the same file or "
-"PEM block, import it twice (once using each button)."
-msgstr ""
-"Se il tuo certificato e la tua chiave privata sono raggruppati nello stesso "
-"file o blocco PEM, importalo due volte (una volta utilizzando ciascun "
-"pulsante)."
-
-#: ../system/integrations/smime/manage-certificates.rst:57
-msgid "Please note that bulk imports of private keys are not possible."
-msgstr ""
-"Si prega di notare che le importazioni massive di chiavi private non sono "
-"possibili."
-
-#: ../system/integrations/smime/manage-certificates.rst:60
-msgid "Download Certificate Data"
-msgstr "Scarica dati certificato"
-
-#: ../system/integrations/smime/manage-certificates.rst:62
-msgid ""
-"You can download the earlier provided certificates and private keys at any "
-"time from your Zammad instance."
-msgstr ""
-"Puoi scaricare i certificati e le chiavi private forniti in precedenza in "
-"qualsiasi momento dalla tua istanza Zammad."
-
-#: ../system/integrations/smime/manage-certificates.rst:65
-msgid ""
-"Please note that passphrase-protected private keys stay protected and when "
-"you download them, you have to know the passphrase to use them after "
-"downloading."
-msgstr ""
-"Si prega di notare che le chiavi private protette da passphrase rimangono "
-"protette e quando le scarichi, devi conoscere la passphrase per usarle dopo "
-"il download."
-
-#: ../system/integrations/smime/manage-certificates.rst:73
-msgid "dialog to download certificates or private keys"
-msgstr "finestra di dialogo per scaricare certificati o chiavi private"
-
-#: ../system/integrations/smime/manage-certificates.rst:73
-msgid "Download stored certificates and their keys"
-msgstr "Scarica certificati memorizzati e le loro chiavi"
-
-#: ../system/integrations/smime/manage-certificates.rst:78
-msgid ""
-"The ticket composer will set all outgoing messages to **signed and "
-"encrypted** by default (assuming the required certificates exist)."
-msgstr ""
-"Il compositore di ticket imposterà tutti i messaggi in uscita come **firmati "
-"e crittografati** per impostazione predefinita (supponendo che i certificati "
-"richiesti esistano)."
-
-#: ../system/integrations/smime/manage-certificates.rst:82
-msgid "These defaults can be modified on a per-group basis:"
-msgstr ""
-"Queste impostazioni predefinite possono essere modificate su base per gruppo:"
-
-#: ../system/integrations/smime/manage-certificates.rst:None
-msgid "Zammad allowing to choose the default behavior on per group basis"
-msgstr ""
-"Zammad consente di scegliere il comportamento predefinito su base per gruppo"
-
-#: ../system/integrations/smime/manage-certificates.rst:89
-msgid ""
-"Of course, agents can always manually change these settings on each email "
-"they send out."
-msgstr ""
-"Naturalmente, gli agenti possono sempre modificare manualmente queste "
-"impostazioni per ogni email che inviano."
-
-#: ../system/integrations/smime/prerequisites.rst:4
-msgid ""
-"A certificate *and* private key for your own organization to **sign outgoing "
-"messages** and **decrypt incoming messages**."
+"A certificate and private key for your own organization to sign outgoing "
+"messages and decrypt incoming messages."
 msgstr ""
 "Un certificato *e* una chiave privata per la tua organizzazione per "
 "**firmare i messaggi in uscita** e **decifrare i messaggi in entrata**."
 
-#: ../system/integrations/smime/prerequisites.rst:7
+#: ../system/integrations/smime.rst:29
+#, fuzzy
+#| msgid ""
+#| "Certificates belonging your contacts, or their issuing certificate "
+#| "authority (CA) to **verify incoming message signatures** and **encrypt "
+#| "outgoing messages**."
 msgid ""
-"Certificates belonging your contacts, or their issuing certificate authority "
-"(CA) to **verify incoming message signatures** and **encrypt outgoing "
-"messages**."
+"Certificates belonging to your contacts or their issuing certificate "
+"authority (CA) to verify incoming message signatures and encrypt outgoing "
+"messages."
 msgstr ""
 "Certificati appartenenti ai tuoi contatti, o alla loro autorità di "
 "certificazione emittente (CA) per **verificare le firme dei messaggi in "
 "entrata** e **crittografare i messaggi in uscita**."
 
-#: ../system/integrations/smime/prerequisites.rst:11
-msgid "**Where can I get a certificate?**"
-msgstr "**Dove posso ottenere un certificato?**"
-
-#: ../system/integrations/smime/prerequisites.rst:13
+#: ../system/integrations/smime.rst:32
+#, fuzzy
+#| msgid ""
+#| "In general, the usage of any expired (``Not After``) or not yet valid "
+#| "(``Not Before``) certificate is denied for outgoing emails."
 msgid ""
-"The easiest way to get certificates is to buy an annual subscription through "
-"a commercial CA, such as:"
+"The usage of any expired (``Not After``) or not yet valid (``Not Before``) "
+"certificate is not allowed for outgoing emails."
+msgstr ""
+"In generale, l'uso di qualsiasi certificato scaduto (``Non dopo``) o non "
+"ancora valido (``Non prima``) è negato per le email in uscita."
+
+#: ../system/integrations/smime.rst:35
+#, fuzzy
+#| msgid ""
+#| "The easiest way to get certificates is to buy an annual subscription "
+#| "through a commercial CA, such as:"
+msgid ""
+"**Where to get a certificate?** The easiest way to get certificates is to "
+"buy an annual subscription through a commercial CA, such as:"
 msgstr ""
 "Il modo più semplice per ottenere certificati è acquistare un abbonamento "
 "annuale tramite una CA commerciale, come:"
 
-#: ../system/integrations/smime/prerequisites.rst:16
+#: ../system/integrations/smime.rst:38
 msgid ""
 "`Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-"
 "smime-certificate>`_"
@@ -32613,90 +32440,175 @@ msgstr ""
 "`Sectigo (precedentemente Comodo) <https://sectigo.com/signing-certificates/"
 "email-smime-certificate>`_"
 
-#: ../system/integrations/smime/prerequisites.rst:17
+#: ../system/integrations/smime.rst:39
 msgid "`Secorio <https://secorio.com/en/certificates/smime-email/>`_"
 msgstr "`Secorio <https://secorio.com/en/certificates/smime-email/>`_"
 
-#: ../system/integrations/smime/prerequisites.rst:18
+#: ../system/integrations/smime.rst:40
 msgid "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 msgstr "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 
-#: ../system/integrations/smime/prerequisites.rst:20
+#: ../system/integrations/smime.rst:42
+#, fuzzy
+#| msgid ""
+#| "You can also generate your own self-signed certificates, but the process "
+#| "is complicated and usually **involves extra work for your contacts**."
 msgid ""
 "You can also generate your own self-signed certificates, but the process is "
-"complicated and usually **involves extra work for your contacts**."
+"complicated and usually involves extra work for your contacts. Bear in mind "
+"that S/MIME only works if the other party is using it, too."
 msgstr ""
 "Puoi anche generare i tuoi certificati autofirmati, ma il processo è "
 "complicato e di solito **comporta lavoro aggiuntivo per i tuoi contatti**."
 
-#: ../system/integrations/smime/prerequisites.rst:23
-msgid ""
-"Bear in mind that **S/MIME only works if the other party is using it, too.**"
-msgstr ""
-"Tieni presente che **S/MIME funziona solo se anche l'altra parte lo "
-"utilizza.**"
-
-#: ../system/integrations/smime/prerequisites.rst:26
-msgid "Certificate and Private Key Checks on Upload"
+#: ../system/integrations/smime.rst:47
+#, fuzzy
+#| msgid "Certificate and Private Key Checks on Upload"
+msgid "Certificate and Key Handling"
 msgstr "Controlli certificato e chiave privata all'upload"
 
-#: ../system/integrations/smime/prerequisites.rst:28
+#: ../system/integrations/smime.rst:50
+#, fuzzy
+#| msgid "Add Certificate Data"
+msgid "Add Certificates and Keys"
+msgstr "Aggiungi dati certificato"
+
+#: ../system/integrations/smime.rst:52
+#, fuzzy
+#| msgid ""
+#| "If your certificate and private key are bundled together in the same file "
+#| "or PEM block, import it twice (once using each button)."
 msgid ""
-"The certificate and public key validation is based on the ``X509v3`` "
-"extensions."
+"When adding certificates and keys, Zammad validates them based on the "
+"``X509v3`` extensions. If your certificate and private key are bundled "
+"together in the same file or PEM block, import them twice (once using each "
+"button)."
 msgstr ""
-"La validazione del certificato e della chiave pubblica si basa sulle "
-"estensioni ``X509v3``."
+"Se il tuo certificato e la tua chiave privata sono raggruppati nello stesso "
+"file o blocco PEM, importalo due volte (una volta utilizzando ciascun "
+"pulsante)."
 
-#: ../system/integrations/smime/prerequisites.rst:44
-msgid "Uploading a **client certificate**?"
-msgstr "Caricamento di un **certificato client**?"
+#: ../system/integrations/smime.rst:65
+msgid "Add Certificate"
+msgstr "Aggiungi Certificato"
 
-#: ../system/integrations/smime/prerequisites.rst:32
-msgid "The following attributes are required then:"
+#: ../system/integrations/smime.rst:57
+#, fuzzy
+#| msgid ""
+#| "You can also add a bunch of certificates in one go by providing a single "
+#| "file with all relevant certificates."
+msgid ""
+"Import public-key certificates for both your own organization and your "
+"contacts. You can add a bunch of certificates all at once by providing a "
+"single file with all relevant certificates."
+msgstr ""
+"Puoi anche aggiungere un gruppo di certificati in una sola volta fornendo un "
+"singolo file con tutti i certificati pertinenti."
+
+#: ../system/integrations/smime.rst:61
+#, fuzzy
+#| msgid ""
+#| "In some cases (e.g. when dealing with large enterprises), you may be "
+#| "given a certificate for an entire CA, rather than a single contact. Add "
+#| "it here to trust *all* certificates issued by that CA."
+msgid ""
+"In some cases (e.g. when dealing with large enterprises), you may be given a "
+"certificate for an entire certificate authority (CA), rather than a single "
+"contact. You can add it here as well to trust *all* certificates issued by "
+"that CA. Commercial CAs can usually be verified online. Zammad does not "
+"include a list of built-in, trusted CAs."
+msgstr ""
+"In alcuni casi (ad esempio, quando si ha a che fare con grandi imprese), "
+"potresti ricevere un certificato per un'intera CA, piuttosto che per un "
+"singolo contatto. Aggiungilo qui per fidarti di *tutti* i certificati emessi "
+"da quella CA."
+
+#: ../system/integrations/smime.rst:78
+msgid "Add Private Key"
+msgstr "Aggiungi Chiave Privata"
+
+#: ../system/integrations/smime.rst:68
+#, fuzzy
+#| msgid ""
+#| "Private keys are for **your own organization only**; never ask your "
+#| "contacts for their private keys."
+msgid ""
+"Once you've added a public-key certificate, you can import its matching "
+"private key. Private keys are for **your own organization only**; never ask "
+"your contacts for their private keys. A bulk import of private keys is not "
+"possible."
+msgstr ""
+"Le chiavi private sono **solo per la tua organizzazione**; non chiedere mai "
+"ai tuoi contatti le loro chiavi private."
+
+#: ../system/integrations/smime.rst:0
+msgid ""
+"S/MIME integration showing configured certificates and possible issues with "
+"Logging"
+msgstr ""
+"Integrazione S/MIME che mostra certificati configurati e possibili problemi "
+"con il Logging"
+
+#: ../system/integrations/smime.rst:78
+msgid ""
+"A note is displayed on certificates with a matching private key (see line 2)."
+msgstr ""
+"Viene visualizzata una nota sui certificati con una chiave privata "
+"corrispondente (vedi riga 2)."
+
+#: ../system/integrations/smime.rst:81
+#, fuzzy
+#| msgid "Add Certificate Data"
+msgid "Certificate Validation"
+msgstr "Aggiungi dati certificato"
+
+#: ../system/integrations/smime.rst:93
+#, fuzzy
+#| msgid "Delete Certificates"
+msgid "Client certificate"
+msgstr "Eliminazione dei certificati"
+
+#: ../system/integrations/smime.rst:84
+#, fuzzy
+#| msgid "The following attributes are required then:"
+msgid "The following attributes are required:"
 msgstr "I seguenti attributi sono quindi richiesti:"
 
-#: ../system/integrations/smime/prerequisites.rst:34
+#: ../system/integrations/smime.rst:86
 msgid "Subject Alternative Name (at least one email address has to be present)"
 msgstr ""
 "Nome Alternativo del Soggetto (deve essere presente almeno un indirizzo "
 "email)"
 
-#: ../system/integrations/smime/prerequisites.rst:35
+#: ../system/integrations/smime.rst:87
 msgid "Key Usage (``Digital Signature`` and/or ``Key Encipherment``)"
 msgstr "Utilizzo Chiave (``Firma Digitale`` e/o ``Cifratura Chiave``)"
 
-#: ../system/integrations/smime/prerequisites.rst:36
+#: ../system/integrations/smime.rst:88
 msgid "Public key algorithm (either ``RSA`` or ``EC``)"
 msgstr "Algoritmo chiave pubblica (``RSA`` o ``EC``)"
 
-#: ../system/integrations/smime/prerequisites.rst:38
+#: ../system/integrations/smime.rst:90
+#, fuzzy
+#| msgid ""
+#| "The Extended Key Usage attribute is optional. If the certificate provides "
+#| "the named attribute, than it must contain the value ``E-mail Protection``."
 msgid ""
 "The Extended Key Usage attribute is optional. If the certificate provides "
-"the named attribute, than it must contain the value ``E-mail Protection``."
+"the named attribute, then it must contain the value ``E-mail Protection``. "
+"Any usable email address has to be prefixed with ``email:`` or ``rfc822:``. "
+"The named public key algorithms are mandatory for private keys as well."
 msgstr ""
 "L'attributo Uso Esteso Chiave è opzionale. Se il certificato fornisce "
 "l'attributo nominato, allora deve contenere il valore ``Protezione Email``."
 
-#: ../system/integrations/smime/prerequisites.rst:41
-msgid ""
-"Please note that any usable email address has to be prefixed with ``email:`` "
-"or ``rfc822:``."
-msgstr ""
-"Si prega di notare che qualsiasi indirizzo email utilizzabile deve essere "
-"preceduto da ``email:`` o ``rfc822:``."
+#: ../system/integrations/smime.rst:98
+#, fuzzy
+#| msgid "no CA certificate"
+msgid "CA certificate"
+msgstr "non un certificato CA"
 
-#: ../system/integrations/smime/prerequisites.rst:44
-msgid "The named public key algorithms are mandatory for private keys as well."
-msgstr ""
-"Gli algoritmi di chiave pubblica nominati sono obbligatori anche per le "
-"chiavi private."
-
-#: ../system/integrations/smime/prerequisites.rst:49
-msgid "Uploading a **CA certificate**?"
-msgstr "Caricamento di un **certificato CA**?"
-
-#: ../system/integrations/smime/prerequisites.rst:47
+#: ../system/integrations/smime.rst:96
 msgid ""
 "In the case of an uploaded CA certificate, providing the value ``CA:TRUE`` "
 "in the attribute **Basic Constraints**, the previously mentioned attributes "
@@ -32706,73 +32618,80 @@ msgstr ""
 "nell'attributo **Vincoli di base**, gli attributi menzionati in precedenza "
 "non vengono verificati."
 
-#: ../system/integrations/smime/prerequisites.rst:51
+#: ../system/integrations/smime.rst:101
+#, fuzzy
+#| msgid "Download Certificates"
+msgid "Download Certificate or Key"
+msgstr "Download dei certificati"
+
+#: ../system/integrations/smime.rst:103
 msgid ""
-"In general, the usage of any expired (``Not After``) or not yet valid (``Not "
-"Before``) certificate is denied for outgoing emails."
+"You can download the previously provided certificates and private keys at "
+"any time from your Zammad instance. Please note that passphrase-protected "
+"private keys stay protected. When you download them, you have to know the "
+"passphrase to use them after downloading. To download a certificate, use the "
+"⠇ menu in the **Actions** column and select ``Download Certificate``. To "
+"download a private key, use the other option labeled ``Download Private "
+"Key``."
 msgstr ""
-"In generale, l'uso di qualsiasi certificato scaduto (``Non dopo``) o non "
-"ancora valido (``Non prima``) è negato per le email in uscita."
 
-#: ../system/integrations/smime/prerequisites.rst:54
-msgid "Example certificate:"
-msgstr "Certificato di esempio:"
+#: ../system/integrations/smime.rst:111
+#, fuzzy
+#| msgid "Delete Certificates"
+msgid "Delete Certificate and Key"
+msgstr "Eliminazione dei certificati"
 
-#: ../system/integrations/smime/prerequisites.rst:80
+#: ../system/integrations/smime.rst:113
+#, fuzzy
+#| msgid ""
+#| "If you want to delete a specific key, you can do it by clicking on the "
+#| "menu in the **actions** column and select **delete**:"
 msgid ""
-"Please note that Zammad will distrust senders by default. This means that "
-"you're always required to provide certificate data, no matter if for signing "
-"or encrypting."
+"To delete a certificate (with an optional private key included), use the ⠇ "
+"menu in the **Actions** column and select ``Delete``."
 msgstr ""
-"Si prega di notare che Zammad diffiderà dei mittenti per impostazione "
-"predefinita. Ciò significa che ti sarà sempre richiesto di fornire dati del "
-"certificato, indipendentemente dal fatto che sia per firmare o crittografare."
+"Se desideri eliminare una chiave specifica, puoi farlo facendo clic sul menu "
+"nella colonna **azioni ** e selezionando **elimina**:"
 
-#: ../system/integrations/smime/prerequisites.rst:84
-msgid "This is by design and can't be adjusted."
-msgstr "Questo è intenzionale e non può essere modificato."
+#: ../system/integrations/smime.rst:119
+msgid ""
+"By default, Zammad tries to send all outgoing emails **signed and "
+"encrypted**, if possible. This behavior can be adjusted on a per-group "
+"basis. You can choose to sign only, encrypt only, both, or neither:"
+msgstr ""
 
-#: ../system/integrations/smime/troubleshooting.rst:4
+#: ../system/integrations/smime.rst:None
+msgid "Zammad allowing to choose the default behavior on per group basis"
+msgstr ""
+"Zammad consente di scegliere il comportamento predefinito su base per gruppo"
+
+#: ../system/integrations/smime.rst:128
+#, fuzzy
+#| msgid ""
+#| "Of course, agents can always manually change these settings on each email "
+#| "they send out."
+msgid "Agents can always override these settings for each email they send out."
+msgstr ""
+"Naturalmente, gli agenti possono sempre modificare manualmente queste "
+"impostazioni per ogni email che inviano."
+
+#: ../system/integrations/smime.rst:133
 msgid ""
 "All of the system's latest S/MIME activity is displayed in the **Recent "
-"Logs** section."
+"Logs** section. The logs contain the status and details of all emails (both "
+"incoming and outgoing), that used signing/verification or encryption/"
+"decryption. This log does **not** include emails sent by :doc:`triggers </"
+"manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`. For those, "
+"check your ``production.log``."
 msgstr ""
-"Tutte le ultime attività S/MIME del sistema sono visualizzate nella sezione "
-"**Log recenti**."
 
-#: ../system/integrations/smime/troubleshooting.rst:11
-msgid "Sample entries of in- and outgoing S/MIME related emails."
-msgstr "Esempi di voci di email S/MIME in entrata e in uscita."
-
-#: ../system/integrations/smime/troubleshooting.rst:11
-msgid ""
-"Logs report the status and details of all mail, both incoming and outgoing, "
-"that used signing/verification or encryption/decryption."
-msgstr ""
-"I log riportano lo stato e i dettagli di tutte le email, sia in entrata che "
-"in uscita, che hanno utilizzato firma/verifica o crittografia/decifratura."
-
-#: ../system/integrations/smime/troubleshooting.rst:14
-msgid ""
-"This log does **not** include email sent by :doc:`triggers </manage/"
-"trigger>` or the :doc:`scheduler </manage/scheduler>`. For those, check your "
-"``production.log``."
-msgstr ""
-"Questo log **non** include le email inviate da :doc:`trigger </manage/"
-"trigger>` o dallo :doc:`scheduler </manage/scheduler>`. Per quelli, "
-"controlla il tuo ``production.log``."
-
-#: ../system/integrations/smime/troubleshooting.rst:20
-msgid "Common Issues"
-msgstr "Problemi comuni"
-
-#: ../system/integrations/smime/troubleshooting.rst:30
+#: ../system/integrations/smime.rst:148
 msgid "I received a signed/encrypted email before I set up S/MIME integration"
 msgstr ""
 "Ho ricevuto un'email firmata/crittografata prima di configurare "
 "l'integrazione S/MIME"
 
-#: ../system/integrations/smime/troubleshooting.rst:23
+#: ../system/integrations/smime.rst:141
 msgid ""
 "No problem. Once S/MIME has been enabled and the appropriate certificates "
 "have been added, agents will be prompted to retry verification/decryption on "
@@ -32782,40 +32701,50 @@ msgstr ""
 "appropriati, agli agenti verrà chiesto di riprovare la verifica/decifratura "
 "sulle email corrispondenti."
 
-#: ../system/integrations/smime/troubleshooting.rst:0
+#: ../system/integrations/smime.rst:0
 msgid "Screenshot of user prompt to retry decryption"
 msgstr "Screenshot del prompt utente per riprovare la decifratura"
 
-#: ../system/integrations/smime/troubleshooting.rst:38
-msgid "The 🔒 ``Encrypt`` button is disabled"
+#: ../system/integrations/smime.rst:157
+#, fuzzy
+#| msgid "The 🔒 ``Encrypt`` button is disabled"
+msgid "The ``Encrypt`` button is disabled"
 msgstr "Il pulsante 🔒 ``Crittografa`` è disabilitato"
 
-#: ../system/integrations/smime/troubleshooting.rst:33
+#: ../system/integrations/smime.rst:151
 msgid "Have you added the recipient's certificate?"
 msgstr "Hai aggiunto il certificato del destinatario?"
 
-#: ../system/integrations/smime/troubleshooting.rst:34
+#: ../system/integrations/smime.rst:152
 msgid "Are you sure the recipient's certificate is valid?"
 msgstr "Sei sicuro che il certificato del destinatario sia valido?"
 
-#: ../system/integrations/smime/troubleshooting.rst:35
+#: ../system/integrations/smime.rst:153
 msgid "Have you checked your ``production.log`` for more details?"
 msgstr "Hai controllato il tuo ``production.log`` per maggiori dettagli?"
 
-#: ../system/integrations/smime/troubleshooting.rst:37
+#: ../system/integrations/smime.rst:155
+#, fuzzy
+#| msgid ""
+#| "If encryption doesn't work in the composer, it won't work "
+#| "in :doc:`triggers </manage/trigger>` or the :doc:`scheduler </manage/"
+#| "scheduler>` either!"
 msgid ""
-"If encryption doesn't work in the composer, it won't work in :doc:`triggers "
-"</manage/trigger>` or the :doc:`scheduler </manage/scheduler>` either!"
+"If encryption doesn't work for outgoing email articles, it won't work "
+"in :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/"
+"scheduler>` either."
 msgstr ""
 "Se la crittografia non funziona nel compositore, non funzionerà nemmeno "
 "nei :doc:`trigger </manage/trigger>` o nello :doc:`scheduler </manage/"
 "scheduler>`!"
 
-#: ../system/integrations/smime/troubleshooting.rst:42
-msgid "The ✅ ``Sign`` button is disabled"
+#: ../system/integrations/smime.rst:162
+#, fuzzy
+#| msgid "The ✅ ``Sign`` button is disabled"
+msgid "The ``Sign`` button is disabled"
 msgstr "Il pulsante ✅ ``Firma`` è disabilitato"
 
-#: ../system/integrations/smime/troubleshooting.rst:41
+#: ../system/integrations/smime.rst:160
 msgid ""
 "Have you added **both the certificate and private key** for your "
 "organization?"
@@ -32823,7 +32752,7 @@ msgstr ""
 "Hai aggiunto **sia il certificato che la chiave privata** per la tua "
 "organizzazione?"
 
-#: ../system/integrations/smime/troubleshooting.rst:42
+#: ../system/integrations/smime.rst:161
 msgid ""
 "Does the email address on the certificate match the email address of the "
 "agent/group composing the email?"
@@ -32831,23 +32760,27 @@ msgstr ""
 "L'indirizzo email sul certificato corrisponde all'indirizzo email "
 "dell'agente/gruppo che compone l'email?"
 
-#: ../system/integrations/smime/troubleshooting.rst:45
-msgid "Error: “Fingerprint already taken”"
+#: ../system/integrations/smime.rst:165
+#, fuzzy
+#| msgid "Error: “Fingerprint already taken”"
+msgid "Error: \"Fingerprint already taken\""
 msgstr "Errore: “Impronta digitale già in uso”"
 
-#: ../system/integrations/smime/troubleshooting.rst:45
+#: ../system/integrations/smime.rst:165
 msgid "Are you sure you haven't added this certificate already?"
 msgstr "Sei sicuro di non aver già aggiunto questo certificato?"
 
-#: ../system/integrations/smime/troubleshooting.rst:48
-msgid "Error: “❌ invalid byte sequence in UTF-8”"
+#: ../system/integrations/smime.rst:168
+#, fuzzy
+#| msgid "Error: “❌ invalid byte sequence in UTF-8”"
+msgid "Error: \"invalid byte sequence in UTF-8\""
 msgstr "Errore: “❌ sequenza di byte non valida in UTF-8”"
 
-#: ../system/integrations/smime/troubleshooting.rst:48
+#: ../system/integrations/smime.rst:168
 msgid "Please ensure to provide PEM formatted certificate and keys."
 msgstr "Assicurati di fornire certificati e chiavi in formato PEM."
 
-#: ../system/integrations/smime/troubleshooting.rst:49
+#: ../system/integrations/smime.rst:169
 msgid "Did you check if the provided file is a valid certificate or key?"
 msgstr ""
 "Hai controllato se il file fornito è un certificato o una chiave valida?"
@@ -35739,6 +35672,413 @@ msgstr "Versione"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Mostra la versione attuale di Zammad della tua istanza."
+
+#~ msgid ""
+#~ "Activating this feature generates summaries of tickets which are "
+#~ "displayed in a new ticket sidebar tab. This can be a huge time saver when "
+#~ "dealing with large tickets and/or many hand-overs between agents."
+#~ msgstr ""
+#~ "L'attivazione di questa funzionalità genera riepiloghi dei ticket che "
+#~ "vengono visualizzati in una nuova scheda della barra laterale del ticket. "
+#~ "Questo può far risparmiare molto tempo quando si hanno a che fare con "
+#~ "ticket di grandi dimensioni e/o molti passaggi di consegna tra agenti."
+
+#~ msgid ""
+#~ "Make sure to configure an :doc:`AI provider <provider>` before activating "
+#~ "the feature. Otherwise, a warning message will tell you to do so."
+#~ msgstr ""
+#~ "Assicurati di configurare un :doc:`provider AI <provider>` prima di "
+#~ "attivare la funzionalità. Altrimenti, un messaggio di avviso ti inviterà "
+#~ "a farlo."
+
+#~ msgid ""
+#~ "Enabling the ticket summary feature triggers a request to the configured "
+#~ "AI service at the configured action (see below). After the summary is "
+#~ "generated, agents are notified by an indicator on the summary sidebar tab."
+#~ msgstr ""
+#~ "L'abilitazione della funzionalità di riepilogo ticket attiva una "
+#~ "richiesta al servizio AI configurato all'azione configurata (vedi sotto). "
+#~ "Dopo che il riepilogo è stato generato, gli agenti vengono notificati da "
+#~ "un indicatore sulla scheda della barra laterale riepilogo."
+
+#~ msgid ""
+#~ "Decide when the summary is generated via **Generation** dropdown. It is "
+#~ "generated when the ticket got updated and an agent either opens the "
+#~ "ticket or opens the summary sidebar tab of the ticket. The first "
+#~ "mentioned option is more comfortable for agents, the latter saves "
+#~ "computing resources if the AI summary is not always viewed. If you want "
+#~ "to have a more granular control, you can override this setting for each "
+#~ "group individually in the :doc:`group management </manage/groups/index>`."
+#~ msgstr ""
+#~ "Decidi quando il riepilogo viene generato tramite il menu a discesa "
+#~ "**Generazione**. Viene generato quando il ticket viene aggiornato e un "
+#~ "agente apre il ticket o apre la scheda della barra laterale riepilogo del "
+#~ "ticket. La prima opzione menzionata è più comoda per gli agenti, la "
+#~ "seconda salva risorse di calcolo se il riepilogo AI non viene sempre "
+#~ "visualizzato. Se vuoi avere un controllo più granulare, puoi "
+#~ "sovrascrivere questa impostazione per ciascun gruppo singolarmente "
+#~ "nella :doc:`gestione gruppi </manage/groups/index>`."
+
+#~ msgid ""
+#~ "Allows to override the setting about when to generate the :doc:`AI ticket "
+#~ "summary </ai/summary>` on group level."
+#~ msgstr ""
+#~ "Consente di sovrascrivere l'impostazione su quando generare "
+#~ "il :doc:`riepilogo ticket IA </ai/summary>` a livello di gruppo."
+
+#~ msgid "Example macros within a ticket detail view."
+#~ msgstr "Esempio di macro all'interno di una vista dettagli ticket."
+
+#~ msgid ""
+#~ "Choose from the macros **Close & Tag as Spam**, **Move to RMA**, and "
+#~ "**Reply & Close & Tag as Banana**."
+#~ msgstr ""
+#~ "Scegli tra le macro **Chiudi e Tagga come Spam**, **Sposta in RMA** e "
+#~ "**Rispondi e Chiudi e Tagga come Banana**."
+
+#~ msgid ""
+#~ "You can also apply macros in bulk (i.e. to many tickets all at once) via "
+#~ "the *Overviews* page:"
+#~ msgstr ""
+#~ "Puoi anche applicare macro in blocco (cioè a molti ticket "
+#~ "contemporaneamente) tramite la pagina *Panoramiche*:"
+
+#~ msgid "Example macros within an overview (bulk operation)."
+#~ msgstr ""
+#~ "Esempio di macro all'interno di una panoramica (operazione in blocco)."
+
+#~ msgid ""
+#~ "Select your desired tickets, then click-and-drag to apply a macro to all "
+#~ "of them."
+#~ msgstr ""
+#~ "Seleziona i tuoi ticket desiderati, quindi fai clic e trascina per "
+#~ "applicare una macro a tutti loro."
+
+#~ msgid ""
+#~ "You can create or edit macros on the Macros page of the admin settings:"
+#~ msgstr ""
+#~ "Puoi creare o modificare le macro nella pagina Macro delle impostazioni "
+#~ "di amministrazione:"
+
+#~ msgid "Screenshot of \"Macros\" page in admin settings"
+#~ msgstr ""
+#~ "Lo screenshot mostra la pagina \"Macro\" nelle impostazioni di "
+#~ "amministrazione"
+
+#~ msgid "How Do Macros Work"
+#~ msgstr "Come funzionano le macro"
+
+#~ msgid ""
+#~ "There are also a few other settings that affect who can use a macro or "
+#~ "how it behaves."
+#~ msgstr ""
+#~ "Ci sono anche alcune altre impostazioni che influenzano chi può usare una "
+#~ "macro o come si comporta."
+
+#~ msgid "Creating Macros"
+#~ msgstr "Creazione Macro"
+
+#~ msgid "There are **no** actions for:"
+#~ msgstr "Non ci sono azioni per:"
+
+#~ msgid ""
+#~ "When cloning a macro, make sure to click \"Submit\" for the duplicate to "
+#~ "be created."
+#~ msgstr ""
+#~ "Quando cloni una macro, assicurati di fare clic su \"Invia\" affinché il "
+#~ "duplicato venga creato."
+
+#~ msgid "Macro Example"
+#~ msgstr "Esempio Macro"
+
+#~ msgid ""
+#~ "To get you up and running quickly, here are some examples of the kinds of "
+#~ "one-click actions you can set up using macros."
+#~ msgstr ""
+#~ "Per metterti subito in grado di operare, ecco alcuni esempi dei tipi di "
+#~ "azioni con un clic che puoi configurare utilizzando le macro."
+
+#~ msgid ""
+#~ "To learn about macros in detail, go to the section :doc:`/manage/macros/"
+#~ "how-do-they-work`."
+#~ msgstr ""
+#~ "Per saperne di più sulle macro in dettaglio, vai alla sezione :doc:`/"
+#~ "manage/macros/how-do-they-work`."
+
+#~ msgid "closed"
+#~ msgstr "chiuso"
+
+#~ msgid "add ``spam``"
+#~ msgstr "aggiungi ``spam``"
+
+#~ msgid "Pending Till"
+#~ msgstr "In attesa fino a"
+
+#~ msgid "is a proof that a message hasn't been manipulated on its way."
+#~ msgstr "è una prova che un messaggio non è stato manipolato in transito."
+
+#~ msgid ""
+#~ "In other words, it guarantees message **privacy** and **data security**."
+#~ msgstr ""
+#~ "In altre parole, garantisce la **riservatezza** del messaggio e la "
+#~ "**sicurezza dei dati**."
+
+#~ msgid ""
+#~ "To use the PGP function, you have to enable the integration (PGP) by "
+#~ "switching the toggle to **enabled**."
+#~ msgstr ""
+#~ "Per utilizzare la funzione PGP, devi abilitare l'integrazione (PGP) "
+#~ "spostando l'interruttore su **abilitato**."
+
+#~ msgid ""
+#~ "Here you can see the last actions regarding signing and encryption and if "
+#~ "they were successful."
+#~ msgstr ""
+#~ "Qui puoi vedere le ultime azioni relative a firma e crittografia e se "
+#~ "hanno avuto successo."
+
+#~ msgid ""
+#~ "In other words, it guarantees a message's **integrity** and "
+#~ "**authenticity**."
+#~ msgstr ""
+#~ "In altre parole, garantisce l'**integrità** e l'**autenticità** di un "
+#~ "messaggio."
+
+#~ msgid "In other words, it guarantees **privacy** and **data security**."
+#~ msgstr ""
+#~ "In altre parole, garantisce la **riservatezza** e la **sicurezza dei "
+#~ "dati**."
+
+#~ msgid "Screencast demo of S/MIME features for both new tickets and replies"
+#~ msgstr ""
+#~ "Demo screencast delle funzionalità S/MIME sia per nuovi ticket che per "
+#~ "risposte"
+
+#~ msgid ""
+#~ "Once S/MIME has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will "
+#~ "appear in the ticket composer."
+#~ msgstr ""
+#~ "Una volta abilitato S/MIME, i pulsanti 🔒 ``Crittografa`` e ✅ ``Firma`` "
+#~ "appariranno nel compositore di ticket."
+
+#~ msgid ":doc:`Prerequisites <prerequisites>`"
+#~ msgstr ":doc:`Prerequisiti <prerequisites>`"
+
+#~ msgid ""
+#~ "New to S/MIME? This section helps you to find certificate providers and "
+#~ "points out Limitations."
+#~ msgstr ""
+#~ "Nuovo per S/MIME? Questa sezione ti aiuta a trovare fornitori di "
+#~ "certificati e indica le limitazioni."
+
+#~ msgid ":doc:`Manage Certificates <manage-certificates>`"
+#~ msgstr ":doc:`Gestisci Certificati <manage-certificates>`"
+
+#~ msgid "Add and download certificates; configure group default behaviors."
+#~ msgstr ""
+#~ "Aggiungi e scarica certificati; configura i comportamenti predefiniti dei "
+#~ "gruppi."
+
+#~ msgid ":doc:`Troubleshooting <troubleshooting>`"
+#~ msgstr ":doc:`Risoluzione problemi <troubleshooting>`"
+
+#~ msgid "Took a wrong turn? About recent logs and common issues."
+#~ msgstr ""
+#~ "Hai preso una strada sbagliata? Informazioni sui log recenti e problemi "
+#~ "comuni."
+
+#~ msgid ""
+#~ "For more details on how S/MIME integration works on the agent side, see "
+#~ "the :user-docs:`user docs </extras/secure-email.html>`."
+#~ msgstr ""
+#~ "Per maggiori dettagli su come funziona l'integrazione S/MIME dal lato "
+#~ "agente, vedi la :user-docs:`documentazione utente </extras/secure-"
+#~ "email.html>`."
+
+#~ msgid "Manage Certificates"
+#~ msgstr "Gestisci Certificati"
+
+#~ msgid ""
+#~ "S/MIME is **disabled by default**. Enable it to start adding certificates."
+#~ msgstr ""
+#~ "S/MIME è **disabilitato per impostazione predefinita**. Abilitalo per "
+#~ "iniziare ad aggiungere certificati."
+
+#~ msgid "dialog to add new certificates or private keys"
+#~ msgstr ""
+#~ "finestra di dialogo per aggiungere nuovi certificati o chiavi private"
+
+#, fuzzy
+#~| msgid ""
+#~| "Manage certificates in the Admin Panel under **System > Integrations > S/"
+#~| "MIME**. Certificates may be pasted in as plain text or uploaded from a "
+#~| "file."
+#~ msgid ""
+#~ "Manage certificates in the admin settings under *System > Integrations > "
+#~ "S/MIME*. Certificates may be pasted in as plain text or uploaded from a "
+#~ "file."
+#~ msgstr ""
+#~ "Gestisci i certificati nel Pannello di Amministrazione sotto **Sistema > "
+#~ "Integrazioni > S/MIME**. I certificati possono essere incollati come "
+#~ "testo semplice o caricati da un file."
+
+#~ msgid ""
+#~ "Import public-key certificates for both your own organization and your "
+#~ "contacts."
+#~ msgstr ""
+#~ "Importa certificati a chiave pubblica sia per la tua organizzazione che "
+#~ "per i tuoi contatti."
+
+#~ msgid "🕵️ **ALWAYS verify certificates in-person or over the phone!**"
+#~ msgstr "🕵️ **VERIFICA SEMPRE i certificati di persona o al telefono!**"
+
+#~ msgid ""
+#~ "The whole point of signatures is to alert you when someone is trying to "
+#~ "pretend to be someone they're not. Never accept a certificate from "
+#~ "someone online without verifying it first."
+#~ msgstr ""
+#~ "L'intero scopo delle firme è avvisarti quando qualcuno sta cercando di "
+#~ "fingersi qualcun altro. Non accettare mai un certificato da qualcuno "
+#~ "online senza averlo verificato prima."
+
+#~ msgid "📇 **What about trusted certificate authorities?**"
+#~ msgstr ""
+#~ "📇 **E per quanto riguarda le autorità di certificazione attendibili?**"
+
+#~ msgid ""
+#~ "Commercial CAs can usually be verified online. Zammad does not include a "
+#~ "list of built-in, trusted CAs."
+#~ msgstr ""
+#~ "Le CA commerciali possono solitamente essere verificate online. Zammad "
+#~ "non include un elenco di CA attendibili integrate."
+
+#~ msgid ""
+#~ "Once you've added a public-key certificate, you can import its matching "
+#~ "private key."
+#~ msgstr ""
+#~ "Una volta aggiunto un certificato a chiave pubblica, puoi importare la "
+#~ "sua chiave privata corrispondente."
+
+#~ msgid "📤 **Certificates and private keys must be uploaded separately.**"
+#~ msgstr ""
+#~ "📤 **Certificati e chiavi private devono essere caricati separatamente.**"
+
+#~ msgid "Please note that bulk imports of private keys are not possible."
+#~ msgstr ""
+#~ "Si prega di notare che le importazioni massive di chiavi private non sono "
+#~ "possibili."
+
+#~ msgid "Download Certificate Data"
+#~ msgstr "Scarica dati certificato"
+
+#~ msgid ""
+#~ "You can download the earlier provided certificates and private keys at "
+#~ "any time from your Zammad instance."
+#~ msgstr ""
+#~ "Puoi scaricare i certificati e le chiavi private forniti in precedenza in "
+#~ "qualsiasi momento dalla tua istanza Zammad."
+
+#~ msgid ""
+#~ "Please note that passphrase-protected private keys stay protected and "
+#~ "when you download them, you have to know the passphrase to use them after "
+#~ "downloading."
+#~ msgstr ""
+#~ "Si prega di notare che le chiavi private protette da passphrase rimangono "
+#~ "protette e quando le scarichi, devi conoscere la passphrase per usarle "
+#~ "dopo il download."
+
+#~ msgid "dialog to download certificates or private keys"
+#~ msgstr "finestra di dialogo per scaricare certificati o chiavi private"
+
+#~ msgid "Download stored certificates and their keys"
+#~ msgstr "Scarica certificati memorizzati e le loro chiavi"
+
+#~ msgid ""
+#~ "The ticket composer will set all outgoing messages to **signed and "
+#~ "encrypted** by default (assuming the required certificates exist)."
+#~ msgstr ""
+#~ "Il compositore di ticket imposterà tutti i messaggi in uscita come "
+#~ "**firmati e crittografati** per impostazione predefinita (supponendo che "
+#~ "i certificati richiesti esistano)."
+
+#~ msgid "These defaults can be modified on a per-group basis:"
+#~ msgstr ""
+#~ "Queste impostazioni predefinite possono essere modificate su base per "
+#~ "gruppo:"
+
+#~ msgid "**Where can I get a certificate?**"
+#~ msgstr "**Dove posso ottenere un certificato?**"
+
+#~ msgid ""
+#~ "Bear in mind that **S/MIME only works if the other party is using it, "
+#~ "too.**"
+#~ msgstr ""
+#~ "Tieni presente che **S/MIME funziona solo se anche l'altra parte lo "
+#~ "utilizza.**"
+
+#~ msgid ""
+#~ "The certificate and public key validation is based on the ``X509v3`` "
+#~ "extensions."
+#~ msgstr ""
+#~ "La validazione del certificato e della chiave pubblica si basa sulle "
+#~ "estensioni ``X509v3``."
+
+#~ msgid "Uploading a **client certificate**?"
+#~ msgstr "Caricamento di un **certificato client**?"
+
+#~ msgid ""
+#~ "Please note that any usable email address has to be prefixed with "
+#~ "``email:`` or ``rfc822:``."
+#~ msgstr ""
+#~ "Si prega di notare che qualsiasi indirizzo email utilizzabile deve essere "
+#~ "preceduto da ``email:`` o ``rfc822:``."
+
+#~ msgid ""
+#~ "The named public key algorithms are mandatory for private keys as well."
+#~ msgstr ""
+#~ "Gli algoritmi di chiave pubblica nominati sono obbligatori anche per le "
+#~ "chiavi private."
+
+#~ msgid "Uploading a **CA certificate**?"
+#~ msgstr "Caricamento di un **certificato CA**?"
+
+#~ msgid "Example certificate:"
+#~ msgstr "Certificato di esempio:"
+
+#~ msgid ""
+#~ "Please note that Zammad will distrust senders by default. This means that "
+#~ "you're always required to provide certificate data, no matter if for "
+#~ "signing or encrypting."
+#~ msgstr ""
+#~ "Si prega di notare che Zammad diffiderà dei mittenti per impostazione "
+#~ "predefinita. Ciò significa che ti sarà sempre richiesto di fornire dati "
+#~ "del certificato, indipendentemente dal fatto che sia per firmare o "
+#~ "crittografare."
+
+#~ msgid "This is by design and can't be adjusted."
+#~ msgstr "Questo è intenzionale e non può essere modificato."
+
+#~ msgid ""
+#~ "All of the system's latest S/MIME activity is displayed in the **Recent "
+#~ "Logs** section."
+#~ msgstr ""
+#~ "Tutte le ultime attività S/MIME del sistema sono visualizzate nella "
+#~ "sezione **Log recenti**."
+
+#~ msgid "Sample entries of in- and outgoing S/MIME related emails."
+#~ msgstr "Esempi di voci di email S/MIME in entrata e in uscita."
+
+#~ msgid ""
+#~ "This log does **not** include email sent by :doc:`triggers </manage/"
+#~ "trigger>` or the :doc:`scheduler </manage/scheduler>`. For those, check "
+#~ "your ``production.log``."
+#~ msgstr ""
+#~ "Questo log **non** include le email inviate da :doc:`trigger </manage/"
+#~ "trigger>` o dallo :doc:`scheduler </manage/scheduler>`. Per quelli, "
+#~ "controlla il tuo ``production.log``."
+
+#~ msgid "Common Issues"
+#~ msgstr "Problemi comuni"
 
 #~ msgid ""
 #~ "The feature is built to assist for proper customer support. And this is "
