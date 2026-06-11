@@ -5,7 +5,7 @@ Zammad's macro feature lets you pre-define ticket changes which can be applied
 with just a click. When you or your agents apply the same changes to many
 tickets repeatedly, you can bundle those changes in a macro to apply them
 by executing it. To add or edit macros in Zammad's admin settings under
-**Manage > Macros**, you need the ``admin.macro`` permission. For action- or
+*Manage > Macros*, the permission ``admin.macro`` is required. For action- or
 time-based automation, have a look at Zammad's :doc:`triggers <trigger>` and
 :doc:`schedulers <scheduler>`.
 
@@ -73,17 +73,15 @@ Active
 Examples
 --------
 
-Find examples of useful macros below.
-
 Mark Ticket as Spam
 ^^^^^^^^^^^^^^^^^^^
 
 If you deal with a lot of spam, you can set up a macro that applies the
 following changes to a ticket:
 
-- **State:** ``closed``
-- **Tags:** add ``spam``
-- **Owner:** current user
+- **State** closed
+- **Tags** *add* spam
+- **Owner** *current user*
 
 .. figure:: /images/manage/macros/macro-example-mark-ticket-as-spam.png
    :align: center
@@ -101,10 +99,10 @@ first select the state, then select a date. You can bundle this into a macro
 to always set a reminder for the same fixed amount of time (for example,
 seven days later):
 
-- **Note:** ``"Postponing ticket for 7 days."`` (🔒 internal visibility only)
-- **State:** ``pending reminder``
-- **Pending Till:** ``relative / 7 / days``
-- **Owner:** current user
+- **Note** Postponing ticket for 7 days. (internal visibility)
+- **State** pending reminder
+- **Pending Till** *relative* 7 Day(s)
+- **Owner** *current user*
 
 .. figure:: /images/manage/macros/macro-example-postpone-ticket-for-7days.png
    :align: center
