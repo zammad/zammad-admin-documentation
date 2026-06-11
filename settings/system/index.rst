@@ -14,7 +14,6 @@ each of the tabs:
    /settings/system/storage
    /settings/system/network
    /settings/system/frontend
-   /settings/system/system-notifications
 
 .. note:: SaaS customers of Zammad only have access to **Services** and
    **Frontend**. The other settings aren't accessible because we're handling
