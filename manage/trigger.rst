@@ -4,7 +4,7 @@ Trigger
 Triggers are one way to automate Zammad. You can create *if this then that*
 rules by defining which tickets should get changed and which changes you want
 to apply to them. To manage triggers in Zammad's admin settings under
-*Manage > Trigger*, you need the permission ``admin.trigger``.
+*Manage > Trigger*, the permission ``admin.trigger`` is required.
 
 Zammad ships one active trigger by default: an auto reply trigger which sends
 an email to the customer after a new ticket is created. You can disable it,
