@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 16:30+0200\n"
+"POT-Creation-Date: 2026-06-11 15:10+0200\n"
 "PO-Revision-Date: 2026-06-10 15:10+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -65,7 +65,8 @@ msgid "Avatar of an AI agent which shows up in the live user section."
 msgstr ""
 "Аватар сличица AI агента која се приказује у одељку присутних корисника."
 
-#: ../ai/ai-agents.rst:22 ../system/data-privacy.rst:10
+#: ../ai/ai-agents.rst:22 ../manage/trigger.rst:14
+#: ../system/data-privacy.rst:10
 msgid "Important Information"
 msgstr "Важне информације"
 
@@ -438,7 +439,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../channels/form.rst:219 ../manage/groups/group-permissions.rst:75
-#: ../manage/macros.rst:74
+#: ../manage/macros.rst:74 ../manage/trigger.rst:180
 msgid "Examples"
 msgstr "Примери"
 
@@ -1153,8 +1154,9 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:25
 #: ../channels/microsoft365-graph/accounts.rst:18 ../manage/macros.rst:31
-#: ../manage/report-profiles.rst:33 ../manage/webhook/add.rst:32
-#: ../misc/first-steps.rst:18 ../system/core-workflows/learn-by-example.rst:36
+#: ../manage/report-profiles.rst:33 ../manage/trigger.rst:31
+#: ../manage/webhook/add.rst:32 ../misc/first-steps.rst:18
+#: ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
 #: ../system/core-workflows/learn-by-example.rst:139
 #: ../system/core-workflows/learn-by-example.rst:198
@@ -2305,12 +2307,15 @@ msgstr ""
 "сами**."
 
 #: ../channels/email/accounts/email-notification.rst:7
-msgid "For more information, see :doc:`/manage/trigger/system-notifications`."
+#, fuzzy
+#| msgid ""
+#| "For more information, see :doc:`/manage/trigger/system-notifications`."
+msgid "For more information, see :doc:`/misc/system-notifications`."
 msgstr ""
 "За више информација погледајте :doc:`/manage/trigger/system-notifications`."
 
 #: ../channels/email/accounts/email-notification.rst:9
-#: ../manage/trigger/system-notifications.rst:7
+#: ../misc/system-notifications.rst:7
 msgid ""
 "System notifications are automated emails sent by Zammad for critical system "
 "events, such as account changes or SLA violations."
@@ -3360,7 +3365,7 @@ msgstr ""
 #: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
 #: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
 #: ../channels/email/filters.rst:166 ../channels/email/filters.rst:180
-#: ../manage/trigger/how-do-they-work.rst:67
+#: ../manage/trigger.rst:94
 msgid "Condition"
 msgstr "Услови"
 
@@ -3371,8 +3376,7 @@ msgstr "**Од:** *задовољава регуларни израз:* ``(\\.|@
 #: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
 #: ../channels/email/filters.rst:140 ../channels/email/filters.rst:155
 #: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
-#: ../manage/trigger/how-do-they-work.rst:27
-#: ../manage/trigger/how-do-they-work.rst:81
+#: ../manage/trigger.rst:54 ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -4991,7 +4995,6 @@ msgid "Screenshot shows Zammad's form management configuration."
 msgstr "Снимак екрана који приказује подешавање Zammad форме."
 
 #: ../channels/form.rst:16 ../channels/whatsapp/limitations.rst:2
-#: ../manage/trigger/limitations.rst:2
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
@@ -9644,9 +9647,8 @@ msgstr ""
 "друго – чим притисну **Сачувај**, више никада неће видети тај тикет. Одлично "
 "за примање телефонских позива за некога важнијег од вас."
 
-#: ../manage/groups/index.rst:30 ../manage/trigger.rst:25
-#: ../manage/webhook.rst:43 ../system/core-workflows.rst:26
-#: ../system/objects.rst:32
+#: ../manage/groups/index.rst:30 ../manage/webhook.rst:43
+#: ../system/core-workflows.rst:26 ../system/objects.rst:32
 msgid "Learn more"
 msgstr "Saznajte više"
 
@@ -10621,8 +10623,8 @@ msgid ""
 "applied with just a click. When you or your agents apply the same changes to "
 "many tickets repeatedly, you can bundle those changes in a macro to apply "
 "them by executing it. To add or edit macros in Zammad's admin settings under "
-"**Manage > Macros**, you need the ``admin.macro`` permission. For action- or "
-"time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
+"*Manage > Macros*, the permission ``admin.macro`` is required. For action- "
+"or time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
 "and :doc:`schedulers <scheduler>`."
 msgstr ""
 
@@ -10791,17 +10793,13 @@ msgstr ""
 msgid "Choose **inactive** to disable this macro without deleting it."
 msgstr "Изаберите „искључено“ да бисте онемогућили овај макро без брисања."
 
-#: ../manage/macros.rst:76
-msgid "Find examples of useful macros below."
-msgstr ""
-
-#: ../manage/macros.rst:79
+#: ../manage/macros.rst:77
 #, fuzzy
 #| msgid "a Ticket has escalated"
 msgid "Mark Ticket as Spam"
 msgstr "по ескалирању тикета"
 
-#: ../manage/macros.rst:81
+#: ../manage/macros.rst:79
 #, fuzzy
 #| msgid ""
 #| "If you deal with a lot of spam, you could set up a macro that applies the "
@@ -10813,29 +10811,29 @@ msgstr ""
 "Ако имате посла са пуно нежељене поште, можете да подесите макро који "
 "примењује следеће измене на тикет:"
 
-#: ../manage/macros.rst:84
+#: ../manage/macros.rst:82
 #, fuzzy
 #| msgid "**State:** closed"
-msgid "**State:** ``closed``"
+msgid "**State** closed"
 msgstr "**Стање:** затворено"
 
-#: ../manage/macros.rst:85
+#: ../manage/macros.rst:83
 #, fuzzy
 #| msgid "**Tag:** *add* ``spam``"
-msgid "**Tags:** add ``spam``"
+msgid "**Tags** *add* spam"
 msgstr "**Ознака:** *додај* ``spam``"
 
-#: ../manage/macros.rst:86 ../manage/macros.rst:107
+#: ../manage/macros.rst:84 ../manage/macros.rst:105
 #, fuzzy
 #| msgid "current user"
-msgid "**Owner:** current user"
+msgid "**Owner** *current user*"
 msgstr "тренутни корисник"
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing spam macro configuration"
 msgstr "Снимак екрана који приказује подешавање макроа нежељене поште"
 
-#: ../manage/macros.rst:93
+#: ../manage/macros.rst:91
 #, fuzzy
 #| msgid ""
 #| "💡 Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
@@ -10847,11 +10845,11 @@ msgstr ""
 "💡 Покрените овај макро у :doc:`/manage/scheduler` да бисте повремено "
 "очистили нежељене тикете."
 
-#: ../manage/macros.rst:97
+#: ../manage/macros.rst:95
 msgid "Postpone Ticket for a Fixed Time"
 msgstr ""
 
-#: ../manage/macros.rst:99
+#: ../manage/macros.rst:97
 #, fuzzy
 #| msgid ""
 #| "If you want to set a ticket's state to *pending reminder*, it's usually a "
@@ -10869,23 +10867,22 @@ msgstr ""
 "бисте увек подесили подсетник за исто, фиксно време (рецимо, седам дана "
 "касније), можете да групишете целу измену у макро:"
 
-#: ../manage/macros.rst:104
+#: ../manage/macros.rst:102
 #, fuzzy
 #| msgid "\"Postponing ticket for 7 days.\" (🔒 internal visibility only)"
-msgid ""
-"**Note:** ``\"Postponing ticket for 7 days.\"`` (🔒 internal visibility only)"
+msgid "**Note** Postponing ticket for 7 days. (internal visibility)"
 msgstr "„Одлагање тикета за 7 дана.” (🔒 видљиво само интерно)"
 
-#: ../manage/macros.rst:105
+#: ../manage/macros.rst:103
 #, fuzzy
 #| msgid "pending reminder"
-msgid "**State:** ``pending reminder``"
+msgid "**State** pending reminder"
 msgstr "на чекању"
 
-#: ../manage/macros.rst:106
+#: ../manage/macros.rst:104
 #, fuzzy
 #| msgid "relative / 7 / days"
-msgid "**Pending Till:** ``relative / 7 / days``"
+msgid "**Pending Till** *relative* 7 Day(s)"
 msgstr "релативно / 7 / дан(а)"
 
 #: ../manage/macros.rst:None
@@ -13092,7 +13089,9 @@ msgid "“Login detected from a new location” emails."
 msgstr "имејл обавештења „логовање из нове земље”."
 
 #: ../manage/roles/permissions.rst:0
-msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
+#, fuzzy
+#| msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
+msgid "To learn more, see :doc:`/misc/system-notifications`."
 msgstr ""
 "Да бисте сазнали више, погледајте :doc:`/manage/trigger/system-"
 "notifications`."
@@ -14948,31 +14947,25 @@ msgid ""
 "Triggers are one way to automate Zammad. You can create *if this then that* "
 "rules by defining which tickets should get changed and which changes you "
 "want to apply to them. To manage triggers in Zammad's admin settings under "
-"*Manage > Trigger*, you need the permission ``admin.trigger``."
+"*Manage > Trigger*, the permission ``admin.trigger`` is required."
 msgstr ""
 "Окидачи су један од начина аутоматизације Zammad-а. Можете дефинисати "
 "правила типа *ако ово онда оно* одређивањем који тикети ће бити обрађени и "
 "које измене желите да примените на њима."
 
 #: ../manage/trigger.rst:9
-msgid ""
-"In case you are looking for a time-based automation, use :doc:`scheduler "
-"jobs </manage/scheduler>` instead. To execute pre-defined changes manually "
-"via UI (without a condition), use :doc:`/manage/macros` instead."
-msgstr ""
-"У случају да тражите аутоматизацију на основу времена, "
-"користите :doc:`планере </manage/scheduler>`. За извршавање предефинисаних "
-"измена ручно путем интерфејса (без услова), користите :doc:`макрое </manage/"
-"macros>`."
-
-#: ../manage/trigger.rst:14
+#, fuzzy
+#| msgid ""
+#| "Zammad ships one active trigger by default: an auto reply trigger which "
+#| "sends an email to the customer after a new ticket is created. This leads "
+#| "to an article in the ticket. This article only displays the title and the "
+#| "recipient as a text string to maintain clarity in the ticket view. You "
+#| "can disable it, modify it or create new ones for all sorts of automation "
+#| "tasks in the **Triggers** section in the admin settings:"
 msgid ""
 "Zammad ships one active trigger by default: an auto reply trigger which "
-"sends an email to the customer after a new ticket is created. This leads to "
-"an article in the ticket. This article only displays the title and the "
-"recipient as a text string to maintain clarity in the ticket view. You can "
-"disable it, modify it or create new ones for all sorts of automation tasks "
-"in the **Triggers** section in the admin settings:"
+"sends an email to the customer after a new ticket is created. You can "
+"disable it, modify it, or create new ones for all sorts of automation tasks."
 msgstr ""
 "Zammad подразумевано долази са једним укљученим окидачем: аутоматски имејл "
 "одговор кориснику по отварању новог тикета. Ово доводи до новог чланка у "
@@ -14980,412 +14973,15 @@ msgstr ""
 "приказа. Можете га искључити, изменити или додати нове за све врсте "
 "аутоматизованих радњи у одељку **Окидачи** администраторских подешавања:"
 
-#: ../manage/trigger.rst:None
+#: ../manage/trigger.rst:16
 #, fuzzy
-#| msgid "Screenshot of “Triggers” page in admin panel"
-msgid "Screenshot of \"Triggers\" page in admin settings"
-msgstr "Снимак екрана странице „Окидачи“ у административном панелу"
-
-#: ../manage/trigger/how-do-they-work.rst:2
-msgid "How Do Trigger Work"
-msgstr "Како окидачи уствари раде"
-
-#: ../manage/trigger/how-do-they-work.rst:4
-msgid "Triggers consist mainly of three parts:"
-msgstr "Окидачи се углавном састоје од три дела:"
-
-#: ../manage/trigger/how-do-they-work.rst:6
-msgid "**Activator:** defines when and how the trigger has to be evaluated."
-msgstr "**Извршилац:** одређује када и како се окидач извршава."
-
-#: ../manage/trigger/how-do-they-work.rst:7
+#| msgid ""
+#| "Triggers are executed when a ticket is updated by clicking the \"Update\" "
+#| "button. Changing an element which doesn't require an explicit ticket "
+#| "update (e.g. setting a tag) does not necessarily lead to a trigger "
+#| "execution."
 msgid ""
-"**Condition:** defines the tickets for which an action has to be executed "
-"based on attributes."
-msgstr ""
-"**Услов:** одређује тикете над којима се извршава радња у зависности од "
-"вредности атрибута."
-
-#: ../manage/trigger/how-do-they-work.rst:9
-msgid ""
-"**Actions:** define what to change in a ticket which matches the condition."
-msgstr "**Радње:** одређује шта се мења у тикету који се подудара са условом."
-
-#: ../manage/trigger/how-do-they-work.rst:11
-msgid ""
-"Triggers are evaluated in alphabetical order by **name.** In some "
-"situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
-"limitations` for more information."
-msgstr ""
-"Окидачи се извршавају по абецедном реду, према **називу.** У неким "
-"ситуацијама окидачи могу бити погрешан избор, погледајте :doc:`ограничења </"
-"manage/trigger/limitations>` за више информација."
-
-#: ../manage/trigger/how-do-they-work.rst:16
-msgid "Activator"
-msgstr "Извршилац"
-
-#: ../manage/trigger/how-do-they-work.rst:18
-msgid ""
-"Choose between an action- or time-based activator in the **Activated by** "
-"section."
-msgstr ""
-"Одаберите између радње или временског извршиоца у одељку **Активација**."
-
-#: ../manage/trigger/how-do-they-work.rst:None
-msgid "Screenshot of activator section in trigger dialog."
-msgstr "Снимак екрана који приказује одељак извршиоца у дијалогу окидача."
-
-#: ../manage/trigger/how-do-they-work.rst:29
-msgid ""
-"An action based trigger always requires a ticket update to run. This can be "
-"an update by an agent or even internal system updates like updated SLA "
-"times. See the explanation below for more details."
-msgstr ""
-"Окидач радњи увек захтева освежавање тикета пре покретања. Ово може бити "
-"освежавање од стране оператера или чак интерно системско освежавање као ново "
-"SLA време. Погледајте објашњење испод за више детаља."
-
-#: ../manage/trigger/how-do-they-work.rst:39
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
-msgid "Selective"
-msgstr "Селективно"
-
-#: ../manage/trigger/how-do-they-work.rst:34
-msgid ""
-"Checks if any attribute from the condition was updated OR an article was "
-"added and the condition matches. If the attributes of the condition weren't "
-"touched and no new article was added, the trigger doesn't run."
-msgstr ""
-"Проверава да ли је било који атрибут из услова освежен или је додат чланак и "
-"услови се подударају. Уколико атрибути из услова нису измењени и није додат "
-"нови чланак, окидач неће бити покренут."
-
-#: ../manage/trigger/how-do-they-work.rst:38
-msgid ""
-"**Example:** A trigger with a condition for priority **1 low** will run if "
-"the ticket was changed to **1 low**."
-msgstr ""
-"**Пример:** Окидач са условом за приоритетом подешеним на **1 низак** ће "
-"бити покренут ако је приоритет тикета измењен на **1 низак**."
-
-#: ../manage/trigger/how-do-they-work.rst:48
-#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-msgid "Always"
-msgstr "Увек"
-
-#: ../manage/trigger/how-do-they-work.rst:42
-msgid ""
-"Checks if the current state of the ticket matches the condition. This means: "
-"the trigger always runs when the ticket is updated and the condition "
-"matches, no matter what was changed. This can lead to more often executions "
-"of such a trigger."
-msgstr ""
-"Проверава да ли се тренутно стање тикета подудара са условом. Ово значи да "
-"ће окидач увек бити покренут када је тикет освежен и подудара се са условом, "
-"без обзира на врсту измене. Ово може довести до честог извршавања таквог "
-"окидача."
-
-#: ../manage/trigger/how-do-they-work.rst:47
-msgid ""
-"**Example:** A trigger with a condition for priority **1 low** will run if "
-"the ticket was moved to another group while priority was set **1 low**."
-msgstr ""
-"**Пример:** Окидач са условом за приоритетом подешеним на **1 низак** ће "
-"бити покренут ако је тикет премештен у другу групу док је приоритет подешен "
-"на **1 низак**."
-
-#: ../manage/trigger/how-do-they-work.rst:50
-msgid ""
-"If in doubt, use **Selective**. The **Always** action activator can lead to "
-"unexpected behavior, e.g. the trigger runs after internal system changes of "
-"the ticket, which aren't visible in the ticket history."
-msgstr ""
-"Уколико нисте сигурни, користите **Селективно**. Активатор радњи **Увек** "
-"може довести до неочекиваног понашања, нпр. окидач ће бити покренут након "
-"интерних системских измена тикета, које нису видљиве у историјату тикета."
-
-#: ../manage/trigger/how-do-they-work.rst:55
-msgid "Time Event"
-msgstr "Временски догађај"
-
-#: ../manage/trigger/how-do-they-work.rst:57
-msgid "The execution is triggered when one of the following events occur:"
-msgstr "Извршавање се заказује када се стекне један од следећих услова:"
-
-#: ../manage/trigger/how-do-they-work.rst:59
-msgid "Time of a reminder is reached"
-msgstr "Достигнуто је време подсетника"
-
-#: ../manage/trigger/how-do-they-work.rst:60
-msgid "Escalation is reached"
-msgstr "Достигнуто је време ескалације"
-
-#: ../manage/trigger/how-do-they-work.rst:61
-msgid "Escalation warning is reached"
-msgstr "Достигнуто је време ескалације"
-
-#: ../manage/trigger/how-do-they-work.rst:63
-msgid ""
-"When such a time event is reached, the trigger runs if the condition "
-"matches. This is the same behavior as action-based activator's \"always\" "
-"mode."
-msgstr ""
-"Када се достигну овакви временски догађају, окидач ће бити извршен уколико "
-"се услови подударају. Ово је исто понашање као и режим извршиоца „увек“ "
-"заснованог на радњи."
-
-#: ../manage/trigger/how-do-they-work.rst:69
-msgid ""
-"Use one or more attributes and values in a condition, which the tickets have "
-"to match you want to apply changes to. Create your condition in the "
-"**Conditions for affected objects** section:"
-msgstr ""
-"Додајте један или више атрибута и вредности као услов, који онда тикети "
-"морају да постигну да би се извршиле радње. Дефинишите ваш услов у одељку "
-"**Услови за захваћене објекте**:"
-
-#: ../manage/trigger/how-do-they-work.rst:None
-msgid "Screenshot of condition section in trigger dialog."
-msgstr "Снимак екрана који приказује одељак услова у дијалогу окидача."
-
-#: ../manage/trigger/how-do-they-work.rst:83
-msgid ""
-"Define which changes to apply for tickets which match your condition in the "
-"**Execute changes on objects** section:"
-msgstr ""
-"Одређује које измене ће бити извршене над тикетима који се подударају са "
-"вашим условом у одељку **Изврши измене на објектима**:"
-
-#: ../manage/trigger/how-do-they-work.rst:None
-msgid "Screenshot of action section in trigger dialog."
-msgstr "Снимак екрана који приказује одељак радњи у дијалогу окидача."
-
-#: ../manage/trigger/how-do-they-work.rst:91
-msgid ""
-"Certain actions (such as email, SMS and notes) support :doc:`/misc/"
-"variables` (see screenshot above), which can be used to build highly-"
-"customized message templates."
-msgstr ""
-"Одређене радње (као што су имејл, SMS и напомене) "
-"подржавају :doc:`променљиве </misc/variables>` (видите снимак екрана изнад=, "
-"које се могу користити за израду високо прилагођених шаблона порука."
-
-#: ../manage/trigger/how-do-they-work.rst:95
-msgid ""
-"A trigger can do the following things once its conditions have been met:"
-msgstr "Окидач може да уради следеће ствари када се испуне његови услови:"
-
-#: ../manage/trigger/how-do-they-work.rst:106
-msgid "Modify the ticket"
-msgstr "Измена тикета"
-
-#: ../manage/trigger/how-do-they-work.rst:98
-msgid ""
-"Examples: escalate its priority, close it, reassign it, rename it, add tags, "
-"subscribe and unsubscribe specific/all users, etc."
-msgstr ""
-"Примери: ескалирајте приоритет, затворите га, поново доделите, промените "
-"назив, додајте ознаке, претплатите и откажите претплату за одређене/све "
-"кориснике, итд."
-
-#: ../manage/trigger/how-do-they-work.rst:101
-msgid ""
-"Date & time attributes (like **Pending till**) can be specified in "
-"*absolute* or *relative* terms."
-msgstr ""
-"Атрибути датума и времена (као што је **На чекању до**) се могу навести у "
-"*апсолутним* или *релативним* терминима."
-
-#: ../manage/trigger/how-do-they-work.rst:104
-msgid ""
-"You can also combine static text with placeholders for text fields. Remember "
-"that the placeholders' values have to be known during trigger runtime. Learn "
-"more about :doc:`/misc/variables`."
-msgstr ""
-"Такође можете комбиновати статички текст са предефинисаним вредностима за "
-"текстуална поља. Запамтите да предефинисане вредности морају бити познате "
-"током времена извршавања окидача. Сазнајте више о :doc:`/misc/variables`."
-
-#: ../manage/trigger/how-do-they-work.rst:117
-msgid "Send an email or SMS"
-msgstr "Пошаљите имејл или SMS"
-
-#: ../manage/trigger/how-do-they-work.rst:109
-msgid ""
-"Either to the customer, the agent who owns the ticket, or every agent in the "
-"system."
-msgstr ""
-"Клијенту, оператеру који поседује карту или сваком оператеру у систему."
-
-#: ../manage/trigger/how-do-they-work.rst:112
-msgid ""
-"Sending emails allows you to include the attachments of the triggering "
-"article if required."
-msgstr ""
-"Слање имејла вам омогућава да по потреби укључите прилоге окидајућег чланка."
-
-#: ../manage/trigger/how-do-they-work.rst:115
-msgid ""
-"In order to send emails with triggers, you need to configure an email "
-"address for the group, the trigger is working in. If you don't, Zammad will "
-"skip the trigger completely."
-msgstr ""
-"Да бисте слали имејл поруке окидачима, морате да подесите имејл адресу за "
-"групу у којој окидач ради. Ако то не учините, Zammad ће у потпуности "
-"прескочити окидач."
-
-#: ../manage/trigger/how-do-they-work.rst:121
-msgid ":doc:`Fire a webhook </manage/webhook>`"
-msgstr ":doc:`Покрените повратни позив </manage/webhook>`"
-
-#: ../manage/trigger/how-do-they-work.rst:120
-msgid ""
-"Connect Zammad to another web service or application to give it live updates "
-"about new tickets."
-msgstr ""
-"Повежите Zammad са другим веб сервисом или апликацијом да бисте га "
-"обавестили о новим тикетима уживо."
-
-#: ../manage/trigger/how-do-they-work.rst:125
-msgid "Add internal or public notes to the ticket"
-msgstr "Додајте интерне или јавне напомене у тикет"
-
-#: ../manage/trigger/how-do-they-work.rst:124
-msgid ""
-"This allows you to help your agents with specific information if needed. "
-"(e.g. automated changes a trigger applied to the ticket)"
-msgstr ""
-"Ово вам омогућава да својим оператерима помогнете са одређеним информацијама "
-"ако је потребно (нпр. аутоматске промене примењеног окидача на тикет)."
-
-#: ../manage/trigger/how-do-they-work.rst:128
-msgid ":doc:`Run an AI agent </ai/ai-agents>`"
-msgstr ":doc:`Извршавање AI агента </ai/ai-agents>`"
-
-#: ../manage/trigger/how-do-they-work.rst:128
-msgid "Trigger an AI agent to run using triggers."
-msgstr "Покрените извршавање AI агента коришћењем окидача."
-
-#: ../manage/trigger/how-do-they-work.rst:133
-msgid "Localization of Execution Changes"
-msgstr "Локализација при извршавању радње"
-
-#: ../manage/trigger/how-do-they-work.rst:135
-msgid ""
-"The system locale and timezone predefines a default format of date and "
-"timestamp replacement variables. These settings are customizable for "
-"triggers."
-msgstr ""
-"Језик и временска зона система одређују подразумевани формат датума и "
-"времена приликом замене вредности променљивих. Ова подешавања могу бити "
-"прилагођена за окидаче."
-
-#: ../manage/trigger/how-do-they-work.rst:0
-msgid "Screenshot showing localization section of trigger dialog"
-msgstr "Снимак екрана који приказује одељак локализација дијалога окидача"
-
-#: ../manage/trigger/how-do-they-work.rst:142
-msgid ""
-"Best practice is to create single separated localized triggers for each "
-"language/timezone and execute them based on user or organization attributes."
-msgstr ""
-"Најбоља пракса је да се додају појединачни окидачи за сваки језик/временску "
-"зону и да се извршавају на основу атрибута корисника или организације."
-
-#: ../manage/trigger/how-do-they-work.rst:145
-msgid ""
-"The format and timezone of date and timestamp replacement variables is "
-"customizable by the use of the ``dt()`` method. Further on the ``t()`` "
-"method can be used to translated string replacement variables according to "
-"the selected locale language."
-msgstr ""
-"Формат и временска зона вредности променљивих датума и временских ознака "
-"може да се прилагоди коришћењем ``dt()`` функције. Додатно, коришћењем "
-"``t()`` функције може се превести вредност променљиве према одабраном језику."
-
-#: ../manage/trigger/how-do-they-work.rst:147
-msgid ""
-"For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
-"in the :ref:`variables section <variable_localization>`."
-msgstr ""
-"За пример коришћења ``t()`` и ``dt()`` функције, пратите упутства "
-"у :ref:`одељку о променљивама <variable_localization>`."
-
-#: ../manage/trigger/learn-by-example.rst:2
-msgid "Trigger Examples"
-msgstr "Примери окидача"
-
-#: ../manage/trigger/learn-by-example.rst:4
-msgid ""
-"To get you up and running quickly, here are some examples of the kinds of "
-"automation tasks you can set up with triggers."
-msgstr ""
-"Да бисмо вам брзо помогли, ево неколико примера врста задатака "
-"аутоматизације које можете подесити помоћу окидача."
-
-#: ../manage/trigger/learn-by-example.rst:7
-msgid "To learn about triggers in detail, first go to :doc:`/manage/trigger`."
-msgstr ""
-"Да бисте сазнали више о окидачима, прво посетите :doc:`/manage/trigger`."
-
-#: ../manage/trigger/learn-by-example.rst:10
-msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
-msgstr "Сваки пут када Jacob Smith отвори тикет, додели је Sales групи:"
-
-#: ../manage/trigger/learn-by-example.rst:16
-msgid ""
-"Emma Taylor is responsible for all sales internally, so if a new ticket has "
-"the word \"order\" in the subject, assign it to her and make sure it's set "
-"with a high priority:"
-msgstr ""
-"Emma Taylor је одговорна за сву продају интерно, па ако нов тикет има реч "
-"„order“ у теми, доделите јој га и уверите се да је постављен на високи "
-"приоритет:"
-
-#: ../manage/trigger/learn-by-example.rst:26
-msgid ""
-"Send an auto-reply email to any customer who creates a ticket via web, if "
-"the detected language is English:"
-msgstr ""
-"Пошаљите имејл са аутоматским одговором сваком клијенту који отвори тикет "
-"преко веб канала, уколико је откривени језик енглески:"
-
-#: ../manage/trigger/learn-by-example.rst:33
-msgid "📨 **Not all automated messages come from triggers!**"
-msgstr "📨 **Не долазе све аутоматске поруке од окидача!**"
-
-#: ../manage/trigger/learn-by-example.rst:35
-msgid ""
-"For instance, when *agents* receive a system email about a newly created "
-"ticket, that's built into the system itself. If you need to customize those, "
-"you will have to :doc:`manually edit files on your server </manage/trigger/"
-"system-notifications>`."
-msgstr ""
-"На пример, када *оператери* добију системско обавештење о новоотвореном "
-"тикету, механизам је уграђен у сам систем. Ако треба да их прилагодите, "
-"мораћете да :doc:`ручно уредите датотеке на свом серверу </manage/trigger/"
-"system-notifications>`."
-
-#: ../manage/trigger/limitations.rst:4
-msgid ""
-"Triggers are one way of automated actions. In addition, there are "
-"also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
-"channels/email/filters>` based automation. Make sure to have a look at those "
-"too. They can be more suitable, depending on your use case."
-msgstr ""
-"Окидачи су један начин аутоматизованих радњи. Додатно, постоји и "
-"аутоматизација на основу :doc:`планера </manage/scheduler>` "
-"и :doc:`постмастер филтера </channels/email/filters>`. У зависности од ваших "
-"потреба, могу бити корисније."
-
-#: ../manage/trigger/limitations.rst:10
-msgid "Limitations of triggers:"
-msgstr "Ограничења окидача:"
-
-#: ../manage/trigger/limitations.rst:12
-msgid ""
-"Triggers are executed when a ticket is updated by clicking the \"Update\" "
+"Triggers are executed when a ticket is updated by clicking the ``Update`` "
 "button. Changing an element which doesn't require an explicit ticket update "
 "(e.g. setting a tag) does not necessarily lead to a trigger execution."
 msgstr ""
@@ -15393,7 +14989,7 @@ msgstr ""
 "Птомена вредности без освежавања тикета (нпр. додавање ознаке) неће извршити "
 "окидач."
 
-#: ../manage/trigger/limitations.rst:15
+#: ../manage/trigger.rst:20
 #, fuzzy
 #| msgid ""
 #| "If a trigger runs due to an an added article, the context for the trigger "
@@ -15408,130 +15004,488 @@ msgstr ""
 "овај последњи чланак. Окидачи се не избршавају на основу старих стања тикета "
 "и чланака."
 
-#: ../manage/trigger/system-notifications.rst:2
-msgid "System Notifications"
-msgstr "Системска обавештења"
-
-#: ../manage/trigger/system-notifications.rst:4
+#: ../manage/trigger.rst:24
 msgid ""
-"System notifications can only be customized on **self-hosted installations**."
+"In addition to triggers, there are also :doc:`scheduler jobs </manage/"
+"scheduler>` for time-based automation, :doc:`email filters </channels/email/"
+"filters>` for channel-based automation and :doc:`macros </manage/macros>` "
+"for manually applying pre-defined changes via the UI. Depending on your use "
+"case, consider using them instead."
 msgstr ""
-"Системска обавештења могу да се прилагођавају само на **инсталацијама које "
-"сами хостујете**."
 
-#: ../manage/trigger/system-notifications.rst:10
+#: ../manage/trigger.rst:33
+msgid "Triggers consist mainly of three parts:"
+msgstr "Окидачи се углавном састоје од три дела:"
+
+#: ../manage/trigger.rst:35
+msgid "**Activator:** defines when and how the trigger has to be evaluated."
+msgstr "**Извршилац:** одређује када и како се окидач извршава."
+
+#: ../manage/trigger.rst:36
 msgid ""
-"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
-"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
-"itself: if you need to customize them, you will have to modify some of the "
-"files on your server."
+"**Condition:** defines the tickets for which an action has to be executed "
+"based on attributes."
 msgstr ""
-"За разлику од аутоматизованих имејл порука које можете да подесите "
-"помоћу :doc:`окидача </manage/trigger>` или :doc:`планера </manage/"
-"scheduler>`, ова обавештења су уграђена у сам Zammad: ако треба да их "
-"прилагодите, мораћете да измените неке од датотека на вашем серверу."
+"**Услов:** одређује тикете над којима се извршава радња у зависности од "
+"вредности атрибута."
 
-#: ../manage/trigger/system-notifications.rst:16
-msgid "When Are They Sent?"
-msgstr "Када се шаљу?"
-
-#: ../manage/trigger/system-notifications.rst:18
-msgid "**All users** are notified about:"
-msgstr "**Сви корисници** се обавештавају о:"
-
-#: ../manage/trigger/system-notifications.rst:20
-msgid "Password changes"
-msgstr "Променама лозинке"
-
-#: ../manage/trigger/system-notifications.rst:21
+#: ../manage/trigger.rst:38
 msgid ""
-":ref:`Account linking notification <automatic-account-linking-notification>` "
-"on initial login"
+"**Actions:** define what to change in a ticket which matches the condition."
+msgstr "**Радње:** одређује шта се мења у тикету који се подудара са условом."
+
+#: ../manage/trigger.rst:40
+msgid "Triggers are evaluated in alphabetical order by their **name.**"
 msgstr ""
-":ref:`Аутоматском повезивању налога <automatic-account-linking-"
-"notification>` при првој пријави"
 
-#: ../manage/trigger/system-notifications.rst:24
-msgid "**Staff (admins & agents)** are notified of:"
-msgstr "**Особље (администратори и оператери)** добијају обавештења о:"
+#: ../manage/trigger.rst:43
+msgid "Activator"
+msgstr "Извршилац"
 
-#: ../manage/trigger/system-notifications.rst:26
-msgid "Logins from a new device"
-msgstr "Пријављивању са новог уређаја"
-
-#: ../manage/trigger/system-notifications.rst:27
-msgid "Logins from a new country"
-msgstr "Пријављивању из нове земље"
-
-#: ../manage/trigger/system-notifications.rst:29
-msgid "**Agents** are notified about:"
-msgstr "**Оператери** се обавештавају о:"
-
-#: ../manage/trigger/system-notifications.rst:31
-msgid "New tickets"
-msgstr "Нови тикети"
-
-#: ../manage/trigger/system-notifications.rst:32
-msgid "Ticket updates"
-msgstr "Освежавању тикета"
-
-#: ../manage/trigger/system-notifications.rst:33
-msgid "Pending reached tickets"
-msgstr "По достигнутим подсетницима тикета"
-
-#: ../manage/trigger/system-notifications.rst:34
-msgid "SLA violations (before and after the deadline)"
-msgstr "Кршења SLA (пре и после рока)"
-
-#: ../manage/trigger/system-notifications.rst:36
+#: ../manage/trigger.rst:45
 msgid ""
-"Agents can change their notification settings in their :user-docs:`user "
-"profile </extras/profile-and-settings.html>`."
+"Choose between an action- or time-based activator in the **Activated by** "
+"section."
 msgstr ""
-"Оператери могу променити своја подешавања обавештења у свом :user-"
-"docs:`корисничком профилу </extras/profile-and-settings.html>`."
+"Одаберите између радње или временског извршиоца у одељку **Активација**."
 
-#: ../manage/trigger/system-notifications.rst:39
+#: ../manage/trigger.rst:None
+msgid "Screenshot of activator section in trigger dialog."
+msgstr "Снимак екрана који приказује одељак извршиоца у дијалогу окидача."
+
+#: ../manage/trigger.rst:56
 msgid ""
-"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
-"for all tickets where the *pending till* time is reached or SLA violations "
-"exist."
+"An action based trigger always requires a ticket update to run. This can be "
+"an update by an agent or even internal system updates like updated SLA "
+"times. See the explanation below for more details."
 msgstr ""
-"Дневне имејл поруке са подсетницима се шаљу у поноћ (системске временске "
-"зоне Zammad-а) за све тикете у којима је достигнуто *време чекања* или је "
-"прекршен SLA."
+"Окидач радњи увек захтева освежавање тикета пре покретања. Ово може бити "
+"освежавање од стране оператера или чак интерно системско освежавање као ново "
+"SLA време. Погледајте објашњење испод за више детаља."
 
-#: ../manage/trigger/system-notifications.rst:44
-msgid "How Can I Customize Them?"
-msgstr "Како могу да их прилагодим?"
+#: ../manage/trigger.rst:66
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:28
+msgid "Selective"
+msgstr "Селективно"
 
-#: ../manage/trigger/system-notifications.rst:46
+#: ../manage/trigger.rst:61
 msgid ""
-"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
-"various events are stored inside the ``/app/views/mailer`` directory, named "
-"according to the language they're written in. Thus,"
+"Checks if any attribute from the condition was updated OR an article was "
+"added and the condition matches. If the attributes of the condition weren't "
+"touched and no new article was added, the trigger doesn't run."
 msgstr ""
-"Унутар вашег Zammad директоријума (обично ``/opt/zammad``), шаблони имејл "
-"порука за различите догађаје се чувају у директоријуму ``/app/views/"
-"mailer``, названи према језику на којем су написани. Стога,"
+"Проверава да ли је било који атрибут из услова освежен или је додат чланак и "
+"услови се подударају. Уколико атрибути из услова нису измењени и није додат "
+"нови чланак, окидач неће бити покренут."
 
-#: ../manage/trigger/system-notifications.rst:54
+#: ../manage/trigger.rst:65
 msgid ""
-"is the German-language template used to notify agents whenever a new ticket "
-"is created. To modify this template, create another file with the same name "
-"and add a ``.custom`` suffix:"
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was changed to **1 low**."
 msgstr ""
-"је шаблон на немачком језику који се користи за обавештавање оператера кад "
-"год се отвори нов тикет. Да бисте изменили овај шаблон, направите другу "
-"датотеку са истим именом и додајте ``.custom`` суфикс:"
+"**Пример:** Окидач са условом за приоритетом подешеним на **1 низак** ће "
+"бити покренут ако је приоритет тикета измењен на **1 низак**."
 
-#: ../manage/trigger/system-notifications.rst:62
+#: ../manage/trigger.rst:75
+#: ../manage/webhook/examples/generic-notifications-trigger.rst:32
+msgid "Always"
+msgstr "Увек"
+
+#: ../manage/trigger.rst:69
 msgid ""
-"Now, this file will be used instead of the original when sending "
-"notification emails in German."
+"Checks if the current state of the ticket matches the condition. This means: "
+"the trigger always runs when the ticket is updated and the condition "
+"matches, no matter what was changed. This can lead to more often executions "
+"of such a trigger."
 msgstr ""
-"Сада ће се ова датотека користити уместо оригиналне приликом слања имејл "
-"порука са обавештењима на немачком."
+"Проверава да ли се тренутно стање тикета подудара са условом. Ово значи да "
+"ће окидач увек бити покренут када је тикет освежен и подудара се са условом, "
+"без обзира на врсту измене. Ово може довести до честог извршавања таквог "
+"окидача."
+
+#: ../manage/trigger.rst:74
+msgid ""
+"**Example:** A trigger with a condition for priority **1 low** will run if "
+"the ticket was moved to another group while priority was set **1 low**."
+msgstr ""
+"**Пример:** Окидач са условом за приоритетом подешеним на **1 низак** ће "
+"бити покренут ако је тикет премештен у другу групу док је приоритет подешен "
+"на **1 низак**."
+
+#: ../manage/trigger.rst:77
+msgid ""
+"If in doubt, use **Selective**. The **Always** action activator can lead to "
+"unexpected behavior, e.g. the trigger runs after internal system changes of "
+"the ticket, which aren't visible in the ticket history."
+msgstr ""
+"Уколико нисте сигурни, користите **Селективно**. Активатор радњи **Увек** "
+"може довести до неочекиваног понашања, нпр. окидач ће бити покренут након "
+"интерних системских измена тикета, које нису видљиве у историјату тикета."
+
+#: ../manage/trigger.rst:82
+msgid "Time Event"
+msgstr "Временски догађај"
+
+#: ../manage/trigger.rst:84
+msgid "The execution is triggered when one of the following events occur:"
+msgstr "Извршавање се заказује када се стекне један од следећих услова:"
+
+#: ../manage/trigger.rst:86
+msgid "Time of a reminder is reached"
+msgstr "Достигнуто је време подсетника"
+
+#: ../manage/trigger.rst:87
+msgid "Escalation is reached"
+msgstr "Достигнуто је време ескалације"
+
+#: ../manage/trigger.rst:88
+msgid "Escalation warning is reached"
+msgstr "Достигнуто је време ескалације"
+
+#: ../manage/trigger.rst:90
+msgid ""
+"When such a time event is reached, the trigger runs if the condition "
+"matches. This is the same behavior as action-based activator's \"always\" "
+"mode."
+msgstr ""
+"Када се достигну овакви временски догађају, окидач ће бити извршен уколико "
+"се услови подударају. Ово је исто понашање као и режим извршиоца „увек“ "
+"заснованог на радњи."
+
+#: ../manage/trigger.rst:96
+msgid ""
+"Use one or more attributes and values in a condition, which the tickets have "
+"to match you want to apply changes to. Create your condition in the "
+"**Conditions for affected objects** section:"
+msgstr ""
+"Додајте један или више атрибута и вредности као услов, који онда тикети "
+"морају да постигну да би се извршиле радње. Дефинишите ваш услов у одељку "
+"**Услови за захваћене објекте**:"
+
+#: ../manage/trigger.rst:None
+msgid "Screenshot of condition section in trigger dialog."
+msgstr "Снимак екрана који приказује одељак услова у дијалогу окидача."
+
+#: ../manage/trigger.rst:110
+msgid ""
+"Define which changes to apply for tickets which match your condition in the "
+"**Execute changes on objects** section:"
+msgstr ""
+"Одређује које измене ће бити извршене над тикетима који се подударају са "
+"вашим условом у одељку **Изврши измене на објектима**:"
+
+#: ../manage/trigger.rst:None
+msgid "Screenshot of action section in trigger dialog."
+msgstr "Снимак екрана који приказује одељак радњи у дијалогу окидача."
+
+#: ../manage/trigger.rst:118
+#, fuzzy
+#| msgid ""
+#| "Certain actions (such as email, SMS and notes) support :doc:`/misc/"
+#| "variables` (see screenshot above), which can be used to build highly-"
+#| "customized message templates."
+msgid ""
+"Certain actions (such as email, SMS and notes) support :doc:`variables </"
+"misc/variables>` (see screenshot above), which can be used to build highly-"
+"customized message templates."
+msgstr ""
+"Одређене радње (као што су имејл, SMS и напомене) "
+"подржавају :doc:`променљиве </misc/variables>` (видите снимак екрана изнад=, "
+"које се могу користити за израду високо прилагођених шаблона порука."
+
+#: ../manage/trigger.rst:122
+msgid ""
+"A trigger can do the following things once its conditions have been met:"
+msgstr "Окидач може да уради следеће ствари када се испуне његови услови:"
+
+#: ../manage/trigger.rst:133
+msgid "Modify the ticket"
+msgstr "Измена тикета"
+
+#: ../manage/trigger.rst:125
+msgid ""
+"Examples: escalate its priority, close it, reassign it, rename it, add tags, "
+"subscribe and unsubscribe specific/all users, etc."
+msgstr ""
+"Примери: ескалирајте приоритет, затворите га, поново доделите, промените "
+"назив, додајте ознаке, претплатите и откажите претплату за одређене/све "
+"кориснике, итд."
+
+#: ../manage/trigger.rst:128
+msgid ""
+"Date & time attributes (like **Pending till**) can be specified in "
+"*absolute* or *relative* terms."
+msgstr ""
+"Атрибути датума и времена (као што је **На чекању до**) се могу навести у "
+"*апсолутним* или *релативним* терминима."
+
+#: ../manage/trigger.rst:131
+#, fuzzy
+#| msgid ""
+#| "You can also combine static text with placeholders for text fields. "
+#| "Remember that the placeholders' values have to be known during trigger "
+#| "runtime. Learn more about :doc:`/misc/variables`."
+msgid ""
+"You can also combine static text with placeholders for text fields. Remember "
+"that the placeholders' values have to be known during trigger runtime. Learn "
+"more about :doc:`variables </misc/variables>`."
+msgstr ""
+"Такође можете комбиновати статички текст са предефинисаним вредностима за "
+"текстуална поља. Запамтите да предефинисане вредности морају бити познате "
+"током времена извршавања окидача. Сазнајте више о :doc:`/misc/variables`."
+
+#: ../manage/trigger.rst:144
+msgid "Send an email or SMS"
+msgstr "Пошаљите имејл или SMS"
+
+#: ../manage/trigger.rst:136
+msgid ""
+"Either to the customer, the agent who owns the ticket, or every agent in the "
+"system."
+msgstr ""
+"Клијенту, оператеру који поседује карту или сваком оператеру у систему."
+
+#: ../manage/trigger.rst:139
+msgid ""
+"Sending emails allows you to include the attachments of the triggering "
+"article if required."
+msgstr ""
+"Слање имејла вам омогућава да по потреби укључите прилоге окидајућег чланка."
+
+#: ../manage/trigger.rst:142
+msgid ""
+"In order to send emails with triggers, you need to configure an email "
+"address for the group, the trigger is working in. If you don't, Zammad will "
+"skip the trigger completely."
+msgstr ""
+"Да бисте слали имејл поруке окидачима, морате да подесите имејл адресу за "
+"групу у којој окидач ради. Ако то не учините, Zammad ће у потпуности "
+"прескочити окидач."
+
+#: ../manage/trigger.rst:148
+msgid ":doc:`Fire a webhook </manage/webhook>`"
+msgstr ":doc:`Покрените повратни позив </manage/webhook>`"
+
+#: ../manage/trigger.rst:147
+msgid ""
+"Connect Zammad to another web service or application to give it live updates "
+"about new tickets."
+msgstr ""
+"Повежите Zammad са другим веб сервисом или апликацијом да бисте га "
+"обавестили о новим тикетима уживо."
+
+#: ../manage/trigger.rst:152
+msgid "Add internal or public notes to the ticket"
+msgstr "Додајте интерне или јавне напомене у тикет"
+
+#: ../manage/trigger.rst:151
+msgid ""
+"This allows you to help your agents with specific information if needed. "
+"(e.g. automated changes a trigger applied to the ticket)"
+msgstr ""
+"Ово вам омогућава да својим оператерима помогнете са одређеним информацијама "
+"ако је потребно (нпр. аутоматске промене примењеног окидача на тикет)."
+
+#: ../manage/trigger.rst:155
+msgid ":doc:`Run an AI agent </ai/ai-agents>`"
+msgstr ":doc:`Извршавање AI агента </ai/ai-agents>`"
+
+#: ../manage/trigger.rst:155
+msgid "Trigger an AI agent to run using triggers."
+msgstr "Покрените извршавање AI агента коришћењем окидача."
+
+#: ../manage/trigger.rst:158
+msgid "Localization of Execution Changes"
+msgstr "Локализација при извршавању радње"
+
+#: ../manage/trigger.rst:160
+msgid ""
+"The system locale and timezone predefines a default format of date and "
+"timestamp replacement variables. These settings are customizable for "
+"triggers."
+msgstr ""
+"Језик и временска зона система одређују подразумевани формат датума и "
+"времена приликом замене вредности променљивих. Ова подешавања могу бити "
+"прилагођена за окидаче."
+
+#: ../manage/trigger.rst:None
+msgid "Screenshot showing localization section of trigger dialog"
+msgstr "Снимак екрана који приказује одељак локализација дијалога окидача"
+
+#: ../manage/trigger.rst:168
+msgid ""
+"Best practice is to create single separated localized triggers for each "
+"language/timezone and execute them based on user or organization attributes."
+msgstr ""
+"Најбоља пракса је да се додају појединачни окидачи за сваки језик/временску "
+"зону и да се извршавају на основу атрибута корисника или организације."
+
+#: ../manage/trigger.rst:171
+msgid ""
+"The format and timezone of date and timestamp replacement variables is "
+"customizable by the use of the ``dt()`` method. Further on the ``t()`` "
+"method can be used to translated string replacement variables according to "
+"the selected locale language."
+msgstr ""
+"Формат и временска зона вредности променљивих датума и временских ознака "
+"може да се прилагоди коришћењем ``dt()`` функције. Додатно, коришћењем "
+"``t()`` функције може се превести вредност променљиве према одабраном језику."
+
+#: ../manage/trigger.rst:176
+msgid ""
+"For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
+"in the :ref:`variables section <variable_localization>`."
+msgstr ""
+"За пример коришћења ``t()`` и ``dt()`` функције, пратите упутства "
+"у :ref:`одељку о променљивама <variable_localization>`."
+
+#: ../manage/trigger.rst:182
+msgid ""
+"To get you up and running quickly, here are some examples of the kinds of "
+"automation tasks you can set up with triggers."
+msgstr ""
+"Да бисмо вам брзо помогли, ево неколико примера врста задатака "
+"аутоматизације које можете подесити помоћу окидача."
+
+#: ../manage/trigger.rst:189
+#, fuzzy
+#| msgid "Group Assignment Based on Sender Domain"
+msgid "Group assignment based on customer"
+msgstr "Додела групе на основу домена пошиљаоца"
+
+#: ../manage/trigger.rst:186
+#, fuzzy
+#| msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
+msgid ""
+"Any time Jacob Smith creates a ticket, assign it to the \"Sales\" group."
+msgstr "Сваки пут када Jacob Smith отвори тикет, додели је Sales групи:"
+
+#: ../manage/trigger.rst:188
+msgid "Condition: **Customer** *is* *specific user* Jacob Smith"
+msgstr ""
+
+#: ../manage/trigger.rst:189
+msgid "Action: **Group** Sales"
+msgstr ""
+
+#: ../manage/trigger.rst:201
+msgid "Owner assignment based on subject"
+msgstr ""
+
+#: ../manage/trigger.rst:192
+#, fuzzy
+#| msgid ""
+#| "Emma Taylor is responsible for all sales internally, so if a new ticket "
+#| "has the word \"order\" in the subject, assign it to her and make sure "
+#| "it's set with a high priority:"
+msgid ""
+"Emma Taylor is responsible for all sales internally, so if a new ticket has "
+"the word \"order\" in the subject, assign it to her and make sure it's set "
+"with a high priority."
+msgstr ""
+"Emma Taylor је одговорна за сву продају интерно, па ако нов тикет има реч "
+"„order“ у теми, доделите јој га и уверите се да је постављен на високи "
+"приоритет:"
+
+#: ../manage/trigger.rst:196
+msgid "Condition: **Title** *contains* order"
+msgstr ""
+
+#: ../manage/trigger.rst:197
+#, fuzzy
+#| msgid "Action"
+msgid "Action:"
+msgstr "Радња"
+
+#: ../manage/trigger.rst:199
+#, fuzzy
+#| msgid "**Groups**"
+msgid "**Group** Sales"
+msgstr "**Групе**"
+
+#: ../manage/trigger.rst:200
+msgid "**Owner** *specific user* Emma Taylor"
+msgstr ""
+
+#: ../manage/trigger.rst:201
+#, fuzzy
+#| msgid "**Priority:** 3 high"
+msgid "**Priority** 3 high"
+msgstr "**Приоритет:** 3 висок"
+
+#: ../manage/trigger.rst:221
+msgid "Auto-reply based on channel and language"
+msgstr ""
+
+#: ../manage/trigger.rst:204
+#, fuzzy
+#| msgid ""
+#| "Send an auto-reply email to any customer who creates a ticket via web, if "
+#| "the detected language is English:"
+msgid ""
+"Send an auto-reply email to any customer who creates a ticket via web, if "
+"the detected language is English."
+msgstr ""
+"Пошаљите имејл са аутоматским одговором сваком клијенту који отвори тикет "
+"преко веб канала, уколико је откривени језик енглески:"
+
+#: ../manage/trigger.rst:207
+#, fuzzy
+#| msgid "Condition"
+msgid "Condition:"
+msgstr "Услови"
+
+#: ../manage/trigger.rst:209
+#, fuzzy
+#| msgid "Escalation is reached"
+msgid "**Action** *is* created"
+msgstr "Достигнуто је време ескалације"
+
+#: ../manage/trigger.rst:210
+#, fuzzy
+#| msgid "**State:** closed"
+msgid "**State** *is not* closed"
+msgstr "**Стање:** затворено"
+
+#: ../manage/trigger.rst:211
+msgid "**Type** *is* web"
+msgstr ""
+
+#: ../manage/trigger.rst:212
+msgid "**Sender** *is* customer"
+msgstr ""
+
+#: ../manage/trigger.rst:213
+msgid "**Detected Language** *is* English"
+msgstr ""
+
+#: ../manage/trigger.rst:215
+msgid "Action: **Email** (public, recipient: customer; with subject and body)"
+msgstr ""
+
+#: ../manage/trigger.rst:217
+#, fuzzy
+#| msgid "📨 **Not all automated messages come from triggers!**"
+msgid "**Not all automated messages come from triggers!**"
+msgstr "📨 **Не долазе све аутоматске поруке од окидача!**"
+
+#: ../manage/trigger.rst:219
+#, fuzzy
+#| msgid ""
+#| "For instance, when *agents* receive a system email about a newly created "
+#| "ticket, that's built into the system itself. If you need to customize "
+#| "those, you will have to :doc:`manually edit files on your server </manage/"
+#| "trigger/system-notifications>`."
+msgid ""
+"For instance, when *agents* receive a system email about a newly created "
+"ticket, that's built into the system itself. If you need to customize those, "
+"you will have to :doc:`manually edit files on your server </misc/system-"
+"notifications>`."
+msgstr ""
+"На пример, када *оператери* добију системско обавештење о новоотвореном "
+"тикету, механизам је уграђен у сам систем. Ако треба да их прилагодите, "
+"мораћете да :doc:`ручно уредите датотеке на свом серверу </manage/trigger/"
+"system-notifications>`."
 
 #: ../manage/users/index.rst:2
 msgid "Users"
@@ -20205,6 +20159,131 @@ msgid ""
 msgstr ""
 "Сазнајте како вам Zammad-ов стручни режим за услове омогућава да дефинишете "
 "још моћније услове са AND/OR клаузулама."
+
+#: ../misc/system-notifications.rst:2
+msgid "System Notifications"
+msgstr "Системска обавештења"
+
+#: ../misc/system-notifications.rst:4
+msgid ""
+"System notifications can only be customized on **self-hosted installations**."
+msgstr ""
+"Системска обавештења могу да се прилагођавају само на **инсталацијама које "
+"сами хостујете**."
+
+#: ../misc/system-notifications.rst:10
+msgid ""
+"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
+"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
+"itself: if you need to customize them, you will have to modify some of the "
+"files on your server."
+msgstr ""
+"За разлику од аутоматизованих имејл порука које можете да подесите "
+"помоћу :doc:`окидача </manage/trigger>` или :doc:`планера </manage/"
+"scheduler>`, ова обавештења су уграђена у сам Zammad: ако треба да их "
+"прилагодите, мораћете да измените неке од датотека на вашем серверу."
+
+#: ../misc/system-notifications.rst:16
+msgid "When Are They Sent?"
+msgstr "Када се шаљу?"
+
+#: ../misc/system-notifications.rst:18
+msgid "**All users** are notified about:"
+msgstr "**Сви корисници** се обавештавају о:"
+
+#: ../misc/system-notifications.rst:20
+msgid "Password changes"
+msgstr "Променама лозинке"
+
+#: ../misc/system-notifications.rst:21
+msgid ""
+":ref:`Account linking notification <automatic-account-linking-notification>` "
+"on initial login"
+msgstr ""
+":ref:`Аутоматском повезивању налога <automatic-account-linking-"
+"notification>` при првој пријави"
+
+#: ../misc/system-notifications.rst:24
+msgid "**Staff (admins & agents)** are notified of:"
+msgstr "**Особље (администратори и оператери)** добијају обавештења о:"
+
+#: ../misc/system-notifications.rst:26
+msgid "Logins from a new device"
+msgstr "Пријављивању са новог уређаја"
+
+#: ../misc/system-notifications.rst:27
+msgid "Logins from a new country"
+msgstr "Пријављивању из нове земље"
+
+#: ../misc/system-notifications.rst:29
+msgid "**Agents** are notified about:"
+msgstr "**Оператери** се обавештавају о:"
+
+#: ../misc/system-notifications.rst:31
+msgid "New tickets"
+msgstr "Нови тикети"
+
+#: ../misc/system-notifications.rst:32
+msgid "Ticket updates"
+msgstr "Освежавању тикета"
+
+#: ../misc/system-notifications.rst:33
+msgid "Pending reached tickets"
+msgstr "По достигнутим подсетницима тикета"
+
+#: ../misc/system-notifications.rst:34
+msgid "SLA violations (before and after the deadline)"
+msgstr "Кршења SLA (пре и после рока)"
+
+#: ../misc/system-notifications.rst:36
+msgid ""
+"Agents can change their notification settings in their :user-docs:`user "
+"profile </extras/profile-and-settings.html>`."
+msgstr ""
+"Оператери могу променити своја подешавања обавештења у свом :user-"
+"docs:`корисничком профилу </extras/profile-and-settings.html>`."
+
+#: ../misc/system-notifications.rst:39
+msgid ""
+"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
+"for all tickets where the *pending till* time is reached or SLA violations "
+"exist."
+msgstr ""
+"Дневне имејл поруке са подсетницима се шаљу у поноћ (системске временске "
+"зоне Zammad-а) за све тикете у којима је достигнуто *време чекања* или је "
+"прекршен SLA."
+
+#: ../misc/system-notifications.rst:44
+msgid "How Can I Customize Them?"
+msgstr "Како могу да их прилагодим?"
+
+#: ../misc/system-notifications.rst:46
+msgid ""
+"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
+"various events are stored inside the ``/app/views/mailer`` directory, named "
+"according to the language they're written in. Thus,"
+msgstr ""
+"Унутар вашег Zammad директоријума (обично ``/opt/zammad``), шаблони имејл "
+"порука за различите догађаје се чувају у директоријуму ``/app/views/"
+"mailer``, названи према језику на којем су написани. Стога,"
+
+#: ../misc/system-notifications.rst:54
+msgid ""
+"is the German-language template used to notify agents whenever a new ticket "
+"is created. To modify this template, create another file with the same name "
+"and add a ``.custom`` suffix:"
+msgstr ""
+"је шаблон на немачком језику који се користи за обавештавање оператера кад "
+"год се отвори нов тикет. Да бисте изменили овај шаблон, направите другу "
+"датотеку са истим именом и додајте ``.custom`` суфикс:"
+
+#: ../misc/system-notifications.rst:62
+msgid ""
+"Now, this file will be used instead of the original when sending "
+"notification emails in German."
+msgstr ""
+"Сада ће се ова датотека користити уместо оригиналне приликом слања имејл "
+"порука са обавештењима на немачком."
 
 #: ../misc/variables.rst:4
 msgid ""
@@ -26818,10 +26897,16 @@ msgid "If you are wondering what this feature is useful for, some ideas:"
 msgstr "Уколико се питате чему служи ова функција, одговор је:"
 
 #: ../settings/ticket.rst:210
+#, fuzzy
+#| msgid ""
+#| "Use the detected language as a condition attribute in triggers and "
+#| "schedulers. Examples are: to send auto replies in different languages "
+#| "(see :ref:`trigger example <trigger-example-3>`) and to move tickets in a "
+#| "specific language into a specific group."
 msgid ""
 "Use the detected language as a condition attribute in triggers and "
 "schedulers. Examples are: to send auto replies in different languages "
-"(see :ref:`trigger example <trigger-example-3>`) and to move tickets in a "
+"(see :doc:`trigger examples </manage/trigger>`) and to move tickets in a "
 "specific language into a specific group."
 msgstr ""
 "Користите откривени језик као атрибут у условима окидача и планера. Примери "
@@ -35841,6 +35926,65 @@ msgstr "Верзија"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Одаберите број оператера који су вам неопходни у вашој инстанци."
 
+#, fuzzy
+#~| msgid "**State:** closed"
+#~ msgid "**State:** ``closed``"
+#~ msgstr "**Стање:** затворено"
+
+#, fuzzy
+#~| msgid "**Tag:** *add* ``spam``"
+#~ msgid "**Tags:** add ``spam``"
+#~ msgstr "**Ознака:** *додај* ``spam``"
+
+#~ msgid ""
+#~ "In case you are looking for a time-based automation, use :doc:`scheduler "
+#~ "jobs </manage/scheduler>` instead. To execute pre-defined changes "
+#~ "manually via UI (without a condition), use :doc:`/manage/macros` instead."
+#~ msgstr ""
+#~ "У случају да тражите аутоматизацију на основу времена, "
+#~ "користите :doc:`планере </manage/scheduler>`. За извршавање "
+#~ "предефинисаних измена ручно путем интерфејса (без услова), "
+#~ "користите :doc:`макрое </manage/macros>`."
+
+#, fuzzy
+#~| msgid "Screenshot of “Triggers” page in admin panel"
+#~ msgid "Screenshot of \"Triggers\" page in admin settings"
+#~ msgstr "Снимак екрана странице „Окидачи“ у административном панелу"
+
+#~ msgid "How Do Trigger Work"
+#~ msgstr "Како окидачи уствари раде"
+
+#~ msgid ""
+#~ "Triggers are evaluated in alphabetical order by **name.** In some "
+#~ "situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
+#~ "limitations` for more information."
+#~ msgstr ""
+#~ "Окидачи се извршавају по абецедном реду, према **називу.** У неким "
+#~ "ситуацијама окидачи могу бити погрешан избор, погледајте :doc:`ограничења "
+#~ "</manage/trigger/limitations>` за више информација."
+
+#~ msgid "Trigger Examples"
+#~ msgstr "Примери окидача"
+
+#~ msgid ""
+#~ "To learn about triggers in detail, first go to :doc:`/manage/trigger`."
+#~ msgstr ""
+#~ "Да бисте сазнали више о окидачима, прво посетите :doc:`/manage/trigger`."
+
+#~ msgid ""
+#~ "Triggers are one way of automated actions. In addition, there are "
+#~ "also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
+#~ "channels/email/filters>` based automation. Make sure to have a look at "
+#~ "those too. They can be more suitable, depending on your use case."
+#~ msgstr ""
+#~ "Окидачи су један начин аутоматизованих радњи. Додатно, постоји и "
+#~ "аутоматизација на основу :doc:`планера </manage/scheduler>` "
+#~ "и :doc:`постмастер филтера </channels/email/filters>`. У зависности од "
+#~ "ваших потреба, могу бити корисније."
+
+#~ msgid "Limitations of triggers:"
+#~ msgstr "Ограничења окидача:"
+
 #~ msgid ""
 #~ "Activating this feature generates summaries of tickets which are "
 #~ "displayed in a new ticket sidebar tab. This can be a huge time saver when "
@@ -37935,9 +38079,6 @@ msgstr "Одаберите број оператера који су вам не
 #~ msgstr ""
 #~ "Сви следећи SLA имају исте основна подешавања. Могуће је да се не користе "
 #~ "у свим примерима."
-
-#~ msgid "**Groups**"
-#~ msgstr "**Групе**"
 
 #~ msgid "Sales"
 #~ msgstr "Sales"

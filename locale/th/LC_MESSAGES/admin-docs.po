@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 16:30+0200\n"
+"POT-Creation-Date: 2026-06-11 15:10+0200\n"
 "PO-Revision-Date: 2026-06-10 15:06+0000\n"
 "Last-Translator: Sumonchai Wongphithak <sumonchai@gmail.com>\n"
 "Language-Team: Thai <https://translations.zammad.org/projects/documentations/"
@@ -51,7 +51,8 @@ msgstr ""
 msgid "Avatar of an AI agent which shows up in the live user section."
 msgstr ""
 
-#: ../ai/ai-agents.rst:22 ../system/data-privacy.rst:10
+#: ../ai/ai-agents.rst:22 ../manage/trigger.rst:14
+#: ../system/data-privacy.rst:10
 msgid "Important Information"
 msgstr ""
 
@@ -346,7 +347,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../channels/form.rst:219 ../manage/groups/group-permissions.rst:75
-#: ../manage/macros.rst:74
+#: ../manage/macros.rst:74 ../manage/trigger.rst:180
 msgid "Examples"
 msgstr ""
 
@@ -904,8 +905,9 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:25
 #: ../channels/microsoft365-graph/accounts.rst:18 ../manage/macros.rst:31
-#: ../manage/report-profiles.rst:33 ../manage/webhook/add.rst:32
-#: ../misc/first-steps.rst:18 ../system/core-workflows/learn-by-example.rst:36
+#: ../manage/report-profiles.rst:33 ../manage/trigger.rst:31
+#: ../manage/webhook/add.rst:32 ../misc/first-steps.rst:18
+#: ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
 #: ../system/core-workflows/learn-by-example.rst:139
 #: ../system/core-workflows/learn-by-example.rst:198
@@ -1853,11 +1855,11 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/accounts/email-notification.rst:7
-msgid "For more information, see :doc:`/manage/trigger/system-notifications`."
+msgid "For more information, see :doc:`/misc/system-notifications`."
 msgstr ""
 
 #: ../channels/email/accounts/email-notification.rst:9
-#: ../manage/trigger/system-notifications.rst:7
+#: ../misc/system-notifications.rst:7
 msgid ""
 "System notifications are automated emails sent by Zammad for critical system "
 "events, such as account changes or SLA violations."
@@ -2719,7 +2721,7 @@ msgstr ""
 #: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
 #: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
 #: ../channels/email/filters.rst:166 ../channels/email/filters.rst:180
-#: ../manage/trigger/how-do-they-work.rst:67
+#: ../manage/trigger.rst:94
 msgid "Condition"
 msgstr ""
 
@@ -2730,8 +2732,7 @@ msgstr ""
 #: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
 #: ../channels/email/filters.rst:140 ../channels/email/filters.rst:155
 #: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
-#: ../manage/trigger/how-do-they-work.rst:27
-#: ../manage/trigger/how-do-they-work.rst:81
+#: ../manage/trigger.rst:54 ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -4036,7 +4037,6 @@ msgid "Screenshot shows Zammad's form management configuration."
 msgstr ""
 
 #: ../channels/form.rst:16 ../channels/whatsapp/limitations.rst:2
-#: ../manage/trigger/limitations.rst:2
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
@@ -7573,9 +7573,8 @@ msgid ""
 "phone calls for someone more important than you."
 msgstr ""
 
-#: ../manage/groups/index.rst:30 ../manage/trigger.rst:25
-#: ../manage/webhook.rst:43 ../system/core-workflows.rst:26
-#: ../system/objects.rst:32
+#: ../manage/groups/index.rst:30 ../manage/webhook.rst:43
+#: ../system/core-workflows.rst:26 ../system/objects.rst:32
 msgid "Learn more"
 msgstr ""
 
@@ -8331,8 +8330,8 @@ msgid ""
 "applied with just a click. When you or your agents apply the same changes to "
 "many tickets repeatedly, you can bundle those changes in a macro to apply "
 "them by executing it. To add or edit macros in Zammad's admin settings under "
-"**Manage > Macros**, you need the ``admin.macro`` permission. For action- or "
-"time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
+"*Manage > Macros*, the permission ``admin.macro`` is required. For action- "
+"or time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
 "and :doc:`schedulers <scheduler>`."
 msgstr ""
 
@@ -8443,47 +8442,43 @@ msgstr ""
 msgid "Choose **inactive** to disable this macro without deleting it."
 msgstr ""
 
-#: ../manage/macros.rst:76
-msgid "Find examples of useful macros below."
-msgstr ""
-
-#: ../manage/macros.rst:79
+#: ../manage/macros.rst:77
 msgid "Mark Ticket as Spam"
 msgstr ""
 
-#: ../manage/macros.rst:81
+#: ../manage/macros.rst:79
 msgid ""
 "If you deal with a lot of spam, you can set up a macro that applies the "
 "following changes to a ticket:"
 msgstr ""
 
-#: ../manage/macros.rst:84
-msgid "**State:** ``closed``"
+#: ../manage/macros.rst:82
+msgid "**State** closed"
 msgstr ""
 
-#: ../manage/macros.rst:85
-msgid "**Tags:** add ``spam``"
+#: ../manage/macros.rst:83
+msgid "**Tags** *add* spam"
 msgstr ""
 
-#: ../manage/macros.rst:86 ../manage/macros.rst:107
-msgid "**Owner:** current user"
+#: ../manage/macros.rst:84 ../manage/macros.rst:105
+msgid "**Owner** *current user*"
 msgstr ""
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing spam macro configuration"
 msgstr ""
 
-#: ../manage/macros.rst:93
+#: ../manage/macros.rst:91
 msgid ""
 "Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
 "unwanted tickets."
 msgstr ""
 
-#: ../manage/macros.rst:97
+#: ../manage/macros.rst:95
 msgid "Postpone Ticket for a Fixed Time"
 msgstr ""
 
-#: ../manage/macros.rst:99
+#: ../manage/macros.rst:97
 msgid ""
 "Setting a ticket's state to *pending reminder* normally requires two steps: "
 "first select the state, then select a date. You can bundle this into a macro "
@@ -8491,17 +8486,16 @@ msgid ""
 "seven days later):"
 msgstr ""
 
+#: ../manage/macros.rst:102
+msgid "**Note** Postponing ticket for 7 days. (internal visibility)"
+msgstr ""
+
+#: ../manage/macros.rst:103
+msgid "**State** pending reminder"
+msgstr ""
+
 #: ../manage/macros.rst:104
-msgid ""
-"**Note:** ``\"Postponing ticket for 7 days.\"`` (🔒 internal visibility only)"
-msgstr ""
-
-#: ../manage/macros.rst:105
-msgid "**State:** ``pending reminder``"
-msgstr ""
-
-#: ../manage/macros.rst:106
-msgid "**Pending Till:** ``relative / 7 / days``"
+msgid "**Pending Till** *relative* 7 Day(s)"
 msgstr ""
 
 #: ../manage/macros.rst:None
@@ -10262,7 +10256,7 @@ msgid "“Login detected from a new location” emails."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:0
-msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
+msgid "To learn more, see :doc:`/misc/system-notifications`."
 msgstr ""
 
 #: ../manage/roles/permissions.rst:250
@@ -11719,105 +11713,107 @@ msgid ""
 "Triggers are one way to automate Zammad. You can create *if this then that* "
 "rules by defining which tickets should get changed and which changes you "
 "want to apply to them. To manage triggers in Zammad's admin settings under "
-"*Manage > Trigger*, you need the permission ``admin.trigger``."
+"*Manage > Trigger*, the permission ``admin.trigger`` is required."
 msgstr ""
 
 #: ../manage/trigger.rst:9
 msgid ""
-"In case you are looking for a time-based automation, use :doc:`scheduler "
-"jobs </manage/scheduler>` instead. To execute pre-defined changes manually "
-"via UI (without a condition), use :doc:`/manage/macros` instead."
-msgstr ""
-
-#: ../manage/trigger.rst:14
-msgid ""
 "Zammad ships one active trigger by default: an auto reply trigger which "
-"sends an email to the customer after a new ticket is created. This leads to "
-"an article in the ticket. This article only displays the title and the "
-"recipient as a text string to maintain clarity in the ticket view. You can "
-"disable it, modify it or create new ones for all sorts of automation tasks "
-"in the **Triggers** section in the admin settings:"
+"sends an email to the customer after a new ticket is created. You can "
+"disable it, modify it, or create new ones for all sorts of automation tasks."
 msgstr ""
 
-#: ../manage/trigger.rst:None
-msgid "Screenshot of \"Triggers\" page in admin settings"
+#: ../manage/trigger.rst:16
+msgid ""
+"Triggers are executed when a ticket is updated by clicking the ``Update`` "
+"button. Changing an element which doesn't require an explicit ticket update "
+"(e.g. setting a tag) does not necessarily lead to a trigger execution."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:2
-msgid "How Do Trigger Work"
+#: ../manage/trigger.rst:20
+msgid ""
+"If a trigger runs due to an added article, the context for the trigger is "
+"always this last article. Triggers aren't running based on older ticket "
+"states or articles."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:4
+#: ../manage/trigger.rst:24
+msgid ""
+"In addition to triggers, there are also :doc:`scheduler jobs </manage/"
+"scheduler>` for time-based automation, :doc:`email filters </channels/email/"
+"filters>` for channel-based automation and :doc:`macros </manage/macros>` "
+"for manually applying pre-defined changes via the UI. Depending on your use "
+"case, consider using them instead."
+msgstr ""
+
+#: ../manage/trigger.rst:33
 msgid "Triggers consist mainly of three parts:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:6
+#: ../manage/trigger.rst:35
 msgid "**Activator:** defines when and how the trigger has to be evaluated."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:7
+#: ../manage/trigger.rst:36
 msgid ""
 "**Condition:** defines the tickets for which an action has to be executed "
 "based on attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:9
+#: ../manage/trigger.rst:38
 msgid ""
 "**Actions:** define what to change in a ticket which matches the condition."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:11
-msgid ""
-"Triggers are evaluated in alphabetical order by **name.** In some "
-"situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
-"limitations` for more information."
+#: ../manage/trigger.rst:40
+msgid "Triggers are evaluated in alphabetical order by their **name.**"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:16
+#: ../manage/trigger.rst:43
 msgid "Activator"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:18
+#: ../manage/trigger.rst:45
 msgid ""
 "Choose between an action- or time-based activator in the **Activated by** "
 "section."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of activator section in trigger dialog."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:29
+#: ../manage/trigger.rst:56
 msgid ""
 "An action based trigger always requires a ticket update to run. This can be "
 "an update by an agent or even internal system updates like updated SLA "
 "times. See the explanation below for more details."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:39
+#: ../manage/trigger.rst:66
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:28
 msgid "Selective"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:34
+#: ../manage/trigger.rst:61
 msgid ""
 "Checks if any attribute from the condition was updated OR an article was "
 "added and the condition matches. If the attributes of the condition weren't "
 "touched and no new article was added, the trigger doesn't run."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:38
+#: ../manage/trigger.rst:65
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was changed to **1 low**."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:48
+#: ../manage/trigger.rst:75
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 msgid "Always"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:42
+#: ../manage/trigger.rst:69
 msgid ""
 "Checks if the current state of the ticket matches the condition. This means: "
 "the trigger always runs when the ticket is updated and the condition "
@@ -11825,175 +11821,175 @@ msgid ""
 "of such a trigger."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:47
+#: ../manage/trigger.rst:74
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was moved to another group while priority was set **1 low**."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:50
+#: ../manage/trigger.rst:77
 msgid ""
 "If in doubt, use **Selective**. The **Always** action activator can lead to "
 "unexpected behavior, e.g. the trigger runs after internal system changes of "
 "the ticket, which aren't visible in the ticket history."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:55
+#: ../manage/trigger.rst:82
 msgid "Time Event"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:57
+#: ../manage/trigger.rst:84
 msgid "The execution is triggered when one of the following events occur:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:59
+#: ../manage/trigger.rst:86
 msgid "Time of a reminder is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:60
+#: ../manage/trigger.rst:87
 msgid "Escalation is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:61
+#: ../manage/trigger.rst:88
 msgid "Escalation warning is reached"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:63
+#: ../manage/trigger.rst:90
 msgid ""
 "When such a time event is reached, the trigger runs if the condition "
 "matches. This is the same behavior as action-based activator's \"always\" "
 "mode."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:69
+#: ../manage/trigger.rst:96
 msgid ""
 "Use one or more attributes and values in a condition, which the tickets have "
 "to match you want to apply changes to. Create your condition in the "
 "**Conditions for affected objects** section:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of condition section in trigger dialog."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:83
+#: ../manage/trigger.rst:110
 msgid ""
 "Define which changes to apply for tickets which match your condition in the "
 "**Execute changes on objects** section:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of action section in trigger dialog."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:91
+#: ../manage/trigger.rst:118
 msgid ""
-"Certain actions (such as email, SMS and notes) support :doc:`/misc/"
-"variables` (see screenshot above), which can be used to build highly-"
+"Certain actions (such as email, SMS and notes) support :doc:`variables </"
+"misc/variables>` (see screenshot above), which can be used to build highly-"
 "customized message templates."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:95
+#: ../manage/trigger.rst:122
 msgid ""
 "A trigger can do the following things once its conditions have been met:"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:106
+#: ../manage/trigger.rst:133
 msgid "Modify the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:98
+#: ../manage/trigger.rst:125
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
 "subscribe and unsubscribe specific/all users, etc."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:101
+#: ../manage/trigger.rst:128
 msgid ""
 "Date & time attributes (like **Pending till**) can be specified in "
 "*absolute* or *relative* terms."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:104
+#: ../manage/trigger.rst:131
 msgid ""
 "You can also combine static text with placeholders for text fields. Remember "
 "that the placeholders' values have to be known during trigger runtime. Learn "
-"more about :doc:`/misc/variables`."
+"more about :doc:`variables </misc/variables>`."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger.rst:144
 msgid "Send an email or SMS"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:109
+#: ../manage/trigger.rst:136
 msgid ""
 "Either to the customer, the agent who owns the ticket, or every agent in the "
 "system."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:112
+#: ../manage/trigger.rst:139
 msgid ""
 "Sending emails allows you to include the attachments of the triggering "
 "article if required."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:115
+#: ../manage/trigger.rst:142
 msgid ""
 "In order to send emails with triggers, you need to configure an email "
 "address for the group, the trigger is working in. If you don't, Zammad will "
 "skip the trigger completely."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:121
+#: ../manage/trigger.rst:148
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:120
+#: ../manage/trigger.rst:147
 msgid ""
 "Connect Zammad to another web service or application to give it live updates "
 "about new tickets."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:125
+#: ../manage/trigger.rst:152
 msgid "Add internal or public notes to the ticket"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:124
+#: ../manage/trigger.rst:151
 msgid ""
 "This allows you to help your agents with specific information if needed. "
 "(e.g. automated changes a trigger applied to the ticket)"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:128
+#: ../manage/trigger.rst:155
 msgid ":doc:`Run an AI agent </ai/ai-agents>`"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:128
+#: ../manage/trigger.rst:155
 msgid "Trigger an AI agent to run using triggers."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:133
+#: ../manage/trigger.rst:158
 msgid "Localization of Execution Changes"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:135
+#: ../manage/trigger.rst:160
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
 "triggers."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:0
+#: ../manage/trigger.rst:None
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:142
+#: ../manage/trigger.rst:168
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:145
+#: ../manage/trigger.rst:171
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -12001,184 +11997,114 @@ msgid ""
 "the selected locale language."
 msgstr ""
 
-#: ../manage/trigger/how-do-they-work.rst:147
+#: ../manage/trigger.rst:176
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:2
-msgid "Trigger Examples"
-msgstr ""
-
-#: ../manage/trigger/learn-by-example.rst:4
+#: ../manage/trigger.rst:182
 msgid ""
 "To get you up and running quickly, here are some examples of the kinds of "
 "automation tasks you can set up with triggers."
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:7
-msgid "To learn about triggers in detail, first go to :doc:`/manage/trigger`."
+#: ../manage/trigger.rst:189
+msgid "Group assignment based on customer"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:10
-msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
+#: ../manage/trigger.rst:186
+msgid ""
+"Any time Jacob Smith creates a ticket, assign it to the \"Sales\" group."
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:16
+#: ../manage/trigger.rst:188
+msgid "Condition: **Customer** *is* *specific user* Jacob Smith"
+msgstr ""
+
+#: ../manage/trigger.rst:189
+msgid "Action: **Group** Sales"
+msgstr ""
+
+#: ../manage/trigger.rst:201
+msgid "Owner assignment based on subject"
+msgstr ""
+
+#: ../manage/trigger.rst:192
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
-"with a high priority:"
+"with a high priority."
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger.rst:196
+msgid "Condition: **Title** *contains* order"
+msgstr ""
+
+#: ../manage/trigger.rst:197
+msgid "Action:"
+msgstr ""
+
+#: ../manage/trigger.rst:199
+msgid "**Group** Sales"
+msgstr ""
+
+#: ../manage/trigger.rst:200
+msgid "**Owner** *specific user* Emma Taylor"
+msgstr ""
+
+#: ../manage/trigger.rst:201
+msgid "**Priority** 3 high"
+msgstr ""
+
+#: ../manage/trigger.rst:221
+msgid "Auto-reply based on channel and language"
+msgstr ""
+
+#: ../manage/trigger.rst:204
 msgid ""
 "Send an auto-reply email to any customer who creates a ticket via web, if "
-"the detected language is English:"
+"the detected language is English."
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:33
-msgid "📨 **Not all automated messages come from triggers!**"
+#: ../manage/trigger.rst:207
+msgid "Condition:"
 msgstr ""
 
-#: ../manage/trigger/learn-by-example.rst:35
+#: ../manage/trigger.rst:209
+msgid "**Action** *is* created"
+msgstr ""
+
+#: ../manage/trigger.rst:210
+msgid "**State** *is not* closed"
+msgstr ""
+
+#: ../manage/trigger.rst:211
+msgid "**Type** *is* web"
+msgstr ""
+
+#: ../manage/trigger.rst:212
+msgid "**Sender** *is* customer"
+msgstr ""
+
+#: ../manage/trigger.rst:213
+msgid "**Detected Language** *is* English"
+msgstr ""
+
+#: ../manage/trigger.rst:215
+msgid "Action: **Email** (public, recipient: customer; with subject and body)"
+msgstr ""
+
+#: ../manage/trigger.rst:217
+msgid "**Not all automated messages come from triggers!**"
+msgstr ""
+
+#: ../manage/trigger.rst:219
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
-"you will have to :doc:`manually edit files on your server </manage/trigger/"
-"system-notifications>`."
-msgstr ""
-
-#: ../manage/trigger/limitations.rst:4
-msgid ""
-"Triggers are one way of automated actions. In addition, there are "
-"also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
-"channels/email/filters>` based automation. Make sure to have a look at those "
-"too. They can be more suitable, depending on your use case."
-msgstr ""
-
-#: ../manage/trigger/limitations.rst:10
-msgid "Limitations of triggers:"
-msgstr ""
-
-#: ../manage/trigger/limitations.rst:12
-msgid ""
-"Triggers are executed when a ticket is updated by clicking the \"Update\" "
-"button. Changing an element which doesn't require an explicit ticket update "
-"(e.g. setting a tag) does not necessarily lead to a trigger execution."
-msgstr ""
-
-#: ../manage/trigger/limitations.rst:15
-msgid ""
-"If a trigger runs due to an added article, the context for the trigger is "
-"always this last article. Triggers aren't running based on older ticket "
-"states or articles."
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:2
-msgid "System Notifications"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:4
-msgid ""
-"System notifications can only be customized on **self-hosted installations**."
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:10
-msgid ""
-"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
-"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
-"itself: if you need to customize them, you will have to modify some of the "
-"files on your server."
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:16
-msgid "When Are They Sent?"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:18
-msgid "**All users** are notified about:"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:20
-msgid "Password changes"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:21
-msgid ""
-":ref:`Account linking notification <automatic-account-linking-notification>` "
-"on initial login"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:24
-msgid "**Staff (admins & agents)** are notified of:"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:26
-msgid "Logins from a new device"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:27
-msgid "Logins from a new country"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:29
-msgid "**Agents** are notified about:"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:31
-msgid "New tickets"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:32
-#, fuzzy
-msgid "Ticket updates"
-msgstr "คุณลักษณะของตั๋ว"
-
-#: ../manage/trigger/system-notifications.rst:33
-msgid "Pending reached tickets"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:34
-msgid "SLA violations (before and after the deadline)"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:36
-msgid ""
-"Agents can change their notification settings in their :user-docs:`user "
-"profile </extras/profile-and-settings.html>`."
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:39
-msgid ""
-"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
-"for all tickets where the *pending till* time is reached or SLA violations "
-"exist."
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:44
-msgid "How Can I Customize Them?"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:46
-msgid ""
-"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
-"various events are stored inside the ``/app/views/mailer`` directory, named "
-"according to the language they're written in. Thus,"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:54
-msgid ""
-"is the German-language template used to notify agents whenever a new ticket "
-"is created. To modify this template, create another file with the same name "
-"and add a ``.custom`` suffix:"
-msgstr ""
-
-#: ../manage/trigger/system-notifications.rst:62
-msgid ""
-"Now, this file will be used instead of the original when sending "
-"notification emails in German."
+"you will have to :doc:`manually edit files on your server </misc/system-"
+"notifications>`."
 msgstr ""
 
 #: ../manage/users/index.rst:2
@@ -15888,6 +15814,111 @@ msgstr ""
 msgid ""
 "Learn how Zammad's expert mode for conditions allows you to create even more "
 "powerful conditions with AND/OR relations."
+msgstr ""
+
+#: ../misc/system-notifications.rst:2
+msgid "System Notifications"
+msgstr ""
+
+#: ../misc/system-notifications.rst:4
+msgid ""
+"System notifications can only be customized on **self-hosted installations**."
+msgstr ""
+
+#: ../misc/system-notifications.rst:10
+msgid ""
+"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
+"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
+"itself: if you need to customize them, you will have to modify some of the "
+"files on your server."
+msgstr ""
+
+#: ../misc/system-notifications.rst:16
+msgid "When Are They Sent?"
+msgstr ""
+
+#: ../misc/system-notifications.rst:18
+msgid "**All users** are notified about:"
+msgstr ""
+
+#: ../misc/system-notifications.rst:20
+msgid "Password changes"
+msgstr ""
+
+#: ../misc/system-notifications.rst:21
+msgid ""
+":ref:`Account linking notification <automatic-account-linking-notification>` "
+"on initial login"
+msgstr ""
+
+#: ../misc/system-notifications.rst:24
+msgid "**Staff (admins & agents)** are notified of:"
+msgstr ""
+
+#: ../misc/system-notifications.rst:26
+msgid "Logins from a new device"
+msgstr ""
+
+#: ../misc/system-notifications.rst:27
+msgid "Logins from a new country"
+msgstr ""
+
+#: ../misc/system-notifications.rst:29
+msgid "**Agents** are notified about:"
+msgstr ""
+
+#: ../misc/system-notifications.rst:31
+msgid "New tickets"
+msgstr ""
+
+#: ../misc/system-notifications.rst:32
+#, fuzzy
+msgid "Ticket updates"
+msgstr "คุณลักษณะของตั๋ว"
+
+#: ../misc/system-notifications.rst:33
+msgid "Pending reached tickets"
+msgstr ""
+
+#: ../misc/system-notifications.rst:34
+msgid "SLA violations (before and after the deadline)"
+msgstr ""
+
+#: ../misc/system-notifications.rst:36
+msgid ""
+"Agents can change their notification settings in their :user-docs:`user "
+"profile </extras/profile-and-settings.html>`."
+msgstr ""
+
+#: ../misc/system-notifications.rst:39
+msgid ""
+"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
+"for all tickets where the *pending till* time is reached or SLA violations "
+"exist."
+msgstr ""
+
+#: ../misc/system-notifications.rst:44
+msgid "How Can I Customize Them?"
+msgstr ""
+
+#: ../misc/system-notifications.rst:46
+msgid ""
+"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
+"various events are stored inside the ``/app/views/mailer`` directory, named "
+"according to the language they're written in. Thus,"
+msgstr ""
+
+#: ../misc/system-notifications.rst:54
+msgid ""
+"is the German-language template used to notify agents whenever a new ticket "
+"is created. To modify this template, create another file with the same name "
+"and add a ``.custom`` suffix:"
+msgstr ""
+
+#: ../misc/system-notifications.rst:62
+msgid ""
+"Now, this file will be used instead of the original when sending "
+"notification emails in German."
 msgstr ""
 
 #: ../misc/variables.rst:4
@@ -21316,7 +21347,7 @@ msgstr ""
 msgid ""
 "Use the detected language as a condition attribute in triggers and "
 "schedulers. Examples are: to send auto replies in different languages "
-"(see :ref:`trigger example <trigger-example-3>`) and to move tickets in a "
+"(see :doc:`trigger examples </manage/trigger>`) and to move tickets in a "
 "specific language into a specific group."
 msgstr ""
 
