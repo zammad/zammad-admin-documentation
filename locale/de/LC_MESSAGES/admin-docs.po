@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 16:30+0200\n"
-"PO-Revision-Date: 2026-06-10 15:01+0000\n"
-"Last-Translator: Gerrit <github@gmail.arghs.de>\n"
+"POT-Creation-Date: 2026-06-11 15:10+0200\n"
+"PO-Revision-Date: 2026-06-13 11:52+0000\n"
+"Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
 "Language: de\n"
@@ -64,7 +64,8 @@ msgstr ""
 msgid "Avatar of an AI agent which shows up in the live user section."
 msgstr "Avatar eines KI-Agenten, der im Live-Benutzer-Bereich angezeigt wird."
 
-#: ../ai/ai-agents.rst:22 ../system/data-privacy.rst:10
+#: ../ai/ai-agents.rst:22 ../manage/trigger.rst:14
+#: ../system/data-privacy.rst:10
 msgid "Important Information"
 msgstr "Wichtige Informationen"
 
@@ -460,7 +461,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:193 ../channels/email/filters.rst:103
 #: ../channels/form.rst:219 ../manage/groups/group-permissions.rst:75
-#: ../manage/macros.rst:74
+#: ../manage/macros.rst:74 ../manage/trigger.rst:180
 msgid "Examples"
 msgstr "Beispiele"
 
@@ -908,6 +909,16 @@ msgid ""
 "so. Agents get notified for a new AI summary by a pulsing dot as indicator "
 "on the summary sidebar tab."
 msgstr ""
+"Wenn Sie diese Funktion aktivieren, werden Zusammenfassungen von Tickets in "
+"einem neuen Seitenleisten-Tab erstellt. Dies kann eine enorme Zeitersparnis "
+"sein, wenn Sie mit großen Tickets und/oder vielen Übergaben zwischen Agenten "
+"zu tun haben. Um diese Funktion unter *KI > Ticket-Zusammenfassung* zu "
+"konfigurieren, benötigen Sie die Berechtigung "
+"``admin.ai_assistance_ticket_summary``. Stellen Sie sicher, dass Sie "
+"einen :doc:`KI Anbieter <provider>` konfigurieren, bevor Sie die Funktion "
+"aktivieren. Andernfalls werden Sie durch eine Warnmeldung darauf "
+"hingewiesen. Agenten werden über eine neue KI-Zusammenfassung durch einen "
+"pulsierenden Punkt als Indikator auf dem Seitenleisten-Tab informiert."
 
 #: ../ai/summary.rst:None
 msgid "Screenshot shows AI ticket summary configuration"
@@ -925,28 +936,21 @@ msgstr ""
 "<provider>` an."
 
 #: ../ai/summary.rst:22
-#, fuzzy
-#| msgid "Image Service"
 msgid "Summary Services"
-msgstr "Bilder-Dienst"
+msgstr "Bestandteile der Zusammenfassung"
 
 #: ../ai/summary.rst:24
-#, fuzzy
-#| msgid ""
-#| "If you activate this feature, **Customer Intent** and **Conversation "
-#| "Summary** are enabled by default. You can choose to activate **Open "
-#| "Questions**, **Upcoming Events** and **Customer Sentiment**, depending on "
-#| "your use case."
 msgid ""
 "Configure what the summary should include. After activating the feature, "
 "**Customer Intent** and **Conversation Summary** are enabled by default. You "
 "can choose to activate **Open Questions**, **Upcoming Events** and "
 "**Customer Sentiment**, depending on your use case."
 msgstr ""
-"Wenn Sie diese Funktion aktivieren, sind **Anliegen des Kunden** und "
-"**Zusammenfassung der Konversation** standardmäßig aktiviert. Je nach "
-"Anwendungsfall können Sie **Offene Fragen**, **Anstehende Ereignisse** und "
-"**Stimmung des Kunden** aktivieren."
+"Legen Sie fest, was die Zusammenfassung enthalten soll. Nach der Aktivierung "
+"der Funktion sind **Anliegen des Kunden** und **Zusammenfassung der "
+"Konversation** standardmäßig aktiviert. Sie können **Offene Fragen**, "
+"**Anstehende Ereignisse** und **Stimmung des Kunden** aktivieren, abhängig "
+"von Ihrem Anwendungsfall."
 
 #: ../ai/summary.rst:30 ../manage/groups/settings.rst:99
 msgid "Summary Generation"
@@ -958,12 +962,14 @@ msgid ""
 "since the last summary generation. You can choose the timing of the "
 "generation or hide the sidebar tab at all via the dropdown:"
 msgstr ""
+"Im Allgemeinen wird die Ticket-Zusammenfassung nur angestoßen, wenn das "
+"Ticket seit der letzten Erstellung der Zusammenfassung aktualisiert wurde. "
+"Sie können den Zeitpunkt der Erstellung wählen oder den Seitenleisten-Tab "
+"über das Dropdown-Menü ganz ausblenden:"
 
 #: ../ai/summary.rst:39
-#, fuzzy
-#| msgid "on Ticket creation"
 msgid "On ticket detail opening"
-msgstr "bei Ticketerstellung"
+msgstr "Beim Öffnen der Ticket-Details"
 
 #: ../ai/summary.rst:37
 msgid ""
@@ -971,10 +977,13 @@ msgid ""
 "comfortable for agents as the summary is already present or at least "
 "triggered when the agent wants to read it."
 msgstr ""
+"Die Zusammenfassung wird erstellt, wenn ein Agent das Ticket öffnet. Das "
+"kann für Agenten bequemer sein, da die Zusammenfassung bereits vorhanden ist "
+"oder zumindest angestoßen wurde, wenn der Agent sie lesen möchte."
 
 #: ../ai/summary.rst:44
 msgid "On ticket summary sidebar activation"
-msgstr ""
+msgstr "Bei Aktivierung der Seitenleiste der Ticket-Zusammenfassung"
 
 #: ../ai/summary.rst:42
 msgid ""
@@ -982,10 +991,14 @@ msgid ""
 "viewed. However, it can happen that an agent has to wait for the summary to "
 "be generated, depending on the ticket size and the resources."
 msgstr ""
+"Diese Option kann Rechenressourcen einsparen, wenn die KI-Zusammenfassung "
+"nicht immer angezeigt wird. Es kann jedoch vorkommen, dass ein Agent auf die "
+"Erstellung der Zusammenfassung warten muss, je nach Größe des Tickets und "
+"der verfügbaren Ressourcen."
 
 #: ../ai/summary.rst:49
 msgid "Hide ticket summary sidebar"
-msgstr ""
+msgstr "Seitenleiste der Ticket-Zusammenfassung ausblenden"
 
 #: ../ai/summary.rst:47
 msgid ""
@@ -994,6 +1007,11 @@ msgid ""
 "settings </manage/groups/settings>` section about where to configure the "
 "summary for each group individually."
 msgstr ""
+"Damit wird der Seitenleisten-Tab der Zusammenfassung komplett ausgeblendet. "
+"Diese Option kann nützlich sein, wenn Sie die Zusammenfassung nur für "
+"bestimmte Gruppen aktivieren möchten. Lesen Sie "
+"unter :doc:`Gruppeneinstellungen </manage/groups/settings>` nach, wo Sie die "
+"Zusammenfassung für jede Gruppe einzeln konfigurieren können."
 
 #: ../ai/writing-assistant.rst:2
 msgid "Writing Assistant"
@@ -1204,8 +1222,9 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:92 ../channels/chat.rst:25
 #: ../channels/microsoft365-graph/accounts.rst:18 ../manage/macros.rst:31
-#: ../manage/report-profiles.rst:33 ../manage/webhook/add.rst:32
-#: ../misc/first-steps.rst:18 ../system/core-workflows/learn-by-example.rst:36
+#: ../manage/report-profiles.rst:33 ../manage/trigger.rst:31
+#: ../manage/webhook/add.rst:32 ../misc/first-steps.rst:18
+#: ../system/core-workflows/learn-by-example.rst:36
 #: ../system/core-workflows/learn-by-example.rst:91
 #: ../system/core-workflows/learn-by-example.rst:139
 #: ../system/core-workflows/learn-by-example.rst:198
@@ -2408,13 +2427,12 @@ msgstr ""
 "konfiguriert werden."
 
 #: ../channels/email/accounts/email-notification.rst:7
-msgid "For more information, see :doc:`/manage/trigger/system-notifications`."
+msgid "For more information, see :doc:`/misc/system-notifications`."
 msgstr ""
-"Weitere Informationen finden Sie unter :doc:`/manage/trigger/system-"
-"notifications`."
+"Weitere Informationen finden Sie unter :doc:`/misc/system-notifications`."
 
 #: ../channels/email/accounts/email-notification.rst:9
-#: ../manage/trigger/system-notifications.rst:7
+#: ../misc/system-notifications.rst:7
 msgid ""
 "System notifications are automated emails sent by Zammad for critical system "
 "events, such as account changes or SLA violations."
@@ -3504,7 +3522,7 @@ msgstr ""
 #: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
 #: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
 #: ../channels/email/filters.rst:166 ../channels/email/filters.rst:180
-#: ../manage/trigger/how-do-they-work.rst:67
+#: ../manage/trigger.rst:94
 msgid "Condition"
 msgstr "Bedingung"
 
@@ -3515,8 +3533,7 @@ msgstr "**Von:** *passt auf regex:* ``(\\.|@)amazon\\.com``"
 #: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
 #: ../channels/email/filters.rst:140 ../channels/email/filters.rst:155
 #: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
-#: ../manage/trigger/how-do-they-work.rst:27
-#: ../manage/trigger/how-do-they-work.rst:81
+#: ../manage/trigger.rst:54 ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -5165,7 +5182,6 @@ msgstr ""
 "Der Screenshot zeigt die Konfiguration der Formularverwaltung von Zammad."
 
 #: ../channels/form.rst:16 ../channels/whatsapp/limitations.rst:2
-#: ../manage/trigger/limitations.rst:2
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
@@ -9812,9 +9828,8 @@ msgstr ""
 "Ticket nie wieder angezeigt. Ideal, um nur Anrufe für jemanden "
 "entgegenzunehmen."
 
-#: ../manage/groups/index.rst:30 ../manage/trigger.rst:25
-#: ../manage/webhook.rst:43 ../system/core-workflows.rst:26
-#: ../system/objects.rst:32
+#: ../manage/groups/index.rst:30 ../manage/webhook.rst:43
+#: ../system/core-workflows.rst:26 ../system/objects.rst:32
 msgid "Learn more"
 msgstr "Erfahren Sie mehr"
 
@@ -10171,6 +10186,10 @@ msgid ""
 "configuration. Choose when the summary should get generated or hide the "
 "ticket summary sidebar tab at all for this group."
 msgstr ""
+"Ermöglicht es Ihnen, die Konfiguration der :doc:`KI Ticket-Zusammenfassung </"
+"ai/summary>` zu übersteuern. Legen Sie fest, wann die Zusammenfassung "
+"generiert werden soll oder blenden Sie den Seitenleisten-Tab für diese "
+"Gruppe ganz aus."
 
 #: ../manage/groups/settings.rst:102
 msgid ""
@@ -10774,83 +10793,72 @@ msgid "Macros"
 msgstr "Makros"
 
 #: ../manage/macros.rst:4
-#, fuzzy
-#| msgid ""
-#| "Zammad's macro feature lets you pre-define ticket changes which can be "
-#| "applied with just a click. So, when you or your agents apply the same "
-#| "changes to many tickets over and over again, you can bundle those changes "
-#| "in a macro to apply them by executing it. To add or edit macros in "
-#| "Zammad's admin settings under *Manage > Macros*, you need the "
-#| "``admin.macro`` permission."
 msgid ""
 "Zammad's macro feature lets you pre-define ticket changes which can be "
 "applied with just a click. When you or your agents apply the same changes to "
 "many tickets repeatedly, you can bundle those changes in a macro to apply "
 "them by executing it. To add or edit macros in Zammad's admin settings under "
-"**Manage > Macros**, you need the ``admin.macro`` permission. For action- or "
-"time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
+"*Manage > Macros*, the permission ``admin.macro`` is required. For action- "
+"or time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
 "and :doc:`schedulers <scheduler>`."
 msgstr ""
-"Mit der Makrofunktion von Zammad können Sie Ticket-Änderungen definieren, "
+"Mit der Makrofunktion von Zammad können Sie Ticket-Änderungen vordefinieren, "
 "die mit nur einem Klick angewendet werden können. Wenn Sie oder Ihre Agenten "
-"also immer wieder dieselben Änderungen an vielen Tickets vornehmen, können "
-"Sie diese Änderungen in einem Makro bündeln, um sie einfach auszuführen. Um "
-"Makros in den Admin-Einstellungen von Zammad unter *Verwalten > Makros* "
-"hinzuzufügen oder zu bearbeiten, benötigen Sie die Berechtigung "
-"``admin.macro``."
+"wiederholt dieselben Änderungen an vielen Tickets vornehmen, können Sie "
+"solche Änderungen in einem Makro bündeln. Um Makros in den Admin-"
+"Einstellungen von Zammad unter *Verwalten > Makros* hinzuzufügen oder zu "
+"bearbeiten, ist die Berechtigung ``admin.macro`` erforderlich. Für aktions- "
+"oder zeitbasierte Automatisierung werfen Sie einen Blick auf Zammads "
+":doc:`Trigger <trigger>` und :doc:`Automatisierung <scheduler>`."
 
 #: ../manage/macros.rst:12
 msgid "Macros can be executed in two ways:"
-msgstr ""
+msgstr "Makros können auf zwei Arten ausgeführt werden:"
 
 #: ../manage/macros.rst:14
 msgid ""
 "In the ticket detail view via the **^** section of the ``Update`` button."
 msgstr ""
+"In der Ticket-Detailansicht über den Bereich **^** der Schaltfläche "
+"``Aktualisieren``."
 
 #: ../manage/macros.rst:15
 msgid ""
 "As bulk action for multiple tickets inside an overview or the detailed "
 "search (bulk action via field selection or via drag & drop)."
 msgstr ""
+"Als Mehrfach-Aktion für mehrere Tickets in einer Übersicht oder der "
+"Erweiterten Suche (Mehrfach-Aktion über Feldauswahl oder per Drag & Drop)."
 
 #: ../manage/macros.rst:19
-#, fuzzy
-#| msgid "Managing Macros"
 msgid "Manage Macros"
-msgstr "Verwaltung von Makros"
+msgstr "Makros verwalten"
 
 #: ../manage/macros.rst:21
-#, fuzzy
-#| msgid ""
-#| "Edit your macros by simply clicking on it. You can delete or even clone "
-#| "existing macros by clicking on the ︙ action menu and select the desired "
-#| "action:"
 msgid ""
 "Edit your macros by clicking on it. You can delete or clone existing macros "
 "by using the ︙ action menu. When cloning a macro, make sure to click "
 "``Submit`` for the duplicate to be created."
 msgstr ""
-"Bearbeiten Sie Ihre Makros, indem Sie sie einfach anklicken. Sie können "
-"bestehende Makros löschen oder sogar klonen, indem Sie auf das Aktionsmenü "
-"︙ klicken und die gewünschte Aktion auswählen:"
+"Bearbeiten Sie Ihre Makros, indem Sie sie anklicken. Sie können bestehende "
+"Makros löschen oder klonen, indem Sie das Aktionsmenü ︙ verwenden. Wenn Sie "
+"ein Makro klonen, stellen Sie sicher, dass Sie auf ``Übermitteln`` klicken, "
+"damit das Duplikat erstellt wird."
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing the macro action menu"
 msgstr "Screenshot des Makro-Aktionsmenüs"
 
 #: ../manage/macros.rst:33
-#, fuzzy
-#| msgid ""
-#| "Macros are made up of **actions** (changes to a ticket). You can add as "
-#| "many actions to a macro as you want."
 msgid ""
 "Macros are a collection of actions (changes to a ticket). You can add as "
 "many actions to a macro as you want. The configuration is the same, whether "
 "you're creating a new macro or editing an existing one."
 msgstr ""
-"Makros bestehen aus **Aktionen** (Änderungen an einem Ticket). Sie können "
-"einem Makro beliebig viele Aktionen hinzufügen."
+"Makros sind eine Sammlung von Aktionen (Änderungen an einem Ticket). Sie "
+"können so viele Aktionen zu einem Makro hinzufügen, wie Sie möchten. Die "
+"Konfiguration ist dieselbe, unabhängig davon, ob Sie ein neues Makro "
+"erstellen oder ein bestehendes Makro bearbeiten."
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing different possible actions for macros."
@@ -10865,72 +10873,46 @@ msgid "You can create actions to:"
 msgstr "Sie können Aktionen erstellen, um:"
 
 #: ../manage/macros.rst:45
-#, fuzzy
-#| msgid "set ticket attributes (priority, state, group, etc.)"
 msgid "Set ticket attributes (priority, state, group, etc.)"
-msgstr "Ticketattribute festzulegen (Priorität, Status, Gruppe, usw.)"
+msgstr "Ticket-Attribute festlegen (Priorität, Status, Gruppe, etc.)"
 
 #: ../manage/macros.rst:46
-#, fuzzy
-#| msgid "add new notes to a ticket"
 msgid "Add new notes to a ticket"
-msgstr "Notizen zu Tickets hinzuzufügen"
+msgstr "Neue Notizen zu einem Ticket hinzufügen"
 
 #: ../manage/macros.rst:47
-#, fuzzy
-#| msgid "Service notification"
 msgid "Send a notification"
-msgstr "Service-Benachrichtigung"
+msgstr "Eine Benachrichtigung senden"
 
 #: ../manage/macros.rst:48
-#, fuzzy
-#| msgid "run an :doc:`AI agent </ai/ai-agents>`"
 msgid "Run an :doc:`AI agent </ai/ai-agents>`"
-msgstr "ausführen eines :doc:`KI-Agenten </ai/ai-agents>`"
+msgstr "Ausführen eines :doc:`KI-Agenten </ai/ai-agents>`"
 
 #: ../manage/macros.rst:50
-#, fuzzy
-#| msgid "sending a reply to the customer"
 msgid "There are **no** actions for sending a reply to the customer."
-msgstr "Eine Antwort an Ihren Kunden zu senden"
+msgstr "Es gibt **keine** Aktionen zum Senden einer Antwort an den Kunden."
 
 #: ../manage/macros.rst:52
-#, fuzzy
-#| msgid ""
-#| "Unlike triggers, the scheduler, and text modules, macro actions do "
-#| "**not** support the use of :doc:`/misc/variables`."
 msgid ""
 "Unlike triggers, the scheduler, and text modules, macro actions do not "
 "support the use of :doc:`variables </misc/variables>`."
 msgstr ""
-"Im Gegensatz zu Triggern, der Automatisierung und Textmodulen unterstützen "
-"Aktionen in Makros **keine** Verwendung von :doc:`Variablen </misc/"
-"variables>`."
+"Im Gegensatz zu Triggern, der Automatisierung und Textbausteinen "
+"unterstützen Aktionen in Makros keine :doc:`Variablen </misc/variables>`."
 
 #: ../manage/macros.rst:55
-#, fuzzy
-#| msgid ""
-#| "If the ticket is missing a required attribute and the macro doesn't set "
-#| "it, then **no actions will be applied**."
 msgid ""
 "If the ticket is missing a required attribute and the macro doesn't set it, "
 "then no actions will be applied."
 msgstr ""
 "Wenn dem Ticket ein erforderliches Attribut fehlt und das Makro es nicht "
-"festlegt, werden **keine Änderungen angewendet**."
+"festlegt, werden keine Änderungen angewendet."
 
 #: ../manage/macros.rst:61
-#, fuzzy
-#| msgid "Once completed..."
 msgid "Once completed"
-msgstr "Nach Abschluss..."
+msgstr "Nach Abschluss"
 
 #: ../manage/macros.rst:59
-#, fuzzy
-#| msgid ""
-#| "After running this macro, should Zammad remain on the current tab, close "
-#| "it, or automatically switch to the next ticket? (Does not apply when "
-#| "running macros \"in bulk\".)"
 msgid ""
 "After running this macro, should Zammad remain on the current tab, close it "
 "or automatically switch to the next ticket? This does not apply when "
@@ -10938,133 +10920,90 @@ msgid ""
 msgstr ""
 "Soll Zammad nach der Ausführung dieses Makros auf der aktuellen "
 "Registerkarte bleiben, diese schließen oder automatisch zum nächsten Ticket "
-"wechseln? (Gilt nicht, wenn Makros auf mehrere Tickets angewandt werden.)"
+"wechseln? Dies gilt nicht für die Anwendung von Makros als Mehrfach-Aktion."
 
 #: ../manage/macros.rst:64
-#, fuzzy
-#| msgid ""
-#| "What should other Zammad admins know about this macro? (Visible only via "
-#| "the \"Edit: Macro\" dialog, Rails console, and API.)"
 msgid ""
 "What should other Zammad admins know about this macro? Only visible for "
 "admins."
 msgstr ""
-"Was sollten andere Zammad-Administratoren über dieses Makro wissen? (Nur "
-"sichtbar über das Dialogfeld \"Bearbeiten: Makro“, die Rails-Konsole und die "
-"API.)"
+"Was sollten andere Zammad-Administratoren über dieses Makro wissen? Nur für "
+"Administratoren sichtbar."
 
 #: ../manage/macros.rst:68
-#, fuzzy
-#| msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
 msgid ""
 "Which :doc:`groups </manage/groups/index>` are allowed to use this macro?"
 msgstr ""
-"Welche :doc:`/manage/groups/index` dürfen das Makro sehen und verwenden?"
+"Welche :doc:`Gruppen </manage/groups/index>` dürfen das Makro verwenden?"
 
 #: ../manage/macros.rst:71
-#, fuzzy
-#| msgid "Choose \"inactive\" to disable this macro without deleting it."
 msgid "Choose **inactive** to disable this macro without deleting it."
 msgstr ""
-"Wählen Sie \"inaktiv“, um dieses Makro zu deaktivieren, ohne es zu löschen."
+"Wählen Sie **inaktiv**, um dieses Makro zu deaktivieren, ohne es zu löschen."
 
-#: ../manage/macros.rst:76
-msgid "Find examples of useful macros below."
-msgstr ""
+#: ../manage/macros.rst:77
+msgid "Mark Ticket as Spam"
+msgstr "Ticket als Spam markieren"
 
 #: ../manage/macros.rst:79
-#, fuzzy
-#| msgid "a Ticket has escalated"
-msgid "Mark Ticket as Spam"
-msgstr "ein Ticket ist eskaliert"
-
-#: ../manage/macros.rst:81
-#, fuzzy
-#| msgid ""
-#| "If you deal with a lot of spam, you could set up a macro that applies the "
-#| "following changes to a ticket:"
 msgid ""
 "If you deal with a lot of spam, you can set up a macro that applies the "
 "following changes to a ticket:"
 msgstr ""
-"Wenn Sie mit viel Spam zu tun haben, können Sie ein Makro einrichten, das "
+"Wenn Sie viel mit Spam zu tun haben, können Sie ein Makro einrichten, das "
 "die folgenden Änderungen auf ein Ticket anwendet:"
 
-#: ../manage/macros.rst:84
-#, fuzzy
-#| msgid "**State:** closed"
-msgid "**State:** ``closed``"
-msgstr "**Status:** geschlossen"
+#: ../manage/macros.rst:82
+msgid "**State** closed"
+msgstr "**Status** geschlossen"
 
-#: ../manage/macros.rst:85
-#, fuzzy
-#| msgid "**Tag:** *add* ``spam``"
-msgid "**Tags:** add ``spam``"
-msgstr "**Tags:** *hinzufügen* ``spam``"
+#: ../manage/macros.rst:83
+msgid "**Tags** *add* spam"
+msgstr "**Tags** *hinzufügen* spam"
 
-#: ../manage/macros.rst:86 ../manage/macros.rst:107
-#, fuzzy
-#| msgid "current user"
-msgid "**Owner:** current user"
-msgstr "aktueller Benutzer"
+#: ../manage/macros.rst:84 ../manage/macros.rst:105
+msgid "**Owner** *current user*"
+msgstr "**Besitzer** *aktueller Benutzer*"
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing spam macro configuration"
 msgstr "Screenshot zeigt Spam-Makro-Konfiguration"
 
-#: ../manage/macros.rst:93
-#, fuzzy
-#| msgid ""
-#| "💡 Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
-#| "unwanted tickets."
+#: ../manage/macros.rst:91
 msgid ""
 "Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
 "unwanted tickets."
 msgstr ""
-"💡 Führen Sie dieses Makro in einer :doc:`/manage/scheduler` aus, um "
-"regelmäßig unerwünschte Tickets zu bereinigen."
+"Führen Sie dieses Makro in einer :doc:`/manage/scheduler` aus, um regelmäßig "
+"unerwünschte Tickets zu bereinigen."
+
+#: ../manage/macros.rst:95
+msgid "Postpone Ticket for a Fixed Time"
+msgstr "Ticket um eine bestimmte Zeit aufschieben"
 
 #: ../manage/macros.rst:97
-msgid "Postpone Ticket for a Fixed Time"
-msgstr ""
-
-#: ../manage/macros.rst:99
-#, fuzzy
-#| msgid ""
-#| "If you want to set a ticket's state to *pending reminder*, it's usually a "
-#| "two-step process - first select the state, then select a date. To always "
-#| "set a reminder for the same, fixed amount of time (say, seven days "
-#| "later), you can bundle the whole change into a macro:"
 msgid ""
 "Setting a ticket's state to *pending reminder* normally requires two steps: "
 "first select the state, then select a date. You can bundle this into a macro "
 "to always set a reminder for the same fixed amount of time (for example, "
 "seven days later):"
 msgstr ""
-"Wenn Sie den Status eines Tickets auf *warten auf Erinnerung* setzen "
-"möchten, erfolgt dies normalerweise in zwei Schritten: Wählen Sie zunächst "
-"den Status und dann ein Datum aus. Um eine Erinnerung immer für den "
-"gleichen, festen Zeitraum (z.B. sieben Tage später) festzulegen, können Sie "
-"die gesamte Änderung in einem Makro bündeln:"
+"Um den Status eines Tickets auf *warten auf Erinnerung* zu setzen, sind "
+"normalerweise zwei Schritte erforderlich: zuerst den Status und dann ein "
+"Datum auswählen. Sie können dies in einem Makro bündeln, um immer eine "
+"Erinnerung für denselben festen Zeitraum zu setzen (z.B. sieben Tage später):"
+
+#: ../manage/macros.rst:102
+msgid "**Note** Postponing ticket for 7 days. (internal visibility)"
+msgstr "**Notiz** Ticket um 7 Tage verschieben. (interne Sichtbarkeit)"
+
+#: ../manage/macros.rst:103
+msgid "**State** pending reminder"
+msgstr "**Status** warten auf Erinnerung"
 
 #: ../manage/macros.rst:104
-#, fuzzy
-#| msgid "\"Postponing ticket for 7 days.\" (🔒 internal visibility only)"
-msgid ""
-"**Note:** ``\"Postponing ticket for 7 days.\"`` (🔒 internal visibility only)"
-msgstr "\"In 7 Tagen erinnern.“ (🔒 nur interne Sichtbarkeit)"
-
-#: ../manage/macros.rst:105
-#, fuzzy
-#| msgid "pending reminder"
-msgid "**State:** ``pending reminder``"
-msgstr "warten auf Erinnerung"
-
-#: ../manage/macros.rst:106
-#, fuzzy
-#| msgid "relative / 7 / days"
-msgid "**Pending Till:** ``relative / 7 / days``"
-msgstr "relativ / 7 / Tage"
+msgid "**Pending Till** *relative* 7 Day(s)"
+msgstr "**Warten bis** *relativ* 7 Tag(e)"
 
 #: ../manage/macros.rst:None
 msgid "Screenshot showing postpone macro configuration"
@@ -13219,8 +13158,9 @@ msgstr ""
 "Benachrichtigungs-E-Mails \"Anmeldung von einem neuen Standort erkannt\"."
 
 #: ../manage/roles/permissions.rst:0
-msgid "To learn more, see :doc:`/manage/trigger/system-notifications`."
-msgstr "Mehr erfahren Sie unter :doc:`/manage/trigger/system-notifications`."
+msgid "To learn more, see :doc:`/misc/system-notifications`."
+msgstr ""
+"Weitere Informationen finden Sie unter :doc:`/misc/system-notifications`."
 
 #: ../manage/roles/permissions.rst:250
 msgid "``user_preferences.language``"
@@ -15084,61 +15024,71 @@ msgid ""
 "Triggers are one way to automate Zammad. You can create *if this then that* "
 "rules by defining which tickets should get changed and which changes you "
 "want to apply to them. To manage triggers in Zammad's admin settings under "
-"*Manage > Trigger*, you need the permission ``admin.trigger``."
+"*Manage > Trigger*, the permission ``admin.trigger`` is required."
 msgstr ""
 "Trigger sind eine Möglichkeit, Zammad zu automatisieren. Sie können *wenn "
 "dies, dann das* Regeln erstellen, indem Sie festlegen, welche Tickets "
 "geändert werden sollen und welche Änderungen Sie auf sie anwenden möchten. "
 "Um Trigger in den Admin-Einstellungen von Zammad unter *Verwalten > Trigger* "
-"zu verwalten, benötigen Sie die Berechtigung ``admin.trigger``."
+"zu verwalten, ist die Berechtigung ``admin.trigger`` erforderlich."
 
 #: ../manage/trigger.rst:9
 msgid ""
-"In case you are looking for a time-based automation, use :doc:`scheduler "
-"jobs </manage/scheduler>` instead. To execute pre-defined changes manually "
-"via UI (without a condition), use :doc:`/manage/macros` instead."
-msgstr ""
-"Falls Sie eine zeitbasierte Automatisierung suchen, verwenden Sie "
-"stattdessen die :doc:`Automatisierung </manage/scheduler>`. Um vordefinierte "
-"Änderungen manuell über die Benutzeroberfläche (ohne Bedingung) auszuführen, "
-"verwenden Sie stattdessen :doc:`/manage/macros`."
-
-#: ../manage/trigger.rst:14
-msgid ""
 "Zammad ships one active trigger by default: an auto reply trigger which "
-"sends an email to the customer after a new ticket is created. This leads to "
-"an article in the ticket. This article only displays the title and the "
-"recipient as a text string to maintain clarity in the ticket view. You can "
-"disable it, modify it or create new ones for all sorts of automation tasks "
-"in the **Triggers** section in the admin settings:"
+"sends an email to the customer after a new ticket is created. You can "
+"disable it, modify it, or create new ones for all sorts of automation tasks."
 msgstr ""
 "Zammad liefert standardmäßig einen aktiven Trigger aus: einen Auto-Antwort-"
 "Trigger, der eine E-Mail an den Kunden sendet, nachdem ein neues Ticket "
-"erstellt wurde. Diese führt zu einem Artikel im Ticket. Dieser Artikel zeigt "
-"nur den Titel und den Empfänger als Zeichenkette an, um die "
-"Übersichtlichkeit in der Ticket-Ansicht zu wahren. Sie können diesen Trigger "
-"deaktivieren, ändern oder neue Trigger für alle Arten von "
-"Automatisierungsaufgaben im Abschnitt **Trigger** in den Einstellungen "
-"erstellen:"
+"erstellt wurde. Sie können ihn deaktivieren, ändern oder neue Trigger für "
+"alle möglichen Automatisierungsaufgaben erstellen."
 
-#: ../manage/trigger.rst:None
-msgid "Screenshot of \"Triggers\" page in admin settings"
-msgstr "Screenshot der Trigger-Seite in den Admin-Einstellungen"
+#: ../manage/trigger.rst:16
+msgid ""
+"Triggers are executed when a ticket is updated by clicking the ``Update`` "
+"button. Changing an element which doesn't require an explicit ticket update "
+"(e.g. setting a tag) does not necessarily lead to a trigger execution."
+msgstr ""
+"Trigger werden ausgeführt, wenn ein Ticket durch Klicken auf die "
+"Schaltfläche ``Aktualisieren`` aktualisiert wird. Das Ändern eines Elements, "
+"das keine explizite Aktualisierung des Tickets erfordert (z.B. das Setzen "
+"eines Tags), führt nicht zwangsläufig zur Ausführung eines Triggers."
 
-#: ../manage/trigger/how-do-they-work.rst:2
-msgid "How Do Trigger Work"
-msgstr "Wie funktionieren Trigger"
+#: ../manage/trigger.rst:20
+msgid ""
+"If a trigger runs due to an added article, the context for the trigger is "
+"always this last article. Triggers aren't running based on older ticket "
+"states or articles."
+msgstr ""
+"Wenn ein Trigger aufgrund eines hinzugefügten Artikels ausgeführt wird, ist "
+"der Kontext für den Trigger immer dieser letzte Artikel. Trigger werden "
+"nicht auf der Grundlage älterer Ticket-Status oder Artikel ausgelöst."
 
-#: ../manage/trigger/how-do-they-work.rst:4
+#: ../manage/trigger.rst:24
+msgid ""
+"In addition to triggers, there are also :doc:`scheduler jobs </manage/"
+"scheduler>` for time-based automation, :doc:`email filters </channels/email/"
+"filters>` for channel-based automation and :doc:`macros </manage/macros>` "
+"for manually applying pre-defined changes via the UI. Depending on your use "
+"case, consider using them instead."
+msgstr ""
+"Neben Triggern gibt es auch :doc:`Automatisierungsaufgaben </manage/"
+"scheduler>` für die zeitbasierte Automatisierung, :doc:`Email-Filter </"
+"channels/email/filters>` für eine kanalabhängige Automatisierung und "
+":doc:`Makros </manage/macros>` für die manuelle Anwendung vordefinierter "
+"Änderungen über die Benutzeroberfläche. Abhängig von Ihrem Ziel können Sie "
+"diese Möglichkeiten auch in Betracht ziehen."
+
+#: ../manage/trigger.rst:33
 msgid "Triggers consist mainly of three parts:"
 msgstr "Trigger bestehen hauptsächlich aus drei Teilen:"
 
-#: ../manage/trigger/how-do-they-work.rst:6
+#: ../manage/trigger.rst:35
 msgid "**Activator:** defines when and how the trigger has to be evaluated."
 msgstr ""
 "**Aktivator:** legt fest, wann und wie der Trigger ausgewertet werden muss."
 
-#: ../manage/trigger/how-do-they-work.rst:7
+#: ../manage/trigger.rst:36
 msgid ""
 "**Condition:** defines the tickets for which an action has to be executed "
 "based on attributes."
@@ -15146,28 +15096,24 @@ msgstr ""
 "**Bedingung:** definiert die Tickets auf Grundlage von Attributen, für die "
 "eine Aktion ausgeführt werden soll."
 
-#: ../manage/trigger/how-do-they-work.rst:9
+#: ../manage/trigger.rst:38
 msgid ""
 "**Actions:** define what to change in a ticket which matches the condition."
 msgstr ""
 "**Aktionen:** legen fest, was in einem Ticket, das die Bedingung erfüllt, "
 "geändert werden soll."
 
-#: ../manage/trigger/how-do-they-work.rst:11
-msgid ""
-"Triggers are evaluated in alphabetical order by **name.** In some "
-"situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
-"limitations` for more information."
+#: ../manage/trigger.rst:40
+msgid "Triggers are evaluated in alphabetical order by their **name.**"
 msgstr ""
-"Trigger werden in alphabetischer Reihenfolge nach ihrem **Namen** "
-"ausgeführt. In manchen Situationen können Trigger jedoch die falsche Wahl "
-"sein, siehe :doc:`/manage/trigger/limitations` für weitere Informationen."
+"Trigger werden in alphabetischer Reihenfolge basierend auf Ihrem **Namen** "
+"ausgeführt."
 
-#: ../manage/trigger/how-do-they-work.rst:16
+#: ../manage/trigger.rst:43
 msgid "Activator"
 msgstr "Aktivator"
 
-#: ../manage/trigger/how-do-they-work.rst:18
+#: ../manage/trigger.rst:45
 msgid ""
 "Choose between an action- or time-based activator in the **Activated by** "
 "section."
@@ -15175,11 +15121,11 @@ msgstr ""
 "Wählen Sie im Abschnitt **Aktiviert durch** zwischen einem aktions- oder "
 "zeitbasierten Aktivator."
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of activator section in trigger dialog."
 msgstr "Screenshot des Aktivator-Abschnitts im Trigger-Dialog."
 
-#: ../manage/trigger/how-do-they-work.rst:29
+#: ../manage/trigger.rst:56
 msgid ""
 "An action based trigger always requires a ticket update to run. This can be "
 "an update by an agent or even internal system updates like updated SLA "
@@ -15190,12 +15136,12 @@ msgstr ""
 "sogar interne Systemaktualisierungen wie aktualisierte SLA-Zeiten sein. "
 "Weitere Einzelheiten finden Sie in der nachstehenden Erklärung."
 
-#: ../manage/trigger/how-do-they-work.rst:39
+#: ../manage/trigger.rst:66
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:28
 msgid "Selective"
 msgstr "Selektiv"
 
-#: ../manage/trigger/how-do-they-work.rst:34
+#: ../manage/trigger.rst:61
 msgid ""
 "Checks if any attribute from the condition was updated OR an article was "
 "added and the condition matches. If the attributes of the condition weren't "
@@ -15206,7 +15152,7 @@ msgstr ""
 "Bedingung nicht berührt wurden und kein neuer Artikel hinzugefügt wurde, "
 "wird der Trigger nicht ausgeführt."
 
-#: ../manage/trigger/how-do-they-work.rst:38
+#: ../manage/trigger.rst:65
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was changed to **1 low**."
@@ -15214,12 +15160,12 @@ msgstr ""
 "**Beispiel:** Ein Trigger mit einer Bedingung für die Priorität **1 "
 "niedrig** wird ausgeführt, wenn das Ticket auf **1 niedrig** geändert wurde."
 
-#: ../manage/trigger/how-do-they-work.rst:48
+#: ../manage/trigger.rst:75
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 msgid "Always"
 msgstr "Immer"
 
-#: ../manage/trigger/how-do-they-work.rst:42
+#: ../manage/trigger.rst:69
 msgid ""
 "Checks if the current state of the ticket matches the condition. This means: "
 "the trigger always runs when the ticket is updated and the condition "
@@ -15232,7 +15178,7 @@ msgstr ""
 "wurde. Dies kann dazu führen, dass ein solcher Trigger häufiger ausgeführt "
 "wird."
 
-#: ../manage/trigger/how-do-they-work.rst:47
+#: ../manage/trigger.rst:74
 msgid ""
 "**Example:** A trigger with a condition for priority **1 low** will run if "
 "the ticket was moved to another group while priority was set **1 low**."
@@ -15241,7 +15187,7 @@ msgstr ""
 "niedrig** wird ausgeführt, wenn das Ticket in eine andere Gruppe verschoben "
 "wurde, während die Priorität **1 niedrig** eingestellt war."
 
-#: ../manage/trigger/how-do-they-work.rst:50
+#: ../manage/trigger.rst:77
 msgid ""
 "If in doubt, use **Selective**. The **Always** action activator can lead to "
 "unexpected behavior, e.g. the trigger runs after internal system changes of "
@@ -15252,28 +15198,28 @@ msgstr ""
 "systeminternen Änderungen des Tickets ausgeführt wird, die in der Ticket-"
 "Historie nicht sichtbar sind."
 
-#: ../manage/trigger/how-do-they-work.rst:55
+#: ../manage/trigger.rst:82
 msgid "Time Event"
 msgstr "Zeitereignis"
 
-#: ../manage/trigger/how-do-they-work.rst:57
+#: ../manage/trigger.rst:84
 msgid "The execution is triggered when one of the following events occur:"
 msgstr ""
 "Die Ausführung wird ausgelöst, wenn eines der folgenden Ereignisse eintritt:"
 
-#: ../manage/trigger/how-do-they-work.rst:59
+#: ../manage/trigger.rst:86
 msgid "Time of a reminder is reached"
 msgstr "Zeitpunkt einer Erinnerung ist erreicht"
 
-#: ../manage/trigger/how-do-they-work.rst:60
+#: ../manage/trigger.rst:87
 msgid "Escalation is reached"
 msgstr "Eskalation ist erreicht"
 
-#: ../manage/trigger/how-do-they-work.rst:61
+#: ../manage/trigger.rst:88
 msgid "Escalation warning is reached"
 msgstr "Eskalationswarnung ist erreicht"
 
-#: ../manage/trigger/how-do-they-work.rst:63
+#: ../manage/trigger.rst:90
 msgid ""
 "When such a time event is reached, the trigger runs if the condition "
 "matches. This is the same behavior as action-based activator's \"always\" "
@@ -15283,7 +15229,7 @@ msgstr ""
 "wenn die Bedingung erfüllt ist. Dies ist das gleiche Verhalten wie der "
 "\"Immer\"-Modus des aktionsbasierten Aktivators."
 
-#: ../manage/trigger/how-do-they-work.rst:69
+#: ../manage/trigger.rst:96
 msgid ""
 "Use one or more attributes and values in a condition, which the tickets have "
 "to match you want to apply changes to. Create your condition in the "
@@ -15294,11 +15240,11 @@ msgstr ""
 "Erstellen Sie Ihre Bedingung im Abschnitt **Bedingungen für zu verarbeitende "
 "Objekte**:"
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of condition section in trigger dialog."
 msgstr "Screenshot des Bedingungsbereichs im Trigger-Dialog."
 
-#: ../manage/trigger/how-do-they-work.rst:83
+#: ../manage/trigger.rst:110
 msgid ""
 "Define which changes to apply for tickets which match your condition in the "
 "**Execute changes on objects** section:"
@@ -15307,32 +15253,32 @@ msgstr ""
 "welche Änderungen auf Tickets angewandt werden sollen, die Ihren Bedingungen "
 "entsprechen:"
 
-#: ../manage/trigger/how-do-they-work.rst:None
+#: ../manage/trigger.rst:None
 msgid "Screenshot of action section in trigger dialog."
 msgstr "Screenshot des Aktionsbereichs im Trigger-Dialog."
 
-#: ../manage/trigger/how-do-they-work.rst:91
+#: ../manage/trigger.rst:118
 msgid ""
-"Certain actions (such as email, SMS and notes) support :doc:`/misc/"
-"variables` (see screenshot above), which can be used to build highly-"
+"Certain actions (such as email, SMS and notes) support :doc:`variables </"
+"misc/variables>` (see screenshot above), which can be used to build highly-"
 "customized message templates."
 msgstr ""
-"Bestimmte Aktionen (z.B. E-Mail, SMS und Notizen) unterstützen :doc:`/misc/"
-"variables` (siehe Screenshot oben), mit denen Sie sehr individuelle "
-"Nachrichtenvorlagen erstellen können."
+"Bestimmte Aktionen (z.B. E-Mail, SMS und Notizen) unterstützen "
+":doc:`Variablen </misc/variables>` (siehe Screenshot oben), mit denen Sie "
+"komplett individuelle Nachrichtenvorlagen erstellen können."
 
-#: ../manage/trigger/how-do-they-work.rst:95
+#: ../manage/trigger.rst:122
 msgid ""
 "A trigger can do the following things once its conditions have been met:"
 msgstr ""
 "Ein Trigger kann folgende Änderungen vornehmen, wenn seine Bedingungen "
 "erfüllt sind:"
 
-#: ../manage/trigger/how-do-they-work.rst:106
+#: ../manage/trigger.rst:133
 msgid "Modify the ticket"
 msgstr "Ändern des Tickets"
 
-#: ../manage/trigger/how-do-they-work.rst:98
+#: ../manage/trigger.rst:125
 msgid ""
 "Examples: escalate its priority, close it, reassign it, rename it, add tags, "
 "subscribe and unsubscribe specific/all users, etc."
@@ -15341,7 +15287,7 @@ msgstr ""
 "umbenennen, Tags hinzufügen, abonnieren und abbestellen von "
 "Benachrichtigungen für einzelne/alle Benutzer usw."
 
-#: ../manage/trigger/how-do-they-work.rst:101
+#: ../manage/trigger.rst:128
 msgid ""
 "Date & time attributes (like **Pending till**) can be specified in "
 "*absolute* or *relative* terms."
@@ -15349,21 +15295,22 @@ msgstr ""
 "Datums- und Zeitattribute (wie **warten auf Erinnerung**) können *absolut* "
 "oder *relativ* angegeben werden."
 
-#: ../manage/trigger/how-do-they-work.rst:104
+#: ../manage/trigger.rst:131
 msgid ""
 "You can also combine static text with placeholders for text fields. Remember "
 "that the placeholders' values have to be known during trigger runtime. Learn "
-"more about :doc:`/misc/variables`."
+"more about :doc:`variables </misc/variables>`."
 msgstr ""
 "Sie können auch statischen Text mit Platzhaltern für Textfelder kombinieren. "
 "Beachten Sie, dass die Werte der Platzhalter zum Ausführungszeitpunkt des "
-"Triggers bekannt sein müssen. Erfahren Sie mehr über :doc:`/misc/variables`."
+"Triggers bekannt sein müssen. Erfahren Sie mehr über :doc:`Variablen </misc/"
+"variables>`."
 
-#: ../manage/trigger/how-do-they-work.rst:117
+#: ../manage/trigger.rst:144
 msgid "Send an email or SMS"
 msgstr "Eine E-Mail oder SMS senden"
 
-#: ../manage/trigger/how-do-they-work.rst:109
+#: ../manage/trigger.rst:136
 msgid ""
 "Either to the customer, the agent who owns the ticket, or every agent in the "
 "system."
@@ -15371,7 +15318,7 @@ msgstr ""
 "Entweder an den Kunden, den Agent, dem das Ticket gehört, oder an alle "
 "Agenten im System."
 
-#: ../manage/trigger/how-do-they-work.rst:112
+#: ../manage/trigger.rst:139
 msgid ""
 "Sending emails allows you to include the attachments of the triggering "
 "article if required."
@@ -15379,7 +15326,7 @@ msgstr ""
 "Beim Versenden von E-Mails können Sie bei Bedarf die Anhänge des auslösenden "
 "Artikels einfügen."
 
-#: ../manage/trigger/how-do-they-work.rst:115
+#: ../manage/trigger.rst:142
 msgid ""
 "In order to send emails with triggers, you need to configure an email "
 "address for the group, the trigger is working in. If you don't, Zammad will "
@@ -15389,11 +15336,11 @@ msgstr ""
 "Gruppe konfigurieren, in welcher der Trigger arbeitet. Wenn Sie das nicht "
 "tun, überspringt Zammad die Ausführung des Triggers."
 
-#: ../manage/trigger/how-do-they-work.rst:121
+#: ../manage/trigger.rst:148
 msgid ":doc:`Fire a webhook </manage/webhook>`"
 msgstr ":doc:`Einen Webhook auslösen </manage/webhook>`"
 
-#: ../manage/trigger/how-do-they-work.rst:120
+#: ../manage/trigger.rst:147
 msgid ""
 "Connect Zammad to another web service or application to give it live updates "
 "about new tickets."
@@ -15401,11 +15348,11 @@ msgstr ""
 "Verbinden Sie Zammad mit einem anderen Webdienst oder einer Anwendung, um "
 "Live-Updates über neue Tickets zu erhalten."
 
-#: ../manage/trigger/how-do-they-work.rst:125
+#: ../manage/trigger.rst:152
 msgid "Add internal or public notes to the ticket"
 msgstr "Interne oder öffentliche Notizen zu Tickets hinzufügen"
 
-#: ../manage/trigger/how-do-they-work.rst:124
+#: ../manage/trigger.rst:151
 msgid ""
 "This allows you to help your agents with specific information if needed. "
 "(e.g. automated changes a trigger applied to the ticket)"
@@ -15413,19 +15360,19 @@ msgstr ""
 "So können Sie Ihre Mitarbeiter bei Bedarf mit spezifischen Informationen "
 "unterstützen (z.B. automatische Änderungen, die ein Trigger ausgeführt hat)."
 
-#: ../manage/trigger/how-do-they-work.rst:128
+#: ../manage/trigger.rst:155
 msgid ":doc:`Run an AI agent </ai/ai-agents>`"
 msgstr ":doc:`Ausführen eines KI-Agenten </ai/ai-agents>`"
 
-#: ../manage/trigger/how-do-they-work.rst:128
+#: ../manage/trigger.rst:155
 msgid "Trigger an AI agent to run using triggers."
 msgstr "Starten Sie einen KI-Agenten mit Hilfe von Triggern."
 
-#: ../manage/trigger/how-do-they-work.rst:133
+#: ../manage/trigger.rst:158
 msgid "Localization of Execution Changes"
 msgstr "Sprache für ausgeführte Aktionen"
 
-#: ../manage/trigger/how-do-they-work.rst:135
+#: ../manage/trigger.rst:160
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
@@ -15435,11 +15382,11 @@ msgstr ""
 "fest, die bei Verwendung von Zeit-/Datums-Variablen ausgegeben werden. Diese "
 "Einstellungen sind für Trigger anpassbar."
 
-#: ../manage/trigger/how-do-they-work.rst:0
+#: ../manage/trigger.rst:None
 msgid "Screenshot showing localization section of trigger dialog"
 msgstr "Screenshot zeigt Sprachanpassung im Trigger-Dialog"
 
-#: ../manage/trigger/how-do-they-work.rst:142
+#: ../manage/trigger.rst:168
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
@@ -15448,7 +15395,7 @@ msgstr ""
 "Trigger zu erstellen und diesen auf der Grundlage von Benutzer- oder "
 "Organisationsattributen auszuführen."
 
-#: ../manage/trigger/how-do-they-work.rst:145
+#: ../manage/trigger.rst:171
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -15460,7 +15407,7 @@ msgstr ""
 "``t()`` verwendet werden, um Text-Variablen entsprechend der gewählten "
 "Sprache zu übersetzen."
 
-#: ../manage/trigger/how-do-they-work.rst:147
+#: ../manage/trigger.rst:176
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
@@ -15468,11 +15415,7 @@ msgstr ""
 "Für die Verwendung der ``t()`` und ``dt()`` Methoden folgen Sie bitte den "
 "Anweisungen im Bereich :ref:`Variablen <variable_localization>`."
 
-#: ../manage/trigger/learn-by-example.rst:2
-msgid "Trigger Examples"
-msgstr "Trigger-Beispiele"
-
-#: ../manage/trigger/learn-by-example.rst:4
+#: ../manage/trigger.rst:182
 msgid ""
 "To get you up and running quickly, here are some examples of the kinds of "
 "automation tasks you can set up with triggers."
@@ -15480,217 +15423,114 @@ msgstr ""
 "Damit Sie schnell loslegen können, finden Sie hier einige Beispiele für "
 "Automatisierungen, die Sie mithilfe von Triggern einrichten können."
 
-#: ../manage/trigger/learn-by-example.rst:7
-msgid "To learn about triggers in detail, first go to :doc:`/manage/trigger`."
-msgstr ""
-"Um mehr über Trigger im Detail zu erfahren, gehen Sie zuerst zu :doc:`/"
-"manage/trigger`."
+#: ../manage/trigger.rst:189
+msgid "Group assignment based on customer"
+msgstr "Gruppenzuweisung basierend auf Kunde"
 
-#: ../manage/trigger/learn-by-example.rst:10
-msgid "Any time Jacob Smith creates a ticket, assign it to the Sales group:"
+#: ../manage/trigger.rst:186
+msgid ""
+"Any time Jacob Smith creates a ticket, assign it to the \"Sales\" group."
 msgstr ""
 "Jedes Mal, wenn Jacob Smith ein Ticket erstellt, soll es der Gruppe "
-"\"Sales\" zugewiesen werden:"
+"\"Sales\" zugewiesen werden."
 
-#: ../manage/trigger/learn-by-example.rst:16
+#: ../manage/trigger.rst:188
+msgid "Condition: **Customer** *is* *specific user* Jacob Smith"
+msgstr "Bedingung: **Kunde** *ist* *spezifischer Benutzer* Jacob Smith"
+
+#: ../manage/trigger.rst:189
+msgid "Action: **Group** Sales"
+msgstr "Aktion: **Gruppe** Sales"
+
+#: ../manage/trigger.rst:201
+msgid "Owner assignment based on subject"
+msgstr "Besitzer-Zuordnung basierend auf Betreff"
+
+#: ../manage/trigger.rst:192
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
-"with a high priority:"
+"with a high priority."
 msgstr ""
 "Emma Taylor ist intern für alle Verkäufe zuständig. Wenn also ein neues "
 "Ticket das Wort \"Order\" im Betreff hat, soll es ihr zugewiesen und mit "
-"hoher Priorität versehen werden:"
+"hoher Priorität versehen werden."
 
-#: ../manage/trigger/learn-by-example.rst:26
+#: ../manage/trigger.rst:196
+msgid "Condition: **Title** *contains* order"
+msgstr "Bedingung: **Titel** *enthält* Order"
+
+#: ../manage/trigger.rst:197
+msgid "Action:"
+msgstr "Aktion:"
+
+#: ../manage/trigger.rst:199
+msgid "**Group** Sales"
+msgstr "**Gruppe** Sales"
+
+#: ../manage/trigger.rst:200
+msgid "**Owner** *specific user* Emma Taylor"
+msgstr "**Besitzer** *spezifischer Benutzer* Emma Taylor"
+
+#: ../manage/trigger.rst:201
+msgid "**Priority** 3 high"
+msgstr "**Priorität** 3 hoch"
+
+#: ../manage/trigger.rst:221
+msgid "Auto-reply based on channel and language"
+msgstr "Automatische Antwort basierend auf Kanal und Sprache"
+
+#: ../manage/trigger.rst:204
 msgid ""
 "Send an auto-reply email to any customer who creates a ticket via web, if "
-"the detected language is English:"
+"the detected language is English."
 msgstr ""
 "Senden Sie eine E-Mail mit einer automatischen Antwort an jeden Kunden, der "
-"ein Ticket über das Internet erstellt, wenn die erkannte Sprache Englisch "
-"ist:"
+"ein Ticket über die Web-UI erstellt und die erkannte Sprache Englisch ist."
 
-#: ../manage/trigger/learn-by-example.rst:33
-msgid "📨 **Not all automated messages come from triggers!**"
-msgstr "📨 **Nicht alle automatischen Emails kommen von Triggern!**"
+#: ../manage/trigger.rst:207
+msgid "Condition:"
+msgstr "Bedingung:"
 
-#: ../manage/trigger/learn-by-example.rst:35
+#: ../manage/trigger.rst:209
+msgid "**Action** *is* created"
+msgstr "**Aktion** *ist* erstellt"
+
+#: ../manage/trigger.rst:210
+msgid "**State** *is not* closed"
+msgstr "**Status** *ist nicht* geschlossen"
+
+#: ../manage/trigger.rst:211
+msgid "**Type** *is* web"
+msgstr "**Typ** *ist* web"
+
+#: ../manage/trigger.rst:212
+msgid "**Sender** *is* customer"
+msgstr "**Sender** *ist* Kunde"
+
+#: ../manage/trigger.rst:213
+msgid "**Detected Language** *is* English"
+msgstr "**Erkannte Sprache** *ist* English"
+
+#: ../manage/trigger.rst:215
+msgid "Action: **Email** (public, recipient: customer; with subject and body)"
+msgstr "Aktion: **E-Mail** (öffentlich, Empfänger: Kunde; mit Betreff und Text)"
+
+#: ../manage/trigger.rst:217
+msgid "**Not all automated messages come from triggers!**"
+msgstr "**Nicht alle automatischen Emails kommen von Triggern!**"
+
+#: ../manage/trigger.rst:219
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
-"you will have to :doc:`manually edit files on your server </manage/trigger/"
-"system-notifications>`."
+"you will have to :doc:`manually edit files on your server </misc/system-"
+"notifications>`."
 msgstr ""
-"Wenn z.B. *Agenten* eine System-E-Mail über ein neu erstelltes Ticket "
-"erhalten, ist das im System selbst eingebaut. Wenn Sie diese anpassen "
-"möchten, müssen Sie :doc:`Dateien auf Ihrem Server manuell bearbeiten </"
-"manage/trigger/system-notifications>`."
-
-#: ../manage/trigger/limitations.rst:4
-msgid ""
-"Triggers are one way of automated actions. In addition, there are "
-"also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
-"channels/email/filters>` based automation. Make sure to have a look at those "
-"too. They can be more suitable, depending on your use case."
-msgstr ""
-"Trigger sind eine Möglichkeit zur Automatisierung von Aktionen. Darüber "
-"hinaus können auch Aktionen basierend auf :doc:`Automatisierung </manage/"
-"scheduler>` und :doc:`E-Mail-Filter </channels/email/filters>` ausgeführt "
-"werden. Werfen Sie auch einen Blick darauf, sie können je nach "
-"Anwendungsfall besser geeignet sein."
-
-#: ../manage/trigger/limitations.rst:10
-msgid "Limitations of triggers:"
-msgstr "Einschränkungen von Triggern:"
-
-#: ../manage/trigger/limitations.rst:12
-msgid ""
-"Triggers are executed when a ticket is updated by clicking the \"Update\" "
-"button. Changing an element which doesn't require an explicit ticket update "
-"(e.g. setting a tag) does not necessarily lead to a trigger execution."
-msgstr ""
-"Trigger werden ausgeführt, wenn ein Ticket durch Klicken auf die "
-"Schaltfläche \"Aktualisieren\" aktualisiert wird. Das Ändern eines Elements, "
-"das keine explizite Aktualisierung des Tickets erfordert (z.B. das Setzen "
-"eines Tags), führt nicht zwangsläufig zur Ausführung eines Triggers."
-
-#: ../manage/trigger/limitations.rst:15
-msgid ""
-"If a trigger runs due to an added article, the context for the trigger is "
-"always this last article. Triggers aren't running based on older ticket "
-"states or articles."
-msgstr ""
-"Wenn ein Trigger aufgrund eines hinzugefügten Artikels ausgeführt wird, ist "
-"der Kontext für den Trigger immer dieser letzte Artikel. Trigger werden "
-"nicht auf der Grundlage älterer Ticket-Status oder Artikel ausgelöst."
-
-#: ../manage/trigger/system-notifications.rst:2
-msgid "System Notifications"
-msgstr "System-Benachrichtigungen"
-
-#: ../manage/trigger/system-notifications.rst:4
-msgid ""
-"System notifications can only be customized on **self-hosted installations**."
-msgstr ""
-"Systembenachrichtigungen können nur bei **selbst gehosteten Installationen** "
-"angepasst werden."
-
-#: ../manage/trigger/system-notifications.rst:10
-msgid ""
-"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
-"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
-"itself: if you need to customize them, you will have to modify some of the "
-"files on your server."
-msgstr ""
-"Im Gegensatz zu den automatischen E-Mails, die Sie mit :doc:`/manage/"
-"trigger` oder :doc:`/manage/scheduler` einrichten können, sind diese "
-"Benachrichtigungen in Zammad selbst eingebaut: Wenn Sie sie anpassen "
-"möchten, müssen Sie einige Dateien auf Ihrem Server ändern."
-
-#: ../manage/trigger/system-notifications.rst:16
-msgid "When Are They Sent?"
-msgstr "Wann werden sie gesendet?"
-
-#: ../manage/trigger/system-notifications.rst:18
-msgid "**All users** are notified about:"
-msgstr "**Alle Benutzer** werden über folgendes benachrichtigt:"
-
-#: ../manage/trigger/system-notifications.rst:20
-msgid "Password changes"
-msgstr "Passwort-Änderungen"
-
-#: ../manage/trigger/system-notifications.rst:21
-msgid ""
-":ref:`Account linking notification <automatic-account-linking-notification>` "
-"on initial login"
-msgstr ""
-":ref:`Benachrichtigung über die Verknüpfung von Konten <automatic-account-"
-"linking-notification>` bei der ersten Anmeldung"
-
-#: ../manage/trigger/system-notifications.rst:24
-msgid "**Staff (admins & agents)** are notified of:"
-msgstr "**Mitarbeiter (Admins & Agenten)** werden benachrichtigt:"
-
-#: ../manage/trigger/system-notifications.rst:26
-msgid "Logins from a new device"
-msgstr "Logins von neuen Geräten"
-
-#: ../manage/trigger/system-notifications.rst:27
-msgid "Logins from a new country"
-msgstr "Anmeldungen aus einem neuen Land"
-
-#: ../manage/trigger/system-notifications.rst:29
-msgid "**Agents** are notified about:"
-msgstr "**Agenten** werden benachrichtigt über:"
-
-#: ../manage/trigger/system-notifications.rst:31
-msgid "New tickets"
-msgstr "Neue Tickets"
-
-#: ../manage/trigger/system-notifications.rst:32
-msgid "Ticket updates"
-msgstr "Ticket-Aktualisierungen"
-
-#: ../manage/trigger/system-notifications.rst:33
-msgid "Pending reached tickets"
-msgstr "Ausstehende Tickets"
-
-#: ../manage/trigger/system-notifications.rst:34
-msgid "SLA violations (before and after the deadline)"
-msgstr "SLA-Verstöße (vor und nach der Frist)"
-
-#: ../manage/trigger/system-notifications.rst:36
-msgid ""
-"Agents can change their notification settings in their :user-docs:`user "
-"profile </extras/profile-and-settings.html>`."
-msgstr ""
-"Agenten können ihre Benachrichtigungseinstellungen in ihrem :user-"
-"docs:`Benutzerprofil </extras/profile-and-settings.html>` ändern."
-
-#: ../manage/trigger/system-notifications.rst:39
-msgid ""
-"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
-"for all tickets where the *pending till* time is reached or SLA violations "
-"exist."
-msgstr ""
-"Tägliche Erinnerungs-E-Mails werden um Mitternacht (in der Zeitzone des "
-"Zammad-Systems) für alle Tickets verschickt, bei denen die *Warten bis* Zeit "
-"erreicht ist oder SLA-Verletzungen vorliegen."
-
-#: ../manage/trigger/system-notifications.rst:44
-msgid "How Can I Customize Them?"
-msgstr "Wie kann ich sie anpassen?"
-
-#: ../manage/trigger/system-notifications.rst:46
-msgid ""
-"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
-"various events are stored inside the ``/app/views/mailer`` directory, named "
-"according to the language they're written in. Thus,"
-msgstr ""
-"Innerhalb Ihres Zammad-Verzeichnisses (normalerweise ``/opt/zammad``) werden "
-"E-Mail-Vorlagen für verschiedene Ereignisse im Verzeichnis ``/app/views/"
-"mailer`` gespeichert, benannt nach der Sprache, in der sie geschrieben sind. "
-"Also"
-
-#: ../manage/trigger/system-notifications.rst:54
-msgid ""
-"is the German-language template used to notify agents whenever a new ticket "
-"is created. To modify this template, create another file with the same name "
-"and add a ``.custom`` suffix:"
-msgstr ""
-"ist die deutschsprachige Vorlage, die verwendet wird, um Agenten zu "
-"benachrichtigen, wenn ein neues Ticket erstellt wird. Um diese Vorlage zu "
-"ändern, erstellen Sie eine weitere Datei mit demselben Namen und fügen Sie "
-"die Endung ``.custom`` hinzu:"
-
-#: ../manage/trigger/system-notifications.rst:62
-msgid ""
-"Now, this file will be used instead of the original when sending "
-"notification emails in German."
-msgstr ""
-"Diese Datei wird nun beim Versand von Benachrichtigungs-E-Mails auf Deutsch "
-"anstelle der Originaldatei verwendet."
+"Wenn z.B. die *Agenten* eine E-Mail über ein neu erstelltes Ticket erhalten, "
+"ist dies in das System selbst eingebaut. Wenn Sie diese anpassen wollen, "
+"müssen Sie :doc:`manuell Dateien auf Ihrem Server bearbeiten </misc/system-"
+"notifications>`."
 
 #: ../manage/users/index.rst:2
 msgid "Users"
@@ -20278,6 +20118,133 @@ msgid ""
 msgstr ""
 "Erfahren Sie, wie Sie mit dem Expertenmodus von Zammad noch "
 "leistungsfähigere Bedingungen mit UND/ODER-Beziehungen erstellen können."
+
+#: ../misc/system-notifications.rst:2
+msgid "System Notifications"
+msgstr "System-Benachrichtigungen"
+
+#: ../misc/system-notifications.rst:4
+msgid ""
+"System notifications can only be customized on **self-hosted installations**."
+msgstr ""
+"Systembenachrichtigungen können nur bei **selbst gehosteten Installationen** "
+"angepasst werden."
+
+#: ../misc/system-notifications.rst:10
+msgid ""
+"Unlike the automated emails you can set up using :doc:`/manage/trigger` or "
+"the :doc:`/manage/scheduler`, these notifications are built into Zammad "
+"itself: if you need to customize them, you will have to modify some of the "
+"files on your server."
+msgstr ""
+"Im Gegensatz zu den automatischen E-Mails, die Sie mit :doc:`/manage/"
+"trigger` oder :doc:`/manage/scheduler` einrichten können, sind diese "
+"Benachrichtigungen in Zammad selbst eingebaut: Wenn Sie sie anpassen "
+"möchten, müssen Sie einige Dateien auf Ihrem Server ändern."
+
+#: ../misc/system-notifications.rst:16
+msgid "When Are They Sent?"
+msgstr "Wann werden sie gesendet?"
+
+#: ../misc/system-notifications.rst:18
+msgid "**All users** are notified about:"
+msgstr "**Alle Benutzer** werden über folgendes benachrichtigt:"
+
+#: ../misc/system-notifications.rst:20
+msgid "Password changes"
+msgstr "Passwort-Änderungen"
+
+#: ../misc/system-notifications.rst:21
+msgid ""
+":ref:`Account linking notification <automatic-account-linking-notification>` "
+"on initial login"
+msgstr ""
+":ref:`Benachrichtigung über die Verknüpfung von Konten <automatic-account-"
+"linking-notification>` bei der ersten Anmeldung"
+
+#: ../misc/system-notifications.rst:24
+msgid "**Staff (admins & agents)** are notified of:"
+msgstr "**Mitarbeiter (Admins & Agenten)** werden benachrichtigt:"
+
+#: ../misc/system-notifications.rst:26
+msgid "Logins from a new device"
+msgstr "Logins von neuen Geräten"
+
+#: ../misc/system-notifications.rst:27
+msgid "Logins from a new country"
+msgstr "Anmeldungen aus einem neuen Land"
+
+#: ../misc/system-notifications.rst:29
+msgid "**Agents** are notified about:"
+msgstr "**Agenten** werden benachrichtigt über:"
+
+#: ../misc/system-notifications.rst:31
+msgid "New tickets"
+msgstr "Neue Tickets"
+
+#: ../misc/system-notifications.rst:32
+msgid "Ticket updates"
+msgstr "Ticket-Aktualisierungen"
+
+#: ../misc/system-notifications.rst:33
+msgid "Pending reached tickets"
+msgstr "Ausstehende Tickets"
+
+#: ../misc/system-notifications.rst:34
+msgid "SLA violations (before and after the deadline)"
+msgstr "SLA-Verstöße (vor und nach der Frist)"
+
+#: ../misc/system-notifications.rst:36
+msgid ""
+"Agents can change their notification settings in their :user-docs:`user "
+"profile </extras/profile-and-settings.html>`."
+msgstr ""
+"Agenten können ihre Benachrichtigungseinstellungen in ihrem :user-"
+"docs:`Benutzerprofil </extras/profile-and-settings.html>` ändern."
+
+#: ../misc/system-notifications.rst:39
+msgid ""
+"Daily reminder emails are sent at midnight (of the Zammad system timezone) "
+"for all tickets where the *pending till* time is reached or SLA violations "
+"exist."
+msgstr ""
+"Tägliche Erinnerungs-E-Mails werden um Mitternacht (in der Zeitzone des "
+"Zammad-Systems) für alle Tickets verschickt, bei denen die *Warten bis* Zeit "
+"erreicht ist oder SLA-Verletzungen vorliegen."
+
+#: ../misc/system-notifications.rst:44
+msgid "How Can I Customize Them?"
+msgstr "Wie kann ich sie anpassen?"
+
+#: ../misc/system-notifications.rst:46
+msgid ""
+"Inside your Zammad directory (usually ``/opt/zammad``), email templates for "
+"various events are stored inside the ``/app/views/mailer`` directory, named "
+"according to the language they're written in. Thus,"
+msgstr ""
+"Innerhalb Ihres Zammad-Verzeichnisses (normalerweise ``/opt/zammad``) werden "
+"E-Mail-Vorlagen für verschiedene Ereignisse im Verzeichnis ``/app/views/"
+"mailer`` gespeichert, benannt nach der Sprache, in der sie geschrieben sind. "
+"Also"
+
+#: ../misc/system-notifications.rst:54
+msgid ""
+"is the German-language template used to notify agents whenever a new ticket "
+"is created. To modify this template, create another file with the same name "
+"and add a ``.custom`` suffix:"
+msgstr ""
+"ist die deutschsprachige Vorlage, die verwendet wird, um Agenten zu "
+"benachrichtigen, wenn ein neues Ticket erstellt wird. Um diese Vorlage zu "
+"ändern, erstellen Sie eine weitere Datei mit demselben Namen und fügen Sie "
+"die Endung ``.custom`` hinzu:"
+
+#: ../misc/system-notifications.rst:62
+msgid ""
+"Now, this file will be used instead of the original when sending "
+"notification emails in German."
+msgstr ""
+"Diese Datei wird nun beim Versand von Benachrichtigungs-E-Mails auf Deutsch "
+"anstelle der Originaldatei verwendet."
 
 #: ../misc/variables.rst:4
 msgid ""
@@ -26732,13 +26699,13 @@ msgstr ""
 msgid ""
 "Use the detected language as a condition attribute in triggers and "
 "schedulers. Examples are: to send auto replies in different languages "
-"(see :ref:`trigger example <trigger-example-3>`) and to move tickets in a "
+"(see :doc:`trigger examples </manage/trigger>`) and to move tickets in a "
 "specific language into a specific group."
 msgstr ""
 "Verwenden Sie die erkannte Sprache als Bedingungsattribut in Triggern und "
-"der Automatisierung. Beispiele sind: automatische Antworten in verschiedenen "
-"Sprachen senden (siehe :ref:`Trigger-Beispiel <trigger-example-3>`) und "
-"Tickets in einer bestimmten Sprache in eine bestimmte Gruppe verschieben."
+"Automatisierungen. Beispiele sind: automatische Antworten in verschiedenen "
+"Sprachen (siehe :doc:`Trigger-Beispiele </manage/trigger>`) und das "
+"Verschieben von Tickets in einer bestimmten Sprache in eine bestimmte Gruppe."
 
 #: ../settings/ticket.rst:214
 msgid ""
@@ -31863,50 +31830,41 @@ msgid "PGP"
 msgstr "PGP"
 
 #: ../system/integrations/pgp.rst:4
-#, fuzzy
-#| msgid ""
-#| "Pretty Good Privacy (PGP) is one method for secure email communication in "
-#| "Zammad (in addition to :doc:`../smime/index`). It allows you to exchange "
-#| "**signed** and **encrypted** messages with others."
 msgid ""
 "Pretty Good Privacy (PGP) is one method for secure email communication in "
 "Zammad (in addition to :doc:`smime`). It allows you to exchange **signed** "
 "and **encrypted** messages with others."
 msgstr ""
 "Pretty Good Privacy (PGP) ist eine Methode zur sicheren E-Mail-Kommunikation "
-"in Zammad (zusätzlich zu :doc:`../smime/index`). Es ermöglicht Ihnen, "
-"**signierte** und **verschlüsselte** Nachrichten mit anderen auszutauschen."
+"in Zammad (zusätzlich zu :doc:`smime`). Es ermöglicht Ihnen, **signierte** "
+"und **verschlüsselte** Nachrichten mit anderen auszutauschen."
 
 #: ../system/integrations/pgp.rst:10 ../system/integrations/smime.rst:12
 msgid "Signing"
 msgstr "Signieren"
 
 #: ../system/integrations/pgp.rst:9
-#, fuzzy
-#| msgid ""
-#| "In other words, it guarantees message **integrity** and **authenticity**."
 msgid ""
 "is proof that a message hasn't been manipulated on its way. In other words, "
 "it guarantees message **integrity** and **authenticity**."
 msgstr ""
-"Mit anderen Worten, es garantiert die **Integrität** und **Authentizität**."
+"ist der Beweis, dass eine Nachricht auf ihrem Weg nicht manipuliert wurde. "
+"Mit anderen Worten, es garantiert die **Integrität** und **Echtheit** der "
+"Nachricht."
 
 #: ../system/integrations/pgp.rst:15 ../system/integrations/smime.rst:16
 msgid "Encryption"
 msgstr "Verschlüsselung"
 
 #: ../system/integrations/pgp.rst:13
-#, fuzzy
-#| msgid ""
-#| "scrambles a message so that it can only be unscrambled by the intended "
-#| "recipient."
 msgid ""
 "scrambles a message so that it can only be unscrambled by the intended "
 "recipient. In other words, it guarantees message **privacy** and **data "
 "security**."
 msgstr ""
-"verschlüsselt eine Nachricht so, dass sie nur vom gewünschten Empfänger "
-"entschlüsselt werden kann."
+"verschlüsselt eine Nachricht so, dass sie nur von dem vorgesehenen Empfänger "
+"entschlüsselt werden kann. Mit anderen Worten, es garantiert die "
+"**Privatsphäre** und den **Datenschutz** der Nachricht."
 
 #: ../system/integrations/pgp.rst:21
 msgid "Screenshot of ticket creation with encrypt and sign buttons"
@@ -31915,16 +31873,12 @@ msgstr ""
 "Signieren"
 
 #: ../system/integrations/pgp.rst:21
-#, fuzzy
-#| msgid ""
-#| "Once PGP has been enabled, 🔒 ``Encrypt`` and ✅ ``Sign`` buttons will "
-#| "appear in the ticket composer."
 msgid ""
 "Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will appear for "
 "outgoing email drafts."
 msgstr ""
-"Sobald PGP aktiviert ist, erscheinen die Schaltflächen 🔒 ``Verschlüsseln`` "
-"und ✅ ``Signieren`` beim Verfassen eines Artikels."
+"Sobald PGP aktiviert ist, werden die Schaltflächen ``Verschlüsseln`` und "
+"``Signieren`` in ausgehenden E-Mail-Entwürfen angezeigt."
 
 #: ../system/integrations/pgp.rst:24
 msgid "**Sign button not visible?**"
@@ -31945,20 +31899,17 @@ msgid "Handling of Keys"
 msgstr "Verwaltung von Schlüsseln"
 
 #: ../system/integrations/pgp.rst:33
-#, fuzzy
-#| msgid ""
-#| "You can add keys by clicking the ``Add Key`` button. The keys can be "
-#| "imported from a file or you can paste the content of the key in the text "
-#| "box."
 msgid ""
 "To use the PGP function, you have to enable the integration (PGP) by "
 "switching the toggle to **enabled**. You can add keys by clicking the ``Add "
 "Key`` button. The keys can be imported from a file or you can paste the "
 "content of the key in the text box."
 msgstr ""
-"Sie können Schlüssel hinzufügen, indem Sie auf die Schaltfläche ``Schlüssel "
-"hinzufügen`` klicken. Die Schlüssel können aus einer Datei importiert werden "
-"oder Sie können den Inhalt des Schlüssels in das Textfeld einfügen."
+"Um die PGP-Funktion zu nutzen, müssen Sie die Integration (PGP) aktivieren, "
+"indem Sie den Schalter auf **aktiviert** schalten. Sie können Schlüssel "
+"hinzufügen, indem Sie auf die Schaltfläche ``Schlüssel hinzufügen`` klicken. "
+"Die Schlüssel können aus einer Datei importiert werden oder Sie können den "
+"Inhalt des Schlüssels in das Textfeld einfügen."
 
 #: ../system/integrations/pgp.rst:38
 msgid "**Which keys do I have to import?**"
@@ -32077,47 +32028,37 @@ msgid "Default Behavior"
 msgstr "Standard-Verhalten"
 
 #: ../system/integrations/pgp.rst:95
-#, fuzzy
-#| msgid ""
-#| "Here, you can adjust on per group basis, if **sign** and **encryption** "
-#| "is on or off by default. Please be aware, that agents can always override "
-#| "the setting for each individual article."
 msgid ""
 "Here, you can adjust on per group basis, if **sign** and **encryption** is "
 "on or off by default. Please be aware, that agents can always override the "
 "setting for each individual email."
 msgstr ""
 "Hier können Sie für jede Gruppe einstellen, ob **Signieren** und "
-"**Verschlüsselung** standardmäßig ein- oder ausgeschaltet sind. Bitte "
-"beachten Sie, dass Agenten die Einstellung für jeden einzelnen Artikel "
-"jederzeit überschreiben können."
+"**Verschlüsselung** standardmäßig ein- oder ausgeschaltet ist. Bitte "
+"beachten Sie, dass die Agenten die Einstellung für jede einzelne E-Mail "
+"übersteuern können."
 
 #: ../system/integrations/pgp.rst:None
 msgid "Adjusting default behavior on per group basis"
 msgstr "Anpassung des Standardverhaltens für jede Gruppe"
 
 #: ../system/integrations/pgp.rst:106
-#, fuzzy
-#| msgid ""
-#| "Logs report the status and details of all mail, both incoming and "
-#| "outgoing, that used signing/verification or encryption/decryption."
 msgid ""
 "All of the system's latest PGP activity is displayed in the **Recent Logs** "
 "section. The logs contain the status and details of all emails (both "
 "incoming and outgoing), that used signing/verification or encryption/"
 "decryption."
 msgstr ""
-"Die Protokolle enthalten den Status und die Details aller eingehenden und "
-"ausgehenden E-Mails, die signiert/verifiziert oder ver- und entschlüsselt "
-"wurden."
+"Alle aktuellen PGP-Aktivitäten des Systems werden im Bereich **Aktuellste "
+"Protokolle** angezeigt. Die Protokolle enthalten den Status und die Details "
+"aller E-Mails (sowohl eingehende als auch ausgehende), die signiert/"
+"verifiziert oder verschlüsselt/entschlüsselt wurden."
 
 #: ../system/integrations/pgp.rst:113
-#, fuzzy
-#| msgid "**Sign button is not visible, but keys are imported.**"
 msgid "Sign button is not visible, but keys are imported."
 msgstr ""
-"**Die Schaltfläche \"Signieren\" ist nicht sichtbar, aber die Schlüssel "
-"wurden importiert.**"
+"Die Schaltfläche Signieren ist nicht sichtbar, aber die Schlüssel sind "
+"importiert."
 
 #: ../system/integrations/pgp.rst:111
 msgid "Did you choose a group in the ticket?"
@@ -32132,10 +32073,8 @@ msgstr ""
 "für ausgehende E-Mails in der Gruppe verwendet wird?"
 
 #: ../system/integrations/pgp.rst:118
-#, fuzzy
-#| msgid "**How to obtain keys?**"
 msgid "How to obtain keys?"
-msgstr "**Wie erhält man Schlüssel?**"
+msgstr "Wie erhalten Sie einen Schlüssel?"
 
 #: ../system/integrations/pgp.rst:116
 msgid ""
@@ -32148,12 +32087,8 @@ msgstr ""
 "ist eine Voraussetzung für die Nutzung der PGP-Funktion."
 
 #: ../system/integrations/pgp.rst:123
-#, fuzzy
-#| msgid "**It says a passphrase is needed, but I haven't got one.**"
 msgid "It says a passphrase is needed, but I haven't got one."
-msgstr ""
-"**Mir wird angezeigt dass eine Passphrase erforderlich ist, aber ich habe "
-"keine.**"
+msgstr "Es heißt, dass eine Passphrase erforderlich ist, aber ich habe keine."
 
 #: ../system/integrations/pgp.rst:121
 msgid ""
@@ -32166,27 +32101,19 @@ msgstr ""
 "Passphrase haben. Dies wird jedoch *nicht* empfohlen."
 
 #: ../system/integrations/pgp.rst:128
-#, fuzzy
-#| msgid "**How do my customers get my new key?**"
 msgid "How do my customers get my new key?"
-msgstr "**Wie bekommen meine Kunden meinen neuen Schlüssel?**"
+msgstr "Wie erhalten meine Kunden meinen neuen Schlüssel?"
 
 #: ../system/integrations/pgp.rst:126
-#, fuzzy
-#| msgid ""
-#| "You have to provide your **public** key in advance. Your customer also "
-#| "has to configure PGP in their email workflow and import your public key. "
-#| "The other way round, you have to get the public key of your customer and "
-#| "have to import it to Zammad."
 msgid ""
 "You have to provide your *public* key in advance. Your customer also has to "
 "configure PGP in their email workflow and import your public key. The other "
 "way round, you have to get the public key of your customer and have to "
 "import it to Zammad."
 msgstr ""
-"Sie müssen Ihren **öffentlichen** Schlüssel im Voraus bereitstellen. Ihr "
-"Kunde muss außerdem PGP in seinem E-Mail-Workflow konfigurieren und Ihren "
-"öffentlichen Schlüssel importieren. Umgekehrt müssen Sie sich den "
+"Sie müssen Ihren *öffentlichen* Schlüssel im Voraus zur Verfügung stellen. "
+"Ihr Kunde muss außerdem PGP in seinem E-Mail-Workflow konfigurieren und "
+"Ihren öffentlichen Schlüssel importieren. Umgekehrt müssen Sie sich den "
 "öffentlichen Schlüssel Ihres Kunden besorgen und ihn in Zammad importieren."
 
 #: ../system/integrations/smime.rst:2
@@ -32194,12 +32121,6 @@ msgid "S/MIME"
 msgstr "S/MIME"
 
 #: ../system/integrations/smime.rst:4
-#, fuzzy
-#| msgid ""
-#| "S/MIME is one method for secure email communication in Zammad (in "
-#| "addition to :doc:`../pgp/index`). It is the most widely-supported method "
-#| "for secure email communication and allows you to exchange **signed** and "
-#| "**encrypted** messages with others."
 msgid ""
 "S/MIME is one method for secure email communication in Zammad (in addition "
 "to :doc:`pgp`). It is the most widely-supported method for secure email "
@@ -32207,34 +32128,28 @@ msgid ""
 "messages with others."
 msgstr ""
 "S/MIME ist eine Methode für die sichere E-Mail-Kommunikation in Zammad "
-"(zusätzlich zu :doc:`../pgp/index`). Es ist die am weitesten verbreitete "
-"Methode für die sichere E-Mail-Kommunikation und ermöglicht Ihnen den "
-"Austausch von **signierten** und **verschlüsselten** Nachrichten mit anderen."
+"(zusätzlich zu :doc:`pgp`). Es ist die am weitesten verbreitete Methode für "
+"die sichere E-Mail-Kommunikation und ermöglicht Ihnen den Austausch von "
+"**signierten** und **verschlüsselten** Nachrichten mit anderen."
 
 #: ../system/integrations/smime.rst:10
-#, fuzzy
-#| msgid ""
-#| "is proof that a message hasn't been tampered with or sent by an "
-#| "impersonator."
 msgid ""
 "is proof that a message hasn't been tampered with or sent by an "
 "impersonator. In other words, it guarantees the message **integrity** and "
 "**authenticity**."
 msgstr ""
 "ist der Beweis, dass eine Nachricht nicht manipuliert oder von einem "
-"Unbekannten gesendet wurde."
+"Nachahmer gesendet wurde. Mit anderen Worten, es garantiert die "
+"**Integrität** und die **Echtheit** der Nachricht."
 
 #: ../system/integrations/smime.rst:15
-#, fuzzy
-#| msgid ""
-#| "scrambles a message so that it can only be unscrambled by the intended "
-#| "recipient."
 msgid ""
 "scrambles a message so that it can only be unscrambled by the intended "
 "recipient. In other words, it guarantees **privacy** and **data security**."
 msgstr ""
-"verschlüsselt eine Nachricht so, dass sie nur vom gewünschten Empfänger "
-"entschlüsselt werden kann."
+"verschlüsselt eine Nachricht, so dass sie nur von dem vorgesehenen Empfänger "
+"entschlüsselt werden kann. Mit anderen Worten, es garantiert die "
+"**Privatsphäre** und den **Datenschutz** der Nachricht."
 
 #: ../system/integrations/smime.rst:18
 msgid ""
@@ -32244,60 +32159,48 @@ msgid ""
 "side, read the :user-docs:`secure email section </extras/secure-email.html>` "
 "in the user documentation."
 msgstr ""
+"Sobald S/MIME über den Schalter oben aktiviert wurde, erscheinen die "
+"Schaltflächen ``Verschlüsseln`` und ``Signieren`` in der Ticket-"
+"Detailansicht, wenn Sie einen E-Mail-basierten Artikel erstellen. Weitere "
+"Einzelheiten zur Funktionsweise von S/MIME für Agenten finden Sie im "
+"Abschnitt :user-docs:`Sichere Email </extras/secure-email.html>` in der "
+"Benutzerdokumentation."
 
 #: ../system/integrations/smime.rst:27
-#, fuzzy
-#| msgid ""
-#| "A certificate *and* private key for your own organization to **sign "
-#| "outgoing messages** and **decrypt incoming messages**."
 msgid ""
 "A certificate and private key for your own organization to sign outgoing "
 "messages and decrypt incoming messages."
 msgstr ""
-"Ein Zertifikat *und* ein privater Schlüssel für Ihre eigene Organisation zum "
-"**Signieren ausgehender Nachrichten** und **Entschlüsseln eingehender "
-"Nachrichten**."
+"Ein Zertifikat und ein privater Schlüssel für Ihre eigene Organisation zum "
+"Signieren ausgehender Nachrichten und Entschlüsseln eingehender Nachrichten."
 
 #: ../system/integrations/smime.rst:29
-#, fuzzy
-#| msgid ""
-#| "Certificates belonging your contacts, or their issuing certificate "
-#| "authority (CA) to **verify incoming message signatures** and **encrypt "
-#| "outgoing messages**."
 msgid ""
 "Certificates belonging to your contacts or their issuing certificate "
 "authority (CA) to verify incoming message signatures and encrypt outgoing "
 "messages."
 msgstr ""
 "Zertifikate, die Ihren Kontakten oder der ausstellenden "
-"Zertifizierungsstelle (CA) gehören, um **Signaturen von "
-"Eingangsnachrichten** zu überprüfen und **Ausgangsnachrichten** zu "
+"Zertifizierungsstelle (*Certificate Authority*, CA) gehören, um Signaturen "
+"von Eingangsnachrichten zu überprüfen und Ausgangsnachrichten zu "
 "verschlüsseln."
 
 #: ../system/integrations/smime.rst:32
-#, fuzzy
-#| msgid ""
-#| "In general, the usage of any expired (``Not After``) or not yet valid "
-#| "(``Not Before``) certificate is denied for outgoing emails."
 msgid ""
 "The usage of any expired (``Not After``) or not yet valid (``Not Before``) "
 "certificate is not allowed for outgoing emails."
 msgstr ""
-"Im Allgemeinen wird die Verwendung eines abgelaufenen (``Not After``) oder "
-"noch nicht gültigen (``Not Before``) Zertifikats für ausgehende E-Mails "
-"verweigert."
+"Die Verwendung eines abgelaufenen (``Not After``) oder noch nicht gültigen "
+"(``Not Before``) Zertifikats für ausgehende E-Mails ist nicht möglich."
 
 #: ../system/integrations/smime.rst:35
-#, fuzzy
-#| msgid ""
-#| "The easiest way to get certificates is to buy an annual subscription "
-#| "through a commercial CA, such as:"
 msgid ""
 "**Where to get a certificate?** The easiest way to get certificates is to "
 "buy an annual subscription through a commercial CA, such as:"
 msgstr ""
-"Der einfachste Weg, Zertifikate zu erhalten, ist der Kauf eines "
-"Jahresabonnements über eine kommerzielle Zertifizierungsstelle, wie z.B.:"
+"**Wo bekomme ich ein Zertifikat?** Der einfachste Weg, Zertifikate zu "
+"erhalten, ist der Kauf eines Jahresabonnements über eine kommerzielle "
+"Zertifizierungsstelle, wie z.B.:"
 
 #: ../system/integrations/smime.rst:38
 msgid ""
@@ -32316,69 +32219,52 @@ msgid "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 msgstr "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 
 #: ../system/integrations/smime.rst:42
-#, fuzzy
-#| msgid ""
-#| "You can also generate your own self-signed certificates, but the process "
-#| "is complicated and usually **involves extra work for your contacts**."
 msgid ""
 "You can also generate your own self-signed certificates, but the process is "
 "complicated and usually involves extra work for your contacts. Bear in mind "
 "that S/MIME only works if the other party is using it, too."
 msgstr ""
 "Sie können auch Ihre eigenen selbstsignierten Zertifikate erstellen, aber "
-"das Verfahren ist kompliziert und bedeutet in der Regel **mehr Arbeit für "
-"Ihre Kontakte**."
+"der Prozess ist kompliziert und bedeutet in der Regel zusätzlichen Aufwand "
+"für Ihre Kontakte. Denken Sie daran, dass S/MIME nur funktioniert, wenn die "
+"andere Partei es auch verwendet."
 
 #: ../system/integrations/smime.rst:47
-#, fuzzy
-#| msgid "Certificate and Private Key Checks on Upload"
 msgid "Certificate and Key Handling"
-msgstr "Überprüfung von Zertifikat und privatem Schlüssel beim Hochladen"
+msgstr "Handhabung von Zertifikaten und Schlüsseln"
 
 #: ../system/integrations/smime.rst:50
-#, fuzzy
-#| msgid "Add Certificate Data"
 msgid "Add Certificates and Keys"
-msgstr "Zertifikatsdaten hinzufügen"
+msgstr "Hinzufügen von Zertifikaten und Schlüsseln"
 
 #: ../system/integrations/smime.rst:52
-#, fuzzy
-#| msgid ""
-#| "If your certificate and private key are bundled together in the same file "
-#| "or PEM block, import it twice (once using each button)."
 msgid ""
 "When adding certificates and keys, Zammad validates them based on the "
 "``X509v3`` extensions. If your certificate and private key are bundled "
 "together in the same file or PEM block, import them twice (once using each "
 "button)."
 msgstr ""
-"Wenn Ihr Zertifikat und Ihr privater Schlüssel in derselben Datei oder "
-"demselben PEM-Block gebündelt sind, importieren Sie sie zweimal (einmal mit "
-"jeder Schaltfläche)."
+"Beim Hinzufügen von Zertifikaten und Schlüsseln validiert Zammad diese "
+"anhand der Erweiterungen ``X509v3``. Wenn Ihr Zertifikat und Ihr privater "
+"Schlüssel in derselben Datei oder demselben PEM-Block gebündelt sind, "
+"importieren Sie diese zweimal (jeweils einmal mit jeder Schaltfläche)."
 
 #: ../system/integrations/smime.rst:65
 msgid "Add Certificate"
 msgstr "Zertifikat hinzufügen"
 
 #: ../system/integrations/smime.rst:57
-#, fuzzy
-#| msgid ""
-#| "You can also add a bunch of certificates in one go by providing a single "
-#| "file with all relevant certificates."
 msgid ""
 "Import public-key certificates for both your own organization and your "
 "contacts. You can add a bunch of certificates all at once by providing a "
 "single file with all relevant certificates."
 msgstr ""
-"Sie können auch eine Reihe von Zertifikaten auf einmal hinzufügen, indem Sie "
-"eine einzige Datei mit allen relevanten Zertifikaten bereitstellen."
+"Importieren Sie Public-Key-Zertifikate sowohl für Ihre eigene Organisation "
+"als auch für Ihre Kontakte. Sie können mehrere Zertifikate auf einmal "
+"hinzufügen, indem Sie eine Datei mit allen relevanten Zertifikaten "
+"bereitstellen."
 
 #: ../system/integrations/smime.rst:61
-#, fuzzy
-#| msgid ""
-#| "In some cases (e.g. when dealing with large enterprises), you may be "
-#| "given a certificate for an entire CA, rather than a single contact. Add "
-#| "it here to trust *all* certificates issued by that CA."
 msgid ""
 "In some cases (e.g. when dealing with large enterprises), you may be given a "
 "certificate for an entire certificate authority (CA), rather than a single "
@@ -32386,28 +32272,29 @@ msgid ""
 "that CA. Commercial CAs can usually be verified online. Zammad does not "
 "include a list of built-in, trusted CAs."
 msgstr ""
-"In manchen Fällen (z.B. bei großen Unternehmen) kann es vorkommen, dass Sie "
-"ein Zertifikat für eine ganze CA erhalten und nicht nur für einen einzelnen "
-"Kontakt. Fügen Sie es hier hinzu, um *allen* von dieser CA ausgestellten "
-"Zertifikaten zu vertrauen."
+"In manchen Fällen (z.B. bei großen Unternehmen) erhalten Sie ein Zertifikat "
+"für eine gesamte Zertifizierungsstelle (CA) und nicht nur für einen "
+"einzelnen Kontakt. Sie können es auch hier hinzufügen, um *allen* "
+"Zertifikate zu vertrauen, die von dieser CA ausgestellt wurden. Kommerzielle "
+"CAs können in der Regel online verifiziert werden. Zammad enthält keine "
+"Liste integrierter, vertrauenswürdiger CAs."
 
 #: ../system/integrations/smime.rst:78
 msgid "Add Private Key"
 msgstr "Privaten Schlüssel hinzufügen"
 
 #: ../system/integrations/smime.rst:68
-#, fuzzy
-#| msgid ""
-#| "Private keys are for **your own organization only**; never ask your "
-#| "contacts for their private keys."
 msgid ""
 "Once you've added a public-key certificate, you can import its matching "
 "private key. Private keys are for **your own organization only**; never ask "
 "your contacts for their private keys. A bulk import of private keys is not "
 "possible."
 msgstr ""
-"Private Schlüssel sind nur für **Ihre eigene Organisation**; fragen Sie "
-"niemals Ihre Kontakte nach deren privaten Schlüsseln."
+"Sobald Sie ein Zertifikat mit einem öffentlichen Schlüssel hinzugefügt "
+"haben, können Sie den dazugehörigen privaten Schlüssel importieren. Private "
+"Schlüssel sind nur für **Ihre eigene Organisation**; fragen Sie niemals Ihre "
+"Kontakte nach deren privaten Schlüsseln. Ein Massenimport von privaten "
+"Schlüsseln ist nicht möglich."
 
 #: ../system/integrations/smime.rst:0
 msgid ""
@@ -32425,22 +32312,16 @@ msgstr ""
 "(siehe Zeile 2)."
 
 #: ../system/integrations/smime.rst:81
-#, fuzzy
-#| msgid "Add Certificate Data"
 msgid "Certificate Validation"
-msgstr "Zertifikatsdaten hinzufügen"
+msgstr "Validierung von Zertifikaten"
 
 #: ../system/integrations/smime.rst:93
-#, fuzzy
-#| msgid "Delete Certificates"
 msgid "Client certificate"
-msgstr "Zertifikate löschen"
+msgstr "Client-Zertifikat"
 
 #: ../system/integrations/smime.rst:84
-#, fuzzy
-#| msgid "The following attributes are required then:"
 msgid "The following attributes are required:"
-msgstr "Die folgenden Attribute sind dann erforderlich:"
+msgstr "Die folgenden Attribute sind erforderlich:"
 
 #: ../system/integrations/smime.rst:86
 msgid "Subject Alternative Name (at least one email address has to be present)"
@@ -32456,25 +32337,21 @@ msgid "Public key algorithm (either ``RSA`` or ``EC``)"
 msgstr "Algorithmus des öffentlichen Schlüssels (entweder ``RSA`` oder ``EC``)"
 
 #: ../system/integrations/smime.rst:90
-#, fuzzy
-#| msgid ""
-#| "The Extended Key Usage attribute is optional. If the certificate provides "
-#| "the named attribute, than it must contain the value ``E-mail Protection``."
 msgid ""
 "The Extended Key Usage attribute is optional. If the certificate provides "
 "the named attribute, then it must contain the value ``E-mail Protection``. "
 "Any usable email address has to be prefixed with ``email:`` or ``rfc822:``. "
 "The named public key algorithms are mandatory for private keys as well."
 msgstr ""
-"Das Attribut \"Extended Key Usage\" ist optional. Wenn das Zertifikat das "
+"Das Attribut Extended Key Usage ist optional. Wenn das Zertifikat das "
 "genannte Attribut enthält, dann muss es den Wert ``E-mail Protection`` "
-"enthalten."
+"enthalten. Jeder verwendbaren E-Mail-Adresse muss das Präfix ``email:`` oder "
+"``rfc822:`` vorangestellt werden. Die genannten Algorithmen für öffentliche "
+"Schlüssel sind auch für private Schlüssel zwingend erforderlich."
 
 #: ../system/integrations/smime.rst:98
-#, fuzzy
-#| msgid "no CA certificate"
 msgid "CA certificate"
-msgstr "kein CA-Zertifikat ist"
+msgstr "CA-Zertifikat"
 
 #: ../system/integrations/smime.rst:96
 msgid ""
@@ -32487,10 +32364,8 @@ msgstr ""
 "nicht überprüft."
 
 #: ../system/integrations/smime.rst:101
-#, fuzzy
-#| msgid "Download Certificates"
 msgid "Download Certificate or Key"
-msgstr "Zertifikate herunterladen"
+msgstr "Zertifikat oder Schlüssel herunterladen"
 
 #: ../system/integrations/smime.rst:103
 msgid ""
@@ -32502,25 +32377,27 @@ msgid ""
 "download a private key, use the other option labeled ``Download Private "
 "Key``."
 msgstr ""
+"Sie können die zuvor bereitgestellten Zertifikate und privaten Schlüssel "
+"jederzeit von Ihrer Zammad-Instanz herunterladen. Bitte beachten Sie, dass "
+"private Schlüssel, die mit einer Passphrase geschützt sind, dies auch "
+"weiterhin bleiben. Wenn Sie sie herunterladen, müssen Sie die Passphrase "
+"kennen, um sie nach dem Herunterladen verwenden zu können. Um ein Zertifikat "
+"herunterzuladen, verwenden Sie das Menü ⠇ in der Spalte **Aktionen** und "
+"wählen Sie ``Zertifikat herunterladen``. Um einen privaten Schlüssel "
+"herunterzuladen, verwenden Sie die andere Option mit der Bezeichnung "
+"``Privaten Schlüssel herunterladen``."
 
 #: ../system/integrations/smime.rst:111
-#, fuzzy
-#| msgid "Delete Certificates"
 msgid "Delete Certificate and Key"
-msgstr "Zertifikate löschen"
+msgstr "Zertifikat und Schlüssel löschen"
 
 #: ../system/integrations/smime.rst:113
-#, fuzzy
-#| msgid ""
-#| "If you want to delete a specific key, you can do it by clicking on the "
-#| "menu in the **actions** column and select **delete**:"
 msgid ""
 "To delete a certificate (with an optional private key included), use the ⠇ "
 "menu in the **Actions** column and select ``Delete``."
 msgstr ""
-"Wenn Sie einen bestimmten Schlüssel löschen möchten, können Sie dies tun, "
-"indem Sie auf das Menü in der Spalte **Aktionen** klicken und **Löschen** "
-"wählen:"
+"Um ein Zertifikat (mit einem optionalen privaten Schlüssel) zu löschen, "
+"verwenden Sie das Menü ⠇ in der Spalte **Aktionen** und wählen ``Löschen``."
 
 #: ../system/integrations/smime.rst:119
 msgid ""
@@ -32528,20 +32405,20 @@ msgid ""
 "encrypted**, if possible. This behavior can be adjusted on a per-group "
 "basis. You can choose to sign only, encrypt only, both, or neither:"
 msgstr ""
+"Standardmäßig versucht Zammad, alle ausgehenden E-Mails **signiert und "
+"verschlüsselt zu senden**, wenn möglich. Dieses Verhalten kann für jede "
+"Gruppe angepasst werden. Sie zwischen nur signieren, nur verschlüsseln, "
+"beides oder keinem von beiden wählen:"
 
 #: ../system/integrations/smime.rst:None
 msgid "Zammad allowing to choose the default behavior on per group basis"
 msgstr "Zammad ermöglicht die Auswahl des Standardverhaltens für jede Gruppe"
 
 #: ../system/integrations/smime.rst:128
-#, fuzzy
-#| msgid ""
-#| "Of course, agents can always manually change these settings on each email "
-#| "they send out."
 msgid "Agents can always override these settings for each email they send out."
 msgstr ""
-"Natürlich können Agenten diese Einstellungen bei jeder E-Mail, die sie "
-"versenden, manuell ändern."
+"Agenten können diese Einstellungen für jede E-Mail, die sie versenden, "
+"übersteuern."
 
 #: ../system/integrations/smime.rst:133
 msgid ""
@@ -32552,6 +32429,13 @@ msgid ""
 "manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`. For those, "
 "check your ``production.log``."
 msgstr ""
+"Alle aktuellen S/MIME-Aktivitäten des Systems werden im Bereich **Aktuellste "
+"Protokolle** angezeigt. Die Protokolle enthalten den Status und die Details "
+"aller E-Mails (sowohl eingehende als auch ausgehende), die signiert/"
+"verifiziert oder verschlüsselt/entschlüsselt wurden. Dieses Protokoll "
+"enthält **nicht** E-Mails, die von :doc:`Triggern </manage/trigger>` "
+"oder :doc:`Automatisierungsaufgaben </manage/scheduler>` gesendet wurden. "
+"Prüfen Sie dazu Ihr ``production.log``."
 
 #: ../system/integrations/smime.rst:148
 msgid "I received a signed/encrypted email before I set up S/MIME integration"
@@ -32575,10 +32459,8 @@ msgstr ""
 "Screenshot mit Benutzeraufforderung, die Entschlüsselung zu wiederholen"
 
 #: ../system/integrations/smime.rst:157
-#, fuzzy
-#| msgid "The 🔒 ``Encrypt`` button is disabled"
 msgid "The ``Encrypt`` button is disabled"
-msgstr "Die 🔒 ``Verschlüsseln``-Schaltfläche ist deaktiviert"
+msgstr "Die Schaltfläche ``Verschlüsseln`` ist deaktiviert"
 
 #: ../system/integrations/smime.rst:151
 msgid "Have you added the recipient's certificate?"
@@ -32593,25 +32475,18 @@ msgid "Have you checked your ``production.log`` for more details?"
 msgstr "Haben Sie Ihr ``production.log`` auf weitere Details überprüft?"
 
 #: ../system/integrations/smime.rst:155
-#, fuzzy
-#| msgid ""
-#| "If encryption doesn't work in the composer, it won't work "
-#| "in :doc:`triggers </manage/trigger>` or the :doc:`scheduler </manage/"
-#| "scheduler>` either!"
 msgid ""
 "If encryption doesn't work for outgoing email articles, it won't work "
 "in :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/"
 "scheduler>` either."
 msgstr ""
-"Wenn die Verschlüsselung Ticket-Bereich nicht funktioniert, wird sie auch "
-"nicht in :doc:`Triggern </manage/trigger>` oder in :doc:`Automatisierungen </"
-"manage/scheduler>` funktionieren!"
+"Wenn die Verschlüsselung für ausgehende E-Mail-Artikel nicht funktioniert, "
+"wird sie auch nicht in :doc:`Triggern </manage/trigger>` "
+"oder :doc:`Automatisierungsaufgaben </manage/scheduler>` funktionieren."
 
 #: ../system/integrations/smime.rst:162
-#, fuzzy
-#| msgid "The ✅ ``Sign`` button is disabled"
 msgid "The ``Sign`` button is disabled"
-msgstr "Die ✅ ``Signieren``-Schaltfläche ist deaktiviert"
+msgstr "Die ``Signieren`` Schaltfläche ist deaktiviert"
 
 #: ../system/integrations/smime.rst:160
 msgid ""
@@ -32630,8 +32505,6 @@ msgstr ""
 "Person/Gruppe überein, die die E-Mail verfasst?"
 
 #: ../system/integrations/smime.rst:165
-#, fuzzy
-#| msgid "Error: “Fingerprint already taken”"
 msgid "Error: \"Fingerprint already taken\""
 msgstr "Fehler: \"Fingerabdruck bereits vorhanden\""
 
@@ -32641,10 +32514,8 @@ msgstr ""
 "Sind Sie sicher, dass Sie dieses Zertifikat nicht bereits hinzugefügt haben?"
 
 #: ../system/integrations/smime.rst:168
-#, fuzzy
-#| msgid "Error: “❌ invalid byte sequence in UTF-8”"
 msgid "Error: \"invalid byte sequence in UTF-8\""
-msgstr "Fehler: \"❌ ungültige Bytefolge in UTF-8\""
+msgstr "Fehler: \"ungültige Bytefolge in UTF-8\""
 
 #: ../system/integrations/smime.rst:168
 msgid "Please ensure to provide PEM formatted certificate and keys."
@@ -35524,6 +35395,68 @@ msgstr "Version"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
 
+#~ msgid "Find examples of useful macros below."
+#~ msgstr "Beispiele für nützliche Makros finden Sie unten."
+
+#, fuzzy
+#~| msgid "**State:** closed"
+#~ msgid "**State:** ``closed``"
+#~ msgstr "**Status:** geschlossen"
+
+#, fuzzy
+#~| msgid "**Tag:** *add* ``spam``"
+#~ msgid "**Tags:** add ``spam``"
+#~ msgstr "**Tags:** *hinzufügen* ``spam``"
+
+#~ msgid ""
+#~ "In case you are looking for a time-based automation, use :doc:`scheduler "
+#~ "jobs </manage/scheduler>` instead. To execute pre-defined changes "
+#~ "manually via UI (without a condition), use :doc:`/manage/macros` instead."
+#~ msgstr ""
+#~ "Falls Sie eine zeitbasierte Automatisierung suchen, verwenden Sie "
+#~ "stattdessen die :doc:`Automatisierung </manage/scheduler>`. Um "
+#~ "vordefinierte Änderungen manuell über die Benutzeroberfläche (ohne "
+#~ "Bedingung) auszuführen, verwenden Sie stattdessen :doc:`/manage/macros`."
+
+#~ msgid "Screenshot of \"Triggers\" page in admin settings"
+#~ msgstr "Screenshot der Trigger-Seite in den Admin-Einstellungen"
+
+#~ msgid "How Do Trigger Work"
+#~ msgstr "Wie funktionieren Trigger"
+
+#~ msgid ""
+#~ "Triggers are evaluated in alphabetical order by **name.** In some "
+#~ "situations, triggers might be the wrong choice, see :doc:`/manage/trigger/"
+#~ "limitations` for more information."
+#~ msgstr ""
+#~ "Trigger werden in alphabetischer Reihenfolge nach ihrem **Namen** "
+#~ "ausgeführt. In manchen Situationen können Trigger jedoch die falsche Wahl "
+#~ "sein, siehe :doc:`/manage/trigger/limitations` für weitere Informationen."
+
+#~ msgid "Trigger Examples"
+#~ msgstr "Trigger-Beispiele"
+
+#~ msgid ""
+#~ "To learn about triggers in detail, first go to :doc:`/manage/trigger`."
+#~ msgstr ""
+#~ "Um mehr über Trigger im Detail zu erfahren, gehen Sie zuerst zu :doc:`/"
+#~ "manage/trigger`."
+
+#~ msgid ""
+#~ "Triggers are one way of automated actions. In addition, there are "
+#~ "also :doc:`scheduler </manage/scheduler>` and :doc:`postmaster filter </"
+#~ "channels/email/filters>` based automation. Make sure to have a look at "
+#~ "those too. They can be more suitable, depending on your use case."
+#~ msgstr ""
+#~ "Trigger sind eine Möglichkeit zur Automatisierung von Aktionen. Darüber "
+#~ "hinaus können auch Aktionen basierend auf :doc:`Automatisierung </manage/"
+#~ "scheduler>` und :doc:`E-Mail-Filter </channels/email/filters>` ausgeführt "
+#~ "werden. Werfen Sie auch einen Blick darauf, sie können je nach "
+#~ "Anwendungsfall besser geeignet sein."
+
+#~ msgid "Limitations of triggers:"
+#~ msgstr "Einschränkungen von Triggern:"
+
 #~ msgid ""
 #~ "Activating this feature generates summaries of tickets which are "
 #~ "displayed in a new ticket sidebar tab. This can be a huge time saver when "
@@ -37693,9 +37626,6 @@ msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
 #~ msgstr ""
 #~ "Alle folgenden SLAs haben die gleiche Basiskonfiguration. Es mag "
 #~ "Beispiele geben, in denen nicht alle davon verwendet werden."
-
-#~ msgid "**Groups**"
-#~ msgstr "**Gruppen**"
 
 #~ msgid "Sales"
 #~ msgstr "Sales"
