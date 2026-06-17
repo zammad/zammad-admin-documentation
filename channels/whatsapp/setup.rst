@@ -7,7 +7,7 @@ First of all, make sure to match the prerequisites and to read the
 there.
 
 To set up the channel in Zammad, head over to the admin settings to add the
-WhatsApp channel under *Channels > WhatsApp*, click on **Add Account** and
+WhatsApp channel under *Channels > WhatsApp*, click on ``Add Account`` and
 follow the steps below.
 
 Step 1
@@ -36,7 +36,7 @@ Access Token
    `business settings <https://business.facebook.com/settings/system-users>`_
    under *Users > System users*. Make sure to assign the created app to the
    system user ("Assign assets") and to grant admin access by enabling the
-   **Manage app** toggle. After clicking the **Generate token** button, choose
+   **Manage app** toggle. After clicking the ``Generate token`` button, choose
    your created app, an expiration date of the token (we recommend "Never") and
    the permissions ``whatsapp_business_management`` and
    ``whatsapp_business_messaging``.
@@ -47,12 +47,12 @@ Access Token
 
 App Secret
    Enter your app secret. You can find it in your app configuration under
-   *App settings > Basic*. Click the **Show** button to be able to copy it.
+   *App settings > Basic*. Click the ``Show`` button to be able to copy it.
 
    .. figure:: /images/channels/whatsapp/app-secret.png
       :alt: App dashboard with app secret
 
-After providing these three values, click on **Next** in Zammad. This performs
+After providing these three values, click on ``Next`` in Zammad. This performs
 a check and fetches your assigned phone number. If everything is fine, the
 dialog switches to the next step.
 
@@ -93,7 +93,7 @@ Group
    Here you can define the :doc:`group </manage/groups/index>` in which the
    ticket should be created.
 
-After you are configured everything, click on **Submit**. Now the
+After you are configured everything, click on ``Submit``. Now the
 WhatsApp channel is technically created on Zammad side. However, you need to
 take another important step to make it work.
 
@@ -113,18 +113,18 @@ This third step is about telling WhatsApp where, how and what data to send.
 
 Go to *Use cases > Configuration* and copy/paste the values from
 **Callback URL** as well as **Verify Token** from Zammad. Confirm with
-**Verify and save**.
+``Verify and save``.
 
 .. figure:: /images/channels/whatsapp/app-dashboard-configuration-webhook.png
    :alt: Configuration section in WhatsApp app dashboard
 
-Scroll down and switch on the toggle for ``messages`` under **Webhook fields**.
+Scroll down and switch on the toggle for **messages** under **Webhook fields**.
 
 .. figure:: /images/channels/whatsapp/select-webhook-fields.png
    :alt: Select "message" as webhook field
    :align: center
 
-After finishing this step, you can click on the **Finish** button in Zammad
+After finishing this step, you can click on the ``Finish`` button in Zammad
 and you should now be ready to receive tickets from your WhatsApp channel!
 
 Troubleshooting

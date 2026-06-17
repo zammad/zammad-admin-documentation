@@ -134,22 +134,22 @@ than disk space warnings.
 
 In most cases, you'll probably want to set one of the following:
 
-* group
-* owner
-* state
-* priority
+- group
+- owner
+- state
+- priority
 
 but in practice, you can set almost any attribute, including
 :doc:`custom ones you created through the Object Manager </system/objects>`.
 
 Please note that the following attributes are **not customizable**:
 
-   * title
-   * id
-   * ticket number
-   * customer
-   * created_by_id
-   * updated_by_id
+- title
+- id
+- ticket number
+- customer
+- created_by_id
+- updated_by_id
 
 Which Values Can Be Set?
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -172,7 +172,7 @@ owner
       -F "owner=it@chrispresso.com"
 
 group & priority
-   Refer to the dropdown menus in the ticket pane:
+   Refer to the dropdown menus in the ticket sidebar:
 
    .. code:: bash
 
@@ -180,7 +180,7 @@ group & priority
       -F "priority=3 high"
 
    .. figure:: /images/system/integrations/checkmk/ticket-attribute-names.png
-      :alt: See possible values for certain attributes in the ticket pane.
+      :alt: See possible values for certain attributes in the ticket sidebar.
       :scale: 50%
       :align: center
 

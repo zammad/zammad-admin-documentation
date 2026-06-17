@@ -14,12 +14,12 @@ What Users See
 ^^^^^^^^^^^^^^
 
 .. figure:: /images/system/integrations/i-doit/ticket-pane-demo.gif
-   :alt: i-doit integration in Zammad's ticket pane
+   :alt: i-doit integration in Zammad's ticket sidebar
    :align: center
 
-   The i-doit integration will appear under a new 🖨 tab in the ticket pane.
+   The i-doit integration will appear under a new 🖨 tab in the ticket sidebar.
 
-i-doit integration puts a new tab in Zammad's ticket pane where you can add
+i-doit integration puts a new tab in Zammad's ticket sidebar where you can add
 links to existing i-doit devices for easy reference.
 (See our
 :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to
@@ -32,10 +32,10 @@ It requires i-doit's
 `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_. Make sure to
 have it properly set up. Use the following setting:
 
-   * Active: ``Yes``
-   * Enforce authentication by username and password: ``No``
+   - Active: ``Yes``
+   - Enforce authentication by username and password: ``No``
 
-To set it up, enable the integration in the Zammad admin panel
+To set it up, enable the integration in the Zammad admin settings
 under *System > Integrations > i-doit*:
 
 .. figure:: /images/system/integrations/i-doit/settings.png
@@ -46,7 +46,7 @@ Endpoint
    The root URL of your i-doit installation.
 
 API token
-   Found in the i-doit admin panel
+   Found in the i-doit admin area
    under *Interfaces / external data > JSON-RPC API > Common Settings*.
 
    .. figure:: /images/system/integrations/i-doit/api-configuration.png
@@ -55,9 +55,8 @@ API token
       :width: 80%
 
 Client ID
-   A unique name to identify Zammad within i-doit.
-
-   (Zammad does not require you to enter a value here, but i-doit might!)
+   A unique name to identify Zammad within i-doit. Zammad does not require you
+   to enter a value here, but i-doit might!
 
 SSL verification
    Here you can decide if the certificate of your i-doit system has to be
@@ -85,7 +84,7 @@ learn how it works in practice).
 How to Set it Up
 ^^^^^^^^^^^^^^^^
 
-Enable this integration in the i-doit admin panel under
+Enable this integration in the i-doit admin settings under
 *Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:
 
 .. figure:: /images/system/integrations/i-doit/trouble-ticket-system-configuration.png

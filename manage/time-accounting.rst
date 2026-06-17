@@ -2,32 +2,31 @@ Time Accounting
 ===============
 
 If you want to know how much time you need for each project or ticket,
-enable the time accounting (turn on the switch on the top left side of the
-page).
+enable the time accounting by turning on the switch on top of the
+page. This allows agents to log their needed time on a per-ticket basis.
+To configure it under *Manage > Time Accounting*, the permission
+``admin.time_accounting`` is required.
 
 .. figure:: /images/manage/time-accounting/time-accounting-management.png
    :alt: Time Accounting Management Screen in Zammad
 
-How it Works
-------------
-
 Settings
-^^^^^^^^
+--------
 
-Zammad's time accounting uses ticket **Selector** (filter) to check if a ticket
-is considered for the time accounting or not. If a ticket is applicable, Zammad
-will request the agent to provide how much time was needed to process the
-current ticket step.
+Zammad's time accounting is based on conditions to check if a ticket
+is considered for being relevant for time accounting or not. Add your condition
+in the **Selector** section. 
 
+.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
+
+If a ticket is relevant, Zammad will request the agent to provide the time which
+was needed to process the current ticket step.
 In order for Zammad to bring up the time accounting dialog to an agent,
 the agent has to update the ticket together with an article of any type.
-The article part is mandatory.
-
-However, the time accounting dialog is not mandatory and can be canceled
-by your agents if needed. You cannot enforce time accounting.
-
-If a ticket is no longer considered for the time accounting, the already
-accounted time will be preserved.
+The adding of an article is mandatory to invoke the time accounting dialog.
+However, the time accounting dialog is not mandatory and can be canceled by
+your agents. You cannot enforce the time accounting. When a ticket is no longer
+considered for the time accounting, the already accounted time will be preserved.
 
 .. tip::
 
@@ -36,14 +35,12 @@ accounted time will be preserved.
    alongside writing an article, the ticket selector has to match the ticket
    state before closing for the time accounting dialog to appear.
 
-.. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
-
 .. figure:: /images/manage/time-accounting/time-accounting-selector.png
    :align: center
    :alt: Time Accounting Ticket Selector
 
-By default, agents account time as a unitless numerical input. However, it is
-possible to show a specific unit by configuring **Unit** setting, which provides
+The accounted time is always a unitless number. However, it is
+possible to show a specific unit in the **Unit** section, which provides
 several options:
 
    no unit
@@ -62,18 +59,17 @@ several options:
    :alt: Time Accounting Unit
 
 .. warning::
-   The configurable time accounting unit is used only for display!
-
-   No numerical transformation will be applied to the values, the unit is merely
-   used to indicate to the agents in which units their time is accounted. The
-   original time values will be preserved.
+   The unit is only displayed to make it easier for agents to account their
+   time! No numerical transformation will be applied to the values, not even if
+   you change the unit. It is just to indicate in which unit agents should
+   account their time.
 
    .. figure:: /images/manage/time-accounting/time-accounting-unit-recording.png
       :align: center
       :alt: Time Accounting Unit when Recording
 
 Activity Types
-^^^^^^^^^^^^^^
+--------------
 
 **Activity Types** can be used to group the different ticket time accounting
 entries together. For example, entries that are relevant to a "Billing" type.
@@ -107,7 +103,7 @@ also possible to unset default activity type, in which case no type will be
 pre-selected and the agents can make their choice.
 
 Accounted Time
-^^^^^^^^^^^^^^
+--------------
 
 Under the **Accounted Time** tab, Zammad provides a section for reviewing all
 accounted times for your tickets. Accounted times are displayed per years and
@@ -147,29 +143,29 @@ Tickets and their accounted time
 
       In this list you'll see the following ticket information:
 
-         * Number
-         * Title
-         * Customer
-         * Organization of customer (if applicable)
-         * Agent that accounted the time
-         * Time units accounted in the current activity
-         * Activity type (if enabled)
-         * Created at
+         - Number
+         - Title
+         - Customer
+         - Organization of customer (if applicable)
+         - Agent that accounted the time
+         - Time units accounted in the current activity
+         - Activity type (if enabled)
+         - Created at
 
    Ticket
       This filter contains all relevant tickets from the selected month.
 
       In this list you'll see the following ticket information:
 
-         * Number
-         * Title
-         * Customer
-         * Organization of customer (if applicable)
-         * Agent currently assigned (ticket owner)
-         * Time units accounted in the current month
-         * Time units total (time accounted during ticket life)
-         * Created at
-         * Closed at (if applicable)
+         - Number
+         - Title
+         - Customer
+         - Organization of customer (if applicable)
+         - Agent currently assigned (ticket owner)
+         - Time units accounted in the current month
+         - Time units total (time accounted during ticket life)
+         - Created at
+         - Closed at (if applicable)
 
    Customer
       This provides you a per user filter on accounted time units.
@@ -178,9 +174,9 @@ Tickets and their accounted time
 
       In this list you'll see the following ticket information:
 
-         * Customer
-         * Organization of customer (if applicable)
-         * Time units accounted in the current month
+         - Customer
+         - Organization of customer (if applicable)
+         - Time units accounted in the current month
 
    Organization
       This provides a list of all organizations where customers have caused

@@ -9,10 +9,10 @@ Zammad.
 The import process does things you might not expect:
 
 .. danger::
-   * By default, Zammad will **delete all emails** in your inbox during the
+   - By default, Zammad will **delete all emails** in your inbox during the
      import process. Use the *Keep Messages on Server* setting to
      :ref:`disable this behavior <microsoft365-keep-messages-on-server>`.
-   * Zammad will **send an auto-reply message to every email it imports**
+   - Zammad will **send an auto-reply message to every email it imports**
      (including the old ones!). Make sure to
      :doc:`disable this behavior </manage/trigger>` prior adding an email
      account, and to turn it back on once all your messages have been imported.
@@ -42,7 +42,7 @@ If you do not use this kind of security measurement, simply skip to
 `Add a New Account`_.
 
 Requesting the consent
-   Within Zammad click on **Request Admin Consent** in order to request consent
+   Within Zammad click on ``Request Admin Consent`` in order to request consent
    from your administrators. This is required in some tenants.
 
    If your admin already provided consent, you'll be automatically
@@ -74,7 +74,7 @@ Add a New Account
 
 Click **Add Account** to connect your Microsoft 365 accounts to Zammad.
 You will be redirected to a Microsoft sign-in and confirmation page. Enter
-your credentials and confirm it by clicking the **Accept** button.
+your credentials and confirm it by clicking the ``Accept`` button.
 
 .. note:: **Aliases are not imported automatically.**
 
@@ -120,9 +120,9 @@ Folder
 Keep messages on server
    Specify what happens to your emails after Zammad imports them:
 
-   * ``no`` Zammad deletes all imported messages
+   - ``no`` Zammad deletes all imported messages
 
-   * ``yes`` Zammad marks imported messages as read
+   - ``yes`` Zammad marks imported messages as read
 
      (With this option, Zammad will only import unread messages.
      This means Zammad may miss messages if the mailbox is externally modified.)
@@ -135,6 +135,8 @@ Keep messages on server
       If you choose **yes** here, remember that it's your responsibility
       to clean out your inbox from time to time to keep it below its storage
       limit.
+
+.. _archive-mode-microsoft365:
 
 Archive Mode
    .. include:: /channels/email/accounts/archive-mode.rst

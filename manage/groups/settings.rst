@@ -1,7 +1,7 @@
 Group Settings
 ==============
 
-Click on a group to edit it, or click on *New group* to create a new group.
+Click on a group to edit it, or click on ``New Group`` to create a new group.
 
 .. figure:: /images/manage/groups/group-management.png
    :alt: Screenshot showing Zammad's group management
@@ -73,10 +73,10 @@ Sending Email Address
 
          Please configure an email based channel before here
 
-            * :doc:`Channels → Email </channels/email/index>`
-            * :doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`
-            * :doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`
-            * :doc:`Channels → Google </channels/google/index>`
+            - :doc:`Channels → Email </channels/email/index>`
+            - :doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`
+            - :doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`
+            - :doc:`Channels → Google </channels/google/index>`
 
          and come back afterwards.
 
@@ -94,8 +94,9 @@ Shared Drafts
    :user-docs:`in our user documentation </extras/shared-drafts.html>`.
 
 Summary Generation
-   Allows to override the setting about when to generate the
-   :doc:`AI ticket summary </ai/summary>` on group level.
+   Allows you to override the :doc:`AI ticket summary </ai/summary>`
+   configuration. Choose when the summary should get generated or hide the 
+   ticket summary sidebar tab at all for this group.
 
 Note
    An internal note about the group that is only visible to people who can
@@ -122,4 +123,3 @@ Active
       Please keep in mind that you still can route tickets into these groups.
       This is potentially dangerous, make sure the group is no longer part
       of email filters or a destination group.
-

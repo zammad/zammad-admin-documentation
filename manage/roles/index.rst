@@ -3,7 +3,9 @@ Roles
 
 Roles are a crucial part of Zammad's permission system. They determine what
 users can do within the application and can also contain group permissions.
-You can manage roles in Zammad's settings under *Manage > Roles*.
+You can manage roles in Zammad's settings under *Manage > Roles* with the
+``admin.role`` permission.
+
 This page gives you an explanation of what roles and permissions are. You can
 find details about each permission in a :doc:`separate sub page <permissions>`.
 
@@ -22,15 +24,15 @@ This makes creating user accounts for new agents much simpler because you just
 have to assign the correct role instead of configuring permissions and group
 access for each user individually. Examples of some important permissions are:
 
-* ``ticket.agent``: allows a user to work on tickets
-* ``admin.user``: allows a user to manage other users in Zammad's admin settings
-* ``knowledge_base.editor``: allows a user to create/edit knowledge base
+- ``ticket.agent``: allows a user to work on tickets
+- ``admin.user``: allows a user to manage other users in Zammad's admin settings
+- ``knowledge_base.editor``: allows a user to create/edit knowledge base
   articles
-* ``user_preferences.language``: allows a user to change the language of
+- ``user_preferences.language``: allows a user to change the language of
   Zammad's UI for their account.
 
 To adjust a permission of a role, simply click on it. To create a new role, use
-the **New Role** button in the top right corner. In both cases, a dialog opens
+the ``New Role`` button in the top right corner. In both cases, a dialog opens
 where you can configure it.
 
 .. _permission-guide:
@@ -69,7 +71,7 @@ system.
 You can also set the group permissions for each user individually in the user
 settings. However, this comes with the downside that you have to configure this
 for each user. Please have a look at the
-:doc:`group permission section </manage/groups/access-levels>` for details.
+:doc:`group permission section </manage/groups/group-permissions>` for details.
 
 
 Additional Settings

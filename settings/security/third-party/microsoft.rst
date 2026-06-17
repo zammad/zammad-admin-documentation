@@ -21,11 +21,11 @@ Limitations
 Supported account types:
    Please note that Zammad only supports these account types (App dependent):
 
-      * Accounts in this organizational directory only
+      - Accounts in this organizational directory only
         (Default Directory only - Single tenant)
-      * Accounts in any organizational directory
+      - Accounts in any organizational directory
         (Any Azure AD directory - Multitenant)
-      * Accounts in any organizational directory
+      - Accounts in any organizational directory
         (Any Azure AD directory - Multitenant)
         and personal Microsoft accounts (e.g. Skype, Xbox)
 
@@ -63,9 +63,9 @@ Redirect URI (optional):
    :align: center
 
 Within  **API permissions** add the following permissions:
-    * ``openid``
-    * ``User.Read``
-    * ``Contacts.Read``
+    - ``openid``
+    - ``User.Read``
+    - ``Contacts.Read``
 
 You can find these permissions within *Microsoft Graph > Delegated permissions*.
 
@@ -87,7 +87,7 @@ If you're using a single tenant app, please also copy *Directory (tenant) ID*.
 You now have all required information for Zammad.
 
 .. figure:: /images/settings/security/third-party/microsoft/microsoft-app-get-applicationID-and-tenantID.gif
-   :alt: Screencast showing how to retreive application client and tenant IDs
+   :alt: Screencast showing how to retrieve application client and tenant IDs
    :width: 80%
    :align: center
 

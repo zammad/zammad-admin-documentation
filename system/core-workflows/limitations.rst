@@ -15,10 +15,10 @@ API calls are only partly affected
 
    This affects the following actions:
 
-   * select
-   * auto select
-   * show
-   * hide
+   - select
+   - auto select
+   - show
+   - hide
 
 Some fields stay unavailable to customers
    For technical and security reasons, some default fields (the pale ones
@@ -43,5 +43,5 @@ What is out of scope of core workflows?
 
    Such as (but not limited to):
 
-    * Up- or downgrade permissions of users
-    * Affecting article creation or listing
+   - Up- or downgrade permissions of users
+   - Affecting article creation or listing

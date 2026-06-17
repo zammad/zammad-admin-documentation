@@ -8,11 +8,11 @@ Requirements
 
 Please provide the following requirements:
 
-   * A telephone system that supports webhooks (outbound)
-     (best option are those that allow customizing the calls).
-   * A unique Call-ID during the call session.
-   * Call event data (both numbers and direction).
-   * Your Zammad instance must be reachable for your telephony system.
+- A telephone system that supports webhooks (outbound)
+  (best option are those that allow customizing the calls).
+- A unique Call-ID during the call session.
+- Call event data (both numbers and direction).
+- Your Zammad instance must be reachable for your telephony system.
 
 If you want to learn more on what kind of requests are supported by Zammad
 and what it expects, please consult our

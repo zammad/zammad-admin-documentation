@@ -1,11 +1,12 @@
 Organizations
 =============
 
-Organizations can be managed individually via UI, via CSV import or the API.
+Organizations can be managed individually via UI, via CSV import or the API and
+require the ``admin.organization`` permission.
 
-Organizations can be managed by admins. However, in most cases agents can, too
-(using the :user-docs:`ticket pane </extras/organizations.html>` or
-organization detail page).
+.. note:: Be aware that agents can view and partially change organizations as
+   well by opening the organization detail page by clicking an organization
+   avatar.
 
 .. figure:: /images/manage/organizations/general-view-of-a-busy-organization.png
    :alt: Creating and editing users directly in the Admin Panel
@@ -20,21 +21,21 @@ Learn more about managing organizations...
 .. toctree::
    :maxdepth: 1
 
-   via the Admin Panel <via-the-admin-panel>
+   via admin settings <via-admin-settings>
    via CSV import <via-csv-import>
    via REST API (system documentation) <https://docs.zammad.org/en/latest/api/intro.html>
 
 **There are some technical limitations:**
 
-* Organizations currently cannot be removed. The only exception
+- Organizations currently cannot be removed. The only exception
   is Zammad's :doc:`/system/data-privacy` function.
-* Unlike users, agents cannot create new organizations.
+- Unlike users, agents cannot create new organizations.
   Check the :doc:`roles section </manage/roles/index>`
   to learn more.
-* Because of how organization references work with users, external syncs
+- Because of how organization references work with users, external syncs
   like LDAP or Exchange *do not* support organization mapping. If this is
   relevant to you, consider domain based assignments.
-* BIG organizations can cause *performance issues*. Especially organizations
+- BIG organizations can cause *performance issues*. Especially organizations
   with many members can cause a fairly high system load if their members run
   many updates, for example ticket creations or frequent communication.
 
@@ -53,7 +54,7 @@ The ones that aren't are described below.
 
    User details can be set in the **New/Edit Organization** dialog.
 
-📢 Shared Organization
+Shared Organization
    If you set this option to ``yes``, all organization members will be able
    to **view** and **update** tickets of their organizational members in
    addition to their own.
@@ -81,7 +82,7 @@ The ones that aren't are described below.
 
       Members of shared organization have access to organization based overviews
 
-🗄️ Domain based assignment
+Domain based assignment
    Activating domain based assignment will cause Zammad to automatically add
    *newly created* users to said organization. This can greatly reduce your
    maintenance effort and is seen as workaround for not being able to map
@@ -89,7 +90,7 @@ The ones that aren't are described below.
 
    The default value on creation dialogs is ``no``
 
-🌐 Domain
+Domain
    Add the email domain of the organization with this option. It's being used
    on user creation to determine the assignment. This option belongs to
    domain based assignment and is required if set to ``yes``.
@@ -98,7 +99,7 @@ The ones that aren't are described below.
    to ensure to not use free mailer domains like ``gmail.com`` for these
    assignments.
 
-👑 VIP
+VIP
    This flag is a way for your team to indicate high-status organizations. Just
    as with customers, you can set up special :doc:`/manage/trigger`,
    :doc:`/manage/scheduler` jobs, :doc:`/manage/slas`,
@@ -111,17 +112,14 @@ The ones that aren't are described below.
 
       VIP organizations are displayed with a crown above their avatars.
 
-📑 Note
+Note
    Notes are visible to all staff members, **including agents**.
 
-   .. hint:: 😵 **Are you using the Note field
-      to keep track of your own "custom" organization attributes?**
+   .. hint:: Are you using the **Note** field to keep track of specific
+      organization individual information? Consider creating a separate field
+      for this! Learn more in the :doc:`/system/objects` section.
 
-      Wish you could add your own fields to organizations?
-
-      You can! To learn more, see :doc:`/system/objects`.
-
-▶️ Active
+Active
    Disabling this flag is a soft alternative to deleting an organization.
    So what's the difference?
 

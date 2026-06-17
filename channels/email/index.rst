@@ -29,8 +29,8 @@ Control how Zammad **sends and receives email**.
 🚛 Migrate existing email channel to "XOAUTH" channel
    At this moment Zammad supports XOAUTH for the following providers:
 
-      * :ref:`Google Email <migrate-channel>`
-      * :doc:`Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-email-channel>` (formerly Office 365)
+      - :ref:`Google Email <migrate-channel>`
+      - :doc:`Microsoft 365 IMAP Email </channels/microsoft365/accounts/migrate-from-email-channel>` (formerly Office 365)
 
    .. note::
 
@@ -59,9 +59,9 @@ Control how Zammad **sends and receives email**.
 :doc:`⚙️  Settings <settings>`
    Manage options like:
 
-   * set the “From:” address on system notifications
-   * raise the limit on attachment sizes
-   * modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
+   - set the “From:” address on system notifications
+   - raise the limit on attachment sizes
+   - modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)
 
    .. hint:: Want to **manually edit email subjects**
       or **always copy parent messages into your replies**?

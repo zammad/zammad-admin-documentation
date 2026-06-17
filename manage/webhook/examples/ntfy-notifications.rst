@@ -12,7 +12,7 @@ configuration.
 Step 1 - Setup Ntfy Topic
 -------------------------
 
-Go to ntfy and create a new topic by using the **Subscribe to topic** button.
+Go to ntfy and create a new topic by using the ``Subscribe to topic`` button.
 Either configure access to this topic (in case you are a ntfy Pro user) or
 choose a random topic.
 
@@ -33,11 +33,11 @@ Step 2 - Add a New Webhook with Custom Payload
 ----------------------------------------------
 
 Go to :doc:`Webhook </manage/webhook/add>` management screen in your Zammad
-instance and click on the **New Webhook** button. Activate the "Custom Payload"
-toggle and add your information like in the example.
+instance and click on the ``New Webhook`` button. Activate the
+**Custom Payload** toggle and add your information like in the example.
 
 Depending on the features you want to use and your ntfy plan, it might be
-required to provide ``HTTP Basic Authentication Username`` as well as the
+required to provide **HTTP Basic Authentication Username** as well as the
 appropriate password.
 
 .. figure:: /images/manage/webhook/webhook-ntfy-webhook-config.png
@@ -93,7 +93,7 @@ For detailed information about the possible actions, have a look at the ntfy
       ]
    }
 
-Finally, click on **Submit**.
+Finally, click on ``Submit``.
 
 Step 3 - Configuring a Trigger for Firing the Webhook
 -----------------------------------------------------

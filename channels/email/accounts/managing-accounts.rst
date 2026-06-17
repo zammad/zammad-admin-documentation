@@ -8,7 +8,7 @@ configuration.
    :alt: Existing accounts can be edited from the Accounts panel.
    :align: center
 
-.. include:: managing-accounts.inbound-outbound.rst
+.. include:: /channels/email/accounts/managing-accounts.inbound-outbound.rst
 
 Destination Group
    Click on the group name to reassign the account.
@@ -27,7 +27,7 @@ Destination Group
    at the :doc:`group settings </manage/groups/settings>`.
 
 Email Address
-   Use the **+ Add** or **Edit** buttons
+   Use the ``+ Add`` or ``Edit`` buttons
    to set up secondary addresses on this account.
 
    See :doc:`secondary-addresses` for a detailed description of each option.

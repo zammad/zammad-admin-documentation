@@ -4,17 +4,17 @@ SAML with Keycloak
 Step 1: Keycloak Configuration
 ------------------------------
 
-* **To add Zammad as a client,**
+- **To add Zammad as a client,**
   save the XML configuration to disk
   (``https://your.zammad.domain/auth/saml/metadata``)
-  and use **Clients > Clients list > Import client** in the Keycloak admin
+  and use *Clients > Clients list > Import client* in the Keycloak admin
   panel.
 
-* To help Zammad **match its own user accounts to Keycloak users**,
-  create a user attribute (or “property”) mapper. In **Clients list**, click on
+- To help Zammad **match its own user accounts to Keycloak users**,
+  create a user attribute (or "property") mapper. In **Clients list**, click on
   your newly created Client ID, choose the tab **Client scopes** and click on
   the link which refers to your Zammad instance. Choose
-  **Add mapper > By configuration > User Property** and create a mapper with
+  *Add mapper > By configuration > User Property* and create a mapper with
   the following entries:
 
    .. list-table::
@@ -37,20 +37,20 @@ Step 1: Keycloak Configuration
   and create a new session for that user.
 
   If your Keycloak users' email addresses are stored on another property
-  (*e.g.,* ``username``), adjust accordingly.
+  (*e.g.* ``username``), adjust accordingly.
 
-* Back in **Settings**, enter the Client ID
+- Back in **Settings**, enter the Client ID
   (``https://your.zammad.domain/auth/saml/metadata``) in the field
   **Master SAML Processing URL**.
 
-* You also need to enable **Sign assertions**.
+- You also need to enable **Sign assertions**.
 
 2. Configure Zammad
 -------------------
 
 - Log in to Zammad as an administrator
-- In the admin panel go to "Settings" > "Security" > "Third-party Applications"
-  > "Authentication via SAML"
+- In the admin settings, go to *Settings > Security > Third-party Applications
+  > Authentication via SAML*
 - Provide the following information:
 
   - SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/saml``

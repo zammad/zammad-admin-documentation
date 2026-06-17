@@ -17,21 +17,21 @@ When Are They Sent?
 
 **All users** are notified about:
 
-* Password changes
-* :ref:`Account linking notification <automatic-account-linking-notification>`
+- Password changes
+- :ref:`Account linking notification <automatic-account-linking-notification>`
   on initial login
 
 **Staff (admins & agents)** are notified of:
 
-* Logins from a new device
-* Logins from a new country
+- Logins from a new device
+- Logins from a new country
 
 **Agents** are notified about:
 
-* New tickets
-* Ticket updates
-* Pending reached tickets
-* SLA violations (before and after the deadline)
+- New tickets
+- Ticket updates
+- Pending reached tickets
+- SLA violations (before and after the deadline)
 
 Agents can change their notification settings in their
 :user-docs:`user profile </extras/profile-and-settings.html>`.

@@ -100,5 +100,6 @@ Zammad Admin Documentation
    misc/variables
    misc/composer
    misc/object-conditions/index
+   misc/system-notifications
    misc/first-steps
    misc/zabbix

@@ -10,7 +10,6 @@ a trigger to run.
 
 .. note:: Due to the above fact, these variables are often not (yet) set or
    available for usage.
-
    In situations where e.g. schedulers or triggers run, this most likely is
    nothing you want to use.
 

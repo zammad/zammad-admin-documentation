@@ -1,47 +1,42 @@
 Password
 ========
 
-This section allows you to define password requirements for the local user
-accounts.
+This section allows you to define password requirements for the user accounts.
 
 .. note::
 
-   Zammad does **not** allow you to change your LDAP password, instead, it will
+   Zammad does **not** allow you to change your LDAP password. Instead, it will
    set a password in its local database.
 
 .. warning:: **Exception for admins**
 
-   Please note that below password policies *do not* affect administrators
-   setting passwords on user accounts. While this seems strange and not safe
-   we believe that an administrator knowing an user's password is insecure
-   as well.
+   Please note that the password policies below do not affect administrators
+   setting passwords on user accounts. While this seems strange and not safe,
+   we believe that an administrator knowing a user's password is insecure as
+   well. The suggested workflow is to use one of the following suggestions:
 
-   The suggested workflow is either:
-
-      * to use third party logins to not require local passwords at all
-        **- or -**
-      * to require your *user to reset the password* upon first login.
+   - Use third-party logins to not require local passwords at all
+   - Require your users to reset their password upon first login
 
    This way administrators are not required to set a user's password at all!
-
 
 Maximum Failed Logins
 ---------------------
 
 You can choose a value between ``4`` and ``20``. This defines how often a login
 to a user account may fail until Zammad will lock it.
-Your users can always use the "forgot password" function to change their
+Your users can always use the **Forgot password?** function to change their
 password and unlock their account.
 
-The default value is ``10``.
+Default: ``10``
 
 .. note::
 
    Beside changing the user's password, you can also unlock accounts via
 
-      * :ref:`User management <locked-user-accounts>`
-      * :docs:`Console (system documentation) </admin/console/working-on-users.html>`
-      * :docs:`API (system documentation) </api/user.html>`
+   - :ref:`User management <locked-user-accounts>`
+   - :docs:`Console (system documentation) </admin/console/working-on-users.html>`
+   - :docs:`API (system documentation) </api/user.html>`
 
 .. hint::
 
@@ -53,8 +48,7 @@ The default value is ``10``.
 You can add complexity to passwords by enforcing at least 2 upper and lower
 case characters.
 
-The default value is ``no``.
-
+Default: ``no``
 
 Minimum Length
 --------------
@@ -62,15 +56,14 @@ Minimum Length
 This defines the minimum password length required for users to provide
 (from ``4`` to ``20``).
 
-The default value is ``6``.
-
+Default: ``6``
 
 Digit Required
 --------------
 
 This enforces your users to use at least one digit within the password.
 
-The default value is ``yes``.
+Default: ``yes``
 
 Special Character Required
 --------------------------
@@ -78,4 +71,4 @@ Special Character Required
 This setting allows you to improve your password quality even more by enforcing
 the password to contain at least one special character.
 
-The default value is ``no``.
+Default: ``no``

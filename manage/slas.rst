@@ -34,8 +34,8 @@ service levels or individual customer agreements.
 SLA Configuration
 ^^^^^^^^^^^^^^^^^
 
-Create a new SLA by clicking the **New SLA** button. To edit an existing SLA,
-click on the **Edit** button in the SLA list. Both actions open the SLA
+Create a new SLA by clicking the ``New SLA`` button. To edit an existing SLA,
+click on the ``Edit`` button in the SLA list. Both actions open the SLA
 configuration dialog, where you can adjust the settings below:
 
 .. figure:: /images/manage/slas/sla-dialog.png

@@ -13,7 +13,7 @@ This section gives you an overview of the available plans and their
 functions / limits and the ability to choose another plan. If you require a
 more detailed table, check our
 `pricing table <https://zammad.com/en/pricing/table>`_ for more information.
-Your selection (green **Selected** button) in this step will decide on the base
+Your selection (green ``Selected`` button) in this step will decide on the base
 agent price and agent limits. You can also find your currently used number of
 agents there and see the accounts. This list *does not* count accounts with
 admin permissions only. Learn more about how to
@@ -21,7 +21,7 @@ admin permissions only. Learn more about how to
 
 .. hint::
 
-   Trial instances are running on a *Professional v2* plan with 3 agents.
+   Trial instances are running on a **Professional v2** plan with 3 agents.
    The plan cannot be changed during the trial period for technical reasons.
    If you require more agents for testing, please contact
    `our sales team <https://zammad.com/en/company/contact>`_ and tell them
@@ -57,7 +57,7 @@ Plan: (Starter|Professional|Plus) V2 - Agents
 Total
    This will be the net total you're going to be billed.
 
-By using the **Update subscription** button, the instance package is getting
+By using the ``Update subscription`` button, the instance package is getting
 adjusted immediately. If you didn't provide a payment method yet, Zammad
 will request you to provide it at this point.
 
@@ -83,13 +83,13 @@ Re-Charge Settings
    - Enable or disable a notification when 80% of AI calls are used.
    - Configure an automatic re-charge when 90% of AI calls are used. Enter an
      amount between 400 and 500,000 AI calls for automatic re-charge and confirm
-     with the **Update Re-charge settings** button. The costs per call and the
+     with the ``Update Re-charge settings`` button. The costs per call and the
      sum based on your input are displayed next to the field.
 
 One-Time Charge Settings
    Add an amount of AI calls for a one time charge. Enter an amount between 400
    and 500,000 AI calls for the one-time charge and confirm
-   with the **One-Time Charge Settings** button. The costs per call and the
+   with the ``One-Time Charge Settings`` button. The costs per call and the
    sum based on your input are displayed next to the field.
 
 Billing Information
@@ -116,7 +116,7 @@ Billing Email Address
    All billing relevant information will then be sent to this email address.
    Invoices are sent as an attachment (PDF) to this email address.
 
-Don't forget to press the **Update billing information** button after you changed
+Don't forget to press the ``Update billing information`` button after you changed
 above settings.
 
 .. figure:: /images/system/subscription/billing-information.png
@@ -129,7 +129,7 @@ Payment Method
 You can pay via credit card or SEPA mandate.
 
 Credit card
-   Simply follow the flow by clicking **authorize credit card** and confirm
+   Simply follow the flow by clicking ``authorize credit card`` and confirm
    -if required by your bank- your consent to Zammad using your card for
    the payments.
 
@@ -147,7 +147,7 @@ Cancel Subscription
 
 Do you want to cancel your subscription?
 In case you no longer want to use Zammad's SaaS, you can cancel your
-subscription by using the red **Yes, please cancel my subscription** button.
+subscription by using the red ``Yes, please cancel my subscription`` button.
 Enter the FQDN of your Zammad instance and provide a reason for your
 cancellation. Your subscription will end the day after your trial or billing
 period ends.
@@ -166,7 +166,7 @@ period ends.
 .. hint:: **Canceled by accident?**
 
    You can always undo the cancellation via the
-   **Yes, undo the cancellation of my subscription** button up to the last
+   ``Yes, undo the cancellation of my subscription`` button up to the last
    subscription day!
 
    .. figure:: /images/system/subscription/undo-cancellation.png

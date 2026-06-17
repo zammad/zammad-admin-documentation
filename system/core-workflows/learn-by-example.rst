@@ -22,7 +22,7 @@ required input and the available options based on the group assigned to the
 ticket.
 
 Problem/scenario
-   When a ticket is created in or moved to the ``2nd Level`` group, the category
+   When a ticket is created in or moved to the **2nd Level** group, the category
    field must be limited, some fields have to be shown and specific fields
    are mandatory to have all relevant information for the 2nd level support
    present in the ticket.
@@ -76,7 +76,7 @@ all requirements for the subsequent process are fulfilled.
 
 Problem/scenario
    The approval of a customer issue can only be done by users with the role
-   ``Approval Person``. As long as this approval has not been done, the value
+   **Approval Person**. As long as this approval has not been done, the value
    must be set fixed to  ``no``, unless the approval person views the ticket.
 
    Based on the approval state, additional automation processes can be
@@ -102,7 +102,7 @@ Workflow configuration
 
       * - Selected conditions
         - **Role** *is not* ``Approval Person``
-        - Checks if role is not ``Approval Person`` for unsaved
+        - Checks if role is not **Approval Person** for unsaved
 
           changes in the ticket.
 
@@ -126,7 +126,7 @@ To have convincing numbers for your statistic, it can be a good idea to enforce
 certain attributes to be populated before the ticket can be closed.
 
 Problem/scenario
-   The ``Category`` field must be set to mandatory if an agent wants to set the
+   The **Category** field must be set to mandatory if an agent wants to set the
    states ``closed`` or ``pending close`` to enforce categorization.
 
 
@@ -163,7 +163,6 @@ Configuration in UI
       :alt: Sample workflow that sets fields to mandatory on specific states
       :width: 70%
 
-
 Ticket Handover Process
 -----------------------
 
@@ -174,7 +173,7 @@ reason for the handover and where to start.
 
 Problem/scenario
    Agents must write a small comment when they want to change the ticket owner.
-   There is a custom ticket attribute called ``Handover`` where a text can be
+   There is a custom ticket attribute called **Handover** where a text can be
    inserted. This field is hidden by default (Workflow 1) and only shows up
    when the owner changes. Additionally, it must be set to mandatory in such a
    case (Workflow 2).

@@ -1,7 +1,10 @@
 Security
 ========
 
-We split each tab within security settings into its own page:
+To configure security-related settings under *Settings > Security*, the
+permission ``admin.security`` is required. The configuration in Zammad is split
+into tabs. This is reflected in this documentation by having a sub-page for
+each of the tabs:
 
 .. toctree::
    :maxdepth: 1

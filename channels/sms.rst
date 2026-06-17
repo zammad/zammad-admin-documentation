@@ -1,11 +1,9 @@
 SMS
 ===
 
-SMS integration primarily lets you create tickets, add articles and respond to
-tickets via SMS. It is also possible to send notifications, e.g. to agents.
-
-You can configure the SMS channel in the admin interface under
-*Channels > SMS*.
+Configure the SMS channel to enable ticket creation via SMS and to send out
+answers and notifications. To configure it under *Channels > SMS*, you need
+the permission ``admin.channel_sms``.
 
 .. note::
    - MessageBird and Twilio are currently the only supported providers to
@@ -17,7 +15,7 @@ You can configure the SMS channel in the admin interface under
 Configure Twilio
 ----------------
 
-- In the Zammad settings, go to *Channels > SMS* and click on the ``New`` button
+- In the SMS configuration screen, click on the ``New`` button
 - After selecting Twilio as provider, you can find your webhook URL in the
   **Webhook** field. Copy the complete URL and switch back to the Twilio
   console.
@@ -56,15 +54,13 @@ as sender to the customer. You can even add a name here.
 
 You can now ``Test`` your configuration by clicking the button. After
 successfully testing your configuration, save it by clicking the ``Submit``
-button.
-
-Communication via SMS is now available in Zammad.
+button. Now the communication via SMS is available in Zammad.
 
 Configure SMS Notifications
 ---------------------------
 
 It's also possible to use the SMS channel to send notifications from the system
-(e.g. from trigger or automation). To set it up, click on the ``New`` button
+(e.g. from trigger or scheduler). To set it up, click on the ``New`` button
 in the **SMS Notification** section.
 
 .. note::
@@ -84,4 +80,3 @@ test your configuration. If successful, save your changes by clicking the
 Now it's possible to send SMS notifications via trigger or automation. The setup
 is done the same way as setting up
 :doc:`email notifications </channels/email/accounts/email-notification>`.
-

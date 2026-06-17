@@ -13,7 +13,7 @@ In your Rocket Chat overflow administration menu, choose **Workspace**.
    :alt: Workspace menu item in Rocket Chat
    :align: center
 
-In the left sidebar choose **Integrations** and then click on the **New** button
+In the left sidebar choose **Integrations** and then click on the ``New`` button
 in the upper right corner.
 
 .. figure:: /images/manage/webhook/webhook-rocket-chat-new-integration.png
@@ -32,7 +32,7 @@ Note that the username must already exist.
    :alt: Incoming Integration Setup
    :align: center
 
-Scroll to the end of the form and click on **Save** button.
+Scroll to the end of the form and click on ``Save`` button.
 
 Once successfully saved, make sure to copy *the webhook endpoint URL* to
 clipboard and save it for later. You can do this in one click via the button
@@ -81,7 +81,7 @@ integration.
    :align: center
    :width: 90%
 
-Finally, click on **Submit**.
+Finally, click on ``Submit``.
 
 Step 3 - Configuring a Trigger for firing of the Webhook
 --------------------------------------------------------
@@ -146,7 +146,7 @@ Then, simply delete the selected code.
    :align: center
    :width: 80%
 
-Finally, click on **Submit** to save your webhook changes.
+Finally, click on ``Submit`` to save your webhook changes.
 
 On the next invocation of the webhook, the notification will not include content
 of the last article.

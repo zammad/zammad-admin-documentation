@@ -1,29 +1,25 @@
 PGP
 ===
 
-Introduction
-------------
-
-Pretty Good Privacy (PGP) is another method for secure email communication.
-With PGP, you can exchange **signed** and **encrypted** messages with others.
+Pretty Good Privacy (PGP) is one method for secure email communication in
+Zammad (in addition to :doc:`smime`). It allows you to exchange
+**signed** and **encrypted** messages with others.
 
 Signing
-   is a proof that a message hasn't been manipulated on its way.
-
-   In other words, it guarantees message **integrity** and **authenticity**.
+   is proof that a message hasn't been manipulated on its way. In other words,
+   it guarantees message **integrity** and **authenticity**.
 
 Encryption
    scrambles a message so that it can only be unscrambled by the intended
-   recipient.
-
-   In other words, it guarantees message **privacy** and **data security**.
+   recipient. In other words, it guarantees message **privacy** and
+   **data security**.
 
 .. figure:: /images/system/integrations/pgp/pgp_ticket_creation.png
    :alt: Screenshot of ticket creation with encrypt and sign buttons
    :align: center
 
-   Once PGP has been enabled, 🔒 **Encrypt** and ✅ **Sign** buttons will
-   appear in the ticket composer.
+   Once PGP has been enabled, ``Encrypt`` and ``Sign`` buttons will
+   appear for outgoing email drafts.
 
 .. note:: **Sign button not visible?**
 
@@ -33,11 +29,11 @@ Encryption
 
 Handling of Keys
 ----------------
-To use the PGP function, you have to enable the integration (PGP) by switching
-the toggle to *enabled*.
 
-You can add keys by clicking the *add key* button. The keys can be imported
-from a file or you can paste the content of the key in the text box.
+To use the PGP function, you have to enable the integration (PGP) by switching
+the toggle to **enabled**. You can add keys by clicking the ``Add Key`` button.
+The keys can be imported from a file or you can paste the content of the key in
+the text box.
 
 .. note:: **Which keys do I have to import?**
 
@@ -55,7 +51,8 @@ from a file or you can paste the content of the key in the text box.
 
 Import Keys From a File
 ^^^^^^^^^^^^^^^^^^^^^^^
-You can import keys from a file in the section **Upload key**:
+
+You can import keys from a file in the **Upload key** section:
 
 .. figure:: /images/system/integrations/pgp/import_key.png
    :alt: Screenshot of adding a key via file
@@ -66,7 +63,8 @@ You can import keys from a file in the section **Upload key**:
 
 Import Keys by Pasting the Content
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You can also paste the key's content in the section **paste key**:
+
+You can also paste the key's content in the **Paste key** section:
 
 .. figure:: /images/system/integrations/pgp/paste_key.png
    :alt: Screenshot of adding a key via pasting
@@ -76,58 +74,56 @@ You can also paste the key's content in the section **paste key**:
 
 Deleting Keys
 ^^^^^^^^^^^^^
+
 If you want to delete a specific key, you can do it by clicking on the menu in
-the *actions* column and select **delete**:
+the **actions** column and select **delete**:
 
 .. figure:: /images/system/integrations/pgp/delete_key.png
    :alt: Screenshot of deleting a key
    :align: center
 
-
 Downloading Keys
 ^^^^^^^^^^^^^^^^
-If you want to download your keys, you can do this as well via corresponding
-action buttons. Depending on the key, you can choose wether you want to
-download the private or the public key.
 
+If you want to download your keys, you can do this as well via corresponding
+action buttons. Depending on the key, you can choose whether you want to
+download the private or the public key.
 
 Default Behavior
 ----------------
-Here you can adjust on per group basis, if *sign* and *encryption* is on or off
-by default. Please be aware, that agents can always override the setting for
-each individual article.
+
+Here, you can adjust on per group basis, if **sign** and **encryption** is on or
+off by default. Please be aware, that agents can always override the setting for
+each individual email.
 
 .. figure:: /images/system/integrations/pgp/group_default.png
    :alt: Adjusting default behavior on per group basis
    :align: center
 
-
-Recent Logs
------------
-Here you can see the last actions regarding signing and encryption and if they
-were successful.
-
-
 Troubleshooting
 ---------------
 
-**Sign button is not visible, but keys are imported.**
-   * Did you choose a group in the ticket?
-   * Did you import a private key for the email adress, which is used for
+All of the system's latest PGP activity is displayed in the **Recent Logs**
+section. The logs contain the status and details of all emails (both incoming
+and outgoing), that used signing/verification or encryption/decryption.
+
+Sign button is not visible, but keys are imported.
+   - Did you choose a group in the ticket?
+   - Did you import a private key for the email address, which is used for
      outgoing emails in the group?
 
-**How to obtain keys?**
+How to obtain keys?
    You can create them yourself! There are some good tutorials on the web on
    how to create them. Providing keys to Zammad is a prerequisite to use the
    PGP feature.
 
-**It says a passphrase is needed, but I haven't got one.**
+It says a passphrase is needed, but I haven't got one.
    If the key is secured with a passphrase, you have to provide it for the
    import in Zammad. It is possible that keys may have an empty passphrase.
    However, this is *not* recommended.
 
-**How do my customers get my new key?**
-   You have to provide your **public** key in advance.
+How do my customers get my new key?
+   You have to provide your *public* key in advance.
    Your customer also has to configure PGP in their email workflow and import
    your public key. The other way round, you have to get the public key of your
    customer and have to import it to Zammad.
