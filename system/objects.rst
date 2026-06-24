@@ -113,15 +113,18 @@ Handling of states
    corner. To change an existing state, simply click on the affected state. This
    opens an edit dialog.
 
-   You can also clone a state or set them to **Default for new tickets** or
-   **Default for follow-ups** by clicking on the ⁝ action button and select the
-   desired function.
+   You can also clone a state or set it as default for certain state types by
+   clicking on the ⁝ action button and select the desired function.
 
    **Default for new tickets** means that this state is used for every newly
    created ticket.
 
    **Default for follow-ups** means that this state is used if the ticket is
    re-opened after it was closed.
+
+   **Default for closed tickets** means that this state is used when an agent
+   uses the keyboard shortcut to update a ticket as closed (usually you will
+   just have one state of this type anyway).
 
 Ticket state in detail
    Below you can find a description for each field and option. Please head over
