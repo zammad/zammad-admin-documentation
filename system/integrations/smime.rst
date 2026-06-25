@@ -118,7 +118,8 @@ System Notifications
 
 To sign outgoing system notifications via email, enable this setting. This
 requires a private key for the notification sender email address. Make sure to
-enable the S/MIME feature in general to make it work. 
+enable the S/MIME feature in general to make it work. Having the toggle disabled
+doesn't sign outgoing system notification emails.
 
 Default Behavior
 ----------------
