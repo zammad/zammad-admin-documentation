@@ -89,6 +89,12 @@ If you want to download your keys, you can do this as well via corresponding
 action buttons. Depending on the key, you can choose whether you want to
 download the private or the public key.
 
+System Notifications
+--------------------
+
+To sign outgoing system notifications via email, enable this setting. This
+requires a private key for the notification sender email address.
+
 Default Behavior
 ----------------
 
