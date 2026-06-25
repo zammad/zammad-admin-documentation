@@ -93,7 +93,8 @@ System Notifications
 --------------------
 
 To sign outgoing system notifications via email, enable this setting. This
-requires a private key for the notification sender email address.
+requires a private key for the notification sender email address. Make sure to
+enable the PGP feature in general to make it work. 
 
 Default Behavior
 ----------------
