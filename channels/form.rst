@@ -39,6 +39,28 @@ Group selection for ticket creation
    The group you set here defines where tickets should be created if they're
    supplied by Zammad's web form.
 
+Spam Protection
+   You can use spam protection to prevent unwanted submissions from your
+   form channel. When enabled, users will have to solve a CAPTCHA or a
+   honeypot challenge to verify they are human. This is especially
+   useful if your form is publicly accessible.
+
+   .. note::
+
+      If the website embedding the form uses Content Security Policy
+      (CSP), you may need to adjust it to allow connecting to your
+      CAPTCHA provider. Otherwise, the CAPTCHA widget may not load.
+
+   .. note::
+
+      If a CAPTCHA provider is enabled, the form's API endpoint will
+      expect additional parameters that depend on the used CAPTCHA
+      flavor. Integrators need to inject the relevant challenge scripts
+      and cannot rely on simple POST requests anymore.
+
+      However, if only the honeypot protection is enabled, no
+      additional parameters are required for submission.
+
 Designer
 --------
 
