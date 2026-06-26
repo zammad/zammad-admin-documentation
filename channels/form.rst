@@ -40,26 +40,40 @@ Group selection for ticket creation
    supplied by Zammad's web form.
 
 Spam Protection
-   You can use spam protection to prevent unwanted submissions from your
-   form channel. When enabled, users will have to solve a CAPTCHA or a
-   honeypot challenge to verify they are human. This is especially
-   useful if your form is publicly accessible.
+^^^^^^^^^^^^^^^
 
-   .. note::
+The form channel provides two methods to protect against unwanted
+submissions. Depending on the method you enable, you may have to adjust
+your website's Content Security Policy (CSP) to allow connecting to
+your chosen CAPTCHA provider.
 
-      If the website embedding the form uses Content Security Policy
-      (CSP), you may need to adjust it to allow connecting to your
-      CAPTCHA provider. Otherwise, the CAPTCHA widget may not load.
+Honeypot
+   A honeypot is a hidden form field that is invisible to regular users
+   because of CSS. Users are therefore not able to fill it out. Bots on
+   the other hand may fill in *all* they find.
+
+   The honeypot is a plain form field with an inconspicuous name,
+   hidden with ``display: none``. If the field is filled out on submit,
+   it indicates bot activity and the submission is rejected.
+
+   .. hint::
+
+      Optionally, you can configure the CSS class name used for the
+      honeypot field. Internally, classes are replaced with a random
+      string by Zammad.
+
+CAPTCHA
+   A CAPTCHA is a challenge that is visually presented to the user to
+   verify that the user is human. Your chosen service provider decides
+   what this challenge looks like (e.g. distorted text, image
+   selections, ...).
 
    .. note::
 
       If a CAPTCHA provider is enabled, the form's API endpoint will
-      expect additional parameters that depend on the used CAPTCHA
-      flavor. Integrators need to inject the relevant challenge scripts
-      and cannot rely on simple POST requests anymore.
-
-      However, if only the honeypot protection is enabled, no
-      additional parameters are required for submission.
+      expect additional parameters depending on your chosen
+      configuration. Integrators need to inject the relevant challenge
+      scripts and cannot rely on simple POST requests anymore.
 
 Designer
 --------
