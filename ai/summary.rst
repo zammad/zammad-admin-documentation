@@ -48,3 +48,9 @@ Hide ticket summary sidebar
    you want to enable the summary for specific groups only. Check the
    :doc:`group settings </manage/groups/settings>` section about where to
    configure the summary for each group individually.
+
+You can also use :doc:`object conditions </misc/object-conditions/basics>`
+to define more precisely which tickets should have the AI summary generated.
+This allows you to specify conditions based on ticket attributes such as
+group, state, priority, or custom attributes. The summary generation will
+only be triggered for tickets matching the configured conditions.
