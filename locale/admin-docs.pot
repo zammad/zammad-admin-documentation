@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-25 15:57+0200\n"
+"POT-Creation-Date: 2026-06-29 08:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:193
 #: ../channels/email/filters.rst:103
-#: ../channels/form.rst:219
+#: ../channels/form.rst:262
 #: ../channels/email/filters.rst:103
 #: ../channels/email/filters.rst:103
 #: ../channels/email/filters.rst:103
@@ -291,7 +291,7 @@ msgstr ""
 #: ../ai/provider.rst:17
 #: ../channels/email/settings.rst:2
 #: ../channels/form.rst:29
-#: ../channels/form.rst:193
+#: ../channels/form.rst:236
 #: ../channels/email/settings.rst:2
 #: ../channels/email/settings.rst:2
 #: ../channels/email/settings.rst:2
@@ -4292,14 +4292,74 @@ msgid "The group you set here defines where tickets should be created if they're
 msgstr ""
 
 #: ../channels/form.rst:43
-msgid "Designer"
+msgid "Spam Protection"
 msgstr ""
 
 #: ../channels/form.rst:45
+msgid "The form channel provides two methods to protect against unwanted submissions."
+msgstr ""
+
+#: ../channels/form.rst:54
+msgid "Honeypot"
+msgstr ""
+
+#: ../channels/form.rst:49
+msgid "When enabling the honeypot, the form includes a hidden field that is invisible to regular users (hidden via CSS). Users are therefore not able to fill it out. Bots on the other hand may fill in all they find. If the field is filled out on submit, it indicates bot activity and the submission is rejected. This is a basic bot protection and doesn't open a connection to any third-party providers."
+msgstr ""
+
+#: ../channels/form.rst:83
+msgid "CAPTCHA"
+msgstr ""
+
+#: ../channels/form.rst:57
+msgid "A CAPTCHA is a challenge to verify that the user is human. Depending on your chosen service provider, the verification may be done in different ways. Common approaches are to display a puzzle or riddle which the user has to solve (e.g. distorted text, image selections) or to measure the behavior of the user (e.g. interaction times), either invisible or showing an indicator of the verification. The following providers are available:"
+msgstr ""
+
+#: ../channels/form.rst:64
+msgid "ALTCHA"
+msgstr ""
+
+#: ../channels/form.rst:65
+msgid "Cloudflare Turnstile"
+msgstr ""
+
+#: ../channels/form.rst:66
+msgid "hCaptcha"
+msgstr ""
+
+#: ../channels/form.rst:67
+msgid "Friendly Captcha"
+msgstr ""
+
+#: ../channels/form.rst:68
+msgid "Google reCAPTCHA"
+msgstr ""
+
+#: ../channels/form.rst:69
+msgid "Google reCAPTCHA Enterprise"
+msgstr ""
+
+#: ../channels/form.rst:71
+msgid "The required configuration depends on your chosen provider. For ALTCHA, no configuration is required and the CAPTCHA is not visible to the user. The other proviers require a sitekey and a secret. Google allows you to adjust the minimum score and its enterprise version requires an API key."
+msgstr ""
+
+#: ../channels/form.rst:77
+msgid "If the target website of the form script uses Content Security Policy (CSP), you may have to adjust your rules to allow additional resources (connection to your provider, fetch and execute scripts, etc.). Check out the documentation of your CAPTCHA provider and of your used website stack since this highly depends on them."
+msgstr ""
+
+#: ../channels/form.rst:82
+msgid "If a CAPTCHA provider is enabled, the form's API endpoint is also protected and expects additional parameters."
+msgstr ""
+
+#: ../channels/form.rst:86
+msgid "Designer"
+msgstr ""
+
+#: ../channels/form.rst:88
 msgid "This section helps you to configure your form. If you're happy with what you've chosen, you get a code you need to copy to your website."
 msgstr ""
 
-#: ../channels/form.rst:50
+#: ../channels/form.rst:93
 msgid "The designer's changes are not stored anywhere in Zammad. This means that the provided source code needs to be copied every time you change settings here."
 msgstr ""
 
@@ -4307,103 +4367,103 @@ msgstr ""
 msgid "Screenshot shows Zammad's form designer with an initial configuration."
 msgstr ""
 
-#: ../channels/form.rst:62
+#: ../channels/form.rst:105
 msgid "Title of the form"
 msgstr ""
 
-#: ../channels/form.rst:59
+#: ../channels/form.rst:102
 msgid "Choose the heading of the form. This is only relevant if you choose to display the form title."
 msgstr ""
 
-#: ../channels/form.rst:62
+#: ../channels/form.rst:105
 msgid "Default: ``Feedback Form``"
 msgstr ""
 
-#: ../channels/form.rst:67
+#: ../channels/form.rst:110
 msgid "Name of form submit button"
 msgstr ""
 
-#: ../channels/form.rst:65
+#: ../channels/form.rst:108
 msgid "If Zammad's default display name of the submit button does not fit, you can provide your own wording with this option. It will be used every time the form is shown."
 msgstr ""
 
-#: ../channels/form.rst:75
+#: ../channels/form.rst:118
 msgid "Message after sending form"
 msgstr ""
 
-#: ../channels/form.rst:70
+#: ../channels/form.rst:113
 msgid "After users click the submit button, a message gets shown with the ticket number of the newly created ticket. Example for default configuration:"
 msgstr ""
 
-#: ../channels/form.rst:124
+#: ../channels/form.rst:167
 msgid "Options"
 msgstr ""
 
-#: ../channels/form.rst:78
+#: ../channels/form.rst:121
 msgid "Zammad provides the following additional configuration options for your form."
 msgstr ""
 
-#: ../channels/form.rst:84
+#: ../channels/form.rst:127
 msgid "Enable debugging for implementation"
 msgstr ""
 
-#: ../channels/form.rst:81
+#: ../channels/form.rst:124
 msgid "This option activates detailed debug information in your browser's developer tools console."
 msgstr ""
 
-#: ../channels/form.rst:84
+#: ../channels/form.rst:127
 msgid "This option *should not* be active on productive forms!"
 msgstr ""
 
-#: ../channels/form.rst:88
+#: ../channels/form.rst:131
 msgid "Show title in form"
 msgstr ""
 
-#: ../channels/form.rst:87
+#: ../channels/form.rst:130
 msgid "This setting is related to **Title of the form** and will provide the form title within the form dialog if selected."
 msgstr ""
 
-#: ../channels/form.rst:97
+#: ../channels/form.rst:140
 msgid "Start modal dialog for form"
 msgstr ""
 
-#: ../channels/form.rst:91
+#: ../channels/form.rst:134
 msgid "If selected, the form will be opened in a modal by clicking a button. Not selecting this option allows you to natively integrate the form within your website's body."
 msgstr ""
 
-#: ../channels/form.rst:95
+#: ../channels/form.rst:138
 msgid "No matter what you select here, the form is always loaded completely if your user browses the page which contains the form. This option is set by default."
 msgstr ""
 
-#: ../channels/form.rst:103
+#: ../channels/form.rst:146
 msgid "Don't load CSS for the form. You need to generate your own CSS for the form."
 msgstr ""
 
-#: ../channels/form.rst:100
+#: ../channels/form.rst:143
 msgid "By default, Zammad's form comes with basic CSS. This may not fit your website's design or even interfere with it. Selecting this option allows you to freely design the form without having to overwrite existing directives."
 msgstr ""
 
-#: ../channels/form.rst:112
+#: ../channels/form.rst:155
 msgid "Add attachment option to upload"
 msgstr ""
 
-#: ../channels/form.rst:106
+#: ../channels/form.rst:149
 msgid "Allows your user to upload **one attachment** to the form."
 msgstr ""
 
-#: ../channels/form.rst:108
+#: ../channels/form.rst:151
 msgid "The allowed attachment sizes is not limited. The only limitation that applies is your web server's upload limit."
 msgstr ""
 
-#: ../channels/form.rst:111
+#: ../channels/form.rst:154
 msgid "If you are a SaaS customer, attachments are limited by the package you've chosen."
 msgstr ""
 
-#: ../channels/form.rst:124
+#: ../channels/form.rst:167
 msgid "Add agreement text before submit"
 msgstr ""
 
-#: ../channels/form.rst:115
+#: ../channels/form.rst:158
 msgid "If enabled, this allows you to define a text that the form displays together with a checkbox. With this, you can ensure your form conforms to legal requirements, e.g. by providing data privacy notes which the user has to accept before submitting the form. Use the ``🔗 Weblink`` button to add links to marked text passages."
 msgstr ""
 
@@ -4411,7 +4471,7 @@ msgstr ""
 msgid "Screenshot shows form designer with activated agreement text setting and selected text to add a hyperlink."
 msgstr ""
 
-#: ../channels/form.rst:127
+#: ../channels/form.rst:170
 #: ../manage/report-profiles.rst:50
 #: ../manage/scheduler.rst:112
 #: ../manage/slas.rst:64
@@ -4419,7 +4479,7 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: ../channels/form.rst:129
+#: ../channels/form.rst:172
 msgid "Below the form options, Zammad provides a preview section to visualize the settings you've just chosen. By default, you'll see a button named ``Feedback``. Clicking on the button will open the form modal. If the form channel is set to active, you are already able to create tickets; even from the preview."
 msgstr ""
 
@@ -4427,7 +4487,7 @@ msgstr ""
 msgid "Screenshot shows the preview section for the configured form."
 msgstr ""
 
-#: ../channels/form.rst:140
+#: ../channels/form.rst:183
 #: ../misc/zabbix.rst:10
 #: ../system/integrations/cti/generic.rst:7
 #: ../system/integrations/cti/placetel.rst:12
@@ -4435,47 +4495,47 @@ msgstr ""
 msgid "Requirements"
 msgstr ""
 
-#: ../channels/form.rst:142
+#: ../channels/form.rst:185
 msgid "The requirement section provides you with everything you need in order to apply Zammad's web form to your website. It basically consists of two parts."
 msgstr ""
 
-#: ../channels/form.rst:158
+#: ../channels/form.rst:201
 msgid "Header section"
 msgstr ""
 
-#: ../channels/form.rst:146
+#: ../channels/form.rst:189
 msgid "The first code block provides you with Zammad's current jQuery dependency. This script section usually belongs to your website's header section."
 msgstr ""
 
-#: ../channels/form.rst:149
+#: ../channels/form.rst:192
 msgid "The channel form suggests the following script tag, which loads the javascript library required from an external site. This may not suit your local requirements. You can use a locally hosted jQuery version, however the version is fixed."
 msgstr ""
 
-#: ../channels/form.rst:154
+#: ../channels/form.rst:197
 msgid "``<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>``"
 msgstr ""
 
-#: ../channels/form.rst:158
+#: ../channels/form.rst:201
 msgid "Do not mix jQuery versions - it's likely to break something."
 msgstr ""
 
-#: ../channels/form.rst:173
+#: ../channels/form.rst:216
 msgid "Body section"
 msgstr ""
 
-#: ../channels/form.rst:161
+#: ../channels/form.rst:204
 msgid "The second code block is the actual code required for your form to run. It is updated automatically when changing settings in the designer above."
 msgstr ""
 
-#: ../channels/form.rst:164
+#: ../channels/form.rst:207
 msgid "The first line containing ``id=\"zammad-feedback-form\"`` highly depends on the settings selected above. This part belongs into the place you actually want the form or form button to appear. The rest can either be placed at the same level or somewhere else on the same page."
 msgstr ""
 
-#: ../channels/form.rst:171
+#: ../channels/form.rst:214
 msgid "These statements *highly* depend on your website. As you're responsible for your own website, you're on your own figuring out where exactly to place what."
 msgstr ""
 
-#: ../channels/form.rst:175
+#: ../channels/form.rst:218
 msgid "Take the Zammad website as an example, the embedded form version can look like this if you apply custom CSS to it:"
 msgstr ""
 
@@ -4483,31 +4543,31 @@ msgstr ""
 msgid "Screenshot shows the zammad.com website with embedded web form"
 msgstr ""
 
-#: ../channels/form.rst:184
+#: ../channels/form.rst:227
 msgid "Potential Spam Issue"
 msgstr ""
 
-#: ../channels/form.rst:186
+#: ../channels/form.rst:229
 msgid "The form channel could be abused by sending a high amount of messages / tickets to your Zammad instance. If you do not use the form, you should disable it. If you want to use it, don't worry: Zammad limits the maximum amount of created tickets based on different criteria. It also ensures that the provided email address is valid (with MX-check on the email's domain)."
 msgstr ""
 
-#: ../channels/form.rst:195
+#: ../channels/form.rst:238
 msgid "You can change the default values by using the console settings below. Please keep in mind, that setting those values higher might lead to problems in terms of created tickets. Read the :docs:`console section in the system documentation </admin/console.html>` about how to use Zammad's Rails console."
 msgstr ""
 
-#: ../channels/form.rst:201
+#: ../channels/form.rst:244
 msgid "Form settings to limit ticket creation"
 msgstr ""
 
-#: ../channels/form.rst:205
+#: ../channels/form.rst:248
 msgid "Option"
 msgstr ""
 
-#: ../channels/form.rst:206
+#: ../channels/form.rst:249
 msgid "Default value"
 msgstr ""
 
-#: ../channels/form.rst:207
+#: ../channels/form.rst:250
 #: ../manage/public-links.rst:43
 #: ../misc/object-conditions/basics.rst:63
 #: ../misc/variables.rst:101
@@ -4517,63 +4577,63 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: ../channels/form.rst:208
+#: ../channels/form.rst:251
 msgid "``form_ticket_create_by_ip_per_hour``"
 msgstr ""
 
-#: ../channels/form.rst:209
+#: ../channels/form.rst:252
 msgid "``20``"
 msgstr ""
 
-#: ../channels/form.rst:210
+#: ../channels/form.rst:253
 msgid "Limits ticket creation per IP and hour to 20 tickets"
 msgstr ""
 
-#: ../channels/form.rst:211
+#: ../channels/form.rst:254
 msgid "``form_ticket_create_by_ip_per_day``"
 msgstr ""
 
-#: ../channels/form.rst:212
+#: ../channels/form.rst:255
 msgid "``240``"
 msgstr ""
 
-#: ../channels/form.rst:213
+#: ../channels/form.rst:256
 msgid "Limits ticket creation per IP and day to 240 tickets"
 msgstr ""
 
-#: ../channels/form.rst:214
+#: ../channels/form.rst:257
 msgid "``form_ticket_create_per_day``"
 msgstr ""
 
-#: ../channels/form.rst:215
+#: ../channels/form.rst:258
 msgid "``5000``"
 msgstr ""
 
-#: ../channels/form.rst:216
+#: ../channels/form.rst:259
 msgid "Limits ticket creation for forms to 5000 tickets per day"
 msgstr ""
 
-#: ../channels/form.rst:221
+#: ../channels/form.rst:264
 msgid "Change the ticket creation per IP and hour to 10:"
 msgstr ""
 
-#: ../channels/form.rst:227
+#: ../channels/form.rst:270
 msgid "Change the ticket creation per IP and hour to 50:"
 msgstr ""
 
-#: ../channels/form.rst:233
+#: ../channels/form.rst:276
 msgid "Change the ticket creation per day to 500:"
 msgstr ""
 
-#: ../channels/form.rst:240
+#: ../channels/form.rst:283
 msgid "Further Options to Make it Harder"
 msgstr ""
 
-#: ../channels/form.rst:242
+#: ../channels/form.rst:285
 msgid "Another way to make it harder for bots to automate against your Zammad instance is to change the location of ``form.js`` ( ``/opt/zammad/assets/form/form.js`` )."
 msgstr ""
 
-#: ../channels/form.rst:245
+#: ../channels/form.rst:288
 msgid "Please keep in mind: if you change the location of ``form.js`` (e.g. by copying), you need to ensure that your ``form.js`` stays up to date if you update Zammad. It's not recommended to delete ``form.js`` from its location in that case, but to forbid access to it via your web server configuration."
 msgstr ""
 

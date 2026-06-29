@@ -43,37 +43,44 @@ Spam Protection
 ^^^^^^^^^^^^^^^
 
 The form channel provides two methods to protect against unwanted
-submissions. Depending on the method you enable, you may have to adjust
-your website's Content Security Policy (CSP) to allow connecting to
-your chosen CAPTCHA provider.
+submissions.
 
 Honeypot
-   A honeypot is a hidden form field that is invisible to regular users
-   because of CSS. Users are therefore not able to fill it out. Bots on
-   the other hand may fill in *all* they find.
-
-   The honeypot is a plain form field with an inconspicuous name,
-   hidden with ``display: none``. If the field is filled out on submit,
-   it indicates bot activity and the submission is rejected.
-
-   .. hint::
-
-      Optionally, you can configure the CSS class name used for the
-      honeypot field. Internally, classes are replaced with a random
-      string by Zammad.
+   When enabling the honeypot, the form includes a hidden field that is
+   invisible to regular users (hidden via CSS). Users are therefore not able to
+   fill it out. Bots on the other hand may fill in all they find. If the field
+   is filled out on submit, it indicates bot activity and the submission is
+   rejected. This is a basic bot protection and doesn't open a connection to
+   any third-party providers.
 
 CAPTCHA
-   A CAPTCHA is a challenge that is visually presented to the user to
-   verify that the user is human. Your chosen service provider decides
-   what this challenge looks like (e.g. distorted text, image
-   selections, ...).
+   A CAPTCHA is a challenge to verify that the user is human. Depending on your
+   chosen service provider, the verification may be done in different ways.
+   Common approaches are to display a puzzle or riddle which the user has to
+   solve (e.g. distorted text, image selections) or to measure the behavior of
+   the user (e.g. interaction times), either invisible or showing an indicator
+   of the verification. The following providers are available:
+
+   - ALTCHA
+   - Cloudflare Turnstile
+   - hCaptcha
+   - Friendly Captcha
+   - Google reCAPTCHA
+   - Google reCAPTCHA Enterprise
+
+   The required configuration depends on your chosen provider. For ALTCHA, no
+   configuration is required and the CAPTCHA is not visible to the user. The
+   other proviers require a sitekey and a secret. Google allows you to adjust
+   the minimum score and its enterprise version requires an API key.
 
    .. note::
-
-      If a CAPTCHA provider is enabled, the form's API endpoint will
-      expect additional parameters depending on your chosen
-      configuration. Integrators need to inject the relevant challenge
-      scripts and cannot rely on simple POST requests anymore.
+      - If the target website of the form script uses Content Security Policy
+        (CSP), you may have to adjust your rules to allow additional resources
+        (connection to your provider, fetch and execute scripts, etc.). Check
+        out the documentation of your CAPTCHA provider and of your used website
+        stack since this highly depends on them.
+      - If a CAPTCHA provider is enabled, the form's API endpoint is also
+        protected and expects additional parameters.
 
 Designer
 --------
