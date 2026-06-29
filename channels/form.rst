@@ -70,7 +70,7 @@ CAPTCHA
 
    The required configuration depends on your chosen provider. For ALTCHA, no
    configuration is required and the CAPTCHA is not visible to the user. The
-   other proviers require a sitekey and a secret. Google allows you to adjust
+   other providers require a sitekey and a secret. Google allows you to adjust
    the minimum score and its enterprise version requires an API key.
 
    .. note::
