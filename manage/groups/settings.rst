@@ -95,8 +95,15 @@ Shared Drafts
 
 Summary Generation
    Allows you to override the :doc:`AI ticket summary </ai/summary>`
-   configuration. Choose when the summary should get generated or hide the 
+   configuration. Choose when the summary should get generated or hide the
    ticket summary sidebar tab at all for this group.
+
+   .. hint::
+
+      In addition to this group-level setting, you can also use
+      :doc:`object conditions </misc/object-conditions/basics>` in the
+      :doc:`AI ticket summary configuration </ai/summary>` to define more
+      precisely which tickets should have the summary generated.
 
 Note
    An internal note about the group that is only visible to people who can

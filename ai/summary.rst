@@ -26,12 +26,22 @@ Configure what the summary should include. After activating the feature,
 choose to activate **Open Questions**, **Upcoming Events** and
 **Customer Sentiment**, depending on your use case.
 
+Summary Selector
+----------------
+
+Use :doc:`object conditions </misc/object-conditions/basics>` to define
+precisely which tickets should be considered for the AI summary
+generation. This allows you to specify conditions based on ticket attributes
+such as group, state, priority or custom attributes. The summary generation is
+only available for tickets matching the configured conditions. For other
+tickets, the summary sidebar tab isn't available.
+
 Summary Generation
 ------------------
 
-In general, the ticket summary is only triggered if the ticket got updated since
-the last summary generation. You can choose the timing of the generation or hide
-the sidebar tab at all via the dropdown:
+In general, the ticket summary is only triggered if the ticket matches the
+configured condition and has been updated since the last summary generation.
+You can choose the timing of the generation via the dropdown:
 
 On ticket detail opening
    The summary is generated when an agent opens the ticket. This can be more
@@ -43,8 +53,7 @@ On ticket summary sidebar activation
    viewed. However, it can happen that an agent has to wait for the summary
    to be generated, depending on the ticket size and the resources.
 
-Hide ticket summary sidebar
-   This hides the summary sidebar tab at all. This option can be useful if
-   you want to enable the summary for specific groups only. Check the
+.. note::
+   You can also configure the summary generation on a group level. Check the
    :doc:`group settings </manage/groups/settings>` section about where to
    configure the summary for each group individually.
