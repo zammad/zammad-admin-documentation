@@ -73,7 +73,7 @@ Customize the appearance of the knowledge base.
    - a category specific RSS feed of the category you're in
      (also applies to answers you're viewing)
 
-   This setting by default is set to ``no``.
+   This setting is set to ``no`` by default.
 
    .. hint::
 
@@ -95,6 +95,12 @@ Customize the appearance of the knowledge base.
    Re-assigning icons on all of your categories is tedious work.
    It's advisable to explore your options early to avoid having to change
    your mind down the road.
+
+.. hint:: In case you want to further customize how your knowledge base looks
+   for your customers, you can do so by providing custom CSS files. Check out
+   the :docs:`custom knowledge base CSS </appendix/custom-kb-css.html>` section
+   in the system documentation to learn how to do that. Please note that this
+   requires access to the machine your Zammad runs on.
 
 Languages
 ^^^^^^^^^
