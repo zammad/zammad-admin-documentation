@@ -104,10 +104,9 @@ Add or remove locales here or set a locale as new default.
 The knowledge base will automatically display the language matching each
 visitor's locale. Visitors may always manually switch to another language via
 language selection menu in the header. If the visitor's locale is not supported,
-the default locale gets displayed then.
-
-Articles which are not yet translated into a given language will be hidden
-when the language is selected by the reader.
+the default locale gets displayed then. Articles which are not yet translated
+into a given language will be hidden when the language is selected by the
+reader.
 
 Public Menu
 ^^^^^^^^^^^
