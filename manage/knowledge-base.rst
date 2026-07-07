@@ -9,18 +9,15 @@ This page describes how to configure the knowledge base. For details
 on how to use and edit it, please head over to the
 :user-docs:`knowledge base section in the user documentation </extras/knowledge-base.html>`.
 
+By default, only admin users are permitted to create, edit and manage
+knowledge base content. See :doc:`roles/index` for details on how to
+grant write access to agents or other users.
+
 .. figure:: /images/manage/knowledge-base/knowledge-base-demo.png
    :alt: Sample Knowledge Base Index
    :align: center
 
    See a live demo at https://support.zammad.com/help.
-
-By default, only admin users are permitted to create, edit and manage
-knowledge base articles. See :doc:`roles/index` for details on how to
-grant write access to agents or other users.
-
-.. note:: The knowledge base will not appear in the primary navigation until it
-   has been enabled in the admin settings.
 
 Features
 --------
@@ -32,29 +29,29 @@ Features
 - 📎 File attachments
 - 🔗 Wiki-style internal linking to both 💡 **KB answers** and 📋 **tickets**
 - 🖼️ Rich text editor + embedded images
+- 📹 Embedded videos
 
 Setup
 -----
 
-To enable the knowledge base, first select the languages/locales you wish to
-publish in and click on the ``Create Knowledge Base`` button.
+To enable the knowledge base, toggle the switch at the top, select the
+languages/locales you wish to publish in and click on the
+``Create Knowledge Base`` button. If the switch is deactivated, the knowledge
+base taskbar tab is not visible.
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-setup.png
+After creating the knowledge base, you have access to the settings across
+different tabs:
+
+.. figure:: /images/manage/knowledge-base/knowledge-base-theme.png
    :alt: Knowledge Base: Initial setup
    :align: center
-
-   Choose at least one language (don't worry, you can always change them later).
 
 Read on for details about each section of the knowledge base configuration.
 
 Theme
 ^^^^^
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-theme.png
-   :alt: Knowledge Base: Configure theme
-   :align: center
-
-   Customize the appearance of the knowledge base.
+Customize the appearance of the knowledge base.
 
 :Icon & Link Color:
    Applies to all **category & article** entries in knowledge base menus,
@@ -74,7 +71,7 @@ Theme
 
    - a general RSS feed of the whole knowledge base (top level)
    - a category specific RSS feed of the category you're in
-      (also applies to answers you're viewing)
+     (also applies to answers you're viewing)
 
    This setting by default is set to ``no``.
 
@@ -102,20 +99,14 @@ Theme
 Languages
 ^^^^^^^^^
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-languages.png
-   :alt: Knowledge Base: Configure languages
-   :align: center
-
-   Add or remove locales, or reassign the default.
+Add or remove locales here or set a locale as new default.
 
 The knowledge base will automatically display the language matching each
 visitor's locale. Visitors may always manually switch to another language via
-language selection menu in the header.
-
-The default locale is displayed when the visitor's locale is not supported.
-
-Articles which are not yet translated into a given language will be hidden
-when the language is selected by the reader.
+language selection menu in the header. If the visitor's locale is not supported,
+the default locale gets displayed then. Articles which are not yet translated
+into a given language will be hidden when the language is selected by the
+reader.
 
 Public Menu
 ^^^^^^^^^^^
@@ -128,20 +119,11 @@ following screenshot:
    :alt: Knowledge Base: Public menu
    :align: center
 
-Zammad will provide a list of the current set links per knowledge base language.
-If you're missing a language, you'll have to add the language up front.
-
-You can adjust every URL on language level.
-
-.. figure:: /images/manage/knowledge-base/knowledge-base-public-menu.png
-   :alt: Knowledge Base: Configure public menu
-   :align: center
-
-   Customize the navigation menu that appears in the header of your
-   knowledge base.
+Zammad provides a list of the currently set links, separated by knowledge base
+language. If you're missing a language, you'll have to add the language first.
 
 Arranging URLs
-   By clicking on "Edit", Zammad allows you to add, update, re-arrange or
+   By clicking on ``Edit``, Zammad allows you to add, update, re-arrange or
    remove URLs from either your public header menu or public footer menu.
 
    Title
@@ -156,45 +138,47 @@ Arranging URLs
 
    Delete
       If you tick the delete field, the URL will be removed from the menu upon
-      pressing on the "Submit" button.
+      pressing on the ``Submit`` button.
 
    Change URLs position
       Use ☰ to drag & drop the URLs in question to the new desired position.
-      Your changes will be saved with pressing the "Submit" button.
+      Your changes will be saved with pressing the ``Submit`` button.
+
+Video Servers
+^^^^^^^^^^^^^
+
+By default, videos from Vimeo and YouTube are accepted for embedding in
+knowledge base answers. To allow users to embed videos from
+`MediaCMS <https://github.com/mediacms-io/mediacms>`_ or
+`PeerTube <https://github.com/Chocobozzz/PeerTube>`_, you must add the
+respective instances here.
+
+Add one or more services by providing a **Name** and a **Hostname**.
+The name appears as a hint for users when adding a video. The system then
+validates each video URL against the hostname, ensuring that users can
+only embed videos from your specified servers.
 
 Custom URL
 ^^^^^^^^^^
 
 .. note:: This feature is only available on **self-hosted** instances.
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-custom-url.png
-   :alt: Knowledge Base: Configure custom URL
-   :align: center
-
-   Relocate the knowledge base to the URL of your choosing.
-
-By default, the knowledge base will appear at the same domain as your Zammad
-instance, under ``/help``.
-
-If you wish to customize where it can be accessed, enter your desired URL here
-and configure your web server accordingly. Zammad provides a snippet for Apache
-and Nginx webserver after clicking the ``Web Server Configuration``.
-You can find a tutorial about how to use a
-:docs:`custom knowledge base URL in combination with Nginx proxy manger (NPM) </appendix/custom-kb-url.html>`
+By default, the knowledge base is accessible at the same domain as your Zammad
+instance with appended ``/help``. If you wish to customize its address,
+enter your desired URL here and configure your web server accordingly. Zammad
+provides a snippet for Apache and Nginx web servers after clicking the
+``Web Server Configuration``. You can find a tutorial about how to use a
+:docs:`custom knowledge base URL in combination with Nginx proxy manager (NPM) </appendix/custom-kb-url.html>`
 in the system documentation.
 
 Delete
 ^^^^^^
 
-.. figure:: /images/manage/knowledge-base/knowledge-base-delete.png
-   :alt: Knowledge Base: Delete knowledge base
-   :align: center
-
-   Permanently delete the knowledge base and all the articles within it.
-
-Use this panel to delete the knowledge base.
-If you wish to unpublish it without deleting all of its content,
-simply disable it via the toggle button at the top of the window instead.
+Permanently delete the knowledge base and all of its content by typing the
+full name of your knowledge base, as indicated in the hint above. Please be
+aware that this action is irreversible and cannot be undone. To unpublish the
+knowledge base without deleting its content, simply disable it using the
+toggle at the top of the page instead.
 
 Permissions
 -----------
