@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-24 09:57+0200\n"
-"PO-Revision-Date: 2026-06-30 15:02+0000\n"
+"PO-Revision-Date: 2026-07-10 08:07+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/sr/>\n"
@@ -872,6 +872,14 @@ msgid ""
 "so. Agents get notified for a new AI summary by a pulsing dot as indicator "
 "on the summary sidebar tab."
 msgstr ""
+"Укључивање ове функције генерише сажети опис тикета који ће бити приказани у "
+"бочној страни тикета. Ово може знатно уштедети време приликом обраде великих "
+"тикета и/или са пуно преношења између оператера. За подешавање под *AI > "
+"Сажети опис тикета* неопходна је дозвола "
+"``admin.ai_assistance_ticket_summary``. Обавезно подесите :doc:`AI провајдер "
+"<provider>` пре укључивања ове функције. У супротном, добићете поруку "
+"упозорења у вези тога. Оператери ће бити обавештени о новом сажетом опису "
+"путем пулсирајућег индикатора на језичку бочне траке тикета."
 
 #: ../ai/summary.rst:None
 msgid "Screenshot shows AI ticket summary configuration"
@@ -888,28 +896,21 @@ msgstr ""
 "у :doc:`подешавању провајдера <provider>`."
 
 #: ../ai/summary.rst:22
-#, fuzzy
-#| msgid "Image Service"
 msgid "Summary Services"
-msgstr "Услуга за слике"
+msgstr "Одељци сажетог описа"
 
 #: ../ai/summary.rst:24
-#, fuzzy
-#| msgid ""
-#| "If you activate this feature, **Customer Intent** and **Conversation "
-#| "Summary** are enabled by default. You can choose to activate **Open "
-#| "Questions**, **Upcoming Events** and **Customer Sentiment**, depending on "
-#| "your use case."
 msgid ""
 "Configure what the summary should include. After activating the feature, "
 "**Customer Intent** and **Conversation Summary** are enabled by default. You "
 "can choose to activate **Open Questions**, **Upcoming Events** and "
 "**Customer Sentiment**, depending on your use case."
 msgstr ""
-"Уколико активирате ову функцију, **Намера клијента** и **Сажети опис "
-"конверзације** су увек укључени и приказани. Можете одабрати да ли желите "
-"укључите или искључите **Отворена питања**, **Предстојеће догађаје** и "
-"**Расположење клијента**, у зависности од ваших потреба."
+"Подесите шта сажети опис треба да укључује. По активирању ове функције, "
+"**Намера клијента** и **Сажети опис конверзације** су увек укључени и "
+"приказани. Можете одабрати да ли желите укључите или искључите **Отворена "
+"питања**, **Предстојеће догађаје** и **Расположење клијента**, у зависности "
+"од ваших потреба."
 
 #: ../ai/summary.rst:30 ../manage/groups/settings.rst:99
 msgid "Summary Generation"
@@ -923,10 +924,8 @@ msgid ""
 msgstr ""
 
 #: ../ai/summary.rst:39
-#, fuzzy
-#| msgid "on Ticket creation"
 msgid "On ticket detail opening"
-msgstr "при отварању тикета"
+msgstr "По учитавању детаљног прегледа тикета"
 
 #: ../ai/summary.rst:37
 msgid ""
@@ -934,10 +933,13 @@ msgid ""
 "comfortable for agents as the summary is already present or at least "
 "triggered when the agent wants to read it."
 msgstr ""
+"Сажети опис се генерише када оператер отвори приказ тикета. Ово може бити "
+"практичније за оператере јер је сажети опис већ доступан или ће бити "
+"припремљен у тренутку када оператер жели да га прочита."
 
 #: ../ai/summary.rst:44
 msgid "On ticket summary sidebar activation"
-msgstr ""
+msgstr "По активацији бочне траке сажетог описа тикета"
 
 #: ../ai/summary.rst:42
 msgid ""
@@ -945,6 +947,9 @@ msgid ""
 "viewed. However, it can happen that an agent has to wait for the summary to "
 "be generated, depending on the ticket size and the resources."
 msgstr ""
+"Ова опција може уштедети рачунарске ресурсе уколико се сажети опис не "
+"приказује увек. Међутим, могуће је да ће оператер морати да сачека да се "
+"сажети опис генерише, у зависности од величине тикета и доступних ресурса."
 
 #: ../ai/summary.rst:49
 msgid "Hide ticket summary sidebar"
@@ -7792,11 +7797,15 @@ msgid "SMS"
 msgstr "SMS"
 
 #: ../channels/sms.rst:4
+#, fuzzy
 msgid ""
 "Configure the SMS channel to enable ticket creation via SMS and to send out "
 "answers and notifications. To configure it under *Channels > SMS*, you need "
 "the permission ``admin.channel_sms``."
 msgstr ""
+"Konfigurišite SMS kanal da omogućite kreiranje tiketa putem SMS-a i slanje "
+"odgovora i notifikacija. Za konfiguraciju pod *Kanali > SMS* potrebna vam je "
+"dozvola ``admin.channel_sms``."
 
 #: ../channels/sms.rst:9
 msgid ""
@@ -7987,11 +7996,15 @@ msgid "Telegram"
 msgstr "Telegram"
 
 #: ../channels/telegram.rst:4
+#, fuzzy
 msgid ""
 "Enable the Telegram channel to allow ticket creation and answering from "
 "within Zammad. To configure it under *Channels > Telegram*, you need the "
 "permission ``admin.channel_telegram``."
 msgstr ""
+"Omogućite Telegram kanal da dozvolite kreiranje tiketa i odgovaranje unutar "
+"Zamada. Za konfiguraciju pod *Kanali > Telegram* potrebna vam je dozvola "
+"``admin.channel_telegram``."
 
 #: ../channels/telegram.rst:10
 msgid ""
@@ -8109,11 +8122,15 @@ msgid "Web"
 msgstr "Веб"
 
 #: ../channels/web.rst:4
+#, fuzzy
 msgid ""
 "Configure the ticket creation by your customers via web interface. To "
 "configure it under *Channels > Web*, you need to have the "
 "``admin.channel_web`` permission."
 msgstr ""
+"Konfigurišite kreiranje tiketa vaših kupaca putem veb interfejsa. Za "
+"konfiguraciju pod *Kanali > Web* potrebna vam je dozvola "
+"``admin.channel_web``."
 
 #: ../channels/web.rst:8
 #, fuzzy
@@ -8134,8 +8151,6 @@ msgid "Screenshot shows the web channel settings page of Zammad"
 msgstr "Снимак екрана који приказује Exchange дијалог мапирања у Zammad-у"
 
 #: ../channels/web.rst:15
-#, fuzzy
-#| msgid "Enable Ticket creation"
 msgid "Enable Ticket Creation"
 msgstr "Укључи отварање тикета"
 
@@ -8155,14 +8170,10 @@ msgstr ""
 "постојећих тикета путем корисничког интерфејса."
 
 #: ../channels/web.rst:21
-#, fuzzy
-#| msgid "Default: ``yes``"
 msgid "Default: **yes**"
-msgstr "Подразумевано: ``да``"
+msgstr "Подразумевано: **да**"
 
 #: ../channels/web.rst:24
-#, fuzzy
-#| msgid "Group selection for Ticket creation"
 msgid "Group Selection for Ticket Creation"
 msgstr "Избор групе приликом отварања тикета"
 
@@ -8184,16 +8195,12 @@ msgstr ""
 "интерних група, можете изабрати скуп група које желите да буду доступне."
 
 #: ../channels/web.rst:32
-#, fuzzy
-#| msgid ""
-#| "This does not affect your agents. Agents are affected by :doc:`/manage/"
-#| "groups/access-levels`."
 msgid ""
 "This does not affect your agents. Agents are affected by :doc:`/manage/"
 "groups/group-permissions`."
 msgstr ""
 "Ово не утиче на ваше оператере. Оператери су под утицајем :doc:`нивоа "
-"приступа </manage/groups/access-levels>`."
+"приступа </manage/groups/group-permissions>`."
 
 #: ../channels/web.rst:35
 #, fuzzy
@@ -8202,8 +8209,6 @@ msgid "Default: unset"
 msgstr "Подразумевана вредност"
 
 #: ../channels/web.rst:38
-#, fuzzy
-#| msgid "Tab behavior after ticket creation"
 msgid "Tab Behavior After Ticket Creation"
 msgstr "Понашање прозора након отварања тикета"
 
@@ -8231,10 +8236,8 @@ msgid "This setting is also valid for agents."
 msgstr "Ово је главна дозвола за оператере"
 
 #: ../channels/web.rst:48
-#, fuzzy
-#| msgid "Default: ``Stay on tab``"
 msgid "Default: **Stay on tab**"
-msgstr "Подразумевано: ``Остани у прозору``"
+msgstr "Подразумевано: **Остани у прозору**"
 
 #: ../channels/web.rst:None
 #, fuzzy
@@ -8526,18 +8529,13 @@ msgid "Create a Meta Developer App"
 msgstr "Креирање Meta Developer апликације"
 
 #: ../channels/whatsapp/preparation.rst:42
-#, fuzzy
-#| msgid ""
-#| "While already logged in with your developer account, go to https://"
-#| "developers.facebook.com/apps/. Click on **Create App** and follow the "
-#| "steps below."
 msgid ""
 "While already logged in with your developer account, go to https://"
 "developers.facebook.com/apps/. Click on ``Create App`` and follow the steps "
 "below."
 msgstr ""
 "Док сте пријављени вашим Developer налогом, посетите https://"
-"developers.facebook.com/apps/. Кликните на **Create App** и пратите кораке "
+"developers.facebook.com/apps/. Кликните на ``Create App`` и пратите кораке "
 "испод."
 
 #: ../channels/whatsapp/preparation.rst:None
@@ -8669,18 +8667,13 @@ msgstr ""
 "вратите овде како бисте наставили."
 
 #: ../channels/whatsapp/setup.rst:9
-#, fuzzy
-#| msgid ""
-#| "To set up the channel in Zammad, head over to the admin settings to add "
-#| "the WhatsApp channel under *Channels > WhatsApp*, click on **Add "
-#| "Account** and follow the steps below."
 msgid ""
 "To set up the channel in Zammad, head over to the admin settings to add the "
 "WhatsApp channel under *Channels > WhatsApp*, click on ``Add Account`` and "
 "follow the steps below."
 msgstr ""
 "За подешавање канала у Zammad-у, идите на панел администратора за додавање "
-"WhatsApp канала под *Канали > WhatsApp*, кликните на дугме **Додај налог** и "
+"WhatsApp канала под *Канали > WhatsApp*, кликните на дугме ``Додај налог`` и "
 "пратите кораке описане испод."
 
 #: ../channels/whatsapp/setup.rst:14
@@ -8723,18 +8716,6 @@ msgid "Access Token"
 msgstr "Приступни кључ"
 
 #: ../channels/whatsapp/setup.rst:34
-#, fuzzy
-#| msgid ""
-#| "Enter the access token of a system user with the permission to manage the "
-#| "app. You can create it in the `business settings <https://"
-#| "business.facebook.com/settings/system-users>`_ under *Users > System "
-#| "users*. Make sure to assign the created app to the system user (\"Assign "
-#| "assets\") and to grant admin access by enabling the **Manage app** "
-#| "toggle. After clicking the **Generate token** button, choose your created "
-#| "app, an expiration date of the token (we recommend \"Never\") and the "
-#| "permissions ``whatsapp_business_management`` and "
-#| "``whatsapp_business_messaging``. Be aware that you have to copy the "
-#| "token, it is just displayed once!"
 msgid ""
 "Enter the access token of a system user with the permission to manage the "
 "app. You can create it in the `business settings <https://"
@@ -8751,7 +8732,7 @@ msgstr ""
 "business.facebook.com/settings/system-users>`_ под *Users > System users*. "
 "Обратите пажњу да доделите креирану апликацију системском кориснику („Assign "
 "assets”) и да им дате администраторски приступ укључивањем прекидача "
-"**Manage app**. Кликом на дугме **Generate token**, одаберите вашу креирану "
+"**Manage app**. Кликом на дугме ``Generate token``, одаберите вашу креирану "
 "апликацију, време истека кључа (препоручујемо „Never”) и дозволе "
 "``whatsapp_business_management`` и ``whatsapp_business_messaging``. Водите "
 "рачуна да морате да ископирате кључ, биће приказан само једанпут!"
@@ -8765,33 +8746,24 @@ msgid "App Secret"
 msgstr "Шифра апликације"
 
 #: ../channels/whatsapp/setup.rst:49
-#, fuzzy
-#| msgid ""
-#| "Enter your app secret. You can find it in your app configuration under "
-#| "*App settings > Basic*. Click the **Show** button to be able to copy it."
 msgid ""
 "Enter your app secret. You can find it in your app configuration under *App "
 "settings > Basic*. Click the ``Show`` button to be able to copy it."
 msgstr ""
 "Унесите вашу шифру апликације. Можете је пронаћи у подешавањима ваше "
-"апликације под *App settings > Basic*. Кликните на дугме **Show** за приказ."
+"апликације под *App settings > Basic*. Кликните на дугме ``Show`` за приказ."
 
 #: ../channels/whatsapp/setup.rst:0
 msgid "App dashboard with app secret"
 msgstr "Контролна табла апликације са шифром апликације"
 
 #: ../channels/whatsapp/setup.rst:55
-#, fuzzy
-#| msgid ""
-#| "After providing these three values, click on **Next** in Zammad. This "
-#| "performs a check and fetches your assigned phone number. If everything is "
-#| "fine, the dialog switches to the next step."
 msgid ""
 "After providing these three values, click on ``Next`` in Zammad. This "
 "performs a check and fetches your assigned phone number. If everything is "
 "fine, the dialog switches to the next step."
 msgstr ""
-"По уносу података, кликните на **Следеће**. У позадини, Zammad ће покушати "
+"По уносу података, кликните на ``Следеће``. У позадини, Zammad ће покушати "
 "да презгме ваше додељен број телефона, који можете потврдити у следећем "
 "кораку."
 
@@ -8885,17 +8857,12 @@ msgstr ""
 "отворани тикети."
 
 #: ../channels/whatsapp/setup.rst:96
-#, fuzzy
-#| msgid ""
-#| "After you are configured everything, click on **Submit**. Now the "
-#| "WhatsApp channel is technically created on Zammad side. However, you need "
-#| "to take another important step to make it work."
 msgid ""
 "After you are configured everything, click on ``Submit``. Now the WhatsApp "
 "channel is technically created on Zammad side. However, you need to take "
 "another important step to make it work."
 msgstr ""
-"По уносу ваших информација, кликните на **Пошаљи**. Након овог корака, "
+"По уносу ваших информација, кликните на ``Пошаљи``. Након овог корака, "
 "WhatsApp канал ће бити додат. Међутим, неопходно је одрадити још један корак."
 
 #: ../channels/whatsapp/setup.rst:101
@@ -8923,11 +8890,6 @@ msgid "Step 3 of adding a WhatsApp account"
 msgstr "Корак 3 приликом додавања WhatsApp налога"
 
 #: ../channels/whatsapp/setup.rst:114
-#, fuzzy
-#| msgid ""
-#| "Go to *Use cases > Configuration* and copy/paste the values from "
-#| "**Callback URL** as well as **Verify Token** from Zammad. Confirm with "
-#| "**Verify and save**."
 msgid ""
 "Go to *Use cases > Configuration* and copy/paste the values from **Callback "
 "URL** as well as **Verify Token** from Zammad. Confirm with ``Verify and "
@@ -8935,38 +8897,29 @@ msgid ""
 msgstr ""
 "Идите на *Use cases > Configuration* и ископирајте/налепите вредности из "
 "Zammad поља **URL за повратне позиве** као и **Верификациони кључ**. "
-"Потврдите кликом на **Verify and save**."
+"Потврдите кликом на ``Verify and save``."
 
 #: ../channels/whatsapp/setup.rst:None
 msgid "Configuration section in WhatsApp app dashboard"
 msgstr "Одељак подешавања у контролној табли WhatsApp апликације"
 
 #: ../channels/whatsapp/setup.rst:121
-#, fuzzy
-#| msgid ""
-#| "Scroll down and switch on the toggle for ``messages`` under **Webhook "
-#| "fields**."
 msgid ""
 "Scroll down and switch on the toggle for **messages** under **Webhook "
 "fields**."
 msgstr ""
-"Идите до дна и укључите прекидач за ``messages`` под **Webhook fields**."
+"Идите до дна и укључите прекидач за **messages** под **Webhook fields**."
 
 #: ../channels/whatsapp/setup.rst:None
 msgid "Select \"message\" as webhook field"
 msgstr "Изаберите „messages” као поље повратног позива"
 
 #: ../channels/whatsapp/setup.rst:127
-#, fuzzy
-#| msgid ""
-#| "After finishing this step, you can click on the **Finish** button in "
-#| "Zammad and you should now be ready to receive tickets from your WhatsApp "
-#| "channel!"
 msgid ""
 "After finishing this step, you can click on the ``Finish`` button in Zammad "
 "and you should now be ready to receive tickets from your WhatsApp channel!"
 msgstr ""
-"По завршетку овог корака, можете кликнути на дугме **Заврши** у Zammad-у и "
+"По завршетку овог корака, можете кликнути на дугме ``Заврши`` у Zammad-у и "
 "бићете у могућности да примате тикете са вашег WhatsApp канала!"
 
 #: ../channels/whatsapp/setup.rst:134
@@ -9078,29 +9031,20 @@ msgid "New Calendar"
 msgstr "Нови календар"
 
 #: ../manage/calendars.rst:24
-#, fuzzy
-#| msgid ""
-#| "To create a new calendar, click the **New Calendar** button on the top "
-#| "right corner."
 msgid ""
 "To create a new calendar, click the ``New Calendar`` button on the top right "
 "corner."
 msgstr ""
-"За додавање новог календара, кликните на дугме **Нови календар** у горњем "
+"За додавање новог календара, кликните на дугме ``Нови календар`` у горњем "
 "десном углу."
 
 #: ../manage/calendars.rst:28
-#, fuzzy
-#| msgid ""
-#| "Click the **Delete** button to delete a specific calendar. All SLAs "
-#| "assigned to this calendar are automatically assigned to the default "
-#| "calendar. You cannot delete the default calendar."
 msgid ""
 "Click the ``Delete`` button to delete a specific calendar. All SLAs assigned "
 "to this calendar are automatically assigned to the default calendar. You "
 "cannot delete the default calendar."
 msgstr ""
-"Кликните на дугме **Обриши** за брисање одређеног календара. Сви SLA "
+"Кликните на дугме ``Обриши`` за брисање одређеног календара. Сви SLA "
 "додељени овом календару се аутоматски додељују подразумеваном календару. "
 "Није могуће обрисати подразумевани календар."
 
@@ -9121,16 +9065,12 @@ msgid "Edit"
 msgstr "Измени"
 
 #: ../manage/calendars.rst:37
-#, fuzzy
-#| msgid ""
-#| "The **Edit** button opens the edit dialog (same as for \"New Calendar\"). "
-#| "The specific configuration options are explained in the next section."
 msgid ""
 "The ``Edit`` button opens the edit dialog (same as for ``New Calendar``). "
 "The specific configuration options are explained in the next section."
 msgstr ""
-"Дугме **Уреди** отвара дијалог измена (идентичан оном као за „Нови "
-"календар”). Одговарајућа подешавања су објашњена у следећем одељку."
+"Дугме ``Уреди`` отвара дијалог измена (идентичан оном као за ``Нови "
+"календар``). Одговарајућа подешавања су објашњена у следећем одељку."
 
 #: ../manage/calendars.rst:41
 msgid "Configure Calendars"
@@ -9215,26 +9155,18 @@ msgid "Holidays"
 msgstr "Празници"
 
 #: ../manage/calendars.rst:76
-#, fuzzy
-#| msgid ""
-#| "Add additional holidays or custom closing times here. After adding a date "
-#| "and an optional description, make sure to finally click the **+ Add** "
-#| "button to save the entry."
 msgid ""
 "Add additional holidays or custom closing times here. After adding a date "
 "and an optional description, make sure to finally click the ``+ Add`` button "
 "to save the entry."
 msgstr ""
 "Овде унесите додатне празнике или нерадно време. По додавању датума и "
-"опционог описа, обавезно кликните на дугме **+ Додај** за снимање уноса."
+"опционог описа, обавезно кликните на дугме ``+ Додај`` за снимање уноса."
 
 #: ../manage/calendars.rst:80
-#, fuzzy
-#| msgid ""
-#| "After you configured the calendar, click the **Submit** button to save it."
 msgid ""
 "After you configured the calendar, click the ``Submit`` button to save it."
-msgstr "По подешавању календара, кликните на дугме **Пошаљи** за снимање."
+msgstr "По подешавању календара, кликните на дугме ``Пошаљи`` за снимање."
 
 #: ../manage/checklist.rst:2
 msgid "Checklist"
@@ -9267,16 +9199,12 @@ msgstr ""
 "делу."
 
 #: ../manage/checklist.rst:17
-#, fuzzy
-#| msgid ""
-#| "To activate/deactivate the feature, simply switch the toggle labeled with "
-#| "\"Enable Checklists\" at the top of the page."
 msgid ""
 "To activate/deactivate the feature, simply switch the toggle labeled with "
 "**Enable Checklists** at the top of the page."
 msgstr ""
 "За укључивање/искључивање функције, једноставно пребаците прекидач под "
-"називом „Укључи спискове задатака” при врху стране."
+"називом **Укључи спискове задатака** при врху стране."
 
 #: ../manage/checklist.rst:20
 #, fuzzy
@@ -9354,11 +9282,8 @@ msgstr ""
 "приказан у режиму читања."
 
 #: ../manage/checklist.rst:45
-#, fuzzy
-#| msgid ""
-#| "Customers have no access to the checklists at all and do not see them."
 msgid "Customers have no access to the checklists at all and can't see them."
-msgstr "Клијенти немају приступ списковима задатака и неће их видети."
+msgstr "Клијенти немају приступ списковима задатака и неће моћи да их виде."
 
 #: ../manage/checklist.rst:46
 #, fuzzy
@@ -9375,11 +9300,6 @@ msgstr ""
 "у тикет на основу шаблона."
 
 #: ../manage/checklist.rst:48
-#, fuzzy
-#| msgid ""
-#| "The checklist feature is currently a standalone feature. That means you "
-#| "can't access the items or state of the checkboxes from other places in "
-#| "Zammad like triggers or workflows."
 msgid ""
 "The checklist feature is currently a standalone feature. This means you "
 "can't access the items or state of the checkboxes from other places in "
@@ -9527,15 +9447,11 @@ msgstr ""
 "У супроном, ваш последњи избор *неће* бити сачуван."
 
 #: ../manage/groups/group-permissions.rst:62
-#, fuzzy
-#| msgid ""
-#| "⚖️ **We recommend choosing one or the other**; things can get confusing if "
-#| "you use both at the same time."
 msgid ""
 "**We recommend choosing one or the other**; things can get confusing if you "
 "use both at the same time."
 msgstr ""
-"⚖️ **Препоручујемо да изаберете једно или друго**; ствари могу постати "
+"**Препоручујемо да изаберете једно или друго**; ствари могу постати "
 "збуњујуће ако користите истовремено оба приступа."
 
 #: ../manage/groups/group-permissions.rst:65
@@ -9675,13 +9591,6 @@ msgstr ""
 "зависи само од вас."
 
 #: ../manage/groups/index.rst:13
-#, fuzzy
-#| msgid ""
-#| "Tickets enter Zammad through various channels (e.g. via email) and are "
-#| "then sorted into these groups. The tickets (cases) are thus made "
-#| "available to the agents responsible for the group. Each ticket can only "
-#| "belong to one group, and you can decide via **access levels** (see below) "
-#| "what access your agents have in each group."
 msgid ""
 "Tickets enter Zammad through various channels (e.g. via email) and are then "
 "sorted into these groups. The tickets (cases) are thus made available to the "
@@ -9745,15 +9654,11 @@ msgid "Group Settings"
 msgstr "Подешавања групе"
 
 #: ../manage/groups/settings.rst:4
-#, fuzzy
-#| msgid ""
-#| "Click on a group to edit it, or click on *New group* to create a new "
-#| "group."
 msgid ""
 "Click on a group to edit it, or click on ``New Group`` to create a new group."
 msgstr ""
-"Кликните на групу да бисте је уредили или кликните на *Нова група* да бисте "
-"додали нову групу."
+"Кликните на групу да бисте је уредили или кликните на ``Нова група`` да "
+"бисте додали нову групу."
 
 #: ../manage/groups/settings.rst:None
 msgid "Screenshot showing Zammad's group management"
@@ -9997,11 +9902,15 @@ msgstr ""
 "документацији </extras/shared-drafts.html>`."
 
 #: ../manage/groups/settings.rst:97
+#, fuzzy
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
 "configuration. Choose when the summary should get generated or hide the "
 "ticket summary sidebar tab at all for this group."
 msgstr ""
+"Omogućava vam da prepišete konfiguraciju :doc:`AI sažetka tiketa </ai/"
+"summary>`. Izaberite kada se sažetak treba generisati ili ga potpuno "
+"sakrijte kao karticu u bočnoj traci za ovu grupu."
 
 #: ../manage/groups/settings.rst:102
 msgid ""
@@ -10614,6 +10523,7 @@ msgid "Macros"
 msgstr "Макрои"
 
 #: ../manage/macros.rst:4
+#, fuzzy
 msgid ""
 "Zammad's macro feature lets you pre-define ticket changes which can be "
 "applied with just a click. When you or your agents apply the same changes to "
@@ -10623,25 +10533,36 @@ msgid ""
 "or time-based automation, have a look at Zammad's :doc:`triggers <trigger>` "
 "and :doc:`schedulers <scheduler>`."
 msgstr ""
+"Makro funkcionalnost Zamada vam omogućava da unapred definišete promene na "
+"tiketima koje se mogu primeniti jednim klikom. Kada vi ili vaši agenti više "
+"puta aplicirate iste promene na mnoge tikete, možete ih grupisati u makro i "
+"primeniti izvršavanjem. Za dodavanje ili uređivanje makroa u admin "
+"podešavanjima Zamada pod *Upravljaj > Makroi*, potrebna je dozvola "
+"``admin.macro``. Za automatizaciju zasnovanu na akcijama ili vremenu, "
+"pogledajte Zammad-ove :doc:`trigger-e <trigger>` i :doc:`scheduler-e "
+"<scheduler>`."
 
 #: ../manage/macros.rst:12
+#, fuzzy
 msgid "Macros can be executed in two ways:"
-msgstr ""
+msgstr "Makroi se mogu izvršiti na dva načina:"
 
 #: ../manage/macros.rst:14
+#, fuzzy
 msgid ""
 "In the ticket detail view via the **^** section of the ``Update`` button."
-msgstr ""
+msgstr "U pregledu detalja tiketa putem ^^ odeljka dugmeta ``Ažuriraj``."
 
 #: ../manage/macros.rst:15
+#, fuzzy
 msgid ""
 "As bulk action for multiple tickets inside an overview or the detailed "
 "search (bulk action via field selection or via drag & drop)."
 msgstr ""
+"Kao masovna radnja za više tiketa unutar pregleda ili detaljne pretrage "
+"(masovna radnja putem selekcije polja ili drag & drop metodom)."
 
 #: ../manage/macros.rst:19
-#, fuzzy
-#| msgid "Managing Macros"
 msgid "Manage Macros"
 msgstr "Управљање макроима"
 
@@ -10689,28 +10610,20 @@ msgid "You can create actions to:"
 msgstr "Можете креирати радње за:"
 
 #: ../manage/macros.rst:45
-#, fuzzy
-#| msgid "set ticket attributes (priority, state, group, etc.)"
 msgid "Set ticket attributes (priority, state, group, etc.)"
-msgstr "подешавање атрибута тикета (приоритет, стање, група, итд.)"
+msgstr "Подешавање атрибута тикета (приоритет, стање, група, итд.)"
 
 #: ../manage/macros.rst:46
-#, fuzzy
-#| msgid "add new notes to a ticket"
 msgid "Add new notes to a ticket"
-msgstr "додавање нових напомена у тикет"
+msgstr "Додавање нових напомена у тикет"
 
 #: ../manage/macros.rst:47
-#, fuzzy
-#| msgid "Service notification"
 msgid "Send a notification"
-msgstr "Сервисна упозорења"
+msgstr "Слање обавештења"
 
 #: ../manage/macros.rst:48
-#, fuzzy
-#| msgid "run an :doc:`AI agent </ai/ai-agents>`"
 msgid "Run an :doc:`AI agent </ai/ai-agents>`"
-msgstr "извршавање :doc:`AI агента </ai/ai-agents>`"
+msgstr "Извршавање :doc:`AI агента </ai/ai-agents>`"
 
 #: ../manage/macros.rst:50
 #, fuzzy
@@ -10731,22 +10644,16 @@ msgstr ""
 "подржавају** употребу :doc:`/misc/variables`."
 
 #: ../manage/macros.rst:55
-#, fuzzy
-#| msgid ""
-#| "If the ticket is missing a required attribute and the macro doesn't set "
-#| "it, then **no actions will be applied**."
 msgid ""
 "If the ticket is missing a required attribute and the macro doesn't set it, "
 "then no actions will be applied."
 msgstr ""
-"Ако тикету недостаје обавезни атрибут и макро га не подеси, онда **неће бити "
-"примењене никакве радње**."
+"Ако тикету недостаје обавезни атрибут и макро га не подеси, онда неће бити "
+"примењене никакве радње."
 
 #: ../manage/macros.rst:61
-#, fuzzy
-#| msgid "Once completed..."
 msgid "Once completed"
-msgstr "Када се заврши…"
+msgstr "По завршетку"
 
 #: ../manage/macros.rst:59
 #, fuzzy
@@ -10776,18 +10683,13 @@ msgstr ""
 "преко дијалога „Измена: Макро“, Rails конзоле и API-ја.)"
 
 #: ../manage/macros.rst:68
-#, fuzzy
-#| msgid "Which :doc:`/manage/groups/index` are allowed to see/use this macro?"
 msgid ""
 "Which :doc:`groups </manage/groups/index>` are allowed to use this macro?"
-msgstr ""
-"Који :doc:`групе </manage/groups/index>` смеју да виде/користе овај макро?"
+msgstr "Које :doc:`групе </manage/groups/index>` смеју да користе овај макро?"
 
 #: ../manage/macros.rst:71
-#, fuzzy
-#| msgid "Choose \"inactive\" to disable this macro without deleting it."
 msgid "Choose **inactive** to disable this macro without deleting it."
-msgstr "Изаберите „искључено“ да бисте онемогућили овај макро без брисања."
+msgstr "Изаберите **искључено** да бисте онемогућили овај макро без брисања."
 
 #: ../manage/macros.rst:77
 #, fuzzy
@@ -10796,10 +10698,6 @@ msgid "Mark Ticket as Spam"
 msgstr "по ескалирању тикета"
 
 #: ../manage/macros.rst:79
-#, fuzzy
-#| msgid ""
-#| "If you deal with a lot of spam, you could set up a macro that applies the "
-#| "following changes to a ticket:"
 msgid ""
 "If you deal with a lot of spam, you can set up a macro that applies the "
 "following changes to a ticket:"
@@ -10808,16 +10706,12 @@ msgstr ""
 "примењује следеће измене на тикет:"
 
 #: ../manage/macros.rst:82
-#, fuzzy
-#| msgid "**State:** closed"
 msgid "**State** closed"
-msgstr "**Стање:** затворено"
+msgstr "**Стање** затворено"
 
 #: ../manage/macros.rst:83
-#, fuzzy
-#| msgid "**Tag:** *add* ``spam``"
 msgid "**Tags** *add* spam"
-msgstr "**Ознака:** *додај* ``spam``"
+msgstr "**Ознаке** *додај* spam"
 
 #: ../manage/macros.rst:84 ../manage/macros.rst:105
 #, fuzzy
@@ -10842,8 +10736,9 @@ msgstr ""
 "очистили нежељене тикете."
 
 #: ../manage/macros.rst:95
+#, fuzzy
 msgid "Postpone Ticket for a Fixed Time"
-msgstr ""
+msgstr "Odloži tiket na fiksno vreme"
 
 #: ../manage/macros.rst:97
 #, fuzzy
@@ -10916,10 +10811,14 @@ msgstr ""
 "путем CSV увоза или путем API-ја."
 
 #: ../manage/organizations/index.rst:7
+#, fuzzy
 msgid ""
 "Be aware that agents can view and partially change organizations as well by "
 "opening the organization detail page by clicking an organization avatar."
 msgstr ""
+"Imajte na umu da agenti mogu takođe pregledati i delimično menjati "
+"organizacije otvaranjem stranice detalja organizacije klikom na avatar "
+"organizacije."
 
 #: ../manage/organizations/index.rst:16
 msgid "Creating and editing users directly in the Admin Panel"
@@ -11116,7 +11015,7 @@ msgstr ""
 
 #: ../manage/organizations/index.rst:113
 msgid "VIP"
-msgstr ""
+msgstr "VIP"
 
 #: ../manage/organizations/index.rst:103
 msgid ""
@@ -11143,11 +11042,15 @@ msgid "Notes are visible to all staff members, **including agents**."
 msgstr "Напомене су видљиве свим члановима особља, **укључујући оператере**."
 
 #: ../manage/organizations/index.rst:118
+#, fuzzy
 msgid ""
 "Are you using the **Note** field to keep track of specific organization "
 "individual information? Consider creating a separate field for this! Learn "
 "more in the :doc:`/system/objects` section."
 msgstr ""
+"Da li koristite polje **Napomena** za praćenje specifičnih pojedinačnih "
+"informacija o organizaciji? Razmislite o kreiranju posebnog polja za ovo! "
+"Saznajte više u :doc:`/system/objects` odeljku."
 
 #: ../manage/organizations/index.rst:123
 msgid ""
@@ -12187,11 +12090,14 @@ msgstr ""
 "на :doc:`посебној страници <permissions>`."
 
 #: ../manage/roles/index.rst:9
+#, fuzzy
 msgid ""
 "This page gives you an explanation of what roles and permissions are. You "
 "can find details about each permission in a :doc:`separate sub page "
 "<permissions>`."
 msgstr ""
+"Ova stranica vam daje objašnjenje šta su uloge i dozvole. Detalje o svakoj "
+"dozvoli možete pronaći na :doc:`odvojenoj podstranici <permissions>`."
 
 #: ../manage/roles/index.rst:13 ../manage/scheduler.rst:22
 #: ../manage/webhook/add.rst:8 ../system/core-workflows/learn-by-example.rst:8
@@ -14093,12 +13999,17 @@ msgid "Tags"
 msgstr "Ознаке"
 
 #: ../manage/tags.rst:4
+#, fuzzy
 msgid ""
 "Tags allow to categorize and mark tickets. Think of tags as some kind of "
 "labels which can be attached to a ticket or a knowledge base answer. Manage "
 "tags in Zammad's admin settings under *Manage > Tags* with the ``admin.tag`` "
 "permission."
 msgstr ""
+"Oznake omogućavaju kategorizaciju i označavanje tiketa. Razmišljajte o "
+"oznakama kao o nekom vrstu etiketa koje se mogu zakačiti na tiket ili "
+"odgovor baze znanja. Upravljajte oznakama u admin podešavanjima Zamada pod "
+"*Upravljaj > Oznake* uz dozvolu ``admin.tag``."
 
 #: ../manage/tags.rst:8
 #, fuzzy
@@ -14127,11 +14038,15 @@ msgid "New Tags"
 msgstr "Ознаке"
 
 #: ../manage/tags.rst:17
+#, fuzzy
 msgid ""
 "Allow or disable the creation of new tags by agents. If disabled and you "
 "want to use tags in your instance, make sure to have a working set of tags "
 "available, your agents can choose from."
 msgstr ""
+"Dozvolite ili onemogućite kreiranje novih oznaka od strane agenata. Ako je "
+"onemogućeno i želite da koristite oznake u vašoj instanci, uverite se da "
+"imate funkcionisan skup dostupnih oznaka iz kojih vaši agenti mogu birati."
 
 #: ../manage/tags.rst:22
 #, fuzzy
@@ -14140,11 +14055,16 @@ msgid "Add Tags"
 msgstr "Ознаке"
 
 #: ../manage/tags.rst:24
+#, fuzzy
 msgid ""
 "Use this field to add new tags. The field allows you to add more tags by "
 "using :kbd:`enter` or :kbd:`tab`. Click the ``Add`` button to save them. If "
 "new tags aren't allowed, this is the only way to add tags via UI."
 msgstr ""
+"Koristite ovo polje za dodavanje novih oznaka. Polje vam omogućava da dodate "
+"još oznaka korišćenjem :kbd:`enter` ili :kbd:`tab`. Kliknite na ``Dodaj`` "
+"dugme da ih sačuvate. Ako nove oznake nisu dozvoljene, ovo je jedini način "
+"za dodavanje oznaka putem UI."
 
 #: ../manage/tags.rst:29
 #, fuzzy
@@ -14153,10 +14073,13 @@ msgid "Delete Tags"
 msgstr "Избриши"
 
 #: ../manage/tags.rst:31
+#, fuzzy
 msgid ""
 "If you don't need a tag, delete it with a click on the trash icon in the "
 "**Action** column."
 msgstr ""
+"Ako vam ne treba određena oznaka, obrišite je klikom na ikonu kante za smeće "
+"u koloni **Akcija**."
 
 #: ../manage/tags.rst:35
 #, fuzzy
@@ -14559,13 +14482,18 @@ msgid "Time Accounting Management Screen in Zammad"
 msgstr "Екран за управљање обрачуном времена у Zammad-у"
 
 #: ../manage/time-accounting.rst:16
+#, fuzzy
 msgid ""
 "Zammad's time accounting is based on conditions to check if a ticket is "
 "considered for being relevant for time accounting or not. Add your condition "
 "in the **Selector** section."
 msgstr ""
+"Vremensko knjiženje u Zamadu zasnovano je na uslovima kako bi se proverilo "
+"da li se tiket smatra relevantnim za vremensko knjiženje ili ne. Dodajte "
+"svoj uslov u odeljku **Selektor**."
 
 #: ../manage/time-accounting.rst:22
+#, fuzzy
 msgid ""
 "If a ticket is relevant, Zammad will request the agent to provide the time "
 "which was needed to process the current ticket step. In order for Zammad to "
@@ -14576,6 +14504,13 @@ msgid ""
 "enforce the time accounting. When a ticket is no longer considered for the "
 "time accounting, the already accounted time will be preserved."
 msgstr ""
+"Ako je tiket relevantan, Zammad će tražiti od agenta da unese vreme potrebno "
+"za obradu trenutnog koraka tiketa. Da bi Zammad prikazao dijalog za "
+"vremensko knjiženje agentu, agent mora ažurirati tiket zajedno sa člankom "
+"bilo koje vrste. Dodavanje članka je obavezno da bi se pozvao dijalog za "
+"vremensko knjiženje. Međutim, dijalog nije obavezan i agenti ga mogu "
+"otkazati. Vremensko knjiženje ne možete forsirati. Kada tiket više nije "
+"relevantan za vremensko knjiženje, već zabeleženo vreme će biti sačuvano."
 
 #: ../manage/time-accounting.rst:33
 msgid ""
@@ -14653,12 +14588,17 @@ msgid "Time Accounting Unit"
 msgstr "Јединица обрачунатог времена"
 
 #: ../manage/time-accounting.rst:62
+#, fuzzy
 msgid ""
 "The unit is only displayed to make it easier for agents to account their "
 "time! No numerical transformation will be applied to the values, not even if "
 "you change the unit. It is just to indicate in which unit agents should "
 "account their time."
 msgstr ""
+"Jedinica se prikazuje samo kako bi se agentima olakšalo knjiženje njihovog "
+"vremena! Na vrednosti se ne primenjuje numerička transformacija, čak ni ako "
+"promenite jedinicu. Služi samo kao indikator u kojoj jedinici agenti treba "
+"da knjiže svoje vreme."
 
 #: ../manage/time-accounting.rst:0
 msgid "Time Accounting Unit when Recording"
@@ -15001,6 +14941,7 @@ msgstr ""
 "и чланака."
 
 #: ../manage/trigger.rst:24
+#, fuzzy
 msgid ""
 "In addition to triggers, there are also :doc:`scheduler jobs </manage/"
 "scheduler>` for time-based automation, :doc:`email filters </channels/email/"
@@ -15008,6 +14949,11 @@ msgid ""
 "for manually applying pre-defined changes via the UI. Depending on your use "
 "case, consider using them instead."
 msgstr ""
+"Pored triggera, postoje i :doc:`scheduler poslovi </manage/scheduler>` za "
+"vremensku automatizaciju, :doc:`email filteri </channels/email/filters>` za "
+"kanalnu automatizaciju i :doc:`makroi </manage/macros>` za ručno aplikovanje "
+"unapred definisanih promena putem UI. U zavisnosti od vašeg slučaja "
+"upotrebe, razmislite o korišćenju njih umesto triggera."
 
 #: ../manage/trigger.rst:33
 msgid "Triggers consist mainly of three parts:"
@@ -15031,8 +14977,9 @@ msgid ""
 msgstr "**Радње:** одређује шта се мења у тикету који се подудара са условом."
 
 #: ../manage/trigger.rst:40
+#, fuzzy
 msgid "Triggers are evaluated in alphabetical order by their **name.**"
-msgstr ""
+msgstr "Triggeri se evaluiraju abecednim redom po svom **imenu**."
 
 #: ../manage/trigger.rst:43
 msgid "Activator"
@@ -15357,16 +15304,19 @@ msgid ""
 msgstr "Сваки пут када Jacob Smith отвори тикет, додели је Sales групи:"
 
 #: ../manage/trigger.rst:188
+#, fuzzy
 msgid "Condition: **Customer** *is* *specific user* Jacob Smith"
-msgstr ""
+msgstr "Uslov: **Kupac** *je* *specifični korisnik* Jakob Smit"
 
 #: ../manage/trigger.rst:189
+#, fuzzy
 msgid "Action: **Group** Sales"
-msgstr ""
+msgstr "Akcija: **Grupa** Prodaja"
 
 #: ../manage/trigger.rst:201
+#, fuzzy
 msgid "Owner assignment based on subject"
-msgstr ""
+msgstr "Dodela vlasnika na osnovu predmeta"
 
 #: ../manage/trigger.rst:192
 #, fuzzy
@@ -15384,8 +15334,9 @@ msgstr ""
 "приоритет:"
 
 #: ../manage/trigger.rst:196
+#, fuzzy
 msgid "Condition: **Title** *contains* order"
-msgstr ""
+msgstr "Uslov: **Naslov** *sadrži* narudžbina"
 
 #: ../manage/trigger.rst:197
 #, fuzzy
@@ -15400,8 +15351,9 @@ msgid "**Group** Sales"
 msgstr "**Групе**"
 
 #: ../manage/trigger.rst:200
+#, fuzzy
 msgid "**Owner** *specific user* Emma Taylor"
-msgstr ""
+msgstr "**Vlasnik** *specifični korisnik* Ema Tejlor"
 
 #: ../manage/trigger.rst:201
 #, fuzzy
@@ -15410,8 +15362,9 @@ msgid "**Priority** 3 high"
 msgstr "**Приоритет:** 3 висок"
 
 #: ../manage/trigger.rst:221
+#, fuzzy
 msgid "Auto-reply based on channel and language"
-msgstr ""
+msgstr "Automatski odgovor na osnovu kanala i jezika"
 
 #: ../manage/trigger.rst:204
 #, fuzzy
@@ -15444,20 +15397,24 @@ msgid "**State** *is not* closed"
 msgstr "**Стање:** затворено"
 
 #: ../manage/trigger.rst:211
+#, fuzzy
 msgid "**Type** *is* web"
-msgstr ""
+msgstr "**Tip** *je* web"
 
 #: ../manage/trigger.rst:212
+#, fuzzy
 msgid "**Sender** *is* customer"
-msgstr ""
+msgstr "**Pošiljalac** *je* korisnik"
 
 #: ../manage/trigger.rst:213
+#, fuzzy
 msgid "**Detected Language** *is* English"
-msgstr ""
+msgstr "**Prepoznati jezik** *je* engleski"
 
 #: ../manage/trigger.rst:215
+#, fuzzy
 msgid "Action: **Email** (public, recipient: customer; with subject and body)"
-msgstr ""
+msgstr "Akcija: **E-pošta** (javna, primaoc: korisnik; sa naslovom i sadržajem)"
 
 #: ../manage/trigger.rst:217
 #, fuzzy
@@ -15504,14 +15461,18 @@ msgstr ""
 "пријаве у Zammad."
 
 #: ../manage/users/index.rst:9
+#, fuzzy
 msgid "To manage users, you need to have ``admin.user`` permission."
-msgstr ""
+msgstr "Da biste upravljali korisnicima, morate imati dozvolu ``admin.user``."
 
 #: ../manage/users/index.rst:11
+#, fuzzy
 msgid ""
 "Be aware that agents can create, view and change customer users as well, for "
 "example:"
 msgstr ""
+"Imajte na umu da agenti takođe mogu da kreiraju, pregledaju i menjaju "
+"korisnike, na primer:"
 
 #: ../manage/users/index.rst:14
 #, fuzzy
@@ -15520,16 +15481,22 @@ msgid "While creating a new ticket"
 msgstr "и отварају нове тикете."
 
 #: ../manage/users/index.rst:15
+#, fuzzy
 msgid ""
 "When opening a user's detail page in the navigation sidebar by clicking on "
 "an avatar."
 msgstr ""
+"Kada otvarate stranicu sa detaljima korisnika u navigacionoj bočnoj traci "
+"klikom na avatar."
 
 #: ../manage/users/index.rst:18
+#, fuzzy
 msgid ""
 "Read on for a description of the individual user attributes below. The "
 "different ways of managing users are described in separate pages:"
 msgstr ""
+"Pročitajte dalje za opis pojedinačnih atributa korisnika ispod. Različiti "
+"načini upravljanja korisnicima su opisani na zasebnim stranicama:"
 
 #: ../manage/users/index.rst:21
 #, fuzzy
@@ -15737,11 +15704,15 @@ msgid "📑 Note"
 msgstr "📑 Напомена"
 
 #: ../manage/users/index.rst:109
+#, fuzzy
 msgid ""
 "Are you using the **Note** field to keep track of specific user individual "
 "information? Consider creating a separate field for this! Learn more in "
 "the :doc:`/system/objects` section."
 msgstr ""
+"Da li koristite polje **Napomena** za praćenje specifičnih individualnih "
+"informacija o korisniku? Razmislite o kreiranju posebnog polja za ovo! "
+"Saznajte više u sekciji :doc:`/system/objects`."
 
 #: ../manage/users/index.rst:136
 msgid "▶️ Active"
@@ -15879,11 +15850,15 @@ msgid "Managing Users via Admin Settings"
 msgstr "Управљање корисницима преко панела администратора"
 
 #: ../manage/users/via-admin-settings.rst:4
+#, fuzzy
 msgid ""
 "To manage users via UI under *Manage > Users*, you need to have the "
 "``admin.user`` permission. See :ref:`user-details-reference` for help with "
 "the individual user attributes."
 msgstr ""
+"Da biste upravljali korisnicima putem interfejsa pod *Upravljaj > "
+"Korisnici*, morate imati dozvolu ``admin.user``. Za pomoć oko pojedinačnih "
+"atributa korisnika pogledajte :ref:`user-details-reference`."
 
 #: ../manage/users/via-admin-settings.rst:14
 #, fuzzy
@@ -18681,6 +18656,7 @@ msgstr ""
 "Пример: ``У четвртак, 27. јун 2019. 15:37:11, Jacob Smith је написао/ла:``"
 
 #: ../misc/first-steps.rst:4
+#, fuzzy
 msgid ""
 "After the basic setup of Zammad with the getting started wizard, you will "
 "see hints how to use the UI (see \"Intro\" below if you want to see them "
@@ -18690,6 +18666,13 @@ msgid ""
 "section on top of the page to see useful links for the start. Depending on "
 "your configuration and permission, your list may look different."
 msgstr ""
+"Nakon osnovne konfiguracije Zammada pomoćom asistenta za početnike, videćete "
+"savete kako da koristite interfejs (pogledajte \"Intro\" ispod ako želite da "
+"ih ponovo vidite). Nakon što se ovi saveti prikažu, videćete nadzornu tablu "
+"koja je zapravo početna stranica Zammada. Ova tabla pruža nekoliko korisnih "
+"informacija za agente. Možete preći na sekciju **Prvi koraci** na vrhu "
+"stranice da vidite korisne linkove za početak. Zavisno od vaše konfiguracije "
+"i dozvola, vaš spisak može izgledati drugačije."
 
 #: ../misc/first-steps.rst:None
 msgid "Screenshot showing highlighted \"First Steps\" section"
@@ -22648,10 +22631,14 @@ msgstr ""
 "www.zabbix.com/documentation/current/manual/config/notifications>`_."
 
 #: ../settings/branding.rst:4
+#, fuzzy
 msgid ""
 "Manage branding related settings in Zammad under *Settings > Branding*. Make "
 "sure to have the permission ``admin.branding``."
 msgstr ""
+"Upravljajte podešavanjima vezanim za brendiranje u Zammadu pod "
+"*Podešavanja > Brendiranje*. Proverite da li imate dozvolu "
+"``admin.branding``."
 
 #: ../settings/branding.rst:13
 msgid "Product Name"
@@ -22845,12 +22832,17 @@ msgid "Security"
 msgstr "Безбедност"
 
 #: ../settings/security.rst:4
+#, fuzzy
 msgid ""
 "To configure security-related settings under *Settings > Security*, the "
 "permission ``admin.security`` is required. The configuration in Zammad is "
 "split into tabs. This is reflected in this documentation by having a sub-"
 "page for each of the tabs:"
 msgstr ""
+"Za konfigurisanje podešavanja vezanih za bezbednost pod *Podešavanja > "
+"Bezbednost* potrebna je dozvola ``admin.security``. Konfiguracija u Zammadu "
+"je podeljena na kartice. Ovo je odraženo u ovoj dokumentaciji tako što "
+"postoji podsadržaj za svaku od kartica:"
 
 #: ../settings/security/base.rst:2 ../settings/system/base.rst:2
 #: ../settings/ticket.rst:9
@@ -22934,12 +22926,18 @@ msgid "Password Login"
 msgstr "Пријављивање путем лозинке"
 
 #: ../settings/security/base.rst:61
+#, fuzzy
 msgid ""
 "Username & password login is enabled by default. If you set it to ``no``, "
 "make sure to configure a :doc:`third-party` login. Otherwise, the login via "
 "username and password is still enabled. The login screen without username "
 "and password login can look like in the screenshot."
 msgstr ""
+"Prijava na osnovu korisničkog imena i lozinke je omogućena podrazumevano. "
+"Ako je podesite na ``ne``, proverite da li ste konfigurisali :doc:`third-"
+"party` login. U suprotnom, prijava putem korisničkog imena i lozinke će i "
+"dalje biti omogućena. Ekran za prijavu bez logovanja na osnovu korisničkog "
+"imena i lozinke može izgledati kao na snimku ekrana."
 
 #: ../settings/security/base.rst:0
 msgid "Figure showing de-activated \"Password Login\" setting"
@@ -23455,11 +23453,15 @@ msgstr ""
 "*Подешавања > Безбедност > Апликације трећег лица*."
 
 #: ../settings/security/third-party.rst:15
+#, fuzzy
 msgid ""
 "We recommend to check your third-party authentication provider's "
 "documentation first. We collected configuration examples for some of them, "
 "but they are partially outdated."
 msgstr ""
+"Preporučujemo da prvo proverite dokumentaciju svog pružača usluge za "
+"autentifikaciju treće strane. Prikupili smo primere konfiguracije za neke od "
+"njih, ali su delimično zastareli."
 
 #: ../settings/security/third-party.rst:36
 msgid "Automatic Account Link on Initial Logon"
@@ -25685,11 +25687,16 @@ msgstr ""
 "приложе исти безбедносни кључ који су регистровали прликом поставке."
 
 #: ../settings/system/base.rst:4
+#, fuzzy
 msgid ""
 "The first two settings got automatically set by the *Getting Started "
 "wizard*. Be aware that changing these settings also changes callback URLs "
 "for your channels etc. It can even lead to being no longer able to login."
 msgstr ""
+"Prva dva podešavanja su automatski postavljena pomoćem *asistenta za "
+"početnike*. Imajte na umu da menjanje ovih podešavanja takođe menja callback "
+"URL-ove za vaše kanale itd. To čak može dovesti do nemogućnosti "
+"prijavljivanja."
 
 #: ../settings/system/base.rst:11
 msgid "Fully Qualified Domain Name"
@@ -25869,12 +25876,17 @@ msgid "X"
 msgstr "X"
 
 #: ../settings/system/index.rst:4
+#, fuzzy
 msgid ""
 "To configure system related settings under *Settings > System*, the "
 "permission ``admin.system`` is required. The configuration in Zammad is "
 "split into tabs. This is reflected in this documentation by having a sub-"
 "page for each of the tabs:"
 msgstr ""
+"Za konfigurisanje sistemskih podešavanja pod *Podešavanja > Sistem* potrebna "
+"je dozvola ``admin.system``. Konfiguracija u Zammadu je podeljena na "
+"kartice. Ovo je odraženo u ovoj dokumentaciji tako što postoji podsadržaj za "
+"svaku od kartica:"
 
 #: ../settings/system/index.rst:18
 #, fuzzy
@@ -27126,15 +27138,20 @@ msgid "Set available options for select fields"
 msgstr "Одредите доступне опције за поља избора"
 
 #: ../system/core-workflows.rst:10
+#, fuzzy
 msgid "Apply these adjustments based on conditions"
-msgstr ""
+msgstr "Primenite ova podešavanja na osnovu uslova"
 
 #: ../system/core-workflows.rst:12
+#, fuzzy
 msgid ""
 "This allows you to provide exactly the information your users really need, "
 "enforce an input for certain fields, distinguish between different roles or "
 "groups and much more."
 msgstr ""
+"Ovo vam omogućava da pružite tačno informacije koje vaši korisnici zaista "
+"trebaju, namećete unos za određena polja, razlikujete različite uloge ili "
+"grupe i mnogo toga drugog."
 
 #: ../system/core-workflows.rst:18
 msgid ""
@@ -31673,11 +31690,15 @@ msgid "Integrations"
 msgstr "Интеграције"
 
 #: ../system/integrations/index.rst:4
+#, fuzzy
 msgid ""
 "Zammad offers many integrations that add additional features to your "
 "instance. To configure them under *System > Integrations*, the permission "
 "``admin.integration`` is required."
 msgstr ""
+"Zammad nudi mnoge integracije koje dodaju dodatne funkcije vašoj instanci. "
+"Da biste ih konfigurisali pod *Sistem > Integracije*, potrebna je dozvola "
+"``admin.integration``."
 
 #: ../system/integrations/index.rst:9
 msgid "Integrations for Phone Systems"
@@ -32486,6 +32507,7 @@ msgstr ""
 "шифрује поруку тако да може да је дешифрује само прималац коме је намењена."
 
 #: ../system/integrations/smime.rst:18
+#, fuzzy
 msgid ""
 "Once S/MIME has been enabled via the toggle at the top, ``Encrypt`` and "
 "``Sign`` buttons will appear in the ticket detail view when creating an "
@@ -32493,6 +32515,11 @@ msgid ""
 "side, read the :user-docs:`secure email section </extras/secure-email.html>` "
 "in the user documentation."
 msgstr ""
+"Nakon što je S/MIME omogućen pomoću prekidača na vrhu, pojaviće se dugmad "
+"``Enkripcija`` i ``Potpis`` u pregledu detalja zahteva prilikom kreiranja "
+"članka na osnovu e-pošte. Za više detalja o tome kako S/MIME funkcioniše na "
+"strani agenta, pročitajte :user-docs:`secure email section </extras/secure-"
+"email.html>` u korisničkoj dokumentaciji."
 
 #: ../system/integrations/smime.rst:27
 #, fuzzy
@@ -32740,6 +32767,7 @@ msgid "Download Certificate or Key"
 msgstr "Преузимање сертификата"
 
 #: ../system/integrations/smime.rst:103
+#, fuzzy
 msgid ""
 "You can download the previously provided certificates and private keys at "
 "any time from your Zammad instance. Please note that passphrase-protected "
@@ -32749,6 +32777,13 @@ msgid ""
 "download a private key, use the other option labeled ``Download Private "
 "Key``."
 msgstr ""
+"Sertifikate i privatne ključeve koji su prethodno obezbeđeni možete preuzeti "
+"u bilo kom trenutku sa svoje Zammad instance. Imajte na umu da privatni "
+"ključevi zaštićeni lozinkom ostaju zaštićeni. Kada ih preuzmete, morate "
+"znati lozinku da biste ih koristili nakon preuzimanja. Da biste preuzeli "
+"sertifikat, koristite meni ⠇ u koloni **Akcije** i izaberite ``Preuzmi "
+"sertifikat``. Da biste preuzeli privatni ključ, upotrebite drugu opciju "
+"označenu kao ``Preuzmi privatni ključ``."
 
 #: ../system/integrations/smime.rst:111
 #, fuzzy
@@ -32769,11 +32804,15 @@ msgstr ""
 "кликнути на мени у колони *радње* и изабрати **избриши**:"
 
 #: ../system/integrations/smime.rst:119
+#, fuzzy
 msgid ""
 "By default, Zammad tries to send all outgoing emails **signed and "
 "encrypted**, if possible. This behavior can be adjusted on a per-group "
 "basis. You can choose to sign only, encrypt only, both, or neither:"
 msgstr ""
+"Podrazumevano, Zammad pokušava da pošalje sve izlazne e-poruke **potpisane i "
+"šifrovane**, ako je moguće. Ovo ponašanje se može prilagoditi po grupama. "
+"Možete izabrati da se samo potpiše, samo enkriptuje, oba ili ništa:"
 
 #: ../system/integrations/smime.rst:None
 msgid "Zammad allowing to choose the default behavior on per group basis"
@@ -32790,6 +32829,7 @@ msgstr ""
 "поруку коју пошаљу."
 
 #: ../system/integrations/smime.rst:133
+#, fuzzy
 msgid ""
 "All of the system's latest S/MIME activity is displayed in the **Recent "
 "Logs** section. The logs contain the status and details of all emails (both "
@@ -32798,6 +32838,12 @@ msgid ""
 "manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`. For those, "
 "check your ``production.log``."
 msgstr ""
+"Sva najnovija S/MIME aktivnost sistema prikazuje se u sekciji **Nedavni "
+"dnevnici**. Dnevnici sadrže status i detalje svih e-poruka (ulaznih i "
+"izlaznih) koje su koristile potpisivanje/proveru ili enkripciju/dekripciju. "
+"Ovaj dnevnik **ne** uključuje e-poruke poslate putem :doc:`triggers </manage/"
+"trigger>` ili :doc:`scheduler jobs </manage/scheduler>`. Za njih proverite "
+"svoj ``production.log``."
 
 #: ../system/integrations/smime.rst:148
 msgid "I received a signed/encrypted email before I set up S/MIME integration"
@@ -33462,11 +33508,15 @@ msgstr ""
 "тикет поново отвори након што је био затворен."
 
 #: ../system/objects.rst:125
+#, fuzzy
 msgid ""
 "**Default for closed tickets** means that this state is used when an agent "
 "uses the keyboard shortcut to update a ticket as closed (usually you will "
 "just have one state of this type anyway)."
 msgstr ""
+"**Podrazumevano za zatvorene zahteve** znači da se ovo stanje koristi kada "
+"agent koristi prečicu na tastaturi da ažurira zahtev kao zatvoren (obično "
+"ćete u svakom slučaju imati samo jedno ovakvo stanje)."
 
 #: ../system/objects.rst:175
 msgid "Ticket state in detail"
