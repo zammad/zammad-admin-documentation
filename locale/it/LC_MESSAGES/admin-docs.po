@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-07 14:49+0200\n"
-"PO-Revision-Date: 2026-06-28 13:02+0000\n"
+"PO-Revision-Date: 2026-07-12 12:10+0000\n"
 "Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/it/>\n"
@@ -937,10 +937,8 @@ msgstr ""
 "del tuo caso d'uso."
 
 #: ../ai/summary.rst:30
-#, fuzzy
-#| msgid "Summary Generation"
 msgid "Summary Selector"
-msgstr "Generazione Riepilogo"
+msgstr "Selettore di riepilogo"
 
 #: ../ai/summary.rst:32
 msgid ""
@@ -951,26 +949,29 @@ msgid ""
 "available for tickets matching the configured conditions. For other tickets, "
 "the summary sidebar tab isn't available."
 msgstr ""
+"Usa le :doc:`object conditions </misc/object-conditions/basics>` per "
+"definire con precisione quali ticket devono essere considerati per la "
+"generazione del riepilogo tramite IA. Questo ti consente di specificare le "
+"condizioni in base agli attributi del ticket, come il gruppo, lo stato, la "
+"priorità o gli attributi personalizzati. La generazione del riepilogo è "
+"disponibile solo per i ticket che soddisfano le condizioni configurate. Per "
+"gli altri ticket, la scheda del riepilogo nella barra laterale non sarà "
+"disponibile."
 
 #: ../ai/summary.rst:40 ../manage/groups/settings.rst:106
 msgid "Summary Generation"
 msgstr "Generazione Riepilogo"
 
 #: ../ai/summary.rst:42
-#, fuzzy
-#| msgid ""
-#| "In general, the ticket summary is only triggered if the ticket got "
-#| "updated since the last summary generation. You can choose the timing of "
-#| "the generation or hide the sidebar tab at all via the dropdown:"
 msgid ""
 "In general, the ticket summary is only triggered if the ticket matches the "
 "configured condition and has been updated since the last summary generation. "
 "You can choose the timing of the generation via the dropdown:"
 msgstr ""
-"In generale, il riepilogo del ticket viene generato solo se il ticket è "
-"stato aggiornato dall'ultima generazione del riepilogo. Puoi scegliere il "
-"momento della generazione oppure nascondere completamente la scheda del "
-"pannello tramite il menu a discesa:"
+"In generale, il riepilogo del ticket viene generato solo se il ticket "
+"corrisponde alla condizione configurata ed è stato aggiornato dall'ultima "
+"generazione del riepilogo. È possibile scegliere la tempistica di "
+"generazione tramite il menu a tendina:"
 
 #: ../ai/summary.rst:49
 msgid "On ticket detail opening"
@@ -1002,22 +1003,15 @@ msgstr ""
 "alle risorse disponibili."
 
 #: ../ai/summary.rst:57
-#, fuzzy
-#| msgid ""
-#| "This hides the summary sidebar tab at all. This option can be useful if "
-#| "you want to enable the summary for specific groups only. Check "
-#| "the :doc:`group settings </manage/groups/settings>` section about where "
-#| "to configure the summary for each group individually."
 msgid ""
 "You can also configure the summary generation on a group level. Check "
 "the :doc:`group settings </manage/groups/settings>` section about where to "
 "configure the summary for each group individually."
 msgstr ""
-"Questo nasconde completamente la scheda del riepilogo. Questa opzione può "
-"essere utile se vuoi abilitare il riepilogo solo per gruppi specifici. "
-"Consulta la sezione :doc:`impostazioni del gruppo </manage/groups/settings>` "
-"per scoprire dove configurare il riepilogo per ciascun gruppo "
-"individualmente."
+"È possibile configurare la generazione del riepilogo anche a livello di "
+"gruppo. Consultare la sezione :doc:`Impostazioni di gruppo </manage/groups/"
+"settings>` per informazioni su come configurare il riepilogo per ciascun "
+"gruppo individualmente."
 
 #: ../ai/writing-assistant.rst:2
 msgid "Writing Assistant"
@@ -5216,17 +5210,19 @@ msgstr ""
 
 #: ../channels/form.rst:43
 msgid "Spam Protection"
-msgstr ""
+msgstr "Protezione antispam"
 
 #: ../channels/form.rst:45
 msgid ""
 "The form channel provides two methods to protect against unwanted "
 "submissions."
 msgstr ""
+"Il canale dei moduli offre due metodi per proteggersi dagli invii "
+"indesiderati."
 
 #: ../channels/form.rst:54
 msgid "Honeypot"
-msgstr ""
+msgstr "Honeypot"
 
 #: ../channels/form.rst:49
 msgid ""
@@ -5237,10 +5233,16 @@ msgid ""
 "rejected. This is a basic bot protection and doesn't open a connection to "
 "any third-party providers."
 msgstr ""
+"Quando si abilita l'honeypot, il modulo include un campo nascosto invisibile "
+"agli utenti normali (nascosto tramite CSS). Gli utenti non sono quindi in "
+"grado di compilarlo. I bot, invece, possono compilare tutti i campi che "
+"trovano. Se il campo viene compilato al momento dell'invio, ciò indica "
+"un'attività di bot e l'invio viene rifiutato. Si tratta di una protezione di "
+"base contro i bot e non apre alcuna connessione con fornitori terzi."
 
 #: ../channels/form.rst:83
 msgid "CAPTCHA"
-msgstr ""
+msgstr "CAPTCHA"
 
 #: ../channels/form.rst:57
 msgid ""
@@ -5251,30 +5253,37 @@ msgid ""
 "the user (e.g. interaction times), either invisible or showing an indicator "
 "of the verification. The following providers are available:"
 msgstr ""
+"Un CAPTCHA è una sfida per verificare che l'utente sia umano. A seconda del "
+"fornitore di servizi scelto, la verifica può essere effettuata in diversi "
+"modi. Gli approcci più comuni prevedono la visualizzazione di un puzzle o un "
+"enigma che l'utente deve risolvere (ad esempio, testo distorto, selezione di "
+"immagini) oppure la misurazione del comportamento dell'utente (ad esempio, "
+"tempi di interazione), in modo invisibile o mostrando un indicatore della "
+"verifica. Sono disponibili i seguenti fornitori:"
 
 #: ../channels/form.rst:64
 msgid "ALTCHA"
-msgstr ""
+msgstr "ALTCHA"
 
 #: ../channels/form.rst:65
 msgid "Cloudflare Turnstile"
-msgstr ""
+msgstr "Cloudflare Turnstile"
 
 #: ../channels/form.rst:66
 msgid "hCaptcha"
-msgstr ""
+msgstr "hCaptcha"
 
 #: ../channels/form.rst:67
 msgid "Friendly Captcha"
-msgstr ""
+msgstr "Friendly Captcha"
 
 #: ../channels/form.rst:68
 msgid "Google reCAPTCHA"
-msgstr ""
+msgstr "Google reCAPTCHA"
 
 #: ../channels/form.rst:69
 msgid "Google reCAPTCHA Enterprise"
-msgstr ""
+msgstr "Google reCAPTCHA Enterprise"
 
 #: ../channels/form.rst:71
 msgid ""
@@ -5283,6 +5292,11 @@ msgid ""
 "other providers require a sitekey and a secret. Google allows you to adjust "
 "the minimum score and its enterprise version requires an API key."
 msgstr ""
+"La configurazione richiesta dipende dal provider scelto. Per ALTCHA non è "
+"necessaria alcuna configurazione e il CAPTCHA non è visibile all'utente. Gli "
+"altri provider richiedono una sitekey e una secret. Google consente di "
+"regolare il punteggio minimo e la sua versione enterprise richiede una "
+"chiave API."
 
 #: ../channels/form.rst:77
 msgid ""
@@ -5292,12 +5306,20 @@ msgid ""
 "documentation of your CAPTCHA provider and of your used website stack since "
 "this highly depends on them."
 msgstr ""
+"Se il sito web di destinazione dello script del modulo utilizza la Content "
+"Security Policy (CSP), potrebbe essere necessario modificare le regole per "
+"consentire risorse aggiuntive (connessione al provider, recupero ed "
+"esecuzione di script, ecc.). Consulta la documentazione del tuo provider "
+"CAPTCHA e dello stack di siti web che utilizzi, poiché la compatibilità "
+"dipende fortemente da questi."
 
 #: ../channels/form.rst:82
 msgid ""
 "If a CAPTCHA provider is enabled, the form's API endpoint is also protected "
 "and expects additional parameters."
 msgstr ""
+"Se è abilitato un provider CAPTCHA, anche l'endpoint API del modulo è "
+"protetto e richiede parametri aggiuntivi."
 
 #: ../channels/form.rst:86
 msgid "Designer"
@@ -10190,6 +10212,10 @@ msgid ""
 "configuration </ai/summary>` to define more precisely which tickets should "
 "have the summary generated."
 msgstr ""
+"Oltre a questa impostazione a livello di gruppo, puoi anche utilizzare "
+":doc:`condizioni dell'oggetto </misc/object-conditions/basics>` nella "
+":doc:`configurazione del riepilogo dei ticket AI </ai/summary>` per definire "
+"con maggiore precisione quali ticket dovrebbero avere il riepilogo generato."
 
 #: ../manage/groups/settings.rst:109
 msgid ""
@@ -10266,20 +10292,15 @@ msgstr ""
 "base nella documentazione utente </extras/knowledge-base.html>`."
 
 #: ../manage/knowledge-base.rst:12
-#, fuzzy
-#| msgid ""
-#| "By default, only admin users are permitted to create, edit and manage "
-#| "knowledge base articles. See :doc:`roles/index` for details on how to "
-#| "grant write access to agents or other users."
 msgid ""
 "By default, only admin users are permitted to create, edit and manage "
 "knowledge base content. See :doc:`roles/index` for details on how to grant "
 "write access to agents or other users."
 msgstr ""
 "Per impostazione predefinita, solo gli utenti amministratori sono "
-"autorizzati a creare, modificare e gestire gli articoli della knowledge "
-"base. Vedi :doc:`roles/index` per i dettagli su come concedere l'accesso in "
-"scrittura ad agenti o altri utenti."
+"autorizzati a creare, modificare e gestire i contenuti della knowledge base. "
+"Consulta la :doc:`roles/index` per informazioni su come concedere l'accesso "
+"in scrittura agli agenti o ad altri utenti."
 
 #: ../manage/knowledge-base.rst:20
 msgid "Sample Knowledge Base Index"
@@ -10327,7 +10348,7 @@ msgstr "🖼️ Editor di testo ricco + immagini incorporate"
 
 #: ../manage/knowledge-base.rst:32
 msgid "📹 Embedded videos"
-msgstr ""
+msgstr "📹 Video incorporati"
 
 #: ../manage/knowledge-base.rst:35 ../manage/slas.rst:21
 #: ../system/integrations/github.rst:15 ../system/integrations/gitlab.rst:15
@@ -10335,24 +10356,24 @@ msgid "Setup"
 msgstr "Configurazione"
 
 #: ../manage/knowledge-base.rst:37
-#, fuzzy
-#| msgid ""
-#| "To enable the knowledge base, first select the languages/locales you wish "
-#| "to publish in and click on the ``Create Knowledge Base`` button."
 msgid ""
 "To enable the knowledge base, toggle the switch at the top, select the "
 "languages/locales you wish to publish in and click on the ``Create Knowledge "
 "Base`` button. If the switch is deactivated, the knowledge base taskbar tab "
 "is not visible."
 msgstr ""
-"Per abilitare la knowledge base, seleziona prima le lingue/localizzazioni in "
-"cui desideri pubblicare e fai clic sul pulsante ``Crea Knowledge Base``."
+"Per abilitare la knowledge base, attiva l'interruttore in alto, seleziona le "
+"lingue/localizzazioni in cui desideri pubblicare e fai clic sul pulsante "
+"``Crea Knowledge Base``. Se l'interruttore è disattivato, la scheda della "
+"knowledge base nella barra delle applicazioni non è visibile."
 
 #: ../manage/knowledge-base.rst:42
 msgid ""
 "After creating the knowledge base, you have access to the settings across "
 "different tabs:"
 msgstr ""
+"Dopo aver creato la knowledge base, è possibile accedere alle impostazioni "
+"tramite diverse schede:"
 
 #: ../manage/knowledge-base.rst:None
 msgid "Knowledge Base: Initial setup"
@@ -10424,18 +10445,17 @@ msgid "a general RSS feed of the whole knowledge base (top level)"
 msgstr "un feed RSS generale dell'intera knowledge base (livello superiore)"
 
 #: ../manage/knowledge-base.rst:73
-#, fuzzy
-#| msgid "a category specific RSS feed of the category you're in"
 msgid ""
 "a category specific RSS feed of the category you're in (also applies to "
 "answers you're viewing)"
-msgstr "un feed RSS specifico per la categoria in cui ti trovi"
+msgstr ""
+"Un feed RSS specifico per la categoria in cui ti trovi (si applica anche "
+"alle risposte che stai visualizzando)"
 
 #: ../manage/knowledge-base.rst:76
-#, fuzzy
-#| msgid "This option is set by default."
 msgid "This setting is set to ``no`` by default."
-msgstr "Questa opzione è impostata per impostazione predefinita."
+msgstr ""
+"Questa impostazione è configurata su ``no`` per impostazione predefinita."
 
 #: ../manage/knowledge-base.rst:80
 msgid ""
@@ -10489,23 +10509,24 @@ msgid ""
 "in the system documentation to learn how to do that. Please note that this "
 "requires access to the machine your Zammad runs on."
 msgstr ""
+"Se desideri personalizzare ulteriormente l'aspetto della tua knowledge base "
+"per i tuoi clienti, puoi farlo fornendo file CSS personalizzati. Dai "
+"un'occhiata alla sezione della documentazione di sistema :docs:`custom "
+"knowledge base CSS </appendix/custom-kb-css.html>` per imparare come fare. "
+"Tieni presente che questo richiede l'accesso alla macchina su cui è eseguito "
+"il tuo Zammad."
 
 #: ../manage/knowledge-base.rst:106
 msgid "Languages"
 msgstr "Lingue"
 
 #: ../manage/knowledge-base.rst:108
-#, fuzzy
-#| msgid "Add or remove locales, or reassign the default."
 msgid "Add or remove locales here or set a locale as new default."
-msgstr "Aggiungi o rimuovi localizzazioni, o riassegna quella predefinita."
+msgstr ""
+"Aggiungi o rimuovi le impostazioni locali qui, oppure imposta come nuova "
+"predefinita."
 
 #: ../manage/knowledge-base.rst:110
-#, fuzzy
-#| msgid ""
-#| "The knowledge base will automatically display the language matching each "
-#| "visitor's locale. Visitors may always manually switch to another language "
-#| "via language selection menu in the header."
 msgid ""
 "The knowledge base will automatically display the language matching each "
 "visitor's locale. Visitors may always manually switch to another language "
@@ -10514,10 +10535,13 @@ msgid ""
 "yet translated into a given language will be hidden when the language is "
 "selected by the reader."
 msgstr ""
-"La knowledge base visualizzerà automaticamente la lingua corrispondente alla "
-"localizzazione di ciascun visitatore. I visitatori possono sempre passare "
-"manualmente a un'altra lingua tramite il menu di selezione della lingua "
-"nell'intestazione."
+"La knowledge base visualizzerà automaticamente la lingua corrispondente alle "
+"impostazioni locali di ciascun visitatore. I visitatori possono sempre "
+"cambiare manualmente lingua tramite il menu di selezione della lingua "
+"nell'intestazione. Se le impostazioni locali del visitatore non sono "
+"supportate, verrà visualizzata la lingua predefinita. Gli articoli non "
+"ancora tradotti in una determinata lingua verranno nascosti quando il "
+"lettore seleziona tale lingua."
 
 #: ../manage/knowledge-base.rst:118
 msgid "Public Menu"
@@ -10538,35 +10562,26 @@ msgid "Knowledge Base: Public menu"
 msgstr "Knowledge Base: Menu pubblico"
 
 #: ../manage/knowledge-base.rst:128
-#, fuzzy
-#| msgid ""
-#| "Zammad will provide a list of the current set links per knowledge base "
-#| "language. If you're missing a language, you'll have to add the language "
-#| "up front."
 msgid ""
 "Zammad provides a list of the currently set links, separated by knowledge "
 "base language. If you're missing a language, you'll have to add the language "
 "first."
 msgstr ""
-"Zammad fornirà un elenco dei link impostati correnti per lingua della "
-"knowledge base. Se manca una lingua, dovrai aggiungerla in anticipo."
+"Zammad fornisce un elenco dei link attualmente impostati, suddivisi per "
+"lingua della knowledge base. Se manca una lingua, dovrai prima aggiungerla."
 
 #: ../manage/knowledge-base.rst:151
 msgid "Arranging URLs"
 msgstr "Organizzazione URL"
 
 #: ../manage/knowledge-base.rst:132
-#, fuzzy
-#| msgid ""
-#| "By clicking on \"Edit\", Zammad allows you to add, update, re-arrange or "
-#| "remove URLs from either your public header menu or public footer menu."
 msgid ""
 "By clicking on ``Edit``, Zammad allows you to add, update, re-arrange or "
 "remove URLs from either your public header menu or public footer menu."
 msgstr ""
-"Facendo clic su \"Modifica\", Zammad ti consente di aggiungere, aggiornare, "
-"riorganizzare o rimuovere URL dal tuo menu di intestazione pubblico o dal "
-"menu di piè di pagina pubblico."
+"Facendo clic su ``Modifica``, Zammad consente di aggiungere, aggiornare, "
+"riorganizzare o rimuovere URL dal menu di intestazione pubblico o dal menu "
+"di piè di pagina pubblico."
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
 #: ../manage/time-accounting.rst:147 ../manage/time-accounting.rst:161
@@ -10596,36 +10611,29 @@ msgstr ""
 "della knowledge base se non impostato."
 
 #: ../manage/knowledge-base.rst:146
-#, fuzzy
-#| msgid ""
-#| "If you tick the delete field, the URL will be removed from the menu upon "
-#| "pressing on the \"Submit\" button."
 msgid ""
 "If you tick the delete field, the URL will be removed from the menu upon "
 "pressing on the ``Submit`` button."
 msgstr ""
-"Se spunti il campo elimina, l'URL verrà rimosso dal menu dopo aver premuto "
-"il pulsante \"Invia\"."
+"Se si seleziona la casella elimina, l'URL verrà rimosso dal menu premendo il "
+"pulsante ``Invia``."
 
 #: ../manage/knowledge-base.rst:151
 msgid "Change URLs position"
 msgstr "Modifica posizione URL"
 
 #: ../manage/knowledge-base.rst:150
-#, fuzzy
-#| msgid ""
-#| "Use ☰ to drag & drop the URLs in question to the new desired position. "
-#| "Your changes will be saved with pressing the \"Submit\" button."
 msgid ""
 "Use ☰ to drag & drop the URLs in question to the new desired position. Your "
 "changes will be saved with pressing the ``Submit`` button."
 msgstr ""
-"Usa ☰ per trascinare e rilasciare gli URL in questione nella nuova posizione "
-"desiderata. Le tue modifiche verranno salvate premendo il pulsante \"Invia\"."
+"Usa l'icona ☰ per trascinare e rilasciare gli URL in questione nella nuova "
+"posizione desiderata. Le modifiche verranno salvate premendo il pulsante "
+"``Invia``."
 
 #: ../manage/knowledge-base.rst:154
 msgid "Video Servers"
-msgstr ""
+msgstr "Server video"
 
 #: ../manage/knowledge-base.rst:156
 msgid ""
@@ -10634,6 +10642,11 @@ msgid ""
 "<https://github.com/mediacms-io/mediacms>`_ or `PeerTube <https://github.com/"
 "Chocobozzz/PeerTube>`_, you must add the respective instances here."
 msgstr ""
+"Per impostazione predefinita, i video di Vimeo e YouTube sono accettati per "
+"l'incorporamento nelle risposte della knowledge base. Per consentire agli "
+"utenti di incorporare video da `MediaCMS <https://github.com/mediacms-io/"
+"mediacms>`_ o `PeerTube <https://github.com/Chocobozzz/PeerTube>`_, è "
+"necessario aggiungere le rispettive istanze qui."
 
 #: ../manage/knowledge-base.rst:162
 msgid ""
@@ -10642,6 +10655,11 @@ msgid ""
 "validates each video URL against the hostname, ensuring that users can only "
 "embed videos from your specified servers."
 msgstr ""
+"Aggiungi uno o più servizi fornendo un **Nome** e un **Nome host**. Il nome "
+"verrà visualizzato come suggerimento per gli utenti durante l'aggiunta di un "
+"video. Il sistema convaliderà quindi ogni URL del video rispetto al nome "
+"host, garantendo che gli utenti possano incorporare solo video provenienti "
+"dai server specificati."
 
 #: ../manage/knowledge-base.rst:168
 msgid "Custom URL"
@@ -10652,14 +10670,6 @@ msgid "This feature is only available on **self-hosted** instances."
 msgstr "Questa funzionalità è disponibile solo su istanze **self-hosted**."
 
 #: ../manage/knowledge-base.rst:172
-#, fuzzy
-#| msgid ""
-#| "If you wish to customize where it can be accessed, enter your desired URL "
-#| "here and configure your web server accordingly. Zammad provides a snippet "
-#| "for Apache and Nginx webserver after clicking the ``Web Server "
-#| "Configuration``. You can find a tutorial about how to use a :docs:`custom "
-#| "knowledge base URL in combination with Nginx proxy manger (NPM) </"
-#| "appendix/custom-kb-url.html>` in the system documentation."
 msgid ""
 "By default, the knowledge base is accessible at the same domain as your "
 "Zammad instance with appended ``/help``. If you wish to customize its "
@@ -10670,12 +10680,14 @@ msgid ""
 "Nginx proxy manager (NPM) </appendix/custom-kb-url.html>` in the system "
 "documentation."
 msgstr ""
-"Se desideri personalizzare l'indirizzo di accesso, inserisci qui l'URL "
-"desiderato e configura il tuo server web di conseguenza. Zammad fornisce uno "
-"snippet per i server web Apache e Nginx dopo aver fatto clic su ``Web Server "
-"Configuration``. Nella documentazione del sistema puoi trovare una guida su "
-"come utilizzare un :docs:`URL personalizzato della knowledge base in "
-"combinazione con Nginx Proxy Manager (NPM) </appendix/custom-kb-url.html>`."
+"Per impostazione predefinita, la knowledge base è accessibile allo stesso "
+"dominio della tua istanza di Zammad con l'aggiunta di ``/help``. Se desideri "
+"personalizzarne l'indirizzo, inserisci qui l'URL desiderato e configura il "
+"tuo server web di conseguenza. Zammad fornisce un esempio di configurazione "
+"per i server web Apache e Nginx dopo aver cliccato su ``Configurazione "
+"server web``. Puoi trovare un tutorial su come utilizzare un URL "
+"personalizzato per la knowledge base in combinazione con Nginx Proxy Manager "
+"(NPM) </appendix/custom-kb-url.html>` nella documentazione di sistema."
 
 #: ../manage/knowledge-base.rst:183
 msgid ""
@@ -10685,6 +10697,12 @@ msgid ""
 "the knowledge base without deleting its content, simply disable it using the "
 "toggle at the top of the page instead."
 msgstr ""
+"Elimina definitivamente la knowledge base e tutto il suo contenuto digitando "
+"il nome completo della knowledge base, come indicato nel suggerimento "
+"precedente. Tieni presente che questa azione è irreversibile e non può "
+"essere annullata. Per rimuovere la pubblicazione della knowledge base senza "
+"eliminarne il contenuto, è sufficiente disattivarla utilizzando "
+"l'interruttore nella parte superiore della pagina."
 
 #: ../manage/knowledge-base.rst:190 ../manage/roles/index.rst:41
 #: ../manage/roles/permissions.rst:2
