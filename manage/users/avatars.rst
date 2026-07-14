@@ -13,20 +13,14 @@ User avatars can be populated from any of the following sources.
 Whichever source last fetched an avatar for a user becomes the active
 one. The following sources are available:
 
-- OAuth login providers (e.g. Microsoft, Google, GitHub, Facebook,
-  GitLab) supply the avatar URL on sign-in when the provider exposes
-  one. Zammad stores this URL on the user and fetches the image.
-
+- OAuth login providers (e.g. Microsoft, Google, GitHub) supply the avatar URL
+  on sign-in when the provider exposes one. Zammad stores this URL on the user
+  and fetches the image.
 - The :doc:`Zammad Image Service </settings/system/services>` is used
   as a fallback for users with a valid email address (e.g. matching a
-  Gravatar entry). The service also looks up organization avatars
-  based on their domain.
-
-- Agents and customers can upload a custom avatar image from their
+  Gravatar entry).
+- Agents and customers can upload or capture a custom avatar image from their
   user profile.
-
-- The :doc:`Clearbit integration </system/integrations/clearbit>` can
-  enrich user records with avatar images alongside other profile data.
 
 .. note::
 
@@ -37,11 +31,6 @@ one. The following sources are available:
 Changing Avatars
 ----------------
 
-Admins cannot change the avatar of a user or an organization. To change their
-own avatar, a user must click on their avatar or initials at the bottom of the
-navigation sidebar, choose ``Profile`` and open the ``Avatar`` section to
-upload an image or capture one with their webcam.
-
-Organization avatars cannot be changed manually at all and are populated only
-by the :doc:`Zammad Image Service </settings/system/services>` based on the
-organization's domain.
+Admins cannot change the avatar of a user. To change their own avatar, a user
+has to change it in the **Avatar** section of their ``Profile`` and upload an
+image or capture one with their webcam.

@@ -16,12 +16,6 @@ require the ``admin.organization`` permission.
    The simplest way to manage organizations is directly in the organization
    detail view.
 
-.. hint::
-
-   Organization avatars are looked up by the Zammad Image Service based
-   on the organization's domain. See :doc:`/manage/users/avatars` for
-   an overview of all avatar sources.
-
 Learn more about managing organizations...
 
 .. toctree::
