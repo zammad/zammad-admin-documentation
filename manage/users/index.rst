@@ -31,6 +31,7 @@ ways of managing users are described in separate pages:
 
    via-admin-settings
    via-csv-import
+   avatars
 
 .. _user-details-reference:
 

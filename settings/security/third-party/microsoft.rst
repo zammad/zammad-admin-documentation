@@ -30,15 +30,9 @@ Supported account types:
         and personal Microsoft accounts (e.g. Skype, Xbox)
 
 Avatars of signing in users:
-   Zammad fetches the avatar from the user's Microsoft profile when one
-   is available. If Microsoft does not provide an avatar, Zammad falls
-   back to the configured ``Zammad Image Service`` (e.g. Gravatar based
-   on the user's email address). See :doc:`Services
-   </settings/system/services>` for more on the image service.
-
-   Already saved avatars are kept on the user, even if the image service
-   gets disabled afterwards. Whenever a new avatar is fetched from any
-   source, the user's avatar is updated with it.
+   Zammad fetches the user's avatar from their Microsoft profile on
+   sign-in. See :doc:`/manage/users/avatars` for an overview of all
+   avatar sources and how they interact.
 
 Step 1 - Register a Microsoft App for Zammad
 --------------------------------------------
