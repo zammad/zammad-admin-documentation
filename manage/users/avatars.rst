@@ -9,8 +9,9 @@ image service gets disabled afterwards.
 Sources
 -------
 
-User avatars are populated from the following sources, in this order
-of preference:
+User avatars can be populated from any of the following sources.
+Whichever source last fetched an avatar for a user becomes the active
+one. The following sources are available:
 
 - OAuth login providers (e.g. Microsoft, Google, GitHub, Facebook,
   GitLab) supply the avatar URL on sign-in when the provider exposes
@@ -21,8 +22,8 @@ of preference:
   Gravatar entry). The service also looks up organization avatars
   based on their domain.
 
-- Agents and customers can upload a custom avatar image from their user
-  profile (click on *Avatar > Profile*).
+- Agents and customers can upload a custom avatar image from their
+  user profile.
 
 - The :doc:`Clearbit integration </system/integrations/clearbit>` can
   enrich user records with avatar images alongside other profile data.
@@ -37,28 +38,16 @@ Changing avatars
 ----------------
 
 Admins cannot change the avatar of a user or an organization from the
-admin panel. Avatars are personal data: each user manages their own
-avatar from their profile.
+admin panel.
 
-To change a user avatar, the user themselves must open their profile
-settings by clicking on the avatar or initials in the top-right corner
-and choosing ``Profile``. From there, the ``Avatar`` section lets the
-user upload an image or capture one with their webcam.
+To change their own avatar, a user must click on their avatar or
+initials at the bottom of the navigation sidebar, choose ``Profile
+settings`` and open the ``Avatar`` section to upload an image or
+capture one with their webcam.
 
-There is no equivalent way to change an organization avatar manually.
-Organization avatars are populated only by the
-:doc:`Zammad Image Service </settings/system/services>` based on the
-organization's domain.
-
-.. warning::
-
-   The ``View from user's perspective`` action in the user overview
-   switches your session to the selected user. Because the avatar
-   upload UI operates on the current session's user, an admin can
-   upload an avatar while in this switched state. This is **not** a
-   supported way to change another user's avatar and should not be
-   used for that purpose. Always ask the user to upload their own
-   avatar from their profile.
+Organization avatars cannot be changed manually at all and are
+populated only by the :doc:`Zammad Image Service
+</settings/system/services>` based on the organization's domain.
 
 See also
 --------
