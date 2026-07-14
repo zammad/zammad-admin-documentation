@@ -34,7 +34,7 @@ one. The following sources are available:
    does **not** synchronize user avatars. Avatars for LDAP-sourced
    users come from the sources listed above instead.
 
-Changing avatars
+Changing Avatars
 ----------------
 
 Admins cannot change the avatar of a user or an organization. To change their
