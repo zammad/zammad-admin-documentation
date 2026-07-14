@@ -37,20 +37,11 @@ one. The following sources are available:
 Changing avatars
 ----------------
 
-Admins cannot change the avatar of a user or an organization from the
-admin panel.
+Admins cannot change the avatar of a user or an organization. To change their
+own avatar, a user must click on their avatar or initials at the bottom of the
+navigation sidebar, choose ``Profile`` and open the ``Avatar`` section to
+upload an image or capture one with their webcam.
 
-To change their own avatar, a user must click on their avatar or
-initials at the bottom of the navigation sidebar, choose ``Profile
-settings`` and open the ``Avatar`` section to upload an image or
-capture one with their webcam.
-
-Organization avatars cannot be changed manually at all and are
-populated only by the :doc:`Zammad Image Service
-</settings/system/services>` based on the organization's domain.
-
-See also
---------
-
-- :doc:`/settings/system/services` for the image service backend
-  configuration.
+Organization avatars cannot be changed manually at all and are populated only
+by the :doc:`Zammad Image Service </settings/system/services>` based on the
+organization's domain.
