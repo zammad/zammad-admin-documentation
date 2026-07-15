@@ -5,12 +5,13 @@ Image Service
    Defines the backend for user and organization image lookups.
    The service is used to fetch user avatars based on the user's email
    address (e.g. matching a Gravatar entry). It is also used once during
-   Zammad's setup wizard to fetch a logo of your company based on the provided
-   URL. Make sure your on premise installation has ``HTTPS`` access to
-   ``images.zammad.com``.
-
+   Zammad's setup wizard to fetch your company logo based on the domain of the
+   email address you provided in the setup wizard.
    See :doc:`/manage/users/avatars` for an overview of all avatar
    sources and how the image service interacts with them.
+
+   Make sure your on premise installation has ``HTTPS`` access to
+   ``images.zammad.com``.
 
    Default: ``Zammad Image Service`` (active)
 
