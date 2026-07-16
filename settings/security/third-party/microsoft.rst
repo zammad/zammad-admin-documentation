@@ -18,21 +18,14 @@ This works for Azure users as well and can be an alternative to
 Limitations
 -----------
 
-Supported account types:
-   Please note that Zammad only supports these account types (App dependent):
+Please note that Zammad only supports these account types (app dependent):
 
-      - Accounts in this organizational directory only
-        (Default Directory only - Single tenant)
-      - Accounts in any organizational directory
-        (Any Azure AD directory - Multitenant)
-      - Accounts in any organizational directory
-        (Any Azure AD directory - Multitenant)
-        and personal Microsoft accounts (e.g. Skype, Xbox)
-
-Avatars of signing in users:
-   Zammad currently ignores user avatars. If the user is registered with
-   e.g. Gravatar, Zammad will fetch the avatar from there if enabled.
-   See :doc:`Zammad Image Service </settings/system/index>` for more.
+- Accounts in this organizational directory only (Default Directory only -
+  Single tenant)
+- Accounts in any organizational directory (Any Azure AD directory -
+  Multitenant)
+- Accounts in any organizational directory (Any Azure AD directory -
+  Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
 
 Step 1 - Register a Microsoft App for Zammad
 --------------------------------------------
