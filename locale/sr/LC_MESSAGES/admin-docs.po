@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 14:49+0200\n"
+"POT-Creation-Date: 2026-07-15 15:09+0200\n"
 "PO-Revision-Date: 2026-07-11 07:07+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -980,8 +980,8 @@ msgid ""
 "the :doc:`group settings </manage/groups/settings>` section about where to "
 "configure the summary for each group individually."
 msgstr ""
-"Генерисање сажетог описа можете подесити и на нивоу групе. Проверите одељак "
-":doc:`подешавања групе </manage/groups/settings>` за информације где "
+"Генерисање сажетог описа можете подесити и на нивоу групе. Проверите "
+"одељак :doc:`подешавања групе </manage/groups/settings>` за информације где "
 "подесити сажети опис за сваку групу појединачно."
 
 #: ../ai/writing-assistant.rst:2
@@ -6352,7 +6352,7 @@ msgstr "``offline_access``"
 
 #: ../channels/microsoft365-graph/accounts.rst:79
 #: ../channels/microsoft365/accounts/register-app.rst:83
-#: ../settings/security/third-party/microsoft.rst:66
+#: ../settings/security/third-party/microsoft.rst:59
 msgid "``openid``"
 msgstr "``openid``"
 
@@ -9442,7 +9442,7 @@ msgstr ""
 "окидачи или радни токови."
 
 #: ../manage/groups/group-permissions.rst:2 ../manage/roles/index.rst:63
-#: ../manage/users/index.rst:161
+#: ../manage/users/index.rst:162
 msgid "Group Permissions"
 msgstr "Групне дозволе"
 
@@ -10363,10 +10363,10 @@ msgid ""
 "requires access to the machine your Zammad runs on."
 msgstr ""
 "Ako želite dalje da prilagodite izgled baze znanja za vaše korisnike, možete "
-"to učiniti tako što ćete dostaviti custom CSS fajlove. Proverite odeljak "
-":docs:`custom CSS baze znanja </appendix/custom-kb-css.html>` u sistemskoj "
-"dokumentaciji da saznate kako. Imajte na umu da ovo zahteva pristup mašini "
-"na kojoj se Zammad izvršava."
+"to učiniti tako što ćete dostaviti custom CSS fajlove. Proverite "
+"odeljak :docs:`custom CSS baze znanja </appendix/custom-kb-css.html>` u "
+"sistemskoj dokumentaciji da saznate kako. Imajte na umu da ovo zahteva "
+"pristup mašini na kojoj se Zammad izvršava."
 
 #: ../manage/knowledge-base.rst:106
 msgid "Languages"
@@ -11191,7 +11191,7 @@ msgstr "Приказ тикета који приказује аватар VIP �
 msgid "VIP organizations are displayed with a crown above their avatars."
 msgstr "VIP организације су приказане са круном изнад њихових аватара."
 
-#: ../manage/organizations/index.rst:116 ../manage/users/index.rst:107
+#: ../manage/organizations/index.rst:116 ../manage/users/index.rst:108
 msgid "Notes are visible to all staff members, **including agents**."
 msgstr "Напомене су видљиве свим члановима особља, **укључујући оператере**."
 
@@ -12218,7 +12218,7 @@ msgstr ""
 "извештавање </appendix/reporting-tools-thirdparty.html>` у системској "
 "документацији, где можете пронаћи више информација."
 
-#: ../manage/roles/index.rst:2 ../manage/users/index.rst:141
+#: ../manage/roles/index.rst:2 ../manage/users/index.rst:142
 msgid "Roles"
 msgstr "Улоге"
 
@@ -15568,7 +15568,8 @@ msgstr "**Prepoznati jezik** *je* engleski"
 #: ../manage/trigger.rst:215
 #, fuzzy
 msgid "Action: **Email** (public, recipient: customer; with subject and body)"
-msgstr "Akcija: **E-pošta** (javna, primaoc: korisnik; sa naslovom i sadržajem)"
+msgstr ""
+"Akcija: **E-pošta** (javna, primaoc: korisnik; sa naslovom i sadržajem)"
 
 #: ../manage/trigger.rst:217
 #, fuzzy
@@ -15593,6 +15594,71 @@ msgstr ""
 "тикету, механизам је уграђен у сам систем. Ако треба да их прилагодите, "
 "мораћете да :doc:`ручно уредите датотеке на свом серверу </manage/trigger/"
 "system-notifications>`."
+
+#: ../manage/users/avatars.rst:2
+#, fuzzy
+#| msgid "Avatar"
+msgid "Avatars"
+msgstr "Аватар"
+
+#: ../manage/users/avatars.rst:4
+msgid ""
+"User avatars in Zammad can come from several sources. Whenever a new avatar "
+"is fetched from any of them, the user's avatar is updated. Already saved "
+"avatars are kept on the user, even if the configured image service gets "
+"disabled afterwards."
+msgstr ""
+
+#: ../manage/users/avatars.rst:10
+msgid "Sources"
+msgstr ""
+
+#: ../manage/users/avatars.rst:12
+msgid ""
+"User avatars can be populated from any of the following sources. Whichever "
+"source last fetched an avatar for a user becomes the active one. The "
+"following sources are available:"
+msgstr ""
+
+#: ../manage/users/avatars.rst:16
+msgid ""
+"OAuth login providers (e.g. Microsoft, Google, GitHub) supply the avatar URL "
+"on sign-in when the provider exposes one. Zammad stores this URL on the user "
+"and fetches the image."
+msgstr ""
+
+#: ../manage/users/avatars.rst:19
+msgid ""
+"The :doc:`Zammad Image Service </settings/system/services>` is used as a "
+"fallback for users with a valid email address (e.g. matching a Gravatar "
+"entry)."
+msgstr ""
+
+#: ../manage/users/avatars.rst:22
+msgid ""
+"Agents and customers can upload or capture a custom avatar image from their "
+"user profile."
+msgstr ""
+
+#: ../manage/users/avatars.rst:27
+msgid ""
+":doc:`LDAP/Active Directory </system/integrations/ldap/index>` does **not** "
+"synchronize user avatars. Avatars for LDAP-sourced users come from the "
+"sources listed above instead."
+msgstr ""
+
+#: ../manage/users/avatars.rst:32
+#, fuzzy
+#| msgid "Managing Accounts"
+msgid "Changing Avatars"
+msgstr "Управљање налозима"
+
+#: ../manage/users/avatars.rst:34
+msgid ""
+"Admins cannot change the avatar of a user. To change their own avatar, a "
+"user has to change it in the **Avatar** section of their ``Profile`` and "
+"upload an image or capture one with their webcam."
+msgstr ""
 
 #: ../manage/users/index.rst:2
 msgid "Users"
@@ -15684,11 +15750,11 @@ msgstr "преко :docs:`REST API (системска документациј�
 msgid ":ref:`via invitation email <invite-agents>`"
 msgstr ":ref:`путем имејл позивнице <invite-agents>`"
 
-#: ../manage/users/index.rst:38
+#: ../manage/users/index.rst:39
 msgid "Reference Guide: User Details"
 msgstr "Референтни водич: Кориснички детаљи"
 
-#: ../manage/users/index.rst:40
+#: ../manage/users/index.rst:41
 msgid ""
 "Most of the attributes you can set on user accounts are self-explanatory. "
 "The ones that aren't are described below."
@@ -15696,22 +15762,22 @@ msgstr ""
 "Већина атрибута које можете подесити на корисничким налозима је разумљива "
 "сама по себи. Они који нису описани су у наставку."
 
-#: ../manage/users/index.rst:48
+#: ../manage/users/index.rst:49
 msgid "The edit user dialog, showing the various user detail fields"
 msgstr ""
 "Дијалог за уређивање корисника, који приказује различита поља са детаљима о "
 "кориснику"
 
-#: ../manage/users/index.rst:48
+#: ../manage/users/index.rst:49
 msgid "User details can be set in the **New/Edit User** dialog."
 msgstr ""
 "Детаљи о кориснику се могу подесити у дијалогу **Ново/Измена: Корисник**."
 
-#: ../manage/users/index.rst:63
+#: ../manage/users/index.rst:64
 msgid "👤 Login"
 msgstr "👤 Пријава"
 
-#: ../manage/users/index.rst:51
+#: ../manage/users/index.rst:52
 msgid ""
 "A user's email and login may differ, but **either one can be used to sign "
 "in.**"
@@ -15725,7 +15791,7 @@ msgstr ""
 "Снимак екрана који приказује кориснички преглед са наглашеном колоним "
 "„Пријава”"
 
-#: ../manage/users/index.rst:58
+#: ../manage/users/index.rst:59
 msgid ""
 "User logins are **not** shown in the New/Edit User dialog, but they are "
 "visible from the user overview."
@@ -15733,7 +15799,7 @@ msgstr ""
 "Корисничке пријаве **нису** приказане у дијалогу Ново/Измена: Корисник, али "
 "су видљиве из прегледа корисника."
 
-#: ../manage/users/index.rst:61
+#: ../manage/users/index.rst:62
 #, fuzzy
 #| msgid ""
 #| "This attribute **cannot** be set via the Admin Panel. Instead, use "
@@ -15748,22 +15814,22 @@ msgstr ""
 "тога, користите :docs:`Zammad конзолу </admin/console.html>`, :docs:`REST "
 "API </api/intro.html>`, или :doc:`CSV увоз <via-csv-import>`."
 
-#: ../manage/users/index.rst:66
+#: ../manage/users/index.rst:67
 msgid "🔑 Password"
 msgstr "🔑 Лозинка"
 
-#: ../manage/users/index.rst:66
+#: ../manage/users/index.rst:67
 msgid ""
 "Yes, administrators really do have the power to change other users' "
 "passwords."
 msgstr ""
 "Да, администратори заиста имају моћ да мењају лозинке других корисника."
 
-#: ../manage/users/index.rst:75
+#: ../manage/users/index.rst:76
 msgid "🏢 Organization"
 msgstr "🏢 Организација"
 
-#: ../manage/users/index.rst:69
+#: ../manage/users/index.rst:70
 msgid ""
 ":doc:`/manage/organizations/index` are a way to group customers together "
 "(usually, members of the same company). This allows you to do things like "
@@ -15775,7 +15841,7 @@ msgstr ""
 "видите све тикете те фирме или да подесите посебне :doc:`окидаче </manage/"
 "trigger>` који се активирају само за те клијенте."
 
-#: ../manage/users/index.rst:74
+#: ../manage/users/index.rst:75
 #, fuzzy
 #| msgid ""
 #| "Please note that the organization has to exist before it can be assigned. "
@@ -15788,11 +15854,11 @@ msgstr ""
 "додељена. Да бисте је додали, идите на **Управљање > Организације** у панелу "
 "администратора."
 
-#: ../manage/users/index.rst:91
+#: ../manage/users/index.rst:92
 msgid "🏤 Secondary Organizations"
 msgstr "🏤 Додатне организације"
 
-#: ../manage/users/index.rst:78
+#: ../manage/users/index.rst:79
 msgid ""
 "This option allows you to assign more organizations, in addition to the "
 "user's primary organization."
@@ -15800,7 +15866,7 @@ msgstr ""
 "Ова опција вам омогућава да доделите више организација, поред примарне "
 "организације корисника."
 
-#: ../manage/users/index.rst:81
+#: ../manage/users/index.rst:82
 msgid ""
 "Secondary organizations behave the same like the primary ones with one "
 "exception: Secondaries are not as highlighted like their primaries."
@@ -15808,7 +15874,7 @@ msgstr ""
 "Додатне организације се понашају исто као и примарне са једним изузетком: "
 "додатне организације нису толико истакнуте као примарне."
 
-#: ../manage/users/index.rst:84
+#: ../manage/users/index.rst:85
 msgid ""
 "Listings for all organizational tickets are not affected by this. Zammad "
 "will mix primary and secondary organization tickets together."
@@ -15816,7 +15882,7 @@ msgstr ""
 "Ово не утиче на листе за све организационе тикете. Zammad ће комбиновати "
 "тикете примарне и додатне организације."
 
-#: ../manage/users/index.rst:89
+#: ../manage/users/index.rst:90
 #, fuzzy
 #| msgid ""
 #| "While the number of secondary organizations is not limited directly, you "
@@ -15829,11 +15895,11 @@ msgstr ""
 "Иако број додатних организација није директно ограничен, можда бисте желели "
 "да ово задржите на разумном броју."
 
-#: ../manage/users/index.rst:104
+#: ../manage/users/index.rst:105
 msgid "👑 VIP"
 msgstr "👑 VIP"
 
-#: ../manage/users/index.rst:94
+#: ../manage/users/index.rst:95
 msgid ""
 "This flag is a way for your team to indicate high-status customers. Just as "
 "with organizations, you can set up special :doc:`/manage/trigger`, :doc:`/"
@@ -15849,15 +15915,15 @@ msgstr ""
 msgid "Ticket view showing a VIP user's avatar with a crown on it"
 msgstr "Приказ тикета који приказује аватар VIP корисника са круном на њему"
 
-#: ../manage/users/index.rst:104
+#: ../manage/users/index.rst:105
 msgid "VIPs are displayed with a crown above their avatars."
 msgstr "VIP особе су приказане са круном изнад њихових аватара."
 
-#: ../manage/users/index.rst:111
+#: ../manage/users/index.rst:112
 msgid "📑 Note"
 msgstr "📑 Напомена"
 
-#: ../manage/users/index.rst:109
+#: ../manage/users/index.rst:110
 #, fuzzy
 msgid ""
 "Are you using the **Note** field to keep track of specific user individual "
@@ -15868,11 +15934,11 @@ msgstr ""
 "informacija o korisniku? Razmislite o kreiranju posebnog polja za ovo! "
 "Saznajte više u sekciji :doc:`/system/objects`."
 
-#: ../manage/users/index.rst:136
+#: ../manage/users/index.rst:137
 msgid "▶️ Active"
 msgstr "Активно"
 
-#: ../manage/users/index.rst:114
+#: ../manage/users/index.rst:115
 msgid ""
 "Inactive users aren't able to login anymore. However, they can still be used "
 "in different places in Zammad (e.g. as ticket customer, in conditions in "
@@ -15882,11 +15948,11 @@ msgstr ""
 "могу бити искоришћени на различитим местима у Zammad-у (нпр. као клијенти "
 "тикета, у условима окидача и планера)."
 
-#: ../manage/users/index.rst:118
+#: ../manage/users/index.rst:119
 msgid "What's the difference between deactivating and deleting a user?"
 msgstr "Која је разлика између искључивања и брисања корисника?"
 
-#: ../manage/users/index.rst:120
+#: ../manage/users/index.rst:121
 msgid ""
 "There is no way to restore a deleted user; inactive users can be reactivated "
 "at any time."
@@ -15894,7 +15960,7 @@ msgstr ""
 "Не постоји начин да вратите избрисаног корисника; искључени корисници се "
 "могу поново укључити у било ком тренутку."
 
-#: ../manage/users/index.rst:123
+#: ../manage/users/index.rst:124
 msgid ""
 "When a user is deleted, all their associated tickets are lost, as well; "
 "deactivating a user keeps all associated tickets intact."
@@ -15902,7 +15968,7 @@ msgstr ""
 "Када се корисник избрише, губе се и сви повезани тикети; искључивање "
 "корисника задржава све повезане тикете нетакнуте."
 
-#: ../manage/users/index.rst:126
+#: ../manage/users/index.rst:127
 msgid ""
 "Inactive users still appear in search results and can be used as a ticket "
 "customer:"
@@ -15914,7 +15980,7 @@ msgstr ""
 msgid "An inactive user displayed in a customer search list"
 msgstr "Искључен корисник приказан на листи резулата претраге клијената"
 
-#: ../manage/users/index.rst:133
+#: ../manage/users/index.rst:134
 msgid ""
 "A slashed-out 👤 icon indicates an inactive user. In other cases, inactive "
 "users are grayed out."
@@ -15922,7 +15988,7 @@ msgstr ""
 "Пресечена иконица 👤 означава искљученог корисника. У другим случајевима, "
 "искључени корисници су засивљени."
 
-#: ../manage/users/index.rst:139
+#: ../manage/users/index.rst:140
 #, fuzzy
 #| msgid ""
 #| "The :doc:`/manage/roles/index` define what users can do in the system. If "
@@ -15937,7 +16003,7 @@ msgstr ""
 "Ако желите да некоме дате дозволе за уређивање базе знача или за приступ "
 "панелу администратора, улоге вам могу помоћи у томе."
 
-#: ../manage/users/index.rst:144
+#: ../manage/users/index.rst:145
 #, fuzzy
 #| msgid ""
 #| "The :doc:`/manage/groups/access-levels` define which tickets an agent can "
@@ -15960,7 +16026,7 @@ msgstr ""
 "улога садржи дозволу ``ticket.agent``. и када постоји више од једне укључене "
 "групе у систему."
 
-#: ../manage/users/index.rst:150
+#: ../manage/users/index.rst:151
 #, fuzzy
 #| msgid ""
 #| "The :doc:`/manage/groups/access-levels` define which tickets an agent can "
@@ -15987,7 +16053,7 @@ msgstr ""
 msgid "Permissions in the edit user dialog"
 msgstr "Дозволе у дијалогу за уређивање корисника"
 
-#: ../manage/users/index.rst:160
+#: ../manage/users/index.rst:161
 msgid ""
 "**Top:** User's roles decide what kind of actions they can perform and "
 "which :doc:`groups </manage/groups/index>` they belong to. **Bottom:** Group "
@@ -22794,9 +22860,8 @@ msgid ""
 "Manage branding related settings in Zammad under *Settings > Branding*. Make "
 "sure to have the permission ``admin.branding``."
 msgstr ""
-"Upravljajte podešavanjima vezanim za brendiranje u Zammadu pod "
-"*Podešavanja > Brendiranje*. Proverite da li imate dozvolu "
-"``admin.branding``."
+"Upravljajte podešavanjima vezanim za brendiranje u Zammadu pod *Podešavanja "
+"> Brendiranje*. Proverite da li imate dozvolu ``admin.branding``."
 
 #: ../settings/branding.rst:13
 msgid "Product Name"
@@ -24195,19 +24260,17 @@ msgstr ""
 "Снимак екрана који приказује дугме за пријаву на Microsoft на екрану пријаве "
 "у Zammad."
 
-#: ../settings/security/third-party/microsoft.rst:30
-#: ../settings/security/third-party/microsoft.rst:53
-msgid "Supported account types:"
-msgstr "Подржани типови налога:"
-
-#: ../settings/security/third-party/microsoft.rst:22
+#: ../settings/security/third-party/microsoft.rst:21
+#, fuzzy
+#| msgid ""
+#| "Please note that Zammad only supports these account types (App dependent):"
 msgid ""
-"Please note that Zammad only supports these account types (App dependent):"
+"Please note that Zammad only supports these account types (app dependent):"
 msgstr ""
 "Имајте на уму да Zammad подржава само следеће типове налога (зависно од "
 "апликације):"
 
-#: ../settings/security/third-party/microsoft.rst:24
+#: ../settings/security/third-party/microsoft.rst:23
 msgid ""
 "Accounts in this organizational directory only (Default Directory only - "
 "Single tenant)"
@@ -24215,7 +24278,7 @@ msgstr ""
 "Налози само у овом организационом директоријуму (само подразумевани "
 "директоријум – један корисник)"
 
-#: ../settings/security/third-party/microsoft.rst:26
+#: ../settings/security/third-party/microsoft.rst:25
 msgid ""
 "Accounts in any organizational directory (Any Azure AD directory - "
 "Multitenant)"
@@ -24223,7 +24286,7 @@ msgstr ""
 "Налози у било ком организационом директоријуму (било који Azure AD "
 "директоријум - више корисника)"
 
-#: ../settings/security/third-party/microsoft.rst:28
+#: ../settings/security/third-party/microsoft.rst:27
 msgid ""
 "Accounts in any organizational directory (Any Azure AD directory - "
 "Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
@@ -24231,26 +24294,11 @@ msgstr ""
 "Налози у било ком организационом директоријуму (било који Azure AD "
 "директоријум - више корисника) и лични Microsoft налози (нпр. Skype, Xbox)"
 
-#: ../settings/security/third-party/microsoft.rst:35
-msgid "Avatars of signing in users:"
-msgstr "Аватари пријављених корисника:"
-
-#: ../settings/security/third-party/microsoft.rst:33
-msgid ""
-"Zammad currently ignores user avatars. If the user is registered with e.g. "
-"Gravatar, Zammad will fetch the avatar from there if enabled. "
-"See :doc:`Zammad Image Service </settings/system/index>` for more."
-msgstr ""
-"Zammad тренутно игнорише аватаре корисника. Уколико је корисник регистрован "
-"код нпр. Gravatar сервиса, Zammad ће преузети аватар одатле ако је укључено. "
-"Погледајте :doc:`Zammad услуга за слике </settings/system/index>` за више "
-"детаља."
-
-#: ../settings/security/third-party/microsoft.rst:38
+#: ../settings/security/third-party/microsoft.rst:31
 msgid "Step 1 - Register a Microsoft App for Zammad"
 msgstr "Корак 1 - Региструјте Microsoft апликацију за Zammad"
 
-#: ../settings/security/third-party/microsoft.rst:40
+#: ../settings/security/third-party/microsoft.rst:33
 msgid ""
 "Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_ and "
 "navigate to App registrations to create a new app. Provide the requested "
@@ -24260,11 +24308,11 @@ msgstr ""
 "идите на App registrations да бисте додали нову апликацију. Наведите тражене "
 "информације на следећи начин и региструјте своју апликацију."
 
-#: ../settings/security/third-party/microsoft.rst:46
+#: ../settings/security/third-party/microsoft.rst:39
 msgid "Name:"
 msgstr "Назив:"
 
-#: ../settings/security/third-party/microsoft.rst:45
+#: ../settings/security/third-party/microsoft.rst:38
 msgid ""
 "Any meaningful name fitting, this name will be displayed to users trying to "
 "authenticate with this app."
@@ -24272,12 +24320,16 @@ msgstr ""
 "Било који назив који има смисла је дозвољен, име ће бити приказано "
 "корисницима који покушавају да се аутентификују помоћу ове апликације."
 
-#: ../settings/security/third-party/microsoft.rst:49
+#: ../settings/security/third-party/microsoft.rst:46
+msgid "Supported account types:"
+msgstr "Подржани типови налога:"
+
+#: ../settings/security/third-party/microsoft.rst:42
 msgid "Choose one of the above mentioned account types (see Limitations)."
 msgstr ""
 "Изаберите један од горе наведених типова налога (погледајте ограничења)."
 
-#: ../settings/security/third-party/microsoft.rst:51
+#: ../settings/security/third-party/microsoft.rst:44
 msgid ""
 "The correct account type depends on your use case. If you want to use the "
 "authentication internal only, choose the first option. If you're unsure, use "
@@ -24287,11 +24339,11 @@ msgstr ""
 "само интерну аутентификацију, изаберите прву опцију. Ако нисте сигурни, "
 "користите линк „Help me choose…“."
 
-#: ../settings/security/third-party/microsoft.rst:58
+#: ../settings/security/third-party/microsoft.rst:51
 msgid "Redirect URI (optional):"
 msgstr "URI адреса преусмерења (опционо):"
 
-#: ../settings/security/third-party/microsoft.rst:56
+#: ../settings/security/third-party/microsoft.rst:49
 msgid ""
 "Select web and provide your callback URL. The callback URL looks like this: "
 "``https://zammad.domain.tld/auth/microsoft_office365/callback``"
@@ -24304,19 +24356,19 @@ msgstr ""
 msgid "Screencast showing how to register a Microsoft app"
 msgstr "Снимак екрана који показује како да региструјете Microsoft апликацију"
 
-#: ../settings/security/third-party/microsoft.rst:68
+#: ../settings/security/third-party/microsoft.rst:61
 msgid "Within  **API permissions** add the following permissions:"
 msgstr "У оквиру **API permissions** додајте следеће дозволе:"
 
-#: ../settings/security/third-party/microsoft.rst:67
+#: ../settings/security/third-party/microsoft.rst:60
 msgid "``User.Read``"
 msgstr "``User.Read``"
 
-#: ../settings/security/third-party/microsoft.rst:68
+#: ../settings/security/third-party/microsoft.rst:61
 msgid "``Contacts.Read``"
 msgstr "``Contacts.Read``"
 
-#: ../settings/security/third-party/microsoft.rst:70
+#: ../settings/security/third-party/microsoft.rst:63
 msgid ""
 "You can find these permissions within *Microsoft Graph > Delegated "
 "permissions*."
@@ -24328,7 +24380,7 @@ msgstr ""
 msgid "Screencast showing how to add required API permissions"
 msgstr "Снимак екрана који показује како да додате потребне API дозволе"
 
-#: ../settings/security/third-party/microsoft.rst:77
+#: ../settings/security/third-party/microsoft.rst:70
 msgid ""
 "Within **Certificates & secrets** create a new client secret. Note down the "
 "returned secret **value** for later. **Do not** use the secret ID!"
@@ -24340,7 +24392,7 @@ msgstr ""
 msgid "Screencast showing how to create a new app secret"
 msgstr "Снимак екрана који показује како да направите нову шифру апликације"
 
-#: ../settings/security/third-party/microsoft.rst:85
+#: ../settings/security/third-party/microsoft.rst:78
 msgid ""
 "From **Overview** copy your apps *Application (client) ID*. If you're using "
 "a single tenant app, please also copy *Directory (tenant) ID*. You now have "
@@ -24358,11 +24410,11 @@ msgstr ""
 "Снимак екрана који показује како да преузмете ID клијента и корисника "
 "апликације"
 
-#: ../settings/security/third-party/microsoft.rst:95
+#: ../settings/security/third-party/microsoft.rst:88
 msgid "Step 2 - Add App Credentials to Zammad"
 msgstr "Корак 2 - Додајте акредитиве апликације у Zammad"
 
-#: ../settings/security/third-party/microsoft.rst:97
+#: ../settings/security/third-party/microsoft.rst:90
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* within Zammad's "
 "admin settings. Scroll down to the section *Authentication via Microsoft* "
@@ -24372,27 +24424,27 @@ msgstr ""
 "ових администраторских подешавања. Померите се надоле до одељка "
 "*Аутентификација путем Microsoft* и попуните потребне информације."
 
-#: ../settings/security/third-party/microsoft.rst:102
+#: ../settings/security/third-party/microsoft.rst:95
 msgid "App ID:"
 msgstr "ID апликације:"
 
-#: ../settings/security/third-party/microsoft.rst:102
+#: ../settings/security/third-party/microsoft.rst:95
 msgid "This is your *Application (client) ID*."
 msgstr "Ово је ваш *Application (client) ID*."
 
-#: ../settings/security/third-party/microsoft.rst:105
+#: ../settings/security/third-party/microsoft.rst:98
 msgid "App secret:"
 msgstr "Шифра апликације:"
 
-#: ../settings/security/third-party/microsoft.rst:105
+#: ../settings/security/third-party/microsoft.rst:98
 msgid "This is your *client secret* (value)."
 msgstr "Ово је ваш *client secret* (вредност)."
 
-#: ../settings/security/third-party/microsoft.rst:110
+#: ../settings/security/third-party/microsoft.rst:103
 msgid "App Tenant ID:"
 msgstr "ID корисника апликације:"
 
-#: ../settings/security/third-party/microsoft.rst:108
+#: ../settings/security/third-party/microsoft.rst:101
 msgid ""
 "**optional** only required for apps that use account type *Accounts in this "
 "organizational directory only (Default Directory only - Single tenant).*"
@@ -24401,7 +24453,7 @@ msgstr ""
 "in this organizational directory only (Default Directory only - Single "
 "tenant).*"
 
-#: ../settings/security/third-party/microsoft.rst:112
+#: ../settings/security/third-party/microsoft.rst:105
 msgid ""
 "Apply your settings by pressing submit and activate *Authentication via "
 "Microsoft*."
@@ -26241,31 +26293,41 @@ msgstr ""
 msgid "Services"
 msgstr "Услуге"
 
-#: ../settings/system/services.rst:9
+#: ../settings/system/services.rst:16
 msgid "Image Service"
 msgstr "Услуга за слике"
 
 #: ../settings/system/services.rst:5
+msgid ""
+"Defines the backend for user and organization image lookups. The service is "
+"used to fetch user avatars based on the user's email address (e.g. matching "
+"a Gravatar entry). It is also used once during Zammad's setup wizard to "
+"fetch your company logo based on the domain of the email address you "
+"provided in the setup wizard. See :doc:`/manage/users/avatars` for an "
+"overview of all avatar sources and how the image service interacts with them."
+msgstr ""
+
+#: ../settings/system/services.rst:13
 #, fuzzy
 #| msgid ""
 #| "Make sure your on premise installation has ``HTTPS`` access to "
 #| "``images.zammad.com``."
 msgid ""
-"Defines the backend for user and organization image lookups. Make sure your "
-"on premise installation has ``HTTPS`` access to ``images.zammad.com``."
+"Make sure your on premise installation has ``HTTPS`` access to "
+"``images.zammad.com``."
 msgstr ""
 "Проверите да ваша локална инстанца има ``HTTPS`` приступ "
 "``images.zammad.com``."
 
-#: ../settings/system/services.rst:9
+#: ../settings/system/services.rst:16
 msgid "Default: ``Zammad Image Service`` (active)"
 msgstr "Подразумевано: ``Zammad сервис за слике`` (укључено)"
 
-#: ../settings/system/services.rst:16
+#: ../settings/system/services.rst:23
 msgid "Geo Calendar Service"
 msgstr "Услуга географског календара"
 
-#: ../settings/system/services.rst:12
+#: ../settings/system/services.rst:19
 #, fuzzy
 #| msgid ""
 #| "Make sure your on premise installation has ``HTTPS`` access to "
@@ -26277,15 +26339,15 @@ msgid ""
 msgstr ""
 "Проверите да ваша локална инстанца има ``HTTPS`` приступ ``geo.zammad.com``."
 
-#: ../settings/system/services.rst:16
+#: ../settings/system/services.rst:23
 msgid "Default: ``Zammad GeoCalendar Service`` (active)"
 msgstr "Подразумевано: ``Zammad GeoCalendar сервис`` (укључено)"
 
-#: ../settings/system/services.rst:23
+#: ../settings/system/services.rst:30
 msgid "Geo IP Service"
 msgstr "Услуга географског IP"
 
-#: ../settings/system/services.rst:19
+#: ../settings/system/services.rst:26
 #, fuzzy
 #| msgid ""
 #| "Defines the backend for geo IP lookups. Shows also location of an IP "
@@ -26298,15 +26360,15 @@ msgstr ""
 "Дефинише позадински модул за географске IP упите. Приказује и локацију IP "
 "адресе ако је IP адреса приказана."
 
-#: ../settings/system/services.rst:23
+#: ../settings/system/services.rst:30
 msgid "Default: ``Zammad GeoIP Service`` (active)"
 msgstr "Подразумевано: ``Zammad GeoIP сервис`` (укључено)"
 
-#: ../settings/system/services.rst:29
+#: ../settings/system/services.rst:36
 msgid "Geo Location Service"
 msgstr "Услуга географске локације"
 
-#: ../settings/system/services.rst:26
+#: ../settings/system/services.rst:33
 msgid ""
 "Defines the backend for geo location lookups to store geo locations for "
 "addresses."
@@ -26314,14 +26376,14 @@ msgstr ""
 "Одређује позадински модул за географско тражење локација ради чувања "
 "географских локација адреса."
 
-#: ../settings/system/services.rst:29
+#: ../settings/system/services.rst:36
 msgid ""
 "Default: ``OpenStreetMap (ODbL 1.0, http://osm.org/copyright)`` (active)"
 msgstr ""
 "Подразумевано: ``OpenStreetMap (ODbL 1.0, http://osm.org/copyright)`` "
 "(укључено)"
 
-#: ../settings/system/services.rst:33
+#: ../settings/system/services.rst:40
 msgid ""
 "You can find a detailed privacy information on what we store for how long on "
 "our :docs:`Privacy Appendix </appendix/privacy.html>` inside of our System "
@@ -36151,6 +36213,19 @@ msgstr "Верзија"
 #| msgid "Choose the number of agents you require for your instance."
 msgid "Shows the current Zammad version of your instance."
 msgstr "Одаберите број оператера који су вам неопходни у вашој инстанци."
+
+#~ msgid "Avatars of signing in users:"
+#~ msgstr "Аватари пријављених корисника:"
+
+#~ msgid ""
+#~ "Zammad currently ignores user avatars. If the user is registered with "
+#~ "e.g. Gravatar, Zammad will fetch the avatar from there if enabled. "
+#~ "See :doc:`Zammad Image Service </settings/system/index>` for more."
+#~ msgstr ""
+#~ "Zammad тренутно игнорише аватаре корисника. Уколико је корисник "
+#~ "регистрован код нпр. Gravatar сервиса, Zammad ће преузети аватар одатле "
+#~ "ако је укључено. Погледајте :doc:`Zammad услуга за слике </settings/"
+#~ "system/index>` за више детаља."
 
 #, fuzzy
 #~| msgid ""
