@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 15:09+0200\n"
+"POT-Creation-Date: 2026-07-20 10:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -361,7 +361,6 @@ msgstr ""
 
 #: ../ai/provider.rst:54
 #: ../manage/knowledge-base.rst:139
-#: ../system/integrations/elasticsearch.rst:52
 msgid "URL"
 msgstr ""
 
@@ -4252,7 +4251,6 @@ msgstr ""
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 #: ../system/integrations/cti/includes/introduction.include.rst:17
-#: ../system/integrations/elasticsearch.rst:20
 #: ../system/integrations/ldap/index.rst:20
 msgid "Limitations"
 msgstr ""
@@ -11193,7 +11191,6 @@ msgid "Defaults to ``yes`` - if you're using unsecure self signed certificates, 
 msgstr ""
 
 #: ../manage/webhook/add.rst:66
-#: ../system/integrations/elasticsearch.rst:59
 msgid "Authentication"
 msgstr ""
 
@@ -21035,107 +21032,111 @@ msgid "Elasticsearch (SaaS)"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:4
-msgid "The Elasticsearch integration allows you to create a read-only user to use with your favorite reporting tool (e.g. :docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`)."
+msgid "The Elasticsearch (SaaS) integration lets you query your instance's search index directly with a reporting tool such as :docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`."
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:8
-msgid "**Only available for SaaS customers.**"
+msgid "**Plan requirements**"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:10
-msgid "In order to use Elasticsearch, you'll need the **Plus** subscription. Self hosted users have all the control over their self hosted Elasticsearch instances."
+msgid "A Plus or Ultimate plan is required. Self hosted customers already have full control over their own Elasticsearch instances and do not need this integration."
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:14
+msgid "**The index contains all ticket and customer data**"
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:16
+msgid "Treat the credentials like any other administrator password. The Elasticsearch index holds every ticket, user and organization record in this instance, including customer information that may be sensitive. Anyone with the credentials can read them all."
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:None
 msgid "Elasticsearch integration page on SaaS environments"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:22
-msgid "Please note the following limitations of Elasticsearch access on hosted environments:"
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:25
-msgid "access to the Elasticsearch index is read-only access"
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:26
-msgid "currently you're limited to user only"
-msgstr ""
-
 #: ../system/integrations/elasticsearch.rst:27
-msgid "Reporting tools that require to write into the indexes (like Kibana) are not supported"
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:29
-msgid "IP access restriction is currently not yet supported"
+msgid "The integration page has no other settings - it only lets you toggle the access on or off. The connection details, indexes and credentials listed on the page are read-only information for your reference; the only interactive control is ``Reset password``."
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:32
-msgid "Activating Elasticsearch Access"
+msgid "The integration has the following limits worth knowing up front:"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:34
-msgid "By default external access to your Elasticsearch index is not active. You can enable the integration at any time if needed."
+msgid "Access is read-only."
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:35
+msgid "Reporting tools that need to write to the indices (such as Kibana) are not supported."
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:37
-msgid "Please ensure to note down the password provided - you won't have access to it afterwards."
+msgid "The integration cannot be restricted to a specific IP allowlist. Suspicious access is blocked based on the IP addresses of connecting clients; the blocklist is managed on the hosting side."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:None
-msgid "Screencast showing activation of Elasticsearch integration"
+#: ../system/integrations/elasticsearch.rst:43
+msgid "Enabling Access"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:46
-msgid "Connection Settings"
+#: ../system/integrations/elasticsearch.rst:45
+msgid "External access is disabled by default. To enable it:"
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:47
+msgid "Open **System > Integrations > Elasticsearch**."
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:48
-msgid "This section holds the most important general information for accessing your Elasticsearch indexes - such as:"
+msgid "Toggle the integration on."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:52
-msgid "A unique subdomain that does not tell your real instance URL."
+#: ../system/integrations/elasticsearch.rst:49
+msgid "Wait for a one-time dialog with the Elasticsearch username and password once provisioning completes."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:56
-msgid "Software"
+#: ../system/integrations/elasticsearch.rst:51
+msgid "Note the password down - it will not be shown again."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:55
-msgid "The major version of the search index being used. This is required by some Reporting tools like Grafana."
+#: ../system/integrations/elasticsearch.rst:53
+msgid "The **Credentials** section on the page then holds the username permanently and a masked password. If you ever need a new password, click ``Reset password`` in that row; a new password appears in a one-time dialog. Update any third party tools that connect with the old password before you forget it."
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:59
-msgid "The authentication type being supported. ``Basic Authentication``"
+#: ../system/integrations/elasticsearch.rst:60
+msgid "Browsing Indexes"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:62
-msgid "Available Indexes"
-msgstr ""
-
-#: ../system/integrations/elasticsearch.rst:64
-msgid "Within this section we're displaying the -in our opinion- most important indexes for a Zammad instance."
+msgid "The integration creates one Elasticsearch user per instance. The page's **Available Indexes** table lists five indexes that are most useful for reporting, each shown with its full name including the per-instance index prefix:"
 msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:67
-msgid "If you require all indexes or our listing is not good enough for you, point your browser to the URL we're providing and append ``/_aliases?pretty=true``. The result should look like this: ``https://<URL>.zammad.com/_aliases?pretty=true``."
+msgid "``<index-prefix>_production_ticket``"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:72
-msgid "Your browser will automatically ask for your credentials - you'll then see something like this:"
+#: ../system/integrations/elasticsearch.rst:68
+msgid "``<index-prefix>_production_chat_session``"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:120
-msgid "Credentials"
+#: ../system/integrations/elasticsearch.rst:69
+msgid "``<index-prefix>_production_cti_log``"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:122
-msgid "Within this section Zammad displays your available users. The password is provided once (upon activation) and cannot be retrieved after that."
+#: ../system/integrations/elasticsearch.rst:70
+msgid "``<index-prefix>_production_user``"
 msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:126
-msgid "If you need to change or reset your Elasticsearch user password, use the \"Reset password\" button in the credentials table. Doing so creates a brand new password for the account in question. This change is immediate, keep in mind that this may affect third party tools connected to your instance."
+#: ../system/integrations/elasticsearch.rst:71
+msgid "``<index-prefix>_production_organization``"
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:73
+msgid "To enumerate every alias the user can see, append ``/_aliases?pretty=true`` to the Elasticsearch URL shown on the integration page. The full URL looks like ``https://<your-es-url>/_aliases?pretty=true`` - your browser will prompt for the credentials above. The response lists every alias the user can see; the example shape is:"
+msgstr ""
+
+#: ../system/integrations/elasticsearch.rst:91
+msgid "Index names, field names and the alias list reflect Zammad's internal search-index schema. They may change between Zammad releases."
 msgstr ""
 
 #: ../system/integrations/exchange.rst:2

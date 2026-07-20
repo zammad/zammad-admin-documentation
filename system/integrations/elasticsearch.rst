@@ -1,129 +1,93 @@
 Elasticsearch (SaaS)
 ====================
 
-The Elasticsearch integration allows you to create a read-only user to use
-with your favorite reporting tool
-(e.g. :docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`).
+The Elasticsearch (SaaS) integration lets you query your instance's
+search index directly with a reporting tool such as
+:docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`.
 
-.. warning:: **Only available for SaaS customers.**
+.. note:: **Plan requirements**
 
-   In order to use Elasticsearch, you'll need the **Plus** subscription.
-   Self hosted users have all the control over their self hosted Elasticsearch
-   instances.
+   A Plus or Ultimate plan is required. Self hosted customers
+   already have full control over their own Elasticsearch
+   instances and do not need this integration.
+
+.. warning:: **The index contains all ticket and customer data**
+
+   Treat the credentials like any other administrator password.
+   The Elasticsearch index holds every ticket, user and
+   organization record in this instance, including customer
+   information that may be sensitive. Anyone with the credentials
+   can read them all.
 
 .. figure:: /images/system/integrations/elasticsearch/elasticsearch-configuration.png
    :width: 70%
    :align: center
    :alt: Elasticsearch integration page on SaaS environments
 
-Limitations
------------
+The integration page has no other settings - it only lets you
+toggle the access on or off. The connection details, indexes and
+credentials listed on the page are read-only information for your
+reference; the only interactive control is ``Reset password``.
 
-Please note the following limitations of Elasticsearch access on
-hosted environments:
+The integration has the following limits worth knowing up front:
 
-- access to the Elasticsearch index is read-only access
-- currently you're limited to user only
-- Reporting tools that require to write into the indexes
-  (like Kibana) are not supported
-- IP access restriction is currently not yet supported
+- Access is read-only.
+- Reporting tools that need to write to the indices (such as
+  Kibana) are not supported.
+- The integration cannot be restricted to a specific IP allowlist.
+  Suspicious access is blocked based on the IP addresses of
+  connecting clients; the blocklist is managed on the hosting
+  side.
 
-Activating Elasticsearch Access
--------------------------------
+Enabling Access
+---------------
 
-By default external access to your Elasticsearch index is not active.
-You can enable the integration at any time if needed.
+External access is disabled by default. To enable it:
 
-Please ensure to note down the password provided - you won't have access
-to it afterwards.
+1. Open **System > Integrations > Elasticsearch**.
+2. Toggle the integration on.
+3. Wait for a one-time dialog with the Elasticsearch username and
+   password once provisioning completes.
+4. Note the password down - it will not be shown again.
 
-.. figure:: /images/system/integrations/elasticsearch/activate-es-integration.gif
-   :width: 85%
-   :align: center
-   :alt: Screencast showing activation of Elasticsearch integration
+The **Credentials** section on the page then holds the username
+permanently and a masked password. If you ever need a new
+password, click ``Reset password`` in that row; a new password
+appears in a one-time dialog. Update any third party tools that
+connect with the old password before you forget it.
 
-Connection Settings
--------------------
+Browsing Indexes
+----------------
 
-This section holds the most important general information for accessing your
-Elasticsearch indexes - such as:
+The integration creates one Elasticsearch user per instance. The
+page's **Available Indexes** table lists five indexes that are
+most useful for reporting, each shown with its full name including
+the per-instance index prefix:
 
-URL
-   A unique subdomain that does not tell your real instance URL.
+- ``<index-prefix>_production_ticket``
+- ``<index-prefix>_production_chat_session``
+- ``<index-prefix>_production_cti_log``
+- ``<index-prefix>_production_user``
+- ``<index-prefix>_production_organization``
 
-Software
-   The major version of the search index being used.
-   This is required by some Reporting tools like Grafana.
-
-Authentication
-   The authentication type being supported. ``Basic Authentication``
-
-Available Indexes
------------------
-
-Within this section we're displaying the -in our opinion- most important
-indexes for a Zammad instance.
-
-If you require all indexes or our listing is not good enough for you,
-point your browser to the URL we're providing and append
-``/_aliases?pretty=true``. The result should look like this:
-``https://<URL>.zammad.com/_aliases?pretty=true``.
-
-Your browser will automatically ask for your credentials - you'll then
-see something like this:
+To enumerate every alias the user can see, append
+``/_aliases?pretty=true`` to the Elasticsearch URL shown on the
+integration page. The full URL looks like
+``https://<your-es-url>/_aliases?pretty=true`` - your browser will
+prompt for the credentials above. The response lists every alias
+the user can see; the example shape is:
 
 .. code-block:: json
 
    {
-      "XXXXXXXX" : {
-         "aliases" : { }
+      "XXXX_ticket": {
+         "aliases": { }
       },
-      "XXXXXXXX_cti_log" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_knowledge_base_answer_translation" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_ticket" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_knowledge_base_category_translation" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_knowledge_base_translation" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_ticket_state" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_user" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_stats_store" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_chat_session" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_group" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_ticket_priority" : {
-         "aliases" : { }
-      },
-      "XXXXXXXX_organization" : {
-         "aliases" : { }
+      "XXXX_user": {
+         "aliases": { }
       }
    }
 
-Credentials
------------
-
-Within this section Zammad displays your available users.
-The password is provided once (upon activation) and cannot be retrieved
-after that.
-
-If you need to change or reset your Elasticsearch user password, use the
-"Reset password" button in the credentials table. Doing so creates a brand new
-password for the account in question. This change is immediate, keep in mind
-that this may affect third party tools connected to your instance.
+.. note:: Index names, field names and the alias list reflect
+   Zammad's internal search-index schema. They may change between
+   Zammad releases.
