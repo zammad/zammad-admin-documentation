@@ -42,7 +42,8 @@ password shows up. Note the password down, it is displayed only once.
 The page also shows **Connection Settings**, **Available Indexes** and
 **Credentials** sections. This is read-only information for your reference.
 The only other interactive control is ``Reset password``. Doing so prompts you
-for confirmation, then invalidates the current credentials.
+for confirmation, then invalidates the current password and shows the new one
+in a one-time dialog.
 
 Browsing Indexes
 ----------------
