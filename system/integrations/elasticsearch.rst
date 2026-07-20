@@ -27,7 +27,7 @@ The integration has the following limitations:
 - Access to the search index is read-only. That means reporting tools that need
   to write to the indexes (such as Kibana) are not supported.
 - You can create credentials for one user only.
-- The integration cannot be restricted to a specific IP allowlist.
+- It is not possible to allow or restrict index access for specific IP addresses.
   Suspicious access is blocked on the hosting side without any configuration
   required from you.
 
