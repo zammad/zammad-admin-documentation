@@ -4,65 +4,53 @@ Elasticsearch (SaaS)
 The Elasticsearch (SaaS) integration lets you query your instance's
 search index directly with a reporting tool such as
 :docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`.
+You can find it under *System > Integrations > Elasticsearch*.
 
-.. note:: **Plan requirements**
+.. note::
 
-   A Plus or Ultimate plan is required. Self hosted customers
-   already have full control over their own Elasticsearch
+   Only available for **SaaS** customers with a **Plus** or **Ultimate** plan.
+   Self hosted customers already have full control over their own Elasticsearch
    instances and do not need this integration.
 
-.. warning:: **The index contains all ticket and customer data**
-
-   Treat the credentials like any other administrator password.
-   The Elasticsearch index holds every ticket, user and
-   organization record in this instance, including customer
-   information that may be sensitive. Anyone with the credentials
-   can read them all.
+.. warning:: **The index contains all ticket and customer data. Keep the
+   credentials secret!** The index includes ticket, user and
+   organization records from your instance, including sensitive customer
+   information. Anyone with the credentials can read them.
 
 .. figure:: /images/system/integrations/elasticsearch/elasticsearch-configuration.png
    :width: 70%
    :align: center
    :alt: Elasticsearch integration page on SaaS environments
 
-The integration page has no other settings - it only lets you
-toggle the access on or off. The connection details, indexes and
-credentials listed on the page are read-only information for your
-reference; the only interactive control is ``Reset password``.
+The integration has the following limitations:
 
-The integration has the following limits worth knowing up front:
-
-- Access is read-only.
-- Reporting tools that need to write to the indices (such as
-  Kibana) are not supported.
+- Access to the search index is read-only. That means reporting tools that need
+  to write to the indexes (such as Kibana) are not supported.
+- You can create credentials for one user only.
 - The integration cannot be restricted to a specific IP allowlist.
-  Suspicious access is blocked based on the IP addresses of
-  connecting clients; the blocklist is managed on the hosting
-  side.
+  Suspicious access is blocked on the hosting side without any configuration
+  required from you.
 
 Enabling Access
 ---------------
 
-External access is disabled by default. To enable it:
+The external access to the search index of your instance is disabled by default.
+To enable it, simply activate the toggle on top of the page.
+After some seconds, a one-time dialog with the Elasticsearch username and
+password shows up. Note the password down, it is displayed only once.
 
-1. Open **System > Integrations > Elasticsearch**.
-2. Toggle the integration on.
-3. Wait for a one-time dialog with the Elasticsearch username and
-   password once provisioning completes.
-4. Note the password down - it will not be shown again.
-
-The **Credentials** section on the page then holds the username
-permanently and a masked password. If you ever need a new
-password, click ``Reset password`` in that row; a new password
-appears in a one-time dialog. Update any third party tools that
-connect with the old password before you forget it.
+After enabling it, additional information gets shown on this page like
+**Connection Settings**, **Available Indexes** and **Credentials**. These are
+read-only information for your reference. The only additional control is
+``Reset password``. Doing so invalidates the current credentials after
+prompting you for confirmation.
 
 Browsing Indexes
 ----------------
 
-The integration creates one Elasticsearch user per instance. The
-page's **Available Indexes** table lists five indexes that are
-most useful for reporting, each shown with its full name including
-the per-instance index prefix:
+The page's **Available Indexes** table lists five indexes that are most useful
+for reporting, each shown with its full name including the per-instance index
+prefix:
 
 - ``<index-prefix>_production_ticket``
 - ``<index-prefix>_production_chat_session``
@@ -70,12 +58,11 @@ the per-instance index prefix:
 - ``<index-prefix>_production_user``
 - ``<index-prefix>_production_organization``
 
-To enumerate every alias the user can see, append
-``/_aliases?pretty=true`` to the Elasticsearch URL shown on the
-integration page. The full URL looks like
-``https://<your-es-url>/_aliases?pretty=true`` - your browser will
-prompt for the credentials above. The response lists every alias
-the user can see; the example shape is:
+To browse all available indexes, you can open the Elasticsearch URL in your web
+browser with appended ``/_aliases?pretty=true`` (resulting in
+``https://<your-es-url>/_aliases?pretty=true``). Provide the created credentials
+from above and you will see a response listing all available aliases. The
+structure looks like this:
 
 .. code-block:: json
 
