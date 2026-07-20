@@ -34,16 +34,15 @@ The integration has the following limitations:
 Enabling Access
 ---------------
 
-The external access to the search index of your instance is disabled by default.
+External access to your instance's search index is disabled by default.
 To enable it, simply activate the toggle on top of the page.
 After some seconds, a one-time dialog with the Elasticsearch username and
 password shows up. Note the password down, it is displayed only once.
 
-After enabling it, additional information gets shown on this page like
-**Connection Settings**, **Available Indexes** and **Credentials**. These are
-read-only information for your reference. The only additional control is
-``Reset password``. Doing so invalidates the current credentials after
-prompting you for confirmation.
+The page also shows **Connection Settings**, **Available Indexes** and
+**Credentials** sections. This is read-only information for your reference.
+The only other interactive control is ``Reset password``. Doing so prompts you
+for confirmation, then invalidates the current credentials.
 
 Browsing Indexes
 ----------------
@@ -60,8 +59,8 @@ prefix:
 
 To browse all available indexes, you can open the Elasticsearch URL in your web
 browser with appended ``/_aliases?pretty=true`` (resulting in
-``https://<your-es-url>/_aliases?pretty=true``). Provide the created credentials
-from above and you will see a response listing all available aliases. The
+``https://<your-es-url>/_aliases?pretty=true``). Enter the credentials shown
+above and you will see a response listing all available aliases. The
 structure looks like this:
 
 .. code-block:: json
