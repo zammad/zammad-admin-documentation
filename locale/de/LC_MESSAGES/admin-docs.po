@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 15:09+0200\n"
-"PO-Revision-Date: 2026-06-30 15:02+0000\n"
+"POT-Creation-Date: 2026-07-20 12:50+0200\n"
+"PO-Revision-Date: 2026-07-18 07:10+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -628,7 +628,6 @@ msgstr ""
 "(LLM) bei der Verarbeitung einer Anfrage arbeitet."
 
 #: ../ai/provider.rst:54 ../manage/knowledge-base.rst:151
-#: ../system/integrations/elasticsearch.rst:52
 msgid "URL"
 msgstr "URL"
 
@@ -5185,7 +5184,6 @@ msgstr ""
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
-#: ../system/integrations/elasticsearch.rst:20
 #: ../system/integrations/ldap/index.rst:20
 msgid "Limitations"
 msgstr "Einschränkungen"
@@ -15534,10 +15532,8 @@ msgstr ""
 "notifications>`."
 
 #: ../manage/users/avatars.rst:2
-#, fuzzy
-#| msgid "Avatar"
 msgid "Avatars"
-msgstr "Avatar"
+msgstr "Avatare"
 
 #: ../manage/users/avatars.rst:4
 msgid ""
@@ -15546,10 +15542,15 @@ msgid ""
 "avatars are kept on the user, even if the configured image service gets "
 "disabled afterwards."
 msgstr ""
+"Benutzeravatare in Zammad können aus verschiedenen Quellen stammen. Jedes "
+"Mal, wenn ein neuer Avatar von einer dieser Quellen abgerufen wird, wird der "
+"Benutzeravatar aktualisiert. Bereits gespeicherte Avatare bleiben beim "
+"Benutzer erhalten, selbst wenn der konfigurierte Bilddienst später "
+"deaktiviert wird."
 
 #: ../manage/users/avatars.rst:10
 msgid "Sources"
-msgstr ""
+msgstr "Quellen"
 
 #: ../manage/users/avatars.rst:12
 msgid ""
@@ -15557,6 +15558,9 @@ msgid ""
 "source last fetched an avatar for a user becomes the active one. The "
 "following sources are available:"
 msgstr ""
+"Benutzer-Avatare können aus einer der folgenden Quellen abgerufen werden. "
+"Die Quelle, aus der zuletzt ein Avatar für einen Benutzer abgerufen wurde, "
+"wird zur aktiven Quelle. Folgende Quellen stehen zur Verfügung:"
 
 #: ../manage/users/avatars.rst:16
 msgid ""
@@ -15564,6 +15568,9 @@ msgid ""
 "on sign-in when the provider exposes one. Zammad stores this URL on the user "
 "and fetches the image."
 msgstr ""
+"OAuth-Anbieter (z. B. Microsoft, Google, GitHub) stellen bei der Anmeldung "
+"die Avatar-URL bereit, sofern der Anbieter eine solche bereitstellt. Zammad "
+"speichert diese URL für den jeweiligen Benutzer und ruft das Bild ab."
 
 #: ../manage/users/avatars.rst:19
 msgid ""
@@ -15571,12 +15578,17 @@ msgid ""
 "fallback for users with a valid email address (e.g. matching a Gravatar "
 "entry)."
 msgstr ""
+"Der :doc:`Zammad Bilder-Service </settings/system/services>` dient als "
+"Rückfallebene für Benutzer mit einer gültigen E-Mail-Adresse (wenn diese "
+"z.B. mit einem Gravatar-Eintrag übereinstimmt)."
 
 #: ../manage/users/avatars.rst:22
 msgid ""
 "Agents and customers can upload or capture a custom avatar image from their "
 "user profile."
 msgstr ""
+"Agenten und Kunden können ein individuelles Avatar-Bild über ihr "
+"Benutzerprofil hochladen oder aufnehmen."
 
 #: ../manage/users/avatars.rst:27
 msgid ""
@@ -15584,12 +15596,14 @@ msgid ""
 "synchronize user avatars. Avatars for LDAP-sourced users come from the "
 "sources listed above instead."
 msgstr ""
+":doc:`LDAP/Active Directory </system/integrations/ldap/index>` "
+"synchronisiert Benutzer-Avatare jedoch **nicht**. Avatare für Benutzer, "
+"deren Daten aus LDAP stammen, werden stattdessen aus den oben aufgeführten "
+"Quellen bezogen."
 
 #: ../manage/users/avatars.rst:32
-#, fuzzy
-#| msgid "Managing Accounts"
 msgid "Changing Avatars"
-msgstr "Accounts verwalten"
+msgstr "Avatare ändern"
 
 #: ../manage/users/avatars.rst:34
 msgid ""
@@ -15597,6 +15611,10 @@ msgid ""
 "user has to change it in the **Avatar** section of their ``Profile`` and "
 "upload an image or capture one with their webcam."
 msgstr ""
+"Administratoren können den Avatar eines Benutzers nicht ändern. Um den "
+"eigenen Avatar zu ändern, muss ein Benutzer dies in den Profileinstellungen "
+"im Bereich **Avatar** vornehmen und ein Bild hochladen oder per Webcam "
+"aufnehmen."
 
 #: ../manage/users/index.rst:2
 msgid "Users"
@@ -16451,7 +16469,7 @@ msgstr ""
 "Der Standardwert ist ``ja`` - wenn Sie unsichere selbstsignierte Zertifikate "
 "verwenden, setzen Sie diese Option auf ``nein``."
 
-#: ../manage/webhook/add.rst:66 ../system/integrations/elasticsearch.rst:59
+#: ../manage/webhook/add.rst:66
 msgid "Authentication"
 msgstr "Authentifizierung"
 
@@ -23938,9 +23956,6 @@ msgid "Screenshot showing Microsoft login button on Zammad login screen."
 msgstr "Screenshot der Microsoft-Anmeldung auf dem Anmeldedialog von Zammad."
 
 #: ../settings/security/third-party/microsoft.rst:21
-#, fuzzy
-#| msgid ""
-#| "Please note that Zammad only supports these account types (App dependent):"
 msgid ""
 "Please note that Zammad only supports these account types (app dependent):"
 msgstr ""
@@ -25973,20 +25988,22 @@ msgid ""
 "provided in the setup wizard. See :doc:`/manage/users/avatars` for an "
 "overview of all avatar sources and how the image service interacts with them."
 msgstr ""
+"Definiert das Backend für die Abfrage von Benutzer- und "
+"Organisationsbildern. Der Dienst wird verwendet, um Benutzer-Avatare anhand "
+"der E-Mail-Adresse des Benutzers abzurufen (z.B. durch Abgleich mit einem "
+"Gravatar-Eintrag). Der Dienst wird außerdem einmalig während des Zammad-"
+"Einrichtungsassistenten verwendet, um Ihr Firmenlogo anhand der Domain der E-"
+"Mail-Adresse abzurufen, die Sie im Assistenten angegeben haben. Unter :doc:`/"
+"manage/users/avatars` finden Sie eine Übersicht über alle Avatar-Quellen und "
+"darüber, wie der Bilddienst mit diesen interagiert."
 
 #: ../settings/system/services.rst:13
-#, fuzzy
-#| msgid ""
-#| "Defines the backend for user and organization image lookups. Make sure "
-#| "your on premise installation has ``HTTPS`` access to "
-#| "``images.zammad.com``."
 msgid ""
 "Make sure your on premise installation has ``HTTPS`` access to "
 "``images.zammad.com``."
 msgstr ""
-"Definiert das Backend für die Suche nach Avatar-Bildern für Benutzer und "
-"Organisationen. Vergewissern Sie sich, dass Ihre lokale Installation "
-"``HTTPS`` Zugriff auf ``images.zammad.com`` hat."
+"Stellen Sie sicher, dass Ihre lokale Installation ``HTTPS`` Zugriff auf "
+"``images.zammad.com`` hat."
 
 #: ../settings/system/services.rst:16
 msgid "Default: ``Zammad Image Service`` (active)"
@@ -30560,175 +30577,138 @@ msgid "Elasticsearch (SaaS)"
 msgstr "Elasticsearch (SaaS)"
 
 #: ../system/integrations/elasticsearch.rst:4
+#, fuzzy
+#| msgid ""
+#| "The Elasticsearch integration allows you to create a read-only user to "
+#| "use with your favorite reporting tool (e.g. :docs:`Grafana </appendix/"
+#| "reporting-tools-thirdparty/grafana.html>`)."
 msgid ""
-"The Elasticsearch integration allows you to create a read-only user to use "
-"with your favorite reporting tool (e.g. :docs:`Grafana </appendix/reporting-"
-"tools-thirdparty/grafana.html>`)."
+"The Elasticsearch (SaaS) integration lets you query your instance's search "
+"index directly with a reporting tool such as :docs:`Grafana </appendix/"
+"reporting-tools-thirdparty/grafana.html>`. You can find it under *System > "
+"Integrations > Elasticsearch*."
 msgstr ""
 "Mit der Elasticsearch-Integration können Sie einen Benutzer mit Lesezugriff "
 "erstellen, den Sie in Ihrem bevorzugten Berichtstool (z.B. :docs:`Grafana </"
 "appendix/reporting-tools-thirdparty/grafana.html>`) verwenden können."
 
-#: ../system/integrations/elasticsearch.rst:8
-msgid "**Only available for SaaS customers.**"
-msgstr "**Nur für SaaS-Kunden verfügbar.**"
-
-#: ../system/integrations/elasticsearch.rst:10
+#: ../system/integrations/elasticsearch.rst:11
 msgid ""
-"In order to use Elasticsearch, you'll need the **Plus** subscription. Self "
-"hosted users have all the control over their self hosted Elasticsearch "
-"instances."
+"Only available for **SaaS** customers with a **Plus** or **Ultimate** plan. "
+"Self hosted customers already have full control over their own Elasticsearch "
+"instances and do not need this integration."
 msgstr ""
-"Um Elasticsearch nutzen zu können, benötigen Sie das **Plus** Abonnement. "
-"Benutzer einer selbst gehosteten Instanz haben die volle Kontrolle über ihre "
-"selbst gehosteten Elasticsearch-Instanzen."
+
+#: ../system/integrations/elasticsearch.rst:15
+msgid ""
+"**The index contains all ticket and customer data. Keep the credentials "
+"secret!** The index includes ticket, user and organization records from your "
+"instance, including sensitive customer information. Anyone with the "
+"credentials can read them."
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:None
 msgid "Elasticsearch integration page on SaaS environments"
 msgstr "Seite Elasticsearch-Integrations für SaaS-Umgebungen"
 
-#: ../system/integrations/elasticsearch.rst:22
-msgid ""
-"Please note the following limitations of Elasticsearch access on hosted "
-"environments:"
-msgstr ""
-"Bitte beachten Sie die folgenden Limitierungen für den Elasticsearch-Zugriff "
-"auf gehosteten Umgebungen:"
-
 #: ../system/integrations/elasticsearch.rst:25
-msgid "access to the Elasticsearch index is read-only access"
-msgstr "der Zugriff auf Elasticsearch-Indexe ist ein lesender Zugriff"
-
-#: ../system/integrations/elasticsearch.rst:26
-msgid "currently you're limited to user only"
-msgstr "Sie sind zur Zeit auf einen Benutzer beschränkt"
+#, fuzzy
+#| msgid "Please note the following limitations:"
+msgid "The integration has the following limitations:"
+msgstr "Bitte beachten Sie die folgenden Limitierungen:"
 
 #: ../system/integrations/elasticsearch.rst:27
+#, fuzzy
+#| msgid ""
+#| "Reporting tools that require to write into the indexes (like Kibana) are "
+#| "not supported"
 msgid ""
-"Reporting tools that require to write into the indexes (like Kibana) are not "
-"supported"
+"Access to the search index is read-only. That means reporting tools that "
+"need to write to the indexes (such as Kibana) are not supported."
 msgstr ""
 "Reporting-Tools die Schreibzugriff auf Indexen benötigen (wie Kibana) werden "
 "nicht unterstützt"
 
 #: ../system/integrations/elasticsearch.rst:29
-msgid "IP access restriction is currently not yet supported"
-msgstr "IP-Zugriffsbeschränkung wird zur Zeit noch nicht unterstützt"
+#, fuzzy
+#| msgid "You can create actions to:"
+msgid "You can create credentials for one user only."
+msgstr "Sie können Aktionen erstellen, um:"
 
-#: ../system/integrations/elasticsearch.rst:32
-msgid "Activating Elasticsearch Access"
-msgstr "Aktivieren des Elasticsearch-Zugangs"
+#: ../system/integrations/elasticsearch.rst:30
+msgid ""
+"It is not possible to allow or restrict index access for specific IP "
+"addresses."
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:34
+#, fuzzy
+#| msgid "Managing Accounts"
+msgid "Enabling Access"
+msgstr "Accounts verwalten"
+
+#: ../system/integrations/elasticsearch.rst:36
 msgid ""
-"By default external access to your Elasticsearch index is not active. You "
-"can enable the integration at any time if needed."
+"External access to your instance's search index is disabled by default. To "
+"enable it, simply activate the toggle on top of the page. After some "
+"seconds, a one-time dialog with the Elasticsearch username and password "
+"shows up. Note the password down, it is displayed only once."
 msgstr ""
-"Standardmäßig ist der externe Zugriff auf Ihren Elasticsearch-Index nicht "
-"aktiv. Sie können die Integration bei Bedarf jederzeit aktivieren."
 
-#: ../system/integrations/elasticsearch.rst:37
+#: ../system/integrations/elasticsearch.rst:41
 msgid ""
-"Please ensure to note down the password provided - you won't have access to "
-"it afterwards."
+"The page also shows **Connection Settings**, **Available Indexes** and "
+"**Credentials** sections. This is read-only information for your reference. "
+"The only other interactive control is ``Reset password``. Doing so prompts "
+"you for confirmation, then invalidates the current password and shows the "
+"new one in a one-time dialog."
 msgstr ""
-"Bitte notieren Sie sich das angegebene Passwort, da Sie später keinen "
-"Zugriff mehr darauf haben."
-
-#: ../system/integrations/elasticsearch.rst:None
-msgid "Screencast showing activation of Elasticsearch integration"
-msgstr "Screencast zeigt Aktivierung der Elasticsearch-Integration"
-
-#: ../system/integrations/elasticsearch.rst:46
-msgid "Connection Settings"
-msgstr "Verbindungs-Einstellungen"
 
 #: ../system/integrations/elasticsearch.rst:48
-msgid ""
-"This section holds the most important general information for accessing your "
-"Elasticsearch indexes - such as:"
+msgid "Browsing Indexes"
 msgstr ""
-"Dieser Abschnitt enthält die wichtigsten allgemeinen Informationen für den "
-"Zugriff auf Ihre Elasticsearch-Indizes - wie zum Beispiel:"
 
-#: ../system/integrations/elasticsearch.rst:52
-msgid "A unique subdomain that does not tell your real instance URL."
-msgstr "Eine eindeutige Subdomain, die Ihre echte Instanz-URL nicht verrät."
+#: ../system/integrations/elasticsearch.rst:50
+msgid ""
+"The page's **Available Indexes** table lists five indexes that are most "
+"useful for reporting, each shown with its full name including the per-"
+"instance index prefix:"
+msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:56
-msgid "Software"
-msgstr "Software"
+#: ../system/integrations/elasticsearch.rst:54
+msgid "``<index-prefix>_production_ticket``"
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:55
-msgid ""
-"The major version of the search index being used. This is required by some "
-"Reporting tools like Grafana."
+msgid "``<index-prefix>_production_chat_session``"
 msgstr ""
-"Die Hauptversion des verwendeten Suchindexes. Dies wird von einigen "
-"Reporting-Tools wie Grafana benötigt."
 
-#: ../system/integrations/elasticsearch.rst:59
-msgid "The authentication type being supported. ``Basic Authentication``"
-msgstr "Der unterstützte Authentifizierungstyp. ``Basic Authentication``"
-
-#: ../system/integrations/elasticsearch.rst:62
-msgid "Available Indexes"
-msgstr "Verfügbare Indexe"
-
-#: ../system/integrations/elasticsearch.rst:64
-msgid ""
-"Within this section we're displaying the -in our opinion- most important "
-"indexes for a Zammad instance."
+#: ../system/integrations/elasticsearch.rst:56
+msgid "``<index-prefix>_production_cti_log``"
 msgstr ""
-"In diesem Abschnitt zeigen wir die - unserer Meinung nach - wichtigsten "
-"Indizes für eine Zammad-Instanz an."
 
-#: ../system/integrations/elasticsearch.rst:67
-msgid ""
-"If you require all indexes or our listing is not good enough for you, point "
-"your browser to the URL we're providing and append ``/_aliases?"
-"pretty=true``. The result should look like this: ``https://<URL>.zammad.com/"
-"_aliases?pretty=true``."
+#: ../system/integrations/elasticsearch.rst:57
+msgid "``<index-prefix>_production_user``"
 msgstr ""
-"Wenn Sie alle Indizes benötigen oder Ihnen unsere Auflistung nicht "
-"ausreicht, rufen Sie mit Ihrem Browser die von uns angegebene URL auf und "
-"fügen Sie ``/_aliases?pretty=true`` hinzu. Das Ergebnis sollte wie folgt "
-"aussehen: ``https://<URL>.zammad.com/_aliases?pretty=true``."
 
-#: ../system/integrations/elasticsearch.rst:72
-msgid ""
-"Your browser will automatically ask for your credentials - you'll then see "
-"something like this:"
+#: ../system/integrations/elasticsearch.rst:58
+msgid "``<index-prefix>_production_organization``"
 msgstr ""
-"Ihr Browser fragt automatisch nach Ihren Zugangsdaten - Sie sehen dann etwas "
-"wie das hier:"
 
-#: ../system/integrations/elasticsearch.rst:120
-msgid "Credentials"
-msgstr "Zugangsdaten"
-
-#: ../system/integrations/elasticsearch.rst:122
+#: ../system/integrations/elasticsearch.rst:60
 msgid ""
-"Within this section Zammad displays your available users. The password is "
-"provided once (upon activation) and cannot be retrieved after that."
+"To browse all available indexes, you can open the Elasticsearch URL in your "
+"web browser with appended ``/_aliases?pretty=true`` (resulting in ``https://"
+"<your-es-url>/_aliases?pretty=true``). Enter the credentials shown above and "
+"you will see a response listing all available aliases. The structure looks "
+"like this:"
 msgstr ""
-"In diesem Abschnitt zeigt Zammad Ihre verfügbaren Benutzer an. Das Passwort "
-"wird einmalig vergeben (bei der Aktivierung) und kann danach nicht mehr "
-"abgerufen werden."
 
-#: ../system/integrations/elasticsearch.rst:126
+#: ../system/integrations/elasticsearch.rst:77
 msgid ""
-"If you need to change or reset your Elasticsearch user password, use the "
-"\"Reset password\" button in the credentials table. Doing so creates a brand "
-"new password for the account in question. This change is immediate, keep in "
-"mind that this may affect third party tools connected to your instance."
+"Index names, field names and the alias list reflect Zammad's internal search-"
+"index schema. They may change between Zammad releases."
 msgstr ""
-"Wenn Sie das Passwort Ihres Elasticsearch-Benutzers ändern oder zurücksetzen "
-"müssen, verwenden Sie die Schaltfläche \"Passwort zurücksetzen\" in der "
-"Tabelle mit den Zugangsdaten. Auf diese Weise wird ein neues Passwort für "
-"das betreffende Konto erstellt. Diese Änderung wird sofort durchgeführt. "
-"Beachten Sie, dass dies Auswirkungen auf Tools von Drittanbietern haben "
-"kann, die mit Ihrer Instanz verbunden sind."
 
 #: ../system/integrations/exchange.rst:2
 msgid "Exchange"
@@ -35473,6 +35453,133 @@ msgstr "Version"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
 
+#~ msgid "**Only available for SaaS customers.**"
+#~ msgstr "**Nur für SaaS-Kunden verfügbar.**"
+
+#~ msgid ""
+#~ "In order to use Elasticsearch, you'll need the **Plus** subscription. "
+#~ "Self hosted users have all the control over their self hosted "
+#~ "Elasticsearch instances."
+#~ msgstr ""
+#~ "Um Elasticsearch nutzen zu können, benötigen Sie das **Plus** Abonnement. "
+#~ "Benutzer einer selbst gehosteten Instanz haben die volle Kontrolle über "
+#~ "ihre selbst gehosteten Elasticsearch-Instanzen."
+
+#~ msgid ""
+#~ "Please note the following limitations of Elasticsearch access on hosted "
+#~ "environments:"
+#~ msgstr ""
+#~ "Bitte beachten Sie die folgenden Limitierungen für den Elasticsearch-"
+#~ "Zugriff auf gehosteten Umgebungen:"
+
+#~ msgid "access to the Elasticsearch index is read-only access"
+#~ msgstr "der Zugriff auf Elasticsearch-Indexe ist ein lesender Zugriff"
+
+#~ msgid "currently you're limited to user only"
+#~ msgstr "Sie sind zur Zeit auf einen Benutzer beschränkt"
+
+#~ msgid "IP access restriction is currently not yet supported"
+#~ msgstr "IP-Zugriffsbeschränkung wird zur Zeit noch nicht unterstützt"
+
+#~ msgid "Activating Elasticsearch Access"
+#~ msgstr "Aktivieren des Elasticsearch-Zugangs"
+
+#~ msgid ""
+#~ "By default external access to your Elasticsearch index is not active. You "
+#~ "can enable the integration at any time if needed."
+#~ msgstr ""
+#~ "Standardmäßig ist der externe Zugriff auf Ihren Elasticsearch-Index nicht "
+#~ "aktiv. Sie können die Integration bei Bedarf jederzeit aktivieren."
+
+#~ msgid ""
+#~ "Please ensure to note down the password provided - you won't have access "
+#~ "to it afterwards."
+#~ msgstr ""
+#~ "Bitte notieren Sie sich das angegebene Passwort, da Sie später keinen "
+#~ "Zugriff mehr darauf haben."
+
+#~ msgid "Screencast showing activation of Elasticsearch integration"
+#~ msgstr "Screencast zeigt Aktivierung der Elasticsearch-Integration"
+
+#~ msgid "Connection Settings"
+#~ msgstr "Verbindungs-Einstellungen"
+
+#~ msgid ""
+#~ "This section holds the most important general information for accessing "
+#~ "your Elasticsearch indexes - such as:"
+#~ msgstr ""
+#~ "Dieser Abschnitt enthält die wichtigsten allgemeinen Informationen für "
+#~ "den Zugriff auf Ihre Elasticsearch-Indizes - wie zum Beispiel:"
+
+#~ msgid "A unique subdomain that does not tell your real instance URL."
+#~ msgstr "Eine eindeutige Subdomain, die Ihre echte Instanz-URL nicht verrät."
+
+#~ msgid "Software"
+#~ msgstr "Software"
+
+#~ msgid ""
+#~ "The major version of the search index being used. This is required by "
+#~ "some Reporting tools like Grafana."
+#~ msgstr ""
+#~ "Die Hauptversion des verwendeten Suchindexes. Dies wird von einigen "
+#~ "Reporting-Tools wie Grafana benötigt."
+
+#~ msgid "The authentication type being supported. ``Basic Authentication``"
+#~ msgstr "Der unterstützte Authentifizierungstyp. ``Basic Authentication``"
+
+#~ msgid "Available Indexes"
+#~ msgstr "Verfügbare Indexe"
+
+#~ msgid ""
+#~ "Within this section we're displaying the -in our opinion- most important "
+#~ "indexes for a Zammad instance."
+#~ msgstr ""
+#~ "In diesem Abschnitt zeigen wir die - unserer Meinung nach - wichtigsten "
+#~ "Indizes für eine Zammad-Instanz an."
+
+#~ msgid ""
+#~ "If you require all indexes or our listing is not good enough for you, "
+#~ "point your browser to the URL we're providing and append ``/_aliases?"
+#~ "pretty=true``. The result should look like this: ``https://"
+#~ "<URL>.zammad.com/_aliases?pretty=true``."
+#~ msgstr ""
+#~ "Wenn Sie alle Indizes benötigen oder Ihnen unsere Auflistung nicht "
+#~ "ausreicht, rufen Sie mit Ihrem Browser die von uns angegebene URL auf und "
+#~ "fügen Sie ``/_aliases?pretty=true`` hinzu. Das Ergebnis sollte wie folgt "
+#~ "aussehen: ``https://<URL>.zammad.com/_aliases?pretty=true``."
+
+#~ msgid ""
+#~ "Your browser will automatically ask for your credentials - you'll then "
+#~ "see something like this:"
+#~ msgstr ""
+#~ "Ihr Browser fragt automatisch nach Ihren Zugangsdaten - Sie sehen dann "
+#~ "etwas wie das hier:"
+
+#~ msgid "Credentials"
+#~ msgstr "Zugangsdaten"
+
+#~ msgid ""
+#~ "Within this section Zammad displays your available users. The password is "
+#~ "provided once (upon activation) and cannot be retrieved after that."
+#~ msgstr ""
+#~ "In diesem Abschnitt zeigt Zammad Ihre verfügbaren Benutzer an. Das "
+#~ "Passwort wird einmalig vergeben (bei der Aktivierung) und kann danach "
+#~ "nicht mehr abgerufen werden."
+
+#~ msgid ""
+#~ "If you need to change or reset your Elasticsearch user password, use the "
+#~ "\"Reset password\" button in the credentials table. Doing so creates a "
+#~ "brand new password for the account in question. This change is immediate, "
+#~ "keep in mind that this may affect third party tools connected to your "
+#~ "instance."
+#~ msgstr ""
+#~ "Wenn Sie das Passwort Ihres Elasticsearch-Benutzers ändern oder "
+#~ "zurücksetzen müssen, verwenden Sie die Schaltfläche \"Passwort "
+#~ "zurücksetzen\" in der Tabelle mit den Zugangsdaten. Auf diese Weise wird "
+#~ "ein neues Passwort für das betreffende Konto erstellt. Diese Änderung "
+#~ "wird sofort durchgeführt. Beachten Sie, dass dies Auswirkungen auf Tools "
+#~ "von Drittanbietern haben kann, die mit Ihrer Instanz verbunden sind."
+
 #~ msgid "Avatars of signing in users:"
 #~ msgstr "Avatare der angemeldeten Benutzer:"
 
@@ -35984,9 +36091,6 @@ msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
 
 #~ msgid "Zammad form management page"
 #~ msgstr "Zammad Formular-Einstellungen"
-
-#~ msgid "Please note the following limitations:"
-#~ msgstr "Bitte beachten Sie die folgenden Limitierungen:"
 
 #~ msgid ""
 #~ "By default the form channel is *inactive*. Use the switch in front of "
