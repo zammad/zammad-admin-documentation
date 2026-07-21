@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 15:09+0200\n"
+"POT-Creation-Date: 2026-07-20 12:50+0200\n"
 "PO-Revision-Date: 2026-07-11 09:07+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -599,7 +599,6 @@ msgstr ""
 "са токенима које LLM учитава приликом обраде захтева."
 
 #: ../ai/provider.rst:54 ../manage/knowledge-base.rst:151
-#: ../system/integrations/elasticsearch.rst:52
 msgid "URL"
 msgstr "URL"
 
@@ -5000,7 +4999,6 @@ msgstr "Снимак екрана који приказује подешавањ
 #: ../settings/security/third-party/microsoft.rst:19
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
-#: ../system/integrations/elasticsearch.rst:20
 #: ../system/integrations/ldap/index.rst:20
 msgid "Limitations"
 msgstr "Ограничења"
@@ -16478,7 +16476,7 @@ msgstr ""
 "Подразумевано је ``да`` - ако користите небезбедне самопотписане "
 "сертификате, подесите ову опцију на ``не``."
 
-#: ../manage/webhook/add.rst:66 ../system/integrations/elasticsearch.rst:59
+#: ../manage/webhook/add.rst:66
 msgid "Authentication"
 msgstr "Аутентификација"
 
@@ -30777,176 +30775,132 @@ msgstr "Elasticsearch (SaaS)"
 #| "The Elasticsearch integration allows you to create a read-only user to "
 #| "use with your favorite reporting tool (e.g. like Grafana)."
 msgid ""
-"The Elasticsearch integration allows you to create a read-only user to use "
-"with your favorite reporting tool (e.g. :docs:`Grafana </appendix/reporting-"
-"tools-thirdparty/grafana.html>`)."
+"The Elasticsearch (SaaS) integration lets you query your instance's search "
+"index directly with a reporting tool such as :docs:`Grafana </appendix/"
+"reporting-tools-thirdparty/grafana.html>`. You can find it under *System > "
+"Integrations > Elasticsearch*."
 msgstr ""
 "Elasticsearch интеграција вам омогућава да додате корисника само за читање "
 "кога ћете користити са вашим омиљеним алатом за извештавање (нпр. као што је "
 "Grafana)."
 
-#: ../system/integrations/elasticsearch.rst:8
-#, fuzzy
-#| msgid "Only available in triggers."
-msgid "**Only available for SaaS customers.**"
-msgstr "Доступно само у окидачима."
-
-#: ../system/integrations/elasticsearch.rst:10
-#, fuzzy
-#| msgid ""
-#| "Self hosted users have all the control over their self hosted "
-#| "Elasticsearch instances."
+#: ../system/integrations/elasticsearch.rst:11
 msgid ""
-"In order to use Elasticsearch, you'll need the **Plus** subscription. Self "
-"hosted users have all the control over their self hosted Elasticsearch "
-"instances."
+"Only available for **SaaS** customers with a **Plus** or **Ultimate** plan. "
+"Self hosted customers already have full control over their own Elasticsearch "
+"instances and do not need this integration."
 msgstr ""
-"Корисници који сами хостују имају сву контролу над својим Elasticsearch "
-"инстанцама које сами хостују."
+
+#: ../system/integrations/elasticsearch.rst:15
+msgid ""
+"**The index contains all ticket and customer data. Keep the credentials "
+"secret!** The index includes ticket, user and organization records from your "
+"instance, including sensitive customer information. Anyone with the "
+"credentials can read them."
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:None
 msgid "Elasticsearch integration page on SaaS environments"
 msgstr "Страница за Elasticsearch интеграцију у SaaS окружењима"
 
-#: ../system/integrations/elasticsearch.rst:22
-msgid ""
-"Please note the following limitations of Elasticsearch access on hosted "
-"environments:"
-msgstr ""
-"Имајте на уму следећа ограничења приступа Elasticsearch у хостованим "
-"окружењима:"
-
 #: ../system/integrations/elasticsearch.rst:25
-msgid "access to the Elasticsearch index is read-only access"
-msgstr "приступ Elasticsearch индексу је омогућен само за читање"
-
-#: ../system/integrations/elasticsearch.rst:26
-msgid "currently you're limited to user only"
-msgstr "тренутно сте ограничени само на кориснике"
+#, fuzzy
+#| msgid "Please note the following limitations:"
+msgid "The integration has the following limitations:"
+msgstr "Имајте на уму следећа ограничења:"
 
 #: ../system/integrations/elasticsearch.rst:27
+#, fuzzy
+#| msgid ""
+#| "Reporting tools that require to write into the indexes (like Kibana) are "
+#| "not supported"
 msgid ""
-"Reporting tools that require to write into the indexes (like Kibana) are not "
-"supported"
+"Access to the search index is read-only. That means reporting tools that "
+"need to write to the indexes (such as Kibana) are not supported."
 msgstr ""
 "Алати за извештавање који захтевају писање у индексе (као што је Kibana) "
 "нису подржани"
 
 #: ../system/integrations/elasticsearch.rst:29
-msgid "IP access restriction is currently not yet supported"
-msgstr "Ограничење приступа на основу IP адресе још увек није подржано"
+#, fuzzy
+#| msgid "You can create actions to:"
+msgid "You can create credentials for one user only."
+msgstr "Можете креирати радње за:"
 
-#: ../system/integrations/elasticsearch.rst:32
-msgid "Activating Elasticsearch Access"
-msgstr "Укључивање Elasticsearch приступа"
+#: ../system/integrations/elasticsearch.rst:30
+msgid ""
+"It is not possible to allow or restrict index access for specific IP "
+"addresses."
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:34
+#, fuzzy
+#| msgid "Managing Accounts"
+msgid "Enabling Access"
+msgstr "Управљање налозима"
+
+#: ../system/integrations/elasticsearch.rst:36
 msgid ""
-"By default external access to your Elasticsearch index is not active. You "
-"can enable the integration at any time if needed."
+"External access to your instance's search index is disabled by default. To "
+"enable it, simply activate the toggle on top of the page. After some "
+"seconds, a one-time dialog with the Elasticsearch username and password "
+"shows up. Note the password down, it is displayed only once."
 msgstr ""
-"Подразумевано, спољни приступ вашем Elasticsearch индексу није омогућен. "
-"Можете укључити интеграцију у било ком тренутку ако је потребно."
 
-#: ../system/integrations/elasticsearch.rst:37
+#: ../system/integrations/elasticsearch.rst:41
 msgid ""
-"Please ensure to note down the password provided - you won't have access to "
-"it afterwards."
+"The page also shows **Connection Settings**, **Available Indexes** and "
+"**Credentials** sections. This is read-only information for your reference. "
+"The only other interactive control is ``Reset password``. Doing so prompts "
+"you for confirmation, then invalidates the current password and shows the "
+"new one in a one-time dialog."
 msgstr ""
-"Обавезно забележите достављену лозинку - касније јој нећете имати приступ."
-
-#: ../system/integrations/elasticsearch.rst:None
-msgid "Screencast showing activation of Elasticsearch integration"
-msgstr "Снимак екрана који приказује укључивање Elasticsearch интеграције"
-
-#: ../system/integrations/elasticsearch.rst:46
-msgid "Connection Settings"
-msgstr "Подешавања везе"
 
 #: ../system/integrations/elasticsearch.rst:48
-msgid ""
-"This section holds the most important general information for accessing your "
-"Elasticsearch indexes - such as:"
+msgid "Browsing Indexes"
 msgstr ""
-"Овај одељак садржи најважније опште информације за приступ вашим "
-"Elasticsearch индексима – као што су:"
 
-#: ../system/integrations/elasticsearch.rst:52
-msgid "A unique subdomain that does not tell your real instance URL."
-msgstr "Јединствени поддомен који не садржи URL адресу ваше праве инстанце."
+#: ../system/integrations/elasticsearch.rst:50
+msgid ""
+"The page's **Available Indexes** table lists five indexes that are most "
+"useful for reporting, each shown with its full name including the per-"
+"instance index prefix:"
+msgstr ""
 
-#: ../system/integrations/elasticsearch.rst:56
-msgid "Software"
-msgstr "Софтвер"
+#: ../system/integrations/elasticsearch.rst:54
+msgid "``<index-prefix>_production_ticket``"
+msgstr ""
 
 #: ../system/integrations/elasticsearch.rst:55
-msgid ""
-"The major version of the search index being used. This is required by some "
-"Reporting tools like Grafana."
+msgid "``<index-prefix>_production_chat_session``"
 msgstr ""
-"Major верзија индекса претраге која се користи. Ово захтевају неки алати за "
-"извештавање као што је Grafana."
 
-#: ../system/integrations/elasticsearch.rst:59
-msgid "The authentication type being supported. ``Basic Authentication``"
-msgstr "Тип аутентификације који је подржан. ``Basic Authentication``"
-
-#: ../system/integrations/elasticsearch.rst:62
-msgid "Available Indexes"
-msgstr "Доступни индекси"
-
-#: ../system/integrations/elasticsearch.rst:64
-msgid ""
-"Within this section we're displaying the -in our opinion- most important "
-"indexes for a Zammad instance."
+#: ../system/integrations/elasticsearch.rst:56
+msgid "``<index-prefix>_production_cti_log``"
 msgstr ""
-"У оквиру овог одељка приказујемо - по нашем мишљењу - најважније индексе за "
-"Zammad инстанцу."
 
-#: ../system/integrations/elasticsearch.rst:67
-msgid ""
-"If you require all indexes or our listing is not good enough for you, point "
-"your browser to the URL we're providing and append ``/_aliases?"
-"pretty=true``. The result should look like this: ``https://<URL>.zammad.com/"
-"_aliases?pretty=true``."
+#: ../system/integrations/elasticsearch.rst:57
+msgid "``<index-prefix>_production_user``"
 msgstr ""
-"Ако су вам потребни сви индекси или наш списак није довољно детаљан, "
-"усмерите свој претраживач на следећу URL адресу ``/_aliases?pretty=true``. "
-"Резултат би требало да изгледа овако: ``https://<URL>.zammad.com/_aliases?"
-"pretty=true``."
 
-#: ../system/integrations/elasticsearch.rst:72
-msgid ""
-"Your browser will automatically ask for your credentials - you'll then see "
-"something like this:"
+#: ../system/integrations/elasticsearch.rst:58
+msgid "``<index-prefix>_production_organization``"
 msgstr ""
-"Ваш претраживач ће аутоматски затражити да се аутентификујете - тада ћете "
-"видети нешто овако:"
 
-#: ../system/integrations/elasticsearch.rst:120
-msgid "Credentials"
-msgstr "Креденцијали"
-
-#: ../system/integrations/elasticsearch.rst:122
+#: ../system/integrations/elasticsearch.rst:60
 msgid ""
-"Within this section Zammad displays your available users. The password is "
-"provided once (upon activation) and cannot be retrieved after that."
+"To browse all available indexes, you can open the Elasticsearch URL in your "
+"web browser with appended ``/_aliases?pretty=true`` (resulting in ``https://"
+"<your-es-url>/_aliases?pretty=true``). Enter the credentials shown above and "
+"you will see a response listing all available aliases. The structure looks "
+"like this:"
 msgstr ""
-"У оквиру овог одељка Zammad приказује ваше доступне кориснике. Лозинка се "
-"даје једном (по активацији) и након тога се не може преузети."
 
-#: ../system/integrations/elasticsearch.rst:126
+#: ../system/integrations/elasticsearch.rst:77
 msgid ""
-"If you need to change or reset your Elasticsearch user password, use the "
-"\"Reset password\" button in the credentials table. Doing so creates a brand "
-"new password for the account in question. This change is immediate, keep in "
-"mind that this may affect third party tools connected to your instance."
+"Index names, field names and the alias list reflect Zammad's internal search-"
+"index schema. They may change between Zammad releases."
 msgstr ""
-"Ако желите да промените или поништите вашу Elasticsearch корисничку лозинку, "
-"користите дугме „Reset password“ у табели са креденцијалима. Овиме ћете "
-"добити потпуно нову лозинку за дотични налог. Ова промена је тренутна, "
-"имајте на уму да то може да утиче на алате трећег лица повезане са вашом "
-"инстанцом."
 
 #: ../system/integrations/exchange.rst:2
 msgid "Exchange"
@@ -36039,6 +35993,135 @@ msgstr "Верзија"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Одаберите број оператера који су вам неопходни у вашој инстанци."
 
+#, fuzzy
+#~| msgid "Only available in triggers."
+#~ msgid "**Only available for SaaS customers.**"
+#~ msgstr "Доступно само у окидачима."
+
+#, fuzzy
+#~| msgid ""
+#~| "Self hosted users have all the control over their self hosted "
+#~| "Elasticsearch instances."
+#~ msgid ""
+#~ "In order to use Elasticsearch, you'll need the **Plus** subscription. "
+#~ "Self hosted users have all the control over their self hosted "
+#~ "Elasticsearch instances."
+#~ msgstr ""
+#~ "Корисници који сами хостују имају сву контролу над својим Elasticsearch "
+#~ "инстанцама које сами хостују."
+
+#~ msgid ""
+#~ "Please note the following limitations of Elasticsearch access on hosted "
+#~ "environments:"
+#~ msgstr ""
+#~ "Имајте на уму следећа ограничења приступа Elasticsearch у хостованим "
+#~ "окружењима:"
+
+#~ msgid "access to the Elasticsearch index is read-only access"
+#~ msgstr "приступ Elasticsearch индексу је омогућен само за читање"
+
+#~ msgid "currently you're limited to user only"
+#~ msgstr "тренутно сте ограничени само на кориснике"
+
+#~ msgid "IP access restriction is currently not yet supported"
+#~ msgstr "Ограничење приступа на основу IP адресе још увек није подржано"
+
+#~ msgid "Activating Elasticsearch Access"
+#~ msgstr "Укључивање Elasticsearch приступа"
+
+#~ msgid ""
+#~ "By default external access to your Elasticsearch index is not active. You "
+#~ "can enable the integration at any time if needed."
+#~ msgstr ""
+#~ "Подразумевано, спољни приступ вашем Elasticsearch индексу није омогућен. "
+#~ "Можете укључити интеграцију у било ком тренутку ако је потребно."
+
+#~ msgid ""
+#~ "Please ensure to note down the password provided - you won't have access "
+#~ "to it afterwards."
+#~ msgstr ""
+#~ "Обавезно забележите достављену лозинку - касније јој нећете имати приступ."
+
+#~ msgid "Screencast showing activation of Elasticsearch integration"
+#~ msgstr "Снимак екрана који приказује укључивање Elasticsearch интеграције"
+
+#~ msgid "Connection Settings"
+#~ msgstr "Подешавања везе"
+
+#~ msgid ""
+#~ "This section holds the most important general information for accessing "
+#~ "your Elasticsearch indexes - such as:"
+#~ msgstr ""
+#~ "Овај одељак садржи најважније опште информације за приступ вашим "
+#~ "Elasticsearch индексима – као што су:"
+
+#~ msgid "A unique subdomain that does not tell your real instance URL."
+#~ msgstr "Јединствени поддомен који не садржи URL адресу ваше праве инстанце."
+
+#~ msgid "Software"
+#~ msgstr "Софтвер"
+
+#~ msgid ""
+#~ "The major version of the search index being used. This is required by "
+#~ "some Reporting tools like Grafana."
+#~ msgstr ""
+#~ "Major верзија индекса претраге која се користи. Ово захтевају неки алати "
+#~ "за извештавање као што је Grafana."
+
+#~ msgid "The authentication type being supported. ``Basic Authentication``"
+#~ msgstr "Тип аутентификације који је подржан. ``Basic Authentication``"
+
+#~ msgid "Available Indexes"
+#~ msgstr "Доступни индекси"
+
+#~ msgid ""
+#~ "Within this section we're displaying the -in our opinion- most important "
+#~ "indexes for a Zammad instance."
+#~ msgstr ""
+#~ "У оквиру овог одељка приказујемо - по нашем мишљењу - најважније индексе "
+#~ "за Zammad инстанцу."
+
+#~ msgid ""
+#~ "If you require all indexes or our listing is not good enough for you, "
+#~ "point your browser to the URL we're providing and append ``/_aliases?"
+#~ "pretty=true``. The result should look like this: ``https://"
+#~ "<URL>.zammad.com/_aliases?pretty=true``."
+#~ msgstr ""
+#~ "Ако су вам потребни сви индекси или наш списак није довољно детаљан, "
+#~ "усмерите свој претраживач на следећу URL адресу ``/_aliases?"
+#~ "pretty=true``. Резултат би требало да изгледа овако: ``https://"
+#~ "<URL>.zammad.com/_aliases?pretty=true``."
+
+#~ msgid ""
+#~ "Your browser will automatically ask for your credentials - you'll then "
+#~ "see something like this:"
+#~ msgstr ""
+#~ "Ваш претраживач ће аутоматски затражити да се аутентификујете - тада ћете "
+#~ "видети нешто овако:"
+
+#~ msgid "Credentials"
+#~ msgstr "Креденцијали"
+
+#~ msgid ""
+#~ "Within this section Zammad displays your available users. The password is "
+#~ "provided once (upon activation) and cannot be retrieved after that."
+#~ msgstr ""
+#~ "У оквиру овог одељка Zammad приказује ваше доступне кориснике. Лозинка се "
+#~ "даје једном (по активацији) и након тога се не може преузети."
+
+#~ msgid ""
+#~ "If you need to change or reset your Elasticsearch user password, use the "
+#~ "\"Reset password\" button in the credentials table. Doing so creates a "
+#~ "brand new password for the account in question. This change is immediate, "
+#~ "keep in mind that this may affect third party tools connected to your "
+#~ "instance."
+#~ msgstr ""
+#~ "Ако желите да промените или поништите вашу Elasticsearch корисничку "
+#~ "лозинку, користите дугме „Reset password“ у табели са креденцијалима. "
+#~ "Овиме ћете добити потпуно нову лозинку за дотични налог. Ова промена је "
+#~ "тренутна, имајте на уму да то може да утиче на алате трећег лица повезане "
+#~ "са вашом инстанцом."
+
 #~ msgid "Avatars of signing in users:"
 #~ msgstr "Аватари пријављених корисника:"
 
@@ -36559,9 +36642,6 @@ msgstr "Одаберите број оператера који су вам не
 
 #~ msgid "Zammad form management page"
 #~ msgstr "Zammad страница за управљање формама"
-
-#~ msgid "Please note the following limitations:"
-#~ msgstr "Имајте на уму следећа ограничења:"
 
 #~ msgid ""
 #~ "By default the form channel is *inactive*. Use the switch in front of "
