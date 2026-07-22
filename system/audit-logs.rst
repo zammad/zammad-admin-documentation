@@ -52,7 +52,7 @@ Created at
    The date and time when the entry was created.
 
 Clicking an entry opens a read-only dialog with the recorded changes. Lines
-perfixed with ``-`` and highlighted in red show previous values. Lines prefixed
+prefixed with ``-`` and highlighted in red show previous values. Lines prefixed
 with ``+`` and highlighted in green show new values. Session takeover entries
 show **No changes** because they record the event rather than an object change.
 
