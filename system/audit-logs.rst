@@ -11,7 +11,7 @@ those, see the ticket history.
 What Is Recorded
 ----------------
 
-The audit log records the following events:
+The audit log records events like:
 
 - Configuration changes in the admin area, such as enabling or disabling
   features and creating, updating or deleting objects such as roles or triggers.
@@ -20,7 +20,8 @@ The audit log records the following events:
 - Session takeover events when an administrator switches to another user's
   session and back using ``View from user's perspective``.
 
-Sensitive values are masked in audit log entries.
+Click on the ``Description`` button for additional examples of recorded
+items. Sensitive values are always masked in audit log entries.
 
 Viewing Audit Log Entries
 -------------------------
