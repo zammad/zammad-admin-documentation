@@ -11,17 +11,34 @@ those, see the ticket history.
 What Is Recorded
 ----------------
 
-The audit log records events like:
+The audit log records basically all actions where admin permissions are
+required. No matter if a setting got adjusted or an object like a trigger got
+touched.
 
-- Configuration changes in the admin area, such as enabling or disabling
-  features and creating, updating or deleting objects such as roles or triggers.
-- Changes to agent and administrator accounts, including account creation and
-  deletion, password changes and role assignments.
-- Session takeover events when an administrator switches to another user's
-  session and back using ``View from user's perspective``.
+Configuration adjustments and changes of data in the admin area:
 
-Click on the ``Description`` button for additional examples of recorded
-items. Sensitive values are always masked in audit log entries.
+- Groups, roles, and permissions
+- Overviews, triggers, schedulers, macros, templates, text modules and checklist
+  templates
+- Channels, postmaster filters, signatures, LDAP sources and webhooks
+- Calendars, SLAs, time accounting, core workflows, object attributes, public
+  links and report profiles
+- System settings and packages
+- AI agents and AI text tools
+- S/MIME, PGP and SSL certificates
+- Knowledge bases and their languages
+
+User account changes (only changes for agents and admins accounts are recorded):
+
+- Password changes
+- Activation and deactivation of accounts
+- Added or removed roles and group permissions
+- Two-factor authentication changes
+
+Session events:
+
+- Taking over another user's session via ``View from user's perspective`` and
+  switching back
 
 Viewing Audit Log Entries
 -------------------------
