@@ -62,6 +62,9 @@ tickets, check the section above and learn more about
    * - ``admin.api``
      - :docs:`System > API </api/intro.html>`
      -
+   * - ``admin.audit_log``
+     - :doc:`System > Audit Logs </system/audit-logs>`
+     - Read-only access to security-relevant audit entries.
    * - ``admin.branding``
      - :doc:`Settings > Branding </settings/branding>`
      -

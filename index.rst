@@ -88,6 +88,7 @@ Zammad Admin Documentation
    system/monitoring
    system/packages
    system/sessions
+   system/audit-logs
    system/system-report
    system/version
 
