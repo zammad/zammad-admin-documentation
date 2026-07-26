@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-20 12:41+0200\n"
+"POT-Creation-Date: 2026-07-23 15:53+0200\n"
 "PO-Revision-Date: 2026-07-11 07:07+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
@@ -1307,7 +1307,7 @@ msgstr ""
 #: ../manage/groups/settings.rst:110 ../manage/macros.rst:65
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
-#: ../manage/roles/permissions.rst:229 ../manage/roles/permissions.rst:299
+#: ../manage/roles/permissions.rst:232 ../manage/roles/permissions.rst:302
 #: ../manage/scheduler.rst:161 ../manage/webhook/add.rst:128
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
@@ -1918,7 +1918,8 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:133
 #: ../channels/email/accounts/account-setup.rst:229
 #: ../channels/email/accounts/email-notification.rst:31
-#: ../misc/object-conditions/basics.rst:27 ../system/sessions.rst:18
+#: ../misc/object-conditions/basics.rst:27 ../system/audit-logs.rst:53
+#: ../system/sessions.rst:18
 msgid "User"
 msgstr "Корисник"
 
@@ -3400,7 +3401,7 @@ msgstr "**Од:** *задовољава регуларни израз:* ``(\\.|@
 #: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
 #: ../manage/trigger.rst:54 ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
-#: ../misc/object-conditions/basics.rst:66
+#: ../misc/object-conditions/basics.rst:66 ../system/audit-logs.rst:58
 #: ../system/core-workflows/how-do-they-work.rst:60
 #: ../system/core-workflows/learn-by-example.rst:58
 #: ../system/core-workflows/learn-by-example.rst:113
@@ -9095,7 +9096,7 @@ msgstr "API (системска документација)"
 msgid "System"
 msgstr "Систем"
 
-#: ../index.rst:96 ../manage/roles/permissions.rst:291
+#: ../index.rst:97 ../manage/roles/permissions.rst:294
 #: ../system/objects/types.rst:279
 msgid "Misc"
 msgstr "Остало"
@@ -12457,12 +12458,12 @@ msgid "Agent"
 msgstr "Оператер"
 
 #: ../manage/roles/permissions.rst:19 ../manage/roles/permissions.rst:47
-#: ../manage/roles/permissions.rst:227 ../manage/roles/permissions.rst:297
+#: ../manage/roles/permissions.rst:230 ../manage/roles/permissions.rst:300
 msgid "Permission"
 msgstr "Дозволе"
 
 #: ../manage/roles/permissions.rst:20 ../manage/roles/permissions.rst:48
-#: ../manage/roles/permissions.rst:228 ../manage/roles/permissions.rst:298
+#: ../manage/roles/permissions.rst:231 ../manage/roles/permissions.rst:301
 msgid "Access To"
 msgstr "Приступни кључ"
 
@@ -12588,30 +12589,46 @@ msgid ":docs:`System > API </api/intro.html>`"
 msgstr ":docs:`Систем > API </api/intro.html>`"
 
 #: ../manage/roles/permissions.rst:65
+#, fuzzy
+#| msgid "``admin.ai``"
+msgid "``admin.audit_log``"
+msgstr "``admin.ai``"
+
+#: ../manage/roles/permissions.rst:66
+#, fuzzy
+#| msgid ":doc:`System > Monitoring </system/monitoring>`"
+msgid ":doc:`System > Audit Logs </system/audit-logs>`"
+msgstr ":doc:`Систем > Надгледање </system/monitoring>`"
+
+#: ../manage/roles/permissions.rst:67
+msgid "Read-only access to security-relevant audit entries."
+msgstr ""
+
+#: ../manage/roles/permissions.rst:68
 msgid "``admin.branding``"
 msgstr "``admin.branding``"
 
-#: ../manage/roles/permissions.rst:66
+#: ../manage/roles/permissions.rst:69
 msgid ":doc:`Settings > Branding </settings/branding>`"
 msgstr ":doc:`Подешавања > Брендинг </settings/branding>`"
 
-#: ../manage/roles/permissions.rst:68
+#: ../manage/roles/permissions.rst:71
 msgid "``admin.calendar``"
 msgstr "``admin.calendar``"
 
-#: ../manage/roles/permissions.rst:69
+#: ../manage/roles/permissions.rst:72
 msgid ":doc:`Manage > Calendars </manage/calendars>`"
 msgstr ":doc:`Управљање > Календари </manage/calendars>`"
 
-#: ../manage/roles/permissions.rst:70
+#: ../manage/roles/permissions.rst:73
 msgid "Required for :doc:`/manage/slas`."
 msgstr "Обавезно за :doc:`/manage/slas`."
 
-#: ../manage/roles/permissions.rst:71
+#: ../manage/roles/permissions.rst:74
 msgid "``admin.channel_chat``"
 msgstr "``admin.channel_chat``"
 
-#: ../manage/roles/permissions.rst:72
+#: ../manage/roles/permissions.rst:75
 msgid ":doc:`Channels > Chat </channels/chat>`"
 msgstr ":doc:`Канали > Ћаскање </channels/chat>`"
 
@@ -12623,43 +12640,43 @@ msgstr "Подешавање канала за ћаскање."
 msgid "Access for agents: ``chat.agent``."
 msgstr "Приступ ћаскању за оператере: ``chat.agent``."
 
-#: ../manage/roles/permissions.rst:75
+#: ../manage/roles/permissions.rst:78
 msgid "``admin.channel_email``"
 msgstr "``admin.channel_email``"
 
-#: ../manage/roles/permissions.rst:76
+#: ../manage/roles/permissions.rst:79
 msgid ":doc:`Channels > Email </channels/email/index>`"
 msgstr ":doc:`Канали > Имејл </channels/email/index>`"
 
-#: ../manage/roles/permissions.rst:78
+#: ../manage/roles/permissions.rst:81
 msgid "``admin.channel_facebook``"
 msgstr "``admin.channel_facebook``"
 
-#: ../manage/roles/permissions.rst:79
+#: ../manage/roles/permissions.rst:82
 msgid ":doc:`Channels > Facebook </channels/facebook>`"
 msgstr ":doc:`Канали > Facebook </channels/facebook>`"
 
-#: ../manage/roles/permissions.rst:81
+#: ../manage/roles/permissions.rst:84
 msgid "``admin.channel_formular``"
 msgstr "``admin.channel_formular``"
 
-#: ../manage/roles/permissions.rst:82
+#: ../manage/roles/permissions.rst:85
 msgid ":doc:`Channels > Form </channels/form>`"
 msgstr ":doc:`Канали > Форма </channels/form>`"
 
-#: ../manage/roles/permissions.rst:84
+#: ../manage/roles/permissions.rst:87
 msgid "``admin.channel_google``"
 msgstr "``admin.channel_google``"
 
-#: ../manage/roles/permissions.rst:85
+#: ../manage/roles/permissions.rst:88
 msgid ":doc:`Channels > Google </channels/google/index>`"
 msgstr ":doc:`Канали > Google </channels/google/index>`"
 
-#: ../manage/roles/permissions.rst:87
+#: ../manage/roles/permissions.rst:90
 msgid "``admin.channel_microsoft_graph``"
 msgstr "``admin.channel_microsoft_graph``"
 
-#: ../manage/roles/permissions.rst:88
+#: ../manage/roles/permissions.rst:91
 msgid ""
 ":doc:`Channels > Microsoft 365 Graph Email </channels/microsoft365-graph/"
 "index>`"
@@ -12667,69 +12684,69 @@ msgstr ""
 ":doc:`Канали > Microsoft 365 Graph имејл </channels/microsoft365-graph/"
 "index>`"
 
-#: ../manage/roles/permissions.rst:90
+#: ../manage/roles/permissions.rst:93
 msgid "``admin.channel_microsoft365``"
 msgstr "``admin.channel_microsoft365``"
 
-#: ../manage/roles/permissions.rst:91
+#: ../manage/roles/permissions.rst:94
 msgid ""
 ":doc:`Channels > Microsoft 365 IMAP Email </channels/microsoft365/index>`"
 msgstr ""
 ":doc:`Канали > Microsoft 365 IMAP имејл </channels/microsoft365/index>`"
 
-#: ../manage/roles/permissions.rst:93
+#: ../manage/roles/permissions.rst:96
 msgid "``admin.channel_sms``"
 msgstr "``admin.channel_sms``"
 
-#: ../manage/roles/permissions.rst:94
+#: ../manage/roles/permissions.rst:97
 msgid ":doc:`Channels > SMS </channels/sms>`"
 msgstr ":doc:`Канали > SMS </channels/sms>`"
 
-#: ../manage/roles/permissions.rst:96
+#: ../manage/roles/permissions.rst:99
 msgid "``admin.channel_telegram``"
 msgstr "``admin.channel_telegram``"
 
-#: ../manage/roles/permissions.rst:97
+#: ../manage/roles/permissions.rst:100
 msgid ":doc:`Channels > Telegram </channels/telegram>`"
 msgstr ":doc:`Канали > Telegram </channels/telegram>`"
 
-#: ../manage/roles/permissions.rst:99
+#: ../manage/roles/permissions.rst:102
 msgid "``admin.channel_web``"
 msgstr "``admin.channel_web``"
 
-#: ../manage/roles/permissions.rst:100
+#: ../manage/roles/permissions.rst:103
 msgid ":doc:`Channels > Web </channels/web>`"
 msgstr ":doc:`Канали > Веб </channels/web>`"
 
-#: ../manage/roles/permissions.rst:102
+#: ../manage/roles/permissions.rst:105
 msgid "``admin.channel_whatsapp``"
 msgstr "``admin.channel_whatsapp``"
 
-#: ../manage/roles/permissions.rst:103
+#: ../manage/roles/permissions.rst:106
 msgid ":doc:`Channels > Whatsapp </channels/whatsapp/index>`"
 msgstr ":doc:`Канали > Whatsapp </channels/whatsapp/index>`"
 
-#: ../manage/roles/permissions.rst:105
+#: ../manage/roles/permissions.rst:108
 msgid "``admin.checklist``"
 msgstr "``admin.checklist``"
 
-#: ../manage/roles/permissions.rst:106
+#: ../manage/roles/permissions.rst:109
 msgid ":doc:`Manage > Checklist </manage/checklist>`"
 msgstr ":doc:`Управљање > Списак задатака </manage/checklist>`"
 
-#: ../manage/roles/permissions.rst:108
+#: ../manage/roles/permissions.rst:111
 msgid "``admin.core_workflows``"
 msgstr "``admin.core_workflows``"
 
-#: ../manage/roles/permissions.rst:109
+#: ../manage/roles/permissions.rst:112
 msgid ":doc:`System > Core Workflows </system/core-workflows>`"
 msgstr ":doc:`Систем > Радни токови </system/core-workflows>`"
 
-#: ../manage/roles/permissions.rst:111
+#: ../manage/roles/permissions.rst:114
 msgid "``admin.data_privacy``"
 msgstr "``admin.data_privacy``"
 
-#: ../manage/roles/permissions.rst:112
+#: ../manage/roles/permissions.rst:115
 msgid ":doc:`System > Data Privacy </system/data-privacy>`"
 msgstr ":doc:`Систем > Приватност података </system/data-privacy>`"
 
@@ -12741,27 +12758,27 @@ msgstr "Будите опрезни, ова дозвола омогућава к
 msgid "delete data on the system."
 msgstr "бришу податке у систему."
 
-#: ../manage/roles/permissions.rst:115
+#: ../manage/roles/permissions.rst:118
 msgid "``admin.group``"
 msgstr "``admin.group``"
 
-#: ../manage/roles/permissions.rst:116
+#: ../manage/roles/permissions.rst:119
 msgid ":doc:`Manage > Groups </manage/groups/index>`"
 msgstr ":doc:`Управљање > Групе </manage/groups/index>`"
 
-#: ../manage/roles/permissions.rst:118
+#: ../manage/roles/permissions.rst:121
 msgid "``admin.integration``"
 msgstr "``admin.integration``"
 
-#: ../manage/roles/permissions.rst:119
+#: ../manage/roles/permissions.rst:122
 msgid ":doc:`System > Integrations </system/integrations/index>`"
 msgstr ":doc:`Систем > Интеграције </system/integrations/index>`"
 
-#: ../manage/roles/permissions.rst:121
+#: ../manage/roles/permissions.rst:124
 msgid "``admin.knowledge_base``"
 msgstr "``admin.knowledge_base``"
 
-#: ../manage/roles/permissions.rst:122
+#: ../manage/roles/permissions.rst:125
 msgid ":doc:`Manage > Knowledge Base </manage/knowledge-base>`"
 msgstr ":doc:`Управљање > База знања </manage/knowledge-base>`"
 
@@ -12777,47 +12794,47 @@ msgstr "чланака, неопходне су дозволе ``knowledge_base.
 msgid "``knowledge_base.editor`` are required."
 msgstr "``knowledge_base.editor``."
 
-#: ../manage/roles/permissions.rst:126
+#: ../manage/roles/permissions.rst:129
 msgid "``admin.macro``"
 msgstr "``admin.macro``"
 
-#: ../manage/roles/permissions.rst:127
+#: ../manage/roles/permissions.rst:130
 msgid ":doc:`Manage > Macros </manage/macros>`"
 msgstr ":doc:`Управљање > Макрои </manage/macros>`"
 
-#: ../manage/roles/permissions.rst:128
+#: ../manage/roles/permissions.rst:131
 msgid "In some cases, macros may also require ``admin.tag``."
 msgstr "У неким случајевима, макрои могу такође захтевати ``admin.tag``."
 
-#: ../manage/roles/permissions.rst:129
+#: ../manage/roles/permissions.rst:132
 msgid "``admin.maintenance``"
 msgstr "``admin.maintenance``"
 
-#: ../manage/roles/permissions.rst:130
+#: ../manage/roles/permissions.rst:133
 msgid ":doc:`System > Maintenance </system/maintenance>`"
 msgstr ":doc:`Систем > Одржавање </system/maintenance>`"
 
-#: ../manage/roles/permissions.rst:132
+#: ../manage/roles/permissions.rst:135
 msgid "``admin.monitoring``"
 msgstr "``admin.monitoring``"
 
-#: ../manage/roles/permissions.rst:133
+#: ../manage/roles/permissions.rst:136
 msgid ":doc:`System > Monitoring </system/monitoring>`"
 msgstr ":doc:`Систем > Надгледање </system/monitoring>`"
 
-#: ../manage/roles/permissions.rst:135
+#: ../manage/roles/permissions.rst:138
 msgid "``admin.object``"
 msgstr "``admin.object``"
 
-#: ../manage/roles/permissions.rst:136
+#: ../manage/roles/permissions.rst:139
 msgid ":doc:`System > Objects </system/objects>`"
 msgstr ":doc:`Систем > Објекти </system/objects>`"
 
-#: ../manage/roles/permissions.rst:138
+#: ../manage/roles/permissions.rst:141
 msgid "``admin.organization``"
 msgstr "``admin.organization``"
 
-#: ../manage/roles/permissions.rst:139
+#: ../manage/roles/permissions.rst:142
 msgid ":doc:`Manage > Organizations </manage/organizations/index>`"
 msgstr ":doc:`Управљање > Организације </manage/organizations/index>`"
 
@@ -12833,132 +12850,132 @@ msgstr "из траке за претрагу, чак и без ове дозв�
 msgid "edit an organization's name, domain, and notes!"
 msgstr "изменити назив, домен и напомену организације!"
 
-#: ../manage/roles/permissions.rst:143
+#: ../manage/roles/permissions.rst:146
 msgid "``admin.overview``"
 msgstr "``admin.overview``"
 
-#: ../manage/roles/permissions.rst:144
+#: ../manage/roles/permissions.rst:147
 msgid ":doc:`Manage > Overviews</manage/overviews>`"
 msgstr ":doc:`Управљање > Прегледи </manage/overviews>`"
 
-#: ../manage/roles/permissions.rst:146
+#: ../manage/roles/permissions.rst:149
 msgid "``admin.package``"
 msgstr "``admin.package``"
 
-#: ../manage/roles/permissions.rst:147
+#: ../manage/roles/permissions.rst:150
 msgid ":doc:`System > Packages </system/packages>`"
 msgstr ":doc:`Систем > Пакети </system/packages>`"
 
-#: ../manage/roles/permissions.rst:149
+#: ../manage/roles/permissions.rst:152
 msgid "``admin.public_links``"
 msgstr "``admin.public_links``"
 
-#: ../manage/roles/permissions.rst:150
+#: ../manage/roles/permissions.rst:153
 msgid ":doc:`Manage > Public Links </manage/public-links>`"
 msgstr ":doc:`Управљање > Јавни линкови </manage/public-links>`"
 
-#: ../manage/roles/permissions.rst:152
+#: ../manage/roles/permissions.rst:155
 msgid "``admin.report_profile``"
 msgstr "``admin.report_profile``"
 
-#: ../manage/roles/permissions.rst:153
+#: ../manage/roles/permissions.rst:156
 msgid ":doc:`Manage > Report Profiles </manage/report-profiles>`"
 msgstr ":doc:`Управљање > Профили извештаја </manage/report-profiles>`"
 
-#: ../manage/roles/permissions.rst:154
+#: ../manage/roles/permissions.rst:157
 msgid "Access to view reports: ``report``"
 msgstr "Приступ за преглед извештаја: ``report``"
 
-#: ../manage/roles/permissions.rst:155
+#: ../manage/roles/permissions.rst:158
 msgid "``admin.role``"
 msgstr "``admin.role``"
 
-#: ../manage/roles/permissions.rst:156
+#: ../manage/roles/permissions.rst:159
 msgid ":doc:`Manage > Roles </manage/roles/index>`"
 msgstr ":doc:`Управљање > Улоге </manage/roles/index>`"
 
-#: ../manage/roles/permissions.rst:158
+#: ../manage/roles/permissions.rst:161
 msgid "``admin.scheduler``"
 msgstr "``admin.scheduler``"
 
-#: ../manage/roles/permissions.rst:159
+#: ../manage/roles/permissions.rst:162
 msgid ":doc:`Manage > Scheduler </manage/scheduler>`"
 msgstr ":doc:`Управљање > Планер </manage/scheduler>`"
 
-#: ../manage/roles/permissions.rst:161
+#: ../manage/roles/permissions.rst:164
 msgid "``admin.security``"
 msgstr "``admin.security``"
 
-#: ../manage/roles/permissions.rst:162
+#: ../manage/roles/permissions.rst:165
 msgid ":doc:`Settings > Security </settings/security>`"
 msgstr ":doc:`Подешавања > Безбедност </settings/security>`"
 
-#: ../manage/roles/permissions.rst:163
+#: ../manage/roles/permissions.rst:166
 msgid "This also includes third party authentications."
 msgstr ""
 "подешавања Zammad-а. Ово такође покрива аутентификацију преко трећег лица."
 
-#: ../manage/roles/permissions.rst:164
+#: ../manage/roles/permissions.rst:167
 msgid "``admin.session``"
 msgstr "``admin.session``"
 
-#: ../manage/roles/permissions.rst:165
+#: ../manage/roles/permissions.rst:168
 msgid ":doc:`System > Sessions </system/sessions>`"
 msgstr ":doc:`Систем > Сесије </system/sessions>`"
 
-#: ../manage/roles/permissions.rst:167
+#: ../manage/roles/permissions.rst:170
 msgid "``admin.sla``"
 msgstr "``admin.sla``"
 
-#: ../manage/roles/permissions.rst:168
+#: ../manage/roles/permissions.rst:171
 msgid ":doc:`Manage > SLAs </manage/slas>`"
 msgstr ":doc:`Управљање > SLA </manage/slas>`"
 
-#: ../manage/roles/permissions.rst:170
+#: ../manage/roles/permissions.rst:173
 msgid "``admin.system``"
 msgstr "``admin.system``"
 
-#: ../manage/roles/permissions.rst:171
+#: ../manage/roles/permissions.rst:174
 msgid ":doc:`Settings > System </settings/system/index>`"
 msgstr ":doc:`Подешавања > Систем </settings/system/index>`"
 
-#: ../manage/roles/permissions.rst:173
+#: ../manage/roles/permissions.rst:176
 msgid "``admin.system_report``"
 msgstr "``admin.system_report``"
 
-#: ../manage/roles/permissions.rst:174
+#: ../manage/roles/permissions.rst:177
 msgid ":doc:`System > System Report </system/system-report>`"
 msgstr ":doc:`Систем > Системски извештај </system/system-report>`"
 
-#: ../manage/roles/permissions.rst:176
+#: ../manage/roles/permissions.rst:179
 msgid "``admin.tag``"
 msgstr "``admin.tag``"
 
-#: ../manage/roles/permissions.rst:177
+#: ../manage/roles/permissions.rst:180
 msgid ":doc:`Manage > Tags </manage/tags>`"
 msgstr ":doc:`Управљање > Ознаке </manage/tags>`"
 
-#: ../manage/roles/permissions.rst:179
+#: ../manage/roles/permissions.rst:182
 msgid "``admin.template``"
 msgstr "``admin.template``"
 
-#: ../manage/roles/permissions.rst:180
+#: ../manage/roles/permissions.rst:183
 msgid ":doc:`Manage > Templates </manage/templates>`"
 msgstr ":doc:`Управљање > Шаблони </manage/templates>`"
 
-#: ../manage/roles/permissions.rst:182
+#: ../manage/roles/permissions.rst:185
 msgid "``admin.text_module``"
 msgstr "``admin.text_module``"
 
-#: ../manage/roles/permissions.rst:183
+#: ../manage/roles/permissions.rst:186
 msgid ":doc:`Manage > Text Modules </manage/text-modules>`"
 msgstr ":doc:`Управљање > Текстуални исечци </manage/text-modules>`"
 
-#: ../manage/roles/permissions.rst:185
+#: ../manage/roles/permissions.rst:188
 msgid "``admin.ticket``"
 msgstr "``admin.ticket``"
 
-#: ../manage/roles/permissions.rst:186
+#: ../manage/roles/permissions.rst:189
 msgid ":doc:`Settings > Tickets </settings/ticket>`"
 msgstr ":doc:`Подешавања > Тикети </settings/ticket>`"
 
@@ -12970,75 +12987,75 @@ msgstr "Подешавања тикета. За приступ оператер�
 msgid "``ticket.agent`` is required."
 msgstr "обавезна је ``ticket.agent`` дозвола."
 
-#: ../manage/roles/permissions.rst:189
+#: ../manage/roles/permissions.rst:192
 msgid "``admin.ticket_auto_assignment``"
 msgstr "``admin.ticket_auto_assignment``"
 
-#: ../manage/roles/permissions.rst:190
+#: ../manage/roles/permissions.rst:193
 msgid ":ref:`Settings > Ticket > Auto Assignment <auto_assignment>`"
 msgstr ":ref:`Подешавања > Тикет > Аутоматска додела тикета <auto_assignment>`"
 
-#: ../manage/roles/permissions.rst:192
+#: ../manage/roles/permissions.rst:195
 msgid "``admin.ticket_duplicate_detection``"
 msgstr "``admin.ticket_duplicate_detection``"
 
-#: ../manage/roles/permissions.rst:193
+#: ../manage/roles/permissions.rst:196
 msgid ":ref:`Settings > Ticket > Duplicate Detection <duplicate_detection>`"
 msgstr ":ref:`Подешавања > Тикет > Откривање дупликата <duplicate_detection>`"
 
-#: ../manage/roles/permissions.rst:195
+#: ../manage/roles/permissions.rst:198
 msgid "``admin.ticket_priority``"
 msgstr "``admin.ticket_priority``"
 
-#: ../manage/roles/permissions.rst:196
+#: ../manage/roles/permissions.rst:199
 msgid ":ref:`System > Objects >Ticket Priority <ticket-priority-reference>`"
 msgstr ":ref:`Систем > Објекти >Приоритет тикета <ticket-priority-reference>`"
 
-#: ../manage/roles/permissions.rst:198
+#: ../manage/roles/permissions.rst:201
 msgid "``admin.ticket_state``"
 msgstr "``admin.ticket_state``"
 
-#: ../manage/roles/permissions.rst:199
+#: ../manage/roles/permissions.rst:202
 msgid ":ref:`System > Objects >Ticket State <ticket-state-reference>`"
 msgstr ":ref:`Систем > Објекти > Стање тикета <ticket-state-reference>`"
 
-#: ../manage/roles/permissions.rst:201
+#: ../manage/roles/permissions.rst:204
 msgid "``admin.time_accounting``"
 msgstr "``admin.time_accounting``"
 
-#: ../manage/roles/permissions.rst:202
+#: ../manage/roles/permissions.rst:205
 msgid ":doc:`Manage > Time Accounting </manage/time-accounting>`"
 msgstr ":doc:`Управљање > Обрачун времена </manage/time-accounting>`"
 
-#: ../manage/roles/permissions.rst:203
+#: ../manage/roles/permissions.rst:206
 msgid "Also allows the export of accounted time records."
 msgstr "Такоће омогућује извоз уноса обрачуна времена."
 
-#: ../manage/roles/permissions.rst:204
+#: ../manage/roles/permissions.rst:207
 msgid "``admin.translation``"
 msgstr "``admin.translation``"
 
-#: ../manage/roles/permissions.rst:205
+#: ../manage/roles/permissions.rst:208
 msgid ":doc:`System > Translations </system/translations>`"
 msgstr ":doc:`Систем > Преводи </system/translations>`"
 
-#: ../manage/roles/permissions.rst:206
+#: ../manage/roles/permissions.rst:209
 msgid "Also enables inline translation."
 msgstr "Такође омогућује непосредне преводе."
 
-#: ../manage/roles/permissions.rst:207
+#: ../manage/roles/permissions.rst:210
 msgid "``admin.trigger``"
 msgstr "``admin.trigger``"
 
-#: ../manage/roles/permissions.rst:208
+#: ../manage/roles/permissions.rst:211
 msgid ":doc:`Manage > Triggers </manage/trigger>`"
 msgstr ":doc:`Управљање > Окидачи </manage/trigger>`"
 
-#: ../manage/roles/permissions.rst:210
+#: ../manage/roles/permissions.rst:213
 msgid "``admin.user``"
 msgstr "``admin.user``"
 
-#: ../manage/roles/permissions.rst:211
+#: ../manage/roles/permissions.rst:214
 msgid ":doc:`Manage > Users </manage/users/index>`"
 msgstr ":doc:`Управљање > Корисници </manage/users/index>`"
 
@@ -13058,19 +13075,19 @@ msgstr "Водите рачуна да ова дозвола омогућава 
 msgid ":ref:`hijack other user sessions <view-from-users-perspective>`."
 msgstr ":ref:`преузимају сесије корисника <view-from-users-perspective>`."
 
-#: ../manage/roles/permissions.rst:216
+#: ../manage/roles/permissions.rst:219
 msgid "``admin.webhook``"
 msgstr "``admin.webhook``"
 
-#: ../manage/roles/permissions.rst:217
+#: ../manage/roles/permissions.rst:220
 msgid ":doc:`Manage > Webhook </manage/webhook>`"
 msgstr ":doc:`Управљање > Повратни позив </manage/webhook>`"
 
-#: ../manage/roles/permissions.rst:221
+#: ../manage/roles/permissions.rst:224
 msgid "User Preferences"
 msgstr "Подешавања преузимања"
 
-#: ../manage/roles/permissions.rst:230
+#: ../manage/roles/permissions.rst:233
 msgid "``user_preferences.access_token``"
 msgstr "``user_preferences.access_token``"
 
@@ -13090,11 +13107,11 @@ msgstr "Генерисани кључеви никада неће имати в�
 msgid "than the user that generated them."
 msgstr "од корисника који их је генерисао."
 
-#: ../manage/roles/permissions.rst:235
+#: ../manage/roles/permissions.rst:238
 msgid "``user_preferences.appearance``"
 msgstr "``user_preferences.appearance``"
 
-#: ../manage/roles/permissions.rst:236
+#: ../manage/roles/permissions.rst:239
 msgid "Appearance configuration"
 msgstr "Подешавање изгледа"
 
@@ -13106,31 +13123,31 @@ msgstr "Корисници могу да изаберу између тамно�
 msgid "automatic mode."
 msgstr "аутоматског мода."
 
-#: ../manage/roles/permissions.rst:239
+#: ../manage/roles/permissions.rst:242
 msgid "``user_preferences.avatar``"
 msgstr "``user_preferences.avatar``"
 
-#: ../manage/roles/permissions.rst:240
+#: ../manage/roles/permissions.rst:243
 msgid "Avatar settings"
 msgstr "Подешавања аватара"
 
-#: ../manage/roles/permissions.rst:241
+#: ../manage/roles/permissions.rst:244
 msgid "Allows users to add a custom avatar image."
 msgstr "Дозвољава корисницима подешавање аватар сличице."
 
-#: ../manage/roles/permissions.rst:242
+#: ../manage/roles/permissions.rst:245
 msgid "``user_preferences.calendar``"
 msgstr "``user_preferences.calendar``"
 
-#: ../manage/roles/permissions.rst:243
+#: ../manage/roles/permissions.rst:246
 msgid "Configure the calendar feed"
 msgstr "Подешавање извора календара"
 
-#: ../manage/roles/permissions.rst:245
+#: ../manage/roles/permissions.rst:248
 msgid "``user_preferences.device``"
 msgstr "``user_preferences.device``"
 
-#: ../manage/roles/permissions.rst:246
+#: ../manage/roles/permissions.rst:249
 msgid "Manage device login sessions"
 msgstr "Управљање сесијама пријаве преко уређаја"
 
@@ -13150,23 +13167,23 @@ msgstr ""
 "Да бисте сазнали више, погледајте :doc:`/manage/trigger/system-"
 "notifications`."
 
-#: ../manage/roles/permissions.rst:250
+#: ../manage/roles/permissions.rst:253
 msgid "``user_preferences.language``"
 msgstr "``user_preferences.language``"
 
-#: ../manage/roles/permissions.rst:251
+#: ../manage/roles/permissions.rst:254
 msgid "Configure the UI locale/language"
 msgstr "Подешавање језика корисничког интерфејса"
 
-#: ../manage/roles/permissions.rst:252
+#: ../manage/roles/permissions.rst:255
 msgid "Allows users to set their preferred language."
 msgstr "Дозвољава корисницима подешавање жељеног језика."
 
-#: ../manage/roles/permissions.rst:253
+#: ../manage/roles/permissions.rst:256
 msgid "``user_preferences.linked_accounts``"
 msgstr "``user_preferences.linked_accounts``"
 
-#: ../manage/roles/permissions.rst:254
+#: ../manage/roles/permissions.rst:257
 msgid "Account linking"
 msgstr "Повезивање налога"
 
@@ -13194,7 +13211,7 @@ msgid "is the only way users can utilize third-party logins."
 msgstr ""
 "је једини начин на који ваши корисници могу да се пријаве преко трећег лица."
 
-#: ../manage/roles/permissions.rst:259
+#: ../manage/roles/permissions.rst:262
 msgid "``user_preferences.notifications``"
 msgstr "``user_preferences.notifications``"
 
@@ -13223,7 +13240,7 @@ msgstr ""
 msgid "Customers can't receive ticket notifications at all."
 msgstr "Клијенти уопште не могу да примају обавештења о тикетима."
 
-#: ../manage/roles/permissions.rst:265
+#: ../manage/roles/permissions.rst:268
 msgid "``user_preferences.out_of_office``"
 msgstr "``user_preferences.out_of_office``"
 
@@ -13251,7 +13268,7 @@ msgstr ":doc:`ниова групних дозвола </manage/groups/access-le
 msgid "they're replacing."
 msgstr "која замењује оператера."
 
-#: ../manage/roles/permissions.rst:271
+#: ../manage/roles/permissions.rst:274
 msgid "``user_preferences.overview_sorting``"
 msgstr "``user_preferences.overview_sorting``"
 
@@ -13279,11 +13296,11 @@ msgstr "преписан од стране администратора. Про�
 msgid "overviews has no effect on custom orders."
 msgstr "прегледа нема утицаја на прилагођене редоследе."
 
-#: ../manage/roles/permissions.rst:278
+#: ../manage/roles/permissions.rst:281
 msgid "``user_preferences.password``"
 msgstr "``user_preferences.password``"
 
-#: ../manage/roles/permissions.rst:279
+#: ../manage/roles/permissions.rst:282
 msgid "Change account password"
 msgstr "Промена лозинке налога"
 
@@ -13327,7 +13344,7 @@ msgstr ""
 msgid "that users can setup and configure it."
 msgstr "да би корисници могли да је подесе и конфигуришу."
 
-#: ../manage/roles/permissions.rst:300
+#: ../manage/roles/permissions.rst:303
 msgid "``knowledge_base.editor``"
 msgstr "``knowledge_base.editor``"
 
@@ -13339,11 +13356,11 @@ msgstr "Дозвола додавања и уређивања"
 msgid "for knowledge base articles"
 msgstr "чланака базе знања"
 
-#: ../manage/roles/permissions.rst:303
+#: ../manage/roles/permissions.rst:306
 msgid "The editor permission always includes the reader permission."
 msgstr "Дозволе уредника увек укључују дозволе читаоца."
 
-#: ../manage/roles/permissions.rst:304
+#: ../manage/roles/permissions.rst:307
 msgid "``knowledge_base.reader``"
 msgstr "``knowledge_base.reader``"
 
@@ -13375,11 +13392,11 @@ msgstr "базу знања. Имајте на уму да ово може би�
 msgid "as reader permission provides access to internal answers!"
 msgstr "јер дозвола читаоца омогућава приступ интерним чланцима!"
 
-#: ../manage/roles/permissions.rst:312
+#: ../manage/roles/permissions.rst:315
 msgid "``report``"
 msgstr "``report``"
 
-#: ../manage/roles/permissions.rst:313
+#: ../manage/roles/permissions.rst:316
 msgid ":user-docs:`Reporting (user docs)</extras/reporting.html>`"
 msgstr ""
 ":user-docs:`Извештавање (корисничка документација)</extras/reporting.html>`"
@@ -13404,11 +13421,11 @@ msgstr ""
 "супервизоре и ограничите приступ преко :doc:`профила извештаја </manage/"
 "report-profiles>`."
 
-#: ../manage/roles/permissions.rst:318 ../settings/security/base.rst:96
+#: ../manage/roles/permissions.rst:321 ../settings/security/base.rst:96
 msgid "``ticket.customer``"
 msgstr "``ticket.customer``"
 
-#: ../manage/roles/permissions.rst:319
+#: ../manage/roles/permissions.rst:322
 msgid "Allows a user to be set as customer of a ticket"
 msgstr "Дозвољава корисницима подесе и конфигуришу"
 
@@ -13617,7 +13634,8 @@ msgstr ""
 "Изаберите време извршавања када би планер требало да се покрене. Зависи од "
 "подешене :doc:`Zammad-ове временске зоне </settings/branding>`."
 
-#: ../manage/scheduler.rst:97 ../system/core-workflows/how-do-they-work.rst:7
+#: ../manage/scheduler.rst:97 ../system/audit-logs.rst:61
+#: ../system/core-workflows/how-do-they-work.rst:7
 #: ../system/core-workflows/learn-by-example.rst:39
 #: ../system/core-workflows/learn-by-example.rst:94
 #: ../system/core-workflows/learn-by-example.rst:142
@@ -14949,6 +14967,7 @@ msgid "Activity type (if enabled)"
 msgstr "Врста активности (ако је укључено)"
 
 #: ../manage/time-accounting.rst:153 ../manage/time-accounting.rst:167
+#: ../system/audit-logs.rst:70
 msgid "Created at"
 msgstr "Додато у"
 
@@ -20392,7 +20411,7 @@ msgstr "Када се шаљу?"
 msgid "**All users** are notified about:"
 msgstr "**Сви корисници** се обавештавају о:"
 
-#: ../misc/system-notifications.rst:20
+#: ../misc/system-notifications.rst:20 ../system/audit-logs.rst:33
 msgid "Password changes"
 msgstr "Променама лозинке"
 
@@ -27330,6 +27349,197 @@ msgstr ""
 "Коначно, можете да подесите **Претражи тикете у следећим стањима** на **Сви "
 "тикети** или **Отворени тикети**. У зависности од тренутног стања тикета, "
 "тикет ће бити узет у обзир."
+
+#: ../system/audit-logs.rst:2
+msgid "Audit Logs"
+msgstr ""
+
+#: ../system/audit-logs.rst:4
+msgid ""
+"The audit log records security-relevant changes in your Zammad instance: who "
+"changed what and when. You can find it under *System > Audit Logs*. The "
+"``admin.audit_log`` permission is required to access it."
+msgstr ""
+
+#: ../system/audit-logs.rst:8
+msgid ""
+"The audit log is read-only. It does not record day-to-day ticket updates. "
+"For those, see the ticket history."
+msgstr ""
+
+#: ../system/audit-logs.rst:12
+#, fuzzy
+#| msgid "What Is a Role?"
+msgid "What Is Recorded"
+msgstr "Шта је то улога?"
+
+#: ../system/audit-logs.rst:14
+msgid ""
+"The audit log records basically all actions where admin permissions are "
+"required. No matter if a setting got adjusted or an object like a trigger "
+"got touched."
+msgstr ""
+
+#: ../system/audit-logs.rst:18
+msgid "Configuration adjustments and changes of data in the admin area:"
+msgstr ""
+
+#: ../system/audit-logs.rst:20
+#, fuzzy
+#| msgid "Group Permissions"
+msgid "Groups, roles, and permissions"
+msgstr "Групне дозволе"
+
+#: ../system/audit-logs.rst:21
+msgid ""
+"Overviews, triggers, schedulers, macros, templates, text modules and "
+"checklist templates"
+msgstr ""
+
+#: ../system/audit-logs.rst:23
+msgid "Channels, postmaster filters, signatures, LDAP sources and webhooks"
+msgstr ""
+
+#: ../system/audit-logs.rst:24
+msgid ""
+"Calendars, SLAs, time accounting, core workflows, object attributes, public "
+"links and report profiles"
+msgstr ""
+
+#: ../system/audit-logs.rst:26
+#, fuzzy
+#| msgid "Account settings page"
+msgid "System settings and packages"
+msgstr "Страница подешавања налога"
+
+#: ../system/audit-logs.rst:27
+msgid "AI agents and AI text tools"
+msgstr ""
+
+#: ../system/audit-logs.rst:28
+#, fuzzy
+#| msgid "SSL Certificates"
+msgid "S/MIME, PGP and SSL certificates"
+msgstr "SSL сертификати"
+
+#: ../system/audit-logs.rst:29
+#, fuzzy
+#| msgid "Knowledge Base: Configure languages"
+msgid "Knowledge bases and their languages"
+msgstr "База знања: подешавање језика"
+
+#: ../system/audit-logs.rst:31
+msgid ""
+"User account changes (only changes for agents and admins accounts are "
+"recorded):"
+msgstr ""
+
+#: ../system/audit-logs.rst:34
+msgid "Activation and deactivation of accounts"
+msgstr ""
+
+#: ../system/audit-logs.rst:35
+#, fuzzy
+#| msgid "than one group exists, the group permissions"
+msgid "Added or removed roles and group permissions"
+msgstr "више од једне групе, табела групних дозвола"
+
+#: ../system/audit-logs.rst:36
+#, fuzzy
+#| msgid "Two-factor Authentication Methods"
+msgid "Two-factor authentication changes"
+msgstr "Методи двофакторске аутентификације"
+
+#: ../system/audit-logs.rst:38
+#, fuzzy
+#| msgid "Sessions"
+msgid "Session events:"
+msgstr "Сесије"
+
+#: ../system/audit-logs.rst:40
+#, fuzzy
+#| msgid ":ref:`hijack other user sessions <view-from-users-perspective>`."
+msgid ""
+"Taking over another user's session via ``View from user's perspective`` and "
+"switching back"
+msgstr ":ref:`преузимају сесије корисника <view-from-users-perspective>`."
+
+#: ../system/audit-logs.rst:44
+msgid "Viewing Audit Log Entries"
+msgstr ""
+
+#: ../system/audit-logs.rst:46
+msgid ""
+"By default, the audit log is sorted by **Created at**, with the newest "
+"entries shown first. The **Created at** timestamp indicates when the audit "
+"log entry was created, not when the affected object was created. Click any "
+"column heading to change the sort order. Use the **Search for audit logs** "
+"bar to find entries. The list displays the following information:"
+msgstr ""
+
+#: ../system/audit-logs.rst:53
+#, fuzzy
+#| msgid "Checks performed action."
+msgid "The user who performed the action."
+msgstr "Проверава извршену радњу."
+
+#: ../system/audit-logs.rst:56
+msgid ""
+"The action that was performed. Available actions include **create**, "
+"**update**, **destroy** (delete), **switch to user** and **switch back to "
+"user**."
+msgstr ""
+
+#: ../system/audit-logs.rst:61
+#, fuzzy
+#| msgid "Matches if content has changed."
+msgid "The type of object that was changed."
+msgstr "Подудара се ако је садржај измењен."
+
+#: ../system/audit-logs.rst:64
+#, fuzzy
+#| msgid "Object"
+msgid "Object name"
+msgstr "Објекат"
+
+#: ../system/audit-logs.rst:64
+msgid "The name of the object that was changed."
+msgstr ""
+
+#: ../system/audit-logs.rst:67
+msgid "Source IP"
+msgstr ""
+
+#: ../system/audit-logs.rst:67
+msgid "The IP address from which the action was performed."
+msgstr ""
+
+#: ../system/audit-logs.rst:70
+#, fuzzy
+#| msgid "Date and time the request was sent."
+msgid "The date and time when the entry was created."
+msgstr "Датум и време слања захтева."
+
+#: ../system/audit-logs.rst:72
+msgid ""
+"Clicking an entry opens a read-only dialog with the recorded changes. Lines "
+"prefixed with ``-`` and highlighted in red show previous values. Lines "
+"prefixed with ``+`` and highlighted in green show new values. Session "
+"takeover entries show **No changes** because they record the event rather "
+"than an object change."
+msgstr ""
+
+#: ../system/audit-logs.rst:78
+#, fuzzy
+#| msgid "Authentication"
+msgid "Retention"
+msgstr "Аутентификација"
+
+#: ../system/audit-logs.rst:80
+msgid ""
+"Zammad automatically removes audit log entries older than 12 months. This "
+"retention period is not configurable. The cleanup runs once a day."
+msgstr ""
 
 #: ../system/core-workflows.rst:2
 msgid "Core Workflows"
@@ -36338,9 +36548,6 @@ msgstr "Одаберите број оператера који су вам не
 #~ msgid "This setting by default is set to ``no``."
 #~ msgstr "Ово подешавање је подразумевано постављено на ``не``."
 
-#~ msgid "Knowledge Base: Configure languages"
-#~ msgstr "База знања: подешавање језика"
-
 #~ msgid ""
 #~ "The default locale is displayed when the visitor's locale is not "
 #~ "supported."
@@ -39646,9 +39853,6 @@ msgstr "Одаберите број оператера који су вам не
 #~ msgid "Give access to"
 #~ msgstr "Омогућује приступ"
 
-#~ msgid "``admin.ai``"
-#~ msgstr "``admin.ai``"
-
 #~ msgid "AI > Smart Assist Text Tools"
 #~ msgstr "AI > Smart Assist текстуалне алатке"
 
@@ -39771,9 +39975,6 @@ msgstr "Одаберите број оператера који су вам не
 #~ "Синхронизација ваших LDAP „група” са Zammad улогама може да олакша "
 #~ "*начин* управљања приступом. Да бисте сазнали више, погледајте :doc:`/"
 #~ "system/integrations/ldap/index`."
-
-#~ msgid "What Is a Role?"
-#~ msgstr "Шта је то улога?"
 
 #~ msgid ""
 #~ "Some users can do things others can't (like close a ticket). Users have "
@@ -42386,9 +42587,6 @@ msgstr "Одаберите број оператера који су вам не
 
 #~ msgid "Contains the remotes response header."
 #~ msgstr "Садржи заглавље одговора удаљеног сервера."
-
-#~ msgid "Date and time the request was sent."
-#~ msgstr "Датум и време слања захтева."
 
 #~ msgid "Nested groups are not supported."
 #~ msgstr "Угнежђене групе нису подржане."
