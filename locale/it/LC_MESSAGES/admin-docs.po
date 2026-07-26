@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-20 12:50+0200\n"
-"PO-Revision-Date: 2026-07-22 06:20+0000\n"
-"Last-Translator: lenny76 <lenny76@lenny76.com>\n"
+"PO-Revision-Date: 2026-07-26 07:10+0000\n"
+"Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/it/>\n"
 "Language: it\n"
@@ -30236,20 +30236,17 @@ msgid "Elasticsearch (SaaS)"
 msgstr "Elasticsearch (SaaS)"
 
 #: ../system/integrations/elasticsearch.rst:4
-#, fuzzy
-#| msgid ""
-#| "The Elasticsearch integration allows you to create a read-only user to "
-#| "use with your favorite reporting tool (e.g. :docs:`Grafana </appendix/"
-#| "reporting-tools-thirdparty/grafana.html>`)."
 msgid ""
 "The Elasticsearch (SaaS) integration lets you query your instance's search "
 "index directly with a reporting tool such as :docs:`Grafana </appendix/"
 "reporting-tools-thirdparty/grafana.html>`. You can find it under *System > "
 "Integrations > Elasticsearch*."
 msgstr ""
-"L'integrazione Elasticsearch ti consente di creare un utente di sola lettura "
-"da utilizzare con il tuo strumento di reporting preferito (ad es. "
-":docs:`Grafana </appendix/reporting-tools-thirdparty/grafana.html>`)."
+"L'integrazione di Elasticsearch (SaaS) consente di interrogare direttamente "
+"l'indice di ricerca della propria istanza tramite uno strumento di "
+"reportistica come :docs:`Grafana </appendix/reporting-tools-thirdparty/"
+"grafana.html>`. È possibile trovarla in *Sistema > Integrazioni > "
+"Elasticsearch*."
 
 #: ../system/integrations/elasticsearch.rst:11
 msgid ""
@@ -30257,6 +30254,10 @@ msgid ""
 "Self hosted customers already have full control over their own Elasticsearch "
 "instances and do not need this integration."
 msgstr ""
+"Disponibile solo per i clienti **SaaS** con un piano **Plus** o "
+"**Ultimate**. I clienti in modalità self-hosted hanno già il pieno controllo "
+"delle proprie istanze Elasticsearch e non hanno bisogno di questa "
+"integrazione."
 
 #: ../system/integrations/elasticsearch.rst:15
 msgid ""
@@ -30265,46 +30266,43 @@ msgid ""
 "instance, including sensitive customer information. Anyone with the "
 "credentials can read them."
 msgstr ""
+"**L'indice contiene tutti i dati dei ticket e dei clienti. Mantieni segrete "
+"le credenziali!** L'indice include i record relativi a ticket, utenti e "
+"organizzazioni della tua istanza, comprese le informazioni sensibili dei "
+"clienti. Chiunque disponga delle credenziali può leggerli."
 
 #: ../system/integrations/elasticsearch.rst:None
 msgid "Elasticsearch integration page on SaaS environments"
 msgstr "Pagina di integrazione Elasticsearch su ambienti SaaS"
 
 #: ../system/integrations/elasticsearch.rst:25
-#, fuzzy
-#| msgid "Please note the following limitations:"
 msgid "The integration has the following limitations:"
-msgstr "Si prega di notare le seguenti limitazioni:"
+msgstr "Questa integrazione è soggetta alle seguenti limitazioni:"
 
 #: ../system/integrations/elasticsearch.rst:27
-#, fuzzy
-#| msgid ""
-#| "Reporting tools that require to write into the indexes (like Kibana) are "
-#| "not supported"
 msgid ""
 "Access to the search index is read-only. That means reporting tools that "
 "need to write to the indexes (such as Kibana) are not supported."
 msgstr ""
-"Gli strumenti di reporting che richiedono la scrittura negli indici (come "
-"Kibana) non sono supportati"
+"L'accesso all'indice di ricerca è in sola lettura. Ciò significa che gli "
+"strumenti di reportistica che devono scrivere negli indici (come Kibana) non "
+"sono supportati."
 
 #: ../system/integrations/elasticsearch.rst:29
-#, fuzzy
-#| msgid "You can create actions to:"
 msgid "You can create credentials for one user only."
-msgstr "Puoi creare azioni per:"
+msgstr "Puoi creare le credenziali per un solo utente."
 
 #: ../system/integrations/elasticsearch.rst:30
 msgid ""
 "It is not possible to allow or restrict index access for specific IP "
 "addresses."
 msgstr ""
+"Non è possibile consentire o limitare l'accesso all'indice per specifici "
+"indirizzi IP."
 
 #: ../system/integrations/elasticsearch.rst:34
-#, fuzzy
-#| msgid "Managing Accounts"
 msgid "Enabling Access"
-msgstr "Gestione Account"
+msgstr "Abilitazione dell'accesso"
 
 #: ../system/integrations/elasticsearch.rst:36
 msgid ""
@@ -30313,6 +30311,12 @@ msgid ""
 "seconds, a one-time dialog with the Elasticsearch username and password "
 "shows up. Note the password down, it is displayed only once."
 msgstr ""
+"L'accesso esterno all'indice di ricerca della tua istanza è disabilitato per "
+"impostazione predefinita. Per abilitarlo, attiva semplicemente "
+"l'interruttore nella parte superiore della pagina. Dopo alcuni secondi, "
+"verrà visualizzata una finestra di dialogo con il nome utente e la password "
+"di Elasticsearch. Annota la password, poiché viene visualizzata solo una "
+"volta."
 
 #: ../system/integrations/elasticsearch.rst:41
 msgid ""
@@ -30322,10 +30326,16 @@ msgid ""
 "you for confirmation, then invalidates the current password and shows the "
 "new one in a one-time dialog."
 msgstr ""
+"La pagina mostra anche le sezioni Impostazioni di connessione, **Indici "
+"disponibili** e **Credenziali**. Si tratta di informazioni in sola lettura, "
+"fornite a scopo di riferimento. L'unico altro comando interattivo è "
+"``Reimposta password``. Questa azione richiede una conferma, dopodiché "
+"invalida la password attuale e mostra quella nuova in una finestra di "
+"dialogo monouso."
 
 #: ../system/integrations/elasticsearch.rst:48
 msgid "Browsing Indexes"
-msgstr ""
+msgstr "Consultazione indici"
 
 #: ../system/integrations/elasticsearch.rst:50
 msgid ""
@@ -30333,26 +30343,29 @@ msgid ""
 "useful for reporting, each shown with its full name including the per-"
 "instance index prefix:"
 msgstr ""
+"La tabella **Indici disponibili** della pagina elenca cinque indici "
+"particolarmente utili per la creazione di report, ciascuno mostrato con il "
+"suo nome completo, incluso il prefisso dell'indice per istanza:"
 
 #: ../system/integrations/elasticsearch.rst:54
 msgid "``<index-prefix>_production_ticket``"
-msgstr ""
+msgstr "``<index-prefix>_production_ticket``"
 
 #: ../system/integrations/elasticsearch.rst:55
 msgid "``<index-prefix>_production_chat_session``"
-msgstr ""
+msgstr "``<index-prefix>_production_chat_session``"
 
 #: ../system/integrations/elasticsearch.rst:56
 msgid "``<index-prefix>_production_cti_log``"
-msgstr ""
+msgstr "``<index-prefix>_production_cti_log``"
 
 #: ../system/integrations/elasticsearch.rst:57
 msgid "``<index-prefix>_production_user``"
-msgstr ""
+msgstr "``<index-prefix>_production_user``"
 
 #: ../system/integrations/elasticsearch.rst:58
 msgid "``<index-prefix>_production_organization``"
-msgstr ""
+msgstr "``<index-prefix>_production_organization``"
 
 #: ../system/integrations/elasticsearch.rst:60
 msgid ""
@@ -30362,12 +30375,20 @@ msgid ""
 "you will see a response listing all available aliases. The structure looks "
 "like this:"
 msgstr ""
+"Per visualizzare tutti gli indici disponibili, è possibile aprire l'URL di "
+"Elasticsearch nel browser web aggiungendo ``/_aliases?pretty=true`` "
+"(ottenendo ``https://<your-es-url>/_aliases?pretty=true``). Inserire le "
+"credenziali mostrate sopra e verrà visualizzata una risposta con l'elenco di "
+"tutti gli alias disponibili. La struttura è la seguente:"
 
 #: ../system/integrations/elasticsearch.rst:77
 msgid ""
 "Index names, field names and the alias list reflect Zammad's internal search-"
 "index schema. They may change between Zammad releases."
 msgstr ""
+"I nomi degli indici, i nomi dei campi e l'elenco degli alias riflettono lo "
+"schema interno dell'indice di ricerca di Zammad. Possono subire modifiche "
+"tra le diverse versioni di Zammad."
 
 #: ../system/integrations/exchange.rst:2
 msgid "Exchange"
