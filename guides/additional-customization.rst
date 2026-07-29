@@ -30,6 +30,19 @@ ticket- or customer-specific text such as the ticket title or customer name.
 Type :kbd:`:` :kbd:`:` in the text module content editor to search for
 available variables.
 
+Enable a Knowledge Base
+-----------------------
+
+A :doc:`knowledge base </manage/knowledge-base>` lets your customers solve
+common questions on their own, before they ever open a ticket. It also
+gives your agents a central place for company and support knowledge, so
+they don't have to dig through scattered documents or recreate answers
+from scratch. With shared articles, the wording stays consistent across
+agents and channels.
+
+Publish your first articles once you have a stable set of common questions
+and answers, then keep them in sync with your products and policies.
+
 Enable Checklist Feature
 ------------------------
 

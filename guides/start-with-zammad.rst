@@ -5,9 +5,9 @@ This guide walks you through the basic configuration of a fresh Zammad
 instance. If you don't have a Zammad instance yet, you can spin up a
 `free 30-day trial <https://zammad.com/en/getting-started>`_ to follow
 along. The navigation menu on the left mirrors the structure of the admin
-settings in Zammad, so the same mental map applies in both places (the
-**Misc** section at the end is the one exception, since it groups items
-that don't belong under a single settings area).
+settings in Zammad, so the same mental map applies in both places (**Guides**
+at the top is introductory reading, **Misc** at the end is a catch-all
+for items that don't belong under a single settings area).
 
 Concept
 -------
