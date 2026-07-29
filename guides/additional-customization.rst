@@ -30,19 +30,6 @@ ticket- or customer-specific text such as the ticket title or customer name.
 Type :kbd:`:` :kbd:`:` in the text module content editor to search for
 available variables.
 
-Enable a Knowledge Base
------------------------
-
-A :doc:`knowledge base </manage/knowledge-base>` lets your customers solve
-common questions on their own, before they ever open a ticket. It also
-gives your agents a central place for company and support knowledge, so
-they don't have to dig through scattered documents or recreate answers
-from scratch. With shared articles, the wording stays consistent across
-agents and channels.
-
-Publish your first articles once you have a stable set of common questions
-and answers, then keep them in sync with your products and policies.
-
 Enable Checklist Feature
 ------------------------
 
@@ -62,42 +49,53 @@ event, a scheduler job runs on a schedule, and a macro is executed manually
 without any condition.
 
 By default, there is already one active trigger that sends an auto-reply
-email to customers after they contact you in a new support case. In the
-channel configuration you can also define which group specific messages are
-dispatched to and which attributes you want to set for those tickets. See
-the :doc:`Filter </channels/email/filters>` tab in the email-based channels.
+email to customers after they contact you in a new support case. Disable it
+in case you don't want that.
 
-Add AI Agents
--------------
+Configure AI features
+---------------------
 
 :doc:`AI agents </ai/ai-agents>` can work on specific routine tasks and
 relieve your agents so they can concentrate on more important things. The
-configuration breaks down to:
+:doc:`ticket summary </ai/summary>` helps when dealing with large tickets and/or
+many handovers between agents. And
+:doc:`writing assistants </ai/writing-assistant>` help to rephrase answers in
+various ways.
 
-- Prerequisite: add an AI provider
-- Create an AI agent with the type of task you want to delegate
-- Call the AI agent in a trigger or scheduler job
+No matter which AI feature you want to use, first configure an
+:doc:`AI provider </ai/provider>` and then check out the respective AI feature
+documentation.
+
+Enable a Knowledge Base
+-----------------------
+
+A :doc:`knowledge base </manage/knowledge-base>` lets your customers solve
+common questions on their own, before they ever open a ticket. It also
+gives your agents a central place for company and support knowledge, so
+they don't have to dig through scattered documents. It allows them to answer
+customer requests in a consistent manner.
 
 Next Steps
 ----------
 
-Depending on your use case, you may want to adjust more things. The left
-navigation menu provides a detailed explanation of all Zammad features.
+Depending on your use case, you may want to customize Zammad further. The left
+navigation menu covers all settings and features. Just read through them or
+directly jump to a specific feature to learn more.
+
+Some examples of what you could look for next:
 
 - To provide more ways for your customers to contact you, add additional
   channels like :doc:`/channels/whatsapp/index` and :doc:`/channels/sms`.
-- Leverage productivity by:
-
-  - Automating additional things via :doc:`/manage/trigger`,
-    :doc:`/manage/scheduler`, and :doc:`/manage/macros`.
-  - Using additional :doc:`AI features </ai/provider>` to relieve your
-    agents so they can focus on more important tasks.
-
-- If you want to bill the support provided, use the
+- To increase automation, create additional :doc:`triggers </manage/trigger>`,
+  :doc:`scheduler jobs </manage/scheduler>` and :doc:`macros </manage/macros>`.
+- Enable additional AI features to relieve your agents so they can focus on
+  more important tasks.
+- To bill your provided support, use the
   :doc:`time accounting </manage/time-accounting>` feature.
 - Add and customize your :doc:`overviews </manage/overviews>` for agents.
-  This is useful for team leaders, or to extend the default overviews.
-- And don't forget to sign up for our
+  This can be useful for team leaders as well as agents who deal with a specific
+  subset of tickets.
+- Don't forget to sign up for our
   `cloud services <https://zammad.com/en/pricing>`_ or get in touch with our
   `sales colleagues <https://zammad.com/en/company/contact>`_ about a
   support contract for self-hosting Zammad.

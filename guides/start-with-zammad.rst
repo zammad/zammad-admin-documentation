@@ -5,9 +5,9 @@ This guide walks you through the basic configuration of a fresh Zammad
 instance. If you don't have a Zammad instance yet, you can spin up a
 `free 30-day trial <https://zammad.com/en/getting-started>`_ to follow
 along. The navigation menu on the left mirrors the structure of the admin
-settings in Zammad, so the same mental map applies in both places (**Guides**
-at the top is introductory reading, **Misc** at the end is a catch-all
-for items that don't belong under a single settings area).
+settings in Zammad, so the same mental map applies in both places (except this
+**Guides** section and the **Misc** section at the end for items that don't
+belong under a single settings area).
 
 Concept
 -------
@@ -17,16 +17,15 @@ with customers and internal departments. Even without advanced configuration,
 Zammad helps you work in a much more structured and transparent way and
 avoids duplicate work.
 
-It is all about tickets. A ticket is a central entity which holds all
-information of a customer request in one place. A ticket is created when
-someone gets in touch with you by sending a message, or manually by a support
-agent when they receive a call from a customer. A ticket includes all
-conversation parts as articles.
-
 Zammad can be invisible to customers and doesn't require your customers to use
 the system at all (but they can, if you allow them to). You just connect a
 communication channel and the customer requests are created as tickets in
 Zammad.
+
+A ticket is a central entity which holds all information of a customer request
+in one place. A ticket is created when someone gets in touch with you by sending
+a message or manually by a support agent when they receive a call from a
+customer. A ticket includes all conversation parts as articles.
 
 Because the ticket itself gathers everything related to a customer request,
 multiple people can work on it without losing context, so side channels
@@ -38,19 +37,17 @@ three roles. Two of them are for internal users (admin, agent). When a new
 ticket gets created and the email address is not yet known to Zammad, it
 automatically creates a user with the customer role, which is the third one.
 
-The diagram below shows how users, roles, and groups relate. Don't worry if it
+The diagram below shows how users, roles and groups relate. Don't worry if it
 isn't fully clear yet; the next sections walk through each piece.
 
 .. figure:: /images/guides/roles-permissions.svg
-   :alt: Diagram of the relation between users, roles, and groups in Zammad
-
-   How users, roles, and groups relate in Zammad.
+   :alt: Diagram of the relation between users, roles and groups in Zammad
 
 Basic Setup
 -----------
 
 The guide assumes your Zammad is not yet configured. If the getting-started
-wizard appears, provide as much information as you like, or skip it and
+wizard appears, provide as much information as you like or skip it and
 configure things later.
 
 Company Details
@@ -81,16 +78,16 @@ A role defines the application permissions (which areas and features are
 accessible) and the access level for each group (read, create, change,
 overview, full).
 
-These three roles cover most standard scenarios. If you need additional
-roles, common examples are:
+These three roles cover most standard scenarios. Common examples for additional
+roles are:
 
 - Team leader
 - Reporting person
-- Knowledgebase editor
+- Knowledge base editor
 
-You can also assign application and group permissions directly to a specific
-user. If more than one person needs the same permissions, prefer creating a
-role.
+You can also assign group permissions directly to a specific user. If more than
+one person needs the same permissions, prefer using a role and assign it to the
+users.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -111,23 +108,24 @@ Configure Groups
 ^^^^^^^^^^^^^^^^
 
 After setting up an email-based channel, revisit your groups. Go to
-*Manage > Groups*, open each group, and set an outbound email address.
-Signatures are configured separately in the **Signatures** tab of the
+*Manage > Groups*, open each group and set an outbound email address.
+Signatures are configured separately in the **Signatures** tab of the respective
 email-based channel.
 
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
 
 Create a :doc:`user </manage/users/index>` for each of your support agents
-from the :doc:`First Steps </misc/first-steps>` section: select *Dashboard*
-in the navigation, switch to the *First Steps* tab, and use the
-**Invite agents/colleagues to help working on tickets** link. Assign
+from the :doc:`First Steps </misc/first-steps>` section: select **Dashboard**
+in the primary navigation on the left side, switch to the **First Steps** tab
+and use the ``Invite agents/colleagues to help working on tickets`` link. Assign
 the correct role to each agent. This step sends invitation emails to your
 agents.
 
 Further Steps
 -------------
 
-At this stage you are ready to use Zammad in production. To customize
-further, follow the :doc:`additional customization guide <additional-customization>`,
-or browse the documentation for the area you want to adjust.
+At this stage, you are ready to use Zammad in production. To customize it
+further, follow the
+:doc:`additional customization guide <additional-customization>` or browse
+the documentation for the area you want to adjust.
