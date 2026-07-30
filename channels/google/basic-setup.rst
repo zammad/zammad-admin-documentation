@@ -20,17 +20,18 @@ Configure OAuth App
 - Go to *APIs & Services > OAuth consent screen* and create an OAuth client.
 - Choose **Web application** as type, provide a fitting name and add a redirect
   URI. You can find the redirect URI in the Google account settings dialog of
-  Zammad by opening the configuration dialog via ``Connect Google App`` button
-  (called **Your callback URL**).
-- After saving your client app, a dialog will be shown with the **Client ID**
+  Zammad by opening the configuration dialog via the ``Connect Google App``
+  button (called **Your callback URL**).
+- After saving your OAuth client, a dialog will be shown with the **Client ID**
   and the **Client secret**. Copy and add them to Zammad's app configuration
   dialog.
-- Save the app configuration in Zammad by clicking the ``Submit`` button and
-  switch back to Google's Cloud console.
-- Go to *APIs & Services > Enabled APIs & Services* and click the button to
-  add them. Search for ``Gmail API``, select and enable it.
+- Save the app configuration in Zammad by clicking the ``Submit`` button in the
+  dialog.
+- Switch back to Google's Cloud console and go to
+  *APIs & Services > Enabled APIs & Services*. Click the button to add an API,
+  search for ``Gmail API`` and select and enable it.
 - Go to *OAuth consent screen > Data Access* and add a scope. Search for
-  ``Gmail API`` and activate the one with the scope
+  ``Gmail API`` and activate the API with the scope
   ``https://mail.google.com/``. Confirm and save it.
 
 Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
