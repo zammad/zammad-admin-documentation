@@ -17,23 +17,22 @@ Configure OAuth App
 
 - Sign in to the `Google Cloud console <https://console.cloud.google.com/>`_.
 - Create a new app if you don't have one already.
-- Go to *APIs & Services > OAuth consent screen* and create an OAuth client by
-  clicking the ``Create OAuth client`` button.
+- Go to *APIs & Services > OAuth consent screen* and create an OAuth client.
 - Choose **Web application** as type, provide a fitting name and add a redirect
   URI. You can find the redirect URI in the Google account settings dialog of
-  Zammad by opening the configuration dialog via ``Connect Google App`` button
-  (called **Your callback URL**).
-- After saving your app, a dialog will be shown with the **Client ID** and the
-  **Client secret**. Copy and add them to Zammad in the app configuration
+  Zammad by opening the configuration dialog via the ``Connect Google App``
+  button (called **Your callback URL**).
+- After saving your OAuth client, a dialog will be shown with the **Client ID**
+  and the **Client secret**. Copy and add them to Zammad's app configuration
   dialog.
-- ``Submit`` the app configuration in Zammad and switch back to Google's Cloud
-  console.
-- Go back to the dashboard and to *APIs & Services > Enabled APIs & Services*
-  and click on ``Enable APIs & services`` button. Search for ``gmail``, open it
-  and hit the ``Enable`` button.
-- Go to *OAuth consent screen > Data Access* and click the
-  ``Add or remove scopes`` button. Search for ``gmail`` and add the scope
-  ``https://mail.google.com/``. Confirm with the ``Update`` button.
+- Save the app configuration in Zammad by clicking the ``Submit`` button in the
+  dialog.
+- Switch back to Google's Cloud console and go to
+  *APIs & Services > Enabled APIs & Services*. Click the button to add an API,
+  search for ``Gmail API`` and select and enable it.
+- Go to *OAuth consent screen > Data Access* and add a scope. Search for
+  ``Gmail API`` and activate the API with the scope
+  ``https://mail.google.com/``. Confirm and save it.
 
 Now, you are technically ready to connect a Gmail mailbox to Zammad. Depending
 on your scenario, you should also have a look at the **Audience** section in
