@@ -51,6 +51,14 @@ system attributes (e.g. for "tags", "active").
      - Matches if content is equal to a specified value.
    * - is any of
      - Matches if content is equal to any of specified values.
+   * - is greater than
+     - Matches if the value is greater than the specified value.
+   * - is greater than or equal to
+     - Matches if the value is greater than or equal to the specified value.
+   * - is less than
+     - Matches if the value is less than the specified value.
+   * - is less than or equal to
+     - Matches if the value is less than or equal to the specified value.
    * - is modified
      - Matches if content is modified.
 
