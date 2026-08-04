@@ -12,13 +12,11 @@ Create Custom Fields
 Zammad lets you add new fields for different objects, such as tickets, users,
 and groups. For example, add a ticket category field where your agents can
 select from pre-defined categories. You can even make the field required to
-provide a solid base for statistics.
+provide a solid base for statistics. Head over to the
+:doc:`object attributes page </system/objects>` for details.
 
-Custom fields are available to self-hosted users and to SaaS customers on a
-Professional plan or higher.
-
-Head over to the :doc:`object attributes page </system/objects>` for
-details.
+Note: custom fields are available to self-hosted users and to SaaS customers on
+a Professional plan or higher.
 
 Add Text Modules
 ----------------
@@ -33,7 +31,7 @@ customer name. Type :kbd:`:` :kbd:`:` in the text module content editor to
 search for available variables.
 
 Use Checklist Feature
-------------------------
+---------------------
 
 Zammad's :doc:`checklist feature </manage/checklist>` lets you keep track of
 certain tasks in a ticket. The feature allows you to create checklist
@@ -59,10 +57,10 @@ Configure AI features
 
 :doc:`AI agents </ai/ai-agents>` can work on specific routine tasks and
 relieve your agents so they can concentrate on more important things. The
-:doc:`ticket summary </ai/summary>` helps when dealing with large tickets and/or
+:doc:`ticket summary </ai/summary>` helps when dealing with large tickets or
 many handovers between agents. The
-:doc:`writing assistant </ai/writing-assistant>` helps you rephrase answers in
-various ways.
+:doc:`writing assistant </ai/writing-assistant>` helps your agents rephrase
+answers in various ways.
 
 No matter which AI feature you want to use, first configure an
 :doc:`AI provider </ai/provider>` and then check out the respective AI feature
@@ -77,7 +75,7 @@ gives your agents a central place for company and support knowledge, so
 they don't have to dig through scattered documents. It allows them to answer
 customer requests in a consistent manner.
 
-The knowledge base is available to self-hosted users and to SaaS customers
+Note: the knowledge base is available to self-hosted users and to SaaS customers
 on a Professional plan or higher.
 
 Next Steps

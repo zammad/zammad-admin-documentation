@@ -73,7 +73,7 @@ Create or Modify Roles
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Zammad comes with three pre-defined :doc:`roles </manage/roles/index>` for
-customers, agents, and admins. A user can have one or more roles assigned.
+admins, agents and customers. A user can have one or more roles assigned.
 A role defines the application permissions (which areas and features are
 accessible) and the access level for each group (read, create, change,
 overview, full).
@@ -102,15 +102,15 @@ Depending on your email system, follow the matching guide:
 After adding an email channel, open the channel and go to the **Signatures**
 tab to create one or more signatures. You can use one signature for many
 groups or create different signatures depending on your company's department
-structure.
+structure. The assignment of signatures is done in the group settings, see
+the next section.
 
 Configure Groups
 ^^^^^^^^^^^^^^^^
 
 After setting up an email-based channel, revisit your groups. Go to
 *Manage > Groups*, open each group, set an outbound email address and select
-the signature to use. Signatures are configured separately in the
-**Signatures** tab of the respective email-based channel.
+the signature to use.
 
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
