@@ -14,20 +14,23 @@ and groups. For example, add a ticket category field where your agents can
 select from pre-defined categories. You can even make the field required to
 provide a solid base for statistics.
 
+Custom fields are available to self-hosted users and to SaaS customers on a
+Professional plan or higher.
+
 Head over to the :doc:`object attributes page </system/objects>` for
 details.
 
 Add Text Modules
 ----------------
 
-:doc:`Text modules </manage/text-modules>` are a nice time saver for your
+:doc:`Text modules </manage/text-modules>` are a nice time-saver for your
 agents. If your agents answer similar questions over and over, or you want to
-unify their answers, add text modules for that. Your agents can fetch a text
-by typing :kbd:`:` :kbd:`:` in the editor, followed by the name or content
-of the text module. You can also use variables to automatically include
-ticket- or customer-specific text such as the ticket title or customer name.
-Type :kbd:`:` :kbd:`:` in the text module content editor to search for
-available variables.
+unify their answers, add text modules for that. Your agents can insert a
+text module by typing :kbd:`:` :kbd:`:` in the editor, followed by the name
+or a keyword of the text module. You can also use variables to automatically
+include ticket- or customer-specific text such as the ticket title or
+customer name. Type :kbd:`:` :kbd:`:` in the text module content editor to
+search for available variables.
 
 Use Checklist Feature
 ------------------------
@@ -73,6 +76,9 @@ common questions on their own, before they ever open a ticket. It also
 gives your agents a central place for company and support knowledge, so
 they don't have to dig through scattered documents. It allows them to answer
 customer requests in a consistent manner.
+
+The knowledge base is available to self-hosted users and to SaaS customers
+on a Professional plan or higher.
 
 Next Steps
 ----------
