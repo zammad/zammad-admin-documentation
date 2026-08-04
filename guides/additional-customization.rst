@@ -1,11 +1,10 @@
 Additional Customization
 ========================
 
-Once the basic setup is in place, this page points you at customization
-options that are commonly useful. Each topic links to the corresponding
-section of the documentation.
-
-It is recommended to follow the :doc:`start-with-zammad` section first.
+We recommend following the :doc:`start-with-zammad` guide first. Once the
+basic setup is in place, this page points you to customization options that
+are commonly useful. Each topic links to the corresponding section of the
+documentation.
 
 Create Custom Fields
 --------------------
@@ -30,14 +29,14 @@ ticket- or customer-specific text such as the ticket title or customer name.
 Type :kbd:`:` :kbd:`:` in the text module content editor to search for
 available variables.
 
-Enable Checklist Feature
+Use Checklist Feature
 ------------------------
 
 Zammad's :doc:`checklist feature </manage/checklist>` lets you keep track of
 certain tasks in a ticket. The feature allows you to create checklist
-templates and link to other tickets as checklist items. If an agent tries to
-close a ticket that still has open checklist items, Zammad asks the agent to
-confirm before closing it.
+templates and add links to other tickets as checklist items. If an agent
+tries to close a ticket that still has open checklist items, Zammad asks the
+agent to confirm before closing it.
 
 Set Up Automation
 -----------------
@@ -50,7 +49,7 @@ without any condition.
 
 By default, there is already one active trigger that sends an auto-reply
 email to customers after they contact you in a new support case. Disable it
-in case you don't want that.
+if you don't want that.
 
 Configure AI features
 ---------------------
@@ -58,8 +57,8 @@ Configure AI features
 :doc:`AI agents </ai/ai-agents>` can work on specific routine tasks and
 relieve your agents so they can concentrate on more important things. The
 :doc:`ticket summary </ai/summary>` helps when dealing with large tickets and/or
-many handovers between agents. And
-:doc:`writing assistants </ai/writing-assistant>` help to rephrase answers in
+many handovers between agents. The
+:doc:`writing assistant </ai/writing-assistant>` helps you rephrase answers in
 various ways.
 
 No matter which AI feature you want to use, first configure an
@@ -69,7 +68,7 @@ documentation.
 Enable a Knowledge Base
 -----------------------
 
-A :doc:`knowledge base </manage/knowledge-base>` lets your customers solve
+A :doc:`knowledge base </manage/knowledge-base>` lets your customers answer
 common questions on their own, before they ever open a ticket. It also
 gives your agents a central place for company and support knowledge, so
 they don't have to dig through scattered documents. It allows them to answer
@@ -79,7 +78,7 @@ Next Steps
 ----------
 
 Depending on your use case, you may want to customize Zammad further. The left
-navigation menu covers all settings and features. Just read through them or
+navigation menu covers all settings and features. Just browse through it or
 directly jump to a specific feature to learn more.
 
 Some examples of what you could look for next:
@@ -90,12 +89,12 @@ Some examples of what you could look for next:
   :doc:`scheduler jobs </manage/scheduler>` and :doc:`macros </manage/macros>`.
 - Enable additional AI features to relieve your agents so they can focus on
   more important tasks.
-- To bill your provided support, use the
+- To bill the support you provide, use the
   :doc:`time accounting </manage/time-accounting>` feature.
 - Add and customize your :doc:`overviews </manage/overviews>` for agents.
   This can be useful for team leaders as well as agents who deal with a specific
   subset of tickets.
 - Don't forget to sign up for our
   `cloud services <https://zammad.com/en/pricing>`_ or get in touch with our
-  `sales colleagues <https://zammad.com/en/company/contact>`_ about a
-  support contract for self-hosting Zammad.
+  `sales team <https://zammad.com/en/company/contact>`_ about a support
+  contract for self-hosting Zammad.

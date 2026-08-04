@@ -5,27 +5,26 @@ This guide walks you through the basic configuration of a fresh Zammad
 instance. If you don't have a Zammad instance yet, you can spin up a
 `free 30-day trial <https://zammad.com/en/getting-started>`_ to follow
 along. The navigation menu on the left mirrors the structure of the admin
-settings in Zammad, so the same mental map applies in both places (except this
-**Guides** section and the **Misc** section at the end for items that don't
-belong under a single settings area).
+settings in Zammad, so the same mental map applies in both places, except for
+this **Guides** section and the **Misc** section at the end, which cover items
+that don't belong under a single settings area.
 
 Concept
 -------
 
 Zammad is a ticketing and helpdesk system that helps you manage communication
 with customers and internal departments. Even without advanced configuration,
-Zammad helps you work in a much more structured and transparent way and
-avoids duplicate work.
+Zammad helps you work in a much more structured and transparent way, and
+helps you avoid duplicate work.
 
 Zammad can be invisible to customers and doesn't require your customers to use
 the system at all (but they can, if you allow them to). You just connect a
-communication channel and the customer requests are created as tickets in
-Zammad.
+communication channel and customer requests are created as tickets in Zammad.
 
-A ticket is a central entity which holds all information of a customer request
-in one place. A ticket is created when someone gets in touch with you by sending
-a message or manually by a support agent when they receive a call from a
-customer. A ticket includes all conversation parts as articles.
+A ticket is a central entity which holds all information about a customer
+request in one place. A ticket is created automatically when someone sends a
+message, or manually by an agent, e.g. when a customer calls. A ticket
+includes all conversation parts as articles.
 
 Because the ticket itself gathers everything related to a customer request,
 multiple people can work on it without losing context, so side channels
@@ -33,9 +32,10 @@ multiple people can work on it without losing context, so side channels
 across tools are not needed.
 
 Your colleagues who work on tickets are called agents in Zammad. Zammad ships
-three roles. Two of them are for internal users (admin, agent). When a new
-ticket gets created and the email address is not yet known to Zammad, it
-automatically creates a user with the customer role, which is the third one.
+with three roles: **Admin**, **Agent**, and **Customer**. The first two are for
+internal users. When a new ticket gets created and the email address is not
+yet known to Zammad, Zammad automatically creates a user with the **Customer**
+role.
 
 The diagram below shows how users, roles and groups relate. Don't worry if it
 isn't fully clear yet; the next sections walk through each piece.
@@ -46,7 +46,7 @@ isn't fully clear yet; the next sections walk through each piece.
 Basic Setup
 -----------
 
-The guide assumes your Zammad is not yet configured. If the getting-started
+This guide assumes your Zammad is not yet configured. If the getting-started
 wizard appears, provide as much information as you like or skip it and
 configure things later.
 
@@ -86,8 +86,8 @@ roles are:
 - Knowledge base editor
 
 You can also assign group permissions directly to a specific user. If more than
-one person needs the same permissions, prefer using a role and assign it to the
-users.
+one person needs the same permissions, prefer using a role and assigning it to
+the users.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,9 +108,9 @@ Configure Groups
 ^^^^^^^^^^^^^^^^
 
 After setting up an email-based channel, revisit your groups. Go to
-*Manage > Groups*, open each group and set an outbound email address.
-Signatures are configured separately in the **Signatures** tab of the respective
-email-based channel.
+*Manage > Groups*, open each group, set an outbound email address and select
+the signature to use. Signatures are configured separately in the
+**Signatures** tab of the respective email-based channel.
 
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
