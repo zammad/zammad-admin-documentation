@@ -1,93 +1,36 @@
 Providers
 =========
 
-Zammad's AI features rely on one or more AI provider connections. Each
-connection has a name, an API token and the settings Zammad needs to
-talk to one provider. Features can share the same connection or each
-use a different one.
-
-Manage your connections under *AI > Providers*. The page requires
-the ``admin.ai_provider`` permission.
+Zammad's AI features rely on one or more *provider connections*
+(what you see as a row in *AI > Providers*). Each provider connection
+has a name, an API token and the settings Zammad needs to talk to
+one provider. From here on the docs use *provider* for short.
+Features can share the same provider or each use a different one.
+Managing them requires the ``admin.ai_provider`` permission.
 
 .. figure:: /images/ai/providers-management.png
-   :alt: Screenshot shows the list of configured AI provider connections
+   :alt: Screenshot shows the list of configured AI providers
    :align: center
 
 .. note:: Zammad's AI features are completely optional and require at
-   least one configured provider connection before any AI request is
-   made. If you don't want to see the AI section at all, read about
+   least one configured provider before any AI request is made. If
+   you don't want to see the AI section at all, read about
    :docs:`how to hide it in the system docs
    </admin/console/other-useful-commands.html#remove-ai-feature>`.
 
 Managing Providers
 ------------------
 
-The page shows a table of all configured connections. Each row has a
-status icon, the connection's name, the provider type and up to three
-badges that mark the connection as the default for a specific
-purpose. The action menu (︙) at the end of the row lets you change
-the connection's defaults or remove it.
+The page shows a table of all configured providers. Each row has a
+status icon, the provider's name, the provider type and up to three
+badges that mark the provider as the default for a specific purpose.
+The ︙ action menu at the end of the row lets you change the
+provider's defaults or remove it.
 
-Actions
-^^^^^^^
+Add or Edit a Provider
+----------------------
 
-The action menu (︙) for each row offers the following entries:
-
-**Set as default**
-   Marks the connection as the default for AI features.
-
-**Use for semantic search** or **Do not use for semantic search**
-   Marks the connection as the default for semantic search, or clears
-   that flag. Only available for providers that support it.
-
-**Use for image text recognition** or **Do not use for image text recognition**
-   Marks the connection as the default for image text recognition, or
-   clears that flag.
-
-**Delete**
-   Removes the connection. Not available for the Zammad AI connection
-   on SaaS.
-
-Status
-^^^^^^
-
-The icon at the start of each row shows whether the connection has
-been used successfully:
-
-Green
-   The connection has been used and the last request succeeded.
-
-Orange
-   The connection is configured but has not been used yet. It
-   turns green after the first successful request.
-
-Red
-   The connection failed. Hover the icon for the error message from
-   the provider.
-
-Badges
-^^^^^^
-
-The same row can carry up to three badges to mark it as the default
-for a specific purpose:
-
-**Default**
-   Used for AI features that have no specific provider assigned.
-
-**Semantic search**
-   Used to turn text into numerical form (vector embeddings) so the
-   knowledge base can find answers by meaning, not just keywords.
-
-**Image text recognition**
-   Used to extract text from images (OCR).
-
-A connection can carry one, two or all three badges at the same time,
-so a single well-equipped provider can serve every purpose.
-
-Add or Edit a Connection
-------------------------
-
-Click ``New Provider`` to add a connection, or click a row to edit an
+Click ``New Provider`` to add a new provider or click on a row to edit an
 existing one. The dialog lets you pick the provider type and fill in
 the credentials and models it needs. The fields shown depend on the
 provider you choose, so switching the type updates the dialog on the
@@ -95,7 +38,6 @@ fly.
 
 .. figure:: /images/ai/provider-dialog.png
    :alt: Screenshot shows the dialog for adding or editing a provider
-         connection
    :align: center
 
 Type
@@ -120,7 +62,7 @@ Type
       `sales department <https://zammad.com/en/company/contact>`_.
 
 Name
-   A human-readable label for the connection. This is what you see
+   A human-readable label for the provider. This is what you see
    in the list, the action menus and the per-feature ``Provider``
    button.
 
@@ -165,49 +107,105 @@ URL (OCR)
    Leave empty to fall back to URL (Completions).
 
 After filling in the fields, click ``Submit``. Zammad tests the
-connection against the provider before saving. If the test succeeds,
-the row's status icon starts orange until the first successful
-request turns it green.
+configuration before saving. If the test succeeds, the row's
+status icon starts orange until the first successful request turns
+it green, see Status next.
+
+Status
+^^^^^^
+
+The icon at the start of each row shows whether the provider has
+been used successfully:
+
+Green
+   The provider has been used and the last request succeeded.
+
+Orange
+   The provider is configured but has not been used yet. It
+   turns green after the first successful request.
+
+Red
+   The provider failed. Hover the icon for the error message from
+   the provider.
+
+Badges
+^^^^^^
+
+The same row can carry up to three badges to mark the provider as
+the default for a specific purpose:
+
+**Default**
+   Used for all AI features that have no specific provider assigned.
+
+**Semantic search**
+   Used to turn text into numerical form (vector embeddings) so the
+   knowledge base can find answers by meaning, not just keywords.
+
+**Image text recognition**
+   Used to extract text from images (OCR).
+
+A provider can carry one, two or all three badges at the same time,
+so a single well-equipped provider can serve every purpose.
+
+Actions
+^^^^^^^
+
+The ︙ action menu for each row offers the following actions:
+
+Set as default
+   Marks the provider as the default for AI features.
+
+Use for semantic search / Do not use for semantic search
+   Marks the provider as the default for semantic search, or clears
+   that flag. Only available for providers that support it.
+
+Use for image text recognition / Do not use for image text recognition
+   Marks the provider as the default for image text recognition, or
+   clears that flag.
+
+Delete
+   Removes the provider. Not available for the Zammad AI provider
+   on SaaS.
 
 Defaults
 --------
 
-Each of the three purposes can have one default connection at a time.
+Each of the three purposes can have one default provider at a time.
 You set the defaults from the action menu (︙). The three defaults
-are independent: a single connection can hold any combination of
+are independent: a single provider can hold any combination of
 them.
 
 .. figure:: /images/ai/providers-management.png
-   :alt: Screenshot shows the providers list with a connection flagged
+   :alt: Screenshot shows the providers list with a provider flagged
          as the default for all three purposes
    :align: center
 
 **Default**
-   The connection used for AI features that have no specific
+   The provider used for AI features that have no specific
    provider assigned.
 
 **Semantic search**
-   The connection used to turn text into numerical form (vector
+   The provider used to turn text into numerical form (vector
    embeddings) so the knowledge base can find answers by meaning,
    not just keywords.
 
 **Image text recognition**
-   The connection used to extract text from images (OCR). If no
-   connection is flagged as the image text recognition default,
-   the **Default** connection is used instead.
+   The provider used to extract text from images (OCR). If no
+   provider is flagged as the image text recognition default,
+   the **Default** provider is used instead.
 
-When you mark a connection as the default for a purpose, Zammad
-clears that flag from whichever connection held it before, so the new
+When you mark a provider as the default for a purpose, Zammad
+clears that flag from whichever provider held it before, so the new
 default takes over immediately.
 
-When you delete the last connection that holds a default, Zammad
-promotes the oldest remaining connection that can serve that purpose
+When you delete the last provider that holds a default, Zammad
+promotes the oldest remaining provider that can serve that purpose
 to default. For semantic search, the promotion picks only a
-connection whose provider type actually supports it.
+provider whose provider type actually supports it.
 
-If no connection is flagged as the default for semantic search and a
+If no provider is flagged as the default for semantic search and a
 feature needs it, Zammad shows a warning on the corresponding feature
-page. Pick a connection that supports semantic search as the default
+page. Pick a provider that supports semantic search as the default
 to clear the warning.
 
 .. _per-feature-provider:
@@ -216,17 +214,17 @@ Per-Feature Routing
 -------------------
 
 The defaults cover most setups. For finer control, assign a specific
-connection to individual features. Every AI feature page exposes a
+provider to individual features. Every AI feature page exposes a
 ``Provider`` button in the page header.
 
 Click the button to open a modal with a dropdown of all configured
-connections. Pick a connection to send that feature's text
-generation requests to it, or pick the *Default provider(s)* entry
-to clear any override and fall back to the default.
+providers. Pick a provider to send that feature's text generation
+requests to it, or pick the *Default provider(s)* entry to clear
+any override and fall back to the default.
 
 .. figure:: /images/ai/provider-selection-ai-feature.png
    :alt: Screenshot shows the per-feature provider modal with a
-         connection selected
+         provider selected
    :align: center
 
 The choice only affects text generation. Semantic search always goes
@@ -234,7 +232,7 @@ to the semantic search default, and image text recognition always
 goes to the image text recognition default (or the default provider
 if no image text recognition default is set). The ``Provider`` button
 is only visible to admins who also hold the ``admin.ai_provider``
-permission, since routing touches the connections you set up on this
+permission, since routing touches the providers you set up on this
 page.
 
 Excursion
@@ -264,20 +262,20 @@ SaaS Customers
    Using Zammad AI requires a "V2" plan. Check your
    :doc:`subscription settings </system/subscription>` and consider
    switching your plan. When a "V2" plan is active, you can buy AI
-   calls for AI processing. Zammad AI is then added as a provider
-   connection automatically and you can enable it as you like. Check
-   your remaining AI calls from time to time or activate the
+   calls for AI processing. A Zammad AI provider is added
+   automatically and you can enable it as you like. Check your
+   remaining AI calls from time to time or activate the
    notification to be alerted when few calls remain.
 
-   On SaaS, the Zammad AI connection is provisioned by the platform
+   On SaaS, the Zammad AI provider is provisioned by the platform
    and you cannot delete it or change its type.
 
 Self-Hosted Customers
    Get in touch with our
    `sales department <https://zammad.com/en/company/contact>`_ to
    obtain a Zammad AI API key and to buy AI calls. After receiving
-   your API key, add a new provider connection of type *Zammad AI*
-   and save the key.
+   your API key, add a new provider of type *Zammad AI* and save
+   the key.
 
 Ollama
 ^^^^^^

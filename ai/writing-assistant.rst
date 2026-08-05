@@ -9,7 +9,7 @@ admin section under *AI > Writing Assistant*. Make sure to configure an
 warning message will tell you to do so. Activate the feature by turning on the
 switch.
 
-To use a different connection for writing assistant tools than the
+To use a different provider for writing assistant tools than the
 default, use the :ref:`per-feature provider routing
 <per-feature-provider>` via the ``Provider`` button at the top of this
 page.
