@@ -52,7 +52,7 @@ By default, there is already one active trigger that sends an auto-reply
 email to customers after they contact you in a new support case. Disable it
 if you don't want that.
 
-Configure AI features
+Configure AI Features
 ---------------------
 
 :doc:`AI agents </ai/ai-agents>` can work on specific routine tasks and
