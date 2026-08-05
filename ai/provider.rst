@@ -3,12 +3,11 @@ Providers
 
 Zammad offers AI-powered features to support your agents! To use AI features in
 Zammad, you must first configure and enable at least one AI provider. Such an AI
-provider processes all your AI requests and is required for any AI
-functionality. You can configure several providers and assign different features
-to different ones. Add your providers in Zammad's admin settings under
-*AI > Providers* and make sure to activate the toggle. Switching the toggle off
-stops all AI calls, even if one or more providers are configured. This setting
-requires the ``admin.ai_provider`` permission to access it.
+provider processes your AI requests and is required for any AI feature.
+Add your providers in Zammad's admin settings under *AI > Providers* and make
+sure to activate the toggle. Switching the toggle off stops all AI calls, even
+if one or more providers are configured. This setting requires the
+``admin.ai_provider`` permission to access it.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI providers
@@ -21,11 +20,12 @@ requires the ``admin.ai_provider`` permission to access it.
 Managing Providers
 ------------------
 
-The settings page shows a table of all configured providers. Each row has a
+This page shows a table of all configured providers. Each row has a
 status icon, the provider's name and type, and badges that mark the provider as
 the default for a specific purpose. The ︙ menu in the **Action** column lets
 you change the provider's defaults or remove it. See :ref:`defaults` for what
-each badge means.
+each badge means. You can add one provider for all AI features you want to
+enable or add multiple to set a provider for individual features.
 
 Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +105,7 @@ Status
 ^^^^^^
 
 The colored dot at the start of each row shows whether the provider has been
-used successfully or has issues:
+used successfully or whether it has issues:
 
 Green
    The provider has been used and the last request succeeded. Shows a tooltip
@@ -187,7 +187,7 @@ control, you can pick a specific provider for individual features.
 
 Every AI feature settings page exposes a ``Provider`` button in the page header.
 It opens a modal with a dropdown of all configured providers. Pick a provider
-to send that feature's text generation requests to it, or pick the **Default
+to send that feature's text generation requests to, or pick the **Default
 (...)** entry to clear any override and fall back to the default.
 
 .. figure:: /images/ai/provider-selection-ai-feature.png
