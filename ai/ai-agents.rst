@@ -7,9 +7,9 @@ admin settings under *AI > AI Agents* and require ``admin.ai_agent`` permission.
 Make sure to configure an :doc:`AI provider <provider>` before activating the
 feature. Otherwise, a warning message will tell you to do so.
 
-To use a different connection for AI agents than the chat default, use the
+To use a different connection for AI agents than the default, use the
 :ref:`per-feature provider routing <per-feature-provider>` via the
-**Provider** button at the top of this page.
+``Provider`` button at the top of this page.
 
 While an AI agent works on a ticket, an avatar is displayed in the
 live user section in the bottom bar of the ticket detail view, see example

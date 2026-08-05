@@ -1,14 +1,21 @@
 Providers
 =========
 
-Zammad's AI features rely on one or more AI provider connections to
-process requests. A *connection* is a named, credentialed handle to an
-AI endpoint such as OpenAI, Anthropic, Ollama or Zammad AI itself. Each
-feature can either share one of the connections or be routed to a
-specific one.
+Zammad's AI features rely on one or more AI provider connections. A
+connection is a named, credentialed handle to one provider endpoint.
+All features can use a default provider, or you can pick a specific
+provider for a single feature.
 
-Manage your connections under *AI > Providers*. The page requires the
-``admin.ai_provider`` permission.
+Manage your connections under **AI > Providers**. The page requires
+the ``admin.ai_provider`` permission.
+
+.. figure:: /images/ai/providers-management.png
+   :alt: Screenshot shows the list of configured AI provider connections
+   :align: center
+
+   The Providers list with one connection flagged as the default,
+   with additional badges for semantic search and image text
+   recognition.
 
 .. note:: Zammad's AI features are completely optional and require at
    least one configured provider connection before any AI request is
@@ -16,79 +23,89 @@ Manage your connections under *AI > Providers*. The page requires the
    :docs:`how to hide it in the system docs
    </admin/console/other-useful-commands.html#remove-ai-feature>`.
 
-.. figure:: /images/ai/providers-list.png
-   :alt: Screenshot shows the list of configured AI provider connections
-   :align: center
-
-   *Placeholder - replace with a screenshot of the AI > Providers list
-   showing one connection flagged as default for chat, semantic search
-   and image text recognition.*
-
-Enable AI Features
-------------------
-
-A toggle at the top of the page turns all AI features on or off at
-once. The toggle is the global kill switch: when disabled, no
-connection is queried, regardless of which features are enabled or
-how the defaults are set.
-
-If no connection exists, the toggle is off. Add at least one
-connection first, then enable it.
-
 Connections List
 ----------------
 
 The page shows a table of all configured connections. Each row displays
-the connection's name, type, current health and the default badges it
-carries:
+the connection's name, the provider type and a status icon that shows
+whether the connection has been used successfully:
 
-Default
-   The connection is used for chat completions when a feature has no
-   per-feature routing entry.
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
 
-Semantic search
-   The connection is used for vector embeddings (semantic search).
+   * - Icon
+     - Meaning
+   * - Green
+     - The connection has been used and the last request succeeded.
+   * - Orange
+     - The connection is configured but has not been used yet. It
+       turns green after the first successful request.
+   * - Red
+     - The connection failed. Hover the icon for the error message
+       from the provider.
 
-Image text recognition
-   The connection is used for optical character recognition (OCR).
+The same row can carry up to three badges to mark it as the default
+for a specific purpose:
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Badge
+     - Purpose
+   * - **Default**
+     - Used for AI features that have no specific provider assigned.
+   * - **Semantic search**
+     - Used to turn text into numerical form (vector embeddings) so the
+       knowledge base can find answers by meaning, not just keywords.
+   * - **Image text recognition**
+     - Used to extract text from images (OCR).
 
 A connection can carry one, two or all three badges at the same time,
-so a single well-equipped provider can serve every AI purpose.
+so a single well-equipped provider can serve every purpose.
 
-The action menu (︙) for each row offers:
+The action menu (︙) for each row offers the following entries:
 
-Set as default
-   Marks the connection as the default for chat completions.
+.. list-table::
+   :widths: 40 60
+   :header-rows: 1
 
-Use for semantic search / Do not use for semantic search
-   Marks the connection as the default for embeddings, or clears that
-   flag. Only available for connections whose type supports embeddings.
-
-Use for image text recognition / Do not use for image text recognition
-   Marks the connection as the default for OCR, or clears that flag.
-
-Delete
-   Removes the connection. Not available for the Zammad AI connection
-   on SaaS.
+   * - Action
+     - Effect
+   * - ``Set as default``
+     - Marks the connection as the default for AI features.
+   * - ``Use for semantic search`` / ``Do not use for semantic search``
+     - Marks the connection as the default for semantic search, or
+       clears that flag. Only available for providers that support
+       it.
+   * - ``Use for image text recognition`` /
+       ``Do not use for image text recognition``
+     - Marks the connection as the default for image text recognition, or
+       clears that flag.
+   * - ``Delete``
+     - Removes the connection. Not available for the Zammad AI
+       connection on SaaS.
 
 Add or Edit a Connection
 ------------------------
 
 Click ``New Provider`` to add a connection, or click a row to edit an
-existing one. The dialog lets you pick the connection's type and
-fill in the credentials and models it needs.
+existing one. The dialog lets you pick the provider type and fill in
+the credentials and models it needs. The fields shown depend on the
+provider you choose, so switching the type updates the dialog on the
+fly.
 
-.. figure:: /images/ai/provider-edit.png
+.. figure:: /images/ai/provider-dialog.png
    :alt: Screenshot shows the dialog for adding or editing a provider
          connection
    :align: center
 
-   *Placeholder - replace with a screenshot of the edit dialog showing
-   provider-specific fields like Token, Model, Embedding Model and
-   OCR Model.*
+   The dialog for a connection of type OpenAI, showing Token, Model,
+   Embedding Model, OCR Model and URL fields.
 
 Type
-   Pick the AI backend. Available types:
+   Pick the AI provider. Available options:
 
    - Zammad AI
    - OpenAI
@@ -118,19 +135,19 @@ Token
    request.
 
 Model
-   The model used for chat completions (for example
-   ``gpt-4o-mini``). Leave empty to use the provider's default, shown
-   as a placeholder.
+   The model used to generate text. Leave empty to use the
+   provider's default, shown as a placeholder.
 
 Embedding Model
-   The model used for vector embeddings in semantic search. Leave
-   empty to fall back to the Model field. Not every provider supports
-   embeddings; the field appears only for the ones that do.
+   The model used to turn text into numerical form for semantic
+   search. Leave empty to fall back to the Model field. Not every
+   provider supports semantic search; the field appears only for the
+   ones that do.
 
 OCR Model
-   The model used for image text recognition. Leave empty to fall
-   back to the Model field. Not every provider supports OCR; the
-   field appears only for the ones that do.
+   The model used to extract text from images. Leave empty to fall
+   back to the Model field. Not every provider supports image text
+   recognition; the field appears only for the ones that do.
 
 URL
    The URL or IP address of the provider. Required for Ollama and
@@ -148,62 +165,70 @@ URL (OCR)
    Azure AI only. The endpoint where the OCR model is available.
    Leave empty to fall back to URL (Completions).
 
-After filling in the fields, click ``Save``. Zammad tests the
-connection against the provider before saving and stores the outcome
-as the row's health badge.
+After filling in the fields, click ``Submit``. Zammad tests the
+connection against the provider before saving and shows the result as
+the row's status icon. The icon starts orange until the first
+successful request turns it green.
 
 Defaults
 --------
 
-Each of the three purposes (chat, semantic search, image text
-recognition) has exactly one default connection at a time. When you
-mark a connection as the default for a purpose, Zammad clears that
-flag from whichever connection held it before, so the new default
-takes over immediately.
+Each of the three purposes has exactly one default connection at a
+time. When you mark a connection as the default for a purpose, Zammad
+clears that flag from whichever connection held it before, so the new
+default takes over immediately.
+
+.. figure:: /images/ai/providers-management.png
+   :alt: Screenshot shows the providers list with a connection flagged
+         as the default for all three purposes
+   :align: center
+
+   A connection carrying all three default badges.
 
 When you delete the last connection that holds a default, Zammad
 promotes the oldest remaining connection that can serve that purpose
 to default. For semantic search, the promotion picks only a
-connection whose type actually supports embeddings.
+connection whose provider type actually supports it.
 
 If no connection is flagged as the default for semantic search and a
-feature needs embeddings, Zammad shows a warning on the corresponding
-feature page. Pick a connection that supports embeddings as the
-semantic search default to clear the warning.
+feature needs it, Zammad shows a warning on the corresponding feature
+page. Pick a connection that supports semantic search as the default
+to clear the warning.
 
 .. _per-feature-provider:
 
 Per-Feature Routing
 -------------------
 
-The defaults cover most setups. For finer control, route individual
-features to a specific connection. Every AI feature page exposes a
-**Provider** button in the page header:
+The defaults cover most setups. For finer control, assign a specific
+connection to individual features. Every AI feature page exposes a
+``Provider`` button in the page header:
 
-- *AI > Ticket Summary*
-- *AI > Writing Assistant*
-- *AI > AI Agents*
-- *AI > KB Answer from Ticket*
+- **AI > Ticket Summary**
+- **AI > Writing Assistant**
+- **AI > AI Agents**
+- **AI > KB Answer from Ticket**
 
 Click the button to open a modal with a dropdown of all configured
 connections. Pick a connection to route that feature to it, or pick
 ``Default provider(s)`` to clear any override and fall back to the
-chat default.
+default.
 
-.. figure:: /images/ai/feature-provider-modal.png
+.. figure:: /images/ai/provider-selection-ai-feature.png
    :alt: Screenshot shows the per-feature provider modal with a
          connection selected
    :align: center
 
-   *Placeholder - replace with a screenshot of the Provider modal
-   opened on a feature page.*
+   The Provider modal opened on a feature page, with a specific
+   connection selected in the dropdown.
 
-A feature's routing entry only affects chat completions. Embeddings
-always go to the semantic search default, and OCR always goes to the
-image text recognition default (or the chat default if no OCR default
-is set). The **Provider** button is only visible to admins who also
-hold the ``admin.ai_provider`` permission, since routing touches the
-connections you set up on this page.
+The choice only affects text generation. Semantic search always goes
+to the semantic search default, and image text recognition always
+goes to the image text recognition default (or the default provider
+if no image text recognition default is set). The ``Provider`` button
+is only visible to admins who also hold the ``admin.ai_provider``
+permission, since routing touches the connections you set up on this
+page.
 
 Excursion
 ---------
