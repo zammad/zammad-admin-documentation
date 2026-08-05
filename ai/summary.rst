@@ -10,6 +10,10 @@ you activate the feature. Otherwise, a warning message will tell you to do so.
 Agents get notified for a new AI summary by a pulsing dot as indicator on the
 summary sidebar tab.
 
+To use a different connection for ticket summaries than the chat default,
+use the :ref:`per-feature provider routing <per-feature-provider>` via the
+**Provider** button at the top of this page.
+
 .. figure:: /images/ai/summary-settings.png
    :alt: Screenshot shows AI ticket summary configuration
    :align: center
