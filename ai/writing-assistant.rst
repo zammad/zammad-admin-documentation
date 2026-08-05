@@ -136,7 +136,7 @@ Custom instructions
         - Preserve all key information, main arguments, and important details.
 
 Groups
-   Define groups which can access the write assistance tool. If no  group is
+   Define groups which can access the write assistance tool. If no group is
    selected (moved on the left side by clicking on it), the tool is
    available for tickets in all groups.
 
