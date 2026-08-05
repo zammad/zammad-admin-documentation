@@ -1,13 +1,14 @@
 Providers
 =========
 
-An AI provider is needed for any AI feature in Zammad, and configuring one
-is the first required step. The provider handles the actual AI calls for text
-generation, semantic search and image text recognition. Add one provider for
-all features, or several to assign different features to different providers.
-Managing them under *AI > Providers* requires the ``admin.ai_provider``
-permission. Switching the toggle at the top of the page to off stops all AI
-calls, regardless of whether a provider is configured.
+Zammad offers AI-powered features to support your agents! To use AI features in
+Zammad, you must first configure and enable at least one AI provider. Such an AI
+provider processes all your AI requests and is required for any AI
+functionality. You can configure several providers and assign different features
+to different ones. Add your providers in Zammad's admin settings under
+*AI > Providers* and make sure to activate the toggle. Switching the toggle off
+stops all AI calls, even if one or more providers are configured. This setting
+requires the ``admin.ai_provider`` permission to access it.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI providers
