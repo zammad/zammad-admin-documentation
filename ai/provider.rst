@@ -6,16 +6,12 @@ connection is a named, credentialed handle to one provider endpoint.
 All features can use a default provider, or you can pick a specific
 provider for a single feature.
 
-Manage your connections under **AI > Providers**. The page requires
+Manage your connections under *AI > Providers*. The page requires
 the ``admin.ai_provider`` permission.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI provider connections
    :align: center
-
-   The Providers list with one connection flagged as the default,
-   with additional badges for semantic search and image text
-   recognition.
 
 .. note:: Zammad's AI features are completely optional and require at
    least one configured provider connection before any AI request is
@@ -23,69 +19,56 @@ the ``admin.ai_provider`` permission.
    :docs:`how to hide it in the system docs
    </admin/console/other-useful-commands.html#remove-ai-feature>`.
 
-Connections List
-----------------
+Connection Overview
+-------------------
 
-The page shows a table of all configured connections. Each row displays
-the connection's name, the provider type and a status icon that shows
-whether the connection has been used successfully:
+The page shows a table of all configured connections. Each row
+displays the connection's name, the provider type and a status icon
+that shows whether the connection has been used successfully:
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+Green
+   The connection has been used and the last request succeeded.
 
-   * - Icon
-     - Meaning
-   * - Green
-     - The connection has been used and the last request succeeded.
-   * - Orange
-     - The connection is configured but has not been used yet. It
-       turns green after the first successful request.
-   * - Red
-     - The connection failed. Hover the icon for the error message
-       from the provider.
+Orange
+   The connection is configured but has not been used yet. It
+   turns green after the first successful request.
+
+Red
+   The connection failed. Hover the icon for the error message from
+   the provider.
 
 The same row can carry up to three badges to mark it as the default
 for a specific purpose:
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**Default**
+   Used for AI features that have no specific provider assigned.
 
-   * - Badge
-     - Purpose
-   * - **Default**
-     - Used for AI features that have no specific provider assigned.
-   * - **Semantic search**
-     - Used to turn text into numerical form (vector embeddings) so the
-       knowledge base can find answers by meaning, not just keywords.
-   * - **Image text recognition**
-     - Used to extract text from images (OCR).
+**Semantic search**
+   Used to turn text into numerical form (vector embeddings) so the
+   knowledge base can find answers by meaning, not just keywords.
+
+**Image text recognition**
+   Used to extract text from images (OCR).
 
 A connection can carry one, two or all three badges at the same time,
 so a single well-equipped provider can serve every purpose.
 
 The action menu (︙) for each row offers the following entries:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 1
+**Set as default**
+   Marks the connection as the default for AI features.
 
-   * - Action
-     - Effect
-   * - ``Set as default``
-     - Marks the connection as the default for AI features.
-   * - ``Use for semantic search`` / ``Do not use for semantic search``
-     - Marks the connection as the default for semantic search, or
-       clears that flag. Only available for providers that support
-       it.
-   * - ``Use for image text recognition`` /
-       ``Do not use for image text recognition``
-     - Marks the connection as the default for image text recognition, or
-       clears that flag.
-   * - ``Delete``
-     - Removes the connection. Not available for the Zammad AI
-       connection on SaaS.
+**Use for semantic search** or **Do not use for semantic search**
+   Marks the connection as the default for semantic search, or clears
+   that flag. Only available for providers that support it.
+
+**Use for image text recognition** or **Do not use for image text recognition**
+   Marks the connection as the default for image text recognition, or
+   clears that flag.
+
+**Delete**
+   Removes the connection. Not available for the Zammad AI connection
+   on SaaS.
 
 Add or Edit a Connection
 ------------------------
@@ -100,9 +83,6 @@ fly.
    :alt: Screenshot shows the dialog for adding or editing a provider
          connection
    :align: center
-
-   The dialog for a connection of type OpenAI, showing Token, Model,
-   Embedding Model, OCR Model and URL fields.
 
 Type
    Pick the AI provider. Available options:
@@ -135,19 +115,24 @@ Token
    request.
 
 Model
-   The model used to generate text. Leave empty to use the
-   provider's default, shown as a placeholder.
+   The model used to generate text. The placeholder shows Zammad's
+   built-in default for the chosen provider (for example
+   ``gpt-4.1`` for OpenAI). Leave the field empty to use that
+   default.
 
 Embedding Model
    The model used to turn text into numerical form for semantic
-   search. Leave empty to fall back to the Model field. Not every
+   search. The placeholder shows Zammad's built-in default for the
+   chosen provider. Leave the field empty to use it. Not every
    provider supports semantic search; the field appears only for the
    ones that do.
 
 OCR Model
-   The model used to extract text from images. Leave empty to fall
-   back to the Model field. Not every provider supports image text
-   recognition; the field appears only for the ones that do.
+   The model used to extract text from images. Leave the field empty
+   to fall back to the Model field. The placeholder shows Zammad's
+   built-in default for the chosen provider. Not every provider
+   supports image text recognition; the field appears only for the
+   ones that do.
 
 URL
    The URL or IP address of the provider. Required for Ollama and
@@ -183,8 +168,6 @@ default takes over immediately.
          as the default for all three purposes
    :align: center
 
-   A connection carrying all three default badges.
-
 When you delete the last connection that holds a default, Zammad
 promotes the oldest remaining connection that can serve that purpose
 to default. For semantic search, the promotion picks only a
@@ -204,23 +187,20 @@ The defaults cover most setups. For finer control, assign a specific
 connection to individual features. Every AI feature page exposes a
 ``Provider`` button in the page header:
 
-- **AI > Ticket Summary**
-- **AI > Writing Assistant**
-- **AI > AI Agents**
-- **AI > KB Answer from Ticket**
+- *AI > Ticket Summary*
+- *AI > Writing Assistant*
+- *AI > AI Agents*
+- *AI > KB Answer from Ticket*
 
 Click the button to open a modal with a dropdown of all configured
-connections. Pick a connection to route that feature to it, or pick
-``Default provider(s)`` to clear any override and fall back to the
-default.
+connections. Pick a connection to send that feature's text
+generation requests to it, or pick the *Default provider(s)* entry
+to clear any override and fall back to the default.
 
 .. figure:: /images/ai/provider-selection-ai-feature.png
    :alt: Screenshot shows the per-feature provider modal with a
          connection selected
    :align: center
-
-   The Provider modal opened on a feature page, with a specific
-   connection selected in the dropdown.
 
 The choice only affects text generation. Semantic search always goes
 to the semantic search default, and image text recognition always
@@ -234,12 +214,8 @@ Excursion
 ---------
 
 If you want to know more about Zammad AI or Ollama, read on here.
-Otherwise, head over to :doc:`feedback-and-logs` or check out the
-AI-powered features and how to use them:
-
-- :doc:`Ticket Summary <summary>`
-- :doc:`Writing Assistant <writing-assistant>`
-- :doc:`AI Agents <ai-agents>`
+Otherwise, head over to :doc:`feedback-and-logs` or pick any of the
+AI feature pages from the menu on the left.
 
 .. _zammad-ai-provider:
 
