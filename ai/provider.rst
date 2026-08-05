@@ -1,12 +1,11 @@
 Providers
 =========
 
-Zammad's AI features rely on one or more AI providers. Each provider has a
-name, an API token and the settings Zammad needs to talk to it. Features can
-share the same provider or each use a different one. Managing them under
-*AI > Providers* requires the ``admin.ai_provider`` permission. Make sure to
-configure a provider and to toggle the switch before enabling an AI-based
-feature.
+Zammad's AI features need at least one configured AI provider. Add one
+provider for all features, or several to assign different features to
+different providers. Managing them under *AI > Providers* requires the
+``admin.ai_provider`` permission. Make sure to configure a provider and turn
+on the toggle at the top of the page before enabling any AI feature.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI providers
@@ -22,9 +21,9 @@ Managing Providers
 
 The settings page shows a table of all configured providers. Each row has a
 status icon, the provider's name and type, and badges that mark the provider as
-the default for a specific purpose. The ︙ action menu at the end of the row
-lets you change the provider's defaults or remove it. See :ref:`defaults` for
-what each badge means.
+the default for a specific purpose. The ︙ menu in the **Action** column lets
+you change the provider's defaults or remove it. See :ref:`defaults` for what
+each badge means.
 
 Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -72,9 +71,9 @@ Model
 
 Embedding Model
    The model used to turn text into numerical form for semantic search. The
-   placeholder shows Zammad's built-in default for the chosen provider.
-   Leave the field empty to use it. Not every provider supports semantic
-   search; the field appears only for the ones that do.
+   placeholder shows Zammad's built-in default for the chosen provider. Leave
+   the field empty to use it. Not every provider supports semantic search; the
+   field appears only for the ones that do.
 
 OCR Model
    The model used to extract text from images. Leave the field empty to fall
@@ -97,14 +96,14 @@ URL (OCR)
    Leave empty to fall back to URL (Completions).
 
 After filling in the fields, click ``Submit``. Zammad tests the configuration
-before saving. If the test succeeds, the row's status icon starts orange until
+before saving. If the test succeeds, the row's status dot starts orange until
 the first successful request turns it green, see Status next.
 
 Status
 ^^^^^^
 
-The icon at the start of each row shows whether the provider has been used
-successfully:
+The colored dot at the start of each row shows whether the provider has been
+used successfully or has issues:
 
 Green
    The provider has been used and the last request succeeded. Shows a tooltip
@@ -115,24 +114,24 @@ Orange
    after the first successful request.
 
 Red
-   The last request to this provider failed. Hover the icon for the error
+   The last request to this provider failed. Hover the dot for the error
    message from the provider, with a timestamp of the first occurrence.
 
 Actions
 ^^^^^^^
 
-The ︙ action menu for each row offers the following actions:
+The ︙ menu in the **Action** column offers the following actions:
 
 Set as default
    Marks the provider as the default for AI features.
 
 Use for semantic search / Do not use for semantic search
-   Marks the provider as the default for semantic search, or clears that
-   flag. Only available for providers that support it.
+   Marks the provider as the default for semantic search, or clears that flag.
+   Only available for providers that support it.
 
 Use for image text recognition / Do not use for image text recognition
-   Marks the provider as the default for image text recognition, or clears
-   that flag.
+   Marks the provider as the default for image text recognition, or clears that
+   flag.
 
 Delete
    Removes the provider. Not available for the Zammad AI provider on SaaS.
@@ -143,24 +142,25 @@ Defaults
 ^^^^^^^^
 
 Each of the three purposes can have one default provider at a time. You set
-the defaults from the ︙ action menu. A provider can carry any combination of
-the three badges, so a single well-equipped provider can serve every purpose.
+the defaults from the ︙ menu in the **Action** column. A provider can carry any
+combination of the three badges, so a single well-equipped provider can serve
+every purpose.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the providers list with a provider flagged as the default for all three purposes
    :align: center
 
-**Default**
+Default
    The provider used for AI features that have no specific provider assigned.
 
-**Semantic search**
+Semantic search
    The provider used to turn text into numerical form (vector embeddings)
    so the knowledge base can find answers by meaning, not just keywords.
 
-**Image text recognition**
+Image text recognition
    The provider used to extract text from images (OCR). If no provider is
-   flagged as the image text recognition default, the **Default** provider
-   is used instead.
+   flagged as the image text recognition default, the **Default** provider is
+   used instead.
 
 When you mark a provider as the default for a purpose, Zammad clears that
 flag from whichever provider held it before, so the new default takes over
