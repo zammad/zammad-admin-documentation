@@ -1,12 +1,11 @@
 Providers
 =========
 
-Zammad's AI features rely on one or more *provider connections*
-(what you see as a row in *AI > Providers*). Each provider connection
-has a name, an API token and the settings Zammad needs to talk to
-one provider. From here on the docs use *provider* for short.
-Features can share the same provider or each use a different one.
-Managing them requires the ``admin.ai_provider`` permission.
+Zammad's AI features rely on one or more AI providers. Each
+provider has a name, an API token and the settings Zammad needs to
+talk to it. Features can share the same provider or each use a
+different one. Managing them requires the ``admin.ai_provider``
+permission.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI providers
@@ -22,10 +21,11 @@ Managing Providers
 ------------------
 
 The page shows a table of all configured providers. Each row has a
-status icon, the provider's name, the provider type and up to three
-badges that mark the provider as the default for a specific purpose.
-The ︙ action menu at the end of the row lets you change the
-provider's defaults or remove it.
+status icon, the provider's name, the provider type and zero or
+more badges that mark the provider as the default for a specific
+purpose. The ︙ action menu at the end of the row lets you change
+the provider's defaults or remove it. See :ref:`defaults` for what
+each badge means.
 
 Add or Edit a Provider
 ----------------------
@@ -128,25 +128,6 @@ Red
    The provider failed. Hover the icon for the error message from
    the provider.
 
-Badges
-^^^^^^
-
-The same row can carry up to three badges to mark the provider as
-the default for a specific purpose:
-
-**Default**
-   Used for all AI features that have no specific provider assigned.
-
-**Semantic search**
-   Used to turn text into numerical form (vector embeddings) so the
-   knowledge base can find answers by meaning, not just keywords.
-
-**Image text recognition**
-   Used to extract text from images (OCR).
-
-A provider can carry one, two or all three badges at the same time,
-so a single well-equipped provider can serve every purpose.
-
 Actions
 ^^^^^^^
 
@@ -167,13 +148,15 @@ Delete
    Removes the provider. Not available for the Zammad AI provider
    on SaaS.
 
+.. _defaults:
+
 Defaults
 --------
 
 Each of the three purposes can have one default provider at a time.
-You set the defaults from the action menu (︙). The three defaults
-are independent: a single provider can hold any combination of
-them.
+You set the defaults from the action menu (︙). A provider can carry
+any combination of the three badges, so a single well-equipped
+provider can serve every purpose.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the providers list with a provider flagged
@@ -210,8 +193,8 @@ to clear the warning.
 
 .. _per-feature-provider:
 
-Per-Feature Routing
--------------------
+Per-Feature Provider
+--------------------
 
 The defaults cover most setups. For finer control, assign a specific
 provider to individual features. Every AI feature page exposes a
