@@ -11,9 +11,9 @@ doing. The page requires the ``admin.ai_feedback_logs`` permission.
 Downloads
 ---------
 
-Your agents can give feedback like thumbs up or down and leave a comment when
-they give a thumbs down. Use the buttons to download this feedback as well as
-error logs to dig into how the features perform. Both downloads provide an Excel
+Your agents can give feedback such as a thumbs up or a thumbs down and leave a
+comment when they give a thumbs down. Use the buttons to download this feedback
+as well as error logs to review how the features perform. Both downloads provide an Excel
 file (.xlsx) with the requested information.
 
 ``Download Feedback`` provides feedback from all AI features in one file. If you

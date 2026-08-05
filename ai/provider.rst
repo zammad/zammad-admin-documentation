@@ -2,12 +2,13 @@ Providers
 =========
 
 Zammad offers AI-powered features to support your agents! To use AI features in
-Zammad, you must first configure and enable at least one AI provider. Such an AI
+Zammad, you must first configure and enable at least one AI provider. An AI
 provider processes your AI requests and is required for any AI feature.
 Add your providers in Zammad's admin settings under *AI > Providers* and make
 sure to activate the toggle. Switching the toggle off stops all AI calls, even
-if one or more providers are configured. This setting requires the
-``admin.ai_provider`` permission to access it.
+if one or more providers are configured.
+
+Accessing this page requires the ``admin.ai_provider`` permission.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the list of configured AI providers
@@ -21,11 +22,11 @@ Managing Providers
 ------------------
 
 This page shows a table of all configured providers. Each row has a
-status icon, the provider's name and type, and badges that mark the provider as
+status dot, the provider's name and type, and badges that mark the provider as
 the default for a specific purpose. The ︙ menu in the **Action** column lets
 you change the provider's defaults or remove it. See :ref:`defaults` for what
 each badge means. You can add one provider for all AI features you want to
-enable or add multiple to set a provider for individual features.
+enable, or add multiple to assign different providers to individual features.
 
 Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -99,7 +100,7 @@ URL (OCR)
 
 After filling in the fields, click ``Submit``. Zammad tests the configuration
 before saving. If the test succeeds, the row's status dot starts orange until
-the first successful request turns it green, see Status next.
+the first successful request turns it green; see Status below for the colors.
 
 Status
 ^^^^^^
@@ -169,7 +170,7 @@ flag from whichever provider held it before, so the new default takes over
 immediately.
 
 When you delete the last provider that holds a default, Zammad promotes the
-oldest remaining provider that can serve that purpose to default. For
+oldest remaining provider that can serve that purpose to be the default. For
 semantic search, the promotion picks only a provider whose provider type
 actually supports it.
 
@@ -177,15 +178,15 @@ If no provider is flagged as the default for semantic search and a feature
 needs it, Zammad shows a warning on the corresponding feature page. Pick a
 provider that supports semantic search as the default to clear the warning.
 
-.. _per-feature-provider:
+.. _per-feature-provider-config:
 
-Provider Per Feature
---------------------
+Configuring Provider per Feature
+--------------------------------
 
 By default, all AI features use the provider marked as the default. For finer
 control, you can pick a specific provider for individual features.
 
-Every AI feature settings page exposes a ``Provider`` button in the page header.
+Every AI feature settings page shows a ``Provider`` button in the page header.
 It opens a modal with a dropdown of all configured providers. Pick a provider
 to send that feature's text generation requests to, or pick the **Default
 (...)** entry to clear any override and fall back to the default.
@@ -201,10 +202,10 @@ default is set). The ``Provider`` button is only visible to admins who also hold
 the ``admin.ai_provider`` permission, since routing touches the providers you
 set up on this page.
 
-Excursion
----------
+Additional Provider Information
+-------------------------------
 
-If you want to know more about Zammad AI or Ollama, read on here. Otherwise,
+If you want to know more about Zammad AI or Ollama, read on. Otherwise,
 head over to :doc:`feedback-and-logs` or pick any of the AI feature pages from
 the menu on the left.
 
@@ -214,7 +215,7 @@ Zammad AI
 ^^^^^^^^^
 
 Using Zammad AI as a provider is the easiest way to get started with Zammad's
-AI features. It has some big advantages:
+AI features. It has several key advantages:
 
 - You don't have to set up an AI system or its configuration.
 - Hosted in the EU and compliant with GDPR.
@@ -245,7 +246,7 @@ Ollama
 ^^^^^^
 
 `Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine
-you control, so your data is not transferred to a third party. That only
+you control, so your data is not transferred to a third party. This approach only
 makes sense if you have a powerful GPU in your system!
 
 If you don't have Ollama running yet, their
