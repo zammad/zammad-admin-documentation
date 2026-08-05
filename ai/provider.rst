@@ -1,10 +1,10 @@
 Providers
 =========
 
-Zammad's AI features rely on one or more AI provider connections. A
-connection is a named, credentialed handle to one provider endpoint.
-All features can use a default provider, or you can pick a specific
-provider for a single feature.
+Zammad's AI features rely on one or more AI provider connections. Each
+connection has a name, an API token and the settings Zammad needs to
+talk to one provider. Features can share the same connection or each
+use a different one.
 
 Manage your connections under *AI > Providers*. The page requires
 the ``admin.ai_provider`` permission.
@@ -19,39 +19,17 @@ the ``admin.ai_provider`` permission.
    :docs:`how to hide it in the system docs
    </admin/console/other-useful-commands.html#remove-ai-feature>`.
 
-Connection Overview
--------------------
+Managing Providers
+------------------
 
-The page shows a table of all configured connections. Each row
-displays the connection's name, the provider type and a status icon
-that shows whether the connection has been used successfully:
+The page shows a table of all configured connections. Each row has a
+status icon, the connection's name, the provider type and up to three
+badges that mark the connection as the default for a specific
+purpose. The action menu (︙) at the end of the row lets you change
+the connection's defaults or remove it.
 
-Green
-   The connection has been used and the last request succeeded.
-
-Orange
-   The connection is configured but has not been used yet. It
-   turns green after the first successful request.
-
-Red
-   The connection failed. Hover the icon for the error message from
-   the provider.
-
-The same row can carry up to three badges to mark it as the default
-for a specific purpose:
-
-**Default**
-   Used for AI features that have no specific provider assigned.
-
-**Semantic search**
-   Used to turn text into numerical form (vector embeddings) so the
-   knowledge base can find answers by meaning, not just keywords.
-
-**Image text recognition**
-   Used to extract text from images (OCR).
-
-A connection can carry one, two or all three badges at the same time,
-so a single well-equipped provider can serve every purpose.
+Actions
+^^^^^^^
 
 The action menu (︙) for each row offers the following entries:
 
@@ -69,6 +47,42 @@ The action menu (︙) for each row offers the following entries:
 **Delete**
    Removes the connection. Not available for the Zammad AI connection
    on SaaS.
+
+Status
+^^^^^^
+
+The icon at the start of each row shows whether the connection has
+been used successfully:
+
+Green
+   The connection has been used and the last request succeeded.
+
+Orange
+   The connection is configured but has not been used yet. It
+   turns green after the first successful request.
+
+Red
+   The connection failed. Hover the icon for the error message from
+   the provider.
+
+Badges
+^^^^^^
+
+The same row can carry up to three badges to mark it as the default
+for a specific purpose:
+
+**Default**
+   Used for AI features that have no specific provider assigned.
+
+**Semantic search**
+   Used to turn text into numerical form (vector embeddings) so the
+   knowledge base can find answers by meaning, not just keywords.
+
+**Image text recognition**
+   Used to extract text from images (OCR).
+
+A connection can carry one, two or all three badges at the same time,
+so a single well-equipped provider can serve every purpose.
 
 Add or Edit a Connection
 ------------------------
@@ -95,10 +109,10 @@ Type
    - Mistral AI
    - Custom (OpenAI compatible)
 
-   Depending on the type you choose, Zammad shows different fields.
-   Keep in mind that some providers require configuration on their
-   side before you can connect (for example Azure AI). Refer to the
-   provider's own documentation for those steps.
+   Different fields appear depending on the type. Some providers
+   also require configuration on their side before you can connect
+   (for example Azure AI). Refer to the provider's own documentation
+   for those steps.
 
    .. note:: The provider you need isn't listed? We are going to add
       more over time. If you need a particular one or want to
@@ -106,8 +120,9 @@ Type
       `sales department <https://zammad.com/en/company/contact>`_.
 
 Name
-   A human-readable label for the connection. The list, the action
-   menus and the per-feature routing modal all use this name.
+   A human-readable label for the connection. This is what you see
+   in the list, the action menus and the per-feature ``Provider``
+   button.
 
 Token
    The API token issued by your provider. Don't confuse it with the
@@ -116,9 +131,8 @@ Token
 
 Model
    The model used to generate text. The placeholder shows Zammad's
-   built-in default for the chosen provider (for example
-   ``gpt-4.1`` for OpenAI). Leave the field empty to use that
-   default.
+   built-in default for the chosen provider. Leave the field empty
+   to use that default.
 
 Embedding Model
    The model used to turn text into numerical form for semantic
@@ -151,22 +165,40 @@ URL (OCR)
    Leave empty to fall back to URL (Completions).
 
 After filling in the fields, click ``Submit``. Zammad tests the
-connection against the provider before saving and shows the result as
-the row's status icon. The icon starts orange until the first
-successful request turns it green.
+connection against the provider before saving. If the test succeeds,
+the row's status icon starts orange until the first successful
+request turns it green.
 
 Defaults
 --------
 
-Each of the three purposes has exactly one default connection at a
-time. When you mark a connection as the default for a purpose, Zammad
-clears that flag from whichever connection held it before, so the new
-default takes over immediately.
+Each of the three purposes can have one default connection at a time.
+You set the defaults from the action menu (︙). The three defaults
+are independent: a single connection can hold any combination of
+them.
 
 .. figure:: /images/ai/providers-management.png
    :alt: Screenshot shows the providers list with a connection flagged
          as the default for all three purposes
    :align: center
+
+**Default**
+   The connection used for AI features that have no specific
+   provider assigned.
+
+**Semantic search**
+   The connection used to turn text into numerical form (vector
+   embeddings) so the knowledge base can find answers by meaning,
+   not just keywords.
+
+**Image text recognition**
+   The connection used to extract text from images (OCR). If no
+   connection is flagged as the image text recognition default,
+   the **Default** connection is used instead.
+
+When you mark a connection as the default for a purpose, Zammad
+clears that flag from whichever connection held it before, so the new
+default takes over immediately.
 
 When you delete the last connection that holds a default, Zammad
 promotes the oldest remaining connection that can serve that purpose
@@ -185,12 +217,7 @@ Per-Feature Routing
 
 The defaults cover most setups. For finer control, assign a specific
 connection to individual features. Every AI feature page exposes a
-``Provider`` button in the page header:
-
-- *AI > Ticket Summary*
-- *AI > Writing Assistant*
-- *AI > AI Agents*
-- *AI > KB Answer from Ticket*
+``Provider`` button in the page header.
 
 Click the button to open a modal with a dropdown of all configured
 connections. Pick a connection to send that feature's text
