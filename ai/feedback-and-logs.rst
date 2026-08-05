@@ -1,7 +1,7 @@
 Feedback & Logs
 ===============
 
-Under **AI > Feedback & Logs** you can review what your AI features have been
+Under *AI > Feedback & Logs* you can review what your AI features have been
 doing. The page requires the ``admin.ai_feedback_logs`` permission.
 
 .. figure:: /images/ai/feedback-logs.png
