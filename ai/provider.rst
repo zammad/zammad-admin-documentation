@@ -21,12 +21,13 @@ Accessing this page requires the ``admin.ai_provider`` permission.
 Managing Providers
 ------------------
 
-This page shows a table of all configured providers. Each row has a
-status dot, the provider's name and type, and badges that mark the provider as
-the default for a specific purpose. The ︙ menu in the **Action** column lets
-you change the provider's defaults or remove it. See :ref:`defaults` for what
-each badge means. You can add one provider for all AI features you want to
-enable, or add multiple to assign different providers to individual features.
+The AI provider configuration page shows a table of all configured providers.
+Each row has a status dot, the provider's name and type, and badges that mark
+the provider as the default for a specific purpose. The ︙ menu in the
+**Action** column lets you change the provider's defaults or remove it. See
+:ref:`defaults` for what each badge means. You can add one provider for all AI
+features you want to enable, or add multiple to assign different providers to
+individual features.
 
 Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -109,8 +110,8 @@ The colored dot at the start of each row shows whether the provider has been
 used successfully or whether it has issues:
 
 Green
-   The provider has been used and the last request succeeded. Shows a tooltip
-   with a timestamp of the last successful connection.
+   The provider has been used and the last request succeeded. Shows the
+   timestamp of the last successful connection in a tooltip on hover.
 
 Orange
    The provider is configured but has not been used yet. It turns green
