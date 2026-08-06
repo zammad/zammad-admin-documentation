@@ -50,10 +50,10 @@ This guide assumes your Zammad is not yet configured. If the getting-started
 wizard appears, provide as much information as you like or skip it and
 configure things later.
 
-Company Details
-^^^^^^^^^^^^^^^
+Organization Details
+^^^^^^^^^^^^^^^^^^^^
 
-The basic customization step in Zammad is to add your company name and your
+The basic customization step in Zammad is to add your organization name and your
 logo. If you haven't already set this in the getting-started wizard, open
 the admin settings (click the cogwheel icon at the bottom of the primary
 navigation on the left side) and go to *Settings > Branding* to adjust it.
@@ -62,7 +62,7 @@ See the :doc:`/settings/branding` page for details.
 Create Groups
 ^^^^^^^^^^^^^
 
-A group in Zammad typically represents a department of a company. You can
+A group in Zammad typically represents a department of an organization. You can
 define which agents have access to which group and set permissions per group.
 A group can also have a specific email address and department name. Start by
 renaming the default **Users** group, then add additional groups as needed.
@@ -87,7 +87,7 @@ roles are:
 
 You can also assign group permissions directly to a specific user. If more than
 one person needs the same permissions, prefer using a role and assigning it to
-the users.
+the users. In any case, you should stick with one method.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,7 +101,7 @@ Depending on your email system, follow the matching guide:
 
 After adding an email channel, open the channel and go to the **Signatures**
 tab to create one or more signatures. You can use one signature for many
-groups or create different signatures depending on your company's department
+groups or create different signatures depending on your organization's department
 structure. The assignment of signatures is done in the group settings, see
 the next section.
 
@@ -115,7 +115,7 @@ the signature to use.
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
 
-Create a :doc:`user </manage/users/index>` for each of your support agents
+Create a :doc:`user </manage/users/index>` for each of your agents
 from the :doc:`First Steps </misc/first-steps>` section: select **Dashboard**
 in the primary navigation on the left side, switch to the **First Steps** tab
 and use the ``Invite agents/colleagues to help working on tickets`` link. Assign
