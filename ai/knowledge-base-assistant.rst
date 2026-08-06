@@ -52,10 +52,15 @@ Knowledge Base Answer from Ticket
 - **AI provider.** The feature requires an :doc:`AI provider <provider>`
   configured and enabled. Without one, the settings page shows a warning.
 - **Vector database.** Related-answer suggestions rely on Zammad's vector
-  database (Elasticsearch as the vector store). The
-  ``vectordb_enabled``, ``vectordb_knowledge_base_excluded_category_ids``,
-  and ``vectordb_knowledge_base_chunking_strategy`` settings control which
-  categories are indexed and how they are split into chunks.
+  database (Elasticsearch as the vector store). Three settings control it:
+
+  - ``vectordb_enabled`` — global on/off switch for the vector database.
+  - ``vectordb_knowledge_base_excluded_category_ids`` — knowledge base
+    categories that should **not** be indexed. Leave empty to index every
+    category.
+  - ``vectordb_knowledge_base_chunking_strategy`` — how answers are split
+    into chunks before they are indexed (recursive hierarchical or
+    sentence-based chunking).
 - **Per-feature provider.** This page shows a ``Provider`` button in the
   page header. See :ref:`Configuring Provider per Feature
   <provider:per-feature-provider-config>` for how the button works. The
