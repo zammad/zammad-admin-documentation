@@ -62,7 +62,7 @@ See the :doc:`/settings/branding` page for details.
 Create Groups
 ^^^^^^^^^^^^^
 
-A group in Zammad typically represents a department of a company. You can
+A group in Zammad typically represents a department of an organization. You can
 define which agents have access to which group and set permissions per group.
 A group can also have a specific email address and department name. Start by
 renaming the default **Users** group, then add additional groups as needed.
@@ -87,7 +87,7 @@ roles are:
 
 You can also assign group permissions directly to a specific user. If more than
 one person needs the same permissions, prefer using a role and assigning it to
-the users.
+the users. In any case, you should stick with one method.
 
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -101,7 +101,7 @@ Depending on your email system, follow the matching guide:
 
 After adding an email channel, open the channel and go to the **Signatures**
 tab to create one or more signatures. You can use one signature for many
-groups or create different signatures depending on your company's department
+groups or create different signatures depending on your organization's department
 structure. The assignment of signatures is done in the group settings, see
 the next section.
 
