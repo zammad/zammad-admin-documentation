@@ -71,7 +71,7 @@ Enable a Knowledge Base
 
 A :doc:`knowledge base </manage/knowledge-base>` lets your customers answer
 common questions on their own, before they ever open a ticket. It also
-gives your agents a central place for company and support knowledge, so
+gives your agents a central place for organization and support knowledge, so
 they don't have to dig through scattered documents. It allows them to answer
 customer requests in a consistent manner.
 

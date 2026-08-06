@@ -50,10 +50,10 @@ This guide assumes your Zammad is not yet configured. If the getting-started
 wizard appears, provide as much information as you like or skip it and
 configure things later.
 
-Company Details
-^^^^^^^^^^^^^^^
+Organization Details
+^^^^^^^^^^^^^^^^^^^^
 
-The basic customization step in Zammad is to add your company name and your
+The basic customization step in Zammad is to add your organization name and your
 logo. If you haven't already set this in the getting-started wizard, open
 the admin settings (click the cogwheel icon at the bottom of the primary
 navigation on the left side) and go to *Settings > Branding* to adjust it.
