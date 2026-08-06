@@ -74,6 +74,7 @@ Zammad Admin Documentation
    :caption: AI
 
    ai/provider
+   ai/feedback-and-logs
    ai/summary
    ai/writing-assistant
    ai/ai-agents

@@ -1,27 +1,48 @@
-Provider
-========
+Providers
+=========
 
-Zammad offers AI-powered features to support your agents!
-To use AI features in Zammad, you must first configure and enable an AI
-provider. Such an AI provider processes all your AI requests and is required for
-any AI functionality. Add your provider in Zammad's admin settings
-under *AI > Provider* and make sure to activate the toggle. This setting
-requires ``admin.ai_provider`` permission to access it.
+Zammad offers AI-powered features to support your agents! To use AI features in
+Zammad, you must first configure and enable at least one AI provider. An AI
+provider processes your AI requests and is required for any AI feature.
+Add your providers in Zammad's admin settings under *AI > Providers* and make
+sure to activate the toggle. Switching the toggle off stops all AI calls, even
+if one or more providers are configured.
 
-.. note:: Zammad's AI feature is completely optional and requires a
-   configuration before any AI request is made. However, if you don't want to
-   see the settings at all, read about
-   :docs:`how to hide it in the system docs </admin/console/other-useful-commands.html#remove-ai-feature>`.
+Accessing this page requires the ``admin.ai_provider`` permission.
 
-Settings
---------
-
-.. figure:: /images/ai/ai-provider.png
-   :alt: Screenshot shows configuration of AI provider in Zammad
+.. figure:: /images/ai/providers-management.png
+   :alt: Screenshot shows the list of configured AI providers
    :align: center
 
-Provider
-   You can choose from different supported providers:
+.. note:: Zammad's AI features are completely optional. If you don't want to see
+   the AI section at all, read about :docs:`how to hide it in the system docs
+   </admin/console/other-useful-commands.html#remove-ai-feature>`.
+
+Managing Providers
+------------------
+
+The AI provider configuration page shows a table of all configured providers.
+Each row has a status dot, the provider's name and type, and badges for any
+special roles the provider currently has. The ︙ menu in the **Action** column
+lets you change these roles or remove the provider. See :ref:`default-provider`
+and :ref:`capabilities` for details. You can add one provider for all AI
+features you want to enable, or add multiple to assign different providers to
+individual features.
+
+Add or Edit a Provider
+^^^^^^^^^^^^^^^^^^^^^^
+
+Click ``New Provider`` to add a new provider or click on a row to edit an
+existing one. The dialog lets you pick the provider type and fill in the
+credentials and models it needs. The fields shown depend on the provider you
+choose, so switching the type updates the dialog on the fly.
+
+.. figure:: /images/ai/provider-dialog.png
+   :alt: Screenshot shows the dialog for adding or editing a provider
+   :align: center
+
+Type
+   Pick the AI provider. Available options:
 
    - Zammad AI
    - OpenAI
@@ -29,134 +50,215 @@ Provider
    - Anthropic
    - Azure AI
    - Mistral AI
-   - Custom (OpenAI Compatible)
+   - Custom (OpenAI compatible)
 
-   Depending on which provider you choose, Zammad displays different fields you
-   can configure.
+   Different fields appear depending on the type. Some providers also require
+   configuration on their side before you can connect (for example Azure AI).
+   Refer to the provider's own documentation for those steps.
 
-   .. tip:: Keep in mind that your AI provider might require some configuration
-      before you can connect to it. That is the case for Azure AI, anyway.
-      As this configuration is beyond the scope of this documentation, please
-      refer to the documentation of the service you are using.
+   .. note:: The provider you need isn't listed? We are going to add more over
+      time. If you need a particular one or want to sponsor it, get in touch
+      with our `sales department <https://zammad.com/en/company/contact>`_.
 
-   .. note:: The AI service you have subscribed to is not available? This is just
-      the first step. We are going to add more providers soon! If you want to
-      support us or need the provider as soon as possible, just let our
-      `sales department <https://zammad.com/en/company/contact>`_ know!
+Name
+   A human-readable label for the provider. This is what you see in the list
+   and elsewhere in Zammad (for example when configuring a provider for a
+   specific feature).
 
 Token
-   Add your API token which you got from your provider here. Don't confuse it
-   with the tokens a large language model (LLM) is dealing with when processing
-   a request.
-
-URL
-   Provide the URL or IP address of your provider. This is required for Ollama
-   and OpenAI compatible providers.
-
-URL (Completions)
-   Only for Azure AI as provider. Add the endpoint where your text generation
-   model is available.
+   The API token issued by your provider. Don't confuse it with the tokens
+   a large language model deals with when processing a request.
 
 Model
-   Enter the exact name of the model here. This model has to be available on
-   your provider's side. Leave it empty (if not mandatory) to use the default
-   which is shown as a placeholder.
+   The base model used to generate text. The placeholder shows Zammad's built-in
+   default for the chosen provider. Leave the field empty to use that default.
 
-Recognize Image Text (OCR)
-   Zammad allows you to use optical character recognition (OCR) to extract text
-   from images. This can be useful if you often get error messages or other
-   important information, which is only present in images.
-
-   Simply switch the toggle on or off. Be aware that using this feature can
-   cause a high consumption of tokens.
+Embedding Model
+   The model used to vectorize text for semantic search. The placeholder shows
+   Zammad's built-in default for the chosen provider. Leave the field empty to
+   use it. Not every provider supports semantic search; the field appears only
+   for the ones that do.
 
 OCR Model
-   Specify a model to use for the OCR feature. Leave it empty to use the default
-   model of your provider.
+   The model used to extract text from images. Leave the field empty to fall
+   back to the **Model** field. The placeholder shows Zammad's built-in
+   default for the chosen provider. Not every provider supports image text
+   recognition; the field appears only for the ones that do.
 
-   Note: the field is called **URL (OCR)** for Azure AI and expects a URL where
-   the OCR model is available instead of a model itself.
+URL
+   The URL or IP address of the provider. Required for Ollama and
+   OpenAI compatible providers.
 
-After providing the information, make sure to click the ``Save`` button and
-activate AI features.
+URL (Completions)
+   Azure AI only. The endpoint where the text generation model is available.
 
-Excursion
----------
+URL (OCR)
+   Azure AI only. The endpoint where the OCR model is available.
+   Leave empty to fall back to URL (Completions).
 
-In case you want to know more about Zammad AI or Ollama, read on here. Otherwise,
-head over to :ref:`feedback-logs` or check out the AI-powered features and how
-to use them.
+After filling in the fields, click ``Submit``. Zammad tests the configuration
+before saving. If the test succeeds, the row's status dot starts orange until
+the first successful request turns it green; see Status below for the colors.
+
+Status
+^^^^^^
+
+The colored dot at the start of each row shows whether the provider has been
+used successfully or whether it has issues:
+
+Green
+   The provider has been used and the last request succeeded. The tooltip
+   shows the timestamp of the last status update.
+
+Orange
+   The provider is configured but has not been used yet. It turns green
+   after the first successful request.
+
+Red
+   The last request to this provider failed. Hover the dot for the error
+   message from the provider. The tooltip always shows the most recent
+   error, so the timestamp belongs to the last failed request.
+
+.. _default-provider:
+
+Default Provider
+^^^^^^^^^^^^^^^^
+
+The **Default** provider serves every AI feature that has no specific provider
+assigned. You set it from the ︙ menu in the **Action** column. A provider can
+also carry capability badges, so a single well-equipped provider can cover
+everything.
+
+.. figure:: /images/ai/providers-management.png
+   :alt: Screenshot shows the providers list with a provider flagged as the default for all three purposes
+   :align: center
+
+When you mark a provider as the default, Zammad clears that flag from
+whichever provider held it before, so the new default takes over
+immediately. The default provider always exists: when you delete the
+provider that holds the flag, Zammad promotes the oldest remaining provider.
+
+.. _capabilities:
+
+Capabilities
+^^^^^^^^^^^^
+
+Semantic search and image text recognition (OCR) are capabilities. You assign
+them from the ︙ menu in the **Action** column; the badges mark which provider
+currently covers each capability.
+
+Semantic search
+   The provider used to turn text into numerical form (vector embeddings)
+   so the knowledge base can find answers by meaning, not just keywords.
+
+   If no provider covers semantic search and a feature needs it, Zammad shows
+   a warning on the corresponding feature page. Assign semantic search to a
+   provider that supports it to clear the warning.
+
+Image text recognition
+   The provider used to extract text from images (OCR).
+
+   This capability is optional. To save on AI-related costs, you can remove
+   it from all providers entirely; features then simply skip the OCR step.
+
+When you assign a capability to a provider, Zammad clears that assignment from
+whichever provider held it before, so the new assignment takes over
+immediately. Unlike the default provider, capabilities are not promoted:
+when you delete the provider that covers a capability, the capability simply
+stays unassigned.
+
+Actions
+^^^^^^^
+
+The ︙ menu in the **Action** column offers the following actions:
+
+Set as default
+   Marks the provider as the default provider for AI features.
+
+Use for semantic search / Do not use for semantic search
+   Assigns the provider to the semantic search capability, or clears that
+   assignment. Only available for providers that support it.
+
+Use for image text recognition / Do not use for image text recognition
+   Assigns the provider to the image text recognition capability, or clears
+   that assignment.
+
+Delete
+   Removes the provider. Not available for the Zammad AI provider on SaaS.
+
+.. _per-feature-provider-config:
+
+Configuring Provider per Feature
+--------------------------------
+
+By default, all AI features use the provider marked as the default. For finer
+control, you can pick a specific provider for individual features.
+
+Every AI feature settings page shows a ``Provider`` button in the page header.
+It opens a modal with a dropdown of all configured providers. Pick a provider
+to send that feature's text generation requests to, or pick the **Default
+(...)** entry to clear any override and fall back to the default.
+
+.. figure:: /images/ai/provider-selection-ai-feature.png
+   :alt: Screenshot shows the per-feature provider modal with a provider selected
+   :align: center
+
+The choice only affects text generation. Semantic search always goes to the
+provider that covers the semantic search capability, and image text
+recognition always goes to the provider that covers the image text
+recognition capability. The ``Provider`` button is only visible to admins who
+hold the ``admin.ai_provider`` permission, since routing touches the
+providers you set up on this page.
+
+Additional Provider Information
+-------------------------------
+
+If you want to know more about Zammad AI or Ollama, read on. Otherwise,
+head over to :doc:`feedback-and-logs` or pick any of the AI feature pages from
+the menu on the left.
 
 .. _zammad-ai-provider:
 
 Zammad AI
 ^^^^^^^^^
 
-Using Zammad AI as a provider is the easiest way you can get started with
-Zammad's AI features. It has some big advantages like:
+Using Zammad AI as a provider is the easiest way to get started with Zammad's
+AI features. It has several key advantages:
 
-- You don't have to take care of the setup of an AI system and its
-  configuration.
+- You don't have to set up an AI system or its configuration.
 - Hosted in the EU and compliant with GDPR.
-- No configuration in Zammad needed (for SaaS customers) or only an API key
-  required (for self-hosted customers).
-- Your requests with sensitive information aren't used for training.
-- If something isn't working as expected, you just have one place where you
-  get support.
+- No configuration in Zammad for SaaS customers, or just an API key
+  for self-hosted customers.
+- Requests with sensitive information aren't used for training.
+- One place to go for support when something isn't working as
+  expected.
 
 SaaS Customers
    Using Zammad AI requires a "V2" plan. Check your
-   :doc:`subscription settings </system/subscription>` and consider to switch
-   your plan. If a "V2" plan is active, you can buy AI calls for AI processing.
-   After doing so, Zammad AI is automatically configured as AI provider and
-   you can activate and configure AI features as you like. Check your remaining
-   AI calls from time to time or activate the notification to be alerted when
-   few calls remain.
+   :doc:`subscription settings </system/subscription>` and consider switching
+   your plan. When a "V2" plan is active, you can buy AI calls for AI
+   processing. A Zammad AI provider is added automatically and you can enable
+   it as you like. Check your remaining AI calls from time to time or activate
+   the notification to be alerted when few calls remain.
+
+   On SaaS, the Zammad AI provider is provisioned by the platform and you
+   cannot delete it or change its type.
 
 Self-Hosted Customers
-   Please `get in touch with our sales department <https://zammad.com/en/company/contact>`_
-   to obtain a Zammad AI API key and to buy AI calls.
-   After receiving your API key, simply add and save it. Then you are ready to
-   activate and configure AI features as you like.
+   Get in touch with our
+   `sales department <https://zammad.com/en/company/contact>`_ to obtain a
+   Zammad AI API key and to buy AI calls. After receiving your API key, add
+   a new provider of type *Zammad AI* and save the key.
 
 Ollama
 ^^^^^^
 
-`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your
-own AI server on a machine you control. That means your data is not transferred
-to a third party. Be aware that this only makes sense if you have a powerful
-GPU in your system!
+`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine
+you control, so your data is not transferred to a third party. This approach only
+makes sense if you have a powerful GPU in your system!
 
-If you don't have an Ollama running already, their
-`documentation <https://docs.ollama.com/>`_
-is a good starting point. You can find the available models in
-`Ollama's model library <https://ollama.com/library>`_ and useful information
-and additional links in the
-`Ollama GitHub repository <https://github.com/ollama/ollama>`_.
-
-.. _feedback-logs:
-
-Feedback & Logs
----------------
-
-At the top of the settings page, you can switch to the **Feedback & Logs** tab.
-
-.. figure:: /images/ai/provider-feedback-logs.png
-   :alt: Screenshot shows AI provider settings with activated "Feedback & Logs" tab
-   :align: center
-   :width: 60%
-
-Downloads
-^^^^^^^^^
-
-Your agents can provide feedback like thumbs up or down and leave a comment in
-case they gave thumbs down. You can download this feedback as well as error
-logs. Both downloads provide an Excel file (.xlsx) with the requested
-information.
-
-Recent Logs
-^^^^^^^^^^^
-
-Zammad shows the last requests and responses in the UI as well. So in case
-something isn't working, have a look there. When you open an entry, you can
-find the request as well as the response from your AI provider.
+If you don't have Ollama running yet, their
+`documentation <https://docs.ollama.com/>`_ is a good starting point.
+Available models are listed in `Ollama's model library
+<https://ollama.com/library>`_, with useful information and additional links
+in the `Ollama GitHub repository <https://github.com/ollama/ollama>`_.

@@ -9,6 +9,11 @@ admin section under *AI > Writing Assistant*. Make sure to configure an
 warning message will tell you to do so. Activate the feature by turning on the
 switch.
 
+To use a different provider for writing assistant tools than the
+default, use the :ref:`per-feature provider configuration
+<per-feature-provider-config>` via the ``Provider`` button at the top of this
+page.
+
 Manage Tools
 ------------
 
@@ -131,7 +136,7 @@ Custom instructions
         - Preserve all key information, main arguments, and important details.
 
 Groups
-   Define groups which can access the write assistance tool. If no  group is
+   Define groups which can access the write assistance tool. If no group is
    selected (moved on the left side by clicking on it), the tool is
    available for tickets in all groups.
 
