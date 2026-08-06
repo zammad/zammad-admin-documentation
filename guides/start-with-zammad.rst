@@ -115,7 +115,7 @@ the signature to use.
 Create Agent Accounts
 ^^^^^^^^^^^^^^^^^^^^^
 
-Create a :doc:`user </manage/users/index>` for each of your support agents
+Create a :doc:`user </manage/users/index>` for each of your agents
 from the :doc:`First Steps </misc/first-steps>` section: select **Dashboard**
 in the primary navigation on the left side, switch to the **First Steps** tab
 and use the ``Invite agents/colleagues to help working on tickets`` link. Assign
