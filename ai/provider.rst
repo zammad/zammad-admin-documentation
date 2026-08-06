@@ -108,9 +108,7 @@ used successfully or whether it has issues:
 
 Green
    The provider has been used and the last request succeeded. The tooltip
-   shows the timestamp of the last status update: subsequent successful
-   requests do not refresh it, so it keeps the moment the status was last
-   set.
+   shows the timestamp of the last status update.
 
 Orange
    The provider is configured but has not been used yet. It turns green
@@ -120,25 +118,6 @@ Red
    The last request to this provider failed. Hover the dot for the error
    message from the provider. The tooltip always shows the most recent
    error, so the timestamp belongs to the last failed request.
-
-Actions
-^^^^^^^
-
-The ︙ menu in the **Action** column offers the following actions:
-
-Set as default
-   Marks the provider as the **Default** provider for AI features.
-
-Use for semantic search / Do not use for semantic search
-   Assigns the provider to the semantic search capability, or clears that
-   assignment. Only available for providers that support it.
-
-Use for image text recognition / Do not use for image text recognition
-   Assigns the provider to the image text recognition capability, or clears
-   that assignment.
-
-Delete
-   Removes the provider. Not available for the Zammad AI provider on SaaS.
 
 .. _default-provider:
 
@@ -154,12 +133,9 @@ everything.
    :alt: Screenshot shows the providers list with a provider flagged as the default for all three purposes
    :align: center
 
-Default
-   The provider used for AI features that have no specific provider assigned.
-
-When you mark a provider as the **Default**, Zammad clears that flag from
-whichever provider held it before, so the new **Default** takes over
-immediately. The **Default** provider always exists: when you delete the
+When you mark a provider as the default, Zammad clears that flag from
+whichever provider held it before, so the new default takes over
+immediately. The default provider always exists: when you delete the
 provider that holds the flag, Zammad promotes the oldest remaining provider.
 
 .. _capabilities:
@@ -175,22 +151,40 @@ Semantic search
    The provider used to turn text into numerical form (vector embeddings)
    so the knowledge base can find answers by meaning, not just keywords.
 
+   If no provider covers semantic search and a feature needs it, Zammad shows
+   a warning on the corresponding feature page. Assign semantic search to a
+   provider that supports it to clear the warning.
+
 Image text recognition
    The provider used to extract text from images (OCR).
 
+   This capability is optional. To save on AI-related costs, you can remove
+   it from all providers entirely; features then simply skip the OCR step.
+
 When you assign a capability to a provider, Zammad clears that assignment from
 whichever provider held it before, so the new assignment takes over
-immediately. Unlike the **Default** provider, capabilities are not promoted:
+immediately. Unlike the default provider, capabilities are not promoted:
 when you delete the provider that covers a capability, the capability simply
 stays unassigned.
 
-If no provider covers semantic search and a feature needs it, Zammad shows a
-warning on the corresponding feature page. Assign semantic search to a
-provider that supports it to clear the warning.
+Actions
+^^^^^^^
 
-Image text recognition is an optional capability. To save on AI-related
-costs, you can remove it from all providers entirely; features then simply
-skip the OCR step.
+The ︙ menu in the **Action** column offers the following actions:
+
+Set as default
+   Marks the provider as the default provider for AI features.
+
+Use for semantic search / Do not use for semantic search
+   Assigns the provider to the semantic search capability, or clears that
+   assignment. Only available for providers that support it.
+
+Use for image text recognition / Do not use for image text recognition
+   Assigns the provider to the image text recognition capability, or clears
+   that assignment.
+
+Delete
+   Removes the provider. Not available for the Zammad AI provider on SaaS.
 
 .. _per-feature-provider-config:
 
@@ -213,7 +207,7 @@ The choice only affects text generation. Semantic search always goes to the
 provider that covers the semantic search capability, and image text
 recognition always goes to the provider that covers the image text
 recognition capability. The ``Provider`` button is only visible to admins who
-also hold the ``admin.ai_provider`` permission, since routing touches the
+hold the ``admin.ai_provider`` permission, since routing touches the
 providers you set up on this page.
 
 Additional Provider Information
