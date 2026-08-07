@@ -41,12 +41,13 @@ sidebar. Answers are only shown when they are above the configured relevance
 threshold.
 
 Agents can open a suggested knowledge base answer directly. If the suggested
-answer solves the problem, the agent can link the answer permanently.
+answer solves the problem, the agent can link the answer permanently to the
+ticket.
 
 .. warning::
 
    Agents should check the answer before sending the suggested article to the
-   customer. Even a high relevance doesn't necessarily mean that it's content
+   customer. Even a high relevance doesn't necessarily mean that its content
    solves the customer's issue.
 
 Knowledge Base Answer Generation
@@ -55,26 +56,26 @@ Knowledge Base Answer Generation
 When enabled, the agent can ask the AI to draft a new knowledge base answer
 from the ticket's content. If a related answer is detected, Zammad shows a
 preview in a dialog and asks if the agent really wants to trigger the
-generation of a new answer. The AI generated answer is linked to the ticket
-then.
+generation of a new answer. The AI-generated answer is then linked to the
+ticket.
 
 Important information:
 
-- The knowledge base answer is generated as draft and doesn't get published
+- The knowledge base answer is generated as a draft and is not published
   automatically.
 - The answer is generated in the default language of your knowledge base.
 - The answer includes a note in the content and a tag (``ai-generated``)
   about the AI generation.
 - A link to the answer is included in the ticket it was generated from.
 - The AI request includes a list of the knowledge base categories for which
-  the (human) agent has editor permissions. The AI then chooses one of these
+  the agent has editor permissions. The AI then chooses one of these
   categories.
 
 .. warning::
 
-   Even though there are instructions to remove personal and customer
-   specific information in the response, make sure your agents carefully
-   review it before the answer gets used or even published.
+   Even though there are instructions to remove personal and customer-specific
+   information from the generated answer, make sure your agents carefully
+   review it before the answer is used or published.
 
 .. _kb-assistant-relevance-threshold:
 
@@ -82,12 +83,12 @@ Relevance Score Threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Only knowledge base answers reaching this score are included in the list of
-suggestions. The default is ``86 %``. Lower values show more suggestions (and
-thererfore more less relevant answers); higher values show only strong matches.
+suggestions. The default is ``86%``. Lower values show more suggestions (and
+therefore less relevant answers); higher values show only strong matches.
 
-.. tip:: The outcome of the value depends on your used provider/model and your
-   existing data, of course. The default value should be a good starting point.
-   Try to refrain from setting it to an extreme value.
+.. tip:: The outcome depends on the provider/model you use and your existing
+   data, of course. The default value should be a good starting point.
+   Avoid setting it to an extreme value.
 
 Usage for Agents
 ----------------
