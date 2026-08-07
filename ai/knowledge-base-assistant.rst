@@ -41,15 +41,18 @@ Relevance Score Threshold
    Only knowledge base answers reaching this score are included in the
    list of suggestions. The default is ``81 %``. Lower values surface
    more suggestions (and more false positives); higher values surface
-   only strong matches.
+   only strong matches. Values near ``0 %`` indicate content that is the
+   opposite of the ticket's, so a very low threshold can surface
+   irrelevant answers.
 
 Usage for Agents
 ----------------
 
-When the feature is enabled, agents see related knowledge base answers
-in the *Related Knowledge* section of the ticket sidebar. When no
-fitting answer is shown, an action lets the agent draft a new answer
-from the ticket's content. The
+**When the feature is enabled**, agents see related knowledge base
+answers in the *Related Knowledge* section of the ticket sidebar. The
+draft-from-ticket action is available whenever the agent has the
+``knowledge_base.editor`` permission and an :doc:`AI provider
+<provider>` is configured. The
 :user-docs:`knowledge base assistant section in the user documentation
 </extras/ai-features.html>` includes additional information for your
 agents.
