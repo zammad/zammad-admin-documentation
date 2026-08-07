@@ -4,13 +4,13 @@ Knowledge Base Assistant
 Zammad's knowledge base assistant helps your agents find existing
 knowledge base answers for incoming tickets and draft a new one from the
 ticket content. The feature is configured in Zammad's admin settings
-under *AI > Knowledge Base Assistant* and requires the
+under **AI > Knowledge Base Assistant** and requires the
 ``admin.ai_knowledge_base`` permission. Make sure to configure an
 :doc:`AI provider <provider>` before activating the feature. Otherwise,
 a warning message will tell you to do so.
 
 The configuration page only appears when at least one knowledge base is
-active in *Manage > Knowledge Base*. Without an active knowledge base,
+active in **Manage > Knowledge Base**. Without an active knowledge base,
 the AI tools have nothing to search or draft from.
 
 Activate the feature by turning on the switch.
@@ -29,7 +29,7 @@ The page exposes two capability toggles and a relevance score threshold.
 Knowledge Base Answer Suggestions
    Turn the related-answer suggestions on or off. When enabled, Zammad
    surfaces existing knowledge base answers whose content matches the
-   ticket in the *Related Knowledge* section of the ticket sidebar, where
+   ticket in the **Related Knowledge** section of the ticket sidebar, where
    the agent can open the answer, copy a link, or send it to the customer
    in one click.
 
