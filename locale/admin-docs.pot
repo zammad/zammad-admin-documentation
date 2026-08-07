@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-06 17:52+0200\n"
+"POT-Creation-Date: 2026-08-07 12:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -279,313 +279,7 @@ msgstr ""
 msgid "This AI agent is capable of rephrasing the ticket title based on the content of the last article. The title is not considered by the agent and gets completely rewritten. This can be useful if your customers often send requests with unclear subjects or if you have a specific channel which only creates tickets with generic titles (e.g. from a web form)."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:2
-msgid "Knowledge Base Assistant"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:4
-msgid "Zammad's knowledge base assistant helps your agents find existing knowledge base answers for incoming tickets and draft a new one from the ticket content. The feature is configured in Zammad's admin settings under *AI > Knowledge Base Assistant* and requires the ``admin.ai_assistance_kb_answer_from_ticket_generation`` permission. Make sure to configure an :doc:`AI provider <provider>` before activating the feature. Otherwise, a warning message will tell you to do so."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:12
-msgid "Feedback and logs are available under the *Feedback and Logs* tab of the :doc:`AI provider <provider>` settings."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:None
-msgid "Screenshot shows the Knowledge Base Assistant configuration screen"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:20
-#: ../channels/form.rst:183
-#: ../misc/zabbix.rst:10
-#: ../system/integrations/cti/generic.rst:7
-#: ../system/integrations/cti/placetel.rst:12
-#: ../system/integrations/cti/sipgate.rst:12
-msgid "Requirements"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:22
-msgid "**AI provider.** The feature requires an :doc:`AI provider <provider>` configured and enabled. Without one, the settings page shows a warning."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:24
-msgid "**Vector database.** Related-answer suggestions rely on the vector database (Elasticsearch, used as the vector store). Activate the vector database under *Settings > System > Vector DB* and review the related settings before enabling the knowledge base assistant:"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:29
-msgid "**Vector DB** - global on/off switch for the vector database."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:30
-msgid "**Vector DB Knowledge Base Excluded Categories** - knowledge base categories that should **not** be indexed. Sub-categories of an excluded category are excluded as well. Leave empty to index every category."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:34
-msgid "**Vector DB Knowledge Base Chunking Strategy** - how answers are split into chunks before they are indexed (recursive hierarchical or sentence-based chunking)."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:38
-msgid "**Per-feature provider.** This page shows a ``Provider`` button in the page header for routing text-generation requests to a specific provider. See :ref:`Configuring Provider per Feature <provider:per-feature-provider-config>` for how the button works."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:44
-#: ../ai/writing-assistant.rst:92
-#: ../channels/chat.rst:25
-#: ../channels/microsoft365-graph/accounts.rst:18
-#: ../manage/macros.rst:31
-#: ../manage/report-profiles.rst:33
-#: ../manage/trigger.rst:31
-#: ../manage/webhook/add.rst:32
-#: ../misc/first-steps.rst:18
-#: ../system/core-workflows/learn-by-example.rst:36
-#: ../system/core-workflows/learn-by-example.rst:91
-#: ../system/core-workflows/learn-by-example.rst:139
-#: ../system/core-workflows/learn-by-example.rst:198
-#: ../system/core-workflows/learn-by-example.rst:237
-#: ../system/integrations/checkmk/admin-settings.rst:5
-#: ../system/integrations/clearbit.rst:35
-msgid "Configuration"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:46
-msgid "The feature combines two complementary capabilities:"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:48
-msgid "**Related Knowledge Base Answers.** When an agent opens a ticket, Zammad surfaces existing knowledge base answers whose content matches the ticket. Suggestions show up in the *Related Knowledge* section of the ticket sidebar and let the agent open the answer, copy a link, or send the answer to the customer in one click."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:53
-msgid "**Knowledge Base Answer from Ticket.** When no suitable answer exists, the agent can ask the AI to draft a new knowledge base answer from the ticket's content. The draft opens in a side panel where the agent can review, edit, and publish it directly into your knowledge base."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:58
-msgid "Activate the feature by turning on the switch."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:64
-msgid "AI Knowledge Base Answer from Ticket"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:61
-msgid "Enable or disable the AI generation of knowledge base answers from ticket content. When disabled, the *draft from ticket* action is not available to agents; related-answer suggestions are still served as long as the vector database is enabled."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:67
-msgid "Relevance Score Threshold"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:69
-msgid "Related-answer suggestions are ranked by a relevance score between ``0`` and ``1`` that Elasticsearch computes from the cosine similarity between the ticket's content and each knowledge base answer. Suggestions below the configured threshold are not shown."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:74
-msgid "The default threshold is ``0.81``. Tune it from this page to match the embedding model and the quality bar that fits your knowledge base. Lower values surface more suggestions (and more false positives); higher values surface only strong matches."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:80
-#: ../ai/writing-assistant.rst:154
-msgid "Usage for Agents"
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:82
-msgid "If enabled and the requirements above are met, agents see related knowledge base answers in the *Related Knowledge* section of the ticket sidebar. When no fitting answer is shown, an action lets the agent draft a new answer from the ticket's content. The :user-docs:`knowledge base assistant section in the user documentation </extras/ai-features.html>` includes additional information for your agents."
-msgstr ""
-
-#: ../ai/provider.rst:2
-#: ../ai/provider.rst:45
-msgid "Provider"
-msgstr ""
-
-#: ../ai/provider.rst:4
-msgid "Zammad offers AI-powered features to support your agents! To use AI features in Zammad, you must first configure and enable an AI provider. Such an AI provider processes all your AI requests and is required for any AI functionality. Add your provider in Zammad's admin settings under *AI > Provider* and make sure to activate the toggle. This setting requires ``admin.ai_provider`` permission to access it."
-msgstr ""
-
-#: ../ai/provider.rst:11
-msgid "Zammad's AI feature is completely optional and requires a configuration before any AI request is made. However, if you don't want to see the settings at all, read about :docs:`how to hide it in the system docs </admin/console/other-useful-commands.html#remove-ai-feature>`."
-msgstr ""
-
-#: ../ai/provider.rst:17
-#: ../channels/email/settings.rst:2
-#: ../channels/form.rst:29
-#: ../channels/form.rst:236
-#: ../channels/email/settings.rst:2
-#: ../channels/email/settings.rst:2
-#: ../channels/email/settings.rst:2
-#: ../index.rst:63
-#: ../index.rst:63
-#: ../manage/time-accounting.rst:14
-msgid "Settings"
-msgstr ""
-
-#: ../ai/provider.rst:None
-msgid "Screenshot shows configuration of AI provider in Zammad"
-msgstr ""
-
-#: ../ai/provider.rst:24
-msgid "You can choose from different supported providers:"
-msgstr ""
-
-#: ../ai/provider.rst:26
-#: ../ai/provider.rst:93
-msgid "Zammad AI"
-msgstr ""
-
-#: ../ai/provider.rst:27
-msgid "OpenAI"
-msgstr ""
-
-#: ../ai/provider.rst:28
-#: ../ai/provider.rst:123
-msgid "Ollama"
-msgstr ""
-
-#: ../ai/provider.rst:29
-msgid "Anthropic"
-msgstr ""
-
-#: ../ai/provider.rst:30
-msgid "Azure AI"
-msgstr ""
-
-#: ../ai/provider.rst:31
-msgid "Mistral AI"
-msgstr ""
-
-#: ../ai/provider.rst:32
-msgid "Custom (OpenAI Compatible)"
-msgstr ""
-
-#: ../ai/provider.rst:34
-msgid "Depending on which provider you choose, Zammad displays different fields you can configure."
-msgstr ""
-
-#: ../ai/provider.rst:37
-msgid "Keep in mind that your AI provider might require some configuration before you can connect to it. That is the case for Azure AI, anyway. As this configuration is beyond the scope of this documentation, please refer to the documentation of the service you are using."
-msgstr ""
-
-#: ../ai/provider.rst:42
-msgid "The AI service you have subscribed to is not available? This is just the first step. We are going to add more providers soon! If you want to support us or need the provider as soon as possible, just let our `sales department <https://zammad.com/en/company/contact>`_ know!"
-msgstr ""
-
-#: ../ai/provider.rst:50
-msgid "Token"
-msgstr ""
-
-#: ../ai/provider.rst:48
-msgid "Add your API token which you got from your provider here. Don't confuse it with the tokens a large language model (LLM) is dealing with when processing a request."
-msgstr ""
-
-#: ../ai/provider.rst:54
-#: ../manage/knowledge-base.rst:139
-msgid "URL"
-msgstr ""
-
-#: ../ai/provider.rst:53
-msgid "Provide the URL or IP address of your provider. This is required for Ollama and OpenAI compatible providers."
-msgstr ""
-
-#: ../ai/provider.rst:58
-msgid "URL (Completions)"
-msgstr ""
-
-#: ../ai/provider.rst:57
-msgid "Only for Azure AI as provider. Add the endpoint where your text generation model is available."
-msgstr ""
-
-#: ../ai/provider.rst:63
-msgid "Model"
-msgstr ""
-
-#: ../ai/provider.rst:61
-msgid "Enter the exact name of the model here. This model has to be available on your provider's side. Leave it empty (if not mandatory) to use the default which is shown as a placeholder."
-msgstr ""
-
-#: ../ai/provider.rst:71
-msgid "Recognize Image Text (OCR)"
-msgstr ""
-
-#: ../ai/provider.rst:66
-msgid "Zammad allows you to use optical character recognition (OCR) to extract text from images. This can be useful if you often get error messages or other important information, which is only present in images."
-msgstr ""
-
-#: ../ai/provider.rst:70
-msgid "Simply switch the toggle on or off. Be aware that using this feature can cause a high consumption of tokens."
-msgstr ""
-
-#: ../ai/provider.rst:78
-msgid "OCR Model"
-msgstr ""
-
-#: ../ai/provider.rst:74
-msgid "Specify a model to use for the OCR feature. Leave it empty to use the default model of your provider."
-msgstr ""
-
-#: ../ai/provider.rst:77
-msgid "Note: the field is called **URL (OCR)** for Azure AI and expects a URL where the OCR model is available instead of a model itself."
-msgstr ""
-
-#: ../ai/provider.rst:80
-msgid "After providing the information, make sure to click the ``Save`` button and activate AI features."
-msgstr ""
-
-#: ../ai/provider.rst:84
-msgid "Excursion"
-msgstr ""
-
-#: ../ai/provider.rst:86
-msgid "In case you want to know more about Zammad AI or Ollama, read on here. Otherwise, head over to :ref:`feedback-logs` or check out the AI-powered features and how to use them."
-msgstr ""
-
-#: ../ai/provider.rst:95
-msgid "Using Zammad AI as a provider is the easiest way you can get started with Zammad's AI features. It has some big advantages like:"
-msgstr ""
-
-#: ../ai/provider.rst:98
-msgid "You don't have to take care of the setup of an AI system and its configuration."
-msgstr ""
-
-#: ../ai/provider.rst:100
-msgid "Hosted in the EU and compliant with GDPR."
-msgstr ""
-
-#: ../ai/provider.rst:101
-msgid "No configuration in Zammad needed (for SaaS customers) or only an API key required (for self-hosted customers)."
-msgstr ""
-
-#: ../ai/provider.rst:103
-msgid "Your requests with sensitive information aren't used for training."
-msgstr ""
-
-#: ../ai/provider.rst:104
-msgid "If something isn't working as expected, you just have one place where you get support."
-msgstr ""
-
-#: ../ai/provider.rst:114
-msgid "SaaS Customers"
-msgstr ""
-
-#: ../ai/provider.rst:108
-msgid "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription settings </system/subscription>` and consider to switch your plan. If a \"V2\" plan is active, you can buy AI calls for AI processing. After doing so, Zammad AI is automatically configured as AI provider and you can activate and configure AI features as you like. Check your remaining AI calls from time to time or activate the notification to be alerted when few calls remain."
-msgstr ""
-
-#: ../ai/provider.rst:120
-msgid "Self-Hosted Customers"
-msgstr ""
-
-#: ../ai/provider.rst:117
-msgid "Please `get in touch with our sales department <https://zammad.com/en/company/contact>`_ to obtain a Zammad AI API key and to buy AI calls. After receiving your API key, simply add and save it. Then you are ready to activate and configure AI features as you like."
-msgstr ""
-
-#: ../ai/provider.rst:125
-msgid "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up your own AI server on a machine you control. That means your data is not transferred to a third party. Be aware that this only makes sense if you have a powerful GPU in your system!"
-msgstr ""
-
-#: ../ai/provider.rst:130
-msgid "If you don't have an Ollama running already, their `documentation <https://docs.ollama.com/>`_ is a good starting point. You can find the available models in `Ollama's model library <https://ollama.com/library>`_ and useful information and additional links in the `Ollama GitHub repository <https://github.com/ollama/ollama>`_."
-msgstr ""
-
-#: ../ai/provider.rst:140
+#: ../ai/feedback-and-logs.rst:2
 msgid "Feedback & Logs"
 msgstr ""
 
@@ -625,6 +319,126 @@ msgstr ""
 
 #: ../ai/feedback-and-logs.rst:30
 msgid "Zammad shows the last AI requests and responses in the UI as well, so you can inspect them when something isn't working. Open an entry to see the request and the response from your AI provider."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:2
+msgid "Knowledge Base Assistant"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:4
+msgid "Zammad's knowledge base assistant helps your agents find existing knowledge base answers for incoming tickets and draft new ones from the ticket content. The feature is configured in Zammad's admin settings under *AI > Knowledge Base Assistant* and requires the ``admin.ai_knowledge_base`` permission. Make sure to configure an :doc:`AI provider <provider>` with the **Semantic search** capability before activating the feature. Otherwise, Zammad shows a warning message."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:12
+msgid "The configuration page only appears when at least one knowledge base is active in *Manage > Knowledge Base*."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:None
+msgid "Screenshot shows the Knowledge Base Assistant configuration screen"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:19
+msgid "Configure it based on the explanation below and make sure to turn on the switch at the top of the page afterwards."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:25
+#: ../ai/writing-assistant.rst:97
+#: ../channels/chat.rst:25
+#: ../channels/microsoft365-graph/accounts.rst:18
+#: ../manage/macros.rst:31
+#: ../manage/report-profiles.rst:33
+#: ../manage/trigger.rst:31
+#: ../manage/webhook/add.rst:32
+#: ../misc/first-steps.rst:18
+#: ../system/core-workflows/learn-by-example.rst:36
+#: ../system/core-workflows/learn-by-example.rst:91
+#: ../system/core-workflows/learn-by-example.rst:139
+#: ../system/core-workflows/learn-by-example.rst:198
+#: ../system/core-workflows/learn-by-example.rst:237
+#: ../system/integrations/checkmk/admin-settings.rst:5
+#: ../system/integrations/clearbit.rst:35
+msgid "Configuration"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:27
+msgid "To use a different provider for the knowledge base assistant than the default, use the :ref:`per-feature provider configuration <per-feature-provider-config>` via the ``Provider`` button at the top of this page."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:31
+msgid "The page shows two checkboxes and a configurable relevance score threshold."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:34
+msgid "Knowledge Base Answer Suggestions"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:36
+msgid "When enabled, Zammad shows existing knowledge base answers whose content matches the ticket in the **Related Knowledge** section of the ticket sidebar. Answers are only shown when they are above the configured relevance threshold."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:41
+msgid "Agents can open a suggested knowledge base answer directly. If the suggested answer solves the problem, the agent can link the answer permanently."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:46
+msgid "Agents should check the answer before sending the suggested article to the customer. Even a high relevance doesn't necessarily mean that it's content solves the customer's issue."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:51
+msgid "Knowledge Base Answer Generation"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:53
+msgid "When enabled, the agent can ask the AI to draft a new knowledge base answer from the ticket's content. If a related answer is detected, Zammad shows a preview in a dialog and asks if the agent really wants to trigger the generation of a new answer. The AI generated answer is linked to the ticket then."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:59
+msgid "Important information:"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:61
+msgid "The knowledge base answer is generated as draft and doesn't get published automatically."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:63
+msgid "The answer is generated in the default language of your knowledge base."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:64
+msgid "The answer includes a note in the content and a tag (``ai-generated``) about the AI generation."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:66
+msgid "A link to the answer is included in the ticket it was generated from."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:67
+msgid "The AI request includes a list of the knowledge base categories for which the (human) agent has editor permissions. The AI then chooses one of these categories."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:73
+msgid "Even though there are instructions to remove personal and customer specific information in the response, make sure your agents carefully review it before the answer gets used or even published."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:80
+msgid "Relevance Score Threshold"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:82
+msgid "Only knowledge base answers reaching this score are included in the list of suggestions. The default is ``86 %``. Lower values show more unrelated suggestions (and more false positives); higher values show only strong matches."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:87
+#: ../ai/writing-assistant.rst:159
+msgid "Usage for Agents"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:None
+msgid "Screenshot shows \"Related knowledge\" section in the ticket sidebar"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:93
+msgid "When the feature is enabled, agents see related knowledge base answers in the **Related Knowledge** section of the ticket sidebar. The draft-from-ticket action is available whenever the agent has the ``knowledge_base.editor`` permission and an :doc:`AI provider <provider>` is configured. The :user-docs:`knowledge base assistant section in the user documentation </extras/ai-features.html>` includes additional information for your agents."
 msgstr ""
 
 #: ../ai/provider.rst:2
@@ -716,75 +530,8 @@ msgstr ""
 msgid "The provider you need isn't listed? We are going to add more over time. If you need a particular one or want to sponsor it, get in touch with our `sales department <https://zammad.com/en/company/contact>`_."
 msgstr ""
 
-#: ../ai/writing-assistant.rst:26
-msgid "To create a new writing assistant tool, you can either start from scratch by using the ``New Writing Assistant Tool`` button in the top right corner or clone an existing one which is similar to your use case and adjust it. In both cases, a configuration dialog gets opened where you can adjust the settings of the writing assistant tool. You can find an explanation of each field in the :ref:`configuration` section below. Some use cases for individual writing assistant tools could be:"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:34
-msgid "Translation to a specific language"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:35
-msgid "Apply company and/or sector specific wording"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:36
-msgid "Change the mood of the text"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:37
-msgid "Reduce or eliminate subjective or uninformative parts"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:38
-msgid "Combine different instructions in one tool"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:40
-msgid "The last column in the table includes the ︙ action menu where you can find the **Clone** and **Delete** action as well as download and reset the feedback (more on that below)."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:44
-msgid "To edit a tool, simply click on its row. This opens a configuration dialog like for creating a new writing assistant tool where you can configure it."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:49
-msgid "Consider cloning an existing tool. So you can use the existing instructions as a starting point and adjust them to your needs. In case it doesn't work as expected, you can still have a look at the instructions of the default tools."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:54
-msgid "Feedback Handling"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:56
-msgid "Your agents can give feedback about the results of the writing assistant tools. This allows you to keep an eye on how well the tools are working and if adjustments are necessary. The agents can choose between a like (thumb up) and dislike (thumb down) reaction. For the dislike reaction, they can optionally add a comment to explain why they are not satisfied with the result."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:62
-msgid "You can see the ratio of likes and dislikes relative to the total tool usage in the feedback column of the table. To get more insights, you can download the feedback data (including your agents' comments) by clicking **Download feedback report** in the ︙ action menu."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:67
-msgid "To **Reset feedback**, use the corresponding entry in the ︙ action menu. This clears the feedback ratio in the table and the already collected feedback is no longer present in the feedback report. A reset can be useful if you made adjustments to the instructions and want to start collecting feedback for the adjusted version. After a reset, you can still access the old feedback by downloading the global feedback report in the :doc:`provider configuration <provider>`."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:77
-msgid "To improve a writing assistant tool and compare the results before and after your adjustments, you have two options:"
-msgstr ""
-
-#: ../ai/writing-assistant.rst:80
-msgid "Apply changes to the tool and reset the feedback. Be aware that the feature specific feedback report no longer includes the feedback from the time before the reset. Either download the report **before** doing the reset or download the global feedback report from the provider configuration."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:85
-msgid "Clone the tool, deactivate the old and adjust the cloned one. This allows you to even compare the like and dislike ratio directly in the UI."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:94
-msgid "Adding or editing a tool opens a configuration dialog. If you want to add a new tool, consider cloning an existing one to have a good starting point."
-msgstr ""
-
-#: ../ai/writing-assistant.rst:99
+#: ../ai/provider.rst:66
+#: ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47
 #: ../channels/form.rst:20
 #: ../channels/email/filters.rst:47
@@ -1240,24 +987,6 @@ msgstr ""
 msgid "Clone the tool, deactivate the old and adjust the cloned one. This allows you to even compare the like and dislike ratio directly in the UI."
 msgstr ""
 
-#: ../ai/writing-assistant.rst:97
-#: ../channels/chat.rst:25
-#: ../channels/microsoft365-graph/accounts.rst:18
-#: ../manage/macros.rst:31
-#: ../manage/report-profiles.rst:33
-#: ../manage/trigger.rst:31
-#: ../manage/webhook/add.rst:32
-#: ../misc/first-steps.rst:18
-#: ../system/core-workflows/learn-by-example.rst:36
-#: ../system/core-workflows/learn-by-example.rst:91
-#: ../system/core-workflows/learn-by-example.rst:139
-#: ../system/core-workflows/learn-by-example.rst:198
-#: ../system/core-workflows/learn-by-example.rst:237
-#: ../system/integrations/checkmk/admin-settings.rst:5
-#: ../system/integrations/clearbit.rst:35
-msgid "Configuration"
-msgstr ""
-
 #: ../ai/writing-assistant.rst:99
 msgid "Adding or editing a tool opens a configuration dialog. If you want to add a new tool, consider cloning an existing one to have a good starting point."
 msgstr ""
@@ -1380,7 +1109,7 @@ msgstr ""
 msgid "After creating or editing, you should test if the result is as expected. In case you are not happy, feel free to adjust the instructions until it fits your expectations."
 msgstr ""
 
-#: ../ai/writing-assistant.rst:156
+#: ../ai/writing-assistant.rst:161
 msgid "If enabled, agents have access to the default tools as well as the custom tools which are available for the group or are not limited to any group. They simply have to select the text they want to check/change and select the writing assistant tool they want to use. The :user-docs:`AI section in the user documentation </extras/ai-features.html>` includes additional information."
 msgstr ""
 
@@ -5051,6 +4780,14 @@ msgstr ""
 msgid "Screenshot shows the preview section for the configured form."
 msgstr ""
 
+#: ../channels/form.rst:183
+#: ../misc/zabbix.rst:10
+#: ../system/integrations/cti/generic.rst:7
+#: ../system/integrations/cti/placetel.rst:12
+#: ../system/integrations/cti/sipgate.rst:12
+msgid "Requirements"
+msgstr ""
+
 #: ../channels/form.rst:185
 msgid "The requirement section provides you with everything you need in order to apply Zammad's web form to your website. It basically consists of two parts."
 msgstr ""
@@ -7464,19 +7201,19 @@ msgstr ""
 msgid "AI"
 msgstr ""
 
-#: ../index.rst:84
+#: ../index.rst:85
 msgid "API (System-Documentation)"
 msgstr ""
 
-#: ../index.rst:84
-#: ../index.rst:84
+#: ../index.rst:85
+#: ../index.rst:85
 #: ../misc/object-conditions/basics.rst:169
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
 
-#: ../index.rst:105
-#: ../index.rst:105
+#: ../index.rst:106
+#: ../index.rst:106
 #: ../manage/roles/permissions.rst:294
 #: ../system/objects/types.rst:279
 msgid "Misc"
