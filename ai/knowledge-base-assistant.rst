@@ -87,8 +87,8 @@ suggestions. The default is ``86%``. Lower values show more suggestions (and
 therefore less relevant answers); higher values show only strong matches.
 
 .. tip:: The outcome depends on the provider/model you use and your existing
-   data, of course. The default value should be a good starting point.
-   Avoid setting it to an extreme value.
+   data. The default value should be a good starting point. Avoid setting it to
+   an extreme value.
 
 Usage for Agents
 ----------------
