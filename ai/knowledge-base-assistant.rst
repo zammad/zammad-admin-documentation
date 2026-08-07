@@ -26,9 +26,11 @@ Configuration
 
 To use a different provider for the knowledge base assistant than the default,
 use the :ref:`per-feature provider configuration <per-feature-provider-config>`
-via the ``Provider`` button at the top of this page.
-
-The page shows two checkboxes and a configurable relevance score threshold.
+via the ``Provider`` button at the top of this page. Be aware that changing
+the provider/assigning the **Semantic search** capability to another provider
+causes a re-creation of the vector database. While this is fine for small
+instances, it can cause a lot of AI calls for instances with many tickets or
+many knowledge base answers.
 
 Knowledge Base Answer Suggestions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,8 +82,12 @@ Relevance Score Threshold
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Only knowledge base answers reaching this score are included in the list of
-suggestions. The default is ``86 %``. Lower values show more unrelated
-suggestions (and more false positives); higher values show only strong matches.
+suggestions. The default is ``86 %``. Lower values show more suggestions (and
+thererfore more less relevant answers); higher values show only strong matches.
+
+.. tip:: The outcome of the value depends on your used provider/model and your
+   existing data, of course. The default value should be a good starting point.
+   Try to refrain from setting it to an extreme value.
 
 Usage for Agents
 ----------------

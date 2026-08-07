@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 12:31+0200\n"
+"POT-Creation-Date: 2026-08-07 12:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -361,74 +361,74 @@ msgid "Configuration"
 msgstr ""
 
 #: ../ai/knowledge-base-assistant.rst:27
-msgid "To use a different provider for the knowledge base assistant than the default, use the :ref:`per-feature provider configuration <per-feature-provider-config>` via the ``Provider`` button at the top of this page."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:31
-msgid "The page shows two checkboxes and a configurable relevance score threshold."
-msgstr ""
-
-#: ../ai/knowledge-base-assistant.rst:34
-msgid "Knowledge Base Answer Suggestions"
+msgid "To use a different provider for the knowledge base assistant than the default, use the :ref:`per-feature provider configuration <per-feature-provider-config>` via the ``Provider`` button at the top of this page. Be aware that changing the provider/assigning the **Semantic search** capability to another provider causes a re-creation of the vector database. While this is fine for small instances, it can cause a lot of AI calls for instances with many tickets or many knowledge base answers."
 msgstr ""
 
 #: ../ai/knowledge-base-assistant.rst:36
+msgid "Knowledge Base Answer Suggestions"
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:38
 msgid "When enabled, Zammad shows existing knowledge base answers whose content matches the ticket in the **Related Knowledge** section of the ticket sidebar. Answers are only shown when they are above the configured relevance threshold."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:41
+#: ../ai/knowledge-base-assistant.rst:43
 msgid "Agents can open a suggested knowledge base answer directly. If the suggested answer solves the problem, the agent can link the answer permanently."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:46
+#: ../ai/knowledge-base-assistant.rst:48
 msgid "Agents should check the answer before sending the suggested article to the customer. Even a high relevance doesn't necessarily mean that it's content solves the customer's issue."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:51
+#: ../ai/knowledge-base-assistant.rst:53
 msgid "Knowledge Base Answer Generation"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:53
+#: ../ai/knowledge-base-assistant.rst:55
 msgid "When enabled, the agent can ask the AI to draft a new knowledge base answer from the ticket's content. If a related answer is detected, Zammad shows a preview in a dialog and asks if the agent really wants to trigger the generation of a new answer. The AI generated answer is linked to the ticket then."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:59
+#: ../ai/knowledge-base-assistant.rst:61
 msgid "Important information:"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:61
+#: ../ai/knowledge-base-assistant.rst:63
 msgid "The knowledge base answer is generated as draft and doesn't get published automatically."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:63
+#: ../ai/knowledge-base-assistant.rst:65
 msgid "The answer is generated in the default language of your knowledge base."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:64
+#: ../ai/knowledge-base-assistant.rst:66
 msgid "The answer includes a note in the content and a tag (``ai-generated``) about the AI generation."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:66
+#: ../ai/knowledge-base-assistant.rst:68
 msgid "A link to the answer is included in the ticket it was generated from."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:67
+#: ../ai/knowledge-base-assistant.rst:69
 msgid "The AI request includes a list of the knowledge base categories for which the (human) agent has editor permissions. The AI then chooses one of these categories."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:73
+#: ../ai/knowledge-base-assistant.rst:75
 msgid "Even though there are instructions to remove personal and customer specific information in the response, make sure your agents carefully review it before the answer gets used or even published."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:80
+#: ../ai/knowledge-base-assistant.rst:82
 msgid "Relevance Score Threshold"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:82
-msgid "Only knowledge base answers reaching this score are included in the list of suggestions. The default is ``86 %``. Lower values show more unrelated suggestions (and more false positives); higher values show only strong matches."
+#: ../ai/knowledge-base-assistant.rst:84
+msgid "Only knowledge base answers reaching this score are included in the list of suggestions. The default is ``86 %``. Lower values show more suggestions (and thererfore more less relevant answers); higher values show only strong matches."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:87
+#: ../ai/knowledge-base-assistant.rst:88
+msgid "The outcome of the value depends on your used provider/model and your existing data, of course. The default value should be a good starting point. Try to refrain from setting it to an extreme value."
+msgstr ""
+
+#: ../ai/knowledge-base-assistant.rst:93
 #: ../ai/writing-assistant.rst:159
 msgid "Usage for Agents"
 msgstr ""
@@ -437,7 +437,7 @@ msgstr ""
 msgid "Screenshot shows \"Related knowledge\" section in the ticket sidebar"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:93
+#: ../ai/knowledge-base-assistant.rst:99
 msgid "When the feature is enabled, agents see related knowledge base answers in the **Related Knowledge** section of the ticket sidebar. The draft-from-ticket action is available whenever the agent has the ``knowledge_base.editor`` permission and an :doc:`AI provider <provider>` is configured. The :user-docs:`knowledge base assistant section in the user documentation </extras/ai-features.html>` includes additional information for your agents."
 msgstr ""
 
