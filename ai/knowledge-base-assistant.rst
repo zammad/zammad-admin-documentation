@@ -9,6 +9,10 @@ under *AI > Knowledge Base Assistant* and requires the
 :doc:`AI provider <provider>` before activating the feature. Otherwise,
 a warning message will tell you to do so.
 
+The configuration page only appears when at least one knowledge base is
+active in *Manage > Knowledge Base*. Without an active knowledge base,
+the AI tools have nothing to search or draft from.
+
 Activate the feature by turning on the switch.
 
 .. figure:: /images/ai/knowledge-base-assistant.png
@@ -49,7 +53,7 @@ Usage for Agents
 ----------------
 
 **When the feature is enabled**, agents see related knowledge base
-answers in the *Related Knowledge* section of the ticket sidebar. The
+answers in the **Related Knowledge** section of the ticket sidebar. The
 draft-from-ticket action is available whenever the agent has the
 ``knowledge_base.editor`` permission and an :doc:`AI provider
 <provider>` is configured. The
