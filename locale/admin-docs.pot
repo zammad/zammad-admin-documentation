@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-07 13:24+0200\n"
+"POT-Creation-Date: 2026-08-11 08:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -329,19 +329,15 @@ msgstr ""
 msgid "Zammad's knowledge base assistant helps your agents find existing knowledge base answers for incoming tickets and draft new ones from the ticket content. The feature is configured in Zammad's admin settings under *AI > Knowledge Base Assistant* and requires the ``admin.ai_knowledge_base`` permission. Make sure to configure an :doc:`AI provider <provider>` with the **Semantic search** capability before activating the feature. Otherwise, Zammad shows a warning message."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:12
-msgid "The configuration page only appears when at least one knowledge base is active in *Manage > Knowledge Base*."
-msgstr ""
-
 #: ../ai/knowledge-base-assistant.rst:None
 msgid "Screenshot shows the Knowledge Base Assistant configuration screen"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:19
+#: ../ai/knowledge-base-assistant.rst:16
 msgid "Configure it based on the explanation below and make sure to turn on the switch at the top of the page afterwards."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:25
+#: ../ai/knowledge-base-assistant.rst:22
 #: ../ai/writing-assistant.rst:97
 #: ../channels/chat.rst:25
 #: ../channels/microsoft365-graph/accounts.rst:18
@@ -360,75 +356,75 @@ msgstr ""
 msgid "Configuration"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:27
+#: ../ai/knowledge-base-assistant.rst:24
 msgid "To use a different provider for the knowledge base assistant than the default, use the :ref:`per-feature provider configuration <per-feature-provider-config>` via the ``Provider`` button at the top of this page. Be aware that changing the provider/assigning the **Semantic search** capability to another provider causes a re-creation of the vector database. While this is fine for small instances, it can cause a lot of AI calls for instances with many tickets or many knowledge base answers."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:36
+#: ../ai/knowledge-base-assistant.rst:33
 msgid "Knowledge Base Answer Suggestions"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:38
+#: ../ai/knowledge-base-assistant.rst:35
 msgid "When enabled, Zammad shows existing knowledge base answers whose content matches the ticket in the **Related Knowledge** section of the ticket sidebar. Answers are only shown when they are above the configured relevance threshold."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:43
+#: ../ai/knowledge-base-assistant.rst:40
 msgid "Agents can open a suggested knowledge base answer directly. If the suggested answer solves the problem, the agent can link the answer permanently to the ticket."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:49
+#: ../ai/knowledge-base-assistant.rst:46
 msgid "Agents should check the answer before sending the suggested article to the customer. Even a high relevance doesn't necessarily mean that its content solves the customer's issue."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:54
+#: ../ai/knowledge-base-assistant.rst:51
 msgid "Knowledge Base Answer Generation"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:56
+#: ../ai/knowledge-base-assistant.rst:53
 msgid "When enabled, the agent can ask the AI to draft a new knowledge base answer from the ticket's content. If a related answer is detected, Zammad shows a preview in a dialog and asks if the agent really wants to trigger the generation of a new answer. The AI-generated answer is then linked to the ticket."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:62
+#: ../ai/knowledge-base-assistant.rst:59
 msgid "Important information:"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:64
+#: ../ai/knowledge-base-assistant.rst:61
 msgid "The knowledge base answer is generated as a draft and is not published automatically."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:66
+#: ../ai/knowledge-base-assistant.rst:63
 msgid "The answer is generated in the default language of your knowledge base."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:67
+#: ../ai/knowledge-base-assistant.rst:64
 msgid "The answer includes a note in the content and a tag (``ai-generated``) about the AI generation."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:69
+#: ../ai/knowledge-base-assistant.rst:66
 msgid "A link to the answer is included in the ticket it was generated from."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:70
+#: ../ai/knowledge-base-assistant.rst:67
 msgid "The AI request includes a list of the knowledge base categories for which the agent has editor permissions. The AI then chooses one of these categories."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:76
+#: ../ai/knowledge-base-assistant.rst:73
 msgid "Even though there are instructions to remove personal and customer-specific information from the generated answer, make sure your agents carefully review it before the answer is used or published."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:83
+#: ../ai/knowledge-base-assistant.rst:80
 msgid "Relevance Score Threshold"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:85
+#: ../ai/knowledge-base-assistant.rst:82
 msgid "Only knowledge base answers reaching this score are included in the list of suggestions. The default is ``86%``. Lower values show more suggestions (and therefore less relevant answers); higher values show only strong matches."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:89
+#: ../ai/knowledge-base-assistant.rst:86
 msgid "The outcome depends on the provider/model you use and your existing data. The default value should be a good starting point. Avoid setting it to an extreme value."
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:94
+#: ../ai/knowledge-base-assistant.rst:91
 #: ../ai/writing-assistant.rst:159
 msgid "Usage for Agents"
 msgstr ""
@@ -437,8 +433,8 @@ msgstr ""
 msgid "Screenshot shows \"Related knowledge\" section in the ticket sidebar"
 msgstr ""
 
-#: ../ai/knowledge-base-assistant.rst:100
-msgid "When the feature is enabled, agents see related knowledge base answers in the **Related Knowledge** section of the ticket sidebar. The draft-from-ticket action is available whenever the agent has the ``knowledge_base.editor`` permission and an :doc:`AI provider <provider>` is configured. The :user-docs:`knowledge base assistant section in the user documentation </extras/ai-features.html>` includes additional information for your agents."
+#: ../ai/knowledge-base-assistant.rst:97
+msgid "When the feature is enabled, agents see related knowledge base answers in the **Related Knowledge** section of the ticket sidebar. The answer generation action is available when an agent has the ``knowledge_base.editor`` permission. The relevance is only visible with admin permissions. Agents can find more information in the :user-docs:`knowledge base assistant section </extras/ai-features.html#knowledge-base-assistant>` in the user documentation."
 msgstr ""
 
 #: ../ai/provider.rst:2

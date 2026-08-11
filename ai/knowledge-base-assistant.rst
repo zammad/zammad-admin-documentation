@@ -9,9 +9,6 @@ permission. Make sure to configure an :doc:`AI provider <provider>` with the
 **Semantic search** capability before activating the feature. Otherwise, Zammad
 shows a warning message.
 
-The configuration page only appears when at least one knowledge base is
-active in *Manage > Knowledge Base*.
-
 .. figure:: /images/ai/knowledge-base-assistant.png
    :alt: Screenshot shows the Knowledge Base Assistant configuration screen
    :align: center
@@ -98,8 +95,9 @@ Usage for Agents
    :align: center
 
 When the feature is enabled, agents see related knowledge base answers in the
-**Related Knowledge** section of the ticket sidebar. The draft-from-ticket
-action is available whenever the agent has the ``knowledge_base.editor``
-permission and an :doc:`AI provider <provider>` is configured. The
-:user-docs:`knowledge base assistant section in the user documentation </extras/ai-features.html>`
-includes additional information for your agents.
+**Related Knowledge** section of the ticket sidebar. The answer generation
+action is available when an agent has the ``knowledge_base.editor``
+permission. The relevance is only visible with admin permissions.
+Agents can find more information in the 
+:user-docs:`knowledge base assistant section </extras/ai-features.html#knowledge-base-assistant>`
+in the user documentation.
