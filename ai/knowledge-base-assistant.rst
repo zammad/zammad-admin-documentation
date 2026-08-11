@@ -26,8 +26,8 @@ use the :ref:`per-feature provider configuration <per-feature-provider-config>`
 via the ``Provider`` button at the top of this page. Be aware that changing
 the provider/assigning the **Semantic search** capability to another provider
 causes a re-creation of the vector database. While this is fine for small
-instances, it can cause a lot of AI calls for instances with many tickets or
-many knowledge base answers.
+instances, it can cause a lot of AI calls for instances with many knowledge base
+answers.
 
 Knowledge Base Answer Suggestions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -97,7 +97,7 @@ Usage for Agents
 When the feature is enabled, agents see related knowledge base answers in the
 **Related Knowledge** section of the ticket sidebar. The answer generation
 action is available when an agent has the ``knowledge_base.editor``
-permission. The relevance is only visible with admin permissions.
+permission. The relevance score is only visible with admin permissions.
 Agents can find more information in the 
 :user-docs:`knowledge base assistant section </extras/ai-features.html#knowledge-base-assistant>`
 in the user documentation.
