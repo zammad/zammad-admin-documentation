@@ -50,11 +50,12 @@ ticket.
 Knowledge Base Answer Generation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When enabled, the agent can ask the AI to draft a new knowledge base answer
-from the ticket's content. If a related answer is detected, Zammad shows a
-preview in a dialog and asks if the agent really wants to trigger the
-generation of a new answer. The AI-generated answer is then linked to the
-ticket.
+When the feature is enabled, the agent can ask the AI to draft a new knowledge
+base answer from the ticket's content by clicking a button in the ticket
+sidebar. If a related answer is detected, Zammad shows a list of answers that
+meet the configured relevance score threshold in a dialog, prompting the agent
+to verify whether a new answer is still needed. When a new answer is generated,
+it is linked to the ticket.
 
 Important information:
 
