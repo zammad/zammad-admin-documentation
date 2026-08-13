@@ -37,8 +37,11 @@ User account changes (only changes for agents and admins accounts are recorded):
 
 Session events:
 
-- Taking over another user's session via ``View from user's perspective`` and
-  switching back
+- Taking over another user's session via "switch to user"
+  (``View from user's perspective``) and switching back.
+  
+An arrow in the **Updated by** column (e.g. "John Doe → Jane Doe") indicates that
+the action was performed via "switch to user".
 
 Viewing Audit Log Entries
 -------------------------
@@ -53,8 +56,8 @@ User
    The user who performed the action.
 
 Action
-   The action that was performed. Available actions include **create**,
-   **update**, **destroy** (delete), **switch to user** and
+   The action that was performed. Available actions include **create object**,
+   **update object**, **delete object**, **switch to user** and
    **switch back to user**.
 
 Object
