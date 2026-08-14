@@ -33,9 +33,14 @@ Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Click ``New Provider`` to add a new provider or click on a row to edit an
-existing one. The dialog lets you pick the provider type and fill in the
-credentials and models it needs. The fields shown depend on the provider you
-choose, so switching the type updates the dialog on the fly.
+existing one. Both ways open a two-step dialog. The dialog's first step lets you
+pick the provider type, enter a name and provider-specific information.
+Switching to the second step via the ``Next`` button verifies your entries,
+connects to the provider and fetches the available models. If there is a
+problem, you are notified at this point already. The
+second step allows you to select or add a model and to configure
+provider-specific settings. The fields shown depend on the provider you choose,
+so switching the type updates the dialog on the fly.
 
 .. figure:: /images/ai/provider-dialog.png
    :alt: Screenshot shows the dialog for adding or editing a provider
@@ -91,8 +96,10 @@ Embedding Model
    :ref:`capabilities`). Not every provider supports semantic search; the
    field appears only for the ones that do.
 
-   When you select or enter an embedding model for which Zammad cannot
-   determine these values, you must also provide the following:
+   When you select or enter an embedding model, Zammad tries to determine values
+   for the two options listed below. If Zammad cannot determine these values,
+   you must provide them. Note that you should only adjust these values if you
+   know what you are doing.
 
    Embedding dimensions
       The length of the vectors the embedding model produces.
@@ -107,6 +114,7 @@ Embedding Model
 OCR Model
    The model used to extract text from images. The dropdown lists the models
    the provider offers. The default option falls back to the **Model** field.
+   Zammad AI chooses the model itself and therefore doesn't show this field.
    Not every provider supports image text recognition; the field appears
    only for the ones that do.
 
