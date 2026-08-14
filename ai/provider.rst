@@ -33,9 +33,14 @@ Add or Edit a Provider
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Click ``New Provider`` to add a new provider or click on a row to edit an
-existing one. The dialog lets you pick the provider type and fill in the
-credentials and models it needs. The fields shown depend on the provider you
-choose, so switching the type updates the dialog on the fly.
+existing one. Both ways open a two-step dialog. The dialog's first step lets you
+pick the provider type, enter a name and provider-specific information.
+Switching to the second step via the ``Next`` button verifies your entries,
+connects to the provider and fetches the available models. If there is a
+problem, you are notified at this point already. The
+second step allows you to select or add a model and to configure
+provider-specific settings. The fields shown depend on the provider you choose,
+so switching the type updates the dialog on the fly.
 
 .. figure:: /images/ai/provider-dialog.png
    :alt: Screenshot shows the dialog for adding or editing a provider
@@ -63,27 +68,55 @@ Type
 Name
    A human-readable label for the provider. This is what you see in the list
    and elsewhere in Zammad (for example when configuring a provider for a
-   specific feature).
+   specific feature). The name must be unique.
 
 Token
    The API token issued by your provider. Don't confuse it with the tokens
    a large language model deals with when processing a request.
 
 Model
-   The base model used to generate text. The placeholder shows Zammad's built-in
-   default for the chosen provider. Leave the field empty to use that default.
+   The base model used to generate text. For providers that offer a model
+   list, the field is a dropdown. The default option shows the provider's
+   recommended model; pick a different one if you prefer. If the provider
+   does not offer a model list, enter its name manually.
+
+   Azure AI and Zammad AI do not show this field. Azure AI identifies the
+   model through its deployment URL, while Zammad AI chooses the model itself.
+
+   .. tip:: Need different models for different features? Add the same provider
+      twice with a different model selected in each, then assign each connection
+      to its feature via :ref:`per-feature-provider-config`.
 
 Embedding Model
-   The model used to vectorize text for semantic search. The placeholder shows
-   Zammad's built-in default for the chosen provider. Leave the field empty to
-   use it. Not every provider supports semantic search; the field appears only
-   for the ones that do.
+   The model used to vectorize text for semantic search. The dropdown lists
+   the models the provider offers. The default option shows the provider's
+   recommendation; pick a different one if you prefer. If the provider does
+   not offer a matching model, enter its name manually. Required if you plan
+   to assign the **Semantic search** capability to this connection (see
+   :ref:`capabilities`). Not every provider supports semantic search; the
+   field appears only for the ones that do.
+
+   When you select or enter an embedding model, Zammad tries to determine values
+   for the two options listed below. If Zammad cannot determine these values,
+   you must provide them. Note that you should only adjust these values if you
+   know what you are doing.
+
+   Embedding dimensions
+      The length of the vectors the embedding model produces.
+
+   Context window size
+      The number of input tokens the embedding model accepts at once.
+
+   .. figure:: /images/ai/provider-dialog-embedding.png
+      :alt: Screenshot shows the AI provider dialog with manually configured embedding settings
+      :align: center
 
 OCR Model
-   The model used to extract text from images. Leave the field empty to fall
-   back to the **Model** field. The placeholder shows Zammad's built-in
-   default for the chosen provider. Not every provider supports image text
-   recognition; the field appears only for the ones that do.
+   The model used to extract text from images. The dropdown lists the models
+   the provider offers. The default option falls back to the **Model** field.
+   Zammad AI chooses the model itself and therefore doesn't show this field.
+   Not every provider supports image text recognition; the field appears
+   only for the ones that do.
 
 URL
    The URL or IP address of the provider. Required for Ollama and
@@ -97,8 +130,9 @@ URL (OCR)
    Leave empty to fall back to URL (Completions).
 
 After filling in the fields, click ``Submit``. Zammad tests the configuration
-before saving. If the test succeeds, the row's status dot starts orange until
-the first successful request turns it green; see Status below for the colors.
+before saving. If the test succeeds, the row's status dot starts orange
+until the first successful request turns it green; see Status below for the
+colors.
 
 Status
 ^^^^^^
@@ -151,9 +185,10 @@ Semantic search
    The provider used to turn text into numerical form (vector embeddings)
    so the knowledge base can find answers by meaning, not just keywords.
 
-   If no provider covers semantic search and a feature needs it, Zammad shows
-   a warning on the corresponding feature page. Assign semantic search to a
-   provider that supports it to clear the warning.
+   If no provider covers semantic search and a feature needs it, Zammad
+   shows a warning on the corresponding feature page. Assign semantic
+   search to a provider that supports it **and that has an Embedding Model
+   set** to clear the warning.
 
 Image text recognition
    The provider used to extract text from images (OCR).
