@@ -58,7 +58,6 @@ Redirect URI (optional):
 Within  **API permissions** add the following permissions:
     - ``openid``
     - ``User.Read``
-    - ``Contacts.Read``
 
 You can find these permissions within *Microsoft Graph > Delegated permissions*.
 
