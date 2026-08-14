@@ -95,8 +95,19 @@ Shared Drafts
 
 Summary Generation
    Allows you to override the :doc:`AI ticket summary </ai/summary>`
-   configuration. Choose when the summary should get generated or hide the
-   ticket summary sidebar tab at all for this group.
+   configuration for this group. Use one of the following values:
+
+   Global Default
+      Use the value configured in *AI > Ticket Summary*.
+
+   On Ticket Detail Opening
+      Always trigger summary generation when an agent opens the ticket.
+
+   On Ticket Summary Sidebar Activation
+      Trigger summary generation only when the agent opens the summary
+      sidebar tab.
+
+   Default setting: ``Global Default``.
 
    .. hint::
 
