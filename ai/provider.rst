@@ -63,22 +63,24 @@ Type
 Name
    A human-readable label for the provider. This is what you see in the list
    and elsewhere in Zammad (for example when configuring a provider for a
-   specific feature).
+   specific feature). The name must be unique.
 
 Token
    The API token issued by your provider. Don't confuse it with the tokens
    a large language model deals with when processing a request.
 
 Model
-   The base model used to generate text. The dropdown lists the models the
-   provider offers. The default option shows the provider's recommended
-   model; pick a different one if you prefer.
+   The base model used to generate text. For providers that offer a model
+   list, the field is a dropdown. The default option shows the provider's
+   recommended model; pick a different one if you prefer. If the provider
+   does not offer a model list, enter its name manually.
 
-   .. tip:: Need different models for different features (for example a
-      lightweight model for classification and a larger one for text
-      generation)? Add the same provider type twice with a different model
-      selected in each, then assign each connection to its feature via
-      :ref:`per-feature-provider-config`.
+   Azure AI and Zammad AI do not show this field. Azure AI identifies the
+   model through its deployment URL, while Zammad AI chooses the model itself.
+
+   .. tip:: Need different models for different features? Add the same provider
+      twice with a different model selected in each, then assign each connection
+      to its feature via :ref:`per-feature-provider-config`.
 
 Embedding Model
    The model used to vectorize text for semantic search. The dropdown lists
@@ -92,11 +94,15 @@ Embedding Model
    When you select or enter an embedding model for which Zammad cannot
    determine these values, you must also provide the following:
 
-   **Embedding dimensions**
+   Embedding dimensions
       The length of the vectors the embedding model produces.
 
-   **Context window size**
+   Context window size
       The number of input tokens the embedding model accepts at once.
+
+   .. figure:: /images/ai/provider-dialog-embedding.png
+      :alt: Screenshot shows the AI provider dialog with manually configured embedding settings
+      :align: center
 
 OCR Model
    The model used to extract text from images. The dropdown lists the models
