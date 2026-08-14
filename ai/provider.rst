@@ -70,20 +70,39 @@ Token
    a large language model deals with when processing a request.
 
 Model
-   The base model used to generate text. The placeholder shows Zammad's built-in
-   default for the chosen provider. Leave the field empty to use that default.
+   The base model used to generate text. The dropdown lists the models the
+   provider offers. The default option shows the provider's recommended
+   model; pick a different one if you prefer.
+
+   .. tip:: Need different models for different features (for example a
+      lightweight model for classification and a larger one for text
+      generation)? Add the same provider type twice with a different model
+      selected in each, then assign each connection to its feature via
+      :ref:`per-feature-provider-config`.
 
 Embedding Model
-   The model used to vectorize text for semantic search. The placeholder shows
-   Zammad's built-in default for the chosen provider. Leave the field empty to
-   use it. Not every provider supports semantic search; the field appears only
-   for the ones that do.
+   The model used to vectorize text for semantic search. The dropdown lists
+   the models the provider offers. The default option shows the provider's
+   recommendation; pick a different one if you prefer. If the provider does
+   not offer a matching model, enter its name manually. Required if you plan
+   to assign the **Semantic search** capability to this connection (see
+   :ref:`capabilities`). Not every provider supports semantic search; the
+   field appears only for the ones that do.
+
+   When you select or enter an embedding model for which Zammad cannot
+   determine these values, you must also provide the following:
+
+   **Embedding dimensions**
+      The length of the vectors the embedding model produces.
+
+   **Context window size**
+      The number of input tokens the embedding model accepts at once.
 
 OCR Model
-   The model used to extract text from images. Leave the field empty to fall
-   back to the **Model** field. The placeholder shows Zammad's built-in
-   default for the chosen provider. Not every provider supports image text
-   recognition; the field appears only for the ones that do.
+   The model used to extract text from images. The dropdown lists the models
+   the provider offers. The default option falls back to the **Model** field.
+   Not every provider supports image text recognition; the field appears
+   only for the ones that do.
 
 URL
    The URL or IP address of the provider. Required for Ollama and
@@ -151,9 +170,10 @@ Semantic search
    The provider used to turn text into numerical form (vector embeddings)
    so the knowledge base can find answers by meaning, not just keywords.
 
-   If no provider covers semantic search and a feature needs it, Zammad shows
-   a warning on the corresponding feature page. Assign semantic search to a
-   provider that supports it to clear the warning.
+   If no provider covers semantic search and a feature needs it, Zammad
+   shows a warning on the corresponding feature page. Assign semantic
+   search to a provider that supports it **and that has an Embedding Model
+   set** to clear the warning.
 
 Image text recognition
    The provider used to extract text from images (OCR).
