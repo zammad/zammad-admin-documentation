@@ -122,14 +122,15 @@ URL (OCR)
    Leave empty to fall back to URL (Completions).
 
 After filling in the fields, click ``Submit``. Zammad tests the configuration
-before saving. If the test succeeds, the row's status dot starts orange until
-the first successful request turns it green; see Status below for the colors.
+before saving. If the test succeeds, the row's status indicator starts orange
+until the first successful request turns it green; see Status below for the
+colors.
 
 Status
 ^^^^^^
 
-The colored dot at the start of each row shows whether the provider has been
-used successfully or whether it has issues:
+The colored indicator dot at the start of each row shows whether the provider
+has been used successfully or whether it has issues:
 
 Green
    The provider has been used and the last request succeeded. The tooltip
@@ -140,7 +141,7 @@ Orange
    after the first successful request.
 
 Red
-   The last request to this provider failed. Hover the dot for the error
+   The last request to this provider failed. Hover the indicator for the error
    message from the provider. The tooltip always shows the most recent
    error, so the timestamp belongs to the last failed request.
 
