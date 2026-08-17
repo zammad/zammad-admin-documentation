@@ -20,23 +20,38 @@ Limitations
 
 Please note that Zammad only supports these account types (app dependent):
 
-- Accounts in this organizational directory only (Default Directory only -
-  Single tenant)
-- Accounts in any organizational directory (Any Azure AD directory -
-  Multitenant)
-- Accounts in any organizational directory (Any Azure AD directory -
-  Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+- Single tenant only - restrict sign-in to users (or guests) in your
+  own tenant.
+- Multiple Entra ID tenants - allow users in any Microsoft Entra tenant
+  to sign in.
+- Any Entra ID tenant + personal Microsoft accounts - allow users in any
+  Microsoft Entra tenant and with personal Microsoft accounts (e.g.
+  Skype, Xbox) to sign in.
 
-Step 1 - Register a Microsoft App for Zammad
---------------------------------------------
+Step 1 - Get the Callback URL from Zammad
+-----------------------------------------
 
-Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_
-and navigate to App registrations to create a new app.
+Navigate to *Settings > Security > Third-party Applications* within
+Zammad's admin settings and scroll down to the section *Authentication
+via Microsoft*.
+
+Leave the *App ID*, *App secret* and *App Tenant ID* fields empty
+for now. Note down the read-only **Your callback URL** field instead
+- you will need it in the next step to configure the app on the
+Microsoft side, and you can copy it directly from Zammad.
+
+Step 2 - Register a Microsoft App in Entra ID
+---------------------------------------------
+
+Sign in to the `Microsoft Entra admin center <https://entra.microsoft.com/>`_\
+and select **Entra ID** > **App registrations** > **New registration**\
+to create a new app.
+
 Provide the requested information as follows and register your app.
 
 Name:
-   Any meaningful name fitting, this name will be displayed to users
-   trying to authenticate with this app.
+   Any meaningful name fits, as this name is displayed to users trying
+   to authenticate with this app.
 
 Supported account types:
    Choose one of the above mentioned account types (see Limitations).
@@ -46,49 +61,30 @@ Supported account types:
    option. If you're unsure, use the "Help me choose..." link.
 
 Redirect URI (optional):
-   Select web and provide your callback URL.
+   Select web and provide your callback URL. You can find it under
+   **Your callback URL** in Zammad where you can copy it.
    The callback URL looks like this:
-   ``https://zammad.domain.tld/auth/microsoft_office365/callback``
+   ``https://zammad.example.com/auth/microsoft_office365/callback``
 
-.. figure:: /images/settings/security/third-party/microsoft/register-microsoft-app.gif
-   :alt: Screencast showing how to register a Microsoft app
-   :width: 80%
-   :align: center
+Sign-in requires only the ``User.Read`` API permission, which new apps
+already have. You can verify this under **API permissions**, within
+*Microsoft Graph > Delegated permissions*. The ``openid`` scope is part
+of the sign-in protocol and is sent automatically, so there is nothing
+to add.
 
-Within  **API permissions** add the following permissions:
-    - ``openid``
-    - ``User.Read``
-
-You can find these permissions within *Microsoft Graph > Delegated permissions*.
-
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-add-api-permissions.gif
-   :alt: Screencast showing how to add required API permissions
-   :width: 80%
-   :align: center
-
-Within **Certificates & secrets** create a new client secret.
+Within **Certificates & secrets**, create a new client secret.
 Note down the returned secret **value** for later. **Do not** use the secret ID!
 
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-create-secret.gif
-   :alt: Screencast showing how to create a new app secret
-   :width: 80%
-   :align: center
-
-From **Overview** copy your apps *Application (client) ID*.
+From **Overview**, copy your app's *Application (client) ID*.
 If you're using a single tenant app, please also copy *Directory (tenant) ID*.
 You now have all required information for Zammad.
 
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-get-applicationID-and-tenantID.gif
-   :alt: Screencast showing how to retrieve application client and tenant IDs
-   :width: 80%
-   :align: center
-
-Step 2 - Add App Credentials to Zammad
+Step 3 - Add App Credentials to Zammad
 --------------------------------------
 
-Navigate to *Settings > Security > Third-party Applications* within Zammad's
-admin settings. Scroll down to the section *Authentication via Microsoft* and
-fill in the required information.
+Return to the *Authentication via Microsoft* section in *Settings >
+Security > Third-party Applications* and fill in the required
+information.
 
 App ID:
    This is your *Application (client) ID*.
@@ -97,15 +93,8 @@ App secret:
    This is your *client secret* (value).
 
 App Tenant ID:
-   **optional** only required for apps that use account type
-   *Accounts in this organizational directory only
-   (Default Directory only - Single tenant).*
+   optional - only required for apps that use the account type
+   *Single tenant only.*
 
 Apply your settings by pressing submit and activate
 *Authentication via Microsoft*.
-
-.. figure:: /images/settings/security/third-party/microsoft/add-microsoft-app-credentials-to-zammad.gif
-   :alt: Screencast showing how to add app credentials and activating the
-         authentication method
-   :width: 80%
-   :align: center
