@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-18 14:23+0200\n"
+"POT-Creation-Date: 2026-08-18 15:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -544,6 +544,7 @@ msgstr ""
 #: ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
+#: ../settings/security/third-party/microsoft.rst:42
 #: ../system/objects.rst:135
 #: ../system/objects.rst:239
 msgid "Name"
@@ -4563,7 +4564,7 @@ msgstr ""
 
 #: ../channels/form.rst:16
 #: ../channels/whatsapp/limitations.rst:2
-#: ../settings/security/third-party/microsoft.rst:19
+#: ../settings/security/third-party/microsoft.rst:21
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 #: ../system/integrations/cti/includes/introduction.include.rst:17
@@ -5383,7 +5384,6 @@ msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:79
 #: ../channels/microsoft365/accounts/register-app.rst:83
-#: ../settings/security/third-party/microsoft.rst:59
 msgid "``openid``"
 msgstr ""
 
@@ -17442,144 +17442,171 @@ msgid "Microsoft"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:4
-msgid "Zammad's Microsoft connection allows your users with Microsoft accounts to login. This works for Azure users as well and can be an alternative to :doc:`/system/integrations/ldap/index`."
+msgid "Zammad's Microsoft connection allows your users with Microsoft accounts to log in. This works for Entra ID users as well and can be an alternative to :doc:`/system/integrations/ldap/index`. The configuration in Zammad is located under *Settings > Security > Third-party Applications* in the **Authentication via Microsoft** section. To access it, the permission ``admin.security`` is required."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:10
-msgid "This documentation part does not cover our :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`."
+#: ../settings/security/third-party/microsoft.rst:13
+msgid "This page does not cover our :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:None
-msgid "Screenshot showing Microsoft login button on Zammad login screen."
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:21
-msgid "Please note that Zammad only supports these account types (app dependent):"
+msgid "Screenshot shows Microsoft login button on Zammad login screen."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:23
-msgid "Accounts in this organizational directory only (Default Directory only - Single tenant)"
+msgid "Please note that Zammad only supports these account types (app-dependent):"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:25
-msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant)"
+msgid "**Single tenant only**: restrict sign-in to users (or guests) in your own tenant."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:27
-msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
+msgid "**Multiple Entra ID tenants**: allow users in any Microsoft Entra tenant to sign in."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:31
-msgid "Step 1 - Register a Microsoft App for Zammad"
+#: ../settings/security/third-party/microsoft.rst:29
+msgid "**Any Entra ID tenant + personal Microsoft accounts**: allow users in any Microsoft Entra tenant, as well as users with personal Microsoft accounts (e.g. Skype, Xbox), to sign in."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:33
-msgid "Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_ and navigate to App registrations to create a new app. Provide the requested information as follows and register your app."
+#: ../settings/security/third-party/microsoft.rst:34
+msgid "Register a Microsoft App in Entra ID"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:39
-msgid "Name:"
+#: ../settings/security/third-party/microsoft.rst:36
+msgid "Sign in to the `Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to **App registrations** and create a new app. Provide the requested information to register your app."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:38
-msgid "Any meaningful name fitting, this name will be displayed to users trying to authenticate with this app."
+#: ../settings/security/third-party/microsoft.rst:41
+msgid "Any meaningful name fits, as it is displayed to users trying to authenticate with this app."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:46
-msgid "Supported account types:"
+#: ../settings/security/third-party/microsoft.rst:48
+msgid "Supported account types"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:42
-msgid "Choose one of the above mentioned account types (see Limitations)."
+#: ../settings/security/third-party/microsoft.rst:45
+msgid "Choose one of the account types listed above. The correct account type depends on your use case. If you only want to use authentication internally, choose the first option. If you're unsure, use the \"Help me choose...\" link."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:44
-msgid "The correct account type depends on your use case. If you want to use the authentication internal only, choose the first option. If you're unsure, use the \"Help me choose...\" link."
+#: ../settings/security/third-party/microsoft.rst:56
+msgid "Redirect URI (optional)"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:51
-msgid "Redirect URI (optional):"
+msgid "Select **Web** as the platform and provide your callback URL. You can find and copy it from Zammad's read-only **Your callback URL** field. Paste it into the redirect URI field in Microsoft's app configuration."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:49
-msgid "Select web and provide your callback URL. The callback URL looks like this: ``https://zammad.domain.tld/auth/microsoft_office365/callback``"
+#: ../settings/security/third-party/microsoft.rst:55
+msgid "The callback URL looks like this: ``https://zammad.example.com/auth/microsoft_office365/callback``"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to register a Microsoft app"
+#: ../settings/security/third-party/microsoft.rst:58
+msgid "Sign-in requires only the ``User.Read`` API permission, which new apps already have. You can verify this under **API permissions** within *Microsoft Graph > Delegated permissions*. The ``openid`` scope is part of the sign-in protocol and is sent automatically, so there is nothing to add."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:60
-msgid "Within  **API permissions** add the following permissions:"
+#: ../settings/security/third-party/microsoft.rst:64
+msgid "Within **Certificates & secrets**, create a new client secret. Note down the returned secret **value** for the next step. **Do not** use the secret ID!"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:60
-msgid "``User.Read``"
+#: ../settings/security/third-party/microsoft.rst:68
+msgid "Add App Credentials to Zammad"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:62
-msgid "You can find these permissions within *Microsoft Graph > Delegated permissions*."
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to add required API permissions"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:69
-msgid "Within **Certificates & secrets** create a new client secret. Note down the returned secret **value** for later. **Do not** use the secret ID!"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to create a new app secret"
+#: ../settings/security/third-party/microsoft.rst:70
+msgid "Now you are ready to provide the values to Zammad. The following table maps the values you collected in Entra ID to the fields in Zammad."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:77
-msgid "From **Overview** copy your apps *Application (client) ID*. If you're using a single tenant app, please also copy *Directory (tenant) ID*. You now have all required information for Zammad."
+msgid "Entra ID"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to retrieve application client and tenant IDs"
+#: ../settings/security/third-party/microsoft.rst:78
+msgid "Zammad field"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:79
+msgid "Comment"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:80
+msgid "**Application (client) ID**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:81
+msgid "**App ID**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:82
+msgid "From **Overview** in the Entra ID portal."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:83
+msgid "**Client secret** (value)"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:84
+msgid "**App Secret**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:85
+msgid "From **Certificates & secrets** > **Client secrets**. Use the *value*, not the *secret ID*."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:86
+msgid "**Directory (tenant) ID**"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:87
-msgid "Step 2 - Add App Credentials to Zammad"
+msgid "**App Tenant ID**"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:89
-msgid "Navigate to *Settings > Security > Third-party Applications* within Zammad's admin settings. Scroll down to the section *Authentication via Microsoft* and fill in the required information."
+#: ../settings/security/third-party/microsoft.rst:88
+msgid "Optional. Required only when the app uses the **Single tenant only** account type."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:90
+msgid "Make sure to enable the toggle next to **Authentication via Microsoft** and click ``Submit`` to activate and save your configuration."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:94
-msgid "App ID:"
+msgid "Optional: Require a Verified Email Domain for Account Linking"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:94
-msgid "This is your *Application (client) ID*."
+#: ../settings/security/third-party/microsoft.rst:96
+msgid "In multi-tenant (``/common``) setups, anyone signing in can present an email address from any domain. Microsoft signals whether the domain of that address is verified for the account's tenant via the ``xms_edov`` (\"email domain owner verified\") claim in the ID token. Enable **Require verified email domain** to make Zammad insist on that signal before it links a Microsoft login to an existing Zammad user by email address."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:97
-msgid "App secret:"
+#: ../settings/security/third-party/microsoft.rst:105
+msgid "This option only has an effect in combination with :ref:`Automatic account link on initial logon <automatic-account-linking>`. Without it, Zammad never links a third-party login to an existing account by email address in the first place."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:97
-msgid "This is your *client secret* (value)."
+#: ../settings/security/third-party/microsoft.rst:110
+msgid "With the option enabled, Zammad links a login to an existing user only if all of the following conditions apply:"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:102
-msgid "App Tenant ID:"
+#: ../settings/security/third-party/microsoft.rst:113
+msgid "The ID token contains an ``xms_edov`` claim with the value ``true``."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:100
-msgid "**optional** only required for apps that use account type *Accounts in this organizational directory only (Default Directory only - Single tenant).*"
+#: ../settings/security/third-party/microsoft.rst:114
+msgid "The ID token contains a non-empty ``email`` claim."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:104
-msgid "Apply your settings by pressing submit and activate *Authentication via Microsoft*."
+#: ../settings/security/third-party/microsoft.rst:115
+msgid "That ``email`` claim matches the email address of the account that is about to be linked (upper and lower case are treated as equal)."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to add app credentials and activating the\n"
-"authentication method"
+#: ../settings/security/third-party/microsoft.rst:118
+msgid "If one of these conditions is not met, Zammad refuses to link the accounts and the sign-in fails with an error message: either that the email address is already in use by another user, or, if **No user creation on logon** is enabled, that the user account does not exist. Affected users can still get access: they log in to their existing Zammad account by other means and link their Microsoft account themselves under *Profile > Linked Accounts*."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:125
+msgid "While the option is disabled (default), Zammad does not require the claim: Microsoft either reports a verified domain via ``xms_edov`` or omits the claim entirely, so an existing account is linked as soon as the email address matches. Only enabling the option makes the verified domain a requirement."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:132
+msgid "Both claims must be configured on your app registration first. In the `Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to *Entra ID > App registrations*, select your app and choose **Token configuration** under **Manage**. Select **Add optional claim**, set the token type to **ID token** and add the claims ``email`` and ``xms_edov``. As long as they are missing, enabling the option blocks all Microsoft account linking by email address."
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:2

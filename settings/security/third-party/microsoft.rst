@@ -1,111 +1,138 @@
 Microsoft
 =========
 
-Zammad's Microsoft connection allows your users with Microsoft accounts to login.
-This works for Azure users as well and can be an alternative to
-:doc:`/system/integrations/ldap/index`.
+Zammad's Microsoft connection allows your users with Microsoft accounts to log
+in. This works for Entra ID users as well and can be an alternative to
+:doc:`/system/integrations/ldap/index`. The configuration in Zammad is located
+under *Settings > Security > Third-party Applications* in the
+**Authentication via Microsoft** section. To access it, the permission
+``admin.security`` is required.
 
 .. note::
 
-   This documentation part does not cover our
+   This page does not cover our
    :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`.
 
 .. figure:: /images/settings/security/third-party/microsoft/zammad-login-interface-with-microsoft-login.png
-   :alt: Screenshot showing Microsoft login button on Zammad login screen.
-   :scale: 75%
+   :alt: Screenshot shows Microsoft login button on Zammad login screen.
    :align: center
 
 Limitations
 -----------
 
-Please note that Zammad only supports these account types (app dependent):
+Please note that Zammad only supports these account types (app-dependent):
 
-- Accounts in this organizational directory only (Default Directory only -
-  Single tenant)
-- Accounts in any organizational directory (Any Azure AD directory -
-  Multitenant)
-- Accounts in any organizational directory (Any Azure AD directory -
-  Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+- **Single tenant only**: restrict sign-in to users (or guests) in your
+  own tenant.
+- **Multiple Entra ID tenants**: allow users in any Microsoft Entra
+  tenant to sign in.
+- **Any Entra ID tenant + personal Microsoft accounts**: allow users in
+  any Microsoft Entra tenant, as well as users with personal Microsoft
+  accounts (e.g. Skype, Xbox), to sign in.
 
-Step 1 - Register a Microsoft App for Zammad
---------------------------------------------
+Register a Microsoft App in Entra ID
+------------------------------------
 
-Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_
-and navigate to App registrations to create a new app.
-Provide the requested information as follows and register your app.
+Sign in to the `Microsoft Entra admin center <https://entra.microsoft.com/>`_,
+go to **App registrations** and create a new app. Provide the requested
+information to register your app.
 
-Name:
-   Any meaningful name fitting, this name will be displayed to users
-   trying to authenticate with this app.
+Name
+   Any meaningful name fits, as it is displayed to users trying
+   to authenticate with this app.
 
-Supported account types:
-   Choose one of the above mentioned account types (see Limitations).
+Supported account types
+   Choose one of the account types listed above. The correct account type
+   depends on your use case. If you only want to use authentication
+   internally, choose the first option. If you're unsure, use the
+   "Help me choose..." link.
 
-   The correct account type depends on your use case.
-   If you want to use the authentication internal only, choose the first
-   option. If you're unsure, use the "Help me choose..." link.
+Redirect URI (optional)
+   Select **Web** as the platform and provide your callback URL. You can find
+   and copy it from Zammad's read-only **Your callback URL** field. Paste it
+   into the redirect URI field in Microsoft's app configuration.
 
-Redirect URI (optional):
-   Select web and provide your callback URL.
    The callback URL looks like this:
-   ``https://zammad.domain.tld/auth/microsoft_office365/callback``
+   ``https://zammad.example.com/auth/microsoft_office365/callback``
 
-.. figure:: /images/settings/security/third-party/microsoft/register-microsoft-app.gif
-   :alt: Screencast showing how to register a Microsoft app
-   :width: 80%
-   :align: center
+Sign-in requires only the ``User.Read`` API permission, which new apps
+already have. You can verify this under **API permissions** within
+*Microsoft Graph > Delegated permissions*. The ``openid`` scope is part
+of the sign-in protocol and is sent automatically, so there is nothing
+to add.
 
-Within  **API permissions** add the following permissions:
-    - ``openid``
-    - ``User.Read``
+Within **Certificates & secrets**, create a new client secret. Note down the
+returned secret **value** for the next step. **Do not** use the secret ID!
 
-You can find these permissions within *Microsoft Graph > Delegated permissions*.
+Add App Credentials to Zammad
+-----------------------------
 
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-add-api-permissions.gif
-   :alt: Screencast showing how to add required API permissions
-   :width: 80%
-   :align: center
+Now you are ready to provide the values to Zammad. The following table
+maps the values you collected in Entra ID to the fields in Zammad.
 
-Within **Certificates & secrets** create a new client secret.
-Note down the returned secret **value** for later. **Do not** use the secret ID!
+.. list-table::
+   :header-rows: 1
+   :widths: 35 25 40
 
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-create-secret.gif
-   :alt: Screencast showing how to create a new app secret
-   :width: 80%
-   :align: center
+   * - Entra ID
+     - Zammad field
+     - Comment
+   * - **Application (client) ID**
+     - **App ID**
+     - From **Overview** in the Entra ID portal.
+   * - **Client secret** (value)
+     - **App Secret**
+     - From **Certificates & secrets** > **Client secrets**. Use the *value*, not the *secret ID*.
+   * - **Directory (tenant) ID**
+     - **App Tenant ID**
+     - Optional. Required only when the app uses the **Single tenant only** account type.
 
-From **Overview** copy your apps *Application (client) ID*.
-If you're using a single tenant app, please also copy *Directory (tenant) ID*.
-You now have all required information for Zammad.
+Make sure to enable the toggle next to **Authentication via Microsoft** and
+click ``Submit`` to activate and save your configuration.
 
-.. figure:: /images/settings/security/third-party/microsoft/microsoft-app-get-applicationID-and-tenantID.gif
-   :alt: Screencast showing how to retrieve application client and tenant IDs
-   :width: 80%
-   :align: center
+Optional: Require a Verified Email Domain for Account Linking
+-------------------------------------------------------------
 
-Step 2 - Add App Credentials to Zammad
---------------------------------------
+In multi-tenant (``/common``) setups, anyone signing in can present an email
+address from any domain. Microsoft signals whether the domain of that address
+is verified for the account's tenant via the ``xms_edov`` ("email domain owner
+verified") claim in the ID token. Enable **Require verified email domain** to
+make Zammad insist on that signal before it links a Microsoft login to an
+existing Zammad user by email address.
 
-Navigate to *Settings > Security > Third-party Applications* within Zammad's
-admin settings. Scroll down to the section *Authentication via Microsoft* and
-fill in the required information.
+.. note::
 
-App ID:
-   This is your *Application (client) ID*.
+   This option only has an effect in combination with
+   :ref:`Automatic account link on initial logon <automatic-account-linking>`.
+   Without it, Zammad never links a third-party login to an existing account
+   by email address in the first place.
 
-App secret:
-   This is your *client secret* (value).
+With the option enabled, Zammad links a login to an existing user only if all
+of the following conditions apply:
 
-App Tenant ID:
-   **optional** only required for apps that use account type
-   *Accounts in this organizational directory only
-   (Default Directory only - Single tenant).*
+- The ID token contains an ``xms_edov`` claim with the value ``true``.
+- The ID token contains a non-empty ``email`` claim.
+- That ``email`` claim matches the email address of the account that is about
+  to be linked (upper and lower case are treated as equal).
 
-Apply your settings by pressing submit and activate
-*Authentication via Microsoft*.
+If one of these conditions is not met, Zammad refuses to link the accounts and
+the sign-in fails with an error message: either that the email address is
+already in use by another user, or, if **No user creation on logon** is
+enabled, that the user account does not exist. Affected users can still get
+access: they log in to their existing Zammad account by other means and link
+their Microsoft account themselves under *Profile > Linked Accounts*.
 
-.. figure:: /images/settings/security/third-party/microsoft/add-microsoft-app-credentials-to-zammad.gif
-   :alt: Screencast showing how to add app credentials and activating the
-         authentication method
-   :width: 80%
-   :align: center
+While the option is disabled (default), Zammad does not require the claim:
+Microsoft either reports a verified domain via ``xms_edov`` or omits the claim
+entirely, so an existing account is linked as soon as the email address
+matches. Only enabling the option makes the verified domain a requirement.
+
+.. warning::
+
+   Both claims must be configured on your app registration first. In the
+   `Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to
+   *Entra ID > App registrations*, select your app and choose
+   **Token configuration** under **Manage**. Select **Add optional claim**,
+   set the token type to **ID token** and add the claims ``email`` and
+   ``xms_edov``. As long as they are missing, enabling the option blocks all
+   Microsoft account linking by email address.
