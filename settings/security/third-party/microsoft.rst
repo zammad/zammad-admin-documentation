@@ -4,8 +4,8 @@ Microsoft
 Zammad's Microsoft connection allows your users with Microsoft accounts to log
 in. This works for Entra ID users as well and can be an alternative to
 :doc:`/system/integrations/ldap/index`. The configuration in Zammad is located
-under *Settings > Security > Third-party Applications* in the section
-**Authentication via Microsoft**. To access it, the permission
+under *Settings > Security > Third-party Applications* in the
+**Authentication via Microsoft** section. To access it, the permission
 ``admin.security`` is required.
 
 .. note::
@@ -14,8 +14,7 @@ under *Settings > Security > Third-party Applications* in the section
    :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`.
 
 .. figure:: /images/settings/security/third-party/microsoft/zammad-login-interface-with-microsoft-login.png
-   :alt: Screenshot showing Microsoft login button on Zammad login screen.
-   :scale: 75%
+   :alt: Screenshot shows Microsoft login button on Zammad login screen.
    :align: center
 
 Limitations
@@ -109,11 +108,11 @@ existing Zammad user by email address.
    by email address in the first place.
 
 With the option enabled, Zammad links a login to an existing user only if all
-of the following apply:
+of the following conditions apply:
 
-- the ID token contains an ``xms_edov`` claim with the value ``true``,
-- the ID token contains a non-empty ``email`` claim, and
-- that ``email`` claim matches the email address of the account that is about
+- The ID token contains an ``xms_edov`` claim with the value ``true``.
+- The ID token contains a non-empty ``email`` claim.
+- That ``email`` claim matches the email address of the account that is about
   to be linked (upper and lower case are treated as equal).
 
 If one of these conditions is not met, Zammad refuses to link the accounts and
