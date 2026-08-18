@@ -52,7 +52,7 @@ was created, not when the affected object was created. Click any column heading
 to change the sort order. Use the **Search for audit logs** bar to find entries.
 The list displays the following information:
 
-User
+Updated by
    The user who performed the action. If the action was performed by using the
    ``View from user's perspective`` action, you see both involved users like
    this: Initiating user → Taken-over user.
@@ -62,7 +62,7 @@ Action
    **update object**, **delete object**, **switch to user** and
    **switch back to user**.
 
-Object
+Object Type
    The type of object that was changed. If the action was **switch to user**
    or **switch back to user**, it shows the affected users here as well.
 
