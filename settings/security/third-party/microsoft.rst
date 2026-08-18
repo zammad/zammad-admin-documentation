@@ -91,24 +91,49 @@ maps the values you collected in Entra ID to the fields in Zammad.
 Make sure to enable the toggle next to **Authentication via Microsoft** and
 click ``Submit`` to activate and save your configuration.
 
-Optional: restrict sign-in to verified email domains
-------------------------------------------------------
+Optional: Require a Verified Email Domain for Account Linking
+-------------------------------------------------------------
 
-In multi-tenant (``/common``) setups, sign-in can present an email address
-from any domain. Microsoft signals whether the sending domain is verified on
-the account via the ``xms_edov`` ID-token claim. You can let Zammad enforce
-this before it auto-links a signed-in email to an existing user by enabling
-the **Require verified email domain** option on this screen.
+In multi-tenant (``/common``) setups, anyone signing in can present an email
+address from any domain. Microsoft signals whether the domain of that address
+is verified for the account's tenant via the ``xms_edov`` ("email domain owner
+verified") claim in the ID token. Enable **Require verified email domain** to
+make Zammad insist on that signal before it links a Microsoft login to an
+existing Zammad user by email address.
 
-When enabled, Zammad only auto-links an account when the ID token carries
-both an ``email`` claim and a ``xms_edov`` claim whose value is ``true``. If
-either is missing or the domain check is not verified, the user can still log
-in, but the account must be linked to an existing user manually.
+.. note::
 
-For this to work, the two claims must first be requested on the app. In the
-`Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to
-*Entra ID > App registrations*, select your app and under **Manage** choose
-**Token configuration**. Select **Add optional claim**, set the token type to
-**ID token**, add the claims ``email`` and ``xms_edov`` and save. Until both
-are configured, enabling this option in Zammad blocks all Microsoft 365
-account auto-linking by email.
+   This option only has an effect in combination with
+   :ref:`Automatic account link on initial logon <automatic-account-linking>`.
+   Without it, Zammad never links a third-party login to an existing account
+   by email address in the first place.
+
+With the option enabled, Zammad links a login to an existing user only if all
+of the following apply:
+
+- the ID token contains an ``xms_edov`` claim with the value ``true``,
+- the ID token contains a non-empty ``email`` claim, and
+- that ``email`` claim matches the email address of the account that is about
+  to be linked (upper and lower case are treated as equal).
+
+If one of these conditions is not met, Zammad refuses to link the accounts and
+the sign-in fails with an error message – either that the email address is
+already in use by another user, or, if **No user creation on logon** is
+enabled, that the user account does not exist. Affected users can still get
+access: they log in to their existing Zammad account by other means and link
+their Microsoft account themselves under *Profile > Linked Accounts*.
+
+While the option is disabled (default), Zammad does not require the claim:
+Microsoft either reports a verified domain via ``xms_edov`` or omits the claim
+entirely, so an existing account is linked as soon as the email address
+matches. Only enabling the option makes the verified domain a requirement.
+
+.. warning::
+
+   Both claims must be requested on your app registration first. In the
+   `Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to
+   *Entra ID > App registrations*, select your app and choose
+   **Token configuration** under **Manage**. Select **Add optional claim**,
+   set the token type to **ID token** and add the claims ``email`` and
+   ``xms_edov``. As long as this is missing, enabling the option blocks all
+   Microsoft account linking by email address.
