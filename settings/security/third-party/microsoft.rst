@@ -10,7 +10,7 @@ under *Settings > Security > Third-party Applications* in the section
 
 .. note::
 
-   This documentation part does not cover our
+   This page does not cover our
    :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`.
 
 .. figure:: /images/settings/security/third-party/microsoft/zammad-login-interface-with-microsoft-login.png
@@ -21,7 +21,7 @@ under *Settings > Security > Third-party Applications* in the section
 Limitations
 -----------
 
-Please note that Zammad only supports these account types (app dependent):
+Please note that Zammad only supports these account types (app-dependent):
 
 - Single tenant only - restrict sign-in to users (or guests) in your
   own tenant.
@@ -44,12 +44,12 @@ Name
 
 Supported account types
    Choose one of the account types listed above. The correct account type
-   depends on your use case. If you want to use the authentication internally
-   only, choose the first option. If you're unsure, use the
+   depends on your use case. If you only want to use the authentication
+   internally, choose the first option. If you're unsure, use the
    "Help me choose..." link.
 
 Redirect URI (optional)
-   Select web as platform and provide your callback URL. You can find and copy
+   Select **Web** as the platform and provide your callback URL. You can find and copy
    it from Zammad's read-only **Your callback URL** field. Paste it into the
    redirect URI field in Microsoft's app configuration.
 
@@ -88,7 +88,8 @@ maps the values you collected in Entra ID to the fields in Zammad.
      - **App Tenant ID**
      - Optional. Required only when the app uses the **Single tenant only** account type.
 
-Click on ``Submit`` to save and activate your configuration.
+Make sure to enable the toggle next to **Authentication via Microsoft** and
+click ``Submit`` to activate and save your configuration.
 
 Optional: restrict sign-in to verified email domains
 ------------------------------------------------------
