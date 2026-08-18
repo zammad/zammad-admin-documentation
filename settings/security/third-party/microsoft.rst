@@ -49,9 +49,9 @@ Supported account types
    "Help me choose..." link.
 
 Redirect URI (optional)
-   Select **Web** as the platform and provide your callback URL. You can find and copy
-   it from Zammad's read-only **Your callback URL** field. Paste it into the
-   redirect URI field in Microsoft's app configuration.
+   Select **Web** as the platform and provide your callback URL. You can find
+   and copy it from Zammad's read-only **Your callback URL** field. Paste it
+   into the redirect URI field in Microsoft's app configuration.
 
    The callback URL looks like this:
    ``https://zammad.example.com/auth/microsoft_office365/callback``
