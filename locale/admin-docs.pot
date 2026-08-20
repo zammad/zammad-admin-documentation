@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-18 15:21+0200\n"
+"POT-Creation-Date: 2026-08-20 08:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -489,7 +489,7 @@ msgid "Pick the AI provider. Available options:"
 msgstr ""
 
 #: ../ai/provider.rst:52
-#: ../ai/provider.rst:258
+#: ../ai/provider.rst:267
 msgid "Zammad AI"
 msgstr ""
 
@@ -498,7 +498,7 @@ msgid "OpenAI"
 msgstr ""
 
 #: ../ai/provider.rst:54
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:298
 msgid "Ollama"
 msgstr ""
 
@@ -578,7 +578,7 @@ msgstr ""
 msgid "Need different models for different features? Add the same provider twice with a different model selected in each, then assign each connection to its feature via :ref:`per-feature-provider-config`."
 msgstr ""
 
-#: ../ai/provider.rst:112
+#: ../ai/provider.rst:120
 msgid "Embedding Model"
 msgstr ""
 
@@ -610,80 +610,84 @@ msgstr ""
 msgid "Screenshot shows the AI provider dialog with manually configured embedding settings"
 msgstr ""
 
-#: ../ai/provider.rst:119
+#: ../ai/provider.rst:114
+msgid "Changing the embedding model or the embedding dimensions triggers a full rebuild of the knowledge base index. This re-embeds every knowledge base article, which takes time and costs AI calls proportional to the size of your knowledge base. Zammad shows a confirmation dialog before the change is saved. Switching the semantic search capability to a provider that uses the same embedding model and dimensions does not trigger a rebuild."
+msgstr ""
+
+#: ../ai/provider.rst:127
 msgid "OCR Model"
 msgstr ""
 
-#: ../ai/provider.rst:115
+#: ../ai/provider.rst:123
 msgid "The model used to extract text from images. The dropdown lists the models the provider offers. The default option falls back to the **Model** field. Zammad AI chooses the model itself and therefore doesn't show this field. Not every provider supports image text recognition; the field appears only for the ones that do."
 msgstr ""
 
-#: ../ai/provider.rst:123
+#: ../ai/provider.rst:131
 #: ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr ""
 
-#: ../ai/provider.rst:122
+#: ../ai/provider.rst:130
 msgid "The URL or IP address of the provider. Required for Ollama and OpenAI compatible providers."
 msgstr ""
 
-#: ../ai/provider.rst:126
+#: ../ai/provider.rst:134
 msgid "URL (Completions)"
 msgstr ""
 
-#: ../ai/provider.rst:126
+#: ../ai/provider.rst:134
 msgid "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 
-#: ../ai/provider.rst:130
+#: ../ai/provider.rst:138
 msgid "URL (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:129
+#: ../ai/provider.rst:137
 msgid "Azure AI only. The endpoint where the OCR model is available. Leave empty to fall back to URL (Completions)."
 msgstr ""
 
-#: ../ai/provider.rst:132
+#: ../ai/provider.rst:140
 msgid "After filling in the fields, click ``Submit``. Zammad tests the configuration before saving. If the test succeeds, the row's status dot starts orange until the first successful request turns it green; see Status below for the colors."
 msgstr ""
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:146
 msgid "Status"
 msgstr ""
 
-#: ../ai/provider.rst:140
+#: ../ai/provider.rst:148
 msgid "The colored dot at the start of each row shows whether the provider has been used successfully or whether it has issues:"
 msgstr ""
 
-#: ../ai/provider.rst:145
+#: ../ai/provider.rst:153
 msgid "Green"
 msgstr ""
 
-#: ../ai/provider.rst:144
+#: ../ai/provider.rst:152
 msgid "The provider has been used and the last request succeeded. The tooltip shows the timestamp of the last status update."
 msgstr ""
 
-#: ../ai/provider.rst:149
+#: ../ai/provider.rst:157
 msgid "Orange"
 msgstr ""
 
-#: ../ai/provider.rst:148
+#: ../ai/provider.rst:156
 msgid "The provider is configured but has not been used yet. It turns green after the first successful request."
 msgstr ""
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:162
 msgid "Red"
 msgstr ""
 
-#: ../ai/provider.rst:152
+#: ../ai/provider.rst:160
 msgid "The last request to this provider failed. Hover the dot for the error message from the provider. The tooltip always shows the most recent error, so the timestamp belongs to the last failed request."
 msgstr ""
 
-#: ../ai/provider.rst:159
+#: ../ai/provider.rst:167
 msgid "Default Provider"
 msgstr ""
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:169
 msgid "The **Default** provider serves every AI feature that has no specific provider assigned. You set it from the ︙ menu in the **Action** column. A provider can also carry capability badges, so a single well-equipped provider can cover everything."
 msgstr ""
 
@@ -691,81 +695,81 @@ msgstr ""
 msgid "Screenshot shows the providers list with a provider flagged as the default for all three purposes"
 msgstr ""
 
-#: ../ai/provider.rst:170
+#: ../ai/provider.rst:178
 msgid "When you mark a provider as the default, Zammad clears that flag from whichever provider held it before, so the new default takes over immediately. The default provider always exists: when you delete the provider that holds the flag, Zammad promotes the oldest remaining provider."
 msgstr ""
 
-#: ../ai/provider.rst:178
+#: ../ai/provider.rst:186
 msgid "Capabilities"
 msgstr ""
 
-#: ../ai/provider.rst:180
+#: ../ai/provider.rst:188
 msgid "Semantic search and image text recognition (OCR) are capabilities. You assign them from the ︙ menu in the **Action** column; the badges mark which provider currently covers each capability."
 msgstr ""
 
-#: ../ai/provider.rst:191
+#: ../ai/provider.rst:200
 msgid "Semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:185
+#: ../ai/provider.rst:193
 msgid "The provider used to turn text into numerical form (vector embeddings) so the knowledge base can find answers by meaning, not just keywords."
 msgstr ""
 
-#: ../ai/provider.rst:188
-msgid "If no provider covers semantic search and a feature needs it, Zammad shows a warning on the corresponding feature page. Assign semantic search to a provider that supports it **and that has an Embedding Model set** to clear the warning."
-msgstr ""
-
-#: ../ai/provider.rst:197
-msgid "Image text recognition"
-msgstr ""
-
-#: ../ai/provider.rst:194
-msgid "The provider used to extract text from images (OCR)."
-msgstr ""
-
 #: ../ai/provider.rst:196
-msgid "This capability is optional. To save on AI-related costs, you can remove it from all providers entirely; features then simply skip the OCR step."
-msgstr ""
-
-#: ../ai/provider.rst:199
-msgid "When you assign a capability to a provider, Zammad clears that assignment from whichever provider held it before, so the new assignment takes over immediately. Unlike the default provider, capabilities are not promoted: when you delete the provider that covers a capability, the capability simply stays unassigned."
+msgid "If no provider covers semantic search and a feature needs it, Zammad shows a warning on the corresponding feature page. Assign semantic search to a provider that supports it **and that has an Embedding Model set** to clear the warning. Note that switching this assignment may trigger a full index rebuild; see the **Embedding Model** field above."
 msgstr ""
 
 #: ../ai/provider.rst:206
+msgid "Image text recognition"
+msgstr ""
+
+#: ../ai/provider.rst:203
+msgid "The provider used to extract text from images (OCR)."
+msgstr ""
+
+#: ../ai/provider.rst:205
+msgid "This capability is optional. To save on AI-related costs, you can remove it from all providers entirely; features then simply skip the OCR step."
+msgstr ""
+
+#: ../ai/provider.rst:208
+msgid "When you assign a capability to a provider, Zammad clears that assignment from whichever provider held it before, so the new assignment takes over immediately. Unlike the default provider, capabilities are not promoted: when you delete the provider that covers a capability, the capability simply stays unassigned."
+msgstr ""
+
+#: ../ai/provider.rst:215
 #: ../manage/macros.rst:56
 #: ../manage/templates.rst:28
 msgid "Actions"
 msgstr ""
 
-#: ../ai/provider.rst:208
+#: ../ai/provider.rst:217
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr ""
 
-#: ../ai/provider.rst:211
+#: ../ai/provider.rst:220
 msgid "Set as default"
 msgstr ""
 
-#: ../ai/provider.rst:211
+#: ../ai/provider.rst:220
 msgid "Marks the provider as the default provider for AI features."
 msgstr ""
 
-#: ../ai/provider.rst:215
+#: ../ai/provider.rst:224
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:214
+#: ../ai/provider.rst:223
 msgid "Assigns the provider to the semantic search capability, or clears that assignment. Only available for providers that support it."
 msgstr ""
 
-#: ../ai/provider.rst:219
+#: ../ai/provider.rst:228
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 
-#: ../ai/provider.rst:218
+#: ../ai/provider.rst:227
 msgid "Assigns the provider to the image text recognition capability, or clears that assignment."
 msgstr ""
 
-#: ../ai/provider.rst:222
+#: ../ai/provider.rst:231
 #: ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../channels/email/accounts/managing-accounts.rst:51
@@ -775,19 +779,19 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: ../ai/provider.rst:222
+#: ../ai/provider.rst:231
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 
-#: ../ai/provider.rst:227
+#: ../ai/provider.rst:236
 msgid "Configuring Provider per Feature"
 msgstr ""
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:238
 msgid "By default, all AI features use the provider marked as the default. For finer control, you can pick a specific provider for individual features."
 msgstr ""
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:241
 msgid "Every AI feature settings page shows a ``Provider`` button in the page header. It opens a modal with a dropdown of all configured providers. Pick a provider to send that feature's text generation requests to, or pick the **Default (...)** entry to clear any override and fall back to the default."
 msgstr ""
 
@@ -795,67 +799,67 @@ msgstr ""
 msgid "Screenshot shows the per-feature provider modal with a provider selected"
 msgstr ""
 
-#: ../ai/provider.rst:241
+#: ../ai/provider.rst:250
 msgid "The choice only affects text generation. Semantic search always goes to the provider that covers the semantic search capability, and image text recognition always goes to the provider that covers the image text recognition capability. The ``Provider`` button is only visible to admins who hold the ``admin.ai_provider`` permission, since routing touches the providers you set up on this page."
 msgstr ""
 
-#: ../ai/provider.rst:249
+#: ../ai/provider.rst:258
 msgid "Additional Provider Information"
 msgstr ""
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:260
 msgid "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head over to :doc:`feedback-and-logs` or pick any of the AI feature pages from the menu on the left."
 msgstr ""
 
-#: ../ai/provider.rst:260
+#: ../ai/provider.rst:269
 msgid "Using Zammad AI as a provider is the easiest way to get started with Zammad's AI features. It has several key advantages:"
 msgstr ""
 
-#: ../ai/provider.rst:263
+#: ../ai/provider.rst:272
 msgid "You don't have to set up an AI system or its configuration."
 msgstr ""
 
-#: ../ai/provider.rst:264
+#: ../ai/provider.rst:273
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr ""
 
-#: ../ai/provider.rst:265
+#: ../ai/provider.rst:274
 msgid "No configuration in Zammad for SaaS customers, or just an API key for self-hosted customers."
 msgstr ""
 
-#: ../ai/provider.rst:267
+#: ../ai/provider.rst:276
 msgid "Requests with sensitive information aren't used for training."
 msgstr ""
 
-#: ../ai/provider.rst:268
+#: ../ai/provider.rst:277
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 
-#: ../ai/provider.rst:280
+#: ../ai/provider.rst:289
 msgid "SaaS Customers"
 msgstr ""
 
-#: ../ai/provider.rst:272
+#: ../ai/provider.rst:281
 msgid "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription settings </system/subscription>` and consider switching your plan. When a \"V2\" plan is active, you can buy AI calls for AI processing. A Zammad AI provider is added automatically and you can enable it as you like. Check your remaining AI calls from time to time or activate the notification to be alerted when few calls remain."
 msgstr ""
 
-#: ../ai/provider.rst:279
+#: ../ai/provider.rst:288
 msgid "On SaaS, the Zammad AI provider is provisioned by the platform and you cannot delete it or change its type."
 msgstr ""
 
-#: ../ai/provider.rst:286
+#: ../ai/provider.rst:295
 msgid "Self-Hosted Customers"
 msgstr ""
 
-#: ../ai/provider.rst:283
+#: ../ai/provider.rst:292
 msgid "Get in touch with our `sales department <https://zammad.com/en/company/contact>`_ to obtain a Zammad AI API key and to buy AI calls. After receiving your API key, add a new provider of type *Zammad AI* and save the key."
 msgstr ""
 
-#: ../ai/provider.rst:291
+#: ../ai/provider.rst:300
 msgid "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine you control, so your data is not transferred to a third party. This approach only makes sense if you have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:295
+#: ../ai/provider.rst:304
 msgid "If you don't have Ollama running yet, their `documentation <https://docs.ollama.com/>`_ is a good starting point. Available models are listed in `Ollama's model library <https://ollama.com/library>`_, with useful information and additional links in the `Ollama GitHub repository <https://github.com/ollama/ollama>`_."
 msgstr ""
 
