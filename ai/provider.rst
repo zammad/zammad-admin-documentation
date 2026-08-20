@@ -195,9 +195,9 @@ Semantic search
 
    If no provider covers semantic search and a feature needs it, Zammad
    shows a warning on the corresponding feature page. Assign semantic
-   search to a provider that supports it **and that has an Embedding Model
-   set** to clear the warning. Note that switching this assignment may
-   trigger a full index rebuild; see the **Embedding Model** field above.
+   search to a provider that supports it and that has an Embedding Model
+   set to clear the warning. Note that switching this assignment may
+   trigger a full index rebuild, see **Embedding Model** above.
 
 Image text recognition
    The provider used to extract text from images (OCR).
