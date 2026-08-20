@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-13 09:25+0200\n"
+"POT-Creation-Date: 2026-08-18 15:21+0200\n"
 "PO-Revision-Date: 2026-07-29 08:08+0000\n"
 "Last-Translator: Rob <robertborge@outlook.com>\n"
 "Language-Team: Turkish <https://translations.zammad.org/projects/"
@@ -695,9 +695,14 @@ msgstr ""
 #: ../ai/provider.rst:35
 msgid ""
 "Click ``New Provider`` to add a new provider or click on a row to edit an "
-"existing one. The dialog lets you pick the provider type and fill in the "
-"credentials and models it needs. The fields shown depend on the provider you "
-"choose, so switching the type updates the dialog on the fly."
+"existing one. Both ways open a two-step dialog. The dialog's first step lets "
+"you pick the provider type, enter a name and provider-specific information. "
+"Switching to the second step via the ``Next`` button verifies your entries, "
+"connects to the provider and fetches the available models. If there is a "
+"problem, you are notified at this point already. The second step allows you "
+"to select or add a model and to configure provider-specific settings. The "
+"fields shown depend on the provider you choose, so switching the type "
+"updates the dialog on the fly."
 msgstr ""
 
 #: ../ai/provider.rst:None
@@ -705,155 +710,207 @@ msgstr ""
 msgid "Screenshot shows the dialog for adding or editing a provider"
 msgstr "Gelen temel e-posta hesabı kurulumunu gösteren ekran görüntüsü"
 
-#: ../ai/provider.rst:61 ../channels/email/accounts/account-setup.rst:122
+#: ../ai/provider.rst:66 ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:206 ../system/objects.rst:158
 msgid "Type"
 msgstr "Tür"
 
-#: ../ai/provider.rst:45
+#: ../ai/provider.rst:50
 msgid "Pick the AI provider. Available options:"
 msgstr ""
 
-#: ../ai/provider.rst:47 ../ai/provider.rst:223
+#: ../ai/provider.rst:52 ../ai/provider.rst:258
 #, fuzzy
 msgid "Zammad AI"
 msgstr "``Zammad``"
 
-#: ../ai/provider.rst:48
+#: ../ai/provider.rst:53
 msgid "OpenAI"
 msgstr ""
 
-#: ../ai/provider.rst:49 ../ai/provider.rst:254
+#: ../ai/provider.rst:54 ../ai/provider.rst:289
 msgid "Ollama"
 msgstr ""
 
-#: ../ai/provider.rst:50
+#: ../ai/provider.rst:55
 msgid "Anthropic"
 msgstr ""
 
-#: ../ai/provider.rst:51
+#: ../ai/provider.rst:56
 msgid "Azure AI"
 msgstr ""
 
-#: ../ai/provider.rst:52
+#: ../ai/provider.rst:57
 msgid "Mistral AI"
 msgstr ""
 
-#: ../ai/provider.rst:53
+#: ../ai/provider.rst:58
 msgid "Custom (OpenAI compatible)"
 msgstr ""
 
-#: ../ai/provider.rst:55
+#: ../ai/provider.rst:60
 msgid ""
 "Different fields appear depending on the type. Some providers also require "
 "configuration on their side before you can connect (for example Azure AI). "
 "Refer to the provider's own documentation for those steps."
 msgstr ""
 
-#: ../ai/provider.rst:59
+#: ../ai/provider.rst:64
 msgid ""
 "The provider you need isn't listed? We are going to add more over time. If "
 "you need a particular one or want to sponsor it, get in touch with our "
 "`sales department <https://zammad.com/en/company/contact>`_."
 msgstr ""
 
-#: ../ai/provider.rst:66 ../ai/writing-assistant.rst:104
+#: ../ai/provider.rst:71 ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
 #: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
 #: ../manage/slas.rst:53 ../manage/templates.rst:23
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
-#: ../misc/variables/ticket.rst:1 ../system/objects.rst:135
+#: ../misc/variables/ticket.rst:1
+#: ../settings/security/third-party/microsoft.rst:42 ../system/objects.rst:135
 #: ../system/objects.rst:239
 #, fuzzy
 msgid "Name"
 msgstr "Ad:"
 
-#: ../ai/provider.rst:64
+#: ../ai/provider.rst:69
 msgid ""
 "A human-readable label for the provider. This is what you see in the list "
 "and elsewhere in Zammad (for example when configuring a provider for a "
-"specific feature)."
+"specific feature). The name must be unique."
 msgstr ""
 
-#: ../ai/provider.rst:70
+#: ../ai/provider.rst:75
 msgid "Token"
 msgstr ""
 
-#: ../ai/provider.rst:69
+#: ../ai/provider.rst:74
 msgid ""
 "The API token issued by your provider. Don't confuse it with the tokens a "
 "large language model deals with when processing a request."
 msgstr ""
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:88
 #, fuzzy
 msgid "Model"
 msgstr "Mod"
 
-#: ../ai/provider.rst:73
+#: ../ai/provider.rst:78
 msgid ""
-"The base model used to generate text. The placeholder shows Zammad's built-"
-"in default for the chosen provider. Leave the field empty to use that "
-"default."
+"The base model used to generate text. For providers that offer a model list, "
+"the field is a dropdown. The default option shows the provider's recommended "
+"model; pick a different one if you prefer. If the provider does not offer a "
+"model list, enter its name manually."
 msgstr ""
 
-#: ../ai/provider.rst:80
-msgid "Embedding Model"
-msgstr ""
-
-#: ../ai/provider.rst:77
+#: ../ai/provider.rst:83
 msgid ""
-"The model used to vectorize text for semantic search. The placeholder shows "
-"Zammad's built-in default for the chosen provider. Leave the field empty to "
-"use it. Not every provider supports semantic search; the field appears only "
-"for the ones that do."
+"Azure AI and Zammad AI do not show this field. Azure AI identifies the model "
+"through its deployment URL, while Zammad AI chooses the model itself."
 msgstr ""
 
 #: ../ai/provider.rst:86
+msgid ""
+"Need different models for different features? Add the same provider twice "
+"with a different model selected in each, then assign each connection to its "
+"feature via :ref:`per-feature-provider-config`."
+msgstr ""
+
+#: ../ai/provider.rst:112
+msgid "Embedding Model"
+msgstr ""
+
+#: ../ai/provider.rst:91
+msgid ""
+"The model used to vectorize text for semantic search. The dropdown lists the "
+"models the provider offers. The default option shows the provider's "
+"recommendation; pick a different one if you prefer. If the provider does not "
+"offer a matching model, enter its name manually. Required if you plan to "
+"assign the **Semantic search** capability to this connection "
+"(see :ref:`capabilities`). Not every provider supports semantic search; the "
+"field appears only for the ones that do."
+msgstr ""
+
+#: ../ai/provider.rst:99
+msgid ""
+"When you select or enter an embedding model, Zammad tries to determine "
+"values for the two options listed below. If Zammad cannot determine these "
+"values, you must provide them. Note that you should only adjust these values "
+"if you know what you are doing."
+msgstr ""
+
+#: ../ai/provider.rst:105
+msgid "Embedding dimensions"
+msgstr ""
+
+#: ../ai/provider.rst:105
+msgid "The length of the vectors the embedding model produces."
+msgstr ""
+
+#: ../ai/provider.rst:108
+msgid "Context window size"
+msgstr ""
+
+#: ../ai/provider.rst:108
+msgid "The number of input tokens the embedding model accepts at once."
+msgstr ""
+
+#: ../ai/provider.rst:0
+#, fuzzy
+msgid ""
+"Screenshot shows the AI provider dialog with manually configured embedding "
+"settings"
+msgstr ""
+"Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
+"düzenleyebilirsiniz:"
+
+#: ../ai/provider.rst:119
 #, fuzzy
 msgid "OCR Model"
 msgstr "Mod"
 
-#: ../ai/provider.rst:83
+#: ../ai/provider.rst:115
 msgid ""
-"The model used to extract text from images. Leave the field empty to fall "
-"back to the **Model** field. The placeholder shows Zammad's built-in default "
-"for the chosen provider. Not every provider supports image text recognition; "
-"the field appears only for the ones that do."
+"The model used to extract text from images. The dropdown lists the models "
+"the provider offers. The default option falls back to the **Model** field. "
+"Zammad AI chooses the model itself and therefore doesn't show this field. "
+"Not every provider supports image text recognition; the field appears only "
+"for the ones that do."
 msgstr ""
 
-#: ../ai/provider.rst:90 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:123 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:89
+#: ../ai/provider.rst:122
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
 msgstr ""
 
-#: ../ai/provider.rst:93
+#: ../ai/provider.rst:126
 msgid "URL (Completions)"
 msgstr ""
 
-#: ../ai/provider.rst:93
+#: ../ai/provider.rst:126
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 
-#: ../ai/provider.rst:97
+#: ../ai/provider.rst:130
 msgid "URL (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:96
+#: ../ai/provider.rst:129
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
 msgstr ""
 
-#: ../ai/provider.rst:99
+#: ../ai/provider.rst:132
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -861,55 +918,55 @@ msgid ""
 "below for the colors."
 msgstr ""
 
-#: ../ai/provider.rst:104
+#: ../ai/provider.rst:138
 msgid "Status"
 msgstr "Durum"
 
-#: ../ai/provider.rst:106
+#: ../ai/provider.rst:140
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
 msgstr ""
 
-#: ../ai/provider.rst:111
+#: ../ai/provider.rst:145
 #, fuzzy
 msgid "Green"
 msgstr "İmzalar"
 
-#: ../ai/provider.rst:110
+#: ../ai/provider.rst:144
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
 msgstr ""
 
-#: ../ai/provider.rst:115
+#: ../ai/provider.rst:149
 msgid "Orange"
 msgstr ""
 
-#: ../ai/provider.rst:114
+#: ../ai/provider.rst:148
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
 msgstr ""
 
-#: ../ai/provider.rst:120
+#: ../ai/provider.rst:154
 msgid "Red"
 msgstr ""
 
-#: ../ai/provider.rst:118
+#: ../ai/provider.rst:152
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
 "so the timestamp belongs to the last failed request."
 msgstr ""
 
-#: ../ai/provider.rst:125
+#: ../ai/provider.rst:159
 #, fuzzy
 #| msgid "Default value"
 msgid "Default Provider"
 msgstr "Varsayılan değer"
 
-#: ../ai/provider.rst:127
+#: ../ai/provider.rst:161
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -923,7 +980,7 @@ msgid ""
 "for all three purposes"
 msgstr ""
 
-#: ../ai/provider.rst:136
+#: ../ai/provider.rst:170
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -931,50 +988,51 @@ msgid ""
 "provider that holds the flag, Zammad promotes the oldest remaining provider."
 msgstr ""
 
-#: ../ai/provider.rst:144
+#: ../ai/provider.rst:178
 msgid "Capabilities"
 msgstr ""
 
-#: ../ai/provider.rst:146
+#: ../ai/provider.rst:180
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
 "provider currently covers each capability."
 msgstr ""
 
-#: ../ai/provider.rst:156
+#: ../ai/provider.rst:191
 msgid "Semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:151
+#: ../ai/provider.rst:185
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
 msgstr ""
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:188
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
-"provider that supports it to clear the warning."
+"provider that supports it **and that has an Embedding Model set** to clear "
+"the warning."
 msgstr ""
 
-#: ../ai/provider.rst:162
+#: ../ai/provider.rst:197
 #, fuzzy
 msgid "Image text recognition"
 msgstr "Yapılandırma"
 
-#: ../ai/provider.rst:159
+#: ../ai/provider.rst:194
 msgid "The provider used to extract text from images (OCR)."
 msgstr ""
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:196
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
 msgstr ""
 
-#: ../ai/provider.rst:164
+#: ../ai/provider.rst:199
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -983,65 +1041,65 @@ msgid ""
 "stays unassigned."
 msgstr ""
 
-#: ../ai/provider.rst:171 ../manage/macros.rst:56 ../manage/templates.rst:28
+#: ../ai/provider.rst:206 ../manage/macros.rst:56 ../manage/templates.rst:28
 msgid "Actions"
 msgstr "Eylemler"
 
-#: ../ai/provider.rst:173
+#: ../ai/provider.rst:208
 #, fuzzy
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Aşağıdaki ayarlardan şunları düzenleyebilirsin:"
 
-#: ../ai/provider.rst:176
+#: ../ai/provider.rst:211
 msgid "Set as default"
 msgstr ""
 
-#: ../ai/provider.rst:176
+#: ../ai/provider.rst:211
 msgid "Marks the provider as the default provider for AI features."
 msgstr ""
 
-#: ../ai/provider.rst:180
+#: ../ai/provider.rst:215
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:179
+#: ../ai/provider.rst:214
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
 msgstr ""
 
-#: ../ai/provider.rst:184
+#: ../ai/provider.rst:219
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 
-#: ../ai/provider.rst:183
+#: ../ai/provider.rst:218
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
 msgstr ""
 
-#: ../ai/provider.rst:187 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:222 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Sil"
 
-#: ../ai/provider.rst:187
+#: ../ai/provider.rst:222
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 
-#: ../ai/provider.rst:192
+#: ../ai/provider.rst:227
 msgid "Configuring Provider per Feature"
 msgstr ""
 
-#: ../ai/provider.rst:194
+#: ../ai/provider.rst:229
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
 msgstr ""
 
-#: ../ai/provider.rst:197
+#: ../ai/provider.rst:232
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1057,7 +1115,7 @@ msgstr ""
 "Yönetici panelinin Makrolar sayfasında makro oluşturabilir veya "
 "düzenleyebilirsiniz:"
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:241
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1067,52 +1125,52 @@ msgid ""
 "providers you set up on this page."
 msgstr ""
 
-#: ../ai/provider.rst:214
+#: ../ai/provider.rst:249
 #, fuzzy
 msgid "Additional Provider Information"
 msgstr "Adres bilgisi"
 
-#: ../ai/provider.rst:216
+#: ../ai/provider.rst:251
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
 "the menu on the left."
 msgstr ""
 
-#: ../ai/provider.rst:225
+#: ../ai/provider.rst:260
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
 msgstr ""
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:263
 msgid "You don't have to set up an AI system or its configuration."
 msgstr ""
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:264
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr ""
 
-#: ../ai/provider.rst:230
+#: ../ai/provider.rst:265
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
 msgstr ""
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:267
 msgid "Requests with sensitive information aren't used for training."
 msgstr ""
 
-#: ../ai/provider.rst:233
+#: ../ai/provider.rst:268
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 
-#: ../ai/provider.rst:245
+#: ../ai/provider.rst:280
 #, fuzzy
 msgid "SaaS Customers"
 msgstr "müşteri"
 
-#: ../ai/provider.rst:237
+#: ../ai/provider.rst:272
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1122,17 +1180,17 @@ msgid ""
 "alerted when few calls remain."
 msgstr ""
 
-#: ../ai/provider.rst:244
+#: ../ai/provider.rst:279
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
 msgstr ""
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:286
 msgid "Self-Hosted Customers"
 msgstr ""
 
-#: ../ai/provider.rst:248
+#: ../ai/provider.rst:283
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1140,14 +1198,14 @@ msgid ""
 "key."
 msgstr ""
 
-#: ../ai/provider.rst:256
+#: ../ai/provider.rst:291
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
 "only makes sense if you have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:260
+#: ../ai/provider.rst:295
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -1222,7 +1280,7 @@ msgid ""
 "the summary sidebar tab isn't available."
 msgstr ""
 
-#: ../ai/summary.rst:44 ../manage/groups/settings.rst:106
+#: ../ai/summary.rst:44 ../manage/groups/settings.rst:117
 msgid "Summary Generation"
 msgstr ""
 
@@ -1494,7 +1552,7 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:110 ../manage/macros.rst:65
+#: ../manage/groups/settings.rst:121 ../manage/macros.rst:65
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:232 ../manage/roles/permissions.rst:302
@@ -1520,7 +1578,7 @@ msgid ""
 msgstr ""
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:131
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:142
 #: ../manage/macros.rst:71 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:164
@@ -2057,8 +2115,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:133
 #: ../channels/email/accounts/account-setup.rst:229
 #: ../channels/email/accounts/email-notification.rst:31
-#: ../misc/object-conditions/basics.rst:27 ../system/audit-logs.rst:58
-#: ../system/sessions.rst:18
+#: ../misc/object-conditions/basics.rst:27 ../system/sessions.rst:18
 msgid "User"
 msgstr "Kullanıcı"
 
@@ -4713,7 +4770,7 @@ msgid "Screenshot shows Zammad's form management configuration."
 msgstr "İlk oturum açmada otomatik hesap bağlantısı"
 
 #: ../channels/form.rst:16 ../channels/whatsapp/limitations.rst:2
-#: ../settings/security/third-party/microsoft.rst:19
+#: ../settings/security/third-party/microsoft.rst:21
 #: ../system/core-workflows/limitations.rst:2
 #: ../system/integrations/cti/includes/introduction.include.rst:17
 #: ../system/integrations/ldap/index.rst:20
@@ -5872,7 +5929,6 @@ msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:79
 #: ../channels/microsoft365/accounts/register-app.rst:83
-#: ../settings/security/third-party/microsoft.rst:59
 msgid "``openid``"
 msgstr "``openid``"
 
@@ -9266,11 +9322,40 @@ msgstr ""
 #: ../manage/groups/settings.rst:97
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
-"configuration. Choose when the summary should get generated or hide the "
-"ticket summary sidebar tab at all for this group."
+"configuration for this group. Use one of the following values:"
 msgstr ""
 
-#: ../manage/groups/settings.rst:103
+#: ../manage/groups/settings.rst:101
+#, fuzzy
+msgid "Global Default"
+msgstr "Varsayılan değer"
+
+#: ../manage/groups/settings.rst:101
+msgid "Use the value configured in *AI > Ticket Summary*."
+msgstr ""
+
+#: ../manage/groups/settings.rst:104
+msgid "On Ticket Detail Opening"
+msgstr ""
+
+#: ../manage/groups/settings.rst:104
+msgid "Always trigger summary generation when an agent opens the ticket."
+msgstr ""
+
+#: ../manage/groups/settings.rst:108
+msgid "On Ticket Summary Sidebar Activation"
+msgstr ""
+
+#: ../manage/groups/settings.rst:107
+msgid ""
+"Trigger summary generation only when the agent opens the summary sidebar tab."
+msgstr ""
+
+#: ../manage/groups/settings.rst:110
+msgid "Default setting: ``Global Default``."
+msgstr ""
+
+#: ../manage/groups/settings.rst:114
 msgid ""
 "In addition to this group-level setting, you can also use :doc:`object "
 "conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary "
@@ -9278,13 +9363,13 @@ msgid ""
 "have the summary generated."
 msgstr ""
 
-#: ../manage/groups/settings.rst:109
+#: ../manage/groups/settings.rst:120
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
 msgstr ""
 
-#: ../manage/groups/settings.rst:113
+#: ../manage/groups/settings.rst:124
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -9293,20 +9378,20 @@ msgid ""
 "existing tickets in an inactive group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:121
+#: ../manage/groups/settings.rst:132
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
 msgstr ""
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:135
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
 "selectable in the trigger configuration."
 msgstr ""
 
-#: ../manage/groups/settings.rst:130
+#: ../manage/groups/settings.rst:141
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -12250,8 +12335,7 @@ msgid ""
 "configured :doc:`timezone in Zammad </settings/branding>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:97 ../system/audit-logs.rst:67
-#: ../system/core-workflows/how-do-they-work.rst:7
+#: ../manage/scheduler.rst:97 ../system/core-workflows/how-do-they-work.rst:7
 #: ../system/core-workflows/learn-by-example.rst:39
 #: ../system/core-workflows/learn-by-example.rst:94
 #: ../system/core-workflows/learn-by-example.rst:142
@@ -21376,183 +21460,252 @@ msgstr "Microsoft 365"
 #: ../settings/security/third-party/microsoft.rst:4
 msgid ""
 "Zammad's Microsoft connection allows your users with Microsoft accounts to "
-"login. This works for Azure users as well and can be an alternative "
-"to :doc:`/system/integrations/ldap/index`."
+"log in. This works for Entra ID users as well and can be an alternative "
+"to :doc:`/system/integrations/ldap/index`. The configuration in Zammad is "
+"located under *Settings > Security > Third-party Applications* in the "
+"**Authentication via Microsoft** section. To access it, the permission "
+"``admin.security`` is required."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:10
+#: ../settings/security/third-party/microsoft.rst:13
+#, fuzzy
 msgid ""
-"This documentation part does not cover our :doc:`📧 Microsoft 365 email "
-"channel </channels/microsoft365/index>`."
-msgstr ""
+"This page does not cover our :doc:`📧 Microsoft 365 email channel </channels/"
+"microsoft365/index>`."
+msgstr ":doc:`Kanallar > E-posta </channels/email/index>`"
 
 #: ../settings/security/third-party/microsoft.rst:None
-msgid "Screenshot showing Microsoft login button on Zammad login screen."
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:21
-msgid ""
-"Please note that Zammad only supports these account types (app dependent):"
-msgstr ""
+#, fuzzy
+msgid "Screenshot shows Microsoft login button on Zammad login screen."
+msgstr "İlk oturum açmada otomatik hesap bağlantısı"
 
 #: ../settings/security/third-party/microsoft.rst:23
 msgid ""
-"Accounts in this organizational directory only (Default Directory only - "
-"Single tenant)"
+"Please note that Zammad only supports these account types (app-dependent):"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:25
 msgid ""
-"Accounts in any organizational directory (Any Azure AD directory - "
-"Multitenant)"
+"**Single tenant only**: restrict sign-in to users (or guests) in your own "
+"tenant."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:27
 msgid ""
-"Accounts in any organizational directory (Any Azure AD directory - "
-"Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)"
+"**Multiple Entra ID tenants**: allow users in any Microsoft Entra tenant to "
+"sign in."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:31
-msgid "Step 1 - Register a Microsoft App for Zammad"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:33
+#: ../settings/security/third-party/microsoft.rst:29
 msgid ""
-"Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_ and "
-"navigate to App registrations to create a new app. Provide the requested "
-"information as follows and register your app."
+"**Any Entra ID tenant + personal Microsoft accounts**: allow users in any "
+"Microsoft Entra tenant, as well as users with personal Microsoft accounts "
+"(e.g. Skype, Xbox), to sign in."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:39
-msgid "Name:"
-msgstr "Ad:"
+#: ../settings/security/third-party/microsoft.rst:34
+msgid "Register a Microsoft App in Entra ID"
+msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:38
+#: ../settings/security/third-party/microsoft.rst:36
 msgid ""
-"Any meaningful name fitting, this name will be displayed to users trying to "
-"authenticate with this app."
+"Sign in to the `Microsoft Entra admin center <https://entra.microsoft.com/"
+">`_, go to **App registrations** and create a new app. Provide the requested "
+"information to register your app."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:46
-msgid "Supported account types:"
+#: ../settings/security/third-party/microsoft.rst:41
+msgid ""
+"Any meaningful name fits, as it is displayed to users trying to authenticate "
+"with this app."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:48
+#, fuzzy
+#| msgid "Supported account types:"
+msgid "Supported account types"
 msgstr "Desteklenen hesap türleri:"
 
-#: ../settings/security/third-party/microsoft.rst:42
-msgid "Choose one of the above mentioned account types (see Limitations)."
+#: ../settings/security/third-party/microsoft.rst:45
+msgid ""
+"Choose one of the account types listed above. The correct account type "
+"depends on your use case. If you only want to use authentication internally, "
+"choose the first option. If you're unsure, use the \"Help me choose...\" "
+"link."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:44
-msgid ""
-"The correct account type depends on your use case. If you want to use the "
-"authentication internal only, choose the first option. If you're unsure, use "
-"the \"Help me choose...\" link."
+#: ../settings/security/third-party/microsoft.rst:56
+msgid "Redirect URI (optional)"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:51
-msgid "Redirect URI (optional):"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:49
 msgid ""
-"Select web and provide your callback URL. The callback URL looks like this: "
-"``https://zammad.domain.tld/auth/microsoft_office365/callback``"
+"Select **Web** as the platform and provide your callback URL. You can find "
+"and copy it from Zammad's read-only **Your callback URL** field. Paste it "
+"into the redirect URI field in Microsoft's app configuration."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to register a Microsoft app"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:61
-msgid "Within  **API permissions** add the following permissions:"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:60
-msgid "``User.Read``"
-msgstr "``User.Read``"
-
-#: ../settings/security/third-party/microsoft.rst:61
-msgid "``Contacts.Read``"
-msgstr "``Contacts.Read``"
-
-#: ../settings/security/third-party/microsoft.rst:63
+#: ../settings/security/third-party/microsoft.rst:55
 msgid ""
-"You can find these permissions within *Microsoft Graph > Delegated "
-"permissions*."
+"The callback URL looks like this: ``https://zammad.example.com/auth/"
+"microsoft_office365/callback``"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to add required API permissions"
+#: ../settings/security/third-party/microsoft.rst:58
+msgid ""
+"Sign-in requires only the ``User.Read`` API permission, which new apps "
+"already have. You can verify this under **API permissions** within "
+"*Microsoft Graph > Delegated permissions*. The ``openid`` scope is part of "
+"the sign-in protocol and is sent automatically, so there is nothing to add."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:64
+msgid ""
+"Within **Certificates & secrets**, create a new client secret. Note down the "
+"returned secret **value** for the next step. **Do not** use the secret ID!"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:68
+msgid "Add App Credentials to Zammad"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:70
 msgid ""
-"Within **Certificates & secrets** create a new client secret. Note down the "
-"returned secret **value** for later. **Do not** use the secret ID!"
+"Now you are ready to provide the values to Zammad. The following table maps "
+"the values you collected in Entra ID to the fields in Zammad."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to create a new app secret"
+#: ../settings/security/third-party/microsoft.rst:77
+msgid "Entra ID"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:78
-msgid ""
-"From **Overview** copy your apps *Application (client) ID*. If you're using "
-"a single tenant app, please also copy *Directory (tenant) ID*. You now have "
-"all required information for Zammad."
+#, fuzzy
+msgid "Zammad field"
+msgstr "``Zammad``"
+
+#: ../settings/security/third-party/microsoft.rst:79
+msgid "Comment"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
-msgid "Screencast showing how to retrieve application client and tenant IDs"
+#: ../settings/security/third-party/microsoft.rst:80
+#, fuzzy
+#| msgid "Application type"
+msgid "**Application (client) ID**"
+msgstr "Uygulama türü"
+
+#: ../settings/security/third-party/microsoft.rst:81
+msgid "**App ID**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:82
+msgid "From **Overview** in the Entra ID portal."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:83
+msgid "**Client secret** (value)"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:84
+msgid "**App Secret**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:85
+msgid ""
+"From **Certificates & secrets** > **Client secrets**. Use the *value*, not "
+"the *secret ID*."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:86
+msgid "**Directory (tenant) ID**"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:87
+msgid "**App Tenant ID**"
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:88
-msgid "Step 2 - Add App Credentials to Zammad"
+msgid ""
+"Optional. Required only when the app uses the **Single tenant only** account "
+"type."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:90
 msgid ""
-"Navigate to *Settings > Security > Third-party Applications* within Zammad's "
-"admin settings. Scroll down to the section *Authentication via Microsoft* "
-"and fill in the required information."
+"Make sure to enable the toggle next to **Authentication via Microsoft** and "
+"click ``Submit`` to activate and save your configuration."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:95
-msgid "App ID:"
+#: ../settings/security/third-party/microsoft.rst:94
+msgid "Optional: Require a Verified Email Domain for Account Linking"
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:95
-msgid "This is your *Application (client) ID*."
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:98
-msgid "App secret:"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:98
-msgid "This is your *client secret* (value)."
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:103
-msgid "App Tenant ID:"
-msgstr ""
-
-#: ../settings/security/third-party/microsoft.rst:101
+#: ../settings/security/third-party/microsoft.rst:96
 msgid ""
-"**optional** only required for apps that use account type *Accounts in this "
-"organizational directory only (Default Directory only - Single tenant).*"
+"In multi-tenant (``/common``) setups, anyone signing in can present an email "
+"address from any domain. Microsoft signals whether the domain of that "
+"address is verified for the account's tenant via the ``xms_edov`` (\"email "
+"domain owner verified\") claim in the ID token. Enable **Require verified "
+"email domain** to make Zammad insist on that signal before it links a "
+"Microsoft login to an existing Zammad user by email address."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:105
 msgid ""
-"Apply your settings by pressing submit and activate *Authentication via "
-"Microsoft*."
+"This option only has an effect in combination with :ref:`Automatic account "
+"link on initial logon <automatic-account-linking>`. Without it, Zammad never "
+"links a third-party login to an existing account by email address in the "
+"first place."
 msgstr ""
 
-#: ../settings/security/third-party/microsoft.rst:None
+#: ../settings/security/third-party/microsoft.rst:110
 msgid ""
-"Screencast showing how to add app credentials and activating the\n"
-"authentication method"
+"With the option enabled, Zammad links a login to an existing user only if "
+"all of the following conditions apply:"
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:113
+msgid "The ID token contains an ``xms_edov`` claim with the value ``true``."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:114
+msgid "The ID token contains a non-empty ``email`` claim."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:115
+msgid ""
+"That ``email`` claim matches the email address of the account that is about "
+"to be linked (upper and lower case are treated as equal)."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:118
+msgid ""
+"If one of these conditions is not met, Zammad refuses to link the accounts "
+"and the sign-in fails with an error message: either that the email address "
+"is already in use by another user, or, if **No user creation on logon** is "
+"enabled, that the user account does not exist. Affected users can still get "
+"access: they log in to their existing Zammad account by other means and link "
+"their Microsoft account themselves under *Profile > Linked Accounts*."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:125
+msgid ""
+"While the option is disabled (default), Zammad does not require the claim: "
+"Microsoft either reports a verified domain via ``xms_edov`` or omits the "
+"claim entirely, so an existing account is linked as soon as the email "
+"address matches. Only enabling the option makes the verified domain a "
+"requirement."
+msgstr ""
+
+#: ../settings/security/third-party/microsoft.rst:132
+msgid ""
+"Both claims must be configured on your app registration first. In the "
+"`Microsoft Entra admin center <https://entra.microsoft.com/>`_, go to *Entra "
+"ID > App registrations*, select your app and choose **Token configuration** "
+"under **Manage**. Select **Add optional claim**, set the token type to **ID "
+"token** and add the claims ``email`` and ``xms_edov``. As long as they are "
+"missing, enabling the option blocks all Microsoft account linking by email "
+"address."
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:2
@@ -23968,6 +24121,11 @@ msgid ""
 "bar to find entries. The list displays the following information:"
 msgstr ""
 
+#: ../system/audit-logs.rst:58
+#, fuzzy
+msgid "Updated by"
+msgstr "Güncelleme Zamanı"
+
 #: ../system/audit-logs.rst:56
 msgid ""
 "The user who performed the action. If the action was performed by using the "
@@ -23981,6 +24139,11 @@ msgid ""
 "**update object**, **delete object**, **switch to user** and **switch back "
 "to user**."
 msgstr ""
+
+#: ../system/audit-logs.rst:67
+#, fuzzy
+msgid "Object Type"
+msgstr "Nesne türleri"
 
 #: ../system/audit-logs.rst:66
 msgid ""
@@ -30826,6 +30989,15 @@ msgstr "Versiyon"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını gösterir."
 
+#~ msgid "Name:"
+#~ msgstr "Ad:"
+
+#~ msgid "``User.Read``"
+#~ msgstr "``User.Read``"
+
+#~ msgid "``Contacts.Read``"
+#~ msgstr "``Contacts.Read``"
+
 #, fuzzy
 #~ msgid "Screenshot shows configuration of AI provider in Zammad"
 #~ msgstr "İlk oturum açmada otomatik hesap bağlantısı"
@@ -31349,10 +31521,6 @@ msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını göst
 #, fuzzy
 #~ msgid "Textarea field"
 #~ msgstr "Metin"
-
-#, fuzzy
-#~ msgid "Default"
-#~ msgstr "Varsayılan değer"
 
 #~ msgid "How does this work...?!"
 #~ msgstr "Bu nasıl çalışır... ?!"
@@ -31984,9 +32152,6 @@ msgstr "Zammad örneğinizde şu anda hangi versiyonun kullanıldığını göst
 
 #~ msgid "User Type"
 #~ msgstr "Kullanıcı Türü"
-
-#~ msgid "Application type"
-#~ msgstr "Uygulama türü"
 
 #~ msgid "Choose **Web application**."
 #~ msgstr "**Web uygulaması**nı seçin."
