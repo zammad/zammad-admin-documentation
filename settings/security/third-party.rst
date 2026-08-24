@@ -42,7 +42,7 @@ authentication providers to existing accounts.
 
 This means that the user has to manually link authentication providers to their
 accounts (for more about this
-:user-docs:`consult the user documentation </extras/profile-and-settings.html>`).
+:user-docs:`consult the user documentation </extras/user-menu-profile-settings.html>`).
 
 Sometimes this doesn't come in handy as this also means you'll receive
 error messages about "email address being in use already" for (yet) unknown

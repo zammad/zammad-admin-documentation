@@ -36,7 +36,6 @@ Prerequisites
    is to buy an annual subscription through a commercial CA, such as:
 
    - `Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/email-smime-certificate>`_
-   - `Secorio <https://secorio.com/en/certificates/smime-email/>`_
    - `GlobalSign <https://shop.globalsign.com/en/secure-email>`_
 
    You can also generate your own self-signed certificates, but the process is

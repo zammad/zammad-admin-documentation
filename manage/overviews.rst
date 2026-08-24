@@ -46,7 +46,7 @@ Only available for users which are absence replacements for other users
    This selection refers to the setting in the user preferences
    (*Avatar > Profile > Out of office*). If this option is checked, this
    overview is only displayed for users who have been set as a substitution.
-   See :user-docs:`Out of Office section (user documentation) </extras/profile-and-settings.html>`
+   See :user-docs:`Out of Office section (user documentation) </extras/user-menu-profile-settings.html>`
    for more details.
 
    **For example:** Agent A is on vacation and Agent B will take care of his
@@ -111,4 +111,4 @@ Sorting, Grouping and Active
       Renaming or reordering overviews has no effect on custom orders!
 
       You can learn more about this setting
-      :user-docs:`in the user documentation </extras/profile-and-settings.html#user-profile-settings>`.
+      :user-docs:`in the user documentation </extras/user-menu-profile-settings.html#user-profile-settings>`.
