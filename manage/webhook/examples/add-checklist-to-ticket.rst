@@ -10,7 +10,7 @@ Create a Token
 Create a personal access token in the account you want to use to create the
 checklists in the tickets. Make sure the account has appropriate permissions.
 To create the token, go to the
-:user-docs:`profile settings (user docs) </extras/profile-and-settings.html>`
+:user-docs:`profile settings (user docs) </extras/user-menu-profile-settings.html>`
 by clicking on the avatar image (either image or initials) on the left bottom
 corner and select **Token Access**. Make sure that the token has
 ``ticket.agent`` permission and the user is able to change tickets in the

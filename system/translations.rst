@@ -115,4 +115,4 @@ deactivate.
    Even though it's available on any screen, the inline translation feature
    requires admin permissions. It works only for the current language selection.
    If you need to translate to a different language, first change the language
-   in your :user-docs:`profile settings </extras/profile-and-settings.html>`.
+   in your :user-docs:`profile settings </extras/user-menu-profile-settings.html>`.

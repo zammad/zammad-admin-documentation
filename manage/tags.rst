@@ -7,7 +7,7 @@ Zammad's admin settings under *Manage > Tags* with the ``admin.tag`` permission.
 
 All agents can tag tickets. You can find further information about tagging of
 tickets in our
-:user-docs:`user documentation </basics/service-ticket/settings/tags.html>`.
+:user-docs:`user documentation </basics/ticket-basics.html>`.
 It is even possible to use an AI agent for ticket tagging. Check out the
 :doc:`AI Agents section </ai/ai-agents>` for more information.
 

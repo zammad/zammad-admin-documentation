@@ -118,7 +118,7 @@ suitable notification will be posted in the configured Teams Channel. The
 notification will contain the link to the ticket, updated data and
 :ref:`content of the last article <teams-removing-article-body>`. It will also
 also be
-:user-docs:`color coded </basics/service-ticket/settings/state.html#state-colors>`
+:user-docs:`color coded </basics/ticket-basics.html#state>`
 according to its latest state.
 
 .. figure:: /images/manage/webhook/webhook-teams-sample-notification.png
