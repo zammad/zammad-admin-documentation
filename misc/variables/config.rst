@@ -15,7 +15,7 @@ triggers to show necessary information to your customer.
 
    "Config > Fully Qualified Domain Name",  "``#{config.fqdn}``",          "``zammad.example.com``"
    "Config > HTTP type",                    "``#{config.http_type}``",     "``https`` or ``http``"
-   "Config > Organization",                 "``#{config.organization}``",  "``Zammad GmbH`` value set in `Branding <https://admin-docs.zammad.org/en/latest/settings-branding.html>`_"
-   "Config > Product Name",                 "``#{config.product_name}``",  "``Helpdesk`` value set in `Branding <https://admin-docs.zammad.org/en/latest/settings-branding.html>`_"
+   "Config > Organization",                 "``#{config.organization}``",  "``Zammad GmbH`` value set in :doc:`Branding </settings/branding>`"
+   "Config > Product Name",                 "``#{config.product_name}``",  "``Helpdesk`` value set in :doc:`Branding </settings/branding>`"
    "Config > SystemID",                     "``#{config.system_id}``",     "``31`` (value between 1 and 99)"
    "Config > Ticket Hook",                  "``#{config.ticket_hook}``",   "``Ticket#``"
