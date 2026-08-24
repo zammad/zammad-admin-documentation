@@ -14,8 +14,8 @@ Concept
 
 Zammad is a ticketing and helpdesk system that helps you manage communication
 with customers and internal departments. Even without advanced configuration,
-Zammad helps you work in a much more structured and transparent way, and
-helps you avoid duplicate work.
+Zammad helps you work in a much more structured and transparent way and helps
+you avoid duplicate work.
 
 Zammad can be invisible to customers and doesn't require your customers to use
 the system at all (but they can, if you allow them to). You just connect a
@@ -23,7 +23,7 @@ communication channel and customer requests are created as tickets in Zammad.
 
 A ticket is a central entity which holds all information about a customer
 request in one place. A ticket is created automatically when someone sends a
-message, or manually by an agent, e.g. when a customer calls. A ticket
+message or manually by an agent, e.g. when a customer calls. A ticket
 includes all conversation parts as articles.
 
 Because the ticket itself gathers everything related to a customer request,
@@ -33,9 +33,8 @@ across tools are not needed.
 
 Your colleagues who work on tickets are called agents in Zammad. Zammad ships
 with three roles: **Admin**, **Agent**, and **Customer**. The first two are for
-internal users. When a new ticket gets created and the email address is not
-yet known to Zammad, Zammad automatically creates a user with the **Customer**
-role.
+internal users. If the email address of a new ticket is not yet known to
+Zammad, a user with the **Customer** role is created automatically.
 
 The diagram below shows how users, roles and groups relate. Don't worry if it
 isn't fully clear yet; the next sections walk through each piece.
@@ -92,7 +91,7 @@ the users. In any case, you should stick with one method.
 Connect Email Accounts to Zammad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Depending on your email system, follow the matching guide:
+Please follow the setup guide for your email system:
 
 - :doc:`Standard IMAP/SMTP </channels/email/index>`
 - :doc:`M365 Graph </channels/microsoft365-graph/index>`
