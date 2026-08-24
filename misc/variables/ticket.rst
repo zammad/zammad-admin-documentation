@@ -53,7 +53,7 @@ to check.
    "Ticket > Group > Note",                            "``#{ticket.group.note}``",                      "``Note about this group``"
    "Ticket > ID",                                      "``#{ticket.id}``",                              "``17``, ``5281``, ..."
    "Ticket > Last contact (agent)",                    "``#{ticket.last_contact_agent_at}``",           "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet"
-   "Ticket > Last contact (customer)",                 "``#{ticket.last_contact_customer_at}``",        "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note `Ticket last contact behavior Settings <https://admin-docs.zammad.org/en/latest/settings-ticket.html>`_ for this)"
+   "Ticket > Last contact (customer)",                 "``#{ticket.last_contact_customer_at}``",        "``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note :doc:`Ticket last contact behavior Settings </settings/ticket>` for this)"
    "Ticket > Last contact",                            "``#{ticket.last_contact_at}``",                 "``2019-10-07 16:25:00 UTC``"
    "Ticket > Number",                                  "``#{ticket.number}``",                          "``31001``, ``201910731001``, ..."
    "Ticket > Organization > Domain based assignment",  "``#{ticket.organization.domain_assignment}``",  "``false`` or ``true``"

@@ -155,7 +155,7 @@ Notifications
    Zammad will also warn agents by sending out an email.
    This depends on the notification configuration of your agents (which can be
    configured in the
-   :user-docs:`profile settings </extras/profile-and-settings.html>`).
+   :user-docs:`profile settings </extras/user-menu-profile-settings.html>`).
 
 Overviews
    You can configure :doc:`/manage/overviews` to allow your agents to filter
