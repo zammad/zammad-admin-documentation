@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 14:59+0200\n"
+"POT-Creation-Date: 2026-08-24 15:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1824,7 +1824,7 @@ msgstr ""
 #: ../system/integrations/github.rst:28
 #: ../system/integrations/gitlab.rst:35
 #: ../system/integrations/pgp.rst:112
-#: ../system/integrations/smime.rst:138
+#: ../system/integrations/smime.rst:139
 msgid "Troubleshooting"
 msgstr ""
 
@@ -10451,7 +10451,7 @@ msgid "Tags allow to categorize and mark tickets. Think of tags as some kind of 
 msgstr ""
 
 #: ../manage/tags.rst:8
-msgid "All agents can tag tickets. You can find further information about tagging of tickets in our :user-docs:`user documentation </basics/ticket-basics.html>`. It is even possible to use an AI agent for ticket tagging. Check out the :doc:`AI Agents section </ai/ai-agents>` for more information."
+msgid "All agents can tag tickets. You can find further information about tagging of tickets in our :user-docs:`user documentation </basics/ticket-basics.html#tags>`. It is even possible to use an AI agent for ticket tagging. Check out the :doc:`AI Agents section </ai/ai-agents>` for more information."
 msgstr ""
 
 #: ../manage/tags.rst:15
@@ -14357,7 +14357,7 @@ msgstr ""
 
 #: ../misc/system-notifications.rst:2
 #: ../system/integrations/pgp.rst:93
-#: ../system/integrations/smime.rst:116
+#: ../system/integrations/smime.rst:117
 msgid "System Notifications"
 msgstr ""
 
@@ -22697,7 +22697,7 @@ msgid "To sign outgoing system notifications via email, enable this setting. Thi
 msgstr ""
 
 #: ../system/integrations/pgp.rst:101
-#: ../system/integrations/smime.rst:124
+#: ../system/integrations/smime.rst:125
 msgid "Default Behavior"
 msgstr ""
 
@@ -22790,42 +22790,46 @@ msgid "`Sectigo (formerly Comodo) <https://sectigo.com/signing-certificates/emai
 msgstr ""
 
 #: ../system/integrations/smime.rst:39
+msgid "`Secorio <https://secorio.com/zertifikate/>`_"
+msgstr ""
+
+#: ../system/integrations/smime.rst:40
 msgid "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
 msgstr ""
 
-#: ../system/integrations/smime.rst:41
+#: ../system/integrations/smime.rst:42
 msgid "You can also generate your own self-signed certificates, but the process is complicated and usually involves extra work for your contacts. Bear in mind that S/MIME only works if the other party is using it, too."
 msgstr ""
 
-#: ../system/integrations/smime.rst:46
+#: ../system/integrations/smime.rst:47
 msgid "Certificate and Key Handling"
 msgstr ""
 
-#: ../system/integrations/smime.rst:49
+#: ../system/integrations/smime.rst:50
 msgid "Add Certificates and Keys"
 msgstr ""
 
-#: ../system/integrations/smime.rst:51
+#: ../system/integrations/smime.rst:52
 msgid "When adding certificates and keys, Zammad validates them based on the ``X509v3`` extensions. If your certificate and private key are bundled together in the same file or PEM block, import them twice (once using each button)."
 msgstr ""
 
-#: ../system/integrations/smime.rst:64
+#: ../system/integrations/smime.rst:65
 msgid "Add Certificate"
 msgstr ""
 
-#: ../system/integrations/smime.rst:56
+#: ../system/integrations/smime.rst:57
 msgid "Import public-key certificates for both your own organization and your contacts. You can add a bunch of certificates all at once by providing a single file with all relevant certificates."
 msgstr ""
 
-#: ../system/integrations/smime.rst:60
+#: ../system/integrations/smime.rst:61
 msgid "In some cases (e.g. when dealing with large enterprises), you may be given a certificate for an entire certificate authority (CA), rather than a single contact. You can add it here as well to trust *all* certificates issued by that CA. Commercial CAs can usually be verified online. Zammad does not include a list of built-in, trusted CAs."
 msgstr ""
 
-#: ../system/integrations/smime.rst:77
+#: ../system/integrations/smime.rst:78
 msgid "Add Private Key"
 msgstr ""
 
-#: ../system/integrations/smime.rst:67
+#: ../system/integrations/smime.rst:68
 msgid "Once you've added a public-key certificate, you can import its matching private key. Private keys are for **your own organization only**; never ask your contacts for their private keys. A bulk import of private keys is not possible."
 msgstr ""
 
@@ -22833,67 +22837,67 @@ msgstr ""
 msgid "S/MIME integration showing configured certificates and possible issues with Logging"
 msgstr ""
 
-#: ../system/integrations/smime.rst:77
+#: ../system/integrations/smime.rst:78
 msgid "A note is displayed on certificates with a matching private key (see line 2)."
 msgstr ""
 
-#: ../system/integrations/smime.rst:80
+#: ../system/integrations/smime.rst:81
 msgid "Certificate Validation"
 msgstr ""
 
-#: ../system/integrations/smime.rst:92
+#: ../system/integrations/smime.rst:93
 msgid "Client certificate"
 msgstr ""
 
-#: ../system/integrations/smime.rst:83
+#: ../system/integrations/smime.rst:84
 msgid "The following attributes are required:"
 msgstr ""
 
-#: ../system/integrations/smime.rst:85
+#: ../system/integrations/smime.rst:86
 msgid "Subject Alternative Name (at least one email address has to be present)"
 msgstr ""
 
-#: ../system/integrations/smime.rst:86
+#: ../system/integrations/smime.rst:87
 msgid "Key Usage (``Digital Signature`` and/or ``Key Encipherment``)"
 msgstr ""
 
-#: ../system/integrations/smime.rst:87
+#: ../system/integrations/smime.rst:88
 msgid "Public key algorithm (either ``RSA`` or ``EC``)"
 msgstr ""
 
-#: ../system/integrations/smime.rst:89
+#: ../system/integrations/smime.rst:90
 msgid "The Extended Key Usage attribute is optional. If the certificate provides the named attribute, then it must contain the value ``E-mail Protection``. Any usable email address has to be prefixed with ``email:`` or ``rfc822:``. The named public key algorithms are mandatory for private keys as well."
 msgstr ""
 
-#: ../system/integrations/smime.rst:97
+#: ../system/integrations/smime.rst:98
 msgid "CA certificate"
 msgstr ""
 
-#: ../system/integrations/smime.rst:95
+#: ../system/integrations/smime.rst:96
 msgid "In the case of an uploaded CA certificate, providing the value ``CA:TRUE`` in the attribute **Basic Constraints**, the previously mentioned attributes are not verified."
 msgstr ""
 
-#: ../system/integrations/smime.rst:100
+#: ../system/integrations/smime.rst:101
 msgid "Download Certificate or Key"
 msgstr ""
 
-#: ../system/integrations/smime.rst:102
+#: ../system/integrations/smime.rst:103
 msgid "You can download the previously provided certificates and private keys at any time from your Zammad instance. Please note that passphrase-protected private keys stay protected. When you download them, you have to know the passphrase to use them after downloading. To download a certificate, use the ⠇ menu in the **Actions** column and select ``Download Certificate``. To download a private key, use the other option labeled ``Download Private Key``."
 msgstr ""
 
-#: ../system/integrations/smime.rst:110
+#: ../system/integrations/smime.rst:111
 msgid "Delete Certificate and Key"
 msgstr ""
 
-#: ../system/integrations/smime.rst:112
+#: ../system/integrations/smime.rst:113
 msgid "To delete a certificate (with an optional private key included), use the ⠇ menu in the **Actions** column and select ``Delete``."
 msgstr ""
 
-#: ../system/integrations/smime.rst:118
+#: ../system/integrations/smime.rst:119
 msgid "To sign outgoing system notifications via email, enable this setting. This requires a private key for the notification sender email address. Make sure to enable the S/MIME feature in general to make it work. Having the toggle disabled doesn't sign outgoing system notification emails."
 msgstr ""
 
-#: ../system/integrations/smime.rst:126
+#: ../system/integrations/smime.rst:127
 msgid "By default, Zammad tries to send all outgoing emails **signed and encrypted**, if possible. This behavior can be adjusted on a per-group basis. You can choose to sign only, encrypt only, both, or neither:"
 msgstr ""
 
@@ -22901,19 +22905,19 @@ msgstr ""
 msgid "Zammad allowing to choose the default behavior on per group basis"
 msgstr ""
 
-#: ../system/integrations/smime.rst:135
+#: ../system/integrations/smime.rst:136
 msgid "Agents can always override these settings for each email they send out."
 msgstr ""
 
-#: ../system/integrations/smime.rst:140
+#: ../system/integrations/smime.rst:141
 msgid "All of the system's latest S/MIME activity is displayed in the **Recent Logs** section. The logs contain the status and details of all emails (both incoming and outgoing), that used signing/verification or encryption/decryption. This log does **not** include emails sent by :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>`. For those, check your ``production.log``."
 msgstr ""
 
-#: ../system/integrations/smime.rst:155
+#: ../system/integrations/smime.rst:156
 msgid "I received a signed/encrypted email before I set up S/MIME integration"
 msgstr ""
 
-#: ../system/integrations/smime.rst:148
+#: ../system/integrations/smime.rst:149
 msgid "No problem. Once S/MIME has been enabled and the appropriate certificates have been added, agents will be prompted to retry verification/decryption on matching emails."
 msgstr ""
 
@@ -22921,55 +22925,55 @@ msgstr ""
 msgid "Screenshot of user prompt to retry decryption"
 msgstr ""
 
-#: ../system/integrations/smime.rst:164
+#: ../system/integrations/smime.rst:165
 msgid "The ``Encrypt`` button is disabled"
 msgstr ""
 
-#: ../system/integrations/smime.rst:158
+#: ../system/integrations/smime.rst:159
 msgid "Have you added the recipient's certificate?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:159
+#: ../system/integrations/smime.rst:160
 msgid "Are you sure the recipient's certificate is valid?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:160
+#: ../system/integrations/smime.rst:161
 msgid "Have you checked your ``production.log`` for more details?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:162
+#: ../system/integrations/smime.rst:163
 msgid "If encryption doesn't work for outgoing email articles, it won't work in :doc:`triggers </manage/trigger>` or :doc:`scheduler jobs </manage/scheduler>` either."
 msgstr ""
 
-#: ../system/integrations/smime.rst:169
+#: ../system/integrations/smime.rst:170
 msgid "The ``Sign`` button is disabled"
 msgstr ""
 
-#: ../system/integrations/smime.rst:167
+#: ../system/integrations/smime.rst:168
 msgid "Have you added **both the certificate and private key** for your organization?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:168
+#: ../system/integrations/smime.rst:169
 msgid "Does the email address on the certificate match the email address of the agent/group composing the email?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:172
+#: ../system/integrations/smime.rst:173
 msgid "Error: \"Fingerprint already taken\""
 msgstr ""
 
-#: ../system/integrations/smime.rst:172
+#: ../system/integrations/smime.rst:173
 msgid "Are you sure you haven't added this certificate already?"
 msgstr ""
 
-#: ../system/integrations/smime.rst:175
+#: ../system/integrations/smime.rst:176
 msgid "Error: \"invalid byte sequence in UTF-8\""
 msgstr ""
 
-#: ../system/integrations/smime.rst:175
+#: ../system/integrations/smime.rst:176
 msgid "Please ensure to provide PEM formatted certificate and keys."
 msgstr ""
 
-#: ../system/integrations/smime.rst:176
+#: ../system/integrations/smime.rst:177
 msgid "Did you check if the provided file is a valid certificate or key?"
 msgstr ""
 
