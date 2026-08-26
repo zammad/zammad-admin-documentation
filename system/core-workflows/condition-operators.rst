@@ -5,7 +5,7 @@ You might know that there is a separate section for explaining
 :doc:`condition operators </misc/object-conditions/basics>`. Head over there
 to see a detailed explanation of many conditions and operators.
 
-Due to differences to other places in Zammad which are also using
+Due to differences from other places in Zammad which are also using
 conditions (e.g. triggers), you can find a dedicated description of
 operators for core workflows below.
 
@@ -114,7 +114,7 @@ system attributes (e.g. for "tags", "active").
      - Matches if date/time content is within specified period of time after
        now.
 
-.. _core-workflow-condition-pitfalls:
+.. _core-workflow-condition-examples:
 
 Multi-Select Operator Examples
 ------------------------------
@@ -122,7 +122,7 @@ Multi-Select Operator Examples
 The ``contains`` family of operators compares two sets of values: the values
 currently in the field and the values specified in the condition. The diagrams
 below show the condition values as an orange circle and the field values as a
-blue circle and the.
+blue circle.
 
 Be aware that these operators behave **differently** in other features that use
 conditions (e.g. triggers and overviews). The most confusing difference: in core
@@ -167,7 +167,7 @@ while the condition asks for the values A and B.
 .. figure:: /images/system/core-workflows/contains-operators-overlap.svg
    :alt: Venn diagram of condition values A, B and field values A, B, C. A and B are in both circles, C only in the field circle.
 
-   Field values ``A, B, C`` overlap with condition values ``A, B``.
+   Condition values ``A, B`` overlap with field values ``A, B, C``.
 
 .. list-table::
    :class: wrapping-table
@@ -197,7 +197,7 @@ while the condition asks for the values A and B.
      - ``A`` and ``B`` are present in the field.
 
 Example 2: Condition A, B, C - Field C, D
-"""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this scenario, the field holds the values C and D. The condition
 value C is present in the field, while A and B are not.
@@ -206,8 +206,8 @@ value C is present in the field, while A and B are not.
    :alt: Venn diagram of condition values A, B, C and field values C, D.
          Only C is in both circles.
 
-   Condition values ``A, B, C`` partially overlap with field
-   values ``C, D``.
+   Condition values ``A, B, C`` partially overlap with
+   field values ``C, D``.
 
 .. list-table::
    :class: wrapping-table
@@ -234,7 +234,7 @@ value C is present in the field, while A and B are not.
      - Same as ``contains not``.
    * - contains all not
      - no
-     - ``C`` is present, so the sets are not without common values.
+     - ``C`` is present in the field.
 
 This partial overlap is where the two "all" operators part ways:
 ``contains all`` fails because one condition value is missing, while
@@ -250,7 +250,7 @@ have nothing in common with the condition values A and B.
 .. figure:: /images/system/core-workflows/contains-operators-disjoint.svg
    :alt: Venn diagram of condition values A, B and field values C, D. The two circles do not overlap.
 
-   Field values ``C, D`` have no overlap with condition values ``A, B``.
+   Condition values ``A, B`` have no overlap with field values ``C, D``.
 
 .. list-table::
    :class: wrapping-table
@@ -279,7 +279,7 @@ have nothing in common with the condition values A and B.
      - yes
      - The field has no value in common with the condition.
 
-This is the only case where both "not" operators agree.
+This is the only example where ``contains all not`` matches.
 
 Example 4: Condition A, B - Field is empty
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

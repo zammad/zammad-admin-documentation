@@ -400,14 +400,14 @@ Available operators for matching:
   | Matches if **not all** given field values are selected (at least one
     is missing). This means "not all of", not "none of".
 - | **contains one not**:
-  | Matches if **none** of the given field values are selected (no
-    intersection). This means "none of", not "not all of".
+  | Matches if **none** of the given field values are selected.
+    This means "none of", not "not all of".
 
 .. note::
 
    In :doc:`core workflows </system/core-workflows>`, these operators
    have different semantics. See
-   :ref:`core workflow condition pitfalls <core-workflow-condition-pitfalls>`
+   :ref:`core workflow condition examples <core-workflow-condition-examples>`
    for details.
 
 
@@ -439,8 +439,8 @@ Available operators for matching:
   | Matches if **not all** given field values are selected (at least one
     is missing). This means "not all of", not "none of".
 - | **contains one not**
-  | Matches if **none** of the given field values are selected (no
-    intersection). This means "none of", not "not all of".
+  | Matches if **none** of the given field values are selected.
+    This means "none of", not "not all of".
 
 Additional Information and Remarks
 ----------------------------------
