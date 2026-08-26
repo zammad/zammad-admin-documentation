@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-18 15:21+0200\n"
-"PO-Revision-Date: 2026-08-20 05:36+0000\n"
+"POT-Creation-Date: 2026-08-24 17:19+0200\n"
+"PO-Revision-Date: 2026-08-26 05:05+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -937,7 +937,7 @@ msgstr "Typ"
 msgid "Pick the AI provider. Available options:"
 msgstr "Wählen Sie den KI-Anbieter aus. Verfügbare Optionen:"
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:258
+#: ../ai/provider.rst:52 ../ai/provider.rst:267
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
@@ -945,7 +945,7 @@ msgstr "Zammad AI"
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:289
+#: ../ai/provider.rst:54 ../ai/provider.rst:298
 msgid "Ollama"
 msgstr "Ollama"
 
@@ -1060,7 +1060,7 @@ msgstr ""
 "auswählen, und weisen Sie anschließend die Verbindungen zu spezifischen "
 "Funktionen zu (siehe :ref:`per-feature-provider-config`)."
 
-#: ../ai/provider.rst:112
+#: ../ai/provider.rst:120
 msgid "Embedding Model"
 msgstr "Embedding-Modell"
 
@@ -1122,11 +1122,29 @@ msgstr ""
 "Der Screenshot zeigt das Dialogfeld des KI-Anbieters mit manuell "
 "konfigurierten Embedding-Einstellungen"
 
-#: ../ai/provider.rst:119
+#: ../ai/provider.rst:114
+msgid ""
+"Changing the embedding model or the embedding dimensions triggers a full "
+"rebuild of the knowledge base index. This re-embeds every knowledge base "
+"article, which takes time and costs AI calls proportional to the size of "
+"your knowledge base. Zammad shows a confirmation dialog before the change is "
+"saved. Switching the semantic search capability to a provider that uses the "
+"same embedding model and dimensions does not trigger a rebuild."
+msgstr ""
+"Eine Änderung des Embedding-Modells oder der Embedding-Dimensionen löst eine "
+"vollständige Neuerstellung Knowledge Base-Index aus. Dabei werden alle "
+"Artikel der Knowledge Base neu vektorisiert, was Zeit in Anspruch nimmt und "
+"KI-Anfragen verursacht, deren Anzahl proportional zur Größe Ihrer Knowledge "
+"Base ist. Zammad zeigt einen Bestätigungsdialog an, bevor die Änderung "
+"gespeichert wird. Die Umstellung der semantischen Suchfunktion auf einen "
+"Anbieter, der dasselbe Embedding-Modell und dieselben Embedding-Dimensionen "
+"verwendet, löst keine Neuerstellung aus."
+
+#: ../ai/provider.rst:127
 msgid "OCR Model"
 msgstr "OCR-Modell"
 
-#: ../ai/provider.rst:115
+#: ../ai/provider.rst:123
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -1141,11 +1159,11 @@ msgstr ""
 "Nicht jeder Anbieter unterstützt die Bildtexterkennung; das Feld wird nur "
 "für Anbieter angezeigt, die diese Funktion unterstützen."
 
-#: ../ai/provider.rst:123 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:131 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:122
+#: ../ai/provider.rst:130
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
@@ -1153,22 +1171,22 @@ msgstr ""
 "Die URL oder IP-Adresse des Anbieters. Erforderlich für Ollama- und OpenAI-"
 "kompatible Anbieter."
 
-#: ../ai/provider.rst:126
+#: ../ai/provider.rst:134
 msgid "URL (Completions)"
 msgstr "URL (Completions)"
 
-#: ../ai/provider.rst:126
+#: ../ai/provider.rst:134
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 "Nur Azure AI. Der Endpunkt, über den das Modell zur Textgenerierung "
 "verfügbar ist."
 
-#: ../ai/provider.rst:130
+#: ../ai/provider.rst:138
 msgid "URL (OCR)"
 msgstr "URL (OCR)"
 
-#: ../ai/provider.rst:129
+#: ../ai/provider.rst:137
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
@@ -1176,7 +1194,7 @@ msgstr ""
 "Nur Azure AI. Der Endpunkt, über den das OCR-Modell verfügbar ist. Lassen "
 "Sie das Feld leer, um auf die URL (Completions) zurückzugreifen."
 
-#: ../ai/provider.rst:132
+#: ../ai/provider.rst:140
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -1189,11 +1207,11 @@ msgstr ""
 "angezeigt, bis er nach der ersten erfolgreichen Anfrage grün wird; die "
 "Farben entnehmen Sie bitte dem Abschnitt Status weiter unten."
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:146
 msgid "Status"
 msgstr "Status"
 
-#: ../ai/provider.rst:140
+#: ../ai/provider.rst:148
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
@@ -1201,11 +1219,11 @@ msgstr ""
 "Der farbige Indikator/Punkt am Anfang jeder Zeile zeigt an, ob der Anbieter "
 "erfolgreich genutzt wurde oder ob Probleme vorliegen:"
 
-#: ../ai/provider.rst:145
+#: ../ai/provider.rst:153
 msgid "Green"
 msgstr "Grün"
 
-#: ../ai/provider.rst:144
+#: ../ai/provider.rst:152
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
@@ -1213,11 +1231,11 @@ msgstr ""
 "Der Anbieter wurde verwendet und die letzte Anfrage war erfolgreich. Der "
 "Tooltip zeigt den Zeitstempel der letzten Statusaktualisierung an."
 
-#: ../ai/provider.rst:149
+#: ../ai/provider.rst:157
 msgid "Orange"
 msgstr "Orange"
 
-#: ../ai/provider.rst:148
+#: ../ai/provider.rst:156
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
@@ -1225,11 +1243,11 @@ msgstr ""
 "Der Anbieter ist konfiguriert, wurde jedoch noch nicht verwendet. Nach der "
 "ersten erfolgreichen Anfrage wechselt der Indikator zu grün."
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:162
 msgid "Red"
 msgstr "Rot"
 
-#: ../ai/provider.rst:152
+#: ../ai/provider.rst:160
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
@@ -1240,11 +1258,11 @@ msgstr ""
 "Der Tooltip zeigt stets den aktuellsten Fehler an, daher bezieht sich der "
 "Zeitstempel auf die zuletzt fehlgeschlagene Anfrage."
 
-#: ../ai/provider.rst:159
+#: ../ai/provider.rst:167
 msgid "Default Provider"
 msgstr "Standard Anbieter"
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:169
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -1265,7 +1283,7 @@ msgstr ""
 "Der Screenshot zeigt die Anbieterliste, wobei ein Anbieter für alle "
 "Funktionen als Standard ausgewählt ist"
 
-#: ../ai/provider.rst:170
+#: ../ai/provider.rst:178
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -1278,11 +1296,11 @@ msgstr ""
 "Standardanbieter: Wenn Sie den Anbieter löschen, der die Markierung innehat, "
 "ernennt Zammad den ältesten verbleibenden Anbieter zum Standardanbieter."
 
-#: ../ai/provider.rst:178
+#: ../ai/provider.rst:186
 msgid "Capabilities"
 msgstr "Fähigkeiten"
 
-#: ../ai/provider.rst:180
+#: ../ai/provider.rst:188
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
@@ -1292,11 +1310,11 @@ msgstr ""
 "können diese über das ︙Menü in der Spalte **Aktion** zuweisen. Die "
 "Plaketten zeigen an, welcher Anbieter die jeweilige Funktion derzeit abdeckt."
 
-#: ../ai/provider.rst:191
+#: ../ai/provider.rst:200
 msgid "Semantic search"
 msgstr "Semantische Suche"
 
-#: ../ai/provider.rst:185
+#: ../ai/provider.rst:193
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
@@ -1305,29 +1323,32 @@ msgstr ""
 "Einbettungen) um, damit die Knowledge Base relevante Antworten anhand der "
 "Bedeutung und nicht nur anhand von Schlüsselwörtern finden kann."
 
-#: ../ai/provider.rst:188
+#: ../ai/provider.rst:196
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
-"provider that supports it **and that has an Embedding Model set** to clear "
-"the warning."
+"provider that supports it and that has an Embedding Model set to clear the "
+"warning. Note that switching this assignment may trigger a full index "
+"rebuild, see **Embedding Model** above."
 msgstr ""
 "Falls kein Anbieter die semantische Suche unterstützt und eine Funktion "
 "diese benötigt, zeigt Zammad auf der entsprechenden Funktionsseite eine "
-"Warnmeldung an. Weisen Sie die semantische Suche einem Anbieter zu, der "
-"diese Funktion unterstützt und **bei dem ein Embedding-Modell konfiguriert "
-"ist**, um die Warnmeldung zu deaktivieren."
+"Warnmeldung an. Weisen Sie einem Anbieter die semantische Suche zu, der "
+"diese Funktion unterstützt und bei dem ein Embedding-Modell festgelegt ist, "
+"um die Warnmeldung zu beseitigen. Bitte beachten Sie, dass eine Änderung "
+"dieser Zuweisung einen vollständigen Neuaufbau des Indexes auslösen kann; "
+"siehe **Embedding-Modell** oben."
 
-#: ../ai/provider.rst:197
+#: ../ai/provider.rst:206
 msgid "Image text recognition"
 msgstr "Texterkennung in Bildern"
 
-#: ../ai/provider.rst:194
+#: ../ai/provider.rst:203
 msgid "The provider used to extract text from images (OCR)."
 msgstr ""
 "Der Anbieter, der zum Extrahieren von Text aus Bildern (OCR) verwendet wird."
 
-#: ../ai/provider.rst:196
+#: ../ai/provider.rst:205
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
@@ -1336,7 +1357,7 @@ msgstr ""
 "allen Anbietern vollständig deaktivieren; die Funktionen verwenden dann "
 "einfach keine OCR."
 
-#: ../ai/provider.rst:199
+#: ../ai/provider.rst:208
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1350,28 +1371,28 @@ msgstr ""
 "nicht weitervererbt: Wenn Sie den Anbieter löschen, der eine Fähigkeit "
 "abdeckt, bleibt diese dann einfach ohne Zuweisung."
 
-#: ../ai/provider.rst:206 ../manage/macros.rst:56 ../manage/templates.rst:28
+#: ../ai/provider.rst:215 ../manage/macros.rst:56 ../manage/templates.rst:28
 msgid "Actions"
 msgstr "Aktionen"
 
-#: ../ai/provider.rst:208
+#: ../ai/provider.rst:217
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Das︙Menü in der Spalte **Aktion** bietet folgende Aktionen:"
 
-#: ../ai/provider.rst:211
+#: ../ai/provider.rst:220
 msgid "Set as default"
 msgstr "Als Standard einstellen"
 
-#: ../ai/provider.rst:211
+#: ../ai/provider.rst:220
 msgid "Marks the provider as the default provider for AI features."
 msgstr "Legt den Anbieter als Standardanbieter für KI-Funktionen fest."
 
-#: ../ai/provider.rst:215
+#: ../ai/provider.rst:224
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 "Für semantische Suche verwenden / Nicht für semantische Suche verwenden"
 
-#: ../ai/provider.rst:214
+#: ../ai/provider.rst:223
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
@@ -1379,12 +1400,12 @@ msgstr ""
 "Weist einem Anbieter die Fähigkeit der semantischen Suche zu oder hebt diese "
 "Zuordnung auf. Nur für Anbieter verfügbar, die diese Funktion unterstützen."
 
-#: ../ai/provider.rst:219
+#: ../ai/provider.rst:228
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 "Für Bildtexterkennung verwenden / Nicht für Bildtexterkennung verwenden"
 
-#: ../ai/provider.rst:218
+#: ../ai/provider.rst:227
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
@@ -1392,23 +1413,23 @@ msgstr ""
 "Weist dem Anbieter die Fähigkeit zur Bildtexterkennung zu oder hebt diese "
 "Zuweisung auf."
 
-#: ../ai/provider.rst:222 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:231 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Löschen"
 
-#: ../ai/provider.rst:222
+#: ../ai/provider.rst:231
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 "Entfernt den Anbieter. Nicht verfügbar für Zammad AI in SaaS-Instanzen."
 
-#: ../ai/provider.rst:227
+#: ../ai/provider.rst:236
 msgid "Configuring Provider per Feature"
 msgstr "Anbieter pro Funktion festlegen"
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:238
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
@@ -1417,7 +1438,7 @@ msgstr ""
 "Anbieter. Für eine bessere Kontrolle können Sie für die einzelnen KI-"
 "Funktionen einen bestimmten Anbieter auswählen."
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:241
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1439,7 +1460,7 @@ msgstr ""
 "Der Screenshot zeigt das Anbieter-Dialogfenster, in dem ein Anbieter "
 "ausgewählt ist"
 
-#: ../ai/provider.rst:241
+#: ../ai/provider.rst:250
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1457,11 +1478,11 @@ msgstr ""
 "verfügen, da dies die Anbieter betrifft, die auf der Anbieter-Seite "
 "eingerichtet wurden."
 
-#: ../ai/provider.rst:249
+#: ../ai/provider.rst:258
 msgid "Additional Provider Information"
 msgstr "Weitere Anbieter-Informationen"
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:260
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
@@ -1471,7 +1492,7 @@ msgstr ""
 "weiter. Andernfalls besuchen Sie bitte :doc:`feedback-and-logs` oder wählen "
 "Sie eine der KI-Funktionen aus dem Menü auf der linken Seite aus."
 
-#: ../ai/provider.rst:260
+#: ../ai/provider.rst:269
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
@@ -1480,17 +1501,17 @@ msgstr ""
 "KI-Funktionen von Zammad zu beginnen. Dies bietet mehrere wesentliche "
 "Vorteile:"
 
-#: ../ai/provider.rst:263
+#: ../ai/provider.rst:272
 msgid "You don't have to set up an AI system or its configuration."
 msgstr ""
 "Sie müssen weder ein KI-System einrichten noch dessen Konfiguration "
 "vornehmen."
 
-#: ../ai/provider.rst:264
+#: ../ai/provider.rst:273
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr "Gehostet in der EU und DSGVO-konform."
 
-#: ../ai/provider.rst:265
+#: ../ai/provider.rst:274
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
@@ -1498,23 +1519,23 @@ msgstr ""
 "Für SaaS-Kunden ist in Zammad keine Konfiguration erforderlich, für Kunden "
 "mit eigenem Hosting lediglich ein API-Schlüssel."
 
-#: ../ai/provider.rst:267
+#: ../ai/provider.rst:276
 msgid "Requests with sensitive information aren't used for training."
 msgstr ""
 "Anfragen mit sensiblen Informationen werden nicht für Trainingszwecke "
 "verwendet."
 
-#: ../ai/provider.rst:268
+#: ../ai/provider.rst:277
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 "Eine Anlaufstelle für Unterstützung, wenn etwas nicht wie erwartet "
 "funktioniert."
 
-#: ../ai/provider.rst:280
+#: ../ai/provider.rst:289
 msgid "SaaS Customers"
 msgstr "SaaS-Kunden"
 
-#: ../ai/provider.rst:272
+#: ../ai/provider.rst:281
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1532,7 +1553,7 @@ msgstr ""
 "Guthaben an KI-Anfragen oder aktivieren Sie die Benachrichtigung, die Sie "
 "bei wenigen verbleibenden Anfragen informiert."
 
-#: ../ai/provider.rst:279
+#: ../ai/provider.rst:288
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
@@ -1540,11 +1561,11 @@ msgstr ""
 "Bei SaaS wird der Zammad AI-Anbieter von der Plattform bereitgestellt und "
 "Sie können ihn weder löschen noch seinen Typ ändern."
 
-#: ../ai/provider.rst:286
+#: ../ai/provider.rst:295
 msgid "Self-Hosted Customers"
 msgstr "Self-Hosted Kunden"
 
-#: ../ai/provider.rst:283
+#: ../ai/provider.rst:292
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1557,7 +1578,7 @@ msgstr ""
 "Sie einen neuen Anbieter vom Typ *Zammad AI* hinzu und speichern den "
 "Schlüssel."
 
-#: ../ai/provider.rst:291
+#: ../ai/provider.rst:300
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
@@ -1568,7 +1589,7 @@ msgstr ""
 "Dritte übertragen werden. Dieser Ansatz ist jedoch nur dann sinnvoll, wenn "
 "Sie über eine leistungsstarke GPU in Ihrem System verfügen!"
 
-#: ../ai/provider.rst:295
+#: ../ai/provider.rst:304
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -6556,7 +6577,7 @@ msgstr ""
 "G-Suite-Benutzer müssen Ihren Administrator kontaktieren, um Alias-Adressen "
 "in den Gmail-Einstellungen hinzufügen zu können."
 
-#: ../channels/google/basic-setup.rst:2 ../guides/start-with-zammad.rst:47
+#: ../channels/google/basic-setup.rst:2 ../guides/start-with-zammad.rst:46
 msgid "Basic Setup"
 msgstr "Grundeinrichtung"
 
@@ -10314,7 +10335,7 @@ msgid ""
 "Zammad is a ticketing and helpdesk system that helps you manage "
 "communication with customers and internal departments. Even without advanced "
 "configuration, Zammad helps you work in a much more structured and "
-"transparent way, and helps you avoid duplicate work."
+"transparent way and helps you avoid duplicate work."
 msgstr ""
 "Zammad ist ein Ticket- und Helpdesk-System, das Ihnen dabei hilft, mit "
 "Kunden und internen Abteilungen zu kommunizieren. Selbst ohne aufwendige "
@@ -10337,7 +10358,7 @@ msgstr ""
 msgid ""
 "A ticket is a central entity which holds all information about a customer "
 "request in one place. A ticket is created automatically when someone sends a "
-"message, or manually by an agent, e.g. when a customer calls. A ticket "
+"message or manually by an agent, e.g. when a customer calls. A ticket "
 "includes all conversation parts as articles."
 msgstr ""
 "Ein Ticket ist eine zentrale Einheit, in der alle Informationen zu einer "
@@ -10363,18 +10384,17 @@ msgstr ""
 msgid ""
 "Your colleagues who work on tickets are called agents in Zammad. Zammad "
 "ships with three roles: **Admin**, **Agent**, and **Customer**. The first "
-"two are for internal users. When a new ticket gets created and the email "
-"address is not yet known to Zammad, Zammad automatically creates a user with "
-"the **Customer** role."
+"two are for internal users. If the email address of a new ticket is not yet "
+"known to Zammad, a user with the **Customer** role is created automatically."
 msgstr ""
-"Ihre Kollegen, die an Tickets arbeiten, werden in Zammad als Agenten "
-"bezeichnet. Zammad verfügt standardmäßig über drei Rollen: "
-"**Administrator**, **Agent** und **Kunde“**. Die ersten beiden sind für "
-"interne Benutzer vorgesehen. Wenn ein neues Ticket erstellt wird und die E-"
-"Mail-Adresse Zammad noch nicht bekannt ist, legt Zammad automatisch einen "
-"Benutzer mit der Rolle **Kunde** an."
+"Ihre Kollegen, die an Tickets arbeiten, werden in Zammad als \"Agenten\" "
+"bezeichnet. Zammad wird mit drei Rollen ausgeliefert: **Administrator**, "
+"**Agent** und **Kunde**. Die ersten beiden sind für interne Benutzer "
+"vorgesehen. Ist die E-Mail-Adresse bei Erstellung eines neuen Tickets in "
+"Zammad noch nicht bekannt, wird automatisch ein Benutzer mit der Rolle "
+"**Kunde** angelegt."
 
-#: ../guides/start-with-zammad.rst:40
+#: ../guides/start-with-zammad.rst:39
 msgid ""
 "The diagram below shows how users, roles and groups relate. Don't worry if "
 "it isn't fully clear yet; the next sections walk through each piece."
@@ -10390,7 +10410,7 @@ msgstr ""
 "Diagramm über die Beziehungen zwischen Benutzern, Rollen und Gruppen in "
 "Zammad"
 
-#: ../guides/start-with-zammad.rst:49
+#: ../guides/start-with-zammad.rst:48
 msgid ""
 "This guide assumes your Zammad is not yet configured. If the getting-started "
 "wizard appears, provide as much information as you like or skip it and "
@@ -10401,11 +10421,11 @@ msgstr ""
 "viele Informationen ein, wie Sie möchten, oder überspringen Sie diesen "
 "Schritt und nehmen Sie die Konfiguration später vor."
 
-#: ../guides/start-with-zammad.rst:54
+#: ../guides/start-with-zammad.rst:53
 msgid "Organization Details"
 msgstr "Angaben zur Organisation"
 
-#: ../guides/start-with-zammad.rst:56
+#: ../guides/start-with-zammad.rst:55
 msgid ""
 "The basic customization step in Zammad is to add your organization name and "
 "your logo. If you haven't already set this in the getting-started wizard, "
@@ -10421,11 +10441,11 @@ msgstr ""
 "Angaben anzupassen. Weitere Informationen finden Sie auf der :doc:`Branding-"
 "Seite </settings/branding>`."
 
-#: ../guides/start-with-zammad.rst:63
+#: ../guides/start-with-zammad.rst:62
 msgid "Create Groups"
 msgstr "Gruppen erstellen"
 
-#: ../guides/start-with-zammad.rst:65
+#: ../guides/start-with-zammad.rst:64
 msgid ""
 "A group in Zammad typically represents a department of an organization. You "
 "can define which agents have access to which group and set permissions per "
@@ -10444,11 +10464,11 @@ msgstr ""
 "Gruppen entsprechend fest. Es ist auch völlig in Ordnung, bei einer einzigen "
 "Gruppe zu bleiben."
 
-#: ../guides/start-with-zammad.rst:73
+#: ../guides/start-with-zammad.rst:72
 msgid "Create or Modify Roles"
 msgstr "Rollen anlegen oder ändern"
 
-#: ../guides/start-with-zammad.rst:75
+#: ../guides/start-with-zammad.rst:74
 msgid ""
 "Zammad comes with three pre-defined :doc:`roles </manage/roles/index>` for "
 "admins, agents and customers. A user can have one or more roles assigned. A "
@@ -10463,7 +10483,7 @@ msgstr ""
 "werden kann) sowie die Berechtigungen für einzelne Gruppen fest (Lesen, "
 "Erstellen, Ändern, Übersicht, Voll)."
 
-#: ../guides/start-with-zammad.rst:81
+#: ../guides/start-with-zammad.rst:80
 msgid ""
 "These three roles cover most standard scenarios. Common examples for "
 "additional roles are:"
@@ -10471,19 +10491,19 @@ msgstr ""
 "Diese drei Rollen decken die meisten Standardszenarien ab. Gängige "
 "Anwendungsfälle für zusätzliche Rollen sind:"
 
-#: ../guides/start-with-zammad.rst:84
+#: ../guides/start-with-zammad.rst:83
 msgid "Team leader"
 msgstr "Teamleiter"
 
-#: ../guides/start-with-zammad.rst:85
+#: ../guides/start-with-zammad.rst:84
 msgid "Reporting person"
 msgstr "Reporting-Abteilung"
 
-#: ../guides/start-with-zammad.rst:86
+#: ../guides/start-with-zammad.rst:85
 msgid "Knowledge base editor"
 msgstr "Knowledge Base Editor"
 
-#: ../guides/start-with-zammad.rst:88
+#: ../guides/start-with-zammad.rst:87
 msgid ""
 "You can also assign group permissions directly to a specific user. If more "
 "than one person needs the same permissions, prefer using a role and "
@@ -10494,31 +10514,31 @@ msgstr ""
 "Sie vorzugsweise eine Rolle verwenden und diese den Benutzern zuweisen. In "
 "jedem Fall sollten Sie sich an eine der beiden Methoden halten."
 
-#: ../guides/start-with-zammad.rst:93
+#: ../guides/start-with-zammad.rst:92
 msgid "Connect Email Accounts to Zammad"
 msgstr "E-Mail-Konten mit Zammad verbinden"
 
-#: ../guides/start-with-zammad.rst:95
-msgid "Depending on your email system, follow the matching guide:"
-msgstr "Befolgen Sie je nach Ihrem E-Mail-System die entsprechende Anleitung:"
+#: ../guides/start-with-zammad.rst:94
+msgid "Please follow the setup guide for your email system:"
+msgstr "Bitte befolgen Sie die Einrichtungsanleitung für Ihr E-Mail-System:"
 
-#: ../guides/start-with-zammad.rst:97
+#: ../guides/start-with-zammad.rst:96
 msgid ":doc:`Standard IMAP/SMTP </channels/email/index>`"
 msgstr ":doc:`Standard IMAP/SMTP </channels/email/index>`"
 
-#: ../guides/start-with-zammad.rst:98
+#: ../guides/start-with-zammad.rst:97
 msgid ":doc:`M365 Graph </channels/microsoft365-graph/index>`"
 msgstr ":doc:`M365 Graph </channels/microsoft365-graph/index>`"
 
-#: ../guides/start-with-zammad.rst:99
+#: ../guides/start-with-zammad.rst:98
 msgid ":doc:`M365 IMAP </channels/microsoft365/index>`"
 msgstr ":doc:`M365 IMAP </channels/microsoft365/index>`"
 
-#: ../guides/start-with-zammad.rst:100
+#: ../guides/start-with-zammad.rst:99
 msgid ":doc:`Google Email </channels/google/index>`"
 msgstr ":doc:`Google Email </channels/google/index>`"
 
-#: ../guides/start-with-zammad.rst:102
+#: ../guides/start-with-zammad.rst:101
 msgid ""
 "After adding an email channel, open the channel and go to the **Signatures** "
 "tab to create one or more signatures. You can use one signature for many "
@@ -10533,11 +10553,11 @@ msgstr ""
 "erstellen. Die Zuordnung der Signaturen erfolgt in den Gruppeneinstellungen; "
 "weitere Informationen finden Sie im nächsten Abschnitt."
 
-#: ../guides/start-with-zammad.rst:109
+#: ../guides/start-with-zammad.rst:108
 msgid "Configure Groups"
 msgstr "Gruppen konfigurieren"
 
-#: ../guides/start-with-zammad.rst:111
+#: ../guides/start-with-zammad.rst:110
 msgid ""
 "After setting up an email-based channel, revisit your groups. Go to *Manage "
 "> Groups*, open each group, set an outbound email address and select the "
@@ -10548,11 +10568,11 @@ msgstr ""
 "jede Gruppe, legen Sie eine Absender-E-Mail-Adresse fest und wählen Sie die "
 "zu verwendende Signatur aus."
 
-#: ../guides/start-with-zammad.rst:116
+#: ../guides/start-with-zammad.rst:115
 msgid "Create Agent Accounts"
 msgstr "Konten für Agenten erstellen"
 
-#: ../guides/start-with-zammad.rst:118
+#: ../guides/start-with-zammad.rst:117
 msgid ""
 "Create a :doc:`user </manage/users/index>` for each of your agents from "
 "the :doc:`First Steps </misc/first-steps>` section: select **Dashboard** in "
@@ -10569,11 +10589,11 @@ msgstr ""
 "richtige Rolle zu. Bei dieser Aktion werden Einladungs-E-Mails an Ihre "
 "Agenten versendet."
 
-#: ../guides/start-with-zammad.rst:126
+#: ../guides/start-with-zammad.rst:125
 msgid "Further Steps"
 msgstr "Weitere Schritte"
 
-#: ../guides/start-with-zammad.rst:128
+#: ../guides/start-with-zammad.rst:127
 msgid ""
 "At this stage, you are ready to use Zammad in production. To customize it "
 "further, follow the :doc:`additional customization guide <additional-"
@@ -13037,14 +13057,14 @@ msgid ""
 "This selection refers to the setting in the user preferences (*Avatar > "
 "Profile > Out of office*). If this option is checked, this overview is only "
 "displayed for users who have been set as a substitution. See :user-docs:`Out "
-"of Office section (user documentation) </extras/profile-and-settings.html>` "
-"for more details."
+"of Office section (user documentation) </extras/user-menu-profile-"
+"settings.html>` for more details."
 msgstr ""
 "Diese Auswahl bezieht sich auf die Einstellung in den Benutzereinstellungen "
 "(*Avatar > Profil > Abwesenheit*). Wenn diese Option gesetzt ist, wird diese "
 "Übersicht nur für Benutzer angezeigt, die als Vertretung hinterlegt wurden. "
-"Siehe :user-docs:`Abwesenheit (Benutzer-Dokumentation) </extras/profile-and-"
-"settings.html>` für weitere Details."
+"Siehe :user-docs:`Abwesenheit (Benutzer-Dokumentation) </extras/user-menu-"
+"profile-settings.html>` für weitere Details."
 
 #: ../manage/overviews.rst:52
 msgid ""
@@ -13199,10 +13219,10 @@ msgstr ""
 #: ../manage/overviews.rst:113
 msgid ""
 "You can learn more about this setting :user-docs:`in the user documentation "
-"</extras/profile-and-settings.html#user-profile-settings>`."
+"</extras/user-menu-profile-settings.html#user-profile-settings>`."
 msgstr ""
 "Sie können mehr über diese Einstellung :user-docs:`in der Benutzer "
-"Dokumentation </extras/profile-and-settings.html#user-profile-settings>` "
+"Dokumentation </extras/user-menu-profile-settings.html#profile-settings>` "
 "erfahren."
 
 #: ../manage/public-links.rst:2
@@ -15579,13 +15599,13 @@ msgid ""
 "ticket finally escalates. In addition to the built-in notifications, Zammad "
 "will also warn agents by sending out an email. This depends on the "
 "notification configuration of your agents (which can be configured in "
-"the :user-docs:`profile settings </extras/profile-and-settings.html>`)."
+"the :user-docs:`profile settings </extras/user-menu-profile-settings.html>`)."
 msgstr ""
 "Zammad warnt die Agenten etwa 15 Minuten vor der Eskalation und wenn das "
 "Ticket schließlich eskaliert. Zusätzlich zu den eingebauten "
 "Benachrichtigungen wird Zammad die Agenten auch per E-Mail warnen. Dies "
-"hängt von der Benachrichtigungskonfiguration Ihrer Agenten ab (die in "
-"den :user-docs:`Profileinstellungen </extras/profile-and-settings.html>` "
+"hängt von der Benachrichtigungskonfiguration Ihrer Agenten ab (die in den "
+":user-docs:`Profileinstellungen </extras/user-menu-profile-settings.html>` "
 "konfiguriert werden kann)."
 
 #: ../manage/slas.rst:161
@@ -15621,15 +15641,15 @@ msgstr ""
 #: ../manage/tags.rst:8
 msgid ""
 "All agents can tag tickets. You can find further information about tagging "
-"of tickets in our :user-docs:`user documentation </basics/service-ticket/"
-"settings/tags.html>`. It is even possible to use an AI agent for ticket "
+"of tickets in our :user-docs:`user documentation </basics/ticket-"
+"basics.html#tags>`. It is even possible to use an AI agent for ticket "
 "tagging. Check out the :doc:`AI Agents section </ai/ai-agents>` for more "
 "information."
 msgstr ""
 "Alle Agenten können Tickets taggen. Weitere Informationen zum Tagging von "
 "Tickets finden Sie in unsere :user-docs:`Benutzer-Dokumentation </basics/"
-"service-ticket/settings/tags.html>`. Es ist sogar möglich, einen KI-Agenten "
-"für das Tagging von Tickets einzusetzen. Weitere Informationen finden Sie im "
+"ticket-basics.html#tags>`. Es ist sogar möglich, einen KI-Agenten für das "
+"Tagging von Tickets einzusetzen. Weitere Informationen finden Sie im "
 "Abschnitt :doc:`KI-Agenten </ai/ai-agents>`."
 
 #: ../manage/tags.rst:15
@@ -18165,8 +18185,8 @@ msgid ""
 "Create a personal access token in the account you want to use to create the "
 "checklists in the tickets. Make sure the account has appropriate "
 "permissions. To create the token, go to the :user-docs:`profile settings "
-"(user docs) </extras/profile-and-settings.html>` by clicking on the avatar "
-"image (either image or initials) on the left bottom corner and select "
+"(user docs) </extras/user-menu-profile-settings.html>` by clicking on the "
+"avatar image (either image or initials) on the left bottom corner and select "
 "**Token Access**. Make sure that the token has ``ticket.agent`` permission "
 "and the user is able to change tickets in the groups you want to add the "
 "checklist to tickets."
@@ -18175,12 +18195,12 @@ msgstr ""
 "Erstellung der Checklisten in den Tickets verwenden möchten. Stellen Sie "
 "sicher, dass das Konto über die entsprechenden Berechtigungen verfügt. Um "
 "das Token zu erstellen, gehen Sie zu den :user-docs:`Profileinstellungen "
-"(Benutzerdokumentation) </extras/profile-and-settings.html>`, indem Sie auf "
-"das Avatarbild (entweder Bild oder Initialen) in der linken unteren Ecke "
-"klicken und **Token-Zugriff** wählen. Stellen Sie sicher, dass das Token "
-"über die Berechtigung ``ticket.agent`` verfügt und der Benutzer in der Lage "
-"ist, Tickets in der Gruppe zu ändern, zu deren Tickets Sie eine Checkliste "
-"hinzufügen wollen."
+"(Benutzerdokumentation) </extras/user-menu-profile-settings.html>`, indem "
+"Sie auf das Avatarbild (entweder Bild oder Initialen) in der linken unteren "
+"Ecke klicken und **Token-Zugriff** wählen. Stellen Sie sicher, dass das "
+"Token über die Berechtigung ``ticket.agent`` verfügt und der Benutzer in der "
+"Lage ist, Tickets in der Gruppe zu ändern, zu deren Tickets Sie eine "
+"Checkliste hinzufügen wollen."
 
 #: ../manage/webhook/examples/add-checklist-to-ticket.rst:20
 msgid "Add Webhook"
@@ -18771,16 +18791,16 @@ msgid ""
 "a suitable notification will be posted in the configured Mattermost Channel. "
 "The notification will contain the link to the ticket, updated data "
 "and :ref:`content of the last article <mattermost-removing-article-body>`. "
-"It will also be :user-docs:`color coded </basics/service-ticket/settings/"
-"state.html#state-colors>` according to its latest state."
+"It will also be :user-docs:`color coded </basics/ticket-basics.html#state>` "
+"according to its latest state."
 msgstr ""
 "Von nun an wird jedes Mal, wenn ein Ticket in Ihrem Zammad-System erstellt "
 "oder aktualisiert wird, eine entsprechende Benachrichtigung in dem "
 "konfigurierten Mattermost-Kanal gepostet. Die Benachrichtigung enthält den "
 "Link zum Ticket, die aktualisierten Daten und den :ref:`Inhalt des letzten "
 "Artikels <mattermost-removing-article-body>`. Außerdem wird sie entsprechend "
-"ihrem letzten Status :user-docs:`farblich gekennzeichnet</basics/service-"
-"ticket/settings/state.html#state-colors>`."
+"ihrem letzten Status :user-docs:`farblich gekennzeichnet </basics/ticket-"
+"basics.html#state>`."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:117
 msgid "Removing Article Content from the Mattermost Notification"
@@ -19066,16 +19086,16 @@ msgid ""
 "a suitable notification will be posted in the configured Teams Channel. The "
 "notification will contain the link to the ticket, updated data "
 "and :ref:`content of the last article <teams-removing-article-body>`. It "
-"will also also be :user-docs:`color coded </basics/service-ticket/settings/"
-"state.html#state-colors>` according to its latest state."
+"will also also be :user-docs:`color coded </basics/ticket-"
+"basics.html#state>` according to its latest state."
 msgstr ""
 "Von nun an wird jedes Mal, wenn ein Ticket in Ihrem Zammad-System erstellt "
 "oder aktualisiert wird, eine entsprechende Benachrichtigung in dem "
 "konfigurierten Teams-Kanal gepostet. Die Benachrichtigung enthält den Link "
 "zum Ticket, die aktualisierten Daten und den :ref:`Inhalt des letzten "
 "Artikels <teams-removing-article-body>`. Außerdem wird sie entsprechend "
-"ihrem letzten Status :user-docs:`farblich gekennzeichnet</basics/service-"
-"ticket/settings/state.html#state-colors>`."
+"ihrem letzten Status :user-docs:`farblich gekennzeichnet </basics/ticket-"
+"basics.html#state>`."
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:131
 msgid "Removing Article Content from the Teams Notification"
@@ -19486,16 +19506,16 @@ msgid ""
 "a suitable notification will be posted in the configured Rocket Chat "
 "Channel. The notification will contain the link to the ticket, updated data "
 "and :ref:`content of the last article <rocket-chat-removing-article-body>`. "
-"It will also be :user-docs:`color coded </basics/service-ticket/settings/"
-"state.html#state-colors>` according to its latest state."
+"It will also be :user-docs:`color coded </basics/ticket-basics.html#state>` "
+"according to its latest state."
 msgstr ""
 "Von nun an wird jedes Mal, wenn ein Ticket in Ihrem Zammad-System erstellt "
 "oder aktualisiert wird, eine entsprechende Benachrichtigung in dem "
 "konfigurierten Rocket Chat-Kanal gepostet. Die Benachrichtigung enthält den "
 "Link zum Ticket, die aktualisierten Daten und den :ref:`Inhalt des letzten "
 "Artikels <rocket-chat-removing-article-body>`. Außerdem wird sie "
-"entsprechend ihrem letzten Status :user-docs:`farblich gekennzeichnet</"
-"basics/service-ticket/settings/state.html#state-colors>`."
+"entsprechend ihrem letzten Status :user-docs:`farblich gekennzeichnet </"
+"basics/ticket-basics.html#state>`."
 
 #: ../manage/webhook/examples/rocket-chat-notifications.rst:113
 msgid "Removing Article Content from the Rocket Chat Notification"
@@ -19683,8 +19703,7 @@ msgid ""
 "configured Slack Channel. The notification will contain the link to the "
 "ticket, escalation information and :ref:`content of the last article <slack-"
 "removing-article-body>`. It will also be :user-docs:`color coded </basics/"
-"service-ticket/settings/state.html#state-colors>` according to its latest "
-"state."
+"ticket-basics.html#state>` according to its latest state."
 msgstr ""
 "Von nun an wird jedes Mal, wenn ein Ticket in Ihrem Zammad-System eskaliert "
 "ist oder eine Eskalationswarnung erreicht hat, eine entsprechende "
@@ -19692,7 +19711,7 @@ msgstr ""
 "Benachrichtigung enthält den Link zum Ticket, Eskalationsinformationen und "
 "den :ref:`Inhalt des letzten Artikels <slack-removing-article-body>`. Sie "
 "wird auch entsprechend dem letzten Status :user-docs:`farblich "
-"gekennzeichnet </basics/service-ticket/settings/state.html#state-colors>`."
+"gekennzeichnet </basics/ticket-basics.html#state>`."
 
 #: ../manage/webhook/examples/slack-notifications.rst:126
 msgid "Removing Article Content from the Slack Notification"
@@ -21699,10 +21718,10 @@ msgstr "SLA-Verstöße (vor und nach der Frist)"
 #: ../misc/system-notifications.rst:36
 msgid ""
 "Agents can change their notification settings in their :user-docs:`user "
-"profile </extras/profile-and-settings.html>`."
+"profile </extras/user-menu-profile-settings.html>`."
 msgstr ""
 "Agenten können ihre Benachrichtigungseinstellungen in ihrem :user-"
-"docs:`Benutzerprofil </extras/profile-and-settings.html>` ändern."
+"docs:`Benutzerprofil </extras/user-menu-profile-settings.html>` ändern."
 
 #: ../misc/system-notifications.rst:39
 msgid ""
@@ -22688,12 +22707,10 @@ msgid "``#{config.organization}``"
 msgstr "``#{config.organization}``"
 
 #: ../misc/variables/config.rst:1
-msgid ""
-"``Zammad GmbH`` value set in `Branding <https://admin-docs.zammad.org/en/"
-"latest/settings-branding.html>`_"
+msgid "``Zammad GmbH`` value set in :doc:`Branding </settings/branding>`"
 msgstr ""
-"``Zammad GmbH`` Wert wird unter `Branding <https://admin-docs.zammad.org/en/"
-"latest/settings-branding.html>`_ gesetzt"
+"Der Wert ``Zammad GmbH`` wird unter :doc:`Branding </settings/branding>` "
+"festgelegt"
 
 #: ../misc/variables/config.rst:1
 msgid "Config > Product Name"
@@ -22704,12 +22721,10 @@ msgid "``#{config.product_name}``"
 msgstr "``#{config.product_name}``"
 
 #: ../misc/variables/config.rst:1
-msgid ""
-"``Helpdesk`` value set in `Branding <https://admin-docs.zammad.org/en/latest/"
-"settings-branding.html>`_"
+msgid "``Helpdesk`` value set in :doc:`Branding </settings/branding>`"
 msgstr ""
-"``Helpdesk`` Wert wird unter `Branding <https://admin-docs.zammad.org/en/"
-"latest/settings-branding.html>`_ gesetzt"
+"Der Wert ``Helpdesk`` wird unter :doc:`Branding </settings/branding>` "
+"festgelegt"
 
 #: ../misc/variables/config.rst:1
 msgid "Config > SystemID"
@@ -23576,13 +23591,13 @@ msgstr "``#{ticket.last_contact_customer_at}``"
 
 #: ../misc/variables/ticket.rst:1
 msgid ""
-"``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please note "
-"`Ticket last contact behavior Settings <https://admin-docs.zammad.org/en/"
-"latest/settings-ticket.html>`_ for this)"
+"``2019-10-07 16:25:00 UTC`` or empty if not applicable yet (Please "
+"note :doc:`Ticket last contact behavior Settings </settings/ticket>` for "
+"this)"
 msgstr ""
 "``2019-10-07 16:25:00 UTC`` oder leer, wenn noch nicht zutreffend (bitte "
-"beachten Sie hierzu `Ticketeinstellung letzter Kontakt <https://admin-"
-"docs.zammad.org/en/latest/settings-ticket.html>`_)"
+"beachten Sie hierzu :doc:`Ticketeinstellung \"letzter Kontakt\" </settings/"
+"ticket>`)"
 
 #: ../misc/variables/ticket.rst:1
 msgid "Ticket > Last contact"
@@ -24899,11 +24914,12 @@ msgstr ""
 msgid ""
 "This means that the user has to manually link authentication providers to "
 "their accounts (for more about this :user-docs:`consult the user "
-"documentation </extras/profile-and-settings.html>`)."
+"documentation </extras/user-menu-profile-settings.html>`)."
 msgstr ""
 "Dies bedeutet, dass der Benutzer die Authentifizierungsanbieter manuell mit "
 "seinen Konten verknüpfen muss (weitere Informationen hierzu finden Sie in "
-"der :user-docs:`Benutzerdokumentation </extras/profile-and-settings.html>`)."
+"der :user-docs:`Benutzerdokumentation </extras/user-menu-profile-"
+"settings.html>`)."
 
 #: ../settings/security/third-party.rst:47
 msgid ""
@@ -25397,11 +25413,6 @@ msgid "Microsoft"
 msgstr "Microsoft"
 
 #: ../settings/security/third-party/microsoft.rst:4
-#, fuzzy
-#| msgid ""
-#| "Zammad's Microsoft connection allows your users with Microsoft accounts "
-#| "to login. This works for Azure users as well and can be an alternative "
-#| "to :doc:`/system/integrations/ldap/index`."
 msgid ""
 "Zammad's Microsoft connection allows your users with Microsoft accounts to "
 "log in. This works for Entra ID users as well and can be an alternative "
@@ -25410,32 +25421,29 @@ msgid ""
 "**Authentication via Microsoft** section. To access it, the permission "
 "``admin.security`` is required."
 msgstr ""
-"Die Microsoft-Andingung von Zammad ermöglicht Ihren Benutzern die Anmeldung "
-"mit einem Microsoft-Konto. Dies funktioniert auch für Azure-Benutzer und "
-"kann eine Alternative zu :doc:`/system/integrations/ldap/index` sein."
+"Die Microsoft-Anbindung von Zammad ermöglicht es Ihren Benutzern mit "
+"Microsoft-Konten, sich anzumelden. Dies funktioniert auch für Entra-ID-"
+"Benutzer und kann eine Alternative zu :doc:`/system/integrations/ldap/index` "
+"darstellen. Die Konfiguration in Zammad finden Sie unter *Einstellungen > "
+"Sicherheit > Anwendungen von Drittanbietern* im Abschnitt **Anmeldung über "
+"Microsoft**. Für den Zugriff ist die Berechtigung ``admin.security`` "
+"erforderlich."
 
 #: ../settings/security/third-party/microsoft.rst:13
-#, fuzzy
-#| msgid ""
-#| "This documentation part does not cover our :doc:`📧 Microsoft 365 email "
-#| "channel </channels/microsoft365/index>`."
 msgid ""
 "This page does not cover our :doc:`📧 Microsoft 365 email channel </channels/"
 "microsoft365/index>`."
 msgstr ""
-"Dieser Teil der Dokumentation deckt nicht unseren :doc:`📧 Microsoft 365-"
-"Kanal </channels/microsoft365/index>` ab."
+"Diese Seite behandelt nicht den :doc:`📧 Microsoft 365 E-Mail-Kanal </"
+"channels/microsoft365/index>`."
 
 #: ../settings/security/third-party/microsoft.rst:None
-#, fuzzy
-#| msgid "Screenshot showing Microsoft login button on Zammad login screen."
 msgid "Screenshot shows Microsoft login button on Zammad login screen."
-msgstr "Screenshot der Microsoft-Anmeldung auf dem Anmeldedialog von Zammad."
+msgstr ""
+"Der Screenshot zeigt die Microsoft-Anmeldeschaltfläche auf dem Zammad-"
+"Anmeldebildschirm."
 
 #: ../settings/security/third-party/microsoft.rst:23
-#, fuzzy
-#| msgid ""
-#| "Please note that Zammad only supports these account types (app dependent):"
 msgid ""
 "Please note that Zammad only supports these account types (app-dependent):"
 msgstr ""
@@ -25447,12 +25455,16 @@ msgid ""
 "**Single tenant only**: restrict sign-in to users (or guests) in your own "
 "tenant."
 msgstr ""
+"**Single tenant only**: Anmeldung beschränkt auf Benutzer (oder Gäste) in "
+"Ihrem eigenen Tenant."
 
 #: ../settings/security/third-party/microsoft.rst:27
 msgid ""
 "**Multiple Entra ID tenants**: allow users in any Microsoft Entra tenant to "
 "sign in."
 msgstr ""
+"**Multiple Entra ID tenants**: Ermöglicht Benutzern in beliebigen Microsoft "
+"Entra-Tenants die Anmeldung."
 
 #: ../settings/security/third-party/microsoft.rst:29
 msgid ""
@@ -25460,34 +25472,26 @@ msgid ""
 "Microsoft Entra tenant, as well as users with personal Microsoft accounts "
 "(e.g. Skype, Xbox), to sign in."
 msgstr ""
+"**Any Entra ID tenant + personal Microsoft accounts**: Ermöglicht Benutzern "
+"in beliebigen Microsoft Entra-Tenants sowie Benutzern mit persönlichen "
+"Microsoft-Konten (z.B. Skype, Xbox) die Anmeldung."
 
 #: ../settings/security/third-party/microsoft.rst:34
-#, fuzzy
-#| msgid "Step 1 - Register a Microsoft App for Zammad"
 msgid "Register a Microsoft App in Entra ID"
-msgstr "Schritt 1 - Registrieren einer Microsoft-App für Zammad"
+msgstr "Eine Microsoft-App in Entra ID registrieren"
 
 #: ../settings/security/third-party/microsoft.rst:36
-#, fuzzy
-#| msgid ""
-#| "Login to the `Microsoft Azure Portal <https://portal.azure.com/>`_ and "
-#| "navigate to App registrations to create a new app. Provide the requested "
-#| "information as follows and register your app."
 msgid ""
 "Sign in to the `Microsoft Entra admin center <https://entra.microsoft.com/"
 ">`_, go to **App registrations** and create a new app. Provide the requested "
 "information to register your app."
 msgstr ""
-"Melden Sie sich im `Microsoft Azure Portal <https://portal.azure.com/>`_ an "
-"und navigieren Sie zu App-Registrierungen, um eine neue App zu erstellen. "
-"Geben Sie die erforderlichen Informationen wie folgt an und registrieren Sie "
-"Ihre App."
+"Melden Sie sich beim `Microsoft Entra Admin Center <https://"
+"entra.microsoft.com/>`_ an, rufen Sie **App registrations** auf und "
+"erstellen Sie eine neue App. Geben Sie die erforderlichen Informationen ein, "
+"um Ihre App zu registrieren."
 
 #: ../settings/security/third-party/microsoft.rst:41
-#, fuzzy
-#| msgid ""
-#| "Any meaningful name fitting, this name will be displayed to users trying "
-#| "to authenticate with this app."
 msgid ""
 "Any meaningful name fits, as it is displayed to users trying to authenticate "
 "with this app."
@@ -25500,26 +25504,20 @@ msgid "Supported account types"
 msgstr "Unterstützte Konten-Typen"
 
 #: ../settings/security/third-party/microsoft.rst:45
-#, fuzzy
-#| msgid ""
-#| "The correct account type depends on your use case. If you want to use the "
-#| "authentication internal only, choose the first option. If you're unsure, "
-#| "use the \"Help me choose...\" link."
 msgid ""
 "Choose one of the account types listed above. The correct account type "
 "depends on your use case. If you only want to use authentication internally, "
 "choose the first option. If you're unsure, use the \"Help me choose...\" "
 "link."
 msgstr ""
-"Der richtige Kontotyp hängt von Ihrem Anwendungsfall ab. Wenn Sie nur die "
-"interne Authentifizierung verwenden möchten, wählen Sie die erste Option. "
-"Wenn Sie unsicher sind, verwenden Sie den Link \"Hilfe bei der Auswahl...\"."
+"Wählen Sie einen der oben aufgeführten Kontotypen aus. Der richtige Kontotyp "
+"hängt von Ihrem Anwendungsfall ab. Wenn Sie nur die interne "
+"Authentifizierung verwenden möchten, wählen Sie die erste Option. Wenn Sie "
+"unsicher sind, verwenden Sie den Link \"Help me choose...\"."
 
 #: ../settings/security/third-party/microsoft.rst:56
-#, fuzzy
-#| msgid "Redirect URI (optional):"
 msgid "Redirect URI (optional)"
-msgstr "Redirect URI (optional):"
+msgstr "Redirect URI (optional)"
 
 #: ../settings/security/third-party/microsoft.rst:51
 msgid ""
@@ -25527,19 +25525,18 @@ msgid ""
 "and copy it from Zammad's read-only **Your callback URL** field. Paste it "
 "into the redirect URI field in Microsoft's app configuration."
 msgstr ""
+"Wählen Sie **Web** als Plattform aus und geben Sie Ihre Callback-URL an. Sie "
+"finden diese im schreibgeschützten Feld **Ihre Callback-URL** von Zammad, wo "
+"Sie sie kopieren können. Fügen Sie sie in das Feld \"Redirect URI\" in der "
+"App-Konfiguration von Microsoft ein."
 
 #: ../settings/security/third-party/microsoft.rst:55
-#, fuzzy
-#| msgid ""
-#| "Select web and provide your callback URL. The callback URL looks like "
-#| "this: ``https://zammad.domain.tld/auth/microsoft_office365/callback``"
 msgid ""
 "The callback URL looks like this: ``https://zammad.example.com/auth/"
 "microsoft_office365/callback``"
 msgstr ""
-"Wählen Sie Web und geben Sie Ihre Callback-URL an. Die Callback-URL sieht "
-"wie folgt aus: ``https://zammad.domain.tld/auth/microsoft_office365/"
-"callback``"
+"Die Callback-URL sieht wie folgt aus: ``https://zammad.example.com/auth/"
+"microsoft_office365/callback``"
 
 #: ../settings/security/third-party/microsoft.rst:58
 msgid ""
@@ -25548,112 +25545,104 @@ msgid ""
 "*Microsoft Graph > Delegated permissions*. The ``openid`` scope is part of "
 "the sign-in protocol and is sent automatically, so there is nothing to add."
 msgstr ""
+"Für die Anmeldung ist lediglich die API-Berechtigung ``User.Read`` "
+"erforderlich, über die neue Apps bereits verfügen. Sie können dies unter "
+"**API permissions** unter *Microsoft Graph > Delegated permissions* "
+"überprüfen. Der Scope ``openid`` ist Teil des Anmeldeprotokolls und wird "
+"automatisch übermittelt, sodass keine weiteren Berechtigungen erforderlich "
+"sind."
 
 #: ../settings/security/third-party/microsoft.rst:64
-#, fuzzy
-#| msgid ""
-#| "Within **Certificates & secrets** create a new client secret. Note down "
-#| "the returned secret **value** for later. **Do not** use the secret ID!"
 msgid ""
 "Within **Certificates & secrets**, create a new client secret. Note down the "
 "returned secret **value** for the next step. **Do not** use the secret ID!"
 msgstr ""
-"Erstellen Sie unter **Zertifikate & Secrets** ein neues Client-Secret. "
-"Notieren Sie sich den zurückgegebenen **Wert** des Geheimnisses für später. "
-"**Verwenden Sie nicht** die geheime ID!"
+"Erstellen Sie unter **Certificates & secrets** ein neues Client-Secret. "
+"Notieren Sie sich den zurückgegebenen **Wert** des Secrets für den nächsten "
+"Schritt. Verwenden Sie **nicht** die Secret ID!"
 
 #: ../settings/security/third-party/microsoft.rst:68
-#, fuzzy
-#| msgid "Step 2 - Add App Credentials to Zammad"
 msgid "Add App Credentials to Zammad"
-msgstr "Schritt 2 - Hinzufügen der Anmeldedaten in Zammad"
+msgstr "Hinzufügen der Anmeldedaten in Zammad"
 
 #: ../settings/security/third-party/microsoft.rst:70
 msgid ""
 "Now you are ready to provide the values to Zammad. The following table maps "
 "the values you collected in Entra ID to the fields in Zammad."
 msgstr ""
+"Nun sind Sie bereit, die Werte in Zammad einzutragen. Die folgende Tabelle "
+"ordnet die Werte aus Entra den Feldern in Zammad zu."
 
 #: ../settings/security/third-party/microsoft.rst:77
 msgid "Entra ID"
-msgstr ""
+msgstr "Entra ID"
 
 #: ../settings/security/third-party/microsoft.rst:78
-#, fuzzy
-#| msgid "Zammad AI"
 msgid "Zammad field"
-msgstr "Zammad AI"
+msgstr "Zammad-Feld"
 
 #: ../settings/security/third-party/microsoft.rst:79
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: ../settings/security/third-party/microsoft.rst:80
-#, fuzzy
-#| msgid "**Client ID**: *Application (client) ID*"
 msgid "**Application (client) ID**"
-msgstr "**Client ID**: *Application (client) ID*"
+msgstr "**Application (client) ID**"
 
 #: ../settings/security/third-party/microsoft.rst:81
-#, fuzzy
-#| msgid "App ID:"
 msgid "**App ID**"
-msgstr "App ID:"
+msgstr "**App ID**"
 
 #: ../settings/security/third-party/microsoft.rst:82
 msgid "From **Overview** in the Entra ID portal."
-msgstr ""
+msgstr "Aus **Overview** im Entra ID Portal."
 
 #: ../settings/security/third-party/microsoft.rst:83
-#, fuzzy
-#| msgid "This is your *client secret* (value)."
 msgid "**Client secret** (value)"
-msgstr "Dies ist Ihr *Client Secret* (Wert)."
+msgstr "**Client secret** (value)"
 
 #: ../settings/security/third-party/microsoft.rst:84
-#, fuzzy
-#| msgid "App Secret"
 msgid "**App Secret**"
-msgstr "App Secret"
+msgstr "**App Secret**"
 
 #: ../settings/security/third-party/microsoft.rst:85
-#, fuzzy
-#| msgid ""
-#| "Within **Certificates & secrets** create a new client secret. Note down "
-#| "the returned secret **value** for later. **Do not** use the secret ID!"
 msgid ""
 "From **Certificates & secrets** > **Client secrets**. Use the *value*, not "
 "the *secret ID*."
 msgstr ""
-"Erstellen Sie unter **Zertifikate & Secrets** ein neues Client-Secret. "
-"Notieren Sie sich den zurückgegebenen **Wert** des Geheimnisses für später. "
-"**Verwenden Sie nicht** die geheime ID!"
+"Aus **Certificates & secrets** > **Client secrets**. Verwenden Sie den "
+"*Wert* (\"value\") und nicht die *secret ID*."
 
 #: ../settings/security/third-party/microsoft.rst:86
 msgid "**Directory (tenant) ID**"
-msgstr ""
+msgstr "**Directory (tenant) ID**"
 
 #: ../settings/security/third-party/microsoft.rst:87
-#, fuzzy
-#| msgid "App Tenant ID:"
 msgid "**App Tenant ID**"
-msgstr "App Tenant ID:"
+msgstr "**Verzeichnis-ID (Mandant)**"
 
 #: ../settings/security/third-party/microsoft.rst:88
 msgid ""
 "Optional. Required only when the app uses the **Single tenant only** account "
 "type."
 msgstr ""
+"Optional. Nur erforderlich, wenn die App den Kontotyp **Single tenant only** "
+"verwendet."
 
 #: ../settings/security/third-party/microsoft.rst:90
 msgid ""
 "Make sure to enable the toggle next to **Authentication via Microsoft** and "
 "click ``Submit`` to activate and save your configuration."
 msgstr ""
+"Stellen Sie sicher, dass Sie den Schalter neben **Anmeldung über Microsoft** "
+"aktivieren, und klicken Sie auf ``Übermitteln``, um Ihre Konfiguration zu "
+"aktivieren und zu speichern."
 
 #: ../settings/security/third-party/microsoft.rst:94
 msgid "Optional: Require a Verified Email Domain for Account Linking"
 msgstr ""
+"Optional: Eine verifizierte E-Mail-Domain für die Kontoverknüpfung "
+"voraussetzen"
 
 #: ../settings/security/third-party/microsoft.rst:96
 msgid ""
@@ -25664,6 +25653,13 @@ msgid ""
 "email domain** to make Zammad insist on that signal before it links a "
 "Microsoft login to an existing Zammad user by email address."
 msgstr ""
+"In Multi-Tenant-Umgebungen (``/common``) kann jeder, der sich anmeldet, eine "
+"E-Mail-Adresse aus einer beliebigen Domain angeben. Microsoft signalisiert "
+"über den Claim ``xms_edov`` (\"email domain owner verified\") im ID-Token, "
+"ob die Domäne dieser Adresse für den Tenant des Kontos verifiziert ist. "
+"Aktivieren Sie **Erfordert eine verifizierte E-Mail-Domain**, damit Zammad "
+"diese Kennzeichnung prüft, bevor eine Microsoft-Anmeldung über die E-Mail-"
+"Adresse mit einem bestehenden Zammad-Benutzer verknüpft wird."
 
 #: ../settings/security/third-party/microsoft.rst:105
 msgid ""
@@ -25672,26 +25668,37 @@ msgid ""
 "links a third-party login to an existing account by email address in the "
 "first place."
 msgstr ""
+"Diese Option wirkt sich nur in Verbindung mit :ref:`Automatische "
+"Kontoverbindung bei der Erstanmeldung <automatic-account-linking>` aus. Ohne "
+"diese Option verknüpft Zammad eine Anmeldung über einen Drittanbieter "
+"grundsätzlich nicht mit einem bestehenden Konto auf Basis der E-Mail-Adresse."
 
 #: ../settings/security/third-party/microsoft.rst:110
 msgid ""
 "With the option enabled, Zammad links a login to an existing user only if "
 "all of the following conditions apply:"
 msgstr ""
+"Ist diese Option aktiviert, ordnet Zammad eine Anmeldung nur dann einem "
+"bestehenden Benutzer zu, wenn alle folgenden Bedingungen erfüllt sind:"
 
 #: ../settings/security/third-party/microsoft.rst:113
 msgid "The ID token contains an ``xms_edov`` claim with the value ``true``."
 msgstr ""
+"Das ID-Token enthält einen Claim mit dem Namen ``xms_edov`` und dem Wert "
+"``true``."
 
 #: ../settings/security/third-party/microsoft.rst:114
 msgid "The ID token contains a non-empty ``email`` claim."
-msgstr ""
+msgstr "Das ID-Token enthält einen nicht leeren Claim des Typs ``email``."
 
 #: ../settings/security/third-party/microsoft.rst:115
 msgid ""
 "That ``email`` claim matches the email address of the account that is about "
 "to be linked (upper and lower case are treated as equal)."
 msgstr ""
+"Dieser ``email`` Wert stimmt mit der E-Mail-Adresse des Kontos überein, das "
+"verknüpft werden soll (Groß- und Kleinbuchstaben werden als identisch "
+"betrachtet)."
 
 #: ../settings/security/third-party/microsoft.rst:118
 msgid ""
@@ -25702,6 +25709,14 @@ msgid ""
 "access: they log in to their existing Zammad account by other means and link "
 "their Microsoft account themselves under *Profile > Linked Accounts*."
 msgstr ""
+"Sollte eine dieser Bedingungen nicht erfüllt sein, lehnt Zammad die "
+"Verknüpfung der Konten ab und die Anmeldung schlägt mit einer Fehlermeldung "
+"fehl: Entweder wird die E-Mail-Adresse bereits von einem anderen Benutzer "
+"verwendet, oder - falls die Option **Keine Erstellung von Benutzern bei der "
+"Anmeldung** aktiviert ist - existiert das Benutzerkonto nicht. Betroffene "
+"Benutzer können dennoch Zugriff erhalten: Sie melden sich auf andere Weise "
+"bei ihrem bestehenden Zammad-Konto an und verknüpfen ihr Microsoft-Konto "
+"selbst unter *Profil > Verknüpfte Konten*."
 
 #: ../settings/security/third-party/microsoft.rst:125
 msgid ""
@@ -25711,6 +25726,11 @@ msgid ""
 "address matches. Only enabling the option makes the verified domain a "
 "requirement."
 msgstr ""
+"Solange die Option deaktiviert ist (Standardeinstellung), verlangt Zammad "
+"diesen Claim nicht: Microsoft meldet entweder eine verifizierte Domain über "
+"``xms_edov`` oder lässt es gänzlich weg, sodass ein bestehendes Konto "
+"verknüpft wird, sobald die E-Mail-Adresse übereinstimmt. Erst durch die "
+"Aktivierung der Option wird die verifizierte Domain zur Voraussetzung."
 
 #: ../settings/security/third-party/microsoft.rst:132
 msgid ""
@@ -25722,6 +25742,14 @@ msgid ""
 "missing, enabling the option blocks all Microsoft account linking by email "
 "address."
 msgstr ""
+"Beide Claims müssen zunächst in Ihrer App-Registrierung konfiguriert werden. "
+"Rufen Sie das `Microsoft Entra Admin Center <https://entra.microsoft.com/>`_ "
+"auf, navigieren Sie zu *Entra ID > App registrations*, wählen Sie Ihre App "
+"und **Token configuration** unter **Manage** aus. Wählen Sie **Add optional "
+"claim**, setzen Sie den Token Type auf **ID token** und fügen Sie die Claims "
+"``email`` und ``xms_edov`` hinzu. Solange diese Angaben fehlen, blockiert "
+"die Aktivierung dieser Option jegliche Verknüpfung von Microsoft-Konten per "
+"E-Mail-Adresse."
 
 #: ../settings/security/third-party/openid-connect.rst:2
 msgid "OpenID Connect"
@@ -27769,13 +27797,13 @@ msgstr ""
 msgid ""
 "Or provide your S3 configuration as an URL (which you can find at the end of "
 "the file). Note: you can also provide this URL as environment variable "
-"(:docs:`see system documentation </appendix/configure-env-vars.html#storage-"
-"options>`) without using this yml-file."
+"(:docs:`see system documentation </appendix/environment-variables.html>`) "
+"without using this yml-file."
 msgstr ""
 "Oder Sie geben Ihre S3-Konfiguration als URL an (die Sie am Ende der Datei "
 "finden). Hinweis: Sie können diese URL auch als Umgebungsvariable angeben "
-"(:docs:`siehe System Documentation </appendix/configure-env-"
-"vars.html#storage-options>`) , ohne diese yml-Datei zu verwenden."
+"(:docs:`siehe System Dokumentation </appendix/environment-variables.html>`) "
+", ohne diese yml-Datei zu verwenden."
 
 #: ../settings/system/storage.rst:56
 msgid ""
@@ -28673,10 +28701,8 @@ msgstr ""
 "Die Liste enthält die folgenden Informationen:"
 
 #: ../system/audit-logs.rst:58
-#, fuzzy
-#| msgid "Update"
 msgid "Updated by"
-msgstr "Aktualisierung"
+msgstr "Aktualisiert von"
 
 #: ../system/audit-logs.rst:56
 msgid ""
@@ -28699,10 +28725,8 @@ msgstr ""
 "wechseln** und **zum Benutzer zurück wechseln**."
 
 #: ../system/audit-logs.rst:67
-#, fuzzy
-#| msgid "Object Types"
 msgid "Object Type"
-msgstr "Objekttypen"
+msgstr "Objekttyp"
 
 #: ../system/audit-logs.rst:66
 msgid ""
@@ -31605,12 +31629,12 @@ msgstr "Geben Sie eine kurze Beschreibung für andere Administratoren."
 #: ../system/integrations/cti/includes/generic-cti-support-note.includes.rst:3
 msgid ""
 "This option requires your PBX to send a specific request to Zammad *before "
-"dialing*. Please consult the :docs:`CTI API </cti/api-intro.html>` in case "
-"you're not sure."
+"dialing*. Please consult the :docs:`CTI API </api/generic-cti/index.html>` "
+"in case you're not sure."
 msgstr ""
 "Diese Option erfordert, dass Ihre Telefonanlage eine spezielle Anfrage *vor "
 "dem Wählen* an Zammad sendet. Bitte konsultieren Sie die :docs:`CTI API </"
-"cti/api-intro.html>`, falls Sie sich nicht sicher sind."
+"api/generic-cti/index.html>`, falls Sie sich nicht sicher sind."
 
 #: ../system/integrations/cti/generic.rst:52
 #: ../system/integrations/cti/placetel.rst:61
@@ -34120,8 +34144,8 @@ msgstr ""
 "smime-certificate>`_"
 
 #: ../system/integrations/smime.rst:39
-msgid "`Secorio <https://secorio.com/en/certificates/smime-email/>`_"
-msgstr "`Secorio <https://secorio.com/en/certificates/smime-email/>`_"
+msgid "`Secorio <https://secorio.com/zertifikate/>`_"
+msgstr "`Secorio <https://secorio.com/zertifikate/>`_"
 
 #: ../system/integrations/smime.rst:40
 msgid "`GlobalSign <https://shop.globalsign.com/en/secure-email>`_"
@@ -37310,14 +37334,14 @@ msgid ""
 "Even though it's available on any screen, the inline translation feature "
 "requires admin permissions. It works only for the current language "
 "selection. If you need to translate to a different language, first change "
-"the language in your :user-docs:`profile settings </extras/profile-and-"
+"the language in your :user-docs:`profile settings </extras/user-menu-profile-"
 "settings.html>`."
 msgstr ""
 "Obwohl sie in jeder Ansicht verfügbar ist, erfordert die Inline-"
 "Übersetzungsfunktion Administratorrechte. Sie funktioniert nur für die "
 "aktuell ausgewählte Sprache. Wenn Sie in eine andere Sprache übersetzen "
 "möchten, müssen Sie zunächst die Sprache in Ihren :user-"
-"docs:`Profileinstellungen </extras/profile-and-settings.html>` ändern."
+"docs:`Profileinstellungen </extras/user-menu-profile-settings.html>` ändern."
 
 #: ../system/version.rst:2
 msgid "Version"
@@ -37326,6 +37350,10 @@ msgstr "Version"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
+
+#~ msgid "Depending on your email system, follow the matching guide:"
+#~ msgstr ""
+#~ "Befolgen Sie je nach Ihrem E-Mail-System die entsprechende Anleitung:"
 
 #~ msgid ""
 #~ "Accounts in this organizational directory only (Default Directory only - "
