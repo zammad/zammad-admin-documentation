@@ -150,5 +150,15 @@ button.copybtn {
     opacity: 1;
     border-radius: 0;
     border: 1px solid rgba(0,0,0,.1);
-    box-shadow: inset 0 1px 2px -1px hsla(0,0%,100%,.5), inset 0 -2px 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px -1px hsla(0,0,100%,.5), inset 0 -2px 0 0 rgba(0,0,0,.1);
+}
+
+/*
+ * The theme forces white-space: nowrap on every table cell, so wide
+ * tables scroll horizontally instead of wrapping. Tables opt in to
+ * wrapping via ":class: wrapping-table" in the RST source.
+ */
+.rst-content table.wrapping-table td,
+.rst-content table.wrapping-table th {
+    white-space: normal;
 }
