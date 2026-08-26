@@ -28,25 +28,26 @@ system attributes (e.g. for "tags", "active").
    * - before (relative)
      - Matches if a time span after a specified event has not passed.
    * - contains
-     - Matches if **at least one** of the specified values is present
-       in the field (OR logic).
+     - Matches if **at least one** of the specified values
+       is present in the field (OR logic).
    * - contains all
-     - Matches if **every** specified value is present in the field
-       (AND logic).
+     - Matches if **every** specified value is present
+       in the field (AND logic).
    * - contains all not
-     - Matches if **none** of the specified values are present in the
-       field (no intersection). This means "contains none of", not
-       "does not contain all of".
+     - Matches if **none** of the specified values are
+       present in the field (no intersection). This means
+       "contains none of", not "does not contain all of".
    * - contains not
-     - Matches if the field contains at least one value that is
-       **not** among the specified values. Also matches if the field
-       is empty.
+     - Matches if the field contains at least one value
+       that is **not** among the specified values. Also
+       matches if the field is empty.
    * - contains one
-     - Same as ``contains`` — matches if **at least one** of the
-       specified values is present.
+     - Same as ``contains``. Matches if **at least one**
+       of the specified values is present.
    * - contains one not
-     - Same as ``contains not`` — matches if the field contains at
-       least one value that is **not** among the specified values.
+     - Same as ``contains not``. Matches if the field
+       contains at least one value that is **not** among
+       the specified values.
    * - does not match regex
      - Matches if content doesn't fit to regex rule.
    * - ends with
@@ -110,59 +111,87 @@ system attributes (e.g. for "tags", "active").
 
 .. _core-workflow-condition-pitfalls:
 
-Common Pitfalls
-^^^^^^^^^^^^^^^
+Multi-Select Operator Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Confusing** ``contains all not`` **with "does not contain all":**
-   ``contains all not`` means "contains **none** of the specified values"
-   (no intersection). It does *not* mean "at least one of the specified
-   values is missing" (partial match).
+The ``contains`` family of operators works on sets of values. To show
+how each operator behaves, consider this scenario:
 
-   **Example:** Condition values ``A, B``.
+**Field values:** ``A, B, C`` (currently selected)
+**Condition values:** ``A, B`` (specified in the workflow)
 
-   - Field value ``C`` → match (neither A nor B is present).
-   - Field value ``A`` → no match (A is present).
-   - Field value ``A, B`` → no match (both are present).
+.. list-table::
+   :widths: 30 25 45
+   :header-rows: 1
 
-   This is different from triggers and overviews, where ``contains all not``
-   means "at least one of the specified values is missing". See
-   :doc:`object conditions </misc/object-conditions/basics>` for the
-   trigger/overview behavior.
+   * - Operator
+     - Matches?
+     - Why
+   * - ``contains``
+     - yes
+     - A is in both sets (OR logic)
+   * - ``contains all``
+     - yes
+     - Both A and B are present (AND logic)
+   * - ``contains one``
+     - yes
+     - Same as ``contains``
+   * - ``contains not``
+     - yes
+     - C is not in {A, B}
+   * - ``contains all not``
+     - no
+     - A is present, so there is an intersection
+   * - ``contains one not``
+     - no
+     - Same as ``contains not``, but reversed
+
+The tricky part: ``contains all not`` and ``contains not`` sound
+similar but behave differently.
+
+- ``contains not`` matches if the field has **any** value outside the
+  condition set. Here, C is outside {A, B}, so it matches.
+- ``contains all not`` matches if **no** value from the condition set
+  is present. Here, A is present, so it does not match.
 
 .. mermaid::
 
-   graph LR
-      subgraph Field values
-         A["A"]
-         B["B"]
-         C["C"]
+   graph TB
+      subgraph field["Field: A, B, C"]
+         both["A, B"]
+         only_field["C"]
       end
-      subgraph Condition values
-         CA["A"]
-         CB["B"]
+      subgraph condition["Condition: A, B"]
+         cond_a["A"]
+         cond_b["B"]
       end
-      A -.->|present| CA
-      B -.->|present| CB
-      C -.->|not present| CA
-      C -.->|not present| CB
+      both -.- cond_a
+      both -.- cond_b
+      only_field ---|"contains not: match<br/>C not in condition"| note1[" "]
+      both ---|"contains all not: no match<br/>A is present"| note2[" "]
 
-   style A fill:#f9f,stroke:#333
-   style B fill:#f9f,stroke:#333
-   style C fill:#9f9,stroke:#333
-   style CA fill:#ff9,stroke:#333
-   style CB fill:#ff9,stroke:#333
+   style both fill:#bbf,stroke:#333
+   style only_field fill:#bfb,stroke:#333
+   style cond_a fill:#ff9,stroke:#333
+   style cond_b fill:#ff9,stroke:#333
+   style note1 fill:none,stroke:none
+   style note2 fill:none,stroke:none
 
-**Understanding** ``contains not`` **vs** ``contains all not``:
-   ``contains not`` matches if the field has **any** value outside the
-   condition set. ``contains all not`` matches if **no** value from the
-   condition set is present.
+Now change the field to ``C, D`` (no overlap with condition ``A, B``):
 
-   **Example:** Condition values ``A, B``.
+- ``contains``: no match (no common values)
+- ``contains all``: no match (no common values)
+- ``contains not``: match (C and D are not in {A, B})
+- ``contains all not``: match (no intersection at all)
 
-   - Field value ``A`` → ``contains not``: no match (A is in {A, B}).
-     ``contains all not``: no match (A is present).
-   - Field value ``C`` → ``contains not``: match (C is not in {A, B}).
-     ``contains all not``: match (neither A nor B is present).
-   - Field value ``A, C`` → ``contains not``: match (C is not in {A, B}).
-     ``contains all not``: no match (A is present).
+This is the case where both "not" operators agree: when there is no
+overlap, both ``contains not`` and ``contains all not`` match.
+
+.. note::
+
+   In triggers and overviews, ``contains all not`` has different
+   semantics: it means "not all condition values are present" (at
+   least one is missing), not "no intersection". See
+   :doc:`object conditions </misc/object-conditions/basics>` for
+   details.
 
