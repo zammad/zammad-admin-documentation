@@ -28,17 +28,29 @@ system attributes (e.g. for "tags", "active").
    * - before (relative)
      - Matches if a time span after a specified event has not passed.
    * - contains
-     - Matches if a specified value is present.
+     - Matches if **at least one** of the specified values is present
+       in the field (OR logic).
    * - contains all
-     - Matches if all of the specified values are present.
+     - Matches if **every** specified value is present in the field
+       (AND logic). For single-value fields, this only matches when
+       exactly one value is specified and it matches.
    * - contains all not
-     - Matches if none of the specified values are present.
+     - Matches if **none** of the specified values are present in the
+       field (no intersection).
+
+       .. warning::
+
+          This means "contains none of", not "does not contain all of".
+          See :ref:`common pitfalls <core-workflow-condition-pitfalls>`.
    * - contains not
-     - Matches if a specified value is not present.
+     - Matches if the field value is **not** among the specified values.
+       For single-value fields, this is equivalent to "is not".
    * - contains one
-     - Matches if one specified value is present.
+     - Same as ``contains`` — matches if **at least one** of the
+       specified values is present.
    * - contains one not
-     - Matches if one specified value is not present.
+     - Same as ``contains not`` — matches if the field value is **not**
+       among the specified values.
    * - does not match regex
      - Matches if content doesn't fit to regex rule.
    * - ends with
@@ -100,4 +112,24 @@ system attributes (e.g. for "tags", "active").
      - Matches if date/time content is within specified period of time after
        now.
 
+.. _core-workflow-condition-pitfalls:
+
+Common Pitfalls
+^^^^^^^^^^^^^^^
+
+**Using** ``contains all`` **with multiple values on single-value fields:**
+   ``contains all`` requires **every** specified value to be present. A
+   single-value field can only hold one value at a time, so specifying
+   multiple values will never match. Use ``is`` or ``is any of`` instead.
+
+**Confusing** ``contains all not`` **with "does not contain all":**
+   ``contains all not`` means "contains **none** of the specified values"
+   (no intersection). It does *not* mean "at least one of the specified
+   values is missing" (partial match).
+
+   **Example:** Condition values ``A, B``.
+
+   - Field value ``C`` → match (neither A nor B is present).
+   - Field value ``A`` → no match (A is present).
+   - Field value ``A, B`` → no match (both are present).
 
