@@ -14,7 +14,8 @@ attribute and its field type. Some of the operators may only be available for
 system attributes (e.g. for "tags", "active").
 
 .. list-table::
-   :widths: 30 70
+   :class: wrapping-table
+   :widths: 25 75
    :header-rows: 1
 
    * - Operator
@@ -30,17 +31,21 @@ system attributes (e.g. for "tags", "active").
    * - contains
      - Matches if **at least one** of the specified values
        is present in the field (OR logic).
+   * - contains not
+     - Matches if the field contains at least one value that
+       is **not** among the specified values. Also matches
+       if the field is empty.
    * - contains all
      - Matches if **every** specified value is present
        in the field (AND logic).
    * - contains all not
      - Matches if **none** of the specified values are
-       present in the field (no intersection). This means
-       "contains none of", not "does not contain all of".
-   * - contains not
-     - Matches if the field contains at least one value
-       that is **not** among the specified values. Also
-       matches if the field is empty.
+       present in the field. The field and the condition have
+       no value in common: this means "contains none of", not "does not contain all of".
+
+       In triggers and overviews, this operator means
+       "not all of the specified values are present"
+       instead. See the examples section below.
    * - contains one
      - Same as ``contains``. Matches if **at least one**
        of the specified values is present.
@@ -112,86 +117,209 @@ system attributes (e.g. for "tags", "active").
 .. _core-workflow-condition-pitfalls:
 
 Multi-Select Operator Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
-The ``contains`` family of operators works on sets of values. To show
-how each operator behaves, consider this scenario:
+The ``contains`` family of operators compares two sets of values: the values
+currently in the field and the values specified in the condition. The diagrams
+below show the condition values as an orange circle and the field values as a
+blue circle and the.
 
-**Field values:** ``A, B, C`` (currently selected)
-**Condition values:** ``A, B`` (specified in the workflow)
+Be aware that these operators behave **differently** in other features that use
+conditions (e.g. triggers and overviews). The most confusing difference: in core
+workflows, ``contains all not`` means that no value matches at all, while in
+triggers and overviews it means "not all values are present". The table below
+compares both worlds side by side.
 
 .. list-table::
-   :widths: 30 25 45
+   :class: wrapping-table
+   :widths: 25 40 35
+   :header-rows: 1
+
+   * - Operator
+     - Core workflows (this page)
+     - Triggers, overviews, etc.
+   * - contains
+     - At least one value is present (OR logic).
+     - Not available; ``contains one`` is the equivalent.
+   * - contains one
+     - Same as ``contains``.
+     - At least one value is present (OR logic).
+   * - contains all
+     - Every value is present (AND logic).
+     - Every value is present (AND logic).
+   * - contains not
+     - At least one field value is outside the condition,
+       or the field is empty.
+     - Not available for multi-select fields.
+   * - contains one not
+     - Same as ``contains not``.
+     - The field has no value in common with the condition.
+   * - contains all not
+     - The field has no value in common with the condition.
+     - Not all values are present (at least one is missing).
+
+Example 1: Condition A, B - Field A, B, C
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In this scenario, the field holds the values A, B and C,
+while the condition asks for the values A and B.
+
+.. figure:: /images/system/core-workflows/contains-operators-overlap.svg
+   :alt: Venn diagram of condition values A, B and field values A, B, C. A and B are in both circles, C only in the field circle.
+
+   Field values ``A, B, C`` overlap with condition values ``A, B``.
+
+.. list-table::
+   :class: wrapping-table
+   :widths: 30 20 50
    :header-rows: 1
 
    * - Operator
      - Matches?
      - Why
-   * - ``contains``
+   * - contains
      - yes
-     - A is in both sets (OR logic)
-   * - ``contains all``
+     - ``A`` and ``B`` are in both sets (OR logic).
+   * - contains one
      - yes
-     - Both A and B are present (AND logic)
-   * - ``contains one``
+     - Same as ``contains``.
+   * - contains all
      - yes
-     - Same as ``contains``
-   * - ``contains not``
+     - Both ``A`` and ``B`` are present (AND logic).
+   * - contains not
      - yes
-     - C is not in {A, B}
-   * - ``contains all not``
+     - ``C`` is in the field but not in the condition.
+   * - contains one not
+     - yes
+     - Same as ``contains not``.
+   * - contains all not
      - no
-     - A is present, so there is an intersection
-   * - ``contains one not``
+     - ``A`` and ``B`` are present in the field.
+
+Example 2: Condition A, B, C - Field C, D
+"""""""""""""""""""""""""""""""""""""""""
+
+In this scenario, the field holds the values C and D. The condition
+value C is present in the field, while A and B are not.
+
+.. figure:: /images/system/core-workflows/contains-operators-partial-overlap.svg
+   :alt: Venn diagram of condition values A, B, C and field values C, D.
+         Only C is in both circles.
+
+   Condition values ``A, B, C`` partially overlap with field
+   values ``C, D``.
+
+.. list-table::
+   :class: wrapping-table
+   :widths: 30 20 50
+   :header-rows: 1
+
+   * - Operator
+     - Matches?
+     - Why
+   * - contains
+     - yes
+     - ``C`` is in both sets (OR logic).
+   * - contains one
+     - yes
+     - Same as ``contains``.
+   * - contains all
      - no
-     - Same as ``contains not``, but reversed
+     - Only ``C`` of the three condition values is present.
+   * - contains not
+     - yes
+     - ``D`` is in the field but not in the condition.
+   * - contains one not
+     - yes
+     - Same as ``contains not``.
+   * - contains all not
+     - no
+     - ``C`` is present, so the sets are not without common values.
 
-The tricky part: ``contains all not`` and ``contains not`` sound
-similar but behave differently.
+This partial overlap is where the two "all" operators part ways:
+``contains all`` fails because one condition value is missing, while
+``contains all not`` fails because a single common value is enough
+to block it.
 
-- ``contains not`` matches if the field has **any** value outside the
-  condition set. Here, C is outside {A, B}, so it matches.
-- ``contains all not`` matches if **no** value from the condition set
-  is present. Here, A is present, so it does not match.
+Example 3: Condition A, B - Field C, D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. mermaid::
+In this scenario, the field holds the values C and D, which
+have nothing in common with the condition values A and B.
 
-   graph TB
-      subgraph field["Field: A, B, C"]
-         both["A, B"]
-         only_field["C"]
-      end
-      subgraph condition["Condition: A, B"]
-         cond_a["A"]
-         cond_b["B"]
-      end
-      both -.- cond_a
-      both -.- cond_b
-      only_field ---|"contains not: match<br/>C not in condition"| note1[" "]
-      both ---|"contains all not: no match<br/>A is present"| note2[" "]
+.. figure:: /images/system/core-workflows/contains-operators-disjoint.svg
+   :alt: Venn diagram of condition values A, B and field values C, D. The two circles do not overlap.
 
-   style both fill:#bbf,stroke:#333
-   style only_field fill:#bfb,stroke:#333
-   style cond_a fill:#ff9,stroke:#333
-   style cond_b fill:#ff9,stroke:#333
-   style note1 fill:none,stroke:none
-   style note2 fill:none,stroke:none
+   Field values ``C, D`` have no overlap with condition values ``A, B``.
 
-Now change the field to ``C, D`` (no overlap with condition ``A, B``):
+.. list-table::
+   :class: wrapping-table
+   :widths: 30 20 50
+   :header-rows: 1
 
-- ``contains``: no match (no common values)
-- ``contains all``: no match (no common values)
-- ``contains not``: match (C and D are not in {A, B})
-- ``contains all not``: match (no intersection at all)
+   * - Operator
+     - Matches?
+     - Why
+   * - contains
+     - no
+     - No value is in both sets.
+   * - contains one
+     - no
+     - Same as ``contains``.
+   * - contains all
+     - no
+     - Neither ``A`` nor ``B`` is present.
+   * - contains not
+     - yes
+     - ``C`` and ``D`` are not in the condition.
+   * - contains one not
+     - yes
+     - Same as ``contains not``.
+   * - contains all not
+     - yes
+     - The field has no value in common with the condition.
 
-This is the case where both "not" operators agree: when there is no
-overlap, both ``contains not`` and ``contains all not`` match.
+This is the only case where both "not" operators agree.
 
-.. note::
+Example 4: Condition A, B - Field is empty
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   In triggers and overviews, ``contains all not`` has different
-   semantics: it means "not all condition values are present" (at
-   least one is missing), not "no intersection". See
-   :doc:`object conditions </misc/object-conditions/basics>` for
-   details.
+In this scenario, the field holds no values at all, while
+the condition asks for the values A and B.
 
+.. figure:: /images/system/core-workflows/contains-operators-empty-field.svg
+   :alt: Venn diagram of condition values A, B and an empty field. The two circles do not overlap.
+
+   The field holds no values at all.
+
+.. list-table::
+   :class: wrapping-table
+   :widths: 30 20 50
+   :header-rows: 1
+
+   * - Operator
+     - Matches?
+     - Why
+   * - contains
+     - no
+     - No value is present.
+   * - contains one
+     - no
+     - Same as ``contains``.
+   * - contains all
+     - no
+     - No value is present.
+   * - contains not
+     - yes
+     - An empty field matches.
+   * - contains one not
+     - yes
+     - Same as ``contains not``.
+   * - contains all not
+     - yes
+     - An empty field has no value in common with the condition.
+
+Note that ``contains not`` and
+``contains one not`` match an empty field, while ``contains`` and
+``contains all`` do not. If you want to exclude specific values,
+be aware that empty fields pass the condition.

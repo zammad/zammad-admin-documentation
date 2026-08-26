@@ -398,10 +398,10 @@ Available operators for matching:
     (OR logic).
 - | **contains all not**:
   | Matches if **not all** given field values are selected (at least one
-    is missing).
+    is missing). This means "not all of", not "none of".
 - | **contains one not**:
   | Matches if **none** of the given field values are selected (no
-    intersection).
+    intersection). This means "none of", not "not all of".
 
 .. note::
 
@@ -437,10 +437,10 @@ Available operators for matching:
     (OR logic).
 - | **contains all not**
   | Matches if **not all** given field values are selected (at least one
-    is missing).
+    is missing). This means "not all of", not "none of".
 - | **contains one not**
   | Matches if **none** of the given field values are selected (no
-    intersection).
+    intersection). This means "none of", not "not all of".
 
 Additional Information and Remarks
 ----------------------------------
