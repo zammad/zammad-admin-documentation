@@ -407,7 +407,7 @@ Available operators for matching:
 
    In :doc:`core workflows </system/core-workflows>`, these operators
    have different semantics. See
-   :ref:`core workflow condition examples <core-workflow-condition-examples>`
+   :ref:`core workflow condition operators <core-workflow-condition-examples>`
    for details.
 
 

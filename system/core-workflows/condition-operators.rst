@@ -114,15 +114,18 @@ system attributes (e.g. for "tags", "active").
      - Matches if date/time content is within specified period of time after
        now.
 
-.. _core-workflow-condition-examples:
-
-Multi-Select Operator Examples
-------------------------------
+Multi-Select Operators
+----------------------
 
 The ``contains`` family of operators compares two sets of values: the values
 currently in the field and the values specified in the condition. The diagrams
 below show the condition values as an orange circle and the field values as a
 blue circle.
+
+.. _core-workflow-condition-examples:
+
+Differences to Triggers and Overviews
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Be aware that these operators behave **differently** in other features that use
 conditions (e.g. triggers and overviews). The most confusing difference: in core
