@@ -392,13 +392,23 @@ Checks if selected field values match the attribute value(s).
 Available operators for matching:
 
 - | **contains all**:
-  | Matches if all given field values are selected.
+  | Matches if **all** given field values are selected (AND logic).
 - | **contains one**:
-  | Matches if one specific given field value is selected.
+  | Matches if **at least one** of the given field values is selected
+    (OR logic).
 - | **contains all not**:
-  | Matches if all given field values are not selected.
+  | Matches if **not all** given field values are selected (at least one
+    is missing).
 - | **contains one not**:
-  | Matches if one specific given field value is not selected.
+  | Matches if **none** of the given field values are selected (no
+    intersection).
+
+.. note::
+
+   In :doc:`core workflows </system/core-workflows>`, these operators
+   have different semantics. See
+   :ref:`core workflow condition pitfalls <core-workflow-condition-pitfalls>`
+   for details.
 
 
 Single Tree Selection Field
@@ -421,13 +431,16 @@ Checks if selected field value(s) match the attribute value(s).
 Available operators for matching:
 
 - | **contains all**
-  | Matches if all given field values are selected.
+  | Matches if **all** given field values are selected (AND logic).
 - | **contains one**
-  | Matches if one specific given field value is selected.
+  | Matches if **at least one** of the given field values is selected
+    (OR logic).
 - | **contains all not**
-  | Matches if all given field values are not selected.
+  | Matches if **not all** given field values are selected (at least one
+    is missing).
 - | **contains one not**
-  | Matches if one specific given field value is not selected.
+  | Matches if **none** of the given field values are selected (no
+    intersection).
 
 Additional Information and Remarks
 ----------------------------------

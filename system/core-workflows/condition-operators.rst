@@ -32,25 +32,21 @@ system attributes (e.g. for "tags", "active").
        in the field (OR logic).
    * - contains all
      - Matches if **every** specified value is present in the field
-       (AND logic). For single-value fields, this only matches when
-       exactly one value is specified and it matches.
+       (AND logic).
    * - contains all not
      - Matches if **none** of the specified values are present in the
-       field (no intersection).
-
-       .. warning::
-
-          This means "contains none of", not "does not contain all of".
-          See :ref:`common pitfalls <core-workflow-condition-pitfalls>`.
+       field (no intersection). This means "contains none of", not
+       "does not contain all of".
    * - contains not
-     - Matches if the field value is **not** among the specified values.
-       For single-value fields, this is equivalent to "is not".
+     - Matches if the field contains at least one value that is
+       **not** among the specified values. Also matches if the field
+       is empty.
    * - contains one
      - Same as ``contains`` — matches if **at least one** of the
        specified values is present.
    * - contains one not
-     - Same as ``contains not`` — matches if the field value is **not**
-       among the specified values.
+     - Same as ``contains not`` — matches if the field contains at
+       least one value that is **not** among the specified values.
    * - does not match regex
      - Matches if content doesn't fit to regex rule.
    * - ends with
@@ -117,11 +113,6 @@ system attributes (e.g. for "tags", "active").
 Common Pitfalls
 ^^^^^^^^^^^^^^^
 
-**Using** ``contains all`` **with multiple values on single-value fields:**
-   ``contains all`` requires **every** specified value to be present. A
-   single-value field can only hold one value at a time, so specifying
-   multiple values will never match. Use ``is`` or ``is any of`` instead.
-
 **Confusing** ``contains all not`` **with "does not contain all":**
    ``contains all not`` means "contains **none** of the specified values"
    (no intersection). It does *not* mean "at least one of the specified
@@ -132,4 +123,46 @@ Common Pitfalls
    - Field value ``C`` → match (neither A nor B is present).
    - Field value ``A`` → no match (A is present).
    - Field value ``A, B`` → no match (both are present).
+
+   This is different from triggers and overviews, where ``contains all not``
+   means "at least one of the specified values is missing". See
+   :doc:`object conditions </misc/object-conditions/basics>` for the
+   trigger/overview behavior.
+
+.. mermaid::
+
+   graph LR
+      subgraph Field values
+         A["A"]
+         B["B"]
+         C["C"]
+      end
+      subgraph Condition values
+         CA["A"]
+         CB["B"]
+      end
+      A -.->|present| CA
+      B -.->|present| CB
+      C -.->|not present| CA
+      C -.->|not present| CB
+
+   style A fill:#f9f,stroke:#333
+   style B fill:#f9f,stroke:#333
+   style C fill:#9f9,stroke:#333
+   style CA fill:#ff9,stroke:#333
+   style CB fill:#ff9,stroke:#333
+
+**Understanding** ``contains not`` **vs** ``contains all not``:
+   ``contains not`` matches if the field has **any** value outside the
+   condition set. ``contains all not`` matches if **no** value from the
+   condition set is present.
+
+   **Example:** Condition values ``A, B``.
+
+   - Field value ``A`` → ``contains not``: no match (A is in {A, B}).
+     ``contains all not``: no match (A is present).
+   - Field value ``C`` → ``contains not``: match (C is not in {A, B}).
+     ``contains all not``: match (neither A nor B is present).
+   - Field value ``A, C`` → ``contains not``: match (C is not in {A, B}).
+     ``contains all not``: no match (A is present).
 
