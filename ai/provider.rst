@@ -111,13 +111,14 @@ Embedding Model
       :alt: Screenshot shows the AI provider dialog with manually configured embedding settings
       :align: center
 
-   .. warning:: Changing the embedding model or the embedding dimensions
+   .. note:: Changing the embedding model or the embedding dimensions
       triggers a full rebuild of the knowledge base index. This
       re-embeds every knowledge base article, which takes time and costs
-      AI calls proportional to the size of your knowledge base. Zammad
-      shows a confirmation dialog before the change is saved. Switching
-      the semantic search capability to a provider that uses the same
-      embedding model and dimensions does not trigger a rebuild.
+      AI calls proportional to the size of your knowledge base. The
+      rebuild runs in the background and Zammad notifies you with a toast
+      message when it starts. Switching the semantic search capability to
+      a provider that uses the same embedding model and dimensions does
+      not trigger a rebuild.
 
 OCR Model
    The model used to extract text from images. The dropdown lists the models
