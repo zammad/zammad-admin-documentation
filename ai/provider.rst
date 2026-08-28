@@ -111,7 +111,7 @@ Embedding Model
       :alt: Screenshot shows the AI provider dialog with manually configured embedding settings
       :align: center
 
-   .. warning:: Changing the embedding model or the embedding dimensions
+   .. note:: Changing the embedding model or the embedding dimensions
       triggers a full rebuild of the knowledge base index. This
       re-embeds every knowledge base article, which takes time and costs
       AI calls proportional to the size of your knowledge base. The
