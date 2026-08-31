@@ -32,6 +32,6 @@ To enable the method, just toggle the switch on in the settings.
    :align: center
 
 Now the users will be able to set up this two-factor authentication method for
-their accounts via "Avatar -> Profile -> Password & Authentication". Once they
+their accounts via *Avatar > Profile > Password & Authentication*. Once they
 do, on next sign-in with password, they will be asked to provide the same
 security key they registered during the setup.
