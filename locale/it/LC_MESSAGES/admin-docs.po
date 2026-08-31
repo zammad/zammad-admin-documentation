@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 17:19+0200\n"
-"PO-Revision-Date: 2026-08-13 07:57+0000\n"
+"POT-Creation-Date: 2026-08-28 15:08+0200\n"
+"PO-Revision-Date: 2026-08-31 09:47+0000\n"
 "Last-Translator: albanobattistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -904,7 +904,7 @@ msgstr "Tipo"
 msgid "Pick the AI provider. Available options:"
 msgstr ""
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:267
+#: ../ai/provider.rst:52 ../ai/provider.rst:268
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
@@ -912,7 +912,7 @@ msgstr "Zammad AI"
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:298
+#: ../ai/provider.rst:54 ../ai/provider.rst:299
 msgid "Ollama"
 msgstr "Ollama"
 
@@ -1021,7 +1021,7 @@ msgid ""
 "feature via :ref:`per-feature-provider-config`."
 msgstr ""
 
-#: ../ai/provider.rst:120
+#: ../ai/provider.rst:121
 msgid "Embedding Model"
 msgstr ""
 
@@ -1076,16 +1076,17 @@ msgid ""
 "Changing the embedding model or the embedding dimensions triggers a full "
 "rebuild of the knowledge base index. This re-embeds every knowledge base "
 "article, which takes time and costs AI calls proportional to the size of "
-"your knowledge base. Zammad shows a confirmation dialog before the change is "
-"saved. Switching the semantic search capability to a provider that uses the "
-"same embedding model and dimensions does not trigger a rebuild."
+"your knowledge base. The rebuild runs in the background and Zammad notifies "
+"you with a toast message when it starts. Switching the semantic search "
+"capability to a provider that uses the same embedding model and dimensions "
+"does not trigger a rebuild."
 msgstr ""
 
-#: ../ai/provider.rst:127
+#: ../ai/provider.rst:128
 msgid "OCR Model"
 msgstr "Modello OCR"
 
-#: ../ai/provider.rst:123
+#: ../ai/provider.rst:124
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -1094,11 +1095,11 @@ msgid ""
 "for the ones that do."
 msgstr ""
 
-#: ../ai/provider.rst:131 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:132 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:130
+#: ../ai/provider.rst:131
 #, fuzzy
 #| msgid ""
 #| "Provide the URL or IP address of your provider. This is required for "
@@ -1110,11 +1111,11 @@ msgstr ""
 "Fornisci l'URL o l'indirizzo IP del tuo provider. Questo è richiesto per "
 "Ollama e provider compatibili OpenAI."
 
-#: ../ai/provider.rst:134
+#: ../ai/provider.rst:135
 msgid "URL (Completions)"
 msgstr "URL (Completamenti)"
 
-#: ../ai/provider.rst:134
+#: ../ai/provider.rst:135
 #, fuzzy
 #| msgid ""
 #| "Only for Azure AI as provider. Add the endpoint where your text "
@@ -1125,17 +1126,17 @@ msgstr ""
 "Solo per Azure AI come provider. Aggiungi l'endpoint dove è disponibile il "
 "tuo modello di generazione di testo."
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:139
 msgid "URL (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:137
+#: ../ai/provider.rst:138
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
 msgstr ""
 
-#: ../ai/provider.rst:140
+#: ../ai/provider.rst:141
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -1143,58 +1144,58 @@ msgid ""
 "below for the colors."
 msgstr ""
 
-#: ../ai/provider.rst:146
+#: ../ai/provider.rst:147
 #, fuzzy
 #| msgid "State"
 msgid "Status"
 msgstr "Stato"
 
-#: ../ai/provider.rst:148
+#: ../ai/provider.rst:149
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
 msgstr ""
 
-#: ../ai/provider.rst:153
+#: ../ai/provider.rst:154
 #, fuzzy
 #| msgid "Screen"
 msgid "Green"
 msgstr "Schermata"
 
-#: ../ai/provider.rst:152
+#: ../ai/provider.rst:153
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
 msgstr ""
 
-#: ../ai/provider.rst:157
+#: ../ai/provider.rst:158
 msgid "Orange"
 msgstr ""
 
-#: ../ai/provider.rst:156
+#: ../ai/provider.rst:157
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
 msgstr ""
 
-#: ../ai/provider.rst:162
+#: ../ai/provider.rst:163
 msgid "Red"
 msgstr ""
 
-#: ../ai/provider.rst:160
+#: ../ai/provider.rst:161
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
 "so the timestamp belongs to the last failed request."
 msgstr ""
 
-#: ../ai/provider.rst:167
+#: ../ai/provider.rst:168
 #, fuzzy
 #| msgid "Default value"
 msgid "Default Provider"
 msgstr "Valore predefinito"
 
-#: ../ai/provider.rst:169
+#: ../ai/provider.rst:170
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -1208,7 +1209,7 @@ msgid ""
 "for all three purposes"
 msgstr ""
 
-#: ../ai/provider.rst:178
+#: ../ai/provider.rst:179
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -1216,30 +1217,30 @@ msgid ""
 "provider that holds the flag, Zammad promotes the oldest remaining provider."
 msgstr ""
 
-#: ../ai/provider.rst:186
+#: ../ai/provider.rst:187
 #, fuzzy
 #| msgid "Capability config"
 msgid "Capabilities"
 msgstr "Configurazione capacità"
 
-#: ../ai/provider.rst:188
+#: ../ai/provider.rst:189
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
 "provider currently covers each capability."
 msgstr ""
 
-#: ../ai/provider.rst:200
+#: ../ai/provider.rst:201
 msgid "Semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:193
+#: ../ai/provider.rst:194
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
 msgstr ""
 
-#: ../ai/provider.rst:196
+#: ../ai/provider.rst:197
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
@@ -1248,23 +1249,23 @@ msgid ""
 "rebuild, see **Embedding Model** above."
 msgstr ""
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:207
 #, fuzzy
 #| msgid "Save the configuration"
 msgid "Image text recognition"
 msgstr "Salva la configurazione"
 
-#: ../ai/provider.rst:203
+#: ../ai/provider.rst:204
 msgid "The provider used to extract text from images (OCR)."
 msgstr ""
 
-#: ../ai/provider.rst:205
+#: ../ai/provider.rst:206
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
 msgstr ""
 
-#: ../ai/provider.rst:208
+#: ../ai/provider.rst:209
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1273,68 +1274,68 @@ msgid ""
 "stays unassigned."
 msgstr ""
 
-#: ../ai/provider.rst:215 ../manage/macros.rst:56 ../manage/templates.rst:28
+#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:28
 msgid "Actions"
 msgstr "Azioni"
 
-#: ../ai/provider.rst:217
+#: ../ai/provider.rst:218
 #, fuzzy
 #| msgid "The integration has the following limitations:"
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Questa integrazione è soggetta alle seguenti limitazioni:"
 
-#: ../ai/provider.rst:220
+#: ../ai/provider.rst:221
 #, fuzzy
 #| msgid "Set as Default"
 msgid "Set as default"
 msgstr "Imposta come predefinito"
 
-#: ../ai/provider.rst:220
+#: ../ai/provider.rst:221
 msgid "Marks the provider as the default provider for AI features."
 msgstr ""
 
-#: ../ai/provider.rst:224
+#: ../ai/provider.rst:225
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:223
+#: ../ai/provider.rst:224
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
 msgstr ""
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:229
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 
-#: ../ai/provider.rst:227
+#: ../ai/provider.rst:228
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
 msgstr ""
 
-#: ../ai/provider.rst:231 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:232 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Elimina"
 
-#: ../ai/provider.rst:231
+#: ../ai/provider.rst:232
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 
-#: ../ai/provider.rst:236
+#: ../ai/provider.rst:237
 msgid "Configuring Provider per Feature"
 msgstr ""
 
-#: ../ai/provider.rst:238
+#: ../ai/provider.rst:239
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
 msgstr ""
 
-#: ../ai/provider.rst:241
+#: ../ai/provider.rst:242
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1352,7 +1353,7 @@ msgstr ""
 "Screenshot che mostra la tabella del filtro registro chiamate con dati di "
 "esempio precompilati"
 
-#: ../ai/provider.rst:250
+#: ../ai/provider.rst:251
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1362,13 +1363,13 @@ msgid ""
 "providers you set up on this page."
 msgstr ""
 
-#: ../ai/provider.rst:258
+#: ../ai/provider.rst:259
 #, fuzzy
 #| msgid "Additional information"
 msgid "Additional Provider Information"
 msgstr "Informazioni aggiuntive"
 
-#: ../ai/provider.rst:260
+#: ../ai/provider.rst:261
 #, fuzzy
 #| msgid ""
 #| "In case you want to know more about Zammad AI or Ollama, read on here. "
@@ -1383,7 +1384,7 @@ msgstr ""
 "qui. Altrimenti, vai a :ref:`feedback-logs` o scopri le funzionalità basate "
 "su AI e come utilizzarle."
 
-#: ../ai/provider.rst:269
+#: ../ai/provider.rst:270
 #, fuzzy
 #| msgid ""
 #| "Using Zammad AI as a provider is the easiest way you can get started with "
@@ -1395,7 +1396,7 @@ msgstr ""
 "Utilizzare Zammad AI come provider è il modo più semplice per iniziare con "
 "le funzionalità AI di Zammad. Ha alcuni grandi vantaggi come:"
 
-#: ../ai/provider.rst:272
+#: ../ai/provider.rst:273
 #, fuzzy
 #| msgid ""
 #| "You don't have to take care of the setup of an AI system and its "
@@ -1405,11 +1406,11 @@ msgstr ""
 "Non devi occuparti della configurazione di un sistema AI e della sua "
 "configurazione."
 
-#: ../ai/provider.rst:273
+#: ../ai/provider.rst:274
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr "Ospitato nell'UE e conforme al GDPR."
 
-#: ../ai/provider.rst:274
+#: ../ai/provider.rst:275
 #, fuzzy
 #| msgid ""
 #| "No configuration in Zammad needed (for SaaS customers) or only an API key "
@@ -1421,7 +1422,7 @@ msgstr ""
 "Nessuna configurazione in Zammad necessaria (per clienti SaaS) o richiesta "
 "solo una chiave API (per clienti self-hosted)."
 
-#: ../ai/provider.rst:276
+#: ../ai/provider.rst:277
 #, fuzzy
 #| msgid "Your requests with sensitive information aren't used for training."
 msgid "Requests with sensitive information aren't used for training."
@@ -1429,15 +1430,15 @@ msgstr ""
 "Le tue richieste con informazioni sensibili non vengono utilizzate per "
 "l'addestramento."
 
-#: ../ai/provider.rst:277
+#: ../ai/provider.rst:278
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:290
 msgid "SaaS Customers"
 msgstr "Clienti SaaS"
 
-#: ../ai/provider.rst:281
+#: ../ai/provider.rst:282
 #, fuzzy
 #| msgid ""
 #| "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
@@ -1464,17 +1465,17 @@ msgstr ""
 "rimanenti o attiva la notifica per essere avvisato quando rimangono poche "
 "chiamate."
 
-#: ../ai/provider.rst:288
+#: ../ai/provider.rst:289
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
 msgstr ""
 
-#: ../ai/provider.rst:295
+#: ../ai/provider.rst:296
 msgid "Self-Hosted Customers"
 msgstr "Clienti Self-Hosted"
 
-#: ../ai/provider.rst:292
+#: ../ai/provider.rst:293
 #, fuzzy
 #| msgid ""
 #| "Please `get in touch with our sales department <https://zammad.com/en/"
@@ -1493,7 +1494,7 @@ msgstr ""
 "semplicemente e salvala. Quindi sei pronto per attivare e configurare le "
 "funzionalità AI come preferisci."
 
-#: ../ai/provider.rst:300
+#: ../ai/provider.rst:301
 #, fuzzy
 #| msgid ""
 #| "`Ollama <https://ollama.com/>`_ is an AI tool that allows you to set up "
@@ -1510,7 +1511,7 @@ msgstr ""
 "che i tuoi dati non vengono trasferiti a terze parti. Tieni presente che "
 "questo ha senso solo se hai una GPU potente nel tuo sistema!"
 
-#: ../ai/provider.rst:304
+#: ../ai/provider.rst:305
 #, fuzzy
 #| msgid ""
 #| "If you don't have an Ollama running already, their `documentation "
@@ -5378,7 +5379,7 @@ msgstr ""
 msgid "Signatures"
 msgstr "Firme"
 
-#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:436
+#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:450
 #: ../system/monitoring.rst:9
 msgid "General"
 msgstr "Generale"
@@ -6327,7 +6328,7 @@ msgstr "Valore predefinito"
 
 #: ../channels/form.rst:250 ../manage/public-links.rst:43
 #: ../misc/object-conditions/basics.rst:63 ../misc/variables.rst:101
-#: ../system/core-workflows/condition-operators.rst:21
+#: ../system/core-workflows/condition-operators.rst:22
 #: ../system/objects/permissions.rst:36 ../system/subscription.rst:196
 msgid "Description"
 msgstr "Descrizione"
@@ -11116,6 +11117,29 @@ msgstr ""
 #: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
+#: ../misc/object-conditions/basics.rst:514
+#: ../misc/object-conditions/basics.rst:517
+#: ../misc/object-conditions/basics.rst:548
+#: ../misc/object-conditions/basics.rst:554
+#: ../misc/object-conditions/basics.rst:591
+#: ../misc/object-conditions/basics.rst:594
+#: ../misc/object-conditions/basics.rst:623
+#: ../misc/object-conditions/basics.rst:626
+#: ../system/core-workflows/condition-operators.rst:184
+#: ../system/core-workflows/condition-operators.rst:187
+#: ../system/core-workflows/condition-operators.rst:190
+#: ../system/core-workflows/condition-operators.rst:193
+#: ../system/core-workflows/condition-operators.rst:196
+#: ../system/core-workflows/condition-operators.rst:224
+#: ../system/core-workflows/condition-operators.rst:227
+#: ../system/core-workflows/condition-operators.rst:233
+#: ../system/core-workflows/condition-operators.rst:236
+#: ../system/core-workflows/condition-operators.rst:276
+#: ../system/core-workflows/condition-operators.rst:279
+#: ../system/core-workflows/condition-operators.rst:282
+#: ../system/core-workflows/condition-operators.rst:316
+#: ../system/core-workflows/condition-operators.rst:319
+#: ../system/core-workflows/condition-operators.rst:322
 msgid "yes"
 msgstr "sì"
 
@@ -11183,6 +11207,23 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
+#: ../misc/object-conditions/basics.rst:520
+#: ../misc/object-conditions/basics.rst:523
+#: ../misc/object-conditions/basics.rst:551
+#: ../misc/object-conditions/basics.rst:557
+#: ../misc/object-conditions/basics.rst:585
+#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:617
+#: ../misc/object-conditions/basics.rst:620
+#: ../system/core-workflows/condition-operators.rst:199
+#: ../system/core-workflows/condition-operators.rst:230
+#: ../system/core-workflows/condition-operators.rst:239
+#: ../system/core-workflows/condition-operators.rst:267
+#: ../system/core-workflows/condition-operators.rst:270
+#: ../system/core-workflows/condition-operators.rst:273
+#: ../system/core-workflows/condition-operators.rst:307
+#: ../system/core-workflows/condition-operators.rst:310
+#: ../system/core-workflows/condition-operators.rst:313
 msgid "no"
 msgstr "no"
 
@@ -11701,7 +11742,7 @@ msgstr ""
 "di piè di pagina pubblico."
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
-#: ../manage/time-accounting.rst:147 ../manage/time-accounting.rst:161
+#: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
 #: ../system/maintenance.rst:31
 msgid "Title"
 msgstr "Titolo"
@@ -15756,15 +15797,28 @@ msgstr ""
 "**Selettore**."
 
 #: ../manage/time-accounting.rst:22
+#, fuzzy
+#| msgid ""
+#| "If a ticket is relevant, Zammad will request the agent to provide the "
+#| "time which was needed to process the current ticket step. In order for "
+#| "Zammad to bring up the time accounting dialog to an agent, the agent has "
+#| "to update the ticket together with an article of any type. The adding of "
+#| "an article is mandatory to invoke the time accounting dialog. However, "
+#| "the time accounting dialog is not mandatory and can be canceled by your "
+#| "agents. You cannot enforce the time accounting. When a ticket is no "
+#| "longer considered for the time accounting, the already accounted time "
+#| "will be preserved."
 msgid ""
 "If a ticket is relevant, Zammad will request the agent to provide the time "
-"which was needed to process the current ticket step. In order for Zammad to "
-"bring up the time accounting dialog to an agent, the agent has to update the "
-"ticket together with an article of any type. The adding of an article is "
-"mandatory to invoke the time accounting dialog. However, the time accounting "
-"dialog is not mandatory and can be canceled by your agents. You cannot "
-"enforce the time accounting. When a ticket is no longer considered for the "
-"time accounting, the already accounted time will be preserved."
+"which was needed to process the current ticket step. This accounted time is "
+"displayed in the ticket sidebar at ticket level and in the article meta "
+"information for an individual article. In order for Zammad to bring up the "
+"time accounting dialog to an agent, the agent has to update the ticket "
+"together with an article of any type. The adding of an article is mandatory "
+"to invoke the time accounting dialog. However, the time accounting dialog is "
+"not mandatory and can be canceled by your agents. You cannot enforce the "
+"time accounting. When a ticket is no longer considered for the time "
+"accounting, the already accounted time will be preserved."
 msgstr ""
 "Se un ticket è pertinente, Zammad richiederà all'agente di fornire il tempo "
 "impiegato per elaborare la fase corrente del ticket. Affinché Zammad "
@@ -15777,7 +15831,7 @@ msgstr ""
 "ticket non viene più considerato per la contabilizzazione del tempo, il "
 "tempo già contabilizzato verrà conservato."
 
-#: ../manage/time-accounting.rst:33
+#: ../manage/time-accounting.rst:35
 msgid ""
 "The selector applies to the ticket state before any attribute changes have "
 "been saved. That means if your agent is e.g. going to close a ticket "
@@ -15794,7 +15848,7 @@ msgstr ""
 msgid "Time Accounting Ticket Selector"
 msgstr "Selettore di ticket per la contabilizzazione del tempo"
 
-#: ../manage/time-accounting.rst:42
+#: ../manage/time-accounting.rst:44
 msgid ""
 "The accounted time is always a unitless number. However, it is possible to "
 "show a specific unit in the **Unit** section, which provides several options:"
@@ -15803,45 +15857,45 @@ msgstr ""
 "mostrare un'unità specifica nella sezione **Unit**, che fornisce diverse "
 "opzioni:"
 
-#: ../manage/time-accounting.rst:46
+#: ../manage/time-accounting.rst:48
 msgid "no unit"
 msgstr "nessuna unità"
 
-#: ../manage/time-accounting.rst:47
+#: ../manage/time-accounting.rst:49
 msgid "Default behavior, no unit is shown next to the time value."
 msgstr ""
 "Comportamento predefinito, nessuna unità viene mostrata accanto al valore "
 "del tempo."
 
-#: ../manage/time-accounting.rst:48
+#: ../manage/time-accounting.rst:50
 msgid "hour(s)"
 msgstr "ora(e)"
 
-#: ../manage/time-accounting.rst:49
+#: ../manage/time-accounting.rst:51
 msgid "Shows ``hour(s)`` as the unit next to the time value."
 msgstr "Mostra ``ora(e)`` come unità accanto al valore del tempo."
 
-#: ../manage/time-accounting.rst:50
+#: ../manage/time-accounting.rst:52
 msgid "quarter-hour(s)"
 msgstr "quarto d'ora(i)"
 
-#: ../manage/time-accounting.rst:51
+#: ../manage/time-accounting.rst:53
 msgid "Shows ``quarter-hour(s)`` as the unit next to the time value."
 msgstr "Mostra ``quarto d'ora(i)`` come unità accanto al valore del tempo."
 
-#: ../manage/time-accounting.rst:52
+#: ../manage/time-accounting.rst:54
 msgid "minute(s)"
 msgstr "minuto(i)"
 
-#: ../manage/time-accounting.rst:53
+#: ../manage/time-accounting.rst:55
 msgid "Shows ``minute(s)`` as the unit next to the time value."
 msgstr "Mostra ``minuto(i)`` come unità accanto al valore del tempo."
 
-#: ../manage/time-accounting.rst:55
+#: ../manage/time-accounting.rst:57
 msgid "custom unit"
 msgstr "unità personalizzata"
 
-#: ../manage/time-accounting.rst:55
+#: ../manage/time-accounting.rst:57
 msgid "Shows a custom unit that can be specified as free input."
 msgstr ""
 "Mostra un'unità personalizzata che può essere specificata come input libero."
@@ -15850,7 +15904,7 @@ msgstr ""
 msgid "Time Accounting Unit"
 msgstr "Unità di Contabilità del Tempo"
 
-#: ../manage/time-accounting.rst:62
+#: ../manage/time-accounting.rst:64
 msgid ""
 "The unit is only displayed to make it easier for agents to account their "
 "time! No numerical transformation will be applied to the values, not even if "
@@ -15867,11 +15921,11 @@ msgstr ""
 msgid "Time Accounting Unit when Recording"
 msgstr "Unità di contabilità del tempo durante la registrazione"
 
-#: ../manage/time-accounting.rst:72
+#: ../manage/time-accounting.rst:74
 msgid "Activity Types"
 msgstr "Tipi di attività"
 
-#: ../manage/time-accounting.rst:74
+#: ../manage/time-accounting.rst:76
 msgid ""
 "**Activity Types** can be used to group the different ticket time accounting "
 "entries together. For example, entries that are relevant to a \"Billing\" "
@@ -15885,7 +15939,7 @@ msgstr ""
 msgid "Time Accounting Activity Types"
 msgstr "Tipologie di attività di contabilità del tempo"
 
-#: ../manage/time-accounting.rst:81
+#: ../manage/time-accounting.rst:83
 msgid ""
 "When you enable the recording of the **Activity Type**, the agents will be "
 "able to select a type from this list."
@@ -15897,7 +15951,7 @@ msgstr ""
 msgid "Time Accounting Activity Type Selection for Agents"
 msgstr "Selezione del Tipo di Attività di Contabilità del Tempo per gli Agenti"
 
-#: ../manage/time-accounting.rst:88
+#: ../manage/time-accounting.rst:90
 msgid ""
 "Additionally, a column with an associated activity type will be rendered for "
 "an entry in the **Activity** table under the **Accounted Time** tab."
@@ -15906,7 +15960,7 @@ msgstr ""
 "per una voce nella tabella **Attività** sotto la scheda **Tempo "
 "Contabilizzato**."
 
-#: ../manage/time-accounting.rst:91
+#: ../manage/time-accounting.rst:93
 msgid ""
 "You can manage available activity types in this screen like any other Zammad "
 "object. Only active types will be available for the selection when recording "
@@ -15923,7 +15977,7 @@ msgstr ""
 msgid "New Time Accounting Activity Type Dialog"
 msgstr "Finestra di dialogo Nuovo Tipo di Attività di Contabilità del Tempo"
 
-#: ../manage/time-accounting.rst:100
+#: ../manage/time-accounting.rst:102
 msgid ""
 "Activity types can be set as default, and in that case they will be pre-"
 "selected for the agents when they are asked to account their time. It is "
@@ -15936,11 +15990,11 @@ msgstr ""
 "attività predefinito, nel qual caso nessun tipo verrà pre-selezionato e gli "
 "agenti potranno fare la loro scelta."
 
-#: ../manage/time-accounting.rst:106
+#: ../manage/time-accounting.rst:108
 msgid "Accounted Time"
 msgstr "Tempo Contabilizzato"
 
-#: ../manage/time-accounting.rst:108
+#: ../manage/time-accounting.rst:110
 msgid ""
 "Under the **Accounted Time** tab, Zammad provides a section for reviewing "
 "all accounted times for your tickets. Accounted times are displayed per "
@@ -15950,7 +16004,7 @@ msgstr ""
 "rivedere tutti i tempi contabilizzati per i tuoi ticket. I tempi "
 "contabilizzati sono visualizzati per anno e mese."
 
-#: ../manage/time-accounting.rst:112
+#: ../manage/time-accounting.rst:114
 msgid ""
 "If you have tickets that are overlapping several months, you can "
 "differentiate by *time units* and *time units total* (e.g. to allow partial "
@@ -15960,11 +16014,11 @@ msgstr ""
 "*unità di tempo* e *unità di tempo totali* (ad esempio, per consentire la "
 "fatturazione parziale) nel file scaricato."
 
-#: ../manage/time-accounting.rst:123
+#: ../manage/time-accounting.rst:125
 msgid "Select the right month"
 msgstr "Seleziona il mese corretto"
 
-#: ../manage/time-accounting.rst:117
+#: ../manage/time-accounting.rst:119
 msgid ""
 "Usually you want to bill accounted time of other months than the current "
 "one. Just select the relevant year and month to receive the accounted times "
@@ -15980,11 +16034,11 @@ msgstr ""
 "Screenshot che mostra una selezione per anno e mese sulla contabilità del "
 "tempo"
 
-#: ../manage/time-accounting.rst:186
+#: ../manage/time-accounting.rst:188
 msgid "Tickets and their accounted time"
 msgstr "Ticket e il loro tempo contabilizzato"
 
-#: ../manage/time-accounting.rst:126
+#: ../manage/time-accounting.rst:128
 msgid ""
 "Zammad allows you to receive the accounted information just like you need "
 "them. For this you currently have four options to review and also download "
@@ -15994,7 +16048,7 @@ msgstr ""
 "come le desideri. Per questo hai attualmente quattro opzioni per rivedere e "
 "anche scaricare i dati pertinenti come CSV."
 
-#: ../manage/time-accounting.rst:130
+#: ../manage/time-accounting.rst:132
 msgid ""
 "To download the CSV data, use the download button right next to each heading "
 "(e.g. \"Ticket\")."
@@ -16002,11 +16056,11 @@ msgstr ""
 "Per scaricare i dati CSV, usa il pulsante di download accanto a ciascuna "
 "intestazione (ad esempio, \"Ticket\")."
 
-#: ../manage/time-accounting.rst:133
+#: ../manage/time-accounting.rst:135
 msgid "This can also be automated with API calls."
 msgstr "Questo può anche essere automatizzato con chiamate API."
 
-#: ../manage/time-accounting.rst:136
+#: ../manage/time-accounting.rst:138
 msgid ""
 "Only the first 20 entries are shown for each table. To see all of them, "
 "simply download the records in CSV."
@@ -16014,11 +16068,11 @@ msgstr ""
 "Solo le prime 20 voci sono mostrate per ogni tabella. Per vederle tutte, "
 "scarica semplicemente i record in CSV."
 
-#: ../manage/time-accounting.rst:153
+#: ../manage/time-accounting.rst:155
 msgid "Activity"
 msgstr "Attività"
 
-#: ../manage/time-accounting.rst:140
+#: ../manage/time-accounting.rst:142
 msgid ""
 "This filter works similar to the ticket filter, with one exception: You'll "
 "find each *individual* time accounting step of your agents. This is what "
@@ -16029,47 +16083,47 @@ msgstr ""
 "agenti. Questo è ciò che vedresti anche nella cronologia del ticket prima di "
 "Zammad 5.2."
 
-#: ../manage/time-accounting.rst:144 ../manage/time-accounting.rst:158
-#: ../manage/time-accounting.rst:175
+#: ../manage/time-accounting.rst:146 ../manage/time-accounting.rst:160
+#: ../manage/time-accounting.rst:177
 msgid "In this list you'll see the following ticket information:"
 msgstr "In questo elenco vedrai le seguenti informazioni sul ticket:"
 
-#: ../manage/time-accounting.rst:146 ../manage/time-accounting.rst:160
+#: ../manage/time-accounting.rst:148 ../manage/time-accounting.rst:162
 #: ../settings/ticket.rst:103
 msgid "Number"
 msgstr "Numero"
 
-#: ../manage/time-accounting.rst:148 ../manage/time-accounting.rst:162
-#: ../manage/time-accounting.rst:179 ../manage/time-accounting.rst:177
+#: ../manage/time-accounting.rst:150 ../manage/time-accounting.rst:164
+#: ../manage/time-accounting.rst:181 ../manage/time-accounting.rst:179
 #: ../misc/object-conditions/basics.rst:37
 #: ../misc/object-conditions/basics.rst:89
 #: ../misc/object-conditions/basics.rst:171
 msgid "Customer"
 msgstr "Cliente"
 
-#: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
-#: ../manage/time-accounting.rst:178
+#: ../manage/time-accounting.rst:151 ../manage/time-accounting.rst:165
+#: ../manage/time-accounting.rst:180
 msgid "Organization of customer (if applicable)"
 msgstr "Organizzazione del cliente (se applicabile)"
 
-#: ../manage/time-accounting.rst:150
+#: ../manage/time-accounting.rst:152
 msgid "Agent that accounted the time"
 msgstr "Agente che ha registrato il tempo"
 
-#: ../manage/time-accounting.rst:151
+#: ../manage/time-accounting.rst:153
 msgid "Time units accounted in the current activity"
 msgstr "Unità di tempo contabilizzate nell'attività corrente"
 
-#: ../manage/time-accounting.rst:152
+#: ../manage/time-accounting.rst:154
 msgid "Activity type (if enabled)"
 msgstr "Tipo di attività (se abilitato)"
 
-#: ../manage/time-accounting.rst:153 ../manage/time-accounting.rst:167
+#: ../manage/time-accounting.rst:155 ../manage/time-accounting.rst:169
 #: ../system/audit-logs.rst:76
 msgid "Created at"
 msgstr "Creato il"
 
-#: ../manage/time-accounting.rst:168 ../misc/object-conditions/basics.rst:26
+#: ../manage/time-accounting.rst:170 ../misc/object-conditions/basics.rst:26
 #: ../misc/object-conditions/basics.rst:90
 #: ../misc/object-conditions/basics.rst:126
 #: ../misc/object-conditions/basics.rst:139
@@ -16085,28 +16139,28 @@ msgstr "Creato il"
 msgid "Ticket"
 msgstr "Ticket"
 
-#: ../manage/time-accounting.rst:156
+#: ../manage/time-accounting.rst:158
 msgid "This filter contains all relevant tickets from the selected month."
 msgstr "Questo filtro contiene tutti i ticket pertinenti del mese selezionato."
 
-#: ../manage/time-accounting.rst:164
+#: ../manage/time-accounting.rst:166
 msgid "Agent currently assigned (ticket owner)"
 msgstr "Agente attualmente assegnato (proprietario del ticket)"
 
-#: ../manage/time-accounting.rst:165 ../manage/time-accounting.rst:179
+#: ../manage/time-accounting.rst:167 ../manage/time-accounting.rst:181
 msgid "Time units accounted in the current month"
 msgstr "Unità di tempo contabilizzate nel mese corrente"
 
-#: ../manage/time-accounting.rst:166
+#: ../manage/time-accounting.rst:168
 msgid "Time units total (time accounted during ticket life)"
 msgstr ""
 "Unità di tempo totali (tempo contabilizzato durante la vita del ticket)"
 
-#: ../manage/time-accounting.rst:168
+#: ../manage/time-accounting.rst:170
 msgid "Closed at (if applicable)"
 msgstr "Chiuso il (se applicabile)"
 
-#: ../manage/time-accounting.rst:171
+#: ../manage/time-accounting.rst:173
 msgid ""
 "This provides you a per user filter on accounted time units. Each user has a "
 "total of time accounted in the current month (over all applicable tickets)."
@@ -16115,13 +16169,13 @@ msgstr ""
 "Ogni utente ha un totale di tempo contabilizzato nel mese corrente (su tutti "
 "i ticket applicabili)."
 
-#: ../manage/time-accounting.rst:186 ../misc/object-conditions/basics.rst:28
+#: ../manage/time-accounting.rst:188 ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:115
 #: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:16
 msgid "Organization"
 msgstr "Organizzazione"
 
-#: ../manage/time-accounting.rst:182
+#: ../manage/time-accounting.rst:184
 msgid ""
 "This provides a list of all organizations where customers have caused "
 "accounted time in that month."
@@ -16129,7 +16183,7 @@ msgstr ""
 "Questo fornisce un elenco di tutte le organizzazioni in cui i clienti hanno "
 "causato tempo contabilizzato in quel mese."
 
-#: ../manage/time-accounting.rst:185
+#: ../manage/time-accounting.rst:187
 msgid ""
 "You can also see entries for customers that are part of a primary "
 "organization. Users without an organization can be found in the Customer "
@@ -20134,7 +20188,7 @@ msgstr "Disponibile solo nei trigger."
 #: ../misc/object-conditions/basics.rst:185
 #: ../misc/object-conditions/basics.rst:209
 #: ../misc/object-conditions/basics.rst:219
-#: ../system/core-workflows/condition-operators.rst:50
+#: ../system/core-workflows/condition-operators.rst:64
 msgid "is"
 msgstr "è"
 
@@ -20151,7 +20205,7 @@ msgstr "è"
 #: ../misc/object-conditions/basics.rst:186
 #: ../misc/object-conditions/basics.rst:210
 #: ../misc/object-conditions/basics.rst:220
-#: ../system/core-workflows/condition-operators.rst:72
+#: ../system/core-workflows/condition-operators.rst:86
 msgid "is not"
 msgstr "non è"
 
@@ -20222,7 +20276,7 @@ msgstr "utente specifico"
 #: ../misc/object-conditions/basics.rst:97
 #: ../misc/object-conditions/basics.rst:155
 #: ../misc/object-conditions/basics.rst:204
-#: ../system/core-workflows/condition-operators.rst:86
+#: ../system/core-workflows/condition-operators.rst:100
 msgid "not set"
 msgstr "non impostato"
 
@@ -20380,22 +20434,58 @@ msgid "Checks tags of a ticket."
 msgstr "Controlla i tag di un ticket."
 
 #: ../misc/object-conditions/basics.rst:193
-#: ../system/core-workflows/condition-operators.rst:32
+#: ../misc/object-conditions/basics.rst:516
+#: ../misc/object-conditions/basics.rst:550
+#: ../misc/object-conditions/basics.rst:587
+#: ../misc/object-conditions/basics.rst:619
+#: ../system/core-workflows/condition-operators.rst:38
+#: ../system/core-workflows/condition-operators.rst:150
+#: ../system/core-workflows/condition-operators.rst:189
+#: ../system/core-workflows/condition-operators.rst:229
+#: ../system/core-workflows/condition-operators.rst:272
+#: ../system/core-workflows/condition-operators.rst:312
 msgid "contains all"
 msgstr "contiene tutti"
 
 #: ../misc/object-conditions/basics.rst:194
-#: ../system/core-workflows/condition-operators.rst:38
+#: ../misc/object-conditions/basics.rst:513
+#: ../misc/object-conditions/basics.rst:547
+#: ../misc/object-conditions/basics.rst:584
+#: ../misc/object-conditions/basics.rst:616
+#: ../system/core-workflows/condition-operators.rst:49
+#: ../system/core-workflows/condition-operators.rst:147
+#: ../system/core-workflows/condition-operators.rst:186
+#: ../system/core-workflows/condition-operators.rst:226
+#: ../system/core-workflows/condition-operators.rst:269
+#: ../system/core-workflows/condition-operators.rst:309
 msgid "contains one"
 msgstr "contiene uno"
 
 #: ../misc/object-conditions/basics.rst:195
-#: ../system/core-workflows/condition-operators.rst:34
+#: ../misc/object-conditions/basics.rst:519
+#: ../misc/object-conditions/basics.rst:553
+#: ../misc/object-conditions/basics.rst:590
+#: ../misc/object-conditions/basics.rst:622
+#: ../system/core-workflows/condition-operators.rst:41
+#: ../system/core-workflows/condition-operators.rst:160
+#: ../system/core-workflows/condition-operators.rst:198
+#: ../system/core-workflows/condition-operators.rst:238
+#: ../system/core-workflows/condition-operators.rst:281
+#: ../system/core-workflows/condition-operators.rst:321
 msgid "contains all not"
 msgstr "non contiene tutti"
 
 #: ../misc/object-conditions/basics.rst:196
-#: ../system/core-workflows/condition-operators.rst:40
+#: ../misc/object-conditions/basics.rst:522
+#: ../misc/object-conditions/basics.rst:556
+#: ../misc/object-conditions/basics.rst:593
+#: ../misc/object-conditions/basics.rst:625
+#: ../system/core-workflows/condition-operators.rst:52
+#: ../system/core-workflows/condition-operators.rst:157
+#: ../system/core-workflows/condition-operators.rst:195
+#: ../system/core-workflows/condition-operators.rst:235
+#: ../system/core-workflows/condition-operators.rst:278
+#: ../system/core-workflows/condition-operators.rst:318
 msgid "contains one not"
 msgstr "non contiene uno"
 
@@ -20416,7 +20506,7 @@ msgid "Checks if time is accounted."
 msgstr "Controlla se il tempo è contabilizzato."
 
 #: ../misc/object-conditions/basics.rst:203
-#: ../system/core-workflows/condition-operators.rst:74
+#: ../system/core-workflows/condition-operators.rst:88
 msgid "is set"
 msgstr "è impostato"
 
@@ -20477,8 +20567,8 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:334
 #: ../misc/object-conditions/basics.rst:381
 #: ../misc/object-conditions/basics.rst:392
-#: ../misc/object-conditions/basics.rst:410
 #: ../misc/object-conditions/basics.rst:421
+#: ../misc/object-conditions/basics.rst:432
 msgid "Available operators for matching:"
 msgstr "Operatori disponibili per il confronto:"
 
@@ -20566,7 +20656,7 @@ msgstr "**non contiene**"
 #: ../misc/object-conditions/basics.rst:269
 #: ../misc/object-conditions/basics.rst:284
 #: ../misc/object-conditions/basics.rst:385
-#: ../misc/object-conditions/basics.rst:414
+#: ../misc/object-conditions/basics.rst:425
 msgid "**has changed**"
 msgstr "**è cambiato**"
 
@@ -20581,14 +20671,14 @@ msgstr "Controlla se un campo di tipo booleano è vero."
 #: ../misc/object-conditions/basics.rst:267
 #: ../misc/object-conditions/basics.rst:278
 #: ../misc/object-conditions/basics.rst:383
-#: ../misc/object-conditions/basics.rst:412
+#: ../misc/object-conditions/basics.rst:423
 msgid "**is**"
 msgstr "**è**"
 
 #: ../misc/object-conditions/basics.rst:268
 #: ../misc/object-conditions/basics.rst:279
 #: ../misc/object-conditions/basics.rst:384
-#: ../misc/object-conditions/basics.rst:413
+#: ../misc/object-conditions/basics.rst:424
 msgid "**is not**"
 msgstr "**non è**"
 
@@ -20891,7 +20981,9 @@ msgid "**contains all**:"
 msgstr "**contiene tutti**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if all given field values are selected."
+#, fuzzy
+#| msgid "Matches if all given field values are selected."
+msgid "Matches if **all** given field values are selected (AND logic)."
 msgstr "Corrisponde se tutti i valori del campo forniti sono selezionati."
 
 #: ../misc/object-conditions/basics.rst:0
@@ -20899,7 +20991,10 @@ msgid "**contains one**:"
 msgstr "**contiene uno**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if one specific given field value is selected."
+#, fuzzy
+#| msgid "Matches if one specific given field value is selected."
+msgid ""
+"Matches if **at least one** of the given field values is selected (OR logic)."
 msgstr "Corrisponde se uno specifico valore del campo fornito è selezionato."
 
 #: ../misc/object-conditions/basics.rst:0
@@ -20907,23 +21002,37 @@ msgid "**contains all not**:"
 msgstr "**non contiene tutti**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if all given field values are not selected."
-msgstr "Corrisponde se tutti i valori del campo forniti non sono selezionati."
+msgid ""
+"Matches if **not all** given field values are selected (at least one is "
+"missing). This means \"not all of\", not \"none of\"."
+msgstr ""
 
 #: ../misc/object-conditions/basics.rst:0
 msgid "**contains one not**:"
 msgstr "**non contiene uno**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if one specific given field value is not selected."
-msgstr ""
-"Corrisponde se uno specifico valore del campo fornito non è selezionato."
+#, fuzzy
+#| msgid "Matches if none of the specified values are present."
+msgid ""
+"Matches if **none** of the given field values are selected. This means "
+"\"none of\", not \"not all of\"."
+msgstr "Corrisponde se nessuno dei valori specificati è presente."
 
-#: ../misc/object-conditions/basics.rst:405 ../system/objects/types.rst:135
+#: ../misc/object-conditions/basics.rst:408
+msgid ""
+"In :doc:`core workflows </system/core-workflows>`, these operators have "
+"different semantics. See :ref:`core workflow condition operators <core-"
+"workflow-condition-examples>` for details. Example scenarios for the "
+"operators described here can be found in :ref:`multi-select-operator-"
+"examples` below."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:416 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr "Campo a selezione singola ad albero"
 
-#: ../misc/object-conditions/basics.rst:407
+#: ../misc/object-conditions/basics.rst:418
 msgid ""
 "Checks if a selected field value match the attribute value. Selecting more "
 "than one value in the condition will act like an \"OR\" clause."
@@ -20932,11 +21041,11 @@ msgstr ""
 "dell'attributo. Selezionare più di un valore nella condizione agirà come una "
 "clausola \"OR\"."
 
-#: ../misc/object-conditions/basics.rst:417 ../system/objects/types.rst:148
+#: ../misc/object-conditions/basics.rst:428 ../system/objects/types.rst:148
 msgid "Multiple Tree Selection Field"
 msgstr "Campo a selezione multipla ad albero"
 
-#: ../misc/object-conditions/basics.rst:419
+#: ../misc/object-conditions/basics.rst:430
 msgid "Checks if selected field value(s) match the attribute value(s)."
 msgstr ""
 "Controlla se il/i valore/i del campo selezionato corrisponde/ono al/ai "
@@ -20958,23 +21067,23 @@ msgstr "**non contiene tutti**"
 msgid "**contains one not**"
 msgstr "**non contiene uno**"
 
-#: ../misc/object-conditions/basics.rst:433
+#: ../misc/object-conditions/basics.rst:447
 msgid "Additional Information and Remarks"
 msgstr "Informazioni aggiuntive e note"
 
-#: ../misc/object-conditions/basics.rst:442
+#: ../misc/object-conditions/basics.rst:456
 msgid "Ticket context conditions do not support:"
 msgstr "Le condizioni del contesto ticket non supportano:"
 
-#: ../misc/object-conditions/basics.rst:439
+#: ../misc/object-conditions/basics.rst:453
 msgid "regular expressions"
 msgstr "espressioni regolari"
 
-#: ../misc/object-conditions/basics.rst:440
+#: ../misc/object-conditions/basics.rst:454
 msgid "case sensitive string conditions"
 msgstr "condizioni stringa sensibili alle maiuscole/minuscole"
 
-#: ../misc/object-conditions/basics.rst:441
+#: ../misc/object-conditions/basics.rst:455
 msgid ""
 "Basic conditions do not support the same attribute to be selected more than "
 "once"
@@ -20982,36 +21091,36 @@ msgstr ""
 "Le condizioni di base non supportano la selezione dello stesso attributo più "
 "di una volta"
 
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:464
 msgid "**has changed** conditions:"
 msgstr "condizioni ``è cambiato``:"
 
-#: ../misc/object-conditions/basics.rst:445
+#: ../misc/object-conditions/basics.rst:459
 msgid "Are only available for ticket attributes and don't affect:"
 msgstr ""
 "Sono disponibili solo per gli attributi del ticket e non influiscono su:"
 
-#: ../misc/object-conditions/basics.rst:447
+#: ../misc/object-conditions/basics.rst:461
 msgid "Ticket articles attributes"
 msgstr "Attributi degli articoli del ticket"
 
-#: ../misc/object-conditions/basics.rst:448
+#: ../misc/object-conditions/basics.rst:462
 msgid "Organization attributes"
 msgstr "Attributi dell'organizzazione"
 
-#: ../misc/object-conditions/basics.rst:449
+#: ../misc/object-conditions/basics.rst:463
 msgid "User attributes"
 msgstr "Attributi utente"
 
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:464
 msgid "Group attributes"
 msgstr "Attributi del gruppo"
 
-#: ../misc/object-conditions/basics.rst:463
+#: ../misc/object-conditions/basics.rst:477
 msgid "Differences in input fields:"
 msgstr "Differenze nei campi di input:"
 
-#: ../misc/object-conditions/basics.rst:453
+#: ../misc/object-conditions/basics.rst:467
 msgid ""
 "Please note that the input field for tokens doesn't support the comma as "
 "separator (as in the input field for tags). If you use the comma in the "
@@ -21021,7 +21130,7 @@ msgstr ""
 "come separatore (come nel campo di input per i tag). Se si utilizza la "
 "virgola nel campo di input dei token, la virgola viene inclusa nel token."
 
-#: ../misc/object-conditions/basics.rst:457
+#: ../misc/object-conditions/basics.rst:471
 msgid "**Example**:"
 msgstr "**Esempio**:"
 
@@ -21029,7 +21138,7 @@ msgstr "**Esempio**:"
 msgid "Example of comma usage in token input field"
 msgstr "Esempio di utilizzo della virgola nel campo di input token"
 
-#: ../misc/object-conditions/basics.rst:462
+#: ../misc/object-conditions/basics.rst:476
 msgid ""
 "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
 "in one token)."
@@ -21037,15 +21146,265 @@ msgstr ""
 "``A`` aggiunto con invio/tab, ``B`` e ``C`` separati da virgola (risultando "
 "in un unico token)."
 
-#: ../misc/object-conditions/basics.rst:468
+#: ../misc/object-conditions/basics.rst:482
+msgid "Multi-Select Operator Examples"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:484
+msgid ""
+"The ``contains`` family of operators for multi-select fields compares two "
+"sets of values: the values currently in the field and the values specified "
+"in the condition. The diagrams below show the condition values as an orange "
+"circle and the field values as a blue circle."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:489
+msgid ""
+"Be aware that these operators behave **differently** in :doc:`core workflows "
+"</system/core-workflows>`. See :ref:`core workflow condition operators <core-"
+"workflow-condition-examples>` for a side by side comparison."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:495
+#: ../system/core-workflows/condition-operators.rst:165
+msgid "Example 1: Condition A, B - Field A, B, C"
+msgstr "Esempio 1: Condizione A, B - Campo A, B, C"
+
+#: ../misc/object-conditions/basics.rst:497
+#: ../system/core-workflows/condition-operators.rst:167
+msgid ""
+"In this scenario, the field holds the values A, B and C, while the condition "
+"asks for the values A and B."
+msgstr ""
+"In questo scenario, il campo contiene i valori A, B e C, mentre la "
+"condizione richiede i valori A e B."
+
+#: ../misc/object-conditions/basics.rst:503
+#: ../system/core-workflows/condition-operators.rst:173
+msgid ""
+"Venn diagram of condition values A, B and field values A, B, C. A and B are "
+"in both circles, C only in the field circle."
+msgstr ""
+"Diagramma di Venn dei valori delle condizioni A, B e dei valori del campo A, "
+"B, C. A e B sono presenti in entrambi i cerchi, C solo nel cerchio del campo."
+
+#: ../misc/object-conditions/basics.rst:503
+#: ../system/core-workflows/condition-operators.rst:173
+msgid "Condition values ``A, B`` overlap with field values ``A, B, C``."
+msgstr ""
+"I valori delle condizioni ``A, B`` si sovrappongono ai valori dei campi ``A, "
+"B, C``."
+
+#: ../misc/object-conditions/basics.rst:510
+#: ../misc/object-conditions/basics.rst:544
+#: ../misc/object-conditions/basics.rst:581
+#: ../misc/object-conditions/basics.rst:613
+#: ../system/core-workflows/condition-operators.rst:21
+#: ../system/core-workflows/condition-operators.rst:141
+#: ../system/core-workflows/condition-operators.rst:180
+#: ../system/core-workflows/condition-operators.rst:220
+#: ../system/core-workflows/condition-operators.rst:263
+#: ../system/core-workflows/condition-operators.rst:303
+msgid "Operator"
+msgstr "Operatore"
+
+#: ../misc/object-conditions/basics.rst:511
+#: ../misc/object-conditions/basics.rst:545
+#: ../misc/object-conditions/basics.rst:582
+#: ../misc/object-conditions/basics.rst:614
+#: ../system/core-workflows/condition-operators.rst:181
+#: ../system/core-workflows/condition-operators.rst:221
+#: ../system/core-workflows/condition-operators.rst:264
+#: ../system/core-workflows/condition-operators.rst:304
+msgid "Matches?"
+msgstr "Corrisponde?"
+
+#: ../misc/object-conditions/basics.rst:512
+#: ../misc/object-conditions/basics.rst:546
+#: ../misc/object-conditions/basics.rst:583
+#: ../misc/object-conditions/basics.rst:615
+#: ../system/core-workflows/condition-operators.rst:182
+#: ../system/core-workflows/condition-operators.rst:222
+#: ../system/core-workflows/condition-operators.rst:265
+#: ../system/core-workflows/condition-operators.rst:305
+msgid "Why"
+msgstr "Perché"
+
+#: ../misc/object-conditions/basics.rst:515
+#: ../system/core-workflows/condition-operators.rst:185
+msgid "``A`` and ``B`` are in both sets (OR logic)."
+msgstr "``A`` e ``B`` appartengono a entrambi gli insiemi (logica OR)."
+
+#: ../misc/object-conditions/basics.rst:518
+#: ../system/core-workflows/condition-operators.rst:191
+msgid "Both ``A`` and ``B`` are present (AND logic)."
+msgstr "Sono presenti sia ``A`` che ``B`` (logica AND)."
+
+#: ../misc/object-conditions/basics.rst:521
+msgid "All condition values are present in the field."
+msgstr "Tutti i valori delle condizioni sono presenti nel campo."
+
+#: ../misc/object-conditions/basics.rst:524
+msgid "The field has values in common with the condition."
+msgstr "Il campo ha valori in comune con la condizione."
+
+#: ../misc/object-conditions/basics.rst:527
+#: ../system/core-workflows/condition-operators.rst:203
+msgid "Example 2: Condition A, B, C - Field C, D"
+msgstr "Esempio 2: Condizione A, B, C - Campo C, D"
+
+#: ../misc/object-conditions/basics.rst:529
+#: ../system/core-workflows/condition-operators.rst:205
+msgid ""
+"In this scenario, the field holds the values C and D. The condition value C "
+"is present in the field, while A and B are not."
+msgstr ""
+"In questo scenario, il campo contiene i valori C e D. Il valore della "
+"condizione C è presente nel campo, mentre A e B non lo sono."
+
+#: ../misc/object-conditions/basics.rst:536
+#: ../system/core-workflows/condition-operators.rst:212
+msgid ""
+"Venn diagram of condition values A, B, C and field values C, D.\n"
+"Only C is in both circles."
+msgstr ""
+"Diagramma di Venn dei valori delle condizioni A, B, C e dei valori dei campi "
+"C, D.\n"
+"Solo C è presente in entrambi i cerchi."
+
+#: ../misc/object-conditions/basics.rst:536
+#: ../system/core-workflows/condition-operators.rst:212
+msgid ""
+"Condition values ``A, B, C`` partially overlap with field values ``C, D``."
+msgstr ""
+"I valori delle condizioni ``A, B, C`` si sovrappongono parzialmente ai "
+"valori dei campi ``C, D``."
+
+#: ../misc/object-conditions/basics.rst:549
+#: ../system/core-workflows/condition-operators.rst:225
+msgid "``C`` is in both sets (OR logic)."
+msgstr "``C`` è presente in entrambi gli insiemi (logica OR)."
+
+#: ../misc/object-conditions/basics.rst:552
+#: ../system/core-workflows/condition-operators.rst:231
+msgid "Only ``C`` of the three condition values is present."
+msgstr "È presente solo il valore ``C`` dei tre valori di condizione."
+
+#: ../misc/object-conditions/basics.rst:555
+#: ../misc/object-conditions/basics.rst:592
+msgid "``A`` and ``B`` are missing from the field."
+msgstr "``A`` e ``B`` mancano dal campo."
+
+#: ../misc/object-conditions/basics.rst:558
+msgid "``C`` is in both the field and the condition."
+msgstr "``C`` è presente sia nel campo che nella condizione."
+
+#: ../misc/object-conditions/basics.rst:560
+msgid ""
+"This partial overlap is where the two \"not\" operators part ways: "
+"``contains all not`` matches because a single condition value is missing, "
+"while ``contains one not`` does not match because the one common value is "
+"enough to block it."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:566
+#: ../system/core-workflows/condition-operators.rst:248
+msgid "Example 3: Condition A, B - Field C, D"
+msgstr "Esempio 3: Condizione A, B - Campo C, D"
+
+#: ../misc/object-conditions/basics.rst:568
+#: ../system/core-workflows/condition-operators.rst:250
+msgid ""
+"In this scenario, the field holds the values C and D, which have nothing in "
+"common with the condition values A and B."
+msgstr ""
+"In questo scenario, il campo contiene i valori C e D, che non hanno nulla in "
+"comune con i valori della condizione A e B."
+
+#: ../misc/object-conditions/basics.rst:574
+#: ../system/core-workflows/condition-operators.rst:256
+msgid ""
+"Venn diagram of condition values A, B and field values C, D. The two circles "
+"do not overlap."
+msgstr ""
+"Diagramma di Venn dei valori delle condizioni A, B e dei valori dei campi C, "
+"D. I due cerchi non si sovrappongono."
+
+#: ../misc/object-conditions/basics.rst:574
+#: ../system/core-workflows/condition-operators.rst:256
+msgid "Condition values ``A, B`` have no overlap with field values ``C, D``."
+msgstr ""
+"I valori delle condizioni ``A, B`` non si sovrappongono ai valori dei campi "
+"``C, D``."
+
+#: ../misc/object-conditions/basics.rst:586
+#: ../system/core-workflows/condition-operators.rst:268
+msgid "No value is in both sets."
+msgstr "Nessun valore è presente in entrambi gli insiemi."
+
+#: ../misc/object-conditions/basics.rst:589
+#: ../system/core-workflows/condition-operators.rst:274
+msgid "Neither ``A`` nor ``B`` is present."
+msgstr "Né ``A`` né ``B`` sono presenti."
+
+#: ../misc/object-conditions/basics.rst:595
+#: ../misc/object-conditions/basics.rst:627
+#: ../system/core-workflows/condition-operators.rst:159
+#: ../system/core-workflows/condition-operators.rst:161
+#: ../system/core-workflows/condition-operators.rst:283
+msgid "The field has no value in common with the condition."
+msgstr "Il campo non ha alcun valore in comune con la condizione."
+
+#: ../misc/object-conditions/basics.rst:598
+#: ../system/core-workflows/condition-operators.rst:288
+msgid "Example 4: Condition A, B - Field is empty"
+msgstr "Esempio 4: Condizione A, B - Il campo è vuoto"
+
+#: ../misc/object-conditions/basics.rst:600
+#: ../system/core-workflows/condition-operators.rst:290
+msgid ""
+"In this scenario, the field holds no values at all, while the condition asks "
+"for the values A and B."
+msgstr ""
+"In questo scenario, il campo non contiene alcun valore, mentre la condizione "
+"richiede i valori A e B."
+
+#: ../misc/object-conditions/basics.rst:606
+#: ../system/core-workflows/condition-operators.rst:296
+msgid ""
+"Venn diagram of condition values A, B and an empty field. The two circles do "
+"not overlap."
+msgstr ""
+"Diagramma di Venn dei valori delle condizioni A, B e di un campo vuoto. I "
+"due cerchi non si sovrappongono."
+
+#: ../misc/object-conditions/basics.rst:606
+#: ../system/core-workflows/condition-operators.rst:296
+msgid "The field holds no values at all."
+msgstr "Il campo non contiene alcun valore."
+
+#: ../misc/object-conditions/basics.rst:618
+#: ../misc/object-conditions/basics.rst:621
+#: ../system/core-workflows/condition-operators.rst:308
+#: ../system/core-workflows/condition-operators.rst:314
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid "No value is present."
+msgstr "Corrisponde se uno dei valori specificati è presente."
+
+#: ../misc/object-conditions/basics.rst:624
+msgid "No condition value is present in the field."
+msgstr "Nel campo non è presente alcun valore di condizione."
+
+#: ../misc/object-conditions/basics.rst:632
 msgid "Regex"
 msgstr "Regex"
 
-#: ../misc/object-conditions/basics.rst:473
+#: ../misc/object-conditions/basics.rst:637
 msgid "Regex support"
 msgstr "Supporto Regex"
 
-#: ../misc/object-conditions/basics.rst:471
+#: ../misc/object-conditions/basics.rst:635
 msgid ""
 "**matches regex** and **does not match regex** are supported only in "
 "Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket "
@@ -21055,11 +21414,11 @@ msgstr ""
 "in Trigger, selettore Contabilità oraria, Filtri Postmaster, Assegnazione "
 "automatica ticket e Flusso di lavoro principale."
 
-#: ../misc/object-conditions/basics.rst:478
+#: ../misc/object-conditions/basics.rst:642
 msgid "\"Old\" style ``regex:...`` conditions"
 msgstr "Condizioni in stile \"vecchio\" ``regex:...``"
 
-#: ../misc/object-conditions/basics.rst:476
+#: ../misc/object-conditions/basics.rst:640
 msgid ""
 "If you update your Zammad from 6.0 or prior and you have already conditions "
 "with **contains** or **contains not** including a regex filter (i.e. "
@@ -28498,10 +28857,15 @@ msgstr ""
 "spiegazione dettagliata di molte condizioni e operatori."
 
 #: ../system/core-workflows/condition-operators.rst:8
+#, fuzzy
+#| msgid ""
+#| "Due to differences to other places in Zammad which are also using "
+#| "conditions (e.g. triggers), you can find a dedicated description of "
+#| "operators for core workflows below."
 msgid ""
-"Due to differences to other places in Zammad which are also using conditions "
-"(e.g. triggers), you can find a dedicated description of operators for core "
-"workflows below."
+"Due to differences from other places in Zammad which are also using "
+"conditions (e.g. triggers), you can find a dedicated description of "
+"operators for core workflows below."
 msgstr ""
 "A causa delle differenze rispetto ad altri luoghi in Zammad che utilizzano "
 "anche condizioni (ad es. trigger), di seguito puoi trovare una descrizione "
@@ -28517,205 +28881,237 @@ msgstr ""
 "selezionato e dal suo tipo di campo. Alcuni operatori potrebbero essere "
 "disponibili solo per attributi di sistema (ad es. per \"tag\", \"attivo\")."
 
-#: ../system/core-workflows/condition-operators.rst:20
-msgid "Operator"
-msgstr "Operatore"
-
-#: ../system/core-workflows/condition-operators.rst:22
+#: ../system/core-workflows/condition-operators.rst:23
 msgid "after (absolute)"
 msgstr "dopo (assoluto)"
 
-#: ../system/core-workflows/condition-operators.rst:23
+#: ../system/core-workflows/condition-operators.rst:24
 msgid "Matches if a date/time is after a specific point in time."
 msgstr ""
 "Corrisponde se una data/ora è successiva a un punto specifico nel tempo."
 
-#: ../system/core-workflows/condition-operators.rst:24
+#: ../system/core-workflows/condition-operators.rst:25
 msgid "after (relative)"
 msgstr "dopo (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:25
+#: ../system/core-workflows/condition-operators.rst:26
 msgid "Matches if a time span after a specified event has passed."
 msgstr ""
 "Corrisponde se è trascorso un intervallo di tempo dopo un evento specificato."
 
-#: ../system/core-workflows/condition-operators.rst:26
+#: ../system/core-workflows/condition-operators.rst:27
 msgid "before (absolute)"
 msgstr "prima (assoluto)"
 
-#: ../system/core-workflows/condition-operators.rst:27
+#: ../system/core-workflows/condition-operators.rst:28
 msgid "Matches if a date/time is before a specific point in time."
 msgstr ""
 "Corrisponde se una data/ora è precedente a un punto specifico nel tempo."
 
-#: ../system/core-workflows/condition-operators.rst:28
+#: ../system/core-workflows/condition-operators.rst:29
 msgid "before (relative)"
 msgstr "prima (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:29
+#: ../system/core-workflows/condition-operators.rst:30
 msgid "Matches if a time span after a specified event has not passed."
 msgstr ""
 "Corrisponde se un intervallo di tempo dopo un evento specificato non è "
 "trascorso."
 
-#: ../system/core-workflows/condition-operators.rst:30
+#: ../system/core-workflows/condition-operators.rst:31
+#: ../system/core-workflows/condition-operators.rst:144
+#: ../system/core-workflows/condition-operators.rst:183
+#: ../system/core-workflows/condition-operators.rst:223
+#: ../system/core-workflows/condition-operators.rst:266
+#: ../system/core-workflows/condition-operators.rst:306
 msgid "contains"
 msgstr "contiene"
 
-#: ../system/core-workflows/condition-operators.rst:31
-msgid "Matches if a specified value is present."
-msgstr "Corrisponde se un valore specificato è presente."
-
-#: ../system/core-workflows/condition-operators.rst:33
-msgid "Matches if all of the specified values are present."
-msgstr "Corrisponde se tutti i valori specificati sono presenti."
-
-#: ../system/core-workflows/condition-operators.rst:35
-msgid "Matches if none of the specified values are present."
+#: ../system/core-workflows/condition-operators.rst:32
+#, fuzzy
+#| msgid "Matches if none of the specified values are present."
+msgid ""
+"Matches if **at least one** of the specified values is present in the field "
+"(OR logic)."
 msgstr "Corrisponde se nessuno dei valori specificati è presente."
 
-#: ../system/core-workflows/condition-operators.rst:36
+#: ../system/core-workflows/condition-operators.rst:34
+#: ../system/core-workflows/condition-operators.rst:153
+#: ../system/core-workflows/condition-operators.rst:192
+#: ../system/core-workflows/condition-operators.rst:232
+#: ../system/core-workflows/condition-operators.rst:275
+#: ../system/core-workflows/condition-operators.rst:315
 msgid "contains not"
 msgstr "non contiene"
 
-#: ../system/core-workflows/condition-operators.rst:37
-msgid "Matches if a specified value is not present."
-msgstr "Corrisponde se un valore specificato non è presente."
+#: ../system/core-workflows/condition-operators.rst:35
+msgid ""
+"Matches if the field contains at least one value that is **not** among the "
+"specified values. Also matches if the field is empty."
+msgstr ""
 
 #: ../system/core-workflows/condition-operators.rst:39
-msgid "Matches if one specified value is present."
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid ""
+"Matches if **every** specified value is present in the field (AND logic)."
 msgstr "Corrisponde se uno dei valori specificati è presente."
 
-#: ../system/core-workflows/condition-operators.rst:41
-msgid "Matches if one specified value is not present."
-msgstr "Corrisponde se uno dei valori specificati non è presente."
-
 #: ../system/core-workflows/condition-operators.rst:42
+msgid ""
+"Matches if **none** of the specified values are present in the field. The "
+"field and the condition have no value in common: this means \"contains none "
+"of\", not \"does not contain all of\"."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:46
+msgid ""
+"In triggers and overviews, this operator means \"not all of the specified "
+"values are present\" instead. See the examples section below."
+msgstr ""
+"Nei trigger e nelle panoramiche, questo operatore significa \"non tutti i "
+"valori specificati sono presenti\". Vedi la sezione esempi qui sotto."
+
+#: ../system/core-workflows/condition-operators.rst:50
+#, fuzzy
+#| msgid "Matches if none of the specified values are present."
+msgid ""
+"Same as ``contains``. Matches if **at least one** of the specified values is "
+"present."
+msgstr "Corrisponde se nessuno dei valori specificati è presente."
+
+#: ../system/core-workflows/condition-operators.rst:53
+msgid ""
+"Same as ``contains not``. Matches if the field contains at least one value "
+"that is **not** among the specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:56
 msgid "does not match regex"
 msgstr "non corrisponde a regex"
 
-#: ../system/core-workflows/condition-operators.rst:43
+#: ../system/core-workflows/condition-operators.rst:57
 msgid "Matches if content doesn't fit to regex rule."
 msgstr "Corrisponde se il contenuto non si adatta alla regola regex."
 
-#: ../system/core-workflows/condition-operators.rst:44
+#: ../system/core-workflows/condition-operators.rst:58
 msgid "ends with"
 msgstr "termina con"
 
-#: ../system/core-workflows/condition-operators.rst:45
+#: ../system/core-workflows/condition-operators.rst:59
 msgid "Matches if content ends with specified value."
 msgstr "Corrisponde se il contenuto termina con il valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:46
+#: ../system/core-workflows/condition-operators.rst:60
 msgid "ends with one of"
 msgstr "termina con uno di"
 
-#: ../system/core-workflows/condition-operators.rst:47
+#: ../system/core-workflows/condition-operators.rst:61
 msgid "Matches if content ends with one of the specified values."
 msgstr "Corrisponde se il contenuto termina con uno dei valori specificati."
 
-#: ../system/core-workflows/condition-operators.rst:48
+#: ../system/core-workflows/condition-operators.rst:62
 msgid "from (relative)"
 msgstr "da (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:49
+#: ../system/core-workflows/condition-operators.rst:63
 msgid "Matches if date/time is after a period of time after an event."
 msgstr ""
 "Corrisponde se data/ora è successiva a un periodo di tempo dopo un evento."
 
-#: ../system/core-workflows/condition-operators.rst:51
+#: ../system/core-workflows/condition-operators.rst:65
 msgid "Matches if content is equal to a specified value."
 msgstr "Corrisponde se il contenuto è uguale a un valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:52
+#: ../system/core-workflows/condition-operators.rst:66
 msgid "is any of"
 msgstr "è uno di"
 
-#: ../system/core-workflows/condition-operators.rst:53
+#: ../system/core-workflows/condition-operators.rst:67
 msgid "Matches if content is equal to any of specified values."
 msgstr ""
 "Corrisponde se il contenuto è uguale a uno qualsiasi dei valori specificati."
 
-#: ../system/core-workflows/condition-operators.rst:54
+#: ../system/core-workflows/condition-operators.rst:68
 msgid "is greater than"
 msgstr "è maggiore di"
 
-#: ../system/core-workflows/condition-operators.rst:55
+#: ../system/core-workflows/condition-operators.rst:69
 msgid "Matches if the value is greater than the specified value."
 msgstr "Corrisponde se il valore è maggiore del valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:56
+#: ../system/core-workflows/condition-operators.rst:70
 msgid "is greater than or equal to"
 msgstr "è maggiore o uguale a"
 
-#: ../system/core-workflows/condition-operators.rst:57
+#: ../system/core-workflows/condition-operators.rst:71
 msgid "Matches if the value is greater than or equal to the specified value."
 msgstr "Corrisponde se il valore è maggiore o uguale al valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:58
+#: ../system/core-workflows/condition-operators.rst:72
 msgid "is less than"
 msgstr "è minore di"
 
-#: ../system/core-workflows/condition-operators.rst:59
+#: ../system/core-workflows/condition-operators.rst:73
 msgid "Matches if the value is less than the specified value."
 msgstr "Corrisponde se il valore è inferiore al valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:60
+#: ../system/core-workflows/condition-operators.rst:74
 msgid "is less than or equal to"
 msgstr "è minore o uguale a"
 
-#: ../system/core-workflows/condition-operators.rst:61
+#: ../system/core-workflows/condition-operators.rst:75
 msgid "Matches if the value is less than or equal to the specified value."
 msgstr "Corrisponde se il valore è minore o uguale al valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:62
+#: ../system/core-workflows/condition-operators.rst:76
 msgid "is modified"
 msgstr "è modificato"
 
-#: ../system/core-workflows/condition-operators.rst:63
+#: ../system/core-workflows/condition-operators.rst:77
 msgid "Matches if content is modified."
 msgstr "Corrisponde se il contenuto è modificato."
 
-#: ../system/core-workflows/condition-operators.rst:65
-#: ../system/core-workflows/condition-operators.rst:69
+#: ../system/core-workflows/condition-operators.rst:79
+#: ../system/core-workflows/condition-operators.rst:83
 msgid "True from the moment of changing content until form submit."
 msgstr ""
 "Vero dal momento della modifica del contenuto fino all'invio del modulo."
 
-#: ../system/core-workflows/condition-operators.rst:66
+#: ../system/core-workflows/condition-operators.rst:80
 msgid "is modified to"
 msgstr "è modificato a"
 
-#: ../system/core-workflows/condition-operators.rst:67
+#: ../system/core-workflows/condition-operators.rst:81
 msgid "Matches if content is modified to a specific value."
 msgstr "Corrisponde se il contenuto è modificato a un valore specifico."
 
-#: ../system/core-workflows/condition-operators.rst:70
+#: ../system/core-workflows/condition-operators.rst:84
 msgid "is none of"
 msgstr "non è nessuno di"
 
-#: ../system/core-workflows/condition-operators.rst:71
+#: ../system/core-workflows/condition-operators.rst:85
 msgid "Matches if content is none of any specified values."
 msgstr "Corrisponde se il contenuto non è nessuno dei valori specificati."
 
-#: ../system/core-workflows/condition-operators.rst:73
+#: ../system/core-workflows/condition-operators.rst:87
 msgid "Matches if content is not equal to a specified value."
 msgstr "Corrisponde se il contenuto non è uguale a un valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:75
+#: ../system/core-workflows/condition-operators.rst:89
 msgid "Matches if content is present."
 msgstr "Corrisponde se il contenuto è presente."
 
-#: ../system/core-workflows/condition-operators.rst:76
+#: ../system/core-workflows/condition-operators.rst:90
 msgid "just changed"
 msgstr "appena cambiato"
 
-#: ../system/core-workflows/condition-operators.rst:77
+#: ../system/core-workflows/condition-operators.rst:91
 msgid "Matches if content has changed."
 msgstr "Corrisponde se il contenuto è cambiato."
 
-#: ../system/core-workflows/condition-operators.rst:79
-#: ../system/core-workflows/condition-operators.rst:83
+#: ../system/core-workflows/condition-operators.rst:93
+#: ../system/core-workflows/condition-operators.rst:97
 msgid ""
 "Only true for the moment of changing content until next form field action/"
 "click."
@@ -28723,81 +29119,230 @@ msgstr ""
 "Vero solo per il momento della modifica del contenuto fino alla successiva "
 "azione/clic sul campo del modulo."
 
-#: ../system/core-workflows/condition-operators.rst:80
+#: ../system/core-workflows/condition-operators.rst:94
 msgid "just changed to"
 msgstr "appena cambiato a"
 
-#: ../system/core-workflows/condition-operators.rst:81
+#: ../system/core-workflows/condition-operators.rst:95
 msgid "Matches if content has changed to a specified value."
 msgstr "Corrisponde se il contenuto è cambiato a un valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:84
+#: ../system/core-workflows/condition-operators.rst:98
 msgid "matches regex"
 msgstr "corrisponde a regex"
 
-#: ../system/core-workflows/condition-operators.rst:85
+#: ../system/core-workflows/condition-operators.rst:99
 msgid "Matches if value fits to regex rule."
 msgstr "Corrisponde se il valore si adatta alla regola regex."
 
-#: ../system/core-workflows/condition-operators.rst:87
+#: ../system/core-workflows/condition-operators.rst:101
 msgid "Matches if no content is present."
 msgstr "Corrisponde se nessun contenuto è presente."
 
-#: ../system/core-workflows/condition-operators.rst:88
+#: ../system/core-workflows/condition-operators.rst:102
 msgid "starts with"
 msgstr "inizia con"
 
-#: ../system/core-workflows/condition-operators.rst:89
+#: ../system/core-workflows/condition-operators.rst:103
 msgid "Matches if content starts with specified value."
 msgstr "Corrisponde se il contenuto inizia con il valore specificato."
 
-#: ../system/core-workflows/condition-operators.rst:90
+#: ../system/core-workflows/condition-operators.rst:104
 msgid "starts with one of"
 msgstr "inizia con uno di"
 
-#: ../system/core-workflows/condition-operators.rst:91
+#: ../system/core-workflows/condition-operators.rst:105
 msgid "Matches if content starts with one of the specified values."
 msgstr "Corrisponde se il contenuto inizia con uno dei valori specificati."
 
-#: ../system/core-workflows/condition-operators.rst:92
+#: ../system/core-workflows/condition-operators.rst:106
 msgid "till (relative)"
 msgstr "fino a (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:93
+#: ../system/core-workflows/condition-operators.rst:107
 msgid "Matches if date/time is before a period of time before an event."
 msgstr ""
 "Corrisponde se data/ora è precedente a un periodo di tempo prima di un "
 "evento."
 
-#: ../system/core-workflows/condition-operators.rst:94
+#: ../system/core-workflows/condition-operators.rst:108
 msgid "today"
 msgstr "oggi"
 
-#: ../system/core-workflows/condition-operators.rst:95
+#: ../system/core-workflows/condition-operators.rst:109
 msgid "Matches if date/time is today."
 msgstr "Corrisponde se data/ora è oggi."
 
-#: ../system/core-workflows/condition-operators.rst:96
+#: ../system/core-workflows/condition-operators.rst:110
 msgid "within last (relative)"
 msgstr "negli ultimi (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:97
+#: ../system/core-workflows/condition-operators.rst:111
 msgid ""
 "Matches if date/time content is within specified period of time before now."
 msgstr ""
 "Corrisponde se il contenuto data/ora è entro il periodo di tempo specificato "
 "prima di ora."
 
-#: ../system/core-workflows/condition-operators.rst:99
+#: ../system/core-workflows/condition-operators.rst:113
 msgid "within next (relative)"
 msgstr "entro i prossimi (relativo)"
 
-#: ../system/core-workflows/condition-operators.rst:100
+#: ../system/core-workflows/condition-operators.rst:114
 msgid ""
 "Matches if date/time content is within specified period of time after now."
 msgstr ""
 "Corrisponde se il contenuto data/ora è entro il periodo di tempo specificato "
 "dopo ora."
+
+#: ../system/core-workflows/condition-operators.rst:118
+#, fuzzy
+#| msgid "Available Operators"
+msgid "Multi-Select Operators"
+msgstr "Operatori Disponibili"
+
+#: ../system/core-workflows/condition-operators.rst:120
+msgid ""
+"The ``contains`` family of operators compares two sets of values: the values "
+"currently in the field and the values specified in the condition. The "
+"diagrams below show the condition values as an orange circle and the field "
+"values as a blue circle."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:128
+msgid "Differences to Triggers and Overviews"
+msgstr "Differenze rispetto a Trigger e Panoramiche"
+
+#: ../system/core-workflows/condition-operators.rst:130
+msgid ""
+"Be aware that these operators behave **differently** in other features that "
+"use conditions (e.g. triggers and overviews). The most confusing difference: "
+"in core workflows, ``contains all not`` means that no value matches at all, "
+"while in triggers and overviews it means \"not all values are present\". The "
+"table below compares both worlds side by side."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:142
+#, fuzzy
+#| msgid "Core workflows do not replace triggers"
+msgid "Core workflows (this page)"
+msgstr "I flussi di lavoro principali non sostituiscono i trigger"
+
+#: ../system/core-workflows/condition-operators.rst:143
+msgid "Triggers, overviews, etc."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:145
+#: ../system/core-workflows/condition-operators.rst:149
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid "At least one value is present (OR logic)."
+msgstr "Corrisponde se uno dei valori specificati è presente."
+
+#: ../system/core-workflows/condition-operators.rst:146
+msgid "Not available; ``contains one`` is the equivalent."
+msgstr "Non disponibile; ``contiene uno`` è l'equivalente."
+
+#: ../system/core-workflows/condition-operators.rst:148
+#: ../system/core-workflows/condition-operators.rst:188
+#: ../system/core-workflows/condition-operators.rst:228
+#: ../system/core-workflows/condition-operators.rst:271
+#: ../system/core-workflows/condition-operators.rst:311
+msgid "Same as ``contains``."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:151
+#: ../system/core-workflows/condition-operators.rst:152
+msgid "Every value is present (AND logic)."
+msgstr "Ogni valore è presente (logica AND)."
+
+#: ../system/core-workflows/condition-operators.rst:154
+#, fuzzy
+#| msgid ""
+#| "If the date field's value is before the configured date, the condition "
+#| "will be met."
+msgid ""
+"At least one field value is outside the condition, or the field is empty."
+msgstr ""
+"Se il valore del campo data è precedente alla data configurata, la "
+"condizione sarà soddisfatta."
+
+#: ../system/core-workflows/condition-operators.rst:156
+#, fuzzy
+#| msgid "Set available options for select fields"
+msgid "Not available for multi-select fields."
+msgstr "Imposta le opzioni disponibili per i campi di selezione"
+
+#: ../system/core-workflows/condition-operators.rst:158
+#: ../system/core-workflows/condition-operators.rst:197
+#: ../system/core-workflows/condition-operators.rst:237
+#: ../system/core-workflows/condition-operators.rst:280
+#: ../system/core-workflows/condition-operators.rst:320
+#, fuzzy
+#| msgid "contains not"
+msgid "Same as ``contains not``."
+msgstr "non contiene"
+
+#: ../system/core-workflows/condition-operators.rst:162
+msgid "Not all values are present (at least one is missing)."
+msgstr "Non tutti i valori sono presenti (almeno uno manca)."
+
+#: ../system/core-workflows/condition-operators.rst:194
+msgid "``C`` is in the field but not in the condition."
+msgstr "``C`` è presente nel campo ma non nella condizione."
+
+#: ../system/core-workflows/condition-operators.rst:200
+msgid "``A`` and ``B`` are present in the field."
+msgstr "``A`` e ``B`` sono presenti nel campo."
+
+#: ../system/core-workflows/condition-operators.rst:234
+msgid "``D`` is in the field but not in the condition."
+msgstr "``D`` è presente nel campo ma non nella condizione."
+
+#: ../system/core-workflows/condition-operators.rst:240
+msgid "``C`` is present in the field."
+msgstr "``C`` è presente nel campo."
+
+#: ../system/core-workflows/condition-operators.rst:242
+msgid ""
+"This partial overlap is where the two \"all\" operators part ways: "
+"``contains all`` fails because one condition value is missing, while "
+"``contains all not`` fails because a single common value is enough to block "
+"it."
+msgstr ""
+"Questa sovrapposizione parziale è il punto in cui i due operatori \"all\" si "
+"dividono: ``contains all`` fallisce perché manca un valore di condizione, "
+"mentre ``contains all not``fallisce perché un singolo valore comune è "
+"sufficiente a bloccarlo."
+
+#: ../system/core-workflows/condition-operators.rst:277
+msgid "``C`` and ``D`` are not in the condition."
+msgstr "``C`` e ``D`` non sono nella condizione."
+
+#: ../system/core-workflows/condition-operators.rst:285
+msgid "This is the only example where ``contains all not`` matches."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:317
+msgid "An empty field matches."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:323
+#, fuzzy
+#| msgid ""
+#| "**Actions:** define what to change in a ticket which matches the "
+#| "condition."
+msgid "An empty field has no value in common with the condition."
+msgstr ""
+"**Azioni:** definiscono cosa modificare in un ticket che corrisponde alla "
+"condizione."
+
+#: ../system/core-workflows/condition-operators.rst:325
+msgid ""
+"Note that ``contains not`` and ``contains one not`` match an empty field, "
+"while ``contains`` and ``contains all`` do not. If you want to exclude "
+"specific values, be aware that empty fields pass the condition."
+msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
@@ -36940,6 +37485,26 @@ msgstr "Versione"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Mostra la versione attuale di Zammad della tua istanza."
+
+#~ msgid "Matches if all given field values are not selected."
+#~ msgstr ""
+#~ "Corrisponde se tutti i valori del campo forniti non sono selezionati."
+
+#~ msgid "Matches if one specific given field value is not selected."
+#~ msgstr ""
+#~ "Corrisponde se uno specifico valore del campo fornito non è selezionato."
+
+#~ msgid "Matches if a specified value is present."
+#~ msgstr "Corrisponde se un valore specificato è presente."
+
+#~ msgid "Matches if all of the specified values are present."
+#~ msgstr "Corrisponde se tutti i valori specificati sono presenti."
+
+#~ msgid "Matches if a specified value is not present."
+#~ msgstr "Corrisponde se un valore specificato non è presente."
+
+#~ msgid "Matches if one specified value is not present."
+#~ msgstr "Corrisponde se uno dei valori specificati non è presente."
 
 #~ msgid ""
 #~ "Accounts in this organizational directory only (Default Directory only - "

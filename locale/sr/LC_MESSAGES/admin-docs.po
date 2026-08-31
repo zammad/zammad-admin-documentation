@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 17:19+0200\n"
-"PO-Revision-Date: 2026-08-26 05:05+0000\n"
+"POT-Creation-Date: 2026-08-28 15:08+0200\n"
+"PO-Revision-Date: 2026-08-31 09:47+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.7.1\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -881,7 +881,7 @@ msgstr "Врста"
 msgid "Pick the AI provider. Available options:"
 msgstr "Изаберите AI провајдера. Доступне опције:"
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:267
+#: ../ai/provider.rst:52 ../ai/provider.rst:268
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
@@ -889,7 +889,7 @@ msgstr "Zammad AI"
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:298
+#: ../ai/provider.rst:54 ../ai/provider.rst:299
 msgid "Ollama"
 msgstr "Ollama"
 
@@ -1000,7 +1000,7 @@ msgstr ""
 "функцији путем :ref:`подешавања провајдера по функцији <per-feature-provider-"
 "config>`."
 
-#: ../ai/provider.rst:120
+#: ../ai/provider.rst:121
 msgid "Embedding Model"
 msgstr "Модел векторизације"
 
@@ -1064,22 +1064,23 @@ msgid ""
 "Changing the embedding model or the embedding dimensions triggers a full "
 "rebuild of the knowledge base index. This re-embeds every knowledge base "
 "article, which takes time and costs AI calls proportional to the size of "
-"your knowledge base. Zammad shows a confirmation dialog before the change is "
-"saved. Switching the semantic search capability to a provider that uses the "
-"same embedding model and dimensions does not trigger a rebuild."
+"your knowledge base. The rebuild runs in the background and Zammad notifies "
+"you with a toast message when it starts. Switching the semantic search "
+"capability to a provider that uses the same embedding model and dimensions "
+"does not trigger a rebuild."
 msgstr ""
 "Промена модела или димензија векторизације ће покренути потпуну обнову "
 "индекса базе знања. Ово ће поново векторизовати сваки чланак базе знања, што "
 "одузима време и троши AI упите пропорционално величини ваше базе знања. "
-"Zammad приказује дијалог потврде пре него што промена буде сачувана. "
+"Реиндексирање се извршава у позадини и Zammad ће вас обавестити када започн. "
 "Пребацивање својства семантичке претраге на други провајдер који користи "
 "исти модел и димензије векторизације неће покренути обнову."
 
-#: ../ai/provider.rst:127
+#: ../ai/provider.rst:128
 msgid "OCR Model"
 msgstr "Режим"
 
-#: ../ai/provider.rst:123
+#: ../ai/provider.rst:124
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -1093,11 +1094,11 @@ msgstr ""
 "нуди ово подешавање. Не подржава сваки провајдер препознавање текста на "
 "сликама; поље се приказује само код оних који га подржавају."
 
-#: ../ai/provider.rst:131 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:132 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:130
+#: ../ai/provider.rst:131
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
@@ -1105,21 +1106,21 @@ msgstr ""
 "URL или IP адреса провајдера. Обавезно за Ollama и OpenAI компатибилне "
 "провајдере."
 
-#: ../ai/provider.rst:134
+#: ../ai/provider.rst:135
 msgid "URL (Completions)"
 msgstr "URL адреса (completions)"
 
-#: ../ai/provider.rst:134
+#: ../ai/provider.rst:135
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 "Само за Azure AI. Путања на којој је доступан модел за генерисање текста."
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:139
 msgid "URL (OCR)"
 msgstr "URL адреса (OCR)"
 
-#: ../ai/provider.rst:137
+#: ../ai/provider.rst:138
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
@@ -1127,7 +1128,7 @@ msgstr ""
 "Само за Azure AI. Путања на којој је доступан OCR модел. Оставите празно да "
 "би се користила вредност из поља URL адреса (completions)."
 
-#: ../ai/provider.rst:140
+#: ../ai/provider.rst:141
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -1139,11 +1140,11 @@ msgstr ""
 "наранџаста, а постаје зелена након првог успешног захтева; погледајте одељак "
 "Статус испод за значење боја."
 
-#: ../ai/provider.rst:146
+#: ../ai/provider.rst:147
 msgid "Status"
 msgstr "Статус"
 
-#: ../ai/provider.rst:148
+#: ../ai/provider.rst:149
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
@@ -1151,11 +1152,11 @@ msgstr ""
 "Обојена тачка на почетку сваког реда показује да ли је провајдер успешно "
 "коришћен или има проблема:"
 
-#: ../ai/provider.rst:153
+#: ../ai/provider.rst:154
 msgid "Green"
 msgstr "Зелена"
 
-#: ../ai/provider.rst:152
+#: ../ai/provider.rst:153
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
@@ -1163,11 +1164,11 @@ msgstr ""
 "Провајдер је коришћен и последњи захтев је успео. Облачић приказује "
 "временску ознаку последњег освежавања статуса."
 
-#: ../ai/provider.rst:157
+#: ../ai/provider.rst:158
 msgid "Orange"
 msgstr "Наранџаста"
 
-#: ../ai/provider.rst:156
+#: ../ai/provider.rst:157
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
@@ -1175,11 +1176,11 @@ msgstr ""
 "Провајдер је подешен, али још увек није коришћен. Тачка постаје зелена након "
 "првог успешног захтева."
 
-#: ../ai/provider.rst:162
+#: ../ai/provider.rst:163
 msgid "Red"
 msgstr "Црвена"
 
-#: ../ai/provider.rst:160
+#: ../ai/provider.rst:161
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
@@ -1189,11 +1190,11 @@ msgstr ""
 "бисте видели поруку о грешци од провајдера. Облачић увек приказује "
 "најскорију грешку, па временска ознака припада последњем неуспелом захтеву."
 
-#: ../ai/provider.rst:167
+#: ../ai/provider.rst:168
 msgid "Default Provider"
 msgstr "Подразумеван провајдер"
 
-#: ../ai/provider.rst:169
+#: ../ai/provider.rst:170
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -1213,7 +1214,7 @@ msgstr ""
 "Снимак екрана који приказује списак провајдера, где је један провајдер "
 "означен као подразумеван за све три намене"
 
-#: ../ai/provider.rst:178
+#: ../ai/provider.rst:179
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -1226,11 +1227,11 @@ msgstr ""
 "провајдера који носи ту ознаку, Zammad је додељује најстаријем преосталом "
 "провајдеру."
 
-#: ../ai/provider.rst:186
+#: ../ai/provider.rst:187
 msgid "Capabilities"
 msgstr "Могућности"
 
-#: ../ai/provider.rst:188
+#: ../ai/provider.rst:189
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
@@ -1240,11 +1241,11 @@ msgstr ""
 "Додељујете их из менија ︙ у колони **Радња**; значке означавају који "
 "провајдер тренутно покрива коју могућност."
 
-#: ../ai/provider.rst:200
+#: ../ai/provider.rst:201
 msgid "Semantic search"
 msgstr "Семантичка претрага"
 
-#: ../ai/provider.rst:193
+#: ../ai/provider.rst:194
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
@@ -1253,7 +1254,7 @@ msgstr ""
 "репрезентације) како би база знања могла да проналази чланке по значењу, а "
 "не само по кључним речима."
 
-#: ../ai/provider.rst:196
+#: ../ai/provider.rst:197
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
@@ -1268,15 +1269,15 @@ msgstr ""
 "овог својство може покренути потпуну обнову индекса, консултујте **Модел "
 "векторизације** изнад."
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:207
 msgid "Image text recognition"
 msgstr "Препознавање текста на сликама"
 
-#: ../ai/provider.rst:203
+#: ../ai/provider.rst:204
 msgid "The provider used to extract text from images (OCR)."
 msgstr "Провајдер који се користи за издвајање текста са слика (OCR)."
 
-#: ../ai/provider.rst:205
+#: ../ai/provider.rst:206
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
@@ -1285,7 +1286,7 @@ msgstr ""
 "потпуности уклонити са свих провајдера; функције тада једноставно прескачу "
 "OCR корак."
 
-#: ../ai/provider.rst:208
+#: ../ai/provider.rst:209
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1299,27 +1300,27 @@ msgstr ""
 "обришете провајдера који покрива неку могућност, та могућност једноставно "
 "остаје недодељена."
 
-#: ../ai/provider.rst:215 ../manage/macros.rst:56 ../manage/templates.rst:28
+#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:28
 msgid "Actions"
 msgstr "Радње"
 
-#: ../ai/provider.rst:217
+#: ../ai/provider.rst:218
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Мени ︙ у колони **Радња** нуди следеће радње:"
 
-#: ../ai/provider.rst:220
+#: ../ai/provider.rst:221
 msgid "Set as default"
 msgstr "Подеси као подразумевано"
 
-#: ../ai/provider.rst:220
+#: ../ai/provider.rst:221
 msgid "Marks the provider as the default provider for AI features."
 msgstr "Означава провајдера као подразумеваног провајдера за AI функције."
 
-#: ../ai/provider.rst:224
+#: ../ai/provider.rst:225
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr "Користи за семантичку претрагу / Не користи за семантичку претрагу"
 
-#: ../ai/provider.rst:223
+#: ../ai/provider.rst:224
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
@@ -1327,13 +1328,13 @@ msgstr ""
 "Додељује провајдеру могућност семантичке претраге или уклања ту доделу. "
 "Доступно само за провајдере који је подржавају."
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:229
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 "Користи за препознавање текста на сликама / Не користи за препознавање "
 "текста на сликама"
 
-#: ../ai/provider.rst:227
+#: ../ai/provider.rst:228
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
@@ -1341,23 +1342,23 @@ msgstr ""
 "Додељује провајдеру могућност препознавања текста на сликама или уклања ту "
 "доделу."
 
-#: ../ai/provider.rst:231 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:232 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Обриши"
 
-#: ../ai/provider.rst:231
+#: ../ai/provider.rst:232
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 "Уклања провајдера. Није доступно за Zammad AI провајдера на SaaS платформи."
 
-#: ../ai/provider.rst:236
+#: ../ai/provider.rst:237
 msgid "Configuring Provider per Feature"
 msgstr "Подешавање провајдера по AI функцији"
 
-#: ../ai/provider.rst:238
+#: ../ai/provider.rst:239
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
@@ -1366,7 +1367,7 @@ msgstr ""
 "подразумеваног. За прецизнију контролу можете изабрати посебног провајдера "
 "за поједине функције."
 
-#: ../ai/provider.rst:241
+#: ../ai/provider.rst:242
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1386,7 +1387,7 @@ msgstr ""
 "Снимак екрана који приказује дијалог за избор провајдера по функцији са "
 "изабраним провајдером"
 
-#: ../ai/provider.rst:250
+#: ../ai/provider.rst:251
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1402,11 +1403,11 @@ msgstr ""
 "дозволу ``admin.ai_provider``, јер усмеравање захтева дира провајдере које "
 "подешавате на овој страници."
 
-#: ../ai/provider.rst:258
+#: ../ai/provider.rst:259
 msgid "Additional Provider Information"
 msgstr "Додатне информације о провајдерима"
 
-#: ../ai/provider.rst:260
+#: ../ai/provider.rst:261
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
@@ -1416,7 +1417,7 @@ msgstr ""
 "даље. У супротном, идите на :doc:`feedback-and-logs` или изаберите неку од "
 "страница са AI функцијама из менија са леве стране."
 
-#: ../ai/provider.rst:269
+#: ../ai/provider.rst:270
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
@@ -1424,15 +1425,15 @@ msgstr ""
 "Коришћење Zammad AI као провајдера је најлакши начин да започнете рад са AI "
 "функцијама у Zammad-у. Доноси неколико кључних предности:"
 
-#: ../ai/provider.rst:272
+#: ../ai/provider.rst:273
 msgid "You don't have to set up an AI system or its configuration."
 msgstr "Не морате да постављате нити подешавате сопствени AI систем."
 
-#: ../ai/provider.rst:273
+#: ../ai/provider.rst:274
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr "Хостован је у Европској унији и усклађен је са GDPR прописима."
 
-#: ../ai/provider.rst:274
+#: ../ai/provider.rst:275
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
@@ -1440,20 +1441,20 @@ msgstr ""
 "Никакво подешавање у Zammad-у за SaaS клијенте, односно само API кључ за "
 "клијенте који сами хостују."
 
-#: ../ai/provider.rst:276
+#: ../ai/provider.rst:277
 msgid "Requests with sensitive information aren't used for training."
 msgstr "Захтеви са осетљивим информацијама се не користе за тренирање модела."
 
-#: ../ai/provider.rst:277
+#: ../ai/provider.rst:278
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 "Једно место на које се обраћате за подршку када нешто не ради како треба."
 
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:290
 msgid "SaaS Customers"
 msgstr "Клијент"
 
-#: ../ai/provider.rst:281
+#: ../ai/provider.rst:282
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1469,7 +1470,7 @@ msgstr ""
 "преостали број AI позива с времена на време, или укључите обавештење да "
 "будете упозорени када их остане мало."
 
-#: ../ai/provider.rst:288
+#: ../ai/provider.rst:289
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
@@ -1477,11 +1478,11 @@ msgstr ""
 "На SaaS платформи Zammad AI провајдера обезбеђује сама платформа, па га не "
 "можете обрисати нити му променити врсту."
 
-#: ../ai/provider.rst:295
+#: ../ai/provider.rst:296
 msgid "Self-Hosted Customers"
 msgstr "Клијенти који сами хостују"
 
-#: ../ai/provider.rst:292
+#: ../ai/provider.rst:293
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1492,7 +1493,7 @@ msgstr ""
 "да бисте добили Zammad AI API кључ и докупили AI позиве. По добијању API "
 "кључа, додајте новог провајдера врсте *Zammad AI* и сачувајте кључ."
 
-#: ../ai/provider.rst:300
+#: ../ai/provider.rst:301
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
@@ -1503,7 +1504,7 @@ msgstr ""
 "трећим лицима. Овај приступ има смисла само ако поседујете моћан GPU у вашем "
 "систему!"
 
-#: ../ai/provider.rst:304
+#: ../ai/provider.rst:305
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -5269,7 +5270,7 @@ msgstr ""
 msgid "Signatures"
 msgstr "Потписи"
 
-#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:436
+#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:450
 #: ../system/monitoring.rst:9
 msgid "General"
 msgstr "Уопштено"
@@ -6181,7 +6182,7 @@ msgstr "Подразумевана вредност"
 
 #: ../channels/form.rst:250 ../manage/public-links.rst:43
 #: ../misc/object-conditions/basics.rst:63 ../misc/variables.rst:101
-#: ../system/core-workflows/condition-operators.rst:21
+#: ../system/core-workflows/condition-operators.rst:22
 #: ../system/objects/permissions.rst:36 ../system/subscription.rst:196
 msgid "Description"
 msgstr "Опис"
@@ -10939,6 +10940,29 @@ msgstr ""
 #: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
+#: ../misc/object-conditions/basics.rst:514
+#: ../misc/object-conditions/basics.rst:517
+#: ../misc/object-conditions/basics.rst:548
+#: ../misc/object-conditions/basics.rst:554
+#: ../misc/object-conditions/basics.rst:591
+#: ../misc/object-conditions/basics.rst:594
+#: ../misc/object-conditions/basics.rst:623
+#: ../misc/object-conditions/basics.rst:626
+#: ../system/core-workflows/condition-operators.rst:184
+#: ../system/core-workflows/condition-operators.rst:187
+#: ../system/core-workflows/condition-operators.rst:190
+#: ../system/core-workflows/condition-operators.rst:193
+#: ../system/core-workflows/condition-operators.rst:196
+#: ../system/core-workflows/condition-operators.rst:224
+#: ../system/core-workflows/condition-operators.rst:227
+#: ../system/core-workflows/condition-operators.rst:233
+#: ../system/core-workflows/condition-operators.rst:236
+#: ../system/core-workflows/condition-operators.rst:276
+#: ../system/core-workflows/condition-operators.rst:279
+#: ../system/core-workflows/condition-operators.rst:282
+#: ../system/core-workflows/condition-operators.rst:316
+#: ../system/core-workflows/condition-operators.rst:319
+#: ../system/core-workflows/condition-operators.rst:322
 msgid "yes"
 msgstr "да"
 
@@ -11006,6 +11030,23 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
+#: ../misc/object-conditions/basics.rst:520
+#: ../misc/object-conditions/basics.rst:523
+#: ../misc/object-conditions/basics.rst:551
+#: ../misc/object-conditions/basics.rst:557
+#: ../misc/object-conditions/basics.rst:585
+#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:617
+#: ../misc/object-conditions/basics.rst:620
+#: ../system/core-workflows/condition-operators.rst:199
+#: ../system/core-workflows/condition-operators.rst:230
+#: ../system/core-workflows/condition-operators.rst:239
+#: ../system/core-workflows/condition-operators.rst:267
+#: ../system/core-workflows/condition-operators.rst:270
+#: ../system/core-workflows/condition-operators.rst:273
+#: ../system/core-workflows/condition-operators.rst:307
+#: ../system/core-workflows/condition-operators.rst:310
+#: ../system/core-workflows/condition-operators.rst:313
 msgid "no"
 msgstr "не"
 
@@ -11493,7 +11534,7 @@ msgstr ""
 "или уклоните URL адресе из јавног менија заглавља или подножја."
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
-#: ../manage/time-accounting.rst:147 ../manage/time-accounting.rst:161
+#: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
 #: ../system/maintenance.rst:31
 msgid "Title"
 msgstr "Наслов"
@@ -15419,24 +15460,28 @@ msgstr ""
 #: ../manage/time-accounting.rst:22
 msgid ""
 "If a ticket is relevant, Zammad will request the agent to provide the time "
-"which was needed to process the current ticket step. In order for Zammad to "
-"bring up the time accounting dialog to an agent, the agent has to update the "
-"ticket together with an article of any type. The adding of an article is "
-"mandatory to invoke the time accounting dialog. However, the time accounting "
-"dialog is not mandatory and can be canceled by your agents. You cannot "
-"enforce the time accounting. When a ticket is no longer considered for the "
-"time accounting, the already accounted time will be preserved."
+"which was needed to process the current ticket step. This accounted time is "
+"displayed in the ticket sidebar at ticket level and in the article meta "
+"information for an individual article. In order for Zammad to bring up the "
+"time accounting dialog to an agent, the agent has to update the ticket "
+"together with an article of any type. The adding of an article is mandatory "
+"to invoke the time accounting dialog. However, the time accounting dialog is "
+"not mandatory and can be canceled by your agents. You cannot enforce the "
+"time accounting. When a ticket is no longer considered for the time "
+"accounting, the already accounted time will be preserved."
 msgstr ""
 "Ако је тикет релевантан, Zammad ће од оператера затражити да унесе време "
-"које је било потребно за обраду тренутног корака тикета. Да би Zammad "
-"приказао дијалог за обрачун времена оператеру, оператер мора да освежи тикет "
-"заједно са чланком било које врсте. Додавање чланка је обавезно да би се "
-"позвао дијалог за обрачун времена. Међутим, дијалог за обрачун времена није "
-"обавезан и ваши оператери могу да га откажу. Обрачун времена не можете "
-"наметнути. Када се тикет више не сматра релевантним за обрачун времена, већ "
-"обрачунато време ће бити сачувано."
+"које је било потребно за обраду тренутног корака тикета. Ово обрачунато "
+"време ће бити приказано као сума у бочној траци тикета и у детаљним "
+"информацијама појединачног чланка. Да би Zammad приказао дијалог за обрачун "
+"времена оператеру, оператер мора да освежи тикет заједно са чланком било "
+"које врсте. Додавање чланка је обавезно да би се позвао дијалог за обрачун "
+"времена. Међутим, дијалог за обрачун времена није обавезан и ваши оператери "
+"могу да га откажу. Обрачун времена не можете наметнути. Када се тикет више "
+"не сматра релевантним за обрачун времена, већ обрачунато време ће бити "
+"сачувано."
 
-#: ../manage/time-accounting.rst:33
+#: ../manage/time-accounting.rst:35
 msgid ""
 "The selector applies to the ticket state before any attribute changes have "
 "been saved. That means if your agent is e.g. going to close a ticket "
@@ -15452,7 +15497,7 @@ msgstr ""
 msgid "Time Accounting Ticket Selector"
 msgstr "Обрачун времена"
 
-#: ../manage/time-accounting.rst:42
+#: ../manage/time-accounting.rst:44
 msgid ""
 "The accounted time is always a unitless number. However, it is possible to "
 "show a specific unit in the **Unit** section, which provides several options:"
@@ -15460,44 +15505,44 @@ msgstr ""
 "Обрачунато време је увек број без јединица. Међутим, могуће је приказати "
 "одређену јединицу у одељку **Јединица**, који нуди неколико опција:"
 
-#: ../manage/time-accounting.rst:46
+#: ../manage/time-accounting.rst:48
 msgid "no unit"
 msgstr "без јединице"
 
-#: ../manage/time-accounting.rst:47
+#: ../manage/time-accounting.rst:49
 msgid "Default behavior, no unit is shown next to the time value."
 msgstr ""
 "Подразумевано понашање, јединица се не приказује поред вредности времена."
 
-#: ../manage/time-accounting.rst:48
+#: ../manage/time-accounting.rst:50
 msgid "hour(s)"
 msgstr "сат(а)"
 
-#: ../manage/time-accounting.rst:49
+#: ../manage/time-accounting.rst:51
 msgid "Shows ``hour(s)`` as the unit next to the time value."
 msgstr "Приказује ``сат(а)`` као јединицу поред вредности времена."
 
-#: ../manage/time-accounting.rst:50
+#: ../manage/time-accounting.rst:52
 msgid "quarter-hour(s)"
 msgstr "четврт сат(а)"
 
-#: ../manage/time-accounting.rst:51
+#: ../manage/time-accounting.rst:53
 msgid "Shows ``quarter-hour(s)`` as the unit next to the time value."
 msgstr "Приказује ``четврт сат(а)`` као јединицу поред вредности времена."
 
-#: ../manage/time-accounting.rst:52
+#: ../manage/time-accounting.rst:54
 msgid "minute(s)"
 msgstr "минут(а)"
 
-#: ../manage/time-accounting.rst:53
+#: ../manage/time-accounting.rst:55
 msgid "Shows ``minute(s)`` as the unit next to the time value."
 msgstr "Приказује ``минут(а)`` као јединицу поред временске вредности."
 
-#: ../manage/time-accounting.rst:55
+#: ../manage/time-accounting.rst:57
 msgid "custom unit"
 msgstr "прилагођена јединица"
 
-#: ../manage/time-accounting.rst:55
+#: ../manage/time-accounting.rst:57
 msgid "Shows a custom unit that can be specified as free input."
 msgstr "Приказује прилагођену јединицу која се може навести као слободан унос."
 
@@ -15505,7 +15550,7 @@ msgstr "Приказује прилагођену јединицу која се
 msgid "Time Accounting Unit"
 msgstr "Јединица обрачунатог времена"
 
-#: ../manage/time-accounting.rst:62
+#: ../manage/time-accounting.rst:64
 msgid ""
 "The unit is only displayed to make it easier for agents to account their "
 "time! No numerical transformation will be applied to the values, not even if "
@@ -15521,11 +15566,11 @@ msgstr ""
 msgid "Time Accounting Unit when Recording"
 msgstr "Јединица обрачунатог времена приликом снимања"
 
-#: ../manage/time-accounting.rst:72
+#: ../manage/time-accounting.rst:74
 msgid "Activity Types"
 msgstr "Врсте активности"
 
-#: ../manage/time-accounting.rst:74
+#: ../manage/time-accounting.rst:76
 msgid ""
 "**Activity Types** can be used to group the different ticket time accounting "
 "entries together. For example, entries that are relevant to a \"Billing\" "
@@ -15538,7 +15583,7 @@ msgstr ""
 msgid "Time Accounting Activity Types"
 msgstr "Врсте активности обрачунатог времена"
 
-#: ../manage/time-accounting.rst:81
+#: ../manage/time-accounting.rst:83
 msgid ""
 "When you enable the recording of the **Activity Type**, the agents will be "
 "able to select a type from this list."
@@ -15550,7 +15595,7 @@ msgstr ""
 msgid "Time Accounting Activity Type Selection for Agents"
 msgstr "Избор врсте активности обрачуна времена за оператере"
 
-#: ../manage/time-accounting.rst:88
+#: ../manage/time-accounting.rst:90
 msgid ""
 "Additionally, a column with an associated activity type will be rendered for "
 "an entry in the **Activity** table under the **Accounted Time** tab."
@@ -15558,7 +15603,7 @@ msgstr ""
 "Поред тога, колона са повезаном врстом активности биће приказана за сваки "
 "унос у табели **Активност** у језичку **Обрачунато време**."
 
-#: ../manage/time-accounting.rst:91
+#: ../manage/time-accounting.rst:93
 msgid ""
 "You can manage available activity types in this screen like any other Zammad "
 "object. Only active types will be available for the selection when recording "
@@ -15574,7 +15619,7 @@ msgstr ""
 msgid "New Time Accounting Activity Type Dialog"
 msgstr "Дијалог нове врсте активности обрачуна времена"
 
-#: ../manage/time-accounting.rst:100
+#: ../manage/time-accounting.rst:102
 msgid ""
 "Activity types can be set as default, and in that case they will be pre-"
 "selected for the agents when they are asked to account their time. It is "
@@ -15587,11 +15632,11 @@ msgstr ""
 "случају ниједна врста неће бити унапред одабрана и оператери могу сами да је "
 "изаберу."
 
-#: ../manage/time-accounting.rst:106
+#: ../manage/time-accounting.rst:108
 msgid "Accounted Time"
 msgstr "Обрачунато време"
 
-#: ../manage/time-accounting.rst:108
+#: ../manage/time-accounting.rst:110
 msgid ""
 "Under the **Accounted Time** tab, Zammad provides a section for reviewing "
 "all accounted times for your tickets. Accounted times are displayed per "
@@ -15601,7 +15646,7 @@ msgstr ""
 "обрачунатих времена ваших тикета. Обрачуната времена су приказана по "
 "годинама и месецима."
 
-#: ../manage/time-accounting.rst:112
+#: ../manage/time-accounting.rst:114
 msgid ""
 "If you have tickets that are overlapping several months, you can "
 "differentiate by *time units* and *time units total* (e.g. to allow partial "
@@ -15611,11 +15656,11 @@ msgstr ""
 "*временске јединице* и *укупне временске јединице* (нпр. за делимичну "
 "наплату) у преузетој датотеци."
 
-#: ../manage/time-accounting.rst:123
+#: ../manage/time-accounting.rst:125
 msgid "Select the right month"
 msgstr "Изаберите одговарајући месец"
 
-#: ../manage/time-accounting.rst:117
+#: ../manage/time-accounting.rst:119
 msgid ""
 "Usually you want to bill accounted time of other months than the current "
 "one. Just select the relevant year and month to receive the accounted times "
@@ -15630,11 +15675,11 @@ msgid "Screenshot showing a selection for year and month on time accounting"
 msgstr ""
 "Снимак екрана који приказује избор за годишњи и месечни обрачун времена"
 
-#: ../manage/time-accounting.rst:186
+#: ../manage/time-accounting.rst:188
 msgid "Tickets and their accounted time"
 msgstr "Тикети и њихово обрачунато време"
 
-#: ../manage/time-accounting.rst:126
+#: ../manage/time-accounting.rst:128
 msgid ""
 "Zammad allows you to receive the accounted information just like you need "
 "them. For this you currently have four options to review and also download "
@@ -15644,7 +15689,7 @@ msgstr ""
 "потребне. За ово тренутно имате четири опције за преглед и преузимање "
 "релевантних података као CSV."
 
-#: ../manage/time-accounting.rst:130
+#: ../manage/time-accounting.rst:132
 msgid ""
 "To download the CSV data, use the download button right next to each heading "
 "(e.g. \"Ticket\")."
@@ -15652,11 +15697,11 @@ msgstr ""
 "Да бисте преузели CSV датотеку, користите дугме за преузимање одмах поред "
 "сваког наслова (нпр. „Тикет“)."
 
-#: ../manage/time-accounting.rst:133
+#: ../manage/time-accounting.rst:135
 msgid "This can also be automated with API calls."
 msgstr "Ово такође можете бити аутоматизовано помоћу API позива."
 
-#: ../manage/time-accounting.rst:136
+#: ../manage/time-accounting.rst:138
 msgid ""
 "Only the first 20 entries are shown for each table. To see all of them, "
 "simply download the records in CSV."
@@ -15664,11 +15709,11 @@ msgstr ""
 "За сваку табелу је приказано само првих 20 уноса. Да бисте их све видели, "
 "једноставно преузмите записе у CSV формату."
 
-#: ../manage/time-accounting.rst:153
+#: ../manage/time-accounting.rst:155
 msgid "Activity"
 msgstr "Активност"
 
-#: ../manage/time-accounting.rst:140
+#: ../manage/time-accounting.rst:142
 msgid ""
 "This filter works similar to the ticket filter, with one exception: You'll "
 "find each *individual* time accounting step of your agents. This is what "
@@ -15678,47 +15723,47 @@ msgstr ""
 "ћете сваки *појединачни* корак обрачуна времена ваших оператера. Ово је оно "
 "што бисте такође видели у историјату тикета пре Zammad верзије 5.2."
 
-#: ../manage/time-accounting.rst:144 ../manage/time-accounting.rst:158
-#: ../manage/time-accounting.rst:175
+#: ../manage/time-accounting.rst:146 ../manage/time-accounting.rst:160
+#: ../manage/time-accounting.rst:177
 msgid "In this list you'll see the following ticket information:"
 msgstr "У овој листи ћете видети следеће информације о тикетима:"
 
-#: ../manage/time-accounting.rst:146 ../manage/time-accounting.rst:160
+#: ../manage/time-accounting.rst:148 ../manage/time-accounting.rst:162
 #: ../settings/ticket.rst:103
 msgid "Number"
 msgstr "Број"
 
-#: ../manage/time-accounting.rst:148 ../manage/time-accounting.rst:162
-#: ../manage/time-accounting.rst:179 ../manage/time-accounting.rst:177
+#: ../manage/time-accounting.rst:150 ../manage/time-accounting.rst:164
+#: ../manage/time-accounting.rst:181 ../manage/time-accounting.rst:179
 #: ../misc/object-conditions/basics.rst:37
 #: ../misc/object-conditions/basics.rst:89
 #: ../misc/object-conditions/basics.rst:171
 msgid "Customer"
 msgstr "Клијент"
 
-#: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
-#: ../manage/time-accounting.rst:178
+#: ../manage/time-accounting.rst:151 ../manage/time-accounting.rst:165
+#: ../manage/time-accounting.rst:180
 msgid "Organization of customer (if applicable)"
 msgstr "Организација клијента (ако постоји)"
 
-#: ../manage/time-accounting.rst:150
+#: ../manage/time-accounting.rst:152
 msgid "Agent that accounted the time"
 msgstr "Оператер који је обрачунао време"
 
-#: ../manage/time-accounting.rst:151
+#: ../manage/time-accounting.rst:153
 msgid "Time units accounted in the current activity"
 msgstr "Јединице времена урачунате у текућу активност"
 
-#: ../manage/time-accounting.rst:152
+#: ../manage/time-accounting.rst:154
 msgid "Activity type (if enabled)"
 msgstr "Врста активности (ако је укључено)"
 
-#: ../manage/time-accounting.rst:153 ../manage/time-accounting.rst:167
+#: ../manage/time-accounting.rst:155 ../manage/time-accounting.rst:169
 #: ../system/audit-logs.rst:76
 msgid "Created at"
 msgstr "Додато у"
 
-#: ../manage/time-accounting.rst:168 ../misc/object-conditions/basics.rst:26
+#: ../manage/time-accounting.rst:170 ../misc/object-conditions/basics.rst:26
 #: ../misc/object-conditions/basics.rst:90
 #: ../misc/object-conditions/basics.rst:126
 #: ../misc/object-conditions/basics.rst:139
@@ -15734,27 +15779,27 @@ msgstr "Додато у"
 msgid "Ticket"
 msgstr "Тикет"
 
-#: ../manage/time-accounting.rst:156
+#: ../manage/time-accounting.rst:158
 msgid "This filter contains all relevant tickets from the selected month."
 msgstr "Овај филтер садржи све релевантне тикете из одабраног месеца."
 
-#: ../manage/time-accounting.rst:164
+#: ../manage/time-accounting.rst:166
 msgid "Agent currently assigned (ticket owner)"
 msgstr "Тренутно додељени оператер (власник тикета)"
 
-#: ../manage/time-accounting.rst:165 ../manage/time-accounting.rst:179
+#: ../manage/time-accounting.rst:167 ../manage/time-accounting.rst:181
 msgid "Time units accounted in the current month"
 msgstr "Обрачунате јединице времена у текућем месецу"
 
-#: ../manage/time-accounting.rst:166
+#: ../manage/time-accounting.rst:168
 msgid "Time units total (time accounted during ticket life)"
 msgstr "Укупне временске јединице (време обрачунато током трајања тикета)"
 
-#: ../manage/time-accounting.rst:168
+#: ../manage/time-accounting.rst:170
 msgid "Closed at (if applicable)"
 msgstr "Затворено у (ако постоји)"
 
-#: ../manage/time-accounting.rst:171
+#: ../manage/time-accounting.rst:173
 msgid ""
 "This provides you a per user filter on accounted time units. Each user has a "
 "total of time accounted in the current month (over all applicable tickets)."
@@ -15763,13 +15808,13 @@ msgstr ""
 "корисник има обрачунато укупно време у текућем месецу (за све тикете који се "
 "подударају)."
 
-#: ../manage/time-accounting.rst:186 ../misc/object-conditions/basics.rst:28
+#: ../manage/time-accounting.rst:188 ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:115
 #: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:16
 msgid "Organization"
 msgstr "Организација"
 
-#: ../manage/time-accounting.rst:182
+#: ../manage/time-accounting.rst:184
 msgid ""
 "This provides a list of all organizations where customers have caused "
 "accounted time in that month."
@@ -15777,7 +15822,7 @@ msgstr ""
 "Ово пружа листу свих организација у којима су клијенти изазвали обрачунато "
 "време у том месецу."
 
-#: ../manage/time-accounting.rst:185
+#: ../manage/time-accounting.rst:187
 msgid ""
 "You can also see entries for customers that are part of a primary "
 "organization. Users without an organization can be found in the Customer "
@@ -18043,8 +18088,9 @@ msgstr ""
 "Од сада, кад год се тикет отвори или освежи у вашем Zammad систему, "
 "одговарајуће обавештење ће бити објављено у подешеном Mattermost каналу. "
 "Обавештење ће садржати линк до тикета, освежене податке и :ref:`садржај "
-"последњег чланка <mattermost-removing-article-body>`. Такође ће бити означен "
-":user-docs:`бојом </basics/ticket-basics.html#state>` према најновијем стању."
+"последњег чланка <mattermost-removing-article-body>`. Такође ће бити "
+"означен :user-docs:`бојом </basics/ticket-basics.html#state>` према "
+"најновијем стању."
 
 #: ../manage/webhook/examples/mattermost-notifications.rst:117
 msgid "Removing Article Content from the Mattermost Notification"
@@ -18327,8 +18373,9 @@ msgstr ""
 "Од сада, кад год се тикет дода или освежи у вашем Zammad систему, "
 "одговарајуће обавештење ће бити објављено у подешеном Teams каналу. "
 "Обавештење ће садржати линк до тикета, освежене податке и :ref:`садржај "
-"последњег чланка <teams-removing-article-body>`. Такође ће бити означен "
-":user-docs:`бојом </basics/ticket-basics.html#state>` према најновијем стању."
+"последњег чланка <teams-removing-article-body>`. Такође ће бити "
+"означен :user-docs:`бојом </basics/ticket-basics.html#state>` према "
+"најновијем стању."
 
 #: ../manage/webhook/examples/microsoft-teams-notifications.rst:131
 msgid "Removing Article Content from the Teams Notification"
@@ -19636,7 +19683,7 @@ msgstr "Доступно само у окидачима."
 #: ../misc/object-conditions/basics.rst:185
 #: ../misc/object-conditions/basics.rst:209
 #: ../misc/object-conditions/basics.rst:219
-#: ../system/core-workflows/condition-operators.rst:50
+#: ../system/core-workflows/condition-operators.rst:64
 msgid "is"
 msgstr "је"
 
@@ -19653,7 +19700,7 @@ msgstr "је"
 #: ../misc/object-conditions/basics.rst:186
 #: ../misc/object-conditions/basics.rst:210
 #: ../misc/object-conditions/basics.rst:220
-#: ../system/core-workflows/condition-operators.rst:72
+#: ../system/core-workflows/condition-operators.rst:86
 msgid "is not"
 msgstr "није"
 
@@ -19724,7 +19771,7 @@ msgstr "конкретан корисник"
 #: ../misc/object-conditions/basics.rst:97
 #: ../misc/object-conditions/basics.rst:155
 #: ../misc/object-conditions/basics.rst:204
-#: ../system/core-workflows/condition-operators.rst:86
+#: ../system/core-workflows/condition-operators.rst:100
 msgid "not set"
 msgstr "није постављено"
 
@@ -19882,22 +19929,58 @@ msgid "Checks tags of a ticket."
 msgstr "Проверава ознаке тикета."
 
 #: ../misc/object-conditions/basics.rst:193
-#: ../system/core-workflows/condition-operators.rst:32
+#: ../misc/object-conditions/basics.rst:516
+#: ../misc/object-conditions/basics.rst:550
+#: ../misc/object-conditions/basics.rst:587
+#: ../misc/object-conditions/basics.rst:619
+#: ../system/core-workflows/condition-operators.rst:38
+#: ../system/core-workflows/condition-operators.rst:150
+#: ../system/core-workflows/condition-operators.rst:189
+#: ../system/core-workflows/condition-operators.rst:229
+#: ../system/core-workflows/condition-operators.rst:272
+#: ../system/core-workflows/condition-operators.rst:312
 msgid "contains all"
 msgstr "садржи све"
 
 #: ../misc/object-conditions/basics.rst:194
-#: ../system/core-workflows/condition-operators.rst:38
+#: ../misc/object-conditions/basics.rst:513
+#: ../misc/object-conditions/basics.rst:547
+#: ../misc/object-conditions/basics.rst:584
+#: ../misc/object-conditions/basics.rst:616
+#: ../system/core-workflows/condition-operators.rst:49
+#: ../system/core-workflows/condition-operators.rst:147
+#: ../system/core-workflows/condition-operators.rst:186
+#: ../system/core-workflows/condition-operators.rst:226
+#: ../system/core-workflows/condition-operators.rst:269
+#: ../system/core-workflows/condition-operators.rst:309
 msgid "contains one"
 msgstr "садржи једно"
 
 #: ../misc/object-conditions/basics.rst:195
-#: ../system/core-workflows/condition-operators.rst:34
+#: ../misc/object-conditions/basics.rst:519
+#: ../misc/object-conditions/basics.rst:553
+#: ../misc/object-conditions/basics.rst:590
+#: ../misc/object-conditions/basics.rst:622
+#: ../system/core-workflows/condition-operators.rst:41
+#: ../system/core-workflows/condition-operators.rst:160
+#: ../system/core-workflows/condition-operators.rst:198
+#: ../system/core-workflows/condition-operators.rst:238
+#: ../system/core-workflows/condition-operators.rst:281
+#: ../system/core-workflows/condition-operators.rst:321
 msgid "contains all not"
 msgstr "не садржи све"
 
 #: ../misc/object-conditions/basics.rst:196
-#: ../system/core-workflows/condition-operators.rst:40
+#: ../misc/object-conditions/basics.rst:522
+#: ../misc/object-conditions/basics.rst:556
+#: ../misc/object-conditions/basics.rst:593
+#: ../misc/object-conditions/basics.rst:625
+#: ../system/core-workflows/condition-operators.rst:52
+#: ../system/core-workflows/condition-operators.rst:157
+#: ../system/core-workflows/condition-operators.rst:195
+#: ../system/core-workflows/condition-operators.rst:235
+#: ../system/core-workflows/condition-operators.rst:278
+#: ../system/core-workflows/condition-operators.rst:318
 msgid "contains one not"
 msgstr "не садржи једно"
 
@@ -19918,7 +20001,7 @@ msgid "Checks if time is accounted."
 msgstr "Проверава да ли је обрачунато време."
 
 #: ../misc/object-conditions/basics.rst:203
-#: ../system/core-workflows/condition-operators.rst:74
+#: ../system/core-workflows/condition-operators.rst:88
 msgid "is set"
 msgstr "је постављено"
 
@@ -19978,8 +20061,8 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:334
 #: ../misc/object-conditions/basics.rst:381
 #: ../misc/object-conditions/basics.rst:392
-#: ../misc/object-conditions/basics.rst:410
 #: ../misc/object-conditions/basics.rst:421
+#: ../misc/object-conditions/basics.rst:432
 msgid "Available operators for matching:"
 msgstr "Доступни оператори за подударање:"
 
@@ -20067,7 +20150,7 @@ msgstr "**не садржи**"
 #: ../misc/object-conditions/basics.rst:269
 #: ../misc/object-conditions/basics.rst:284
 #: ../misc/object-conditions/basics.rst:385
-#: ../misc/object-conditions/basics.rst:414
+#: ../misc/object-conditions/basics.rst:425
 msgid "**has changed**"
 msgstr "**је измењено**"
 
@@ -20082,14 +20165,14 @@ msgstr "Проверава да ли је неко логичко поље ис�
 #: ../misc/object-conditions/basics.rst:267
 #: ../misc/object-conditions/basics.rst:278
 #: ../misc/object-conditions/basics.rst:383
-#: ../misc/object-conditions/basics.rst:412
+#: ../misc/object-conditions/basics.rst:423
 msgid "**is**"
 msgstr "**је**"
 
 #: ../misc/object-conditions/basics.rst:268
 #: ../misc/object-conditions/basics.rst:279
 #: ../misc/object-conditions/basics.rst:384
-#: ../misc/object-conditions/basics.rst:413
+#: ../misc/object-conditions/basics.rst:424
 msgid "**is not**"
 msgstr "**није**"
 
@@ -20386,38 +20469,61 @@ msgid "**contains all**:"
 msgstr "**садржи све**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if all given field values are selected."
-msgstr "Одговара ако су изабране све дате вредности поља."
+msgid "Matches if **all** given field values are selected (AND logic)."
+msgstr "Одговара ако су изабране **све** дате вредности поља (AND оператор)."
 
 #: ../misc/object-conditions/basics.rst:0
 msgid "**contains one**:"
 msgstr "**садржи једно**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if one specific given field value is selected."
-msgstr "Одговара ако је изабрана одређена вредност поља."
+msgid ""
+"Matches if **at least one** of the given field values is selected (OR logic)."
+msgstr ""
+"Одговара ако је изабрана **бар једна** дата вредност поља (OR оператор)."
 
 #: ../misc/object-conditions/basics.rst:0
 msgid "**contains all not**:"
 msgstr "**не садржи све**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if all given field values are not selected."
-msgstr "Одговара ако све дате вредности поља нису изабране."
+msgid ""
+"Matches if **not all** given field values are selected (at least one is "
+"missing). This means \"not all of\", not \"none of\"."
+msgstr ""
+"Одговара ако **недостаје бар једна** дата вредност поља (нису одабране све). "
+"Ово значи „не све од”, не „ниједна од”."
 
 #: ../misc/object-conditions/basics.rst:0
 msgid "**contains one not**:"
 msgstr "**не садржи једно**:"
 
 #: ../misc/object-conditions/basics.rst:0
-msgid "Matches if one specific given field value is not selected."
-msgstr "Одговара ако једна одређена вредност поља није изабрана."
+msgid ""
+"Matches if **none** of the given field values are selected. This means "
+"\"none of\", not \"not all of\"."
+msgstr ""
+"Одговара се ако није одабрана **ниједна** дата вредност поља. Ово значи "
+"„ниједна од”, не „не све од”."
 
-#: ../misc/object-conditions/basics.rst:405 ../system/objects/types.rst:135
+#: ../misc/object-conditions/basics.rst:408
+msgid ""
+"In :doc:`core workflows </system/core-workflows>`, these operators have "
+"different semantics. See :ref:`core workflow condition operators <core-"
+"workflow-condition-examples>` for details. Example scenarios for the "
+"operators described here can be found in :ref:`multi-select-operator-"
+"examples` below."
+msgstr ""
+"У :doc:`радним токовима </system/core-workflows>`, ови оператори имају "
+"другачије значење. Погледајте :ref:`операторе услова радних токова <core-"
+"workflow-condition-examples>` за детаље. Примери оператора описаних овде се "
+"могу пронаћи :ref:`испод <multi-select-operator-examples>`."
+
+#: ../misc/object-conditions/basics.rst:416 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr "Поље за једноструки избор стабла"
 
-#: ../misc/object-conditions/basics.rst:407
+#: ../misc/object-conditions/basics.rst:418
 msgid ""
 "Checks if a selected field value match the attribute value. Selecting more "
 "than one value in the condition will act like an \"OR\" clause."
@@ -20426,11 +20532,11 @@ msgstr ""
 "Одабир више од једне вредности у услову ће деловати као дисјункција "
 "(клаузула „OR“)."
 
-#: ../misc/object-conditions/basics.rst:417 ../system/objects/types.rst:148
+#: ../misc/object-conditions/basics.rst:428 ../system/objects/types.rst:148
 msgid "Multiple Tree Selection Field"
 msgstr "Поље за вишеструки избор стабла"
 
-#: ../misc/object-conditions/basics.rst:419
+#: ../misc/object-conditions/basics.rst:430
 msgid "Checks if selected field value(s) match the attribute value(s)."
 msgstr ""
 "Проверава да ли одабране вредности поља одговарају стварној вредности "
@@ -20452,57 +20558,57 @@ msgstr "**не садржи све**"
 msgid "**contains one not**"
 msgstr "**не садржи једно**"
 
-#: ../misc/object-conditions/basics.rst:433
+#: ../misc/object-conditions/basics.rst:447
 msgid "Additional Information and Remarks"
 msgstr "Додатне информације и напомене"
 
-#: ../misc/object-conditions/basics.rst:442
+#: ../misc/object-conditions/basics.rst:456
 msgid "Ticket context conditions do not support:"
 msgstr "Контекст услова тикета не подржава следеће:"
 
-#: ../misc/object-conditions/basics.rst:439
+#: ../misc/object-conditions/basics.rst:453
 msgid "regular expressions"
 msgstr "регуларне изразе"
 
-#: ../misc/object-conditions/basics.rst:440
+#: ../misc/object-conditions/basics.rst:454
 msgid "case sensitive string conditions"
 msgstr "услове који су осетљиви на велика и мала слова"
 
-#: ../misc/object-conditions/basics.rst:441
+#: ../misc/object-conditions/basics.rst:455
 msgid ""
 "Basic conditions do not support the same attribute to be selected more than "
 "once"
 msgstr "Основни услови не подржавају да се исти атрибут бира више пута"
 
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:464
 msgid "**has changed** conditions:"
 msgstr "услове **је измењено**:"
 
-#: ../misc/object-conditions/basics.rst:445
+#: ../misc/object-conditions/basics.rst:459
 msgid "Are only available for ticket attributes and don't affect:"
 msgstr "Доступно само за атрибуте тикета и не утиче на:"
 
-#: ../misc/object-conditions/basics.rst:447
+#: ../misc/object-conditions/basics.rst:461
 msgid "Ticket articles attributes"
 msgstr "атрибуте чланака тикета"
 
-#: ../misc/object-conditions/basics.rst:448
+#: ../misc/object-conditions/basics.rst:462
 msgid "Organization attributes"
 msgstr "атрибуте организације"
 
-#: ../misc/object-conditions/basics.rst:449
+#: ../misc/object-conditions/basics.rst:463
 msgid "User attributes"
 msgstr "атрибуте корисника"
 
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:464
 msgid "Group attributes"
 msgstr "атрибуте група"
 
-#: ../misc/object-conditions/basics.rst:463
+#: ../misc/object-conditions/basics.rst:477
 msgid "Differences in input fields:"
 msgstr "Разлике у пољима за унос:"
 
-#: ../misc/object-conditions/basics.rst:453
+#: ../misc/object-conditions/basics.rst:467
 msgid ""
 "Please note that the input field for tokens doesn't support the comma as "
 "separator (as in the input field for tags). If you use the comma in the "
@@ -20512,7 +20618,7 @@ msgstr ""
 "пољу за унос за ознаке). Ако користите зарез у пољу за унос значки, зарез ће "
 "бити укључен у вашу значку."
 
-#: ../misc/object-conditions/basics.rst:457
+#: ../misc/object-conditions/basics.rst:471
 msgid "**Example**:"
 msgstr "**Пример**:"
 
@@ -20520,7 +20626,7 @@ msgstr "**Пример**:"
 msgid "Example of comma usage in token input field"
 msgstr "Пример употребе зареза у пољу за унос значки"
 
-#: ../misc/object-conditions/basics.rst:462
+#: ../misc/object-conditions/basics.rst:476
 msgid ""
 "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
 "in one token)."
@@ -20528,15 +20634,260 @@ msgstr ""
 "``A`` додато са ентером/табом, ``B`` и ``C`` одвојени зарезом (што резултира "
 "једном значком)."
 
-#: ../misc/object-conditions/basics.rst:468
+#: ../misc/object-conditions/basics.rst:482
+msgid "Multi-Select Operator Examples"
+msgstr "Примери оператор поља вишеструког избора"
+
+#: ../misc/object-conditions/basics.rst:484
+msgid ""
+"The ``contains`` family of operators for multi-select fields compares two "
+"sets of values: the values currently in the field and the values specified "
+"in the condition. The diagrams below show the condition values as an orange "
+"circle and the field values as a blue circle."
+msgstr ""
+"Породица оператора ``садржи`` за поља вишеструког избора пореди два скупа "
+"вредности: вредности поља и вредности које су део услова. Дијаграми испод "
+"приказују вредности услова као наранџасти круг и вредности поља као плави "
+"круг."
+
+#: ../misc/object-conditions/basics.rst:489
+msgid ""
+"Be aware that these operators behave **differently** in :doc:`core workflows "
+"</system/core-workflows>`. See :ref:`core workflow condition operators <core-"
+"workflow-condition-examples>` for a side by side comparison."
+msgstr ""
+"Обратите пажњу да се ови оператори понашају **другачије** у :doc:`радним "
+"токовима </system/core-workflows>`. Погледајте :ref:`операторе услова радних "
+"токова <core-workflow-condition-examples>` за детаљно поређење."
+
+#: ../misc/object-conditions/basics.rst:495
+#: ../system/core-workflows/condition-operators.rst:165
+msgid "Example 1: Condition A, B - Field A, B, C"
+msgstr "Пример 1: Услов A, B - Поље A, B, C"
+
+#: ../misc/object-conditions/basics.rst:497
+#: ../system/core-workflows/condition-operators.rst:167
+msgid ""
+"In this scenario, the field holds the values A, B and C, while the condition "
+"asks for the values A and B."
+msgstr ""
+"У овом сцренарију, поље садржи вредности A, B и C, док услов захтева "
+"вредности A и B."
+
+#: ../misc/object-conditions/basics.rst:503
+#: ../system/core-workflows/condition-operators.rst:173
+msgid ""
+"Venn diagram of condition values A, B and field values A, B, C. A and B are "
+"in both circles, C only in the field circle."
+msgstr ""
+"Венов дијаграм вредности услова A, B и вредности поља A, B, C. A и B се "
+"налазе у оба круга, C само у кругу поља."
+
+#: ../misc/object-conditions/basics.rst:503
+#: ../system/core-workflows/condition-operators.rst:173
+msgid "Condition values ``A, B`` overlap with field values ``A, B, C``."
+msgstr "Вредности услова ``A, B`` се секу са вредностима поља ``A, B, C``."
+
+#: ../misc/object-conditions/basics.rst:510
+#: ../misc/object-conditions/basics.rst:544
+#: ../misc/object-conditions/basics.rst:581
+#: ../misc/object-conditions/basics.rst:613
+#: ../system/core-workflows/condition-operators.rst:21
+#: ../system/core-workflows/condition-operators.rst:141
+#: ../system/core-workflows/condition-operators.rst:180
+#: ../system/core-workflows/condition-operators.rst:220
+#: ../system/core-workflows/condition-operators.rst:263
+#: ../system/core-workflows/condition-operators.rst:303
+msgid "Operator"
+msgstr "Оператор"
+
+#: ../misc/object-conditions/basics.rst:511
+#: ../misc/object-conditions/basics.rst:545
+#: ../misc/object-conditions/basics.rst:582
+#: ../misc/object-conditions/basics.rst:614
+#: ../system/core-workflows/condition-operators.rst:181
+#: ../system/core-workflows/condition-operators.rst:221
+#: ../system/core-workflows/condition-operators.rst:264
+#: ../system/core-workflows/condition-operators.rst:304
+msgid "Matches?"
+msgstr "Поклапа се?"
+
+#: ../misc/object-conditions/basics.rst:512
+#: ../misc/object-conditions/basics.rst:546
+#: ../misc/object-conditions/basics.rst:583
+#: ../misc/object-conditions/basics.rst:615
+#: ../system/core-workflows/condition-operators.rst:182
+#: ../system/core-workflows/condition-operators.rst:222
+#: ../system/core-workflows/condition-operators.rst:265
+#: ../system/core-workflows/condition-operators.rst:305
+msgid "Why"
+msgstr "Зашто"
+
+#: ../misc/object-conditions/basics.rst:515
+#: ../system/core-workflows/condition-operators.rst:185
+msgid "``A`` and ``B`` are in both sets (OR logic)."
+msgstr "``A`` и ``B`` се налазе у оба скупа (OR оператор)."
+
+#: ../misc/object-conditions/basics.rst:518
+#: ../system/core-workflows/condition-operators.rst:191
+msgid "Both ``A`` and ``B`` are present (AND logic)."
+msgstr "И ``A`` и ``B`` су присутни (AND оператор)."
+
+#: ../misc/object-conditions/basics.rst:521
+msgid "All condition values are present in the field."
+msgstr "Све вредности услова су присутне у пољу."
+
+#: ../misc/object-conditions/basics.rst:524
+msgid "The field has values in common with the condition."
+msgstr "Поље дели вредности са условом."
+
+#: ../misc/object-conditions/basics.rst:527
+#: ../system/core-workflows/condition-operators.rst:203
+msgid "Example 2: Condition A, B, C - Field C, D"
+msgstr "Пример 2: Услов A, B, C - Поље C, D"
+
+#: ../misc/object-conditions/basics.rst:529
+#: ../system/core-workflows/condition-operators.rst:205
+msgid ""
+"In this scenario, the field holds the values C and D. The condition value C "
+"is present in the field, while A and B are not."
+msgstr ""
+"У оовом сценарију, поље садржи вредности C и D. Вредност услова C је "
+"присутна у пољу, док A и B нису."
+
+#: ../misc/object-conditions/basics.rst:536
+#: ../system/core-workflows/condition-operators.rst:212
+msgid ""
+"Venn diagram of condition values A, B, C and field values C, D.\n"
+"Only C is in both circles."
+msgstr ""
+"Венов дијаграм вредности услова A, B, C и вредности поља C, D.\n"
+"Само C је присутно у оба круга."
+
+#: ../misc/object-conditions/basics.rst:536
+#: ../system/core-workflows/condition-operators.rst:212
+msgid ""
+"Condition values ``A, B, C`` partially overlap with field values ``C, D``."
+msgstr ""
+"Вредности услова ``A, B, C`` се делимично секу са вредностима поља ``C, D``."
+
+#: ../misc/object-conditions/basics.rst:549
+#: ../system/core-workflows/condition-operators.rst:225
+msgid "``C`` is in both sets (OR logic)."
+msgstr "``C`` је присутно у оба скупа (OR оператор)."
+
+#: ../misc/object-conditions/basics.rst:552
+#: ../system/core-workflows/condition-operators.rst:231
+msgid "Only ``C`` of the three condition values is present."
+msgstr "Само вредност ``C`` од три различите вредности услова је присутна."
+
+#: ../misc/object-conditions/basics.rst:555
+#: ../misc/object-conditions/basics.rst:592
+msgid "``A`` and ``B`` are missing from the field."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:558
+msgid "``C`` is in both the field and the condition."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:560
+msgid ""
+"This partial overlap is where the two \"not\" operators part ways: "
+"``contains all not`` matches because a single condition value is missing, "
+"while ``contains one not`` does not match because the one common value is "
+"enough to block it."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:566
+#: ../system/core-workflows/condition-operators.rst:248
+msgid "Example 3: Condition A, B - Field C, D"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:568
+#: ../system/core-workflows/condition-operators.rst:250
+msgid ""
+"In this scenario, the field holds the values C and D, which have nothing in "
+"common with the condition values A and B."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:574
+#: ../system/core-workflows/condition-operators.rst:256
+msgid ""
+"Venn diagram of condition values A, B and field values C, D. The two circles "
+"do not overlap."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:574
+#: ../system/core-workflows/condition-operators.rst:256
+msgid "Condition values ``A, B`` have no overlap with field values ``C, D``."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:586
+#: ../system/core-workflows/condition-operators.rst:268
+msgid "No value is in both sets."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:589
+#: ../system/core-workflows/condition-operators.rst:274
+msgid "Neither ``A`` nor ``B`` is present."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:595
+#: ../misc/object-conditions/basics.rst:627
+#: ../system/core-workflows/condition-operators.rst:159
+#: ../system/core-workflows/condition-operators.rst:161
+#: ../system/core-workflows/condition-operators.rst:283
+#, fuzzy
+#| msgid "This field is only available for Trigger conditions!"
+msgid "The field has no value in common with the condition."
+msgstr "Ово поље је доступно само за услове окидача!"
+
+#: ../misc/object-conditions/basics.rst:598
+#: ../system/core-workflows/condition-operators.rst:288
+msgid "Example 4: Condition A, B - Field is empty"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:600
+#: ../system/core-workflows/condition-operators.rst:290
+msgid ""
+"In this scenario, the field holds no values at all, while the condition asks "
+"for the values A and B."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:606
+#: ../system/core-workflows/condition-operators.rst:296
+msgid ""
+"Venn diagram of condition values A, B and an empty field. The two circles do "
+"not overlap."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:606
+#: ../system/core-workflows/condition-operators.rst:296
+msgid "The field holds no values at all."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:618
+#: ../misc/object-conditions/basics.rst:621
+#: ../system/core-workflows/condition-operators.rst:308
+#: ../system/core-workflows/condition-operators.rst:314
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid "No value is present."
+msgstr "Подудара се ако једна дата вредност постоји."
+
+#: ../misc/object-conditions/basics.rst:624
+msgid "No condition value is present in the field."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:632
 msgid "Regex"
 msgstr "Регуларни израз"
 
-#: ../misc/object-conditions/basics.rst:473
+#: ../misc/object-conditions/basics.rst:637
 msgid "Regex support"
 msgstr "Подршка регуларних израза"
 
-#: ../misc/object-conditions/basics.rst:471
+#: ../misc/object-conditions/basics.rst:635
 msgid ""
 "**matches regex** and **does not match regex** are supported only in "
 "Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket "
@@ -20546,11 +20897,11 @@ msgstr ""
 "подржани само у окидачима, бирачу временског обрачуна, postmaster филтерима, "
 "аутоматском додељивању тикета и радном току."
 
-#: ../misc/object-conditions/basics.rst:478
+#: ../misc/object-conditions/basics.rst:642
 msgid "\"Old\" style ``regex:...`` conditions"
 msgstr "Услови са „старим” стилом ``regex:…``"
 
-#: ../misc/object-conditions/basics.rst:476
+#: ../misc/object-conditions/basics.rst:640
 msgid ""
 "If you update your Zammad from 6.0 or prior and you have already conditions "
 "with **contains** or **contains not** including a regex filter (i.e. "
@@ -22728,8 +23079,8 @@ msgid ""
 "note :doc:`Ticket last contact behavior Settings </settings/ticket>` for "
 "this)"
 msgstr ""
-"``2019-10-07 16:25:00 UTC`` или празно ако не постоји (обратите пажњу на "
-":doc:`подешавање понашања последњег одговора тикета </settings/ticket>`)"
+"``2019-10-07 16:25:00 UTC`` или празно ако не постоји (обратите пажњу "
+"на :doc:`подешавање понашања последњег одговора тикета </settings/ticket>`)"
 
 #: ../misc/variables/ticket.rst:1
 msgid "Ticket > Last contact"
@@ -27848,10 +28199,15 @@ msgstr ""
 "објашњења за многе услове и операторе."
 
 #: ../system/core-workflows/condition-operators.rst:8
+#, fuzzy
+#| msgid ""
+#| "Due to differences to other places in Zammad which are also using "
+#| "conditions (e.g. triggers), you can find a dedicated description of "
+#| "operators for core workflows below."
 msgid ""
-"Due to differences to other places in Zammad which are also using conditions "
-"(e.g. triggers), you can find a dedicated description of operators for core "
-"workflows below."
+"Due to differences from other places in Zammad which are also using "
+"conditions (e.g. triggers), you can find a dedicated description of "
+"operators for core workflows below."
 msgstr ""
 "Услед разлика са другим областима Zammad-а које такође користи услове (нпр. "
 "окидачи), испод можете пронаћи објашњење посвећено операторима радних токова."
@@ -27866,272 +28222,444 @@ msgstr ""
 "поља. Неки од оператора могу бити доступни само за системске атрибуте (нпр. "
 "за „Ознаке”, „Активно”)."
 
-#: ../system/core-workflows/condition-operators.rst:20
-msgid "Operator"
-msgstr "Оператор"
-
-#: ../system/core-workflows/condition-operators.rst:22
+#: ../system/core-workflows/condition-operators.rst:23
 msgid "after (absolute)"
 msgstr "након (апсолутно)"
 
-#: ../system/core-workflows/condition-operators.rst:23
+#: ../system/core-workflows/condition-operators.rst:24
 msgid "Matches if a date/time is after a specific point in time."
 msgstr "Подудара се ако је датум/време након одређеног тренутка."
 
-#: ../system/core-workflows/condition-operators.rst:24
+#: ../system/core-workflows/condition-operators.rst:25
 msgid "after (relative)"
 msgstr "након (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:25
+#: ../system/core-workflows/condition-operators.rst:26
 msgid "Matches if a time span after a specified event has passed."
 msgstr "Подудара се ако је временски оквир прошао након одређеног догађаја."
 
-#: ../system/core-workflows/condition-operators.rst:26
+#: ../system/core-workflows/condition-operators.rst:27
 msgid "before (absolute)"
 msgstr "пре (апсолутно)"
 
-#: ../system/core-workflows/condition-operators.rst:27
+#: ../system/core-workflows/condition-operators.rst:28
 msgid "Matches if a date/time is before a specific point in time."
 msgstr "Подудара се ако је време/датум пре одређеног тренутка."
 
-#: ../system/core-workflows/condition-operators.rst:28
+#: ../system/core-workflows/condition-operators.rst:29
 msgid "before (relative)"
 msgstr "пре (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:29
+#: ../system/core-workflows/condition-operators.rst:30
 msgid "Matches if a time span after a specified event has not passed."
 msgstr "Подудара се ако временски оквир након одређеног догађаја није прошао."
 
-#: ../system/core-workflows/condition-operators.rst:30
+#: ../system/core-workflows/condition-operators.rst:31
+#: ../system/core-workflows/condition-operators.rst:144
+#: ../system/core-workflows/condition-operators.rst:183
+#: ../system/core-workflows/condition-operators.rst:223
+#: ../system/core-workflows/condition-operators.rst:266
+#: ../system/core-workflows/condition-operators.rst:306
 msgid "contains"
 msgstr "садржи"
 
-#: ../system/core-workflows/condition-operators.rst:31
-msgid "Matches if a specified value is present."
-msgstr "Подудара се ако одређена вредност постоји."
-
-#: ../system/core-workflows/condition-operators.rst:33
-msgid "Matches if all of the specified values are present."
-msgstr "Подудара се ако све дате вредности постоје."
-
-#: ../system/core-workflows/condition-operators.rst:35
-msgid "Matches if none of the specified values are present."
+#: ../system/core-workflows/condition-operators.rst:32
+#, fuzzy
+#| msgid "Matches if none of the specified values are present."
+msgid ""
+"Matches if **at least one** of the specified values is present in the field "
+"(OR logic)."
 msgstr "Подудара се ако ниједна од датих вредности не постоји."
 
-#: ../system/core-workflows/condition-operators.rst:36
+#: ../system/core-workflows/condition-operators.rst:34
+#: ../system/core-workflows/condition-operators.rst:153
+#: ../system/core-workflows/condition-operators.rst:192
+#: ../system/core-workflows/condition-operators.rst:232
+#: ../system/core-workflows/condition-operators.rst:275
+#: ../system/core-workflows/condition-operators.rst:315
 msgid "contains not"
 msgstr "не садржи"
 
-#: ../system/core-workflows/condition-operators.rst:37
-msgid "Matches if a specified value is not present."
-msgstr "Подудара се ако дата вредност не постоји."
+#: ../system/core-workflows/condition-operators.rst:35
+msgid ""
+"Matches if the field contains at least one value that is **not** among the "
+"specified values. Also matches if the field is empty."
+msgstr ""
 
 #: ../system/core-workflows/condition-operators.rst:39
-msgid "Matches if one specified value is present."
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid ""
+"Matches if **every** specified value is present in the field (AND logic)."
 msgstr "Подудара се ако једна дата вредност постоји."
 
-#: ../system/core-workflows/condition-operators.rst:41
-msgid "Matches if one specified value is not present."
-msgstr "Подудара се ако једна дата вредност не постоји."
-
 #: ../system/core-workflows/condition-operators.rst:42
+msgid ""
+"Matches if **none** of the specified values are present in the field. The "
+"field and the condition have no value in common: this means \"contains none "
+"of\", not \"does not contain all of\"."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:46
+msgid ""
+"In triggers and overviews, this operator means \"not all of the specified "
+"values are present\" instead. See the examples section below."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:50
+#, fuzzy
+#| msgid "Matches if none of the specified values are present."
+msgid ""
+"Same as ``contains``. Matches if **at least one** of the specified values is "
+"present."
+msgstr "Подудара се ако ниједна од датих вредности не постоји."
+
+#: ../system/core-workflows/condition-operators.rst:53
+msgid ""
+"Same as ``contains not``. Matches if the field contains at least one value "
+"that is **not** among the specified values."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:56
 msgid "does not match regex"
 msgstr "не задовољава регуларни израз"
 
-#: ../system/core-workflows/condition-operators.rst:43
+#: ../system/core-workflows/condition-operators.rst:57
 msgid "Matches if content doesn't fit to regex rule."
 msgstr "Подудара се ако се садржај не поклапа са регуларним изразом."
 
-#: ../system/core-workflows/condition-operators.rst:44
+#: ../system/core-workflows/condition-operators.rst:58
 msgid "ends with"
 msgstr "завршава се са"
 
-#: ../system/core-workflows/condition-operators.rst:45
+#: ../system/core-workflows/condition-operators.rst:59
 msgid "Matches if content ends with specified value."
 msgstr "Подудара се ако се садржај завршава са датом вредности."
 
-#: ../system/core-workflows/condition-operators.rst:46
+#: ../system/core-workflows/condition-operators.rst:60
 msgid "ends with one of"
 msgstr "завршава се са једним од"
 
-#: ../system/core-workflows/condition-operators.rst:47
+#: ../system/core-workflows/condition-operators.rst:61
 msgid "Matches if content ends with one of the specified values."
 msgstr "Подудара се ако се садржај завршава са једном од датих вредности."
 
-#: ../system/core-workflows/condition-operators.rst:48
+#: ../system/core-workflows/condition-operators.rst:62
 msgid "from (relative)"
 msgstr "од (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:49
+#: ../system/core-workflows/condition-operators.rst:63
 msgid "Matches if date/time is after a period of time after an event."
 msgstr "Подудара се ако је датум/време након датог периода после догађаја."
 
-#: ../system/core-workflows/condition-operators.rst:51
+#: ../system/core-workflows/condition-operators.rst:65
 msgid "Matches if content is equal to a specified value."
 msgstr "Подудара се ако је садржај једнак датој вредности."
 
-#: ../system/core-workflows/condition-operators.rst:52
+#: ../system/core-workflows/condition-operators.rst:66
 msgid "is any of"
 msgstr "је један од"
 
-#: ../system/core-workflows/condition-operators.rst:53
+#: ../system/core-workflows/condition-operators.rst:67
 msgid "Matches if content is equal to any of specified values."
 msgstr "Подудара се ако је садржај једнак једној од датих вредности."
 
-#: ../system/core-workflows/condition-operators.rst:54
+#: ../system/core-workflows/condition-operators.rst:68
 msgid "is greater than"
 msgstr "је веће од"
 
-#: ../system/core-workflows/condition-operators.rst:55
+#: ../system/core-workflows/condition-operators.rst:69
 msgid "Matches if the value is greater than the specified value."
 msgstr "Подудара се ако је вредност већа од дате вредности."
 
-#: ../system/core-workflows/condition-operators.rst:56
+#: ../system/core-workflows/condition-operators.rst:70
 msgid "is greater than or equal to"
 msgstr "је веће од или једнако"
 
-#: ../system/core-workflows/condition-operators.rst:57
+#: ../system/core-workflows/condition-operators.rst:71
 msgid "Matches if the value is greater than or equal to the specified value."
 msgstr "Подудара се ако је вредност већа од или једнака датој вредности."
 
-#: ../system/core-workflows/condition-operators.rst:58
+#: ../system/core-workflows/condition-operators.rst:72
 msgid "is less than"
 msgstr "је мање од"
 
-#: ../system/core-workflows/condition-operators.rst:59
+#: ../system/core-workflows/condition-operators.rst:73
 msgid "Matches if the value is less than the specified value."
 msgstr "Подудара се ако је вредност мања од дате вредности."
 
-#: ../system/core-workflows/condition-operators.rst:60
+#: ../system/core-workflows/condition-operators.rst:74
 msgid "is less than or equal to"
 msgstr "је мање од или једнако"
 
-#: ../system/core-workflows/condition-operators.rst:61
+#: ../system/core-workflows/condition-operators.rst:75
 msgid "Matches if the value is less than or equal to the specified value."
 msgstr "Подудара се ако је вредност мања од или једнака датој вредности."
 
-#: ../system/core-workflows/condition-operators.rst:62
+#: ../system/core-workflows/condition-operators.rst:76
 msgid "is modified"
 msgstr "је измењено"
 
-#: ../system/core-workflows/condition-operators.rst:63
+#: ../system/core-workflows/condition-operators.rst:77
 msgid "Matches if content is modified."
 msgstr "Подудара се ако је садржај промењен."
 
-#: ../system/core-workflows/condition-operators.rst:65
-#: ../system/core-workflows/condition-operators.rst:69
+#: ../system/core-workflows/condition-operators.rst:79
+#: ../system/core-workflows/condition-operators.rst:83
 msgid "True from the moment of changing content until form submit."
 msgstr "Тачно од тренутка промене садржаја до слања форме."
 
-#: ../system/core-workflows/condition-operators.rst:66
+#: ../system/core-workflows/condition-operators.rst:80
 msgid "is modified to"
 msgstr "је промењено на"
 
-#: ../system/core-workflows/condition-operators.rst:67
+#: ../system/core-workflows/condition-operators.rst:81
 msgid "Matches if content is modified to a specific value."
 msgstr "Подудара се ако је садржај промењен на дату вредност."
 
-#: ../system/core-workflows/condition-operators.rst:70
+#: ../system/core-workflows/condition-operators.rst:84
 msgid "is none of"
 msgstr "није ниједан од"
 
-#: ../system/core-workflows/condition-operators.rst:71
+#: ../system/core-workflows/condition-operators.rst:85
 msgid "Matches if content is none of any specified values."
 msgstr "Подудара се ако садржај није једнак ниједног од датих вредности."
 
-#: ../system/core-workflows/condition-operators.rst:73
+#: ../system/core-workflows/condition-operators.rst:87
 msgid "Matches if content is not equal to a specified value."
 msgstr "Подудара се ако садржај није једнак датој вредности."
 
-#: ../system/core-workflows/condition-operators.rst:75
+#: ../system/core-workflows/condition-operators.rst:89
 msgid "Matches if content is present."
 msgstr "Подудара се ако садржај постоји."
 
-#: ../system/core-workflows/condition-operators.rst:76
+#: ../system/core-workflows/condition-operators.rst:90
 msgid "just changed"
 msgstr "управо измењено"
 
-#: ../system/core-workflows/condition-operators.rst:77
+#: ../system/core-workflows/condition-operators.rst:91
 msgid "Matches if content has changed."
 msgstr "Подудара се ако је садржај измењен."
 
-#: ../system/core-workflows/condition-operators.rst:79
-#: ../system/core-workflows/condition-operators.rst:83
+#: ../system/core-workflows/condition-operators.rst:93
+#: ../system/core-workflows/condition-operators.rst:97
 msgid ""
 "Only true for the moment of changing content until next form field action/"
 "click."
 msgstr ""
 "Тачно само од тренутка измене садржаја до следеће акције/клика поља форме."
 
-#: ../system/core-workflows/condition-operators.rst:80
+#: ../system/core-workflows/condition-operators.rst:94
 msgid "just changed to"
 msgstr "је управо измењено на"
 
-#: ../system/core-workflows/condition-operators.rst:81
+#: ../system/core-workflows/condition-operators.rst:95
 msgid "Matches if content has changed to a specified value."
 msgstr "Подудара се ако је садржај измењен на дату вредност."
 
-#: ../system/core-workflows/condition-operators.rst:84
+#: ../system/core-workflows/condition-operators.rst:98
 msgid "matches regex"
 msgstr "задовољава регуларни израз"
 
-#: ../system/core-workflows/condition-operators.rst:85
+#: ../system/core-workflows/condition-operators.rst:99
 msgid "Matches if value fits to regex rule."
 msgstr "Подудара се ако се садржај поклапа са регуларним изразом."
 
-#: ../system/core-workflows/condition-operators.rst:87
+#: ../system/core-workflows/condition-operators.rst:101
 msgid "Matches if no content is present."
 msgstr "Подудара се ако садржај не постоји."
 
-#: ../system/core-workflows/condition-operators.rst:88
+#: ../system/core-workflows/condition-operators.rst:102
 msgid "starts with"
 msgstr "почиње са"
 
-#: ../system/core-workflows/condition-operators.rst:89
+#: ../system/core-workflows/condition-operators.rst:103
 msgid "Matches if content starts with specified value."
 msgstr "Подудара се ако садржај почиње са датом вредности."
 
-#: ../system/core-workflows/condition-operators.rst:90
+#: ../system/core-workflows/condition-operators.rst:104
 msgid "starts with one of"
 msgstr "почиње са једним од"
 
-#: ../system/core-workflows/condition-operators.rst:91
+#: ../system/core-workflows/condition-operators.rst:105
 msgid "Matches if content starts with one of the specified values."
 msgstr "Подудара се ако садржај почиње са једном од датих вредности."
 
-#: ../system/core-workflows/condition-operators.rst:92
+#: ../system/core-workflows/condition-operators.rst:106
 msgid "till (relative)"
 msgstr "до (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:93
+#: ../system/core-workflows/condition-operators.rst:107
 msgid "Matches if date/time is before a period of time before an event."
 msgstr "Подудара се ако је датум/време пре датог периода пре догађаја."
 
-#: ../system/core-workflows/condition-operators.rst:94
+#: ../system/core-workflows/condition-operators.rst:108
 msgid "today"
 msgstr "данас"
 
-#: ../system/core-workflows/condition-operators.rst:95
+#: ../system/core-workflows/condition-operators.rst:109
 msgid "Matches if date/time is today."
 msgstr "Подудара се ако је датум/време у току данашњег дана."
 
-#: ../system/core-workflows/condition-operators.rst:96
+#: ../system/core-workflows/condition-operators.rst:110
 msgid "within last (relative)"
 msgstr "у последњих (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:97
+#: ../system/core-workflows/condition-operators.rst:111
 msgid ""
 "Matches if date/time content is within specified period of time before now."
 msgstr "Подудара се ако је датум/време унутар датог периода у прошлости."
 
-#: ../system/core-workflows/condition-operators.rst:99
+#: ../system/core-workflows/condition-operators.rst:113
 msgid "within next (relative)"
 msgstr "у следећих (релативно)"
 
-#: ../system/core-workflows/condition-operators.rst:100
+#: ../system/core-workflows/condition-operators.rst:114
 msgid ""
 "Matches if date/time content is within specified period of time after now."
 msgstr "Подудара се ако је датум/време унутар датог периода у будућности."
+
+#: ../system/core-workflows/condition-operators.rst:118
+#, fuzzy
+#| msgid "Available Operators"
+msgid "Multi-Select Operators"
+msgstr "Доступни оператори"
+
+#: ../system/core-workflows/condition-operators.rst:120
+msgid ""
+"The ``contains`` family of operators compares two sets of values: the values "
+"currently in the field and the values specified in the condition. The "
+"diagrams below show the condition values as an orange circle and the field "
+"values as a blue circle."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:128
+msgid "Differences to Triggers and Overviews"
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:130
+msgid ""
+"Be aware that these operators behave **differently** in other features that "
+"use conditions (e.g. triggers and overviews). The most confusing difference: "
+"in core workflows, ``contains all not`` means that no value matches at all, "
+"while in triggers and overviews it means \"not all values are present\". The "
+"table below compares both worlds side by side."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:142
+#, fuzzy
+#| msgid "Core workflows do not replace triggers"
+msgid "Core workflows (this page)"
+msgstr "Радни токови не замењују окидаче"
+
+#: ../system/core-workflows/condition-operators.rst:143
+msgid "Triggers, overviews, etc."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:145
+#: ../system/core-workflows/condition-operators.rst:149
+#, fuzzy
+#| msgid "Matches if one specified value is present."
+msgid "At least one value is present (OR logic)."
+msgstr "Подудара се ако једна дата вредност постоји."
+
+#: ../system/core-workflows/condition-operators.rst:146
+msgid "Not available; ``contains one`` is the equivalent."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:148
+#: ../system/core-workflows/condition-operators.rst:188
+#: ../system/core-workflows/condition-operators.rst:228
+#: ../system/core-workflows/condition-operators.rst:271
+#: ../system/core-workflows/condition-operators.rst:311
+msgid "Same as ``contains``."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:151
+#: ../system/core-workflows/condition-operators.rst:152
+msgid "Every value is present (AND logic)."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:154
+#, fuzzy
+#| msgid ""
+#| "If the date field's value is before the configured date, the condition "
+#| "will be met."
+msgid ""
+"At least one field value is outside the condition, or the field is empty."
+msgstr ""
+"Ако је вредност поља датума пре подешеног датума, услов ће бити испуњен."
+
+#: ../system/core-workflows/condition-operators.rst:156
+#, fuzzy
+#| msgid "Set available options for select fields"
+msgid "Not available for multi-select fields."
+msgstr "Одредите доступне опције за поља избора"
+
+#: ../system/core-workflows/condition-operators.rst:158
+#: ../system/core-workflows/condition-operators.rst:197
+#: ../system/core-workflows/condition-operators.rst:237
+#: ../system/core-workflows/condition-operators.rst:280
+#: ../system/core-workflows/condition-operators.rst:320
+#, fuzzy
+#| msgid "contains not"
+msgid "Same as ``contains not``."
+msgstr "не садржи"
+
+#: ../system/core-workflows/condition-operators.rst:162
+msgid "Not all values are present (at least one is missing)."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:194
+msgid "``C`` is in the field but not in the condition."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:200
+msgid "``A`` and ``B`` are present in the field."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:234
+msgid "``D`` is in the field but not in the condition."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:240
+msgid "``C`` is present in the field."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:242
+msgid ""
+"This partial overlap is where the two \"all\" operators part ways: "
+"``contains all`` fails because one condition value is missing, while "
+"``contains all not`` fails because a single common value is enough to block "
+"it."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:277
+msgid "``C`` and ``D`` are not in the condition."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:285
+msgid "This is the only example where ``contains all not`` matches."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:317
+msgid "An empty field matches."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:323
+#, fuzzy
+#| msgid ""
+#| "**Actions:** define what to change in a ticket which matches the "
+#| "condition."
+msgid "An empty field has no value in common with the condition."
+msgstr "**Радње:** одређује шта се мења у тикету који се подудара са условом."
+
+#: ../system/core-workflows/condition-operators.rst:325
+msgid ""
+"Note that ``contains not`` and ``contains one not`` match an empty field, "
+"while ``contains`` and ``contains all`` do not. If you want to exclude "
+"specific values, be aware that empty fields pass the condition."
+msgstr ""
 
 #: ../system/core-workflows/how-do-they-work.rst:2
 msgid "How do they work?"
@@ -36022,6 +36550,24 @@ msgstr "Верзија"
 msgid "Shows the current Zammad version of your instance."
 msgstr "Приказује тренутну Zammad верзију ваше инстанце."
 
+#~ msgid "Matches if all given field values are not selected."
+#~ msgstr "Одговара ако све дате вредности поља нису изабране."
+
+#~ msgid "Matches if one specific given field value is not selected."
+#~ msgstr "Одговара ако једна одређена вредност поља није изабрана."
+
+#~ msgid "Matches if a specified value is present."
+#~ msgstr "Подудара се ако одређена вредност постоји."
+
+#~ msgid "Matches if all of the specified values are present."
+#~ msgstr "Подудара се ако све дате вредности постоје."
+
+#~ msgid "Matches if a specified value is not present."
+#~ msgstr "Подудара се ако дата вредност не постоји."
+
+#~ msgid "Matches if one specified value is not present."
+#~ msgstr "Подудара се ако једна дата вредност не постоји."
+
 #~ msgid "Depending on your email system, follow the matching guide:"
 #~ msgstr "У зависности од вашег имејл система, пратите одговарајући водич:"
 
@@ -43525,9 +44071,6 @@ msgstr "Приказује тренутну Zammad верзију ваше ин�
 #~ msgid "Action *(Scope: Ticket, Ticket article)*"
 #~ msgstr "Радња *(обим: тикет, чланак тикета)*"
 
-#~ msgid "This field is only available for Trigger conditions!"
-#~ msgstr "Ово поље је доступно само за услове окидача!"
-
 #~ msgid "How was the ticket in question touched?"
 #~ msgstr "Како је измењен дотични тикет?"
 
@@ -43744,9 +44287,6 @@ msgstr "Приказује тренутну Zammad верзију ваше ин�
 
 #~ msgid "Tags *(Scope: Ticket)*"
 #~ msgstr "Ознаке *(обим: тикет)*"
-
-#~ msgid "Additional tags can be present in the ticket without issues."
-#~ msgstr "Додатне ознаке могу бити присутне у тикету без проблема."
 
 #~ msgid "What ticket tags are affected (or not)?"
 #~ msgstr "Које ознаке тикета се узимају у обзир (или не)?"
@@ -44587,9 +45127,6 @@ msgstr "Приказује тренутну Zammad верзију ваше ин�
 
 #~ msgid "This is the actual target page you're linking to."
 #~ msgstr "Ово је стварна циљна страница коју линкујете."
-
-#~ msgid "Why?"
-#~ msgstr "Зашто?"
 
 #~ msgid ""
 #~ "This context *does not* affect the :ref:`security_password_login` "
