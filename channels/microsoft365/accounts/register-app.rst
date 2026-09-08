@@ -41,9 +41,9 @@ Create App
   ``New registration``.
 - Enter a fitting name and select an account type. Supported types are:
 
-  - Accounts in this organizational directory only (Single tenant)
-  - Accounts in any organizational directory (Multitenant)
-  - Accounts in any organizational directory (Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+  - Accounts in this organizational directory only (single tenant)
+  - Accounts in any organizational directory (any Microsoft Entra ID tenant, multitenant)
+  - Accounts in any organizational directory (any Microsoft Entra ID tenant, multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
 
     .. note::
        "Personal Microsoft accounts only" are not supported.
@@ -124,7 +124,7 @@ In this section you can select specific users and / or groups
 (users must be direct members!) that are allowed to use your app for
 adding mailboxes to Zammad.
 
-After adding users and groups, go back to the Azure portals home and
+After adding users and groups, go back to the Entra admin center's home and
 select **App registrations**. Within your desired app, go to
 **API permissions** and use the ``Grant admin consent for {company name}``
 button to generally allow connecting users you previously consented.
