@@ -50,14 +50,14 @@ to ``http://your.zammad.domain/auth/saml/callback``.
 Set Up User Attribute Mapping
 """""""""""""""""""""""""""""
 
-Zammad requests the following user attributes (or “properties”) from the IdP:
+Zammad requests the following user attributes (or "properties") from the IdP:
 
 - Email address (``email``)
 - Full name (``name``)
 - Given name (``first_name``)
 - Family name (``last_name``)
 
-You may need to set up “mappers” (or “mappings”) to tell your IdP
+You may need to set up "mappers" (or "mappings") to tell your IdP
 how user attributes in SAML correspond to those in Zammad.
 For a more detailed breakdown,
 refer to the XML metadata file referenced in the previous section.
@@ -72,7 +72,7 @@ You can find specific configuration guides for:
 - :doc:`Keycloak <./saml/saml-keycloak>`
 - :doc:`Microsoft SAML <./saml/saml-microsoft>`
 
-If your are using another IdP, adapt it to your needs. For a description of the
+If you are using another IdP, adapt it to your needs. For a description of the
 fields in Zammad, read on below.
 
 .. toctree::
@@ -87,8 +87,8 @@ fields in Zammad, read on below.
 General Zammad Configuration
 ----------------------------
 
-Enable SAML and enter your IdP's details in the Admin Panel under
-**Settings > Security > Third Party Applications > Authentication via SAML**:
+Enable SAML and enter your IdP's details in the admin settings under
+*Settings > Security > Third-party Applications > Authentication via SAML*:
 
 .. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_general.png
    :alt: Example configuration of SAML part 1
@@ -117,9 +117,9 @@ IDP certificate fingerprint
    The fingerprint of your IDPs public certificate to verify during callback
    phase.
 
-   .. note:: 🔏 **For the IdP certificate / certificate fingerprint:**
+   .. note:: **IdP certificate or certificate fingerprint**
 
-      Provide **only one or the other**—do not provide both!
+      Provide only one or the other, do not provide both!
       (Between the two, we recommend the signing certificate itself:
       fingerprints use SHA-1, which `has been broken for a while now
       <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
