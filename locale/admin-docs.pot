@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 16:06+0200\n"
+"POT-Creation-Date: 2026-09-09 08:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5276,7 +5276,6 @@ msgstr ""
 
 #: ../channels/microsoft365-graph/accounts.rst:25
 #: ../channels/microsoft365/accounts/register-app.rst:34
-#: ../settings/security/third-party/facebook.rst:None
 msgid "Create App"
 msgstr ""
 
@@ -17451,58 +17450,107 @@ msgid "Weibo"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:4
-msgid "It is possible to create a quick login for your helpdesk via Facebook. To do so, you need to follow these steps:"
-msgstr ""
-
-#: ../settings/security/third-party/facebook.rst:8
-msgid "Register Facebook App"
+msgid "Configure Facebook as an authentication provider so users can log in to Zammad with their Facebook account. For details about app creation and Facebook Login, see the `Meta developer documentation <https://developers.facebook.com/documentation/facebook-login/>`_."
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:10
-msgid "Visit https://developers.facebook.com/apps/ and click on \"Add a new App\""
+msgid "Register a Facebook App"
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:None
-#: ../settings/security/third-party/twitter.rst:None
-msgid "initial page"
+#: ../settings/security/third-party/facebook.rst:13
+msgid "Create the App"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:15
-msgid "After that enter the app settings"
+msgid "Log in to the `Meta App Dashboard <https://developers.facebook.com/>`_ with your Facebook account, register as a developer if you have no developer account yet (see `Register as a Meta Developer <https://developers.facebook.com/documentation/development/register>`_), and go to `https://developers.facebook.com/apps/creation/ <https://developers.facebook.com/apps/creation/>`_ to create a new app:"
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:20
-msgid "Navigate to \"Settings\" and fill in this information"
+#: ../settings/security/third-party/facebook.rst:24
+msgid "**App details**"
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:None
-msgid "App Settings"
+#: ../settings/security/third-party/facebook.rst:23
+msgid "Enter a name for your app, for example Zammad, and a contact email address."
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:25
-msgid "Navigate to app review and Check \"Make [appname] public?\""
+#: ../settings/security/third-party/facebook.rst:29
+msgid "**Use cases**"
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:None
-msgid "App Review"
-msgstr ""
-
-#: ../settings/security/third-party/facebook.rst:31
-msgid "Configure Zammad as Facebook App"
+#: ../settings/security/third-party/facebook.rst:27
+msgid "Select **Authenticate and request data from users with Facebook Login**. This use case includes the ``public_profile`` permission which is required for the login to work."
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:33
-msgid "Navigate to *Settings > Security > Third-party Applications* and enter the App ID and the App Secret. You can find this key in the dashboard of your Facebook app."
+msgid "**Business**"
 msgstr ""
 
-#: ../settings/security/third-party/facebook.rst:None
-msgid "Zammad Configuration"
+#: ../settings/security/third-party/facebook.rst:32
+msgid "You don't need a business portfolio for the login. Select **I don't want to connect a business portfolio yet**."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:36
+msgid "Add the Email Permission"
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:38
+msgid "Zammad needs the ``email`` permission to match logins to existing accounts."
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:40
-#: ../settings/security/third-party/github.rst:43
-#: ../settings/security/third-party/gitlab.rst:46
-msgid "Now you can link accounts via *Avatar > Profile > Link Accounts* or login via Zammad login page."
+msgid "Open your app in the dashboard and go to **Use cases** in the left-side menu."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:42
+msgid "Click the **Authenticate and request data from users with Facebook Login** use case."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:44
+msgid "Under **Permissions and features**, click **Add** next to **email**."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:47
+msgid "Provide the Callback URL"
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:49
+msgid "Facebook redirects users to this URL after the login."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:51
+msgid "In the use case, go to *Customize > Settings*."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:52
+msgid "Under **Valid OAuth Redirect URIs**, enter ``https://zammad.domain.tld/auth/facebook/callback`` and replace ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also copy the callback URL from the **Authentication via Facebook** section in Zammad's admin settings."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:59
+msgid "Get Your App Credentials"
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:61
+msgid "Go to *App settings > Basic*."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:62
+msgid "Note down the **App ID** and click **Show** next to **App secret** to note it down as well."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:66
+msgid "Configure Zammad"
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:68
+msgid "Navigate to *Settings > Security > Third-party Applications* and scroll to the **Authentication via Facebook** section. Enter your **App ID** and **App Secret**, enable the toggle, and click **Submit**."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:72
+msgid "After submitting, the Facebook button appears on the login page and users can log in with their Facebook account."
+msgstr ""
+
+#: ../settings/security/third-party/facebook.rst:77
+msgid "New apps start in Development mode. In this mode only users with a role on the app, such as administrators, developers or testers, can log in. For everyone else to use the login, switch your app to **Live mode** in the dashboard toolbar. The ``public_profile`` and ``email`` permissions used by Zammad are automatically granted and don't require App Review."
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:2
@@ -17557,6 +17605,11 @@ msgstr ""
 #: ../settings/security/third-party/github.rst:40
 #: ../settings/security/third-party/gitlab.rst:43
 msgid "After granting access, you will be redirected to your Zammad instance and logged in."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:43
+#: ../settings/security/third-party/gitlab.rst:46
+msgid "Now you can link accounts via *Avatar > Profile > Link Accounts* or login via Zammad login page."
 msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:2
@@ -18546,6 +18599,10 @@ msgstr ""
 
 #: ../settings/security/third-party/twitter.rst:10
 msgid "Go to https://dev.twitter.com/apps and login with your account."
+msgstr ""
+
+#: ../settings/security/third-party/twitter.rst:None
+msgid "initial page"
 msgstr ""
 
 #: ../settings/security/third-party/twitter.rst:15
