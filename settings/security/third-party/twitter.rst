@@ -10,7 +10,7 @@ Register Twitter App
 Go to https://dev.twitter.com/apps and login with your account.
 
 .. image:: /images/settings/security/third-party/twitter/apps.twitter.com_start.png
-   :alt: inital page
+   :alt: initial page
 
 Click on "Create App"
 

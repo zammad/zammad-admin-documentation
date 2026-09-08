@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 13:24+0200\n"
+"POT-Creation-Date: 2026-09-08 16:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3830,6 +3830,7 @@ msgstr ""
 #: ../index.rst:63
 #: ../index.rst:63
 #: ../manage/time-accounting.rst:14
+#: ../settings/security/third-party.rst:17
 msgid "Settings"
 msgstr ""
 
@@ -17381,89 +17382,72 @@ msgstr ""
 msgid "Screenshot showing certificate download button"
 msgstr ""
 
-#: ../settings/security/third-party.rst:19
-#: ../settings/security/third-party.rst:19
-msgid "Login Providers"
-msgstr ""
-
 #: ../settings/security/third-party.rst:2
 msgid "Third-Party Applications"
 msgstr ""
 
 #: ../settings/security/third-party.rst:4
-msgid "Third-party authentication is a great way to help your users to login to Zammad more easily. If the account is not yet known, Zammad will create a new user automatically without users being required to interact (e.g. type in their name). Another big advantage of this feature is that users don't need to remember another password. You can deactivate the login via :ref:`password <security_password_login>` if any of the mentioned authentication providers are enabled in your instance."
+msgid "Zammad supports authentication via third-party providers. Your users can log in with an account they already have, for example their Google or Microsoft account, and don't need to remember an extra password. If no matching account exists yet, Zammad creates one automatically with the roles configured as default at signup. Once at least one provider is enabled, you can deactivate the :ref:`password login <security_password_login>` to not offer local passwords at all."
 msgstr ""
 
 #: ../settings/security/third-party.rst:12
-msgid "You can find the configuration in Zammad's admin settings under *Settings > Security > Third-party Applications*."
+msgid "You can find the configuration in Zammad's admin settings under *Settings > Security > Third-party Applications*. The general settings are at the top of the page, followed by the configuration sections of the providers."
 msgstr ""
 
-#: ../settings/security/third-party.rst:15
-msgid "We recommend to check your third-party authentication provider's documentation first. We collected configuration examples for some of them, but they are partially outdated."
+#: ../settings/security/third-party.rst:19
+msgid "The following options apply to all authentication providers."
 msgstr ""
 
-#: ../settings/security/third-party.rst:36
+#: ../settings/security/third-party.rst:24
 msgid "Automatic Account Link on Initial Logon"
 msgstr ""
 
-#: ../settings/security/third-party.rst:38
-msgid "In general there's two possible options for Zammad on how to deal with already known users as they try to authenticate against a third-party application. By default, Zammad will not automatically link \"unknown\" authentication providers to existing accounts."
+#: ../settings/security/third-party.rst:26
+msgid "Zammad matches third-party logins to existing accounts by email address. By default, this linking on first logon is disabled: users have to link authentication providers to their account manually, and may see errors that their email address is already used for another user. If you want your users to be able to log in with their existing accounts, enable **Automatic account link on initial logon** by setting it to ``yes``."
 msgstr ""
 
-#: ../settings/security/third-party.rst:43
-msgid "This means that the user has to manually link authentication providers to their accounts (for more about this :user-docs:`consult the user documentation </extras/user-menu-profile-settings.html>`)."
-msgstr ""
-
-#: ../settings/security/third-party.rst:47
-msgid "Sometimes this doesn't come in handy as this also means you'll receive error messages about \"email address being in use already\" for (yet) unknown third-party authentication methods."
-msgstr ""
-
-#: ../settings/security/third-party.rst:51
-msgid "If you want to allow your users to always be able to log in, no matter what, you may want to enable **Automatic account link on initial logon** by setting it to ``yes``."
-msgstr ""
-
-#: ../settings/security/third-party.rst:58
+#: ../settings/security/third-party.rst:36
 msgid "Automatic Account Linking Notification"
 msgstr ""
 
-#: ../settings/security/third-party.rst:60
-msgid "To improve security and your users awareness, you can enable Zammad to notify your users when a new third-party application has been linked to their account by setting it to ``yes``."
+#: ../settings/security/third-party.rst:38
+msgid "Enable this setting to notify users when a new third-party application has been linked to their account. The notification is sent once per application and mentions the provider, for example ``Microsoft``. By default the setting is inactive (set to ``no``). The notification is only sent if the account in question already exists; it is skipped when the login itself creates the account. It therefore only applies to:"
 msgstr ""
 
-#: ../settings/security/third-party.rst:64
-msgid "This notification is sent out once per third-party application. Zammad does also mention the method used, e.g.: ``Microsoft``."
+#: ../settings/security/third-party.rst:45
+msgid "manual account linking in the third-party page of the user's profile"
 msgstr ""
 
-#: ../settings/security/third-party.rst:67
-msgid "By default this setting is not active (set to ``no``)."
+#: ../settings/security/third-party.rst:46
+msgid "logging into an existing local account via **automatic account link on initial logon**"
 msgstr ""
 
-#: ../settings/security/third-party.rst:71
-msgid "This notification is only sent if the account in question already exists. If the login via the third-party also creates the missing account, the notification will be skipped."
-msgstr ""
-
-#: ../settings/security/third-party.rst:75
-msgid "This means it only affects:"
-msgstr ""
-
-#: ../settings/security/third-party.rst:77
-msgid "manual account linking within the third-party page of the users profile"
-msgstr ""
-
-#: ../settings/security/third-party.rst:78
-msgid "logging into an existing local account by utilizing the **automatic account link on initial logon** functionality"
-msgstr ""
-
-#: ../settings/security/third-party.rst:82
+#: ../settings/security/third-party.rst:50
 msgid "No User Creation on Logon"
 msgstr ""
 
-#: ../settings/security/third-party.rst:84
-msgid "By default, Zammad will create a new user account if the user logs in via a third-party application and the account doesn't exist yet."
+#: ../settings/security/third-party.rst:52
+msgid "By default, Zammad creates a new user account when a user logs in via a third-party application for the first time and no matching account exists. To prevent this, set **No user creation on logon** to ``yes``. Zammad then refuses such logins with the message *The user account does not exist. Please contact your administrator.* To allow logins only for existing accounts, enable this setting together with **Automatic account link on initial logon**. Without it, Zammad refuses logins even if the email address matches an existing account."
 msgstr ""
 
-#: ../settings/security/third-party.rst:87
-msgid "If you want to prevent Zammad from creating new accounts on logon, you can disable this feature by setting **No user creation on logon** to ``yes``."
+#: ../settings/security/third-party.rst:62
+msgid "Login Providers"
+msgstr ""
+
+#: ../settings/security/third-party.rst:64
+msgid "Check your provider's documentation first. The configuration examples we provide for some providers are partially outdated."
+msgstr ""
+
+#: ../settings/security/third-party.rst:80
+msgid "Zammad also supports the following providers. They are currently undocumented:"
+msgstr ""
+
+#: ../settings/security/third-party.rst:83
+msgid "LinkedIn"
+msgstr ""
+
+#: ../settings/security/third-party.rst:84
+msgid "Weibo"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:4
@@ -17479,6 +17463,7 @@ msgid "Visit https://developers.facebook.com/apps/ and click on \"Add a new App\
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:None
+#: ../settings/security/third-party/twitter.rst:None
 msgid "initial page"
 msgstr ""
 
@@ -17728,7 +17713,7 @@ msgid "Zammad's Microsoft connection allows your users with Microsoft accounts t
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:13
-msgid "This page does not cover our :doc:`📧 Microsoft 365 email channel </channels/microsoft365/index>`."
+msgid "This page does not cover our :doc:`Microsoft 365 email channel </channels/microsoft365/index>`."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:None
@@ -17984,11 +17969,12 @@ msgid "If you would like to use `PKCE <https://oauth.net/2/pkce/>`_, you need to
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:54
+#: ../settings/security/third-party/saml/saml-keycloak.rst:49
 msgid "Step 2: Configure Zammad"
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:56
-msgid "Enable OpenID Connect and enter your OP's details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via OpenID Connect**:"
+msgid "Enable OpenID Connect and enter your OP's details in the admin settings under *Settings > Security > Third-party Applications > Authentication via OpenID Connect*:"
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:None
@@ -18105,7 +18091,7 @@ msgid "Set Up User Attribute Mapping"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:53
-msgid "Zammad requests the following user attributes (or “properties”) from the IdP:"
+msgid "Zammad requests the following user attributes (or \"properties\") from the IdP:"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:55
@@ -18125,7 +18111,7 @@ msgid "Family name (``last_name``)"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:60
-msgid "You may need to set up “mappers” (or “mappings”) to tell your IdP how user attributes in SAML correspond to those in Zammad. For a more detailed breakdown, refer to the XML metadata file referenced in the previous section."
+msgid "You may need to set up \"mappers\" (or \"mappings\") to tell your IdP how user attributes in SAML correspond to those in Zammad. For a more detailed breakdown, refer to the XML metadata file referenced in the previous section."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:68
@@ -18145,7 +18131,7 @@ msgid ":doc:`Microsoft SAML <./saml/saml-microsoft>`"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:75
-msgid "If your are using another IdP, adapt it to your needs. For a description of the fields in Zammad, read on below."
+msgid "If you are using another IdP, adapt it to your needs. For a description of the fields in Zammad, read on below."
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:88
@@ -18153,7 +18139,7 @@ msgid "General Zammad Configuration"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:90
-msgid "Enable SAML and enter your IdP's details in the Admin Panel under **Settings > Security > Third Party Applications > Authentication via SAML**:"
+msgid "Enable SAML and enter your IdP's details in the admin settings under *Settings > Security > Third-party Applications > Authentication via SAML*:"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:None
@@ -18201,11 +18187,11 @@ msgid "The fingerprint of your IDPs public certificate to verify during callback
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:120
-msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
+msgid "**IdP certificate or certificate fingerprint**"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:122
-msgid "Provide **only one or the other**—do not provide both! (Between the two, we recommend the signing certificate itself: fingerprints use SHA-1, which `has been broken for a while now <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)"
+msgid "Provide only one or the other, do not provide both! (Between the two, we recommend the signing certificate itself: fingerprints use SHA-1, which `has been broken for a while now <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)"
 msgstr ""
 
 #: ../settings/security/third-party/saml.rst:127
@@ -18388,10 +18374,6 @@ msgstr ""
 msgid "You also need to enable **Sign assertions**."
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-keycloak.rst:49
-msgid "2. Configure Zammad"
-msgstr ""
-
 #: ../settings/security/third-party/saml/saml-keycloak.rst:51
 #: ../settings/security/third-party/saml/saml-microsoft.rst:53
 msgid "Log in to Zammad as an administrator"
@@ -18564,10 +18546,6 @@ msgstr ""
 
 #: ../settings/security/third-party/twitter.rst:10
 msgid "Go to https://dev.twitter.com/apps and login with your account."
-msgstr ""
-
-#: ../settings/security/third-party/twitter.rst:None
-msgid "inital page"
 msgstr ""
 
 #: ../settings/security/third-party/twitter.rst:15

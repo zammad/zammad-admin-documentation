@@ -45,8 +45,8 @@ Step 1: Keycloak Configuration
 
 - You also need to enable **Sign assertions**.
 
-2. Configure Zammad
--------------------
+Step 2: Configure Zammad
+------------------------
 
 - Log in to Zammad as an administrator
 - In the admin settings, go to *Settings > Security > Third-party Applications

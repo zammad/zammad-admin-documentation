@@ -53,9 +53,9 @@ challenge method for PKCE.
 Step 2: Configure Zammad
 ------------------------
 
-Enable OpenID Connect and enter your OP's details in the Admin Panel under
-**Settings > Security > Third Party Applications > Authentication via OpenID
-Connect**:
+Enable OpenID Connect and enter your OP's details in the admin settings under
+*Settings > Security > Third-party Applications > Authentication via OpenID
+Connect*:
 
 .. image:: /images/settings/security/third-party/openid-connect/zammad_connect_oidc_thirdparty_general.png
    :alt: Example configuration of OpenID Connect
