@@ -32,8 +32,8 @@ Create App
   ``New registration``.
 - Enter a fitting name and select an account type. Supported types are:
 
-  - Accounts in this organizational directory only (Single tenant)
-  - Accounts in any organizational directory (Multitenant)
+  - Accounts in this organizational directory only (single tenant)
+  - Accounts in any organizational directory (any Microsoft Entra ID tenant, multitenant)
 
 - Under **Redirect URI**, select **Web** as platform and paste your already
   copied callback URL from Zammad.
