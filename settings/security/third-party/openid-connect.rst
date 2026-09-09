@@ -20,8 +20,8 @@ that you either host or subscribe to
    - Our instructions are based on connecting Zammad with Keycloak.
    - PKCE is currently only supporting SHA256 as code challenge method.
 
-Step 1: Configure Your OP
--------------------------
+Configure Your OP
+-----------------
 
 Add a new Client
 ^^^^^^^^^^^^^^^^
@@ -54,8 +54,8 @@ If you would like to use `PKCE <https://oauth.net/2/pkce/>`_, you need to switch
 to the **Advanced** tab and select **S256** in **Advanced settings** as the code
 challenge method for PKCE.
 
-Step 2: Configure Zammad
-------------------------
+Configure Zammad
+----------------
 
 Enable OpenID Connect and enter your OP's details in the admin settings under
 *Settings > Security > Third-party Applications > Authentication via OpenID

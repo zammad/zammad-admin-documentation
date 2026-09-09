@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-09 15:23+0200\n"
+"POT-Creation-Date: 2026-09-09 15:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17543,6 +17543,9 @@ msgstr ""
 #: ../settings/security/third-party/github.rst:42
 #: ../settings/security/third-party/gitlab.rst:45
 #: ../settings/security/third-party/google.rst:82
+#: ../settings/security/third-party/openid-connect.rst:58
+#: ../settings/security/third-party/saml/saml-keycloak.rst:49
+#: ../settings/security/third-party/saml/saml-microsoft.rst:51
 msgid "Configure Zammad"
 msgstr ""
 
@@ -17999,7 +18002,7 @@ msgid "PKCE is currently only supporting SHA256 as code challenge method."
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:24
-msgid "Step 1: Configure Your OP"
+msgid "Configure Your OP"
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:27
@@ -18060,11 +18063,6 @@ msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:53
 msgid "If you would like to use `PKCE <https://oauth.net/2/pkce/>`_, you need to switch to the **Advanced** tab and select **S256** in **Advanced settings** as the code challenge method for PKCE."
-msgstr ""
-
-#: ../settings/security/third-party/openid-connect.rst:58
-#: ../settings/security/third-party/saml/saml-keycloak.rst:49
-msgid "Step 2: Configure Zammad"
 msgstr ""
 
 #: ../settings/security/third-party/openid-connect.rst:60
@@ -18381,7 +18379,7 @@ msgid "SAML with Keycloak"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:5
-msgid "Step 1: Keycloak Configuration"
+msgid "Keycloak Configuration"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:7
@@ -18446,34 +18444,33 @@ msgid "In the admin settings, go to *Settings > Security > Third-party Applicati
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:54
-#: ../settings/security/third-party/saml/saml-microsoft.rst:56
-msgid "Provide the following information:"
-msgstr ""
-
-#: ../settings/security/third-party/saml/saml-keycloak.rst:56
-msgid "SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/saml``"
+msgid "Provide the following information, replacing ``keycloak.example.com`` and ``your-realm`` with your Keycloak hostname and realm:"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:57
-msgid "SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/saml``"
+msgid "SAML IdP Login URL: ``https://keycloak.example.com/realms/your-realm/protocol/saml``"
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-keycloak.rst:59
+#: ../settings/security/third-party/saml/saml-keycloak.rst:58
+msgid "SAML IdP Logout URL: ``https://keycloak.example.com/realms/your-realm/protocol/saml``"
+msgstr ""
+
+#: ../settings/security/third-party/saml/saml-keycloak.rst:60
 #: ../settings/security/third-party/saml/saml-microsoft.rst:61
 msgid "Name Identifier Format: ``urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress``"
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-keycloak.rst:60
+#: ../settings/security/third-party/saml/saml-keycloak.rst:61
 #: ../settings/security/third-party/saml/saml-microsoft.rst:62
 msgid "SAML IdP Certificate: Upload the previously downloaded Base64 certificate."
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-keycloak.rst:61
+#: ../settings/security/third-party/saml/saml-keycloak.rst:62
 #: ../settings/security/third-party/saml/saml-microsoft.rst:63
 msgid "Save the settings"
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-keycloak.rst:64
+#: ../settings/security/third-party/saml/saml-keycloak.rst:65
 #: ../settings/security/third-party/saml/saml-microsoft.rst:72
 msgid "Read on at :ref:`saml-zammad` for a description of the specific fields in Zammad."
 msgstr ""
@@ -18483,7 +18480,7 @@ msgid "SAML with Microsoft 365"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:5
-msgid "1. Register Zammad as an Application in Microsoft Entra ID"
+msgid "Register Zammad as an Application in Microsoft Entra ID"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:7
@@ -18491,11 +18488,11 @@ msgid "Log in to the Microsoft Entra admin center with administrative rights"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:8
-msgid "Navigate to \"Identity\" > \"Applications\" > \"Enterprise Applications\""
+msgid "Navigate to *Identity > Applications > Enterprise Applications*"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:9
-msgid "Click \"New Application\" and select \"Create your own application\""
+msgid "Click ``New Application`` and select ``Create your own application``"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:10
@@ -18503,11 +18500,11 @@ msgid "Enter a name for the application, e.g. \"Zammad SAML Integration\""
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:11
-msgid "Choose \"Integrate any other application you don't find in the gallery\", then click \"Create\""
+msgid "Choose \"Integrate any other application you don't find in the gallery\", then click ``Create``"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:15
-msgid "2. Configure SAML-based Single Sign-On (SSO)"
+msgid "Configure SAML-based Single Sign-On"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:17
@@ -18515,7 +18512,7 @@ msgid "After the application is created, go to its overview page"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:18
-msgid "Select \"Single sign-on\" from the left-hand menu"
+msgid "Select **Single sign-on** from the left-hand menu"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:19
@@ -18523,7 +18520,7 @@ msgid "Choose \"SAML\" as the sign-on method"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:20
-msgid "In the \"Basic SAML Configuration\" section, click \"Edit\":"
+msgid "In the **Basic SAML Configuration** section, click ``Edit``:"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:22
@@ -18539,11 +18536,11 @@ msgid "Save the configuration"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:30
-msgid "3. Configure User Attributes and Claims Mapping"
+msgid "Configure User Attributes and Claims Mapping"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:32
-msgid "In the \"Attributes & Claims\" section, click \"Edit\". By default, some claims like User Principal Name, Email Address, First Name, and Last Name are already configured."
+msgid "In the **Attributes & Claims** section, click ``Edit``. By default, some claims like User Principal Name, Email Address, First Name and Last Name are already configured."
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:None
@@ -18551,23 +18548,23 @@ msgid "Screenshots showing \"Attribute & Claims\" configuration in Entra admin c
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:41
-msgid "4. Download the SAML Certificate"
+msgid "Download the SAML Certificate"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:43
-msgid "In the \"SAML Signing Certificate\" section, download the \"Certificate (Base64)\":"
+msgid "In the **SAML Signing Certificate** section, download the **Certificate (Base64)**:"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:None
 msgid "Screenshot showing the highlighted certificate export already"
 msgstr ""
 
-#: ../settings/security/third-party/saml/saml-microsoft.rst:51
-msgid "5. Configure Zammad"
-msgstr ""
-
 #: ../settings/security/third-party/saml/saml-microsoft.rst:54
 msgid "Go to *Settings > Security > Third-party Applications > Authentication via SAML* in the admin settings."
+msgstr ""
+
+#: ../settings/security/third-party/saml/saml-microsoft.rst:56
+msgid "Provide the following information:"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:58
@@ -18579,7 +18576,7 @@ msgid "IDP single logout target URL: The Logout URL from the Microsoft Entra Adm
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:66
-msgid "6. Assign Users"
+msgid "Assign Users"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:68
