@@ -6,7 +6,7 @@ Step 1: Keycloak Configuration
 
 - **To add Zammad as a client,**
   save the XML configuration to disk
-  (``https://your.zammad.domain/auth/saml/metadata``)
+  (``https://zammad.example.com/auth/saml/metadata``)
   and use *Clients > Clients list > Import client* in the Keycloak admin
   panel.
 
@@ -40,7 +40,7 @@ Step 1: Keycloak Configuration
   (*e.g.* ``username``), adjust accordingly.
 
 - Back in **Settings**, enter the Client ID
-  (``https://your.zammad.domain/auth/saml/metadata``) in the field
+  (``https://zammad.example.com/auth/saml/metadata``) in the field
   **Master SAML Processing URL**.
 
 - You also need to enable **Sign assertions**.

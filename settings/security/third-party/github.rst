@@ -20,11 +20,11 @@ OAuth apps* and click ``New OAuth App``. Provide the following information:
 
 **Homepage URL**
    Enter the URL of your Zammad instance, for example
-   ``https://zammad.domain.tld``.
+   ``https://zammad.example.com``.
 
 **Authorization callback URL**
-   Enter ``https://zammad.domain.tld/auth/github/callback`` and replace
-   ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+   Enter ``https://zammad.example.com/auth/github/callback`` and replace
+   ``zammad.example.com`` with the FQDN of your Zammad instance. You can also
    copy the callback URL from the **Authentication via GitHub** section in
    Zammad's admin settings.
 

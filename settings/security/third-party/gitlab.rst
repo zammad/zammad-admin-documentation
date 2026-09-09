@@ -21,8 +21,8 @@ information:
    Enter a name for your application, for example Zammad.
 
 **Redirect URI**
-   Enter ``https://zammad.domain.tld/auth/gitlab/callback`` and replace
-   ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+   Enter ``https://zammad.example.com/auth/gitlab/callback`` and replace
+   ``zammad.example.com`` with the FQDN of your Zammad instance. You can also
    copy the callback URL from the **Authentication via GitLab** section in
    Zammad's admin settings.
 

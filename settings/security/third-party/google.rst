@@ -47,7 +47,7 @@ Platform, where you can adjust it later and add optional details:
 
 **Authorized domains**
    Optionally add the domain of your Zammad instance, for example
-   ``zammad.domain.tld``. If you provide app domain links, their domain
+   ``zammad.example.com``. If you provide app domain links, their domain
    must match an authorized domain.
 
 **Developer contact information**
@@ -68,8 +68,8 @@ ID and the client secret, are required in Zammad afterwards.
 - Switch to **Clients** in the left sidebar and click ``+ Create client``.
 - For the application type, select **Web application**.
 - Under **Authorized redirect URIs**, enter
-  ``https://zammad.domain.tld/auth/google_oauth2/callback`` and replace
-  ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+  ``https://zammad.example.com/auth/google_oauth2/callback`` and replace
+  ``zammad.example.com`` with the FQDN of your Zammad instance. You can also
   copy the callback URL from the **Authentication via Google** section in
   Zammad's admin settings.
 - Click ``Create``.
