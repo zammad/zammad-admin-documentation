@@ -1,47 +1,54 @@
 GitLab
 ======
 
-It is possible to create a quick login for your helpdesk via GitLab.
-To activate the quick login, you need to enable OAuth for GitLab.
+Configure GitLab as an authentication provider so users can log in to Zammad
+with their GitLab account. This works with GitLab.com and with self-hosted
+GitLab instances. For details about OAuth applications, see the `GitLab
+documentation
+<https://docs.gitlab.com/integration/oauth_provider/>`_.
 
-Register GitLab App
--------------------
+Register a GitLab App
+---------------------
 
-To register an app in GitLab, open your profile and select applications.
+Create the Application
+^^^^^^^^^^^^^^^^^^^^^^
 
-As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback``
-where ``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even
-find and copy the callback URL from Zammad in the **Authentication via GitLab**
-section.
+In GitLab, select your avatar and go to *Edit profile > Access >
+Applications*, then select ``Add new application``. Provide the following
+information:
 
-.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_gitlab.png
-   :alt: Register OAuth app on gitlab instance
+**Name**
+   Enter a name for your application, for example Zammad.
 
-Just select *read_user* under scopes as in the screenshot and save it.
+**Redirect URI**
+   Enter ``https://zammad.domain.tld/auth/gitlab/callback`` and replace
+   ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+   copy the callback URL from the **Authentication via GitLab** section in
+   Zammad's admin settings.
 
-Configure Zammad as GitLab App
-------------------------------
+**Scopes**
+   Select **read_user**. Zammad only needs read access to the user's
+   profile data, which includes the email address used to match logins to
+   existing accounts.
 
-Enter the **APP ID** and the **APP SECRET** from the GitLab OAUTH Applications
-Dashboard and your GitLab-URL in the **SITE** field.
+Finally, select ``Save application``.
 
-.. image:: /images/settings/security/third-party/gitlab/enable-authentication-via-gitlab-in-zammad.png
-   :alt: GitLab config in Zammad admin interface
+Get Your App Credentials
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-After you configured the GitLab credentials and activated the login method, you
-should see a new icon on the login page.
+After saving, GitLab displays the **Application ID** and the **Secret**.
+Note both down. The secret is shown only once, but you can generate a new
+one with ``Renew secret`` at any time. You can retrieve the values later in
+this **Applications** screen.
 
-.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_login.png
-   :alt: GitLab logo on login page
+Configure Zammad
+----------------
 
-If you click on the icon, you will be redirected to GitLab and see something
-similar to this:
+Navigate to *Settings > Security > Third-party Applications* and scroll to
+the **Authentication via GitLab** section. Enter your **App ID**,
+**App Secret**, and your GitLab URL in the **Site** field, enable the
+toggle, and click ``Submit``.
 
-.. image:: /images/settings/security/third-party/gitlab/zammad_connect_gitlab_thirdparty_gitlab_authorize.png
-   :alt: GitLab oauth page
-
-After granting access, you will be redirected to your Zammad instance
-and logged in.
-
-Now you can link accounts via *Avatar > Profile > Link Accounts* or login
-via Zammad login page.
+After submitting, the GitLab button appears on the login page and users can
+log in with their GitLab account. On first login, GitLab asks them to
+authorize the access.
