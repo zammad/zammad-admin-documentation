@@ -37,7 +37,7 @@ Step 1: Keycloak Configuration
   and create a new session for that user.
 
   If your Keycloak users' email addresses are stored on another property
-  (*e.g.* ``username``), adjust accordingly.
+  (e.g. ``username``), adjust accordingly.
 
 - Back in **Settings**, enter the Client ID
   (``https://zammad.example.com/auth/saml/metadata``) in the field
