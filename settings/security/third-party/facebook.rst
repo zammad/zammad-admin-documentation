@@ -50,8 +50,8 @@ Facebook redirects users to this URL after the login.
 
 - In the use case, go to *Customize > Settings*.
 - Under **Valid OAuth Redirect URIs**, enter
-  ``https://zammad.domain.tld/auth/facebook/callback`` and replace
-  ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+  ``https://zammad.example.com/auth/facebook/callback`` and replace
+  ``zammad.example.com`` with the FQDN of your Zammad instance. You can also
   copy the callback URL from the **Authentication via Facebook** section in
   Zammad's admin settings.
 

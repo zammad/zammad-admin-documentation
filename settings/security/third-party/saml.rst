@@ -32,7 +32,7 @@ Add Zammad as a Client/App
 """"""""""""""""""""""""""
 
 Import Zammad into your IdP using the XML configuration
-found at ``https://your.zammad.domain/auth/saml/metadata``.
+found at ``https://zammad.example.com/auth/saml/metadata``.
 
 If your IdP doesn't support XML import, you will have to configure Zammad as a
 new client/app manually using the above XML metadata file for reference.
@@ -41,11 +41,11 @@ For instance, when you see this tag:
 
 .. code-block:: xml
 
-   <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://your.zammad.domain/auth/saml/callback" index="0" isDefault="true"/>
+   <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://zammad.example.com/auth/saml/callback" index="0" isDefault="true"/>
 
 Set the **Assertion Consumer Service Binding URL**
 (sometimes also listed as **Valid Redirect URIs**)
-to ``http://your.zammad.domain/auth/saml/callback``.
+to ``http://zammad.example.com/auth/saml/callback``.
 
 Set Up User Attribute Mapping
 """""""""""""""""""""""""""""

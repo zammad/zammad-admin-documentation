@@ -20,9 +20,9 @@ SAML with Microsoft 365
 - In the "Basic SAML Configuration" section, click "Edit":
 
   - Identifier (Entity ID): Use Zammad's Entity ID, which can be found at
-    ``https://your.zammad.domain/auth/saml/metadata``
+    ``https://zammad.example.com/auth/saml/metadata``
   - Reply URL (Assertion Consumer Service URL): Set it to
-    ``https://your.zammad.domain/auth/saml/callback``
+    ``https://zammad.example.com/auth/saml/callback``
 
 - Save the configuration
 
