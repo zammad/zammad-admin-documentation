@@ -13,11 +13,11 @@ Create the App
 ^^^^^^^^^^^^^^
 
 Log in to the `Meta App Dashboard <https://developers.facebook.com/>`_ with
-your Facebook account, register as a developer if you have no developer
+your Facebook account and register as a developer if you have no developer
 account yet (see `Register as a Meta Developer
-<https://developers.facebook.com/documentation/development/register>`_),
-and go to `https://developers.facebook.com/apps/creation/
-<https://developers.facebook.com/apps/creation/>`_ to create a new app:
+<https://developers.facebook.com/documentation/development/register>`_).
+Then, create a `new app <https://developers.facebook.com/apps/creation/>`_ and
+provide the following information:
 
 **App details**
    Enter a name for your app, for example Zammad, and a contact email
