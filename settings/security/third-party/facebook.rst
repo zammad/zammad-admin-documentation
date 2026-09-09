@@ -41,7 +41,7 @@ Zammad needs the ``email`` permission to match logins to existing accounts.
   menu.
 - Click the **Authenticate and request data from users with Facebook
   Login** use case.
-- Under **Permissions and features**, click **Add** next to **email**.
+- Under **Permissions and features**, click ``Add`` next to **email**.
 
 Provide the Callback URL
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,7 +59,7 @@ Get Your App Credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Go to *App settings > Basic*.
-- Note down the **App ID** and click **Show** next to **App secret** to
+- Note down the **App ID** and click ``Show`` next to **App secret** to
   note it down as well.
 
 Configure Zammad
@@ -67,7 +67,7 @@ Configure Zammad
 
 Navigate to *Settings > Security > Third-party Applications* and scroll to
 the **Authentication via Facebook** section. Enter your **App ID** and
-**App Secret**, enable the toggle, and click **Submit**.
+**App Secret**, enable the toggle, and click ``Submit``.
 
 After submitting, the Facebook button appears on the login page and users
 can log in with their Facebook account.
