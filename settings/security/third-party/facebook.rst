@@ -3,8 +3,8 @@ Facebook
 
 Configure Facebook as an authentication provider so users can log in to
 Zammad with their Facebook account. For details about app creation and
-Facebook Login, see the `Meta developer documentation
-<https://developers.facebook.com/documentation/facebook-login/>`_.
+Facebook Login, see the `Meta app creation documentation
+<https://developers.facebook.com/documentation/facebook-login/create-an-app>`_.
 
 Register a Facebook App
 -----------------------

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-09 08:15+0200\n"
+"POT-Creation-Date: 2026-09-09 08:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17450,7 +17450,7 @@ msgid "Weibo"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:4
-msgid "Configure Facebook as an authentication provider so users can log in to Zammad with their Facebook account. For details about app creation and Facebook Login, see the `Meta developer documentation <https://developers.facebook.com/documentation/facebook-login/>`_."
+msgid "Configure Facebook as an authentication provider so users can log in to Zammad with their Facebook account. For details about app creation and Facebook Login, see the `Meta app creation documentation <https://developers.facebook.com/documentation/facebook-login/create-an-app>`_."
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:10
@@ -17462,7 +17462,7 @@ msgid "Create the App"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:15
-msgid "Log in to the `Meta App Dashboard <https://developers.facebook.com/>`_ with your Facebook account, register as a developer if you have no developer account yet (see `Register as a Meta Developer <https://developers.facebook.com/documentation/development/register>`_), and go to `https://developers.facebook.com/apps/creation/ <https://developers.facebook.com/apps/creation/>`_ to create a new app:"
+msgid "Log in to the `Meta App Dashboard <https://developers.facebook.com/>`_ with your Facebook account and register as a developer if you have no developer account yet (see `Register as a Meta Developer <https://developers.facebook.com/documentation/development/register>`_). Then, create a `new app <https://developers.facebook.com/apps/creation/>`_ and provide the following information:"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:24
@@ -17526,6 +17526,7 @@ msgid "Under **Valid OAuth Redirect URIs**, enter ``https://zammad.domain.tld/au
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:59
+#: ../settings/security/third-party/github.rst:39
 msgid "Get Your App Credentials"
 msgstr ""
 
@@ -17538,6 +17539,7 @@ msgid "Note down the **App ID** and click **Show** next to **App secret** to not
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:66
+#: ../settings/security/third-party/github.rst:47
 msgid "Configure Zammad"
 msgstr ""
 
@@ -17559,57 +17561,77 @@ msgid "GitHub"
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:4
-msgid "It is possible to create a quick login for your helpdesk via GitHub. To activate the quick login, you need to enable OAuth for GitHub."
-msgstr ""
-
-#: ../settings/security/third-party/github.rst:8
-msgid "Register GitHub App"
+msgid "Configure GitHub as an authentication provider so users can log in to Zammad with their GitHub account. For details about OAuth apps, see the `GitHub developer documentation <https://docs.github.com/en/apps/oauth-apps>`_."
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:10
-msgid "Visit https://www.github.com/settings/applications/new and enter the app settings. As callback URL, enter ``https://zammad_host/auth/github/callback`` where ``zammad_host`` has to be replaced with your Zammad FQDN. You can even find and copy the callback URL from Zammad in the **Authentication via GitHub** section."
+msgid "Register a GitHub App"
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:None
-msgid "Register OAuth app on www.github.com"
+#: ../settings/security/third-party/github.rst:13
+msgid "Create the OAuth App"
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:15
+msgid "In the upper-right corner of any page on GitHub, click your profile picture, then click **Settings**."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:17
+msgid "In the left sidebar, click **Developer settings**."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:18
+msgid "In the left sidebar, click **OAuth apps**."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:19
+msgid "Click **New OAuth App**."
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:20
-msgid "Configure Zammad as GitHub App"
+#: ../settings/security/third-party/saml/saml-keycloak.rst:54
+#: ../settings/security/third-party/saml/saml-microsoft.rst:56
+msgid "Provide the following information:"
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:22
-msgid "Enter the **APP ID** and the **APP SECRET** from the GitHub OAUTH Applications Dashboard:"
+#: ../settings/security/third-party/github.rst:24
+msgid "**Application name**"
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:None
-msgid "GitHub config in Zammad admin interface"
+#: ../settings/security/third-party/github.rst:23
+msgid "Enter a name for your app, for example Zammad. This is what users see when they authorize the login."
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:28
-msgid "After you configured the GitHub credentials and activated the login method, you should see a new icon on the login page."
+msgid "**Homepage URL**"
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:None
-msgid "GitHub logo on login page"
+#: ../settings/security/third-party/github.rst:27
+msgid "Enter the URL of your Zammad instance, for example ``https://zammad.domain.tld``."
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:34
-msgid "If you click on the icon you will be redirected to GitHub and see something similar to this:"
+msgid "**Authorization callback URL**"
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:None
-msgid "GitHub oauth page"
+#: ../settings/security/third-party/github.rst:31
+msgid "Enter ``https://zammad.domain.tld/auth/github/callback`` and replace ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also copy the callback URL from the **Authentication via GitHub** section in Zammad's admin settings."
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:40
-#: ../settings/security/third-party/gitlab.rst:43
-msgid "After granting access, you will be redirected to your Zammad instance and logged in."
+#: ../settings/security/third-party/github.rst:36
+msgid "Click **Register application**."
 msgstr ""
 
-#: ../settings/security/third-party/github.rst:43
-#: ../settings/security/third-party/gitlab.rst:46
-msgid "Now you can link accounts via *Avatar > Profile > Link Accounts* or login via Zammad login page."
+#: ../settings/security/third-party/github.rst:41
+msgid "After registering, GitHub displays the **Client ID**. Generate a client secret with the **Generate a new client secret** button and note it down. You can retrieve both values later via **OAuth apps** > your app in the developer settings."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:49
+msgid "Navigate to *Settings > Security > Third-party Applications* and scroll to the **Authentication via GitHub** section. Enter your **App ID** and **App Secret**, enable the toggle, and click **Submit**."
+msgstr ""
+
+#: ../settings/security/third-party/github.rst:53
+msgid "After submitting, the GitHub button appears on the login page and users can log in with their GitHub account. On first login, GitHub asks them to authorize the access."
 msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:2
@@ -17667,6 +17689,14 @@ msgstr ""
 
 #: ../settings/security/third-party/gitlab.rst:None
 msgid "GitLab oauth page"
+msgstr ""
+
+#: ../settings/security/third-party/gitlab.rst:43
+msgid "After granting access, you will be redirected to your Zammad instance and logged in."
+msgstr ""
+
+#: ../settings/security/third-party/gitlab.rst:46
+msgid "Now you can link accounts via *Avatar > Profile > Link Accounts* or login via Zammad login page."
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:2
@@ -18434,11 +18464,6 @@ msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:52
 msgid "In the admin settings, go to *Settings > Security > Third-party Applications > Authentication via SAML*"
-msgstr ""
-
-#: ../settings/security/third-party/saml/saml-keycloak.rst:54
-#: ../settings/security/third-party/saml/saml-microsoft.rst:56
-msgid "Provide the following information:"
 msgstr ""
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:56

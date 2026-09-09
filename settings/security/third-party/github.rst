@@ -1,44 +1,55 @@
 GitHub
 ======
 
-It is possible to create a quick login for your helpdesk via GitHub.
-To activate the quick login, you need to enable OAuth for GitHub.
+Configure GitHub as an authentication provider so users can log in to Zammad
+with their GitHub account. For details about OAuth apps, see the `GitHub
+developer documentation
+<https://docs.github.com/en/apps/oauth-apps>`_.
 
-Register GitHub App
--------------------
+Register a GitHub App
+---------------------
 
-Visit https://www.github.com/settings/applications/new and enter the app
-settings. As callback URL, enter ``https://zammad_host/auth/github/callback``
-where ``zammad_host`` has to be replaced with your Zammad FQDN. You can even
-find and copy the callback URL from Zammad in the **Authentication via GitHub**
-section.
+Create the OAuth App
+^^^^^^^^^^^^^^^^^^^^
 
-.. image:: /images/settings/security/third-party/github/zammad_connect_github_thirdparty_github.png
-   :alt: Register OAuth app on www.github.com
+1. In the upper-right corner of any page on GitHub, click your profile
+   picture, then click **Settings**.
+2. In the left sidebar, click **Developer settings**.
+3. In the left sidebar, click **OAuth apps**.
+4. Click **New OAuth App**.
+5. Provide the following information:
 
-Configure Zammad as GitHub App
-------------------------------
+**Application name**
+   Enter a name for your app, for example Zammad. This is what users see
+   when they authorize the login.
 
-Enter the **APP ID** and the **APP SECRET** from the GitHub OAUTH Applications
-Dashboard:
+**Homepage URL**
+   Enter the URL of your Zammad instance, for example
+   ``https://zammad.domain.tld``.
 
-.. image:: /images/settings/security/third-party/github/enable-authentication-via-github-in-zammad.png
-   :alt: GitHub config in Zammad admin interface
+**Authorization callback URL**
+   Enter ``https://zammad.domain.tld/auth/github/callback`` and replace
+   ``zammad.domain.tld`` with the FQDN of your Zammad instance. You can also
+   copy the callback URL from the **Authentication via GitHub** section in
+   Zammad's admin settings.
 
-After you configured the GitHub credentials and activated the login method, you
-should see a new icon on the login page.
+6. Click **Register application**.
 
-.. image:: /images/settings/security/third-party/github/zammad_connect_github_thirdparty_login.png
-   :alt: GitHub logo on login page
+Get Your App Credentials
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you click on the icon you will be redirected to GitHub and see something
-similar to this:
+After registering, GitHub displays the **Client ID**. Generate a client
+secret with the **Generate a new client secret** button and note it down.
+You can retrieve both values later via **OAuth apps** > your app in the
+developer settings.
 
-.. image:: /images/settings/security/third-party/github/zammad_connect_github_thirdparty_github_authorize.png
-   :alt: GitHub oauth page
+Configure Zammad
+----------------
 
-After granting access, you will be redirected to your Zammad instance
-and logged in.
+Navigate to *Settings > Security > Third-party Applications* and scroll to
+the **Authentication via GitHub** section. Enter your **App ID** and
+**App Secret**, enable the toggle, and click **Submit**.
 
-Now you can link accounts via *Avatar > Profile > Link Accounts* or login
-via Zammad login page.
+After submitting, the GitHub button appears on the login page and users can
+log in with their GitHub account. On first login, GitHub asks them to
+authorize the access.
