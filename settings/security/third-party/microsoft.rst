@@ -13,10 +13,6 @@ under *Settings > Security > Third-party Applications* in the
    This page does not cover our
    :doc:`Microsoft 365 email channel </channels/microsoft365/index>`.
 
-.. figure:: /images/settings/security/third-party/microsoft/zammad-login-interface-with-microsoft-login.png
-   :alt: Screenshot shows Microsoft login button on Zammad login screen.
-   :align: center
-
 Limitations
 -----------
 
