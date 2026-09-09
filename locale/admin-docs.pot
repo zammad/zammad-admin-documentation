@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-09 16:05+0200\n"
+"POT-Creation-Date: 2026-09-09 16:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17437,12 +17437,8 @@ msgstr ""
 msgid "Check your provider's documentation first. The configuration examples we provide for some providers are partially outdated."
 msgstr ""
 
-#: ../settings/security/third-party.rst:80
-msgid "Zammad also supports the following providers. They are currently undocumented:"
-msgstr ""
-
-#: ../settings/security/third-party.rst:83
-msgid "LinkedIn"
+#: ../settings/security/third-party.rst:81
+msgid "Zammad also supports the following provider. It is currently undocumented:"
 msgstr ""
 
 #: ../settings/security/third-party.rst:84
@@ -17458,6 +17454,7 @@ msgid "Register a Facebook App"
 msgstr ""
 
 #: ../settings/security/third-party/facebook.rst:13
+#: ../settings/security/third-party/linkedin.rst:23
 #: ../settings/security/third-party/twitter.rst:21
 msgid "Create the App"
 msgstr ""
@@ -17530,6 +17527,7 @@ msgstr ""
 #: ../settings/security/third-party/facebook.rst:59
 #: ../settings/security/third-party/github.rst:34
 #: ../settings/security/third-party/gitlab.rst:37
+#: ../settings/security/third-party/linkedin.rst:44
 #: ../settings/security/third-party/twitter.rst:41
 msgid "Get Your App Credentials"
 msgstr ""
@@ -17546,6 +17544,7 @@ msgstr ""
 #: ../settings/security/third-party/github.rst:42
 #: ../settings/security/third-party/gitlab.rst:45
 #: ../settings/security/third-party/google.rst:82
+#: ../settings/security/third-party/linkedin.rst:63
 #: ../settings/security/third-party/openid-connect.rst:58
 #: ../settings/security/third-party/saml/saml-keycloak.rst:49
 #: ../settings/security/third-party/saml/saml-microsoft.rst:51
@@ -17591,6 +17590,7 @@ msgid "**Application name**"
 msgstr ""
 
 #: ../settings/security/third-party/github.rst:18
+#: ../settings/security/third-party/linkedin.rst:30
 msgid "Enter a name for your app, for example Zammad. This is what users see when they authorize the login."
 msgstr ""
 
@@ -17709,6 +17709,7 @@ msgid "If the platform is not configured yet for your project, click ``GET START
 msgstr ""
 
 #: ../settings/security/third-party/google.rst:24
+#: ../settings/security/third-party/linkedin.rst:31
 msgid "**App name**"
 msgstr ""
 
@@ -17803,6 +17804,78 @@ msgstr ""
 
 #: ../settings/security/third-party/google.rst:88
 msgid "After submitting, the Google button appears on the login page and users can log in with their Google account."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:2
+msgid "LinkedIn"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:4
+msgid "Configure LinkedIn as an authentication provider so users can log in to Zammad with their LinkedIn account. For details about LinkedIn apps and the Sign In with LinkedIn product, see the `LinkedIn developer documentation <https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin-v2>`_."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:11
+msgid "Zammad uses the legacy Sign In with LinkedIn scopes (``r_liteprofile`` and ``r_emailaddress``). LinkedIn deprecated this version of Sign In with LinkedIn in favor of OpenID Connect, and new LinkedIn apps can no longer request these scopes. If the authorization fails for your app with an \"unauthorized scope\" error, use Zammad's :doc:`OpenID Connect <openid-connect>` provider with LinkedIn's OpenID Connect product instead."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:20
+msgid "Register a LinkedIn App"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:25
+msgid "Log in to the `LinkedIn Developer Portal <https://developer.linkedin.com/>`_ with your LinkedIn account and click ``Create app``. Provide the following information:"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:35
+msgid "**LinkedIn Page**"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:34
+msgid "Select a LinkedIn page associated with your company or create one. Every app must be linked to a LinkedIn page."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:39
+msgid "**App logo**"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:38
+msgid "Upload a logo for your app. It is displayed to users on the consent screen."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:41
+msgid "Then check the legal agreement checkbox and click ``Create app``."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:46
+msgid "Go to the **Auth** tab of your app."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:47
+msgid "Note down the **Client ID** and the **Client Secret** under **Application credentials**. The secret is shown after you click it, and you can reveal it again at any time."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:52
+msgid "Provide the Redirect URL"
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:54
+msgid "Still on the **Auth** tab, find the **OAuth 2.0 settings** section and click the edit icon next to **Authorized redirect URLs for your app**."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:56
+msgid "Add ``https://zammad.example.com/auth/linkedin/callback`` and replace ``zammad.example.com`` with the FQDN of your Zammad instance. You can also copy the callback URL from the **Authentication via LinkedIn** section in Zammad's admin settings."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:60
+msgid "Click ``Update``."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:65
+msgid "Navigate to *Settings > Security > Third-party Applications* and scroll to the **Authentication via LinkedIn** section. Enter your **App ID** and **App Secret**, enable the toggle, and click ``Submit``."
+msgstr ""
+
+#: ../settings/security/third-party/linkedin.rst:69
+msgid "After submitting, the LinkedIn button appears on the login page and users can log in with their LinkedIn account. On first login, LinkedIn asks them to authorize the access."
 msgstr ""
 
 #: ../settings/security/third-party/microsoft.rst:2

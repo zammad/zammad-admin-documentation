@@ -71,14 +71,14 @@ provide for some providers are partially outdated.
    third-party/github
    third-party/gitlab
    third-party/google
+   third-party/linkedin
    third-party/microsoft
    third-party/openid-connect
    third-party/saml
    third-party/sso
    third-party/twitter
 
-Zammad also supports the following providers. They are currently
+Zammad also supports the following provider. It is currently
 undocumented:
 
-- LinkedIn
 - Weibo
