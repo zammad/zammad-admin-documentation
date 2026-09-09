@@ -1,52 +1,59 @@
 Twitter
 =======
 
-It is possible to create a quick login for your helpdesk via Twitter. To do so,
-you need to follow these steps:
+Configure Twitter as an authentication provider so users can log in to
+Zammad with their Twitter account.
 
-Register Twitter App
---------------------
+.. warning::
 
-Go to https://dev.twitter.com/apps and login with your account.
+   X (formerly Twitter) recommends OAuth 2.0 for new apps. Zammad uses the
+   legacy OAuth 1.0a flow (Sign in with X) for this login provider. New X
+   apps are created in the `X Developer Console <https://console.x.com>`_,
+   and X restricts or charges for API access depending on your tier. If you
+   don't already have an X app with API Key and Secret credentials, check
+   the current X developer documentation before investing time in this
+   provider.
 
-.. image:: /images/settings/security/third-party/twitter/apps.twitter.com_start.png
-   :alt: initial page
+Register a Twitter App
+----------------------
 
-Click on "Create App"
+Create the App
+^^^^^^^^^^^^^^
 
-.. image:: /images/settings/security/third-party/twitter/apps.twitter.com_new_app_screen.png
-   :alt: new app page
+Log in to the `X Developer Console <https://console.x.com>`_ (or the app
+dashboard on `developer.x.com <https://developer.x.com>`_ for apps created
+before the console migration) with your X account and create a new app.
+Provide a name, a description and your use case.
 
-Enter app settings. As "Callback URL" you need to enter
-``https://zammad_host/api/v1/external_credentials/twitter/callback``. You need
-to replace ``zammad_host`` with the domain of your Zammad system.
+Provide the Callback URL
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-After the app has been created, update the application icon and organization
-attributes.
+X redirects users to this URL after the login. Add it to your app's callback
+URL allowlist in the developer settings:
 
-.. image:: /images/settings/security/third-party/twitter/apps.twitter.com_set_permissions.png
-   :alt: set permissions to receive and send direct messages
+``https://zammad.example.com/auth/twitter/callback``
 
-Next we need to set ``read, write and access direct messages`` permissions
-for the app.
+Replace ``zammad.example.com`` with the FQDN of your Zammad instance. You
+can also copy the callback URL from the **Authentication via Twitter**
+section in Zammad's admin settings.
 
-.. image:: /images/settings/security/third-party/twitter/apps.twitter.com_get_credentials.png
-   :alt: click on Keys & Access Token, note them
+Get Your App Credentials
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Go to "Keys and Access Token" tab and note the "Consumer Key" and
-"Consumer Secret".
+In your app's **Keys and tokens** section, generate the **API Key and
+Secret** (formerly Consumer Key and Secret) for OAuth 1.0a. Note both down.
 
-Configure Zammad as Twitter App
--------------------------------
+No additional permissions are needed for the login. The read, write and
+Direct Message permissions you may find in the app settings are not used by
+this authentication provider.
 
-Go to "Admin > Security > Twitter > Third Party Applications > Twitter"
-Section.
+Configure Zammad
+----------------
 
-.. image:: /images/settings/security/third-party/twitter/enable-authentication-via-twitter-in-zammad.png
-   :alt: Admin > Security > Third Party Applications
+Navigate to *Settings > Security > Third-party Applications* and scroll to
+the **Authentication via Twitter** section. Enter your **Twitter Key** and
+**Twitter Secret**, enable the toggle, and click ``Submit``.
 
-Fill in the "Twitter Key" and the "Twitter Secret" and click the "Submit"
-button.
-
-Now you can link accounts via "Avatar > Profile > Link Accounts" or login via
-Zammad login page.
+After submitting, the Twitter button appears on the login page and users can
+log in with their Twitter account. On first login, X asks them to authorize
+the access.
