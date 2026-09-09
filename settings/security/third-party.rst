@@ -77,8 +77,4 @@ provide for some providers are partially outdated.
    third-party/saml
    third-party/sso
    third-party/twitter
-
-Zammad also supports the following provider. It is currently
-undocumented:
-
-- Weibo
+   third-party/weibo
