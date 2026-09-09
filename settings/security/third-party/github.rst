@@ -12,12 +12,8 @@ Register a GitHub App
 Create the OAuth App
 ^^^^^^^^^^^^^^^^^^^^
 
-1. In the upper-right corner of any page on GitHub, click your profile
-   picture, then click **Settings**.
-2. In the left sidebar, click **Developer settings**.
-3. In the left sidebar, click **OAuth apps**.
-4. Click **New OAuth App**.
-5. Provide the following information:
+In GitHub, go to *your profile picture > Settings > Developer settings >
+OAuth apps* and click ``New OAuth App``. Provide the following information:
 
 **Application name**
    Enter a name for your app, for example Zammad. This is what users see
@@ -33,13 +29,13 @@ Create the OAuth App
    copy the callback URL from the **Authentication via GitHub** section in
    Zammad's admin settings.
 
-6. Click **Register application**.
+Finally, click ``Register application``.
 
 Get Your App Credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 After registering, GitHub displays the **Client ID**. Generate a client
-secret with the **Generate a new client secret** button and note it down.
+secret with the ``Generate a new client secret`` button and note it down.
 You can retrieve both values later via **OAuth apps** > your app in the
 developer settings.
 
@@ -48,7 +44,7 @@ Configure Zammad
 
 Navigate to *Settings > Security > Third-party Applications* and scroll to
 the **Authentication via GitHub** section. Enter your **App ID** and
-**App Secret**, enable the toggle, and click **Submit**.
+**App Secret**, enable the toggle, and click ``Submit``.
 
 After submitting, the GitHub button appears on the login page and users can
 log in with their GitHub account. On first login, GitHub asks them to
