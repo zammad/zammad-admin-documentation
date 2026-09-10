@@ -31,6 +31,8 @@ information:
    profile data, which includes the email address used to match logins to
    existing accounts.
 
+The default settings for the remaining options work as they are.
+
 Finally, select ``Save application``.
 
 Get Your App Credentials
@@ -45,9 +47,11 @@ Configure Zammad
 ----------------
 
 Navigate to *Settings > Security > Third-party Applications* and scroll to
-the **Authentication via GitLab** section. Enter your **App ID**,
-**App Secret**, and your GitLab URL in the **Site** field, enable the
-toggle, and click ``Submit``.
+the **Authentication via GitLab** section. Enter your **App ID** and
+**App Secret**. In the **Site** field, enter the URL of your GitLab
+instance: ``https://gitlab.com`` if you use GitLab's service, or the URL
+where your self-hosted GitLab lives otherwise. Enable the toggle and click
+``Submit``.
 
 After submitting, the GitLab button appears on the login page and users can
 log in with their GitLab account. On first login, GitLab asks them to
