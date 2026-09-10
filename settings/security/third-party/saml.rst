@@ -22,58 +22,11 @@ This guide assumes you are already using SAML within your organization
 Basic Configuration
 -------------------
 
-This section describes the setup of an IdP in a general way. See
-:ref:`saml-guides` for setup guides for Keycloak and Microsoft SAML.
-
-Configure Your IdP
-^^^^^^^^^^^^^^^^^^
-
-Add Zammad as a Client/App
-""""""""""""""""""""""""""
-
-Import Zammad into your IdP using the XML configuration
-found at ``https://your.zammad.domain/auth/saml/metadata``.
-
-If your IdP doesn't support XML import, you will have to configure Zammad as a
-new client/app manually using the above XML metadata file for reference.
-
-For instance, when you see this tag:
-
-.. code-block:: xml
-
-   <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://your.zammad.domain/auth/saml/callback" index="0" isDefault="true"/>
-
-Set the **Assertion Consumer Service Binding URL**
-(sometimes also listed as **Valid Redirect URIs**)
-to ``http://your.zammad.domain/auth/saml/callback``.
-
-Set Up User Attribute Mapping
-"""""""""""""""""""""""""""""
-
-Zammad requests the following user attributes (or “properties”) from the IdP:
-
-- Email address (``email``)
-- Full name (``name``)
-- Given name (``first_name``)
-- Family name (``last_name``)
-
-You may need to set up “mappers” (or “mappings”) to tell your IdP
-how user attributes in SAML correspond to those in Zammad.
-For a more detailed breakdown,
-refer to the XML metadata file referenced in the previous section.
-
-.. _saml-guides:
-
-Configuration Guides
---------------------
-
-You can find specific configuration guides for:
-
-- :doc:`Keycloak <./saml/saml-keycloak>`
-- :doc:`Microsoft SAML <./saml/saml-microsoft>`
-
-If your are using another IdP, adapt it to your needs. For a description of the
-fields in Zammad, read on below.
+This section describes the setup of an IdP in a general way. Specific setup
+guides are available for :doc:`Keycloak <./saml/saml-keycloak>` and
+:doc:`Microsoft SAML <./saml/saml-microsoft>`. If you are using another IdP,
+adapt it to your needs. For a description of the fields in Zammad, read on
+below.
 
 .. toctree::
    :maxdepth: 2
@@ -82,13 +35,51 @@ fields in Zammad, read on below.
    saml/saml-keycloak
    saml/saml-microsoft
 
+.. _saml-guides:
+
+Configure Your IdP
+^^^^^^^^^^^^^^^^^^
+
+Add Zammad as a Client/App
+""""""""""""""""""""""""""
+
+Import Zammad into your IdP using the XML configuration
+found at ``https://zammad.example.com/auth/saml/metadata``.
+If your IdP doesn't support XML import, you will have to configure Zammad as a
+new client/app manually using the above XML metadata file for reference.
+
+For instance, when you see this tag:
+
+.. code-block:: xml
+
+   <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://zammad.example.com/auth/saml/callback" index="0" isDefault="true"/>
+
+Set the **Assertion Consumer Service Binding URL**
+(sometimes also listed as **Valid Redirect URIs**)
+to ``http://zammad.example.com/auth/saml/callback``.
+
+Set Up User Attribute Mapping
+"""""""""""""""""""""""""""""
+
+Zammad requests the following user attributes (or "properties") from the IdP:
+
+- Email address (``email``)
+- Full name (``name``)
+- Given name (``first_name``)
+- Family name (``last_name``)
+
+You may need to set up "mappers" (or "mappings") to tell your IdP
+how user attributes in SAML correspond to those in Zammad.
+For a more detailed breakdown,
+refer to the XML metadata file referenced in the previous section.
+
 .. _saml-zammad:
 
 General Zammad Configuration
 ----------------------------
 
-Enable SAML and enter your IdP's details in the Admin Panel under
-**Settings > Security > Third Party Applications > Authentication via SAML**:
+Enable SAML and enter your IdP's details in the admin settings under
+*Settings > Security > Third-party Applications > Authentication via SAML*:
 
 .. image:: /images/settings/security/third-party/saml/zammad_connect_saml_thirdparty_general.png
    :alt: Example configuration of SAML part 1
@@ -117,9 +108,9 @@ IDP certificate fingerprint
    The fingerprint of your IDPs public certificate to verify during callback
    phase.
 
-   .. note:: 🔏 **For the IdP certificate / certificate fingerprint:**
+   .. note:: **IdP certificate or certificate fingerprint**
 
-      Provide **only one or the other**—do not provide both!
+      Provide only one or the other, do not provide both!
       (Between the two, we recommend the signing certificate itself:
       fingerprints use SHA-1, which `has been broken for a while now
       <https://www.schneier.com/blog/archives/2005/02/sha1_broken.html>`_.)
@@ -174,13 +165,11 @@ Your callback URL
    This URL is needed for your IdP configuration so it knows where to redirect
    to after successful authentication.
 
-.. hint:: After saving your input by clicking on the "Submit" button, Zammad
-   verifies the provided keys/certificates (e.g. if they are valid for
-   signing/encrypting and if they aren't expired).
-
-
-See :ref:`automatic account linking <automatic-account-linking>` for details on
-how to link existing Zammad accounts to IdP accounts.
+After saving your input by clicking on ``Submit``, Zammad verifies the
+provided keys/certificates (e.g. if they are valid for signing/encrypting and
+if they aren't expired). See :ref:`automatic account linking
+<automatic-account-linking>` for details on how to link existing Zammad
+accounts to IdP accounts.
 
 Troubleshooting
 ---------------
@@ -190,5 +179,5 @@ Automatic account linking doesn't work
 
 Logout doesn't work
    In case your logout process doesn't work, you can try
-   ``https://<your-zammad-url>/auth/saml/slo`` as an alternative. However, no
+   ``https://zammad.example.com/auth/saml/slo`` as an alternative. However, no
    logout is sent to your IdP then.
