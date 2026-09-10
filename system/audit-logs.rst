@@ -28,9 +28,12 @@ Configuration adjustments and changes of data in the admin area:
 - S/MIME, PGP and SSL certificates
 - Knowledge bases and their languages
 
-User account changes (only changes for agents and admins accounts are recorded):
+User account changes (only changes for agents and admins accounts are
+recorded, with one exception below):
 
-- Password changes
+- Password changes. For customers, only changes made by another user or an
+  admin are recorded. Password resets done by customers themselves are not
+  recorded.
 - Activation and deactivation of accounts
 - Added or removed roles and group permissions
 - Two-factor authentication changes
