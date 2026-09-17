@@ -20,8 +20,8 @@ that you either host or subscribe to
    - Our instructions are based on connecting Zammad with Keycloak.
    - PKCE is currently only supporting SHA256 as code challenge method.
 
-Step 1: Configure Your OP
---------------------------
+Configure Your OP
+-----------------
 
 Add a new Client
 ^^^^^^^^^^^^^^^^
@@ -37,25 +37,29 @@ Capability config
  - Authentication flow: Standard flow
 
 Login settings
- - Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/callback``
- - Valid post logout redirect URIs: ``https://your.zammad.domain/*``
+ - Valid redirect URIs: ``https://zammad.example.com/auth/openid_connect/callback``
+ - Valid post logout redirect URIs: ``https://zammad.example.com/*``
  - Web origins: ``+``
 
 In the **Logout settings** for the newly created client, set the
 **Backchannel logout URL** to
-``https://your.zammad.domain/auth/openid_connect/backchannel_logout`` and
+``https://zammad.example.com/auth/openid_connect/backchannel_logout`` and
 switch on **Backchannel logout session required**.
+
+Replace ``zammad.example.com`` with the FQDN of your Zammad instance in all
+three URLs. You can also copy the callback URL from the **Authentication via
+OpenID Connect** section in Zammad's admin settings.
 
 If you would like to use `PKCE <https://oauth.net/2/pkce/>`_, you need to switch
 to the **Advanced** tab and select **S256** in **Advanced settings** as the code
 challenge method for PKCE.
 
-Step 2: Configure Zammad
-------------------------
+Configure Zammad
+----------------
 
-Enable OpenID Connect and enter your OP's details in the Admin Panel under
-**Settings > Security > Third Party Applications > Authentication via OpenID
-Connect**:
+Enable OpenID Connect and enter your OP's details in the admin settings under
+*Settings > Security > Third-party Applications > Authentication via OpenID
+Connect*:
 
 .. image:: /images/settings/security/third-party/openid-connect/zammad_connect_oidc_thirdparty_general.png
    :alt: Example configuration of OpenID Connect

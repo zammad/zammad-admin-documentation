@@ -1,88 +1,80 @@
 Third-Party Applications
 ========================
 
-Third-party authentication is a great way to help your users to login to Zammad
-more easily. If the account is not yet known, Zammad will create a new user
-automatically without users being required to interact (e.g. type in their name).
-Another big advantage of this feature is that users don't need to remember
-another password. You can deactivate the login via
-:ref:`password <security_password_login>` if any of the mentioned authentication
-providers are enabled in your instance.
+Zammad supports authentication via third-party providers. Your users can log
+in with an account they already have, for example their Google or Microsoft
+account, and don't need to remember an extra password. If no matching account
+exists yet, Zammad creates one automatically with the roles configured as
+default at signup. Once at least one provider is enabled, you can deactivate
+the :ref:`password login <security_password_login>` to not offer local
+passwords at all.
 
 You can find the configuration in Zammad's admin settings under
-*Settings > Security > Third-party Applications*.
+*Settings > Security > Third-party Applications*. The general settings are at
+the top of the page, followed by the configuration sections of the providers.
 
-We recommend to check your third-party authentication provider's
-documentation first. We collected configuration examples for some of them, but
-they are partially outdated.
+Settings
+--------
+
+The following options apply to all authentication providers.
+
+.. _automatic-account-linking:
+
+Automatic Account Link on Initial Logon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Zammad matches third-party logins to existing accounts by email address. By
+default, this linking on first logon is disabled: users have to link
+authentication providers to their account manually, and may see errors that
+their email address is already used for another user. If you want your users
+to be able to log in with their existing accounts, enable **Automatic account
+link on initial logon** by setting it to ``yes``.
+
+.. _automatic-account-linking-notification:
+
+Automatic Account Linking Notification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Enable this setting to notify users when a new third-party application has
+been linked to their account. The notification is sent once per application
+and mentions the provider, for example ``Microsoft``. By default the setting
+is inactive (set to ``no``). The notification is only sent if the account in
+question already exists; it is skipped when the login itself creates the
+account. It therefore only applies to:
+
+- manual account linking in the third-party page of the user's profile
+- logging into an existing local account via
+  **automatic account link on initial logon**
+
+No User Creation on Logon
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, Zammad creates a new user account when a user logs in via a
+third-party application for the first time and no matching account exists.
+To prevent this, set **No user creation on logon** to ``yes``. Zammad then
+refuses such logins with the message *The user account does not exist.
+Please contact your administrator.* To allow logins only for existing
+accounts, enable this setting together with **Automatic account link on
+initial logon**. Without it, Zammad refuses logins even if the email address
+matches an existing account.
+
+Login Providers
+---------------
+
+Check your provider's documentation first. The configuration examples we
+provide for some providers are partially outdated.
 
 .. toctree::
-   :caption: Login Providers
    :maxdepth: 1
 
    third-party/facebook
    third-party/github
    third-party/gitlab
    third-party/google
+   third-party/linkedin
    third-party/microsoft
    third-party/openid-connect
    third-party/saml
    third-party/sso
    third-party/twitter
-
-.. _automatic-account-linking:
-
-Automatic Account Link on Initial Logon
----------------------------------------
-
-In general there's two possible options for Zammad on how to deal with
-already known users as they try to authenticate against a third-party
-application. By default, Zammad will not automatically link "unknown"
-authentication providers to existing accounts.
-
-This means that the user has to manually link authentication providers to their
-accounts (for more about this
-:user-docs:`consult the user documentation </extras/user-menu-profile-settings.html>`).
-
-Sometimes this doesn't come in handy as this also means you'll receive
-error messages about "email address being in use already" for (yet) unknown
-third-party authentication methods.
-
-If you want to allow your users to always be able to log in, no matter what,
-you may want to enable **Automatic account link on initial logon** by setting
-it to ``yes``.
-
-.. _automatic-account-linking-notification:
-
-Automatic Account Linking Notification
---------------------------------------
-
-To improve security and your users awareness, you can enable Zammad to
-notify your users when a new third-party application has been linked to their
-account by setting it to ``yes``.
-
-This notification is sent out once per third-party application.
-Zammad does also mention the method used, e.g.: ``Microsoft``.
-
-By default this setting is not active (set to ``no``).
-
-.. note::
-
-   This notification is only sent if the account in question already exists.
-   If the login via the third-party also creates the missing account,
-   the notification will be skipped.
-
-   This means it only affects:
-
-      - manual account linking within the third-party page of the users profile
-      - logging into an existing local account by utilizing the
-        **automatic account link on initial logon** functionality
-
-No User Creation on Logon
--------------------------
-
-By default, Zammad will create a new user account if the user logs in via a
-third-party application and the account doesn't exist yet.
-
-If you want to prevent Zammad from creating new accounts on logon, you can
-disable this feature by setting **No user creation on logon** to ``yes``.
+   third-party/weibo
