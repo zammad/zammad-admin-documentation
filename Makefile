@@ -178,10 +178,11 @@ info:
 .PHONY: gettext
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) locale
-	# Keep POT-Creation-Date empty, following the convention of the zammad/zammad
-	# i18n catalog: a timestamp here churns on every regeneration, gets copied
-	# into all .po headers by msgmerge and causes Weblate rebase conflicts.
-	perl -pi -e 's/^"POT-Creation-Date: .*/"POT-Creation-Date: \\n"/' locale/admin-docs.pot
+	# Drop the POT-Creation-Date header: a timestamp here churns on every
+	# regeneration, gets copied into all .po headers by msgmerge and causes
+	# Weblate rebase conflicts. An empty value is not an option, because Babel
+	# fails to parse it and Sphinx then silently falls back to a stale .mo file.
+	perl -ni -e 'print unless /^"POT-Creation-Date:/' locale/admin-docs.pot
 	@echo
 	@echo "Created or updated POT file in locale."
 
