@@ -12,6 +12,13 @@ settings under *Manage > Templates* with the ``admin.template`` permission.
 .. warning::
    Please note that ticket templates do not allow the use of variables.
 
+.. hint::
+   Applying a template never overwrites fields that already contain values,
+   no matter how they were filled. Zammad only fills the empty fields that
+   the template provides.
+   Learn more about applying templates
+   :user-docs:`in our user documentation </advanced/ticket-templates.html>`.
+
 Managing templates
 ------------------
 
