@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-09-18 06:08+0000\n"
+"PO-Revision-Date: 2026-09-20 06:12+0000\n"
 "Last-Translator: Igor Costa <igor_sfx@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/pt_BR/>\n"
@@ -961,7 +961,7 @@ msgstr ""
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
 #: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
-#: ../manage/slas.rst:53 ../manage/templates.rst:23
+#: ../manage/slas.rst:53 ../manage/templates.rst:30
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
@@ -1331,7 +1331,7 @@ msgstr ""
 "promovidas: quando você exclui o provedor que cobre uma capacidade, ela "
 "simplesmente fica sem atribuição."
 
-#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:28
+#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:35
 msgid "Actions"
 msgstr "Ações"
 
@@ -2037,7 +2037,7 @@ msgstr ""
 #: ../manage/macros.rst:71 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:164
-#: ../manage/templates.rst:33 ../manage/webhook/add.rst:134
+#: ../manage/templates.rst:40 ../manage/webhook/add.rst:134
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
 msgstr "Ativo"
@@ -15514,6 +15514,18 @@ msgid "Please note that ticket templates do not allow the use of variables."
 msgstr "Observe que os modelos de ticket não permitem o uso de variáveis."
 
 #: ../manage/templates.rst:16
+msgid ""
+"Applying a template never overwrites fields that already contain values, no "
+"matter how they were filled. Zammad only fills the empty fields that the "
+"template provides. Learn more about applying templates :user-docs:`in our "
+"user documentation </advanced/ticket-templates.html>`."
+msgstr ""
+"Aplicar um modelo nunca sobrescreve campos que já contêm valores, não "
+"importa como foram preenchidos. O Zammad preenche apenas os campos vazios "
+"que o modelo fornece. Saiba mais sobre como aplicar modelos :user-docs:`na "
+"nossa documentação do usuário </advanced/ticket-templates.html>`."
+
+#: ../manage/templates.rst:23
 msgid "Managing templates"
 msgstr "Gerenciando modelos"
 
@@ -15521,11 +15533,11 @@ msgstr "Gerenciando modelos"
 msgid "Adding new template"
 msgstr "Adicionando novo modelo"
 
-#: ../manage/templates.rst:19
+#: ../manage/templates.rst:26
 msgid "Use the *New Template* button to start creating a new template."
 msgstr "Use o botão *New Template* para começar a criar um novo modelo."
 
-#: ../manage/templates.rst:22
+#: ../manage/templates.rst:29
 msgid ""
 "Select a meaningful template name. This name will be shown to your agents "
 "during ticket creation (within *Select Template*)."
@@ -15533,7 +15545,7 @@ msgstr ""
 "Selecione um nome de modelo significativo. Esse nome será exibido aos seus "
 "agentes durante a criação do ticket (em *Select Template*)."
 
-#: ../manage/templates.rst:26
+#: ../manage/templates.rst:33
 msgid ""
 "Within actions, Zammad will provide all available ticket attributes. This "
 "allows you to create granular templates with the information you need."
@@ -15542,7 +15554,7 @@ msgstr ""
 "disponíveis. Isso permite criar modelos granulares com as informações que "
 "você precisa."
 
-#: ../manage/templates.rst:31
+#: ../manage/templates.rst:38
 msgid ""
 "Set any currently active ticket template to ``inactive`` if you don't need "
 "it momentarily. This allows you to keep the template for e.g. seasonal "
@@ -15560,7 +15572,7 @@ msgstr "A captura de tela mostra a configuração do modelo"
 msgid "Editing templates"
 msgstr "Editando modelos"
 
-#: ../manage/templates.rst:40
+#: ../manage/templates.rst:47
 msgid ""
 "If your template no longer fits your need or contains errors, simply click "
 "on the template name to edit it."
@@ -15572,7 +15584,7 @@ msgstr ""
 msgid "Cloning templates"
 msgstr "Clonando modelos"
 
-#: ../manage/templates.rst:44
+#: ../manage/templates.rst:51
 msgid ""
 "Zammad allows you to clone existing templates and continue your new template "
 "from there."
@@ -15580,7 +15592,7 @@ msgstr ""
 "O Zammad permite clonar modelos existentes e continuar seu novo modelo a "
 "partir daí."
 
-#: ../manage/templates.rst:47
+#: ../manage/templates.rst:54
 msgid ""
 "To do so, use ⋮ in the Action column of the desired template in your list "
 "and choose *Clone*. A new template modal will open with attributes prefilled."
@@ -15593,7 +15605,7 @@ msgstr ""
 msgid "Removing templates"
 msgstr "Removendo modelos"
 
-#: ../manage/templates.rst:51
+#: ../manage/templates.rst:58
 msgid ""
 "If you no longer require a specific template, use ⋮ in the Action column in "
 "the list and choose *Delete*."
@@ -15601,7 +15613,7 @@ msgstr ""
 "Se você não precisar mais de um modelo específico, use ⋮ na coluna Action na "
 "lista e escolha *Delete*."
 
-#: ../manage/templates.rst:54
+#: ../manage/templates.rst:61
 msgid "Be aware that the deletion is permanent."
 msgstr "Esteja ciente de que a exclusão é permanente."
 
@@ -24745,23 +24757,28 @@ msgid ""
 "can deactivate the :ref:`password login <security_password_login>` to not "
 "offer local passwords at all."
 msgstr ""
+"O Zammad suporta autenticação por meio de provedores de terceiros. Seus "
+"usuários podem fazer login com uma conta que já possuem, por exemplo a conta "
+"do Google ou da Microsoft, sem precisar memorizar uma senha extra. Se ainda "
+"não existir uma conta correspondente, o Zammad cria uma automaticamente com "
+"as funções configuradas como padrão no cadastro. Assim que pelo menos um "
+"provedor estiver ativado, você pode desativar o :ref:`login por senha "
+"<security_password_login>` para não oferecer senhas locais."
 
 #: ../settings/security/third-party.rst:12
-#, fuzzy
-#| msgid ""
-#| "You can find the configuration in Zammad's admin settings under *Settings "
-#| "> Security > Third-party Applications*."
 msgid ""
 "You can find the configuration in Zammad's admin settings under *Settings > "
 "Security > Third-party Applications*. The general settings are at the top of "
 "the page, followed by the configuration sections of the providers."
 msgstr ""
 "Você pode encontrar a configuração nas configurações de administração do "
-"Zammad em *Settings > Security > Third-party Applications*."
+"Zammad em *Settings > Security > Third-party Applications*. As configurações "
+"gerais ficam no topo da página, seguidas pelas seções de configuração de "
+"cada provedor."
 
 #: ../settings/security/third-party.rst:19
 msgid "The following options apply to all authentication providers."
-msgstr ""
+msgstr "As opções a seguir se aplicam a todos os provedores de autenticação."
 
 #: ../settings/security/third-party.rst:24
 msgid "Automatic Account Link on Initial Logon"
@@ -24776,6 +24793,13 @@ msgid ""
 "to be able to log in with their existing accounts, enable **Automatic "
 "account link on initial logon** by setting it to ``yes``."
 msgstr ""
+"O Zammad associa logins de terceiros a contas existentes pelo endereço de "
+"email. Por padrão, essa vinculação no primeiro login está desativada: os "
+"usuários precisam vincular provedores de autenticação à sua conta "
+"manualmente, e podem ver erros informando que o endereço de email já está em "
+"uso por outro usuário. Se você quiser que seus usuários possam fazer login "
+"com suas contas existentes, ative **Automatic account link on initial "
+"logon** definindo-a como ``yes``."
 
 #: ../settings/security/third-party.rst:36
 msgid "Automatic Account Linking Notification"
@@ -24790,25 +24814,24 @@ msgid ""
 "question already exists; it is skipped when the login itself creates the "
 "account. It therefore only applies to:"
 msgstr ""
+"Ative essa configuração para notificar os usuários quando um novo aplicativo "
+"de terceiros for vinculado à conta deles. A notificação é enviada uma vez "
+"por aplicativo e menciona o provedor, por exemplo ``Microsoft``. Por padrão, "
+"a configuração está inativa (definida como ``no``). A notificação só é "
+"enviada se a conta em questão já existir; ela é ignorada quando o próprio "
+"login cria a conta. Portanto, ela se aplica apenas a:"
 
 #: ../settings/security/third-party.rst:45
-#, fuzzy
-#| msgid ""
-#| "manual account linking within the third-party page of the users profile"
 msgid "manual account linking in the third-party page of the user's profile"
 msgstr "vinculação manual de conta na página de terceiros do perfil do usuário"
 
 #: ../settings/security/third-party.rst:46
-#, fuzzy
-#| msgid ""
-#| "logging into an existing local account by utilizing the **automatic "
-#| "account link on initial logon** functionality"
 msgid ""
 "logging into an existing local account via **automatic account link on "
 "initial logon**"
 msgstr ""
-"login em uma conta local existente utilizando a funcionalidade **automatic "
-"account link on initial logon**"
+"login em uma conta local existente por meio de **automatic account link on "
+"initial logon**"
 
 #: ../settings/security/third-party.rst:50
 msgid "No User Creation on Logon"
@@ -24825,24 +24848,27 @@ msgid ""
 "initial logon**. Without it, Zammad refuses logins even if the email address "
 "matches an existing account."
 msgstr ""
+"Por padrão, o Zammad cria uma nova conta de usuário quando alguém faz login "
+"por meio de um aplicativo de terceiros pela primeira vez e não existe uma "
+"conta correspondente. Para evitar isso, defina **No user creation on logon** "
+"como ``yes``. O Zammad então recusa esses logins com a mensagem *The user "
+"account does not exist. Please contact your administrator.* Para permitir "
+"logins apenas para contas já existentes, ative essa configuração junto com "
+"**Automatic account link on initial logon**. Sem ela, o Zammad recusa logins "
+"mesmo que o endereço de email corresponda a uma conta existente."
 
 #: ../settings/security/third-party.rst:62
 msgid "Login Providers"
 msgstr "Provedores de login"
 
 #: ../settings/security/third-party.rst:64
-#, fuzzy
-#| msgid ""
-#| "We recommend to check your third-party authentication provider's "
-#| "documentation first. We collected configuration examples for some of "
-#| "them, but they are partially outdated."
 msgid ""
 "Check your provider's documentation first. The configuration examples we "
 "provide for some providers are partially outdated."
 msgstr ""
-"Recomendamos consultar primeiro a documentação do seu provedor de "
-"autenticação de terceiros. Reunimos exemplos de configuração para alguns "
-"deles, mas estão parcialmente desatualizados."
+"Consulte primeiro a documentação do seu provedor. Os exemplos de "
+"configuração que fornecemos para alguns provedores estão parcialmente "
+"desatualizados."
 
 #: ../settings/security/third-party/facebook.rst:4
 msgid ""
@@ -24851,20 +24877,21 @@ msgid ""
 "Facebook Login, see the `Meta app creation documentation <https://"
 "developers.facebook.com/documentation/facebook-login/create-an-app>`_."
 msgstr ""
+"Configure o Facebook como provedor de autenticação para que os usuários "
+"possam fazer login no Zammad com a conta do Facebook. Para detalhes sobre a "
+"criação de aplicativos e o Facebook Login, veja a `documentação de criação "
+"de apps da Meta <https://developers.facebook.com/documentation/facebook-"
+"login/create-an-app>`_."
 
 #: ../settings/security/third-party/facebook.rst:10
-#, fuzzy
-#| msgid "Register Facebook App"
 msgid "Register a Facebook App"
-msgstr "Registrar uma aplicação de robô do Telegram"
+msgstr "Registrar um aplicativo do Facebook"
 
 #: ../settings/security/third-party/facebook.rst:13
 #: ../settings/security/third-party/linkedin.rst:23
 #: ../settings/security/third-party/twitter.rst:21
-#, fuzzy
-#| msgid "Create App"
 msgid "Create the App"
-msgstr "Criar aplicativo"
+msgstr "Criar o aplicativo"
 
 #: ../settings/security/third-party/facebook.rst:15
 msgid ""
@@ -24875,23 +24902,27 @@ msgid ""
 "a `new app <https://developers.facebook.com/apps/creation/>`_ and provide "
 "the following information:"
 msgstr ""
+"Faça login no `Meta App Dashboard <https://developers.facebook.com/>`_ com "
+"sua conta do Facebook e registre-se como desenvolvedor caso ainda não tenha "
+"uma conta de desenvolvedor (veja `Register as a Meta Developer <https://"
+"developers.facebook.com/documentation/development/register>`_). Em seguida, "
+"crie um `novo aplicativo <https://developers.facebook.com/apps/creation/>`_ "
+"e forneça as seguintes informações:"
 
 #: ../settings/security/third-party/facebook.rst:24
-#, fuzzy
-#| msgid "**App Secret**"
 msgid "**App details**"
-msgstr "**App Secret**"
+msgstr "**App details**"
 
 #: ../settings/security/third-party/facebook.rst:23
 msgid ""
 "Enter a name for your app, for example Zammad, and a contact email address."
 msgstr ""
+"Informe um nome para seu aplicativo, por exemplo Zammad, e um endereço de "
+"email de contato."
 
 #: ../settings/security/third-party/facebook.rst:29
-#, fuzzy
-#| msgid "**Usage**"
 msgid "**Use cases**"
-msgstr "**Uso**"
+msgstr "**Use cases**"
 
 #: ../settings/security/third-party/facebook.rst:27
 msgid ""
@@ -24899,77 +24930,77 @@ msgid ""
 "This use case includes the ``public_profile`` permission which is required "
 "for the login to work."
 msgstr ""
+"Selecione **Authenticate and request data from users with Facebook Login**. "
+"Esse caso de uso inclui a permissão ``public_profile``, necessária para o "
+"funcionamento do login."
 
 #: ../settings/security/third-party/facebook.rst:33
-#, fuzzy
-#| msgid "Business Hours"
 msgid "**Business**"
-msgstr "Horário comercial"
+msgstr "**Business**"
 
 #: ../settings/security/third-party/facebook.rst:32
 msgid ""
 "You don't need a business portfolio for the login. Select **I don't want to "
 "connect a business portfolio yet**."
 msgstr ""
+"Você não precisa de um portfólio empresarial para o login. Selecione **I "
+"don't want to connect a business portfolio yet**."
 
 #: ../settings/security/third-party/facebook.rst:36
-#, fuzzy
-#| msgid "Add the following permissions:"
 msgid "Add the Email Permission"
-msgstr "Adicione as seguintes permissões:"
+msgstr "Adicionar a permissão de email"
 
 #: ../settings/security/third-party/facebook.rst:38
 msgid ""
 "Zammad needs the ``email`` permission to match logins to existing accounts."
 msgstr ""
+"O Zammad precisa da permissão ``email`` para associar logins a contas "
+"existentes."
 
 #: ../settings/security/third-party/facebook.rst:40
 msgid ""
 "Open your app in the dashboard and go to **Use cases** in the left-side menu."
 msgstr ""
+"Abra seu aplicativo no painel e vá até **Use cases** no menu à esquerda."
 
 #: ../settings/security/third-party/facebook.rst:42
 msgid ""
 "Click the **Authenticate and request data from users with Facebook Login** "
 "use case."
 msgstr ""
+"Clique no caso de uso **Authenticate and request data from users with "
+"Facebook Login**."
 
 #: ../settings/security/third-party/facebook.rst:44
 msgid "Under **Permissions and features**, click ``Add`` next to **email**."
 msgstr ""
+"Em **Permissions and features**, clique em ``Add`` ao lado de **email**."
 
 #: ../settings/security/third-party/facebook.rst:47
 #: ../settings/security/third-party/twitter.rst:29
-#, fuzzy
-#| msgid "Your callback URL"
 msgid "Provide the Callback URL"
-msgstr "Sua URL de retorno de chamada"
+msgstr "Informar a URL de retorno de chamada"
 
 #: ../settings/security/third-party/facebook.rst:49
 msgid "Facebook redirects users to this URL after the login."
-msgstr ""
+msgstr "O Facebook redireciona os usuários para essa URL após o login."
 
 #: ../settings/security/third-party/facebook.rst:51
 msgid "In the use case, go to *Customize > Settings*."
-msgstr ""
+msgstr "No caso de uso, vá até *Customize > Settings*."
 
 #: ../settings/security/third-party/facebook.rst:52
-#, fuzzy
-#| msgid ""
-#| "As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback`` where "
-#| "``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even "
-#| "find and copy the callback URL from Zammad in the **Authentication via "
-#| "GitLab** section."
 msgid ""
 "Under **Valid OAuth Redirect URIs**, enter ``https://zammad.example.com/auth/"
 "facebook/callback`` and replace ``zammad.example.com`` with the FQDN of your "
 "Zammad instance. You can also copy the callback URL from the "
 "**Authentication via Facebook** section in Zammad's admin settings."
 msgstr ""
-"Como URL de retorno de chamada, informe ``https://zammad-fqdn/auth/gitlab/"
-"callback``, onde ``zammad-fqdn`` deve ser substituído pelo FQDN do seu "
-"Zammad. Você também pode encontrar e copiar a URL de retorno de chamada no "
-"Zammad, na seção **Authentication via GitLab**."
+"Em **Valid OAuth Redirect URIs**, informe ``https://zammad.example.com/auth/"
+"facebook/callback`` e substitua ``zammad.example.com`` pelo FQDN da sua "
+"instância do Zammad. Você também pode copiar a URL de retorno de chamada na "
+"seção **Authentication via Facebook**, nas configurações de administração do "
+"Zammad."
 
 #: ../settings/security/third-party/facebook.rst:59
 #: ../settings/security/third-party/github.rst:34
@@ -24977,20 +25008,20 @@ msgstr ""
 #: ../settings/security/third-party/linkedin.rst:44
 #: ../settings/security/third-party/twitter.rst:41
 #: ../settings/security/third-party/weibo.rst:30
-#, fuzzy
-#| msgid "Enter your app details:"
 msgid "Get Your App Credentials"
-msgstr "Informe os detalhes do seu aplicativo:"
+msgstr "Obter as credenciais do aplicativo"
 
 #: ../settings/security/third-party/facebook.rst:61
 msgid "Go to *App settings > Basic*."
-msgstr ""
+msgstr "Vá até *App settings > Basic*."
 
 #: ../settings/security/third-party/facebook.rst:62
 msgid ""
 "Note down the **App ID** and click ``Show`` next to **App secret** to note "
 "it down as well."
 msgstr ""
+"Anote o **App ID** e clique em ``Show`` ao lado de **App secret** para anotá-"
+"lo também."
 
 #: ../settings/security/third-party/facebook.rst:66
 #: ../settings/security/third-party/github.rst:42
@@ -25002,35 +25033,26 @@ msgstr ""
 #: ../settings/security/third-party/saml/saml-microsoft.rst:51
 #: ../settings/security/third-party/twitter.rst:51
 #: ../settings/security/third-party/weibo.rst:36
-#, fuzzy
-#| msgid "2. Configure Zammad"
 msgid "Configure Zammad"
-msgstr "Configure o Zammad como um robô do Telegram"
+msgstr "Configurar o Zammad"
 
 #: ../settings/security/third-party/facebook.rst:68
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via Facebook** section. Enter your **App ID** and **App "
 "Secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via Facebook**. Informe seu **App ID** e **App Secret**, "
+"ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/facebook.rst:72
-#, fuzzy
-#| msgid "After submitting, users can log in with their Google account."
 msgid ""
 "After submitting, the Facebook button appears on the login page and users "
 "can log in with their Facebook account."
-msgstr "Depois de enviar, os usuários podem fazer login com a conta do Google."
+msgstr ""
+"Depois de enviar, o botão do Facebook aparece na tela de login e os usuários "
+"podem fazer login com a conta do Facebook."
 
 #: ../settings/security/third-party/facebook.rst:77
 msgid ""
@@ -25040,6 +25062,12 @@ msgid ""
 "dashboard toolbar. The ``public_profile`` and ``email`` permissions used by "
 "Zammad are automatically granted and don't require App Review."
 msgstr ""
+"Novos aplicativos começam no modo Development. Nesse modo, apenas usuários "
+"com um papel no aplicativo, como administradores, desenvolvedores ou "
+"testadores, podem fazer login. Para que todos os outros possam usar o login, "
+"mude seu aplicativo para **Live mode** na barra de ferramentas do painel. As "
+"permissões ``public_profile`` e ``email`` usadas pelo Zammad são concedidas "
+"automaticamente e não exigem App Review."
 
 #: ../settings/security/third-party/github.rst:2
 #: ../system/integrations/github.rst:2
@@ -25052,18 +25080,18 @@ msgid ""
 "with their GitHub account. For details about OAuth apps, see the `GitHub "
 "developer documentation <https://docs.github.com/en/apps/oauth-apps>`_."
 msgstr ""
+"Configure o GitHub como provedor de autenticação para que os usuários possam "
+"fazer login no Zammad com a conta do GitHub. Para detalhes sobre aplicativos "
+"OAuth, veja a `documentação para desenvolvedores do GitHub <https://"
+"docs.github.com/en/apps/oauth-apps>`_."
 
 #: ../settings/security/third-party/github.rst:9
-#, fuzzy
-#| msgid "Register GitHub App"
 msgid "Register a GitHub App"
-msgstr "Registrar aplicativo do GitHub"
+msgstr "Registrar um aplicativo do GitHub"
 
 #: ../settings/security/third-party/github.rst:12
-#, fuzzy
-#| msgid "Register an OAuth App"
 msgid "Create the OAuth App"
-msgstr "Registrar um aplicativo OAuth"
+msgstr "Criar o aplicativo OAuth"
 
 #: ../settings/security/third-party/github.rst:14
 msgid ""
@@ -25071,12 +25099,13 @@ msgid ""
 "settings > OAuth apps* and click ``New OAuth App``. Provide the following "
 "information:"
 msgstr ""
+"No GitHub, clique na sua foto de perfil, vá até *Settings > Developer "
+"settings > OAuth apps* e clique em ``New OAuth App``. Forneça as seguintes "
+"informações:"
 
 #: ../settings/security/third-party/github.rst:19
-#, fuzzy
-#| msgid "**Application (client) ID**"
 msgid "**Application name**"
-msgstr "**Application (client) ID**"
+msgstr "**Application name**"
 
 #: ../settings/security/third-party/github.rst:18
 #: ../settings/security/third-party/linkedin.rst:30
@@ -25084,46 +25113,40 @@ msgid ""
 "Enter a name for your app, for example Zammad. This is what users see when "
 "they authorize the login."
 msgstr ""
+"Informe um nome para seu aplicativo, por exemplo Zammad. É isso que os "
+"usuários veem ao autorizar o login."
 
 #: ../settings/security/third-party/github.rst:23
 msgid "**Homepage URL**"
-msgstr ""
+msgstr "**Homepage URL**"
 
 #: ../settings/security/third-party/github.rst:22
 msgid ""
 "Enter the URL of your Zammad instance, for example ``https://"
 "zammad.example.com``."
 msgstr ""
+"Informe a URL da sua instância do Zammad, por exemplo ``https://"
+"zammad.example.com``."
 
 #: ../settings/security/third-party/github.rst:29
-#, fuzzy
-#| msgid "Your callback URL"
 msgid "**Authorization callback URL**"
-msgstr "Sua URL de retorno de chamada"
+msgstr "**Authorization callback URL**"
 
 #: ../settings/security/third-party/github.rst:26
-#, fuzzy
-#| msgid ""
-#| "As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback`` where "
-#| "``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even "
-#| "find and copy the callback URL from Zammad in the **Authentication via "
-#| "GitLab** section."
 msgid ""
 "Enter ``https://zammad.example.com/auth/github/callback`` and replace "
 "``zammad.example.com`` with the FQDN of your Zammad instance. You can also "
 "copy the callback URL from the **Authentication via GitHub** section in "
 "Zammad's admin settings."
 msgstr ""
-"Como URL de retorno de chamada, informe ``https://zammad-fqdn/auth/gitlab/"
-"callback``, onde ``zammad-fqdn`` deve ser substituído pelo FQDN do seu "
-"Zammad. Você também pode encontrar e copiar a URL de retorno de chamada no "
-"Zammad, na seção **Authentication via GitLab**."
+"Informe ``https://zammad.example.com/auth/github/callback`` e substitua "
+"``zammad.example.com`` pelo FQDN da sua instância do Zammad. Você também "
+"pode copiar a URL de retorno de chamada na seção **Authentication via "
+"GitHub**, nas configurações de administração do Zammad."
 
 #: ../settings/security/third-party/github.rst:31
-#, fuzzy
-#| msgid "Finally, click on ``Submit``."
 msgid "Finally, click ``Register application``."
-msgstr "Por fim, clique em ``Submit``."
+msgstr "Por fim, clique em ``Register application``."
 
 #: ../settings/security/third-party/github.rst:36
 msgid ""
@@ -25132,23 +25155,20 @@ msgid ""
 "and note it down too. You can retrieve both values later in this **OAuth "
 "apps** screen in the developer settings."
 msgstr ""
+"Depois de registrar, o GitHub exibe o **Client ID**. Anote-o. Agora gere um "
+"client secret com o botão ``Generate a new client secret`` e anote-o também. "
+"Você pode recuperar os dois valores mais tarde nessa tela **OAuth apps**, "
+"nas configurações de desenvolvedor."
 
 #: ../settings/security/third-party/github.rst:44
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via GitHub** section. Enter your **App ID** and **App "
 "Secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via GitHub**. Informe seu **App ID** e **App Secret**, "
+"ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/github.rst:48
 msgid ""
@@ -25156,6 +25176,9 @@ msgid ""
 "log in with their GitHub account. On first login, GitHub asks them to "
 "authorize the access."
 msgstr ""
+"Depois de enviar, o botão do GitHub aparece na tela de login e os usuários "
+"podem fazer login com a conta do GitHub. No primeiro login, o GitHub pede "
+"que eles autorizem o acesso."
 
 #: ../settings/security/third-party/gitlab.rst:2
 #: ../system/integrations/gitlab.rst:2
@@ -25169,18 +25192,19 @@ msgid ""
 "GitLab instances. For details about OAuth applications, see the `GitLab "
 "documentation <https://docs.gitlab.com/integration/oauth_provider/>`_."
 msgstr ""
+"Configure o GitLab como provedor de autenticação para que os usuários possam "
+"fazer login no Zammad com a conta do GitLab. Isso funciona tanto com o "
+"GitLab.com quanto com instâncias auto-hospedadas do GitLab. Para detalhes "
+"sobre aplicativos OAuth, veja a `documentação do GitLab <https://"
+"docs.gitlab.com/integration/oauth_provider/>`_."
 
 #: ../settings/security/third-party/gitlab.rst:11
-#, fuzzy
-#| msgid "Register GitLab App"
 msgid "Register a GitLab App"
-msgstr "Registrar uma aplicação de robô do Telegram"
+msgstr "Registrar um aplicativo do GitLab"
 
 #: ../settings/security/third-party/gitlab.rst:14
-#, fuzzy
-#| msgid "Third-Party Applications"
 msgid "Create the Application"
-msgstr "Aplicativos de terceiros"
+msgstr "Criar o aplicativo"
 
 #: ../settings/security/third-party/gitlab.rst:16
 msgid ""
@@ -25188,6 +25212,9 @@ msgid ""
 "Applications*, then select ``Add new application``. Provide the following "
 "information:"
 msgstr ""
+"No GitLab, selecione seu avatar e vá até *Edit profile > Access > "
+"Applications*, depois selecione ``Add new application``. Forneça as "
+"seguintes informações:"
 
 #: ../settings/security/third-party/gitlab.rst:21
 #: ../settings/security/third-party/saml/saml-keycloak.rst:22
@@ -25195,41 +25222,28 @@ msgid "**Name**"
 msgstr "**Name**"
 
 #: ../settings/security/third-party/gitlab.rst:21
-#, fuzzy
-#| msgid "Enter a name for the application, e.g. \"Zammad SAML Integration\""
 msgid "Enter a name for your application, for example Zammad."
-msgstr ""
-"Informe um nome para o aplicativo, por exemplo, \"Zammad SAML Integration\""
+msgstr "Informe um nome para seu aplicativo, por exemplo Zammad."
 
 #: ../settings/security/third-party/gitlab.rst:27
-#, fuzzy
-#| msgid "**Requirements**"
 msgid "**Redirect URI**"
-msgstr "**Requisitos**"
+msgstr "**Redirect URI**"
 
 #: ../settings/security/third-party/gitlab.rst:24
-#, fuzzy
-#| msgid ""
-#| "As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback`` where "
-#| "``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even "
-#| "find and copy the callback URL from Zammad in the **Authentication via "
-#| "GitLab** section."
 msgid ""
 "Enter ``https://zammad.example.com/auth/gitlab/callback`` and replace "
 "``zammad.example.com`` with the FQDN of your Zammad instance. You can also "
 "copy the callback URL from the **Authentication via GitLab** section in "
 "Zammad's admin settings."
 msgstr ""
-"Como URL de retorno de chamada, informe ``https://zammad-fqdn/auth/gitlab/"
-"callback``, onde ``zammad-fqdn`` deve ser substituído pelo FQDN do seu "
-"Zammad. Você também pode encontrar e copiar a URL de retorno de chamada no "
-"Zammad, na seção **Authentication via GitLab**."
+"Informe ``https://zammad.example.com/auth/gitlab/callback`` e substitua "
+"``zammad.example.com`` pelo FQDN da sua instância do Zammad. Você também "
+"pode copiar a URL de retorno de chamada na seção **Authentication via "
+"GitLab**, nas configurações de administração do Zammad."
 
 #: ../settings/security/third-party/gitlab.rst:32
-#, fuzzy
-#| msgid "Scopes"
 msgid "**Scopes**"
-msgstr "Scopes"
+msgstr "**Scopes**"
 
 #: ../settings/security/third-party/gitlab.rst:30
 msgid ""
@@ -25237,16 +25251,17 @@ msgid ""
 "data, which includes the email address used to match logins to existing "
 "accounts."
 msgstr ""
+"Selecione **read_user**. O Zammad precisa apenas de acesso de leitura aos "
+"dados de perfil do usuário, que incluem o endereço de email usado para "
+"associar logins a contas existentes."
 
 #: ../settings/security/third-party/gitlab.rst:34
 msgid "The default settings for the remaining options work as they are."
-msgstr ""
+msgstr "As configurações padrão das demais opções funcionam como estão."
 
 #: ../settings/security/third-party/gitlab.rst:36
-#, fuzzy
-#| msgid "Finally, click on ``Submit``."
 msgid "Finally, select ``Save application``."
-msgstr "Por fim, clique em ``Submit``."
+msgstr "Por fim, selecione ``Save application``."
 
 #: ../settings/security/third-party/gitlab.rst:41
 msgid ""
@@ -25255,6 +25270,10 @@ msgid ""
 "one with ``Renew secret`` at any time. You can retrieve the values later in "
 "this **Applications** screen."
 msgstr ""
+"Depois de salvar, o GitLab exibe o **Application ID** e o **Secret**. Anote "
+"os dois. O secret é exibido apenas uma vez, mas você pode gerar um novo a "
+"qualquer momento com ``Renew secret``. Você pode recuperar os valores mais "
+"tarde nessa tela **Applications**."
 
 #: ../settings/security/third-party/gitlab.rst:49
 msgid ""
@@ -25264,6 +25283,11 @@ msgid ""
 "``https://gitlab.com`` if you use GitLab's service, or the URL where your "
 "self-hosted GitLab lives otherwise. Enable the toggle and click ``Submit``."
 msgstr ""
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via GitLab**. Informe seu **App ID** e **App Secret**. No "
+"campo **Site**, informe a URL da sua instância do GitLab: ``https://"
+"gitlab.com`` se você usa o serviço do GitLab, ou a URL onde seu GitLab auto-"
+"hospedado está, caso contrário. Ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/gitlab.rst:56
 msgid ""
@@ -25271,6 +25295,9 @@ msgid ""
 "log in with their GitLab account. On first login, GitLab asks them to "
 "authorize the access."
 msgstr ""
+"Depois de enviar, o botão do GitLab aparece na tela de login e os usuários "
+"podem fazer login com a conta do GitLab. No primeiro login, o GitLab pede "
+"que eles autorizem o acesso."
 
 #: ../settings/security/third-party/google.rst:2
 msgid "Google"
@@ -25283,12 +25310,14 @@ msgid ""
 "`Google Auth Platform documentation <https://support.google.com/cloud/answer/"
 "15549257>`_."
 msgstr ""
+"Configure o Google como provedor de autenticação para que os usuários possam "
+"fazer login no Zammad com a conta do Google. Para detalhes sobre clientes "
+"OAuth 2.0, veja a `documentação da Google Auth Platform <https://"
+"support.google.com/cloud/answer/15549257>`_."
 
 #: ../settings/security/third-party/google.rst:10
-#, fuzzy
-#| msgid "Create Secret"
 msgid "Create the Project"
-msgstr "Criar uma macro global"
+msgstr "Criar o projeto"
 
 #: ../settings/security/third-party/google.rst:12
 msgid ""
@@ -25298,75 +25327,82 @@ msgid ""
 "to create a project with a **Name**, for example Zammad, and a **Parent "
 "resource** where you can select your organization, if applicable."
 msgstr ""
+"Faça login na `Google Auth Platform <https://console.developers.google.com/"
+"auth/overview>`_ com sua conta do Google. Se você já tiver um projeto, verá "
+"sua visão geral e pode pular esta seção. Caso contrário, será solicitado que "
+"crie um projeto com um **Name**, por exemplo Zammad, e um **Parent "
+"resource**, onde você pode selecionar sua organização, se aplicável."
 
 #: ../settings/security/third-party/google.rst:19
 msgid ""
 "If the platform is not configured yet for your project, click ``GET "
 "STARTED`` and provide the following information:"
 msgstr ""
+"Se a plataforma ainda não estiver configurada para o seu projeto, clique em "
+"``GET STARTED`` e forneça as seguintes informações:"
 
 #: ../settings/security/third-party/google.rst:24
 #: ../settings/security/third-party/linkedin.rst:31
-#, fuzzy
-#| msgid "**App ID**"
 msgid "**App name**"
-msgstr "**App ID**"
+msgstr "**App name**"
 
 #: ../settings/security/third-party/google.rst:23
 msgid ""
 "Enter a name, for example Zammad. This is what users see when they authorize "
 "the login."
 msgstr ""
+"Informe um nome, por exemplo Zammad. É isso que os usuários veem ao "
+"autorizar o login."
 
 #: ../settings/security/third-party/google.rst:28
 msgid "**User support email**"
-msgstr ""
+msgstr "**User support email**"
 
 #: ../settings/security/third-party/google.rst:27
 msgid ""
 "Choose an email address for users to contact you with questions about their "
 "consent. It is displayed to users on the consent screen."
 msgstr ""
+"Escolha um endereço de email para os usuários entrarem em contato com "
+"dúvidas sobre o consentimento deles. Ele é exibido aos usuários na tela de "
+"consentimento."
 
 #: ../settings/security/third-party/google.rst:33
 msgid "**Audience**"
-msgstr ""
+msgstr "**Audience**"
 
 #: ../settings/security/third-party/google.rst:31
 msgid ""
 "Choose **Internal** if your users belong to a Google Workspace organization "
 "and should be the only ones to log in. Choose **External** otherwise."
 msgstr ""
+"Escolha **Internal** se seus usuários pertencem a uma organização do Google "
+"Workspace e devem ser os únicos a fazer login. Caso contrário, escolha "
+"**External**."
 
 #: ../settings/security/third-party/google.rst:37
-#, fuzzy
-#| msgid "Important information:"
 msgid "**Contact information**"
-msgstr "Informações importantes:"
+msgstr "**Contact information**"
 
 #: ../settings/security/third-party/google.rst:36
 #: ../settings/security/third-party/google.rst:54
-#, fuzzy
-#| msgid ""
-#| "**Contact Information**: enter an email address which should get notified "
-#| "about changes in your project."
 msgid ""
 "Enter an email address that Google notifies about changes to your project."
 msgstr ""
-"**Contact Information**: informe um endereço de email que deve ser "
-"notificado sobre alterações no seu projeto."
+"Informe um endereço de email que o Google notificará sobre alterações no seu "
+"projeto."
 
 #: ../settings/security/third-party/google.rst:39
 msgid ""
 "All of this information lives under **Branding** in the Google Auth "
 "Platform, where you can adjust it later and add optional details:"
 msgstr ""
+"Todas essas informações ficam em **Branding**, na Google Auth Platform, onde "
+"você pode ajustá-las depois e adicionar detalhes opcionais:"
 
 #: ../settings/security/third-party/google.rst:46
-#, fuzzy
-#| msgid "**App ID**"
 msgid "**App domain**"
-msgstr "**App ID**"
+msgstr "**App domain**"
 
 #: ../settings/security/third-party/google.rst:43
 msgid ""
@@ -25375,10 +25411,14 @@ msgid ""
 "your application and data practices. They are displayed to users on the "
 "consent screen."
 msgstr ""
+"Opcionalmente, forneça links para sua página inicial, sua política de "
+"privacidade e seus termos de serviço. O Google recomenda esses links para "
+"que os usuários possam saber mais sobre seu aplicativo e suas práticas de "
+"dados. Eles são exibidos aos usuários na tela de consentimento."
 
 #: ../settings/security/third-party/google.rst:51
 msgid "**Authorized domains**"
-msgstr ""
+msgstr "**Authorized domains**"
 
 #: ../settings/security/third-party/google.rst:49
 msgid ""
@@ -25386,12 +25426,13 @@ msgid ""
 "``zammad.example.com``. If you provide app domain links, their domain must "
 "match an authorized domain."
 msgstr ""
+"Opcionalmente, adicione o domínio da sua instância do Zammad, por exemplo "
+"``zammad.example.com``. Se você fornecer links de domínio do app, o domínio "
+"deles deve corresponder a um domínio autorizado."
 
 #: ../settings/security/third-party/google.rst:55
-#, fuzzy
-#| msgid "Important information:"
 msgid "**Developer contact information**"
-msgstr "Informações importantes:"
+msgstr "**Developer contact information**"
 
 #: ../settings/security/third-party/google.rst:57
 msgid ""
@@ -25400,51 +25441,51 @@ msgid ""
 "apps and even then optional unless you want your app name and logo to be "
 "displayed on the consent screen."
 msgstr ""
+"Nenhum dos detalhes de branding afeta o login em si. Eles são exigidos se "
+"você enviar seu aplicativo para verificação, o que só é necessário para "
+"aplicativos externos, e mesmo assim é opcional, a menos que você queira que "
+"o nome e o logotipo do seu aplicativo sejam exibidos na tela de "
+"consentimento."
 
 #: ../settings/security/third-party/google.rst:63
 msgid "Create the OAuth Client"
-msgstr ""
+msgstr "Criar o cliente OAuth"
 
 #: ../settings/security/third-party/google.rst:65
 msgid ""
 "Zammad connects to Google via an OAuth client. Its credentials, the client "
 "ID and the client secret, are required in Zammad afterwards."
 msgstr ""
+"O Zammad se conecta ao Google por meio de um cliente OAuth. As credenciais "
+"desse cliente, o client ID e o client secret, são necessárias no Zammad em "
+"seguida."
 
 #: ../settings/security/third-party/google.rst:68
 msgid ""
 "Switch to **Clients** in the left sidebar and click ``+ Create client``."
 msgstr ""
+"Vá até **Clients** na barra lateral esquerda e clique em ``+ Create client``."
 
 #: ../settings/security/third-party/google.rst:69
-#, fuzzy
-#| msgid "**Application type**: Web application"
 msgid "For the application type, select **Web application**."
-msgstr "**Application type**: Web application"
+msgstr "Para o tipo de aplicativo, selecione **Web application**."
 
 #: ../settings/security/third-party/google.rst:70
-#, fuzzy
-#| msgid ""
-#| "As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback`` where "
-#| "``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even "
-#| "find and copy the callback URL from Zammad in the **Authentication via "
-#| "GitLab** section."
 msgid ""
 "Under **Authorized redirect URIs**, enter ``https://zammad.example.com/auth/"
 "google_oauth2/callback`` and replace ``zammad.example.com`` with the FQDN of "
 "your Zammad instance. You can also copy the callback URL from the "
 "**Authentication via Google** section in Zammad's admin settings."
 msgstr ""
-"Como URL de retorno de chamada, informe ``https://zammad-fqdn/auth/gitlab/"
-"callback``, onde ``zammad-fqdn`` deve ser substituído pelo FQDN do seu "
-"Zammad. Você também pode encontrar e copiar a URL de retorno de chamada no "
-"Zammad, na seção **Authentication via GitLab**."
+"Em **Authorized redirect URIs**, informe ``https://zammad.example.com/auth/"
+"google_oauth2/callback`` e substitua ``zammad.example.com`` pelo FQDN da sua "
+"instância do Zammad. Você também pode copiar a URL de retorno de chamada na "
+"seção **Authentication via Google**, nas configurações de administração do "
+"Zammad."
 
 #: ../settings/security/third-party/google.rst:75
-#, fuzzy
-#| msgid "Click ``Next``."
 msgid "Click ``Create``."
-msgstr "Clique em ``Next``."
+msgstr "Clique em ``Create``."
 
 #: ../settings/security/third-party/google.rst:77
 msgid ""
@@ -25452,37 +25493,31 @@ msgid ""
 "**Client secret**. Copy both from the dialog and note them down. You can "
 "generate a new secret at any time in the client's details."
 msgstr ""
+"Depois de clicar no botão, uma caixa de diálogo exibe o **Client ID** e o "
+"**Client secret**. Copie os dois da caixa de diálogo e anote-os. Você pode "
+"gerar um novo secret a qualquer momento nos detalhes do cliente."
 
 #: ../settings/security/third-party/google.rst:84
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via Google** section. Enter your **Client ID** and "
 "**Client secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via Google**. Informe seu **Client ID** e **Client "
+"secret**, ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/google.rst:88
-#, fuzzy
-#| msgid "After submitting, users can log in with their Google account."
 msgid ""
 "After submitting, the Google button appears on the login page and users can "
 "log in with their Google account."
-msgstr "Depois de enviar, os usuários podem fazer login com a conta do Google."
+msgstr ""
+"Depois de enviar, o botão do Google aparece na tela de login e os usuários "
+"podem fazer login com a conta do Google."
 
 #: ../settings/security/third-party/linkedin.rst:2
-#, fuzzy
-#| msgid "Link"
 msgid "LinkedIn"
-msgstr "Link"
+msgstr "LinkedIn"
 
 #: ../settings/security/third-party/linkedin.rst:4
 msgid ""
@@ -25492,6 +25527,11 @@ msgid ""
 "<https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/"
 "sign-in-with-linkedin-v2>`_."
 msgstr ""
+"Configure o LinkedIn como provedor de autenticação para que os usuários "
+"possam fazer login no Zammad com a conta do LinkedIn. Para detalhes sobre "
+"aplicativos do LinkedIn e o produto Sign In with LinkedIn, veja a "
+"`documentação para desenvolvedores do LinkedIn <https://learn.microsoft.com/"
+"en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin-v2>`_."
 
 #: ../settings/security/third-party/linkedin.rst:11
 msgid ""
@@ -25502,12 +25542,16 @@ msgid ""
 "\"unauthorized scope\" error, use Zammad's :doc:`OpenID Connect <openid-"
 "connect>` provider with LinkedIn's OpenID Connect product instead."
 msgstr ""
+"O Zammad usa os escopos legados do Sign In with LinkedIn (``r_liteprofile`` "
+"e ``r_emailaddress``). O LinkedIn descontinuou essa versão do Sign In with "
+"LinkedIn em favor do OpenID Connect, e novos aplicativos do LinkedIn não "
+"podem mais solicitar esses escopos. Se a autorização falhar para o seu "
+"aplicativo com um erro \"unauthorized scope\", use o provedor :doc:`OpenID "
+"Connect <openid-connect>` do Zammad com o produto OpenID Connect do LinkedIn."
 
 #: ../settings/security/third-party/linkedin.rst:20
-#, fuzzy
-#| msgid "Register a Google App"
 msgid "Register a LinkedIn App"
-msgstr "Registrar uma aplicação de robô do Telegram"
+msgstr "Registrar um aplicativo do LinkedIn"
 
 #: ../settings/security/third-party/linkedin.rst:25
 msgid ""
@@ -25515,35 +25559,42 @@ msgid ""
 "with your LinkedIn account and click ``Create app``. Provide the following "
 "information:"
 msgstr ""
+"Faça login no `LinkedIn Developer Portal <https://developer.linkedin.com/>`_ "
+"com sua conta do LinkedIn e clique em ``Create app``. Forneça as seguintes "
+"informações:"
 
 #: ../settings/security/third-party/linkedin.rst:35
 msgid "**LinkedIn Page**"
-msgstr ""
+msgstr "**LinkedIn Page**"
 
 #: ../settings/security/third-party/linkedin.rst:34
 msgid ""
 "Select a LinkedIn page associated with your company or create one. Every app "
 "must be linked to a LinkedIn page."
 msgstr ""
+"Selecione uma página do LinkedIn associada à sua empresa ou crie uma. Todo "
+"aplicativo precisa estar vinculado a uma página do LinkedIn."
 
 #: ../settings/security/third-party/linkedin.rst:39
-#, fuzzy
-#| msgid "**App ID**"
 msgid "**App logo**"
-msgstr "**App ID**"
+msgstr "**App logo**"
 
 #: ../settings/security/third-party/linkedin.rst:38
 msgid ""
 "Upload a logo for your app. It is displayed to users on the consent screen."
 msgstr ""
+"Envie um logotipo para o seu aplicativo. Ele é exibido aos usuários na tela "
+"de consentimento."
 
 #: ../settings/security/third-party/linkedin.rst:41
 msgid "Then check the legal agreement checkbox and click ``Create app``."
 msgstr ""
+"Depois, marque a caixa de aceite do contrato legal e clique em ``Create "
+"app``."
 
 #: ../settings/security/third-party/linkedin.rst:46
 msgid "Go to the **Auth** tab of your app."
-msgstr ""
+msgstr "Vá até a aba **Auth** do seu aplicativo."
 
 #: ../settings/security/third-party/linkedin.rst:47
 msgid ""
@@ -25551,57 +25602,47 @@ msgid ""
 "credentials**. The secret is shown after you click it, and you can reveal it "
 "again at any time."
 msgstr ""
+"Anote o **Client ID** e o **Client Secret** em **Application credentials**. "
+"O secret é exibido depois que você clica nele, e você pode revelá-lo "
+"novamente a qualquer momento."
 
 #: ../settings/security/third-party/linkedin.rst:52
 msgid "Provide the Redirect URL"
-msgstr ""
+msgstr "Informar a URL de redirecionamento"
 
 #: ../settings/security/third-party/linkedin.rst:54
 msgid ""
 "Still on the **Auth** tab, find the **OAuth 2.0 settings** section and click "
 "the edit icon next to **Authorized redirect URLs for your app**."
 msgstr ""
+"Ainda na aba **Auth**, encontre a seção **OAuth 2.0 settings** e clique no "
+"ícone de edição ao lado de **Authorized redirect URLs for your app**."
 
 #: ../settings/security/third-party/linkedin.rst:56
-#, fuzzy
-#| msgid ""
-#| "As callback URL, enter ``https://zammad-fqdn/auth/gitlab/callback`` where "
-#| "``zammad-fqdn`` has to be replaced with your Zammad FQDN. You can even "
-#| "find and copy the callback URL from Zammad in the **Authentication via "
-#| "GitLab** section."
 msgid ""
 "Add ``https://zammad.example.com/auth/linkedin/callback`` and replace "
 "``zammad.example.com`` with the FQDN of your Zammad instance. You can also "
 "copy the callback URL from the **Authentication via LinkedIn** section in "
 "Zammad's admin settings."
 msgstr ""
-"Como URL de retorno de chamada, informe ``https://zammad-fqdn/auth/gitlab/"
-"callback``, onde ``zammad-fqdn`` deve ser substituído pelo FQDN do seu "
-"Zammad. Você também pode encontrar e copiar a URL de retorno de chamada no "
-"Zammad, na seção **Authentication via GitLab**."
+"Adicione ``https://zammad.example.com/auth/linkedin/callback`` e substitua "
+"``zammad.example.com`` pelo FQDN da sua instância do Zammad. Você também "
+"pode copiar a URL de retorno de chamada na seção **Authentication via "
+"LinkedIn**, nas configurações de administração do Zammad."
 
 #: ../settings/security/third-party/linkedin.rst:60
-#, fuzzy
-#| msgid "Click ``Next``."
 msgid "Click ``Update``."
-msgstr "Clique em ``Next``."
+msgstr "Clique em ``Update``."
 
 #: ../settings/security/third-party/linkedin.rst:65
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via LinkedIn** section. Enter your **App ID** and **App "
 "Secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via LinkedIn**. Informe seu **App ID** e **App Secret**, "
+"ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/linkedin.rst:69
 msgid ""
@@ -25609,6 +25650,9 @@ msgid ""
 "can log in with their LinkedIn account. On first login, LinkedIn asks them "
 "to authorize the access."
 msgstr ""
+"Depois de enviar, o botão do LinkedIn aparece na tela de login e os usuários "
+"podem fazer login com a conta do LinkedIn. No primeiro login, o LinkedIn "
+"pede que eles autorizem o acesso."
 
 #: ../settings/security/third-party/microsoft.rst:2
 msgid "Microsoft"
@@ -25631,15 +25675,11 @@ msgstr ""
 "necessária a permissão ``admin.security``."
 
 #: ../settings/security/third-party/microsoft.rst:13
-#, fuzzy
-#| msgid ""
-#| "This page does not cover our :doc:`📧 Microsoft 365 email channel </"
-#| "channels/microsoft365/index>`."
 msgid ""
 "This page does not cover our :doc:`Microsoft 365 email channel </channels/"
 "microsoft365/index>`."
 msgstr ""
-"Esta página não cobre nosso :doc:`📧 canal de email Microsoft 365 </channels/"
+"Esta página não cobre nosso :doc:`canal de email Microsoft 365 </channels/"
 "microsoft365/index>`."
 
 #: ../settings/security/third-party/microsoft.rst:19
@@ -25998,10 +26038,8 @@ msgstr ""
 "Atualmente, o PKCE suporta apenas SHA256 como método de code challenge."
 
 #: ../settings/security/third-party/openid-connect.rst:24
-#, fuzzy
-#| msgid "Configure Your IdP"
 msgid "Configure Your OP"
-msgstr "Configuração"
+msgstr "Configurar seu OP"
 
 #: ../settings/security/third-party/openid-connect.rst:27
 msgid "Add a new Client"
@@ -26040,34 +26078,22 @@ msgid "Login settings"
 msgstr "Configurações"
 
 #: ../settings/security/third-party/openid-connect.rst:40
-#, fuzzy
-#| msgid ""
-#| "Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/"
-#| "callback``"
 msgid ""
 "Valid redirect URIs: ``https://zammad.example.com/auth/openid_connect/"
 "callback``"
 msgstr ""
-"Valid redirect URIs: ``https://your.zammad.domain/auth/openid_connect/"
+"Valid redirect URIs: ``https://zammad.example.com/auth/openid_connect/"
 "callback``"
 
 #: ../settings/security/third-party/openid-connect.rst:41
-#, fuzzy
-#| msgid "Valid post logout redirect URIs: ``https://your.zammad.domain/*``"
 msgid "Valid post logout redirect URIs: ``https://zammad.example.com/*``"
-msgstr "Valid post logout redirect URIs: ``https://your.zammad.domain/*``"
+msgstr "Valid post logout redirect URIs: ``https://zammad.example.com/*``"
 
 #: ../settings/security/third-party/openid-connect.rst:42
 msgid "Web origins: ``+``"
 msgstr "Web origins: ``+``"
 
 #: ../settings/security/third-party/openid-connect.rst:44
-#, fuzzy
-#| msgid ""
-#| "In the **Logout settings** for the newly created client, set the "
-#| "**Backchannel logout URL** to ``https://your.zammad.domain/auth/"
-#| "openid_connect/backchannel_logout`` and switch on **Backchannel logout "
-#| "session required**."
 msgid ""
 "In the **Logout settings** for the newly created client, set the "
 "**Backchannel logout URL** to ``https://zammad.example.com/auth/"
@@ -26075,7 +26101,7 @@ msgid ""
 "session required**."
 msgstr ""
 "Em **Logout settings** do client recém-criado, defina o **Backchannel logout "
-"URL** como ``https://your.zammad.domain/auth/openid_connect/"
+"URL** como ``https://zammad.example.com/auth/openid_connect/"
 "backchannel_logout`` e ative **Backchannel logout session required**."
 
 #: ../settings/security/third-party/openid-connect.rst:49
@@ -26084,6 +26110,10 @@ msgid ""
 "three URLs. You can also copy the callback URL from the **Authentication via "
 "OpenID Connect** section in Zammad's admin settings."
 msgstr ""
+"Substitua ``zammad.example.com`` pelo FQDN da sua instância do Zammad nas "
+"três URLs. Você também pode copiar a URL de retorno de chamada na seção "
+"**Authentication via OpenID Connect**, nas configurações de administração do "
+"Zammad."
 
 #: ../settings/security/third-party/openid-connect.rst:53
 msgid ""
@@ -26096,19 +26126,14 @@ msgstr ""
 "método de code challenge para o PKCE."
 
 #: ../settings/security/third-party/openid-connect.rst:60
-#, fuzzy
-#| msgid ""
-#| "Enable OpenID Connect and enter your OP's details in the Admin Panel "
-#| "under **Settings > Security > Third Party Applications > Authentication "
-#| "via OpenID Connect**:"
 msgid ""
 "Enable OpenID Connect and enter your OP's details in the admin settings "
 "under *Settings > Security > Third-party Applications > Authentication via "
 "OpenID Connect*:"
 msgstr ""
-"Habilite o OpenID Connect e informe os detalhes do seu OP no painel de "
-"administração em **Settings > Security > Third Party Applications > "
-"Authentication via OpenID Connect**:"
+"Ative o OpenID Connect e informe os detalhes do seu OP nas configurações de "
+"administração, em *Settings > Security > Third-party Applications > "
+"Authentication via OpenID Connect*:"
 
 #: ../settings/security/third-party/openid-connect.rst:None
 msgid "Example configuration of OpenID Connect"
@@ -26240,6 +26265,11 @@ msgid ""
 "IdP, adapt it to your needs. For a description of the fields in Zammad, read "
 "on below."
 msgstr ""
+"Esta seção descreve a configuração de um IdP de forma geral. Guias de "
+"configuração específicos estão disponíveis para :doc:`Keycloak <./saml/saml-"
+"keycloak>` e :doc:`Microsoft SAML <./saml/saml-microsoft>`. Se você estiver "
+"usando outro IdP, adapte conforme sua necessidade. Para uma descrição dos "
+"campos no Zammad, continue lendo abaixo."
 
 #: ../settings/security/third-party/saml.rst:41
 msgid "Configure Your IdP"
@@ -26250,37 +26280,28 @@ msgid "Add Zammad as a Client/App"
 msgstr "Adicionar o Zammad como um Client/App"
 
 #: ../settings/security/third-party/saml.rst:46
-#, fuzzy
-#| msgid ""
-#| "If your IdP doesn't support XML import, you will have to configure Zammad "
-#| "as a new client/app manually using the above XML metadata file for "
-#| "reference."
 msgid ""
 "Import Zammad into your IdP using the XML configuration found at ``https://"
 "zammad.example.com/auth/saml/metadata``. If your IdP doesn't support XML "
 "import, you will have to configure Zammad as a new client/app manually using "
 "the above XML metadata file for reference."
 msgstr ""
-"Se o seu IdP não suportar importação de XML, você precisará configurar o "
-"Zammad manualmente como um novo client/app, usando o arquivo de metadados "
-"XML acima como referência."
+"Importe o Zammad no seu IdP usando a configuração XML encontrada em "
+"``https://zammad.example.com/auth/saml/metadata``. Se o seu IdP não suportar "
+"importação de XML, você precisará configurar o Zammad manualmente como um "
+"novo client/app, usando o arquivo de metadados XML acima como referência."
 
 #: ../settings/security/third-party/saml.rst:51
 msgid "For instance, when you see this tag:"
 msgstr "Por exemplo, quando você vir esta tag:"
 
 #: ../settings/security/third-party/saml.rst:57
-#, fuzzy
-#| msgid ""
-#| "Set the **Assertion Consumer Service Binding URL** (sometimes also listed "
-#| "as **Valid Redirect URIs**) to ``http://your.zammad.domain/auth/saml/"
-#| "callback``."
 msgid ""
 "Set the **Assertion Consumer Service Binding URL** (sometimes also listed as "
 "**Valid Redirect URIs**) to ``http://zammad.example.com/auth/saml/callback``."
 msgstr ""
 "Defina o **Assertion Consumer Service Binding URL** (às vezes também listado "
-"como **Valid Redirect URIs**) como ``http://your.zammad.domain/auth/saml/"
+"como **Valid Redirect URIs**) como ``http://zammad.example.com/auth/saml/"
 "callback``."
 
 #: ../settings/security/third-party/saml.rst:62
@@ -26288,10 +26309,6 @@ msgid "Set Up User Attribute Mapping"
 msgstr "Configurar mapeamento de atributos de usuário"
 
 #: ../settings/security/third-party/saml.rst:64
-#, fuzzy
-#| msgid ""
-#| "Zammad requests the following user attributes (or “properties”) from the "
-#| "IdP:"
 msgid ""
 "Zammad requests the following user attributes (or \"properties\") from the "
 "IdP:"
@@ -26316,12 +26333,6 @@ msgid "Family name (``last_name``)"
 msgstr "Sobrenome (``last_name``)"
 
 #: ../settings/security/third-party/saml.rst:71
-#, fuzzy
-#| msgid ""
-#| "You may need to set up “mappers” (or “mappings”) to tell your IdP how "
-#| "user attributes in SAML correspond to those in Zammad. For a more "
-#| "detailed breakdown, refer to the XML metadata file referenced in the "
-#| "previous section."
 msgid ""
 "You may need to set up \"mappers\" (or \"mappings\") to tell your IdP how "
 "user attributes in SAML correspond to those in Zammad. For a more detailed "
@@ -26337,18 +26348,13 @@ msgid "General Zammad Configuration"
 msgstr "Configuração"
 
 #: ../settings/security/third-party/saml.rst:81
-#, fuzzy
-#| msgid ""
-#| "Enable SAML and enter your IdP's details in the Admin Panel under "
-#| "**Settings > Security > Third Party Applications > Authentication via "
-#| "SAML**:"
 msgid ""
 "Enable SAML and enter your IdP's details in the admin settings under "
 "*Settings > Security > Third-party Applications > Authentication via SAML*:"
 msgstr ""
-"Habilite o SAML e informe os detalhes do seu IdP no painel de administração "
-"em **Settings > Security > Third Party Applications > Authentication via "
-"SAML**:"
+"Ative o SAML e informe os detalhes do seu IdP nas configurações de "
+"administração, em *Settings > Security > Third-party Applications > "
+"Authentication via SAML*:"
 
 #: ../settings/security/third-party/saml.rst:None
 msgid "Example configuration of SAML part 1"
@@ -26415,25 +26421,17 @@ msgstr ""
 "verificar durante a fase de retorno de chamada."
 
 #: ../settings/security/third-party/saml.rst:111
-#, fuzzy
-#| msgid "🔏 **For the IdP certificate / certificate fingerprint:**"
 msgid "**IdP certificate or certificate fingerprint**"
-msgstr "🔏 **Para o certificado do IdP / fingerprint do certificado:**"
+msgstr "**IdP certificate or certificate fingerprint**"
 
 #: ../settings/security/third-party/saml.rst:113
-#, fuzzy
-#| msgid ""
-#| "Provide **only one or the other**—do not provide both! (Between the two, "
-#| "we recommend the signing certificate itself: fingerprints use SHA-1, "
-#| "which `has been broken for a while now <https://www.schneier.com/blog/"
-#| "archives/2005/02/sha1_broken.html>`_.)"
 msgid ""
 "Provide only one or the other, do not provide both! (Between the two, we "
 "recommend the signing certificate itself: fingerprints use SHA-1, which `has "
 "been broken for a while now <https://www.schneier.com/blog/archives/2005/02/"
 "sha1_broken.html>`_.)"
 msgstr ""
-"Forneça **apenas um ou outro** - não forneça os dois! (Entre os dois, "
+"Forneça apenas um ou outro - não forneça os dois! (Entre os dois, "
 "recomendamos o próprio certificado de assinatura: fingerprints usam SHA-1, "
 "que `já está comprometido há um tempo <https://www.schneier.com/blog/"
 "archives/2005/02/sha1_broken.html>`_.)"
@@ -26566,11 +26564,6 @@ msgstr ""
 "para onde redirecionar após a autenticação bem-sucedida."
 
 #: ../settings/security/third-party/saml.rst:168
-#, fuzzy
-#| msgid ""
-#| "After saving your input by clicking on the \"Submit\" button, Zammad "
-#| "verifies the provided keys/certificates (e.g. if they are valid for "
-#| "signing/encrypting and if they aren't expired)."
 msgid ""
 "After saving your input by clicking on ``Submit``, Zammad verifies the "
 "provided keys/certificates (e.g. if they are valid for signing/encrypting "
@@ -26578,9 +26571,11 @@ msgid ""
 "account-linking>` for details on how to link existing Zammad accounts to IdP "
 "accounts."
 msgstr ""
-"Depois de salvar suas informações clicando no botão \"Submit\", o Zammad "
-"verifica as chaves/certificados fornecidos (por exemplo, se são válidos para "
-"assinatura/criptografia e se não estão expirados)."
+"Depois de salvar suas informações clicando em ``Submit``, o Zammad verifica "
+"as chaves/certificados fornecidos (por exemplo, se são válidos para "
+"assinatura/criptografia e se não estão expirados). Veja :ref:`vinculação "
+"automática de conta <automatic-account-linking>` para detalhes sobre como "
+"vincular contas existentes do Zammad a contas do IdP."
 
 #: ../settings/security/third-party/saml.rst:178
 msgid "Automatic account linking doesn't work"
@@ -26598,43 +26593,31 @@ msgid "Logout doesn't work"
 msgstr "O logout não funciona"
 
 #: ../settings/security/third-party/saml.rst:181
-#, fuzzy
-#| msgid ""
-#| "In case your logout process doesn't work, you can try ``https://<your-"
-#| "zammad-url>/auth/saml/slo`` as an alternative. However, no logout is sent "
-#| "to your IdP then."
 msgid ""
 "In case your logout process doesn't work, you can try ``https://"
 "zammad.example.com/auth/saml/slo`` as an alternative. However, no logout is "
 "sent to your IdP then."
 msgstr ""
-"Caso seu processo de logout não funcione, você pode tentar ``https://<your-"
-"zammad-url>/auth/saml/slo`` como alternativa. No entanto, nesse caso, nenhum "
-"logout é enviado ao seu IdP."
+"Caso seu processo de logout não funcione, você pode tentar ``https://"
+"zammad.example.com/auth/saml/slo`` como alternativa. No entanto, nesse caso, "
+"nenhum logout é enviado ao seu IdP."
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:2
 msgid "SAML with Keycloak"
 msgstr "SAML com Keycloak"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:5
-#, fuzzy
-#| msgid "Step 1: Keycloak Configuration"
 msgid "Keycloak Configuration"
-msgstr "Configuração"
+msgstr "Configuração do Keycloak"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:7
-#, fuzzy
-#| msgid ""
-#| "**To add Zammad as a client,** save the XML configuration to disk "
-#| "(``https://your.zammad.domain/auth/saml/metadata``) and use *Clients > "
-#| "Clients list > Import client* in the Keycloak admin panel."
 msgid ""
 "**To add Zammad as a client,** save the XML configuration to disk (``https://"
 "zammad.example.com/auth/saml/metadata``) and use *Clients > Clients list > "
 "Import client* in the Keycloak admin panel."
 msgstr ""
 "**Para adicionar o Zammad como um client,** salve a configuração XML em "
-"disco (``https://your.zammad.domain/auth/saml/metadata``) e use *Clients > "
+"disco (``https://zammad.example.com/auth/saml/metadata``) e use *Clients > "
 "Clients list > Import client* no painel de administração do Keycloak."
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:13
@@ -26694,27 +26677,19 @@ msgstr ""
 "criar uma nova sessão para esse usuário."
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:39
-#, fuzzy
-#| msgid ""
-#| "If your Keycloak users' email addresses are stored on another property "
-#| "(*e.g.* ``username``), adjust accordingly."
 msgid ""
 "If your Keycloak users' email addresses are stored on another property (e.g. "
 "``username``), adjust accordingly."
 msgstr ""
 "Se os endereços de email dos seus usuários do Keycloak estiverem armazenados "
-"em outra propriedade (*por exemplo,* ``username``), ajuste de acordo."
+"em outra propriedade (por exemplo, ``username``), ajuste de acordo."
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:42
-#, fuzzy
-#| msgid ""
-#| "Back in **Settings**, enter the Client ID (``https://your.zammad.domain/"
-#| "auth/saml/metadata``) in the field **Master SAML Processing URL**."
 msgid ""
 "Back in **Settings**, enter the Client ID (``https://zammad.example.com/auth/"
 "saml/metadata``) in the field **Master SAML Processing URL**."
 msgstr ""
-"De volta em **Settings**, informe o Client ID (``https://your.zammad.domain/"
+"De volta em **Settings**, informe o Client ID (``https://zammad.example.com/"
 "auth/saml/metadata``) no campo **Master SAML Processing URL**."
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:46
@@ -26739,28 +26714,24 @@ msgid ""
 "Provide the following information, replacing ``keycloak.example.com`` and "
 "``your-realm`` with your Keycloak hostname and realm:"
 msgstr ""
+"Forneça as seguintes informações, substituindo ``keycloak.example.com`` e "
+"``your-realm`` pelo seu hostname e realm do Keycloak:"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:57
-#, fuzzy
-#| msgid ""
-#| "SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/"
-#| "saml``"
 msgid ""
 "SAML IdP Login URL: ``https://keycloak.example.com/realms/your-realm/"
 "protocol/saml``"
 msgstr ""
-"SAML IdP Login URL: ``https://your.domain/realms/your-realm/protocol/saml``"
+"SAML IdP Login URL: ``https://keycloak.example.com/realms/your-realm/"
+"protocol/saml``"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:58
-#, fuzzy
-#| msgid ""
-#| "SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/"
-#| "saml``"
 msgid ""
 "SAML IdP Logout URL: ``https://keycloak.example.com/realms/your-realm/"
 "protocol/saml``"
 msgstr ""
-"SAML IdP Logout URL: ``https://your.domain/realms/your-realm/protocol/saml``"
+"SAML IdP Logout URL: ``https://keycloak.example.com/realms/your-realm/"
+"protocol/saml``"
 
 #: ../settings/security/third-party/saml/saml-keycloak.rst:60
 #: ../settings/security/third-party/saml/saml-microsoft.rst:61
@@ -26797,10 +26768,8 @@ msgid "SAML with Microsoft 365"
 msgstr "SAML com Microsoft 365"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:5
-#, fuzzy
-#| msgid "1. Register Zammad as an Application in Microsoft Entra ID"
 msgid "Register Zammad as an Application in Microsoft Entra ID"
-msgstr "1. Registrar o Zammad como um aplicativo no Microsoft Entra ID"
+msgstr "Registrar o Zammad como um aplicativo no Microsoft Entra ID"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:7
 msgid "Log in to the Microsoft Entra admin center with administrative rights"
@@ -26808,19 +26777,13 @@ msgstr ""
 "Faça login no Microsoft Entra admin center com direitos administrativos"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:8
-#, fuzzy
-#| msgid ""
-#| "Navigate to \"Identity\" > \"Applications\" > \"Enterprise Applications\""
 msgid "Navigate to *Identity > Applications > Enterprise Applications*"
-msgstr ""
-"Navegue até \"Identity\" > \"Applications\" > \"Enterprise Applications\""
+msgstr "Vá até *Identity > Applications > Enterprise Applications*"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:9
-#, fuzzy
-#| msgid "Click \"New Application\" and select \"Create your own application\""
 msgid "Click ``New Application`` and select ``Create your own application``"
 msgstr ""
-"Clique em \"New Application\" e selecione \"Create your own application\""
+"Clique em ``New Application`` e selecione ``Create your own application``"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:10
 msgid "Enter a name for the application, e.g. \"Zammad SAML Integration\""
@@ -26828,89 +26791,64 @@ msgstr ""
 "Informe um nome para o aplicativo, por exemplo, \"Zammad SAML Integration\""
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:11
-#, fuzzy
-#| msgid ""
-#| "Choose \"Integrate any other application you don't find in the gallery\", "
-#| "then click \"Create\""
 msgid ""
 "Choose \"Integrate any other application you don't find in the gallery\", "
 "then click ``Create``"
 msgstr ""
 "Escolha \"Integrate any other application you don't find in the gallery\" e "
-"clique em \"Create\""
+"clique em ``Create``"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:15
-#, fuzzy
-#| msgid "2. Configure SAML-based Single Sign-On (SSO)"
 msgid "Configure SAML-based Single Sign-On"
-msgstr "2. Configurar o logon único (SSO) baseado em SAML"
+msgstr "Configurar o logon único (SSO) baseado em SAML"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:17
 msgid "After the application is created, go to its overview page"
 msgstr "Depois que o aplicativo for criado, vá até sua página de visão geral"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:18
-#, fuzzy
-#| msgid "Select \"Single sign-on\" from the left-hand menu"
 msgid "Select **Single sign-on** from the left-hand menu"
-msgstr "Selecione \"Single sign-on\" no menu à esquerda"
+msgstr "Selecione **Single sign-on** no menu à esquerda"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:19
 msgid "Choose \"SAML\" as the sign-on method"
 msgstr "Escolha \"SAML\" como método de login"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:20
-#, fuzzy
-#| msgid "In the \"Basic SAML Configuration\" section, click \"Edit\":"
 msgid "In the **Basic SAML Configuration** section, click ``Edit``:"
-msgstr "Na seção \"Basic SAML Configuration\", clique em \"Edit\":"
+msgstr "Na seção **Basic SAML Configuration**, clique em ``Edit``:"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:22
-#, fuzzy
-#| msgid ""
-#| "Identifier (Entity ID): Use Zammad's Entity ID, which can be found at "
-#| "``https://your.zammad.domain/auth/saml/metadata``"
 msgid ""
 "Identifier (Entity ID): Use Zammad's Entity ID, which can be found at "
 "``https://zammad.example.com/auth/saml/metadata``"
 msgstr ""
 "Identifier (Entity ID): use o Entity ID do Zammad, que pode ser encontrado "
-"em ``https://your.zammad.domain/auth/saml/metadata``"
+"em ``https://zammad.example.com/auth/saml/metadata``"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:24
-#, fuzzy
-#| msgid ""
-#| "Reply URL (Assertion Consumer Service URL): Set it to ``https://"
-#| "your.zammad.domain/auth/saml/callback``"
 msgid ""
 "Reply URL (Assertion Consumer Service URL): Set it to ``https://"
 "zammad.example.com/auth/saml/callback``"
 msgstr ""
 "Reply URL (Assertion Consumer Service URL): defina como ``https://"
-"your.zammad.domain/auth/saml/callback``"
+"zammad.example.com/auth/saml/callback``"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:27
 msgid "Save the configuration"
 msgstr "Configuração"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:30
-#, fuzzy
-#| msgid "3. Configure User Attributes and Claims Mapping"
 msgid "Configure User Attributes and Claims Mapping"
-msgstr "3. Configurar o mapeamento de atributos e claims de usuário"
+msgstr "Configurar o mapeamento de atributos e claims de usuário"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:32
-#, fuzzy
-#| msgid ""
-#| "In the \"Attributes & Claims\" section, click \"Edit\". By default, some "
-#| "claims like User Principal Name, Email Address, First Name, and Last Name "
-#| "are already configured."
 msgid ""
 "In the **Attributes & Claims** section, click ``Edit``. By default, some "
 "claims like User Principal Name, Email Address, First Name and Last Name are "
 "already configured."
 msgstr ""
-"Na seção \"Attributes & Claims\", clique em \"Edit\". Por padrão, algumas "
+"Na seção **Attributes & Claims**, clique em ``Edit``. Por padrão, algumas "
 "claims como User Principal Name, Email Address, First Name e Last Name já "
 "estão configuradas."
 
@@ -26923,21 +26861,15 @@ msgstr ""
 "admin center"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:41
-#, fuzzy
-#| msgid "4. Download the SAML Certificate"
 msgid "Download the SAML Certificate"
-msgstr "4. Baixe o certificado SAML"
+msgstr "Baixar o certificado SAML"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:43
-#, fuzzy
-#| msgid ""
-#| "In the \"SAML Signing Certificate\" section, download the \"Certificate "
-#| "(Base64)\":"
 msgid ""
 "In the **SAML Signing Certificate** section, download the **Certificate "
 "(Base64)**:"
 msgstr ""
-"Na seção \"SAML Signing Certificate\", baixe o \"Certificate (Base64)\":"
+"Na seção **SAML Signing Certificate**, baixe o **Certificate (Base64)**:"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:None
 msgid "Screenshot showing the highlighted certificate export already"
@@ -26968,10 +26900,8 @@ msgstr ""
 "IDP single logout target URL: a Logout URL do Microsoft Entra Admin Center."
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:66
-#, fuzzy
-#| msgid "6. Assign Users"
 msgid "Assign Users"
-msgstr "6. Atribuir usuários"
+msgstr "Atribuir usuários"
 
 #: ../settings/security/third-party/saml/saml-microsoft.rst:68
 msgid ""
@@ -27001,16 +26931,12 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: ../settings/security/third-party/twitter.rst:4
-#, fuzzy
-#| msgid ""
-#| "Configure Google as an OAuth provider so users can log in to Zammad with "
-#| "their Google account."
 msgid ""
 "Configure Twitter as an authentication provider so users can log in to "
 "Zammad with their Twitter account."
 msgstr ""
-"Configure o Google como provedor OAuth para que os usuários possam fazer "
-"login no Zammad com a conta do Google."
+"Configure o Twitter como provedor de autenticação para que os usuários "
+"possam fazer login no Zammad com a conta do Twitter."
 
 #: ../settings/security/third-party/twitter.rst:9
 msgid ""
@@ -27021,12 +26947,17 @@ msgid ""
 "already have an X app with API Key and Secret credentials, check the current "
 "X developer documentation before investing time in this provider."
 msgstr ""
+"O X (antigo Twitter) recomenda OAuth 2.0 para novos aplicativos. O Zammad "
+"usa o fluxo legado OAuth 1.0a (Sign in with X) para este provedor de login. "
+"Novos aplicativos do X são criados no `X Developer Console <https://"
+"console.x.com>`_, e o X restringe ou cobra pelo acesso à API dependendo do "
+"seu plano. Se você ainda não tem um aplicativo do X com credenciais de API "
+"Key e Secret, consulte a documentação atual para desenvolvedores do X antes "
+"de investir tempo neste provedor."
 
 #: ../settings/security/third-party/twitter.rst:18
-#, fuzzy
-#| msgid "Register Twitter App"
 msgid "Register a Twitter App"
-msgstr "Registrar uma aplicação de robô do Telegram"
+msgstr "Registrar um aplicativo do Twitter"
 
 #: ../settings/security/third-party/twitter.rst:23
 msgid ""
@@ -27035,18 +26966,23 @@ msgid ""
 "before the console migration) with your X account and create a new app. "
 "Provide a name, a description and your use case."
 msgstr ""
+"Faça login no `X Developer Console <https://console.x.com>`_ (ou no painel "
+"do aplicativo em `developer.x.com <https://developer.x.com>`_ para "
+"aplicativos criados antes da migração do console) com sua conta do X e crie "
+"um novo aplicativo. Forneça um nome, uma descrição e seu caso de uso."
 
 #: ../settings/security/third-party/twitter.rst:31
 msgid ""
 "X redirects users to this URL after the login. Add it to your app's callback "
 "URL allowlist in the developer settings:"
 msgstr ""
+"O X redireciona os usuários para essa URL após o login. Adicione-a à lista "
+"de URLs de retorno de chamada permitidas do seu aplicativo, nas "
+"configurações de desenvolvedor:"
 
 #: ../settings/security/third-party/twitter.rst:34
-#, fuzzy
-#| msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
 msgid "``https://zammad.example.com/auth/twitter/callback``"
-msgstr "Exemplo: ``https://zammad.example.com/#ticket/zoom/123``."
+msgstr "``https://zammad.example.com/auth/twitter/callback``"
 
 #: ../settings/security/third-party/twitter.rst:36
 msgid ""
@@ -27054,12 +26990,17 @@ msgid ""
 "can also copy the callback URL from the **Authentication via Twitter** "
 "section in Zammad's admin settings."
 msgstr ""
+"Substitua ``zammad.example.com`` pelo FQDN da sua instância do Zammad. Você "
+"também pode copiar a URL de retorno de chamada na seção **Authentication via "
+"Twitter**, nas configurações de administração do Zammad."
 
 #: ../settings/security/third-party/twitter.rst:43
 msgid ""
 "In your app's **Keys and tokens** section, generate the **API Key and "
 "Secret** (formerly Consumer Key and Secret) for OAuth 1.0a. Note both down."
 msgstr ""
+"Na seção **Keys and tokens** do seu aplicativo, gere o **API Key and "
+"Secret** (antigo Consumer Key and Secret) para OAuth 1.0a. Anote os dois."
 
 #: ../settings/security/third-party/twitter.rst:46
 msgid ""
@@ -27067,23 +27008,19 @@ msgid ""
 "Direct Message permissions you may find in the app settings are not used by "
 "this authentication provider."
 msgstr ""
+"Nenhuma permissão adicional é necessária para o login. As permissões de "
+"leitura, escrita e Direct Message que você pode encontrar nas configurações "
+"do aplicativo não são usadas por este provedor de autenticação."
 
 #: ../settings/security/third-party/twitter.rst:53
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via Twitter** section. Enter your **Twitter Key** and "
 "**Twitter Secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via Twitter**. Informe seu **Twitter Key** e **Twitter "
+"Secret**, ative a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/twitter.rst:57
 msgid ""
@@ -27091,23 +27028,23 @@ msgid ""
 "log in with their Twitter account. On first login, X asks them to authorize "
 "the access."
 msgstr ""
+"Depois de enviar, o botão do Twitter aparece na tela de login e os usuários "
+"podem fazer login com a conta do Twitter. No primeiro login, o X pede que "
+"eles autorizem o acesso."
 
 #: ../settings/security/third-party/weibo.rst:2
 msgid "Weibo"
-msgstr ""
+msgstr "Weibo"
 
 #: ../settings/security/third-party/weibo.rst:4
-#, fuzzy
-#| msgid ""
-#| "Configure Google as an OAuth provider so users can log in to Zammad with "
-#| "their Google account."
 msgid ""
 "Configure Weibo as an authentication provider so users can log in to Zammad "
 "with their Weibo account. This provider is primarily relevant for instances "
 "serving users in China."
 msgstr ""
-"Configure o Google como provedor OAuth para que os usuários possam fazer "
-"login no Zammad com a conta do Google."
+"Configure o Weibo como provedor de autenticação para que os usuários possam "
+"fazer login no Zammad com a conta do Weibo. Este provedor é relevante "
+"principalmente para instâncias que atendem usuários na China."
 
 #: ../settings/security/third-party/weibo.rst:10
 msgid ""
@@ -27116,12 +27053,15 @@ msgid ""
 "and Weibo's developer portal is available in Chinese only. Registering an "
 "app requires a Weibo developer account and is subject to app review by Weibo."
 msgstr ""
+"O Zammad depende da gem de terceiros ``omniauth-weibo-oauth2`` para este "
+"provedor. Seu último lançamento (0.5.3) é anterior às mudanças recentes na "
+"plataforma do Weibo, e o portal de desenvolvedores do Weibo está disponível "
+"apenas em chinês. Registrar um aplicativo exige uma conta de desenvolvedor "
+"do Weibo e está sujeito a revisão do aplicativo pelo Weibo."
 
 #: ../settings/security/third-party/weibo.rst:17
-#, fuzzy
-#| msgid "Register Facebook App"
 msgid "Register a Weibo App"
-msgstr "Registrar uma aplicação de robô do Telegram"
+msgstr "Registrar um aplicativo do Weibo"
 
 #: ../settings/security/third-party/weibo.rst:19
 msgid ""
@@ -27129,12 +27069,14 @@ msgid ""
 "(Chinese). Create the app, and add your callback URL to the app's authorized "
 "redirect settings:"
 msgstr ""
+"Registre um aplicativo na `plataforma de desenvolvedores do Weibo <https://"
+"open.weibo.com/>`_ (em chinês). Crie o aplicativo e adicione sua URL de "
+"retorno de chamada às configurações de redirecionamento autorizado do "
+"aplicativo:"
 
 #: ../settings/security/third-party/weibo.rst:23
-#, fuzzy
-#| msgid "Example: ``https://zammad.example.com/#ticket/zoom/123``."
 msgid "``https://zammad.example.com/auth/weibo/callback``"
-msgstr "Exemplo: ``https://zammad.example.com/#ticket/zoom/123``."
+msgstr "``https://zammad.example.com/auth/weibo/callback``"
 
 #: ../settings/security/third-party/weibo.rst:25
 msgid ""
@@ -27142,29 +27084,27 @@ msgid ""
 "can also copy the callback URL from the **Authentication via Weibo** section "
 "in Zammad's admin settings."
 msgstr ""
+"Substitua ``zammad.example.com`` pelo FQDN da sua instância do Zammad. Você "
+"também pode copiar a URL de retorno de chamada na seção **Authentication via "
+"Weibo**, nas configurações de administração do Zammad."
 
 #: ../settings/security/third-party/weibo.rst:32
 msgid ""
 "In your app settings, note down the **App Key** and **App Secret** that "
 "Weibo assigns to your app."
 msgstr ""
+"Nas configurações do seu aplicativo, anote o **App Key** e o **App Secret** "
+"que o Weibo atribui ao seu aplicativo."
 
 #: ../settings/security/third-party/weibo.rst:38
-#, fuzzy
-#| msgid ""
-#| "After creating the credentials, go to your Zammad installation and "
-#| "navigate to *Settings > Security > Third-party Applications > "
-#| "Authentication via Google*. Enter your **Client ID** and **Client "
-#| "secret** here, enable the toggle and click on ``Submit``."
 msgid ""
 "Navigate to *Settings > Security > Third-party Applications* and scroll to "
 "the **Authentication via Weibo** section. Enter your **App ID** and **App "
 "Secret**, enable the toggle, and click ``Submit``."
 msgstr ""
-"Depois de criar as credenciais, vá até a sua instalação do Zammad e navegue "
-"até *Settings > Security > Third-party Applications > Authentication via "
-"Google*. Informe aqui seu **Client ID** e **Client secret**, ative a chave e "
-"clique em ``Submit``."
+"Vá até *Settings > Security > Third-party Applications* e role até a seção "
+"**Authentication via Weibo**. Informe seu **App ID** e **App Secret**, ative "
+"a chave e clique em ``Submit``."
 
 #: ../settings/security/third-party/weibo.rst:42
 msgid ""
@@ -27172,6 +27112,9 @@ msgid ""
 "log in with their Weibo account. On first login, Weibo asks them to "
 "authorize the access."
 msgstr ""
+"Depois de enviar, o botão do Weibo aparece na tela de login e os usuários "
+"podem fazer login com a conta do Weibo. No primeiro login, o Weibo pede que "
+"eles autorizem o acesso."
 
 #: ../settings/security/two-factor.rst:11
 msgid "Two-factor Authentication Methods"
