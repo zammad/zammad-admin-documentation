@@ -42,6 +42,13 @@ In Zammad's Telegram configuration, click ``Add Bot``. Enter
 your API token, a welcome message and a goodbye message and choose a group in
 which the tickets should be created.
 
+Zammad creates a ticket with the customer's first message to the bot.
+Subsequent messages are added to the customer's most recent open ticket of
+this bot until it's closed. Sending ``/start`` makes the bot reply with the
+welcome message without creating a ticket. Sending ``/end`` closes the
+customer's most recent open ticket of this bot and sends the goodbye message,
+if configured.
+
 .. image:: /images/channels/telegram/telegram-configuration.png
    :alt: Screenshot shows Zammad's Telegram configuration dialog
    :align: center
