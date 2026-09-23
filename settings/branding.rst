@@ -50,7 +50,7 @@ Pretty Date
    This does not have any effect on how Zammad returns e.g. time values
    via variables.
 
-   Choose in between the following options:
+   Choose one of the following options:
       relative
          This timestamp shows a relative time span until it switches to a date.
          Over time, it will change as follows:
@@ -74,3 +74,23 @@ Pretty Date
          or for German e.g. ``12.03.2022 14:40``.
 
       Default setting: ``relative``.
+
+User Name Format
+   Defines how user names are displayed in dropdowns, overviews, selection
+   fields, tables, and user references throughout the interface. Email
+   recipient lines always use *Firstname Lastname* regardless of this
+   setting.
+
+   Choose one of the following options:
+
+      Firstname Lastname
+         Shows the user's first name followed by the last name.
+
+      Lastname Firstname
+         Shows the user's last name followed by the first name.
+
+      Lastname, Firstname
+         Shows the user's last name, followed by a comma, and then the
+         first name.
+
+      Default setting: ``Firstname Lastname``.

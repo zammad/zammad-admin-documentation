@@ -20,7 +20,9 @@ in the **Selector** section.
 .. include:: /misc/object-conditions/conditioning-depth-hint.include.rst
 
 If a ticket is relevant, Zammad will request the agent to provide the time which
-was needed to process the current ticket step.
+was needed to process the current ticket step. This accounted time is displayed
+in the ticket sidebar at ticket level and in the article meta information
+for an individual article.
 In order for Zammad to bring up the time accounting dialog to an agent,
 the agent has to update the ticket together with an article of any type.
 The adding of an article is mandatory to invoke the time accounting dialog.

@@ -39,6 +39,49 @@ Group selection for ticket creation
    The group you set here defines where tickets should be created if they're
    supplied by Zammad's web form.
 
+Spam Protection
+^^^^^^^^^^^^^^^
+
+The form channel provides two methods to protect against unwanted
+submissions.
+
+Honeypot
+   When enabling the honeypot, the form includes a hidden field that is
+   invisible to regular users (hidden via CSS). Users are therefore not able to
+   fill it out. Bots on the other hand may fill in all they find. If the field
+   is filled out on submit, it indicates bot activity and the submission is
+   rejected. This is a basic bot protection and doesn't open a connection to
+   any third-party providers.
+
+CAPTCHA
+   A CAPTCHA is a challenge to verify that the user is human. Depending on your
+   chosen service provider, the verification may be done in different ways.
+   Common approaches are to display a puzzle or riddle which the user has to
+   solve (e.g. distorted text, image selections) or to measure the behavior of
+   the user (e.g. interaction times), either invisible or showing an indicator
+   of the verification. The following providers are available:
+
+   - ALTCHA
+   - Cloudflare Turnstile
+   - hCaptcha
+   - Friendly Captcha
+   - Google reCAPTCHA
+   - Google reCAPTCHA Enterprise
+
+   The required configuration depends on your chosen provider. For ALTCHA, no
+   configuration is required and the CAPTCHA is not visible to the user. The
+   other providers require a sitekey and a secret. Google allows you to adjust
+   the minimum score and its enterprise version requires an API key.
+
+   .. note::
+      - If the target website of the form script uses Content Security Policy
+        (CSP), you may have to adjust your rules to allow additional resources
+        (connection to your provider, fetch and execute scripts, etc.). Check
+        out the documentation of your CAPTCHA provider and of your used website
+        stack since this highly depends on them.
+      - If a CAPTCHA provider is enabled, the form's API endpoint is also
+        protected and expects additional parameters.
+
 Designer
 --------
 
