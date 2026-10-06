@@ -56,6 +56,12 @@ tickets, check the section above and learn more about
    * - ``admin.ai_assistance_ticket_summary``
      - :doc:`AI > Ticket Summary </ai/summary>`
      -
+   * - ``admin.ai_feedback_logs``
+     - :doc:`AI > Feedback & Logs </ai/feedback-and-logs>`
+     -
+   * - ``admin.ai_knowledge_base``
+     - :doc:`AI > Knowledge Base Assistant </ai/knowledge-base-assistant>`
+     -
    * - ``admin.ai_provider``
      - :doc:`AI > Provider </ai/provider>`
      -
@@ -108,7 +114,7 @@ tickets, check the section above and learn more about
    * - ``admin.checklist``
      - :doc:`Manage > Checklist </manage/checklist>`
      -
-   * - ``admin.core_workflows``
+   * - ``admin.core_workflow``
      - :doc:`System > Core Workflows </system/core-workflows>`
      -
    * - ``admin.data_privacy``
