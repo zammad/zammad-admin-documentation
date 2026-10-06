@@ -544,6 +544,7 @@ msgstr ""
 #: ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
 #: ../settings/security/third-party/microsoft.rst:38
+#: ../system/api.rst:117
 #: ../system/objects.rst:135
 #: ../system/objects.rst:239
 msgid "Name"
@@ -554,6 +555,7 @@ msgid "A human-readable label for the provider. This is what you see in the list
 msgstr ""
 
 #: ../ai/provider.rst:75
+#: ../system/api.rst:133
 msgid "Token"
 msgstr ""
 
@@ -7236,10 +7238,6 @@ msgid "AI"
 msgstr ""
 
 #: ../index.rst:85
-msgid "API (System-Documentation)"
-msgstr ""
-
-#: ../index.rst:85
 #: ../index.rst:85
 #: ../misc/object-conditions/basics.rst:169
 #: ../settings/system/index.rst:2
@@ -9290,7 +9288,7 @@ msgid "``admin.ai_knowledge_base``"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:63
-msgid ":doc:`AI > Knowledge Base Assistant </ai/knowledge-base-assistant>`"
+msgid ":doc:`System > API </system/api>`"
 msgstr ""
 
 #: ../manage/roles/permissions.rst:65
@@ -19719,6 +19717,158 @@ msgstr ""
 
 #: ../settings/ticket.rst:289
 msgid "Finally, you can configure between matching within **All tickets** or **Open tickets** only by setting **Match tickets in following states**. Depending on the current ticket state, a ticket may or not be matched."
+msgstr ""
+
+#: ../system/api.rst:2
+msgid "API"
+msgstr ""
+
+#: ../system/api.rst:4
+msgid "Zammad comes with a REST API that allows external applications and scripts to read and write data of your Zammad instance without using the web interface. The API endpoints themselves are always available, the settings on this tab only decide how clients authenticate. The tab *System > API* has two jobs: it decides which authentication methods Zammad accepts for API requests and it manages the applications that use Zammad as an OAuth provider. The ``admin.api`` permission is required to access the tab."
+msgstr ""
+
+#: ../system/api.rst:12
+msgid "The endpoints and the data they expect are not described on this page. You can find them in the :docs:`REST API documentation </api/intro.html>` of our system documentation."
+msgstr ""
+
+#: ../system/api.rst:17
+msgid "Authentication Methods"
+msgstr ""
+
+#: ../system/api.rst:19
+msgid "Zammad supports three ways for a client to authenticate against the API. The first two are toggles on this page, the third one comes with the OAuth applications further down:"
+msgstr ""
+
+#: ../system/api.rst:26
+msgid "Personal access token"
+msgstr ""
+
+#: ../system/api.rst:24
+msgid "A token a user creates in their own user profile. It can be limited to specific permissions and can have an expiration date. This is the recommended way for API access. Controlled by the **Token Access** toggle."
+msgstr ""
+
+#: ../system/api.rst:31
+msgid "Username/email address and password"
+msgstr ""
+
+#: ../system/api.rst:29
+msgid "The credentials are sent as HTTP basic authentication with every request. Needed for clients that only support basic authentication. Controlled by the **Password Access** toggle."
+msgstr ""
+
+#: ../system/api.rst:36
+msgid "OAuth2 access token"
+msgstr ""
+
+#: ../system/api.rst:34
+msgid "A token an application receives for a user after the user authorized the application. It is managed with the applications further down on this page. Unlike the other two methods it has no toggle and cannot be switched off."
+msgstr ""
+
+#: ../system/api.rst:41
+msgid "Token Access"
+msgstr ""
+
+#: ../system/api.rst:43
+msgid "The **Token Access** toggle enables personal access tokens (HTTP token authentication). It is active by default."
+msgstr ""
+
+#: ../system/api.rst:46
+msgid "Every user with the ``user_preferences.access_token`` role permission (:doc:`see the permission list </manage/roles/permissions>`) can create as many tokens as needed in their own profile (*Avatar > Profile > Token Access*). When creating a token, the user decides which permissions the token gets and can set an expiration date. A token never carries more permissions than the user who created it. Clients send the token as HTTP header:"
+msgstr ""
+
+#: ../system/api.rst:57
+msgid "The example shown next to the toggle uses the **Fully Qualified Domain Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`."
+msgstr ""
+
+#: ../system/api.rst:61
+msgid "If you switch the toggle off, all existing personal access tokens stop working immediately. The **Token Access** entry also disappears from the user profile, which means nobody can create new tokens. OAuth2 access tokens are not affected because Zammad handles them separately."
+msgstr ""
+
+#: ../system/api.rst:68
+msgid "Users have to create their own tokens. See the :user-docs:`user documentation </extras/user-menu-profile-settings.html>` for the user's point of view."
+msgstr ""
+
+#: ../system/api.rst:73
+msgid "Password Access"
+msgstr ""
+
+#: ../system/api.rst:75
+msgid "The **Password Access** toggle allows clients to authenticate with the username/email address and the password of a user (HTTP basic authentication). It is active by default."
+msgstr ""
+
+#: ../system/api.rst:83
+msgid "Basic authentication sends the credentials with every single request and it cannot be combined with two-factor authentication: Zammad rejects such logins. For the calendar subscription URLs (``/ical/...``) Zammad verifies the password only, which is why calendar subscriptions work even for users with two-factor authentication. We recommend switching the toggle off and using :ref:`personal access tokens <system-api-token-access>` instead."
+msgstr ""
+
+#: ../system/api.rst:90
+msgid "Switching the toggle off has two consequences:"
+msgstr ""
+
+#: ../system/api.rst:92
+msgid "All API requests with basic authentication are rejected."
+msgstr ""
+
+#: ../system/api.rst:93
+msgid "The calendar subscription URLs in user profiles stop working, because calendar apps authenticate with basic authentication. Affected users get a warning on the calendar page of their profile and are asked to contact their administrator."
+msgstr ""
+
+#: ../system/api.rst:99
+msgid "Applications"
+msgstr ""
+
+#: ../system/api.rst:101
+msgid "The lower part of the page manages OAuth applications. An OAuth application is any external software that wants to work with your Zammad data on behalf of a user, e.g. a reporting tool or an integration you develop yourself. Zammad acts as OAuth provider for it: the user logs into Zammad once and authorizes the application, which then works with the REST API as that user and with their permissions."
+msgstr ""
+
+#: ../system/api.rst:108
+msgid "This is not a login method for Zammad itself. If you want your users to log into Zammad through an external provider, see :doc:`Third-Party Applications </settings/security/third-party>`."
+msgstr ""
+
+#: ../system/api.rst:112
+msgid "Create a new application with the ``New Application`` button. The dialog asks for the following information:"
+msgstr ""
+
+#: ../system/api.rst:116
+msgid "The name of the application. It is only shown in this list, choose a name that tells your users what they authorize."
+msgstr ""
+
+#: ../system/api.rst:121
+msgid "Callback URL"
+msgstr ""
+
+#: ../system/api.rst:120
+msgid "The URL an application is redirected to after a user authorized it. Enter one URI per line if the application uses several URLs."
+msgstr ""
+
+#: ../system/api.rst:123
+msgid "The list of existing applications shows the name, the callback URL and the number of access tokens that were already created for the application. The **View** and **Token** columns provide direct actions:"
+msgstr ""
+
+#: ../system/api.rst:129
+msgid "View"
+msgstr ""
+
+#: ../system/api.rst:128
+msgid "Shows the **AppID** and the **Secret** of the application. An application needs both values to authenticate at Zammad."
+msgstr ""
+
+#: ../system/api.rst:132
+msgid "Generates an access token for the application which belongs to your own user account. Zammad displays it in a dialog."
+msgstr ""
+
+#: ../system/api.rst:135
+msgid "Creating an application does not grant it any access. A user still has to authorize the application once, or you generate an access token with the **Token** action. The bottom of the page lists the two URLs of your instance that an application uses during the authorization:"
+msgstr ""
+
+#: ../system/api.rst:140
+msgid "``<fqdn>/oauth/authorize``: the application sends the user there to request access for that user (**Requesting the Grant**)."
+msgstr ""
+
+#: ../system/api.rst:142
+msgid "``<fqdn>/oauth/token``: the application requests an access token there afterwards (**Getting an Access Token**)."
+msgstr ""
+
+#: ../system/api.rst:147
+msgid "The :docs:`REST API documentation </api/intro.html>` explains how a client sends an OAuth2 access token with an API call."
 msgstr ""
 
 #: ../system/audit-logs.rst:2
