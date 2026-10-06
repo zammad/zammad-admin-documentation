@@ -66,7 +66,7 @@ tickets, check the section above and learn more about
      - :doc:`AI > Provider </ai/provider>`
      -
    * - ``admin.api``
-     - :docs:`System > API </api/intro.html>`
+     - :doc:`System > API </system/api>`
      -
    * - ``admin.audit_log``
      - :doc:`System > Audit Logs </system/audit-logs>`
