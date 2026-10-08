@@ -10,6 +10,11 @@ Fully Qualified Domain Name
 
    This value is used by :doc:`/misc/variables` and in notifications.
 
+   Together with the HTTP type, this value is the trusted origin for the
+   real-time channel of the web interface, so it has to match the URL users
+   open Zammad with. IP addresses and short host names stop live updates from
+   working.
+
 HTTP type
    The HTTP type tells if your installation is accessible with transport layer
    security (``https``) or not (``http``).
