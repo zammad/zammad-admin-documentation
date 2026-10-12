@@ -32,6 +32,28 @@ reorder, delete them) and set the entire template to active/inactive.
    :align: center
    :scale: 70%
 
+Add Checklists Automatically
+----------------------------
+
+Templates can also be added without any agent interaction. Triggers, macros
+and :doc:`scheduler jobs </manage/scheduler>` offer the action **Add checklist
+template** in the *Checklists* group of their action selector. Select the
+template you want to add in the **Checklist Template** field. Scheduler jobs
+only offer the action if their object is set to **Ticket**.
+
+If the ticket already has a checklist, Zammad appends the template items to it
+instead of creating a second checklist. The existing checklist keeps its name
+and its items. A checklist holds a maximum of 100 items; if the template does
+not fit into this limit, the action is skipped and nothing is added.
+
+Triggers and scheduler jobs additionally offer the condition attribute
+**Has checklist** to select tickets which have a checklist with at least one
+item. An empty checklist counts as a ticket without checklist.
+
+.. note:: Zammad skips the action if the checklist feature is disabled, if the
+   selected template was deleted or set to inactive, and if the same rule
+   deletes the ticket.
+
 Remarks
 -------
 
@@ -45,6 +67,7 @@ Remarks
 - Customers have no access to the checklists at all and can't see them.
 - An agent can always overwrite and adjust the checklist, even a deletion is
   possible. This also applies to checklists which got added from a template.
-- The checklist feature is currently a standalone feature. This means you can't
-  access the items or state of the checkboxes from other places in Zammad like
-  triggers or workflows.
+- Checklist items and their checkbox state are not available as ticket
+  attributes. Triggers and scheduler jobs can check whether a ticket has a
+  checklist and add a checklist template (see **Add Checklists Automatically**
+  above).

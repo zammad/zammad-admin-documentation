@@ -118,7 +118,8 @@ Execute changes on objects
    based scheduler).
 
    You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler
-   jobs.
+   jobs. Ticket objects additionally offer to add a checklist from a
+   :doc:`checklist template </manage/checklist>`.
 
    .. warning::
 
