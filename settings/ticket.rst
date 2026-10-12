@@ -242,6 +242,11 @@ Default Notifications
    In case you want to go back to the initial state of ticket notifications,
    just use the ``Reset to default`` button.
 
+Push notifications on the mobile devices of your agents mirror these internal
+notifications; there is no notification matrix column for them. Agents turn
+them on for each device in the mobile view, see the
+:user-docs:`mobile view documentation </extras/mobile-view.html>`.
+
 .. _duplicate_detection:
 
 Duplicate Detection
