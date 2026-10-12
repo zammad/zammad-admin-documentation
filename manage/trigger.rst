@@ -154,6 +154,10 @@ Add internal or public notes to the ticket
 :doc:`Run an AI agent </ai/ai-agents>`
    Trigger an AI agent to run using triggers.
 
+:doc:`Add a checklist from a template </manage/checklist>`
+   Add the items of a checklist template to the ticket. If the ticket already
+   has a checklist, the items are appended to it.
+
 Localization of Execution Changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

@@ -143,6 +143,20 @@ editing a condition. Find them in the following table.
      - All configured and
 
        active groups.
+   * - Has checklist
+     - Ticket
+     - Checks if the ticket
+
+       has a checklist with
+
+       at least one item.
+
+       Only available in triggers
+
+       and scheduler.
+     - `-`
+     - - yes
+       - no
    * - Organization
      - Ticket,
 

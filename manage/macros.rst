@@ -46,6 +46,7 @@ Actions
    - Add new notes to a ticket
    - Send a notification
    - Run an :doc:`AI agent </ai/ai-agents>`
+   - Add a checklist from a :doc:`checklist template </manage/checklist>`
 
    There are **no** actions for sending a reply to the customer.
 
