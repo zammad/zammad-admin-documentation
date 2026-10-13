@@ -77,4 +77,3 @@ This section will hold any other integration that can't be grouped up (yet).
 
    i-doit
    elasticsearch
-   translation-services
