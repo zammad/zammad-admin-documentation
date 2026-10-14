@@ -6570,7 +6570,7 @@ msgid "Screenshot shows ticket detail view with tab behavior menu"
 msgstr ""
 
 #: ../channels/whatsapp/index.rst:2
-#: ../settings/system/network.rst:21
+#: ../settings/system/network.rst:27
 msgid "WhatsApp"
 msgstr ""
 
@@ -19146,6 +19146,10 @@ msgid "This page covers the proxy configuration in Zammad via GUI. As an alterna
 msgstr ""
 
 #: ../settings/system/network.rst:9
+msgid "Web push notifications of the mobile view are also sent to the push service of the browser and use this proxy configuration, including the no-proxy list. The addresses to allow are listed in the :docs:`web push section of the system documentation </appendix/proxy.html#web-push-notifications>`."
+msgstr ""
+
+#: ../settings/system/network.rst:15
 msgid "Proxy configuration comparison"
 msgstr ""
 
@@ -19190,67 +19194,67 @@ msgstr ""
 msgid "Exceptions (see note below)"
 msgstr ""
 
-#: ../settings/system/network.rst:18
+#: ../settings/system/network.rst:24
 msgid "The following features/services are not affected by the GUI proxy configuration:"
 msgstr ""
 
-#: ../settings/system/network.rst:22
+#: ../settings/system/network.rst:28
 msgid "Zendesk Migrator"
 msgstr ""
 
-#: ../settings/system/network.rst:23
+#: ../settings/system/network.rst:29
 msgid "Elasticsearch plugin installation (ES < 8)"
 msgstr ""
 
-#: ../settings/system/network.rst:24
+#: ../settings/system/network.rst:30
 msgid "Zammad update process"
 msgstr ""
 
-#: ../settings/system/network.rst:26
+#: ../settings/system/network.rst:32
 msgid "If you use one of these features/services and want to route their traffic through a proxy, you need to provide the proxy configuration via environment variables."
 msgstr ""
 
-#: ../settings/system/network.rst:30
+#: ../settings/system/network.rst:36
 msgid "Find the individual settings you can configure below. Be aware that the proxy settings can only be saved after successfully testing proxy connection. To do so, click the ``Test Connection`` button after providing the required information. Zammad then shows you if the test was successful or not. If the test was successful, make sure to click the ``Submit`` button to save the configuration."
 msgstr ""
 
-#: ../settings/system/network.rst:41
+#: ../settings/system/network.rst:47
 msgid "Proxy Address"
 msgstr ""
 
-#: ../settings/system/network.rst:38
+#: ../settings/system/network.rst:44
 msgid "Allows you to provide a proxy server if needed. This is relevant for network communication by Zammad."
 msgstr ""
 
-#: ../settings/system/network.rst:41
+#: ../settings/system/network.rst:47
 msgid "It **does not** affect the update process or Elasticsearch."
 msgstr ""
 
-#: ../settings/system/network.rst:44
+#: ../settings/system/network.rst:50
 msgid "Username for proxy connection"
 msgstr ""
 
-#: ../settings/system/network.rst:44
+#: ../settings/system/network.rst:50
 msgid "If your proxy server requires authentication, provide the username here."
 msgstr ""
 
-#: ../settings/system/network.rst:48
+#: ../settings/system/network.rst:54
 msgid "Password for proxy connection"
 msgstr ""
 
-#: ../settings/system/network.rst:47
+#: ../settings/system/network.rst:53
 msgid "If your proxy server requires authentication, provide the password of the user here."
 msgstr ""
 
-#: ../settings/system/network.rst:56
+#: ../settings/system/network.rst:62
 msgid "No proxy for the following hosts"
 msgstr ""
 
-#: ../settings/system/network.rst:51
+#: ../settings/system/network.rst:57
 msgid "Exception list for hosts you can't or don't want to reach via proxy server. It supports wildcards (e.g. ``*.example.com``). Connections to loopback addresses are always excepted when configuring the proxy via UI."
 msgstr ""
 
-#: ../settings/system/network.rst:55
+#: ../settings/system/network.rst:61
 msgid "In case you are using the default Docker Compose stack behind a proxy, make sure to add the Elasticsearch container to the exception list. The default container name is ``zammad-elasticsearch``."
 msgstr ""
 
@@ -19734,55 +19738,59 @@ msgstr ""
 msgid "In case you want to go back to the initial state of ticket notifications, just use the ``Reset to default`` button."
 msgstr ""
 
-#: ../settings/ticket.rst:248
+#: ../settings/ticket.rst:245
+msgid "Push notifications on the mobile devices of your agents follow the same notification settings and can't be configured separately. Zammad does not send push notifications to a mobile device while the agent is working in the desktop view. Agents turn them on for each device in the mobile view, see the :user-docs:`mobile view documentation </extras/mobile-view.html>`."
+msgstr ""
+
+#: ../settings/ticket.rst:254
 msgid "Duplicate Detection"
 msgstr ""
 
-#: ../settings/ticket.rst:290
+#: ../settings/ticket.rst:296
 msgid "Detect Duplicate Ticket Creation"
 msgstr ""
 
-#: ../settings/ticket.rst:251
+#: ../settings/ticket.rst:257
 msgid "This setting turns on the duplicate ticket detection mechanism during ticket creation. If similar tickets are found in the system, a suitable warning will be shown to the user trying to create a ticket."
 msgstr ""
 
-#: ../settings/ticket.rst:258
+#: ../settings/ticket.rst:264
 msgid "A Sample Duplicate Ticket Warning"
 msgstr ""
 
-#: ../settings/ticket.rst:260
+#: ../settings/ticket.rst:266
 msgid "You can choose which ticket attributes will be matched by selecting them in **Attributes to compare** field. Only if the ticket attribute value provided by the user in the ticket create form is *equal* with the attribute in an existing ticket, the warning will be shown."
 msgstr ""
 
-#: ../settings/ticket.rst:265
+#: ../settings/ticket.rst:271
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr ""
 
-#: ../settings/ticket.rst:267
+#: ../settings/ticket.rst:273
 msgid "You can limit the detection only to certain user roles. By default, only agents will see the warning."
 msgstr ""
 
-#: ../settings/ticket.rst:270
+#: ../settings/ticket.rst:276
 msgid "If you don't want to show the matched tickets as part of the warning, you can set **Show matching ticket(s) in the warning** setting to *no*."
 msgstr ""
 
-#: ../settings/ticket.rst:273
+#: ../settings/ticket.rst:279
 msgid "By default, **Permission level for looking up ticket** is set to *User*, which  means user permissions will be honored during search. The user will see the warning only if tickets they have access to are matched. Alternatively, you can set this setting to *System*, in which case the search will happen within *all* tickets in the system, regardless of user permissions."
 msgstr ""
 
-#: ../settings/ticket.rst:279
+#: ../settings/ticket.rst:285
 msgid "**🦺 Safety first!**"
 msgstr ""
 
-#: ../settings/ticket.rst:281
+#: ../settings/ticket.rst:287
 msgid "Even if the permission level is set to *System*, the user will not be shown the tickets they don't have access to in the warning, even if they match."
 msgstr ""
 
-#: ../settings/ticket.rst:285
+#: ../settings/ticket.rst:291
 msgid "However, just the confirmation about the existence of the tickets in the system may be considered an unwanted information disclosure. Use this option carefully!"
 msgstr ""
 
-#: ../settings/ticket.rst:289
+#: ../settings/ticket.rst:295
 msgid "Finally, you can configure between matching within **All tickets** or **Open tickets** only by setting **Match tickets in following states**. Depending on the current ticket state, a ticket may or not be matched."
 msgstr ""
 
