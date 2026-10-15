@@ -461,7 +461,7 @@ msgstr ""
 
 #: ../ai/ai-agents.rst:197 ../channels/email/filters.rst:103
 #: ../channels/form.rst:262 ../manage/groups/group-permissions.rst:75
-#: ../manage/macros.rst:74 ../manage/trigger.rst:180
+#: ../manage/macros.rst:75 ../manage/trigger.rst:184
 msgid "Examples"
 msgstr "Esempi"
 
@@ -896,7 +896,7 @@ msgstr ""
 "eliminazione."
 
 #: ../ai/provider.rst:66 ../channels/email/accounts/account-setup.rst:122
-#: ../misc/object-conditions/basics.rst:206 ../system/objects.rst:158
+#: ../misc/object-conditions/basics.rst:220 ../system/objects.rst:158
 msgid "Type"
 msgstr "Tipo"
 
@@ -1274,7 +1274,7 @@ msgid ""
 "stays unassigned."
 msgstr ""
 
-#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:35
+#: ../ai/provider.rst:216 ../manage/macros.rst:57 ../manage/templates.rst:35
 msgid "Actions"
 msgstr "Azioni"
 
@@ -1952,7 +1952,7 @@ msgstr ""
 "clonare uno strumento di testo esistente e modificarlo."
 
 #: ../ai/writing-assistant.rst:144 ../manage/groups/index.rst:2
-#: ../manage/macros.rst:68
+#: ../manage/macros.rst:69
 msgid "Groups"
 msgstr "Gruppi"
 
@@ -1985,11 +1985,11 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:121 ../manage/macros.rst:65
+#: ../manage/groups/settings.rst:121 ../manage/macros.rst:66
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:238 ../manage/roles/permissions.rst:308
-#: ../manage/scheduler.rst:161 ../manage/webhook/add.rst:128
+#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:128
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -2015,9 +2015,9 @@ msgstr ""
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
 #: ../channels/form.rst:36 ../manage/groups/settings.rst:142
-#: ../manage/macros.rst:71 ../manage/organizations/index.rst:135
+#: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
-#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:164
+#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
 #: ../manage/templates.rst:40 ../manage/webhook/add.rst:134
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
@@ -5375,7 +5375,7 @@ msgstr ""
 msgid "Signatures"
 msgstr "Firme"
 
-#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:450
+#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:464
 #: ../system/monitoring.rst:9
 msgid "General"
 msgstr "Generale"
@@ -9200,7 +9200,7 @@ msgstr ""
 "Lo screenshot mostra la vista dettagliata del ticket con il menu del "
 "comportamento delle schede"
 
-#: ../channels/whatsapp/index.rst:2 ../settings/system/network.rst:21
+#: ../channels/whatsapp/index.rst:2 ../settings/system/network.rst:27
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
@@ -10364,7 +10364,7 @@ msgstr "Canali"
 msgid "AI"
 msgstr "IA"
 
-#: ../index.rst:85 ../misc/object-conditions/basics.rst:169
+#: ../index.rst:85 ../misc/object-conditions/basics.rst:183
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr "Sistema"
@@ -10649,14 +10649,52 @@ msgstr ""
 "checklist."
 
 #: ../manage/checklist.rst:36
+#, fuzzy
+#| msgid "Add Checklist to Tickets"
+msgid "Add Checklists Automatically"
+msgstr "Aggiungi Checklist ai Ticket"
+
+#: ../manage/checklist.rst:38
+msgid ""
+"Templates can also be added without any agent interaction. Triggers, macros "
+"and :doc:`scheduler jobs </manage/scheduler>` offer the action **Add "
+"checklist template** in the *Checklists* group of their action selector. "
+"Select the template you want to add in the **Checklist Template** field. "
+"Scheduler jobs only offer the action if their object is set to **Ticket**."
+msgstr ""
+
+#: ../manage/checklist.rst:44
+msgid ""
+"If the ticket already has a checklist, Zammad appends the template items to "
+"it instead of creating a second checklist. The existing checklist keeps its "
+"name and its items. A checklist holds a maximum of 100 items; if the "
+"template does not fit into this limit, the action is skipped and nothing is "
+"added."
+msgstr ""
+
+#: ../manage/checklist.rst:49
+msgid ""
+"Triggers and scheduler jobs additionally offer the condition attribute **Has "
+"checklist** to select tickets which have a checklist with at least one item. "
+"An empty checklist counts as a ticket without checklist."
+msgstr ""
+
+#: ../manage/checklist.rst:53
+msgid ""
+"Zammad skips the action if the checklist feature is disabled, if the "
+"selected template was deleted or set to inactive, and if the same rule "
+"deletes the ticket."
+msgstr ""
+
+#: ../manage/checklist.rst:58
 msgid "Remarks"
 msgstr "Note"
 
-#: ../manage/checklist.rst:38
+#: ../manage/checklist.rst:60
 msgid "It is only possible to add one checklist per ticket."
 msgstr "È possibile aggiungere una sola checklist per ticket."
 
-#: ../manage/checklist.rst:39
+#: ../manage/checklist.rst:61
 msgid ""
 "There is no specific agent permission for the checklist feature. You can "
 "turn it on or off and optionally provide checklist templates."
@@ -10665,14 +10703,14 @@ msgstr ""
 "checklist. Puoi attivarla o disattivarla e, opzionalmente, fornire modelli "
 "di checklist."
 
-#: ../manage/checklist.rst:41
+#: ../manage/checklist.rst:63
 msgid ""
 "If the agent has access to the ticket, they will also have access to its "
 "checklist."
 msgstr ""
 "Se l'agente ha accesso al ticket, avrà anche accesso alla sua checklist."
 
-#: ../manage/checklist.rst:43
+#: ../manage/checklist.rst:65
 msgid ""
 "If an agent only has reading permissions for this ticket, the checklist will "
 "be displayed in read-only mode."
@@ -10680,12 +10718,12 @@ msgstr ""
 "Se un agente ha solo permessi di lettura per questo ticket, la checklist "
 "verrà visualizzata in modalità di sola lettura."
 
-#: ../manage/checklist.rst:45
+#: ../manage/checklist.rst:67
 msgid "Customers have no access to the checklists at all and can't see them."
 msgstr ""
 "I clienti non hanno alcun accesso alle checklist e non possono vederle."
 
-#: ../manage/checklist.rst:46
+#: ../manage/checklist.rst:68
 msgid ""
 "An agent can always overwrite and adjust the checklist, even a deletion is "
 "possible. This also applies to checklists which got added from a template."
@@ -10694,15 +10732,13 @@ msgstr ""
 "possibile eliminarla. Questo si applica anche alle checklist aggiunte a "
 "partire da un modello."
 
-#: ../manage/checklist.rst:48
+#: ../manage/checklist.rst:70
 msgid ""
-"The checklist feature is currently a standalone feature. This means you "
-"can't access the items or state of the checkboxes from other places in "
-"Zammad like triggers or workflows."
+"Checklist items and their checkbox state are not available as ticket "
+"attributes. Triggers and scheduler jobs can check whether a ticket has a "
+"checklist and add a checklist template (see **Add Checklists Automatically** "
+"above)."
 msgstr ""
-"La funzionalità checklist è attualmente una funzionalità autonoma. Ciò "
-"significa che non puoi accedere agli elementi o allo stato delle caselle di "
-"controllo da altri luoghi in Zammad come trigger o workflow."
 
 #: ../manage/groups/group-permissions.rst:2 ../manage/roles/index.rst:63
 #: ../manage/users/index.rst:162
@@ -11134,14 +11170,15 @@ msgstr ""
 #: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
-#: ../misc/object-conditions/basics.rst:514
-#: ../misc/object-conditions/basics.rst:517
-#: ../misc/object-conditions/basics.rst:548
-#: ../misc/object-conditions/basics.rst:554
-#: ../misc/object-conditions/basics.rst:591
-#: ../misc/object-conditions/basics.rst:594
-#: ../misc/object-conditions/basics.rst:623
-#: ../misc/object-conditions/basics.rst:626
+#: ../misc/object-conditions/basics.rst:158
+#: ../misc/object-conditions/basics.rst:528
+#: ../misc/object-conditions/basics.rst:531
+#: ../misc/object-conditions/basics.rst:562
+#: ../misc/object-conditions/basics.rst:568
+#: ../misc/object-conditions/basics.rst:605
+#: ../misc/object-conditions/basics.rst:608
+#: ../misc/object-conditions/basics.rst:637
+#: ../misc/object-conditions/basics.rst:640
 #: ../system/core-workflows/condition-operators.rst:184
 #: ../system/core-workflows/condition-operators.rst:187
 #: ../system/core-workflows/condition-operators.rst:190
@@ -11224,14 +11261,15 @@ msgstr ""
 
 #: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
-#: ../misc/object-conditions/basics.rst:520
-#: ../misc/object-conditions/basics.rst:523
-#: ../misc/object-conditions/basics.rst:551
-#: ../misc/object-conditions/basics.rst:557
-#: ../misc/object-conditions/basics.rst:585
-#: ../misc/object-conditions/basics.rst:588
-#: ../misc/object-conditions/basics.rst:617
-#: ../misc/object-conditions/basics.rst:620
+#: ../misc/object-conditions/basics.rst:159
+#: ../misc/object-conditions/basics.rst:534
+#: ../misc/object-conditions/basics.rst:537
+#: ../misc/object-conditions/basics.rst:565
+#: ../misc/object-conditions/basics.rst:571
+#: ../misc/object-conditions/basics.rst:599
+#: ../misc/object-conditions/basics.rst:602
+#: ../misc/object-conditions/basics.rst:631
+#: ../misc/object-conditions/basics.rst:634
 #: ../system/core-workflows/condition-operators.rst:199
 #: ../system/core-workflows/condition-operators.rst:230
 #: ../system/core-workflows/condition-operators.rst:239
@@ -12067,11 +12105,17 @@ msgstr "Inviare una notifica"
 msgid "Run an :doc:`AI agent </ai/ai-agents>`"
 msgstr "Eseguire un :doc:`agente IA </ai/ai-agents>`"
 
-#: ../manage/macros.rst:50
+#: ../manage/macros.rst:49
+#, fuzzy
+#| msgid ":doc:`Manage > Checklist </manage/checklist>`"
+msgid "Add a checklist from a :doc:`checklist template </manage/checklist>`"
+msgstr ":doc:`Gestisci > Checklist </manage/checklist>`"
+
+#: ../manage/macros.rst:51
 msgid "There are **no** actions for sending a reply to the customer."
 msgstr "Non esistono azioni per **inviare una risposta al cliente**."
 
-#: ../manage/macros.rst:52
+#: ../manage/macros.rst:53
 msgid ""
 "Unlike triggers, the scheduler, and text modules, macro actions do not "
 "support the use of :doc:`variables </misc/variables>`."
@@ -12079,7 +12123,7 @@ msgstr ""
 "A differenza di trigger, scheduler e moduli di testo, le azioni delle macro "
 "non supportano l'uso delle :doc:`variabili </misc/variables>`."
 
-#: ../manage/macros.rst:55
+#: ../manage/macros.rst:56
 msgid ""
 "If the ticket is missing a required attribute and the macro doesn't set it, "
 "then no actions will be applied."
@@ -12087,11 +12131,11 @@ msgstr ""
 "Se al ticket manca un attributo richiesto e la macro non lo imposta, allora "
 "nessuna azione verrà applicata."
 
-#: ../manage/macros.rst:61
+#: ../manage/macros.rst:62
 msgid "Once completed"
 msgstr "Una volta completato"
 
-#: ../manage/macros.rst:59
+#: ../manage/macros.rst:60
 msgid ""
 "After running this macro, should Zammad remain on the current tab, close it "
 "or automatically switch to the next ticket? This does not apply when "
@@ -12101,7 +12145,7 @@ msgstr ""
 "corrente, chiuderla o passare automaticamente al ticket successivo? Questo "
 "non si applica quando si eseguono macro in blocco."
 
-#: ../manage/macros.rst:64
+#: ../manage/macros.rst:65
 msgid ""
 "What should other Zammad admins know about this macro? Only visible for "
 "admins."
@@ -12109,22 +12153,22 @@ msgstr ""
 "Cosa dovrebbero sapere gli altri amministratori Zammad su questa macro? "
 "Visibile solo agli amministratori."
 
-#: ../manage/macros.rst:68
+#: ../manage/macros.rst:69
 msgid ""
 "Which :doc:`groups </manage/groups/index>` are allowed to use this macro?"
 msgstr ""
 "Quali :doc:`gruppi </manage/groups/index>` sono autorizzati a usare questa "
 "macro?"
 
-#: ../manage/macros.rst:71
+#: ../manage/macros.rst:72
 msgid "Choose **inactive** to disable this macro without deleting it."
 msgstr "Scegli **inattivo** per disabilitare questa macro senza eliminarla."
 
-#: ../manage/macros.rst:77
+#: ../manage/macros.rst:78
 msgid "Mark Ticket as Spam"
 msgstr "Contrassegna ticket come spam"
 
-#: ../manage/macros.rst:79
+#: ../manage/macros.rst:80
 msgid ""
 "If you deal with a lot of spam, you can set up a macro that applies the "
 "following changes to a ticket:"
@@ -12132,15 +12176,15 @@ msgstr ""
 "Se hai a che fare con molto spam, puoi configurare una macro che applica le "
 "seguenti modifiche a un ticket:"
 
-#: ../manage/macros.rst:82
+#: ../manage/macros.rst:83
 msgid "**State** closed"
 msgstr "**Stato** chiuso"
 
-#: ../manage/macros.rst:83
+#: ../manage/macros.rst:84
 msgid "**Tags** *add* spam"
 msgstr "**Tag** *aggiungi* spam"
 
-#: ../manage/macros.rst:84 ../manage/macros.rst:105
+#: ../manage/macros.rst:85 ../manage/macros.rst:106
 msgid "**Owner** *current user*"
 msgstr "**Proprietario** *utente corrente*"
 
@@ -12148,7 +12192,7 @@ msgstr "**Proprietario** *utente corrente*"
 msgid "Screenshot showing spam macro configuration"
 msgstr "Screenshot che mostra la configurazione della macro spam"
 
-#: ../manage/macros.rst:91
+#: ../manage/macros.rst:92
 msgid ""
 "Run this macro in a :doc:`/manage/scheduler` to periodically clean up "
 "unwanted tickets."
@@ -12156,11 +12200,11 @@ msgstr ""
 "Esegui questa macro in uno :doc:`/manage/scheduler` per pulire "
 "periodicamente i ticket indesiderati."
 
-#: ../manage/macros.rst:95
+#: ../manage/macros.rst:96
 msgid "Postpone Ticket for a Fixed Time"
 msgstr "Rinvia ticket per un tempo fisso"
 
-#: ../manage/macros.rst:97
+#: ../manage/macros.rst:98
 msgid ""
 "Setting a ticket's state to *pending reminder* normally requires two steps: "
 "first select the state, then select a date. You can bundle this into a macro "
@@ -12173,15 +12217,15 @@ msgstr ""
 "promemoria per lo stesso lasso di tempo fisso (ad esempio, sette giorni "
 "dopo):"
 
-#: ../manage/macros.rst:102
+#: ../manage/macros.rst:103
 msgid "**Note** Postponing ticket for 7 days. (internal visibility)"
 msgstr "**Nota** Rimandare il ticket per 7 giorni. (visibilità interna)"
 
-#: ../manage/macros.rst:103
+#: ../manage/macros.rst:104
 msgid "**State** pending reminder"
 msgstr "**Stato** in attesa di promemoria"
 
-#: ../manage/macros.rst:104
+#: ../manage/macros.rst:105
 msgid "**Pending Till** *relative* 7 Day(s)"
 msgstr "**In attesa fino a** *relativo* 7 giorno/i"
 
@@ -13646,7 +13690,7 @@ msgstr ""
 "raggruppati per casi d'uso comuni, puoi mescolarli come preferisci. "
 "Assicurati solo di mantenere una panoramica dei tuoi permessi."
 
-#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:170
+#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:184
 msgid "Agent"
 msgstr "Agente"
 
@@ -14885,7 +14929,7 @@ msgstr ""
 "sulla condizione attualmente selezionata. Non rappresentano necessariamente "
 "gli oggetti per l'esecuzione all'ora definita."
 
-#: ../manage/scheduler.rst:134
+#: ../manage/scheduler.rst:135
 msgid "Execute changes on objects"
 msgstr "Esegui modifiche sugli oggetti"
 
@@ -14902,14 +14946,19 @@ msgstr ""
 "per eseguire azioni sui ticket da uno scheduler basato sul contesto utente)."
 
 #: ../manage/scheduler.rst:120
+#, fuzzy
+#| msgid ""
+#| "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using "
+#| "scheduler jobs."
 msgid ""
 "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler "
-"jobs."
+"jobs. Ticket objects additionally offer to add a checklist from "
+"a :doc:`checklist template </manage/checklist>`."
 msgstr ""
 "Puoi persino attivare l'esecuzione di un :doc:`agente AI </ai/ai-agents>` "
 "utilizzando i job dello scheduler."
 
-#: ../manage/scheduler.rst:125
+#: ../manage/scheduler.rst:126
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
@@ -14920,7 +14969,7 @@ msgstr ""
 "essere usati con cautela! Se eseguiti, gli oggetti vengono eliminati e non è "
 "possibile alcun ripristino."
 
-#: ../manage/scheduler.rst:129
+#: ../manage/scheduler.rst:130
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
@@ -14928,7 +14977,7 @@ msgstr ""
 "**Elimina immediatamente** eliminerà il ticket al momento dell'esecuzione "
 "del job *senza alcun avviso* nell'interfaccia utente."
 
-#: ../manage/scheduler.rst:132
+#: ../manage/scheduler.rst:133
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
@@ -14939,11 +14988,11 @@ msgstr ""
 "dell'esecuzione del job. Ciò significa che sarà visibile nel :doc:`pannello "
 "della privacy dei dati </system/data-privacy>` di Zammad."
 
-#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:139
 msgid "Disable notifications"
 msgstr "Disabilita notifiche"
 
-#: ../manage/scheduler.rst:137
+#: ../manage/scheduler.rst:138
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
@@ -14952,11 +15001,11 @@ msgstr ""
 "notifiche. Puoi sovrascrivere questo comportamento impostando questa opzione "
 "su *no*."
 
-#: ../manage/scheduler.rst:147 ../settings/branding.rst:29
+#: ../manage/scheduler.rst:148 ../settings/branding.rst:29
 msgid "Locale"
 msgstr "Localizzazione"
 
-#: ../manage/scheduler.rst:141 ../manage/scheduler.rst:150
+#: ../manage/scheduler.rst:142 ../manage/scheduler.rst:151
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
@@ -14964,7 +15013,7 @@ msgstr ""
 "Questo può essere attivato con l'interruttore \"Localizzazione delle "
 "modifiche di esecuzione\"."
 
-#: ../manage/scheduler.rst:144
+#: ../manage/scheduler.rst:145
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
@@ -14974,11 +15023,11 @@ msgstr ""
 "tradotto utilizzando la funzione ``t``. Per maggiori informazioni, consulta "
 "la spiegazione nella sezione :ref:`variabili <variable_localization>`."
 
-#: ../manage/scheduler.rst:156 ../settings/branding.rst:45
+#: ../manage/scheduler.rst:157 ../settings/branding.rst:45
 msgid "Timezone"
 msgstr "Fuso Orario"
 
-#: ../manage/scheduler.rst:153
+#: ../manage/scheduler.rst:154
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -14990,7 +15039,7 @@ msgstr ""
 "informazioni, consulta la spiegazione nella sezione :ref:`variabili "
 "<variable_localization>`."
 
-#: ../manage/scheduler.rst:159
+#: ../manage/scheduler.rst:160
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
@@ -15000,7 +15049,7 @@ msgstr ""
 "visibile solo ad altri amministratori quando modificano lo scheduler. "
 "**Non** è un modo per aggiungere note agli oggetti."
 
-#: ../manage/scheduler.rst:164
+#: ../manage/scheduler.rst:165
 msgid "With this setting you can enable/disable the scheduler."
 msgstr "Con questa impostazione puoi abilitare/disabilitare lo scheduler."
 
@@ -15386,7 +15435,7 @@ msgstr ""
 "i ticket che sono escalati o in procinto di escalare entro i prossimi 10 "
 "minuti: ``Ticket Escalati``."
 
-#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:190
+#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:204
 msgid "Tags"
 msgstr "Etichette"
 
@@ -16151,7 +16200,7 @@ msgstr "Numero"
 #: ../manage/time-accounting.rst:181 ../manage/time-accounting.rst:179
 #: ../misc/object-conditions/basics.rst:37
 #: ../misc/object-conditions/basics.rst:89
-#: ../misc/object-conditions/basics.rst:171
+#: ../misc/object-conditions/basics.rst:185
 msgid "Customer"
 msgstr "Cliente"
 
@@ -16181,10 +16230,11 @@ msgstr "Creato il"
 #: ../misc/object-conditions/basics.rst:90
 #: ../misc/object-conditions/basics.rst:126
 #: ../misc/object-conditions/basics.rst:139
-#: ../misc/object-conditions/basics.rst:157
-#: ../misc/object-conditions/basics.rst:173
-#: ../misc/object-conditions/basics.rst:181
-#: ../misc/object-conditions/basics.rst:191 ../misc/variables/ticket.rst:2
+#: ../misc/object-conditions/basics.rst:147
+#: ../misc/object-conditions/basics.rst:171
+#: ../misc/object-conditions/basics.rst:187
+#: ../misc/object-conditions/basics.rst:195
+#: ../misc/object-conditions/basics.rst:205 ../misc/variables/ticket.rst:2
 #: ../settings/ticket.rst:2 ../system/core-workflows/learn-by-example.rst:40
 #: ../system/core-workflows/learn-by-example.rst:95
 #: ../system/core-workflows/learn-by-example.rst:143
@@ -16225,7 +16275,7 @@ msgstr ""
 
 #: ../manage/time-accounting.rst:188 ../misc/object-conditions/basics.rst:28
 #: ../misc/object-conditions/basics.rst:115
-#: ../misc/object-conditions/basics.rst:146 ../settings/branding.rst:16
+#: ../misc/object-conditions/basics.rst:160 ../settings/branding.rst:16
 msgid "Organization"
 msgstr "Organizzazione"
 
@@ -16595,11 +16645,23 @@ msgstr ":doc:`Esegui un agente AI </ai/ai-agents>`"
 msgid "Trigger an AI agent to run using triggers."
 msgstr "Attiva un agente AI da eseguire tramite trigger."
 
+#: ../manage/trigger.rst:159
+#, fuzzy
+#| msgid ":doc:`Manage > Checklist </manage/checklist>`"
+msgid ":doc:`Add a checklist from a template </manage/checklist>`"
+msgstr ":doc:`Gestisci > Checklist </manage/checklist>`"
+
 #: ../manage/trigger.rst:158
+msgid ""
+"Add the items of a checklist template to the ticket. If the ticket already "
+"has a checklist, the items are appended to it."
+msgstr ""
+
+#: ../manage/trigger.rst:162
 msgid "Localization of Execution Changes"
 msgstr "Localizzazione delle Modifiche di Esecuzione"
 
-#: ../manage/trigger.rst:160
+#: ../manage/trigger.rst:164
 msgid ""
 "The system locale and timezone predefines a default format of date and "
 "timestamp replacement variables. These settings are customizable for "
@@ -16615,7 +16677,7 @@ msgstr ""
 "Screenshot che mostra la sezione di localizzazione della finestra di dialogo "
 "del trigger"
 
-#: ../manage/trigger.rst:168
+#: ../manage/trigger.rst:172
 msgid ""
 "Best practice is to create single separated localized triggers for each "
 "language/timezone and execute them based on user or organization attributes."
@@ -16624,7 +16686,7 @@ msgstr ""
 "lingua/fuso orario ed eseguirli in base agli attributi dell'utente o "
 "dell'organizzazione."
 
-#: ../manage/trigger.rst:171
+#: ../manage/trigger.rst:175
 msgid ""
 "The format and timezone of date and timestamp replacement variables is "
 "customizable by the use of the ``dt()`` method. Further on the ``t()`` "
@@ -16636,7 +16698,7 @@ msgstr ""
 "metodo ``t()`` può essere utilizzato per tradurre le variabili di "
 "sostituzione di stringa in base alla lingua locale selezionata."
 
-#: ../manage/trigger.rst:176
+#: ../manage/trigger.rst:180
 msgid ""
 "For usage of the ``t()`` and ``dt()`` method, please follow the instructions "
 "in the :ref:`variables section <variable_localization>`."
@@ -16644,7 +16706,7 @@ msgstr ""
 "Per l'utilizzo dei metodi ``t()`` e ``dt()``, segui le istruzioni nella "
 "sezione :ref:`variabili <variable_localization>`."
 
-#: ../manage/trigger.rst:182
+#: ../manage/trigger.rst:186
 msgid ""
 "To get you up and running quickly, here are some examples of the kinds of "
 "automation tasks you can set up with triggers."
@@ -16652,29 +16714,29 @@ msgstr ""
 "Per metterti rapidamente in funzione, ecco alcuni esempi dei tipi di "
 "attività di automazione che puoi configurare con i trigger."
 
-#: ../manage/trigger.rst:189
+#: ../manage/trigger.rst:193
 msgid "Group assignment based on customer"
 msgstr "Assegnazione del gruppo in base al cliente"
 
-#: ../manage/trigger.rst:186
+#: ../manage/trigger.rst:190
 msgid ""
 "Any time Jacob Smith creates a ticket, assign it to the \"Sales\" group."
 msgstr ""
 "Ogni volta che Jacob Smith crea un ticket, assegnarlo al gruppo \"Vendite\"."
 
-#: ../manage/trigger.rst:188
+#: ../manage/trigger.rst:192
 msgid "Condition: **Customer** *is* *specific user* Jacob Smith"
 msgstr "Condizione: **Cliente** *è* *utente specifico* Jacob Smith"
 
-#: ../manage/trigger.rst:189
+#: ../manage/trigger.rst:193
 msgid "Action: **Group** Sales"
 msgstr "Azione: **Gruppo** Vendite"
 
-#: ../manage/trigger.rst:201
+#: ../manage/trigger.rst:205
 msgid "Owner assignment based on subject"
 msgstr "Assegnazione del proprietario in base all'oggetto"
 
-#: ../manage/trigger.rst:192
+#: ../manage/trigger.rst:196
 msgid ""
 "Emma Taylor is responsible for all sales internally, so if a new ticket has "
 "the word \"order\" in the subject, assign it to her and make sure it's set "
@@ -16684,31 +16746,31 @@ msgstr ""
 "ticket contiene la parola \"ordine\" nell'oggetto, assegnarlo a lei e "
 "assicurati che sia impostato con alta priorità."
 
-#: ../manage/trigger.rst:196
+#: ../manage/trigger.rst:200
 msgid "Condition: **Title** *contains* order"
 msgstr "Condizione: **Titolo** *contiene* ordine"
 
-#: ../manage/trigger.rst:197
+#: ../manage/trigger.rst:201
 msgid "Action:"
 msgstr "Azione:"
 
-#: ../manage/trigger.rst:199
+#: ../manage/trigger.rst:203
 msgid "**Group** Sales"
 msgstr "**Gruppo** Vendite"
 
-#: ../manage/trigger.rst:200
+#: ../manage/trigger.rst:204
 msgid "**Owner** *specific user* Emma Taylor"
 msgstr "**Proprietario** *utente specifico* Emma Taylor"
 
-#: ../manage/trigger.rst:201
+#: ../manage/trigger.rst:205
 msgid "**Priority** 3 high"
 msgstr "**Priorità** 3 alta"
 
-#: ../manage/trigger.rst:221
+#: ../manage/trigger.rst:225
 msgid "Auto-reply based on channel and language"
 msgstr "Risposta automatica in base al canale e alla lingua"
 
-#: ../manage/trigger.rst:204
+#: ../manage/trigger.rst:208
 msgid ""
 "Send an auto-reply email to any customer who creates a ticket via web, if "
 "the detected language is English."
@@ -16716,40 +16778,40 @@ msgstr ""
 "Invia un'email di risposta automatica a qualsiasi cliente che crea un ticket "
 "via web, se la lingua rilevata è l'inglese."
 
-#: ../manage/trigger.rst:207
+#: ../manage/trigger.rst:211
 msgid "Condition:"
 msgstr "Condizione:"
 
-#: ../manage/trigger.rst:209
+#: ../manage/trigger.rst:213
 msgid "**Action** *is* created"
 msgstr "**Azione** *è* creato"
 
-#: ../manage/trigger.rst:210
+#: ../manage/trigger.rst:214
 msgid "**State** *is not* closed"
 msgstr "**Stato** *non è* chiuso"
 
-#: ../manage/trigger.rst:211
+#: ../manage/trigger.rst:215
 msgid "**Type** *is* web"
 msgstr "**Tipo** *è* web"
 
-#: ../manage/trigger.rst:212
+#: ../manage/trigger.rst:216
 msgid "**Sender** *is* customer"
 msgstr "**Mittente** *è* cliente"
 
-#: ../manage/trigger.rst:213
+#: ../manage/trigger.rst:217
 msgid "**Detected Language** *is* English"
 msgstr "**Lingua rilevata** *è* inglese"
 
-#: ../manage/trigger.rst:215
+#: ../manage/trigger.rst:219
 msgid "Action: **Email** (public, recipient: customer; with subject and body)"
 msgstr ""
 "Azione: **Email** (pubblica, destinatario: cliente; con oggetto e corpo)"
 
-#: ../manage/trigger.rst:217
+#: ../manage/trigger.rst:221
 msgid "**Not all automated messages come from triggers!**"
 msgstr "**Non tutti i messaggi automatici provengono dai trigger!**"
 
-#: ../manage/trigger.rst:219
+#: ../manage/trigger.rst:223
 msgid ""
 "For instance, when *agents* receive a system email about a newly created "
 "ticket, that's built into the system itself. If you need to customize those, "
@@ -17944,11 +18006,20 @@ msgstr ""
 "Segui i passaggi seguenti per aggiungere una checklist da un modello a tutti "
 "i ticket dopo che sono stati creati."
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:8
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:7
+msgid ""
+"Checklists can also be added without a webhook: triggers, macros and "
+"scheduler jobs offer the action **Add checklist template** "
+"(see :doc:`Checklist </manage/checklist>`). Only continue below if you need "
+"the checklist to be added through Zammad's REST API, e.g. from an external "
+"system."
+msgstr ""
+
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:14
 msgid "Create a Token"
 msgstr "Creare un Token"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:10
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:16
 #, fuzzy
 #| msgid ""
 #| "Create a personal access token in the account you want to use to create "
@@ -17978,15 +18049,15 @@ msgstr ""
 "permesso ``ticket.agent`` e che l'utente sia in grado di modificare i ticket "
 "nei gruppi a cui vuoi aggiungere la checklist ai ticket."
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:20
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:26
 msgid "Add Webhook"
 msgstr "Aggiungi Webhook"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:22
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:28
 msgid "Create a new webhook with the following configuration:"
 msgstr "Crea un nuovo webhook con la seguente configurazione:"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:24
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:30
 msgid ""
 "Endpoint: ``https://{your.domain.tld}/api/v1/checklists`` (replace the value "
 "in {} with the domain of your Zammad)"
@@ -17994,19 +18065,19 @@ msgstr ""
 "Endpoint: ``https://{tuo.dominio.tld}/api/v1/checklists`` (sostituisci il "
 "valore in {} con il dominio del tuo Zammad)"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:26
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:32
 msgid "Request method: ``POST``"
 msgstr "Metodo di richiesta: ``POST``"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:27
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:33
 msgid "Authentication: **Bearer Token**"
 msgstr "Autenticazione: **Bearer Token**"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:28
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:34
 msgid "Bearer token: paste the token you created before"
 msgstr "Bearer token: incolla il token che hai creato in precedenza"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:29
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:35
 msgid ""
 "Custom payload: activate it and add the following snippet. Make sure to "
 "replace the value ``1`` for ``template_id`` with the ID of your checklist "
@@ -18016,11 +18087,11 @@ msgstr ""
 "di sostituire il valore ``1`` per ``template_id`` con l'ID del tuo modello "
 "di checklist."
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:41
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:47
 msgid "Create Trigger"
 msgstr "Creare trigger"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:43
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:49
 msgid ""
 "Configure a trigger which invokes the webhook after ticket creation. In case "
 "you additionally want to narrow down affected tickets, just enhance the "
@@ -18037,15 +18108,15 @@ msgstr ""
 "trigger per l'invio di notifiche. Per questo scenario, la condizione "
 "potrebbe essere così:"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:50
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:56
 msgid "Activated by: Action"
 msgstr "Attivato da: Azione"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:51
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:57
 msgid "Action execution: Selective"
 msgstr "Esecuzione azione: Selettiva"
 
-#: ../manage/webhook/examples/add-checklist-to-ticket.rst:52
+#: ../manage/webhook/examples/add-checklist-to-ticket.rst:58
 msgid "Conditions for affected objects: **Action** > *is* > created"
 msgstr "Condizioni per gli oggetti interessati: **Azione** > *è* > creato"
 
@@ -19533,7 +19604,6 @@ msgid "Webhook Logs and Troubleshooting"
 msgstr "Log dei webhook e risoluzione dei problemi"
 
 #: ../manage/webhook/log.rst:5
-#: ../system/integrations/translation-services.rst:48
 msgid "Logs"
 msgstr "Log"
 
@@ -20159,10 +20229,10 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:36
 #: ../misc/object-conditions/basics.rst:101
-#: ../misc/object-conditions/basics.rst:165
-#: ../misc/object-conditions/basics.rst:201
-#: ../misc/object-conditions/basics.rst:207
+#: ../misc/object-conditions/basics.rst:179
 #: ../misc/object-conditions/basics.rst:215
+#: ../misc/object-conditions/basics.rst:221
+#: ../misc/object-conditions/basics.rst:229
 msgid "Article"
 msgstr "Articolo"
 
@@ -20236,13 +20306,13 @@ msgstr "Disponibile solo nei trigger."
 #: ../misc/object-conditions/basics.rst:119
 #: ../misc/object-conditions/basics.rst:134
 #: ../misc/object-conditions/basics.rst:141
-#: ../misc/object-conditions/basics.rst:151
-#: ../misc/object-conditions/basics.rst:159
-#: ../misc/object-conditions/basics.rst:167
-#: ../misc/object-conditions/basics.rst:175
-#: ../misc/object-conditions/basics.rst:185
-#: ../misc/object-conditions/basics.rst:209
-#: ../misc/object-conditions/basics.rst:219
+#: ../misc/object-conditions/basics.rst:165
+#: ../misc/object-conditions/basics.rst:173
+#: ../misc/object-conditions/basics.rst:181
+#: ../misc/object-conditions/basics.rst:189
+#: ../misc/object-conditions/basics.rst:199
+#: ../misc/object-conditions/basics.rst:223
+#: ../misc/object-conditions/basics.rst:233
 #: ../system/core-workflows/condition-operators.rst:64
 msgid "is"
 msgstr "è"
@@ -20253,13 +20323,13 @@ msgstr "è"
 #: ../misc/object-conditions/basics.rst:120
 #: ../misc/object-conditions/basics.rst:135
 #: ../misc/object-conditions/basics.rst:142
-#: ../misc/object-conditions/basics.rst:152
-#: ../misc/object-conditions/basics.rst:160
-#: ../misc/object-conditions/basics.rst:168
-#: ../misc/object-conditions/basics.rst:176
-#: ../misc/object-conditions/basics.rst:186
-#: ../misc/object-conditions/basics.rst:210
-#: ../misc/object-conditions/basics.rst:220
+#: ../misc/object-conditions/basics.rst:166
+#: ../misc/object-conditions/basics.rst:174
+#: ../misc/object-conditions/basics.rst:182
+#: ../misc/object-conditions/basics.rst:190
+#: ../misc/object-conditions/basics.rst:200
+#: ../misc/object-conditions/basics.rst:224
+#: ../misc/object-conditions/basics.rst:234
 #: ../system/core-workflows/condition-operators.rst:86
 msgid "is not"
 msgstr "non è"
@@ -20317,20 +20387,20 @@ msgid "has changed"
 msgstr "è cambiato"
 
 #: ../misc/object-conditions/basics.rst:95
-#: ../misc/object-conditions/basics.rst:161
-#: ../misc/object-conditions/basics.rst:187
+#: ../misc/object-conditions/basics.rst:175
+#: ../misc/object-conditions/basics.rst:201
 msgid "current user"
 msgstr "utente corrente"
 
 #: ../misc/object-conditions/basics.rst:96
-#: ../misc/object-conditions/basics.rst:162
-#: ../misc/object-conditions/basics.rst:188
+#: ../misc/object-conditions/basics.rst:176
+#: ../misc/object-conditions/basics.rst:202
 msgid "specific user"
 msgstr "utente specifico"
 
 #: ../misc/object-conditions/basics.rst:97
-#: ../misc/object-conditions/basics.rst:155
-#: ../misc/object-conditions/basics.rst:204
+#: ../misc/object-conditions/basics.rst:169
+#: ../misc/object-conditions/basics.rst:218
 #: ../system/core-workflows/condition-operators.rst:100
 msgid "not set"
 msgstr "non impostato"
@@ -20414,85 +20484,122 @@ msgstr "Tutti i gruppi configurati e"
 msgid "active groups."
 msgstr "attivi."
 
-#: ../misc/object-conditions/basics.rst:147
+#: ../misc/object-conditions/basics.rst:146
+#, fuzzy
+#| msgid "Checklist"
+msgid "Has checklist"
+msgstr "Checklist"
+
+#: ../misc/object-conditions/basics.rst:148
+#, fuzzy
+#| msgid "changes in the ticket."
+msgid "Checks if the ticket"
+msgstr "nel ticket."
+
+#: ../misc/object-conditions/basics.rst:150
+msgid "has a checklist with"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:152
+msgid "at least one item."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:154
+#, fuzzy
+#| msgid "Only available in triggers."
+msgid "Only available in triggers"
+msgstr "Disponibile solo nei trigger."
+
+#: ../misc/object-conditions/basics.rst:156
+#, fuzzy
+#| msgid "Scheduler"
+msgid "and scheduler."
+msgstr "Scheduler"
+
+#: ../misc/object-conditions/basics.rst:157
+#: ../misc/object-conditions/basics.rst:219
+msgid "`-`"
+msgstr "`-`"
+
+#: ../misc/object-conditions/basics.rst:161
 msgid "Ticket,"
 msgstr "Ticket,"
 
-#: ../misc/object-conditions/basics.rst:149
+#: ../misc/object-conditions/basics.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:150
 msgid "customer"
 msgstr "cliente"
 
-#: ../misc/object-conditions/basics.rst:150
+#: ../misc/object-conditions/basics.rst:164
 msgid "Checks affected organization."
 msgstr "Controlla l'organizzazione interessata."
 
-#: ../misc/object-conditions/basics.rst:153
+#: ../misc/object-conditions/basics.rst:167
 msgid "current user organization"
 msgstr "organizzazione utente corrente"
 
-#: ../misc/object-conditions/basics.rst:154
+#: ../misc/object-conditions/basics.rst:168
 msgid "specific organization"
 msgstr "organizzazione specifica"
 
-#: ../misc/object-conditions/basics.rst:156
+#: ../misc/object-conditions/basics.rst:170
 msgid "Owner"
 msgstr "Proprietario"
 
-#: ../misc/object-conditions/basics.rst:158
+#: ../misc/object-conditions/basics.rst:172
 msgid "Checks the owner."
 msgstr "Controlla il proprietario."
 
-#: ../misc/object-conditions/basics.rst:163
-#: ../misc/object-conditions/basics.rst:189
+#: ../misc/object-conditions/basics.rst:177
+#: ../misc/object-conditions/basics.rst:203
 msgid "not set (not defined)"
 msgstr "non impostato (non definito)"
 
-#: ../misc/object-conditions/basics.rst:164
+#: ../misc/object-conditions/basics.rst:178
 msgid "Sender"
 msgstr "Mittente"
 
-#: ../misc/object-conditions/basics.rst:166
+#: ../misc/object-conditions/basics.rst:180
 msgid "Checks the type of sender."
 msgstr "Controlla il tipo di mittente."
 
-#: ../misc/object-conditions/basics.rst:172
+#: ../misc/object-conditions/basics.rst:186
 msgid "State"
 msgstr "Stato"
 
-#: ../misc/object-conditions/basics.rst:174
+#: ../misc/object-conditions/basics.rst:188
 msgid "Checks ticket state."
 msgstr "Controlla lo stato del ticket."
 
-#: ../misc/object-conditions/basics.rst:177
+#: ../misc/object-conditions/basics.rst:191
 msgid "All configured"
 msgstr "Tutti i"
 
-#: ../misc/object-conditions/basics.rst:179
+#: ../misc/object-conditions/basics.rst:193
 msgid "ticket states."
 msgstr "stati dei ticket."
 
-#: ../misc/object-conditions/basics.rst:180
+#: ../misc/object-conditions/basics.rst:194
 msgid "Subscribe"
 msgstr "Iscritto"
 
-#: ../misc/object-conditions/basics.rst:182
+#: ../misc/object-conditions/basics.rst:196
 msgid "Checks if user is a"
 msgstr "Controlla se l'utente è un"
 
-#: ../misc/object-conditions/basics.rst:184
+#: ../misc/object-conditions/basics.rst:198
 msgid "ticket subscriber"
 msgstr "sottoscrittore del ticket"
 
-#: ../misc/object-conditions/basics.rst:192
+#: ../misc/object-conditions/basics.rst:206
 msgid "Checks tags of a ticket."
 msgstr "Controlla i tag di un ticket."
 
-#: ../misc/object-conditions/basics.rst:193
-#: ../misc/object-conditions/basics.rst:516
-#: ../misc/object-conditions/basics.rst:550
-#: ../misc/object-conditions/basics.rst:587
-#: ../misc/object-conditions/basics.rst:619
+#: ../misc/object-conditions/basics.rst:207
+#: ../misc/object-conditions/basics.rst:530
+#: ../misc/object-conditions/basics.rst:564
+#: ../misc/object-conditions/basics.rst:601
+#: ../misc/object-conditions/basics.rst:633
 #: ../system/core-workflows/condition-operators.rst:38
 #: ../system/core-workflows/condition-operators.rst:150
 #: ../system/core-workflows/condition-operators.rst:189
@@ -20502,11 +20609,11 @@ msgstr "Controlla i tag di un ticket."
 msgid "contains all"
 msgstr "contiene tutti"
 
-#: ../misc/object-conditions/basics.rst:194
-#: ../misc/object-conditions/basics.rst:513
-#: ../misc/object-conditions/basics.rst:547
-#: ../misc/object-conditions/basics.rst:584
-#: ../misc/object-conditions/basics.rst:616
+#: ../misc/object-conditions/basics.rst:208
+#: ../misc/object-conditions/basics.rst:527
+#: ../misc/object-conditions/basics.rst:561
+#: ../misc/object-conditions/basics.rst:598
+#: ../misc/object-conditions/basics.rst:630
 #: ../system/core-workflows/condition-operators.rst:49
 #: ../system/core-workflows/condition-operators.rst:147
 #: ../system/core-workflows/condition-operators.rst:186
@@ -20516,11 +20623,11 @@ msgstr "contiene tutti"
 msgid "contains one"
 msgstr "contiene uno"
 
-#: ../misc/object-conditions/basics.rst:195
-#: ../misc/object-conditions/basics.rst:519
-#: ../misc/object-conditions/basics.rst:553
-#: ../misc/object-conditions/basics.rst:590
-#: ../misc/object-conditions/basics.rst:622
+#: ../misc/object-conditions/basics.rst:209
+#: ../misc/object-conditions/basics.rst:533
+#: ../misc/object-conditions/basics.rst:567
+#: ../misc/object-conditions/basics.rst:604
+#: ../misc/object-conditions/basics.rst:636
 #: ../system/core-workflows/condition-operators.rst:41
 #: ../system/core-workflows/condition-operators.rst:160
 #: ../system/core-workflows/condition-operators.rst:198
@@ -20530,11 +20637,11 @@ msgstr "contiene uno"
 msgid "contains all not"
 msgstr "non contiene tutti"
 
-#: ../misc/object-conditions/basics.rst:196
-#: ../misc/object-conditions/basics.rst:522
-#: ../misc/object-conditions/basics.rst:556
-#: ../misc/object-conditions/basics.rst:593
-#: ../misc/object-conditions/basics.rst:625
+#: ../misc/object-conditions/basics.rst:210
+#: ../misc/object-conditions/basics.rst:536
+#: ../misc/object-conditions/basics.rst:570
+#: ../misc/object-conditions/basics.rst:607
+#: ../misc/object-conditions/basics.rst:639
 #: ../system/core-workflows/condition-operators.rst:52
 #: ../system/core-workflows/condition-operators.rst:157
 #: ../system/core-workflows/condition-operators.rst:195
@@ -20544,68 +20651,64 @@ msgstr "non contiene tutti"
 msgid "contains one not"
 msgstr "non contiene uno"
 
-#: ../misc/object-conditions/basics.rst:197
+#: ../misc/object-conditions/basics.rst:211
 msgid "Text input field"
 msgstr "Campo di input testo"
 
-#: ../misc/object-conditions/basics.rst:198
+#: ../misc/object-conditions/basics.rst:212
 msgid "Time"
 msgstr "Tempo"
 
-#: ../misc/object-conditions/basics.rst:200
+#: ../misc/object-conditions/basics.rst:214
 msgid "Accounting"
 msgstr "Contabilità"
 
-#: ../misc/object-conditions/basics.rst:202
+#: ../misc/object-conditions/basics.rst:216
 msgid "Checks if time is accounted."
 msgstr "Controlla se il tempo è contabilizzato."
 
-#: ../misc/object-conditions/basics.rst:203
+#: ../misc/object-conditions/basics.rst:217
 #: ../system/core-workflows/condition-operators.rst:88
 msgid "is set"
 msgstr "è impostato"
 
-#: ../misc/object-conditions/basics.rst:205
-msgid "`-`"
-msgstr "`-`"
-
-#: ../misc/object-conditions/basics.rst:208
+#: ../misc/object-conditions/basics.rst:222
 msgid "Checks the type of the article."
 msgstr "Controlla il tipo dell'articolo."
 
-#: ../misc/object-conditions/basics.rst:211
+#: ../misc/object-conditions/basics.rst:225
 msgid "All available"
 msgstr "Tutti i"
 
-#: ../misc/object-conditions/basics.rst:213
+#: ../misc/object-conditions/basics.rst:227
 msgid "article types."
 msgstr "tipi di articolo disponibili."
 
-#: ../misc/object-conditions/basics.rst:214
+#: ../misc/object-conditions/basics.rst:228
 msgid "Visibility"
 msgstr "Visibilità"
 
-#: ../misc/object-conditions/basics.rst:216
+#: ../misc/object-conditions/basics.rst:230
 msgid "Checks the visibility"
 msgstr "Controlla la visibilità"
 
-#: ../misc/object-conditions/basics.rst:218
+#: ../misc/object-conditions/basics.rst:232
 msgid "of the article."
 msgstr "dell'articolo."
 
-#: ../misc/object-conditions/basics.rst:221
+#: ../misc/object-conditions/basics.rst:235
 msgid "internal"
 msgstr "interno"
 
-#: ../misc/object-conditions/basics.rst:222
+#: ../misc/object-conditions/basics.rst:236
 msgid "public"
 msgstr "pubblico"
 
-#: ../misc/object-conditions/basics.rst:225 ../system/objects/types.rst:116
+#: ../misc/object-conditions/basics.rst:239 ../system/objects/types.rst:116
 msgid "Text Field"
 msgstr "Campo di testo"
 
-#: ../misc/object-conditions/basics.rst:227
+#: ../misc/object-conditions/basics.rst:241
 msgid ""
 "Checks if any field of type text contains a specific string. The configured "
 "\"Type\" of input fields has no impact on the available options."
@@ -20614,16 +20717,16 @@ msgstr ""
 "\"Tipo\" configurato dei campi di input non ha impatto sulle opzioni "
 "disponibili."
 
-#: ../misc/object-conditions/basics.rst:230
-#: ../misc/object-conditions/basics.rst:254
-#: ../misc/object-conditions/basics.rst:265
-#: ../misc/object-conditions/basics.rst:276
-#: ../misc/object-conditions/basics.rst:293
-#: ../misc/object-conditions/basics.rst:334
-#: ../misc/object-conditions/basics.rst:381
-#: ../misc/object-conditions/basics.rst:392
-#: ../misc/object-conditions/basics.rst:421
-#: ../misc/object-conditions/basics.rst:432
+#: ../misc/object-conditions/basics.rst:244
+#: ../misc/object-conditions/basics.rst:268
+#: ../misc/object-conditions/basics.rst:279
+#: ../misc/object-conditions/basics.rst:290
+#: ../misc/object-conditions/basics.rst:307
+#: ../misc/object-conditions/basics.rst:348
+#: ../misc/object-conditions/basics.rst:395
+#: ../misc/object-conditions/basics.rst:406
+#: ../misc/object-conditions/basics.rst:435
+#: ../misc/object-conditions/basics.rst:446
 msgid "Available operators for matching:"
 msgstr "Operatori disponibili per il confronto:"
 
@@ -20691,81 +20794,81 @@ msgstr "**non corrisponde a regex**:"
 msgid "Evaluates if text does not match provided regular expression."
 msgstr "Valuta se il testo non corrisponde all'espressione regolare fornita."
 
-#: ../misc/object-conditions/basics.rst:250 ../system/objects/types.rst:102
+#: ../misc/object-conditions/basics.rst:264 ../system/objects/types.rst:102
 msgid "Textarea Field"
 msgstr "Campo textarea"
 
-#: ../misc/object-conditions/basics.rst:252
+#: ../misc/object-conditions/basics.rst:266
 msgid "Checks if any field of type textarea contains a specific string."
 msgstr "Controlla se un campo di tipo textarea contiene una stringa specifica."
 
-#: ../misc/object-conditions/basics.rst:256
+#: ../misc/object-conditions/basics.rst:270
 msgid "**contains**"
 msgstr "**contiene**"
 
-#: ../misc/object-conditions/basics.rst:257
+#: ../misc/object-conditions/basics.rst:271
 msgid "**contains not**"
 msgstr "**non contiene**"
 
-#: ../misc/object-conditions/basics.rst:258
-#: ../misc/object-conditions/basics.rst:269
-#: ../misc/object-conditions/basics.rst:284
-#: ../misc/object-conditions/basics.rst:385
-#: ../misc/object-conditions/basics.rst:425
+#: ../misc/object-conditions/basics.rst:272
+#: ../misc/object-conditions/basics.rst:283
+#: ../misc/object-conditions/basics.rst:298
+#: ../misc/object-conditions/basics.rst:399
+#: ../misc/object-conditions/basics.rst:439
 msgid "**has changed**"
 msgstr "**è cambiato**"
 
-#: ../misc/object-conditions/basics.rst:261 ../system/objects/types.rst:14
+#: ../misc/object-conditions/basics.rst:275 ../system/objects/types.rst:14
 msgid "Boolean Field"
 msgstr "Campo booleano"
 
-#: ../misc/object-conditions/basics.rst:263
+#: ../misc/object-conditions/basics.rst:277
 msgid "Checks if any field of type boolean is true."
 msgstr "Controlla se un campo di tipo booleano è vero."
 
-#: ../misc/object-conditions/basics.rst:267
-#: ../misc/object-conditions/basics.rst:278
-#: ../misc/object-conditions/basics.rst:383
-#: ../misc/object-conditions/basics.rst:423
+#: ../misc/object-conditions/basics.rst:281
+#: ../misc/object-conditions/basics.rst:292
+#: ../misc/object-conditions/basics.rst:397
+#: ../misc/object-conditions/basics.rst:437
 msgid "**is**"
 msgstr "**è**"
 
-#: ../misc/object-conditions/basics.rst:268
-#: ../misc/object-conditions/basics.rst:279
-#: ../misc/object-conditions/basics.rst:384
-#: ../misc/object-conditions/basics.rst:424
+#: ../misc/object-conditions/basics.rst:282
+#: ../misc/object-conditions/basics.rst:293
+#: ../misc/object-conditions/basics.rst:398
+#: ../misc/object-conditions/basics.rst:438
 msgid "**is not**"
 msgstr "**non è**"
 
-#: ../misc/object-conditions/basics.rst:272 ../system/objects/types.rst:52
+#: ../misc/object-conditions/basics.rst:286 ../system/objects/types.rst:52
 msgid "Integer Field"
 msgstr "Campo intero"
 
-#: ../misc/object-conditions/basics.rst:274
+#: ../misc/object-conditions/basics.rst:288
 msgid "Checks if any field of type integer has a specific value."
 msgstr "Controlla se un campo di tipo intero ha un valore specifico."
 
-#: ../misc/object-conditions/basics.rst:280
+#: ../misc/object-conditions/basics.rst:294
 msgid "**is less than**"
 msgstr "**è minore di**"
 
-#: ../misc/object-conditions/basics.rst:281
+#: ../misc/object-conditions/basics.rst:295
 msgid "**is less than or equal to**"
 msgstr "**è minore o uguale a**"
 
-#: ../misc/object-conditions/basics.rst:282
+#: ../misc/object-conditions/basics.rst:296
 msgid "**is greater than**"
 msgstr "**è maggiore di**"
 
-#: ../misc/object-conditions/basics.rst:283
+#: ../misc/object-conditions/basics.rst:297
 msgid "**is greater than or equal to**"
 msgstr "**è maggiore o uguale a**"
 
-#: ../misc/object-conditions/basics.rst:287 ../system/objects/types.rst:23
+#: ../misc/object-conditions/basics.rst:301 ../system/objects/types.rst:23
 msgid "Date Field"
 msgstr "Campo data"
 
-#: ../misc/object-conditions/basics.rst:289
+#: ../misc/object-conditions/basics.rst:303
 msgid ""
 "Checks if a date is before or past (both absolute or relative) a specific "
 "point in time or time period. Relative operators allow you to define a time "
@@ -20880,7 +20983,7 @@ msgstr "**è cambiato**:"
 msgid "The field has been changed during a ticket update."
 msgstr "Il campo è stato modificato durante un aggiornamento del ticket."
 
-#: ../misc/object-conditions/basics.rst:322
+#: ../misc/object-conditions/basics.rst:336
 msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you."
@@ -20888,11 +20991,11 @@ msgstr ""
 "Per aiutarti a comprendere meglio le condizioni temporali di Zammad, il "
 "diagramma sottostante potrebbe esserti utile."
 
-#: ../misc/object-conditions/basics.rst:328 ../system/objects/types.rst:36
+#: ../misc/object-conditions/basics.rst:342 ../system/objects/types.rst:36
 msgid "Date & Time Field"
 msgstr "Campo Data e Ora"
 
-#: ../misc/object-conditions/basics.rst:330
+#: ../misc/object-conditions/basics.rst:344
 msgid ""
 "Checks if a date and time is before or past (both absolute or relative) a "
 "specific point in time or time period. Relative operators allow you to "
@@ -20998,7 +21101,7 @@ msgstr ""
 "Disponibile solo per il Tempo di escalation del ticket nelle condizioni del "
 "trigger."
 
-#: ../misc/object-conditions/basics.rst:371
+#: ../misc/object-conditions/basics.rst:385
 msgid ""
 "Have a look at the diagram above. It applies also for date & time but you "
 "additionally have hours and minutes on top to use."
@@ -21006,11 +21109,11 @@ msgstr ""
 "Dai un'occhiata al diagramma sopra. Si applica anche a data e ora, ma in "
 "aggiunta hai ore e minuti da utilizzare."
 
-#: ../misc/object-conditions/basics.rst:375 ../system/objects/types.rst:83
+#: ../misc/object-conditions/basics.rst:389 ../system/objects/types.rst:83
 msgid "Single Selection Field"
 msgstr "Campo a selezione singola"
 
-#: ../misc/object-conditions/basics.rst:377
+#: ../misc/object-conditions/basics.rst:391
 msgid ""
 "Checks if selected field values match the attribute value. It allows you to "
 "select one or more values of the attribute in question. Selecting more than "
@@ -21021,11 +21124,11 @@ msgstr ""
 "in questione. Selezionare più di un valore nella condizione agirà come una "
 "clausola \"OR\"."
 
-#: ../misc/object-conditions/basics.rst:388 ../system/objects/types.rst:64
+#: ../misc/object-conditions/basics.rst:402 ../system/objects/types.rst:64
 msgid "Multiple Selection Field"
 msgstr "Campo a selezione multipla"
 
-#: ../misc/object-conditions/basics.rst:390
+#: ../misc/object-conditions/basics.rst:404
 msgid "Checks if selected field values match the attribute value(s)."
 msgstr ""
 "Controlla se i valori del campo selezionato corrispondono al/ai valore/i "
@@ -21077,7 +21180,7 @@ msgid ""
 "\"none of\", not \"not all of\"."
 msgstr "Corrisponde se nessuno dei valori specificati è presente."
 
-#: ../misc/object-conditions/basics.rst:408
+#: ../misc/object-conditions/basics.rst:422
 msgid ""
 "In :doc:`core workflows </system/core-workflows>`, these operators have "
 "different semantics. See :ref:`core workflow condition operators <core-"
@@ -21091,11 +21194,11 @@ msgstr ""
 "operatori descritti qui possono essere trovati in :ref:`multi-select-"
 "operator-examples` di seguito."
 
-#: ../misc/object-conditions/basics.rst:416 ../system/objects/types.rst:135
+#: ../misc/object-conditions/basics.rst:430 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr "Campo a selezione singola ad albero"
 
-#: ../misc/object-conditions/basics.rst:418
+#: ../misc/object-conditions/basics.rst:432
 msgid ""
 "Checks if a selected field value match the attribute value. Selecting more "
 "than one value in the condition will act like an \"OR\" clause."
@@ -21104,11 +21207,11 @@ msgstr ""
 "dell'attributo. Selezionare più di un valore nella condizione agirà come una "
 "clausola \"OR\"."
 
-#: ../misc/object-conditions/basics.rst:428 ../system/objects/types.rst:148
+#: ../misc/object-conditions/basics.rst:442 ../system/objects/types.rst:148
 msgid "Multiple Tree Selection Field"
 msgstr "Campo a selezione multipla ad albero"
 
-#: ../misc/object-conditions/basics.rst:430
+#: ../misc/object-conditions/basics.rst:444
 msgid "Checks if selected field value(s) match the attribute value(s)."
 msgstr ""
 "Controlla se il/i valore/i del campo selezionato corrisponde/ono al/ai "
@@ -21130,23 +21233,23 @@ msgstr "**non contiene tutti**"
 msgid "**contains one not**"
 msgstr "**non contiene uno**"
 
-#: ../misc/object-conditions/basics.rst:447
+#: ../misc/object-conditions/basics.rst:461
 msgid "Additional Information and Remarks"
 msgstr "Informazioni aggiuntive e note"
 
-#: ../misc/object-conditions/basics.rst:456
+#: ../misc/object-conditions/basics.rst:470
 msgid "Ticket context conditions do not support:"
 msgstr "Le condizioni del contesto ticket non supportano:"
 
-#: ../misc/object-conditions/basics.rst:453
+#: ../misc/object-conditions/basics.rst:467
 msgid "regular expressions"
 msgstr "espressioni regolari"
 
-#: ../misc/object-conditions/basics.rst:454
+#: ../misc/object-conditions/basics.rst:468
 msgid "case sensitive string conditions"
 msgstr "condizioni stringa sensibili alle maiuscole/minuscole"
 
-#: ../misc/object-conditions/basics.rst:455
+#: ../misc/object-conditions/basics.rst:469
 msgid ""
 "Basic conditions do not support the same attribute to be selected more than "
 "once"
@@ -21154,36 +21257,36 @@ msgstr ""
 "Le condizioni di base non supportano la selezione dello stesso attributo più "
 "di una volta"
 
-#: ../misc/object-conditions/basics.rst:464
+#: ../misc/object-conditions/basics.rst:478
 msgid "**has changed** conditions:"
 msgstr "condizioni ``è cambiato``:"
 
-#: ../misc/object-conditions/basics.rst:459
+#: ../misc/object-conditions/basics.rst:473
 msgid "Are only available for ticket attributes and don't affect:"
 msgstr ""
 "Sono disponibili solo per gli attributi del ticket e non influiscono su:"
 
-#: ../misc/object-conditions/basics.rst:461
+#: ../misc/object-conditions/basics.rst:475
 msgid "Ticket articles attributes"
 msgstr "Attributi degli articoli del ticket"
 
-#: ../misc/object-conditions/basics.rst:462
+#: ../misc/object-conditions/basics.rst:476
 msgid "Organization attributes"
 msgstr "Attributi dell'organizzazione"
 
-#: ../misc/object-conditions/basics.rst:463
+#: ../misc/object-conditions/basics.rst:477
 msgid "User attributes"
 msgstr "Attributi utente"
 
-#: ../misc/object-conditions/basics.rst:464
+#: ../misc/object-conditions/basics.rst:478
 msgid "Group attributes"
 msgstr "Attributi del gruppo"
 
-#: ../misc/object-conditions/basics.rst:477
+#: ../misc/object-conditions/basics.rst:491
 msgid "Differences in input fields:"
 msgstr "Differenze nei campi di input:"
 
-#: ../misc/object-conditions/basics.rst:467
+#: ../misc/object-conditions/basics.rst:481
 msgid ""
 "Please note that the input field for tokens doesn't support the comma as "
 "separator (as in the input field for tags). If you use the comma in the "
@@ -21193,7 +21296,7 @@ msgstr ""
 "come separatore (come nel campo di input per i tag). Se si utilizza la "
 "virgola nel campo di input dei token, la virgola viene inclusa nel token."
 
-#: ../misc/object-conditions/basics.rst:471
+#: ../misc/object-conditions/basics.rst:485
 msgid "**Example**:"
 msgstr "**Esempio**:"
 
@@ -21201,7 +21304,7 @@ msgstr "**Esempio**:"
 msgid "Example of comma usage in token input field"
 msgstr "Esempio di utilizzo della virgola nel campo di input token"
 
-#: ../misc/object-conditions/basics.rst:476
+#: ../misc/object-conditions/basics.rst:490
 msgid ""
 "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
 "in one token)."
@@ -21209,11 +21312,11 @@ msgstr ""
 "``A`` aggiunto con invio/tab, ``B`` e ``C`` separati da virgola (risultando "
 "in un unico token)."
 
-#: ../misc/object-conditions/basics.rst:482
+#: ../misc/object-conditions/basics.rst:496
 msgid "Multi-Select Operator Examples"
 msgstr "Esempi di Operatore di Selezione Multipla"
 
-#: ../misc/object-conditions/basics.rst:484
+#: ../misc/object-conditions/basics.rst:498
 msgid ""
 "The ``contains`` family of operators for multi-select fields compares two "
 "sets of values: the values currently in the field and the values specified "
@@ -21226,7 +21329,7 @@ msgstr ""
 "della condizione come un cerchio arancione e i valori del campo come un "
 "cerchio blu."
 
-#: ../misc/object-conditions/basics.rst:489
+#: ../misc/object-conditions/basics.rst:503
 msgid ""
 "Be aware that these operators behave **differently** in :doc:`core workflows "
 "</system/core-workflows>`. See :ref:`core workflow condition operators <core-"
@@ -21237,12 +21340,12 @@ msgstr ""
 "condition operators <core-workflow-condition-examples>` per un confronto "
 "affiancato."
 
-#: ../misc/object-conditions/basics.rst:495
+#: ../misc/object-conditions/basics.rst:509
 #: ../system/core-workflows/condition-operators.rst:165
 msgid "Example 1: Condition A, B - Field A, B, C"
 msgstr "Esempio 1: Condizione A, B - Campo A, B, C"
 
-#: ../misc/object-conditions/basics.rst:497
+#: ../misc/object-conditions/basics.rst:511
 #: ../system/core-workflows/condition-operators.rst:167
 msgid ""
 "In this scenario, the field holds the values A, B and C, while the condition "
@@ -21251,7 +21354,7 @@ msgstr ""
 "In questo scenario, il campo contiene i valori A, B e C, mentre la "
 "condizione richiede i valori A e B."
 
-#: ../misc/object-conditions/basics.rst:503
+#: ../misc/object-conditions/basics.rst:517
 #: ../system/core-workflows/condition-operators.rst:173
 msgid ""
 "Venn diagram of condition values A, B and field values A, B, C. A and B are "
@@ -21260,17 +21363,17 @@ msgstr ""
 "Diagramma di Venn dei valori delle condizioni A, B e dei valori del campo A, "
 "B, C. A e B sono presenti in entrambi i cerchi, C solo nel cerchio del campo."
 
-#: ../misc/object-conditions/basics.rst:503
+#: ../misc/object-conditions/basics.rst:517
 #: ../system/core-workflows/condition-operators.rst:173
 msgid "Condition values ``A, B`` overlap with field values ``A, B, C``."
 msgstr ""
 "I valori delle condizioni ``A, B`` si sovrappongono ai valori dei campi ``A, "
 "B, C``."
 
-#: ../misc/object-conditions/basics.rst:510
-#: ../misc/object-conditions/basics.rst:544
-#: ../misc/object-conditions/basics.rst:581
-#: ../misc/object-conditions/basics.rst:613
+#: ../misc/object-conditions/basics.rst:524
+#: ../misc/object-conditions/basics.rst:558
+#: ../misc/object-conditions/basics.rst:595
+#: ../misc/object-conditions/basics.rst:627
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/core-workflows/condition-operators.rst:141
 #: ../system/core-workflows/condition-operators.rst:180
@@ -21280,10 +21383,10 @@ msgstr ""
 msgid "Operator"
 msgstr "Operatore"
 
-#: ../misc/object-conditions/basics.rst:511
-#: ../misc/object-conditions/basics.rst:545
-#: ../misc/object-conditions/basics.rst:582
-#: ../misc/object-conditions/basics.rst:614
+#: ../misc/object-conditions/basics.rst:525
+#: ../misc/object-conditions/basics.rst:559
+#: ../misc/object-conditions/basics.rst:596
+#: ../misc/object-conditions/basics.rst:628
 #: ../system/core-workflows/condition-operators.rst:181
 #: ../system/core-workflows/condition-operators.rst:221
 #: ../system/core-workflows/condition-operators.rst:264
@@ -21291,10 +21394,10 @@ msgstr "Operatore"
 msgid "Matches?"
 msgstr "Corrisponde?"
 
-#: ../misc/object-conditions/basics.rst:512
-#: ../misc/object-conditions/basics.rst:546
-#: ../misc/object-conditions/basics.rst:583
-#: ../misc/object-conditions/basics.rst:615
+#: ../misc/object-conditions/basics.rst:526
+#: ../misc/object-conditions/basics.rst:560
+#: ../misc/object-conditions/basics.rst:597
+#: ../misc/object-conditions/basics.rst:629
 #: ../system/core-workflows/condition-operators.rst:182
 #: ../system/core-workflows/condition-operators.rst:222
 #: ../system/core-workflows/condition-operators.rst:265
@@ -21302,30 +21405,30 @@ msgstr "Corrisponde?"
 msgid "Why"
 msgstr "Perché"
 
-#: ../misc/object-conditions/basics.rst:515
+#: ../misc/object-conditions/basics.rst:529
 #: ../system/core-workflows/condition-operators.rst:185
 msgid "``A`` and ``B`` are in both sets (OR logic)."
 msgstr "``A`` e ``B`` appartengono a entrambi gli insiemi (logica OR)."
 
-#: ../misc/object-conditions/basics.rst:518
+#: ../misc/object-conditions/basics.rst:532
 #: ../system/core-workflows/condition-operators.rst:191
 msgid "Both ``A`` and ``B`` are present (AND logic)."
 msgstr "Sono presenti sia ``A`` che ``B`` (logica AND)."
 
-#: ../misc/object-conditions/basics.rst:521
+#: ../misc/object-conditions/basics.rst:535
 msgid "All condition values are present in the field."
 msgstr "Tutti i valori delle condizioni sono presenti nel campo."
 
-#: ../misc/object-conditions/basics.rst:524
+#: ../misc/object-conditions/basics.rst:538
 msgid "The field has values in common with the condition."
 msgstr "Il campo ha valori in comune con la condizione."
 
-#: ../misc/object-conditions/basics.rst:527
+#: ../misc/object-conditions/basics.rst:541
 #: ../system/core-workflows/condition-operators.rst:203
 msgid "Example 2: Condition A, B, C - Field C, D"
 msgstr "Esempio 2: Condizione A, B, C - Campo C, D"
 
-#: ../misc/object-conditions/basics.rst:529
+#: ../misc/object-conditions/basics.rst:543
 #: ../system/core-workflows/condition-operators.rst:205
 msgid ""
 "In this scenario, the field holds the values C and D. The condition value C "
@@ -21334,7 +21437,7 @@ msgstr ""
 "In questo scenario, il campo contiene i valori C e D. Il valore della "
 "condizione C è presente nel campo, mentre A e B non lo sono."
 
-#: ../misc/object-conditions/basics.rst:536
+#: ../misc/object-conditions/basics.rst:550
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Venn diagram of condition values A, B, C and field values C, D.\n"
@@ -21344,7 +21447,7 @@ msgstr ""
 "C, D.\n"
 "Solo C è presente in entrambi i cerchi."
 
-#: ../misc/object-conditions/basics.rst:536
+#: ../misc/object-conditions/basics.rst:550
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Condition values ``A, B, C`` partially overlap with field values ``C, D``."
@@ -21352,26 +21455,26 @@ msgstr ""
 "I valori delle condizioni ``A, B, C`` si sovrappongono parzialmente ai "
 "valori dei campi ``C, D``."
 
-#: ../misc/object-conditions/basics.rst:549
+#: ../misc/object-conditions/basics.rst:563
 #: ../system/core-workflows/condition-operators.rst:225
 msgid "``C`` is in both sets (OR logic)."
 msgstr "``C`` è presente in entrambi gli insiemi (logica OR)."
 
-#: ../misc/object-conditions/basics.rst:552
+#: ../misc/object-conditions/basics.rst:566
 #: ../system/core-workflows/condition-operators.rst:231
 msgid "Only ``C`` of the three condition values is present."
 msgstr "È presente solo il valore ``C`` dei tre valori di condizione."
 
-#: ../misc/object-conditions/basics.rst:555
-#: ../misc/object-conditions/basics.rst:592
+#: ../misc/object-conditions/basics.rst:569
+#: ../misc/object-conditions/basics.rst:606
 msgid "``A`` and ``B`` are missing from the field."
 msgstr "``A`` e ``B`` mancano dal campo."
 
-#: ../misc/object-conditions/basics.rst:558
+#: ../misc/object-conditions/basics.rst:572
 msgid "``C`` is in both the field and the condition."
 msgstr "``C`` è presente sia nel campo che nella condizione."
 
-#: ../misc/object-conditions/basics.rst:560
+#: ../misc/object-conditions/basics.rst:574
 msgid ""
 "This partial overlap is where the two \"not\" operators part ways: "
 "``contains all not`` matches because a single condition value is missing, "
@@ -21383,12 +21486,12 @@ msgstr ""
 "condizione, mentre ``contains one not`` non corrisponde perché il singolo "
 "valore comune è sufficiente a bloccarlo."
 
-#: ../misc/object-conditions/basics.rst:566
+#: ../misc/object-conditions/basics.rst:580
 #: ../system/core-workflows/condition-operators.rst:248
 msgid "Example 3: Condition A, B - Field C, D"
 msgstr "Esempio 3: Condizione A, B - Campo C, D"
 
-#: ../misc/object-conditions/basics.rst:568
+#: ../misc/object-conditions/basics.rst:582
 #: ../system/core-workflows/condition-operators.rst:250
 msgid ""
 "In this scenario, the field holds the values C and D, which have nothing in "
@@ -21397,7 +21500,7 @@ msgstr ""
 "In questo scenario, il campo contiene i valori C e D, che non hanno nulla in "
 "comune con i valori della condizione A e B."
 
-#: ../misc/object-conditions/basics.rst:574
+#: ../misc/object-conditions/basics.rst:588
 #: ../system/core-workflows/condition-operators.rst:256
 msgid ""
 "Venn diagram of condition values A, B and field values C, D. The two circles "
@@ -21406,37 +21509,37 @@ msgstr ""
 "Diagramma di Venn dei valori delle condizioni A, B e dei valori dei campi C, "
 "D. I due cerchi non si sovrappongono."
 
-#: ../misc/object-conditions/basics.rst:574
+#: ../misc/object-conditions/basics.rst:588
 #: ../system/core-workflows/condition-operators.rst:256
 msgid "Condition values ``A, B`` have no overlap with field values ``C, D``."
 msgstr ""
 "I valori delle condizioni ``A, B`` non si sovrappongono ai valori dei campi "
 "``C, D``."
 
-#: ../misc/object-conditions/basics.rst:586
+#: ../misc/object-conditions/basics.rst:600
 #: ../system/core-workflows/condition-operators.rst:268
 msgid "No value is in both sets."
 msgstr "Nessun valore è presente in entrambi gli insiemi."
 
-#: ../misc/object-conditions/basics.rst:589
+#: ../misc/object-conditions/basics.rst:603
 #: ../system/core-workflows/condition-operators.rst:274
 msgid "Neither ``A`` nor ``B`` is present."
 msgstr "Né ``A`` né ``B`` sono presenti."
 
-#: ../misc/object-conditions/basics.rst:595
-#: ../misc/object-conditions/basics.rst:627
+#: ../misc/object-conditions/basics.rst:609
+#: ../misc/object-conditions/basics.rst:641
 #: ../system/core-workflows/condition-operators.rst:159
 #: ../system/core-workflows/condition-operators.rst:161
 #: ../system/core-workflows/condition-operators.rst:283
 msgid "The field has no value in common with the condition."
 msgstr "Il campo non ha alcun valore in comune con la condizione."
 
-#: ../misc/object-conditions/basics.rst:598
+#: ../misc/object-conditions/basics.rst:612
 #: ../system/core-workflows/condition-operators.rst:288
 msgid "Example 4: Condition A, B - Field is empty"
 msgstr "Esempio 4: Condizione A, B - Il campo è vuoto"
 
-#: ../misc/object-conditions/basics.rst:600
+#: ../misc/object-conditions/basics.rst:614
 #: ../system/core-workflows/condition-operators.rst:290
 msgid ""
 "In this scenario, the field holds no values at all, while the condition asks "
@@ -21445,7 +21548,7 @@ msgstr ""
 "In questo scenario, il campo non contiene alcun valore, mentre la condizione "
 "richiede i valori A e B."
 
-#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:620
 #: ../system/core-workflows/condition-operators.rst:296
 msgid ""
 "Venn diagram of condition values A, B and an empty field. The two circles do "
@@ -21454,13 +21557,13 @@ msgstr ""
 "Diagramma di Venn dei valori delle condizioni A, B e di un campo vuoto. I "
 "due cerchi non si sovrappongono."
 
-#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:620
 #: ../system/core-workflows/condition-operators.rst:296
 msgid "The field holds no values at all."
 msgstr "Il campo non contiene alcun valore."
 
-#: ../misc/object-conditions/basics.rst:618
-#: ../misc/object-conditions/basics.rst:621
+#: ../misc/object-conditions/basics.rst:632
+#: ../misc/object-conditions/basics.rst:635
 #: ../system/core-workflows/condition-operators.rst:308
 #: ../system/core-workflows/condition-operators.rst:314
 #, fuzzy
@@ -21468,19 +21571,19 @@ msgstr "Il campo non contiene alcun valore."
 msgid "No value is present."
 msgstr "Corrisponde se uno dei valori specificati è presente."
 
-#: ../misc/object-conditions/basics.rst:624
+#: ../misc/object-conditions/basics.rst:638
 msgid "No condition value is present in the field."
 msgstr "Nel campo non è presente alcun valore di condizione."
 
-#: ../misc/object-conditions/basics.rst:632
+#: ../misc/object-conditions/basics.rst:646
 msgid "Regex"
 msgstr "Regex"
 
-#: ../misc/object-conditions/basics.rst:637
+#: ../misc/object-conditions/basics.rst:651
 msgid "Regex support"
 msgstr "Supporto Regex"
 
-#: ../misc/object-conditions/basics.rst:635
+#: ../misc/object-conditions/basics.rst:649
 msgid ""
 "**matches regex** and **does not match regex** are supported only in "
 "Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket "
@@ -21490,11 +21593,11 @@ msgstr ""
 "in Trigger, selettore Contabilità oraria, Filtri Postmaster, Assegnazione "
 "automatica ticket e Flusso di lavoro principale."
 
-#: ../misc/object-conditions/basics.rst:642
+#: ../misc/object-conditions/basics.rst:656
 msgid "\"Old\" style ``regex:...`` conditions"
 msgstr "Condizioni in stile \"vecchio\" ``regex:...``"
 
-#: ../misc/object-conditions/basics.rst:640
+#: ../misc/object-conditions/basics.rst:654
 msgid ""
 "If you update your Zammad from 6.0 or prior and you have already conditions "
 "with **contains** or **contains not** including a regex filter (i.e. "
@@ -27742,7 +27845,7 @@ msgstr ""
 "queste impostazioni comporta anche la modifica degli URL di callback per i "
 "tuoi canali, ecc. Potrebbe persino impedirti di accedere."
 
-#: ../settings/system/base.rst:11
+#: ../settings/system/base.rst:16
 msgid "Fully Qualified Domain Name"
 msgstr "Nome di Dominio Completamente Qualificato"
 
@@ -27750,17 +27853,25 @@ msgstr "Nome di Dominio Completamente Qualificato"
 msgid "The URL of your Zammad installation."
 msgstr "L'URL della tua installazione Zammad."
 
-#: ../settings/system/base.rst:11 ../settings/system/base.rst:17
+#: ../settings/system/base.rst:11 ../settings/system/base.rst:22
 msgid "This value is used by :doc:`/misc/variables` and in notifications."
 msgstr ""
 "Questo valore viene utilizzato dalle :doc:`/misc/variables` e nelle "
 "notifiche."
 
-#: ../settings/system/base.rst:17
+#: ../settings/system/base.rst:13
+msgid ""
+"Together with the HTTP type, this value is the trusted origin for the real-"
+"time channel of the web interface, so it has to match the URL users open "
+"Zammad with. IP addresses and short host names stop live updates from "
+"working."
+msgstr ""
+
+#: ../settings/system/base.rst:22
 msgid "HTTP type"
 msgstr "Tipo HTTP"
 
-#: ../settings/system/base.rst:14
+#: ../settings/system/base.rst:19
 msgid ""
 "The HTTP type tells if your installation is accessible with transport layer "
 "security (``https``) or not (``http``)."
@@ -27768,11 +27879,11 @@ msgstr ""
 "Il tipo HTTP indica se la tua installazione è accessibile con sicurezza del "
 "livello di trasporto (``https``) o meno (``http``)."
 
-#: ../settings/system/base.rst:29
+#: ../settings/system/base.rst:34
 msgid "SystemID"
 msgstr "ID di Sistema"
 
-#: ../settings/system/base.rst:20
+#: ../settings/system/base.rst:25
 msgid ""
 "This ID is being used within your ticket number. In case you're "
 "communicating with another ticket system with similar ticket number schemes, "
@@ -27782,14 +27893,14 @@ msgstr ""
 "stia comunicando con un altro sistema di ticket con schemi di numerazione "
 "simili, questo ID riduce notevolmente il rischio di falsi follow-up."
 
-#: ../settings/system/base.rst:24
+#: ../settings/system/base.rst:29
 msgid ""
 "The SystemID is randomly selected upon installation of Zammad (``1-99``)."
 msgstr ""
 "Il SystemID viene selezionato casualmente al momento dell'installazione di "
 "Zammad (``1-99``)."
 
-#: ../settings/system/base.rst:28
+#: ../settings/system/base.rst:33
 msgid ""
 "**Do not** change this setting in a productive system! Your Zammad "
 "installation may no longer recognize old ticket number based follow ups upon "
@@ -27961,6 +28072,14 @@ msgstr ""
 "proxy.html>`."
 
 #: ../settings/system/network.rst:9
+msgid ""
+"Web push notifications of the mobile view are also sent to the push service "
+"of the browser and use this proxy configuration, including the no-proxy "
+"list. The addresses to allow are listed in the :docs:`web push section of "
+"the system documentation </appendix/proxy.html#web-push-notifications>`."
+msgstr ""
+
+#: ../settings/system/network.rst:15
 msgid "Proxy configuration comparison"
 msgstr "Confronto della configurazione del proxy"
 
@@ -28000,7 +28119,7 @@ msgstr "Manualmente tramite script di test"
 msgid "Exceptions (see note below)"
 msgstr "Eccezioni (vedi nota sotto)"
 
-#: ../settings/system/network.rst:18
+#: ../settings/system/network.rst:24
 msgid ""
 "The following features/services are not affected by the GUI proxy "
 "configuration:"
@@ -28008,19 +28127,19 @@ msgstr ""
 "Le seguenti funzionalità/servizi non sono influenzati dalla configurazione "
 "del proxy GUI:"
 
-#: ../settings/system/network.rst:22
+#: ../settings/system/network.rst:28
 msgid "Zendesk Migrator"
 msgstr "Zendesk Migrator"
 
-#: ../settings/system/network.rst:23
+#: ../settings/system/network.rst:29
 msgid "Elasticsearch plugin installation (ES < 8)"
 msgstr "Installazione del plugin Elasticsearch (ES < 8)"
 
-#: ../settings/system/network.rst:24
+#: ../settings/system/network.rst:30
 msgid "Zammad update process"
 msgstr "Processo di aggiornamento di Zammad"
 
-#: ../settings/system/network.rst:26
+#: ../settings/system/network.rst:32
 msgid ""
 "If you use one of these features/services and want to route their traffic "
 "through a proxy, you need to provide the proxy configuration via environment "
@@ -28030,7 +28149,7 @@ msgstr ""
 "relativo traffico attraverso un proxy, devi fornire la configurazione del "
 "proxy tramite variabili d'ambiente."
 
-#: ../settings/system/network.rst:30
+#: ../settings/system/network.rst:36
 msgid ""
 "Find the individual settings you can configure below. Be aware that the "
 "proxy settings can only be saved after successfully testing proxy "
@@ -28047,11 +28166,11 @@ msgstr ""
 "Se il test ha avuto esito positivo, assicurati di cliccare sul pulsante "
 "Submit (Invia) per salvare la configurazione."
 
-#: ../settings/system/network.rst:41
+#: ../settings/system/network.rst:47
 msgid "Proxy Address"
 msgstr "Indirizzo Proxy"
 
-#: ../settings/system/network.rst:38
+#: ../settings/system/network.rst:44
 msgid ""
 "Allows you to provide a proxy server if needed. This is relevant for network "
 "communication by Zammad."
@@ -28059,26 +28178,26 @@ msgstr ""
 "Consente di fornire un server proxy, se necessario. Questo è rilevante per "
 "la comunicazione di rete da parte di Zammad."
 
-#: ../settings/system/network.rst:41
+#: ../settings/system/network.rst:47
 msgid "It **does not** affect the update process or Elasticsearch."
 msgstr "Non influisce sul processo di aggiornamento o su Elasticsearch."
 
-#: ../settings/system/network.rst:44
+#: ../settings/system/network.rst:50
 msgid "Username for proxy connection"
 msgstr "Nome utente per la connessione proxy"
 
-#: ../settings/system/network.rst:44
+#: ../settings/system/network.rst:50
 msgid ""
 "If your proxy server requires authentication, provide the username here."
 msgstr ""
 "Se il tuo server proxy richiede l'autenticazione, fornisci qui il nome "
 "utente."
 
-#: ../settings/system/network.rst:48
+#: ../settings/system/network.rst:54
 msgid "Password for proxy connection"
 msgstr "Password per la connessione proxy"
 
-#: ../settings/system/network.rst:47
+#: ../settings/system/network.rst:53
 msgid ""
 "If your proxy server requires authentication, provide the password of the "
 "user here."
@@ -28086,11 +28205,11 @@ msgstr ""
 "Se il tuo server proxy richiede l'autenticazione, inserisci qui la password "
 "dell'utente."
 
-#: ../settings/system/network.rst:56
+#: ../settings/system/network.rst:62
 msgid "No proxy for the following hosts"
 msgstr "Nessun proxy per i seguenti host"
 
-#: ../settings/system/network.rst:51
+#: ../settings/system/network.rst:57
 msgid ""
 "Exception list for hosts you can't or don't want to reach via proxy server. "
 "It supports wildcards (e.g. ``*.example.com``). Connections to loopback "
@@ -28101,7 +28220,7 @@ msgstr ""
 "``*.example.com``). Le connessioni agli indirizzi di loopback sono sempre "
 "consentite durante la configurazione del proxy tramite interfaccia utente."
 
-#: ../settings/system/network.rst:55
+#: ../settings/system/network.rst:61
 msgid ""
 "In case you are using the default Docker Compose stack behind a proxy, make "
 "sure to add the Elasticsearch container to the exception list. The default "
@@ -29003,15 +29122,24 @@ msgstr ""
 "Nel caso in cui desideri tornare allo stato iniziale delle notifiche dei "
 "ticket, usa semplicemente il pulsante ``Reset to default``."
 
-#: ../settings/ticket.rst:248
+#: ../settings/ticket.rst:245
+msgid ""
+"Push notifications on the mobile devices of your agents follow the same "
+"notification settings and can't be configured separately. Zammad does not "
+"send push notifications to a mobile device while the agent is working in the "
+"desktop view. Agents turn them on for each device in the mobile view, see "
+"the :user-docs:`mobile view documentation </extras/mobile-view.html>`."
+msgstr ""
+
+#: ../settings/ticket.rst:254
 msgid "Duplicate Detection"
 msgstr "Rilevamento Duplicati"
 
-#: ../settings/ticket.rst:290
+#: ../settings/ticket.rst:296
 msgid "Detect Duplicate Ticket Creation"
 msgstr "Rileva Creazione Ticket Duplicati"
 
-#: ../settings/ticket.rst:251
+#: ../settings/ticket.rst:257
 msgid ""
 "This setting turns on the duplicate ticket detection mechanism during ticket "
 "creation. If similar tickets are found in the system, a suitable warning "
@@ -29022,11 +29150,11 @@ msgstr ""
 "sistema, verrà mostrato un avviso appropriato all'utente che tenta di creare "
 "un ticket."
 
-#: ../settings/ticket.rst:258
+#: ../settings/ticket.rst:264
 msgid "A Sample Duplicate Ticket Warning"
 msgstr "Un Esempio di Avviso Ticket Duplicato"
 
-#: ../settings/ticket.rst:260
+#: ../settings/ticket.rst:266
 msgid ""
 "You can choose which ticket attributes will be matched by selecting them in "
 "**Attributes to compare** field. Only if the ticket attribute value provided "
@@ -29039,13 +29167,13 @@ msgstr ""
 "ticket è *uguale* all'attributo in un ticket esistente, verrà mostrato "
 "l'avviso."
 
-#: ../settings/ticket.rst:265
+#: ../settings/ticket.rst:271
 msgid "**Warning title** and **Warning message** are configurable as well."
 msgstr ""
 "Anche il **titolo dell'avviso** e il **messaggio di avviso** sono "
 "configurabili."
 
-#: ../settings/ticket.rst:267
+#: ../settings/ticket.rst:273
 msgid ""
 "You can limit the detection only to certain user roles. By default, only "
 "agents will see the warning."
@@ -29053,7 +29181,7 @@ msgstr ""
 "Puoi limitare il rilevamento solo a determinati ruoli utente. Per "
 "impostazione predefinita, solo gli agenti vedranno l'avviso."
 
-#: ../settings/ticket.rst:270
+#: ../settings/ticket.rst:276
 msgid ""
 "If you don't want to show the matched tickets as part of the warning, you "
 "can set **Show matching ticket(s) in the warning** setting to *no*."
@@ -29062,7 +29190,7 @@ msgstr ""
 "puoi impostare l'impostazione **Mostra ticket corrispondenti nell'avviso** "
 "su *no*."
 
-#: ../settings/ticket.rst:273
+#: ../settings/ticket.rst:279
 msgid ""
 "By default, **Permission level for looking up ticket** is set to *User*, "
 "which  means user permissions will be honored during search. The user will "
@@ -29079,11 +29207,11 @@ msgstr ""
 "all'interno di *tutti* i ticket nel sistema, indipendentemente dai permessi "
 "dell'utente."
 
-#: ../settings/ticket.rst:279
+#: ../settings/ticket.rst:285
 msgid "**🦺 Safety first!**"
 msgstr "**🦺 La sicurezza prima di tutto!**"
 
-#: ../settings/ticket.rst:281
+#: ../settings/ticket.rst:287
 msgid ""
 "Even if the permission level is set to *System*, the user will not be shown "
 "the tickets they don't have access to in the warning, even if they match."
@@ -29092,7 +29220,7 @@ msgstr ""
 "verranno mostrati i ticket a cui non ha accesso nell'avviso, anche se "
 "corrispondono."
 
-#: ../settings/ticket.rst:285
+#: ../settings/ticket.rst:291
 msgid ""
 "However, just the confirmation about the existence of the tickets in the "
 "system may be considered an unwanted information disclosure. Use this option "
@@ -29102,7 +29230,7 @@ msgstr ""
 "potrebbe essere considerata una divulgazione di informazioni indesiderata. "
 "Usa questa opzione con attenzione!"
 
-#: ../settings/ticket.rst:289
+#: ../settings/ticket.rst:295
 msgid ""
 "Finally, you can configure between matching within **All tickets** or **Open "
 "tickets** only by setting **Match tickets in following states**. Depending "
@@ -35473,141 +35601,6 @@ msgid "Did you check if the provided file is a valid certificate or key?"
 msgstr ""
 "Hai controllato se il file fornito è un certificato o una chiave valida?"
 
-#: ../system/integrations/translation-services.rst:2
-#, fuzzy
-#| msgid "Translations"
-msgid "Translation Services"
-msgstr "Traduzioni"
-
-#: ../system/integrations/translation-services.rst:4
-msgid ""
-"The translation services integration allows you to connect to a translation "
-"service provider so your agents can translate ticket articles into another "
-"language. To enable and configure the service, go to *System > Integrations* "
-"and click on the **Translation services** integration. This opens its "
-"configuration with four tabs: Provider Settings, Ticket Articles, Logs and "
-"Feedback. The Feedback tab requires the ``admin.ai_feedback_logs`` "
-"permission."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:12
-#, fuzzy
-#| msgid "Other Settings"
-msgid "Provider Settings"
-msgstr "Altre Impostazioni"
-
-#: ../system/integrations/translation-services.rst:14
-msgid ""
-"The integration supports three services: any of the configured AI providers, "
-"DeepL and LibreTranslate."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:17
-msgid ""
-"**AI provider**: choose from your already configured AI providers "
-"(see :doc:`/ai/provider`)."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:19
-msgid "**DeepL**: select an API plan and provide your API key."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:20
-msgid ""
-"**LibreTranslate**: provide the URL of a reachable LibreTranslate instance "
-"(e.g. ``http://libretranslate:5000`` in the LibreTranslate Docker Compose "
-"scenario) and optionally an API key."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:24
-msgid ""
-"Saving the provider turns the integration on. However, agents can only "
-"translate articles once you enable **Ticket articles translation** on the "
-"**Ticket Articles** tab (see next section)."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:29
-#, fuzzy
-#| msgid "Ticket > Article#"
-msgid "Ticket Articles"
-msgstr "Ticket > Articolo#"
-
-#: ../system/integrations/translation-services.rst:34
-#, fuzzy
-#| msgid "Ticket articles attributes"
-msgid "Ticket articles translation"
-msgstr "Attributi degli articoli del ticket"
-
-#: ../system/integrations/translation-services.rst:32
-msgid ""
-"Enabling it lets your agents translate individual articles from the ticket "
-"detail view manually on demand. This can be useful if you have tickets in "
-"another language from time to time."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:45
-msgid "Allow translation of all articles at once"
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:37
-msgid ""
-"Enabling it lets your agents translate all articles of a ticket in one go. "
-"To use it, an agent switches the toggle on in the language picker of the "
-"ticket detail view. The articles are then translated automatically as soon "
-"as the agent opens a ticket with articles in another language."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:42
-msgid ""
-"You can restrict this to specific roles. If no role is selected, all agents "
-"may use it. Be aware that this can result in additional costs, depending on "
-"the configured service. This feature is useful for multi-language teams or "
-"multi-language customers."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:50
-msgid ""
-"The **Logs** tab shows HTTP log entries for the configured service. When an "
-"AI provider is configured for the translation, the relevant entries appear "
-"in :doc:`/ai/feedback-and-logs` instead."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:55
-#, fuzzy
-#| msgid "Feedback & Logs"
-msgid "Feedback"
-msgstr "Feedback & Log"
-
-#: ../system/integrations/translation-services.rst:57
-msgid ""
-"Your agents can give feedback for the translation in the form of thumbs up "
-"or thumbs down. When rating a translation with thumbs down, an optional "
-"comment can be added. You can download this feedback as an Excel file by "
-"clicking the ``Download Feedback`` button."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:63
-#, fuzzy
-#| msgid "Agent Perspective"
-msgid "Agents' Perspective"
-msgstr "Prospettiva dell'Agente"
-
-#: ../system/integrations/translation-services.rst:65
-msgid ""
-"Agents can choose a language from a language picker. By default, the picker "
-"shows the agent's user interface language. If the service does not offer it, "
-"Zammad falls back to the instance's default language and, after that, to "
-"English."
-msgstr ""
-
-#: ../system/integrations/translation-services.rst:70
-msgid ""
-"In addition, agents can specify one or more languages they understand in "
-"their personal profile settings. Articles in these languages aren't "
-"translated automatically, unless an agent clicks the translate button in an "
-"article."
-msgstr ""
-
 #: ../system/maintenance.rst:2
 msgid "Maintenance"
 msgstr "Manutenzione"
@@ -38488,6 +38481,45 @@ msgstr "Versione"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Mostra la versione attuale di Zammad della tua istanza."
+
+#, fuzzy
+#~| msgid "Translations"
+#~ msgid "Translation Services"
+#~ msgstr "Traduzioni"
+
+#, fuzzy
+#~| msgid "Other Settings"
+#~ msgid "Provider Settings"
+#~ msgstr "Altre Impostazioni"
+
+#, fuzzy
+#~| msgid "Ticket > Article#"
+#~ msgid "Ticket Articles"
+#~ msgstr "Ticket > Articolo#"
+
+#, fuzzy
+#~| msgid "Ticket articles attributes"
+#~ msgid "Ticket articles translation"
+#~ msgstr "Attributi degli articoli del ticket"
+
+#, fuzzy
+#~| msgid "Feedback & Logs"
+#~ msgid "Feedback"
+#~ msgstr "Feedback & Log"
+
+#, fuzzy
+#~| msgid "Agent Perspective"
+#~ msgid "Agents' Perspective"
+#~ msgstr "Prospettiva dell'Agente"
+
+#~ msgid ""
+#~ "The checklist feature is currently a standalone feature. This means you "
+#~ "can't access the items or state of the checkboxes from other places in "
+#~ "Zammad like triggers or workflows."
+#~ msgstr ""
+#~ "La funzionalità checklist è attualmente una funzionalità autonoma. Ciò "
+#~ "significa che non puoi accedere agli elementi o allo stato delle caselle "
+#~ "di controllo da altri luoghi in Zammad come trigger o workflow."
 
 #~ msgid "API (System-Documentation)"
 #~ msgstr "API (Documentazione di sistema)"
