@@ -107,7 +107,11 @@ Internal Email Handling
 0008_postmaster_filter_follow_up_merged
    Routes follow-up emails for merged tickets to the correct ticket.
 
-0009_postmaster_filter_follow_up_assignment
+0009_postmaster_filter_out_of_office_check
+   Identifies out-of-office auto-responder emails, assigns them to the correct
+   ticket and keeps the current ticket state.
+
+0010_postmaster_filter_follow_up_assignment
    Sets the owner for follow-up emails based on the
    **Assign follow-ups** configuration of the
    :doc:`group's settings </manage/groups/settings>`.
@@ -116,6 +120,10 @@ Internal Email Handling
    Sets the sender/from for the article based on the
    **Sender based on Reply-To header** configuration of the
    :doc:`channel's settings <../settings>`.
+
+0012_postmaster_filter_attachment_reference_remove
+   Removes image references to attachments which are stored in Zammad from the
+   body of incoming HTML emails.
 
 0014_postmaster_filter_own_notification_loop_detection
    Checks if the email is a self-created notification email, and ignores it in
@@ -131,10 +139,6 @@ Internal Email Handling
 0018_postmaster_import_archive
    Handles the emails which are imported in
    :ref:`archive mode <archive-mode-email>`.
-
-0030_postmaster_filter_out_of_office_check
-   Identifies out-of-office auto-responder emails, assigns them to the correct
-   ticket and keeps the current ticket state.
 
 0200_postmaster_filter_follow_up_possible_check
    Handles the emails based on the **Follow-up possible** configuration of the
