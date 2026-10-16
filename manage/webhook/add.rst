@@ -66,8 +66,9 @@ Authentication
       here.
 
 HMAC SHA1 Signature Token
-   If set, all sent webhooks contain a `x-hub-signature` header allowing
-   the remote site to verify the request.
+   If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing
+   the remote site to verify the request. Its value is ``sha1=<hex digest>``,
+   so drop the ``sha1=`` prefix before comparing it with your own signature.
 
    .. note::
 
