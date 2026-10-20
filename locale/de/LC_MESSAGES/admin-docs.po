@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-10-15 09:26+0000\n"
+"PO-Revision-Date: 2026-10-19 13:12+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/de/>\n"
@@ -2081,7 +2081,7 @@ msgstr ""
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:238 ../manage/roles/permissions.rst:308
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:128
+#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -2110,7 +2110,7 @@ msgstr ""
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
-#: ../manage/templates.rst:40 ../manage/webhook/add.rst:134
+#: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
 msgstr "Aktiv"
@@ -4664,11 +4664,23 @@ msgid "Routes follow-up emails for merged tickets to the correct ticket."
 msgstr ""
 "Ordnet Nachfragen für zusammengefasste Tickets dem richtigen Ticket zu."
 
-#: ../channels/email/filters/system-filters.rst:113
-msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr "0009_postmaster_filter_follow_up_assignment"
+#: ../channels/email/filters/system-filters.rst:112
+msgid "0009_postmaster_filter_out_of_office_check"
+msgstr "0009_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:111
+msgid ""
+"Identifies out-of-office auto-responder emails, assigns them to the correct "
+"ticket and keeps the current ticket state."
+msgstr ""
+"Identifiziert Abwesenheitsbenachrichtigungen, weist sie dem entsprechenden "
+"Ticket zu und behält den aktuellen Ticket-Status bei."
+
+#: ../channels/email/filters/system-filters.rst:117
+msgid "0010_postmaster_filter_follow_up_assignment"
+msgstr "0010_postmaster_filter_follow_up_assignment"
+
+#: ../channels/email/filters/system-filters.rst:115
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
@@ -4677,11 +4689,11 @@ msgstr ""
 "Einstellung **Zuweisung bei Nachfrage** in den :doc:`Gruppeneinstellungen </"
 "manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:118
+#: ../channels/email/filters/system-filters.rst:122
 msgid "0011_postmaster_sender_based_on_reply_to"
 msgstr "0011_postmaster_sender_based_on_reply_to"
 
-#: ../channels/email/filters/system-filters.rst:116
+#: ../channels/email/filters/system-filters.rst:120
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
@@ -4690,11 +4702,23 @@ msgstr ""
 "der Einstellung **Absender basierend auf Reply-To-Header** in "
 "den :doc:`Kanaleinstellungen<../settings>`."
 
-#: ../channels/email/filters/system-filters.rst:122
+#: ../channels/email/filters/system-filters.rst:126
+msgid "0012_postmaster_filter_attachment_reference_remove"
+msgstr "0012_postmaster_filter_attachment_reference_remove"
+
+#: ../channels/email/filters/system-filters.rst:125
+msgid ""
+"Removes image references to attachments which are stored in Zammad from the "
+"body of incoming HTML emails."
+msgstr ""
+"Entfernt Bildreferenzen zu Anhängen, die in Zammad gespeichert sind, aus dem "
+"Text eingehender HTML-E-Mails."
+
+#: ../channels/email/filters/system-filters.rst:130
 msgid "0014_postmaster_filter_own_notification_loop_detection"
 msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
-#: ../channels/email/filters/system-filters.rst:121
+#: ../channels/email/filters/system-filters.rst:129
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
@@ -4703,11 +4727,11 @@ msgstr ""
 "E-Mail handelt und ignoriert sie in solchen Fällen, um E-Mail-Schleifen zu "
 "vermeiden."
 
-#: ../channels/email/filters/system-filters.rst:129
+#: ../channels/email/filters/system-filters.rst:137
 msgid "0015_postmaster_filter_identify_session_user"
 msgstr "0015_postmaster_filter_identify_session_user"
 
-#: ../channels/email/filters/system-filters.rst:125
+#: ../channels/email/filters/system-filters.rst:133
 msgid ""
 "Identifies a session user via ``x-zammad-session-user-id``. If none is "
 "provided or valid, it falls back to sender data and can create a user. This "
@@ -4722,11 +4746,11 @@ msgstr ""
 "Agenten an das System weitergeleitet wurden, als vom Kunden und nicht vom "
 "Agent stammend angezeigt werden."
 
-#: ../channels/email/filters/system-filters.rst:133
+#: ../channels/email/filters/system-filters.rst:141
 msgid "0018_postmaster_import_archive"
 msgstr "0018_postmaster_import_archive"
 
-#: ../channels/email/filters/system-filters.rst:132
+#: ../channels/email/filters/system-filters.rst:140
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
@@ -4734,23 +4758,11 @@ msgstr ""
 "Verarbeitet die E-Mails, die im :ref:`Archivmodus <archive-mode-email>` "
 "importiert werden."
 
-#: ../channels/email/filters/system-filters.rst:137
-msgid "0030_postmaster_filter_out_of_office_check"
-msgstr "0030_postmaster_filter_out_of_office_check"
-
-#: ../channels/email/filters/system-filters.rst:136
-msgid ""
-"Identifies out-of-office auto-responder emails, assigns them to the correct "
-"ticket and keeps the current ticket state."
-msgstr ""
-"Identifiziert Abwesenheitsbenachrichtigungen, weist sie dem entsprechenden "
-"Ticket zu und behält den aktuellen Ticket-Status bei."
-
-#: ../channels/email/filters/system-filters.rst:141
+#: ../channels/email/filters/system-filters.rst:145
 msgid "0200_postmaster_filter_follow_up_possible_check"
 msgstr "0200_postmaster_filter_follow_up_possible_check"
 
-#: ../channels/email/filters/system-filters.rst:140
+#: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
@@ -4758,11 +4770,11 @@ msgstr ""
 "Verarbeitet die E-Mails basierend auf der **Nachfrage möglich** "
 "Konfiguration in den :doc:`Gruppeneinstellungen</manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:145
+#: ../channels/email/filters/system-filters.rst:149
 msgid "0900_postmaster_filter_bounce_follow_up_check"
 msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
-#: ../channels/email/filters/system-filters.rst:144
+#: ../channels/email/filters/system-filters.rst:148
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
@@ -4770,11 +4782,11 @@ msgstr ""
 "Identifiziert Postmaster-Bounce-Benachrichtigungen und ordnet sie als "
 "Nachfrage dem ursprünglichen Ticket zu."
 
-#: ../channels/email/filters/system-filters.rst:150
+#: ../channels/email/filters/system-filters.rst:154
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
 msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
-#: ../channels/email/filters/system-filters.rst:148
+#: ../channels/email/filters/system-filters.rst:152
 msgid ""
 "Identifies postmaster bounce notification emails about permanent delivery "
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
@@ -4785,11 +4797,11 @@ msgstr ""
 "``mail_delivery_failed`` in den Benutzereinstellungen, um zukünftige "
 "Benachrichtigungen zu unterdrücken."
 
-#: ../channels/email/filters/system-filters.rst:155
+#: ../channels/email/filters/system-filters.rst:159
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
 msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
-#: ../channels/email/filters/system-filters.rst:153
+#: ../channels/email/filters/system-filters.rst:157
 msgid ""
 "Identifies postmaster bounce notification emails about temporary delivery "
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
@@ -4799,11 +4811,11 @@ msgstr ""
 "Zustellfehler (verzögert, wiederholbar, Status ``4.4.1``) und behandelt die "
 "E-Mail im Kontext einer Abwesenheitsbenachrichtigung."
 
-#: ../channels/email/filters/system-filters.rst:159
+#: ../channels/email/filters/system-filters.rst:163
 msgid "1000_postmaster_filter_database_check"
 msgstr "1000_postmaster_filter_database_check"
 
-#: ../channels/email/filters/system-filters.rst:158
+#: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
@@ -4811,11 +4823,11 @@ msgstr ""
 "Führt aktive benutzerdefinierte Email-Filter aus der Datenbank aus und "
 "protokolliert deren Verarbeitung."
 
-#: ../channels/email/filters/system-filters.rst:163
+#: ../channels/email/filters/system-filters.rst:167
 msgid "5500_postmaster_internal_article_check"
 msgstr "5500_postmaster_internal_article_check"
 
-#: ../channels/email/filters/system-filters.rst:162
+#: ../channels/email/filters/system-filters.rst:166
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
@@ -4824,11 +4836,11 @@ msgstr ""
 "auf einen internen Artikel handelt oder die letzte ausgehende E-Mail intern "
 "ist."
 
-#: ../channels/email/filters/system-filters.rst:167
+#: ../channels/email/filters/system-filters.rst:171
 msgid "6005_postmaster_filter_identify_group"
 msgstr "6005_postmaster_filter_identify_group"
 
-#: ../channels/email/filters/system-filters.rst:166
+#: ../channels/email/filters/system-filters.rst:170
 msgid ""
 "Sets ticket group by using explicit group headers first, then existing "
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
@@ -4838,11 +4850,11 @@ msgstr ""
 "geprüft werden, dann der vorhandene Ticket-Kontext (ID/Nummer), dann die "
 "Mailbox-/Gruppen-Zuordnung oder die Fallback-Standardgruppe."
 
-#: ../channels/email/filters/system-filters.rst:172
+#: ../channels/email/filters/system-filters.rst:176
 msgid "6105_postmaster_filter_sender_is_system_address"
 msgstr "6105_postmaster_filter_sender_is_system_address"
 
-#: ../channels/email/filters/system-filters.rst:170
+#: ../channels/email/filters/system-filters.rst:174
 msgid ""
 "Detects system or agent senders and sets the article sender role (``Agent`` "
 "or ``Customer``), depending on sender address, permissions, group access and "
@@ -4852,12 +4864,12 @@ msgstr ""
 "Absenders fest (``Agent`` oder ``Kunde``), je nach Absenderadresse, "
 "Berechtigungen, Gruppenzugriff und Ticket-Kundenbeziehung."
 
-#: ../channels/email/filters/system-filters.rst:175
-#: ../channels/email/filters/system-filters.rst:176
+#: ../channels/email/filters/system-filters.rst:179
+#: ../channels/email/filters/system-filters.rst:180
 msgid "6500_postmaster_filter_identify_sender"
 msgstr "6500_postmaster_filter_identify_sender"
 
-#: ../channels/email/filters/system-filters.rst:175
+#: ../channels/email/filters/system-filters.rst:179
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
@@ -5906,8 +5918,8 @@ msgstr "Einschränkungen"
 msgid "The fields provided by the form are limited to:"
 msgstr "Die im Formular nutzbaren Felder sind beschränkt auf:"
 
-#: ../channels/form.rst:22 ../system/maintenance.rst:93
-#: ../system/maintenance.rst:34
+#: ../channels/form.rst:22 ../system/maintenance.rst:100
+#: ../system/maintenance.rst:41
 msgid "Message"
 msgstr "Nachricht"
 
@@ -12112,7 +12124,7 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
 #: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "Title"
 msgstr "Titel"
 
@@ -18121,20 +18133,22 @@ msgstr ""
 "Im Fall von **HTTP-Basis-Authentifizierung** geben Sie hier das Passwort des "
 "Benutzers an."
 
-#: ../manage/webhook/add.rst:77
+#: ../manage/webhook/add.rst:78
 msgid "HMAC SHA1 Signature Token"
 msgstr "HMAC SHA1 Signatur-Token"
 
 #: ../manage/webhook/add.rst:69
 msgid ""
-"If set, all sent webhooks contain a `x-hub-signature` header allowing the "
-"remote site to verify the request."
+"If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing the "
+"remote site to verify the request. Its value is ``sha1=<hex digest>``, so "
+"drop the ``sha1=`` prefix before comparing it with your own signature."
 msgstr ""
-"Wenn diese Option gesetzt ist, enthalten alle gesendeten Webhooks einen `x-"
-"hub-signature`-Header, der es der Gegenstelle ermöglicht, die Anfrage zu "
-"überprüfen."
+"Wenn diese Option aktiviert ist, enthalten alle gesendeten Webhooks einen "
+"``X-Hub-Signature``-Header, mit dem die Remote-Seite die Anfrage "
+"verifizieren kann. Dessen Wert ist ``sha1=<hex-Digest>``, entfernen Sie also "
+"das Präfix ``sha1=``, bevor Sie es mit Ihrer eigenen Signatur vergleichen."
 
-#: ../manage/webhook/add.rst:74
+#: ../manage/webhook/add.rst:75
 msgid ""
 "This **does not** encrypt the payload. Use HTTPS connections to secure the "
 "communication. It contains a HMAC signature of the body of the webhook "
@@ -18146,11 +18160,11 @@ msgstr ""
 "Signatur des Body der Webhook-Anfrage. Erfahren Sie mehr über HUB-Signaturen "
 "`hier <https://www.w3.org/TR/websub/#authenticated-content-distribution>`_."
 
-#: ../manage/webhook/add.rst:90
+#: ../manage/webhook/add.rst:91
 msgid "Pre-defined Webhook"
 msgstr "Vordefinierter Webhook"
 
-#: ../manage/webhook/add.rst:80
+#: ../manage/webhook/add.rst:81
 msgid ""
 "This field is only displayed for *pre-defined webhooks*! It only serves as a "
 "reference to a pre-defined webhook. It is not possible to change it for "
@@ -18164,7 +18178,7 @@ msgstr ""
 "werden. Sie können für zusätzliche Anpassungen des Webhook-Verhaltens "
 "verwendet werden."
 
-#: ../manage/webhook/add.rst:87
+#: ../manage/webhook/add.rst:88
 msgid "Example for Mattermost:"
 msgstr "Beispiel für Mattermost:"
 
@@ -18172,11 +18186,11 @@ msgstr "Beispiel für Mattermost:"
 msgid "Additional pre-defined webhook fields"
 msgstr "Zusätzliche vordefinierte Webhook-Felder"
 
-#: ../manage/webhook/add.rst:124
+#: ../manage/webhook/add.rst:125
 msgid "Custom Payload"
 msgstr "Eigene Nutzlast"
 
-#: ../manage/webhook/add.rst:93
+#: ../manage/webhook/add.rst:94
 msgid ""
 "By default, it is turned off and the webhook will always send :ref:`webhook-"
 "payload-default` to the target endpoint. When switched on, a code editor "
@@ -18191,7 +18205,7 @@ msgstr ""
 "misc/variables` einzufügen, verwenden Sie :kbd:`:` :kbd:`:` oder fügen Sie "
 "``#{`` zur automatischen Vervollständigung ein."
 
-#: ../manage/webhook/add.rst:102
+#: ../manage/webhook/add.rst:103
 msgid ""
 "The usage of variables is limited compared to other places. Some features "
 "are not available in webhooks (e.g. the ``.value`` extension, translation "
@@ -18206,7 +18220,7 @@ msgstr ""
 "Stellen Sie sicher, dass Sie eine Variable aus den Vorschlägen der "
 "Autovervollständigung auswählen."
 
-#: ../manage/webhook/add.rst:107
+#: ../manage/webhook/add.rst:108
 msgid ""
 "The custom payload must have a valid JSON syntax! The code editor will "
 "highlight if there is an issue with the syntax. Also, it will not be "
@@ -18216,7 +18230,7 @@ msgstr ""
 "hervorgehoben, wenn es ein Problem mit der Syntax gibt. Außerdem ist es "
 "nicht möglich, eine ungültige JSON-Struktur zu speichern."
 
-#: ../manage/webhook/add.rst:110
+#: ../manage/webhook/add.rst:111
 msgid ""
 "Pre-defined webhooks will always provide an initial custom payload, specific "
 "for the associated service."
@@ -18229,11 +18243,11 @@ msgid "Custom payload code editor with variable auto completion"
 msgstr ""
 "Code-Editor für eigene Nutzlast mit automatischer Variablenvervollständigung"
 
-#: ../manage/webhook/add.rst:116
+#: ../manage/webhook/add.rst:117
 msgid "A basic example for the structure looks like this:"
 msgstr "Ein einfaches Beispiel für die Struktur sieht wie folgt aus:"
 
-#: ../manage/webhook/add.rst:127
+#: ../manage/webhook/add.rst:128
 msgid ""
 "If required you can leave useful information for other Zammad admins to "
 "understand the webhook in question better."
@@ -18242,7 +18256,7 @@ msgstr ""
 "Administratoren hinterlegen, damit der betreffende Webhook besser verstanden "
 "wird."
 
-#: ../manage/webhook/add.rst:131
+#: ../manage/webhook/add.rst:132
 msgid ""
 "If set to ``inactive``, you can no longer select the webhook in the trigger "
 "or scheduler configuration. Inactive webhooks will not be fired. If triggers "
@@ -18254,7 +18268,7 @@ msgstr ""
 "Webhooks werden nicht gesendet. Wenn Trigger oder Automatisierungs-Jobs auch "
 "andere Aktionen konfiguriert haben, werden diese trotzdem ausgeführt."
 
-#: ../manage/webhook/add.rst:136
+#: ../manage/webhook/add.rst:137
 msgid ""
 "After you set up your webhook, make sure to invoke it via trigger or "
 "scheduler. In case something doesn't work, have a look at "
@@ -20094,17 +20108,31 @@ msgstr "``X-Hub-Signature``"
 
 #: ../manage/webhook/payload.rst:22
 msgid ""
-"The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided one "
-"when creating your trigger)"
+"The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
+"computed with your signature token as the key. Only sent if you entered a "
+"signature token in the trigger"
 msgstr ""
-"Der SHA-1-Hash Ihres HMAC-SHA1-Signatur-Tokens (vorausgesetzt, Sie haben bei "
-"der Erstellung Ihres Triggers einen solchen angegeben)"
+"Die HMAC-SHA1-Signatur des Anfragetexts als ``sha1=<hex-Digest>``, berechnet "
+"mit Ihrem Token als Schlüssel. Wird nur gesendet, wenn Sie ein Token im "
+"Trigger angegeben haben"
 
-#: ../manage/webhook/payload.rst:28
+#: ../manage/webhook/payload.rst:0
+msgid "``Authorization``"
+msgstr "``Authorization``"
+
+#: ../manage/webhook/payload.rst:26
+msgid ""
+"The credentials of the trigger, as ``Bearer <token>`` with **Bearer Token** "
+"or as ``Basic <base64>`` with **HTTP Basic Authentication**"
+msgstr ""
+"Die Zugangsdaten des Triggers, als ``Bearer <token>`` mit **Bearer Token** "
+"oder als ``Basic <base64>`` mit **HTTP Basic Authentication**"
+
+#: ../manage/webhook/payload.rst:33
 msgid "Default JSON Payload"
 msgstr "Standard-JSON-Nutzlast"
 
-#: ../manage/webhook/payload.rst:30
+#: ../manage/webhook/payload.rst:35
 msgid ""
 "When the webhook payload is not customized, requests will include default "
 "payload depending on the webhook type."
@@ -20112,11 +20140,11 @@ msgstr ""
 "Wenn die Webhook-Nutzlast nicht angepasst ist, enthalten die Anfragen je "
 "nach Webhook-Typ die Standard-Nutzlast."
 
-#: ../manage/webhook/payload.rst:34
+#: ../manage/webhook/payload.rst:39
 msgid "Regular Webhooks (example)"
 msgstr "Reguläre Webhooks (Beispiel)"
 
-#: ../manage/webhook/payload.rst:337
+#: ../manage/webhook/payload.rst:342
 msgid ""
 "For better readability, all empty and ``null`` values have been omitted from "
 "the sample payload above. That means the webhooks you receive *will include "
@@ -20126,7 +20154,7 @@ msgstr ""
 "Beispiel-Nutzlast weggelassen. Das bedeutet, dass die Webhooks, die Sie "
 "erstellen, *zusätzliche, hier nicht aufgeführte Felder enthalten*."
 
-#: ../manage/webhook/payload.rst:340
+#: ../manage/webhook/payload.rst:345
 msgid ""
 "Webhooks will also include fields for any relevant :doc:`custom objects </"
 "system/objects>` defined in your system."
@@ -20134,7 +20162,7 @@ msgstr ""
 "Webhooks enthalten auch Felder für alle relevanten :doc:`benutzerdefinierten "
 "Objekte </system/objects>`, die in Ihrem System angelegt sind."
 
-#: ../manage/webhook/payload.rst:342
+#: ../manage/webhook/payload.rst:347
 msgid ""
 "Attachments are *not included*; links to attachments *are* (authentication "
 "required)."
@@ -20142,51 +20170,51 @@ msgstr ""
 "Anhänge sind *nicht enthalten*; Links zu Anhängen *sind enthalten* "
 "(Authentifizierung erforderlich)."
 
-#: ../manage/webhook/payload.rst:344
+#: ../manage/webhook/payload.rst:349
 msgid "Linked tickets are *not included*."
 msgstr "Verknüpfte Tickets sind *nicht enthalten*."
 
-#: ../manage/webhook/payload.rst:345
+#: ../manage/webhook/payload.rst:350
 msgid "None of the following **user attributes** are included:"
 msgstr "Keines der folgenden **Benutzerattribute** ist enthalten:"
 
-#: ../manage/webhook/payload.rst:347
+#: ../manage/webhook/payload.rst:352
 msgid "``last_login``"
 msgstr "``last_login``"
 
-#: ../manage/webhook/payload.rst:348
+#: ../manage/webhook/payload.rst:353
 msgid "``login_failed``"
 msgstr "``login_failed``"
 
-#: ../manage/webhook/payload.rst:349
+#: ../manage/webhook/payload.rst:354
 msgid "``password``"
 msgstr "``password``"
 
-#: ../manage/webhook/payload.rst:350
+#: ../manage/webhook/payload.rst:355
 msgid "``preferences``"
 msgstr "``preferences``"
 
-#: ../manage/webhook/payload.rst:351
+#: ../manage/webhook/payload.rst:356
 msgid "``group_ids``"
 msgstr "``group_ids``"
 
-#: ../manage/webhook/payload.rst:352
+#: ../manage/webhook/payload.rst:357
 msgid "``groups``"
 msgstr "``groups``"
 
-#: ../manage/webhook/payload.rst:353
+#: ../manage/webhook/payload.rst:358
 msgid "``authorization_ids``"
 msgstr "``authorization_ids``"
 
-#: ../manage/webhook/payload.rst:354
+#: ../manage/webhook/payload.rst:359
 msgid "``authorizations``"
 msgstr "``authorizations``"
 
-#: ../manage/webhook/payload.rst:357
+#: ../manage/webhook/payload.rst:362
 msgid "Pre-defined Webhooks"
 msgstr "Vordefinierte Webhooks"
 
-#: ../manage/webhook/payload.rst:359
+#: ../manage/webhook/payload.rst:364
 msgid ""
 "Each pre-defined webhook template provides a special payload designed for a "
 "particular service. See :doc:`/manage/webhook/examples` for more information."
@@ -28328,8 +28356,8 @@ msgstr ""
 msgid "Set to ``yes``"
 msgstr "Auf ``Ja`` gesetzt"
 
-#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:70
-#: ../system/maintenance.rst:94
+#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:77
+#: ../system/maintenance.rst:101
 msgid "X"
 msgstr "X"
 
@@ -28393,8 +28421,8 @@ msgid ""
 msgstr ""
 "Web-Push-Benachrichtigungen der Mobilansicht werden an den Push-Dienst des "
 "Browsers gesendet und verwenden diese Proxy-Konfiguration, einschließlich "
-"der No-Proxy-Liste. Die zu erlaubenden Adressen finden Sie im Bereich "
-":docs:`Web-Push-Benachrichtigungen </appendix/proxy.html#web-push-"
+"der No-Proxy-Liste. Die zu erlaubenden Adressen finden Sie im "
+"Bereich :docs:`Web-Push-Benachrichtigungen </appendix/proxy.html#web-push-"
 "notifications>` in der System-Dokumentation."
 
 #: ../settings/system/network.rst:15
@@ -29454,8 +29482,8 @@ msgstr ""
 "Benachrichtigungseinstellungen und können nicht separat konfiguriert werden. "
 "Zammad sendet keine Push-Benachrichtigungen an ein Mobilgerät, solange der "
 "Agent in der Desktop-Ansicht arbeitet. Agenten aktivieren diese "
-"Benachrichtigungen für jedes Gerät in der Mobilansicht. Mehr dazu unter "
-":user-docs:`Mobilansicht </extras/mobile-view.html>` in der Benutzer-"
+"Benachrichtigungen für jedes Gerät in der Mobilansicht. Mehr dazu "
+"unter :user-docs:`Mobilansicht </extras/mobile-view.html>` in der Benutzer-"
 "Dokumentation."
 
 #: ../settings/ticket.rst:254
@@ -36028,7 +36056,7 @@ msgstr ""
 "Instanz oder zum Ändern von Einstellungen verwenden können, wobei die "
 "Verfügbarkeit und die Funktionen eingeschränkt werden."
 
-#: ../system/maintenance.rst:13
+#: ../system/maintenance.rst:20
 msgid "Mode"
 msgstr "Modus"
 
@@ -36050,11 +36078,23 @@ msgstr ""
 "Im Wartungsmodus ist der Zugriff nur auf administrative Rollen beschränkt. "
 "Das bedeutet, dass Agenten und Kunden abgemeldet sind."
 
-#: ../system/maintenance.rst:23
+#: ../system/maintenance.rst:17
+msgid ""
+"Import mode activates the maintenance mode as well, for as long as it stays "
+"enabled. Access is then denied to all users without the "
+"``admin.maintenance`` permission. See the :docs:`migration guides </"
+"migration/index.html>`."
+msgstr ""
+"Der Importmodus aktiviert auch den Wartungsmodus, solange er aktiviert "
+"bleibt. Der Zugang wird dann allen Benutzern ohne die Berechtigung "
+"``admin.maintenance`` verwehrt. Siehe :docs:`Migrationsanleitungen </"
+"migration/index.html>`."
+
+#: ../system/maintenance.rst:30
 msgid "@Login"
 msgstr "@Login"
 
-#: ../system/maintenance.rst:16
+#: ../system/maintenance.rst:23
 msgid ""
 "This setting allows you to provide a login message within a green banner "
 "above the login screen. Click into the green banner in the settings page to "
@@ -36072,7 +36112,7 @@ msgid ""
 "settings page"
 msgstr "Screenshot zeigt die Standard-Anmeldung auf der Einstellungsseite"
 
-#: ../system/maintenance.rst:26
+#: ../system/maintenance.rst:33
 msgid ""
 "Send an informative message to **all active sessions**. This comes handy to "
 "inform your agents e.g. about mayor outages or to force reloads after "
@@ -36082,20 +36122,20 @@ msgstr ""
 "Dies ist nützlich, um Ihre Agenten z.B. über größere Ausfälle zu informieren "
 "oder um nach Konfigurationsänderungen einen Reload zu erzwingen."
 
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "This is the messages title (slightly bigger than the normal message)."
 msgstr ""
 "Dies ist der Titel der Nachricht (etwas größer als die normale Nachricht)."
 
-#: ../system/maintenance.rst:34
+#: ../system/maintenance.rst:41
 msgid "The text you want to provide to your logged in sessions."
 msgstr "Der Text, den Sie Ihren angemeldeten Benutzern senden wollen."
 
-#: ../system/maintenance.rst:39
+#: ../system/maintenance.rst:46
 msgid "Reload application"
 msgstr "Applikation neu laden"
 
-#: ../system/maintenance.rst:37
+#: ../system/maintenance.rst:44
 msgid ""
 "Selecting this option will change the message acceptance button from "
 "``Close`` (with nothing happening) to ``Continue session``, which forces the "
@@ -36105,7 +36145,7 @@ msgstr ""
 "Benachrichtigung von ``Schließen`` (ohne dass etwas passiert) in ``Sitzung "
 "fortsetzen``, wodurch ein erneutes Laden der Anwendung erzwungen wird."
 
-#: ../system/maintenance.rst:43
+#: ../system/maintenance.rst:50
 msgid ""
 "If you have customers that are logged in to Zammad, they'll also be notified "
 "if they're active in that moment."
@@ -36113,11 +36153,11 @@ msgstr ""
 "Wenn Sie Kunden haben, die bei Zammad eingeloggt sind, werden diese "
 "ebenfalls benachrichtigt, wenn sie in diesem Moment aktiv sind."
 
-#: ../system/maintenance.rst:48
+#: ../system/maintenance.rst:55
 msgid "Example without reload application"
 msgstr "Beispiel ohne Anwendungs-Aktualisierung"
 
-#: ../system/maintenance.rst:52
+#: ../system/maintenance.rst:59
 msgid ""
 "Message setting within Zammad's admin settings without ticket reload "
 "application setting."
@@ -36133,7 +36173,7 @@ msgstr ""
 "Screenshot mit den Einstellungen für das Senden von Nachrichten ohne "
 "Aktualisierung der Anwendung"
 
-#: ../system/maintenance.rst:61 ../system/maintenance.rst:85
+#: ../system/maintenance.rst:68 ../system/maintenance.rst:92
 msgid ""
 "The modal all other active sessions will see upon pressing ``Send to "
 "clients``."
@@ -36147,11 +36187,11 @@ msgid ""
 "without reload application ticket"
 msgstr "Screenshot mit Benachrichtigung ohne Aktualisierung der Anwendung"
 
-#: ../system/maintenance.rst:72
+#: ../system/maintenance.rst:79
 msgid "Example with reload application"
 msgstr "Beispiel mit Anwendungs-Aktualisierung"
 
-#: ../system/maintenance.rst:76
+#: ../system/maintenance.rst:83
 msgid ""
 "Message setting within Zammad's admin settings with ticket reload "
 "application setting."
@@ -38889,6 +38929,13 @@ msgstr "Version"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
+
+#~ msgid ""
+#~ "The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided "
+#~ "one when creating your trigger)"
+#~ msgstr ""
+#~ "Der SHA-1-Hash Ihres HMAC-SHA1-Signatur-Tokens (vorausgesetzt, Sie haben "
+#~ "bei der Erstellung Ihres Triggers einen solchen angegeben)"
 
 #~ msgid "Translation Services"
 #~ msgstr "Übersetzungsdienst"
