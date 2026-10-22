@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-10-14 03:12+0000\n"
+"PO-Revision-Date: 2026-10-17 03:12+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -1965,7 +1965,7 @@ msgstr ""
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:238 ../manage/roles/permissions.rst:308
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:128
+#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -1994,7 +1994,7 @@ msgstr ""
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
-#: ../manage/templates.rst:40 ../manage/webhook/add.rst:134
+#: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
 msgstr "Активно"
@@ -4455,11 +4455,23 @@ msgstr "0008_postmaster_filter_follow_up_merged"
 msgid "Routes follow-up emails for merged tickets to the correct ticket."
 msgstr "Усмерава имејл поруке наставка за спојене тикете у одговарајући тикет."
 
-#: ../channels/email/filters/system-filters.rst:113
-msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr "0009_postmaster_filter_follow_up_assignment"
+#: ../channels/email/filters/system-filters.rst:112
+msgid "0009_postmaster_filter_out_of_office_check"
+msgstr "0009_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:111
+msgid ""
+"Identifies out-of-office auto-responder emails, assigns them to the correct "
+"ticket and keeps the current ticket state."
+msgstr ""
+"Идентификује имејл поруке аутоматског одговора ван канцеларије, додељује их "
+"одговарајућем тикету и одржава тренутно стање тикета."
+
+#: ../channels/email/filters/system-filters.rst:117
+msgid "0010_postmaster_filter_follow_up_assignment"
+msgstr "0010_postmaster_filter_follow_up_assignment"
+
+#: ../channels/email/filters/system-filters.rst:115
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
@@ -4467,11 +4479,11 @@ msgstr ""
 "Поставља власника за имејл поруке наставка на основу **Доделе наставака** "
 "у :doc:`подешавањима групе </manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:118
+#: ../channels/email/filters/system-filters.rst:122
 msgid "0011_postmaster_sender_based_on_reply_to"
 msgstr "0011_postmaster_sender_based_on_reply_to"
 
-#: ../channels/email/filters/system-filters.rst:116
+#: ../channels/email/filters/system-filters.rst:120
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
@@ -4479,11 +4491,23 @@ msgstr ""
 "Поставља атрибут пошиљаоца/од чланка на основу **Пошиљалац на основу Reply-"
 "To заглавља** у :doc:`подешавањима канала <../settings>`."
 
-#: ../channels/email/filters/system-filters.rst:122
+#: ../channels/email/filters/system-filters.rst:126
+msgid "0012_postmaster_filter_attachment_reference_remove"
+msgstr "0012_postmaster_filter_attachment_reference_remove"
+
+#: ../channels/email/filters/system-filters.rst:125
+msgid ""
+"Removes image references to attachments which are stored in Zammad from the "
+"body of incoming HTML emails."
+msgstr ""
+"Уклања референце на прилоге слика који су снимљени у Zammad-у из тела "
+"долазних HTML порука."
+
+#: ../channels/email/filters/system-filters.rst:130
 msgid "0014_postmaster_filter_own_notification_loop_detection"
 msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
-#: ../channels/email/filters/system-filters.rst:121
+#: ../channels/email/filters/system-filters.rst:129
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
@@ -4491,11 +4515,11 @@ msgstr ""
 "Проверава да ли је имејл порука генерисано обавештење, и у том случају га "
 "игнорише ради спречавања имејл петље."
 
-#: ../channels/email/filters/system-filters.rst:129
+#: ../channels/email/filters/system-filters.rst:137
 msgid "0015_postmaster_filter_identify_session_user"
 msgstr "0015_postmaster_filter_identify_session_user"
 
-#: ../channels/email/filters/system-filters.rst:125
+#: ../channels/email/filters/system-filters.rst:133
 msgid ""
 "Identifies a session user via ``x-zammad-session-user-id``. If none is "
 "provided or valid, it falls back to sender data and can create a user. This "
@@ -4509,11 +4533,11 @@ msgstr ""
 "систем преко личног сандучета оператера приказују као да стижу од стране "
 "клијента."
 
-#: ../channels/email/filters/system-filters.rst:133
+#: ../channels/email/filters/system-filters.rst:141
 msgid "0018_postmaster_import_archive"
 msgstr "0018_postmaster_import_archive"
 
-#: ../channels/email/filters/system-filters.rst:132
+#: ../channels/email/filters/system-filters.rst:140
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
@@ -4521,23 +4545,11 @@ msgstr ""
 "Обрађује имеј поруке које су увежене у :ref:`архивском режиму <archive-mode-"
 "email>`."
 
-#: ../channels/email/filters/system-filters.rst:137
-msgid "0030_postmaster_filter_out_of_office_check"
-msgstr "0030_postmaster_filter_out_of_office_check"
-
-#: ../channels/email/filters/system-filters.rst:136
-msgid ""
-"Identifies out-of-office auto-responder emails, assigns them to the correct "
-"ticket and keeps the current ticket state."
-msgstr ""
-"Идентификује имејл поруке аутоматског одговора ван канцеларије, додељује их "
-"одговарајућем тикету и одржава тренутно стање тикета."
-
-#: ../channels/email/filters/system-filters.rst:141
+#: ../channels/email/filters/system-filters.rst:145
 msgid "0200_postmaster_filter_follow_up_possible_check"
 msgstr "0200_postmaster_filter_follow_up_possible_check"
 
-#: ../channels/email/filters/system-filters.rst:140
+#: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
@@ -4545,11 +4557,11 @@ msgstr ""
 "Обрађује имејл поруке на основу **Могућег наставка** у :doc:`подешавањима "
 "групе </manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:145
+#: ../channels/email/filters/system-filters.rst:149
 msgid "0900_postmaster_filter_bounce_follow_up_check"
 msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
-#: ../channels/email/filters/system-filters.rst:144
+#: ../channels/email/filters/system-filters.rst:148
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
@@ -4557,11 +4569,11 @@ msgstr ""
 "Идентификује имејл поруке обавештења о postmaster преусмерењима и обрађује "
 "их као наставке изворних тикета."
 
-#: ../channels/email/filters/system-filters.rst:150
+#: ../channels/email/filters/system-filters.rst:154
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
 msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
-#: ../channels/email/filters/system-filters.rst:148
+#: ../channels/email/filters/system-filters.rst:152
 msgid ""
 "Identifies postmaster bounce notification emails about permanent delivery "
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
@@ -4572,11 +4584,11 @@ msgstr ""
 "``mail_delivery_failed`` у њиховим корисничким профилима ради сузбијања "
 "будућих обавештења."
 
-#: ../channels/email/filters/system-filters.rst:155
+#: ../channels/email/filters/system-filters.rst:159
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
 msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
-#: ../channels/email/filters/system-filters.rst:153
+#: ../channels/email/filters/system-filters.rst:157
 msgid ""
 "Identifies postmaster bounce notification emails about temporary delivery "
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
@@ -4586,11 +4598,11 @@ msgstr ""
 "неуспелих испорука (одложено, поновљено, статус ``4.4.1``) и обележава "
 "поруке контекстом ван канцеларије."
 
-#: ../channels/email/filters/system-filters.rst:159
+#: ../channels/email/filters/system-filters.rst:163
 msgid "1000_postmaster_filter_database_check"
 msgstr "1000_postmaster_filter_database_check"
 
-#: ../channels/email/filters/system-filters.rst:158
+#: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
@@ -4598,11 +4610,11 @@ msgstr ""
 "Извршава укључене прилагођене имејл postmaster филтере из базе података и "
 "води евиденцију њихове обраде."
 
-#: ../channels/email/filters/system-filters.rst:163
+#: ../channels/email/filters/system-filters.rst:167
 msgid "5500_postmaster_internal_article_check"
 msgstr "5500_postmaster_internal_article_check"
 
-#: ../channels/email/filters/system-filters.rst:162
+#: ../channels/email/filters/system-filters.rst:166
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
@@ -4610,11 +4622,11 @@ msgstr ""
 "Поставља видљивост чланка на интерну уколико је у питању одговор на интерни "
 "чланак или последња одлазна имејл порука је интерна."
 
-#: ../channels/email/filters/system-filters.rst:167
+#: ../channels/email/filters/system-filters.rst:171
 msgid "6005_postmaster_filter_identify_group"
 msgstr "6005_postmaster_filter_identify_group"
 
-#: ../channels/email/filters/system-filters.rst:166
+#: ../channels/email/filters/system-filters.rst:170
 msgid ""
 "Sets ticket group by using explicit group headers first, then existing "
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
@@ -4624,11 +4636,11 @@ msgstr ""
 "контекста тикета (ID/број), затим мапирања сандучета и групе или на "
 "подразумевану групу као последњу опцију."
 
-#: ../channels/email/filters/system-filters.rst:172
+#: ../channels/email/filters/system-filters.rst:176
 msgid "6105_postmaster_filter_sender_is_system_address"
 msgstr "6105_postmaster_filter_sender_is_system_address"
 
-#: ../channels/email/filters/system-filters.rst:170
+#: ../channels/email/filters/system-filters.rst:174
 msgid ""
 "Detects system or agent senders and sets the article sender role (``Agent`` "
 "or ``Customer``), depending on sender address, permissions, group access and "
@@ -4638,12 +4650,12 @@ msgstr ""
 "пошиљаоца чланка (``Оператер`` или ``Клијент``), у зависности од адресе "
 "пошиљаоца, дозвола, приступа групи и клијента тикета."
 
-#: ../channels/email/filters/system-filters.rst:175
-#: ../channels/email/filters/system-filters.rst:176
+#: ../channels/email/filters/system-filters.rst:179
+#: ../channels/email/filters/system-filters.rst:180
 msgid "6500_postmaster_filter_identify_sender"
 msgstr "6500_postmaster_filter_identify_sender"
 
-#: ../channels/email/filters/system-filters.rst:175
+#: ../channels/email/filters/system-filters.rst:179
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
@@ -5674,8 +5686,8 @@ msgstr "Ограничења"
 msgid "The fields provided by the form are limited to:"
 msgstr "Поља наведена у форми су ограничена на:"
 
-#: ../channels/form.rst:22 ../system/maintenance.rst:93
-#: ../system/maintenance.rst:34
+#: ../channels/form.rst:22 ../system/maintenance.rst:100
+#: ../system/maintenance.rst:41
 msgid "Message"
 msgstr "Порука"
 
@@ -11604,7 +11616,7 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
 #: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "Title"
 msgstr "Наслов"
 
@@ -17377,19 +17389,24 @@ msgid ""
 "here."
 msgstr "У случају **HTTP Basic Auth**, унесите вашу корисничку лозинку овде."
 
-#: ../manage/webhook/add.rst:77
+#: ../manage/webhook/add.rst:78
 msgid "HMAC SHA1 Signature Token"
 msgstr "HMAC SHA1 кључ за потпис"
 
 #: ../manage/webhook/add.rst:69
+#, fuzzy
+#| msgid ""
+#| "If set, all sent webhooks contain a `x-hub-signature` header allowing the "
+#| "remote site to verify the request."
 msgid ""
-"If set, all sent webhooks contain a `x-hub-signature` header allowing the "
-"remote site to verify the request."
+"If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing the "
+"remote site to verify the request. Its value is ``sha1=<hex digest>``, so "
+"drop the ``sha1=`` prefix before comparing it with your own signature."
 msgstr ""
 "Ако је подешено, сви послати повратни позиви садрже заглавље `x-hub-"
 "signature` које омогућава удаљеном сервису да верификује захтев."
 
-#: ../manage/webhook/add.rst:74
+#: ../manage/webhook/add.rst:75
 msgid ""
 "This **does not** encrypt the payload. Use HTTPS connections to secure the "
 "communication. It contains a HMAC signature of the body of the webhook "
@@ -17401,11 +17418,11 @@ msgstr ""
 "више о Hub потписима `овде <https://www.w3.org/TR/websub/#authenticated-"
 "content-distribution>`_."
 
-#: ../manage/webhook/add.rst:90
+#: ../manage/webhook/add.rst:91
 msgid "Pre-defined Webhook"
 msgstr "Повратни позив по шаблону"
 
-#: ../manage/webhook/add.rst:80
+#: ../manage/webhook/add.rst:81
 msgid ""
 "This field is only displayed for *pre-defined webhooks*! It only serves as a "
 "reference to a pre-defined webhook. It is not possible to change it for "
@@ -17419,7 +17436,7 @@ msgstr ""
 "шаблону, додатна поља могу бити приказана испод овог. Могу се користити за "
 "додатно прилагођавање понашања повратног позива."
 
-#: ../manage/webhook/add.rst:87
+#: ../manage/webhook/add.rst:88
 msgid "Example for Mattermost:"
 msgstr "Пример сертификата:"
 
@@ -17427,11 +17444,11 @@ msgstr "Пример сертификата:"
 msgid "Additional pre-defined webhook fields"
 msgstr "Додатна поља повратног позива по шаблону"
 
-#: ../manage/webhook/add.rst:124
+#: ../manage/webhook/add.rst:125
 msgid "Custom Payload"
 msgstr "Прилагођени подаци"
 
-#: ../manage/webhook/add.rst:93
+#: ../manage/webhook/add.rst:94
 msgid ""
 "By default, it is turned off and the webhook will always send :ref:`webhook-"
 "payload-default` to the target endpoint. When switched on, a code editor "
@@ -17446,7 +17463,7 @@ msgstr ""
 "бисте уметнули подржане :doc:`променљиве </misc/variables>` користите "
 "пречице :kbd:`:` :kbd:`:` или унесите ``#{`` за претрагу."
 
-#: ../manage/webhook/add.rst:102
+#: ../manage/webhook/add.rst:103
 msgid ""
 "The usage of variables is limited compared to other places. Some features "
 "are not available in webhooks (e.g. the ``.value`` extension, translation "
@@ -17459,7 +17476,7 @@ msgstr ""
 "превод (``#{t(object.attribute)}``) и функције форматирање времена "
 "(``#{dt(object.time_attribute, [...])}``)."
 
-#: ../manage/webhook/add.rst:107
+#: ../manage/webhook/add.rst:108
 msgid ""
 "The custom payload must have a valid JSON syntax! The code editor will "
 "highlight if there is an issue with the syntax. Also, it will not be "
@@ -17469,7 +17486,7 @@ msgstr ""
 "вас обавестити путем аутоматизованих савета ако постоји проблем са кодом. "
 "Такође, неће бити могуће сачувати неисправну JSON структуру."
 
-#: ../manage/webhook/add.rst:110
+#: ../manage/webhook/add.rst:111
 msgid ""
 "Pre-defined webhooks will always provide an initial custom payload, specific "
 "for the associated service."
@@ -17481,11 +17498,11 @@ msgstr ""
 msgid "Custom payload code editor with variable auto completion"
 msgstr "Уређивач кода прилагођених података"
 
-#: ../manage/webhook/add.rst:116
+#: ../manage/webhook/add.rst:117
 msgid "A basic example for the structure looks like this:"
 msgstr "Једноставан пример структуре изгледа овако:"
 
-#: ../manage/webhook/add.rst:127
+#: ../manage/webhook/add.rst:128
 msgid ""
 "If required you can leave useful information for other Zammad admins to "
 "understand the webhook in question better."
@@ -17493,7 +17510,7 @@ msgstr ""
 "Ако је потребно, можете оставити корисне информације другим Zammad "
 "администраторима да боље разумеју дотични повратни позив."
 
-#: ../manage/webhook/add.rst:131
+#: ../manage/webhook/add.rst:132
 msgid ""
 "If set to ``inactive``, you can no longer select the webhook in the trigger "
 "or scheduler configuration. Inactive webhooks will not be fired. If triggers "
@@ -17505,7 +17522,7 @@ msgstr ""
 "бити покренути. Ако окидачи или планери имају подешене и друге радње, оне ће "
 "се и даље извршавати."
 
-#: ../manage/webhook/add.rst:136
+#: ../manage/webhook/add.rst:137
 msgid ""
 "After you set up your webhook, make sure to invoke it via trigger or "
 "scheduler. In case something doesn't work, have a look at "
@@ -19285,17 +19302,28 @@ msgstr "``X-Hub-Signature``"
 
 #: ../manage/webhook/payload.rst:22
 msgid ""
-"The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided one "
-"when creating your trigger)"
+"The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
+"computed with your signature token as the key. Only sent if you entered a "
+"signature token in the trigger"
 msgstr ""
-"SHA-1 отисак вашег HMAC-SHA1 кључа за потпис (под претпоставком да сте га "
-"навели приликом додавања окидача)"
 
-#: ../manage/webhook/payload.rst:28
+#: ../manage/webhook/payload.rst:0
+#, fuzzy
+#| msgid "``authorizations``"
+msgid "``Authorization``"
+msgstr "``authorizations``"
+
+#: ../manage/webhook/payload.rst:26
+msgid ""
+"The credentials of the trigger, as ``Bearer <token>`` with **Bearer Token** "
+"or as ``Basic <base64>`` with **HTTP Basic Authentication**"
+msgstr ""
+
+#: ../manage/webhook/payload.rst:33
 msgid "Default JSON Payload"
 msgstr "JSON структура подразумеваних података"
 
-#: ../manage/webhook/payload.rst:30
+#: ../manage/webhook/payload.rst:35
 msgid ""
 "When the webhook payload is not customized, requests will include default "
 "payload depending on the webhook type."
@@ -19303,11 +19331,11 @@ msgstr ""
 "Када подаци повратног позива нису прилагођени, захтеви ће користити "
 "подразумеване податке у зависности од типа повратног позива."
 
-#: ../manage/webhook/payload.rst:34
+#: ../manage/webhook/payload.rst:39
 msgid "Regular Webhooks (example)"
 msgstr "Стандардни повратни позиви (пример)"
 
-#: ../manage/webhook/payload.rst:337
+#: ../manage/webhook/payload.rst:342
 msgid ""
 "For better readability, all empty and ``null`` values have been omitted from "
 "the sample payload above. That means the webhooks you receive *will include "
@@ -19317,7 +19345,7 @@ msgstr ""
 "примера података изнад. То значи да повратни позиви могу *укључивати додатна "
 "поља која нису приказана овде*."
 
-#: ../manage/webhook/payload.rst:340
+#: ../manage/webhook/payload.rst:345
 msgid ""
 "Webhooks will also include fields for any relevant :doc:`custom objects </"
 "system/objects>` defined in your system."
@@ -19325,7 +19353,7 @@ msgstr ""
 "Повратни позиви ће такође укључити поља за све релевантне :doc:`прилагођене "
 "објекте </system/objects>` дефинисане у вашем систему."
 
-#: ../manage/webhook/payload.rst:342
+#: ../manage/webhook/payload.rst:347
 msgid ""
 "Attachments are *not included*; links to attachments *are* (authentication "
 "required)."
@@ -19333,51 +19361,51 @@ msgstr ""
 "Прилози *нису укључени*; везе до прилога *јесу* (потребна је "
 "аутентификација)."
 
-#: ../manage/webhook/payload.rst:344
+#: ../manage/webhook/payload.rst:349
 msgid "Linked tickets are *not included*."
 msgstr "Повезани тикети *нису укључени*."
 
-#: ../manage/webhook/payload.rst:345
+#: ../manage/webhook/payload.rst:350
 msgid "None of the following **user attributes** are included:"
 msgstr "Ниједан од следећих **корисничких атрибута** није укључен:"
 
-#: ../manage/webhook/payload.rst:347
+#: ../manage/webhook/payload.rst:352
 msgid "``last_login``"
 msgstr "``last_login``"
 
-#: ../manage/webhook/payload.rst:348
+#: ../manage/webhook/payload.rst:353
 msgid "``login_failed``"
 msgstr "``login_failed``"
 
-#: ../manage/webhook/payload.rst:349
+#: ../manage/webhook/payload.rst:354
 msgid "``password``"
 msgstr "``password``"
 
-#: ../manage/webhook/payload.rst:350
+#: ../manage/webhook/payload.rst:355
 msgid "``preferences``"
 msgstr "``preferences``"
 
-#: ../manage/webhook/payload.rst:351
+#: ../manage/webhook/payload.rst:356
 msgid "``group_ids``"
 msgstr "``group_ids``"
 
-#: ../manage/webhook/payload.rst:352
+#: ../manage/webhook/payload.rst:357
 msgid "``groups``"
 msgstr "``groups``"
 
-#: ../manage/webhook/payload.rst:353
+#: ../manage/webhook/payload.rst:358
 msgid "``authorization_ids``"
 msgstr "``authorization_ids``"
 
-#: ../manage/webhook/payload.rst:354
+#: ../manage/webhook/payload.rst:359
 msgid "``authorizations``"
 msgstr "``authorizations``"
 
-#: ../manage/webhook/payload.rst:357
+#: ../manage/webhook/payload.rst:362
 msgid "Pre-defined Webhooks"
 msgstr "Повратни позиви по шаблону"
 
-#: ../manage/webhook/payload.rst:359
+#: ../manage/webhook/payload.rst:364
 msgid ""
 "Each pre-defined webhook template provides a special payload designed for a "
 "particular service. See :doc:`/manage/webhook/examples` for more information."
@@ -27320,8 +27348,8 @@ msgstr ""
 msgid "Set to ``yes``"
 msgstr "Постављено на ``да``"
 
-#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:70
-#: ../system/maintenance.rst:94
+#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:77
+#: ../system/maintenance.rst:101
 msgid "X"
 msgstr "X"
 
@@ -27382,6 +27410,10 @@ msgid ""
 "list. The addresses to allow are listed in the :docs:`web push section of "
 "the system documentation </appendix/proxy.html#web-push-notifications>`."
 msgstr ""
+"Веб пуш обавештења мобилног приказа се такође шаљу преко пуш сервиса "
+"претраживача и користе ову прокси конфигурацију, укључујући и листу без "
+"проксија. Адресе за дозволу су излистсане у :docs:`веб пуш одељку системске "
+"документације </appendix/proxy.html#web-push-notifications>`."
 
 #: ../settings/system/network.rst:15
 msgid "Proxy configuration comparison"
@@ -28408,6 +28440,11 @@ msgid ""
 "desktop view. Agents turn them on for each device in the mobile view, see "
 "the :user-docs:`mobile view documentation </extras/mobile-view.html>`."
 msgstr ""
+"Пуш обавештења на мобилним уређајима ваших оператера прате иста подешавања "
+"обавештења и не могу се засебно подесити. Zamamd не шаље пуш обавештења на "
+"мобилни уређај док оператер ради у основном приказу. Оператери их могу "
+"укључити за сваки уређај засебно у мобилном приказу, погледајте :user-"
+"docs:`документацију мобилног приказа </extras/mobile-view.html>`."
 
 #: ../settings/ticket.rst:254
 msgid "Duplicate Detection"
@@ -34732,7 +34769,7 @@ msgstr ""
 "Zammad долази са режимом одржавања који можете користити за нпр. ажурирање "
 "инстанце или промену подешавања уз ограничавање доступности функција."
 
-#: ../system/maintenance.rst:13
+#: ../system/maintenance.rst:20
 msgid "Mode"
 msgstr "Режим"
 
@@ -34753,11 +34790,22 @@ msgstr ""
 "Режим одржавања ће ограничити приступ само улози администратора. То значи да "
 "су оператери и клијенти одјављени."
 
-#: ../system/maintenance.rst:23
+#: ../system/maintenance.rst:17
+msgid ""
+"Import mode activates the maintenance mode as well, for as long as it stays "
+"enabled. Access is then denied to all users without the "
+"``admin.maintenance`` permission. See the :docs:`migration guides </"
+"migration/index.html>`."
+msgstr ""
+"Режим увоза такође активира режим одржавања, све док је укључен. Приступ је "
+"затим ускраћен свим корисницима без дозволе ``admin.maintenance``. "
+"Погледајте :docs:`водиче за миграцију </migration/index.html>`."
+
+#: ../system/maintenance.rst:30
 msgid "@Login"
 msgstr "@Пријави се"
 
-#: ../system/maintenance.rst:16
+#: ../system/maintenance.rst:23
 msgid ""
 "This setting allows you to provide a login message within a green banner "
 "above the login screen. Click into the green banner in the settings page to "
@@ -34777,7 +34825,7 @@ msgstr ""
 "Снимак екрана који приказује подразумевану пријавну поруку у оквиру\n"
 "странице са подешавањима"
 
-#: ../system/maintenance.rst:26
+#: ../system/maintenance.rst:33
 msgid ""
 "Send an informative message to **all active sessions**. This comes handy to "
 "inform your agents e.g. about mayor outages or to force reloads after "
@@ -34787,19 +34835,19 @@ msgstr ""
 "обавестите своје оператере, нпр. о дужим прекидима рада или о обавезном "
 "поновном учитавању апликације након измена конфигурације."
 
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "This is the messages title (slightly bigger than the normal message)."
 msgstr "Ово је наслов поруке (мало већи фонт од остатка текста)."
 
-#: ../system/maintenance.rst:34
+#: ../system/maintenance.rst:41
 msgid "The text you want to provide to your logged in sessions."
 msgstr "Текст који желите да пошаљете својим пријављеним сесијама."
 
-#: ../system/maintenance.rst:39
+#: ../system/maintenance.rst:46
 msgid "Reload application"
 msgstr "Освежи апликацију"
 
-#: ../system/maintenance.rst:37
+#: ../system/maintenance.rst:44
 msgid ""
 "Selecting this option will change the message acceptance button from "
 "``Close`` (with nothing happening) to ``Continue session``, which forces the "
@@ -34809,7 +34857,7 @@ msgstr ""
 "икакве функције) у ``Настави сесију``, што приморава апликацију да се поново "
 "учита."
 
-#: ../system/maintenance.rst:43
+#: ../system/maintenance.rst:50
 msgid ""
 "If you have customers that are logged in to Zammad, they'll also be notified "
 "if they're active in that moment."
@@ -34817,11 +34865,11 @@ msgstr ""
 "Ако имате клијенте који су пријављени у Zammad, они ће такође бити "
 "обавештени уколико су активни у том тренутку."
 
-#: ../system/maintenance.rst:48
+#: ../system/maintenance.rst:55
 msgid "Example without reload application"
 msgstr "Пример без поновног учитавања апликације"
 
-#: ../system/maintenance.rst:52
+#: ../system/maintenance.rst:59
 msgid ""
 "Message setting within Zammad's admin settings without ticket reload "
 "application setting."
@@ -34837,7 +34885,7 @@ msgstr ""
 "Снимак екрана који приказује подешавање слања поруке без\n"
 "поновног учитавања апликације"
 
-#: ../system/maintenance.rst:61 ../system/maintenance.rst:85
+#: ../system/maintenance.rst:68 ../system/maintenance.rst:92
 msgid ""
 "The modal all other active sessions will see upon pressing ``Send to "
 "clients``."
@@ -34853,11 +34901,11 @@ msgstr ""
 "Снимак екрана који приказује дијалог изазван поруком одржавања\n"
 "без поновног учитавања апликације"
 
-#: ../system/maintenance.rst:72
+#: ../system/maintenance.rst:79
 msgid "Example with reload application"
 msgstr "Пример са поновним учитавањем апликације"
 
-#: ../system/maintenance.rst:76
+#: ../system/maintenance.rst:83
 msgid ""
 "Message setting within Zammad's admin settings with ticket reload "
 "application setting."
@@ -37493,6 +37541,13 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Приказује тренутну Zammad верзију ваше инстанце."
+
+#~ msgid ""
+#~ "The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided "
+#~ "one when creating your trigger)"
+#~ msgstr ""
+#~ "SHA-1 отисак вашег HMAC-SHA1 кључа за потпис (под претпоставком да сте га "
+#~ "навели приликом додавања окидача)"
 
 #~ msgid "Translation Services"
 #~ msgstr "Сервиси превода"

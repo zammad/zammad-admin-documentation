@@ -1958,7 +1958,7 @@ msgstr ""
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:238 ../manage/roles/permissions.rst:308
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:128
+#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -1987,7 +1987,7 @@ msgstr ""
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
-#: ../manage/templates.rst:40 ../manage/webhook/add.rst:134
+#: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
 msgstr "Aktivní"
@@ -4450,11 +4450,27 @@ msgstr "0008_postmaster_filter_follow_up_merged"
 msgid "Routes follow-up emails for merged tickets to the correct ticket."
 msgstr "Směruje navazující e-maily ke sloučeným tiketům do správného tiketu."
 
-#: ../channels/email/filters/system-filters.rst:113
-msgid "0009_postmaster_filter_follow_up_assignment"
-msgstr "0009_postmaster_filter_follow_up_assignment"
+#: ../channels/email/filters/system-filters.rst:112
+#, fuzzy
+#| msgid "0030_postmaster_filter_out_of_office_check"
+msgid "0009_postmaster_filter_out_of_office_check"
+msgstr "0030_postmaster_filter_out_of_office_check"
 
 #: ../channels/email/filters/system-filters.rst:111
+msgid ""
+"Identifies out-of-office auto-responder emails, assigns them to the correct "
+"ticket and keeps the current ticket state."
+msgstr ""
+"Rozpoznává automatické odpovědi o nepřítomnosti, přiřazuje je ke správnému "
+"tiketu a zachovává aktuální stav tiketu."
+
+#: ../channels/email/filters/system-filters.rst:117
+#, fuzzy
+#| msgid "0009_postmaster_filter_follow_up_assignment"
+msgid "0010_postmaster_filter_follow_up_assignment"
+msgstr "0009_postmaster_filter_follow_up_assignment"
+
+#: ../channels/email/filters/system-filters.rst:115
 msgid ""
 "Sets the owner for follow-up emails based on the **Assign follow-ups** "
 "configuration of the :doc:`group's settings </manage/groups/settings>`."
@@ -4462,11 +4478,11 @@ msgstr ""
 "Nastavuje vlastníka u navazujících e-mailů na základě nastavení **Přiřazovat "
 "navazující zprávy** v :doc:`nastavení skupiny </manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:118
+#: ../channels/email/filters/system-filters.rst:122
 msgid "0011_postmaster_sender_based_on_reply_to"
 msgstr "0011_postmaster_sender_based_on_reply_to"
 
-#: ../channels/email/filters/system-filters.rst:116
+#: ../channels/email/filters/system-filters.rst:120
 msgid ""
 "Sets the sender/from for the article based on the **Sender based on Reply-To "
 "header** configuration of the :doc:`channel's settings <../settings>`."
@@ -4474,11 +4490,23 @@ msgstr ""
 "Nastavuje odesílatele (From) článku na základě nastavení **Odesílatel podle "
 "hlavičky Reply-To** v :doc:`nastavení kanálu <../settings>`."
 
-#: ../channels/email/filters/system-filters.rst:122
+#: ../channels/email/filters/system-filters.rst:126
+#, fuzzy
+#| msgid "6500_postmaster_filter_identify_sender"
+msgid "0012_postmaster_filter_attachment_reference_remove"
+msgstr "6500_postmaster_filter_identify_sender"
+
+#: ../channels/email/filters/system-filters.rst:125
+msgid ""
+"Removes image references to attachments which are stored in Zammad from the "
+"body of incoming HTML emails."
+msgstr ""
+
+#: ../channels/email/filters/system-filters.rst:130
 msgid "0014_postmaster_filter_own_notification_loop_detection"
 msgstr "0014_postmaster_filter_own_notification_loop_detection"
 
-#: ../channels/email/filters/system-filters.rst:121
+#: ../channels/email/filters/system-filters.rst:129
 msgid ""
 "Checks if the email is a self-created notification email, and ignores it in "
 "such cases to prevent email loops."
@@ -4486,11 +4514,11 @@ msgstr ""
 "Kontroluje, zda nejde o e-mail s oznámením, které vytvořil sám Zammad, a v "
 "takovém případě ho ignoruje, aby nevznikla e-mailová smyčka."
 
-#: ../channels/email/filters/system-filters.rst:129
+#: ../channels/email/filters/system-filters.rst:137
 msgid "0015_postmaster_filter_identify_session_user"
 msgstr "0015_postmaster_filter_identify_session_user"
 
-#: ../channels/email/filters/system-filters.rst:125
+#: ../channels/email/filters/system-filters.rst:133
 msgid ""
 "Identifies a session user via ``x-zammad-session-user-id``. If none is "
 "provided or valid, it falls back to sender data and can create a user. This "
@@ -4504,11 +4532,11 @@ msgstr ""
 "přeposlal do systému ze své osobní schránky, se zobrazují jako od zákazníků, "
 "a ne od agenta."
 
-#: ../channels/email/filters/system-filters.rst:133
+#: ../channels/email/filters/system-filters.rst:141
 msgid "0018_postmaster_import_archive"
 msgstr "0018_postmaster_import_archive"
 
-#: ../channels/email/filters/system-filters.rst:132
+#: ../channels/email/filters/system-filters.rst:140
 msgid ""
 "Handles the emails which are imported in :ref:`archive mode <archive-mode-"
 "email>`."
@@ -4516,23 +4544,11 @@ msgstr ""
 "Zpracovává e-maily, které se importují v :ref:`archivním režimu <archive-"
 "mode-email>`."
 
-#: ../channels/email/filters/system-filters.rst:137
-msgid "0030_postmaster_filter_out_of_office_check"
-msgstr "0030_postmaster_filter_out_of_office_check"
-
-#: ../channels/email/filters/system-filters.rst:136
-msgid ""
-"Identifies out-of-office auto-responder emails, assigns them to the correct "
-"ticket and keeps the current ticket state."
-msgstr ""
-"Rozpoznává automatické odpovědi o nepřítomnosti, přiřazuje je ke správnému "
-"tiketu a zachovává aktuální stav tiketu."
-
-#: ../channels/email/filters/system-filters.rst:141
+#: ../channels/email/filters/system-filters.rst:145
 msgid "0200_postmaster_filter_follow_up_possible_check"
 msgstr "0200_postmaster_filter_follow_up_possible_check"
 
-#: ../channels/email/filters/system-filters.rst:140
+#: ../channels/email/filters/system-filters.rst:144
 msgid ""
 "Handles the emails based on the **Follow-up possible** configuration of "
 "the :doc:`group's settings </manage/groups/settings>`."
@@ -4540,11 +4556,11 @@ msgstr ""
 "Zpracovává e-maily na základě nastavení **Navázání možné** v :doc:`nastavení "
 "skupiny </manage/groups/settings>`."
 
-#: ../channels/email/filters/system-filters.rst:145
+#: ../channels/email/filters/system-filters.rst:149
 msgid "0900_postmaster_filter_bounce_follow_up_check"
 msgstr "0900_postmaster_filter_bounce_follow_up_check"
 
-#: ../channels/email/filters/system-filters.rst:144
+#: ../channels/email/filters/system-filters.rst:148
 msgid ""
 "Identifies postmaster bounce notification emails and handles them as follow-"
 "up of the original tickets."
@@ -4552,11 +4568,11 @@ msgstr ""
 "Rozpoznává e-maily s oznámením o nedoručení (bounce) od správce pošty a "
 "zpracovává je jako navazující zprávy k původním tiketům."
 
-#: ../channels/email/filters/system-filters.rst:150
+#: ../channels/email/filters/system-filters.rst:154
 msgid "0950_postmaster_filter_bounce_delivery_permanent_failed"
 msgstr "0950_postmaster_filter_bounce_delivery_permanent_failed"
 
-#: ../channels/email/filters/system-filters.rst:148
+#: ../channels/email/filters/system-filters.rst:152
 msgid ""
 "Identifies postmaster bounce notification emails about permanent delivery "
 "failures and marks affected recipients with ``mail_delivery_failed`` in "
@@ -4566,11 +4582,11 @@ msgstr ""
 "selhání doručení, a dotčeným příjemcům nastaví v uživatelských předvolbách "
 "příznak ``mail_delivery_failed``, aby se jim v budoucnu neposílala oznámení."
 
-#: ../channels/email/filters/system-filters.rst:155
+#: ../channels/email/filters/system-filters.rst:159
 msgid "0955_postmaster_filter_bounce_delivery_temporary_failed"
 msgstr "0955_postmaster_filter_bounce_delivery_temporary_failed"
 
-#: ../channels/email/filters/system-filters.rst:153
+#: ../channels/email/filters/system-filters.rst:157
 msgid ""
 "Identifies postmaster bounce notification emails about temporary delivery "
 "failures (delayed, retryable, status ``4.4.1``) and marks the email as out-"
@@ -4580,11 +4596,11 @@ msgstr ""
 "selhání doručení (zpoždění, lze opakovat, stav ``4.4.1``), a označí e-mail "
 "pro zpracování v kontextu nepřítomnosti."
 
-#: ../channels/email/filters/system-filters.rst:159
+#: ../channels/email/filters/system-filters.rst:163
 msgid "1000_postmaster_filter_database_check"
 msgstr "1000_postmaster_filter_database_check"
 
-#: ../channels/email/filters/system-filters.rst:158
+#: ../channels/email/filters/system-filters.rst:162
 msgid ""
 "Executes active custom email postmaster filters from the database and logs "
 "their processing."
@@ -4592,11 +4608,11 @@ msgstr ""
 "Spouští aktivní vlastní filtry správce pošty z databáze a zapisuje jejich "
 "zpracování do logu."
 
-#: ../channels/email/filters/system-filters.rst:163
+#: ../channels/email/filters/system-filters.rst:167
 msgid "5500_postmaster_internal_article_check"
 msgstr "5500_postmaster_internal_article_check"
 
-#: ../channels/email/filters/system-filters.rst:162
+#: ../channels/email/filters/system-filters.rst:166
 msgid ""
 "Sets the articles visibility to internal if it is a reply to an internal "
 "article or the last outgoing email is internal."
@@ -4604,11 +4620,11 @@ msgstr ""
 "Nastaví viditelnost článku na interní, pokud jde o odpověď na interní článek "
 "nebo pokud je poslední odchozí e-mail interní."
 
-#: ../channels/email/filters/system-filters.rst:167
+#: ../channels/email/filters/system-filters.rst:171
 msgid "6005_postmaster_filter_identify_group"
 msgstr "6005_postmaster_filter_identify_group"
 
-#: ../channels/email/filters/system-filters.rst:166
+#: ../channels/email/filters/system-filters.rst:170
 msgid ""
 "Sets ticket group by using explicit group headers first, then existing "
 "ticket context (ID/number), then mailbox/group mapping or fallback default "
@@ -4618,11 +4634,11 @@ msgstr ""
 "podle kontextu existujícího tiketu (ID/číslo) a nakonec podle přiřazení "
 "schránky ke skupině nebo podle záložní výchozí skupiny."
 
-#: ../channels/email/filters/system-filters.rst:172
+#: ../channels/email/filters/system-filters.rst:176
 msgid "6105_postmaster_filter_sender_is_system_address"
 msgstr "6105_postmaster_filter_sender_is_system_address"
 
-#: ../channels/email/filters/system-filters.rst:170
+#: ../channels/email/filters/system-filters.rst:174
 msgid ""
 "Detects system or agent senders and sets the article sender role (``Agent`` "
 "or ``Customer``), depending on sender address, permissions, group access and "
@@ -4632,12 +4648,12 @@ msgstr ""
 "článku (``Agent`` nebo ``Customer``) v závislosti na adrese odesílatele, "
 "oprávněních, přístupu ke skupině a vztahu k zákazníkovi tiketu."
 
-#: ../channels/email/filters/system-filters.rst:175
-#: ../channels/email/filters/system-filters.rst:176
+#: ../channels/email/filters/system-filters.rst:179
+#: ../channels/email/filters/system-filters.rst:180
 msgid "6500_postmaster_filter_identify_sender"
 msgstr "6500_postmaster_filter_identify_sender"
 
-#: ../channels/email/filters/system-filters.rst:175
+#: ../channels/email/filters/system-filters.rst:179
 msgid ""
 "Checks if sender can be identified as Zammad user and optionally creates a "
 "new user."
@@ -5661,8 +5677,8 @@ msgstr "Omezení"
 msgid "The fields provided by the form are limited to:"
 msgstr "Formulář nabízí pouze tato pole:"
 
-#: ../channels/form.rst:22 ../system/maintenance.rst:93
-#: ../system/maintenance.rst:34
+#: ../channels/form.rst:22 ../system/maintenance.rst:100
+#: ../system/maintenance.rst:41
 msgid "Message"
 msgstr "Zpráva"
 
@@ -11551,7 +11567,7 @@ msgstr ""
 
 #: ../manage/knowledge-base.rst:136 ../manage/public-links.rst:35
 #: ../manage/time-accounting.rst:149 ../manage/time-accounting.rst:163
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "Title"
 msgstr "Název"
 
@@ -17265,19 +17281,24 @@ msgid ""
 "here."
 msgstr "V případě **HTTP Basic autentizace** zadejte sem heslo uživatele."
 
-#: ../manage/webhook/add.rst:77
+#: ../manage/webhook/add.rst:78
 msgid "HMAC SHA1 Signature Token"
 msgstr "Podpisový token HMAC SHA1"
 
 #: ../manage/webhook/add.rst:69
+#, fuzzy
+#| msgid ""
+#| "If set, all sent webhooks contain a `x-hub-signature` header allowing the "
+#| "remote site to verify the request."
 msgid ""
-"If set, all sent webhooks contain a `x-hub-signature` header allowing the "
-"remote site to verify the request."
+"If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing the "
+"remote site to verify the request. Its value is ``sha1=<hex digest>``, so "
+"drop the ``sha1=`` prefix before comparing it with your own signature."
 msgstr ""
 "Pokud je nastaven, obsahují všechny odeslané webhooky hlavičku `x-hub-"
 "signature`, pomocí které může vzdálená strana požadavek ověřit."
 
-#: ../manage/webhook/add.rst:74
+#: ../manage/webhook/add.rst:75
 msgid ""
 "This **does not** encrypt the payload. Use HTTPS connections to secure the "
 "communication. It contains a HMAC signature of the body of the webhook "
@@ -17289,11 +17310,11 @@ msgstr ""
 "podpisech se dozvíte `zde <https://www.w3.org/TR/websub/#authenticated-"
 "content-distribution>`_."
 
-#: ../manage/webhook/add.rst:90
+#: ../manage/webhook/add.rst:91
 msgid "Pre-defined Webhook"
 msgstr "Předdefinovaný webhook"
 
-#: ../manage/webhook/add.rst:80
+#: ../manage/webhook/add.rst:81
 msgid ""
 "This field is only displayed for *pre-defined webhooks*! It only serves as a "
 "reference to a pre-defined webhook. It is not possible to change it for "
@@ -17306,7 +17327,7 @@ msgstr ""
 "Podle typu předdefinovaného webhooku se pod ním mohou zobrazit další pole. "
 "Ta lze použít k dalšímu přizpůsobení chování webhooku."
 
-#: ../manage/webhook/add.rst:87
+#: ../manage/webhook/add.rst:88
 msgid "Example for Mattermost:"
 msgstr "Příklad pro Mattermost:"
 
@@ -17314,11 +17335,11 @@ msgstr "Příklad pro Mattermost:"
 msgid "Additional pre-defined webhook fields"
 msgstr "Další pole předdefinovaného webhooku"
 
-#: ../manage/webhook/add.rst:124
+#: ../manage/webhook/add.rst:125
 msgid "Custom Payload"
 msgstr "Vlastní obsah (payload)"
 
-#: ../manage/webhook/add.rst:93
+#: ../manage/webhook/add.rst:94
 msgid ""
 "By default, it is turned off and the webhook will always send :ref:`webhook-"
 "payload-default` to the target endpoint. When switched on, a code editor "
@@ -17332,7 +17353,7 @@ msgstr ""
 "webhooku ve formátu JSON. Podporované :doc:`/misc/variables` vložíte "
 "pomocí :kbd:`:` :kbd:`:` nebo zadáním ``#{`` pro automatické doplňování."
 
-#: ../manage/webhook/add.rst:102
+#: ../manage/webhook/add.rst:103
 msgid ""
 "The usage of variables is limited compared to other places. Some features "
 "are not available in webhooks (e.g. the ``.value`` extension, translation "
@@ -17346,7 +17367,7 @@ msgstr ""
 "(``#{dt(object.time_attribute, [...]``)). Proměnnou vždy vyberte z návrhů "
 "automatického doplňování."
 
-#: ../manage/webhook/add.rst:107
+#: ../manage/webhook/add.rst:108
 msgid ""
 "The custom payload must have a valid JSON syntax! The code editor will "
 "highlight if there is an issue with the syntax. Also, it will not be "
@@ -17356,7 +17377,7 @@ msgstr ""
 "případné problémy se syntaxí. Neplatnou strukturu JSON navíc nebude možné "
 "uložit."
 
-#: ../manage/webhook/add.rst:110
+#: ../manage/webhook/add.rst:111
 msgid ""
 "Pre-defined webhooks will always provide an initial custom payload, specific "
 "for the associated service."
@@ -17369,11 +17390,11 @@ msgid "Custom payload code editor with variable auto completion"
 msgstr ""
 "Editor kódu pro vlastní obsah (payload) s automatickým doplňováním proměnných"
 
-#: ../manage/webhook/add.rst:116
+#: ../manage/webhook/add.rst:117
 msgid "A basic example for the structure looks like this:"
 msgstr "Základní příklad struktury vypadá takto:"
 
-#: ../manage/webhook/add.rst:127
+#: ../manage/webhook/add.rst:128
 msgid ""
 "If required you can leave useful information for other Zammad admins to "
 "understand the webhook in question better."
@@ -17381,7 +17402,7 @@ msgstr ""
 "V případě potřeby zde můžete zanechat užitečné informace, které ostatním "
 "administrátorům Zammadu pomohou daný webhook lépe pochopit."
 
-#: ../manage/webhook/add.rst:131
+#: ../manage/webhook/add.rst:132
 msgid ""
 "If set to ``inactive``, you can no longer select the webhook in the trigger "
 "or scheduler configuration. Inactive webhooks will not be fired. If triggers "
@@ -17393,7 +17414,7 @@ msgstr ""
 "spouštěče nebo plánovače nakonfigurovány i další akce, ty se provedou i "
 "nadále."
 
-#: ../manage/webhook/add.rst:136
+#: ../manage/webhook/add.rst:137
 msgid ""
 "After you set up your webhook, make sure to invoke it via trigger or "
 "scheduler. In case something doesn't work, have a look at "
@@ -19144,17 +19165,28 @@ msgstr "``X-Hub-Signature``"
 
 #: ../manage/webhook/payload.rst:22
 msgid ""
-"The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided one "
-"when creating your trigger)"
+"The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
+"computed with your signature token as the key. Only sent if you entered a "
+"signature token in the trigger"
 msgstr ""
-"Hash SHA-1 vašeho podpisového tokenu HMAC-SHA1 (pokud jste ho při vytváření "
-"spouštěče zadali)"
 
-#: ../manage/webhook/payload.rst:28
+#: ../manage/webhook/payload.rst:0
+#, fuzzy
+#| msgid "``authorizations``"
+msgid "``Authorization``"
+msgstr "``authorizations``"
+
+#: ../manage/webhook/payload.rst:26
+msgid ""
+"The credentials of the trigger, as ``Bearer <token>`` with **Bearer Token** "
+"or as ``Basic <base64>`` with **HTTP Basic Authentication**"
+msgstr ""
+
+#: ../manage/webhook/payload.rst:33
 msgid "Default JSON Payload"
 msgstr "Výchozí obsah (payload) JSON"
 
-#: ../manage/webhook/payload.rst:30
+#: ../manage/webhook/payload.rst:35
 msgid ""
 "When the webhook payload is not customized, requests will include default "
 "payload depending on the webhook type."
@@ -19162,11 +19194,11 @@ msgstr ""
 "Pokud obsah (payload) webhooku není přizpůsoben, obsahují požadavky výchozí "
 "obsah podle typu webhooku."
 
-#: ../manage/webhook/payload.rst:34
+#: ../manage/webhook/payload.rst:39
 msgid "Regular Webhooks (example)"
 msgstr "Běžné webhooky (příklad)"
 
-#: ../manage/webhook/payload.rst:337
+#: ../manage/webhook/payload.rst:342
 msgid ""
 "For better readability, all empty and ``null`` values have been omitted from "
 "the sample payload above. That means the webhooks you receive *will include "
@@ -19176,7 +19208,7 @@ msgstr ""
 "prázdné hodnoty a hodnoty ``null``. Webhooky, které obdržíte, tedy *budou "
 "obsahovat další pole, která zde nejsou uvedena*."
 
-#: ../manage/webhook/payload.rst:340
+#: ../manage/webhook/payload.rst:345
 msgid ""
 "Webhooks will also include fields for any relevant :doc:`custom objects </"
 "system/objects>` defined in your system."
@@ -19184,57 +19216,57 @@ msgstr ""
 "Webhooky budou obsahovat také pole pro všechny relevantní :doc:`vlastní "
 "objekty </system/objects>` definované ve vašem systému."
 
-#: ../manage/webhook/payload.rst:342
+#: ../manage/webhook/payload.rst:347
 msgid ""
 "Attachments are *not included*; links to attachments *are* (authentication "
 "required)."
 msgstr "Přílohy *nejsou zahrnuty*, odkazy na přílohy *ano* (vyžadují ověření)."
 
-#: ../manage/webhook/payload.rst:344
+#: ../manage/webhook/payload.rst:349
 msgid "Linked tickets are *not included*."
 msgstr "Propojené tikety *nejsou zahrnuty*."
 
-#: ../manage/webhook/payload.rst:345
+#: ../manage/webhook/payload.rst:350
 msgid "None of the following **user attributes** are included:"
 msgstr "Nezahrnuje se žádný z následujících **atributů uživatele**:"
 
-#: ../manage/webhook/payload.rst:347
+#: ../manage/webhook/payload.rst:352
 msgid "``last_login``"
 msgstr "``last_login``"
 
-#: ../manage/webhook/payload.rst:348
+#: ../manage/webhook/payload.rst:353
 msgid "``login_failed``"
 msgstr "``login_failed``"
 
-#: ../manage/webhook/payload.rst:349
+#: ../manage/webhook/payload.rst:354
 msgid "``password``"
 msgstr "``password``"
 
-#: ../manage/webhook/payload.rst:350
+#: ../manage/webhook/payload.rst:355
 msgid "``preferences``"
 msgstr "``preferences``"
 
-#: ../manage/webhook/payload.rst:351
+#: ../manage/webhook/payload.rst:356
 msgid "``group_ids``"
 msgstr "``group_ids``"
 
-#: ../manage/webhook/payload.rst:352
+#: ../manage/webhook/payload.rst:357
 msgid "``groups``"
 msgstr "``groups``"
 
-#: ../manage/webhook/payload.rst:353
+#: ../manage/webhook/payload.rst:358
 msgid "``authorization_ids``"
 msgstr "``authorization_ids``"
 
-#: ../manage/webhook/payload.rst:354
+#: ../manage/webhook/payload.rst:359
 msgid "``authorizations``"
 msgstr "``authorizations``"
 
-#: ../manage/webhook/payload.rst:357
+#: ../manage/webhook/payload.rst:362
 msgid "Pre-defined Webhooks"
 msgstr "Předdefinované webhooky"
 
-#: ../manage/webhook/payload.rst:359
+#: ../manage/webhook/payload.rst:364
 msgid ""
 "Each pre-defined webhook template provides a special payload designed for a "
 "particular service. See :doc:`/manage/webhook/examples` for more information."
@@ -27136,8 +27168,8 @@ msgstr ""
 msgid "Set to ``yes``"
 msgstr "Nastaveno na ``yes``"
 
-#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:70
-#: ../system/maintenance.rst:94
+#: ../settings/system/frontend.rst:54 ../system/maintenance.rst:77
+#: ../system/maintenance.rst:101
 msgid "X"
 msgstr "X"
 
@@ -34484,7 +34516,7 @@ msgstr ""
 "instance nebo změnách nastavení a během kterého je omezena dostupnost a "
 "funkce."
 
-#: ../system/maintenance.rst:13
+#: ../system/maintenance.rst:20
 msgid "Mode"
 msgstr "Režim"
 
@@ -34504,11 +34536,19 @@ msgstr ""
 "Režim údržby omezí přístup jen na administrátorské role. Agenti a zákazníci "
 "budou odhlášeni."
 
-#: ../system/maintenance.rst:23
+#: ../system/maintenance.rst:17
+msgid ""
+"Import mode activates the maintenance mode as well, for as long as it stays "
+"enabled. Access is then denied to all users without the "
+"``admin.maintenance`` permission. See the :docs:`migration guides </"
+"migration/index.html>`."
+msgstr ""
+
+#: ../system/maintenance.rst:30
 msgid "@Login"
 msgstr "@Login"
 
-#: ../system/maintenance.rst:16
+#: ../system/maintenance.rst:23
 msgid ""
 "This setting allows you to provide a login message within a green banner "
 "above the login screen. Click into the green banner in the settings page to "
@@ -34527,7 +34567,7 @@ msgstr ""
 "Snímek obrazovky zobrazující výchozí zprávu pro přihlášení na\n"
 "stránce nastavení"
 
-#: ../system/maintenance.rst:26
+#: ../system/maintenance.rst:33
 msgid ""
 "Send an informative message to **all active sessions**. This comes handy to "
 "inform your agents e.g. about mayor outages or to force reloads after "
@@ -34537,19 +34577,19 @@ msgstr ""
 "informování agentů o rozsáhlých výpadcích nebo k vynucení znovunačtení po "
 "změnách konfigurace."
 
-#: ../system/maintenance.rst:31
+#: ../system/maintenance.rst:38
 msgid "This is the messages title (slightly bigger than the normal message)."
 msgstr "Nadpis zprávy (o něco větší než běžný text zprávy)."
 
-#: ../system/maintenance.rst:34
+#: ../system/maintenance.rst:41
 msgid "The text you want to provide to your logged in sessions."
 msgstr "Text, který chcete zobrazit přihlášeným relacím."
 
-#: ../system/maintenance.rst:39
+#: ../system/maintenance.rst:46
 msgid "Reload application"
 msgstr "Znovu načíst aplikaci"
 
-#: ../system/maintenance.rst:37
+#: ../system/maintenance.rst:44
 msgid ""
 "Selecting this option will change the message acceptance button from "
 "``Close`` (with nothing happening) to ``Continue session``, which forces the "
@@ -34559,7 +34599,7 @@ msgstr ""
 "``Zavřít`` (nic se nestane) na ``Pokračovat v relaci``, které vynutí "
 "znovunačtení aplikace."
 
-#: ../system/maintenance.rst:43
+#: ../system/maintenance.rst:50
 msgid ""
 "If you have customers that are logged in to Zammad, they'll also be notified "
 "if they're active in that moment."
@@ -34567,11 +34607,11 @@ msgstr ""
 "Pokud máte v Zammadu přihlášené zákazníky, zprávu dostanou také, pokud jsou "
 "v tu chvíli aktivní."
 
-#: ../system/maintenance.rst:48
+#: ../system/maintenance.rst:55
 msgid "Example without reload application"
 msgstr "Příklad bez znovunačtení aplikace"
 
-#: ../system/maintenance.rst:52
+#: ../system/maintenance.rst:59
 msgid ""
 "Message setting within Zammad's admin settings without ticket reload "
 "application setting."
@@ -34587,7 +34627,7 @@ msgstr ""
 "Snímek obrazovky zobrazující nastavení odeslání zprávy bez zaškrtnuté\n"
 "možnosti Znovu načíst aplikaci"
 
-#: ../system/maintenance.rst:61 ../system/maintenance.rst:85
+#: ../system/maintenance.rst:68 ../system/maintenance.rst:92
 msgid ""
 "The modal all other active sessions will see upon pressing ``Send to "
 "clients``."
@@ -34603,11 +34643,11 @@ msgstr ""
 "Snímek obrazovky zobrazující dialog vyvolaný zprávou z údržby\n"
 "bez znovunačtení aplikace"
 
-#: ../system/maintenance.rst:72
+#: ../system/maintenance.rst:79
 msgid "Example with reload application"
 msgstr "Příklad se znovunačtením aplikace"
 
-#: ../system/maintenance.rst:76
+#: ../system/maintenance.rst:83
 msgid ""
 "Message setting within Zammad's admin settings with ticket reload "
 "application setting."
@@ -37201,6 +37241,13 @@ msgstr "Verze"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zobrazuje aktuální verzi Zammadu vaší instance."
+
+#~ msgid ""
+#~ "The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided "
+#~ "one when creating your trigger)"
+#~ msgstr ""
+#~ "Hash SHA-1 vašeho podpisového tokenu HMAC-SHA1 (pokud jste ho při "
+#~ "vytváření spouštěče zadali)"
 
 #~ msgid ""
 #~ "The checklist feature is currently a standalone feature. This means you "
