@@ -117,6 +117,9 @@ tickets, check the section above and learn more about
    * - ``admin.core_workflow``
      - :doc:`System > Core Workflows </system/core-workflows>`
      -
+   * - ``admin.dashboard``
+     - :doc:`Settings > Dashboard </settings/dashboard>`
+     -
    * - ``admin.data_privacy``
      - :doc:`System > Data Privacy </system/data-privacy>`
      - | Be careful, this allows users to permanently

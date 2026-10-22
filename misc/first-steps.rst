@@ -3,12 +3,13 @@ First Steps
 
 After the basic setup of Zammad with the getting started wizard, you will see
 hints how to use the UI (see "Intro" below if you want to see them again).
-After these hints were shown, the dashboard is presented to you which is
+After these hints were shown, the dashboard is presented to you (unless it is
+turned off in the :doc:`dashboard settings </settings/dashboard>`), which is
 basically the starting page of Zammad. This dashboard provides some useful
 information for the agents.
-You can switch to the **First Steps** section on top of the page to see useful
-links for the start. Depending on your configuration and permission, your list
-may look different.
+You can switch to the **First Steps** section on top of the page (if it is
+turned on) to see useful links for the start. Depending on your configuration
+and permission, your list may look different.
 
 .. figure:: /images/misc/first-steps/first-steps-overview.png
     :align: center
