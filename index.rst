@@ -65,6 +65,7 @@ Zammad Admin Documentation
    :caption: Settings
 
    settings/branding
+   settings/dashboard
    settings/system/index
    settings/security
    settings/ticket
