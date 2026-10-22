@@ -137,7 +137,8 @@ Single Tree Selection Field
 Provides a field with pre-defined values from which the user can select one.
 It supports up to 6 hierarchy levels. To restrict the
 selection of a value (e.g. for parent values), uncheck the box in the "Active"
-column.
+column. To define a default value, select it in the "Default" column; select
+it again to remove the default. Only active values can be the default.
 
 .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
@@ -149,7 +150,9 @@ Multiple Tree Selection Field
 
 Provides a field with pre-defined values from which the user can select one or
 more. It supports up to 6 hierarchy levels. To restrict the selection of a value
-(e.g. for parent values), uncheck the box in the "Active" column.
+(e.g. for parent values), uncheck the box in the "Active" column. To define
+default values, check them in the "Default" column. Only active values can be
+defaults.
 
 .. include:: /system/objects/includes/reposition-treeselect-values.include.rst
 
