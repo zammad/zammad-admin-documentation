@@ -901,7 +901,7 @@ msgid "Use :doc:`object conditions </misc/object-conditions/basics>` to define p
 msgstr ""
 
 #: ../ai/summary.rst:44
-#: ../manage/groups/settings.rst:117
+#: ../manage/groups/settings.rst:125
 msgid "Summary Generation"
 msgstr ""
 
@@ -1083,7 +1083,7 @@ msgstr ""
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
 #: ../channels/email/filters.rst:96
-#: ../manage/groups/settings.rst:121
+#: ../manage/groups/settings.rst:129
 #: ../manage/macros.rst:66
 #: ../manage/organizations/index.rst:120
 #: ../manage/roles/index.rst:89
@@ -1121,7 +1121,7 @@ msgstr ""
 #: ../channels/email/filters.rst:100
 #: ../channels/email/filters.rst:100
 #: ../channels/email/filters.rst:100
-#: ../manage/groups/settings.rst:142
+#: ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:72
 #: ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0
@@ -7698,24 +7698,28 @@ msgstr ""
 msgid "Zammad supports 10 hierarchy levels for groups as a maximum."
 msgstr ""
 
-#: ../manage/groups/settings.rst:35
+#: ../manage/groups/settings.rst:43
 msgid "Assignment timeout"
 msgstr ""
 
 #: ../manage/groups/settings.rst:33
-msgid "The time in minutes after which the ticket's ownership will revert back to *unassigned* after the assigned agent hasn't worked on the ticket. This timeout does *not* take any working hours in account."
+msgid "The time in minutes after which Zammad unassigns the ticket again, so it shows up as *unassigned*. Leave the field empty or enter ``0`` to disable the timeout."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:37
+msgid "The countdown starts when a ticket in state *new* or *open* is assigned to an agent. It restarts whenever the owner or the group changes, the state changes to *new* or *open* or the agent sends a public reply. Editing other ticket attributes and adding internal notes does not count as working on the ticket. Tickets in a pending or closed state are not unassigned. Zammad runs the unassignment check every 10 minutes, so a ticket can stay assigned up to 10 minutes longer than configured. Working hours are not taken into account."
+msgstr ""
+
+#: ../manage/groups/settings.rst:63
 msgid "Follow-up possible"
 msgstr ""
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:46
 msgid "This option allows you to decide how Zammad should react if a customer replies to a closed ticket (no matter if by e.g. email or UI)."
 msgstr ""
 
-#: ../manage/groups/settings.rst:42
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:50
+#: ../manage/groups/settings.rst:71
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
 #: ../misc/object-conditions/basics.rst:158
@@ -7745,43 +7749,43 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:50
 msgid "The ticket will be reopened. This is the default value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:46
+#: ../manage/groups/settings.rst:54
 msgid "do not reopen Ticket but create new Ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:53
 msgid "The ticket will remain closed and Zammad will create a new ticket instead. The new ticket contains the customers reply only."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:63
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:57
 msgid "The ticket can be reopened unless the specified number of days *after last ticket closure* has been exceeded. If the time limit is exceeded, Zammad will create a new ticket instead of reopening."
 msgstr ""
 
-#: ../manage/groups/settings.rst:53
+#: ../manage/groups/settings.rst:61
 msgid "Choosing this option will provide the option *Reopening time in days* which requires you to provide the number of days you want Zammad to wait until it creates new tickets."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "Assign follow-ups"
 msgstr ""
 
-#: ../manage/groups/settings.rst:58
+#: ../manage/groups/settings.rst:66
 msgid "This setting allows you to decide if, upon a reopen of a ticket, the last assigned owner should stay assigned or if Zammad should reset the owner to nobody."
 msgstr ""
 
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:71
 msgid "The ticket will remain with the last agent who owned it. This is the default value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 #: ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
 #: ../misc/object-conditions/basics.rst:159
@@ -7805,119 +7809,119 @@ msgstr ""
 msgid "no"
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "The owner assignment of the ticket will be removed."
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "Sending Email Address"
 msgstr ""
 
-#: ../manage/groups/settings.rst:69
+#: ../manage/groups/settings.rst:77
 msgid "Select which sender's email address Zammad will use outbound for replying on a ticket in this group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:80
 msgid "**You don't have an email address configured yet?**"
 msgstr ""
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:82
 msgid "Please configure an email based channel before here"
 msgstr ""
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:84
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:77
+#: ../manage/groups/settings.rst:85
 msgid ":doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:78
+#: ../manage/groups/settings.rst:86
 msgid ":doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:87
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "and come back afterwards."
 msgstr ""
 
-#: ../manage/groups/settings.rst:86
+#: ../manage/groups/settings.rst:94
 msgid "Signature"
 msgstr ""
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:92
 msgid "Choose which :doc:`signature </channels/email/signatures>` to use when replying to tickets in this group. Leaving this option unset will send emails without any signature."
 msgstr ""
 
-#: ../manage/groups/settings.rst:94
+#: ../manage/groups/settings.rst:102
 msgid "Shared Drafts"
 msgstr ""
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:97
 msgid "Shared drafts allows your agents to share ticket drafts (for new and existing tickets) with their colleagues. By default this setting is enabled, disable it if you don't want your agents to use this function."
 msgstr ""
 
-#: ../manage/groups/settings.rst:93
+#: ../manage/groups/settings.rst:101
 msgid "Learn more about shared drafts :user-docs:`in our user documentation </extras/shared-drafts.html>`."
 msgstr ""
 
-#: ../manage/groups/settings.rst:97
+#: ../manage/groups/settings.rst:105
 msgid "Allows you to override the :doc:`AI ticket summary </ai/summary>` configuration for this group. Use one of the following values:"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Global Default"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Use the value configured in *AI > Ticket Summary*."
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "On Ticket Detail Opening"
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "Always trigger summary generation when an agent opens the ticket."
 msgstr ""
 
-#: ../manage/groups/settings.rst:108
+#: ../manage/groups/settings.rst:116
 msgid "On Ticket Summary Sidebar Activation"
 msgstr ""
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:115
 msgid "Trigger summary generation only when the agent opens the summary sidebar tab."
 msgstr ""
 
-#: ../manage/groups/settings.rst:110
+#: ../manage/groups/settings.rst:118
 msgid "Default setting: ``Global Default``."
 msgstr ""
 
-#: ../manage/groups/settings.rst:114
+#: ../manage/groups/settings.rst:122
 msgid "In addition to this group-level setting, you can also use :doc:`object conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary configuration </ai/summary>` to define more precisely which tickets should have the summary generated."
 msgstr ""
 
-#: ../manage/groups/settings.rst:120
+#: ../manage/groups/settings.rst:128
 msgid "An internal note about the group that is only visible to people who can access the group management area."
 msgstr ""
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:132
 msgid "Don't need the group anymore or want to restrict the selection of this group? If you can't or don't want to recycle (rename) the group, you can also set it to inactive. Agents will no longer be able to see or edit tickets in this group. However, customers can still interact with their existing tickets in an inactive group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:132
+#: ../manage/groups/settings.rst:140
 msgid "Want to handle tickets from an inactive group, which are updated by customers?"
 msgstr ""
 
-#: ../manage/groups/settings.rst:135
+#: ../manage/groups/settings.rst:143
 msgid "You could e.g. create a trigger which moves them to another group when they got updated. Create this trigger before deactivating the group so it is selectable in the trigger configuration."
 msgstr ""
 
-#: ../manage/groups/settings.rst:141
+#: ../manage/groups/settings.rst:149
 msgid "Please keep in mind that you still can route tickets into these groups. This is potentially dangerous, make sure the group is no longer part of email filters or a destination group."
 msgstr ""
 
