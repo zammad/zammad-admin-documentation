@@ -1560,7 +1560,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:248
 #: ../manage/webhook/add.rst:52
 #: ../settings/security/third-party/saml.rst:140
-#: ../system/integrations/i-doit.rst:66
+#: ../system/integrations/i-doit.rst:54
 msgid "SSL verification"
 msgstr ""
 
@@ -11904,7 +11904,7 @@ msgstr ""
 
 #: ../manage/webhook/add.rst:42
 #: ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
+#: ../system/integrations/i-doit.rst:39
 msgid "Endpoint"
 msgstr ""
 
@@ -23149,133 +23149,123 @@ msgid "i-doit"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:4
-msgid "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration management database) tool which is capable of managing information about your physical and digital IT infrastructure. If you use tickets to track issues with your IT components, you may want to connect them with your CMDB. With Zammad, you can do that in two ways!"
+msgid "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration management database). It manages information about your physical and digital IT infrastructure. Linking it to Zammad adds context on both sides: agents see which infrastructure a ticket is about, and people working in i-doit see what has been reported about an object."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:11
-msgid "1. Add i-doit Links to Zammad Tickets"
+#: ../system/integrations/i-doit.rst:10
+msgid "The integration has two independent parts, each configured on its own:"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:12
+msgid "The ticket sidebar in Zammad shows the i-doit objects linked to a ticket. You configure this in Zammad's admin settings."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:14
-#: ../system/integrations/i-doit.rst:72
-msgid "What Users See"
+msgid "An object's page in i-doit shows the Zammad tickets linked to it. You configure this in i-doit."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:20
-msgid "i-doit integration in Zammad's ticket sidebar"
+#: ../system/integrations/i-doit.rst:17
+msgid "You can use one part without the other. Zammad stores only the object IDs on the ticket and reads the object data from i-doit each time the panel is shown. A renamed object therefore appears under its new name and an object deleted in i-doit drops off the list. Customers never see the panel, and an agent needs update access to a ticket to change its links. How agents and i-doit users work with both parts is described in the :user-docs:`user documentation </extras/i-doit-track-company-property.html>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:20
-msgid "The i-doit integration will appear under a new 🖨 tab in the ticket sidebar."
+#: ../system/integrations/i-doit.rst:26
+msgid "Configure Object Linking in Zammad"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:22
-msgid "i-doit integration puts a new tab in Zammad's ticket sidebar where you can add links to existing i-doit devices for easy reference. (See our :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to learn how it works in practice)."
+#: ../system/integrations/i-doit.rst:28
+msgid "The settings are under *System > Integrations > i-doit* and require the ``admin.integration`` permission. Use the switch at the top of the page to enable the panel. Switching it off hides the panel but keeps the links stored on existing tickets."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:29
-#: ../system/integrations/i-doit.rst:85
-msgid "How to Set it Up"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:31
-msgid "It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_. Make sure to have it properly set up. Use the following setting:"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:35
-msgid "Active: ``Yes``"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:36
-msgid "Enforce authentication by username and password: ``No``"
+#: ../system/integrations/i-doit.rst:None
+msgid "i-doit integration settings in Zammad's admin settings"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:38
-msgid "To set it up, enable the integration in the Zammad admin settings under *System > Integrations > i-doit*:"
+msgid "The root URL of your i-doit installation, including the protocol, e.g. ``https://idoit.example.com``. Zammad adds ``/src/jsonrpc.php`` to it."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit settings within the integration pages"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:46
-msgid "The root URL of your i-doit installation."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:55
+#: ../system/integrations/i-doit.rst:42
 msgid "API token"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:49
-msgid "Found in the i-doit admin area under *Interfaces / external data > JSON-RPC API > Common Settings*."
+#: ../system/integrations/i-doit.rst:42
+msgid "The key from i-doit's JSON-RPC API settings."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:0
-msgid "i-doit administration interface with API configuration"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:59
+#: ../system/integrations/i-doit.rst:46
 msgid "Client ID"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:58
-msgid "A unique name to identify Zammad within i-doit. Zammad does not require you to enter a value here, but i-doit might!"
+#: ../system/integrations/i-doit.rst:45
+msgid "Zammad stores this value but does not send it to i-doit, so it has no effect. Leave it empty."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:62
-msgid "Here you can decide if the certificate of your i-doit system has to be verified or not. In case you are using custom certificates, please have a look at :doc:`how to add them to Zammad </settings/security/ssl-certificates>`."
+#: ../system/integrations/i-doit.rst:49
+msgid "Decides whether Zammad verifies the certificate of your i-doit installation. Default value: ``yes``. If you use a custom certificate, add it to Zammad as described in :doc:`SSL certificates </settings/security/ssl-certificates>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:69
-msgid "2. List / Create Zammad Tickets in i-doit"
+#: ../system/integrations/i-doit.rst:56
+msgid "Zammad reads the objects through i-doit's JSON-RPC API, which ships as an add-on and is not part of the i-doit Docker images. If the add-on is missing, i-doit's API answers ``Api Module is not available.`` and Zammad cannot read any objects. Activate the API and make sure that it does not enforce authentication by username and password, so the API key alone is sufficient. Which objects the key can read is defined by the rights of its user in i-doit. Zammad itself offers every object type that i-doit returns."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "Zammad integration in i-doit's device view"
+#: ../system/integrations/i-doit.rst:64
+msgid "Clicking ``Save`` verifies the connection by requesting i-doit's object types. If i-doit doesn't answer, Zammad shows the reason instead of saving. The **Recent Logs** table below the settings lists the requests Zammad sent to i-doit, which helps to track down a failed connection."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:78
-msgid "i-doit's ticket system integration gives you a way to see all the tickets for a given device without ever leaving i-doit. (See our :user-docs:`user documentation </extras/i-doit-track-company-property.html>` to learn how it works in practice)."
+#: ../system/integrations/i-doit.rst:70
+msgid "Configure Ticket Linking in i-doit"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:87
-msgid "Enable this integration in the i-doit admin settings under *Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:"
+#: ../system/integrations/i-doit.rst:72
+msgid "i-doit's trouble ticket system integration (TTS) shows the Zammad tickets that are linked to an object on the object's page, so you can see what has been reported about it without leaving i-doit. The list holds up to 10 tickets, and each row links to the ticket in Zammad."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit administration interface with TTS configuration"
+#: ../system/integrations/i-doit.rst:77
+msgid "In i-doit, the settings are under *Administration > Import and interfaces > Trouble Ticket System (TTS)*."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "TTS-Type"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "``Zammad``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:107
-msgid "Username / Password"
+#: ../system/integrations/i-doit.rst:90
+msgid "Username and Password"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:99
-msgid "Login credentials for a Zammad agent."
+#: ../system/integrations/i-doit.rst:84
+msgid "Login credentials of a Zammad agent. i-doit searches Zammad's API with this account, and Zammad returns only the tickets this agent may read. The agent therefore needs read access to the groups whose tickets should show up on i-doit objects."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:101
-msgid "This agent must have **read permission** for all :doc:`groups </manage/groups/index>` that plan on using the i-doit integration."
+#: ../system/integrations/i-doit.rst:89
+msgid "Consider a dedicated agent for this purpose: if the password of the account changes, you have to update it here."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:105
-msgid "You may even wish to create a dedicated agent account just for this integration (otherwise, if the agent ever changes her password, you will have to remember to update it here)."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:109
+#: ../system/integrations/i-doit.rst:93
 msgid "URL incl. protocol"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:110
+#: ../system/integrations/i-doit.rst:93
 msgid "``https://your.zammad.domain``"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:98
+msgid "TLS-Certificate"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:96
+msgid "A certificate file from i-doit's file management that i-doit uses to verify Zammad's certificate. Leave it empty unless your Zammad installation uses a certificate that i-doit does not trust."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Request Tracker queues"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Belongs to the Request Tracker integration. i-doit shows the field for every TTS-Type, so leave it empty."
 msgstr ""
 
 #: ../system/integrations/index.rst:2
