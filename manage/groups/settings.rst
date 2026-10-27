@@ -30,9 +30,17 @@ Parent group
    Zammad supports 10 hierarchy levels for groups as a maximum.
 
 Assignment timeout
-   The time in minutes after which the ticket's ownership will revert back to
-   *unassigned* after the assigned agent hasn't worked on the ticket.
-   This timeout does *not* take any working hours in account.
+   The time in minutes after which Zammad unassigns the ticket again, so it
+   shows up as *unassigned*. Leave the field empty or enter ``0`` to disable
+   the timeout.
+
+   The countdown starts when a ticket in state *new* or *open* is assigned to an
+   agent. It restarts whenever the owner or the group changes, the state
+   changes to *new* or *open* or the agent sends a public reply. Editing other
+   ticket attributes and adding internal notes does not count as working on the
+   ticket. Tickets in a pending or closed state are not unassigned. Zammad runs
+   the unassignment check every 10 minutes, so a ticket can stay assigned up to
+   10 minutes longer than configured. Working hours are not taken into account.
 
 Follow-up possible
    This option allows you to decide how Zammad should react if a customer
