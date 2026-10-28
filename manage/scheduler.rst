@@ -31,8 +31,11 @@ is required.
 Create a new scheduler job by clicking the ``New Scheduler`` button
 in the top right corner. This opens a dialog where you can define your scheduler
 job. To edit an existing scheduler, simply click on the row and the dialog gets
-opened again. The ︙ action menu holds the options to clone or delete the
-scheduler job.
+opened again. The ︙ action menu holds the options to run, clone or delete the
+scheduler job. **Run now** executes the job immediately, regardless of its
+execution time, and processes all objects matching its conditions. Zammad asks
+for confirmation before the run starts, and the action is not available while a
+run is in progress.
 
 After creating at least one scheduler job, you can find a table in the main
 area. There you can see additional information like how many objects were
