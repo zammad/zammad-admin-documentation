@@ -2910,7 +2910,7 @@ msgstr ""
 #: ../misc/variables/config.rst:1
 #: ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
-#: ../settings/security/base.rst:117
+#: ../settings/security/base.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr ""
@@ -9263,7 +9263,7 @@ msgid "Requires configuration of :doc:`CTI integration </system/integrations/cti
 msgstr ""
 
 #: ../manage/roles/permissions.rst:28
-#: ../settings/security/base.rst:95
+#: ../settings/security/base.rst:141
 msgid "``ticket.agent``"
 msgstr ""
 
@@ -10148,7 +10148,7 @@ msgid "supervisors and limit the access via :doc:`/manage/report-profiles` first
 msgstr ""
 
 #: ../manage/roles/permissions.rst:330
-#: ../settings/security/base.rst:96
+#: ../settings/security/base.rst:142
 msgid "``ticket.customer``"
 msgstr ""
 
@@ -13283,6 +13283,7 @@ msgstr ""
 #: ../misc/composer.rst:35
 #: ../misc/composer.rst:47
 #: ../misc/composer.rst:57
+#: ../settings/security/base.rst:109
 #: ../settings/security/password.rst:51
 #: ../settings/security/password.rst:74
 #: ../settings/ticket.rst:138
@@ -17368,70 +17369,102 @@ msgid "Figure showing de-activated \"Password Login\" setting"
 msgstr ""
 
 #: ../settings/security/base.rst:77
-msgid "To help administrators to overcome login issues, Zammad automatically offers a password request for administrator users as you can see in the screenshot above. This allows you to adjust third-party applications, even if the login doesn't work."
+msgid "To help administrators to overcome login issues, Zammad automatically offers a password request for administrator users as you can see in the screenshot above. This allows you to adjust third-party applications, even if the login doesn't work. Open ``https://<your-zammad>/#admin_password_auth`` directly, or use the **Request the password login here** link on the login screen. After entering your username or email address, Zammad sends a one-time login link to your email address, valid for one day. Opening the link shows the password login form, also when the automatic third-party login redirects the regular login screen."
 msgstr ""
 
-#: ../settings/security/base.rst:85
-msgid "Session Timeout"
-msgstr ""
-
-#: ../settings/security/base.rst:87
-msgid "All settings below by default are set to ``4 weeks``. Session Timeout defines the life time of a users session. As soon as it's reached, Zammad will automatically log off the session in question."
+#: ../settings/security/base.rst:90
+msgid "Automatic Third-party Login"
 msgstr ""
 
 #: ../settings/security/base.rst:92
-msgid "Zammad takes the highest value assigned for the user based on the permissions."
-msgstr ""
-
-#: ../settings/security/base.rst:94
-msgid "``admin``"
-msgstr ""
-
-#: ../settings/security/base.rst:97
-msgid "``default`` (fallback if user doesn't have above permissions set)"
+msgid "Activates the automatic redirect from the login screen to the sign-in page of a :doc:`third-party <third-party>` provider. This works with every provider Zammad offers, SAML, OpenID Connect and OAuth providers included. Users get sent straight to the provider instead of seeing Zammad's login screen and continue to the page they originally requested after signing in, e.g. a ticket link from a notification email."
 msgstr ""
 
 #: ../settings/security/base.rst:99
-msgid "All settings act independently from each other allowing you to disable the timeouts for e.g. admins, but not agents."
-msgstr ""
-
-#: ../settings/security/base.rst:103
-msgid "Let's suppose you configured the following session timeouts:"
-msgstr ""
-
-#: ../settings/security/base.rst:105
-msgid "Default: 3 weeks"
-msgstr ""
-
-#: ../settings/security/base.rst:106
-msgid "Admin: 2 weeks"
-msgstr ""
-
-#: ../settings/security/base.rst:107
-msgid "Ticket.agent: 4 weeks"
-msgstr ""
-
-#: ../settings/security/base.rst:108
-msgid "Ticket.customer: 1 week"
-msgstr ""
-
-#: ../settings/security/base.rst:110
-msgid "This results in the following situations:"
-msgstr ""
-
-#: ../settings/security/base.rst:112
-msgid "A user with ``admin`` permission will have a timeout of 2 weeks"
+msgid "The redirect takes effect only when **Password Login** is deactivated and exactly one third-party provider is enabled. Otherwise users sign in through the login screen as usual. Zammad also holds the redirect back in maintenance mode so administrators keep their way in. The same happens when a sign-in attempt returns to Zammad without a session, and Zammad retries the redirect after 60 seconds. With the redirect in place, the fallback under :ref:`Password Login <security_password_login>` is still available: the one-time login link from the email opens the password login form without the redirect."
 msgstr ""
 
 #: ../settings/security/base.rst:113
+msgid "After a logout Zammad does not sign users back in automatically, even when their provider session is still valid. What happens next depends on the provider's logout support:"
+msgstr ""
+
+#: ../settings/security/base.rst:120
+msgid "**With logout support**"
+msgstr ""
+
+#: ../settings/security/base.rst:118
+msgid "Logging out of Zammad also ends the session at the provider (SAML with a single logout URL, OpenID Connect with an end session endpoint). The next visit shows the provider's own sign-in page."
+msgstr ""
+
+#: ../settings/security/base.rst:125
+msgid "**Without logout support**"
+msgstr ""
+
+#: ../settings/security/base.rst:123
+msgid "The session at the provider stays valid. This is the case for all OAuth providers, e.g. Facebook, LinkedIn, GitHub, GitLab, Microsoft, Google or Weibo. Zammad then keeps showing its login screen and users sign in again with a click on the provider's button."
+msgstr ""
+
+#: ../settings/security/base.rst:131
+msgid "Session Timeout"
+msgstr ""
+
+#: ../settings/security/base.rst:133
+msgid "All settings below by default are set to ``4 weeks``. Session Timeout defines the life time of a users session. As soon as it's reached, Zammad will automatically log off the session in question."
+msgstr ""
+
+#: ../settings/security/base.rst:138
+msgid "Zammad takes the highest value assigned for the user based on the permissions."
+msgstr ""
+
+#: ../settings/security/base.rst:140
+msgid "``admin``"
+msgstr ""
+
+#: ../settings/security/base.rst:143
+msgid "``default`` (fallback if user doesn't have above permissions set)"
+msgstr ""
+
+#: ../settings/security/base.rst:145
+msgid "All settings act independently from each other allowing you to disable the timeouts for e.g. admins, but not agents."
+msgstr ""
+
+#: ../settings/security/base.rst:149
+msgid "Let's suppose you configured the following session timeouts:"
+msgstr ""
+
+#: ../settings/security/base.rst:151
+msgid "Default: 3 weeks"
+msgstr ""
+
+#: ../settings/security/base.rst:152
+msgid "Admin: 2 weeks"
+msgstr ""
+
+#: ../settings/security/base.rst:153
+msgid "Ticket.agent: 4 weeks"
+msgstr ""
+
+#: ../settings/security/base.rst:154
+msgid "Ticket.customer: 1 week"
+msgstr ""
+
+#: ../settings/security/base.rst:156
+msgid "This results in the following situations:"
+msgstr ""
+
+#: ../settings/security/base.rst:158
+msgid "A user with ``admin`` permission will have a timeout of 2 weeks"
+msgstr ""
+
+#: ../settings/security/base.rst:159
 msgid "A user with ``admin`` and ``ticket.agent`` permissions will have a timeout of 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:115
+#: ../settings/security/base.rst:161
 msgid "A user with ``ticket.customer`` permission will have a timeout of 1 week"
 msgstr ""
 
-#: ../settings/security/base.rst:117
+#: ../settings/security/base.rst:163
 msgid "A user with neither ``admin``, ``ticket.agent`` nor ``ticket.customer`` permissions will have a timeout of 3 weeks"
 msgstr ""
 
