@@ -738,7 +738,7 @@ msgstr ""
 #: ../ai/provider.rst:71 ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
-#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
+#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:92
 #: ../manage/slas.rst:53 ../manage/templates.rst:30
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
@@ -1251,7 +1251,7 @@ msgid ""
 "the summary sidebar tab isn't available."
 msgstr ""
 
-#: ../ai/summary.rst:44 ../manage/groups/settings.rst:117
+#: ../ai/summary.rst:44 ../manage/groups/settings.rst:125
 msgid "Summary Generation"
 msgstr ""
 
@@ -1521,11 +1521,11 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:121 ../manage/macros.rst:66
+#: ../manage/groups/settings.rst:129 ../manage/macros.rst:66
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:241 ../manage/roles/permissions.rst:311
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
+#: ../manage/scheduler.rst:165 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -1547,10 +1547,10 @@ msgid ""
 msgstr ""
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:142
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
-#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
+#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:168
 #: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
@@ -2081,7 +2081,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:248
 #: ../manage/webhook/add.rst:52 ../settings/security/third-party/saml.rst:140
-#: ../system/integrations/i-doit.rst:66
+#: ../system/integrations/i-doit.rst:54
 #, fuzzy
 msgid "SSL verification"
 msgstr "Bloquer les notifications"
@@ -4982,7 +4982,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/form.rst:170 ../manage/report-profiles.rst:50
-#: ../manage/scheduler.rst:112 ../manage/slas.rst:64
+#: ../manage/scheduler.rst:115 ../manage/slas.rst:64
 #: ../system/objects/types.rst:274
 msgid "Preview"
 msgstr ""
@@ -8896,30 +8896,41 @@ msgstr ""
 msgid "Zammad supports 10 hierarchy levels for groups as a maximum."
 msgstr ""
 
-#: ../manage/groups/settings.rst:35
+#: ../manage/groups/settings.rst:43
 #, fuzzy
 msgid "Assignment timeout"
 msgstr "Ticket > Groupe > Délai d'attente d'affectation"
 
 #: ../manage/groups/settings.rst:33
 msgid ""
-"The time in minutes after which the ticket's ownership will revert back to "
-"*unassigned* after the assigned agent hasn't worked on the ticket. This "
-"timeout does *not* take any working hours in account."
+"The time in minutes after which Zammad unassigns the ticket again, so it "
+"shows up as *unassigned*. Leave the field empty or enter ``0`` to disable "
+"the timeout."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:37
+msgid ""
+"The countdown starts when a ticket in state *new* or *open* is assigned to "
+"an agent. It restarts whenever the owner or the group changes, the state "
+"changes to *new* or *open* or the agent sends a public reply. Editing other "
+"ticket attributes and adding internal notes does not count as working on the "
+"ticket. Tickets in a pending or closed state are not unassigned. Zammad runs "
+"the unassignment check every 10 minutes, so a ticket can stay assigned up to "
+"10 minutes longer than configured. Working hours are not taken into account."
+msgstr ""
+
+#: ../manage/groups/settings.rst:63
 #, fuzzy
 msgid "Follow-up possible"
 msgstr "Billet > Groupe > Suivi possible"
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:46
 msgid ""
 "This option allows you to decide how Zammad should react if a customer "
 "replies to a closed ticket (no matter if by e.g. email or UI)."
 msgstr ""
 
-#: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
 #: ../misc/object-conditions/basics.rst:158
@@ -8949,56 +8960,56 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:50
 msgid "The ticket will be reopened. This is the default value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:46
+#: ../manage/groups/settings.rst:54
 msgid "do not reopen Ticket but create new Ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:53
 msgid ""
 "The ticket will remain closed and Zammad will create a new ticket instead. "
 "The new ticket contains the customers reply only."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:63
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:57
 msgid ""
 "The ticket can be reopened unless the specified number of days *after last "
 "ticket closure* has been exceeded. If the time limit is exceeded, Zammad "
 "will create a new ticket instead of reopening."
 msgstr ""
 
-#: ../manage/groups/settings.rst:53
+#: ../manage/groups/settings.rst:61
 msgid ""
 "Choosing this option will provide the option *Reopening time in days* which "
 "requires you to provide the number of days you want Zammad to wait until it "
 "creates new tickets."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "Assign follow-ups"
 msgstr ""
 
-#: ../manage/groups/settings.rst:58
+#: ../manage/groups/settings.rst:66
 msgid ""
 "This setting allows you to decide if, upon a reopen of a ticket, the last "
 "assigned owner should stay assigned or if Zammad should reset the owner to "
 "nobody."
 msgstr ""
 
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:71
 msgid ""
 "The ticket will remain with the last agent who owned it. This is the default "
 "value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
 #: ../misc/object-conditions/basics.rst:159
 #: ../misc/object-conditions/basics.rst:534
@@ -9021,115 +9032,115 @@ msgstr ""
 msgid "no"
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "The owner assignment of the ticket will be removed."
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "Sending Email Address"
 msgstr ""
 
-#: ../manage/groups/settings.rst:69
+#: ../manage/groups/settings.rst:77
 msgid ""
 "Select which sender's email address Zammad will use outbound for replying on "
 "a ticket in this group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:80
 msgid "**You don't have an email address configured yet?**"
 msgstr ""
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:82
 msgid "Please configure an email based channel before here"
 msgstr ""
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:84
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:77
+#: ../manage/groups/settings.rst:85
 #, fuzzy
 msgid ":doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`"
 msgstr "Billet > Prganisation > Organisation partagée"
 
-#: ../manage/groups/settings.rst:78
+#: ../manage/groups/settings.rst:86
 #, fuzzy
 msgid ""
 ":doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 msgstr "Billet > Prganisation > Organisation partagée"
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:87
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "and come back afterwards."
 msgstr ""
 
-#: ../manage/groups/settings.rst:86
+#: ../manage/groups/settings.rst:94
 msgid "Signature"
 msgstr ""
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:92
 msgid ""
 "Choose which :doc:`signature </channels/email/signatures>` to use when "
 "replying to tickets in this group. Leaving this option unset will send "
 "emails without any signature."
 msgstr ""
 
-#: ../manage/groups/settings.rst:94
+#: ../manage/groups/settings.rst:102
 msgid "Shared Drafts"
 msgstr ""
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:97
 msgid ""
 "Shared drafts allows your agents to share ticket drafts (for new and "
 "existing tickets) with their colleagues. By default this setting is enabled, "
 "disable it if you don't want your agents to use this function."
 msgstr ""
 
-#: ../manage/groups/settings.rst:93
+#: ../manage/groups/settings.rst:101
 msgid ""
 "Learn more about shared drafts :user-docs:`in our user documentation </"
 "extras/shared-drafts.html>`."
 msgstr ""
 
-#: ../manage/groups/settings.rst:97
+#: ../manage/groups/settings.rst:105
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
 "configuration for this group. Use one of the following values:"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Global Default"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Use the value configured in *AI > Ticket Summary*."
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "On Ticket Detail Opening"
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "Always trigger summary generation when an agent opens the ticket."
 msgstr ""
 
-#: ../manage/groups/settings.rst:108
+#: ../manage/groups/settings.rst:116
 msgid "On Ticket Summary Sidebar Activation"
 msgstr ""
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:115
 msgid ""
 "Trigger summary generation only when the agent opens the summary sidebar tab."
 msgstr ""
 
-#: ../manage/groups/settings.rst:110
+#: ../manage/groups/settings.rst:118
 msgid "Default setting: ``Global Default``."
 msgstr ""
 
-#: ../manage/groups/settings.rst:114
+#: ../manage/groups/settings.rst:122
 msgid ""
 "In addition to this group-level setting, you can also use :doc:`object "
 "conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary "
@@ -9137,13 +9148,13 @@ msgid ""
 "have the summary generated."
 msgstr ""
 
-#: ../manage/groups/settings.rst:120
+#: ../manage/groups/settings.rst:128
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
 msgstr ""
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:132
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -9152,20 +9163,20 @@ msgid ""
 "existing tickets in an inactive group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:132
+#: ../manage/groups/settings.rst:140
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
 msgstr ""
 
-#: ../manage/groups/settings.rst:135
+#: ../manage/groups/settings.rst:143
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
 "selectable in the trigger configuration."
 msgstr ""
 
-#: ../manage/groups/settings.rst:141
+#: ../manage/groups/settings.rst:149
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -11930,11 +11941,14 @@ msgid ""
 "Create a new scheduler job by clicking the ``New Scheduler`` button in the "
 "top right corner. This opens a dialog where you can define your scheduler "
 "job. To edit an existing scheduler, simply click on the row and the dialog "
-"gets opened again. The ︙ action menu holds the options to clone or delete "
-"the scheduler job."
+"gets opened again. The ︙ action menu holds the options to run, clone or "
+"delete the scheduler job. **Run now** executes the job immediately, "
+"regardless of its execution time, and processes all objects matching its "
+"conditions. Zammad asks for confirmation before the run starts, and the "
+"action is not available while a run is in progress."
 msgstr ""
 
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:40
 msgid ""
 "After creating at least one scheduler job, you can find a table in the main "
 "area. There you can see additional information like how many objects were "
@@ -11945,21 +11959,21 @@ msgstr ""
 msgid "Screenshot shows Zammad's scheduler management"
 msgstr ""
 
-#: ../manage/scheduler.rst:47
+#: ../manage/scheduler.rst:50
 msgid "Scheduler Job Structure"
 msgstr ""
 
-#: ../manage/scheduler.rst:49
+#: ../manage/scheduler.rst:52
 msgid ""
 "Read on for details about the main parts of a scheduler job. A description "
 "of all available fields follows in the :ref:`scheduler-job-details` section."
 msgstr ""
 
-#: ../manage/scheduler.rst:60
+#: ../manage/scheduler.rst:63
 msgid "Execution Time"
 msgstr ""
 
-#: ../manage/scheduler.rst:53
+#: ../manage/scheduler.rst:56
 msgid ""
 "Define time(s) and day(s), when the scheduler job is supposed to run. Simply "
 "click the day and time table entries to select and deselect items. You can "
@@ -11970,11 +11984,11 @@ msgstr ""
 msgid "Screenshot shows date and time selection in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:71
+#: ../manage/scheduler.rst:74
 msgid "Define Object Condition"
 msgstr ""
 
-#: ../manage/scheduler.rst:63
+#: ../manage/scheduler.rst:66
 msgid ""
 "Define a condition to specify the affected objects you want to apply changes "
 "or perform an action. If you're not familiar with conditions in Zammad, you "
@@ -11987,11 +12001,11 @@ msgid ""
 "Screenshot shows object condition definition in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:81
+#: ../manage/scheduler.rst:84
 msgid "Define Action"
 msgstr ""
 
-#: ../manage/scheduler.rst:74
+#: ../manage/scheduler.rst:77
 msgid ""
 "In this area, you define which changes or actions should get applied to the "
 "affected objects. Depending on the selected object context, the available "
@@ -12002,25 +12016,25 @@ msgstr ""
 msgid "Screenshot shows action selection in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:89
 msgid "Scheduler Job Details"
 msgstr ""
 
-#: ../manage/scheduler.rst:89
+#: ../manage/scheduler.rst:92
 msgid "Choose a name for the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:96
 msgid "When should the job run?"
 msgstr ""
 
-#: ../manage/scheduler.rst:92
+#: ../manage/scheduler.rst:95
 msgid ""
 "Choose the points in time when the scheduler should run. It depends on the "
 "configured :doc:`timezone in Zammad </settings/branding>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:97 ../system/core-workflows/how-do-they-work.rst:7
+#: ../manage/scheduler.rst:100 ../system/core-workflows/how-do-they-work.rst:7
 #: ../system/core-workflows/learn-by-example.rst:39
 #: ../system/core-workflows/learn-by-example.rst:94
 #: ../system/core-workflows/learn-by-example.rst:142
@@ -12029,41 +12043,41 @@ msgstr ""
 msgid "Object"
 msgstr ""
 
-#: ../manage/scheduler.rst:96
+#: ../manage/scheduler.rst:99
 msgid ""
 "Choose in which object context the scheduler should be executed. Possible "
 "objects are: **Organization**, **Ticket** and **User**."
 msgstr ""
 
-#: ../manage/scheduler.rst:103
+#: ../manage/scheduler.rst:106
 msgid "Conditions for affected objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:103
 msgid ""
 "Determine the object attributes to select the objects on which the actions "
 "will be applied."
 msgstr ""
 
-#: ../manage/scheduler.rst:106
+#: ../manage/scheduler.rst:109
 msgid ""
 "This list previews some objects that your conditions are matching and shows "
 "a total of how many objects are being matched. Use this to double-check the "
 "entered conditions."
 msgstr ""
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:113
 msgid ""
 "Please be aware that the preview and displayed number is just based on the "
 "currently selected condition. It doesn't necessarily represent the objects "
 "for execution at the defined time."
 msgstr ""
 
-#: ../manage/scheduler.rst:135
+#: ../manage/scheduler.rst:138
 msgid "Execute changes on objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:115
+#: ../manage/scheduler.rst:118
 msgid ""
 "Determine the changes to be made to the object. The possible changes depend "
 "on the selected object context. Be aware that a related object context may "
@@ -12071,66 +12085,66 @@ msgid ""
 "scheduler)."
 msgstr ""
 
-#: ../manage/scheduler.rst:120
+#: ../manage/scheduler.rst:123
 msgid ""
 "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler "
 "jobs. Ticket objects additionally offer to add a checklist from "
 "a :doc:`checklist template </manage/checklist>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:126
+#: ../manage/scheduler.rst:129
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
 "executed, the objects are deleted and no rollback is possible."
 msgstr ""
 
-#: ../manage/scheduler.rst:130
+#: ../manage/scheduler.rst:133
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
 msgstr ""
 
-#: ../manage/scheduler.rst:133
+#: ../manage/scheduler.rst:136
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
 "Zammad's :doc:`data privacy panel </system/data-privacy>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:139
+#: ../manage/scheduler.rst:142
 #, fuzzy
 msgid "Disable notifications"
 msgstr "Bloquer les notifications"
 
-#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:141
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
 msgstr ""
 
-#: ../manage/scheduler.rst:148 ../settings/branding.rst:29
+#: ../manage/scheduler.rst:151 ../settings/branding.rst:29
 msgid "Locale"
 msgstr ""
 
-#: ../manage/scheduler.rst:142 ../manage/scheduler.rst:151
+#: ../manage/scheduler.rst:145 ../manage/scheduler.rst:154
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
 msgstr ""
 
-#: ../manage/scheduler.rst:145
+#: ../manage/scheduler.rst:148
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
 "explanation in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:157 ../settings/branding.rst:45
+#: ../manage/scheduler.rst:160 ../settings/branding.rst:45
 msgid "Timezone"
 msgstr ""
 
-#: ../manage/scheduler.rst:154
+#: ../manage/scheduler.rst:157
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -12138,14 +12152,14 @@ msgid ""
 "<variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:160
+#: ../manage/scheduler.rst:163
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
 "*not* a way to add notes to objects."
 msgstr ""
 
-#: ../manage/scheduler.rst:165
+#: ../manage/scheduler.rst:168
 #, fuzzy
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
@@ -14213,7 +14227,7 @@ msgid "This name will be displayed within trigger and scheduler selections."
 msgstr ""
 
 #: ../manage/webhook/add.rst:42 ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
+#: ../system/integrations/i-doit.rst:39
 msgid "Endpoint"
 msgstr ""
 
@@ -28108,162 +28122,178 @@ msgstr ""
 #: ../system/integrations/i-doit.rst:4
 msgid ""
 "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration "
-"management database) tool which is capable of managing information about "
-"your physical and digital IT infrastructure. If you use tickets to track "
-"issues with your IT components, you may want to connect them with your CMDB. "
-"With Zammad, you can do that in two ways!"
+"management database). It manages information about your physical and digital "
+"IT infrastructure. Linking it to Zammad adds context on both sides: agents "
+"see which infrastructure a ticket is about, and people working in i-doit see "
+"what has been reported about an object."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:11
-msgid "1. Add i-doit Links to Zammad Tickets"
+#: ../system/integrations/i-doit.rst:10
+msgid "The integration has two independent parts, each configured on its own:"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:14 ../system/integrations/i-doit.rst:72
-msgid "What Users See"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:20
-msgid "i-doit integration in Zammad's ticket sidebar"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:20
+#: ../system/integrations/i-doit.rst:12
 msgid ""
-"The i-doit integration will appear under a new 🖨 tab in the ticket sidebar."
+"The ticket sidebar in Zammad shows the i-doit objects linked to a ticket. "
+"You configure this in Zammad's admin settings."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:22
+#: ../system/integrations/i-doit.rst:14
 msgid ""
-"i-doit integration puts a new tab in Zammad's ticket sidebar where you can "
-"add links to existing i-doit devices for easy reference. (See our :user-"
-"docs:`user documentation </extras/i-doit-track-company-property.html>` to "
-"learn how it works in practice)."
+"An object's page in i-doit shows the Zammad tickets linked to it. You "
+"configure this in i-doit."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:29 ../system/integrations/i-doit.rst:85
-msgid "How to Set it Up"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:31
+#: ../system/integrations/i-doit.rst:17
 msgid ""
-"It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-"
-"add-on/>`_. Make sure to have it properly set up. Use the following setting:"
+"You can use one part without the other. Zammad stores only the object IDs on "
+"the ticket and reads the object data from i-doit each time the panel is "
+"shown. A renamed object therefore appears under its new name and an object "
+"deleted in i-doit drops off the list. Customers never see the panel, and an "
+"agent needs update access to a ticket to change its links. How agents and i-"
+"doit users work with both parts is described in the :user-docs:`user "
+"documentation </extras/i-doit-track-company-property.html>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:35
-msgid "Active: ``Yes``"
+#: ../system/integrations/i-doit.rst:26
+#, fuzzy
+msgid "Configure Object Linking in Zammad"
+msgstr "Configuration du greffon de clavardage"
+
+#: ../system/integrations/i-doit.rst:28
+msgid ""
+"The settings are under *System > Integrations > i-doit* and require the "
+"``admin.integration`` permission. Use the switch at the top of the page to "
+"enable the panel. Switching it off hides the panel but keeps the links "
+"stored on existing tickets."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:36
-msgid "Enforce authentication by username and password: ``No``"
+#: ../system/integrations/i-doit.rst:None
+msgid "i-doit integration settings in Zammad's admin settings"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:38
 msgid ""
-"To set it up, enable the integration in the Zammad admin settings under "
-"*System > Integrations > i-doit*:"
+"The root URL of your i-doit installation, including the protocol, e.g. "
+"``https://idoit.example.com``. Zammad adds ``/src/jsonrpc.php`` to it."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit settings within the integration pages"
+#: ../system/integrations/i-doit.rst:42
+msgid "API token"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:42
+msgid "The key from i-doit's JSON-RPC API settings."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:46
-msgid "The root URL of your i-doit installation."
+msgid "Client ID"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:55
-msgid "API token"
+#: ../system/integrations/i-doit.rst:45
+msgid ""
+"Zammad stores this value but does not send it to i-doit, so it has no "
+"effect. Leave it empty."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:49
 msgid ""
-"Found in the i-doit admin area under *Interfaces / external data > JSON-RPC "
-"API > Common Settings*."
+"Decides whether Zammad verifies the certificate of your i-doit installation. "
+"Default value: ``yes``. If you use a custom certificate, add it to Zammad as "
+"described in :doc:`SSL certificates </settings/security/ssl-certificates>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:0
-msgid "i-doit administration interface with API configuration"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:59
-msgid "Client ID"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:58
+#: ../system/integrations/i-doit.rst:56
 msgid ""
-"A unique name to identify Zammad within i-doit. Zammad does not require you "
-"to enter a value here, but i-doit might!"
+"Zammad reads the objects through i-doit's JSON-RPC API, which ships as an "
+"add-on and is not part of the i-doit Docker images. If the add-on is "
+"missing, i-doit's API answers ``Api Module is not available.`` and Zammad "
+"cannot read any objects. Activate the API and make sure that it does not "
+"enforce authentication by username and password, so the API key alone is "
+"sufficient. Which objects the key can read is defined by the rights of its "
+"user in i-doit. Zammad itself offers every object type that i-doit returns."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:62
+#: ../system/integrations/i-doit.rst:64
 msgid ""
-"Here you can decide if the certificate of your i-doit system has to be "
-"verified or not. In case you are using custom certificates, please have a "
-"look at :doc:`how to add them to Zammad </settings/security/ssl-"
-"certificates>`."
+"Clicking ``Save`` verifies the connection by requesting i-doit's object "
+"types. If i-doit doesn't answer, Zammad shows the reason instead of saving. "
+"The **Recent Logs** table below the settings lists the requests Zammad sent "
+"to i-doit, which helps to track down a failed connection."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:69
-msgid "2. List / Create Zammad Tickets in i-doit"
+#: ../system/integrations/i-doit.rst:70
+msgid "Configure Ticket Linking in i-doit"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "Zammad integration in i-doit's device view"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:78
+#: ../system/integrations/i-doit.rst:72
 msgid ""
-"i-doit's ticket system integration gives you a way to see all the tickets "
-"for a given device without ever leaving i-doit. (See our :user-docs:`user "
-"documentation </extras/i-doit-track-company-property.html>` to learn how it "
-"works in practice)."
+"i-doit's trouble ticket system integration (TTS) shows the Zammad tickets "
+"that are linked to an object on the object's page, so you can see what has "
+"been reported about it without leaving i-doit. The list holds up to 10 "
+"tickets, and each row links to the ticket in Zammad."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:87
+#: ../system/integrations/i-doit.rst:77
 msgid ""
-"Enable this integration in the i-doit admin settings under *Interfaces / "
-"external data > Trouble Ticket System (TTS) > Configuration*:"
+"In i-doit, the settings are under *Administration > Import and interfaces > "
+"Trouble Ticket System (TTS)*."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit administration interface with TTS configuration"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "TTS-Type"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "``Zammad``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:107
-msgid "Username / Password"
+#: ../system/integrations/i-doit.rst:90
+msgid "Username and Password"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:99
-msgid "Login credentials for a Zammad agent."
+#: ../system/integrations/i-doit.rst:84
+msgid ""
+"Login credentials of a Zammad agent. i-doit searches Zammad's API with this "
+"account, and Zammad returns only the tickets this agent may read. The agent "
+"therefore needs read access to the groups whose tickets should show up on i-"
+"doit objects."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:89
+msgid ""
+"Consider a dedicated agent for this purpose: if the password of the account "
+"changes, you have to update it here."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:93
+msgid "URL incl. protocol"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:93
+msgid "``https://your.zammad.domain``"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:98
+#, fuzzy
+msgid "TLS-Certificate"
+msgstr "Bloquer les notifications"
+
+#: ../system/integrations/i-doit.rst:96
+msgid ""
+"A certificate file from i-doit's file management that i-doit uses to verify "
+"Zammad's certificate. Leave it empty unless your Zammad installation uses a "
+"certificate that i-doit does not trust."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Request Tracker queues"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:101
 msgid ""
-"This agent must have **read permission** for all :doc:`groups </manage/"
-"groups/index>` that plan on using the i-doit integration."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:105
-msgid ""
-"You may even wish to create a dedicated agent account just for this "
-"integration (otherwise, if the agent ever changes her password, you will "
-"have to remember to update it here)."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:109
-msgid "URL incl. protocol"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:110
-msgid "``https://your.zammad.domain``"
+"Belongs to the Request Tracker integration. i-doit shows the field for every "
+"TTS-Type, so leave it empty."
 msgstr ""
 
 #: ../system/integrations/index.rst:2
