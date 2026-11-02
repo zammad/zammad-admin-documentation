@@ -81,8 +81,9 @@ Password Login
    directly, or use the **Request the password login here** link on the
    login screen. After entering your username or email address, Zammad sends
    a one-time login link to your email address, valid for one day. Opening
-   the link shows the password login form, also when the automatic
-   third-party login redirects the regular login screen.
+   the link shows the password login form, also when
+   :ref:`Automatic Third-party Login <security_automatic_third_party_login>`
+   is active.
 
 .. _security_automatic_third_party_login:
 
@@ -99,12 +100,11 @@ in, e.g. a ticket link from a notification email.
 The redirect takes effect only when **Password Login** is deactivated and
 exactly one third-party provider is enabled. Otherwise users sign in
 through the login screen as usual. Zammad also holds the redirect back in
-maintenance mode so administrators keep their way in. The same happens when
-a sign-in attempt returns to Zammad without a session, and Zammad retries
-the redirect after 60 seconds. With the redirect in place, the fallback
-under :ref:`Password Login <security_password_login>` is still available:
-the one-time login link from the email opens the password login form
-without the redirect.
+maintenance mode so administrators keep their way in. The same happens for
+60 seconds when a sign-in attempt returns to Zammad without a session. The
+next visit of the login page after that redirects again. With the redirect
+in place, the administrator fallback under
+:ref:`Password Login <security_password_login>` stays available.
 
 Default: ``no``
 
