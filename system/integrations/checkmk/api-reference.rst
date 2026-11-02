@@ -159,7 +159,8 @@ Which Values Can Be Set?
    If you provide a value that Zammad doesn't understand
    (*e.g.,* ``-F "priority=high"``), it's not always clear what will happen.
    In some cases, a ticket will be created with the default values instead - but
-   in others, it may not be created at all!
+   in others, it may not be created at all. An unknown ``group`` value is
+   rejected with HTTP 422 and no ticket is created.
 
 So what values does Zammad understand, then?
 Well, it depends...
