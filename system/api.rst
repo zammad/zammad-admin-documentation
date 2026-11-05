@@ -3,22 +3,18 @@ API
 
 Zammad comes with a REST API that allows external applications and scripts to
 read and write data of your Zammad instance without using the web interface.
-The API endpoints themselves are always available, the settings on this tab
-only decide how clients authenticate. The tab *System > API* has two jobs: it
-decides which authentication methods Zammad accepts for API requests and it
-manages the applications that use Zammad as an OAuth provider. The
-``admin.api`` permission is required to access the tab.
+The API endpoints themselves are always available, the settings of this page
+only decide how clients authenticate and whether the MCP server answers. The
+``admin.api`` permission is required to access the page.
 
 The endpoints and the data they expect are not described on this page. You can
 find them in the :docs:`REST API documentation </api/intro.html>` of our system
 documentation.
 
-Authentication Methods
-----------------------
-
-Zammad supports three ways for a client to authenticate against the API. The
-first two are toggles on this page, the third one comes with the OAuth
-applications further down:
+Zammad supports three ways for a client to authenticate against the REST API.
+This overview only names them, the settings themselves are organized
+differently: the first two methods are toggles on the *Token access* tab, the
+third one belongs to the OAuth applications on the *OAuth* tab:
 
 Personal access token
    A token a user creates in their own user profile. It can be limited to
@@ -32,13 +28,20 @@ Username/email address and password
 
 OAuth2 access token
    A token an application receives for a user after the user authorized the
-   application. It is managed with the applications further down on this page.
+   application. It is managed with the applications on the *OAuth* tab.
    Unlike the other two methods it has no toggle and cannot be switched off.
+
+Token Access
+------------
+
+The first tab of the page is named *Token access*. It holds the toggles
+described in the following three sections: direct authentication of the REST
+API and the MCP server.
 
 .. _system-api-token-access:
 
 Token Access
-------------
+^^^^^^^^^^^^
 
 The **Token Access** toggle enables personal access tokens (HTTP token
 authentication). It is active by default.
@@ -70,7 +73,7 @@ affected because Zammad handles them separately.
    for the user's point of view.
 
 Password Access
----------------
+^^^^^^^^^^^^^^^
 
 The **Password Access** toggle allows clients to authenticate with the
 username/email address and the password of a user (HTTP basic authentication).
@@ -95,19 +98,158 @@ Switching the toggle off has two consequences:
   warning on the calendar page of their profile and are asked to contact their
   administrator.
 
-Applications
-------------
+.. _system-api-mcp-server:
 
-The lower part of the page manages OAuth applications. An OAuth application is
-any external software that wants to work with your Zammad data on behalf of a
-user, e.g. a reporting tool or an integration you develop yourself. Zammad acts
-as OAuth provider for it: the user logs into Zammad once and authorizes the
-application, which then works with the REST API as that user and with their
-permissions.
+MCP Server
+^^^^^^^^^^
+
+Zammad answers the *Model Context Protocol* (MCP) on its own server, next to
+the REST API. Through it, an AI client (a chat application or a coding tool,
+for example) reads, finds, updates and creates tickets in your Zammad. Nothing
+has to be installed or run in addition, the server is part of every
+installation.
+
+The **MCP server** toggle enables the server for the whole installation. It is
+off by default. While it is off, Zammad refuses every request to the server,
+whatever token the request carries.
+
+The clients authenticate with personal access tokens, so the server works only
+while :ref:`Token Access <system-api-token-access>` is enabled. A client can
+do exactly what the token and its owner may do, nothing more: every tool
+requires the ``ticket.agent`` permission. Users without agent permissions, such
+as customers, get no tools. See the :user-docs:`user documentation
+</extras/mcp-server.html>` for how a user connects a client.
+
+When the toggle is on, the page shows the address of the server
+(``https://<fqdn>/mcp``) and an example for connecting a client:
+
+.. code-block:: console
+
+   $ claude mcp add --transport http zammad https://<fqdn>/mcp --header "Authorization: Bearer ***"
+
+Zammad answers only when a request addresses the **Fully Qualified Domain
+Name**, the **Alternative FQDN** or a loopback address (``localhost``,
+``127.0.0.1``). Requests at another address fail, and browser requests from
+other origins are refused to protect the server against DNS rebinding.
+
+Before something reaches a customer, Zammad asks the user to approve the
+message with its text and the recipients visible, where the client supports
+the approval (a form elicitation, as of MCP revision 2026-07-28). Where the
+client cannot show that form, Zammad sends nothing.
+
+The client gets the following tools. Its own tool list shows the same names,
+in an order the client decides.
+
+.. list-table::
+   :widths: 30 8 62
+   :header-rows: 1
+
+   * - Tool
+     - Access
+     - What it does
+   * - ``add_internal_note``
+     - write
+     - Adds an internal note to a ticket. The customer never sees it.
+   * - ``create_article``
+     - write
+     - Adds an article to a ticket or sends a reply to the customer.
+   * - ``create_ticket``
+     - write
+     - Creates a ticket with a first message from a phone call or an email, or
+       as an internal note.
+   * - ``get_current_user``
+     - read
+     - Reads the user the connection works as, with their groups and their
+       knowledge base access.
+   * - ``get_knowledge_base_answer``
+     - read
+     - Reads one knowledge base answer in full, in the locale asked for.
+   * - ``get_organization``
+     - read
+     - Reads an organization with its domain, VIP flag, note, custom fields and
+       members.
+   * - ``get_overview_tickets``
+     - read
+     - Reads the tickets of an overview, such as "My Assigned Tickets".
+   * - ``get_shared_draft``
+     - read
+     - Reads the shared draft saved for a ticket.
+   * - ``get_ticket``
+     - read
+     - Reads a ticket with its customer, organization, owner, links and
+       messages.
+   * - ``get_ticket_articles``
+     - read
+     - Reads the messages of a ticket: an index, a search in them or single
+       messages in full.
+   * - ``get_ticket_fields``
+     - read
+     - Lists the fields a ticket has, with the values to choose from.
+   * - ``get_ticket_history``
+     - read
+     - Reads what changed on a ticket, when and by whom or by which automation.
+   * - ``get_user``
+     - read
+     - Reads a user with email, phone, mobile, organizations and custom fields.
+   * - ``link_knowledge_base_answer``
+     - write
+     - Links a knowledge base answer to a ticket.
+   * - ``link_tickets``
+     - write
+     - Links two tickets.
+   * - ``list_overviews``
+     - read
+     - Lists the overviews with their number of tickets.
+   * - ``list_tags``
+     - read
+     - Lists the tags that exist, the most used first.
+   * - ``read_attachment``
+     - read
+     - Reads the text of a file attached to a ticket message.
+   * - ``save_shared_draft``
+     - write
+     - Saves a reply as the shared draft of a ticket. Nothing is sent.
+   * - ``search_knowledge_base``
+     - read
+     - Searches the knowledge base by words or by meaning.
+   * - ``search_organizations``
+     - read
+     - Finds organizations by their name or their domain.
+   * - ``search_tickets``
+     - read
+     - Searches tickets by a query, by filters or both.
+   * - ``search_users``
+     - read
+     - Finds users by name, email, login or phone number.
+   * - ``send_shared_draft``
+     - write
+     - Sends the shared draft of a ticket as it is saved.
+   * - ``set_ticket_tags``
+     - write
+     - Adds tags to a ticket and removes tags from it.
+   * - ``update_ticket``
+     - write
+     - Changes state, priority, group, owner, pending time or custom fields of a
+       ticket.
+
+The three knowledge base tools appear only where a knowledge base is active.
+
+OAuth
+-----
+
+The second tab of the page is named *OAuth*. An OAuth application is any
+external software that wants to work with your Zammad data on behalf of a
+user, e.g. a reporting tool or an integration you develop yourself. Zammad
+acts as OAuth provider for it: the user logs into Zammad once and authorizes
+the application, which then works with the REST API as that user and with
+their permissions.
 
 This is not a login method for Zammad itself. If you want your users to log
 into Zammad through an external provider, see
 :doc:`Third-Party Applications </settings/security/third-party>`.
+
+Applications
+^^^^^^^^^^^^
 
 Create a new application with the ``New Application`` button. The dialog asks
 for the following information:
@@ -134,8 +276,13 @@ Token
 
 Creating an application does not grant it any access. A user still has to
 authorize the application once, or you generate an access token with the
-**Token** action. The bottom of the page lists the two URLs of your instance
-that an application uses during the authorization:
+**Token** action.
+
+Authorization URLs
+^^^^^^^^^^^^^^^^^^
+
+The bottom of the tab lists the two URLs of your instance that an application
+uses during the authorization:
 
 - ``<fqdn>/oauth/authorize``: the application sends the user there to request
   access for that user (**Requesting the Grant**).
