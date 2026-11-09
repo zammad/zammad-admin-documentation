@@ -120,22 +120,32 @@ requires the ``ticket.agent`` permission. Users without agent permissions, such
 as customers, get no tools. See the :user-docs:`user documentation
 </extras/mcp-server.html>` for how a user connects a client.
 
-When the toggle is on, the page shows the address of the server
-(``https://<fqdn>/mcp``) and an example for connecting a client:
+When the toggle is on, the page shows the address of the server and an example
+for connecting a client. Both use the **Fully Qualified Domain Name** and the
+**HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`:
 
 .. code-block:: console
 
-   $ claude mcp add --transport http zammad https://<fqdn>/mcp --header "Authorization: Bearer ***"
+   $ claude mcp add --transport http zammad https://<fqdn>/mcp --header "Authorization: Bearer <token>"
 
 Zammad answers only when a request addresses the **Fully Qualified Domain
-Name**, the **Alternative FQDN** or a loopback address (``localhost``,
-``127.0.0.1``). Requests at another address fail, and browser requests from
-other origins are refused to protect the server against DNS rebinding.
+Name**, the **Alternative fully qualified domain name** or a loopback address
+(``localhost``, ``127.0.0.1``, ``::1``). Requests at another address fail, and
+browser requests from other origins are refused to protect the server against
+DNS rebinding.
 
-Before something reaches a customer, Zammad asks the user to approve the
-message with its text and the recipients visible, where the client supports
-the approval (a form elicitation, as of MCP revision 2026-07-28). Where the
-client cannot show that form, Zammad sends nothing.
+Where the client can show it, Zammad asks the user to approve a message before
+it reaches a customer. The request shows the complete text, the recipients and
+the visibility (a form elicitation, as of MCP revision 2026-07-28), and Zammad
+sends only once the user accepted there. A declined approval sends nothing, and
+the client can then offer to save the text as the ticket's shared draft.
+
+A client that cannot show the form falls back to its own approval of the tool
+call, as a change over the REST API with the same token goes through without a
+further approval. For two changes the user's yes in the conversation stands in
+for the form: Zammad replaces a shared draft that is already there and closes a
+ticket with an incomplete checklist only after the client asked and the user
+agreed.
 
 The client gets the following tools. Its own tool list shows the same names,
 in an order the client decides.
@@ -180,8 +190,8 @@ in an order the client decides.
        messages.
    * - ``get_ticket_articles``
      - read
-     - Reads the messages of a ticket: an index, a search in them or single
-       messages in full.
+     - Reads the messages of a ticket: an index, a search in them or chosen
+       ones with their text.
    * - ``get_ticket_fields``
      - read
      - Lists the fields a ticket has, with the values to choose from.

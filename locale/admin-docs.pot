@@ -548,7 +548,7 @@ msgstr ""
 #: ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
 #: ../settings/security/third-party/microsoft.rst:38
-#: ../system/api.rst:117
+#: ../system/api.rst:269
 #: ../system/objects.rst:135
 #: ../system/objects.rst:239
 msgid "Name"
@@ -559,7 +559,7 @@ msgid "A human-readable label for the provider. This is what you see in the list
 msgstr ""
 
 #: ../ai/provider.rst:82
-#: ../system/api.rst:133
+#: ../system/api.rst:285
 msgid "Token"
 msgstr ""
 
@@ -19979,150 +19979,455 @@ msgid "API"
 msgstr ""
 
 #: ../system/api.rst:4
-msgid "Zammad comes with a REST API that allows external applications and scripts to read and write data of your Zammad instance without using the web interface. The API endpoints themselves are always available, the settings on this tab only decide how clients authenticate. The tab *System > API* has two jobs: it decides which authentication methods Zammad accepts for API requests and it manages the applications that use Zammad as an OAuth provider. The ``admin.api`` permission is required to access the tab."
+msgid "Zammad comes with a REST API that allows external applications and scripts to read and write data of your Zammad instance without using the web interface. The API endpoints themselves are always available, the settings of this page only decide how clients authenticate and whether the MCP server answers. The ``admin.api`` permission is required to access the page."
 msgstr ""
 
-#: ../system/api.rst:12
+#: ../system/api.rst:10
 msgid "The endpoints and the data they expect are not described on this page. You can find them in the :docs:`REST API documentation </api/intro.html>` of our system documentation."
 msgstr ""
 
-#: ../system/api.rst:17
-msgid "Authentication Methods"
+#: ../system/api.rst:14
+msgid "Zammad supports three ways for a client to authenticate against the REST API. This overview only names them, the settings themselves are organized differently: the first two methods are toggles on the *Token access* tab, the third one belongs to the OAuth applications on the *OAuth* tab:"
 msgstr ""
 
-#: ../system/api.rst:19
-msgid "Zammad supports three ways for a client to authenticate against the API. The first two are toggles on this page, the third one comes with the OAuth applications further down:"
-msgstr ""
-
-#: ../system/api.rst:26
+#: ../system/api.rst:22
 msgid "Personal access token"
 msgstr ""
 
-#: ../system/api.rst:24
+#: ../system/api.rst:20
 msgid "A token a user creates in their own user profile. It can be limited to specific permissions and can have an expiration date. This is the recommended way for API access. Controlled by the **Token Access** toggle."
 msgstr ""
 
-#: ../system/api.rst:31
+#: ../system/api.rst:27
 msgid "Username/email address and password"
 msgstr ""
 
-#: ../system/api.rst:29
+#: ../system/api.rst:25
 msgid "The credentials are sent as HTTP basic authentication with every request. Needed for clients that only support basic authentication. Controlled by the **Password Access** toggle."
 msgstr ""
 
-#: ../system/api.rst:36
+#: ../system/api.rst:32
 msgid "OAuth2 access token"
 msgstr ""
 
-#: ../system/api.rst:34
-msgid "A token an application receives for a user after the user authorized the application. It is managed with the applications further down on this page. Unlike the other two methods it has no toggle and cannot be switched off."
+#: ../system/api.rst:30
+msgid "A token an application receives for a user after the user authorized the application. It is managed with the applications on the *OAuth* tab. Unlike the other two methods it has no toggle and cannot be switched off."
 msgstr ""
 
-#: ../system/api.rst:41
+#: ../system/api.rst:35
+#: ../system/api.rst:44
 msgid "Token Access"
 msgstr ""
 
-#: ../system/api.rst:43
-msgid "The **Token Access** toggle enables personal access tokens (HTTP token authentication). It is active by default."
+#: ../system/api.rst:37
+msgid "The first tab of the page is named *Token access*. It holds the toggles described in the following three sections: direct authentication of the REST API and the MCP server."
 msgstr ""
 
 #: ../system/api.rst:46
+msgid "The **Token Access** toggle enables personal access tokens (HTTP token authentication). It is active by default."
+msgstr ""
+
+#: ../system/api.rst:49
 msgid "Every user with the ``user_preferences.access_token`` role permission (:doc:`see the permission list </manage/roles/permissions>`) can create as many tokens as needed in their own profile (*Avatar > Profile > Token Access*). When creating a token, the user decides which permissions the token gets and can set an expiration date. A token never carries more permissions than the user who created it. Clients send the token as HTTP header:"
 msgstr ""
 
-#: ../system/api.rst:57
+#: ../system/api.rst:60
 msgid "The example shown next to the toggle uses the **Fully Qualified Domain Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`."
 msgstr ""
 
-#: ../system/api.rst:61
+#: ../system/api.rst:64
 msgid "If you switch the toggle off, all existing personal access tokens stop working immediately. The **Token Access** entry also disappears from the user profile, which means nobody can create new tokens. OAuth2 access tokens are not affected because Zammad handles them separately."
 msgstr ""
 
-#: ../system/api.rst:68
+#: ../system/api.rst:71
 msgid "Users have to create their own tokens. See the :user-docs:`user documentation </extras/user-menu-profile-settings.html>` for the user's point of view."
 msgstr ""
 
-#: ../system/api.rst:73
+#: ../system/api.rst:76
 msgid "Password Access"
 msgstr ""
 
-#: ../system/api.rst:75
+#: ../system/api.rst:78
 msgid "The **Password Access** toggle allows clients to authenticate with the username/email address and the password of a user (HTTP basic authentication). It is active by default."
 msgstr ""
 
-#: ../system/api.rst:83
+#: ../system/api.rst:86
 msgid "Basic authentication sends the credentials with every single request and it cannot be combined with two-factor authentication: Zammad rejects such logins. For the calendar subscription URLs (``/ical/...``) Zammad verifies the password only, which is why calendar subscriptions work even for users with two-factor authentication. We recommend switching the toggle off and using :ref:`personal access tokens <system-api-token-access>` instead."
 msgstr ""
 
-#: ../system/api.rst:90
+#: ../system/api.rst:93
 msgid "Switching the toggle off has two consequences:"
 msgstr ""
 
-#: ../system/api.rst:92
+#: ../system/api.rst:95
 msgid "All API requests with basic authentication are rejected."
 msgstr ""
 
-#: ../system/api.rst:93
+#: ../system/api.rst:96
 msgid "The calendar subscription URLs in user profiles stop working, because calendar apps authenticate with basic authentication. Affected users get a warning on the calendar page of their profile and are asked to contact their administrator."
 msgstr ""
 
-#: ../system/api.rst:99
-msgid "Applications"
+#: ../system/api.rst:104
+msgid "MCP Server"
 msgstr ""
 
-#: ../system/api.rst:101
-msgid "The lower part of the page manages OAuth applications. An OAuth application is any external software that wants to work with your Zammad data on behalf of a user, e.g. a reporting tool or an integration you develop yourself. Zammad acts as OAuth provider for it: the user logs into Zammad once and authorizes the application, which then works with the REST API as that user and with their permissions."
-msgstr ""
-
-#: ../system/api.rst:108
-msgid "This is not a login method for Zammad itself. If you want your users to log into Zammad through an external provider, see :doc:`Third-Party Applications </settings/security/third-party>`."
+#: ../system/api.rst:106
+msgid "Zammad answers the *Model Context Protocol* (MCP) on its own server, next to the REST API. Through it, an AI client (a chat application or a coding tool, for example) reads, finds, updates and creates tickets in your Zammad. Nothing has to be installed or run in addition, the server is part of every installation."
 msgstr ""
 
 #: ../system/api.rst:112
-msgid "Create a new application with the ``New Application`` button. The dialog asks for the following information:"
+msgid "The **MCP server** toggle enables the server for the whole installation. It is off by default. While it is off, Zammad refuses every request to the server, whatever token the request carries."
 msgstr ""
 
 #: ../system/api.rst:116
-msgid "The name of the application. It is only shown in this list, choose a name that tells your users what they authorize."
-msgstr ""
-
-#: ../system/api.rst:121
-msgid "Callback URL"
-msgstr ""
-
-#: ../system/api.rst:120
-msgid "The URL an application is redirected to after a user authorized it. Enter one URI per line if the application uses several URLs."
+msgid "The clients authenticate with personal access tokens, so the server works only while :ref:`Token Access <system-api-token-access>` is enabled. A client can do exactly what the token and its owner may do, nothing more: every tool requires the ``ticket.agent`` permission. Users without agent permissions, such as customers, get no tools. See the :user-docs:`user documentation </extras/mcp-server.html>` for how a user connects a client."
 msgstr ""
 
 #: ../system/api.rst:123
+msgid "When the toggle is on, the page shows the address of the server and an example for connecting a client. Both use the **Fully Qualified Domain Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`:"
+msgstr ""
+
+#: ../system/api.rst:131
+msgid "Zammad answers only when a request addresses the **Fully Qualified Domain Name**, the **Alternative fully qualified domain name** or a loopback address (``localhost``, ``127.0.0.1``, ``::1``). Requests at another address fail, and browser requests from other origins are refused to protect the server against DNS rebinding."
+msgstr ""
+
+#: ../system/api.rst:137
+msgid "Where the client can show it, Zammad asks the user to approve a message before it reaches a customer. The request shows the complete text, the recipients and the visibility (a form elicitation, as of MCP revision 2026-07-28), and Zammad sends only once the user accepted there. A declined approval sends nothing, and the client can then offer to save the text as the ticket's shared draft."
+msgstr ""
+
+#: ../system/api.rst:143
+msgid "A client that cannot show the form falls back to its own approval of the tool call, as a change over the REST API with the same token goes through without a further approval. For two changes the user's yes in the conversation stands in for the form: Zammad replaces a shared draft that is already there and closes a ticket with an incomplete checklist only after the client asked and the user agreed."
+msgstr ""
+
+#: ../system/api.rst:150
+msgid "The client gets the following tools. Its own tool list shows the same names, in an order the client decides."
+msgstr ""
+
+#: ../system/api.rst:157
+msgid "Tool"
+msgstr ""
+
+#: ../system/api.rst:158
+msgid "Access"
+msgstr ""
+
+#: ../system/api.rst:159
+msgid "What it does"
+msgstr ""
+
+#: ../system/api.rst:160
+msgid "``add_internal_note``"
+msgstr ""
+
+#: ../system/api.rst:161
+#: ../system/api.rst:164
+#: ../system/api.rst:167
+#: ../system/api.rst:205
+#: ../system/api.rst:208
+#: ../system/api.rst:220
+#: ../system/api.rst:235
+#: ../system/api.rst:238
+#: ../system/api.rst:241
+msgid "write"
+msgstr ""
+
+#: ../system/api.rst:162
+msgid "Adds an internal note to a ticket. The customer never sees it."
+msgstr ""
+
+#: ../system/api.rst:163
+msgid "``create_article``"
+msgstr ""
+
+#: ../system/api.rst:165
+msgid "Adds an article to a ticket or sends a reply to the customer."
+msgstr ""
+
+#: ../system/api.rst:166
+msgid "``create_ticket``"
+msgstr ""
+
+#: ../system/api.rst:168
+msgid "Creates a ticket with a first message from a phone call or an email, or as an internal note."
+msgstr ""
+
+#: ../system/api.rst:170
+msgid "``get_current_user``"
+msgstr ""
+
+#: ../system/api.rst:171
+#: ../system/api.rst:175
+#: ../system/api.rst:178
+#: ../system/api.rst:182
+#: ../system/api.rst:185
+#: ../system/api.rst:188
+#: ../system/api.rst:192
+#: ../system/api.rst:196
+#: ../system/api.rst:199
+#: ../system/api.rst:202
+#: ../system/api.rst:211
+#: ../system/api.rst:214
+#: ../system/api.rst:217
+#: ../system/api.rst:223
+#: ../system/api.rst:226
+#: ../system/api.rst:229
+#: ../system/api.rst:232
+msgid "read"
+msgstr ""
+
+#: ../system/api.rst:172
+msgid "Reads the user the connection works as, with their groups and their knowledge base access."
+msgstr ""
+
+#: ../system/api.rst:174
+msgid "``get_knowledge_base_answer``"
+msgstr ""
+
+#: ../system/api.rst:176
+msgid "Reads one knowledge base answer in full, in the locale asked for."
+msgstr ""
+
+#: ../system/api.rst:177
+msgid "``get_organization``"
+msgstr ""
+
+#: ../system/api.rst:179
+msgid "Reads an organization with its domain, VIP flag, note, custom fields and members."
+msgstr ""
+
+#: ../system/api.rst:181
+msgid "``get_overview_tickets``"
+msgstr ""
+
+#: ../system/api.rst:183
+msgid "Reads the tickets of an overview, such as \"My Assigned Tickets\"."
+msgstr ""
+
+#: ../system/api.rst:184
+msgid "``get_shared_draft``"
+msgstr ""
+
+#: ../system/api.rst:186
+msgid "Reads the shared draft saved for a ticket."
+msgstr ""
+
+#: ../system/api.rst:187
+msgid "``get_ticket``"
+msgstr ""
+
+#: ../system/api.rst:189
+msgid "Reads a ticket with its customer, organization, owner, links and messages."
+msgstr ""
+
+#: ../system/api.rst:191
+msgid "``get_ticket_articles``"
+msgstr ""
+
+#: ../system/api.rst:193
+msgid "Reads the messages of a ticket: an index, a search in them or chosen ones with their text."
+msgstr ""
+
+#: ../system/api.rst:195
+msgid "``get_ticket_fields``"
+msgstr ""
+
+#: ../system/api.rst:197
+msgid "Lists the fields a ticket has, with the values to choose from."
+msgstr ""
+
+#: ../system/api.rst:198
+msgid "``get_ticket_history``"
+msgstr ""
+
+#: ../system/api.rst:200
+msgid "Reads what changed on a ticket, when and by whom or by which automation."
+msgstr ""
+
+#: ../system/api.rst:201
+msgid "``get_user``"
+msgstr ""
+
+#: ../system/api.rst:203
+msgid "Reads a user with email, phone, mobile, organizations and custom fields."
+msgstr ""
+
+#: ../system/api.rst:204
+msgid "``link_knowledge_base_answer``"
+msgstr ""
+
+#: ../system/api.rst:206
+msgid "Links a knowledge base answer to a ticket."
+msgstr ""
+
+#: ../system/api.rst:207
+msgid "``link_tickets``"
+msgstr ""
+
+#: ../system/api.rst:209
+msgid "Links two tickets."
+msgstr ""
+
+#: ../system/api.rst:210
+msgid "``list_overviews``"
+msgstr ""
+
+#: ../system/api.rst:212
+msgid "Lists the overviews with their number of tickets."
+msgstr ""
+
+#: ../system/api.rst:213
+msgid "``list_tags``"
+msgstr ""
+
+#: ../system/api.rst:215
+msgid "Lists the tags that exist, the most used first."
+msgstr ""
+
+#: ../system/api.rst:216
+msgid "``read_attachment``"
+msgstr ""
+
+#: ../system/api.rst:218
+msgid "Reads the text of a file attached to a ticket message."
+msgstr ""
+
+#: ../system/api.rst:219
+msgid "``save_shared_draft``"
+msgstr ""
+
+#: ../system/api.rst:221
+msgid "Saves a reply as the shared draft of a ticket. Nothing is sent."
+msgstr ""
+
+#: ../system/api.rst:222
+msgid "``search_knowledge_base``"
+msgstr ""
+
+#: ../system/api.rst:224
+msgid "Searches the knowledge base by words or by meaning."
+msgstr ""
+
+#: ../system/api.rst:225
+msgid "``search_organizations``"
+msgstr ""
+
+#: ../system/api.rst:227
+msgid "Finds organizations by their name or their domain."
+msgstr ""
+
+#: ../system/api.rst:228
+msgid "``search_tickets``"
+msgstr ""
+
+#: ../system/api.rst:230
+msgid "Searches tickets by a query, by filters or both."
+msgstr ""
+
+#: ../system/api.rst:231
+msgid "``search_users``"
+msgstr ""
+
+#: ../system/api.rst:233
+msgid "Finds users by name, email, login or phone number."
+msgstr ""
+
+#: ../system/api.rst:234
+msgid "``send_shared_draft``"
+msgstr ""
+
+#: ../system/api.rst:236
+msgid "Sends the shared draft of a ticket as it is saved."
+msgstr ""
+
+#: ../system/api.rst:237
+msgid "``set_ticket_tags``"
+msgstr ""
+
+#: ../system/api.rst:239
+msgid "Adds tags to a ticket and removes tags from it."
+msgstr ""
+
+#: ../system/api.rst:240
+msgid "``update_ticket``"
+msgstr ""
+
+#: ../system/api.rst:242
+msgid "Changes state, priority, group, owner, pending time or custom fields of a ticket."
+msgstr ""
+
+#: ../system/api.rst:245
+msgid "The three knowledge base tools appear only where a knowledge base is active."
+msgstr ""
+
+#: ../system/api.rst:248
+msgid "OAuth"
+msgstr ""
+
+#: ../system/api.rst:250
+msgid "The second tab of the page is named *OAuth*. An OAuth application is any external software that wants to work with your Zammad data on behalf of a user, e.g. a reporting tool or an integration you develop yourself. Zammad acts as OAuth provider for it: the user logs into Zammad once and authorizes the application, which then works with the REST API as that user and with their permissions."
+msgstr ""
+
+#: ../system/api.rst:257
+msgid "This is not a login method for Zammad itself. If you want your users to log into Zammad through an external provider, see :doc:`Third-Party Applications </settings/security/third-party>`."
+msgstr ""
+
+#: ../system/api.rst:262
+msgid "Applications"
+msgstr ""
+
+#: ../system/api.rst:264
+msgid "Create a new application with the ``New Application`` button. The dialog asks for the following information:"
+msgstr ""
+
+#: ../system/api.rst:268
+msgid "The name of the application. It is only shown in this list, choose a name that tells your users what they authorize."
+msgstr ""
+
+#: ../system/api.rst:273
+msgid "Callback URL"
+msgstr ""
+
+#: ../system/api.rst:272
+msgid "The URL an application is redirected to after a user authorized it. Enter one URI per line if the application uses several URLs."
+msgstr ""
+
+#: ../system/api.rst:275
 msgid "The list of existing applications shows the name, the callback URL and the number of access tokens that were already created for the application. The **View** and **Token** columns provide direct actions:"
 msgstr ""
 
-#: ../system/api.rst:129
+#: ../system/api.rst:281
 msgid "View"
 msgstr ""
 
-#: ../system/api.rst:128
+#: ../system/api.rst:280
 msgid "Shows the **AppID** and the **Secret** of the application. An application needs both values to authenticate at Zammad."
 msgstr ""
 
-#: ../system/api.rst:132
+#: ../system/api.rst:284
 msgid "Generates an access token for the application which belongs to your own user account. Zammad displays it in a dialog."
 msgstr ""
 
-#: ../system/api.rst:135
-msgid "Creating an application does not grant it any access. A user still has to authorize the application once, or you generate an access token with the **Token** action. The bottom of the page lists the two URLs of your instance that an application uses during the authorization:"
+#: ../system/api.rst:287
+msgid "Creating an application does not grant it any access. A user still has to authorize the application once, or you generate an access token with the **Token** action."
 msgstr ""
 
-#: ../system/api.rst:140
+#: ../system/api.rst:292
+msgid "Authorization URLs"
+msgstr ""
+
+#: ../system/api.rst:294
+msgid "The bottom of the tab lists the two URLs of your instance that an application uses during the authorization:"
+msgstr ""
+
+#: ../system/api.rst:297
 msgid "``<fqdn>/oauth/authorize``: the application sends the user there to request access for that user (**Requesting the Grant**)."
 msgstr ""
 
-#: ../system/api.rst:142
+#: ../system/api.rst:299
 msgid "``<fqdn>/oauth/token``: the application requests an access token there afterwards (**Getting an Access Token**)."
 msgstr ""
 
-#: ../system/api.rst:147
+#: ../system/api.rst:304
 msgid "The :docs:`REST API documentation </api/intro.html>` explains how a client sends an OAuth2 access token with an API call."
 msgstr ""
 
