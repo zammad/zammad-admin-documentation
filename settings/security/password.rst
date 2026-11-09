@@ -28,7 +28,7 @@ to a user account may fail until Zammad will lock it.
 Your users can always use the **Forgot password?** function to change their
 password and unlock their account.
 
-Default: ``10``
+Default: ``5``
 
 .. note::
 
@@ -48,7 +48,7 @@ Default: ``10``
 You can add complexity to passwords by enforcing at least 2 upper and lower
 case characters.
 
-Default: ``no``
+Default: ``yes``
 
 Minimum Length
 --------------
@@ -56,7 +56,7 @@ Minimum Length
 This defines the minimum password length required for users to provide
 (from ``4`` to ``20``).
 
-Default: ``6``
+Default: ``10``
 
 Digit Required
 --------------
