@@ -122,11 +122,7 @@ as customers, get no tools. See the :user-docs:`user documentation
 
 When the toggle is on, the page shows the address of the server and an example
 for connecting a client. Both use the **Fully Qualified Domain Name** and the
-**HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`:
-
-.. code-block:: console
-
-   $ claude mcp add --transport http zammad https://<fqdn>/mcp --header "Authorization: Bearer <token>"
+**HTTP type** from Zammad's :doc:`Base settings </settings/system/base>`.
 
 Zammad answers only when a request addresses the **Fully Qualified Domain
 Name**, the **Alternative fully qualified domain name** or a loopback address
