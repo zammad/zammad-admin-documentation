@@ -53,13 +53,20 @@ Type
    - OpenAI
    - Ollama
    - Anthropic
-   - Azure AI
+   - Azure AI (legacy deployment-based endpoints)
    - Mistral AI
-   - Custom (OpenAI compatible)
+   - Custom (OpenAI Compatible)
 
    Different fields appear depending on the type. Some providers also require
    configuration on their side before you can connect (for example Azure AI).
    Refer to the provider's own documentation for those steps.
+
+   Azure AI is a legacy option and doesn't support semantic search. To connect
+   Azure, pick Custom (OpenAI Compatible) instead. Enter your resource's v1
+   endpoint (``https://<resource>.openai.azure.com/openai/v1``) as URL and your
+   deployment name as model. To use this connection for semantic search as
+   well, enter the name of an embedding deployment in the **Embedding Model**
+   field.
 
    .. note:: The provider you need isn't listed? We are going to add more over
       time. If you need a particular one or want to sponsor it, get in touch
