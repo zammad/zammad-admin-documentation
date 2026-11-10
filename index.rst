@@ -112,5 +112,6 @@ Zammad Admin Documentation
    misc/composer
    misc/object-conditions/index
    misc/system-notifications
+   misc/unprocessable-emails
    misc/first-steps
    misc/zabbix
