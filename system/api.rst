@@ -141,104 +141,13 @@ call, as a change over the REST API with the same token goes through without a
 further approval. For two changes the user's yes in the conversation stands in
 for the form: Zammad replaces a shared draft that is already there and closes a
 ticket with an incomplete checklist only after the client asked and the user
-agreed.
+agreed. Keep the approval of tool calls enabled in the client, because a client
+that runs them without a prompt sends a message without any further question.
 
-The client gets the following tools. Its own tool list shows the same names,
-in an order the client decides.
-
-.. list-table::
-   :widths: 30 8 62
-   :header-rows: 1
-
-   * - Tool
-     - Access
-     - What it does
-   * - ``add_internal_note``
-     - write
-     - Adds an internal note to a ticket. The customer never sees it.
-   * - ``create_article``
-     - write
-     - Adds an article to a ticket or sends a reply to the customer.
-   * - ``create_ticket``
-     - write
-     - Creates a ticket with a first message from a phone call or an email, or
-       as an internal note.
-   * - ``get_current_user``
-     - read
-     - Reads the user the connection works as, with their groups and their
-       knowledge base access.
-   * - ``get_knowledge_base_answer``
-     - read
-     - Reads one knowledge base answer in full, in the locale asked for.
-   * - ``get_organization``
-     - read
-     - Reads an organization with its domain, VIP flag, note, custom fields and
-       members.
-   * - ``get_overview_tickets``
-     - read
-     - Reads the tickets of an overview, such as "My Assigned Tickets".
-   * - ``get_shared_draft``
-     - read
-     - Reads the shared draft saved for a ticket.
-   * - ``get_ticket``
-     - read
-     - Reads a ticket with its customer, organization, owner, links and
-       messages.
-   * - ``get_ticket_articles``
-     - read
-     - Reads the messages of a ticket: an index, a search in them or chosen
-       ones with their text.
-   * - ``get_ticket_fields``
-     - read
-     - Lists the fields a ticket has, with the values to choose from.
-   * - ``get_ticket_history``
-     - read
-     - Reads what changed on a ticket, when and by whom or by which automation.
-   * - ``get_user``
-     - read
-     - Reads a user with email, phone, mobile, organizations and custom fields.
-   * - ``link_knowledge_base_answer``
-     - write
-     - Links a knowledge base answer to a ticket.
-   * - ``link_tickets``
-     - write
-     - Links two tickets.
-   * - ``list_overviews``
-     - read
-     - Lists the overviews with their number of tickets.
-   * - ``list_tags``
-     - read
-     - Lists the tags that exist, the most used first.
-   * - ``read_attachment``
-     - read
-     - Reads the text of a file attached to a ticket message.
-   * - ``save_shared_draft``
-     - write
-     - Saves a reply as the shared draft of a ticket. Nothing is sent.
-   * - ``search_knowledge_base``
-     - read
-     - Searches the knowledge base by words or by meaning.
-   * - ``search_organizations``
-     - read
-     - Finds organizations by their name or their domain.
-   * - ``search_tickets``
-     - read
-     - Searches tickets by a query, by filters or both.
-   * - ``search_users``
-     - read
-     - Finds users by name, email, login or phone number.
-   * - ``send_shared_draft``
-     - write
-     - Sends the shared draft of a ticket as it is saved.
-   * - ``set_ticket_tags``
-     - write
-     - Adds tags to a ticket and removes tags from it.
-   * - ``update_ticket``
-     - write
-     - Changes state, priority, group, owner, pending time or custom fields of a
-       ticket.
-
-The three knowledge base tools appear only where a knowledge base is active.
+The client works with tools for reading and writing tickets, for searching
+and for shared drafts and knowledge base answers. The complete list, with the
+access of each tool and the limits that apply, is part of the system
+documentation: :docs:`MCP tool reference </api/mcp.html>`.
 
 OAuth
 -----
