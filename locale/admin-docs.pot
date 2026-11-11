@@ -14843,6 +14843,151 @@ msgstr ""
 msgid "Now, this file will be used instead of the original when sending notification emails in German."
 msgstr ""
 
+#: ../misc/unprocessable-emails.rst:2
+msgid "Unprocessable Emails"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:4
+msgid "Zammad turns incoming emails into tickets. When an email cannot be processed at all, Zammad does not drop it. It creates a ticket titled ``Unprocessable email`` instead, so that the request stays visible and an agent can pick it up."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:9
+msgid "Such a ticket carries the complete email as it arrived, plus a log of what went wrong. That is what makes the ticket workable although Zammad could not read the email."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:14
+msgid "Error Tickets"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:16
+msgid "Zammad takes the title from the default language at the time the ticket is created, so changing the default language later does not rename tickets that already exist."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:20
+msgid "The ticket starts in the state that is set as the default for new tickets and is assigned to the group of the email channel that fetched the mail. If that channel has no group, Zammad uses the group that owns the recipient address of the email, and falls back to the first active group."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:25
+msgid "The ticket carries a single internal note of the system account with two attachments:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "``unprocessable_email.eml``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "The raw email as it arrived."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:33
+msgid "``processing_log.txt``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:32
+msgid "When processing failed and what Zammad reported about the failure. Comparing it with the raw email shows whether the email or Zammad is at fault."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:35
+msgid "The note itself is not rendered. The conversation shows a warning instead, stating that the email could not be processed. The warning also offers the ``Download raw email`` and ``Download processing log`` buttons, which download exactly those two attachments."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:41
+msgid "Common Reasons"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:43
+msgid "Zammad creates an error ticket whenever processing fails. The usual causes are:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:47
+msgid "**Unreadable message**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:46
+msgid "The email has no header field Zammad can read. This catches input that is not an email at all, for example plain text."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:51
+msgid "**Processing exceeds the time limit**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:50
+msgid "Zammad stops processing a single email after three minutes. Big or unusual messages can exceed that."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:56
+msgid "**Unexpected processing error**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:54
+msgid "Anything else that fails while Zammad reads the email. The processing log names what Zammad reported, which is what to hand to Zammad support when the email itself is fine."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:59
+msgid "Email Without a Usable Sender"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:61
+msgid "A broken sender does not produce an error ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:67
+msgid "**Malformed sender address**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:64
+msgid "Zammad creates the customer from the address it can read: the address becomes the customer's login, and the customer gets no email address. Nothing is sent to an address Zammad could not read, and later emails from the same sender land on that same customer."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:71
+msgid "**No sender at all**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:70
+msgid "The ticket is created for the system account. It has no customer, and the customer column of an overview shows ``-`` instead of a name."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:74
+msgid "Handling an Error Ticket"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:76
+msgid "Read the raw email to see who wrote and what the request was."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:77
+msgid "Use **Change customer** to attach the ticket to the right customer, also when it has none yet, and continue working it like any other ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:79
+msgid "If the email makes no sense at all, read the processing log, then close or delete the ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:81
+msgid "Postmaster filters only run on email that Zammad could process, so a sender whose mail keeps failing cannot be caught by them. Block such a sender in the mailbox itself."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:86
+msgid "Reprocessing a Repaired Email"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:88
+msgid "Zammad has no way to reprocess an error ticket. The rake tasks for failed emails only work on records from before 7.3, and an error ticket carries no such record."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:92
+msgid "A repaired copy can still become a ticket: download the raw email, fix what made it unreadable, and feed the file back into Zammad with the console command from the :doc:`/channels/email/advanced/fetchmail` page. Zammad processes it like a mail that arrives in the mailbox, which means a copy that is still broken creates another error ticket. The first one stays behind, to be closed, merged or deleted."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:100
+#: ../system/monitoring.rst:2
+msgid "Monitoring"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:102
+msgid "Unprocessable emails no longer appear in the monitoring. Zammad recorded them as failed emails and reported their count until 7.3. Records from before the update survive and keep being reported until they are removed. The :docs:`Administration via Console </admin/console/other-useful-commands.html>` page describes how to reprocess such a record, which turns it into a ticket."
+msgstr ""
+
 #: ../misc/variables.rst:4
 msgid "Use variables in text modules, triggers and many other places in Zammad to dynamically reflect information from object attributes."
 msgstr ""
@@ -24031,47 +24176,35 @@ msgid "Screenshot showing modal caused by maintenance's message\n"
 "with reload application ticket"
 msgstr ""
 
-#: ../system/monitoring.rst:2
-msgid "Monitoring"
-msgstr ""
-
 #: ../system/monitoring.rst:4
 msgid "This function is only available in self hosted instances. For our SaaS customers, we're monitoring the system on our own and take steps to fix potential problems directly."
 msgstr ""
 
 #: ../system/monitoring.rst:11
-msgid "On the monitoring page, you can see the current health state of Zammad under **Current Status** at the bottom. This can be useful if you want to have a look if everything is up and running. As an example, you could have a look in the monitoring when you assume that some emails aren't processed from Zammad."
+msgid "On the monitoring page, you can see the current health state of Zammad under **Current Status** at the bottom. This can be useful if you want to have a look if everything is up and running. For example, the monitoring reports an email channel that cannot connect to its mail server, or one that has not fetched email for more than an hour. Emails that cannot be processed are not part of it. Zammad creates a ticket titled ``Unprocessable email`` instead, see :doc:`/misc/unprocessable-emails`."
 msgstr ""
 
-#: ../system/monitoring.rst:17
-msgid "**Can't receive an email and the monitoring response is \"healthy\"?**"
-msgstr ""
-
-#: ../system/monitoring.rst:19
-msgid "Zammad will just inform you about unprocessable emails. This is not the case for oversized emails. You can adjust the maximum email size in :doc:`../channels/email/settings`."
-msgstr ""
-
-#: ../system/monitoring.rst:24
+#: ../system/monitoring.rst:20
 msgid "Monitoring API"
 msgstr ""
 
-#: ../system/monitoring.rst:26
+#: ../system/monitoring.rst:22
 msgid "Beside the indication in the monitoring page, you can also use an external monitoring tool to monitor Zammad's health. To request the health of Zammad, you need to provide the API key (token) to the external monitoring tool. You can copy the token from the **Current Token** field as well as the whole API endpoint of your system (**Health Check** field), in which the API token is already included."
 msgstr ""
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Current Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:38
+#: ../system/monitoring.rst:34
 msgid "In addition to that, you can reset the auto-generated token to make sure that already configured monitoring systems won't work anymore. So, please use this ``Reset`` button only if you know what you do!"
 msgstr ""
 
-#: ../system/monitoring.rst:43
+#: ../system/monitoring.rst:39
 msgid "Example Output"
 msgstr ""
 
@@ -24079,8 +24212,8 @@ msgstr ""
 msgid "No issues found"
 msgstr ""
 
-#: ../system/monitoring.rst:47
-#: ../system/monitoring.rst:64
+#: ../system/monitoring.rst:43
+#: ../system/monitoring.rst:60
 msgid "**Indicator in Zammad**:"
 msgstr ""
 
@@ -24088,8 +24221,8 @@ msgstr ""
 msgid "Screenshot showing monitoring with no issues"
 msgstr ""
 
-#: ../system/monitoring.rst:53
-#: ../system/monitoring.rst:70
+#: ../system/monitoring.rst:49
+#: ../system/monitoring.rst:66
 msgid "**API response**:"
 msgstr ""
 
