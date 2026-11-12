@@ -279,18 +279,28 @@ AI features. It has several key advantages:
 
 - You don't have to set up an AI system or its configuration.
 - Hosted in the EU and compliant with GDPR.
-- No configuration in Zammad required.
+- No configuration in Zammad for SaaS customers, or just an API key
+  for self-hosted customers.
 - Requests with sensitive information aren't used for training.
 - One place to go for support when something isn't working as
   expected.
 
-Zammad AI is only available to SaaS customers. Using it requires a "V2" plan,
-so check your :doc:`subscription settings </system/subscription>` and consider
-switching your plan. When a "V2" plan is active, you can buy AI calls for AI
-processing. A Zammad AI provider is added automatically and you can enable it
-as you like. Check your remaining AI calls from time to time or activate the
-notification to be alerted when few calls remain. The platform provisions this
-provider, so you cannot delete it or change its type.
+SaaS Customers
+   Using Zammad AI requires a "V2" plan. Check your
+   :doc:`subscription settings </system/subscription>` and consider switching
+   your plan. When a "V2" plan is active, you can buy AI calls for AI
+   processing. A Zammad AI provider is added automatically and you can enable
+   it as you like. Check your remaining AI calls from time to time or activate
+   the notification to be alerted when few calls remain.
+
+   On SaaS, the Zammad AI provider is provisioned by the platform and you
+   cannot delete it or change its type.
+
+Self-Hosted Customers
+   Get in touch with our
+   `sales department <https://zammad.com/en/company/contact>`_ to obtain a
+   Zammad AI API key and to buy AI calls. After receiving your API key, add
+   a new provider of type *Zammad AI* and save the key.
 
 Ollama
 ^^^^^^
