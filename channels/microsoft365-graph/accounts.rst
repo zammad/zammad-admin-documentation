@@ -188,6 +188,15 @@ Microsoft's documentation:
 - https://learn.microsoft.com/en-us/graph/outlook-send-mail-from-other-user
 - https://learn.microsoft.com/en-us/microsoft-365/admin/email/add-another-email-alias-for-a-user
 
+.. note:: **Aliases of shared mailboxes don't work.**
+
+   Zammad sends emails of a shared mailbox with delegated access. Microsoft
+   doesn't support sending from aliases of a shared mailbox this way, see the
+   known issues of Microsoft's
+   `sending from aliases <https://techcommunity.microsoft.com/blog/exchange/sending-from-email-aliases-%E2%80%93-general-availability/4562543>`_
+   feature. If you need an additional sender address, create a separate shared
+   mailbox for it and add it as its own account.
+
 To add an alias, click on ``+ Add`` in the **Email Address** section and provide
 the requested information. It works the same way as for other email based
 channels. Because of this, have a look at the
