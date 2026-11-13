@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-10-26 07:49+0000\n"
+"PO-Revision-Date: 2026-11-13 12:02+0000\n"
 "Last-Translator: Ralf Schmid <rsc@zammad.com>\n"
 "Language-Team: German <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-latest/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.10\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -928,7 +928,7 @@ msgstr ""
 "Der Screenshot zeigt das Dialogfeld zum Hinzufügen oder Bearbeiten eines "
 "Anbieters"
 
-#: ../ai/provider.rst:66 ../channels/email/accounts/account-setup.rst:122
+#: ../ai/provider.rst:73 ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:206 ../system/objects.rst:158
 msgid "Type"
 msgstr "Typ"
@@ -937,7 +937,7 @@ msgstr "Typ"
 msgid "Pick the AI provider. Available options:"
 msgstr "Wählen Sie den KI-Anbieter aus. Verfügbare Optionen:"
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:268
+#: ../ai/provider.rst:52 ../ai/provider.rst:275
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
@@ -945,7 +945,7 @@ msgstr "Zammad AI"
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:299
+#: ../ai/provider.rst:54 ../ai/provider.rst:306
 msgid "Ollama"
 msgstr "Ollama"
 
@@ -954,15 +954,15 @@ msgid "Anthropic"
 msgstr "Anthropic"
 
 #: ../ai/provider.rst:56
-msgid "Azure AI"
-msgstr "Azure AI"
+msgid "Azure AI (legacy deployment-based endpoints)"
+msgstr "Azure AI (Legacy Deployment-Endpunkte)"
 
 #: ../ai/provider.rst:57
 msgid "Mistral AI"
 msgstr "Mistral AI"
 
 #: ../ai/provider.rst:58
-msgid "Custom (OpenAI compatible)"
+msgid "Custom (OpenAI Compatible)"
 msgstr "Benutzerdefiniert (OpenAI-kompatibel)"
 
 #: ../ai/provider.rst:60
@@ -978,6 +978,23 @@ msgstr ""
 
 #: ../ai/provider.rst:64
 msgid ""
+"Azure AI is a legacy option and doesn't support semantic search. To connect "
+"Azure, pick Custom (OpenAI Compatible) instead. Enter your resource's v1 "
+"endpoint (``https://<resource>.openai.azure.com/openai/v1``) as URL and your "
+"deployment name as model. To use this connection for semantic search as "
+"well, enter the name of an embedding deployment in the **Embedding Model** "
+"field."
+msgstr ""
+"Azure AI ist eine veraltete Option und unterstützt keine semantische Suche. "
+"Um eine Verbindung zu Azure herzustellen, wählen Sie stattdessen "
+"\"Benutzerdefiniert (OpenAI-kompatibel)\". Geben Sie den v1-Endpunkt Ihrer "
+"Ressource (``https://<resource>.openai.azure.com/openai/v1``) als URL und "
+"Ihren Deployment-Namen als Modell ein. Um diese Verbindung auch für die "
+"semantische Suche zu nutzen, geben Sie den Namen eines Embedding-Deployments "
+"in das Feld **Embedding-Modell** ein."
+
+#: ../ai/provider.rst:71
+msgid ""
 "The provider you need isn't listed? We are going to add more over time. If "
 "you need a particular one or want to sponsor it, get in touch with our "
 "`sales department <https://zammad.com/en/company/contact>`_."
@@ -987,7 +1004,7 @@ msgstr ""
 "oder eine Implementierung sponsern möchten, wenden Sie sich bitte an unsere "
 "`Vertriebsabteilung <https://zammad.com/de/company/contact>`_."
 
-#: ../ai/provider.rst:71 ../ai/writing-assistant.rst:104
+#: ../ai/provider.rst:78 ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
 #: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
@@ -1000,7 +1017,7 @@ msgstr ""
 msgid "Name"
 msgstr "Name"
 
-#: ../ai/provider.rst:69
+#: ../ai/provider.rst:76
 msgid ""
 "A human-readable label for the provider. This is what you see in the list "
 "and elsewhere in Zammad (for example when configuring a provider for a "
@@ -1011,11 +1028,11 @@ msgstr ""
 "Konfiguration eines funktionsspezifischen Anbieters). Der Name muss "
 "eindeutig sein."
 
-#: ../ai/provider.rst:75 ../system/api.rst:133
+#: ../ai/provider.rst:82 ../system/api.rst:133
 msgid "Token"
 msgstr "Token"
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:81
 msgid ""
 "The API token issued by your provider. Don't confuse it with the tokens a "
 "large language model deals with when processing a request."
@@ -1024,11 +1041,11 @@ msgstr ""
 "mit den Token, mit denen ein großes Sprachmodell bei der Bearbeitung einer "
 "Anfrage arbeitet."
 
-#: ../ai/provider.rst:88
+#: ../ai/provider.rst:95
 msgid "Model"
 msgstr "Modell"
 
-#: ../ai/provider.rst:78
+#: ../ai/provider.rst:85
 msgid ""
 "The base model used to generate text. For providers that offer a model list, "
 "the field is a dropdown. The default option shows the provider's recommended "
@@ -1041,7 +1058,7 @@ msgstr ""
 "an; wählen Sie ein anderes aus, falls Sie dies bevorzugen. Falls der "
 "Anbieter keine Modellliste bereitstellt, geben Sie den Namen manuell ein."
 
-#: ../ai/provider.rst:83
+#: ../ai/provider.rst:90
 msgid ""
 "Azure AI and Zammad AI do not show this field. Azure AI identifies the model "
 "through its deployment URL, while Zammad AI chooses the model itself."
@@ -1049,7 +1066,7 @@ msgstr ""
 "Azure AI und Zammad AI zeigen dieses Feld nicht an. Azure AI identifiziert "
 "das Modell anhand der URL, während Zammad AI das Modell selbst auswählt."
 
-#: ../ai/provider.rst:86
+#: ../ai/provider.rst:93
 msgid ""
 "Need different models for different features? Add the same provider twice "
 "with a different model selected in each, then assign each connection to its "
@@ -1060,11 +1077,11 @@ msgstr ""
 "auswählen, und weisen Sie anschließend die Verbindungen zu spezifischen "
 "Funktionen zu (siehe :ref:`per-feature-provider-config`)."
 
-#: ../ai/provider.rst:121
+#: ../ai/provider.rst:128
 msgid "Embedding Model"
 msgstr "Embedding-Modell"
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:98
 msgid ""
 "The model used to vectorize text for semantic search. The dropdown lists the "
 "models the provider offers. The default option shows the provider's "
@@ -1084,7 +1101,7 @@ msgstr ""
 "jeder Anbieter unterstützt die semantische Suche; das Feld wird nur für "
 "Anbieter angezeigt, die dies tun."
 
-#: ../ai/provider.rst:99
+#: ../ai/provider.rst:106
 msgid ""
 "When you select or enter an embedding model, Zammad tries to determine "
 "values for the two options listed below. If Zammad cannot determine these "
@@ -1097,19 +1114,19 @@ msgstr ""
 "beachten Sie, dass Sie diese Werte nur anpassen sollten, wenn Sie genau "
 "wissen, was Sie tun."
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "Embedding dimensions"
 msgstr "Embedding-Dimensionen"
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "The length of the vectors the embedding model produces."
 msgstr "Die Länge der Vektoren, die das Embedding-Modell erzeugt."
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "Context window size"
 msgstr "Größe des Kontextfensters"
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "The number of input tokens the embedding model accepts at once."
 msgstr ""
 "Die Anzahl der Eingabetoken, die das Embedding-Modell auf einmal akzeptiert."
@@ -1122,7 +1139,7 @@ msgstr ""
 "Der Screenshot zeigt das Dialogfeld des KI-Anbieters mit manuell "
 "konfigurierten Embedding-Einstellungen"
 
-#: ../ai/provider.rst:114
+#: ../ai/provider.rst:121
 msgid ""
 "Changing the embedding model or the embedding dimensions triggers a full "
 "rebuild of the knowledge base index. This re-embeds every knowledge base "
@@ -1141,11 +1158,11 @@ msgstr ""
 "semantischen Suchfunktion auf einen Anbieter, der dasselbe Embedding-Modell "
 "und dieselben Embedding-Dimensionen verwendet, löst keine Neuerstellung aus."
 
-#: ../ai/provider.rst:128
+#: ../ai/provider.rst:135
 msgid "OCR Model"
 msgstr "OCR-Modell"
 
-#: ../ai/provider.rst:124
+#: ../ai/provider.rst:131
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -1160,11 +1177,11 @@ msgstr ""
 "Nicht jeder Anbieter unterstützt die Bildtexterkennung; das Feld wird nur "
 "für Anbieter angezeigt, die diese Funktion unterstützen."
 
-#: ../ai/provider.rst:132 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:139 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:131
+#: ../ai/provider.rst:138
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
@@ -1172,22 +1189,22 @@ msgstr ""
 "Die URL oder IP-Adresse des Anbieters. Erforderlich für Ollama- und OpenAI-"
 "kompatible Anbieter."
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid "URL (Completions)"
 msgstr "URL (Completions)"
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 "Nur Azure AI. Der Endpunkt, über den das Modell zur Textgenerierung "
 "verfügbar ist."
 
-#: ../ai/provider.rst:139
+#: ../ai/provider.rst:146
 msgid "URL (OCR)"
 msgstr "URL (OCR)"
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:145
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
@@ -1195,7 +1212,7 @@ msgstr ""
 "Nur Azure AI. Der Endpunkt, über den das OCR-Modell verfügbar ist. Lassen "
 "Sie das Feld leer, um auf die URL (Completions) zurückzugreifen."
 
-#: ../ai/provider.rst:141
+#: ../ai/provider.rst:148
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -1208,11 +1225,11 @@ msgstr ""
 "angezeigt, bis er nach der ersten erfolgreichen Anfrage grün wird; die "
 "Farben entnehmen Sie bitte dem Abschnitt Status weiter unten."
 
-#: ../ai/provider.rst:147
+#: ../ai/provider.rst:154
 msgid "Status"
 msgstr "Status"
 
-#: ../ai/provider.rst:149
+#: ../ai/provider.rst:156
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
@@ -1220,11 +1237,11 @@ msgstr ""
 "Der farbige Indikator/Punkt am Anfang jeder Zeile zeigt an, ob der Anbieter "
 "erfolgreich genutzt wurde oder ob Probleme vorliegen:"
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:161
 msgid "Green"
 msgstr "Grün"
 
-#: ../ai/provider.rst:153
+#: ../ai/provider.rst:160
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
@@ -1232,11 +1249,11 @@ msgstr ""
 "Der Anbieter wurde verwendet und die letzte Anfrage war erfolgreich. Der "
 "Tooltip zeigt den Zeitstempel der letzten Statusaktualisierung an."
 
-#: ../ai/provider.rst:158
+#: ../ai/provider.rst:165
 msgid "Orange"
 msgstr "Orange"
 
-#: ../ai/provider.rst:157
+#: ../ai/provider.rst:164
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
@@ -1244,11 +1261,11 @@ msgstr ""
 "Der Anbieter ist konfiguriert, wurde jedoch noch nicht verwendet. Nach der "
 "ersten erfolgreichen Anfrage wechselt der Indikator zu grün."
 
-#: ../ai/provider.rst:163
+#: ../ai/provider.rst:170
 msgid "Red"
 msgstr "Rot"
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:168
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
@@ -1259,11 +1276,11 @@ msgstr ""
 "Der Tooltip zeigt stets den aktuellsten Fehler an, daher bezieht sich der "
 "Zeitstempel auf die zuletzt fehlgeschlagene Anfrage."
 
-#: ../ai/provider.rst:168
+#: ../ai/provider.rst:175
 msgid "Default Provider"
 msgstr "Standard Anbieter"
 
-#: ../ai/provider.rst:170
+#: ../ai/provider.rst:177
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -1284,7 +1301,7 @@ msgstr ""
 "Der Screenshot zeigt die Anbieterliste, wobei ein Anbieter für alle "
 "Funktionen als Standard ausgewählt ist"
 
-#: ../ai/provider.rst:179
+#: ../ai/provider.rst:186
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -1297,11 +1314,11 @@ msgstr ""
 "Standardanbieter: Wenn Sie den Anbieter löschen, der die Markierung innehat, "
 "ernennt Zammad den ältesten verbleibenden Anbieter zum Standardanbieter."
 
-#: ../ai/provider.rst:187
+#: ../ai/provider.rst:194
 msgid "Capabilities"
 msgstr "Fähigkeiten"
 
-#: ../ai/provider.rst:189
+#: ../ai/provider.rst:196
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
@@ -1311,11 +1328,11 @@ msgstr ""
 "können diese über das ︙Menü in der Spalte **Aktion** zuweisen. Die "
 "Plaketten zeigen an, welcher Anbieter die jeweilige Funktion derzeit abdeckt."
 
-#: ../ai/provider.rst:201
+#: ../ai/provider.rst:208
 msgid "Semantic search"
 msgstr "Semantische Suche"
 
-#: ../ai/provider.rst:194
+#: ../ai/provider.rst:201
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
@@ -1324,7 +1341,7 @@ msgstr ""
 "Einbettungen) um, damit die Knowledge Base relevante Antworten anhand der "
 "Bedeutung und nicht nur anhand von Schlüsselwörtern finden kann."
 
-#: ../ai/provider.rst:197
+#: ../ai/provider.rst:204
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
@@ -1340,16 +1357,16 @@ msgstr ""
 "dieser Zuweisung einen vollständigen Neuaufbau des Indexes auslösen kann; "
 "siehe **Embedding-Modell** oben."
 
-#: ../ai/provider.rst:207
+#: ../ai/provider.rst:214
 msgid "Image text recognition"
 msgstr "Texterkennung in Bildern"
 
-#: ../ai/provider.rst:204
+#: ../ai/provider.rst:211
 msgid "The provider used to extract text from images (OCR)."
 msgstr ""
 "Der Anbieter, der zum Extrahieren von Text aus Bildern (OCR) verwendet wird."
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:213
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
@@ -1358,7 +1375,7 @@ msgstr ""
 "allen Anbietern vollständig deaktivieren; die Funktionen verwenden dann "
 "einfach keine OCR."
 
-#: ../ai/provider.rst:209
+#: ../ai/provider.rst:216
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1372,28 +1389,28 @@ msgstr ""
 "nicht weitervererbt: Wenn Sie den Anbieter löschen, der eine Fähigkeit "
 "abdeckt, bleibt diese dann einfach ohne Zuweisung."
 
-#: ../ai/provider.rst:216 ../manage/macros.rst:56 ../manage/templates.rst:35
+#: ../ai/provider.rst:223 ../manage/macros.rst:56 ../manage/templates.rst:35
 msgid "Actions"
 msgstr "Aktionen"
 
-#: ../ai/provider.rst:218
+#: ../ai/provider.rst:225
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Das︙Menü in der Spalte **Aktion** bietet folgende Aktionen:"
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Set as default"
 msgstr "Als Standard einstellen"
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Marks the provider as the default provider for AI features."
 msgstr "Legt den Anbieter als Standardanbieter für KI-Funktionen fest."
 
-#: ../ai/provider.rst:225
+#: ../ai/provider.rst:232
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 "Für semantische Suche verwenden / Nicht für semantische Suche verwenden"
 
-#: ../ai/provider.rst:224
+#: ../ai/provider.rst:231
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
@@ -1401,12 +1418,12 @@ msgstr ""
 "Weist einem Anbieter die Fähigkeit der semantischen Suche zu oder hebt diese "
 "Zuordnung auf. Nur für Anbieter verfügbar, die diese Funktion unterstützen."
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:236
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 "Für Bildtexterkennung verwenden / Nicht für Bildtexterkennung verwenden"
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:235
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
@@ -1414,23 +1431,23 @@ msgstr ""
 "Weist dem Anbieter die Fähigkeit zur Bildtexterkennung zu oder hebt diese "
 "Zuweisung auf."
 
-#: ../ai/provider.rst:232 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:239 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Löschen"
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:239
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 "Entfernt den Anbieter. Nicht verfügbar für Zammad AI in SaaS-Instanzen."
 
-#: ../ai/provider.rst:237
+#: ../ai/provider.rst:244
 msgid "Configuring Provider per Feature"
 msgstr "Anbieter pro Funktion festlegen"
 
-#: ../ai/provider.rst:239
+#: ../ai/provider.rst:246
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
@@ -1439,7 +1456,7 @@ msgstr ""
 "Anbieter. Für eine bessere Kontrolle können Sie für die einzelnen KI-"
 "Funktionen einen bestimmten Anbieter auswählen."
 
-#: ../ai/provider.rst:242
+#: ../ai/provider.rst:249
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1461,7 +1478,7 @@ msgstr ""
 "Der Screenshot zeigt das Anbieter-Dialogfenster, in dem ein Anbieter "
 "ausgewählt ist"
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:258
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1479,11 +1496,11 @@ msgstr ""
 "verfügen, da dies die Anbieter betrifft, die auf der Anbieter-Seite "
 "eingerichtet wurden."
 
-#: ../ai/provider.rst:259
+#: ../ai/provider.rst:266
 msgid "Additional Provider Information"
 msgstr "Weitere Anbieter-Informationen"
 
-#: ../ai/provider.rst:261
+#: ../ai/provider.rst:268
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
@@ -1493,7 +1510,7 @@ msgstr ""
 "weiter. Andernfalls besuchen Sie bitte :doc:`feedback-and-logs` oder wählen "
 "Sie eine der KI-Funktionen aus dem Menü auf der linken Seite aus."
 
-#: ../ai/provider.rst:270
+#: ../ai/provider.rst:277
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
@@ -1502,17 +1519,17 @@ msgstr ""
 "KI-Funktionen von Zammad zu beginnen. Dies bietet mehrere wesentliche "
 "Vorteile:"
 
-#: ../ai/provider.rst:273
+#: ../ai/provider.rst:280
 msgid "You don't have to set up an AI system or its configuration."
 msgstr ""
 "Sie müssen weder ein KI-System einrichten noch dessen Konfiguration "
 "vornehmen."
 
-#: ../ai/provider.rst:274
+#: ../ai/provider.rst:281
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr "Gehostet in der EU und DSGVO-konform."
 
-#: ../ai/provider.rst:275
+#: ../ai/provider.rst:282
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
@@ -1520,23 +1537,23 @@ msgstr ""
 "Für SaaS-Kunden ist in Zammad keine Konfiguration erforderlich, für Kunden "
 "mit eigenem Hosting lediglich ein API-Schlüssel."
 
-#: ../ai/provider.rst:277
+#: ../ai/provider.rst:284
 msgid "Requests with sensitive information aren't used for training."
 msgstr ""
 "Anfragen mit sensiblen Informationen werden nicht für Trainingszwecke "
 "verwendet."
 
-#: ../ai/provider.rst:278
+#: ../ai/provider.rst:285
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 "Eine Anlaufstelle für Unterstützung, wenn etwas nicht wie erwartet "
 "funktioniert."
 
-#: ../ai/provider.rst:290
+#: ../ai/provider.rst:297
 msgid "SaaS Customers"
 msgstr "SaaS-Kunden"
 
-#: ../ai/provider.rst:282
+#: ../ai/provider.rst:289
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1554,7 +1571,7 @@ msgstr ""
 "Guthaben an KI-Anfragen oder aktivieren Sie die Benachrichtigung, die Sie "
 "bei wenigen verbleibenden Anfragen informiert."
 
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:296
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
@@ -1562,11 +1579,11 @@ msgstr ""
 "Bei SaaS wird der Zammad AI-Anbieter von der Plattform bereitgestellt und "
 "Sie können ihn weder löschen noch seinen Typ ändern."
 
-#: ../ai/provider.rst:296
+#: ../ai/provider.rst:303
 msgid "Self-Hosted Customers"
 msgstr "Self-Hosted Kunden"
 
-#: ../ai/provider.rst:293
+#: ../ai/provider.rst:300
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1579,7 +1596,7 @@ msgstr ""
 "Sie einen neuen Anbieter vom Typ *Zammad AI* hinzu und speichern den "
 "Schlüssel."
 
-#: ../ai/provider.rst:301
+#: ../ai/provider.rst:308
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
@@ -1590,7 +1607,7 @@ msgstr ""
 "Dritte übertragen werden. Dieser Ansatz ist jedoch nur dann sinnvoll, wenn "
 "Sie über eine leistungsstarke GPU in Ihrem System verfügen!"
 
-#: ../ai/provider.rst:305
+#: ../ai/provider.rst:312
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -1695,7 +1712,7 @@ msgstr ""
 "entsprechen. Bei anderen Tickets ist der Seitenleisten-Tab für die "
 "Zusammenfassung nicht verfügbar."
 
-#: ../ai/summary.rst:44 ../manage/groups/settings.rst:117
+#: ../ai/summary.rst:44 ../manage/groups/settings.rst:125
 msgid "Summary Generation"
 msgstr "Erstellung der Zusammenfassung"
 
@@ -2077,7 +2094,7 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:121 ../manage/macros.rst:65
+#: ../manage/groups/settings.rst:129 ../manage/macros.rst:65
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:238 ../manage/roles/permissions.rst:308
@@ -2106,7 +2123,7 @@ msgstr ""
 "der Werkzeuge angezeigt. Sie wird **nicht** als Kontext für die KI verwendet."
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:142
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:71 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:164
@@ -2752,7 +2769,7 @@ msgstr "STARTTLS"
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:248
 #: ../manage/webhook/add.rst:52 ../settings/security/third-party/saml.rst:140
-#: ../system/integrations/i-doit.rst:66
+#: ../system/integrations/i-doit.rst:54
 msgid "SSL verification"
 msgstr "SSL-Verizifierung"
 
@@ -11394,26 +11411,45 @@ msgstr ""
 msgid "Zammad supports 10 hierarchy levels for groups as a maximum."
 msgstr "Zammad unterstützt maximal 10 Hierarchieebenen für Gruppen."
 
-#: ../manage/groups/settings.rst:35
+#: ../manage/groups/settings.rst:43
 msgid "Assignment timeout"
 msgstr "Zeitliche Zuweisungsüberschreitung"
 
 #: ../manage/groups/settings.rst:33
 msgid ""
-"The time in minutes after which the ticket's ownership will revert back to "
-"*unassigned* after the assigned agent hasn't worked on the ticket. This "
-"timeout does *not* take any working hours in account."
+"The time in minutes after which Zammad unassigns the ticket again, so it "
+"shows up as *unassigned*. Leave the field empty or enter ``0`` to disable "
+"the timeout."
 msgstr ""
-"Die Zeit in Minuten, nach der der Besitzer des Tickets wieder auf *nicht "
-"zugewiesen* zurückgesetzt wird, sofern der zugewiesene Besitzer (Agent) "
-"nicht an dem Ticket gearbeitet hat. Bei dieser Zeitüberschreitung werden "
-"*keine* Arbeitszeiten berücksichtigt."
+"Die Zeit in Minuten, nach der Zammad die Zuweisung wieder entfernt, sodass "
+"es als *nicht zugewiesen* erscheint. Lassen Sie das Feld leer oder geben Sie "
+"``0`` ein, um die Frist zu deaktivieren."
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:37
+msgid ""
+"The countdown starts when a ticket in state *new* or *open* is assigned to "
+"an agent. It restarts whenever the owner or the group changes, the state "
+"changes to *new* or *open* or the agent sends a public reply. Editing other "
+"ticket attributes and adding internal notes does not count as working on the "
+"ticket. Tickets in a pending or closed state are not unassigned. Zammad runs "
+"the unassignment check every 10 minutes, so a ticket can stay assigned up to "
+"10 minutes longer than configured. Working hours are not taken into account."
+msgstr ""
+"Der Countdown beginnt, wenn ein Ticket im Status *neu* oder *offen* einem "
+"Agenten zugewiesen wird. Er wird neu gestartet, wenn der Besitzer oder die "
+"Gruppe sich ändert, der Status auf *neu* oder *offen* wechselt oder der "
+"Agent eine öffentliche Antwort sendet. Das Bearbeiten anderer "
+"Ticketattribute und das Hinzufügen interner Notizen setzen den Countdown "
+"nicht zurück. Bei Tickets in einem \"Warten auf\" oder geschlossenen Status "
+"wird der Besitzer nicht automatisch entfernt. Zammad führt die Prüfung alle "
+"10 Minuten durch, sodass ein Ticket bis zu 10 Minuten länger zugewiesen "
+"bleiben kann als konfiguriert. Geschäftszeiten werden nicht berücksichtigt."
+
+#: ../manage/groups/settings.rst:63
 msgid "Follow-up possible"
 msgstr "Nachfrage möglich"
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:46
 msgid ""
 "This option allows you to decide how Zammad should react if a customer "
 "replies to a closed ticket (no matter if by e.g. email or UI)."
@@ -11422,7 +11458,7 @@ msgstr ""
 "wenn ein Kunde auf ein geschlossenes Ticket antwortet (egal ob per E-Mail "
 "oder Benutzeroberfläche)."
 
-#: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
 #: ../misc/object-conditions/basics.rst:514
@@ -11451,15 +11487,15 @@ msgstr ""
 msgid "yes"
 msgstr "ja"
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:50
 msgid "The ticket will be reopened. This is the default value."
 msgstr "Das Ticket wird wieder geöffnet. Dies ist der Standardwert."
 
-#: ../manage/groups/settings.rst:46
+#: ../manage/groups/settings.rst:54
 msgid "do not reopen Ticket but create new Ticket"
 msgstr "Ticket nicht wieder öffnen, sondern neues Ticket erstellen"
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:53
 msgid ""
 "The ticket will remain closed and Zammad will create a new ticket instead. "
 "The new ticket contains the customers reply only."
@@ -11467,13 +11503,13 @@ msgstr ""
 "Das Ticket bleibt geschlossen und Zammad erstellt stattdessen ein neues "
 "Ticket. Das neue Ticket enthält nur die Antwort des Kunden."
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:63
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr ""
 "nach einer bestimmten Zeit das Ticket nicht wieder öffnen, sondern ein neues "
 "erstellen"
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:57
 msgid ""
 "The ticket can be reopened unless the specified number of days *after last "
 "ticket closure* has been exceeded. If the time limit is exceeded, Zammad "
@@ -11484,7 +11520,7 @@ msgstr ""
 "Wenn das Zeitlimit überschritten wurde, erstellt Zammad ein neues Ticket, "
 "anstatt es erneut zu öffnen."
 
-#: ../manage/groups/settings.rst:53
+#: ../manage/groups/settings.rst:61
 msgid ""
 "Choosing this option will provide the option *Reopening time in days* which "
 "requires you to provide the number of days you want Zammad to wait until it "
@@ -11494,11 +11530,11 @@ msgstr ""
 "Tagen* angezeigt, bei der Sie die Anzahl der Tage angeben müssen, nach denen "
 "Zammad ein neues Ticket erstellen soll."
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "Assign follow-ups"
 msgstr "Zuweisung bei Nachfrage"
 
-#: ../manage/groups/settings.rst:58
+#: ../manage/groups/settings.rst:66
 msgid ""
 "This setting allows you to decide if, upon a reopen of a ticket, the last "
 "assigned owner should stay assigned or if Zammad should reset the owner to "
@@ -11508,7 +11544,7 @@ msgstr ""
 "Tickets der zuletzt zugewiesene Besitzer gesetzt bleiben soll oder ob Zammad "
 "den Besitzer zurücksetzen soll."
 
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:71
 msgid ""
 "The ticket will remain with the last agent who owned it. This is the default "
 "value."
@@ -11516,7 +11552,7 @@ msgstr ""
 "Das Ticket verbleibt beim letzten Agenten, dem es zugewiesen ist. Dies ist "
 "der Standardwert."
 
-#: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
 #: ../misc/object-conditions/basics.rst:520
 #: ../misc/object-conditions/basics.rst:523
@@ -11538,15 +11574,15 @@ msgstr ""
 msgid "no"
 msgstr "nein"
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "The owner assignment of the ticket will be removed."
 msgstr "Der Besitzer wird aus dem Ticket entfernt."
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "Sending Email Address"
 msgstr "E-Mail-Versandadresse"
 
-#: ../manage/groups/settings.rst:69
+#: ../manage/groups/settings.rst:77
 msgid ""
 "Select which sender's email address Zammad will use outbound for replying on "
 "a ticket in this group."
@@ -11554,41 +11590,41 @@ msgstr ""
 "Wählen Sie die E-Mail-Adresse des Absenders aus, die Zammad ausgehend für "
 "die Beantwortung eines Tickets in dieser Gruppe verwenden soll."
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:80
 msgid "**You don't have an email address configured yet?**"
 msgstr "**Sie haben noch keine E-Mail-Adresse konfiguriert?**"
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:82
 msgid "Please configure an email based channel before here"
 msgstr "Bitte konfigurieren Sie zuvor einen E-Mail-basierten Kanal hier"
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:84
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ":doc:`Kanäle → E-Mail </channels/email/index>`"
 
-#: ../manage/groups/settings.rst:77
+#: ../manage/groups/settings.rst:85
 msgid ":doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`"
 msgstr ":doc:`Kanäle → Microsoft 365 IMAP </channels/microsoft365/index>`"
 
-#: ../manage/groups/settings.rst:78
+#: ../manage/groups/settings.rst:86
 msgid ""
 ":doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 msgstr ""
 ":doc:`Kanäle → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:87
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ":doc:`Kanäle → Google </channels/google/index>`"
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "and come back afterwards."
 msgstr "und fahren Sie anschließend hier fort."
 
-#: ../manage/groups/settings.rst:86
+#: ../manage/groups/settings.rst:94
 msgid "Signature"
 msgstr "Signatur"
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:92
 msgid ""
 "Choose which :doc:`signature </channels/email/signatures>` to use when "
 "replying to tickets in this group. Leaving this option unset will send "
@@ -11598,11 +11634,11 @@ msgstr ""
 "Beantworten von Tickets in dieser Gruppe verwendet werden soll. Wenn Sie "
 "diese Option nicht aktivieren, werden E-Mails ohne Signatur versendet."
 
-#: ../manage/groups/settings.rst:94
+#: ../manage/groups/settings.rst:102
 msgid "Shared Drafts"
 msgstr "Gemeinsame Entwürfe"
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:97
 msgid ""
 "Shared drafts allows your agents to share ticket drafts (for new and "
 "existing tickets) with their colleagues. By default this setting is enabled, "
@@ -11613,7 +11649,7 @@ msgstr ""
 "Einstellung aktiviert. Deaktivieren Sie sie, wenn Ihre Agenten diese "
 "Funktion nicht verwenden sollen."
 
-#: ../manage/groups/settings.rst:93
+#: ../manage/groups/settings.rst:101
 msgid ""
 "Learn more about shared drafts :user-docs:`in our user documentation </"
 "extras/shared-drafts.html>`."
@@ -11621,7 +11657,7 @@ msgstr ""
 "Erfahren Sie mehr über geteilte Entwürfe :user-docs:`in unserer Benutzer-"
 "Dokumentation </extras/shared-drafts.html>`."
 
-#: ../manage/groups/settings.rst:97
+#: ../manage/groups/settings.rst:105
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
 "configuration for this group. Use one of the following values:"
@@ -11630,42 +11666,42 @@ msgstr ""
 "</ai/summary>` für diese Gruppe überschreiben. Verwenden Sie einen der "
 "folgenden Werte:"
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Global Default"
 msgstr "Globalen Standard verwenden"
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Use the value configured in *AI > Ticket Summary*."
 msgstr ""
 "Verwendet die Einstellung, die unter *KI > Ticket-Zusammenfassung* "
 "konfiguriert wurde."
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "On Ticket Detail Opening"
 msgstr "Beim Öffnen der Ticket-Details"
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "Always trigger summary generation when an agent opens the ticket."
 msgstr ""
 "Löst die Erstellung einer Zusammenfassung aus, wenn ein Agent das Ticket "
 "öffnet."
 
-#: ../manage/groups/settings.rst:108
+#: ../manage/groups/settings.rst:116
 msgid "On Ticket Summary Sidebar Activation"
 msgstr "Bei Aktivierung der Seitenleiste der Ticket-Zusammenfassung"
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:115
 msgid ""
 "Trigger summary generation only when the agent opens the summary sidebar tab."
 msgstr ""
 "Löst die Erstellung der Zusammenfassung erst dann aus, wenn ein Agent den "
 "Zusammenfassungs-Tab in der Seitenleiste öffnet."
 
-#: ../manage/groups/settings.rst:110
+#: ../manage/groups/settings.rst:118
 msgid "Default setting: ``Global Default``."
 msgstr "Standard-Einstellung: ``Globalen Standard verwenden``."
 
-#: ../manage/groups/settings.rst:114
+#: ../manage/groups/settings.rst:122
 msgid ""
 "In addition to this group-level setting, you can also use :doc:`object "
 "conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary "
@@ -11678,7 +11714,7 @@ msgstr ""
 "um genau festzulegen, für welche Tickets die Zusammenfassung erstellt werden "
 "soll."
 
-#: ../manage/groups/settings.rst:120
+#: ../manage/groups/settings.rst:128
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
@@ -11686,7 +11722,7 @@ msgstr ""
 "Ein interner Hinweis zur Gruppe, der nur für Personen sichtbar ist, die "
 "Zugriff auf den Gruppenverwaltungsbereich haben."
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:132
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -11701,7 +11737,7 @@ msgstr ""
 "weiterhin mit ihren bestehenden Tickets in einer inaktiven Gruppe "
 "interagieren."
 
-#: ../manage/groups/settings.rst:132
+#: ../manage/groups/settings.rst:140
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
@@ -11709,7 +11745,7 @@ msgstr ""
 "Möchten Sie mit Tickets aus einer inaktiven Gruppe umgehen, die von Kunden "
 "aktualisiert werden?"
 
-#: ../manage/groups/settings.rst:135
+#: ../manage/groups/settings.rst:143
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
@@ -11720,7 +11756,7 @@ msgstr ""
 "bevor Sie die Gruppe deaktivieren, damit sie in der Trigger-Konfiguration "
 "auswählbar ist."
 
-#: ../manage/groups/settings.rst:141
+#: ../manage/groups/settings.rst:149
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -13457,7 +13493,8 @@ msgstr ""
 
 #: ../manage/public-links.rst:85 ../misc/composer.rst:65
 #: ../settings/security/base.rst:13 ../settings/security/base.rst:39
-#: ../settings/security/base.rst:66 ../settings/security/password.rst:66
+#: ../settings/security/base.rst:66 ../settings/security/password.rst:51
+#: ../settings/security/password.rst:66
 msgid "Default: ``yes``"
 msgstr "Standard: ``ja``"
 
@@ -17963,7 +18000,7 @@ msgstr ""
 "angezeigt."
 
 #: ../manage/webhook/add.rst:42 ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
+#: ../system/integrations/i-doit.rst:39
 msgid "Endpoint"
 msgstr "Endpunkt"
 
@@ -20171,8 +20208,7 @@ msgstr ""
 "der Artikel bereits existiert oder noch im Entwurfsstadium ist."
 
 #: ../misc/composer.rst:35 ../misc/composer.rst:47 ../misc/composer.rst:57
-#: ../settings/security/password.rst:51 ../settings/security/password.rst:74
-#: ../settings/ticket.rst:138
+#: ../settings/security/password.rst:74 ../settings/ticket.rst:138
 msgid "Default: ``no``"
 msgstr "Standardwert: ``Nein``"
 
@@ -21195,7 +21231,7 @@ msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you."
 msgstr ""
-"Damit Sie die zeitlichen Bedingungen von Zammad besser verstehen, könnte Sie "
+"Damit Sie die zeitlichen Bedingungen von Zammad besser verstehen, können Sie "
 "sich das folgende Diagramm anschauen."
 
 #: ../misc/object-conditions/basics.rst:328 ../system/objects/types.rst:36
@@ -25038,9 +25074,9 @@ msgstr ""
 "vergessen?** verwenden, um ihr Passwort zu ändern und ihr Konto zu "
 "entsperren."
 
-#: ../settings/security/password.rst:31
-msgid "Default: ``10``"
-msgstr "Standard: ``10``"
+#: ../settings/security/password.rst:31 ../settings/ticket.rst:154
+msgid "Default: ``5``"
+msgstr "Standard: ``5``"
 
 #: ../settings/security/password.rst:35
 msgid "Beside changing the user's password, you can also unlock accounts via"
@@ -25091,8 +25127,8 @@ msgstr ""
 "(von ``4`` bis ``20``)."
 
 #: ../settings/security/password.rst:59
-msgid "Default: ``6``"
-msgstr "Standard: ``6``"
+msgid "Default: ``10``"
+msgstr "Standard: ``10``"
 
 #: ../settings/security/password.rst:62
 msgid "Digit Required"
@@ -29088,10 +29124,6 @@ msgid ""
 msgstr ""
 "Diese Option ist nur verfügbar, wenn das Ticket-Nummer-Format auf "
 "``Inkrement`` gesetzt ist!"
-
-#: ../settings/ticket.rst:154
-msgid "Default: ``5``"
-msgstr "Standard: ``5``"
 
 #: ../settings/ticket.rst:159
 msgid "Auto-Assignment"
@@ -34492,200 +34524,244 @@ msgstr "i-doit"
 #: ../system/integrations/i-doit.rst:4
 msgid ""
 "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration "
-"management database) tool which is capable of managing information about "
-"your physical and digital IT infrastructure. If you use tickets to track "
-"issues with your IT components, you may want to connect them with your CMDB. "
-"With Zammad, you can do that in two ways!"
+"management database). It manages information about your physical and digital "
+"IT infrastructure. Linking it to Zammad adds context on both sides: agents "
+"see which infrastructure a ticket is about, and people working in i-doit see "
+"what has been reported about an object."
 msgstr ""
-"`i-doit <https://www.i-doit.com/>`_ ist ein quelloffenes CMDB-Tool "
-"(Configuration Management Database), mit dem Sie Informationen über Ihre "
-"physische und digitale IT-Infrastruktur verwalten können. Wenn Sie Tickets "
-"verwenden, um Probleme mit Ihren IT-Komponenten zu verfolgen, möchten Sie "
-"diese vielleicht mit Ihrer CMDB verbinden. Mit Zammad können Sie das auf "
-"zwei Arten tun!"
+"`i-doit <https://www.i-doit.com/>`_ ist eine Open-Source-CMDB (Configuration "
+"Management Database). Sie verwaltet Informationen über Ihre physische und "
+"digitale IT-Infrastruktur. Die Verknüpfung mit Zammad fügt Kontext auf "
+"beiden Seiten hinzu: Agenten sehen, um welche Infrastruktur es bei einem "
+"Ticket geht, und Personen, die in i-doit arbeiten, sehen, was über ein "
+"Objekt gemeldet wurde."
 
-#: ../system/integrations/i-doit.rst:11
-msgid "1. Add i-doit Links to Zammad Tickets"
-msgstr "1. i-doit Links zu Zammad-Tickets hinzufügen"
+#: ../system/integrations/i-doit.rst:10
+msgid "The integration has two independent parts, each configured on its own:"
+msgstr ""
+"Die Integration besteht aus zwei voneinander unabhängigen Teilen, die "
+"jeweils separat konfiguriert werden:"
 
-#: ../system/integrations/i-doit.rst:14 ../system/integrations/i-doit.rst:72
-msgid "What Users See"
-msgstr "Was die Nutzer sehen"
-
-#: ../system/integrations/i-doit.rst:20
-msgid "i-doit integration in Zammad's ticket sidebar"
-msgstr "Integration von i-doit in Zammads Ticket-Seitenleiste"
-
-#: ../system/integrations/i-doit.rst:20
+#: ../system/integrations/i-doit.rst:12
 msgid ""
-"The i-doit integration will appear under a new 🖨 tab in the ticket sidebar."
+"The ticket sidebar in Zammad shows the i-doit objects linked to a ticket. "
+"You configure this in Zammad's admin settings."
 msgstr ""
-"Die i-doit-Integration wird in einem neuen 🖨 Tab in der Seitenleiste "
-"angezeigt."
+"Die Ticket-Seitenleiste in Zammad zeigt die mit einem Ticket verknüpften i-"
+"doit-Objekte an. Dies konfigurieren Sie in den Admin-Einstellungen von "
+"Zammad."
 
-#: ../system/integrations/i-doit.rst:22
+#: ../system/integrations/i-doit.rst:14
 msgid ""
-"i-doit integration puts a new tab in Zammad's ticket sidebar where you can "
-"add links to existing i-doit devices for easy reference. (See our :user-"
-"docs:`user documentation </extras/i-doit-track-company-property.html>` to "
-"learn how it works in practice)."
+"An object's page in i-doit shows the Zammad tickets linked to it. You "
+"configure this in i-doit."
 msgstr ""
-"Die i-doit-Integration fügt einen neuen Tab zur Seitenleiste in Tickets "
-"hinzu, in dem Sie Links zu vorhandenen i-doit-Geräten hinzufügen können, um "
-"sie leichter zu finden. (Siehe unsere :user-docs:`Benutzerdokumentation </"
-"extras/i-doit-track-company-property.html>` für weitere Informationen zur "
-"Handhabung in der Praxis)."
+"Auf der Objekt-Seite von i-doit werden die damit verknüpften Zammad-Tickets "
+"angezeigt. Dies konfigurieren Sie in i-doit."
 
-#: ../system/integrations/i-doit.rst:29 ../system/integrations/i-doit.rst:85
-msgid "How to Set it Up"
-msgstr "Einrichtung"
-
-#: ../system/integrations/i-doit.rst:31
+#: ../system/integrations/i-doit.rst:17
 msgid ""
-"It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-"
-"add-on/>`_. Make sure to have it properly set up. Use the following setting:"
+"You can use one part without the other. Zammad stores only the object IDs on "
+"the ticket and reads the object data from i-doit each time the panel is "
+"shown. A renamed object therefore appears under its new name and an object "
+"deleted in i-doit drops off the list. Customers never see the panel, and an "
+"agent needs update access to a ticket to change its links. How agents and i-"
+"doit users work with both parts is described in the :user-docs:`user "
+"documentation </extras/i-doit-track-company-property.html>`."
 msgstr ""
-"Das `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_ von i-"
-"doit ist dazu erforderlich. Stellen Sie sicher, dass es richtig eingerichtet "
-"ist. Verwenden Sie die folgende Einstellung:"
+"Sie können einen Teil ohne den anderen verwenden. Zammad speichert lediglich "
+"die Objekt-IDs im Ticket und liest die Objektdaten bei jeder Anzeige des "
+"Bereichs aus i-doit aus. Ein umbenanntes Objekt erscheint daher unter seinem "
+"neuen Namen und ein in i-doit gelöschtes Objekt verschwindet aus der Liste. "
+"Kunden sehen diesen Bereich nicht und ein Agent benötigt Änderungsrechte für "
+"ein Ticket, um dessen Verknüpfungen zu ändern. Wie Agenten und i-doit-"
+"Benutzer mit beiden Komponenten arbeiten, wird in der :user-"
+"docs:`Benutzerdokumentation </extras/i-doit-track-company-property.html>` "
+"beschrieben."
 
-#: ../system/integrations/i-doit.rst:35
-msgid "Active: ``Yes``"
-msgstr "Aktiv: ``Ja``"
+#: ../system/integrations/i-doit.rst:26
+msgid "Configure Object Linking in Zammad"
+msgstr "Konfiguration der Objektverknüpfung in Zammad"
 
-#: ../system/integrations/i-doit.rst:36
-msgid "Enforce authentication by username and password: ``No``"
-msgstr "Authentifizierung mit Benutzername und Passwort erzwingen: ``Nein``"
+#: ../system/integrations/i-doit.rst:28
+msgid ""
+"The settings are under *System > Integrations > i-doit* and require the "
+"``admin.integration`` permission. Use the switch at the top of the page to "
+"enable the panel. Switching it off hides the panel but keeps the links "
+"stored on existing tickets."
+msgstr ""
+"Die Einstellung finden Sie unter *System > Integrationen > i-doit* und "
+"erfordert die Berechtigung ``admin.integration``. Verwenden Sie den Schalter "
+"im oberen Bereich der Seite, um die Funktion zu aktivieren. Das Deaktivieren "
+"versteckt den Bereich, behält aber die Verknüpfungen auf bestehenden Tickets."
+
+#: ../system/integrations/i-doit.rst:None
+msgid "i-doit integration settings in Zammad's admin settings"
+msgstr "Einstellungen der i-doit-Integration in Zammads Admin-Bereich"
 
 #: ../system/integrations/i-doit.rst:38
 msgid ""
-"To set it up, enable the integration in the Zammad admin settings under "
-"*System > Integrations > i-doit*:"
+"The root URL of your i-doit installation, including the protocol, e.g. "
+"``https://idoit.example.com``. Zammad adds ``/src/jsonrpc.php`` to it."
 msgstr ""
-"Um sie einzurichten, aktivieren Sie die Integration in den Admin-"
-"Einstellungen unter *System > Integrationen > i-doit*:"
+"Die Root-URL Ihrer i-doit-Installation inklusive Protokoll, z.B. ``https://"
+"idoit.example.com``. Zammad fügt ``/src/jsonrpc.php`` hinzu."
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit settings within the integration pages"
-msgstr "i-doit-Einstellungen unter Integrationen"
-
-#: ../system/integrations/i-doit.rst:46
-msgid "The root URL of your i-doit installation."
-msgstr "Die URL Ihrer i-doit-Installation."
-
-#: ../system/integrations/i-doit.rst:55
+#: ../system/integrations/i-doit.rst:42
 msgid "API token"
 msgstr "API-Token"
 
-#: ../system/integrations/i-doit.rst:49
-msgid ""
-"Found in the i-doit admin area under *Interfaces / external data > JSON-RPC "
-"API > Common Settings*."
-msgstr ""
-"Zu finden im i-doit Admin-Bereich unter *Interfaces / external data > JSON-"
-"RPC API > Common Settings*."
+#: ../system/integrations/i-doit.rst:42
+msgid "The key from i-doit's JSON-RPC API settings."
+msgstr "Der Schlüssel aus den JSON-RPC-API-Einstellungen von i-doit."
 
-#: ../system/integrations/i-doit.rst:0
-msgid "i-doit administration interface with API configuration"
-msgstr "i-doit Verwaltungsoberfläche mit API-Konfiguration"
-
-#: ../system/integrations/i-doit.rst:59
+#: ../system/integrations/i-doit.rst:46
 msgid "Client ID"
 msgstr "Client-ID"
 
-#: ../system/integrations/i-doit.rst:58
+#: ../system/integrations/i-doit.rst:45
 msgid ""
-"A unique name to identify Zammad within i-doit. Zammad does not require you "
-"to enter a value here, but i-doit might!"
+"Zammad stores this value but does not send it to i-doit, so it has no "
+"effect. Leave it empty."
 msgstr ""
-"Ein eindeutiger Name, um Zammad in i-doit zu identifizieren. Zammad verlangt "
-"nicht, dass Sie hier einen Wert eingeben, aber i-doit könnte das!"
+"Zammad speichert diesen Wert, übermittelt ihn jedoch nicht an i-doit, sodass "
+"er keine Auswirkungen hat. Lassen Sie das Feld leer."
 
-#: ../system/integrations/i-doit.rst:62
+#: ../system/integrations/i-doit.rst:49
 msgid ""
-"Here you can decide if the certificate of your i-doit system has to be "
-"verified or not. In case you are using custom certificates, please have a "
-"look at :doc:`how to add them to Zammad </settings/security/ssl-"
-"certificates>`."
+"Decides whether Zammad verifies the certificate of your i-doit installation. "
+"Default value: ``yes``. If you use a custom certificate, add it to Zammad as "
+"described in :doc:`SSL certificates </settings/security/ssl-certificates>`."
 msgstr ""
-"Hier können Sie festlegen, ob das Zertifikat Ihres i-doit-Systems überprüft "
-"werden soll oder nicht. Falls Sie benutzerdefinierte Zertifikate verwenden, "
-"sehen Sie sich bitte an, wie man diese :doc:`in Zammad hinterlegt </settings/"
-"security/ssl-certificates>`."
+"Legt fest, ob Zammad das Zertifikat Ihrer i-doit-Installation überprüft. "
+"Standardwert: ``ja``. Wenn Sie ein benutzerdefiniertes Zertifikat verwenden, "
+"fügen Sie es zu Zammad wie unter :doc:`SSL-Zertifikate </settings/security/"
+"ssl-certificates>` beschrieben hinzu."
 
-#: ../system/integrations/i-doit.rst:69
-msgid "2. List / Create Zammad Tickets in i-doit"
-msgstr "2. Zammad-Tickets in i-doit auflisten / erstellen"
-
-#: ../system/integrations/i-doit.rst:None
-msgid "Zammad integration in i-doit's device view"
-msgstr "Zammad-Integration in der Geräteansicht von i-doit"
-
-#: ../system/integrations/i-doit.rst:78
+#: ../system/integrations/i-doit.rst:56
 msgid ""
-"i-doit's ticket system integration gives you a way to see all the tickets "
-"for a given device without ever leaving i-doit. (See our :user-docs:`user "
-"documentation </extras/i-doit-track-company-property.html>` to learn how it "
-"works in practice)."
+"Zammad reads the objects through i-doit's JSON-RPC API, which ships as an "
+"add-on and is not part of the i-doit Docker images. If the add-on is "
+"missing, i-doit's API answers ``Api Module is not available.`` and Zammad "
+"cannot read any objects. Activate the API and make sure that it does not "
+"enforce authentication by username and password, so the API key alone is "
+"sufficient. Which objects the key can read is defined by the rights of its "
+"user in i-doit. Zammad itself offers every object type that i-doit returns."
 msgstr ""
-"Die Integration des Ticketsystems in i-doit bietet Ihnen die Möglichkeit, "
-"alle Tickets für ein bestimmtes Gerät einzusehen, ohne i-doit zu verlassen "
-"(siehe :user-docs:`i-doit Benutzerdokumentation </extras/i-doit-track-"
-"company-property.html>`, um es im praktischen Einsatz zu sehen)."
+"Zammad liest die Objekte über die JSON-RPC-API von i-doit ein, die als Add-"
+"On bereitgestellt wird und nicht Bestandteil der i-doit-Docker-Images ist. "
+"Fehlt das Add-On, gibt die API von i-doit die Fehlermeldung ``Api Module is "
+"not available.`` zurück und Zammad kann keine Objekte lesen. Aktivieren Sie "
+"die API und stellen Sie sicher, dass keine Authentifizierung per "
+"Benutzername und Passwort erforderlich ist, sodass der API-Schlüssel allein "
+"ausreicht. Welche Objekte der Schlüssel lesen kann wird durch die "
+"Berechtigungen des jeweiligen Benutzers in i-doit festgelegt. Zammad selbst "
+"bietet jeden Objekttyp an, den i-doit zurückgibt."
 
-#: ../system/integrations/i-doit.rst:87
+#: ../system/integrations/i-doit.rst:64
 msgid ""
-"Enable this integration in the i-doit admin settings under *Interfaces / "
-"external data > Trouble Ticket System (TTS) > Configuration*:"
+"Clicking ``Save`` verifies the connection by requesting i-doit's object "
+"types. If i-doit doesn't answer, Zammad shows the reason instead of saving. "
+"The **Recent Logs** table below the settings lists the requests Zammad sent "
+"to i-doit, which helps to track down a failed connection."
 msgstr ""
-"Aktivieren Sie diese Integration im i-doit Admin-Bereich unter *Interfaces / "
-"external data > Trouble Ticket System (TTS) > Configuration*:"
+"Durch Klicken auf ``Speichern`` wird die Verbindung über eine Anfrage der "
+"Objekttypen von i-doit überprüft. Wenn i-doit keine Antwort gibt, zeigt "
+"Zammad den Grund an anstatt zu speichern. Die Tabelle **Aktuellste "
+"Protokolle** unterhalb der Einstellungen listet die Anfragen auf, die Zammad "
+"an i-doit gesendet hat. Dies hilft, fehlgeschlagene Verbindungen zu prüfen."
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit administration interface with TTS configuration"
-msgstr "i-doit Verwaltungsoberfläche mit TTS-Konfiguration"
+#: ../system/integrations/i-doit.rst:70
+msgid "Configure Ticket Linking in i-doit"
+msgstr "Konfigurieren der Ticketverknüpfung in i-doit"
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:72
+msgid ""
+"i-doit's trouble ticket system integration (TTS) shows the Zammad tickets "
+"that are linked to an object on the object's page, so you can see what has "
+"been reported about it without leaving i-doit. The list holds up to 10 "
+"tickets, and each row links to the ticket in Zammad."
+msgstr ""
+"i-doits Trouble-Ticket-Systems (TTS) zeigt die Zammad-Tickets, die mit einem "
+"Objekt verknüpft sind, auf der Seite des jeweiligen Objekts an. Dadurch "
+"können Sie sehen, was dazu gemeldet wurde, ohne i-doit verlassen zu müssen. "
+"Die Liste umfasst bis zu 10 Tickets und jede Zeile enthält einen Link zum "
+"entsprechenden Ticket in Zammad."
+
+#: ../system/integrations/i-doit.rst:77
+msgid ""
+"In i-doit, the settings are under *Administration > Import and interfaces > "
+"Trouble Ticket System (TTS)*."
+msgstr ""
+"In i-doit befinden sich die Einstellungen unter *Administration > Import und "
+"Schnittstellen > Trouble Ticket System (TTS)*."
+
+#: ../system/integrations/i-doit.rst:81
 msgid "TTS-Type"
 msgstr "TTS-Typ"
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "``Zammad``"
 msgstr "``Zammad``"
 
-#: ../system/integrations/i-doit.rst:107
-msgid "Username / Password"
-msgstr "Benutzername/Passwort"
+#: ../system/integrations/i-doit.rst:90
+msgid "Username and Password"
+msgstr "Benutzername und Passwort"
 
-#: ../system/integrations/i-doit.rst:99
-msgid "Login credentials for a Zammad agent."
-msgstr "Anmeldedaten für einen Zammad-Agenten."
-
-#: ../system/integrations/i-doit.rst:101
+#: ../system/integrations/i-doit.rst:84
 msgid ""
-"This agent must have **read permission** for all :doc:`groups </manage/"
-"groups/index>` that plan on using the i-doit integration."
+"Login credentials of a Zammad agent. i-doit searches Zammad's API with this "
+"account, and Zammad returns only the tickets this agent may read. The agent "
+"therefore needs read access to the groups whose tickets should show up on i-"
+"doit objects."
 msgstr ""
-"Dieser Agent muss **Leseberechtigung** für alle :doc:`Gruppen </manage/"
-"groups/index>` haben, die die i-doit-Integration nutzen wollen."
+"Zugangsdaten eines Zammad-Agenten. i-doit fragt die Zammad-API mit diesem "
+"Konto ab, und Zammad gibt nur die Tickets zurück, die dieser Agent lesen "
+"darf. Der Agent benötigt daher Lesezugriff auf die Gruppen, deren Tickets in "
+"i-doit-Objekten angezeigt werden sollen."
 
-#: ../system/integrations/i-doit.rst:105
+#: ../system/integrations/i-doit.rst:89
 msgid ""
-"You may even wish to create a dedicated agent account just for this "
-"integration (otherwise, if the agent ever changes her password, you will "
-"have to remember to update it here)."
+"Consider a dedicated agent for this purpose: if the password of the account "
+"changes, you have to update it here."
 msgstr ""
-"Möglicherweise möchten Sie sogar ein eigenes Konto für den Agenten "
-"einrichten (andernfalls müssen Sie daran denken, das Passwort zu "
-"aktualisieren, wenn der Agent sein Passwort ändert)."
+"Ziehen Sie hierfür einen speziellen Agenten in Betracht: Sollte sich das "
+"Passwort des Kontos ändern, müssen Sie dies hier entsprechend aktualisieren."
 
-#: ../system/integrations/i-doit.rst:109
+#: ../system/integrations/i-doit.rst:93
 msgid "URL incl. protocol"
 msgstr "URL mit Protokoll"
 
-#: ../system/integrations/i-doit.rst:110
+#: ../system/integrations/i-doit.rst:93
 msgid "``https://your.zammad.domain``"
 msgstr "``https://ihre.zammad.domain``"
+
+#: ../system/integrations/i-doit.rst:98
+msgid "TLS-Certificate"
+msgstr "TLS-Zertifikat"
+
+#: ../system/integrations/i-doit.rst:96
+msgid ""
+"A certificate file from i-doit's file management that i-doit uses to verify "
+"Zammad's certificate. Leave it empty unless your Zammad installation uses a "
+"certificate that i-doit does not trust."
+msgstr ""
+"Eine Zertifikatsdatei aus der Dateiverwaltung von i-doit, die i-doit zur "
+"Überprüfung des Zammad-Zertifikats verwendet. Lassen Sie dieses Feld leer, "
+"es sei denn, Ihre Zammad-Installation verwendet ein Zertifikat, dem i-doit "
+"nicht vertraut."
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Request Tracker queues"
+msgstr "Request Tracker Warteschlangen"
+
+#: ../system/integrations/i-doit.rst:101
+msgid ""
+"Belongs to the Request Tracker integration. i-doit shows the field for every "
+"TTS-Type, so leave it empty."
+msgstr ""
+"Gehört zur Request-Tracker-Integration. i-doit zeigt das Feld für jeden TTS-"
+"Typ an; lassen Sie es daher leer."
 
 #: ../system/integrations/index.rst:2
 msgid "Integrations"
@@ -38736,6 +38812,142 @@ msgstr "Version"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Zeigt die aktuelle Zammad-Version Ihrer Instanz an."
+
+#~ msgid "Azure AI"
+#~ msgstr "Azure AI"
+
+#~ msgid "Default: ``6``"
+#~ msgstr "Standard: ``6``"
+
+#~ msgid "1. Add i-doit Links to Zammad Tickets"
+#~ msgstr "1. i-doit Links zu Zammad-Tickets hinzufügen"
+
+#~ msgid "What Users See"
+#~ msgstr "Was die Nutzer sehen"
+
+#~ msgid ""
+#~ "The i-doit integration will appear under a new 🖨 tab in the ticket "
+#~ "sidebar."
+#~ msgstr ""
+#~ "Die i-doit-Integration wird in einem neuen 🖨 Tab in der Seitenleiste "
+#~ "angezeigt."
+
+#~ msgid ""
+#~ "i-doit integration puts a new tab in Zammad's ticket sidebar where you "
+#~ "can add links to existing i-doit devices for easy reference. (See "
+#~ "our :user-docs:`user documentation </extras/i-doit-track-company-"
+#~ "property.html>` to learn how it works in practice)."
+#~ msgstr ""
+#~ "Die i-doit-Integration fügt einen neuen Tab zur Seitenleiste in Tickets "
+#~ "hinzu, in dem Sie Links zu vorhandenen i-doit-Geräten hinzufügen können, "
+#~ "um sie leichter zu finden. (Siehe unsere :user-"
+#~ "docs:`Benutzerdokumentation </extras/i-doit-track-company-property.html>` "
+#~ "für weitere Informationen zur Handhabung in der Praxis)."
+
+#~ msgid "How to Set it Up"
+#~ msgstr "Einrichtung"
+
+#~ msgid ""
+#~ "It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/"
+#~ "api-add-on/>`_. Make sure to have it properly set up. Use the following "
+#~ "setting:"
+#~ msgstr ""
+#~ "Das `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-add-on/>`_ von "
+#~ "i-doit ist dazu erforderlich. Stellen Sie sicher, dass es richtig "
+#~ "eingerichtet ist. Verwenden Sie die folgende Einstellung:"
+
+#~ msgid "Active: ``Yes``"
+#~ msgstr "Aktiv: ``Ja``"
+
+#~ msgid "Enforce authentication by username and password: ``No``"
+#~ msgstr "Authentifizierung mit Benutzername und Passwort erzwingen: ``Nein``"
+
+#~ msgid ""
+#~ "To set it up, enable the integration in the Zammad admin settings under "
+#~ "*System > Integrations > i-doit*:"
+#~ msgstr ""
+#~ "Um sie einzurichten, aktivieren Sie die Integration in den Admin-"
+#~ "Einstellungen unter *System > Integrationen > i-doit*:"
+
+#~ msgid "i-doit settings within the integration pages"
+#~ msgstr "i-doit-Einstellungen unter Integrationen"
+
+#~ msgid "The root URL of your i-doit installation."
+#~ msgstr "Die URL Ihrer i-doit-Installation."
+
+#~ msgid ""
+#~ "Found in the i-doit admin area under *Interfaces / external data > JSON-"
+#~ "RPC API > Common Settings*."
+#~ msgstr ""
+#~ "Zu finden im i-doit Admin-Bereich unter *Interfaces / external data > "
+#~ "JSON-RPC API > Common Settings*."
+
+#~ msgid "i-doit administration interface with API configuration"
+#~ msgstr "i-doit Verwaltungsoberfläche mit API-Konfiguration"
+
+#~ msgid ""
+#~ "A unique name to identify Zammad within i-doit. Zammad does not require "
+#~ "you to enter a value here, but i-doit might!"
+#~ msgstr ""
+#~ "Ein eindeutiger Name, um Zammad in i-doit zu identifizieren. Zammad "
+#~ "verlangt nicht, dass Sie hier einen Wert eingeben, aber i-doit könnte das!"
+
+#~ msgid "2. List / Create Zammad Tickets in i-doit"
+#~ msgstr "2. Zammad-Tickets in i-doit auflisten / erstellen"
+
+#~ msgid "Zammad integration in i-doit's device view"
+#~ msgstr "Zammad-Integration in der Geräteansicht von i-doit"
+
+#~ msgid ""
+#~ "i-doit's ticket system integration gives you a way to see all the tickets "
+#~ "for a given device without ever leaving i-doit. (See our :user-docs:`user "
+#~ "documentation </extras/i-doit-track-company-property.html>` to learn how "
+#~ "it works in practice)."
+#~ msgstr ""
+#~ "Die Integration des Ticketsystems in i-doit bietet Ihnen die Möglichkeit, "
+#~ "alle Tickets für ein bestimmtes Gerät einzusehen, ohne i-doit zu "
+#~ "verlassen (siehe :user-docs:`i-doit Benutzerdokumentation </extras/i-doit-"
+#~ "track-company-property.html>`, um es im praktischen Einsatz zu sehen)."
+
+#~ msgid ""
+#~ "Enable this integration in the i-doit admin settings under *Interfaces / "
+#~ "external data > Trouble Ticket System (TTS) > Configuration*:"
+#~ msgstr ""
+#~ "Aktivieren Sie diese Integration im i-doit Admin-Bereich unter "
+#~ "*Interfaces / external data > Trouble Ticket System (TTS) > "
+#~ "Configuration*:"
+
+#~ msgid "i-doit administration interface with TTS configuration"
+#~ msgstr "i-doit Verwaltungsoberfläche mit TTS-Konfiguration"
+
+#~ msgid "Login credentials for a Zammad agent."
+#~ msgstr "Anmeldedaten für einen Zammad-Agenten."
+
+#~ msgid ""
+#~ "This agent must have **read permission** for all :doc:`groups </manage/"
+#~ "groups/index>` that plan on using the i-doit integration."
+#~ msgstr ""
+#~ "Dieser Agent muss **Leseberechtigung** für alle :doc:`Gruppen </manage/"
+#~ "groups/index>` haben, die die i-doit-Integration nutzen wollen."
+
+#~ msgid ""
+#~ "You may even wish to create a dedicated agent account just for this "
+#~ "integration (otherwise, if the agent ever changes her password, you will "
+#~ "have to remember to update it here)."
+#~ msgstr ""
+#~ "Möglicherweise möchten Sie sogar ein eigenes Konto für den Agenten "
+#~ "einrichten (andernfalls müssen Sie daran denken, das Passwort zu "
+#~ "aktualisieren, wenn der Agent sein Passwort ändert)."
+
+#~ msgid ""
+#~ "The time in minutes after which the ticket's ownership will revert back "
+#~ "to *unassigned* after the assigned agent hasn't worked on the ticket. "
+#~ "This timeout does *not* take any working hours in account."
+#~ msgstr ""
+#~ "Die Zeit in Minuten, nach der der Besitzer des Tickets wieder auf *nicht "
+#~ "zugewiesen* zurückgesetzt wird, sofern der zugewiesene Besitzer (Agent) "
+#~ "nicht an dem Ticket gearbeitet hat. Bei dieser Zeitüberschreitung werden "
+#~ "*keine* Arbeitszeiten berücksichtigt."
 
 #~ msgid "API (System-Documentation)"
 #~ msgstr "API (System-Dokumentation)"
