@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-10-24 08:12+0000\n"
+"PO-Revision-Date: 2026-11-12 03:12+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.10\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -694,7 +694,7 @@ msgstr ""
 
 #: ../ai/knowledge-base-assistant.rst:64
 msgid "The answer is generated in the default language of your knowledge base."
-msgstr "Чланак је генерисан на подразумеваном језику ваше базе знања."
+msgstr "Чланак се генерише на подразумеваном језику ваше базе знања."
 
 #: ../ai/knowledge-base-assistant.rst:65
 msgid ""
@@ -872,7 +872,7 @@ msgid "Screenshot shows the dialog for adding or editing a provider"
 msgstr ""
 "Снимак екрана који приказује дијалог за додавање или уређивање провајдера"
 
-#: ../ai/provider.rst:66 ../channels/email/accounts/account-setup.rst:122
+#: ../ai/provider.rst:73 ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:220 ../system/objects.rst:158
 msgid "Type"
 msgstr "Врста"
@@ -881,7 +881,7 @@ msgstr "Врста"
 msgid "Pick the AI provider. Available options:"
 msgstr "Изаберите AI провајдера. Доступне опције:"
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:268
+#: ../ai/provider.rst:52 ../ai/provider.rst:275
 msgid "Zammad AI"
 msgstr "Zammad AI"
 
@@ -889,7 +889,7 @@ msgstr "Zammad AI"
 msgid "OpenAI"
 msgstr "OpenAI"
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:299
+#: ../ai/provider.rst:54 ../ai/provider.rst:306
 msgid "Ollama"
 msgstr "Ollama"
 
@@ -898,15 +898,15 @@ msgid "Anthropic"
 msgstr "Anthropic"
 
 #: ../ai/provider.rst:56
-msgid "Azure AI"
-msgstr "Azure AI"
+msgid "Azure AI (legacy deployment-based endpoints)"
+msgstr "Azure AI (застарела верзија путања)"
 
 #: ../ai/provider.rst:57
 msgid "Mistral AI"
 msgstr "Mistral AI"
 
 #: ../ai/provider.rst:58
-msgid "Custom (OpenAI compatible)"
+msgid "Custom (OpenAI Compatible)"
 msgstr "Прилагођен (OpenAI компатибилан)"
 
 #: ../ai/provider.rst:60
@@ -921,6 +921,22 @@ msgstr ""
 
 #: ../ai/provider.rst:64
 msgid ""
+"Azure AI is a legacy option and doesn't support semantic search. To connect "
+"Azure, pick Custom (OpenAI Compatible) instead. Enter your resource's v1 "
+"endpoint (``https://<resource>.openai.azure.com/openai/v1``) as URL and your "
+"deployment name as model. To use this connection for semantic search as "
+"well, enter the name of an embedding deployment in the **Embedding Model** "
+"field."
+msgstr ""
+"Azure AI је застарела опција и не подржава семантичку претрагу. Да бисте "
+"повезали Azure, уместо тога изаберите опцију Прилагођен (OpenAI "
+"компатибилан). Унесите v1 путању вашег ресурса (``https://"
+"<resource>.openai.azure.com/openai/v1``) као URL и назив ваше верзије као "
+"модел. Да бисте ову конекцију користили и за семантичко претраживање, у поље "
+"**Модел векторизације** унесите назив верзије за embedding."
+
+#: ../ai/provider.rst:71
+msgid ""
 "The provider you need isn't listed? We are going to add more over time. If "
 "you need a particular one or want to sponsor it, get in touch with our "
 "`sales department <https://zammad.com/en/company/contact>`_."
@@ -930,20 +946,20 @@ msgstr ""
 "спонзоришете, обратите се нашем `одељењу продаје <https://zammad.com/en/"
 "company/contact>`_."
 
-#: ../ai/provider.rst:71 ../ai/writing-assistant.rst:104
+#: ../ai/provider.rst:78 ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
-#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
+#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:92
 #: ../manage/slas.rst:53 ../manage/templates.rst:30
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
-#: ../settings/security/third-party/microsoft.rst:38 ../system/api.rst:117
+#: ../settings/security/third-party/microsoft.rst:38 ../system/api.rst:174
 #: ../system/objects.rst:135 ../system/objects.rst:239
 msgid "Name"
 msgstr "Назив"
 
-#: ../ai/provider.rst:69
+#: ../ai/provider.rst:76
 msgid ""
 "A human-readable label for the provider. This is what you see in the list "
 "and elsewhere in Zammad (for example when configuring a provider for a "
@@ -953,11 +969,11 @@ msgstr ""
 "у Zammad-у (на пример приликом подешавања провајдера за одређену функцију). "
 "Назив мора бити јединствен у систему."
 
-#: ../ai/provider.rst:75 ../system/api.rst:133
+#: ../ai/provider.rst:82 ../system/api.rst:190
 msgid "Token"
 msgstr "API кључ"
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:81
 msgid ""
 "The API token issued by your provider. Don't confuse it with the tokens a "
 "large language model deals with when processing a request."
@@ -965,11 +981,11 @@ msgstr ""
 "API кључ који вам је издао ваш провајдер. Немојте га побркати са токенима "
 "које велики језички модел обрађује приликом извршавања захтева."
 
-#: ../ai/provider.rst:88
+#: ../ai/provider.rst:95
 msgid "Model"
 msgstr "Режим"
 
-#: ../ai/provider.rst:78
+#: ../ai/provider.rst:85
 msgid ""
 "The base model used to generate text. For providers that offer a model list, "
 "the field is a dropdown. The default option shows the provider's recommended "
@@ -981,7 +997,7 @@ msgstr ""
 "препоручени модел; одаберите другу опцију уколико желите. Уколико провајдер "
 "не подржава списак модела, ручно унесите назив модела."
 
-#: ../ai/provider.rst:83
+#: ../ai/provider.rst:90
 msgid ""
 "Azure AI and Zammad AI do not show this field. Azure AI identifies the model "
 "through its deployment URL, while Zammad AI chooses the model itself."
@@ -989,7 +1005,7 @@ msgstr ""
 "Azure AI и Zammad AI не приказују ово поље. Azure AI одређује модел преко "
 "своје радне путање, док Zammad AI сам одређује модел."
 
-#: ../ai/provider.rst:86
+#: ../ai/provider.rst:93
 msgid ""
 "Need different models for different features? Add the same provider twice "
 "with a different model selected in each, then assign each connection to its "
@@ -1000,11 +1016,11 @@ msgstr ""
 "функцији путем :ref:`подешавања провајдера по функцији <per-feature-provider-"
 "config>`."
 
-#: ../ai/provider.rst:121
+#: ../ai/provider.rst:128
 msgid "Embedding Model"
 msgstr "Модел векторизације"
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:98
 msgid ""
 "The model used to vectorize text for semantic search. The dropdown lists the "
 "models the provider offers. The default option shows the provider's "
@@ -1023,7 +1039,7 @@ msgstr ""
 "сваки провајдер семантичку претрагу; поље се приказује само код оних који је "
 "подржавају."
 
-#: ../ai/provider.rst:99
+#: ../ai/provider.rst:106
 msgid ""
 "When you select or enter an embedding model, Zammad tries to determine "
 "values for the two options listed below. If Zammad cannot determine these "
@@ -1035,19 +1051,19 @@ msgstr ""
 "ове вредности, морате их сами унети. Мењајте предложене вредности само ако "
 "знате шта радите."
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "Embedding dimensions"
 msgstr "Димензије вектора"
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "The length of the vectors the embedding model produces."
 msgstr "Дужина вектора које производи модел векторизације."
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "Context window size"
 msgstr "Величина контекста"
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "The number of input tokens the embedding model accepts at once."
 msgstr "Број улазних токена које модел векторизације прихвата одједном."
 
@@ -1059,7 +1075,7 @@ msgstr ""
 "Снимак екрана који приказује дијалог AI провајдера са ручно унешеним "
 "подешавањима векторизације"
 
-#: ../ai/provider.rst:114
+#: ../ai/provider.rst:121
 msgid ""
 "Changing the embedding model or the embedding dimensions triggers a full "
 "rebuild of the knowledge base index. This re-embeds every knowledge base "
@@ -1076,11 +1092,11 @@ msgstr ""
 "Пребацивање својства семантичке претраге на други провајдер који користи "
 "исти модел и димензије векторизације неће покренути обнову."
 
-#: ../ai/provider.rst:128
+#: ../ai/provider.rst:135
 msgid "OCR Model"
 msgstr "Режим"
 
-#: ../ai/provider.rst:124
+#: ../ai/provider.rst:131
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -1094,11 +1110,11 @@ msgstr ""
 "нуди ово подешавање. Не подржава сваки провајдер препознавање текста на "
 "сликама; поље се приказује само код оних који га подржавају."
 
-#: ../ai/provider.rst:132 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:139 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr "URL"
 
-#: ../ai/provider.rst:131
+#: ../ai/provider.rst:138
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
@@ -1106,21 +1122,21 @@ msgstr ""
 "URL или IP адреса провајдера. Обавезно за Ollama и OpenAI компатибилне "
 "провајдере."
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid "URL (Completions)"
 msgstr "URL адреса (completions)"
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 "Само за Azure AI. Путања на којој је доступан модел за генерисање текста."
 
-#: ../ai/provider.rst:139
+#: ../ai/provider.rst:146
 msgid "URL (OCR)"
 msgstr "URL адреса (OCR)"
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:145
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
@@ -1128,7 +1144,7 @@ msgstr ""
 "Само за Azure AI. Путања на којој је доступан OCR модел. Оставите празно да "
 "би се користила вредност из поља URL адреса (completions)."
 
-#: ../ai/provider.rst:141
+#: ../ai/provider.rst:148
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -1140,11 +1156,11 @@ msgstr ""
 "наранџаста, а постаје зелена након првог успешног захтева; погледајте одељак "
 "Статус испод за значење боја."
 
-#: ../ai/provider.rst:147
+#: ../ai/provider.rst:154
 msgid "Status"
 msgstr "Статус"
 
-#: ../ai/provider.rst:149
+#: ../ai/provider.rst:156
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
@@ -1152,11 +1168,11 @@ msgstr ""
 "Обојена тачка на почетку сваког реда показује да ли је провајдер успешно "
 "коришћен или има проблема:"
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:161
 msgid "Green"
 msgstr "Зелена"
 
-#: ../ai/provider.rst:153
+#: ../ai/provider.rst:160
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
@@ -1164,11 +1180,11 @@ msgstr ""
 "Провајдер је коришћен и последњи захтев је успео. Облачић приказује "
 "временску ознаку последњег освежавања статуса."
 
-#: ../ai/provider.rst:158
+#: ../ai/provider.rst:165
 msgid "Orange"
 msgstr "Наранџаста"
 
-#: ../ai/provider.rst:157
+#: ../ai/provider.rst:164
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
@@ -1176,11 +1192,11 @@ msgstr ""
 "Провајдер је подешен, али још увек није коришћен. Тачка постаје зелена након "
 "првог успешног захтева."
 
-#: ../ai/provider.rst:163
+#: ../ai/provider.rst:170
 msgid "Red"
 msgstr "Црвена"
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:168
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
@@ -1190,11 +1206,11 @@ msgstr ""
 "бисте видели поруку о грешци од провајдера. Облачић увек приказује "
 "најскорију грешку, па временска ознака припада последњем неуспелом захтеву."
 
-#: ../ai/provider.rst:168
+#: ../ai/provider.rst:175
 msgid "Default Provider"
 msgstr "Подразумеван провајдер"
 
-#: ../ai/provider.rst:170
+#: ../ai/provider.rst:177
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -1214,7 +1230,7 @@ msgstr ""
 "Снимак екрана који приказује списак провајдера, где је један провајдер "
 "означен као подразумеван за све три намене"
 
-#: ../ai/provider.rst:179
+#: ../ai/provider.rst:186
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -1227,11 +1243,11 @@ msgstr ""
 "провајдера који носи ту ознаку, Zammad је додељује најстаријем преосталом "
 "провајдеру."
 
-#: ../ai/provider.rst:187
+#: ../ai/provider.rst:194
 msgid "Capabilities"
 msgstr "Могућности"
 
-#: ../ai/provider.rst:189
+#: ../ai/provider.rst:196
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
@@ -1241,11 +1257,11 @@ msgstr ""
 "Додељујете их из менија ︙ у колони **Радња**; значке означавају који "
 "провајдер тренутно покрива коју могућност."
 
-#: ../ai/provider.rst:201
+#: ../ai/provider.rst:208
 msgid "Semantic search"
 msgstr "Семантичка претрага"
 
-#: ../ai/provider.rst:194
+#: ../ai/provider.rst:201
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
@@ -1254,7 +1270,7 @@ msgstr ""
 "репрезентације) како би база знања могла да проналази чланке по значењу, а "
 "не само по кључним речима."
 
-#: ../ai/provider.rst:197
+#: ../ai/provider.rst:204
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
@@ -1269,15 +1285,15 @@ msgstr ""
 "овог својство може покренути потпуну обнову индекса, консултујте **Модел "
 "векторизације** изнад."
 
-#: ../ai/provider.rst:207
+#: ../ai/provider.rst:214
 msgid "Image text recognition"
 msgstr "Препознавање текста на сликама"
 
-#: ../ai/provider.rst:204
+#: ../ai/provider.rst:211
 msgid "The provider used to extract text from images (OCR)."
 msgstr "Провајдер који се користи за издвајање текста са слика (OCR)."
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:213
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
@@ -1286,7 +1302,7 @@ msgstr ""
 "потпуности уклонити са свих провајдера; функције тада једноставно прескачу "
 "OCR корак."
 
-#: ../ai/provider.rst:209
+#: ../ai/provider.rst:216
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1300,27 +1316,27 @@ msgstr ""
 "обришете провајдера који покрива неку могућност, та могућност једноставно "
 "остаје недодељена."
 
-#: ../ai/provider.rst:216 ../manage/macros.rst:57 ../manage/templates.rst:35
+#: ../ai/provider.rst:223 ../manage/macros.rst:57 ../manage/templates.rst:35
 msgid "Actions"
 msgstr "Радње"
 
-#: ../ai/provider.rst:218
+#: ../ai/provider.rst:225
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Мени ︙ у колони **Радња** нуди следеће радње:"
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Set as default"
 msgstr "Подеси као подразумевано"
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Marks the provider as the default provider for AI features."
 msgstr "Означава провајдера као подразумеваног провајдера за AI функције."
 
-#: ../ai/provider.rst:225
+#: ../ai/provider.rst:232
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr "Користи за семантичку претрагу / Не користи за семантичку претрагу"
 
-#: ../ai/provider.rst:224
+#: ../ai/provider.rst:231
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
@@ -1328,13 +1344,13 @@ msgstr ""
 "Додељује провајдеру могућност семантичке претраге или уклања ту доделу. "
 "Доступно само за провајдере који је подржавају."
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:236
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 "Користи за препознавање текста на сликама / Не користи за препознавање "
 "текста на сликама"
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:235
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
@@ -1342,23 +1358,23 @@ msgstr ""
 "Додељује провајдеру могућност препознавања текста на сликама или уклања ту "
 "доделу."
 
-#: ../ai/provider.rst:232 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:239 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr "Обриши"
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:239
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 "Уклања провајдера. Није доступно за Zammad AI провајдера на SaaS платформи."
 
-#: ../ai/provider.rst:237
+#: ../ai/provider.rst:244
 msgid "Configuring Provider per Feature"
 msgstr "Подешавање провајдера по AI функцији"
 
-#: ../ai/provider.rst:239
+#: ../ai/provider.rst:246
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
@@ -1367,7 +1383,7 @@ msgstr ""
 "подразумеваног. За прецизнију контролу можете изабрати посебног провајдера "
 "за поједине функције."
 
-#: ../ai/provider.rst:242
+#: ../ai/provider.rst:249
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1387,7 +1403,7 @@ msgstr ""
 "Снимак екрана који приказује дијалог за избор провајдера по функцији са "
 "изабраним провајдером"
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:258
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1403,11 +1419,11 @@ msgstr ""
 "дозволу ``admin.ai_provider``, јер усмеравање захтева дира провајдере које "
 "подешавате на овој страници."
 
-#: ../ai/provider.rst:259
+#: ../ai/provider.rst:266
 msgid "Additional Provider Information"
 msgstr "Додатне информације о провајдерима"
 
-#: ../ai/provider.rst:261
+#: ../ai/provider.rst:268
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
@@ -1417,7 +1433,7 @@ msgstr ""
 "даље. У супротном, идите на :doc:`feedback-and-logs` или изаберите неку од "
 "страница са AI функцијама из менија са леве стране."
 
-#: ../ai/provider.rst:270
+#: ../ai/provider.rst:277
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
@@ -1425,15 +1441,15 @@ msgstr ""
 "Коришћење Zammad AI као провајдера је најлакши начин да започнете рад са AI "
 "функцијама у Zammad-у. Доноси неколико кључних предности:"
 
-#: ../ai/provider.rst:273
+#: ../ai/provider.rst:280
 msgid "You don't have to set up an AI system or its configuration."
 msgstr "Не морате да постављате нити подешавате сопствени AI систем."
 
-#: ../ai/provider.rst:274
+#: ../ai/provider.rst:281
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr "Хостован је у Европској унији и усклађен је са GDPR прописима."
 
-#: ../ai/provider.rst:275
+#: ../ai/provider.rst:282
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
@@ -1441,20 +1457,20 @@ msgstr ""
 "Никакво подешавање у Zammad-у за SaaS клијенте, односно само API кључ за "
 "клијенте који сами хостују."
 
-#: ../ai/provider.rst:277
+#: ../ai/provider.rst:284
 msgid "Requests with sensitive information aren't used for training."
 msgstr "Захтеви са осетљивим информацијама се не користе за тренирање модела."
 
-#: ../ai/provider.rst:278
+#: ../ai/provider.rst:285
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 "Једно место на које се обраћате за подршку када нешто не ради како треба."
 
-#: ../ai/provider.rst:290
+#: ../ai/provider.rst:297
 msgid "SaaS Customers"
 msgstr "Клијент"
 
-#: ../ai/provider.rst:282
+#: ../ai/provider.rst:289
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1470,7 +1486,7 @@ msgstr ""
 "преостали број AI позива с времена на време, или укључите обавештење да "
 "будете упозорени када их остане мало."
 
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:296
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
@@ -1478,11 +1494,11 @@ msgstr ""
 "На SaaS платформи Zammad AI провајдера обезбеђује сама платформа, па га не "
 "можете обрисати нити му променити врсту."
 
-#: ../ai/provider.rst:296
+#: ../ai/provider.rst:303
 msgid "Self-Hosted Customers"
 msgstr "Клијенти који сами хостују"
 
-#: ../ai/provider.rst:293
+#: ../ai/provider.rst:300
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1493,7 +1509,7 @@ msgstr ""
 "да бисте добили Zammad AI API кључ и докупили AI позиве. По добијању API "
 "кључа, додајте новог провајдера врсте *Zammad AI* и сачувајте кључ."
 
-#: ../ai/provider.rst:301
+#: ../ai/provider.rst:308
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
@@ -1504,7 +1520,7 @@ msgstr ""
 "трећим лицима. Овај приступ има смисла само ако поседујете моћан GPU у вашем "
 "систему!"
 
-#: ../ai/provider.rst:305
+#: ../ai/provider.rst:312
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -1603,7 +1619,7 @@ msgstr ""
 "је доступно само за тикете који задовољавају подешене услове. За остале "
 "тикете, бочна трака сажетог описа није доступна."
 
-#: ../ai/summary.rst:44 ../manage/groups/settings.rst:117
+#: ../ai/summary.rst:44 ../manage/groups/settings.rst:125
 msgid "Summary Generation"
 msgstr "Генерисање сажетог описа"
 
@@ -1961,11 +1977,11 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:121 ../manage/macros.rst:66
+#: ../manage/groups/settings.rst:129 ../manage/macros.rst:66
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:241 ../manage/roles/permissions.rst:311
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
+#: ../manage/scheduler.rst:165 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -1990,10 +2006,10 @@ msgstr ""
 "у обзир као контекст за AI."
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:142
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
-#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
+#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:168
 #: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
@@ -2611,7 +2627,7 @@ msgstr "STARTTLS"
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:248
 #: ../manage/webhook/add.rst:52 ../settings/security/third-party/saml.rst:140
-#: ../system/integrations/i-doit.rst:66
+#: ../system/integrations/i-doit.rst:54
 msgid "SSL verification"
 msgstr "SSL провера"
 
@@ -4013,7 +4029,7 @@ msgstr "Додела групе на основу домена пошиљаоц�
 #: ../channels/email/filters.rst:163 ../channels/email/filters.rst:177
 #: ../manage/report-profiles.rst:62 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
-#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:117
+#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr "Пример"
@@ -6033,7 +6049,7 @@ msgstr ""
 "одабраним текстом за додавање линка."
 
 #: ../channels/form.rst:170 ../manage/report-profiles.rst:50
-#: ../manage/scheduler.rst:112 ../manage/slas.rst:64
+#: ../manage/scheduler.rst:115 ../manage/slas.rst:64
 #: ../system/objects/types.rst:274
 msgid "Preview"
 msgstr "Преглед"
@@ -10989,25 +11005,44 @@ msgstr ""
 msgid "Zammad supports 10 hierarchy levels for groups as a maximum."
 msgstr "Zammad подржава максимално 10 нивоа групне хијерархије."
 
-#: ../manage/groups/settings.rst:35
+#: ../manage/groups/settings.rst:43
 msgid "Assignment timeout"
 msgstr "Време истека доделе"
 
 #: ../manage/groups/settings.rst:33
 msgid ""
-"The time in minutes after which the ticket's ownership will revert back to "
-"*unassigned* after the assigned agent hasn't worked on the ticket. This "
-"timeout does *not* take any working hours in account."
+"The time in minutes after which Zammad unassigns the ticket again, so it "
+"shows up as *unassigned*. Leave the field empty or enter ``0`` to disable "
+"the timeout."
 msgstr ""
-"Време у минутима након којег ће се власништво тикета вратити на *недодељено* "
-"након што додељени оператер није радио на тикету. Калкулација овог "
-"временског истека *не* узима у обзир радне сате."
+"Време у минутима након којег Zammad поново скида доделу са тикета, тако да "
+"се он приказује као *недодељен*. Оставите поље празно или унесите ``0`` да "
+"бисте искључили временско ограничење."
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:37
+msgid ""
+"The countdown starts when a ticket in state *new* or *open* is assigned to "
+"an agent. It restarts whenever the owner or the group changes, the state "
+"changes to *new* or *open* or the agent sends a public reply. Editing other "
+"ticket attributes and adding internal notes does not count as working on the "
+"ticket. Tickets in a pending or closed state are not unassigned. Zammad runs "
+"the unassignment check every 10 minutes, so a ticket can stay assigned up to "
+"10 minutes longer than configured. Working hours are not taken into account."
+msgstr ""
+"Одбројавање почиње када се тикет у стању *ново* или *отворено* додели "
+"оператеру. Поново почиње кад год се промени власник или група, када се стање "
+"промени у *ново* или *отворено* или када оператер пошаље јавни одговор. "
+"Измена других атрибута тикета и додавање интерних напомена не рачунају се "
+"као рад на тикету. Тикетима у стању на чекању или затвореном стању не скида "
+"се додела. Zammad проверава скидање доделе на сваких 10 минута, тако да "
+"тикет може остати додељен и до 10 минута дуже од подешеног времена. Радно "
+"време се не узима у обзир."
+
+#: ../manage/groups/settings.rst:63
 msgid "Follow-up possible"
 msgstr "Могућ наставак"
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:46
 msgid ""
 "This option allows you to decide how Zammad should react if a customer "
 "replies to a closed ticket (no matter if by e.g. email or UI)."
@@ -11016,7 +11051,7 @@ msgstr ""
 "клијент одговори на затворени тикет (без обзира да ли путем имејла или "
 "корисничког интерфејса)."
 
-#: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
 #: ../misc/object-conditions/basics.rst:158
@@ -11046,15 +11081,15 @@ msgstr ""
 msgid "yes"
 msgstr "да"
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:50
 msgid "The ticket will be reopened. This is the default value."
 msgstr "Тикет ће бити поново отворен. Ово је подразумевана вредност."
 
-#: ../manage/groups/settings.rst:46
+#: ../manage/groups/settings.rst:54
 msgid "do not reopen Ticket but create new Ticket"
 msgstr "уместно поновног отварања отвори нови тикет"
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:53
 msgid ""
 "The ticket will remain closed and Zammad will create a new ticket instead. "
 "The new ticket contains the customers reply only."
@@ -11062,11 +11097,11 @@ msgstr ""
 "Тикет ће остати затворен и Zammad ће уместо њега отворити нов тикет. Нов "
 "тикет садржи само одговор клијента."
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:63
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr "уместо поновног отварања након извесног времена отвори нови тикет"
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:57
 msgid ""
 "The ticket can be reopened unless the specified number of days *after last "
 "ticket closure* has been exceeded. If the time limit is exceeded, Zammad "
@@ -11076,7 +11111,7 @@ msgstr ""
 "*након последњег затварања тикета*. Ако је временско ограничење прекорачено, "
 "Zammad ће отворити нов тикет уместо поновног отварања."
 
-#: ../manage/groups/settings.rst:53
+#: ../manage/groups/settings.rst:61
 msgid ""
 "Choosing this option will provide the option *Reopening time in days* which "
 "requires you to provide the number of days you want Zammad to wait until it "
@@ -11086,11 +11121,11 @@ msgstr ""
 "која захтева да наведете број дана који желите да Zammad сачека док не крене "
 "да отвара нове тикета."
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "Assign follow-ups"
 msgstr "Додели наставке"
 
-#: ../manage/groups/settings.rst:58
+#: ../manage/groups/settings.rst:66
 msgid ""
 "This setting allows you to decide if, upon a reopen of a ticket, the last "
 "assigned owner should stay assigned or if Zammad should reset the owner to "
@@ -11100,7 +11135,7 @@ msgstr ""
 "тикета, последњи додељени власник треба да остане додељен или да Zammad "
 "ресетује власника на никога."
 
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:71
 msgid ""
 "The ticket will remain with the last agent who owned it. This is the default "
 "value."
@@ -11108,7 +11143,7 @@ msgstr ""
 "Тикет ће остати последњем оператеру који га је поседовао. Ово је "
 "подразумевана вредност."
 
-#: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
 #: ../misc/object-conditions/basics.rst:159
 #: ../misc/object-conditions/basics.rst:534
@@ -11131,15 +11166,15 @@ msgstr ""
 msgid "no"
 msgstr "не"
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "The owner assignment of the ticket will be removed."
 msgstr "Додела власника тикета ће бити уклоњена."
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "Sending Email Address"
 msgstr "Имејл адреса за слање"
 
-#: ../manage/groups/settings.rst:69
+#: ../manage/groups/settings.rst:77
 msgid ""
 "Select which sender's email address Zammad will use outbound for replying on "
 "a ticket in this group."
@@ -11147,41 +11182,41 @@ msgstr ""
 "Изаберите имејл адресу пошиљаоца коју ће Zammad користити као одлазну адресу "
 "за одговарање на тикет у овој групи."
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:80
 msgid "**You don't have an email address configured yet?**"
 msgstr "**Још немате подешену имејл адресу?**"
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:82
 msgid "Please configure an email based channel before here"
 msgstr "Прво подесите имејл канал"
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:84
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ":doc:`Канали → Имејл </channels/email/index>`"
 
-#: ../manage/groups/settings.rst:77
+#: ../manage/groups/settings.rst:85
 msgid ":doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`"
 msgstr ":doc:`Канали → Microsoft 365 IMAP </channels/microsoft365/index>`"
 
-#: ../manage/groups/settings.rst:78
+#: ../manage/groups/settings.rst:86
 msgid ""
 ":doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 msgstr ""
 ":doc:`Канали → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:87
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ":doc:`Канали → Google </channels/google/index>`"
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "and come back afterwards."
 msgstr "а затим се вратите овде."
 
-#: ../manage/groups/settings.rst:86
+#: ../manage/groups/settings.rst:94
 msgid "Signature"
 msgstr "Потпис"
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:92
 msgid ""
 "Choose which :doc:`signature </channels/email/signatures>` to use when "
 "replying to tickets in this group. Leaving this option unset will send "
@@ -11191,11 +11226,11 @@ msgstr ""
 "користите када одговарате на тикете у овој групи. Ако ову опцију не "
 "подесите, имејл поруке ће се слати без икаквог потписа."
 
-#: ../manage/groups/settings.rst:94
+#: ../manage/groups/settings.rst:102
 msgid "Shared Drafts"
 msgstr "Заједнички нацрти"
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:97
 msgid ""
 "Shared drafts allows your agents to share ticket drafts (for new and "
 "existing tickets) with their colleagues. By default this setting is enabled, "
@@ -11206,7 +11241,7 @@ msgstr ""
 "омогућена, онемогућите је ако не желите да ваши оператери користе ову "
 "функцију."
 
-#: ../manage/groups/settings.rst:93
+#: ../manage/groups/settings.rst:101
 msgid ""
 "Learn more about shared drafts :user-docs:`in our user documentation </"
 "extras/shared-drafts.html>`."
@@ -11214,7 +11249,7 @@ msgstr ""
 "Сазнајте више о заједничким нацртима :user-docs:`у нашој корисничкој "
 "документацији </extras/shared-drafts.html>`."
 
-#: ../manage/groups/settings.rst:97
+#: ../manage/groups/settings.rst:105
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
 "configuration for this group. Use one of the following values:"
@@ -11222,37 +11257,37 @@ msgstr ""
 "Омогућава вам да преиначите подешавање :doc:`AI сажетог описа тикета </ai/"
 "summary>` за ову групу. Користите једну од следећих вредности:"
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Global Default"
 msgstr "Користи глобално понашање"
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Use the value configured in *AI > Ticket Summary*."
 msgstr "Користи вредност подешену под *AI > Сажети опис тикета*."
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "On Ticket Detail Opening"
 msgstr "По учитавању детаљног приказа тикета"
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "Always trigger summary generation when an agent opens the ticket."
 msgstr "Генерише сажети опис када оператер отвори тикет."
 
-#: ../manage/groups/settings.rst:108
+#: ../manage/groups/settings.rst:116
 msgid "On Ticket Summary Sidebar Activation"
 msgstr "По активацији бочне траке сажетог описа тикета"
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:115
 msgid ""
 "Trigger summary generation only when the agent opens the summary sidebar tab."
 msgstr ""
 "Генерише сажети опис само када оператер отвори бочну траку сажетог описа."
 
-#: ../manage/groups/settings.rst:110
+#: ../manage/groups/settings.rst:118
 msgid "Default setting: ``Global Default``."
 msgstr "Подразумевана поставка: ``Користи глобално понашање``."
 
-#: ../manage/groups/settings.rst:114
+#: ../manage/groups/settings.rst:122
 msgid ""
 "In addition to this group-level setting, you can also use :doc:`object "
 "conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary "
@@ -11264,7 +11299,7 @@ msgstr ""
 "описа тикета </ai/summary>` да прецизније дефинишете за које тикете треба "
 "генерисати сажети опис."
 
-#: ../manage/groups/settings.rst:120
+#: ../manage/groups/settings.rst:128
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
@@ -11272,7 +11307,7 @@ msgstr ""
 "Интерна напомена о групи која је видљива само људима који могу да приступе "
 "области управљања групом."
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:132
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -11286,14 +11321,14 @@ msgstr ""
 "групи. Међутим, клијенти и даље могу да комуницирају преко својих постојећих "
 "тикета у искљученој групи."
 
-#: ../manage/groups/settings.rst:132
+#: ../manage/groups/settings.rst:140
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
 msgstr ""
 "Желите да обрађујете тикете у искљученој групи, које клијенти освежавају?"
 
-#: ../manage/groups/settings.rst:135
+#: ../manage/groups/settings.rst:143
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
@@ -11303,7 +11338,7 @@ msgstr ""
 "освежавања. Додајте овај окидач пре искључивања групе тако да је одабир исте "
 "могућ приликом подешавања окидача."
 
-#: ../manage/groups/settings.rst:141
+#: ../manage/groups/settings.rst:149
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -12967,7 +13002,8 @@ msgstr ""
 
 #: ../manage/public-links.rst:85 ../misc/composer.rst:65
 #: ../settings/security/base.rst:13 ../settings/security/base.rst:39
-#: ../settings/security/base.rst:66 ../settings/security/password.rst:66
+#: ../settings/security/base.rst:66 ../settings/security/password.rst:51
+#: ../settings/security/password.rst:66
 msgid "Default: ``yes``"
 msgstr "Подразумевано: ``да``"
 
@@ -13478,7 +13514,7 @@ msgid ""
 msgstr ""
 "Захтева подешавање :doc:`CTI интеграције </system/integrations/cti/generic>`."
 
-#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:95
+#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:141
 msgid "``ticket.agent``"
 msgstr "``ticket.agent``"
 
@@ -14407,7 +14443,7 @@ msgstr ""
 "супервизоре и ограничите приступ преко :doc:`профила извештаја </manage/"
 "report-profiles>`."
 
-#: ../manage/roles/permissions.rst:330 ../settings/security/base.rst:96
+#: ../manage/roles/permissions.rst:330 ../settings/security/base.rst:142
 msgid "``ticket.customer``"
 msgstr "``ticket.customer``"
 
@@ -14491,16 +14527,22 @@ msgid ""
 "Create a new scheduler job by clicking the ``New Scheduler`` button in the "
 "top right corner. This opens a dialog where you can define your scheduler "
 "job. To edit an existing scheduler, simply click on the row and the dialog "
-"gets opened again. The ︙ action menu holds the options to clone or delete "
-"the scheduler job."
+"gets opened again. The ︙ action menu holds the options to run, clone or "
+"delete the scheduler job. **Run now** executes the job immediately, "
+"regardless of its execution time, and processes all objects matching its "
+"conditions. Zammad asks for confirmation before the run starts, and the "
+"action is not available while a run is in progress."
 msgstr ""
-"Додајте нови планирани посао кликом на дугме ``Нови планер`` у горњем десном "
-"углу. Ово ће отворити дијалог где можете дефинисати ваш планирани посао. За "
-"уређивање постојећих планера, једноставно кликните на ред у табели и дијалог "
-"ће се поново отворити. Мени радњи ︙ садржи радње за клонирање или брисање "
-"планираног посла."
+"Додајте нови планер кликом на дугме ``Нови планер`` у горњем десном углу. "
+"Ово ће отворити дијалог где можете дефинисати ваш планер. За уређивање "
+"постојећих планера, једноставно кликните на ред у табели и дијалог ће се "
+"поново отворити. Мени радњи ︙ садржи радње за клонирање или брисање "
+"планера. **Покрени сада** извршава планер моментално, независно од времена "
+"извршавања, и обрађује све објекте који се подударају са условима. Zammad ће "
+"тражити потврду пре извршавања, и радња неће бити могућа док се планер "
+"извршава."
 
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:40
 msgid ""
 "After creating at least one scheduler job, you can find a table in the main "
 "area. There you can see additional information like how many objects were "
@@ -14514,11 +14556,11 @@ msgstr ""
 msgid "Screenshot shows Zammad's scheduler management"
 msgstr "Снимак екрана који приказује уређивање планера у Zammad-у"
 
-#: ../manage/scheduler.rst:47
+#: ../manage/scheduler.rst:50
 msgid "Scheduler Job Structure"
 msgstr "Структура планера"
 
-#: ../manage/scheduler.rst:49
+#: ../manage/scheduler.rst:52
 msgid ""
 "Read on for details about the main parts of a scheduler job. A description "
 "of all available fields follows in the :ref:`scheduler-job-details` section."
@@ -14526,11 +14568,11 @@ msgstr ""
 "Читајте даље за основне појмове планера. Опис свих доступних поља се налази "
 "у одељку :ref:`scheduler-job-details`."
 
-#: ../manage/scheduler.rst:60
+#: ../manage/scheduler.rst:63
 msgid "Execution Time"
 msgstr "Време извршавања"
 
-#: ../manage/scheduler.rst:53
+#: ../manage/scheduler.rst:56
 msgid ""
 "Define time(s) and day(s), when the scheduler job is supposed to run. Simply "
 "click the day and time table entries to select and deselect items. You can "
@@ -14545,11 +14587,11 @@ msgid "Screenshot shows date and time selection in scheduler job configuration"
 msgstr ""
 "Снимак екрана који приказује селекцију датума и времена у подешавању планера"
 
-#: ../manage/scheduler.rst:71
+#: ../manage/scheduler.rst:74
 msgid "Define Object Condition"
 msgstr "Одредите услове објекта"
 
-#: ../manage/scheduler.rst:63
+#: ../manage/scheduler.rst:66
 msgid ""
 "Define a condition to specify the affected objects you want to apply changes "
 "or perform an action. If you're not familiar with conditions in Zammad, you "
@@ -14566,11 +14608,11 @@ msgid ""
 "Screenshot shows object condition definition in scheduler job configuration"
 msgstr "Снимак екрана који приказује дефиницију услова у подешавању планера"
 
-#: ../manage/scheduler.rst:81
+#: ../manage/scheduler.rst:84
 msgid "Define Action"
 msgstr "Одаберите радњу"
 
-#: ../manage/scheduler.rst:74
+#: ../manage/scheduler.rst:77
 msgid ""
 "In this area, you define which changes or actions should get applied to the "
 "affected objects. Depending on the selected object context, the available "
@@ -14584,19 +14626,19 @@ msgstr ""
 msgid "Screenshot shows action selection in scheduler job configuration"
 msgstr "Снимак екрана који приказује одабир радње у подешавању планера"
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:89
 msgid "Scheduler Job Details"
 msgstr "Детаљи планера"
 
-#: ../manage/scheduler.rst:89
+#: ../manage/scheduler.rst:92
 msgid "Choose a name for the scheduler."
 msgstr "Изаберите назив планера."
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:96
 msgid "When should the job run?"
 msgstr "Када ће се посао извршити?"
 
-#: ../manage/scheduler.rst:92
+#: ../manage/scheduler.rst:95
 msgid ""
 "Choose the points in time when the scheduler should run. It depends on the "
 "configured :doc:`timezone in Zammad </settings/branding>`."
@@ -14604,7 +14646,7 @@ msgstr ""
 "Изаберите време извршавања када би планер требало да се покрене. Зависи од "
 "подешене :doc:`Zammad-ове временске зоне </settings/branding>`."
 
-#: ../manage/scheduler.rst:97 ../system/core-workflows/how-do-they-work.rst:7
+#: ../manage/scheduler.rst:100 ../system/core-workflows/how-do-they-work.rst:7
 #: ../system/core-workflows/learn-by-example.rst:39
 #: ../system/core-workflows/learn-by-example.rst:94
 #: ../system/core-workflows/learn-by-example.rst:142
@@ -14613,7 +14655,7 @@ msgstr ""
 msgid "Object"
 msgstr "Објекат"
 
-#: ../manage/scheduler.rst:96
+#: ../manage/scheduler.rst:99
 msgid ""
 "Choose in which object context the scheduler should be executed. Possible "
 "objects are: **Organization**, **Ticket** and **User**."
@@ -14621,11 +14663,11 @@ msgstr ""
 "Изаберите у ком објектном контексту планер треба да буде извршен. Могући "
 "објекти су: **организација**, **тикет** и **корисник**."
 
-#: ../manage/scheduler.rst:103
+#: ../manage/scheduler.rst:106
 msgid "Conditions for affected objects"
 msgstr "Услови за захваћене објекте"
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:103
 msgid ""
 "Determine the object attributes to select the objects on which the actions "
 "will be applied."
@@ -14633,7 +14675,7 @@ msgstr ""
 "Одредите атрибуте (услове) објекта да бисте одабрали објекте на којима ће се "
 "извршити радње."
 
-#: ../manage/scheduler.rst:106
+#: ../manage/scheduler.rst:109
 msgid ""
 "This list previews some objects that your conditions are matching and shows "
 "a total of how many objects are being matched. Use this to double-check the "
@@ -14643,7 +14685,7 @@ msgstr ""
 "приказује укупан број објеката које се подударају. Искористите је да још "
 "једном проверите унете услове."
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:113
 msgid ""
 "Please be aware that the preview and displayed number is just based on the "
 "currently selected condition. It doesn't necessarily represent the objects "
@@ -14653,11 +14695,11 @@ msgstr ""
 "одабраним условима. Не мора да значи да ће приказати објекте на којима ће се "
 "извршити планер у одговарајуће време."
 
-#: ../manage/scheduler.rst:135
+#: ../manage/scheduler.rst:138
 msgid "Execute changes on objects"
 msgstr "Изврши измене на објектима"
 
-#: ../manage/scheduler.rst:115
+#: ../manage/scheduler.rst:118
 msgid ""
 "Determine the changes to be made to the object. The possible changes depend "
 "on the selected object context. Be aware that a related object context may "
@@ -14669,7 +14711,7 @@ msgstr ""
 "можда није доступан (нпр. за извршавање радњи тикета у контексту планера "
 "корисника)."
 
-#: ../manage/scheduler.rst:120
+#: ../manage/scheduler.rst:123
 msgid ""
 "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler "
 "jobs. Ticket objects additionally offer to add a checklist from "
@@ -14679,7 +14721,7 @@ msgstr ""
 "коришћењем планера. Објекат тикета додатно нуди и могућност додавања списка "
 "задатака на основу :doc:`шаблона списка задатака </manage/checklist>`."
 
-#: ../manage/scheduler.rst:126
+#: ../manage/scheduler.rst:129
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
@@ -14689,7 +14731,7 @@ msgstr ""
 "приватних података* су опасни и треба их користити са опрезом! По "
 "извршавању, објекти ће бити обрисани и није могуће вратити их."
 
-#: ../manage/scheduler.rst:130
+#: ../manage/scheduler.rst:133
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
@@ -14697,7 +14739,7 @@ msgstr ""
 "**Избриши одмах** ће обрисати тикет по извршавању планера *без било какве "
 "назнаке* у корисничком интерфејсу."
 
-#: ../manage/scheduler.rst:133
+#: ../manage/scheduler.rst:136
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
@@ -14707,11 +14749,11 @@ msgstr ""
 "брисање објекта по извршавању планера. Ово значи да ће бити видљив у Zammad-"
 "овом :doc:`панелу приватности података </system/data-privacy>`."
 
-#: ../manage/scheduler.rst:139
+#: ../manage/scheduler.rst:142
 msgid "Disable notifications"
 msgstr "Искључи обавештења"
 
-#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:141
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
@@ -14719,18 +14761,18 @@ msgstr ""
 "Подразумевано, радње које покрећу планери неће слати обавештења. Ово "
 "понашање можете преиначити овде тако што ћете овај атрибут поставити на *не*."
 
-#: ../manage/scheduler.rst:148 ../settings/branding.rst:29
+#: ../manage/scheduler.rst:151 ../settings/branding.rst:29
 msgid "Locale"
 msgstr "Језик"
 
-#: ../manage/scheduler.rst:142 ../manage/scheduler.rst:151
+#: ../manage/scheduler.rst:145 ../manage/scheduler.rst:154
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
 msgstr ""
 "Ово можете укључити дугметом под називом „Локализација при извршавању радње”."
 
-#: ../manage/scheduler.rst:145
+#: ../manage/scheduler.rst:148
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
@@ -14740,11 +14782,11 @@ msgstr ""
 "функције. За више информација, погледајте објашњење у :ref:`одељку о "
 "променљивама <variable_localization>`."
 
-#: ../manage/scheduler.rst:157 ../settings/branding.rst:45
+#: ../manage/scheduler.rst:160 ../settings/branding.rst:45
 msgid "Timezone"
 msgstr "Временска зона"
 
-#: ../manage/scheduler.rst:154
+#: ../manage/scheduler.rst:157
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -14755,7 +14797,7 @@ msgstr ""
 "коришћена за променљиве временских вредности. За више информација, "
 "погледајте објашњење у :ref:`одељку о променљивама <variable_localization>`."
 
-#: ../manage/scheduler.rst:160
+#: ../manage/scheduler.rst:163
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
@@ -14765,7 +14807,7 @@ msgstr ""
 "само другим администраторима када уређују планер. То *није* начин додавања "
 "напомена у објекте."
 
-#: ../manage/scheduler.rst:165
+#: ../manage/scheduler.rst:168
 msgid "With this setting you can enable/disable the scheduler."
 msgstr "Овим подешавањем можете укључити/искључити планер."
 
@@ -17327,7 +17369,7 @@ msgid "This name will be displayed within trigger and scheduler selections."
 msgstr "Овај назив ће бити приказан у оквиру избора окидача и планера."
 
 #: ../manage/webhook/add.rst:42 ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
+#: ../system/integrations/i-doit.rst:39
 msgid "Endpoint"
 msgstr "Путања"
 
@@ -17407,8 +17449,8 @@ msgid ""
 "remote site to verify the request. Its value is ``sha1=<hex digest>``, so "
 "drop the ``sha1=`` prefix before comparing it with your own signature."
 msgstr ""
-"Ако је подешено, сви послати повратни позиви садрже заглавље `x-hub-"
-"signature` које омогућава удаљеном сервису да верификује захтев. Вредност "
+"Ако је подешено, сви послати повратни позиви садрже заглавље ``X-Hub-"
+"Signature`` које омогућава удаљеном сервису да верификује захтев. Вредност "
 "заглавља је ``sha1=<hex digest>``, тако да обришите префикс ``sha1=`` пре "
 "поређења са својим потписом."
 
@@ -19493,7 +19535,7 @@ msgstr ""
 "без обзира да ли чланак већ постоји или је још увек у нацрту."
 
 #: ../misc/composer.rst:35 ../misc/composer.rst:47 ../misc/composer.rst:57
-#: ../settings/security/password.rst:51 ../settings/security/password.rst:74
+#: ../settings/security/base.rst:109 ../settings/security/password.rst:74
 #: ../settings/ticket.rst:138
 msgid "Default: ``no``"
 msgstr "Подразумевано: ``не``"
@@ -19573,9 +19615,9 @@ msgstr ""
 "Након основног подешавања Zammad-а помоћу чаробњака за почетак, видећете "
 "савете о томе како да користите кориснички интерфејс (погледајте „Увод” "
 "испод ако желите поново да их видите). Након што се ови савети прикажу, "
-"приказаће вам се контролна табла (осим у случају кад је искључена у "
-":doc:`подешавањима контролне табле </settings/dashboard>`) ,која је у основи "
-"почетна страна Zammad-а. Ова табла пружа неке корисне информације за "
+"приказаће вам се контролна табла (осим у случају кад је искључена "
+"у :doc:`подешавањима контролне табле </settings/dashboard>`) ,која је у "
+"основи почетна страна Zammad-а. Ова табла пружа неке корисне информације за "
 "оператере. Можете прећи на одељак **Први кораци** при врху стране (под "
 "условом да је укључен) да бисте видели корисне линкове за почетак. У "
 "зависности од вашег подешавања и дозвола, ваша листа може изгледати "
@@ -20003,7 +20045,7 @@ msgstr "клијент/"
 
 #: ../misc/object-conditions/basics.rst:130
 #: ../system/integrations/checkmk/api-reference.rst:138
-#: ../system/integrations/checkmk/api-reference.rst:172
+#: ../system/integrations/checkmk/api-reference.rst:173
 msgid "owner"
 msgstr "owner"
 
@@ -21472,6 +21514,217 @@ msgid ""
 msgstr ""
 "Сада ће се ова датотека користити уместо оригиналне приликом слања имејл "
 "порука са обавештењима на немачком."
+
+#: ../misc/unprocessable-emails.rst:2
+msgid "Unprocessable Emails"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:4
+msgid ""
+"Zammad turns incoming emails into tickets. When an email cannot be processed "
+"at all, Zammad does not drop it. It creates a ticket titled ``Unprocessable "
+"email`` instead, so that the request stays visible and an agent can pick it "
+"up."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:9
+msgid ""
+"Such a ticket carries the complete email as it arrived, plus a log of what "
+"went wrong. That is what makes the ticket workable although Zammad could not "
+"read the email."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:14
+#, fuzzy
+#| msgid "Ticket"
+msgid "Error Tickets"
+msgstr "Тикет"
+
+#: ../misc/unprocessable-emails.rst:16
+msgid ""
+"Zammad takes the title from the default language at the time the ticket is "
+"created, so changing the default language later does not rename tickets that "
+"already exist."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:20
+msgid ""
+"The ticket starts in the state that is set as the default for new tickets "
+"and is assigned to the group of the email channel that fetched the mail. If "
+"that channel has no group, Zammad uses the group that owns the recipient "
+"address of the email, and falls back to the first active group."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:25
+msgid ""
+"The ticket carries a single internal note of the system account with two "
+"attachments:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "``unprocessable_email.eml``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "The raw email as it arrived."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:33
+msgid "``processing_log.txt``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:32
+msgid ""
+"When processing failed and what Zammad reported about the failure. Comparing "
+"it with the raw email shows whether the email or Zammad is at fault."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:35
+msgid ""
+"The note itself is not rendered. The conversation shows a warning instead, "
+"stating that the email could not be processed. The warning also offers the "
+"``Download raw email`` and ``Download processing log`` buttons, which "
+"download exactly those two attachments."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:41
+#, fuzzy
+#| msgid "Common Errors"
+msgid "Common Reasons"
+msgstr "Уобичајене грешке"
+
+#: ../misc/unprocessable-emails.rst:43
+msgid ""
+"Zammad creates an error ticket whenever processing fails. The usual causes "
+"are:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:47
+msgid "**Unreadable message**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:46
+msgid ""
+"The email has no header field Zammad can read. This catches input that is "
+"not an email at all, for example plain text."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:51
+msgid "**Processing exceeds the time limit**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:50
+msgid ""
+"Zammad stops processing a single email after three minutes. Big or unusual "
+"messages can exceed that."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:56
+msgid "**Unexpected processing error**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:54
+msgid ""
+"Anything else that fails while Zammad reads the email. The processing log "
+"names what Zammad reported, which is what to hand to Zammad support when the "
+"email itself is fine."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:59
+msgid "Email Without a Usable Sender"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:61
+msgid "A broken sender does not produce an error ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:67
+msgid "**Malformed sender address**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:64
+msgid ""
+"Zammad creates the customer from the address it can read: the address "
+"becomes the customer's login, and the customer gets no email address. "
+"Nothing is sent to an address Zammad could not read, and later emails from "
+"the same sender land on that same customer."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:71
+#, fuzzy
+#| msgid "**contains all**"
+msgid "**No sender at all**"
+msgstr "**садржи све**"
+
+#: ../misc/unprocessable-emails.rst:70
+msgid ""
+"The ticket is created for the system account. It has no customer, and the "
+"customer column of an overview shows ``-`` instead of a name."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:74
+#, fuzzy
+#| msgid "Handling of priorities"
+msgid "Handling an Error Ticket"
+msgstr "Руковање приоритетима"
+
+#: ../misc/unprocessable-emails.rst:76
+msgid "Read the raw email to see who wrote and what the request was."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:77
+msgid ""
+"Use **Change customer** to attach the ticket to the right customer, also "
+"when it has none yet, and continue working it like any other ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:79
+msgid ""
+"If the email makes no sense at all, read the processing log, then close or "
+"delete the ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:81
+msgid ""
+"Postmaster filters only run on email that Zammad could process, so a sender "
+"whose mail keeps failing cannot be caught by them. Block such a sender in "
+"the mailbox itself."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:86
+msgid "Reprocessing a Repaired Email"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:88
+msgid ""
+"Zammad has no way to reprocess an error ticket. The rake tasks for failed "
+"emails only work on records from before 7.3, and an error ticket carries no "
+"such record."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:92
+msgid ""
+"A repaired copy can still become a ticket: download the raw email, fix what "
+"made it unreadable, and feed the file back into Zammad with the console "
+"command from the :doc:`/channels/email/advanced/fetchmail` page. Zammad "
+"processes it like a mail that arrives in the mailbox, which means a copy "
+"that is still broken creates another error ticket. The first one stays "
+"behind, to be closed, merged or deleted."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:100 ../system/monitoring.rst:2
+msgid "Monitoring"
+msgstr "Надгледање"
+
+#: ../misc/unprocessable-emails.rst:102
+msgid ""
+"Unprocessable emails no longer appear in the monitoring. Zammad recorded "
+"them as failed emails and reported their count until 7.3. Records from "
+"before the update survive and keep being reported until they are removed. "
+"The :docs:`Administration via Console </admin/console/other-useful-"
+"commands.html>` page describes how to reprocess such a record, which turns "
+"it into a ticket."
+msgstr ""
 
 #: ../misc/variables.rst:4
 msgid ""
@@ -24026,84 +24279,98 @@ msgid ""
 "Zammad under *Settings > Dashboard*. Make sure to have the permission "
 "``admin.dashboard``."
 msgstr ""
+"Контролна табла је страна коју оператери виде након пријаве. На њој се "
+"приказују статистички виџети, језичак **Први кораци** и ток активности. Њом "
+"управљате у Zammad-у под *Подешавања > Контролна табла*. Обавезно морате "
+"имати дозволу ``admin.dashboard``."
 
 #: ../settings/dashboard.rst:9
 msgid "You can turn off the whole dashboard or only some of its parts."
-msgstr ""
+msgstr "Можете искључити целу контролну таблу или само неке њене делове."
 
 #: ../settings/dashboard.rst:12
 msgid "Turn Off the Dashboard"
-msgstr ""
+msgstr "Искључивање контролне табле"
 
 #: ../settings/dashboard.rst:14
 msgid ""
 "Use the switch at the top of the page to turn the dashboard on or off. It is "
 "turned on by default. While it is turned off:"
 msgstr ""
+"Помоћу прекидача на врху стране укључите или искључите контролну таблу. "
+"Подразумевано је укључена. Док је искључена:"
 
 #: ../settings/dashboard.rst:17
 msgid ""
 "The dashboard disappears from the main menu and agents land on their ticket "
 "overviews after logging in."
 msgstr ""
+"Контролна табла нестаје из главног менија, а оператери након пријаве долазе "
+"на своје прегледе тикета."
 
 #: ../settings/dashboard.rst:19
 msgid "The keyboard shortcut for the dashboard is not available."
-msgstr ""
+msgstr "Пречица на тастатури за контролну таблу није доступна."
 
 #: ../settings/dashboard.rst:20
 msgid ""
 "Zammad does not record activities for the activity stream (see **Activity "
 "Stream** below)."
 msgstr ""
+"Zammad не бележи активности за ток активности (погледајте **Ток активности** "
+"испод)."
 
 #: ../settings/dashboard.rst:23
 msgid ""
 "While the dashboard is turned off, you can't change its views and widgets. "
 "Turning it on again restores them as they were configured before."
 msgstr ""
+"Док је контролна табла искључена, не можете мењати њене приказе и "
+"апликативне додатке. Када је поново укључите, они се враћају онако како су "
+"претходно били подешени."
 
 #: ../settings/dashboard.rst:27
-#, fuzzy
-#| msgid "App dashboard overview"
 msgid "Dashboard Views"
-msgstr "Контролна табла апликације"
+msgstr "Прикази контролне табле"
 
 #: ../settings/dashboard.rst:38
-#, fuzzy
-#| msgid "**in the Activity Stream**"
 msgid "**Activity Stream**"
-msgstr "**у току активности**"
+msgstr "**Ток активности**"
 
 #: ../settings/dashboard.rst:30
 msgid ""
 "Shows recent changes to tickets, users and organizations on the dashboard. "
 "Choose which activities agents see:"
 msgstr ""
+"Приказује недавне измене тикета, корисника и организација на контролној "
+"табли. Изаберите које активности оператери виде:"
 
 #: ../settings/dashboard.rst:33
 msgid "**All activities** (default): all activities the agent has access to."
 msgstr ""
+"**Све активности** (подразумевано): све активности којима оператер има "
+"приступ."
 
 #: ../settings/dashboard.rst:34
 msgid "**Own activities only**: only activities the agent caused themselves."
 msgstr ""
+"**Само сопствене активности**: само активности које је оператер сам изазвао."
 
 #: ../settings/dashboard.rst:35
 msgid "**Do not show activities**: the activity stream is hidden."
-msgstr ""
+msgstr "**Не приказуј активности**: ток активности је сакривен."
 
 #: ../settings/dashboard.rst:37
 msgid ""
 "While the activity stream is hidden, Zammad does not record any activities. "
 "If you show it again later, activities from that period are missing."
 msgstr ""
+"Док је ток активности сакривен, Zammad не бележи никакве активности. Ако га "
+"касније поново прикажете, активности из тог периода ће недостајати."
 
 #: ../settings/dashboard.rst:43
-#, fuzzy
-#| msgid "First Steps"
 msgid "**First Steps**"
-msgstr "Први кораци"
+msgstr "**Први кораци**"
 
 #: ../settings/dashboard.rst:41
 msgid ""
@@ -24111,42 +24378,46 @@ msgid ""
 "with a step-by-step Zammad setup. See :doc:`/misc/first-steps` for its "
 "content. Turned on by default."
 msgstr ""
+"Приказује језичак **Први кораци** на контролној табли, који нове кориснике "
+"уводи у рад кроз подешавање Zammad-а корак по корак. Погледајте :doc:`/misc/"
+"first-steps` за његов садржај. Подразумевано је укључен."
 
 #: ../settings/dashboard.rst:46
 msgid "Dashboard Widgets"
-msgstr ""
+msgstr "Апликативни додаци контролне табле"
 
 #: ../settings/dashboard.rst:48
 msgid ""
 "Each checkbox shows or hides one statistic widget on the dashboard for all "
 "agents. All widgets are turned on by default:"
 msgstr ""
+"Свако поље за потврду приказује или сакрива један апликативни додатак "
+"статистике на контролној табли за све оператере. Сви додаци су подразумевано "
+"укључени:"
 
 #: ../settings/dashboard.rst:51
 msgid "**∅ Waiting time today**"
-msgstr ""
+msgstr "**∅ Време чекања данас**"
 
 #: ../settings/dashboard.rst:52
 msgid "**Mood**"
-msgstr ""
+msgstr "**Расположење**"
 
 #: ../settings/dashboard.rst:53
-#, fuzzy
-#| msgid "Cancel Subscription"
 msgid "**Channel Distribution**"
-msgstr "Откажи претплату"
+msgstr "**Дистрибуција канала**"
 
 #: ../settings/dashboard.rst:54
 msgid "**Assigned**"
-msgstr ""
+msgstr "**Додељено**"
 
 #: ../settings/dashboard.rst:55
 msgid "**My tickets in process**"
-msgstr ""
+msgstr "**Моји тикети у обради**"
 
 #: ../settings/dashboard.rst:56
 msgid "**Reopening rate**"
-msgstr ""
+msgstr "**Стопа поново отворених**"
 
 #: ../settings/dashboard.rst:58
 msgid ""
@@ -24155,6 +24426,10 @@ msgid ""
 "soon as you turn them on again. Widgets added by add-ons don't appear in "
 "this list and can't be hidden here."
 msgstr ""
+"Текст помоћи уз свако поље за потврду објашњава шта апликативни додатак "
+"приказује. Zammad наставља да израчунава статистику сакривених додатака, "
+"тако да они приказују тренутне вредности чим их поново укључите. Додаци које "
+"додају пакети се не појављују на овој листи и не могу се овде сакрити."
 
 #: ../settings/dashboard.rst:63
 msgid ""
@@ -24162,6 +24437,10 @@ msgid ""
 "agents see an empty dashboard asking them to contact their administrator. If "
 "you don't need the dashboard at all, turn it off instead."
 msgstr ""
+"Ако искључите све приказе и додатке, страна подешавања приказује упозорење, "
+"а оператери виде празну контролну таблу која их упућује да се обрате свом "
+"администратору. Ако вам контролна табла уопште није потребна, радије је "
+"искључите."
 
 #: ../settings/security.rst:2
 msgid "Security"
@@ -24272,18 +24551,111 @@ msgid ""
 "To help administrators to overcome login issues, Zammad automatically offers "
 "a password request for administrator users as you can see in the screenshot "
 "above. This allows you to adjust third-party applications, even if the login "
-"doesn't work."
+"doesn't work. Open ``https://<your-zammad>/#admin_password_auth`` directly, "
+"or use the **Request the password login here** link on the login screen. "
+"After entering your username or email address, Zammad sends a one-time login "
+"link to your email address, valid for one day. Opening the link shows the "
+"password login form, also when :ref:`Automatic Third-party Login "
+"<security_automatic_third_party_login>` is active."
 msgstr ""
 "Да би помогао администраторима да превазиђу проблеме са пријављивањем, "
 "Zammad аутоматски нуди захтев за лозинку за администраторске кориснике, како "
 "можете видети на снимку екрана изнад. Ово вам омогућава да подесите "
-"апликације трећег лица, чак и ако пријава не функционише."
+"апликације трећег лица, чак и ако пријава не функционише. Отворите директно "
+"``https://<your-zammad>/#admin_password_auth`` или употребите везу **Упути "
+"захтев за пријаву преко привремене лозинке овде** на екрану за пријаву. "
+"Након што унесете корисничко име или имејл адресу, Zammad на вашу имејл "
+"адресу шаље једнократну везу за пријаву која важи један дан. Отварањем везе "
+"приказује се форма за пријаву путем лозинке, чак и када је :ref:`Аутоматско "
+"пријављивање преко трећег лица <security_automatic_third_party_login>` "
+"укључено."
 
-#: ../settings/security/base.rst:85
+#: ../settings/security/base.rst:91
+msgid "Automatic Third-party Login"
+msgstr "Аутоматско пријављивање преко трећег лица"
+
+#: ../settings/security/base.rst:93
+msgid ""
+"Activates the automatic redirect from the login screen to the sign-in page "
+"of a :doc:`third-party <third-party>` provider. This works with every "
+"provider Zammad offers, SAML, OpenID Connect and OAuth providers included. "
+"Users get sent straight to the provider instead of seeing Zammad's login "
+"screen and continue to the page they originally requested after signing in, "
+"e.g. a ticket link from a notification email."
+msgstr ""
+"Укључује аутоматско преусмеравање са екрана за пријаву на страну за "
+"пријављивање :doc:`провајдера трећег лица <third-party>`. Ово функционише са "
+"сваким провајдером који Zammad нуди, укључујући SAML, OpenID Connect и OAuth "
+"провајдере. Корисници се одмах упућују на провајдера уместо да виде Zammad-"
+"ов екран за пријаву, а након пријављивања настављају на страну коју су "
+"првобитно затражили, нпр. преко везе до тикета из имејл обавештења."
+
+#: ../settings/security/base.rst:100
+msgid ""
+"The redirect takes effect only when **Password Login** is deactivated and "
+"exactly one third-party provider is enabled. Otherwise users sign in through "
+"the login screen as usual. Zammad also holds the redirect back in "
+"maintenance mode so administrators keep their way in. The same happens for "
+"60 seconds when a sign-in attempt returns to Zammad without a session. The "
+"next visit of the login page after that redirects again. With the redirect "
+"in place, the administrator fallback under :ref:`Password Login "
+"<security_password_login>` stays available."
+msgstr ""
+"Преусмеравање се примењује само када је **Пријављивање путем лозинке** "
+"искључено и када је укључен тачно један провајдер трећег лица. У супротном "
+"се корисници пријављују преко екрана за пријаву као и обично. Zammad такође "
+"обуставља преусмеравање док је укључен режим одржавања, како би "
+"администратори задржали могућност пријаве. Исто важи 60 секунди након што се "
+"покушај пријављивања врати у Zammad без сесије. Следећа посета страни за "
+"пријаву после тога поново преусмерава. Уз укључено преусмеравање, резервна "
+"опција за администраторе под :ref:`Пријављивање путем лозинке "
+"<security_password_login>` остаје доступна."
+
+#: ../settings/security/base.rst:113
+msgid ""
+"After a logout Zammad does not sign users back in automatically, even when "
+"their provider session is still valid. What happens next depends on the "
+"provider's logout support:"
+msgstr ""
+"Након одјаве Zammad не пријављује кориснике аутоматски поново, чак ни када "
+"је њихова сесија код провајдера још увек важећа. Шта се дешава даље зависи "
+"од тога да ли провајдер подржава одјаву:"
+
+#: ../settings/security/base.rst:120
+msgid "**With logout support**"
+msgstr "**Уз подршку за одјаву**"
+
+#: ../settings/security/base.rst:118
+msgid ""
+"Logging out of Zammad also ends the session at the provider (SAML with a "
+"single logout URL, OpenID Connect with an end session endpoint). The next "
+"visit shows the provider's own sign-in page."
+msgstr ""
+"Одјава из Zammad-а завршава и сесију код провајдера (SAML са URL путањом за "
+"јединствену одјаву, OpenID Connect са крајњом тачком за завршетак сесије). "
+"При следећој посети приказује се страна за пријављивање самог провајдера."
+
+#: ../settings/security/base.rst:125
+msgid "**Without logout support**"
+msgstr "**Без подршке за одјаву**"
+
+#: ../settings/security/base.rst:123
+msgid ""
+"The session at the provider stays valid. This is the case for all OAuth "
+"providers, e.g. Facebook, LinkedIn, GitHub, GitLab, Microsoft, Google or "
+"Weibo. Zammad then keeps showing its login screen and users sign in again "
+"with a click on the provider's button."
+msgstr ""
+"Сесија код провајдера остаје важећа. То је случај код свих OAuth провајдера, "
+"нпр. Facebook, LinkedIn, GitHub, GitLab, Microsoft, Google или Weibo. Zammad "
+"тада и даље приказује свој екран за пријаву, а корисници се поново "
+"пријављују кликом на дугме провајдера."
+
+#: ../settings/security/base.rst:131
 msgid "Session Timeout"
 msgstr "Време истека сесије"
 
-#: ../settings/security/base.rst:87
+#: ../settings/security/base.rst:133
 msgid ""
 "All settings below by default are set to ``4 weeks``. Session Timeout "
 "defines the life time of a users session. As soon as it's reached, Zammad "
@@ -24293,22 +24665,22 @@ msgstr ""
 "ограничење сесије дефинише време трајања сесије корисника. Чим се достигне, "
 "Zammad ће аутоматски одјавити дотичну сесију."
 
-#: ../settings/security/base.rst:92
+#: ../settings/security/base.rst:138
 msgid ""
 "Zammad takes the highest value assigned for the user based on the "
 "permissions."
 msgstr ""
 "Zammad узима највишу вредност која је додељена кориснику на основу дозвола."
 
-#: ../settings/security/base.rst:94
+#: ../settings/security/base.rst:140
 msgid "``admin``"
 msgstr "``admin``"
 
-#: ../settings/security/base.rst:97
+#: ../settings/security/base.rst:143
 msgid "``default`` (fallback if user doesn't have above permissions set)"
 msgstr "``подразумевано`` (замена ако корисник нема постављене дозволе изнад)"
 
-#: ../settings/security/base.rst:99
+#: ../settings/security/base.rst:145
 msgid ""
 "All settings act independently from each other allowing you to disable the "
 "timeouts for e.g. admins, but not agents."
@@ -24316,35 +24688,35 @@ msgstr ""
 "Сва подешавања делују независно једно од другог омогућавајући вам да "
 "искључите временска ограничења за нпр. администраторе, али не и оператере."
 
-#: ../settings/security/base.rst:103
+#: ../settings/security/base.rst:149
 msgid "Let's suppose you configured the following session timeouts:"
 msgstr "Претпоставимо да сте подесили следећа временска ограничења сесије:"
 
-#: ../settings/security/base.rst:105
+#: ../settings/security/base.rst:151
 msgid "Default: 3 weeks"
 msgstr "Подразумевано: 3 недеље"
 
-#: ../settings/security/base.rst:106
+#: ../settings/security/base.rst:152
 msgid "Admin: 2 weeks"
 msgstr "Admin: 2 недеље"
 
-#: ../settings/security/base.rst:107
+#: ../settings/security/base.rst:153
 msgid "Ticket.agent: 4 weeks"
 msgstr "Ticket.agent: 4 недеље"
 
-#: ../settings/security/base.rst:108
+#: ../settings/security/base.rst:154
 msgid "Ticket.customer: 1 week"
 msgstr "Ticket.customer: 1 недеља"
 
-#: ../settings/security/base.rst:110
+#: ../settings/security/base.rst:156
 msgid "This results in the following situations:"
 msgstr "Ово резултира следећим ситуацијама:"
 
-#: ../settings/security/base.rst:112
+#: ../settings/security/base.rst:158
 msgid "A user with ``admin`` permission will have a timeout of 2 weeks"
 msgstr "Корисник са дозволом ``admin`` имаће временско ограничење од 2 недеље"
 
-#: ../settings/security/base.rst:113
+#: ../settings/security/base.rst:159
 msgid ""
 "A user with ``admin`` and ``ticket.agent`` permissions will have a timeout "
 "of 2 weeks"
@@ -24352,14 +24724,14 @@ msgstr ""
 "Корисник са дозволама ``admin`` и ``ticket.agent`` имаће временско "
 "ограничење од 2 недеље"
 
-#: ../settings/security/base.rst:115
+#: ../settings/security/base.rst:161
 msgid ""
 "A user with ``ticket.customer`` permission will have a timeout of 1 week"
 msgstr ""
 "Корисник са дозволом ``ticket.customer`` имаће временско ограничење од 1 "
 "недеље"
 
-#: ../settings/security/base.rst:117
+#: ../settings/security/base.rst:163
 msgid ""
 "A user with neither ``admin``, ``ticket.agent`` nor ``ticket.customer`` "
 "permissions will have a timeout of 3 weeks"
@@ -24433,9 +24805,9 @@ msgstr ""
 "закључа. Ваши корисници увек могу да користе функцију **Заборавили сте "
 "лозинку?** да промене своју лозинку и откључају свој налог."
 
-#: ../settings/security/password.rst:31
-msgid "Default: ``10``"
-msgstr "Подразумевано: ``10``"
+#: ../settings/security/password.rst:31 ../settings/ticket.rst:154
+msgid "Default: ``5``"
+msgstr "Подразумевано: ``5``"
 
 #: ../settings/security/password.rst:35
 msgid "Beside changing the user's password, you can also unlock accounts via"
@@ -24485,8 +24857,8 @@ msgstr ""
 "до ``20``)."
 
 #: ../settings/security/password.rst:59
-msgid "Default: ``6``"
-msgstr "Подразумевано: ``6``"
+msgid "Default: ``10``"
+msgstr "Подразумевано: ``10``"
 
 #: ../settings/security/password.rst:62
 msgid "Digit Required"
@@ -28395,10 +28767,6 @@ msgstr ""
 "Ова опција је доступна само ако је формат броја тикета подешен на "
 "``Увећање``!"
 
-#: ../settings/ticket.rst:154
-msgid "Default: ``5``"
-msgstr "Подразумевано: ``5``"
-
 #: ../settings/ticket.rst:159
 msgid "Auto-Assignment"
 msgstr "Аутоматска додела"
@@ -28713,14 +29081,22 @@ msgid "API"
 msgstr "API"
 
 #: ../system/api.rst:4
+#, fuzzy
+#| msgid ""
+#| "Zammad comes with a REST API that allows external applications and "
+#| "scripts to read and write data of your Zammad instance without using the "
+#| "web interface. The API endpoints themselves are always available, the "
+#| "settings on this tab only decide how clients authenticate. The tab "
+#| "*System > API* has two jobs: it decides which authentication methods "
+#| "Zammad accepts for API requests and it manages the applications that use "
+#| "Zammad as an OAuth provider. The ``admin.api`` permission is required to "
+#| "access the tab."
 msgid ""
 "Zammad comes with a REST API that allows external applications and scripts "
 "to read and write data of your Zammad instance without using the web "
 "interface. The API endpoints themselves are always available, the settings "
-"on this tab only decide how clients authenticate. The tab *System > API* has "
-"two jobs: it decides which authentication methods Zammad accepts for API "
-"requests and it manages the applications that use Zammad as an OAuth "
-"provider. The ``admin.api`` permission is required to access the tab."
+"of this page only decide how clients authenticate and whether the MCP server "
+"answers. The ``admin.api`` permission is required to access the page."
 msgstr ""
 "Zammad долази са REST API-јем који омогућава спољним апликацијама и "
 "скриптама да читају и уписују податке ваше Zammad инстанце без коришћења веб "
@@ -28730,7 +29106,7 @@ msgstr ""
 "управља апликацијама које користе Zammad као OAuth провајдера. За приступ "
 "овом екранз потребна је дозвола ``admin.api``."
 
-#: ../system/api.rst:12
+#: ../system/api.rst:10
 msgid ""
 "The endpoints and the data they expect are not described on this page. You "
 "can find them in the :docs:`REST API documentation </api/intro.html>` of our "
@@ -28740,25 +29116,27 @@ msgstr ""
 "пронаћи у :docs:`REST API одељку </api/intro.html>` наше системске "
 "документације."
 
-#: ../system/api.rst:17
-msgid "Authentication Methods"
-msgstr "Методи аутентификације"
-
-#: ../system/api.rst:19
+#: ../system/api.rst:14
+#, fuzzy
+#| msgid ""
+#| "Zammad supports three ways for a client to authenticate against the API. "
+#| "The first two are toggles on this page, the third one comes with the "
+#| "OAuth applications further down:"
 msgid ""
-"Zammad supports three ways for a client to authenticate against the API. The "
-"first two are toggles on this page, the third one comes with the OAuth "
-"applications further down:"
+"Zammad supports three ways for a client to authenticate against the REST "
+"API. This overview only names them, the settings themselves are organized "
+"differently: the first two methods are toggles on the *Token access* tab, "
+"the third one belongs to the OAuth applications on the *OAuth* tab:"
 msgstr ""
 "Zammad подржава три начина за аутентификацију API клијента. Прва два су "
 "доступне као прекидачи на овој страници, а трећи начин је омогућен преко "
 "OAuth апликација даље доле:"
 
-#: ../system/api.rst:26
+#: ../system/api.rst:22
 msgid "Personal access token"
 msgstr "Лични приступни кључ"
 
-#: ../system/api.rst:24
+#: ../system/api.rst:20
 msgid ""
 "A token a user creates in their own user profile. It can be limited to "
 "specific permissions and can have an expiration date. This is the "
@@ -28768,11 +29146,11 @@ msgstr ""
 "на одређене дозволе и може имати датум истека. Ово је препоручен начин за "
 "приступ API-ју. Контролише се преко прекидача **Приступ путем кључа**."
 
-#: ../system/api.rst:31
+#: ../system/api.rst:27
 msgid "Username/email address and password"
 msgstr "Корисничко име/имејл адреса и лозинка"
 
-#: ../system/api.rst:29
+#: ../system/api.rst:25
 msgid ""
 "The credentials are sent as HTTP basic authentication with every request. "
 "Needed for clients that only support basic authentication. Controlled by the "
@@ -28782,25 +29160,38 @@ msgstr ""
 "клијенте који подржавају само Basic Auth. Контролише се преко прекидача "
 "**Приступ путем лозинке**."
 
-#: ../system/api.rst:36
+#: ../system/api.rst:32
 msgid "OAuth2 access token"
 msgstr "OAuth2 приступни кључ"
 
-#: ../system/api.rst:34
+#: ../system/api.rst:30
+#, fuzzy
+#| msgid ""
+#| "A token an application receives for a user after the user authorized the "
+#| "application. It is managed with the applications further down on this "
+#| "page. Unlike the other two methods it has no toggle and cannot be "
+#| "switched off."
 msgid ""
 "A token an application receives for a user after the user authorized the "
-"application. It is managed with the applications further down on this page. "
-"Unlike the other two methods it has no toggle and cannot be switched off."
+"application. It is managed with the applications on the *OAuth* tab. Unlike "
+"the other two methods it has no toggle and cannot be switched off."
 msgstr ""
 "Кључ који апликација добија за корисника након што корисник ауторизује "
 "апликацију. Управља преко апликација даље на овој страници. За разлику од "
 "остале две методе, нема прекидач и не може се искључити."
 
-#: ../system/api.rst:41
+#: ../system/api.rst:35 ../system/api.rst:44
 msgid "Token Access"
 msgstr "Приступ путем кључа"
 
-#: ../system/api.rst:43
+#: ../system/api.rst:37
+msgid ""
+"The first tab of the page is named *Token access*. It holds the toggles "
+"described in the following three sections: direct authentication of the REST "
+"API and the MCP server."
+msgstr ""
+
+#: ../system/api.rst:46
 msgid ""
 "The **Token Access** toggle enables personal access tokens (HTTP token "
 "authentication). It is active by default."
@@ -28808,7 +29199,7 @@ msgstr ""
 "Прекидач **Приступ путем кључа** укључује личне приступне кључеве (HTTP "
 "аутентификација преко токена). Подразумевано је уљкучен."
 
-#: ../system/api.rst:46
+#: ../system/api.rst:49
 msgid ""
 "Every user with the ``user_preferences.access_token`` role permission "
 "(:doc:`see the permission list </manage/roles/permissions>`) can create as "
@@ -28825,7 +29216,7 @@ msgstr ""
 "дозволе има и може да подеси датум истека. Кључ никада не носи више дозвола "
 "од корисника који га је генерисао. Клијенти шаљу кључ као HTTP заглавље:"
 
-#: ../system/api.rst:57
+#: ../system/api.rst:60
 msgid ""
 "The example shown next to the toggle uses the **Fully Qualified Domain "
 "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
@@ -28835,7 +29226,7 @@ msgstr ""
 "**HTTP протокол** из Zammad-ових :doc:`основних подешавања </settings/system/"
 "base>`."
 
-#: ../system/api.rst:61
+#: ../system/api.rst:64
 msgid ""
 "If you switch the toggle off, all existing personal access tokens stop "
 "working immediately. The **Token Access** entry also disappears from the "
@@ -28847,7 +29238,7 @@ msgstr ""
 "корисника, што значи да нико не може да генерише нове кључеве. OAuth2 "
 "приступни кључеви нису обухваћени јер их Zammad обрађује посебно."
 
-#: ../system/api.rst:68
+#: ../system/api.rst:71
 msgid ""
 "Users have to create their own tokens. See the :user-docs:`user "
 "documentation </extras/user-menu-profile-settings.html>` for the user's "
@@ -28857,11 +29248,11 @@ msgstr ""
 "корисничкој документацији </extras/user-menu-profile-settings.html>` за "
 "перспективу корисника."
 
-#: ../system/api.rst:73
+#: ../system/api.rst:76
 msgid "Password Access"
 msgstr "Приступ путем лозинке"
 
-#: ../system/api.rst:75
+#: ../system/api.rst:78
 msgid ""
 "The **Password Access** toggle allows clients to authenticate with the "
 "username/email address and the password of a user (HTTP basic "
@@ -28871,7 +29262,7 @@ msgstr ""
 "са корисничким именом/имејл адресом и лозинком (HTTP Basic Auth). "
 "Подразумевано је укључен."
 
-#: ../system/api.rst:83
+#: ../system/api.rst:86
 msgid ""
 "Basic authentication sends the credentials with every single request and it "
 "cannot be combined with two-factor authentication: Zammad rejects such "
@@ -28887,15 +29278,15 @@ msgstr ""
 "двофакторском аутентификацијом. Предлажемо искључивање прекидања и "
 "коришћење :ref:`личног приступног кључа <system-api-token-access>`."
 
-#: ../system/api.rst:90
+#: ../system/api.rst:93
 msgid "Switching the toggle off has two consequences:"
 msgstr "Искључивање прекидача има две последице:"
 
-#: ../system/api.rst:92
+#: ../system/api.rst:95
 msgid "All API requests with basic authentication are rejected."
 msgstr "Сви API захтеви са Basic Auth ће бити одбијени."
 
-#: ../system/api.rst:93
+#: ../system/api.rst:96
 msgid ""
 "The calendar subscription URLs in user profiles stop working, because "
 "calendar apps authenticate with basic authentication. Affected users get a "
@@ -28907,18 +29298,115 @@ msgstr ""
 "корисници ће добити упозорење на страници календара у свом профилу и биће "
 "преусмерени на администратора."
 
-#: ../system/api.rst:99
-msgid "Applications"
-msgstr "Апликације"
+#: ../system/api.rst:104
+#, fuzzy
+#| msgid "Video Servers"
+msgid "MCP Server"
+msgstr "Видео сервери"
 
-#: ../system/api.rst:101
+#: ../system/api.rst:106
 msgid ""
-"The lower part of the page manages OAuth applications. An OAuth application "
-"is any external software that wants to work with your Zammad data on behalf "
-"of a user, e.g. a reporting tool or an integration you develop yourself. "
-"Zammad acts as OAuth provider for it: the user logs into Zammad once and "
-"authorizes the application, which then works with the REST API as that user "
-"and with their permissions."
+"Zammad answers the *Model Context Protocol* (MCP) on its own server, next to "
+"the REST API. Through it, an AI client (a chat application or a coding tool, "
+"for example) reads, finds, updates and creates tickets in your Zammad. "
+"Nothing has to be installed or run in addition, the server is part of every "
+"installation."
+msgstr ""
+
+#: ../system/api.rst:112
+msgid ""
+"The **MCP server** toggle enables the server for the whole installation. It "
+"is off by default. While it is off, Zammad refuses every request to the "
+"server, whatever token the request carries."
+msgstr ""
+
+#: ../system/api.rst:116
+msgid ""
+"The clients authenticate with personal access tokens, so the server works "
+"only while :ref:`Token Access <system-api-token-access>` is enabled. A "
+"client can do exactly what the token and its owner may do, nothing more: "
+"every tool requires the ``ticket.agent`` permission. Users without agent "
+"permissions, such as customers, get no tools. See the :user-docs:`user "
+"documentation </extras/mcp-server.html>` for how a user connects a client."
+msgstr ""
+
+#: ../system/api.rst:123
+#, fuzzy
+#| msgid ""
+#| "The example shown next to the toggle uses the **Fully Qualified Domain "
+#| "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
+#| "system/base>`."
+msgid ""
+"When the toggle is on, the page shows the address of the server and an "
+"example for connecting a client. Both use the **Fully Qualified Domain "
+"Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
+"system/base>`."
+msgstr ""
+"Пример приказан поред прекидача користи **квалификовано назив домена** и "
+"**HTTP протокол** из Zammad-ових :doc:`основних подешавања </settings/system/"
+"base>`."
+
+#: ../system/api.rst:127
+msgid ""
+"Zammad answers only when a request addresses the **Fully Qualified Domain "
+"Name**, the **Alternative fully qualified domain name** or a loopback "
+"address (``localhost``, ``127.0.0.1``, ``::1``). Requests at another address "
+"fail, and browser requests from other origins are refused to protect the "
+"server against DNS rebinding."
+msgstr ""
+
+#: ../system/api.rst:133
+msgid ""
+"Where the client can show it, Zammad asks the user to approve a message "
+"before it reaches a customer. The request shows the complete text, the "
+"recipients and the visibility (a form elicitation, as of MCP revision "
+"2026-07-28), and Zammad sends only once the user accepted there. A declined "
+"approval sends nothing, and the client can then offer to save the text as "
+"the ticket's shared draft."
+msgstr ""
+
+#: ../system/api.rst:139
+msgid ""
+"A client that cannot show the form falls back to its own approval of the "
+"tool call, as a change over the REST API with the same token goes through "
+"without a further approval. For two changes the user's yes in the "
+"conversation stands in for the form: Zammad replaces a shared draft that is "
+"already there and closes a ticket with an incomplete checklist only after "
+"the client asked and the user agreed. Keep the approval of tool calls "
+"enabled in the client, because a client that runs them without a prompt "
+"sends a message without any further question."
+msgstr ""
+
+#: ../system/api.rst:147
+msgid ""
+"The client works with tools for reading and writing tickets, for searching "
+"and for shared drafts and knowledge base answers. The complete list, with "
+"the access of each tool and the limits that apply, is part of the system "
+"documentation: :docs:`MCP tool reference </api/mcp.html>`."
+msgstr ""
+
+#: ../system/api.rst:153
+#, fuzzy
+#| msgid "OAuth Setup"
+msgid "OAuth"
+msgstr "OAuth подешавање"
+
+#: ../system/api.rst:155
+#, fuzzy
+#| msgid ""
+#| "The lower part of the page manages OAuth applications. An OAuth "
+#| "application is any external software that wants to work with your Zammad "
+#| "data on behalf of a user, e.g. a reporting tool or an integration you "
+#| "develop yourself. Zammad acts as OAuth provider for it: the user logs "
+#| "into Zammad once and authorizes the application, which then works with "
+#| "the REST API as that user and with their permissions."
+msgid ""
+"The second tab of the page is named *OAuth*. An OAuth application is any "
+"external software that wants to work with your Zammad data on behalf of a "
+"user, e.g. a reporting tool or an integration you develop yourself. Zammad "
+"acts as OAuth provider for it: the user logs into Zammad once and authorizes "
+"the application, which then works with the REST API as that user and with "
+"their permissions."
 msgstr ""
 "Доњи део странице омогућава управљање OAuth апликацијама. OAuth апликације "
 "је било који екстерни софтвер који жели да ради са вашим Zammad подацима у "
@@ -28927,7 +29415,7 @@ msgstr ""
 "ауторизује апликацију, која онда ради преко REST API у име тог корисника и "
 "са његовим дозволама."
 
-#: ../system/api.rst:108
+#: ../system/api.rst:162
 msgid ""
 "This is not a login method for Zammad itself. If you want your users to log "
 "into Zammad through an external provider, see :doc:`Third-Party Applications "
@@ -28937,7 +29425,11 @@ msgstr ""
 "приступају Zammad-у преко удаљеног провајдера, погледајте :doc:`апликације "
 "трећег лица </settings/security/third-party>`."
 
-#: ../system/api.rst:112
+#: ../system/api.rst:167
+msgid "Applications"
+msgstr "Апликације"
+
+#: ../system/api.rst:169
 msgid ""
 "Create a new application with the ``New Application`` button. The dialog "
 "asks for the following information:"
@@ -28945,7 +29437,7 @@ msgstr ""
 "Додајте нову апликацију кликом на дугме ``Нова апликација``. Нови дијалог ће "
 "вам тражити следеће информације:"
 
-#: ../system/api.rst:116
+#: ../system/api.rst:173
 msgid ""
 "The name of the application. It is only shown in this list, choose a name "
 "that tells your users what they authorize."
@@ -28953,11 +29445,11 @@ msgstr ""
 "Назив апликације. Користи се замо за приказ у листи, одаберите назив који "
 "објашњава вашим корисницима шта тачно ауторизују."
 
-#: ../system/api.rst:121
+#: ../system/api.rst:178
 msgid "Callback URL"
 msgstr "URL за повратне позиве"
 
-#: ../system/api.rst:120
+#: ../system/api.rst:177
 msgid ""
 "The URL an application is redirected to after a user authorized it. Enter "
 "one URI per line if the application uses several URLs."
@@ -28966,7 +29458,7 @@ msgstr ""
 "ауторизује. Унесите по једну URI адресу по реду уколико апликација користи "
 "више адреса."
 
-#: ../system/api.rst:123
+#: ../system/api.rst:180
 msgid ""
 "The list of existing applications shows the name, the callback URL and the "
 "number of access tokens that were already created for the application. The "
@@ -28976,11 +29468,11 @@ msgstr ""
 "приступних кључева који су већ генерисани за апликацију. Колоне **Преглед** "
 "и **Кључ** омогућавају директне радње:"
 
-#: ../system/api.rst:129
+#: ../system/api.rst:186
 msgid "View"
 msgstr "Преглед"
 
-#: ../system/api.rst:128
+#: ../system/api.rst:185
 msgid ""
 "Shows the **AppID** and the **Secret** of the application. An application "
 "needs both values to authenticate at Zammad."
@@ -28988,7 +29480,7 @@ msgstr ""
 "Приказује **AppID** и **Шифру** апликације. Апликација захтева обе вредности "
 "за Zammad аутентификацију."
 
-#: ../system/api.rst:132
+#: ../system/api.rst:189
 msgid ""
 "Generates an access token for the application which belongs to your own user "
 "account. Zammad displays it in a dialog."
@@ -28996,19 +29488,36 @@ msgstr ""
 "Генерише приступни кључ за апликацију која припада вашем корисничком налогу. "
 "Zammad ће га приказати у дијалогу."
 
-#: ../system/api.rst:135
+#: ../system/api.rst:192
+#, fuzzy
+#| msgid ""
+#| "Creating an application does not grant it any access. A user still has to "
+#| "authorize the application once, or you generate an access token with the "
+#| "**Token** action. The bottom of the page lists the two URLs of your "
+#| "instance that an application uses during the authorization:"
 msgid ""
 "Creating an application does not grant it any access. A user still has to "
 "authorize the application once, or you generate an access token with the "
-"**Token** action. The bottom of the page lists the two URLs of your instance "
-"that an application uses during the authorization:"
+"**Token** action."
 msgstr ""
 "Додавање апликације јој не омогућава никакав приступ. Корисник и даље мора "
 "једном да одобри апликацији приступ, или ви да генеришете приступни кључ "
 "помоћу радње **Кључ**. При дну странице наведене су две URL адресе ваше "
 "инстанце које апликација користи током ауторизације:"
 
-#: ../system/api.rst:140
+#: ../system/api.rst:197
+#, fuzzy
+#| msgid "``Authorization``"
+msgid "Authorization URLs"
+msgstr "``Authorization``"
+
+#: ../system/api.rst:199
+msgid ""
+"The bottom of the tab lists the two URLs of your instance that an "
+"application uses during the authorization:"
+msgstr ""
+
+#: ../system/api.rst:202
 msgid ""
 "``<fqdn>/oauth/authorize``: the application sends the user there to request "
 "access for that user (**Requesting the Grant**)."
@@ -29016,7 +29525,7 @@ msgstr ""
 "``<fqdn>/oauth/authorize``: апликације преусмерава корисника тамо да затражи "
 "приступ (**Упућивање захтева за сагласност**)."
 
-#: ../system/api.rst:142
+#: ../system/api.rst:204
 msgid ""
 "``<fqdn>/oauth/token``: the application requests an access token there "
 "afterwards (**Getting an Access Token**)."
@@ -29024,7 +29533,7 @@ msgstr ""
 "``<fqdn>/oauth/token``: апликација потом тамо захтева пристпни кључ "
 "(**Добијање приступног кључа**)."
 
-#: ../system/api.rst:147
+#: ../system/api.rst:209
 msgid ""
 "The :docs:`REST API documentation </api/intro.html>` explains how a client "
 "sends an OAuth2 access token with an API call."
@@ -29101,7 +29610,7 @@ msgid "System settings and packages"
 msgstr "Системска подешавања и пакети"
 
 #: ../system/audit-logs.rst:27
-msgid "AI agents and AI text tools"
+msgid "AI providers, AI agents and AI text tools"
 msgstr "AI агенти и AI текстуалне алатке"
 
 #: ../system/audit-logs.rst:28
@@ -31531,26 +32040,28 @@ msgid ""
 "If you provide a value that Zammad doesn't understand (*e.g.,* ``-F "
 "\"priority=high\"``), it's not always clear what will happen. In some cases, "
 "a ticket will be created with the default values instead - but in others, it "
-"may not be created at all!"
+"may not be created at all. An unknown ``group`` value is rejected with HTTP "
+"422 and no ticket is created."
 msgstr ""
 "Ако наведете вредност коју Zammad не разуме (*нпр.* ``-F "
 "\"priority=high\"``), није увек сасвим јасно шта ће се догодити. У неким "
-"случајевима ће се уместо тога отворити тикет са подразумеваним вредностима — "
-"али у другим, можда неће бити уопште отворен!"
+"случајевима, биће отворен тикет са подразумеваним вредностима – али у "
+"другим, можда неће бити уопште отворен. Непозната вредност за ``group`` ће "
+"бити одбоијена са кôдом HTTP 422 и тикет неће бити отворен."
 
-#: ../system/integrations/checkmk/api-reference.rst:164
+#: ../system/integrations/checkmk/api-reference.rst:165
 msgid "So what values does Zammad understand, then? Well, it depends..."
 msgstr "Дакле, које вредности Zammad разуме? Па, зависи..."
 
-#: ../system/integrations/checkmk/api-reference.rst:168
+#: ../system/integrations/checkmk/api-reference.rst:169
 msgid "Use an email address or username:"
 msgstr "Користите имејл адресу или корисничко име:"
 
-#: ../system/integrations/checkmk/api-reference.rst:190
+#: ../system/integrations/checkmk/api-reference.rst:191
 msgid "group & priority"
 msgstr "group & priority"
 
-#: ../system/integrations/checkmk/api-reference.rst:175
+#: ../system/integrations/checkmk/api-reference.rst:176
 msgid "Refer to the dropdown menus in the ticket sidebar:"
 msgstr "Погледајте падајуће меније у бочној траци тикета:"
 
@@ -31559,11 +32070,11 @@ msgid "See possible values for certain attributes in the ticket sidebar."
 msgstr ""
 "Погледајте могуће вредности за одређене атрибуте у бочној траци тикета."
 
-#: ../system/integrations/checkmk/api-reference.rst:187
+#: ../system/integrations/checkmk/api-reference.rst:188
 msgid "🙅 **Ticket state CANNOT be set this way!**"
 msgstr "🙅 **Стање тикета НЕ МОЖЕ да се подеси на овај начин!**"
 
-#: ../system/integrations/checkmk/api-reference.rst:189
+#: ../system/integrations/checkmk/api-reference.rst:190
 msgid ""
 "Why? Because ``-F \"state=...\"`` is already used :ref:`as a Checkmk "
 "parameter <checkmk-parameter-state>`."
@@ -31571,11 +32082,11 @@ msgstr ""
 "Зашто? Зато што се ``-F \"state=...\"`` већ користи :ref:`као Checkmk "
 "параметар <checkmk-parameter-state>`."
 
-#: ../system/integrations/checkmk/api-reference.rst:222
+#: ../system/integrations/checkmk/api-reference.rst:223
 msgid "Everything Else"
 msgstr "Све остало"
 
-#: ../system/integrations/checkmk/api-reference.rst:193
+#: ../system/integrations/checkmk/api-reference.rst:194
 msgid ""
 "To set any other attributes, it helps to know your way around "
 "the :docs:`rails console </admin/console.html>`. Valid values are those that "
@@ -31585,7 +32096,7 @@ msgstr ""
 "снађете у :docs:`rails конзоли </admin/console.html>`. Важеће вредности су "
 "оне које можете поставити текстуалним низом:"
 
-#: ../system/integrations/checkmk/api-reference.rst:218
+#: ../system/integrations/checkmk/api-reference.rst:219
 msgid "These values can then be passed directly to the API:"
 msgstr "Ове вредности се затим могу пренети директно у API:"
 
@@ -33618,197 +34129,235 @@ msgstr "i-doit"
 #: ../system/integrations/i-doit.rst:4
 msgid ""
 "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration "
-"management database) tool which is capable of managing information about "
-"your physical and digital IT infrastructure. If you use tickets to track "
-"issues with your IT components, you may want to connect them with your CMDB. "
-"With Zammad, you can do that in two ways!"
+"management database). It manages information about your physical and digital "
+"IT infrastructure. Linking it to Zammad adds context on both sides: agents "
+"see which infrastructure a ticket is about, and people working in i-doit see "
+"what has been reported about an object."
 msgstr ""
 "`i-doit <https://www.i-doit.com/>`_ је база података за управљање "
-"конфигурацијом отвореног кода која документује информације о вашој физичкој "
-"и дигиталној IT инфраструктури. Уколико користите тикете да пратите проблеме "
-"са вашим IT компонентама, можда ћете желети да их повежете са вашом базом. "
-"Са Zammad-ом, то можете ураадити на два начина!"
+"конфигурацијом отвореног кода. Управља информацијама ваше физичке и "
+"дигиталне IT инфраструктуре. Повезивањем са Zammad-ом обезбеђује контекст на "
+"обе стране: оператери виде за коју инфраструктуру је отворен тикет, и "
+"корисници i-doit виде шта је пријављено у вези објекта."
 
-#: ../system/integrations/i-doit.rst:11
-msgid "1. Add i-doit Links to Zammad Tickets"
-msgstr "1. Додавање i-doit веза ка Zammad тикетима"
+#: ../system/integrations/i-doit.rst:10
+msgid "The integration has two independent parts, each configured on its own:"
+msgstr ""
+"Интеграција има два независна дела, од којих се сваки подешава засебно:"
 
-#: ../system/integrations/i-doit.rst:14 ../system/integrations/i-doit.rst:72
-msgid "What Users See"
-msgstr "Шта корисници виде"
+#: ../system/integrations/i-doit.rst:12
+msgid ""
+"The ticket sidebar in Zammad shows the i-doit objects linked to a ticket. "
+"You configure this in Zammad's admin settings."
+msgstr ""
+"Бочна трака тикета у Zammad-у приказује i-doit објекте повезане са тикетом. "
+"Ово подешавате у администраторским подешавањима Zammad-а."
 
-#: ../system/integrations/i-doit.rst:20
-msgid "i-doit integration in Zammad's ticket sidebar"
+#: ../system/integrations/i-doit.rst:14
+msgid ""
+"An object's page in i-doit shows the Zammad tickets linked to it. You "
+"configure this in i-doit."
+msgstr ""
+"Страна објекта у i-doit-у приказује Zammad тикете повезане са њим. Ово "
+"подешавате у i-doit-у."
+
+#: ../system/integrations/i-doit.rst:17
+msgid ""
+"You can use one part without the other. Zammad stores only the object IDs on "
+"the ticket and reads the object data from i-doit each time the panel is "
+"shown. A renamed object therefore appears under its new name and an object "
+"deleted in i-doit drops off the list. Customers never see the panel, and an "
+"agent needs update access to a ticket to change its links. How agents and i-"
+"doit users work with both parts is described in the :user-docs:`user "
+"documentation </extras/i-doit-track-company-property.html>`."
+msgstr ""
+"Један део можете користити без другог. Zammad на тикету чува само ID-јеве "
+"објеката и чита податке о објектима из i-doit-а сваки пут када се панел "
+"прикаже. Преименовани објекат се зато појављује под новим називом, а објекат "
+"обрисан у i-doit-у нестаје са листе. Клијенти никада не виде панел, а "
+"оператеру је потребан приступ за измену тикета да би мењао његове везе. Како "
+"оператери и i-doit корисници раде са оба дела описано је у :user-"
+"docs:`корисничкој документацији </extras/i-doit-track-company-"
+"property.html>`."
+
+#: ../system/integrations/i-doit.rst:26
+msgid "Configure Object Linking in Zammad"
+msgstr "Подешавање повезивања објекта у Zammad-у"
+
+#: ../system/integrations/i-doit.rst:28
+msgid ""
+"The settings are under *System > Integrations > i-doit* and require the "
+"``admin.integration`` permission. Use the switch at the top of the page to "
+"enable the panel. Switching it off hides the panel but keeps the links "
+"stored on existing tickets."
+msgstr ""
+"Подешавања се налазе под *Систем > Интеграције > i-doit* и захтевају дозволу "
+"``admin.integration``. Помоћу прекидача на врху стране укључите панел. "
+"Искључивање прекидача сакрива панел, али задржава везе сачуване на "
+"постојећим тикетима."
+
+#: ../system/integrations/i-doit.rst:None
+msgid "i-doit integration settings in Zammad's admin settings"
 msgstr "i-doit интеграција у Zammad-овој бочној траци тикета"
-
-#: ../system/integrations/i-doit.rst:20
-msgid ""
-"The i-doit integration will appear under a new 🖨 tab in the ticket sidebar."
-msgstr ""
-"i-doit интеграција ће се појавити под новим 🖨 језичком у бочној траци тикета."
-
-#: ../system/integrations/i-doit.rst:22
-msgid ""
-"i-doit integration puts a new tab in Zammad's ticket sidebar where you can "
-"add links to existing i-doit devices for easy reference. (See our :user-"
-"docs:`user documentation </extras/i-doit-track-company-property.html>` to "
-"learn how it works in practice)."
-msgstr ""
-"i-doit интеграција омогућава нов језичак у Zammad-овој бочној траци тикета "
-"где можете додати везе на постојеће i-doit уређаје ради лакшег "
-"референцирања. (Погледајте нашу :user-docs:`корисничку документацију </"
-"extras/i-doit-track-company-property.html>` да бисте сазнали како то "
-"функционише у пракси)."
-
-#: ../system/integrations/i-doit.rst:29 ../system/integrations/i-doit.rst:85
-msgid "How to Set it Up"
-msgstr "Како подесити"
-
-#: ../system/integrations/i-doit.rst:31
-msgid ""
-"It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-"
-"add-on/>`_. Make sure to have it properly set up. Use the following setting:"
-msgstr ""
-"Захтева i-doit `API додатак <https://www.i-doit.com/i-doit/add-ons/api-add-"
-"on/>`_. Обавезно проверите да ли је исправно подешен. Користите следећа "
-"подешавања:"
-
-#: ../system/integrations/i-doit.rst:35
-msgid "Active: ``Yes``"
-msgstr "Active: ``Yes``"
-
-#: ../system/integrations/i-doit.rst:36
-msgid "Enforce authentication by username and password: ``No``"
-msgstr "Enforce authentication by username and password: ``No``"
 
 #: ../system/integrations/i-doit.rst:38
 msgid ""
-"To set it up, enable the integration in the Zammad admin settings under "
-"*System > Integrations > i-doit*:"
+"The root URL of your i-doit installation, including the protocol, e.g. "
+"``https://idoit.example.com``. Zammad adds ``/src/jsonrpc.php`` to it."
 msgstr ""
-"Да бисте је подесили, укључите интеграцију у Zammad администраторским "
-"подешавањима под *Систем > Интеграције > i-doit*:"
+"Основни URL ваше i-doit инсталације, укључујући протокол, нпр. ``https://"
+"idoit.example.com``. Zammad на њега додаје ``/src/jsonrpc.php``."
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit settings within the integration pages"
-msgstr "i-doit подешавања у оквиру страница за интеграцију"
-
-#: ../system/integrations/i-doit.rst:46
-msgid "The root URL of your i-doit installation."
-msgstr "Основни URL ваше i-doit инсталације."
-
-#: ../system/integrations/i-doit.rst:55
+#: ../system/integrations/i-doit.rst:42
 msgid "API token"
 msgstr "API кључ"
 
-#: ../system/integrations/i-doit.rst:49
-msgid ""
-"Found in the i-doit admin area under *Interfaces / external data > JSON-RPC "
-"API > Common Settings*."
-msgstr ""
-"Налази се у i-doit администраторском панелу под *Interfaces / external data "
-"> JSON-RPC API > Common Settings*."
+#: ../system/integrations/i-doit.rst:42
+msgid "The key from i-doit's JSON-RPC API settings."
+msgstr "Кључ из подешавања JSON-RPC API-ја у i-doit-у."
 
-#: ../system/integrations/i-doit.rst:0
-msgid "i-doit administration interface with API configuration"
-msgstr "i-doit административни интерфејс са API конфигурацијом"
-
-#: ../system/integrations/i-doit.rst:59
+#: ../system/integrations/i-doit.rst:46
 msgid "Client ID"
 msgstr "Клијент ID"
 
-#: ../system/integrations/i-doit.rst:58
+#: ../system/integrations/i-doit.rst:45
 msgid ""
-"A unique name to identify Zammad within i-doit. Zammad does not require you "
-"to enter a value here, but i-doit might!"
+"Zammad stores this value but does not send it to i-doit, so it has no "
+"effect. Leave it empty."
 msgstr ""
-"Јединствен назив за идентификацију Zammad-а у оквиру i-doit-а. Zammad не "
-"захтева од вас да унесете вредност овде, али i-doit би могао!"
+"Zammad чува ову вредност, али је не шаље i-doit-у, тако да она нема никаквог "
+"ефекта. Оставите поље празно."
 
-#: ../system/integrations/i-doit.rst:62
+#: ../system/integrations/i-doit.rst:49
 msgid ""
-"Here you can decide if the certificate of your i-doit system has to be "
-"verified or not. In case you are using custom certificates, please have a "
-"look at :doc:`how to add them to Zammad </settings/security/ssl-"
-"certificates>`."
+"Decides whether Zammad verifies the certificate of your i-doit installation. "
+"Default value: ``yes``. If you use a custom certificate, add it to Zammad as "
+"described in :doc:`SSL certificates </settings/security/ssl-certificates>`."
 msgstr ""
-"Овде можете одлучити да ли ће сертификат вашег i-doit система бити проверен "
-"или не. У случају да користите прилагођене сертификате, молимо погледајте "
-"и :doc:`како да их додате у Zammad </settings/security/ssl-certificates>`."
+"Одређује да ли Zammad проверава сертификат ваше i-doit инсталације. "
+"Подразумевана вредност: ``да``. У случају да користите прилагођени "
+"сертификат, додајте га у Zammad према упутству за :doc:`SSL сертификате </"
+"settings/security/ssl-certificates>`."
 
-#: ../system/integrations/i-doit.rst:69
-msgid "2. List / Create Zammad Tickets in i-doit"
-msgstr "2. Излистајте / Додајте Zammad тикете у i-doit"
-
-#: ../system/integrations/i-doit.rst:None
-msgid "Zammad integration in i-doit's device view"
-msgstr "Zammad интеграција у приказу уређаја i-doit-а"
-
-#: ../system/integrations/i-doit.rst:78
+#: ../system/integrations/i-doit.rst:56
 msgid ""
-"i-doit's ticket system integration gives you a way to see all the tickets "
-"for a given device without ever leaving i-doit. (See our :user-docs:`user "
-"documentation </extras/i-doit-track-company-property.html>` to learn how it "
-"works in practice)."
+"Zammad reads the objects through i-doit's JSON-RPC API, which ships as an "
+"add-on and is not part of the i-doit Docker images. If the add-on is "
+"missing, i-doit's API answers ``Api Module is not available.`` and Zammad "
+"cannot read any objects. Activate the API and make sure that it does not "
+"enforce authentication by username and password, so the API key alone is "
+"sufficient. Which objects the key can read is defined by the rights of its "
+"user in i-doit. Zammad itself offers every object type that i-doit returns."
 msgstr ""
-"Интеграција i-doit система тикета даје вам начин да видите све тикете за "
-"дати уређај без напуштања i-doit-а. (Погледајте нашу :user-docs:`корисничку "
-"документацију </extras/i-doit-track-company-property.html>` да бисте сазнали "
-"како то функционише у пракси)."
+"Zammad чита објекте преко i-doit JSON-RPC API-ја, који се испоручује као "
+"додатак и није део i-doit Docker слика. Ако додатак недостаје, i-doit API "
+"одговара са ``Api Module is not available.`` и Zammad не може да прочита "
+"ниједан објекат. Активирајте API и уверите се да не захтева аутентификацију "
+"корисничким именом и лозинком, тако да је сам API кључ довољан. Које објекте "
+"кључ може да чита одређују права његовог корисника у i-doit-у. Zammad сам "
+"нуди сваку врсту објекта коју i-doit врати."
 
-#: ../system/integrations/i-doit.rst:87
+#: ../system/integrations/i-doit.rst:64
 msgid ""
-"Enable this integration in the i-doit admin settings under *Interfaces / "
-"external data > Trouble Ticket System (TTS) > Configuration*:"
+"Clicking ``Save`` verifies the connection by requesting i-doit's object "
+"types. If i-doit doesn't answer, Zammad shows the reason instead of saving. "
+"The **Recent Logs** table below the settings lists the requests Zammad sent "
+"to i-doit, which helps to track down a failed connection."
 msgstr ""
-"Укључите ову интеграцију у i-doit администраторским подешавањима под "
-"*Interfaces / external data > Trouble Ticket System (TTS) > Configuration*:"
+"Клик на ``Сачувај`` проверава везу тако што од i-doit-а захтева врсте "
+"објеката. Ако i-doit не одговори, Zammad уместо чувања приказује разлог. "
+"Табела **Недавни уноси дневника** испод подешавања наводи захтеве које је "
+"Zammad послао i-doit-у, што помаже у откривању узрока неуспешне везе."
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit administration interface with TTS configuration"
-msgstr "i-doit административни интерфејс са TTS конфигурацијом"
+#: ../system/integrations/i-doit.rst:70
+msgid "Configure Ticket Linking in i-doit"
+msgstr "Подешавање повезивања тикета у i-doit-у"
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:72
+msgid ""
+"i-doit's trouble ticket system integration (TTS) shows the Zammad tickets "
+"that are linked to an object on the object's page, so you can see what has "
+"been reported about it without leaving i-doit. The list holds up to 10 "
+"tickets, and each row links to the ticket in Zammad."
+msgstr ""
+"Интеграција i-doit-а са системом за пријаву проблема (TTS) приказује Zammad "
+"тикете повезане са објектом на страни тог објекта, тако да можете видети шта "
+"је о њему пријављено без напуштања i-doit-а. Листа садржи до 10 тикета, а "
+"сваки ред води до тикета у Zammad-у."
+
+#: ../system/integrations/i-doit.rst:77
+msgid ""
+"In i-doit, the settings are under *Administration > Import and interfaces > "
+"Trouble Ticket System (TTS)*."
+msgstr ""
+"У i-doit-у се подешавања налазе под *Administration > Import and interfaces "
+"> Trouble Ticket System (TTS)*."
+
+#: ../system/integrations/i-doit.rst:81
 msgid "TTS-Type"
 msgstr "TTS-Type"
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "``Zammad``"
 msgstr "``Zammad``"
 
-#: ../system/integrations/i-doit.rst:107
-msgid "Username / Password"
-msgstr "Корисничко име / лозинка"
+#: ../system/integrations/i-doit.rst:90
+msgid "Username and Password"
+msgstr "Корисничко име и лозинка"
 
-#: ../system/integrations/i-doit.rst:99
-msgid "Login credentials for a Zammad agent."
-msgstr "Креденцијали за пријаву Zammad оператера."
-
-#: ../system/integrations/i-doit.rst:101
+#: ../system/integrations/i-doit.rst:84
 msgid ""
-"This agent must have **read permission** for all :doc:`groups </manage/"
-"groups/index>` that plan on using the i-doit integration."
+"Login credentials of a Zammad agent. i-doit searches Zammad's API with this "
+"account, and Zammad returns only the tickets this agent may read. The agent "
+"therefore needs read access to the groups whose tickets should show up on i-"
+"doit objects."
 msgstr ""
-"Овај оператер мора имати **дозволу за читање** за све :doc:`групе </manage/"
-"groups/index>` које планирају да користе i-doit интеграцију."
+"Подаци за пријаву Zammad оператера. i-doit претражује Zammad API помоћу овог "
+"налога, а Zammad враћа само тикете које овај оператер сме да чита. Оператеру "
+"је зато потребан приступ за читање групама чији тикети треба да се приказују "
+"на i-doit објектима."
 
-#: ../system/integrations/i-doit.rst:105
+#: ../system/integrations/i-doit.rst:89
 msgid ""
-"You may even wish to create a dedicated agent account just for this "
-"integration (otherwise, if the agent ever changes her password, you will "
-"have to remember to update it here)."
+"Consider a dedicated agent for this purpose: if the password of the account "
+"changes, you have to update it here."
 msgstr ""
-"Можда ћете чак желети да направите наменски налог оператера само за ову "
-"интеграцију (у супротном, ако оператер икада промени своју лозинку, мораћете "
-"да се сетите да је освежите и овде)."
+"Размотрите коришћење посебног оператера за ову намену: ако се лозинка налога "
+"промени, морате је ажурирати овде."
 
-#: ../system/integrations/i-doit.rst:109
+#: ../system/integrations/i-doit.rst:93
 msgid "URL incl. protocol"
 msgstr "URL адреса укључујући и протокол"
 
-#: ../system/integrations/i-doit.rst:110
+#: ../system/integrations/i-doit.rst:93
 msgid "``https://your.zammad.domain``"
 msgstr "``https://your.zammad.domain``"
+
+#: ../system/integrations/i-doit.rst:98
+msgid "TLS-Certificate"
+msgstr "SSL сертификат"
+
+#: ../system/integrations/i-doit.rst:96
+msgid ""
+"A certificate file from i-doit's file management that i-doit uses to verify "
+"Zammad's certificate. Leave it empty unless your Zammad installation uses a "
+"certificate that i-doit does not trust."
+msgstr ""
+"Датотека сертификата из управљања датотекама у i-doit-у коју i-doit користи "
+"за проверу сертификата Zammad-а. Оставите поље празно осим ако ваша Zammad "
+"инсталација користи сертификат коме i-doit не верује."
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Request Tracker queues"
+msgstr "Request Tracker queues"
+
+#: ../system/integrations/i-doit.rst:101
+msgid ""
+"Belongs to the Request Tracker integration. i-doit shows the field for every "
+"TTS-Type, so leave it empty."
+msgstr ""
+"Припада интеграцији са Request Tracker-ом. i-doit приказује ово поље за "
+"сваки TTS-Type, па га оставите празним."
 
 #: ../system/integrations/index.rst:2
 msgid "Integrations"
@@ -35090,10 +35639,6 @@ msgstr ""
 "Снимак екрана који приказује дијалог изазван поруком одржавања\n"
 "са поновним учитавањем апликације"
 
-#: ../system/monitoring.rst:2
-msgid "Monitoring"
-msgstr "Надгледање"
-
 #: ../system/monitoring.rst:4
 msgid ""
 "This function is only available in self hosted instances. For our SaaS "
@@ -35105,38 +35650,32 @@ msgstr ""
 "потенцијалне проблеме."
 
 #: ../system/monitoring.rst:11
+#, fuzzy
+#| msgid ""
+#| "On the monitoring page, you can see the current health state of Zammad "
+#| "under **Current Status** at the bottom. This can be useful if you want to "
+#| "have a look if everything is up and running. As an example, you could "
+#| "have a look in the monitoring when you assume that some emails aren't "
+#| "processed from Zammad."
 msgid ""
 "On the monitoring page, you can see the current health state of Zammad under "
 "**Current Status** at the bottom. This can be useful if you want to have a "
-"look if everything is up and running. As an example, you could have a look "
-"in the monitoring when you assume that some emails aren't processed from "
-"Zammad."
+"look if everything is up and running. For example, the monitoring reports an "
+"email channel that cannot connect to its mail server, or one that has not "
+"fetched email for more than an hour. Emails that cannot be processed are not "
+"part of it. Zammad creates a ticket titled ``Unprocessable email`` instead, "
+"see :doc:`/misc/unprocessable-emails`."
 msgstr ""
 "На страни за надгледање можете видети тренутно стање Zammad-а под **Тренутно "
 "стање** при дну. Ово може бити корисно ако желите да проверите да ли је све "
 "у реду. Као пример, могли бисте да проверите надгледање када претпоставите "
 "да се неке имејл поруке не обрађују од стране Zammad-а."
 
-#: ../system/monitoring.rst:17
-msgid "**Can't receive an email and the monitoring response is \"healthy\"?**"
-msgstr ""
-"**Не можете да примите имејл поруке и стање надгледања је „без проблема“?**"
-
-#: ../system/monitoring.rst:19
-msgid ""
-"Zammad will just inform you about unprocessable emails. This is not the case "
-"for oversized emails. You can adjust the maximum email size in :doc:`../"
-"channels/email/settings`."
-msgstr ""
-"Zammad ће вас само обавестити о необрађеним имејл порукама. Ово није случај "
-"са превеликим имејл порукама. Можете подесити максималну величину имејл "
-"порука путем :doc:`../channels/email/settings`."
-
-#: ../system/monitoring.rst:24
+#: ../system/monitoring.rst:20
 msgid "Monitoring API"
 msgstr "API надгледања"
 
-#: ../system/monitoring.rst:26
+#: ../system/monitoring.rst:22
 msgid ""
 "Beside the indication in the monitoring page, you can also use an external "
 "monitoring tool to monitor Zammad's health. To request the health of Zammad, "
@@ -35151,15 +35690,15 @@ msgstr ""
 "из поља **Тренутни кључ**, као и комплетну API путању вашег система (поље "
 "**Провера доступности**), у коју је API кључ већ укључен."
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Current Token and Health Check"
 msgstr "Снимак екрана који приказује тренутни кључ и проверу доступности"
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Token and Health Check"
 msgstr "Снимак екрана који приказује кључ и проверу доступности"
 
-#: ../system/monitoring.rst:38
+#: ../system/monitoring.rst:34
 msgid ""
 "In addition to that, you can reset the auto-generated token to make sure "
 "that already configured monitoring systems won't work anymore. So, please "
@@ -35169,7 +35708,7 @@ msgstr ""
 "сигурни да већ конфигурисани системи за надгледање више неће радити. Дакле, "
 "користите дугме ``Поништи`` само ако знате шта радите!"
 
-#: ../system/monitoring.rst:43
+#: ../system/monitoring.rst:39
 msgid "Example Output"
 msgstr "Пример резултата"
 
@@ -35177,7 +35716,7 @@ msgstr "Пример резултата"
 msgid "No issues found"
 msgstr "Није пронађен ниједан проблем"
 
-#: ../system/monitoring.rst:47 ../system/monitoring.rst:64
+#: ../system/monitoring.rst:43 ../system/monitoring.rst:60
 msgid "**Indicator in Zammad**:"
 msgstr "**Индикатор у Zammad-у**:"
 
@@ -35185,7 +35724,7 @@ msgstr "**Индикатор у Zammad-у**:"
 msgid "Screenshot showing monitoring with no issues"
 msgstr "Снимак екрана који приказује преглед надгледања без проблема"
 
-#: ../system/monitoring.rst:53 ../system/monitoring.rst:70
+#: ../system/monitoring.rst:49 ../system/monitoring.rst:66
 msgid "**API response**:"
 msgstr "**API одговор**:"
 
@@ -36368,9 +36907,9 @@ msgid ""
 msgstr ""
 "Омогућава поље са предефинисаним вредностима у коме корисник може одабрати "
 "једну или више. Подржава хијерархију до 6 нивоа дубине. За рестрикцију "
-"одабира вредности (нпр. надређене категорије), одзначите поље у колони „"
-"Активно”. За одређивање подразумеваних вредности, означите их у колони „"
-"Подразумевано”. Само укључене вредности могу бити подразумеване."
+"одабира вредности (нпр. надређене категорије), одзначите поље у колони "
+"„Активно”. За одређивање подразумеваних вредности, означите их у колони "
+"„Подразумевано”. Само укључене вредности могу бити подразумеване."
 
 #: ../system/objects/types.rst:163
 msgid "External Data Source Field"
@@ -37710,6 +38249,170 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Приказује тренутну Zammad верзију ваше инстанце."
+
+#~ msgid "Authentication Methods"
+#~ msgstr "Методи аутентификације"
+
+#~ msgid ""
+#~ "**Can't receive an email and the monitoring response is \"healthy\"?**"
+#~ msgstr ""
+#~ "**Не можете да примите имејл поруке и стање надгледања је „без проблема“?"
+#~ "**"
+
+#~ msgid ""
+#~ "Zammad will just inform you about unprocessable emails. This is not the "
+#~ "case for oversized emails. You can adjust the maximum email size "
+#~ "in :doc:`../channels/email/settings`."
+#~ msgstr ""
+#~ "Zammad ће вас само обавестити о необрађеним имејл порукама. Ово није "
+#~ "случај са превеликим имејл порукама. Можете подесити максималну величину "
+#~ "имејл порука путем :doc:`../channels/email/settings`."
+
+#~ msgid "Azure AI"
+#~ msgstr "Azure AI"
+
+#~ msgid "Default: ``6``"
+#~ msgstr "Подразумевано: ``6``"
+
+#~ msgid ""
+#~ "To help administrators to overcome login issues, Zammad automatically "
+#~ "offers a password request for administrator users as you can see in the "
+#~ "screenshot above. This allows you to adjust third-party applications, "
+#~ "even if the login doesn't work."
+#~ msgstr ""
+#~ "Да би помогао администраторима да превазиђу проблеме са пријављивањем, "
+#~ "Zammad аутоматски нуди захтев за лозинку за администраторске кориснике, "
+#~ "како можете видети на снимку екрана изнад. Ово вам омогућава да подесите "
+#~ "апликације трећег лица, чак и ако пријава не функционише."
+
+#~ msgid "1. Add i-doit Links to Zammad Tickets"
+#~ msgstr "1. Додавање i-doit веза ка Zammad тикетима"
+
+#~ msgid "What Users See"
+#~ msgstr "Шта корисници виде"
+
+#~ msgid ""
+#~ "The i-doit integration will appear under a new 🖨 tab in the ticket "
+#~ "sidebar."
+#~ msgstr ""
+#~ "i-doit интеграција ће се појавити под новим 🖨 језичком у бочној траци "
+#~ "тикета."
+
+#~ msgid ""
+#~ "i-doit integration puts a new tab in Zammad's ticket sidebar where you "
+#~ "can add links to existing i-doit devices for easy reference. (See "
+#~ "our :user-docs:`user documentation </extras/i-doit-track-company-"
+#~ "property.html>` to learn how it works in practice)."
+#~ msgstr ""
+#~ "i-doit интеграција омогућава нов језичак у Zammad-овој бочној траци "
+#~ "тикета где можете додати везе на постојеће i-doit уређаје ради лакшег "
+#~ "референцирања. (Погледајте нашу :user-docs:`корисничку документацију </"
+#~ "extras/i-doit-track-company-property.html>` да бисте сазнали како то "
+#~ "функционише у пракси)."
+
+#~ msgid "How to Set it Up"
+#~ msgstr "Како подесити"
+
+#~ msgid ""
+#~ "It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/"
+#~ "api-add-on/>`_. Make sure to have it properly set up. Use the following "
+#~ "setting:"
+#~ msgstr ""
+#~ "Захтева i-doit `API додатак <https://www.i-doit.com/i-doit/add-ons/api-"
+#~ "add-on/>`_. Обавезно проверите да ли је исправно подешен. Користите "
+#~ "следећа подешавања:"
+
+#~ msgid "Active: ``Yes``"
+#~ msgstr "Active: ``Yes``"
+
+#~ msgid "Enforce authentication by username and password: ``No``"
+#~ msgstr "Enforce authentication by username and password: ``No``"
+
+#~ msgid ""
+#~ "To set it up, enable the integration in the Zammad admin settings under "
+#~ "*System > Integrations > i-doit*:"
+#~ msgstr ""
+#~ "Да бисте је подесили, укључите интеграцију у Zammad администраторским "
+#~ "подешавањима под *Систем > Интеграције > i-doit*:"
+
+#~ msgid "i-doit settings within the integration pages"
+#~ msgstr "i-doit подешавања у оквиру страница за интеграцију"
+
+#~ msgid "The root URL of your i-doit installation."
+#~ msgstr "Основни URL ваше i-doit инсталације."
+
+#~ msgid ""
+#~ "Found in the i-doit admin area under *Interfaces / external data > JSON-"
+#~ "RPC API > Common Settings*."
+#~ msgstr ""
+#~ "Налази се у i-doit администраторском панелу под *Interfaces / external "
+#~ "data > JSON-RPC API > Common Settings*."
+
+#~ msgid "i-doit administration interface with API configuration"
+#~ msgstr "i-doit административни интерфејс са API конфигурацијом"
+
+#~ msgid ""
+#~ "A unique name to identify Zammad within i-doit. Zammad does not require "
+#~ "you to enter a value here, but i-doit might!"
+#~ msgstr ""
+#~ "Јединствен назив за идентификацију Zammad-а у оквиру i-doit-а. Zammad не "
+#~ "захтева од вас да унесете вредност овде, али i-doit би могао!"
+
+#~ msgid "2. List / Create Zammad Tickets in i-doit"
+#~ msgstr "2. Излистајте / Додајте Zammad тикете у i-doit"
+
+#~ msgid "Zammad integration in i-doit's device view"
+#~ msgstr "Zammad интеграција у приказу уређаја i-doit-а"
+
+#~ msgid ""
+#~ "i-doit's ticket system integration gives you a way to see all the tickets "
+#~ "for a given device without ever leaving i-doit. (See our :user-docs:`user "
+#~ "documentation </extras/i-doit-track-company-property.html>` to learn how "
+#~ "it works in practice)."
+#~ msgstr ""
+#~ "Интеграција i-doit система тикета даје вам начин да видите све тикете за "
+#~ "дати уређај без напуштања i-doit-а. (Погледајте нашу :user-"
+#~ "docs:`корисничку документацију </extras/i-doit-track-company-"
+#~ "property.html>` да бисте сазнали како то функционише у пракси)."
+
+#~ msgid ""
+#~ "Enable this integration in the i-doit admin settings under *Interfaces / "
+#~ "external data > Trouble Ticket System (TTS) > Configuration*:"
+#~ msgstr ""
+#~ "Укључите ову интеграцију у i-doit администраторским подешавањима под "
+#~ "*Interfaces / external data > Trouble Ticket System (TTS) > "
+#~ "Configuration*:"
+
+#~ msgid "i-doit administration interface with TTS configuration"
+#~ msgstr "i-doit административни интерфејс са TTS конфигурацијом"
+
+#~ msgid "Login credentials for a Zammad agent."
+#~ msgstr "Креденцијали за пријаву Zammad оператера."
+
+#~ msgid ""
+#~ "This agent must have **read permission** for all :doc:`groups </manage/"
+#~ "groups/index>` that plan on using the i-doit integration."
+#~ msgstr ""
+#~ "Овај оператер мора имати **дозволу за читање** за све :doc:`групе </"
+#~ "manage/groups/index>` које планирају да користе i-doit интеграцију."
+
+#~ msgid ""
+#~ "You may even wish to create a dedicated agent account just for this "
+#~ "integration (otherwise, if the agent ever changes her password, you will "
+#~ "have to remember to update it here)."
+#~ msgstr ""
+#~ "Можда ћете чак желети да направите наменски налог оператера само за ову "
+#~ "интеграцију (у супротном, ако оператер икада промени своју лозинку, "
+#~ "мораћете да се сетите да је освежите и овде)."
+
+#~ msgid ""
+#~ "The time in minutes after which the ticket's ownership will revert back "
+#~ "to *unassigned* after the assigned agent hasn't worked on the ticket. "
+#~ "This timeout does *not* take any working hours in account."
+#~ msgstr ""
+#~ "Време у минутима након којег ће се власништво тикета вратити на "
+#~ "*недодељено* након што додељени оператер није радио на тикету. "
+#~ "Калкулација овог временског истека *не* узима у обзир радне сате."
 
 #~ msgid ""
 #~ "The SHA-1 hash of your HMAC-SHA1 signature token (assuming you provided "

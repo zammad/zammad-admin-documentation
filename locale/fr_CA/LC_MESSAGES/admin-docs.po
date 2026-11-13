@@ -684,7 +684,7 @@ msgstr ""
 msgid "Screenshot shows the dialog for adding or editing a provider"
 msgstr ""
 
-#: ../ai/provider.rst:66 ../channels/email/accounts/account-setup.rst:122
+#: ../ai/provider.rst:73 ../channels/email/accounts/account-setup.rst:122
 #: ../misc/object-conditions/basics.rst:220 ../system/objects.rst:158
 msgid "Type"
 msgstr ""
@@ -693,7 +693,7 @@ msgstr ""
 msgid "Pick the AI provider. Available options:"
 msgstr ""
 
-#: ../ai/provider.rst:52 ../ai/provider.rst:268
+#: ../ai/provider.rst:52 ../ai/provider.rst:275
 msgid "Zammad AI"
 msgstr ""
 
@@ -701,7 +701,7 @@ msgstr ""
 msgid "OpenAI"
 msgstr ""
 
-#: ../ai/provider.rst:54 ../ai/provider.rst:299
+#: ../ai/provider.rst:54 ../ai/provider.rst:306
 msgid "Ollama"
 msgstr ""
 
@@ -710,7 +710,7 @@ msgid "Anthropic"
 msgstr ""
 
 #: ../ai/provider.rst:56
-msgid "Azure AI"
+msgid "Azure AI (legacy deployment-based endpoints)"
 msgstr ""
 
 #: ../ai/provider.rst:57
@@ -718,7 +718,7 @@ msgid "Mistral AI"
 msgstr ""
 
 #: ../ai/provider.rst:58
-msgid "Custom (OpenAI compatible)"
+msgid "Custom (OpenAI Compatible)"
 msgstr ""
 
 #: ../ai/provider.rst:60
@@ -730,46 +730,56 @@ msgstr ""
 
 #: ../ai/provider.rst:64
 msgid ""
+"Azure AI is a legacy option and doesn't support semantic search. To connect "
+"Azure, pick Custom (OpenAI Compatible) instead. Enter your resource's v1 "
+"endpoint (``https://<resource>.openai.azure.com/openai/v1``) as URL and your "
+"deployment name as model. To use this connection for semantic search as "
+"well, enter the name of an embedding deployment in the **Embedding Model** "
+"field."
+msgstr ""
+
+#: ../ai/provider.rst:71
+msgid ""
 "The provider you need isn't listed? We are going to add more over time. If "
 "you need a particular one or want to sponsor it, get in touch with our "
 "`sales department <https://zammad.com/en/company/contact>`_."
 msgstr ""
 
-#: ../ai/provider.rst:71 ../ai/writing-assistant.rst:104
+#: ../ai/provider.rst:78 ../ai/writing-assistant.rst:104
 #: ../channels/email/filters.rst:47 ../channels/form.rst:20
 #: ../manage/calendars.rst:49 ../manage/groups/settings.rst:16
-#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:89
+#: ../manage/report-profiles.rst:39 ../manage/scheduler.rst:92
 #: ../manage/slas.rst:53 ../manage/templates.rst:30
 #: ../manage/webhook/add.rst:37 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
 #: ../misc/variables/ticket.rst:1
-#: ../settings/security/third-party/microsoft.rst:38 ../system/api.rst:117
+#: ../settings/security/third-party/microsoft.rst:38 ../system/api.rst:174
 #: ../system/objects.rst:135 ../system/objects.rst:239
 msgid "Name"
 msgstr ""
 
-#: ../ai/provider.rst:69
+#: ../ai/provider.rst:76
 msgid ""
 "A human-readable label for the provider. This is what you see in the list "
 "and elsewhere in Zammad (for example when configuring a provider for a "
 "specific feature). The name must be unique."
 msgstr ""
 
-#: ../ai/provider.rst:75 ../system/api.rst:133
+#: ../ai/provider.rst:82 ../system/api.rst:190
 msgid "Token"
 msgstr ""
 
-#: ../ai/provider.rst:74
+#: ../ai/provider.rst:81
 msgid ""
 "The API token issued by your provider. Don't confuse it with the tokens a "
 "large language model deals with when processing a request."
 msgstr ""
 
-#: ../ai/provider.rst:88
+#: ../ai/provider.rst:95
 msgid "Model"
 msgstr ""
 
-#: ../ai/provider.rst:78
+#: ../ai/provider.rst:85
 msgid ""
 "The base model used to generate text. For providers that offer a model list, "
 "the field is a dropdown. The default option shows the provider's recommended "
@@ -777,24 +787,24 @@ msgid ""
 "model list, enter its name manually."
 msgstr ""
 
-#: ../ai/provider.rst:83
+#: ../ai/provider.rst:90
 msgid ""
 "Azure AI and Zammad AI do not show this field. Azure AI identifies the model "
 "through its deployment URL, while Zammad AI chooses the model itself."
 msgstr ""
 
-#: ../ai/provider.rst:86
+#: ../ai/provider.rst:93
 msgid ""
 "Need different models for different features? Add the same provider twice "
 "with a different model selected in each, then assign each connection to its "
 "feature via :ref:`per-feature-provider-config`."
 msgstr ""
 
-#: ../ai/provider.rst:121
+#: ../ai/provider.rst:128
 msgid "Embedding Model"
 msgstr ""
 
-#: ../ai/provider.rst:91
+#: ../ai/provider.rst:98
 msgid ""
 "The model used to vectorize text for semantic search. The dropdown lists the "
 "models the provider offers. The default option shows the provider's "
@@ -805,7 +815,7 @@ msgid ""
 "field appears only for the ones that do."
 msgstr ""
 
-#: ../ai/provider.rst:99
+#: ../ai/provider.rst:106
 msgid ""
 "When you select or enter an embedding model, Zammad tries to determine "
 "values for the two options listed below. If Zammad cannot determine these "
@@ -813,19 +823,19 @@ msgid ""
 "if you know what you are doing."
 msgstr ""
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "Embedding dimensions"
 msgstr ""
 
-#: ../ai/provider.rst:105
+#: ../ai/provider.rst:112
 msgid "The length of the vectors the embedding model produces."
 msgstr ""
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "Context window size"
 msgstr ""
 
-#: ../ai/provider.rst:108
+#: ../ai/provider.rst:115
 msgid "The number of input tokens the embedding model accepts at once."
 msgstr ""
 
@@ -836,7 +846,7 @@ msgid ""
 "settings"
 msgstr "Bloquer les notifications"
 
-#: ../ai/provider.rst:114
+#: ../ai/provider.rst:121
 msgid ""
 "Changing the embedding model or the embedding dimensions triggers a full "
 "rebuild of the knowledge base index. This re-embeds every knowledge base "
@@ -847,11 +857,11 @@ msgid ""
 "does not trigger a rebuild."
 msgstr ""
 
-#: ../ai/provider.rst:128
+#: ../ai/provider.rst:135
 msgid "OCR Model"
 msgstr ""
 
-#: ../ai/provider.rst:124
+#: ../ai/provider.rst:131
 msgid ""
 "The model used to extract text from images. The dropdown lists the models "
 "the provider offers. The default option falls back to the **Model** field. "
@@ -860,36 +870,36 @@ msgid ""
 "for the ones that do."
 msgstr ""
 
-#: ../ai/provider.rst:132 ../manage/knowledge-base.rst:139
+#: ../ai/provider.rst:139 ../manage/knowledge-base.rst:139
 msgid "URL"
 msgstr ""
 
-#: ../ai/provider.rst:131
+#: ../ai/provider.rst:138
 msgid ""
 "The URL or IP address of the provider. Required for Ollama and OpenAI "
 "compatible providers."
 msgstr ""
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid "URL (Completions)"
 msgstr ""
 
-#: ../ai/provider.rst:135
+#: ../ai/provider.rst:142
 msgid ""
 "Azure AI only. The endpoint where the text generation model is available."
 msgstr ""
 
-#: ../ai/provider.rst:139
+#: ../ai/provider.rst:146
 msgid "URL (OCR)"
 msgstr ""
 
-#: ../ai/provider.rst:138
+#: ../ai/provider.rst:145
 msgid ""
 "Azure AI only. The endpoint where the OCR model is available. Leave empty to "
 "fall back to URL (Completions)."
 msgstr ""
 
-#: ../ai/provider.rst:141
+#: ../ai/provider.rst:148
 msgid ""
 "After filling in the fields, click ``Submit``. Zammad tests the "
 "configuration before saving. If the test succeeds, the row's status dot "
@@ -897,53 +907,53 @@ msgid ""
 "below for the colors."
 msgstr ""
 
-#: ../ai/provider.rst:147
+#: ../ai/provider.rst:154
 msgid "Status"
 msgstr ""
 
-#: ../ai/provider.rst:149
+#: ../ai/provider.rst:156
 msgid ""
 "The colored dot at the start of each row shows whether the provider has been "
 "used successfully or whether it has issues:"
 msgstr ""
 
-#: ../ai/provider.rst:154
+#: ../ai/provider.rst:161
 msgid "Green"
 msgstr ""
 
-#: ../ai/provider.rst:153
+#: ../ai/provider.rst:160
 msgid ""
 "The provider has been used and the last request succeeded. The tooltip shows "
 "the timestamp of the last status update."
 msgstr ""
 
-#: ../ai/provider.rst:158
+#: ../ai/provider.rst:165
 msgid "Orange"
 msgstr ""
 
-#: ../ai/provider.rst:157
+#: ../ai/provider.rst:164
 msgid ""
 "The provider is configured but has not been used yet. It turns green after "
 "the first successful request."
 msgstr ""
 
-#: ../ai/provider.rst:163
+#: ../ai/provider.rst:170
 msgid "Red"
 msgstr ""
 
-#: ../ai/provider.rst:161
+#: ../ai/provider.rst:168
 msgid ""
 "The last request to this provider failed. Hover the dot for the error "
 "message from the provider. The tooltip always shows the most recent error, "
 "so the timestamp belongs to the last failed request."
 msgstr ""
 
-#: ../ai/provider.rst:168
+#: ../ai/provider.rst:175
 #, fuzzy
 msgid "Default Provider"
 msgstr "Somme de contrôle (default: ``no``)"
 
-#: ../ai/provider.rst:170
+#: ../ai/provider.rst:177
 msgid ""
 "The **Default** provider serves every AI feature that has no specific "
 "provider assigned. You set it from the ︙ menu in the **Action** column. A "
@@ -957,7 +967,7 @@ msgid ""
 "for all three purposes"
 msgstr ""
 
-#: ../ai/provider.rst:179
+#: ../ai/provider.rst:186
 msgid ""
 "When you mark a provider as the default, Zammad clears that flag from "
 "whichever provider held it before, so the new default takes over "
@@ -965,28 +975,28 @@ msgid ""
 "provider that holds the flag, Zammad promotes the oldest remaining provider."
 msgstr ""
 
-#: ../ai/provider.rst:187
+#: ../ai/provider.rst:194
 msgid "Capabilities"
 msgstr ""
 
-#: ../ai/provider.rst:189
+#: ../ai/provider.rst:196
 msgid ""
 "Semantic search and image text recognition (OCR) are capabilities. You "
 "assign them from the ︙ menu in the **Action** column; the badges mark which "
 "provider currently covers each capability."
 msgstr ""
 
-#: ../ai/provider.rst:201
+#: ../ai/provider.rst:208
 msgid "Semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:194
+#: ../ai/provider.rst:201
 msgid ""
 "The provider used to turn text into numerical form (vector embeddings) so "
 "the knowledge base can find answers by meaning, not just keywords."
 msgstr ""
 
-#: ../ai/provider.rst:197
+#: ../ai/provider.rst:204
 msgid ""
 "If no provider covers semantic search and a feature needs it, Zammad shows a "
 "warning on the corresponding feature page. Assign semantic search to a "
@@ -995,22 +1005,22 @@ msgid ""
 "rebuild, see **Embedding Model** above."
 msgstr ""
 
-#: ../ai/provider.rst:207
+#: ../ai/provider.rst:214
 #, fuzzy
 msgid "Image text recognition"
 msgstr "Bloquer les notifications"
 
-#: ../ai/provider.rst:204
+#: ../ai/provider.rst:211
 msgid "The provider used to extract text from images (OCR)."
 msgstr ""
 
-#: ../ai/provider.rst:206
+#: ../ai/provider.rst:213
 msgid ""
 "This capability is optional. To save on AI-related costs, you can remove it "
 "from all providers entirely; features then simply skip the OCR step."
 msgstr ""
 
-#: ../ai/provider.rst:209
+#: ../ai/provider.rst:216
 msgid ""
 "When you assign a capability to a provider, Zammad clears that assignment "
 "from whichever provider held it before, so the new assignment takes over "
@@ -1019,65 +1029,65 @@ msgid ""
 "stays unassigned."
 msgstr ""
 
-#: ../ai/provider.rst:216 ../manage/macros.rst:57 ../manage/templates.rst:35
+#: ../ai/provider.rst:223 ../manage/macros.rst:57 ../manage/templates.rst:35
 msgid "Actions"
 msgstr ""
 
-#: ../ai/provider.rst:218
+#: ../ai/provider.rst:225
 #, fuzzy
 msgid "The ︙ menu in the **Action** column offers the following actions:"
 msgstr "Le résultat final ressemblera à ceci:"
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Set as default"
 msgstr ""
 
-#: ../ai/provider.rst:221
+#: ../ai/provider.rst:228
 msgid "Marks the provider as the default provider for AI features."
 msgstr ""
 
-#: ../ai/provider.rst:225
+#: ../ai/provider.rst:232
 msgid "Use for semantic search / Do not use for semantic search"
 msgstr ""
 
-#: ../ai/provider.rst:224
+#: ../ai/provider.rst:231
 msgid ""
 "Assigns the provider to the semantic search capability, or clears that "
 "assignment. Only available for providers that support it."
 msgstr ""
 
-#: ../ai/provider.rst:229
+#: ../ai/provider.rst:236
 msgid "Use for image text recognition / Do not use for image text recognition"
 msgstr ""
 
-#: ../ai/provider.rst:228
+#: ../ai/provider.rst:235
 msgid ""
 "Assigns the provider to the image text recognition capability, or clears "
 "that assignment."
 msgstr ""
 
-#: ../ai/provider.rst:232 ../channels/email/accounts/managing-accounts.rst:50
+#: ../ai/provider.rst:239 ../channels/email/accounts/managing-accounts.rst:50
 #: ../channels/email/accounts/managing-accounts.rst:51
 #: ../manage/calendars.rst:30 ../manage/knowledge-base.rst:147
 #: ../manage/knowledge-base.rst:181
 msgid "Delete"
 msgstr ""
 
-#: ../ai/provider.rst:232
+#: ../ai/provider.rst:239
 msgid "Removes the provider. Not available for the Zammad AI provider on SaaS."
 msgstr ""
 
-#: ../ai/provider.rst:237
+#: ../ai/provider.rst:244
 msgid "Configuring Provider per Feature"
 msgstr ""
 
-#: ../ai/provider.rst:239
+#: ../ai/provider.rst:246
 msgid ""
 "By default, all AI features use the provider marked as the default. For "
 "finer control, you can pick a specific provider for individual features."
 msgstr ""
 
-#: ../ai/provider.rst:242
+#: ../ai/provider.rst:249
 msgid ""
 "Every AI feature settings page shows a ``Provider`` button in the page "
 "header. It opens a modal with a dropdown of all configured providers. Pick a "
@@ -1090,7 +1100,7 @@ msgid ""
 "Screenshot shows the per-feature provider modal with a provider selected"
 msgstr ""
 
-#: ../ai/provider.rst:251
+#: ../ai/provider.rst:258
 msgid ""
 "The choice only affects text generation. Semantic search always goes to the "
 "provider that covers the semantic search capability, and image text "
@@ -1100,51 +1110,51 @@ msgid ""
 "providers you set up on this page."
 msgstr ""
 
-#: ../ai/provider.rst:259
+#: ../ai/provider.rst:266
 #, fuzzy
 msgid "Additional Provider Information"
 msgstr "Bloquer les notifications"
 
-#: ../ai/provider.rst:261
+#: ../ai/provider.rst:268
 msgid ""
 "If you want to know more about Zammad AI or Ollama, read on. Otherwise, head "
 "over to :doc:`feedback-and-logs` or pick any of the AI feature pages from "
 "the menu on the left."
 msgstr ""
 
-#: ../ai/provider.rst:270
+#: ../ai/provider.rst:277
 msgid ""
 "Using Zammad AI as a provider is the easiest way to get started with "
 "Zammad's AI features. It has several key advantages:"
 msgstr ""
 
-#: ../ai/provider.rst:273
+#: ../ai/provider.rst:280
 msgid "You don't have to set up an AI system or its configuration."
 msgstr ""
 
-#: ../ai/provider.rst:274
+#: ../ai/provider.rst:281
 msgid "Hosted in the EU and compliant with GDPR."
 msgstr ""
 
-#: ../ai/provider.rst:275
+#: ../ai/provider.rst:282
 msgid ""
 "No configuration in Zammad for SaaS customers, or just an API key for self-"
 "hosted customers."
 msgstr ""
 
-#: ../ai/provider.rst:277
+#: ../ai/provider.rst:284
 msgid "Requests with sensitive information aren't used for training."
 msgstr ""
 
-#: ../ai/provider.rst:278
+#: ../ai/provider.rst:285
 msgid "One place to go for support when something isn't working as expected."
 msgstr ""
 
-#: ../ai/provider.rst:290
+#: ../ai/provider.rst:297
 msgid "SaaS Customers"
 msgstr ""
 
-#: ../ai/provider.rst:282
+#: ../ai/provider.rst:289
 msgid ""
 "Using Zammad AI requires a \"V2\" plan. Check your :doc:`subscription "
 "settings </system/subscription>` and consider switching your plan. When a "
@@ -1154,17 +1164,17 @@ msgid ""
 "alerted when few calls remain."
 msgstr ""
 
-#: ../ai/provider.rst:289
+#: ../ai/provider.rst:296
 msgid ""
 "On SaaS, the Zammad AI provider is provisioned by the platform and you "
 "cannot delete it or change its type."
 msgstr ""
 
-#: ../ai/provider.rst:296
+#: ../ai/provider.rst:303
 msgid "Self-Hosted Customers"
 msgstr ""
 
-#: ../ai/provider.rst:293
+#: ../ai/provider.rst:300
 msgid ""
 "Get in touch with our `sales department <https://zammad.com/en/company/"
 "contact>`_ to obtain a Zammad AI API key and to buy AI calls. After "
@@ -1172,14 +1182,14 @@ msgid ""
 "key."
 msgstr ""
 
-#: ../ai/provider.rst:301
+#: ../ai/provider.rst:308
 msgid ""
 "`Ollama <https://ollama.com/>`_ lets you run your own AI server on a machine "
 "you control, so your data is not transferred to a third party. This approach "
 "only makes sense if you have a powerful GPU in your system!"
 msgstr ""
 
-#: ../ai/provider.rst:305
+#: ../ai/provider.rst:312
 msgid ""
 "If you don't have Ollama running yet, their `documentation <https://"
 "docs.ollama.com/>`_ is a good starting point. Available models are listed in "
@@ -1251,7 +1261,7 @@ msgid ""
 "the summary sidebar tab isn't available."
 msgstr ""
 
-#: ../ai/summary.rst:44 ../manage/groups/settings.rst:117
+#: ../ai/summary.rst:44 ../manage/groups/settings.rst:125
 msgid "Summary Generation"
 msgstr ""
 
@@ -1521,11 +1531,11 @@ msgstr ""
 #: ../channels/email/accounts/secondary-addresses.rst:45
 #: ../channels/email/filters.rst:96
 #: ../channels/email/accounts/secondary-addresses.rst:46
-#: ../manage/groups/settings.rst:121 ../manage/macros.rst:66
+#: ../manage/groups/settings.rst:129 ../manage/macros.rst:66
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:241 ../manage/roles/permissions.rst:311
-#: ../manage/scheduler.rst:162 ../manage/webhook/add.rst:129
+#: ../manage/scheduler.rst:165 ../manage/webhook/add.rst:129
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -1547,10 +1557,10 @@ msgid ""
 msgstr ""
 
 #: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
-#: ../channels/form.rst:36 ../manage/groups/settings.rst:142
+#: ../channels/form.rst:36 ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
-#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:165
+#: ../manage/roles/index.rst:94 ../manage/scheduler.rst:168
 #: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
@@ -2081,7 +2091,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:153
 #: ../channels/email/accounts/account-setup.rst:248
 #: ../manage/webhook/add.rst:52 ../settings/security/third-party/saml.rst:140
-#: ../system/integrations/i-doit.rst:66
+#: ../system/integrations/i-doit.rst:54
 #, fuzzy
 msgid "SSL verification"
 msgstr "Bloquer les notifications"
@@ -3263,7 +3273,7 @@ msgstr ""
 #: ../channels/email/filters.rst:163 ../channels/email/filters.rst:177
 #: ../manage/report-profiles.rst:62 ../misc/variables/article.rst:1
 #: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
-#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:117
+#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr ""
@@ -4982,7 +4992,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/form.rst:170 ../manage/report-profiles.rst:50
-#: ../manage/scheduler.rst:112 ../manage/slas.rst:64
+#: ../manage/scheduler.rst:115 ../manage/slas.rst:64
 #: ../system/objects/types.rst:274
 msgid "Preview"
 msgstr ""
@@ -8896,30 +8906,41 @@ msgstr ""
 msgid "Zammad supports 10 hierarchy levels for groups as a maximum."
 msgstr ""
 
-#: ../manage/groups/settings.rst:35
+#: ../manage/groups/settings.rst:43
 #, fuzzy
 msgid "Assignment timeout"
 msgstr "Ticket > Groupe > Délai d'attente d'affectation"
 
 #: ../manage/groups/settings.rst:33
 msgid ""
-"The time in minutes after which the ticket's ownership will revert back to "
-"*unassigned* after the assigned agent hasn't worked on the ticket. This "
-"timeout does *not* take any working hours in account."
+"The time in minutes after which Zammad unassigns the ticket again, so it "
+"shows up as *unassigned*. Leave the field empty or enter ``0`` to disable "
+"the timeout."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:37
+msgid ""
+"The countdown starts when a ticket in state *new* or *open* is assigned to "
+"an agent. It restarts whenever the owner or the group changes, the state "
+"changes to *new* or *open* or the agent sends a public reply. Editing other "
+"ticket attributes and adding internal notes does not count as working on the "
+"ticket. Tickets in a pending or closed state are not unassigned. Zammad runs "
+"the unassignment check every 10 minutes, so a ticket can stay assigned up to "
+"10 minutes longer than configured. Working hours are not taken into account."
+msgstr ""
+
+#: ../manage/groups/settings.rst:63
 #, fuzzy
 msgid "Follow-up possible"
 msgstr "Billet > Groupe > Suivi possible"
 
-#: ../manage/groups/settings.rst:38
+#: ../manage/groups/settings.rst:46
 msgid ""
 "This option allows you to decide how Zammad should react if a customer "
 "replies to a closed ticket (no matter if by e.g. email or UI)."
 msgstr ""
 
-#: ../manage/groups/settings.rst:42 ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
 #: ../misc/object-conditions/basics.rst:121
 #: ../misc/object-conditions/basics.rst:136
 #: ../misc/object-conditions/basics.rst:158
@@ -8949,56 +8970,56 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
-#: ../manage/groups/settings.rst:42
+#: ../manage/groups/settings.rst:50
 msgid "The ticket will be reopened. This is the default value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:46
+#: ../manage/groups/settings.rst:54
 msgid "do not reopen Ticket but create new Ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:45
+#: ../manage/groups/settings.rst:53
 msgid ""
 "The ticket will remain closed and Zammad will create a new ticket instead. "
 "The new ticket contains the customers reply only."
 msgstr ""
 
-#: ../manage/groups/settings.rst:55
+#: ../manage/groups/settings.rst:63
 msgid "do not reopen ticket after certain time but create new ticket"
 msgstr ""
 
-#: ../manage/groups/settings.rst:49
+#: ../manage/groups/settings.rst:57
 msgid ""
 "The ticket can be reopened unless the specified number of days *after last "
 "ticket closure* has been exceeded. If the time limit is exceeded, Zammad "
 "will create a new ticket instead of reopening."
 msgstr ""
 
-#: ../manage/groups/settings.rst:53
+#: ../manage/groups/settings.rst:61
 msgid ""
 "Choosing this option will provide the option *Reopening time in days* which "
 "requires you to provide the number of days you want Zammad to wait until it "
 "creates new tickets."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "Assign follow-ups"
 msgstr ""
 
-#: ../manage/groups/settings.rst:58
+#: ../manage/groups/settings.rst:66
 msgid ""
 "This setting allows you to decide if, upon a reopen of a ticket, the last "
 "assigned owner should stay assigned or if Zammad should reset the owner to "
 "nobody."
 msgstr ""
 
-#: ../manage/groups/settings.rst:63
+#: ../manage/groups/settings.rst:71
 msgid ""
 "The ticket will remain with the last agent who owned it. This is the default "
 "value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:66 ../misc/object-conditions/basics.rst:122
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
 #: ../misc/object-conditions/basics.rst:137
 #: ../misc/object-conditions/basics.rst:159
 #: ../misc/object-conditions/basics.rst:534
@@ -9021,115 +9042,115 @@ msgstr ""
 msgid "no"
 msgstr ""
 
-#: ../manage/groups/settings.rst:66
+#: ../manage/groups/settings.rst:74
 msgid "The owner assignment of the ticket will be removed."
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "Sending Email Address"
 msgstr ""
 
-#: ../manage/groups/settings.rst:69
+#: ../manage/groups/settings.rst:77
 msgid ""
 "Select which sender's email address Zammad will use outbound for replying on "
 "a ticket in this group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:72
+#: ../manage/groups/settings.rst:80
 msgid "**You don't have an email address configured yet?**"
 msgstr ""
 
-#: ../manage/groups/settings.rst:74
+#: ../manage/groups/settings.rst:82
 msgid "Please configure an email based channel before here"
 msgstr ""
 
-#: ../manage/groups/settings.rst:76
+#: ../manage/groups/settings.rst:84
 msgid ":doc:`Channels → Email </channels/email/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:77
+#: ../manage/groups/settings.rst:85
 #, fuzzy
 msgid ":doc:`Channels → Microsoft 365 IMAP </channels/microsoft365/index>`"
 msgstr "Billet > Prganisation > Organisation partagée"
 
-#: ../manage/groups/settings.rst:78
+#: ../manage/groups/settings.rst:86
 #, fuzzy
 msgid ""
 ":doc:`Channels → Microsoft 365 Graph </channels/microsoft365-graph/index>`"
 msgstr "Billet > Prganisation > Organisation partagée"
 
-#: ../manage/groups/settings.rst:79
+#: ../manage/groups/settings.rst:87
 msgid ":doc:`Channels → Google </channels/google/index>`"
 msgstr ""
 
-#: ../manage/groups/settings.rst:81
+#: ../manage/groups/settings.rst:89
 msgid "and come back afterwards."
 msgstr ""
 
-#: ../manage/groups/settings.rst:86
+#: ../manage/groups/settings.rst:94
 msgid "Signature"
 msgstr ""
 
-#: ../manage/groups/settings.rst:84
+#: ../manage/groups/settings.rst:92
 msgid ""
 "Choose which :doc:`signature </channels/email/signatures>` to use when "
 "replying to tickets in this group. Leaving this option unset will send "
 "emails without any signature."
 msgstr ""
 
-#: ../manage/groups/settings.rst:94
+#: ../manage/groups/settings.rst:102
 msgid "Shared Drafts"
 msgstr ""
 
-#: ../manage/groups/settings.rst:89
+#: ../manage/groups/settings.rst:97
 msgid ""
 "Shared drafts allows your agents to share ticket drafts (for new and "
 "existing tickets) with their colleagues. By default this setting is enabled, "
 "disable it if you don't want your agents to use this function."
 msgstr ""
 
-#: ../manage/groups/settings.rst:93
+#: ../manage/groups/settings.rst:101
 msgid ""
 "Learn more about shared drafts :user-docs:`in our user documentation </"
 "extras/shared-drafts.html>`."
 msgstr ""
 
-#: ../manage/groups/settings.rst:97
+#: ../manage/groups/settings.rst:105
 msgid ""
 "Allows you to override the :doc:`AI ticket summary </ai/summary>` "
 "configuration for this group. Use one of the following values:"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Global Default"
 msgstr ""
 
-#: ../manage/groups/settings.rst:101
+#: ../manage/groups/settings.rst:109
 msgid "Use the value configured in *AI > Ticket Summary*."
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "On Ticket Detail Opening"
 msgstr ""
 
-#: ../manage/groups/settings.rst:104
+#: ../manage/groups/settings.rst:112
 msgid "Always trigger summary generation when an agent opens the ticket."
 msgstr ""
 
-#: ../manage/groups/settings.rst:108
+#: ../manage/groups/settings.rst:116
 msgid "On Ticket Summary Sidebar Activation"
 msgstr ""
 
-#: ../manage/groups/settings.rst:107
+#: ../manage/groups/settings.rst:115
 msgid ""
 "Trigger summary generation only when the agent opens the summary sidebar tab."
 msgstr ""
 
-#: ../manage/groups/settings.rst:110
+#: ../manage/groups/settings.rst:118
 msgid "Default setting: ``Global Default``."
 msgstr ""
 
-#: ../manage/groups/settings.rst:114
+#: ../manage/groups/settings.rst:122
 msgid ""
 "In addition to this group-level setting, you can also use :doc:`object "
 "conditions </misc/object-conditions/basics>` in the :doc:`AI ticket summary "
@@ -9137,13 +9158,13 @@ msgid ""
 "have the summary generated."
 msgstr ""
 
-#: ../manage/groups/settings.rst:120
+#: ../manage/groups/settings.rst:128
 msgid ""
 "An internal note about the group that is only visible to people who can "
 "access the group management area."
 msgstr ""
 
-#: ../manage/groups/settings.rst:124
+#: ../manage/groups/settings.rst:132
 msgid ""
 "Don't need the group anymore or want to restrict the selection of this "
 "group? If you can't or don't want to recycle (rename) the group, you can "
@@ -9152,20 +9173,20 @@ msgid ""
 "existing tickets in an inactive group."
 msgstr ""
 
-#: ../manage/groups/settings.rst:132
+#: ../manage/groups/settings.rst:140
 msgid ""
 "Want to handle tickets from an inactive group, which are updated by "
 "customers?"
 msgstr ""
 
-#: ../manage/groups/settings.rst:135
+#: ../manage/groups/settings.rst:143
 msgid ""
 "You could e.g. create a trigger which moves them to another group when they "
 "got updated. Create this trigger before deactivating the group so it is "
 "selectable in the trigger configuration."
 msgstr ""
 
-#: ../manage/groups/settings.rst:141
+#: ../manage/groups/settings.rst:149
 msgid ""
 "Please keep in mind that you still can route tickets into these groups. This "
 "is potentially dangerous, make sure the group is no longer part of email "
@@ -10519,7 +10540,8 @@ msgstr ""
 
 #: ../manage/public-links.rst:85 ../misc/composer.rst:65
 #: ../settings/security/base.rst:13 ../settings/security/base.rst:39
-#: ../settings/security/base.rst:66 ../settings/security/password.rst:66
+#: ../settings/security/base.rst:66 ../settings/security/password.rst:51
+#: ../settings/security/password.rst:66
 msgid "Default: ``yes``"
 msgstr ""
 
@@ -10916,7 +10938,7 @@ msgid ""
 "generic>`."
 msgstr ""
 
-#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:95
+#: ../manage/roles/permissions.rst:28 ../settings/security/base.rst:141
 msgid "``ticket.agent``"
 msgstr ""
 
@@ -11858,7 +11880,7 @@ msgid ""
 "supervisors and limit the access via :doc:`/manage/report-profiles` first."
 msgstr ""
 
-#: ../manage/roles/permissions.rst:330 ../settings/security/base.rst:96
+#: ../manage/roles/permissions.rst:330 ../settings/security/base.rst:142
 msgid "``ticket.customer``"
 msgstr ""
 
@@ -11930,11 +11952,14 @@ msgid ""
 "Create a new scheduler job by clicking the ``New Scheduler`` button in the "
 "top right corner. This opens a dialog where you can define your scheduler "
 "job. To edit an existing scheduler, simply click on the row and the dialog "
-"gets opened again. The ︙ action menu holds the options to clone or delete "
-"the scheduler job."
+"gets opened again. The ︙ action menu holds the options to run, clone or "
+"delete the scheduler job. **Run now** executes the job immediately, "
+"regardless of its execution time, and processes all objects matching its "
+"conditions. Zammad asks for confirmation before the run starts, and the "
+"action is not available while a run is in progress."
 msgstr ""
 
-#: ../manage/scheduler.rst:37
+#: ../manage/scheduler.rst:40
 msgid ""
 "After creating at least one scheduler job, you can find a table in the main "
 "area. There you can see additional information like how many objects were "
@@ -11945,21 +11970,21 @@ msgstr ""
 msgid "Screenshot shows Zammad's scheduler management"
 msgstr ""
 
-#: ../manage/scheduler.rst:47
+#: ../manage/scheduler.rst:50
 msgid "Scheduler Job Structure"
 msgstr ""
 
-#: ../manage/scheduler.rst:49
+#: ../manage/scheduler.rst:52
 msgid ""
 "Read on for details about the main parts of a scheduler job. A description "
 "of all available fields follows in the :ref:`scheduler-job-details` section."
 msgstr ""
 
-#: ../manage/scheduler.rst:60
+#: ../manage/scheduler.rst:63
 msgid "Execution Time"
 msgstr ""
 
-#: ../manage/scheduler.rst:53
+#: ../manage/scheduler.rst:56
 msgid ""
 "Define time(s) and day(s), when the scheduler job is supposed to run. Simply "
 "click the day and time table entries to select and deselect items. You can "
@@ -11970,11 +11995,11 @@ msgstr ""
 msgid "Screenshot shows date and time selection in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:71
+#: ../manage/scheduler.rst:74
 msgid "Define Object Condition"
 msgstr ""
 
-#: ../manage/scheduler.rst:63
+#: ../manage/scheduler.rst:66
 msgid ""
 "Define a condition to specify the affected objects you want to apply changes "
 "or perform an action. If you're not familiar with conditions in Zammad, you "
@@ -11987,11 +12012,11 @@ msgid ""
 "Screenshot shows object condition definition in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:81
+#: ../manage/scheduler.rst:84
 msgid "Define Action"
 msgstr ""
 
-#: ../manage/scheduler.rst:74
+#: ../manage/scheduler.rst:77
 msgid ""
 "In this area, you define which changes or actions should get applied to the "
 "affected objects. Depending on the selected object context, the available "
@@ -12002,25 +12027,25 @@ msgstr ""
 msgid "Screenshot shows action selection in scheduler job configuration"
 msgstr ""
 
-#: ../manage/scheduler.rst:86
+#: ../manage/scheduler.rst:89
 msgid "Scheduler Job Details"
 msgstr ""
 
-#: ../manage/scheduler.rst:89
+#: ../manage/scheduler.rst:92
 msgid "Choose a name for the scheduler."
 msgstr ""
 
-#: ../manage/scheduler.rst:93
+#: ../manage/scheduler.rst:96
 msgid "When should the job run?"
 msgstr ""
 
-#: ../manage/scheduler.rst:92
+#: ../manage/scheduler.rst:95
 msgid ""
 "Choose the points in time when the scheduler should run. It depends on the "
 "configured :doc:`timezone in Zammad </settings/branding>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:97 ../system/core-workflows/how-do-they-work.rst:7
+#: ../manage/scheduler.rst:100 ../system/core-workflows/how-do-they-work.rst:7
 #: ../system/core-workflows/learn-by-example.rst:39
 #: ../system/core-workflows/learn-by-example.rst:94
 #: ../system/core-workflows/learn-by-example.rst:142
@@ -12029,41 +12054,41 @@ msgstr ""
 msgid "Object"
 msgstr ""
 
-#: ../manage/scheduler.rst:96
+#: ../manage/scheduler.rst:99
 msgid ""
 "Choose in which object context the scheduler should be executed. Possible "
 "objects are: **Organization**, **Ticket** and **User**."
 msgstr ""
 
-#: ../manage/scheduler.rst:103
+#: ../manage/scheduler.rst:106
 msgid "Conditions for affected objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:100
+#: ../manage/scheduler.rst:103
 msgid ""
 "Determine the object attributes to select the objects on which the actions "
 "will be applied."
 msgstr ""
 
-#: ../manage/scheduler.rst:106
+#: ../manage/scheduler.rst:109
 msgid ""
 "This list previews some objects that your conditions are matching and shows "
 "a total of how many objects are being matched. Use this to double-check the "
 "entered conditions."
 msgstr ""
 
-#: ../manage/scheduler.rst:110
+#: ../manage/scheduler.rst:113
 msgid ""
 "Please be aware that the preview and displayed number is just based on the "
 "currently selected condition. It doesn't necessarily represent the objects "
 "for execution at the defined time."
 msgstr ""
 
-#: ../manage/scheduler.rst:135
+#: ../manage/scheduler.rst:138
 msgid "Execute changes on objects"
 msgstr ""
 
-#: ../manage/scheduler.rst:115
+#: ../manage/scheduler.rst:118
 msgid ""
 "Determine the changes to be made to the object. The possible changes depend "
 "on the selected object context. Be aware that a related object context may "
@@ -12071,66 +12096,66 @@ msgid ""
 "scheduler)."
 msgstr ""
 
-#: ../manage/scheduler.rst:120
+#: ../manage/scheduler.rst:123
 msgid ""
 "You can even trigger an :doc:`AI agent </ai/ai-agents>` run using scheduler "
 "jobs. Ticket objects additionally offer to add a checklist from "
 "a :doc:`checklist template </manage/checklist>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:126
+#: ../manage/scheduler.rst:129
 msgid ""
 "🔥 Schedulers with *Action: Delete immediately* and *Action: Add a data "
 "privacy deletion task* are dangerous and should be used with care! If "
 "executed, the objects are deleted and no rollback is possible."
 msgstr ""
 
-#: ../manage/scheduler.rst:130
+#: ../manage/scheduler.rst:133
 msgid ""
 "**Delete immediately** will delete the ticket at the runtime of the job "
 "*without any hint* in the UI."
 msgstr ""
 
-#: ../manage/scheduler.rst:133
+#: ../manage/scheduler.rst:136
 msgid ""
 "**Add a data privacy deletion task** will create a data privacy deletion "
 "task for the object at the runtime of the job. That means it is visible in "
 "Zammad's :doc:`data privacy panel </system/data-privacy>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:139
+#: ../manage/scheduler.rst:142
 #, fuzzy
 msgid "Disable notifications"
 msgstr "Bloquer les notifications"
 
-#: ../manage/scheduler.rst:138
+#: ../manage/scheduler.rst:141
 msgid ""
 "By default, actions triggered by schedulers won't send notifications. You "
 "can override this here by setting this to *no*."
 msgstr ""
 
-#: ../manage/scheduler.rst:148 ../settings/branding.rst:29
+#: ../manage/scheduler.rst:151 ../settings/branding.rst:29
 msgid "Locale"
 msgstr ""
 
-#: ../manage/scheduler.rst:142 ../manage/scheduler.rst:151
+#: ../manage/scheduler.rst:145 ../manage/scheduler.rst:154
 msgid ""
 "This can be activated with the switch labeled \"Localization of execution "
 "changes\"."
 msgstr ""
 
-#: ../manage/scheduler.rst:145
+#: ../manage/scheduler.rst:148
 msgid ""
 "Set a desired language, in which the output of variables is translated into "
 "by using the ``t`` function. For more information, please have a look at the "
 "explanation in the :ref:`variables section <variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:157 ../settings/branding.rst:45
+#: ../manage/scheduler.rst:160 ../settings/branding.rst:45
 msgid "Timezone"
 msgstr ""
 
-#: ../manage/scheduler.rst:154
+#: ../manage/scheduler.rst:157
 msgid ""
 "Similar as for the \"Locale\" setting, you can define a time zone, which is "
 "applied to the output of time stamp variables. For more information, please "
@@ -12138,14 +12163,14 @@ msgid ""
 "<variable_localization>`."
 msgstr ""
 
-#: ../manage/scheduler.rst:160
+#: ../manage/scheduler.rst:163
 msgid ""
 "You can use the note field to describe the purpose of the scheduler. This is "
 "only visible to other admins when they are editing the scheduler. It is "
 "*not* a way to add notes to objects."
 msgstr ""
 
-#: ../manage/scheduler.rst:165
+#: ../manage/scheduler.rst:168
 #, fuzzy
 msgid "With this setting you can enable/disable the scheduler."
 msgstr ""
@@ -14213,7 +14238,7 @@ msgid "This name will be displayed within trigger and scheduler selections."
 msgstr ""
 
 #: ../manage/webhook/add.rst:42 ../system/integrations/cti/placetel.rst:44
-#: ../system/integrations/i-doit.rst:46
+#: ../system/integrations/i-doit.rst:39
 msgid "Endpoint"
 msgstr ""
 
@@ -16012,7 +16037,7 @@ msgid ""
 msgstr ""
 
 #: ../misc/composer.rst:35 ../misc/composer.rst:47 ../misc/composer.rst:57
-#: ../settings/security/password.rst:51 ../settings/security/password.rst:74
+#: ../settings/security/base.rst:109 ../settings/security/password.rst:74
 #: ../settings/ticket.rst:138
 #, fuzzy
 msgid "Default: ``no``"
@@ -16473,7 +16498,7 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:130
 #: ../system/integrations/checkmk/api-reference.rst:138
-#: ../system/integrations/checkmk/api-reference.rst:172
+#: ../system/integrations/checkmk/api-reference.rst:173
 msgid "owner"
 msgstr ""
 
@@ -17808,6 +17833,211 @@ msgstr ""
 msgid ""
 "Now, this file will be used instead of the original when sending "
 "notification emails in German."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:2
+msgid "Unprocessable Emails"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:4
+msgid ""
+"Zammad turns incoming emails into tickets. When an email cannot be processed "
+"at all, Zammad does not drop it. It creates a ticket titled ``Unprocessable "
+"email`` instead, so that the request stays visible and an agent can pick it "
+"up."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:9
+msgid ""
+"Such a ticket carries the complete email as it arrived, plus a log of what "
+"went wrong. That is what makes the ticket workable although Zammad could not "
+"read the email."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:14
+#, fuzzy
+#| msgid "Ticket"
+msgid "Error Tickets"
+msgstr "Billet"
+
+#: ../misc/unprocessable-emails.rst:16
+msgid ""
+"Zammad takes the title from the default language at the time the ticket is "
+"created, so changing the default language later does not rename tickets that "
+"already exist."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:20
+msgid ""
+"The ticket starts in the state that is set as the default for new tickets "
+"and is assigned to the group of the email channel that fetched the mail. If "
+"that channel has no group, Zammad uses the group that owns the recipient "
+"address of the email, and falls back to the first active group."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:25
+msgid ""
+"The ticket carries a single internal note of the system account with two "
+"attachments:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "``unprocessable_email.eml``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:29
+msgid "The raw email as it arrived."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:33
+msgid "``processing_log.txt``"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:32
+msgid ""
+"When processing failed and what Zammad reported about the failure. Comparing "
+"it with the raw email shows whether the email or Zammad is at fault."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:35
+msgid ""
+"The note itself is not rendered. The conversation shows a warning instead, "
+"stating that the email could not be processed. The warning also offers the "
+"``Download raw email`` and ``Download processing log`` buttons, which "
+"download exactly those two attachments."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:41
+msgid "Common Reasons"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:43
+msgid ""
+"Zammad creates an error ticket whenever processing fails. The usual causes "
+"are:"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:47
+msgid "**Unreadable message**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:46
+msgid ""
+"The email has no header field Zammad can read. This catches input that is "
+"not an email at all, for example plain text."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:51
+msgid "**Processing exceeds the time limit**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:50
+msgid ""
+"Zammad stops processing a single email after three minutes. Big or unusual "
+"messages can exceed that."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:56
+msgid "**Unexpected processing error**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:54
+msgid ""
+"Anything else that fails while Zammad reads the email. The processing log "
+"names what Zammad reported, which is what to hand to Zammad support when the "
+"email itself is fine."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:59
+msgid "Email Without a Usable Sender"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:61
+msgid "A broken sender does not produce an error ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:67
+msgid "**Malformed sender address**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:64
+msgid ""
+"Zammad creates the customer from the address it can read: the address "
+"becomes the customer's login, and the customer gets no email address. "
+"Nothing is sent to an address Zammad could not read, and later emails from "
+"the same sender land on that same customer."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:71
+msgid "**No sender at all**"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:70
+msgid ""
+"The ticket is created for the system account. It has no customer, and the "
+"customer column of an overview shows ``-`` instead of a name."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:74
+msgid "Handling an Error Ticket"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:76
+msgid "Read the raw email to see who wrote and what the request was."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:77
+msgid ""
+"Use **Change customer** to attach the ticket to the right customer, also "
+"when it has none yet, and continue working it like any other ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:79
+msgid ""
+"If the email makes no sense at all, read the processing log, then close or "
+"delete the ticket."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:81
+msgid ""
+"Postmaster filters only run on email that Zammad could process, so a sender "
+"whose mail keeps failing cannot be caught by them. Block such a sender in "
+"the mailbox itself."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:86
+msgid "Reprocessing a Repaired Email"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:88
+msgid ""
+"Zammad has no way to reprocess an error ticket. The rake tasks for failed "
+"emails only work on records from before 7.3, and an error ticket carries no "
+"such record."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:92
+msgid ""
+"A repaired copy can still become a ticket: download the raw email, fix what "
+"made it unreadable, and feed the file back into Zammad with the console "
+"command from the :doc:`/channels/email/advanced/fetchmail` page. Zammad "
+"processes it like a mail that arrives in the mailbox, which means a copy "
+"that is still broken creates another error ticket. The first one stays "
+"behind, to be closed, merged or deleted."
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:100 ../system/monitoring.rst:2
+msgid "Monitoring"
+msgstr ""
+
+#: ../misc/unprocessable-emails.rst:102
+msgid ""
+"Unprocessable emails no longer appear in the monitoring. Zammad recorded "
+"them as failed emails and reported their count until 7.3. Records from "
+"before the update survive and keep being reported until they are removed. "
+"The :docs:`Administration via Console </admin/console/other-useful-"
+"commands.html>` page describes how to reprocess such a record, which turns "
+"it into a ticket."
 msgstr ""
 
 #: ../misc/variables.rst:4
@@ -20514,84 +20744,145 @@ msgid ""
 "To help administrators to overcome login issues, Zammad automatically offers "
 "a password request for administrator users as you can see in the screenshot "
 "above. This allows you to adjust third-party applications, even if the login "
-"doesn't work."
+"doesn't work. Open ``https://<your-zammad>/#admin_password_auth`` directly, "
+"or use the **Request the password login here** link on the login screen. "
+"After entering your username or email address, Zammad sends a one-time login "
+"link to your email address, valid for one day. Opening the link shows the "
+"password login form, also when :ref:`Automatic Third-party Login "
+"<security_automatic_third_party_login>` is active."
 msgstr ""
 
-#: ../settings/security/base.rst:85
+#: ../settings/security/base.rst:91
+msgid "Automatic Third-party Login"
+msgstr ""
+
+#: ../settings/security/base.rst:93
+msgid ""
+"Activates the automatic redirect from the login screen to the sign-in page "
+"of a :doc:`third-party <third-party>` provider. This works with every "
+"provider Zammad offers, SAML, OpenID Connect and OAuth providers included. "
+"Users get sent straight to the provider instead of seeing Zammad's login "
+"screen and continue to the page they originally requested after signing in, "
+"e.g. a ticket link from a notification email."
+msgstr ""
+
+#: ../settings/security/base.rst:100
+msgid ""
+"The redirect takes effect only when **Password Login** is deactivated and "
+"exactly one third-party provider is enabled. Otherwise users sign in through "
+"the login screen as usual. Zammad also holds the redirect back in "
+"maintenance mode so administrators keep their way in. The same happens for "
+"60 seconds when a sign-in attempt returns to Zammad without a session. The "
+"next visit of the login page after that redirects again. With the redirect "
+"in place, the administrator fallback under :ref:`Password Login "
+"<security_password_login>` stays available."
+msgstr ""
+
+#: ../settings/security/base.rst:113
+msgid ""
+"After a logout Zammad does not sign users back in automatically, even when "
+"their provider session is still valid. What happens next depends on the "
+"provider's logout support:"
+msgstr ""
+
+#: ../settings/security/base.rst:120
+msgid "**With logout support**"
+msgstr ""
+
+#: ../settings/security/base.rst:118
+msgid ""
+"Logging out of Zammad also ends the session at the provider (SAML with a "
+"single logout URL, OpenID Connect with an end session endpoint). The next "
+"visit shows the provider's own sign-in page."
+msgstr ""
+
+#: ../settings/security/base.rst:125
+msgid "**Without logout support**"
+msgstr ""
+
+#: ../settings/security/base.rst:123
+msgid ""
+"The session at the provider stays valid. This is the case for all OAuth "
+"providers, e.g. Facebook, LinkedIn, GitHub, GitLab, Microsoft, Google or "
+"Weibo. Zammad then keeps showing its login screen and users sign in again "
+"with a click on the provider's button."
+msgstr ""
+
+#: ../settings/security/base.rst:131
 msgid "Session Timeout"
 msgstr ""
 
-#: ../settings/security/base.rst:87
+#: ../settings/security/base.rst:133
 msgid ""
 "All settings below by default are set to ``4 weeks``. Session Timeout "
 "defines the life time of a users session. As soon as it's reached, Zammad "
 "will automatically log off the session in question."
 msgstr ""
 
-#: ../settings/security/base.rst:92
+#: ../settings/security/base.rst:138
 msgid ""
 "Zammad takes the highest value assigned for the user based on the "
 "permissions."
 msgstr ""
 
-#: ../settings/security/base.rst:94
+#: ../settings/security/base.rst:140
 msgid "``admin``"
 msgstr ""
 
-#: ../settings/security/base.rst:97
+#: ../settings/security/base.rst:143
 msgid "``default`` (fallback if user doesn't have above permissions set)"
 msgstr ""
 
-#: ../settings/security/base.rst:99
+#: ../settings/security/base.rst:145
 msgid ""
 "All settings act independently from each other allowing you to disable the "
 "timeouts for e.g. admins, but not agents."
 msgstr ""
 
-#: ../settings/security/base.rst:103
+#: ../settings/security/base.rst:149
 msgid "Let's suppose you configured the following session timeouts:"
 msgstr ""
 
-#: ../settings/security/base.rst:105
+#: ../settings/security/base.rst:151
 #, fuzzy
 msgid "Default: 3 weeks"
 msgstr "Somme de contrôle (default: ``no``)"
 
-#: ../settings/security/base.rst:106
+#: ../settings/security/base.rst:152
 msgid "Admin: 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:107
+#: ../settings/security/base.rst:153
 #, fuzzy
 msgid "Ticket.agent: 4 weeks"
 msgstr "Billet"
 
-#: ../settings/security/base.rst:108
+#: ../settings/security/base.rst:154
 #, fuzzy
 msgid "Ticket.customer: 1 week"
 msgstr "L'agent sera défini comme client du billet."
 
-#: ../settings/security/base.rst:110
+#: ../settings/security/base.rst:156
 #, fuzzy
 msgid "This results in the following situations:"
 msgstr "Le résultat final ressemblera à ceci:"
 
-#: ../settings/security/base.rst:112
+#: ../settings/security/base.rst:158
 msgid "A user with ``admin`` permission will have a timeout of 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:113
+#: ../settings/security/base.rst:159
 msgid ""
 "A user with ``admin`` and ``ticket.agent`` permissions will have a timeout "
 "of 2 weeks"
 msgstr ""
 
-#: ../settings/security/base.rst:115
+#: ../settings/security/base.rst:161
 msgid ""
 "A user with ``ticket.customer`` permission will have a timeout of 1 week"
 msgstr ""
 
-#: ../settings/security/base.rst:117
+#: ../settings/security/base.rst:163
 msgid ""
 "A user with neither ``admin``, ``ticket.agent`` nor ``ticket.customer`` "
 "permissions will have a timeout of 3 weeks"
@@ -20646,9 +20937,9 @@ msgid ""
 "unlock their account."
 msgstr ""
 
-#: ../settings/security/password.rst:31
+#: ../settings/security/password.rst:31 ../settings/ticket.rst:154
 #, fuzzy
-msgid "Default: ``10``"
+msgid "Default: ``5``"
 msgstr "Somme de contrôle (default: ``no``)"
 
 #: ../settings/security/password.rst:35
@@ -20694,7 +20985,7 @@ msgstr ""
 
 #: ../settings/security/password.rst:59
 #, fuzzy
-msgid "Default: ``6``"
+msgid "Default: ``10``"
 msgstr "Somme de contrôle (default: ``no``)"
 
 #: ../settings/security/password.rst:62
@@ -23877,11 +24168,6 @@ msgstr ""
 "Cette option n'est disponible que si le format du numéro de billet est réglé "
 "sur ``Increment``!"
 
-#: ../settings/ticket.rst:154
-#, fuzzy
-msgid "Default: ``5``"
-msgstr "Somme de contrôle (default: ``no``)"
-
 #: ../settings/ticket.rst:159
 msgid "Auto-Assignment"
 msgstr "Affectation automatique"
@@ -24137,74 +24423,76 @@ msgid ""
 "Zammad comes with a REST API that allows external applications and scripts "
 "to read and write data of your Zammad instance without using the web "
 "interface. The API endpoints themselves are always available, the settings "
-"on this tab only decide how clients authenticate. The tab *System > API* has "
-"two jobs: it decides which authentication methods Zammad accepts for API "
-"requests and it manages the applications that use Zammad as an OAuth "
-"provider. The ``admin.api`` permission is required to access the tab."
+"of this page only decide how clients authenticate and whether the MCP server "
+"answers. The ``admin.api`` permission is required to access the page."
 msgstr ""
 
-#: ../system/api.rst:12
+#: ../system/api.rst:10
 msgid ""
 "The endpoints and the data they expect are not described on this page. You "
 "can find them in the :docs:`REST API documentation </api/intro.html>` of our "
 "system documentation."
 msgstr ""
 
-#: ../system/api.rst:17
-msgid "Authentication Methods"
-msgstr ""
-
-#: ../system/api.rst:19
+#: ../system/api.rst:14
 msgid ""
-"Zammad supports three ways for a client to authenticate against the API. The "
-"first two are toggles on this page, the third one comes with the OAuth "
-"applications further down:"
+"Zammad supports three ways for a client to authenticate against the REST "
+"API. This overview only names them, the settings themselves are organized "
+"differently: the first two methods are toggles on the *Token access* tab, "
+"the third one belongs to the OAuth applications on the *OAuth* tab:"
 msgstr ""
 
-#: ../system/api.rst:26
+#: ../system/api.rst:22
 msgid "Personal access token"
 msgstr ""
 
-#: ../system/api.rst:24
+#: ../system/api.rst:20
 msgid ""
 "A token a user creates in their own user profile. It can be limited to "
 "specific permissions and can have an expiration date. This is the "
 "recommended way for API access. Controlled by the **Token Access** toggle."
 msgstr ""
 
-#: ../system/api.rst:31
+#: ../system/api.rst:27
 msgid "Username/email address and password"
 msgstr ""
 
-#: ../system/api.rst:29
+#: ../system/api.rst:25
 msgid ""
 "The credentials are sent as HTTP basic authentication with every request. "
 "Needed for clients that only support basic authentication. Controlled by the "
 "**Password Access** toggle."
 msgstr ""
 
-#: ../system/api.rst:36
+#: ../system/api.rst:32
 msgid "OAuth2 access token"
 msgstr ""
 
-#: ../system/api.rst:34
+#: ../system/api.rst:30
 msgid ""
 "A token an application receives for a user after the user authorized the "
-"application. It is managed with the applications further down on this page. "
-"Unlike the other two methods it has no toggle and cannot be switched off."
+"application. It is managed with the applications on the *OAuth* tab. Unlike "
+"the other two methods it has no toggle and cannot be switched off."
 msgstr ""
 
-#: ../system/api.rst:41
+#: ../system/api.rst:35 ../system/api.rst:44
 msgid "Token Access"
 msgstr ""
 
-#: ../system/api.rst:43
+#: ../system/api.rst:37
+msgid ""
+"The first tab of the page is named *Token access*. It holds the toggles "
+"described in the following three sections: direct authentication of the REST "
+"API and the MCP server."
+msgstr ""
+
+#: ../system/api.rst:46
 msgid ""
 "The **Token Access** toggle enables personal access tokens (HTTP token "
 "authentication). It is active by default."
 msgstr ""
 
-#: ../system/api.rst:46
+#: ../system/api.rst:49
 msgid ""
 "Every user with the ``user_preferences.access_token`` role permission "
 "(:doc:`see the permission list </manage/roles/permissions>`) can create as "
@@ -24215,14 +24503,14 @@ msgid ""
 "header:"
 msgstr ""
 
-#: ../system/api.rst:57
+#: ../system/api.rst:60
 msgid ""
 "The example shown next to the toggle uses the **Fully Qualified Domain "
 "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
 "system/base>`."
 msgstr ""
 
-#: ../system/api.rst:61
+#: ../system/api.rst:64
 msgid ""
 "If you switch the toggle off, all existing personal access tokens stop "
 "working immediately. The **Token Access** entry also disappears from the "
@@ -24230,25 +24518,25 @@ msgid ""
 "are not affected because Zammad handles them separately."
 msgstr ""
 
-#: ../system/api.rst:68
+#: ../system/api.rst:71
 msgid ""
 "Users have to create their own tokens. See the :user-docs:`user "
 "documentation </extras/user-menu-profile-settings.html>` for the user's "
 "point of view."
 msgstr ""
 
-#: ../system/api.rst:73
+#: ../system/api.rst:76
 msgid "Password Access"
 msgstr ""
 
-#: ../system/api.rst:75
+#: ../system/api.rst:78
 msgid ""
 "The **Password Access** toggle allows clients to authenticate with the "
 "username/email address and the password of a user (HTTP basic "
 "authentication). It is active by default."
 msgstr ""
 
-#: ../system/api.rst:83
+#: ../system/api.rst:86
 msgid ""
 "Basic authentication sends the credentials with every single request and it "
 "cannot be combined with two-factor authentication: Zammad rejects such "
@@ -24258,15 +24546,15 @@ msgid ""
 "using :ref:`personal access tokens <system-api-token-access>` instead."
 msgstr ""
 
-#: ../system/api.rst:90
+#: ../system/api.rst:93
 msgid "Switching the toggle off has two consequences:"
 msgstr ""
 
-#: ../system/api.rst:92
+#: ../system/api.rst:95
 msgid "All API requests with basic authentication are rejected."
 msgstr ""
 
-#: ../system/api.rst:93
+#: ../system/api.rst:96
 msgid ""
 "The calendar subscription URLs in user profiles stop working, because "
 "calendar apps authenticate with basic authentication. Affected users get a "
@@ -24274,94 +24562,185 @@ msgid ""
 "administrator."
 msgstr ""
 
-#: ../system/api.rst:99
-#, fuzzy
-msgid "Applications"
-msgstr "Bloquer les notifications"
-
-#: ../system/api.rst:101
-msgid ""
-"The lower part of the page manages OAuth applications. An OAuth application "
-"is any external software that wants to work with your Zammad data on behalf "
-"of a user, e.g. a reporting tool or an integration you develop yourself. "
-"Zammad acts as OAuth provider for it: the user logs into Zammad once and "
-"authorizes the application, which then works with the REST API as that user "
-"and with their permissions."
+#: ../system/api.rst:104
+msgid "MCP Server"
 msgstr ""
 
-#: ../system/api.rst:108
+#: ../system/api.rst:106
+msgid ""
+"Zammad answers the *Model Context Protocol* (MCP) on its own server, next to "
+"the REST API. Through it, an AI client (a chat application or a coding tool, "
+"for example) reads, finds, updates and creates tickets in your Zammad. "
+"Nothing has to be installed or run in addition, the server is part of every "
+"installation."
+msgstr ""
+
+#: ../system/api.rst:112
+msgid ""
+"The **MCP server** toggle enables the server for the whole installation. It "
+"is off by default. While it is off, Zammad refuses every request to the "
+"server, whatever token the request carries."
+msgstr ""
+
+#: ../system/api.rst:116
+msgid ""
+"The clients authenticate with personal access tokens, so the server works "
+"only while :ref:`Token Access <system-api-token-access>` is enabled. A "
+"client can do exactly what the token and its owner may do, nothing more: "
+"every tool requires the ``ticket.agent`` permission. Users without agent "
+"permissions, such as customers, get no tools. See the :user-docs:`user "
+"documentation </extras/mcp-server.html>` for how a user connects a client."
+msgstr ""
+
+#: ../system/api.rst:123
+msgid ""
+"When the toggle is on, the page shows the address of the server and an "
+"example for connecting a client. Both use the **Fully Qualified Domain "
+"Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
+"system/base>`."
+msgstr ""
+
+#: ../system/api.rst:127
+msgid ""
+"Zammad answers only when a request addresses the **Fully Qualified Domain "
+"Name**, the **Alternative fully qualified domain name** or a loopback "
+"address (``localhost``, ``127.0.0.1``, ``::1``). Requests at another address "
+"fail, and browser requests from other origins are refused to protect the "
+"server against DNS rebinding."
+msgstr ""
+
+#: ../system/api.rst:133
+msgid ""
+"Where the client can show it, Zammad asks the user to approve a message "
+"before it reaches a customer. The request shows the complete text, the "
+"recipients and the visibility (a form elicitation, as of MCP revision "
+"2026-07-28), and Zammad sends only once the user accepted there. A declined "
+"approval sends nothing, and the client can then offer to save the text as "
+"the ticket's shared draft."
+msgstr ""
+
+#: ../system/api.rst:139
+msgid ""
+"A client that cannot show the form falls back to its own approval of the "
+"tool call, as a change over the REST API with the same token goes through "
+"without a further approval. For two changes the user's yes in the "
+"conversation stands in for the form: Zammad replaces a shared draft that is "
+"already there and closes a ticket with an incomplete checklist only after "
+"the client asked and the user agreed. Keep the approval of tool calls "
+"enabled in the client, because a client that runs them without a prompt "
+"sends a message without any further question."
+msgstr ""
+
+#: ../system/api.rst:147
+msgid ""
+"The client works with tools for reading and writing tickets, for searching "
+"and for shared drafts and knowledge base answers. The complete list, with "
+"the access of each tool and the limits that apply, is part of the system "
+"documentation: :docs:`MCP tool reference </api/mcp.html>`."
+msgstr ""
+
+#: ../system/api.rst:153
+msgid "OAuth"
+msgstr ""
+
+#: ../system/api.rst:155
+msgid ""
+"The second tab of the page is named *OAuth*. An OAuth application is any "
+"external software that wants to work with your Zammad data on behalf of a "
+"user, e.g. a reporting tool or an integration you develop yourself. Zammad "
+"acts as OAuth provider for it: the user logs into Zammad once and authorizes "
+"the application, which then works with the REST API as that user and with "
+"their permissions."
+msgstr ""
+
+#: ../system/api.rst:162
 msgid ""
 "This is not a login method for Zammad itself. If you want your users to log "
 "into Zammad through an external provider, see :doc:`Third-Party Applications "
 "</settings/security/third-party>`."
 msgstr ""
 
-#: ../system/api.rst:112
+#: ../system/api.rst:167
+#, fuzzy
+msgid "Applications"
+msgstr "Bloquer les notifications"
+
+#: ../system/api.rst:169
 msgid ""
 "Create a new application with the ``New Application`` button. The dialog "
 "asks for the following information:"
 msgstr ""
 
-#: ../system/api.rst:116
+#: ../system/api.rst:173
 msgid ""
 "The name of the application. It is only shown in this list, choose a name "
 "that tells your users what they authorize."
 msgstr ""
 
-#: ../system/api.rst:121
+#: ../system/api.rst:178
 msgid "Callback URL"
 msgstr ""
 
-#: ../system/api.rst:120
+#: ../system/api.rst:177
 msgid ""
 "The URL an application is redirected to after a user authorized it. Enter "
 "one URI per line if the application uses several URLs."
 msgstr ""
 
-#: ../system/api.rst:123
+#: ../system/api.rst:180
 msgid ""
 "The list of existing applications shows the name, the callback URL and the "
 "number of access tokens that were already created for the application. The "
 "**View** and **Token** columns provide direct actions:"
 msgstr ""
 
-#: ../system/api.rst:129
+#: ../system/api.rst:186
 msgid "View"
 msgstr ""
 
-#: ../system/api.rst:128
+#: ../system/api.rst:185
 msgid ""
 "Shows the **AppID** and the **Secret** of the application. An application "
 "needs both values to authenticate at Zammad."
 msgstr ""
 
-#: ../system/api.rst:132
+#: ../system/api.rst:189
 msgid ""
 "Generates an access token for the application which belongs to your own user "
 "account. Zammad displays it in a dialog."
 msgstr ""
 
-#: ../system/api.rst:135
+#: ../system/api.rst:192
 msgid ""
 "Creating an application does not grant it any access. A user still has to "
 "authorize the application once, or you generate an access token with the "
-"**Token** action. The bottom of the page lists the two URLs of your instance "
-"that an application uses during the authorization:"
+"**Token** action."
 msgstr ""
 
-#: ../system/api.rst:140
+#: ../system/api.rst:197
+#, fuzzy
+msgid "Authorization URLs"
+msgstr "``#{ticket.organization.domain}``"
+
+#: ../system/api.rst:199
+msgid ""
+"The bottom of the tab lists the two URLs of your instance that an "
+"application uses during the authorization:"
+msgstr ""
+
+#: ../system/api.rst:202
 msgid ""
 "``<fqdn>/oauth/authorize``: the application sends the user there to request "
 "access for that user (**Requesting the Grant**)."
 msgstr ""
 
-#: ../system/api.rst:142
+#: ../system/api.rst:204
 msgid ""
 "``<fqdn>/oauth/token``: the application requests an access token there "
 "afterwards (**Getting an Access Token**)."
 msgstr ""
 
-#: ../system/api.rst:147
+#: ../system/api.rst:209
 msgid ""
 "The :docs:`REST API documentation </api/intro.html>` explains how a client "
 "sends an OAuth2 access token with an API call."
@@ -24425,7 +24804,7 @@ msgid "System settings and packages"
 msgstr ""
 
 #: ../system/audit-logs.rst:27
-msgid "AI agents and AI text tools"
+msgid "AI providers, AI agents and AI text tools"
 msgstr ""
 
 #: ../system/audit-logs.rst:28
@@ -26488,22 +26867,23 @@ msgid ""
 "If you provide a value that Zammad doesn't understand (*e.g.,* ``-F "
 "\"priority=high\"``), it's not always clear what will happen. In some cases, "
 "a ticket will be created with the default values instead - but in others, it "
-"may not be created at all!"
+"may not be created at all. An unknown ``group`` value is rejected with HTTP "
+"422 and no ticket is created."
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:164
+#: ../system/integrations/checkmk/api-reference.rst:165
 msgid "So what values does Zammad understand, then? Well, it depends..."
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:168
+#: ../system/integrations/checkmk/api-reference.rst:169
 msgid "Use an email address or username:"
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:190
+#: ../system/integrations/checkmk/api-reference.rst:191
 msgid "group & priority"
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:175
+#: ../system/integrations/checkmk/api-reference.rst:176
 msgid "Refer to the dropdown menus in the ticket sidebar:"
 msgstr ""
 
@@ -26511,28 +26891,28 @@ msgstr ""
 msgid "See possible values for certain attributes in the ticket sidebar."
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:187
+#: ../system/integrations/checkmk/api-reference.rst:188
 msgid "🙅 **Ticket state CANNOT be set this way!**"
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:189
+#: ../system/integrations/checkmk/api-reference.rst:190
 msgid ""
 "Why? Because ``-F \"state=...\"`` is already used :ref:`as a Checkmk "
 "parameter <checkmk-parameter-state>`."
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:222
+#: ../system/integrations/checkmk/api-reference.rst:223
 msgid "Everything Else"
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:193
+#: ../system/integrations/checkmk/api-reference.rst:194
 msgid ""
 "To set any other attributes, it helps to know your way around "
 "the :docs:`rails console </admin/console.html>`. Valid values are those that "
 "you can set with a string:"
 msgstr ""
 
-#: ../system/integrations/checkmk/api-reference.rst:218
+#: ../system/integrations/checkmk/api-reference.rst:219
 msgid "These values can then be passed directly to the API:"
 msgstr ""
 
@@ -28108,162 +28488,178 @@ msgstr ""
 #: ../system/integrations/i-doit.rst:4
 msgid ""
 "`i-doit <https://www.i-doit.com/>`_ is an open-source CMDB (configuration "
-"management database) tool which is capable of managing information about "
-"your physical and digital IT infrastructure. If you use tickets to track "
-"issues with your IT components, you may want to connect them with your CMDB. "
-"With Zammad, you can do that in two ways!"
+"management database). It manages information about your physical and digital "
+"IT infrastructure. Linking it to Zammad adds context on both sides: agents "
+"see which infrastructure a ticket is about, and people working in i-doit see "
+"what has been reported about an object."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:11
-msgid "1. Add i-doit Links to Zammad Tickets"
+#: ../system/integrations/i-doit.rst:10
+msgid "The integration has two independent parts, each configured on its own:"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:14 ../system/integrations/i-doit.rst:72
-msgid "What Users See"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:20
-msgid "i-doit integration in Zammad's ticket sidebar"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:20
+#: ../system/integrations/i-doit.rst:12
 msgid ""
-"The i-doit integration will appear under a new 🖨 tab in the ticket sidebar."
+"The ticket sidebar in Zammad shows the i-doit objects linked to a ticket. "
+"You configure this in Zammad's admin settings."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:22
+#: ../system/integrations/i-doit.rst:14
 msgid ""
-"i-doit integration puts a new tab in Zammad's ticket sidebar where you can "
-"add links to existing i-doit devices for easy reference. (See our :user-"
-"docs:`user documentation </extras/i-doit-track-company-property.html>` to "
-"learn how it works in practice)."
+"An object's page in i-doit shows the Zammad tickets linked to it. You "
+"configure this in i-doit."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:29 ../system/integrations/i-doit.rst:85
-msgid "How to Set it Up"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:31
+#: ../system/integrations/i-doit.rst:17
 msgid ""
-"It requires i-doit's `API Add-on <https://www.i-doit.com/i-doit/add-ons/api-"
-"add-on/>`_. Make sure to have it properly set up. Use the following setting:"
+"You can use one part without the other. Zammad stores only the object IDs on "
+"the ticket and reads the object data from i-doit each time the panel is "
+"shown. A renamed object therefore appears under its new name and an object "
+"deleted in i-doit drops off the list. Customers never see the panel, and an "
+"agent needs update access to a ticket to change its links. How agents and i-"
+"doit users work with both parts is described in the :user-docs:`user "
+"documentation </extras/i-doit-track-company-property.html>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:35
-msgid "Active: ``Yes``"
+#: ../system/integrations/i-doit.rst:26
+#, fuzzy
+msgid "Configure Object Linking in Zammad"
+msgstr "Configuration du greffon de clavardage"
+
+#: ../system/integrations/i-doit.rst:28
+msgid ""
+"The settings are under *System > Integrations > i-doit* and require the "
+"``admin.integration`` permission. Use the switch at the top of the page to "
+"enable the panel. Switching it off hides the panel but keeps the links "
+"stored on existing tickets."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:36
-msgid "Enforce authentication by username and password: ``No``"
+#: ../system/integrations/i-doit.rst:None
+msgid "i-doit integration settings in Zammad's admin settings"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:38
 msgid ""
-"To set it up, enable the integration in the Zammad admin settings under "
-"*System > Integrations > i-doit*:"
+"The root URL of your i-doit installation, including the protocol, e.g. "
+"``https://idoit.example.com``. Zammad adds ``/src/jsonrpc.php`` to it."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit settings within the integration pages"
+#: ../system/integrations/i-doit.rst:42
+msgid "API token"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:42
+msgid "The key from i-doit's JSON-RPC API settings."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:46
-msgid "The root URL of your i-doit installation."
+msgid "Client ID"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:55
-msgid "API token"
+#: ../system/integrations/i-doit.rst:45
+msgid ""
+"Zammad stores this value but does not send it to i-doit, so it has no "
+"effect. Leave it empty."
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:49
 msgid ""
-"Found in the i-doit admin area under *Interfaces / external data > JSON-RPC "
-"API > Common Settings*."
+"Decides whether Zammad verifies the certificate of your i-doit installation. "
+"Default value: ``yes``. If you use a custom certificate, add it to Zammad as "
+"described in :doc:`SSL certificates </settings/security/ssl-certificates>`."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:0
-msgid "i-doit administration interface with API configuration"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:59
-msgid "Client ID"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:58
+#: ../system/integrations/i-doit.rst:56
 msgid ""
-"A unique name to identify Zammad within i-doit. Zammad does not require you "
-"to enter a value here, but i-doit might!"
+"Zammad reads the objects through i-doit's JSON-RPC API, which ships as an "
+"add-on and is not part of the i-doit Docker images. If the add-on is "
+"missing, i-doit's API answers ``Api Module is not available.`` and Zammad "
+"cannot read any objects. Activate the API and make sure that it does not "
+"enforce authentication by username and password, so the API key alone is "
+"sufficient. Which objects the key can read is defined by the rights of its "
+"user in i-doit. Zammad itself offers every object type that i-doit returns."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:62
+#: ../system/integrations/i-doit.rst:64
 msgid ""
-"Here you can decide if the certificate of your i-doit system has to be "
-"verified or not. In case you are using custom certificates, please have a "
-"look at :doc:`how to add them to Zammad </settings/security/ssl-"
-"certificates>`."
+"Clicking ``Save`` verifies the connection by requesting i-doit's object "
+"types. If i-doit doesn't answer, Zammad shows the reason instead of saving. "
+"The **Recent Logs** table below the settings lists the requests Zammad sent "
+"to i-doit, which helps to track down a failed connection."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:69
-msgid "2. List / Create Zammad Tickets in i-doit"
+#: ../system/integrations/i-doit.rst:70
+msgid "Configure Ticket Linking in i-doit"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "Zammad integration in i-doit's device view"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:78
+#: ../system/integrations/i-doit.rst:72
 msgid ""
-"i-doit's ticket system integration gives you a way to see all the tickets "
-"for a given device without ever leaving i-doit. (See our :user-docs:`user "
-"documentation </extras/i-doit-track-company-property.html>` to learn how it "
-"works in practice)."
+"i-doit's trouble ticket system integration (TTS) shows the Zammad tickets "
+"that are linked to an object on the object's page, so you can see what has "
+"been reported about it without leaving i-doit. The list holds up to 10 "
+"tickets, and each row links to the ticket in Zammad."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:87
+#: ../system/integrations/i-doit.rst:77
 msgid ""
-"Enable this integration in the i-doit admin settings under *Interfaces / "
-"external data > Trouble Ticket System (TTS) > Configuration*:"
+"In i-doit, the settings are under *Administration > Import and interfaces > "
+"Trouble Ticket System (TTS)*."
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:None
-msgid "i-doit administration interface with TTS configuration"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "TTS-Type"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:96
+#: ../system/integrations/i-doit.rst:81
 msgid "``Zammad``"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:107
-msgid "Username / Password"
+#: ../system/integrations/i-doit.rst:90
+msgid "Username and Password"
 msgstr ""
 
-#: ../system/integrations/i-doit.rst:99
-msgid "Login credentials for a Zammad agent."
+#: ../system/integrations/i-doit.rst:84
+msgid ""
+"Login credentials of a Zammad agent. i-doit searches Zammad's API with this "
+"account, and Zammad returns only the tickets this agent may read. The agent "
+"therefore needs read access to the groups whose tickets should show up on i-"
+"doit objects."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:89
+msgid ""
+"Consider a dedicated agent for this purpose: if the password of the account "
+"changes, you have to update it here."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:93
+msgid "URL incl. protocol"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:93
+msgid "``https://your.zammad.domain``"
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:98
+#, fuzzy
+msgid "TLS-Certificate"
+msgstr "Bloquer les notifications"
+
+#: ../system/integrations/i-doit.rst:96
+msgid ""
+"A certificate file from i-doit's file management that i-doit uses to verify "
+"Zammad's certificate. Leave it empty unless your Zammad installation uses a "
+"certificate that i-doit does not trust."
+msgstr ""
+
+#: ../system/integrations/i-doit.rst:101
+msgid "Request Tracker queues"
 msgstr ""
 
 #: ../system/integrations/i-doit.rst:101
 msgid ""
-"This agent must have **read permission** for all :doc:`groups </manage/"
-"groups/index>` that plan on using the i-doit integration."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:105
-msgid ""
-"You may even wish to create a dedicated agent account just for this "
-"integration (otherwise, if the agent ever changes her password, you will "
-"have to remember to update it here)."
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:109
-msgid "URL incl. protocol"
-msgstr ""
-
-#: ../system/integrations/i-doit.rst:110
-msgid "``https://your.zammad.domain``"
+"Belongs to the Request Tracker integration. i-doit shows the field for every "
+"TTS-Type, so leave it empty."
 msgstr ""
 
 #: ../system/integrations/index.rst:2
@@ -29276,10 +29672,6 @@ msgid ""
 "with reload application ticket"
 msgstr ""
 
-#: ../system/monitoring.rst:2
-msgid "Monitoring"
-msgstr ""
-
 #: ../system/monitoring.rst:4
 msgid ""
 "This function is only available in self hosted instances. For our SaaS "
@@ -29291,27 +29683,18 @@ msgstr ""
 msgid ""
 "On the monitoring page, you can see the current health state of Zammad under "
 "**Current Status** at the bottom. This can be useful if you want to have a "
-"look if everything is up and running. As an example, you could have a look "
-"in the monitoring when you assume that some emails aren't processed from "
-"Zammad."
+"look if everything is up and running. For example, the monitoring reports an "
+"email channel that cannot connect to its mail server, or one that has not "
+"fetched email for more than an hour. Emails that cannot be processed are not "
+"part of it. Zammad creates a ticket titled ``Unprocessable email`` instead, "
+"see :doc:`/misc/unprocessable-emails`."
 msgstr ""
 
-#: ../system/monitoring.rst:17
-msgid "**Can't receive an email and the monitoring response is \"healthy\"?**"
-msgstr ""
-
-#: ../system/monitoring.rst:19
-msgid ""
-"Zammad will just inform you about unprocessable emails. This is not the case "
-"for oversized emails. You can adjust the maximum email size in :doc:`../"
-"channels/email/settings`."
-msgstr ""
-
-#: ../system/monitoring.rst:24
+#: ../system/monitoring.rst:20
 msgid "Monitoring API"
 msgstr ""
 
-#: ../system/monitoring.rst:26
+#: ../system/monitoring.rst:22
 msgid ""
 "Beside the indication in the monitoring page, you can also use an external "
 "monitoring tool to monitor Zammad's health. To request the health of Zammad, "
@@ -29321,22 +29704,22 @@ msgid ""
 "already included."
 msgstr ""
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Current Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:36
+#: ../system/monitoring.rst:32
 msgid "Screenshot showing Token and Health Check"
 msgstr ""
 
-#: ../system/monitoring.rst:38
+#: ../system/monitoring.rst:34
 msgid ""
 "In addition to that, you can reset the auto-generated token to make sure "
 "that already configured monitoring systems won't work anymore. So, please "
 "use this ``Reset`` button only if you know what you do!"
 msgstr ""
 
-#: ../system/monitoring.rst:43
+#: ../system/monitoring.rst:39
 #, fuzzy
 msgid "Example Output"
 msgstr "Exemple"
@@ -29345,7 +29728,7 @@ msgstr "Exemple"
 msgid "No issues found"
 msgstr ""
 
-#: ../system/monitoring.rst:47 ../system/monitoring.rst:64
+#: ../system/monitoring.rst:43 ../system/monitoring.rst:60
 msgid "**Indicator in Zammad**:"
 msgstr ""
 
@@ -29353,7 +29736,7 @@ msgstr ""
 msgid "Screenshot showing monitoring with no issues"
 msgstr ""
 
-#: ../system/monitoring.rst:53 ../system/monitoring.rst:70
+#: ../system/monitoring.rst:49 ../system/monitoring.rst:66
 msgid "**API response**:"
 msgstr ""
 
@@ -31406,6 +31789,10 @@ msgstr ""
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Default: ``6``"
+#~ msgstr "Somme de contrôle (default: ``no``)"
 
 #, fuzzy
 #~ msgid "Translation Services"
