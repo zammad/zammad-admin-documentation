@@ -266,6 +266,16 @@ which describes the backgrounds as well.
 This this Zammad ensures that your email account is capable of sending internal
 and external - once this is verified the setup process is complete! 🎉
 
+.. note:: An email account has to be able to send to external recipients. If
+   your server refuses the test email to the external address, the
+   verification fails. This also applies to servers which answer with
+   "Recipient address rejected" or "Sender address rejected: Domain not
+   found": these replies passed the verification before Zammad 7.4, see the
+   `breaking changes of Zammad 7.4 <https://github.com/zammad/zammad/blob/develop/BREAKING_CHANGES.md#74>`_.
+
+   Only the :ref:`notification channel <email-notification-internal-only>` can
+   be set up with a server which only delivers to internal recipients.
+
 .. include:: /channels/email/accounts/account-setup-group-hint.include.rst
 
 Troubleshooting
