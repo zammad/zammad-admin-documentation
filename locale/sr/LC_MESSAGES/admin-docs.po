@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad Admin Documentation pre-release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-11-12 03:12+0000\n"
+"PO-Revision-Date: 2026-11-19 13:12+0000\n"
 "Last-Translator: Dusan Vuckovic <dv@zammad.com>\n"
 "Language-Team: Serbian <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/sr/>\n"
@@ -447,7 +447,7 @@ msgstr ""
 "одабрати другу опцију. На пример, ако се агент извршава ручно преко макроа, "
 "*Сви чланци* је можда бољи избор."
 
-#: ../ai/ai-agents.rst:197 ../channels/email/filters.rst:103
+#: ../ai/ai-agents.rst:197 ../channels/email/filters.rst:106
 #: ../channels/form.rst:262 ../manage/groups/group-permissions.rst:75
 #: ../manage/macros.rst:75 ../manage/trigger.rst:184
 msgid "Examples"
@@ -873,7 +873,7 @@ msgstr ""
 "Снимак екрана који приказује дијалог за додавање или уређивање провајдера"
 
 #: ../ai/provider.rst:73 ../channels/email/accounts/account-setup.rst:122
-#: ../misc/object-conditions/basics.rst:220 ../system/objects.rst:158
+#: ../misc/object-conditions/basics.rst:238 ../system/objects.rst:158
 msgid "Type"
 msgstr "Врста"
 
@@ -971,7 +971,7 @@ msgstr ""
 
 #: ../ai/provider.rst:82 ../system/api.rst:190
 msgid "Token"
-msgstr "API кључ"
+msgstr "Кључ"
 
 #: ../ai/provider.rst:81
 msgid ""
@@ -1981,7 +1981,7 @@ msgstr ""
 #: ../manage/organizations/index.rst:120 ../manage/roles/index.rst:89
 #: ../manage/roles/permissions.rst:21 ../manage/roles/permissions.rst:49
 #: ../manage/roles/permissions.rst:241 ../manage/roles/permissions.rst:311
-#: ../manage/scheduler.rst:165 ../manage/webhook/add.rst:129
+#: ../manage/scheduler.rst:165 ../manage/webhook/add.rst:131
 #: ../misc/variables.rst:102 ../system/core-workflows/learn-by-example.rst:37
 #: ../system/core-workflows/learn-by-example.rst:92
 #: ../system/core-workflows/learn-by-example.rst:140
@@ -2005,12 +2005,12 @@ msgstr ""
 "служи. Ова информације ће бити приказа у табели алатки. **Неће** бити узета "
 "у обзир као контекст за AI."
 
-#: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:100
+#: ../ai/writing-assistant.rst:152 ../channels/email/filters.rst:103
 #: ../channels/form.rst:36 ../manage/groups/settings.rst:150
 #: ../manage/macros.rst:72 ../manage/organizations/index.rst:135
 #: ../manage/overviews.rst:0 ../manage/report-profiles.rst:59
 #: ../manage/roles/index.rst:94 ../manage/scheduler.rst:168
-#: ../manage/templates.rst:40 ../manage/webhook/add.rst:135
+#: ../manage/templates.rst:40 ../manage/webhook/add.rst:137
 #: ../system/objects.rst:173 ../system/objects.rst:253
 msgid "Active"
 msgstr "Активно"
@@ -2420,7 +2420,8 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:73
 #: ../channels/email/accounts/secondary-addresses.rst:39
 #: ../channels/email/index.rst:2 ../channels/form.rst:21
-#: ../system/objects/types.rst:123
+#: ../misc/object-conditions/basics.rst:112
+#: ../misc/object-conditions/basics.rst:115 ../system/objects/types.rst:123
 msgid "Email"
 msgstr "Имејл"
 
@@ -4015,46 +4016,51 @@ msgstr ""
 #: ../channels/email/filters.rst:99
 msgid ""
 "Set the filter to active or inactive. Only active filters are applied to "
-"incoming emails."
+"incoming emails. Zammad applies them in alphabetical order of their names; "
+"filters that share a name run oldest first. If several filters set the same "
+"field, the last one wins. Tags are the exception, as filters add and remove "
+"them instead of setting them."
 msgstr ""
-"Укључите или искључите филтер. Само укључени филтери се извршавају над "
-"примљеним имејл порукама."
 
-#: ../channels/email/filters.rst:106
-msgid "Group Assignment Based on Sender Domain"
-msgstr "Додела групе на основу домена пошиљаоца"
+#: ../channels/email/filters.rst:109
+msgid "Priority Based on Stated Urgency"
+msgstr ""
 
-#: ../channels/email/filters.rst:109 ../channels/email/filters.rst:122
-#: ../channels/email/filters.rst:134 ../channels/email/filters.rst:147
-#: ../channels/email/filters.rst:163 ../channels/email/filters.rst:177
-#: ../manage/report-profiles.rst:62 ../misc/variables/article.rst:1
-#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
-#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:163
+#: ../channels/email/filters.rst:113 ../channels/email/filters.rst:133
+#: ../channels/email/filters.rst:146 ../channels/email/filters.rst:158
+#: ../channels/email/filters.rst:171 ../channels/email/filters.rst:187
+#: ../channels/email/filters.rst:201 ../manage/report-profiles.rst:62
+#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
+#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
+#: ../settings/security/base.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr "Пример"
 
-#: ../channels/email/filters.rst:109
+#: ../channels/email/filters.rst:112
+#, fuzzy
+#| msgid "Automatically increase the priority of tickets from a VIP customer."
 msgid ""
-"Automatically move emails from ``@amazon.com`` to the \"Purchasing\" group."
-msgstr ""
-"Аутоматско пребацивање имејл порука од ``@amazon.com`` у „Purchasing” групу."
+"Automatically raise the priority of messages whose sender marked them as "
+"urgent."
+msgstr "Аутоматско повећавање приоритета тикета VIP клијента."
 
-#: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
-#: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
-#: ../channels/email/filters.rst:166 ../channels/email/filters.rst:180
-#: ../manage/trigger.rst:94
+#: ../channels/email/filters.rst:116 ../channels/email/filters.rst:136
+#: ../channels/email/filters.rst:149 ../channels/email/filters.rst:161
+#: ../channels/email/filters.rst:174 ../channels/email/filters.rst:190
+#: ../channels/email/filters.rst:204 ../manage/trigger.rst:94
 msgid "Condition"
 msgstr "Услови"
 
-#: ../channels/email/filters.rst:112
-msgid "**From:** *matches regex:* ``(\\.|@)amazon\\.com``"
-msgstr "**Од:** *задовољава регуларни израз:* ``(\\.|@)amazon\\.com``"
+#: ../channels/email/filters.rst:116
+msgid "**Email urgency:** *is any of* ``High urgency``"
+msgstr ""
 
-#: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
-#: ../channels/email/filters.rst:140 ../channels/email/filters.rst:155
-#: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
-#: ../manage/trigger.rst:54 ../manage/trigger.rst:108
+#: ../channels/email/filters.rst:119 ../channels/email/filters.rst:139
+#: ../channels/email/filters.rst:152 ../channels/email/filters.rst:164
+#: ../channels/email/filters.rst:179 ../channels/email/filters.rst:193
+#: ../channels/email/filters.rst:207 ../manage/trigger.rst:54
+#: ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66 ../system/audit-logs.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -4066,50 +4072,75 @@ msgstr "**Од:** *задовољава регуларни израз:* ``(\\.|@
 msgid "Action"
 msgstr "Радња"
 
-#: ../channels/email/filters.rst:115
+#: ../channels/email/filters.rst:119 ../channels/email/filters.rst:164
+msgid "**Priority:** 3 high"
+msgstr "**Приоритет:** 3 висок"
+
+#: ../channels/email/filters.rst:121
+msgid ""
+"The **Email urgency** condition is offered in the **Expert Settings** group "
+"of the attribute list. It combines the ``Importance``, ``Priority``, ``X-"
+"Priority`` and ``X-MSMail-Priority`` headers into a single value, so one "
+"filter per urgency level covers senders that use any of them. You don't need "
+"separate filters for each header. Have a look at the :ref:`Email Urgency "
+"<email-urgency>` section of the object conditions page for the header "
+"mapping."
+msgstr ""
+
+#: ../channels/email/filters.rst:130
+msgid "Group Assignment Based on Sender Domain"
+msgstr "Додела групе на основу домена пошиљаоца"
+
+#: ../channels/email/filters.rst:133
+msgid ""
+"Automatically move emails from ``@amazon.com`` to the \"Purchasing\" group."
+msgstr ""
+"Аутоматско пребацивање имејл порука од ``@amazon.com`` у „Purchasing” групу."
+
+#: ../channels/email/filters.rst:136
+msgid "**From:** *matches regex:* ``(\\.|@)amazon\\.com``"
+msgstr "**Од:** *задовољава регуларни израз:* ``(\\.|@)amazon\\.com``"
+
+#: ../channels/email/filters.rst:139
 msgid "**Group:** Purchasing"
 msgstr "**Група:** Purchasing"
 
-#: ../channels/email/filters.rst:118
+#: ../channels/email/filters.rst:142
 msgid "Organization-Based Ticket Assignment"
 msgstr "Додела тикета на основу организације"
 
-#: ../channels/email/filters.rst:121
+#: ../channels/email/filters.rst:145
 msgid ""
 "Automatically dispatch tickets to responsible staff based on the "
 "organization name."
 msgstr ""
 "Аутоматска додала тикета одговорним особама на основу назива организације."
 
-#: ../channels/email/filters.rst:125
+#: ../channels/email/filters.rst:149
 msgid "**Organization:** *starts with one of* ``A`` ``B`` ``C``"
 msgstr "**Организација:** *почиње са једним од* ``A`` ``B`` ``C``"
 
-#: ../channels/email/filters.rst:128
+#: ../channels/email/filters.rst:152
 msgid "**Owner:** Emily Adams"
 msgstr "**Власник:** Emily Adams"
 
-#: ../channels/email/filters.rst:131
+#: ../channels/email/filters.rst:155
 msgid "VIP Customer Handling"
 msgstr "Рад са VIP клијентима"
 
-#: ../channels/email/filters.rst:134
+#: ../channels/email/filters.rst:158
 msgid "Automatically increase the priority of tickets from a VIP customer."
 msgstr "Аутоматско повећавање приоритета тикета VIP клијента."
 
-#: ../channels/email/filters.rst:137
+#: ../channels/email/filters.rst:161
 msgid "**From:** *contains* ``ourvipcustomer@example.com``"
 msgstr "**Од:** *садржи* ``ourvipcustomer@example.com``"
 
-#: ../channels/email/filters.rst:140
-msgid "**Priority:** 3 high"
-msgstr "**Приоритет:** 3 висок"
-
-#: ../channels/email/filters.rst:143
+#: ../channels/email/filters.rst:167
 msgid "Spam Handling"
 msgstr "Обрада нежељених порука"
 
-#: ../channels/email/filters.rst:146
+#: ../channels/email/filters.rst:170
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin)."
@@ -4117,23 +4148,23 @@ msgstr ""
 "Аутоматско означавање и затварање тикета које је спољни филтер непожељне "
 "поште означио као нежељену (нпр. SpamAssassin)."
 
-#: ../channels/email/filters.rst:150
+#: ../channels/email/filters.rst:174
 msgid "**X-Spam-Flag:** *contains* ``YES``"
 msgstr "**X-Spam-Flag:** *садржи* ``YES``"
 
-#: ../channels/email/filters.rst:153
+#: ../channels/email/filters.rst:177
 msgid "**Tag:** *add* ``spam``"
 msgstr "**Ознака:** *додај* ``spam``"
 
-#: ../channels/email/filters.rst:155
+#: ../channels/email/filters.rst:179
 msgid "**State:** closed"
 msgstr "**Стање:** затворено"
 
-#: ../channels/email/filters.rst:158
+#: ../channels/email/filters.rst:182
 msgid "Extract Information from Subject"
 msgstr "Издвајање информација из предмета"
 
-#: ../channels/email/filters.rst:161
+#: ../channels/email/filters.rst:185
 msgid ""
 "Automatically extract an invoice number from the email subject (with an "
 "unnamed capture group) and write it to the custom object attribute \"Invoice "
@@ -4143,20 +4174,20 @@ msgstr ""
 "неименованом групом подударања) и снимање у прилагођени атрибут тикета "
 "„Invoice number”."
 
-#: ../channels/email/filters.rst:166
+#: ../channels/email/filters.rst:190
 msgid "**Subject:** *matches regex* ``.*[Ii]nvoice.*\\D(\\d+).*``"
 msgstr ""
 "**Предмет:** *задовољава регуларни израз* ``.*[Ii]nvoice.*\\D(\\d+).*``"
 
-#: ../channels/email/filters.rst:169
+#: ../channels/email/filters.rst:193
 msgid "**Invoice number:** ``#{regexp.1}``"
 msgstr "**Invoice number:** ``#{regexp.1}``"
 
-#: ../channels/email/filters.rst:172
+#: ../channels/email/filters.rst:196
 msgid "Extract Information from Email Body"
 msgstr "Издвајање информација из садржаја имејл поруке"
 
-#: ../channels/email/filters.rst:175
+#: ../channels/email/filters.rst:199
 msgid ""
 "Automatically extract an order number from the email body (with a named "
 "capture group) and write it to the custom object attribute \"Order number\"."
@@ -4164,22 +4195,22 @@ msgstr ""
 "Аутоматско издвајање броја поруџбине из садржаја имејл поруке (са именованом "
 "групом подударања) и снимање у прилагођени атрибут тикета „Order number”."
 
-#: ../channels/email/filters.rst:180
+#: ../channels/email/filters.rst:204
 msgid "**Body:** *matches regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+).*``"
 msgstr ""
 "**Садржај:** *задовољава регуларни израз* ``.*[Oo]rder.*\\D(?"
 "<order_number>\\d+).*``"
 
-#: ../channels/email/filters.rst:183
+#: ../channels/email/filters.rst:207
 msgid "**Order number:** ``#{regexp.order_number}``"
 msgstr "**Order number:** ``#{regexp.order_number}``"
 
-#: ../channels/email/filters.rst:186
+#: ../channels/email/filters.rst:210
 #: ../channels/email/filters/system-filters.rst:2
 msgid "System Filters"
 msgstr "Системски филтери"
 
-#: ../channels/email/filters.rst:188
+#: ../channels/email/filters.rst:212
 msgid ""
 "Zammad comes with some built-in system filters by default. You can't see "
 "them in the UI. The intention is to tweak the behavior of Zammad for emails "
@@ -4761,7 +4792,7 @@ msgstr ""
 "(Корисници који сами хостују су можда већ обавили овај корак током "
 "подешавања новог система.)"
 
-#: ../channels/email/index.rst:54 ../channels/email/index.rst:14
+#: ../channels/email/index.rst:58 ../channels/email/index.rst:18
 msgid ":doc:`🗂️ Filters <filters>`"
 msgstr ":doc:`🗂 Филтери <filters>`"
 
@@ -4773,37 +4804,44 @@ msgstr ""
 "**Уверите се да се нови тикети појављују на правом месту** са аутоматским "
 "правилима ако-ово-онда-оно за сву долазну пошту."
 
-#: ../channels/email/index.rst:57 ../channels/email/index.rst:17
+#: ../channels/email/index.rst:56 ../channels/email/index.rst:16
+msgid ""
+"Filters can also react on the **Email urgency** a sender stated in the "
+"message headers. See :ref:`Email Urgency <email-urgency>` for the headers "
+"Zammad derives it from."
+msgstr ""
+
+#: ../channels/email/index.rst:61 ../channels/email/index.rst:21
 msgid ":doc:`📜  Signatures <signatures>`"
 msgstr ":doc:`📜 Потписи <signatures>`"
 
-#: ../channels/email/index.rst:57 ../channels/email/index.rst:17
+#: ../channels/email/index.rst:61 ../channels/email/index.rst:21
 msgid "Customize signatures for all outgoing email."
 msgstr "Прилагодите потписе за сву одлазну пошту."
 
-#: ../channels/email/index.rst:69 ../channels/email/index.rst:29
+#: ../channels/email/index.rst:73 ../channels/email/index.rst:33
 msgid ":doc:`⚙️  Settings <settings>`"
 msgstr ":doc:`⚙️ Подешавања <settings>`"
 
-#: ../channels/email/index.rst:60 ../channels/google/index.rst:42
-#: ../channels/email/index.rst:20
+#: ../channels/email/index.rst:64 ../channels/google/index.rst:42
+#: ../channels/email/index.rst:24
 msgid "Manage options like:"
 msgstr "Управљајте опцијама као што су:"
 
-#: ../channels/email/index.rst:62 ../channels/email/index.rst:22
+#: ../channels/email/index.rst:66 ../channels/email/index.rst:26
 msgid "set the “From:” address on system notifications"
 msgstr "подешавање „Од:“ адресе за системска обавештења"
 
-#: ../channels/email/index.rst:63 ../channels/google/index.rst:45
-#: ../channels/email/index.rst:23
+#: ../channels/email/index.rst:67 ../channels/google/index.rst:45
+#: ../channels/email/index.rst:27
 msgid "raise the limit on attachment sizes"
 msgstr "подизање ограничења величине прилога"
 
-#: ../channels/email/index.rst:64 ../channels/email/index.rst:24
+#: ../channels/email/index.rst:68 ../channels/email/index.rst:28
 msgid "modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)"
 msgstr "измена префикса наслова (*нпр.* коришћење „AW:“ уместо „RE:“)"
 
-#: ../channels/email/index.rst:66 ../channels/email/index.rst:26
+#: ../channels/email/index.rst:70 ../channels/email/index.rst:30
 msgid ""
 "Want to **manually edit email subjects** or **always copy parent messages "
 "into your replies**?"
@@ -4811,29 +4849,29 @@ msgstr ""
 "Желите да **ручно измените предмете порука** или **увек копирате оригиналне "
 "поруке у своје одговоре**?"
 
-#: ../channels/email/index.rst:69 ../channels/email/index.rst:29
+#: ../channels/email/index.rst:73 ../channels/email/index.rst:33
 msgid "Check the ✍️ :doc:`/misc/composer`."
 msgstr "Погледајте ✍️ :doc:`/misc/composer`."
 
-#: ../channels/email/index.rst:74 ../channels/email/index.rst:35
+#: ../channels/email/index.rst:78 ../channels/email/index.rst:39
 msgid ":doc:`📇 Header based actions <email-headers>`"
 msgstr ":doc:`📇 Радње заглавља <email-headers>`"
 
-#: ../channels/email/index.rst:72 ../channels/google/index.rst:49
-#: ../channels/email/index.rst:32
+#: ../channels/email/index.rst:76 ../channels/google/index.rst:49
+#: ../channels/email/index.rst:36
 msgid "Manipulate auto response behavior or incoming routing."
 msgstr "Манипулишите понашањем аутоматског одговора или долазним рутирањем."
 
-#: ../channels/email/index.rst:74 ../channels/google/index.rst:51
-#: ../channels/email/index.rst:34
+#: ../channels/email/index.rst:78 ../channels/google/index.rst:51
+#: ../channels/email/index.rst:38
 msgid "🤓 This is a very advanced topic."
 msgstr "🤓 Ово је веома напредна тема."
 
-#: ../channels/email/index.rst:77
+#: ../channels/email/index.rst:81
 msgid "Extra Options for Self-Hosted Users"
 msgstr "Додатне опције за кориснике који сами хостују"
 
-#: ../channels/email/index.rst:79
+#: ../channels/email/index.rst:83
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr "Ако сте превише кул за POP3/IMAP/SMTP..."
 
@@ -5299,7 +5337,7 @@ msgstr ""
 msgid "Signatures"
 msgstr "Потписи"
 
-#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:464
+#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:482
 #: ../system/monitoring.rst:9
 msgid "General"
 msgstr "Уопштено"
@@ -9602,7 +9640,7 @@ msgstr ""
 "унети овде. Оставите поље празним да бисте користили подразумевану поруку."
 
 #: ../channels/whatsapp/setup.rst:94 ../misc/object-conditions/basics.rst:29
-#: ../misc/object-conditions/basics.rst:138
+#: ../misc/object-conditions/basics.rst:156
 #: ../system/integrations/checkmk/admin-settings.rst:14
 msgid "Group"
 msgstr "Група"
@@ -10246,7 +10284,7 @@ msgstr "Канали"
 msgid "AI"
 msgstr "AI"
 
-#: ../index.rst:86 ../misc/object-conditions/basics.rst:183
+#: ../index.rst:86 ../misc/object-conditions/basics.rst:201
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr "Систем"
@@ -11052,17 +11090,17 @@ msgstr ""
 "корисничког интерфејса)."
 
 #: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
-#: ../misc/object-conditions/basics.rst:121
-#: ../misc/object-conditions/basics.rst:136
-#: ../misc/object-conditions/basics.rst:158
-#: ../misc/object-conditions/basics.rst:528
-#: ../misc/object-conditions/basics.rst:531
-#: ../misc/object-conditions/basics.rst:562
-#: ../misc/object-conditions/basics.rst:568
-#: ../misc/object-conditions/basics.rst:605
-#: ../misc/object-conditions/basics.rst:608
-#: ../misc/object-conditions/basics.rst:637
-#: ../misc/object-conditions/basics.rst:640
+#: ../misc/object-conditions/basics.rst:139
+#: ../misc/object-conditions/basics.rst:154
+#: ../misc/object-conditions/basics.rst:176
+#: ../misc/object-conditions/basics.rst:546
+#: ../misc/object-conditions/basics.rst:549
+#: ../misc/object-conditions/basics.rst:580
+#: ../misc/object-conditions/basics.rst:586
+#: ../misc/object-conditions/basics.rst:623
+#: ../misc/object-conditions/basics.rst:626
+#: ../misc/object-conditions/basics.rst:655
+#: ../misc/object-conditions/basics.rst:658
 #: ../system/core-workflows/condition-operators.rst:184
 #: ../system/core-workflows/condition-operators.rst:187
 #: ../system/core-workflows/condition-operators.rst:190
@@ -11143,17 +11181,17 @@ msgstr ""
 "Тикет ће остати последњем оператеру који га је поседовао. Ово је "
 "подразумевана вредност."
 
-#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
-#: ../misc/object-conditions/basics.rst:137
-#: ../misc/object-conditions/basics.rst:159
-#: ../misc/object-conditions/basics.rst:534
-#: ../misc/object-conditions/basics.rst:537
-#: ../misc/object-conditions/basics.rst:565
-#: ../misc/object-conditions/basics.rst:571
-#: ../misc/object-conditions/basics.rst:599
-#: ../misc/object-conditions/basics.rst:602
-#: ../misc/object-conditions/basics.rst:631
-#: ../misc/object-conditions/basics.rst:634
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:140
+#: ../misc/object-conditions/basics.rst:155
+#: ../misc/object-conditions/basics.rst:177
+#: ../misc/object-conditions/basics.rst:552
+#: ../misc/object-conditions/basics.rst:555
+#: ../misc/object-conditions/basics.rst:583
+#: ../misc/object-conditions/basics.rst:589
+#: ../misc/object-conditions/basics.rst:617
+#: ../misc/object-conditions/basics.rst:620
+#: ../misc/object-conditions/basics.rst:649
+#: ../misc/object-conditions/basics.rst:652
 #: ../system/core-workflows/condition-operators.rst:199
 #: ../system/core-workflows/condition-operators.rst:230
 #: ../system/core-workflows/condition-operators.rst:239
@@ -13473,7 +13511,7 @@ msgstr ""
 "Иако су дозволе груписане по уобичајеним случајевима употребе, можете их "
 "мешати по жељи. Само водите рачуна да увек имате увид у своје дозволе."
 
-#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:184
+#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:202
 msgid "Agent"
 msgstr "Оператер"
 
@@ -15172,7 +15210,7 @@ msgstr ""
 "тикете који су или ескалирани или ескалираће у наредних 10 минута: "
 "``Ескалирани тикети``."
 
-#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:204
+#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:222
 msgid "Tags"
 msgstr "Ознаке"
 
@@ -15904,7 +15942,7 @@ msgstr "Број"
 #: ../manage/time-accounting.rst:181 ../manage/time-accounting.rst:179
 #: ../misc/object-conditions/basics.rst:37
 #: ../misc/object-conditions/basics.rst:89
-#: ../misc/object-conditions/basics.rst:185
+#: ../misc/object-conditions/basics.rst:203
 msgid "Customer"
 msgstr "Клијент"
 
@@ -15932,13 +15970,13 @@ msgstr "Додато у"
 
 #: ../manage/time-accounting.rst:170 ../misc/object-conditions/basics.rst:26
 #: ../misc/object-conditions/basics.rst:90
-#: ../misc/object-conditions/basics.rst:126
-#: ../misc/object-conditions/basics.rst:139
-#: ../misc/object-conditions/basics.rst:147
-#: ../misc/object-conditions/basics.rst:171
-#: ../misc/object-conditions/basics.rst:187
-#: ../misc/object-conditions/basics.rst:195
-#: ../misc/object-conditions/basics.rst:205 ../misc/variables/ticket.rst:2
+#: ../misc/object-conditions/basics.rst:144
+#: ../misc/object-conditions/basics.rst:157
+#: ../misc/object-conditions/basics.rst:165
+#: ../misc/object-conditions/basics.rst:189
+#: ../misc/object-conditions/basics.rst:205
+#: ../misc/object-conditions/basics.rst:213
+#: ../misc/object-conditions/basics.rst:223 ../misc/variables/ticket.rst:2
 #: ../settings/ticket.rst:2 ../system/core-workflows/learn-by-example.rst:40
 #: ../system/core-workflows/learn-by-example.rst:95
 #: ../system/core-workflows/learn-by-example.rst:143
@@ -15977,8 +16015,8 @@ msgstr ""
 "подударају)."
 
 #: ../manage/time-accounting.rst:188 ../misc/object-conditions/basics.rst:28
-#: ../misc/object-conditions/basics.rst:115
-#: ../misc/object-conditions/basics.rst:160 ../settings/branding.rst:16
+#: ../misc/object-conditions/basics.rst:133
+#: ../misc/object-conditions/basics.rst:178 ../settings/branding.rst:16
 msgid "Organization"
 msgstr "Организација"
 
@@ -17439,22 +17477,25 @@ msgid ""
 "here."
 msgstr "У случају **HTTP Basic Auth**, унесите вашу корисничку лозинку овде."
 
-#: ../manage/webhook/add.rst:78
-msgid "HMAC SHA1 Signature Token"
-msgstr "HMAC SHA1 кључ за потпис"
+#: ../manage/webhook/add.rst:80
+msgid "HMAC signature token"
+msgstr "HMAC кључ за потпис"
 
 #: ../manage/webhook/add.rst:69
 msgid ""
-"If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing the "
-"remote site to verify the request. Its value is ``sha1=<hex digest>``, so "
-"drop the ``sha1=`` prefix before comparing it with your own signature."
+"If set, Zammad signs the body of each webhook request and adds an ``X-Hub-"
+"Signature`` header with the HMAC-SHA1 signature as ``sha1=<hex digest>`` and "
+"an ``X-Hub-Signature-256`` header with the HMAC-SHA256 signature as "
+"``sha256=<hex digest>``. Drop the prefix before comparing a value with your "
+"own signature."
 msgstr ""
-"Ако је подешено, сви послати повратни позиви садрже заглавље ``X-Hub-"
-"Signature`` које омогућава удаљеном сервису да верификује захтев. Вредност "
-"заглавља је ``sha1=<hex digest>``, тако да обришите префикс ``sha1=`` пре "
-"поређења са својим потписом."
+"Ако је подешено, Zammad потписује садржај захтева сваког повратног позива и "
+"додаје заглавље ``X-Hub-Signature`` са HMAC-SHA1 потписом као ``sha1=<hex "
+"digest>`` и заглавље ``X-Hub-Signature-256`` са HMAC-SHA256 потписом као "
+"``sha256=<hex digest>``. Обришите префикс пре поређења вредности са својим "
+"потписом."
 
-#: ../manage/webhook/add.rst:75
+#: ../manage/webhook/add.rst:77
 msgid ""
 "This **does not** encrypt the payload. Use HTTPS connections to secure the "
 "communication. It contains a HMAC signature of the body of the webhook "
@@ -17466,11 +17507,11 @@ msgstr ""
 "више о Hub потписима `овде <https://www.w3.org/TR/websub/#authenticated-"
 "content-distribution>`_."
 
-#: ../manage/webhook/add.rst:91
+#: ../manage/webhook/add.rst:93
 msgid "Pre-defined Webhook"
 msgstr "Повратни позив по шаблону"
 
-#: ../manage/webhook/add.rst:81
+#: ../manage/webhook/add.rst:83
 msgid ""
 "This field is only displayed for *pre-defined webhooks*! It only serves as a "
 "reference to a pre-defined webhook. It is not possible to change it for "
@@ -17484,7 +17525,7 @@ msgstr ""
 "шаблону, додатна поља могу бити приказана испод овог. Могу се користити за "
 "додатно прилагођавање понашања повратног позива."
 
-#: ../manage/webhook/add.rst:88
+#: ../manage/webhook/add.rst:90
 msgid "Example for Mattermost:"
 msgstr "Пример сертификата:"
 
@@ -17492,11 +17533,11 @@ msgstr "Пример сертификата:"
 msgid "Additional pre-defined webhook fields"
 msgstr "Додатна поља повратног позива по шаблону"
 
-#: ../manage/webhook/add.rst:125
+#: ../manage/webhook/add.rst:127
 msgid "Custom Payload"
 msgstr "Прилагођени подаци"
 
-#: ../manage/webhook/add.rst:94
+#: ../manage/webhook/add.rst:96
 msgid ""
 "By default, it is turned off and the webhook will always send :ref:`webhook-"
 "payload-default` to the target endpoint. When switched on, a code editor "
@@ -17511,7 +17552,7 @@ msgstr ""
 "бисте уметнули подржане :doc:`променљиве </misc/variables>` користите "
 "пречице :kbd:`:` :kbd:`:` или унесите ``#{`` за претрагу."
 
-#: ../manage/webhook/add.rst:103
+#: ../manage/webhook/add.rst:105
 msgid ""
 "The usage of variables is limited compared to other places. Some features "
 "are not available in webhooks (e.g. the ``.value`` extension, translation "
@@ -17524,7 +17565,7 @@ msgstr ""
 "превод (``#{t(object.attribute)}``) и функције форматирање времена "
 "(``#{dt(object.time_attribute, [...])}``)."
 
-#: ../manage/webhook/add.rst:108
+#: ../manage/webhook/add.rst:110
 msgid ""
 "The custom payload must have a valid JSON syntax! The code editor will "
 "highlight if there is an issue with the syntax. Also, it will not be "
@@ -17534,7 +17575,7 @@ msgstr ""
 "вас обавестити путем аутоматизованих савета ако постоји проблем са кодом. "
 "Такође, неће бити могуће сачувати неисправну JSON структуру."
 
-#: ../manage/webhook/add.rst:111
+#: ../manage/webhook/add.rst:113
 msgid ""
 "Pre-defined webhooks will always provide an initial custom payload, specific "
 "for the associated service."
@@ -17546,11 +17587,11 @@ msgstr ""
 msgid "Custom payload code editor with variable auto completion"
 msgstr "Уређивач кода прилагођених података"
 
-#: ../manage/webhook/add.rst:117
+#: ../manage/webhook/add.rst:119
 msgid "A basic example for the structure looks like this:"
 msgstr "Једноставан пример структуре изгледа овако:"
 
-#: ../manage/webhook/add.rst:128
+#: ../manage/webhook/add.rst:130
 msgid ""
 "If required you can leave useful information for other Zammad admins to "
 "understand the webhook in question better."
@@ -17558,7 +17599,7 @@ msgstr ""
 "Ако је потребно, можете оставити корисне информације другим Zammad "
 "администраторима да боље разумеју дотични повратни позив."
 
-#: ../manage/webhook/add.rst:132
+#: ../manage/webhook/add.rst:134
 msgid ""
 "If set to ``inactive``, you can no longer select the webhook in the trigger "
 "or scheduler configuration. Inactive webhooks will not be fired. If triggers "
@@ -17570,7 +17611,7 @@ msgstr ""
 "бити покренути. Ако окидачи или планери имају подешене и друге радње, оне ће "
 "се и даље извршавати."
 
-#: ../manage/webhook/add.rst:137
+#: ../manage/webhook/add.rst:139
 msgid ""
 "After you set up your webhook, make sure to invoke it via trigger or "
 "scheduler. In case something doesn't work, have a look at "
@@ -19317,8 +19358,8 @@ msgid "Request Headers"
 msgstr "Заглавља захтева"
 
 #: ../manage/webhook/payload.rst:17
-msgid "Zammad sends the following headers in each webhook POST request:"
-msgstr "Zammad шаље следећа заглавља при сваком POST захтеву повратног позива:"
+msgid "Zammad sends the following headers in each webhook request:"
+msgstr "Zammad шаље следећа заглавља при захтеву повратног позива:"
 
 #: ../manage/webhook/payload.rst:0
 msgid "``User-Agent``"
@@ -19352,29 +19393,43 @@ msgstr "``X-Hub-Signature``"
 msgid ""
 "The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
 "computed with your signature token as the key. Only sent if you entered a "
-"signature token in the trigger"
+"signature token in the webhook"
 msgstr ""
 "HMAC-SHA1 потпис захтева као вредност ``sha1=<hex digest>``, израчунат на "
 "основу вашег кључа за потпис. Шаље се само уколико унесете кључ потписа у "
-"окидачу"
+"повратном позиву"
+
+#: ../manage/webhook/payload.rst:0
+msgid "``X-Hub-Signature-256``"
+msgstr "``X-Hub-Signature-256``"
+
+#: ../manage/webhook/payload.rst:26
+msgid ""
+"The HMAC-SHA256 signature of the request body as ``sha256=<hex digest>``, "
+"computed with your signature token as the key. Only sent if you entered a "
+"signature token in the webhook"
+msgstr ""
+"HMAC-SHA256 потпис захтева као вредност ``sha256=<hex digest>``, израчунат "
+"на основу вашег кључа за потпис. Шаље се само уколико унесете кључ потписа у "
+"повратном позиву"
 
 #: ../manage/webhook/payload.rst:0
 msgid "``Authorization``"
 msgstr "``Authorization``"
 
-#: ../manage/webhook/payload.rst:26
+#: ../manage/webhook/payload.rst:30
 msgid ""
-"The credentials of the trigger, as ``Bearer <token>`` with **Bearer Token** "
+"The credentials of the webhook, as ``Bearer <token>`` with **Bearer Token** "
 "or as ``Basic <base64>`` with **HTTP Basic Authentication**"
 msgstr ""
-"Креденцијали окидача, у формату ``Bearer <кључ>`` са **Bearer Token** кључем "
-"или ``Basic <base64>`` са **HTTP Basic** аутентификацијом"
+"Креденцијали повратнот позива, у формату ``Bearer <кључ>`` са **Bearer "
+"Token** кључем или ``Basic <base64>`` са **HTTP Basic** аутентификацијом"
 
-#: ../manage/webhook/payload.rst:33
+#: ../manage/webhook/payload.rst:37
 msgid "Default JSON Payload"
 msgstr "JSON структура подразумеваних података"
 
-#: ../manage/webhook/payload.rst:35
+#: ../manage/webhook/payload.rst:39
 msgid ""
 "When the webhook payload is not customized, requests will include default "
 "payload depending on the webhook type."
@@ -19382,11 +19437,11 @@ msgstr ""
 "Када подаци повратног позива нису прилагођени, захтеви ће користити "
 "подразумеване податке у зависности од типа повратног позива."
 
-#: ../manage/webhook/payload.rst:39
+#: ../manage/webhook/payload.rst:43
 msgid "Regular Webhooks (example)"
 msgstr "Стандардни повратни позиви (пример)"
 
-#: ../manage/webhook/payload.rst:342
+#: ../manage/webhook/payload.rst:346
 msgid ""
 "For better readability, all empty and ``null`` values have been omitted from "
 "the sample payload above. That means the webhooks you receive *will include "
@@ -19396,7 +19451,7 @@ msgstr ""
 "примера података изнад. То значи да повратни позиви могу *укључивати додатна "
 "поља која нису приказана овде*."
 
-#: ../manage/webhook/payload.rst:345
+#: ../manage/webhook/payload.rst:349
 msgid ""
 "Webhooks will also include fields for any relevant :doc:`custom objects </"
 "system/objects>` defined in your system."
@@ -19404,7 +19459,7 @@ msgstr ""
 "Повратни позиви ће такође укључити поља за све релевантне :doc:`прилагођене "
 "објекте </system/objects>` дефинисане у вашем систему."
 
-#: ../manage/webhook/payload.rst:347
+#: ../manage/webhook/payload.rst:351
 msgid ""
 "Attachments are *not included*; links to attachments *are* (authentication "
 "required)."
@@ -19412,51 +19467,51 @@ msgstr ""
 "Прилози *нису укључени*; везе до прилога *јесу* (потребна је "
 "аутентификација)."
 
-#: ../manage/webhook/payload.rst:349
+#: ../manage/webhook/payload.rst:353
 msgid "Linked tickets are *not included*."
 msgstr "Повезани тикети *нису укључени*."
 
-#: ../manage/webhook/payload.rst:350
+#: ../manage/webhook/payload.rst:354
 msgid "None of the following **user attributes** are included:"
 msgstr "Ниједан од следећих **корисничких атрибута** није укључен:"
 
-#: ../manage/webhook/payload.rst:352
+#: ../manage/webhook/payload.rst:356
 msgid "``last_login``"
 msgstr "``last_login``"
 
-#: ../manage/webhook/payload.rst:353
+#: ../manage/webhook/payload.rst:357
 msgid "``login_failed``"
 msgstr "``login_failed``"
 
-#: ../manage/webhook/payload.rst:354
+#: ../manage/webhook/payload.rst:358
 msgid "``password``"
 msgstr "``password``"
 
-#: ../manage/webhook/payload.rst:355
+#: ../manage/webhook/payload.rst:359
 msgid "``preferences``"
 msgstr "``preferences``"
 
-#: ../manage/webhook/payload.rst:356
+#: ../manage/webhook/payload.rst:360
 msgid "``group_ids``"
 msgstr "``group_ids``"
 
-#: ../manage/webhook/payload.rst:357
+#: ../manage/webhook/payload.rst:361
 msgid "``groups``"
 msgstr "``groups``"
 
-#: ../manage/webhook/payload.rst:358
+#: ../manage/webhook/payload.rst:362
 msgid "``authorization_ids``"
 msgstr "``authorization_ids``"
 
-#: ../manage/webhook/payload.rst:359
+#: ../manage/webhook/payload.rst:363
 msgid "``authorizations``"
 msgstr "``authorizations``"
 
-#: ../manage/webhook/payload.rst:362
+#: ../manage/webhook/payload.rst:366
 msgid "Pre-defined Webhooks"
 msgstr "Повратни позиви по шаблону"
 
-#: ../manage/webhook/payload.rst:364
+#: ../manage/webhook/payload.rst:368
 msgid ""
 "Each pre-defined webhook template provides a special payload designed for a "
 "particular service. See :doc:`/manage/webhook/examples` for more information."
@@ -19815,10 +19870,10 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:36
 #: ../misc/object-conditions/basics.rst:101
-#: ../misc/object-conditions/basics.rst:179
-#: ../misc/object-conditions/basics.rst:215
-#: ../misc/object-conditions/basics.rst:221
-#: ../misc/object-conditions/basics.rst:229
+#: ../misc/object-conditions/basics.rst:197
+#: ../misc/object-conditions/basics.rst:233
+#: ../misc/object-conditions/basics.rst:239
+#: ../misc/object-conditions/basics.rst:247
 msgid "Article"
 msgstr "Чланак"
 
@@ -19888,16 +19943,16 @@ msgstr "Доступно само у окидачима."
 #: ../misc/object-conditions/basics.rst:73
 #: ../misc/object-conditions/basics.rst:92
 #: ../misc/object-conditions/basics.rst:103
-#: ../misc/object-conditions/basics.rst:119
-#: ../misc/object-conditions/basics.rst:134
-#: ../misc/object-conditions/basics.rst:141
-#: ../misc/object-conditions/basics.rst:165
-#: ../misc/object-conditions/basics.rst:173
-#: ../misc/object-conditions/basics.rst:181
-#: ../misc/object-conditions/basics.rst:189
+#: ../misc/object-conditions/basics.rst:137
+#: ../misc/object-conditions/basics.rst:152
+#: ../misc/object-conditions/basics.rst:159
+#: ../misc/object-conditions/basics.rst:183
+#: ../misc/object-conditions/basics.rst:191
 #: ../misc/object-conditions/basics.rst:199
-#: ../misc/object-conditions/basics.rst:223
-#: ../misc/object-conditions/basics.rst:233
+#: ../misc/object-conditions/basics.rst:207
+#: ../misc/object-conditions/basics.rst:217
+#: ../misc/object-conditions/basics.rst:241
+#: ../misc/object-conditions/basics.rst:251
 #: ../system/core-workflows/condition-operators.rst:64
 msgid "is"
 msgstr "је"
@@ -19905,16 +19960,16 @@ msgstr "је"
 #: ../misc/object-conditions/basics.rst:74
 #: ../misc/object-conditions/basics.rst:93
 #: ../misc/object-conditions/basics.rst:104
-#: ../misc/object-conditions/basics.rst:120
-#: ../misc/object-conditions/basics.rst:135
-#: ../misc/object-conditions/basics.rst:142
-#: ../misc/object-conditions/basics.rst:166
-#: ../misc/object-conditions/basics.rst:174
-#: ../misc/object-conditions/basics.rst:182
-#: ../misc/object-conditions/basics.rst:190
+#: ../misc/object-conditions/basics.rst:138
+#: ../misc/object-conditions/basics.rst:153
+#: ../misc/object-conditions/basics.rst:160
+#: ../misc/object-conditions/basics.rst:184
+#: ../misc/object-conditions/basics.rst:192
 #: ../misc/object-conditions/basics.rst:200
-#: ../misc/object-conditions/basics.rst:224
-#: ../misc/object-conditions/basics.rst:234
+#: ../misc/object-conditions/basics.rst:208
+#: ../misc/object-conditions/basics.rst:218
+#: ../misc/object-conditions/basics.rst:242
+#: ../misc/object-conditions/basics.rst:252
 #: ../system/core-workflows/condition-operators.rst:86
 msgid "is not"
 msgstr "није"
@@ -19972,20 +20027,20 @@ msgid "has changed"
 msgstr "је измењено"
 
 #: ../misc/object-conditions/basics.rst:95
-#: ../misc/object-conditions/basics.rst:175
-#: ../misc/object-conditions/basics.rst:201
+#: ../misc/object-conditions/basics.rst:193
+#: ../misc/object-conditions/basics.rst:219
 msgid "current user"
 msgstr "тренутни корисник"
 
 #: ../misc/object-conditions/basics.rst:96
-#: ../misc/object-conditions/basics.rst:176
-#: ../misc/object-conditions/basics.rst:202
+#: ../misc/object-conditions/basics.rst:194
+#: ../misc/object-conditions/basics.rst:220
 msgid "specific user"
 msgstr "конкретан корисник"
 
 #: ../misc/object-conditions/basics.rst:97
-#: ../misc/object-conditions/basics.rst:169
-#: ../misc/object-conditions/basics.rst:218
+#: ../misc/object-conditions/basics.rst:187
+#: ../misc/object-conditions/basics.rst:236
 #: ../system/core-workflows/condition-operators.rst:100
 msgid "not set"
 msgstr "није постављено"
@@ -20018,165 +20073,219 @@ msgstr "сервиса за откривање"
 msgid "service."
 msgstr "језика."
 
-#: ../misc/object-conditions/basics.rst:112
-#: ../misc/object-conditions/basics.rst:123
+#: ../misc/object-conditions/basics.rst:114
+msgid "urgency"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:116
+#, fuzzy
+#| msgid "Checks the type of sender."
+msgid "Checks the urgency the sender"
+msgstr "Проверава врсту пошиљаоца."
+
+#: ../misc/object-conditions/basics.rst:118
+#, fuzzy
+#| msgid "Contains the remotes response header."
+msgid "stated in the message headers."
+msgstr "Садржи заглавље одговора удаљеног сервера."
+
+#: ../misc/object-conditions/basics.rst:120
+#, fuzzy
+#| msgid "Only available in triggers"
+msgid "Only available in postmaster"
+msgstr "Доступно само у окидачима"
+
+#: ../misc/object-conditions/basics.rst:122
+#, fuzzy
+#| msgid "Filters"
+msgid "filters."
+msgstr "Филтери"
+
+#: ../misc/object-conditions/basics.rst:124
+msgid "See :ref:`Email Urgency <email-urgency>` below."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:125
+#: ../system/core-workflows/condition-operators.rst:66
+msgid "is any of"
+msgstr "је један од"
+
+#: ../misc/object-conditions/basics.rst:126
+#: ../system/core-workflows/condition-operators.rst:84
+msgid "is none of"
+msgstr "није ниједан од"
+
+#: ../misc/object-conditions/basics.rst:127
+msgid "High urgency"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:128
+msgid "Normal urgency"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:129
+msgid "Low urgency"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:130
+#: ../misc/object-conditions/basics.rst:141
 msgid "Existing"
 msgstr "Постојеће"
 
-#: ../misc/object-conditions/basics.rst:114
+#: ../misc/object-conditions/basics.rst:132
 msgid "members"
 msgstr "чланови"
 
-#: ../misc/object-conditions/basics.rst:116
+#: ../misc/object-conditions/basics.rst:134
 msgid "Checks if organization"
 msgstr "Проверава да ли организација"
 
-#: ../misc/object-conditions/basics.rst:118
+#: ../misc/object-conditions/basics.rst:136
 msgid "has members."
 msgstr "има чланове."
 
-#: ../misc/object-conditions/basics.rst:125
+#: ../misc/object-conditions/basics.rst:143
 msgid "tickets"
 msgstr "тикети"
 
-#: ../misc/object-conditions/basics.rst:128
+#: ../misc/object-conditions/basics.rst:146
 msgid "customer/"
 msgstr "клијент/"
 
-#: ../misc/object-conditions/basics.rst:130
+#: ../misc/object-conditions/basics.rst:148
 #: ../system/integrations/checkmk/api-reference.rst:138
 #: ../system/integrations/checkmk/api-reference.rst:173
 msgid "owner"
 msgstr "owner"
 
-#: ../misc/object-conditions/basics.rst:131
+#: ../misc/object-conditions/basics.rst:149
 msgid "Checks if tickets are assigned."
 msgstr "Проверава да ли су тикети додељени."
 
-#: ../misc/object-conditions/basics.rst:133
+#: ../misc/object-conditions/basics.rst:151
 msgid "Only available in scheduler."
 msgstr "Доступно само у планерима."
 
-#: ../misc/object-conditions/basics.rst:140
+#: ../misc/object-conditions/basics.rst:158
 msgid "Checks affected group."
 msgstr "Проверава захваћену групу."
 
-#: ../misc/object-conditions/basics.rst:143
+#: ../misc/object-conditions/basics.rst:161
 msgid "All configured and"
 msgstr "Све подешене и"
 
-#: ../misc/object-conditions/basics.rst:145
+#: ../misc/object-conditions/basics.rst:163
 msgid "active groups."
 msgstr "укључене групе."
 
-#: ../misc/object-conditions/basics.rst:146
+#: ../misc/object-conditions/basics.rst:164
 msgid "Has checklist"
 msgstr "Има списак задатака"
 
-#: ../misc/object-conditions/basics.rst:148
+#: ../misc/object-conditions/basics.rst:166
 msgid "Checks if the ticket"
 msgstr "Проверава да ли тикет"
 
-#: ../misc/object-conditions/basics.rst:150
+#: ../misc/object-conditions/basics.rst:168
 msgid "has a checklist with"
 msgstr "има списак задатака са"
 
-#: ../misc/object-conditions/basics.rst:152
+#: ../misc/object-conditions/basics.rst:170
 msgid "at least one item."
 msgstr "бар једним задатком."
 
-#: ../misc/object-conditions/basics.rst:154
+#: ../misc/object-conditions/basics.rst:172
 msgid "Only available in triggers"
 msgstr "Доступно само у окидачима"
 
-#: ../misc/object-conditions/basics.rst:156
+#: ../misc/object-conditions/basics.rst:174
 msgid "and scheduler."
 msgstr "и планерима."
 
-#: ../misc/object-conditions/basics.rst:157
-#: ../misc/object-conditions/basics.rst:219
+#: ../misc/object-conditions/basics.rst:175
+#: ../misc/object-conditions/basics.rst:237
 msgid "`-`"
 msgstr "`-`"
 
-#: ../misc/object-conditions/basics.rst:161
+#: ../misc/object-conditions/basics.rst:179
 msgid "Ticket,"
 msgstr "Тикет,"
 
-#: ../misc/object-conditions/basics.rst:163
+#: ../misc/object-conditions/basics.rst:181
 #: ../system/integrations/checkmk/api-reference.rst:150
 msgid "customer"
 msgstr "customer"
 
-#: ../misc/object-conditions/basics.rst:164
+#: ../misc/object-conditions/basics.rst:182
 msgid "Checks affected organization."
 msgstr "Проверава захваћену организацију."
 
-#: ../misc/object-conditions/basics.rst:167
+#: ../misc/object-conditions/basics.rst:185
 msgid "current user organization"
 msgstr "организација тренутног корисника"
 
-#: ../misc/object-conditions/basics.rst:168
+#: ../misc/object-conditions/basics.rst:186
 msgid "specific organization"
 msgstr "конкретна организација"
 
-#: ../misc/object-conditions/basics.rst:170
+#: ../misc/object-conditions/basics.rst:188
 msgid "Owner"
 msgstr "Власник"
 
-#: ../misc/object-conditions/basics.rst:172
+#: ../misc/object-conditions/basics.rst:190
 msgid "Checks the owner."
 msgstr "Проверава власника."
 
-#: ../misc/object-conditions/basics.rst:177
-#: ../misc/object-conditions/basics.rst:203
+#: ../misc/object-conditions/basics.rst:195
+#: ../misc/object-conditions/basics.rst:221
 msgid "not set (not defined)"
 msgstr "није постављено (није одређено)"
 
-#: ../misc/object-conditions/basics.rst:178
+#: ../misc/object-conditions/basics.rst:196
 msgid "Sender"
 msgstr "Пошиљалац"
 
-#: ../misc/object-conditions/basics.rst:180
+#: ../misc/object-conditions/basics.rst:198
 msgid "Checks the type of sender."
 msgstr "Проверава врсту пошиљаоца."
 
-#: ../misc/object-conditions/basics.rst:186
+#: ../misc/object-conditions/basics.rst:204
 msgid "State"
 msgstr "Стање"
 
-#: ../misc/object-conditions/basics.rst:188
+#: ../misc/object-conditions/basics.rst:206
 msgid "Checks ticket state."
 msgstr "Проверава стање тикета."
 
-#: ../misc/object-conditions/basics.rst:191
+#: ../misc/object-conditions/basics.rst:209
 msgid "All configured"
 msgstr "Сва подешена"
 
-#: ../misc/object-conditions/basics.rst:193
+#: ../misc/object-conditions/basics.rst:211
 msgid "ticket states."
 msgstr "стања тикета."
 
-#: ../misc/object-conditions/basics.rst:194
+#: ../misc/object-conditions/basics.rst:212
 msgid "Subscribe"
 msgstr "Претплата"
 
-#: ../misc/object-conditions/basics.rst:196
+#: ../misc/object-conditions/basics.rst:214
 msgid "Checks if user is a"
 msgstr "Проверава да ли је корисник"
 
-#: ../misc/object-conditions/basics.rst:198
+#: ../misc/object-conditions/basics.rst:216
 msgid "ticket subscriber"
 msgstr "претплатник тикета"
 
-#: ../misc/object-conditions/basics.rst:206
+#: ../misc/object-conditions/basics.rst:224
 msgid "Checks tags of a ticket."
 msgstr "Проверава ознаке тикета."
 
-#: ../misc/object-conditions/basics.rst:207
-#: ../misc/object-conditions/basics.rst:530
-#: ../misc/object-conditions/basics.rst:564
-#: ../misc/object-conditions/basics.rst:601
-#: ../misc/object-conditions/basics.rst:633
+#: ../misc/object-conditions/basics.rst:225
+#: ../misc/object-conditions/basics.rst:548
+#: ../misc/object-conditions/basics.rst:582
+#: ../misc/object-conditions/basics.rst:619
+#: ../misc/object-conditions/basics.rst:651
 #: ../system/core-workflows/condition-operators.rst:38
 #: ../system/core-workflows/condition-operators.rst:150
 #: ../system/core-workflows/condition-operators.rst:189
@@ -20186,11 +20295,11 @@ msgstr "Проверава ознаке тикета."
 msgid "contains all"
 msgstr "садржи све"
 
-#: ../misc/object-conditions/basics.rst:208
-#: ../misc/object-conditions/basics.rst:527
-#: ../misc/object-conditions/basics.rst:561
-#: ../misc/object-conditions/basics.rst:598
-#: ../misc/object-conditions/basics.rst:630
+#: ../misc/object-conditions/basics.rst:226
+#: ../misc/object-conditions/basics.rst:545
+#: ../misc/object-conditions/basics.rst:579
+#: ../misc/object-conditions/basics.rst:616
+#: ../misc/object-conditions/basics.rst:648
 #: ../system/core-workflows/condition-operators.rst:49
 #: ../system/core-workflows/condition-operators.rst:147
 #: ../system/core-workflows/condition-operators.rst:186
@@ -20200,11 +20309,11 @@ msgstr "садржи све"
 msgid "contains one"
 msgstr "садржи једно"
 
-#: ../misc/object-conditions/basics.rst:209
-#: ../misc/object-conditions/basics.rst:533
-#: ../misc/object-conditions/basics.rst:567
-#: ../misc/object-conditions/basics.rst:604
-#: ../misc/object-conditions/basics.rst:636
+#: ../misc/object-conditions/basics.rst:227
+#: ../misc/object-conditions/basics.rst:551
+#: ../misc/object-conditions/basics.rst:585
+#: ../misc/object-conditions/basics.rst:622
+#: ../misc/object-conditions/basics.rst:654
 #: ../system/core-workflows/condition-operators.rst:41
 #: ../system/core-workflows/condition-operators.rst:160
 #: ../system/core-workflows/condition-operators.rst:198
@@ -20214,11 +20323,11 @@ msgstr "садржи једно"
 msgid "contains all not"
 msgstr "не садржи све"
 
-#: ../misc/object-conditions/basics.rst:210
-#: ../misc/object-conditions/basics.rst:536
-#: ../misc/object-conditions/basics.rst:570
-#: ../misc/object-conditions/basics.rst:607
-#: ../misc/object-conditions/basics.rst:639
+#: ../misc/object-conditions/basics.rst:228
+#: ../misc/object-conditions/basics.rst:554
+#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:625
+#: ../misc/object-conditions/basics.rst:657
 #: ../system/core-workflows/condition-operators.rst:52
 #: ../system/core-workflows/condition-operators.rst:157
 #: ../system/core-workflows/condition-operators.rst:195
@@ -20228,64 +20337,64 @@ msgstr "не садржи све"
 msgid "contains one not"
 msgstr "не садржи једно"
 
-#: ../misc/object-conditions/basics.rst:211
+#: ../misc/object-conditions/basics.rst:229
 msgid "Text input field"
 msgstr "Поље уноса текста"
 
-#: ../misc/object-conditions/basics.rst:212
+#: ../misc/object-conditions/basics.rst:230
 msgid "Time"
 msgstr "Обрачун"
 
-#: ../misc/object-conditions/basics.rst:214
+#: ../misc/object-conditions/basics.rst:232
 msgid "Accounting"
 msgstr "времена"
 
-#: ../misc/object-conditions/basics.rst:216
+#: ../misc/object-conditions/basics.rst:234
 msgid "Checks if time is accounted."
 msgstr "Проверава да ли је обрачунато време."
 
-#: ../misc/object-conditions/basics.rst:217
+#: ../misc/object-conditions/basics.rst:235
 #: ../system/core-workflows/condition-operators.rst:88
 msgid "is set"
 msgstr "је постављено"
 
-#: ../misc/object-conditions/basics.rst:222
+#: ../misc/object-conditions/basics.rst:240
 msgid "Checks the type of the article."
 msgstr "Проверава врсту чланка."
 
-#: ../misc/object-conditions/basics.rst:225
+#: ../misc/object-conditions/basics.rst:243
 msgid "All available"
 msgstr "Све доступне"
 
-#: ../misc/object-conditions/basics.rst:227
+#: ../misc/object-conditions/basics.rst:245
 msgid "article types."
 msgstr "врсте чланка."
 
-#: ../misc/object-conditions/basics.rst:228
+#: ../misc/object-conditions/basics.rst:246
 msgid "Visibility"
 msgstr "Видљивост"
 
-#: ../misc/object-conditions/basics.rst:230
+#: ../misc/object-conditions/basics.rst:248
 msgid "Checks the visibility"
 msgstr "Проверава видљивост"
 
-#: ../misc/object-conditions/basics.rst:232
+#: ../misc/object-conditions/basics.rst:250
 msgid "of the article."
 msgstr "чланка."
 
-#: ../misc/object-conditions/basics.rst:235
+#: ../misc/object-conditions/basics.rst:253
 msgid "internal"
 msgstr "интерно"
 
-#: ../misc/object-conditions/basics.rst:236
+#: ../misc/object-conditions/basics.rst:254
 msgid "public"
 msgstr "јавно"
 
-#: ../misc/object-conditions/basics.rst:239 ../system/objects/types.rst:116
+#: ../misc/object-conditions/basics.rst:257 ../system/objects/types.rst:116
 msgid "Text Field"
 msgstr "Поље текста"
 
-#: ../misc/object-conditions/basics.rst:241
+#: ../misc/object-conditions/basics.rst:259
 msgid ""
 "Checks if any field of type text contains a specific string. The configured "
 "\"Type\" of input fields has no impact on the available options."
@@ -20293,16 +20402,16 @@ msgstr ""
 "Проверава да ли поље уноса текста садржи одговарајући низ. Подешена врста "
 "поља за унос нема утицаја на доступне опције."
 
-#: ../misc/object-conditions/basics.rst:244
-#: ../misc/object-conditions/basics.rst:268
-#: ../misc/object-conditions/basics.rst:279
-#: ../misc/object-conditions/basics.rst:290
-#: ../misc/object-conditions/basics.rst:307
-#: ../misc/object-conditions/basics.rst:348
-#: ../misc/object-conditions/basics.rst:395
-#: ../misc/object-conditions/basics.rst:406
-#: ../misc/object-conditions/basics.rst:435
-#: ../misc/object-conditions/basics.rst:446
+#: ../misc/object-conditions/basics.rst:262
+#: ../misc/object-conditions/basics.rst:286
+#: ../misc/object-conditions/basics.rst:297
+#: ../misc/object-conditions/basics.rst:308
+#: ../misc/object-conditions/basics.rst:325
+#: ../misc/object-conditions/basics.rst:366
+#: ../misc/object-conditions/basics.rst:413
+#: ../misc/object-conditions/basics.rst:424
+#: ../misc/object-conditions/basics.rst:453
+#: ../misc/object-conditions/basics.rst:464
 msgid "Available operators for matching:"
 msgstr "Доступни оператори за подударање:"
 
@@ -20370,81 +20479,81 @@ msgstr "**не задовољава регуларни израз**:"
 msgid "Evaluates if text does not match provided regular expression."
 msgstr "Процењује да ли текст не задовољава дати регуларни израз."
 
-#: ../misc/object-conditions/basics.rst:264 ../system/objects/types.rst:102
+#: ../misc/object-conditions/basics.rst:282 ../system/objects/types.rst:102
 msgid "Textarea Field"
 msgstr "Текстуално поље"
 
-#: ../misc/object-conditions/basics.rst:266
+#: ../misc/object-conditions/basics.rst:284
 msgid "Checks if any field of type textarea contains a specific string."
 msgstr "Проверава да ли неко текстуално поље садржи одређени низ."
 
-#: ../misc/object-conditions/basics.rst:270
+#: ../misc/object-conditions/basics.rst:288
 msgid "**contains**"
 msgstr "**садржи**"
 
-#: ../misc/object-conditions/basics.rst:271
+#: ../misc/object-conditions/basics.rst:289
 msgid "**contains not**"
 msgstr "**не садржи**"
 
-#: ../misc/object-conditions/basics.rst:272
-#: ../misc/object-conditions/basics.rst:283
-#: ../misc/object-conditions/basics.rst:298
-#: ../misc/object-conditions/basics.rst:399
-#: ../misc/object-conditions/basics.rst:439
+#: ../misc/object-conditions/basics.rst:290
+#: ../misc/object-conditions/basics.rst:301
+#: ../misc/object-conditions/basics.rst:316
+#: ../misc/object-conditions/basics.rst:417
+#: ../misc/object-conditions/basics.rst:457
 msgid "**has changed**"
 msgstr "**је измењено**"
 
-#: ../misc/object-conditions/basics.rst:275 ../system/objects/types.rst:14
+#: ../misc/object-conditions/basics.rst:293 ../system/objects/types.rst:14
 msgid "Boolean Field"
 msgstr "Логичко поље"
 
-#: ../misc/object-conditions/basics.rst:277
+#: ../misc/object-conditions/basics.rst:295
 msgid "Checks if any field of type boolean is true."
 msgstr "Проверава да ли је неко логичко поље истинито."
 
-#: ../misc/object-conditions/basics.rst:281
-#: ../misc/object-conditions/basics.rst:292
-#: ../misc/object-conditions/basics.rst:397
-#: ../misc/object-conditions/basics.rst:437
+#: ../misc/object-conditions/basics.rst:299
+#: ../misc/object-conditions/basics.rst:310
+#: ../misc/object-conditions/basics.rst:415
+#: ../misc/object-conditions/basics.rst:455
 msgid "**is**"
 msgstr "**је**"
 
-#: ../misc/object-conditions/basics.rst:282
-#: ../misc/object-conditions/basics.rst:293
-#: ../misc/object-conditions/basics.rst:398
-#: ../misc/object-conditions/basics.rst:438
+#: ../misc/object-conditions/basics.rst:300
+#: ../misc/object-conditions/basics.rst:311
+#: ../misc/object-conditions/basics.rst:416
+#: ../misc/object-conditions/basics.rst:456
 msgid "**is not**"
 msgstr "**није**"
 
-#: ../misc/object-conditions/basics.rst:286 ../system/objects/types.rst:52
+#: ../misc/object-conditions/basics.rst:304 ../system/objects/types.rst:52
 msgid "Integer Field"
 msgstr "Целобројно поље"
 
-#: ../misc/object-conditions/basics.rst:288
+#: ../misc/object-conditions/basics.rst:306
 msgid "Checks if any field of type integer has a specific value."
 msgstr "Проверава да ли неко целобројно поље има одређену вредност."
 
-#: ../misc/object-conditions/basics.rst:294
+#: ../misc/object-conditions/basics.rst:312
 msgid "**is less than**"
 msgstr "**је мање од**"
 
-#: ../misc/object-conditions/basics.rst:295
+#: ../misc/object-conditions/basics.rst:313
 msgid "**is less than or equal to**"
 msgstr "**је мање од или једнако**"
 
-#: ../misc/object-conditions/basics.rst:296
+#: ../misc/object-conditions/basics.rst:314
 msgid "**is greater than**"
 msgstr "**је веће од**"
 
-#: ../misc/object-conditions/basics.rst:297
+#: ../misc/object-conditions/basics.rst:315
 msgid "**is greater than or equal to**"
 msgstr "**је веће од или једнако**"
 
-#: ../misc/object-conditions/basics.rst:301 ../system/objects/types.rst:23
+#: ../misc/object-conditions/basics.rst:319 ../system/objects/types.rst:23
 msgid "Date Field"
 msgstr "Поље датума"
 
-#: ../misc/object-conditions/basics.rst:303
+#: ../misc/object-conditions/basics.rst:321
 msgid ""
 "Checks if a date is before or past (both absolute or relative) a specific "
 "point in time or time period. Relative operators allow you to define a time "
@@ -20557,7 +20666,7 @@ msgstr "**је измењено**:"
 msgid "The field has been changed during a ticket update."
 msgstr "Поље је измењено током освежавања тикета."
 
-#: ../misc/object-conditions/basics.rst:336
+#: ../misc/object-conditions/basics.rst:354
 msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you."
@@ -20565,11 +20674,11 @@ msgstr ""
 "Да бисмо вам помогли да боље разумете временске услове Zammad-а, прилажемо "
 "дијаграм испод."
 
-#: ../misc/object-conditions/basics.rst:342 ../system/objects/types.rst:36
+#: ../misc/object-conditions/basics.rst:360 ../system/objects/types.rst:36
 msgid "Date & Time Field"
 msgstr "Поље датума и времена"
 
-#: ../misc/object-conditions/basics.rst:344
+#: ../misc/object-conditions/basics.rst:362
 msgid ""
 "Checks if a date and time is before or past (both absolute or relative) a "
 "specific point in time or time period. Relative operators allow you to "
@@ -20671,7 +20780,7 @@ msgstr "Време подешено у овом пољу биће достигн
 msgid "Only available for Ticket's Escalation time in Trigger conditions."
 msgstr "Доступно само за време ескалације тикета у условима окидача."
 
-#: ../misc/object-conditions/basics.rst:385
+#: ../misc/object-conditions/basics.rst:403
 msgid ""
 "Have a look at the diagram above. It applies also for date & time but you "
 "additionally have hours and minutes on top to use."
@@ -20679,11 +20788,11 @@ msgstr ""
 "Погледајте дијаграм изнад. Такође се односи на датум и време, али у том "
 "случају додатно имате сате и минуте на располагању."
 
-#: ../misc/object-conditions/basics.rst:389 ../system/objects/types.rst:83
+#: ../misc/object-conditions/basics.rst:407 ../system/objects/types.rst:83
 msgid "Single Selection Field"
 msgstr "Поље за једноструки избор"
 
-#: ../misc/object-conditions/basics.rst:391
+#: ../misc/object-conditions/basics.rst:409
 msgid ""
 "Checks if selected field values match the attribute value. It allows you to "
 "select one or more values of the attribute in question. Selecting more than "
@@ -20694,11 +20803,11 @@ msgstr ""
 "Одабир више од једне вредности у услову ће деловати као дисјункција "
 "(клаузула „OR“)."
 
-#: ../misc/object-conditions/basics.rst:402 ../system/objects/types.rst:64
+#: ../misc/object-conditions/basics.rst:420 ../system/objects/types.rst:64
 msgid "Multiple Selection Field"
 msgstr "Поље за вишеструки избор"
 
-#: ../misc/object-conditions/basics.rst:404
+#: ../misc/object-conditions/basics.rst:422
 msgid "Checks if selected field values match the attribute value(s)."
 msgstr ""
 "Проверава да ли одабране вредности поља одговарају стварној вредности "
@@ -20746,7 +20855,7 @@ msgstr ""
 "Одговара се ако није одабрана **ниједна** дата вредност поља. Ово значи "
 "„ниједна од”, не „не све од”."
 
-#: ../misc/object-conditions/basics.rst:422
+#: ../misc/object-conditions/basics.rst:440
 msgid ""
 "In :doc:`core workflows </system/core-workflows>`, these operators have "
 "different semantics. See :ref:`core workflow condition operators <core-"
@@ -20759,11 +20868,11 @@ msgstr ""
 "workflow-condition-examples>` за детаље. Примери оператора описаних овде се "
 "могу пронаћи :ref:`испод <multi-select-operator-examples>`."
 
-#: ../misc/object-conditions/basics.rst:430 ../system/objects/types.rst:135
+#: ../misc/object-conditions/basics.rst:448 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr "Поље за једноструки избор стабла"
 
-#: ../misc/object-conditions/basics.rst:432
+#: ../misc/object-conditions/basics.rst:450
 msgid ""
 "Checks if a selected field value match the attribute value. Selecting more "
 "than one value in the condition will act like an \"OR\" clause."
@@ -20772,11 +20881,11 @@ msgstr ""
 "Одабир више од једне вредности у услову ће деловати као дисјункција "
 "(клаузула „OR“)."
 
-#: ../misc/object-conditions/basics.rst:442 ../system/objects/types.rst:149
+#: ../misc/object-conditions/basics.rst:460 ../system/objects/types.rst:149
 msgid "Multiple Tree Selection Field"
 msgstr "Поље за вишеструки избор стабла"
 
-#: ../misc/object-conditions/basics.rst:444
+#: ../misc/object-conditions/basics.rst:462
 msgid "Checks if selected field value(s) match the attribute value(s)."
 msgstr ""
 "Проверава да ли одабране вредности поља одговарају стварној вредности "
@@ -20798,57 +20907,57 @@ msgstr "**не садржи све**"
 msgid "**contains one not**"
 msgstr "**не садржи једно**"
 
-#: ../misc/object-conditions/basics.rst:461
+#: ../misc/object-conditions/basics.rst:479
 msgid "Additional Information and Remarks"
 msgstr "Додатне информације и напомене"
 
-#: ../misc/object-conditions/basics.rst:470
+#: ../misc/object-conditions/basics.rst:488
 msgid "Ticket context conditions do not support:"
 msgstr "Контекст услова тикета не подржава следеће:"
 
-#: ../misc/object-conditions/basics.rst:467
+#: ../misc/object-conditions/basics.rst:485
 msgid "regular expressions"
 msgstr "регуларне изразе"
 
-#: ../misc/object-conditions/basics.rst:468
+#: ../misc/object-conditions/basics.rst:486
 msgid "case sensitive string conditions"
 msgstr "услове који су осетљиви на велика и мала слова"
 
-#: ../misc/object-conditions/basics.rst:469
+#: ../misc/object-conditions/basics.rst:487
 msgid ""
 "Basic conditions do not support the same attribute to be selected more than "
 "once"
 msgstr "Основни услови не подржавају да се исти атрибут бира више пута"
 
-#: ../misc/object-conditions/basics.rst:478
+#: ../misc/object-conditions/basics.rst:496
 msgid "**has changed** conditions:"
 msgstr "услове **је измењено**:"
 
-#: ../misc/object-conditions/basics.rst:473
+#: ../misc/object-conditions/basics.rst:491
 msgid "Are only available for ticket attributes and don't affect:"
 msgstr "Доступно само за атрибуте тикета и не утиче на:"
 
-#: ../misc/object-conditions/basics.rst:475
+#: ../misc/object-conditions/basics.rst:493
 msgid "Ticket articles attributes"
 msgstr "атрибуте чланака тикета"
 
-#: ../misc/object-conditions/basics.rst:476
+#: ../misc/object-conditions/basics.rst:494
 msgid "Organization attributes"
 msgstr "атрибуте организације"
 
-#: ../misc/object-conditions/basics.rst:477
+#: ../misc/object-conditions/basics.rst:495
 msgid "User attributes"
 msgstr "атрибуте корисника"
 
-#: ../misc/object-conditions/basics.rst:478
+#: ../misc/object-conditions/basics.rst:496
 msgid "Group attributes"
 msgstr "атрибуте група"
 
-#: ../misc/object-conditions/basics.rst:491
+#: ../misc/object-conditions/basics.rst:509
 msgid "Differences in input fields:"
 msgstr "Разлике у пољима за унос:"
 
-#: ../misc/object-conditions/basics.rst:481
+#: ../misc/object-conditions/basics.rst:499
 msgid ""
 "Please note that the input field for tokens doesn't support the comma as "
 "separator (as in the input field for tags). If you use the comma in the "
@@ -20858,7 +20967,7 @@ msgstr ""
 "пољу за унос за ознаке). Ако користите зарез у пољу за унос значки, зарез ће "
 "бити укључен у вашу значку."
 
-#: ../misc/object-conditions/basics.rst:485
+#: ../misc/object-conditions/basics.rst:503
 msgid "**Example**:"
 msgstr "**Пример**:"
 
@@ -20866,7 +20975,7 @@ msgstr "**Пример**:"
 msgid "Example of comma usage in token input field"
 msgstr "Пример употребе зареза у пољу за унос значки"
 
-#: ../misc/object-conditions/basics.rst:490
+#: ../misc/object-conditions/basics.rst:508
 msgid ""
 "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
 "in one token)."
@@ -20874,11 +20983,11 @@ msgstr ""
 "``A`` додато са ентером/табом, ``B`` и ``C`` одвојени зарезом (што резултира "
 "једном значком)."
 
-#: ../misc/object-conditions/basics.rst:496
+#: ../misc/object-conditions/basics.rst:514
 msgid "Multi-Select Operator Examples"
 msgstr "Примери оператор поља вишеструког избора"
 
-#: ../misc/object-conditions/basics.rst:498
+#: ../misc/object-conditions/basics.rst:516
 msgid ""
 "The ``contains`` family of operators for multi-select fields compares two "
 "sets of values: the values currently in the field and the values specified "
@@ -20890,7 +20999,7 @@ msgstr ""
 "приказују вредности услова као наранџасти круг и вредности поља као плави "
 "круг."
 
-#: ../misc/object-conditions/basics.rst:503
+#: ../misc/object-conditions/basics.rst:521
 msgid ""
 "Be aware that these operators behave **differently** in :doc:`core workflows "
 "</system/core-workflows>`. See :ref:`core workflow condition operators <core-"
@@ -20900,12 +21009,12 @@ msgstr ""
 "токовима </system/core-workflows>`. Погледајте :ref:`операторе услова радних "
 "токова <core-workflow-condition-examples>` за детаљно поређење."
 
-#: ../misc/object-conditions/basics.rst:509
+#: ../misc/object-conditions/basics.rst:527
 #: ../system/core-workflows/condition-operators.rst:165
 msgid "Example 1: Condition A, B - Field A, B, C"
 msgstr "Пример 1: Услов A, B - Поље A, B, C"
 
-#: ../misc/object-conditions/basics.rst:511
+#: ../misc/object-conditions/basics.rst:529
 #: ../system/core-workflows/condition-operators.rst:167
 msgid ""
 "In this scenario, the field holds the values A, B and C, while the condition "
@@ -20914,7 +21023,7 @@ msgstr ""
 "У овом сцренарију, поље садржи вредности A, B и C, док услов захтева "
 "вредности A и B."
 
-#: ../misc/object-conditions/basics.rst:517
+#: ../misc/object-conditions/basics.rst:535
 #: ../system/core-workflows/condition-operators.rst:173
 msgid ""
 "Venn diagram of condition values A, B and field values A, B, C. A and B are "
@@ -20923,15 +21032,15 @@ msgstr ""
 "Венов дијаграм вредности услова A, B и вредности поља A, B, C. A и B се "
 "налазе у оба круга, C само у кругу поља."
 
-#: ../misc/object-conditions/basics.rst:517
+#: ../misc/object-conditions/basics.rst:535
 #: ../system/core-workflows/condition-operators.rst:173
 msgid "Condition values ``A, B`` overlap with field values ``A, B, C``."
 msgstr "Вредности услова ``A, B`` се секу са вредностима поља ``A, B, C``."
 
-#: ../misc/object-conditions/basics.rst:524
-#: ../misc/object-conditions/basics.rst:558
-#: ../misc/object-conditions/basics.rst:595
-#: ../misc/object-conditions/basics.rst:627
+#: ../misc/object-conditions/basics.rst:542
+#: ../misc/object-conditions/basics.rst:576
+#: ../misc/object-conditions/basics.rst:613
+#: ../misc/object-conditions/basics.rst:645
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/core-workflows/condition-operators.rst:141
 #: ../system/core-workflows/condition-operators.rst:180
@@ -20941,10 +21050,10 @@ msgstr "Вредности услова ``A, B`` се секу са вредно
 msgid "Operator"
 msgstr "Оператор"
 
-#: ../misc/object-conditions/basics.rst:525
-#: ../misc/object-conditions/basics.rst:559
-#: ../misc/object-conditions/basics.rst:596
-#: ../misc/object-conditions/basics.rst:628
+#: ../misc/object-conditions/basics.rst:543
+#: ../misc/object-conditions/basics.rst:577
+#: ../misc/object-conditions/basics.rst:614
+#: ../misc/object-conditions/basics.rst:646
 #: ../system/core-workflows/condition-operators.rst:181
 #: ../system/core-workflows/condition-operators.rst:221
 #: ../system/core-workflows/condition-operators.rst:264
@@ -20952,10 +21061,10 @@ msgstr "Оператор"
 msgid "Matches?"
 msgstr "Поклапа се?"
 
-#: ../misc/object-conditions/basics.rst:526
-#: ../misc/object-conditions/basics.rst:560
-#: ../misc/object-conditions/basics.rst:597
-#: ../misc/object-conditions/basics.rst:629
+#: ../misc/object-conditions/basics.rst:544
+#: ../misc/object-conditions/basics.rst:578
+#: ../misc/object-conditions/basics.rst:615
+#: ../misc/object-conditions/basics.rst:647
 #: ../system/core-workflows/condition-operators.rst:182
 #: ../system/core-workflows/condition-operators.rst:222
 #: ../system/core-workflows/condition-operators.rst:265
@@ -20963,30 +21072,30 @@ msgstr "Поклапа се?"
 msgid "Why"
 msgstr "Зашто"
 
-#: ../misc/object-conditions/basics.rst:529
+#: ../misc/object-conditions/basics.rst:547
 #: ../system/core-workflows/condition-operators.rst:185
 msgid "``A`` and ``B`` are in both sets (OR logic)."
 msgstr "``A`` и ``B`` се налазе у оба скупа (OR оператор)."
 
-#: ../misc/object-conditions/basics.rst:532
+#: ../misc/object-conditions/basics.rst:550
 #: ../system/core-workflows/condition-operators.rst:191
 msgid "Both ``A`` and ``B`` are present (AND logic)."
 msgstr "И ``A`` и ``B`` су присутни (AND оператор)."
 
-#: ../misc/object-conditions/basics.rst:535
+#: ../misc/object-conditions/basics.rst:553
 msgid "All condition values are present in the field."
 msgstr "Све вредности услова су присутне у пољу."
 
-#: ../misc/object-conditions/basics.rst:538
+#: ../misc/object-conditions/basics.rst:556
 msgid "The field has values in common with the condition."
 msgstr "Поље дели вредности са условом."
 
-#: ../misc/object-conditions/basics.rst:541
+#: ../misc/object-conditions/basics.rst:559
 #: ../system/core-workflows/condition-operators.rst:203
 msgid "Example 2: Condition A, B, C - Field C, D"
 msgstr "Пример 2: Услов A, B, C - Поље C, D"
 
-#: ../misc/object-conditions/basics.rst:543
+#: ../misc/object-conditions/basics.rst:561
 #: ../system/core-workflows/condition-operators.rst:205
 msgid ""
 "In this scenario, the field holds the values C and D. The condition value C "
@@ -20995,7 +21104,7 @@ msgstr ""
 "У оовом сценарију, поље садржи вредности C и D. Вредност услова C је "
 "присутна у пољу, док A и B нису."
 
-#: ../misc/object-conditions/basics.rst:550
+#: ../misc/object-conditions/basics.rst:568
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Venn diagram of condition values A, B, C and field values C, D.\n"
@@ -21004,33 +21113,33 @@ msgstr ""
 "Венов дијаграм вредности услова A, B, C и вредности поља C, D.\n"
 "Само C је присутно у оба круга."
 
-#: ../misc/object-conditions/basics.rst:550
+#: ../misc/object-conditions/basics.rst:568
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Condition values ``A, B, C`` partially overlap with field values ``C, D``."
 msgstr ""
 "Вредности услова ``A, B, C`` се делимично секу са вредностима поља ``C, D``."
 
-#: ../misc/object-conditions/basics.rst:563
+#: ../misc/object-conditions/basics.rst:581
 #: ../system/core-workflows/condition-operators.rst:225
 msgid "``C`` is in both sets (OR logic)."
 msgstr "``C`` је присутно у оба скупа (OR оператор)."
 
-#: ../misc/object-conditions/basics.rst:566
+#: ../misc/object-conditions/basics.rst:584
 #: ../system/core-workflows/condition-operators.rst:231
 msgid "Only ``C`` of the three condition values is present."
 msgstr "Само вредност ``C`` од три различите вредности услова је присутна."
 
-#: ../misc/object-conditions/basics.rst:569
-#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:587
+#: ../misc/object-conditions/basics.rst:624
 msgid "``A`` and ``B`` are missing from the field."
 msgstr "Вредности ``A`` и ``B`` недостају у пољу."
 
-#: ../misc/object-conditions/basics.rst:572
+#: ../misc/object-conditions/basics.rst:590
 msgid "``C`` is in both the field and the condition."
 msgstr "Вредност ``C`` је присутна и у пољу и у услову."
 
-#: ../misc/object-conditions/basics.rst:574
+#: ../misc/object-conditions/basics.rst:592
 msgid ""
 "This partial overlap is where the two \"not\" operators part ways: "
 "``contains all not`` matches because a single condition value is missing, "
@@ -21042,12 +21151,12 @@ msgstr ""
 "садржи једно`` не поклапа јер је једна заједничка вредност довољна да га "
 "спречи."
 
-#: ../misc/object-conditions/basics.rst:580
+#: ../misc/object-conditions/basics.rst:598
 #: ../system/core-workflows/condition-operators.rst:248
 msgid "Example 3: Condition A, B - Field C, D"
 msgstr "Пример 3: Услов A, B - Поље C, D"
 
-#: ../misc/object-conditions/basics.rst:582
+#: ../misc/object-conditions/basics.rst:600
 #: ../system/core-workflows/condition-operators.rst:250
 msgid ""
 "In this scenario, the field holds the values C and D, which have nothing in "
@@ -21056,7 +21165,7 @@ msgstr ""
 "У овом сценарију, вредност садржи вредности C и D, које се не поклапају са "
 "вредностима услова A и B."
 
-#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:606
 #: ../system/core-workflows/condition-operators.rst:256
 msgid ""
 "Venn diagram of condition values A, B and field values C, D. The two circles "
@@ -21065,35 +21174,35 @@ msgstr ""
 "Венов дијаграм вредности услова A, B и вредности поља C, D. Два круга се не "
 "секу."
 
-#: ../misc/object-conditions/basics.rst:588
+#: ../misc/object-conditions/basics.rst:606
 #: ../system/core-workflows/condition-operators.rst:256
 msgid "Condition values ``A, B`` have no overlap with field values ``C, D``."
 msgstr "Вредности услова ``A, B`` се не секу са вредностима поља ``C, D``."
 
-#: ../misc/object-conditions/basics.rst:600
+#: ../misc/object-conditions/basics.rst:618
 #: ../system/core-workflows/condition-operators.rst:268
 msgid "No value is in both sets."
 msgstr "Ниједна вредност није присутна у оба скупа."
 
-#: ../misc/object-conditions/basics.rst:603
+#: ../misc/object-conditions/basics.rst:621
 #: ../system/core-workflows/condition-operators.rst:274
 msgid "Neither ``A`` nor ``B`` is present."
 msgstr "Ни вредност ``A`` ни вредност ``B`` нису присутне."
 
-#: ../misc/object-conditions/basics.rst:609
-#: ../misc/object-conditions/basics.rst:641
+#: ../misc/object-conditions/basics.rst:627
+#: ../misc/object-conditions/basics.rst:659
 #: ../system/core-workflows/condition-operators.rst:159
 #: ../system/core-workflows/condition-operators.rst:161
 #: ../system/core-workflows/condition-operators.rst:283
 msgid "The field has no value in common with the condition."
 msgstr "Ово поље нема вредност која се поклапа са условом."
 
-#: ../misc/object-conditions/basics.rst:612
+#: ../misc/object-conditions/basics.rst:630
 #: ../system/core-workflows/condition-operators.rst:288
 msgid "Example 4: Condition A, B - Field is empty"
 msgstr "Пример 4: Услов A, B - Поље је празно"
 
-#: ../misc/object-conditions/basics.rst:614
+#: ../misc/object-conditions/basics.rst:632
 #: ../system/core-workflows/condition-operators.rst:290
 msgid ""
 "In this scenario, the field holds no values at all, while the condition asks "
@@ -21102,7 +21211,7 @@ msgstr ""
 "У овом сценарију, поље не садржи ниједну вредност, док услов захтева "
 "вредности A и B."
 
-#: ../misc/object-conditions/basics.rst:620
+#: ../misc/object-conditions/basics.rst:638
 #: ../system/core-workflows/condition-operators.rst:296
 msgid ""
 "Venn diagram of condition values A, B and an empty field. The two circles do "
@@ -21110,31 +21219,31 @@ msgid ""
 msgstr ""
 "Венов дијаграм вредности услова A, B и празног поља. Два круга се не секу."
 
-#: ../misc/object-conditions/basics.rst:620
+#: ../misc/object-conditions/basics.rst:638
 #: ../system/core-workflows/condition-operators.rst:296
 msgid "The field holds no values at all."
 msgstr "Поље не садржи ниједну вредност."
 
-#: ../misc/object-conditions/basics.rst:632
-#: ../misc/object-conditions/basics.rst:635
+#: ../misc/object-conditions/basics.rst:650
+#: ../misc/object-conditions/basics.rst:653
 #: ../system/core-workflows/condition-operators.rst:308
 #: ../system/core-workflows/condition-operators.rst:314
 msgid "No value is present."
 msgstr "Вредност није присутна."
 
-#: ../misc/object-conditions/basics.rst:638
+#: ../misc/object-conditions/basics.rst:656
 msgid "No condition value is present in the field."
 msgstr "Вредност услова није присутна у пољу."
 
-#: ../misc/object-conditions/basics.rst:646
+#: ../misc/object-conditions/basics.rst:664
 msgid "Regex"
 msgstr "Регуларни израз"
 
-#: ../misc/object-conditions/basics.rst:651
+#: ../misc/object-conditions/basics.rst:669
 msgid "Regex support"
 msgstr "Подршка регуларних израза"
 
-#: ../misc/object-conditions/basics.rst:649
+#: ../misc/object-conditions/basics.rst:667
 msgid ""
 "**matches regex** and **does not match regex** are supported only in "
 "Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket "
@@ -21144,11 +21253,11 @@ msgstr ""
 "подржани само у окидачима, бирачу временског обрачуна, postmaster филтерима, "
 "аутоматском додељивању тикета и радном току."
 
-#: ../misc/object-conditions/basics.rst:656
+#: ../misc/object-conditions/basics.rst:675
 msgid "\"Old\" style ``regex:...`` conditions"
 msgstr "Услови са „старим” стилом ``regex:…``"
 
-#: ../misc/object-conditions/basics.rst:654
+#: ../misc/object-conditions/basics.rst:672
 msgid ""
 "If you update your Zammad from 6.0 or prior and you have already conditions "
 "with **contains** or **contains not** including a regex filter (i.e. "
@@ -21159,6 +21268,139 @@ msgstr ""
 "**садржи** или **не садржи** укључујући филтер регуларних израза (нпр. "
 "``regex:^(foo|bar)$``), Zammad ће покушати да их мигрира на нове "
 "**задовољава регуларни израз** и **не задовољава регуларни израз** операторе."
+
+#: ../misc/object-conditions/basics.rst:680
+#, fuzzy
+#| msgid "Email Address"
+msgid "Email Urgency"
+msgstr "Имејл адреса"
+
+#: ../misc/object-conditions/basics.rst:682
+msgid ""
+"Zammad derives the **Email urgency** from several message headers. The table "
+"shows what each of them has to state. Header values are checked case-"
+"insensitively, so ``High`` and ``high`` are both recognized:"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:690
+#, fuzzy
+#| msgid "Header Color"
+msgid "Header"
+msgstr "Боја заглавља"
+
+#: ../misc/object-conditions/basics.rst:691
+msgid "high"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:692
+#, fuzzy
+#| msgid "``2 normal``"
+msgid "normal"
+msgstr "``2 normal``"
+
+#: ../misc/object-conditions/basics.rst:693
+msgid "low"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:694
+#, fuzzy
+#| msgid "``report``"
+msgid "``Importance``"
+msgstr "``report``"
+
+#: ../misc/object-conditions/basics.rst:695
+msgid "``high``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:696
+#: ../misc/object-conditions/basics.rst:700
+#, fuzzy
+#| msgid "``2 normal``"
+msgid "``normal``"
+msgstr "``2 normal``"
+
+#: ../misc/object-conditions/basics.rst:697
+msgid "``low``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:698
+#, fuzzy
+#| msgid "Priority"
+msgid "``Priority``"
+msgstr "Приоритет"
+
+#: ../misc/object-conditions/basics.rst:699
+#, fuzzy
+#| msgid "``agent``"
+msgid "``urgent``"
+msgstr "``agent``"
+
+#: ../misc/object-conditions/basics.rst:701
+#, fuzzy
+#| msgid "``agent``"
+msgid "``non-urgent``"
+msgstr "``agent``"
+
+#: ../misc/object-conditions/basics.rst:702
+#, fuzzy
+#| msgid "Priority"
+msgid "``X-Priority``"
+msgstr "Приоритет"
+
+#: ../misc/object-conditions/basics.rst:703
+#, fuzzy
+#| msgid "``17``, ``5281``, ..."
+msgid "``1``, ``2``"
+msgstr "``17``, ``5281``, ..."
+
+#: ../misc/object-conditions/basics.rst:704
+msgid "``3``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:705
+#, fuzzy
+#| msgid "``17``, ``5281``, ..."
+msgid "``4``, ``5``"
+msgstr "``17``, ``5281``, ..."
+
+#: ../misc/object-conditions/basics.rst:706
+msgid "``X-MSMail-Priority``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:707
+msgid "``High``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:708
+#, fuzzy
+#| msgid "``2 normal``"
+msgid "``Normal``"
+msgstr "``2 normal``"
+
+#: ../misc/object-conditions/basics.rst:709
+msgid "``Low``"
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:711
+msgid ""
+"The headers are checked in the order of the table. ``Priority``, ``X-"
+"Priority`` and ``X-MSMail-Priority`` only count when they state a value "
+"Zammad recognizes, otherwise the next header is used. ``Importance`` is "
+"different: when it states a value, Zammad uses that value alone. If it does "
+"not recognize the value, the message has no urgency."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:717
+msgid ""
+"For ``X-Priority``, only the leading digit counts, so ``1 (Highest)`` still "
+"reads as high."
+msgstr ""
+
+#: ../misc/object-conditions/basics.rst:720
+msgid ""
+"A message that states no urgency has none. The **is none of** operator also "
+"matches such messages."
+msgstr ""
 
 #: ../misc/object-conditions/expert-mode.rst:2
 msgid "Expert Mode"
@@ -21517,7 +21759,7 @@ msgstr ""
 
 #: ../misc/unprocessable-emails.rst:2
 msgid "Unprocessable Emails"
-msgstr ""
+msgstr "Имејл поруке које се не могу обрадити"
 
 #: ../misc/unprocessable-emails.rst:4
 msgid ""
@@ -21526,6 +21768,10 @@ msgid ""
 "email`` instead, so that the request stays visible and an agent can pick it "
 "up."
 msgstr ""
+"Zammad претвара долазне имејл поруке у тикете. Када имејл порука уопште не "
+"може да се обради, Zammad је не одбацује. Уместо тога отвара тикет са "
+"насловом ``Имејл порука која се не може обрадити``, тако да захтев остаје "
+"видљив и оператер може да га преузме."
 
 #: ../misc/unprocessable-emails.rst:9
 msgid ""
@@ -21533,12 +21779,13 @@ msgid ""
 "went wrong. That is what makes the ticket workable although Zammad could not "
 "read the email."
 msgstr ""
+"Такав тикет садржи целу имејл поруку онако како је стигла, као и дневник "
+"онога што није успело. Управо због тога се са тикетом може радити иако "
+"Zammad није могао да прочита имејл поруку."
 
 #: ../misc/unprocessable-emails.rst:14
-#, fuzzy
-#| msgid "Ticket"
 msgid "Error Tickets"
-msgstr "Тикет"
+msgstr "Тикети о грешкама"
 
 #: ../misc/unprocessable-emails.rst:16
 msgid ""
@@ -21546,6 +21793,9 @@ msgid ""
 "created, so changing the default language later does not rename tickets that "
 "already exist."
 msgstr ""
+"Zammad узима наслов на подразумеваном језику који важи у тренутку отварања "
+"тикета, па каснија промена подразумеваног језика не мења наслове тикета који "
+"већ постоје."
 
 #: ../misc/unprocessable-emails.rst:20
 msgid ""
@@ -21554,30 +21804,36 @@ msgid ""
 "that channel has no group, Zammad uses the group that owns the recipient "
 "address of the email, and falls back to the first active group."
 msgstr ""
+"Тикет почиње у стању које је подешено као подразумевано за нове тикете и "
+"додељује се групи имејл канала који је преузео поруку. Ако тај канал нема "
+"групу, Zammad користи групу којој припада адреса примаоца имејл поруке, а у "
+"крајњем случају прву активну групу."
 
 #: ../misc/unprocessable-emails.rst:25
 msgid ""
 "The ticket carries a single internal note of the system account with two "
 "attachments:"
-msgstr ""
+msgstr "Тикет садржи једну интерну напомену системског налога са два прилога:"
 
 #: ../misc/unprocessable-emails.rst:29
 msgid "``unprocessable_email.eml``"
-msgstr ""
+msgstr "``unprocessable_email.eml``"
 
 #: ../misc/unprocessable-emails.rst:29
 msgid "The raw email as it arrived."
-msgstr ""
+msgstr "Изворни имејл онако како је стигао."
 
 #: ../misc/unprocessable-emails.rst:33
 msgid "``processing_log.txt``"
-msgstr ""
+msgstr "``processing_log.txt``"
 
 #: ../misc/unprocessable-emails.rst:32
 msgid ""
 "When processing failed and what Zammad reported about the failure. Comparing "
 "it with the raw email shows whether the email or Zammad is at fault."
 msgstr ""
+"Када обрада није успела и шта је Zammad пријавио о грешци. Поређење са "
+"изворним имејлом показује да ли је проблем у имејл поруци или у Zammad-у."
 
 #: ../misc/unprocessable-emails.rst:35
 msgid ""
@@ -21586,42 +21842,49 @@ msgid ""
 "``Download raw email`` and ``Download processing log`` buttons, which "
 "download exactly those two attachments."
 msgstr ""
+"Сама напомена се не приказује. Уместо ње, разговор приказује упозорење да "
+"имејл порука није могла да се обради. Упозорење нуди и дугмад ``Преузми "
+"изворни имејл`` и ``Преузми дневник обраде``, која преузимају управо та два "
+"прилога."
 
 #: ../misc/unprocessable-emails.rst:41
-#, fuzzy
-#| msgid "Common Errors"
 msgid "Common Reasons"
-msgstr "Уобичајене грешке"
+msgstr "Уобичајени узроци"
 
 #: ../misc/unprocessable-emails.rst:43
 msgid ""
 "Zammad creates an error ticket whenever processing fails. The usual causes "
 "are:"
 msgstr ""
+"Zammad отвара тикет о грешци кад год обрада не успе. Уобичајени узроци су:"
 
 #: ../misc/unprocessable-emails.rst:47
 msgid "**Unreadable message**"
-msgstr ""
+msgstr "**Нечитљива порука**"
 
 #: ../misc/unprocessable-emails.rst:46
 msgid ""
 "The email has no header field Zammad can read. This catches input that is "
 "not an email at all, for example plain text."
 msgstr ""
+"Имејл порука нема ниједно поље заглавља које Zammad може да прочита. Тако се "
+"хвата унос који уопште није имејл порука, на пример обичан текст."
 
 #: ../misc/unprocessable-emails.rst:51
 msgid "**Processing exceeds the time limit**"
-msgstr ""
+msgstr "**Обрада прекорачује временско ограничење**"
 
 #: ../misc/unprocessable-emails.rst:50
 msgid ""
 "Zammad stops processing a single email after three minutes. Big or unusual "
 "messages can exceed that."
 msgstr ""
+"Zammad прекида обраду појединачне имејл поруке после три минута. Велике или "
+"необичне поруке могу да прекораче то ограничење."
 
 #: ../misc/unprocessable-emails.rst:56
 msgid "**Unexpected processing error**"
-msgstr ""
+msgstr "**Неочекивана грешка при обради**"
 
 #: ../misc/unprocessable-emails.rst:54
 msgid ""
@@ -21629,18 +21892,21 @@ msgid ""
 "names what Zammad reported, which is what to hand to Zammad support when the "
 "email itself is fine."
 msgstr ""
+"Било шта друго што не успе док Zammad чита имејл поруку. Дневник обраде "
+"наводи шта је Zammad пријавио, а то је оно што треба проследити Zammad "
+"подршци када је сама имејл порука исправна."
 
 #: ../misc/unprocessable-emails.rst:59
 msgid "Email Without a Usable Sender"
-msgstr ""
+msgstr "Имејл порука без употребљивог пошиљаоца"
 
 #: ../misc/unprocessable-emails.rst:61
 msgid "A broken sender does not produce an error ticket."
-msgstr ""
+msgstr "Неисправан пошиљалац не доводи до отварања тикета о грешци."
 
 #: ../misc/unprocessable-emails.rst:67
 msgid "**Malformed sender address**"
-msgstr ""
+msgstr "**Неправилно формирана адреса пошиљаоца**"
 
 #: ../misc/unprocessable-emails.rst:64
 msgid ""
@@ -21649,40 +21915,48 @@ msgid ""
 "Nothing is sent to an address Zammad could not read, and later emails from "
 "the same sender land on that same customer."
 msgstr ""
+"Zammad додаје клијента на основу адресе коју може да прочита: адреса постаје "
+"корисничко име клијента, а клијент не добија имејл адресу. Ништа се не шаље "
+"на адресу коју Zammad није могао да прочита, а касније имејл поруке истог "
+"пошиљаоца стижу код тог истог клијента."
 
 #: ../misc/unprocessable-emails.rst:71
-#, fuzzy
-#| msgid "**contains all**"
 msgid "**No sender at all**"
-msgstr "**садржи све**"
+msgstr "**Пошиљалац потпуно недостаје**"
 
 #: ../misc/unprocessable-emails.rst:70
 msgid ""
 "The ticket is created for the system account. It has no customer, and the "
 "customer column of an overview shows ``-`` instead of a name."
 msgstr ""
+"Тикет се отвара за системски налог. Нема клијента, а колона клијента у "
+"прегледу приказује ``-`` уместо имена."
 
 #: ../misc/unprocessable-emails.rst:74
-#, fuzzy
-#| msgid "Handling of priorities"
 msgid "Handling an Error Ticket"
-msgstr "Руковање приоритетима"
+msgstr "Поступање са тикетом о грешци"
 
 #: ../misc/unprocessable-emails.rst:76
 msgid "Read the raw email to see who wrote and what the request was."
 msgstr ""
+"Прочитајте изворни имејл да бисте видели ко је писао и какав је био захтев."
 
 #: ../misc/unprocessable-emails.rst:77
 msgid ""
 "Use **Change customer** to attach the ticket to the right customer, also "
 "when it has none yet, and continue working it like any other ticket."
 msgstr ""
+"Помоћу **Измени клијента** повежите тикет са одговарајућим клијентом, и онда "
+"када тикет још нема клијента, па наставите да радите на њему као на сваком "
+"другом тикету."
 
 #: ../misc/unprocessable-emails.rst:79
 msgid ""
 "If the email makes no sense at all, read the processing log, then close or "
 "delete the ticket."
 msgstr ""
+"Ако имејл порука уопште нема смисла, прочитајте дневник обраде, а затим "
+"затворите или избришите тикет."
 
 #: ../misc/unprocessable-emails.rst:81
 msgid ""
@@ -21690,10 +21964,13 @@ msgid ""
 "whose mail keeps failing cannot be caught by them. Block such a sender in "
 "the mailbox itself."
 msgstr ""
+"Postmaster филтери се примењују само на имејл поруке које је Zammad могао да "
+"обради, па пошиљалац чије поруке стално не успевају не може њима да се "
+"ухвати. Блокирајте таквог пошиљаоца у самом поштанском сандучету."
 
 #: ../misc/unprocessable-emails.rst:86
 msgid "Reprocessing a Repaired Email"
-msgstr ""
+msgstr "Поновна обрада поправљене имејл поруке"
 
 #: ../misc/unprocessable-emails.rst:88
 msgid ""
@@ -21701,6 +21978,9 @@ msgid ""
 "emails only work on records from before 7.3, and an error ticket carries no "
 "such record."
 msgstr ""
+"Zammad нема начин да поново обради тикет о грешци. Rake задаци за неуспешне "
+"имејл поруке раде само са записима из времена пре верзије 7.3, а тикет о "
+"грешци не садржи такав запис."
 
 #: ../misc/unprocessable-emails.rst:92
 msgid ""
@@ -21711,6 +21991,12 @@ msgid ""
 "that is still broken creates another error ticket. The first one stays "
 "behind, to be closed, merged or deleted."
 msgstr ""
+"Поправљена копија ипак може да постане тикет: преузмите изворни имејл, "
+"исправите оно што га је учинило нечитљивим и вратите датотеку у Zammad "
+"помоћу конзолне команде са странице :doc:`/channels/email/advanced/"
+"fetchmail`. Zammad је обрађује као поруку која стиже у поштанско сандуче, "
+"што значи да копија која је и даље неисправна отвара нови тикет о грешци. "
+"Први тикет остаје и треба га затворити, спојити или избрисати."
 
 #: ../misc/unprocessable-emails.rst:100 ../system/monitoring.rst:2
 msgid "Monitoring"
@@ -21725,6 +22011,12 @@ msgid ""
 "commands.html>` page describes how to reprocess such a record, which turns "
 "it into a ticket."
 msgstr ""
+"Имејл поруке које не могу да се обраде више се не приказују у надгледању. "
+"Zammad их је до верзије 7.3 евидентирао као неуспешне имејл поруке и "
+"пријављивао њихов број. Записи из времена пре ажурирања остају и пријављују "
+"се све док се не уклоне. Страница :docs:`Администрација путем конзоле </"
+"admin/console/other-useful-commands.html>` описује како се такав запис "
+"поново обрађује, чиме се претвара у тикет."
 
 #: ../misc/variables.rst:4
 msgid ""
@@ -29081,16 +29373,6 @@ msgid "API"
 msgstr "API"
 
 #: ../system/api.rst:4
-#, fuzzy
-#| msgid ""
-#| "Zammad comes with a REST API that allows external applications and "
-#| "scripts to read and write data of your Zammad instance without using the "
-#| "web interface. The API endpoints themselves are always available, the "
-#| "settings on this tab only decide how clients authenticate. The tab "
-#| "*System > API* has two jobs: it decides which authentication methods "
-#| "Zammad accepts for API requests and it manages the applications that use "
-#| "Zammad as an OAuth provider. The ``admin.api`` permission is required to "
-#| "access the tab."
 msgid ""
 "Zammad comes with a REST API that allows external applications and scripts "
 "to read and write data of your Zammad instance without using the web "
@@ -29100,11 +29382,9 @@ msgid ""
 msgstr ""
 "Zammad долази са REST API-јем који омогућава спољним апликацијама и "
 "скриптама да читају и уписују податке ваше Zammad инстанце без коришћења веб "
-"интерфејса. Саме API путање су увек доступне, а подешавања на овом екрану "
-"само одређују како се клијенти аутентификују. Екран *Систем > API* има две "
-"улоге: одређује које методе аутентификације Zammad прихвата за API захтеве и "
-"управља апликацијама које користе Zammad као OAuth провајдера. За приступ "
-"овом екранз потребна је дозвола ``admin.api``."
+"интерфејса. Саме API путање су увек доступне, а подешавања на овој страници "
+"само одређују како се клијенти аутентификују и да ли MCP сервер одговара. За "
+"приступ овој страници потребна је дозвола ``admin.api``."
 
 #: ../system/api.rst:10
 msgid ""
@@ -29117,20 +29397,16 @@ msgstr ""
 "документације."
 
 #: ../system/api.rst:14
-#, fuzzy
-#| msgid ""
-#| "Zammad supports three ways for a client to authenticate against the API. "
-#| "The first two are toggles on this page, the third one comes with the "
-#| "OAuth applications further down:"
 msgid ""
 "Zammad supports three ways for a client to authenticate against the REST "
 "API. This overview only names them, the settings themselves are organized "
 "differently: the first two methods are toggles on the *Token access* tab, "
 "the third one belongs to the OAuth applications on the *OAuth* tab:"
 msgstr ""
-"Zammad подржава три начина за аутентификацију API клијента. Прва два су "
-"доступне као прекидачи на овој страници, а трећи начин је омогућен преко "
-"OAuth апликација даље доле:"
+"Zammad подржава три начина на које се клијент може аутентификовати према "
+"REST API-ју. Овај преглед их само наводи, а сама подешавања су организована "
+"другачије: прва два начина су прекидачи на језичку *Приступ путем кључа*, а "
+"трећи припада OAuth апликацијама на језичку *OAuth*:"
 
 #: ../system/api.rst:22
 msgid "Personal access token"
@@ -29165,20 +29441,14 @@ msgid "OAuth2 access token"
 msgstr "OAuth2 приступни кључ"
 
 #: ../system/api.rst:30
-#, fuzzy
-#| msgid ""
-#| "A token an application receives for a user after the user authorized the "
-#| "application. It is managed with the applications further down on this "
-#| "page. Unlike the other two methods it has no toggle and cannot be "
-#| "switched off."
 msgid ""
 "A token an application receives for a user after the user authorized the "
 "application. It is managed with the applications on the *OAuth* tab. Unlike "
 "the other two methods it has no toggle and cannot be switched off."
 msgstr ""
 "Кључ који апликација добија за корисника након што корисник ауторизује "
-"апликацију. Управља преко апликација даље на овој страници. За разлику од "
-"остале две методе, нема прекидач и не може се искључити."
+"апликацију. Њиме се управља преко апликација на језичку *OAuth*. За разлику "
+"од остале две методе, нема прекидач и не може се искључити."
 
 #: ../system/api.rst:35 ../system/api.rst:44
 msgid "Token Access"
@@ -29190,6 +29460,9 @@ msgid ""
 "described in the following three sections: direct authentication of the REST "
 "API and the MCP server."
 msgstr ""
+"Први језичак странице зове се *Приступ путем кључа*. На њему су прекидачи "
+"описани у следећа три одељка: директна аутентификација за REST API и MCP "
+"сервер."
 
 #: ../system/api.rst:46
 msgid ""
@@ -29299,10 +29572,8 @@ msgstr ""
 "преусмерени на администратора."
 
 #: ../system/api.rst:104
-#, fuzzy
-#| msgid "Video Servers"
 msgid "MCP Server"
-msgstr "Видео сервери"
+msgstr "MCP сервер"
 
 #: ../system/api.rst:106
 msgid ""
@@ -29312,6 +29583,11 @@ msgid ""
 "Nothing has to be installed or run in addition, the server is part of every "
 "installation."
 msgstr ""
+"Zammad одговара на *Model Context Protocol* (MCP) на сопственом серверу, "
+"поред REST API-ја. Преко њега AI клијент (на пример, апликација за ћаскање "
+"или алат за програмирање) чита, проналази, мења и отвара тикете у вашем "
+"Zammad-у. Ништа не мора додатно да се инсталира нити покреће, сервер је део "
+"сваке инсталације."
 
 #: ../system/api.rst:112
 msgid ""
@@ -29319,6 +29595,9 @@ msgid ""
 "is off by default. While it is off, Zammad refuses every request to the "
 "server, whatever token the request carries."
 msgstr ""
+"Прекидач **MCP сервер** укључује сервер за целу инсталацију. Подразумевано "
+"је искључен. Док је искључен, Zammad одбија сваки захтев упућен серверу, без "
+"обзира на то који кључ захтев носи."
 
 #: ../system/api.rst:116
 msgid ""
@@ -29329,22 +29608,25 @@ msgid ""
 "permissions, such as customers, get no tools. See the :user-docs:`user "
 "documentation </extras/mcp-server.html>` for how a user connects a client."
 msgstr ""
+"Клијенти се аутентификују личним приступним кључевима, па сервер ради само "
+"док је :ref:`Приступ путем кључа <system-api-token-access>` укључен. Клијент "
+"може да ради тачно оно што смеју кључ и његов власник, ништа више: сваки "
+"алат захтева дозволу ``ticket.agent``. Корисници без дозвола оператера, као "
+"што су клијенти, не добијају никакве алате. Погледајте :user-"
+"docs:`корисничку документацију </extras/mcp-server.html>` да бисте сазнали "
+"како корисник повезује клијент."
 
 #: ../system/api.rst:123
-#, fuzzy
-#| msgid ""
-#| "The example shown next to the toggle uses the **Fully Qualified Domain "
-#| "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
-#| "system/base>`."
 msgid ""
 "When the toggle is on, the page shows the address of the server and an "
 "example for connecting a client. Both use the **Fully Qualified Domain "
 "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
 "system/base>`."
 msgstr ""
-"Пример приказан поред прекидача користи **квалификовано назив домена** и "
-"**HTTP протокол** из Zammad-ових :doc:`основних подешавања </settings/system/"
-"base>`."
+"Када је прекидач укључен, страница приказује адресу сервера и пример за "
+"повезивање клијента. И адреса и пример користе **Квалификовани назив "
+"домена** и **HTTP протокол** из Zammad-ових :doc:`основних подешавања </"
+"settings/system/base>`."
 
 #: ../system/api.rst:127
 msgid ""
@@ -29354,6 +29636,11 @@ msgid ""
 "fail, and browser requests from other origins are refused to protect the "
 "server against DNS rebinding."
 msgstr ""
+"Zammad одговара само када је захтев упућен на **Квалификовани назив "
+"домена**, **Алтернативни квалификовани назив домена** или на повратну адресу "
+"(``localhost``, ``127.0.0.1``, ``::1``). Захтеви упућени на другу адресу не "
+"успевају, а захтеви из претраживача са другог порекла (origin) одбијају се "
+"како би се сервер заштитио од DNS rebinding напада."
 
 #: ../system/api.rst:133
 msgid ""
@@ -29364,6 +29651,12 @@ msgid ""
 "approval sends nothing, and the client can then offer to save the text as "
 "the ticket's shared draft."
 msgstr ""
+"Где AI клијент то може да прикаже, Zammad тражи од корисника да одобри "
+"поруку пре него што она стигне до клијента. Захтев приказује цео текст, "
+"примаоце и видљивост (form elicitation, почев од MCP ревизије 2026-07-28), а "
+"Zammad шаље поруку тек када је корисник ту прихвати. Ако корисник одбије "
+"одобрење, ништа се не шаље, а AI клијент тада може да понуди да текст сачува "
+"као заједнички нацрт тикета."
 
 #: ../system/api.rst:139
 msgid ""
@@ -29376,6 +29669,13 @@ msgid ""
 "enabled in the client, because a client that runs them without a prompt "
 "sends a message without any further question."
 msgstr ""
+"AI клијент који не може да прикаже формулар ослања се на сопствено "
+"одобравање позива алата, јер измена преко REST API-ја истим кључем пролази "
+"без додатног одобрења. Код две измене корисниково „да” у разговору замењује "
+"формулар: Zammad замењује заједнички нацрт који већ постоји и затвара тикет "
+"са недовршеним списком задатака тек пошто је AI клијент питао, а корисник "
+"пристао. Држите одобравање позива алата укљученим у AI клијенту, јер клијент "
+"који их покреће без упита шаље поруку без икаквог додатног питања."
 
 #: ../system/api.rst:147
 msgid ""
@@ -29384,22 +29684,16 @@ msgid ""
 "the access of each tool and the limits that apply, is part of the system "
 "documentation: :docs:`MCP tool reference </api/mcp.html>`."
 msgstr ""
+"AI клијент ради са алатима за читање и измену тикета, за претрагу, као и за "
+"заједничке нацрте и чланке базе знања. Комплетна листа, са приступом сваког "
+"алата и ограничењима која важе, део је системске "
+"документације: :docs:`Референца MCP алата </api/mcp.html>`."
 
 #: ../system/api.rst:153
-#, fuzzy
-#| msgid "OAuth Setup"
 msgid "OAuth"
-msgstr "OAuth подешавање"
+msgstr "OAuth"
 
 #: ../system/api.rst:155
-#, fuzzy
-#| msgid ""
-#| "The lower part of the page manages OAuth applications. An OAuth "
-#| "application is any external software that wants to work with your Zammad "
-#| "data on behalf of a user, e.g. a reporting tool or an integration you "
-#| "develop yourself. Zammad acts as OAuth provider for it: the user logs "
-#| "into Zammad once and authorizes the application, which then works with "
-#| "the REST API as that user and with their permissions."
 msgid ""
 "The second tab of the page is named *OAuth*. An OAuth application is any "
 "external software that wants to work with your Zammad data on behalf of a "
@@ -29408,12 +29702,12 @@ msgid ""
 "the application, which then works with the REST API as that user and with "
 "their permissions."
 msgstr ""
-"Доњи део странице омогућава управљање OAuth апликацијама. OAuth апликације "
-"је било који екстерни софтвер који жели да ради са вашим Zammad подацима у "
-"име корисника, нпр. алат за извештаје или интеграција коју сами развијате. "
-"Zammad се понаша као OAuth провајдер: корисник се пријављује у Zammad и "
-"ауторизује апликацију, која онда ради преко REST API у име тог корисника и "
-"са његовим дозволама."
+"Други језичак странице зове се *OAuth*. OAuth апликација је било који "
+"екстерни софтвер који жели да ради са вашим Zammad подацима у име корисника, "
+"нпр. алат за извештаје или интеграција коју сами развијате. Zammad за њу има "
+"улогу OAuth провајдера: корисник се једном пријављује у Zammad и ауторизује "
+"апликацију, која онда ради преко REST API-ја у име тог корисника и са "
+"његовим дозволама."
 
 #: ../system/api.rst:162
 msgid ""
@@ -29489,12 +29783,6 @@ msgstr ""
 "Zammad ће га приказати у дијалогу."
 
 #: ../system/api.rst:192
-#, fuzzy
-#| msgid ""
-#| "Creating an application does not grant it any access. A user still has to "
-#| "authorize the application once, or you generate an access token with the "
-#| "**Token** action. The bottom of the page lists the two URLs of your "
-#| "instance that an application uses during the authorization:"
 msgid ""
 "Creating an application does not grant it any access. A user still has to "
 "authorize the application once, or you generate an access token with the "
@@ -29502,20 +29790,19 @@ msgid ""
 msgstr ""
 "Додавање апликације јој не омогућава никакав приступ. Корисник и даље мора "
 "једном да одобри апликацији приступ, или ви да генеришете приступни кључ "
-"помоћу радње **Кључ**. При дну странице наведене су две URL адресе ваше "
-"инстанце које апликација користи током ауторизације:"
+"помоћу радње **Кључ**."
 
 #: ../system/api.rst:197
-#, fuzzy
-#| msgid "``Authorization``"
 msgid "Authorization URLs"
-msgstr "``Authorization``"
+msgstr "URL адресе за ауторизацију"
 
 #: ../system/api.rst:199
 msgid ""
 "The bottom of the tab lists the two URLs of your instance that an "
 "application uses during the authorization:"
 msgstr ""
+"На дну језичка наведене су две URL адресе ваше инстанце које апликација "
+"користи током ауторизације:"
 
 #: ../system/api.rst:202
 msgid ""
@@ -30011,10 +30298,6 @@ msgstr "Подудара се ако је датум/време након да�
 msgid "Matches if content is equal to a specified value."
 msgstr "Подудара се ако је садржај једнак датој вредности."
 
-#: ../system/core-workflows/condition-operators.rst:66
-msgid "is any of"
-msgstr "је један од"
-
 #: ../system/core-workflows/condition-operators.rst:67
 msgid "Matches if content is equal to any of specified values."
 msgstr "Подудара се ако је садржај једнак једној од датих вредности."
@@ -30071,10 +30354,6 @@ msgstr "је промењено на"
 #: ../system/core-workflows/condition-operators.rst:81
 msgid "Matches if content is modified to a specific value."
 msgstr "Подудара се ако је садржај промењен на дату вредност."
-
-#: ../system/core-workflows/condition-operators.rst:84
-msgid "is none of"
-msgstr "није ниједан од"
 
 #: ../system/core-workflows/condition-operators.rst:85
 msgid "Matches if content is none of any specified values."
@@ -35650,13 +35929,6 @@ msgstr ""
 "потенцијалне проблеме."
 
 #: ../system/monitoring.rst:11
-#, fuzzy
-#| msgid ""
-#| "On the monitoring page, you can see the current health state of Zammad "
-#| "under **Current Status** at the bottom. This can be useful if you want to "
-#| "have a look if everything is up and running. As an example, you could "
-#| "have a look in the monitoring when you assume that some emails aren't "
-#| "processed from Zammad."
 msgid ""
 "On the monitoring page, you can see the current health state of Zammad under "
 "**Current Status** at the bottom. This can be useful if you want to have a "
@@ -35668,8 +35940,11 @@ msgid ""
 msgstr ""
 "На страни за надгледање можете видети тренутно стање Zammad-а под **Тренутно "
 "стање** при дну. Ово може бити корисно ако желите да проверите да ли је све "
-"у реду. Као пример, могли бисте да проверите надгледање када претпоставите "
-"да се неке имејл поруке не обрађују од стране Zammad-а."
+"у реду. На пример, надгледање пријављује имејл канал који не може да се "
+"повеже са својим имејл сервером или канал који није преузео имејл поруке "
+"дуже од сат времена. Имејл поруке које не могу да се обраде нису део тога. "
+"Zammad уместо тога отвара тикет са насловом ``Имејл порука која се не може "
+"обрадити``, погледајте :doc:`/misc/unprocessable-emails`."
 
 #: ../system/monitoring.rst:20
 msgid "Monitoring API"
@@ -38249,6 +38524,13 @@ msgstr "Верзија"
 #: ../system/version.rst:4
 msgid "Shows the current Zammad version of your instance."
 msgstr "Приказује тренутну Zammad верзију ваше инстанце."
+
+#~ msgid ""
+#~ "Set the filter to active or inactive. Only active filters are applied to "
+#~ "incoming emails."
+#~ msgstr ""
+#~ "Укључите или искључите филтер. Само укључени филтери се извршавају над "
+#~ "примљеним имејл порукама."
 
 #~ msgid "Authentication Methods"
 #~ msgstr "Методи аутентификације"
@@ -45440,9 +45722,6 @@ msgstr "Приказује тренутну Zammad верзију ваше ин�
 
 #~ msgid "Response"
 #~ msgstr "Response"
-
-#~ msgid "Contains the remotes response header."
-#~ msgstr "Садржи заглавље одговора удаљеног сервера."
 
 #~ msgid "Nested groups are not supported."
 #~ msgstr "Угнежђене групе нису подржане."
