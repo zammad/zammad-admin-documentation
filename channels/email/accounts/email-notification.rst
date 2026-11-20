@@ -74,10 +74,8 @@ nothing is saved. There is no way to save a notification channel without an
 accepted test email.
 
 A notification channel verified this way is saved as internal-only. The
-**Email Notification** panel shows this as **Internal email server: yes**; an
-SMTP server which passed the usual check shows **no**. An SMTP server which was
-saved before the update to Zammad 7.4 shows neither until it is saved again,
-and the local MTA has no such line.
+**Email Notification** panel shows this as **Internal email server: yes**. A
+server which passed the usual check has no such line.
 
 .. warning:: An internal-only email server may fail to deliver password reset,
    new device and similar system emails to recipients outside your
