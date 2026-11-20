@@ -97,9 +97,10 @@ Note
 
 Active
    Set the filter to active or inactive. Only active filters are applied to
-   incoming emails. Zammad applies them in alphabetical order of their names.
-   If several filters set the same field, the last one wins. Tags are the
-   exception, as filters add and remove them instead of setting them.
+   incoming emails. Zammad applies them in alphabetical order of their names;
+   filters that share a name run oldest first. If several filters set the same
+   field, the last one wins. Tags are the exception, as filters add and remove
+   them instead of setting them.
 
 Examples
 --------

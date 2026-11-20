@@ -680,7 +680,8 @@ Email Urgency
 ^^^^^^^^^^^^^
 
 Zammad derives the **Email urgency** from several message headers. The table
-shows what each of them has to state:
+shows what each of them has to state. Header values are checked
+case-insensitively, so ``High`` and ``high`` are both recognized:
 
 .. list-table::
    :widths: 25 25 25 25
