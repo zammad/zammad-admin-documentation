@@ -61,12 +61,11 @@ If your server was reached and the login worked, but the test email was
 refused, Zammad shows the reply of your server and asks:
 **Does this email server only deliver to internal recipients?**
 
-Answer with **Yes** to verify the server with a recipient of your choice:
-
-Custom verification email
-   The address the test email is sent to instead. It is pre-filled with your
-   own email address and can be changed to any address your server delivers
-   to. The address is used for this check only and is not stored.
+Answer with **Yes** to verify the server with a recipient of your choice. The
+field **Custom verification email** appears, pre-filled with your own email
+address. You can change it to any address your server delivers to. The test
+email is sent to this address instead. The address is used for this check only
+and is not stored.
 
 The configuration is saved only if your server accepts the email to this
 address. If it is refused as well, you see the reply of your server again and
@@ -95,6 +94,5 @@ server which passed the usual check has no such line.
             notifications
       :align: center
 
-   The wizard, also the guided setup of the new desktop view, verifies your
-   server in the same way and asks the same question for an internal-only
-   email server.
+   The wizard verifies your server in the same way and asks the same question
+   for an internal-only email server.
