@@ -1,5 +1,3 @@
-.. :orphan:
-
 .. hint::
    What is the difference between the
    :doc:`Graph-API- </channels/microsoft365-graph/index>` and
