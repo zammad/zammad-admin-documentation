@@ -105,27 +105,6 @@ Active
 Examples
 --------
 
-Priority Based on Stated Urgency
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Example
-   Automatically raise the priority of messages whose sender marked them as
-   urgent.
-
-Condition
-   **Email urgency:** *is any of* ``High urgency``
-
-Action
-   **Priority:** 3 high
-
-The **Email urgency** condition is offered in the **Expert Settings** group of
-the attribute list. It combines the ``Importance``, ``Priority``, ``X-Priority``
-and ``X-MSMail-Priority`` headers into a single value, so one filter per
-urgency level covers senders that use any of them. You don't need separate
-filters for each header. Have a look at the
-:ref:`Email Urgency <email-urgency>` section of the object conditions page for
-the header mapping.
-
 Group Assignment Based on Sender Domain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
