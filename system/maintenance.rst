@@ -12,6 +12,13 @@ Mode
    The maintenance mode will restrict access to administrative roles only.
    This means agents and customers are logged off.
 
+   .. note::
+
+      Import mode activates the maintenance mode as well, for as long as it
+      stays enabled. Access is then denied to all users without the
+      ``admin.maintenance`` permission. See the
+      :docs:`migration guides </migration/index.html>`.
+
 @Login
    This setting allows you to provide a login message within a green banner
    above the login screen. Click into the green banner in the settings page

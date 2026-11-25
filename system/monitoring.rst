@@ -10,15 +10,11 @@ General
 
 On the monitoring page, you can see the current health state of Zammad under
 **Current Status** at the bottom. This can be useful if you want to have a look
-if everything is up and running.
-As an example, you could have a look in the monitoring when you assume that
-some emails aren't processed from Zammad.
-
-.. note:: **Can't receive an email and the monitoring response is "healthy"?**
-
-   Zammad will just inform you about unprocessable emails. This is not the case
-   for oversized emails. You can adjust the maximum email size in
-   :doc:`../channels/email/settings`.
+if everything is up and running. For example, the monitoring reports an email
+channel that cannot connect to its mail server, or one that has not fetched
+email for more than an hour. Emails that cannot be processed are not part of
+it. Zammad creates a ticket titled ``Unprocessable email`` instead, see
+:doc:`/misc/unprocessable-emails`.
 
 Monitoring API
 --------------

@@ -77,7 +77,53 @@ Password Login
    To help administrators to overcome login issues, Zammad automatically
    offers a password request for administrator users as you can see in the
    screenshot above. This allows you to adjust third-party applications, even
-   if the login doesn't work.
+   if the login doesn't work. Open ``https://<your-zammad>/#admin_password_auth``
+   directly, or use the **Request the password login here** link on the
+   login screen. After entering your username or email address, Zammad sends
+   a one-time login link to your email address, valid for one day. Opening
+   the link shows the password login form, also when
+   :ref:`Automatic Third-party Login <security_automatic_third_party_login>`
+   is active.
+
+.. _security_automatic_third_party_login:
+
+Automatic Third-party Login
+---------------------------
+
+Activates the automatic redirect from the login screen to the sign-in page
+of a :doc:`third-party <third-party>` provider. This works with every
+provider Zammad offers, SAML, OpenID Connect and OAuth providers included.
+Users get sent straight to the provider instead of seeing Zammad's login
+screen and continue to the page they originally requested after signing
+in, e.g. a ticket link from a notification email.
+
+The redirect takes effect only when **Password Login** is deactivated and
+exactly one third-party provider is enabled. Otherwise users sign in
+through the login screen as usual. Zammad also holds the redirect back in
+maintenance mode so administrators keep their way in. The same happens for
+60 seconds when a sign-in attempt returns to Zammad without a session. The
+next visit of the login page after that redirects again. With the redirect
+in place, the administrator fallback under
+:ref:`Password Login <security_password_login>` stays available.
+
+Default: ``no``
+
+.. note::
+
+   After a logout Zammad does not sign users back in automatically, even
+   when their provider session is still valid. What happens next depends on
+   the provider's logout support:
+
+   **With logout support**
+      Logging out of Zammad also ends the session at the provider (SAML
+      with a single logout URL, OpenID Connect with an end session
+      endpoint). The next visit shows the provider's own sign-in page.
+
+   **Without logout support**
+      The session at the provider stays valid. This is the case for all
+      OAuth providers, e.g. Facebook, LinkedIn, GitHub, GitLab, Microsoft,
+      Google or Weibo. Zammad then keeps showing its login screen and
+      users sign in again with a click on the provider's button.
 
 .. _security_session_timeout:
 

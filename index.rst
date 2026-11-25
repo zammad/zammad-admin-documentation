@@ -65,6 +65,7 @@ Zammad Admin Documentation
    :caption: Settings
 
    settings/branding
+   settings/dashboard
    settings/system/index
    settings/security
    settings/ticket
@@ -111,5 +112,6 @@ Zammad Admin Documentation
    misc/composer
    misc/object-conditions/index
    misc/system-notifications
+   misc/unprocessable-emails
    misc/first-steps
    misc/zabbix

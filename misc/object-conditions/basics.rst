@@ -109,6 +109,24 @@ editing a condition. Find them in the following table.
        language detection
 
        service.
+   * - Email
+
+       urgency
+     - Email
+     - Checks the urgency the sender
+
+       stated in the message headers.
+
+       Only available in postmaster
+
+       filters.
+
+       See :ref:`Email Urgency <email-urgency>` below.
+     - - is any of
+       - is none of
+     - - High urgency
+       - Normal urgency
+       - Low urgency
    * - Existing
 
        members
@@ -143,6 +161,20 @@ editing a condition. Find them in the following table.
      - All configured and
 
        active groups.
+   * - Has checklist
+     - Ticket
+     - Checks if the ticket
+
+       has a checklist with
+
+       at least one item.
+
+       Only available in triggers
+
+       and scheduler.
+     - `-`
+     - - yes
+       - no
    * - Organization
      - Ticket,
 
@@ -641,3 +673,49 @@ Regex support
    with **contains** or **contains not** including a regex filter
    (i.e. ``regex:^(foo|bar)$``), Zammad tries to migrate them to the new
    **matches regex** and **does not match regex** operators.
+
+.. _email-urgency:
+
+Email Urgency
+^^^^^^^^^^^^^
+
+Zammad derives the **Email urgency** from several message headers. The table
+shows what each of them has to state. Header values are checked
+case-insensitively, so ``High`` and ``high`` are both recognized:
+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - Header
+     - high
+     - normal
+     - low
+   * - ``Importance``
+     - ``high``
+     - ``normal``
+     - ``low``
+   * - ``Priority``
+     - ``urgent``
+     - ``normal``
+     - ``non-urgent``
+   * - ``X-Priority``
+     - ``1``, ``2``
+     - ``3``
+     - ``4``, ``5``
+   * - ``X-MSMail-Priority``
+     - ``High``
+     - ``Normal``
+     - ``Low``
+
+The headers are checked in the order of the table. ``Priority``, ``X-Priority``
+and ``X-MSMail-Priority`` only count when they state a value Zammad recognizes,
+otherwise the next header is used. ``Importance`` is different: when it states
+a value, Zammad uses that value alone. If it does not recognize the value, the
+message has no urgency.
+
+For ``X-Priority``, only the leading digit counts, so ``1 (Highest)`` still
+reads as high.
+
+A message that states no urgency has none. The **is none of** operator also
+matches such messages.

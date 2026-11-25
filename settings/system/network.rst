@@ -6,6 +6,12 @@ the proxy configuration is also possible via environment variables. You can find
 more information about that in the
 :docs:`proxy section of the system documentation </appendix/proxy.html>`.
 
+Web push notifications of the mobile view are also sent to the push service of
+the browser and use this proxy configuration, including the no-proxy list. The
+addresses to allow are listed in the
+:docs:`web push section of the system documentation
+</appendix/proxy.html#web-push-notifications>`.
+
 .. csv-table:: Proxy configuration comparison
    :header: "", "GUI configuration", "Environment variable"
    :widths: 40, 30, 30

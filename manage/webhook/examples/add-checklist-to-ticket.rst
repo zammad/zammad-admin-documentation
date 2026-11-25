@@ -4,6 +4,12 @@ Add Checklist to Tickets
 Follow the steps below to add a checklist from a template to all tickets after
 they get created.
 
+.. note:: Checklists can also be added without a webhook: triggers, macros and
+   scheduler jobs offer the action **Add checklist template** (see
+   :doc:`Checklist </manage/checklist>`). Only continue below if you need the
+   checklist to be added through Zammad's REST API, e.g. from an external
+   system.
+
 Create a Token
 --------------
 

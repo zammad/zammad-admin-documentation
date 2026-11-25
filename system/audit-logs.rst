@@ -24,7 +24,7 @@ Configuration adjustments and changes of data in the admin area:
 - Calendars, SLAs, time accounting, core workflows, object attributes, public
   links and report profiles
 - System settings and packages
-- AI agents and AI text tools
+- AI providers, AI agents and AI text tools
 - S/MIME, PGP and SSL certificates
 - Knowledge bases and their languages
 

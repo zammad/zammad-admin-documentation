@@ -53,6 +53,10 @@ Control how Zammad **sends and receives email**.
    **Make sure new tickets show up in the right place**
    with automated, if-this-then-that rules for all incoming email.
 
+   Filters can also react on the **Email urgency** a sender stated in the
+   message headers. See :ref:`Email Urgency <email-urgency>` for the headers
+   Zammad derives it from.
+
 :doc:`📜  Signatures <signatures>`
    Customize signatures for all outgoing email.
 

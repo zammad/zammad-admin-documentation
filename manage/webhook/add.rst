@@ -65,9 +65,12 @@ Authentication
       In case of **HTTP Basic Authentication**, provide the password of the user
       here.
 
-HMAC SHA1 Signature Token
-   If set, all sent webhooks contain a `x-hub-signature` header allowing
-   the remote site to verify the request.
+HMAC signature token
+   If set, Zammad signs the body of each webhook request and adds an
+   ``X-Hub-Signature`` header with the HMAC-SHA1 signature as
+   ``sha1=<hex digest>`` and an ``X-Hub-Signature-256`` header with the
+   HMAC-SHA256 signature as ``sha256=<hex digest>``. Drop the prefix before
+   comparing a value with your own signature.
 
    .. note::
 

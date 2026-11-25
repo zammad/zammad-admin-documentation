@@ -14,13 +14,22 @@ Webhook Payload
 Request Headers
 ---------------
 
-Zammad sends the following headers in each webhook POST request:
+Zammad sends the following headers in each webhook request:
 
-:``User-Agent``:        ``"Zammad User Agent"``
-:``X-Zammad-Trigger``:  The name of the originating trigger
-:``X-Zammad-Delivery``: A unique, random ID string
-:``X-Hub-Signature``:   The SHA-1 hash of your HMAC-SHA1 signature token
-                        (assuming you provided one when creating your trigger)
+:``User-Agent``:          ``"Zammad User Agent"``
+:``X-Zammad-Trigger``:    The name of the originating trigger
+:``X-Zammad-Delivery``:   A unique, random ID string
+:``X-Hub-Signature``:     The HMAC-SHA1 signature of the request body as
+                          ``sha1=<hex digest>``, computed with your
+                          signature token as the key. Only sent if you
+                          entered a signature token in the webhook
+:``X-Hub-Signature-256``: The HMAC-SHA256 signature of the request body as
+                          ``sha256=<hex digest>``, computed with your
+                          signature token as the key. Only sent if you
+                          entered a signature token in the webhook
+:``Authorization``:       The credentials of the webhook, as ``Bearer <token>``
+                          with **Bearer Token** or as ``Basic <base64>`` with
+                          **HTTP Basic Authentication**
 
 .. _webhook-payload-default:
 
