@@ -46,12 +46,12 @@ account. It therefore only applies to:
 - logging into an existing local account via
   **automatic account link on initial logon**
 
-No User Creation on Logon
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Skip User Creation on Logon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, Zammad creates a new user account when a user logs in via a
 third-party application for the first time and no matching account exists.
-To prevent this, set **No user creation on logon** to ``yes``. Zammad then
+To prevent this, set **Skip user creation on logon** to ``yes``. Zammad then
 refuses such logins with the message *The user account does not exist.
 Please contact your administrator.* To allow logins only for existing
 accounts, enable this setting together with **Automatic account link on

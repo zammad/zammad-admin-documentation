@@ -113,7 +113,7 @@ of the following conditions apply:
 
 If one of these conditions is not met, Zammad refuses to link the accounts and
 the sign-in fails with an error message: either that the email address is
-already in use by another user, or, if **No user creation on logon** is
+already in use by another user, or, if **Skip user creation on logon** is
 enabled, that the user account does not exist. Affected users can still get
 access: they log in to their existing Zammad account by other means and link
 their Microsoft account themselves under *Profile > Linked Accounts*.
