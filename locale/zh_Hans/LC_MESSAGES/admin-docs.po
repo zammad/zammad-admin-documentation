@@ -696,7 +696,7 @@ msgid "Screenshot shows the dialog for adding or editing a provider"
 msgstr ""
 
 #: ../ai/provider.rst:73 ../channels/email/accounts/account-setup.rst:122
-#: ../misc/object-conditions/basics.rst:238 ../system/objects.rst:158
+#: ../misc/object-conditions/basics.rst:220 ../system/objects.rst:158
 msgid "Type"
 msgstr "类型"
 
@@ -1939,8 +1939,7 @@ msgstr ""
 #: ../channels/email/accounts/account-setup.rst:73
 #: ../channels/email/accounts/secondary-addresses.rst:39
 #: ../channels/email/index.rst:2 ../channels/form.rst:21
-#: ../misc/object-conditions/basics.rst:112
-#: ../misc/object-conditions/basics.rst:115 ../system/objects/types.rst:123
+#: ../system/objects/types.rst:123
 msgid "Email"
 msgstr "Email"
 
@@ -2151,7 +2150,7 @@ msgid ""
 "settings/security/ssl-certificates>`."
 msgstr ""
 
-#: ../includes/ssl-verification-warning.rst:4
+#: ../includes/ssl-verification-warning.rst:2
 msgid ""
 "Please be aware that **turning off SSL verification is a security risk**. It "
 "should only be used temporarily or for testing purposes. If turned off, "
@@ -3282,43 +3281,40 @@ msgid ""
 msgstr ""
 
 #: ../channels/email/filters.rst:109
-msgid "Priority Based on Stated Urgency"
+msgid "Group Assignment Based on Sender Domain"
 msgstr ""
 
-#: ../channels/email/filters.rst:113 ../channels/email/filters.rst:133
-#: ../channels/email/filters.rst:146 ../channels/email/filters.rst:158
-#: ../channels/email/filters.rst:171 ../channels/email/filters.rst:187
-#: ../channels/email/filters.rst:201 ../manage/report-profiles.rst:62
-#: ../misc/variables/article.rst:1 ../misc/variables/config.rst:1
-#: ../misc/variables/current-user.rst:1 ../misc/variables/ticket.rst:1
-#: ../settings/security/base.rst:163
+#: ../channels/email/filters.rst:112 ../channels/email/filters.rst:125
+#: ../channels/email/filters.rst:137 ../channels/email/filters.rst:150
+#: ../channels/email/filters.rst:166 ../channels/email/filters.rst:180
+#: ../manage/report-profiles.rst:62 ../misc/variables/article.rst:1
+#: ../misc/variables/config.rst:1 ../misc/variables/current-user.rst:1
+#: ../misc/variables/ticket.rst:1 ../settings/security/base.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:13
 msgid "Example"
 msgstr "例如"
 
 #: ../channels/email/filters.rst:112
 msgid ""
-"Automatically raise the priority of messages whose sender marked them as "
-"urgent."
+"Automatically move emails from ``@amazon.com`` to the \"Purchasing\" group."
 msgstr ""
 
-#: ../channels/email/filters.rst:116 ../channels/email/filters.rst:136
-#: ../channels/email/filters.rst:149 ../channels/email/filters.rst:161
-#: ../channels/email/filters.rst:174 ../channels/email/filters.rst:190
-#: ../channels/email/filters.rst:204 ../manage/trigger.rst:94
+#: ../channels/email/filters.rst:115 ../channels/email/filters.rst:128
+#: ../channels/email/filters.rst:140 ../channels/email/filters.rst:153
+#: ../channels/email/filters.rst:169 ../channels/email/filters.rst:183
+#: ../manage/trigger.rst:94
 #, fuzzy
 msgid "Condition"
 msgstr "聊天小部件的配置"
 
-#: ../channels/email/filters.rst:116
-msgid "**Email urgency:** *is any of* ``High urgency``"
+#: ../channels/email/filters.rst:115
+msgid "**From:** *matches regex:* ``(\\.|@)amazon\\.com``"
 msgstr ""
 
-#: ../channels/email/filters.rst:119 ../channels/email/filters.rst:139
-#: ../channels/email/filters.rst:152 ../channels/email/filters.rst:164
-#: ../channels/email/filters.rst:179 ../channels/email/filters.rst:193
-#: ../channels/email/filters.rst:207 ../manage/trigger.rst:54
-#: ../manage/trigger.rst:108
+#: ../channels/email/filters.rst:118 ../channels/email/filters.rst:131
+#: ../channels/email/filters.rst:143 ../channels/email/filters.rst:158
+#: ../channels/email/filters.rst:172 ../channels/email/filters.rst:186
+#: ../manage/trigger.rst:54 ../manage/trigger.rst:108
 #: ../manage/webhook/examples/generic-notifications-trigger.rst:32
 #: ../misc/object-conditions/basics.rst:66 ../system/audit-logs.rst:66
 #: ../system/core-workflows/how-do-they-work.rst:60
@@ -3330,134 +3326,110 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: ../channels/email/filters.rst:119 ../channels/email/filters.rst:164
-msgid "**Priority:** 3 high"
-msgstr ""
-
-#: ../channels/email/filters.rst:121
-msgid ""
-"The **Email urgency** condition is offered in the **Expert Settings** group "
-"of the attribute list. It combines the ``Importance``, ``Priority``, ``X-"
-"Priority`` and ``X-MSMail-Priority`` headers into a single value, so one "
-"filter per urgency level covers senders that use any of them. You don't need "
-"separate filters for each header. Have a look at the :ref:`Email Urgency "
-"<email-urgency>` section of the object conditions page for the header "
-"mapping."
-msgstr ""
-
-#: ../channels/email/filters.rst:130
-msgid "Group Assignment Based on Sender Domain"
-msgstr ""
-
-#: ../channels/email/filters.rst:133
-msgid ""
-"Automatically move emails from ``@amazon.com`` to the \"Purchasing\" group."
-msgstr ""
-
-#: ../channels/email/filters.rst:136
-msgid "**From:** *matches regex:* ``(\\.|@)amazon\\.com``"
-msgstr ""
-
-#: ../channels/email/filters.rst:139
+#: ../channels/email/filters.rst:118
 msgid "**Group:** Purchasing"
 msgstr ""
 
-#: ../channels/email/filters.rst:142
+#: ../channels/email/filters.rst:121
 #, fuzzy
 msgid "Organization-Based Ticket Assignment"
 msgstr "组织和部门名称"
 
-#: ../channels/email/filters.rst:145
+#: ../channels/email/filters.rst:124
 msgid ""
 "Automatically dispatch tickets to responsible staff based on the "
 "organization name."
 msgstr ""
 
-#: ../channels/email/filters.rst:149
+#: ../channels/email/filters.rst:128
 msgid "**Organization:** *starts with one of* ``A`` ``B`` ``C``"
 msgstr ""
 
-#: ../channels/email/filters.rst:152
+#: ../channels/email/filters.rst:131
 msgid "**Owner:** Emily Adams"
 msgstr ""
 
-#: ../channels/email/filters.rst:155
+#: ../channels/email/filters.rst:134
 msgid "VIP Customer Handling"
 msgstr ""
 
-#: ../channels/email/filters.rst:158
+#: ../channels/email/filters.rst:137
 msgid "Automatically increase the priority of tickets from a VIP customer."
 msgstr ""
 
-#: ../channels/email/filters.rst:161
+#: ../channels/email/filters.rst:140
 msgid "**From:** *contains* ``ourvipcustomer@example.com``"
 msgstr ""
 
-#: ../channels/email/filters.rst:167
+#: ../channels/email/filters.rst:143
+msgid "**Priority:** 3 high"
+msgstr ""
+
+#: ../channels/email/filters.rst:146
 msgid "Spam Handling"
 msgstr ""
 
-#: ../channels/email/filters.rst:170
+#: ../channels/email/filters.rst:149
 msgid ""
 "Automatically tag and close spam tickets that have been marked as spam by an "
 "external spam filter (e.g. SpamAssassin)."
 msgstr ""
 
-#: ../channels/email/filters.rst:174
+#: ../channels/email/filters.rst:153
 msgid "**X-Spam-Flag:** *contains* ``YES``"
 msgstr ""
 
-#: ../channels/email/filters.rst:177
+#: ../channels/email/filters.rst:156
 msgid "**Tag:** *add* ``spam``"
 msgstr ""
 
-#: ../channels/email/filters.rst:179
+#: ../channels/email/filters.rst:158
 msgid "**State:** closed"
 msgstr ""
 
-#: ../channels/email/filters.rst:182
+#: ../channels/email/filters.rst:161
 msgid "Extract Information from Subject"
 msgstr ""
 
-#: ../channels/email/filters.rst:185
+#: ../channels/email/filters.rst:164
 msgid ""
 "Automatically extract an invoice number from the email subject (with an "
 "unnamed capture group) and write it to the custom object attribute \"Invoice "
 "number\"."
 msgstr ""
 
-#: ../channels/email/filters.rst:190
+#: ../channels/email/filters.rst:169
 msgid "**Subject:** *matches regex* ``.*[Ii]nvoice.*\\D(\\d+).*``"
 msgstr ""
 
-#: ../channels/email/filters.rst:193
+#: ../channels/email/filters.rst:172
 msgid "**Invoice number:** ``#{regexp.1}``"
 msgstr ""
 
-#: ../channels/email/filters.rst:196
+#: ../channels/email/filters.rst:175
 msgid "Extract Information from Email Body"
 msgstr ""
 
-#: ../channels/email/filters.rst:199
+#: ../channels/email/filters.rst:178
 msgid ""
 "Automatically extract an order number from the email body (with a named "
 "capture group) and write it to the custom object attribute \"Order number\"."
 msgstr ""
 
-#: ../channels/email/filters.rst:204
+#: ../channels/email/filters.rst:183
 msgid "**Body:** *matches regex* ``.*[Oo]rder.*\\D(?<order_number>\\d+).*``"
 msgstr ""
 
-#: ../channels/email/filters.rst:207
+#: ../channels/email/filters.rst:186
 msgid "**Order number:** ``#{regexp.order_number}``"
 msgstr ""
 
-#: ../channels/email/filters.rst:210
+#: ../channels/email/filters.rst:189
 #: ../channels/email/filters/system-filters.rst:2
 msgid "System Filters"
 msgstr ""
 
-#: ../channels/email/filters.rst:212
+#: ../channels/email/filters.rst:191
 msgid ""
 "Zammad comes with some built-in system filters by default. You can't see "
 "them in the UI. The intention is to tweak the behavior of Zammad for emails "
@@ -3928,7 +3900,7 @@ msgid ""
 "setup.)"
 msgstr ""
 
-#: ../channels/email/index.rst:58 ../channels/email/index.rst:18
+#: ../channels/email/index.rst:54 ../channels/email/index.rst:14
 msgid ":doc:`🗂️ Filters <filters>`"
 msgstr ""
 
@@ -3938,72 +3910,65 @@ msgid ""
 "then-that rules for all incoming email."
 msgstr ""
 
-#: ../channels/email/index.rst:56 ../channels/email/index.rst:16
-msgid ""
-"Filters can also react on the **Email urgency** a sender stated in the "
-"message headers. See :ref:`Email Urgency <email-urgency>` for the headers "
-"Zammad derives it from."
-msgstr ""
-
-#: ../channels/email/index.rst:61 ../channels/email/index.rst:21
+#: ../channels/email/index.rst:57 ../channels/email/index.rst:17
 msgid ":doc:`📜  Signatures <signatures>`"
 msgstr ""
 
-#: ../channels/email/index.rst:61 ../channels/email/index.rst:21
+#: ../channels/email/index.rst:57 ../channels/email/index.rst:17
 msgid "Customize signatures for all outgoing email."
 msgstr ""
 
-#: ../channels/email/index.rst:73 ../channels/email/index.rst:33
+#: ../channels/email/index.rst:69 ../channels/email/index.rst:29
 msgid ":doc:`⚙️  Settings <settings>`"
 msgstr ""
 
-#: ../channels/email/index.rst:64 ../channels/google/index.rst:42
-#: ../channels/email/index.rst:24
+#: ../channels/email/index.rst:60 ../channels/google/index.rst:42
+#: ../channels/email/index.rst:20
 msgid "Manage options like:"
 msgstr ""
 
-#: ../channels/email/index.rst:66 ../channels/email/index.rst:26
+#: ../channels/email/index.rst:62 ../channels/email/index.rst:22
 msgid "set the “From:” address on system notifications"
 msgstr ""
 
-#: ../channels/email/index.rst:67 ../channels/google/index.rst:45
-#: ../channels/email/index.rst:27
+#: ../channels/email/index.rst:63 ../channels/google/index.rst:45
+#: ../channels/email/index.rst:23
 msgid "raise the limit on attachment sizes"
 msgstr ""
 
-#: ../channels/email/index.rst:68 ../channels/email/index.rst:28
+#: ../channels/email/index.rst:64 ../channels/email/index.rst:24
 msgid "modify subject-line prefixes (*e.g.,* use “AW:” instead of “RE:”)"
 msgstr ""
 
-#: ../channels/email/index.rst:70 ../channels/email/index.rst:30
+#: ../channels/email/index.rst:66 ../channels/email/index.rst:26
 msgid ""
 "Want to **manually edit email subjects** or **always copy parent messages "
 "into your replies**?"
 msgstr ""
 
-#: ../channels/email/index.rst:73 ../channels/email/index.rst:33
+#: ../channels/email/index.rst:69 ../channels/email/index.rst:29
 msgid "Check the ✍️ :doc:`/misc/composer`."
 msgstr ""
 
-#: ../channels/email/index.rst:78 ../channels/email/index.rst:39
+#: ../channels/email/index.rst:74 ../channels/email/index.rst:35
 msgid ":doc:`📇 Header based actions <email-headers>`"
 msgstr ""
 
-#: ../channels/email/index.rst:76 ../channels/google/index.rst:49
-#: ../channels/email/index.rst:36
+#: ../channels/email/index.rst:72 ../channels/google/index.rst:49
+#: ../channels/email/index.rst:32
 msgid "Manipulate auto response behavior or incoming routing."
 msgstr ""
 
-#: ../channels/email/index.rst:78 ../channels/google/index.rst:51
-#: ../channels/email/index.rst:38
+#: ../channels/email/index.rst:74 ../channels/google/index.rst:51
+#: ../channels/email/index.rst:34
 msgid "🤓 This is a very advanced topic."
 msgstr ""
 
-#: ../channels/email/index.rst:81
+#: ../channels/email/index.rst:77
 msgid "Extra Options for Self-Hosted Users"
 msgstr ""
 
-#: ../channels/email/index.rst:83
+#: ../channels/email/index.rst:79
 msgid "If you're too cool for POP3/IMAP/SMTP..."
 msgstr ""
 
@@ -4368,7 +4333,7 @@ msgstr ""
 msgid "Signatures"
 msgstr ""
 
-#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:482
+#: ../channels/email/signatures.rst:9 ../misc/object-conditions/basics.rst:464
 #: ../system/monitoring.rst:9
 msgid "General"
 msgstr ""
@@ -6131,39 +6096,39 @@ msgid ""
 "Zammad."
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:4
+#: ../includes/m365-imap-graph.rst:2
 msgid ""
 "What is the difference between the :doc:`Graph-API- </channels/microsoft365-"
 "graph/index>` and :doc:`IMAP-based M365 channel </channels/microsoft365/"
 "index>`?"
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:8
+#: ../includes/m365-imap-graph.rst:6
 msgid "The Graph-API variant has some advantages over the IMAP-based channel:"
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:10
+#: ../includes/m365-imap-graph.rst:8
 msgid ""
 "Shared mailboxes are implemented in a better way. By using them, you can "
 "save some license costs."
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:12
+#: ../includes/m365-imap-graph.rst:10
 msgid ""
 "The selection of an inbox folder is implemented with a tree-select field in "
 "Zammad. So you can choose a folder from the fetched folder list, which is "
 "much less error-prone."
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:15
+#: ../includes/m365-imap-graph.rst:13
 msgid "It is the future-proof way of connecting to your M365 environment."
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:16
+#: ../includes/m365-imap-graph.rst:14
 msgid "It is more secure and scalable and offers a unified endpoint."
 msgstr ""
 
-#: ../includes/m365-imap-graph.rst:18
+#: ../includes/m365-imap-graph.rst:16
 msgid ""
 "However, there is also a known issue for the Graph-based M365 channel which "
 "is caused by Microsoft: it can happen that the ``From:`` header in outgoing "
@@ -7788,7 +7753,7 @@ msgid ""
 msgstr ""
 
 #: ../channels/whatsapp/setup.rst:94 ../misc/object-conditions/basics.rst:29
-#: ../misc/object-conditions/basics.rst:156
+#: ../misc/object-conditions/basics.rst:138
 #: ../system/integrations/checkmk/admin-settings.rst:14
 msgid "Group"
 msgstr ""
@@ -8286,7 +8251,7 @@ msgstr ""
 msgid "AI"
 msgstr ""
 
-#: ../index.rst:86 ../misc/object-conditions/basics.rst:201
+#: ../index.rst:86 ../misc/object-conditions/basics.rst:183
 #: ../settings/system/index.rst:2
 msgid "System"
 msgstr ""
@@ -8918,17 +8883,17 @@ msgid ""
 msgstr ""
 
 #: ../manage/groups/settings.rst:50 ../manage/groups/settings.rst:71
-#: ../misc/object-conditions/basics.rst:139
-#: ../misc/object-conditions/basics.rst:154
-#: ../misc/object-conditions/basics.rst:176
-#: ../misc/object-conditions/basics.rst:546
-#: ../misc/object-conditions/basics.rst:549
-#: ../misc/object-conditions/basics.rst:580
-#: ../misc/object-conditions/basics.rst:586
-#: ../misc/object-conditions/basics.rst:623
-#: ../misc/object-conditions/basics.rst:626
-#: ../misc/object-conditions/basics.rst:655
-#: ../misc/object-conditions/basics.rst:658
+#: ../misc/object-conditions/basics.rst:121
+#: ../misc/object-conditions/basics.rst:136
+#: ../misc/object-conditions/basics.rst:158
+#: ../misc/object-conditions/basics.rst:528
+#: ../misc/object-conditions/basics.rst:531
+#: ../misc/object-conditions/basics.rst:562
+#: ../misc/object-conditions/basics.rst:568
+#: ../misc/object-conditions/basics.rst:605
+#: ../misc/object-conditions/basics.rst:608
+#: ../misc/object-conditions/basics.rst:637
+#: ../misc/object-conditions/basics.rst:640
 #: ../system/core-workflows/condition-operators.rst:184
 #: ../system/core-workflows/condition-operators.rst:187
 #: ../system/core-workflows/condition-operators.rst:190
@@ -8996,17 +8961,17 @@ msgid ""
 "value."
 msgstr ""
 
-#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:140
-#: ../misc/object-conditions/basics.rst:155
-#: ../misc/object-conditions/basics.rst:177
-#: ../misc/object-conditions/basics.rst:552
-#: ../misc/object-conditions/basics.rst:555
-#: ../misc/object-conditions/basics.rst:583
-#: ../misc/object-conditions/basics.rst:589
-#: ../misc/object-conditions/basics.rst:617
-#: ../misc/object-conditions/basics.rst:620
-#: ../misc/object-conditions/basics.rst:649
-#: ../misc/object-conditions/basics.rst:652
+#: ../manage/groups/settings.rst:74 ../misc/object-conditions/basics.rst:122
+#: ../misc/object-conditions/basics.rst:137
+#: ../misc/object-conditions/basics.rst:159
+#: ../misc/object-conditions/basics.rst:534
+#: ../misc/object-conditions/basics.rst:537
+#: ../misc/object-conditions/basics.rst:565
+#: ../misc/object-conditions/basics.rst:571
+#: ../misc/object-conditions/basics.rst:599
+#: ../misc/object-conditions/basics.rst:602
+#: ../misc/object-conditions/basics.rst:631
+#: ../misc/object-conditions/basics.rst:634
 #: ../system/core-workflows/condition-operators.rst:199
 #: ../system/core-workflows/condition-operators.rst:230
 #: ../system/core-workflows/condition-operators.rst:239
@@ -10854,7 +10819,7 @@ msgid ""
 "permissions."
 msgstr ""
 
-#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:202
+#: ../manage/roles/permissions.rst:11 ../misc/object-conditions/basics.rst:184
 msgid "Agent"
 msgstr ""
 
@@ -12380,7 +12345,7 @@ msgid ""
 "escalated or escalating within the next 10 minutes: ``Escalated Tickets``."
 msgstr ""
 
-#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:222
+#: ../manage/tags.rst:2 ../misc/object-conditions/basics.rst:204
 msgid "Tags"
 msgstr ""
 
@@ -12955,7 +12920,7 @@ msgstr ""
 #: ../manage/time-accounting.rst:181 ../manage/time-accounting.rst:179
 #: ../misc/object-conditions/basics.rst:37
 #: ../misc/object-conditions/basics.rst:89
-#: ../misc/object-conditions/basics.rst:203
+#: ../misc/object-conditions/basics.rst:185
 msgid "Customer"
 msgstr ""
 
@@ -12983,13 +12948,13 @@ msgstr ""
 
 #: ../manage/time-accounting.rst:170 ../misc/object-conditions/basics.rst:26
 #: ../misc/object-conditions/basics.rst:90
-#: ../misc/object-conditions/basics.rst:144
-#: ../misc/object-conditions/basics.rst:157
-#: ../misc/object-conditions/basics.rst:165
-#: ../misc/object-conditions/basics.rst:189
-#: ../misc/object-conditions/basics.rst:205
-#: ../misc/object-conditions/basics.rst:213
-#: ../misc/object-conditions/basics.rst:223 ../misc/variables/ticket.rst:2
+#: ../misc/object-conditions/basics.rst:126
+#: ../misc/object-conditions/basics.rst:139
+#: ../misc/object-conditions/basics.rst:147
+#: ../misc/object-conditions/basics.rst:171
+#: ../misc/object-conditions/basics.rst:187
+#: ../misc/object-conditions/basics.rst:195
+#: ../misc/object-conditions/basics.rst:205 ../misc/variables/ticket.rst:2
 #: ../settings/ticket.rst:2 ../system/core-workflows/learn-by-example.rst:40
 #: ../system/core-workflows/learn-by-example.rst:95
 #: ../system/core-workflows/learn-by-example.rst:143
@@ -13025,8 +12990,8 @@ msgid ""
 msgstr ""
 
 #: ../manage/time-accounting.rst:188 ../misc/object-conditions/basics.rst:28
-#: ../misc/object-conditions/basics.rst:133
-#: ../misc/object-conditions/basics.rst:178 ../settings/branding.rst:16
+#: ../misc/object-conditions/basics.rst:115
+#: ../misc/object-conditions/basics.rst:160 ../settings/branding.rst:16
 msgid "Organization"
 msgstr ""
 
@@ -16156,10 +16121,10 @@ msgstr ""
 
 #: ../misc/object-conditions/basics.rst:36
 #: ../misc/object-conditions/basics.rst:101
-#: ../misc/object-conditions/basics.rst:197
-#: ../misc/object-conditions/basics.rst:233
-#: ../misc/object-conditions/basics.rst:239
-#: ../misc/object-conditions/basics.rst:247
+#: ../misc/object-conditions/basics.rst:179
+#: ../misc/object-conditions/basics.rst:215
+#: ../misc/object-conditions/basics.rst:221
+#: ../misc/object-conditions/basics.rst:229
 msgid "Article"
 msgstr ""
 
@@ -16224,16 +16189,16 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:73
 #: ../misc/object-conditions/basics.rst:92
 #: ../misc/object-conditions/basics.rst:103
-#: ../misc/object-conditions/basics.rst:137
-#: ../misc/object-conditions/basics.rst:152
-#: ../misc/object-conditions/basics.rst:159
-#: ../misc/object-conditions/basics.rst:183
-#: ../misc/object-conditions/basics.rst:191
+#: ../misc/object-conditions/basics.rst:119
+#: ../misc/object-conditions/basics.rst:134
+#: ../misc/object-conditions/basics.rst:141
+#: ../misc/object-conditions/basics.rst:165
+#: ../misc/object-conditions/basics.rst:173
+#: ../misc/object-conditions/basics.rst:181
+#: ../misc/object-conditions/basics.rst:189
 #: ../misc/object-conditions/basics.rst:199
-#: ../misc/object-conditions/basics.rst:207
-#: ../misc/object-conditions/basics.rst:217
-#: ../misc/object-conditions/basics.rst:241
-#: ../misc/object-conditions/basics.rst:251
+#: ../misc/object-conditions/basics.rst:223
+#: ../misc/object-conditions/basics.rst:233
 #: ../system/core-workflows/condition-operators.rst:64
 msgid "is"
 msgstr ""
@@ -16241,16 +16206,16 @@ msgstr ""
 #: ../misc/object-conditions/basics.rst:74
 #: ../misc/object-conditions/basics.rst:93
 #: ../misc/object-conditions/basics.rst:104
-#: ../misc/object-conditions/basics.rst:138
-#: ../misc/object-conditions/basics.rst:153
-#: ../misc/object-conditions/basics.rst:160
-#: ../misc/object-conditions/basics.rst:184
-#: ../misc/object-conditions/basics.rst:192
+#: ../misc/object-conditions/basics.rst:120
+#: ../misc/object-conditions/basics.rst:135
+#: ../misc/object-conditions/basics.rst:142
+#: ../misc/object-conditions/basics.rst:166
+#: ../misc/object-conditions/basics.rst:174
+#: ../misc/object-conditions/basics.rst:182
+#: ../misc/object-conditions/basics.rst:190
 #: ../misc/object-conditions/basics.rst:200
-#: ../misc/object-conditions/basics.rst:208
-#: ../misc/object-conditions/basics.rst:218
-#: ../misc/object-conditions/basics.rst:242
-#: ../misc/object-conditions/basics.rst:252
+#: ../misc/object-conditions/basics.rst:224
+#: ../misc/object-conditions/basics.rst:234
 #: ../system/core-workflows/condition-operators.rst:86
 msgid "is not"
 msgstr ""
@@ -16309,20 +16274,20 @@ msgid "has changed"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:95
-#: ../misc/object-conditions/basics.rst:193
-#: ../misc/object-conditions/basics.rst:219
+#: ../misc/object-conditions/basics.rst:175
+#: ../misc/object-conditions/basics.rst:201
 msgid "current user"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:96
-#: ../misc/object-conditions/basics.rst:194
-#: ../misc/object-conditions/basics.rst:220
+#: ../misc/object-conditions/basics.rst:176
+#: ../misc/object-conditions/basics.rst:202
 msgid "specific user"
 msgstr ""
 
 #: ../misc/object-conditions/basics.rst:97
-#: ../misc/object-conditions/basics.rst:187
-#: ../misc/object-conditions/basics.rst:236
+#: ../misc/object-conditions/basics.rst:169
+#: ../misc/object-conditions/basics.rst:218
 #: ../system/core-workflows/condition-operators.rst:100
 msgid "not set"
 msgstr ""
@@ -16355,213 +16320,167 @@ msgstr ""
 msgid "service."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:114
-msgid "urgency"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:116
-msgid "Checks the urgency the sender"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:118
-msgid "stated in the message headers."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:120
-msgid "Only available in postmaster"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:122
-msgid "filters."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:124
-msgid "See :ref:`Email Urgency <email-urgency>` below."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:125
-#: ../system/core-workflows/condition-operators.rst:66
-msgid "is any of"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:126
-#: ../system/core-workflows/condition-operators.rst:84
-msgid "is none of"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:127
-msgid "High urgency"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:128
-msgid "Normal urgency"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:129
-msgid "Low urgency"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:130
-#: ../misc/object-conditions/basics.rst:141
+#: ../misc/object-conditions/basics.rst:112
+#: ../misc/object-conditions/basics.rst:123
 msgid "Existing"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:132
+#: ../misc/object-conditions/basics.rst:114
 msgid "members"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:134
+#: ../misc/object-conditions/basics.rst:116
 msgid "Checks if organization"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:136
+#: ../misc/object-conditions/basics.rst:118
 msgid "has members."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:143
+#: ../misc/object-conditions/basics.rst:125
 #, fuzzy
 msgid "tickets"
 msgstr "宏"
 
-#: ../misc/object-conditions/basics.rst:146
+#: ../misc/object-conditions/basics.rst:128
 msgid "customer/"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:148
+#: ../misc/object-conditions/basics.rst:130
 #: ../system/integrations/checkmk/api-reference.rst:138
 #: ../system/integrations/checkmk/api-reference.rst:173
 msgid "owner"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:149
+#: ../misc/object-conditions/basics.rst:131
 msgid "Checks if tickets are assigned."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:151
+#: ../misc/object-conditions/basics.rst:133
 msgid "Only available in scheduler."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:158
+#: ../misc/object-conditions/basics.rst:140
 msgid "Checks affected group."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:161
+#: ../misc/object-conditions/basics.rst:143
 msgid "All configured and"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:163
+#: ../misc/object-conditions/basics.rst:145
 msgid "active groups."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:164
+#: ../misc/object-conditions/basics.rst:146
 msgid "Has checklist"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:166
+#: ../misc/object-conditions/basics.rst:148
 msgid "Checks if the ticket"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:168
+#: ../misc/object-conditions/basics.rst:150
 msgid "has a checklist with"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:170
+#: ../misc/object-conditions/basics.rst:152
 msgid "at least one item."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:172
+#: ../misc/object-conditions/basics.rst:154
 msgid "Only available in triggers"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:174
+#: ../misc/object-conditions/basics.rst:156
 msgid "and scheduler."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:175
-#: ../misc/object-conditions/basics.rst:237
+#: ../misc/object-conditions/basics.rst:157
+#: ../misc/object-conditions/basics.rst:219
 msgid "`-`"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:179
+#: ../misc/object-conditions/basics.rst:161
 #, fuzzy
 msgid "Ticket,"
 msgstr "宏"
 
-#: ../misc/object-conditions/basics.rst:181
+#: ../misc/object-conditions/basics.rst:163
 #: ../system/integrations/checkmk/api-reference.rst:150
 msgid "customer"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:182
+#: ../misc/object-conditions/basics.rst:164
 msgid "Checks affected organization."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:185
+#: ../misc/object-conditions/basics.rst:167
 msgid "current user organization"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:186
+#: ../misc/object-conditions/basics.rst:168
 msgid "specific organization"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:188
+#: ../misc/object-conditions/basics.rst:170
 msgid "Owner"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:190
+#: ../misc/object-conditions/basics.rst:172
 msgid "Checks the owner."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:195
-#: ../misc/object-conditions/basics.rst:221
+#: ../misc/object-conditions/basics.rst:177
+#: ../misc/object-conditions/basics.rst:203
 msgid "not set (not defined)"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:196
+#: ../misc/object-conditions/basics.rst:178
 msgid "Sender"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:198
+#: ../misc/object-conditions/basics.rst:180
 msgid "Checks the type of sender."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:204
+#: ../misc/object-conditions/basics.rst:186
 msgid "State"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:206
+#: ../misc/object-conditions/basics.rst:188
 msgid "Checks ticket state."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:209
+#: ../misc/object-conditions/basics.rst:191
 msgid "All configured"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:211
+#: ../misc/object-conditions/basics.rst:193
 msgid "ticket states."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:212
+#: ../misc/object-conditions/basics.rst:194
 msgid "Subscribe"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:214
+#: ../misc/object-conditions/basics.rst:196
 msgid "Checks if user is a"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:216
+#: ../misc/object-conditions/basics.rst:198
 msgid "ticket subscriber"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:224
+#: ../misc/object-conditions/basics.rst:206
 msgid "Checks tags of a ticket."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:225
-#: ../misc/object-conditions/basics.rst:548
-#: ../misc/object-conditions/basics.rst:582
-#: ../misc/object-conditions/basics.rst:619
-#: ../misc/object-conditions/basics.rst:651
+#: ../misc/object-conditions/basics.rst:207
+#: ../misc/object-conditions/basics.rst:530
+#: ../misc/object-conditions/basics.rst:564
+#: ../misc/object-conditions/basics.rst:601
+#: ../misc/object-conditions/basics.rst:633
 #: ../system/core-workflows/condition-operators.rst:38
 #: ../system/core-workflows/condition-operators.rst:150
 #: ../system/core-workflows/condition-operators.rst:189
@@ -16571,11 +16490,11 @@ msgstr ""
 msgid "contains all"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:226
-#: ../misc/object-conditions/basics.rst:545
-#: ../misc/object-conditions/basics.rst:579
-#: ../misc/object-conditions/basics.rst:616
-#: ../misc/object-conditions/basics.rst:648
+#: ../misc/object-conditions/basics.rst:208
+#: ../misc/object-conditions/basics.rst:527
+#: ../misc/object-conditions/basics.rst:561
+#: ../misc/object-conditions/basics.rst:598
+#: ../misc/object-conditions/basics.rst:630
 #: ../system/core-workflows/condition-operators.rst:49
 #: ../system/core-workflows/condition-operators.rst:147
 #: ../system/core-workflows/condition-operators.rst:186
@@ -16585,11 +16504,11 @@ msgstr ""
 msgid "contains one"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:227
-#: ../misc/object-conditions/basics.rst:551
-#: ../misc/object-conditions/basics.rst:585
-#: ../misc/object-conditions/basics.rst:622
-#: ../misc/object-conditions/basics.rst:654
+#: ../misc/object-conditions/basics.rst:209
+#: ../misc/object-conditions/basics.rst:533
+#: ../misc/object-conditions/basics.rst:567
+#: ../misc/object-conditions/basics.rst:604
+#: ../misc/object-conditions/basics.rst:636
 #: ../system/core-workflows/condition-operators.rst:41
 #: ../system/core-workflows/condition-operators.rst:160
 #: ../system/core-workflows/condition-operators.rst:198
@@ -16599,11 +16518,11 @@ msgstr ""
 msgid "contains all not"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:228
-#: ../misc/object-conditions/basics.rst:554
-#: ../misc/object-conditions/basics.rst:588
-#: ../misc/object-conditions/basics.rst:625
-#: ../misc/object-conditions/basics.rst:657
+#: ../misc/object-conditions/basics.rst:210
+#: ../misc/object-conditions/basics.rst:536
+#: ../misc/object-conditions/basics.rst:570
+#: ../misc/object-conditions/basics.rst:607
+#: ../misc/object-conditions/basics.rst:639
 #: ../system/core-workflows/condition-operators.rst:52
 #: ../system/core-workflows/condition-operators.rst:157
 #: ../system/core-workflows/condition-operators.rst:195
@@ -16613,80 +16532,80 @@ msgstr ""
 msgid "contains one not"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:229
+#: ../misc/object-conditions/basics.rst:211
 msgid "Text input field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:230
+#: ../misc/object-conditions/basics.rst:212
 msgid "Time"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:232
+#: ../misc/object-conditions/basics.rst:214
 #, fuzzy
 msgid "Accounting"
 msgstr "账户"
 
-#: ../misc/object-conditions/basics.rst:234
+#: ../misc/object-conditions/basics.rst:216
 msgid "Checks if time is accounted."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:235
+#: ../misc/object-conditions/basics.rst:217
 #: ../system/core-workflows/condition-operators.rst:88
 msgid "is set"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:240
+#: ../misc/object-conditions/basics.rst:222
 msgid "Checks the type of the article."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:243
+#: ../misc/object-conditions/basics.rst:225
 msgid "All available"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:245
+#: ../misc/object-conditions/basics.rst:227
 msgid "article types."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:246
+#: ../misc/object-conditions/basics.rst:228
 msgid "Visibility"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:248
+#: ../misc/object-conditions/basics.rst:230
 msgid "Checks the visibility"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:250
+#: ../misc/object-conditions/basics.rst:232
 msgid "of the article."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:253
+#: ../misc/object-conditions/basics.rst:235
 msgid "internal"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:254
+#: ../misc/object-conditions/basics.rst:236
 msgid "public"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:257 ../system/objects/types.rst:116
+#: ../misc/object-conditions/basics.rst:239 ../system/objects/types.rst:116
 msgid "Text Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:259
+#: ../misc/object-conditions/basics.rst:241
 msgid ""
 "Checks if any field of type text contains a specific string. The configured "
 "\"Type\" of input fields has no impact on the available options."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:262
-#: ../misc/object-conditions/basics.rst:286
-#: ../misc/object-conditions/basics.rst:297
-#: ../misc/object-conditions/basics.rst:308
-#: ../misc/object-conditions/basics.rst:325
-#: ../misc/object-conditions/basics.rst:366
-#: ../misc/object-conditions/basics.rst:413
-#: ../misc/object-conditions/basics.rst:424
-#: ../misc/object-conditions/basics.rst:453
-#: ../misc/object-conditions/basics.rst:464
+#: ../misc/object-conditions/basics.rst:244
+#: ../misc/object-conditions/basics.rst:268
+#: ../misc/object-conditions/basics.rst:279
+#: ../misc/object-conditions/basics.rst:290
+#: ../misc/object-conditions/basics.rst:307
+#: ../misc/object-conditions/basics.rst:348
+#: ../misc/object-conditions/basics.rst:395
+#: ../misc/object-conditions/basics.rst:406
+#: ../misc/object-conditions/basics.rst:435
+#: ../misc/object-conditions/basics.rst:446
 msgid "Available operators for matching:"
 msgstr ""
 
@@ -16752,81 +16671,81 @@ msgstr ""
 msgid "Evaluates if text does not match provided regular expression."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:282 ../system/objects/types.rst:102
+#: ../misc/object-conditions/basics.rst:264 ../system/objects/types.rst:102
 msgid "Textarea Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:284
+#: ../misc/object-conditions/basics.rst:266
 msgid "Checks if any field of type textarea contains a specific string."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:288
+#: ../misc/object-conditions/basics.rst:270
 msgid "**contains**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:289
+#: ../misc/object-conditions/basics.rst:271
 msgid "**contains not**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:290
-#: ../misc/object-conditions/basics.rst:301
-#: ../misc/object-conditions/basics.rst:316
-#: ../misc/object-conditions/basics.rst:417
-#: ../misc/object-conditions/basics.rst:457
+#: ../misc/object-conditions/basics.rst:272
+#: ../misc/object-conditions/basics.rst:283
+#: ../misc/object-conditions/basics.rst:298
+#: ../misc/object-conditions/basics.rst:399
+#: ../misc/object-conditions/basics.rst:439
 msgid "**has changed**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:293 ../system/objects/types.rst:14
+#: ../misc/object-conditions/basics.rst:275 ../system/objects/types.rst:14
 msgid "Boolean Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:295
+#: ../misc/object-conditions/basics.rst:277
 msgid "Checks if any field of type boolean is true."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:299
-#: ../misc/object-conditions/basics.rst:310
-#: ../misc/object-conditions/basics.rst:415
-#: ../misc/object-conditions/basics.rst:455
+#: ../misc/object-conditions/basics.rst:281
+#: ../misc/object-conditions/basics.rst:292
+#: ../misc/object-conditions/basics.rst:397
+#: ../misc/object-conditions/basics.rst:437
 msgid "**is**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:300
-#: ../misc/object-conditions/basics.rst:311
-#: ../misc/object-conditions/basics.rst:416
-#: ../misc/object-conditions/basics.rst:456
+#: ../misc/object-conditions/basics.rst:282
+#: ../misc/object-conditions/basics.rst:293
+#: ../misc/object-conditions/basics.rst:398
+#: ../misc/object-conditions/basics.rst:438
 msgid "**is not**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:304 ../system/objects/types.rst:52
+#: ../misc/object-conditions/basics.rst:286 ../system/objects/types.rst:52
 msgid "Integer Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:306
+#: ../misc/object-conditions/basics.rst:288
 msgid "Checks if any field of type integer has a specific value."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:312
+#: ../misc/object-conditions/basics.rst:294
 msgid "**is less than**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:313
+#: ../misc/object-conditions/basics.rst:295
 msgid "**is less than or equal to**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:314
+#: ../misc/object-conditions/basics.rst:296
 msgid "**is greater than**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:315
+#: ../misc/object-conditions/basics.rst:297
 msgid "**is greater than or equal to**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:319 ../system/objects/types.rst:23
+#: ../misc/object-conditions/basics.rst:301 ../system/objects/types.rst:23
 msgid "Date Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:321
+#: ../misc/object-conditions/basics.rst:303
 msgid ""
 "Checks if a date is before or past (both absolute or relative) a specific "
 "point in time or time period. Relative operators allow you to define a time "
@@ -16921,17 +16840,17 @@ msgstr ""
 msgid "The field has been changed during a ticket update."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:354
+#: ../misc/object-conditions/basics.rst:336
 msgid ""
 "To help you understand the time conditions of Zammad better, below diagram "
 "might also be helpful to you."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:360 ../system/objects/types.rst:36
+#: ../misc/object-conditions/basics.rst:342 ../system/objects/types.rst:36
 msgid "Date & Time Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:362
+#: ../misc/object-conditions/basics.rst:344
 msgid ""
 "Checks if a date and time is before or past (both absolute or relative) a "
 "specific point in time or time period. Relative operators allow you to "
@@ -17012,28 +16931,28 @@ msgstr ""
 msgid "Only available for Ticket's Escalation time in Trigger conditions."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:403
+#: ../misc/object-conditions/basics.rst:385
 msgid ""
 "Have a look at the diagram above. It applies also for date & time but you "
 "additionally have hours and minutes on top to use."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:407 ../system/objects/types.rst:83
+#: ../misc/object-conditions/basics.rst:389 ../system/objects/types.rst:83
 msgid "Single Selection Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:409
+#: ../misc/object-conditions/basics.rst:391
 msgid ""
 "Checks if selected field values match the attribute value. It allows you to "
 "select one or more values of the attribute in question. Selecting more than "
 "one value in the condition will act like an \"OR\" clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:420 ../system/objects/types.rst:64
+#: ../misc/object-conditions/basics.rst:402 ../system/objects/types.rst:64
 msgid "Multiple Selection Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:422
+#: ../misc/object-conditions/basics.rst:404
 msgid "Checks if selected field values match the attribute value(s)."
 msgstr ""
 
@@ -17074,7 +16993,7 @@ msgid ""
 "\"none of\", not \"not all of\"."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:440
+#: ../misc/object-conditions/basics.rst:422
 msgid ""
 "In :doc:`core workflows </system/core-workflows>`, these operators have "
 "different semantics. See :ref:`core workflow condition operators <core-"
@@ -17083,21 +17002,21 @@ msgid ""
 "examples` below."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:448 ../system/objects/types.rst:135
+#: ../misc/object-conditions/basics.rst:430 ../system/objects/types.rst:135
 msgid "Single Tree Selection Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:450
+#: ../misc/object-conditions/basics.rst:432
 msgid ""
 "Checks if a selected field value match the attribute value. Selecting more "
 "than one value in the condition will act like an \"OR\" clause."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:460 ../system/objects/types.rst:149
+#: ../misc/object-conditions/basics.rst:442 ../system/objects/types.rst:149
 msgid "Multiple Tree Selection Field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:462
+#: ../misc/object-conditions/basics.rst:444
 msgid "Checks if selected field value(s) match the attribute value(s)."
 msgstr ""
 
@@ -17117,66 +17036,66 @@ msgstr ""
 msgid "**contains one not**"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:479
+#: ../misc/object-conditions/basics.rst:461
 msgid "Additional Information and Remarks"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:488
+#: ../misc/object-conditions/basics.rst:470
 msgid "Ticket context conditions do not support:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:485
+#: ../misc/object-conditions/basics.rst:467
 msgid "regular expressions"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:486
+#: ../misc/object-conditions/basics.rst:468
 msgid "case sensitive string conditions"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:487
+#: ../misc/object-conditions/basics.rst:469
 msgid ""
 "Basic conditions do not support the same attribute to be selected more than "
 "once"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:496
+#: ../misc/object-conditions/basics.rst:478
 msgid "**has changed** conditions:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:491
+#: ../misc/object-conditions/basics.rst:473
 msgid "Are only available for ticket attributes and don't affect:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:493
+#: ../misc/object-conditions/basics.rst:475
 #, fuzzy
 msgid "Ticket articles attributes"
 msgstr "优先级"
 
-#: ../misc/object-conditions/basics.rst:494
+#: ../misc/object-conditions/basics.rst:476
 #, fuzzy
 msgid "Organization attributes"
 msgstr "组织和部门名称"
 
-#: ../misc/object-conditions/basics.rst:495
+#: ../misc/object-conditions/basics.rst:477
 msgid "User attributes"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:496
+#: ../misc/object-conditions/basics.rst:478
 msgid "Group attributes"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:509
+#: ../misc/object-conditions/basics.rst:491
 msgid "Differences in input fields:"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:499
+#: ../misc/object-conditions/basics.rst:481
 msgid ""
 "Please note that the input field for tokens doesn't support the comma as "
 "separator (as in the input field for tags). If you use the comma in the "
 "token input field, the comma is included in you token."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:503
+#: ../misc/object-conditions/basics.rst:485
 msgid "**Example**:"
 msgstr ""
 
@@ -17184,17 +17103,17 @@ msgstr ""
 msgid "Example of comma usage in token input field"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:508
+#: ../misc/object-conditions/basics.rst:490
 msgid ""
 "``A`` added with enter/tab, ``B`` and ``C`` separated with comma (resulting "
 "in one token)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:514
+#: ../misc/object-conditions/basics.rst:496
 msgid "Multi-Select Operator Examples"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:516
+#: ../misc/object-conditions/basics.rst:498
 msgid ""
 "The ``contains`` family of operators for multi-select fields compares two "
 "sets of values: the values currently in the field and the values specified "
@@ -17202,41 +17121,41 @@ msgid ""
 "circle and the field values as a blue circle."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:521
+#: ../misc/object-conditions/basics.rst:503
 msgid ""
 "Be aware that these operators behave **differently** in :doc:`core workflows "
 "</system/core-workflows>`. See :ref:`core workflow condition operators <core-"
 "workflow-condition-examples>` for a side by side comparison."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:527
+#: ../misc/object-conditions/basics.rst:509
 #: ../system/core-workflows/condition-operators.rst:165
 msgid "Example 1: Condition A, B - Field A, B, C"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:529
+#: ../misc/object-conditions/basics.rst:511
 #: ../system/core-workflows/condition-operators.rst:167
 msgid ""
 "In this scenario, the field holds the values A, B and C, while the condition "
 "asks for the values A and B."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:535
+#: ../misc/object-conditions/basics.rst:517
 #: ../system/core-workflows/condition-operators.rst:173
 msgid ""
 "Venn diagram of condition values A, B and field values A, B, C. A and B are "
 "in both circles, C only in the field circle."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:535
+#: ../misc/object-conditions/basics.rst:517
 #: ../system/core-workflows/condition-operators.rst:173
 msgid "Condition values ``A, B`` overlap with field values ``A, B, C``."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:542
-#: ../misc/object-conditions/basics.rst:576
-#: ../misc/object-conditions/basics.rst:613
-#: ../misc/object-conditions/basics.rst:645
+#: ../misc/object-conditions/basics.rst:524
+#: ../misc/object-conditions/basics.rst:558
+#: ../misc/object-conditions/basics.rst:595
+#: ../misc/object-conditions/basics.rst:627
 #: ../system/core-workflows/condition-operators.rst:21
 #: ../system/core-workflows/condition-operators.rst:141
 #: ../system/core-workflows/condition-operators.rst:180
@@ -17246,10 +17165,10 @@ msgstr ""
 msgid "Operator"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:543
-#: ../misc/object-conditions/basics.rst:577
-#: ../misc/object-conditions/basics.rst:614
-#: ../misc/object-conditions/basics.rst:646
+#: ../misc/object-conditions/basics.rst:525
+#: ../misc/object-conditions/basics.rst:559
+#: ../misc/object-conditions/basics.rst:596
+#: ../misc/object-conditions/basics.rst:628
 #: ../system/core-workflows/condition-operators.rst:181
 #: ../system/core-workflows/condition-operators.rst:221
 #: ../system/core-workflows/condition-operators.rst:264
@@ -17257,10 +17176,10 @@ msgstr ""
 msgid "Matches?"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:544
-#: ../misc/object-conditions/basics.rst:578
-#: ../misc/object-conditions/basics.rst:615
-#: ../misc/object-conditions/basics.rst:647
+#: ../misc/object-conditions/basics.rst:526
+#: ../misc/object-conditions/basics.rst:560
+#: ../misc/object-conditions/basics.rst:597
+#: ../misc/object-conditions/basics.rst:629
 #: ../system/core-workflows/condition-operators.rst:182
 #: ../system/core-workflows/condition-operators.rst:222
 #: ../system/core-workflows/condition-operators.rst:265
@@ -17268,69 +17187,69 @@ msgstr ""
 msgid "Why"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:547
+#: ../misc/object-conditions/basics.rst:529
 #: ../system/core-workflows/condition-operators.rst:185
 msgid "``A`` and ``B`` are in both sets (OR logic)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:550
+#: ../misc/object-conditions/basics.rst:532
 #: ../system/core-workflows/condition-operators.rst:191
 msgid "Both ``A`` and ``B`` are present (AND logic)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:553
+#: ../misc/object-conditions/basics.rst:535
 msgid "All condition values are present in the field."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:556
+#: ../misc/object-conditions/basics.rst:538
 msgid "The field has values in common with the condition."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:559
+#: ../misc/object-conditions/basics.rst:541
 #: ../system/core-workflows/condition-operators.rst:203
 msgid "Example 2: Condition A, B, C - Field C, D"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:561
+#: ../misc/object-conditions/basics.rst:543
 #: ../system/core-workflows/condition-operators.rst:205
 msgid ""
 "In this scenario, the field holds the values C and D. The condition value C "
 "is present in the field, while A and B are not."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:568
+#: ../misc/object-conditions/basics.rst:550
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Venn diagram of condition values A, B, C and field values C, D.\n"
 "Only C is in both circles."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:568
+#: ../misc/object-conditions/basics.rst:550
 #: ../system/core-workflows/condition-operators.rst:212
 msgid ""
 "Condition values ``A, B, C`` partially overlap with field values ``C, D``."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:581
+#: ../misc/object-conditions/basics.rst:563
 #: ../system/core-workflows/condition-operators.rst:225
 msgid "``C`` is in both sets (OR logic)."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:584
+#: ../misc/object-conditions/basics.rst:566
 #: ../system/core-workflows/condition-operators.rst:231
 msgid "Only ``C`` of the three condition values is present."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:587
-#: ../misc/object-conditions/basics.rst:624
+#: ../misc/object-conditions/basics.rst:569
+#: ../misc/object-conditions/basics.rst:606
 msgid "``A`` and ``B`` are missing from the field."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:590
+#: ../misc/object-conditions/basics.rst:572
 msgid "``C`` is in both the field and the condition."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:592
+#: ../misc/object-conditions/basics.rst:574
 msgid ""
 "This partial overlap is where the two \"not\" operators part ways: "
 "``contains all not`` matches because a single condition value is missing, "
@@ -17338,221 +17257,108 @@ msgid ""
 "enough to block it."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:598
+#: ../misc/object-conditions/basics.rst:580
 #: ../system/core-workflows/condition-operators.rst:248
 msgid "Example 3: Condition A, B - Field C, D"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:600
+#: ../misc/object-conditions/basics.rst:582
 #: ../system/core-workflows/condition-operators.rst:250
 msgid ""
 "In this scenario, the field holds the values C and D, which have nothing in "
 "common with the condition values A and B."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:588
 #: ../system/core-workflows/condition-operators.rst:256
 msgid ""
 "Venn diagram of condition values A, B and field values C, D. The two circles "
 "do not overlap."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:606
+#: ../misc/object-conditions/basics.rst:588
 #: ../system/core-workflows/condition-operators.rst:256
 msgid "Condition values ``A, B`` have no overlap with field values ``C, D``."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:618
+#: ../misc/object-conditions/basics.rst:600
 #: ../system/core-workflows/condition-operators.rst:268
 msgid "No value is in both sets."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:621
+#: ../misc/object-conditions/basics.rst:603
 #: ../system/core-workflows/condition-operators.rst:274
 msgid "Neither ``A`` nor ``B`` is present."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:627
-#: ../misc/object-conditions/basics.rst:659
+#: ../misc/object-conditions/basics.rst:609
+#: ../misc/object-conditions/basics.rst:641
 #: ../system/core-workflows/condition-operators.rst:159
 #: ../system/core-workflows/condition-operators.rst:161
 #: ../system/core-workflows/condition-operators.rst:283
 msgid "The field has no value in common with the condition."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:630
+#: ../misc/object-conditions/basics.rst:612
 #: ../system/core-workflows/condition-operators.rst:288
 msgid "Example 4: Condition A, B - Field is empty"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:632
+#: ../misc/object-conditions/basics.rst:614
 #: ../system/core-workflows/condition-operators.rst:290
 msgid ""
 "In this scenario, the field holds no values at all, while the condition asks "
 "for the values A and B."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:638
+#: ../misc/object-conditions/basics.rst:620
 #: ../system/core-workflows/condition-operators.rst:296
 msgid ""
 "Venn diagram of condition values A, B and an empty field. The two circles do "
 "not overlap."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:638
+#: ../misc/object-conditions/basics.rst:620
 #: ../system/core-workflows/condition-operators.rst:296
 msgid "The field holds no values at all."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:650
-#: ../misc/object-conditions/basics.rst:653
+#: ../misc/object-conditions/basics.rst:632
+#: ../misc/object-conditions/basics.rst:635
 #: ../system/core-workflows/condition-operators.rst:308
 #: ../system/core-workflows/condition-operators.rst:314
 msgid "No value is present."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:656
+#: ../misc/object-conditions/basics.rst:638
 msgid "No condition value is present in the field."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:664
+#: ../misc/object-conditions/basics.rst:646
 msgid "Regex"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:669
+#: ../misc/object-conditions/basics.rst:651
 msgid "Regex support"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:667
+#: ../misc/object-conditions/basics.rst:649
 msgid ""
 "**matches regex** and **does not match regex** are supported only in "
 "Triggers, Time Accounting selector, Postmaster Filters, Automatic ticket "
 "assignment and Core Workflow."
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:675
+#: ../misc/object-conditions/basics.rst:656
 msgid "\"Old\" style ``regex:...`` conditions"
 msgstr ""
 
-#: ../misc/object-conditions/basics.rst:672
+#: ../misc/object-conditions/basics.rst:654
 msgid ""
 "If you update your Zammad from 6.0 or prior and you have already conditions "
 "with **contains** or **contains not** including a regex filter (i.e. "
 "``regex:^(foo|bar)$``), Zammad tries to migrate them to the new **matches "
 "regex** and **does not match regex** operators."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:680
-msgid "Email Urgency"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:682
-msgid ""
-"Zammad derives the **Email urgency** from several message headers. The table "
-"shows what each of them has to state. Header values are checked case-"
-"insensitively, so ``High`` and ``high`` are both recognized:"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:690
-msgid "Header"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:691
-msgid "high"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:692
-msgid "normal"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:693
-msgid "low"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:694
-msgid "``Importance``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:695
-msgid "``high``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:696
-#: ../misc/object-conditions/basics.rst:700
-msgid "``normal``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:697
-msgid "``low``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:698
-#, fuzzy
-#| msgid "priority"
-msgid "``Priority``"
-msgstr "优先级"
-
-#: ../misc/object-conditions/basics.rst:699
-msgid "``urgent``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:701
-msgid "``non-urgent``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:702
-#, fuzzy
-#| msgid "priority"
-msgid "``X-Priority``"
-msgstr "优先级"
-
-#: ../misc/object-conditions/basics.rst:703
-msgid "``1``, ``2``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:704
-msgid "``3``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:705
-msgid "``4``, ``5``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:706
-msgid "``X-MSMail-Priority``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:707
-msgid "``High``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:708
-msgid "``Normal``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:709
-msgid "``Low``"
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:711
-msgid ""
-"The headers are checked in the order of the table. ``Priority``, ``X-"
-"Priority`` and ``X-MSMail-Priority`` only count when they state a value "
-"Zammad recognizes, otherwise the next header is used. ``Importance`` is "
-"different: when it states a value, Zammad uses that value alone. If it does "
-"not recognize the value, the message has no urgency."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:717
-msgid ""
-"For ``X-Priority``, only the leading digit counts, so ``1 (Highest)`` still "
-"reads as high."
-msgstr ""
-
-#: ../misc/object-conditions/basics.rst:720
-msgid ""
-"A message that states no urgency has none. The **is none of** operator also "
-"matches such messages."
 msgstr ""
 
 #: ../misc/object-conditions/expert-mode.rst:2
@@ -21114,14 +20920,14 @@ msgid ""
 msgstr ""
 
 #: ../settings/security/third-party.rst:50
-msgid "No User Creation on Logon"
+msgid "Skip User Creation on Logon"
 msgstr ""
 
 #: ../settings/security/third-party.rst:52
 msgid ""
 "By default, Zammad creates a new user account when a user logs in via a "
 "third-party application for the first time and no matching account exists. "
-"To prevent this, set **No user creation on logon** to ``yes``. Zammad then "
+"To prevent this, set **Skip user creation on logon** to ``yes``. Zammad then "
 "refuses such logins with the message *The user account does not exist. "
 "Please contact your administrator.* To allow logins only for existing "
 "accounts, enable this setting together with **Automatic account link on "
@@ -21974,7 +21780,7 @@ msgstr ""
 msgid ""
 "If one of these conditions is not met, Zammad refuses to link the accounts "
 "and the sign-in fails with an error message: either that the email address "
-"is already in use by another user, or, if **No user creation on logon** is "
+"is already in use by another user, or, if **Skip user creation on logon** is "
 "enabled, that the user account does not exist. Affected users can still get "
 "access: they log in to their existing Zammad account by other means and link "
 "their Microsoft account themselves under *Profile > Linked Accounts*."
@@ -24960,6 +24766,10 @@ msgstr ""
 msgid "Matches if content is equal to a specified value."
 msgstr ""
 
+#: ../system/core-workflows/condition-operators.rst:66
+msgid "is any of"
+msgstr ""
+
 #: ../system/core-workflows/condition-operators.rst:67
 msgid "Matches if content is equal to any of specified values."
 msgstr ""
@@ -25015,6 +24825,10 @@ msgstr ""
 
 #: ../system/core-workflows/condition-operators.rst:81
 msgid "Matches if content is modified to a specific value."
+msgstr ""
+
+#: ../system/core-workflows/condition-operators.rst:84
+msgid "is none of"
 msgstr ""
 
 #: ../system/core-workflows/condition-operators.rst:85
@@ -31556,6 +31370,16 @@ msgstr "版本"
 #| msgid "Shows which version is currently being used on your Zammad-instance."
 msgid "Shows the current Zammad version of your instance."
 msgstr "显示当前在您的Zammad实例上使用的版本。"
+
+#, fuzzy
+#~| msgid "priority"
+#~ msgid "``Priority``"
+#~ msgstr "优先级"
+
+#, fuzzy
+#~| msgid "priority"
+#~ msgid "``X-Priority``"
+#~ msgstr "优先级"
 
 #, fuzzy
 #~ msgid "Translation Services"
