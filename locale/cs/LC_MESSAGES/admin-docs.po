@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Zammad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-31 15:40+0200\n"
-"PO-Revision-Date: 2026-11-04 13:12+0000\n"
+"PO-Revision-Date: 2026-11-27 03:12+0000\n"
 "Last-Translator: Mixer <mixer@mixercz.cz>\n"
 "Language-Team: Czech <https://translations.zammad.org/projects/"
 "documentations/admin-documentation-pre-release/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.11\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: ../ai/ai-agents.rst:2
 msgid "AI Agents"
@@ -895,15 +895,13 @@ msgstr "Anthropic"
 
 #: ../ai/provider.rst:56
 msgid "Azure AI (legacy deployment-based endpoints)"
-msgstr ""
+msgstr "Azure AI (starší endpointy založené na nasazení)"
 
 #: ../ai/provider.rst:57
 msgid "Mistral AI"
 msgstr "Mistral AI"
 
 #: ../ai/provider.rst:58
-#, fuzzy
-#| msgid "Custom (OpenAI compatible)"
 msgid "Custom (OpenAI Compatible)"
 msgstr "Vlastní (kompatibilní s OpenAI)"
 
@@ -926,6 +924,12 @@ msgid ""
 "well, enter the name of an embedding deployment in the **Embedding Model** "
 "field."
 msgstr ""
+"Azure AI je starší možnost a nepodporuje sémantické vyhledávání. Pro "
+"připojení Azure místo toho zvolte Vlastní (kompatibilní s OpenAI). Jako URL "
+"zadejte koncový bod v1 vašeho prostředku (``https://"
+"<resource>.openai.azure.com/openai/v1``) a jako model název vašeho nasazení. "
+"Pokud chcete toto připojení používat i pro sémantické vyhledávání, zadejte "
+"do pole **Embeddingový model** název nasazení embeddingového modelu."
 
 #: ../ai/provider.rst:71
 msgid ""
@@ -2636,7 +2640,7 @@ msgstr ""
 "(výchozí: ``yes``). Pokud používáte vlastní certifikáty, podívejte "
 "se, :doc:`jak je přidat do Zammadu </settings/security/ssl-certificates>`."
 
-#: ../includes/ssl-verification-warning.rst:4
+#: ../includes/ssl-verification-warning.rst:2
 msgid ""
 "Please be aware that **turning off SSL verification is a security risk**. It "
 "should only be used temporarily or for testing purposes. If turned off, "
@@ -4010,10 +4014,15 @@ msgid ""
 "field, the last one wins. Tags are the exception, as filters add and remove "
 "them instead of setting them."
 msgstr ""
+"Nastavte filtr jako aktivní nebo neaktivní. Na příchozí e-maily se použijí "
+"jen aktivní filtry. Zammad je používá v abecedním pořadí podle jejich názvů; "
+"filtry se stejným názvem se spouštějí od nejstaršího. Pokud několik filtrů "
+"nastavuje stejné pole, platí poslední z nich. Výjimkou jsou štítky, protože "
+"je filtry přidávají a odebírají, místo aby je nastavovaly."
 
 #: ../channels/email/filters.rst:109
 msgid "Priority Based on Stated Urgency"
-msgstr ""
+msgstr "Priorita podle uvedené naléhavosti"
 
 #: ../channels/email/filters.rst:113 ../channels/email/filters.rst:133
 #: ../channels/email/filters.rst:146 ../channels/email/filters.rst:158
@@ -4027,12 +4036,11 @@ msgid "Example"
 msgstr "Příklad"
 
 #: ../channels/email/filters.rst:112
-#, fuzzy
-#| msgid "Automatically increase the priority of tickets from a VIP customer."
 msgid ""
 "Automatically raise the priority of messages whose sender marked them as "
 "urgent."
-msgstr "Automaticky zvýšit prioritu tiketů od VIP zákazníka."
+msgstr ""
+"Automaticky zvýšit prioritu zpráv, které odesílatel označil jako naléhavé."
 
 #: ../channels/email/filters.rst:116 ../channels/email/filters.rst:136
 #: ../channels/email/filters.rst:149 ../channels/email/filters.rst:161
@@ -4043,7 +4051,7 @@ msgstr "Podmínka"
 
 #: ../channels/email/filters.rst:116
 msgid "**Email urgency:** *is any of* ``High urgency``"
-msgstr ""
+msgstr "**Naléhavost e-mailu:** *je některý z* ``Vysoká naléhavost``"
 
 #: ../channels/email/filters.rst:119 ../channels/email/filters.rst:139
 #: ../channels/email/filters.rst:152 ../channels/email/filters.rst:164
@@ -4075,6 +4083,13 @@ msgid ""
 "<email-urgency>` section of the object conditions page for the header "
 "mapping."
 msgstr ""
+"Podmínka **Naléhavost e-mailu** je v seznamu atributů ve skupině **Rozšířené "
+"nastavení**. Spojuje hlavičky ``Importance``, ``Priority``, ``X-Priority`` a "
+"``X-MSMail-Priority`` do jediné hodnoty, takže jeden filtr pro každou úroveň "
+"naléhavosti pokryje odesílatele, kteří používají kteroukoli z nich. "
+"Samostatné filtry pro jednotlivé hlavičky nepotřebujete. Mapování hlaviček "
+"najdete v části :ref:`Naléhavost e-mailu <email-urgency>` na stránce o "
+"podmínkách objektů."
 
 #: ../channels/email/filters.rst:130
 msgid "Group Assignment Based on Sender Domain"
@@ -4800,6 +4815,9 @@ msgid ""
 "message headers. See :ref:`Email Urgency <email-urgency>` for the headers "
 "Zammad derives it from."
 msgstr ""
+"Filtry mohou reagovat i na **naléhavost e-mailu**, kterou odesílatel uvedl v "
+"hlavičkách zprávy. Hlavičky, ze kterých ji Zammad odvozuje, najdete v "
+"části :ref:`Naléhavost e-mailu <email-urgency>`."
 
 #: ../channels/email/index.rst:61 ../channels/email/index.rst:21
 msgid ":doc:`📜  Signatures <signatures>`"
@@ -7519,7 +7537,7 @@ msgid ""
 msgstr ""
 "Připojte k Zammadu účet Microsoft 365 (dříve \"Office 365\") přes Graph API."
 
-#: ../includes/m365-imap-graph.rst:4
+#: ../includes/m365-imap-graph.rst:2
 msgid ""
 "What is the difference between the :doc:`Graph-API- </channels/microsoft365-"
 "graph/index>` and :doc:`IMAP-based M365 channel </channels/microsoft365/"
@@ -7529,12 +7547,12 @@ msgstr ""
 "microsoft365-graph/index>` a :doc:`kanálem M365 založeným na IMAP </channels/"
 "microsoft365/index>`?"
 
-#: ../includes/m365-imap-graph.rst:8
+#: ../includes/m365-imap-graph.rst:6
 msgid "The Graph-API variant has some advantages over the IMAP-based channel:"
 msgstr ""
 "Varianta s Graph API má oproti kanálu založenému na IMAP několik výhod:"
 
-#: ../includes/m365-imap-graph.rst:10
+#: ../includes/m365-imap-graph.rst:8
 msgid ""
 "Shared mailboxes are implemented in a better way. By using them, you can "
 "save some license costs."
@@ -7542,7 +7560,7 @@ msgstr ""
 "Sdílené schránky jsou implementovány lépe. Jejich používáním můžete ušetřit "
 "část nákladů na licence."
 
-#: ../includes/m365-imap-graph.rst:12
+#: ../includes/m365-imap-graph.rst:10
 msgid ""
 "The selection of an inbox folder is implemented with a tree-select field in "
 "Zammad. So you can choose a folder from the fetched folder list, which is "
@@ -7552,15 +7570,15 @@ msgstr ""
 "Složku tak vybíráte ze seznamu načtených složek, což je mnohem méně náchylné "
 "k chybám."
 
-#: ../includes/m365-imap-graph.rst:15
+#: ../includes/m365-imap-graph.rst:13
 msgid "It is the future-proof way of connecting to your M365 environment."
 msgstr "Je to perspektivní způsob připojení k vašemu prostředí M365."
 
-#: ../includes/m365-imap-graph.rst:16
+#: ../includes/m365-imap-graph.rst:14
 msgid "It is more secure and scalable and offers a unified endpoint."
 msgstr "Je bezpečnější, lépe škálovatelná a nabízí jednotný koncový bod."
 
-#: ../includes/m365-imap-graph.rst:18
+#: ../includes/m365-imap-graph.rst:16
 msgid ""
 "However, there is also a known issue for the Graph-based M365 channel which "
 "is caused by Microsoft: it can happen that the ``From:`` header in outgoing "
@@ -17378,18 +17396,10 @@ msgid ""
 msgstr "V případě **HTTP Basic autentizace** zadejte sem heslo uživatele."
 
 #: ../manage/webhook/add.rst:80
-#, fuzzy
-#| msgid "HMAC SHA1 Signature Token"
 msgid "HMAC signature token"
-msgstr "Podpisový token HMAC SHA1"
+msgstr "Podpisový token HMAC"
 
 #: ../manage/webhook/add.rst:69
-#, fuzzy
-#| msgid ""
-#| "If set, all sent webhooks contain an ``X-Hub-Signature`` header allowing "
-#| "the remote site to verify the request. Its value is ``sha1=<hex "
-#| "digest>``, so drop the ``sha1=`` prefix before comparing it with your own "
-#| "signature."
 msgid ""
 "If set, Zammad signs the body of each webhook request and adds an ``X-Hub-"
 "Signature`` header with the HMAC-SHA1 signature as ``sha1=<hex digest>`` and "
@@ -17397,10 +17407,11 @@ msgid ""
 "``sha256=<hex digest>``. Drop the prefix before comparing a value with your "
 "own signature."
 msgstr ""
-"Pokud je nastaven, obsahují všechny odeslané webhooky hlavičku ``X-Hub-"
-"Signature``, pomocí které může vzdálená strana požadavek ověřit. Její "
-"hodnota má tvar ``sha1=<hex digest>``, proto před porovnáním s vlastním "
-"podpisem předponu ``sha1=`` odstraňte."
+"Pokud je nastaven, Zammad podepíše tělo každého požadavku webhooku a přidá "
+"hlavičku ``X-Hub-Signature`` s podpisem HMAC-SHA1 ve tvaru ``sha1=<hex "
+"digest>`` a hlavičku ``X-Hub-Signature-256`` s podpisem HMAC-SHA256 ve tvaru "
+"``sha256=<hex digest>``. Před porovnáním hodnoty s vlastním podpisem "
+"předponu odstraňte."
 
 #: ../manage/webhook/add.rst:77
 msgid ""
@@ -19241,10 +19252,8 @@ msgid "Request Headers"
 msgstr "Hlavičky požadavku"
 
 #: ../manage/webhook/payload.rst:17
-#, fuzzy
-#| msgid "Zammad sends the following headers in each webhook POST request:"
 msgid "Zammad sends the following headers in each webhook request:"
-msgstr "Zammad posílá v každém požadavku POST webhooku tyto hlavičky:"
+msgstr "Zammad posílá v každém požadavku webhooku tyto hlavičky:"
 
 #: ../manage/webhook/payload.rst:0
 msgid "``User-Agent``"
@@ -19275,56 +19284,40 @@ msgid "``X-Hub-Signature``"
 msgstr "``X-Hub-Signature``"
 
 #: ../manage/webhook/payload.rst:22
-#, fuzzy
-#| msgid ""
-#| "The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
-#| "computed with your signature token as the key. Only sent if you entered a "
-#| "signature token in the trigger"
 msgid ""
 "The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
 "computed with your signature token as the key. Only sent if you entered a "
 "signature token in the webhook"
 msgstr ""
 "Podpis HMAC-SHA1 těla požadavku ve tvaru ``sha1=<hex digest>`` vypočtený s "
-"vaším podpisovým tokenem jako klíčem. Odesílá se, jen pokud jste ve "
-"spouštěči zadali podpisový token"
+"vaším podpisovým tokenem jako klíčem. Odesílá se, jen pokud jste ve webhooku "
+"zadali podpisový token"
 
 #: ../manage/webhook/payload.rst:0
-#, fuzzy
-#| msgid "``X-Hub-Signature``"
 msgid "``X-Hub-Signature-256``"
-msgstr "``X-Hub-Signature``"
+msgstr "``X-Hub-Signature-256``"
 
 #: ../manage/webhook/payload.rst:26
-#, fuzzy
-#| msgid ""
-#| "The HMAC-SHA1 signature of the request body as ``sha1=<hex digest>``, "
-#| "computed with your signature token as the key. Only sent if you entered a "
-#| "signature token in the trigger"
 msgid ""
 "The HMAC-SHA256 signature of the request body as ``sha256=<hex digest>``, "
 "computed with your signature token as the key. Only sent if you entered a "
 "signature token in the webhook"
 msgstr ""
-"Podpis HMAC-SHA1 těla požadavku ve tvaru ``sha1=<hex digest>`` vypočtený s "
-"vaším podpisovým tokenem jako klíčem. Odesílá se, jen pokud jste ve "
-"spouštěči zadali podpisový token"
+"Podpis HMAC-SHA256 těla požadavku ve tvaru ``sha256=<hex digest>`` vypočtený "
+"s vaším podpisovým tokenem jako klíčem. Odesílá se, jen pokud jste ve "
+"webhooku zadali podpisový token"
 
 #: ../manage/webhook/payload.rst:0
 msgid "``Authorization``"
 msgstr "``Authorization``"
 
 #: ../manage/webhook/payload.rst:30
-#, fuzzy
-#| msgid ""
-#| "The credentials of the trigger, as ``Bearer <token>`` with **Bearer "
-#| "Token** or as ``Basic <base64>`` with **HTTP Basic Authentication**"
 msgid ""
 "The credentials of the webhook, as ``Bearer <token>`` with **Bearer Token** "
 "or as ``Basic <base64>`` with **HTTP Basic Authentication**"
 msgstr ""
-"Přihlašovací údaje spouštěče ve tvaru ``Bearer <token>`` při **Bearer "
-"token** nebo ``Basic <base64>`` při **HTTP Basic autentizace**"
+"Přihlašovací údaje webhooku ve tvaru ``Bearer <token>`` při **Bearer token** "
+"nebo ``Basic <base64>`` při **HTTP Basic autentizace**"
 
 #: ../manage/webhook/payload.rst:37
 msgid "Default JSON Payload"
@@ -19969,33 +19962,27 @@ msgstr "jazyka."
 
 #: ../misc/object-conditions/basics.rst:114
 msgid "urgency"
-msgstr ""
+msgstr "urgency"
 
 #: ../misc/object-conditions/basics.rst:116
-#, fuzzy
-#| msgid "Checks the type of sender."
 msgid "Checks the urgency the sender"
-msgstr "Kontroluje typ odesílatele."
+msgstr "Kontroluje naléhavost, kterou odesílatel"
 
 #: ../misc/object-conditions/basics.rst:118
 msgid "stated in the message headers."
-msgstr ""
+msgstr "uvedl v hlavičkách zprávy."
 
 #: ../misc/object-conditions/basics.rst:120
-#, fuzzy
-#| msgid "Only available in triggers"
 msgid "Only available in postmaster"
-msgstr "K dispozici jen ve spouštěčích"
+msgstr "K dispozici jen ve filtrech"
 
 #: ../misc/object-conditions/basics.rst:122
-#, fuzzy
-#| msgid "Filters"
 msgid "filters."
-msgstr "Filtry"
+msgstr "správce pošty."
 
 #: ../misc/object-conditions/basics.rst:124
 msgid "See :ref:`Email Urgency <email-urgency>` below."
-msgstr ""
+msgstr "Viz :ref:`Naléhavost e-mailu <email-urgency>` níže."
 
 #: ../misc/object-conditions/basics.rst:125
 #: ../system/core-workflows/condition-operators.rst:66
@@ -20009,15 +19996,15 @@ msgstr "není žádný z"
 
 #: ../misc/object-conditions/basics.rst:127
 msgid "High urgency"
-msgstr ""
+msgstr "Vysoká naléhavost"
 
 #: ../misc/object-conditions/basics.rst:128
 msgid "Normal urgency"
-msgstr ""
+msgstr "Normální naléhavost"
 
 #: ../misc/object-conditions/basics.rst:129
 msgid "Low urgency"
-msgstr ""
+msgstr "Nízká naléhavost"
 
 #: ../misc/object-conditions/basics.rst:130
 #: ../misc/object-conditions/basics.rst:141
@@ -21163,10 +21150,8 @@ msgstr ""
 "regulárnímu výrazu**."
 
 #: ../misc/object-conditions/basics.rst:680
-#, fuzzy
-#| msgid "Email Address"
 msgid "Email Urgency"
-msgstr "E-mailová adresa"
+msgstr "Naléhavost e-mailu"
 
 #: ../misc/object-conditions/basics.rst:682
 msgid ""
@@ -21174,105 +21159,86 @@ msgid ""
 "shows what each of them has to state. Header values are checked case-"
 "insensitively, so ``High`` and ``high`` are both recognized:"
 msgstr ""
+"Zammad odvozuje **naléhavost e-mailu** z několika hlaviček zprávy. Tabulka "
+"ukazuje, co musí každá z nich uvádět. Hodnoty hlaviček se porovnávají bez "
+"ohledu na velikost písmen, takže se rozpozná ``High`` i ``high``:"
 
 #: ../misc/object-conditions/basics.rst:690
-#, fuzzy
-#| msgid "Header Color"
 msgid "Header"
-msgstr "Barva hlavičky"
+msgstr "Hlavička"
 
 #: ../misc/object-conditions/basics.rst:691
 msgid "high"
-msgstr ""
+msgstr "vysoká"
 
 #: ../misc/object-conditions/basics.rst:692
-#, fuzzy
-#| msgid "``2 normal``"
 msgid "normal"
-msgstr "``2 normal``"
+msgstr "normální"
 
 #: ../misc/object-conditions/basics.rst:693
 msgid "low"
-msgstr ""
+msgstr "nízká"
 
 #: ../misc/object-conditions/basics.rst:694
-#, fuzzy
-#| msgid "``report``"
 msgid "``Importance``"
-msgstr "``report``"
+msgstr "``Importance``"
 
 #: ../misc/object-conditions/basics.rst:695
 msgid "``high``"
-msgstr ""
+msgstr "``high``"
 
 #: ../misc/object-conditions/basics.rst:696
 #: ../misc/object-conditions/basics.rst:700
-#, fuzzy
-#| msgid "``2 normal``"
 msgid "``normal``"
-msgstr "``2 normal``"
+msgstr "``normal``"
 
 #: ../misc/object-conditions/basics.rst:697
 msgid "``low``"
-msgstr ""
+msgstr "``low``"
 
 #: ../misc/object-conditions/basics.rst:698
-#, fuzzy
-#| msgid "Priority"
 msgid "``Priority``"
-msgstr "Priorita"
+msgstr "``Priority``"
 
 #: ../misc/object-conditions/basics.rst:699
-#, fuzzy
-#| msgid "``agent``"
 msgid "``urgent``"
-msgstr "``agent``"
+msgstr "``urgent``"
 
 #: ../misc/object-conditions/basics.rst:701
-#, fuzzy
-#| msgid "``agent``"
 msgid "``non-urgent``"
-msgstr "``agent``"
+msgstr "``non-urgent``"
 
 #: ../misc/object-conditions/basics.rst:702
-#, fuzzy
-#| msgid "Priority"
 msgid "``X-Priority``"
-msgstr "Priorita"
+msgstr "``X-Priority``"
 
 #: ../misc/object-conditions/basics.rst:703
-#, fuzzy
-#| msgid "``17``, ``5281``, ..."
 msgid "``1``, ``2``"
-msgstr "``17``, ``5281``, …"
+msgstr "``1``, ``2``"
 
 #: ../misc/object-conditions/basics.rst:704
 msgid "``3``"
-msgstr ""
+msgstr "``3``"
 
 #: ../misc/object-conditions/basics.rst:705
-#, fuzzy
-#| msgid "``17``, ``5281``, ..."
 msgid "``4``, ``5``"
-msgstr "``17``, ``5281``, …"
+msgstr "``4``, ``5``"
 
 #: ../misc/object-conditions/basics.rst:706
 msgid "``X-MSMail-Priority``"
-msgstr ""
+msgstr "``X-MSMail-Priority``"
 
 #: ../misc/object-conditions/basics.rst:707
 msgid "``High``"
-msgstr ""
+msgstr "``High``"
 
 #: ../misc/object-conditions/basics.rst:708
-#, fuzzy
-#| msgid "``2 normal``"
 msgid "``Normal``"
-msgstr "``2 normal``"
+msgstr "``Normal``"
 
 #: ../misc/object-conditions/basics.rst:709
 msgid "``Low``"
-msgstr ""
+msgstr "``Low``"
 
 #: ../misc/object-conditions/basics.rst:711
 msgid ""
@@ -21282,18 +21248,27 @@ msgid ""
 "different: when it states a value, Zammad uses that value alone. If it does "
 "not recognize the value, the message has no urgency."
 msgstr ""
+"Hlavičky se kontrolují v pořadí podle tabulky. ``Priority``, ``X-Priority`` "
+"a ``X-MSMail-Priority`` se počítají, jen pokud uvádějí hodnotu, kterou "
+"Zammad rozpozná, jinak se použije další hlavička. ``Importance`` se chová "
+"jinak: pokud uvádí nějakou hodnotu, Zammad použije výhradně ji. Pokud tuto "
+"hodnotu nerozpozná, zpráva nemá žádnou naléhavost."
 
 #: ../misc/object-conditions/basics.rst:717
 msgid ""
 "For ``X-Priority``, only the leading digit counts, so ``1 (Highest)`` still "
 "reads as high."
 msgstr ""
+"U ``X-Priority`` se počítá jen první číslice, takže ``1 (Highest)`` se stále "
+"vyhodnotí jako vysoká."
 
 #: ../misc/object-conditions/basics.rst:720
 msgid ""
 "A message that states no urgency has none. The **is none of** operator also "
 "matches such messages."
 msgstr ""
+"Zpráva, která neuvádí žádnou naléhavost, žádnou nemá. Operátor **není žádný "
+"z** odpovídá i takovým zprávám."
 
 #: ../misc/object-conditions/expert-mode.rst:2
 msgid "Expert Mode"
@@ -21651,7 +21626,7 @@ msgstr ""
 
 #: ../misc/unprocessable-emails.rst:2
 msgid "Unprocessable Emails"
-msgstr ""
+msgstr "Nezpracovatelné e-maily"
 
 #: ../misc/unprocessable-emails.rst:4
 msgid ""
@@ -21660,6 +21635,10 @@ msgid ""
 "email`` instead, so that the request stays visible and an agent can pick it "
 "up."
 msgstr ""
+"Zammad z příchozích e-mailů vytváří tikety. Když e-mail vůbec nelze "
+"zpracovat, Zammad ho nezahodí. Místo toho vytvoří tiket s názvem "
+"``Nezpracovatelný e-mail``, aby požadavek zůstal vidět a mohl se ho ujmout "
+"agent."
 
 #: ../misc/unprocessable-emails.rst:9
 msgid ""
@@ -21667,12 +21646,13 @@ msgid ""
 "went wrong. That is what makes the ticket workable although Zammad could not "
 "read the email."
 msgstr ""
+"Takový tiket obsahuje celý e-mail tak, jak dorazil, a navíc log s popisem "
+"toho, co se pokazilo. Díky tomu se dá s tiketem pracovat, přestože Zammad e-"
+"mail nedokázal přečíst."
 
 #: ../misc/unprocessable-emails.rst:14
-#, fuzzy
-#| msgid "Ticket"
 msgid "Error Tickets"
-msgstr "Tiket"
+msgstr "Chybové tikety"
 
 #: ../misc/unprocessable-emails.rst:16
 msgid ""
@@ -21680,6 +21660,9 @@ msgid ""
 "created, so changing the default language later does not rename tickets that "
 "already exist."
 msgstr ""
+"Zammad převezme název ve výchozím jazyce platném v okamžiku vytvoření "
+"tiketu, takže pozdější změna výchozího jazyka již existující tikety "
+"nepřejmenuje."
 
 #: ../misc/unprocessable-emails.rst:20
 msgid ""
@@ -21688,30 +21671,37 @@ msgid ""
 "that channel has no group, Zammad uses the group that owns the recipient "
 "address of the email, and falls back to the first active group."
 msgstr ""
+"Tiket začíná ve stavu, který je nastaven jako výchozí pro nové tikety, a je "
+"přiřazen ke skupině e-mailového kanálu, který poštu stáhl. Pokud tento kanál "
+"nemá skupinu, Zammad použije skupinu, které patří adresa příjemce e-mailu, a "
+"jako poslední možnost první aktivní skupinu."
 
 #: ../misc/unprocessable-emails.rst:25
 msgid ""
 "The ticket carries a single internal note of the system account with two "
 "attachments:"
 msgstr ""
+"Tiket obsahuje jedinou interní poznámku systémového účtu se dvěma přílohami:"
 
 #: ../misc/unprocessable-emails.rst:29
 msgid "``unprocessable_email.eml``"
-msgstr ""
+msgstr "``unprocessable_email.eml``"
 
 #: ../misc/unprocessable-emails.rst:29
 msgid "The raw email as it arrived."
-msgstr ""
+msgstr "Nezpracovaný e-mail tak, jak dorazil."
 
 #: ../misc/unprocessable-emails.rst:33
 msgid "``processing_log.txt``"
-msgstr ""
+msgstr "``processing_log.txt``"
 
 #: ../misc/unprocessable-emails.rst:32
 msgid ""
 "When processing failed and what Zammad reported about the failure. Comparing "
 "it with the raw email shows whether the email or Zammad is at fault."
 msgstr ""
+"Kdy zpracování selhalo a co Zammad o selhání ohlásil. Porovnáním s "
+"nezpracovaným e-mailem zjistíte, zda je chyba v e-mailu, nebo v Zammadu."
 
 #: ../misc/unprocessable-emails.rst:35
 msgid ""
@@ -21720,42 +21710,50 @@ msgid ""
 "``Download raw email`` and ``Download processing log`` buttons, which "
 "download exactly those two attachments."
 msgstr ""
+"Samotná poznámka se nevykresluje. Místo ní se v konverzaci zobrazí "
+"upozornění, že e-mail nebylo možné zpracovat. Upozornění nabízí také "
+"tlačítka ``Stáhnout nezpracovaný e-mail`` a ``Stáhnout log zpracování``, "
+"která stáhnou právě tyto dvě přílohy."
 
 #: ../misc/unprocessable-emails.rst:41
-#, fuzzy
-#| msgid "Common Errors"
 msgid "Common Reasons"
-msgstr "Časté chyby"
+msgstr "Časté příčiny"
 
 #: ../misc/unprocessable-emails.rst:43
 msgid ""
 "Zammad creates an error ticket whenever processing fails. The usual causes "
 "are:"
 msgstr ""
+"Zammad vytvoří chybový tiket pokaždé, když zpracování selže. Obvyklé příčiny "
+"jsou:"
 
 #: ../misc/unprocessable-emails.rst:47
 msgid "**Unreadable message**"
-msgstr ""
+msgstr "**Nečitelná zpráva**"
 
 #: ../misc/unprocessable-emails.rst:46
 msgid ""
 "The email has no header field Zammad can read. This catches input that is "
 "not an email at all, for example plain text."
 msgstr ""
+"E-mail nemá žádné pole hlavičky, které by Zammad dokázal přečíst. Sem spadá "
+"vstup, který vůbec není e-mailem, například prostý text."
 
 #: ../misc/unprocessable-emails.rst:51
 msgid "**Processing exceeds the time limit**"
-msgstr ""
+msgstr "**Zpracování překročí časový limit**"
 
 #: ../misc/unprocessable-emails.rst:50
 msgid ""
 "Zammad stops processing a single email after three minutes. Big or unusual "
 "messages can exceed that."
 msgstr ""
+"Zammad zastaví zpracování jednoho e-mailu po třech minutách. Velké nebo "
+"neobvyklé zprávy mohou tento limit překročit."
 
 #: ../misc/unprocessable-emails.rst:56
 msgid "**Unexpected processing error**"
-msgstr ""
+msgstr "**Neočekávaná chyba zpracování**"
 
 #: ../misc/unprocessable-emails.rst:54
 msgid ""
@@ -21763,18 +21761,21 @@ msgid ""
 "names what Zammad reported, which is what to hand to Zammad support when the "
 "email itself is fine."
 msgstr ""
+"Cokoli jiného, co selže, zatímco Zammad e-mail čte. V logu zpracování je "
+"uvedeno, co Zammad ohlásil – a právě to předejte podpoře Zammadu, pokud je "
+"samotný e-mail v pořádku."
 
 #: ../misc/unprocessable-emails.rst:59
 msgid "Email Without a Usable Sender"
-msgstr ""
+msgstr "E-mail bez použitelného odesílatele"
 
 #: ../misc/unprocessable-emails.rst:61
 msgid "A broken sender does not produce an error ticket."
-msgstr ""
+msgstr "Poškozený odesílatel chybový tiket nevytvoří."
 
 #: ../misc/unprocessable-emails.rst:67
 msgid "**Malformed sender address**"
-msgstr ""
+msgstr "**Chybně formátovaná adresa odesílatele**"
 
 #: ../misc/unprocessable-emails.rst:64
 msgid ""
@@ -21783,40 +21784,48 @@ msgid ""
 "Nothing is sent to an address Zammad could not read, and later emails from "
 "the same sender land on that same customer."
 msgstr ""
+"Zammad vytvoří zákazníka z adresy, kterou dokáže přečíst: adresa se stane "
+"přihlašovacím jménem zákazníka a zákazník nedostane žádnou e-mailovou "
+"adresu. Na adresu, kterou Zammad nedokázal přečíst, se nic neodesílá, a "
+"další e-maily od stejného odesílatele se přiřadí k témuž zákazníkovi."
 
 #: ../misc/unprocessable-emails.rst:71
-#, fuzzy
-#| msgid "**contains all**"
 msgid "**No sender at all**"
-msgstr "**obsahuje všechny**"
+msgstr "**Úplně chybí odesílatel**"
 
 #: ../misc/unprocessable-emails.rst:70
 msgid ""
 "The ticket is created for the system account. It has no customer, and the "
 "customer column of an overview shows ``-`` instead of a name."
 msgstr ""
+"Tiket se vytvoří pro systémový účet. Nemá žádného zákazníka a ve sloupci "
+"zákazníka v přehledu se místo jména zobrazí ``-``."
 
 #: ../misc/unprocessable-emails.rst:74
-#, fuzzy
-#| msgid "Handling of priorities"
 msgid "Handling an Error Ticket"
-msgstr "Práce s prioritami"
+msgstr "Práce s chybovým tiketem"
 
 #: ../misc/unprocessable-emails.rst:76
 msgid "Read the raw email to see who wrote and what the request was."
 msgstr ""
+"Přečtěte si nezpracovaný e-mail, abyste zjistili, kdo psal a s jakým "
+"požadavkem."
 
 #: ../misc/unprocessable-emails.rst:77
 msgid ""
 "Use **Change customer** to attach the ticket to the right customer, also "
 "when it has none yet, and continue working it like any other ticket."
 msgstr ""
+"Pomocí **Změnit zákazníka** přiřaďte tiket správnému zákazníkovi, i když "
+"zatím žádného nemá, a pokračujte v práci jako u každého jiného tiketu."
 
 #: ../misc/unprocessable-emails.rst:79
 msgid ""
 "If the email makes no sense at all, read the processing log, then close or "
 "delete the ticket."
 msgstr ""
+"Pokud e-mail nedává vůbec žádný smysl, přečtěte si log zpracování a poté "
+"tiket uzavřete nebo smažte."
 
 #: ../misc/unprocessable-emails.rst:81
 msgid ""
@@ -21824,10 +21833,13 @@ msgid ""
 "whose mail keeps failing cannot be caught by them. Block such a sender in "
 "the mailbox itself."
 msgstr ""
+"Filtry správce pošty se spouštějí jen u e-mailů, které Zammad dokázal "
+"zpracovat, takže odesílatele, jehož pošta opakovaně selhává, jimi "
+"nezachytíte. Takového odesílatele zablokujte přímo v poštovní schránce."
 
 #: ../misc/unprocessable-emails.rst:86
 msgid "Reprocessing a Repaired Email"
-msgstr ""
+msgstr "Opětovné zpracování opraveného e-mailu"
 
 #: ../misc/unprocessable-emails.rst:88
 msgid ""
@@ -21835,6 +21847,9 @@ msgid ""
 "emails only work on records from before 7.3, and an error ticket carries no "
 "such record."
 msgstr ""
+"Zammad nemá žádný způsob, jak chybový tiket znovu zpracovat. Úlohy rake pro "
+"neúspěšné e-maily fungují jen se záznamy z doby před verzí 7.3 a chybový "
+"tiket žádný takový záznam neobsahuje."
 
 #: ../misc/unprocessable-emails.rst:92
 msgid ""
@@ -21845,6 +21860,12 @@ msgid ""
 "that is still broken creates another error ticket. The first one stays "
 "behind, to be closed, merged or deleted."
 msgstr ""
+"Z opravené kopie se tiket přesto vytvořit dá: stáhněte nezpracovaný e-mail, "
+"opravte to, co ho činilo nečitelným, a předejte soubor zpět Zammadu příkazem "
+"konzole ze stránky :doc:`/channels/email/advanced/fetchmail`. Zammad ho "
+"zpracuje jako poštu, která dorazila do schránky, což znamená, že kopie, "
+"která je stále poškozená, vytvoří další chybový tiket. První tiket zůstane a "
+"je potřeba ho uzavřít, sloučit nebo smazat."
 
 #: ../misc/unprocessable-emails.rst:100 ../system/monitoring.rst:2
 msgid "Monitoring"
@@ -21859,6 +21880,12 @@ msgid ""
 "commands.html>` page describes how to reprocess such a record, which turns "
 "it into a ticket."
 msgstr ""
+"Nezpracovatelné e-maily se už nezobrazují v monitorování. Do verze 7.3 je "
+"Zammad evidoval jako neúspěšné e-maily a hlásil jejich počet. Záznamy z doby "
+"před aktualizací zůstávají zachovány a hlásí se, dokud je neodstraníte. Na "
+"stránce :docs:`Správa přes konzoli </admin/console/other-useful-"
+"commands.html>` je popsáno, jak takový záznam znovu zpracovat, čímž se z něj "
+"stane tiket."
 
 #: ../misc/variables.rst:4
 msgid ""
@@ -25230,14 +25257,26 @@ msgstr ""
 "při prvním přihlášení**"
 
 #: ../settings/security/third-party.rst:50
-msgid "No User Creation on Logon"
+#, fuzzy
+#| msgid "No User Creation on Logon"
+msgid "Skip User Creation on Logon"
 msgstr "Nevytvářet uživatele při přihlášení"
 
 #: ../settings/security/third-party.rst:52
+#, fuzzy
+#| msgid ""
+#| "By default, Zammad creates a new user account when a user logs in via a "
+#| "third-party application for the first time and no matching account "
+#| "exists. To prevent this, set **No user creation on logon** to ``yes``. "
+#| "Zammad then refuses such logins with the message *The user account does "
+#| "not exist. Please contact your administrator.* To allow logins only for "
+#| "existing accounts, enable this setting together with **Automatic account "
+#| "link on initial logon**. Without it, Zammad refuses logins even if the "
+#| "email address matches an existing account."
 msgid ""
 "By default, Zammad creates a new user account when a user logs in via a "
 "third-party application for the first time and no matching account exists. "
-"To prevent this, set **No user creation on logon** to ``yes``. Zammad then "
+"To prevent this, set **Skip user creation on logon** to ``yes``. Zammad then "
 "refuses such logins with the message *The user account does not exist. "
 "Please contact your administrator.* To allow logins only for existing "
 "accounts, enable this setting together with **Automatic account link on "
@@ -26314,10 +26353,19 @@ msgstr ""
 "(velká a malá písmena se nerozlišují)."
 
 #: ../settings/security/third-party/microsoft.rst:114
+#, fuzzy
+#| msgid ""
+#| "If one of these conditions is not met, Zammad refuses to link the "
+#| "accounts and the sign-in fails with an error message: either that the "
+#| "email address is already in use by another user, or, if **No user "
+#| "creation on logon** is enabled, that the user account does not exist. "
+#| "Affected users can still get access: they log in to their existing Zammad "
+#| "account by other means and link their Microsoft account themselves under "
+#| "*Profile > Linked Accounts*."
 msgid ""
 "If one of these conditions is not met, Zammad refuses to link the accounts "
 "and the sign-in fails with an error message: either that the email address "
-"is already in use by another user, or, if **No user creation on logon** is "
+"is already in use by another user, or, if **Skip user creation on logon** is "
 "enabled, that the user account does not exist. Affected users can still get "
 "access: they log in to their existing Zammad account by other means and link "
 "their Microsoft account themselves under *Profile > Linked Accounts*."
@@ -29156,16 +29204,6 @@ msgid "API"
 msgstr "API"
 
 #: ../system/api.rst:4
-#, fuzzy
-#| msgid ""
-#| "Zammad comes with a REST API that allows external applications and "
-#| "scripts to read and write data of your Zammad instance without using the "
-#| "web interface. The API endpoints themselves are always available, the "
-#| "settings on this tab only decide how clients authenticate. The tab "
-#| "*System > API* has two jobs: it decides which authentication methods "
-#| "Zammad accepts for API requests and it manages the applications that use "
-#| "Zammad as an OAuth provider. The ``admin.api`` permission is required to "
-#| "access the tab."
 msgid ""
 "Zammad comes with a REST API that allows external applications and scripts "
 "to read and write data of your Zammad instance without using the web "
@@ -29175,11 +29213,9 @@ msgid ""
 msgstr ""
 "Zammad obsahuje REST API, které externím aplikacím a skriptům umožňuje číst "
 "a zapisovat data vaší instance Zammadu bez použití webového rozhraní. "
-"Samotné koncové body API jsou vždy dostupné, nastavení na této záložce "
-"rozhodují jen o tom, jak se klienti ověřují. Záložka *Systém > API* má dva "
-"úkoly: určuje, které metody ověřování Zammad u požadavků API přijímá, a "
-"spravuje aplikace, které používají Zammad jako poskytovatele OAuth. Pro "
-"přístup k záložce je potřeba oprávnění ``admin.api``."
+"Samotné koncové body API jsou vždy dostupné, nastavení na této stránce "
+"rozhodují jen o tom, jak se klienti ověřují a zda odpovídá MCP server. Pro "
+"přístup ke stránce je potřeba oprávnění ``admin.api``."
 
 #: ../system/api.rst:10
 msgid ""
@@ -29192,19 +29228,16 @@ msgstr ""
 "dokumentaci."
 
 #: ../system/api.rst:14
-#, fuzzy
-#| msgid ""
-#| "Zammad supports three ways for a client to authenticate against the API. "
-#| "The first two are toggles on this page, the third one comes with the "
-#| "OAuth applications further down:"
 msgid ""
 "Zammad supports three ways for a client to authenticate against the REST "
 "API. This overview only names them, the settings themselves are organized "
 "differently: the first two methods are toggles on the *Token access* tab, "
 "the third one belongs to the OAuth applications on the *OAuth* tab:"
 msgstr ""
-"Zammad podporuje tři způsoby, jak se klient může vůči API ověřit. První dva "
-"se zapínají přepínači na této stránce, třetí souvisí s aplikacemi OAuth níže:"
+"Zammad podporuje tři způsoby, jak se klient může vůči REST API ověřit. Tento "
+"přehled je jen vyjmenovává, samotná nastavení jsou uspořádána jinak: první "
+"dvě metody se zapínají přepínači na záložce *Přístup přes token*, třetí "
+"patří k aplikacím OAuth na záložce *OAuth*:"
 
 #: ../system/api.rst:22
 msgid "Personal access token"
@@ -29240,19 +29273,13 @@ msgid "OAuth2 access token"
 msgstr "Přístupový token OAuth2"
 
 #: ../system/api.rst:30
-#, fuzzy
-#| msgid ""
-#| "A token an application receives for a user after the user authorized the "
-#| "application. It is managed with the applications further down on this "
-#| "page. Unlike the other two methods it has no toggle and cannot be "
-#| "switched off."
 msgid ""
 "A token an application receives for a user after the user authorized the "
 "application. It is managed with the applications on the *OAuth* tab. Unlike "
 "the other two methods it has no toggle and cannot be switched off."
 msgstr ""
 "Token, který aplikace získá pro uživatele poté, co uživatel aplikaci "
-"autorizoval. Spravuje se pomocí aplikací níže na této stránce. Na rozdíl od "
+"autorizoval. Spravuje se spolu s aplikacemi na záložce *OAuth*. Na rozdíl od "
 "ostatních dvou metod nemá přepínač a nelze ho vypnout."
 
 #: ../system/api.rst:35 ../system/api.rst:44
@@ -29265,6 +29292,9 @@ msgid ""
 "described in the following three sections: direct authentication of the REST "
 "API and the MCP server."
 msgstr ""
+"První záložka stránky se jmenuje *Přístup přes token*. Obsahuje přepínače "
+"popsané v následujících třech částech: přímé ověřování k REST API a MCP "
+"server."
 
 #: ../system/api.rst:46
 msgid ""
@@ -29373,10 +29403,8 @@ msgstr ""
 "aby kontaktovali svého správce."
 
 #: ../system/api.rst:104
-#, fuzzy
-#| msgid "Video Servers"
 msgid "MCP Server"
-msgstr "Video servery"
+msgstr "MCP server"
 
 #: ../system/api.rst:106
 msgid ""
@@ -29386,6 +29414,11 @@ msgid ""
 "Nothing has to be installed or run in addition, the server is part of every "
 "installation."
 msgstr ""
+"Zammad odpovídá na *Model Context Protocol* (MCP) na vlastním serveru, vedle "
+"REST API. Jeho prostřednictvím AI klient (například chatovací aplikace nebo "
+"nástroj pro programování) čte, vyhledává, aktualizuje a vytváří tikety ve "
+"vašem Zammadu. Nic dalšího není potřeba instalovat ani spouštět, server je "
+"součástí každé instalace."
 
 #: ../system/api.rst:112
 msgid ""
@@ -29393,6 +29426,9 @@ msgid ""
 "is off by default. While it is off, Zammad refuses every request to the "
 "server, whatever token the request carries."
 msgstr ""
+"Přepínač **MCP server** zapíná server pro celou instalaci. Ve výchozím stavu "
+"je vypnutý. Dokud je vypnutý, Zammad odmítá každý požadavek na server bez "
+"ohledu na to, jaký token požadavek nese."
 
 #: ../system/api.rst:116
 msgid ""
@@ -29403,22 +29439,24 @@ msgid ""
 "permissions, such as customers, get no tools. See the :user-docs:`user "
 "documentation </extras/mcp-server.html>` for how a user connects a client."
 msgstr ""
+"Klienti se ověřují osobními přístupovými tokeny, takže server funguje jen "
+"tehdy, když je zapnutý :ref:`Přístup přes token <system-api-token-access>`. "
+"Klient může dělat přesně to, co smí token a jeho vlastník, nic víc: každý "
+"nástroj vyžaduje oprávnění ``ticket.agent``. Uživatelé bez oprávnění agenta, "
+"například zákazníci, nedostanou žádné nástroje. Jak uživatel připojí "
+"klienta, se dozvíte v :user-docs:`uživatelské dokumentaci </extras/mcp-"
+"server.html>`."
 
 #: ../system/api.rst:123
-#, fuzzy
-#| msgid ""
-#| "The example shown next to the toggle uses the **Fully Qualified Domain "
-#| "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
-#| "system/base>`."
 msgid ""
 "When the toggle is on, the page shows the address of the server and an "
 "example for connecting a client. Both use the **Fully Qualified Domain "
 "Name** and the **HTTP type** from Zammad's :doc:`Base settings </settings/"
 "system/base>`."
 msgstr ""
-"Příklad zobrazený vedle přepínače používá **Plně kvalifikovaný doménový "
-"název (FQDN)** a **Typ HTTP** ze :doc:`základního nastavení </settings/"
-"system/base>` Zammadu."
+"Když je přepínač zapnutý, stránka zobrazí adresu serveru a příklad připojení "
+"klienta. Obojí používá **Plně kvalifikovaný doménový název (FQDN)** a **Typ "
+"HTTP** ze :doc:`základního nastavení </settings/system/base>` Zammadu."
 
 #: ../system/api.rst:127
 msgid ""
@@ -29428,6 +29466,11 @@ msgid ""
 "fail, and browser requests from other origins are refused to protect the "
 "server against DNS rebinding."
 msgstr ""
+"Zammad odpovídá jen tehdy, když požadavek směřuje na **Plně kvalifikovaný "
+"doménový název (FQDN)**, **Alternativní plně kvalifikovaný doménový název** "
+"nebo adresu loopback (``localhost``, ``127.0.0.1``, ``::1``). Požadavky na "
+"jinou adresu selžou a požadavky prohlížeče z jiných originů se odmítají, aby "
+"byl server chráněn před útokem DNS rebinding."
 
 #: ../system/api.rst:133
 msgid ""
@@ -29438,6 +29481,12 @@ msgid ""
 "approval sends nothing, and the client can then offer to save the text as "
 "the ticket's shared draft."
 msgstr ""
+"Pokud to klient umí zobrazit, Zammad požádá uživatele o schválení zprávy "
+"dříve, než se dostane k zákazníkovi. Žádost zobrazí celý text, příjemce a "
+"viditelnost (formulářová elicitace podle revize MCP 2026-07-28) a Zammad "
+"zprávu odešle, až když ji tam uživatel schválí. Při zamítnutí se nic "
+"neodešle a klient pak může nabídnout uložení textu jako sdíleného konceptu "
+"tiketu."
 
 #: ../system/api.rst:139
 msgid ""
@@ -29450,6 +29499,14 @@ msgid ""
 "enabled in the client, because a client that runs them without a prompt "
 "sends a message without any further question."
 msgstr ""
+"Klient, který formulář zobrazit neumí, se spolehne na vlastní schvalování "
+"volání nástrojů, stejně jako změna přes REST API se stejným tokenem projde "
+"bez dalšího schválení. U dvou změn nahrazuje formulář souhlas uživatele v "
+"konverzaci: Zammad nahradí již existující sdílený koncept a uzavře tiket s "
+"nedokončeným kontrolním seznamem, teprve když se klient zeptal a uživatel "
+"souhlasil. Schvalování volání nástrojů mějte v klientovi zapnuté, protože "
+"klient, který je spouští bez dotazu, odešle zprávu bez jakéhokoli dalšího "
+"potvrzení."
 
 #: ../system/api.rst:147
 msgid ""
@@ -29458,22 +29515,16 @@ msgid ""
 "the access of each tool and the limits that apply, is part of the system "
 "documentation: :docs:`MCP tool reference </api/mcp.html>`."
 msgstr ""
+"Klient pracuje s nástroji pro čtení a zápis tiketů, pro vyhledávání a pro "
+"sdílené koncepty a odpovědi znalostní báze. Úplný seznam s přístupem "
+"jednotlivých nástrojů a platnými omezeními je součástí systémové "
+"dokumentace: :docs:`Reference nástrojů MCP </api/mcp.html>`."
 
 #: ../system/api.rst:153
-#, fuzzy
-#| msgid "OAuth Setup"
 msgid "OAuth"
-msgstr "Nastavení OAuth"
+msgstr "OAuth"
 
 #: ../system/api.rst:155
-#, fuzzy
-#| msgid ""
-#| "The lower part of the page manages OAuth applications. An OAuth "
-#| "application is any external software that wants to work with your Zammad "
-#| "data on behalf of a user, e.g. a reporting tool or an integration you "
-#| "develop yourself. Zammad acts as OAuth provider for it: the user logs "
-#| "into Zammad once and authorizes the application, which then works with "
-#| "the REST API as that user and with their permissions."
 msgid ""
 "The second tab of the page is named *OAuth*. An OAuth application is any "
 "external software that wants to work with your Zammad data on behalf of a "
@@ -29482,12 +29533,12 @@ msgid ""
 "the application, which then works with the REST API as that user and with "
 "their permissions."
 msgstr ""
-"Spodní část stránky slouží ke správě aplikací OAuth. Aplikace OAuth je "
-"jakýkoli externí software, který chce pracovat s daty ve vašem Zammadu "
-"jménem uživatele, např. nástroj pro reporty nebo integrace, kterou si sami "
-"vyvíjíte. Zammad pro ni funguje jako poskytovatel OAuth: uživatel se jednou "
-"přihlásí do Zammadu a autorizuje aplikaci, která pak pracuje s REST API jako "
-"tento uživatel a s jeho oprávněními."
+"Druhá záložka stránky se jmenuje *OAuth*. Aplikace OAuth je jakýkoli externí "
+"software, který chce pracovat s daty ve vašem Zammadu jménem uživatele, "
+"např. nástroj pro reporty nebo integrace, kterou si sami vyvíjíte. Zammad "
+"pro ni funguje jako poskytovatel OAuth: uživatel se jednou přihlásí do "
+"Zammadu a autorizuje aplikaci, která pak pracuje s REST API jako tento "
+"uživatel a s jeho oprávněními."
 
 #: ../system/api.rst:162
 msgid ""
@@ -29562,33 +29613,25 @@ msgstr ""
 "uživatelskému účtu. Zammad ho zobrazí v dialogu."
 
 #: ../system/api.rst:192
-#, fuzzy
-#| msgid ""
-#| "Creating an application does not grant it any access. A user still has to "
-#| "authorize the application once, or you generate an access token with the "
-#| "**Token** action. The bottom of the page lists the two URLs of your "
-#| "instance that an application uses during the authorization:"
 msgid ""
 "Creating an application does not grant it any access. A user still has to "
 "authorize the application once, or you generate an access token with the "
 "**Token** action."
 msgstr ""
 "Vytvoření aplikace jí nedává žádný přístup. Uživatel musí aplikaci stále "
-"jednou autorizovat, nebo vygenerujete přístupový token akcí **Token**. Ve "
-"spodní části stránky jsou uvedeny dvě URL vaší instance, které aplikace "
-"používá při autorizaci:"
+"jednou autorizovat, nebo vygenerujete přístupový token akcí **Token**."
 
 #: ../system/api.rst:197
-#, fuzzy
-#| msgid "``Authorization``"
 msgid "Authorization URLs"
-msgstr "``Authorization``"
+msgstr "Autorizační URL"
 
 #: ../system/api.rst:199
 msgid ""
 "The bottom of the tab lists the two URLs of your instance that an "
 "application uses during the authorization:"
 msgstr ""
+"Ve spodní části záložky jsou uvedeny dvě URL vaší instance, které aplikace "
+"používá při autorizaci:"
 
 #: ../system/api.rst:202
 msgid ""
@@ -35665,13 +35708,6 @@ msgstr ""
 "zákazníků SaaS systém monitorujeme sami a případné problémy přímo řešíme."
 
 #: ../system/monitoring.rst:11
-#, fuzzy
-#| msgid ""
-#| "On the monitoring page, you can see the current health state of Zammad "
-#| "under **Current Status** at the bottom. This can be useful if you want to "
-#| "have a look if everything is up and running. As an example, you could "
-#| "have a look in the monitoring when you assume that some emails aren't "
-#| "processed from Zammad."
 msgid ""
 "On the monitoring page, you can see the current health state of Zammad under "
 "**Current Status** at the bottom. This can be useful if you want to have a "
@@ -35682,9 +35718,12 @@ msgid ""
 "see :doc:`/misc/unprocessable-emails`."
 msgstr ""
 "Na stránce monitorování vidíte dole v části **Aktuální stav** aktuální stav "
-"Zammadu. Hodí se to, když chcete zkontrolovat, že vše běží. Do monitorování "
-"se můžete podívat například tehdy, když máte podezření, že Zammad "
-"nezpracovává některé e-maily."
+"Zammadu. Hodí se to, když chcete zkontrolovat, že vše běží. Monitorování "
+"například ohlásí e-mailový kanál, který se nemůže připojit ke svému "
+"poštovnímu serveru, nebo kanál, který déle než hodinu nestáhl žádný e-mail. "
+"Nezpracovatelné e-maily do něj nepatří. Zammad pro ně místo toho vytvoří "
+"tiket s názvem ``Nezpracovatelný e-mail``, viz :doc:`/misc/unprocessable-"
+"emails`."
 
 #: ../system/monitoring.rst:20
 msgid "Monitoring API"
